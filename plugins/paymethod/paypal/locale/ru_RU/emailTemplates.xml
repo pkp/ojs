@@ -1,28 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE email_texts SYSTEM "../../../../../lib/pkp/dtd/emailTemplateData.dtd">
+
 <!--
-  * plugins/paymethod/paypal/locale/ru_RU/emailTemplateData.xml
+  * @file plugins/paymethod/paypal/locale/ru_RU/emailTemplates.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Russian_(ru_RU)
   * Localized email templates XML file.
   -->
+
 <email_texts locale="ru_RU">
 	<email_text key="PAYPAL_INVESTIGATE_PAYMENT">
 		<subject>Необычная активность PayPal</subject>
-		<body><![CDATA[Система OJS обнаружила необычную активность, свящанную с поддержкой платежей в системе PayPal для журнала {$contextName}.  Может потребоваться внимание и вмешательство в ручном режиме.<br />
+		<body><![CDATA[Система Open Journal Systems обнаружила необычную активность, связанную с поддержкой платежей через PayPal для журнала «{$contextName}». Эта активность может требовать дополнительного изучения или вмешательства в ручном режиме.<br />
+                       <br />
+Это письмо было сгенерировано модулем «Платежи через PayPal» системы Open Journal Systems.<br />
 <br />
-Письмо было сгенерировано модулем платежей PayPal.<br />
-<br />
-Полная информация о запросе:<br />
+Полная информация для запроса:<br />
 {$postInfo}<br />
 <br />
-Дополнительная информация (если указана):<br />
+Дополнительная информация (если есть):<br />
 {$additionalInfo}<br />
 <br />
 Переменные сервера:<br />
-{$serverVars}]]></body>
+{$serverVars}<br />
+]]></body>
+		<description>Этот шаблон письма используется для уведомления контактного лица редакции о том, что была зарегистрирована подозрительная активность или активность, требующая вмешательства в ручном режиме, вызванная модулем «Платежи через PayPal».</description>
 	</email_text>
 </email_texts>

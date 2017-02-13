@@ -3,8 +3,8 @@
 /**
  * @file classes/sword/OJSSwordDeposit.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class OJSSwordDeposit
@@ -41,7 +41,7 @@ class OJSSwordDeposit {
 	 * Create a SWORD deposit object for an OJS article.
 	 * @param $article Article
 	 */
-	function OJSSwordDeposit($article) {
+	function __construct($article) {
 		// Create a directory for deposit contents
 		$this->outPath = tempnam('/tmp', 'sword');
 		unlink($this->outPath);

@@ -3,8 +3,8 @@
 /**
  * @file controllers/grid/users/stageParticipant/form/StageParticipantNotifyForm.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class StageParticipantNotifyForm
@@ -21,8 +21,8 @@ class StageParticipantNotifyForm extends PKPStageParticipantNotifyForm {
 	/**
 	 * Constructor.
 	 */
-	function StageParticipantNotifyForm($itemId, $itemType, $stageId, $template = null) {
-		parent::PKPStageParticipantNotifyForm($itemId, $itemType, $stageId, $template);
+	function __construct($itemId, $itemType, $stageId, $template = null) {
+		parent::__construct($itemId, $itemType, $stageId, $template);
 	}
 
 	/**
@@ -30,9 +30,8 @@ class StageParticipantNotifyForm extends PKPStageParticipantNotifyForm {
 	 * @return array
 	 */
 	protected function _getStageTemplates() {
-
 		return array(
-			WORKFLOW_STAGE_ID_SUBMISSION => array(),
+			WORKFLOW_STAGE_ID_SUBMISSION => array('EDITOR_ASSIGN'),
 			WORKFLOW_STAGE_ID_EXTERNAL_REVIEW => array('EDITOR_ASSIGN'),
 			WORKFLOW_STAGE_ID_EDITING => array('COPYEDIT_REQUEST'),
 			WORKFLOW_STAGE_ID_PRODUCTION => array('LAYOUT_REQUEST', 'LAYOUT_COMPLETE', 'INDEX_REQUEST', 'INDEX_COMPLETE', 'EDITOR_ASSIGN')

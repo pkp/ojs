@@ -4,15 +4,15 @@
 <!--
   * locale/nb_NO/editor.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the nb_NO (Norsk bokmål) locale.
   *
   -->
 
-<locale name="nb_NO" full_name = "Norwegian">
+<locale name="nb_NO" full_name="Norsk bokmål">
 	<message key="editor.home">Ansvarlig redaktør</message>
 	<message key="editor.submissionsAndPublishing">Manuskript og publisering</message>
 	<message key="editor.submissionQueue">Manuskriptkø</message>
@@ -136,10 +136,6 @@
 	<message key="editor.article.assignEditor">Legg til redaktør</message>
 	<message key="editor.article.selectEditor">Velg {$roleName}</message>
 	<message key="editor.article.selectDecision">Velg beslutning</message>
-	<message key="editor.article.decision.accept">Aksepter manuskript</message>
-	<message key="editor.article.decision.pendingRevisions">Omarbeiding påkrevet</message>
-	<message key="editor.article.decision.resubmit">Send inn igjen for fagvurdering</message>
-	<message key="editor.article.decision.decline">Avvis manuskript</message>
 	<message key="editor.article.selectLayoutEditor">Velg layoutredaktør</message>
 	<message key="editor.article.replaceLayoutEditor">Erstatt layoutredaktør</message>
 	<message key="editor.article.reviewSubmission">Fagvurdering av manuskript</message>

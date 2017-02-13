@@ -4,15 +4,15 @@
 <!--
   * locale/nb_NO/author.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the nb_NO (Norsk bokmål) locale.
   *
   -->
 
-<locale name="nb_NO" full_name = "Norwegian">
+<locale name="nb_NO" full_name="Norsk bokmål">
 	<message key="author.submit">Nytt manus</message>
 	<message key="author.track">Aktive manus</message>
 	<message key="author.submit.submitArticle">Send inn en artikkel</message>
@@ -29,7 +29,7 @@
 	<message key="author.submit.metadata">Skriv inn metadata</message>
 	<message key="author.submit.supplementaryFiles">Last opp tilleggsfiler</message>
 	<message key="author.submit.confirmation">Bekreftelse</message>
-	<message key="author.submit.cancelSubmission">Du kan fullføre denne innsendingen senere, ved å velge Aktive manus fra forfattersiden din.</message>
+	<message key="submission.submit.cancelSubmission">Du kan fullføre denne innsendingen senere, ved å velge Aktive manus fra forfattersiden din.</message>
 	<message key="author.submit.notAccepting">Dette tidsskriftet tar for øyeblikket ikke imot bidrag.</message>
 	<message key="author.submissions.uploadCopyeditedVersion">Last opp manuskript i redigert versjon</message>
 	<message key="author.submissions.proofreadingCorrections">Korrektur</message>
@@ -121,7 +121,5 @@
 	<message key="author.submissions.queuedEditingProofread">Under redigering: Korrekturlesing ønsket</message>
 	<message key="author.submit.reorder">Endre rekkefølgen på forfatternavnene</message>
 	<message key="author.submit.form.wordCountAlert">Du har overskredet maksimalt antall ord i et sammendrag i denne seksjonen.</message>
-	<message key="author.submit.submissionLocale">Innleveringsspråk</message>
-	<message key="author.submit.submissionLocaleDescription">Dette tidsskriftet tillater innleveringer på flere språk. Velg hovedspråket for innleveringen fra rullegardinmenyen under.</message>
 	<message key="author.submit.form.localeRequired">Vennligst velg innleveringsspråk.</message>
 </locale>

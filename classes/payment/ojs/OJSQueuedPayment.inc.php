@@ -3,8 +3,8 @@
 /**
  * @file classes/payment/ojs/OJSQueuedPayment.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class OJSQueuedPayment
@@ -29,8 +29,8 @@ class OJSQueuedPayment extends QueuedPayment {
 	/**
 	 * @copydoc QueuedPayment::QueuedPayment
 	 */
-	function OJSQueuedPayment($amount, $currencyCode, $userId = null, $assocId = null) {
-		parent::QueuedPayment($amount, $currencyCode, $userId, $assocId);
+	function __construct($amount, $currencyCode, $userId = null, $assocId = null) {
+		parent::__construct($amount, $currencyCode, $userId, $assocId);
 	}
 
 	/**

@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/native/filter/IssueNativeXmlFilter.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2000-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2000-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IssueNativeXmlFilter
@@ -20,9 +20,9 @@ class IssueNativeXmlFilter extends NativeExportFilter {
 	 * Constructor
 	 * @param $filterGroup FilterGroup
 	 */
-	function IssueNativeXmlFilter($filterGroup) {
+	function __construct($filterGroup) {
 		$this->setDisplayName('Native XML issue export');
-		parent::NativeExportFilter($filterGroup);
+		parent::__construct($filterGroup);
 	}
 
 
@@ -48,6 +48,8 @@ class IssueNativeXmlFilter extends NativeExportFilter {
 	function &process(&$issues) {
 		// Create the XML document
 		$doc = new DOMDocument('1.0');
+		$doc->preserveWhiteSpace = false;
+		$doc->formatOutput = true;
 		$deployment = $this->getDeployment();
 
 		if (count($issues)==1) {
@@ -95,7 +97,7 @@ class IssueNativeXmlFilter extends NativeExportFilter {
 
 		$this->addDates($doc, $issueNode, $issue);
 		$this->addSections($doc, $issueNode, $issue);
-		$this->addCoverImage($doc, $issueNode, $issue);
+		$this->addCoverImages($doc, $issueNode, $issue);
 		$this->addIssueGalleys($doc, $issueNode, $issue);
 		$this->addArticles($doc, $issueNode, $issue);
 
@@ -118,7 +120,7 @@ class IssueNativeXmlFilter extends NativeExportFilter {
 
 		// Add public ID
 		if ($pubId = $issue->getStoredPubId('publisher-id')) {
-			$issueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'id', $pubId));
+			$issueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'id', htmlspecialchars($pubId, ENT_COMPAT, 'UTF-8')));
 			$node->setAttribute('type', 'public');
 			$node->setAttribute('advice', 'update');
 		}
@@ -142,7 +144,7 @@ class IssueNativeXmlFilter extends NativeExportFilter {
 		$pubId = $issue->getStoredPubId($pubIdPlugin->getPubIdType());
 		if ($pubId) {
 			$deployment = $this->getDeployment();
-			$issueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'id', $pubId));
+			$issueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'id', htmlspecialchars($pubId, ENT_COMPAT, 'UTF-8')));
 			$node->setAttribute('type', $pubIdPlugin->getPubIdType());
 			$node->setAttribute('advice', 'update');
 			return $node;
@@ -160,16 +162,16 @@ class IssueNativeXmlFilter extends NativeExportFilter {
 		$deployment = $this->getDeployment();
 
 		if ($issue->getDatePublished())
-			$issueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'date_published', strftime('%F', strtotime($issue->getDatePublished()))));
+			$issueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'date_published', strftime('%Y-%m-%d', strtotime($issue->getDatePublished()))));
 
 		if ($issue->getDateNotified())
-			$issueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'date_notified', strftime('%F', strtotime($issue->getDateNotified()))));
+			$issueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'date_notified', strftime('%Y-%m-%d', strtotime($issue->getDateNotified()))));
 
 		if ($issue->getLastModified())
-			$issueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'last_modified', strftime('%F', strtotime($issue->getLastModified()))));
+			$issueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'last_modified', strftime('%Y-%m-%d', strtotime($issue->getLastModified()))));
 
 		if ($issue->getOpenAccessDate())
-			$issueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'open_access_date', strftime('%F', strtotime($issue->getOpenAccessDate()))));
+			$issueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'open_access_date', strftime('%Y-%m-%d', strtotime($issue->getOpenAccessDate()))));
 	}
 
 	/**
@@ -216,29 +218,32 @@ class IssueNativeXmlFilter extends NativeExportFilter {
 	}
 
 	/**
-	 * Add the issue cover image to its DOM element.
+	 * Add the issue cover images to its DOM element.
 	 * @param $doc DOMDocument
 	 * @param $issueNode DOMElement
 	 * @param $issue Issue
 	 */
-	function addCoverImage($doc, $issueNode, $issue) {
-
-		$coverImage = $issue->getCoverImage();
-		if (!empty($coverImage)) {
+	function addCoverImages($doc, $issueNode, $issue) {
+		$coverImages = $issue->getCoverImage(null);
+		if (!empty($coverImages)) {
 			$deployment = $this->getDeployment();
-			$issueCoverNode = $doc->createElementNS($deployment->getNamespace(), 'issue_cover');
-			$issueCoverNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'cover_image', $issue->getCoverImage()));
-			$issueCoverNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'cover_image_alt_text', $issue->getCoverImage()));
+			$issueCoversNode = $doc->createElementNS($deployment->getNamespace(), 'issue_covers');
+			foreach ($coverImages as $locale => $coverImage) {
+				$coverNode = $doc->createElementNS($deployment->getNamespace(), 'cover');
+				$coverNode->setAttribute('locale', $locale);
+				$coverNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'cover_image', htmlspecialchars($coverImage, ENT_COMPAT, 'UTF-8')));
+				$coverNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'cover_image_alt_text', htmlspecialchars($issue->getCoverImageAltText($locale), ENT_COMPAT, 'UTF-8')));
 
-			import('classes.file.PublicFileManager');
-			$publicFileManager = new PublicFileManager();
+				import('classes.file.PublicFileManager');
+				$publicFileManager = new PublicFileManager();
+				$filePath = $publicFileManager->getContextFilesPath(ASSOC_TYPE_JOURNAL, $issue->getJournalId()) . '/' . $coverImage;
+				$embedNode = $doc->createElementNS($deployment->getNamespace(), 'embed', base64_encode(file_get_contents($filePath)));
+				$embedNode->setAttribute('encoding', 'base64');
+				$coverNode->appendChild($embedNode);
 
-			$filePath = $publicFileManager->getContextFilesPath(ASSOC_TYPE_JOURNAL, $issue->getJournalId()) . '/' . $issue->getCoverImage();
-			$embedNode = $doc->createElementNS($deployment->getNamespace(), 'embed', base64_encode(file_get_contents($filePath)));
-			$embedNode->setAttribute('encoding', 'base64');
-			$issueCoverNode->appendChild($embedNode);
-
-			$issueNode->appendChild($issueCoverNode);
+				$issueCoversNode->appendChild($coverNode);
+			}
+			$issueNode->appendChild($issueCoversNode);
 		}
 	}
 
@@ -271,7 +276,6 @@ class IssueNativeXmlFilter extends NativeExportFilter {
 			$sectionNode->setAttribute('abstracts_not_required', $section->getAbstractsNotRequired());
 			$sectionNode->setAttribute('hide_title', $section->getHideTitle());
 			$sectionNode->setAttribute('hide_author', $section->getHideAuthor());
-			$sectionNode->setAttribute('hide_about', $section->getHideAbout());
 			$sectionNode->setAttribute('abstract_word_count', (int) $section->getAbstractWordCount());
 
 			$this->createLocalizedNodes($doc, $sectionNode, 'abbrev', $section->getAbbrev(null));

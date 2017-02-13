@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/native/filter/SupplementaryFileNativeXmlFilter.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2000-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2000-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SupplementaryFileNativeXmlFilter
@@ -20,8 +20,8 @@ class SupplementaryFileNativeXmlFilter extends SubmissionFileNativeXmlFilter {
 	 * Constructor
 	 * @param $filterGroup FilterGroup
 	 */
-	function SupplementaryFileNativeXmlFilter($filterGroup) {
-		parent::SubmissionFileNativeXmlFilter($filterGroup);
+	function __construct($filterGroup) {
+		parent::__construct($filterGroup);
 	}
 
 
@@ -58,7 +58,7 @@ class SupplementaryFileNativeXmlFilter extends SubmissionFileNativeXmlFilter {
 		}
 		$this->createLocalizedNodes($doc, $submissionFileNode, 'source', $submissionFile->getSource(null));
 		if ($language = $submissionFile->getLanguage()) {
-			$submissionFileNode->appendChild($doc->createElementNS($deployment->getNamespace(), 'language', $language));
+			$submissionFileNode->appendChild($doc->createElementNS($deployment->getNamespace(), 'language', htmlspecialchars($language, ENT_COMPAT, 'UTF-8')));
 		}
 		return $submissionFileNode;
 	}

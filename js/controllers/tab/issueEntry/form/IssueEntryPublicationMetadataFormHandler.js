@@ -1,8 +1,8 @@
 /**
  * @file js/controllers/tab/issueEntry/form/IssueEntryPublicationMetadataFormHandler.js
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2000-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2000-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IssueEntryPublicationMetadataFormHandler.js
@@ -32,8 +32,8 @@
 		this.parent($form, options);
 
 		// initial setup.
-		$('input[id^="datePublished"]', $form).datepicker(
-				{ dateFormat: 'yy-mm-dd', minDate: '0', autoSize: true});
+		//$('input[id^="datePublished"]', $form).datepicker(
+		//		{ dateFormat: 'yy-mm-dd', minDate: '0', autoSize: true});
 
 		// bind click handlers to the two payment waiver buttons.
 		$('#paymentReceivedButton', $form).click(

@@ -3,8 +3,8 @@
 /**
  * @file tests/data/40-CreateUsersTest.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2000-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2000-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class CreateUsersTest
@@ -52,7 +52,7 @@ class CreateUsersTest extends PKPCreateUsersTest {
 			'username' => 'dbuskins',
 			'firstName' => 'David',
 			'lastName' => 'Buskins',
-			'country' => 'United States',
+			'country' => 'United States of America',
 			'affiliation' => 'University of Chicago',
 			'roles' => array('Section editor'),
 		));
@@ -136,7 +136,7 @@ class CreateUsersTest extends PKPCreateUsersTest {
 			'username' => 'agallego',
 			'firstName' => 'Adela',
 			'lastName' => 'Gallego',
-			'country' => 'United States',
+			'country' => 'United States of America',
 			'affiliation' => 'State University of New York',
 			'roles' => array('Reviewer'),
 		));
@@ -178,7 +178,7 @@ class CreateUsersTest extends PKPCreateUsersTest {
 			'username' => 'gcox',
 			'firstName' => 'Graham',
 			'lastName' => 'Cox',
-			'country' => 'United States',
+			'country' => 'United States of America',
 			'affiliation' => 'Duke University',
 			'roles' => array('Layout Editor'),
 		));
@@ -206,7 +206,7 @@ class CreateUsersTest extends PKPCreateUsersTest {
 			'username' => 'cturner',
 			'firstName' => 'Catherine',
 			'lastName' => 'Turner',
-			'country' => 'United Kingdom',
+			'country' => 'United Kingdom of Great Britain and Nothern Ireland',
 			'affiliation' => 'Imperial College London',
 			'roles' => array('Proofreader'),
 		));

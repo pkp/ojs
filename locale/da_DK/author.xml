@@ -4,8 +4,8 @@
 <!--
   * /locale/da_DK/author.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the da_DK (Dansk) locale.
@@ -27,7 +27,7 @@
 	<message key="author.submit.start">Start</message>
 	<message key="author.submit.supplementaryFiles">Overfør supplerende filer</message>
 	<message key="author.submit.confirmation">Bekræftelse</message>
-	<message key="author.submit.cancelSubmission">Du kan fuldføre denne indsendelse på et senere tidspunkt ved at vælge Aktive indsendelser på startsiden for forfattere.</message>
+	<message key="submission.submit.cancelSubmission">Du kan fuldføre denne indsendelse på et senere tidspunkt ved at vælge Aktive indsendelser på startsiden for forfattere.</message>
 	<message key="author.submit.notAccepting">Dette tidsskrift accepterer ikke indsendelser på nuværende tidspunkt.</message>
 	<message key="author.submit.requestWaiver">Anmod om afkald</message>
 	<message key="author.submit.qualifyForWaiver">Overvej at give afkald på artikelmanuskriptgebyret for denne artikel</message>
@@ -87,7 +87,7 @@
 	<message key="author.submit.suppFile.dataSet">Datasæt</message>
 	<message key="author.submit.suppFile.sourceText">Kildetekst</message>
 	<message key="author.submit.suppFile.briefDescription">Kort beskrivelse</message>
-	<message key="author.submit.suppFile.availableToPeers">Præsenter fil for bedømmere (uden metadata), da den ikke vil gøre blindbedømmelse umulig.</message>
+	<message key="author.submit.suppFile.availableToPeers">Præsenter fil for bedømmere (uden metadata), da den ikke vil gøre blind review umulig.</message>
 	<message key="author.submit.suppFile.publisherDescription">Anvend kun sammen med formelt publicerede materialer.</message>
 	<message key="author.submit.suppFile.dateDescription">Dato for indsamling af data eller oprettelse af instrument.</message>
 	<message key="author.submit.suppFile.sourceDescription">Navn på afhandling eller anden oprindelse.</message>

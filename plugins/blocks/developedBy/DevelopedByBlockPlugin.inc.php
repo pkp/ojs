@@ -3,8 +3,8 @@
 /**
  * @file plugins/blocks/developedBy/DevelopedByBlockPlugin.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class DevelopedByBlockPlugin
@@ -49,7 +49,7 @@ class DevelopedByBlockPlugin extends BlockPlugin {
 	 * @return int
 	 */
 	function getBlockContext() {
-		if (!Config::getVar('general', 'installed')) return BLOCK_CONTEXT_LEFT_SIDEBAR;
+		if (!Config::getVar('general', 'installed')) return BLOCK_CONTEXT_SIDEBAR;
 		return parent::getBlockContext();
 	}
 

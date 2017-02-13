@@ -4,8 +4,8 @@
 <!--
   * locale/zh_CN/author.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings.
@@ -31,7 +31,7 @@
 	<message key="author.submit.metadata">输入元数据</message>
 	<message key="author.submit.supplementaryFiles">上传附件</message>
 	<message key="author.submit.confirmation">确认</message>
-	<message key="author.submit.cancelSubmission">您可以在以后的时间通过选择在作者首页的处理中投稿来完成本次投稿.</message>
+	<message key="submission.submit.cancelSubmission">您可以在以后的时间通过选择在作者首页的处理中投稿来完成本次投稿.</message>
 	<message key="author.submit.notAccepting">这个杂志是在这个时候不接受投稿.</message>
 	<message key="author.submit.requestWaiver">申请免费</message>
 	<message key="author.submit.qualifyForWaiver">请考虑免除这个文章的投稿费</message>
@@ -118,7 +118,5 @@
 	<message key="author.article.copyeditedFile">文本编辑文件</message>
 	<message key="author.article.authorRevisedFile">作者文件</message>
 	<message key="author.submit.authorSubmitLoginMessage">投稿要求有一个本期刊的用户帐户.这个帐户用于编辑跟踪您的投稿，当投稿的状态改变的时候通知你，或者编辑需要您的相信信息 .</message>
-	<message key="author.submit.submissionLocale">投稿语言</message>
-	<message key="author.submit.submissionLocaleDescription">本期刊支持多语言投稿。请从下面的下拉菜单中选择投稿的主语言。</message>
 	<message key="author.submit.form.localeRequired">请选择一种提交语言</message>
 </locale>

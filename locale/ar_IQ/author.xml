@@ -4,8 +4,8 @@
 <!--
   * locale/ar_IQ/author.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings.
@@ -31,7 +31,7 @@
 	<message key="author.submit.supplementaryFiles">إرفع الملفات التكميلية</message>
 	<message key="author.submit.confirmation">تأكيد الطلب</message>
 	<message key="author.submit.nextSteps">الخطوة التالية</message>
-	<message key="author.submit.cancelSubmission">لك أن تكمل طلبك للنشر في موقعنا لاحقاً عبر الذهاب إلى (طلبات النشر قيد المعالجة) في صفحة دخول المؤلفين</message>
+	<message key="submission.submit.cancelSubmission">لك أن تكمل طلبك للنشر في موقعنا لاحقاً عبر الذهاب إلى (طلبات النشر قيد المعالجة) في صفحة دخول المؤلفين</message>
 	<message key="author.submit.notAccepting">النشر في هذه المجلة معلق حالياً</message>
 	<message key="author.submit.requestWaiver">إلتمس خصماً مالياً</message>
 	<message key="author.submit.qualifyForWaiver">لطفاً، خذ بنظر الاعتبار خصم رسوم النشر لهذه المقالة</message>
@@ -48,8 +48,6 @@
 	<message key="author.submissions.noSubmissions">لا توجد تقديمات</message>
 	<message key="author.submit.journalSection">قسم المجلة</message>
 	<message key="author.submit.journalSectionDescription"><![CDATA[إختر القسم الأنسب لطلب النشر هذا (أنظر الأقسام وسياسات النشر <a href="{$aboutUrl}" target="_new">في المجلة</a>)]]></message>
-	<message key="author.submit.submissionLocale">لغة طلب النشر</message>
-	<message key="author.submit.submissionLocaleDescription">هذه المجلة تتقبل طلبات النشر بعدة لغات. إختر لغة الطلب الأساسية من القائمة المنسدلة أدناه</message>
 	<message key="author.submit.verifyChecklist">عليك التأكد من أن كل فقرات نموذج التقديم تمت تلبيتها قبل المتابعة</message>
 	<message key="author.submit.copyrightNoticeAgree">المؤلف أو المؤلفون يوافقون على فقرات إشعار الحقوق الفكرية، والتي تنطبق على طلب النشر هذا إذا أو عند تحقق النشر عبر هذه المجلة (الملاحظات إلى هيئة التحرير يمكن إضافتها أدناه)</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">عليك أن توافق على فقرات إشعار الحقوق الفكرية لتتمكن من المتابعة</message>

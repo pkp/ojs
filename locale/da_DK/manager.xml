@@ -4,8 +4,8 @@
 <!--
   * locale/da_DK/manager.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the da_DK (Dansk) locale.
@@ -152,7 +152,7 @@
 	<message key="manager.setup.enablePublicGalleyId">Redigerbare identifikationsmarkører bruges til at identificere korrekturer (f.eks. HTML eller PDF filer) for publicerede elementer.</message>
 	<message key="manager.setup.enablePublicIssueId">Brugerdefinerede id'er benyttes til at identificere numre.</message>
 	<message key="manager.setup.enablePublicSuppFileId">Brugerdefinerede id'er benyttes til at identificere supplerende artikelfiler.</message>
-	<message key="manager.setup.enableUserRegistration">Brugere kan lade sig registrere hos tidsskriftet i en eller flere af følgende roller:</message>
+	<message key="manager.setup.enableUserRegistration">Brugere kan lade sig registrere hos tidsskriftet.</message>
 	<message key="manager.setup.focusAndScope">Fokus og område</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWork">Til forfattere til indeksering af deres værker</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWorkDescription"><![CDATA[OJS overholder protokollen <a href="http://www.openarchives.org/" target="_blank">Open Archives Initiative</a> Protocol for Metadata Harvesting, som er udviklingsstandarden for oprettelse af velindekseret adgang til elektroniske forskningsressourcer på et globalt plan. Forfatterne benytter en lignende skabelon til angivelse af metadata til deres manuskript. Tidsskriftschefen vælger de kategorier, der skal indekseres, og præsenterer forfatterne for relevante eksempler med henblik på at hjælpe dem med at indeksere deres værker. Termer adskilles med et semikolon (f.eks. term1; term2). Posterne skal introduceres som eksempler ved hjælp af "F.eks." eller "For eksempel".]]></message>
@@ -206,7 +206,7 @@
 	<message key="manager.setup.layoutTemplates.title">Titel</message>
 	<message key="manager.setup.lists">Lister</message>
 	<message key="manager.setup.listsDescription">Angiv det maksimale antal elementer (f.eks. manuskripter, brugere eller redigeringsopgaver), der skal vises på de enkelte sider på en liste, samt det antal sidelinks, der skal vises på hver side.</message>
-	<message key="manager.setup.lockssEnable"><![CDATA[Aktiver LOCKSS for at gemme og distribuere tidsskriftsindhold hos deltagende biblioteker via LOCKSS-siden <a href="{$lockssUrl}" target="_blank">Publisher Manifest</a>. Der vises en LOCKSS-licens under Om tidsskriftet under Arkiverer:]]></message>
+	<message key="manager.setup.lockssEnable"><![CDATA[Aktivér LOCKSS for at gemme og distribuere tidsskriftsindhold hos deltagende biblioteker via LOCKSS-siden <a href="{$lockssUrl}" target="_blank">Publisher Manifest</a>. Der vises en LOCKSS-licens under Om tidsskriftet under Arkiverer:]]></message>
 	<message key="manager.setup.lockssRegister"><![CDATA[Find 6-10 bibliotekarer, der skal registrere og gemme tidsskriftet. Tag f.eks. kontakt til institutioner, hvor redaktører eller udvalgsmedlemmer arbejder, og/eller institutioner, der allerede deltager i LOCKSS. Se <a href="http://lockss.stanford.edu/about/users.htm" target="_blank">participating libraries</a>. Brug de forberedte invitationer til (i) <a href="{$lockssExistingArchiveUrl}" target="_blank">biblioteker, der deltager i LOCKSS</a> eller (ii) <a href="{$lockssNewArchiveUrl}" target="_blank">biblioteker, der endnu ikke deltager i LOCKSS</a>.]]></message>
 	<message key="manager.setup.look">Udseende</message>
 	<message key="manager.setup.look.description">Sidehoved på startside, indhold, tidsskriftssidehoved, sidefod, navigationslinje og typografiark.</message>
@@ -239,7 +239,7 @@
 	<message key="manager.setup.publicationScheduling">Publiceringsplanlægning</message>
 	<message key="manager.setup.publicIdentifier">Identifikation af tidsskriftsindhold</message>
 	<message key="manager.setup.publisher">Forlægger</message>
-	<message key="manager.setup.publisherDescription">Navnet på den organisation, der publicerer tidsskriftet, vises under Om tidsskriftet.</message>
+	<message key="manager.setup.publisherDescription">Navnet på den organisation, der publicerer tidsskriftet, skal indgå i de metadata, der leveres til arkiver, søgeindeks og registreringstjenester som f.eks. CrossRef.</message>
 	<message key="manager.setup.referenceLinking">Angivelse af links til referencer</message>
 	<message key="manager.setup.refLinkInstructions.description">Layoutinstruktioner til Angivelse af links til referencer</message>
 	<message key="manager.setup.restrictArticleAccess">Brugere skal være registreret og logge på for at få vist Open Access-indhold.</message>
@@ -250,7 +250,7 @@ I begge tilfælde har redaktøren mulighed for at inkludere bedømmelseskommenta
 	<message key="manager.setup.reviewOptions">Bedømmelsesindstillinger</message>
 	<message key="manager.setup.reviewOptions.automatedReminders">Det er muligt at sende automatiske e-mail-påmindelser (tilgængelige i OJS-systemets standard-e-mails) til bedømmere på to tidspunkter (redaktøren kan desuden altid sende en e-mail direkte til bedømmeren)</message>
 	<message key="manager.setup.reviewOptions.automatedRemindersDisabled"><![CDATA[<strong>Bemærk!</strong> Hvis du vil aktivere disse indstillinger, skal webstedsadministratoren aktivere indstillingen <tt>scheduled_tasks</tt> i OJS-konfigurationsfilen. Understøttelse af denne funktionalitet (som eventuelt ikke er muligt på alle servere) kan kræve yderligere konfiguration af serveren som angivet i dokumentationen til OJS.]]></message>
-	<message key="manager.setup.reviewOptions.blindReview">Blindbedømmelse</message>
+	<message key="manager.setup.reviewOptions.blindReview">Blind review</message>
 	<message key="manager.setup.reviewOptions.numWeeksPerReview">Det normale tidsforbrug, der er tilladt til bedømmelser</message>
 	<message key="manager.setup.reviewOptions.onQuality">Redaktører klassificerer bedømmere på en fempunktskvalitetsskala efter hver bedømmelse.</message>
 	<message key="manager.setup.reviewOptions.restrictReviewerFileAccess">Bedømmere får kun adgang til manuskriptfilen, efter de har accepteret at bedømme den.</message>
@@ -259,7 +259,7 @@ I begge tilfælde har redaktøren mulighed for at inkludere bedømmelseskommenta
 	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"><![CDATA[<strong>Bemærk!:</strong> E-mail-invitationen til bedømmere indeholder en speciel URL-adresse, der sender de inviterede bedømmere direkte til siden Bedømmelse for manuskriptet (med adgang til andre sider, hvor de skal logge på). Af sikkerhedshensyn i forbindelse med denne indstilling kan redaktører ikke ændre e-mail-adresser eller tilføje CC'er eller BCC'er forud for afsendelse af invitationer til bedømmere.]]></message>
 	<message key="manager.setup.reviewOptions.reviewerRatings">Bedømmerklassificeringer</message>
 	<message key="manager.setup.reviewOptions.reviewerReminders">Påmindelser til bedømmere</message>
-	<message key="manager.setup.reviewOptions.showEnsuringLink"><![CDATA[Indeholder links til <a href="javascript:openHelp('{$blindReviewHelpId}')" class="action">Sikring af en blindbedømmelse</a> på sider, hvor forfattere og bedømmere overfører filer.]]></message>
+	<message key="manager.setup.reviewOptions.showEnsuringLink"><![CDATA[Indeholder links til <a href="javascript:openHelp('{$blindReviewHelpId}')" class="action">Sikring af blind review</a> på sider, hvor forfattere og bedømmere overfører filer.]]></message>
 	<message key="manager.setup.reviewPolicy">Bedømmelsespolitik</message>
 	<message key="manager.setup.searchEngineIndexing">Søgemaskineindeksering</message>
 	<message key="manager.setup.searchEngineIndexingDescription">Hjælp brugere af søgemaskiner med at finde dette tidsskrift ved at angive en kort beskrivelse af tidsskriftet samt relevante nøgleord (adskilt af semikolon).</message>
@@ -510,4 +510,83 @@ I begge tilfælde har redaktøren mulighed for at inkludere bedømmelseskommenta
 	<message key="manager.statistics.reports.filters.byContext.description">Indsnævre resultatet ud fra sammenhæng (nummer og/eller artikel)</message>
 	<message key="manager.statistics.reports.filters.byObject.description">Indsnævre resultatet ud fra elementtype (tidsskrift, nummer, artikel, pdf-format, andrepubliceringsformater) og/eller ud fra et eller flere element-id'er.</message>
 	<message key="manager.setup.copyrightYearBasis">Basér ny artikels ophavsretsår på</message>
+	<message key="manager.setup.contextName">Titel på tidsskrift</message>
+	<message key=""><![CDATA[]]></message>
+	<message key="manager.setup.journalSummary">Tidsskriftsbeskrivelse</message>
+	<message key="manager.setup.journalSummary.description">Tilføj en kort beskrivelse på 20-25 ord, der vises lige under tidsskriftets links på den fælles hjemmeside sammen med de øvrige tidsskrifter.</message>
+	<message key="manager.setup.masthead.description">Opret liste over redaktører, tidsskriftschefer og andre personer tilknyttet tidsskriftet.</message>
+	<message key="manager.setup.journalAbout">Om tidsskriftet</message>
+	<message key="manager.setup.journalAbout.description">Her indskrives alle de informationer, som kan være af interesse for læsere, forfattere eller bedømmere. Det gælder f.eks. tidsskriftets fokusområde, oplysninger om ophavsret, open access politik, en erklæring om beskyttelse af personlige oplysninger, tidsskriftets historie mm.</message>
+	<message key=""><![CDATA[]]></message>
+	<message key="manager.setup.masthead">Kolofon</message>
+	<message key="manager.setup.Issn">ISSN</message>
+	<message key="manager.website.archiving">Arkivering</message>
+	<message key="manager.setup.useStyleSheet">Style sheet til tidsskrift</message>
+	<message key="manager.setup.favicon">Favicon</message>
+	<message key="manager.setup.faviconDescription">Tilføj et favicon til dette tidsskrift. Det vises i navigationslinjen, når brugeren besøger jeres website.</message>
+	<message key="manager.setup.faviconInvalid">Ugyldigt format. Følgende fomater accepteres: .ico, .png og .gif.</message>
+	<message key="manager.setup.journalThumbnail.description">Et mindre tidsskrifts-logo, der kan figurere på den fælles indgangsside (sammen med de øvrige tidsskrifter).</message>
+	<message key="manager.publication.library">Forlagsbibliotek</message>
+	<message key="grid.genres.title.short">Materiale</message>
+	<message key="grid.genres.title">Artikelmateriale</message>
+	<message key="grid.action.addSection">Tilføj sektion</message>
+	<message key="manager.distribution.access">Adgang</message>
+	<message key="manager.setup.copyrightYearBasis.issue">Nummer: Det forud fastsatte årstal hentes fra nummerets publiceringsdato.</message>
+	<message key="manager.setup.copyrightYearBasis.article">Artikel: Det forud fastsatte årstal hentes fra artiklens publiceringsdato svarende til "publish-as-you-go".</message>
+	<message key="manager.setup.enableArchive">Aktivér arkivering</message>
+	<message key="manager.setup.clockssEnable"><![CDATA[Aktivér CLOCKSS for at gemme og distribuere tidsskriftsindhold hos deltagende biblioteker via CLOCKSS-siden <a href="{$clockssUrl}" target="_blank">Publisher Manifest</a> page.]]></message>
+	<message key="manager.setup.lockssTitle">LOCKSS</message>
+	<message key="manager.setup.clockssTitle">CLOCKSS</message>
+	<message key="manager.setup.clockssRegister"><![CDATA[Tilmelding til CLOCKSS sker via <a href="http://clockss.org/" target="_blank">the CLOCKSS website</a>.]]></message>
+	<message key="manager.section.noSectionEditors"><![CDATA[Der er endnu ikke valgt sektionsredaktør. Tilføj denne rolle til mindst én bruger via 'Brugere & roller']]></message>
+	<message key="manager.setup.homepageContent">Indhold på tidsskriftshjemmeside</message>
+	<message key="manager.setup.homepageContentDescription">Tidsskriftshjemmesiden består af en række standard navigationslinks. Yderligere hjemmesideindhold kan tilføjes ved at benytte én af eller alle de følgende muligheder, som vil fremkomme i den viste orden.</message>
+	<message key="manager.setup.layout">Tidsskrifts-layout</message>
+	<message key="manager.setup.pageHeader">Tidsskrifts-header</message>
+	<message key="manager.setup.focusAndScope.description">Beskriv over for forfattere, læsere og bibliotekarer omfanget af artikler og andet indhold som tidsskriftet vil udgive.</message>
+	<message key="manager.setup.form.issnInvalid">Det angivne ISSN er ikke gyldigt.</message>
+	<message key="manager.setup.includeCreativeCommons">Inkludér på passende tidspunkt, en Creative Commons licens i alt publiceret materiale for alle de tidsskrifter, der tilbyder direkte eller forsinket open access.</message>
+	<message key="manager.setup.journalThumbnail.altText">Alternativ tekst til miniaturebillede</message>
+	<message key="manager.setup.lockssLicenseLabel">LOCKSS licensbeskrivelse</message>
+	<message key="manager.setup.lockssLicenseDescription"><![CDATA[En LOCKSS licens vil fremtræde i afsnittet 'Om tidsskriftet' under arkivering: <a href="http://www.lockss.org/community/publishers-titles-gln/" target="_blank">LOCKSS License</a>]]></message>
+	<message key="manager.setup.clockssLicenseDescription"><![CDATA[En CLOCKSS licens vil fremtræde i afsnittet 'Om tidsskriftet' under arkivering: <a href="http://clockss.org/" target="_blank">CLOCKSS License</a>]]></message>
+	<message key="manager.setup.clockssLicenseLabel">CLOCKSS licensbeskrivelse</message>
+	<message key="manager.statistics.reports.defaultReport.issuePageViews">Issue table of contents page views</message>
+	<message key="manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid">Anvend det givne afkrydsningsfelt.</message>
+	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths1">Underret abonnenter via e-mail</message>
+	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths2">måned(er) efter abonnementsophør</message>
+	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths1">Underret abonnenter via e-mail</message>
+	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths2">måned(er) før abonnementsudløb.</message>
+	<message key="grid.category.path">Sti</message>
+	<message key="manager.setup.section.description">Et tidsskrifts artikler er som oftest organiseret i sektioner, typisk som tema eller indholdstype (f.eks. Anmeldelser, Forskning osv.)</message>
+	<message key="settings.roles.gridDescription">Roller er tidsskriftets brugergrupper, der hver især har forskellige adgangsrettigheder, og som er tilknyttet tidsskriftets workflow. Der er fem forskellige adgangsniveauer: Tidsskriftschefer har adgang til alt i tidsskriftet (alt indhold og alle indstillinger). Sektionsredaktører har fuld adgang til alt indhold. Tidsskriftsassistenter har begrænset adgang til det indsendte materiale, der eksplicit er blevet tildelt dem af en redaktør. Bedømmere kan se og arbejde med de indsendelser, de er blevet sat til at bedømme, og forfattere kan se og interagere i forhold til en begrænset del af de informationer, der løbende knyttes til deres egne indsendelser. Derudover er der fem forskellige trin i workflowet, som roller kan tildeles adgang til: Indsendelse, intern bedømmelse, bedømmelse, redigering og produktion.</message>
+	<message key="grid.genres.description">Disse elementer bruges til filbeskrivelse og præsenteres i en dropdown-menu i forbindelse med upload af filer. Elementer (genre) mærket ## tillader brugere at forbinde filen med enten hele indsendelsen 99Z eller en specifik nummereret del (f.eks. 02)</message>
+	<message key="manager.setup.resetPermissions.confirm">Er du sikker på, at du vil nulstille de adgangstilladelser, der er knyttet til artikler?</message>
+	<message key="plugins.importexport.common.settings">Indstillinger</message>
+	<message key="plugins.importexport.common.settings.DOIPluginSettings">DOI-plugin-indstillinger</message>
+	<message key="plugins.importexport.common.export.articles">Artikler</message>
+	<message key="plugins.importexport.common.export.issues">Numre</message>
+	<message key="plugins.importexport.common.export.representations">Publiceringsversioner</message>
+	<message key="plugins.importexport.common.missingRequirements">Plugin-krav ikke efterkommet</message>
+	<message key="plugins.importexport.common.error.DOIsNotAvailable">For at tage dette plug-in i brug skal du under "Public Identifier" plug-in-kategorien, aktivere og konfigurere DOI plug-in'en og angive et gyldigt præfix.</message>
+	<message key="plugins.importexport.common.error.pluginNotConfigured">Plug-in'en er ikke indstillet fuldt ud.</message>
+	<message key="plugins.importexport.common.error.noDOIContentObjects">Der er ikke valgt publiceringselementer i forbindelse med DOI-tildeling under DOI public indentifier plug-in'en, så der er ingen deponerings- eller eksportmuligheder i dette plug-in.</message>
+	<message key="plugins.importexport.common.settings.form.password">Adgangskode</message>
+	<message key="plugins.importexport.common.settings.form.password.description">Bemærk: Adgangskoden gemmes i klartekst dvs. ikke-krypteret.</message>
+	<message key="plugins.importexport.common.filter.issue">Ethvert nummer</message>
+	<message key="plugins.importexport.common.status.any">Enhver status</message>
+	<message key="plugins.importexport.common.status.notDeposited">Ikke deponeret</message>
+	<message key="plugins.importexport.common.status.markedRegistered">Markeret registreret</message>
+	<message key="plugins.importexport.common.status.registered">Registreret</message>
+	<message key="plugins.importexport.common.action">Aktion</message>
+	<message key="plugins.importexport.common.action.export">Eksport</message>
+	<message key="plugins.importexport.common.action.markRegistered">Markér registreret</message>
+	<message key="plugins.importexport.common.action.register">Registrér</message>
+	<message key="plugins.importexport.common.error.noObjectsSelected">Der er ikke valgt element.</message>
+	<message key="plugins.importexport.common.error.validation">Kunne ikke konvertere de valgte elementer.</message>
+	<message key="plugins.importexport.common.invalidXML">Ugyldig XML:</message>
+	<message key="plugins.importexport.common.export.error.outputFileNotWritable">Produktfilen {$param} er ikke skrivbar.</message>
+	<message key="plugins.importexport.common.register.error.mdsError">Registreringen blev ikke gennemført! DOI-registreringsserveren sendte en fejlmelding: '{$param}'.</message>
+	<message key="plugins.importexport.common.register.success">Registrering gennemført!</message>
+	<message key="plugins.importexport.common.senderTask.warning.noDOIprefix">DOI-præfikset mangler for tidsskriftet med stien {$path}.</message>
 </locale>

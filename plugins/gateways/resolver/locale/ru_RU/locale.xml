@@ -4,17 +4,16 @@
 <!--
   * plugins/gateways/resolver/locale/ru_RU/locale.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Localization strings for the ru_RU (Русский) locale.
-  *
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Russian_(ru_RU)
+  * Localization strings.
   -->
  
 <locale name="ru_RU" full_name="Русский">
-	<message key="plugins.gateways.resolver.displayName">Модуль Идентификации</message>
-	<message key="plugins.gateways.resolver.description">Этот модуль идентифицирует выпуски и статьи на основании информации в ссылках.</message>
-	<message key="plugins.gateways.resolver.errors.errorMessage">Указанной в ссылке информации недостаточно для получения уникального ответа. Пожалуйста убедитесь, что ссылка полна и относится к статье, опубликованной на данном сервере.</message>
-	<message key="plugins.gateways.resolver.exportHoldings">Export Holdings</message>
+	<message key="plugins.gateways.resolver.displayName">Модуль «Разбор ссылок»</message>
+	<message key="plugins.gateways.resolver.description">Определяет выпуски и статьи, опираясь на информацию в библографической ссылке.</message>
+	<message key="plugins.gateways.resolver.errors.errorMessage">Указанной в библиографической ссылке информации недостаточно для определения конкретного материала. Пожалуйста убедитесь, что информация библиографической ссылки полна и указывает на материал в этой инсталляции OJS.</message>
+	<message key="plugins.gateways.resolver.exportHoldings">Экспортировать результаты</message>
 </locale>

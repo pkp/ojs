@@ -3,8 +3,8 @@
 /**
  * @file classes/template/TemplateManager.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class TemplateManager
@@ -25,8 +25,8 @@ class TemplateManager extends PKPTemplateManager {
 	 * Initialize template engine and assign basic template variables.
 	 * @param $request PKPRequest
 	 */
-	function TemplateManager($request) {
-		parent::PKPTemplateManager($request);
+	function __construct($request) {
+		parent::__construct($request);
 
 		if (!defined('SESSION_DISABLE_INIT')) {
 			/**
@@ -70,22 +70,21 @@ class TemplateManager extends PKPTemplateManager {
 			}
 			if (isset($context)) {
 
-				$this->assign('currentJournal', $context);
-				$this->assign('siteTitle', $context->getLocalizedName());
-				$this->assign('publicFilesDir', $request->getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($context->getId()));
-
-				$this->assign('primaryLocale', $context->getPrimaryLocale());
-				$this->assign('supportedLocales', $context->getSupportedLocaleNames());
-
-				// Assign page header
-				$this->assign('displayPageHeaderTitle', $context->getLocalizedPageHeaderTitle());
-				$this->assign('displayPageHeaderLogo', $context->getLocalizedPageHeaderLogo());
-				$this->assign('displayPageHeaderLogoAltText', $context->getLocalizedSetting('pageHeaderLogoImageAltText'));
-				$this->assign('numPageLinks', $context->getSetting('numPageLinks'));
-				$this->assign('itemsPerPage', $context->getSetting('itemsPerPage'));
-				$this->assign('enableAnnouncements', $context->getSetting('enableAnnouncements'));
-				$this->assign('contextSettings', $context->getSettingsDAO()->getSettings($context->getId()));
-				$this->assign('disableUserReg', $context->getSetting('disableUserReg'));
+				$this->assign(array(
+					'currentJournal' => $context,
+					'siteTitle' => $context->getLocalizedName(),
+					'publicFilesDir' => $request->getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($context->getId()),
+					'primaryLocale' => $context->getPrimaryLocale(),
+					'supportedLocales' => $context->getSupportedLocaleNames(),
+					'displayPageHeaderTitle' => $context->getLocalizedPageHeaderTitle(),
+					'displayPageHeaderLogo' => $context->getLocalizedPageHeaderLogo(),
+					'displayPageHeaderLogoAltText' => $context->getLocalizedSetting('pageHeaderLogoImageAltText'),
+					'numPageLinks' => $context->getSetting('numPageLinks'),
+					'itemsPerPage' => $context->getSetting('itemsPerPage'),
+					'enableAnnouncements' => $context->getSetting('enableAnnouncements'),
+					'contextSettings' => $context->getSettingsDAO()->getSettings($context->getId()),
+					'disableUserReg' => $context->getSetting('disableUserReg'),
+				));
 
 				// Assign meta tags
 				$favicon = $context->getLocalizedFavicon();
@@ -118,13 +117,27 @@ class TemplateManager extends PKPTemplateManager {
 				$this->assign('journalPaymentsEnabled', $paymentManager->isConfigured());
 				$this->assign('pageFooter', $context->getLocalizedSetting('pageFooter'));
 			} else {
-				// Add the site-wide logo, if set for this locale or the primary locale
-				$this->assign('displayPageHeaderTitle', $site->getLocalizedPageHeaderTitle());
-				$this->assign('displayPageHeaderLogo', $site->getLocalizedSetting('pageHeaderTitleImage'));
+				// Check if registration is open for any contexts
+				$contextDao = Application::getContextDAO();
+				$contexts = $contextDao->getAll(true)->toArray();
+				$contextsForRegistration = array();
+				foreach($contexts as $context) {
+					if (!$context->getSetting('disableUserReg')) {
+						$contextsForRegistration[] = $context;
+					}
+				}
 
-				$this->assign('siteTitle', $site->getLocalizedTitle());
-				$this->assign('primaryLocale', $site->getPrimaryLocale());
-				$this->assign('supportedLocales', $site->getSupportedLocaleNames());
+				$this->assign(array(
+					'contexts' => $contextsForRegistration,
+					'disableUserReg' => empty($contextsForRegistration),
+					'displayPageHeaderTitle' => $site->getLocalizedPageHeaderTitle(),
+					'displayPageHeaderLogo' => $site->getLocalizedSetting('pageHeaderTitleImage'),
+					'siteTitle' => $site->getLocalizedTitle(),
+					'primaryLocale' => $site->getPrimaryLocale(),
+					'supportedLocales' => $site->getSupportedLocaleNames(),
+					'pageFooter' => $site->getLocalizedSetting('pageFooter'),
+				));
+
 			}
 		}
 	}

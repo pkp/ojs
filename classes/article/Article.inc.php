@@ -9,8 +9,8 @@
 /**
  * @file classes/article/Article.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class Article
@@ -31,8 +31,8 @@ class Article extends Submission {
 	/**
 	 * Constructor.
 	 */
-	function Article() {
-		parent::Submission();
+	function __construct() {
+		parent::__construct();
 	}
 
 
@@ -196,22 +196,6 @@ class Article extends Submission {
 	}
 
 	/**
-	 * Get current review round.
-	 * @return int
-	 */
-	function getCurrentRound() {
-		return $this->getData('currentRound');
-	}
-
-	/**
-	 * Set current review round.
-	 * @param $currentRound int
-	 */
-	function setCurrentRound($currentRound) {
-		return $this->setData('currentRound', $currentRound);
-	}
-
-	/**
 	 * get expedited
 	 * @return boolean
 	 */
@@ -228,21 +212,74 @@ class Article extends Submission {
 	}
 
 	/**
-	 * Get starting page of an article.
-	 * @return int
+	 * Get the localized cover page server-side file name
+	 * @return string
 	 */
-	function getStartingPage() {
-		preg_match('/^[^\d]*(\d+)\D*(.*)$/', $this->getPages(), $pages);
-		return $pages[1];
+	function getLocalizedCoverImage() {
+		return $this->getLocalizedData('coverImage');
 	}
 
 	/**
-	 * Get ending page of an article.
-	 * @return int
+	 * get cover page server-side file name
+	 * @param $locale string
+	 * @return string
 	 */
-	function getEndingPage() {
-		preg_match('/^[^\d]*(\d+)\D*(.*)$/', $this->getPages(), $pages);
-		return $pages[2];
+	function getCoverImage($locale) {
+		return $this->getData('coverImage', $locale);
+	}
+
+	/**
+	 * set cover page server-side file name
+	 * @param $coverImage string
+	 * @param $locale string
+	 */
+	function setCoverImage($coverImage, $locale) {
+		$this->setData('coverImage', $coverImage, $locale);
+	}
+
+	/**
+	 * Get the localized cover page alternate text
+	 * @return string
+	 */
+	function getLocalizedCoverImageAltText() {
+		return $this->getLocalizedData('coverImageAltText');
+	}
+
+	/**
+	 * get cover page alternate text
+	 * @param $locale string
+	 * @return string
+	 */
+	function getCoverImageAltText($locale) {
+		return $this->getData('coverImageAltText', $locale);
+	}
+
+	/**
+	 * set cover page alternate text
+	 * @param $coverImageAltText string
+	 * @param $locale string
+	 */
+	function setCoverImageAltText($coverImageAltText, $locale) {
+		$this->setData('coverImageAltText', $coverImageAltText, $locale);
+	}
+
+	/**
+	 * Get a full URL to the localized cover image
+	 *
+	 * @return string
+	 */
+	function getLocalizedCoverImageUrl() {
+		$coverImage = $this->getLocalizedCoverImage();
+		if (!$coverImage) {
+			return '';
+		}
+
+		$request = Application::getRequest();
+
+		import('classes.file.PublicFileManager');
+		$publicFileManager = new PublicFileManager();
+
+		return $request->getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($this->getContextId()) . '/' . $coverImage;
 	}
 }
 

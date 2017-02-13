@@ -1,10 +1,10 @@
-	=================================
+	===================================
 	=== Open Journal Systems
 	=== The Public Knowledge Project
-	=== Version: 3.0
-	=== GIT tag: ojs-3_0_0-0
-	=== Release date: August 31, 2016
-	=================================
+	=== Version: 3.0.2
+	=== GIT tag: ojs-3_0_2-0
+	=== Release date: February 1, 2017
+	===================================
 
 
 About
@@ -176,6 +176,14 @@ Third-party Libraries
 	* See lib/pkp/lib/libraries.txt for a list of third-party libraries
 	  used by OJS.
 
+	* OJS supports the legacy GeoLiteCite database to approximate geolocation
+	  information for usage statistics. If you would like to use this optional
+	  functionality, you can download the database from MaxMind at:
+	  http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz
+	  You will need to decompress the file and place "GeoLiteCity.dat" into
+	  the "plugins/generic/usageStats" directory. A separate license agreement
+	  is required for this use of this database. For details, see:
+	  https://dev.maxmind.com/geoip/legacy/geolite/
 
 Contact/Support
 ---------------

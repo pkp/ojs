@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/crossref/CrossRefExportPlugin.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class CrossRefExportPlugin
@@ -40,8 +40,8 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 	/**
 	 * Constructor
 	 */
-	function CrossRefExportPlugin() {
-		parent::DOIPubIdExportPlugin();
+	function __construct() {
+		parent::__construct();
 	}
 
 	/**
@@ -134,14 +134,14 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 	}
 
 	/**
-	 * @copydoc PubObjectsExportPlugin::getPluginSettingsPrefix()
+	 * @copydoc ImportExportPlugin::getPluginSettingsPrefix()
 	 */
 	function getPluginSettingsPrefix() {
 		return 'crossref';
 	}
 
 	/**
-	 * @copydoc DOIPubIdExportPlugin::getSettingsFormClassName()
+	 * @copydoc PubObjectsExportPlugin::getSettingsFormClassName()
 	 */
 	function getSettingsFormClassName() {
 		return 'CrossRefSettingsForm';
@@ -181,7 +181,7 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 	}
 
 	/**
-	 * @copydoc DOIPubIdExportPlugin::depositXML()
+	 * @copydoc PubObjectsExportPlugin::depositXML()
 	 */
 	function depositXML($objects, $context, $filename) {
 		$curlCh = curl_init();
@@ -258,10 +258,13 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 		$doi = urlencode($object->getStoredPubId('doi'));
 		$params = 'filter=doi:' . $doi ;
 
+		// Use a different endpoint for testing and
+		// production.
+		$endpoint = ($this->isTestMode($context) ? CROSSREF_API_URL_DEV : CROSSREF_API_URL);
 		curl_setopt(
 			$curlCh,
 			CURLOPT_URL,
-			CROSSREF_API_URL . (strpos(CROSSREF_API_URL,'?')===false?'?':'&') . $params
+			$endpoint . (strpos($endpoint,'?')===false?'?':'&') . $params
 		);
 		// try to fetch from the new API
 		$response = curl_exec($curlCh);

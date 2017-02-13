@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/htmlArticleGalley/HtmlArticleGalleyPlugin.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class HtmlArticleGalleyPlugin
@@ -22,7 +22,8 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 	function register($category, $path) {
 		if (parent::register($category, $path)) {
 			if ($this->getEnabled()) {
-				HookRegistry::register('ArticleHandler::view::galley', array($this, 'articleCallback'));
+				HookRegistry::register('ArticleHandler::view::galley', array($this, 'articleViewCallback'));
+				HookRegistry::register('ArticleHandler::download', array($this, 'articleDownloadCallback'));
 			}
 			return true;
 		}
@@ -53,29 +54,56 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 	}
 
 	/**
-	 * Callback to insert CSS style sheets into the article header.
+	 * Present the article wrapper page.
 	 * @param string $hookName
 	 * @param array $args
 	 */
-	function articleCallback($hookName, $args) {
+	function articleViewCallback($hookName, $args) {
 		$request =& $args[0];
 		$issue =& $args[1];
 		$galley =& $args[2];
 		$article =& $args[3];
 
-		$templateMgr = TemplateManager::getManager($request);
 		if ($galley && $galley->getFileType() == 'text/html') {
+			$templateMgr = TemplateManager::getManager($request);
+			$templateMgr->addStyleSheet(
+				'htmlArticleGalleyStyles',
+				$request->getBaseUrl() . '/plugins/generic/htmlArticleGalley/display.css',
+				array(
+					'priority' => STYLE_SEQUENCE_CORE,
+					'contexts' => 'frontend',
+				)
+			);
 			$templateMgr->assign(array(
-				'pluginTemplatePath' => $this->getTemplatePath(),
-				'pluginUrl' => $request->getBaseUrl() . '/' . $this->getPluginPath(),
-				'galleyFile' => $galley->getFile(),
 				'issue' => $issue,
 				'article' => $article,
 				'galley' => $galley,
-				'htmlGalleyContents' => $this->_getHTMLContents($request, $galley),
 			));
 			$templateMgr->display($this->getTemplatePath() . '/display.tpl');
 
+			return true;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Present rewritten article HTML.
+	 * @param string $hookName
+	 * @param array $args
+	 */
+	function articleDownloadCallback($hookName, $args) {
+		$article =& $args[0];
+		$galley =& $args[1];
+		$fileId =& $args[2];
+		$request = Application::getRequest();
+
+		if ($galley && $galley->getFileType() == 'text/html' && $galley->getFileId() == $fileId) {
+			if (!HookRegistry::call('HtmlArticleGalleyPlugin::articleDownload', array($article,  &$galley, &$fileId))) {
+				echo $this->_getHtmlContents($request, $galley);
+				$returner = true;
+				HookRegistry::call('HtmlArticleGalleyPlugin::articleDownloadFinished', array(&$returner));
+			}
 			return true;
 		}
 
@@ -99,40 +127,50 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 		import('lib.pkp.classes.submission.SubmissionFile'); // Constants
 		$embeddableFiles = array_merge(
 			$submissionFileDao->getLatestRevisions($submissionFile->getSubmissionId(), SUBMISSION_FILE_PROOF),
-			$submissionFileDao->getLatestRevisions($submissionFile->getSubmissionId(), SUBMISSION_FILE_DEPENDENT)
+			$submissionFileDao->getLatestRevisionsByAssocId(ASSOC_TYPE_SUBMISSION_FILE, $submissionFile->getFileId(), $submissionFile->getSubmissionId(), SUBMISSION_FILE_DEPENDENT)
 		);
+		$referredArticle = null;
+		$articleDao = DAORegistry::getDAO('ArticleDAO');
 
 		foreach ($embeddableFiles as $embeddableFile) {
-			$fileUrl = $request->url(null, 'article', 'download', array($galley->getSubmissionId(), $galley->getBestGalleyId($journal), $embeddableFile->getFileId()));
+			$params = array();
+
+			if ($embeddableFile->getFileType()=='text/plain' || $embeddableFile->getFileType()=='text/css') $params['inline']='true';
+
+			// Ensure that the $referredArticle object refers to the article we want
+			if (!$referredArticle || $referredArticle->getId() != $galley->getSubmissionId()) {
+				$referredArticle = $articleDao->getById($galley->getSubmissionId());
+			}
+			$fileUrl = $request->url(null, 'article', 'download', array($referredArticle->getBestArticleId(), $galley->getBestGalleyId(), $embeddableFile->getFileId()), $params);
 			$pattern = preg_quote($embeddableFile->getOriginalFileName());
 
 			$contents = preg_replace(
-					'/([Ss][Rr][Cc]|[Hh][Rr][Ee][Ff]|[Dd][Aa][Tt][Aa])\s*=\s*"([^"]*' . $pattern . ')"/',
-					'\1="' . $fileUrl . '"',
-					$contents
+				'/([Ss][Rr][Cc]|[Hh][Rr][Ee][Ff]|[Dd][Aa][Tt][Aa])\s*=\s*"([^"]*' . $pattern . ')"/',
+				'\1="' . $fileUrl . '"',
+				$contents
 			);
 
 			// Replacement for Flowplayer
 			$contents = preg_replace(
-					'/[Uu][Rr][Ll]\s*\:\s*\'(' . $pattern . ')\'/',
-					'url:\'' . $fileUrl . '\'',
-					$contents
+				'/[Uu][Rr][Ll]\s*\:\s*\'(' . $pattern . ')\'/',
+				'url:\'' . $fileUrl . '\'',
+				$contents
 			);
 
 			// Replacement for other players (ested with odeo; yahoo and google player won't work w/ OJS URLs, might work for others)
 			$contents = preg_replace(
-					'/[Uu][Rr][Ll]=([^"]*' . $pattern . ')/',
-					'url=' . $fileUrl ,
-					$contents
+				'/[Uu][Rr][Ll]=([^"]*' . $pattern . ')/',
+				'url=' . $fileUrl ,
+				$contents
 			);
 
 		}
 
 		// Perform replacement for ojs://... URLs
 		$contents = preg_replace_callback(
-				'/(<[^<>]*")[Oo][Jj][Ss]:\/\/([^"]+)("[^<>]*>)/',
-				array(&$this, '_handleOjsUrl'),
-				$contents
+			'/(<[^<>]*")[Oo][Jj][Ss]:\/\/([^"]+)("[^<>]*>)/',
+			array($this, '_handleOjsUrl'),
+			$contents
 		);
 
 		// Perform variable replacement for journal, issue, site info
@@ -143,10 +181,10 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 		$site = $request->getSite();
 
 		$paramArray = array(
-				'issueTitle' => $issue?$issue->getIssueIdentification():__('editor.article.scheduleForPublication.toBeAssigned'),
-				'journalTitle' => $journal->getLocalizedName(),
-				'siteTitle' => $site->getLocalizedTitle(),
-				'currentUrl' => $request->getRequestUrl()
+			'issueTitle' => $issue?$issue->getIssueIdentification():__('editor.article.scheduleForPublication.toBeAssigned'),
+			'journalTitle' => $journal->getLocalizedName(),
+			'siteTitle' => $site->getLocalizedTitle(),
+			'currentUrl' => $request->getRequestUrl()
 		);
 
 		foreach ($paramArray as $key => $value) {

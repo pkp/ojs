@@ -3,8 +3,8 @@
 /**
  * @file plugins/reports/articles/ArticleReportPlugin.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ArticleReportPlugin
@@ -76,10 +76,10 @@ class ArticleReportPlugin extends ReportPlugin {
 		import('classes.article.Article');
 		import('classes.workflow.EditorDecisionActionsManager');
 		$decisionMessages = array(
-			SUBMISSION_EDITOR_DECISION_ACCEPT => __('editor.article.decision.accept'),
-			SUBMISSION_EDITOR_DECISION_PENDING_REVISIONS => __('editor.article.decision.pendingRevisions'),
-			SUBMISSION_EDITOR_DECISION_RESUBMIT => __('editor.article.decision.resubmit'),
-			SUBMISSION_EDITOR_DECISION_DECLINE => __('editor.article.decision.decline'),
+			SUBMISSION_EDITOR_DECISION_ACCEPT => __('editor.submission.decision.accept'),
+			SUBMISSION_EDITOR_DECISION_PENDING_REVISIONS => __('editor.submission.decision.pendingRevisions'),
+			SUBMISSION_EDITOR_DECISION_RESUBMIT => __('editor.submission.decision.resubmit'),
+			SUBMISSION_EDITOR_DECISION_DECLINE => __('editor.submission.decision.decline'),
 			null => __('plugins.reports.articles.nodecision')
 		);
 

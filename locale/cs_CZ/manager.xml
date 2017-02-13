@@ -4,8 +4,8 @@
 <!--
   * locale/cs_CZ/manager.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization strings for the cs_CZ (Čeština) locale.
   * locale information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Czech_%28cs_CZ%29
@@ -87,7 +87,6 @@
 	<message key="manager.sections.form.mustAllowPermission">Ujistěte se, prosím, že je zaškrtnuté alespoň jedno políčko pro každý úkol editora sekce.</message>
 	<message key="manager.sections.form.reviewFormId">Ujistěte se prosím, že jste vybral platný formulář posudku.</message>
 	<message key="manager.sections.form.titleRequired">Je vyžadován název pro tuto sekci.</message>
-	<message key="manager.sections.hideAbout">Vypustit tuto sekci z "O časopisu".</message>
 	<message key="manager.sections.hideTocAuthor">Vypustit jména autorů pro položky sekce z obsahu čísla.</message>
 	<message key="manager.sections.hideTocTitle">Vypustit název této sekce z obsahu čísla.</message>
 	<message key="manager.sections.identifyType">Pro účely sběru metadat označte každou položku v této sekci jako</message>
@@ -147,11 +146,7 @@
 	<message key="manager.setup.enableAnnouncements">Umožnit manažerům časopisu přidávat oznámení časopisu.</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">Zobrazit</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">z nejnovějších oznámení na domácí stránce časopisu.</message>
-	<message key="manager.setup.enablePageNumber">Čísla stránek pro položky budou spočítána a ručně vložena do obsahu časopisu (např., ss. 13-26).</message>
-	<message key="manager.setup.enablePublicArticleId">Pro identifikaci publikovaných položek budou použity uživatelské identifikátory.</message>
-	<message key="manager.setup.enablePublicGalleyId">Pro identifikaci sazebnic (např. HTML nebo PDF souborů) publikovaných položek budou použity uživatelské identifikátory.</message>
 	<message key="manager.setup.enablePublicIssueId">Pro identifikaci čísel časopisu budou použity uživatelské identifikátory.</message>
-	<message key="manager.setup.enablePublicSuppFileId">Pro identifikaci doplňkových souborů článku budou použity uživatelské identifikátory.</message>
 	<message key="manager.setup.enableUserRegistration">Uživatelé se mohou do časopisu registrovat v jedné nebo více z následujících rolí:</message>
 	<message key="manager.setup.focusAndScope">Zaměření a záběr</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWork">Autorům pro indexaci jejich práce</message>
@@ -489,7 +484,7 @@
 	<message key="manager.subscriptionTypes.form.individual">Individuální (uživatelé jsou ověřování pomocí přihlášení)</message>
 	<message key="manager.sections.confirmDelete">Jste si jisti, že chcete natrvalo vymazat tuto sekci?</message>
 	<message key="manager.sections.alertDelete">Než budete moci smazat tuto sekci, musíte přesunout všechny články z této sekce do jiných sekcí.</message>
-	<message key="manager.statistics.reports.today">Dnes</message>
+
 	<message key="manager.setup.resetPermissions">Resetovat práva k článku</message>
 	<message key="manager.setup.journalThumbnail">Náhled časopisu</message>
 	<message key="manager.setup.useThumbnail">Náhled</message>

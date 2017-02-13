@@ -4,8 +4,8 @@
 <!--
   * locale/pt_BR/author.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Portuguese_(pt_BR)
   * Localization strings.
@@ -30,7 +30,7 @@
 	<message key="author.submit.metadata">Inclusão de metadados</message>
 	<message key="author.submit.supplementaryFiles">Transferência de documentos suplementares</message>
 	<message key="author.submit.confirmation">Confirmação</message>
-	<message key="author.submit.cancelSubmission">A submissão pode ser concluída em uma data posterior, clicando em Submissões Ativas nas opções da sua página de autor.</message>
+	<message key="submission.submit.cancelSubmission">A submissão pode ser concluída em uma data posterior, clicando em Submissões Ativas nas opções da sua página de autor.</message>
 	<message key="author.submit.notAccepting">A revista não está aceitando submissões neste momento.</message>
 	<message key="author.submit.requestWaiver">Solicitar isenção de taxas</message>
 	<message key="author.submit.qualifyForWaiver">Solicito considerar isenção de Taxa de Submissão para este artigo</message>
@@ -116,8 +116,6 @@
 	<message key="author.submissions.queuedEditingProofread">Em edição: Leitura de provas solicitada</message>
 	<message key="author.submit.reorder">Reordenar nome do autor</message>
 	<message key="author.submit.form.wordCountAlert">O limite de palavras para resumos desta seção foi excedido.</message>
-	<message key="author.submit.submissionLocale">Idioma da submissão</message>
 	<message key="author.submit.form.localeRequired">Escolha um idioma para a submissão.</message>
-	<message key="author.submit.submissionLocaleDescription">Este periódico aceita submissões em vários idiomas. Escolha o idioma principal da submissão a partir do menu dropdown a seguir.</message>
 	<message key="author.submit.nextSteps">Próximos Passos</message>
 </locale>

@@ -8,8 +8,8 @@
 /**
  * @file classes/issue/Issue.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class Issue
@@ -345,35 +345,74 @@ class Issue extends DataObject {
 	}
 
 	/**
-	 * Get issue cover image file name
+	 * Get the localized issue cover image file name
 	 * @return string
 	 */
-	function getCoverImage() {
-		return $this->getData('coverImage');
+	function getLocalizedCoverImage() {
+		return $this->getLocalizedData('coverImage');
+	}
+
+	/**
+	 * Get issue cover image file name
+	 * @param $locale string
+	 * @return string
+	 */
+	function getCoverImage($locale) {
+		return $this->getData('coverImage', $locale);
 	}
 
 	/**
 	 * Set issue cover image file name
 	 * @param $coverImage string
+	 * @param $locale string
 	 */
-	function setCoverImage($coverImage) {
-		return $this->setData('coverImage', $coverImage);
+	function setCoverImage($coverImage, $locale) {
+		return $this->setData('coverImage', $coverImage, $locale);
+	}
+
+	/**
+	 * Get the localized issue cover image alternate text
+	 * @return string
+	 */
+	function getLocalizedCoverImageAltText() {
+		return $this->getLocalizedData('coverImageAltText');
 	}
 
 	/**
 	 * Get issue cover image alternate text
+	 * @param $locale string
 	 * @return string
 	 */
-	function getCoverImageAltText() {
-		return $this->getData('coverImageAltText');
+	function getCoverImageAltText($locale) {
+		return $this->getData('coverImageAltText', $locale);
+	}
+
+	/**
+	 * Get a full URL to the localized cover image
+	 *
+	 * @return string
+	 */
+	function getLocalizedCoverImageUrl() {
+		$coverImage = $this->getLocalizedCoverImage();
+		if (!$coverImage) {
+			return '';
+		}
+
+		$request = Application::getRequest();
+
+		import('classes.file.PublicFileManager');
+		$publicFileManager = new PublicFileManager();
+
+		return $request->getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($this->getJournalId()) . '/' . $coverImage;
 	}
 
 	/**
 	 * Set issue cover image alternate text
 	 * @param $coverImageAltText string
+	 * @param $locale string
 	 */
-	function setCoverImageAltText($coverImageAltText) {
-		return $this->setData('coverImageAltText', $coverImageAltText);
+	function setCoverImageAltText($coverImageAltText, $locale) {
+		return $this->setData('coverImageAltText', $coverImageAltText, $locale);
 	}
 
 	/**

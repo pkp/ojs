@@ -3,8 +3,8 @@
 /**
  * @file pages/index/IndexHandler.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IndexHandler
@@ -19,8 +19,8 @@ class IndexHandler extends Handler {
 	/**
 	 * Constructor
 	 */
-	function IndexHandler() {
-		parent::Handler();
+	function __construct() {
+		parent::__construct();
 	}
 
 	/**
@@ -50,10 +50,12 @@ class IndexHandler extends Handler {
 		$templateMgr = TemplateManager::getManager($request);
 		if ($journal) {
 			// Assign header and content for home page
-			$templateMgr->assign('additionalHomeContent', $journal->getLocalizedSetting('additionalHomeContent'));
-			$templateMgr->assign('homepageImage', $journal->getLocalizedSetting('homepageImage'));
-			$templateMgr->assign('homepageImageAltText', $journal->getLocalizedSetting('homepageImageAltText'));
-			$templateMgr->assign('journalDescription', $journal->getLocalizedSetting('description'));
+			$templateMgr->assign(array(
+				'additionalHomeContent' => $journal->getLocalizedSetting('additionalHomeContent'),
+				'homepageImage' => $journal->getLocalizedSetting('homepageImage'),
+				'homepageImageAltText' => $journal->getLocalizedSetting('homepageImageAltText'),
+				'journalDescription' => $journal->getLocalizedSetting('description'),
+			));
 
 			$issueDao = DAORegistry::getDAO('IssueDAO');
 			$issue = $issueDao->getCurrent($journal->getId(), true);

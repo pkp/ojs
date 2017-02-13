@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/usageEvent/UsageEventPlugin.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class UsageEventPlugin
@@ -27,7 +27,18 @@ class UsageEventPlugin extends PKPUsageEventPlugin {
 	function getEventHooks() {
 		return array_merge(parent::getEventHooks(), array(
 			'ArticleHandler::download',
-			'IssueHandler::download'
+			'IssueHandler::download',
+			'HtmlArticleGalleyPlugin::articleDownload',
+			'HtmlArticleGalleyPlugin::articleDownloadFinished'
+		));
+	}
+
+	/**
+	 * @copydoc PKPUsageEventPlugin::getDownloadFinishedEventHooks()
+	 */
+	protected function getDownloadFinishedEventHooks() {
+		return array_merge(parent::getDownloadFinishedEventHooks(), array(
+			'HtmlArticleGalleyPlugin::articleDownloadFinished'
 		));
 	}
 
@@ -59,7 +70,7 @@ class UsageEventPlugin extends PKPUsageEventPlugin {
 
 					$journal = $templateMgr->get_template_vars('currentContext');
 					$issue = $templateMgr->get_template_vars('issue');
-					$publishedArticle = $templateMgr->get_template_vars('publishedArticle');
+					$publishedArticle = $templateMgr->get_template_vars('article');
 
 					// No published objects, no usage event.
 					if (!$journal && !$issue && !$publishedArticle) break;
@@ -102,10 +113,13 @@ class UsageEventPlugin extends PKPUsageEventPlugin {
 
 					// Article file.
 				case 'ArticleHandler::download':
+				case 'HtmlArticleGalleyPlugin::articleDownload':
 					$assocType = ASSOC_TYPE_SUBMISSION_FILE;
 					$article = $hookArgs[0];
 					$galley = $hookArgs[1];
 					$fileId = $hookArgs[2];
+					// if file is not a gallay file (e.g. CSS or images), there is no usage event.
+					if ($galley->getFileId() != $fileId) return false;
 					$canonicalUrlOp = 'download';
 					$canonicalUrlParams = array($article->getId(), $galley->getId(), $fileId);
 					$idParams = array('a' . $article->getId(), 'g' . $galley->getId(), 'f' . $fileId);

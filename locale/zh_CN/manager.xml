@@ -4,8 +4,8 @@
 <!--
   * locale/zh_CN/manager.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings.
@@ -87,7 +87,6 @@
 	<message key="manager.sections.form.mustAllowPermission">请确认至少有一个选项已经选取，便于栏目编辑指派</message>
 	<message key="manager.sections.form.reviewFormId">请确认您已经选择一个有效的审稿表单</message>
 	<message key="manager.sections.form.titleRequired">此栏目需要一个标题。</message>
-	<message key="manager.sections.hideAbout">在关于期刊里忽略这个栏目</message>
 	<message key="manager.sections.hideTocAuthor">在目录里忽略作者姓名</message>
 	<message key="manager.sections.hideTocTitle">从这些期数的目录删掉本栏目的标题。</message>
 	<message key="manager.sections.identifyType">为了元数据的缘故，请指订此文稿类型中的每个项目为一个</message>
@@ -151,11 +150,7 @@
 	<message key="manager.setup.enableAnnouncements">让期刊管理员可以增加期刊公告。</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">显示</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">之期刊首页最近公告。</message>
-	<message key="manager.setup.enablePageNumber">项目页码将会以手动方式填入目录里(例如：页 13-26)。</message>
-	<message key="manager.setup.enablePublicArticleId">自订的识别码将会被用来识别出版项目。</message>
-	<message key="manager.setup.enablePublicGalleyId">自订的识别码将会被用来识别出版项目的版面。（如HTML或者PDF格式文件）</message>
 	<message key="manager.setup.enablePublicIssueId">自订的识别码将会被用来识别期数。</message>
-	<message key="manager.setup.enablePublicSuppFileId">自订的识别码将会被用来识别论文的补充文件。</message>
 	<message key="manager.setup.enableUserRegistration">允设用户在本期刊网站注册为：</message>
 	<message key="manager.setup.focusAndScope">焦点和范围</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWork">为作者作品建立索引</message>
@@ -482,7 +477,7 @@
 	<message key="manager.setup.categories.description">从上面的设置列表中选择最合适的类别。读者将能够从完整的期刊设置中依靠分类进行浏览。</message>
 	<message key="manager.statistics.reports.defaultReport.articleAbstract">文章摘要页面浏览量</message>
 	<message key="manager.statistics.reports.defaultReport.articleAbstractAndDownloads">文章摘要和下载</message>
-	<message key="manager.statistics.reports.today">今日</message>
+
 	<message key="manager.setup.resetPermissions">重设文章权限</message>
 	<message key="manager.statistics.reports.defaultReport.articleDownloads">文章文件下载</message>
 	<message key="manager.statistics.reports.defaultReport.journalIndexPageViews">期刊主要页面访问量</message>

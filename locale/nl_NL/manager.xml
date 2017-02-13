@@ -4,8 +4,8 @@
 <!--
   * locale/nl_NL/manager.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the nl_NL (Nederlands) locale.
@@ -86,7 +86,6 @@
 	<message key="manager.sections.form.mustAllowPermission">Verzeker u ervan dat tenminste één aankruisvak is aangekruist voor iedere sectieredacteurstaak</message>
 	<message key="manager.sections.form.reviewFormId">Verzeker u ervan dat u een geldig reviewformulier heb gekozen.</message>
 	<message key="manager.sections.form.titleRequired">Een titel voor de sectie is verplicht.</message>
-	<message key="manager.sections.hideAbout">Deze sectie weglaten bij Over dit tijdschrift.</message>
 	<message key="manager.sections.hideTocAuthor">Auteursnamen weglaten bij de secties van de inhoudsopgave van het nummer.</message>
 	<message key="manager.sections.hideTocTitle">De titel van deze sectie niet opnemen in de inhoudsopgave van dit nummer.</message>
 	<message key="manager.sections.identifyType">Identificeer publicaties in deze sectie als a(n)</message>
@@ -146,11 +145,7 @@
 	<message key="manager.setup.enableAnnouncements">Geef tijdschriftbeheerders de mogelijkheid om nieuwsberichten bij het tijdschrift te plaatsen</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">Toon</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">van de nieuwste berichten op de homepage van het tijdschrift</message>
-	<message key="manager.setup.enablePageNumber">Paginanummers worden handmatig opgenomen in de inhoudsopgave (bv. 13-26).</message>
-	<message key="manager.setup.enablePublicArticleId">Er worden aangepaste identificaties gebruikt voor het identificeren van gepubliceerde artikelen.</message>
-	<message key="manager.setup.enablePublicGalleyId">Aangepaste identificaties gebruiken voor het identificeren van proefdrukken (bv. HTML of PDF bestanden) van gepubliceerde artikelen</message>
 	<message key="manager.setup.enablePublicIssueId">Er worden aangepaste identificaties gebruikt voor het identificeren van nummers.</message>
-	<message key="manager.setup.enablePublicSuppFileId">Er worden aangepaste identificaties gebruikt voor het identificeren van aanvullende bestanden die bij artikelen horen.</message>
 	<message key="manager.setup.enableUserRegistration">Gebruikers kunnen zichzelf registreren bij het tijdschrift in een of meer van de volgende rollen:</message>
 	<message key="manager.setup.focusAndScope">Focus en missie</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWork">Voor auteurs ter indexering van hun werk</message>
@@ -497,7 +492,7 @@
 	<message key="manager.sections.alertDelete">Voordat u deze sectie kunt verwijderen, moet u de erin gepubliceerde artikelen verplaatsen naar andere secties.</message>
 	<message key="manager.setup.categories.description">Kies de meest toepasselijke categorieën uit de hierboven getoonde set. Lezers kunnen op categorie door de tijdschriften bladeren.</message>
 	<message key="manager.payment.giftFees">Gift kosten</message>
-	<message key="manager.statistics.reports.today">Vandaag</message>
+
 	<message key="manager.setup.resetPermissions">Artikel-toestemmingen terugzetten</message>
 	<message key="manager.setup.resetPermissions.description">Het copyright statement en de licentie-informatie zullen permanent gekoppeld zijn aan de gepubliceerde inhoud, wat garandeert dat deze informatie niet wijzigt als het tijdschrift zijn beleid voor nieuwe inzendingen zou wijzigen. Klik op de knop hieronder om de reeds opgeslagen toestemmingen te terug te zetten</message>
 	<message key="manager.statistics.defaultMetricDescription">Uw tijdschrift is geconfigureerd voor meer dan een gebruiksmeting Gebruiksstatistieken zullen getoond worden in verschillende contexten.

@@ -3,8 +3,8 @@
 /**
  * @file tools/genEmailUpdates.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class genEmailUpdates
@@ -28,8 +28,8 @@ class genEmailUpdates extends CommandLineTool {
 	 * @param $argv array command-line arguments
 	 * 	If specified, the first argument should be the file to parse
 	 */
-	function genEmailUpdates($argv = array()) {
-		parent::CommandLineTool($argv);
+	function __construct($argv = array()) {
+		parent::__construct($argv);
 
 		if (count($argv) != 3) {
 			$this->usage();

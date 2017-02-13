@@ -4,8 +4,8 @@
 <!--
   * locale/cs_CZ/author.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization strings for the cs_CZ (Čeština) locale.
   * locale information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Czech_%28cs_CZ%29
@@ -26,7 +26,7 @@
 	<message key="author.submit.start">Zahájení</message>
 	<message key="author.submit.supplementaryFiles">Nahrát doplňkové soubory</message>
 	<message key="author.submit.confirmation">Potvrzení</message>
-	<message key="author.submit.cancelSubmission">Odeslání tohoto příspěvku můžete dokončit později tím, že na domácí sránce pro autora vyberete Aktivní příspěvky.</message>
+	<message key="submission.submit.cancelSubmission">Odeslání tohoto příspěvku můžete dokončit později tím, že na domácí sránce pro autora vyberete Aktivní příspěvky.</message>
 	<message key="author.submit.notAccepting">Tento časopis aktuálně nepřijímá příspěvky.</message>
 	<message key="author.submit.requestWaiver">Požádat o prominutí</message>
 	<message key="author.submit.qualifyForWaiver">Zvažte, prosím, prominutí platby poplatku za zaslání příspěvku pro tento článek</message>
@@ -116,8 +116,6 @@
 	<message key="author.submissions.queuedEditingProofread">Redakční úpravy: Vyžádána korektura</message>
 	<message key="author.submit.reorder">Přeuspořádat jméno autora</message>
 	<message key="author.submit.form.wordCountAlert">Překročil jste maximální limit slov pro abstrakt v této sekci.</message>
-	<message key="author.submit.submissionLocale">Jazyk příspěvku</message>
-	<message key="author.submit.submissionLocaleDescription">Tento časopis přijímá příspěvky v několika jazycích. Zvolte si primární jazyk vašeho příspěvku z následujícího rozbalovacícho menu.</message>
 	<message key="author.submit.form.localeRequired">Zvolte si, prosím, jazyk příspěvku.</message>
 	<message key="author.submit.submissionIndexingDescription">Doplňte, prosím, klíčová slova pro indexování příspěvku: oddělte jednotlivá klíčová slova středníkem (klíčové slovo1; klíčové slovo 2; klíčové slovo 3)</message>
 </locale>

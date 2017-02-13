@@ -4,8 +4,8 @@
 <!--
   * locale/sr_SR/manager.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the sr_SR (Cрпски) locale.
@@ -19,7 +19,7 @@
 	<message key="manager.setup.resetPermissions">Vrati na početno stanje dozvole u vezi članka.</message>
 	<message key="manager.setup.journalThumbnail">Mala slika časopisa</message>
 	<message key="manager.setup.useThumbnail">Mala slika</message>
-	<message key="manager.statistics.reports.today">Danas</message>
+
 	<message key="manager.setup.categories">Kategorije</message>
 	<message key="manager.payment.giftFees">Cene poklona</message>
 	<message key="manager.payment.giftFeesDescription">Veza na poklonjenu pretplatu će se pojaviti na strani za pretplatu u delu O časopisu u delu bočnog bloka za pretplate.</message>

@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/crossref/filter/IssueCrossrefXmlFilter.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2000-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2000-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IssueCrossrefXmlFilter
@@ -20,9 +20,9 @@ class IssueCrossrefXmlFilter extends NativeExportFilter {
 	 * Constructor
 	 * @param $filterGroup FilterGroup
 	 */
-	function ArticleCrossrefXmlFilter($filterGroup) {
+	function __construct($filterGroup) {
 		$this->setDisplayName('Crossref XML issue export');
-		parent::NativeExportFilter($filterGroup);
+		parent::__construct($filterGroup);
 	}
 
 	//
@@ -99,7 +99,7 @@ class IssueCrossrefXmlFilter extends NativeExportFilter {
 		$context = $deployment->getContext();
 		$plugin = $deployment->getPlugin();
 		$headNode = $doc->createElementNS($deployment->getNamespace(), 'head');
-		$headNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'doi_batch_id', $context->getSetting('initials', $context->getPrimaryLocale()) . '_' . time()));
+		$headNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'doi_batch_id', htmlspecialchars($context->getSetting('initials', $context->getPrimaryLocale()) . '_' . time(), ENT_COMPAT, 'UTF-8')));
 		$headNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'timestamp', time()));
 		$depositorNode = $doc->createElementNS($deployment->getNamespace(), 'depositor');
 		$depositorName = $plugin->getSetting($context->getId(), 'depositorName');
@@ -110,11 +110,11 @@ class IssueCrossrefXmlFilter extends NativeExportFilter {
 		if (empty($depositorEmail)) {
 			$depositorEmail = $context->getSetting('supportEmail');
 		}
-		$depositorNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'depositor_name', $depositorName));
-		$depositorNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'email_address', $depositorEmail));
+		$depositorNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'depositor_name', htmlspecialchars($depositorName, ENT_COMPAT, 'UTF-8')));
+		$depositorNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'email_address', htmlspecialchars($depositorEmail, ENT_COMPAT, 'UTF-8')));
 		$headNode->appendChild($depositorNode);
 		$publisherInstitution = $context->getSetting('publisherInstitution');
-		$headNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'registrant', $publisherInstitution));
+		$headNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'registrant', htmlspecialchars($publisherInstitution, ENT_COMPAT, 'UTF-8')));
 		return $headNode;
 	}
 
@@ -148,13 +148,13 @@ class IssueCrossrefXmlFilter extends NativeExportFilter {
 		if ($journalTitle == '') {
 			$journalTitle = $context->getSetting('abbreviation', $context->getPrimaryLocale());
 		}
-		$journalMetadataNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'full_title', $journalTitle));
+		$journalMetadataNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'full_title', htmlspecialchars($journalTitle, ENT_COMPAT, 'UTF-8')));
 		/* Abbreviated title - defaulting to initials if no abbreviation found */
 		$journalAbbrev = $context->getSetting('abbreviation', $context->getPrimaryLocale());
 		if ( $journalAbbrev == '' ) {
 			$journalAbbrev = $context->getSetting('acronym', $context->getPrimaryLocale());
 		}
-		$journalMetadataNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'abbrev_title', $journalAbbrev));
+		$journalMetadataNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'abbrev_title', htmlspecialchars($journalAbbrev, ENT_COMPAT, 'UTF-8')));
 		/* Both ISSNs are permitted for CrossRef, so sending whichever one (or both) */
 		if ($ISSN = $context->getSetting('onlineIssn') ) {
 			$journalMetadataNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'issn', $ISSN));
@@ -183,16 +183,16 @@ class IssueCrossrefXmlFilter extends NativeExportFilter {
 		if ($issue->getDatePublished()) {
 			$journalIssueNode->appendChild($this->createPublicationDateNode($doc, $issue->getDatePublished()));
 		}
-		if ($issue->getVolume()){
+		if ($issue->getVolume() && $issue->getShowVolume()){
 			$journalVolumeNode = $doc->createElementNS($deployment->getNamespace(), 'journal_volume');
-			$journalVolumeNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'volume', $issue->getVolume()));
+			$journalVolumeNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'volume', htmlspecialchars($issue->getVolume(), ENT_COMPAT, 'UTF-8')));
 			$journalIssueNode->appendChild($journalVolumeNode);
 		}
-		if ($issue->getNumber()) {
-			$journalIssueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'issue', $issue->getNumber()));
+		if ($issue->getNumber() && $issue->getShowNumber()) {
+			$journalIssueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'issue', htmlspecialchars($issue->getNumber(), ENT_COMPAT, 'UTF-8')));
 		}
 		if ($issue->getDatePublished() && $issue->getStoredPubId('doi')) {
-			$journalIssueNode->appendChild($this->createDOIDataNode($doc, $issue->getStoredPubId('doi'), Request::url($context->getPath(), 'issue', 'view', $issue->getBestIssueId($context))));
+			$journalIssueNode->appendChild($this->createDOIDataNode($doc, $issue->getStoredPubId('doi'), Request::url($context->getPath(), 'issue', 'view', $issue->getBestIssueId($context), null, null, true)));
 		}
 		return $journalIssueNode;
 	}
@@ -228,7 +228,7 @@ class IssueCrossrefXmlFilter extends NativeExportFilter {
 	function createDOIDataNode($doc, $doi, $url) {
 		$deployment = $this->getDeployment();
 		$doiDataNode = $doc->createElementNS($deployment->getNamespace(), 'doi_data');
-		$doiDataNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'doi', $doi));
+		$doiDataNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'doi', htmlspecialchars($doi, ENT_COMPAT, 'UTF-8')));
 		$doiDataNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'resource', $url));
 		return $doiDataNode;
 	}

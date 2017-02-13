@@ -1,8 +1,8 @@
 {**
  * plugins/generic/webFeed/templates/rss.tpl
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * RSS feed template
@@ -97,8 +97,8 @@
 				<dc:date>{$article->getDatePublished()|date_format:"%Y-%m-%d"}</dc:date>
 				<prism:publicationDate>{$article->getDatePublished()|date_format:"%Y-%m-%d"}</prism:publicationDate>
 			{/if}
-			{if $issue->getVolume()}<prism:volume>{$issue->getVolume()|escape}</prism:volume>{/if}
-			{if $issue->getNumber()}<prism:number>{$issue->getNumber()|escape}</prism:number>{/if}
+			{if $issue->getVolume() && $issue->getShowVolume()}<prism:volume>{$issue->getVolume()|escape}</prism:volume>{/if}
+			{if $issue->getNumber() && $issue->getShowNumber()}<prism:number>{$issue->getNumber()|escape}</prism:number>{/if}
 
 			{if $article->getPages()}
 				{if $article->getStartingPage()}

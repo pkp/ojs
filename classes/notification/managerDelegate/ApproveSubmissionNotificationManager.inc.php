@@ -3,8 +3,8 @@
 /**
  * @file classes/notification/managerDelegate/ApproveSubmissionNotificationManager.inc.php
  *
- * Copyright (c) 2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2016-2017 Simon Fraser University Library
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ApproveSubmissionNotificationManager
@@ -22,8 +22,8 @@ class ApproveSubmissionNotificationManager extends PKPApproveSubmissionNotificat
 	 * Constructor.
 	 * @param $notificationType int NOTIFICATION_TYPE_...
 	 */
-	function ApproveSubmissionNotificationManager($notificationType) {
-		parent::PKPApproveSubmissionNotificationManager($notificationType);
+	function __construct($notificationType) {
+		parent::__construct($notificationType);
 	}
 
 	/**

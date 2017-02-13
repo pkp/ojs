@@ -4,8 +4,8 @@
 <!--
   * locale/zh_CN/locale.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings.
@@ -306,16 +306,6 @@
 	<!-- Reader Comments -->
 	<message key="comments.commentsOnArticle">这篇文章的评论</message>
 	<message key="comments.authenticated"><![CDATA[通过 <a href="{$publicProfileUrl}" target="_parent">{$userName}</a>]]></message>
-
-	<!-- Site Administration -->
-
-	<message key="admin.settings.oaiRegistrationDescription"><![CDATA[为了让这个网站的所有期刊内容可以让一个全球发行的研究数据库检索，请将您网站的网址(url)<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">注册</a>到Public Knowledge Project的元数据<a href="http://pkp.sfu.ca/harvester/" target="_blank">收集器</a> 。该工具将会收集期刊中每个检索项目的元数据，以便精确和集中搜寻每个隶属于<a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">为收集元数据而设的开放文件初始协议</a>的研究网站。
-<br /><br />
-<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">点击这里</a>并且输入 <span class="highlight">{$siteUrl}</span>在<strong>网站网址</strong>，和 <span class="highlight">{$oaiUrl}</span>在<strong>供「公开文件柜索引」(OAI)的基础网址</strong>。
-<br /><br />
-藉由修改开放期刊系统的配置，请注意开放存档检索界面可以被关闭。未来开放期刊系统的版本将会允设一个网站的各别期刊可以配置开启或关闭OAI系统。]]></message>
-
-
 
 	<!-- Languages -->
 	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>从PKP网站下载的语言包暂时不被支持，原因如下:</p>

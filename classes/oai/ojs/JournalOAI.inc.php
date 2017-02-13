@@ -3,8 +3,8 @@
 /**
  * @file classes/oai/ojs/JournalOAI.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class JournalOAI
@@ -36,8 +36,8 @@ class JournalOAI extends OAI {
 	/**
 	 * @copydoc OAI::OAI()
 	 */
-	function JournalOAI($config) {
-		parent::OAI($config);
+	function __construct($config) {
+		parent::__construct($config);
 
 		$this->site = Request::getSite();
 		$this->journal = Request::getJournal();

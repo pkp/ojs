@@ -4,8 +4,8 @@
 <!--
   * plugins/importexport/doaj/filter/filterConfig.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Filter Configuration.
@@ -19,6 +19,13 @@
 			description="plugins.importexport.doaj.description"
 			inputType="class::classes.article.Article[]"
 			outputType="xml::schema(plugins/importexport/doaj/doajArticles.xsd)" />
+		<!-- DOAJ JSON article output -->
+		<filterGroup
+			symbolic="article=>doaj-json"
+			displayName="plugins.importexport.doaj.displayName"
+			description="plugins.importexport.doaj.description"
+			inputType="class::classes.article.Article[]"
+			outputType="primitive::string" />
 	</filterGroups>
 	<filters>
 		<!-- DOAJ XML article output -->
@@ -26,5 +33,10 @@
 			inGroup="article=>doaj-xml"
 			class="plugins.importexport.doaj.filter.DOAJXmlFilter"
 			isTemplate="0" />
+		<!-- DOAJ JSON article output -->
+		<filter
+			inGroup="article=>doaj-json"
+			class="plugins.importexport.doaj.filter.DOAJJsonFilter"
+			isTemplate="0" />	
 	</filters>
 </filterConfig>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/oaiMetadataFormats/nlm/locale/ru_RU/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Russian_(ru_RU)
+  * Localization strings.
+  -->
+ 
+<locale name="ru_RU" full_name="Русский">
+	<message key="plugins.oaiMetadata.nlm.displayName">Модуль «Формат метаданных NLM»</message>
+	<message key="plugins.oaiMetadata.nlm.description">Структурирует метаданные таким образом, чтобы они соответствовали формату NLM Journal Article.</message>
+</locale>

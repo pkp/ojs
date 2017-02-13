@@ -4,8 +4,8 @@
 <!--
   * locale/es_ES/emailTemplates.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * https://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_(es_ES)
   * Localized email templates XML file.
@@ -177,6 +177,20 @@ Si tiene cualquier pregunta no dude en contactar con nosotros/as. Gracias por te
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Este correo, cuando está activado, se envía automáticamente a un/a autor/a when cuando completa el proceso de envío de un manuscrito a la revista. Proporciona información para hacer el seguimiento del envío a través del proceso y agradece la contribución.</description>
+	</email_text>
+	<email_text key="SUBMISSION_ACK">
+		<subject>Acuse de recibo del envío</subject>
+		<body><![CDATA[{$authorName}:<br />
+<br />
+Gracias por enviar el manuscrito &quot;{$submissionTitle}&quot; a {$contextName}. Con el sistema de gestión de publicaciones en línea que utilizamos podrá seguir el progreso a través del proceso editorial tras iniciar sesión en el sitio web de la publicación:<br />
+<br />
+URL del manuscrito: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Nombre de usuario/a: {$authorUsername}<br />
+<br />
+Si tiene alguna duda puede ponerse en contacto conmigo. Gracias por elegir esta editorial para mostrar su trabajo.<br />
+<br />
+{$editorialContactSignature}]]></body>
+		<description>Este correo electrónico, si está activado, se envía automáticamente a un autor/a cuando completa el proceso de envío de un manuscrito a la editorial. Proporciona información sobre el seguimiento del envío en el proceso y agradece al autor/a el envío.</description>
 	</email_text>
 	<email_text key="SUBMISSION_UNSUITABLE">
 		<subject>Envío rechazado</subject>

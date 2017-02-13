@@ -4,8 +4,8 @@
 <!--
   * locale/zh_CN/editor.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings.
@@ -150,10 +150,6 @@
 	<message key="editor.article.assignEditor">添加编辑</message>
 	<message key="editor.article.selectEditor">选择 {$roleName}</message>
 	<message key="editor.article.selectDecision">选择决定</message>
-	<message key="editor.article.decision.accept">接受投稿</message>
-	<message key="editor.article.decision.pendingRevisions">必要的修订</message>
-	<message key="editor.article.decision.resubmit">重新提交审阅</message>
-	<message key="editor.article.decision.decline">拒绝投稿</message>
 	<message key="editor.article.selectLayoutEditor">选择布局编辑</message>
 	<message key="editor.article.replaceLayoutEditor">替换布局编辑</message>
 	<message key="editor.article.reviewSubmission">审阅投稿</message>

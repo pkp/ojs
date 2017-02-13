@@ -3,8 +3,8 @@
 /**
  * @file classes/subscription/form/InstitutionalSubscriptionForm.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class InstitutionalSubscriptionForm
@@ -18,11 +18,11 @@ import('classes.subscription.form.SubscriptionForm');
 class InstitutionalSubscriptionForm extends SubscriptionForm {
 	/**
 	 * Constructor
-	 * @param subscriptionId int leave as default for new subscription
+	 * @param $subscriptionId int leave as default for new subscription
+	 * @param $userId int?
 	 */
-	function InstitutionalSubscriptionForm($subscriptionId = null, $userId = null) {
-		parent::Form('subscription/institutionalSubscriptionForm.tpl');
-		parent::SubscriptionForm($subscriptionId, $userId);
+	function __construct($subscriptionId = null, $userId = null) {
+		parent::__construct('subscription/institutionalSubscriptionForm.tpl', $subscriptionId, $userId);
 
 		$subscriptionId = isset($subscriptionId) ? (int) $subscriptionId : null;
 		$userId = isset($userId) ? (int) $userId : null;

@@ -3,8 +3,8 @@
 /**
  * @file controllers/grid/articleGalleys/ArticleGalleyGridCellProvider.inc.php
  *
- * Copyright (c) 2016 Simon Fraser University Library
- * Copyright (c) 2000-2016 John Willinsky
+ * Copyright (c) 2016-2017 Simon Fraser University Library
+ * Copyright (c) 2000-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ArticleGalleyGridCellProvider
@@ -24,8 +24,8 @@ class ArticleGalleyGridCellProvider extends DataObjectGridCellProvider {
 	 * Constructor
 	 * @param $submission Submission
 	 */
-	function ArticleGalleyGridCellProvider($submission) {
-		parent::DataObjectGridCellProvider();
+	function __construct($submission) {
+		parent::__construct();
 		$this->_submission = $submission;
 	}
 

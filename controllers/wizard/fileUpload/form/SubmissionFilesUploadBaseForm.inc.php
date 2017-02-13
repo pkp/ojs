@@ -3,8 +3,8 @@
 /**
  * @file controllers/wizard/fileUpload/form/SubmissionFilesUploadBaseForm.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SubmissionFilesUploadBaseForm
@@ -29,9 +29,9 @@ class SubmissionFilesUploadBaseForm extends PKPSubmissionFilesUploadBaseForm {
 	 * @param $reviewRound ReviewRound
 	 * @param $revisedFileId integer
 	 */
-	function SubmissionFilesUploadBaseForm($request, $template, $submissionId, $stageId, $fileStage,
+	function __construct($request, $template, $submissionId, $stageId, $fileStage,
 			$revisionOnly = false, $reviewRound = null, $revisedFileId = null, $assocType = null, $assocId = null) {
-		parent::PKPSubmissionFilesUploadBaseForm($request, $template, $submissionId, $stageId, $fileStage,
+		parent::__construct($request, $template, $submissionId, $stageId, $fileStage,
 				$revisionOnly, $reviewRound, $revisedFileId, $assocType, $assocId);
 	}
 

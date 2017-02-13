@@ -3,8 +3,8 @@
 <!--
   * locale/ca_ES/editor.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Credits: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_(ca_ES)
@@ -169,10 +169,6 @@
 	<message key="editor.article.assignEditor">Afegeix un editor/a</message>
 	<message key="editor.article.selectEditor">Selecciona {$roleName}</message>
 	<message key="editor.article.selectDecision">Selecciona una decisió</message>
-	<message key="editor.article.decision.accept">Accepta la tramesa</message>
-	<message key="editor.article.decision.pendingRevisions">Calen revisions</message>
-	<message key="editor.article.decision.resubmit">Torna-ho a trametre per a revisió</message>
-	<message key="editor.article.decision.decline">Rebutja la tramesa</message>
 	<message key="editor.article.selectLayoutEditor">Selecciona un maquetista</message>
 	<message key="editor.article.replaceLayoutEditor">Reemplaça el maquetista</message>
 	<message key="editor.article.reviewSubmission">Revisa la tramesa</message>

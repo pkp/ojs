@@ -3,8 +3,8 @@
 /**
  * @file controllers/grid/issues/form/IssueForm.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IssueForm
@@ -24,8 +24,8 @@ class IssueForm extends Form {
 	/**
 	 * Constructor.
 	 */
-	function IssueForm($issue = null) {
-		parent::Form('controllers/grid/issues/form/issueForm.tpl');
+	function __construct($issue = null) {
+		parent::__construct('controllers/grid/issues/form/issueForm.tpl');
 		$this->addCheck(new FormValidatorCustom($this, 'showVolume', 'optional', 'editor.issues.volumeRequired', create_function('$showVolume, $form', 'return !$showVolume || $form->getData(\'volume\') ? true : false;'), array($this)));
 		$this->addCheck(new FormValidatorCustom($this, 'showNumber', 'optional', 'editor.issues.numberRequired', create_function('$showNumber, $form', 'return !$showNumber || $form->getData(\'number\') ? true : false;'), array($this)));
 		$this->addCheck(new FormValidatorCustom($this, 'showYear', 'optional', 'editor.issues.yearRequired', create_function('$showYear, $form', 'return !$showYear || $form->getData(\'year\') ? true : false;'), array($this)));
@@ -55,8 +55,8 @@ class IssueForm extends Form {
 		$templateMgr->assign('enableDelayedOpenAccess', $journal->getSetting('enableDelayedOpenAccess'));
 
 		$templateMgr->assign('accessOptions', array(
-			ISSUE_ACCESS_OPEN => AppLocale::Translate('editor.issues.openAccess'),
-			ISSUE_ACCESS_SUBSCRIPTION => AppLocale::Translate('editor.issues.subscription')
+			ISSUE_ACCESS_OPEN => __('editor.issues.openAccess'),
+			ISSUE_ACCESS_SUBSCRIPTION => __('editor.issues.subscription')
 		));
 
 		if ($this->issue) {
@@ -65,8 +65,8 @@ class IssueForm extends Form {
 		}
 
 		// Cover image preview
-		$coverImage = null;
-		if ($this->issue) $coverImage = $this->issue->getCoverImage();
+		$locale = AppLocale::getLocale();
+		$coverImage = $this->issue ? $this->issue->getCoverImage($locale) : null;
 
 		// Cover image delete link action
 		if ($coverImage) {
@@ -119,6 +119,7 @@ class IssueForm extends Form {
 	 */
 	function initData($request) {
 		if (isset($this->issue)) {
+			$locale = AppLocale::getLocale();
 			$this->_data = array(
 				'title' => $this->issue->getTitle(null), // Localized
 				'volume' => $this->issue->getVolume(),
@@ -132,8 +133,8 @@ class IssueForm extends Form {
 				'showNumber' => $this->issue->getShowNumber(),
 				'showYear' => $this->issue->getShowYear(),
 				'showTitle' => $this->issue->getShowTitle(),
-				'coverImage' => $this->issue->getCoverImage(),
-				'coverImageAltText' => $this->issue->getCoverImageAltText(),
+				'coverImage' => $this->issue->getCoverImage($locale),
+				'coverImageAltText' => $this->issue->getCoverImageAltText($locale),
 			);
 			parent::initData();
 		} else {
@@ -231,6 +232,7 @@ class IssueForm extends Form {
 			$issueDao->insertObject($issue);
 		}
 
+		$locale = AppLocale::getLocale();
 		// Copy an uploaded cover file for the issue, if there is one.
 		if ($temporaryFileId = $this->getData('temporaryFileId')) {
 			$user = $request->getUser();
@@ -239,14 +241,14 @@ class IssueForm extends Form {
 
 			import('classes.file.PublicFileManager');
 			$publicFileManager = new PublicFileManager();
-			$newFileName = 'cover_issue_' . $issue->getId() . $publicFileManager->getImageExtension($temporaryFile->getFileType());
+			$newFileName = 'cover_issue_' . $issue->getId() . '_' . $locale . $publicFileManager->getImageExtension($temporaryFile->getFileType());
 			$journal = $request->getJournal();
 			$publicFileManager->copyJournalFile($journal->getId(), $temporaryFile->getFilePath(), $newFileName);
-			$issue->setCoverImage($newFileName);
+			$issue->setCoverImage($newFileName, $locale);
 			$issueDao->updateObject($issue);
 		}
 
-		$issue->setCoverImageAltText($this->getData('coverImageAltText'));
+		$issue->setCoverImageAltText($this->getData('coverImageAltText'), $locale);
 
 		parent::execute();
 		$issueDao->updateObject($issue);

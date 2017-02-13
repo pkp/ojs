@@ -4,8 +4,8 @@
 <!--
   * locale/cs_CZ/editor.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization strings for the cs_CZ (Čeština) locale.
   * locale information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Czech_%28cs_CZ%29
@@ -145,10 +145,6 @@
 	<message key="editor.article.assignEditor">Přidat editora</message>
 	<message key="editor.article.selectEditor">Zvolit {$roleName}</message>
 	<message key="editor.article.selectDecision">Vybrat rozhodnutí</message>
-	<message key="editor.article.decision.accept">Přijmout příspěvek</message>
-	<message key="editor.article.decision.pendingRevisions">Požadovat přepracování (malé změny)</message>
-	<message key="editor.article.decision.resubmit">Znovu předložit k recenzi</message>
-	<message key="editor.article.decision.decline">Odmítnout příspěvek</message>
 	<message key="editor.article.selectLayoutEditor">Zvolit typografa</message>
 	<message key="editor.article.replaceLayoutEditor">Nahradit typografa</message>
 	<message key="editor.article.reviewSubmission">Recenzovat příspěvek</message>

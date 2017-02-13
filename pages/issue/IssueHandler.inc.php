@@ -3,8 +3,8 @@
 /**
  * @file pages/issue/IssueHandler.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IssueHandler
@@ -23,8 +23,8 @@ class IssueHandler extends Handler {
 	/**
 	 * Constructor
 	 **/
-	function IssueHandler() {
-		parent::Handler();
+	function __construct() {
+		parent::__construct();
 	}
 
 	/**
@@ -126,14 +126,8 @@ class IssueHandler extends Handler {
 	 */
 	function archive($args, $request) {
 		$this->setupTemplate($request);
-		$journal = $request->getJournal();
-
 		$templateMgr = TemplateManager::getManager($request);
-		import('classes.file.PublicFileManager');
-		$publicFileManager = new PublicFileManager();
-		$coverImagePath = $request->getBaseUrl() . '/';
-		$coverImagePath .= $publicFileManager->getJournalFilesPath($journal->getId()) . '/';
-		$templateMgr->assign('coverImagePath', $coverImagePath);
+		$journal = $request->getJournal();
 
 		$rangeInfo = $this->getRangeInfo($request, 'issues');
 		$issueDao = DAORegistry::getDAO('IssueDAO');
@@ -286,10 +280,7 @@ class IssueHandler extends Handler {
 
 		$locale = AppLocale::getLocale();
 
-		import('classes.file.PublicFileManager');
-		$publicFileManager = new PublicFileManager();
 		$templateMgr->assign(array(
-			'coverImagePath' => $request->getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($journal->getId()) . '/',
 			'locale' => $locale,
 		));
 

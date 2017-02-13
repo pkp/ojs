@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/doaj/filter/DOAJXmlFilter.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2000-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2000-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class DOAJXmlFilter
@@ -21,9 +21,9 @@ class DOAJXmlFilter extends NativeExportFilter {
 	 * Constructor
 	 * @param $filterGroup FilterGroup
 	 */
-	function DOAJXmlFilter($filterGroup) {
+	function __construct($filterGroup) {
 		$this->setDisplayName('DOAJ XML export');
-		parent::NativeExportFilter($filterGroup);
+		parent::__construct($filterGroup);
 	}
 
 	//
@@ -76,10 +76,10 @@ class DOAJXmlFilter extends NativeExportFilter {
 			if (!empty($language)) $recordNode->appendChild($node = $doc->createElement('language', $language));
 			// Publisher name (i.e. institution name)
 			$publisher = $context->getSetting('publisherInstitution');
-			if (!empty($publisher)) $recordNode->appendChild($node = $doc->createElement('publisher', $publisher));
+			if (!empty($publisher)) $recordNode->appendChild($node = $doc->createElement('publisher', htmlspecialchars($publisher, ENT_COMPAT, 'UTF-8')));
 			// Journal's title (M)
 			$journalTitle =  $context->getName($context->getPrimaryLocale());
-			$recordNode->appendChild($node = $doc->createElement('journalTitle', $journalTitle));
+			$recordNode->appendChild($node = $doc->createElement('journalTitle', htmlspecialchars($journalTitle, ENT_COMPAT, 'UTF-8')));
 			// Identification Numbers
 			$issn = $context->getSetting('printIssn');
 			if (!empty($issn)) $recordNode->appendChild($node = $doc->createElement('issn', $issn));
@@ -93,36 +93,32 @@ class DOAJXmlFilter extends NativeExportFilter {
 				$recordNode->appendChild($node = $doc->createElement('publicationDate', $this->formatDate($issue->getDatePublished())));
 			}
 			$volume = $issue->getVolume();
-			if (!empty($volume)) $recordNode->appendChild($node = $doc->createElement('volume', $volume));
+			if (!empty($volume) && $issue->getShowVolume()) $recordNode->appendChild($node = $doc->createElement('volume', htmlspecialchars($volume, ENT_COMPAT, 'UTF-8')));
 			$issueNumber = $issue->getNumber();
-			if (!empty($issueNumber)) $recordNode->appendChild($node = $doc->createElement('issue', $issueNumber));
+			if (!empty($issueNumber) && $issue->getShowNumber()) $recordNode->appendChild($node = $doc->createElement('issue', htmlspecialchars($issueNumber, ENT_COMPAT, 'UTF-8')));
 			/** --- FirstPage / LastPage (from PubMed plugin)---
 			 * there is some ambiguity for online journals as to what
 			 * "page numbers" are; for example, some journals (eg. JMIR)
 			 * use the "e-location ID" as the "page numbers" in PubMed
 			 */
-			$pages = $pubObject->getPages();
-			if (preg_match("/([0-9]+)\s*-\s*([0-9]+)/i", $pages, $matches)) {
-				// simple pagination (eg. "pp. 3-8")
-				$recordNode->appendChild($node = $doc->createElement('startPage', $matches[1]));
-				$recordNode->appendChild($node = $doc->createElement('endPage', $matches[2]));
-			} elseif (preg_match("/(e[0-9]+)/i", $pages, $matches)) {
-				// elocation-id (eg. "e12")
-				$recordNode->appendChild($node = $doc->createElement('startPage', $matches[1]));
-				$recordNode->appendChild($node = $doc->createElement('endPage', $matches[1]));
+			$startPage = $pubObject->getStartingPage();
+			$endPage = $pubObject->getEndingPage();
+			if (isset($startPage) && $startPage !== "") {
+				$recordNode->appendChild($node = $doc->createElement('startPage', htmlspecialchars($startPage, ENT_COMPAT, 'UTF-8')));
+				$recordNode->appendChild($node = $doc->createElement('endPage', htmlspecialchars($endPage, ENT_COMPAT, 'UTF-8')));
 			}
 			// DOI
 			$doi = $pubObject->getStoredPubId('doi');
-			if (!empty($doi)) $recordNode->appendChild($node = $doc->createElement('doi', $doi));
+			if (!empty($doi)) $recordNode->appendChild($node = $doc->createElement('doi', htmlspecialchars($doi, ENT_COMPAT, 'UTF-8')));
 			// publisherRecordId
-			$recordNode->appendChild($node = $doc->createElement('publisherRecordId', $pubObject->getId()));
+			$recordNode->appendChild($node = $doc->createElement('publisherRecordId', htmlspecialchars($pubObject->getId(), ENT_COMPAT, 'UTF-8')));
 			// documentType
 			$type = $pubObject->getType($pubObject->getLocale());
-			if (!empty($type)) $recordNode->appendChild($node = $doc->createElement('documentType', $type));
+			if (!empty($type)) $recordNode->appendChild($node = $doc->createElement('documentType', htmlspecialchars($type, ENT_COMPAT, 'UTF-8')));
 			// Article title
 			foreach ((array) $pubObject->getTitle(null) as $locale => $title) {
 				if (!empty($title)) {
-					$recordNode->appendChild($node = $doc->createElement('title', $title));
+					$recordNode->appendChild($node = $doc->createElement('title', htmlspecialchars($title, ENT_COMPAT, 'UTF-8')));
 					$node->setAttribute('language', AppLocale::get3LetterIsoFromLocale($locale));
 				}
 			}
@@ -137,26 +133,26 @@ class DOAJXmlFilter extends NativeExportFilter {
 				$affilsNode = $doc->createElement('affiliationsList');
 				$recordNode->appendChild($affilsNode);
 				for ($i = 0; $i < count($affilList); $i++) {
-					$affilsNode->appendChild($node = $doc->createElement('affiliationName', $affilList[$i]));
+					$affilsNode->appendChild($node = $doc->createElement('affiliationName', htmlspecialchars($affilList[$i], ENT_COMPAT, 'UTF-8')));
 					$node->setAttribute('affiliationId', $i);
 				}
 			}
 			// Abstract
 			foreach ((array) $pubObject->getAbstract(null) as $locale => $abstract) {
 				if (!empty($abstract)) {
-					$recordNode->appendChild($node = $doc->createElement('abstract', PKPString::html2text($abstract)));
+					$recordNode->appendChild($node = $doc->createElement('abstract', htmlspecialchars(PKPString::html2text($abstract), ENT_COMPAT, 'UTF-8')));
 					$node->setAttribute('language', AppLocale::get3LetterIsoFromLocale($locale));
 				}
 			}
 			// FullText URL
-			$recordNode->appendChild($node = $doc->createElement('fullTextUrl', Request::url(null, 'article', 'view', $pubObject->getId())));
+			$recordNode->appendChild($node = $doc->createElement('fullTextUrl', htmlspecialchars(Request::url(null, 'article', 'view', $pubObject->getId()), ENT_COMPAT, 'UTF-8')));
 			$node->setAttribute('format', 'html');
 			// Keywords
 			$keywordsNode = $doc->createElement('keywords');
 			$recordNode->appendChild($keywordsNode);
 			$subjects = array_map('trim', explode(';', $pubObject->getSubject($pubObject->getLocale())));
 			foreach ($subjects as $keyword) {
-				if (!empty($keyword)) $keywordsNode->appendChild($node = $doc->createElement('keyword', $keyword));
+				if (!empty($keyword)) $keywordsNode->appendChild($node = $doc->createElement('keyword', htmlspecialchars($keyword, ENT_COMPAT, 'UTF-8')));
 			}
 		}
 		return $doc;
@@ -186,11 +182,11 @@ class DOAJXmlFilter extends NativeExportFilter {
 	function createAuthorNode($doc, $article, $author, $affilList) {
 		$deployment = $this->getDeployment();
 		$authorNode = $doc->createElement('author');
-		$authorNode->appendChild($node = $doc->createElement('name', $author->getFullName()));
+		$authorNode->appendChild($node = $doc->createElement('name', htmlspecialchars($author->getFullName(), ENT_COMPAT, 'UTF-8')));
 		$email = $author->getEmail();
-		if (!empty($email)) $authorNode->appendChild($node = $doc->createElement('email', $email));
+		if (!empty($email)) $authorNode->appendChild($node = $doc->createElement('email', htmlspecialchars($email, ENT_COMPAT, 'UTF-8')));
 		if(in_array($author->getAffiliation($article->getLocale()), $affilList)  && !empty($affilList[0])) {
-			$authorNode->appendChild($node = $doc->createElement('affiliationId', current(array_keys($affilList, $author->getAffiliation($article->getLocale())))));
+			$authorNode->appendChild($node = $doc->createElement('affiliationId', htmlspecialchars(current(array_keys($affilList, $author->getAffiliation($article->getLocale()))), ENT_COMPAT, 'UTF-8')));
 		}
 		return $authorNode;
 	}

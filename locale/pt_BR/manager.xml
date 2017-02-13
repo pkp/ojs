@@ -4,8 +4,8 @@
 <!--
   * locale/pt_BR/manager.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Portuguese_(pt_BR)
   * Localization strings.
@@ -85,7 +85,6 @@
 	<message key="manager.sections.form.mustAllowPermission">Marque pelo menos uma opção para cada tarefa do Editor de seção</message>
 	<message key="manager.sections.form.reviewFormId">É necessário escolher um formulário de avaliação válido.</message>
 	<message key="manager.sections.form.titleRequired">Título obrigatório para a seção.</message>
-	<message key="manager.sections.hideAbout">Omitir esta seção da página Sobre a revista.</message>
 	<message key="manager.sections.hideTocAuthor">Omitir nomes dos autores dos itens publicados nesta seção no sumário da edição.</message>
 	<message key="manager.sections.hideTocTitle">Omitir o título desta seção no sumário da edição.</message>
 	<message key="manager.sections.identifyType">Como metadado do artigo, identificar itens nesta seção como</message>

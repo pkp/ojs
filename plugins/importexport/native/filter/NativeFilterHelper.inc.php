@@ -2,8 +2,8 @@
 /**
  * @file plugins/importexport/native/filter/NativeFilterHelper.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2000-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2000-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class NativeFilterHelper
@@ -31,11 +31,11 @@ class NativeFilterHelper {
 		$issueIdentificationNode = $doc->createElementNS($deployment->getNamespace(), 'issue_identification');
 		if ($issue->getShowVolume()) {
 			assert(!empty($vol));
-			$issueIdentificationNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'volume', $vol));
+			$issueIdentificationNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'volume', htmlspecialchars($vol, ENT_COMPAT, 'UTF-8')));
 		}
 		if ($issue->getShowNumber()) {
 			assert(!empty($num));
-			$issueIdentificationNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'number', $num));
+			$issueIdentificationNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'number', htmlspecialchars($num, ENT_COMPAT, 'UTF-8')));
 		}
 		if ($issue->getShowYear()) {
 			assert(!empty($year));

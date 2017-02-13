@@ -4,8 +4,8 @@
 <!--
   * locale/pt_BR/editor.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Portuguese_(pt_BR)
   * Localization strings.
@@ -143,10 +143,6 @@
 	<message key="editor.article.assignEditor">Incluir editor</message>
 	<message key="editor.article.selectEditor">Escolher {$roleName}</message>
 	<message key="editor.article.selectDecision">Escolha a decisão</message>
-	<message key="editor.article.decision.accept">Aceitar</message>
-	<message key="editor.article.decision.pendingRevisions">Revisões requeridas</message>
-	<message key="editor.article.decision.resubmit">Submeter a nova rodada</message>
-	<message key="editor.article.decision.decline">Rejeitar</message>
 	<message key="editor.article.selectLayoutEditor">Selecionar Editor de Layout</message>
 	<message key="editor.article.replaceLayoutEditor">Substituir editor de layout</message>
 	<message key="editor.article.reviewSubmission">Avaliar submissão</message>
@@ -226,4 +222,10 @@
 	<message key="editor.issues.datePublished">Data de Publicação</message>
 	<message key="editor.issues.identifiers">Identificadores</message>
 	<message key="grid.action.addGalley">Adicionar composição final</message>
+	<message key="editor.issues.removeCoverImageFileNameMismatch">A imagem da capa que você solicitou para excluir não corresponde à imagem da capa dessa edição. Por favor, recarregue a página e tente denovo.</message>
+	<message key="editor.issues.removeCoverImageFileNotFound">Não foi possível encontrar a imagem da capa que você solicitou para excluir. Ela já pode ter sido excluída. Tente recarregar a página.</message>
+	<message key="editor.issues.invalidCoverImageFormat">Formato da imagem de capa inválida. Os formatos aceitos são .gif, .jpg ou .png.</message>
+	<message key="editor.article.schedulePublication">Agendar para Publicação</message>
+	<message key="editor.article.coverImage">Imagem de Capa</message>
+	<message key="editor.article.removeCoverImageFileNotFound">Não foi possível encontrar a imagem da capa que você solicitou para excluir. Ele já pode ter sido excluída. Tente recarregar a página.</message>
 </locale>

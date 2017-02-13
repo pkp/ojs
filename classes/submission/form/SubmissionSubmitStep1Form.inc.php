@@ -3,8 +3,8 @@
 /**
  * @file classes/submission/form/SubmissionSubmitStep1Form.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SubmissionSubmitStep1Form
@@ -19,8 +19,8 @@ class SubmissionSubmitStep1Form extends PKPSubmissionSubmitStep1Form {
 	/**
 	 * Constructor.
 	 */
-	function SubmissionSubmitStep1Form($context, $submission = null) {
-		parent::PKPSubmissionSubmitStep1Form($context, $submission);
+	function __construct($context, $submission = null) {
+		parent::__construct($context, $submission);
 		$this->addCheck(new FormValidatorCustom($this, 'sectionId', 'required', 'author.submit.form.sectionRequired', array(DAORegistry::getDAO('SectionDAO'), 'sectionExists'), array($context->getId())));
 	}
 
@@ -28,11 +28,15 @@ class SubmissionSubmitStep1Form extends PKPSubmissionSubmitStep1Form {
 	 * Fetch the form.
 	 */
 	function fetch($request) {
-		$templateMgr = TemplateManager::getManager($request);
+		$roleDao = DAORegistry::getDAO('RoleDAO');
+		$user = $request->getUser();
+		$canSubmitAll = $roleDao->userHasRole($this->context->getId(), $user->getId(), ROLE_ID_MANAGER) ||
+			$roleDao->userHasRole($this->context->getId(), $user->getId(), ROLE_ID_SUB_EDITOR);
 
-		// Get section for this context
+		// Get section options for this context
 		$sectionDao = DAORegistry::getDAO('SectionDAO');
-		$sectionOptions = array('0' => '') + $sectionDao->getSectionTitles($this->context->getId());
+		$sectionOptions = array('0' => '') + $sectionDao->getTitles($this->context->getId(), !$canSubmitAll);
+		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign('sectionOptions', $sectionOptions);
 
 		return parent::fetch($request);

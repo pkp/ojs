@@ -4,8 +4,8 @@
 <!--
   * locale/pt_PT/emailTemplates.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localized email templates XML file.
@@ -859,7 +859,7 @@ A senha para desactivar os e-mails é: {$password}<br />
 		<subject>Decisão editorial</subject>
 		<body><![CDATA[{$authorName},<br />
 <br />
-Foi tomada uma decisão sobre o artigo submetido à revista {$journalTitle},<br />
+Foi tomada uma decisão sobre o artigo submetido à revista {$contextName},<br />
 &quot;{$submissionTitle}&quot;.<br />
 <br />
 A decisão é: INSERIR DECISÃO EDITORIAL<br />
@@ -871,7 +871,7 @@ A decisão é: INSERIR DECISÃO EDITORIAL<br />
 		<subject>Decisão editorial</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Foi tomada uma decisão sobre o artigo submetido à {$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
+Foi tomada uma decisão sobre o artigo submetido à {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
 A decisão é: REVISÕES REQUERIDAS<br />
 <br />
@@ -882,7 +882,7 @@ A decisão é: REVISÕES REQUERIDAS<br />
 		<subject>Decisão editorial</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Foi tomada uma decisão sobre o artigo enviado à revista {$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
+Foi tomada uma decisão sobre o artigo enviado à revista {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
 A decisão é: SUBMETER NOVAMENTE PARA REVISÕES<br />
 <br />
@@ -893,7 +893,7 @@ A decisão é: SUBMETER NOVAMENTE PARA REVISÕES<br />
 		<subject>Decisão editorial</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Foi tomada uma decisão sobre o artigo submetido à revista {$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
+Foi tomada uma decisão sobre o artigo submetido à revista {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
 A decisão é: REJEITAR<br />
 <br />

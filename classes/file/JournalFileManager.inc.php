@@ -3,8 +3,8 @@
 /**
  * @file classes/file/JournalFileManager.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class JournalFileManager
@@ -25,8 +25,8 @@ class JournalFileManager extends BaseSubmissionFileManager {
 	 * @param $journalId int
 	 * @param $articleId int
 	 */
-	function JournalFileManager($journalId, $articleId) {
-		parent::BaseSubmissionFileManager($journalId, $articleId);
+	function __construct($journalId, $articleId) {
+		parent::__construct($journalId, $articleId);
 	}
 
 	/**

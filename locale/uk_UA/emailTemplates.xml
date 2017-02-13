@@ -4,8 +4,8 @@
 <!--
   * locale/uk_UA/emailTemplates.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localized email templates XML file.
@@ -368,7 +368,7 @@ URL подання: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><
 		<subject>Рішення редактора</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Ми прийняли рішення стосовно Вашого подання &quot;{$submissionTitle}&quot; до видання &quot;{$journalTitle}&quot;.<br />
+Ми прийняли рішення стосовно Вашого подання &quot;{$submissionTitle}&quot; до видання &quot;{$contextName}&quot;.<br />
 <br />
 Наше рішення:<br />
 <br />
@@ -379,7 +379,7 @@ URL подання: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><
 		<subject>Рішення редактора</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Ми прийняли рішення стосовно Вашого подання &quot;{$submissionTitle}&quot; до видання &quot;{$journalTitle}&quot;.<br />
+Ми прийняли рішення стосовно Вашого подання &quot;{$submissionTitle}&quot; до видання &quot;{$contextName}&quot;.<br />
 <br />
 Наше рішення:<br />
 <br />
@@ -390,7 +390,7 @@ URL подання: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><
 		<subject>Рішення редактора</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Ми прийняли рішення стосовно Вашого подання &quot;{$submissionTitle}&quot; до видання &quot;{$journalTitle}&quot;.<br />
+Ми прийняли рішення стосовно Вашого подання &quot;{$submissionTitle}&quot; до видання &quot;{$contextName}&quot;.<br />
 <br />
 Наше рішення:<br />
 <br />
@@ -401,7 +401,7 @@ URL подання: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><
 		<subject>Рішення редактора</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Ми прийняли рішення стосовно Вашого подання &quot;{$submissionTitle}&quot; до видання &quot;{$journalTitle}&quot;.<br />
+Ми прийняли рішення стосовно Вашого подання &quot;{$submissionTitle}&quot; до видання &quot;{$contextName}&quot;.<br />
 <br />
 Наше рішення:<br />
 <br />

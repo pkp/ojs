@@ -3,8 +3,8 @@
 /**
  * @file tools/runScheduledTasks.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class runScheduledTasks
@@ -24,8 +24,8 @@ class runScheduledTasks extends ScheduledTaskTool {
 	 * 		If specified, the first parameter should be the path to
 	 *		a tasks XML descriptor file (other than the default)
 	 */
-	function runScheduledTasks($argv = array()) {
-		parent::ScheduledTaskTool($argv);
+	function __construct($argv = array()) {
+		parent::__construct($argv);
 	}
 
 }

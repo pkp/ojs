@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../../../lib/pkp/dtd/xmlData.dtd">
+
+<!--
+  * 3.0.0_issue_settings.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * 3.0.0.0 issue settings update.
+  -->
+<data>
+	<sql><!-- #1934 rename issue cover images settings (fileName to coverImage and coverPageAltText to coverImageAltText) -->
+		<query>UPDATE issue_settings SET setting_name = 'coverImage' WHERE setting_name = 'fileName'</query>
+		<query>UPDATE issue_settings SET setting_name = 'coverImageAltText' WHERE setting_name = 'coverPageAltText'</query>
+	</sql>
+</data>
+

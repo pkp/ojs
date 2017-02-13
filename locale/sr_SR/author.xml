@@ -4,8 +4,8 @@
 <!--
   * locale/sr_SR/author.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the sr_SR (Cрпски) locale.
@@ -31,7 +31,7 @@
 	<message key="author.submit.metadata">Unos metapodataka</message>
 	<message key="author.submit.supplementaryFiles">Dodavanje dodatnih fajlova</message>
 	<message key="author.submit.confirmation">Potvrda</message>
-	<message key="author.submit.cancelSubmission">Možete završiti predaju kasnije odabirom "Aktivnih predaja" u autorskom nalogu.</message>
+	<message key="submission.submit.cancelSubmission">Možete završiti predaju kasnije odabirom "Aktivnih predaja" u autorskom nalogu.</message>
 	<message key="author.submit.notAccepting">Časopis trenutno ne prihvata predaje radova.</message>
 	<message key="author.submit.requestWaiver">Zahtevaj oslobađanje</message>
 	<message key="author.submit.addReasonsForWaiver">Koristite tekst box ispod da navedete razloge za oslobađanje od naknade.</message>
@@ -50,8 +50,6 @@
 	<message key="author.submit.journalSection">Sekcije časopisa</message>
 	<message key="author.submit.journalSectionDescription"><![CDATA[Odaberite odgovarajuću sekciju u časopisu (pogledajte sekcije i pravila u <a href="{$aboutUrl}" target="_new">O časopisu</a>).]]></message>
 	<message key="submission.submit.selectSection">Odaberite sekciju...</message>
-	<message key="author.submit.submissionLocale">Jezik predaje</message>
-	<message key="author.submit.submissionLocaleDescription">Ovaj časopis prihvata radove ne nekoliko jezika. Odaberite primarni jezik rada iz menija.</message>
 	<message key="author.submit.submissionChecklist">Spisak predaja</message>
 	<message key="author.submit.verifyChecklist">Morate biti sigurni da su sve stavke u predaji zadovoljene pre nastavka.</message>
 	<message key="author.submit.copyrightNoticeAgree">Autor se slaže sa autorskim pravima koja će biti primenjena na ovaj rad ako i kada bude objavljen u časopisu (komentare za urednika može ispod dodat).</message>

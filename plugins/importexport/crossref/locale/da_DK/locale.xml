@@ -4,8 +4,8 @@
 <!--
   * plugins/importexport/crossref/locale/da_DK/locale.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the da_DK (Dansk) locale.
@@ -16,10 +16,11 @@
 	<message key="plugins.importexport.crossref.displayName">CrossRef XML Export Plugin</message>
 	<message key="plugins.importexport.crossref.description">Eksportér artikelmetadata i CrossRef XML format.</message>
 
-	<message key="plugins.importexport.crossref.cliUsage"><![CDATA[Brug:
+	<message key="plugins.importexport.crossref.cliUsage"><![CDATA[Brug: 
 {$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...
 {$scriptName} {$pluginName} register [journal_path] articles objectId1 [objectId2] ...
 ]]></message>
+	<message key="plugins.importexport.crossref.cliError">FEJL:</message>
 
 	<message key="plugins.importexport.crossref.export.error.issueNotFound">Intet nummer mathede det specificerede nummer ID "{$issueId}".</message>
 	<message key="plugins.importexport.crossref.export.error.articleNotFound">Ingen artikel matchede det specificerede artikel ID "{$articleId}".</message>

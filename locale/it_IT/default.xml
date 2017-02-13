@@ -4,8 +4,8 @@
 <!--
   * locale/it_IT/default.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the it_IT (Italiano) locale.
@@ -70,11 +70,6 @@ Dopo che avete finito con le vostre revisioni, rinominare il file da NomeAutoreQ
 &bull; Frase aggiunta in risposta al QA. Il grassetto indica aggiunta di testo nuovo
 &bull; [parola cancellata] indica l'omissione di "completamente"
 &bull; Il commento contiene una risposta alla QA dell'editor]]></message>
-	<message key="default.journalSettings.emailHeader">Il seguente messaggio è stato spedito per conto di {$journalName}.
-________________________________________________________________________</message>
-	<message key="default.journalSettings.emailSignature">---
-{$journalName}
-{$indexUrl}/{$journalPath}</message>
 	<message key="default.journalSettings.forReaders"><![CDATA[Incoraggiamo i lettori a iscriversi al servizio di notifica di questa rivista. Usa il link <a href="{$indexUrl}/{$journalPath}/user/register">Registra</a> in alto alla  homepage della rivista. Con questa registrazione il lettore ricever&#x00E0; l'indice per email di ogni nuova uscita della rivista.  Vedi la <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">dichiarazione sulla privacy</a> della rivista che assicura il lettori che il loro nome e indirizzo email non sar&#x00E0; usato per altri fini.]]></message>
 	<message key="default.journalSettings.forAuthors"><![CDATA[Interessato a proporre contributi a questa rivista? Raccomandiamo di rivedere la pagina <a href="{$indexUrl}/{$journalPath}/about">Info</a>, in particolare le politiche delle sezioni della  rivista, e le <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">linee guida per l'autore</a>. Gli autori devono <a href="{$indexUrl}/{$journalPath}/user/register">registrarsi</a> per  effettuare la prima submission alla rivista, o se gi&#x00E0; registrato pu&#x00F9; semplicemente fare il <a href="{$indexUrl}/index/login">log in</a> e cominciare il processo guidato in 5 fasi.]]></message>
 	<message key="default.journalSettings.forLibrarians"><![CDATA[Suggeriamo ai bibliotecari di aggiungere questa rivista nel loro sistema di reference linking. Inoltre, segnaliamo che il sistema open source utilizzato per la pubblicazione di questa rivista potrebbe essere proposto anche per la gestione di riviste nelle quali i bibliotecari siano coinvolti (vedi <a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a> per ulteriori dettagli).]]></message>
@@ -145,4 +140,30 @@ Il paragrafo che comincia con "Questo ultimo argomento..." non è allineato</pre
 	<message key="section.default.policy"></message>
 	<message key="default.journalSettings.purchaseIssueFee">Acquista il fascicolo</message>
 	<message key="default.journalSettings.purchaseIssueFeeDescription">Il pagamento di questa quota ti permetterà di visualizzare, scaricare, e stampare questo fascicolo.</message>
+	<message key="default.genres.article">Articolo</message>
+	<message key="default.groups.name.manager">Direttore</message>
+	<message key="default.groups.plural.manager">Direttori</message>
+	<message key="default.groups.abbrev.manager">MNGR</message>
+	<message key="default.groups.name.editor">Editor</message>
+	<message key="default.groups.plural.editor">Editor</message>
+	<message key="default.groups.abbrev.editor">EDT</message>
+	<message key="default.groups.name.guestEditor">Guest editor</message>
+	<message key="default.groups.plural.guestEditor">Guest editor</message>
+	<message key="default.groups.abbrev.guestEditor">G_EDT</message>
+	<message key="default.groups.name.sectionEditor">Editor di sezione</message>
+	<message key="default.groups.plural.sectionEditor">Editor di sezione</message>
+	<message key="default.groups.abbrev.sectionEditor">SecE</message>
+	<message key="default.groups.name.subscriptionManager">Subscription manager</message>
+	<message key="default.groups.plural.subscriptionManager">Subscription manager</message>
+	<message key="default.groups.abbrev.subscriptionManager">SubM</message>
+	<message key="default.genres.researchInstrument">Strumenti di ricerca</message>
+	<message key="default.genres.researchMaterials">Materiali di ricerca</message>
+	<message key="default.genres.researchResults">Risultati di ricerca</message>
+	<message key="default.genres.transcripts">Trascrizioni</message>
+	<message key="default.genres.dataAnalysis">Analisi di dati</message>
+	<message key="default.genres.dataSet">Data set</message>
+	<message key="default.genres.sourceTexts">Fonti bibliografiche</message>
+	<message key="default.groups.name.externalReviewer">Revisore esterno</message>
+	<message key="default.groups.plural.externalReviewer">Revisori esterni</message>
+	<message key="default.groups.abbrev.externalReviewer">REV</message>
 </locale>

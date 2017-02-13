@@ -4,8 +4,8 @@
 <!--
   * locale/de_DE/editor.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_German_(de_DE)
   * Localization strings.
@@ -163,10 +163,6 @@
 	<message key="editor.article.assignEditor">Redakteur/in zuweisen</message>
 	<message key="editor.article.selectEditor">{$roleName} auswählen</message>
 	<message key="editor.article.selectDecision">Entscheidung auswählen</message>
-	<message key="editor.article.decision.accept">Beitrag annehmen</message>
-	<message key="editor.article.decision.pendingRevisions">Überarbeitung erforderlich</message>
-	<message key="editor.article.decision.resubmit">Erneut zur Begutachtung einreichen</message>
-	<message key="editor.article.decision.decline">Beitrag ablehnen</message>
 	<message key="editor.article.selectLayoutEditor">Layouter/in auswählen</message>
 	<message key="editor.article.replaceLayoutEditor">Layouter/in ersetzen</message>
 	<message key="editor.article.reviewSubmission">Beitrag begutachten</message>

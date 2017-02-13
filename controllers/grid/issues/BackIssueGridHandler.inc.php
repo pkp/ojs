@@ -3,8 +3,8 @@
 /**
  * @file controllers/grid/issues/IssueGridHandler.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2000-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2000-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IssueGridHandler
@@ -19,8 +19,12 @@ class BackIssueGridHandler extends IssueGridHandler {
 	/**
 	 * Constructor
 	 */
-	function BackIssueGridHandler() {
-		parent::IssueGridHandler();
+	function __construct() {
+		parent::__construct();
+		$this->addRoleAssignment(
+			array(ROLE_ID_MANAGER),
+			array('saveSequence')
+		);
 	}
 
 
@@ -52,6 +56,34 @@ class BackIssueGridHandler extends IssueGridHandler {
 				$issueGridCellProvider
 			)
 		);
+	}
+
+	/**
+	 * @copydoc GridHandler::setDataElementSequence()
+	 */
+	function setDataElementSequence($request, $rowId, $gridDataElement, $newSequence) {
+		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$issueDao->moveCustomIssueOrder($gridDataElement->getJournalId(), $gridDataElement->getId(), $newSequence);
+	}
+
+	/**
+	 * @copydoc GridHandler::getDataElementSequence()
+	 */
+	function getDataElementSequence($gridDataElement) {
+		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$customOrder = $issueDao->getCustomIssueOrder($gridDataElement->getJournalId(), $gridDataElement->getId());
+		if ($customOrder !== null) return $customOrder;
+
+		if ($gridDataElement->getCurrent()) return 0;
+		return $gridDataElement->getDatePublished();
+	}
+
+	/**
+	 * @copydoc GridHandler::addFeatures()
+	 */
+	function initFeatures($request, $args) {
+		import('lib.pkp.classes.controllers.grid.feature.OrderGridItemsFeature');
+		return array(new OrderGridItemsFeature());
 	}
 
 	/**

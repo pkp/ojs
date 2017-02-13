@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/medra/classes/form/MedraSettingsForm.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class MedraSettingsForm
@@ -50,11 +50,11 @@ class MedraSettingsForm extends Form {
 	 * @param $plugin MedraExportPlugin
 	 * @param $contextId integer
 	 */
-	function MedraSettingsForm($plugin, $contextId) {
+	function __construct($plugin, $contextId) {
 		$this->_contextId = $contextId;
 		$this->_plugin = $plugin;
 
-		parent::Form($plugin->getTemplatePath() . 'settingsForm.tpl');
+		parent::__construct($plugin->getTemplatePath() . 'settingsForm.tpl');
 
 		// DOI plugin settings action link
 		$pubIdPlugins = PluginRegistry::loadCategory('pubIds', true);

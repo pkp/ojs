@@ -1,8 +1,8 @@
 {**
  * templates/controllers/tab/issueEntry/form/publicationMetadataFormFields.tpl
  *
- * Copyright (c) 2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2016-2017 Simon Fraser University Library
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  *}
@@ -49,7 +49,7 @@
 		{if $publishedArticle}
 			{fbvFormArea id="schedulingInformation" title="editor.issues.published"}
 				{fbvFormSection for="publishedDate"}
-					{fbvElement type="text" required=true id="datePublished" value=$publishedArticle->getDatePublished()|date_format:$dateFormatShort translate=false label="editor.issues.published" inline=true size=$fbvStyles.size.MEDIUM}
+					{fbvElement type="text" required=true id="datePublished" value=$publishedArticle->getDatePublished()|date_format:$dateFormatShort translate=false label="editor.issues.published" inline=true size=$fbvStyles.size.MEDIUM class="datepicker"}
 				{if $issueAccess && $issueAccess == $smarty.const.ISSUE_ACCESS_SUBSCRIPTION && $context->getSetting('publishingMode') == $smarty.const.PUBLISHING_MODE_SUBSCRIPTION}
 					{fbvElement type="select" id="accessStatus" required=true from=$accessOptions selected=$publishedArticle->getAccessStatus() translate=false label="editor.issues.access" inline=true size=$fbvStyles.size.MEDIUM}
 				{/if}

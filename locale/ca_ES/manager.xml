@@ -3,8 +3,8 @@
 <!--
   * locale/ca_ES/manager.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Credits: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_(ca_ES)
@@ -96,7 +96,6 @@
 	<message key="manager.sections.form.mustAllowPermission">Comproveu que s’hagi activat com a mínim una casella de selecció per a cada assignació a l’editor/a de secció.</message>
 	<message key="manager.sections.form.reviewFormId">Comproveu que hàgiu seleccionat un formulari de revisió vàlid.</message>
 	<message key="manager.sections.form.titleRequired">Heu d’introduir un títol per a la secció.</message>
-	<message key="manager.sections.hideAbout">Omet aquesta secció de «Sobre la revista».</message>
 	<message key="manager.sections.hideTocAuthor">Omet els noms dels autors/ores en els elements de secció de la taula de continguts dels números.</message>
 	<message key="manager.sections.hideTocTitle">Omet el títol d’aquesta secció de la taula de continguts dels números.</message>
 	<message key="manager.sections.identifyType">Identifica els elements publicats en aquesta secció com a</message>
@@ -160,11 +159,7 @@
 	<message key="manager.setup.enableAnnouncements">Permet als administradors/ores de la revista que afegeixin avisos.</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">Mostra</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">dels avisos més recents a la pàgina inicial de la revista.</message>
-	<message key="manager.setup.enablePageNumber">Els números de pàgina per als elements es calculen i s’introdueixen a la taula de continguts de manera manual (p. ex. pàg. 13-26).</message>
-	<message key="manager.setup.enablePublicArticleId">S’utilitzen identificadors personalitzats per identificar elements publicats.</message>
-	<message key="manager.setup.enablePublicGalleyId">S’utilitzen identificadors personalitzats per identificar galerades (com ara fitxers HTML o PDF) per a elements publicats.</message>
 	<message key="manager.setup.enablePublicIssueId">S’utilitzen identificadors personalitzats per identificar números.</message>
-	<message key="manager.setup.enablePublicSuppFileId">S’utilitzen identificadors personalitzats per identificar fitxers d’articles complementaris.</message>
 	<message key="manager.setup.enableUserRegistration">Els usuaris/àries es poden registrar a la revista amb un o més dels rols següents:</message>
 	<message key="manager.setup.focusAndScope">Objectius i temàtica</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWork">Instruccions per a la indexació d’obres per part dels autors/ores</message>

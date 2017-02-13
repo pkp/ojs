@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/announcementFeed/SettingsForm.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SettingsForm
@@ -28,11 +28,11 @@ class SettingsForm extends Form {
 	 * @param $plugin object
 	 * @param $journalId int
 	 */
-	function SettingsForm($plugin, $journalId) {
+	function __construct($plugin, $journalId) {
 		$this->_journalId = $journalId;
 		$this->_plugin = $plugin;
 
-		parent::Form($plugin->getTemplatePath() . 'settingsForm.tpl');
+		parent::__construct($plugin->getTemplatePath() . 'settingsForm.tpl');
 		$this->addCheck(new FormValidatorPost($this));
 		$this->addCheck(new FormValidatorCSRF($this));
 	}

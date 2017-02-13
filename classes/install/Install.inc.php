@@ -3,8 +3,8 @@
 /**
  * @file classes/install/Install.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class Install
@@ -34,8 +34,8 @@ class Install extends PKPInstall {
 	 * @param $descriptor string descriptor path
 	 * @param $isPlugin boolean true iff a plugin is being installed
 	 */
-	function Install($params, $descriptor = 'install.xml', $isPlugin = false) {
-		parent::PKPInstall($descriptor, $params, $isPlugin);
+	function __construct($params, $descriptor = 'install.xml', $isPlugin = false) {
+		parent::__construct($descriptor, $params, $isPlugin);
 	}
 
 	//

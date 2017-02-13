@@ -4,8 +4,8 @@
 <!--
   * locale/de_DE/emailTemplates.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_German_(de_DE)
   * Localized email templates XML file.
@@ -453,7 +453,7 @@ Unsere Entscheidung lautet: Beitrag annehmen<br />
 		<subject>Entscheidung der Redaktion</subject>
 		<body><![CDATA[{$authorName},<br />
 <br />
-wir sind zu einer Entscheidung in Bezug auf Ihre Einreichung für {$journalTitle}: &quot;{$submissionTitle}&quot; gekommen.<br />
+wir sind zu einer Entscheidung in Bezug auf Ihre Einreichung für {$contextName}: &quot;{$submissionTitle}&quot; gekommen.<br />
 <br />
 Unsere Entscheidung lautet:<br />
 <br />
@@ -465,7 +465,7 @@ Unsere Entscheidung lautet:<br />
 		<subject>Entscheidung der Redaktion</subject>
 		<body><![CDATA[{$authorName},<br />
 <br />
-wir sind zu einer Entscheidung in Bezug auf Ihre Einreichung für {$journalTitle}: &quot;{$submissionTitle}&quot; gekommen.<br />
+wir sind zu einer Entscheidung in Bezug auf Ihre Einreichung für {$contextName}: &quot;{$submissionTitle}&quot; gekommen.<br />
 <br />
 Unsere Entscheidung lautet:<br />
 <br />
@@ -477,7 +477,7 @@ Unsere Entscheidung lautet:<br />
 		<subject>Entscheidung der Redaktion</subject>
 		<body><![CDATA[{$authorName},<br />
 <br />
-wir sind zu einer Entscheidung in Bezug auf Ihre Einreichung für {$journalTitle}: &quot;{$submissionTitle}&quot; gekommen.<br />
+wir sind zu einer Entscheidung in Bezug auf Ihre Einreichung für {$contextName}: &quot;{$submissionTitle}&quot; gekommen.<br />
 <br />
 Unsere Entscheidung lautet: Beitrag ablehnen<br />
 <br />

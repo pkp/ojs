@@ -3,8 +3,8 @@
 /**
  * @file controllers/grid/pubIds/form/AssignPublicIdentifiersForm.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class AssignPublicIdentifiersForm
@@ -30,8 +30,8 @@ class AssignPublicIdentifiersForm extends PKPAssignPublicIdentifiersForm {
 	 * @param $confirmationText string
 	 * @param $formParams array
 	 */
-	function AssignPublicIdentifiersForm($template, $pubObject, $approval, $confirmationText, $formParams = null) {
-		parent::PKPAssignPublicIdentifiersForm($template, $pubObject, $approval, $confirmationText);
+	function __construct($template, $pubObject, $approval, $confirmationText, $formParams = null) {
+		parent::__construct($template, $pubObject, $approval, $confirmationText);
 
 		$this->_formParams = $formParams;
 	}

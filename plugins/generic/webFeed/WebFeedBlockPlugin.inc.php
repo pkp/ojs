@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/webFeed/WebFeedBlockPlugin.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class WebFeedBlockPlugin
@@ -19,8 +19,8 @@ class WebFeedBlockPlugin extends BlockPlugin {
 	/** @var string Name of parent plugin */
 	var $parentPluginName;
 
-	function WebFeedBlockPlugin($parentPluginName) {
-		parent::BlockPlugin();
+	function __construct($parentPluginName) {
+		parent::__construct();
 		$this->parentPluginName = $parentPluginName;
 	}
 
@@ -60,7 +60,7 @@ class WebFeedBlockPlugin extends BlockPlugin {
 	 * @return array
 	 */
 	function getSupportedContexts() {
-		return array(BLOCK_CONTEXT_LEFT_SIDEBAR);
+		return array(BLOCK_CONTEXT_SIDEBAR);
 	}
 
 	/**
@@ -80,11 +80,10 @@ class WebFeedBlockPlugin extends BlockPlugin {
 	}
 
 	/**
-	 * Override the builtin to get the correct template path.
-	 * @return string
+	 * @copydoc PKPPlugin::getTemplatePath
 	 */
-	function getTemplatePath() {
-		return $this->getWebFeedPlugin()->getTemplatePath();
+	function getTemplatePath($inCore = false) {
+		return $this->getWebFeedPlugin()->getTemplatePath($inCore);
 	}
 
 	/**

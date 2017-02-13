@@ -4,8 +4,8 @@
 <!--
   * locale/sv_SE/manager.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2000-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the sv_SE (Svenska) locale.
@@ -82,7 +82,6 @@
 	<message key="manager.sections.editors">Sektionsredaktörer</message>
 	<message key="manager.sections.form.abbrevRequired">Man måste ange en förkortning till sektionens namn</message>
 	<message key="manager.sections.form.titleRequired">Man måste ange ett namn på sektionen.</message>
-	<message key="manager.sections.hideAbout">Utelämna den här sektionen från Om tidskriften.</message>
 	<message key="manager.sections.hideTocAuthor">Utelämna författarnamnen på sektionsmaterial från numrets innehållsförteckning</message>
 	<message key="manager.sections.hideTocTitle">Utelämna titeln på den här sektionen från numrets innehållsförteckning.</message>
 	<message key="manager.sections.identifyType">Som metadata ska varje komponent i den här sektionen anges i obestämd form</message>
@@ -144,11 +143,7 @@
 	<message key="manager.setup.enableAnnouncements">Möjliggör för tidskriftsansvariga att lägga till tillkännagivanden.</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">Visning</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">av tidskriftens senaste tillkännagivanden.</message>
-	<message key="manager.setup.enablePageNumber">Sidnumrering bestäms och förs in manuellt i Innehållsförteckningen (ex., 13-26).</message>
-	<message key="manager.setup.enablePublicArticleId">Anpassade identifierare används för att identifiera tidskriftens publicerade innehåll.</message>
-	<message key="manager.setup.enablePublicGalleyId">Anpassade identifierare används för att identifiera sidkorrektur (t ex HTML eller PDF filer) för publicerade enheter.</message>
 	<message key="manager.setup.enablePublicIssueId">Anpassade identifierare används för att identifiera tidskriftens nummer.</message>
-	<message key="manager.setup.enablePublicSuppFileId">Anpassade identifierare används för att identifiera kompletterande artikelfiler.</message>
 	<message key="manager.setup.enableUserRegistration">Användare kan registrera sig på tidskriften som en eller flera av följande fuktioner:</message>
 	<message key="manager.setup.focusAndScope">Ämne och fokus</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWork">Författarens indexering av den egna publikationen</message>

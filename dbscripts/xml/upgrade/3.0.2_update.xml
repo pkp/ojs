@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../../../lib/pkp/dtd/xmlData.dtd">
+
+<!--
+  * 3.0.2_update.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * 3.0.2.0 general updates.
+  -->
+<data>
+	<sql><!-- pkp/pkp-lib#2111: Clean up inoperative Guest Editor role -->
+		<query>UPDATE user_groups SET role_id=17 WHERE role_id=513</query><!-- 513: 0x00000201 ROLE_ID_GUEST_EDITOR; 17: 0x00000011 ROLE_ID_SECTION_EDITOR -->
+	</sql>
+</data>
+

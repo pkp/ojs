@@ -3,8 +3,8 @@
 <!--
   * locale/ca_ES/author.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Credits: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_(ca_ES)
@@ -31,7 +31,7 @@
 	<message key="author.submit.metadata">Introducció de les metadades</message>
 	<message key="author.submit.supplementaryFiles">Càrrega de fitxers addicionals</message>
 	<message key="author.submit.confirmation">Confirmació</message>
-	<message key="author.submit.cancelSubmission">Podeu completar aquesta tramesa més endavant si seleccioneu «Trameses actives» a la pàgina d'inici de l’autor/a.</message>
+	<message key="submission.submit.cancelSubmission">Podeu completar aquesta tramesa més endavant si seleccioneu «Trameses actives» a la pàgina d'inici de l’autor/a.</message>
 	<message key="author.submit.notAccepting">Actualment aquesta revista no accepta trameses.</message>
 	<message key="author.submit.requestWaiver">Sol·licita una exempció</message>
 	<message key="author.submit.qualifyForWaiver">Tingueu en compte que podeu sol·licitar l’exempció de la quota per a la tramesa d’aquest article.</message>
@@ -51,8 +51,6 @@
 	<message key="author.submit.journalSection">Secció de la revista</message>
 	<message key="author.submit.journalSectionDescription"><![CDATA[Seleccioneu la secció adequada per a aquesta tramesa (vegeu «Seccions i Polítiques» a «<a href="{$aboutUrl}" target="_new">Sobre</a> la revista»).]]></message>
 	<message key="submission.submit.selectSection">Seleccioneu una secció...</message>
-	<message key="author.submit.submissionLocale">Llengua de la tramesa</message>
-	<message key="author.submit.submissionLocaleDescription">Aquesta revista accepta trameses en diverses llengües. Trieu la llengua principal de la tramesa al menú desplegable que hi ha a continuació.</message>
 	<message key="author.submit.submissionChecklist">Llista de verificació de tramesa</message>
 	<message key="author.submit.verifyChecklist">Abans de continuar, comproveu que es compleixen tots els punts de la llista de verificació de la tramesa.</message>
 	<message key="author.submit.copyrightNoticeAgree">Els autors/ores accepten les condicions d’aquest avís de drets d'autor/a, que s’aplicarà quan aquesta tramesa es publiqui en aquesta revista (podeu incloure comentaris per a l’editor/a a continuació).</message>

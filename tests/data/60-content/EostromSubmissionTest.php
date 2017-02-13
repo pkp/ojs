@@ -3,8 +3,8 @@
 /**
  * @file tests/data/60-content/EostromSubmissionTest.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2000-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2000-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class EostromSubmissionTest
@@ -25,7 +25,7 @@ class EostromSubmissionTest extends ContentBaseTestCase {
 			'firstName' => 'Elinor',
 			'lastName' => 'Ostrom',
 			'affiliation' => 'Indiana University',
-			'country' => 'United States',
+			'country' => 'United States of America',
 		));
 
 		$title = 'Traditions and Trends in the Study of the Commons';
@@ -41,7 +41,7 @@ class EostromSubmissionTest extends ContentBaseTestCase {
 				array(
 					'firstName' => 'Frank',
 					'lastName' => 'van Laerhoven',
-					'country' => 'United States',
+					'country' => 'United States of America',
 					'affiliation' => 'Indiana University',
 					'email' => 'fvanlaerhoven@mailinator.com',
 				)

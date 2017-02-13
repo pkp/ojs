@@ -3,8 +3,8 @@
 /**
  * @file controllers/grid/pubIds/PubIdExportSubmissionsListGridCellProvider.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2000-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2000-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class PubIdExportSubmissionsListGridCellProvider
@@ -20,8 +20,8 @@ class PubIdExportSubmissionsListGridCellProvider extends ExportPublishedSubmissi
 	/**
 	 * Constructor
 	 */
-	function PubIdExportSubmissionsListGridCellProvider($plugin, $authorizedRoles = null) {
-		parent::ExportPublishedSubmissionsListGridCellProvider($plugin, $authorizedRoles);
+	function __construct($plugin, $authorizedRoles = null) {
+		parent::__construct($plugin, $authorizedRoles);
 	}
 
 	/**

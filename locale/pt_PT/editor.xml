@@ -4,8 +4,8 @@
 <!--
   * locale/pt_PT/editor.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the pt_PT (Português (Portugal)) locale.
@@ -146,10 +146,6 @@
 	<message key="editor.article.assignEditor">Designar Editor</message>
 	<message key="editor.article.selectEditor">Escolher {$roleName}</message>
 	<message key="editor.article.selectDecision">Seleccionar Decisão</message>
-	<message key="editor.article.decision.accept">Aceitar</message>
-	<message key="editor.article.decision.pendingRevisions">Revisões requeridas</message>
-	<message key="editor.article.decision.resubmit">Enviar novamente para revisão</message>
-	<message key="editor.article.decision.decline">Rejeitar</message>
 	<message key="editor.article.selectLayoutEditor">Seleccionar Editor de Layout</message>
 	<message key="editor.article.replaceLayoutEditor">Substituir Editor de Layout</message>
 	<message key="editor.article.reviewSubmission">Rever Submissão</message>

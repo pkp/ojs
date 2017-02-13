@@ -4,8 +4,8 @@
 <!--
   * locale/es_ES/locale.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * https://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_(es_ES)
   * Localization strings.
@@ -310,10 +310,6 @@
 	<!-- Reader Comments -->
 	<message key="comments.commentsOnArticle">Comentarios sobre este artículo</message>
 	<message key="comments.authenticated"><![CDATA[por <a href="{$publicProfileUrl}" target="_parent">{$userName}</a>]]></message>
-
-	<!-- Site Administration -->
-
-	<message key="admin.settings.oaiRegistrationDescription"><![CDATA[Para indexar el contenido de todas las revistas del sitio web en el sistema global de bases de datos para la investigación, <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">registre</a> la URL de su sitio web con <a href="http://pkp.sfu.ca/harvester/" target="_blank">la recopilación de los metadatos del Public Knowledge Project </a>. Esta herramienta recopila los metadatos de cada elemento indizado en la revista, permitiendo así una búsqueda precisa y conjunta en aquellos sitios de investigación que están adheridos al <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank"> Protocolo de Open Archives Initiative para la recopilación de metadatos</a>. <br /><br /> <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Haga clic aquí</a> e introduzca <span class="highlight">{$siteUrl}</span> en <strong>URL del sitio </strong>, y <span class="highlight">{$oaiUrl}</span> en <strong>URL base para el Archivo OAI</strong>. <br /><br /> Tenga en cuenta que la interfaz OAI se puede deshabilitar de este sitio modificando la configuración del sistema OJS. Versiones futuras de OJS permitirán activar o desactivar la interfaz OAI de forma individual para cada una de las revistas del sitio.]]></message>
 
 	<!-- Languages -->
 
@@ -948,8 +944,6 @@
 	<message key="user.role.subEditors">Editores/as de sección</message>
 	<message key="user.role.journalAssistant">Asistente/a de revista</message>
 	<message key="user.role.journalAssistants">Asistentes/as de revista</message>
-	<message key="user.role.guestEditor">Editor/a invitado/a</message>
-	<message key="user.role.guestEditors">Editores/as invitados/as</message>
 	<message key="issue.return">Volver a los detalles del número</message>
 	<message key="submission.event.submissionSubmitted">Artículo enviado</message>
 	<message key="search.results.orderBy">Ordenar resultados por</message>

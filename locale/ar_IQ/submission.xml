@@ -4,14 +4,14 @@
 <!--
   * locale/ar_IQ/submission.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the ar_IQ (العربية) locale.
   -->
 
-<locale name="ar_IQ" full_name = "العربية">
+<locale name="ar_IQ" full_name="العربية">
 	<!-- Submission wizard -->
 	<message key="submission.submit.title">قدم طلباً للنشر</message>
 	<message key="submission.submit.userGroup">قدم طلباً بصفتي...</message>

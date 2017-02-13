@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE email_texts SYSTEM "../../../../../lib/pkp/dtd/emailTemplateData.dtd">
+
 <!--
-  * plugins/paymethod/paypal/locale/fr_CA/emailTemplateData.xml
+  * @file plugins/paymethod/paypal/locale/fr_CA/emailTemplates.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_French_(fr_CA)
   * Localized email templates XML file.
   -->
-<email_texts locale="fr_CA">
+
+<email_texts locale = "fr_CA">
 	<email_text key="PAYPAL_INVESTIGATE_PAYMENT">
 		<subject>Activité inhabituelle de PayPal</subject>
 		<body><![CDATA[L'Open Journal Systems a remarqué une activité inhabituelle concernant la prise en charge du paiement PayPal pour la revue {$contextName}. Cette activité pourrait nécessiter une attention particulière ou une intervention manuelle.<br />

@@ -3,8 +3,8 @@
 /**
  * @file classes/plugins/DOIPubIdExportPlugin.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class DOIPubIdExportPlugin
@@ -17,7 +17,6 @@ import('classes.plugins.PubObjectsExportPlugin');
 
 // Configuration errors.
 define('DOI_EXPORT_CONFIG_ERROR_DOIPREFIX', 0x01);
-define('DOI_EXPORT_CONFIG_ERROR_SETTINGS', 0x02);
 
 // The name of the setting used to save the registered DOI.
 define('DOI_EXPORT_REGISTERED_DOI', 'registeredDoi');
@@ -27,8 +26,8 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin {
 	/**
 	 * Constructor
 	 */
-	function DOIPubIdExportPlugin() {
-		parent::PubObjectsExportPlugin();
+	function __construct() {
+		parent::__construct();
 	}
 
 	/**
@@ -51,9 +50,11 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin {
 		switch (array_shift($args)) {
 			case 'index':
 			case '':
+				parent::display($args, $request);
+				$templateMgr = TemplateManager::getManager($request);
 				// Check for configuration errors:
-				$configurationErrors = array();
-				// 1) missing DOI prefix
+				$configurationErrors = $templateMgr->get_template_vars('configurationErrors');
+				// missing DOI prefix
 				$doiPrefix = $exportArticles = $exportIssues = null;
 				$pubIdPlugins = PluginRegistry::loadCategory('pubIds', true);
 				if (isset($pubIdPlugins['doipubidplugin'])) {
@@ -66,30 +67,7 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin {
 				if (empty($doiPrefix)) {
 					$configurationErrors[] = DOI_EXPORT_CONFIG_ERROR_DOIPREFIX;
 				}
-
-				// 2) missing plugin settings
-				$form = $this->_instantiateSettingsForm($context);
-				foreach($form->getFormFields() as $fieldName => $fieldType) {
-					if ($form->isOptional($fieldName)) continue;
-					$pluginSetting = $this->getSetting($context->getId(), $fieldName);
-					if (empty($pluginSetting)) {
-						$configurationErrors[] = DOI_EXPORT_CONFIG_ERROR_SETTINGS;
-						break;
-					}
-				}
-				// Add link actions
-				$actions = $this->getExportActions($context);
-				$actionNames = array_intersect_key($this->getExportActionNames(), array_flip($actions));
-				import('lib.pkp.classes.linkAction.request.NullAction');
-				$linkActions = array();
-				foreach ($actionNames as $action => $actionName) {
-					$linkActions[] = new LinkAction($action, new NullAction(), $actionName);
-				}
-				$templateMgr = TemplateManager::getManager($request);
 				$templateMgr->assign(array(
-					'plugin' => $this,
-					'actionNames' => $actionNames,
-					'configurationErrors' => $configurationErrors,
 					'exportArticles' => $exportArticles,
 					'exportIssues' => $exportIssues,
 					'exportRepresentations' => $exportRepresentations,
@@ -97,50 +75,6 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin {
 				$templateMgr->display($this->getTemplatePath() . 'index.tpl');
 				break;
 		}
-	}
-
-	/**
-	 * @copydoc PubObjectsExportPlugin::executeExportAction()
-	 */
-	function executeExportAction($request, $objects, $filter, $tab, $objectsFileNamePart) {
-		$context = $request->getContext();
-		$path = array('plugin', $this->getName());
-		if ($request->getUserVar(EXPORT_ACTION_DEPOSIT)) {
-			assert($filter != null);
-			// Get the XML
-			$exportXml = $this->exportXML($objects, $filter, $context);
-			// Write the XML to a file.
-			// export file name example: crossref/20160723-160036-articles-1.xml
-			$exportFileName = $this->getExportFileName($objectsFileNamePart, $context);
-			file_put_contents($exportFileName, $exportXml);
-			// Deposit the XML file.
-			$result = $this->depositXML($objects, $context, $exportFileName);
-			// send notifications
-			if ($result === true) {
-				$this->_sendNotification(
-					$request->getUser(),
-					$this->getDepositSuccessNotificationMessageKey(),
-					NOTIFICATION_TYPE_SUCCESS
-				);
-			} else {
-				if (is_array($result)) {
-					foreach($result as $error) {
-						assert(is_array($error) && count($error) >= 1);
-						$this->_sendNotification(
-							$request->getUser(),
-							$error[0],
-							NOTIFICATION_TYPE_ERROR,
-							(isset($error[1]) ? $error[1] : null)
-						);
-					}
-				}
-			}
-			// Remove all temporary files.
-			$this->cleanTmpfile($exportFileName);
-			// redirect back to the right tab
-			$request->redirect(null, null, null, $path, null, $tab);
-		}
-		parent::executeExportAction($request, $objects, $filter, $tab, $objectsFileNamePart);
 	}
 
 	/**
@@ -158,24 +92,6 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin {
 	function getPubIdDisplayType() {
 		return 'DOI';
 	}
-
-	/**
-	 * Get the locale key used in the notification for
-	 * the successful deposit.
-	 */
-	function getDepositSuccessNotificationMessageKey() {
-		return 'plugins.importexport.common.register.success';
-	}
-
-	/**
-	 * Deposit XML document.
-	 * This must be implemented in the subclasses, if the action is supported.
-	 * @param $objects mixed Array of or single published article, issue or galley
-	 * @param $context Context
-	 * @param $filename Export XML filename
-	 * @return boolean Whether the XML document has been registered
-	 */
-	abstract function depositXML($objects, $context, $filename);
 
 	/**
 	 * Mark selected submissions or issues as registered.
@@ -223,15 +139,6 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin {
 		$additionalFields =& $args[1];
 		assert(is_array($additionalFields));
 		$additionalFields[] = $this->getPluginSettingsPrefix() . '::' . DOI_EXPORT_REGISTERED_DOI;
-	}
-
-	/**
-	 * @copydoc AcronPlugin::parseCronTab()
-	 */
-	function callbackParseCronTab($hookName, $args) {
-		$taskFilesPath =& $args[0];
-		$taskFilesPath[] = $this->getPluginPath() . DIRECTORY_SEPARATOR . 'scheduledTasks.xml';
-		return false;
 	}
 
 	/**
@@ -348,19 +255,6 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin {
 		}
 		return $galleys;
 	}
-
-	/**
-	 * Instantiate the settings form.
-	 * @param $context Context
-	 * @return CrossRefSettingsForm
-	 */
-	function _instantiateSettingsForm($context) {
-		$settingsFormClassName = $this->getSettingsFormClassName();
-		$this->import('classes.form.' . $settingsFormClassName);
-		$settingsForm = new $settingsFormClassName($this, $context->getId());
-		return $settingsForm;
-	}
-
 
 }
 

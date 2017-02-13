@@ -3,8 +3,8 @@
 /**
  * @file classes/submission/form/SubmissionSubmitStep4Form.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SubmissionSubmitStep4Form
@@ -21,8 +21,8 @@ class SubmissionSubmitStep4Form extends PKPSubmissionSubmitStep4Form {
 	 * @param $context Context
 	 * @param $submission Submission
 	 */
-	function SubmissionSubmitStep4Form($context, $submission) {
-		parent::PKPSubmissionSubmitStep4Form(
+	function __construct($context, $submission) {
+		parent::__construct(
 			$context,
 			$submission
 		);
@@ -57,18 +57,19 @@ class SubmissionSubmitStep4Form extends PKPSubmissionSubmitStep4Form {
 				$primaryAuthor = $authors[0];
 			}
 			$mail->addRecipient($user->getEmail(), $user->getFullName());
-
-			if ($user->getEmail() != $primaryAuthor->getEmail()) {
-				$authorMail->addRecipient($primaryAuthor->getEmail(), $primaryAuthor->getFullName());
-			}
+			// Add primary contact and e-mail address as specified in the journal submission settings
 			if ($context->getSetting('copySubmissionAckPrimaryContact')) {
-				$authorMail->addBcc(
+				$mail->addBcc(
 					$context->getSetting('contactEmail'),
 					$context->getSetting('contactName')
 				);
 			}
 			if ($copyAddress = $context->getSetting('copySubmissionAckAddress')) {
-				$authorMail->addBcc($copyAddress);
+				$mail->addBcc($copyAddress);
+			}
+
+			if ($user->getEmail() != $primaryAuthor->getEmail()) {
+				$authorMail->addRecipient($primaryAuthor->getEmail(), $primaryAuthor->getFullName());
 			}
 
 			$assignedAuthors = $submission->getAuthors();

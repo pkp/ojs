@@ -3,8 +3,8 @@
 /**
  * @file tools/upgrade.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class upgradeTool
@@ -25,8 +25,8 @@ class OJSUpgradeTool extends UpgradeTool {
 	 * Constructor.
 	 * @param $argv array command-line arguments
 	 */
-	function OJSUpgradeTool($argv = array()) {
-		parent::UpgradeTool($argv);
+	function __construct($argv = array()) {
+		parent::__construct($argv);
 	}
 }
 

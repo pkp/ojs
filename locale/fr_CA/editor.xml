@@ -4,15 +4,14 @@
 <!--
   * locale/fr_CA/editor.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Localization strings for the fr_CA (Français (Canada)) locale.
-  *
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_French_(fr_CA)
+  * Localization strings.
   -->
 
-<locale name="fr_CA" full_name="Français (Canada)">
+<locale name = "fr_CA" full_name = "Français (Canada)">
 	<message key="editor.home">Page d'accueil du rédacteur</message>
 	<message key="editor.submissionsAndPublishing">Soumissions et publication</message>
 	<message key="editor.submissionQueue">Soumission en attente</message>
@@ -35,8 +34,6 @@
 	<message key="editor.notifyUsers.includeToc">Inclure le sommaire de ce numéro :</message>
 	<message key="editor.editorAdministration">Administration du rédacteur</message>
 	<message key="editor.issues.createIssue">Créer un numéro</message>
-	<message key="editor.issues.backIssues"> Numéros précédents</message>
-	<message key="editor.issues.futureIssues">Numéros à venir</message>
 	<message key="editor.issues.currentIssue">Numéro courant</message>
 	<message key="editor.issues.numArticles">Articles</message>
 	<message key="editor.issues.noArticles">Aucun article n'est actuellement planifié pour ce numéro.</message>
@@ -146,10 +143,6 @@
 	<message key="editor.article.assignEditor">Ajouter un rédacteur</message>
 	<message key="editor.article.selectEditor">Sélectionner {$roleName}</message>
 	<message key="editor.article.selectDecision">Sélectionner une décision</message>
-	<message key="editor.article.decision.accept">Accepter la soumission</message>
-	<message key="editor.article.decision.pendingRevisions">Révisions requises</message>
-	<message key="editor.article.decision.resubmit">Soumettre à nouveau pour évaluation</message>
-	<message key="editor.article.decision.decline">Refuser la soumission</message>
 	<message key="editor.article.selectLayoutEditor">Sélectionner le responsable de la mise en page</message>
 	<message key="editor.article.replaceLayoutEditor">Remplacer le responsable de la mise en page</message>
 	<message key="editor.article.reviewSubmission">Évaluer la soumission</message>
@@ -210,7 +203,28 @@
 	<message key="editor.issues.noneIssueGalleys">Les épreuves du numéro n'ont pas été publiées.</message>
 	<message key="editor.issues.galleyLabelRequired">Veuillez attribuer une étiquette aux épreuves du numéro.</message>
 	<message key="editor.issues.galleyLocaleRequired">Veuillez préciser la langue utilisée dans les épreuves du numéro.</message>
-	<message key="editor.issues.galleyPublicIdentificationExists">L'identification des épreuves publiées du numéro existe déjà???</message>
+	<message key="editor.issues.galleyPublicIdentificationExists">L'identifiant du numéro de l'épreuve publié existe déjà.</message>
 	<message key="editor.issues.backToIssueGalleys">Retourner aux épreuves du numéro</message>
 	<message key="editor.issues.confirmDeleteGalley">Voulez-vous vraiment supprimer les épreuves de ce numéro?</message>
+	<message key="editor.issues.editIssue">Gestion de numéro: {$issueIdentification}</message>
+	<message key="editor.issues.datePublished">Date de publication</message>
+	<message key="editor.issues.removeCoverImageFileNameMismatch">L'image de la page couverture à supprimer ne correspond pas à l'image de ce numéro. Veuillez recharger la page et essayer de nouveau.</message>
+	<message key="editor.issues.removeCoverImageFileNotFound">L'image de la page couverture à supprimer n'a pu être repérée. Elle est peut-être déjà détruite. Essayer de recharger la page.</message>
+	<message key="editor.issues.invalidCoverImageFormat">Format de page couverture invalide. Les formats acceptés sont .gif, .jpg, et .png.</message>
+	<message key="editor.issues.identifiers">Identifiants</message>
+	<message key="grid.action.addGalley">Ajouter une épreuve</message>
+	<message key="grid.action.publish">Publier le numéro</message>
+	<message key="grid.action.addIssue">Créer un numéro</message>
+	<message key="grid.action.viewIssue">Voir</message>
+	<message key="grid.action.previewIssue">Aperçu</message>
+	<message key="grid.action.addIssueGalley">Créer une épreuve pour le numéro</message>
+	<message key="editor.article.schedulePublication">Calendrier de publication</message>
+	<message key="editor.article.removeCoverImageFileNotFound">L'image de page couverture à supprimer n'a pu être repérée. Elle est peut-être déjà supprimée. Essayer de recharger la page.</message>
+	<message key="grid.action.removeArticle">Retirer l'article du numéro</message>
+	<message key="editor.article.remove.confirm">Êtes-vous certain de vouloir retirer cet article de ce numéro? L'article restera disponible pour un autre numéro.</message>
+	<message key="editor.issues.editIssueGalley">Éditer les épreuves du numéro</message>
+	<message key="editor.submission.production.productionReadyFilesDescription"><![CDATA[Le responsable de la mise en page prépare les fichiers de chaque épreuve et les téléverse dans le dossier <span class="pkp_help_title">Épreuves</span> approprié pour fins de vérification.]]></message>
+	<message key="editor.submission.selectGalleyFiles">Sélectionner les fichiers d'épreuves</message>
+	<message key="editor.submission.editorial.finalDraftDescription"><![CDATA[Les versions finales sur cette liste sont transformées par un Réviseur en versions révisées, téléversées dans <span class = "pkp_help_title">Révision</ span>.]]></message>
+	<message key="editor.submission.proof.manageProofFilesDescription">Tous les fichiers qui ont déjà été téléversés à n'importe quelle étape de soumission peuvent être ajoutés à la liste de vérification des épreuves en cochant la case "Inclure" ci-dessous et en cliquant sur "Rechercher". Tous les fichiers disponibles seront répertoriés et pourront être sélectionnés pour inclusion.</message>
 </locale>

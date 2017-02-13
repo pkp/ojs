@@ -3,8 +3,8 @@
 /**
  * @file classes/controllers/grid/filter/FilterGridHandler.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2000-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2000-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class FilterGridHandler
@@ -19,8 +19,8 @@ class FilterGridHandler extends PKPFilterGridHandler {
 	/**
 	 * Constructor
 	 */
-	function FilterGridHandler() {
-		parent::PKPFilterGridHandler();
+	function __construct() {
+		parent::__construct();
 		$this->addRoleAssignment(
 				ROLE_ID_MANAGER,
 				array('fetchGrid', 'addFilter', 'editFilter', 'updateFilter', 'deleteFilter'));

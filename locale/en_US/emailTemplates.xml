@@ -4,8 +4,8 @@
 <!--
   * locale/en_US/emailTemplates.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
   * Localized email templates XML file.
@@ -92,7 +92,7 @@ You have created an account with {$contextName}, but before you can start using 
 <br />
 Thank you,<br />
 {$principalContactSignature}]]></body>
-		<description>This email is sent to a newly registered user to welcome them to the system and provide them with a record of their username and password.</description>
+		<description>This email is sent to a newly registered user to validate their email account.</description>
 	</email_text>
 	<email_text key="REVIEWER_REGISTER">
 		<subject>Registration as Reviewer with {$contextName}</subject>
@@ -163,6 +163,17 @@ If you have any questions, please contact me. Thank you for considering this jou
 {$editorialContactSignature}]]></body>
 		<description>This email, when enabled, is automatically sent to an author when he or she completes the process of submitting a manuscript to the journal. It provides information about tracking the submission through the process and thanks the author for the submission.</description>
 	</email_text>
+	<email_text key="SUBMISSION_ACK_NOT_USER">
+		<subject>Submission Acknowledgement</subject>
+		<body><![CDATA[Hello,<br />
+<br />
+{$submitterName} has submitted the manuscript, &quot;{$submissionTitle}&quot; to {$contextName}. <br />
+<br />
+If you have any questions, please contact me. Thank you for considering this journal as a venue for your work.<br />
+<br />
+{$editorialContactSignature}]]></body>
+		<description>This email, when enabled, is automatically sent to the other authors who are not users within OJS specified during the submission process.</description>
+	</email_text>
 	<email_text key="SUBMISSION_UNSUITABLE">
 		<subject>Unsuitable Submission</subject>
 		<body><![CDATA[{$authorName}:<br />
@@ -214,7 +225,7 @@ Just a gentle reminder of our request for your review of the submission, &quot;{
 <br />
 I believe that you would serve as an excellent reviewer of the manuscript. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.<br />
 <br />
-Please log into the journal web site by to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is <a href="{$contextUrl}">{$contextUrl}</a><br />
+Please log into the journal web site to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is <a href="{$contextUrl}">{$contextUrl}</a><br />
 <br />
 The review itself is due {$reviewDueDate}.<br />
 <br />

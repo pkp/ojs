@@ -4,8 +4,8 @@
 <!--
   * locale/en_US/author.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
   * Localization strings.
@@ -31,7 +31,7 @@
 	<message key="author.submit.supplementaryFiles">Upload Supplementary Files</message>
 	<message key="author.submit.confirmation">Confirmation</message>
 	<message key="author.submit.nextSteps">Next Steps</message>
-	<message key="author.submit.cancelSubmission">You can complete this submission at a later date by selecting Active Submissions from the Author home.</message>
+	<message key="submission.submit.cancelSubmission">You can complete this submission at a later date by selecting Active Submissions from the Author home.</message>
 	<message key="author.submit.notAccepting">This journal is not accepting submissions at this time.</message>
 	<message key="author.submit.requestWaiver">Request Waiver</message>
 	<message key="author.submit.qualifyForWaiver">Please consider waiving the Article Submission Fee for this article</message>
@@ -48,8 +48,6 @@
 	<message key="author.submissions.noSubmissions">No submissions.</message>
 	<message key="author.submit.journalSection">Journal Section</message>
 	<message key="author.submit.journalSectionDescription">Articles must be submitted to one of the journal's sections.</message>
-	<message key="author.submit.submissionLocale">Submission Language</message>
-	<message key="author.submit.submissionLocaleDescription">This journal accepts submissions in several languages. Choose the primary language of the submission from the pulldown below.</message>
 	<message key="author.submit.verifyChecklist">You must make sure all items in the submission checklist are satisfied before continuing.</message>
 	<message key="author.submit.copyrightNoticeAgree">The authors agree to the terms of this Copyright Notice, which will apply to this submission if and when it is published by this journal (comments to the editor can be added below).</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">You must agree to the terms of the Copyright Notice before continuing.</message>

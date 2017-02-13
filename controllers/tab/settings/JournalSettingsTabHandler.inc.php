@@ -3,8 +3,8 @@
 /**
  * @file controllers/tab/settings/JournalSettingsTabHandler.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class JournalSettingsTabHandler
@@ -19,8 +19,8 @@ class JournalSettingsTabHandler extends ManagerSettingsTabHandler {
 	/**
 	 * Constructor
 	 */
-	function JournalSettingsTabHandler() {
-		parent::ManagerSettingsTabHandler();
+	function __construct() {
+		parent::__construct();
 		$this->setPageTabs(array(
 			'masthead' => 'controllers.tab.settings.masthead.form.MastheadForm',
 			'contact' => 'lib.pkp.controllers.tab.settings.contact.form.ContactForm',

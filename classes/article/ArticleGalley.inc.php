@@ -3,8 +3,8 @@
 /**
  * @file classes/article/ArticleGalley.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ArticleGalley
@@ -23,8 +23,8 @@ class ArticleGalley extends Representation {
 	/**
 	 * Constructor.
 	 */
-	function ArticleGalley() {
-		parent::Representation();
+	function __construct() {
+		parent::__construct();
 	}
 
 	//
@@ -36,7 +36,12 @@ class ArticleGalley extends Representation {
 	 */
 	function getViews() {
 		$application = PKPApplication::getApplication();
-		return $application->getPrimaryMetricByAssoc(ASSOC_TYPE_GALLEY, $this->getId());
+		$fileId = $this->getFileId();
+		if ($fileId) {
+			return $application->getPrimaryMetricByAssoc(ASSOC_TYPE_SUBMISSION_FILE, $fileId);
+		} else {
+			return 0;
+		}
 	}
 
 	/**

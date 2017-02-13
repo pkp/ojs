@@ -4,8 +4,8 @@
 <!--
   * locale/pt_BR/locale.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Portuguese_(pt_BR)
   * Localization strings.
@@ -253,16 +253,6 @@
 	<!-- Reader Comments -->
 	<message key="comments.commentsOnArticle">Comentários sobre o artigo</message>
 	<message key="comments.authenticated"><![CDATA[por <a href="{$publicProfileUrl}" target="_parent">{$userName}</a>]]></message>
-
-	<!-- Site Administration -->
-
-	<message key="admin.settings.oaiRegistrationDescription"><![CDATA[Para indexar todo o conteúdo das revistas hospedadas neste portal em um sistema global de bases de dados de pesquisa integradas, <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">cadastre</a> a URL do portal no <a href="http://pkp.sfu.ca/harvester/" target="_blank">coletador de metadados</a> do Public Knowledge Project. Esta ferramenta coleta os metadados de cada item indexado na revista, permitindo pesquisa coletiva e precisa dentro dos portais que adotam o <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Protocolo de Arquivos Abertos para Coleta de Metadados - OAI PMH</a>.
-<br /><br />
-<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Clique aqui</a> e insira <span class="highlight">{$siteUrl}</span> no campo <strong>URL do Portal</strong>, e <span class="highlight">{$oaiUrl}</span> no campo <strong>URL Base para o Arquivo OAI</strong>.
-<br /><br />
-Note que a interface OAI pode ser desativada para este portal nas configurações do sistema. Futuras versões do OJS permitirão ativar ou desativar a interface OAI para revistas, individualmente.]]></message>
-
-
 
 	<!-- Languages -->
 
@@ -1071,8 +1061,6 @@ Pode-se opcionalmente informar o motivo pelo qual está sendo desativado o cadas
 	<message key="user.register.noContextReviewerInterests">Se você pediu para ser um avaliador em qualquer revista, por favor, informe seus assuntos de interesse.</message>
 	<message key="user.role.journalAssistant">Assistente da Revista</message>
 	<message key="user.role.journalAssistants">Assitentes de Revista</message>
-	<message key="user.role.guestEditor">Editor Convidado</message>
-	<message key="user.role.guestEditors">Editores Convidados</message>
 	<message key="issue.return">Voltar aos Detalhes da Edição</message>
 	<message key="search.results.orderBy">Ordenar resultados por</message>
 	<message key="search.results.orderBy.article">Título do Artigo</message>
@@ -1139,4 +1127,7 @@ Pode-se opcionalmente informar o motivo pelo qual está sendo desativado o cadas
 
 	<message key="editor.issues.backIssues">Edições anteriores</message>
 	<message key="editor.issues.futureIssues">Edições futuras</message>
+	<message key="notification.type.assignProductionUser">Designe um usuário para criar as composições finais usando o link "Adicionar" na lista Participantes.</message>
+	<message key="notification.type.awaitingRepresentations">Esperando Composições Finais</message>
+	<message key="journal.viewAllIssues">Ver Todas as Edições</message>
 </locale>

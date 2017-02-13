@@ -1,8 +1,8 @@
 {**
  * controllers/tab/settings/masthead/form/mastheadForm.tpl
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Masthead management form.
@@ -28,11 +28,11 @@
 
 	{fbvFormArea id="mastheadNameContainer"}
 		{fbvFormSection title="manager.setup.contextName" for="name" required=true inline=true size=$fbvStyles.size.MEDIUM}
-			{fbvElement type="text" multilingual=true name="name" id="name" value=$name}
+			{fbvElement type="text" multilingual=true name="name" id="name" value=$name required=true}
 		{/fbvFormSection}
 
 		{fbvFormSection title="manager.setup.journalInitials" for="acronym" required=true inline=true size=$fbvStyles.size.SMALL}
-			{fbvElement type="text" multilingual=true name="acronym" id="acronym" value=$acronym}
+			{fbvElement type="text" multilingual=true name="acronym" id="acronym" value=$acronym required=true}
 		{/fbvFormSection}
 
 		{fbvFormSection title="manager.setup.journalAbbreviation" for="abbreviation" inline=true size=$fbvStyles.size.SMALL}

@@ -4,8 +4,8 @@
 <!--
   * locale/sv_SE/author.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2000-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the sv_SE (Svenska) locale.
@@ -31,7 +31,7 @@
 	<message key="author.submit.upload">3. Ladda upp manuskriptet</message>
 	<message key="author.submit.supplementaryFiles">Ladda upp komplementerande filer</message>
 	<message key="author.submit.confirmation">Bekräfta</message>
-	<message key="author.submit.cancelSubmission">Du kan göra klart manusinlämningen vid ett senare tillfälle genom att välja Aktiva manuskript under Din Författarsida.</message>
+	<message key="submission.submit.cancelSubmission">Du kan göra klart manusinlämningen vid ett senare tillfälle genom att välja Aktiva manuskript under Din Författarsida.</message>
 	<message key="author.submit.notAccepting">Den här tidskriften tar för tillfället inte emot några manuskript.</message>
 	<message key="author.submit.requestWaiver">Begär avsägelse</message>
 	<message key="author.submit.qualifyForWaiver">Vänligen överväg att avstå från avgiften för den här artikeln</message>
@@ -116,7 +116,5 @@
 	<message key="author.submissions.queuedReviewRevisions">Granskas: revidering nödvändig</message>
 	<message key="author.submissions.queuedEditingCopyedit">Redigeras: manusredigering begärd</message>
 	<message key="author.submissions.queuedEditingProofread">Redigeras: Korrekturläsning begärd</message>
-	<message key="author.submit.submissionLocale">Bidragets språk</message>
-	<message key="author.submit.submissionLocaleDescription">Den här tidskriften tar emot bidrag på fler än ett språk. Välj bidragets huvudsakliga språk från listan nedan.</message>
 	<message key="author.submit.form.localeRequired">Vänligen välj ett språk för bidraget</message>
 </locale>

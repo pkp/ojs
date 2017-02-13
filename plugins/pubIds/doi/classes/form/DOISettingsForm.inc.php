@@ -3,8 +3,8 @@
 /**
  * @file plugins/pubIds/doi/classes/form/DOISettingsForm.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class DOISettingsForm
@@ -52,11 +52,11 @@ class DOISettingsForm extends Form {
 	 * @param $plugin DOIPubIdPlugin
 	 * @param $contextId integer
 	 */
-	function DOISettingsForm($plugin, $contextId) {
+	function __construct($plugin, $contextId) {
 		$this->_contextId = $contextId;
 		$this->_plugin = $plugin;
 
-		parent::Form($plugin->getTemplatePath() . 'settingsForm.tpl');
+		parent::__construct($plugin->getTemplatePath() . 'settingsForm.tpl');
 
 		$this->addCheck(new FormValidatorCustom($this, 'doiObjects', 'required', 'plugins.pubIds.doi.manager.settings.doiObjectsRequired', create_function('$enableIssueDoi,$form', 'return $form->getData(\'enableIssueDoi\') || $form->getData(\'enableSubmissionDoi\') || $form->getData(\'enableRepresentationDoi\');'), array($this)));
 		$this->addCheck(new FormValidatorRegExp($this, 'doiPrefix', 'required', 'plugins.pubIds.doi.manager.settings.doiPrefixPattern', '/^10\.[0-9]{4,7}$/'));

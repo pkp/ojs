@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/medra/filter/ArticleMedraXmlFilter.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2000-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2000-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ArticleMedraXmlFilter
@@ -21,9 +21,9 @@ class ArticleMedraXmlFilter extends O4DOIXmlFilter {
 	 * Constructor
 	 * @param $filterGroup FilterGroup
 	 */
-	function ArticleMedraXmlFilter($filterGroup) {
+	function __construct($filterGroup) {
 		$this->setDisplayName('mEDRA XML article export');
-		parent::O4DOIXmlFilter($filterGroup);
+		parent::__construct($filterGroup);
 	}
 
 	/**
@@ -135,11 +135,11 @@ class ArticleMedraXmlFilter extends O4DOIXmlFilter {
 		$notificationType = (empty($registeredDoi) ? O4DOI_NOTIFICATION_TYPE_NEW : O4DOI_NOTIFICATION_TYPE_UPDATE);
 		$articleNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'NotificationType', $notificationType));
 		// DOI (mandatory)
-		$articleNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'DOI', $doi));
+		$articleNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'DOI', htmlspecialchars($doi, ENT_COMPAT, 'UTF-8')));
 		// DOI URL (mandatory)
 		$urlPath = $article->getBestArticleId();
 		if ($galley) $urlPath = array($article->getBestArticleId(), $galley->getBestGalleyId());
-		$url = $router->url($request, $context->getPath(), 'article', 'view', $urlPath);
+		$url = $router->url($request, $context->getPath(), 'article', 'view', $urlPath, null, null, true);
 		if ($plugin->isTestMode($context)) {
 			// Change server domain for testing.
 			$url = PKPString::regexp_replace('#://[^\s]+/index.php#', '://example.com/index.php', $url);
@@ -148,7 +148,7 @@ class ArticleMedraXmlFilter extends O4DOIXmlFilter {
 		// DOI strucural type
 		$articleNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'DOIStructuralType', $this->getDOIStructuralType()));
 		// Registrant (mandatory)
-		$articleNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'RegistrantName', $plugin->getSetting($context->getId(), 'registrantName')));
+		$articleNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'RegistrantName', htmlspecialchars($plugin->getSetting($context->getId(), 'registrantName'), ENT_COMPAT, 'UTF-8')));
 		// Registration authority (mandatory)
 		$articleNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'RegistrationAuthority', 'mEDRA'));
 		// WorkIdentifier - proprietary ID
@@ -195,23 +195,20 @@ class ArticleMedraXmlFilter extends O4DOIXmlFilter {
 		$seq = $article->getSequence();
 		assert(!empty($seq));
 		$contentItemNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'SequenceNumber', $seq));
-		// Number of pages
-		$pages = $article->getPages();
-		if (is_numeric($pages)) {
-			$pages = (int) $pages;
-		} else {
-			// If the field is not numeric then try to parse it (eg. "pp. 3-8").
-			if (preg_match("/([0-9]+)\s*-\s*([0-9]+)/i", $pages, $matches)) {
-				if (is_numeric($matches[1]) && is_numeric($matches[2])) {
-					$firstPage = (int) $matches[1];
-					$lastPage = (int) $matches[2];
-					$pages = $lastPage - $firstPage + 1;
-				}
-			}
-		}
-		if (is_integer($pages)) {
+		// Describe page runs
+		$pages = $article->getPageArray();
+		if ($pages) {
 			$textItemNode = $doc->createElementNS($deployment->getNamespace(), 'TextItem');
-			$textItemNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'NumberOfPages', $pages));
+			foreach ($pages as $range) {
+				$pageRunNode = $doc->createElementNS($deployment->getNamespace(), 'PageRun');
+				$node = $doc->createElementNS($deployment->getNamespace(), 'FirstPageNumber', htmlspecialchars($range[0]));
+				$pageRunNode->appendChild($node);
+				if (isset($range[1])) {
+					$node = $doc->createElementNS($deployment->getNamespace(), 'LastPageNumber', htmlspecialchars($range[1]));
+					$pageRunNode->appendChild($node);
+				}
+				$textItemNode->appendChild($pageRunNode);
+			}
 			$contentItemNode->appendChild($textItemNode);
 		}
 		// Extent (for article-as-manifestation only)
@@ -353,22 +350,22 @@ class ArticleMedraXmlFilter extends O4DOIXmlFilter {
 		// Person name (mandatory)
 		$personName = $author->getFullName();
 		assert(!empty($personName));
-		$contributorNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'PersonName', $personName));
+		$contributorNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'PersonName', htmlspecialchars($personName, ENT_COMPAT, 'UTF-8')));
 		// Inverted person name
 		$invertedPersonName = $author->getFullName(true);
 		assert(!empty($invertedPersonName));
-		$contributorNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'PersonNameInverted', $invertedPersonName));
+		$contributorNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'PersonNameInverted', htmlspecialchars($invertedPersonName, ENT_COMPAT, 'UTF-8')));
 		// Affiliation
 		$affiliation = $this->getPrimaryTranslation($author->getAffiliation(null), $objectLocalePrecedence);
 		if (!empty($affiliation)) {
 			$affiliationNode = $doc->createElementNS($deployment->getNamespace(), 'ProfessionalAffiliation');
-			$affiliationNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'Affiliation', $affiliation));
+			$affiliationNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'Affiliation', htmlspecialchars($affiliation, ENT_COMPAT, 'UTF-8')));
 			$contributorNode->appendChild($affiliationNode);
 		}
 		// Biographical note
 		$bioNote = $this->getPrimaryTranslation($author->getBiography(null), $objectLocalePrecedence);
 		if (!empty($bioNote)) {
-			$contributorNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'BiographicalNote', PKPString::html2text($bioNote)));
+			$contributorNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'BiographicalNote', htmlspecialchars(PKPString::html2text($bioNote), ENT_COMPAT, 'UTF-8')));
 		}
 		return $contributorNode;
 	}
@@ -388,12 +385,12 @@ class ArticleMedraXmlFilter extends O4DOIXmlFilter {
 		$subjectNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'SubjectSchemeIdentifier', $subjectSchemeId));
 		if (is_null($subjectSchemeName)) {
 			// Subject Heading
-			$subjectNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'SubjectHeadingText', $subjectHeadingOrCode));
+			$subjectNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'SubjectHeadingText', htmlspecialchars($subjectHeadingOrCode, ENT_COMPAT, 'UTF-8')));
 		} else {
 			// Subject Scheme Name
-			$subjectNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'SubjectSchemeName', $subjectSchemeName));
+			$subjectNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'SubjectSchemeName', htmlspecialchars($subjectSchemeName, ENT_COMPAT, 'UTF-8')));
 			// Subject Code
-			$subjectNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'SubjectCode', $subjectHeadingOrCode));
+			$subjectNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'SubjectCode', htmlspecialchars($subjectHeadingOrCode, ENT_COMPAT, 'UTF-8')));
 		}
 		return $subjectNode;
 	}

@@ -4,8 +4,8 @@
 <!--
   * locale/nl_NL/author.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the nl_NL (Nederlands) locale.
@@ -27,7 +27,7 @@
 	<message key="author.submit.start">Start</message>
 	<message key="author.submit.supplementaryFiles">Aanvullende bestanden laden</message>
 	<message key="author.submit.confirmation">Bevestiging</message>
-	<message key="author.submit.cancelSubmission">U kunt deze inzending op een later tijdstip voltooien door Actieve inzendingen te kiezen op de homepage voor auteurs.</message>
+	<message key="submission.submit.cancelSubmission">U kunt deze inzending op een later tijdstip voltooien door Actieve inzendingen te kiezen op de homepage voor auteurs.</message>
 	<message key="author.submit.notAccepting">Dit tijdschrift accepteert momenteel geen inzendingen.</message>
 	<message key="author.submit.requestWaiver">Kwijtschelding vragen</message>
 	<message key="author.submit.qualifyForWaiver">Overweeg kwijtschelding van de inzendingskosten voor dit artikel</message>
@@ -118,7 +118,5 @@
 	<message key="author.submit.form.wordCountAlert">U heeft het maximaal aantal woorden voor een samenvatting in deze sectie overschreden.</message>
 	<message key="author.submissions.queuedEditingCopyedit">Onder redactie: tekstredactie gevraagd</message>
 	<message key="author.submissions.queuedEditingProofread">Onder redactie: proeflezen gevraagd</message>
-	<message key="author.submit.submissionLocale">Taal van de inzending</message>
 	<message key="author.submit.form.localeRequired">Selecteer een taal voor de inzending.</message>
-	<message key="author.submit.submissionLocaleDescription">Dit tijdschrift accepteert inzendingen in verschillende  talen. Kies de taal van de inzending uit het menu hieronder.</message>
 </locale>

@@ -1,8 +1,8 @@
 {**
  * templates/frontend/objects/article_details.tpl
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @brief View of an Article which displays all details about the article.
@@ -136,19 +136,68 @@
 
 			{call_hook name="Templates::Article::Main"}
 
+			{* Author biographies *}
+			{assign var="hasBiographies" value=0}
+			{foreach from=$article->getAuthors() item=author}
+				{if $author->getLocalizedBiography()}
+					{assign var="hasBiographies" value=$hasBiographies+1}
+				{/if}
+			{/foreach}
+			{if $hasBiographies}
+				<div class="item author_bios">
+					<h3 class="label">
+						{if $hasBiographies > 1}
+							{translate key="submission.authorBiographies"}
+						{else}
+							{translate key="submission.authorBiography"}
+						{/if}
+					</h3>
+					{foreach from=$article->getAuthors() item=author}
+						{if $author->getLocalizedBiography()}
+							<div class="sub_item">
+								<div class="label">
+									{if $author->getLocalizedAffiliation()}
+										{capture assign="authorName"}{$author->getFullName()|escape}{/capture}
+										{capture assign="authorAffiliation"}<span class="affiliation">{$author->getLocalizedAffiliation()|escape}</span>{/capture}
+										{translate key="submission.authorWithAffiliation" name=$authorName affiliation=$authorAffiliation}
+									{else}
+										{$author->getFullName()|escape}
+									{/if}
+								</div>
+								<div class="value">
+									{$author->getLocalizedBiography()|strip_unsafe_html}
+								</div>
+							</div>
+						{/if}
+					{/foreach}
+				</div>
+			{/if}
+
+			{* References *}
+			{if $article->getCitations()}
+				<div class="item references">
+					<h3 class="label">
+						{translate key="submission.citations"}
+					</h3>
+					<div class="value">
+						{$article->getCitations()|nl2br}
+					</div>
+				</div>
+			{/if}
+
 		</div><!-- .main_entry -->
 
 		<div class="entry_details">
 
 			{* Article/Issue cover image *}
-			{if $article->getCoverImage() || $issue->getCoverImage()}
+			{if $article->getLocalizedCoverImage() || $issue->getLocalizedCoverImage()}
 				<div class="item cover_image">
 					<div class="sub_item">
-						{if $article->getCoverImage()}
-							<img src="{$publicFilesDir}/{$article->getCoverImage()|escape}"{if $article->getCoverImageAltText()} alt="{$article->getCoverImageAltText()|escape}"{/if}>
+						{if $article->getLocalizedCoverImage()}
+							<img src="{$article->getLocalizedCoverImageUrl()|escape}"{if $article->getLocalizedCoverImageAltText()} alt="{$article->getLocalizedCoverImageAltText()|escape}"{/if}>
 						{else}
 							<a href="{url page="issue" op="view" path=$issue->getBestIssueId()}">
-								<img src="{$publicFilesDir}/{$issue->getCoverImage()|escape}"{if $issue->getCoverImageAltText()} alt="{$issue->getCoverImageAltText()|escape}"{/if}>
+								<img src="{$issue->getLocalizedCoverImageUrl()|escape}"{if $issue->getLocalizedCoverImageAltText()} alt="{$issue->getLocalizedCoverImageAltText()|escape}"{/if}>
 							</a>
 						{/if}
 					</div>
@@ -175,7 +224,7 @@
 						{translate key="submissions.published"}
 					</div>
 					<div class="value">
-						{$article->getDatePublished()|date_format}
+						{$article->getDatePublished()|date_format:$dateFormatShort}
 					</div>
 				</div>
 			{/if}

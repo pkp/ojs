@@ -4,8 +4,8 @@
 <!--
   * locale/nl_NL/locale.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the nl_NL (Nederlands) locale.
@@ -237,15 +237,6 @@
 	<!-- Reader Comments -->
 	<message key="comments.commentsOnArticle">Reacties op dit artikel</message>
 	<message key="comments.authenticated"><![CDATA[door <a href="{$publicProfileUrl}" target="_parent">{$userName}</a>]]></message>
-
-	<!-- Site Administration -->
-
-	<message key="admin.settings.oaiRegistrationDescription"><![CDATA[Als u de inhoud van de tijdschriften op deze site geïndexeerd wilt hebben in een wereldwijd netwerk van onderzoeksdatabases, <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">registreer</a> dan de url van uw site bij de Public Knowledge Project metadata <a href="http://pkp.sfu.ca/harvester/" target="_blank">harvester</a>. Die verzamelt de metadata van de geïndexeerde items van dit tijdschrift, waardoor accuraat en collectief zoeken mogelijk wordt binnen de sites die het <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Open Archives Initiative Protocol for Metadata Harvesting</a> gebruiken.
-<br /><br />
-<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Klik hier</a> en geef <span class="highlight">{$siteUrl}</span> op bij <b>Site URL</b>, en <span class="highlight">{$oaiUrl}</span> bij <b>Base URL for OAI Archive</b>.
-<br /><br />
-Merk op dat de OAI interface voor deze site uitgeschakeld kan worden door de configuratie van het OJS systeem te wijzigen. In toekomstige versies van het OJS systeem zal het mogelijk zijn de OAI interface voor afzonderlijke tijdschriften binnen de site aan of uit te zetten.]]></message>
-
 
 	<!-- Languages -->
 	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Het binnenhalen van taalbestanden van de Public Knowledge Project website is momenteel niet mogelijk omdat:</p>

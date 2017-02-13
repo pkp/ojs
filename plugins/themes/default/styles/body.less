@@ -1,8 +1,8 @@
 /**
  * @file plugins/themes/default/styles/body.less
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @brief Classes for site-wide elements and layout scaffolding
@@ -147,6 +147,28 @@ a {
 
 		&:after {
 			left: @screen-lg-desktop-container - @sidebar-width;
+		}
+	}
+}
+
+// Center the content panel when no sidebar is present
+.pkp_structure_main:first-child:last-child {
+
+	@media(min-width: @screen-desktop) {
+		float: none;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: @quadruple;
+
+		// Aligns the left and right borders
+		@no-sidebar-margins: @sidebar-width / 2;
+		&:before {
+			left: @no-sidebar-margins;
+		}
+
+		&:after {
+			left: auto;
+			right: @no-sidebar-margins;
 		}
 	}
 }

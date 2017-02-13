@@ -4,8 +4,8 @@
 <!--
   * locale/it_IT/manager.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2000-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the it_IT (Italiano) locale.
@@ -89,7 +89,6 @@ Una volta aggiunto, il SE sarà automaticamente assegnato  alla gestione della R
 	<message key="manager.sections.form.mustAllowPermission">Assicurati di aver selezionato almeno un'assegnazione per ciascun section editor.</message>
 	<message key="manager.sections.form.reviewFormId">Assicurati di aver scelto un modulo per la revisione valido.</message>
 	<message key="manager.sections.form.titleRequired">Inserisci un titolo per questa sezione.</message>
-	<message key="manager.sections.hideAbout">Non mostrare questa sezione nella pagina delle informazioni sulla rivista.</message>
 	<message key="manager.sections.hideTocAuthor">Non mostrare il nome degli autori degli articoli pubblicati in questa sezione nel sommario dei fascicoli</message>
 	<message key="manager.sections.hideTocTitle">Non mostrare il titolo di questa sezione nel sommario dei fascicoli.</message>
 	<message key="manager.sections.identifyType">Nei metadati, identifica gli item pubblicati in questa sezione come</message>
@@ -150,11 +149,6 @@ Una volta aggiunto, il SE sarà automaticamente assegnato  alla gestione della R
 	<message key="manager.setup.enableAnnouncements">Abilita gli amministratori della rivista ad aggiungere avvisi.</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">Mostra</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">avvisi recenti nella homepage della rivista.</message>
-	<message key="manager.setup.enablePageNumber">I numeri di pagina degli articoli vanno calcolati e inseriti manualmente (es. 13-26).</message>
-	<message key="manager.setup.enablePublicArticleId">Gli identificatori personalizzati saranno apposti agli articoli pubblicati.</message>
-	<message key="manager.setup.enablePublicGalleyId">Gli identificatori personalizzati saranno apposti  a ciascun formato (es, HTML, PDF) di ciascun articolo pubblicato.</message>
-	<message key="manager.setup.enablePublicIssueId">Gli identificatori personalizzati saranno apposti ai fascicoli.</message>
-	<message key="manager.setup.enablePublicSuppFileId">Gli identificatori personalizzati saranno apposti ai file supplementari degli articoli.</message>
 	<message key="manager.setup.enableUserRegistration">Gli utenti possono autoregistrarsi alla rivista con uno o più dei seguenti ruoli:</message>
 	<message key="manager.setup.focusAndScope">Scopo e ambito</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWork">Indicizzare gli articoli</message>
@@ -297,13 +291,11 @@ Al momento di concludere una revisione, ai revisori vengono presentate due box, 
 	<message key="manager.setup.useJournalStyleSheet">CSS della rivista</message>
 	<message key="manager.setup.userRegistration">Registrazione utenti</message>
 	<message key="manager.setup.useTextTitle">Testo del titolo</message>
-	<message key="manager.statistics.city">Città</message>
-	<message key="manager.statistics.region">Regione</message>
 	<message key="manager.statistics.reports.defaultReport.articleDownloads">Download degli articoli</message>
 	<message key="manager.statistics.reports.defaultReport.articleAbstract">Viste delle pagine degli abstract</message>
 	<message key="manager.statistics.reports.defaultReport.articleAbstractAndDownloads">Viste degli abstract e download degli articoli</message>
 	<message key="manager.statistics.reports.defaultReport.journalIndexPageViews">Viste della home page della rivista</message>
-	<message key="manager.statistics.reports.today">Oggi</message>
+
 	<message key="manager.statistics.reports.filters.byContext.description">Restringe i risultati per contesto (fascicolo e/o articolo).</message>
 	<message key="manager.statistics.reports.filters.byObject.description">Restringe i risultati per tipo di oggetto (rivista, fascicolo, articolo, gabbia PDF, altre gabbie) e/o per uno o più id.</message>
 	<message key="manager.statistics.statistics">Statistiche</message>
@@ -517,8 +509,6 @@ I valori ammessi sono i nomi di dominio (es. www.cilea.it).</message>
 	<message key="manager.statistics.defaultMetricDescription">La rivista è configurata per registrare più di una metrica di utilizzo. Le statistiche di utilizzo verranno visualizzate in diversi contesti. 
 Ci sono casi in cui deve essere utilizzato una sola statistica di utilizzo, ad esempio, per visualizzare un elenco ordinato di oggetti più utilizzati o risultati di ricerca. 
 Selezionare una delle metriche configurate come predefinita.</message>
-	<message key="manager.statistics.reports.objectNotFound">Oggetto non trovato nel database.</message>
-
 	<!-- Common DOI export plugins (crossref, datacite, medra) keys -->
 	<!-- plugin tabs -->
 	<message key="plugins.importexport.common.settings">Impostazioni</message>
@@ -532,4 +522,30 @@ Selezionare una delle metriche configurate come predefinita.</message>
 	<message key="plugins.importexport.common.export.error.outputFileNotWritable">Il file {$param} non è scrivibile.</message>
 	<message key="plugins.importexport.common.register.error.mdsError">Errore nella registrazione! Il server di registrazione ha restituito un errore: '{$param}'.</message>
 	<message key="plugins.importexport.common.register.success">Registrazione conclusa con successo!</message>
+	<message key="manager.website.archiving">Archiviazione</message>
+	<message key="manager.setup.masthead">Testata</message>
+	<message key="manager.setup.masthead.description">Informazioni sulla redazione</message>
+	<message key="manager.setup.useStyleSheet">Foglio di stile</message>
+	<message key="manager.setup.contextName">Nome della rivista</message>
+	<message key="manager.setup.journalSummary">Presentazione della rivista</message>
+	<message key="manager.setup.journalSummary.description">Descrizione riassuntiva</message>
+	<message key="manager.setup.journalAbout">Informazioni sulla rivista</message>
+	<message key="manager.setup.journalAbout.description">Scopo e ambito della rivista, politiche, informazioni sulla peer review, copyright, archiviazione, sponsor, ecc.</message>
+	<message key="manager.setup.favicon">Favicon</message>
+	<message key="manager.setup.faviconDescription">Carica un'immagine (max 32x32px) che sarà visualizzata accanto al nome della rivista nella barra di navigazione</message>
+	<message key="manager.setup.journalThumbnail.description">Un piccolo logo da usare negli indici di riviste</message>
+	<message key="manager.setup.Issn">ISSN</message>
+	<message key="manager.distribution.access">Accesso</message>
+	<message key="manager.publication.library">Editore</message>
+	<message key="grid.genres.title.short">Componenti</message>
+	<message key="plugins.importexport.common.settings.DOIPluginSettings">Impostazioni plugin DOI</message>
+	<message key="plugins.importexport.common.export.articles">Articoli</message>
+	<message key="plugins.importexport.common.missingRequirements">Configurazione incompleta</message>
+	<message key="plugins.importexport.common.settings.form.password.description">La password verrà salvata come testo, non crittografata</message>
+	<message key="plugins.importexport.common.status.any">Ogni status</message>
+	<message key="plugins.importexport.common.status.notDeposited">Non depositato</message>
+	<message key="plugins.importexport.common.status.markedRegistered">Segnato come registrato</message>
+	<message key="plugins.importexport.common.status.registered">Registrato</message>
+	<message key="plugins.importexport.common.action.export">Esporta</message>
+	<message key="plugins.importexport.common.action.markRegistered">Segna come registrato</message>
 </locale>

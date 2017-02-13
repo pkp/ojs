@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../../../lib/pkp/dtd/xmlData.dtd">
+
+<!--
+  * 3.0.0_review_method.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * 3.0.0.0 review_method update.
+  -->
+<data>
+	<sql><!-- #2195 set review_method = 2 (SUBMISSION_REVIEW_METHOD_DOUBLEBLIND) where review_method = 0 i.e. for those migrated from OJS 2.4.x -->
+		<query>UPDATE review_assignments SET review_method = 2 WHERE review_method = 0</query>
+	</sql>
+</data>
+

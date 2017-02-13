@@ -3,8 +3,8 @@
 #
 # tools/buildpkg.sh
 #
-# Copyright (c) 2014-2016 Simon Fraser University Library
-# Copyright (c) 2003-2016 John Willinsky
+# Copyright (c) 2014-2017 Simon Fraser University Library
+# Copyright (c) 2003-2017 John Willinsky
 # Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
 #
 # Script to create an OJS package for distribution.
@@ -29,7 +29,6 @@ TMPDIR=`mktemp -d $PREFIX.XXXXXX` || exit 1
 EXCLUDE="dbscripts/xml/data/locale/en_US/sample.xml		\
 dbscripts/xml/data/sample.xml					\
 docs/dev							\
-locale/te_ST							\
 tests								\
 tools/buildpkg.sh						\
 tools/genLocaleReport.sh					\
@@ -41,6 +40,7 @@ plugins/*/*/tests						\
 plugins/auth/ldap						\
 plugins/generic/announcementFeed				\
 plugins/generic/backup						\
+plugins/generic/browse						\
 plugins/generic/coins						\
 plugins/generic/cookiesAlert					\
 plugins/generic/counter						\
@@ -54,7 +54,9 @@ plugins/generic/recommendBySimilarity				\
 plugins/generic/translator					\
 plugins/importexport/sample					\
 plugins/importexport/duracloud					\
+plugins/importexport/pubmed					\
 plugins/reports/subscriptions					\
+plugins/blocks/relatedItems					\
 tests								\
 lib/pkp/tests							\
 .git								\

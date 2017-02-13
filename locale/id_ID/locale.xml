@@ -4,8 +4,8 @@
 <!--
   * locale/id_ID/locale.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
 
@@ -229,8 +229,6 @@
 	<message key="user.role.subscriptionManagers">Manajer Langganan</message>
 	<message key="user.role.journalAssistant">Asisten Jurnal</message>
 	<message key="user.role.journalAssistants">Asisten Jurnal</message>
-	<message key="user.role.guestEditor">Editor Tamu</message>
-	<message key="user.role.guestEditors">Editor Tamu</message>
 		
 	<!-- Common Issue Terms -->
 	<message key="issue.issue">Terbitan</message>
@@ -347,19 +345,6 @@
 	<message key="search.results.orderDir.desc">Descending</message>
 	<message key="search.results.similarDocuments">dokumen serupa</message>
 	
-	<!-- Site Administration -->
-
-	<message key="admin.settings.oaiRegistrationDescription"><![CDATA[Untuk mengindeks konten jurnal yang ada di situs ini ke dalam pangkalan data penelitian terdistribusi global, <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">daftarkan</a> URL situs Anda pada Open Journal Systems Metadata <a href="http://pkp.sfu.ca/harvester/" target="_blank">Harvester</a>. Alat ini mengumpulkan metadata dari tiap item yang terindeks di jurnal, memungkinkan pencarian kolektif dan akurat di antara situs penelitian yang mengikuti <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Open Archives Initiative Protocol for Metadata Harvesting</a>.
-<br /><br />
-<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Klik di sini</a> dan masukkan <span class="highlight">{$siteUrl}</span> di bawah <strong>URL situs</strong>, dan <span class="highlight">{$oaiUrl}</span> di bawah <strong>URL Base untuk arsip OAI</strong>.
-<br /><br />
-Perhatikan bahwa OAI antarmuka dapat dinonaktifkan dengan mengedit konfigurasi sistem OJS. Pada versi selanjutnya OJS akan membuat pengaktifan OAI antarmuka pada masing-masing jurnal yang terdaftar di situs.]]></message>
-
-	<message key="admin.auth.defaultSourceDescription"><![CDATA[<p>Menetapkan sumber otentifikasi selain OJS akan menimbulkan dampak berikut:</p>
-	<ul>
-		<li>Jika pengguna hendak mendaftar akun baru ke situs ini dengan username yang telah ada di sumber otentifikasi (namun belum ada di databasee OJS), pendaftaran hanya akan berhasil bila menggunakan password yang sama untuk username di sumber tersebut.</li>
-	</ul>]]></message>
-
 	<!-- System Information -->
 	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>Catatan!</h4>
 	<p>Sistem tidak dapat secara otomatis menimpa file konfigurasi. Untuk menerapkan perubahan konfigurasi Anda, Anda harus membuka <tt>config.inc.php</tt> di text editor yang cocok dan mengganti isinya dengan isi text field di bawah ini.</p>]]></message>

@@ -731,7 +731,7 @@ class SimplePie
 	 * @param string $cache_location This is where you want the cache to be stored.
 	 * @param int $cache_duration This is the number of seconds that you want to store the cache file for.
 	 */
-	function SimplePie($feed_url = null, $cache_location = null, $cache_duration = null)
+	function __construct($feed_url = null, $cache_location = null, $cache_duration = null)
 	{
 		// Other objects, instances created here so we can set options on them
 		$this->sanitize = new SimplePie_Sanitize;

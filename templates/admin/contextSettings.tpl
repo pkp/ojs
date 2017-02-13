@@ -1,8 +1,8 @@
 {**
  * templates/admin/journalSettings.tpl
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Basic journal settings under site administration.
@@ -28,13 +28,13 @@
 
 	{fbvFormArea id="journalSettings"}
 		{fbvFormSection title="manager.setup.journalTitle" required=true for="name"}
-			{fbvElement type="text" id="name" value=$name multilingual=true}
+			{fbvElement type="text" id="name" value=$name multilingual=true required=true}
 		{/fbvFormSection}
 		{fbvFormSection title="admin.journals.journalDescription" for="description"}
 			{fbvElement type="textarea" id="description" value=$description multilingual=true rich=true}
 		{/fbvFormSection}
 		{fbvFormSection title="journal.path" required=true for="path"}
-			{fbvElement type="text" id="path" value=$path size=$smarty.const.SMALL maxlength="32"}
+			{fbvElement type="text" id="path" value=$path size=$smarty.const.SMALL maxlength="32" required=true}
 			{url|assign:"sampleUrl" router=$smarty.const.ROUTE_PAGE journal="path"}
 			{** FIXME: is this class instruct still the right one? **}
 			<span class="instruct">{translate key="admin.journals.urlWillBe" sampleUrl=$sampleUrl}</span>

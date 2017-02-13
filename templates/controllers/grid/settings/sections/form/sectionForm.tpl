@@ -1,8 +1,8 @@
 {**
  * templates/controllers/grid/settings/section/form/sectionForm.tpl
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Section form under journal management.
@@ -27,8 +27,8 @@
 
 	{fbvFormArea id="sectionInfo"}
 		{fbvFormSection}
-			{fbvElement type="text" multilingual=true id="title" label="section.title" value=$title maxlength="80" size=$fbvStyles.size.MEDIUM inline=true}
-			{fbvElement type="text" multilingual=true id="abbrev" label="section.abbreviation" value=$abbrev maxlength="80" size=$fbvStyles.size.SMALL inline=true}
+			{fbvElement type="text" multilingual=true id="title" label="section.title" value=$title maxlength="80" size=$fbvStyles.size.MEDIUM inline=true required=true}
+			{fbvElement type="text" multilingual=true id="abbrev" label="section.abbreviation" value=$abbrev maxlength="80" size=$fbvStyles.size.SMALL inline=true required=true}
 		{/fbvFormSection}
 
 		{fbvFormSection title="manager.sections.policy" for="policy"}
@@ -56,7 +56,6 @@
 			{fbvElement type="checkbox" id="editorRestriction" checked=$editorRestriction label="manager.sections.editorRestriction"}
 			{fbvElement type="checkbox" id="hideTitle" checked=$hideTitle label="manager.sections.hideTocTitle"}
 			{fbvElement type="checkbox" id="hideAuthor" checked=$hideAuthor label="manager.sections.hideTocAuthor"}
-			{fbvElement type="checkbox" id="hideAbout" checked=$hideAbout label="manager.sections.hideAbout"}
 		{/fbvFormSection}
 
 		{fbvFormSection for="identifyType" title="manager.sections.identifyType"}

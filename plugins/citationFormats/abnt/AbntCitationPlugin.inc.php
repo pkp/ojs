@@ -3,8 +3,8 @@
 /**
  * @file plugins/citationFormats/abnt/AbntCitationPlugin.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * With contributions from by Lepidus Tecnologia
  *
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
@@ -72,19 +72,6 @@ class AbntCitationPlugin extends CitationPlugin {
 			$location = $settings[AppLocale::getPrimaryLocale()];
 		}
 		return $location;
-	}
-
-	/**
-	 * Display verbs for the management interface.
-	 * @return array
-	 */
-	function getManagementVerbs() {
-		return array(
-			array(
-				'settings',
-				__('plugins.citationFormats.abnt.manager.settings')
-			)
-		);
 	}
 
 	/**

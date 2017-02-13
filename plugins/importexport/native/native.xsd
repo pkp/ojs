@@ -3,8 +3,8 @@
 <!--
   * plugins/importexport/native/native.xsd
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2014-2017 Simon Fraser University Library
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Schema describing native XML import/export elements specific to OJS
@@ -118,7 +118,7 @@
 			<element name="open_access_date" type="date" minOccurs="0" maxOccurs="1" />
 			<!-- sub elements -->
 			<element ref="pkp:sections" minOccurs="1" maxOccurs="1" />
-			<element ref="pkp:issue_cover" minOccurs="0" maxOccurs="1" />
+			<element ref="pkp:issue_covers" minOccurs="0" maxOccurs="1" />
 			<element ref="pkp:issue_galleys" minOccurs="0" maxOccurs="1" />
 			<element ref="pkp:articles" minOccurs="1" maxOccurs="1" />
 		</sequence>
@@ -160,13 +160,24 @@
 		</sequence>
 	</complexType>
 
-	<complexType name="issue_cover">
-		<sequence>
-			<element name="cover_image" type="string" minOccurs="1" maxOccurs="1" />
-			<element name="cover_image_alt_text" type="string" minOccurs="1" maxOccurs="1" />
-			<element name="embed" type="pkp:embed" />
-		</sequence>
-	</complexType>
+	<element name="issue_covers">
+		<complexType>
+			<sequence>
+				<element ref="pkp:cover" minOccurs="1" maxOccurs="unbounded" />
+			</sequence>
+		</complexType>
+	</element>
+
+	<element name="cover">
+		<complexType>
+			<sequence>
+				<element name="cover_image" type="string" minOccurs="1" maxOccurs="1" />
+				<element name="cover_image_alt_text" type="string" minOccurs="1" maxOccurs="1" />
+				<element name="embed" type="pkp:embed" />
+			</sequence>
+			<attribute name="locale" type="string" />
+		</complexType>
+	</element>
 
 	<element name="issue_galleys">
 		<complexType>
@@ -200,7 +211,6 @@
 		<attribute name="abstracts_not_required" type="int" />
 		<attribute name="hide_title" type="int" />
 		<attribute name="hide_author" type="int" />
-		<attribute name="hide_about" type="int" />
 		<attribute name="abstract_word_count" type="int" />
 	</complexType>
 
@@ -212,9 +222,6 @@
 
 	<!-- Permit "issue_file" as a root element -->
 	<element name="issue_file" type="pkp:issue_file" />
-
-	<!-- Permit "issue_cover" as a root element -->
-	<element name="issue_cover" type="pkp:issue_cover" />
 
 	<!-- Permit "section" as a root element -->
 	<element name="section" type="pkp:section" />

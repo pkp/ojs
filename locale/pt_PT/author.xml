@@ -4,8 +4,8 @@
 <!--
   * locale/pt_PT/author.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the pt_PT (Português (Portugal)) locale.
@@ -31,7 +31,7 @@
 	<message key="author.submit.metadata">Inclusão de metadados</message>
 	<message key="author.submit.supplementaryFiles">Transferência de documentos suplementares</message>
 	<message key="author.submit.confirmation">Confirmação</message>
-	<message key="author.submit.cancelSubmission">A submissão pode ser concluída numa data posterior, clicando em Submissões Activas nas opções da página do Autor.</message>
+	<message key="submission.submit.cancelSubmission">A submissão pode ser concluída numa data posterior, clicando em Submissões Activas nas opções da página do Autor.</message>
 	<message key="author.submit.notAccepting">Neste momento esta revista não aceita submissões.</message>
 	<message key="author.submit.requestWaiver">Solicitar isenção de taxas</message>
 	<message key="author.submit.qualifyForWaiver">Solicito considerar isenção de Taxa de Submissão para este artigo</message>
@@ -118,7 +118,5 @@
 	<message key="author.submissions.queuedEditingProofread">Em Edição: Leitura de provas solicitada</message>
 	<message key="author.submit.reorder">Reordenar nome do autor</message>
 	<message key="author.submit.form.wordCountAlert">O limite de palavras de resumo para esta secção foi excedido.</message>
-	<message key="author.submit.submissionLocale">Idioma de Submissão</message>
-	<message key="author.submit.submissionLocaleDescription">A revista aceita submissões em vários idiomas. Escolha o principal idioma de submissão a partir do botão em baixo.</message>
 	<message key="author.submit.form.localeRequired">Seleccione o idioma de submissão</message>
 </locale>

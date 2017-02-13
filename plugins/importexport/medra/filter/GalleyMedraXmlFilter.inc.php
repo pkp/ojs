@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/medra/filter/GalleyMedraXmlFilter.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2000-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2000-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class GalleyMedraXmlFilter
@@ -21,9 +21,9 @@ class GalleyMedraXmlFilter extends ArticleMedraXmlFilter {
 	 * Constructor
 	 * @param $filterGroup FilterGroup
 	 */
-	function GalleyMedraXmlFilter($filterGroup) {
+	function __construct($filterGroup) {
 		$this->setDisplayName('mEDRA XML galley export');
-		parent::ArticleMedraXmlFilter($filterGroup);
+		parent::__construct($filterGroup);
 	}
 
 	/**

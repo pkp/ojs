@@ -4,14 +4,14 @@
 <!--
   * @file plugins/importexport/medra/locale/fr_CA/locale.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Localization strings
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_French_(fr_CA)
+  * Localization strings.
   -->
  
-<locale name="fr_CA" full_name="Français (Canada)">
+<locale name = "fr_CA" full_name = "Français (Canada)">
 	<message key="plugins.importexport.medra.displayName">Plugiciel d'exportation / d'enregistrement mEDRA</message>
 	<message key="plugins.importexport.medra.description">Exporte les métadonnées des numéros, articles et les épreuves dans Onix pour format DOI (O4GOI) et enregistre les DOI avec l'agence d'enregistrement mEDRA.</message>
 

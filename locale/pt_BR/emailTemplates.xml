@@ -4,8 +4,8 @@
 <!--
   * locale/pt_BR/emailTemplates.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Portuguese_(pt_BR)
   * Localized email templates XML file.
@@ -189,6 +189,17 @@ Agradecemos mais uma vez considerar nossa revista como meio de compartilhar seu 
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Mensagem enviada automaticamente pelo sistema ao autor, quando habilitada, ao ser concluído o processo de submissão de um trabalho à revista. Oferece informações sobre os mecanismos para acompanhamento do trabalho durante o processo editorial, e serve como registro e confirmação da submissão.</description>
+	</email_text>
+	<email_text key="SUBMISSION_ACK_NOT_USER">
+		<subject>Agradecimento pela submissão</subject>
+		<body><![CDATA[Olá,<br />
+<br />
+{$submitterName} submeteu o manuscrito &quot;{$submissionTitle}&quot; à editora {$contextName}. <br />
+<br />
+Em caso de dúvidas, entre em contato. Agradecemos por considerar nossa editora como um veículo para seus trabalhos.<br />
+<br />
+{$editorialContactSignature}]]></body>
+		<description>Quando habilitada, esta mensagem é enviada automaticamente aos coautores informados durante o processo de submissão, que não estão cadastrados no OMP.</description>
 	</email_text>
 	<email_text key="SUBMISSION_UNSUITABLE">
 		<subject>Submissão inadequada</subject>

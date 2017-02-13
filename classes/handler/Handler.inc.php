@@ -3,8 +3,8 @@
 /**
  * @file classes/handler/Handler.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class Handler
@@ -19,8 +19,8 @@ class Handler extends PKPHandler {
 	/**
 	 * Constructor
 	 */
-	function Handler() {
-		parent::PKPHandler();
+	function __construct() {
+		parent::__construct();
 	}
 
 	/**
@@ -39,7 +39,7 @@ class Handler extends PKPHandler {
 		if ($requestedPath === 'index' || $requestedPath === '') {
 			// No journal requested. Check how many journals the site has.
 			$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
-			$journals = $journalDao->getAll();
+			$journals = $journalDao->getAll(true);
 			$journalsCount = $journals->getCount();
 			$journal = null;
 			if ($journalsCount === 1) {

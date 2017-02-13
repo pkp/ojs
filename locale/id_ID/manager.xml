@@ -4,8 +4,8 @@
 <!--
   * locale/id_ID/manager.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings.
@@ -158,7 +158,6 @@
 	<message key="manager.sections.form.mustAllowPermission">Pastikan bahwa setidaknya satu kotak cek telah dicek untuk masing-masing tugas editor bagian.</message> 
 	<message key="manager.sections.form.reviewFormId">Pastikan Anda telah memilih form review yang valid.</message>	
 <message key="manager.sections.form.titleRequired">Judul diperlukan untuk bagian ini.</message> 
-	<message key="manager.sections.hideAbout">Hilangkan bagian ini dari Tentang Kami.</message> 
 	<message key="manager.sections.hideTocAuthor">Hilangkan nama penulis untuk item bagian dari daftar isi terbitan.</message>
 	<message key="manager.sections.hideTocTitle">Hilangkan judul bagian ini dari daftar isi terbitan.</message> 
 	<message key="manager.sections.identifyType">Identifikasi item yang diterbitkan di bagian ini sebagai sebuah</message> 
@@ -226,12 +225,12 @@
 	<message key="manager.setup.doiPrefix">Awalan DOI</message> 
 	<message key="manager.setup.doiPrefixDescription"><![CDATA[Awalan DOI (Digital Object Identifier) ditugaskan oleh <a href="http://www.crossref.org" target="_new">CrossRef</a> dan dalam format 10.xxxx (contoh: 10.1234).]]></message> 
 	<message key="manager.setup.doiSuffix">Akhiran DOI</message>	<message key="manager.setup.doiSuffixDefault">Gunakan pola default (%j.v%vi%i.%a).</message> 
-<message key="manager.setup.doiSuffixPattern">Gunakan pola yang akan dimasukkan pada kolom dibawah ini untuk menghasilkan akhiran DOI. Gunakan %j untuk inisial jurnal, %v untuk nomor volume, %i untuk nomor terbitan, %a untuk ID artikel OJS, dan %p untuk nomor halaman.</message> 
-<message key="manager.setup.doiSuffixPattern.example">Sebagai contoh, vol%viss%ipp%p dapat membuat DOI 10.1234/vol3iss2pp230</message>
+	<message key="manager.setup.doiSuffixPattern">Gunakan pola yang akan dimasukkan pada kolom dibawah ini untuk menghasilkan akhiran DOI. Gunakan %j untuk inisial jurnal, %v untuk nomor volume, %i untuk nomor terbitan, %a untuk ID artikel OJS, dan %p untuk nomor halaman.</message> 
+	<message key="manager.setup.doiSuffixPattern.example">Sebagai contoh, vol%viss%ipp%p dapat membuat DOI 10.1234/vol3iss2pp230</message>
 	<message key="manager.setup.doiSuffixDescription">Akhiran DOI dapat berbentuk apapun, tetapi harus unik untuk masing-masing item yang telah yang diterbitkan.</message>	
-<message key="manager.setup.doiSuffixCustomIdentifier">Gunakan "Custom Identifier" untuk item yang telah diterbitkan sebagai akhiran DOI (harus diaktifkan pada langkah 4).</message>
-<message key="manager.setup.doiReassign">Menugaskan Kembali DOIs</message>
-<message key="manager.setup.doiReassign.description">Jika Anda mengubah konfigurasi DOI, DOI yang sebelumnya tidak akan berfungsi lagi. Saat konfigurasi DOI disimpan, gunakan tombol ini untuk menghapus semua DOI yang ada sehingga pengaturan baru akan berlaku pada artikel yang sudah ada.</message> 
+	<message key="manager.setup.doiSuffixCustomIdentifier">Gunakan "Custom Identifier" untuk item yang telah diterbitkan sebagai akhiran DOI (harus diaktifkan pada langkah 4).</message>
+	<message key="manager.setup.doiReassign">Menugaskan Kembali DOIs</message>
+	<message key="manager.setup.doiReassign.description">Jika Anda mengubah konfigurasi DOI, DOI yang sebelumnya tidak akan berfungsi lagi. Saat konfigurasi DOI disimpan, gunakan tombol ini untuk menghapus semua DOI yang ada sehingga pengaturan baru akan berlaku pada artikel yang sudah ada.</message> 
 	<message key="manager.setup.editorDecision">Keputusan Editor</message> 
 
 
@@ -244,18 +243,14 @@
 	<message key="manager.setup.emails">Identifikasi Email</message> 
 	<message key="manager.setup.emailSignature">Signature</message> 
 	<message key="manager.setup.emailSignatureDescription">Email yang disiapkan dan dikirim oleh sistem untuk kepentingan jurnal memiliki signature yang ditambahkan di akhir. Badan email tersedia di bawah Manajemen Jurnal untuk pengeditan.</message>	
-<message key="manager.setup.enableAnnouncements">Memungkinkan manajer jurnal untuk menambahkan pengumuman jurnal.</message> 
+	<message key="manager.setup.enableAnnouncements">Memungkinkan manajer jurnal untuk menambahkan pengumuman jurnal.</message> 
 	<message key="manager.setup.enableAnnouncementsHomepage1">Tampilan</message> 
 	<message key="manager.setup.enableAnnouncementsHomepage2">pengumuman terkini di beranda jurnal.</message>	
-<message key="manager.setup.enablePageNumber">Nomor halaman untuk item akan dijumlahkan dan dimasukkan secara manual di daftar isi (contoh: hal. 13-26).</message> 
-	<message key="manager.setup.enablePublicArticleId">Custom identifier akan digunakan untuk mengidentifikasikan item yang diterbitkan.</message> 
-	<message key="manager.setup.enablePublicGalleyId">Custom identifier akan digunakan untuk mengidentifikasikan galley.</message> 
 	<message key="manager.setup.enablePublicIssueId">Custom identifier akan digunakan untuk mengidentifikasikan terbitan.</message> 
-	<message key="manager.setup.enablePublicSuppFileId">Custom identifier akan digunakan untuk mengidentifikasikan file artikel tambahan.</message> 
 
 	<message key="manager.setup.enableUserRegistration">Pengguna akan mendaftarkan diri mereka sendiri pada jurnal dalam satu peran atau lebih:</message> 
 
-<message key="manager.setup.focusAndScope">Fokus dan Ruang Lingkup</message> 
+	<message key="manager.setup.focusAndScope">Fokus dan Ruang Lingkup</message> 
 
 
 
@@ -267,7 +262,7 @@
 	<message key="manager.setup.form.journalInitialsRequired">Inisial jurnal diperlukan.</message> 
 	<message key="manager.setup.form.journalTitleRequired">Judul jurnal diperlukan.</message> 
 	<message key="manager.setup.form.numReviewersPerSubmission">Jumlah Reviewer per penyerahan diperlukan .</message>	
-<message key="manager.setup.form.doiPrefixPattern">Pola DOI harus dalam form 10.xxxx.</message> 
+	<message key="manager.setup.form.doiPrefixPattern">Pola DOI harus dalam form 10.xxxx.</message> 
 	<message key="manager.setup.form.supportEmailRequired">Email dukungan diperlukan.</message>
 	<message key="manager.setup.form.supportNameRequired">Nama dukungan diperlukan.</message> 
 
@@ -282,8 +277,8 @@
 	<message key="manager.setup.information.forAuthors">Untuk Penulis</message> 
 	<message key="manager.setup.information.forLibrarians">Untuk Pustakawan</message> 
 	<message key="manager.setup.information.forReaders">Untuk Pembaca</message> 
-	<message key="manager.setup.initialIssue">Terbitan Awal
-</message>	<message key="manager.setup.initialIssueDescription">Tergantung pada format yang dipilih, mengidentifikasi terbitan, volume, dan/ atau tahun terbitan pertama untuk diterbitkan dnegan OJS:</message> 
+	<message key="manager.setup.initialIssue">Terbitan Awal</message>
+	<message key="manager.setup.initialIssueDescription">Tergantung pada format yang dipilih, mengidentifikasi terbitan, volume, dan/ atau tahun terbitan pertama untuk diterbitkan dnegan OJS:</message> 
 	<message key="manager.setup.institution">Institusi</message> 
 	<message key="manager.setup.itemsDescription">Item navigasi bisa ditambahkan ke set yang ada saat ini (Beranda, Tentang Kami, Beranda Pengguna, dll) yang ditampilkan di bagian atas pada halaman.</message>
 	<message key="manager.setup.itemsPerPage">Item per halaman</message> 
@@ -302,8 +297,8 @@
 	<message key="manager.setup.journalInitials">Inisial Jurnal</message> 
 	<message key="manager.setup.journalLayout">Layout Jurnal</message> 
 	<message key="manager.setup.journalLayoutDescription">Pilih tema jurnal dan komponen layout di sini. Style sheet jurnal juga akan diunggah, yang dapat digunakan untuk menggantikan style sheet defult sistem(jika tema tersedia.</message> 
-	<message key="manager.setup.journalLogo">Logo Jurnal</message>	<message key="manager.setup.journalLogo.altText">Logo Jurnal
-</message> 
+	<message key="manager.setup.journalLogo">Logo Jurnal</message>
+	<message key="manager.setup.journalLogo.altText">Logo Jurnal</message> 
 	<message key="manager.setup.journalPageFooter">Footer Halaman Jurnal</message> 
 	<message key="manager.setup.journalPageFooterDescription">Ini adalah footer jurnal Anda. Untuk mengganti atau meng-update footer, salin kode HTML pada kotak teks di bawah. Sebagai contoh dapat berisi navigasi lain, counter, dll. Footer ini akan tampil di tiap halaman.</message> 
 
@@ -313,8 +308,8 @@
 	<message key="manager.setup.journalSetupUpdated">Setup jurnal Anda telah di-update.</message> 
 	<message key="manager.setup.journalStyleSheetInvalid">Format lembar model jurnal invalid. Format yang diterima adalah .css.</message> 
 	<message key="manager.setup.journalTheme">Tema Jurnal</message> 
-	<message key="manager.setup.journalTitle">Nama Jurnal
-</message>	<message key="manager.setup.labelName">Nama Label</message> 
+	<message key="manager.setup.journalTitle">Nama Jurnal</message>
+	<message key="manager.setup.labelName">Nama Label</message> 
 	<message key="manager.setup.layoutInstructions">Instruksi Layout</message> 
 	<message key="manager.setup.layoutInstructionsDescription">Instruksi Layout digunakan untuk pemformatan atau penerbitan item di jurnal dan dimasukkan pada kolom dibawah ini dalam HTML atau teks biasa. Isntruksi ini akan tersedia untuk editor layout dan editor bagian di halaman pengeditan dari masing-masing penyerahan. (Saat masing-masing jurnal menggunakan format file, standar bibliografi, style sheet, dll milik mereka sendiri, satu set default instruksi tidak disediakan.</message> 
 	<message key="manager.setup.layoutTemplates">Template Layout</message>  

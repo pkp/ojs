@@ -3,8 +3,8 @@
 /**
  * @file plugins/metadata/dc11/filter/Dc11SchemaArticleAdapter.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2000-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2000-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class Dc11SchemaArticleAdapter
@@ -25,8 +25,8 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 	 * Constructor
 	 * @param $filterGroup FilterGroup
 	 */
-	function Dc11SchemaArticleAdapter($filterGroup) {
-		parent::MetadataDataObjectAdapter($filterGroup);
+	function __construct($filterGroup) {
+		parent::__construct($filterGroup);
 	}
 
 
@@ -46,11 +46,10 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 	//
 	/**
 	 * @see MetadataDataObjectAdapter::injectMetadataIntoDataObject()
-	 * @param $dc11Description MetadataDescription
-	 * @param $article Article
-	 * @param $authorClassName string the application specific author class name
+	 * @param $metadataDescription MetadataDescription
+	 * @param $targetDataObject Article
 	 */
-	function &injectMetadataIntoDataObject(&$dc11Description, &$article, $authorClassName) {
+	function &injectMetadataIntoDataObject(&$metadataDescription, &$targetDataObject) {
 		// Not implemented
 		assert(false);
 	}

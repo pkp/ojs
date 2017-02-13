@@ -4,8 +4,8 @@
 <!--
   * /locale/da_DK/admin.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the da_DK (Dansk) locale.
@@ -79,4 +79,11 @@
 	<message key="admin.settings.defaultMetricDescription">Jeres OJS-installation er konfigureret til at registrere mere end en metrisk brugerenhed. Brugerstatistikker vil blive fremvist i flere forskellige sammenhænge.
 		Der er tilfælde, hvor en enkelt brugerstatistik skal anvendes, f.eks. ved visning af en sorteret liste over mest anvendte artikler eller ved rangering af
 		søgeresultater. Vælg én af de konfigurerede metriske enheder som standard.</message>
+	<message key="admin.scheduledTask.openAccessNotification">Open Access meddelelse</message>
+	<message key="admin.scheduledTask.subscriptionExpiryReminder">Påmindelse om abonnementes udløb</message>
+	<message key="admin.contexts.form.titleRequired">Titel mangler.</message>
+	<message key="admin.languages.confirmDisable">Er du sikker på, at du vil deaktivere denne landestandard? Det kan påvirke de hostede tidsskrifter, der måtte anvende landestandarden.</message>
+
+	<message key="admin.presses.createInstructions">Du vil automatisk blive indskrevet som chef for dette tidsskrift. Efter at have oprettet et nyt tidsskrift, vil du blive omdirigeret til indstillingsguiden for at afslutte den indledende konfiguration af tidsskriftet.</message>
+	<message key="admin.scheduledTask.reviewReminder">Påmindelse om bedømmelse</message>
 </locale>

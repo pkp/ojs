@@ -3,8 +3,8 @@
 /**
 * @file classes/statistics/StatisticsHelper.inc.php
 *
-* Copyright (c) 2013-2016 Simon Fraser University Library
-* Copyright (c) 2003-2016 John Willinsky
+* Copyright (c) 2013-2017 Simon Fraser University
+* Copyright (c) 2003-2017 John Willinsky
 * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
 *
 * @class StatisticsHelper
@@ -20,8 +20,8 @@ define('STATISTICS_DIMENSION_ISSUE_ID', STATISTICS_DIMENSION_ASSOC_OBJECT_ID);
 
 class StatisticsHelper extends PKPStatisticsHelper {
 
-	function StatisticsHelper() {
-		parent::PKPStatisticsHelper();
+	function __construct() {
+		parent::__construct();
 	}
 
 	/**

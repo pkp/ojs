@@ -3,8 +3,8 @@
 /**
  * @file classes/file/IssueFileManager.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IssueFileManager
@@ -32,15 +32,15 @@ class IssueFileManager extends FileManager {
 	 * Create a manager for handling issue files.
 	 * @param $issueId int
 	 */
-	function IssueFileManager($issueId) {
+	function __construct($issueId) {
 		$issueDao = DAORegistry::getDAO('IssueDAO');
 		$issue = $issueDao->getById($issueId);
-		assert($issue);
+		assert(isset($issue));
 
 		$this->setIssueId($issueId);
 		$this->setFilesDir(Config::getVar('files', 'files_dir') . '/journals/' . $issue->getJournalId() . '/issues/' . $issueId . '/');
 
-		parent::FileManager();
+		parent::__construct();
 	}
 
 	/**

@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/counter/CounterPlugin.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class CounterPlugin
@@ -152,26 +152,12 @@ class CounterPlugin extends GenericPlugin {
 		return true;
 	}
 
-	function getManagementVerbs() {
-		$verbs = parent::getManagementVerbs();
-
-		if ($this->getEnabled()) {
-			$verbs[] = array('counter', __('plugins.generic.counter'));
-
-			$this->import('CounterReportDAO');
-			$counterReportDao = new CounterReportDAO();
-			DAORegistry::registerDAO('CounterReportDAO', $counterReportDao);
-		}
-		return $verbs;
-	}
-
  	/**
-	 * @see Plugin::manage()
+	 * @copydoc Plugin::manage()
 	 */
-	function manage($verb, $args, &$message, &$messageParams, &$pluginModalContent = null) {
-		if (!parent::manage($verb, $args, $message, $messageParams)) return false;
-		$request =& $this->getRequest();
-		switch ($verb) {
+	function manage($args, $request) {
+		if (!parent::manage($args, $request)) return false;
+		switch (array_shift($args)) {
 			case 'counter':
 				$request->redirect(null, 'counter');
 				return false;

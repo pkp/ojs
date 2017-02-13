@@ -1,8 +1,8 @@
 #
 # registry/minifiedScripts.txt
 #
-# Copyright (c) 2014-2016 Simon Fraser University Library
-# Copyright (c) 2003-2016 John Willinsky
+# Copyright (c) 2014-2017 Simon Fraser University Library
+# Copyright (c) 2003-2017 John Willinsky
 # Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
 #
 # This file contains a list of all JavaScript files that should be compiled
@@ -125,6 +125,7 @@ lib/pkp/js/pages/workflow/WorkflowHandler.js
 lib/pkp/js/controllers/grid/users/reviewer/AdvancedReviewerSearchHandler.js
 lib/pkp/js/controllers/grid/users/reviewer/form/EditReviewFormHandler.js
 lib/pkp/js/controllers/grid/users/reviewer/form/AddReviewerFormHandler.js
+lib/pkp/js/controllers/grid/users/stageParticipant/StageParticipantGridHandler.js
 lib/pkp/js/controllers/grid/users/stageParticipant/form/StageParticipantNotifyHandler.js
 lib/pkp/js/controllers/grid/users/stageParticipant/form/AddParticipantFormHandler.js
 lib/pkp/js/pages/reviewer/ReviewerTabHandler.js

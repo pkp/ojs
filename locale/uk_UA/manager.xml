@@ -4,8 +4,8 @@
 <!--
   * locale/uk_UA/manager.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the uk_UA (Українська) locale.
@@ -94,7 +94,6 @@
        <message key="manager.sections.form.mustAllowPermission">Будь ласка, переконайтеся, що для кожного призначення редактора розділу обрано принаймні по одному прапорцю.</message>
        <message key="manager.sections.form.reviewFormId">Будь ласка, переконайтеся, що Ви коректно обрали форму рецензування.</message>
        <message key="manager.sections.form.titleRequired">Необхідно вказати назву для цього розділу.</message>
-       <message key="manager.sections.hideAbout">Не вказувати цей розділ на сторінці "Про журнал".</message>
        <message key="manager.sections.hideTocAuthor">Для цього розділу не вказувати імена авторів на сторінках змісту випусків.</message>
        <message key="manager.sections.hideTocTitle">Не вказувати назву цього розділу на сторінках змісту випусків.</message>
        <message key="manager.sections.identifyType">Ідентифікувати об'єкти, опубліковані у цьому розділі, як</message>
@@ -158,11 +157,7 @@
        <message key="manager.setup.enableAnnouncements">Дозволити менеджерам журналу додавати анонси журналу.</message>
        <message key="manager.setup.enableAnnouncementsHomepage1">Показати</message>
        <message key="manager.setup.enableAnnouncementsHomepage2">найновіших анонсів на домашній сторінці журналу.</message>
-       <message key="manager.setup.enablePageNumber">Номери сторінок для опублікованих одиниць будуть вручну вираховуватись та вводитись для відображення на сторінках змісту (наприклад, С. 13-26).</message>
-       <message key="manager.setup.enablePublicArticleId">Опубліковані матеріали матимуть власні унікальні ідентифікатори.</message>
-       <message key="manager.setup.enablePublicGalleyId">Гранки опублікованих статей (наприклад, файли HTML або PDF) матимуть власні унікальні ідентифікатори.</message>
        <message key="manager.setup.enablePublicIssueId">Випуски матимуть власні унікальні ідентифікатори.</message>
-       <message key="manager.setup.enablePublicSuppFileId">Супровідні файли опублікованих статей матимуть власні унікальні ідентифікатори.</message>
        <message key="manager.setup.enableUserRegistration">Користувачі самостійно можуть реєструватися у журналі з однією або кількома наступними ролями:</message>
                          <message key="manager.setup.focusAndScope">Галузь та проблематика</message>
          

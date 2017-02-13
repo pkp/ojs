@@ -1,8 +1,8 @@
 {**
  * templates/controllers/grid/issues/form/issueData.tpl
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Form for creation and modification of an issue
@@ -45,7 +45,7 @@
 		{fbvFormArea id="datePublishedArea" title="editor.issues.datePublished"}
 			{fbvFormSection}
 				{if $issuePublished}
-					{fbvElement type="text" id="datePublished" value=$datePublished|date_format:"%Y-%m-%d" size=$fbvStyles.size.SMALL class="datepicker"}
+					{fbvElement type="text" id="datePublished" value=$datePublished|date_format:$dateFormatShort size=$fbvStyles.size.SMALL class="datepicker"}
 				{/if}
 			{/fbvFormSection}
 		{/fbvFormArea}

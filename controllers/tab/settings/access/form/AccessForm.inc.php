@@ -3,8 +3,8 @@
 /**
  * @file controllers/tab/settings/access/form/AccessForm.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class AccessForm
@@ -21,8 +21,8 @@ class AccessForm extends ContextSettingsForm {
 	 * Constructor.
 	 * @param $wizardMode boolean True IFF wizard mode is to be used.
 	 */
-	function AccessForm($wizardMode = false) {
-		parent::ContextSettingsForm(
+	function __construct($wizardMode = false) {
+		parent::__construct(
 			array(
 				'publishingMode' => 'int',
 			),

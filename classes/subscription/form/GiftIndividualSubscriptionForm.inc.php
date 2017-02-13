@@ -3,8 +3,8 @@
 /**
  * @file classes/subscription/form/GiftIndividualSubscriptionForm.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class GiftIndividualSubscriptionForm
@@ -29,8 +29,8 @@ class GiftIndividualSubscriptionForm extends Form {
 	 * Constructor
 	 * @param buyerUserId int
 	 */
-	function GiftIndividualSubscriptionForm($request, $buyerUserId = null) {
-		parent::Form('subscription/giftIndividualSubscriptionForm.tpl');
+	function __construct($request, $buyerUserId = null) {
+		parent::__construct('subscription/giftIndividualSubscriptionForm.tpl');
 
 		$this->buyerUserId = isset($buyerUserId) ? (int) $buyerUserId : null;
 		$this->request =& $request;

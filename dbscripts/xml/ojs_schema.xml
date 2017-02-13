@@ -4,8 +4,8 @@
 <!--
   * ojs_schema.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * OJS database schema in XML.
@@ -119,10 +119,6 @@
 			<DEFAULT VALUE="0"/>
 		</field>
 		<field name="hide_author" type="I1">
-			<NOTNULL/>
-			<DEFAULT VALUE="0"/>
-		</field>
-		<field name="hide_about" type="I1">
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>
 		</field>
@@ -451,7 +447,6 @@
 		<field name="language" type="C2" size="10">
 			<DEFAULT VALUE="en"/>
 		</field>
-		<field name="comments_to_ed" type="X"/>
 		<field name="citations" type="X"/>
 		<field name="date_submitted" type="T"/>
 		<field name="last_modified" type="T"/>
@@ -461,10 +456,6 @@
 			<DEFAULT VALUE="1"/>
 		</field>
 		<field name="submission_progress" type="I1">
-			<NOTNULL/>
-			<DEFAULT VALUE="1"/>
-		</field>
-		<field name="current_round" type="I1">
 			<NOTNULL/>
 			<DEFAULT VALUE="1"/>
 		</field>

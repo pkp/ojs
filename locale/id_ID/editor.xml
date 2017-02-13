@@ -4,8 +4,8 @@
 <!--
   * locale/id_ID/editor.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings.
@@ -156,10 +156,6 @@
 	<message key="editor.article.assignSectionEditor">Tambah Editor Bagian</message>
 	<message key="editor.article.assignEditor">Tambah Editor</message>	<message key="editor.article.selectEditor">Pilih {$roleName}</message> 
 	<message key="editor.article.selectDecision">Pilih Keputusan</message> 
-	<message key="editor.article.decision.accept">Terima Langganan</message> 
-	<message key="editor.article.decision.pendingRevisions">Dibutuhkan Revisi</message> 
-	<message key="editor.article.decision.resubmit">Penyerahan Kembali Untuk Review</message> 
-	<message key="editor.article.decision.decline">Penolakan Langganan</message> 
 	<message key="editor.article.selectLayoutEditor">Pilih Tampilan Editor</message> 
 	<message key="editor.article.replaceLayoutEditor">Ganti Tampilan Editor</message> 
 	<message key="editor.article.reviewSubmission">Review Langganan</message> 

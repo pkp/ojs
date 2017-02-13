@@ -7,7 +7,6 @@
 	<prefix locale="en_US">The</prefix>
 	<subtitle locale="en_US">Subtitle</subtitle>
 	<abstract locale="en_US">the abstract</abstract>
-	<comments_to_editor>the comments to the editor</comments_to_editor>
 	<authors xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		xsi:schemaLocation="http://pkp.sfu.ca native.xsd">
 		<author primary_contact="true" user_group_ref="Journal manager">

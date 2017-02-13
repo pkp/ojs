@@ -4,17 +4,16 @@
 <!--
   * plugins/citationFormats/apa/locale/ru_RU/locale.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Localization strings for this citation plugin in en_US.
-  *
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Russian_(ru_RU)
+  * Localization strings.
   -->
  
 <locale name="ru_RU" full_name="Русский">
-	<message key="plugins.citationFormats.apa.displayName">Модуль формата ссылок APA</message>
+	<message key="plugins.citationFormats.apa.displayName">Модуль формата библиографических ссылок APA</message>
 	<message key="plugins.citationFormats.apa.citationFormatName">APA</message>
-	<message key="plugins.citationFormats.apa.description">Этот модул реализует формат ссылок APA.</message>
-	<message key="plugins.citationFormats.apa.retrieved"><![CDATA[Получено из <a href="{$url}" target="_new">{$url}</a>]]></message>
+	<message key="plugins.citationFormats.apa.description">Реализует формат библиографических ссылок APA.</message>
+	<message key="plugins.citationFormats.apa.retrieved"><![CDATA[Получено с <a href="{$url}" target="_new">{$url}</a>]]></message>
 </locale>

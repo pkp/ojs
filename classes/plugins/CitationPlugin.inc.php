@@ -3,8 +3,8 @@
 /**
  * @file classes/plugins/CitationPlugin.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class CitationPlugin
@@ -19,8 +19,8 @@ abstract class CitationPlugin extends Plugin {
 	/**
 	 * Constructor
 	 */
-	function CitationPlugin() {
-		parent::Plugin();
+	function __construct() {
+		parent::__construct();
 
 		if ($this->getEnabled()) {
 			HookRegistry::register('TemplateManager::display', array($this, 'loadJavaScript'));
@@ -61,10 +61,12 @@ abstract class CitationPlugin extends Plugin {
 	 */
 	function fetchCitation($article, $issue, $journal) {
 		$templateMgr = TemplateManager::getManager($this->getRequest());
-		$templateMgr->assign('citationPlugin', $this);
-		$templateMgr->assign('article', $article);
-		$templateMgr->assign('issue', $issue);
-		$templateMgr->assign('journal', $journal);
+		$templateMgr->assign(array(
+			'citationPlugin' => $this,
+			'article' => $article,
+			'issue' => $issue,
+			'journal' => $journal,
+		));
 		return $templateMgr->fetch($this->getTemplatePath() . '/citation.tpl');
 	}
 

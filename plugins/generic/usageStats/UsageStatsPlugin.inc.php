@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/usageStats/UsageStatsPlugin.inc.php
  *
- * Copyright (c) 2013-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2013-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class UsageStatsPlugin
@@ -21,8 +21,17 @@ class UsageStatsPlugin extends PKPUsageStatsPlugin {
 	/**
 	 * Constructor.
 	 */
-	function UsageStatsPlugin() {
-		parent::PKPUsageStatsPlugin();
+	function __construct() {
+		parent::__construct();
+	}
+
+	/**
+	 * @copydoc PKPUsageEventPlugin::getDownloadFinishedEventHooks()
+	 */
+	protected function getDownloadFinishedEventHooks() {
+		return array_merge(parent::getDownloadFinishedEventHooks(), array(
+			'HtmlArticleGalleyPlugin::articleDownloadFinished'
+		));
 	}
 
 	/**

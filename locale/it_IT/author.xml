@@ -4,8 +4,8 @@
 <!--
   * locale/it_IT/author.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2000-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the it_IT (Italiano) locale.
@@ -32,7 +32,6 @@
 	<message key="author.submit.upload">Carica il file della proposta</message>
 	<message key="author.submit.supplementaryFiles">Carica i file supplementari</message>
 	<message key="author.submit.confirmation">Conferma</message>
-	<message key="author.submit.cancelSubmission">Puoi completare questa proposta in un momento successivo, selezionando la voce "Proposteattive" nell'home page della sezione Autore.</message>
 	<message key="author.submit.notAccepting">In questo momento la rivista non accetta nessuna proposta.</message>
 	<message key="author.submit.requestWaiver">Richiedi un'esenzione</message>
 	<message key="author.submit.qualifyForWaiver">Chiedo di essere esonerato dal pagamento della  quota di submission per questa proposta.</message>
@@ -42,11 +41,8 @@
 	<message key="author.submissions.confirmDelete">Sei sicuro di cancellare questa proposta incompleta?</message>
 	<message key="author.submissions.viewStatus">Vedi lo stato</message>
 	<message key="author.submissions.noSubmissions">Nessuna proposta.</message>
-	<message key="author.submit.howToSubmitNoPhone"><![CDATA[Stai incontrando difficoltà? Contatta <a href="mailto:{$supportEmail}">{$supportName}</a> per assistenza.]]></message>
 	<message key="author.submit.journalSection">Sezione della rivista</message>
 	<message key="author.submit.journalSectionDescription"><![CDATA[Scegli la sezione più adatta alla tua proposta (Vedi le politiche delle sezioni in <a href="{$aboutUrl}" target="_new">Info</a> ).]]></message>
-	<message key="submission.submit.selectSection">Scegli una sezione...</message>
-	<message key="author.submit.submissionChecklist">Lista di controllo della proposta</message>
 	<message key="author.submit.verifyChecklist">Assicurati di aver spuntato tutte le voci della lista prima di continuare</message>
 	<message key="author.submit.copyrightNoticeAgree">Gli autori acconsentono ai termini di questa nota sul Copyright, che sarà applicata al loro contributo se e quando verrà pubblicato (commenti per l'editor possono essere aggiunti sotto).</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">Devi accettare i termini della nota di Copyright prima di continuare.</message>
@@ -115,11 +111,9 @@
 	<message key="author.submissions.queuedReviewRevisions">In revisione: Richieste modifiche</message>
 	<message key="author.submissions.queuedEditingCopyedit">In lavorazione: Richiesto copyediting</message>
 	<message key="author.submissions.queuedEditingProofread">In lavorazione: Richiesta correzione di bozze</message>
-	<message key="author.submit.howToSubmit"><![CDATA[Sei in difficolt&#224;? Contatta <a href="mailto:{$supportEmail}">{$supportName}</a> per assistenza ({$supportPhone}).]]></message>
 	<message key="author.submit.reorder">Riordina i nomi degli autori</message>
 	<message key="author.submit.form.wordCountAlert">Hai superato il numero massimo di parole previsto per l'abstract degli articoli da pubblicare in questa sezione.</message>
 	<message key="author.submit.mustEnterWaiverReason">Se stai chiedendo un esonero, devi indicarne il motivo.</message>
 	<message key="author.submit.form.localeRequired">Seleziona una lingua per la proposta.</message>
-	<message key="author.submit.submissionLocale">Lingua della proposta</message>
-	<message key="author.submit.submissionLocaleDescription"><![CDATA[Questa rivista accetta contributi in diverse lingue. Seleziona la lingua della proposta dal men&#249; a tendina.]]></message>
+	<message key="author.submit.nextSteps">Passi successivi</message>
 </locale>

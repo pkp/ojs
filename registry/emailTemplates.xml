@@ -3,8 +3,8 @@
 <!--
   * emailTemplates.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Email templates XML file.
@@ -23,6 +23,7 @@
 	<email key="LOCKSS_EXISTING_ARCHIVE" can_edit="1" can_disable="0"/>
 	<email key="LOCKSS_NEW_ARCHIVE" can_edit="1" can_disable="0"/>
 	<email key="SUBMISSION_ACK" can_edit="1" can_disable="1" to_role_id="65536"/>
+	<email key="SUBMISSION_ACK_NOT_USER" can_edit="1" can_disable="1" to_role_id="65536"/>
 	<email key="SUBMISSION_UNSUITABLE" can_edit="1" can_disable="1" to_role_id="65536" from_role_id="512"/>
 	<email key="EDITOR_ASSIGN" can_edit="1" can_disable="1" from_role_id="256" to_role_id="512"/>
 	<email key="REVIEW_CANCEL" can_edit="1" can_disable="1" from_role_id="512" to_role_id="4096"/>
@@ -42,8 +43,8 @@
 	<email key="REVIEW_REMIND_ONECLICK" can_edit="1" can_disable="0" from_role_id="512" to_role_id="4096"/>
 	<email key="REVIEW_REMIND_AUTO_ONECLICK" can_edit="1" can_disable="0" to_role_id="4096"/>
 	<email key="EDITOR_DECISION_ACCEPT" can_edit="1" can_disable="0" from_role_id="512" to_role_id="65536"/>
-	<email key="EDITOR_DECISION_SEND_TO_EXTERNAL" can_edit="1" can_disable="0" from_role_id="513" to_role_id="65536"/>
-	<email key="EDITOR_DECISION_SEND_TO_PRODUCTION" can_edit="1" can_disable="0" from_role_id="513" to_role_id="65536"/>
+	<email key="EDITOR_DECISION_SEND_TO_EXTERNAL" can_edit="1" can_disable="0" from_role_id="17" to_role_id="65536"/>
+	<email key="EDITOR_DECISION_SEND_TO_PRODUCTION" can_edit="1" can_disable="0" from_role_id="17" to_role_id="65536"/>
 	<email key="EDITOR_DECISION_REVISIONS" can_edit="1" can_disable="0" from_role_id="512" to_role_id="65536"/>
 	<email key="EDITOR_DECISION_RESUBMIT" can_edit="1" can_disable="0" from_role_id="512" to_role_id="65536"/>
 	<email key="EDITOR_DECISION_DECLINE" can_edit="1" can_disable="0" from_role_id="512" to_role_id="65536"/>

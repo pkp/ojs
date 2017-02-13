@@ -3,8 +3,8 @@
 /**
  * @file controllers/grid/issues/form/IssueGalleyForm.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IssueGalleyForm
@@ -28,8 +28,8 @@ class IssueGalleyForm extends Form {
 	 * @param $issue Issue
 	 * @param $issueGalley IssueGalley (optional)
 	 */
-	function IssueGalleyForm($request, $issue, $issueGalley = null) {
-		parent::Form('controllers/grid/issueGalleys/form/issueGalleyForm.tpl');
+	function __construct($request, $issue, $issueGalley = null) {
+		parent::__construct('controllers/grid/issueGalleys/form/issueGalleyForm.tpl');
 		$this->_issue = $issue;
 		$this->_issueGalley = $issueGalley;
 

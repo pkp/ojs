@@ -4,8 +4,8 @@
 <!--
   * locale/es_ES/manager.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * https://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_(es_ES)
   * Localization strings.
@@ -95,7 +95,6 @@
 	<message key="manager.sections.form.mustAllowPermission">Asegúrese de que hay, al menos, una casilla de verificación seleccionada para cada tarea del editor/a de sección.</message>
 	<message key="manager.sections.form.reviewFormId">Asegúrese de que ha elegido un formulario de revisión válido.</message>
 	<message key="manager.sections.form.titleRequired">Especifique un título para la sección.</message>
-	<message key="manager.sections.hideAbout">Omitir esta sección en el apartado Acerca de la revista.</message>
 	<message key="manager.sections.hideTocAuthor">Omitir los nombres de los autores/as en los elementos de sección de la tabla de contenidos de la publicación.</message>
 	<message key="manager.sections.hideTocTitle">Omitir el título de esta sección en la tabla de contenidos de la publicación.</message>
 	<message key="manager.sections.identifyType">Identificar los elementos publicados en esta sección como</message>
@@ -159,11 +158,7 @@
 	<message key="manager.setup.enableAnnouncements">Permitir que los gestores/as de la revista publiquen avisos.</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">Mostrar</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">los últimos avisos publicados en la página inicial.</message>
-	<message key="manager.setup.enablePageNumber">Se calcularán e introducirán los números de página manualmente en la tabla de contenidos (p. ej., pág. 13-26).</message>
-	<message key="manager.setup.enablePublicArticleId">Se usarán identificadores personalizados para identificar los elementos publicados.</message>
-	<message key="manager.setup.enablePublicGalleyId">Se usarán identificadores personalizados para identificar las galeradas (p. ej., archivos HTML o PDF) de los elementos publicados.</message>
 	<message key="manager.setup.enablePublicIssueId">Se usarán identificadores personalizados para identificar las publicaciones.</message>
-	<message key="manager.setup.enablePublicSuppFileId">Se usarán identificadores personalizados para identificar los archivos artículos suplementarios.</message>
 	<message key="manager.setup.enableUserRegistration">Los usuarios/as pueden registrarse en la revista con uno o varios de los siguientes roles:</message>
 	<message key="manager.setup.focusAndScope">Objeto y alcance</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWork">Instrucciones de indexación para los autores/as</message>

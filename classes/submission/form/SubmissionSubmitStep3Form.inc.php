@@ -3,8 +3,8 @@
 /**
  * @file classes/submission/form/SubmissionSubmitStep3Form.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SubmissionSubmitStep3Form
@@ -20,8 +20,8 @@ class SubmissionSubmitStep3Form extends PKPSubmissionSubmitStep3Form {
 	/**
 	 * Constructor.
 	 */
-	function SubmissionSubmitStep3Form($context, $submission) {
-		parent::PKPSubmissionSubmitStep3Form(
+	function __construct($context, $submission) {
+		parent::__construct(
 			$context,
 			$submission,
 			new SubmissionMetadataFormImplementation($this)

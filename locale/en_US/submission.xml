@@ -4,8 +4,8 @@
 <!--
   * locale/en_US/submission.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
   * Localization strings.
@@ -75,4 +75,5 @@
 	<message key="submission.citationFormat.notFound">The requested citation format could not be retrieved.</message>
 
 	<message key="submission.metadataDescription">These specifications are based on the Dublin Core metadata set, an international standard used to describe journal content.</message>
+	<message key="section.any">Any Section</message>
 </locale>

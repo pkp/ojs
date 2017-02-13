@@ -4,8 +4,8 @@
 <!--
   * locale/zh_CN/emailTemplates.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localized email templates XML file.
@@ -371,7 +371,7 @@
 	<email_text key="EDITOR_DECISION_ACCEPT">
 		<subject>编辑决定</subject>
 		<body><![CDATA[{$authorName}:<br />
-我们对于您在《{$journalTitle}》提交的〈{$submissionTitle}〉达成一项决定。<br />
+我们对于您在《{$contextName}》提交的〈{$submissionTitle}〉达成一项决定。<br />
 <br />
 我们的决定是：<br />
 <br />
@@ -383,7 +383,7 @@
 		<subject>编辑决定</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-我们对于您在《{$journalTitle}》提交的〈{$submissionTitle}〉达成一项决定。<br />
+我们对于您在《{$contextName}》提交的〈{$submissionTitle}〉达成一项决定。<br />
 <br />
 我们的决定是：<br />
 <br />
@@ -395,7 +395,7 @@
 		<subject>编辑决定</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-我们对于您在《{$journalTitle}》提交的〈{$submissionTitle}〉达成一项决定。<br />
+我们对于您在《{$contextName}》提交的〈{$submissionTitle}〉达成一项决定。<br />
 <br />
 我们的决定是：<br />
 <br />
@@ -407,7 +407,7 @@
 		<subject>编辑决定</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-我们对于您在《{$journalTitle}》提交的〈{$submissionTitle}〉达成一项决定。<br />
+我们对于您在《{$contextName}》提交的〈{$submissionTitle}〉达成一项决定。<br />
 <br />
 我们的决定是：<br />
 <br />

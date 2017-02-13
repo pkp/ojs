@@ -3,8 +3,8 @@
 /**
  * @file controllers/grid/articleGalleys/ArticleGalleyGridHandler.inc.php
  *
- * Copyright (c) 2016 Simon Fraser University Library
- * Copyright (c) 2000-2016 John Willinsky
+ * Copyright (c) 2016-2017 Simon Fraser University Library
+ * Copyright (c) 2000-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ArticleGalleyGridHandler
@@ -27,8 +27,8 @@ class ArticleGalleyGridHandler extends GridHandler {
 	/**
 	 * Constructor
 	 */
-	function ArticleGalleyGridHandler() {
-		parent::GridHandler();
+	function __construct() {
+		parent::__construct();
 		$this->addRoleAssignment(
 			array(ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR, ROLE_ID_ASSISTANT),
 			array('fetchGrid', 'fetchRow', 'addGalley', 'editGalley', 'editGalleyTab', 'updateGalley', 'deleteGalley', 'identifiers', 'updateIdentifiers', 'clearPubId', 'saveSequence'));
@@ -147,7 +147,7 @@ class ArticleGalleyGridHandler extends GridHandler {
 	function setDataElementSequence($request, $rowId, $gridDataElement, $newSequence) {
 		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 		$journal = $request->getJournal();
-		$galley = $galleyDao->getById($rowId, $journal->getId());
+		$galley = $galleyDao->getById($rowId, null, $journal->getId());
 		$galley->setSequence($newSequence);
 		$galleyDao->updateObject($galley);
 	}

@@ -4,8 +4,8 @@
 <!--
   * locale/da_DK/locale.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the Danish locale.
@@ -287,7 +287,7 @@ Vær opmærksom på, at OAI-grænsefladen kan deaktiveres for dette websted ved 
 
 	<message key="plugins.categories.citationFormats.description">Plug-ins til citatformater gør det muligt for brugere at få adgang til artikelcitater i forskellige formater.</message>
 
-	<message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems understøtter <a href="http://www.lockss.org/" target="_blank">LOCKSS</a>-systemet (Lots of Copies Keep Stuff Safe) for at sikre et pålideligt og permanent arkiv for tidsskriftet. LOCKSS er open source-software, der er udviklet på Stanford Universitetets bibliotek, og der gør bibliotekarer til stand til at bevare udvalgte webtidsskrifter ved regelmæssigt at foretage polling af registrerede tidsskriftswebsteder med henblik på at finde nyt publiceret indhold og arkivere det. Hvert enkelt arkiv valideres løbende i forhold til andre bibliotekscachelagre, og hvis indholdet er beskadiget eller er gået tabt, bruges de andre cachelagre eller tidsskrifter til at gendanne det.
+	<message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems understøtter <a href="http://www.lockss.org/" target="_blank">LOCKSS</a>-systemet (Lots of Copies Keep Stuff Safe) for at sikre et pålideligt og permanent arkiv for tidsskriftet. LOCKSS er open source-software, der er udviklet på Stanford University Library, og som gør det muligt for biblioteker at bevare udvalgte webtidsskrifter ved regelmæssigt at foretage polling af registrerede tidsskriftswebsteder med henblik på at finde nyt publiceret indhold og arkivere det. Hvert enkelt arkiv valideres løbende i forhold til andre bibliotekscachelagre, og hvis indholdet er beskadiget eller er gået tabt, bruges de andre cachelagre eller tidsskrifter til at gendanne det.
 <br /><br />
 Konfigurationen af LOCKSS-understøttelse for Open Journal Systems behøver ikke finde sted, før publiceringen er i fuld gang. På dette tidspunkt skal du følge disse to trin:]]></message>
 
@@ -429,7 +429,7 @@ Aktiv er antallet af bedømmelser, der i øjeblikket overvejes eller er forestå
         <message key="reviewer.article.selectRecommendation">Vælg en anbefaling, og fremsend bedømmelsen for at fuldføre processen. Du skal angive en bedømmelse eller overføre en fil, inden du kan vælge en anbefaling.</message>
 	<message key="reviewer.article.mustSelectDecision">Der er ikke valgt nogen anbefaling. Du skal vælge en anbefaling, du vil fremsende.</message>
 	<message key="reviewer.article.confirmDecision">Når du har registreret en beslutning, kan du ikke længere foretage ændringer af denne bedømmelse. Er du sikker på, at du vil fortsætte?</message>
-	<message key="reviewer.article.ensuringBlindReview">Sikring af en blindbedømmelse</message>
+	<message key="reviewer.article.ensuringBlindReview">Sikring af blind review</message>
 
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">Fil til C/E</message>
@@ -580,7 +580,7 @@ aktuelle adgangskode.<br /><br />Angiv din e-mail-adresse nedenfor for at nulsti
 	<message key="about.submissions">Manuskripter</message>
 	<message key="about.onlineSubmissions">Onlinemanuskripter</message>
 	<message key="about.onlineSubmissions.login">Gå til logon</message>
-	<message key="about.onlineSubmissions.registrationRequired">Du skal være registreret og logget på for at kunne fremsende elementer online og for at kontrollere de aktuelle manuskripters status.</message>
+	<message key="about.onlineSubmissions.registrationRequired">Du skal {$login} eller {$register} for at kunne foretage en indsendelse.</message>
 	<message key="about.authorGuidelines">Retningslinjer for forfattere</message>
 	<message key="about.submissionPreparationChecklist">Tjekliste til forberedelse af manuskript</message>
 	<message key="about.submissionPreparationChecklist.description">Som en del af manuskriptprocessen skal forfattere afkrydse, at deres manuskript overholder alle følgende elementer, og manuskripter kan returneres til forfattere, der ikke overholder disse retningslinjer.</message>
@@ -990,4 +990,79 @@ Valideringen kan mislykkes i forbindelse med URL-søgeadresser, der kræver send
 	<message key="installer.maxFileUploadSize"><![CDATA[Din server tillader på nuværende tidspunkt upload af dokument på maksimumstørrelse: <strong>{$maxFileUploadSize}</strong>]]></message>
 	<message key="site.upgradeAvailable.admin"><![CDATA[Der er en ny OJS-udgave tilgængelig! Du anvender i øjeblikket {$currentVersion}. Den nyeste OJS-udgave er {$latestVersion}. Besøg <a href="http://pkp.sfu.ca/ojs_download" target="_new">this page</a> og download den nyeste version og se opgraderingsinstruktionerne.]]></message>
 	<message key="site.upgradeAvailable.manager"><![CDATA[Der er en ny OJS-udgave tilgængelig! Du anvender i øjeblikket {$currentVersion}. Den nyeste OJS-udgave er {$latestVersion}. Kontakt din webstedsadministrator  ({$siteAdminName}, <a href="mailto:{$siteAdminEmail}">{$siteAdminEmail}</a>) for at gøre ham opmærksom på den nye version. Få mere information <a href="http://pkp.sfu.ca/ojs_download" target="_new">her</a>.]]></message>
+	<message key="journal.viewAllIssues">Se alle numre</message>
+	<message key="about.aboutContext">Om tidsskriftet</message>
+
+	<message key="editor.navigation.issues">Numre</message>
+	<message key="notification.type.submissionSubmitted">En ny artikel, "{$title}," er blevet indleveret.</message>
+	<message key="notification.type.editorAssignmentTask">En ny artikel er blevet indleveret. En redaktør skal tilknyttes.</message>
+	<message key="about.onlineSubmissions.submissionActions">{$newSubmission} eller {$viewSubmissions}.</message>
+	<message key="about.onlineSubmissions.newSubmission">Foretag en ny indsendelse</message>
+	<message key="about.onlineSubmissions.viewSubmissions">se dine igangværende indsendelser</message>
+	<message key="editor.issues.backIssues">Tidligere numre</message>
+	<message key="editor.issues.futureIssues">Fremtidige numre</message>
+	<message key="notification.type.assignProductionUser">For at indsætte en publiceringsversion tilføjes bruger via linket 'Tilføj' under deltagerlisten.</message>
+	<message key="notification.type.awaitingRepresentations">Afventer publiceringsversion</message>
+	<message key="submission.layout.galley.remotelyHostedContent">Denne publiceringsversion vil være tilgængelig på et separat website.</message>
+	<message key="submission.layout.galley.remoteURL">Ekstern URL</message>
+	<message key="notification.savedIssueMetadata">Nummer-metadata gemt</message>
+	<message key="manager.setup.clockssDescription"><![CDATA[Open Journal Systems understøtter også <a href="http://clockss.org/" target="_blank">CLOCKSS</a> (Controlled Lots of Copies Keep Stuff Safe) for at sikre et pålideligt og permanent arkiv for tidsskrifter. CLOCKSS er baseret på LOCKSS open source-software, der er udviklet på Stanford University Library, og som gør det muligt for biblioteker at bevare udvalgte webtidsskrifter ved regelmæssigt at foretage polling af registrerede tidsskriftswebsteder med henblik på at finde nyt publiceret indhold og arkivere det. Hvert enkelt arkiv valideres løbende i forhold til andre bibliotekscachelagre, og hvis indholdet er beskadiget eller er gået tabt, bruges de andre cachelagre eller tidsskrifter til at gendanne det.
+<br /><br />
+Konfigurationen af CLOCKSS-understøttelse for Open Journal Systems behøver ikke finde sted, før publiceringen er i fuld gang. På dette tidspunkt skal du følge disse to trin:]]></message>
+	<message key="user.role.guestEditor">Gæsteredaktør</message>
+	<message key="user.noRoles.selectUsersWithoutRoles">Inkludér brugere uden nogen roller vedrørende dette tidsskrift.</message>
+	<message key="user.role.subEditors">Sektionsredaktører</message>
+	<message key="user.role.journalAssistant">Tidsskriftsassistent</message>
+	<message key="user.role.journalAssistants">Tidsskriftsassistenter</message>
+	<message key="user.role.guestEditors">Gæsteredaktører</message>
+	<message key="context.current">Aktuelle tidsskrift:</message>
+	<message key="context.select">Skift til et andet tidsskrift:</message>
+	<message key="article.return">Tilbage til artikeldetaljer</message>
+	<message key="user.reviewerPrompt">Vil du påtage dig at bedømme manuskripter til dette tidsskrift?</message>
+	<message key="user.reviewerPrompt.userGroup">Ja, rekvirér {$userGroup} rollen.</message>
+	<message key="submission.event.submissionSubmitted">Artikel indsendt</message>
+	<message key="search.results.orderBy">Opstil resultat efter</message>
+	<message key="issue.return">Vend tilbage til nummerdetaljer</message>
+	<message key="search.results.orderBy.article">Artiklens titel</message>
+	<message key="search.results.orderBy.author">Forfatter</message>
+	<message key="search.results.orderBy.date">Publiceringsdato</message>
+	<message key="search.results.orderBy.issue">Nummer</message>
+	<message key="search.results.orderBy.journal">Tidsskrifttitel</message>
+	<message key="search.results.orderBy.popularityAll">Popularity (All Time)</message>
+	<message key="user.register.contextsPrompt">Hvilket tidsskrift på dette site vil du gerne registreres under?</message>
+	<message key="user.register.otherContextRoles">Anmod om følgende roller.</message>
+	<message key="user.register.noContextReviewerInterests">Hvis du har anmodet om at være bedømmer hos et af tidsskrifterne bedes du anføre dine emneinteresser.</message>
+	<message key="search.results.orderBy.popularityMonth">Popularitet (Sidste måned)</message>
+	<message key="search.results.orderBy.relevance">Relevans</message>
+	<message key="search.results.orderDir.asc">Stigende</message>
+	<message key="search.results.orderDir.desc">Faldende</message>
+	<message key="search.results.similarDocuments">tilsvarende dokumenter</message>
+	<message key="plugins.categories.viewableFiles">'Article Galley Plugins'</message>
+	<message key="plugins.categories.viewableFiles.description">'Article Galley Plugins' understøtter fremvisningen af forskellige dokumenttyper som publiceringsversion af artiklen.</message>
+	<message key="manager.setup.citations.enable">Aktivér citationsmarkeringsværktøjet</message>
+	<message key="reviewer.article.selectRecommendation.byEditor">Indsæt eller tilret bedømmer-indstillingen.</message>
+	<message key="user.register.selectContext">Vælg et tidsskrift at lade dig registrere ved:</message>
+	<message key="article.pageTitle">Bedømmelse af {$title}</message>
+	<message key="article.download">Download denne PDF-fil</message>
+	<message key="article.pluginMissing"><![CDATA[<p>Den valgte PDF-fil vil blive indlæst her, såfremt din browser har en PDF reader plugin installeret (for eksempel, en nyere version af <a href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a>).</p>]]></message>
+	<message key="archive.archivesPageNumber">Arkiver - Side {$pageNumber}</message>
+	<message key="about.contact">Kontakt</message>
+	<message key="about.onlineSubmissions.register">Registrér</message>
+	<message key="help.goToEditPage">Redigér {$sectionTitle}</message>
+	<message key="user.authorization.noContext">Intet tidsskrift i denne sammenhæng!</message>
+	<message key="user.authorization.invalidIssue">Ugyldigt nummer efterspurgt!</message>
+	<message key="grid.action.createContext">Opret et nyt tidsskrift</message>
+	<message key="notification.type.approveSubmissionTitle">Afventer godkendelse.</message>
+	<message key="user.profile.form.showOtherContexts">Registrér hos andre tidsskrifter</message>
+	<message key="user.profile.form.hideOtherContexts">Skjul ander tidsskrifter</message>
+	<message key="notification.type.approveSubmission">Denne indsendelse afventer godkendelse inden den vises i nummeret.</message>
+	<message key="article.view.interstitial">Vælg en artikelfil til at downloade.</message>
+	<message key="grid.catalogEntry.availableRepresentation.approved">Godkendt</message>
+	<message key="grid.catalogEntry.availableRepresentation.notApproved">Afventer godkendelse</message>
+	<message key="grid.catalogEntry.approvedRepresentation.title">Godkendelse af publiceringsversion</message>
+	<message key="grid.catalogEntry.approvedRepresentation.message"><![CDATA[<p>Godkend denne publiceringsversion til publicering.</p>]]></message>
+	<message key="grid.catalogEntry.approvedRepresentation.removeMessage"><![CDATA[<p>Fjern godkendelse fra denne publiceringsversion.</p>]]></message>
+	<message key="search.cli.rebuildIndex.indexing">Indeksering af "{$journalName}"</message>
+	<message key="search.cli.rebuildIndex.indexingByJournalNotSupported">Denne søgning tillader ikke en re-indeksering af hver enkelt tidsskrift.</message>
+	<message key="search.cli.rebuildIndex.unknownJournal">Den angivne tidsskriftssti "{$journalPath}" leder ikke frem til et tidsskrift.</message>
 </locale>

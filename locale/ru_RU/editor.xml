@@ -4,32 +4,31 @@
 <!--
   * locale/ru_RU/editor.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Localization strings for the ru_RU (Русский) locale.
-  * With updates from Pavel Pisklakov (revising translation). 
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Russian_(ru_RU)
+  * Localization strings.
   -->
 
 <locale name="ru_RU" full_name="Русский">
 	<message key="editor.home">Главная страница редактора</message>
 	<message key="editor.reassign">Переназначить</message>
-	<message key="editor.submissionsAndPublishing">Рукописи и публикация</message>
-	<message key="editor.submissionQueue">Очередь рукописей</message>
-	<message key="editor.submissionArchive">Архив рукописей</message>
+	<message key="editor.submissionsAndPublishing">Материалы и публикация</message>
+	<message key="editor.submissionQueue">Очередь материалов</message>
+	<message key="editor.submissionArchive">Архив материалов</message>
 	<message key="editor.publishing">Публикация</message>
 	<message key="editor.publishedIssues">Опубликованные выпуски</message>
 	<message key="editor.allSections">Все разделы</message>
 	<message key="editor.allEditors">Все редакторы</message>
 	<message key="editor.me">Я</message>
 	<message key="editor.publicIdentificationExists">Открытый идентификатор «{$publicIdentifier}» уже используется для другого объекта (выпуска, статьи, гранки или дополнительного файла). Пожалуйста, выбирайте уникальные идентификаторы в рамках своего журнала.</message>
-	<message key="editor.submissionArchive.noSubmissions">Нет рукописей в архиве.</message>
-	<message key="editor.submissionArchive.saveChanges">Сохранить изменения в архиве рукописей? Отмеченные для удаления рукописи будут навсегда удалены из системы.</message>
-	<message key="editor.submissionArchive.confirmDelete">Вы уверены, что хотите навсегда удалить эту рукопись?</message>
+	<message key="editor.submissionArchive.noSubmissions">Нет материалов в архиве.</message>
+	<message key="editor.submissionArchive.saveChanges">Сохранить изменения в архиве материалов? Отмеченные для удаления материалы будут навсегда удалены из системы.</message>
+	<message key="editor.submissionArchive.confirmDelete">Вы уверены, что хотите навсегда удалить этот материал?</message>
 	<message key="editor.submissionReview.confirmDecision">Вы уверены, что хотите записать это решение?</message>
-	<message key="editor.submissionReview.emailWillArchive">Эта рукопись будет перенесена в архив после того, как будет отправлено письмо «Уведомить автора» или нажата кнопка «Не отправлять письмо».</message>
-	<message key="editor.submissionReview.cannotSendToCopyediting">Перед направлением рукописи на литературное редактирование используйте ссылку «Уведомить автора», чтобы сообщить автору о решении и выберите отправляемую версию.</message>
+	<message key="editor.submissionReview.emailWillArchive">Этот материал будет перенесен в архив после того, как будет отправлено письмо «Уведомить автора» или нажата кнопка «Не отправлять письмо».</message>
+	<message key="editor.submissionReview.cannotSendToCopyediting">Перед отправкой материала на литературное редактирование используйте ссылку «Уведомить автора», чтобы сообщить автору о решении и выберите версию, которую нужно отправить.</message>
 	<message key="editor.submissionReview.sendToCopyediting">Отправить на литературное редактирование</message>
 	<message key="editor.notifyUsers">Уведомить пользователей</message>
 	<message key="editor.notifyUsers.allUsers">Все пользователи, связанные с этим журналом ({$count} пользователей)</message>
@@ -44,19 +43,19 @@
 	<message key="editor.notifyUsers.includeToc">Включить содержание из этого номера:</message>
 	<message key="editor.editorAdministration">Редактор: Администрирование</message>
 	<message key="editor.issues.createIssue">Создать выпуск</message>
-	<message key="editor.issues.backIssues">Старые выпуски</message>
-	<message key="editor.issues.futureIssues">Будущие выпуски</message>
+	<message key="editor.issues.editIssue">Управление выпуском: {$issueIdentification}</message>
 	<message key="editor.issues.currentIssue">Текущий выпуск</message>
-	<message key="editor.issues.numArticles">Количество статей</message>
-	<message key="editor.issues.noArticles">На текущий момент нет запланированных статей для этого выпуска.</message>
+	<message key="editor.issues.numArticles">Количество материалов</message>
+	<message key="editor.issues.noArticles">На текущий момент нет запланированных материалов для этого выпуска.</message>
 	<message key="editor.issues.confirmDelete">Вы уверены, что хотите навсегда удалить этот выпуск?</message>
-	<message key="editor.issues.published">Опубликованные</message>
-	<message key="editor.issues.unpublished">Неопубликованные</message>
+	<message key="editor.issues.published">Опубликован</message>
+	<message key="editor.issues.unpublished">Не опубликован</message>
+	<message key="editor.issues.datePublished">Дата опубликования</message>
 	<message key="editor.issues.volumeRequired">Номер тома обязателен и должен быть положительным числом.</message>
 	<message key="editor.issues.numberRequired">Номер выпуска обязателен и должен быть положительным числом.</message>
 	<message key="editor.issues.yearRequired">Номер года обязателен и должен быть положительным числом.</message>
 	<message key="editor.issues.titleRequired">Название для выпуска обязательно.</message>
-	<message key="editor.issues.issueIdentificationRequired">Идентификация выпуска обязательна. Пожалуйста выберите по крайней мере один из вариантов идентификации выпуска.</message>
+	<message key="editor.issues.issueIdentificationRequired">Идентификация выпуска обязательна. Пожалуйста, выберите по крайней мере один из вариантов идентификации выпуска.</message>
 	<message key="editor.issues.issueIdentification">Идентификация выпуска</message>
 	<message key="editor.issues.publicIssueIdentifier">Открытый идентификатор выпуска</message>
 	<message key="editor.issues.description">Описание</message>
@@ -67,23 +66,23 @@
 	<message key="editor.issues.coverPageInstructions">(Разрешенные форматы: .gif, .jpg, или .png)</message>
 	<message key="editor.issues.uploaded">Загружен</message>
 	<message key="editor.issues.remove">Удалить</message>
-	<message key="editor.issues.proofed">Проверено</message>
+	<message key="editor.issues.proofed">Проверен</message>
 	<message key="editor.issues.removeCoverPage">Удалить изображение обложки?</message>
-	<message key="editor.issues.invalidCoverPageFormat">Неверный формат изображения обложки. Разрешенные форматы — .gif, .jpg, или .png.</message>
+	<message key="editor.issues.removeCoverImageFileNameMismatch">Изображение обложки, которое вы хотите удалить, не соответствует изображению обложки для этого выпуска. Пожалуйста, перезагрузите страницу и попробуйте снова.</message>
+	<message key="editor.issues.removeCoverImageFileNotFound">Изображение обложки, которое вы хотите удалить, не удается найти. Возможно оно уже было удалено. Попробуйте перезагрузить страницу.</message>
+	<message key="editor.issues.invalidCoverImageFormat">Неверный формат изображения обложки. Разрешенные форматы — .gif, .jpg, или .png.</message>
 	<message key="editor.issues.styleFile">Таблица стилей</message>
 	<message key="editor.issues.invalidStyleFormat">Неверный формат таблицы стилей. Убедитесь, что отправленный файл является синтаксически правильным CSS. (Обратите внимание, что комментарии вначале таблицы стилей могут привести к отказу системы его принять.)</message>
 	<message key="editor.issues.removeStyleFile">Удалить таблицу стилей?</message>
 	<message key="editor.issues.coverPageCaption">Надпись на обложке</message>
 	<message key="editor.issues.showCoverPage">Создайте обложку для этого выпуска со следующими элементами.</message>
 	<message key="editor.issues.coverPageDisplay">Показать</message>
-	<message key="editor.issues.hideCoverPageArchives">Не показывать уменьшенное изображение обложки в списке выпусков.</message>
-	<message key="editor.issues.hideCoverPageCover">Не показывать изображение обложки перед содержанием выпуска.</message>
 	<message key="editor.issues.openAccess">Открытый доступ</message>
 	<message key="editor.issues.subscription">Подписка</message>
 	<message key="editor.issues.identification">Идентификация</message>
 	<message key="editor.issues.access">Доступ</message>
 	<message key="editor.issues.cover">Обложка</message>
-	<message key="editor.issues.confirmIssueDelete">Все статьи будут возвращены в очередь на редактирование и все связанные с ними файлы будут навсегда удалены. Вы уверены, что хотите удалить этот выпуск?</message>
+	<message key="editor.issues.confirmIssueDelete">Все статьи будут возвращены в очередь редактирования и все связанные с ними файлы будут навсегда удалены. Вы уверены, что хотите удалить этот выпуск?</message>
 	<message key="editor.issues.resetIssueOrder"><![CDATA[Этот журнал использует нестандартную сортировку выпусков. <a href="{$url}" class="action">Вернуться к сортировке по умолчанию</a>]]></message>
 	<message key="editor.issues.resetSectionOrder"><![CDATA[Этот журнал использует нестандартную сортировку разделов. <a href="{$url}" class="action">Вернуться к сортировке по умолчанию</a>]]></message>
 	<message key="editor.issues.issueData">Данные выпуска</message>
@@ -94,7 +93,7 @@
 	<message key="editor.issues.publishIssue">Опубликовать выпуск</message>
 	<message key="editor.issues.unpublishIssue">Отменить публикацию выпуска</message>
 	<message key="editor.issues.previewIssue">Предварительный просмотр выпуска</message>
-	<message key="editor.issues.preview">(предварительный просмотр)</message>
+	<message key="editor.issues.preview">Предварительный просмотр</message>
 	<message key="editor.issues.confirmPublish">Вы уверены, что хотите опубликовать новый выпуск?</message>
 	<message key="editor.issues.confirmUnpublish">Вы уверены, что хотите отменить публикацию этого опубликованного выпуска?</message>
 	<message key="editor.issues.publicArticleIdExists">Не могу сохранить открытый идентификатор для статьи:</message>
@@ -105,14 +104,21 @@
 	<message key="editor.issues.galley">Гранка выпуска</message>
 	<message key="editor.issues.viewingGalley">Просмотр гранки выпуска</message>
 	<message key="editor.issues.issueGalleysDescription">Публиковать гранки с полным содержанием выпуска.</message>
-	<message key="editor.issues.noneIssueGalleys">Никакие гранки выпуска не были опубликованы.</message>
+	<message key="editor.issues.noneIssueGalleys">Нет опубликованных гранок выпуска.</message>
 	<message key="editor.issues.galleyLabelRequired">Метка гранки выпуска обязательна.</message>
 	<message key="editor.issues.galleyLocaleRequired">Язык гранки выпуска обязателен.</message>
 	<message key="editor.issues.galleyPublicIdentificationExists">Открытая идентификация гранки выпуска уже существует.</message>
 	<message key="editor.issues.backToIssueGalleys">Назад к гранкам выпуска</message>
 	<message key="editor.issues.viewingGalley">Просмотр гранки выпуска</message>
 	<message key="editor.issues.confirmDeleteGalley">Вы уверены, что хотите удалить эту гранку выпуска?</message>
+	<message key="editor.issues.identifiers">Идентификаторы</message>
 	<message key="editor.navigation.futureIssues">Будущие выпуски</message>
+	<message key="grid.action.addGalley">Добавить гранку</message>
+	<message key="grid.action.publish">Опубликовать выпуск</message>
+	<message key="grid.action.addIssue">Создать выпуск</message>
+	<message key="grid.action.viewIssue">Показать</message>
+	<message key="grid.action.previewIssue">Предварительный просмотр</message>
+	<message key="grid.action.addIssueGalley">Создать гранку выпуска</message>
 	<message key="editor.navigation.issueArchive">Старые выпуски</message>
 	<message key="editor.article.designateReviewVersion">Обозначить оригинальный файл как версию для рецензирования</message>
 	<message key="editor.article.uploadReviewVersion">Загрузить переработанную версию для рецензирования</message>
@@ -121,7 +127,7 @@
 	<message key="editor.article.clear">Очистить</message>
 	<message key="editor.article.clearReviewer">Убрать рецензента</message>
 	<message key="editor.article.changeSection">Изменить раздел</message>
-	<message key="editor.article.setDueDate">Определить срок выполнения</message>
+	<message key="editor.article.setDueDate">Задать срок выполнения</message>
 	<message key="editor.article.addReviewer">Добавить рецензента</message>
 	<message key="editor.article.toReviewer">Рецензенту</message>
 	<message key="editor.article.notifyReviewer">Уведомить рецензента</message>
@@ -139,11 +145,11 @@
 	<message key="editor.article.decision">Решение</message>
 	<message key="editor.article.noEditorSelected">Редактор не выбран.</message>
 	<message key="editor.article.recordDecision">Записать решение</message>
-	<message key="editor.article.cannotRecord">Редактор секции еще не назначен или не предоставлен файл рецензии.</message>
+	<message key="editor.article.cannotRecord">Редактор раздела еще не назначен или не предоставлен файл рецензии.</message>
 	<message key="editor.article.reviewersSeeAuthorsVersion">Рецензенты, которые могут увидеть авторскую версию</message>
 	<message key="editor.article.designateDueDate">Обозначить срок выполнения</message>
-	<message key="editor.article.designateDueDateDescription">Введите дату или количество недель, чтобы обозначить новый срок выполнения.</message>
-	<message key="editor.article.todaysDate">Сегодня</message>
+	<message key="editor.article.designateDueDateDescription">Введите дату или количество недель, чтобы задать новый срок выполнения.</message>
+	<message key="editor.article.todaysDate">Сегодняшняя дата</message>
 	<message key="editor.article.requestedByDate">Срок выполнения</message>
 	<message key="editor.article.dueDateFormat">Формат: ГГГГ-MM-ДД</message>
 	<message key="editor.article.numberOfWeeks">Количество недель</message>
@@ -163,56 +169,56 @@
 	<message key="editor.article.saveRating">Сохранить оценку</message>
 	<message key="editor.article.noneSelected">Ничего не выбрано</message>
 	<message key="editor.article.authorProofing">Авторская корректура</message>
-	<message key="editor.article.archiveSubmission">Отклонить и переместить рукопись в архив</message>
-	<message key="editor.article.restoreToQueue">Восстановить в списке обрабатываемых статей</message>
+	<message key="editor.article.archiveSubmission">Отклонить и переместить материал в архив</message>
+	<message key="editor.article.restoreToQueue">Восстановить в списке активных</message>
 	<message key="editor.article.assignSectionEditor">Добавить редактора раздела</message>
 	<message key="editor.article.assignEditor">Добавить редактора</message>
 	<message key="editor.article.selectEditor">Выбрать {$roleName}</message>
 	<message key="editor.article.selectDecision">Выбрать решение</message>
-	<message key="editor.article.decision.accept">Принять рукопись</message>
-	<message key="editor.article.decision.pendingRevisions">Нужны исправления</message>
-	<message key="editor.article.decision.resubmit">Отправить снова на рецензирование</message>
-	<message key="editor.article.decision.decline">Отклонить рукопись</message>
 	<message key="editor.article.selectLayoutEditor">Выбрать верстальщика</message>
 	<message key="editor.article.replaceLayoutEditor">Заменить верстальщика</message>
-	<message key="editor.article.reviewSubmission">Рецензирование статьи</message>
+	<message key="editor.article.reviewSubmission">Рецензирование материала</message>
 	<message key="editor.article.resubmitForReview">Повторно отправить файл на рецензию</message>
-	<message key="editor.article.resubmitFileForPeerReview">Повторно отправить выбранный файл для рецензирования</message>
+	<message key="editor.article.resubmitFileForPeerReview">Повторно отправить выбранный файл на рецензирование</message>
 	<message key="editor.article.sendToCopyedit">Отправить файл на литературное редактирование</message>
 	<message key="editor.article.selectProofreader">Назначить корректора</message>
 	<message key="editor.article.replaceProofreader">Заменить корректора</message>
 	<message key="editor.article.authorComments">Комментарии автора</message>
 	<message key="editor.article.proofreaderComments">Комментарии корректора</message>
-	<message key="editor.article.layoutEditorFinal">Окончательная верстка статьи</message>
+	<message key="editor.article.layoutEditorFinal">Итоговая версия после верстки</message>
 	<message key="editor.article.noDate">(дата)</message>
 	<message key="editor.submissions.showBy">Показать по</message>
 	<message key="editor.submissions.submitMMDD">Отправить MM-DD</message>
 	<message key="editor.submissions.activeAssignments">Активные редакционные задания</message>
 	<message key="editor.submissions.invite">Пригласить</message>
 	<message key="editor.submissions.accept">Принять</message>
-	<message key="editor.submissions.noSubmissions">Нет отправленных статьей</message>
+	<message key="editor.submissions.noSubmissions">Нет отправленных материалов</message>
 	<message key="editor.submissions.lastAssigned">Последняя</message>
 	<message key="editor.submissions.averageTime">Недель</message>
 	<message key="editor.submissions.lastCompleted">Последняя завершенная</message>
 	<message key="editor.submissions.assignedTo">Кому назначено</message>
 	<message key="editor.submissions.inSection">В разделе</message>
+	<message key="editor.article.schedulePublication">Запланировать для публикации</message>
 	<message key="editor.article.scheduleForPublication">Запланировать для публикации в</message>
 	<message key="editor.article.scheduleForPublication.toBeAssigned">Будет назначено позже</message>
-	<message key="editor.article.payment.publicationFeeNotPaid">Не поступила плата за публикацию. Чтобы запланировать статью к публикации уведомите автора о необходимости внести плату или отмените платеж.</message>
+	<message key="editor.article.payment.publicationFeeNotPaid">Не поступила плата за публикацию. Чтобы запланировать материал к публикации уведомите автора о необходимости внести плату или отмените платеж.</message>
 	<message key="editor.article.display">Показать</message>
 	<message key="editor.article.hideTocAuthorDescription">Убрать имена авторов из содержания выпуска</message>
 	<message key="editor.article.hideTocAuthorDefault">По умолчанию</message>
 	<message key="editor.article.hideTocAuthorHide">Убрать</message>
 	<message key="editor.article.hideTocAuthorShow">Показать</message>
 	<message key="editor.article.cover">Обложка</message>
-	<message key="editor.article.showCoverPage">Создать обложку для этой статьи, содержащую следующие элементы.</message>
-	<message key="editor.article.coverImageDisplay">Показать</message>
-	<message key="editor.article.hideCoverPageToc">Не показывать уменьшенное изображение обложки в содержании.</message>
-	<message key="editor.article.hideCoverPageAbstract">Не показывать изображение обложки в просмотре аннотации статьи.</message>
 	<message key="editor.article.coverImage">Изображение обложки</message>
-	<message key="editor.article.coverImageInstructions">(Разрешенные форматы: .gif, .jpg, или .png)</message>
+	<message key="editor.article.removeCoverImageFileNotFound">Изображение обложки, которое вы хотите удалить, не удается найти. Возможно оно уже было удалено. Попробуйте перезагрузить страницу.</message>
 	<message key="editor.article.uploaded">Загружен</message>
 	<message key="editor.article.removeCoverPage">Удалить изображение обложки?</message>
+	<message key="grid.action.removeArticle">Удалить статью из выпуска</message>
 	<message key="editor.article.remove">Удалить</message>
-	<message key="editor.issues.invalidAccessDate">Неверная дата предоставления открытого доступа.</message>
+	<message key="editor.article.remove.confirm">Вы уверены, что хотите удалить эту статью из выпуска? Статья будет доступна для планирования к публикации в другом выпуске.</message>
+	<message key="editor.issues.invalidAccessDate">Дата доступа не корректна.</message>
+	<message key="editor.issues.editIssueGalley">Редактировать гранку выпуска</message>
+	<message key="editor.submission.production.productionReadyFilesDescription"><![CDATA[Верстальщик подготовит эти файлы для каждой гранки, а затем загрузить в соответствующие места раздела <span class="pkp_help_title">«Корректура»</span> для выполнения корректуры.]]></message>
+	<message key="editor.submission.selectGalleyFiles">Выбрать файлы гранок</message>
+	<message key="editor.submission.editorial.finalDraftDescription"><![CDATA[Итоговые файлы черновиков в этом списке преобразованы литературным редактором в версии, прошедши литературное редактирование, загруженные ниже в раздел  <span class="pkp_help_title">«Литературное редактирование»</span>.]]></message>
+	<message key="editor.submission.proof.manageProofFilesDescription">Все файлы, которые уже были загружены на любом этапе отправки материала, могут быть добавлены в список «Корректура», для этого нужно поставить галочку «Включить» ниже и щелкнуть на кнопке «Поиск»: все доступные файлы будут показаны в списке и могут быть выбраны для включения.</message>
 </locale>

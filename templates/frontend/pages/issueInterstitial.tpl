@@ -1,8 +1,8 @@
 {**
  * templates/frontend/pages/issueGalley.tpl
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @brief Lightweight page for viewing PDF files
@@ -35,7 +35,7 @@
 <body class="pkp_page_{$requestedPage|escape} pkp_op_{$requestedOp|escape}">
 
 	{* Header wrapper *}
-	<header class="header_view_pdf">
+	<header class="header_view">
 
 		<a href="{$parentUrl}" class="return">
 			<span class="pkp_screen_reader">

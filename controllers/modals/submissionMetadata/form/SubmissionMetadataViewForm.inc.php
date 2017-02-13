@@ -3,8 +3,8 @@
 /**
  * @file controllers/modals/submissionMetadata/form/SubmissionMetadataViewForm.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SubmissionMetadataViewForm
@@ -23,8 +23,8 @@ class SubmissionMetadataViewForm extends PKPSubmissionMetadataViewForm {
 	 * @param $stageId integer
 	 * @param $formParams array
 	 */
-	function SubmissionMetadataViewForm($submissionId, $stageId = null, $formParams = null, $templateName = 'controllers/modals/submissionMetadata/form/submissionMetadataViewForm.tpl') {
-		parent::PKPSubmissionMetadataViewForm($submissionId, $stageId, $formParams, $templateName);
+	function __construct($submissionId, $stageId = null, $formParams = null, $templateName = 'controllers/modals/submissionMetadata/form/submissionMetadataViewForm.tpl') {
+		parent::__construct($submissionId, $stageId, $formParams, $templateName);
 	}
 
 	/**
@@ -39,12 +39,13 @@ class SubmissionMetadataViewForm extends PKPSubmissionMetadataViewForm {
 
 		// Get section for this journal
 		$sectionDao = DAORegistry::getDAO('SectionDAO');
-		$seriesOptions = $sectionDao->getSectionTitles($submission->getContextId());
-		$templateMgr->assign('sectionOptions', $seriesOptions);
+		$sectionOptions = $sectionDao->getTitles($submission->getContextId());
+		$templateMgr->assign('sectionOptions', $sectionOptions);
 		$templateMgr->assign('sectionId', $submission->getSectionId());
 
 		// Cover image delete link action
-		$coverImage = $submission->getCoverImage();
+		$locale = AppLocale::getLocale();
+		$coverImage = $submission->getCoverImage($locale);
 		if ($coverImage) {
 			import('lib.pkp.classes.linkAction.LinkAction');
 			import('lib.pkp.classes.linkAction.request.RemoteActionConfirmationModal');
@@ -83,8 +84,9 @@ class SubmissionMetadataViewForm extends PKPSubmissionMetadataViewForm {
 	function initData($args, $request) {
 		parent::initData($args, $request);
 		$submission = $this->getSubmission();
-		$this->setData('coverImage', $submission->getCoverImage());
-		$this->setData('coverImageAltText', $submission->getCoverImageAltText());
+		$locale = AppLocale::getLocale();
+		$this->setData('coverImage', $submission->getCoverImage($locale));
+		$this->setData('coverImageAltText', $submission->getCoverImageAltText($locale));
 	}
 
 	/**
@@ -104,8 +106,15 @@ class SubmissionMetadataViewForm extends PKPSubmissionMetadataViewForm {
 		$submission = $this->getSubmission();
 		$submissionDao = Application::getSubmissionDAO();
 
-		$submission->setSectionId($this->getData('sectionId'));
+		// if section changed consider reordering
+		$reorder = false;
+		$oldSectionId = $submission->getSectionId();
+		if ($oldSectionId != $this->getData('sectionId')) {
+			$reorder = true;
+			$submission->setSectionId($this->getData('sectionId'));
+		}
 
+		$locale = AppLocale::getLocale();
 		// Copy an uploaded cover file for the article, if there is one.
 		if ($temporaryFileId = $this->getData('temporaryFileId')) {
 			$user = $request->getUser();
@@ -114,15 +123,29 @@ class SubmissionMetadataViewForm extends PKPSubmissionMetadataViewForm {
 
 			import('classes.file.PublicFileManager');
 			$publicFileManager = new PublicFileManager();
-			$newFileName = 'article_' . $submission->getId() . '_cover' . $publicFileManager->getImageExtension($temporaryFile->getFileType());
+			$newFileName = 'article_' . $submission->getId() . '_cover_' . $locale . $publicFileManager->getImageExtension($temporaryFile->getFileType());
 			$journal = $request->getJournal();
 			$publicFileManager->copyJournalFile($journal->getId(), $temporaryFile->getFilePath(), $newFileName);
-			$submission->setCoverImage($newFileName);
+			$submission->setCoverImage($newFileName, $locale);
 		}
 
-		$submission->setCoverImageAltText($this->getData('coverImageAltText'));
+		$submission->setCoverImageAltText($this->getData('coverImageAltText'), $locale);
 
 		$submissionDao->updateObject($submission);
+
+		if ($reorder) {
+			// see if it is a published article
+			$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
+			$publishedArticle = $publishedArticleDao->getPublishedArticleByArticleId($submission->getId(), null, false); /* @var $publishedArticle PublishedArticle */
+			if ($publishedArticle) {
+				// Resequence the articles.
+				$publishedArticle->setSequence(REALLY_BIG_NUMBER);
+				$publishedArticleDao->updatePublishedArticle($publishedArticle);
+				$publishedArticleDao->resequencePublishedArticles($submission->getSectionId(), $publishedArticle->getIssueId());
+				// The reordering for the old section is not necessary, but for the correctness sake
+				$publishedArticleDao->resequencePublishedArticles($oldSectionId, $publishedArticle->getIssueId());
+			}
+		}
 
 		if ($submission->getDatePublished()) {
 			import('classes.search.ArticleSearchIndex');

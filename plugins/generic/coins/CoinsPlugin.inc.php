@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/coins/CoinsPlugin.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class CoinsPlugin
@@ -77,8 +77,8 @@ class CoinsPlugin extends GenericPlugin {
 				array('rft.atitle', $article->getLocalizedTitle()),
 				array('rft.artnum', $article->getBestArticleId()),
 				array('rft.stitle', $journal->getLocalizedSetting('abbreviation')),
-				array('rft.volume', $issue->getVolume()),
-				array('rft.issue', $issue->getNumber()),
+				array('rft.volume', $issue->getShowVolume()?$issue->getVolume():''),
+				array('rft.issue', $issue->getShowNumber()?$issue->getNumber():''),
 				array('rft.aulast', $firstAuthor->getLastName()),
 				array('rft.aufirst', $firstAuthor->getFirstName()),
 				array('rft.auinit', $firstAuthor->getMiddleName())

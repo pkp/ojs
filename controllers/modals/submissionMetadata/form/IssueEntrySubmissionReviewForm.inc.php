@@ -3,8 +3,8 @@
 /**
  * @file controllers/modals/submissionMetadata/form/IssueEntrySubmissionReviewForm.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class CatalogEntrySubmissionReviewForm
@@ -26,8 +26,8 @@ class IssueEntrySubmissionReviewForm extends SubmissionMetadataViewForm {
 	 * @param $stageId integer
 	 * @param $formParams array
 	 */
-	function IssueEntrySubmissionReviewForm($submissionId, $stageId = null, $formParams = null) {
-		parent::SubmissionMetadataViewForm($submissionId, $stageId, $formParams, 'controllers/modals/submissionMetadata/form/issueEntrySubmissionReviewForm.tpl');
+	function __construct($submissionId, $stageId = null, $formParams = null) {
+		parent::__construct($submissionId, $stageId, $formParams, 'controllers/modals/submissionMetadata/form/issueEntrySubmissionReviewForm.tpl');
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON, LOCALE_COMPONENT_APP_SUBMISSION, LOCALE_COMPONENT_APP_AUTHOR);
 	}
 

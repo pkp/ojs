@@ -1,8 +1,8 @@
 {**
  * plugins/citationFormats/cbe/citation.tpl
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Article reading tools -- Capture Citation CBE format
@@ -12,7 +12,7 @@
 {assign var=authorCount value=$authors|@count}
 {foreach from=$authors item=author name=authors key=i}
 	{assign var=firstName value=$author->getFirstName()}
-	{$author->getLastName()|escape}, {$firstName|escape|truncate:1}.{if $i==$authorCount-2}, &amp; {elseif $i<$authorCount-1}, {/if}
+	{$author->getLastName()|escape}, {$firstName|escape|truncate:1:""}.{if $i==$authorCount-2}, &amp; {elseif $i<$authorCount-1}, {/if}
 {/foreach}
 
-{if $article->getDatePublished()}{$article->getDatePublished()|date_format:'%Y %b %e'}{elseif $issue->getDatePublished()}{$issue->getDatePublished()|date_format:'%Y %b %e'}{else}{$issue->getYear()|escape}{/if}. {$article->getLocalizedTitle()|strip_unsafe_html}. {$journal->getLocalizedName()|escape}. [{translate key="rt.captureCite.online"}] {if $issue}{$issue->getVolume()|escape}:{$issue->getNumber()|escape}{/if}
+{if $article->getDatePublished()}{$article->getDatePublished()|date_format:'%Y %b %e'}{elseif $issue->getDatePublished()}{$issue->getDatePublished()|date_format:'%Y %b %e'}{else}{$issue->getYear()|escape}{/if}. {$article->getLocalizedTitle()|strip_unsafe_html}. {$journal->getLocalizedName()|escape}. [{translate key="rt.captureCite.online"}] {if $issue}{if $issue->getShowVolume()}{$issue->getVolume()|escape}{/if}:{if $issue->getShowNumber()}{$issue->getNumber()|escape}{/if}{/if}

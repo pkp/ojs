@@ -3,8 +3,8 @@
 /**
  * @file plugins/metadata/nlm30/Nlm30MetadataPlugin.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class Nlm30MetadataPlugin
@@ -20,8 +20,8 @@ class Nlm30MetadataPlugin extends PKPNlm30MetadataPlugin {
 	/**
 	 * Constructor
 	 */
-	function Nlm30MetadataPlugin() {
-		parent::PKPNlm30MetadataPlugin();
+	function __construct() {
+		parent::__construct();
 	}
 }
 

@@ -4,21 +4,42 @@
 <!--
   * locale/tr_TR/submission.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the tr_TR (Türkçe) locale.
   -->
 
-<locale name="tr_TR" full_name = "Türkçe">
+<locale name="tr_TR" full_name="Türkçe">
+    
+
+    <message key="submission.mySubmissions">Yazılarım</message>
+    <message key="submission.submit.submissionChecklist">Yazar Onay Butonları</message>
+    <message key="submission.submit.submissionChecklistDescription">Yeni yazı girişi için yazarın bu butonları onaylamış ve kabul etmiş olmaları gerekmektedir.</message>
+    <message key="submission.submit.uploadStep">Dosya Yükleme</message>
+    <message key="submission.submission">Giriş Yapıldı</message>
+    <message key="submission.upload.fileContents">Yüklenecek Dosya İçeriği</message>
+    <message key="submission.submit.uploadSubmissionFile">Yeni Yazı Girişi</message>
+    <message key="submission.upload.selectComponent">Lütfen Seçiniz...</message>
+    
 	<!-- Submission wizard -->
+    <message key="submission.submit.title">Bir Makale Girişi Yapınız.</message>
+    <message key="submission.title">Makale Başlığı</message>
+    <message key="grid.action.workflow">Gönderi İş Akışı</message>
+    <message key="submission.submit.newSubmissionSingle">Yeni Yazı Girişi</message>
+    <message key="submission.issueEntry">Metadata</message>
+    <message key="submission.submit.userGroup">... olarak gönder.</message>
+
 
 	<!-- Submission Information Modal -->
-
+    <message key="submission.issueEntry.submissionMetadata">Yazı Girişi</message>
+    <message key="submission.issueEntry.publicationMetadata">Yayın</message>
+    
 	<!-- events -->
 
 	<!-- galleys grid -->
-
+    <message key="grid.submission.itemTitle">Yazı Başlığı</message>
+    <message key="workflow.stage">Durumu</message>
 	<!-- galley files grid -->
 </locale>

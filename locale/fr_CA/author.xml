@@ -4,15 +4,14 @@
 <!--
   * locale/fr_CA/author.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Localization strings for the fr_CA (Français (Canada)) locale.
-  *
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_French_(fr_CA)
+  * Localization strings.
   -->
 
-<locale name="fr_CA" full_name="Français (Canada)">
+<locale name = "fr_CA" full_name = "Français (Canada)">
 	<message key="author.submit">Nouvelle soumission</message>
 	<message key="author.track">Soumissions actives</message>
 	<message key="author.competingInterests"><![CDATA[Conflits&nbsp;d'intérêts <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">Politique de CI</a>]]></message>
@@ -31,12 +30,12 @@
 	<message key="author.submit.metadata">Saisir les métadonnées</message>
 	<message key="author.submit.supplementaryFiles">Télécharger les fichiers supplémentaires</message>
 	<message key="author.submit.confirmation">Confirmer la soumission</message>
-	<message key="author.submit.cancelSubmission">Vous pouvez terminer cette soumission plus tard en sélectionnant Soumissions actives à la Page d'accueil de l'auteur.</message>
-	<message key="author.submit.notAccepting">Cette revue n'accepte pas de soumissions pour le moment.</message>
+	<message key="submission.submit.cancelSubmission">Vous pouvez compléter cette soumission plus tard en la sélectionnant dans le menu des soumissions actives de l'auteur.</message>
+  <message key="author.submit.notAccepting">Cette revue n'accepte pas de soumissions pour le moment.</message>
 	<message key="author.submit.requestWaiver">Demande d'exemption</message>
 	<message key="author.submit.qualifyForWaiver">Veuillez envisager d'être exempté des Frais de soumission d'article pour cet article</message>
 	<message key="author.submit.addReasonsForWaiver">Veuillez utiliser la boîte de commentaires ci-dessous pour expliquer pourquoi vous devriez être exempté des frais.</message>
-	<message key="author.submissions.uploadCopyeditedVersion">Télécharger le fichier révisé</message>
+	<message key="author.submissions.uploadCopyeditedVersion">Téléverser le fichier révisé</message>
 	<message key="author.submissions.proofreadingCorrections">Corrections d'épreuve</message>
 	<message key="author.submissions.confirmDelete">Êtes-vous certain de vouloir supprimer cette soumission incomplète?</message>
 	<message key="author.submissions.viewStatus">Voir le statut</message>
@@ -44,7 +43,7 @@
 	<message key="author.submit.howToSubmit"><![CDATA[Vous éprouvez des difficultés? Communiquez avec <a href="mailto:{$supportEmail}">{$supportName}</a> pour obtenir de l'aide ({$supportPhone}).]]></message>
 	<message key="author.submit.howToSubmitNoPhone"><![CDATA[Vous éprouvez des difficultés? Communiquez avec <a href="mailto:{$supportEmail}">{$supportName}</a> pour obtenir de l'aide.]]></message>
 	<message key="author.submit.journalSection">Rubrique de la revue</message>
-	<message key="author.submit.journalSectionDescription"><![CDATA[Sélectionner la rubrique de la revue la plus appropriée pour cette soumission (voir Rubriques et politiques dans <a href="{$aboutUrl}" target="_new">À propos</a>de la revue).]]></message>
+	<message key="author.submit.journalSectionDescription">Les articles doivent être soumis à l'une des rubriques de la revue.</message>
 	<message key="submission.submit.selectSection">Veuillez sélectionner une rubrique...</message>
 	<message key="author.submit.submissionChecklist">Liste de vérification de la soumission</message>
 	<message key="author.submit.verifyChecklist">Vous devez vous assurer que tous les éléments de la liste de vérification de la soumission sont satisfaits avant de continuer</message>
@@ -66,17 +65,17 @@
 	<message key="author.submit.form.titleRequired">Veuillez saisir le titre de votre article.</message>
 	<message key="author.submit.form.abstractRequired">Veuillez saisir le résumé de votre article.</message>
 	<message key="author.submit.submissionFile">Fichier de soumission</message>
-	<message key="author.submit.uploadSubmissionFile">Télécharger le fichier de soumission</message>
+	<message key="author.submit.uploadSubmissionFile">Téléverser le fichier de soumission</message>
 	<message key="author.submit.replaceSubmissionFile">Remplacer le fichier de soumission</message>
 	<message key="author.submit.noSubmissionFile">Aucun fichier de soumission téléchargé.</message>
 	<message key="author.submit.noSubmissionConfirm">Êtes-vous certain de vouloir continuer sans télécharger le fichier de soumission?</message>
 	<message key="author.submit.supplementaryFilesInstructions">Cette étape facultative permet l'ajout de fichiers supplémentaires à la soumission. Les fichiers, qui peuvent être de n'importe quel format, peuvent comprendre (a) des instruments de recherche, (b) des ensembles de données se conformant aux conditions de la révision déontologique de la recherche de l'étude, (c) des sources qui autrement ne seraient pas disponibles aux lecteurs, (d) des nombres et des tableaux qui ne peuvent être intégrés dans le texte en soi, ou autres documents qui ajoutent une contribution au travail.</message>
-	<message key="author.submit.supplementaryFiles.saveToUpload">Cliquer sur Enregistrer pour télécharger le fichier (après cela, des fichiers supplémentaires peuvent être téléchargés).</message>
+	<message key="author.submit.supplementaryFiles.saveToUpload">Cliquer sur Enregistrer pour téléverser le fichier (après cela, des fichiers supplémentaires peuvent être téléversés).</message>
 	<message key="author.submit.forgottenSubmitSuppFile">Êtes-vous certain de vouloir continuer sans télécharger le fichier supplémentaire que vous avez choisi?</message>
 	<message key="author.submit.noSupplementaryFiles">Aucun fichier supplémentaire n'a été ajouté à cette soumission.</message>
 	<message key="author.submit.backToSupplementaryFiles">Retour à Fichiers supplémentaires</message>
 	<message key="author.submit.confirmDeleteSuppFile">Êtes-vous certain de vouloir supprimer ce fichier supplémentaire?</message>
-	<message key="author.submit.uploadSuppFile">Télécharger le fichier supplémentaire</message>
+	<message key="author.submit.uploadSuppFile">Téléverser le fichier supplémentaire</message>
 	<message key="author.submit.addSupplementaryFile">Ajouter un fichier supplémentaire</message>
 	<message key="author.submit.editSupplementaryFile">Modifier un fichier supplémentaire</message>
 	<message key="author.submit.supplementaryFileData">Métadonnées du fichier supplémentaire</message>
@@ -118,7 +117,6 @@
 	<message key="author.submissions.queuedEditingProofread">En révision : Correction d'épreuves requise</message>
 	<message key="author.submit.reorder">Réordonner le nom de l'auteur</message>
 	<message key="author.submit.form.wordCountAlert">Vous avez dépassé la limite maximale de mots fixée pour les résumés, dans cette section de la rubrique</message>
-	<message key="author.submit.submissionLocale">Langue de la soumission</message>
-	<message key="author.submit.submissionLocaleDescription">La revue accepte les soumissions dans plusieurs langues. Choisir la langue principale de la soumission à partir de la liste déroulante ci-dessous.</message>
 	<message key="author.submit.form.localeRequired">Veuillez sélectionner une langue de soumission.</message>
+	<message key="author.submit.nextSteps">Étapes suivantes</message>
 </locale>

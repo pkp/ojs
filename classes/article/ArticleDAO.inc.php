@@ -3,8 +3,8 @@
 /**
  * @file classes/article/ArticleDAO.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ArticleDAO
@@ -21,8 +21,19 @@ class ArticleDAO extends SubmissionDAO {
 	/**
 	 * Constructor.
 	 */
-	function ArticleDAO() {
-		parent::SubmissionDAO();
+	function __construct() {
+		parent::__construct();
+	}
+
+	/**
+	 * Get a list of fields for which localized data is supported
+	 * @return array
+	 */
+	function getLocaleFieldNames() {
+		return array_merge(
+			parent::getLocaleFieldNames(), array(
+				'coverImageAltText', 'coverImage',
+		));
 	}
 
 	/**
@@ -76,7 +87,6 @@ class ArticleDAO extends SubmissionDAO {
 		$article->setSectionTitle($row['section_title']);
 		$article->setSectionAbbrev($row['section_abbrev']);
 		$article->setCitations($row['citations']);
-		$article->setCurrentRound($row['current_round']);
 		$article->setPages($row['pages']);
 		$article->setFastTracked($row['fast_tracked']);
 		$article->setHideAuthor($row['hide_author']);
@@ -101,9 +111,9 @@ class ArticleDAO extends SubmissionDAO {
 		$article->stampModified();
 		$this->update(
 			sprintf('INSERT INTO submissions
-				(locale, context_id, section_id, stage_id, language, comments_to_ed, citations, date_submitted, date_status_modified, last_modified, status, submission_progress, current_round, pages, fast_tracked, hide_author)
+				(locale, context_id, section_id, stage_id, language, citations, date_submitted, date_status_modified, last_modified, status, submission_progress, pages, fast_tracked, hide_author)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, %s, %s, %s, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, %s, %s, %s, ?, ?, ?, ?, ?)',
 				$this->datetimeToDB($article->getDateSubmitted()), $this->datetimeToDB($article->getDateStatusModified()), $this->datetimeToDB($article->getLastModified())),
 			array(
 				$article->getLocale(),
@@ -111,11 +121,9 @@ class ArticleDAO extends SubmissionDAO {
 				(int) $article->getSectionId(),
 				(int) $article->getStageId(),
 				$article->getLanguage(),
-				$article->getCommentsToEditor(),
 				$article->getCitations(),
 				$article->getStatus() === null ? STATUS_QUEUED : $article->getStatus(),
 				$article->getSubmissionProgress() === null ? 1 : $article->getSubmissionProgress(),
-				$article->getCurrentRound() === null ? 1 : $article->getCurrentRound(),
 				$article->getPages(),
 				(int) $article->getFastTracked(),
 				(int) $article->getHideAuthor(),
@@ -147,14 +155,12 @@ class ArticleDAO extends SubmissionDAO {
 					section_id = ?,
 					stage_id = ?,
 					language = ?,
-					comments_to_ed = ?,
 					citations = ?,
 					date_submitted = %s,
 					date_status_modified = %s,
 					last_modified = %s,
 					status = ?,
 					submission_progress = ?,
-					current_round = ?,
 					pages = ?,
 					fast_tracked = ?,
 					hide_author = ?
@@ -165,11 +171,9 @@ class ArticleDAO extends SubmissionDAO {
 				(int) $article->getSectionId(),
 				(int) $article->getStageId(),
 				$article->getLanguage(),
-				$article->getCommentsToEditor(),
 				$article->getCitations(),
 				(int) $article->getStatus(),
 				(int) $article->getSubmissionProgress(),
-				(int) $article->getCurrentRound(),
 				$article->getPages(),
 				(int) $article->getFastTracked(),
 				(int) $article->getHideAuthor(),

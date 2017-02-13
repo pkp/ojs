@@ -4,8 +4,8 @@
 <!--
   * locale/sr_SR/locale.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the sr_SR (Cрпски) locale.
@@ -211,14 +211,6 @@
 	 *
 	 --><!--  Reader article view  -->	<!--  Reader Comments  --><message key="comments.commentsOnArticle">Komentari na ovaj članak</message>
 	<message key="comments.authenticated"><![CDATA[od <a href="{$publicProfileUrl}" target="_parent">{$userName}</a>{$userName}]]></message>
-
-	<!--  Site Administration  -->	<message key="admin.settings.oaiRegistrationDescription"><![CDATA[Kako biste učinili sadržaj svih časopisa objavljenih u okviru ovog sajta indeksiranim unutar globalno distribuisanog sistema istraživačkih baza podataka, <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">registrujte</a> URL ove stranice na <a href="http://pkp.sfu.ca/harvester/" target="_blank">sakupljaču</a> metapodataka Public Knowledge Project-a. Ovaj alat sakuplja metapodatke iz svakog indeksiranog priloga svakog časopisa na ovom sajtu, omogućavajući precizno i kolektivno pretraživanje istraživačkih stranica koje sudeluju u <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Open Archives Initiative Protocol for Metadata Harvesting</a>.
-<br /><br />
-Za registraciju na PKP sakupljaču <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">kliknite ovde</a> i upišite: <span class="highlight">{$siteUrl}</span> unutar <b>Site URL</b>-a i <span class="highlight">{$oaiUrl}</span> unutar <b>Base URL for OAI Archive</b>.
-<br /><br />
-Aktivirani OAI protokol može biti isključen na nivou čitavog sajta promenom sistemske konfiguracije OJS-a. Buduće verzije OJS-a omogući će da se OAI sudelovanje u OAI protokolu može uključiti ili isključiti individualno za svaki časopis koji se nalazi na sajtu.]]></message>
-
-
 
 	<!--  Languages  -->	<message key="admin.auth.defaultSourceDescription"><![CDATA[<p>Određivanje primarnog izvora autentifikacije izvan OJS-a rezultuje sledećim:</p>
 <ul>

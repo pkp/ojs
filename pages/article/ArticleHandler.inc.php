@@ -3,8 +3,8 @@
 /**
  * @file pages/article/ArticleHandler.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ArticleHandler
@@ -33,8 +33,8 @@ class ArticleHandler extends Handler {
 	 * Constructor
 	 * @param $request Request
 	 */
-	function ArticleHandler() {
-		parent::Handler();
+	function __construct() {
+		parent::__construct();
 	}
 
 	/**
@@ -361,7 +361,6 @@ print_r($galleyFile);
 		$returnFormat = isset($args[2]) ? $args[2] : null;
 
 		$citationPlugins = PluginRegistry::loadCategory('citationFormats');
-		uasort($citationPlugins, create_function('$a, $b', 'return strcmp($a->getDisplayName(), $b->getDisplayName());'));
 
 		import('lib.pkp.classes.core.JSONMessage');
 

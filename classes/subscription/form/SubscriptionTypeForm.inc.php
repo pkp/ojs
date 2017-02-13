@@ -3,8 +3,8 @@
 /**
  * @file classes/subscription/form/SubscriptionTypeForm.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SubscriptionTypeForm
@@ -29,7 +29,7 @@ class SubscriptionTypeForm extends Form {
 	 * Constructor
 	 * @param typeId int leave as default for new subscription type
 	 */
-	function SubscriptionTypeForm($typeId = null) {
+	function __construct($typeId = null) {
 
 		$this->validFormats = array (
 			SUBSCRIPTION_TYPE_FORMAT_ONLINE => __('subscriptionTypes.format.online'),
@@ -46,7 +46,7 @@ class SubscriptionTypeForm extends Form {
 
 		$this->typeId = isset($typeId) ? (int) $typeId : null;
 
-		parent::Form('subscription/subscriptionTypeForm.tpl');
+		parent::__construct('subscription/subscriptionTypeForm.tpl');
 
 		// Type name is provided
 		$this->addCheck(new FormValidatorLocale($this, 'name', 'required', 'manager.subscriptionTypes.form.typeNameRequired'));

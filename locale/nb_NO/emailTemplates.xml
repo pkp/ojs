@@ -4,8 +4,8 @@
 <!--
   * locale/nb_NO/emailTemplates.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localized email templates XML file.
@@ -131,7 +131,7 @@ Ved den redaksjonelle gjennomgangen av ditt manuskript &quot;{$submissionTitle}&
 		<subject>Redaksjonelt oppdrag</subject>
 		<body><![CDATA[{$editorialContactName}:<br />
 <br />
-Som seksjonsredaktør i {$contextName} er du herved oppnevnt til å føre det innsendte manuskriptet &quot;{$submissionTitle}&quot; gjennom den redaksjonelle prosessen.<br />
+Som seksjonsredaktør i {$contextName} er du herved oppnevnt til å lede det innsendte manuskriptet &quot;{$submissionTitle}&quot; gjennom den redaksjonelle prosessen.<br />
 <br />
 Manuskript URL: {$submissionUrl}<br />
 Brukernavn: {$editorUsername}<br />
@@ -677,7 +677,7 @@ Ditt passord for å slå av e-postmeldinger er: {$password}<br />
 		<subject>Redaktørens beslutning</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Vi har tatt en beslutning med hensyn til ditt innsendte manus til {$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
+Vi har tatt en beslutning med hensyn til ditt innsendte manus til {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
 Vår beslutning er:<br />
 <br />
@@ -687,7 +687,7 @@ Vår beslutning er:<br />
 		<subject>Redaktørens beslutning</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Vi har tatt en beslutning med hensyn til ditt innsendte manus til {$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
+Vi har tatt en beslutning med hensyn til ditt innsendte manus til {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
 Vår beslutning er:<br />
 <br />
@@ -697,7 +697,7 @@ Vår beslutning er:<br />
 		<subject>Redaktørens beslutning</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Vi har tatt en beslutning vedrørende ditt insendte manuskript til {$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
+Vi har tatt en beslutning vedrørende ditt insendte manuskript til {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
 Vår beslutning er:<br />
 <br />
@@ -707,7 +707,7 @@ Vår beslutning er:<br />
 		<subject>Redaktørens beslutning</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Vi har tatt en beslutning vedrørende ditt insendte manuskript til {$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
+Vi har tatt en beslutning vedrørende ditt insendte manuskript til {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
 Vår beslutning er:<br />
 <br />

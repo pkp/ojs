@@ -4,37 +4,40 @@
 <!--
   * plugins/importexport/datacite/locale/ru_RU/locale.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Localization strings for the ru_RU (Русский) locale.
-  * With updates from Pavel Pisklakov (revising translation). 
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Russian_(ru_RU)
+  * Localization strings.
   -->
- 
-<locale name="ru_RU" full_name="Русский">
-	<message key="plugins.importexport.datacite.displayName">Плагин «Экспорт/регистрация DataCite»</message>
-	<message key="plugins.importexport.datacite.description">Этот плагин позволяет экспортировать или зарегистрировать метаданные выпуска, статьи, гранки и дополнительных файлов в формате DataCite.</message>
 
+<locale name="ru_RU" full_name="Русский">
+	<message key="plugins.importexport.datacite.displayName">Модуль «Экспорт/регистрация DataCite»</message>
+	<message key="plugins.importexport.datacite.description">Экспортирует или регистрирует метаданные выпуска, статьи, гранки и дополнительных файлов в формате DataCite.</message>
+
+	<message key="plugins.importexport.datacite.settings.description">Пожалуйста, настройте модуль экспорта DataCite перед его первым использованием.</message>
 	<message key="plugins.importexport.datacite.intro"><![CDATA[
 		Если вы хотите зарегистрировать DOI в DataCite, пожалуйста, свяжитесь с управляющим 
 		агентом через <a href="http://datacite.org/contact" target="_blank">главную страницу 
 		DataCite</a>, который перенаправит вас к вашему региональному члену DataCite. Как только вы
-		установите отношения с организацией-членом DataCite, вы должны будете получить 
+		установите отношения с организацией-членом DataCite, вы будете получить 
 		доступ к службе DataCite для выдачи постоянных идентификаторов (DOI)
 		и регистрации связанных с ними метаданных. Если у вас нет вашего собственного имени пользователя и
-		пароля, вы все равно сможете экспортировать в формат DataCite XML, но вы
-		не сможете зарегистрировать ваши DOI в DataCite из системы OJS.
-		Пожалуйста, обратие внимание, что пароль будет сохраняться как простой текст, то есть не будет шифроваться,
+		пароля, вы все равно сможете экспортировать в формат DataCite XML, но 
+		не сможете зарегистрировать ваши DOI в DataCite из OJS.
+		Пожалуйста, обратите внимание, что пароль будет сохраняться как простой текст, то есть не будет шифроваться,
 		это требования службы регистрации DataCite.
 	]]></message>
 
 	<message key="plugins.importexport.datacite.settings.form.username">Имя пользователя (символ)</message>
-	<message key="plugins.importexport.datacite.settings.form.usernameRequired">Пожалуйста, введите имя пользователя (символ), который вы получили от DataCite. Имя пользователя не может содержать двоеточие.</message>
+	<message key="plugins.importexport.datacite.settings.form.usernameRequired">Пожалуйста, введите имя пользователя (символ), который вы получили от DataCite. Имя пользователя не может содержать двоеточия.</message>
+	<message key="plugins.importexport.datacite.settings.form.automaticRegistration.description">OJS будет депонировать DOI автоматически в DataCite. Обратите внимание, что это может потребовать небольшого количества времени после публикации для обработки. Вы можете проверить все незарегистрированные DOI.</message>
+	<message key="plugins.importexport.datacite.settings.form.testMode.description">Использовать тестовый префикс DataCite для регистрации DOI. Пожалуйста, не забудьте убрать этот параметр этот параметр для реальной работы.</message>
+
+	<message key="plugins.importexport.datacite.senderTask.name">Задача автоматической регистрации DataCite</message>
 
 	<message key="plugins.importexport.datacite.cliUsage"><![CDATA[Вызов: 
-{$scriptName} {$pluginName} export [outputFileName] [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...
-{$scriptName} {$pluginName} register [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...
+{$scriptName} {$pluginName} export [ИмяФайлаВывода] [путь_журнала] {issues|articles|galleys} IdОбъекта1 [IdОбъекта2] ...
+{$scriptName} {$pluginName} register [путь_журнала] {issues|articles|galleys} IdОбъекта1 [IdОбъекта2] ...
 ]]></message>
-	<message key="plugins.importexport.datacite.senderTask.name">Задача автоматической регистрации DataCite</message>
 </locale>

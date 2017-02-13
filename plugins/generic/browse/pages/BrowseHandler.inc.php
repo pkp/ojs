@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/browse/pages/BrowseHandler.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class BrowseHandler
@@ -44,10 +44,12 @@ class BrowseHandler extends Handler {
 				$results = new VirtualArrayIterator($articleSearch->formatResults($publishedArticleIds), $totalResults, $rangeInfo->getPage(), $rangeInfo->getCount());
 
 				$templateMgr = TemplateManager::getManager($request);
-				$templateMgr->assign('results', $results);
-				$templateMgr->assign('title', $section->getLocalizedTitle());
-				$templateMgr->assign('sectionId', $sectionId);
-				$templateMgr->assign('enableBrowseBySections', $enableBrowseBySections);
+				$templateMgr->assign(array(
+					'results' => $results,
+					'title' => $section->getLocalizedTitle(),
+					'sectionId' => $sectionId,
+					'enableBrowseBySections' => $enableBrowseBySections,
+				));
 				$templateMgr->display($browsePlugin->getTemplatePath() . 'searchDetails.tpl');
 			} else {
 				$excludedSections = $browsePlugin->getSetting($journal->getId(), 'excludedSections');
@@ -109,12 +111,13 @@ class BrowseHandler extends Handler {
 				$totalResults = count($publishedArticleIds);
 				$publishedArticleIds = array_slice($publishedArticleIds, $rangeInfo->getCount() * ($rangeInfo->getPage()-1), $rangeInfo->getCount());
 				$articleSearch = new ArticleSearch();
-				$results = new VirtualArrayIterator($articleSearch->formatResults($publishedArticleIds), $totalResults, $rangeInfo->getPage(), $rangeInfo->getCount());
 
 				$templateMgr = TemplateManager::getManager($request);
-				$templateMgr->assign('results', $results);
-				$templateMgr->assign('title', $identifyType);
-				$templateMgr->assign('enableBrowseByIdentifyTypes', $enableBrowseByIdentifyTypes);
+				$templateMgr->assign(array(
+					'results' => new VirtualArrayIterator($articleSearch->formatResults($publishedArticleIds), $totalResults, $rangeInfo->getPage(), $rangeInfo->getCount()),
+					'title' => $identifyType,
+					'enableBrowseByIdentifyTypes' => $enableBrowseByIdentifyTypes,
+				));
 				$templateMgr->display($browsePlugin->getTemplatePath() . 'searchDetails.tpl');
 			} else {
 				$excludedIdentifyTypes = $browsePlugin->getSetting($journal->getId(), 'excludedIdentifyTypes');

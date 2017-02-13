@@ -4,16 +4,15 @@
 <!--
   * plugins/blocks/information/locale/ru_RU/locale.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Localization strings for the ru_RU (Русский) locale.
-  *
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Russian_(ru_RU)
+  * Localization strings.
   -->
  
 <locale name="ru_RU" full_name="Русский">
-	<message key="plugins.block.information.displayName">Информационный блок</message>
-	<message key="plugins.block.information.description">Добавляет к боковой панели ссылку на информацию.</message>
+	<message key="plugins.block.information.displayName">Блок «Информация»</message>
+	<message key="plugins.block.information.description">Добавляет ссылку на информацию на боковую панель.</message>
 	<message key="plugins.block.information.link">Информация</message>
 </locale>

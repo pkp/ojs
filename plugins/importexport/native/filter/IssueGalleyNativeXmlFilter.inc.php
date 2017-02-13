@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/native/filter/IssueGalleyNativeXmlFilter.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2000-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2000-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IssueGalleyNativeXmlFilter
@@ -20,9 +20,9 @@ class IssueGalleyNativeXmlFilter extends NativeExportFilter {
 	 * Constructor
 	 * @param $filterGroup FilterGroup
 	 */
-	function IssueGalleyNativeXmlFilter($filterGroup) {
+	function __construct($filterGroup) {
 		$this->setDisplayName('Native XML issue galley export');
-		parent::NativeExportFilter($filterGroup);
+		parent::__construct($filterGroup);
 	}
 
 
@@ -48,6 +48,8 @@ class IssueGalleyNativeXmlFilter extends NativeExportFilter {
 	function &process(&$issueGalleys) {
 		// Create the XML document
 		$doc = new DOMDocument('1.0');
+		$doc->preserveWhiteSpace = false;
+		$doc->formatOutput = true;
 		$deployment = $this->getDeployment();
 
 		$rootNode = $doc->createElementNS($deployment->getNamespace(), 'issue_galleys');
@@ -76,7 +78,7 @@ class IssueGalleyNativeXmlFilter extends NativeExportFilter {
 		$deployment = $this->getDeployment();
 		$issueGalleyNode = $doc->createElementNS($deployment->getNamespace(), 'issue_galley');
 		$issueGalleyNode->setAttribute('locale', $issueGalley->getLocale());
-		$issueGalleyNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'label', $issueGalley->getLabel()));
+		$issueGalleyNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'label', htmlspecialchars($issueGalley->getLabel(), ENT_COMPAT, 'UTF-8')));
 
 		$this->addFile($doc, $issueGalleyNode, $issueGalley);
 
@@ -96,13 +98,13 @@ class IssueGalleyNativeXmlFilter extends NativeExportFilter {
 		if ($issueFile) {
 			$deployment = $this->getDeployment();
 			$issueFileNode = $doc->createElementNS($deployment->getNamespace(), 'issue_file');
-			$issueFileNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'file_name', $issueFile->getServerFileName()));
-			$issueFileNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'file_type', $issueFile->getFileType()));
+			$issueFileNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'file_name', htmlspecialchars($issueFile->getServerFileName(), ENT_COMPAT, 'UTF-8')));
+			$issueFileNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'file_type', htmlspecialchars($issueFile->getFileType(), ENT_COMPAT, 'UTF-8')));
 			$issueFileNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'file_size', $issueFile->getFileSize()));
-			$issueFileNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'content_type', $issueFile->getContentType()));
-			$issueFileNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'original_file_name', $issueFile->getOriginalFileName()));
-			$issueFileNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'date_uploaded', strftime('%F', strtotime($issueFile->getDateUploaded()))));
-			$issueFileNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'date_modified', strftime('%F', strtotime($issueFile->getDateModified()))));
+			$issueFileNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'content_type', htmlspecialchars($issueFile->getContentType(), ENT_COMPAT, 'UTF-8')));
+			$issueFileNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'original_file_name', htmlspecialchars($issueFile->getOriginalFileName(), ENT_COMPAT, 'UTF-8')));
+			$issueFileNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'date_uploaded', strftime('%Y-%m-%d', strtotime($issueFile->getDateUploaded()))));
+			$issueFileNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'date_modified', strftime('%Y-%m-%d', strtotime($issueFile->getDateModified()))));
 
 			import('classes.file.IssueFileManager');
 			$issueFileManager = new IssueFileManager($issueGalley->getIssueId());

@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/medra/filter/IssueMedraXmlFilter.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2000-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2000-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IssueMedraXmlFilter
@@ -21,9 +21,9 @@ class IssueMedraXmlFilter extends O4DOIXmlFilter {
 	 * Constructor
 	 * @param $filterGroup FilterGroup
 	 */
-	function IssueMedraXmlFilter($filterGroup) {
+	function __construct($filterGroup) {
 		$this->setDisplayName('mEDRA XML issue export');
-		parent::O4DOIXmlFilter($filterGroup);
+		parent::__construct($filterGroup);
 	}
 
 	/**
@@ -98,9 +98,9 @@ class IssueMedraXmlFilter extends O4DOIXmlFilter {
 		$notificationType = (empty($registeredDoi) ? O4DOI_NOTIFICATION_TYPE_NEW : O4DOI_NOTIFICATION_TYPE_UPDATE);
 		$issueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'NotificationType', $notificationType));
 		// DOI (mandatory)
-		$issueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'DOI', $doi));
+		$issueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'DOI', htmlspecialchars($doi, ENT_COMPAT, 'UTF-8')));
 		// DOI URL (mandatory)
-		$url = $router->url($request, $context->getPath(), 'article', 'view', $pubObject->getBestIssueId());
+		$url = $router->url($request, $context->getPath(), 'article', 'view', $pubObject->getBestIssueId(), null, null, true);
 		if ($plugin->isTestMode($context)) {
 			// Change server domain for testing.
 			$url = PKPString::regexp_replace('#://[^\s]+/index.php#', '://example.com/index.php', $url);
@@ -110,7 +110,7 @@ class IssueMedraXmlFilter extends O4DOIXmlFilter {
 		$structuralType = $this->isWork($context, $plugin) ? 'Abstraction' : 'DigitalFixation';
 		$issueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'DOIStructuralType', $structuralType));
 		// Registrant (mandatory)
-		$issueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'RegistrantName', $plugin->getSetting($context->getId(), 'registrantName')));
+		$issueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'RegistrantName', htmlspecialchars($plugin->getSetting($context->getId(), 'registrantName'), ENT_COMPAT, 'UTF-8')));
 		// Registration authority (mandatory)
 		$issueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'RegistrationAuthority', 'mEDRA'));
 		// Work/ProductIdentifier - proprietary ID

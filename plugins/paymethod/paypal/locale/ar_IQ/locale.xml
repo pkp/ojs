@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/paymethod/paypal/locale/ar_IQ/locale.xml
+  *
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2006-2009 Gunther Eysenbach, Juan Pablo Alperin, MJ Suhonos
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings
+  -->
+ 
+<locale name="ar_IQ" full_name="العربية">
+	<message key="plugins.paymethod.paypal.displayName">دفع الرسوم عبر PayPal</message>
+
+	<!-- PayPal Settings Form -->
+	<message key="plugins.paymethod.paypal.settings.paypalenable">تمكين PayPal</message>
+	<message key="plugins.paymethod.paypal.settings.paypalurl">IPN URL</message>
+	<message key="plugins.paymethod.paypal.settings.paypalurl.description"><![CDATA[هذا هو رابط الإنترنت لخدمة إشعار الدفع الفوري الخاص بـ PayPal (IPN). لاختبارها، استعمل <code>https://www.sandbox.paypal.com/cgi-bin/webscr</code>؛ لأنظمة التشغيل الفعلي، استعمل <code>https://www.paypal.com/cgi-bin/webscr</code>.]]></message>
+	<message key="plugins.paymethod.paypal.settings.selleraccount">حساب البائع</message>
+	<message key="plugins.paymethod.paypal.settings.selleraccount.description">هذا هو اسم المستخدم لحساب البائع الذي يمكن استعماله، وهو عادة عنوان بريد الالكتروني. تأكد من تفعيل خدمة إشعار الدفع الفوري (IPN) في الملف الشخصي لحساب البائع.</message>
+	<message key="plugins.paymethod.paypal.settings.curlNotInstalled">تحذير: دعم CURL لـ PHP غير منصب حالياً. دعم عملية الدفع عبر PayPal يتطلب وجود مكتبة CURL ولن يكون متاحاً للعمل ما لم تتوفر هذه المكتبة في النظام.</message>
+	<message key="plugins.paymethod.paypal.settings">إعدادات PayPal</message>
+
+	<!-- PayPal -->
+	<message key="plugins.paymethod.paypal">دفع الرسوم عبر PayPal</message>
+	<message key="plugins.paymethod.paypal.description"><![CDATA[PayPal تمكن المستخدمين، سواءً كانوا أعضاءً في PayPal أو لا، من استعمال كل بطاقات الائتمان الرئيسية. سيكون على رئيس تحرير المجلة تهيئة <a href="http://www.paypal.com" target="_new">حساب تجاري لـ PayPal</a>.]]></message>
+	<message key="plugins.paymethod.paypal.تحذير">أنقر زر المتابعة أدناه للذهاب إلى موقع PayPal، حيث يمكن استعمال بطاقات الائتمان لدفع الرسوم (دون الحاجة إلى الانضمام إلى PayPal). استعمل زر "العودة إلى التاجر" بعد إجراء الدفع المالي للعودة إلى هذا الموقع.</message>
+	<message key="plugins.paymethod.paypal.purchase.title">العنوان</message>
+	<message key="plugins.paymethod.paypal.purchase.fee">الرسم</message>
+	<message key="plugins.paymethod.paypal.purchase.description">الوصف</message>
+	<message key="plugins.paymethod.paypal.purchase.cancelled">أُلغيت عملية الشراء.</message>
+	<message key="plugins.paymethod.paypal.purchase.cancelled.title">أُلغي الشراء</message>
+</locale>

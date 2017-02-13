@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/lucene/LuceneFacetsBlockPlugin.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class LuceneFacetsBlockPlugin
@@ -25,9 +25,9 @@ class LuceneFacetsBlockPlugin extends BlockPlugin {
 	 * Constructor
 	 * @param $parentPluginName string
 	 */
-	function LuceneFacetsBlockPlugin($parentPluginName) {
+	function __construct($parentPluginName) {
 		$this->_parentPluginName = $parentPluginName;
-		parent::BlockPlugin();
+		parent::__construct();
 	}
 
 
@@ -71,11 +71,11 @@ class LuceneFacetsBlockPlugin extends BlockPlugin {
 	}
 
 	/**
-	 * @see Plugin::getTemplatePath()
+	 * @copydoc PKPPlugin::getTemplatePath
 	 */
-	function getTemplatePath() {
-		$plugin =& $this->_getLucenePlugin();
-		return $plugin->getTemplatePath();
+	function getTemplatePath($inCore = false) {
+		$plugin = $this->_getLucenePlugin();
+		return $plugin->getTemplatePath($inCore);
 	}
 
 	/**
@@ -120,7 +120,7 @@ class LuceneFacetsBlockPlugin extends BlockPlugin {
 		// where navigation will usually be expected
 		// by the user.
 		if (!in_array($blockContext, $this->getSupportedContexts())) {
-			$blockContext = BLOCK_CONTEXT_LEFT_SIDEBAR;
+			$blockContext = BLOCK_CONTEXT_SIDEBAR;
 		}
 
 		return $blockContext;

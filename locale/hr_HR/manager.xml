@@ -4,8 +4,8 @@
 <!--
   * locale/hr_HR/manager.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the hr_HR (Hrvatski) locale.
@@ -83,7 +83,6 @@
 	<message key="manager.sections.form.mustAllowPermission">Molimo da odaberete barem jednu opciju uz svako zaduženje urednika rubrika.</message>
 	<message key="manager.sections.form.reviewFormId">Molimo odaberite valjani recenzijski obrazac.</message>
 	<message key="manager.sections.form.titleRequired">Naslov je obavezan za ovu rubriku.</message>
-	<message key="manager.sections.hideAbout">Izostavi ovu rubriku pod "O časopisu".</message>
 	<message key="manager.sections.hideTocAuthor">Za priloge u ovoj rubrici ne prikazuj imena autora u kazalu sadržaja.</message>
 	<message key="manager.sections.hideTocTitle">Izostavi naslov ove rubrike iz kazala sadržaja izdanih brojeva časopisa.</message>
 	<message key="manager.sections.identifyType">Pri kreiranju metapodataka, svi će članci u rubrici biti označeni kao:</message>
@@ -141,11 +140,7 @@
 	<message key="manager.setup.enableAnnouncements">Omogući glavnim urednicima da postavljaju obavijesti.</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">Prikaz</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">posljednje objavljene obavijesti na naslovnoj stranici časopisa.</message>
-	<message key="manager.setup.enablePageNumber">Brojevi stranica mogu se postaviti uz svaki pojedini prilog u izdanju. Brojevi stranica trebaju se ručno izračunati i unijeti u kazalo sadržaja (npr. str. 13-26).</message>
-	<message key="manager.setup.enablePublicArticleId">Časopis koristi posebne identifikatore za identifikaciju objavljenih priloga.</message>
-	<message key="manager.setup.enablePublicGalleyId">Časopis koristi posebne identifikatore za identifikaciju datoteka prijeloma (npr. HTML ili PDF) objavljenih priloga.</message>
 	<message key="manager.setup.enablePublicIssueId">Časopis koristi posebne identifikatore za identifikaciju brojeva časopisa.</message>
-	<message key="manager.setup.enablePublicSuppFileId">Časopis koristi posebne identifikatore za identifikaciju dopunskih datoteka priloženih uz članke.</message>
 	<message key="manager.setup.enableUserRegistration">Korisnici se mogu sami registrirati na stranicama časopisa u jednoj ili više od sljedećih uloga:</message>
 	<message key="manager.setup.focusAndScope">Fokus i područje primjene</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWork">Autorsko indeksiranje radova</message>
@@ -460,7 +455,7 @@
 	<message key="manager.subscriptionTypes.form.individual">Individualna (korisnici su potvrđeni prijavom u sustav)</message>
 	<message key="manager.subscriptionTypes.form.options">Mogućnosti</message>
 	<message key="manager.setup.categories">Kategorije</message>
-	<message key="manager.statistics.reports.today">Danas</message>
+
 	<message key="manager.statistics.statistics">Statistica časopisa</message>
 	<message key="manager.subscriptionPolicies.onlinePaymentNotifications">Obavijesti o internet plaćanjima</message>
 	<message key="manager.subscriptions.form.referenceNumber">Broj reference</message>

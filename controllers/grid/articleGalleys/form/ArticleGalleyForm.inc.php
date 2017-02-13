@@ -3,8 +3,8 @@
 /**
  * @file controllers/grid/articleGalleys/form/ArticleGalleyForm.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ArticleGalleyForm
@@ -28,8 +28,8 @@ class ArticleGalleyForm extends Form {
 	 * @param $submission Submission
 	 * @param $articleGalley ArticleGalley (optional)
 	 */
-	function ArticleGalleyForm($request, $submission, $articleGalley = null) {
-		parent::Form('controllers/grid/articleGalleys/form/articleGalleyForm.tpl');
+	function __construct($request, $submission, $articleGalley = null) {
+		parent::__construct('controllers/grid/articleGalleys/form/articleGalleyForm.tpl');
 		$this->_submission = $submission;
 		$this->_articleGalley = $articleGalley;
 

@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/announcementFeed/AnnouncementFeedGatewayPlugin.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class AnnouncementFeedGatewayPlugin
@@ -22,8 +22,9 @@ class AnnouncementFeedGatewayPlugin extends GatewayPlugin {
 	/**
 	 * Constructor
 	 */
-	function AnnouncementFeedGatewayPlugin($parentPluginName) {
+	function __construct($parentPluginName) {
 		$this->parentPluginName = $parentPluginName;
+		parent::__construct();
 	}
 
 	/**
@@ -66,11 +67,10 @@ class AnnouncementFeedGatewayPlugin extends GatewayPlugin {
 	}
 
 	/**
-	 * Override the builtin to get the correct template path.
-	 * @return string
+	 * @copydoc PKPPlugin::getTemplatePath
 	 */
-	function getTemplatePath() {
-		return $this->getAnnouncementFeedPlugin()->getTemplatePath() . 'templates/';
+	function getTemplatePath($inCore = false) {
+		return $this->getAnnouncementFeedPlugin()->getTemplatePath($inCore) . 'templates/';
 	}
 
 	/**
@@ -80,15 +80,6 @@ class AnnouncementFeedGatewayPlugin extends GatewayPlugin {
 	 */
 	function getEnabled() {
 		return $this->getAnnouncementFeedPlugin()->getEnabled();
-	}
-
-	/**
-	 * Get the management verbs for this plugin (override to none so that the parent
-	 * plugin can handle this)
-	 * @return array
-	 */
-	function getManagementVerbs() {
-		return array();
 	}
 
 	/**
@@ -154,11 +145,13 @@ class AnnouncementFeedGatewayPlugin extends GatewayPlugin {
 		$version = $versionDao->getCurrentVersion();
 
 		$templateMgr = TemplateManager::getManager($request);
-		$templateMgr->assign('ojsVersion', $version->getVersionString());
-		$templateMgr->assign('selfUrl', $request->getCompleteUrl());
-		$templateMgr->assign('dateUpdated', $dateUpdated);
-		$templateMgr->assign('announcements', $announcements->toArray());
-		$templateMgr->assign('journal', $journal);
+		$templateMgr->assign(array(
+			'ojsVersion' => $version->getVersionString(),
+			'selfUrl' => $request->getCompleteUrl(),
+			'dateUpdated' => $dateUpdated,
+			'announcements' => $announcements->toArray(),
+			'journal' => $journal,
+		));
 
 		$templateMgr->display($this->getTemplatePath() . $typeMap[$type], $mimeTypeMap[$type]);
 

@@ -3,8 +3,8 @@
 /**
  * @file controllers/grid/settings/sections/form/SectionForm.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SectionForm
@@ -22,8 +22,8 @@ class SectionForm extends PKPSectionForm {
 	 * @param $request Request
 	 * @param $sectionId int optional
 	 */
-	function SectionForm($request, $sectionId = null) {
-		parent::PKPSectionForm(
+	function __construct($request, $sectionId = null) {
+		parent::__construct(
 			$request,
 			'controllers/grid/settings/sections/form/sectionForm.tpl',
 			$sectionId
@@ -62,7 +62,6 @@ class SectionForm extends PKPSectionForm {
 				'editorRestriction' => $section->getEditorRestricted(),
 				'hideTitle' => $section->getHideTitle(),
 				'hideAuthor' => $section->getHideAuthor(),
-				'hideAbout' => $section->getHideAbout(),
 				'policy' => $section->getPolicy(null), // Localized
 				'wordCount' => $section->getAbstractWordCount()
 			);
@@ -99,7 +98,7 @@ class SectionForm extends PKPSectionForm {
 	 */
 	function readInputData() {
 		parent::readInputData();
-		$this->readUserVars(array('abbrev', 'policy', 'reviewFormId', 'identifyType', 'metaIndexed', 'metaReviewed', 'abstractsNotRequired', 'editorRestriction', 'hideTitle', 'hideAuthor', 'hideAbout', 'wordCount'));
+		$this->readUserVars(array('abbrev', 'policy', 'reviewFormId', 'identifyType', 'metaIndexed', 'metaReviewed', 'abstractsNotRequired', 'editorRestriction', 'hideTitle', 'hideAuthor', 'wordCount'));
 	}
 
 	/**
@@ -142,7 +141,6 @@ class SectionForm extends PKPSectionForm {
 		$section->setEditorRestricted($this->getData('editorRestriction') ? 1 : 0);
 		$section->setHideTitle($this->getData('hideTitle') ? 1 : 0);
 		$section->setHideAuthor($this->getData('hideAuthor') ? 1 : 0);
-		$section->setHideAbout($this->getData('hideAbout') ? 1 : 0);
 		$section->setPolicy($this->getData('policy'), null); // Localized
 		$section->setAbstractWordCount($this->getData('wordCount'));
 

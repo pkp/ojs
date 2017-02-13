@@ -4,8 +4,8 @@
 <!--
   * locale/it_IT/emailTemplates.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localized email templates XML file.
@@ -752,7 +752,7 @@ Se non vuoi ricevere email di notifica, vai alla pagina {$unsubscribeLink} per c
 		<subject>Decisione dell'editor</subject>
 		<body><![CDATA[&lt;![CDATA[{$authorName}:<br />
 <br />
-Abbiamo raggiunto una decisione riguardo alla Sua submission a {$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
+Abbiamo raggiunto una decisione riguardo alla Sua submission a {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
 La decisione &amp;#232;:<br />
 <br />
@@ -763,7 +763,7 @@ La decisione &amp;#232;:<br />
 		<subject>Decisione dell'editor</subject>
 		<body><![CDATA[&lt;![CDATA[{$authorName}:<br />
 <br />
-Abbiamo raggiunto una decisione sulla Sua submission a {$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
+Abbiamo raggiunto una decisione sulla Sua submission a {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
 La nostra decisione &amp;#232;:<br />
 <br />
@@ -859,7 +859,7 @@ Per vedere o modificare i dettagli dell'abbonamento, vai alla pagina: <a href="{
 		<subject>Decisione dell'editor</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Abbiamo raggiunto una decisione riguardo alla Sua submission a {$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
+Abbiamo raggiunto una decisione riguardo alla Sua submission a {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
 La decisione è:<br />
 <br />
@@ -870,7 +870,7 @@ La decisione è:<br />
 		<subject>Decisione dell'editor</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Abbiamo raggiunto una decisione riguardo alla Sua submission a {$journalTitle}, &quot;{$submissionTitle}&quot;.<br />
+Abbiamo raggiunto una decisione riguardo alla Sua submission a {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description></description>

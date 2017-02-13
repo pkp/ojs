@@ -4,8 +4,8 @@
 <!--
   * locale/de_DE/author.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_German_(de_DE)
   * Localization strings.
@@ -30,7 +30,7 @@
 	<message key="author.submit.metadata">Metadaten eingeben</message>
 	<message key="author.submit.supplementaryFiles">Zusatzdateien hochladen</message>
 	<message key="author.submit.confirmation">Bestätigung</message>
-	<message key="author.submit.cancelSubmission">Sie können die Einreichung auch später fertigstellen, indem Sie "Aktuelle Beiträge" auf der Autor/innenstartseite auswählen.</message>
+	<message key="submission.submit.cancelSubmission">Sie können die Einreichung auch später fertigstellen, indem Sie "Aktuelle Beiträge" auf der Autor/innenstartseite auswählen.</message>
 	<message key="author.submit.notAccepting">Die Zeitschrift nimmt zur Zeit keine Beiträge an.</message>
 	<message key="author.submit.requestWaiver">Gebührenverzicht beantragen</message>
 	<message key="author.submit.qualifyForWaiver">Bitte ziehen Sie einen Verzicht auf die Einreichungsgebühr für diesen Artikel in Erwägung.</message>
@@ -50,8 +50,6 @@
 	<message key="author.submit.journalSection">Zeitschriftenrubrik</message>
 	<message key="author.submit.journalSectionDescription"><![CDATA[Wählen Sie die passende Rubrik für diesen Beitrag aus (Siehe Rubriken und Richtlinien in <a href="{$aboutUrl}" target="_new">Über uns</a>).]]></message>
 	<message key="submission.submit.selectSection">Wählen Sie eine Rubrik aus...</message>
-	<message key="author.submit.submissionLocale">Beitragssprache</message>
-	<message key="author.submit.submissionLocaleDescription">Diese Zeitschrift nimmt Beiträge in verschiedenen Sprachen entgegen. Wählen Sie die primäre Sprache des Beitrags aus dem Auswahlmenü unten.</message>
 	<message key="author.submit.verifyChecklist">Stellen Sie sicher, dass alle Punkte der Checkliste erfüllt sind, bevor Sie fortfahren.</message>
 	<message key="author.submit.copyrightNoticeAgree">Die Autor/innen stimmen den Bestimmungen dieser Copyright-Regelungen zu, die für diesen Beitrag im Falle einer Veröffentlichung Anwendung finden. (Kommentare für die Redaktion können weiter unten angefügt werden.)</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">Sie müssen den Copyright-Regelungen zustimmen, bevor Sie fortfahren.</message>

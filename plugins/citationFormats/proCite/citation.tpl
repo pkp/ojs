@@ -1,17 +1,17 @@
 {**
  * plugins/citationFormats/proCite/citation.tpl
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * ProCite citation format generator
  *
  *}
-{if $galleyId}
-	{url|assign:"articleUrl" page="article" op="view" path=$articleId|to_array:$galleyId}
+{if $galley}
+	{url|assign:"articleUrl" page="article" op="view" path=$article->getBestArticleId()|to_array:$galley->getBestGalleyId()}
 {else}
-	{url|assign:"articleUrl" page="article" op="view" path=$articleId}
+	{url|assign:"articleUrl" page="article" op="view" path=$article->getBestArticleId()}
 {/if}
 TY  - JOUR
 {foreach from=$article->getAuthors() item=author}

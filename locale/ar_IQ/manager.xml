@@ -4,8 +4,8 @@
 <!--
   * locale/ar_IQ/manager.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings.
@@ -97,7 +97,6 @@
 	<message key="manager.sections.form.mustAllowPermission">لطفاً، تأكد من أن واحداً من خانات الاختيار على الأقل مؤشر لأيٍّ من مهام محرر القسم.</message>
 	<message key="manager.sections.form.reviewFormId">لطفاً، تأكد من كونك قد اخترت نموذج تحكيم صحيح.</message>
 	<message key="manager.sections.form.titleRequired">لا بد من منح القسم عنواناً.</message>
-	<message key="manager.sections.hideAbout">أسقط هذا القسم من (عن المجلة).</message>
 	<message key="manager.sections.hideTocAuthor">أسقط أسماء المؤلفين من جدول محتويات العدد التابع لفقرات القسم.</message>
 	<message key="manager.sections.hideTocTitle">أسقط عنوان هذا القسم من جدول محتويات الأعداد الصادرة من المجلة.</message>
 	<message key="manager.sections.identifyType">عرِّف الفقرات المنشورة ضمن هذا القسم على أنها</message>

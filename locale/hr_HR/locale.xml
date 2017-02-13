@@ -4,8 +4,8 @@
 <!--
   * locale/hr_HR/locale.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the hr_HR (Hrvatski) locale.
@@ -235,15 +235,6 @@
 	<!-- Reader Comments -->
 	<message key="comments.commentsOnArticle">Komentari na ovaj članak</message>
 	<message key="comments.authenticated">{$userName}</message>
-
-	<!-- Site Administration -->
-	<message key="admin.settings.oaiRegistrationDescription"><![CDATA[Kako biste učinili sadržaj svih časopisa izdanih u okviru ovih stranica indeksiranim unutar globalno distribuiranog sustava istraživačkih baza podataka, <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">registrirajte</a> URL ove stranice pri <a href="http://pkp.sfu.ca/harvester/" target="_blank">sakupljaču</a> metapodataka Public Knowledge Project-a. Ovaj alat sakuplja metapodatke iz svakog indeksiranog priloga svakog časopisa na ovim stranicama, omogućujući precizno i kolektivno pretraživanje istraživačkih stranica koje sudjeluju u <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Open Archives Initiative Protocol for Metadata Harvesting</a>.
-<br /><br />
-Za registraciju pri PKP sakupljaču <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">kliknite ovdje</a> i upišite: <span class="highlight">{$siteUrl}</span> unutar <b>Site URL</b>-a i <span class="highlight">{$oaiUrl}</span> unutar <b>Base URL for OAI Archive</b>.
-<br /><br />
-Aktivirani OAI protokol može biti isključen na razini čitave stranice promjenom sistemske konfiguracije OJS-a. Buduće verzije OJS-a omogućit će da se OAI sudjelovanje u OAI protokolu može uključiti ili isključiti individualno za svaki časopis koji se nalazi na stranici.]]></message>
-
-
 
 	<!-- Languages -->
 	<message key="admin.auth.defaultSourceDescription"><![CDATA[<p>Određivanje primarnog izvora autentifikacije izvan OJS-a rezultira sljedećim:</p>

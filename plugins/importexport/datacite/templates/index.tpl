@@ -1,8 +1,8 @@
 {**
  * @file plugins/importexport/datacite/templates/index.tpl
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * List of operations this plugin can perform
@@ -44,7 +44,7 @@
 				{foreach from=$configurationErrors item=configurationError}
 					{if $configurationError == $smarty.const.DOI_EXPORT_CONFIG_ERROR_DOIPREFIX}
 						{include file="controllers/notification/inPlaceNotificationContent.tpl" notificationId=dataciteConfigurationErrors notificationStyleClass="notifyWarning" notificationTitle="plugins.importexport.common.missingRequirements"|translate notificationContents="plugins.importexport.common.error.DOIsNotAvailable"|translate}
-					{elseif $configurationError == $smarty.const.DOI_EXPORT_CONFIG_ERROR_SETTINGS}
+					{elseif $configurationError == $smarty.const.EXPORT_CONFIG_ERROR_SETTINGS}
 						{include file="controllers/notification/inPlaceNotificationContent.tpl" notificationId=dataciteConfigurationErrors notificationStyleClass="notifyWarning" notificationTitle="plugins.importexport.common.missingRequirements"|translate notificationContents="plugins.importexport.common.error.pluginNotConfigured"|translate}
 					{/if}
 				{/foreach}
@@ -73,9 +73,9 @@
 						{url|assign:submissionsListGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.pubIds.PubIdExportSubmissionsListGridHandler" op="fetchGrid" plugin="datacite" category="importexport" escape=false}
 						{load_url_in_div id="submissionsListGridContainer" url=$submissionsListGridUrl}
 						{if !empty($actionNames)}
-							<ul class="pubids_export_actions">
+							<ul class="export_actions">
 								{foreach from=$actionNames key=action item=actionName}
-									<li class="pubids_export_action">
+									<li class="export_action">
 										{fbvElement type="submit" label="$actionName" id="$action" name="$action" value="1" class="$action" translate=false inline=true}
 									</li>
 								{/foreach}
@@ -99,9 +99,9 @@
 						{url|assign:issuesListGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.pubIds.PubIdExportIssuesListGridHandler" op="fetchGrid" plugin="datacite" category="importexport" escape=false}
 						{load_url_in_div id="issuesListGridContainer" url=$issuesListGridUrl}
 						{if !empty($actionNames)}
-							<ul class="pubids_export_actions">
+							<ul class="export_actions">
 								{foreach from=$actionNames key=action item=actionName}
-									<li class="pubids_export_action">
+									<li class="export_action">
 										{fbvElement type="submit" label="$actionName" id="$action" name="$action" value="1" class="$action" translate=false inline=true}
 									</li>
 								{/foreach}
@@ -125,9 +125,9 @@
 						{url|assign:representationsListGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.pubIds.PubIdExportRepresentationsListGridHandler" op="fetchGrid" plugin="datacite" category="importexport" escape=false}
 						{load_url_in_div id="representationsListGridContainer" url=$representationsListGridUrl}
 						{if !empty($actionNames)}
-							<ul class="pubids_export_actions">
+							<ul class="export_actions">
 								{foreach from=$actionNames key=action item=actionName}
-									<li class="pubids_export_action">
+									<li class="export_action">
 										{fbvElement type="submit" label="$actionName" id="$action" name="$action" value="1" class="$action" translate=false inline=true}
 									</li>
 								{/foreach}

@@ -4,8 +4,8 @@
 <!--
   * locale/uk_UA/locale.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the uk_UA (Українська) locale.
@@ -310,14 +310,6 @@
        <!-- Reader Comments -->
        <message key="comments.commentsOnArticle">Коментарі цієї статті</message>
        <message key="comments.authenticated"><![CDATA[як <a href="{$publicProfileUrl}" target="_parent">{$userName}</a>]]></message>
-
-       <!-- Site Administration -->
-
-       <message key="admin.settings.oaiRegistrationDescription"><![CDATA[Для того, щоб зміст всіх розміщених на цьому сайті журналів індексувався в глобальній розподіленій системі баз даних наукової інформації, <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">зареєструйте</a> URL цього сайту з Public Knowledge Project metadata <a href="http://pkp.sfu.ca/harvester/" target="_blank">harvester</a>. Даний інструмент збирає метадані кожної проіндексованої одиниці у цьому журналі, дозволяючи точний та ефективний наскрізний пошук по наукових сайтах за <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">протоколом для отримання метаданих Ініціативи відкритих архівів (OAI-PMH)</a>.
-<br /><br />
-<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Натисніть сюди</a> та введіть <span class="highlight">{$siteUrl}</span> як <strong>Site URL</strong> та <span class="highlight">{$oaiUrl}</span> як <strong>Base URL for OAI Archive</strong>.
-<br /><br />
-Зауважте, що інтерфейс OAI може бути відключений для цього сайта шляхом зміни налаштувань системи OJS. Майбутні версії OJS будуть дозволяти включення або відключення інтерфейсу OAI для окремих журналів на сайті.]]></message>
 
        <!-- Languages -->
        <message key="admin.languages.downloadUnavailable"><![CDATA[<p>Завантаження мовних пакетів з веб-серверу Public Knowledge Project зараз недоступне оскільки:</p>

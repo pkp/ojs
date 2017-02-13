@@ -4,8 +4,8 @@
 <!--
   * locale/hr_HR/author.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the hr_HR (Hrvatski) locale.
@@ -30,7 +30,7 @@
 	<message key="author.submit.metadata">Metapodaci</message>
 	<message key="author.submit.supplementaryFiles">Dopunske datoteke</message>
 	<message key="author.submit.confirmation">Potvrda</message>
-	<message key="author.submit.cancelSubmission">Ovu prijavu možete dovršiti nekom drugom prilikom ukoliko odaberete Aktivne prijave s autorove naslovne stranice.</message>
+	<message key="submission.submit.cancelSubmission">Ovu prijavu možete dovršiti nekom drugom prilikom ukoliko odaberete Aktivne prijave s autorove naslovne stranice.</message>
 	<message key="author.submit.notAccepting">Ovaj časopis ne prihvaća prijave u ovom trenutku.</message>
 	<message key="author.submit.requestWaiver">Zatražite izuzeće</message>
 	<message key="author.submit.qualifyForWaiver">Molim vas da razmotrite izuzeće mojeg priloga od naknade za prijavu članka.</message>
@@ -108,8 +108,6 @@
 	<message key="author.article.authorRevisedFile">Datoteka autora</message>
 	<message key="author.submit.authorSubmitLoginMessage">Za prijavu priloga u časopis potreban vam je korisnički račun. To omogućuje našim urednicima da prate vašu prijavu, kontaktiraju vas sa ishodima recenzijskog i uređivačkog postupka.</message>
 	<message key="author.submit">Novo podnošenje članka</message>
-	<message key="author.submit.submissionLocale">Jezik podnošenja članka</message>
-	<message key="author.submit.submissionLocaleDescription">Ovaj časopis prihvaća podnošenje članaka na nekoliko jezika. ODaberite prvi jezik podnošenja članka sa padajućeg izbora dole.</message>
 	<message key="author.submit.form.localeRequired">ODaberite jezik podnošenja članka.</message>
 	<message key="author.submit.reorder">Promijeni redoslijed autorovog imena</message>
 	<message key="author.submit.howToSubmit"><![CDATA[Imate poteškoće? Kontaktirajte <a href="mailto:{$supportEmail}">{$supportName}</a> za asistenciju. ({$supportPhone}).]]></message>

@@ -3,8 +3,8 @@
 /**
  * @file controllers/grid/articleGalleys/ArticleGalleyGridRow.inc.php
  *
- * Copyright (c) 2016 Simon Fraser University Library
- * Copyright (c) 2000-2016 John Willinsky
+ * Copyright (c) 2016-2017 Simon Fraser University Library
+ * Copyright (c) 2000-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ArticleGalleyGridRow
@@ -23,10 +23,10 @@ class ArticleGalleyGridRow extends GridRow {
 	 * Constructor
 	 * @param $submission Submission
 	 */
-	function ArticleGalleyGridRow($submission) {
+	function __construct($submission) {
 		$this->_submission = $submission;
 
-		parent::GridRow();
+		parent::__construct();
 	}
 
 	//

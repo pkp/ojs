@@ -1,8 +1,8 @@
 {**
  * controllers/modals/submissionMetadata/form/issueEntrySubmissionReviewForm.tpl
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Display a submission's issue entry form.
@@ -17,6 +17,7 @@
 		$('#{$submissionMetadataViewFormId}').pkpHandler(
 			'$.pkp.controllers.form.FileUploadFormHandler',
 			{ldelim}
+				readOnly: {$formParams.readOnly|json_encode},
 				$uploader: $('#coverImageUploader'),
 				$preview: $('#coverImagePreview'),
 				uploaderOptions: {ldelim}
@@ -49,6 +50,8 @@
 
 	{include file="submission/form/section.tpl" readOnly=$formParams.readOnly}
 
+	{include file="core:submission/submissionLocale.tpl" readOnly=$formParams.readOnly}
+
 	{include file="core:submission/submissionMetadataFormTitleFields.tpl" readOnly=$formParams.readOnly}
 
 	{* Contributors *}
@@ -79,12 +82,14 @@
 							{translate key="common.altText"}
 						</span>
 						<span class="value">
-							{fbvElement type="text" id="coverImageAltText" label="common.altTextInstructions" value=$coverImageAltText}
+							{fbvElement type="text" id="coverImageAltText" label="common.altTextInstructions" value=$coverImageAltText readOnly=$formParams.readOnly}
 						</span>
 
-						<div id="{$deleteCoverImageLinkAction->getId()}" class="actions">
-							{include file="linkAction/linkAction.tpl" action=$deleteCoverImageLinkAction contextId="issueForm"}
-						</div>
+						{if !$formParams.readOnly}
+							<div id="{$deleteCoverImageLinkAction->getId()}" class="actions">
+								{include file="linkAction/linkAction.tpl" action=$deleteCoverImageLinkAction contextId="issueForm"}
+							</div>
+						{/if}
 					</div>
 				</div>
 			{/if}

@@ -3,8 +3,8 @@
 /**
  * @file classes/subscription/form/SubscriptionPolicyForm.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SubscriptionPolicyForm
@@ -46,7 +46,7 @@ class SubscriptionPolicyForm extends Form {
 	/**
 	 * Constructor
 	 */
-	function SubscriptionPolicyForm() {
+	function __construct() {
 
 		for ($i=SUBSCRIPTION_OPEN_ACCESS_DELAY_MIN; $i<=SUBSCRIPTION_OPEN_ACCESS_DELAY_MAX; $i++) {
 			$this->validDuration[$i] = $i;
@@ -68,7 +68,7 @@ class SubscriptionPolicyForm extends Form {
 			$this->validNumWeeksAfterExpiry[$i] = $i;
 		}
 
-		parent::Form('subscription/subscriptionPolicyForm.tpl');
+		parent::__construct('subscription/subscriptionPolicyForm.tpl');
 
 		// If provided, subscription contact email is valid
 		$this->addCheck(new FormValidatorEmail($this, 'subscriptionEmail', 'optional', 'manager.subscriptionPolicies.subscriptionContactEmailValid'));

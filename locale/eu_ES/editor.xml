@@ -4,8 +4,8 @@
 <!--
   * locale/eu_ES/editor.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the eu_ES (Euskara) locale.
@@ -146,10 +146,6 @@
 	<message key="editor.article.assignEditor">Gehitu Editorea</message>
 	<message key="editor.article.selectEditor">Hautatu {$roleName}</message>
 	<message key="editor.article.selectDecision">Hautatu erabakia</message>
-	<message key="editor.article.decision.accept">Onartu bidalketa</message>
-	<message key="editor.article.decision.pendingRevisions">Berrikusi egin behar da</message>
-	<message key="editor.article.decision.resubmit">Birbidali ebaluatzeko</message>
-	<message key="editor.article.decision.decline">Ez onartu bidalketa</message>
 	<message key="editor.article.selectLayoutEditor">Hautatu Maketatzailea</message>
 	<message key="editor.article.replaceLayoutEditor">Ordeztu Maketatzailea</message>
 	<message key="editor.article.reviewSubmission">Ebaluatu bidalketa</message>

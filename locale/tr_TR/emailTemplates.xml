@@ -4,8 +4,8 @@
 <!--
   * locale/tr_TR/emailTemplates.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localized email templates XML file.
@@ -782,7 +782,7 @@ Review Guidelines<br />
 		<subject>Editör Kararı</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-{$journalTitle} adlı dergiye yayımlanması için değerlendirilmek üzere gönderdiğiniz &quot;{$submissionTitle}&quot; başlıklı çalışmanız için bir karara varılmıştır.<br />
+{$contextName} adlı dergiye yayımlanması için değerlendirilmek üzere gönderdiğiniz &quot;{$submissionTitle}&quot; başlıklı çalışmanız için bir karara varılmıştır.<br />
 <br />
 Kararımız:<br />
 <br />
@@ -793,7 +793,7 @@ Kararımız:<br />
 		<subject>Editör Kararı</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-{$journalTitle} adlı dergiye yayımlanması için değerlendirilmek üzere gönderdiğiniz &quot;{$submissionTitle}&quot; başlıklı çalışmanız için bir karara varılmıştır.<br />
+{$contextName} adlı dergiye yayımlanması için değerlendirilmek üzere gönderdiğiniz &quot;{$submissionTitle}&quot; başlıklı çalışmanız için bir karara varılmıştır.<br />
 <br />
 Kararımız:<br />
 <br />
@@ -804,7 +804,7 @@ Kararımız:<br />
 		<subject>Editör Kararı</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-{$journalTitle} adlı dergiye yayımlanması için değerlendirilmek üzere gönderdiğiniz &quot;{$submissionTitle}&quot; başlıklı çalışmanız için bir karara varılmıştır.<br />
+{$contextName} adlı dergiye yayımlanması için değerlendirilmek üzere gönderdiğiniz &quot;{$submissionTitle}&quot; başlıklı çalışmanız için bir karara varılmıştır.<br />
 <br />
 Kararımız:<br />
 <br />
@@ -815,7 +815,7 @@ Kararımız:<br />
 		<subject>Editör Kararı</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-{$journalTitle} adlı dergiye yayımlanması için değerlendirilmek üzere gönderdiğiniz &quot;{$submissionTitle}&quot; başlıklı çalışmanız için bir karara varılmıştır.<br />
+{$contextName} adlı dergiye yayımlanması için değerlendirilmek üzere gönderdiğiniz &quot;{$submissionTitle}&quot; başlıklı çalışmanız için bir karara varılmıştır.<br />
 <br />
 Kararımız:<br />
 <br />

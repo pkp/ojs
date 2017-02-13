@@ -4,8 +4,8 @@
 <!--
   * locale/en_US/editor.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
   * Localization strings.
@@ -31,7 +31,7 @@
 	<message key="editor.submissionReview.cannotSendToCopyediting">Before sending a submission to Copyediting, use Notify Author link to inform author of decision and select the version to be sent.</message>
 	<message key="editor.submissionReview.sendToCopyediting">Send to Copyediting</message>
 	<message key="editor.notifyUsers">Notify Users</message>
-	<message key="editor.notifyUsers.allUsers">All users associated with this conference ({$count} users)</message>
+	<message key="editor.notifyUsers.allUsers">All users associated with this journal ({$count} users)</message>
 	<message key="editor.notifyUsers.allReaders">All readers ({$count} users)</message>
 	<message key="editor.notifyUsers.allAuthors">All published authors ({$count} users)</message>
 	<message key="editor.notifyUsers.allIndividualSubscribers">All individual subscribers ({$count} users)</message>
@@ -63,7 +63,7 @@
 	<message key="editor.issues.accessDate">Open access date</message>
 	<message key="editor.issues.enableOpenAccessDate">Enable delayed open access</message>
 	<message key="editor.issues.coverPage">Cover image</message>
-	<message key="editor.issues.coverPageInstructions">(Allowed formats: .gif, .jpg, or .png )</message>
+	<message key="editor.issues.coverPageInstructions">(Allowed formats: .gif, .jpg, or .png)</message>
 	<message key="editor.issues.uploaded">Uploaded</message>
 	<message key="editor.issues.remove">Remove</message>
 	<message key="editor.issues.proofed">Proofed</message>
@@ -175,10 +175,6 @@
 	<message key="editor.article.assignEditor">Add Editor</message>
 	<message key="editor.article.selectEditor">Select {$roleName}</message>
 	<message key="editor.article.selectDecision">Select decision</message>
-	<message key="editor.article.decision.accept">Accept Submission</message>
-	<message key="editor.article.decision.pendingRevisions">Revisions Required</message>
-	<message key="editor.article.decision.resubmit">Resubmit for Review</message>
-	<message key="editor.article.decision.decline">Decline Submission</message>
 	<message key="editor.article.selectLayoutEditor">Select Layout Editor</message>
 	<message key="editor.article.replaceLayoutEditor">Replace Layout Editor</message>
 	<message key="editor.article.reviewSubmission">Review Submission</message>

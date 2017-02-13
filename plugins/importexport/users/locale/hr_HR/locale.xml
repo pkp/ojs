@@ -3,8 +3,8 @@
 <!--
   * locale.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the hr_HR (Hrvatski) locale.
@@ -15,26 +15,12 @@
 	<message key="plugins.importexport.users.displayName">Dodatak za XML korisnika</message>
 	<message key="plugins.importexport.users.description">Unošenje i iznošenje korisnika.</message>
 
-	<message key="plugins.importexport.users.cliUsage">Primjena: {$scriptName} {$pluginName} [naredba] ...
+	<message key="plugins.importexport.users.cliUsage"><![CDATA[Primjena: {$scriptName} {$pluginName} [naredba] ...
 Naredba:
-	import [xmlNazivDatoteke] [putanja_časopisa] [opcionalne oznake]
-	export [xmlNazivDatoteke] [putanja_časopisa]
-	export [xmlNazivDatoteke] [putanja_časopisa] [putanja_uloge1] [putanja_uloge2] ...
-
-Opcionalne oznake:
-	continue_on_error: Ako je zadano, u slučaju pojavljivanja pogreške ne staje s unošenjem korisnika
-
-	send_notify: Ako je zadano, šalje e-pošte obavijesti unesenim korisnicima koji sadrže korisnička imena i lozinke
-
-Primjeri:
-	Unosi korisnike u mojCasopis iz mojaDatotekaUnosenja.xml, nastavljajući u slučaju pogreške:
-	{$scriptName} {$pluginName} import mojaDatotekaUnosenja.xml mojCasopis continue_on_error
-
-	Iznosi sve korisnike iz časpoisa mojCasopis:
-	{$scriptName} {$pluginName} export mojaDatotekaIznosa.xml mojCasopis
-
-	Iznosi sve korisnike registrirane kao recenzente, zajedno s njihovim recenzentskim ulogama:
-	{$scriptName} {$pluginName} export mojaDatotekaIznosa.xml mojCasopis reviewer</message>
+	import [xmlFileName] [journal_path]
+	export [xmlFileName] [journal_path]
+	export [xmlFileName] [journal_path] [userId1] [userId2] ...
+]]></message>
 	<message key="plugins.importexport.users.import.importUsers">Unesi korisnike</message>
 	<message key="plugins.importexport.users.import.instructions"><![CDATA[Molim odaberite XML datoteku koja sadrži informacije o korisnicima koje želite unijeti u ovaj časopis. Konzultirajte pomoć časopisa za detalje o formatu ove datoteke.<br /><br />Ukoliko unesena datoteka sadrži bilo koja korisnička imena ili adrese e-pošte koje već postoje u sustavu, ti korisnici neće biti uneseni, već će njihove uloge biti dodijeljene onima postojećih korisnika.]]></message>
 	<message key="plugins.importexport.users.import.failedToImportUser">Neuspjelo unošenje korisnika</message>

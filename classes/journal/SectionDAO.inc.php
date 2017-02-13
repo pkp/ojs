@@ -3,8 +3,8 @@
 /**
  * @file classes/journal/SectionDAO.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SectionDAO
@@ -20,8 +20,8 @@ import ('lib.pkp.classes.context.PKPSectionDAO');
 class SectionDAO extends PKPSectionDAO {
 	var $cache;
 
-	function SectionDAO() {
-		parent::PKPSectionDAO();
+	function __construct() {
+		parent::__construct();
 	}
 
 	function _cacheMiss($cache, $id) {
@@ -155,7 +155,6 @@ class SectionDAO extends PKPSectionDAO {
 		$section->setAbstractsNotRequired($row['abstracts_not_required']);
 		$section->setHideTitle($row['hide_title']);
 		$section->setHideAuthor($row['hide_author']);
-		$section->setHideAbout($row['hide_about']);
 		$section->setAbstractWordCount($row['abstract_word_count']);
 
 		$this->getDataObjectSettings('section_settings', 'section_id', $row['section_id'], $section);
@@ -193,9 +192,9 @@ class SectionDAO extends PKPSectionDAO {
 	function insertObject($section) {
 		$this->update(
 			'INSERT INTO sections
-				(journal_id, review_form_id, seq, meta_indexed, meta_reviewed, abstracts_not_required, editor_restricted, hide_title, hide_author, hide_about, abstract_word_count)
+				(journal_id, review_form_id, seq, meta_indexed, meta_reviewed, abstracts_not_required, editor_restricted, hide_title, hide_author, abstract_word_count)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
 				(int)$section->getJournalId(),
 				(int)$section->getReviewFormId(),
@@ -206,7 +205,6 @@ class SectionDAO extends PKPSectionDAO {
 				$section->getEditorRestricted() ? 1 : 0,
 				$section->getHideTitle() ? 1 : 0,
 				$section->getHideAuthor() ? 1 : 0,
-				$section->getHideAbout() ? 1 : 0,
 				(int) $section->getAbstractWordCount()
 			)
 		);
@@ -232,7 +230,6 @@ class SectionDAO extends PKPSectionDAO {
 					editor_restricted = ?,
 					hide_title = ?,
 					hide_author = ?,
-					hide_about = ?,
 					abstract_word_count = ?
 				WHERE section_id = ?',
 			array(
@@ -244,7 +241,6 @@ class SectionDAO extends PKPSectionDAO {
 				(int)$section->getEditorRestricted(),
 				(int)$section->getHideTitle(),
 				(int)$section->getHideAuthor(),
-				(int)$section->getHideAbout(),
 				$this->nullOrInt($section->getAbstractWordCount()),
 				(int)$section->getId()
 			)
@@ -394,20 +390,13 @@ class SectionDAO extends PKPSectionDAO {
 	 * Retrieve the IDs and titles of the sections for a journal in an associative array.
 	 * @return array
 	 */
-	function &getSectionTitles($journalId, $submittableOnly = false) {
+	function getTitles($journalId, $submittableOnly = false) {
 		$sections = array();
-
 		$sectionsIterator = $this->getByJournalId($journalId);
 		while ($section = $sectionsIterator->next()) {
-			if ($submittableOnly) {
-				if (!$section->getEditorRestricted()) {
-					$sections[$section->getId()] = $section->getLocalizedTitle();
-				}
-			} else {
-				$sections[$section->getId()] = $section->getLocalizedTitle();
-			}
+			if ($submittableOnly && $section->getEditorRestricted()) continue;
+			$sections[$section->getId()] = $section->getLocalizedTitle();
 		}
-
 		return $sections;
 	}
 
@@ -554,18 +543,12 @@ class SectionDAO extends PKPSectionDAO {
 	 * @param $issueId int
 	 */
 	function setDefaultCustomSectionOrders($issueId) {
-		$result = $this->retrieve(
-			'SELECT s.section_id FROM sections s, issues i WHERE i.journal_id = s.journal_id AND i.issue_id = ? ORDER BY seq',
-			(int) $issueId
-		);
-
-		for ($i=1; !$result->EOF; $i++) {
-			list($sectionId) = $result->fields;
-			$this->insertCustomSectionOrder($issueId, $sectionId, $i);
-			$result->MoveNext();
+		$issueSections = $this->getByIssueId($issueId);
+		$i = 1;
+		foreach ($issueSections as $section) {
+			$this->insertCustomSectionOrder($issueId, $section->getId(), $i);
+			$i++;
 		}
-
-		$result->Close();
 	}
 
 	/**
@@ -582,19 +565,18 @@ class SectionDAO extends PKPSectionDAO {
 	}
 
 	/**
-	 * Move a custom issue ordering up or down, resequencing as necessary.
+	 * Update a custom section ordering
 	 * @param $issueId int
 	 * @param $sectionId int
-	 * @param $newPos int The new position (0-based) of this section
-	 * @param $up boolean Whether we're moving the section up or down
+	 * @param $seq int
 	 */
-	function moveCustomSectionOrder($issueId, $sectionId, $newPos, $up) {
+	function updateCustomSectionOrder($issueId, $sectionId, $seq) {
 		$this->update(
-			'UPDATE custom_section_orders SET seq = ? ' . ($up?'-':'+') . ' 0.5 WHERE issue_id = ? AND section_id = ?',
-			array((float) $newPos, (int) $issueId, (int) $sectionId)
+			'UPDATE custom_section_orders SET seq = ? WHERE issue_id = ? AND section_id = ?',
+			array((float) $seq, (int) $issueId, (int) $sectionId)
 		);
-		$this->resequenceCustomSectionOrders($issueId);
 	}
+
 }
 
 ?>

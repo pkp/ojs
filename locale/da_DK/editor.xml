@@ -4,8 +4,8 @@
 <!--
   * locale/da_DK/editor.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the da_DK (Dansk) locale.
@@ -146,10 +146,6 @@
 	<message key="editor.article.assignEditor">Tilføj redaktør</message>
 	<message key="editor.article.selectEditor">Vælg {$roleName}</message>
 	<message key="editor.article.selectDecision">Vælg beslutning</message>
-	<message key="editor.article.decision.accept">Accepter manuskript</message>
-	<message key="editor.article.decision.pendingRevisions">Rettelser er påkrævet</message>
-	<message key="editor.article.decision.resubmit">Fremsend igen til bedømmelse</message>
-	<message key="editor.article.decision.decline">Afvis manuskript</message>
 	<message key="editor.article.selectLayoutEditor">Vælg layoutredaktør</message>
 	<message key="editor.article.replaceLayoutEditor">Erstat layoutredaktør</message>
 	<message key="editor.article.reviewSubmission">Bedøm manuskript</message>
@@ -213,4 +209,25 @@
 	<message key="editor.issues.confirmDeleteGalley">Er du sikker på, at du vil slette dette nummer?</message>
 	<message key="editor.reassign">Overfør</message>
 	<message key="editor.publicIdentificationExists">Filnavnet '{$publicIdentifier}' eksisterer allerede i forbindelse med andet materiale (nummer, artikel, publiceringsversion eller supplerende filer). Vælg et unikt filnavn inden for dit tidsskrift.</message>
+	<message key="grid.action.addIssue">Opret nummer</message>
+	<message key="editor.article.schedulePublication">Planlæg publicering</message>
+	<message key="grid.action.addGalley">Tilføj publiceringsversion</message>
+	<message key="grid.action.viewIssue">Vis</message>
+	<message key="grid.action.previewIssue">Vis</message>
+	<message key="editor.issues.editIssue">Nummerforvaltning: {$issueIdentification}</message>
+	<message key="editor.issues.datePublished">Publiceringsdato</message>
+	<message key="editor.issues.removeCoverImageFileNameMismatch">Forsidebilledet, som du ønskede af slette, svarede ikke til dette nummers forsidebillede. Genindlæs siden og prøv igen.</message>
+	<message key="editor.article.removeCoverImageFileNotFound">Forsidebilledet, som du ønskede at slette, kunne ikke findes. Det er måske allerede slettet. Prøv og genindlæs siden.</message>
+	<message key="grid.action.addIssueGalley">Opret hele numre</message>
+	<message key="grid.action.removeArticle">Fjern artikel fra nummer</message>
+	<message key="editor.article.remove.confirm">Er du sikker på, at du vil fjerne denne artikel fra dette nummer? Artiklen vil være klar til at blive indsat i et andet nummer.</message>
+	<message key="editor.issues.editIssueGalley">Redigér hele nummeret</message>
+	<message key="editor.submission.production.productionReadyFilesDescription"><![CDATA[Layoutredaktøren klargører disse filer, så de kan lægges under hver sit 'Publiceringsformat' og uploader derefter til passende <span class="pkp_help_title">Korrekturer</span> til korrekturlæsning.]]></message>
+	<message key="editor.issues.removeCoverImageFileNotFound">Forsidebilledet som du ønskede at slette kunne ikke fremfindes. Det er måske allerede slettet. Prøv og genindlæs siden.</message>
+	<message key="editor.issues.invalidCoverImageFormat">Ugyldigt format til forsidebillede. De godkendte formater er  .gif, .jpg, or .png.</message>
+	<message key="editor.issues.identifiers">Identifikationer</message>
+	<message key="grid.action.publish">Publicér nummer</message>
+	<message key="editor.submission.selectGalleyFiles">Vælg publi´ceringsklare filer</message>
+	<message key="editor.submission.editorial.finalDraftDescription"><![CDATA[Det sidste udkast på denne liste tilrettes af en manuskriptredaktør til den manuskriptredigerede version uploadet nedenfor under <span class="pkp_help_title">Manuskriptredigering</span>.]]></message>
+	<message key="editor.submission.proof.manageProofFilesDescription">Enhver fil, der allerede er blevet uploadet til et af indsendelsestrinnene kan tilføjes korrekturlæsningslisten ved nedenfor at markere afkrydsningsfeltet ud for 'Inkludér' og klikke 'Søg': Alle tilgængelige filer vil stå opført og kan tilvælges.</message>
 </locale>

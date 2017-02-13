@@ -4,8 +4,8 @@
 <!--
   * locale/ar_IQ/locale.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings.
@@ -218,8 +218,6 @@
 	<message key="user.role.subscriptionManagers">مدراء الاشتراكات</message>
 	<message key="user.role.journalAssistant">مساعد المجلة</message>
 	<message key="user.role.journalAssistants">مساعدو المجلة</message>
-	<message key="user.role.guestEditor">محرر مستضاف</message>
-	<message key="user.role.guestEditors">محررون مستضافون</message>
 	
 	<!-- Common Issue Terms -->
 	<message key="issue.issue">إصدار</message>
@@ -337,13 +335,6 @@
 	<message key="search.results.orderDir.asc">تصاعدياً</message>
 	<message key="search.results.orderDir.desc">تنازلياً</message>
 	<message key="search.results.similarDocuments">ملفات مشابهة</message>
-	
-	<!-- Site Administration -->
-	<message key="admin.settings.oaiRegistrationDescription"><![CDATA[لتحصل على فهرسة لمحتويات جميع المجلات المستضافة في هذا الموقع ضمن نظام موزع عالمياً من أنظمة المعلومات، <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">سجل</a> رابط موقعك في: البيانات الوصفية لمشروع المعرفة العامة <a href="http://pkp.sfu.ca/harvester/" target="_blank">الحاصود</a>. هذه الأداة تجمع البيانات الوصفية من كل فقرة مفهرسة في تلك المجلات، لتمكين عمليات البحث الدقيقة والمتكاملة بين المواقع البحثية التي تلتزم <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">بروتوكول مبادرة المحفوظات المفتوحة لحصد البيانات الوصفية</a>.
-		<br /><br />
-			<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">أنقر هنا</a> وأدخل <span class="highlight">{$siteUrl}</span> ضمن <strong>رابط الموقع</strong>، و<span class="highlight">{$oaiUrl}</span> ضمن <strong>الرابط الأساسي لمحفوظات البروتوكول أعلاه</strong>.
-		<br /><br />
-	لاحظ أن واجهة OAI لهذا الموقع يمكن تعطيلها عبر تعديل إعدادات نظام المجلات المفتوحة. النسخ القادمة (بإذن الله) من هذا النظام ستسمح بتمكين أو تعطيل تلك الواجهة على مستوى أحد المجلات المستضافة في الموقع وليس للموقع بأكمله.]]></message>
 	
 	<message key="admin.auth.defaultSourceDescription"><![CDATA[<p>تحديد مصدر مصادقة إفتراضي مغاير لنظام المجلات المفتوحة له التبعات الآتية:</p>
 	<ul>

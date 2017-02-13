@@ -4,8 +4,8 @@
 <!--
   * locale/it_IT/editor.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2000-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the it_IT (Italiano) locale.
@@ -37,8 +37,6 @@
 	<message key="editor.editorAdministration">Amministrazione</message>
 	<message key="editor.issues.createIssue">Crea un fascicolo</message>
 	<message key="editor.issues.published">Data di pubblicazione</message>
-	<message key="editor.issues.backIssues">Fascicoli pubblicati</message>
-	<message key="editor.issues.futureIssues">Fascicoli futuri</message>
 	<message key="editor.issues.currentIssue">Fascicolo corrente</message>
 	<message key="editor.issues.numArticles">N° articoli</message>
 	<message key="editor.issues.noArticles">Nessun articolo è attualmente programmato per questo fascicolo.</message>
@@ -62,15 +60,12 @@
 	<message key="editor.issues.remove">Elimina</message>
 	<message key="editor.issues.proofed">Controllato</message>
 	<message key="editor.issues.removeCoverPage">Eliminare l'immagine della copertina?</message>
-	<message key="editor.issues.invalidCoverPageFormat">Formato dell'immagine di copertina non valido. I formati validi sono .gif, .jpg, o .png.</message>
 	<message key="editor.issues.styleFile">Foglio di stile</message>
 	<message key="editor.issues.invalidStyleFormat">Formato non valido per il foglio di stile. Assicurarsi che il file caricato sia un CSS valido. (da notare che i fogli di stile con commenti all'inizio potrebbero essere respinti.)</message>
 	<message key="editor.issues.removeStyleFile">Eliminare il foglio di stile?</message>
 	<message key="editor.issues.coverPageCaption">Didascalia della copertina</message>
 	<message key="editor.issues.showCoverPage">Crea una copertina per il fascicolo con i seguenti elementi</message>
 	<message key="editor.issues.coverPageDisplay">Visualizzazione</message>
-	<message key="editor.issues.hideCoverPageArchives">Non mostrare l'immagine della copertina nell'archivio dei fascicoli.</message>
-	<message key="editor.issues.hideCoverPageCover">Non mostrare l'immagine della copertina prima del sommario.</message>
 	<message key="editor.issues.openAccess">Accesso aperto</message>
 	<message key="editor.issues.subscription">Abbonamento</message>
 	<message key="editor.issues.identification">Numerazione</message>
@@ -149,10 +144,6 @@
 	<message key="editor.article.assignEditor">Assegna a un editor</message>
 	<message key="editor.article.selectEditor">Aggiungi il {$roleName}</message>
 	<message key="editor.article.selectDecision">Seleziona la decisione</message>
-	<message key="editor.article.decision.accept">Accettare la proposta</message>
-	<message key="editor.article.decision.pendingRevisions">Richiedere correzioni</message>
-	<message key="editor.article.decision.resubmit">Inviare nuovamente in revisione</message>
-	<message key="editor.article.decision.decline">Rifiutare la proposta</message>
 	<message key="editor.article.selectLayoutEditor">Seleziona l'editor del layout</message>
 	<message key="editor.article.replaceLayoutEditor">Sostituisci l'editor del layout</message>
 	<message key="editor.article.reviewSubmission">Revisione della proposta</message>
@@ -185,12 +176,7 @@
 	<message key="editor.article.hideTocAuthorHide">Ometti</message>
 	<message key="editor.article.hideTocAuthorShow">Mostra</message>
 	<message key="editor.article.cover">Copertina</message>
-	<message key="editor.article.showCoverPage">Crea  una copertina per questo articolo con i seguenti elementi.</message>
-	<message key="editor.article.coverImageDisplay">Visualizza</message>
-	<message key="editor.article.hideCoverPageToc">Non visualizzare l'immagine della copertina nell'indice.</message>
-	<message key="editor.article.hideCoverPageAbstract">Non visualizzare l'immagine della copertina nella vista dell'abstract dell'articolo.</message>
 	<message key="editor.article.coverImage">Immagine di copertina</message>
-	<message key="editor.article.coverImageInstructions">(Formati ammessi: .gif, .jpg o .png)</message>
 	<message key="editor.article.uploaded">Caricato</message>
 	<message key="editor.article.removeCoverPage">Rimuovi l'immagine di copertina?</message>
 	<message key="editor.article.remove">Rimuovi</message>

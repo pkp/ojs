@@ -4,8 +4,8 @@
 <!--
   * locale/de_DE/manager.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_German_(de_DE)
   * Localization strings.
@@ -97,7 +97,6 @@
 	<message key="manager.sections.form.mustAllowPermission">Bitte stellen Sie sicher, dass mindestens ein Kontrollkästchen für jede Zuteilung einer Rubrikredakteurin/eines Rubrikredakteurs angekreuzt ist.</message>
 	<message key="manager.sections.form.reviewFormId">Bitte stellen Sie sicher, dass Sie ein gültiges Begutachtungsformular gewählt haben.</message>
 	<message key="manager.sections.form.titleRequired">Ein Rubriktitel ist erforderlich.</message>
-	<message key="manager.sections.hideAbout">Diese Rubrik nicht im "Über uns" aufführen.</message>
 	<message key="manager.sections.hideTocAuthor">Autor/innennamen zu Beiträgen in dieser Rubrik nicht im Inhaltsverzeichnis aufführen.</message>
 	<message key="manager.sections.hideTocTitle">Diese Rubrik nicht im Inhaltsverzeichnis der Ausgabe aufführen.</message>
 	<message key="manager.sections.identifyType">Beiträge in dieser Rubrik kennzeichnen als</message>

@@ -1,8 +1,8 @@
 {**
  * controllers/tab/settings/siteSetup/form/siteSetupForm.tpl
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Site settings form.
@@ -42,6 +42,10 @@
 			{fbvElement type="textarea" multilingual=true id="about" value=$about}
 		{/fbvFormSection}
 	{/fbvFormArea}
+
+	{* Footer *}
+	{include file="core:controllers/tab/settings/appearance/form/footer.tpl"}
+
 	{fbvFormArea id="siteRedirection"}
 		{fbvFormSection title="admin.settings.journalRedirect"}
 			{fbvElement type="select" id="redirect" from=$redirectOptions selected=$redirect translate=false defaultValue="" label="admin.settings.journalRedirectInstructions" size=$fbvStyles.size.MEDIUM}
@@ -71,33 +75,29 @@
 			</div>
 		{/fbvFormSection}
 		{include file="controllers/tab/settings/appearance/form/theme.tpl"}
+		{include file="controllers/tab/settings/appearance/form/sidebar.tpl" isSiteSidebar=true}
 	{/fbvFormArea}
-	{fbvFormArea id="oai"}
-		{fbvFormSection title="admin.settings.oaiRegistration"}
-			{url|assign:"oaiUrl" router=$smarty.const.ROUTE_PAGE page="oai"}
-			{url|assign:"siteUrl" router=$smarty.const.ROUTE_PAGE page="index"}
-			<p>{translate key="admin.settings.oaiRegistrationDescription" siteUrl=$siteUrl oaiUrl=$oaiUrl}</p>
-			{if count($availableMetricTypes) > 1}
-				<br />
-				<div id="defaultMetricSelection">
-					<h4>{translate key="defaultMetric.title"}</h4>
-					<p>{translate key="admin.settings.defaultMetricDescription"}</p>
-					<table class="data" width="100%">
-						<tr valign="top">
-							<td width="20%" class="label">{fieldLabel name="defaultMetricType" key="defaultMetric.availableMetrics"}</td>
-							<td colspan="2" width="80%" class="value">
-								<select name="defaultMetricType" class="selectMenu" id="defaultMetricType">
-									{foreach from=$availableMetricTypes key=metricType item=displayName}
-										<option value="{$metricType|escape}"{if $metricType == $defaultMetricType} selected="selected"{/if}>{$displayName|escape}</option>
-									{/foreach}
-								</select>
-							</td>
-						</tr>
-					</table>
-				</div>
-			{/if}
-		{/fbvFormSection}
-	{/fbvFormArea}
+
+	{if count($availableMetricTypes) > 1}
+		{fbvFormArea id="defaultMetricSelection"}
+			{fbvFormSection title="defaultMetric.title"}
+				<p>{translate key="admin.settings.defaultMetricDescription"}</p>
+				<table class="data" width="100%">
+					<tr valign="top">
+						<td width="20%" class="label">{fieldLabel name="defaultMetricType" key="defaultMetric.availableMetrics"}</td>
+						<td colspan="2" width="80%" class="value">
+							<select name="defaultMetricType" class="selectMenu" id="defaultMetricType">
+								{foreach from=$availableMetricTypes key=metricType item=displayName}
+									<option value="{$metricType|escape}"{if $metricType == $defaultMetricType} selected="selected"{/if}>{$displayName|escape}</option>
+								{/foreach}
+							</select>
+						</td>
+					</tr>
+				</table>
+			</div>
+			{/fbvFormSection}
+		{/fbvFormArea}
+	{/if}
 
 	<p><span class="formRequired">{translate key="common.requiredField"}</span></p>
 	{fbvFormButtons id="siteSetupFormSubmit" submitText="common.save" hideCancel=true}

@@ -4,8 +4,8 @@
 <!--
   * locale/pt_PT/manager.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the pt_PT (Português (Portugal)) locale.
@@ -86,7 +86,6 @@
 	<message key="manager.sections.form.mustAllowPermission">Verifique que pelo menos uma opção está marcada para cada tarefa de Editor de Secção</message>
 	<message key="manager.sections.form.reviewFormId">É necessário escolher um formulário de revisão válido</message>
 	<message key="manager.sections.form.titleRequired">Título obrigatório para a secção.</message>
-	<message key="manager.sections.hideAbout">Omitir esta secção em Sobre a Revista.</message>
 	<message key="manager.sections.hideTocAuthor">Omitir nomes dos autores dos itens publicados nesta secção no sumário da edição.</message>
 	<message key="manager.sections.hideTocTitle">Omitir o título desta secção no sumário da edição.</message>
 	<message key="manager.sections.identifyType">Como metadado do artigo, identificar itens nesta secção como</message>
@@ -146,11 +145,7 @@
 	<message key="manager.setup.enableAnnouncements">Activar notícias a Editores-Gestores.</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">Exibir</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">das notícias mais recentes na página inicial da revista.</message>
-	<message key="manager.setup.enablePageNumber">A numeração de páginas para cada item publicado pode ser incluída manualmente no Sumário da revista(Ex.: p. 13-26).</message>
-	<message key="manager.setup.enablePublicArticleId">Identificadores Personalizados serão utilizados para identificar itens publicados.</message>
-	<message key="manager.setup.enablePublicGalleyId">Identificadores personalizados serão utilizados para identificar composições finais (ex.: documentos HTML ou PDF) de itens publicados.</message>
 	<message key="manager.setup.enablePublicIssueId">Identificadores Personalizados serão utilizados para identificar as edições.</message>
-	<message key="manager.setup.enablePublicSuppFileId">Identificadores personalizados serão utilizados para identificar documentos suplementares da submissão.</message>
 	<message key="manager.setup.enableUserRegistration">Utilizadores podem se registar numa revista, assumindo um ou mais papéis, listados a seguir:</message>
 	<message key="manager.setup.focusAndScope">Âmbito</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWork">Indexação da submissão</message>
@@ -503,7 +498,7 @@
 	<message key="manager.statistics.reports.defaultReport.articleAbstract">Visualizações da página do resumo do artigo</message>
 	<message key="manager.statistics.reports.defaultReport.articleAbstractAndDownloads">Resumo do artigo e downloads</message>
 	<message key="manager.statistics.reports.defaultReport.journalIndexPageViews">Visualizações da página principal da revista</message>
-	<message key="manager.statistics.reports.today">Hoje</message>
+
 	<message key="manager.statistics.reports.filters.byContext.description">Restringir resultados por contexto (número e/ou artigo)</message>
 	<message key="manager.statistics.reports.filters.byObject.description">Restringir resultados por tipo de objecto (revista, número, artigo, pdf galles, outros galleys) e /ou por um mais IDs de objectos.</message>
 	<message key="manager.setup.categories">Categorias</message>

@@ -1,0 +1,218 @@
+/**
+ * @file plugins/themes/default/rtl.less
+ *
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @brief Stylesheet for flipping content to RTL (e.g. for Arabic, Persian and Hebrew)
+ *
+ */
+
+body[dir="rtl"] {
+	direction: rtl;
+	unicode-bidi: embed;
+
+	// Layout
+	@media(min-width: @screen-tablet) {
+
+		.pkp_structure_main {
+
+			&:before {
+				left: auto;
+				right: 0;
+			}
+
+			&:after {
+				left: auto;
+				right: @screen-tablet-container;
+			}
+		}
+	}
+
+	@media(min-width: @screen-desktop) {
+
+		.pkp_structure_main {
+			float: right;
+
+			&:after {
+				left: auto;
+				right: @screen-desktop-container - @sidebar-width;
+			}
+		}
+
+		.pkp_structure_sidebar {
+			float: left;
+		}
+	}
+
+	@media(min-width: @screen-lg-desktop) {
+
+		.pkp_structure_main {
+
+			&:after {
+				left: auto;
+				right: @screen-lg-desktop-container - @sidebar-width;
+			}
+		}
+	}
+
+	// Header
+	@media(min-width: @screen-desktop) {
+
+		.pkp_site_name {
+			text-align: right;
+		}
+	}
+
+	.pkp_navigation_primary {
+
+		ul {
+			left: auto;
+			right: -9999px;
+			text-align: right;
+		}
+
+		[aria-expanded="true"] > ul {
+			right: 0;
+			left: auto;
+		}
+	}
+
+	.pkp_navigation_user {
+		text-align: left;
+
+		li {
+			text-align: right;
+		}
+
+		ul {
+			left: auto;
+			right: -9999px;
+		}
+
+		[aria-expanded="true"] > ul {
+			right: auto;
+			left: 0;
+		}
+	}
+
+	.pkp_head_wrapper .pkp_search {
+		right: auto;
+		left: 0;
+		text-align: left;
+
+		&.is_open {
+
+			.search_prompt {
+				border-left: none;
+				border-right: @bg-border;
+			}
+
+			input[type="text"] {
+				padding-right: 0.5em;
+				padding-left: 180px;
+			}
+		}
+	}
+
+	// Utils
+	.pkp_screen_reader,
+	.cmp_skip_to_content a,
+	.pkp_page_index .journals h2,
+	.pkp_page_index .cmp_announcements h2,
+	.page_register .context_optin .roles legend {
+		left: auto;
+		right: -2000px;
+
+		&:focus {
+			right: 50%;
+		}
+	}
+
+	// Announcement summary
+	.obj_announcement_summary {
+
+		.date:before {
+			margin-right: 0;
+			margin-left: 0.5em;
+		}
+	}
+
+	// Issue table of contents
+	.obj_issue_toc {
+
+		.galleys_links li {
+			margin-right: inherit;
+			margin-left: 1em;
+		}
+
+		@media(min-width: @screen-tablet) {
+
+			.galleys h2,
+			.section h2 {
+				left: auto;
+				right: @triple / 2;
+			}
+
+			.cover {
+				float: right;
+				margin-right: inherit;
+				margin-left: @double;
+			}
+		}
+
+		@media(min-width: @screen-desktop) {
+
+			.cover {
+				margin-right: inherit;
+				margin-left: @triple;
+			}
+		}
+	}
+
+	// Issue summary
+	.obj_issue_summary {
+
+		@media(min-width: @screen-tablet) {
+
+			.cover {
+				float: right;
+				margin-right: inherit;
+				margin-left: @double;
+			}
+		}
+	}
+
+	// Article summary
+	.obj_article_summary {
+
+		@media(min-width: @screen-tablet) {
+			padding-right: 0;
+			padding-left: 5em;
+		}
+	}
+
+	@media(min-width: @screen-tablet) {
+
+		.galleys h2,
+		.section h2 {
+			left: auto;
+			right: @triple / 2;
+		}
+
+		.cover {
+			float: right;
+			margin-right: inherit;
+			margin-left: @double;
+		}
+	}
+
+	@media(min-width: @screen-desktop) {
+
+		.cover {
+			margin-right: inherit;
+			margin-left: @triple;
+		}
+	}
+}

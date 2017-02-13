@@ -4,15 +4,15 @@
 <!--
   * locale/nb_NO/manager.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the nb_NO (Norsk bokmål) locale.
   *
   -->
 
-<locale name="nb_NO" full_name = "Norwegian">
+<locale name="nb_NO" full_name="Norsk bokmål">
 	<message key="manager.emails.confirmResetAll">Er du sikker på at du vil tilbakestille alle e-postmaler i dette tidsskriftet? Du vil miste alle tilpasninger du har gjort.</message>
 	<message key="manager.files.note">NB: Filutforskeren er en avansert funksjon som gir mulighet til å manipulere filene og mappene til tidsskriftet direkte.</message>
 	<message key="manager.groups">Redaksjon</message>
@@ -487,7 +487,6 @@
 	<message key="manager.sections.abstractsNotRequired">Ikke krev sammendrag</message>
 	<message key="manager.sections.form.mustAllowPermission">Vennligst kontrollér at minst én avkrysningsboks er krysset av for hvert oppdrag en seksjonsredaktør er oppnevnt til.</message>
 	<message key="manager.sections.form.reviewFormId">Vennligst kontrollér at du har valgt et gyldig vurderingsskjema.</message>
-	<message key="manager.sections.hideAbout">Utelat denne seksjonen fra 'Om' tidsskriftet.</message>
 	<message key="manager.sections.hideTocAuthor">Utelat forfatternavn for seksjonselementer fra utgavens innholdsoversikt.</message>
 	<message key="manager.setup.addReviewerDatabaseLink">Legg til en ny databaselenke</message>
 	<message key="manager.setup.competingInterests">Erklæring om interessekonflikter</message>
@@ -614,4 +613,91 @@
 	<message key="manager.sections.alertDelete">Før du kan slette denne seksjonen, må du flytte artiklene som er publisert i den over i andre seksjoner.</message>
 	<message key="manager.plugins.settings">Innstillinger</message>
 	<message key="manager.payment.options.purchaseIssueFee">Kjøp nummer</message>
+	<message key="manager.website.archiving">Arkivering</message>
+	<message key="manager.language.submissions">Manuskript</message>
+	<message key="manager.payment.giftFees">Avgift på gaveabonnement</message>
+	<message key="manager.payment.giftFeesDescription">En lenke til gaveabonnement vil vises på Abonnementsiden under Om tidsskriftet og som del av abonnementsidespalten.</message>
+	<message key="manager.payment.options.acceptGiftSubscriptionPayments">Dette vil slå på betalingsverktøy for gaveabonnement, som tillater lesere å kjøpe gaveabonnement for andre lesere.</message>
+	<message key="manager.section.noSectionEditors"><![CDATA[Det er ikke oppnevnt en seksjonsredaktør. Tildel denne rollen til minst en bruker under Administrasjon > Innstillinger > Brukere &amp; roller først.]]></message>
+	<message key="manager.setup.masthead">Kolofon</message>
+	<message key="manager.setup.masthead.description">Opprett en liste over redaktører, redaksjonsledere  og andre personer tilknyttet tidsskriftet.</message>
+	<message key="manager.setup.homepageContent">Innhold på hjemmesiden</message>
+	<message key="manager.setup.homepageContentDescription">Som standard består hjemmesiden av navigasjonslenker. Ytterligere hjemmesideinnhold kan legges til ved å bruke en eller flere av følgende valgmuligheter, som vil bli vist i den viste rekkefølgen.</message>
+	<message key="manager.setup.layout">Tidsskriftets sideoppsett</message>
+	<message key="manager.setup.useStyleSheet">Tidsskriftets stilark</message>
+	<message key="manager.setup.contextName">Tidsskriftets navn</message>
+	<message key="manager.setup.pageHeader">Tidsskriftets topptekst</message>
+	<message key="manager.setup.focusAndScope.description">Beskriv til forfattere, lesere og bibliotekarer spennvidden på artikler og annet innhold som tidsskriftet vil publisere.</message>
+	<message key="manager.setup.form.issnInvalid">Angitt ISSN er ugyldig.</message>
+	<message key="manager.setup.journalSummary">Tidsskriftsbeskrivelse</message>
+	<message key="manager.setup.journalSummary.description">En kort beskrivelse av tidsskriftet som kan vises i listen over tidsskrift.</message>
+	<message key="manager.setup.journalAbout">Om tidsskriftet</message>
+	<message key="manager.setup.journalAbout.description">Inkluder informasjon om tidsskriftet som kan være av interesse for lesere, forfattere eller fagfeller. Dette kan inkludere retningslinjer for open access, hovedfokus og spennvidde for tidsskriftet, opphavsrettsnotis, informasjon om sponsorer, tidsskriftets historie, erklæring om personopplysninger og arkivering i LOCKSS eller CLOCKSS arkivsystem.</message>
+	<message key="manager.setup.journalThumbnail">Tidsskriftets miniatyrbilde</message>
+	<message key="manager.setup.journalThumbnail.description">En liten logo eller representasjon av tidsskriftet som kan bli brukt i listen over tidsskrift.</message>
+	<message key="manager.setup.journalThumbnail.altText">Alternativ tekst for miniatyrbildet</message>
+	<message key="manager.setup.enableArchive">Slå på arkivering</message>
+	<message key="manager.setup.lockssLicenseDescription"><![CDATA[En LOKCSS-lisens vil vises i Om tidsskriftet under Arkivering: <a href="http://www.lockss.org/community/publishers-titles-gln/" target="_blank">LOCKSS-lisens</a>]]></message>
+	<message key="manager.setup.lockssLicenseLabel">Beskrivelse av LOCKSS-lisens</message>
+	<message key="manager.setup.lockssTitle">LOCKSS</message>
+	<message key="manager.setup.clockssEnable"><![CDATA[Slå på CLOCKSS for å lagre og distribuere tidsskriftets innhold til deltakende bibliotek via et CLOCKSS-<a href="{$clockssUrl}" target="_blank">publiseringsmanifest</a> page.]]></message>
+	<message key="manager.setup.clockssLicenseDescription"><![CDATA[En CLOCKSS-lisens vil vises i Om tidsskriftet under Arkivering: <a href="http://clockss.org/" target="_blank">CLOCKSS-lisens</a>]]></message>
+	<message key="manager.setup.clockssLicenseLabel">Beskrivelse av CLOCKSS-lisens</message>
+	<message key="manager.setup.clockssRegister"><![CDATA[Meld deg på CLOCKSS-tjenesten ved å besøke nettsiden: <a href="http://clockss.org/" target="_blank"></a>.]]></message>
+	<message key="manager.setup.clockssTitle">CLOCKSS</message>
+	<message key="manager.setup.Issn">ISSN</message>
+	<message key="manager.distribution.access">Tilgang</message>
+	<message key="grid.category.path">Sti</message>
+	<message key="grid.action.addSection">Legg til seksjon</message>
+	<message key="manager.setup.section.description">Artikler i publiserte tidsskriftsnummer er organisert i seksjoner, vanligvis etter tema eller innholdstype (f.eks. vitenskapelige artikler, vitenskapelige oversiktsartikler osv.)</message>
+	<message key="settings.roles.gridDescription">Roller er grupper av tidsskriftsbrukere  som er gitt ulikt tilgangsnivå og knyttet til ulike arbeidsflyter i tidsskriftet. Det er fem ulike tilgangsnivå: Tidsskriftsadministratorer har tilgang til alt i tidsskriftet (alt innhold og alle innstillinger). Seksjonsredaktører har full tilgang til alt innhold de er blitt tildelt. Tidsskriftsassistenter har begrenset tilgang til alle manuskript som en redaktør har tildelt dem. Fagfeller kan se og arbeide med manuskriptene som de skal vurdere. Forfattere kan se og interagere med en begrenset mengde informasjon knyttet til deres manuskript. I tillegg er det fem ulike trinn som roller kan bli gitt tilgang til: Manuskriptinnsending, Intern fagfellevurdering, Fagfellevurdering, Redaksjonelt og Produksjon.</message>
+	<message key="manager.publication.library">Utgivers bibliotek</message>
+	<message key="manager.setup.copyrightYearBasis">Baser nye artiklers opphavsrettsår på</message>
+	<message key="manager.setup.copyrightYearBasis.article">Artikkel: År vil bli hentet fra artikkelens publiseringsdato.</message>
+	<message key="manager.setup.copyrightYearBasis.issue">Nummer: År vil bli hentet fra nummerets publiseringsdato.</message>
+	<message key="manager.setup.resetPermissions">Tilbakestill artikkelrettigheter</message>
+	<message key="manager.setup.resetPermissions.confirm">Er du sikker på at du ønsker å tilbakestille rettighetsinformasjon som er knyttet til artikler?</message>
+	<message key="manager.setup.resetPermissions.description">Erklæring om opphavsrett og lisensinformasjon vil bli permanent knyttet til publisert innhold for å sikre at disse dataene ikke blir endret når et tidsskrift endrer retningslinjer for nytt innhold. For å tilbakestille lagret rettighetsinformasjon knyttet til publisert innhold, bruk knappen under.</message>
+	<message key="grid.genres.title.short">Komponenter</message>
+	<message key="grid.genres.title">Artikkelkomponenter</message>
+	<message key="grid.genres.description">Disse komponentene er brukt for å navngi filer og er presentert i en nedtrekksmeny ved opplasting av filer. Stilene som er tildelt ## tillater brukeren å knytte filen til enten hele innsendingen 99Z eller en bestemt nummerert komponent (f.eks. 02).</message>
+	<message key="manager.setup.useThumbnail">Miniatyrbilde</message>
+	<message key="manager.statistics.defaultMetricDescription">Tidsskriftet er konfigurert til å lagre mer enn én type brukerstatistikk. Brukerstatistikk vil bli vist i flere kontekster. Det er tilfeller der en enkelt brukerstatistikk må brukes, f.eks. for å vise en ordnet liste over de mest brukte artiklene eller for å rangere søkeresultat. Vennligst velg en av de konfigurerte statistikkene som standard.</message>
+	<message key="manager.statistics.reports.defaultReport.articleDownloads">Nedlasting av artikkelfil</message>
+	<message key="manager.statistics.reports.defaultReport.articleAbstract">Sidevisning av artikkelsammendrag</message>
+	<message key="manager.statistics.reports.defaultReport.articleAbstractAndDownloads">Artikkelsammendrag og nedlastinger</message>
+	<message key="manager.statistics.reports.defaultReport.journalIndexPageViews">Visninger av tidsskriftets hovedside</message>
+	<message key="manager.statistics.reports.defaultReport.issuePageViews">Visninger av nummertabell eller innholdsside</message>
+	<message key="manager.statistics.reports.filters.byContext.description">Avgrens resultater etter kontekst (nummer og/eller artikler).</message>
+	<message key="manager.statistics.reports.filters.byObject.description">Avgrens resultater etter objekttype (tidsskrift, nummer, artikkel, filtype) og/eller etter en eller flere objektIDer.</message>
+	<message key="plugins.importexport.common.settings">Innstillinger</message>
+	<message key="plugins.importexport.common.settings.DOIPluginSettings">Innstillinger for DOI-programutvidelse</message>
+	<message key="plugins.importexport.common.export.articles">Artikler</message>
+	<message key="plugins.importexport.common.export.issues">Nummer</message>
+	<message key="plugins.importexport.common.export.representations">Sideoppsett</message>
+	<message key="plugins.importexport.common.missingRequirements">Krav til programutvidelse er ikke oppfylt</message>
+	<message key="plugins.importexport.common.error.DOIsNotAvailable">For å bruke denne programutvidelsen vennligst gå til "Programutvidelser for offentlige identifikatorer", slå på og konfigurer DOI-programutvidelsen og spesifiser et gyldig DOI-prefiks.</message>
+	<message key="plugins.importexport.common.error.pluginNotConfigured">Programutvidelsen er ikke ferdig satt opp</message>
+	<message key="plugins.importexport.common.error.noDOIContentObjects">Ingen publiserte objekt er valgt for DOI-tildeling i DOI-programutvidelsen, så det er ingen deponerings- eller eksportmulighet i denne programutvidelsen.</message>
+	<message key="plugins.importexport.common.settings.form.password">Passord</message>
+	<message key="plugins.importexport.common.settings.form.password.description">Vennligst merk at passordet vil bli lagret i ren tekst og ikke kryptert.</message>
+	<message key="plugins.importexport.common.filter.issue">Ethvert nummer</message>
+	<message key="plugins.importexport.common.status.any">Enhver status</message>
+	<message key="plugins.importexport.common.status.notDeposited">Ikke deponert</message>
+	<message key="plugins.importexport.common.status.markedRegistered">Merket som registrert</message>
+	<message key="plugins.importexport.common.status.registered">Registrert</message>
+	<message key="plugins.importexport.common.action">Handling</message>
+	<message key="plugins.importexport.common.action.export">Eksporter</message>
+	<message key="plugins.importexport.common.action.markRegistered">Merk som registrert</message>
+	<message key="plugins.importexport.common.action.register">Registrer</message>
+	<message key="plugins.importexport.common.error.noObjectsSelected">Ingen objekt er valgt</message>
+	<message key="plugins.importexport.common.error.validation">Kunne ikke konvertere de valgte objektene.</message>
+	<message key="plugins.importexport.common.invalidXML">Ugyldig XML:</message>
+	<message key="plugins.importexport.common.export.error.outputFileNotWritable">Resultatfilen {$param} er ikke skrivbar.</message>
+	<message key="plugins.importexport.common.register.error.mdsError">Registreringen feilet! DOI-registreringstjeneren returnerte en feil: '{$param}'.</message>
+	<message key="plugins.importexport.common.register.success">Registreringen var vellykket!</message>
+	<message key="plugins.importexport.common.senderTask.warning.noDOIprefix">DOI-prefiks mangler for tidsskriftet med stien {$path}.</message>
+	<message key="plugins.importexport.common.cliError">FEIL:</message>
+	<message key="plugins.importexport.common.error.unknownJournal">Den spesifiserte tidsskriftsstien "{$journalPath}" eksisterer ikke.</message>
+	<message key="plugins.importexport.common.error.unknownObjects">De spesifiserte objekteter ble ikke funnet.</message>
 </locale>

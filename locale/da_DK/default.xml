@@ -4,8 +4,8 @@
 <!--
   * locale/da_DK/default.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings.
@@ -24,7 +24,7 @@
 	 *
 	-->
 	<message key="default.journalSettings.checklist.notPreviouslyPublished">Manuskriptet er ikke tidligere blevet publiceret, og det er heller ikke sendt til et andet tidsskrift med henblik på at komme i betragtning til at blive publiceret (eller der er angivet en forklaring under kommentarfeltet 'Kommentarer til redaktøren').</message>
-	<message key="default.journalSettings.checklist.fileFormat">Manuskriptfilen er i et OpenOffice, Microsoft Word-, RTF- eller WordPerfect-dokumentfilformat.</message>
+	<message key="default.journalSettings.checklist.fileFormat">Manuskriptfilen er i et OpenOffice, Microsoft Word- eller RTF- eller dokumentfilformat.</message>
 	<message key="default.journalSettings.checklist.addressesLinked">Der er angivet URL-adresser til referencerne, hvor de er tilgængelige.</message>
 	<message key="default.journalSettings.checklist.submissionAppearance">Teksten er skrevet med enkelt linjeafstand, benytter en 12-punktsskrifttype og anvender kursiv i stedet for understregning (med undtagelse af URL-adresser), og alle illustrationer, figurer og tabeller er placeret i teksten på passende steder i stedet for til sidst.</message>
 	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[Teksten opfylder de stilistiske og bibliografiske krav, der er beskrevet under <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines" target="_new"> Retningslinjer for forfattere </a>, som findes under Om tidsskriftet.]]></message>
@@ -101,9 +101,9 @@ Tallene i tabel 3 er ikke justeret i tredje kolonne.</pre>
 <pre>4. FORMATERING
 Afsnittet, der begynder med "Dette sidste emne...", er ikke blevet indrykket.</pre>]]></message>
 	
-	<message key="default.journalSettings.emailSignature">________________________________________________________________________
-{$journalName}
-{$indexUrl}/{$journalPath}</message>
+	<message key="default.journalSettings.emailSignature"><![CDATA[<br/>
+________________________________________________________________________<br/>
+<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>]]></message>
 	<message key="default.journalSettings.forReaders"><![CDATA[Vi opfordrer læsere til at tilmelde sig nyhedstjenesten vedrørende publiceringer for dette tidsskrift. Brug linket <a href="{$indexUrl}/{$journalPath}/user/register">Registrer</a> øverst på tidsskriftets hjemmeside. Denne registrering medfører, at læseren via e-mail modtager indholdsfortegnelsen for alle nye numre af tidsskriftet. Denne liste giver også tidsskriftet mulighed for at hævde at have et vist supportniveau eller et vist antal læsere. Se tidsskriftets <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">Erklæring om beskyttelse af personlige oplysninger</a>, der garanterer læserne, at deres navne og e-mail-adresser ikke benyttes til andre formål.]]></message>
 	<message key="default.journalSettings.forAuthors"><![CDATA[Er du interesseret i at fremsende et manuskript til dette tidsskrift? Vi anbefaler, at du gennemgår siden <a href="{$indexUrl}/{$journalPath}/about">Om tidsskriftet</a>, hvor du kan finde tidsskriftets sektionspolitikker, samt <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Retningslinjer for forfattere</a>. Forfattere skal <a href="{$indexUrl}/{$journalPath}/user/register">tilmelde sig</a> tidsskriftet, inden de kan fremsende et manuskript. Hvis de allerede er tilmeldt, kan de blot <a href="{$indexUrl}/index/login">logge på</a> og påbegynde processen, der består af 5 trin.]]></message>	
 	<message key="default.journalSettings.forLibrarians"><![CDATA[Vi opfordrer forskningsbibliotekarer til at anføre dette tidsskrift på listen over deres biblioteks beholdning af elektroniske tidsskrifter. Det kan desuden være nyttigt at bemærke, at dette tidsskrifts open source-publiceringssystem er velegnet til biblioteker, som kan være værter for det til deres fakultetsmedlemmer, som kan bruge det til de tidsskrifter, de er ved at redigere (se <a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></message>
@@ -125,4 +125,31 @@ Afsnittet, der begynder med "Dette sidste emne...", er ikke blevet indrykket.</p
 	<message key="default.journalSettings.donationFeeDescription">Dette tidsskrift er taknemmelig over at modtage donationer på et hvilket som helst beløb, og donationerne gør det muligt for redaktørerne at udgive et tidsskrift af højeste kvalitet til dets læsere.</message>
 	<message key="default.journalSettings.purchaseIssueFee">Købsnummer</message>
 	<message key="default.journalSettings.purchaseIssueFeeDescription">Betaling af dette gebyr vil gøre det muligt for dig at læse, downloade og printe dette nummer.</message>
+	<message key="default.genres.article">Artikeltekst</message>
+	<message key="default.genres.researchInstrument">Forskningsredskab</message>
+	<message key="default.genres.researchMaterials">Forskningsmateriale</message>
+	<message key="default.genres.researchResults">Forskningsresultater</message>
+	<message key="default.genres.transcripts">Transskription</message>
+	<message key="default.genres.dataAnalysis">Dataanalyse</message>
+	<message key="default.genres.sourceTexts">Kildetekster</message>
+	<message key="default.genres.dataSet">Datasæt</message>
+	<message key="default.journalSettings.clockssLicense"><![CDATA[Dette tidsskrift anvender CLOCKSS systemet for at understøtte et udbredt arkiveringssystem blandt deltagende biblioteker og giver disse biblioteker ret til permanent at arkivere tidsskriftet til bevaring og eventuel genoprettelse. <a href="http://clockss.org/">Mere...</a>]]></message>
+	<message key="default.groups.name.manager">Tidsskriftschef</message>
+	<message key="default.groups.plural.manager">Tidsskriftschefer</message>
+	<message key="default.groups.abbrev.manager">JM</message>
+	<message key="default.groups.name.editor">Tidsskfitsredaktør</message>
+	<message key="default.groups.plural.editor">Tidsskfitsredaktører</message>
+	<message key="default.groups.abbrev.editor">JE</message>
+	<message key="default.groups.name.guestEditor">Gæsteredaktør</message>
+	<message key="default.groups.plural.guestEditor">Gæsteredaktører</message>
+	<message key="default.groups.abbrev.guestEditor">GE</message>
+	<message key="default.groups.name.sectionEditor">Sektionsredaktør</message>
+	<message key="default.groups.plural.sectionEditor">Sektionsredaktører</message>
+	<message key="default.groups.abbrev.sectionEditor">SecE</message>
+	<message key="default.groups.name.subscriptionManager">Abonnementschef</message>
+	<message key="default.groups.plural.subscriptionManager">Abonnementschefer</message>
+	<message key="default.groups.abbrev.subscriptionManager">SubM</message>
+	<message key="default.groups.name.externalReviewer">Bedømmer</message>
+	<message key="default.groups.plural.externalReviewer">Bedømmere</message>
+	<message key="default.groups.abbrev.externalReviewer">R</message>
 </locale>

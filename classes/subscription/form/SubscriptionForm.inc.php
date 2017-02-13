@@ -3,8 +3,8 @@
 /**
  * @file classes/subscription/form/SubscriptionForm.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SubscriptionForm
@@ -34,10 +34,13 @@ class SubscriptionForm extends Form {
 
 	/**
 	 * Constructor
-	 * @param subscriptionId int The subscription ID for this subscription; null for new subscription
+	 * @param $template string? Template to use for form presentation
+	 * @param $subscriptionId int The subscription ID for this subscription; null for new subscription
 	 * @param $userId int The user ID for this subscription; null for new subscription
 	 */
-	function SubscriptionForm($subscriptionId = null, $userId = null) {
+	function __construct($template, $subscriptionId = null, $userId = null) {
+		parent::__construct($template);
+
 		$subscriptionId = isset($subscriptionId) ? (int) $subscriptionId : null;
 		$this->userId = isset($userId) ? (int) $userId : null;
 

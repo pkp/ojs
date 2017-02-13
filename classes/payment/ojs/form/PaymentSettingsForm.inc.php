@@ -3,7 +3,7 @@
 /**
  * @file classes/payment/ojs/form/PaymentSettingsForm.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
+ * Copyright (c) 2014-2017 Simon Fraser University
  * Copyright (c) 2006-2009 Gunther Eysenbach, Juan Pablo Alperin
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
@@ -30,9 +30,9 @@ class PaymentSettingsForm extends Form {
 	 * Constructor
 	 * @param $journalId int
 	 */
-	function PaymentSettingsForm() {
+	function __construct() {
 
-		parent::Form('payments/paymentSettings.tpl');
+		parent::__construct('payments/paymentSettings.tpl');
 
 		$this->settings = array(
 			'journalPaymentsEnabled' => 'bool',

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/oaiMetadataFormats/nlm/locale/ar_IQ/locale.xml
+  *
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings
+  -->
+ 
+<locale name="ar_IQ" full_name="العربية">
+	<message key="plugins.oaiMetadata.nlm.displayName">صيغة البيانات الوصفية NLM</message>
+	<message key="plugins.oaiMetadata.nlm.description">تقوم بتشكيل البيانات الوصفية بشكل يجعلها متوافقة مع صيغة NLM لمقالات المجلة.</message>
+</locale>

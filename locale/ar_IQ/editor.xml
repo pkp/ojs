@@ -4,8 +4,8 @@
 <!--
   * locale/ar_IQ/editor.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings.
@@ -175,10 +175,6 @@
 	<message key="editor.article.assignEditor">أضف محرراً</message>
 	<message key="editor.article.selectEditor">إختر {$roleName}</message>
 	<message key="editor.article.selectDecision">إختر قراراً</message>
-	<message key="editor.article.decision.accept">إقبل طلب التقديم</message>
-	<message key="editor.article.decision.pendingRevisions">التحكيمات مطلوبة</message>
-	<message key="editor.article.decision.resubmit">أعد تقديمه للتحكيم</message>
-	<message key="editor.article.decision.decline">أرفض طلب التقديم</message>
 	<message key="editor.article.selectLayoutEditor">إختر محرر التصميم</message>
 	<message key="editor.article.replaceLayoutEditor">استبدل محرر التصميم</message>
 	<message key="editor.article.reviewSubmission">تنقيح طلب التقديم</message>

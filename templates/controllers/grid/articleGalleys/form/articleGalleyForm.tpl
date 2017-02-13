@@ -1,8 +1,8 @@
 {**
  * templates/editor/issues/articleGalleyForm.tpl
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Form to add/edit an issue galley.
@@ -25,11 +25,11 @@
 <form class="pkp_form" id="articleGalleyForm" method="post" action="{url op="updateGalley" submissionId=$submissionId representationId=$representationId}">
 	{csrf}
 	{fbvFormArea id="galley"}
-		{fbvFormSection title="submission.layout.galleyLabel"}
-			{fbvElement type="text" label="submission.layout.galleyLabelInstructions" value=$label id="label" size=$fbvStyles.size.MEDIUM inline=true}
+		{fbvFormSection title="submission.layout.galleyLabel" required=true}
+			{fbvElement type="text" label="submission.layout.galleyLabelInstructions" value=$label id="label" size=$fbvStyles.size.MEDIUM inline=true required=true}
 		{/fbvFormSection}
 		{fbvFormSection}
-			{fbvElement type="select" id="galleyLocale" label="common.language" from=$supportedLocales selected=$galleyLocale|default:$formLocale size=$fbvStyles.size.MEDIUM translate=false inline=true}
+			{fbvElement type="select" id="galleyLocale" label="common.language" from=$supportedLocales selected=$galleyLocale|default:$formLocale size=$fbvStyles.size.MEDIUM translate=false inline=true required=true}
 		{/fbvFormSection}
 		{fbvFormSection for="remotelyHostedContent" list=true}
 			{fbvElement type="checkbox" label="submission.layout.galley.remotelyHostedContent" id="remotelyHostedContent"}

@@ -1,8 +1,8 @@
 {**
  * templates/frontend/objects/article_summary.tpl
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @brief View of an Article summary which is shown within a list of articles.
@@ -18,10 +18,10 @@
 {/if}
 
 <div class="obj_article_summary">
-	{if $article->getCoverImage()}
+	{if $article->getLocalizedCoverImage()}
 		<div class="cover">
 			<a href="{url page="article" op="view" path=$articlePath}" class="file">
-				<img src="{$coverImagePath|escape}{$article->getCoverImage()|escape}"{if $article->getCoverImageAltText() != ''} alt="{$article->getCoverImageAltText()|escape}"{else} alt="{translate key="article.coverPage.altText"}"{/if}>
+				<img src="{$article->getLocalizedCoverImageUrl()|escape}"{if $article->getLocalizedCoverImageAltText() != ''} alt="{$article->getLocalizedCoverImageAltText()|escape}"{else} alt="{translate key="article.coverPage.altText"}"{/if}>
 			</a>
 		</div>
 	{/if}

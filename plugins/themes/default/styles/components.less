@@ -1,8 +1,8 @@
 /**
  * @file styles/components.less
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @brief Reusable components
@@ -254,7 +254,7 @@
 	//  more appropriate in the theme.
 	.tagit {
 		&:extend(.pkp_unstyled_list);
-		&:extend(.pkp_form input[type="text"]);
+		&:extend(.cmp_form input[type="text"]);
 		.pkp_helpers_clear();
 
 		// overwrite text field styles
@@ -475,5 +475,21 @@
 			padding-right: @triple;
 		}
 
+	}
+}
+
+// Skip-to navigation links
+.cmp_skip_to_content a {
+	&:extend(.pkp_screen_reader);
+	display: block;
+	padding: 1em;
+	z-index: 99999;
+	background: @bg;
+	transform: translateX(-50%);
+
+	&:focus {
+		clip: auto;
+		top: 0;
+		left: 50%;
 	}
 }
