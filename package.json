@@ -5,6 +5,7 @@
   "author": "Public Knowledge Project",
   "private": true,
   "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack --progress --hide-modules --watch",
     "build-dev": "cross-env NODE_ENV=development webpack --progress --hide-modules",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
