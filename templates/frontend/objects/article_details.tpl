@@ -66,11 +66,11 @@
 <article class="obj_article_details">
 
 	{* Notification if there is a more recent version of this article *}
-	{if $versioningEnabled && $isPreviousRevision}
+	{if $isPreviousRevision}
 		<div class='cmp_notification'>
-			{translate key="submission.versioning.currentVersion"}: 
+			{translate key="submission.versioning.linkToLatest"}
 			{assign var=newVersionLink value=$article->getBestArticleId($currentJournal)}
-			<a href="{url op="view" path=$newVersionLink escape=false}">{$latestTitle}</a>
+			<a href="{url op="view" path=$newVersionLink escape=false}">{translate key="submission.versioning.latest"}</a>.
 		</div>
 	{/if}
 
@@ -241,6 +241,22 @@
 						{$article->getDatePublished()|date_format:$dateFormatShort}
 					</div>
 				</div>
+
+				{* Display article versions *}
+				{if $versioningEnabled}
+					{if $previousRevisions|@count > 0}
+						<div class="item versioning">
+							<div class="label">
+								{translate key="submission.versioning.versionHistory"}
+							</div>
+							<div class="value">
+								{foreach from=$previousRevisions item=submissionRevision}
+									<a href="{url op="version" path=$article->getBestArticleId($currentJournal)|to_array:$submissionRevision->getSubmissionRevision() escape=false}">{$submissionRevision->getDatePublished()|date_format:$dateFormatShort}</a><br>
+								{/foreach}
+							</div>
+						</div>
+					{/if}
+				{/if}
 			{/if}
 
 			{* Citation formats *}

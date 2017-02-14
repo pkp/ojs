@@ -41,9 +41,6 @@ class ArticleHandler extends Handler {
 	/** @var array: precedent revisions of the current submission **/
 	var $previousRevisions;
 
-	/** @var string: localized title of the latest submission **/
-	var $latestTitle;
-
 	/**
 	 * Constructor
 	 * @param $request Request
@@ -77,19 +74,16 @@ class ArticleHandler extends Handler {
 		$articleDao = DAORegistry::getDAO('ArticleDAO');
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 
-		// get all previous article versions
-		$this->previousRevisions = $articleDao->getSubmissionRevisions($articleId, $this->journal->getId(), false, true);
+		// get all published previous article versions
+		$this->previousRevisions = $articleDao->getPublishedSubmissionRevisions($articleId);
 
 		// get the most resent article version
-		$this->latestSubmissionRevision = $articleDao->getLatestRevisionId($articleId, $this->journal->getId() );
+		$this->latestSubmissionRevision = $articleDao->getLatestPublishedRevisionId($articleId, $this->journal->getId());
 		// set latest submission revision as default
 		$this->submissionRevision = $this->latestSubmissionRevision;
 
 		// get published article object
 		$publishedArticle = $publishedArticleDao->getPublishedArticleByBestArticleId((int) $this->journal->getId(), $articleId, false, $this->submissionRevision);
-
-		// get title of recent article version
-		$this->latestTitle = $publishedArticleDao->getLocalizedTitleByVersion($publishedArticle->getId(), $this->latestSubmissionRevision);
 
 		// get data of publishedArticle
 		if (isset($publishedArticle)) {
@@ -123,16 +117,22 @@ class ArticleHandler extends Handler {
 		$galleyId = isset($args[2]) ? $args[2] : 0;
 		array_splice($args, 1, 1);
 
-		// get this published article version
-		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-		$this->article = $publishedArticleDao->getPublishedArticleByBestArticleId((int) $this->journal->getId(), $articleId, false, $this->submissionRevision);
+		// check if submission revision exists
+		$submissionDao = Application::getSubmissionDAO();
+		$submission = $submissionDao->getById($articleId, null, false, $this->submissionRevision);
 
-		// check of this is an old version
-		if ($this->submissionRevision &&($this->submissionRevision < $this->latestSubmissionRevision)) {
-			$this->isPreviousRevision = true;
+		if($submission->getDatePublished()){
+			// get this published article version
+			$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
+			$this->article = $publishedArticleDao->getPublishedArticleByBestArticleId((int) $this->journal->getId(), $articleId, false, $this->submissionRevision);
+
+			// check of this is an old version
+			if ($this->submissionRevision && ($this->submissionRevision < $this->latestSubmissionRevision)) {
+				$this->isPreviousRevision = true;
+			}
+
+			$this->view($args, $request);
 		}
-
-		$this->view($args, $request);
 	}
 
 	/**
@@ -229,7 +229,6 @@ class ArticleHandler extends Handler {
 			// article versioning
 			if ($this->isPreviousRevision) {
 				$templateMgr->assign('isPreviousRevision', true);
-				$templateMgr->assign('latestTitle', $this->latestTitle);
 			}
 			$templateMgr->assign('submissionRevision', $this->submissionRevision);
 			$templateMgr->assign('previousRevisions', $this->previousRevisions);
