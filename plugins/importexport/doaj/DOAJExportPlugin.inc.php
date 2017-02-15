@@ -163,7 +163,7 @@ class DOAJExportPlugin extends PubObjectsExportPlugin {
 	/**
 	 * @copydoc PubObjectsExportPlugin::executeExportAction()
 	 */
-	function executeExportAction($request, $objects, $filter, $tab, $objectsFileNamePart) {
+	function executeExportAction($request, $objects, $filter, $tab, $objectsFileNamePart, $noValidation = null) {
 		$context = $request->getContext();
 		$path = array('plugin', $this->getName());
 		if ($request->getUserVar(EXPORT_ACTION_DEPOSIT)) {
@@ -197,7 +197,7 @@ class DOAJExportPlugin extends PubObjectsExportPlugin {
 			// redirect back to the right tab
 			$request->redirect(null, null, null, $path, null, $tab);
 		} else {
-			return parent::executeExportAction($request, $objects, $filter, $tab, $objectsFileNamePart);
+			return parent::executeExportAction($request, $objects, $filter, $tab, $objectsFileNamePart, $noValidation);
 		}
 	}
 

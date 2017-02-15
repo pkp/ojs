@@ -58,7 +58,11 @@
 				{fbvFormArea id="submissionsXmlForm"}
 					{url|assign:submissionsListGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.submissions.ExportPublishedSubmissionsListGridHandler" op="fetchGrid" plugin="doaj" category="importexport" escape=false}
 					{load_url_in_div id="submissionsListGridContainer" url=$submissionsListGridUrl}
+					{fbvFormSection list="true"}
+						{fbvElement type="checkbox" id="validation" label="plugins.importexport.common.validation" checked=$validation|default:true}
+					{/fbvFormSection}
 					{if !empty($actionNames)}
+						{fbvFormSection}
 						<ul class="export_actions">
 							{foreach from=$actionNames key=action item=actionName}
 								<li class="export_action">								
@@ -66,6 +70,7 @@
 								</li>
 							{/foreach}
 						</ul>
+						{/fbvFormSection}
 					{/if}
 				{/fbvFormArea}
 			</form>
