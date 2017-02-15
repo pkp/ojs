@@ -137,12 +137,24 @@
 		<data file="dbscripts/xml/upgrade/3.0.0_edit_decisions.xml" />
 		<code function="clearCssCache" />
 		<code function="convertCommentsToEditor" condition="return $installer->tableExists('submissions_tmp');" />
+		<code function="moveReviewerFiles" />
+		<data file="dbscripts/xml/upgrade/3.0.0_reviewer_files.xml" />
 	</upgrade>
 
 	<upgrade minversion="2.4.0.0" maxversion="3.0.1.9">
 		<data file="dbscripts/xml/upgrade/3.0.2_update.xml" />
+		<!--  the order of the next two lines is important -->
+		<code function="moveReviewerFiles" />
+		<data file="dbscripts/xml/upgrade/3.0.0_reviewer_files.xml" />
 		<note file="docs/release-notes/README-3.0.2" />
 	</upgrade>
+
+	<upgrade minversion="3.0.2.0" maxversion="3.0.2.9">
+		<!--  the order of the next two lines is important -->
+		<code function="moveReviewerFiles" />
+		<data file="dbscripts/xml/upgrade/3.0.0_reviewer_files.xml" />
+	</upgrade>
+
 
 	<!-- update plugin configuration - should be done as the final upgrade task -->
 	<code function="addPluginVersions" />
