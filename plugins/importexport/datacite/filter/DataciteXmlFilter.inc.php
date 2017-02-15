@@ -120,6 +120,8 @@ class DataciteXmlFilter extends NativeExportFilter {
 			}
 		}
 
+		// Identify the object locale.
+		$objectLocalePrecedence = $this->getObjectLocalePrecedence($context, $article, $galley);
 		// The publisher is required.
 		// Use the journal title as DataCite recommends for now.
 		$publisher = $this->getPrimaryTranslation($context->getName(null), $objectLocalePrecedence);
@@ -134,8 +136,6 @@ class DataciteXmlFilter extends NativeExportFilter {
 		// Create the root node
 		$rootNode = $this->createRootNode($doc);
 		$doc->appendChild($rootNode);
-		// Identify the object locale.
-		$objectLocalePrecedence = $this->getObjectLocalePrecedence($context, $article, $galley);
 		// DOI (mandatory)
 		$doi = $pubObject->getStoredPubId('doi');
 		if ($plugin->isTestMode($context)) {

@@ -142,6 +142,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 				$selectedIssues = (array) $request->getUserVar('selectedIssues');
 				$selectedRepresentations = (array) $request->getUserVar('selectedRepresentations');
 				$tab = (string) $request->getUserVar('tab');
+				$noValidation = $request->getUserVar('validation') ? false : true;
 
 				if (empty($selectedSubmissions) && empty($selectedIssues) && empty($selectedRepresentations)) {
 					fatalError(__('plugins.importexport.common.error.noObjectsSelected'));
@@ -161,7 +162,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 				}
 
 				// Execute export action
-				$this->executeExportAction($request, $objects, $filter, $tab, $objectsFileNamePart);
+				$this->executeExportAction($request, $objects, $filter, $tab, $objectsFileNamePart, $noValidation);
 		}
 	}
 
@@ -172,14 +173,15 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 	 * @param $filter string Filter to use
 	 * @param $tab string Tab to return to
 	 * @param $objectsFileNamePart string Export file name part for this kind of objects
+	 * @param $noValidation boolean If set to true no XML validation will be done
 	 */
-	function executeExportAction($request, $objects, $filter, $tab, $objectsFileNamePart) {
+	function executeExportAction($request, $objects, $filter, $tab, $objectsFileNamePart, $noValidation = null) {
 		$context = $request->getContext();
 		$path = array('plugin', $this->getName());
 		if ($request->getUserVar(EXPORT_ACTION_EXPORT)) {
 			assert($filter != null);
 			// Get the XML
-			$exportXml = $this->exportXML($objects, $filter, $context);
+			$exportXml = $this->exportXML($objects, $filter, $context, $noValidation);
 			import('lib.pkp.classes.file.FileManager');
 			$fileManager = new FileManager();
 			$exportFileName = $this->getExportFileName($this->getExportPath(), $objectsFileNamePart, $context, '.xml');
@@ -189,7 +191,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 		} elseif ($request->getUserVar(EXPORT_ACTION_DEPOSIT)) {
 			assert($filter != null);
 			// Get the XML
-			$exportXml = $this->exportXML($objects, $filter, $context);
+			$exportXml = $this->exportXML($objects, $filter, $context, $noValidation);
 			// Write the XML to a file.
 			// export file name example: crossref-20160723-160036-articles-1.xml
 			import('lib.pkp.classes.file.FileManager');
@@ -334,8 +336,9 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 	 * @param $filter string
 	 * @param $context Context
 	 * @return string XML document.
+	 * @param $noValidation boolean If set to true no XML validation will be done
 	 */
-	function exportXML($objects, $filter, $context) {
+	function exportXML($objects, $filter, $context, $noValidation = null) {
 		$xml = '';
 		$filterDao = DAORegistry::getDAO('FilterDAO');
 		$exportFilters = $filterDao->getObjectsByGroup($filter);
@@ -343,6 +346,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 		$exportFilter = array_shift($exportFilters);
 		$exportDeployment = $this->_instantiateExportDeployment($context);
 		$exportFilter->setDeployment($exportDeployment);
+		if ($noValidation) $exportFilter->setNoValidation($noValidation);
 		libxml_use_internal_errors(true);
 		$exportXml = $exportFilter->execute($objects, true);
 		$xml = $exportXml->saveXml();

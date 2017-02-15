@@ -201,7 +201,7 @@ class IssueMedraXmlFilter extends O4DOIXmlFilter {
 		// Extent (for issues-as-manifestation only)
 		if (!$this->isWork($context, $plugin)) {
 			$issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /* @var $issueGalleyDao IssueGalleyDAO */
-			$issueGalleys = $issueGalleyDao->getGalleysByIssue($issue->getId());
+			$issueGalleys = $issueGalleyDao->getByIssueId($issue->getId());
 			if (!empty($issueGalleys)) {
 				foreach($issueGalleys as $issueGalley) {
 					$journalIssueNode->appendChild($this->createExtentNode($doc, $issueGalley));
