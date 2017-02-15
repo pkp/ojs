@@ -1813,6 +1813,46 @@ class Upgrade extends Installer {
 		$articleDao->flushCache();
 		return true;
 	}
+
+	/**
+	 * For 3.0.0 - 3.0.2 upgrade: first part of the fix for the migrated reviewer files.
+	 * The files are renamed and moved from 'review' to 'review/attachment' folder.
+	 * @return boolean
+	 */
+	function moveReviewerFiles() {
+		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
+
+		import('lib.pkp.classes.file.SubmissionFileManager');
+
+		// get reviewer file ids
+		$result = $submissionFileDao->retrieve(
+			'SELECT ra.review_id, ra.submission_id, ra.review_round_id, ra.review_id, ra.reviewer_file_id, s.context_id
+			FROM review_assignments ra, submissions s
+			WHERE ra.reviewer_file_id IS NOT NULL AND s.submission_id = ra.submission_id'
+		);
+		while (!$result->EOF) {
+			$row = $result->GetRowAssoc(false);
+
+			$submissionFileManager = new SubmissionFileManager($row['context_id'], $row['submission_id']);
+			// revision is always 1 because in OJS 2.4.x there was only one reviewer file
+			$revision = $submissionFileDao->getRevision($row['reviewer_file_id'], 1);
+			$wrongFilePath = $revision->getFilePath();
+			$revision->setFileStage(SUBMISSION_FILE_REVIEW_ATTACHMENT);
+			$newFilePath = $revision->getFilePath();
+			if (!file_exists($newFilePath)) {
+				if (!file_exists($path = dirname($newFilePath)) && !$submissionFileManager->mkdirtree($path)) {
+					error_log("Unable to make directory \"$path\"");
+				}
+				if (!rename($wrongFilePath, $newFilePath)) {
+					error_log("Unable to move \"$wrongFilePath\" to \"$newFilePath\".");
+				}
+			}
+			$result->MoveNext();
+		}
+		$result->Close();
+		return true;
+	}
+
 }
 
 ?>
