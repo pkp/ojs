@@ -545,8 +545,8 @@ class Upgrade extends Installer {
 		// Articles.
 		$params = array('ojs::timedViews', $loadId, ASSOC_TYPE_SUBMISSION);
 		$tempStatsDao->update(
-					'INSERT INTO metrics (load_id, metric_type, assoc_type, assoc_id, day, country_id, region, city, submission_id, metric, context_id, issue_id)
-					SELECT tr.load_id, ?, tr.assoc_type, tr.assoc_id, tr.day, tr.country_id, tr.region, tr.city, tr.assoc_id, count(tr.metric), a.context_id, pa.issue_id
+					'INSERT INTO metrics (load_id, metric_type, assoc_type, assoc_id, day, country_id, region, city, submission_id, metric, context_id, assoc_object_type, assoc_object_id)
+					SELECT tr.load_id, ?, tr.assoc_type, tr.assoc_id, tr.day, tr.country_id, tr.region, tr.city, tr.assoc_id, count(tr.metric), a.context_id, ' . ASSOC_TYPE_ISSUE . ', pa.issue_id
 					FROM usage_stats_temporary_records AS tr
 					LEFT JOIN submissions AS a ON a.submission_id = tr.assoc_id
 					LEFT JOIN published_submissions AS pa ON pa.submission_id = tr.assoc_id
@@ -557,8 +557,8 @@ class Upgrade extends Installer {
 		// Galleys.
 		$params = array('ojs::timedViews', $loadId, ASSOC_TYPE_GALLEY);
 		$tempStatsDao->update(
-					'INSERT INTO metrics (load_id, metric_type, assoc_type, assoc_id, day, country_id, region, city, submission_id, metric, context_id, issue_id)
-					SELECT tr.load_id, ?, tr.assoc_type, tr.assoc_id, tr.day, tr.country_id, tr.region, tr.city, ag.submission_id, count(tr.metric), a.context_id, pa.issue_id
+					'INSERT INTO metrics (load_id, metric_type, assoc_type, assoc_id, day, country_id, region, city, submission_id, metric, context_id, assoc_object_type, assoc_object_id)
+					SELECT tr.load_id, ?, tr.assoc_type, tr.assoc_id, tr.day, tr.country_id, tr.region, tr.city, ag.submission_id, count(tr.metric), a.context_id, ' . ASSOC_TYPE_ISSUE . ', pa.issue_id
 					FROM usage_stats_temporary_records AS tr
 					LEFT JOIN submission_galleys AS ag ON ag.galley_id = tr.assoc_id
 					LEFT JOIN submissions AS a ON a.submission_id = ag.submission_id
@@ -581,7 +581,7 @@ class Upgrade extends Installer {
 	function migrateDefaultUsageStatistics() {
 		$loadId = '3.0.0-upgrade-ojsViews';
 		$metricsDao = DAORegistry::getDAO('MetricsDAO');
-		$insertIntoClause = 'INSERT INTO metrics (file_type, load_id, metric_type, assoc_type, assoc_id, submission_id, metric, context_id, issue_id)';
+		$insertIntoClause = 'INSERT INTO metrics (file_type, load_id, metric_type, assoc_type, assoc_id, submission_id, metric, context_id, assoc_object_type, assoc_object_id)';
 		$selectClause = null; // Conditionally set later
 
 		// Galleys.
@@ -605,7 +605,7 @@ class Upgrade extends Installer {
 
 			if ($case['assocType'] == ASSOC_TYPE_GALLEY) {
 				array_push($params, (int) $case['isHtml']);
-				$selectClause = ' SELECT ?, ?, ?, ?, ag.galley_id, ag.article_id, ag.views, a.context_id, pa.issue_id
+				$selectClause = ' SELECT ?, ?, ?, ?, ag.galley_id, ag.article_id, ag.views, a.context_id, ' . ASSOC_TYPE_ISSUE . ', pa.issue_id
 					FROM article_galleys_stats_migration as ag
 					LEFT JOIN submissions AS a ON ag.article_id = a.submission_id
 					LEFT JOIN published_submissions as pa on ag.article_id = pa.submission_id
@@ -614,7 +614,7 @@ class Upgrade extends Installer {
 						AND af.file_type ';
 			} else {
 				if ($this->tableExists('issue_galleys_stats_migration')) {
-					$selectClause = 'SELECT ?, ?, ?, ?, ig.galley_id, 0, ig.views, i.journal_id, ig.issue_id
+					$selectClause = 'SELECT ?, ?, ?, ?, ig.galley_id, 0, ig.views, i.journal_id, ' . ASSOC_TYPE_ISSUE . ', ig.issue_id
 						FROM issue_galleys_stats_migration AS ig
 						LEFT JOIN issues AS i ON ig.issue_id = i.issue_id
 						LEFT JOIN issue_files AS ifi ON ig.file_id = ifi.file_id
@@ -636,7 +636,7 @@ class Upgrade extends Installer {
 		// Published articles.
 		$params = array(null, $loadId, 'ojs::legacyDefault', ASSOC_TYPE_SUBMISSION);
 		$metricsDao->update($insertIntoClause .
-			' SELECT ?, ?, ?, ?, pa.article_id, pa.article_id, pa.views, i.journal_id, pa.issue_id
+			' SELECT ?, ?, ?, ?, pa.article_id, pa.article_id, pa.views, i.journal_id, ' . ASSOC_TYPE_ISSUE . ', pa.issue_id
 			FROM published_articles_stats_migration as pa
 			LEFT JOIN issues AS i ON pa.issue_id = i.issue_id
 			WHERE pa.views > 0 AND i.issue_id is not null;', $params, false);
