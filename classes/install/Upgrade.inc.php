@@ -1020,6 +1020,55 @@ class Upgrade extends Installer {
 			}
 			$article = $articleDao->getById($row['article_id']);
 
+			// if it is a remote supp file and article is published, convert it to a remote galley
+			if (!$row['file_id'] && $row['remote_url'] != '' && $article->getStatus() == STATUS_PUBLISHED) {
+				$remoteSuppFileSettingsResult = $submissionFileDao->retrieve('SELECT * FROM article_supp_file_settings WHERE supp_id = ? AND setting_value IS NOT NULL', array($row['supp_id']));
+				$extraRemoteGalleySettings = $remoteSuppFileTitle = array();
+				while (!$remoteSuppFileSettingsResult->EOF) {
+					$rsfRow = $remoteSuppFileSettingsResult->getRowAssoc(false);
+					$remoteSuppFileSettingsResult->MoveNext();
+					switch ($rsfRow['setting_name']) {
+						case 'title':
+							$remoteSuppFileTitle[$rsfRow['locale']] = $rsfRow['setting_value'];
+							break;
+						case 'pub-id::doi':
+						case 'pub-id::other::urn':
+						case 'pub-id::publisher-id':
+						case 'urnSuffix':
+						case 'doiSuffix':
+							$extraRemoteGalleySettings[$rsfRow['setting_name']] = $rsfRow['setting_value'];
+							break;
+						default:
+							// other settings are not relevant for remote galleys
+							break;
+					}
+				}
+				$remoteSuppFileSettingsResult->Close();
+
+				$articleGalley = $articleGalleyDao->newDataObject();
+				$articleGalley->setSubmissionId($article->getId());
+				$articleGalley->setLabel($remoteSuppFileTitle[$article->getLocale()]);
+				$articleGalley->setRemoteURL($row['remote_url']);
+				$articleGalley->setLocale($article->getLocale());
+				$articleGalleyDao->insertObject($articleGalley);
+
+				// Preserve extra settings. (Plugins may not be loaded, so other mechanisms might not work.)
+				foreach ($extraRemoteGalleySettings as $name => $value) {
+					$submissionFileDao->update(
+						'INSERT INTO submission_galley_settings (galley_id, setting_name, setting_value, setting_type) VALUES (?, ?, ?, ?)',
+						array(
+							$articleGalley->getId(),
+							$name,
+							$value,
+							'string'
+						)
+					);
+				}
+
+				// continue with the next supp file
+				continue;
+			}
+
 			$genre = null;
 			switch ($row['type']) {
 				// author.submit.suppFile.dataAnalysis
