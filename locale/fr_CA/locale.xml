@@ -495,7 +495,7 @@ Active indique combien d'évaluations sont présentement considérées ou en cou
 	<message key="about.submissions">Soumissions</message>
 	<message key="about.onlineSubmissions">Soumissions en ligne</message>
 	<message key="about.onlineSubmissions.login">Ouvrir une session</message>
-	<message key="about.onlineSubmissions.registrationRequired">{$register} et/ou ({$login}) sont obligatoires pour soumettre des articles en ligne.</message>
+	<message key="about.onlineSubmissions.registrationRequired">{$login} ou ({$register}) pour faire une soumission.</message>
 	<message key="about.authorGuidelines">Directives aux auteurs</message>
 	<message key="about.submissionPreparationChecklist">Liste de vérification de la soumission</message>
 	<message key="about.submissionPreparationChecklist.description">En tant que partie intégrante du processus de soumission, les auteurs doivent s'assurer de la conformité de leur soumission avec tous les éléments suivants, et les soumissions peuvent être retournées aux auteurs qui ne sont pas conformes à ces directives.</message>
