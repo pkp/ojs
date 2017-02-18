@@ -95,7 +95,7 @@
         <message key="manager.setup.Issn">ISSN</message>
 <message key="manager.setup.journalAbout">Tentang Jurnal</message>
 <message key="manager.setup.journalAbout.description">Include any information about your journal which may be of interest to readers, authors or reviewers. This could include your open access policy, the focus and scope of the journal, copyright notice, sponsorship disclosure, history of the journal, a privacy statement, and inclusion in any LOCKSS or CLOCKSS archival system.</message>
-<message key="manager.setup.journalSummary">Journal Summary</message>
+<message key="manager.setup.journalSummary">Ringkasan Jurnal</message>
 	<message key="manager.setup.journalSummary.description">A brief description of your journal that can be displayed in lists of journals.</message>
 <message key="manager.setup.masthead">Tajuk</message>
 	<message key="manager.setup.masthead.description">List editors, managing directors, and other individuals associated with the journal.</message>
