@@ -586,13 +586,17 @@
 	<message key="plugins.importexport.common.action.export">Export</message>
 	<message key="plugins.importexport.common.action.markRegistered">Als registriert markieren</message>
 	<message key="plugins.importexport.common.action.register">Registrieren</message>
+	<message key="plugins.importexport.common.validation">XML vor Export und Registrierung validieren.</message>
 	<!--  notifications and errors -->
 	<message key="plugins.importexport.common.error.noObjectsSelected">Keine Objekte ausgewählt.</message>
 	<message key="plugins.importexport.common.error.validation">Konnte ausgewählte Objekte nicht konvertieren.</message>
+	<message key="plugins.importexport.common.invalidXML">XML ungültig:</message>
 	<message key="plugins.importexport.common.export.error.outputFileNotWritable">Die Ausgabedatei {$param} ist nicht beschreibbar.</message>
 	<message key="plugins.importexport.common.register.error.mdsError">Die Registrierung war nicht erfolgreich! Der DOI-Registrierungsserver hat einen Fehler zurückgeliefert: '{$param}'.</message>
 	<message key="plugins.importexport.common.register.success">Registrierung erfolgreich!</message>
 	<message key="plugins.importexport.common.senderTask.warning.noDOIprefix">DOI-Präfix fehlt für die Zeitschrift mit dem Pfad {$path}.</message>
 	<message key="plugins.importexport.common.cliError">FEHLER:</message>
 	<message key="plugins.importexport.common.error.unknownJournal">Der angegebene Zeitschriftenpfad, "{$journalPath}", existiert nicht.</message>
+	<message key="plugins.importexport.common.error.unknownObjects">Die angegebenen Objekte konnten nicht gefunden werden.</message>
+	<message key="manager.setup.notifications.copyPrimaryContact">Eine Kopie an den in den Einstellungen der Zeitschrift festgelegten Hauptkontakt senden.</message>
 </locale>
