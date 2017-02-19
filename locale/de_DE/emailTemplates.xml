@@ -163,6 +163,17 @@ Für weitere Fragen stehen wir Ihnen gern zur Verfügung. Danke für Ihr Interes
 {$editorialContactSignature}]]></body>
 		<description>Diese E-Mail wird, sofern aktiviert, automatisch an eine Autorin/einen Autor gesendet, wenn sie oder er den Einreichungsprozess eines Manuskripts für die Zeitschrift abgeschlossen hat. Sie liefert Informationen über das Verfolgen der Einreichung durch den Prozess hindurch und dankt der Autorin/dem Autor für die Einreichung.</description>
 	</email_text>
+	<email_text key="SUBMISSION_ACK_NOT_USER">
+		<subject>Eingangsbestätigung</subject>
+		<body><![CDATA[Liebe/r Autor/in,<br />
+<br />
+{$submitterName} hat das Manuskript &quot;{$submissionTitle}&quot; bei {$contextName} eingereicht. <br />
+<br />
+Für weitere Fragen stehen wir Ihnen gern zur Verfügung. Danke für Ihr Interesse an einer Veröffentlichung in unserer Zeitschrift.<br />
+<br />
+{$editorialContactSignature}]]></body>
+		<description>Diese E-Mail wird, sofern aktiviert, automatisch an die weiteren Autor/innen geschickt, die laut Einreichung keine OJS-Benutzeraccounts haben.</description>
+	</email_text>
 	<email_text key="SUBMISSION_UNSUITABLE">
 		<subject>Ungeeigneter Beitrag</subject>
 		<body><![CDATA[{$authorName},<br />
@@ -289,8 +300,6 @@ In der Hoffnung auf eine positive Antwort,<br />
 <br />
 {$editorialContactSignature}<br />
 <br />
-<br />
-<br />
 &quot;{$submissionTitle}&quot;<br />
 <br />
 {$submissionAbstract}]]></body>
@@ -313,8 +322,6 @@ URL des Beitrags: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br
 In der Hoffnung auf eine positive Antwort,<br />
 <br />
 {$editorialContactSignature}<br />
-<br />
-<br />
 <br />
 &quot;{$submissionTitle}&quot;<br />
 <br />
