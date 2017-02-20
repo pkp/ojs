@@ -73,6 +73,9 @@ class IssueEntryPublicationMetadataForm extends Form {
 			'context' => $context,
 		));
 
+		// check if this submissionRevision has a publication date
+		$templateMgr->assign('publishedVersion', ($this->_submission->getDatePublished()? true : false));
+
 		$journalSettingsDao = DAORegistry::getDAO('JournalSettingsDAO');
 		$templateMgr->assign('issueOptions', $this->getIssueOptions($context));
 
@@ -150,7 +153,7 @@ class IssueEntryPublicationMetadataForm extends Form {
 
 		$submission = $this->getSubmission();
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-		$this->_publishedArticle = $publishedArticleDao->getByArticleId($submission->getId(), null, false);
+		$this->_publishedArticle = $publishedArticleDao->getByArticleId($submission->getId(), null, false, $submission->getSubmissionRevision());
 
 		$copyrightHolder = $submission->getCopyrightHolder(null);
 		$copyrightYear = $submission->getCopyrightYear();
@@ -259,7 +262,7 @@ class IssueEntryPublicationMetadataForm extends Form {
 
 			$sectionDao = DAORegistry::getDAO('SectionDAO');
 			$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-			$publishedArticle = $publishedArticleDao->getByArticleId($submission->getId(), null, false); /* @var $publishedArticle PublishedArticle */
+			$publishedArticle = $publishedArticleDao->getByArticleId($submission->getId(), null, false, $submission->getSubmissionRevision()); /* @var $publishedArticle PublishedArticle */
 
 			if ($publishedArticle) {
 				if (!$issue || !$issue->getPublished()) {
@@ -344,7 +347,7 @@ class IssueEntryPublicationMetadataForm extends Form {
 			// Versioning
 
 			// set publication date
-			$submission->setDatePublished($this->getData('datePublished') ? $this->getData('datePublished') : $submission->getDatePublished());
+			$submission->setDatePublished($this->getData('datePublished') ? $this->getData('datePublished') : Core::getCurrentDate());
 
 			// get revisions
 			if ($request->getUserVar('submissionRevision')) {

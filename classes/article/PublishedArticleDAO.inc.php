@@ -154,12 +154,15 @@ class PublishedArticleDAO extends ArticleDAO {
 				' . $this->getFetchColumns() . '
 			FROM	published_submissions ps
 				LEFT JOIN submissions s ON ps.submission_id = s.submission_id
+				LEFT JOIN submission_settings ss ON ss.submission_id = ps.submission_id
 				LEFT JOIN issues i ON ps.issue_id = i.issue_id
 				' . $this->getFetchJoins() . '
 			WHERE 	i.published = 1
 				' . ($journalId?'AND s.context_id = ?':'') . '
 				AND s.status <> ' . STATUS_DECLINED . '
-			ORDER BY ps.date_published '. ($reverse?'DESC':'ASC'),
+				AND ss.setting_name = "datePublished"
+				AND ss.submission_revision = 1
+			ORDER BY ss.setting_value '. ($reverse?'DESC':'ASC'),
 			$params,
 			$rangeInfo
 		);
@@ -276,7 +279,10 @@ class PublishedArticleDAO extends ArticleDAO {
 	 */
 	function getPublishedArticleById($publishedArticleId) {
 		$result = $this->retrieve(
-			'SELECT * FROM published_submissions WHERE published_submission_id = ?', (int) $publishedArticleId
+			'SELECT ps.*, ss.setting_value FROM published_submissions ps
+				JOIN 	submissions_settings ss ON (ss.submission_id = ps.submission_id) 					WHERE 	ss.setting_name = "datePublished" AND
+					ss.submission_revision = 1 AND
+					published_submission_id = ?', (int) $publishedArticleId
 		);
 		$row = $result->GetRowAssoc(false);
 
@@ -284,7 +290,7 @@ class PublishedArticleDAO extends ArticleDAO {
 		$publishedArticle->setPublishedArticleId($row['published_submission_id']);
 		$publishedArticle->setId($row['submission_id']);
 		$publishedArticle->setIssueId($row['issue_id']);
-		$publishedArticle->setDatePublished($this->datetimeFromDB($row['date_published']));
+		$publishedArticle->setDatePublished($this->datetimeFromDB($row['setting_value']));
 		$publishedArticle->setSequence($row['seq']);
 		$publishedArticle->setAccessStatus($row['access_status']);
 
@@ -480,11 +486,14 @@ class PublishedArticleDAO extends ArticleDAO {
 			'SELECT	s.submission_id AS pub_id
 			FROM	published_submissions ps
 				JOIN submissions s ON ps.submission_id = s.submission_id
+				JOIN submission_settings ss ON ss.submission_id = ps.submission_id
 				JOIN sections se ON s.section_id = se.section_id
 				JOIN issues i ON ps.issue_id = i.issue_id
 			WHERE	i.published = 1
 				' . (isset($journalId)?' AND s.context_id = ?':'') . '
-			ORDER BY ps.date_published DESC',
+				AND ss.setting_name = "datePublished"
+				AND ss.submission_revision = 1
+			ORDER BY ss.setting_value DESC',
 			isset($journalId)?(int) $journalId:false
 		);
 
@@ -498,6 +507,7 @@ class PublishedArticleDAO extends ArticleDAO {
 		$result->Close();
 		return $articleIds;
 	}
+
 	/**
 	 * Retrieve "submission_id"s for published articles for a journal section, sorted
 	 * by reverse publish date.
@@ -511,10 +521,13 @@ class PublishedArticleDAO extends ArticleDAO {
 			'SELECT	s.submission_id
 			FROM published_submissions ps
 				JOIN submissions s ON s.submission_id = ps.submission_id
+				JOIN submission_settings ss ON ss.submission_id = ps.submission_id
 				JOIN issues i ON ps.issue_id = i.issue_id
 			WHERE	i.published = 1 AND
-				s.section_id = ?
-			ORDER BY ps.date_published DESC',
+				s.section_id = ? AND
+				ss.setting_name = "datePublished" AND
+				ss.submission_revision = 1
+			ORDER BY ss.setting_value DESC',
 			(int) $sectionId
 		);
 
@@ -564,12 +577,10 @@ class PublishedArticleDAO extends ArticleDAO {
 	 * @return pubId int
 	 */
 	function insertObject($publishedArticle) {
-		$this->update(
-			sprintf('INSERT INTO published_submissions
-				(submission_id, issue_id, date_published, seq, access_status)
+		$this->update('INSERT INTO published_submissions
+				(submission_id, issue_id, seq, access_status)
 				VALUES
-				(?, ?, %s, ?, ?)',
-				$this->datetimeToDB($publishedArticle->getDatePublished())),
+				(?, ?, ?, ?)',
 			array(
 				(int) $publishedArticle->getId(),
 				(int) $publishedArticle->getIssueId(),
@@ -655,16 +666,13 @@ class PublishedArticleDAO extends ArticleDAO {
 	 * @param PublishedArticle object
 	 */
 	function updatePublishedArticle($publishedArticle) {
-		$this->update(
-			sprintf('UPDATE published_submissions
+		$this->update('UPDATE published_submissions
 				SET
 					submission_id = ?,
 					issue_id = ?,
-					date_published = %s,
 					seq = ?,
 					access_status = ?
 				WHERE published_submission_id = ?',
-				$this->datetimeToDB($publishedArticle->getDatePublished())),
 			array(
 				(int) $publishedArticle->getId(),
 				(int) $publishedArticle->getIssueId(),
@@ -722,11 +730,15 @@ class PublishedArticleDAO extends ArticleDAO {
 	 */
 	function getArticleYearRange($journalId = null) {
 		$result = $this->retrieve(
-			'SELECT	MAX(ps.date_published),
-				MIN(ps.date_published)
+			'SELECT	MAX(ss.setting_value),
+				MIN(ss.setting_value)
 			FROM	published_submissions ps,
-				submissions s
+				submissions s,
+				submission_settings ss
 			WHERE	ps.submission_id = s.submission_id
+				AND s.submission_id = ss.submissionId
+				AND ss.setting_name = "datePublished"
+				AND ss.submission_revision = 1
 				' . (isset($journalId)?' AND s.context_id = ?':''),
 			isset($journalId)?(int) $journalId:false
 		);
@@ -780,21 +792,23 @@ class PublishedArticleDAO extends ArticleDAO {
 			FROM	published_submissions ps
 				JOIN issues i ON (ps.issue_id = i.issue_id)
 				LEFT JOIN submissions s ON (s.submission_id = ps.submission_id)
-				' . ($pubIdType != null?' LEFT JOIN submission_settings ss ON (s.submission_id = ss.submission_id)':'')
+				JOIN submission_settings ss ON (ss.submission_id = ps.submission_id)
+				' . ($pubIdType != null?' LEFT JOIN submission_settings ssp ON (s.submission_id = ssp.submission_id)':'')
 				. ($title != null?' LEFT JOIN submission_settings sst ON (s.submission_id = sst.submission_id)':'')
 				. ($author != null?' LEFT JOIN authors au ON (s.submission_id = au.submission_id)':'')
 				. ($pubIdSettingName != null?' LEFT JOIN submission_settings sss ON (s.submission_id = sss.submission_id AND sss.setting_name = ?)':'')
 				. ' ' . $this->getFetchJoins() .'
 			WHERE
 				i.published = 1 AND s.context_id = ?
-				' . ($pubIdType != null?' AND ss.setting_name = ? AND ss.setting_value IS NOT NULL':'')
+				AND ss.setting_name = "datePublished" AND ss.submission_revision = 1
+				' . ($pubIdType != null?' AND ssp.setting_name = ? AND ssp.setting_value IS NOT NULL':'')
 				. ($title != null?' AND (sst.setting_name = ? AND sst.locale = ? AND sst.setting_value LIKE ?)':'')
 				. ($author != null?' AND (au.first_name LIKE ? OR au.middle_name LIKE ? OR au.last_name LIKE ?)':'')
 				. ($issueId != null?' AND ps.issue_id = ?':'')
 				. (($pubIdSettingName != null && $pubIdSettingValue != null && $pubIdSettingValue == EXPORT_STATUS_NOT_DEPOSITED)?' AND sss.setting_value IS NULL':'')
 				. (($pubIdSettingName != null && $pubIdSettingValue != null && $pubIdSettingValue != EXPORT_STATUS_NOT_DEPOSITED)?' AND sss.setting_value = ?':'')
 				. (($pubIdSettingName != null && is_null($pubIdSettingValue))?' AND (sss.setting_value IS NULL OR sss.setting_value = \'\')':'')
-			. ' ORDER BY ps.date_published DESC, s.submission_id DESC',
+			. ' ORDER BY ss.setting_value DESC, s.submission_id DESC',
 			$params,
 			$rangeInfo
 		);

@@ -243,7 +243,7 @@
 				</div>
 
 				{* Display article versions *}
-				{if $versioningEnabled}
+				{if $versioningEnabled && (@count($previousRevisions) > 1)}
 					{if $previousRevisions|@count > 0}
 						<div class="item versioning">
 							<div class="label">

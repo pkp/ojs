@@ -55,11 +55,11 @@ class ArticleSearchDAO extends SubmissionSearchDAO {
 		}
 
 		if (!empty($publishedFrom)) {
-			$sqlWhere .= ' AND ps.date_published >= ' . $this->datetimeToDB($publishedFrom);
+			$sqlWhere .= ' AND ss.setting_value >= ' . $this->datetimeToDB($publishedFrom);
 		}
 
 		if (!empty($publishedTo)) {
-			$sqlWhere .= ' AND ps.date_published <= ' . $this->datetimeToDB($publishedTo);
+			$sqlWhere .= ' AND ss.setting_value <= ' . $this->datetimeToDB($publishedTo);
 		}
 
 		if (!empty($journal)) {
@@ -73,17 +73,21 @@ class ArticleSearchDAO extends SubmissionSearchDAO {
 				o.submission_id,
 				MAX(s.context_id) AS journal_id,
 				MAX(i.date_published) AS i_pub,
-				MAX(ps.date_published) AS s_pub,
+				MAX(ss.setting_value) AS s_pub,
 				COUNT(*) AS count
 			FROM
 				submissions s,
 				published_submissions ps,
+				submission_settings ss,
 				issues i,
 				submission_search_objects o NATURAL JOIN ' . $sqlFrom . '
 			WHERE
 				s.submission_id = o.submission_id AND
 				s.status = ' . STATUS_PUBLISHED . ' AND
 				ps.submission_id = s.submission_id AND
+				ss.submission_id = s.submission_id AND
+				ss.setting_name = "datePublished" AND
+				ss.submission_revision = 1 AND
 				i.issue_id = ps.issue_id AND
 				i.published = 1 AND ' . $sqlWhere . '
 			GROUP BY o.submission_id

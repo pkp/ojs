@@ -48,7 +48,6 @@ class ReviewerSubmissionDAO extends ArticleDAO {
 		$result = $this->retrieve(
 			'SELECT	a.*,
 				r.*,
-				ps.date_published,
 				u.first_name, u.last_name,
 				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
 				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
@@ -192,7 +191,6 @@ class ReviewerSubmissionDAO extends ArticleDAO {
 		$locale = AppLocale::getLocale();
 		$sql = 'SELECT	a.*,
 				r.*,
-				ps.date_published,
 				u.first_name, u.last_name,
 				atl.setting_value AS submission_title,
 				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,

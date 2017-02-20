@@ -22,5 +22,6 @@
 		<query>UPDATE submission_galley_files SET version = 1 WHERE version IS NULL OR version = 0</query>
 		<query>ALTER TABLE submission_galleys DROP COLUMN file_id</query>
 		<query>ALTER TABLE submission_galley_files DROP PRIMARY KEY, ADD PRIMARY KEY(galley_id, version)</query>
+		<query>ALTER TABLE published_submissions DROP COLUMN date_published</query>
 	</sql>
 </data>

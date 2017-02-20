@@ -524,6 +524,7 @@ class ArticleGalleyDAO extends RepresentationDAO implements PKPPubIdPluginDAO {
 			FROM	submission_galleys g
 				JOIN submissions s ON (s.submission_id = g.submission_id)
 				LEFT JOIN published_submissions ps ON (ps.submission_id = g.submission_id)
+				JOIN submission_settings ss ON (ss.submission_id = ps.submission_id)
 				JOIN issues i ON (ps.issue_id = i.issue_id)
 				LEFT JOIN submission_galley_files sfg ON (sfg.galley_id = g.galley_id)
 				LEFT JOIN submission_files sf ON (sfg.file_id = sf.file_id)
@@ -534,6 +535,7 @@ class ArticleGalleyDAO extends RepresentationDAO implements PKPPubIdPluginDAO {
 				. ($pubIdSettingName != null?' LEFT JOIN submission_galley_settings gss ON (g.galley_id = gss.galley_id AND gss.setting_name = ?)':'') .'
 			WHERE
 				i.published = 1 AND s.context_id = ?
+				AND ss.setting_name = "datePublished" AND ss.submission_revision = 1
 				' . ($pubIdType != null?' AND gs.setting_name = ? AND gs.setting_value IS NOT NULL':'')
 				. ($title != null?' AND (sst.setting_name = ? AND sst.locale = ? AND sst.setting_value LIKE ?)':'')
 				. ($author != null?' AND (au.first_name LIKE ? OR au.middle_name LIKE ? OR au.last_name LIKE ?)':'')
@@ -541,7 +543,7 @@ class ArticleGalleyDAO extends RepresentationDAO implements PKPPubIdPluginDAO {
 				. (($pubIdSettingName != null && $pubIdSettingValue != null && $pubIdSettingValue == EXPORT_STATUS_NOT_DEPOSITED)?' AND gss.setting_value IS NULL':'')
 				. (($pubIdSettingName != null && $pubIdSettingValue != null && $pubIdSettingValue != EXPORT_STATUS_NOT_DEPOSITED)?' AND gss.setting_value = ?':'')
 				. (($pubIdSettingName != null && is_null($pubIdSettingValue))?' AND (gss.setting_value IS NULL OR gss.setting_value = \'\')':'') .'
-				ORDER BY ps.date_published DESC, s.submission_id DESC, g.galley_id DESC',
+				ORDER BY ss.setting_value DESC, s.submission_id DESC, g.galley_id DESC',
 				$params,
 				$rangeInfo
 		);

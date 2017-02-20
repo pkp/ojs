@@ -47,7 +47,7 @@
 			{/fbvFormSection}
 		{/fbvFormArea}
 
-		{if $publishedArticle}
+		{if $publishedArticle && $publishedVersion}
 			{fbvFormArea id="schedulingInformation" title="editor.issues.published"}
 				{fbvFormSection for="publishedDate"}
 					{fbvElement type="text" required=true id="datePublished" value=$datePublished|date_format:$dateFormatShort translate=false label="editor.issues.published" inline=true size=$fbvStyles.size.MEDIUM class="datepicker"}

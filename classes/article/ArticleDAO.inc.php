@@ -45,7 +45,7 @@ class ArticleDAO extends SubmissionDAO {
 		$params = $this->getFetchParameters();
 		$params[] = $settingName;
 
-		$sql = 'SELECT s.*, ps.date_published,
+		$sql = 'SELECT s.*,
 				' . $this->getFetchColumns() . '
 			FROM	submissions s
 				LEFT JOIN published_submissions ps ON (s.submission_id = ps.submission_id)
@@ -378,7 +378,7 @@ class ArticleDAO extends SubmissionDAO {
 	 * @copydoc SubmissionDAO::getGroupByColumns()
 	 */
 	protected function getGroupByColumns() {
-		return 's.submission_id, ps.date_published, stl.setting_value, stpl.setting_value, sal.setting_value, sapl.setting_value';
+		return 's.submission_id, stl.setting_value, stpl.setting_value, sal.setting_value, sapl.setting_value';
 	}
 
 	/**
