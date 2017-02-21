@@ -12,7 +12,12 @@
 <div class="block" id="sidebarNavigation">
 	<span class="blockTitle">{translate key="plugins.block.navigation.journalContent"}</span>
 
-	<form id="simpleSearchForm" action="{url page="search" op="search"}">
+	{url|assign:"searchFormUrl" op="search" escape=false}
+	{$searchFormUrl|parse_url:$smarty.const.PHP_URL_QUERY|parse_str:$formUrlParameters}
+	<form id="simplesearchForm" action="{$searchFormUrl|strtok:"?"|escape}">
+		{foreach from=$formUrlParameters key=paramKey item=paramValue}
+			<input type="hidden" name="{$paramKey|escape}" value="{$paramValue|escape}"/>
+		{/foreach}
 		<table id="simpleSearchInput">
 			<tr>
 				<td>
