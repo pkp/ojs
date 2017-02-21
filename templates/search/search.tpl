@@ -19,7 +19,13 @@
 			$('#searchForm').pkpHandler('$.pkp.pages.search.SearchFormHandler');
 		{rdelim});
 	</script>
-	<form id="searchForm" action="{url op="search"}">
+
+	{url|assign:"searchFormUrl" op="search" escape=false}
+	{$searchFormUrl|parse_url:$smarty.const.PHP_URL_QUERY|parse_str:$formUrlParameters}
+	<form id="searchForm" action="{$searchFormUrl|strtok:"?"|escape}">
+		{foreach from=$formUrlParameters key=paramKey item=paramValue}
+			<input type="hidden" name="{$paramKey|escape}" value="{$paramValue|escape}"/>
+		{/foreach}
 		<table class="data">
 			<tr valign="top">
 				<td class="label"><label for="query">{translate key="search.searchAllCategories"}</label></td>
