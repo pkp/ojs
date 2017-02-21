@@ -251,7 +251,7 @@
 							</div>
 							<div class="value">
 								{foreach from=$previousRevisions item=submissionRevision}
-									<a href="{url op="version" path=$article->getBestArticleId($currentJournal)|to_array:$submissionRevision->getSubmissionRevision() escape=false}">{$submissionRevision->getDatePublished()|date_format:$dateFormatShort}</a><br>
+									<a href="{url op="version" path=$article->getBestArticleId($currentJournal)|to_array:$submissionRevision->getSubmissionRevision() escape=false}">{translate key="submission.versioning.version" version=$submissionRevision->getSubmissionRevision() date=$submissionRevision->getDatePublished()|date_format:$dateFormatShort}</a><br>
 								{/foreach}
 							</div>
 						</div>

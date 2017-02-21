@@ -55,43 +55,46 @@ class ArticleGalleyGridRow extends GridRow {
 			$actionArgs = $this->getRequestArgs();
 			$actionArgs['representationId'] = $rowId;
 
-			// Add row-level actions
-			import('lib.pkp.classes.linkAction.request.AjaxModal');
-			$this->addAction(new LinkAction(
-				'editGalley',
-				new AjaxModal(
-					$router->url($request, null, null, 'editGalley', null, $actionArgs),
-					__('submission.layout.editGalley'),
-					'modal_edit'
-				),
-				__('grid.action.edit'),
-				'edit'
-			));
+			// Check of this is the latest version to ...
+			if($submissionRevision == $submission->getCurrentVersionId()){
+				// ... add row-level actions
+				import('lib.pkp.classes.linkAction.request.AjaxModal');
+				$this->addAction(new LinkAction(
+					'editGalley',
+					new AjaxModal(
+						$router->url($request, null, null, 'editGalley', null, $actionArgs),
+						__('submission.layout.editGalley'),
+						'modal_edit'
+					),
+					__('grid.action.edit'),
+					'edit'
+				));
 
-			$galley = $this->getData();
-			if ($galley->getRemoteUrl() == '') {
-				import('lib.pkp.controllers.api.file.linkAction.AddFileLinkAction');
-				import('lib.pkp.classes.submission.SubmissionFile'); // Constants
-				$this->addAction(new AddFileLinkAction(
-					$request, $this->getSubmission()->getId(), WORKFLOW_STAGE_ID_PRODUCTION,
-					array(ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR, ROLE_ID_ASSISTANT),
-					null, SUBMISSION_FILE_PROOF,
-					ASSOC_TYPE_REPRESENTATION, $rowId,
-					null, $galley->getFileId()
+				$galley = $this->getData();
+				if ($galley->getRemoteUrl() == '') {
+					import('lib.pkp.controllers.api.file.linkAction.AddFileLinkAction');
+					import('lib.pkp.classes.submission.SubmissionFile'); // Constants
+					$this->addAction(new AddFileLinkAction(
+						$request, $this->getSubmission()->getId(), WORKFLOW_STAGE_ID_PRODUCTION,
+						array(ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR, ROLE_ID_ASSISTANT),
+						null, SUBMISSION_FILE_PROOF,
+						ASSOC_TYPE_REPRESENTATION, $rowId,
+						null, $galley->getFileId()
+					));
+				}
+
+				import('lib.pkp.classes.linkAction.request.RemoteActionConfirmationModal');
+				$this->addAction(new LinkAction(
+					'deleteGalley',
+					new RemoteActionConfirmationModal(
+						$request->getSession(),
+						__('common.confirmDelete'),
+						__('grid.action.delete'),
+						$router->url($request, null, null, 'deleteGalley', null, $actionArgs), 'modal_delete'),
+					__('grid.action.delete'),
+					'delete'
 				));
 			}
-
-			import('lib.pkp.classes.linkAction.request.RemoteActionConfirmationModal');
-			$this->addAction(new LinkAction(
-				'deleteGalley',
-				new RemoteActionConfirmationModal(
-					$request->getSession(),
-					__('common.confirmDelete'),
-					__('grid.action.delete'),
-					$router->url($request, null, null, 'deleteGalley', null, $actionArgs), 'modal_delete'),
-				__('grid.action.delete'),
-				'delete'
-			));
 		}
 	}
 

@@ -24,9 +24,6 @@ class ArticleGalleyGridHandler extends GridHandler {
 	/** @var PKPRequest */
 	var $_request;
 
-	/** TODO: FIXME */
-	var $_submissionRevision;
-
 	/**
 	 * Constructor
 	 */
@@ -53,20 +50,11 @@ class ArticleGalleyGridHandler extends GridHandler {
 	}
 
 	/**
-	 * Set submission revision.
-	 * @param $submissionRevision int
-	 * TODO: FIXME get submission revision from authorized context object
-	 */
-	function setSubmissionRevision($submissionRevision) {
-		$this->_submissionRevision = $submissionRevision;
-	}
-
-	/**
 	 * Get submission revision.
 	 * @return int
 	 */
 	function getSubmissionRevision() {
-		return $this->_submissionRevision;
+		return $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION_REVISION);
 	}
 
 	/**
@@ -97,8 +85,8 @@ class ArticleGalleyGridHandler extends GridHandler {
 		import('lib.pkp.classes.security.authorization.WorkflowStageAccessPolicy');
 		$this->addPolicy(new WorkflowStageAccessPolicy($request, $args, $roleAssignments, 'submissionId', WORKFLOW_STAGE_ID_PRODUCTION));
 
-		// TODO: add submission revision to access policy
-		$this->setSubmissionRevision($request->getUserVar('submissionRevision'));
+		import('lib.pkp.classes.security.authorization.internal.VersioningRequiredPolicy');
+		$this->addPolicy(new VersioningRequiredPolicy($request, $args));
 
 		if ($request->getUserVar('representationId')) {
 			import('lib.pkp.classes.security.authorization.internal.RepresentationRequiredPolicy');
@@ -138,6 +126,11 @@ class ArticleGalleyGridHandler extends GridHandler {
 		$router = $request->getRouter();
 		$userRoles = $this->getAuthorizedContextObject(ASSOC_TYPE_USER_ROLES);
 		if (0 != count(array_intersect($userRoles, array(ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR, ROLE_ID_ASSISTANT)))) {
+
+		// Add addGalley action to the latest version
+		if($this->getSubmissionRevision() == $this->getSubmission()->getCurrentVersionId()){
+			$router = $request->getRouter();
+
 			$this->addAction(new LinkAction(
 				'addGalley',
 				new AjaxModal(
