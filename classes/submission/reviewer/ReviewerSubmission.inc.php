@@ -264,22 +264,6 @@ class ReviewerSubmission extends Article {
 	}
 
 	/**
-	 * Get the replaced value.
-	 * @return boolean
-	 */
-	function getReplaced() {
-		return $this->getData('replaced');
-	}
-
-	/**
-	 * Set the reviewer's replaced value.
-	 * @param $replaced boolean
-	 */
-	function setReplaced($replaced) {
-		return $this->setData('replaced', $replaced);
-	}
-
-	/**
 	 * Get the cancelled value.
 	 * @return boolean
 	 */
