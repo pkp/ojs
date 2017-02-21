@@ -64,7 +64,7 @@
 	<message key="submission.submit.form.localeRequired">لطفاً، إختر اللغة التي كُتب بها المؤلَّف.</message>
 	<message key="submission.submit.submissionChecklist">قائمة إجراءات طلب النشر</message>
 	<message key="submission.submit.submissionChecklistDescription">عليك أن تقرأ المتطلبات أدناه وتعترف بها قبل المتابعة.</message>
-	<message key="submission.submit.privacyStatement">بيان الخصوصوية</message>
+	<message key="submission.submit.privacyStatement">بيان الخصوصية</message>
 	<message key="submission.submit.contributorRole">دور المساهمين</message>
 	<message key="submission.submit.form.authorRequired">أذكر مؤلفاً واحداً على الأقل لهذا الطلب.</message>
 	<message key="submission.submit.form.authorRequiredFields">الاسم الأول، الاسم الأخير وعنوان البريد الالكتروني لكل مؤلف معلومات مطلوبة حتماً.</message>
@@ -75,4 +75,5 @@
 	<message key="submission.citationFormat.notFound">تعذر استرجاع صيغة الاقتباس التي تم طلبها.</message>
 
 	<message key="submission.metadataDescription">هذه المواصفات مستندة إلى جدول البيانات الوصفية Dublin Core، وهو صيغة قياسية عالمية تستعمل لوصف محتويات المجلة.</message>
+	<message key="section.any">أي قسم</message>
 </locale>
