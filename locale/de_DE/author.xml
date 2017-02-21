@@ -30,6 +30,7 @@
 	<message key="author.submit.metadata">Metadaten eingeben</message>
 	<message key="author.submit.supplementaryFiles">Zusatzdateien hochladen</message>
 	<message key="author.submit.confirmation">Bestätigung</message>
+	<message key="author.submit.nextSteps">Nächste Schritte</message>
 	<message key="submission.submit.cancelSubmission">Sie können die Einreichung auch später fertigstellen, indem Sie "Aktuelle Beiträge" auf der Autor/innenstartseite auswählen.</message>
 	<message key="author.submit.notAccepting">Die Zeitschrift nimmt zur Zeit keine Beiträge an.</message>
 	<message key="author.submit.requestWaiver">Gebührenverzicht beantragen</message>
@@ -45,11 +46,8 @@
 	<message key="author.submissions.confirmDelete">Sind Sie sicher, dass Sie diese unvollständige Einreichung löschen wollen?</message>
 	<message key="author.submissions.viewStatus">Status anzeigen</message>
 	<message key="author.submissions.noSubmissions">Keine Eingaben</message>
-	<message key="author.submit.howToSubmit"><![CDATA[Sind Schwierigkeiten aufgetreten? Kontaktieren Sie <a href="mailto:{$supportEmail}">{$supportName}</a> ({$supportPhone}).]]></message>
-	<message key="author.submit.howToSubmitNoPhone"><![CDATA[Sind Schwierigkeiten aufgetreten? Kontaktieren Sie <a href="mailto:{$supportEmail}">{$supportName}</a>.]]></message>
 	<message key="author.submit.journalSection">Zeitschriftenrubrik</message>
-	<message key="author.submit.journalSectionDescription"><![CDATA[Wählen Sie die passende Rubrik für diesen Beitrag aus (Siehe Rubriken und Richtlinien in <a href="{$aboutUrl}" target="_new">Über uns</a>).]]></message>
-	<message key="submission.submit.selectSection">Wählen Sie eine Rubrik aus...</message>
+	<message key="author.submit.journalSectionDescription">Artikel müssen in einer der Rubriken der Zeitschrift eingereicht werden.</message>
 	<message key="author.submit.verifyChecklist">Stellen Sie sicher, dass alle Punkte der Checkliste erfüllt sind, bevor Sie fortfahren.</message>
 	<message key="author.submit.copyrightNoticeAgree">Die Autor/innen stimmen den Bestimmungen dieser Copyright-Regelungen zu, die für diesen Beitrag im Falle einer Veröffentlichung Anwendung finden. (Kommentare für die Redaktion können weiter unten angefügt werden.)</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">Sie müssen den Copyright-Regelungen zustimmen, bevor Sie fortfahren.</message>
@@ -117,5 +115,4 @@
 	<message key="author.article.copyeditedFile">Lektorierte Datei</message>
 	<message key="author.article.authorRevisedFile">Autor/innendatei</message>
 	<message key="author.submit.authorSubmitLoginMessage">Um Beiträge bei dieser Zeitschrift einzureichen, ist ein Benutzer/innen-Konto erforderlich. Dies ermöglicht es unserer Redaktion, Ihre Beiträge zu verfolgen und Sie zu kontaktieren, wenn sich der Status Ihres Beitrags ändert oder wenn zusätzliche Informationen von Ihnen benötigt werden.</message>
-	<message key="author.submit.nextSteps">Nächste Schritte</message>
 </locale>

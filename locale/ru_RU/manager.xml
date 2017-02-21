@@ -586,6 +586,7 @@
 	<message key="plugins.importexport.common.action.export">Экспорт</message>
 	<message key="plugins.importexport.common.action.markRegistered">Отметить как зарегистрированный</message>
 	<message key="plugins.importexport.common.action.register">Зарегистрировать</message>
+	<message key="plugins.importexport.common.validation">Проверять XML перед экспортом и регистрацией.</message>
 	<!--  уведомления и ошибки -->
 	<message key="plugins.importexport.common.error.noObjectsSelected">Нет выбранных объектов.</message>
 	<message key="plugins.importexport.common.error.validation">Невозможно конвертировать выбранные объекты.</message>

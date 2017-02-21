@@ -73,4 +73,7 @@
 	<message key="submission.submit.form.contributorRoleRequired">Bitte wählen Sie die Rolle der Beiträgerin/des Beiträgers aus.</message>
 
 	<message key="submission.citationFormat.notFound">Das angeforderte Zitationsformat konnte nicht abgerufen werden.</message>
+
+	<message key="submission.metadataDescription">Diese Spezifikationen basieren auf dem Dublin-Core-Metadaten-Schema, einem internationalen Standard zur Beschreibung von Zeitschrifteninhalten.</message>
+	<message key="section.any">Alle Rubriken</message>
 </locale>

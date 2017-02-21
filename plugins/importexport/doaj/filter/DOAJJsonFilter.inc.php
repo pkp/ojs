@@ -139,8 +139,9 @@ class DOAJJsonFilter extends NativeImportExportFilter {
 			$abstract = $pubObject->getAbstract($pubObject->getLocale());
 			if (!empty($abstract)) $article['bibjson']['abstract'] = PKPString::html2text($abstract);
 			// Keywords
-			$keywords = array_map('trim', explode(';', $pubObject->getSubject($pubObject->getLocale())));
-			if (!empty($keywords)) $article['bibjson']['keywords'] = $keywords;
+			$dao = DAORegistry::getDAO('SubmissionKeywordDAO');
+			$keywords = $dao->getKeywords($pubObject->getId(), array($pubObject->getLocale()));
+			if (!empty($keywords[$pubObject->getLocale()])) $article['bibjson']['keywords'] = $keywords[$pubObject->getLocale()];
 
 			/* not needed here:
 			// Language

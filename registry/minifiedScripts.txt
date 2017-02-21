@@ -47,7 +47,6 @@ lib/pkp/js/classes/features/OrderGridItemsFeature.js
 lib/pkp/js/classes/features/OrderCategoryGridItemsFeature.js
 lib/pkp/js/classes/features/OrderListbuilderItemsFeature.js
 lib/pkp/js/classes/features/OrderMultipleListsItemsFeature.js
-lib/pkp/js/classes/features/GridCategoryAccordionFeature.js
 lib/pkp/js/classes/features/GeneralPagingFeature.js
 lib/pkp/js/classes/features/PagingFeature.js
 lib/pkp/js/classes/features/InfiniteScrollingFeature.js
