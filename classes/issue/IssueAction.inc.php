@@ -195,7 +195,7 @@ class IssueAction {
 			$userId = $user->getId();
 			$subscriptionAssumedRoles = array(
 				ROLE_ID_MANAGER,
-				ROLE_ID_SECTION_EDITOR,
+				ROLE_ID_SUB_EDITOR,
 				ROLE_ID_ASSISTANT,
 				ROLE_ID_SUBSCRIPTION_MANAGER
 			);

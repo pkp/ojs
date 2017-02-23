@@ -362,7 +362,7 @@
 	<message key="manager.statistics.statistics.subscriptions">الاشتراكات</message>
 	<message key="manager.statistics.reports.defaultReport.articleDownloads">تنزيلات ملفات المؤلَّفات</message>
 	<message key="manager.statistics.reports.defaultReport.articleAbstract">مشاهدات صفحة الملخصات</message>
-	<message key="manager.statistics.reports.defaultReport.articleAbstractAndDownloads">ملخصات المؤلَّفات والتنزيلات</message>
+	<message key="manager.statistics.reports.defaultReport.articleAbstractAndDownloads">ملخصات المؤلَّفات، عدد المشاهدات والتنزيلات</message>
 	<message key="manager.statistics.reports.defaultReport.journalIndexPageViews">مشاهدات صفحة المجلة الرئيسية</message>
 	<message key="manager.statistics.reports.defaultReport.issuePageViews">مشاهدات صفحة محتويات العدد</message>
 	<message key="manager.statistics.reports.filters.byContext.description">تضييق النتائج حسب السياق (الإصدار و/أو المؤلَّف).</message>

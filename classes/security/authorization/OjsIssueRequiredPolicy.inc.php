@@ -53,7 +53,7 @@ class OjsIssueRequiredPolicy extends DataObjectRequiredPolicy {
 			array(
 				ROLE_ID_SITE_ADMIN,
 				ROLE_ID_MANAGER,
-				ROLE_ID_SECTION_EDITOR,
+				ROLE_ID_SUB_EDITOR,
 				ROLE_ID_ASSISTANT,
 			)
 		))==0) {

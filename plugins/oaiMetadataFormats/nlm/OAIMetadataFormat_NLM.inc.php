@@ -258,7 +258,7 @@ class OAIMetadataFormat_NLM extends OAIMetadataFormat {
 
 		$response = '';
 		$roleDao = DAORegistry::getDAO('RoleDAO');
-		$roleMap = array(ROLE_ID_SECTION_EDITOR => 'secteditor', ROLE_ID_MANAGER => 'editor');
+		$roleMap = array(ROLE_ID_SUB_EDITOR => 'secteditor', ROLE_ID_MANAGER => 'editor');
 		foreach ($roleMap as $roleId => $roleName) {
 			$users = $roleDao->getUsersByRoleId($roleId, $journalId);
 			$isFirst = true;
