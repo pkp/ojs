@@ -590,7 +590,7 @@
 	<message key="plugins.importexport.common.error.noObjectsSelected">Tidak ada objek yang dipilih.</message>
 	<message key="plugins.importexport.common.error.validation">Tidak dapat mengubah objek yang dipilih.</message>
 	<message key="plugins.importexport.common.invalidXML">Invalid XML:</message>
-	<message key="plugins.importexport.common.export.error.outputFileNotWritable">File output {$param} tidak <em>writable</em>.</message>
+	<message key="plugins.importexport.common.export.error.outputFileNotWritable">File output {$param} tidak writable.</message>
 	<message key="plugins.importexport.common.register.error.mdsError">Registrasi tidak berhasil! Server registrasi DOI memberikan error: '{$param}'.</message>
 	<message key="plugins.importexport.common.register.success">Registrasi berhasil!</message>
 	<message key="plugins.importexport.common.senderTask.warning.noDOIprefix">Prefix DOI tidak ditemukan untuk jurnal dengan path {$path}.</message>
