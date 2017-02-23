@@ -199,7 +199,7 @@
 	<message key="user.reviewerPrompt.userGroup">Ya, daftarkan saya sebagai {$userGroup}.</message>
 	<message key="user.register.contextsPrompt">Jurnal mana saja yang Anda pilih?</message>
 	<message key="user.register.otherContextRoles">Mendaftar ke peran berikut.</message>
-	<message key="user.register.noContextReviewerInterests">Jika Anda meminta peran sebagai reviewer, mohon sebutkan subjek yang Anda minati.</message>, 
+	<message key="user.register.noContextReviewerInterests">Jika Anda meminta peran sebagai reviewer, mohon sebutkan subjek yang Anda minati.</message>
 	<message key="user.myJournals">Jurnal Saya</message>
 	<message key="user.manageMySubscriptions">Atur Langganan Saya</message>
 	<message key="user.noRoles.chooseJournal">Akun Anda tidak terdaftar ke jurnal apapun. Pilihlah satu jurnal:</message>
