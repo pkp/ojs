@@ -224,4 +224,5 @@
 	<message key="editor.submission.selectGalleyFiles">Seleccionar los archivos de galerada</message>
 	<message key="editor.submission.editorial.finalDraftDescription"><![CDATA[Los borradores finales de esta lista son transformados por el corrector/a de originales en versiones revisadas, cargadas a continuación en <span class="pkp_help_title">Corrección de originales</span>.]]></message>
 	<message key="editor.submission.proof.manageProofFilesDescription">Cualquier archivo que ya haya sido asignado a una fase del envío puede añadirse a la lista de corrección de originales marcando la casilla "Añadir" y haciendo clic en "Buscar": se listarán todos los archivos disponibles y podrán ser seleccionados para su inclusión.</message>
+	<message key="editor.publicIdentificationExistsForTheSameType">El identificador público '{$publicIdentifier}' ya existe para otro objeto del mismo tipo. Por favor, elija identificadores únicos para los objetos del mismo tipo en su revista.</message>
 </locale>
