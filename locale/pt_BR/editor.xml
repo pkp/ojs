@@ -228,4 +228,5 @@
 	<message key="editor.article.schedulePublication">Agendar para Publicação</message>
 	<message key="editor.article.coverImage">Imagem de Capa</message>
 	<message key="editor.article.removeCoverImageFileNotFound">Não foi possível encontrar a imagem da capa que você solicitou para excluir. Ele já pode ter sido excluída. Tente recarregar a página.</message>
+	<message key="editor.publicIdentificationExistsForTheSameType">O identificador público '{$publicIdentifier}' já existe para outro objeto do mesmo tipo. Por favor, escolha identificadores únicos para os objetos do mesmo tipo dentro de sua revista.</message>
 </locale>
