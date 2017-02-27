@@ -34,9 +34,9 @@ file storage, so be sure to back it up before running an upgrade.
 With that noted, follow the OJS 3.0 process described below.
 
 
-========================
-Upgrading from OJS 3.0.0
-========================
+======================
+Upgrading from OJS 3.x
+======================
 
 Upgrading to the latest version of OJS involves two steps:
 
