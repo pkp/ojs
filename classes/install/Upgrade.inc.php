@@ -267,12 +267,10 @@ class Upgrade extends Installer {
 
 			// Reviewers.  All existing OJS reviewers get mapped to external reviewers.
 			// There should only be one user group with ROLE_ID_REVIEWER in the external review stage.
-			$userGroups = $userGroupDao->getUserGroupsByStage($journal->getId(), WORKFLOW_STAGE_ID_EXTERNAL_REVIEW, true, false, ROLE_ID_REVIEWER);
+			$userGroups = $userGroupDao->getUserGroupsByStage($journal->getId(), WORKFLOW_STAGE_ID_EXTERNAL_REVIEW, ROLE_ID_REVIEWER);
 			$reviewerUserGroup = null; // keep this in scope for later.
 
 			while ($group = $userGroups->next()) {
-				// make sure.
-				if ($group->getRoleId() != ROLE_ID_REVIEWER) continue;
 				$reviewerUserGroup = $group;
 
 				$userResult = $journalDao->retrieve('SELECT user_id FROM roles WHERE journal_id = ? AND role_id = ?', array((int) $journal->getId(), ROLE_ID_REVIEWER));
