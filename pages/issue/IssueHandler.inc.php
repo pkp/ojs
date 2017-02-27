@@ -74,19 +74,16 @@ class IssueHandler extends Handler {
 	 * Display current issue page.
 	 */
 	function current($args, $request) {
-		$this->setupTemplate($request);
-
 		$journal = $request->getJournal();
-
 		$issueDao = DAORegistry::getDAO('IssueDAO');
 		$issue = $issueDao->getCurrent($journal->getId(), true);
 
-		$templateMgr = TemplateManager::getManager($request);
-
 		if ($issue != null) {
-			$request->redirect(null, 'issue', 'view', $issue->getId(), $request->getQueryArray());
+			$request->redirect(null, 'issue', 'view', $issue->getBestIssueId());
 		}
 
+		$this->setupTemplate($request);
+		$templateMgr = TemplateManager::getManager($request);
 		// consider public identifiers
 		$pubIdPlugins = PluginRegistry::loadCategory('pubIds', true);
 		$templateMgr->assign('pubIdPlugins', $pubIdPlugins);
