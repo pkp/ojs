@@ -12,7 +12,7 @@
   -->
 <data>
 	<sql><!-- pkp/pkp-lib#2160: Clean up editorial history -->
-		<query>UPDATE event_log SET setting_name='submission_id' WHERE setting_name='article_id'</query>
+		<query>UPDATE event_log_settings SET setting_name='submission_id' WHERE setting_name='article_id'</query>
 	</sql>
 </data>
 
