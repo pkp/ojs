@@ -307,7 +307,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 		$xmlFile = array_shift($args);
 		$journalPath = array_shift($args);
 
-		AppLocale::requireComponents(LOCALE_COMPONENT_APP_MANAGER);
+		AppLocale::requireComponents(LOCALE_COMPONENT_APP_MANAGER, LOCALE_COMPONENT_PKP_MANAGER, LOCALE_COMPONENT_PKP_SUBMISSION);
 
 		$journalDao = DAORegistry::getDAO('JournalDAO');
 		$issueDao = DAORegistry::getDAO('IssueDAO');
@@ -351,7 +351,61 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 					return;
 				}
 
-				$this->importSubmissions(file_get_contents($xmlFile), $journal, $user);
+				$filter = 'native-xml=>issue';
+				// is this articles import:
+				$xmlString = file_get_contents($xmlFile);
+				$document = new DOMDocument();
+				$document->loadXml($xmlString);
+				$requirementsErrors = null;
+				if (in_array($document->documentElement->tagName, array('article', 'articles'))) {
+					$filter = 'native-xml=>article';
+				}
+				$deployment = new NativeImportExportDeployment($journal, $user);
+				$content = $this->importSubmissions($xmlString, $filter, $deployment);
+
+				// Are there any issues import errors, display them
+				$processedIssuesIds = $deployment->getProcessedObjectsIds(ASSOC_TYPE_ISSUE);
+				if (!empty($processedIssuesIds)) {
+					$issuesErrors = array_filter($processedIssuesIds, create_function('$a', 'return !empty($a);'));
+					if (!empty($issuesErrors)) {
+						echo __('plugins.importexport.common.errorsOccured') . "\n";
+						$i = 0;
+						foreach ($issuesErrors as $issuesErrorMessages) {
+							if (count($issuesErrorMessages) > 0) {
+								echo ++$i . '.' . __('issue.issue') . "\n";
+								foreach ($issuesErrorMessages as $issuesErrorMessage) {
+									echo '- ' . $issuesErrorMessage . "\n";
+								}
+							}
+						}
+					}
+				}
+				// Are there any submissions import errors, display them
+				$processedSubmissionsIds = $deployment->getProcessedObjectsIds(ASSOC_TYPE_SUBMISSION);
+				if (!empty($processedSubmissionsIds)) {
+					$submissionsErrors = array_filter($processedSubmissionsIds, create_function('$a', 'return !empty($a);'));
+					if (!empty($submissionsErrors)) {
+						echo __('plugins.importexport.common.errorsOccured') . "\n";
+						$i = 0;
+						foreach ($submissionsErrors as $submissionsErrorMessages) {
+							if (count($submissionsErrorMessages) > 0) {
+								echo ++$i . '.' . __('submission.submission') . "\n";
+								foreach ($submissionsErrorMessages as $submissionsErrorMessage) {
+									echo '- ' . $submissionsErrorMessage . "\n";
+								}
+							}
+						}
+					}
+				}
+				// If there are any submissions or validataion errors
+				// delete imported submissions and issues.
+				// Issues errors can be ignored here, because they only contain section mismatch errors,
+				// that shall only be displayed to the user but that do not influence the import objects.
+				if (!empty($submissionsErrors) || !empty($validationErrors)) {
+					// remove all imported issues and sumissions
+					$deployment->removeImportedObjects(ASSOC_TYPE_ISSUE);
+					$deployment->removeImportedObjects(ASSOC_TYPE_SUBMISSION);
+				}
 				return;
 			case 'export':
 				if ($xmlFile != '') switch (array_shift($args)) {
