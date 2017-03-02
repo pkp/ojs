@@ -30,9 +30,9 @@ class LoginHandler extends PKPLoginHandler {
 	 * Helper Function - set mail from address
 	 * @param $request PKPRequest
 	 * @param $mail MailTemplate
+	 * @param $site Site
 	 */
-	function _setMailFrom($request, &$mail) {
-		$site = $request->getSite();
+	function _setMailFrom($request, $mail, $site) {
 		$journal = $request->getJournal();
 
 		// Set the sender based on the current context
