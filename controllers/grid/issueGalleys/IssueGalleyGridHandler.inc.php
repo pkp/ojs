@@ -64,10 +64,10 @@ class IssueGalleyGridHandler extends GridHandler {
 	/**
 	 * @copydoc GridHandler::setDataElementSequence()
 	 */
-	function setDataElementSequence($request, $rowId, &$issueGalley, $newSequence) {
+	function setDataElementSequence($request, $rowId, $gridDataElement, $newSequence) {
 		$issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /* @var $issueGalleyDao IssueGalleyDAO */
-		$issueGalley->setSequence($newSequence);
-		$issueGalleyDao->updateObject($issueGalley);
+		$gridDataElement->setSequence($newSequence);
+		$issueGalleyDao->updateObject($gridDataElement);
 	}
 
 	/**

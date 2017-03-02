@@ -32,12 +32,11 @@ class SectionGridHandler extends SetupGridHandler {
 	//
 	// Overridden template methods
 	//
-	/*
-	 * Configure the grid
-	 * @param $request PKPRequest
+	/**
+	 * @copydoc GridHandler::initialize()
 	 */
-	function initialize($request) {
-		parent::initialize($request);
+	function initialize($request, $args = null) {
+		parent::initialize($request, $args);
 		$journal = $request->getJournal();
 
 		// FIXME are these all required?
