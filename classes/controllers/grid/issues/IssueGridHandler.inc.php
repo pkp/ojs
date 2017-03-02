@@ -62,9 +62,9 @@ class IssueGridHandler extends GridHandler {
 	}
 
 	/**
-	 * @see PKPHandler::initialize()
+	 * @copydoc GridHandler::initialize()
 	 */
-	function initialize($request, $args) {
+	function initialize($request, $args = null) {
 		parent::initialize($request, $args);
 
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR);

@@ -51,10 +51,10 @@ class PubIdExportRepresentationsListGridHandler extends GridHandler {
 	}
 
 	/**
-	 * @copydoc PKPHandler::initialize()
+	 * @copydoc GridHandler::initialize()
 	 */
-	function initialize($request) {
-		parent::initialize($request);
+	function initialize($request, $args = null) {
+		parent::initialize($request, $args);
 		$context = $request->getContext();
 
 		// Basic grid configuration.
