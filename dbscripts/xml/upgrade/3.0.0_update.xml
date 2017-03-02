@@ -185,6 +185,7 @@
 		<query driver="postgres7">UPDATE review_assignments SET review_round_id=rr.review_round_id FROM review_rounds rr WHERE rr.round = review_assignments.round AND rr.submission_id = review_assignments.submission_id</query>
 		<query>INSERT INTO review_round_files (submission_id, review_round_id, stage_id, file_id, revision) SELECT afm.article_id, rr.review_round_id, 3, afm.file_id, afm.revision FROM article_files_migration afm, articles_migration am, review_rounds rr WHERE am.review_file_id = afm.file_id AND rr.submission_id = afm.article_id AND rr.round = afm.round</query><!-- WORKFLOW_STAGE_ID_EXTERNAL_REVIEW -->
 		<query>INSERT INTO review_round_files (submission_id, review_round_id, stage_id, file_id, revision) SELECT afm.article_id, rr.review_round_id, 3, afm.file_id, afm.revision FROM article_files_migration afm, articles_migration am, review_rounds rr WHERE am.revised_file_id = afm.file_id AND rr.submission_id = afm.article_id AND rr.round = afm.round</query><!-- WORKFLOW_STAGE_ID_EXTERNAL_REVIEW -->
+		<query>INSERT INTO review_files (review_id, file_id) SELECT DISTINCT ra.review_id, afm.file_id FROM article_files_migration afm, articles_migration am, review_assignments ra WHERE ra.submission_id = am.article_id AND am.review_file_id = afm.file_id</query>
 	</sql>
 	<sql><!-- Update file stages -->
 		<query driver="mysql">UPDATE submission_files sf, articles_migration am SET sf.file_stage=2 WHERE am.submission_file_id=sf.file_id</query><!-- SUBMISSION_FILE_SUBMISSION -->
