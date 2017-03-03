@@ -1883,7 +1883,6 @@ class Upgrade extends Installer {
 			$row = $result->GetRowAssoc(false);
 
 			$submissionFileManager = new SubmissionFileManager($row['context_id'], $row['submission_id']);
-			// revision is always 1 because in OJS 2.4.x there was only one reviewer file
 			$revisions = $submissionFileDao->getAllRevisions($row['reviewer_file_id']);
 			if (!empty($revisions)) {
 				foreach ($revisions as $revision) {
