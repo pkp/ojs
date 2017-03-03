@@ -1884,18 +1884,25 @@ class Upgrade extends Installer {
 
 			$submissionFileManager = new SubmissionFileManager($row['context_id'], $row['submission_id']);
 			// revision is always 1 because in OJS 2.4.x there was only one reviewer file
-			$revision = $submissionFileDao->getRevision($row['reviewer_file_id'], 1);
-			$wrongFilePath = $revision->getFilePath();
-			$revision->setFileStage(SUBMISSION_FILE_REVIEW_ATTACHMENT);
-			$newFilePath = $revision->getFilePath();
-			if (!file_exists($newFilePath)) {
-				if (!file_exists($path = dirname($newFilePath)) && !$submissionFileManager->mkdirtree($path)) {
-					error_log("Unable to make directory \"$path\"");
+			$revisions = $submissionFileDao->getAllRevisions($row['reviewer_file_id']);
+			if (!empty($revisions)) {
+				foreach ($revisions as $revision) {
+					$wrongFilePath = $revision->getFilePath();
+					$revision->setFileStage(SUBMISSION_FILE_REVIEW_ATTACHMENT);
+					$newFilePath = $revision->getFilePath();
+					if (!file_exists($newFilePath)) {
+						if (!file_exists($path = dirname($newFilePath)) && !$submissionFileManager->mkdirtree($path)) {
+							error_log("ERROR: Unable to make directory \"$path\"");
+						}
+						if (!rename($wrongFilePath, $newFilePath)) {
+							error_log("ERROR: Unable to move \"$wrongFilePath\" to \"$newFilePath\".");
+						}
+					}
 				}
-				if (!rename($wrongFilePath, $newFilePath)) {
-					error_log("Unable to move \"$wrongFilePath\" to \"$newFilePath\".");
-				}
+			} else {
+				error_log('ERROR: Reviewer files with ID ' . $row['reviewer_file_id'] . ' from review assignment ' .$row['review_id'] . ' could not be found in the database table submission_files');
 			}
+
 			$result->MoveNext();
 		}
 		$result->Close();
