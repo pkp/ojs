@@ -4,10 +4,10 @@
 <!--
   * plugins/paymethod/paypal/locale/sr_RS@latin/locale.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2014-2017 Simon Fraser University
   * Copyright (c) 2006-2009 Gunther Eysenbach, Juan Pablo Alperin, MJ Suhonos
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Serbian_%28sr_RS%29
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Serbian_(sr_RS)
   * Localization strings for the sr_RS@latin (Srpski) locale.
   *
  -->
@@ -18,7 +18,7 @@
 	<!-- PayPal Settings Form -->
 	<message key="plugins.paymethod.paypal.settings.paypalenable">Omogući PayPal</message>
 	<message key="plugins.paymethod.paypal.settings.paypalurl">IPN URL</message>
-	<message key="plugins.paymethod.paypal.settings.paypalurl.description"><![CDATA[Ovo je URL ka PayPal Instant Payment Notification (IPN) servisu. Kako biste testirali, koristite <u>https://www.sandbox.paypal.com/cgi-bin/webscr</u>; za produktivne sisteme koristite <u>https://www.paypal.com/cgi-bin/webscr</u>.]]></message>
+	<message key="plugins.paymethod.paypal.settings.paypalurl.description"><![CDATA[Ovo je URL ka PayPal Instant Payment Notification (IPN) servisu. Kako biste testirali, koristite <u>https://pkp.sfu.ca/wiki/index.php?title=OJS:_Serbian_(sr_RS)://www.sandbox.paypal.com/cgi-bin/webscr</u>; za produktivne sisteme koristite <u>https://pkp.sfu.ca/wiki/index.php?title=OJS:_Serbian_(sr_RS)://www.paypal.com/cgi-bin/webscr</u>.]]></message>
 	<message key="plugins.paymethod.paypal.settings.selleraccount">Nalog prodavca</message>
 	<message key="plugins.paymethod.paypal.settings.selleraccount.description">Ovo je korisničko ime naloga prodavca koji će se koristiti, obično imejl adresa.  Budite sigurni da ste aktivirali Instant Payment Notification (IPN) u profilu naloga prodavca.</message>
 	<message key="plugins.paymethod.paypal.settings.curlNotInstalled">UPOZORENjE: CURL podrška za PHP nije instalirana. PayPal podrška za plaćanje zahteva  CURL biblioteku i neće funkcionisati do njenog instaliranja.</message>
