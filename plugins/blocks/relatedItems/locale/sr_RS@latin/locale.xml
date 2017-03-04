@@ -8,11 +8,11 @@
   * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the sr_RS (Srpski) locale.
+  * Localization strings for the sr_RS@latin (Srpski) locale.
   *
   -->
 
-<locale name="sr_RS" full_name="Srpski">
+<locale name="sr_RS@latin" full_name="Srpski">
 	<message key="plugins.block.relatedItems.displayName">Blok povezanih stavki</message>
 	<message key="plugins.block.relatedItems.description">Ovaj blok prikazuje povezane stavke u alatkama za čitanje.</message>
 	<message key="plugins.block.relatedItems.title">Povezane stavke</message>
