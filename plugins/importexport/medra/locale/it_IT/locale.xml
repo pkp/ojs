@@ -4,8 +4,8 @@
 <!--
   * plugins/importexport/medra/locale/it_IT/locale.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the it_IT locale.
@@ -47,4 +47,7 @@
 {$scriptName} {$pluginName} export [xmlFileName] [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...
 {$scriptName} {$pluginName} register [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...
 ]]></message>
+	<message key="plugins.importexport.medra.settings.form.exportIssuesAs.label">Esporta i fascicoli come</message>
+	<message key="plugins.importexport.medra.settings.form.automaticRegistration.description">OJS registrerà presso mEDRA i DOI assegnati automaticamente. Questa operazione può richiedere un po' di tempo dopo l'avvenuta pubblicazione.</message>
+	<message key="plugins.importexport.medra.settings.form.testMode.description">Usa la API di test di mEDRA per la registrazione dei DOI. Non dimenticare di togliere questa possibilità per la produzione.</message>
 </locale>

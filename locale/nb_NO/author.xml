@@ -4,15 +4,15 @@
 <!--
   * locale/nb_NO/author.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the nb_NO (Norsk bokmål) locale.
   *
   -->
 
-<locale name="nb_NO" full_name = "Norwegian">
+<locale name="nb_NO" full_name="Norsk bokmål">
 	<message key="author.submit">Nytt manus</message>
 	<message key="author.track">Aktive manus</message>
 	<message key="author.submit.submitArticle">Send inn en artikkel</message>

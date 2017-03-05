@@ -4,8 +4,8 @@
 <!--
   * plugins/generic/webFeed/locale/da_DK/locale.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the da_DK (Dansk) locale.
@@ -27,4 +27,5 @@
 	<message key="plugins.generic.webfeed.atom.altText">Atom logo</message>
 	<message key="plugins.generic.webfeed.rss1.altText">RSS1 logo</message>
 	<message key="plugins.generic.webfeed.rss2.altText">RSS2 logo</message>
+	<message key="plugins.generic.webfeed.settings.recent">Vis et fastsat antal af de mest aktuelle artikler.</message>
 </locale>

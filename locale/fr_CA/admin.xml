@@ -4,14 +4,14 @@
 <!--
   * locale/fr_CA/admin.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Localization strings for the fr_CA (Français (Canada)) locale.
-  *
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_French_(fr_CA)
+  * Localization strings.
   -->
-<locale name="fr_CA" full_name="Français (Canada)">
+
+<locale name = "fr_CA" full_name = "Français (Canada)">
 	<message key="admin.hostedJournals">Revues hébergées</message>
 	<message key="admin.settings.journalRedirect">Réacheminement vers la revue</message>
 	<message key="admin.settings.journalRedirectInstructions">Les demandes faites au site principal seront réacheminées vers cette revue. Cela pourrait être utile si le site héberge, par exemple, une seule revue.</message>
@@ -54,7 +54,7 @@
 	<message key="admin.mergeUsers.into.description">Sélectionner un utilisateur à qui attribuer la paternité des textes, les assignations de révisions etc. de l'utilisateur précédent.</message>
 	<message key="admin.mergeUsers.from.description">Sélectionner un utilisateur à fusionner au compte d'un autre utilisateur (par ex. : lorsque quelqu'un possède deux comptes utilisateur). Le compte sélectionné en premier sera supprimé et ses soumissions, assignations, etc. seront affectées au second compte.</message>
 	<message key="admin.mergeUsers.allUsers">Tous les utilisateurs inscrits à des rôles</message>
-	<message key="admin.mergeUsers.confirm">Êtes-vous certain de vouloir fusionner le compte portant le nom d'utilisateur "{$oldUsername}" avec le compte portant le nom d'utilisateur "{$newUsername}"? Le compte portant le nom d'utilisateur "{$oldUsername}" sera supprimé. Cette action n'est pas réversible.</message>
+	<message key="admin.mergeUsers.confirm">Êtes-vous certain de vouloir fusionner le compte portant le nom d'utilisateur "{$oldAccountCount}" avec le compte portant le nom d'utilisateur "{$newUsername}"? Le compte portant le nom d'utilisateur "{$oldAccountCount}" sera supprimé. Cette action n'est pas réversible.</message>
 	<message key="admin.mergeUsers.noneEnrolled">Aucun utilisateur inscrit.</message>
 	<message key="admin.locale.maybeIncomplete">Les langues sélectionnées peuvent être incomplètes.</message>
 	<message key="admin.settings.options">Options</message>
@@ -77,4 +77,16 @@
 	<message key="admin.categories.nameRequired">Un nom de catégorie est requis.</message>
 	<message key="admin.settings.defaultMetricDescription">Votre installation OJS est paramétrée pour enregistrer plus d'une mesure d'utilisation. Les statistiques d'utilisation seront affichées dans plusieurs contextes. Il y a des cas où seulement une statistique d'utilisation doit être utilisée, ex. pour afficher une liste ordonnée des articles les plus utilisés ou classer les résultats de recherche. Veuillez sélectionnez l'une des mesures comme celle par défaut.</message>
 	
+	<message key="admin.languages.confirmDisable">Êtes-vous certain de vouloir désactiver cette instance locale? Cela pourrait avoir un impact sur toute revue utilisant présentement cette instance.</message>
+	<message key="admin.contexts.form.titleRequired">Un titre est requis.</message>
+	<message key="admin.presses.createInstructions">Le rôle de directeur de la revue vous sera automatique attribué. Après avoir créer une nouvelle revue, vous serez dirigé vers son assistant de configuration afin de terminer la configuration initiale de la revue.</message>
+	<message key="admin.scheduledTask.subscriptionExpiryReminder">Rappel d'expiration d'abonnement</message>
+	<message key="admin.scheduledTask.openAccessNotification">Avis de libre accès</message>
+	<message key="admin.scheduledTask.reviewReminder">Rappel d'évaluation</message>
+	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Le téléchargement de fichiers de langue depuis le serveur Web Public Knowledge Project n'est pas disponible actuellement car: </p>
+<ul>
+<li>Votre serveur n'a pas ou ne permet pas l'exécution de l'utilitaire GNU "tar". </li>
+<li>OJS est incapable de modifier le fichier de registre régional, généralement "registry/locales.xml". </li>
+</ul>
+<p>Les fichiers de langue peuvent être téléchargés manuellement depuis le <a href="http://pkp.sfu.ca"> site Web PKP </a>. </p>]]></message>
 </locale>

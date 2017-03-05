@@ -4,8 +4,8 @@
 <!--
   * plugins/pubIds/doi/locale/de_DE/locale.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_German_(de_DE)
   * Localization strings.
@@ -13,6 +13,8 @@
  
 <locale name="de_DE" full_name="Deutsch (Deutschland)">
 	<message key="plugins.pubIds.doi.displayName">DOI</message>
+	<message key="plugins.pubIds.doi.description">Dieses Plugin ermöglicht die Zuweisung von DOIs (persistent identifiers) zu Ausgaben, Artikeln und Fahnen in OJS.</message>
+	<message key="plugins.pubIds.doi.readerDisplayName">DOI:</message>
 
 	<!-- settings form -->
 	<message key="plugins.pubIds.doi.manager.settings.description">Bitte konfigurieren Sie das DOI-Plugin, damit Sie DOI in OJS verwalten und benutzen können:</message>

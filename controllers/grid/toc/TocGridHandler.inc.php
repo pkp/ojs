@@ -3,8 +3,8 @@
 /**
  * @file controllers/grid/toc/TocGridHandler.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2000-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2000-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class TocGridHandler
@@ -161,7 +161,7 @@ class TocGridHandler extends CategoryGridHandler {
 	/**
 	 * @copydoc GridHandler::setDataElementSequence()
 	 */
-	function setDataElementSequence($request, $sectionId, $section, $newSequence) {
+	function setDataElementSequence($request, $sectionId, $gridDataElement, $newSequence) {
 		$sectionDao = DAORegistry::getDAO('SectionDAO');
 		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
 		if (!$sectionDao->customSectionOrderingExists($issue->getId())) {

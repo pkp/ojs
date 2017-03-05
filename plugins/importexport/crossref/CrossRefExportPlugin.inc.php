@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/crossref/CrossRefExportPlugin.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class CrossRefExportPlugin
@@ -141,7 +141,7 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 	}
 
 	/**
-	 * @copydoc DOIPubIdExportPlugin::getSettingsFormClassName()
+	 * @copydoc PubObjectsExportPlugin::getSettingsFormClassName()
 	 */
 	function getSettingsFormClassName() {
 		return 'CrossRefSettingsForm';
@@ -157,7 +157,7 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 	/**
 	 * @copydoc PubObjectsExportPlugin::executeExportAction()
 	 */
-	function executeExportAction($request, $objects, $filter, $tab, $objectsFileNamePart) {
+	function executeExportAction($request, $objects, $filter, $tab, $objectsFileNamePart, $noValidation = null) {
 		$context = $request->getContext();
 		$path = array('plugin', $this->getName());
 		if ($request->getUserVar(CROSSREF_EXPORT_ACTION_CHECKSTATUS)) {
@@ -165,7 +165,7 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 			// redirect back to the right tab
 			$request->redirect(null, null, null, $path, null, $tab);
 		} else {
-			parent::executeExportAction($request, $objects, $filter, $tab, $objectsFileNamePart);
+			parent::executeExportAction($request, $objects, $filter, $tab, $objectsFileNamePart, $noValidation);
 		}
 	}
 
@@ -181,7 +181,7 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 	}
 
 	/**
-	 * @copydoc DOIPubIdExportPlugin::depositXML()
+	 * @copydoc PubObjectsExportPlugin::depositXML()
 	 */
 	function depositXML($objects, $context, $filename) {
 		$curlCh = curl_init();

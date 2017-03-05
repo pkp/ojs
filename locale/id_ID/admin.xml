@@ -4,10 +4,10 @@
 <!--
   * locale/id_ID/admin.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
   * Localization strings.
   -->
 
@@ -34,7 +34,7 @@
 		<li>Server Anda tidak mengijinkan eksekusi piranti lunak GNU "tar".</li>
 		<li>OJS tidak dapat mengubah file register bahasa, biasanya ada di "registry/locales.xml".</li>
 	</ul>
-<p>Paket bahasa dapat diunduh secara manual dari <a href="http://pkp.sfu.ca">situs PKP</a>.</p>]]></message>
+<p>Paket bahasa dapat diunduh secara manual dari <a href="http://pkp.sfu.ca">Situs PKP</a>.</p>]]></message>
 	
 	<message key="admin.languages.primaryLocaleInstructions">Bahasa utama ini akan menjadi bahasa default situs dan setiap jurnal yang dikelola di situs ini.</message> 
 	<message key="admin.languages.supportedLocalesInstructions">Pilih bahasa yang akan didukung situs ini. Bahasa yang dipilih akan dapat digunakan oleh semua jurnal yang dikelola situs ini, dan juga akan tampil dalam menu pilihan bahasa di setiap halaman situs (yang dapat diganti pada halaman spesifik jurnal).  Jika hanya ada satu bahasa, menu pilihan bahasa tidak akan muncul.</message>	
@@ -56,7 +56,7 @@
 	<message key="admin.journals.createInstructions">Secara otomatis Anda akan terdaftar sebagai manajer jurnal ini. Setelah membuat jurnal baru, Anda akan dialihkan ke panduan pengaturan jurnal untuk menyelesaikan pengaturan awal.</message> 
 	<message key="admin.journals.journalSettings">Pengaturan Jurnal</message> 
 	<message key="admin.journals.noneCreated">Belum ada jurnal yang dibuat.</message> 
-	<message key="admin.contexts.confirmDelete">Apakah Anda yakin ingin menghapus jurnal ini dan semua isinya secara permanen?</message> 
+	<message key="admin.contexts.confirmDelete">Apakah Anda yakin ingin menghapus jurnal ini dan seluruh isinya secara permanen?</message> 
 	<message key="admin.contexts.create">Buat Jurnal</message> 
 	<message key="admin.journals.urlWillBe">Kata atau singkatan yang mengidentifikasi jurnal. URL jurnal akan menjadi {$sampleUrl}</message> 
 	<message key="admin.contexts.form.titleRequired">Perlu judul.</message>

@@ -4,16 +4,15 @@
 <!--
   * plugins/citationFormats/endNote/locale/ru_RU/locale.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Localization strings for this citation plugin in en_US.
-  *
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Russian_(ru_RU)
+  * Localization strings.
   -->
  
 <locale name="ru_RU" full_name="Русский">
-	<message key="plugins.citationFormats.endNote.displayName">Модуль формата ссылок EndNote</message>
-	<message key="plugins.citationFormats.endNote.citationFormatName"><![CDATA[EndNote - EndNote format (Macintosh & Windows)]]></message>
-	<message key="plugins.citationFormats.endNote.description">Этот модуль реализует формат ссылок EndNote.</message>
+	<message key="plugins.citationFormats.endNote.displayName">Модуль формата библиографических ссылок EndNote</message>
+	<message key="plugins.citationFormats.endNote.citationFormatName">EndNote - формат EndNote (Macintosh &amp; Windows)</message>
+	<message key="plugins.citationFormats.endNote.description">Реализует формат библиографических ссылок EndNote.</message>
 </locale>

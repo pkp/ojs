@@ -4,16 +4,15 @@
 <!--
   * plugins/generic/counter/locale/ru_RU/locale.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Localization strings for the ru_RU (Русский) locale.
-  *
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Russian_(ru_RU)
+  * Localization strings.
   -->
  
 <locale name="ru_RU" full_name="Русский">
-	<message key="plugins.generic.counter.description"><![CDATA[Модуль COUNTER позволяет записать и показать на <a href="http://www.projectcounter.org/about.html" target="_new">COUNTER</a> активность сайта.]]></message>
+	<message key="plugins.generic.counter.description"><![CDATA[Позволяет записать и показать на <a href="http://www.projectcounter.org/about.html" target="_new">COUNTER</a> отчет об активности сайта.]]></message>
 	<message key="plugins.generic.counter">Статистика COUNTER</message>
 	<message key="plugins.generic.counter.migrate">Переместить Log File</message>
 	<message key="plugins.generic.counter.1a.title">Отчет журнала 1 (R2): Запросы полнотекстовых статей по месяцам и журналам</message>

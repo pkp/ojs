@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/datacite/filter/DataciteXmlFilter.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2000-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2000-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class DataciteXmlFilter
@@ -120,6 +120,8 @@ class DataciteXmlFilter extends NativeExportFilter {
 			}
 		}
 
+		// Identify the object locale.
+		$objectLocalePrecedence = $this->getObjectLocalePrecedence($context, $article, $galley);
 		// The publisher is required.
 		// Use the journal title as DataCite recommends for now.
 		$publisher = $this->getPrimaryTranslation($context->getName(null), $objectLocalePrecedence);
@@ -134,8 +136,6 @@ class DataciteXmlFilter extends NativeExportFilter {
 		// Create the root node
 		$rootNode = $this->createRootNode($doc);
 		$doc->appendChild($rootNode);
-		// Identify the object locale.
-		$objectLocalePrecedence = $this->getObjectLocalePrecedence($context, $article, $galley);
 		// DOI (mandatory)
 		$doi = $pubObject->getStoredPubId('doi');
 		if ($plugin->isTestMode($context)) {

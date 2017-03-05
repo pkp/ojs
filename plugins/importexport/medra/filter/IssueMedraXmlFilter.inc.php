@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/medra/filter/IssueMedraXmlFilter.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2000-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2000-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IssueMedraXmlFilter
@@ -201,7 +201,7 @@ class IssueMedraXmlFilter extends O4DOIXmlFilter {
 		// Extent (for issues-as-manifestation only)
 		if (!$this->isWork($context, $plugin)) {
 			$issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /* @var $issueGalleyDao IssueGalleyDAO */
-			$issueGalleys = $issueGalleyDao->getGalleysByIssue($issue->getId());
+			$issueGalleys = $issueGalleyDao->getByIssueId($issue->getId());
 			if (!empty($issueGalleys)) {
 				foreach($issueGalleys as $issueGalley) {
 					$journalIssueNode->appendChild($this->createExtentNode($doc, $issueGalley));

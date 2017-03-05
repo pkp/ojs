@@ -9,8 +9,8 @@
 /**
  * @file classes/article/Article.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class Article
@@ -193,22 +193,6 @@ class Article extends Submission {
 	 */
 	function setSectionAbbrev($sectionAbbrev) {
 		return $this->setData('sectionAbbrev', $sectionAbbrev);
-	}
-
-	/**
-	 * Get current review round.
-	 * @return int
-	 */
-	function getCurrentRound() {
-		return $this->getData('currentRound');
-	}
-
-	/**
-	 * Set current review round.
-	 * @param $currentRound int
-	 */
-	function setCurrentRound($currentRound) {
-		return $this->setData('currentRound', $currentRound);
 	}
 
 	/**

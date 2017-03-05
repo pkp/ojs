@@ -4,11 +4,11 @@
 <!--
   * locale/id_ID/submission.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Localization strings for the id_ID (Bahasa Indonesia) locale.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
+  * Localization strings.
   -->
 
 <locale name="id_ID" full_name = "Bahasa Indonesia">
@@ -75,4 +75,5 @@
 	<message key="submission.citationFormat.notFound">Format sitasi yang diminta tidak ditemukan.</message>
 
 	<message key="submission.metadataDescription">Spesifikasi ini dibuat berdasarkan set metadata Dublin Core, suatu standar internasional untuk mendeskripsikan isi jurnal.</message>
+	<message key="section.any">Semua Bagian</message>
 </locale>

@@ -4,8 +4,8 @@
 <!--
   * locale/ar_IQ/emailTemplates.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
   * Localized email templates XML file.
@@ -162,6 +162,19 @@
 {$editorialContactSignature}]]></body>
 		<description>عند تمكين هذه الرسالة، سيتم إرسالها تلقائياً للمؤلف بمجرد إكماله خطوات تقديم طلب النشر إلى المجلة. يتعرف من خلالها عن إمكانية متابعة طلبه عبر موقع المجلة كما يشكره على تقديم طلبه لها.</description>
 	</email_text>
+	<email_text key="SUBMISSION_ACK_NOT_USER">
+		<subject>إشعار طلب التقديم</subject>
+		<body>
+			<![CDATA[مرحباً، <br />
+<br />
+إن {$submitterName} قد تقدم بطلب لنشر المؤلَّف &quot;{$submissionTitle}&quot; إلى {$contextName}. <br />
+<br />
+إن كان لديك أي استفسارات، لطفاً تواصل معي. شكراً على اعتبارك هذه المجلة جديرة بعملك.<br />
+<br />
+{$editorialContactSignature}]]>
+		</body>
+		<description>عند تمكين هذه الرسالة، سيتم إرسالها تلقائياً إلى المؤلفين الآخرين الذين لا يملكون حسابات في نظام المجلات المفتوحة المعني خلال مرحلة تقديم الطلب.</description>
+	</email_text>
 	<email_text key="SUBMISSION_UNSUITABLE">
 		<subject>طلب نشر غير متوافق مع المجلة</subject>
 		<body><![CDATA[{$authorName}:<br />
@@ -213,7 +226,7 @@
 <br />
 كلي ثقة بأنك ستكون محكماً متميزاً للمؤلَّف. إن ملخص موضوعه مبين أدناه، وأنا أرجو أنك ستأخذ على عاتقك إنجاز هذه المهمة لمجلتنا.<br />
 <br />
-لطفاً، أدخل إلى موقع المجلة حتى يوم لتبين لنا فيما لو أنك موافق على هذا التحكيم أم لا، كما يمكنك أيضاً عبر الرابط أدناه الوصول إلى متعلقات طلب النشر المذكور، وتثبيت تقييمك له وملاحظاتك بشأنه. الرابط هو: <a href="{$contextUrl}">{$contextUrl}</a><br />
+لطفاً، أدخل إلى موقع المجلة لتبين لنا فيما لو أنك موافق على هذا التحكيم أم لا، كما يمكنك أيضاً عبر الرابط أدناه الوصول إلى متعلقات طلب النشر المذكور، وتثبيت تقييمك له وملاحظاتك بشأنه. الرابط هو: <a href="{$contextUrl}">{$contextUrl}</a><br />
 <br />
 أما التحكيم نفسه، فإن موعده النهائي سيكون: {$reviewDueDate}.<br />
 <br />

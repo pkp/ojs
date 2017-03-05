@@ -4,15 +4,15 @@
 <!--
   * locale/nb_NO/admin.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the nb_NO (Norsk bokmål) locale.
   *
   -->
 
-<locale name="nb_NO" full_name = "Norwegian">
+<locale name="nb_NO" full_name="Norsk bokmål">
 	<message key="admin.hostedJournals">Nettstedets tidsskrift</message>
 	<message key="admin.settings.journalRedirect">Tidsskriftomdirigering</message>
 	<message key="admin.settings.journalRedirectInstructions">Henvendelser til hovednettstedet vil bli omdirigert til dette tidsskriftet. Dette er nyttig hvis nettstedet for eksempel bare er vert for ett tidsskrift.</message>

@@ -4,36 +4,37 @@
 <!--
   * plugins/auth/ldap/locale/ru_RU/locale.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Localization strings for the ru_RU (Русский) locale.
-  *
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Russian_(ru_RU)
+  * Localization strings.
   -->
  
 <locale name="ru_RU" full_name="Русский">
-	<!-- FIXME: We need a Russian translation. -->
-	<message key="plugins.auth.ldap.displayName">LDAP</message>
-	<message key="plugins.auth.ldap.description">Этот модуль поддерживает авторизацию и синхронизацию пользовательских учетных записей с внешней базой данных LDAP.</message>
+	<message key="plugins.auth.ldap.displayName">Модуль «LDAP»</message>
+	<message key="plugins.auth.ldap.description">Поддерживает авторизацию и синхронизацию пользовательских учетных записей с внешним источником данных LDAP.</message>
+
 	<message key="plugins.auth.ldap.settings">Настройки LDAP</message>
-	<message key="plugins.auth.ldap.settings.hostname">Сервер</message>
-	<message key="plugins.auth.ldap.settings.hostname.description">Например "ldap.example.com", или "ldaps://ldap.example.com" (с использованием SSL)</message>
-	<message key="plugins.auth.ldap.settings.port">Сетевой порт</message>
+	<message key="plugins.auth.ldap.settings.hostname">Имя сервера</message>
+	<message key="plugins.auth.ldap.settings.hostname.description">Например "ldap.example.com", или "ldaps://ldap.example.com" (чтобы использовать SSL)</message>
+	<message key="plugins.auth.ldap.settings.port">Порт сервера</message>
 	<message key="plugins.auth.ldap.settings.port.description">Необязательно. По умолчанию 389 (LDAP) или 636 (LDAP по SSL)</message>
-	<message key="plugins.auth.ldap.settings.basedn">Base DN</message>
-	<message key="plugins.auth.ldap.settings.basedn.description">Например, "ou=people,dc=example,dc=com"</message>
-	<message key="plugins.auth.ldap.settings.managerdn">Manager DN</message>
-	<message key="plugins.auth.ldap.settings.managerdn.description">Например, "cn=Manager,dc=example,dc=com"</message>
-	<message key="plugins.auth.ldap.settings.managerpwd">Manager password</message>
-	<message key="plugins.auth.ldap.settings.managerpwd.description">Имя и пароль менеджера нужны только если включена опция синхронизации паролей и учетных записей. Если LDAP используется только для авторизации, эти опции можно опустить.</message>
-	<message key="plugins.auth.ldap.settings.uid">Аттрибут, хранящий имя пользователя</message>
-	<message key="plugins.auth.ldap.settings.uid.description">Атрибут, значение которого уникально определяет учетную запись, такой как uid, cn или sAMAccountName.</message>
-	<message key="plugins.auth.ldap.settings.pwhash">Формат хранимого пароля</message>
+	<message key="plugins.auth.ldap.settings.basedn">Базовое DN</message>
+	<message key="plugins.auth.ldap.settings.basedn.description">Например "ou=people,dc=example,dc=com"</message>
+	<message key="plugins.auth.ldap.settings.managerdn">DN менеджера</message>
+	<message key="plugins.auth.ldap.settings.managerdn.description">Например "cn=Manager,dc=example,dc=com"</message>
+	<message key="plugins.auth.ldap.settings.managerpwd">Пароль менеджера</message>
+	<message key="plugins.auth.ldap.settings.managerpwd.description">DN менеджера и пароль нужны только в случае, если включена опция синхронизации паролей или создания учетных записей. Если LDAP используется только для авторизации, эти параметры можно пропустить.</message>
+	<message key="plugins.auth.ldap.settings.uid">Атрибут имени учетной записи</message>
+	<message key="plugins.auth.ldap.settings.uid.description">Атрибут, значение которого уникальным образом определяет объект пользователя, такой как uid, cn или sAMAccountName.</message>
+	<message key="plugins.auth.ldap.settings.pwhash">Шифрование пароля</message>
+	<message key="plugins.auth.ldap.settings.pwhash.description">Формат хэша для паролей, хранимых на сервере. Рекомендуется SSHA.</message>
 	<message key="plugins.auth.ldap.settings.saslopt">Настройки SASL (необязательно)</message>
+	<message key="plugins.auth.ldap.settings.sasl">Использовать SASL вместо простой авторизации</message>
 	<message key="plugins.auth.ldap.settings.saslmech">Механизм SASL</message>
-	<message key="plugins.auth.ldap.settings.saslmech.description">Например "DIGEST-MD5"</message>
-	<message key="plugins.auth.ldap.settings.saslrealm">Realm</message>
-	<message key="plugins.auth.ldap.settings.saslauthzid">Требуемый authorization ID (authzid)</message>
-	<message key="plugins.auth.ldap.settings.saslprop">Дополнительные свойства SASL</message>
+	<message key="plugins.auth.ldap.settings.saslmech.description">Например «DIGEST-MD5»</message>
+	<message key="plugins.auth.ldap.settings.saslrealm">Область (Realm)</message>
+	<message key="plugins.auth.ldap.settings.saslauthzid">Запрашиваемый ID авторизации</message>
+	<message key="plugins.auth.ldap.settings.saslprop">Свойства безопасности SASL</message>
 </locale>

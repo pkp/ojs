@@ -34,9 +34,9 @@ file storage, so be sure to back it up before running an upgrade.
 With that noted, follow the OJS 3.0 process described below.
 
 
-========================
-Upgrading from OJS 3.0.0
-========================
+======================
+Upgrading from OJS 3.x
+======================
 
 Upgrading to the latest version of OJS involves two steps:
 
@@ -58,9 +58,10 @@ package, and from read-only github access.
 If you have not made local code modifications to the system, upgrade by 
 downloading the complete package for the latest release of OJS:
 
-    - Download and decompress the package from the OJS web site
-    - Move or copy the following files and directories from your current OJS
-      installation:
+    - Download and decompress the package from the OJS web site into an empty
+      directory (NOT over top of your current OJS installation)
+    - Move or copy the following files and directories into it from your current
+      OJS installation:
         - config.inc.php
         - public/
         - Your uploaded files directory ("files_dir" in config.inc.php), if it

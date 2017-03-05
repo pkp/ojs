@@ -4,8 +4,8 @@
 <!--
   * /locale/da_DK/author.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the da_DK (Dansk) locale.
@@ -87,7 +87,7 @@
 	<message key="author.submit.suppFile.dataSet">Datasæt</message>
 	<message key="author.submit.suppFile.sourceText">Kildetekst</message>
 	<message key="author.submit.suppFile.briefDescription">Kort beskrivelse</message>
-	<message key="author.submit.suppFile.availableToPeers">Præsenter fil for bedømmere (uden metadata), da den ikke vil gøre blindbedømmelse umulig.</message>
+	<message key="author.submit.suppFile.availableToPeers">Præsenter fil for bedømmere (uden metadata), da den ikke vil gøre blind review umulig.</message>
 	<message key="author.submit.suppFile.publisherDescription">Anvend kun sammen med formelt publicerede materialer.</message>
 	<message key="author.submit.suppFile.dateDescription">Dato for indsamling af data eller oprettelse af instrument.</message>
 	<message key="author.submit.suppFile.sourceDescription">Navn på afhandling eller anden oprindelse.</message>
@@ -116,6 +116,8 @@
 	<message key="author.submissions.queuedReviewRevisions">Under bedømmelse: Rettelser påkrævet</message>
 	<message key="author.submissions.queuedEditingCopyedit">Under redigering: Manuskriptredigering påkrævet</message>
 	<message key="author.submissions.queuedEditingProofread">Under redigering: Korrekturlæsning påkrævet</message>
+	<message key="author.submit.submissionLocale">Indleveringssprog</message>
+	<message key="author.submit.submissionLocaleDescription">Dette tidsskrift accepterer indleverede manuskripter på en række sprog. Vælg det primære sprog for indleveringen i rullemenuen.</message>
 	<message key="author.submit.form.localeRequired">Vælg et indleveringssprog.</message>
 	<message key="author.submit.reorder">Genbestil forfatternavn</message>
 	<message key="author.submit.form.wordCountAlert">Du har overskredet grænsen for det maksimale antal ord for resuméer i denne sektion.</message>

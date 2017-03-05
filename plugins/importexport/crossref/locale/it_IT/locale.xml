@@ -4,8 +4,8 @@
 <!--
   * plugins/importexport/crossref/locale/it_IT/locale.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the it_IT locale.
@@ -21,4 +21,9 @@
 {$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...
 {$scriptName} {$pluginName} register [journal_path] articles objectId1 [objectId2] ...
 ]]></message>
+	<message key="plugins.importexport.crossref.settings.depositorIntro">Le informazioni seguenti sono richieste per un deposito corretto su CrossRef</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorName">Nome del depositor</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorEmail">Email del depositor</message>
+	<message key="plugins.importexport.crossref.registrationIntro"><![CDATA[Se vuoi usare questo plugin per registrare i DOI direttamente su CrossRef avrai bisogno di un nome utente e una password (ottenibili su <a href="http://www.crossref.org" target="_blank">CrossRef</a>). Se non ha un nome utente e una password, puoi comunque esportare nel formato XML di CrossRef ma non potrai registrare i DOI con CrossRef tramite OJS.]]></message>
+	<message key="plugins.importexport.crossref.settings.form.username">Nome utente</message>
 </locale>

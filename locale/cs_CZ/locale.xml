@@ -4,8 +4,8 @@
 <!--
   * locale/cs_CZ/locale.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization strings for the cs_CZ (Čeština) locale.
   * locale information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Czech_%28cs_CZ%29
@@ -312,16 +312,6 @@
 	<!-- Reader Comments -->
 	<message key="comments.commentsOnArticle">Komentáře k tomuto článku</message>
 	<message key="comments.authenticated"><![CDATA[<a href="{$publicProfileUrl}" target="_parent">{$userName}</a>]]></message>
-
-	<!-- Site Administration -->
-
-	<message key="admin.settings.oaiRegistrationDescription"><![CDATA[Aby byl obsah všech časopisů hostovaných na této stránce indexován v celosvětově distribuovaném systému výzkumných databází, <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">zaregistrujte</a> URL Vaší stránky do <a href="http://pkp.sfu.ca/harvester/" target="_blank">shromažďovače</a> metadat Public Knowledge Projektu. Tento nástroj sbírá metadata z každé indexované položky tohoto časopisu a umožňuje přesné a hromadné vyhledávání v rámci výzkumných stránek, které dodržují <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">protokol Iniciativy otevřených archivů pro shromažďování metadat </a> (Open Archives Initiative (OAI) Protocol for Metadata Harvesting).
-<br /><br />
-<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Klikněte zde</a> a vložte <span class="highlight">{$siteUrl}</span> pod <strong> URL stránky</strong> a <span class="highlight">{$oaiUrl}</span> pod <strong> Základní URL pro OAI Archív</strong>.
-<br /><br />
-Vězte, že rozhraní OAI může být pro tuto stránku vypnuto editací konfigurace OJS systému. Příští verze OJS umožní, aby rozhraní OAI bylo povoleno nebo zakázáno pro jednotlivé časopisy na této stránce.]]></message>
-
-
 
 	<!-- Languages -->
 	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Stahování jazykových balíčků ze serveru Public Knowledge Projektu není momentálně dostupné protože:</p>

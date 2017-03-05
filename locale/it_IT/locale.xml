@@ -4,8 +4,8 @@
 <!--
   * locale/it_IT/locale.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings.
@@ -129,7 +129,6 @@
 	<message key="article.submission">Proposta</message>
 	<message key="article.submissions">Proposte</message>
 	<message key="article.details">Dettagli</message>
-	<message key="article.identifiers">Identificatori</message>
 	<message key="article.abstract">Abstract</message>
 	<message key="article.coverPage.altText">Immagine di copertina</message>
 	<message key="article.accessLogoOpen.altText">Open Access</message>
@@ -141,8 +140,6 @@
 	<message key="article.fontSize.small.altText">Piccolo</message>
 	<message key="article.fontSize.medium.altText">Medio</message>
 	<message key="article.fontSize.large.altText">Grande</message>
-	<message key="article.nbn">NBN</message>
-
 	<!-- Submission Tracking - Common -->
 	<message key="submission.submissionEditing">Lavorazione degli articoli</message>
 	<message key="submission.changeSection">Cambia in</message>
@@ -313,24 +310,7 @@
 	<message key="comments.commentsOnArticle">Commenti su questo articolo</message>
 	<message key="comments.authenticated"><![CDATA[di <a href="{$publicProfileUrl}" target="_parent">{$userName}</a>]]></message>
 
-	<!-- Site Administration -->
-
-	<message key="admin.settings.oaiRegistrationDescription"><![CDATA[Per permettere l'indicizzazione dei contenuti delle riviste pubblicate in questo sito in un sistema di database dedicati alla ricerca e distribuiti globalmente, <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">registra</a> la URL del tuo sito URL nel Public Knowledge Project metadata <a href="http://pkp.sfu.ca/harvester/" target="_blank">harvester</a>. Questo servizio raccoglie i metadati da ogni elemento indicizzato in questa rivista, permettendo ricerche accurate ai siti che aderiscono alla <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Open Archives Initiative Protocol for Metadata Harvesting</a>.
-<br /><br />
-<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Fai click qui</a> e inserisci <span class="highlight">{$siteUrl}</span> come <strong>Site URL</strong>, e <span class="highlight">{$oaiUrl}</span> come <strong>Base URL for OAI Archive</strong>.
-<br /><br />
-Nota che l'interfaccia OAI può essere disabilitata per questo sito modificando la configurazione di OJS. Le prossime versioni di OJS permetteranno di disabilitare l'interfaccia OAI anche solo su singole riviste all'interno del sito.]]></message>
-
-
-
 	<!-- Languages -->
-	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Lo scaricamento dei pacchetti di localizzazione dal server del Public Knowledge Project web server non è attualmente disponibile perché:</p>
-	<ul>
-		<li>Il tuo server non ha o non permette l'esecuzione dello strumento GNU "tar"</li>
-		<li>OJS non riesce a modificare il file di registro locale, tipicamente "registry/locales.xml".</li>
-	</ul>
-<p>I pacchetti di localizzazione possono essere scaricati dal <a href="http://pkp.sfu.ca">sito web del PKP</a>.</p>]]></message>
-
 	<message key="admin.auth.defaultSourceDescription"><![CDATA[<p>Specificare una fonte di autenticazione diversa da OJS produrà i seguenti effetti:</p>
 <ul>
 	<li>Se un utente tenta di registrare un nuovo account in questo sito con una username che già esiste sulla fonte di autenticazione (ma non nel database di OJS), il tentativo di registrazione andrà a buon fine solamente se la password fornita per quell'account è corretta.</li>
@@ -394,12 +374,6 @@ Gli autori che pubblicano su questa rivista accettano le seguenti condizioni:
 	<li>Gli autori possono diffondere la loro opera online (es. in repository istituzionali o nel loro sito web) prima e durante il processo di submission, poichè può portare a scambi produttivi e aumentare le citazioni dell'opera pubblicata (Vedi <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>).</li>
 </ol>]]></message>
 
-
-	<message key="manager.setup.subjectClassificationDescription"><![CDATA[La rivista utilizza un sistema di classificazione disponibile sul web.<br />
-Titolo del sistema di classificazione]]></message>
-	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[Per permettere l'indicizzazione della rivista in un sistema globalmente distribuito di database per la ricerca, leggi <a href="http://www.oclc.org/oaister/contribute.en.html" target="_blank">come partecipare </a> e registra il tuo sito nel <a href="http://www.openarchives.org/data/registerasprovider.html" target="_blank">Registro Open Archives</a>.  To register, you will need the base URL for your repository: <span class="highlight">{$oaiUrl}</span>.  Afterwards, you can register your journal at the <a href="http://gita.grainger.uiuc.edu/registry/" target="_blank">UIUC OAI registry</a> and <a href="http://www.oclc.org/oaister" target="_blank">OAIster</a>.
-<br /><br />
-Nota che se l'amministratore del sito ha già registrato l'intero sito in questi servizi, la tua rivista verrà automaticamente indicizzata e non è necessario registrarla di nuovo.]]></message>
 
 	<!-- Setup Step 4 -->
 	<message key="manager.setup.basicEditorialStepsDescription"><![CDATA[Passaggi: Coda delle proposte &gt; Revisione della proposta &gt; Lavorazione dell'articolo &gt; Sommario.<br /><br />
@@ -672,7 +646,6 @@ Attive indica quante revisioni sono attualmente in corso.]]></message>
 	<!-- Registration -->
 	<message key="user.register.noJournals">Non ci sono riviste alle quali registrarsi.</message>
 	<message key="user.register.privacyStatement">Informativa sulla privacy</message>
-	<message key="user.register.loginToRegister">Inserisci le tue credenziali per registrarti a questa rivista.</message>
 	<message key="user.register.registrationDisabled">Questa rivista attualmente non accetta registrazioni.</message>
 	<message key="user.register.form.passwordLengthTooShort">La password inserita non è abbastanza lunga.</message>
 	<message key="user.register.readerDescription">Avvertimi via email della pubblicazione di un nuovo fascicolo di questa rivista.</message>
@@ -773,7 +746,6 @@ Attive indica quante revisioni sono attualmente in corso.]]></message>
 	<message key="about.focusAndScope">Focus e ambito</message>
 	<message key="about.sectionPolicies">Politiche delle sezioni</message>
 	<message key="about.submissions">Proposte</message>
-	<message key="about.onlineSubmissions">Proposte online</message>
 	<message key="about.onlineSubmissions.login">Vai al Login</message>
 	<message key="about.onlineSubmissions.registrationRequired">Registratione e login sono richiesti per sottoporre articoli e verificare online lo stato delle proposte inviate.</message>
 	<message key="about.authorGuidelines">Linee guida per gli autori</message>
@@ -1096,4 +1068,17 @@ Il processo di validazione pu&#x00F2; non funzionare sugli URL di ricerca che ri
 
 	<!-- Debug messages -->
 	<message key="debug.notes.currencyListLoad">Elenco delle valute caricate "{$filename}" da XML</message>
+	<message key="journal.viewAllIssues">Visualizza tutti i numeri</message>
+	<message key="user.noRoles.selectUsersWithoutRoles">Includi utenti che non hanno un ruolo in questa rivista</message>
+	<message key="user.role.journalAssistant">Redattore</message>
+	<message key="user.role.journalAssistants">Redattori</message>
+	<message key="user.role.guestEditor">Guest editor</message>
+	<message key="user.role.guestEditors">Guest editor</message>
+	<message key="reviewer.article.selectRecommendation.byEditor">Imposta o modifica il parere del revisore</message>
+	<message key="about.aboutContext">Sulla rivista</message>
+	<message key="about.onlineSubmissions.submissionActions">{$newSubmission} o {$viewSubmissions}.</message>
+	<message key="notification.type.submissionSubmitted">È stata ricevuta una nuova proposta: "{$title}".</message>
+	<message key="notification.type.editorAssignmentTask">È necessario assegnare un editor ad una nuova proposta che è stata ricevuta.</message>
+	<message key="editor.navigation.issues">Fascicoli</message>
+	<message key="user.profile.form.showOtherContexts">Registra anche ad altre riviste</message>
 </locale>

@@ -1,8 +1,8 @@
 {**
  * templates/frontend/objects/article_details.tpl
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @brief View of an Article which displays all details about the article.
@@ -134,6 +134,8 @@
 				</div>
 			{/if}
 
+			{call_hook name="Templates::Article::Main"}
+
 			{* Author biographies *}
 			{assign var="hasBiographies" value=0}
 			{foreach from=$article->getAuthors() item=author}
@@ -171,7 +173,17 @@
 				</div>
 			{/if}
 
-			{call_hook name="Templates::Article::Main"}
+			{* References *}
+			{if $article->getCitations()}
+				<div class="item references">
+					<h3 class="label">
+						{translate key="submission.citations"}
+					</h3>
+					<div class="value">
+						{$article->getCitations()|nl2br}
+					</div>
+				</div>
+			{/if}
 
 		</div><!-- .main_entry -->
 

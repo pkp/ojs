@@ -3,15 +3,15 @@
 <!--
   * upgrade.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Upgrade descriptor file.
   *
   -->
 
-<install version="3.0.1.0">
+<install version="3.0.2.0">
 	<upgrade minversion="2.0.0.0" maxversion="2.3.9.9">
 		<!-- OJS < 2.4.0 to 3.0 upgrade unsupported -->
 		<code function="abort" message="installer.unsupportedUpgradeError" />
@@ -31,16 +31,13 @@
 		<data file="dbscripts/xml/upgrade/3.0.0_adaptReferrals.xml" condition="return $installer->tableExists('referrals');" />
 		<data file="dbscripts/xml/upgrade/3.0.0_adaptBooksForReview.xml" condition="return $installer->tableExists('books_for_review');" />
 		<data file="dbscripts/xml/upgrade/remove_timed_views_bots.xml" condition="return $installer->tableExists('timed_views_log');" />
-		<code function="migrateCounterPluginUsageStatistics" condition="return $installer->tableExists('counter_monthly_log');" />
-		<code function="migrateTimedViewsUsageStatistics" condition="return $installer->tableExists('timed_views_log');" />
-		<code function="migrateDefaultUsageStatistics" condition="return $installer->tableExists('article_galleys_stats_migration');" />
-		<data file="dbscripts/xml/upgrade/2.4.0_postUsageStatsMigration.xml" condition="return $installer->tableExists('article_galleys_stats_migration');" />
-		<data file="dbscripts/xml/upgrade/2.4.0_postUsageStatsMigration2.xml" condition="return $installer->tableExists('issue_galleys_stats_migration');" />
-		<data file="dbscripts/xml/upgrade/2.4.0_postCounterMigration.xml" condition="return $installer->tableExists('counter_monthly_log');" />
-		<data file="dbscripts/xml/upgrade/2.4.0_postTimedViewsMigration.xml" condition="return $installer->tableExists('timed_views_log');" />
+		<data file="dbscripts/xml/upgrade/3.0.0_preupdate_commentsToEditor.xml" condition="return $installer->columnExists('submissions', 'comments_to_ed');" />
 	</upgrade>
 
-
+	<upgrade minversion="3.0.0.0" maxversion="3.0.1.9">
+		<data file="dbscripts/xml/upgrade/3.0.0_preupdate_commentsToEditor.xml" condition="return $installer->columnExists('submissions', 'comments_to_ed');" />
+	</upgrade>
+	
 	<!-- PKP schema components -->
 	<schema file="lib/pkp/xml/schema/common.xml" />
 	<schema file="lib/pkp/xml/schema/log.xml" />
@@ -71,6 +68,13 @@
 	<data file="dbscripts/xml/indexes.xml" />
 
 	<upgrade minversion="2.4.0.0" maxversion="2.4.9.9">
+		<code function="migrateCounterPluginUsageStatistics" condition="return $installer->tableExists('counter_monthly_log');" />
+		<code function="migrateTimedViewsUsageStatistics" condition="return $installer->tableExists('timed_views_log');" />
+		<code function="migrateDefaultUsageStatistics" condition="return $installer->tableExists('article_galleys_stats_migration');" />
+		<data file="dbscripts/xml/upgrade/2.4.0_postUsageStatsMigration.xml" condition="return $installer->tableExists('article_galleys_stats_migration');" />
+		<data file="dbscripts/xml/upgrade/2.4.0_postUsageStatsMigration2.xml" condition="return $installer->tableExists('issue_galleys_stats_migration');" />
+		<data file="dbscripts/xml/upgrade/2.4.0_postCounterMigration.xml" condition="return $installer->tableExists('counter_monthly_log');" />
+		<data file="dbscripts/xml/upgrade/2.4.0_postTimedViewsMigration.xml" condition="return $installer->tableExists('timed_views_log');" />
 		<data file="dbscripts/xml/upgrade/3.0.0_change_assoc_type.xml" />
 		<data file="dbscripts/xml/upgrade/3.0.0_change_assoc_type_metrics.xml" condition="return $installer->tableExists('metrics');" />
 		<data file="dbscripts/xml/upgrade/3.0.0_settings.xml" />
@@ -87,7 +91,7 @@
 		<code function="installEmailTemplate" key="REVIEW_REQUEST_REMIND_AUTO_ONECLICK" locales="en_US" />
 		<code function="installEmailTemplate" key="EDITOR_DECISION_SEND_TO_EXTERNAL" locales="en_US" />
 		<code function="installEmailTemplate" key="EDITOR_DECISION_SEND_TO_PRODUCTION" locales="en_US" />
-		<code function="installEmailTemplate" key="SUBMISSION_ACK_NOT_USER" locales="en_US,ca_ES,el_GR,es_ES,fr_CA,pt_BR" />
+		<code function="installEmailTemplate" key="SUBMISSION_ACK_NOT_USER" locales="en_US,ca_ES,es_ES,fr_CA,pt_BR" />
 		<data file="dbscripts/xml/upgrade/3.0.0_scheduledTasks.xml" />
 		<code function="localizeCustomBlockSettings" />
 		<code function="convertEditorDecisionNotes" />
@@ -103,6 +107,10 @@
 		<data file="dbscripts/xml/upgrade/3.0.0_issue_settings.xml" />
 		<data file="dbscripts/xml/upgrade/3.0.0_submission_settings.xml" />
 		<data file="dbscripts/xml/upgrade/3.0.0_review_method.xml" />
+		<data file="dbscripts/xml/upgrade/3.0.0_edit_decisions.xml" />
+		<code function="convertCommentsToEditor" condition="return $installer->tableExists('submissions_tmp');" />
+		<note file="docs/release-notes/README-3.0" />
+		<note file="docs/release-notes/README-3.0.1" />
 	</upgrade>
 
 	<upgrade minversion="3.0.0.0" maxversion="3.0.0.9">
@@ -115,15 +123,40 @@
 		<code function="localizeArticleCoverImages" />
 		<data file="dbscripts/xml/upgrade/3.0.0_issue_settings.xml" />
 		<data file="dbscripts/xml/upgrade/3.0.0_submission_settings.xml" />
-		<code function="installEmailTemplate" key="SUBMISSION_ACK_NOT_USER" locales="en_US,ca_ES,el_GR,es_ES,fr_CA,pt_BR" />
+		<code function="installEmailTemplate" key="SUBMISSION_ACK_NOT_USER" locales="en_US,ca_ES,es_ES,fr_CA,pt_BR" />
 		<data file="dbscripts/xml/upgrade/3.0.0_review_method.xml" />
+		<data file="dbscripts/xml/upgrade/3.0.0_stage_assignments.xml" />
+		<data file="dbscripts/xml/upgrade/3.0.0_edit_decisions.xml" />
+		<code function="convertCommentsToEditor" condition="return $installer->tableExists('submissions_tmp');" />
+		<note file="docs/release-notes/README-3.0.1" />
 	</upgrade>
 
 	<upgrade minversion="3.0.1.0" maxversion="3.0.1.9">
 		<data file="dbscripts/xml/upgrade/3.0.0_review_method.xml" />
+		<data file="dbscripts/xml/upgrade/3.0.0_stage_assignments.xml" />
+		<data file="dbscripts/xml/upgrade/3.0.0_edit_decisions.xml" />
+		<code function="clearCssCache" />
+		<code function="convertCommentsToEditor" condition="return $installer->tableExists('submissions_tmp');" />
+		<code function="moveReviewerFiles" />
+		<data file="dbscripts/xml/upgrade/3.0.0_reviewer_files.xml" />
 	</upgrade>
 
-	<upgrade minversion="3.0.0.0" maxversion="3.0.9.9">
+	<upgrade minversion="2.4.0.0" maxversion="3.0.1.9">
+		<data file="dbscripts/xml/upgrade/3.0.2_update.xml" />
+		<!--  the order of the next two lines is important -->
+		<code function="moveReviewerFiles" />
+		<data file="dbscripts/xml/upgrade/3.0.0_reviewer_files.xml" />
+		<note file="docs/release-notes/README-3.0.2" />
+	</upgrade>
+
+	<upgrade minversion="3.0.2.0" maxversion="3.0.2.9">
+		<!--  the order of the next two lines is important -->
+		<code function="moveReviewerFiles" />
+		<data file="dbscripts/xml/upgrade/3.0.0_reviewer_files.xml" />
+	</upgrade>
+
+
+	<upgrade minversion="2.4.0.0" maxversion="3.0.9.9">
 		<data file="dbscripts/xml/upgrade/3.1.0_update.xml" />
 		<note file="docs/release-notes/README-3.1.0" />
 	</upgrade>

@@ -4,8 +4,8 @@
 <!--
   * locale/tr_TR/locale.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the tr_TR (Türkçe) locale.
@@ -105,7 +105,6 @@
     <message key="common.subtitle.tip">İsteğe bağlı altyazı, ana başlığın ardından iki nokta üst üste (:) deyiminin arkasında görünecektir.</message>
     <message key="common.abstract">Özet</message>
     <message key="common.name">Adı</message>
-    <message key="common.designation">Görev Kısaltması</message>
 
 	<!-- Common Form Messages -->
 
@@ -377,19 +376,6 @@
 	<!-- Reader Comments -->
 	<message key="comments.commentsOnArticle">Bu makale hakkındaki yorumlar</message>
 	<message key="comments.authenticated"><![CDATA[<a href="{$publicProfileUrl}" target="_parent">{$userName}</a> tarafınan]]></message>
-
-	<!-- Site Administration -->
-
-	<message key="admin.settings.oaiRegistrationDescription"><![CDATA[Sitedeki tüm dergilerin Public Knowledge Project kapsamında dizinlenmesi için site adresini <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">buraya tıklayarak kaydedin</a>. Proje ile ilgili daha fazla bilgi için <a href="http://pkp.sfu.ca/harvester/" target="_blank">buraya tıklayınız</a>. Bu araç, dergide yayınlanan her yazı için üst verileri toplayıp, <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Açık Arşivler Girişimi Üstveri Harmanlama Protokolü</a> kapsamında taranacak biçimde veri tabanına ekler.
-<br /><br />
-Kayıt olmak için <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">burayı tıklayın</a>. <strong>Site URL</strong> <span class="highlight">{$siteUrl}</span> ile <strong>Base URL for OAI Archive</strong> alanlarına <span class="highlight">{$oaiUrl}</span> istenilen bilgileri giriniz.
-<br /><br />
-Not: Bu site için Açık Arşiv Sistemi arayüzü ADS ana düzenleme sayfasında etkinleştirilir. ADS gelecek sürümlerinde arayüz her dergi için tek tek etkinleştirilebilecektir.]]></message>
-
-	<message key="admin.auth.defaultSourceDescription"><![CDATA[<p>ADS dışında bir yetkilendirme kaynağını birincil olarak kullanmak aşağıdaki durumlara sebep olabilir:</p>
-<ul>
-	<li>Eğer bir kullanıcı, birincil kaynakta olan, ancak ADS veri tabanında olmayan bir kullanıcı adı ile yeni bir kayıt oluşturur ise, kayıt işlemi ancak diğer sitedeki şifrenin aynısının verilmesi ile gerçekleşebilir.</li>
-</ul>]]></message>
 
 	<!-- System Information -->
 	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>NOT!</h4>

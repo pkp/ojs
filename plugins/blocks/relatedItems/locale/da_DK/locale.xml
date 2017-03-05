@@ -4,8 +4,8 @@
 <!--
   * plugins/blocks/relatedItems/locale/da_DK/locale.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the da_DK (Dansk) locale.
@@ -13,7 +13,7 @@
   -->
 
 <locale name="da_DK" full_name="Dansk">
-	<message key="plugins.block.relatedItems.displayName">Related Items Block</message>
+	<message key="plugins.block.relatedItems.displayName">Relaterede emner (blok)</message>
 	<message key="plugins.block.relatedItems.description">Dette plugin fremviser relaterede artikler  i sidemenuen under læseværktøjer.</message>
 	<message key="plugins.block.relatedItems.title">Relaterede artikler</message>
 	<message key="plugins.block.relatedItems.hide">Skjul</message>

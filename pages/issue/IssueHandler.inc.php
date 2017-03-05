@@ -3,8 +3,8 @@
 /**
  * @file pages/issue/IssueHandler.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IssueHandler
@@ -74,19 +74,16 @@ class IssueHandler extends Handler {
 	 * Display current issue page.
 	 */
 	function current($args, $request) {
-		$this->setupTemplate($request);
-
 		$journal = $request->getJournal();
-
 		$issueDao = DAORegistry::getDAO('IssueDAO');
 		$issue = $issueDao->getCurrent($journal->getId(), true);
 
-		$templateMgr = TemplateManager::getManager($request);
-
 		if ($issue != null) {
-			$request->redirect(null, 'issue', 'view', $issue->getId(), $request->getQueryArray());
+			$request->redirect(null, 'issue', 'view', $issue->getBestIssueId());
 		}
 
+		$this->setupTemplate($request);
+		$templateMgr = TemplateManager::getManager($request);
 		// consider public identifiers
 		$pubIdPlugins = PluginRegistry::loadCategory('pubIds', true);
 		$templateMgr->assign('pubIdPlugins', $pubIdPlugins);

@@ -4,8 +4,8 @@
 <!--
   * locale/de_DE/admin.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_German_(de_DE)
   * Localization strings.
@@ -27,7 +27,15 @@
 		Ihre OJS-Installation ist so eingestellt, dass sie mehr als eine Nutzungsstatistik aufzeichnet. Nutzungsstatistiken werden in verschiedenen Kontexten angezeigt.
 		Es gibt Fälle, in denen eine einzige Nutzungsstatistik benutzt werden muss, z.B. wenn eine sortierte Liste der am häufigsten genutzten Artikel angezeigt werden soll oder um
 		Suchergebnisse zu gewichten. Bitte wählen Sie eine der Nutzungsmetriken als Standard aus.
-</message>
+	</message>
+	<message key="admin.languages.confirmDisable">Sind Sie sicher, dass Sie diese Regionaleinstellung deaktivieren wollen? Dies könnte alle Zeitschriften auf dieser Plattform, die momentan diese Regionaleinstellung benutzen, betreffen.</message>
+	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Sprachpakete können momentan nicht vom Webserver des Public Knowledge Project installiert werden. Mögliche Gründe sind:</p>
+	<ul>
+		<li>Ihr Server verfügt nicht über das Hilfsprogramm GNU "tar" oder erlaubt nicht dessen Ausführung.</li>
+		<li>OJS kann die Locale-Registrierungsdatei nicht verändern, üblicherweise "registry/locales.xml".</li>
+	</ul>
+<p>Sprachpakete können manuell von der <a href="http://pkp.sfu.ca">PKP-Website</a> heruntergeladen werden.</p>]]></message>
+
 	<message key="admin.languages.primaryLocaleInstructions">Diese Regionaleinstellung wird die Standardeinstellung der Website und aller ihrer Zeitschriften.</message>
 	<message key="admin.languages.supportedLocalesInstructions">Wählen Sie alle Regionaleinstellungen aus, die die Website anbieten soll. Die gewählten Parameter können von allen Zeitschriften, die auf der Website angeboten werden, verwendet werden und erscheinen auch im Sprachenmenü auf jeder Seite der Website (die Seiten bestimmter Zeitschriften können davon ausgenommen werden). Wenn nur eine Regionaleinstellung ausgewählt wird, erscheint das Sprachenmenü nicht, und den Zeitschriften stehen keine erweiterten Spracheinstellungen zur Verfügung.</message>
 	<message key="admin.locale.maybeIncomplete">Gekennzeichnete Lokaleinstellungen können unvollständig sein.</message>	
@@ -45,12 +53,13 @@
 	<message key="admin.systemVersion">OJS-Version</message>
 	<message key="admin.systemConfiguration">OJS-Konfiguration</message>
 	<message key="admin.systemConfigurationDescription"><![CDATA[OJS-Konfigurationsdatei <tt>config.inc.php</tt>.]]></message>
+	<message key="admin.journals.createInstructions">Sie werden automatisch als Redakteur/in dieser Zeitschrift eingetragen. Nachdem Sie eine neue Zeitschrift eingerichtet haben, loggen Sie sich dort als Redakteur/in ein, fahren Sie mit der Konfiguration fort und tragen Sie Benutzer/innen ein.</message>
 	<message key="admin.journals.journalSettings">Zeitschriften-Einstellungen</message>
 	<message key="admin.journals.noneCreated">Es wurde keine Zeitschrift eingerichtet.</message>
 	<message key="admin.contexts.confirmDelete">Sind Sie sicher, dass Sie diese Zeitschrift mitsamt ihrem gesamten Inhalt endgültig löschen möchten?</message>
 	<message key="admin.contexts.create">Eine Zeitschrift einrichten</message>
-	<message key="admin.journals.createInstructions">Sie werden automatisch als Redakteur/in dieser Zeitschrift eingetragen. Nachdem Sie eine neue Zeitschrift eingerichtet haben, loggen Sie sich dort als Redakteur/in ein, fahren Sie mit der Konfiguration fort und tragen Sie Benutzer/innen ein.</message>
-	<message key="admin.journals.urlWillBe"><![CDATA[Die URL der Zeitschrift ist {$sampleUrl}]]></message>
+	<message key="admin.journals.urlWillBe">Die Zeitschrift sollte über ein kurzes Wort oder eine Abkürzung identifizierbar sein. Die URL der Zeitschrift wird {$sampleUrl} lauten.</message>
+	<message key="admin.contexts.form.titleRequired">Die Angabe eines Titels ist erforderlich.</message>
 	<message key="admin.contexts.form.pathRequired">Die Angabe eines Zugangspfads ist erforderlich.</message>
 	<message key="admin.contexts.form.pathAlphaNumeric">Der Zugangspfad darf nur Buchstaben und Zahlen, Unterstriche und Bindestriche enthalten und muss mit einem Buchstaben oder einer Zahl beginnen und enden.</message>
 	<message key="admin.contexts.form.pathExists">Der gewählte Zugangspfad wird bereits für eine andere Zeitschrift verwendet.</message>
@@ -70,7 +79,7 @@
 	<message key="admin.mergeUsers.confirm">Sind Sie sicher, dass Sie die ausgewählten {$oldAccountCount} Konten in dem Konto mit dem Benutzer/innennamen "{$newUsername}" zusammenführen wollen? Die ausgewählten {$oldAccountCount} Konten werden danach nicht mehr existieren. Diese Aktion kann nicht rückgängig gemacht werden.</message>
 	<message key="admin.mergeUsers.noneEnrolled">Keine registrierten Benutzer/innen.</message>
 
-	<!-- Kategorien -->
+	<!-- Categories -->
 	<message key="admin.categories">Kategorien</message>
 	<message key="admin.categories.enable.description">Die Website-Administratorin/der Website-Administrator kann sich dafür entscheiden, eine Menge von Kategorien zu definieren, um die Organisation einer großen Menge von Zeitschriften zu erleichtern. Zeitschriftenverwalter/innen können dann mehrere dieser Kategorien für jede Zeitschrift auswählen, und Leser/innen können Zeitschriftensammlungen nach Kategorien durchsehen.</message>
 	<message key="admin.categories.disableCategories">Zeitschriften nicht in Kategorien organisieren.</message>
@@ -82,20 +91,8 @@
 	<message key="admin.categories.confirmDelete">Sind Sie sicher, dass Sie diese Kategorie löschen wollen?</message>
 	<message key="admin.categories.name">Name</message>
 	<message key="admin.categories.nameRequired">Ein Kategorienname ist notwendig.</message>
-
-	
-	<message key="admin.contexts.form.titleRequired">Die Angabe eines Titels ist erforderlich.</message>
 	<message key="admin.presses.createInstructions">Sie werden automatisch als Verwalter/in dieser Zeitschrift eingetragen werden. Nachdem Sie eine neue Zeitschrift angelegt haben, werden Sie automatisch zum Einrichtungsassistenten weitergeleitet, um die Einrichtung der Zeitschrift abzuschließen.</message>
 	<message key="admin.scheduledTask.subscriptionExpiryReminder">Erinnerung an Abonnement-Ende</message>
 	<message key="admin.scheduledTask.openAccessNotification">Open-Access-Benachrichtigung</message>
 	<message key="admin.scheduledTask.reviewReminder">Erinnerung an Gutachten</message>
-	<message key="admin.languages.confirmDisable">Sind Sie sicher, dass Sie diese Regionaleinstellung deaktivieren wollen? Dies könnte alle Zeitschriften auf dieser Plattform, die momentan diese Regionaleinstellung benutzen, betreffen.</message>
-	<message key=""><![CDATA[]]></message>
-	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Sprachpakete können momentan nicht vom Webserver des Public Knowledge Project installiert werden. Mögliche Gründe sind:</p>
-	<ul>
-		<li>Ihr Server verfügt nicht über das Hilfsprogramm GNU "tar" oder erlaubt nicht dessen Ausführung.</li>
-		<li>OJS kann die Locale-Registrierungsdatei nicht verändern, üblicherweise "registry/locales.xml".</li>
-	</ul>
-<p>Sprachpakete können manuell von der <a href="http://pkp.sfu.ca">PKP-Website</a> heruntergeladen werden.</p>]]></message>
-	<message key=""><![CDATA[]]></message>
 </locale>

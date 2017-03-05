@@ -4,15 +4,15 @@
 <!--
   * plugins/oaiMetadataFormats/rfc1807/locale/tr_TR/locale.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the tr_TR (Türkçe) locale.
   *
   -->
  
-<locale name="tr_TR" full_name = "Turkish">
+<locale name="tr_TR" full_name="Türkçe">
 	<message key="plugins.OAIMetadata.rfc1807.displayName">RFC1807 Üst veri Biçimi</message>
 	<message key="plugins.OAIMetadata.rfc1807.description">Üst veri yapısı bir bakıma RFC1807 ile tutarlı olmanın yoludur.</message>
 </locale>

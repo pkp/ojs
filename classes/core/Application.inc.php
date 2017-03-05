@@ -3,8 +3,8 @@
 /**
  * @file classes/core/Application.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class Application
@@ -109,7 +109,7 @@ class Application extends PKPApplication {
 			'QueuedPaymentDAO' => 'lib.pkp.classes.payment.QueuedPaymentDAO',
 			'ReviewAssignmentDAO' => 'lib.pkp.classes.submission.reviewAssignment.ReviewAssignmentDAO',
 			'ReviewerSubmissionDAO' => 'classes.submission.reviewer.ReviewerSubmissionDAO',
-			'RoleDAO' => 'classes.security.RoleDAO',
+			'RoleDAO' => 'lib.pkp.classes.security.RoleDAO',
 			'ScheduledTaskDAO' => 'lib.pkp.classes.scheduledTask.ScheduledTaskDAO',
 			'SectionDAO' => 'classes.journal.SectionDAO',
 			'StageAssignmentDAO' => 'lib.pkp.classes.stageAssignment.StageAssignmentDAO',

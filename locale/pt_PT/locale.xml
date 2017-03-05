@@ -4,8 +4,8 @@
 <!--
   * locale/pt_PT/locale.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the pt_PT (Português (Portugal)) locale.
@@ -222,16 +222,6 @@
 	<!-- Reader Comments -->
 	<message key="comments.commentsOnArticle">Comentários sobre o artigo</message>
 	<message key="comments.authenticated"><![CDATA[por <a href="{$publicProfileUrl}" target="_parent">{$userName}</a>]]></message>
-
-	<!-- Site Administration -->
-
-	<message key="admin.settings.oaiRegistrationDescription"><![CDATA[Para indexar todo o conteúdo das revistas hospedadas neste portal num sistema global de bases de dados de pesquisa integradas, <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">registe</a> o URL do portal no <a href="http://pkp.sfu.ca/harvester/" target="_blank">colectador de metadados</a> do Public Knowledge Project. Esta ferramenta recolhe os metadados de cada item indexado na revista, permitindo pesquisa coletiva e precisa dentro dos portais que adoptam o <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Protocolo de Ficheiros Abertos para Recolha de Metadados - OAI PMH</a>.
-<br /><br />
-<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Clique aqui</a> e insira <span class="highlight">{$siteUrl}</span> no campo <strong>URL do Portal</strong>, e <span class="highlight">{$oaiUrl}</span> no campo <strong>URL Base para o Ficheiro OAI</strong>.
-<br /><br />
-Note que a interface OAI pode ser desactivada para este portal nas configurações do sistema. Futuras versões do SEER/OJS permitirão activar ou desactivar a interface OAI para revistas, individualmente.]]></message>
-
-
 
 	<!-- Languages -->
 
@@ -959,4 +949,34 @@ Pode-se opcionalmente informar o motivo pelo qual está sendo desactivado o regi
 	<message key="user.authorization.copyeditorAssignmentMissing">Acesso recusado! Não tem direitos de autor sobre este artigo.</message>
 	<message key="user.authorization.sectionAssignment">Está a tentar aceder a um artigo que não pertence à secção.</message>
 	<message key="user.authorization.invalidCopyditorSubmission">Submissão de cópia de editor inválida ou nenhuma de cópia de editor solicitada!</message>
+
+
+
+
+
+	<message key="dashboard.myQueue">Painel de Controlo</message>
+	<message key="editor.navigation.issues">Números</message>
+	<message key="editor.issues.futureIssues">Próximos</message>
+	<message key="editor.issues.backIssues">Anteriores</message>
+	<message key="navigation.settings">Definições</message>
+	<message key="navigation.access">Gestão de acessos</message>
+	<message key="navigation.tools">Ferramentas</message>
+	<message key="navigation.admin">Administrador</message>
+	<message key="navigation.viewFrontend">Previsualizar</message>
+	<message key="navigation.submissions">Submissões</message>
+	<message key="navigation.archives">Arquivo</message>
+	<message key="navigation.items.shownTotal">Total</message>
+	<message key="navigation.tools.importExport">Importar / exportar</message>
+	<message key="navigation.tools.statistics">Estatísticas</message>
+	<message key="submission.submit.newSubmissionSingle">Submeter</message>
+	<message key="submission.mySubmissions">As minhas submissões</message>
+	<message key="common.queue.long.myAssigned">As minhas tarefas</message>
+	<message key="grid.submission.itemTitle">Título</message>
+	<message key="workflow.stage">Estado</message>
+	<message key="workflow.review.externalReview">Revisão externa</message>
+	<message key="common.tasks">Tarefas ativas</message>
+	<message key="manager.website">Website</message>
+	<message key="manager.workflow">Fluxo de trabalho</message>
+	<message key="manager.distribution">Permissões</message>
+	<message key="manager.siteAccessOptions.siteAccessOptions">Opções de acesso</message>
 </locale>

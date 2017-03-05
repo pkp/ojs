@@ -3,8 +3,8 @@
 /**
  * @file classes/plugins/PubObjectsExportPlugin.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class PubObjectsExportPlugin
@@ -25,6 +25,9 @@ define('EXPORT_STATUS_REGISTERED', 'registered');
 define('EXPORT_ACTION_EXPORT', 'export');
 define('EXPORT_ACTION_MARKREGISTERED', 'markRegistered');
 define('EXPORT_ACTION_DEPOSIT', 'deposit');
+
+// Configuration errors.
+define('EXPORT_CONFIG_ERROR_SETTINGS', 0x02);
 
 
 abstract class PubObjectsExportPlugin extends ImportExportPlugin {
@@ -104,6 +107,19 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 		switch (array_shift($args)) {
 			case 'index':
 			case '':
+				// Check for configuration errors:
+				$configurationErrors = array();
+				// missing plugin settings
+				$form = $this->_instantiateSettingsForm($context);
+				foreach($form->getFormFields() as $fieldName => $fieldType) {
+					if ($form->isOptional($fieldName)) continue;
+					$pluginSetting = $this->getSetting($context->getId(), $fieldName);
+					if (empty($pluginSetting)) {
+						$configurationErrors[] = EXPORT_CONFIG_ERROR_SETTINGS;
+						break;
+					}
+				}
+
 				// Add link actions
 				$actions = $this->getExportActions($context);
 				$actionNames = array_intersect_key($this->getExportActionNames(), array_flip($actions));
@@ -116,6 +132,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 				$templateMgr->assign(array(
 					'plugin' => $this,
 					'actionNames' => $actionNames,
+					'configurationErrors' => $configurationErrors,
 				));
 				break;
 			case 'exportSubmissions':
@@ -125,6 +142,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 				$selectedIssues = (array) $request->getUserVar('selectedIssues');
 				$selectedRepresentations = (array) $request->getUserVar('selectedRepresentations');
 				$tab = (string) $request->getUserVar('tab');
+				$noValidation = $request->getUserVar('validation') ? false : true;
 
 				if (empty($selectedSubmissions) && empty($selectedIssues) && empty($selectedRepresentations)) {
 					fatalError(__('plugins.importexport.common.error.noObjectsSelected'));
@@ -144,7 +162,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 				}
 
 				// Execute export action
-				$this->executeExportAction($request, $objects, $filter, $tab, $objectsFileNamePart);
+				$this->executeExportAction($request, $objects, $filter, $tab, $objectsFileNamePart, $noValidation);
 		}
 	}
 
@@ -155,20 +173,57 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 	 * @param $filter string Filter to use
 	 * @param $tab string Tab to return to
 	 * @param $objectsFileNamePart string Export file name part for this kind of objects
+	 * @param $noValidation boolean If set to true no XML validation will be done
 	 */
-	function executeExportAction($request, $objects, $filter, $tab, $objectsFileNamePart) {
+	function executeExportAction($request, $objects, $filter, $tab, $objectsFileNamePart, $noValidation = null) {
 		$context = $request->getContext();
 		$path = array('plugin', $this->getName());
 		if ($request->getUserVar(EXPORT_ACTION_EXPORT)) {
 			assert($filter != null);
 			// Get the XML
-			$exportXml = $this->exportXML($objects, $filter, $context);
+			$exportXml = $this->exportXML($objects, $filter, $context, $noValidation);
 			import('lib.pkp.classes.file.FileManager');
 			$fileManager = new FileManager();
 			$exportFileName = $this->getExportFileName($this->getExportPath(), $objectsFileNamePart, $context, '.xml');
 			$fileManager->writeFile($exportFileName, $exportXml);
 			$fileManager->downloadFile($exportFileName);
 			$fileManager->deleteFile($exportFileName);
+		} elseif ($request->getUserVar(EXPORT_ACTION_DEPOSIT)) {
+			assert($filter != null);
+			// Get the XML
+			$exportXml = $this->exportXML($objects, $filter, $context, $noValidation);
+			// Write the XML to a file.
+			// export file name example: crossref-20160723-160036-articles-1.xml
+			import('lib.pkp.classes.file.FileManager');
+			$fileManager = new FileManager();
+			$exportFileName = $this->getExportFileName($this->getExportPath(), $objectsFileNamePart, $context, '.xml');
+			$fileManager->writeFile($exportFileName, $exportXml);
+			// Deposit the XML file.
+			$result = $this->depositXML($objects, $context, $exportFileName);
+			// send notifications
+			if ($result === true) {
+				$this->_sendNotification(
+					$request->getUser(),
+					$this->getDepositSuccessNotificationMessageKey(),
+					NOTIFICATION_TYPE_SUCCESS
+				);
+			} else {
+				if (is_array($result)) {
+					foreach($result as $error) {
+						assert(is_array($error) && count($error) >= 1);
+						$this->_sendNotification(
+							$request->getUser(),
+							$error[0],
+							NOTIFICATION_TYPE_ERROR,
+							(isset($error[1]) ? $error[1] : null)
+						);
+					}
+				}
+			}
+			// Remove all temporary files.
+			$fileManager->deleteFile($exportFileName);
+			// redirect back to the right tab
+			$request->redirect(null, null, null, $path, null, $tab);
 		} elseif ($request->getUserVar(EXPORT_ACTION_MARKREGISTERED)) {
 			$this->markRegistered($context, $objects);
 			// redirect back to the right tab
@@ -178,6 +233,24 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 			$dispatcher->handle404();
 		}
 	}
+
+	/**
+	 * Get the locale key used in the notification for
+	 * the successful deposit.
+	 */
+	function getDepositSuccessNotificationMessageKey() {
+		return 'plugins.importexport.common.register.success';
+	}
+
+	/**
+	 * Deposit XML document.
+	 * This must be implemented in the subclasses, if the action is supported.
+	 * @param $objects mixed Array of or single published article, issue or galley
+	 * @param $context Context
+	 * @param $filename Export XML filename
+	 * @return boolean Whether the XML document has been registered
+	 */
+	abstract function depositXML($objects, $context, $filename);
 
 	/**
 	 * Get the submission filter.
@@ -263,8 +336,9 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 	 * @param $filter string
 	 * @param $context Context
 	 * @return string XML document.
+	 * @param $noValidation boolean If set to true no XML validation will be done
 	 */
-	function exportXML($objects, $filter, $context) {
+	function exportXML($objects, $filter, $context, $noValidation = null) {
 		$xml = '';
 		$filterDao = DAORegistry::getDAO('FilterDAO');
 		$exportFilters = $filterDao->getObjectsByGroup($filter);
@@ -272,6 +346,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 		$exportFilter = array_shift($exportFilters);
 		$exportDeployment = $this->_instantiateExportDeployment($context);
 		$exportFilter->setDeployment($exportDeployment);
+		if ($noValidation) $exportFilter->setNoValidation($noValidation);
 		libxml_use_internal_errors(true);
 		$exportXml = $exportFilter->execute($objects, true);
 		$xml = $exportXml->saveXml();
@@ -337,6 +412,35 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 		$additionalFields[] = $this->getDepositStatusSettingName();
 	}
 
+	/**
+	 * @copydoc AcronPlugin::parseCronTab()
+	 */
+	function callbackParseCronTab($hookName, $args) {
+		$taskFilesPath =& $args[0];
+		$taskFilesPath[] = $this->getPluginPath() . DIRECTORY_SEPARATOR . 'scheduledTasks.xml';
+		return false;
+	}
+
+	/**
+	 * Retrieve all unregistered articles.
+	 * @param $context Context
+	 * @return array
+	 */
+	function getUnregisteredArticles($context) {
+		// Retrieve all published articles that have not yet been registered.
+		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO'); /* @var $publishedArticleDao PublishedArticleDAO */
+		$articles = $publishedArticleDao->getExportable(
+			$context->getId(),
+			null,
+			null,
+			null,
+			null,
+			$this->getDepositStatusSettingName(),
+			EXPORT_STATUS_NOT_DEPOSITED,
+			null
+		);
+		return $articles->toArray();
+	}
 	/**
 	 * Check whether we are in test mode.
 	 * @param $context Context
@@ -568,6 +672,18 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 		$this->import($exportDeploymentClassName);
 		$exportDeployment = new $exportDeploymentClassName($context, $this);
 		return $exportDeployment;
+	}
+
+	/**
+	 * Instantiate the settings form.
+	 * @param $context Context
+	 * @return CrossRefSettingsForm
+	 */
+	function _instantiateSettingsForm($context) {
+		$settingsFormClassName = $this->getSettingsFormClassName();
+		$this->import('classes.form.' . $settingsFormClassName);
+		$settingsForm = new $settingsFormClassName($this, $context->getId());
+		return $settingsForm;
 	}
 
 }

@@ -3,8 +3,8 @@
 /**
  * @file controllers/grid/issueGalleys/IssueGalleyGridHandler.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2000-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2000-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IssueGalleyGridHandler
@@ -64,10 +64,10 @@ class IssueGalleyGridHandler extends GridHandler {
 	/**
 	 * @copydoc GridHandler::setDataElementSequence()
 	 */
-	function setDataElementSequence($request, $rowId, &$issueGalley, $newSequence) {
+	function setDataElementSequence($request, $rowId, $gridDataElement, $newSequence) {
 		$issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /* @var $issueGalleyDao IssueGalleyDAO */
-		$issueGalley->setSequence($newSequence);
-		$issueGalleyDao->updateObject($issueGalley);
+		$gridDataElement->setSequence($newSequence);
+		$issueGalleyDao->updateObject($gridDataElement);
 	}
 
 	/**
@@ -91,9 +91,9 @@ class IssueGalleyGridHandler extends GridHandler {
 	}
 
 	/**
-	 * @copydoc PKPHandler::initialize()
+	 * @copydoc GridHandler::initialize()
 	 */
-	function initialize($request, $args) {
+	function initialize($request, $args = null) {
 		parent::initialize($request, $args);
 
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR, LOCALE_COMPONENT_PKP_SUBMISSION);

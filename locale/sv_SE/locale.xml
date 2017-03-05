@@ -4,8 +4,8 @@
 <!--
   * locale/sv_SE/locale.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings.
@@ -283,16 +283,6 @@
 	<!-- Reader Comments -->
 	<message key="comments.commentsOnArticle">Kommentarer på artikeln</message>
 	<message key="comments.authenticated">{$userName}</message>
-
-	<!-- Site Administration -->
-
-	<message key="admin.settings.oaiRegistrationDescription"><![CDATA[För att innehållet i de tidskrifter som tillhör den här sidan ska indexeras och distribueras globalt till forskningsdatabaser, <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">registrera</a> din sidas URL med the Public Knowledge Project metadata <a href="http://pkp.sfu.ca/harvester/" target="_blank">harvester</a>. Det här verkyget samlar metadata från allt indexerat material i tidskriften, vilket innebär korrekta sökvägar från forskningssidor som knutits till <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Open Archives Initiative Protocol for Metadata Harvesting</a>.
-<br /><br />
-<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Klicka här</a> and skriv in <span class="highlight">{$siteUrl}</span> under <b>Site URL</b>, och <span class="highlight">{$oaiUrl}</span> under <b>Base URL för OAI Archive</b>.
-<br /><br />
-Observera att OAI-gränssnittet kan avaktiveras från sidan om man redigerar OJS systemkonfiguration. Framtida versioner av OJS kommer stödja OAI-gränssnittet på tidskriftsnivå.]]></message>
-
-
 
 	<!-- Languages -->
 	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Nedladdning av språkfiler från Public Knowledge Project web server är inte tillgängligt för tillfället:</p>

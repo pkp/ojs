@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/htmlArticleGalley/HtmlArticleGalleyPlugin.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class HtmlArticleGalleyPlugin
@@ -99,9 +99,11 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 		$request = Application::getRequest();
 
 		if ($galley && $galley->getFileType() == 'text/html' && $galley->getFileId() == $fileId) {
-			echo $this->_getHtmlContents($request, $galley);
-			$returner = true;
-			HookRegistry::call('HtmlArticleGalleyPlugin::articleDownloadFinished', array(&$returner));
+			if (!HookRegistry::call('HtmlArticleGalleyPlugin::articleDownload', array($article,  &$galley, &$fileId))) {
+				echo $this->_getHtmlContents($request, $galley);
+				$returner = true;
+				HookRegistry::call('HtmlArticleGalleyPlugin::articleDownloadFinished', array(&$returner));
+			}
 			return true;
 		}
 

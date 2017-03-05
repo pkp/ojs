@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/crossref/filter/IssueCrossrefXmlFilter.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2000-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2000-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IssueCrossrefXmlFilter
@@ -110,7 +110,7 @@ class IssueCrossrefXmlFilter extends NativeExportFilter {
 		if (empty($depositorEmail)) {
 			$depositorEmail = $context->getSetting('supportEmail');
 		}
-		$depositorNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'depositor_name', htmlspecialchars($depositorName, ENT_COMPAT, 'UTF=8')));
+		$depositorNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'depositor_name', htmlspecialchars($depositorName, ENT_COMPAT, 'UTF-8')));
 		$depositorNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'email_address', htmlspecialchars($depositorEmail, ENT_COMPAT, 'UTF-8')));
 		$headNode->appendChild($depositorNode);
 		$publisherInstitution = $context->getSetting('publisherInstitution');

@@ -4,8 +4,8 @@
 <!--
   * locale/de_DE/locale.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_German_(de_DE)
   * Localization strings.
@@ -335,13 +335,6 @@
 	<message key="search.results.orderDir.asc">Aufsteigend</message>
 	<message key="search.results.orderDir.desc">Absteigend</message>
 	<message key="search.results.similarDocuments">ähnliche Dokumente</message>
-
-	<!-- Site Administration -->
-	<message key="admin.settings.oaiRegistrationDescription"><![CDATA[Um den Inhalt aller von dieser Website angebotenen Zeitschriften bei einem allgemein verbreiteten System von Forschungsdatenbanken zu indizieren, <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">registrieren Sie</a> die URL Ihrer Website beim Metadaten-Harvester des Public Knowledge Project <a href="http://pkp.sfu.ca/harvester/" target="_blank"></a>. Der Harvester sammelt die Metadaten jedes indizierten Artikels dieser Zeitschrift und ermöglicht somit eine umfassende und genaue Suche auf allen Forschungs-Webseiten, die sich an dem Projekt <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank"> Open Archives Initiative Protocol for Metadata Harvesting</a> beteiligen.
-<br /><br />
-<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Klicken Sie hier</a> und geben Sie <span class="highlight">{$siteUrl}</span> unter <strong>URL</strong> und <span class="highlight">{$oaiUrl}</span> unter <strong>OAI Base URL</strong> ein.
-<br /><br />
-Bitte beachten Sie, dass die OAI-Schnittstelle für diese Website in der OJS-Systemkonfiguration deaktiviert werden kann. Zukünftige Versionen von OJS werden es ermöglichen, die OAI-Schnittstelle für jede Zeitschrift einer Website gesondert zu aktivieren oder zu deaktivieren.]]></message>
 
 	<message key="admin.auth.defaultSourceDescription"><![CDATA[<p>Eine Standardauthentifizierungsquelle außerhalb vom OJS festzulegen, hat folgende Auswirkungen:</p>
 <ul>

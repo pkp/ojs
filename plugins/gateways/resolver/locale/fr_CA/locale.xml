@@ -4,15 +4,14 @@
 <!--
   * plugins/gateways/resolver/locale/fr_CA/locale.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Localization strings for the fr_CA locale.
-  *
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_French_(fr_CA)
+  * Localization strings.
   -->
  
-<locale name="fr_CA" full_name="Français (Canada)">
+<locale name = "fr_CA" full_name = "Français (Canada)">
 	<message key="plugins.gateways.resolver.displayName">Plugiciel Resolver</message>
 	<message key="plugins.gateways.resolver.description">Ce plugiciel résout les numéros et les articles basés sur l'information de référence bibliographique.</message>
 	<message key="plugins.gateways.resolver.errors.errorMessage">Impossible de résoudre une seule entité en utilisant l'information de référence bibliographique spécifiée. Veuillez vous assurer que l'information de référence bibliographique est complète et qu'elle se rapporte à une entité dans cette installation de OJS.</message>

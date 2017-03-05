@@ -4,8 +4,8 @@
 <!--
   * locale/ar_IQ/editor.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings.
@@ -221,4 +221,5 @@
 	<message key="editor.submission.selectGalleyFiles">إختر ملفات اللوح الطباعي</message>
 	<message key="editor.submission.editorial.finalDraftDescription"><![CDATA[الملفات المسودة النهائية ضمن هذه القائمة يتم تحويلها من قبل المدقق إلى نسخ مدققة، يتم رفعها أدناه ضمن باب <span class="pkp_help_title">التدقيق</span>.]]></message>
 	<message key="editor.submission.proof.manageProofFilesDescription">أي ملفات سبق رفعها إلى أي مرحلة من مراحل طلب النشر يمكن إضافتها إلى قائمة القراءة التصحيحية عبر تأشير خانة تضمين الملفات أدناه ومن ثم النقر على زر البحث. كل الملفات المتاحة سيتم عرضها وستكون جاهزة لهذا الغرض.</message>
+	<message key="editor.publicIdentificationExistsForTheSameType">المعرف العام '{$publicIdentifier}' موجود سلفاً لمكون آخر من نفس النوع. لطفاً، إختر معرفات فريدة للمكونات التي من نفس النوع ضمن مجلتك.</message>
 </locale>

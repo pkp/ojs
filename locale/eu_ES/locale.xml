@@ -4,8 +4,8 @@
 <!--
   * locale/eu_ES/locale.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings.
@@ -281,16 +281,6 @@
 	<!-- Reader Comments -->
 	<message key="comments.commentsOnArticle">Artikulu honi buruzko iruzkinak</message>
 	<message key="comments.authenticated"><![CDATA[<a href="{$publicProfileUrl}" target="_parent">{$userName}</a>]]></message>
-
-	<!-- Site Administration -->
-
-	<message key="admin.settings.oaiRegistrationDescription"><![CDATA[Gune honetan ostatatutako aldizkari guztien edukia datu-baseetan bilaketak egiteko sistema banatu batean indexatuta edukitzeko, <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">erregistratu</a> zuen gunearen URLa Public Knowledge Project-en <a href="http://pkp.sfu.ca/harvester/" target="_blank">harvester</a> metadatu-biltzailean. Tresna horrek aldizkari honetako elementu indexatu guztietako metadatuak bilduko ditu, bilaketa zehatzak eta kolektiboak egin ahal izateko <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Open Archives Initiative Protocol for Metadata Harvesting</a> protokoloari atxikitako bilaketa-guneen bitartez.
-<br /><br />
-<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Egin klik hemen</a> eta idatzi <span class="highlight">{$siteUrl}</span> <strong>Gunearen URLa</strong>n eta <span class="highlight">{$oaiUrl}</span> <strong>OAI Base URL</strong> eremuan.
-<br /><br />
-Kontuan izan OAI interfazea desgaitu daitekeela gune honetarako, OJS sistema-konfigurazioa editatuz. OJS bertsio berriagoetan aukera izango da gune barruko aldizkariak banaka gaitzeko edo desgaitzeko.]]></message>
-
-
 
 	<!-- Languages -->
 	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Orain ezin da hizkuntza-paketerik deskargatu Public Knowledge Project web-zerbitzaritik:</p>

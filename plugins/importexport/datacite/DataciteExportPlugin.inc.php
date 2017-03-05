@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/datacite/DataciteExportPlugin.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class DataciteExportPlugin
@@ -101,7 +101,7 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin {
 	/**
 	 * @copydoc PubObjectsExportPlugin::executeExportAction()
 	 */
-	function executeExportAction($request, $objects, $filter, $tab, $objectsFileNamePart) {
+	function executeExportAction($request, $objects, $filter, $tab, $objectsFileNamePart, $noValidation = null) {
 		$context = $request->getContext();
 		$path = array('plugin', $this->getName());
 
@@ -115,7 +115,7 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin {
 				$exportedFiles = array();
 				foreach ($objects as $object) {
 					// Get the XML
-					$exportXml = $this->exportXML($object, $filter, $context);
+					$exportXml = $this->exportXML($object, $filter, $context, $noValidation);
 					// Write the XML to a file.
 					// export file name example: datacite-20160723-160036-articles-1-1.xml
 					$objectFileNamePart = $objectsFileNamePart . '-' . $object->getId();
@@ -158,7 +158,7 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin {
 			$resultErrors = array();
 			foreach ($objects as $object) {
 				// Get the XML
-				$exportXml = $this->exportXML($object, $filter, $context);
+				$exportXml = $this->exportXML($object, $filter, $context, $noValidation);
 				// Write the XML to a file.
 				// export file name example: datacite-20160723-160036-articles-1-1.xml
 				$objectFileNamePart = $objectsFileNamePart . '-' . $object->getId();
@@ -200,7 +200,7 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin {
 	}
 
 	/**
-	 * @copydoc DOIPubIdExportPlugin::depositXML()
+	 * @copydoc PubObjectsExportPlugin::depositXML()
 	 */
 	function depositXML($object, $context, $filename) {
 		$request = $this->getRequest();

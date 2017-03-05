@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../../../lib/pkp/dtd/xmlData.dtd">
+
+<!--
+  * 3.0.0_stage_assignments.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * 3.0.0.0 stage_assignemnts update.
+  -->
+<data>
+	<sql><!-- #2201 remove reviewer (4096 = ROLE_ID_REVIEWER) from stage_assignemnts, applies for those already migrated from OJS 2.4.x -->
+		<query driver="mysql">DELETE FROM sa USING stage_assignments sa INNER JOIN review_assignments ra ON (sa.submission_id = ra.submission_id AND sa.user_id = ra.reviewer_id) INNER JOIN user_groups ug ON (sa.user_group_id = ug.user_group_id AND ug.role_id = 4096)</query>
+		<query driver="mysqli">DELETE FROM sa USING stage_assignments sa INNER JOIN review_assignments ra ON (sa.submission_id = ra.submission_id AND sa.user_id = ra.reviewer_id) INNER JOIN user_groups ug ON (sa.user_group_id = ug.user_group_id AND ug.role_id = 4096)</query>
+		<query driver="postgres7">DELETE FROM stage_assignments sa USING review_assignments ra, user_groups ug WHERE sa.submission_id = ra.submission_id AND sa.user_id = ra.reviewer_id AND sa.user_group_id = ug.user_group_id AND ug.role_id = 4096</query>
+	</sql>
+</data>
+

@@ -2,14 +2,13 @@
 <!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * locale.xml
+  * locale/fr_CA/locale.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Localization strings for the fr_CA (Français (Canada)) locale.
-  *
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_French_(fr_CA)
+  * Localization strings.
   -->
 
 <locale name="fr_CA" full_name="Français (Canada)">
@@ -235,16 +234,6 @@
 	<message key="comments.commentsOnArticle">Commentaires sur cet article</message>
 	<message key="comments.authenticated"><![CDATA[par <a href="{$publicProfileUrl}" target="_parent">{$userName}</a>]]></message>
 
-	<!-- Site Administration -->
-
-	<message key="admin.settings.oaiRegistrationDescription"><![CDATA[Pour indexer le contenu de toutes les revues hébergées sur ce site selon un système distribué de bases de données de recherche, <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">inscrire</a> l'adresse URL de votre site dans le <a href="http://pkp.sfu.ca/harvester/" target="_blank">collecteur</a> de métadonnées du Public Knowledge Project. Cet outil récolte les métadonnées de chaque article indexé de la revue, permettant ainsi une recherche précise et globale parmi les sites de recherche qui adhèrent au protocole de collecte de métadonnées du <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Open Archives Initiative</a>.
-<br /><br />
-<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Cliquer ici</a> et saisir <span class="highlight">{$siteUrl}</span> sous <b>Site URL</b>, et <span class="highlight">{$oaiUrl}</span> sous <b>Base URL for OAI Archive</b>.
-<br /><br />
-À noter que l'interface OAI peut être désactivée pour ce site en modifiant la configuration OJS. Les futures versions d'OJS permettront d'activer ou de désactiver l'interface OAI pour chacune des revues du site.]]></message>
-
-
-
 	<!-- Languages -->
 
 	<message key="admin.auth.defaultSourceDescription"><![CDATA[<p>Définir une source d'authentification par défaut autre que celle d'OJS a pour conséquence :
@@ -275,7 +264,7 @@
 	La configuration de la prise en charge de LOCKSS pour Open Journal Systems n'a pas à être effectuée avant que le processus de publication soit bien enclenché, en quel cas, suivre ces deux étapes :]]></message>
 
 	<!-- Setup Step 3 -->
-	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[Pour que le contenu de cette revue soit indexé dans un système distribué de bases de données de recherche, veuillez lire <a href="http://www.oaister.org/dataproviders.html" target="_blank">les étapes pour devenir un fournisseur de données</a> et inscrire votre revue avec le <a href="http://www.openarchives.org/data/registerasprovider.html" target="_blank">registre Open Archives</a> officiel. Pour vous inscrire, vous aurez besoin de l'URL de base de votre dépôt : <span class="highlight">{$oaiUrl}</span>.
+	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[Pour que le contenu de cette revue soit indexé dans un système distribué de bases de données de recherche, veuillez lire <a href="http://www.oaister.org/dataproviders.html" target="_blank">les étapes pour devenir un fournisseur de données</a> et inscrire votre revue avec le <a href="http://www.openarchives.org/data/registerasprovider.html" target="_blank">registre Open Archives</a> officiel. Pour vous inscrire, vous aurez besoin de l'URL de base de votre dépôt : <span class="highlight">x</span>.
 Par la suite, vous pouvez inscrire votre revue au <a href="http://gita.grainger.uiuc.edu/registry/" target="_blank">registre UIUC OAI</a> et <a href="http://www.oaister.org/" target="_blank">OAIster</a>.
 <br /><br />
 Prendre note que si votre administrateur de site a déjà inscrit ce site auprès de ces services, votre revue sera indexée automatiquement et vous n'avez pas besoin d'inscrire votre revue.]]></message>
@@ -322,7 +311,7 @@ Active indique combien d'évaluations sont présentement considérées ou en cou
 	<message key="layoutEditor.layoutEditingAssignments">Travail éditorial de mise en page</message>
 	<message key="layoutEditor.galley.uploadGalleyFormat">Télécharger l'épreuve</message>
 	<message key="layoutEditor.galley.replaceGalley">Remplacer le fichier</message>
-	<message key="layoutEditor.galley.uploadSuppFile">Télécharger le fichier supplémentaire</message>
+	<message key="layoutEditor.galley.uploadSuppFile">Téléverser le fichier supplémentaire</message>
 
 	<!-- Reviewer -->
 	<message key="reviewer.pendingReviews">Articles en attente d'évaluation</message>
@@ -506,7 +495,7 @@ Active indique combien d'évaluations sont présentement considérées ou en cou
 	<message key="about.submissions">Soumissions</message>
 	<message key="about.onlineSubmissions">Soumissions en ligne</message>
 	<message key="about.onlineSubmissions.login">Ouvrir une session</message>
-	<message key="about.onlineSubmissions.registrationRequired">L'inscription et l'ouverture de session sont obligatoires pour soumettre des articles en ligne et pour vérifier l'état des soumissions courantes.</message>
+	<message key="about.onlineSubmissions.registrationRequired">{$login} ou ({$register}) pour faire une soumission.</message>
 	<message key="about.authorGuidelines">Directives aux auteurs</message>
 	<message key="about.submissionPreparationChecklist">Liste de vérification de la soumission</message>
 	<message key="about.submissionPreparationChecklist.description">En tant que partie intégrante du processus de soumission, les auteurs doivent s'assurer de la conformité de leur soumission avec tous les éléments suivants, et les soumissions peuvent être retournées aux auteurs qui ne sont pas conformes à ces directives.</message>
@@ -538,13 +527,13 @@ Active indique combien d'évaluations sont présentement considérées ou en cou
 	<message key="installer.ojsUpgrade">Mise à jour d'OJS</message>
 	<message key="installer.installationInstructions"><![CDATA[<h4>Version d'OJS {$version}</h4>
 
-<p>Merci de télécharger Open Journal Systems <strong> du Public Knowledge Project</strong>. Avant de continuer, veuillez lire le fichier <a href="{$baseUrl}/docs/README">README</a> inclus avec ce logiciel. Pour en savoir plus sur Public Knowledge Project et ses projets de logiciels, veuillez visiter le <a href="http://pkp.sfu.ca/" target="_blank">site Web du PKP</a>. Si vous avez des rapports de bogues ou des demandes de soutien technique concernant Open Journal Systems, voir le <a href="http://forum.pkp.sfu.ca" target="_blank">forum de soutien</a> ou visiter le <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">système de rapports de bogues</a>en ligne de PKP. Même si le forum de soutien is the preferred method of contact, you can also email the team at <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
+<p>Merci de télécharger Open Journal Systems <strong> du Public Knowledge Project</strong>. Avant de continuer, veuillez lire le fichier <a href="{$baseUrl}/docs/README">README</a> inclus avec ce logiciel. Pour en savoir plus sur Public Knowledge Project et ses projets de logiciels, veuillez visiter le <a href="http://pkp.sfu.ca/" target="_blank">site Web du PKP</a>. Si vous avez des rapports de bogues ou des demandes de soutien technique concernant Open Journal Systems, voir le <a href="http://forum.pkp.sfu.ca" target="_blank">forum de soutien</a> ou visiter le <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">système de rapports de bogues</a>en ligne de PKP. Même si le forum de soutien est la méthode préférée de contact, vous pouvez aussi vous adresser par courriel à  <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
 
 <h4>Mise à jour</h4>
 
-<p>Si vous faites la mise à jour d'une installation existante d'OJS 2.x, <a href="{$pageUrl}/install/upgrade">cliquer ici</a> pour procéder.</p>
+<p>Si vous faites la mise à jour d'une installation existante d'OJS, <a href="{$upgradeUrl}">cliquer ici</a> pour procéder.</p>
 
-<h4>Configuration du système recommandée</h4>
+<h4>Configuration du système recommandé</h4>
 
 <ul>
 	<li><a href="http://www.php.net/" target="_blank">PHP</a> >= {$phpRequiredVersion}; vous utilisez présentement PHP {$phpVersion}{$wrongPhpText}</li>
@@ -555,29 +544,11 @@ Active indique combien d'évaluations sont présentement considérées ou en cou
 
 <p>Comme PKP n'a pas les ressources nécessaires lui permettant de tester toutes les combinaisons possibles de versions et de plateformes des logiciels, aucune garantie de fonctionnement ou de soutien adéquat n'est implicite.</p>
 
-<p>Des modifications à ces paramètres peuvent être apportées après l'installation en modifiant le fichier <tt>config.inc.php</tt> dans le répertoire de base d'OJS, ou en utilisant l'interface de administration du site Web.</p>
+<p>Des modifications à ces paramètres peuvent être apportées après l'installation en modifiant le fichier <tt>config.inc.php</tt> dans le répertoire de base d'OJS, ou en utilisant l'interface d'administration du site Web.</p>
 
 <h4>Systèmes de base de données pris en charge</h4>
 
-<p>Présentement, OJS a uniquement été testé sur MySQL et PostgreSQL, bien que d'autres systèmes de gestion de base de données pris en charge par <a href="http://adodb.sourceforge.net/" target="_blank">ADOdb</a> pourraient fonctionner (en tout ou en partie). Il est possible d'envoyer à l'équipe d'OJS des rapports de compatibilité ou des rustines de codes pour d'autres SGBD.</p>
-
-<h4>Étapes précédant l'installation</h4>
-
-<p>1. Les fichiers et répertoires suivants (et leur contenu) doivent être accessibles en écriture :</p>
-<ul>
-	<li><tt>config.inc.php</tt> est accessible en écriture (facultatif) : {$writable_config}</li>
-	<li><tt>public/</tt> est accessible en écriture : {$writable_public}</li>
-	<li><tt>cache/</tt> est accessible en écriture : {$writable_cache}</li>
-	<li><tt>cache/t_cache/</tt> est accessible en écriture : {$writable_templates_cache}</li>
-	<li><tt>cache/t_compile/</tt> est accessible en écriture : {$writable_templates_compile}</li>
-	<li><tt>cache/_db</tt> est accessible en écriture : {$writable_db_cache}</li>
-</ul>
-
-<p>2. Un répertoire pour stocker les fichiers téléchargés doit être créé et accessible en écriture (voir "Paramètres des fichiers" ci-dessous).</p>
-
-<h4>Installation manuelle</h4>
-
-<p>Sélectionner l'<strong>Installation manuelle</strong>pour afficher les énoncés SQL nécessaires à la création du schéma et des données initiales de la base de données OJS qui permettront de procéder à l'installation manuelle de la base de données. Cette option est utile au moment du débogage des problèmes d'installation, particulièrement avec les plateformes qui ne sont pas prises en charge. Prendre note que cette méthode d'installation ne crée pas de bases de donnés ou de tables, bien que le fichier de configuration sera quand même généré avec les paramètres de la base de données fournis.</p>]]></message>
+<p>Présentement, OJS a uniquement été testé sur MySQL et PostgreSQL, bien que d'autres systèmes de gestion de base de données pris en charge par <a href="http://adodb.sourceforge.net/" target="_blank">ADOdb</a> pourraient fonctionner (en tout ou en partie). Il est possible d'envoyer à l'équipe d'OJS des rapports de compatibilité ou des rustines de codes pour d'autres SGBD.</p>]]></message>
 	<message key="installer.upgradeInstructions"><![CDATA[<h4>Version {$version} d'OJS</h4>
 
 <p>Merci de télécharger <strong>Open Journal Systems</strong> du Public Knowledge Project. Avant de continuer, veuillez lire les fichiers <a href="{$baseUrl}/docs/README">README</a> et <a href="{$baseUrl}/docs/UPGRADE">UPGRADE</a> inclus avec ce logiciel. Pour en savoir plus sur le Public Knowledge Project et ses projets logiciels, veuillez visiter le site Web <a href="http://pkp.sfu.ca/" target="_blank">PKP</a>. Si vous avez des rapports de bogues ou des demandes de soutien technique concernant Open Journal Systems, voir le <a href="http://forum.pkp.sfu.ca" target="_blank">forum de soutien</a> ou visiter le <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">système de rapports de bogues</a>en ligne de PKP. Même si le forum de soutien is the preferred method of contact, you can also email the team at <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
@@ -841,7 +812,7 @@ Titre du système de classification]]></message>
 </ol>]]></message>
 	<message key="reviewer.article.reviewGuidelinesDescription">Les directives pour l'évaluation fourniront aux évaluateurs des critères pour juger de la pertinence d'une soumission pour fins de publication dans la revue, et peuvent inclure toutes instructions spéciales nécessaires à la préparation d'une évaluation efficace et utile. En effectuant l'évaluation, les évaluateurs se font présenter deux boîtes de texte, la première "pour l'auteur et le rédacteur" et la deuxième "pour le rédacteur." Alternativement, le directeur de la revue peut créer un formulaire d'évaluation par les pairs sous Formulaires d'évaluation. Dans tous les cas, les rédacteurs auront l'option d'inclure les évaluations dans leur correspondance avec l'auteur.</message>
 	<message key="reviewer.article.enterCompetingInterests"><![CDATA[Déclarer si vous êtes en conflit d'intérêts en ce qui concerne cette recherche (voir <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">Politique de CI</a>).]]></message>
-	<message key="reviewer.article.selectRecommendation">Choisir une recommandation et soumettre l'évaluation pour compléter le processus. Vous devez écrire une évaluation ou télécharger un fichier avant de choisir une recommandation.</message>
+	<message key="reviewer.article.selectRecommendation">Choisir une recommandation et soumettre l'évaluation pour compléter le processus. Vous devez écrire une évaluation ou téléverser un fichier avant de choisir une recommandation.</message>
 	<message key="user.subscriptions.mySubscriptions">Mes abonnements</message>
 	<message key="user.subscriptions.individualSubscriptions">Abonnement individuel</message>
 	<message key="user.subscriptions.institutionalSubscriptions">Abonnements institutionnels</message>
@@ -953,12 +924,99 @@ La validation peut échouer sur les URL de recherche qui nécessitent des formul
 	<message key="payment.type.purchaseIssue">Tarif au numéro</message>
 	<message key="payment.type.gift">Cadeau</message>
 	<message key="payment.type.gift.subscription">Abonnement</message>
-	<message key="installer.maxFileUploadSize"><![CDATA[Votre serveur permet actuellement le téléchargement de fichiers : <strong>{$allowFileUploads}</strong>]]></message>
+	<message key="installer.maxFileUploadSize"><![CDATA[Votre serveur permet actuellement de téléverser des fichiers d'une taille maximale de: <strong>{$maxFileUploadSize}</strong>]]></message>
 	<message key="site.upgradeAvailable.admin"><![CDATA[Une nouvelle version d'OJS est maintenant disponible! Vous utilisez actuellement OJS {$currentVersion}. La dernière version est OJS {$latestVersion}. Allez à <a href="http://pkp.sfu.ca/ojs_download" target="_new">this page</a> pour télécharger la dernière version d'OJS et voir les instructions concernant la mise à jour.]]></message>
-	<message key="site.upgradeAvailable.manager"><![CDATA[Une nouvelle version d'OJS est maintenant disponible! Vous utilisez actuellement OJS {$currentVersion}. La dernière version est OJS {$latestVersion}. Contactez votre administrateur de site ({$siteAdminName}, </a]]></message>
+	<message key="site.upgradeAvailable.manager"><![CDATA[Une nouvelle version d'OJS est maintenant disponible! Vous utilisez actuellement OJS {$currentVersion}. La dernière version est OJS {$latestVersion}. Contactez votre administrateur de site ({$siteAdminName}, <a href="mailto:{$siteAdminEmail}">{$siteAdminEmail}</a>) pour lui signaler cette nouvelle version. Plus d'information <a href="http://pkp.sfu.ca/ojs_download" target="_new">ici</a>.]]></message>
 	<message key="installer.allowFileUploads"><![CDATA[Votre serveur permet actuellement le téléchargement de fichiers : <strong>{$allowFileUploads}</strong>]]></message>
-	<message key="user.authorization.copyeditorAssignmentMissing">Accès refusé! Vous n'avez pas été nommé rédacteur/éditeur de cet article.</message>
+	<message key="user.authorization.copyeditorAssignmentMissing">Accès refusé! Vous n'avez pas été désigné rédacteur/éditeur de cet article.</message>
 	<message key="user.authorization.sectionAssignment">Vous tentez d'accéder à un article qui ne fait pas partie de votre section.</message>
 	<message key="user.authorization.invalidCopyditorSubmission">Dépôt du rédacteur non valide ou non requis!</message>
 	<message key="user.profile.profileImage">Image du profil</message>
+	<message key="editor.navigation.issues">Numéros</message>
+	<message key="context.current">Revue sélectionnée:</message>
+	<message key="context.select">Sélectionner une autre revue:</message>
+	<message key="article.return">Retourner aux informations sur l'article</message>
+	<message key="journal.viewAllIssues">Voir tous les numéros</message>
+	<message key="user.noRoles.selectUsersWithoutRoles">Inclure les utilisateurs n'ayant aucun rôle dans cette revue.</message>
+	<message key="user.reviewerPrompt">Seriez-vous prêt(e) à évaluer des soumissions à cette revue?</message>
+	<message key="user.reviewerPrompt.userGroup">Oui, demande du rôle {$userGroup}.</message>
+	<message key="user.register.contextsPrompt">Auprès de quelles revues souhaitez-vous vous enregistrer?</message>
+	<message key="user.register.otherContextRoles">Demander les rôles suivants.</message>
+	<message key="user.register.noContextReviewerInterests">Si vous demandez d'être évaluateur pour une revue, indiquez vos champs d'intérêts.</message>
+	<message key="grid.catalogEntry.approvedRepresentation.title">Approbation des épreuves</message>
+	<message key="grid.catalogEntry.approvedRepresentation.message"><![CDATA[*<p>Approuver cette épreuve pour publication.</p>]]></message>
+	<message key="grid.catalogEntry.approvedRepresentation.removeMessage"><![CDATA[*<p>Retirer l'approbation pour cette épreuve.</p>]]></message>
+	<message key="search.cli.rebuildIndex.indexing">indexation de "{$journalName}"</message>
+	<message key="search.cli.rebuildIndex.indexingByJournalNotSupported">Cette implémentation de recherche ne permet pas la réindexation par journal.</message>
+	<message key="search.cli.rebuildIndex.unknownJournal">Le chemin d'accès donné "{$journalPath}" ne mène à aucun journal.</message>
+	<message key="editor.issues.backIssues">Numéros précédents</message>
+	<message key="editor.issues.futureIssues">Numéros à venir</message>
+	<message key="notification.type.submissionSubmitted">Un nouvel article, "{$title}," a été soumis.</message>
+	<message key="notification.savedIssueMetadata">Métadonnées du numéro sauvegardées.</message>
+	<message key="notification.type.editorAssignmentTask">Un nouvel article a été soumis. Un rédacteur doit lui être assigné.</message>
+	<message key="notification.type.assignProductionUser">Demander à un utilisateur de créer les épreuves en utilisant le lien "Ajouter" dans la liste des participants.</message>
+	<message key="notification.type.awaitingRepresentations">Épreuves en attente.</message>
+	<message key="user.authorization.noContext">Aucune revue présente!</message>
+	<message key="user.authorization.invalidIssue">Numéro demandé invalide!</message>
+	<message key="grid.action.createContext">Créer une nouvelle revue</message>
+	<message key="notification.type.approveSubmission">Cette soumission est présentement en attente d'approbation avant sa parution dans le numéro.</message>
+	<message key="notification.type.approveSubmissionTitle">En attente d'approbation.</message>
+	<message key="user.profile.form.showOtherContexts">S'enregistrer auprès d'autres revues</message>
+	<message key="user.profile.form.hideOtherContexts">Cacher les autres revues</message>
+	<message key="article.view.interstitial">Choisir un fichier d'article à télécharger.</message>
+	<message key="grid.catalogEntry.availableRepresentation.approved">Approuvé</message>
+	<message key="grid.catalogEntry.availableRepresentation.notApproved">En attente d'approbation</message>
+	<message key="user.role.subEditors">Chefs de rubriques</message>
+	<message key="issue.return">Retourner aux informations sur le numéro</message>
+	<message key="submission.event.submissionSubmitted">Article soumis</message>
+	<message key="search.results.orderBy">Trier les résultats par</message>
+	<message key="search.results.orderBy.article">Titre de l'article</message>
+	<message key="search.results.orderBy.author">Auteur</message>
+	<message key="search.results.orderBy.date">Date de publication</message>
+	<message key="search.results.orderBy.issue">Numéro</message>
+	<message key="search.results.orderBy.journal">Titre de la revue</message>
+	<message key="search.results.orderBy.popularityAll">Popularité (global)</message>
+	<message key="search.results.orderBy.popularityMonth">Popularité (dernier mois)</message>
+	<message key="search.results.orderBy.relevance">Pertinence</message>
+	<message key="search.results.orderDir.asc">Croissant</message>
+	<message key="search.results.orderDir.desc">Décroissant</message>
+	<message key="search.results.similarDocuments">Documents similaires</message>
+	<message key="plugins.categories.viewableFiles">Plugiciels d'épreuve</message>
+	<message key="plugins.categories.viewableFiles.description">Les plugiciels d'épreuves soutiennent l'affichage de différents types de documents comme épreuves.</message>
+	<message key="submission.layout.galley.remotelyHostedContent">Cette épreuve sera disponible sur un site web distinct.</message>
+	<message key="reviewer.article.selectRecommendation.byEditor">Fixer ou ajuster la recommandation de l'évaluateur.</message>
+	<message key="article.pageTitle">Vue de {$title}</message>
+	<message key="article.download">Télécharger ce document PDF.</message>
+	<message key="user.register.selectContext">Sélectionner une revue à laquelle vous enregistrer</message>
+	<message key="archive.archivesPageNumber">Archives - Page {$pageNumber}</message>
+	<message key="about.contact">Contact</message>
+	<message key="about.aboutContext">À propos de cette revue</message>
+	<message key="about.onlineSubmissions.register">S'inscrire</message>
+	<message key="about.onlineSubmissions.submissionActions">{$newSubmission} ou {$viewSubmissions}.</message>
+	<message key="about.onlineSubmissions.newSubmission">Faire une nouvelle soumission</message>
+	<message key="about.onlineSubmissions.viewSubmissions">Voir vos soumissions en attente</message>
+	<message key="help.goToEditPage">Éditer {$sectionTitle}</message>
+	<message key="user.role.journalAssistant">Assistant</message>
+	<message key="user.role.journalAssistants">Assistants</message>
+	<message key="user.role.guestEditor">Rédacteur invité</message>
+	<message key="user.role.guestEditors">Rédacteurs invités</message>
+	<message key="installer.preInstallationInstructions"><![CDATA[<h4>Étapes précédant l'installation</h4>
+
+<p>1. Les fichiers et répertoires suivants (et leur contenu) doivent être accessibles en écriture :</p>
+<ul>
+	<li><tt>config.inc.php</tt> est accessible en écriture (facultatif) : {$writable_config}</li>
+	<li><tt>public/</tt> est accessible en écriture : {$writable_public}</li>
+	<li><tt>cache/</tt> est accessible en écriture : {$writable_cache}</li>
+	<li><tt>cache/t_cache/</tt> est accessible en écriture : {$writable_templates_cache}</li>
+	<li><tt>cache/t_compile/</tt> est accessible en écriture : {$writable_templates_compile}</li>
+	<li><tt>cache/_db</tt> est accessible en écriture : {$writable_db_cache}</li>
+</ul>
+
+<p>2. Un répertoire pour stocker les fichiers téléchargés doit être créé et accessible en écriture (voir "Paramètres des fichiers" ci-dessous).</p>]]></message>
+	<message key="article.pluginMissing"><![CDATA[*<p>Le fichier PDF sélectionné devrait se s'afficher ici si un plugiciel de lecture de PDF est installé dans votre navigateur (par exemple, une version récente de <a href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a>).</p>]]></message>
+	<message key="manager.setup.clockssDescription"><![CDATA[Open Journal Systems prend également en charge le système <a href="http://clockss.org/" target="_blank"> CLOCKSS </a> (Controlled Lots of Copies Keep Stuff Safe) pour assurer un archivage sécurisé et permanent pour le journal. CLOCKSS est basé sur le logiciel open source LOCKSS, développé à la bibliothèque de l'Université de Stanford, qui permet aux bibliothèques de préserver des revues Web en sondant régulièrement les sites Web de revues enregistrées pour les contenus nouvellement publiés, pour ensuite les archiver. Chaque archive est continuellement validée par rapport à d'autres caches et si le contenu est corrompu ou perdu, les autres caches ou le journal sont utilisés pour la restaurer.
+<br /> <br />
+L'installation de CLOCKSS pour Open Journal Systems n'a pas besoin d'avoir lieu avant que la publication soit en cours.]]></message>
+	<message key="manager.setup.citations.enable">Activer l'Assistant au balisage de référence (Citation Markup Assistant)</message>
+	<message key="submission.layout.galley.remoteURL">URL du contenu hébergé à distance</message>
 </locale>
