@@ -350,22 +350,18 @@ class PublishedArticleDAO extends ArticleDAO {
 		$publishedArticle = null;
 		if (!empty($pubId)) {
 			$publishedArticles = $this->getBySetting('pub-id::'.$pubIdType, $pubId, $journalId);
-			if (!empty($publishedArticles)) {
-				assert(count($publishedArticles) == 1);
-				$publishedArticle = $publishedArticles[0];
+			if ($publishedArticles->getCount()) {
+				assert($publishedArticles->getCount() == 1);
+				$publishedArticle = $publishedArticles->next();
 			}
 		}
 		return $publishedArticle;
 	}
 
 	/**
-	 * Find published articles by querying article settings.
-	 * @param $settingName string
-	 * @param $settingValue mixed
-	 * @param $journalId int optional
-	 * @return array The articles identified by setting.
+	 * @copydoc ArticleDAO::getBySetting()
 	 */
-	function getBySetting($settingName, $settingValue, $journalId = null) {
+	function getBySetting($settingName, $settingValue, $journalId = null, $rangeInfo = null) {
 		$params = $this->getFetchParameters();
 		$params[] = $settingName;
 
@@ -391,14 +387,9 @@ class PublishedArticleDAO extends ArticleDAO {
 		$sql .= ' ORDER BY ps.issue_id, s.submission_id';
 		$result = $this->retrieve($sql, $params);
 
-		$publishedArticles = array();
-		while (!$result->EOF) {
-			$publishedArticles[] = $this->_fromRow($result->GetRowAssoc(false));
-			$result->MoveNext();
-		}
-		$result->Close();
+		$result = $this->retrieveRange($sql, $params, $rangeInfo);
 
-		return $publishedArticles;
+		return new DAOResultFactory($result, $this, '_fromRow');
 	}
 
 	/**

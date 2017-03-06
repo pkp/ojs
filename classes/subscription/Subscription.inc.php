@@ -271,14 +271,6 @@ class Subscription extends DataObject {
 			return false;
 		}
 	}
-
-	/**
-	 * Check whether subscription is valid
-	 */
-	function isValid($check = SUBSCRIPTION_DATE_BOTH, $checkDate = null) {
-		// must be implemented by sub-classes
-		assert(false);
-	}
 }
 
 ?>
