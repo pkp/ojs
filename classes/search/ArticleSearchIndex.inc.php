@@ -212,7 +212,7 @@ class ArticleSearchIndex {
 			$articleId = $suppFile->getArticleId();
 			$this->_updateTextIndex(
 				$articleId,
-				ARTICLE_SEARCH_SUPPLEMENTARY_FILE,
+				ARTICLE_SEARCH_SUPPLEMENTARY_FILE_METADATA,
 				array_merge(
 					array_values((array) $suppFile->getTitle(null)),
 					array_values((array) $suppFile->getCreator(null)),
