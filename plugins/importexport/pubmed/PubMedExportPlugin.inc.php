@@ -45,7 +45,7 @@ class PubMedExportPlugin extends ImportExportPlugin {
 		return __('plugins.importexport.pubmed.description');
 	}
 
-	function display(&$args, $request) {
+	function display($args, $request) {
 		$templateMgr = TemplateManager::getManager($request);
 		parent::display($args, $request);
 
