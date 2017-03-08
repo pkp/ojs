@@ -776,7 +776,6 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 			$this->insertCustomIssueOrder($journalId, $issueId, $newPos);
 		}
 		$result->Close();
-		$this->resequenceCustomIssueOrders($journalId);
 	}
 
 	/**
