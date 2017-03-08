@@ -24,6 +24,67 @@ abstract class PubIdPlugin extends PKPPubIdPlugin {
 		parent::__construct();
 	}
 
+	/**
+	 * @copydoc Plugin::manage()
+	 */
+	function manage($args, $request) {
+		$user = $request->getUser();
+		$router = $request->getRouter();
+		$context = $router->getContext($request);
+
+		$notificationManager = new NotificationManager();
+		switch ($request->getUserVar('verb')) {
+			case 'assignPubIds':
+				if (!$request->checkCSRF()) return new JSONMessage(false);
+				$suffixFieldName = $this->getSuffixFieldName();
+				$suffixGenerationStrategy = $this->getSetting($context->getId(), $suffixFieldName);
+				if ($suffixGenerationStrategy != 'customId') {
+					$issueEnabled = $this->isObjectTypeEnabled('Issue', $context->getId());
+					$submissionEnabled = $this->isObjectTypeEnabled('Submission', $context->getId());
+					$representationEnabled = $this->isObjectTypeEnabled('Representation', $context->getId());
+					if ($issueEnabled) {
+						$issueDao = DAORegistry::getDAO('IssueDAO');
+						$issues = $issueDao->getPublishedIssues($context->getId());
+						while ($issue = $issues->next()) {
+							$issuePubId = $issue->getStoredPubId($this->getPubIdType());
+							if (empty($issuePubId)) {
+								$issuePubId = $this->getPubId($issue);
+								$issueDao->changePubId($issue->getId(), $this->getPubIdType(), $issuePubId);
+							}
+						}
+					}
+					if ($submissionEnabled || $representationEnabled) {
+						$submissionDao = Application::getSubmissionDAO();
+						$representationDao = Application::getRepresentationDAO();
+						$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
+						$publishedArticles = $publishedArticleDao->getPublishedArticlesByJournalId($context->getId());
+						while ($publishedArticle = $publishedArticles->next()) {
+							if ($submissionEnabled) {
+								$submissionPubId = $publishedArticle->getStoredPubId($this->getPubIdType());
+								if (empty($submissionPubId)) {
+									$submissionPubId = $this->getPubId($publishedArticle);
+									$submissionDao->changePubId($publishedArticle->getId(), $this->getPubIdType(), $submissionPubId);
+								}
+							}
+							if ($representationEnabled) {
+								$representations = $representationDao->getBySubmissionId($publishedArticle->getid(), $context->getId());
+								while ($representation = $representations->next()) {
+									$representationPubId = $representation->getStoredPubId($this->getPubIdType());
+									if (empty($representationPubId)) {
+										$representationPubId = $this->getPubId($representation);
+										$representationDao->changePubId($representation->getId(), $this->getPubIdType(), $representationPubId);
+									}
+								}
+							}
+						}
+					}
+					$notificationManager->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_SUCCESS);
+				}
+				return new JSONMessage(true);
+			default:
+				return parent::manage($args, $request);
+		}
+	}
 
 	//
 	// Protected template methods from PKPPlubIdPlugin
