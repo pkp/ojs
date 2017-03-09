@@ -78,7 +78,6 @@ abstract class PubIdPlugin extends PKPPubIdPlugin {
 							}
 						}
 					}
-					$notificationManager->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_SUCCESS);
 				}
 				return new JSONMessage(true);
 			default:

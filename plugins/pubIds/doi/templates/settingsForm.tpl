@@ -59,14 +59,14 @@
 	{/fbvFormArea}
 	{fbvFormArea id="doiReassignFormArea" title="plugins.pubIds.doi.manager.settings.doiReassign"}
 		{fbvFormSection}
-			<span class="instruct">{translate key="plugins.pubIds.doi.manager.settings.doiReassign.description"}</span><br/>
+			<div class="instruct">{translate key="plugins.pubIds.doi.manager.settings.doiReassign.description"}</div>
 			{include file="linkAction/linkAction.tpl" action=$clearPubIdsLinkAction contextId="doiSettingsForm"}
 		{/fbvFormSection}
 	{/fbvFormArea}
 	{if ($enableIssueDoi || $enableSubmissionDoi || $enableRepresentationDoi) && $doiPrefix && $doiSuffix && $doiSuffix != 'customId' }
 		{fbvFormArea id="doiAssignJournalWideFormArea" title="plugins.pubIds.doi.manager.settings.doiAssignJournalWide"}
 			{fbvFormSection}
-				<span class="instruct">{translate key="plugins.pubIds.doi.manager.settings.doiAssignJournalWide.description"}</span><br/>
+				<div class="instruct">{translate key="plugins.pubIds.doi.manager.settings.doiAssignJournalWide.description"}</div>
 				{include file="linkAction/linkAction.tpl" action=$assignJournalWidePubIdsLinkAction contextId="doiSettingsForm"}
 			{/fbvFormSection}
 		{/fbvFormArea}

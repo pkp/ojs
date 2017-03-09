@@ -76,7 +76,7 @@
 	{/fbvFormArea}
 	{fbvFormArea id="urnReassignFormArea" title="plugins.pubIds.urn.manager.settings.urnReassign"}
 		{fbvFormSection}
-			<span class="instruct">{translate key="plugins.pubIds.urn.manager.settings.urnReassign.description"}</span><br/>
+			<div class="instruct">{translate key="plugins.pubIds.urn.manager.settings.urnReassign.description"}</div>
 			{include file="linkAction/linkAction.tpl" action=$clearPubIdsLinkAction contextId="urnSettingsForm"}
 		{/fbvFormSection}
 	{/fbvFormArea}
