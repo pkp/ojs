@@ -39,9 +39,9 @@ class JournalSiteSettingsForm extends ContextSiteSettingsForm {
 
 	/**
 	 * Save journal settings.
-	 * @param $request PKPRequest
 	 */
-	function execute($request) {
+	function execute() {
+		$request = Application::getRequest();
 		$site = $request->getSite();
 		$journalDao = DAORegistry::getDAO('JournalDAO');
 

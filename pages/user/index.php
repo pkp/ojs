@@ -42,7 +42,6 @@ switch ($op) {
 	case 'redeemGift':
 	case 'subscriptions':
 	case 'setLocale':
-	case 'become':
 	case 'authorizationDenied':
 	case 'purchaseSubscription':
 	case 'payPurchaseSubscription':
