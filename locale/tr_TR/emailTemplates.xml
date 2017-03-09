@@ -20,7 +20,7 @@
 Bu istek sizin dışınızda oluştu ise, lütfen bu mesajı dikkate almayınız; eski şifrenizi kullanabilirsiniz.<br />
 Eğer şifrenizi değiştirmek istiyorsanız aşağıdaki bağlantıyı tıklayınız.<br />
 <br />
-Şifre değiştirmek için: <a href="{$url}">{$url}</a><br />
+Şifre değiştirmek için: {$url}<br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Bu e-posta şifrelerini unuttuğunu beyan eden ve/veya giriş yapamayan kayıtlı kullanıcılara gönderilmektedir. Şifre değiştirme işlemlerini yapabilecekleri bir internet adresi bildirir.</description>
@@ -50,7 +50,7 @@ Teşekkür ederiz,<br />
 		<subject>Yeni Sayı Yayınlandı</subject>
 		<body><![CDATA[Kıymetli Okuyucumuz,<br />
 <br />
-{$contextName} adlı derginin yeni saysını yayınladı. Yeni sayıya <a href="{$contextUrl}">{$contextUrl}</a> adresinden ulaşabilirsiniz.<br />
+{$contextName} adlı derginin yeni saysını yayınladı. Yeni sayıya {$contextUrl} adresinden ulaşabilirsiniz.<br />
 <br />
 Sizi dergimizin içindekiler sayfasını incelemeye, beğendiğiniz makaleleri okumaya ve değerli görüşlerinizi diğer okuyucularımız ile paylaşmaya çağırıyoruz.<br />
 <br />
@@ -81,7 +81,7 @@ Herhangi bir sorunuz olursa lütfen çekinmeden benimle irtibat kurun.<br />
 		<subject>Sayı Açık Erişime Açıldı</subject>
 		<body><![CDATA[Sayın Okuyucu,<br />
 <br />
-{$contextName} aşağıdaki sayıyı açık erişime açmıştır. Sizi sayının içindekiler bölümünü incelemeye ve dilediğiniz yazıları okumak üzere web sitemize davet ediyoruz (<a href="{$contextUrl}">{$contextUrl}</a>).<br />
+{$contextName} aşağıdaki sayıyı açık erişime açmıştır. Sizi sayının içindekiler bölümünü incelemeye ve dilediğiniz yazıları okumak üzere web sitemize davet ediyoruz ({$contextUrl}).<br />
 <br />
 Çalışmalarımıza süren ilginiz için teşekkür ederiz,<br />
 {$editorialContactSignature}]]></body>
@@ -91,11 +91,11 @@ Herhangi bir sorunuz olursa lütfen çekinmeden benimle irtibat kurun.<br />
 		<subject>{$contextName} arşivleme talebi</subject>
 		<body><![CDATA[&lt;![CDATA[Kıymetli [University Librarian]<br />
 <br />
-{$contextName} &lt;<a href="{$contextUrl}">{$contextUrl}</a>&gt; dergisi için fakültenizin üyesi [name of member] [title of position] görevini üstlenmiştir. Dergi bu ve diğer üniversite kütüphaneleri ile LOCKSS (Lots of Copies Keep Stuff Safe – çok sayıda kopya güvenliğini koruma) uyumlu arşiv oluşturmayı hedeflemektedir. <br />
+{$contextName} &lt;{$contextUrl}&gt; dergisi için fakültenizin üyesi [name of member] [title of position] görevini üstlenmiştir. Dergi bu ve diğer üniversite kütüphaneleri ile LOCKSS (Lots of Copies Keep Stuff Safe – çok sayıda kopya güvenliğini koruma) uyumlu arşiv oluşturmayı hedeflemektedir. <br />
 <br />
 [Brief description of journal]<br />
 <br />
-Dergimizin LOCKSS yayınevi bildirgesi internet adresi: <a href="{$contextUrl}">{$contextUrl}</a>/gateway/lockss<br />
+Dergimizin LOCKSS yayınevi bildirgesi internet adresi: {$contextUrl}/gateway/lockss<br />
 <br />
 LOCKSS sistemini kullandığınızı tespit etmiş bulunuyoruz. Dergimizin sizin kullandığınız LOCKSS sürümüne kaydedilebilmesi için gerekli her türlü meta veriyi sağlamaktan mutluluk duyarız.<br />
 <br />
@@ -107,7 +107,7 @@ Teşekkür ederiz,<br />
 		<subject>{$contextName} dergisi arşivleme talebi </subject>
 		<body><![CDATA[Değerli [University Librarian]<br />
 <br />
-{$contextName} &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt; dergisi için fakültenizin üyesi [name of member] [title of position] görevini üstlenmiştir. Dergi bu ve diğer üniversite kütüphaneleri ile LOCKSS (Lots of Copies Keep Stuff Safe – çok sayıda kopya güvenliğini koruma) uyumlu arşiv oluşturmayı hedeflemektedir. <br />
+{$contextName} &amp;lt;{$contextUrl}&amp;gt; dergisi için fakültenizin üyesi [name of member] [title of position] görevini üstlenmiştir. Dergi bu ve diğer üniversite kütüphaneleri ile LOCKSS (Lots of Copies Keep Stuff Safe – çok sayıda kopya güvenliğini koruma) uyumlu arşiv oluşturmayı hedeflemektedir. <br />
 <br />
 <br />
 [Brief description of journal]<br />
@@ -183,13 +183,13 @@ Teşekkürler,<br />
 <br />
 {$contextName} için gönderilen &quot;{$submissionTitle}&quot; başlıklı çalışmanın sizin ilgi alanlarınız ile uyuştuğunu ve dergimizde yayınlanabilirliği açısından inceleyebileceğinize inanoyoruz. Başvurunun içeriği aşağıya eklenmiştir. Bu görevin bizim için ne kadar önemli olduğunu göz önünde bulunduracağınızı umuyoruz.<br />
 <br />
-{$responseDueDate} tarihine kadar, bu çalışmanın hakemliğini kabul edip etmediğinizi belirtmek, ilgili çalışmaya ulaşmak, eleştiri ve önerilerinizi kaydetmek için dergi internet sitesine giriş yapabilirsiniz. Dergi adresi: <a href="{$contextUrl}">{$contextUrl}</a> <br />
+{$responseDueDate} tarihine kadar, bu çalışmanın hakemliğini kabul edip etmediğinizi belirtmek, ilgili çalışmaya ulaşmak, eleştiri ve önerilerinizi kaydetmek için dergi internet sitesine giriş yapabilirsiniz. Dergi adresi: {$contextUrl} <br />
 <br />
 Değerlendirme için son tarih: {$reviewDueDate}.<br />
 <br />
-Eğer derginin web sitesine giriş için kullanıcı adı ve şifreniz yoksa veya unuttunuz ise, şifrenizi yenilemek için bu bağlantıyı kullanabilirsiniz (Kullanıcı adınızla birlikte şifreniz size postalanacaktır). <a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
+Eğer derginin web sitesine giriş için kullanıcı adı ve şifreniz yoksa veya unuttunuz ise, şifrenizi yenilemek için bu bağlantıyı kullanabilirsiniz (Kullanıcı adınızla birlikte şifreniz size postalanacaktır). {$passwordResetUrl}<br />
 <br />
-Makale Erişim Adresi: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+Makale Erişim Adresi: {$submissionReviewUrl}<br />
 <br />
 Bu dileğimizi değerlendirdiğiniz için teşekkür ederiz.<br />
 <br />
@@ -213,7 +213,7 @@ Dergimiz web sitesine girerek, {$responseDueDate} süresinde gözden geçirme is
 <br />
 Değerlendirme raporunuz için son tarih {$reviewDueDate}.<br />
 <br />
-Başvuruya ulaşım için adres: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+Başvuruya ulaşım için adres: {$submissionReviewUrl}<br />
 <br />
 İsteğimize olumlu yaklaşımınız için şimdiden teşekkür ederiz.<br />
 <br />
@@ -290,9 +290,9 @@ Değerlendirme Rehberi:<br />
 <br />
 {$contextName} adlı dergide yayınlanması için değerlendirilmek üzere gönderilen &quot;{$submissionTitle}&quot; başlıklı çalışmanın değerlendirmesini {$reviewDueDate} tarihinden önce tamamlayacağınızı ümit ediyoruz. Yoğun işleriniz arasında değerlendirme raporunuzu tamamlayıp, bize bir an önce ileteceğiniz inancı ile dergimiz sitesindeki ulaşım bilgilerini size iletmeyi istedik.<br />
 <br />
-Eğer derginin web sitesine giriş için kullanıcı adı ve şifreniz yoksa veya unuttunuz ise, şifrenizi yenilemek için bu bağlantıyı kullanabilirsiniz (Kullanıcı adınızla birlikte şifreniz size postalanacaktır). <a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
+Eğer derginin web sitesine giriş için kullanıcı adı ve şifreniz yoksa veya unuttunuz ise, şifrenizi yenilemek için bu bağlantıyı kullanabilirsiniz (Kullanıcı adınızla birlikte şifreniz size postalanacaktır). {$passwordResetUrl}<br />
 <br />
-Makale Erişim Adresi: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+Makale Erişim Adresi: {$submissionReviewUrl}<br />
 <br />
 Derginin kalitesini arttıracak bu önemli katkıyı yapabileceğinizi lütfen onaylayınız. <br />
 <br />
@@ -305,7 +305,7 @@ Derginin kalitesini arttıracak bu önemli katkıyı yapabileceğinizi lütfen o
 <br />
 {$contextName} adlı dergide yayınlanması için değerlendirilmek üzere gönderilen &quot;{$submissionTitle}&quot; başlıklı çalışmanın değerlendirmesini {$reviewDueDate} tarihinden önce tamamlayacağınızı ümit ediyoruz. Yoğun işleriniz arasında değerlendirme raporunuzu tamamlayıp, bize bir an önce ileteceğiniz inancı ile dergimiz sitesindeki ulaşım bilgilerini size iletmeyi istedik.<br />
 <br />
-Makale Erişim Adresi: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+Makale Erişim Adresi: {$submissionReviewUrl}<br />
 <br />
 Derginin kalitesini arttıracak bu önemli katkıyı yapabileceğinizi lütfen onaylayınız.<br />
 <br />
@@ -320,9 +320,9 @@ Derginin kalitesini arttıracak bu önemli katkıyı yapabileceğinizi lütfen o
 <br />
 Değerlendirme raporunuzu bize bir an önce ileteceğiniz inancı ile dergimiz sitesindeki ulaşım bilgilerini size iletmeyi istedik.<br />
 <br />
-Eğer derginin web sitesine giriş için kullanıcı adı ve şifreniz yoksa veya unuttunuz ise, şifrenizi yenilemek için bu bağlantıyı kullanabilirsiniz (Kullanıcı adınızla birlikte şifreniz size postalanacaktır). <a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
+Eğer derginin web sitesine giriş için kullanıcı adı ve şifreniz yoksa veya unuttunuz ise, şifrenizi yenilemek için bu bağlantıyı kullanabilirsiniz (Kullanıcı adınızla birlikte şifreniz size postalanacaktır). {$passwordResetUrl}<br />
 <br />
-Makale Erişim Adresi: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+Makale Erişim Adresi: {$submissionReviewUrl}<br />
 <br />
 Derginin kalitesini arttıracak bu önemli katkıyı yapabileceğinizi lütfen onaylayınız.<br />
 <br />
@@ -337,9 +337,9 @@ Derginin kalitesini arttıracak bu önemli katkıyı yapabileceğinizi lütfen o
 <br />
 Değerlendirme raporunuzu bize bir an önce ileteceğiniz inancı ile dergimiz sitesindeki ulaşım bilgilerini size iletmeyi istedik.<br />
 <br />
-Eğer derginin web sitesine giriş için kullanıcı adı ve şifreniz yoksa veya unuttunuz ise, şifrenizi yenilemek için bu bağlantıyı kullanabilirsiniz (Kullanıcı adınızla birlikte şifreniz size postalanacaktır). <a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
+Eğer derginin web sitesine giriş için kullanıcı adı ve şifreniz yoksa veya unuttunuz ise, şifrenizi yenilemek için bu bağlantıyı kullanabilirsiniz (Kullanıcı adınızla birlikte şifreniz size postalanacaktır). {$passwordResetUrl}<br />
 <br />
-Makale Erişim Adresi: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+Makale Erişim Adresi: {$submissionReviewUrl}<br />
 <br />
 Derginin kalitesini arttıracak bu önemli katkıyı yapabileceğinizi lütfen onaylayınız.<br />
 <br />
@@ -352,7 +352,7 @@ Derginin kalitesini arttıracak bu önemli katkıyı yapabileceğinizi lütfen o
 <br />
 {$contextName} ileri sayılarında yayınlanmak üzere kabul edilen &quot;{$submissionTitle}&quot; başlıklı çalışmanın sayfa düzenini tamamlamanızı rica ederim. Dergi sitesinde yazıyı , sayfa düzeni konusundaki özel açıklamalar ile birlikte bulabilirsiniz. <br />
 <br />
-Yazı ulaşım adresi: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Yazı ulaşım adresi: {$submissionUrl}<br />
 Kullanıcı adı: {$participantUsername}<br />
 <br />
 Lütfen eğer sayfa düzenini yapmanız konusunda bir sorun var ise bana bildiriniz.<br />
@@ -389,7 +389,7 @@ Teşekkürler,<br />
 <br />
 Bu yazıda ciddi değişiklikler için son şansınızdır. Sonraki basamakta prova dizgi üzerinde küçük yazım hatası benzeri düzeltmeler dışında değiştirme yapma olasılığı yoktur.<br />
 <br />
-Sayfa düzeni kopyası için bağlantı: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Sayfa düzeni kopyası için bağlantı: {$submissionUrl}<br />
  <br />
 Eğer değerlendirmeyi yapamayacaksanız veya sorunuz olur ise bana yazmaya çekinmeyiniz. Dergimize katkılarınız için teşekkür ederiz.<br />
 <br />
@@ -420,7 +420,7 @@ Eğer değerlendirmeyi yapamayacaksanız veya sorunuz olur ise bana yazmaya çek
 <br />
 {$contextName} için &quot;{$submissionTitle}&quot; başlıklı çalışmanın sayfa düzenini yazar ve editörce gözden geçirilmiştir. Mizanpaja hazır son &quot;temiz kopya&quot; için ilginizi rica ederim.<br />
 <br />
-Sayfa düzeni kopyası için bağlantı: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Sayfa düzeni kopyası için bağlantı: {$submissionUrl}<br />
 Kullanıcı adı: {$participantUsername}<br />
 <br />
 Dergimiz adına teşkkür ederiz,<br />
@@ -452,7 +452,7 @@ Dergimiz adına teşkkür ederiz,<br />
 <br />
 {$contextName} için &quot;{$submissionTitle}&quot; başlıklı çalışmanın mizanpajının tamamlanarak, prova dizginin tarafımıza gönderilmesi için rica ederiz.<br />
 <br />
-Sayfa düzeni kopyası için bağlantı: <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a><br />
+Sayfa düzeni kopyası için bağlantı: {$submissionLayoutUrl}<br />
 Kullanıcı adı: {$participantUsername}<br />
 <br />
 İşin gerçekleştirilmesi ile ilgili bir sorununuz veya diğer sorularınız için bana yazabilirsiniz.<br />
@@ -685,7 +685,7 @@ If you wish to stop receiving notification emails, please go to {$unsubscribeLin
 <br />
 You have created an account with {$contextName}, but before you can start using it, you need to validate your email account. To do this, simply follow the link below:<br />
 <br />
-<a href="{$activateUrl}">{$activateUrl}</a><br />
+{$activateUrl}<br />
 <br />
 Thank you,<br />
 {$principalContactSignature}]]></body>
@@ -712,13 +712,13 @@ This regards the manuscript &quot;{$submissionTitle},&quot; which is under consi
 <br />
 Following the review of the previous version of the manuscript, the authors have now submitted a revised version of their paper. We would appreciate it if you could help evaluate it.<br />
 <br />
-Please log into the journal web site by {$responseDueDate} to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is <a href="{$contextUrl}">{$contextUrl}</a><br />
+Please log into the journal web site by {$responseDueDate} to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is {$contextUrl}<br />
 <br />
 The review itself is due {$reviewDueDate}.<br />
 <br />
-If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). <a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
+If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). {$passwordResetUrl}<br />
 <br />
-Submission URL: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+Submission URL: {$submissionReviewUrl}<br />
 <br />
 Thank you for considering this request.<br />
 <br />
@@ -743,7 +743,7 @@ Please log into the journal web site by {$responseDueDate} to indicate whether y
 <br />
 The review itself is due {$reviewDueDate}.<br />
 <br />
-Submission URL: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+Submission URL: {$submissionReviewUrl}<br />
 <br />
 Thank you for considering this request.<br />
 <br />
@@ -837,7 +837,7 @@ Membership Information (if provided):<br />
 <br />
 To view or edit this subscription, please use the following URL.<br />
 <br />
-Subscription URL: <a href="{$subscriptionUrl}">{$subscriptionUrl}</a>]]></body>
+Subscription URL: {$subscriptionUrl}]]></body>
 		<description>This email notifies the Subscription Manager that an individual subscription has been purchased online. It provides summary information about the subscription and a quick access link to the purchased subscription.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_PURCHASE_INSTL">
@@ -865,7 +865,7 @@ Membership Information (if provided):<br />
 <br />
 To view or edit this subscription, please use the following URL.<br />
 <br />
-Subscription URL: <a href="{$subscriptionUrl}">{$subscriptionUrl}</a>]]></body>
+Subscription URL: {$subscriptionUrl}]]></body>
 		<description>This email notifies the Subscription Manager that an institutional subscription has been purchased online. It provides summary information about the subscription and a quick access link to the purchased subscription.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_RENEW_INDL">
@@ -883,7 +883,7 @@ Membership Information (if provided):<br />
 <br />
 To view or edit this subscription, please use the following URL.<br />
 <br />
-Subscription URL: <a href="{$subscriptionUrl}">{$subscriptionUrl}</a>]]></body>
+Subscription URL: {$subscriptionUrl}]]></body>
 		<description>This email notifies the Subscription Manager that an individual subscription has been renewed online. It provides summary information about the subscription and a quick access link to the renewed subscription.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_RENEW_INSTL">
@@ -911,7 +911,7 @@ Membership Information (if provided):<br />
 <br />
 To view or edit this subscription, please use the following URL.<br />
 <br />
-Subscription URL: <a href="{$subscriptionUrl}">{$subscriptionUrl}</a>]]></body>
+Subscription URL: {$subscriptionUrl}]]></body>
 		<description>This email notifies the Subscription Manager that an institutional subscription has been renewed online. It provides summary information about the subscription and a quick access link to the renewed subscription.</description>
 	</email_text>
 	<email_text key="CITATION_EDITOR_AUTHOR_QUERY">
@@ -956,7 +956,7 @@ We hope that you enjoy your gift!<br />
 {$giftDetails}<br />
 <br />
 <br />
-To redeem your gift, please login to the journal website at <a href="{$giftUrl}">{$giftUrl}</a><br />
+To redeem your gift, please login to the journal website at {$giftUrl}<br />
 <br />
 Your username: {$username}<br />
 Your password: {$password}<br />
@@ -977,7 +977,7 @@ We hope that you enjoy your gift!<br />
 {$giftDetails}<br />
 <br />
 <br />
-To redeem your gift, please login to the journal website at <a href="{$giftUrl}">{$giftUrl}</a><br />
+To redeem your gift, please login to the journal website at {$giftUrl}<br />
 <br />
 Your username: {$username}<br />
 <br />
