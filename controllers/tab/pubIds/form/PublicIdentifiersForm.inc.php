@@ -29,7 +29,7 @@ class PublicIdentifiersForm extends PKPPublicIdentifiersForm {
 
 	/**
 	 * Store objects with pub ids.
-	 * @copydoc Form::execute()
+	 * @param $request PKPRequest
 	 */
 	function execute($request) {
 		parent::execute($request);

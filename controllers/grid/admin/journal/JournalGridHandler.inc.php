@@ -41,7 +41,7 @@ class JournalGridHandler extends ContextGridHandler {
 		// Form handling.
 		$settingsForm = new JournalSiteSettingsForm(!isset($journalId) || empty($journalId) ? null : $journalId);
 		$settingsForm->initData();
-		return new JSONMessage(true, $settingsForm->fetch($args, $request));
+		return new JSONMessage(true, $settingsForm->fetch($request));
 	}
 
 	/**
