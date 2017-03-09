@@ -127,7 +127,7 @@ class ReviewerAction extends Action {
 
 		// Only record the reviewers recommendation if
 		// no recommendation has previously been submitted.
-		if ($reviewAssignment->getRecommendation() === null || $reviewAssignment->getRecommendation === '') {
+		if ($reviewAssignment->getRecommendation() === null || $reviewAssignment->getRecommendation() === '') {
 			import('classes.mail.ArticleMailTemplate');
 			$email = new ArticleMailTemplate($reviewerSubmission, 'REVIEW_COMPLETE');
 			// Must explicitly set sender because we may be here on an access
