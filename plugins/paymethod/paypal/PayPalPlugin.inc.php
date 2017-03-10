@@ -104,7 +104,7 @@ class PayPalPlugin extends PaymethodPlugin {
 	 * @param $params
 	 * @param $smarty Smarty
 	 */
-	function displayPaymentSettingsForm($params, $smarty) {
+	function displayPaymentSettingsForm(&$params, $smarty) {
 		$smarty->assign('isCurlInstalled', $this->isCurlInstalled());
 		return parent::displayPaymentSettingsForm($params, $smarty);
 	}
