@@ -3,7 +3,7 @@
 /**
  * @file tests/data/50-IssuesTest.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University
+ * Copyright (c) 2014-2017 Simon Fraser University
  * Copyright (c) 2000-2016 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
