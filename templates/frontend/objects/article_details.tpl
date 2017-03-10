@@ -269,7 +269,7 @@
 								{translate key="submission.howToCite"}
 							</div>
 							<div id="citationOutput" class="value">
-								{$citationPlugin->fetchCitation($article, $issue, $currentContext)}
+								{$citationPlugin->fetchCitation($article, $issue, $currentContext, $article->getSubmissionRevision())}
 							</div>
 						</div>
 						{php}break;{/php}
@@ -284,7 +284,7 @@
 							<ul>
 								{foreach from=$citationPlugins name="citationPlugins" item="citationPlugin"}
 									<li class="{$citationPlugin->getName()|escape}{if $smarty.foreach.citationPlugins.iteration == 1} current{/if}">
-										{capture assign="citationUrl"}{url page="article" op="cite" path=$article->getBestArticleId()}/{$citationPlugin->getName()|escape}{/capture}
+										{capture assign="citationUrl"}{url page="article" op="cite" path=$article->getBestArticleId()|to_array:$article->getSubmissionRevision()}/{$citationPlugin->getName()|escape}{/capture}
 										<a href="{$citationUrl}"{if !$citationPlugin->isDownloadable()} data-load-citation="true"{/if} target="_blank">{$citationPlugin->getCitationFormatName()|escape}</a>
 									</li>
 								{/foreach}

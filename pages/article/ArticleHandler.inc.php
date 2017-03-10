@@ -432,8 +432,9 @@ class ArticleHandler extends Handler {
 		$router = $request->getRouter();
 		$this->setupTemplate($request);
 		$articleId = isset($args[0]) ? $args[0] : 0;
-		$citeType = isset($args[1]) ? $args[1] : null;
-		$returnFormat = isset($args[2]) ? $args[2] : null;
+		$version = isset($args[1]) ? $args[1] : null;
+		$citeType = isset($args[2]) ? $args[2] : null;
+		$returnFormat = isset($args[3]) ? $args[3] : null;
 
 		$citationPlugins = PluginRegistry::loadCategory('citationFormats');
 
@@ -456,11 +457,11 @@ class ArticleHandler extends Handler {
 
 		// Initiate a file download and exit
 		if ($citationPlugins[$citeType]->isDownloadable()) {
-			$citationPlugins[$citeType]->downloadCitation($article, $issue, $journal);
+			$citationPlugins[$citeType]->downloadCitation($article, $issue, $journal, $version);
 			return;
 		}
 
-		$citation = $citationPlugins[$citeType]->fetchCitation($article, $issue, $journal);
+		$citation = $citationPlugins[$citeType]->fetchCitation($article, $issue, $journal, $version);
 
 		// Return a JSON formatted string
 		if ($returnFormat == 'json') {

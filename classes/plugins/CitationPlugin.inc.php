@@ -59,11 +59,12 @@ abstract class CitationPlugin extends Plugin {
 	 * @param $issue Issue
 	 * @param $journal Journal
 	 */
-	function fetchCitation($article, $issue, $journal) {
+	function fetchCitation($article, $issue, $journal, $version) {
 		$templateMgr = TemplateManager::getManager($this->getRequest());
 		$templateMgr->assign(array(
 			'citationPlugin' => $this,
 			'article' => $article,
+			'version' => $version,
 			'issue' => $issue,
 			'journal' => $journal,
 		));

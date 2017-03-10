@@ -24,8 +24,8 @@ abstract class DownloadableCitationPlugin extends CitationPlugin {
 	 * @param $issue Issue
 	 * @param $journal Journal
 	 */
-	function downloadCitation($article, $issue, $journal) {
-		$output = parent::fetchCitation($article, $issue, $journal);
+	function downloadCitation($article, $issue, $journal, $version) {
+		$output = parent::fetchCitation($article, $issue, $journal, $version);
 		$this->setHeaders($article, $issue, $journal);
 		echo $output;
 	}

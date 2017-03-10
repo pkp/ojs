@@ -26,7 +26,7 @@
 {/literal}{/if}{if count($article->getPageArray()) > 0}	pages = {literal}{{/literal}{foreach from=$article->getPageArray() item=range name=pages}{$range[0]|escape}{if $range[1]}--{$range[1]|escape}{if !$smarty.foreach.pages.last},{/if}{/if}{/foreach}{literal}},
 {/literal}{/if}{if $article->getStoredPubId('doi')}	doi = {ldelim}{$article->getStoredPubId('doi')|escape}{rdelim},
 {/if}
-	url = {ldelim}{url|bibtex_escape page="article" op="view" path=$article->getBestArticleId()}{rdelim}
+	url = {ldelim}{url|bibtex_escape page="article" op="version" path=$article->getBestArticleId()|to_array:$version}{rdelim}
 {rdelim}
 </textarea>
 </div>

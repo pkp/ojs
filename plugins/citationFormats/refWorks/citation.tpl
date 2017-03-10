@@ -9,9 +9,9 @@
  *
  *}
 {if $galley}
-	{url|assign:"articleUrl" page="article" op="view" path=$article->getBestArticleId()|to_array:$galley->getBestGalleyId()}
+	{url|assign:"articleUrl" page="article" op="version" path=$article->getBestArticleId()|to_array:$version:$galley->getBestGalleyId()}
 {else}
-	{url|assign:"articleUrl" page="article" op="view" path=$article->getBestArticleId()}
+	{url|assign:"articleUrl" page="article" op="version" path=$article->getBestArticleId()|to_array:$version}
 {/if}
 <form class="refworks_citation_form" action="http://www.refworks.com/express/expressimport.asp?vendor=Public%20Knowledge%20Project&filter=BibTeX&encoding=65001" method="post" target="RefWorksMain">
 	<textarea name="ImportData" rows=15 cols=70>{literal}@article{{{/literal}{$journal->getLocalizedAcronym()|escape}{literal}}{{/literal}{$articleId|escape}{literal}},

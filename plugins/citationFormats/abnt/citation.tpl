@@ -28,6 +28,6 @@
 {if $article->getPages()}, p. {$article->getPages()|escape}{/if}, {if $article->getDatePublished()}{$article->getDatePublished()|abnt_date_format|lower}{elseif $issue->getDatePublished()}{$issue->getDatePublished()|abnt_date_format}{else}{$issue->getYear()|escape}{/if}.
 {if $currentJournal->getSetting('onlineIssn')}ISSN {$currentJournal->getSetting('onlineIssn')|escape}.
 {elseif $currentJournal->getSetting('printIssn')}ISSN {$currentJournal->getSetting('printIssn')|escape}. {/if}
-{capture assign=articleUrl}{url page="article" op="view" path=$article->getBestArticleId()}{/capture}
+{capture assign=articleUrl}{url page="article" op="version" path=$article->getBestArticleId()|to_array:$version}{/capture}
 {translate key="plugins.citationFormats.abnt.retrieved" retrievedDate=$smarty.now|abnt_date_format_with_day url=$articleUrl}
 {if $article->getStoredPubId('doi')}doi: <a href="https://doi.org/{$article->getStoredPubId('doi')|escape}">https://doi.org/{$article->getStoredPubId('doi')|escape}</a>. {/if}

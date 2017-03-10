@@ -108,12 +108,12 @@ class AbntCitationPlugin extends CitationPlugin {
 	 * @param $issue Issue
 	 * @param $journal Journal
 	 */
-	function fetchCitation($article, $issue, $journal) {
+	function fetchCitation($article, $issue, $journal, $version) {
 		$templateMgr = TemplateManager::getManager($this->getRequest());
 		$templateMgr->register_modifier('mb_upper', array('PKPString', 'strtoupper'));
 		$templateMgr->register_modifier('abnt_date_format', array($this, 'abntDateFormat'));
 		$templateMgr->register_modifier('abnt_date_format_with_day', array($this, 'abntDateFormatWithDay'));
-		return parent::fetchCitation($article, $issue, $journal);
+		return parent::fetchCitation($article, $issue, $journal, $version);
 	}
 
  	/**

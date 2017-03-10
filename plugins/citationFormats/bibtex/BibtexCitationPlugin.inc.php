@@ -51,10 +51,10 @@ class BibtexCitationPlugin extends CitationPlugin {
 	 * @param $issue Issue
 	 * @param $journal Journal
 	 */
-	function fetchCitation($article, $issue, $journal) {
+	function fetchCitation($article, $issue, $journal, $version) {
 		$templateMgr = TemplateManager::getManager($this->getRequest());
 		$templateMgr->register_modifier('bibtex_escape', array($this, 'bibtexEscape'));
-		return parent::fetchCitation($article, $issue, $journal);
+		return parent::fetchCitation($article, $issue, $journal, $version);
 	}
 
 	/**

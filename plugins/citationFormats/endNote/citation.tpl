@@ -9,9 +9,9 @@
  *
  *}
 {if $galley}
-	{url|assign:"articleUrl" page="article" op="view" path=$article->getBestArticleId()|to_array:$galley->getBestGalleyId()}
+	{url|assign:"articleUrl" page="article" op="version" path=$article->getBestArticleId()|to_array:$version:$galley->getBestGalleyId()}
 {else}
-	{url|assign:"articleUrl" page="article" op="view" path=$article->getBestArticleId()}
+	{url|assign:"articleUrl" page="article" op="version" path=$article->getBestArticleId()|to_array:$version}
 {/if}
 {foreach from=$article->getAuthors() item=author}
 %A {$author->getFullName(true)|escape}
