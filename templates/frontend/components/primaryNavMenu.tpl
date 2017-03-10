@@ -61,6 +61,13 @@
 						</a>
 					</li>
 				{/if}
+				{if $currentJournal->getSetting('versioningEnabled') && $currentJournal->getSetting('versioningPolicy')}
+					<li>
+						<a href="{url router=$smarty.const.ROUTE_PAGE page="about" op="versioning"}">
+							{translate key="about.versioning"}
+						</a>
+					</li>
+				{/if}
 			</ul>
 		</li>
 	{/if}

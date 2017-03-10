@@ -20,8 +20,12 @@
 
 	{fbvFormArea id="versioningSettings"}
 
-		{fbvFormSection for="versioningEnabled" list=true}
-			{fbvElement type="checkbox" label="manager.setup.versioningEnabled" id="versioningEnabled" checked=$versioningEnabled}
+		{fbvFormSection for="versioningEnabled" list=true label="manager.setup.versioningEnabled.label" description="manager.setup.versioningEnabled.description"}
+			{fbvElement type="checkbox" label="manager.setup.versioningEnabled.option" id="versioningEnabled" checked=$versioningEnabled}
+		{/fbvFormSection}
+
+		{fbvFormSection label="manager.setup.versioningPolicy.title" for="versioningPolicy" description="manager.setup.versioningPolicy.description"}
+			{fbvElement type="textarea" name="versioningPolicy" id="versioningPolicy" value=$versioningPolicy rich=true}
 		{/fbvFormSection}
 
 	{/fbvFormArea}

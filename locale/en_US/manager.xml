@@ -331,7 +331,12 @@
 	<message key="manager.setup.userRegistration">User Registration</message>
 	<message key="manager.setup.useTextTitle">Title text</message>
 	<message key="manager.setup.versioning">Versioning</message>
-	<message key="manager.setup.versioningEnabled">Enable versioning for this journal.</message>
+	<message key="manager.setup.versioningEnabled.label">Versioning for published articles</message>
+	<message key="manager.setup.versioningEnabled.description">Enabling will give you the option to create new versions of published articles. Disabling will not delete old versions. They are also still available but not linked to at the article page.</message>
+	<message key="manager.setup.versioningEnabled.option">Enable versioning of published articles for this journal.</message>
+	<message key="manager.setup.versioningPolicy.title">Versioning policy</message>
+	<message key="manager.setup.versioningPolicy.description">This text will be displayed at about the journal. It should inform the readers on the versioning policy of this journal.</message>
+
 	<message key="manager.statistics.defaultMetricDescription">
 		Your journal is configured to record more than one usage metric. Usage statistics will be displayed in several contexts.
 		There are cases where a single usage statistic must be used, e.g. to display an ordered list of most-used articles or to rank

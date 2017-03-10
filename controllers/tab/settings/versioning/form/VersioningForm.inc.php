@@ -23,6 +23,7 @@ class VersioningForm extends ContextSettingsForm {
 	function __construct($wizardMode = false) {
 		$settings = array(
 			'versioningEnabled' => 'bool',
+			'versioningPolicy' => 'string',
 		);
 
 		parent::__construct($settings, 'controllers/tab/settings/versioning/form/versioningForm.tpl', $wizardMode);

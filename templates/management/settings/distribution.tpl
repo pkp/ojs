@@ -26,6 +26,7 @@
 		<li><a name="access" href="{url router=$smarty.const.ROUTE_COMPONENT component="tab.settings.DistributionSettingsTabHandler" op="showTab" tab="access"}">{translate key="manager.distribution.access"}</a></li>
 		<li><a name="payments" href="{url router=$smarty.const.ROUTE_COMPONENT component="tab.settings.DistributionSettingsTabHandler" op="showTab" tab="paymentMethod"}">{translate key="manager.paymentMethod"}</a></li>
 		<li><a name="permissions" href="{url router=$smarty.const.ROUTE_COMPONENT component="tab.settings.DistributionSettingsTabHandler" op="showTab" tab="permissions"}">{translate key="submission.permissions"}</a></li>
+		<li><a name="versioning" href="{url router=$smarty.const.ROUTE_COMPONENT component="tab.settings.JournalSettingsTabHandler" op="showTab" tab="versioning"}">{translate key="manager.setup.versioning"}</a></li>
 	</ul>
 </div>
 
