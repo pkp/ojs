@@ -536,6 +536,20 @@ class Issue extends DataObject {
 	}
 
 	/**
+	 * Check whether this issue is a current issue
+	 * @return bool
+	 */
+	function isCurrent() {
+		$current = $this->getCurrent();
+		
+		if ($current == 1) {
+			return true;
+		}
+
+		return false;
+	}
+
+	/**
 	 * @copydoc DataObject::getDAO()
 	 */
 	function getDAO() {
