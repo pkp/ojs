@@ -101,7 +101,6 @@ class IssueGridRow extends GridRow {
 			}
 
 			if ($issue->getDatePublished() && !$issue->isCurrent()) {
-				import('lib.pkp.classes.linkAction.request.AjaxModal');
 				$this->addAction(
 				    new LinkAction(
 				        'setCurrentIssue',

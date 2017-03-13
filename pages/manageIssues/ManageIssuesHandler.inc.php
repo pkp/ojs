@@ -27,7 +27,7 @@ class ManageIssuesHandler extends Handler {
 		$this->addRoleAssignment(
 			array(ROLE_ID_SUB_EDITOR, ROLE_ID_MANAGER),
 			array(
-				'index',
+				'index', 'issuesTabs'
 			)
 		);
 	}
@@ -52,7 +52,21 @@ class ManageIssuesHandler extends Handler {
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR);
 
 		$templateMgr = TemplateManager::getManager($request);
+		if ($request->getUserVar('json') == 1) {
+			return new JSONMessage(true, $templateMgr->fetch('manageIssues/issues.tpl'));
+		}
+
 		return $templateMgr->display('manageIssues/issues.tpl');
+
+	}
+
+	function issuesTabs($args, $request) {
+		$this->setupTemplate($request);
+		AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR);
+
+		$templateMgr = TemplateManager::getManager($request);
+		
+		return new JSONMessage(true, $templateMgr->fetch('manageIssues/issuesTabs.tpl'));
 	}
 }
 

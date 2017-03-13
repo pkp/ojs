@@ -516,7 +516,7 @@ class IssueGridHandler extends GridHandler {
 
 		$dispatcher = $request->getDispatcher();
 		$json = new JSONMessage();
-		$json->setEvent('containerReloadRequested', array('tabsUrl' => $dispatcher->url($request, ROUTE_PAGE, null, 'manageIssues', 'index')));
+		$json->setEvent('containerReloadRequested', array('tabsUrl' => $dispatcher->url($request, ROUTE_PAGE, null, 'manageIssues', 'issuesTabs', null)));
 		return $json;
 	}
 
@@ -536,10 +536,10 @@ class IssueGridHandler extends GridHandler {
 	    $issueDao = DAORegistry::getDAO('IssueDAO');
 	    $issueDao->updateCurrent($journal->getId(), $issue);
 
-	    $dispatcher = $request->getDispatcher();
-	    $json = new JSONMessage();
-	    $json->setEvent('containerReloadRequested', array('tabsUrl' => $dispatcher->url($request, ROUTE_PAGE, null, 'manageIssues', 'index')));
-	    return $json;
+		$dispatcher = $request->getDispatcher();
+		$json = new JSONMessage();
+		$json->setEvent('containerReloadRequested', array('tabsUrl' => $dispatcher->url($request, ROUTE_PAGE, null, 'manageIssues', 'issuesTabs', null)));
+		return $json;
 	}
 
 	/**
