@@ -582,4 +582,14 @@
 	<message key="plugins.importexport.common.export.error.outputFileNotWritable">El archivo de salida {$param} no es editable.</message>
 	<message key="plugins.importexport.common.register.error.mdsError">¡El registro ha fallado! El servidor de registro del DOI ha comunicado un error: '{$param}'.</message>
 	<message key="plugins.importexport.common.register.success">¡Registro correcto!</message>
+	<message key="plugins.importexport.common.export.representations">Galeradas</message>
+	<message key="plugins.importexport.common.error.noDOIContentObjects">No se seleccionaron objetos de publicación para la asignación DOI en el módulo de identificador público DOI, por lo que no hay posibilidad de depósito o exportación en este complemento.</message>
+	<message key="plugins.importexport.common.status.registered">Registrado</message>
+	<message key="plugins.importexport.common.validation">Validar XML antes de la exportación y registro.</message>
+	<message key="plugins.importexport.common.invalidXML">XML inválido:</message>
+	<message key="plugins.importexport.common.senderTask.warning.noDOIprefix">El prefijo DOI falta para la revista con la ruta de acceso {$path}.</message>
+	<message key="plugins.importexport.common.cliError">ERROR:</message>
+	<message key="plugins.importexport.common.error.unknownJournal">La ruta de la revista especificada, "{$journalPath}", no existe.</message>
+	<message key="plugins.importexport.common.error.unknownObjects">No se pudieron encontrar los objetos especificados.</message>
+	<message key="manager.setup.notifications.copyPrimaryContact">Envíe una copia al contacto principal, identificado en la configuración de la revista.</message>
 </locale>

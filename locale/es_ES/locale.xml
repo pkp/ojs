@@ -1013,4 +1013,10 @@ La configuración del soporte CLOCKSS para Open Journal Systems no hace falta qu
 
 	<message key="editor.issues.backIssues">Números anteriores</message>
 	<message key="editor.issues.futureIssues">Próximos números</message>
+	<message key="journal.viewAllIssues">Ver todos los números</message>
+	<message key="about.onlineSubmissions.submissionActions">{$newSubmission} o {$viewSubmissions}.</message>
+	<message key="about.onlineSubmissions.newSubmission">Hacer un nuevo envío</message>
+	<message key="about.onlineSubmissions.viewSubmissions">Ver tus envíos pendientes</message>
+	<message key="notification.type.assignProductionUser">Asigne un usuario para crear galeradas utilizando el enlace Añadir en la lista Participantes.</message>
+	<message key="notification.type.awaitingRepresentations">Esperando galeradas.</message>
 </locale>

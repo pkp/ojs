@@ -69,4 +69,7 @@
 	<message key="submission.submit.form.titleRequired">Por favor, introduzca el título de su artículo.</message>
 	<message key="submission.submit.form.abstractRequired">Por favor, introduzca el resumen de su artículo.</message>
 	<message key="submission.submit.form.contributorRoleRequired">Por favor, seleccione el rol del colaborador.</message>
+	<message key="submission.citationFormat.notFound">No se pudo recuperar el formato de cita solicitado.</message>
+	<message key="submission.metadataDescription">Estas especificaciones se basan en el conjunto de metadatos Dublin Core, un standard internacional utilizada para describir el contenido de la revista.</message>
+	<message key="section.any">Cualquier sección</message>
 </locale>
