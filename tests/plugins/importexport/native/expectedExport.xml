@@ -14,7 +14,7 @@
   </author>
   <date_published>{$currentDate}</date_published>
   <permissions>
-    <license_url>http://creativecommons.org/licenses/by-nc-nd/4.0</license_url>
+    <license_url>https://creativecommons.org/licenses/by-nc-nd/4.0</license_url>
     <copyright_holder locale="en_US">Brian Vemer</copyright_holder>
     <copyright_year>{$currentYear}</copyright_year>
   </permissions>
