@@ -357,12 +357,12 @@ class Application extends PKPApplication {
 	 */
 	function getCCLicenseOptions() {
 		return array(
-			'http://creativecommons.org/licenses/by-nc-nd/4.0' => 'submission.license.cc.by-nc-nd4',
-			'http://creativecommons.org/licenses/by-nc/4.0' => 'submission.license.cc.by-nc4',
-			'http://creativecommons.org/licenses/by-nc-sa/4.0' => 'submission.license.cc.by-nc-sa4',
-			'http://creativecommons.org/licenses/by-nd/4.0' => 'submission.license.cc.by-nd4',
-			'http://creativecommons.org/licenses/by/4.0' => 'submission.license.cc.by4',
-			'http://creativecommons.org/licenses/by-sa/4.0' => 'submission.license.cc.by-sa4'
+			'https://creativecommons.org/licenses/by-nc-nd/4.0' => 'submission.license.cc.by-nc-nd4',
+			'https://creativecommons.org/licenses/by-nc/4.0' => 'submission.license.cc.by-nc4',
+			'https://creativecommons.org/licenses/by-nc-sa/4.0' => 'submission.license.cc.by-nc-sa4',
+			'https://creativecommons.org/licenses/by-nd/4.0' => 'submission.license.cc.by-nd4',
+			'https://creativecommons.org/licenses/by/4.0' => 'submission.license.cc.by4',
+			'https://creativecommons.org/licenses/by-sa/4.0' => 'submission.license.cc.by-sa4'
 		);
 	}
 
@@ -374,12 +374,12 @@ class Application extends PKPApplication {
 	 */
 	function getCCLicenseBadge($ccLicenseURL) {
 		$licenseKeyMap = array(
-			'http://creativecommons.org/licenses/by-nc-nd/4.0' => 'submission.license.cc.by-nc-nd4.footer',
-			'http://creativecommons.org/licenses/by-nc/4.0' => 'submission.license.cc.by-nc4.footer',
-			'http://creativecommons.org/licenses/by-nc-sa/4.0' => 'submission.license.cc.by-nc-sa4.footer',
-			'http://creativecommons.org/licenses/by-nd/4.0' => 'submission.license.cc.by-nd4.footer',
-			'http://creativecommons.org/licenses/by/4.0' => 'submission.license.cc.by4.footer',
-			'http://creativecommons.org/licenses/by-sa/4.0' => 'submission.license.cc.by-sa4.footer'
+			'https://creativecommons.org/licenses/by-nc-nd/4.0' => 'submission.license.cc.by-nc-nd4.footer',
+			'https://creativecommons.org/licenses/by-nc/4.0' => 'submission.license.cc.by-nc4.footer',
+			'https://creativecommons.org/licenses/by-nc-sa/4.0' => 'submission.license.cc.by-nc-sa4.footer',
+			'https://creativecommons.org/licenses/by-nd/4.0' => 'submission.license.cc.by-nd4.footer',
+			'https://creativecommons.org/licenses/by/4.0' => 'submission.license.cc.by4.footer',
+			'https://creativecommons.org/licenses/by-sa/4.0' => 'submission.license.cc.by-sa4.footer'
 		);
 		if (isset($licenseKeyMap[$ccLicenseURL])) {
 			return __($licenseKeyMap[$ccLicenseURL]);
