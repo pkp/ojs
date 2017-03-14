@@ -45,7 +45,6 @@ class ManageIssuesHandler extends Handler {
 	 * Displays the issue listings in a tabbed interface.
 	 * @param $args array
 	 * @param $request PKPRequest
-	 * @return JSONMessage JSON object
 	 */
 	function index($args, $request) {
 		$this->setupTemplate($request);
@@ -55,6 +54,12 @@ class ManageIssuesHandler extends Handler {
 		return $templateMgr->display('manageIssues/issues.tpl');
 	}
 
+	/**
+	 * Returns the issues tabs in the form of a JSON Message.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 * @return JSONMessage JSON object
+	 */
 	function issuesTabs($args, $request) {
 		$this->setupTemplate($request);
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR);
