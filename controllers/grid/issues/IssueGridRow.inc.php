@@ -102,18 +102,18 @@ class IssueGridRow extends GridRow {
 
 			if ($issue->getDatePublished() && !$issue->getCurrent()) {
 				$this->addAction(
-				    new LinkAction(
-				        'setCurrentIssue',
-				        new RemoteActionConfirmationModal(
-				            $request->getSession(),
-				            __('editor.issues.confirmSetCurrentIssue'),
-				            __('editor.issues.currentIssue'),
-				            $router->url($request, null, null, 'setCurrentIssue', null, array('issueId' => $issueId)),
-				            'modal_delete'
-				        ),
-				        __('editor.issues.currentIssue'),
-				        'delete'
-				    )
+					new LinkAction(
+						'setCurrentIssue',
+						new RemoteActionConfirmationModal(
+							$request->getSession(),
+							__('editor.issues.confirmSetCurrentIssue'),
+							__('editor.issues.currentIssue'),
+							$router->url($request, null, null, 'setCurrentIssue', null, array('issueId' => $issueId)),
+							'modal_delete'
+						),
+						__('editor.issues.currentIssue'),
+						'delete'
+					)
 				);
 			}
 
