@@ -526,15 +526,15 @@ class IssueGridHandler extends GridHandler {
 	 * @param $request PKPRequest
 	 */
 	function setCurrentIssue($args, $request) {
-	    $issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
-	    $journal = $request->getJournal();
+		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
+		$journal = $request->getJournal();
 
-	    if (!$request->checkCSRF()) return new JSONMessage(false);
+		if (!$request->checkCSRF()) return new JSONMessage(false);
 
-	    $issue->setCurrent(1);
+		$issue->setCurrent(1);
 
-	    $issueDao = DAORegistry::getDAO('IssueDAO');
-	    $issueDao->updateCurrent($journal->getId(), $issue);
+		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$issueDao->updateCurrent($journal->getId(), $issue);
 
 		$dispatcher = $request->getDispatcher();
 		$json = new JSONMessage();
