@@ -96,6 +96,7 @@
 	<message key="editor.issues.preview">Preview</message>
 	<message key="editor.issues.confirmPublish">Are you sure you want to publish the new issue?</message>
 	<message key="editor.issues.confirmUnpublish">Are you sure you want to unpublish this published issue?</message>
+	<message key="editor.issues.confirmSetCurrentIssue">Are you sure you want to set this issue as current?</message>
 	<message key="editor.issues.publicArticleIdExists">Unable to save public id for article:</message>
 	<message key="editor.issues.noLiveIssues">No Live Issues</message>
 	<message key="editor.issues.open">Open</message>
@@ -119,6 +120,7 @@
 	<message key="grid.action.viewIssue">View</message>
 	<message key="grid.action.previewIssue">Preview</message>
 	<message key="grid.action.addIssueGalley">Create Issue Galley</message>
+	<message key="grid.action.setCurrentIssue">Set Current Issue</message>
 	<message key="editor.navigation.issueArchive">Back Issues</message>
 	<message key="editor.article.designateReviewVersion">Designate the original file as the Review Version</message>
 	<message key="editor.article.uploadReviewVersion">Upload a revised Review Version</message>
