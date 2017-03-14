@@ -100,7 +100,7 @@ class IssueGridRow extends GridRow {
 				);
 			}
 
-			if ($issue->getDatePublished() && !$issue->isCurrent()) {
+			if ($issue->getDatePublished() && !$issue->getCurrent()) {
 				$this->addAction(
 				    new LinkAction(
 				        'setCurrentIssue',
