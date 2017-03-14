@@ -52,12 +52,7 @@ class ManageIssuesHandler extends Handler {
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR);
 
 		$templateMgr = TemplateManager::getManager($request);
-		if ($request->getUserVar('json') == 1) {
-			return new JSONMessage(true, $templateMgr->fetch('manageIssues/issues.tpl'));
-		}
-
 		return $templateMgr->display('manageIssues/issues.tpl');
-
 	}
 
 	function issuesTabs($args, $request) {
@@ -65,7 +60,7 @@ class ManageIssuesHandler extends Handler {
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR);
 
 		$templateMgr = TemplateManager::getManager($request);
-		
+
 		return new JSONMessage(true, $templateMgr->fetch('manageIssues/issuesTabs.tpl'));
 	}
 }
