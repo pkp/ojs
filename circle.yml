@@ -1,0 +1,13 @@
+
+deployment:
+
+  production:
+    branch: master
+    commands:
+
+      # add the output and region
+      - printf '%s\n%s\n' 'output = json' 'region = us-east-1' >> ~/.aws/config
+
+      # aws codedeploy for API
+      - aws deploy create-deployment --application-name DraftEngine --deployment-config-name CodeDeployDefault.OneAtATime --deployment-group-name DraftEngineProduction --description "Engine Deployment" --github-location commitId=$CIRCLE_SHA1,repository=draftapp/analytics-engine
+
