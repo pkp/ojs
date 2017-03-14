@@ -67,7 +67,7 @@ class ManageIssuesHandler extends Handler {
 
 		$templateMgr = TemplateManager::getManager($request);
 
-		return new JSONMessage(true, $templateMgr->fetch('manageIssues/issuesTabs.tpl'));
+		return $templateMgr->fetchJson('manageIssues/issuesTabs.tpl');
 	}
 }
 
