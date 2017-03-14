@@ -1,0 +1,35 @@
+version: 0.0
+
+os: linux
+
+files:
+
+    - source: ./
+      destination: /var/www/journal/latest_release/
+
+hooks:
+
+  ApplicationStop:
+    - location: deploy/application_stop.sh
+      timeout: 300
+      runas: root
+
+  BeforeInstall:
+    - location: deploy/before_install.sh
+      timeout: 300
+      runas: root
+
+  AfterInstall:
+    - location: deploy/after_install.sh
+      timeout: 1000
+      runas: ubuntu
+
+  ApplicationStart:
+    - location: deploy/application_start.sh
+      timeout: 300
+      runas: ubuntu
+
+  ValidateService:
+    - location: deploy/validate_service.sh
+      runas: ubuntu
+      timeout: 300
