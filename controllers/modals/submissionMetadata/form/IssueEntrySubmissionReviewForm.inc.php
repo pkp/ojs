@@ -35,6 +35,7 @@ class IssueEntrySubmissionReviewForm extends SubmissionMetadataViewForm {
 	 * Save the metadata.
 	 */
 	function execute($request) {
+		parent::execute($request);
 		HookRegistry::call('issueentrysubmissionreviewform::execute', array($this));
 
 		$submission = $this->getSubmission();
