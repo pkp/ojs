@@ -1,7 +1,7 @@
-OJS 2.4.8-1 Release Notes
-CVS tag: ojs-2_4_8-1
-Release date: August 3, 2016
-=================================
+OJS 2.4.8-2 Release Notes
+CVS tag: ojs-2_4_8-2
+Release date: March 15, 2017
+============================
 
 Configuration Changes
 ---------------------
@@ -116,3 +116,24 @@ Bug Fixes
 	#1013: Ajax form submit controls doesn't get enabled after form submission
 	#1001: Usage event plugin should not use public ids
 	#862: Implement better logging for web service requests
+	#1621: Missing $request param in comment form emails
+	#1665: Make object for review cover images adaptable to the window size
+	#1720: Homogenise max_length for session_id columns in OJS and OCS
+	#1749: remove PHP 5.3 code from OJS 2.4.8
+	#1788: Fix incorrect datetime value
+	#1820: Title parameter in multiple locale.xml files is $param instead of $title
+	#1877: DataCite export's "publisher" should be clarified
+	#1894: Dataverse plugin overrides NOTIFICATION_TYPE_ERROR message
+	#1901: Update Crossref DOI display according to their new guidelines
+	#1905: Acron really, really wants to run... (when perhaps it shouldn't)
+	#1929: locale key parameter missing
+	#1959: PubmedNlm30CitationSchemaFilterTest and CURL SSL Version
+	#2068: DOI Export Plugin assertion "register" is noisy
+	#2119: BibTeX plugin missing comma between pages and doi element
+	#2145: Correct SubmissionProofreaderHandler warning
+	#2156: OJS install/upgrade documentation is slightly inaccurate
+	#2164: Bad link in Crossref settings form after pkp/pkp-lib#1498
+	#2232: Smarty doesn't understand Validation::isLoggedIn() in if statements
+	#2300: Form method="GET" (default) does not work with `path_info_disabled` URLs.
+	#2327: ArticleSearchIndex::_updateTextIndex() clears prior indexed content
+	#2348: Public Profile link from comments is broken
