@@ -49,7 +49,7 @@ Merci,<br />
 		<subject>Parution du dernier numéro</subject>
 		<body><![CDATA[Lecteurs:<br />
 <br />
-Le plus récent numéro de {$contextName} vient d'être publié à l'adresse suivante : <a href="{$contextUrl}">{$contextUrl}</a>. Nous vous invitons à consulter la table des matières, puis à visiter notre site Web pour y lire les articles qui vous intéressent.<br />
+Le plus récent numéro de {$contextName} vient d'être publié à l'adresse suivante : {$contextUrl}. Nous vous invitons à consulter la table des matières, puis à visiter notre site Web pour y lire les articles qui vous intéressent.<br />
 <br />
 Nous vous remercions de l'intérêt que vous portez à notre revue,<br />
 {$editorialContactSignature}]]></body>
@@ -59,11 +59,11 @@ Nous vous remercions de l'intérêt que vous portez à notre revue,<br />
 		<subject>Demande d'archivage pour {$contextName}</subject>
 		<body><![CDATA[Cher [Bibliothécaire universitaire]<br />
 <br />
-{$contextName} &lt;<a href="{$contextUrl}">{$contextUrl}</a>&gt; est une revue pour laquelle un membre de votre faculté, [nom du membre], agit à titre de [titre de la position occupée]. La revue désire mettre en place un système d'archivage conforme LOCKSS (Lots of Copies Keep Stuff Safe - Plusieurs exemplaires qui assurent la sécurité) avec votre bibliothèque universitaire ainsi que celles d'autres universités.<br />
+{$contextName} &lt;{$contextUrl}&gt; est une revue pour laquelle un membre de votre faculté, [nom du membre], agit à titre de [titre de la position occupée]. La revue désire mettre en place un système d'archivage conforme LOCKSS (Lots of Copies Keep Stuff Safe - Plusieurs exemplaires qui assurent la sécurité) avec votre bibliothèque universitaire ainsi que celles d'autres universités.<br />
 <br />
 [Brève description de la revue]<br />
 <br />
-L'adresse URL pour le LOCKSS Publisher Manifest pour notre revue est: <a href="{$contextUrl}">{$contextUrl}</a>/gateway/lockss<br />
+L'adresse URL pour le LOCKSS Publisher Manifest pour notre revue est: {$contextUrl}/gateway/lockss<br />
 <br />
 Nous savons que vous participez déjà à LOCKSS. Si nous pouvons vous fournir des métadonnées supplémentaires afin d'inscrire notre revue avec votre version de LOCKSS, il nous fera plaisir de vous les fournir.<br />
 <br />
@@ -75,7 +75,7 @@ Merci,<br />
 		<subject>Demande d'archivage pour {$contextName}</subject>
 		<body><![CDATA[Cher [Bibliothécaire universitaire]<br />
 <br />
-{$contextName}, &lt;<a href="{$contextUrl}">{$contextUrl}</a>&gt;, est une revue pour laquelle un membre de votre faculté, [nom du membre], agit à titre de [titre de la fonction occupée]. La revue désire mettre en place un système d'archivage conforme LOCKSS (Lots of Copies Keep Stuff Safe) avec votre bibliothèque universitaire et celles d'autres universités.<br />
+{$contextName}, &lt;{$contextUrl}&gt;, est une revue pour laquelle un membre de votre faculté, [nom du membre], agit à titre de [titre de la fonction occupée]. La revue désire mettre en place un système d'archivage conforme LOCKSS (Lots of Copies Keep Stuff Safe) avec votre bibliothèque universitaire et celles d'autres universités.<br />
 <br />
 [Brève description de la revue]<br />
 <br />
@@ -163,13 +163,13 @@ Merci,<br />
 <br />
 Nous croyons que vous seriez un excellent évaluateur pour le manuscrit intitulé « {$submissionTitle} » qui a été soumis à la revue {$contextName}. Vous trouverez un résumé de la soumission ci-dessous.  Nous espérons que vous accepterez ce travail essentiel à la publication de la revue.<br />
 <br />
-Veuillez accéder au site Web de la revue avant le {$responseDueDate} pour nous laisser savoir si vous acceptez de faire l'évaluation ou non. Vous pouvez également y consulter la soumission et y enregistrer votre évaluation et votre recommandation. Le site Web se trouve à l'adresse suivante : <a href="{$contextUrl}">{$contextUrl}</a><br />
+Veuillez accéder au site Web de la revue avant le {$responseDueDate} pour nous laisser savoir si vous acceptez de faire l'évaluation ou non. Vous pouvez également y consulter la soumission et y enregistrer votre évaluation et votre recommandation. Le site Web se trouve à l'adresse suivante : {$contextUrl}<br />
 <br />
 La date d'échéance de l'évaluation a été fixée au {$reviewDueDate}.<br />
 <br />
-Si vous n'avez pas de nom d'utilisateur et de mot de passe pour le site Web de la revue, cliquer sur le lien ci-dessous pour réinitialiser votre mot de passe (qui vous sera envoyé par courriel avec votre nom d'utilisateur). <a href="{$psasswordResetUrl}">{$psasswordResetUrl}</a><br />
+Si vous n'avez pas de nom d'utilisateur et de mot de passe pour le site Web de la revue, cliquer sur le lien ci-dessous pour réinitialiser votre mot de passe (qui vous sera envoyé par courriel avec votre nom d'utilisateur). {$psasswordResetUrl}<br />
 <br />
-URL de la soumission : <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+URL de la soumission : {$submissionReviewUrl}<br />
 <br />
 En espérant que vous accepterez notre demande, veuillez agréer l'expression de notre considération distinguée.<br />
 <br />
@@ -189,11 +189,11 @@ En espérant que vous accepterez notre demande, veuillez agréer l'expression de
 <br />
 Nous croyons que vous seriez un excellent évaluateur pour le manuscrit intitulé « {$submissionTitle} » qui a été soumis à la revue {$contextName}. Vous trouverez un résumé de la soumission ci-dessous.  Nous espérons que vous accepterez ce travail essentiel à la publication de la revue.<br />
 <br />
-Veuillez accéder au site Web de la revue avant le {$responseDueDate} pour nous informer si vous acceptez de faire l'évaluation ou non. Vous pouvez également y consulter la soumission et y enregistrer votre évaluation et votre recommandation. Le site Web se trouve à l'adresse suivante : <a href="{$contextUrl}">{$contextUrl}</a><br />
+Veuillez accéder au site Web de la revue avant le {$responseDueDate} pour nous informer si vous acceptez de faire l'évaluation ou non. Vous pouvez également y consulter la soumission et y enregistrer votre évaluation et votre recommandation. Le site Web se trouve à l'adresse suivante : {$contextUrl}<br />
 <br />
 Date limite pour l'évaluation {$reviewDueDate}.<br />
 <br />
-URL de la soumission : <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a>.<br />
+URL de la soumission : {$submissionReviewUrl}.<br />
 <br />
 En espérant que vous accepterez notre demande, veuillez agréer l'expression de notre considération distinguée.<br />
 <br />
@@ -266,9 +266,9 @@ Nous vous remercions d'avoir évalué la soumission intitulée « {$submissionTi
 <br />
 Juste un petit mot pour vous rappeler notre demande d'évaluation de la soumission intitulée « {$submissionTitle} » pour {$contextName}. Nous espérions recevoir votre évaluation avant le {$reviewDueDate}, et nous serions heureux de la recevoir dès que possible.<br />
 <br />
-Si vous n'avez pas de nom d'utilisateur ni de mot de passe pour le site Web de la revue, cliquer sur le lien ci-dessous pour réinitialiser votre mot de passe (qui vous sera alors envoyé par courriel avec votre nom d'utilisateur). <a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
+Si vous n'avez pas de nom d'utilisateur ni de mot de passe pour le site Web de la revue, cliquer sur le lien ci-dessous pour réinitialiser votre mot de passe (qui vous sera alors envoyé par courriel avec votre nom d'utilisateur). {$passwordResetUrl}<br />
 <br />
-URL de la soumission : <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+URL de la soumission : {$submissionReviewUrl}<br />
 <br />
 Veuillez confirmer que vous êtes en mesure d'effectuer ce travail essentiel pour la publication de notre revue. Nous espérons avoir de vos nouvelles très bientôt.<br />
 <br />
@@ -281,7 +281,7 @@ Veuillez confirmer que vous êtes en mesure d'effectuer ce travail essentiel pou
 <br />
 Juste un petit mot pour vous rappeler notre demande d'évaluation de la soumission intitulée « {$submissionTitle} », pour {$contextName}. Nous espérions recevoir votre évaluation le {$reviewDueDate} et nous serions heureux de la recevoir aussitôt qu'il vous sera possible de le faire.<br />
 <br />
-Adresse URL de la soumission: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+Adresse URL de la soumission: {$submissionReviewUrl}<br />
 <br />
 Veuillez confirmer si vous êtes en mesure de compléter ce travail essentiel pour la publication de la revue. Espérant avoir de vos nouvelles sous peu.<br />
 <br />
@@ -294,9 +294,9 @@ Veuillez confirmer si vous êtes en mesure de compléter ce travail essentiel po
 <br />
 Juste un petit mot pour vous rappeler notre demande à propos de l'évaluation de la soumission intitulée « {$submissionTitle} » pour {$contextName}. Nous espérions recevoir votre évaluation avant le {$reviewDueDate}. Ce courriel a été envoyé automatiquement parce que la date d'échéance est passée. Nous serions quand même heureux de recevoir votre évaluation dès que possible.<br />
 <br />
-Si vous n'avez pas de nom d'utilisateur ni de mot de passe pour le site Web de la revue, cliquez sur le lien ci-dessous pour réinitialiser votre mot de passe (qui vous sera envoyé par courriel avec votre nom d'utilisateur). <a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
+Si vous n'avez pas de nom d'utilisateur ni de mot de passe pour le site Web de la revue, cliquez sur le lien ci-dessous pour réinitialiser votre mot de passe (qui vous sera envoyé par courriel avec votre nom d'utilisateur). {$passwordResetUrl}<br />
 <br />
-URL de la soumission : <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+URL de la soumission : {$submissionReviewUrl}<br />
 <br />
 Veuillez confirmer que vous êtes en mesure d'effectuer ce travail important pour notre revue. J'espère avoir de vos nouvelles très bientôt.<br />
 <br />
@@ -309,7 +309,7 @@ Veuillez confirmer que vous êtes en mesure d'effectuer ce travail important pou
 <br />
 Juste un petit mot au sujet de notre demande d'évaluation de la soumission « {$submissionTitle} », pour {$contextName}. Nous espérions avoir cette évaluation avant le {$reviewDueDate}, et ce courriel vous a été envoyé automatiquement parce que la date d'échéance est passée. Nous serions heureux de la recevoir dès qu'il vous sera possible de nous l'envoyer.<br />
 <br />
-L'adresse URL de la soumission: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+L'adresse URL de la soumission: {$submissionReviewUrl}<br />
 <br />
 S.V.P. veuillez nous confirmer votre disponibilité à compléter cette contribution importante à notre revue. Espérant recevoir de vos nouvelles bientôt.<br />
 <br />
@@ -328,8 +328,8 @@ J'aimerais que vous effectuiez la révision du manuscrit intitulé « {$submissi
 5. Enregistrer le fichier révisé, et télécharger à l'Étape 1 de la révision.<br />
 6. Envoyer le courriel TERMINÉ au rédacteur.<br />
 <br />
-URL de {$contextName} : <a href="{$contextUrl}">{$contextUrl}</a><br />
-URL de la soumission : <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL de {$contextName} : {$contextUrl}<br />
+URL de la soumission : {$submissionUrl}<br />
 Nom d'utilisateur : {$participantUsername}<br />
 <br />
 {$editorialContactSignature}]]></body>
@@ -349,7 +349,7 @@ Nous avons terminé la révision de la soumission intitulé « {$submissionTitle
 <br />
 Il s'agit de votre dernière chance d'apporter des modifications importantes à votre soumission. À l'étape de la correction d'épreuves, vous ne pourrez changer que les erreurs typographiques et les problèmes de mise en page.<br />
 <br />
-URL de la soumission : <a href="{$submissionEditingUrl}">{$submissionEditingUrl}</a><br />
+URL de la soumission : {$submissionEditingUrl}<br />
 <br />
 Si vous ne pouvez pas effectuer ce travail pour le moment ou si vous avez des questions, veuillez communiquer avec nous. Nous vous remercions de votre collaboration.<br />
 <br />
@@ -380,7 +380,7 @@ Nous avons maintenant terminé la révision initiale de votre manuscrit intitul�
 7. Cliquer sur MÉTADONNÉES pour vérifier l'information d'indexation afin de vous assurer que tout êtes exact et complet.<br />
 8. Envoyer le courriel TERMINÉ au rédacteur et au réviseur.<br />
 <br />
-URL de la soumission : <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL de la soumission : {$submissionUrl}<br />
 <br />
 Il s'agit de votre dernière chance d'apporter des modifications importantes à votre soumission. À l'étape de la correction d'épreuves, vous ne pourrez changer que les erreurs typographiques et les problèmes de mise en page.<br />
 <br />
@@ -420,8 +420,8 @@ L'auteur et le rédacteur ont complété la revue de la révision de « {$submis
 5. Cliquer sur MÉTADONNÉES pour vérifier l'information d'indexation (en enregistrant toutes les corrections).<br />
 6. Envoyer le courriel TERMINÉ au rédacteur.<br />
 <br />
-URL de {$contextName} : <a href="{$contextUrl}">{$contextUrl}</a><br />
-URL de la soumission : <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL de {$contextName} : {$contextUrl}<br />
+URL de la soumission : {$submissionUrl}<br />
 Nom d'utilisateur : {$participantUsername}<br />
 <br />
 {$editorialContactSignature}]]></body>
@@ -454,8 +454,8 @@ J'aimerais que vous prépariez les épreuves du manuscrit intitulé « {$submiss
 2. Se connecter au site Web de la revue et utiliser la version de mise en page du fichier pour créer les épreuves en fonction des normes de la revue.<br />
 3. Envoyer le courriel TERMINÉ au rédacteur.<br />
 <br />
-URL de {$contextName} : <a href="{$contextUrl}">{$contextUrl}</a><br />
-URL du manuscrit : <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a><br />
+URL de {$contextName} : {$contextUrl}<br />
+URL du manuscrit : {$submissionLayoutUrl}<br />
 Nom d'utilisateur : {$participantUsername}<br />
 <br />
 Si vous ne pouvez pas effectuer ce travail pour le moment ou si vous avez des questions, veuillez communiquer avec moi. Je vous remercie de votre collaboration.<br />
@@ -565,7 +565,7 @@ Nous aimerions que vous insériez les modifications nécessaires à la suite de 
 3.Télécharger les épreuves corrigées.<br />
 4. Envoyer le courriel TERMINÉ de l'Étape 3 de Correction d'épreuves au rédacteur.<br />
 <br />
-URL de {$contextName} : <a href="{$contextUrl}">{$contextUrl}</a><br />
+URL de {$contextName} : {$contextUrl}<br />
 URL du manuscrit : {$submissionUrl}<br />
 Nom d'utilisateur : {$participantUsername}<br />
 <br />
@@ -594,7 +594,7 @@ Nous vous remercions d'avoir corrigé les épreuves du manuscrit intitulé « {$
 	</email_text>
 	<email_text key="EMAIL_LINK">
 		<subject>Article potentiellement intéressant</subject>
-		<body><![CDATA[Je pense que l'article suivant pourrait vous intéresser : « {$submissionTitle} » par {$authorName}, publié dans le volume {$volume}, numéro {$number} de ({$year}) de la revue {$contextName}. Vous le trouverez à l'adresse suivante : <a href="{$articleUrl}">{$articleUrl}</a>.]]></body>
+		<body><![CDATA[Je pense que l'article suivant pourrait vous intéresser : « {$submissionTitle} » par {$authorName}, publié dans le volume {$volume}, numéro {$number} de ({$year}) de la revue {$contextName}. Vous le trouverez à l'adresse suivante : {$articleUrl}.]]></body>
 		<description>Ce courriel type donne à un lecteur inscrit l'occasion d'envoyer de l'information à quelqu'un qui peut être intéressé par un article en particulier. Il est disponible via Outils de lecture et doit être activé par le Directeur de la revue à la page Gestion des outils de lecture.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_NOTIFY">
@@ -620,7 +620,7 @@ Si vous avez des questions, n'hésitez pas à communiquer avec moi.<br />
 		<subject>Le numéro est maintenant à accès libre</subject>
 		<body><![CDATA[Chers lecteurs et lectrices :<br />
 <br />
-{$contextName} vient de rendre disponible en format libre accès le numéro suivant. Nous vous invitons à lire la table des matières ici puis visiter notre site Web (<a href="{$contextUrl}">{$contextUrl}</a>) pour lire les articles et autres textes qui pourraient vous intéresser.<br />
+{$contextName} vient de rendre disponible en format libre accès le numéro suivant. Nous vous invitons à lire la table des matières ici puis visiter notre site Web ({$contextUrl}) pour lire les articles et autres textes qui pourraient vous intéresser.<br />
 <br />
 Merci de votre intérêt continu pour notre travail,<br />
 {$editorialContactSignature}]]></body>
@@ -680,7 +680,7 @@ Si vous avez des questions, ne hésitez pas à communiquer avec moi.<br />
 <br />
 Vous avez créé un compte avec {$contextName}, mais avant de pouvoir commencer à l'utiliser, vous devez valider votre compte de courriel. Pour ce faire, suivre simplement le lien ci-dessous :<br />
 <br />
-<a href="{$activateUrl}">{$activateUrl}</a><br />
+{$activateUrl}<br />
 <br />
 Merci,<br />
 {$principalContactSignature}]]></body>
@@ -794,7 +794,7 @@ Information d'adhésion (si fournie):<br />
 <br />
 Pour afficher ou modifier cet abonnement, veuillez utiliser l'URL suivante.<br />
 <br />
-URL d'abonnement: <a href="{$subscriptionUrl}">{$subscriptionUrl}</a>]]></body>
+URL d'abonnement: {$subscriptionUrl}]]></body>
 	</email_text>
 	<email_text key="SUBSCRIPTION_PURCHASE_INSTL">
 		<subject>Souscription à un abonnement: Institutionnel</subject>
@@ -821,7 +821,7 @@ Information d'adhésion (si fourni):<br />
 <br />
 Pour afficher ou modifier cet abonnement, veuillez utiliser l'URL suivant :<br />
 <br />
-URL de l'abonnement : <a href="{$subscriptionUrl}">{$subscriptionUrl}</a>]]></body>
+URL de l'abonnement : {$subscriptionUrl}]]></body>
 	</email_text>
 	<email_text key="SUBSCRIPTION_RENEW_INDL">
 		<subject>Renouvellement d'abonnement : Individuel</subject>
@@ -838,7 +838,7 @@ Information d'adhésion (si fourni):<br />
 <br />
 Pour afficher ou modifier cet abonnement, veuillez utiliser l'URL suivant.<br />
 <br />
-URL de l'abonnement : <a href="{$subscriptionUrl}">{$subscriptionUrl}</a>]]></body>
+URL de l'abonnement : {$subscriptionUrl}]]></body>
 	</email_text>
 	<email_text key="SUBSCRIPTION_RENEW_INSTL">
 		<subject>Renouvellement d'abonnement : Institutionnel</subject>
@@ -865,7 +865,7 @@ Information d'adhésion (si fourni):<br />
 <br />
 Pour afficher ou modifier cet abonnement, veuillez utiliser l'URL suivant.<br />
 <br />
-URL de l'abonnement : <a href="{$subscriptionUrl}">{$subscriptionUrl}</a>]]></body>
+URL de l'abonnement : {$subscriptionUrl}]]></body>
 	</email_text>
 	<email_text key="CITATION_EDITOR_AUTHOR_QUERY">
 		<subject>Modification des références</subject>
@@ -915,7 +915,7 @@ Veuillez vous authentifier sur la page de la revue avant le {$responseDueDate} p
 <br />
 L'évaluation est dû pour le  {$reviewDueDate}.<br />
 <br />
-Hyperlien de la soumission: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+Hyperlien de la soumission: {$submissionReviewUrl}<br />
 <br />
 Merci de considérer cette requête.<br />
 <br />
@@ -944,14 +944,14 @@ Ceci est un rappel concernant notre demande d'évaluation de &quot;{$submissionT
 <br />
 Nous pensons que vous seriez un excellent évaluateur pour le manuscrit. Vous trouverez un résumé de la soumission en suivant l'hyperlien plus bas.<br />
 <br />
-Veuillez vous authentifier sur la page de la revue avant le {$responseDueDate} pour y indiquer si vous participerez à cette évaluation ou non, ou simplement indiquer les recommandations suivant votre évaluation. Le site web est  <a href="{$contextUrl}">{$contextUrl}</a><br />
+Veuillez vous authentifier sur la page de la revue avant le {$responseDueDate} pour y indiquer si vous participerez à cette évaluation ou non, ou simplement indiquer les recommandations suivant votre évaluation. Le site web est  {$contextUrl}<br />
 <br />
 L'évaluation est dû pour le  {$reviewDueDate}.<br />
 <br />
 Si vous n'avez pas votre identifiant pour le site de la revue, vous pouvez utiliser l'hyperlien suivant pour entrer un nouveau mot de passe.
-<a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
+{$passwordResetUrl}<br />
 <br />
-Hyperlien de la soumission: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+Hyperlien de la soumission: {$submissionReviewUrl}<br />
 <br />
 Merci de considérer cette requête.<br />
 <br />
@@ -974,9 +974,9 @@ Vous seriez aimable de vous authentifier sur la page de la revue en nous indiqua
 L'évaluation est dû pour le  {$reviewDueDate}.<br />
 <br />
 Si vous n'avez pas votre identifiant pour le site de la revue, vous pouvez utiliser l'hyperlien suivant pour entrer un nouveau mot de passe.
-<a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
+{$passwordResetUrl}<br />
 <br />
-Hyperlien de la soumission: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+Hyperlien de la soumission: {$submissionReviewUrl}<br />
 <br />
 Merci de considérer cette requête.<br />
 <br />
@@ -999,7 +999,7 @@ Veuillez vous authentifier sur la page de la revue avant le {$responseDueDate} p
 <br />
 L'évaluation est dû pour le  {$reviewDueDate}.<br />
 <br />
-Hyperlien de la soumission: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+Hyperlien de la soumission: {$submissionReviewUrl}<br />
 <br />
 Merci de considérer cette requête.<br />
 <br />
