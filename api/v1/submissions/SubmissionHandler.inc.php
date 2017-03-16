@@ -17,6 +17,14 @@
 import('lib.pkp.classes.handler.APIHandler');
 
 class SubmissionHandler extends APIHandler {
+
+	/**
+	 * The unique endpoint string for this handler
+	 *
+	 * @param string
+	 */
+	protected $_handlerPath = 'submissions';
+
 	/**
 	 * Constructor
 	 */
@@ -25,12 +33,12 @@ class SubmissionHandler extends APIHandler {
 		$this->_endpoints = array(
 			'GET' => array (
 				array(
-					'pattern' => '/{contextPath}/api/{version}/submissions/{submissionId}/files/{fileId}',
+					'pattern' => $this->getEndpointPattern() . '/{submissionId}/files/{fileId}',
 					'handler' => array($this,'getFile'),
 					'roles' => $roles
 				),
 				array(
-					'pattern' => '/{contextPath}/api/{version}/submissions/{submissionId}',
+					'pattern' => $this->getEndpointPattern() . '/{submissionId}',
 					'handler' => array($this,'submissionMetadata'),
 					'roles' => $roles
 				),
