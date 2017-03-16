@@ -14,7 +14,7 @@
  */
 
 define('SUBSCRIPTION_OPEN_ACCESS_DELAY_MIN', '0');
-define('SUBSCRIPTION_OPEN_ACCESS_DELAY_MAX', '24');
+define('SUBSCRIPTION_OPEN_ACCESS_DELAY_MAX', '60');
 
 import('lib.pkp.classes.form.Form');
 
