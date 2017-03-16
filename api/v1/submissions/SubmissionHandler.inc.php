@@ -84,6 +84,7 @@ class SubmissionHandler extends APIHandler {
 		$submissionFile = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION_FILE);
 		assert($submissionFile); // Should have been validated already
 		$context = $request->getContext();
+		import('lib.pkp.classes.file.SubmissionFileManager');
 		$fileManager = new SubmissionFileManager($context->getId(), $submissionFile->getSubmissionId());
 		if (!$fileManager->downloadFile($submissionFile->getFileId(), $submissionFile->getRevision(), false, $submissionFile->getClientFileName())) {
 			error_log('FileApiHandler: File ' . $submissionFile->getFilePath() . ' does not exist or is not readable!');
