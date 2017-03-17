@@ -37,6 +37,10 @@
 	<upgrade minversion="3.0.0.0" maxversion="3.0.1.9">
 		<data file="dbscripts/xml/upgrade/3.0.0_preupdate_commentsToEditor.xml" condition="return $installer->columnExists('submissions', 'comments_to_ed');" />
 	</upgrade>
+
+	<upgrade minversion="2.4.0.0" maxversion="3.0.9.9">
+		<data file="dbscripts/xml/upgrade/3.1.0_preupdate_review_assignments.xml" condition="return $installer->columnExists('review_assignments', 'cancelled');" />
+	</upgrade>
 	
 	<!-- PKP schema components -->
 	<schema file="lib/pkp/xml/schema/common.xml" />
@@ -157,6 +161,7 @@
 
 
 	<upgrade minversion="2.4.0.0" maxversion="3.0.9.9">
+		<code function="removeCancelledReviewAssignments" condition="return $installer->tableExists('review_assignments_tmp');" />
 		<data file="dbscripts/xml/upgrade/3.1.0_update.xml" />
 		<note file="docs/release-notes/README-3.1.0" />
 	</upgrade>
