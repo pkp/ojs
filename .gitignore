@@ -7,3 +7,7 @@ temp
 .buildpath
 .settings
 .DS_Store
+cache
+.idea
+/.idea
+game

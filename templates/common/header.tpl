@@ -18,4 +18,5 @@
 		</li>
 	{/if}
 {/capture}
+
 {include file="core:common/header.tpl" appSpecificMenuItems=$appSpecificMenuItems}
