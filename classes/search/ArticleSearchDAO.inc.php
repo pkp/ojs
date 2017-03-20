@@ -86,7 +86,7 @@ class ArticleSearchDAO extends SubmissionSearchDAO {
 				s.status = ' . STATUS_PUBLISHED . ' AND
 				ps.submission_id = s.submission_id AND
 				ss.submission_id = s.submission_id AND
-				ss.setting_name = "datePublished" AND
+				ss.setting_name = \'datePublished\' AND
 				ss.submission_revision = 1 AND
 				i.issue_id = ps.issue_id AND
 				i.published = 1 AND ' . $sqlWhere . '

@@ -17,19 +17,19 @@
 import('lib.pkp.classes.form.Form');
 
 class ArticleGalleyForm extends Form {
-	/** @var the article */
+	/** @var $_submission object the article */
 	var $_submission = null;
 
-	/** @var the article version */
+	/** @var $_submissionRevision int the article version */
 	var $_submissionRevision = null;
 
-	/** @var ArticleGalley current galley */
+	/** @var $_articleGalley object current galley */
 	var $_articleGalley = null;
 
 	/**
 	 * Constructor.
 	 * @param $submission Submission
-	 * @param $submissionRevision SubmissionRevision (optional)
+	 * @param $submissionRevision int (optional)
 	 * @param $articleGalley ArticleGalley (optional)
 	 */
 	function __construct($request, $submission, $submissionRevision = null, $articleGalley = null) {

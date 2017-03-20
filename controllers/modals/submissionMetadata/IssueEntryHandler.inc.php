@@ -59,7 +59,11 @@ class IssueEntryHandler extends PublicationEntryHandler {
 		$journal = $request->getJournal();
 		$articleDao = DAORegistry::getDAO('ArticleDAO');
 		$latestSubmissionRevision = $articleDao->getLatestRevisionId($submission->getId());
-		$submissionRevision = $args['submissionRevision'] ? $args['submissionRevision'] : $latestSubmissionRevision;
+		$submissionRevision = $latestSubmissionRevision;
+
+		if(isset($args['submissionRevision'])){
+			$submissionRevision = $args['submissionRevision'];
+		}
 
 		$templateMgr->assign('versioningEnabled', $journal->getSetting('versioningEnabled'));
 		$templateMgr->assign('latestSubmissionRevision', $latestSubmissionRevision);

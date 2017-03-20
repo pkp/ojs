@@ -349,14 +349,12 @@ class IssueEntryPublicationMetadataForm extends Form {
 			// set publication date
 			$submission->setDatePublished($this->getData('datePublished') ? $this->getData('datePublished') : Core::getCurrentDate());
 
-			// get revisions
+			// get submission revision
 			if ($request->getUserVar('submissionRevision')) {
 				$revision = (int)$request->getUserVar('submissionRevision');
 			} else {
-				$revision = $submission->getCurrentVersionId($context->getId());
+				$revision = $submission->getCurrentVersionId();
 			}
-
-			// store submission revision
 			$submission->setData('submissionRevision', $revision);
 
 			// Resequence the articles.

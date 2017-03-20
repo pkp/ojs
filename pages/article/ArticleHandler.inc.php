@@ -17,28 +17,28 @@
 import('classes.handler.Handler');
 
 class ArticleHandler extends Handler {
-	/** @var journal object: journal associated with the request **/
+	/** @var $journal Journal: journal associated with the request **/
 	var $journal;
 
-	/** @var issue object: issue associated with the request **/
+	/** @var $issue Issue: issue associated with the request **/
 	var $issue;
 
-	/** @var article object: article associated with the request **/
+	/** @var $article Article: article associated with the request **/
 	var $article;
 
-	/** @var galley object: galley associated with the request **/
+	/** @var $galley Galley: galley associated with the request **/
 	var $galley;
 
-	/** @var int: submission(article) revision ID associated with the request **/
+	/** @var $submissionRevision int: submission(article) revision ID associated with the request **/
 	var $submissionRevision;
 
-	/** @var int: the highest metadata revision ID of a submission **/
+	/** @var $latestSubmissionRevision int: the highest metadata revision ID of a submission **/
 	var $latestSubmissionRevision;
 
-	/** @var boolean: true if current submission is an old revision **/
+	/** @var $isPreviousRevision boolean: true if current submission is an old revision **/
 	var $isPreviousRevision = false;
 
-	/** @var array: precedent revisions of the current submission **/
+	/** @var $previousRevisions array: precedent revisions of the current submission **/
 	var $previousRevisions;
 
 	/**
@@ -75,10 +75,11 @@ class ArticleHandler extends Handler {
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 
 		// get all published previous article versions
-		$this->previousRevisions = $articleDao->getPublishedSubmissionRevisions($articleId);
+		$this->previousRevisions = $publishedArticleDao->getPublishedSubmissionRevisions($articleId, $this->journal->getId(), SORT_DIRECTION_DESC);
 
 		// get the most resent article version
-		$this->latestSubmissionRevision = $articleDao->getLatestPublishedRevisionId($articleId, $this->journal->getId());
+		$this->latestSubmissionRevision = $this->previousRevisions[0]->getSubmissionRevision();
+
 		// set latest submission revision as default
 		$this->submissionRevision = $this->latestSubmissionRevision;
 
@@ -92,7 +93,7 @@ class ArticleHandler extends Handler {
 			$this->article = $publishedArticle;
 		} else {
 			$articleDao = DAORegistry::getDAO('ArticleDAO');
-			$article = $articleDao->getById((int) $articleId, $journal->getId(), true);
+			$article = $articleDao->getById((int) $articleId, $this->journal->getId(), true);
 			$this->article = $article;
 		}
 
@@ -113,26 +114,20 @@ class ArticleHandler extends Handler {
 	 */
 	function version($args, $request){
 		$articleId = $args[0];
-		$this->submissionRevision = $args[1];
+		$this->submissionRevision = isset($args[1]) ? $args[1] : 1;
 		$galleyId = isset($args[2]) ? $args[2] : 0;
 		array_splice($args, 1, 1);
 
-		// check if submission revision exists
-		$submissionDao = Application::getSubmissionDAO();
-		$submission = $submissionDao->getById($articleId, null, false, $this->submissionRevision);
+		// get this published article version
+		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
+		$this->article = $publishedArticleDao->getPublishedArticleByBestArticleId((int) $this->journal->getId(), $articleId, false, $this->submissionRevision);
 
-		if($submission->getDatePublished()){
-			// get this published article version
-			$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-			$this->article = $publishedArticleDao->getPublishedArticleByBestArticleId((int) $this->journal->getId(), $articleId, false, $this->submissionRevision);
-
-			// check of this is an old version
-			if ($this->submissionRevision && ($this->submissionRevision < $this->latestSubmissionRevision)) {
-				$this->isPreviousRevision = true;
-			}
-
-			$this->view($args, $request);
+		// check of this is an old version
+		if ($this->submissionRevision && ($this->submissionRevision < $this->latestSubmissionRevision)) {
+			$this->isPreviousRevision = true;
 		}
+
+		$this->view($args, $request);
 	}
 
 	/**

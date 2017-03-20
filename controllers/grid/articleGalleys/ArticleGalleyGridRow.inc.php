@@ -16,10 +16,10 @@
 import('lib.pkp.classes.controllers.grid.GridRow');
 
 class ArticleGalleyGridRow extends GridRow {
-	/** @var Submission **/
+	/** @var $_submission object the article **/
 	var $_submission;
 
-	/** @var Submission revision */
+	/** @var $_submissionRevision int the article version */
 	var $_submissionRevision;
 
 	/**
@@ -108,7 +108,7 @@ class ArticleGalleyGridRow extends GridRow {
 
 	/**
 	 * Get the submission revision for this row (already authorized)
-	 * @return Submission revision
+	 * @return int
 	 */
 	function getSubmissionRevision() {
 		return $this->_submissionRevision;

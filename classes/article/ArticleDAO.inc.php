@@ -177,14 +177,12 @@ class ArticleDAO extends SubmissionDAO {
 		);
 
 		$this->updateLocaleFields($article);
-		$contextId = Request::getContext()->getId();
-		$version = $article->getCurrentVersionId($contextId);
+		$version = $article->getCurrentVersionId($article->getContextId());
 
 		// update authors for this article
 		$authors = $article->getAuthors(false, $version);
 		for ($i=0, $count=count($authors); $i < $count; $i++) {
 			if ($authors[$i]->getId() > 0) {
-				$authors[$i]->setVersion($version);
 				$this->authorDao->updateObject($authors[$i]);
 			} else {
 				$this->authorDao->insertObject($authors[$i]);

@@ -125,6 +125,58 @@ class PublishedArticleDAO extends ArticleDAO {
 	}
 
 	/**
+	 * Get all published article versions ids
+	 * @param $submissionId int
+	 * @param $contextId int optional
+	 * @param $order string optional
+	 * @return array
+	*/
+	function getPublishedSubmissionRevisionIds($submissionId, $contextId = null, $order = SORT_DIRECTION_DESC){
+		$params = array((int) $submissionId);
+		if ($contextId) {
+			$params[] = (int) $contextId;
+		}
+
+		$sql = 'SELECT DISTINCT ss.submission_revision
+			FROM 	submission_settings ss
+				LEFT JOIN published_submissions ps ON ps.submission_id = ss.submission_id
+				LEFT JOIN submissions s ON ps.submission_id = s.submission_id
+			WHERE 	ss.submission_id = ?'.
+				($contextId ? ' AND s.context_id = ?' : '').'
+				AND ss.setting_name = \'datePublished\'
+			ORDER BY ss.submission_revision ' . $this->getDirectionMapping($order);
+
+		$result = $this->retrieve($sql, $params);
+		$submissionRevisions = array();
+
+		foreach($result as $submission) {
+			$submissionRevisions[] = $submission['submission_revision'];
+		}
+
+		return $submissionRevisions;
+	}
+
+	/**
+	 * Get all published article versions
+	 * @param $submissionId int
+	 * @param $contextId int optional
+	 * @param $order string optional
+	 * @return array
+	*/
+	function getPublishedSubmissionRevisions($submissionId, $contextId = null, $order = SORT_DIRECTION_DESC){
+		$submissionDao = Application::getSubmissionDAO();
+		$publishedSubmissionRevisions = array();
+		$submissionRevisions = $this->getPublishedSubmissionRevisionIds($submissionId, $contextId, $order);
+
+		foreach($submissionRevisions as $revision){
+			$publishedSubmissionRevisions[] = $submissionDao->getById($submissionId, null, false, $revision);
+		}
+
+		return $publishedSubmissionRevisions;
+	}
+
+
+	/**
 	 * Retrieve a count of published articles in a journal.
 	 * @param $journalId int
 	 */
@@ -160,7 +212,7 @@ class PublishedArticleDAO extends ArticleDAO {
 			WHERE 	i.published = 1
 				' . ($journalId?'AND s.context_id = ?':'') . '
 				AND s.status <> ' . STATUS_DECLINED . '
-				AND ss.setting_name = "datePublished"
+				AND ss.setting_name = \'datePublished\'
 				AND ss.submission_revision = 1
 			ORDER BY ss.setting_value '. ($reverse?'DESC':'ASC'),
 			$params,
@@ -280,7 +332,7 @@ class PublishedArticleDAO extends ArticleDAO {
 	function getPublishedArticleById($publishedArticleId) {
 		$result = $this->retrieve(
 			'SELECT ps.*, ss.setting_value FROM published_submissions ps
-				JOIN 	submissions_settings ss ON (ss.submission_id = ps.submission_id) 					WHERE 	ss.setting_name = "datePublished" AND
+				JOIN 	submissions_settings ss ON (ss.submission_id = ps.submission_id) 					WHERE 	ss.setting_name = \'datePublished\' AND
 					ss.submission_revision = 1 AND
 					published_submission_id = ?', (int) $publishedArticleId
 		);
@@ -317,6 +369,7 @@ class PublishedArticleDAO extends ArticleDAO {
 		$params = $this->getFetchParameters();
 		$params[] = (int) $articleId;
 		if ($journalId) $params[] = (int) $journalId;
+		if ($submissionRevision) $params[] = (int) $submissionRevision;
 
 		$result = $this->retrieve(
 			'SELECT	ps.*,
@@ -324,9 +377,12 @@ class PublishedArticleDAO extends ArticleDAO {
 				' . $this->getFetchColumns() . '
 			FROM	published_submissions ps
 				JOIN submissions s ON (ps.submission_id = s.submission_id)
+				JOIN submission_settings ss ON (ss.submission_id = s.submission_id)
 				' . $this->getFetchJoins() . '
-			WHERE	s.submission_id = ?' .
-				($journalId?' AND s.context_id = ?':''),
+			WHERE	s.submission_id = ?
+				AND ss.setting_name = \'datePublished\''.
+				($journalId?' AND s.context_id = ?':'').
+				($submissionRevision?' AND ss.submission_revision = ? ':''),
 			$params
 		);
 
@@ -491,7 +547,7 @@ class PublishedArticleDAO extends ArticleDAO {
 				JOIN issues i ON ps.issue_id = i.issue_id
 			WHERE	i.published = 1
 				' . (isset($journalId)?' AND s.context_id = ?':'') . '
-				AND ss.setting_name = "datePublished"
+				AND ss.setting_name = \'datePublished\'
 				AND ss.submission_revision = 1
 			ORDER BY ss.setting_value DESC',
 			isset($journalId)?(int) $journalId:false
@@ -525,7 +581,7 @@ class PublishedArticleDAO extends ArticleDAO {
 				JOIN issues i ON ps.issue_id = i.issue_id
 			WHERE	i.published = 1 AND
 				s.section_id = ? AND
-				ss.setting_name = "datePublished" AND
+				ss.setting_name = \'datePublished\' AND
 				ss.submission_revision = 1
 			ORDER BY ss.setting_value DESC',
 			(int) $sectionId
@@ -736,8 +792,8 @@ class PublishedArticleDAO extends ArticleDAO {
 				submissions s,
 				submission_settings ss
 			WHERE	ps.submission_id = s.submission_id
-				AND s.submission_id = ss.submissionId
-				AND ss.setting_name = "datePublished"
+				AND s.submission_id = ss.submission_id
+				AND ss.setting_name = \'datePublished\'
 				AND ss.submission_revision = 1
 				' . (isset($journalId)?' AND s.context_id = ?':''),
 			isset($journalId)?(int) $journalId:false
@@ -800,7 +856,7 @@ class PublishedArticleDAO extends ArticleDAO {
 				. ' ' . $this->getFetchJoins() .'
 			WHERE
 				i.published = 1 AND s.context_id = ?
-				AND ss.setting_name = "datePublished" AND ss.submission_revision = 1
+				AND ss.setting_name = \'datePublished\' AND ss.submission_revision = 1
 				' . ($pubIdType != null?' AND ssp.setting_name = ? AND ssp.setting_value IS NOT NULL':'')
 				. ($title != null?' AND (sst.setting_name = ? AND sst.locale = ? AND sst.setting_value LIKE ?)':'')
 				. ($author != null?' AND (au.first_name LIKE ? OR au.middle_name LIKE ? OR au.last_name LIKE ?)':'')

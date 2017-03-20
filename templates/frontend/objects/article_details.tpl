@@ -69,8 +69,8 @@
 	{if $isPreviousRevision}
 		<div class='cmp_notification'>
 			{translate key="submission.versioning.linkToLatest"}
-			{assign var=newVersionLink value=$article->getBestArticleId($currentJournal)}
-			<a href="{url op="view" path=$newVersionLink escape=false}">{translate key="submission.versioning.latest"}</a>.
+			{assign var=newVersionLink value=$article->getBestArticleId()}
+			<a href="{url op="view" path=$newVersionLink|escape}">{translate key="submission.versioning.latest"}</a>.
 		</div>
 	{/if}
 
@@ -216,7 +216,6 @@
 			{/if}
 
 			{* Article Galleys *}
-			{assign var=hasRevisions value=false}
 			{assign var=galleys value=$article->getGalleys()}
 			{if $galleys}
 				<div class="item galleys">
@@ -251,7 +250,7 @@
 							</div>
 							<div class="value">
 								{foreach from=$previousRevisions item=submissionRevision}
-									<a href="{url op="version" path=$article->getBestArticleId($currentJournal)|to_array:$submissionRevision->getSubmissionRevision() escape=false}">{translate key="submission.versioning.version" version=$submissionRevision->getSubmissionRevision() date=$submissionRevision->getDatePublished()|date_format:$dateFormatShort}</a><br>
+									<a href="{url op="version" path=$article->getBestArticleId()|to_array:$submissionRevision->getSubmissionRevision()|escape}">{translate key="submission.versioning.version" version=$submissionRevision->getSubmissionRevision() date=$submissionRevision->getDatePublished()|date_format:$dateFormatShort}</a><br>
 								{/foreach}
 							</div>
 						</div>

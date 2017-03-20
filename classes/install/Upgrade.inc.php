@@ -1902,7 +1902,7 @@ class Upgrade extends Installer {
 			$result->MoveNext();
 		}
 		$result->Close();
-
+		return true;
 	}
 
 	/**
