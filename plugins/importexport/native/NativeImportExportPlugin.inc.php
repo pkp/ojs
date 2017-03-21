@@ -38,7 +38,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 	}
 
 	/**
-	 * @see Plugin::getTemplatePath($inCore)
+	 * @copydoc Plugin::getTemplatePath($inCore)
 	 */
 	function getTemplatePath($inCore = false) {
 		return parent::getTemplatePath($inCore) . 'templates/';

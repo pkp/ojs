@@ -594,7 +594,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 		$publishedArticles = array();
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 		foreach ($submissionIds as $submissionId) {
-			$publishedArticle = $publishedArticleDao->getPublishedArticleByArticleId($submissionId, $context->getId());
+			$publishedArticle = $publishedArticleDao->getByArticleId($submissionId, $context->getId());
 			if ($publishedArticle) $publishedArticles[] = $publishedArticle;
 		}
 		return $publishedArticles;

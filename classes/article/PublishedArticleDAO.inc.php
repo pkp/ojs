@@ -296,7 +296,7 @@ class PublishedArticleDAO extends ArticleDAO {
 	 * @param $useCache boolean optional
 	 * @return PublishedArticle object
 	 */
-	function getPublishedArticleByArticleId($articleId, $journalId = null, $useCache = false) {
+	function getByArticleId($articleId, $journalId = null, $useCache = false) {
 		if ($useCache) {
 			$cache = $this->_getPublishedArticleCache();
 			$returner = $cache->get($articleId);
@@ -403,7 +403,7 @@ class PublishedArticleDAO extends ArticleDAO {
 	function getPublishedArticleByBestArticleId($journalId, $articleId, $useCache = false) {
 		$article = $this->getPublishedArticleByPubId('publisher-id', $articleId, $journalId, $useCache);
 		if (!$article && ctype_digit("$articleId")) {
-			return $this->getPublishedArticleByArticleId($articleId, $journalId, $useCache);
+			return $this->getByArticleId($articleId, $journalId, $useCache);
 		}
 		return $article;
 	}
