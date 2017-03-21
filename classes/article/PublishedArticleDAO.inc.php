@@ -105,10 +105,13 @@ class PublishedArticleDAO extends ArticleDAO {
 				' . $this->getFetchColumns() . '
 			FROM	published_submissions ps
 				LEFT JOIN submissions s ON ps.submission_id = s.submission_id
+				JOIN submission_settings ss ON (ss.submission_id = s.submission_id)
 				' . $this->getFetchJoins() . '
 				LEFT JOIN custom_section_orders o ON (s.section_id = o.section_id AND o.issue_id = ?)
 			WHERE	ps.submission_id = s.submission_id
 				AND ps.issue_id = ?
+				AND ss.setting_name = \'datePublished\'
+				AND MAX(ss.submission_revision)
 				AND s.status <> ' . STATUS_DECLINED . '
 			ORDER BY section_seq ASC, ps.seq ASC';
 
@@ -213,7 +216,6 @@ class PublishedArticleDAO extends ArticleDAO {
 				' . ($journalId?'AND s.context_id = ?':'') . '
 				AND s.status <> ' . STATUS_DECLINED . '
 				AND ss.setting_name = \'datePublished\'
-				AND ss.submission_revision = 1
 			ORDER BY ss.setting_value '. ($reverse?'DESC':'ASC'),
 			$params,
 			$rangeInfo
@@ -247,9 +249,11 @@ class PublishedArticleDAO extends ArticleDAO {
 				' . $this->getFetchColumns() . '
 			FROM	published_submissions ps
 				JOIN submissions s ON (ps.submission_id = s.submission_id)
+				LEFT JOIN submission_settings ss ON (ss.submission_id = ps.submission_id)
 				' . $this->getFetchJoins() . '
 				LEFT JOIN custom_section_orders o ON (s.section_id = o.section_id AND ps.issue_id = o.issue_id)
 			WHERE	ps.issue_id = ?
+				AND ss.setting_name = \'datePublished\'
 				AND s.status <> ' . STATUS_DECLINED . '
 			ORDER BY section_seq ASC, ps.seq ASC',
 			array_merge(
@@ -276,8 +280,9 @@ class PublishedArticleDAO extends ArticleDAO {
 					$publishedArticles[$currSectionId]['title'] = $publishedArticle->getSectionTitle();
 				}
 			}
-			// get metadata of the current version
-			$publishedArticle = $this->getPublishedArticleByArticleId($publishedArticle->getId(), null, false, $publishedArticle->getCurrentVersionId());
+
+			// get galleys of the current version
+			$publishedArticle->setGalleys($this->galleyDao->getBySubmissionId($row['submission_id'], null, $publishedArticle->getCurrentVersionId())->toArray());
 
 			$publishedArticles[$currSectionId]['articles'][] = $publishedArticle;
 			$result->MoveNext();
@@ -300,9 +305,11 @@ class PublishedArticleDAO extends ArticleDAO {
 				' . $this->getFetchColumns() . '
 			FROM	published_submissions ps
 				JOIN submissions s ON (ps.submission_id = s.submission_id)
+				JOIN submission_settings ss ON (ss.submission_id = s.submission_id)
 				' . $this->getFetchJoins() . '
 			WHERE	se.section_id = ?
 				AND ps.issue_id = ?
+				AND ss.setting_name = \'datePublished\'
 				AND s.status <> ' . STATUS_DECLINED . '
 			ORDER BY ps.seq ASC',
 			array_merge(
@@ -333,8 +340,7 @@ class PublishedArticleDAO extends ArticleDAO {
 		$result = $this->retrieve(
 			'SELECT ps.*, ss.setting_value FROM published_submissions ps
 				JOIN 	submissions_settings ss ON (ss.submission_id = ps.submission_id) 					WHERE 	ss.setting_name = \'datePublished\' AND
-					ss.submission_revision = 1 AND
-					published_submission_id = ?', (int) $publishedArticleId
+					ps.published_submission_id = ?', (int) $publishedArticleId
 		);
 		$row = $result->GetRowAssoc(false);
 
@@ -548,7 +554,6 @@ class PublishedArticleDAO extends ArticleDAO {
 			WHERE	i.published = 1
 				' . (isset($journalId)?' AND s.context_id = ?':'') . '
 				AND ss.setting_name = \'datePublished\'
-				AND ss.submission_revision = 1
 			ORDER BY ss.setting_value DESC',
 			isset($journalId)?(int) $journalId:false
 		);
@@ -582,7 +587,6 @@ class PublishedArticleDAO extends ArticleDAO {
 			WHERE	i.published = 1 AND
 				s.section_id = ? AND
 				ss.setting_name = \'datePublished\' AND
-				ss.submission_revision = 1
 			ORDER BY ss.setting_value DESC',
 			(int) $sectionId
 		);
@@ -619,6 +623,8 @@ class PublishedArticleDAO extends ArticleDAO {
 		$publishedArticle->setIssueId($row['issue_id']);
 		$publishedArticle->setSequence($row['seq']);
 		$publishedArticle->setAccessStatus($row['access_status']);
+
+		$submissionRevision = $submissionRevision ? $submissionRevision : $this->getLatestRevisionId($row['published_submission_id']);
 
 		$publishedArticle->setGalleys($this->galleyDao->getBySubmissionId($row['submission_id'], null, $submissionRevision)->toArray());
 

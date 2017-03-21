@@ -74,17 +74,20 @@ class ArticleHandler extends Handler {
 		$articleDao = DAORegistry::getDAO('ArticleDAO');
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 
-		// get all published previous article versions
-		$this->previousRevisions = $publishedArticleDao->getPublishedSubmissionRevisions($articleId, $this->journal->getId(), SORT_DIRECTION_DESC);
+		// get published article object (handle pub ids)
+		$publishedArticle = $publishedArticleDao->getPublishedArticleByBestArticleId((int) $this->journal->getId(), $articleId, false, null);
 
-		// get the most resent article version
-		$this->latestSubmissionRevision = $this->previousRevisions[0]->getSubmissionRevision();
+		// get all published previous article versions
+		$this->previousRevisions = $publishedArticleDao->getPublishedSubmissionRevisions($publishedArticle->getId(), $this->journal->getId(), SORT_DIRECTION_DESC);
+
+		// get the most recent article version
+		$this->latestSubmissionRevision = $articleDao->getLatestRevisionId($publishedArticle->getId(), $this->journal->getId());
 
 		// set latest submission revision as default
 		$this->submissionRevision = $this->latestSubmissionRevision;
 
-		// get published article object
-		$publishedArticle = $publishedArticleDao->getPublishedArticleByBestArticleId((int) $this->journal->getId(), $articleId, false, $this->submissionRevision);
+		// get metadata of the latest version
+		$publishedArticle = $publishedArticleDao->getPublishedArticleByBestArticleId((int) $this->journal->getId(), $articleId, false, $this->latestSubmissionRevision);
 
 		// get data of publishedArticle
 		if (isset($publishedArticle)) {
@@ -114,7 +117,7 @@ class ArticleHandler extends Handler {
 	 */
 	function version($args, $request){
 		$articleId = $args[0];
-		$this->submissionRevision = isset($args[1]) ? $args[1] : 1;
+		$this->submissionRevision = isset($args[1]) ? $args[1] : null;
 		$galleyId = isset($args[2]) ? $args[2] : 0;
 		array_splice($args, 1, 1);
 
