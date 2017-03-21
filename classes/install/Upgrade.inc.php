@@ -1036,6 +1036,7 @@ class Upgrade extends Installer {
 						case 'pub-id::publisher-id':
 						case 'urnSuffix':
 						case 'doiSuffix':
+						case 'datacite::registeredDoi':
 							$extraRemoteGalleySettings[$rsfRow['setting_name']] = $rsfRow['setting_value'];
 							break;
 						default:
@@ -1356,6 +1357,7 @@ class Upgrade extends Installer {
 						case 'pub-id::publisher-id':
 						case 'urnSuffix':
 						case 'doiSuffix':
+						case 'datacite::registeredDoi':
 							$extraGalleySettings[$sfRow['setting_name']] = $sfRow['setting_value'];
 							break;
 						default:
