@@ -458,6 +458,8 @@
 
        <!-- Navigation sidebar menu -->
 
+       <message key="navigation.archives">Архів</message>
+
        <!-- Used by editor in submission review / editing -->
        <message key="editor.article.selectReviewerNotes"><![CDATA[Імена є посиланнями на профілі рецензентів.<br />
 Шкала рейтингу п'ятибальна. Оцінка 5 (Відмінно).<br />
