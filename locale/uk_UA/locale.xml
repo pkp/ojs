@@ -188,7 +188,7 @@
        <!-- Submission Notes -->
 
        <!-- Common Journal Terms -->
-       <message key="journal.currentIssue">Поточний номер</message>
+       <message key="journal.currentIssue">Поточний номер1</message>
        <message key="journal.journals">Журнали</message>
        <message key="journal.path">Шлях</message>
        <message key="context.context">Журнал</message>
