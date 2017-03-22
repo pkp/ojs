@@ -119,7 +119,6 @@ class ReviewerSubmissionDAO extends ArticleDAO {
 		$reviewerSubmission->setDateDue($this->datetimeFromDB($row['date_due']));
 		$reviewerSubmission->setDateResponseDue($this->datetimeFromDB($row['date_response_due']));
 		$reviewerSubmission->setDeclined($row['declined']);
-		$reviewerSubmission->setReplaced($row['replaced']);
 		$reviewerSubmission->setCancelled((int) $row['cancelled']);
 		$reviewerSubmission->setQuality($row['quality']);
 		$reviewerSubmission->setRound($row['round']);
@@ -147,7 +146,6 @@ class ReviewerSubmissionDAO extends ArticleDAO {
 					competing_interests = ?,
 					recommendation = ?,
 					declined = ?,
-					replaced = ?,
 					cancelled = ?,
 					date_assigned = %s,
 					date_notified = %s,
@@ -175,7 +173,6 @@ class ReviewerSubmissionDAO extends ArticleDAO {
 				$reviewerSubmission->getCompetingInterests(),
 				(int) $reviewerSubmission->getRecommendation(),
 				(int) $reviewerSubmission->getDeclined(),
-				(int) $reviewerSubmission->getReplaced(),
 				(int) $reviewerSubmission->getCancelled(),
 				(int) $reviewerSubmission->getQuality(),
 				(int) $reviewerSubmission->getReviewId()
