@@ -1910,6 +1910,23 @@ class Upgrade extends Installer {
 		return true;
 	}
 
+	/**
+	 * For 2.4.x - 3.0.2 upgrade: remove cancelled review assignments.
+	 * @return boolean
+	 */
+	function removeCancelledReviewAssignments() {
+		$reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO');
+		// get cancelled review assignemnts
+		$result = $reviewAssignmentDao->retrieve('SELECT review_id FROM review_assignments WHERE cancelled = 1');
+		while (!$result->EOF) {
+			$row = $result->GetRowAssoc(false);
+			$reviewAssignmentDao->deleteById($row['review_id']);
+			$result->MoveNext();
+		}
+		$result->Close();
+		return true;
+	}
+
 }
 
 ?>
