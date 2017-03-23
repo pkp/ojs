@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../../../lib/pkp/dtd/xmlData.dtd">
+
+<!--
+  * 3.0.2_edit_decisions.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * 3.0.2.0 edit_decisions update.
+  -->
+<data>
+	<sql>
+		<!-- #2159 add missing first editor decision SUBMISSION_EDITOR_DECISION_EXTERNAL_REVIEW (changing the stage from WORKFLOW_STAGE_ID_SUBMISSION to WORKFLOW_STAGE_ID_EXTERNAL_REVIEW) for those migrated from OJS 2.4.x -->
+		<query>INSERT INTO edit_decisions (submission_id, review_round_id, stage_id, round, decision, editor_id, date_decided) SELECT DISTINCT ed.submission_id, 0, 1, 0, 8, ed.editor_id, ed.date_decided FROM edit_decisions ed JOIN (SELECT submission_id, MIN(date_decided) AS date_decided FROM edit_decisions GROUP BY submission_id) ed1 ON (ed1.submission_id = ed.submission_id) WHERE ed.stage_id = 3 AND ed1.date_decided = ed.date_decided AND NOT EXISTS (SELECT ed2.submission_id FROM edit_decisions ed2 WHERE ed2.stage_id = 1 AND ed2.decision = 8 AND ed2.submission_id = ed.submission_id)</query>
+	</sql>
+</data>
+
