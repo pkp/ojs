@@ -19,6 +19,7 @@ switch($op) {
 	case 'index':
 	case 'tasks':
 	case 'myQueue':
+	case 'unassigned':
 	case 'active':
 	case 'archives':
 		define('HANDLER_CLASS', 'DashboardHandler');
