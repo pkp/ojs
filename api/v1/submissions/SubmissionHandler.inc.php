@@ -28,10 +28,22 @@ class SubmissionHandler extends APIHandler {
 	/**
 	 * Constructor
 	 */
-	public function SubmissionHandler() {
+	public function __construct() {
 		$roles = array(ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR, ROLE_ID_ASSISTANT, ROLE_ID_REVIEWER, ROLE_ID_AUTHOR);
 		$this->_endpoints = array(
 			'GET' => array (
+				array(
+					'pattern' => $this->getEndpointPattern(),
+					'handler' => array($this, 'get'),
+					'roles' => array(
+						ROLE_ID_SITE_ADMIN,
+						ROLE_ID_MANAGER,
+						ROLE_ID_SUB_EDITOR,
+						ROLE_ID_AUTHOR,
+						ROLE_ID_REVIEWER,
+						ROLE_ID_ASSISTANT,
+					),
+				),
 				array(
 					'pattern' => $this->getEndpointPattern() . '/{submissionId}/files/{fileId}',
 					'handler' => array($this,'getFile'),
@@ -44,7 +56,7 @@ class SubmissionHandler extends APIHandler {
 				),
 			)
 		);
-		parent::APIHandler();
+		parent::__construct();
 	}
 
 	//
@@ -77,6 +89,108 @@ class SubmissionHandler extends APIHandler {
 	//
 	// Public handler methods
 	//
+	/**
+	 * Get a list of submissions according to passed query parameters
+	 *
+	 * `assignedTo` int Return submissions assigned to this user ID. Note: only
+	 *   journal managers and admins can view submissions assigned to anyone
+	 *   but themselves. Default: null
+	 * `unassigned` bool Whether to fetch submissions without an assigned editor
+	 *   Default: null. Note: can't be used if an `assignedTo` param is passed.
+	 * `searchPhrase` string Return submissions matching the words in this
+	 *   phrase. @see SubmissionDAO::get(). Default: null
+	 * `status` int|array|string Return submissions with this status or a
+	 *   comma-separated list of statuses. Accepts the following constants:
+	 *   STATUS_QUEUED, STATUS_PUBLISHED, STATUS_DECLINED. Default:
+	 *   [STATUS_QUEUED, STATUS_PUBLISHED, STATUS_DECLINED]
+	 * `count` int Maximum number of submissions to return. Default: 20
+	 * `page` int Page of results to start. Default: 1
+	 * `orderBy` string Order by column. Supports `id`, `dateSubmitted`,
+	 *    `lastModified`. Default: `dateSubmitted`
+	 * `order` string Supports `ASC` or `DESC`. Default: `DESC`
+	 *
+	 * @param $slimRequest Request Slim request object
+	 * @param $response Response object
+	 * @param array $args arguments
+	 * @return Response
+	 */
+	public function get($slimRequest, $response, $args) {
+
+		$request = Application::getRequest();
+		$currentUser = $request->getUser();
+		$context = $request->getContext();
+
+		// Merge query params over default params
+		$defaultParams = array(
+			'count' => 20,
+			'page' => 1,
+		);
+
+		if (!$currentUser->hasRole(array(ROLE_ID_MANAGER, ROLE_ID_ADMIN), $context->getId())) {
+			$defaultParams['assignedTo'] = $currentUser->getId();
+		}
+
+		$params = array_merge($defaultParams, $slimRequest->getQueryParams());
+
+		// Process query params to format incoming data as needed
+		foreach ($params as $param => $val) {
+			switch ($param) {
+
+				// Always convert status to array
+				case 'status':
+					if (strpos($val, ',') > -1) {
+						$val = explode(',', $val);
+					} elseif (!is_array($val)) {
+						$val = array($val);
+					}
+					$params[$param] = array_map('intval', $val);
+					break;
+
+				case 'assignedTo':
+					$params[$param] = (int) $val;
+					break;
+
+				// Only journal managers and admins can access unassigned
+				// submissions
+				case 'unassigned':
+					$params[$param] = $currentUser->hasRole(array(ROLE_ID_MANAGER, ROLE_ID_ADMIN), $context->getId());
+					break;
+
+				// Enforce a maximum count to prevent the API from crippling the
+				// server
+				case 'count':
+					$params[$param] = min(20, (int) $val);
+					break;
+
+				case 'page':
+					$params[$param] = (int) $val;
+					break;
+
+				case 'orderBy':
+					if ($val !== 'id' || $val !== 'dateSubmitted' || $val !== 'lastModified') {
+						unset($params[$param]);
+					}
+					break;
+
+				case 'order':
+					$params[$param] = $val === 'ASC' ? $val : 'DESC';
+					break;
+			}
+		}
+
+		// Prevent users from viewing submissions they're not assigned to,
+		// except for journal managers and admins.
+		if (!$currentUser->hasRole(array(ROLE_ID_MANAGER, ROLE_ID_ADMIN), $context->getId())
+				&& $params['assignedTo'] !== $currentUser->getId()) {
+			return $response->withStatus(403)->withJsonError('api.submissions.403.requestedOthersUnpublishedSubmissions');
+		}
+
+		$submissionDao = Application::getSubmissionDAO();
+		$data = $submissionDao->get($this, $params, $context->getId());
+
+		return $response->withJson($data);
+	}
+
 	/**
 	 * Handle file download
 	 * @param $slimRequest Request Slim request object
