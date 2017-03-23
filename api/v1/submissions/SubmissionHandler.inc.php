@@ -181,7 +181,7 @@ class SubmissionHandler extends APIHandler {
 		// Prevent users from viewing submissions they're not assigned to,
 		// except for journal managers and admins.
 		if (!$currentUser->hasRole(array(ROLE_ID_MANAGER, ROLE_ID_ADMIN), $context->getId())
-				&& $params['assignedTo'] !== $currentUser->getId()) {
+				&& $params['assignedTo'] != $currentUser->getId()) {
 			return $response->withStatus(403)->withJsonError('api.submissions.403.requestedOthersUnpublishedSubmissions');
 		}
 
