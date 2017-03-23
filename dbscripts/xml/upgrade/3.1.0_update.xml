@@ -20,5 +20,8 @@
 	<sql><!-- pkp/pkp-lib#2310: Move plugins to unified sidebar upon upgrade -->
 		<query>UPDATE plugin_settings SET setting_value=1 WHERE setting_name='context' AND plugin_name LIKE '%BlockPlugin'</query><!-- 1 is BLOCK_CONTEXT_SIDEBAR -->
 	</sql>
+	<sql><!-- pkp/pkp-lib#2151: set viewable = 1 for submission files (migrated from 2.4.x) -->
+		<query>UPDATE submission_files SET viewable = 1 WHERE file_stage = 2 AND viewable = 0</query><!-- 2 is SUBMISSION_FILE_SUBMISSION -->
+	</sql>
 </data>
 
