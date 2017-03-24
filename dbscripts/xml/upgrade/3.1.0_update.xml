@@ -23,5 +23,35 @@
 	<sql><!-- pkp/pkp-lib#2151: set viewable = 1 for submission files (migrated from 2.4.x) -->
 		<query>UPDATE submission_files SET viewable = 1 WHERE file_stage = 2 AND viewable = 0</query><!-- 2 is SUBMISSION_FILE_SUBMISSION -->
 	</sql>
+	<sql>
+		<!--pkp/pkp-lib#2064: update the already existing <a href="{$url}">{$url}</a> pattern to {$url}-->
+		<!--<a href="{$activateUrl}">{$activateUrl}</a>-->
+		<query>UPDATE email_templates_default_data SET body=REPLACE(body, '&lt;a href=&quot;{$activateUrl}&quot;&gt;{$activateUrl}&lt;/a&gt;', '{$activateUrl}')</query>
+		<query>UPDATE email_templates_data SET body=REPLACE(body, '&lt;a href=&quot;{$activateUrl}&quot;&gt;{$activateUrl}&lt;/a&gt;', '{$activateUrl}')</query>
+		<!--<a href="{$url}">{$url}</a>-->
+		<query>UPDATE email_templates_default_data SET body=REPLACE(body, '&lt;a href=&quot;{$url}&quot;&gt;{$url}&lt;/a&gt;', '{$url}')</query>
+		<query>UPDATE email_templates_data SET body=REPLACE(body, '&lt;a href=&quot;{$url}&quot;&gt;{$url}&lt;/a&gt;', '{$url}')</query>
+		<!--<a href="{$contextUrl}">{$contextUrl}</a>-->
+		<query>UPDATE email_templates_default_data SET body=REPLACE(body, '&lt;a href=&quot;{$contextUrl}&quot;&gt;{$contextUrl}&lt;/a&gt;', '{$contextUrl}')</query>
+		<query>UPDATE email_templates_data SET body=REPLACE(body, '&lt;a href=&quot;{$contextUrl}&quot;&gt;{$contextUrl}&lt;/a&gt;', '{$contextUrl}')</query>
+		<!--<a href="{$passwordResetUrl}">{$passwordResetUrl}</a>-->
+		<query>UPDATE email_templates_default_data SET body=REPLACE(body, '&lt;a href=&quot;{$passwordResetUrl}&quot;&gt;{$passwordResetUrl}&lt;/a&gt;', '{$passwordResetUrl}')</query>
+		<query>UPDATE email_templates_data SET body=REPLACE(body, '&lt;a href=&quot;{$passwordResetUrl}&quot;&gt;{$passwordResetUrl}&lt;/a&gt;', '{$passwordResetUrl}')</query>
+		<!--<a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a>-->
+		<query>UPDATE email_templates_default_data SET body=REPLACE(body, '&lt;a href=&quot;{$submissionReviewUrl}&quot;&gt;{$submissionReviewUrl}&lt;/a&gt;', '{$submissionReviewUrl}')</query>
+		<query>UPDATE email_templates_data SET body=REPLACE(body, '&lt;a href=&quot;{$submissionReviewUrl}&quot;&gt;{$submissionReviewUrl}&lt;/a&gt;', '{$submissionReviewUrl}')</query>
+		<!--<a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a>-->
+		<query>UPDATE email_templates_default_data SET body=REPLACE(body, '&lt;a href=&quot;{$submissionLayoutUrl}&quot;&gt;{$submissionLayoutUrl}&lt;/a&gt;', '{$submissionLayoutUrl}')</query>
+		<query>UPDATE email_templates_data SET body=REPLACE(body, '&lt;a href=&quot;{$submissionLayoutUrl}&quot;&gt;{$submissionLayoutUrl}&lt;/a&gt;', '{$submissionLayoutUrl}')</query>
+		<!--<a href="{$articleUrl}">{$articleUrl}</a></a>-->
+		<query>UPDATE email_templates_default_data SET body=REPLACE(body, '&lt;a href=&quot;{$articleUrl}&quot;&gt;{$articleUrl}&lt;/a&gt;', '{$articleUrl}')</query>
+		<query>UPDATE email_templates_data SET body=REPLACE(body, '&lt;a href=&quot;{$articleUrl}&quot;&gt;{$articleUrl}&lt;/a&gt;', '{$articleUrl}')</query>
+		<!--<a href="{$subscriptionUrl}">{$subscriptionUrl}</a>-->
+		<query>UPDATE email_templates_default_data SET body=REPLACE(body, '&lt;a href=&quot;{$subscriptionUrl}&quot;&gt;{$subscriptionUrl}&lt;/a&gt;', '{$subscriptionUrl}')</query>
+		<query>UPDATE email_templates_data SET body=REPLACE(body, '&lt;a href=&quot;{$subscriptionUrl}&quot;&gt;{$subscriptionUrl}&lt;/a&gt;', '{$subscriptionUrl}')</query>
+		<!--<a href="{$giftUrl}">{$giftUrl}</a>-->
+		<query>UPDATE email_templates_default_data SET body=REPLACE(body, '&lt;a href=&quot;{$giftUrl}&quot;&gt;{$giftUrl}&lt;/a&gt;', '{$giftUrl}')</query>
+		<query>UPDATE email_templates_data SET body=REPLACE(body, '&lt;a href=&quot;{$giftUrl}&quot;&gt;{$giftUrl}&lt;/a&gt;', '{$giftUrl}')</query>
+	</sql>
 </data>
 
