@@ -148,6 +148,7 @@
 		<data file="dbscripts/xml/upgrade/3.0.0_reviewer_files.xml" />
 		<data file="dbscripts/xml/upgrade/3.0.2_review_assignments.xml" />
 		<data file="dbscripts/xml/upgrade/3.0.2_edit_decisions.xml" />
+		<data file="dbscripts/xml/upgrade/3.0.2_crossref_schema_url_update.xml" />
 		<note file="docs/release-notes/README-3.0.2" />
 	</upgrade>
 
@@ -157,6 +158,7 @@
 		<data file="dbscripts/xml/upgrade/3.0.0_reviewer_files.xml" />
 		<data file="dbscripts/xml/upgrade/3.0.2_review_assignments.xml" />
 		<data file="dbscripts/xml/upgrade/3.0.2_edit_decisions.xml" />
+		<data file="dbscripts/xml/upgrade/3.0.2_crossref_schema_url_update.xml" />
 	</upgrade>
 
 

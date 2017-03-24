@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../../../lib/pkp/dtd/xmlData.dtd">
+
+<!--
+  * 3.0.2_crossref_schema_url_update.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * 3.0.2.0 Crossref schema URL update.
+  -->
+<data>
+	<sql><!-- pkp/pkp-lib#2258 -->
+		<query>UPDATE filter_groups SET output_type = 'xml::schema(https://www.crossref.org/schemas/crossref4.3.6.xsd)' WHERE output_type = 'xml::schema(http://www.crossref.org/schema/deposit/crossref4.3.6.xsd)'</query>
+	</sql>
+</data>
+
