@@ -23,7 +23,7 @@ define('CROSSREF_XMLNS_XSI' , 'http://www.w3.org/2001/XMLSchema-instance');
 define('CROSSREF_XMLNS' , 'http://www.crossref.org/schema/4.3.6');
 define('CROSSREF_VERSION' , '4.3.6');
 define('CROSSREF_XSI_SCHEMAVERSION' , '4.3.6');
-define('CROSSREF_XSI_SCHEMALOCATION' , 'http://www.crossref.org/schema/4.3.6 http://www.crossref.org/schema/deposit/crossref4.3.6.xsd');
+define('CROSSREF_XSI_SCHEMALOCATION' , 'http://www.crossref.org/schema/4.3.6 https://www.crossref.org/schemas/crossref4.3.6.xsd');
 
 class CrossRefExportDom extends DOIExportDom {
 
