@@ -44,6 +44,10 @@
 		<data file="dbscripts/xml/upgrade/3.1.0_preupdate_review_assignments.xml" condition="return $installer->columnExists('review_assignments', 'cancelled');" />
 		<data file="dbscripts/xml/upgrade/3.1.0_preupdate_notes.xml" condition="return $installer->columnExists('notes', 'file_id');" />
 	</upgrade>
+
+	<upgrade minversion="2.4.0.0" maxversion="3.0.9.9">
+		<data file="dbscripts/xml/upgrade/3.1.0_preupdate_versioning.xml" condition="return $installer->columnExists('published_submissions', 'date_published');" />
+	</upgrade>
 	
 	<!-- PKP schema components -->
 	<schema file="lib/pkp/xml/schema/common.xml" />
@@ -121,8 +125,6 @@
 	<upgrade minversion="3.0.0.0" maxversion="3.0.0.9">
 		<code function="setFileUploader" />
 		<code function="setFileName" />
-		<code function="migrateDatesPublished" />
-		<data file="dbscripts/xml/upgrade/3.0.0_versioning.xml" />
 		<data file="dbscripts/xml/upgrade/3.0.1_update.xml" />
 		<data file="dbscripts/xml/upgrade/3.0.0_postupgrade_galley_files.xml" />
 		<data file="dbscripts/xml/upgrade/3.0.0_postupgrade_metrics.xml" />
@@ -138,10 +140,8 @@
 		<note file="docs/release-notes/README-3.0.1" />
 	</upgrade>
 
-	<upgrade minversion="3.0.0.0" maxversion="3.1.0.0">
-		<code function="migrateDatesPublished" />
-		<code function="migrateGalleyFiles" />
-		<data file="dbscripts/xml/upgrade/3.0.0_versioning.xml" />
+	<upgrade minversion="2.4.0.0" maxversion="3.0.9.9">
+		<data file="dbscripts/xml/upgrade/3.1.0_versioning.xml" condition="return $installer->tableExists('published_submissions_tmp')"/>
 	</upgrade>
 
 	<upgrade minversion="3.0.1.0" maxversion="3.0.1.9">

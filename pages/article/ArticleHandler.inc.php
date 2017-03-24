@@ -81,7 +81,7 @@ class ArticleHandler extends Handler {
 		$this->previousRevisions = $publishedArticleDao->getPublishedSubmissionRevisions($publishedArticle->getId(), $this->journal->getId(), SORT_DIRECTION_DESC);
 
 		// get the most recent article version
-		$this->latestSubmissionRevision = $articleDao->getLatestRevisionId($publishedArticle->getId(), $this->journal->getId());
+		$this->latestSubmissionRevision = $publishedArticleDao->getLatestRevisionId($publishedArticle->getId(), $this->journal->getId());
 
 		// set latest submission revision as default
 		$this->submissionRevision = $this->latestSubmissionRevision;

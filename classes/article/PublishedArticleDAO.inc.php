@@ -178,6 +178,29 @@ class PublishedArticleDAO extends ArticleDAO {
 		return $publishedSubmissionRevisions;
 	}
 
+	/**
+	 * Get the latest published revision id for a submission
+	 * @param $submissionId int
+	 * @param $contextId int
+	 * @return int
+	 */
+	function getLatestRevisionId($submissionId, $contextId = null){
+		$params = array((int) $submissionId);
+		if ($contextId) {
+			$params[] = (int) $contextId;
+		}
+
+		$sql = 'SELECT MAX(ss.submission_revision)
+			FROM 	submission_settings ss
+				INNER JOIN submissions s ON ss.submission_id = s.submission_id
+			WHERE 	ss.submission_id = ?
+				AND ss.setting_name = \'datePublished\'
+				'.($contextId ? ' AND s.context_id = ?' : '');
+
+		$result = $this->retrieve($sql, $params);
+
+		return $result->fields[0];
+	}
 
 	/**
 	 * Retrieve a count of published articles in a journal.
@@ -618,14 +641,12 @@ class PublishedArticleDAO extends ArticleDAO {
 	 * @return PublishedArticle object
 	 */
 	function _fromRow($row, $callHooks = true, $submissionRevision = null) {
+		$submissionRevision = $submissionRevision ? $submissionRevision : $this->getLatestRevisionId($row['published_submission_id']);
 		$publishedArticle = parent::_fromRow($row, $submissionRevision);
 		$publishedArticle->setPublishedArticleId($row['published_submission_id']);
 		$publishedArticle->setIssueId($row['issue_id']);
 		$publishedArticle->setSequence($row['seq']);
 		$publishedArticle->setAccessStatus($row['access_status']);
-
-		$submissionRevision = $submissionRevision ? $submissionRevision : $this->getLatestRevisionId($row['published_submission_id']);
-
 		$publishedArticle->setGalleys($this->galleyDao->getBySubmissionId($row['submission_id'], null, $submissionRevision)->toArray());
 
 		if ($callHooks) HookRegistry::call('PublishedArticleDAO::_returnPublishedArticleFromRow', array(&$publishedArticle, &$row));

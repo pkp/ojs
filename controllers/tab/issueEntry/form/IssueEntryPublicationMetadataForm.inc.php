@@ -262,7 +262,7 @@ class IssueEntryPublicationMetadataForm extends Form {
 
 			$sectionDao = DAORegistry::getDAO('SectionDAO');
 			$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-			$publishedArticle = $publishedArticleDao->getByArticleId($submission->getId(), null, false, $submission->getSubmissionRevision()); /* @var $publishedArticle PublishedArticle */
+			$publishedArticle = $publishedArticleDao->getByArticleId($submission->getId(), null, false, $publishedArticleDao->getLatestRevisionId($submission->getId())); /* @var $publishedArticle PublishedArticle */
 
 			if ($publishedArticle) {
 				if (!$issue || !$issue->getPublished()) {
@@ -288,6 +288,9 @@ class IssueEntryPublicationMetadataForm extends Form {
 			}
 
 			if ($issue) {
+
+				// set publication date
+				$submission->setDatePublished($this->getData('datePublished') ? $this->getData('datePublished') : Core::getCurrentDate());
 
 				// Schedule against an issue.
 				if ($publishedArticle) {
@@ -345,9 +348,6 @@ class IssueEntryPublicationMetadataForm extends Form {
 			}
 
 			// Versioning
-
-			// set publication date
-			$submission->setDatePublished($this->getData('datePublished') ? $this->getData('datePublished') : Core::getCurrentDate());
 
 			// get submission revision
 			if ($request->getUserVar('submissionRevision')) {

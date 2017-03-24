@@ -536,7 +536,6 @@
 		<field name="issue_id" type="I8">
 			<NOTNULL/>
 		</field>
-		<field name="date_published" type="T"/>
 		<field name="seq" type="F">
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>
@@ -570,7 +569,6 @@
 			<NOTNULL/>
 		</field>
 		<field name="label" type="C2" size="255"/>
-		<field name="file_id" type="I8"/>
 		<field name="seq" type="F">
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>
@@ -593,7 +591,6 @@
 	  -->
 	<table name="submission_galley_files">
 		<field name="galley_id" type="I8">
-			<KEY />
 			<AUTOINCREMENT/>
 		</field>
 		<field name="version" type="I8">
@@ -604,6 +601,11 @@
 		<descr>Submission galley files</descr>
 		<index name="submission_galley_files_galley_id">
 			<col>galley_id</col>
+		</index>
+		<index name="submission_galley_files_pkey">
+			<col>galley_id</col>
+			<col>version</col>
+			<UNIQUE/>
 		</index>
 	</table>
 

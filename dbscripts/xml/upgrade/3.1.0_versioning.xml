@@ -2,26 +2,37 @@
 <!DOCTYPE data SYSTEM "../../../lib/pkp/dtd/xmlData.dtd">
 
 <!--
-  * 3.0.0_versioning.xml
+  * 3.1.0_versioning.xml
   *
   * Copyright (c) 2014-2017 Simon Fraser University
   * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * 3.0.0.0 versioning updates.
+  * 3.1.0.0 versioning updates.
   -->
 <data>
 	<sql>
 		<!-- submission_settings -->
+		<query>
+			INSERT INTO submission_settings (submission_id, setting_name, setting_value, setting_type)
+			SELECT ps.submission_id, 'datePublished', ps.date_published, 'string'
+			FROM published_submissions_tmp ps
+			WHERE ps.date_published IS NOT NULL
+		</query>
 		<query>UPDATE submission_settings SET submission_revision = 1 WHERE submission_revision IS NULL OR submission_revision = 0</query>
+
 		<!-- authors -->
 		<query>UPDATE authors SET version = 1 WHERE version IS NULL OR version = 0</query>
 		<query>UPDATE author_settings SET version = 1 WHERE version IS NULL OR version = 0</query>
-		<query>ALTER TABLE authors DROP PRIMARY KEY, ADD PRIMARY KEY (author_id, version)</query>
+		
+		<!-- submission galleys -->
+		<query>
+			INSERT INTO submission_galley_files (galley_id, file_id)
+			SELECT sg.galley_id, sg.file_id
+			FROM submission_galleys_tmp sg
+			WHERE sg.file_id IS NOT NULL
+		</query>
 		<query>UPDATE submission_galley_settings SET version = 1 WHERE version IS NULL OR version = 0</query>
 		<query>UPDATE submission_galley_files SET version = 1 WHERE version IS NULL OR version = 0</query>
-		<query>ALTER TABLE submission_galleys DROP COLUMN file_id</query>
-		<query>ALTER TABLE submission_galley_files DROP PRIMARY KEY, ADD PRIMARY KEY(galley_id, version)</query>
-		<query>ALTER TABLE published_submissions DROP COLUMN date_published</query>
 	</sql>
 </data>

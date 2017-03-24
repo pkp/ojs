@@ -46,6 +46,79 @@ class VersioningTabHandler extends PKPVersioningTabHandler {
 
 		return parent::authorize($request, $args, $roleAssignments);
 	}
+
+	/**
+	 * create new submission revision
+	 * @param $args array
+	 * @param $request PKPRequest
+	 * @return JSONMessage JSON object
+	 */
+	function newVersion($args, $request){
+		$submissionId = (int)$request->getUserVar('submissionId');
+		$submissionDao = Application::getSubmissionDAO();
+		$oldVersion = $submissionDao->getLatestRevisionId($submissionId);
+
+		// get galleys of old version
+		import('classes.article.ArticleGalley');
+		$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
+		$articleGalleys = $articleGalleyDao->getBySubmissionId($submissionId, null, $oldVersion);
+		$galleys = $articleGalleys->toArray();
+
+		$newVersion = $oldVersion+1;
+
+		// create new galley versions
+		foreach($galleys as $galley) {
+			// copy file and link copy to galley version
+			if($galley->getFile()){
+				$context = $request->getContext();
+				$oldFile = $galley->getFile();
+				$fileStage = $oldFile->getFileStage();
+				$newFileId = $this->copyFile($context, $oldFile, $fileStage);
+				$articleGalleyDao->addFile($galley->getId(), $newFileId, $newVersion);
+			}
+		}
+
+		return parent::newVersion($args, $request);
+	}
+
+	/**
+	 * Handle version info (tab content).
+	 * @param $request PKPRequest
+	 * @param $args array
+	 * @return JSONMessage JSON object
+	 */
+	function versioning($args, $request) {
+		$this->setupTemplate($request);
+		$templateMgr = TemplateManager::getManager($request);
+
+		// Retrieve the authorized submission, stage id and submission revision.
+		$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
+		$stageId = $this->getAuthorizedContextObject(ASSOC_TYPE_WORKFLOW_STAGE);
+		$submissionRevision = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION_REVISION);
+
+		// Create schedule for publication link action.
+		$dispatcher = $request->getDispatcher();
+		import('lib.pkp.classes.linkAction.request.AjaxModal');
+
+		$schedulePublicationLinkAction = new LinkAction(
+			'schedulePublication',
+			new AjaxModal(
+				$dispatcher->url(
+					$request, ROUTE_COMPONENT, null,
+					'tab.issueEntry.IssueEntryTabHandler',
+					'publicationMetadata', null,
+					array('submissionId' => $submission->getId(), 'stageId' => $stageId, 'submissionRevision' => $submissionRevision)
+				),
+				__('submission.issueEntry.publicationMetadata')
+			),
+			__('editor.article.publishVersion')
+		);
+
+		$templateMgr->assign('schedulePublicationLinkAction', $schedulePublicationLinkAction);
+
+		return parent::versioning($args, $request);
+	}
+
 }
 
 ?>

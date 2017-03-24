@@ -18,13 +18,13 @@
 			'$.pkp.controllers.TabHandler',
 			{ldelim}
 				{assign var=versionIndex value=$latestSubmissionRevision-1}
-				selected: {$versionIndex},
-				disabled: [{$submissionRevision}]
+				selected: {$versionIndex}
 			{rdelim}
 		);
 	{rdelim});
 </script>
-<div id="production">}
+<div id="production">
+	{include file="controllers/notification/inPlaceNotification.tpl" notificationId="productionNotification" requestOptions=$productionNotificationRequestOptions}
 	{if $versioningEnabled || $submissionRevisions|@count > 1}
 		<div id="submissionRevisions" class="pkp_controllers_tab">
 			<ul>
@@ -46,7 +46,6 @@
 		{load_url_in_div id="queriesGrid" url=$queriesGridUrl}
 
 	{else}
-		{include file="controllers/notification/inPlaceNotification.tpl" notificationId="productionNotification" requestOptions=$productionNotificationRequestOptions}
 		<div class="pkp_context_sidebar">
 			{if array_intersect(array(ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR), (array)$userRoles)}
 				<div id="schedulePublicationDiv" class="pkp_tab_actions">
