@@ -12,7 +12,8 @@
   *
   * Translated by Denys Solovianenko, 2011
   * V. I. Vernadsky National Library of Ukraine
-  * Edited by Liliia Luparenko, 2017
+  
+  * Edited and translated by Liliia Luparenko, 2017
   * Institute of Information Technologies and Learning Tools
   -->
 
@@ -28,6 +29,18 @@
     <message key="admin.settings.journalsList.showThumbnail">Мініатюрне зображення журналу</message>
     <message key="admin.settings.journalsList.showTitle">Назва журналу</message>
     <message key="admin.settings.journalsList.showDescription">Опис журналу</message>
+    <message key="admin.settings.defaultMetricDescription">
+        Ваша інсталяція OJS налаштована на запис декількох метрик використання. Статистика використання буде відображатися у декількох контекстах.
+        Є випадки, коли повинна бути застосована тільки одна статистика використання, наприклад, щоб відобразити упорядкований список найбільш використовуваних статей або проранжувати результати пошуку. Будь ласка, оберіть одну з налаштованих метрик як метрики за замовчуванням.
+    </message>
+    <message key="admin.languages.confirmDisable">Ви впевнені, що хочете відключити цю мову? Це може вплинути на всі розміщені журнали, які зараз її використовують.</message>
+    <message key="admin.languages.downloadUnavailable"><![CDATA[<p>Завантаження мовних пакетів з веб-сервера Public Knowledge Project зараз недоступне, оскільки:</p>
+	<ul>
+		<li>На вашому сервері не встановлена утиліта GNU «tar» або не дозволено її виконання сервером.</li>
+		<li>OJS не може змінити файл списку мов, зазвичай розташований в «registry/locales.xml».</li>
+	</ul>
+<p>Мовні пакети можуть бути вручну завантажені з <a href="http://pkp.sfu.ca">веб-сайта PKP</a>.</p>]]></message>
+
     <message key="admin.languages.primaryLocaleInstructions">Це буде мова за замовчуванням для сайту та всіх журналів на ньому.</message>
     <message key="admin.languages.supportedLocalesInstructions">Оберіть всі локалізації, що будуть підтримуватись сайтом. Обрані локалізації будуть доступні для використання у всіх журналах на сайті, вони також з'являться у меню вибору мови на кожній сторінці сайту (для окремих сторінок функція може бути заборонена). Якщо не буде обрано принаймні декілька локалізацій, меню вибору мови не з'являться та розширені мовні функції не будуть доступні для журналів.</message>
     <message key="admin.locale.maybeIncomplete">Підтримка відмічених мов може бути неповною.</message>
@@ -69,8 +82,6 @@
     <message key="admin.mergeUsers.allUsers">Всі користувачі, які мають ролі</message>
     <message key="admin.mergeUsers.confirm">Ви впевнені, що хочете об'єднати обрані облікові записи ({$oldAccountCount}) у єдиний обліковий запис із іменем користувача "{$newUsername}"? Обрані {$oldAccountCount} облікових записів не будуть надалі існувати окремо. Це незворотна дія.</message>
     <message key="admin.mergeUsers.noneEnrolled">Немає користувачів, які мають ролі.</message>
-
-
 
     <!-- Categories -->
 	<message key="admin.categories">Категорії</message>
