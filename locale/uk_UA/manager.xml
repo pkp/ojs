@@ -11,6 +11,7 @@
   * Localization strings for the uk_UA (Українська) locale.
   *
   * Translated by Denys Solovianenko, 2011
+  * Edited by Liliia Luparenko, 2017
   * V. I. Vernadsky National Library of Ukraine
   -->
 
@@ -488,26 +489,69 @@
        <message key="manager.subscriptionTypes.noneCreated">Жодних типів передплати не було створено.</message>
        <message key="manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully">Тип передплати створений успішно.</message>
 	<message key="manager.payment.options.purchaseIssueFee">Купити випуск</message>
-	<message key="manager.setup.categories">Категорії</message>
 	<message key="manager.payment.giftFees">Платежі за подарунки</message>
 	<message key="manager.payment.giftFeesDescription">Посилання на подарункові передплати з'явиться на сторінці "Передплати" розділу "Про журнал" разом з іншою інформацією стосовно передплат.</message>
 	<message key="manager.payment.options.acceptGiftSubscriptionPayments">У цьому пункті активуються платежі за подарункові передплати. Це дозволяє читачам журналу купувати передплати як подарунки іншим читачам.</message>
 	<message key="manager.sections.alertDelete">Перш, ніж Ви зможете видалити цей розділ, потрібно перенести всі опубліковані у ньому статті до інших розділів.</message>
 	<message key="manager.setup.journalThumbnail">Мініатюрне зображення журналу</message>
 	<message key="manager.setup.useThumbnail">Мініатюра</message>
-	<message key="manager.setup.categories.description">Зі списку нижче оберіть найбільш відповідні категорії. Читачі зможуть переглядати статті за обраними категоріями.</message>
 
-	<!-- Common DOI export plugins (crossref, datacite, medra) keys -->
-	<!-- plugin tabs -->
-	<message key="plugins.importexport.common.settings">Налаштування</message>
-	<!-- settings form -->
-	<message key="plugins.importexport.common.error.DOIsNotAvailable">Щоб використовувати цей модуль, будь ласка, перейдіть до категорії модулів "Публічні ідентифікатори", включіть та налаштуйте модуль DOI, а потім вкажіть тут Ваш префікс DOI.</message>
-	<message key="plugins.importexport.common.error.pluginNotConfigured">Модуль не був повністю підключений.</message>
-	<message key="plugins.importexport.common.settings.form.password">Пароль</message>
-	<!-- actions -->
-	<message key="plugins.importexport.common.action.register">Зареєструвати</message>
-	<!--  notifications and errors -->
-	<message key="plugins.importexport.common.export.error.outputFileNotWritable">Файл результатів {$param} не доступний для запису.</message>
-	<message key="plugins.importexport.common.register.error.mdsError">Реєстрація пройшла невдало! Реєстраційний сервер DOI повернув помилку: '{$param}'.</message>
-	<message key="plugins.importexport.common.register.success">Реєстрація вдала!</message>
+       <!-- Categories -->
+       <message key="manager.setup.categories">Категорії</message>
+       <message key="manager.setup.categories.description">Оберіть найбільш відповідні категорії зі списку нижче. Читачі зможуть переглядати статті за обраними категоріями.</message>
+
+       <message key="grid.category.path">Шлях</message>
+       <message key="grid.action.addSection">Додати розділ</message>
+       <message key="manager.setup.section.description">Статті в опублікованих випусках журналу групуються в розділи, зазвичай за темою або типом контенту, наприклад «оглядові статті», «наукові статті», тощо.</message>
+       <message key="settings.roles.gridDescription">Ролі - це групи користувачів, яким надається різного рівня доступ до різних робочих процесів журналу. Передбачено 5 різних рівнів доступу: Менеджери жураналу мають доступ до всього контенту і налаштувань; Редактори розділів мають повний доступ до вього призначеного їм контенту; Асистенти журналу мають обмежений доступ до рукописів, що були їм призначені Редактором; Рецензенти можуть переглядати і рецензувати призначені їм рукописи; Автори можуть переглядати і оперувати даними про їх власні рукописи. Крім того, є п'ять різних етапів призначень для яких можуть призначатись ролі: подання, внутрішнє рецензування, рецензування, редагування та публікація.</message>
+       <message key="manager.publication.library">Бібліотека видавця</message>
+       <message key="manager.setup.copyrightYearBasis">Рік авторського права нової статті визначається</message>
+       <message key="manager.setup.copyrightYearBasis.article">Стаття: рік за замовчуванням буде відповідати даті публікації статті, виходячи з принципу «публікація по ходу роботи».</message>
+       <message key="manager.setup.copyrightYearBasis.issue">Випуск: рік за замовчуванням буде відповідати даті публікації випуску.</message>
+       <message key="manager.setup.resetPermissions">Скинути дозволи статей</message>
+       <message key="manager.setup.resetPermissions.confirm">Ви впевнені, що хочете скинути дозволи статей, які вже задані?</message>
+       <message key="manager.setup.resetPermissions.description">Рядок копірайту та інформація про ліцензії буде додана до опублікованого контенту, щоб ці дані не могли змінитися в разі зміни політики журналу по відношенню до нових статей. Для скидання збереженої та прикріпленої до опублікованого контенту інформації про дозволи, скористайтеся кнопкою нижче.</message>
+
+       <!-- Genres Grid -->
+       <message key="grid.genres.title.short">Компоненти</message>
+       <message key="grid.genres.title">Компоненти статті</message>
+       <message key="grid.genres.description">Ці компоненти використовуються з метою надання імен файлам і відображаються у випадаючому меню в процесі їх вивантаженння.  Жанри, позначені ##, дозволяють користувачу пов'язувати файл як з усім відправленим матеріалом 99Z, так і з конкретним компонентом за номером (наприклад 02).</message>
+
+       <!-- Common DOI export plugins (crossref, datacite, medra) keys -->
+       <!-- plugin tabs -->
+       <message key="plugins.importexport.common.settings">Налаштування</message>
+       <message key="plugins.importexport.common.settings.DOIPluginSettings">Налаштування модуля DOI</message>
+       <message key="plugins.importexport.common.export.articles">Статті</message>
+       <message key="plugins.importexport.common.export.issues">Випуски</message>
+       <message key="plugins.importexport.common.export.representations">Гранки</message>
+       <!-- settings form -->
+       <message key="plugins.importexport.common.missingRequirements">Вимоги модуля не виконані</message>
+       <message key="plugins.importexport.common.error.DOIsNotAvailable">Щоб використовувати цей модуль, будь ласка, перейдіть до категорії модулів "Публічні ідентифікатори", включіть та налаштуйте модуль DOI, а потім вкажіть тут Ваш префікс DOI.</message>
+       <message key="plugins.importexport.common.error.pluginNotConfigured">Модуль не був повністю підключений.</message>
+       <message key="plugins.importexport.common.error.noDOIContentObjects">Не обрано жодного опублікованого об'єкта для призначення DOI, тому неможливо здійснити депонування або експорт у модулі публічного ідентифікатора DOI.</message>
+       <message key="plugins.importexport.common.settings.form.password">Пароль</message>
+       <message key="plugins.importexport.common.settings.form.password.description">Зверніть увагу, що пароль буде збережений у вигляді звичайного тексту, тобто не буде зашифрований.</message>
+       <!-- export filter -->
+       <message key="plugins.importexport.common.filter.issue">Будь-який випуск</message>
+       <message key="plugins.importexport.common.status.any">Будь-який статус</message>
+       <message key="plugins.importexport.common.status.notDeposited">Не депонований</message>
+       <message key="plugins.importexport.common.status.markedRegistered">Відмічений як зареєстрований</message>
+       <message key="plugins.importexport.common.status.registered">Зареєстрований</message>
+       <!-- actions -->
+       <message key="plugins.importexport.common.action">Дія</message>
+       <message key="plugins.importexport.common.action.export">Експорт</message>
+       <message key="plugins.importexport.common.action.markRegistered">Відмітити як зареєстрований</message>
+       <message key="plugins.importexport.common.action.register">Зареєструвати</message>
+       <!--  notifications and errors -->
+       <message key="plugins.importexport.common.error.noObjectsSelected">Немає обраних об'єктів.</message>
+       <message key="plugins.importexport.common.error.validation">Неможливо конвертувати вибрані об'єкти.</message>
+       <message key="plugins.importexport.common.invalidXML">Невірний XML:</message>
+       <message key="plugins.importexport.common.export.error.outputFileNotWritable">Файл результатів {$param} не доступний для запису.</message>
+       <message key="plugins.importexport.common.register.error.mdsError">Реєстрація пройшла невдало! Реєстраційний сервер DOI повернув помилку: '{$param}'.</message>
+       <message key="plugins.importexport.common.register.success">Реєстрація пройшла успішно!</message>
+       <message key="plugins.importexport.common.senderTask.warning.noDOIprefix">Відсутній префікс DOI для журналу з адресою {$path}.</message>
+       <message key="plugins.importexport.common.cliError">ПОМИЛКА:</message>
+       <message key="plugins.importexport.common.error.unknownJournal">Вказаний шлях журналу "{$journalPath}" не існує.</message>
+       <message key="plugins.importexport.common.error.unknownObjects">Не вдалось знайти вказані об'єкти.</message>
+       <message key="manager.setup.notifications.copyPrimaryContact">Надіслати копію основній контактній особі, вказаній в налаштуваннях журналу.</message>
 </locale>
