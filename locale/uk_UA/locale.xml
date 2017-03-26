@@ -14,7 +14,7 @@
   * V. I. Vernadsky National Library of Ukraine
 
   * Revised and translated by Liliia Luparenko, 2017
-  * Institute of Information Technologies and Learning Tools
+  * Institute of Information Technologies and Learning Tools of NAES of Ukraine
   -->
 
 <locale name="uk_UA" full_name="Українська">
@@ -26,7 +26,7 @@
         *             понять системи, наприклад, Стаття, Журнал, Розділ
         *  INTERFACE - Містить фрази, організовані за розділами
         *              інтерфейсу користувача, в яких вони з'являються.
-        *  LOG - Містить фрази, пов'язані з записами в журналах подій.
+        *  LOG - Містить фрази, пов'язані із записами в журналах подій.
         *  MISC - Рядки, що не увійшли в інші розділи.
         *  DEFAULT - Значення за замовчуванням для параметрів налаштувань.
 
@@ -49,7 +49,7 @@
 
        <!--
         *
-        * COMMON - This section contains the most frequently-used words
+        * COMMON - Містить часто використовувані слова
         *
        -->
 
@@ -97,8 +97,8 @@
 
        <!--
         *
-        * ENTITIES - This section contains terms pertaining to the system's
-        *            major entities, e.g. Article, Journal, Section
+        * ENTITIES - Містить терміни, що стосуються основних
+        *            понять системи, наприклад, Стаття, Журнал, Розділ
         *
        -->
 
@@ -272,7 +272,7 @@
 
        <!--
         *
-        * LOG - This section contains entries related to log entries.
+        * LOG - Містить фрази, пов'язані із записами в журналах подій.
         *
        -->
        <message key="submission.event.general.defaultEvent">Подія з поданням</message>
@@ -314,8 +314,8 @@
 
        <!--
         *
-        * INTERFACE - Contains phrases organized by the section of the
-        *             user interface they appear in.
+        * INTERFACE - Містить фрази, організовані за розділами
+        *             інтерфейсу користувача, в яких вони з'являються
         *
        -->
 
@@ -1101,7 +1101,7 @@
 
        <!--
         *
-        * MISC - Entries that do not belong in the other sections.
+        * MISC - Рядки, що не увійшли в інші розділи.
         *
        -->
        <!-- Authorization -->

@@ -9,7 +9,9 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the uk_UA (Українська) locale.
+
   * Translated by Liliia Luparenko, 2017
+  * Institute of Information Technologies and Learning Tools of NAES of Ukraine
   -->
 
 <locale name="uk_UA" full_name="Українська">
@@ -38,7 +40,7 @@
 	<!-- events -->
 	<message key="submission.event.articleGalleyMadeAvailable">Гранка статті "{$galleyFormatName}" зроблена доступною.</message>
 	<message key="submission.event.articleGalleyMadeUnavailable">Гранка статті "{$galleyFormatName}" зроблена недоступною.</message>
-	<message key="submission.event.publicIdentifiers">Відкриті ідентифікатори подання оновлені.</message>
+	<message key="submission.event.publicIdentifiers">Публічні ідентифікатори подання оновлені.</message>
 
 	<!-- galleys grid -->
 	<message key="grid.issueEntry.availableGalley.title">Підтвердження формату</message>
