@@ -33,8 +33,8 @@
 	<message key="navigation.categories">الفئات</message>
 	<message key="navigation.categories.browse">تصفح</message>
 
-	
-	
+
+
 	<message key="reviewer.article.enterReviewForm">أنقر الإيقونة لملء نموذج التحكيم</message>
 	<message key="reviewer.article.reviewFormResponse.form.responseRequired">لطفاً، عليك بإملاء الحقول المطلوبة</message>
 
@@ -137,7 +137,7 @@
 	<message key="article.fontSize.medium.altText">متوسط</message>
 	<message key="article.fontSize.large.altText">كبير</message>
 	<message key="article.return">العودة إلى تفاصيل المؤلَّف</message>
-	
+
 	<!-- Submission Tracking - Common -->
 	<message key="submission.submissionEditing">تحرير طلب النشر</message>
 	<message key="submission.changeSection">حول إلى</message>
@@ -208,7 +208,7 @@
 	<message key="user.noRoles.submitArticleRegClosed">قدم مؤلَّفاً: تسجيل المؤلف معطل حالياً</message>
 	<message key="user.noRoles.regReviewer">سجل بصفة محكم</message>
 	<message key="user.noRoles.regReviewerClosed">التسجيل بصفة محكم: تسجيل المحكم معطل حالياً</message>
-    
+
 	<!-- Roles -->
 	<message key="user.role.manager">رئيس التحرير</message>
 	<message key="user.role.sectionEditor">محرر القسم</message>
@@ -218,7 +218,7 @@
 	<message key="user.role.subscriptionManagers">مدراء الاشتراكات</message>
 	<message key="user.role.journalAssistant">مساعد المجلة</message>
 	<message key="user.role.journalAssistants">مساعدو المجلة</message>
-	
+
 	<!-- Common Issue Terms -->
 	<message key="issue.issue">إصدار</message>
 	<message key="issue.issues">إصدارات</message>
@@ -335,7 +335,7 @@
 	<message key="search.results.orderDir.asc">تصاعدياً</message>
 	<message key="search.results.orderDir.desc">تنازلياً</message>
 	<message key="search.results.similarDocuments">ملفات مشابهة</message>
-	
+
 	<message key="admin.auth.defaultSourceDescription"><![CDATA[<p>تحديد مصدر مصادقة إفتراضي مغاير لنظام المجلات المفتوحة له التبعات الآتية:</p>
 	<ul>
 		<li>لو حاول مستخدم ما تسجيل حساب جديد في هذا الموقع باسم دخول مسجل سلفاً في مصدر المصادقة (لكنه غير معروف في قاعدة بيانات نظام المجلات المفتوحة)، فإن ذلك التسجيل سيكون ممكناً فقط عندما تكون كلمة المرور صحيحة في ذلك المصدر الخارجي أيضاً.</li>
@@ -370,7 +370,7 @@
 	<message key="plugins.categories.generic.description">الإضافات العامة تستعمل لتعزيز نظام المجلات المفتوحة في مجالات شتى غير مدعومة ضمن فئات الإضافات الأخرى</message>
 
 	<message key="manager.setup.lockssDescription"><![CDATA[إن نظام المجلات المفتوحة يدعم شبكات <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> Lots of Copies Keep Stuff Safe لضمان حفظ آمن ودائمي لمحتويات المجلة. إن أنظمة LOCKSS هي برامجيات مفتوحة المصدر مطورة في مكتبة جامعة ستانفورد وهو يمكن المكتبات من حفظ مجلات منتخبة من الإنترنت عبر القيام دورياً بتنزيل محتويات هذه المجلات المسجلة في النظام وإضافتها إلى الأرشيف. يتم بشكل مستمر مقارنة هذا الأرشيف مع مخزونات المجلة الأخرى، وإذا تم العثور على أي محتوى مفقود أو تالف، يقوم النظام تلقائياً بتعويضه من مخزونه الإحتياطي.
-<br /><br />		
+<br /><br />
 إن إعداد نظام LOCKSS ليقدم الدعم لنظام المجلات المفتوحة لا يستلزم أن يحدث حتى تبدأ المجلة بإصدار أعدادها بشكل نهائي. عند هذه النقطة اتبع الخطوات الآتية:]]>
 </message>
 	<message key="manager.setup.clockssDescription"><![CDATA[إن نظام المجلات المفتوحة يدعم أيضاً شبكات <a href="http://clockss.org/" target="_blank">CLOCKSS</a> Controlled Lots of Copies Keep Stuff Safe لضمان حفظ آمن ودائمي لمحتويات المجلة. إن أنظمة CLOCKSS تستند إلى برامجيات مفتوحة المصدر مطورة في مكتبة جامعة ستانفورد وهو يمكن المكتبات من حفظ مجلات منتخبة من الإنترنت عبر القيام دورياً بتنزيل محتويات هذه المجلات المسجلة في النظام وإضافتها إلى الأرشيف. يتم بشكل مستمر مقارنة هذا الأرشيف مع مخزونات المجلة الأخرى، وإذا تم العثور على أي محتوى مفقود أو تالف، يقوم النظام تلقائياً بتعويضه من مخزونه الإحتياطي.
@@ -681,7 +681,7 @@
 	<message key="user.register.reviewerDescriptionNoInterests">راغبٌ في إجراء تحكيم مناظر لطلبات النشر في المجلة.</message>
 	<message key="user.register.reviewerDescription">راغبٌ في إجراء تحكيم مناظر لطلبات النشر في الموقع.</message>
 	<message key="user.register.reviewerInterests">عرِّف إهتمامات التحكيم (مجالاته الثابتة وطرق البحث):</message>
-        
+
 	<!-- Subscriptions -->
 	<message key="user.subscriptions.mySubscriptions">اشتراكاتي</message>
 	<message key="user.subscriptions.subscriptionStatus">حالة الاشتراك</message>
