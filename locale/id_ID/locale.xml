@@ -12,7 +12,7 @@
   -->
 
 <locale name="id_ID" full_name="Bahasa Indonesia">
-	<!-- 
+	<!--
 	 * This file is organized into several major sections, separated
 	 * by comments like this one. These sections are called:
 	 *  COMMON - Contains frequently-used words
@@ -24,11 +24,11 @@
 	 *  MISC - Entries that don't belong elsewhere.
 	 *  DEFAULT - Default settings for configuration items.
 	-->
-	
+
 	<!-- common -->
 	<message key="context.current">Jurnal:</message>
 	<message key="context.select">Lihat jurnal lain:</message>
-	
+
 	<!-- Categories -->
 	<message key="navigation.categories">Kategori</message>
 	<message key="navigation.categories.browse">Telusuri</message>
@@ -208,7 +208,7 @@
 	<message key="user.noRoles.submitArticleRegClosed">Penyerahan Naskah: Pendaftaran penulis belum dibuka.</message>
 	<message key="user.noRoles.regReviewer">Pendaftaran Reviewer</message>
 	<message key="user.noRoles.regReviewerClosed">Pendaftaran Reviewer: Pendaftaran reviewer belum dibuka.</message>
-	
+
 	<!-- Roles -->
 	<message key="user.role.manager">Manajer Jurnal</message>
 	<message key="user.role.sectionEditor">Editor Bagian</message>
@@ -571,7 +571,7 @@ Aktif berarti berapa jumlah review yang sedang dipertimbangkan atau sedang berla
 	<message key="reviewer.article.enterReviewA">Klik di ikon untuk memasukkan review Anda terhadap naskah ini.</message>
 	<message key="reviewer.article.uploadFile">Sebagai tambahan, Anda dapat mengunggah file untuk menjadi acuan editor dan/atau penulis.</message>
 	<message key="reviewer.article.selectRecommendation">Pilih rekomendasi dan serahkan hasil review untuk menyelesaikan proses. Anda harus memasukkan review atau mengunggah file sebelum memilih rekomendasi.</message>
-	<message key="reviewer.article.selectRecommendation.byEditor">Tetapkan atau atur rekomendasi reviewer.</message>	
+	<message key="reviewer.article.selectRecommendation.byEditor">Tetapkan atau atur rekomendasi reviewer.</message>
 	<message key="reviewer.article.mustSelectDecision">Tidak ada rekomendasi dipilih. Anda harus memilih satu rekomendasi untuk diserahkan.</message>
 	<message key="reviewer.article.confirmDecision">Saat Anda sudah menyimpan keputusan, Anda tidak akan bisa membuat perubahan untuk review ini. Apakah Anda yakin untuk melanjutkan?</message>
 	<message key="reviewer.article.ensuringBlindReview">Memastikan Review Anonim</message>
@@ -746,7 +746,7 @@ Aktif berarti berapa jumlah review yang sedang dipertimbangkan atau sedang berla
 	<message key="article.pdf.title">Portable Document Format (PDF)</message>
 	<message key="article.download">Unduh file PDF ini</message>
 	<message key="article.pluginMissing"><![CDATA[<p>File PDF yang Anda pilih akan tampil di sini bila browser Anda memiliki PDF reader plug-in (misalnya, versi mutakhir <a href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a>).</p>]]></message>
-	
+
 	<!-- Interstitial page for non-PDF non-HTML galleys -->
 	<message key="article.nonpdf.title">Unduh Artikel</message>
 	<message key="article.nonpdf.note"><![CDATA[File yang Anda pilih dapat meng-unggah secara otomatis. Jika tidak, klik tautan dibawah ini. Perhatikan file ini mungkin memerlukan plugin untuk dilihat.<br /><br />Jika file tidak meng-unggah secara otomatis <a href="{$url}">klik disini</a>.]]></message>
