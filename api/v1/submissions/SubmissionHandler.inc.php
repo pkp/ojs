@@ -54,7 +54,18 @@ class SubmissionHandler extends APIHandler {
 					'handler' => array($this,'submissionMetadata'),
 					'roles' => $roles
 				),
-			)
+			),
+			'DELETE' => array(
+				array(
+					'pattern' => $this->getEndpointPattern() . '/{submissionId}',
+					'handler' => array($this, 'delete'),
+					'roles' => array(
+						ROLE_ID_SITE_ADMIN,
+						ROLE_ID_MANAGER,
+						ROLE_ID_AUTHOR,
+					),
+				),
+			),
 		);
 		parent::__construct();
 	}
@@ -126,7 +137,7 @@ class SubmissionHandler extends APIHandler {
 			'page' => 1,
 		);
 
-		if (!$currentUser->hasRole(array(ROLE_ID_MANAGER, ROLE_ID_ADMIN), $context->getId())) {
+		if (!$currentUser->hasRole(array(ROLE_ID_MANAGER, ROLE_ID_SITE_ADMIN), $context->getId())) {
 			$defaultParams['assignedTo'] = $currentUser->getId();
 		}
 
@@ -153,7 +164,7 @@ class SubmissionHandler extends APIHandler {
 				// Only journal managers and admins can access unassigned
 				// submissions
 				case 'unassigned':
-					$params[$param] = $currentUser->hasRole(array(ROLE_ID_MANAGER, ROLE_ID_ADMIN), $context->getId());
+					$params[$param] = $currentUser->hasRole(array(ROLE_ID_MANAGER, ROLE_ID_SITE_ADMIN), $context->getId());
 					break;
 
 				// Enforce a maximum count to prevent the API from crippling the
@@ -180,7 +191,7 @@ class SubmissionHandler extends APIHandler {
 
 		// Prevent users from viewing submissions they're not assigned to,
 		// except for journal managers and admins.
-		if (!$currentUser->hasRole(array(ROLE_ID_MANAGER, ROLE_ID_ADMIN), $context->getId())
+		if (!$currentUser->hasRole(array(ROLE_ID_MANAGER, ROLE_ID_SITE_ADMIN), $context->getId())
 				&& $params['assignedTo'] != $currentUser->getId()) {
 			return $response->withStatus(403)->withJsonError('api.submissions.403.requestedOthersUnpublishedSubmissions');
 		}
@@ -189,6 +200,57 @@ class SubmissionHandler extends APIHandler {
 		$data = $submissionDao->get($this, $params, $context->getId());
 
 		return $response->withJson($data);
+	}
+
+	/**
+	 * Delete a submission
+	 *
+	 * @param $slimRequest Request Slim request object
+	 * @param $response Response object
+	 * @param array $args arguments
+	 * @return Response
+	 */
+	public function delete($slimRequest, $response, $args) {
+
+		$request = Application::getRequest();
+		$currentUser = $request->getUser();
+		$context = $request->getContext();
+
+		$submissionDao = Application::getSubmissionDAO();
+		$submission = $submissionDao->getById((int) $args['submissionId']);
+
+		if (!$submission) {
+			return $response->withStatus(404)->withJsonError('api.submissions.404.resourceNotFound');
+		}
+
+		if ($context->getId() != $submission->getContextId()) {
+			return $response->withStatus(403)->withJsonError('api.submissions.403.deleteSubmissionOutOfContext');
+		}
+
+		$canDelete = false;
+
+		// Only allow admins and journal managers to delete submissions, except
+		// for authors who can delete their own incomplete submissions
+		if ($currentUser->hasRole(array(ROLE_ID_MANAGER, ROLE_ID_SITE_ADMIN), $context->getId())) {
+			$canDelete = true;
+		} else {
+			if ($submission->getSubmissionProgress() != 0 ) {
+				$stageAssignmentDao = DAORegistry::getDAO('StageAssignmentDAO');
+				$assignments = $stageAssignmentDao->getBySubmissionAndRoleId($submission->getId(), ROLE_ID_AUTHOR, 1, $currentUser->getId());
+				$assignment = $assignments->next();
+				if ($assignment) {
+					$canDelete = true;
+				}
+			}
+		}
+
+		if (!$canDelete) {
+			return $response->withStatus(403)->withJsonError('api.submissions.403.unauthorizedDeleteSubmission');
+		}
+
+		$submissionDao->deleteObject($submission);
+
+		return $response->withJson(true);
 	}
 
 	/**
