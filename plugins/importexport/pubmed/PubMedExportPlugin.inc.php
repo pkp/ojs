@@ -142,22 +142,37 @@ class PubMedExportPlugin extends ImportExportPlugin {
 	 */
 	function exportIssues($issueIds, $context, $user) {
 		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
+		$submissionIds = array();
+		foreach ($issueIds as $issueId) {
+			$publishedArticles = $publishedArticleDao->getPublishedArticles($issueId);
+			foreach ($publishedArticles as $publishedArticle) {
+				$submissionIds[] = $publishedArticle->getId();
+			}
+		}
+
+		$submissionDao = Application::getSubmissionDAO();
 		$xml = '';
 		$filterDao = DAORegistry::getDAO('FilterDAO');
-		$nativeExportFilters = $filterDao->getObjectsByGroup('issue=>pubmed-xml');
-		assert(count($nativeExportFilters) == 1); // Assert only a single serialization filter
-		$exportFilter = array_shift($nativeExportFilters);
-		$issues = array();
-		foreach ($issueIds as $issueId) {
-			$issue = $issueDao->getById($issueId, $context->getId());
-			if ($issue) $issues[] = $issue;
+		$pubmedExportFilters = $filterDao->getObjectsByGroup('article=>pubmed-xml');
+		assert(count($pubmedExportFilters) == 1); // Assert only a single serialization filter
+		$exportFilter = array_shift($pubmedExportFilters);
+		$submissions = array();
+		foreach ($submissionIds as $submissionId) {
+			$submission = $submissionDao->getById($submissionId, $context->getId());
+			if ($submission) $submissions[] = $submission;
 		}
 		libxml_use_internal_errors(true);
-		$issueXml = $exportFilter->execute($issues, true);
-		$xml = $issueXml->saveXml();
+		$submissionXml = $exportFilter->execute($submissions, true);
+		$xml = $submissionXml->saveXml();
 		$errors = array_filter(libxml_get_errors(), create_function('$a', 'return $a->level == LIBXML_ERR_ERROR || $a->level == LIBXML_ERR_FATAL;'));
 		if (!empty($errors)) {
+			$charset = Config::getVar('i18n', 'client_charset');
+			header('Content-type: text/html; charset=' . $charset);
+			echo '<html><body>';
 			$this->displayXMLValidationErrors($errors, $xml);
+			echo '</body></html>';
+			fatalError(__('plugins.importexport.common.error.validation'));
 		}
 		return $xml;
 	}

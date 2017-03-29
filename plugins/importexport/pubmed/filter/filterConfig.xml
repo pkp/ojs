@@ -19,24 +19,12 @@
 			description="plugins.importexport.pubmed.description"
 			inputType="class::classes.article.Article[]"
 			outputType="xml::dtd" />
-		<!-- Native XML issue output -->
-		<filterGroup
-			symbolic="issue=>pubmed-xml"
-			displayName="plugins.importexport.pubmed.displayName"
-			description="plugins.importexport.pubmed.description"
-			inputType="class::classes.issue.Issue[]"
-			outputType="xml::dtd" />
 	</filterGroups>
 	<filters>
-		<!-- Native XML article output -->
+		<!-- PubMed article output -->
 		<filter
 			inGroup="article=>pubmed-xml"
 			class="plugins.importexport.pubmed.filter.ArticlePubMedXmlFilter"
-			isTemplate="0" />
-		<!-- Native XML issue output -->
-		<filter
-			inGroup="issue=>pubmed-xml"
-			class="plugins.importexport.pubmed.filter.IssuePubMedXmlFilter"
 			isTemplate="0" />
 	</filters>
 </filterConfig>
