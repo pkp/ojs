@@ -56,7 +56,7 @@
 如果您没有提出这个请求，请忽略这封电子邮件，同时您的密码将会保持不变。<br />
 如果您希望要重置您的密码，请按下面的链接。<br />
 <br />
-重置我的密码： <a href="{$url}">{$url}</a><br />
+重置我的密码： {$url}<br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>当注册用户忘记他们的密码或者无法登入的时候，这封电子邮件会寄给他们。信中会提供一个网址让它们能够登入并重置他们的密码。</description>
@@ -90,7 +90,7 @@
 <br />
 您已经在《{$contextName}》创建了账户, 在开始使用前，您需要验证您的电子邮件账号。要做到这一点，只需按照下面的链接：<br />
 <br />
-<a href="{$activateUrl}">{$activateUrl}</a><br />
+{$activateUrl}<br />
 <br />
 谢谢您,<br />
 {$principalContactSignature}]]></body>
@@ -113,7 +113,7 @@
 		<subject>新一期期刊已出版</subject>
 		<body><![CDATA[亲爱的读者您好：<br />
 <br />
-《{$contextName}》已经出版了最新一期的期刊，请见<a href="{$contextUrl}">{$contextUrl}</a>。我们诚挚地邀请您阅览这里的目录，并接着访问我们的网站以阅读各种文章以及有趣的项目。<br />
+《{$contextName}》已经出版了最新一期的期刊，请见{$contextUrl}。我们诚挚地邀请您阅览这里的目录，并接着访问我们的网站以阅读各种文章以及有趣的项目。<br />
 <br />
 感谢您持续地关注我们的作品，<br />
 {$editorialContactSignature}]]></body>
@@ -123,11 +123,11 @@
 		<subject>请存档《{$contextName}》</subject>
 		<body><![CDATA[Dear [University Librarian]<br />
 <br />
-《{$contextName}》 &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt;是一份适合贵单位教职员的期刊：[成员名称]，[职称]。这份期刊正试着与这个图书馆与其他大学图书馆，共同建立一个符合洛克斯存档计划(LOCKSS; Lots of Copies Keep Stuff Safe)的检藏资料库。<br />
+《{$contextName}》 &amp;lt;{$contextUrl}&amp;gt;是一份适合贵单位教职员的期刊：[成员名称]，[职称]。这份期刊正试着与这个图书馆与其他大学图书馆，共同建立一个符合洛克斯存档计划(LOCKSS; Lots of Copies Keep Stuff Safe)的检藏资料库。<br />
 <br />
 [期刊的简介]<br />
 <br />
-我们这份期刊在「洛克斯出版品一览」的网址是：<a href="{$contextUrl}">{$contextUrl}</a>/gateway/lockss<br />
+我们这份期刊在「洛克斯出版品一览」的网址是：{$contextUrl}/gateway/lockss<br />
 <br />
 我们了解贵单位已经参与洛克斯计划。我们非常乐意提供任何额外的后设资料，以在贵单位的洛克斯版本中进行注册。<br />
 <br />
@@ -139,7 +139,7 @@
 		<subject>请存档《{$contextName}》</subject>
 		<body><![CDATA[亲爱的[大学图书馆]：<br />
 <br />
-《{$contextName}》 &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt;是一份适合贵单位一位教职员的期刊：[成员名称]，[职称]。这份期刊正试着与这个图书馆与其他大学图书馆，共同建立一个符合洛克斯存档计划(LOCKSS; Lots of Copies Keep Stuff Safe)的检藏资料库。<br />
+《{$contextName}》 &amp;lt;{$contextUrl}&amp;gt;是一份适合贵单位一位教职员的期刊：[成员名称]，[职称]。这份期刊正试着与这个图书馆与其他大学图书馆，共同建立一个符合洛克斯存档计划(LOCKSS; Lots of Copies Keep Stuff Safe)的检藏资料库。<br />
 <br />
 [期刊的简介]<br />
 <br />
@@ -210,13 +210,13 @@
 <br />
 《{$contextName}》的编辑团队相信您是投稿到本期刊之稿件〈{$submissionTitle}〉的最佳审查人选。该份稿件的摘要如下，而我们希望您会考虑进行这份对我们来说相当重要的一个工作。<br />
 <br />
-无论您是否接受审查工作与否，都请在{$responseDueDate}之前登入这个期刊网站，同时检阅这份稿件并且记录您的审查意见和编辑建议。网站为：<a href="{$contextUrl}">{$contextUrl}</a><br />
+无论您是否接受审查工作与否，都请在{$responseDueDate}之前登入这个期刊网站，同时检阅这份稿件并且记录您的审查意见和编辑建议。网站为：{$contextUrl}<br />
 <br />
 请注意审查工作的期限为：{$reviewDueDate}。<br />
 <br />
-如果您没有您在这个期刊网站的用户帐号和密码。您可以使用这个链接去重新设定您的密码（该密码会和您的用户帐号名称一起电邮给您）：<a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
+如果您没有您在这个期刊网站的用户帐号和密码。您可以使用这个链接去重新设定您的密码（该密码会和您的用户帐号名称一起电邮给您）：{$passwordResetUrl}<br />
 <br />
-稿件网址：<a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+稿件网址：{$submissionReviewUrl}<br />
 <br />
 非常感谢您考虑我们的邀请。<br />
 <br />
@@ -240,7 +240,7 @@
 <br />
 请注意审查工作的期限为：{$reviewDueDate}。<br />
 <br />
-稿件网址：<a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+稿件网址：{$submissionReviewUrl}<br />
 <br />
 非常感谢您考虑我们的邀请。<br />
 {$editorialContactSignature}<br />
@@ -315,9 +315,9 @@
 这封信只是礼貌地提醒您，我们已邀请您为《{$contextName}》审查稿件〈{$submissionTitle}〉。我们希望您<br />
 能在 {$reviewDueDate}前完成这份审查工作，并请您在备妥审查意见书之后尽快寄给我们。<br />
 <br />
-如果您没有您在这个期刊网站的用户帐号和密码。您可以使用这个链接去重新设定您的密码（该密码会和您的用户帐号名称一起电邮给您）：<a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
+如果您没有您在这个期刊网站的用户帐号和密码。您可以使用这个链接去重新设定您的密码（该密码会和您的用户帐号名称一起电邮给您）：{$passwordResetUrl}<br />
 <br />
-稿件网址：<a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+稿件网址：{$submissionReviewUrl}<br />
 <br />
 请确认您能够完成这个对本期刊作品而言非常重要的审稿任务。我们期盼得到您的回复。<br />
 <br />
@@ -331,7 +331,7 @@
 这封信只是礼貌地提醒您，我们已邀请您为《{$contextName}》审查稿件〈{$submissionTitle}〉。我们希望您<br />
 能在 {$reviewDueDate}前完成这份审查工作，并请您在备妥审查意见书之后尽快寄给我们。<br />
 <br />
-稿件网址：<a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+稿件网址：{$submissionReviewUrl}<br />
 <br />
 请确认您能够完成这个对本期刊作品而言非常重要的贡献。我们期盼听到您的回复。<br />
 <br />
@@ -345,9 +345,9 @@
 这封信只是礼貌地提醒您，我们已邀请您为《{$contextName}》审查稿件〈{$submissionTitle}〉。我们希望您<br />
 能在 {$reviewDueDate}前完成这份审查工作，并请您在备妥审查意见书之后尽快寄给我们。<br />
 <br />
-如果您没有您在这个期刊网站的用户帐号和密码。您可以使用这个链接去重新设定您的密码（该密码会和您的用户帐号名称一起电邮给您）：<a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
+如果您没有您在这个期刊网站的用户帐号和密码。您可以使用这个链接去重新设定您的密码（该密码会和您的用户帐号名称一起电邮给您）：{$passwordResetUrl}<br />
 <br />
-稿件网址：<a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+稿件网址：{$submissionReviewUrl}<br />
 <br />
 请确认您能够完成这个对本期刊作品而言非常重要的贡献。我们期盼听到您的回复。<br />
 <br />
@@ -361,7 +361,7 @@
 这封信只是礼貌地提醒您，我们已邀请您为《{$contextName}》审查稿件〈{$submissionTitle}〉。我们希望您<br />
 能在 {$reviewDueDate}前完成这份审查工作，并请您在备妥审查意见书之后尽快寄给我们。<br />
 <br />
-稿件网址：<a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+稿件网址：{$submissionReviewUrl}<br />
 <br />
 请确认您能够完成这个对本期刊作品而言非常重要的贡献。我们期盼听到您的回复。<br />
 <br />
@@ -421,7 +421,7 @@
 <br />
 我想请您为《{$contextName}》担任稿件〈{$submissionTitle}〉的校样编辑。您可以在网站上找到这份稿件，以及校样编辑的工作指引。<br />
 <br />
-稿件网址：<a href="{$submissionUrl}">{$submissionUrl}</a><br />
+稿件网址：{$submissionUrl}"<br />
 用户名称：{$participantUsername}<br />
 <br />
 如果您目前无法进行这份工作，或者对这项工作有任何的疑问，请直接回信与我联络。非常感谢您同意为这份期刊进行这份重要的工作。<br />
@@ -443,7 +443,7 @@
 <br />
 这是最后的机会您可以做出修改。您将在最后的阶段被请求校对草稿，但是只有少数的文字问题或者排版问题才能修改。.<br />
 <br />
-稿件 URL: <a href="{$submissionEditingUrl}">{$submissionEditingUrl}</a><br />
+稿件 URL: {$submissionEditingUrl}<br />
 <br />
 如果您不能完成这项工作或者有任何的疑问需要质询，请联系我们，感谢您对本刊的贡献.<br />
 <br />
@@ -475,7 +475,7 @@
 7. 点击元数据（METADATA），检查索引信息的正确性，并查补漏缺.<br />
 8. 发送完成邮件给编辑和文字编辑.<br />
 <br />
-稿件URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+稿件URL: {$submissionUrl}<br />
 <br />
 这是最后的机会您可以对稿件做出文字编辑修改.在校对阶段， 校样只允许修改少量的文字问题于布局错误.<br />
 <br />
@@ -515,8 +515,8 @@
 5. 点击元数据（METADATA），检查索引信息(保存任何更正).<br />
 6. 发送完成电子邮件给编辑.<br />
 <br />
-{$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
-稿件URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+{$contextName} URL: {$contextUrl}<br />
+稿件URL: {$submissionUrl}<br />
 用户名: {$participantUsername}<br />
 <br />
 {$editorialContactSignature}]]></body>
@@ -551,8 +551,8 @@
 2. 登录到期刊，并且使用排版版本文件根据期刊标准来创建样稿.<br />
 3. 发送完成稿件给编辑.<br />
 <br />
-{$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
-稿件URL: <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a><br />
+{$contextName} URL: {$contextUrl}<br />
+稿件URL: {$submissionLayoutUrl}<br />
 用户名: {$participantUsername}<br />
 <br />
 如果您这次不能完成这项工作或者有任何质询，请联系我们，感谢您对本刊的贡献.<br />
@@ -670,7 +670,7 @@
 3. 上传修订完的样稿.<br />
 4. 在校对步骤3里发送完成电邮给编辑.<br />
 <br />
-{$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
+{$contextName} URL: {$contextUrl}<br />
 Subnmission URL: {$submissionUrl}<br />
 Username: {$participantUsername}<br />
 <br />
@@ -701,7 +701,7 @@ Username: {$participantUsername}<br />
 	</email_text>
 	<email_text key="EMAIL_LINK">
 		<subject>您可能会感兴趣的期刊文章</subject>
-		<body><![CDATA[我想您会有兴趣想看看{$authorName}所写的〈{$submissionTitle}〉，刊行在《{$contextName}》 ，第{$volume}册，第{$number}期 ({$year}) 。网址为： &quot;<a href="{$articleUrl}">{$articleUrl}</a>&quot;.]]></body>
+		<body><![CDATA[我想您会有兴趣想看看{$authorName}所写的〈{$submissionTitle}〉，刊行在《{$contextName}》 ，第{$volume}册，第{$number}期 ({$year}) 。网址为： &quot;{$articleUrl}&quot;.]]></body>
 		<description>这份电子邮件样版让一个注册的读者有机会将有关一篇文章的相关信息寄给可能会感兴趣的人。这可以透过「阅读工具」进行，并且一定要由期刊管理员在「阅读工具管理」页面中启用这项功能。</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_NOTIFY">
@@ -729,7 +729,7 @@ Username: {$participantUsername}<br />
 		<subject>本期内容已经开放访问</subject>
 		<body><![CDATA[亲爱的读者您好：<br />
 <br />
-《{$contextName}》已经以开放访问的格式公开本期期刊内容。我们邀请您浏览这里所附的目录，并且接着访问我们的网站 (<a href="{$contextUrl}">{$contextUrl}</a>) ，阅读文章以及您感兴趣的项目。<br />
+《{$contextName}》已经以开放访问的格式公开本期期刊内容。我们邀请您浏览这里所附的目录，并且接着访问我们的网站 ({$contextUrl}) ，阅读文章以及您感兴趣的项目。<br />
 <br />
 感谢您持续地关注本期刊<br />
 <br />
@@ -800,7 +800,7 @@ Username: {$participantUsername}<br />
 <br />
 审阅或者编辑这个订阅，请使用如下链接.<br />
 <br />
-订阅URL: <a href="{$subscriptionUrl}">{$subscriptionUrl}</a><br />
+订阅URL: {$subscriptionUrl}<br />
 ]]></body>
 		<description>这个邮件通知订阅管理员有一个个人订阅已经在线购买.这里提供关于订阅的摘要信息和快速存取链接到订阅.</description>
 	</email_text>
@@ -830,7 +830,7 @@ IP范围(可选):<br />
 <br />
 请使用下面的链接查看和编辑这个订阅：<br />
 <br />
-订阅URL: <a href="{$subscriptionUrl}">{$subscriptionUrl}</a><br />
+订阅URL: {$subscriptionUrl}<br />
 ]]></body>
 		<description>这个邮件通知订阅管理员，一个团体订阅已经在线购买。邮件还将提供关于订阅的摘要信息和到订阅的快速存取链接.</description>
 	</email_text>
@@ -849,7 +849,7 @@ IP范围(可选):<br />
 <br />
 请使用如下链接查看和编辑这个订阅.<br />
 <br />
-订阅链接URL: <a href="{$subscriptionUrl}">{$subscriptionUrl}</a><br />
+订阅链接URL: {$subscriptionUrl}<br />
 ]]></body>
 		<description>这个邮件通知订阅管理员一个个人订阅已经在线续订了。邮件还将提供关于续订的摘要信息和到续订的快速存取链接.</description>
 	</email_text>
@@ -878,7 +878,7 @@ IP范围(可选):<br />
 <br />
 使用如下链接审查和编辑这个订阅.<br />
 <br />
-订阅URL: <a href="{$subscriptionUrl}">{$subscriptionUrl}</a><br />
+订阅URL: {$subscriptionUrl}<br />
 ]]></body>
 		<description>这个邮件通知订阅管理员一个团体订阅已经在线续订了。邮件还将提供关于续订的摘要信息和到续订的快速存取链接.</description>
 	</email_text>
@@ -904,13 +904,13 @@ This regards the manuscript &quot;{$submissionTitle},&quot; which is under consi
 <br />
 Following the review of the previous version of the manuscript, the authors have now submitted a revised version of their paper. We would appreciate it if you could help evaluate it.<br />
 <br />
-Please log into the journal web site by {$responseDueDate} to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is <a href="{$contextUrl}">{$contextUrl}</a><br />
+Please log into the journal web site by {$responseDueDate} to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is {$contextUrl}<br />
 <br />
 The review itself is due {$reviewDueDate}.<br />
 <br />
-If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). <a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
+If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). {$passwordResetUrl}<br />
 <br />
-Submission URL: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+Submission URL: {$submissionReviewUrl}<br />
 <br />
 Thank you for considering this request.<br />
 <br />
@@ -976,7 +976,7 @@ Please log into the journal web site by {$responseDueDate} to indicate whether y
 <br />
 The review itself is due {$reviewDueDate}.<br />
 <br />
-Submission URL: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+Submission URL: {$submissionReviewUrl}<br />
 <br />
 Thank you for considering this request.<br />
 <br />
@@ -998,7 +998,7 @@ Thank you for considering this request.<br />
 {$giftDetails}<br />
 <br />
 <br />
-To redeem your gift, please login to the journal website at <a href="{$giftUrl}">{$giftUrl}</a><br />
+To redeem your gift, please login to the journal website at {$giftUrl}<br />
 <br />
 Your username: {$username}<br />
 Your password: {$password}<br />
@@ -1019,7 +1019,7 @@ We hope that you enjoy your gift!<br />
 {$giftDetails}<br />
 <br />
 <br />
-To redeem your gift, please login to the journal website at <a href="{$giftUrl}">{$giftUrl}</a><br />
+To redeem your gift, please login to the journal website at {$giftUrl}<br />
 <br />
 Your username: {$username}<br />
 <br />
