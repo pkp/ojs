@@ -96,7 +96,7 @@ class DataciteInfoSender extends ScheduledTask {
 				$exportSpec[DOI_EXPORT_ISSUES] = $unregisteredIssueIds;
 				$register = true;
 			}
-			if (count($unregisteredArticles)) {
+			if (count($unregisteredArticlesIds)) {
 				$exportSpec[DOI_EXPORT_ARTICLES] = $unregisteredArticlesIds;
 				$register = true;
 			}
