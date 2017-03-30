@@ -187,7 +187,9 @@ class IssueEntryTabHandler extends PublicationEntryTabHandler {
 		import('controllers.tab.pubIds.form.PublicIdentifiersForm');
 		$submission = $this->getSubmission();
 		$stageId = $this->getStageId();
-		$identifiersForm = new PublicIdentifiersForm($submission, $stageId, array('displayedInContainer' => true));
+		$revision = $args['submissionRevision'] ? $args['submissionRevision'] : null;
+
+		$identifiersForm = new PublicIdentifiersForm($submission, $stageId, array('displayedInContainer' => true, 'revision' => $revision));
 		$identifiersForm->initData();
 		return new JSONMessage(true, $identifiersForm->fetch($request));
 	}

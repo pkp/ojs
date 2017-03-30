@@ -463,6 +463,7 @@ class PublishedArticleDAO extends ArticleDAO {
 
 		$sql = 'SELECT	ps.*,
 				s.*,
+				sst.*,
 				' . $this->getFetchColumns() . '
 			FROM	published_submissions ps
 				JOIN submissions s ON ps.submission_id = s.submission_id
@@ -476,6 +477,10 @@ class PublishedArticleDAO extends ArticleDAO {
 			$sql .= 'INNER JOIN submission_settings sst ON s.submission_id = sst.submission_id
 				WHERE	sst.setting_name = ? AND sst.setting_value = ?';
 		}
+		if($submissionRevision){
+			$params[] = (int) $submissionRevision;
+			$sql .= 'AND sst.submission_revision = ?';
+		}
 		if ($journalId) {
 			$params[] = (int) $journalId;
 			$sql .= ' AND s.context_id = ?';
@@ -484,14 +489,6 @@ class PublishedArticleDAO extends ArticleDAO {
 		$result = $this->retrieve($sql, $params);
 
 		$result = $this->retrieveRange($sql, $params, $rangeInfo);
-
-	/*	$publishedArticles = array();
-		while (!$result->EOF) {
-			$publishedArticles[] = $this->_fromRow($result->GetRowAssoc(false), false, $submissionRevision);
-			$result->MoveNext();
-		}
-		$result->Close();
-	*/
 
 		return new DAOResultFactory($result, $this, '_fromRow');
 	}
@@ -641,7 +638,13 @@ class PublishedArticleDAO extends ArticleDAO {
 	 * @return PublishedArticle object
 	 */
 	function _fromRow($row, $callHooks = true, $submissionRevision = null) {
-		$submissionRevision = $submissionRevision ? $submissionRevision : $this->getLatestRevisionId($row['published_submission_id']);
+		if(!$submissionRevision){
+			if(isset($row['submission_revision'])){
+				$submissionRevision = $row['submission_revision'];
+			}else{
+				$submissionRevision = $this->getLatestRevisionId($row['published_submission_id']);
+			}
+		}
 		$publishedArticle = parent::_fromRow($row, $submissionRevision);
 		$publishedArticle->setPublishedArticleId($row['published_submission_id']);
 		$publishedArticle->setIssueId($row['issue_id']);
@@ -870,7 +873,7 @@ class PublishedArticleDAO extends ArticleDAO {
 		}
 
 		$result = $this->retrieveRange(
-			'SELECT	s.*, ps.*,
+			'SELECT	s.*, ps.*, ss.*,
 				' . $this->getFetchColumns() . '
 			FROM	published_submissions ps
 				JOIN issues i ON (ps.issue_id = i.issue_id)
@@ -883,7 +886,7 @@ class PublishedArticleDAO extends ArticleDAO {
 				. ' ' . $this->getFetchJoins() .'
 			WHERE
 				i.published = 1 AND s.context_id = ?
-				AND ss.setting_name = \'datePublished\' AND ss.submission_revision = 1
+				AND ss.setting_name = \'datePublished\'
 				' . ($pubIdType != null?' AND ssp.setting_name = ? AND ssp.setting_value IS NOT NULL':'')
 				. ($title != null?' AND (sst.setting_name = ? AND sst.locale = ? AND sst.setting_value LIKE ?)':'')
 				. ($author != null?' AND (au.first_name LIKE ? OR au.middle_name LIKE ? OR au.last_name LIKE ?)':'')
