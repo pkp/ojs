@@ -128,7 +128,7 @@ class CrossrefInfoSender extends ScheduledTask {
 		$journals = array();
 		while($journal =& $journalFactory->next()) {
 			$journalId = $journal->getId();
-			if (!$plugin->getSetting($journalId, 'username') || !$plugin->getSetting($journalId, 'password')) continue;
+			if (!$plugin->getSetting($journalId, 'username') || !$plugin->getSetting($journalId, 'password') || !$plugin->getSetting($journalId, 'automaticRegistration')) continue;
 
 			$doiPrefix = null;
 			$pubIdPlugins =& PluginRegistry::loadCategory('pubIds', true, $journalId);
