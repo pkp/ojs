@@ -1034,6 +1034,7 @@ class Upgrade extends Installer {
 						case 'pub-id::publisher-id':
 						case 'urnSuffix':
 						case 'doiSuffix':
+						case 'datacite::registeredDoi':
 							$extraRemoteGalleySettings[$rsfRow['setting_name']] = $rsfRow['setting_value'];
 							break;
 						default:
@@ -1354,6 +1355,7 @@ class Upgrade extends Installer {
 						case 'pub-id::publisher-id':
 						case 'urnSuffix':
 						case 'doiSuffix':
+						case 'datacite::registeredDoi':
 							$extraGalleySettings[$sfRow['setting_name']] = $sfRow['setting_value'];
 							break;
 						default:
@@ -1903,6 +1905,28 @@ class Upgrade extends Installer {
 			$result->MoveNext();
 		}
 		$result->Close();
+		return true;
+	}
+
+	/**
+	 * For 2.4.x - 3.1.0 upgrade: remove cancelled review assignments.
+	 * @return boolean
+	 */
+	function removeCancelledReviewAssignments() {
+		$reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO');
+		// get cancelled review assignemnts
+		$result = $reviewAssignmentDao->retrieve('SELECT review_id FROM review_assignments_tmp');
+		while (!$result->EOF) {
+			$row = $result->GetRowAssoc(false);
+			$reviewAssignmentDao->deleteById($row['review_id']);
+			$result->MoveNext();
+		}
+		$result->Close();
+		// remove temporary table
+		$reviewAssignmentDao->update('DROP TABLE review_assignments_tmp');
+		// update log messages
+		$eventLogDao = DAORegistry::getDAO('SubmissionEventLogDAO');
+		$eventLogDao->update('UPDATE event_log SET message = \'log.review.reviewCleared\' WHERE message = \'log.review.reviewCancelled\'');
 		return true;
 	}
 

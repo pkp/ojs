@@ -119,7 +119,7 @@ class LuceneSettingsForm extends Form {
 	}
 
 	/**
-	 * @see Form::execute()
+	 * Execute the form.
 	 */
 	function execute() {
 		$plugin =& $this->_plugin;

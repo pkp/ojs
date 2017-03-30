@@ -530,21 +530,22 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 	 * @param journalId int optional
 	 * @return Issue object
 	 */
-	function getIssueByArticleId($articleId, $journalId = null) {
+	function getByArticleId($articleId, $journalId = null) {
 		$params = array((int) $articleId);
-		$sql = 'SELECT	i.*
+		if ($journalId) $params[] = (int) $journalId;
+
+		$result = $this->retrieve(
+			'SELECT	i.*
 			FROM	issues i,
 				published_submissions pa,
 				submissions a
 			WHERE	i.issue_id = pa.issue_id AND
 				pa.submission_id = ? AND
-				pa.submission_id = a.submission_id';
-		if ($journalId !== null) {
-			$sql .= ' AND i.journal_id = ? AND a.context_id = i.journal_id';
-			$params[] = (int) $journalId;
-		}
-
-		$result = $this->retrieve($sql, $params);
+				pa.submission_id = a.submission_id AND
+				a.context_id = i.journal_id' .
+				($journalId?' AND i.journal_id = ?':''),
+			$params
+		);
 
 		$issue = null;
 		if ($result->RecordCount() != 0) {
@@ -776,7 +777,6 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 			$this->insertCustomIssueOrder($journalId, $issueId, $newPos);
 		}
 		$result->Close();
-		$this->resequenceCustomIssueOrders($journalId);
 	}
 
 	/**

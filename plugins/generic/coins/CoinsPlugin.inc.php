@@ -64,9 +64,6 @@ class CoinsPlugin extends GenericPlugin {
 			$journal = $templateMgr->get_template_vars('currentJournal');
 			$issue = $templateMgr->get_template_vars('issue');
 
-			$authors = $article->getAuthors();
-			$firstAuthor = $authors[0];
-
 			$vars = array(
 				array('ctx_ver', 'Z39.88-2004'),
 				array('rft_id', $request->url(null, 'article', 'view', $article->getId())),
@@ -79,10 +76,16 @@ class CoinsPlugin extends GenericPlugin {
 				array('rft.stitle', $journal->getLocalizedSetting('abbreviation')),
 				array('rft.volume', $issue->getShowVolume()?$issue->getVolume():''),
 				array('rft.issue', $issue->getShowNumber()?$issue->getNumber():''),
-				array('rft.aulast', $firstAuthor->getLastName()),
-				array('rft.aufirst', $firstAuthor->getFirstName()),
-				array('rft.auinit', $firstAuthor->getMiddleName())
 			);
+
+			$authors = $article->getAuthors();
+			if ($firstAuthor = array_shift($authors)) {
+				$vars = array_merge($vars, array(
+					array('rft.aulast', $firstAuthor->getLastName()),
+					array('rft.aufirst', $firstAuthor->getFirstName()),
+					array('rft.auinit', $firstAuthor->getMiddleName()),
+				));
+			}
 
 			$datePublished = $article->getDatePublished();
 			if (!$datePublished) $datePublished = $issue->getDatePublished();

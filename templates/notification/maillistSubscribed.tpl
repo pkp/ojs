@@ -8,10 +8,9 @@
  * Displays the notification settings page and unchecks
  *
  *}
-{strip}
-{assign var="pageTitle" value="notification.mailList"}
-{include file="common/header.tpl"}
-{/strip}
+{include file="common/header.tpl" pageTitle="notification.mailList"}
+
+<div class="pkp_page_content pkp_page_notifications">
 
 <ul>
 	<li>
@@ -20,5 +19,7 @@
 		</span>
 	</li>
 <ul>
+
+</div>
 
 {include file="common/footer.tpl"}

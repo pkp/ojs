@@ -93,7 +93,7 @@ class Application extends PKPApplication {
 			'ArticleGalleyDAO' => 'classes.article.ArticleGalleyDAO',
 			'ArticleSearchDAO' => 'classes.search.ArticleSearchDAO',
 			'AuthorDAO' => 'classes.article.AuthorDAO',
-			'EmailTemplateDAO' => 'classes.mail.EmailTemplateDAO',
+			'EmailTemplateDAO' => 'lib.pkp.classes.mail.EmailTemplateDAO',
 			'GiftDAO' => 'classes.gift.GiftDAO',
 			'IndividualSubscriptionDAO' => 'classes.subscription.IndividualSubscriptionDAO',
 			'InstitutionalSubscriptionDAO' => 'classes.subscription.InstitutionalSubscriptionDAO',

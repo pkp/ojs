@@ -18,7 +18,7 @@
 <br />
 Hvis du ikke selv har sendt denne forespørgsel, skal du ignorere denne e-mail, og din adgangskode vil ikke blive ændret. Klik på nedenstående URL-adresse, hvis adgangskoden skal ændres.<br />
 <br />
-Nulstil min adgangskode: <a href="{$url}">{$url}</a><br />
+Nulstil min adgangskode: {$url}<br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Denne e-mail sendes til registrerede brugere, når de angiver, at de har glemt deres adgangskode eller ikke kan logge på. Den indeholder en URL-adresse, de kan følge for at nulstille deres adgangskode.</description>
@@ -50,7 +50,7 @@ Tak. {$principalContactSignature}]]></body>
 <br />
 Du har oprettet en konto hos {$contextName}, men inden du kan benytte den, skal du validere din e-mail-konto. Det gør du ved blot at følge linket nedenfor:<br />
 <br />
-<a href="{$activateUrl}">{$activateUrl}</a><br />
+{$activateUrl}<br />
 <br />
 Tak. {$principalContactSignature}]]></body>
 		<description>Denne e-mail sendes til netop registrerede brugere for at byde dem velkommen til systemet og for at oplyse dem om deres brugernavn og adgangskode.</description>
@@ -71,7 +71,7 @@ Tak. {$principalContactSignature}]]></body>
 		<subject>Ny udgave er blevet publiceret</subject>
 		<body><![CDATA[Læsere:<br />
 <br />
-{$contextName} har lige publiceret den seneste udgave på <a href="{$contextUrl}">{$contextUrl}</a>. Vi inviterer dig til at gennemse indholdsfortegnelsen her og derefter besøge vores websted, hvor du kan gennemse artikler og elementer, der har din interesse.<br />
+{$contextName} har lige publiceret den seneste udgave på {$contextUrl}. Vi inviterer dig til at gennemse indholdsfortegnelsen her og derefter besøge vores websted, hvor du kan gennemse artikler og elementer, der har din interesse.<br />
 <br />
 Tak for din fortsatte interesse i vores arbejde. {$editorialContactSignature}]]></body>
 		<description>Denne e-mail sendes til registrerede læsere via linket "Underret brugere" på redaktørens brugerstartside. Den underretter læsere om en ny udgave og inviterer dem til at besøge tidsskriftet på en angiven URL-adresse.</description>
@@ -80,11 +80,11 @@ Tak for din fortsatte interesse i vores arbejde. {$editorialContactSignature}]]>
 		<subject>Forespørgsel om arkivering af {$contextName}</subject>
 		<body><![CDATA[Kære [universitetsbibliotekar]<br />
 <br />
-{$contextName} &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt; er et tidsskrift, hvor et medlem af dit fakultet, [navn på medlem], fungerer som [stillingsbetegnelse]. Tidsskriftet forsøger at etablere et LOCKSS-kompatibelt (Lots of Copies Keep Stuff Safe) arkiv med dette og andre universitetsbiblioteker.<br />
+{$contextName} &amp;lt;{$contextUrl}&amp;gt; er et tidsskrift, hvor et medlem af dit fakultet, [navn på medlem], fungerer som [stillingsbetegnelse]. Tidsskriftet forsøger at etablere et LOCKSS-kompatibelt (Lots of Copies Keep Stuff Safe) arkiv med dette og andre universitetsbiblioteker.<br />
 <br />
 [Kort beskrivelse af tidsskrift]<br />
 <br />
-URL-adressen til LOCKSS Publisher Manifest for vores tidsskrift er: <a href="{$contextUrl}">{$contextUrl}</a>/gateway/lockss<br />
+URL-adressen til LOCKSS Publisher Manifest for vores tidsskrift er: {$contextUrl}/gateway/lockss<br />
 <br />
 Vi er klar over, at du allerede deltager i LOCKSS. Hvis vi kan stå til rådighed med yderligere metadata med henblik på at få vores tidsskrift registreret med din version af LOCKSS, gør vi gerne dette.<br />
 <br />
@@ -96,7 +96,7 @@ Tak.<br />
 		<subject>Forespørgsel om arkivering af {$contextName}</subject>
 		<body><![CDATA[Kære [universitetsbibliotekar]<br />
 <br />
-{$contextName} &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt; er et tidsskrift, hvor et medlem af dit fakultet, [navn på medlem], fungerer som [stillingsbetegnelse]. Tidsskriftet forsøger at etablere et LOCKSS-kompatibelt (Lots of Copies Keep Stuff Safe) arkiv med dette og andre universitetsbiblioteker.<br />
+{$contextName} &amp;lt;{$contextUrl}&amp;gt; er et tidsskrift, hvor et medlem af dit fakultet, [navn på medlem], fungerer som [stillingsbetegnelse]. Tidsskriftet forsøger at etablere et LOCKSS-kompatibelt (Lots of Copies Keep Stuff Safe) arkiv med dette og andre universitetsbiblioteker.<br />
 <br />
 [Kort beskrivelse af tidsskrift]<br />
 <br />
@@ -164,13 +164,13 @@ Tak. {$editorialContactSignature}]]></body>
 <br />
 Jeg tror, at du vil være en fremragende bedømmer af manuskriptet &quot;{$submissionTitle}&quot;, der er blevet sendt til {$contextName}. Nedenfor finder du et resumé af manuskriptet, og jeg håber, at du vil overveje at påtage dig denne vigtige opgave for os.<br />
 <br />
-Log på tidsskriftets websted inden den {$responseDueDate} for at angive, om du vil påtage dig bedømmelsen eller ej, samt for at få adgang til manuskriptet og registrere din bedømmelse og anbefaling. Webstedet er <a href="{$contextUrl}">{$contextUrl}</a><br />
+Log på tidsskriftets websted inden den {$responseDueDate} for at angive, om du vil påtage dig bedømmelsen eller ej, samt for at få adgang til manuskriptet og registrere din bedømmelse og anbefaling. Webstedet er {$contextUrl}<br />
 <br />
 Selve bedømmelsen skal afleveres senest den {$reviewDueDate}.<br />
 <br />
-Hvis du ikke har dit brugernavn og din adgangskode til tidsskriftets websted, kan du bruge dette link til at nulstille adgangskoden (som så vil blive sendt til dig via e-mail sammen med dit brugernavn). <a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
+Hvis du ikke har dit brugernavn og din adgangskode til tidsskriftets websted, kan du bruge dette link til at nulstille adgangskoden (som så vil blive sendt til dig via e-mail sammen med dit brugernavn). {$passwordResetUrl}<br />
 <br />
-Manuskriptets URL-adresse: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+Manuskriptets URL-adresse: {$submissionReviewUrl}<br />
 <br />
 Tak for din overvejelse af denne forespørgsel.<br />
 <br />
@@ -193,7 +193,7 @@ Log på tidsskriftets websted inden den {$responseDueDate} for at angive, om du 
 <br />
 Selve bedømmelsen skal afleveres senest den {$reviewDueDate}.<br />
 <br />
-Manuskriptets URL-adresse: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+Manuskriptets URL-adresse: {$submissionReviewUrl}<br />
 <br />
 Tak for din overvejelse af denne forespørgsel.<br />
 <br />
@@ -269,9 +269,9 @@ Tak, fordi du har fuldført bedømmelsen af manuskriptet &quot;{$submissionTitle
 <br />
 Dette er blot for at minde dig om vores forespørgsel om din bedømmelse af manuskriptet &quot;{$submissionTitle}&quot; til {$contextName}. Vi havde håbet på at modtage bedømmelsen senest den {$reviewDueDate} og ser frem til at modtage den, så snart du er færdig med den.<br />
 <br />
-Hvis du ikke har dit brugernavn og din adgangskode til tidsskriftets websted, kan du bruge dette link til at nulstille adgangskoden (som så vil blive sendt til dig via e-mail sammen med dit brugernavn). <a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
+Hvis du ikke har dit brugernavn og din adgangskode til tidsskriftets websted, kan du bruge dette link til at nulstille adgangskoden (som så vil blive sendt til dig via e-mail sammen med dit brugernavn). {$passwordResetUrl}<br />
 <br />
-Manuskriptets URL-adresse: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+Manuskriptets URL-adresse: {$submissionReviewUrl}<br />
 <br />
 Vi beder dig bekræfte, at du er i stand til at fuldføre dette vigtige bidrag til tidsskriftets arbejde. Jeg ser frem til at høre fra dig.<br />
 <br />
@@ -284,7 +284,7 @@ Vi beder dig bekræfte, at du er i stand til at fuldføre dette vigtige bidrag t
 <br />
 Dette er blot for at minde dig om vores forespørgsel om din bedømmelse af manuskriptet &quot;{$submissionTitle}&quot; til {$contextName}. Vi havde håbet på at modtage bedømmelsen senest den {$reviewDueDate} og ser frem til at modtage den, så snart du er færdig med den.<br />
 <br />
-Manuskriptets URL-adresse: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+Manuskriptets URL-adresse: {$submissionReviewUrl}<br />
 <br />
 Vi beder dig bekræfte, at du er i stand til at fuldføre dette vigtige bidrag til tidsskriftets arbejde. Jeg ser frem til at høre fra dig.<br />
 <br />
@@ -297,9 +297,9 @@ Vi beder dig bekræfte, at du er i stand til at fuldføre dette vigtige bidrag t
 <br />
 Dette er blot for at minde dig om vores forespørgsel om din bedømmelse af manuskriptet &quot;{$submissionTitle}&quot; til {$contextName}. Vi havde håbet på at modtage bedømmelsen senest den {$reviewDueDate}, og denne e-mail er blevet automatisk genereret og sendt til dig, da den pågældende dato er overskredet. Vi ser stadig frem til at modtage den, så snart du er færdig med den.<br />
 <br />
-Hvis du ikke har dit brugernavn og din adgangskode til tidsskriftets websted, kan du bruge dette link til at nulstille adgangskoden (som så vil blive sendt til dig via e-mail sammen med dit brugernavn). <a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
+Hvis du ikke har dit brugernavn og din adgangskode til tidsskriftets websted, kan du bruge dette link til at nulstille adgangskoden (som så vil blive sendt til dig via e-mail sammen med dit brugernavn). {$passwordResetUrl}<br />
 <br />
-Manuskriptets URL-adresse: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+Manuskriptets URL-adresse: {$submissionReviewUrl}<br />
 <br />
 Vi beder dig bekræfte, at du er i stand til at fuldføre dette vigtige bidrag til tidsskriftets arbejde. Jeg ser frem til at høre fra dig.<br />
 <br />
@@ -312,7 +312,7 @@ Vi beder dig bekræfte, at du er i stand til at fuldføre dette vigtige bidrag t
 <br />
 Dette er blot for at minde dig om vores forespørgsel om din bedømmelse af manuskriptet &quot;{$submissionTitle}&quot; til {$contextName}. Vi havde håbet på at modtage bedømmelsen senest den {$reviewDueDate}, og denne e-mail er blevet automatisk genereret og sendt til dig, da den pågældende dato er overskredet. Vi ser stadig frem til at modtage den, så snart du er færdig med den.<br />
 <br />
-Manuskriptets URL-adresse: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+Manuskriptets URL-adresse: {$submissionReviewUrl}<br />
 <br />
 Vi beder dig bekræfte, at du er i stand til at fuldføre dette vigtige bidrag til tidsskriftets arbejde. Jeg ser frem til at høre fra dig.<br />
 <br />
@@ -329,101 +329,12 @@ Jeg vil bede dig om at foretage manuskriptredigering af &quot;{$submissionTitle}
 3. Gem manuskriptredigeret fil og upload den ud for ‘Manuskriptredigering’.<br />
 4. Giv redaktøren besked, når alle filer er færdigredigerede og klar til blive videresendt til ’Produktion’.<br />
 <br />
-{$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
-Submission URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+{$contextName} URL: {$contextUrl}<br />
+Submission URL: {$submissionUrl}<br />
 Username: {$participantUsername}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Denne e-mail sendes af en sektionsredaktør til manuskriptredaktøren for et manuskript og beder vedkommende om at påbegynde manuskriptredigeringsprocessen. Den indeholder oplysninger om manuskriptet og om, hvordan der oprettes adgang til det.</description>
-	</email_text>
-	<email_text key="COPYEDIT_COMPLETE">
-		<subject>Manuskriptredigeringen er fuldført</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
-<br />
-Vi har nu redigeret dit manuskript &quot;{$submissionTitle}&quot; til {$contextName}. Følg disse trin for at få vist de foreslåede ændringer og svare på forfatterforespørgsler:<br />
-<br />
-1. Log på tidsskriftet ved hjælp af URL-adressen nedenfor med dit brugernavn og din adgangskode (brug eventuelt linket Har du glemt din adgangskode). 2. Klik på filen under 1. Første manuskriptredigering for at hente og åbne den manuskriptredigerede version. 3. Gennemgå manuskriptredigeringen, idet du foretager ændringer ved hjælp af funktionen Ændringer i Word, og svar på forespørgsler. 4. Gem filen på computeren, og overfør den under 2. Forfatters manuskriptredigering. 5. Klik på e-mail-ikonet under UDFØR, og send e-mailen til redaktøren.<br />
-<br />
-Dette er den sidste mulighed, du har for at foretage omfattende ændringer. På et senere tidspunkt vil du blive bedt om at læse korrektur på satsskibene, men på det tidspunkt kan du kun rette mindre typografiske fejl og layoutfejl.<br />
-<br />
-Manuskriptets URL-adresse: <a href="{$submissionEditingUrl}">{$submissionEditingUrl}</a>
-<br />
-Hvis du ikke er i stand til at påtage dig dette arbejde på nuværende tidspunkt eller har spørgsmål, bedes du kontakte mig.<br />
- Tak for dit bidrag til dette tidsskrift.<br />
-{$participantName}]]></body>
-	</email_text>
-	<email_text key="COPYEDIT_ACK">
-		<subject>Bekræftelse af manuskriptredigering</subject>
-		<body><![CDATA[{$participantName}:<br />
-<br />
-Tak, fordi du har redigeret manuskriptet &quot;{$submissionTitle}&quot; til {$contextName}. Det har stor betydning for kvaliteten af dette tidsskrift.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Denne e-mail sendes af sektionsredaktøren til manuskriptredaktøren for et manuskript og bekræfter, at manuskriptredaktøren har fuldført manuskriptredigeringsprocessen samt takker vedkommende for sit bidrag.</description>
-	</email_text>
-	<email_text key="COPYEDIT_AUTHOR_REQUEST">
-		<subject>Forespørgsel om gennemgang af manuskriptredigering</subject>
-		<body><![CDATA[{$authorName}:<br />
-<br />
-Dit manuskript &quot;{$submissionTitle}&quot; til {$contextName} har gennemgået første trin i manuskriptredigeringsfasen, og du kan nu gennemgå det ved at følge disse trin.<br />
-<br />
-1. Klik på manuskriptets URL-adresse nedenfor. 2. Log på tidsskriftet, og klik på den fil, der vises i trin 1. 3. Åbn det hentede manuskript. 4. Gennemgå teksten, herunder manuskriptredigeringsforslag og forfatterforespørgsler. 5. Foretag eventuelle ændringer, der vil forbedre teksten yderligere. 6. Overfør filen i trin 2, når du er færdig med at foretage ændringer. 7. Klik på METADATA for at kontrollere, at indekseringsoplysningerne er fuldstændige og præcise. 8. Send e-mailen under UDFØR til redaktøren og manuskriptredaktøren.<br />
-<br />
-Manuskriptets URL-adresse: <a href="{$submissionUrl}">{$submissionUrl}</a>
-<br />
-Dette er din sidste mulighed for at foretage omfattende ændringer af manuskriptet. Korrekturlæsningsfasen, der følger efter forberedelsen af satsskibene, begrænser sig til rettelse af typografiske fejl og layoutfejl.<br />
-<br />
-Hvis du ikke er i stand til at påtage dig dette arbejde på nuværende tidspunkt eller har spørgsmål, bedes du kontakte mig.<br />
- Tak for dit bidrag til dette tidsskrift.<br />
-{$editorialContactSignature}]]></body>
-		<description>Denne e-mail sendes af sektionsredaktøren til forfatteren af et manuskript og beder vedkommende om at læse korrektur på manuskriptredaktørens arbejde. Den indeholder oplysninger om adgang til manuskriptet og gør opmærksom på, at dette er forfatterens sidste mulighed for at foretage omfattende ændringer.</description>
-	</email_text>
-	<email_text key="COPYEDIT_AUTHOR_COMPLETE">
-		<subject>Gennemgang af manuskriptredigering er fuldført</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
-<br />
-Jeg har nu gennemgået redigeringen af manuskriptet &quot;{$submissionTitle}&quot; til {$contextName}, og manuskriptet er klar til den sidste fase i manuskriptredigeringsprocessen og til forberedelse for layout.<br />
-<br />
-Tak for dette bidrag til min artikel. {$authorName}]]></body>
-		<description>Denne e-mail sendes af forfatteren til sektionsredaktøren for at underrette vedkommende om, at forfatterens manuskriptredigeringsproces er fuldført.</description>
-	</email_text>
-	<email_text key="COPYEDIT_AUTHOR_ACK">
-		<subject>Bekræftelse af gennemgang af manuskriptredigering</subject>
-		<body><![CDATA[{$authorName}:<br />
-<br />
-Tak, fordi du har gennemgået redigeringen af dit manuskript, &quot;{$submissionTitle}&quot;, til {$contextName}. Vi ser frem til at publicere denne artikel.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Denne e-mail sendes af sektionsredaktøren til forfatteren af et manuskript for at bekræfte, at forfatterens manuskriptredigeringsproces er fuldført og for at takke forfatteren for sit bidrag.</description>
-	</email_text>
-	<email_text key="COPYEDIT_FINAL_REQUEST">
-		<subject>Sidste gennemgang af manuskriptredigering</subject>
-		<body><![CDATA[{$participantName}:<br />
-<br />
-Forfatteren og redaktøren har nu fuldført deres gennemgang af redigeringen af manuskriptet &quot;{$submissionTitle}&quot; til {$contextName}. Der skal nu forberedes en &quot;ren kopi&quot; til layoutfasen ved at følge nedenstående trin. 1. Klik på manuskriptets URL-adresse nedenfor. 2. Log på tidsskriftet, og klik på den fil, der vises i trin 2. 3. Åbn den hentede fil, og indfør alle manuskriptredigeringer og forespørgselssvar. 4. Gem den rene fil, og overfør den til trin 3 under Manuskriptredigering. 5. Klik på METADATA for at kontrollere indekseringsoplysningerne (og gemme eventuelle rettelser). 6. Send e-mailen under UDFØR til redaktøren.<br />
-<br />
-{$contextName} URL-adresse: <a href="{$contextUrl}">{$contextUrl}</a> Manuskriptets URL-adresse: <a href="{$submissionUrl}">{$submissionUrl}</a> Brugernavn: {$participantUsername}<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>I denne e-mail fra sektionsredaktøren til manuskriptredaktøren bliver manuskriptredaktøren bedt om at foretage en sidste redigering af et manuskript, inden det går videre til layoutprocessen.</description>
-	</email_text>
-	<email_text key="COPYEDIT_FINAL_COMPLETE">
-		<subject>Sidste gennemgang af manuskriptredigering er fuldført</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
-<br />
-Jeg har nu forberedt en ren og redigeret version af manuskriptet &quot;{$submissionTitle}&quot; til {$contextName}. Den er klar til layout og forberedelsen af satsskibene.<br />
-<br />
-{$participantName}]]></body>
-		<description>Denne e-mail fra manuskriptredaktøren til sektionsredaktøren underretter sektionsredaktøren om, at den sidste manuskriptredigeringsrunde er fuldført, og at layoutprocessen nu kan begynde.</description>
-	</email_text>
-	<email_text key="COPYEDIT_FINAL_ACK">
-		<subject>Bekræftelse af sidste gennemgang af manuskriptredigering</subject>
-		<body><![CDATA[{$participantName}:<br />
-<br />
-Tak, fordi du har fuldført redigeringen af manuskriptet &quot;{$submissionTitle}&quot; til {$contextName}. Forberedelsen af en &quot;ren kopi&quot; til layout er et vigtigt trin i den redaktionelle proces.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>I denne e-mail fra sektionsredaktøren til manuskriptredaktøren bekræftes fuldførelsen af den sidste manuskriptredigeringsrunde, og sektionsredaktøren takker manuskriptredaktøren for sit bidrag.</description>
 	</email_text>
 	<email_text key="LAYOUT_REQUEST">
 		<subject>Forespørgsel om publiceringsversion</subject>
@@ -435,8 +346,8 @@ Indsendelsen &quot;{$submissionTitle}&quot; til {$contextName} skal nu gøres pu
 3. Upload de publiceringsklare filer via linket ‘Tilføj publiceringsversion’.<br />
 4. Giv redaktøren besked når publiceringsversionen er klar via linket ‘Tilføj indlæg’ under ‘Drøftelser under produktion’.<br />
 <br />
-{$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
-Submission URL: <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a><br />
+{$contextName} URL: {$contextUrl}<br />
+Submission URL: {$submissionLayoutUrl}<br />
 Username: {$participantUsername}<br />
 <br />
 Hvis du ikke er i stand til at påtage dig dette arbejde på nuværende tidspunkt eller har spørgsmål, bedes du kontakte mig.<br />
@@ -533,7 +444,7 @@ Tak, fordi du har læst korrektur på satsskibene for manuskriptet &quot;{$submi
 <br />
 Manuskriptet &quot;{$submissionTitle}&quot; til {$contextName} er blevet korrekturlæst af forfatteren og korrekturlæseren, og der skal nu foretages eventuelle rettelser ved at følge disse trin. 1. Klik på manuskriptets URL-adresse nedenfor. 2. Log på tidsskriftet, og få vist Korrekturrettelser for at oprette korrigerede satsskibe. 3. Overfør de rettede satsskibe. 4. Send e-mailen under UDFØR i trin 3 under Korrekturlæsning til redaktøren.<br />
 <br />
-{$contextName} URL-adresse: <a href="{$contextUrl}">{$contextUrl}</a> Manuskriptets URL-adresse: {$submissionUrl} Brugernavn: {$participantUsername}<br />
+{$contextName} URL-adresse: {$contextUrl} Manuskriptets URL-adresse: {$submissionUrl} Brugernavn: {$participantUsername}<br />
 <br />
 Hvis du ikke er i stand til at påtage dig dette arbejde på nuværende tidspunkt eller har spørgsmål, bedes du kontakte mig.<br />
  Tak for dit bidrag til dette tidsskrift.<br />
@@ -560,7 +471,7 @@ Tak, fordi du har indført korrekturrettelserne i de satsskibe, der er tilknytte
 	</email_text>
 	<email_text key="EMAIL_LINK">
 		<subject>Artikel, der muligvis har din interesse</subject>
-		<body><![CDATA[Jeg tænkte, at du måske ville være interesseret i at læse &quot;{$submissionTitle}&quot; af {$authorName}, der er publiceret i Årg. {$volume}, Nr. {$number} ({$year}) i {$contextName} på &quot;<a href="{$articleUrl}">{$articleUrl}</a>&quot;.]]></body>
+		<body><![CDATA[Jeg tænkte, at du måske ville være interesseret i at læse &quot;{$submissionTitle}&quot; af {$authorName}, der er publiceret i Årg. {$volume}, Nr. {$number} ({$year}) i {$contextName} på &quot;{$articleUrl}&quot;.]]></body>
 		<description>Denne e-mail-skabelon giver en registreret læser mulighed for at sende oplysninger om en artikel til en person, der muligvis er interesseret. Den er tilgængelig via læseværktøjerne og skal aktiveres af tidsskriftschefen på siden Administration af læseværktøjer.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_NOTIFY">
@@ -586,7 +497,7 @@ Hvis du har spørgsmål, er du velkommen til at kontakte mig.<br />
 		<subject>Udgave nu i Open Access-format</subject>
 		<body><![CDATA[Læsere:<br />
 <br />
-{$contextName} har netop udgivet følgende udgave i et Open Access-format. Vi inviterer dig til at gennemse indholdsfortegnelsen her og derefter besøge vores websted (<a href="{$contextUrl}">{$contextUrl}</a>), hvor du kan gennemse artikler og elementer, der har din interesse.<br />
+{$contextName} har netop udgivet følgende udgave i et Open Access-format. Vi inviterer dig til at gennemse indholdsfortegnelsen her og derefter besøge vores websted ({$contextUrl}), hvor du kan gennemse artikler og elementer, der har din interesse.<br />
 <br />
 Tak for din fortsatte interesse i vores arbejde. {$editorialContactSignature}]]></body>
 		<description>Denne e-mail sendes til registrerede læsere, der har anmodet om at modtage en e-mail-meddelelse, når en udgave udgives i et Open Access-format.</description>
@@ -731,7 +642,7 @@ Medlemsoplysninger (hvis angivet):<br />
 <br />
 Følg dette link, hvis du vil se eller redigere abonnementet.<br />
 <br />
-Link til abonnement: <a href="{$subscriptionUrl}">{$subscriptionUrl}</a>]]></body>
+Link til abonnement: {$subscriptionUrl}]]></body>
 		<description>Denne e-mail giver abonnementschefen besked om, at der er blevet købt et individuelt abonnement online. Meddelelsen indeholder en opsummering af abonnementsoplysningerne og et quick access-link til det købte abonnement.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_PURCHASE_INSTL">
@@ -759,7 +670,7 @@ Medlemsoplysninger (hvis angivet):<br />
 <br />
 Følg dette link, hvis du vil se eller redigere abonnementet.<br />
 <br />
-Link til abonnement: <a href="{$subscriptionUrl}">{$subscriptionUrl}</a>]]></body>
+Link til abonnement: {$subscriptionUrl}]]></body>
 		<description></description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_RENEW_INDL">
@@ -777,7 +688,7 @@ Medlemsoplysninger (hvis angivet):<br />
 <br />
 Følg dette link, hvis du vil se eller redigere abonnementet.<br />
 <br />
-Link til abonnement: <a href="{$subscriptionUrl}">{$subscriptionUrl}</a>]]></body>
+Link til abonnement: {$subscriptionUrl}]]></body>
 		<description>Denne e-mail giver abonnementschefen besked om, at et individuelt abonnement er blevet fornyet online. Meddelelsen indeholder en opsummering af abonnementsoplysningerne og et quick access-link til det fornyede abonnement.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_RENEW_INSTL">
@@ -805,7 +716,7 @@ Medlemsoplysninger (hvis angivet):<br />
 <br />
 Følg dette link, hvis du vil se eller redigere abonnementet.<br />
 <br />
-Link til abonnement: <a href="{$subscriptionUrl}">{$subscriptionUrl}</a>]]></body>
+Link til abonnement: {$subscriptionUrl}]]></body>
 		<description>Denne e-mail giver abonnementschefen besked om, at et individuelt abonnement er blevet fornyet online. Meddelelsen indeholder en opsummering af abonnementsoplysningerne og et quick access-link til det fornyede abonnement.</description>
 	</email_text>
 	<email_text key="CITATION_EDITOR_AUTHOR_QUERY">
@@ -858,13 +769,13 @@ Dette er blot for at minde dig om vores forespørgsel om din bedømmelse af manu
 <br />
 Jeg tror, at du vil være en fremragende bedømmer af manuskriptet. Nedenfor finder du et resumé af manuskriptet, og jeg håber, at du vil overveje at påtage dig denne vigtige opgave for os.<br />
 <br />
-Log på tidsskriftets websted for at angive, om du vil påtage dig bedømmelsen eller ej, samt for at få adgang til manuskriptet og registrere din bedømmelse og anbefaling. Webstedet er <a href="{$contextUrl}">{$contextUrl}</a><br />
+Log på tidsskriftets websted for at angive, om du vil påtage dig bedømmelsen eller ej, samt for at få adgang til manuskriptet og registrere din bedømmelse og anbefaling. Webstedet er {$contextUrl}<br />
 <br />
 Selve bedømmelsen skal afleveres senest den {$reviewDueDate}.<br />
 <br />
-Hvis du ikke har dit brugernavn og din adgangskode til tidsskriftets websted, kan du bruge dette link til at ændre adgangskoden (som så vil blive sendt til dig via e-mail sammen med dit brugernavn). <a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
+Hvis du ikke har dit brugernavn og din adgangskode til tidsskriftets websted, kan du bruge dette link til at ændre adgangskoden (som så vil blive sendt til dig via e-mail sammen med dit brugernavn). {$passwordResetUrl}<br />
 <br />
-Manuskriptets URL-adresse: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+Manuskriptets URL-adresse: {$submissionReviewUrl}<br />
 <br />
 Tak for din overvejelse af denne forespørgsel.<br />
 <br />
@@ -886,7 +797,7 @@ Log på tidsskriftets websted for at angive, om du vil påtage dig bedømmelsen 
 </br>
 Selve bedømmelsen skal afleveres senest den {$reviewDueDate}.<br />
 <br />
-Manuskriptets URL-adresse: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+Manuskriptets URL-adresse: {$submissionReviewUrl}<br />
 <br />
 Tak for din overvejelse af denne forespørgsel.<br />
 <br />
@@ -909,7 +820,7 @@ Log på tidsskriftets websted inden {$responseDueDate} for at angive, om du vil 
 <br />
 Selve bedømmelsen skal afleveres senest den {$reviewDueDate}.<br />
 </br>
-Manuskriptets URL URL: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+Manuskriptets URL URL: {$submissionReviewUrl}<br />
 <br />
 Tak for din overvejelse af denne forespørgsel. <br />
 <br />
@@ -950,13 +861,13 @@ Dette omhandler manuskriptet &quot;{$submissionTitle},&quot; som behandles af {$
 <br />
 Som opfølgning på en tidligere bedømmelse af manuskriptet, har forfatterne indsendt en revideret version af deres indlæg. Vi vil sætte stor pris på din hjælp, hvis du vil foretage en bedømmelse af det.<br />
 <br />
-Log på tidsskriftets websted inden {$responseDueDate} for at angive, om du vil påtage dig bedømmelsen eller ej, samt for at få adgang til manuskriptet og registrere din bedømmelse og anbefaling. Webstedet er <a href="{$contextUrl}">{$contextUrl}</a><br />
+Log på tidsskriftets websted inden {$responseDueDate} for at angive, om du vil påtage dig bedømmelsen eller ej, samt for at få adgang til manuskriptet og registrere din bedømmelse og anbefaling. Webstedet er {$contextUrl}<br />
 <br />
 Selve bedømmelsen skal afleveres senest den {$reviewDueDate}.<br />
 <br />
-Hvis du ikke har dit brugernavn og din adgangskode til tidsskriftets websted, kan du bruge dette link til at ændre adgangskoden (som så vil blive sendt til dig via e-mail sammen med dit brugernavn). <a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
+Hvis du ikke har dit brugernavn og din adgangskode til tidsskriftets websted, kan du bruge dette link til at ændre adgangskoden (som så vil blive sendt til dig via e-mail sammen med dit brugernavn). {$passwordResetUrl}<br />
 <br />
-Manuskriptets URL: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+Manuskriptets URL: {$submissionReviewUrl}<br />
 <br />
 Tak for din overvejelse af denne forespørgsel.<br />
 <br />

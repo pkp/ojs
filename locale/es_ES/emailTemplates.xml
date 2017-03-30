@@ -18,7 +18,7 @@
 <br />
 Si no hizo usted esta petición ignore este correo-e y su contraseña no cambiará. Si desea cambiar su contraseña pinche en el enlace que le mostramos a continuación.<br />
 <br />
-Cambiar mi contraseña: <a href="{$url}">{$url}</a><br />
+Cambiar mi contraseña: {$url}<br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Este correo se envía a un/a usuario/a registrado/a cuando indican que han olvidado su contraseña o que no se pueden identificar. Proporciona una URL para que cambien su contraseña.</description>
@@ -48,7 +48,7 @@ Gracias,<br />
 		<subject>Nuevo número publicado</subject>
 		<body><![CDATA[Estimados/as lectores/as:<br />
 <br />
-{$contextName} acaba de publicar su último número en <a href="{$contextUrl}">{$contextUrl}</a>. A continuación le mostramos la tabla de contenidos, después puede visitar nuestro sitio web para consultar los artículos que sean de su interés.<br />
+{$contextName} acaba de publicar su último número en {$contextUrl}. A continuación le mostramos la tabla de contenidos, después puede visitar nuestro sitio web para consultar los artículos que sean de su interés.<br />
 <br />
 Gracias por mantener el interés en nuestro trabajo,<br />
 {$editorialContactSignature}]]></body>
@@ -77,7 +77,7 @@ Si tiene cualquier pregunta no dude en contactar con nosotros/as.<br />
 		<subject>Ahora el Número es Acceso Libre</subject>
 		<body><![CDATA[Lectores:<br />
 <br />
-	{$contextName} acaba de hacer disponible de forma acceso libre el siguiente número. Los invitamos a revisar la Tabla de Contenido aquí y después visite nuestra página Web  (<a href="{$contextUrl}">{$contextUrl}</a>) para consultar los artículos que sean de su interés.<br />
+	{$contextName} acaba de hacer disponible de forma acceso libre el siguiente número. Los invitamos a revisar la Tabla de Contenido aquí y después visite nuestra página Web  ({$contextUrl}) para consultar los artículos que sean de su interés.<br />
 <br />
 	Gracias por mantener el interés en nuestro trabajo,<br />
 	{$editorialContactSignature}]]></body>
@@ -136,11 +136,11 @@ Si tiene cualquier pregunta no dude en contactar con nosotros/as.<br />
 		<subject>Petición de Archivado para {$contextName}</subject>
 		<body><![CDATA[Estimado/a [Bibliotecaria/o Universitaria/o]<br />
 <br />
-{$contextName} &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt;, es una revista en la que un miembro de su Facultad/Universidad, [nombre de la persona], colabora como [cargo que desempeña]. La revista está intentando crear un archivo LOCKSS (Lots of Copies Keep Stuff Safe) con esta y otras bibliotecas universitarias.<br />
+{$contextName} &amp;lt;{$contextUrl}&amp;gt;, es una revista en la que un miembro de su Facultad/Universidad, [nombre de la persona], colabora como [cargo que desempeña]. La revista está intentando crear un archivo LOCKSS (Lots of Copies Keep Stuff Safe) con esta y otras bibliotecas universitarias.<br />
 <br />
 [Breve descripción de la revista]<br />
 <br />
-La URL para el Manifiesto Editorial LOCKSS para nuestra revista es: <a href="{$contextUrl}">{$contextUrl}</a>/gateway/lockss<br />
+La URL para el Manifiesto Editorial LOCKSS para nuestra revista es: {$contextUrl}/gateway/lockss<br />
 <br />
 Entendemos que ya está participando en LOCKSS. Si podemos proporcionarle metadatos adicionales para registrar nuestra revista con su versión de LOCKSS, estaremos encantados/as de hacerlo.<br />
 <br />
@@ -152,7 +152,7 @@ Gracias,<br />
 		<subject>Petición de archivo para {$contextName}</subject>
 		<body><![CDATA[Estimado/a [Bibliotecario/a Universitario/a]<br />
 <br />
-{$contextName} &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt;, es una revista en la que un miembro de su Facultad/Universidad, [nombre de la persona], colabora como [cargo que desempeña]. La revista está intentando crear un archivo LOCKSS (Lots of Copies Keep Stuff Safe) con esta y otras bibliotecas universitarias.<br />
+{$contextName} &amp;lt;{$contextUrl}&amp;gt;, es una revista en la que un miembro de su Facultad/Universidad, [nombre de la persona], colabora como [cargo que desempeña]. La revista está intentando crear un archivo LOCKSS (Lots of Copies Keep Stuff Safe) con esta y otras bibliotecas universitarias.<br />
 <br />
 [Breve descripción de la revista]<br />
 <br />
@@ -184,7 +184,7 @@ Si tiene cualquier pregunta no dude en contactar con nosotros/as. Gracias por te
 <br />
 Gracias por enviar el manuscrito &quot;{$submissionTitle}&quot; a {$contextName}. Con el sistema de gestión de publicaciones en línea que utilizamos podrá seguir el progreso a través del proceso editorial tras iniciar sesión en el sitio web de la publicación:<br />
 <br />
-URL del manuscrito: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL del manuscrito: {$submissionUrl}<br />
 Nombre de usuario/a: {$authorUsername}<br />
 <br />
 Si tiene alguna duda puede ponerse en contacto conmigo. Gracias por elegir esta editorial para mostrar su trabajo.<br />
@@ -237,13 +237,13 @@ Gracias,<br />
 <br />
 Tengo el convencimiento de que sería un/a excelente revisor/a del manuscrito, &quot;{$submissionTitle},&quot; que ha sido enviado a {$contextName}. A continuación encontrará un extracto del envío, con la esperanza de que aceptará llevar a cabo esta importante tarea para nosotros.<br />
 <br />
-Por favor, identifíquese en la revista antes de {$responseDueDate} para decirnos si hará o no la revisión, así como para tener acceso al envío y para registrar su revisión y recomendación. La dirección es <a href="{$contextUrl}">{$contextUrl}</a><br />
+Por favor, identifíquese en la revista antes de {$responseDueDate} para decirnos si hará o no la revisión, así como para tener acceso al envío y para registrar su revisión y recomendación. La dirección es {$contextUrl}<br />
 <br />
 La revisión propiamente dicha debe estar lista para el {$reviewDueDate}.<br />
 <br />
-Si ha perdido su nombre de usuaria/o y contraseña puede pinchar en el siguiente enlace para cambiar su contraseña (le llegará por correo-e junto con su nombre de usuaria/o). <a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
+Si ha perdido su nombre de usuaria/o y contraseña puede pinchar en el siguiente enlace para cambiar su contraseña (le llegará por correo-e junto con su nombre de usuaria/o). {$passwordResetUrl}<br />
 <br />
-URL del envío: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+URL del envío: {$submissionReviewUrl}<br />
 <br />
 Gracias por tener en cuenta nuestra solicitud.<br />
 <br />
@@ -267,7 +267,7 @@ Por favor, identifíquese en la revista antes de {$responseDueDate} para decirno
 <br />
 La revisión propiamente dicha debe estar lista para el {$reviewDueDate}.<br />
 <br />
-URL del envío: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+URL del envío: {$submissionReviewUrl}<br />
 <br />
 Gracias por tener en cuenta nuestra solicitud.<br />
 <br />
@@ -340,9 +340,9 @@ Gracias por completar la revisión del envío &quot;{$submissionTitle},&quot; pa
 <br />
 Le recordamos nuestra petición de revisión del envío &quot;{$submissionTitle},&quot; para {$contextName}. Esperábamos su revisión antes del {$reviewDueDate}, esperamos nos la mande en cuanto la tenga lista.<br />
 <br />
-Si ha perdido su nombre de usuaria/o y contraseña para la revista puede pinchar en el siguiente enlace para cambiar su contraseña (se la enviaremos por correo-e junto con su nombre de usuaria/o). <a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
+Si ha perdido su nombre de usuaria/o y contraseña para la revista puede pinchar en el siguiente enlace para cambiar su contraseña (se la enviaremos por correo-e junto con su nombre de usuaria/o). {$passwordResetUrl}<br />
 <br />
-URL del envío: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+URL del envío: {$submissionReviewUrl}<br />
 <br />
 Le rogamos nos confirme su disponibilidad para completar esta contribución vital para el trabajo de la revista. Esperamos tener noticias suyas a la mayor brevedad.<br />
 <br />
@@ -355,7 +355,7 @@ Le rogamos nos confirme su disponibilidad para completar esta contribución vita
 <br />
 Le recordamos nuestra petición de revisión del envío &quot;{$submissionTitle},&quot; para {$contextName}. Esperábamos su revisión antes del {$reviewDueDate}, esperamos nos la mande en cuanto la tenga lista.<br />
 <br />
-URL del envío: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+URL del envío: {$submissionReviewUrl}<br />
 <br />
 Le rogamos nos confirme su disponibilidad para completar esta contribución vital para el trabajo de la revista. Esperamos tener noticias suyas a la mayor brevedad.<br />
 <br />
@@ -368,9 +368,9 @@ Le rogamos nos confirme su disponibilidad para completar esta contribución vita
 <br />
 Le recordamos nuestra petición de revisión del envío &quot;{$submissionTitle},&quot; para {$contextName}. Esperábamos su revisión antes del {$reviewDueDate}, y se ha generado automáticamente este correo-e al haberse superado dicha fecha. Aún estaríamos encantados de recibirla una vez la tenga lista.<br />
 <br />
-Si ha perdido su nombre de usuaria/o y contraseña para la revista puede pinchar en el siguiente enlace para cambiar su contraseña (se la enviaremos por correo-e junto con su nombre de usuaria/o). <a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
+Si ha perdido su nombre de usuaria/o y contraseña para la revista puede pinchar en el siguiente enlace para cambiar su contraseña (se la enviaremos por correo-e junto con su nombre de usuaria/o). {$passwordResetUrl}<br />
 <br />
-URL del envío: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+URL del envío: {$submissionReviewUrl}<br />
 <br />
 Le rogamos nos confirme su disponibilidad para completar esta contribución vital para el trabajo de la revista. Esperamos tener noticias suyas a la mayor brevedad.<br />
 <br />
@@ -383,7 +383,7 @@ Le rogamos nos confirme su disponibilidad para completar esta contribución vita
 <br />
 Le recordamos nuestra petición de revisión del envío &quot;{$submissionTitle},&quot; para {$contextName}. Esperábamos su revisión antes del {$reviewDueDate}, y se ha generado automáticamente este correo-e al haberse superado dicha fecha. Aún estaríamos encantados de recibirla una vez la tenga lista.<br />
 <br />
-URL del envío: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+URL del envío: {$submissionReviewUrl}<br />
 <br />
 Le rogamos nos confirme su disponibilidad para completar esta contribución vital para el trabajo de la revista. Esperamos tener noticias suyas a la mayor brevedad.<br />
 <br />
@@ -396,7 +396,7 @@ Le rogamos nos confirme su disponibilidad para completar esta contribución vita
 <br />
 Me gustaría pedirle que llevara a cabo la corrección del manuscrito &quot;{$submissionTitle},&quot; para {$contextName}. En el sitio web de la revista puede encontrar el envío, así como las instrucciones de corrección.<br />
 <br />
-URL del manuscrito: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL del manuscrito: {$submissionUrl}<br />
 Nombre de usuaria/o: {$participantUsername}<br />
 <br />
 Si no puede llevar a cabo este trabajo en este momento o tiene cualquier pregunta, póngase en contacto con nosotros/as. Gracias por aceptar llevar a cabo este importante trabajo para la revista.<br />
@@ -404,97 +404,13 @@ Si no puede llevar a cabo este trabajo en este momento o tiene cualquier pregunt
 {$editorialContactSignature}]]></body>
 		<description>Este correo es enviado por un/a Editor/a de Sección a un/a corrector/a de un envío para pedirles que comiencen un proceso de corrección. Le proporciona información sobre en el envío y cómo acceder a él.</description>
 	</email_text>
-	<email_text key="COPYEDIT_COMPLETE">
-		<subject>Corrección completada</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
-<br />
-Acabo de finalizar la primera ronda de corrección del manuscrito &quot;{$submissionTitle},&quot; para {$contextName}. Ya está preparado para que el/la autor/a y el/la editor/a revisen los cambios y consultas.<br />
-<br />
-Gracias,<br />
-{$participantName}]]></body>
-	</email_text>
-	<email_text key="COPYEDIT_ACK">
-		<subject>Acuse de recibo de corrección</subject>
-		<body><![CDATA[{$participantName}:<br />
-<br />
-Gracias por corregir el manuscrito {$submissionTitle},&quot; para {$contextName}. Supondrá una importante contribución a la calidad de la revista.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Este correo es enviado por el/la Editor/a de Sección al / a la corrector/a de un envío para comunicarle que ha recibido la corrección y agradecerle su contribución.</description>
-	</email_text>
-	<email_text key="COPYEDIT_AUTHOR_REQUEST">
-		<subject>Petición de revisión de corrección</subject>
-		<body><![CDATA[{$authorName}:<br />
-<br />
-Acabamos de finalizar una corrección inicial de su manuscrito &quot;{$submissionTitle},&quot; para {$contextName}. Por favor, identifíquese en el sitio de la revista y responda a las consultas al / a la autor/a que el/la corrector/a haya insertado en el manuscrito y revise los cambios de corrección propuestos.<br />
-<br />
-Esta es la última oportunidad que tendrá para hacer cambios sustanciales. Se le pedirá que revise las galeradas, pero en esa fase tan solo podrá corregir pequeños errores tipográficos y de maquetación.<br />
-<br />
-URL del manuscrito: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
-<br />
-Si no puede llevar a cabo este trabajo en este momento o tiene cualquier pregunta, póngase en contacto con nosotros/as. Gracias por su contribución a la revista.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Este correo es enviado por el/la Editor/a de Sección al / a la autor/a de un envío para pedirle que revise el trabajo del / de la corrector/a. Proporciona información de acceso al manuscrito y le avisa de que es la última oportunidad que tiene el/la autor/a para hacer cambios substanciales.</description>
-	</email_text>
-	<email_text key="COPYEDIT_AUTHOR_COMPLETE">
-		<subject>Revisión de corrección completada</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
-<br />
-Acabo de revisar la corrección del manuscrito &quot;{$submissionTitle},&quot; para {$contextName}, y ya está listo para la ronda final de corrección y preparación para la maquetación.<br />
-<br />
-Gracias por su contribución a mi trabajo,<br />
-{$authorName}]]></body>
-		<description>Este correo es enviado por el/la autor/a al / a la Editor/a de Sección para comunicarle que el proceso de corrección del / de la autor/a se ha completado.</description>
-	</email_text>
-	<email_text key="COPYEDIT_AUTHOR_ACK">
-		<subject>Acuse de recibo de revisión de corrección</subject>
-		<body><![CDATA[{$authorName}:<br />
-<br />
-Gracias por revisar la corrección de su manuscrito &quot;{$submissionTitle},&quot; para {$contextName}. Esperamos poder publicar su trabajo lo antes posible.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Este correo es enviado por el / la Editor/a de Sección al / a la autor/a de un envío para confirmar que el proceso de corrección por parte del / de la autor/a se ha completado y agradecerle su contribución.</description>
-	</email_text>
-	<email_text key="COPYEDIT_FINAL_REQUEST">
-		<subject>Revisión final de corrección</subject>
-		<body><![CDATA[{$participantName}:<br />
-<br />
-El/la autor/a y el/la editor/a han completado su revisión de la corrección del manuscrito &quot;{$submissionTitle},&quot; para {$contextName}. Ya se puede preparar para maquetación la &quot;copia limpia&quot; final.<br />
-<br />
-URL del manuscrito: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
-Nombre de usuaria/o: {$participantUsername}<br />
-<br />
-Gracias en el nombre de la revista,<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Este correo enviado por el/la Editor/a de Sección al / a la corrector/a le pide que haga una ronda final de corrección de un envío antes de que pase a maquetación.</description>
-	</email_text>
-	<email_text key="COPYEDIT_FINAL_COMPLETE">
-		<subject>Revisión de corrección final completada</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
-<br />
-Acabo de preparar una versión limpia y corregida del manuscrito &quot;{$submissionTitle},&quot; para {$contextName}. Está listo para su maquetación y la preparación de las galeradas.<br />
-<br />
-{$participantName}]]></body>
-		<description>Este correo es enviado del / de la corrector/a al / a la Editor/a de Sección para notificarle que la ronda final de corrección ha finalizado y que ya puede comenzar el proceso de maquetación.</description>
-	</email_text>
-	<email_text key="COPYEDIT_FINAL_ACK">
-		<subject>Acuse de recibo de revisión final corregida</subject>
-		<body><![CDATA[{$participantName}:<br />
-<br />
-Gracias por completar la revisión del manuscrito &quot;{$submissionTitle},&quot; para {$contextName}. La preparación de una &quot;copia limpia&quot; para maquetación es un paso importante en el proceso editorial.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Este correo es enviado por el/la Editor/a de Sección al / a la corrector/a agradeciéndole que haya completado la ronda final de corrección y agradeciéndoles su contribución.</description>
-	</email_text>
 	<email_text key="LAYOUT_REQUEST">
 		<subject>Solicitud de galeradas</subject>
 		<body><![CDATA[{$participantName}:<br />
 <br />
 Le solicito que prepare las galeradas del manuscrito &quot;{$submissionTitle},&quot; para {$contextName}.<br />
 <br />
-URL del manuscrito: <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a><br />
+URL del manuscrito: {$submissionLayoutUrl}<br />
 Nombre de usuaria/o: {$participantUsername}<br />
 <br />
 Si no puede llevar a cabo este trabajo en este momento o tiene cualquier pregunta, póngase en contacto con nosotros/as. Gracias por su contribución a la revista.<br />
@@ -621,7 +537,7 @@ Gracias por completar la corrección de las pruebas de galeradas asociadas con e
 	</email_text>
 	<email_text key="EMAIL_LINK">
 		<subject>Artículo interesante</subject>
-		<body><![CDATA[He pensado que le podría interesar ver el artículo &quot;{$submissionTitle}&quot; de {$authorName}, publicado en el vol. {$volume}, nº {$number} ({$year}) de {$contextName} en &quot;<a href="{$articleUrl}">{$articleUrl}</a>&quot;.]]></body>
+		<body><![CDATA[He pensado que le podría interesar ver el artículo &quot;{$submissionTitle}&quot; de {$authorName}, publicado en el vol. {$volume}, nº {$number} ({$year}) de {$contextName} en &quot;{$articleUrl}&quot;.]]></body>
 		<description>Esta plantilla de correo proporciona a un/a lector/a registrado/a la oportunidad de enviar información sobre un artículo a alguien a quien le podría interesar. Está disponible a través de las Herramientas de Lectura y debe ser activado por el/la Gestor/a de la Revista en las Administración de Herramientas de Lectura.</description>
 	</email_text>
 	<email_text key="USER_VALIDATE">
@@ -630,7 +546,7 @@ Gracias por completar la corrección de las pruebas de galeradas asociadas con e
 <br />
 Se ha recibido una solicitud de cuenta de usuario para la revista {$contextName} utilizando su dirección de correo. Si desea activar su cuenta en {$contextName}, pulse por favor sobre el vínculo siguiente:<br />
 <br />
-<a href="{$activateUrl}">{$activateUrl}</a><br />
+{$activateUrl}<br />
 <br />
 Muchas gracias por su interés.]]></body>
 		<description/>
@@ -713,7 +629,7 @@ Información de membresía (si proporcionada):<br />
 <br />
 Para ver o editar esta suscripción, por favor use la siguiente url:<br />
 <br />
-URL para gestionar la Suscripción: <a href="{$subscriptionUrl}">{$subscriptionUrl}</a>]]></body>
+URL para gestionar la Suscripción: {$subscriptionUrl}]]></body>
 		<description>Este correo notifica al Gestor de Suscripciones de que una Suscripción Institucional ha sido renovada online. Provee de información resumida de la suscripción y de un enlace deacceso rápido a la suscripción renovada.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_RENEW_INDL">
@@ -731,7 +647,7 @@ Información de Membresía (si proporcionada):<br />
 <br />
 Para ver o editar esta suscripción use la siguiente URL:<br />
 <br />
-URL para gestionar la subscripción: <a href="{$subscriptionUrl}">{$subscriptionUrl}</a>]]></body>
+URL para gestionar la subscripción: {$subscriptionUrl}]]></body>
 		<description>Este email notifica al Gestor de Suscripciones de que una suscripción Individual se ha renovado online. Provee de información resumida sobre la suscripción y de un enlace de acceso rápido a la suscripción renovada.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_ACCEPT">
@@ -793,7 +709,7 @@ Información de Membresía (si proporcionada):<br />
 <br />
 Para ver o editar esta suscripción, use la siguiente URL.<br />
 <br />
-URL de la suscripción: <a href="{$subscriptionUrl}">{$subscriptionUrl}</a>]]></body>
+URL de la suscripción: {$subscriptionUrl}]]></body>
 		<description>Este correo notifica al Gestor de Suscripciones que una suscripción individual ha sido comprada online. Proporciona de un resumen de la información sobre la suscripción y un acceso rápido al enlace de la suscripción comprada.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_PURCHASE_INSTL">
@@ -821,7 +737,7 @@ Información de Membresía (si proporcionada):<br />
 <br />
 Para ver o editar esta suscripción, use el siguiente enlace.<br />
 <br />
-Enlace de la suscripción: <a href="{$subscriptionUrl}">{$subscriptionUrl}</a>]]></body>
+Enlace de la suscripción: {$subscriptionUrl}]]></body>
 		<description>Este correo notifica al Gestor de Suscripciones de que una suscripción institucional ha sido comprada online. Proporciona información resumida sobre la suscripción y un enlace rápido a la suscripción comprada.</description>
 	</email_text>
 	<email_text key="CITATION_EDITOR_AUTHOR_QUERY">
@@ -886,7 +802,7 @@ En breve recibirá un correo electrónico de seguimiento con los detalles de acc
 {$giftDetails}<br />
 <br />
 <br />
-Para obtener su regalo solo tiene que ingresar en la página web de la revista <a href="{$giftUrl}">{$giftUrl}</a><br />
+Para obtener su regalo solo tiene que ingresar en la página web de la revista {$giftUrl}<br />
 <br />
 Usuario: {$username}<br />
 <br />
@@ -904,7 +820,7 @@ Usuario: {$username}<br />
 {$giftDetails}<br />
 <br />
 <br />
-Para obtener su regalo solo tiene que ingresar en la página web de la revista <a href="{$giftUrl}">{$giftUrl}</a><br />
+Para obtener su regalo solo tiene que ingresar en la página web de la revista {$giftUrl}<br />
 <br />
 Usuario: {$username}<br />
 Contraseña: {$password}<br />
@@ -955,7 +871,7 @@ Inicie sesión en el sitio web de la revista antes del {$responseDueDate} para i
 <br />
 La fecha límite para entregar la revisión es el {$reviewDueDate}.<br />
 <br />
-URL del envío: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+URL del envío: {$submissionReviewUrl}<br />
 <br />
 Gracias por considerar esta solicitud.<br />
 <br />
@@ -973,13 +889,13 @@ Le recordamos nuestra petición acerca de la revisión del envío &quot;{$submis
 <br />
 El resumen del envío se ha insertado a continuación. Creemos que sería un excelente revisor para este artículo, por lo que esperamos que reconsidere llevar a cabo esta importante tarea para nosotros.<br />
 <br />
-Por favor, ingrese en la página web de la revista para indicar si realizará o no la revisión, y en caso afirmativo para acceder al envío y registrar su revisión y su recomendación. El sitio web es <a href="{$contextUrl}">{$contextUrl}</a><br />
+Por favor, ingrese en la página web de la revista para indicar si realizará o no la revisión, y en caso afirmativo para acceder al envío y registrar su revisión y su recomendación. El sitio web es {$contextUrl}<br />
 <br />
 La fecha límite para la revisión es el {$reviewDueDate}.<br />
 <br />
-Si no dispone de un nombre de usuario/a y contraseña para el sitio web de la revista, puede hacer clic en este enlace para restablecer su contraseña (se la enviaremos junto con su nombre de usuario/a). <a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
+Si no dispone de un nombre de usuario/a y contraseña para el sitio web de la revista, puede hacer clic en este enlace para restablecer su contraseña (se la enviaremos junto con su nombre de usuario/a). {$passwordResetUrl}<br />
 <br />
-URL del envío: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+URL del envío: {$submissionReviewUrl}<br />
 <br />
 Gracias por considerar esta petición.<br />
 <br />
@@ -1001,7 +917,7 @@ Por favor, ingrese en la página web de la revista para indicar si realizará o 
 <br />
 La fecha límite para la revisión es el {$reviewDueDate}.<br />
 <br />
-URL del envío: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+URL del envío: {$submissionReviewUrl}<br />
 <br />
 Gracias por considerar esta petición.<br />
 <br />
@@ -1020,13 +936,13 @@ Este correo es en referencia al manuscrito &quot;{$submissionTitle},&quot;, que 
 <br />
 Después de la revisión de la versión previa del manuscrito, los autores/as han enviado una versión revisada de su artículo. Le agradeceríamos mucho si pudiera ayudarnos a evaluarla.<br />
 <br />
-Inicie sesión en el sitio web de la revista antes del {$responseDueDate} para indicar si llevará a cabo la revisión o no, además de para obtener acceso al envío y registrar su revisión y recomendación. El sitio web es <a href="{$contextUrl}">{$contextUrl}</a><br />
+Inicie sesión en el sitio web de la revista antes del {$responseDueDate} para indicar si llevará a cabo la revisión o no, además de para obtener acceso al envío y registrar su revisión y recomendación. El sitio web es {$contextUrl}<br />
 <br />
 La fecha límite para entregar la revisión es el {$reviewDueDate}.<br />
 <br />
-Si no dispone de un nombre de usuario/a y contraseña para el sitio web de la revista, puede hacer clic en este enlace para restablecer su contraseña (se la enviaremos junto con su nombre de usuario/a). <a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
+Si no dispone de un nombre de usuario/a y contraseña para el sitio web de la revista, puede hacer clic en este enlace para restablecer su contraseña (se la enviaremos junto con su nombre de usuario/a). {$passwordResetUrl}<br />
 <br />
-URL del envío: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+URL del envío: {$submissionReviewUrl}<br />
 <br />
 Gracias por considerar esta solicitud.<br />
 <br />

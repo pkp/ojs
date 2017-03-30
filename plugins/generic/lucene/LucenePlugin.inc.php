@@ -723,7 +723,9 @@ class LucenePlugin extends GenericPlugin {
 	}
 
 	/**
-	 * @see Form::execute()
+	 * Callback for execution upon section form save
+	 * @param $hookName string
+	 * @param $params array
 	 */
 	function callbackSectionFormExecute($hookName, $params) {
 		// Convert the ranking boost option back into a ranking boost factor.

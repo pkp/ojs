@@ -63,7 +63,7 @@ class OJSSwordDeposit {
 		$this->section = $sectionDao->getById($article->getSectionId());
 
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-		$publishedArticle = $publishedArticleDao->getPublishedArticleByArticleId($article->getId());
+		$publishedArticle = $publishedArticleDao->getByArticleId($article->getId());
 
 		$issueDao = DAORegistry::getDAO('IssueDAO');
 		if ($publishedArticle) {

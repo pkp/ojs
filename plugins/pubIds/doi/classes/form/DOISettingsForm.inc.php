@@ -82,6 +82,18 @@ class DOISettingsForm extends Form {
 			__('plugins.pubIds.doi.manager.settings.doiReassign'),
 			'delete'
 		));
+		$this->setData('assignJournalWidePubIdsLinkAction', new LinkAction(
+			'assignDOIs',
+			new RemoteActionConfirmationModal(
+				$request->getSession(),
+				__('plugins.pubIds.doi.manager.settings.doiAssignJournalWide.confirm'),
+				__('plugins.pubIds.doi.manager.settings.doiAssignJournalWide'),
+				$request->url(null, null, 'manage', null, array('verb' => 'assignPubIds', 'plugin' => $plugin->getName(), 'category' => 'pubIds')),
+				'modal_confirm'
+			),
+			__('plugins.pubIds.doi.manager.settings.doiAssignJournalWide'),
+			'advance'
+		));
 		$this->setData('pluginName', $plugin->getName());
 	}
 
@@ -108,7 +120,7 @@ class DOISettingsForm extends Form {
 	}
 
 	/**
-	 * @copydoc Form::execute()
+	 * Execute the form.
 	 */
 	function execute() {
 		$plugin = $this->_getPlugin();

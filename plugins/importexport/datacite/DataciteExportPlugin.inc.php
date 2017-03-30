@@ -413,7 +413,7 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin {
 				$article = $cache->get('articles', $articleId);
 			} else {
 				$articleDao = DAORegistry::getDAO('PublishedArticleDAO'); /* @var $articleDao PublishedArticleDAO */
-				$article = $articleDao->getPublishedArticleByArticleId($articleId, $context->getId(), true);
+				$article = $articleDao->getByArticleId($articleId, $context->getId(), true);
 			}
 			assert(is_a($article, 'PublishedArticle'));
 		}

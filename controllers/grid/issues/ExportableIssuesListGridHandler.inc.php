@@ -66,7 +66,8 @@ class ExportableIssuesListGridHandler extends IssueGridHandler {
 	 */
 	function initFeatures($request, $args) {
 		import('lib.pkp.classes.controllers.grid.feature.selectableItems.SelectableItemsFeature');
-		return array(new SelectableItemsFeature());
+		import('lib.pkp.classes.controllers.grid.feature.PagingFeature');
+		return array(new SelectableItemsFeature(), new PagingFeature());
 	}
 
 	/**

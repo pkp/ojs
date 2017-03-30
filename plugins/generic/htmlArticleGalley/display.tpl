@@ -22,7 +22,7 @@
 			</span>
 		</a>
 
-		<a href="{url page="article" op="view" path=$article->getBestArticleId()|to_array:$galley->getBestGalleyId()}" class="title">
+		<a href="{url page="article" op="view" path=$article->getBestArticleId()}" class="title">
 			{$article->getLocalizedTitle()|escape}
 		</a>
 	</header>

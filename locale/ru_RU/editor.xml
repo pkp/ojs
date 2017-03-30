@@ -96,6 +96,7 @@
 	<message key="editor.issues.preview">Предварительный просмотр</message>
 	<message key="editor.issues.confirmPublish">Вы уверены, что хотите опубликовать новый выпуск?</message>
 	<message key="editor.issues.confirmUnpublish">Вы уверены, что хотите отменить публикацию этого опубликованного выпуска?</message>
+	<message key="editor.issues.confirmSetCurrentIssue">Вы уверены, что хотите сделать этот выпуск текущим?</message>
 	<message key="editor.issues.publicArticleIdExists">Не могу сохранить открытый идентификатор для статьи:</message>
 	<message key="editor.issues.noLiveIssues">Нет опубликованных выпусков</message>
 	<message key="editor.issues.open">Открыть</message>
@@ -119,6 +120,7 @@
 	<message key="grid.action.viewIssue">Показать</message>
 	<message key="grid.action.previewIssue">Предварительный просмотр</message>
 	<message key="grid.action.addIssueGalley">Создать гранку выпуска</message>
+	<message key="grid.action.setCurrentIssue">Задать текущий выпуск</message>
 	<message key="editor.navigation.issueArchive">Старые выпуски</message>
 	<message key="editor.article.designateReviewVersion">Обозначить оригинальный файл как версию для рецензирования</message>
 	<message key="editor.article.uploadReviewVersion">Загрузить переработанную версию для рецензирования</message>

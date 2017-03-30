@@ -33,7 +33,9 @@ class InitiateExternalReviewForm extends EditorDecisionForm {
 	// Implement protected template methods from Form
 	//
 	/**
-	 * @copydoc Form::execute()
+	 * Execute the form.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
 	function execute($args, $request) {
 		// Retrieve the submission.

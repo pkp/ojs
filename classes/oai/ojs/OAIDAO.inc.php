@@ -50,10 +50,10 @@ class OAIDAO extends PKPOAIDAO {
 	}
 
 	/**
-	 * @see lib/pkp/classes/oai/PKPOAIDAO::getEarliestDatestamp()
+	 * @copydoc PKPOAIDAO::getEarliestDatestampQuery()
 	 */
-	function getEarliestDatestamp($setIds = array()) {
-		return parent::getEarliestDatestamp('SELECT	CASE WHEN COALESCE(dot.date_deleted, a.last_modified) > i.last_modified THEN i.last_modified ELSE COALESCE(dot.date_deleted, a.last_modified) END', $setIds);
+	function getEarliestDatestampQuery() {
+		return 'SELECT CASE WHEN COALESCE(dot.date_deleted, a.last_modified) > i.last_modified THEN i.last_modified ELSE COALESCE(dot.date_deleted, a.last_modified) END';
 	}
 
 	/**
@@ -233,7 +233,7 @@ class OAIDAO extends PKPOAIDAO {
 		$record->sets = array(urlencode($journal->getPath()) . ':' . urlencode($section->getLocalizedAbbrev()));
 
 		if ($isRecord) {
-			$publishedArticle = $this->publishedArticleDao->getPublishedArticleByArticleId($articleId);
+			$publishedArticle = $this->publishedArticleDao->getByArticleId($articleId);
 			$issue = $this->getIssue($row['issue_id']);
 			$galleys = $this->articleGalleyDao->getBySubmissionId($articleId)->toArray();
 
