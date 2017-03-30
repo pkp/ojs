@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/en_US/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.generic.navigationMenus.displayName">navigationMenu Plugin</message>
+	<message key="plugins.generic.navigationMenus.description">This plugin allows navigationMenu Content Management.</message>
+	<message key="plugins.generic.navigationMenus.navigationMenus">navigationMenu</message>
+	<message key="plugins.generic.navigationMenus.pageTitle">Title</message>
+	<message key="plugins.generic.navigationMenus.content">Content</message>
+
+	<message key="plugins.generic.navigationMenus.path">Path</message>
+	<message key="plugins.generic.navigationMenus.requirement.tinymce"><![CDATA[<p><strong>The TinyMCE Plugin must be installed and enabled in order to add/edit content.</strong></p>]]></message>
+
+	<message key="plugins.generic.navigationMenus.editAddContent">Edit/Add Content</message>
+
+	<message key="plugins.generic.navigationMenus.addNavigationMenu">Add navigationMenu</message>
+	<message key="plugins.generic.navigationMenus.addNewPage">Add New navigationMenu</message>
+	<message key="plugins.generic.navigationMenus.editNavigationMenu">Edit navigationMenu</message>	
+	<message key="plugins.generic.navigationMenus.noneCreated">No navigationMenu have been created.</message>
+
+	<message key="plugins.generic.navigationMenus.settingInstructions">The form below shows you all the navigationMenu you have created.  You can edit or delete the navigationMenu using the links on the right-hand side.</message>
+	<message key="plugins.generic.navigationMenus.editInstructions">Use the form below to add/edit navigationMenu content.</message>
+	<message key="plugins.generic.navigationMenus.pathRegEx">The path field must contain only alphanumeric characters plus '.', '/', '-', and '_'.</message>
+	<message key="plugins.generic.navigationMenus.viewInstructions"><![CDATA[<p>This page will be accessible at: <blockquote>{$pagesPath}</blockquote>...where %PATH% is the path entered above. <strong>Note:</strong> No two pages can have the same path. Using paths that are built into the system may cause you to lose access to important functions.</p>]]></message>
+	<message key="plugins.generic.navigationMenus.duplicatePath">This path already exists for another navigationMenu.</message>
+	
+	<message key="plugins.generic.navigationMenus.pageSaved">navigationMenu successfully saved.</message>
+	<message key="plugins.generic.navigationMenus.pageDeleted">navigationMenu successfully deleted.</message>
+	
+	<message key="plugins.generic.navigationMenus.noneExist">No navigationMenu have been created</message>
+</locale>
