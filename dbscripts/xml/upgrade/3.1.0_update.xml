@@ -60,5 +60,10 @@
 	<sql><!-- pkp/pkp-lib#2258 -->
 		<query>UPDATE filter_groups SET output_type = 'xml::schema(https://www.crossref.org/schemas/crossref4.3.6.xsd)' WHERE output_type = 'xml::schema(http://www.crossref.org/schema/deposit/crossref4.3.6.xsd)'</query>
 	</sql>
+	<sql><!-- pkp/pkp-lib#2401 -->
+		<!-- submissionEditingUrl becomes submissionUrl -->
+		<query>UPDATE email_templates_default_data SET body=REPLACE(body, '{$submissionEditingUrl}', '{$submissionUrl}'), subject=REPLACE(subject, '{$submissionEditingUrl}', '{$submissionUrl}')</query>
+		<query>UPDATE email_templates_data SET body=REPLACE(body, '{$submissionEditingUrl}', '{$submissionUrl}'), subject=REPLACE(subject, '{$submissionEditingUrl}', '{$submissionUrl}')</query>
+	</sql>
 </data>
 

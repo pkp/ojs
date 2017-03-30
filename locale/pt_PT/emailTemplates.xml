@@ -236,7 +236,7 @@ Agradecemos a sua contribuição, a qual é fundamental para garantir a qualidad
 <br />
 A submissão &quot;{$submissionTitle}&quot; a {$contextName} foi-lhe designada para acompanhamento durante o processo editorial, como parte das suas funções como Editor de Secção.<br />
 <br />
-URL da Submissão: {$submissionEditingUrl}<br />
+URL da Submissão: {$submissionUrl}<br />
 Nome de utilizador: {$editorUsername}<br />
 <br />
 Agradecendo desde já a sua atenção,<br />
@@ -476,133 +476,6 @@ Agradecemos desde já a sua colaboração, fundamental para a qualidade da revis
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Mensagem enviada pelo Editor de Secção solicitando a realização de uma tarefa de edição ao Editor de Texto, com informações sobre e como aceder ao documento.</description>
-	</email_text>
-	<email_text key="COPYEDIT_COMPLETE">
-		<subject>Edição de texto concluída</subject>
-		<body><![CDATA[{$editorialContactName},<br />
-<br />
-A edição do texto do artigo &quot;{$submissionTitle}&quot;, submetido à revista {$contextName} foi concluída. Para verificar as sugestões e responder às Perguntas ao Autor, siga os passos a seguir:<br />
-<br />
-1. Aceda ao sistema da revista através da URL indicada nesta mensagem, com o nome de utilizador e a senha criadas no acto do registo (use a opção Esqueci a senha, caso necessário).<br />
-2. Clique no ficheiro disponível no passo 1 &quot;Edição de Texto inicial&quot; e abra a versão editada.<br />
-3. Avalie as sugestões, usando o Controlo de Alterações do Word, e responda às perguntas.<br />
-4. Guarde o ficheiro no seu computador e envie no passo 2 &quot;Edição de Texto do autor&quot;.<br />
-5. Clique no ícone de email sob CONCLUÍDO e envie a mensagem ao editor.<br />
-<br />
-Esta é a última oportunidade para realizar alterações substanciais no documento. Em etapa posterior, lhe será solicitada a leitura de prova das composições finais, onde será possível solicitar apenas pequenas correcções de redacção e visual.<br />
-<br />
-URL da submissão: {$submissionEditingUrl}<br />
-<br />
-Caso não esteja disponível para realizar esta tarefa ou em caso de dúvidas, entre em contacto através deste email.<br />
-<br />
-Agradecendo a atenção dispensada,<br />
-{$participantName}]]></body>
-		<description>Mensagem enviada pelo Editor de Texto ao Editor de Secção, informando da conclusão da tarefa editorial.</description>
-	</email_text>
-	<email_text key="COPYEDIT_ACK">
-		<subject>Agradecimento pela edição de texto</subject>
-		<body><![CDATA[{$participantName},<br />
-<br />
-Agradecemos a conclusão da edição do texto do manuscrito &quot;{$submissionTitle}&quot;, submetido à revista {$contextName}.<br />
-<br />
-A sua contribuição é fundamental para a qualidade desta publicação.<br />
-<br />
-Obrigado,<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Mensagem enviada pelo Editor de Secção ao Editor de Texto, agradecendo pela conclusão da tarefa editorial.</description>
-	</email_text>
-	<email_text key="COPYEDIT_AUTHOR_REQUEST">
-		<subject>Pedido de avaliação da edição de texto</subject>
-		<body><![CDATA[{$authorName},<br />
-<br />
-Concluímos a Edição de Texto inicial do seu manuscrito &quot;{$submissionTitle}&quot;, submetido à revista {$contextName}. Avalie o trabalho realizado conforme os passos a seguir:<br />
-<br />
-1. Clique no URL da submissão, informado mais adiante nesta mensagem.<br />
-2. Aceda ao sistema e clique no ficheiro que aparece no Passo 1.<br />
-3. Abra o ficheiro transferido.<br />
-4. Avalie o texto, incluindo as propostas de alteração e as Perguntas ao Autor.<br />
-5. Realize as alterações necessárias para melhor ainda mais a qualidade do trabalho.<br />
-6. Após concluída a revisão, envie o ficheiro no Passo 2.<br />
-7. Clique em METADADOS para verificar a qualidade da indexação do documento.<br />
-8. Envie o e-mail de CONCLUÍDO ao editor e ao editor de texto.<br />
-<br />
-URL da submissão: {$submissionUrl}<br />
-<br />
-Esta é a última oportunidade para realizar alterações substanciais no documento. Em etapa posterior, lhe será solicitada a leitura de prova das composições finais, onde será possível solicitar apenas pequenas correcções de redacção e visual.<br />
-<br />
-Caso não esteja disponível para assumir esta responsabilidade no momento, ou em caso de dúvidas, entre em contacto através deste email.<br />
-<br />
-Agradecemos desde já a sua colaboração, fundamental para a qualidade da revista.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Mensagem enviada pelo Editor de Secção ao autor, solicitando que verifique o trabalho realizado pelo Editor de Texto, com informações sobre acesso e avisando que é a última chance de realizar modificações no texto.</description>
-	</email_text>
-	<email_text key="COPYEDIT_AUTHOR_COMPLETE">
-		<subject>Avaliação da edição de texto concluída</subject>
-		<body><![CDATA[{$editorialContactName},<br />
-<br />
-Concluí a avaliação da edição do texto do manuscrito &quot;{$submissionTitle}&quot;, submetido à revista {$contextName}, a qual está pronta para a edição de texto final e preparação das composições.<br />
-<br />
-Agradeço as contribuições para a melhoria do manuscrito.<br />
-<br />
-Obrigado,<br />
-<br />
-{$authorName}]]></body>
-		<description>Mensagem enviada pelo Autor ao Editor de Secção, informando da conclusão da avaliação da edição de texto e que o documento está pronto para composição e layout.</description>
-	</email_text>
-	<email_text key="COPYEDIT_AUTHOR_ACK">
-		<subject>Agradecimento pela avaliação da edição de texto</subject>
-		<body><![CDATA[{$authorName},<br />
-<br />
-Agradecemos a sua avaliação da edição do texto do manuscrito &quot;{$submissionTitle}&quot;, submetido à revista {$contextName}. Em breve o seu trabalho estará pronto para publicação.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Mensagem enviada pelo Editor de Secção ao autor, agradecendo pela avaliação da Edição de Texto.</description>
-	</email_text>
-	<email_text key="COPYEDIT_FINAL_REQUEST">
-		<subject>Avaliação da edição de texto final</subject>
-		<body><![CDATA[{$participantName},<br />
-<br />
-O autor e o editor concluíram a avaliação da edição do texto do manuscrito &quot;{$submissionTitle}&quot;, submetido à revista {$contextName}. A versão final deeverá ser preparada para envio ao Layout, conforme os passos a seguir:<br />
-<br />
-1. Clique no link da submissão, indicado mais adiante nesta mensagem.<br />
-2. Aceda ao sistema da revista e clique no ficheiro disponível no Passo 2.<br />
-3. Abra o ficheiro transferido e incorpore todas as alterações e respostas a questionamentos necessárias.<br />
-4. Salve como versão vinal e envie para o Passo 3 da Edição.<br />
-5. Clique em METADADOS para avaliar a qualidade da indexação do documento (salvando quaisquer alterações).<br />
-6. Envie o email CONCLUÍDO ao editor.<br />
-<br />
-URL da revista {$contextName}: {$contextUrl}<br />
-URL da submissão: {$submissionUrl}<br />
-Nome de utilizador: {$participantUsername}<br />
-<br />
-Em nome da Equipe Editorial, agradeço a sua colaboração para a qualidade desta publicação,<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Mensagem enviada pelo Editor de Secção ao Editor de Texto, solicitando que realize a última Edição de Texto, com informações sobre acesso.</description>
-	</email_text>
-	<email_text key="COPYEDIT_FINAL_COMPLETE">
-		<subject>Avaliação final da edição de texto concluída</subject>
-		<body><![CDATA[{$editorialContactName},<br />
-<br />
-Concluí a edição da versão final do manuscrito &quot;{$submissionTitle}&quot;, submetido a {$contextName}, a qual está pronta para preparação das composições.<br />
-<br />
-{$participantName}]]></body>
-		<description>Mensagem enviada pelo Editor de Texto ao Editor de Secção, solicitando que verifique o trabalho realizado pelo Editor de Texto, com informações sobre acesso e avisando que é a última chance de realizar modificações no texto.</description>
-	</email_text>
-	<email_text key="COPYEDIT_FINAL_ACK">
-		<subject>Agradecimento pela avaliação final da edição de texto</subject>
-		<body><![CDATA[{$participantName},<br />
-<br />
-Agradecemos a conclusão da edição do texto do manuscrito &quot;{$submissionTitle}&quot;, submetido à revista {$contextName}.<br />
-<br />
-A preparação da versão final para composição é uma etapa fundamental do processo editorial.<br />
-<br />
-Agradecendo mais uma vez pela sua contribuição,<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Mensagem enviada pelo Editor de Secção ao Editor de Texto, agradecendo pela conclusão da última Edição de Texto solicitada.</description>
 	</email_text>
 	<email_text key="LAYOUT_REQUEST">
 		<subject>Pedido de composições</subject>
