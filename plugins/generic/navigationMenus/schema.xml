@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE schema SYSTEM "../../../lib/pkp/dtd/xmlSchema.dtd">
+
+<!--
+  * schema.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * NavigationMenus plugin schema in XML.
+  *
+  -->
+
+<schema version="0.2">
+	<!--
+	 *
+	 * TABLE navigation_menus
+	 *
+	 -->
+	<table name="navigation_menus">
+		<field name="navigation_menu_id" type="I8">
+			<KEY/>
+			<AUTOINCREMENT/>
+		</field>
+		<field name="path" type="C2" size="255">
+			<NOTNULL/>
+		</field>
+		<field name="context_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="seq" type="I8">
+			<DEFAULT VALUE="0"/>
+			<NOTNULL/>
+		</field>
+		<field name="assoc_id" type="I8">
+			<DEFAULT VALUE="0"/>
+			<NOTNULL/>
+		</field>
+		<descr>List of navigation menus for each context</descr>
+	</table>
+
+	<!--
+	  *
+	  * TABLE navigation_menu_settings
+	  *
+	  -->
+	<table name="navigation_menu_settings">
+		<field name="navigation_menu_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="locale" type="C2" size="5">
+			<NOTNULL/>
+			<DEFAULT VALUE=""/>
+		</field>
+		<field name="setting_name" type="C2" size="255">
+			<NOTNULL/>
+		</field>
+		<field name="setting_value" type="XL"/>
+		<field name="setting_type" type="C2" size="6">
+			<NOTNULL/>
+			<descr>(bool|int|float|string|object)</descr>
+		</field>
+		<descr>navigation menu settings.</descr>
+		<index name="navigation_menu_settings_navigation_menu_id">
+			<col>navigation_menu_id</col>
+		</index>
+		<index name="navigation_menu_settings_pkey">
+			<col>navigation_menu_id</col>
+			<col>locale</col>
+			<col>setting_name</col>
+			<UNIQUE />
+		</index>
+	</table>
+</schema>
