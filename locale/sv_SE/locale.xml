@@ -103,7 +103,7 @@
 	<message key="article.suppFile">Tilläggsfil</message>
 	<message key="article.suppFiles">Tilläggsfil (er)</message>
 	<message key="article.suppFilesAbbrev">Tilläggsfil (er)</message>
-	<message key="article.discipline">Ämnen och underdicipliner</message>
+	<message key="article.discipline">Ämnen och underdiscipliner</message>
 	<message key="article.subjectClassification">Ämnesklassificering</message>
 	<message key="article.subject">Nyckelord</message>
 	<message key="article.coverage">Täckning</message>
@@ -882,7 +882,7 @@ Din server stöttas för tillfället av mbstring: <strong>{$supportsMBString}</s
 	<!-- RT Settings -->
 	<message key="rt.admin.settings">Val för läsverktyg</message>
 
-	<message key="rt.admin.settings.description">Läsverktygen kommer att visas i en ram vid sidan av det publicerade materialet i de sektioner av tidskriften som stöder indexering. Läsverktygen består av en uppsättning valfria verktyg som hör till det publicerade materialet, (se nedan), och en uppsättning verktyg som ger tillgång till relaterad information, organiserad enligt ämne och diciplin.</message>
+	<message key="rt.admin.settings.description">Läsverktygen kommer att visas i en ram vid sidan av det publicerade materialet i de sektioner av tidskriften som stöder indexering. Läsverktygen består av en uppsättning valfria verktyg som hör till det publicerade materialet, (se nedan), och en uppsättning verktyg som ger tillgång till relaterad information, organiserad enligt ämne och disciplin.</message>
 	<message key="rt.admin.settings.enableReadingTools">Aktivera Läsverktyg för valda sektioner av tidskriften.</message>
 	<message key="rt.admin.settings.relatedItems">Fält</message>
 	<message key="rt.admin.settings.relatedItemsLink"><![CDATA[See <a href="{$relatedItemsLink}" class="action">Inställningar för Relaterat material</a> för att visa, lägga till, korrigera, eller radera information från respektive fält.]]></message>
