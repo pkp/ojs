@@ -81,7 +81,7 @@
        <message key="manager.people.allSiteUsers">Надати роль у цьому журналі користувачу, зареєстрованому на сайті</message>
        <message key="manager.people.showNoRole">Показати користувачів, які не мають ролей</message>
        <message key="manager.people.allUsers">Всі користувачі, які мають ролі</message>
-       <messae key="manager.people.confirmRemove">Видалити цього користувача з цього журналу? Ця дія скасує всі призначення користувача в межах цього журналу.</messae>
+       <message key="manager.people.confirmRemove">Видалити цього користувача з цього журналу? Ця дія скасує всі призначення користувача в межах цього журналу.</message>
        <message key="manager.people.emailUsers.selectTemplate">Обрати шаблон</message>
        <message key="manager.people.enrollExistingUser">Надати нову роль існуючому користувачу</message>
        <message key="manager.people.enrollSyncJournal">З журналом</message>
