@@ -18,7 +18,7 @@ class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat {
 	/**
 	 * @see OAIMetadataFormat#toXml
 	 */
-	function toXml(&$record, $format = null) {
+	function toXml($record, $format = null) {
 		$article =& $record->getData('article');
 		$journal =& $record->getData('journal');
 		$section =& $record->getData('section');

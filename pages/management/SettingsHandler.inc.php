@@ -46,7 +46,7 @@ class SettingsHandler extends ManagementHandler {
 		switch($path) {
 			case 'index':
 			case '':
-			case 'journal':
+			case 'context':
 				$this->journal($args, $request);
 				break;
 			case 'website':

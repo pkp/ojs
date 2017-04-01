@@ -105,7 +105,7 @@ class DataciteXmlFilter extends NativeExportFilter {
 				$article = $cache->get('articles', $articleId);
 			} else {
 				$articleDao = DAORegistry::getDAO('PublishedArticleDAO'); /* @var $articleDao PublishedArticleDAO */
-				$article = $articleDao->getPublishedArticleByArticleId($pubObject->getSubmissionId(), $context->getId());
+				$article = $articleDao->getByArticleId($pubObject->getSubmissionId(), $context->getId());
 				if ($article) $cache->add($article, null);
 			}
 		}

@@ -129,7 +129,7 @@ class LDAPAuthPlugin extends AuthPlugin {
 	 * @param $user User to update
 	 * @return boolean true if successful
 	 */
-	function getUserInfo(&$user) {
+	function getUserInfo($user) {
 		$valid = false;
 		if ($this->open()) {
 			if ($entry = $this->getUserEntry($user->getUsername())) {
@@ -147,7 +147,7 @@ class LDAPAuthPlugin extends AuthPlugin {
 	 * @param $user User to store
 	 * @return boolean true if successful
 	 */
-	function setUserInfo(&$user) {
+	function setUserInfo($user) {
 		$valid = false;
 		if ($this->open()) {
 			if ($entry = $this->getUserEntry($user->getUsername())) {
@@ -187,7 +187,7 @@ class LDAPAuthPlugin extends AuthPlugin {
 	 * @param $user User to create
 	 * @return boolean true if successful
 	 */
-	function createUser(&$user) {
+	function createUser($user) {
 		$valid = false;
 		if ($this->open()) {
 			if (!($entry = $this->getUserEntry($user->getUsername()))) {

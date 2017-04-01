@@ -28,7 +28,7 @@ class OAIMetadataFormat_NLM extends OAIMetadataFormat {
 	 *  In Isabelle's mapping document:
 	 *   Article order in the issue's Table of Contents
 	 */
-	function toXml(&$record, $format = null) {
+	function toXml($record, $format = null) {
 		$article =& $record->getData('article');
 		$journal =& $record->getData('journal');
 		$section =& $record->getData('section');

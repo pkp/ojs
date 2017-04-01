@@ -1289,7 +1289,7 @@ class SolrWebService extends XmlWebService {
 		foreach($articles as $article) {
 			if (!is_a($article, 'PublishedArticle')) {
 				// Try to upgrade the article to a published article.
-				$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($article->getId());
+				$publishedArticle =& $publishedArticleDao->getByArticleId($article->getId());
 				if (is_a($publishedArticle, 'PublishedArticle')) {
 					unset($article);
 					$article =& $publishedArticle;

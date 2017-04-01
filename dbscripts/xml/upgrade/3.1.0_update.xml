@@ -17,5 +17,53 @@
 	<sql><!-- #2173 set the missing response due dates to review due dates -->
 		<query>UPDATE review_assignments SET date_response_due = date_due WHERE date_response_due IS NULL</query>
 	</sql>
+	<sql><!-- pkp/pkp-lib#2310: Move plugins to unified sidebar upon upgrade -->
+		<query>UPDATE plugin_settings SET setting_value=1 WHERE setting_name='context' AND plugin_name LIKE '%BlockPlugin'</query><!-- 1 is BLOCK_CONTEXT_SIDEBAR -->
+	</sql>
+	<sql><!-- pkp/pkp-lib#2151: set viewable = 1 for submission files (migrated from 2.4.x) -->
+		<query>UPDATE submission_files SET viewable = 1 WHERE file_stage = 2 AND viewable = 0</query><!-- 2 is SUBMISSION_FILE_SUBMISSION -->
+	</sql>
+	<sql>
+		<!--pkp/pkp-lib#2064: update the already existing <a href="{$url}">{$url}</a> pattern to {$url}-->
+		<!--<a href="{$activateUrl}">{$activateUrl}</a>-->
+		<query>UPDATE email_templates_default_data SET body=REPLACE(body, '&lt;a href=&quot;{$activateUrl}&quot;&gt;{$activateUrl}&lt;/a&gt;', '{$activateUrl}')</query>
+		<query>UPDATE email_templates_data SET body=REPLACE(body, '&lt;a href=&quot;{$activateUrl}&quot;&gt;{$activateUrl}&lt;/a&gt;', '{$activateUrl}')</query>
+		<!--<a href="{$url}">{$url}</a>-->
+		<query>UPDATE email_templates_default_data SET body=REPLACE(body, '&lt;a href=&quot;{$url}&quot;&gt;{$url}&lt;/a&gt;', '{$url}')</query>
+		<query>UPDATE email_templates_data SET body=REPLACE(body, '&lt;a href=&quot;{$url}&quot;&gt;{$url}&lt;/a&gt;', '{$url}')</query>
+		<!--<a href="{$contextUrl}">{$contextUrl}</a>-->
+		<query>UPDATE email_templates_default_data SET body=REPLACE(body, '&lt;a href=&quot;{$contextUrl}&quot;&gt;{$contextUrl}&lt;/a&gt;', '{$contextUrl}')</query>
+		<query>UPDATE email_templates_data SET body=REPLACE(body, '&lt;a href=&quot;{$contextUrl}&quot;&gt;{$contextUrl}&lt;/a&gt;', '{$contextUrl}')</query>
+		<!--<a href="{$passwordResetUrl}">{$passwordResetUrl}</a>-->
+		<query>UPDATE email_templates_default_data SET body=REPLACE(body, '&lt;a href=&quot;{$passwordResetUrl}&quot;&gt;{$passwordResetUrl}&lt;/a&gt;', '{$passwordResetUrl}')</query>
+		<query>UPDATE email_templates_data SET body=REPLACE(body, '&lt;a href=&quot;{$passwordResetUrl}&quot;&gt;{$passwordResetUrl}&lt;/a&gt;', '{$passwordResetUrl}')</query>
+		<!--<a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a>-->
+		<query>UPDATE email_templates_default_data SET body=REPLACE(body, '&lt;a href=&quot;{$submissionReviewUrl}&quot;&gt;{$submissionReviewUrl}&lt;/a&gt;', '{$submissionReviewUrl}')</query>
+		<query>UPDATE email_templates_data SET body=REPLACE(body, '&lt;a href=&quot;{$submissionReviewUrl}&quot;&gt;{$submissionReviewUrl}&lt;/a&gt;', '{$submissionReviewUrl}')</query>
+		<!--<a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a>-->
+		<query>UPDATE email_templates_default_data SET body=REPLACE(body, '&lt;a href=&quot;{$submissionLayoutUrl}&quot;&gt;{$submissionLayoutUrl}&lt;/a&gt;', '{$submissionLayoutUrl}')</query>
+		<query>UPDATE email_templates_data SET body=REPLACE(body, '&lt;a href=&quot;{$submissionLayoutUrl}&quot;&gt;{$submissionLayoutUrl}&lt;/a&gt;', '{$submissionLayoutUrl}')</query>
+		<!--<a href="{$articleUrl}">{$articleUrl}</a></a>-->
+		<query>UPDATE email_templates_default_data SET body=REPLACE(body, '&lt;a href=&quot;{$articleUrl}&quot;&gt;{$articleUrl}&lt;/a&gt;', '{$articleUrl}')</query>
+		<query>UPDATE email_templates_data SET body=REPLACE(body, '&lt;a href=&quot;{$articleUrl}&quot;&gt;{$articleUrl}&lt;/a&gt;', '{$articleUrl}')</query>
+		<!--<a href="{$subscriptionUrl}">{$subscriptionUrl}</a>-->
+		<query>UPDATE email_templates_default_data SET body=REPLACE(body, '&lt;a href=&quot;{$subscriptionUrl}&quot;&gt;{$subscriptionUrl}&lt;/a&gt;', '{$subscriptionUrl}')</query>
+		<query>UPDATE email_templates_data SET body=REPLACE(body, '&lt;a href=&quot;{$subscriptionUrl}&quot;&gt;{$subscriptionUrl}&lt;/a&gt;', '{$subscriptionUrl}')</query>
+		<!--<a href="{$giftUrl}">{$giftUrl}</a>-->
+		<query>UPDATE email_templates_default_data SET body=REPLACE(body, '&lt;a href=&quot;{$giftUrl}&quot;&gt;{$giftUrl}&lt;/a&gt;', '{$giftUrl}')</query>
+		<query>UPDATE email_templates_data SET body=REPLACE(body, '&lt;a href=&quot;{$giftUrl}&quot;&gt;{$giftUrl}&lt;/a&gt;', '{$giftUrl}')</query>
+	</sql>
+	<sql>
+		<!-- #2159 add missing first editor decision SUBMISSION_EDITOR_DECISION_EXTERNAL_REVIEW (changing the stage from WORKFLOW_STAGE_ID_SUBMISSION to WORKFLOW_STAGE_ID_EXTERNAL_REVIEW) for those migrated from OJS 2.4.x -->
+		<query>INSERT INTO edit_decisions (submission_id, review_round_id, stage_id, round, decision, editor_id, date_decided) SELECT DISTINCT ed.submission_id, 0, 1, 0, 8, ed.editor_id, ed.date_decided FROM edit_decisions ed JOIN (SELECT submission_id, MIN(date_decided) AS date_decided FROM edit_decisions GROUP BY submission_id) ed1 ON (ed1.submission_id = ed.submission_id) WHERE ed.stage_id = 3 AND ed1.date_decided = ed.date_decided AND NOT EXISTS (SELECT ed2.submission_id FROM edit_decisions ed2 WHERE ed2.stage_id = 1 AND ed2.decision = 8 AND ed2.submission_id = ed.submission_id)</query>
+	</sql>
+	<sql><!-- pkp/pkp-lib#2258 -->
+		<query>UPDATE filter_groups SET output_type = 'xml::schema(https://www.crossref.org/schemas/crossref4.3.6.xsd)' WHERE output_type = 'xml::schema(http://www.crossref.org/schema/deposit/crossref4.3.6.xsd)'</query>
+	</sql>
+	<sql><!-- pkp/pkp-lib#2401 -->
+		<!-- submissionEditingUrl becomes submissionUrl -->
+		<query>UPDATE email_templates_default_data SET body=REPLACE(body, '{$submissionEditingUrl}', '{$submissionUrl}'), subject=REPLACE(subject, '{$submissionEditingUrl}', '{$submissionUrl}')</query>
+		<query>UPDATE email_templates_data SET body=REPLACE(body, '{$submissionEditingUrl}', '{$submissionUrl}'), subject=REPLACE(subject, '{$submissionEditingUrl}', '{$submissionUrl}')</query>
+	</sql>
 </data>
 
