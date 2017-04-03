@@ -1106,11 +1106,4 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<message key="editor.issues.futureIssues">Future Issues</message>
 	<message key="navigation.subscriptions">Subscriptions</message>
 
-	<!-- Versioning -->
-	<message key="submissions.versions">Version History</message>
-	<message key="submissions.versionsOf">Version History of </message>
-	<message key="submissions.versions.current">Current Version</message>
-	<message key="submissions.versions.previous">Previous Versions</message>
-
-	<message key="editor.submission.newVersion">New Version</message>
 </locale>

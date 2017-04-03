@@ -199,6 +199,7 @@
 	<message key="editor.submissions.lastCompleted">Zuletzt fertiggestellt</message>
 	<message key="editor.submissions.assignedTo">Zugeteilt an</message>
 	<message key="editor.submissions.inSection">In Rubrik</message>
+	<message key="editor.article.publishVersion">Diese Version veröffentlichen</message>
 	<message key="editor.article.schedulePublication">Zur Veröffentlichung vorsehen</message>
 	<message key="editor.article.scheduleForPublication">Zur Veröffentlichung vorsehen in</message>
 	<message key="editor.article.scheduleForPublication.toBeAssigned">Muss noch zugewiesen werden</message>

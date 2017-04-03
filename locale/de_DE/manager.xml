@@ -330,6 +330,12 @@
 	<message key="manager.setup.useJournalStyleSheet">Style Sheet für die Zeitschrift</message>
 	<message key="manager.setup.userRegistration">Registrierung von Benutzer/innen</message>
 	<message key="manager.setup.useTextTitle">Titeltext</message>
+	<message key="manager.setup.versioning">Versionierung</message>
+	<message key="manager.setup.versioningEnabled.label">Artikelversionierung</message>
+	<message key="manager.setup.versioningEnabled.description">Das Aktivieren dieser Option ermöglicht das Erstellen neuer Artikelversionen. Das Deaktivieren löscht keine bereits vorhandenen alten Versionen. Sie werden nur nicht mehr auf der Artikelseite angezeigt.</message>
+	<message key="manager.setup.versioningEnabled.option">Versionierung publizierter Artikel für diese Zeitschrift aktivieren.</message>
+	<message key="manager.setup.versioningPolicy.title">Versionierungsrichtlinien</message>
+	<message key="manager.setup.versioningPolicy.description">Dieser Text wird auf einer eigenen Unterseite angezeigt. Er kann Informationen enthalten, wie die Artikelversionierung in dieser Zeitschrift gehandhabt wird.</message>
 	<message key="manager.statistics.defaultMetricDescription">
 		Ihre OJS-Installation ist so eingestellt, dass sie mehr als eine Nutzungsstatistik aufzeichnet. Nutzungsstatistiken werden in verschiedenen Kontexten angezeigt.
 		Es gibt Fälle, in denen eine einzige Nutzungsstatistik benutzt werden muss, z.B. wenn eine sortierte Liste der am häufigsten genutzten Artikel angezeigt werden soll oder um

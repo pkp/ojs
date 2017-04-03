@@ -100,6 +100,12 @@ class VersioningTabHandler extends PKPVersioningTabHandler {
 		$dispatcher = $request->getDispatcher();
 		import('lib.pkp.classes.linkAction.request.AjaxModal');
 
+		if($submissionRevision == 1){
+			$linkActionLabel = 'editor.article.schedulePublication';
+		}else{
+			$linkActionLabel = 'editor.article.publishVersion';
+		}
+
 		$schedulePublicationLinkAction = new LinkAction(
 			'schedulePublication',
 			new AjaxModal(
@@ -111,7 +117,7 @@ class VersioningTabHandler extends PKPVersioningTabHandler {
 				),
 				__('submission.issueEntry.publicationMetadata')
 			),
-			__('editor.article.publishVersion')
+			__($linkActionLabel)
 		);
 
 		$templateMgr->assign('schedulePublicationLinkAction', $schedulePublicationLinkAction);
