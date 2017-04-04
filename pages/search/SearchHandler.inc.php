@@ -29,7 +29,7 @@ class SearchHandler extends Handler {
 	 */
 	function authorize($request, &$args, $roleAssignments) {
 		import('classes.security.authorization.OjsJournalMustPublishPolicy');
-		$this->addPolicy(new OjsJournalMustPublishPolicy($request));
+		if ($request->getContext()) $this->addPolicy(new OjsJournalMustPublishPolicy($request));
 
 		return parent::authorize($request, $args, $roleAssignments);
 	}
