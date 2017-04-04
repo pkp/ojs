@@ -37,11 +37,15 @@ class OpenAIREHandler extends Handler {
                 $searchType = $request->getUserVar('searchBy');
                 $searchValue = $request->getUserVar('searchValue');
                 $projectsPage = $request->getUserVar('projectsPage');
+                
+                $itemsPerPage = Config::getVar('interface', 'items_per_page');
                 $searchResults = array();
                 $totalResults = 0;
+                
                 if ($searchValue) {
+                    
                     $queryParams = array('page'   => $projectsPage,
-                                         'size'   => 25);
+                                         'size'   => $itemsPerPage);
                     if ($searchType == 'id') {
                         $query = http_build_query(array_merge(array('grantID' => $searchValue), $queryParams));
                     } else {
@@ -116,7 +120,7 @@ class OpenAIREHandler extends Handler {
                 if ($rangeInfo->isValid()) {                                    
                     // Instantiate article iterator.
                     import('lib.pkp.classes.core.VirtualArrayIterator');
-                    $iterator = new VirtualArrayIterator($searchResults, $totalResults, $projectsPage, 25);
+                    $iterator = new VirtualArrayIterator($searchResults, $totalResults, $projectsPage, $itemsPerPage);
 
                     // Prepare and display the article template.
                     $templateMgr->assign_by_ref('searchType', $searchType);
