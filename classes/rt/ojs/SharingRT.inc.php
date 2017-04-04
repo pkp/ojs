@@ -95,7 +95,7 @@ class SharingRT {
 			$btnStyle = 'share';
 		}
 		$btnRecord = $btnStyles[$btnStyle];
-		$btnUrl = (strpos(trim($btnRecord['img']), 'http://') !== 0 ? "http://s7.addthis.com/static/btn/" : "") . $btnRecord['img'];
+		$btnUrl = (strpos(trim($btnRecord['img']), 'http://') !== 0 ? "//s7.addthis.com/static/btn/" : "") . $btnRecord['img'];
 		$btnUrl = str_replace('%lang%', SharingRT::sharingLocale($journalRt->getSharingLanguage()), $btnUrl);
 		$btnWidth = $btnRecord['w'];
 		$btnHeight = $btnRecord['h'];
