@@ -52,12 +52,16 @@ input.defaultButton {
 	border-bottom: 1px solid black;	
 }
 
-#main h2 {
+#main h2, h3 {
 	padding-left: 10px;
 }
 
 td.tocGalleys {
 	padding-right: 10px;
+}
+
+div.tocGalleys, div.tocPages {
+    padding-right: 10px;
 }
 
 #navbar {
@@ -76,3 +80,6 @@ td.tocGalleys {
 	border-top: 0px dotted #000;
 }
 
+#content h3 {
+    padding-left: 0px;
+}
