@@ -24,6 +24,7 @@
 	<message key="plugins.generic.openAIRE.projectID.description">(Il projectID è uguale al numero del Grant Agreement)</message>
 	<message key="plugins.generic.openAIRE.projectIDValid">Inserisci un projectID valido</message>
     <message key="plugins.generic.openAIRE.search">Cerca progetto</message>
+    <message key="plugins.generic.openAIRE.clear">Cancella campi</message>
     <message key="plugins.generic.openAIRE.searchBy">Cerca per</message>
     <message key="plugins.generic.openAIRE.searchByGrant">Grant Id</message>
     <message key="plugins.generic.openAIRE.searchByTitle">Titolo</message>

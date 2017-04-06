@@ -19,6 +19,15 @@
         oauthWindow.opener = self;
         return false;
     {rdelim}
+    
+    function clearFields() {ldelim}
+        document.getElementById('projectID').value = '';  
+        document.getElementById('projectTitle').value = '';  
+        document.getElementById('projectFunder').value = '';  
+        document.getElementById('projectFundingProgram').value = '';  
+        return false;
+    {rdelim}   
+    
 </script>  
 
 <div id="openAIRE">
@@ -28,7 +37,7 @@
             <td width="20%" class="label"></td>
             <td td width="80%" class="value">
                 <button id="openAIRE_FindByID" tabindex="1" onclick="return searchProject();">{translate key="plugins.generic.openAIRE.search"}</button>
-                <span id="searchResult" class="searchError" style="display: none;">{translate key="plugins.generic.openAIRE.noResults"}</span>
+                <button id="openAIRE_clear" tabindex="1" onclick="return clearFields();">{translate key="plugins.generic.openAIRE.clear"}</button>                
             </td>
         </tr>
         <tr valign="top">
