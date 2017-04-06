@@ -74,8 +74,15 @@
                     window.close();
                 }
                 
-            });              
+            }); 
+            
+            $("#openaireSearchResultsBack").click(function(event) {
+                document.location.href = "{/literal}{url|escape:"javascript" page="openaireapi" op="searchProject" targetOp="form" escape=false}{literal}";
+            });
+                         
         });
+        
+
     
     </script>
 {/literal}    
@@ -128,7 +135,8 @@
         </table>
         <p>
             <input id="openaireSearchResultsSubmit" type="submit" value="{translate key='plugins.generic.openAIRE.submitAction'}" class="button defaultButton">            
-            <input type="button" value="{translate key='common.back'}" class="button" onclick="window.history.back();">
+            <input id="openaireSearchResultsBack" type="button" value="{translate key='common.back'}" class="button">
+            <input type="button" value="{translate key='common.close'}" class="button" onclick="window.close();">
         </p>
     </form>
 </div>
