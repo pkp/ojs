@@ -90,7 +90,7 @@
 <h3>{translate key='plugins.generic.openAIRE.searchPageTitle'}</h3>
 <div id="content">
     <p>{translate key='plugins.generic.openAIRE.searchResultsList'}</p>
-    <form action="{plugin_url path="process"}" method="post" id="issuesForm">
+    <form action="#" method="post" id="issuesForm">
         <input type="hidden" name="target" value="issue" />
         <table width="100%" class="listing">
             <tr>
