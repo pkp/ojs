@@ -412,7 +412,7 @@ class IssueHandler extends Handler {
 			return false;
 		}
 	}
-	
+
 	/**
 	 * Given an issue, set up the template with all the required variables for
 	 * issues/view.tpl to function properly (i.e. current issue and view issue).
@@ -439,14 +439,11 @@ class IssueHandler extends Handler {
 			$templateMgr->assign('coverPagePath', $coverPagePath);
 			$templateMgr->assign('locale', $locale);
 
-			$coverLocale = $issue->getFileName($locale) ? $locale : $journal->getPrimaryLocale();
-			if (!$showToc && $issue->getFileName($coverLocale) && $issue->getShowCoverPage($coverLocale) && !$issue->getHideCoverPageCover($coverLocale)) {
-				$templateMgr->assign('fileName', $issue->getFileName($coverLocale));
-				$templateMgr->assign('width', $issue->getWidth($coverLocale));
-				$templateMgr->assign('height', $issue->getHeight($coverLocale));
-				$templateMgr->assign('coverPageAltText', $issue->getCoverPageAltText($coverLocale));
-				$templateMgr->assign('originalFileName', $issue->getOriginalFileName($coverLocale));
-				$templateMgr->assign('coverLocale', $coverLocale);
+			if (!$showToc && $issue->getLocalizedFileName() && $issue->getLocalizedShowCoverPage() && !$issue->getHideCoverPageCover($locale)) {
+				$templateMgr->assign('fileName', $issue->getLocalizedFileName());
+				$templateMgr->assign('width', $issue->getLocalizedWidth());
+				$templateMgr->assign('height', $issue->getLocalizedHeight());
+				$templateMgr->assign('coverPageAltText', $issue->getLocalizedCoverPageAltText());
 
 				$showToc = false;
 			} else {
