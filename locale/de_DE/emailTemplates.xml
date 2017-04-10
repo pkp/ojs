@@ -491,17 +491,15 @@ Unsere Entscheidung lautet: Beitrag ablehnen<br />
 {$editorialContactSignature}<br />]]></body>
 		<description>Diese E-Mail von der/dem Redakteur/in oder Rubrikredakteur/in an eine/n Autor/in informiert diese/n über eine getroffene Entscheidung zu ihrer/seiner Einreichung.</description>
 	</email_text>
-		<email_text key="COPYEDIT_REQUEST">
+	<email_text key="COPYEDIT_REQUEST">
 		<subject>Bitte um ein Lektorat</subject>
 		<body><![CDATA[{$participantName},<br />
 <br />
 ich bitte Sie, das Manuskript &quot;{$submissionTitle}&quot; für {$contextName} zu lektorieren. Bitte gehen Sie dabei folgendermaßen vor:<br />
 1. Klicken Sie auf die unten stehende URL des Beitrags.<br />
-2. Loggen Sie sich bei der Zeitschrift ein und klicken Sie auf den Dateinamen in Schritt 1.<br />
-3. Beachten Sie die Hinweise zum Lektorat auf der Webseite.<br />
-4. Öffnen Sie die heruntergeladene Datei und lektorieren Sie den Text; fügen Sie, falls nötig, Fragen an die Autorin/den Autor hinzu.<br />
-5. Sichern Sie die lektorierte Version und laden Sie sie zu Schritt 1 des Lektorats hoch.<br />
-6. Schicken Sie die ABGESCHLOSSEN-E-Mail an die Redaktion.<br />
+2. Öffnen Sie alle Dateien, die unter Entwurf für Lektorat verfügbar sind, und beginnen Sie Ihr Lektorat. Fügen Sie neue Diskussionen zum Lektorat nach Bedarf hinzu.<br />
+3. Sichern Sie die lektorierte(n) Dateien und laden Sie sie unter Lektoriert hoch.<br />
+4. Benachrichtigen Sie die/den Redakteur/in, dass alle Dateien fertig sind und dass der Herstellungsprozess beginnen kann.<br />
 <br />
 URL {$contextName}: {$contextUrl}<br />
 URL des Beitrags: {$submissionUrl}<br />
