@@ -174,7 +174,8 @@
 
 	<sql><!-- Set submission stages based on progress through the 2.4.x workflow. WARNING: These cascade; they cannot be moved out of sequence. -->
 		<!-- All submissions will begin with workflow stage 1 (WORKFLOW_STAGE_ID_SUBMISSION), per schema descriptor -->
-		<query>UPDATE submissions SET stage_id=3 WHERE submission_id IN (SELECT DISTINCT submission_id FROM review_assignments);</query><!-- WORKFLOW_STAGE_ID_EXTERNAL_REVIEW -->
+		<query>UPDATE submissions SET stage_id=3 WHERE submission_id IN (SELECT DISTINCT submission_id FROM review_assignments)</query><!-- WORKFLOW_STAGE_ID_EXTERNAL_REVIEW -->
+		<query>UPDATE submissions SET stage_id=3 WHERE stage_id = 1 AND submission_id IN (SELECT DISTINCT submission_id FROM review_rounds)</query><!-- WORKFLOW_STAGE_ID_EXTERNAL_REVIEW -->
 		<query>UPDATE submissions SET stage_id=4 WHERE submission_id IN (SELECT e1.submission_id FROM edit_decisions e1 LEFT JOIN edit_decisions e2 ON (e2.edit_decision_id > e1.edit_decision_id AND e2.submission_id = e1.submission_id) WHERE e2.edit_decision_id IS NULL AND e1.decision = 1)</query><!-- WORKFLOW_STAGE_ID_EDITING; SUBMISSION_EDITOR_DECISION_ACCEPT -->
 	</sql>
 	<sql><!-- Update review schema to suit OJS 3.0 -->
