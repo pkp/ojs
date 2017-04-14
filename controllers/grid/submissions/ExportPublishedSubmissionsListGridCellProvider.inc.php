@@ -21,13 +21,16 @@ class ExportPublishedSubmissionsListGridCellProvider extends DataObjectGridCellP
 
 	/**
 	 * Constructor
+	 * @param $request PKPRequest
+	 * @param $plugin PKPPlugin
+	 * @param $authorizedRoles mixed
 	 */
-	function __construct($plugin, $authorizedRoles = null) {
+	function __construct($request, $plugin, $authorizedRoles = null) {
 		$this->_plugin  = $plugin;
 		if ($authorizedRoles) {
 			$this->_authorizedRoles = $authorizedRoles;
 		}
-		parent::__construct();
+		parent::__construct($request);
 	}
 
 	//
@@ -38,7 +41,7 @@ class ExportPublishedSubmissionsListGridCellProvider extends DataObjectGridCellP
 	 *
 	 * @copydoc GridCellProvider::getCellActions()
 	 */
-	function getCellActions($request, $row, $column, $position = GRID_ACTION_POSITION_DEFAULT) {
+	function getCellActions($row, $column, $position = GRID_ACTION_POSITION_DEFAULT) {
 		$publishedSubmission = $row->getData();
 		$columnId = $column->getId();
 		assert(is_a($publishedSubmission, 'PublishedArticle') && !empty($columnId));
@@ -56,7 +59,7 @@ class ExportPublishedSubmissionsListGridCellProvider extends DataObjectGridCellP
 					new LinkAction(
 						'itemWorkflow',
 						new RedirectAction(
-							SubmissionsListGridCellProvider::getUrlByUserRoles($request, $publishedSubmission)
+							SubmissionsListGridCellProvider::getUrlByUserRoles($this->_request, $publishedSubmission)
 						),
 						$title
 					)
@@ -74,7 +77,7 @@ class ExportPublishedSubmissionsListGridCellProvider extends DataObjectGridCellP
 					new LinkAction(
 						'edit',
 						new AjaxModal(
-							$dispatcher->url($request, ROUTE_COMPONENT, null, 'grid.issues.BackIssueGridHandler', 'editIssue', null, array('issueId' => $issue->getId())),
+							$dispatcher->url($this->_request, ROUTE_COMPONENT, null, 'grid.issues.BackIssueGridHandler', 'editIssue', null, array('issueId' => $issue->getId())),
 							__('plugins.importexport.common.settings.DOIPluginSettings')
 						),
 						$issue->getIssueIdentification(),
@@ -99,14 +102,11 @@ class ExportPublishedSubmissionsListGridCellProvider extends DataObjectGridCellP
 					);
 				}
 		}
-		return parent::getCellActions($request, $row, $column, $position);
+		return parent::getCellActions($row, $column, $position);
 	}
 
 	/**
-	 * Extracts variables for a given column from a data element
-	 * so that they may be assigned to template before rendering.
-	 *
-	 * @copydoc DataObjectGridCellProvider::getTemplateVarsFromRowColumn()
+	 * @copydoc GridCellProvider::getTemplateVarsFromRowColumn()
 	 */
 	function getTemplateVarsFromRowColumn($row, $column) {
 		$publishedSubmission = $row->getData();

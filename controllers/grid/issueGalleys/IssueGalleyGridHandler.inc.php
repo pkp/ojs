@@ -119,7 +119,7 @@ class IssueGalleyGridHandler extends GridHandler {
 
 		// Grid columns.
 		import('controllers.grid.issueGalleys.IssueGalleyGridCellProvider');
-		$issueGalleyGridCellProvider = new IssueGalleyGridCellProvider();
+		$issueGalleyGridCellProvider = new IssueGalleyGridCellProvider($request);
 
 		// Issue identification
 		$this->addColumn(

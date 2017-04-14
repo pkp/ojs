@@ -21,13 +21,16 @@ class PubIdExportIssuesListGridCellProvider extends DataObjectGridCellProvider {
 
 	/**
 	 * Constructor
+	 * @param $request PKPRequest
+	 * @param $plugin PKPPlugin
+	 * @param $authorizedRoles mixed
 	 */
-	function __construct($plugin, $authorizedRoles = null) {
+	function __construct($request, $plugin, $authorizedRoles = null) {
 		$this->_plugin  = $plugin;
 		if ($authorizedRoles) {
 			$this->_authorizedRoles = $authorizedRoles;
 		}
-		parent::__construct();
+		parent::__construct($request);
 	}
 
 	//
@@ -38,7 +41,7 @@ class PubIdExportIssuesListGridCellProvider extends DataObjectGridCellProvider {
 	 *
 	 * @copydoc GridCellProvider::getCellActions()
 	 */
-	function getCellActions($request, $row, $column, $position = GRID_ACTION_POSITION_DEFAULT) {
+	function getCellActions($row, $column, $position = GRID_ACTION_POSITION_DEFAULT) {
 		$publishedIssue = $row->getData();
 		$columnId = $column->getId();
 		assert(is_a($publishedIssue, 'Issue') && !empty($columnId));
@@ -53,7 +56,7 @@ class PubIdExportIssuesListGridCellProvider extends DataObjectGridCellProvider {
 					new LinkAction(
 						'edit',
 						new AjaxModal(
-							$dispatcher->url($request, ROUTE_COMPONENT, null, 'grid.issues.BackIssueGridHandler', 'editIssue', null, array('issueId' => $publishedIssue->getId())),
+							$dispatcher->url($this->_request, ROUTE_COMPONENT, null, 'grid.issues.BackIssueGridHandler', 'editIssue', null, array('issueId' => $publishedIssue->getId())),
 							__('plugins.importexport.common.settings.DOIPluginSettings')
 						),
 						$publishedIssue->getIssueIdentification(),
@@ -79,7 +82,7 @@ class PubIdExportIssuesListGridCellProvider extends DataObjectGridCellProvider {
 					);
 				}
 		}
-		return parent::getCellActions($request, $row, $column, $position);
+		return parent::getCellActions($row, $column, $position);
 	}
 
 	/**

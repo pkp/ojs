@@ -74,7 +74,7 @@ class PubIdExportIssuesListGridHandler extends GridHandler {
 		$authorizedRoles = $this->getAuthorizedContextObject(ASSOC_TYPE_USER_ROLES);
 
 		// Grid columns.
-		$cellProvider = new PubIdExportIssuesListGridCellProvider($this->_plugin, $authorizedRoles);
+		$cellProvider = new PubIdExportIssuesListGridCellProvider($request, $this->_plugin, $authorizedRoles);
 		$this->addColumn(
 			new GridColumn(
 				'identification',

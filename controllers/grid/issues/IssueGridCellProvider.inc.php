@@ -22,8 +22,8 @@ class IssueGridCellProvider extends GridCellProvider {
 	/**
 	 * Constructor
 	 */
-	function __construct() {
-		parent::__construct();
+	function __constuct($request) {
+		parent::__constuct($request);
 		$this->dateFormatShort = Config::getVar('general', 'date_format_short');
 	}
 
@@ -33,17 +33,17 @@ class IssueGridCellProvider extends GridCellProvider {
 	 * @param $column GridColumn
 	 * @return array an array of LinkAction instances
 	 */
-	function getCellActions($request, $row, $column, $position = GRID_ACTION_POSITION_DEFAULT) {
+	function getCellActions($row, $column, $position = GRID_ACTION_POSITION_DEFAULT) {
 		if ($column->getId() == 'identification') {
 			$issue = $row->getData();
 			assert(is_a($issue, 'Issue'));
-			$router = $request->getRouter();
+			$router = $this->_request->getRouter();
 			import('lib.pkp.classes.linkAction.request.AjaxModal');
 			return array(
 				new LinkAction(
 					'edit',
 					new AjaxModal(
-						$router->url($request, null, null, 'editIssue', null, array('issueId' => $issue->getId())),
+						$router->url($this->_request, null, null, 'editIssue', null, array('issueId' => $issue->getId())),
 						__('editor.issues.editIssue', array('issueIdentification' => $issue->getIssueIdentification())),
 						'modal_edit',
 						true
@@ -56,11 +56,7 @@ class IssueGridCellProvider extends GridCellProvider {
 	}
 
 	/**
-	 * Extracts variables for a given column from a data element
-	 * so that they may be assigned to template before rendering.
-	 * @param $row GridRow
-	 * @param $column GridColumn
-	 * @return array
+	 * @copydoc GridCellProvider::getTemplateVarsFromRowColumn()
 	 */
 	function getTemplateVarsFromRowColumn($row, $column) {
 		$issue = $row->getData();

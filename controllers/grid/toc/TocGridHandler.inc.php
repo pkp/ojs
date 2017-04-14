@@ -61,7 +61,7 @@ class TocGridHandler extends CategoryGridHandler {
 		// Grid columns.
 		//
 		import('controllers.grid.toc.TocGridCellProvider');
-		$tocGridCellProvider = new TocGridCellProvider();
+		$tocGridCellProvider = new TocGridCellProvider($request);
 
 		// Article title
 		$this->addColumn(
