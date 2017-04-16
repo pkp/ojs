@@ -59,7 +59,7 @@
 	<message key="author.submit.reorderInstructions">Редослед којим ће аутори бити приказани у часопису.</message>
 	<message key="author.submit.reorder">Редослед имена аутора</message>
 	<message key="author.submit.selectPrincipalContact">Контакт за уредничку коресподенцију.</message>
-	<message key="author.submit.addAuthor">Додај аутора/message>
+	<message key="author.submit.addAuthor">Додај аутора</message>
 	<message key="author.submit.deleteAuthor">Обриши аутора</message>
 	<message key="author.submit.submissionIndexingDescription">Унесите термине за индексирање  (кључне речи); одвојите их , (термин1, термин2, термин3).</message>
 	<message key="author.submit.coverageInstructions">Односи се на геопросторне локације, хронолошки или историјски период и/или карактеристике истраживачког поступка.</message>
