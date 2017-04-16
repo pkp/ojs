@@ -59,7 +59,7 @@
 	<message key="author.submit.reorderInstructions">Redosled kojim će autori biti prikazani u časopisu.</message>
 	<message key="author.submit.reorder">Redosled imena autora</message>
 	<message key="author.submit.selectPrincipalContact">Kontakt za uredničku korespodenciju.</message>
-	<message key="author.submit.addAuthor">Dodaj autora/message>
+	<message key="author.submit.addAuthor">Dodaj autora</message>
 	<message key="author.submit.deleteAuthor">Obriši autora</message>
 	<message key="author.submit.submissionIndexingDescription">Unesite termine za indeksiranje  (ključne reči); odvojite ih , (termin1, termin2, termin3).</message>
 	<message key="author.submit.coverageInstructions">Odnosi se na geoprostorne lokacije, hronološki ili istorijski period i/ili karakteristike istraživačkog postupka.</message>
