@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE version SYSTEM "../../../lib/pkp/dtd/pluginVersion.dtd">
+
+<!--
+  * plugins/generic/dataverse/version.xml
+  *
+  * Copyright (c) 2003-2014 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Plugin version information.
+  -->
+<version>
+	<application>dataverse</application>
+	<type>plugins.generic</type>
+	<release>1.1.1.0</release>
+	<date>2014-03-18</date>
+	<lazy-load>1</lazy-load>
+	<class>DataversePlugin</class>
+</version>
