@@ -8,7 +8,6 @@
  * Object for review assignemnt form.
  *
  *}
-
 {include file="common/header.tpl"}
 
 <br/>

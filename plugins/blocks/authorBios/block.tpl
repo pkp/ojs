@@ -18,7 +18,7 @@
 		{/if}
 	</span>
 	{foreach from=$article->getAuthors() item=author name=authors}
-	<div id="authorBio">
+	<div class="authorBio">
 	<p>
 		<em>{$author->getFullName()|escape}</em><br />
 		{if $author->getData('orcid')}<a href="{$author->getData('orcid')|escape}" target="_blank">{translate key="user.orcid"}</a>{/if}
