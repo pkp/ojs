@@ -396,7 +396,7 @@ http://journals.mui.ac.ir/index.php/index/index
 	<message key="search.allJournals">تمام مجلات</message>
 	<message key="search.authorIndex">مرور اندکس نویسندگان</message>
 	<message key="search.authorDetails">جزئیات نویسندگان</message>
-	<message key="search.syntaxInstructions"><![CDATA[نکاتی در مورد جستجو: <ul>
+	<message key="search.syntaxInstructions"><![CDATA[<h4>نکاتی در مورد جستجو: </h4><ul>
 <li>حروف کوچک وبزرگ فرقی ندارند</li>
 <li>کلمات رایج در عبارت جستجو نادیده گرفته میشوند</li>
 <li>بصورت پیش فرض فقط مقالاتی که دارای <i>همه</i> کلمات جستجو هستند برگردانده میشوند. مثل وقتی که عملگر <i>AND</i> اعمال میشود</li>

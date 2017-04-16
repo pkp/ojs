@@ -768,7 +768,7 @@ current password.<br /><br />Enter your email address below to reset your passwo
 	<message key="search.allJournals">എല്ലാ ജര്‍ണലുകളും</message>
 	<message key="search.authorIndex">ഓതര്‍ ഇന്‍ഡക്സ് ബ്രൗസ് ചെയ്യുക</message>
 	<message key="search.authorDetails">ഗ്രന്ഥകര്‍ത്താവിന്റെ വിശദാംശങ്ങള്‍</message>
-	<message key="search.syntaxInstructions"><![CDATA[Search tips: <ul>
+	<message key="search.syntaxInstructions"><![CDATA[<h4>Search tips: </h4><ul>
 <li>Search terms are case-insensitive</li>
 <li>Common words are ignored</li>
 <li>By default only articles containing <em>all</em> terms in the query are returned (i.e., <em>AND</em> is implied)</li>

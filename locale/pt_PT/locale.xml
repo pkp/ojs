@@ -560,7 +560,7 @@ Activo indica revisão em consideração ou em progresso.]]></message>
 	<message key="search.allJournals">Todas as Revistas</message>
 	<message key="search.authorIndex">Índice de Autores</message>
 	<message key="search.authorDetails">Perfil do Autor</message>
-	<message key="search.syntaxInstructions"><![CDATA[Dicas para pesquisa: <ul>
+	<message key="search.syntaxInstructions"><![CDATA[<h4>Dicas para pesquisa: </h4><ul>
 <li>O sistema de pesquisa não diferencia maiúsculas ou minúsculas</li>
 <li>Termos irrelevantes são ignorados pelo sistema de pesquisa</li>
 <li>São recuperados por padrão apenas artigos contendo <em>todos</em> os termos de pesquisa (ex.: <strong>E</strong> é implícito)</li>

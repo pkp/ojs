@@ -643,7 +643,7 @@ současného hesla.<br /><br />Pro resetování Vašeho hesla vložte níže Va�
 	<message key="search.allJournals">Všechny časopisy</message>
 	<message key="search.authorIndex">Procházet index autorů</message>
 	<message key="search.authorDetails">Detaily autora</message>
-	<message key="search.syntaxInstructions"><![CDATA[Tipy pro vyhledávání: <ul>
+	<message key="search.syntaxInstructions"><![CDATA[<h4>Tipy pro vyhledávání: </h4><ul>
 <li>Nezáleží na velikosti písmen vyhledávaného výrazu</li>
 <li>Běžná slova jsou ignorována</li>
 <li>Ve výchozím nastavení jsou vraceny pouze články obsahující <i>všechny</i> termíny dotazu (tzn. <i>AND</i> je aplikováno)</li>

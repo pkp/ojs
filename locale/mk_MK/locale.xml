@@ -769,7 +769,7 @@
 	<message key="search.allJournals">Сите списанија</message>
 	<message key="search.authorIndex">Барајте го авторот по индекс</message>
 	<message key="search.authorDetails">Детали за авторот</message>
-	<message key="search.syntaxInstructions"><![CDATA[Search tips: <ul>
+	<message key="search.syntaxInstructions"><![CDATA[<h4>Search tips: </h4><ul>
 <li>Термините за пребарување препознаваат големи букви</li>
 <li>Заедничките зборови се игнорираат</li>
 <li>Стандардно само статиите кои ги содржат <em>сите</em> термини во барањето се враќаат(односно, <em>AND</em> е имплицирано))</li>

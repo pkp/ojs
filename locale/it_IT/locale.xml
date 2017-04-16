@@ -608,7 +608,7 @@ L'impostare del supporto LOCKSS per Open Journal Systems non deve avvenire fino 
 	<message key="search.allJournals">Tutte le riviste</message>
 	<message key="search.authorIndex">Scorri l'indice degli autori</message>
 	<message key="search.authorDetails">Dettagli dell'autore</message>
-	<message key="search.syntaxInstructions"><![CDATA[Suggerimenti per la ricerca: <ul>
+	<message key="search.syntaxInstructions"><![CDATA[<h4>Suggerimenti per la ricerca: </h4><ul>
 <li>I termini di ricerca non distinguono maiuscole e minuscole</li>
 <li>Le parole comuni (stopword) sono ignorate</li>
 <li>Per default vengono restituiti solo gli articoli contenenti <em>tutti</em> i termini della ricerca (<em>AND</em> &#x00E8; sottointeso)</li>

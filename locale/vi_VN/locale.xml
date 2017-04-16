@@ -583,7 +583,7 @@ Mới nhất là ngày ngày bài phản biện gần nhất được chấp nh�
 	<message key="search.allJournals">Tất cả các tạp chí</message>
 	<message key="search.authorIndex">Duyệt Chỉ mục Tác giả</message>
 	<message key="search.authorDetails">Chi tiết về Tác giả</message>
-	<message key="search.syntaxInstructions"><![CDATA[Mẹo tìm kiếm: <ul>
+	<message key="search.syntaxInstructions"><![CDATA[<h4>Mẹo tìm kiếm: </h4><ul>
 <li>Từ khóa tìm kiếm có phân biệt chữ thường/hoa</li>
 <li>Các từ thông dụng được bỏ qua</li>
 <li>Theo mặc định, hệ thống chỉ tìm những bài viết có <em>tất cả</em> các thuật ngữ trong thao tác tìm kiếm (có nghĩa là, toán tử <em>AND</em> được áp dụng)</li>

@@ -681,7 +681,7 @@ da bidali zuzentzeko fitxategia hautatu arte Ebaluazio-orrian, Editorearen eraba
 	<message key="search.allJournals">Aldizkari guztiak</message>
 	<message key="search.authorIndex">Arakatu egileen indizea</message>
 	<message key="search.authorDetails">Egilearen xehetasunak</message>
-	<message key="search.syntaxInstructions"><![CDATA[Bilatzeko aholkuak: <ul>
+	<message key="search.syntaxInstructions"><![CDATA[<h4>Bilatzeko aholkuak: </h4><ul>
 <li>Bilatu beharreko hitzetan ez da maiuskula/minuskularik bereizten</li>
 <li>Hitz arruntei ez ikusi egiten zaie</li>
 <li>Lehenespenez, galderan sartutako termino <em>guztiak</em> dauzkaten artikuluak erakusten dira (hau da, <em>ETA</em> ulertzen da)</li>

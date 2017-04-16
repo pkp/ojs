@@ -478,7 +478,7 @@ OJSのシステム設定を変更することにより、OAIインターフェ�
   <message key="search.allJournals">全雑誌</message>
   <message key="search.authorIndex">著者インデックスをブラウズ</message>
   <message key="search.authorDetails">著者情報</message>
-  <message key="search.syntaxInstructions"><![CDATA[検索のヒント: <ul>
+  <message key="search.syntaxInstructions"><![CDATA[<h4>検索のヒント: </h4><ul>
 <li>検査語は大文字・小文字を区別しません。</li>
 <li>一般的な語は無視されます</li>
 <li>デフォルトでは、検索語に指定した<em>すべての</em>語を含む論文だけがヒットします（すなわち、暗黙に<em>AND</em>検索が行われます）</li>

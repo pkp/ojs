@@ -593,7 +593,7 @@ la contraseña actual.<br /><br />Introduzca su dirección de correo-e para camb
 	<message key="search.allJournals">Todas las revistas</message>
 	<message key="search.authorIndex">Consultar índice de autoras/es</message>
 	<message key="search.authorDetails">Detalles de autor/a</message>
-	<message key="search.syntaxInstructions"><![CDATA[Consejos de búsqueda: <ul>
+	<message key="search.syntaxInstructions"><![CDATA[<h4>Consejos de búsqueda: </h4><ul>
 <li>Los términos de búsqueda no distinguen minúsculas/MAYÚSCULAS</li>
 <li>Se ignoran las palabras comunes</li>
 <li>Por defecto sólo se recuperan los artículos que contienen <em>todos</em> los términos de la búsqueda (se usa por defecto el operador <strong>AND</strong>)</li>

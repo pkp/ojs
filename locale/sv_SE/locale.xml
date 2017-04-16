@@ -703,7 +703,7 @@ Aktiva visar antalet granskare som för tillfället arbetar med granskning.]]></
 	<message key="search.allJournals">Alla tidskrifter</message>
 	<message key="search.authorIndex">Bläddra Författarregister</message>
 	<message key="search.authorDetails">Författardetaljer</message>
-	<message key="search.syntaxInstructions"><![CDATA[Search tips: <ul>
+	<message key="search.syntaxInstructions"><![CDATA[<h4>Search tips: </h4><ul>
 <li>Söktermer skiljer inte på små och storabokstäver</li>
 <li>Vanliga ord ignoreras</li>
 <li>Vid Default-Sök får du träffar på <i>alla</i> termer som angivits i sökfrågan (m.a.o., <i>AND</i> är implicit)</li>

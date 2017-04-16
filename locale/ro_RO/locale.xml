@@ -839,7 +839,7 @@ parola existentă.<br /><br />Introdu adresa de email mai jos pentru a a reseta 
 	<message key="search.allJournals">Toate revistele</message>
 	<message key="search.authorIndex">Parcurge indexul de autori</message>
 	<message key="search.authorDetails">Detalii autor</message>
-	<message key="search.syntaxInstructions"><![CDATA[Ponturi de căutare: <ul>
+	<message key="search.syntaxInstructions"><![CDATA[<h4>Ponturi de căutare: </h4><ul>
 <li>N-are importanță dacă termenii de căutare sunt cu majuscule</li>
 <li>Cuvintele des întânite sunt ignorate</li>
 <li>Implicit toate articole ce conţin <em>toţi</em> termenii din interogare sunt returnate (ie. <em>AND</em> este luat pus implicit)</li>

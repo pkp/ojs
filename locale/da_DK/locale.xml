@@ -636,7 +636,7 @@ aktuelle adgangskode.<br /><br />Angiv din e-mail-adresse nedenfor for at nulsti
 	<message key="search.allJournals">Alle tidsskrifter</message>
 	<message key="search.authorIndex">Gennemse forfatterindeks</message>
 	<message key="search.authorDetails">Oplysninger om forfatter</message>
-	<message key="search.syntaxInstructions"><![CDATA[Tip til søgning: <ul>
+	<message key="search.syntaxInstructions"><![CDATA[<h4>Tip til søgning: </h4><ul>
 <li>Der skelnes ikke mellem store og små bogstaver i søgeordene</li>
 <li>Fællesord ignoreres</li>
 <li>Som standard returneres kun artikler, der indeholder <i>alle</i> ordene i forespørgslen (dvs. <i>OG</i> er underforstået)</li>

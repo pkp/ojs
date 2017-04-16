@@ -795,7 +795,7 @@ current password.<br /><br />Enter your email address below to reset your passwo
 	<message key="search.allJournals">All Journals</message>
 	<message key="search.authorIndex">Browse Author Index</message>
 	<message key="search.authorDetails">Author Details</message>
-	<message key="search.syntaxInstructions"><![CDATA[Search tips: <ul>
+	<message key="search.syntaxInstructions"><![CDATA[<h4>Search tips: </h4><ul>
 <li>Search terms are case-insensitive</li>
 <li>Common words are ignored</li>
 <li>By default only articles containing <em>all</em> terms in the query are returned (i.e., <em>AND</em> is implied)</li>
