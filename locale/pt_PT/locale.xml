@@ -960,10 +960,19 @@ Idiomas estão disponíveis para download manual no <a href="http://pkp.sfu.ca">
 	<message key="manager.people.confirmDisable">Desactivar este utilizador? Isto impedirá o acesso ao sistema pelo utilizador.
 
 Pode-se opcionalmente informar o motivo pelo qual está sendo desactivado o registo.</message>
-	<message key="editor.submissionReview.notes"><![CDATA[<ol>
-	<li>Itens marcados indicam que uma acção é exigida por parte do editor.</li>
-	<li>"Prazo" é preenchido quando o revisões indica disponibilidade para realizar a revisão; exibe o tempo em semanas até à data de entrega da revisão ou (-) semanas quando está atrasado.</li>
-</ol>]]></message>
+	<message key="editor.submissionReview.notes"><![CDATA[[<ol>
+	<li>Os itens coloridos requerem uma ação do editor de acordo com a seguinte legenda:
+	<ul>
+<li class="highlightReviewerNotNotified">Um revisor foi associado mas não notificado por email</li>
+<li class="highlightNoDecision">Todos os revisores concluíram a revisão mas o editor não tomou ainda uma decisão </li>
+<li class="highlightRevisedCopyUploaded">O autor enviou uma nova versão do trabalho </li>
+<li class="highlightReviewerConfirmationOverdue">O revisor não aceitou ainda o convite para a revisão por pares </li>
+<li class="highlightReviewerCompletionOverdue">O revisor está atrasado na revisão por pares </li>
+	</ul>
+	</li>
+	<li>"Prazo" é preenchido quando o revisor aceita o pedido de revisão; apresenta o número de semanas até ao final do prazo ou um valor negativo (-) em semanas quando o prazo foi ultrapassado.</li>
+</ol>
+]]></message>
 	<message key="reviewer.article.reviewGuidelinesDescription">As Directrizes para Revisão fornecerão aos revisores critérios necessários para julgar se uma submissão é adequada para publicação no periódico, e podem incluir quaisquer instruções especiais para preparar uma revisão efectiva e construtiva. Ao entrar na revisão, os revisores terão acesso a dois campos de texto aberto, sendo o primeiro "para autor e editor" e o segundo "somente para o editor". Como opção alternativa, o Editor-Gestor pode criar formulários específicos acedendo a "Formulários de Revisão", na Administração da revista. Em todos os casos, os editores terão a opção de incluir as revisões nas mensagens, ao se comunicarem com o autor.</message>
 	<message key="user.subscriptions.mySubscriptions">Minhas Subscrições</message>
 	<message key="user.subscriptions.individualSubscriptions">Subscrição Individual</message>
@@ -1072,13 +1081,16 @@ Pode-se opcionalmente informar o motivo pelo qual está sendo desactivado o regi
 	<message key="plugins.categories.pubIds">Identificadores Públicos de Plugins</message>
 	<message key="plugins.categories.pubIds.description">Estes plugins implementam o suporte ao identificador público.</message>
 	<message key="editor.submissionEditing.notes"><![CDATA[<ol>
-	<li>Highlighted items indicate action is required by an editor, labelled as follows:
+		<li> Os itens coloridos requerem uma ação do editor de acordo com a seguinte legenda:
 		<ul>
-			<li class="highlightCopyediting">An action is required in the copyediting stage</li>
-			<li class="highlightLayoutEditing">An action is required in the layout editing stage</li>
-			<li class="higlightProofreading">An action is required in the proofreading stage</li>
+<li class="highlightCopyediting">É necessária uma ação de edição de texto  (copyediting)</li>
+
+<li class="highlightLayoutEditing"> É necessária uma ação de edição de layout</li>
+
+<li class="higlightProofreading"> É necessária uma ação na leitura de prova (proofreading )</li>
 		</ul>
 	</li>
+
 </ol>]]></message>
 	<message key="site.noJournals">Não existem revistas.</message>
 	<message key="gifts.buyer">De</message>
