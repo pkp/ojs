@@ -1,5 +1,5 @@
 <?php
-
+This is not a suitable pull request.
 /**
  * @mainpage OJS API Reference
  *
