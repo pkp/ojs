@@ -16,6 +16,8 @@
 	<!-- Section default -->
 	<message key="section.default.title">Чланци</message>
 	<message key="section.default.abbrev">ART</message>
+	<!--
+	 *	
 	 * DEFAULT - Default settings for setup items.
 	 *
 	-->
