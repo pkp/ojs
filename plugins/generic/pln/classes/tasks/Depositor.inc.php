@@ -73,7 +73,7 @@ class Depositor extends ScheduledTask {
 			}
 			
 			// check to make sure zip is installed
-			if (!$this->_plugin->curlInstalled()) {
+			if (!$this->_plugin->zipInstalled()) {
 				$this->addExecutionLogEntry(__('plugins.generic.pln.notifications.zip_missing'), SCHEDULED_TASK_MESSAGE_TYPE_WARNING);
 				$this->_plugin->createJournalManagerNotification($journal->getId(),PLN_PLUGIN_NOTIFICATION_TYPE_ZIP_MISSING);
 				continue;

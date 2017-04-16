@@ -110,7 +110,7 @@ class DepositPackage {
 		
 		$url = $journal->getUrl() . '/' . PLN_PLUGIN_ARCHIVE_FOLDER . '/deposits/' . $this->_deposit->getUUID();
 		$pkpDetails = $atom->createElementNS('http://pkp.sfu.ca/SWORD', 'pkp:content', $url);
-		$pkpDetails->setAttribute('size', ceil(filesize($packageFile)/1024));
+		$pkpDetails->setAttribute('size', ceil(filesize($packageFile)/1000));
 		
 		$objectVolume = "";
 		$objectIssue = "";
