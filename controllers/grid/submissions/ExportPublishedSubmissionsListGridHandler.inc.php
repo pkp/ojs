@@ -286,7 +286,7 @@ class ExportPublishedSubmissionsListGridHandler extends GridHandler {
 		// Fetch the authorized roles.
 		$authorizedRoles = $this->getAuthorizedContextObject(ASSOC_TYPE_USER_ROLES);
 		import('controllers.grid.submissions.ExportPublishedSubmissionsListGridCellProvider');
-		// TODO: Where should the request come from?
+		// TODO: pkp/pkp-lib#2444 Where should the request come from?
 		$request = PKPApplication::getRequest();
 		return new ExportPublishedSubmissionsListGridCellProvider($request, $this->_plugin, $authorizedRoles);
 	}
