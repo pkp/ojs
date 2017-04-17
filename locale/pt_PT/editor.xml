@@ -37,7 +37,7 @@
 	<message key="editor.notifyUsers.interestedUsers">Enviar esta mensagem a todos os utilizadores associados a esta revista que indicaram desejar receber notificações ({$count} utilizadores)</message>
 	<message key="editor.notifyUsers.includeToc">Incluir sumário da edição:</message>
 	<message key="editor.editorAdministration">Administração do Editor</message>
-	<message key="editor.issues.createIssue">Criar Edição</message>
+	<message key="editor.issues.createIssue">Gerir Edições</message>
 	<message key="editor.issues.backIssues">Edições Anteriores</message>
 	<message key="editor.issues.futureIssues">Edições Futuras</message>
 	<message key="editor.issues.currentIssue">Edição Actual</message>
