@@ -115,7 +115,8 @@
 	<message key="manager.sections.wordCountInstructions">Ограничить количество слов в аннотации для этого раздела (0 — без ограничений)</message>
 	<message key="manager.setup">Настройки журнала</message>
 	<message key="manager.setup.masthead">Выходные данные</message>
-	<message key="manager.setup.masthead.description">Список редакторов, управляющих директоров и других людей, связанных с журналом.</message>
+	<message key="manager.setup.editorialTeam">Редакция</message>
+	<message key="manager.setup.editorialTeam.description">Список редакторов, управляющих директоров и других людей, связанных с журналом.</message>
 	<message key="manager.setup.homepageContent">Контент главной страницы журнала</message>
 	<message key="manager.setup.homepageContentDescription">Главная страница журнала по умолчанию состоит из навигационных ссылок. Дополнительный контент на главной странице может быть добавлен с помощью одного или нескольких следующих параметров, которые появятся на странице в показанном порядке.</message>
 	<message key="manager.setup.layout">Макет журнала</message>

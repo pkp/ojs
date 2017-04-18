@@ -517,7 +517,8 @@ Il y a des cas où seulement une seule statistique d'utilisation doit être util
 	<message key="plugins.importexport.common.register.success">Enregistrement réussi!</message>
 	<message key="manager.website.archiving">Archivage</message>
 	<message key="manager.setup.masthead">Bloc générique</message>
-	<message key="manager.setup.masthead.description">Inscrire la liste de personnes impliquées dans la revue (directeur, rédacteurs et autres).</message>
+	<message key="manager.setup.editorialTeam">Comité éditorial</message>
+	<message key="manager.setup.editorialTeam.description">Inscrire la liste de personnes impliquées dans la revue (directeur, rédacteurs et autres).</message>
 	<message key="manager.setup.homepageContent">Contenu de la page d'accueil de la revue</message>
 	<message key="manager.setup.homepageContentDescription">La page d'accueil de la revue consiste par défaut en liens pour la navigation. Des contenus additionnels peuvent être ajoutés en utilisant une ou toutes les options suivantes, qui apparaîtront dans l'ordre indiqué.</message>
 	<message key="manager.setup.layout">Mise en page de la revue</message>

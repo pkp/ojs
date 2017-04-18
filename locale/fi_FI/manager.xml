@@ -116,7 +116,8 @@
 	<message key="manager.sections.wordCountInstructions">Rajaa tämän osaston abstraktien sanamäärät (0 ei rajoitusta)</message>
 	<message key="manager.setup">Julkaisun asetukset</message>
 	<message key="manager.setup.masthead">Tunnuslaatikko</message>
-	<message key="manager.setup.masthead.description">Luettele toimittajat, toimitusjohtajat ja muut julkaisuun liittyvät henkilöt.</message>
+	<message key="manager.setup.editorialTeam">Toimituskunta</message>
+	<message key="manager.setup.editorialTeam.description">Luettele toimittajat, toimitusjohtajat ja muut julkaisuun liittyvät henkilöt.</message>
 	<message key="manager.setup.homepageContent">Julkaisun etusivun sisältö</message>
 	<message key="manager.setup.homepageContentDescription">Julkaisun etusivu koostuu oletusarvoisesti siirtymälinkeistä. Muuta sisältöä etusivulle voidaan liittää käyttämällä yhtä tai kaikkia seuraavista vaihtoehdoista, jotka ilmestyvät esitetyssä järjestyksessä.</message>
 	<message key="manager.setup.layout">Julkaisun taitto</message>

@@ -524,7 +524,8 @@ Selezionare una delle metriche configurate come predefinita.</message>
 	<message key="plugins.importexport.common.register.success">Registrazione conclusa con successo!</message>
 	<message key="manager.website.archiving">Archiviazione</message>
 	<message key="manager.setup.masthead">Testata</message>
-	<message key="manager.setup.masthead.description">Informazioni sulla redazione</message>
+	<message key="manager.setup.editorialTeam">Editorial Team</message>
+	<message key="manager.setup.editorialTeam.description">Informazioni sulla redazione</message>
 	<message key="manager.setup.useStyleSheet">Foglio di stile</message>
 	<message key="manager.setup.contextName">Nome della rivista</message>
 	<message key="manager.setup.journalSummary">Presentazione della rivista</message>

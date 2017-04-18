@@ -11,6 +11,9 @@
   * 3.1.0.0 general updates.
   -->
 <data>
+	<sql><!-- pkp/pkp-lib#2441 rename masthead to editorialTeam in journal_settings -->
+		<query>UPDATE `journal_settings` SET setting_name = 'editorialTeam' WHERE setting_name = 'masthead'</query>
+	</sql>
 	<sql><!-- pkp/pkp-lib#2160: Clean up editorial history -->
 		<query>UPDATE event_log_settings SET setting_name='submission_id' WHERE setting_name='article_id'</query>
 	</sql>

@@ -511,7 +511,8 @@ Poderão ser usados estatísticas individuais de uso, por exemplo, para exibir u
 	<message key="manager.website.archiving">Arquivamento</message>
 	<message key="manager.section.noSectionEditors"><![CDATA[Ainda não existem editores de sessão. Designe este papel a ao menos um usuário por meio de Gerente > Cnfigurações > Usuários e Papéis.]]></message>
 	<message key="manager.setup.masthead">Equipe Editorial</message>
-	<message key="manager.setup.masthead.description">A Equipe Editorial contem uma lista de editores, diretores, gerentes e outros indivíduos associados à revista. As informações cadastradas aqui aparecerão na seção "Sobre" da revista.</message>
+	<message key="manager.setup.editorialTeam">Equipe Editorial</message>
+	<message key="manager.setup.editorialTeam.description">A Equipe Editorial contem uma lista de editores, diretores, gerentes e outros indivíduos associados à revista. As informações cadastradas aqui aparecerão na seção "Sobre" da revista.</message>
 	<message key="manager.setup.homepageContent">Página Inicial da Revista</message>
 	<message key="manager.setup.homepageContentDescription">A página inicial da revista consiste em links de navegação por padrão. Conteúdo adicional pode ser anexado usando uma ou todas as seguintes opções, que aparecerão na ordem mostrada.</message>
 	<message key="manager.setup.layout">Leiaute da Revista</message>
