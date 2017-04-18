@@ -108,7 +108,8 @@
 	<message key="manager.sections.wordCountInstructions">Wortanzahl für Abstracts für diese Rubrik begrenzen (0 für keine Begrenzung):</message>
 	<message key="manager.setup">Setup</message>
 	<message key="manager.setup.masthead">Impressum</message>
-	<message key="manager.setup.masthead.description">Nennen Sie Redakteur/innen, Verwalter/innen und andere mit der Zeitschrift verbundene Personen.</message>
+	<message key="manager.setup.editorialTeam">Redaktion</message>
+	<message key="manager.setup.editorialTeam.description">Nennen Sie Redakteur/innen, Verwalter/innen und andere mit der Zeitschrift verbundene Personen.</message>
 	<message key="manager.setup.homepageContent">Inhalte der Zeitschriften-Homepage</message>
 	<message key="manager.setup.homepageContentDescription">Die Zeitschriften-Homepage besteht standardmäßig aus Navigations-Links. Zusätzliche Inhalte können hinzugefügt werden, indem eine oder alle der folgenden Optionen ausgewählt werden. Sie werden in der angezeigten Reihenfolge auftauchen.</message>
 	<message key="manager.setup.layout">Layout der Zeitschrift</message>
