@@ -300,8 +300,10 @@ class PublishedArticleDAO extends ArticleDAO {
 		if ($useCache) {
 			$cache = $this->_getPublishedArticleCache();
 			$returner = $cache->get($articleId);
-			if ($returner && $journalId != null && $journalId != $returner->getJournalId()) $returner = null;
-			return $returner;
+                        $skip = $returner && $journalId != null && $journalId != $returner->getJournalId();
+                        if ($returner && !$skip) {
+                            return $returner;
+                        }
 		}
 
 		$params = $this->getFetchParameters();
