@@ -64,6 +64,11 @@ class CustomBlockEditForm extends Form {
 
 		// Enable TinyMCE with specific params
 		$additionalHeadData = $templateMgr->get_template_vars('additionalHeadData');
+		
+		// add journalId to user session
+		$sessionManager = SessionManager::getManager();
+		$userSession = $sessionManager->getUserSession();
+		$userSession->setSessionVar('journalId', $journalId);
 
 		import('classes.file.JournalFileManager');
 		$publicFileManager = new PublicFileManager();
@@ -72,11 +77,11 @@ class CustomBlockEditForm extends Form {
 		<script language="javascript" type="text/javascript">
 			tinyMCE.init({
 			mode : "textareas",
-			plugins : "style,paste,jbimages",
+			plugins : "style,paste,jbimages,publicfileuploader",
 			theme : "advanced",
 			theme_advanced_buttons1 : "formatselect,fontselect,fontsizeselect",
 			theme_advanced_buttons2 : "bold,italic,underline,separator,strikethrough,justifyleft,justifycenter,justifyright, justifyfull,bullist,numlist,undo,redo,link,unlink",
-			theme_advanced_buttons3 : "cut,copy,paste,pastetext,pasteword,|,cleanup,help,code,jbimages",
+			theme_advanced_buttons3 : "cut,copy,paste,pastetext,pasteword,|,cleanup,help,code,jbimages,publicfileuploader",
 			theme_advanced_toolbar_location : "bottom",
 			theme_advanced_toolbar_align : "left",
 			content_css : "' . Request::getBaseUrl() . '/styles/common.css", 
