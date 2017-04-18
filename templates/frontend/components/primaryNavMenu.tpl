@@ -42,7 +42,7 @@
 						{translate key="about.aboutContext"}
 					</a>
 				</li>
-				{if $currentJournal->getLocalizedSetting('masthead')}
+				{if $currentJournal->getLocalizedSetting('editorialTeam')}
 					<li>
 						<a href="{url router=$smarty.const.ROUTE_PAGE page="about" op="editorialTeam"}">
 							{translate key="about.editorialTeam"}
