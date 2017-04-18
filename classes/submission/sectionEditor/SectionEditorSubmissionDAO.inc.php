@@ -833,10 +833,8 @@ class SectionEditorSubmissionDAO extends DAO {
 				(SELECT MAX(ac.date_notified) FROM review_assignments ac WHERE ac.reviewer_id = u.user_id AND ac.date_completed IS NOT NULL) AS latest,
 				(SELECT AVG(ac.date_completed-ac.date_notified) FROM review_assignments ac WHERE ac.reviewer_id = u.user_id AND ac.date_completed IS NOT NULL AND ac.cancelled = 0) AS average
 			 FROM users u
-				LEFT JOIN review_assignments ra ON (ra.reviewer_id = u.user_id)
 				LEFT JOIN review_assignments ar ON (ar.reviewer_id = u.user_id AND ar.cancelled = 0 AND ar.submission_id = ? AND ar.round = ?)
 				LEFT JOIN roles r ON (r.user_id = u.user_id)
-				LEFT JOIN articles a ON (ra.submission_id = a.article_id)
 				'.$interestJoinSql.'
 				WHERE u.user_id = r.user_id AND
 				r.journal_id = ? AND
