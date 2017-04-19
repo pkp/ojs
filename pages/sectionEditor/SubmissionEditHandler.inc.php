@@ -201,6 +201,9 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
+		
+		/* https://github.com/ubiquitypress/OJS-Draft-Editorial/commit/9135893848e9d40923c105a2cafc59b0529659c9 */ 
+		$drafts = $sectionEditorSubmissionDao->getArticleDrafts($articleId);
 
 		// Setting the round.
 		$round = isset($args[1]) ? $args[1] : $submission->getCurrentRound();
@@ -249,6 +252,14 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			unset($reviewForm);
 			$reviewFormResponses[$reviewAssignment->getId()] = $reviewFormResponseDao->reviewFormResponseExists($reviewAssignment->getId());
 		}
+		
+		// Detect if user is a full editor.
+		$roleDao =& DAORegistry::getDAO('RoleDAO');
+		$user =& Request::getUser();
+		$isEditor = $roleDao->userHasRole($journal->getId(), $user->getId(), ROLE_ID_EDITOR);
+		
+		// TODO: Pull from CONFIG!
+		$draftingDisabled = Config::getVar('general', 'disable_drafting');
 
 		$templateMgr =& TemplateManager::getManager();
 
@@ -278,10 +289,214 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr->assign('allowRecommendation', $allowRecommendation);
 		$templateMgr->assign('allowResubmit', $allowResubmit);
 		$templateMgr->assign('allowCopyedit', $allowCopyedit);
+		
+		$templateMgr->assign('isEditor', $isEditor);
+		$templateMgr->assign('draftingDisabled', $draftingDisabled);
+		$templateMgr->assign('drafts', $drafts);
 
 		$templateMgr->assign('helpTopicId', 'editorial.sectionEditorsRole.review');
 		$templateMgr->display('sectionEditor/submissionReview.tpl');
 	}
+	
+	/**
+	 * View the submission review page.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
+	function draftDecision($args, &$request) {
+		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		$this->validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
+		$journal =& Request::getJournal();
+		$submission =& $this->submission;
+		$user =& $request->getUser();
+		$this->setupTemplate(true, $articleId);
+
+		if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit_draft'])) {
+
+			$decision = $_POST["decision"];
+			$senioreditorId = $_POST["editor"];
+			$subject = $_POST["subject"];
+			$body = $_POST["body"];
+			$note = $_POST["note"];
+			$status = 'draft';
+			$key = uniqid('draft_', true);
+			$junioreditorId = $user->getId();
+
+			$articleDao =& DAORegistry::getDAO('ArticleDAO');
+			$article =& $articleDao->getArticle($articleId);
+
+			//$articleID, $Key, $seniorEditorID, $juniorEditorID, $Subject, $Body, $Note, $Decision, $Status
+			$sectioneditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
+			$draft = $sectioneditorSubmissionDao->recordDraftDecision($articleId, $key, $senioreditorId, $junioreditorId, $subject, $body, $note, $decision, $status);
+
+			// lets send an email to the editor :D
+			$base_url = Config::getVar('general', 'base_url');
+			$senior_editor_email = $sectioneditorSubmissionDao->getUserEmail($senioreditorId);
+			$email_message = $article->getArticleTitle() . " has a new draft decision. View the draft: " . $base_url . "/index.php/" . $journal->getPath() ."/editor/viewDraftDecision/" . $articleId . "?key=" . $key;
+			import('lib.pkp.classes.mail.Mail');
+			$email = new Mail();
+			$userDao =& DAORegistry::getDAO('UserDAO');
+			$authorUser =& $userDao->getUser($submission->getUserId());
+			$email->setSubject('New Draft Decision');
+			$email->setBody($email_message);
+			$email->addRecipient($senior_editor_email);
+			$email->send();
+			$request->redirect(null, null, 'submissionReview', $articleId);
+	
+		} elseif ($_SERVER['REQUEST_METHOD'] === 'POST') {
+			$decision = $_POST["decision"];
+			$decisionTemplateMap = array(
+				SUBMISSION_EDITOR_DECISION_ACCEPT => 'EDITOR_DECISION_ACCEPT',
+				SUBMISSION_EDITOR_DECISION_PENDING_REVISIONS => 'EDITOR_DECISION_REVISIONS',
+				SUBMISSION_EDITOR_DECISION_RESUBMIT => 'EDITOR_DECISION_RESUBMIT',
+				SUBMISSION_EDITOR_DECISION_DECLINE => 'EDITOR_DECISION_DECLINE'
+			);
+
+			$articleDao =& DAORegistry::getDAO('ArticleDAO');
+			$article =& $articleDao->getArticle($articleId);
+
+			import('classes.mail.ArticleMailTemplate');
+			$email = new ArticleMailTemplate(
+				$article,
+				isset($decisionTemplateMap[$decision])?$decisionTemplateMap[$decision]:null
+			);
+			$userDao =& DAORegistry::getDAO('UserDAO');
+			$authorUser =& $userDao->getUser($submission->getUserId());
+			$email->assignParams(array(
+				'editorialContactSignature' => $user->getContactSignature(),
+				'authorName' => $authorUser->getFullName(),
+				'journalTitle' => $journal->getLocalizedTitle(),
+				'articleTitle' => $article->getArticleTitle()
+			));
+
+			$title = $article->getArticleTitle();
+			$email_subject = $email->getSubject('en_us') . ' ' . $title;
+
+		} else {
+			$request->redirect(null, null, 'submissionReview', $articleId);
+		}
+
+		// Detect if user is a full editor.
+		$roleDao =& DAORegistry::getDAO('RoleDAO');
+		$user =& Request::getUser();
+		$isEditor = $roleDao->userHasRole($journal->getId(), $user->getId(), ROLE_ID_EDITOR);
+		$editors = $roleDao->getUsersByRoleId(ROLE_ID_EDITOR, $journal->getId());
+
+		// Assign to the template
+		$templateMgr =& TemplateManager::getManager();
+
+		$templateMgr->assign_by_ref('submission', $submission);
+		$templateMgr->assign_by_ref('editors', $editors);
+		$templateMgr->assign('isEditor', $isEditor);
+		$templateMgr->assign('editorDecisionOptions', SectionEditorSubmission::getEditorDecisionOptions());
+		$templateMgr->assign('email', $email);
+		$templateMgr->assign('title', $email_subject);
+		$templateMgr->assign('decision', $decision);
+
+		$templateMgr->display('sectionEditor/draftDecision.tpl');
+	}
+
+	function viewDraftDecision($args, &$request) {
+		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		$this->validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
+		$journal =& Request::getJournal();
+		$submission =& $this->submission;
+		$user =& $request->getUser();
+		$this->setupTemplate(true, $articleId);
+		$key = $_GET['key'];
+
+		$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$draft = $sectionEditorSubmissionDao->getDraftDecision($key);
+
+		$roleDao =& DAORegistry::getDAO('RoleDAO');
+		$isEditor = $roleDao->userHasRole($journal->getId(), $user->getId(), ROLE_ID_EDITOR);
+
+		$articleDao =& DAORegistry::getDAO('ArticleDAO');
+		$article =& $articleDao->getArticle($articleId);
+
+		if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['edit_draft'])) {
+			$view = 'edit';
+		} elseif ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['save_changes'])) {
+			$params = array();
+			$params[] = $_POST["decision"];
+			$params[] = $_POST["subject"];
+			$params[] = $_POST["body"];
+			$params[] = $_POST["note"];
+			$params[] = $draft->fields['id'];
+
+			$sectionEditorSubmissionDao->updateDraft($params);
+
+			$draft = $sectionEditorSubmissionDao->getDraftDecision($key);
+			$view = 'view';
+			
+		} elseif ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['decline_draft'])) {
+			$sectionEditorSubmissionDao->setDraftStatus($draft->fields['id'], 'declined');
+			$request->redirect(null, null, 'submissionReview', $articleId);
+
+		} elseif ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['accept_draft'])) {
+			switch ($draft->fields['decision']) {
+			case SUBMISSION_EDITOR_DECISION_ACCEPT:
+			case SUBMISSION_EDITOR_DECISION_PENDING_REVISIONS:
+			case SUBMISSION_EDITOR_DECISION_RESUBMIT:
+			case SUBMISSION_EDITOR_DECISION_DECLINE:
+				SectionEditorAction::recordDecision($submission, $draft->fields['decision'], $request);
+				$sectionEditorSubmissionDao->setDraftStatus($draft->fields['id'], 'accepted');
+
+				$userDao =& DAORegistry::getDAO('UserDAO');
+				$authorUser =& $userDao->getUser($submission->getUserId());
+				$authorEmail = $authorUser->getEmail();
+				
+				import('lib.pkp.classes.mail.Mail');
+				$email = new Mail();
+				$userDao =& DAORegistry::getDAO('UserDAO');
+				$authorUser =& $userDao->getUser($submission->getUserId());
+				$email->setSubject($draft->fields['subject']);
+				$email->setBody($draft->fields['body']);
+				$email->addRecipient($authorEmail);
+				$email->send();
+
+				if ($draft->fields['decision'] == SUBMISSION_EDITOR_DECISION_DECLINE) {
+					// If the most recent decision was a decline,
+					// sending this email archives the submission.
+					$submission->setStatus(STATUS_ARCHIVED);
+					$submission->stampStatusModified();
+					$sectionEditorSubmissionDao->updateSectionEditorSubmission($submission);
+				}
+
+				$articleCommentDao =& DAORegistry::getDAO('ArticleCommentDAO');
+				$articleComment = new ArticleComment();
+				$articleComment->setCommentType(COMMENT_TYPE_EDITOR_DECISION);
+				$articleComment->setRoleId(Validation::isEditor()?ROLE_ID_EDITOR:ROLE_ID_SECTION_EDITOR);
+				$articleComment->setArticleId($draft->fields['article_id']);
+				$articleComment->setAuthorId($submission->getUserId());
+				$articleComment->setCommentTitle($draft->fields['subject']);
+				$articleComment->setComments($draft->fields['body']);
+				$articleComment->setDatePosted(Core::getCurrentDate());
+				$articleComment->setViewable(true);
+				$articleComment->setAssocId($submission->getId());
+				$articleCommentDao->insertArticleComment($articleComment);
+				break;
+
+			//$request->redirect(null, null, 'submissionReview', $articleId);
+		}
+
+		$request->redirect(null, null, 'submissionReview', $articleId);
+		} else {
+			$view = 'view';
+		}
+
+		// Assign to the template
+		$templateMgr =& TemplateManager::getManager();
+
+		$templateMgr->assign_by_ref('submission', $submission);
+		$templateMgr->assign_by_ref('editorDecisionOptions', SectionEditorSubmission::getEditorDecisionOptions());
+		$templateMgr->assign('draft', $draft);
+		$templateMgr->assign('view', $view);
+		$templateMgr->assign('isEditor', $isEditor);
+
+		$templateMgr->display('sectionEditor/viewDraftDecision.tpl');
+	}
+
 
 	/**
 	 * View the submission editing page.

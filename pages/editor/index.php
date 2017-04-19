@@ -27,6 +27,9 @@ switch ($op) {
 	case 'submission':
 	case 'submissionRegrets':
 	case 'submissionReview':
+	/* https://github.com/ubiquitypress/OJS-Draft-Editorial/commit/9135893848e9d40923c105a2cafc59b0529659c9  */
+	case 'draftDecision':
+	case 'viewDraftDecision':
 	case 'submissionEditing':
 	case 'submissionHistory':
 	case 'submissionCitations':

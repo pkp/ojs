@@ -12,11 +12,25 @@
   * Contributed by Andrea Marchitelli - CINECA.
   -->
 
-<locale name="it_IT" full_name="Italiano">
+<locale name="it_IT" full_name = "Italiano">
 	<message key="editor.article.reviewForms">Moduli di revisione</message>
 	<message key="editor.article.selectReviewForm">Seleziona il modulo di revisione</message>
 	<message key="editor.article.clearReviewForm">Cancella il modulo di revisione</message>
 	<message key="editor.article.confirmChangeReviewForm">Modificare il modulo di revisione rimuoverà tutte le risposte che i revisori abbiano dato sinora. Vuoi continuare?</message>
+	<message key="editor.draft.decision">Decisione provvisoria</message>
+	<message key="editor.draft.decision.accept">Accetta</message>
+	<message key="editor.draft.decision.decline">Rifiuta</message>
+	<message key="editor.draft.decision.edit">Modifica</message>
+	<message key="editor.draft.adecision">Predisponi una decisione provvisoria</message>
+	<message key="editor.draft.email">Questo messaggio verrà inviato all'autore solo dopo l'approvazione da parte dell'Editor</message>
+	<message key="editor.draft.SectionEditorRecommendation">Nota del Section Editor</message>
+	<message key="editor.draft.selectDecision">Seleziona una decisione provvisoria</message>
+	<message key="editor.draft.comment">In qualità di Section editor, puoi proporre una decisione provvisoria all'approvazione dell'editor</message>
+	<message key="editor.draft.emailSenior">Editor</message>
+	<message key="editor.draft.emailNote">Nota (verrà mostrata solo all'editor)</message>
+	<message key="editor.draft.intro">Puoi accettare, modificare o rifiutare questa decisione provvisoria. Se accetti, l'accettazione verrà registrata e sarà inviata una notifica all'autore.</message>
+	<message key="editor.draft.viewCurrent">Vedi la decisione provvisoria corrente</message>
+	<message key="editor.draft.record">Registra decisione provvisoria</message>
 	<message key="editor.home">Cruscotto dell'editor</message>
 	<message key="editor.submissionsAndPublishing">Proposte e pubblicazioni</message>
 	<message key="editor.submissionQueue">Coda delle proposte</message>

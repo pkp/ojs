@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../../../lib/pkp/dtd/xmlData.dtd">
+
+<!--
+  * 2.4.8-1_editorial_draft.xml
+  *
+  * Copyright (c) 2013-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * 2.4.8-1 editorial draft table creation.
+  *
+  -->
+
+<data>
+	<!-- Create editorial draft table -->
+	<sql>
+		<query driver="mysql">
+		CREATE TABLE `draft_decisions` (
+		  `id` int(11) NOT NULL AUTO_INCREMENT,
+		  `key_val` varchar(45) NOT NULL,
+		  `senior_editor_id` int(11) NOT NULL,
+		  `junior_editor_id` int(11) NOT NULL,
+		  `article_id` int(11) NOT NULL,
+		  `decision` int(11) NOT NULL,
+		  `subject` varchar(200) DEFAULT NULL,
+		  `body` text,
+		  `note` text,
+		  `attatchment` text,
+		  `status` varchar(45) NOT NULL,
+		  PRIMARY KEY (`id`)
+		);
+		</query>
+		<query driver="postgres7">
+		CREATE TABLE draft_decisions (
+		  id bigserial PRIMARY KEY,
+		  key_val varchar(45) NOT NULL,
+		  senior_editor_id numeric(11) NOT NULL,
+		  junior_editor_id numeric(11) NOT NULL,
+		  article_id numeric(11) NOT NULL,
+		  decision numeric(11) NOT NULL,
+		  subject varchar(200) DEFAULT NULL,
+		  body text,
+		  note text,
+		  attatchment text,
+		  status varchar(45) NOT NULL,
+		  PRIMARY KEY (id)
+		) ;
+		</query>
+	</sql>
+</data>

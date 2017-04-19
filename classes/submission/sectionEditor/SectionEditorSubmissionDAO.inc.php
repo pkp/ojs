@@ -1303,6 +1303,61 @@ class SectionEditorSubmissionDAO extends DAO {
 
 		return $statistics;
 	}
+	
+	/* Draft editorial https://github.com/ubiquitypress/OJS-Draft-Editorial/commit/9135893848e9d40923c105a2cafc59b0529659c9 */
+	function recordDraftDecision($articleID, $Key, $seniorEditorID, $juniorEditorID, $Subject, $Body, $Note, $Decision, $Status) {
+		$this->update(
+			'INSERT INTO draft_decisions
+				(key_val, senior_editor_id, junior_editor_id, article_id, decision, subject, body, note, status)
+				VALUES
+				(?, ?, ?, ?, ?, ?, ?, ?, ?)',
+			array($Key, $seniorEditorID, $juniorEditorID, $articleID, $Decision, $Subject, $Body, $Note, $Status)
+		);
+	}
+
+	function getArticleDrafts($articleId) {
+		$result =& $this->retrieve(
+			'SELECT dd.key_val, dd.decision, dd.article_id, u.first_name, u.last_name
+			 FROM draft_decisions dd
+			 JOIN users u ON dd.junior_editor_id = u.user_id
+			 WHERE article_id = ? AND dd.status = ?',
+			array($articleId, 'draft')
+		);
+
+		return $result;
+	}
+
+	function getDraftDecision($key) {
+		$result =& $this->retrieve(
+			"SELECT dd.*, concat(u.first_name, ' ' , u.last_name) AS junior_editor_name
+			 FROM draft_decisions dd
+			 JOIN users u ON dd.junior_editor_id = u.user_id
+			 WHERE key_val = ? LIMIT 1",
+			array($key)
+		);
+
+		return $result;
+	}
+
+	function getUserEmail($id) {
+		$result =& $this->retrieve(
+			"SELECT email FROM users WHERE user_id = ? LIMIT 1", array($id)
+		);
+
+		return $result->fields['email'];
+	}
+
+	function updateDraft($params) {
+		$this->update(
+			'UPDATE draft_decisions SET decision = ?, subject = ?, body = ?, note = ? WHERE id = ?', $params
+		);
+	}
+
+	function setDraftStatus($id, $status){
+		$this->update(
+			'UPDATE draft_decisions SET status = ? WHERE id = ?', array($status, $id)
+		);
+	}
 
 	/**
 	 * Map a column heading value to a database value for sorting
