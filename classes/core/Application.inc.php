@@ -62,7 +62,7 @@ class Application extends PKPApplication {
 	 * @return string
 	 */
 	function getName() {
-		return 'ojs2';
+		return 'ojs3';
 	}
 
 	/**
