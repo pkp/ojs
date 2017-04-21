@@ -238,8 +238,8 @@ class OAIDAO extends PKPOAIDAO {
 			WHERE	i.published = 1 AND j.enabled = 1 AND a.status <> ' . STATUS_DECLINED . '
 				' . ($journalId?' AND j.journal_id = ?':'') . '
 				' . ($sectionId?' AND s.section_id = ?':'') . '
-				' . ($from?' AND LEAST(a.last_modified, i.last_modified) >= ' . $this->datetimeToDB($from):'') . '
-				' . ($until?' AND GREATEST(a.last_modified, i.last_modified) <= ' . $this->datetimeToDB($until):'') . '
+				' . ($from?' AND GREATEST(a.last_modified, i.last_modified) >= ' . $this->datetimeToDB($from):'') . '
+				' . ($until?' AND LEAST(a.last_modified, i.last_modified) <= ' . $this->datetimeToDB($until):'') . '
 				' . ($submissionId?' AND a.submission_id = ?':'') . '
 			UNION
 			SELECT	dot.date_deleted AS last_modified,
