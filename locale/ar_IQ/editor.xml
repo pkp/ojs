@@ -96,6 +96,7 @@
 	<message key="editor.issues.preview">(معاينة)</message>
 	<message key="editor.issues.confirmPublish">هل أنت متأكد من رغبتك في نشر العدد الجديد؟</message>
 	<message key="editor.issues.confirmUnpublish">هل أنت متأكد من رغبتك في التراجع عن نشر هذا العدد الذي سبق نشره؟</message>
+	<message key="editor.issues.confirmSetCurrentIssue">هل أنت متأكد من رغبتك في جعل هذا العدد هو العدد الحالي؟</message>
 	<message key="editor.issues.publicArticleIdExists">تعذر حفظ رمز التعريف العام للمؤلَّف:</message>
 	<message key="editor.issues.noLiveIssues">لا أعداد صادرة</message>
 	<message key="editor.issues.open">فتح</message>
@@ -119,6 +120,7 @@
 	<message key="grid.action.viewIssue">معاينة</message>
 	<message key="grid.action.previewIssue">معاينة</message>
 	<message key="grid.action.addIssueGalley">أنشئ اللوح الطباعي للعدد</message>
+	<message key="grid.action.setCurrentIssue">إجعله العدد الحالي</message>
 	<message key="editor.navigation.issueArchive">الأعداد السابقة</message>
 	<message key="editor.article.designateReviewVersion">إعتبر الملف الأصلي بمثابة النسخة المنقحة أو المحكمة</message>
 	<message key="editor.article.uploadReviewVersion">إرفع نسخة معدة للتحكيم</message>
