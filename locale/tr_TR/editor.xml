@@ -27,7 +27,6 @@
     <message key="editor.submission.decision.resubmit">Karar: Tekrar Gönderme</message>
     <message key="editor.submission.roundStatus.pendingReviewers">Hakem Bekleniyor</message>
     <message key="editor.submissionReview.uploadAttachment">Dosya Yükle</message>
-    <message key="editor.submission.decision.accept">Karar: Kabul</message>
     <message key="editor.submission.decision.decline">Karar: Red</message>
     <message key="editor.submission.decision.sendToProduction">Basıma Gönder</message>
     <message key="editor.submission.production.productionReadyFiles">Basıma Hazır Dosyalar</message>
