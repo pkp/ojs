@@ -155,6 +155,7 @@
 	<upgrade minversion="3.0.2.0" maxversion="3.0.2.9">
 		<!--  the order of the next two lines is important -->
 		<code function="moveReviewerFiles" />
+		<code function="fixAuthorGroup" />
 		<data file="dbscripts/xml/upgrade/3.0.0_reviewer_files.xml" />
 		<data file="dbscripts/xml/upgrade/3.0.2_review_assignments.xml" />
 		<data file="dbscripts/xml/upgrade/3.0.2_edit_decisions.xml" />

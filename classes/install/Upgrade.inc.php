@@ -222,6 +222,9 @@ class Upgrade extends Installer {
 		define('ROLE_ID_COPYEDITOR', 0x00002000);
 		define('ROLE_ID_PROOFREADER', 0x00003000);
 
+		// fix stage id assignments for reviews.  OJS hard coded *all* of these to '1' initially. Consider OJS reviews as external reviews.
+		$userGroupDao->update('UPDATE review_assignments SET stage_id = ?', array(WORKFLOW_STAGE_ID_EXTERNAL_REVIEW));
+
 		while ($journal = $journals->next()) {
 			// Install default user groups so we can assign users to them.
 			$userGroupDao->installSettings($journal->getId(), 'registry/userGroups.xml');
@@ -254,16 +257,13 @@ class Upgrade extends Installer {
 			}
 
 			// Authors.
-			$group = $userGroupDao->getDefaultByRoleId($journal->getId(), ROLE_ID_AUTHOR);
+			$authorGroup = $userGroupDao->getDefaultByRoleId($journal->getId(), ROLE_ID_AUTHOR);
 			$userResult = $journalDao->retrieve('SELECT user_id FROM roles WHERE journal_id = ? AND role_id = ?', array((int) $journal->getId(), ROLE_ID_AUTHOR));
 			while (!$userResult->EOF) {
 				$row = $userResult->GetRowAssoc(false);
-				$userGroupDao->assignUserToGroup($row['user_id'], $group->getId());
+				$userGroupDao->assignUserToGroup($row['user_id'], $authorGroup->getId());
 				$userResult->MoveNext();
 			}
-
-			// update the user_group_id column in the authors table.
-			$userGroupDao->update('UPDATE authors SET user_group_id = ?', array((int) $group->getId()));
 
 			// Reviewers.  All existing OJS reviewers get mapped to external reviewers.
 			// There should only be one user group with ROLE_ID_REVIEWER in the external review stage.
@@ -282,9 +282,6 @@ class Upgrade extends Installer {
 					$userResult->MoveNext();
 				}
 			}
-
-			// fix stage id assignments for reviews.  OJS hard coded *all* of these to '1' initially. Consider OJS reviews as external reviews.
-			$userGroupDao->update('UPDATE review_assignments SET stage_id = ?', array(WORKFLOW_STAGE_ID_EXTERNAL_REVIEW));
 
 			// regular Editors.  NOTE:  this involves a role id change from 0x100 to 0x10 (old OJS _EDITOR to PKP-lib _MANAGER).
 			$userGroups = $userGroupDao->getByRoleId($journal->getId(), ROLE_ID_MANAGER);
@@ -368,6 +365,10 @@ class Upgrade extends Installer {
 
 				// Authors get access to all stages.
 				$stageAssignmentDao->build($submissionId, $authorGroup->getId(), $submissionUserId);
+
+
+				// update the user_group_id column in the authors table.
+				$userGroupDao->update('UPDATE authors SET user_group_id = ? WHERE submission_id = ?', array((int) $authorGroup->getId(), $submissionId));
 
 				// Journal Editors
 				// First, full editors.
@@ -1862,6 +1863,27 @@ class Upgrade extends Installer {
 			default: fatalError('Unknown database type!');
 		}
 		$articleDao->flushCache();
+		return true;
+	}
+
+	/**
+	 * For 3.1.0 upgrade (#2467): In multi-journal upgrades from OJS 2.x, the
+	 * user_group_id column in the authors table may be updated to point to
+	 * user groups in other journals.
+	 * @return boolean
+	 */
+	function fixAuthorGroup() {
+		$userGroupDao = DAORegistry::getDAO('UserGroupDAO');
+		$result = $userGroupDao->retrieve(
+			'SELECT a.author_id, s.context_id FROM authors a JOIN submissions s ON (a.submission_id = s.submission_id) JOIN user_groups g ON (a.user_group_id = g.user_group_id) WHERE g.context_id <> s.context_id'
+		);
+		while (!$result->EOF) {
+			$row = $result->GetRowAssoc(false);
+			$authorGroup = $userGroupDao->getDefaultByRoleId($row['context_id'], ROLE_ID_AUTHOR);
+			if ($authorGroup) $userGroupDao->update('UPDATE authors SET user_group_id = ?', (int) $authorGroup->getId());
+			$result->MoveNext();
+		}
+		$result->Close();
 		return true;
 	}
 
