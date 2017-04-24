@@ -1865,6 +1865,27 @@ class Upgrade extends Installer {
 	}
 
 	/**
+	 * For 3.1.0 upgrade (#2467): In multi-journal upgrades from OJS 2.x, the
+	 * user_group_id column in the authors table may be updated to point to
+	 * user groups in other journals.
+	 * @return boolean
+	 */
+	function fixAuthorGroup() {
+		$userGroupDao = DAORegistry::getDAO('UserGroupDAO');
+		$result = $userGroupDao->retrieve(
+			'SELECT a.author_id, s.context_id FROM authors a JOIN submissions s ON (a.submission_id = s.submission_id) JOIN user_groups g ON (a.user_group_id = g.user_group_id) WHERE g.context_id <> s.context_id'
+		);
+		while (!$result->EOF) {
+			$row = $result->GetRowAssoc(false);
+			$authorGroup = $userGroupDao->getDefaultByRoleId($row['context_id'], ROLE_ID_AUTHOR);
+			if ($authorGroup) $userGroupDao->update('UPDATE authors SET user_group_id = ?', (int) $authorGroup->getId());
+			$result->MoveNext();
+		}
+		$result->Close();
+		return true;
+	}
+
+	/**
 	 * For 3.0.0 - 3.0.2 upgrade: first part of the fix for the migrated reviewer files.
 	 * The files are renamed and moved from 'review' to 'review/attachment' folder.
 	 * @return boolean
