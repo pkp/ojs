@@ -29,7 +29,6 @@
 	<message key="editor.submissionReview.confirmDecision">¿Está seguro/a de que desea registrar esta decisión?</message>
 	<message key="editor.submissionReview.emailWillArchive">Este envío se archivará después de que se envíe el correo electrónico de notificación al autor/a, o después de pulsar el botón No enviar correo electrónico.</message>
 	<message key="editor.submissionReview.cannotSendToCopyediting">Antes de mandar un envío a corrección de originales, utilice el enlace Notificar al autor/a para comunicarle la decisión y seleccionar la versión que se enviará.</message>
-	<message key="editor.submissionReview.sendToCopyediting">Enviar a Corrección de originales</message>
 	<message key="editor.notifyUsers">Informar a los usuarios/as</message>
 	<message key="editor.notifyUsers.allUsers">Todos los usuarios/as asociados con esta revista ({$count} usuarios/as)</message>
 	<message key="editor.notifyUsers.allReaders">Todos los lectores/as ({$count} usuarios/as)</message>

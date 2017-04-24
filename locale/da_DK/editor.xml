@@ -188,7 +188,6 @@
 	<message key="editor.article.removeCoverPage">Fjen forsidebillede?</message>
 	<message key="editor.article.remove">Fjern</message>
 	<message key="editor.submissionReview.cannotSendToCopyediting">Inden du sender et indleveret manuskript til manuskriptredigering, skal du bruge linket Underret forfatter til at informere forfatteren om beslutningen og vælge den version, der skal sendes.</message>
-	<message key="editor.submissionReview.sendToCopyediting">Send til manuskriptredigering</message>
 	<message key="editor.notifyUsers.allReaders">Alle læsere ({$count} brugere)</message>
 	<message key="editor.notifyUsers.allAuthors">Alle udgivne forfattere({$count} brugere)</message>
 	<message key="editor.notifyUsers.allIndividualSubscribers">Alle individuelle abonnenter ({$count} brugere)</message>

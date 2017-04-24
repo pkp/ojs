@@ -41,8 +41,8 @@
      <message key="editor.review.requestSent">İstek Gönderildi </message>
      <message key="editor.review.reviewDetails">Detaylar </message>
      <message key="editor.review.emailReviewer">E-Mail Gönder</message>
-     
-     
+
+
     <message key="editor.submission.revisions">Düzeltmeler</message>
     <message key="editor.submission.selectReviewer">Hakem Ata</message>
     <message key="editor.review.skipEmail">Mail Gönderme</message>
@@ -67,8 +67,6 @@
 	<message key="editor.submissionReview.confirmDecision">Bu kararı kaydetmek istediğinizden emin misiniz?</message>
 	<message key="editor.submissionReview.emailWillArchive">Bu gönderi Yazarı Bilgilendir e-posta mesajından sonra arşivlenecektir. Arşivleme için "Gönder" veya "E-posta Göndermeden" seçeneklerinin hangisinin kullanıldığı fark etmez.</message>
 	<message key="editor.submissionReview.cannotSendToCopyediting">Makaleyi yayına göndermeden önce,  kararı yazara bildirmek için Yazarı Bilgilendir linkini kullanınız. Daha sonra yayına gönderilcek sürümü seçerek Dosya Gönder seçeneğini tıklayınız.</message>
-	<message key="editor.submissionReview.sendToCopyediting">Sayfa Düzenlemeye Gönder</message>
-	<message key="editor.notifyUsers">Kullanıcıları Uyar</message>
 	<message key="editor.notifyUsers.allUsers">Bu mesajı dergi ile bağlantılı tüm üyelere gönder ({$count} üye)</message>
 	<message key="editor.notifyUsers.allReaders">Tüm okuyucular ({$count} kişidir)</message>
 	<message key="editor.notifyUsers.allAuthors">Tüm yayınlanan yazarlar ({$count} kişidir)</message>
@@ -256,7 +254,7 @@
 	<message key="editor.article.coverImageDisplay">Görüntüle</message>
 	<message key="editor.article.hideCoverPageToc">İçindekiler sayfasında küçük kapak görseli görüntüleme.</message>
 	<message key="editor.article.hideCoverPageAbstract">Makale abstraktını görüntülerken kapak görseli görüntüleme.</message>
-	
+
 	<message key="editor.article.coverImageInstructions">(Kabul edilebilir formatlar: .gif, .jpg veya .png )</message>
 	<message key="editor.article.uploaded">Yüklendi</message>
 	<message key="editor.article.removeCoverPage">Kapak görseli kaldırılsın mı?</message>

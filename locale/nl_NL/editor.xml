@@ -193,8 +193,6 @@
 	<message key="editor.article.archiveSubmission">Verwerp en archiveer inzending</message>
 	<message key="editor.notifyUsers.allIndividualSubscribers">Alle individuele abonnees ({$count} gebruikers)</message>
 	<message key="editor.notifyUsers.allInstitutionalSubscribers">Alle institutionele abonnees ({$count} gebruikers)</message>
-	<message key="editor.submissionReview.sendToCopyediting">Naar tekstredactie sturen</message>
-	<message key="editor.notifyUsers.allAuthors">Alle gepubliceerde auteurs ({$count} gebruikers)</message>
 	<message key="editor.notifyUsers.allReaders">Alle lezers ({$count} gebruikers)</message>
 	<message key="editor.submissionReview.cannotSendToCopyediting">Gebruik de Bericht aan de auteur-link om de auteur van de beslissing op de hoogte te stellen en selecteer de te versturen versie, alvorens een inzending maar de tekstredactie te sturen,</message>
 	<message key="editor.issues.galleys">Proeven van dit numer</message>

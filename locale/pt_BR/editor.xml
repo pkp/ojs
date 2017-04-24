@@ -188,7 +188,6 @@
 	<message key="editor.issues.unpublishIssue">Despublicar edição</message>
 	<message key="editor.issues.confirmUnpublish">Deseja realmente despublicar esta edição?</message>
 	<message key="editor.article.archiveSubmission">Rejeitar e arquivar submissão</message>
-	<message key="editor.submissionReview.sendToCopyediting">Enviar para a edição de texto</message>
 	<message key="editor.notifyUsers.allReaders">Todos os leitores ({$count} usuários)</message>
 	<message key="editor.notifyUsers.allAuthors">Todos os autores com publicações ({$count} usuários)</message>
 	<message key="editor.notifyUsers.allIndividualSubscribers">Todos os assinantes individuais ({$count} usuários)</message>

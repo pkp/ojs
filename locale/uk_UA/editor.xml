@@ -15,9 +15,9 @@
   -->
 
 <locale name="uk_UA" full_name="Українська">
-       
+
                    <message key="editor.home">Тека редактора</message>
-      
+
        <message key="editor.submissionsAndPublishing">Подання та публікація</message>
        <message key="editor.submissionQueue">Редакційна черга</message>
        <message key="editor.submissionArchive">Архів подань</message>
@@ -25,20 +25,19 @@
        <message key="editor.publishedIssues">Опубліковані випуски</message>
        <message key="editor.allSections">Всі розділи</message>
        <message key="editor.allEditors">Всі редактори</message>
-       <message key="editor.me">Я</message>    
+       <message key="editor.me">Я</message>
        <message key="editor.submissionReview.confirmDecision">Ви впевнені, що хочете записати це рішення?</message>
        <message key="editor.submissionReview.emailWillArchive">Це подання буде архівоване після того, як буде надіслане сповіщення автору або після натискання кнопки "Пропустити надсилання листа".</message>
        <message key="editor.submissionReview.cannotSendToCopyediting">Перш ніж надсилати подання на літературне редагування, за допомогою посилання "Сповістити автора" інформуйте автора про прийняте Вами рішення та визначіть версію для літературного редагування.</message>
-       <message key="editor.submissionReview.sendToCopyediting">Надіслати на літературне редагування</message>
        <message key="editor.notifyUsers">Сповістити користувачів</message>
        <message key="editor.notifyUsers.allUsers">Надіслати це повідомлення всім користувачам, асоційованим з цим журналом ({$count} користувачів)</message>
        <message key="editor.notifyUsers.allReaders">Всім читачам ({$count} користувачів)</message>
        <message key="editor.notifyUsers.allAuthors">Всім опублікованим авторам ({$count} користувачів)</message>
        <message key="editor.notifyUsers.allIndividualSubscribers">Всім індивідуальним передплатникам ({$count} користувачів)</message>
-       <message key="editor.notifyUsers.allInstitutionalSubscribers">Всім установам-передплатникам ({$count} користувачів)</message>   
+       <message key="editor.notifyUsers.allInstitutionalSubscribers">Всім установам-передплатникам ({$count} користувачів)</message>
        <message key="editor.notifyUsers.interestedUsers">Надіслати це повідомлення лише тим користувачам журналу, які вказати бажання отримувати новини ({$count} користувачів)</message>
        <message key="editor.notifyUsers.inProgress">Сповіщаються користувачі...</message>
-       <message key="editor.usersNotified">Користувачі сповіщені</message>     
+       <message key="editor.usersNotified">Користувачі сповіщені</message>
        <message key="editor.notifyUsers.includeToc">Включити сторінку змісту цього випуску:</message>
        <message key="editor.editorAdministration">Редактор Адміністрація</message>
        <message key="editor.issues.createIssue">Створити випуск</message>
