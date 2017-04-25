@@ -16,6 +16,12 @@
 
 import('lib.pkp.classes.install.Installer');
 
+define('OJS2_ROLE_ID_EDITOR',	0x00000100);
+define('OJS2_ROLE_ID_SECTION_EDITOR',	0x00000200);
+define('OJS2_ROLE_ID_LAYOUT_EDITOR',	0x00000300);
+define('OJS2_ROLE_ID_COPYEDITOR', 0x00002000);
+define('OJS2_ROLE_ID_PROOFREADER', 0x00003000);
+
 class Upgrade extends Installer {
 	/**
 	 * Constructor.
@@ -218,10 +224,6 @@ class Upgrade extends Installer {
 
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_DEFAULT, LOCALE_COMPONENT_PKP_DEFAULT);
 
-		define('ROLE_ID_LAYOUT_EDITOR',	0x00000300);
-		define('ROLE_ID_COPYEDITOR', 0x00002000);
-		define('ROLE_ID_PROOFREADER', 0x00003000);
-
 		// fix stage id assignments for reviews.  OJS hard coded *all* of these to '1' initially. Consider OJS reviews as external reviews.
 		$userGroupDao->update('UPDATE review_assignments SET stage_id = ?', array(WORKFLOW_STAGE_ID_EXTERNAL_REVIEW));
 
@@ -287,7 +289,7 @@ class Upgrade extends Installer {
 			while ($group = $userGroups->next()) {
 				if ($group->getData('nameLocaleKey') == 'default.groups.name.editor') {
 					$editorUserGroup = $group; // stash for later.
-					$userResult = $journalDao->retrieve('SELECT user_id FROM roles WHERE journal_id = ? AND role_id = ?', array((int) $journal->getId(), 0x00000100 /* ROLE_ID_EDITOR */));
+					$userResult = $journalDao->retrieve('SELECT user_id FROM roles WHERE journal_id = ? AND role_id = ?', array((int) $journal->getId(), OJS2_ROLE_ID_EDITOR));
 					while (!$userResult->EOF) {
 						$row = $userResult->GetRowAssoc(false);
 						$userGroupDao->assignUserToGroup($row['user_id'], $group->getId());
@@ -311,7 +313,7 @@ class Upgrade extends Installer {
 			while ($group = $userGroups->next()) {
 				if ($group->getData('nameLocaleKey') == 'default.groups.name.layoutEditor') {
 					$layoutEditorGroup = $group;
-					$userResult = $journalDao->retrieve('SELECT user_id FROM roles WHERE journal_id = ? AND role_id = ?', array((int) $journal->getId(), ROLE_ID_LAYOUT_EDITOR));
+					$userResult = $journalDao->retrieve('SELECT user_id FROM roles WHERE journal_id = ? AND role_id = ?', array((int) $journal->getId(), OJS2_ROLE_ID_LAYOUT_EDITOR));
 					while (!$userResult->EOF) {
 						$row = $userResult->GetRowAssoc(false);
 						$userGroupDao->assignUserToGroup($row['user_id'], $group->getId());
@@ -326,7 +328,7 @@ class Upgrade extends Installer {
 			while ($group = $userGroups->next()) {
 				if ($group->getData('nameLocaleKey') == 'default.groups.name.copyeditor') {
 					$copyEditorGroup = $group;
-					$userResult = $journalDao->retrieve('SELECT user_id FROM roles WHERE journal_id = ? AND role_id = ?', array((int) $journal->getId(), ROLE_ID_COPYEDITOR));
+					$userResult = $journalDao->retrieve('SELECT user_id FROM roles WHERE journal_id = ? AND role_id = ?', array((int) $journal->getId(), OJS2_ROLE_ID_COPYEDITOR));
 					while (!$userResult->EOF) {
 						$row = $userResult->GetRowAssoc(false);
 						$userGroupDao->assignUserToGroup($row['user_id'], $group->getId());
@@ -341,7 +343,7 @@ class Upgrade extends Installer {
 			while ($group = $userGroups->next()) {
 				if ($group->getData('nameLocaleKey') == 'default.groups.name.proofreader') {
 					$proofreaderGroup = $group;
-					$userResult = $journalDao->retrieve('SELECT user_id FROM roles WHERE journal_id = ? AND role_id = ?', array((int) $journal->getId(), ROLE_ID_PROOFREADER));
+					$userResult = $journalDao->retrieve('SELECT user_id FROM roles WHERE journal_id = ? AND role_id = ?', array((int) $journal->getId(), OJS2_ROLE_ID_PROOFREADER));
 					while (!$userResult->EOF) {
 						$row = $userResult->GetRowAssoc(false);
 						$userGroupDao->assignUserToGroup($row['user_id'], $group->getId());
@@ -371,7 +373,7 @@ class Upgrade extends Installer {
 				// Journal Editors
 				// First, full editors.
 				$editorsResult = $stageAssignmentDao->retrieve('SELECT e.* FROM submissions s, edit_assignments e, users u, roles r WHERE r.user_id = e.editor_id AND r.role_id = ' .
-							0x00000100 /* ROLE_ID_EDITOR */ . ' AND e.article_id = ? AND r.journal_id = s.context_id AND s.submission_id = e.article_id AND e.editor_id = u.user_id', array($submissionId));
+							OJS2_ROLE_ID_EDITOR . ' AND e.article_id = ? AND r.journal_id = s.context_id AND s.submission_id = e.article_id AND e.editor_id = u.user_id', array($submissionId));
 				while (!$editorsResult->EOF) {
 					$editorRow = $editorsResult->GetRowAssoc(false);
 					$stageAssignmentDao->build($submissionId, $editorUserGroup->getId(), $editorRow['editor_id']);
@@ -381,7 +383,7 @@ class Upgrade extends Installer {
 
 				// Section Editors.
 				$editorsResult = $stageAssignmentDao->retrieve('SELECT e.* FROM submissions s LEFT JOIN edit_assignments e ON (s.submission_id = e.article_id) LEFT JOIN users u ON (e.editor_id = u.user_id)
-							LEFT JOIN roles r ON (r.user_id = e.editor_id AND r.role_id = ' . 0x00000100 /* ROLE_ID_EDITOR */ . ' AND r.journal_id = s.context_id) WHERE e.article_id = ? AND s.submission_id = e.article_id
+							LEFT JOIN roles r ON (r.user_id = e.editor_id AND r.role_id = ' . OJS2_ROLE_ID_EDITOR . ' AND r.journal_id = s.context_id) WHERE e.article_id = ? AND s.submission_id = e.article_id
 							AND r.role_id IS NULL', array($submissionId));
 				while (!$editorsResult->EOF) {
 					$editorRow = $editorsResult->GetRowAssoc(false);
@@ -1963,15 +1965,15 @@ class Upgrade extends Installer {
 		while ($journal = $journals->next()) {
 			$supportedFormLocales = $journal->getSupportedFormLocales();
 			$focusAndScope = $journal->getSetting('focusScopeDesc');
-			$focusAndScope['localKey'] = 'about.focusAndScope';
+			$focusAndScope['localeKey'] = 'about.focusAndScope';
 			$reviewPolicy = $journal->getSetting('reviewPolicy');
-			$reviewPolicy['localKey'] = 'about.peerReviewProcess';
+			$reviewPolicy['localeKey'] = 'about.peerReviewProcess';
 			$pubFreqPolicy = $journal->getSetting('pubFreqPolicy');
-			$pubFreqPolicy['localKey'] = 'about.publicationFrequency';
+			$pubFreqPolicy['localeKey'] = 'about.publicationFrequency';
 			$oaPolicy = array();
 			if ($journal->getSetting('publishingMode') == PUBLISHING_MODE_OPEN) {
 				$oaPolicy = $journal->getSetting('openAccessPolicy');
-				$oaPolicy['localKey'] = 'about.openAccessPolicy';
+				$oaPolicy['localeKey'] = 'about.openAccessPolicy';
 			}
 			// the elements order accords to how they were displayed on the about page
 			$editorialPolicySettings = array(
@@ -1986,10 +1988,10 @@ class Upgrade extends Installer {
 			$sponsorNote = $journal->getSetting('sponsorNote');
 			$sponsors = $journal->getSetting('sponsors');
 			$contributorNote = $journal->getSetting('contributorNote');
-			$contributorNote['localKey'] = 'grid.contributor.title';
+			$contributorNote['localeKey'] = 'grid.contributor.title';
 			$contributors = $journal->getSetting('contributors');
 			$history = $journal->getSetting('history');
-			$history['localKey'] = 'about.history';
+			$history['localeKey'] = 'about.history';
 			// the elements order accords to how they were displayed on the about page
 			$otherSettings = array(
 				'sponsors' => $sponsorNote,
@@ -2006,7 +2008,7 @@ class Upgrade extends Installer {
 					if (!empty($editorialPolicySetting[$locale])) {
 						$aboutJournal[$locale] .= '
 							<div id="'.$divId.'">
-							<h3>'.__($editorialPolicySetting['localKey'], array(), $locale).'</h3>
+							<h3>'.__($editorialPolicySetting['localeKey'], array(), $locale).'</h3>
 							<p>'.nl2br($editorialPolicySetting[$locale]).'</p>
 							</div>';
 					}
@@ -2023,7 +2025,7 @@ class Upgrade extends Installer {
 						}
 					}
 				}
-				// finaly, concatenate the other settings
+				// finally, concatenate the other settings
 				foreach ($otherSettings as $divId => $otherSetting) {
 					if ($divId == 'sponsors') {
 						if (!empty($otherSetting[$locale]) || !empty($sponsors)) {
@@ -2054,7 +2056,7 @@ class Upgrade extends Installer {
 						if (!empty($otherSetting[$locale]) || !empty($contributors)) {
 							$aboutJournal[$locale] .= '
 								<div id="'.$divId.'">
-								<h3>'.__($otherSetting['localKey'], array(), $locale).'</h3>';
+								<h3>'.__($otherSetting['localeKey'], array(), $locale).'</h3>';
 							if (!empty($otherSetting[$locale])) {
 								$aboutJournal[$locale] .= '
 									<p>'.nl2br($otherSetting[$locale]).'</p>';
@@ -2079,7 +2081,7 @@ class Upgrade extends Installer {
 						if (!empty($otherSetting[$locale])) {
 							$aboutJournal[$locale] .= '
 								<div id="'.$divId.'">
-								<h3>'.__($otherSetting['localKey'], array(), $locale).'</h3>
+								<h3>'.__($otherSetting['localeKey'], array(), $locale).'</h3>
 								<p>'.nl2br($otherSetting[$locale]).'</p>
 								</div>';
 						}
@@ -2097,18 +2099,13 @@ class Upgrade extends Installer {
 	 * @return boolean
 	 */
 	function concatenateIntoMasthead() {
-		$roleIdEditor = 0x00000100;
-		$roleIdSectionEditor = 0x00000200;
-		$roleIdLayoutEditor = 0x00000300;
-		$roleIdCopyeditor = 0x00002000;
-		$roleIdProofreader = 0x00003000;
-		$roles = array($roleIdEditor, $roleIdSectionEditor, $roleIdLayoutEditor, $roleIdCopyeditor, $roleIdProofreader);
+		$roles = array(OJS2_ROLE_ID_EDITOR, OJS2_ROLE_ID_SECTION_EDITOR, OJS2_ROLE_ID_LAYOUT_EDITOR, OJS2_ROLE_ID_COPYEDITOR, OJS2_ROLE_ID_PROOFREADER);
 		$localeKeys = array(
-			$roleIdEditor => array('user.role.editor', 'user.role.editors'),
-			$roleIdSectionEditor => array('user.role.sectionEditor', 'user.role.subEditors'),
-			$roleIdLayoutEditor => array('user.role.layoutEditor', 'user.role.layoutEditors'),
-			$roleIdCopyeditor => array('user.role.copyeditor', 'user.role.copyeditors'),
-			$roleIdProofreader => array('user.role.proofreader', 'user.role.proofreaders'),
+			OJS2_ROLE_ID_EDITOR => array('user.role.editor', 'user.role.editors'),
+			OJS2_ROLE_ID_SECTION_EDITOR => array('user.role.sectionEditor', 'user.role.subEditors'),
+			OJS2_ROLE_ID_LAYOUT_EDITOR => array('user.role.layoutEditor', 'user.role.layoutEditors'),
+			OJS2_ROLE_ID_COPYEDITOR => array('user.role.copyeditor', 'user.role.copyeditors'),
+			OJS2_ROLE_ID_PROOFREADER => array('user.role.proofreader', 'user.role.proofreaders'),
 		);
 
 		$roleDao = DAORegistry::getDAO('RoleDAO');
