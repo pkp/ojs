@@ -29,7 +29,6 @@
 	<message key="editor.submissionReview.confirmDecision">Da li želite da zabeležite ovu odluku?</message>
 	<message key="editor.submissionReview.emailWillArchive">Predaja će biti arhivirana nakon što se pošalje imejl autoru ili se klikne dugme "preskoči imejl".</message>
 	<message key="editor.submissionReview.cannotSendToCopyediting">Pre slanja prijave na lekturu iskoristite link "Obavesti autora" da biste ga obavestili o odluci i definisali koju verziju rada poslati.</message>
-	<message key="editor.submissionReview.sendToCopyediting">Pošalji na lekturu</message>
 	<message key="editor.notifyUsers">Obavesti autora</message>
 	<message key="editor.notifyUsers.allUsers">Pošalji ovu poruku svim korisnicima koji imaju veze sa ovim časopisom ({$count} korisnika)</message>
 	<message key="editor.notifyUsers.allReaders">Svi čitaoci ({$count} korisnika)</message>

@@ -40,7 +40,7 @@ class RbaiyewuSubmissionTest extends ContentBaseTestCase {
 		$this->waitForElementPresent('//a[contains(text(), \'Review\')]/*[contains(text(), \'Initiated\')]');
 		$this->assignReviewer('phudson', 'Paul Hudson');
 		$this->assignReviewer('amccrae', 'Aisla McCrae');
-		$this->recordEditorialDecision('Send to Copyediting');
+		$this->recordEditorialDecision('Accept Submission');
 		$this->waitForElementPresent('//a[contains(text(), \'Copyediting\')]/*[contains(text(), \'Initiated\')]');
 		$this->assignParticipant('Copyeditor', 'Sarah Vogt');
 		$this->recordEditorialDecision('Send To Production');

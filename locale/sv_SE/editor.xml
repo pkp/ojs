@@ -189,7 +189,6 @@
 	<message key="editor.article.uploaded">Uppladdad</message>
 	<message key="editor.submissionReview.cannotSendToCopyediting">Innan du skickar manuskriptet för redigering, kontrollera att det finns tillgängliga granskare och att författaren meddelas om granskning med hjälp av Meddela Författaren-länken ovan.</message>
 	<message key="editor.article.sendFileToCopyedit">Välj fil för Manusredigering</message>
-	<message key="editor.submissionReview.sendToCopyediting">Skicka till manusredigering</message>
 	<message key="editor.issues.galleys">Korrekturversion nummer</message>
 	<message key="editor.issues.galley">Numrets korrekturversion</message>
 	<message key="editor.issues.viewingGalley">Visar numrets korrekturversion</message>
