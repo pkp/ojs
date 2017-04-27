@@ -29,13 +29,14 @@
 	{/if}
 
 	<div id="issue-{$issue->getId()}" style="clear:left;">
-	{if $issue->getFileName($locale)}
-		{assign var="coverLocale" value="$locale"}
+	{if $issue->getLocalizedFileName() && $issue->getLocalizedShowCoverPage() && !$issue->getHideCoverPageArchives($locale)}
+		{assign var=showCoverPage value=true}
 	{else}
-		{assign var="coverLocale" value="$primaryLocale"}
+		{assign var=showCoverPage value=false}
 	{/if}
-	{if $issue->getFileName($coverLocale) && !$issue->getHideCoverPageArchives($coverLocale)}
-		<div class="issueCoverImage"><a href="{url op="view" path=$issue->getBestIssueId($currentJournal)}"><img src="{$coverPagePath|escape}{$issue->getFileName($coverLocale)|escape}"{if $issue->getCoverPageAltText($coverLocale) != ''} alt="{$issue->getCoverPageAltText($coverLocale)|escape}"{else} alt="{translate key="issue.coverPage.altText"}"{/if}/></a>
+
+	{if $showCoverPage}
+		<div class="issueCoverImage"><a href="{url op="view" path=$issue->getBestIssueId($currentJournal)}"><img src="{$coverPagePath|escape}{$issue->getLocalizedFileName()|escape}"{if $issue->getLocalizedCoverPageAltText() != ''} alt="{$issue->getLocalizedCoverPageAltText()|escape}"{else} alt="{translate key="issue.coverPage.altText"}"{/if}/></a>
 		</div>
 		<h4><a href="{url op="view" path=$issue->getBestIssueId($currentJournal)}">{$issue->getIssueIdentification()|escape}</a></h4>
 		<div class="issueCoverDescription">{$issue->getLocalizedCoverPageDescription()|strip_unsafe_html|nl2br}</div>
