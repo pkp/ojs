@@ -83,4 +83,10 @@
 		<query>UPDATE submission_settings SET setting_name = 'crossref::status' WHERE setting_name = 'crossref::depositStatus' </query>
 		<query>UPDATE submission_settings SET setting_name = 'crossref::statusUrl' WHERE setting_name = 'crossref::depositStatusUrl' </query>
 	</sql>
+	<sql><!-- pkp/pkp-lib#1791 -->
+		<!-- fix assoc_type for supp files, above all for those already migrated: -->
+		<!-- update the ASSOC_TYPE_SUBMISSION_FILE = 515 constant to ASSOC_TYPE_SUBMISSION_FILE_COUNTER_OTHER = 531 defined in PKPApplication -->
+		<query>UPDATE metrics SET assoc_type = 531 WHERE assoc_type = 515 AND assoc_id IN (SELECT file_id FROM submission_supplementary_files)</query>
+		<query>UPDATE metrics SET assoc_type = 531 WHERE assoc_type = 515 AND assoc_id IN (SELECT file_id FROM submission_artwork_files)</query>
+	</sql>
 </data>
