@@ -352,12 +352,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 		$xml = $exportXml->saveXml();
 		$errors = array_filter(libxml_get_errors(), create_function('$a', 'return $a->level == LIBXML_ERR_ERROR || $a->level == LIBXML_ERR_FATAL;'));
 		if (!empty($errors)) {
-			$charset = Config::getVar('i18n', 'client_charset');
-			header('Content-type: text/html; charset=' . $charset);
-			echo '<html><body>';
 			$this->displayXMLValidationErrors($errors, $xml);
-			echo '</body></html>';
-			fatalError(__('plugins.importexport.common.error.validation'));
 		}
 		return $xml;
 	}
@@ -599,7 +594,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 		$publishedArticles = array();
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 		foreach ($submissionIds as $submissionId) {
-			$publishedArticle = $publishedArticleDao->getPublishedArticleByArticleId($submissionId, $context->getId());
+			$publishedArticle = $publishedArticleDao->getByArticleId($submissionId, $context->getId());
 			if ($publishedArticle) $publishedArticles[] = $publishedArticle;
 		}
 		return $publishedArticles;

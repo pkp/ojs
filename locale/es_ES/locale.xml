@@ -823,7 +823,6 @@
 	<message key="log.review.reviewerUnassigned">Se excluyó a {$reviewerName} de la revisión del envío {$submissionId} en la ronda de revisión {$round}.</message>
 	<message key="log.review.reviewInitiated">{$reviewerName} inició la ronda de revisión {$round} del envío {$submissionId}.</message>
 	<message key="log.review.reviewReinitiated">{$reviewerName} reinició la ronda de revisión {$round} del envío {$submissionId}.</message>
-	<message key="log.review.reviewCancelled">La ronda {$round} que {$reviewerName} revisaba para el envío {$submissionId} se canceló.</message>
 	<message key="log.review.reviewCleared">La ronda {$round} que {$reviewerName} revisa para el envío {$submissionId} se eliminó.</message>
 	<message key="log.review.reviewerRated">{$reviewerName} ha sido clasificado/a para la ronda de revisión {$round} del envío {$submissionId}.</message>
 	<message key="log.review.reviewDueDateSet">La fecha límite para la ronda de revisión {$round} del envío {$submissionId} de {$reviewerName} se estableció para {$dueDate}.</message>

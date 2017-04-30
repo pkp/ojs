@@ -144,7 +144,7 @@ class SectionForm extends PKPSectionForm {
 		$section->setPolicy($this->getData('policy'), null); // Localized
 		$section->setAbstractWordCount($this->getData('wordCount'));
 
-		$section = parent::execute($section);
+		HookRegistry::call('sectionform::execute', array($this, $section));
 
 		// Insert or update the section in the DB
 		if ($this->getSectionId()) {

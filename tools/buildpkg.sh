@@ -3,7 +3,7 @@
 #
 # tools/buildpkg.sh
 #
-# Copyright (c) 2014-2017 Simon Fraser University Library
+# Copyright (c) 2014-2017 Simon Fraser University
 # Copyright (c) 2003-2017 John Willinsky
 # Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
 #
@@ -52,9 +52,9 @@ plugins/generic/openAIRE					\
 plugins/generic/phpMyVisites					\
 plugins/generic/recommendBySimilarity				\
 plugins/generic/translator					\
+plugins/oaiMetadataFormats/nlm					\
 plugins/importexport/sample					\
 plugins/importexport/duracloud					\
-plugins/importexport/pubmed					\
 plugins/reports/subscriptions					\
 plugins/blocks/relatedItems					\
 tests								\

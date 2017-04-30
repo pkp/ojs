@@ -149,7 +149,7 @@ class IssueEntryPublicationMetadataForm extends Form {
 
 		$submission = $this->getSubmission();
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-		$this->_publishedArticle = $publishedArticleDao->getPublishedArticleByArticleId($submission->getId(), null, false);
+		$this->_publishedArticle = $publishedArticleDao->getByArticleId($submission->getId(), null, false);
 
 		$copyrightHolder = $submission->getCopyrightHolder(null);
 		$copyrightYear = $submission->getCopyrightYear();
@@ -257,7 +257,7 @@ class IssueEntryPublicationMetadataForm extends Form {
 
 			$sectionDao = DAORegistry::getDAO('SectionDAO');
 			$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-			$publishedArticle = $publishedArticleDao->getPublishedArticleByArticleId($submission->getId(), null, false); /* @var $publishedArticle PublishedArticle */
+			$publishedArticle = $publishedArticleDao->getByArticleId($submission->getId(), null, false); /* @var $publishedArticle PublishedArticle */
 
 			if ($publishedArticle) {
 				if (!$issue || !$issue->getPublished()) {

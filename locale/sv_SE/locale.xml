@@ -869,7 +869,6 @@ Din server stöttas för tillfället av mbstring: <strong>{$supportsMBString}</s
 	<message key="log.review.reviewerUnassigned">{$reviewerName} har avlösts som granskare för manuskript {$submissionId} för granskningsomgång {$round}.</message>
 	<message key="log.review.reviewInitiated">Omgång {$round} granskad av {$reviewerName} för manuskriptet {$submissionId} har påbörjats.</message>
 	<message key="log.review.reviewReinitiated">Omgång {$round} granskad av {$reviewerName} för manuskriptet {$submissionId} har åter påbörjats.</message>
-	<message key="log.review.reviewCancelled">Omgång {$round} granskad av {$reviewerName} för manuskriptet {$submissionId} har avbrutits.</message>
 	<message key="log.review.reviewCleared">Omgång {$round} granskad av {$reviewerName} för manuskriptet {$submissionId} har tagits bort.</message>
 	<message key="log.review.reviewerRated">{$reviewerName} har skickats till omgång {$round} för granskning av manuskript {$submissionId}.</message>
 	<message key="log.review.reviewDueDateSet">Sista datum för omgång {$round} för granskning av manuskript av {$reviewerName} har satts till {$dueDate}.</message>

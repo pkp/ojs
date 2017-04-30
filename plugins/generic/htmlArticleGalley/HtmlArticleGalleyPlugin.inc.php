@@ -175,7 +175,7 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 
 		// Perform variable replacement for journal, issue, site info
 		$issueDao = DAORegistry::getDAO('IssueDAO');
-		$issue = $issueDao->getIssueByArticleId($galley->getSubmissionId());
+		$issue = $issueDao->getByArticleId($galley->getSubmissionId());
 
 		$journal = $request->getJournal();
 		$site = $request->getSite();

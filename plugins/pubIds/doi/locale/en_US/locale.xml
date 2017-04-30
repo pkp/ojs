@@ -48,6 +48,9 @@
 	<message key="plugins.pubIds.doi.manager.settings.doiReassign.description">If you change your DOI configuration, DOIs that have already been assigned will not be affected. Once the DOI configuration is saved, use this button to clear all existing DOIs so that the new settings will take effect with existing objects.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiReassign.confirm">Are you sure you wish to delete all existing DOIs?</message>
 
+	<message key="plugins.pubIds.doi.manager.settings.doiAssignJournalWide">Assign DOIs</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiAssignJournalWide.description">Assign DOIs to all published journal objects that have not been assigned DOIs. This action can not be used with the individual suffix configuration. If you have modified the DOI configuration above, please save your changes before initiating this action. Assigning DOIs may take a long time, depending on the number of published objects in the journal.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiAssignJournalWide.confirm">Are you sure you wish to assign DOIs to all published objects that have not been assigned DOIs?</message>
 
 	<!-- metadata form -->
 	<message key="plugins.pubIds.doi.editor.doi">DOI</message>

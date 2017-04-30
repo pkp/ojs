@@ -21,11 +21,10 @@ class Mods34MetadataPluginTest extends PKPMods34MetadataPluginTest {
 	 * @covers Mods34MetadataPlugin
 	 * @covers PKPMods34MetadataPlugin
 	 */
-	public function testMods34MetadataPlugin() {
+	public function testMods34MetadataPlugin($appSpecificFilters = array('article=>mods34', 'mods34=>article')) {
 		$this->markTestSkipped('Skipped because of weird class interaction with ControlledVocabDAO.');
 
-		parent::testMods34MetadataPlugin(
-				array('article=>mods34', 'mods34=>article'));
+		parent::testMods34MetadataPlugin($appSpecificFilters);
 	}
 }
 ?>

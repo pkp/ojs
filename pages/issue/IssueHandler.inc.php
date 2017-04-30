@@ -45,9 +45,10 @@ class IssueHandler extends Handler {
 	}
 
 	/**
-	 * @see PKPHandler::initialize()
+	 * @copydoc PKPHandler::initialize()
+	 * @param $args array Arguments list
 	 */
-	function initialize($request, $args) {
+	function initialize($request, $args = array()) {
 		// Get the issue galley
 		$galleyId = isset($args[1]) ? $args[1] : 0;
 		if ($galleyId) {

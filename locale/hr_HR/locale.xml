@@ -643,7 +643,6 @@ Vaš poslužitelj trenutno podržava mbstring: <strong>{$supportsMBString}</stro
 	<message key="log.review.reviewerUnassigned">{$reviewerName} je povučen(a) iz recenzijskog postupka priloga {$submissionId} u {$round}. krugu recenzije.</message>
 	<message key="log.review.reviewInitiated">Recenzent {$reviewerName} pokrenuo je  {$round}. krug recenzije priloga {$submissionId}.</message>
 	<message key="log.review.reviewReinitiated">{$round}. krug recenzije recenzenta {$reviewerName} za prilog {$submissionId} je iznova pokrenut.</message>
-	<message key="log.review.reviewCancelled">Recenzija {$round}. kruga recenzenta {$reviewerName} za prilog {$submissionId} je poništena.</message>
 	<message key="log.review.reviewCleared">Recenzija {$round}. kruga recenzenta {$reviewerName} za prilog {$submissionId} je izbrisana.</message>
 	<message key="log.review.reviewerRated">{$reviewerName} je ocijenjen za {$round}. krug recenzije priloga {$submissionId}.</message>
 	<message key="log.review.reviewDueDateSet">Krajnji rok za {$round}. krug recenzije za prilog {$submissionId} za recenzenta {$reviewerName} je izmijenjen na {$dueDate}.</message>

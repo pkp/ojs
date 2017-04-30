@@ -35,7 +35,7 @@ class IssueGridHandler extends GridHandler {
 				'uploadFile', 'deleteCoverImage',
 				'issueToc',
 				'issueGalleys',
-				'deleteIssue', 'publishIssue', 'unpublishIssue',
+				'deleteIssue', 'publishIssue', 'unpublishIssue', 'setCurrentIssue',
 				'identifiers', 'updateIdentifiers', 'clearPubId', 'clearIssueObjectsPubIds',
 			)
 		);
@@ -483,7 +483,7 @@ class IssueGridHandler extends GridHandler {
 				)
 			);
 		}
-		
+
 		return DAO::getDataChangedEvent();
 	}
 
@@ -516,7 +516,29 @@ class IssueGridHandler extends GridHandler {
 
 		$dispatcher = $request->getDispatcher();
 		$json = new JSONMessage();
-		$json->setEvent('containerReloadRequested', array('tabsUrl' => $dispatcher->url($request, ROUTE_PAGE, null, 'manageIssues', 'index')));
+		$json->setEvent('containerReloadRequested', array('tabsUrl' => $dispatcher->url($request, ROUTE_PAGE, null, 'manageIssues', 'issuesTabs', null)));
+		return $json;
+	}
+
+	/**
+	 * Set Issue as current
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
+	function setCurrentIssue($args, $request) {
+		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
+		$journal = $request->getJournal();
+
+		if (!$request->checkCSRF()) return new JSONMessage(false);
+
+		$issue->setCurrent(1);
+
+		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$issueDao->updateCurrent($journal->getId(), $issue);
+
+		$dispatcher = $request->getDispatcher();
+		$json = new JSONMessage();
+		$json->setEvent('containerReloadRequested', array('tabsUrl' => $dispatcher->url($request, ROUTE_PAGE, null, 'manageIssues', 'issuesTabs', null)));
 		return $json;
 	}
 

@@ -204,7 +204,7 @@ class TocGridHandler extends CategoryGridHandler {
 		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
 		$issueDao = DAORegistry::getDAO('IssueDAO');
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-		$article = $publishedArticleDao->getPublishedArticleByArticleId($articleId);
+		$article = $publishedArticleDao->getByArticleId($articleId);
 		import('classes.article.ArticleTombstoneManager');
 		$articleTombstoneManager = new ArticleTombstoneManager();
 		if ($article && $article->getIssueId() == $issue->getId() && $request->checkCSRF()) {

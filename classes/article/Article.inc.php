@@ -74,7 +74,7 @@ class Article extends Submission {
 
 				// Override based on context settings
 				$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
-				$publishedArticle = $publishedArticleDao->getPublishedArticleByArticleId($this->getId());
+				$publishedArticle = $publishedArticleDao->getByArticleId($this->getId());
 				if ($publishedArticle) {
 					switch($context->getSetting('copyrightYearBasis')) {
 						case 'submission':
@@ -85,7 +85,7 @@ class Article extends Submission {
 							if ($publishedArticle->getIssueId()) {
 								// override to the issue's year if published as issue-based
 								$issueDao =& DAORegistry::getDAO('IssueDAO');
-								$issue = $issueDao->getIssueByArticleId($this->getId());
+								$issue = $issueDao->getByArticleId($this->getId());
 								if ($issue && $issue->getDatePublished()) {
 									$fieldValue = date('Y', strtotime($issue->getDatePublished()));
 								}

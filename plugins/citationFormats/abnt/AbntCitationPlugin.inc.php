@@ -108,7 +108,7 @@ class AbntCitationPlugin extends CitationPlugin {
 	 * @param $issue Issue
 	 * @param $journal Journal
 	 */
-	function fetchCitation(&$article, &$issue, &$journal) {
+	function fetchCitation($article, $issue, $journal) {
 		$templateMgr = TemplateManager::getManager($this->getRequest());
 		$templateMgr->register_modifier('mb_upper', array('PKPString', 'strtoupper'));
 		$templateMgr->register_modifier('abnt_date_format', array($this, 'abntDateFormat'));
@@ -119,9 +119,8 @@ class AbntCitationPlugin extends CitationPlugin {
  	/**
 	 * @copydoc Plugin::manage()
 	 */
-	function manage($verb, $args, &$message, &$messageParams, &$pluginModalContent = null) {
-		$request = $this->getRequest();
-		switch ($verb) {
+	function manage($args, $request) {
+		switch ($request->getUserVar('verb')) {
 			case 'settings':
 				$templateMgr = TemplateManager::getManager($request);
 				$templateMgr->register_function('plugin_url', array($this, 'smartyPluginUrl'));
@@ -147,10 +146,8 @@ class AbntCitationPlugin extends CitationPlugin {
 					$form->display();
 				}
 				return true;
-			default:
-				// Unknown management verb, delegate to parent
-				return parent::manage($verb, $args, $message);
 		}
+		return parent::manage($args, $request);
 	}
 
 	/**

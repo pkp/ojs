@@ -250,7 +250,8 @@ class IssueForm extends Form {
 
 		$issue->setCoverImageAltText($this->getData('coverImageAltText'), $locale);
 
-		parent::execute();
+		HookRegistry::call('issueform::execute', array($this, $issue));
+
 		$issueDao->updateObject($issue);
 	}
 }

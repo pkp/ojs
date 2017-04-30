@@ -130,14 +130,29 @@ class ArticleCrossrefXmlFilter extends IssueCrossrefXmlFilter {
 		}
 
 		// pages
-		if ($submission->getPages() != '') {
-			// extract the first page for the first_page element, store the remaining bits in otherPages,
-			// after removing any preceding non-numerical characters.
-			if (preg_match('/^[^\d]*(\d+)\D*(.*)$/', $submission->getPages(), $matches)) {
+		// CrossRef requires first_page and last_page of any contiguous range, then any other ranges go in other_pages
+		$pages = $submission->getPageArray();
+		if (is_array($pages)) {
+			$firstRange = array_shift($pages);
+			$firstPage = array_shift($firstRange);
+			if (count($firstRange)) {
+				// There is a first page and last page for the first range
+				$lastPage = array_shift($firstRange);
+			} else {
+				// There is not a range in the first segment
+				$lastPage = '';
+			}
+			// CrossRef accepts no punctuation in first_page or last_page
+			if ((!empty($firstPage) || $firstPage === "0") && !preg_match('/[^[:alnum:]]/', $firstPage) && !preg_match('/[^[:alnum:]]/', $lastPage)) {
 				$pagesNode = $doc->createElementNS($deployment->getNamespace(), 'pages');
-				$firstPage = $matches[1];
-				$otherPages = $matches[2];
 				$pagesNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'first_page', $firstPage));
+				if ($lastPage != '') {
+					$pagesNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'last_page', $lastPage));
+				}
+				$otherPages = '';
+				foreach ($pages as $range) {
+					$otherPages .= ($otherPages ? ',' : '').implode('-', $range);
+				}
 				if ($otherPages != '') {
 					$pagesNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'other_pages', $otherPages));
 				}

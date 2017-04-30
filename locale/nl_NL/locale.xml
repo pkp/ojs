@@ -714,7 +714,6 @@ Uw server ondersteunt momenteel mbstring: <strong>{$supportsMBString}</strong>]]
 	<message key="log.review.reviewerUnassigned">{$reviewerName} is teruggetrokken als reviewer van inzending {$submissionId} voor reviewronde {$round}.</message>
 	<message key="log.review.reviewInitiated">De review voor ronde {$round} door {$reviewerName} voor inzending {$submissionId} is gestart.</message>
 	<message key="log.review.reviewReinitiated">De review voor ronde {$round} door {$reviewerName} voor inzending {$submissionId} is opnieuw gestart.</message>
-	<message key="log.review.reviewCancelled">De review voor ronde {$round} door {$reviewerName} voor inzending {$submissionId} is ingetrokken.</message>
 	<message key="log.review.reviewCleared">De review voor ronde {$round} door {$reviewerName} voor inzending {$submissionId} is gewist.</message>
 	<message key="log.review.reviewerRated">{$reviewerName} is beoordeeld voor reviewronde {$round} van inzeinding {$submissionId}.</message>
 	<message key="log.review.reviewDueDateSet">De afloopdatum voor de review voor ronde {$round} van inzending {$submissionId} door {$reviewerName} staat op {$dueDate}.</message>

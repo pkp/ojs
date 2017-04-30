@@ -120,7 +120,6 @@ class ReviewerSubmissionDAO extends ArticleDAO {
 		$reviewerSubmission->setDateResponseDue($this->datetimeFromDB($row['date_response_due']));
 		$reviewerSubmission->setDeclined($row['declined']);
 		$reviewerSubmission->setReplaced($row['replaced']);
-		$reviewerSubmission->setCancelled((int) $row['cancelled']);
 		$reviewerSubmission->setQuality($row['quality']);
 		$reviewerSubmission->setRound($row['round']);
 		$reviewerSubmission->setStep($row['step']);
@@ -148,7 +147,6 @@ class ReviewerSubmissionDAO extends ArticleDAO {
 					recommendation = ?,
 					declined = ?,
 					replaced = ?,
-					cancelled = ?,
 					date_assigned = %s,
 					date_notified = %s,
 					date_confirmed = %s,
@@ -176,7 +174,6 @@ class ReviewerSubmissionDAO extends ArticleDAO {
 				(int) $reviewerSubmission->getRecommendation(),
 				(int) $reviewerSubmission->getDeclined(),
 				(int) $reviewerSubmission->getReplaced(),
-				(int) $reviewerSubmission->getCancelled(),
 				(int) $reviewerSubmission->getQuality(),
 				(int) $reviewerSubmission->getReviewId()
 			)
@@ -214,9 +211,9 @@ class ReviewerSubmissionDAO extends ArticleDAO {
 				'AND r.date_notified IS NOT NULL';
 
 		if ($active) {
-			$sql .=  ' AND r.date_completed IS NULL AND r.declined <> 1 AND (r.cancelled = 0 OR r.cancelled IS NULL)';
+			$sql .=  ' AND r.date_completed IS NULL AND r.declined <> 1';
 		} else {
-			$sql .= ' AND (r.date_completed IS NOT NULL OR r.cancelled = 1 OR r.declined = 1)';
+			$sql .= ' AND (r.date_completed IS NOT NULL OR r.declined = 1)';
 		}
 
 		if ($skipDeclined) {
@@ -253,7 +250,7 @@ class ReviewerSubmissionDAO extends ArticleDAO {
 		$submissionsCount[1] = 0;
 
 		$result = $this->retrieve(
-			'SELECT	r.date_completed, r.declined, r.cancelled
+			'SELECT	r.date_completed, r.declined
 			FROM	submissions a
 				LEFT JOIN review_assignments r ON (a.submission_id = r.submission_id)
 				LEFT JOIN section s ON (s.section_id = a.section_id)
@@ -266,7 +263,7 @@ class ReviewerSubmissionDAO extends ArticleDAO {
 		);
 
 		while (!$result->EOF) {
-			if ($result->fields['date_completed'] == null && $result->fields['declined'] != 1 && $result->fields['cancelled'] != 1) {
+			if ($result->fields['date_completed'] == null && $result->fields['declined'] != 1) {
 				$submissionsCount[0] += 1; // Active
 			} else {
 				$submissionsCount[1] += 1; // Complete

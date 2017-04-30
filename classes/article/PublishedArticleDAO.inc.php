@@ -296,7 +296,7 @@ class PublishedArticleDAO extends ArticleDAO {
 	 * @param $useCache boolean optional
 	 * @return PublishedArticle object
 	 */
-	function getPublishedArticleByArticleId($articleId, $journalId = null, $useCache = false) {
+	function getByArticleId($articleId, $journalId = null, $useCache = false) {
 		if ($useCache) {
 			$cache = $this->_getPublishedArticleCache();
 			$returner = $cache->get($articleId);
@@ -350,22 +350,18 @@ class PublishedArticleDAO extends ArticleDAO {
 		$publishedArticle = null;
 		if (!empty($pubId)) {
 			$publishedArticles = $this->getBySetting('pub-id::'.$pubIdType, $pubId, $journalId);
-			if (!empty($publishedArticles)) {
-				assert(count($publishedArticles) == 1);
-				$publishedArticle = $publishedArticles[0];
+			if ($publishedArticles->getCount()) {
+				assert($publishedArticles->getCount() == 1);
+				$publishedArticle = $publishedArticles->next();
 			}
 		}
 		return $publishedArticle;
 	}
 
 	/**
-	 * Find published articles by querying article settings.
-	 * @param $settingName string
-	 * @param $settingValue mixed
-	 * @param $journalId int optional
-	 * @return array The articles identified by setting.
+	 * @copydoc ArticleDAO::getBySetting()
 	 */
-	function getBySetting($settingName, $settingValue, $journalId = null) {
+	function getBySetting($settingName, $settingValue, $journalId = null, $rangeInfo = null) {
 		$params = $this->getFetchParameters();
 		$params[] = $settingName;
 
@@ -391,14 +387,9 @@ class PublishedArticleDAO extends ArticleDAO {
 		$sql .= ' ORDER BY ps.issue_id, s.submission_id';
 		$result = $this->retrieve($sql, $params);
 
-		$publishedArticles = array();
-		while (!$result->EOF) {
-			$publishedArticles[] = $this->_fromRow($result->GetRowAssoc(false));
-			$result->MoveNext();
-		}
-		$result->Close();
+		$result = $this->retrieveRange($sql, $params, $rangeInfo);
 
-		return $publishedArticles;
+		return new DAOResultFactory($result, $this, '_fromRow');
 	}
 
 	/**
@@ -412,7 +403,7 @@ class PublishedArticleDAO extends ArticleDAO {
 	function getPublishedArticleByBestArticleId($journalId, $articleId, $useCache = false) {
 		$article = $this->getPublishedArticleByPubId('publisher-id', $articleId, $journalId, $useCache);
 		if (!$article && ctype_digit("$articleId")) {
-			return $this->getPublishedArticleByArticleId($articleId, $journalId, $useCache);
+			return $this->getByArticleId($articleId, $journalId, $useCache);
 		}
 		return $article;
 	}

@@ -128,7 +128,7 @@ class MedraSettingsForm extends Form {
 	}
 
 	/**
-	 * @copydoc Form::execute()
+	 * Execute the form.
 	 */
 	function execute() {
 		$plugin = $this->_getPlugin();

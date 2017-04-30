@@ -37,6 +37,11 @@
 	<upgrade minversion="3.0.0.0" maxversion="3.0.1.9">
 		<data file="dbscripts/xml/upgrade/3.0.0_preupdate_commentsToEditor.xml" condition="return $installer->columnExists('submissions', 'comments_to_ed');" />
 	</upgrade>
+
+	<upgrade minversion="2.4.0.0" maxversion="3.0.9.9">
+		<data file="dbscripts/xml/upgrade/3.1.0_preupdate_review_assignments.xml" condition="return $installer->columnExists('review_assignments', 'cancelled');" />
+		<data file="dbscripts/xml/upgrade/3.1.0_preupdate_notes.xml" condition="return $installer->columnExists('notes', 'file_id');" />
+	</upgrade>
 	
 	<!-- PKP schema components -->
 	<schema file="lib/pkp/xml/schema/common.xml" />
@@ -137,26 +142,19 @@
 		<data file="dbscripts/xml/upgrade/3.0.0_edit_decisions.xml" />
 		<code function="clearCssCache" />
 		<code function="convertCommentsToEditor" condition="return $installer->tableExists('submissions_tmp');" />
-		<code function="moveReviewerFiles" />
-		<data file="dbscripts/xml/upgrade/3.0.0_reviewer_files.xml" />
 	</upgrade>
 
 	<upgrade minversion="2.4.0.0" maxversion="3.0.1.9">
 		<data file="dbscripts/xml/upgrade/3.0.2_update.xml" />
-		<!--  the order of the next two lines is important -->
-		<code function="moveReviewerFiles" />
-		<data file="dbscripts/xml/upgrade/3.0.0_reviewer_files.xml" />
 		<note file="docs/release-notes/README-3.0.2" />
 	</upgrade>
 
-	<upgrade minversion="3.0.2.0" maxversion="3.0.2.9">
+	<upgrade minversion="2.4.0.0" maxversion="3.0.9.9">
 		<!--  the order of the next two lines is important -->
 		<code function="moveReviewerFiles" />
 		<data file="dbscripts/xml/upgrade/3.0.0_reviewer_files.xml" />
-	</upgrade>
-
-
-	<upgrade minversion="2.4.0.0" maxversion="3.0.9.9">
+		<code function="removeCancelledReviewAssignments" condition="return $installer->tableExists('review_assignments_tmp');" />
+		<data file="dbscripts/xml/upgrade/3.1.0_notes.xml" condition="return $installer->tableExists('notes_tmp');" />
 		<data file="dbscripts/xml/upgrade/3.1.0_update.xml" />
 		<note file="docs/release-notes/README-3.1.0" />
 	</upgrade>

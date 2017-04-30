@@ -29,11 +29,9 @@ class InformationHandler extends Handler {
 	 * @param $request PKPRequest
 	 */
 	function index($args, $request) {
+		$this->setupTemplate($request);
+		$this->validate(null, $request);
 		$journal = $request->getJournal();
-		if (!$journal) $request->redirect('index');
-
-		$this->validate();
-		$this->setupTemplate($request, $journal);
 
 		switch(array_shift($args)) {
 			case 'readers':
@@ -90,11 +88,10 @@ class InformationHandler extends Handler {
 	/**
 	 * Initialize the template.
 	 * @param $request PKPRequest
-	 * @param $journal Journal
 	 */
-	function setupTemplate($request, $journal) {
+	function setupTemplate($request) {
 		parent::setupTemplate($request);
-		if (!$journal->getSetting('restrictSiteAccess')) {
+		if (!$request->getJournal()->getSetting('restrictSiteAccess')) {
 			$templateMgr = TemplateManager::getManager($request);
 			$templateMgr->setCacheability(CACHEABILITY_PUBLIC);
 		}

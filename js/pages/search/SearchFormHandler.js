@@ -52,7 +52,7 @@
 			// Bind the instant search handler to key
 			// events on all input fields.
 			$(':input', $form)
-				.keyup(this.callbackWrapper(this.instantSearch));
+					.keyup(this.callbackWrapper(this.instantSearch));
 		}
 	};
 	$.pkp.classes.Helper.inherits(
@@ -189,7 +189,7 @@
 		];
 		for (i = 0, numFields = formFields.length; i < numFields; i++) {
 			fieldLength = $form.find('input[name="' + formFields[i] + '"]')
-				.val().length;
+					.val().length;
 			hasData = (fieldLength >= minLen);
 			if (hasData) {
 				break;

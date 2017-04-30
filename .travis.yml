@@ -10,6 +10,7 @@ language: php
 php:
   - 5.3
   - 5.6
+  - 7.1
 python:
   - 3.3
 addons:
@@ -46,7 +47,7 @@ before_install:
 
 script:
   - if [[ "$TEST" != "validation" ]]; then ./lib/pkp/tools/travis/run-tests.sh; fi
-  - if [[ "$TEST" == "validation" ]]; then ./lib/pkp/tools/travis/validate-xml.sh && ./lib/pkp/tools/buildjs.sh; fi
+  - if [[ "$TEST" == "validation" ]]; then ./lib/pkp/tools/travis/validate-xml.sh && ./lib/pkp/tools/buildjs.sh -n; fi
 
 after_script:
   # Merge the coverage reports into one HTML report and upload to http://pkp.sfu.ca/test-coverage 
