@@ -18,9 +18,9 @@
 	<message key="submission.submit.userGroupDescription">Выберите роль, под которой вы отправляете статью.</message>
 	<message key="submission.upload.selectComponent">Выбрать компонент статьи</message>
 	<message key="submission.title">Заголовок статьи</message>
-	<message key="submission.title.tip"><![CDATA[Тип материала обычно что-то из «изображение», «текст» или другие типы мультимедиа, включая «программное обеспечение» или «интерактив». Пожалуйста, выберите один наиболее подходящий тип для вашего материала. Примеры можно найти на <a target="_blank" href="http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type">http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</a>]]></message>
-	<message key="submission.submit.newSubmissionMultiple">Начать отправку нового материала в</message>
-	<message key="submission.submit.newSubmissionSingle">Новый материал</message>
+	<message key="submission.title.tip"><![CDATA[Тип материала обычно что-то из «изображение», «текст» или другие типы мультимедиа, такі як «програмне забезпечення» або «інтерактив». Будь ласка, виберіть один найбільш підходящий тип для вашого матеріалу. Приклади див. за посиланням <a target="_blank" href="http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type">http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</a>]]></message>
+	<message key="submission.submit.newSubmissionMultiple">Розпочати подання нового рукопису в</message>
+	<message key="submission.submit.newSubmissionSingle">Новий рукопис</message>
 	<message key="grid.action.workflow">Процесс отправки</message>
 
 	<message key="submission.issueEntry">Метаданные</message>
