@@ -116,7 +116,7 @@ echo -n "Installing composer dependencies ... "
 cd lib/pkp
 composer.phar update
 cd lib/vendor/oyejorge/less.php
-composer.phar update
+composer.phar install
 cd ../../../..
 cd ../..
 
