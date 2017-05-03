@@ -13,7 +13,7 @@
  * @brief LDAP authentication plugin.
  */
 
-import('classes.plugins.AuthPlugin');
+import('lib.pkp.classes.plugins.AuthPlugin');
 
 class LDAPAuthPlugin extends AuthPlugin {
 	/**
