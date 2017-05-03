@@ -70,7 +70,7 @@ class BackendHandler extends APIHandler {
 	 * 		@option string searchPhrase Return submissions matching the words in
 	 *		  this string.
 	 * 		@option int count Max submissions to return. Default: 20
-	 * 		@option int page Default: 1
+	 * 		@option int offset Default: 0
 	 * }
 	 *
 	 * @return Response
@@ -84,7 +84,7 @@ class BackendHandler extends APIHandler {
 		// Merge query params over default params
 		$defaultParams = array(
 			'count' => 20,
-			'page' => 1,
+			'offset' => 0,
 		);
 
 		$params = array_merge($defaultParams, $slimRequest->getQueryParams());
@@ -119,7 +119,7 @@ class BackendHandler extends APIHandler {
 					$params[$param] = min(20, (int) $val);
 					break;
 
-				case 'page':
+				case 'offset':
 					$params[$param] = (int) $val;
 					break;
 
