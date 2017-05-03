@@ -87,6 +87,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 					'title' => 'plugins.importexport.native.exportSubmissionsSelect',
 					'count' => 100,
 					'inputName' => 'selectedSubmissions[]',
+					'lazyLoad' => true,
 				));
 				$templateMgr->assign('exportSubmissionsListData', json_encode($exportSubmissionsListHandler->getConfig()));
 				$templateMgr->display($this->getTemplatePath() . 'index.tpl');
