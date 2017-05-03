@@ -116,7 +116,7 @@ class BackendHandler extends APIHandler {
 				// Enforce a maximum count to prevent the API from crippling the
 				// server
 				case 'count':
-					$params[$param] = min(20, (int) $val);
+					$params[$param] = min(100, (int) $val);
 					break;
 
 				case 'offset':
