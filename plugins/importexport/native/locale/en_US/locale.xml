@@ -16,6 +16,7 @@
 	<message key="plugins.importexport.native.description">Import and export articles and issues in OJS's native XML format.</message>
 	<message key="plugins.importexport.native.import">Import</message>
 	<message key="plugins.importexport.native.import.instructions">Upload XML file to import</message>
+	<message key="plugins.importexport.native.exportSubmissionsSelect">Select articles to export</message>
 	<message key="plugins.importexport.native.exportSubmissions">Export Articles</message>
 	<message key="plugins.importexport.native.exportIssues">Export Issues</message>
 	<message key="plugins.importexport.native.results">Results</message>

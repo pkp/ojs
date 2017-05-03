@@ -7,6 +7,7 @@ import VueRegistry from '../lib/pkp/js/classes/VueRegistry.js';
 // All Vue controllers
 import ListPanel from '../lib/pkp/js/controllers/list/ListPanel.vue';
 import SubmissionsListPanel from '../lib/pkp/js/controllers/list/submissions/SubmissionsListPanel.vue';
+import SelectSubmissionsListPanel from '../lib/pkp/js/controllers/list/submissions/SelectSubmissionsListPanel.vue';
 
 // Expose Vue, the registry and controllers in a global var
 window.pkp = {
@@ -16,6 +17,7 @@ window.pkp = {
 	controllers: {
 		'ListPanel': ListPanel,
 		'SubmissionsListPanel': SubmissionsListPanel,
+		'SelectSubmissionsListPanel': SelectSubmissionsListPanel,
 	},
 	/**
 	 * Helper function to determine if the current user has a role
