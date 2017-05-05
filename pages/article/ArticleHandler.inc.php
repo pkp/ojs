@@ -72,6 +72,8 @@ class ArticleHandler extends Handler {
 			$this->article = $article;
 		}
 
+		if (!isset($this->article)) $request->getDispatcher()->handle404();
+
 		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 		$this->galley = $galleyDao->getByBestGalleyId($galleyId, $this->article->getId());
 	}
