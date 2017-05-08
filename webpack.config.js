@@ -6,7 +6,7 @@ module.exports = {
       './js/load.js',
   ],
   output: {
-    path: './js',
+    path: path.resolve(__dirname, 'js'),
     filename: 'build.js'
   },
   module: {
