@@ -56,7 +56,7 @@ class ExportPublishedSubmissionsListGridCellProvider extends DataObjectGridCellP
 					new LinkAction(
 						'itemWorkflow',
 						new RedirectAction(
-							ServicesContainer::instance()->getWorklowUrlByUserRoles($publishedSubmission)
+							ServicesContainer::instance()->get('submission')->getWorklowUrlByUserRoles($publishedSubmission)
 						),
 						$title
 					)
