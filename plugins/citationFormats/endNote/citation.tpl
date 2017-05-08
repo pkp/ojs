@@ -32,7 +32,7 @@
 {if $article->getStoredPubId('doi')}%R {$article->getStoredPubId('doi')|escape}
 {/if}
 {if count($article->getPageArray()) > 0}%P {foreach from=$article->getPageArray() item=range name=pages}{$range[0]|escape}{if $range[1]}-{$range[1]|escape}{if !$smarty.foreach.pages.last},{/if}{/if}{/foreach}
-{/if}
+{* explicit newline required because Smarty foreach eats the one we expect *}{"\n"}{/if}
 {if $issue->getShowVolume()}%V {$issue->getVolume()|escape}
 {/if}
 {if $issue->getShowNumber()}%N {$issue->getNumber()|escape}
