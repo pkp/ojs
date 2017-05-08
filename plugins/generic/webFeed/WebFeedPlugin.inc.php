@@ -94,6 +94,9 @@ class WebFeedPlugin extends GenericPlugin {
 
 		$templateManager =& $args[0];
 		$currentJournal = $templateManager->get_template_vars('currentJournal');
+		if (is_null($currentJournal)) {
+			return;
+		}
 		$issueDao = DAORegistry::getDAO('IssueDAO');
 		$currentIssue = $issueDao->getCurrent($currentJournal->getId(), true);
 
