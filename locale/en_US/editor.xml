@@ -29,7 +29,6 @@
 	<message key="editor.submissionReview.confirmDecision">Are you sure you wish to record this decision?</message>
 	<message key="editor.submissionReview.emailWillArchive">This submission will be archived after the Notify Author email is either sent or its Skip Email button is pressed.</message>
 	<message key="editor.submissionReview.cannotSendToCopyediting">Before sending a submission to Copyediting, use Notify Author link to inform author of decision and select the version to be sent.</message>
-	<message key="editor.submissionReview.sendToCopyediting">Send to Copyediting</message>
 	<message key="editor.notifyUsers">Notify Users</message>
 	<message key="editor.notifyUsers.allUsers">All users associated with this journal ({$count} users)</message>
 	<message key="editor.notifyUsers.allReaders">All readers ({$count} users)</message>

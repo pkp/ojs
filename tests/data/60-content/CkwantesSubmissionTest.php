@@ -44,7 +44,7 @@ class CkwantesSubmissionTest extends ContentBaseTestCase {
 		$this->waitForElementPresent('//a[contains(text(), \'Review\')]/*[contains(text(), \'Initiated\')]');
 		$this->assignReviewer('amccrae', 'Aisla McCrae');
 		$this->assignReviewer('agallego', 'Adela Gallego');
-		$this->recordEditorialDecision('Send to Copyediting');
+		$this->recordEditorialDecision('Accept Submission');
 		$this->waitForElementPresent('//a[contains(text(), \'Copyediting\')]/*[contains(text(), \'Initiated\')]');
 		$this->assignParticipant('Copyeditor', 'Maria Fritz');
 		$this->logOut();

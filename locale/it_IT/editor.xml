@@ -183,8 +183,6 @@
 	<message key="editor.issues.enableOpenAccessDate">Accesso aperto con embargo</message>
 	<message key="editor.issues.unpublishIssue">Nascondi il fascicolo pubblicato</message>
 	<message key="editor.issues.confirmUnpublish">Sei sicuro di voler nascondere il fascicolo pubblicato?</message>
-	<message key="editor.submissionReview.sendToCopyediting">Invia al copyediting</message>
-	<message key="editor.notifyUsers.allReaders">Tutti i lettori ({$count} utenti)</message>
 	<message key="editor.notifyUsers.allAuthors">Tutti gli autori ({$count} utenti)</message>
 	<message key="editor.notifyUsers.allIndividualSubscribers">Tutti gli abbonati persona ({$count} utenti)</message>
 	<message key="editor.notifyUsers.allInstitutionalSubscribers">Tutti gli abbonati enti ({$count} utenti)</message>

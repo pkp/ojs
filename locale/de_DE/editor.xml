@@ -29,7 +29,6 @@
 	<message key="editor.submissionReview.confirmDecision">Sind Sie sicher, dass Sie diese Entscheidung protokollieren wollen?</message>
 	<message key="editor.submissionReview.emailWillArchive">Dieser Beitrag wird archiviert, nachdem die Benachrichtigungs-E-Mail an die Autorin/den Autor entweder versendet wurde oder nachdem "E-Mail überspringen" angeklickt wurde.</message>
 	<message key="editor.submissionReview.cannotSendToCopyediting">Bevor Sie einen Beitrag ins Lektorat überweisen, nutzen Sie bitten den ‚Autor/in benachrichtigen‘-Link, um den/die Autor/in über die Entscheidung zu informieren, und wählen Sie die zu überweisende Version aus.</message>
-	<message key="editor.submissionReview.sendToCopyediting">Ins Lektorat überweisen</message>
 	<message key="editor.notifyUsers">Benutzer/innen benachrichtigen</message>
 	<message key="editor.notifyUsers.allUsers">Mitteilung an allen Benutzer/innen der Zeischrift ({$count} Benutzer/innen) senden</message>
 	<message key="editor.notifyUsers.allReaders">Alle Leser/innen ({$count} Nutzer/innen)</message>
