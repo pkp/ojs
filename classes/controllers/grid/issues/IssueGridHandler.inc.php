@@ -73,7 +73,7 @@ class IssueGridHandler extends GridHandler {
 
 		// Grid columns.
 		import('controllers.grid.issues.IssueGridCellProvider');
-		$issueGridCellProvider = new IssueGridCellProvider();
+		$issueGridCellProvider = new IssueGridCellProvider($request);
 
 		// Issue identification
 		$this->addColumn(

@@ -22,10 +22,11 @@ class ArticleGalleyGridCellProvider extends DataObjectGridCellProvider {
 
 	/**
 	 * Constructor
+	 * @param $request PKPRequest
 	 * @param $submission Submission
 	 */
-	function __construct($submission) {
-		parent::__construct();
+	function __construct($request, $submission) {
+		parent::__construct($request);
 		$this->_submission = $submission;
 	}
 
@@ -65,7 +66,7 @@ class ArticleGalleyGridCellProvider extends DataObjectGridCellProvider {
 	/**
 	 * @copydoc GridCellProvider::getCellActions()
 	 */
-	function getCellActions($request, $row, $column) {
+	function getCellActions($row, $column) {
 		switch ($column->getId()) {
 			case 'label':
 				$element = $row->getData();
@@ -79,9 +80,9 @@ class ArticleGalleyGridCellProvider extends DataObjectGridCellProvider {
 					$element->getSubmissionId()
 				);
 				import('lib.pkp.controllers.api.file.linkAction.DownloadFileLinkAction');
-				return array(new DownloadFileLinkAction($request, $submissionFile, $request->getUserVar('stageId'), $element->getLabel()));
+				return array(new DownloadFileLinkAction($this->_request, $submissionFile, $this->_request->getUserVar('stageId'), $element->getLabel()));
 		}
-		return parent::getCellActions($request, $row, $column);
+		return parent::getCellActions($row, $column);
 	}
 }
 
