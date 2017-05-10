@@ -319,13 +319,6 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 		if ($xmlFile && $this->isRelativePath($xmlFile)) {
 			$xmlFile = PWD . '/' . $xmlFile;
 		}
-		$outputDir = dirname($xmlFile);
-		if (!is_writable($outputDir) || (file_exists($xmlFile) && !is_writable($xmlFile))) {
-			echo __('plugins.importexport.common.cliError') . "\n";
-			echo __('plugins.importexport.common.export.error.outputFileNotWritable', array('param' => $xmlFile)) . "\n\n";
-			$this->usage($scriptName);
-			return;
-		}
 
 		switch ($command) {
 			case 'import':
@@ -343,14 +336,20 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 
 				$filter = 'native-xml=>issue';
 				// is this articles import:
+				if (!file_exists($xmlFile)) {
+					echo __('plugins.importexport.common.cliError') . "\n";
+					echo __('plugins.importexport.common.export.error.inputFileNotReadable', array('param' => $xmlFile)) . "\n\n";
+					$this->usage($scriptName);
+					return;
+				}
 				$xmlString = file_get_contents($xmlFile);
 				$document = new DOMDocument();
 				$document->loadXml($xmlString);
-				$requirementsErrors = null;
 				if (in_array($document->documentElement->tagName, array('article', 'articles'))) {
 					$filter = 'native-xml=>article';
 				}
 				$deployment = new NativeImportExportDeployment($journal, $user);
+				$deployment->setImportPath(dirname($xmlFile));
 				$content = $this->importSubmissions($xmlString, $filter, $deployment);
 
 				// Are there any issues import errors, display them
@@ -398,6 +397,13 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 				}
 				return;
 			case 'export':
+				$outputDir = dirname($xmlFile);
+				if (!is_writable($outputDir) || (file_exists($xmlFile) && !is_writable($xmlFile))) {
+					echo __('plugins.importexport.common.cliError') . "\n";
+					echo __('plugins.importexport.common.export.error.outputFileNotWritable', array('param' => $xmlFile)) . "\n\n";
+					$this->usage($scriptName);
+					return;
+				}
 				if ($xmlFile != '') switch (array_shift($args)) {
 					case 'article':
 					case 'articles':
