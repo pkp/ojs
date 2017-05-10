@@ -88,12 +88,10 @@ class Application extends PKPApplication {
 	 */
 	function getDAOMap() {
 		return array_merge(parent::getDAOMap(), array(
-			'SubmissionCommentDAO' => 'lib.pkp.classes.submission.SubmissionCommentDAO',
 			'ArticleDAO' => 'classes.article.ArticleDAO',
 			'ArticleGalleyDAO' => 'classes.article.ArticleGalleyDAO',
 			'ArticleSearchDAO' => 'classes.search.ArticleSearchDAO',
 			'AuthorDAO' => 'classes.article.AuthorDAO',
-			'EmailTemplateDAO' => 'lib.pkp.classes.mail.EmailTemplateDAO',
 			'GiftDAO' => 'classes.gift.GiftDAO',
 			'IndividualSubscriptionDAO' => 'classes.subscription.IndividualSubscriptionDAO',
 			'InstitutionalSubscriptionDAO' => 'classes.subscription.InstitutionalSubscriptionDAO',
@@ -106,18 +104,12 @@ class Application extends PKPApplication {
 			'OAIDAO' => 'classes.oai.ojs.OAIDAO',
 			'OJSCompletedPaymentDAO' => 'classes.payment.ojs.OJSCompletedPaymentDAO',
 			'PublishedArticleDAO' => 'classes.article.PublishedArticleDAO',
-			'QueuedPaymentDAO' => 'lib.pkp.classes.payment.QueuedPaymentDAO',
-			'ReviewAssignmentDAO' => 'lib.pkp.classes.submission.reviewAssignment.ReviewAssignmentDAO',
 			'ReviewerSubmissionDAO' => 'classes.submission.reviewer.ReviewerSubmissionDAO',
-			'RoleDAO' => 'lib.pkp.classes.security.RoleDAO',
-			'ScheduledTaskDAO' => 'lib.pkp.classes.scheduledTask.ScheduledTaskDAO',
 			'SectionDAO' => 'classes.journal.SectionDAO',
-			'StageAssignmentDAO' => 'lib.pkp.classes.stageAssignment.StageAssignmentDAO',
 			'SubmissionEventLogDAO' => 'classes.log.SubmissionEventLogDAO',
 			'SubmissionFileDAO' => 'classes.article.SubmissionFileDAO',
 			'SubscriptionDAO' => 'classes.subscription.SubscriptionDAO',
 			'SubscriptionTypeDAO' => 'classes.subscription.SubscriptionTypeDAO',
-			'UserGroupAssignmentDAO' => 'lib.pkp.classes.security.UserGroupAssignmentDAO',
 			'UserDAO' => 'classes.user.UserDAO',
 			'UserSettingsDAO' => 'classes.user.UserSettingsDAO'
 		));
