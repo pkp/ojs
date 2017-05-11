@@ -28,12 +28,6 @@ define('PUBLISHING_MODE_NONE', 2);
 import('lib.pkp.classes.context.Context');
 
 class Journal extends Context {
-	/**
-	 * Constructor.
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 
 	/**
 	 * Get "localized" journal page title (if applicable).

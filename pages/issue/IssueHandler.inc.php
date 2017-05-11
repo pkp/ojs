@@ -20,12 +20,6 @@ class IssueHandler extends Handler {
 	/** @var IssueGalley retrieved issue galley */
 	var $_galley = null;
 
-	/**
-	 * Constructor
-	 **/
-	function __construct() {
-		parent::__construct();
-	}
 
 	/**
 	 * @copydoc PKPHandler::authorize()

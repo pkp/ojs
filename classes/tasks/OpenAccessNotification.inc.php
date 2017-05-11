@@ -18,13 +18,6 @@ import('lib.pkp.classes.scheduledTask.ScheduledTask');
 class OpenAccessNotification extends ScheduledTask {
 
 	/**
-	 * Constructor.
-	 */
-	function __construct() {
-		parent::__construct();
-	}
-
-	/**
 	 * @see ScheduledTask::getName()
 	 */
 	function getName() {

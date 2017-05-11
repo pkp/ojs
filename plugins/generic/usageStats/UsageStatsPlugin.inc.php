@@ -19,13 +19,6 @@ import('lib.pkp.plugins.generic.usageStats.PKPUsageStatsPlugin');
 class UsageStatsPlugin extends PKPUsageStatsPlugin {
 
 	/**
-	 * Constructor.
-	 */
-	function __construct() {
-		parent::__construct();
-	}
-
-	/**
 	 * @copydoc PKPUsageEventPlugin::getDownloadFinishedEventHooks()
 	 */
 	protected function getDownloadFinishedEventHooks() {

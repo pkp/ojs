@@ -19,15 +19,9 @@ import('classes.issue.IssueFile');
 
 class IssueFileDAO extends DAO {
 
-	 /* @var array MIME types that can be displayed inline in a browser */
+	 /** @var array MIME types that can be displayed inline in a browser */
 	var $_inlineableTypes = null;
 
-	/**
-	 * Constructor.
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 
 	/**
 	 * Get inlineable file types.

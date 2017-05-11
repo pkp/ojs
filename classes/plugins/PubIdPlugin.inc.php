@@ -18,13 +18,6 @@ import('lib.pkp.classes.plugins.PKPPubIdPlugin');
 abstract class PubIdPlugin extends PKPPubIdPlugin {
 
 	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-	}
-
-	/**
 	 * @copydoc Plugin::manage()
 	 */
 	function manage($args, $request) {

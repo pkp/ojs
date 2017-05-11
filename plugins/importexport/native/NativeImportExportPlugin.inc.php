@@ -16,12 +16,6 @@
 import('lib.pkp.classes.plugins.ImportExportPlugin');
 
 class NativeImportExportPlugin extends ImportExportPlugin {
-	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 
 	/**
 	 * Called as a plugin is registered to the registry

@@ -18,12 +18,6 @@
 import('lib.pkp.classes.submission.PKPAuthor');
 
 class Author extends PKPAuthor {
-	/**
-	 * Constructor.
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 
 	//
 	// Get/set methods

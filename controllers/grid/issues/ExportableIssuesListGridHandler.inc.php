@@ -16,13 +16,6 @@
 import('classes.controllers.grid.issues.IssueGridHandler');
 
 class ExportableIssuesListGridHandler extends IssueGridHandler {
-	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-	}
-
 
 	//
 	// Implement template methods from PKPHandler

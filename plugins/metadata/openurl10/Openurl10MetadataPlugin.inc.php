@@ -17,12 +17,6 @@
 import('lib.pkp.plugins.metadata.openurl10.PKPOpenurl10MetadataPlugin');
 
 class Openurl10MetadataPlugin extends PKPOpenurl10MetadataPlugin {
-	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 }
 
 ?>

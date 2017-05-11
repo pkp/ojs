@@ -17,12 +17,6 @@
 import('lib.pkp.plugins.citationLookup.crossref.PKPCrossrefCitationLookupPlugin');
 
 class CrossrefCitationLookupPlugin extends PKPCrossrefCitationLookupPlugin {
-	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 }
 
 ?>

@@ -17,12 +17,6 @@
 import('lib.pkp.plugins.citationOutput.mla.PKPMlaCitationOutputPlugin');
 
 class MlaCitationOutputPlugin extends PKPMlaCitationOutputPlugin {
-	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 }
 
 ?>

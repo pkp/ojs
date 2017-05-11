@@ -20,10 +20,6 @@ define('EXTERNAL_FEED_DISPLAY_BLOCK_ALL',		2);
 
 class ExternalFeed extends DataObject {
 
-	function __construct() {
-		parent::__construct();
-	}
-
 	//
 	// Get/set methods
 	//

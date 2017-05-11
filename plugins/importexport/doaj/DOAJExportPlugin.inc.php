@@ -24,12 +24,6 @@ define('DOAJ_API_URL_DEV', 'http://testdoaj.cottagelabs.com/api/v1/');
 define('DOAJ_API_OPERATION', 'bulk/articles');
 
 class DOAJExportPlugin extends PubObjectsExportPlugin {
-	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 
 	/**
 	 * @copydoc Plugin::getName()

@@ -28,12 +28,6 @@ define('DATACITE_EXPORT_FILE_TAR', 0x02);
 
 
 class DataciteExportPlugin extends DOIPubIdExportPlugin {
-	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 
 	/**
 	 * @see Plugin::getName()

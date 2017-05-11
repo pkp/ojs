@@ -27,12 +27,6 @@ class ReviewerSubmission extends Article {
 	/** @var array the editor decisions of this submission */
 	var $editorDecisions;
 
-	/**
-	 * Constructor.
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 
 	/**
 	 * Get/Set Methods.

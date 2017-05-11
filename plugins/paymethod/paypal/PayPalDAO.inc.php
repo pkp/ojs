@@ -16,12 +16,6 @@
 import('lib.pkp.classes.db.DAO');
 
 class PayPalDAO extends DAO {
-	/**
-	 * Constructor.
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 
 	/**
 	 * Insert a payment into the payments table

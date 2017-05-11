@@ -24,13 +24,6 @@ define('DOI_EXPORT_REGISTERED_DOI', 'registeredDoi');
 abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin {
 
 	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-	}
-
-	/**
 	 * @copydoc Plugin::register()
 	 */
 	function register($category, $path) {

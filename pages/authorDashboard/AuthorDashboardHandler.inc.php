@@ -17,12 +17,6 @@
 import('lib.pkp.pages.authorDashboard.PKPAuthorDashboardHandler');
 
 class AuthorDashboardHandler extends PKPAuthorDashboardHandler {
-	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 }
 
 ?>

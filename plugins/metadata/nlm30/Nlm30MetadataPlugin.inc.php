@@ -17,12 +17,6 @@
 import('lib.pkp.plugins.metadata.nlm30.PKPNlm30MetadataPlugin');
 
 class Nlm30MetadataPlugin extends PKPNlm30MetadataPlugin {
-	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 }
 
 ?>

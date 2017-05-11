@@ -17,12 +17,6 @@
 import('lib.pkp.plugins.citationLookup.isbndb.PKPIsbndbCitationLookupPlugin');
 
 class IsbndbCitationLookupPlugin extends PKPIsbndbCitationLookupPlugin {
-	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 }
 
 ?>

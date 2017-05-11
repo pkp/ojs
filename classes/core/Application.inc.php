@@ -32,13 +32,6 @@ define('CONTEXT_JOURNAL', 1);
 
 class Application extends PKPApplication {
 	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-	}
-
-	/**
 	 * Get the "context depth" of this application, i.e. the number of
 	 * parts of the URL after index.php that represent the context of
 	 * the current request (e.g. Journal [1], or Conference and

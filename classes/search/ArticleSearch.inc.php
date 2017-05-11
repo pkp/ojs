@@ -17,12 +17,6 @@
 import('lib.pkp.classes.search.SubmissionSearch');
 
 class ArticleSearch extends SubmissionSearch {
-	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 
 	/**
 	 * See SubmissionSearch::getSparseArray()

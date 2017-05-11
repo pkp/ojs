@@ -16,12 +16,6 @@
 import('lib.pkp.classes.handler.PKPHandler');
 
 class Handler extends PKPHandler {
-	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 
 	/**
 	 * Returns a "best-guess" journal, based in the request data, if

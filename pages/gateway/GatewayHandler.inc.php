@@ -16,12 +16,6 @@
 import('classes.handler.Handler');
 
 class GatewayHandler extends Handler {
-	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 
 	function index($args, $request) {
 		$request->redirect(null, 'index');

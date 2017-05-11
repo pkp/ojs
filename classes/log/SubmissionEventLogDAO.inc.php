@@ -17,12 +17,6 @@ import('lib.pkp.classes.log.PKPSubmissionEventLogDAO');
 import('classes.log.SubmissionEventLogEntry');
 
 class SubmissionEventLogDAO extends PKPSubmissionEventLogDAO {
-	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 }
 
 ?>

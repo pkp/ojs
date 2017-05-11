@@ -29,13 +29,6 @@ class ArticleHandler extends Handler {
 	/** galley associated with the request **/
 	var $galley;
 
-	/**
-	 * Constructor
-	 * @param $request Request
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 
 	/**
 	 * @copydoc PKPHandler::authorize()

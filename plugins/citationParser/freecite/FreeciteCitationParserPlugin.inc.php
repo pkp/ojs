@@ -17,12 +17,6 @@
 import('lib.pkp.plugins.citationParser.freecite.PKPFreeciteCitationParserPlugin');
 
 class FreeciteCitationParserPlugin extends PKPFreeciteCitationParserPlugin {
-	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 }
 
 ?>

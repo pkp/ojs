@@ -43,14 +43,6 @@ class LucenePlugin extends GenericPlugin {
 	var $_facets;
 
 
-	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-	}
-
-
 	//
 	// Getters and Setters
 	//

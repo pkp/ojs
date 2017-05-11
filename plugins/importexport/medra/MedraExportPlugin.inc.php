@@ -22,12 +22,6 @@ define('O4DOI_ARTICLE_AS_WORK', 0x03);
 define('O4DOI_ARTICLE_AS_MANIFESTATION', 0x04);
 
 class MedraExportPlugin extends DOIPubIdExportPlugin {
-	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 
 	/**
 	 * @see Plugin::getName()
