@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the fa_IR (فارسی) locale.
+  -->
+<locale name="fa_IR" full_name="فارسی">
+	<message key="plugins.generic.tinymce.name" >پلاگین TinyMCE</message>
+	<message key="plugins.generic.tinymce.description" ><![CDATA[با این پلاگین میتوان متون موجود در جعبه های متن را بصورتی که میخواهید ویرایش کنید. برای این کار از ویرایشگر محتوی <a href="http://tinymce.moxiecode.com" target="_blank">TinyMCE</a> استفاده میشود.]]></message>
+	<message key="plugins.generic.tinymce.settings" >تنظیمات</message>
+</locale>

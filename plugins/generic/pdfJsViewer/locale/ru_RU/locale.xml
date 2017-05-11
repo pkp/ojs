@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/pdfJsViewer/locale/ru_RU/locale.xml
+  *
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings
+  -->
+
+<locale name="ru_RU" full_name="Русский">
+	<message key="plugins.generic.pdfJsViewer.name">Модуль «PDF-просмотрщик PDF.JS»</message>
+	<message key="plugins.generic.pdfJsViewer.description"><![CDATA[Использует <a href="http://mozilla.github.io/pdf.js">PDF-просмотрщик pdf.js</a> для встраивания PDF-файлов на страницы просмотра гранок статьи и выпуска.]]></message>
+</locale>

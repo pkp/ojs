@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/googleAnalytics/locale/sr_SR/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Google Analytics plugin localization strings for the sr_SR (Cрпски) locale.
+  *
+  -->
+ 
+<locale name="sr_SR" full_name="Cрпски">
+
+	<!-- Google Analytics -->
+	<message key="plugins.generic.googleAnalytics.displayName">Google Analytics dodatak</message>
+	<message key="plugins.generic.googleAnalytics.description"><![CDATA[Integriše Google Analytics u OJS. Zahteva da već imate Google Analytics nalog. Pogledajte <a href="http://www.google.com/analytics/" title="Google Analytics site">Google Analytics sajt</a> za više informacija.]]></message>
+
+	<!-- Google Analytics Settings Management -->
+	<message key="plugins.generic.googleAnalytics.manager.settings">Podešavanja</message>
+	<message key="plugins.generic.googleAnalytics.manager.googleAnalyticsSettings">Google Analytics podešavanja</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.description"><![CDATA[<p>With this plugin enabled Google Analytics may be used to collect and analyze web site usage and traffic for this journal. Please note that this plugin requires that you have already setup a Google Analytics account. Please see the <a href="http://www.google.com/analytics/" title="Google Analytics site">Google Analytics site</a> for more information.</p><p>Please note that Google Analytics may require up to 24 hours before statistics are collected and reported. During this period, the 'Check Status' function may not accurately report whether it has detected the required tracking code for the journal.</p>]]></message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteId">Account number</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdInstructions">Sa Google Analytics, kliknite na 'Proveri status' da biste videli kod za praćenje vašeg sajta. Za stariji tip koda broj naloga je prikazan u kodu kao: _uacct = "###". Za nove kodove broj naloga je prikazan u kodu kao: var pageTracker = _gat._getTracker("###"). Unesite tekst koji odgovara ###.</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdRequired">Unesite broj naloga</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCode">Kod ta praćenje</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCodeRequired">Odaberite kod za praćenje koji će se koristiti.</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.urchin">Stari tip koda (urchin.js)</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.ga">Novi tip koda (ga.js)</message>
+	<message key="plugins.generic.googleAnalytics.authorAccount">Google Analytics broj naloga</message>
+	<message key="plugins.generic.googleAnalytics.authorAccount.description">Da biste pratili učestalost čitanja objavljenih članaka unesite broj naloga ovde (e.g. UA-xxxxxx-x).</message>
+	<message key="plugins.generic.googleAnalytics.authorAccountInvalid">Jedan ili više brojeva naloga nije ispravan.</message>
+</locale>

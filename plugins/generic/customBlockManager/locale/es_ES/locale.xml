@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/customBlockManager/locale/es_ES/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Credits: https://pkp.sfu.ca/wiki/index.php?title=OMP:_Spanish_%28es_ES%29
+  * Localization strings.
+  -->
+ 
+<locale name="es_ES" full_name="Español (España)">
+	<message key="plugins.generic.customBlockManager.displayName">Gestor de Bloque Personalizado</message>
+	<message key="plugins.generic.customBlockManager.manage">Gestionar bloques personalizados</message>
+	<message key="plugins.generic.customBlockManager.description">Este complemento le permite gestionar (añadir, editar, eliminar) los bloques personalizados de la barra lateral.</message>
+	<message key="plugins.generic.customBlockManager.customBlocks">Bloques personalizados</message>	
+	<message key="plugins.generic.customBlockManager.blockName">Nombre de Bloque</message>
+	<message key="plugins.generic.customBlockManager.addBlock">Añadir Bloque</message>	
+	<message key="plugins.generic.customBlockManager.noneCreated">No se han creado complementos de bloques personalizados.</message>	
+	
+	<message key="plugins.generic.customBlock.content">Contenido</message>
+	<message key="plugins.generic.customBlock.nameSuffix">(Plugin de Bloque Personalizado)</message>	
+	<message key="plugins.generic.customBlock.description">Este es un Bloque generado por el usuario.</message>
+	<message key="plugins.generic.customBlock.nameRequired">Se requiere el nombre del bloque personalizado.</message>
+	<message key="plugins.generic.customBlock.nameRegEx">El nombre del bloque personalizado debe conteber sólo letras, números y guiones/guiones bajos.</message>
+</locale>

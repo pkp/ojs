@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/googleAnalytics/locale/vi_VN/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Google Analytics plugin localization strings for the vi_VN (Tiếng Việt) locale.
+  *
+  -->
+ 
+<locale name="vi_VN" full_name="Tiếng Việt">
+
+	<!-- Google Analytics -->
+	<message key="plugins.generic.googleAnalytics.displayName">Công cụ Analytics Plugin</message>
+	<message key="plugins.generic.googleAnalytics.description"><![CDATA[Tích hợp OJS với Google Analytics, công cụ phân tích lưu lượng truy cập web của Google. Đòi hỏi bạn đã có một tài khoản Google Analytics. Xem website <a href="http://www.google.com/analytics/" title="Google Analytics site">Google Analytics</a> để biết thêm chi tiết.]]></message>
+
+	<!-- Google Analytics Settings Management -->
+	<message key="plugins.generic.googleAnalytics.manager.settings">Tham số thiết lập</message>
+	<message key="plugins.generic.googleAnalytics.manager.googleAnalyticsSettings">Tham số Google Analytics</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.description"><![CDATA[<p>Với công cụ này được kích hoạt,Google Analytics có thể sử dụng để thu thập và phân tích lưu lượng truy câp và sử dụng của tạp chí này. Lưu ý là công cụ này đòi hỏi quý vị đã có sẵn tài khoản Google Analytics. Xem website <a href="http://www.google.com/analytics/" title="Google Analytics site">Google Analytics site</a> để biết thêm chi tiết.</p><p>Lưu ý là có thể phải mất 24h để Google Analytics để bắt đầu thu thập và phân tích sử liệu. Trong thời gian đó nút  'Check Status' có thể thông báo không chính xác xem nó đã tìm được mã theo dõi dành cho tạp chí hay chưa.</p>]]></message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteId">Số tài khoản</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdInstructions">Trong Google Analytics, nhấp chuột vào nút 'Check Status' để xem mã theo dõi cho website của bạn. Đối với mã theo dõi cũ, số tài khoản được hiển thị trong code như sau: _uacct = "###". Đối với mã theo dõi mới, số tài khoản được hiển thị trong code như sau: var pageTracker = _gat._getTracker("###"). Nhập phần chữ tương ứng với ###.</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdRequired">Vui lòng nhập số tài khoản</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCode">Mã theo dõi</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCodeRequired">Vui lòng chọn một loại mã theo dõi để sử dụng.</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.urchin">Mã theo dõi cũ (urchin.js)</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.ga">Mã theo dõi mới (ga.js)</message>
+</locale>

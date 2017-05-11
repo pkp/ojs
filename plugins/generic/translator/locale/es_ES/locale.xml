@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the es_ES (Español (España)) locale.
+  -->
+
+<locale name="es_ES" full_name="Español (España)">
+	<message key="plugins.generic.translator.name">Complemento de traducción</message>
+	<message key="plugins.generic.translator.description">Este complemento permite el mantenimiento on-line de los archivos de traducción.</message>
+	<message key="plugins.generic.translator.longdescription">Esta área le permite al administrador/a del sitio crear, modificar y revisar las traducciones de OMP. Esto es para el sitio web completo y no debería ser usado para personalizar una sola editorial OMP. Si usted corrige o crea una traducción, considere enviarla a Publick Knowledge Project para su distribución en futuras publicaciones.</message>
+	<message key="plugins.generic.translator.localeFileContents">Archivos de configuración de variedades regionales</message>
+	<message key="plugins.generic.translator.localeName">Nombre locale</message>
+	<message key="plugins.generic.translator.localeKey">Clave</message>
+	<message key="plugins.generic.translator.localeKey.description">Introduzca la clave de configuración regional completa que desee buscar.</message>
+	<message key="plugins.generic.translator.localeKeyValue">Valor</message>
+	<message key="plugins.generic.translator.translate">Traducir</message>
+	<message key="plugins.generic.translator.availableLocales">Idiomas disponibles</message>
+	<message key="plugins.generic.translator.check">Revisar</message>
+	<message key="grid.action.checkLocale">Comprobar idioma</message>
+	<message key="grid.action.download">Descargar</message>
+	<message key="plugins.generic.translator.localeFile.complete">Completar ({$reference})</message>
+	<message key="plugins.generic.translator.localeFile.incompleteCount">{$complete} / {$reference} ({$percent}%)</message>
+	<message key="plugins.generic.translator.localeFile.doesNotExist">Falta ({$reference})</message>
+	<message key="plugins.generic.translator.miscFile.complete">Completado</message>
+	<message key="plugins.generic.translator.miscFile.doesNotExist">Falta</message>
+	<message key="plugins.generic.translator.email.complete">Completado</message>
+	<message key="plugins.generic.translator.email.doesNotExist">Falta</message>
+
+	<message key="plugins.generic.translator.errors">Locale errors</message>
+
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_KEY.title">Claves que faltan</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_EXTRA_KEY.title">Claves extra</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_DIFFERING_PARAMS.title">Lista de parámetros diferentes</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_FILE.title">Archivos locale que faltan</message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_MISSING_EMAIL.title">Emails que faltan</message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_EXTRA_EMAIL.title">Emails extra</message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_DIFFERING_PARAMS.title">Listas de parámetros de emails diferentes</message>
+
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_KEY.message">La clave "{$key}" falta en "{$filename}". La versión en Español se estableció como la versión predeterminada.</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_EXTRA_KEY.message">La clave "{$key}" ya no está en uso y puede eliminarse desde "{$filename}".</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_DIFFERING_PARAMS.message">La clave de idioma "{$key}" en "{$filename}" difiere de la referencia de idioma en lo que respecta al uso de los parámetros. Asegúrese de que contenga todos los parámetros relevantes. Los parámetros que no coinciden son:</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_FILE.message">El archivo de idioma"{$filename}" falta o no puede leerse.</message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_MISSING_EMAIL.message">El mensaje del correo electrónico "{$key}" no está incluído en la traducción.</message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_EXTRA_EMAIL.message">El mensaje del correo electrónico "{$key}"ya no en uso y puede eliminarse.</message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_DIFFERING_PARAMS.message">El mensaje de correo electrónico "{$key}" difiere de la referencia de idioma en lo que respecta al uso de los parámetros. Asegúrese de que contenga todos los parámetros relevantes. Los parámetros que no coinciden son:</message>
+	<message key="plugins.generic.translator.jumpTo">Saltar a...</message>
+	<message key="plugins.generic.translator.locale">{$locale}Variedad regional</message>
+	<message key="plugins.generic.translator.localeFiles">Archivos locale</message>
+	<message key="plugins.generic.translator.miscFileDescription">La lista a continuación contiene todos los archivos de las variantes regionales. Normalmente, estos son archivos en formato XML pero que no cumplen con los formatos clave-valor estándares usados en la mayoría del contenido traducido.</message>
+	<message key="plugins.generic.translator.emails">Plantillas correo-e</message>
+	<message key="plugins.generic.translator.file.filename">Nombre de archivo</message>
+	<message key="plugins.generic.translator.file.edit">Edición {$filename}</message>
+	<message key="plugins.generic.translator.email.edit">Edición {$emailKey}</message>
+	<message key="plugins.generic.translator.file.reference">Versión de referencia</message>
+	<message key="plugins.generic.translator.file.translation">Traducción</message>
+	<message key="plugins.generic.translator.email.reference">Versión de referencia</message>
+	<message key="plugins.generic.translator.email.translation">Traducción</message>
+	<message key="plugins.generic.translator.file.reset">Restaurar</message>
+	<message key="plugins.generic.translator.file.resetToReference">Restaurar a referencia</message>
+	<message key="plugins.generic.translator.email.reset">Restaurar</message>
+	<message key="plugins.generic.translator.email.resetToReference">Restaurar a referencia</message>
+	<message key="plugins.generic.translator.file.resetConfirm">¿Seguro que quieres restaurar los contenidos del archivo?</message>
+	<message key="plugins.generic.translator.email.resetConfirm">¿Seguro que quieres restaurar los contenidos del correo electrónico?</message>
+	<message key="plugins.generic.translator.file.doesNotExistNote">* Este archivo aun no está traducido.</message>
+	<message key="plugins.generic.translator.email.description">Traduzca en los siguientes campos el título, el cuerpo de texto y la descripción de la plantilla de correo electrónico. La descripción será usada sólo como referencia para el gestor/a de la publicación.</message>
+	<message key="plugins.generic.translator.confirmDelete">¿Está seguro de que desea eliminar este elemento? Esta acción es irreversible.</message>
+	<message key="plugins.generic.translator.deleteKey">Borrar esta clave</message>
+	<message key="plugins.generic.translator.deleteEmail">Borrar este correo electrónico</message>
+	<message key="plugins.generic.translator.saveBeforeContinuing">Asegúrese de guardar cualquier cambio que realice en esta página antes de continuar o los cambios se perderán. ¿Desea continuar? Si continúa, se perderán los cambios que no hayan sido guardados.</message>
+	<message key="plugins.generic.translator.couldNotWriteFile">No se puede modificar el archivo "{$filename}". Asegúrese de que los permisos del archivo se hayan establecido de forma correcta.</message>
+	<message key="plugins.generic.translator.errorEditingFile">Ha ocurrido un problema al editar el archivo "{$filename}". Asegúrese de que cumpla con el formato establecido.</message>
+</locale>

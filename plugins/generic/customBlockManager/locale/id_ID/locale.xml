@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/customBlockManager/locale/id_ID/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the id_ID (Bahasa Indonesia) locale.
+  *
+  -->
+ 
+<locale name="id_ID" full_name="Bahasa Indonesia">
+	<message key="plugins.generic.customBlockManager.displayName">Blok Manager Umum</message> 
+	<message key="plugins.generic.customBlockManager.blockName">Nama Blok</message>	
+	<message key="plugins.generic.customBlockManager.addBlock">Tambah Blok</message>	
+
+	<message key="plugins.generic.customBlock.content">Konten</message>
+	<message key="plugins.generic.customBlock.nameSuffix">(Plugin Custom Block)</message>
+	<message key="plugins.generic.customBlock.description">Ini adalah user-generated block.</message>
+</locale>

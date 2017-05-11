@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE email_texts SYSTEM "../../../../../lib/pkp/dtd/emailTemplateData.dtd">
+
+<!--
+  * @file plugins/generic/orcidProfile/locale/ru_RU/emailTemplates.xml
+  *
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localized email templates XML file.
+  -->
+
+<email_texts locale="ru_RU">
+	<email_text key="ORCID_COLLECT_AUTHOR_ID">
+		<subject>ORCID материала</subject>
+		<body>{$authorName}!
+
+Вы были указаны как соавтор материала «{$articleTitle}», отправленного в журнал «{$journalName}». 
+
+Чтобы подтвердить свое авторство, пожалуйста, добавьте свой идентификатор ORCID к этому материалу, перейдя по приведенной ниже ссылке.
+
+{$authorOrcidUrl}
+
+Если у Вас есть какие-либо вопросы, пожалуйста, свяжитесь со мной.
+
+{$editorialContactSignature}
+
+
+</body>
+		<description>Этот шаблон письма используется для сбора идентификаторов ORCID с соавторов.</description>
+	</email_text>
+</email_texts>

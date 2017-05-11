@@ -1,0 +1,1682 @@
+/* Textish Styles
+-------------------------------------------------------------------------------*/
+
+.content-node.text .content {
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+}
+
+
+/* When rendered in main panel */
+.document .content-node.text {
+  padding: 20px 60px;
+  padding-left: 100px;
+}
+/* Paragraph Node
+-------------------------------------------------------------------------------*/
+
+.content-node.paragraph {
+}
+
+.content-node.paragraph .content {
+  min-height: 28px;
+}
+
+.content-node.paragraph .content-node.text {
+  padding: 0px;
+  display:inline;
+  width: auto;
+}
+
+.content-node.paragraph .content-node.text.heading {
+  display:block;
+}
+
+.content-node.paragraph .content-node.text div {
+  display:inline;
+  width: auto;
+}
+
+.content-node.paragraph .content-node.image div img {
+  display:inline;
+  width: 100%;
+}
+
+.content-node.paragraph .content-node.formula.inline {
+  display: inline;
+  padding: 0px;
+}
+
+/* Heading Node
+-------------------------------------------------------------------------------*/
+
+.content-node.heading {
+}
+
+.content-node.heading .content {
+  min-height: 40px;
+}
+
+.content-node.heading .label { display: inline; padding-right: 10px; }
+.content-node.heading .title, .content-node.heading .content .title .content { display: inline; }
+
+.content-node.heading { }
+
+.content-node.heading .content {
+  color: rgba(0,0,0,0.8);
+  font-weight: 600;
+  line-height: 40px;
+}
+
+.content-node.heading.level-1 .content {
+  font-size: 24px;
+}
+
+.content-node.heading.level-2 .content {
+  font-size: 21px;
+}
+
+.content-node.heading.level-3 .content {
+  font-size: 18px;
+}
+
+/* List Node
+-------------------------------------------------------------------------------*/
+
+.content-node.list {
+  padding: 10px 0px;
+  padding-top: 0px;
+}
+
+.content-node .listitem {
+  padding: 2px 0px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.content-node .listitem .bullet {
+  position: absolute;
+  left: 0px;
+  top: 14px;
+  width: 4px;
+  height: 4px;
+  background: #bbb;
+}
+
+.content-node.list .content {
+  min-height: 30px;
+}
+
+.content-node.list { }
+
+.content-node.list .content {
+
+}
+
+.content-node.list.level-2 .content {
+  font-size: 20px;
+}
+
+.content-node.list.level-3 .content {
+  font-size: 17px;
+}
+/* Image Node
+-------------------------------------------------------------------------------*/
+
+.content-node.image { }
+
+
+.content-node.image .content {
+  padding: 0px;
+}
+
+.content-node.image div.image-char {
+  width: 100%;
+}
+
+.content-node.image div.selected .overlay {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background: rgba(0,169, 255, 0.25);
+}
+
+.content-node.image div img {
+  width: 100%;
+}
+/* Codeblock Node
+-------------------------------------------------------------------------------*/
+
+.content-node.codeblock > .content {
+  border: 1px dashed #ddd;
+  line-height: 20px;
+  padding: 10px 10px;
+}
+
+.content-node.codeblock > .content {
+  font-family: 'Menlo', monospace;
+  font-size: 14px;
+  color: #777;
+  min-height: 28px;
+}
+
+.lens-article .content-node.cover {
+  color: rgba(0,0,0,0.8);
+}
+
+.lens-article .content-node.cover .breadcrumbs {
+  font-size: 14px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+
+  /* Prevent from nasty scrollbars that appear when eLife logo is shown */
+  overflow: hidden;
+}
+
+.lens-article .content-node.cover .breadcrumbs a {
+  margin-right: 20px;
+  display: block;
+  float: left;
+  line-height: 40px;
+  height: 40px;
+}
+
+.lens-article .content-node.cover .content {
+  background: none;
+}
+
+.lens-article .content-node.cover .title {
+  font-weight: 600;
+  line-height: 1.3em;
+  font-size: 30px;
+  padding-top: 20px;
+}
+
+.lens-article .content-node.cover .published-on {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.lens-article .content-node.cover .doi {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  color: #666;
+  font-size: 14px;
+}
+
+.lens-article .content-node.cover .content .authors {
+  padding-top: 30px;
+  color: #1B6685;
+  overflow: auto;
+}
+
+.lens-article .content-node.cover .content .links {
+  margin-top: 20px;
+  font-size: 15px;
+}
+
+.lens-article .content-node.cover .content .links a {
+  padding-left: 4px;
+  margin-right: 20px;
+}
+
+/* One para per author */
+.lens-article .content-node.cover .authors .text {
+  float: left;
+  padding: 0px;
+  margin: 0px;
+  font-size: 17px;
+  margin-right: 10px;
+  margin-bottom: 8px;
+}
+
+.lens-article .content-node.cover .authors .text.plain {
+  color: #777;
+  padding-left: 1px;
+}
+
+
+.lens-article .intro {
+  font-size: 13px;
+  background: #FFFEF5;
+  border: 1px solid#D8D9C1;
+  color: rgba(0,0,0,0.6);
+  padding: 0 10px;
+  line-height: 30px;
+}
+
+.lens-article .intro .intro-text {
+  float: left;
+}
+
+.lens-article .intro .send-feedback {
+  float: right;
+  color: #E40000;
+  font-weight: bold;
+}
+
+.lens-article .intro .send-feedback:hover {
+  color: #ff0000;
+}
+.content-node.supplement > .content {
+  padding: 10px 20px;
+}
+
+.content-node.supplement .content .file {
+  padding: 20px 0;
+  font-weight: bold;
+  font-size: 16px;
+}
+/*
+Box
+--------------------------------------- */
+
+.content-node.box > .content {
+  padding: 20px;
+}
+
+.surface.content .content-node.box {
+  /*margin-left: 60px;*/
+/*  padding-left: 100px;
+  padding-right: 60px;*/
+
+  /*padding: 0px;*/
+  /*background: #ccc;*/
+}
+
+.document .content-node.box .content-node.paragraph {
+  /*padding: 0px;*/
+  /*padding: 20px 60px 20px 100px;*/
+}
+
+.surface.content .content-node.box {
+  /*background: #ccc;*/
+}
+
+.surface.content .content-node.box > .content {
+  border: 1px dotted #ddd;
+}
+
+.surface.content .content-node.box .content {
+  background: #fbfbfb;
+}
+
+.surface.content .content-node.box > .content > .label  {
+  font-weight: 600;
+  padding-bottom: 20px;
+}
+
+/*
+Citations 
+--------------------------------------- */
+
+.lens-article .content-node.citation .content .title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.lens-article .content-node.citation .content .authors {
+  font-size: 16px;
+}
+
+.lens-article .content-node.citation .content .source {
+  color: #777;
+  padding-top: 10px;
+}
+
+.lens-article .content-node.citation .content .citation-urls {
+  padding-top: 20px;
+}
+
+.lens-article .content-node.citation .content .citation-urls .url {
+  padding-right: 20px;
+}
+/*
+Definition 
+--------------------------------------- */
+
+
+.lens-article .content-node.definition .description {
+  font-size: 16px;
+}
+
+/* Figure Node
+-------------------------------------------------------------------------------*/
+
+.content-node.figure { 
+}
+
+.content-node.figure div.image-wrapper {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.content-node.figure div .image-wrapper img {
+  width: 100%;
+}
+.lens-article .content-node.html-table > .content {
+  padding: 20px;
+}
+
+.lens-article .content-node.html-table > .content img {
+  width: 100%;
+}
+
+.lens-article .content-node.html-table .table-wrapper {
+  width: 100%;
+  overflow: auto;
+}
+
+.lens-article .content-node.html-table .caption {
+  padding-top: 20px;
+}
+
+.lens-article .content-node.html-table table {
+  position: relative;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-bottom: 20px;
+  margin: 0 auto;
+}
+
+.lens-article .content-node.html-table thead tr {
+  background: #eee;
+}
+
+.lens-article .content-node.html-table thead td {
+  font-weight: bold;
+}
+
+/* Table sub tags */
+.lens-article .content-node.html-table table sub {
+  vertical-align: baseline;
+  position: relative;
+  top: 0.4em;
+  font-size: 11px;
+}
+
+.lens-article .content-node.html-table table td {
+  padding: 5px;
+  font-size: 12px;
+  border: 1px solid lightgrey;
+  /* Enable white-space: nowrap; if author controls wrapping (<br> in HTML)
+  /* white-space: nowrap; */ 
+}
+
+.lens-article .content-node.html-table .footers {
+  padding: 0 20px;
+  padding-top: 10px;
+  font-size: 12px;
+  background: #fff;
+}
+
+.resources .content-node.video .video-wrapper {
+  background: black;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.resources .content-node.video .content video {
+  background: #000;
+  padding: 10px;
+  max-width: 100%;
+  max-height: 500px;
+}
+
+/* Fullscreen overrides */
+
+.resources .content-node.video.fullscreen .content .video-wrapper {
+  background: black;
+
+  padding: 50px 0;
+  text-align: center;
+  
+}
+.lens-article .content-node.caption .caption-title {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.lens-article .content-node.caption > .content > .content-node.paragraph {
+  padding-bottom: 20px;
+}
+/*
+Contributor 
+--------------------------------------- */
+
+.lens-article .content-node.contributor .content {
+  
+}
+
+.lens-article .content-node.contributor .affiliation {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.lens-article .content-node.contributor .contributor-bio {
+  padding-top: 30px;  
+}
+
+.lens-article .content-node.contributor .contributor-bio .bio {
+
+  font-size: 13px;
+}
+
+.lens-article .content-node.contributor .contributor-bio .bio .content {
+  background: transparent;
+}
+
+.lens-article .content-node.contributor .contributor-bio img {
+  max-width: 120px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  display: inline;
+  float: left;
+  display: block;
+}
+
+.lens-article .content-node.contributor .contributor-name {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.lens-article .content-node.contributor .label {
+  font-size: 15px;
+  margin-top: 20px;
+  color: #999;
+}
+/* Publication Info */
+
+.lens-article .content-node.publication-info {
+  font-size: 16px;
+  color: #333;
+}
+
+/*.article .resources .nodes > .content-node.publication-info > .content {*/
+  /*border-top: 1px solid #ddd;*/
+/*}*/
+
+.lens-article .content-node.publication-info table {
+  padding: 10px 0;
+  border: none;
+  width: 100%;
+}
+
+.lens-article .content-node.publication-info .meta-data > .container {
+  margin-bottom: 20px;
+}
+
+.lens-article .content-node.publication-info .meta-data {
+  padding-bottom: 30px;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+.lens-article .content-node.publication-info .label {
+  float: left;
+  width: 100px;
+  font-size: 15px;
+  color: #999;
+}
+
+.lens-article .content-node.publication-info .value {
+  margin-left: 140px;
+}
+
+.lens-article .content-node.publication-info .dates {
+  font-size: 16px;
+}
+
+.article .resources .nodes > .content-node.publication-info > .content {
+  border: none;
+  padding: 10px;
+}
+
+.article .resources .nodes > .content-node.publication-info .content-node[data-id=articleinfo] {
+  font-size: 16px;
+}
+
+.article .resources .nodes > .content-node.publication-info .content-node[data-id=articleinfo] .heading.level-3 {
+  padding-top: 10px;
+}
+
+.article .resources .nodes > .content-node.publication-info .content-node[data-id=articleinfo] .heading.level-3 .content {
+  font-size: 15px;
+  font-weight: normal;
+  font-family: "Source Sans Pro";
+  color: #999;
+}
+
+.article .resources .nodes > .content-node.publication-info .content-node[data-id=articleinfo] .content-node {
+  padding-top: 10px;
+}
+
+/* Surface
+-------------------------------------------------------------------------------*/
+
+.surface {
+  position: relative;
+}
+
+/* Very important dude */
+/* Makes sure .nodes is used as a reference for absolute positioning */
+.surface .nodes {
+  position: relative;
+}
+
+/* Generic node styles */
+.surface .content-node {
+  position: relative;
+}
+
+.surface .nodes > .content-node {
+  /*margin: 0 60px;*/
+}
+
+
+/* Cursor
+-------------------------------------------------------------------------------*/
+
+.surface .cursor {
+  position: absolute;
+  top: 0px;
+  height: 20px;
+  width: 2px;
+  background: #00ACEA;
+}
+
+/*
+  blinking from http://codepen.io/hofweber/pen/vbJHc
+  thanks patch!
+*/
+
+.surface .cursor {
+  -webkit-animation: blink 1.2s step-end infinite;
+     -moz-animation: blink 1.2s step-end infinite;
+      -ms-animation: blink 1.2s step-end infinite;
+       -o-animation: blink 1.2s step-end infinite;
+          animation: blink 1.2s step-end infinite;
+}
+
+@-webkit-keyframes blink {0% {background: #00ACEA} 50% {background: transparent;}}
+   @-moz-keyframes blink {0% {background: #00ACEA} 50% {background: transparent;}}
+    @-ms-keyframes blink {0% {background: #00ACEA} 50% {background: transparent;}}
+     @-o-keyframes blink {0% {background: #00ACEA} 50% {background: transparent;}}
+        @keyframes blink {0% {background: #00ACEA} 50% {background: transparent;}}
+
+/* Fix weird behavior
+-------------------------------------------------------------------------------*/
+
+/*
+When using event delegation if the parent element has a click handler, when
+the user touches anything inside this element, the whole region will gray
+out (on iOS 5.1), or flicker (on iOS 6). */
+
+* {
+  -webkit-tap-highlight-color:transparent;
+}
+
+/* Clearfix solution */
+.container:after {
+  content:"";
+  display:table;
+  clear:both;
+}
+
+/* Article
+-------------------------------------------------------------------------------*/
+
+.article {
+  height: 100%;
+}
+
+/* Surface specific styles */
+.content-node {
+
+}
+
+.hidden {
+  visibility: none;
+}
+
+.content-node .content {
+  margin: 0px;
+}
+
+/* Main content panel
+======================================================================= */
+
+.article .document {
+  line-height: 28.5px;
+  font-size: 17px;
+  position: relative;
+  float: left;
+  overflow: hidden;
+  height: 100%;
+  width: 50%;
+  border-right: 1px solid #ddd;
+}
+
+.article .document .surface.content {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  /*overflow: auto;*/
+  -webkit-overflow-scrolling: touch;
+}
+
+.article .document .surface.content .nodes {
+  min-height: 100%;
+  padding-left: 20px;
+  padding-right: 0px;
+  background: #FFFFFF;
+  padding-bottom: 50px;
+}
+
+
+/* Back Navigation
+=======================================================================*/
+
+
+/* Context Toggles
+=======================================================================*/
+
+.article .panel.hidden {
+  visibility: hidden;
+}
+
+/* Switcher */
+.article .medial-strip {
+  width: 40px;
+  position: absolute;
+  left: 50%;
+  margin-left: -18px;
+
+  top: 0px;
+  bottom: 0px;
+  background: #fff;
+  z-index: 3000;
+}
+
+.article .back-nav {
+  display: block;
+  overflow: hidden;
+  width: 40px;
+  position: absolute;
+  top: 20px;
+  z-index: 5000;
+  font-size: 22px;
+  background: #fff;
+  color: #aaa;
+  padding: 10px 10px;
+}
+
+.article .back-nav:hover {
+  color: #333;
+}
+
+.article .medial-strip .separator-line {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 20px;
+  width: 1px;
+  background: #ddd;
+  z-index: 4000;
+}
+
+.article .context-toggles {
+  position: absolute;
+  top: 30px;
+  left: 0px;
+  right: 0px;
+  z-index: 5000;
+}
+
+.article .context-toggles .context-toggle {
+  cursor: pointer;
+  display: block;
+  z-index: 5000;
+  padding: 0 10px;
+  line-height: 40px;
+  font-size: 22px;
+  color: #aaa;
+  background: #fff;
+  text-align: center;
+}
+
+.article .context-toggles .context-toggle.hidden {
+  display: none;
+}
+
+.article .context-toggles .context-toggle.pdf {
+  margin-top: 40px;
+}
+
+.article .context-toggles .context-toggle i {
+
+}
+
+.article .context-toggles .context-toggle span {
+  display: none;
+}
+
+.article .context-toggles .context-toggle div.label {
+  margin-left: -15px;
+  margin-right: -15px;
+  font-weight: bold;
+  font-size: 11px;
+  line-height: 12px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.article .context-toggles .context-toggle:hover {
+  color: #555;
+}
+
+.article .context-toggles .context-toggle.active {
+  color: #111;
+}
+
+
+/* Resources Panel
+======================================================================= */
+
+.article .resources {
+  float: right;
+  line-height: 25px;
+  width: 50%;
+
+  height: 100%;
+  padding-left: 50px;
+  padding-right: 50px;
+  position: relative;
+}
+
+/* It's not exactly good to have the overflow-y: scroll for the container AND the surface.
+   There should be just one overflowing container, if possible
+*/
+
+.article .resources .panel {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+.article .resources .surface {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  font-size: 14px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.article .nodes {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.article .resources .nodes {
+  padding-left: 55px;
+  padding-right: 40px;
+}
+
+.article .resources .nodes > .content-node {
+  color: #505050;
+  position: relative;
+  background: #fff;
+  padding: 0px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.article .resources .nodes > .content-node > .content {
+  border: 1px solid #ddd;
+  border-top: none;
+}
+
+.article .resources .content-node .resource-header:hover {
+  background: rgba(0,0,0,0.15);
+}
+
+/* Clickable header */
+.article .resources .content-node .resource-header {
+  min-height: 40px;
+  position: relative;
+  background: rgba(0,0,0,0.1);
+}
+
+
+/* TOC View
+----------------------------------------------------------------------- */
+
+.article .resources .panel .toc {
+  padding-left: 50px;
+  overflow: auto;
+  padding-top: 30px;
+}
+
+/* Info View
+----------------------------------------------------------------------- */
+
+.article .resources .surface.info {
+}
+
+/* Related Articles View
+----------------------------------------------------------------------- */
+
+.article .resources .surface.related_articles {
+}
+
+/* Consistent Resource Header for figures captions and person cards
+----------------------------------------------------------------------- */
+
+.article .resources .resource-header .name {
+  display: block;
+  min-height: 40px;
+
+  color: #444;
+  font-size: 16px;
+  line-height: 21px;
+  padding: 10px 20px;
+  padding-right: 40px;
+}
+
+
+.article .resources .content-node .reference-count {
+  font-size: 13px;
+  position: absolute;
+  right: 20px;
+  top: 40px;
+  text-align: right;
+}
+
+
+/* Resource toggle */
+.article .resources .content-node .resource-header .toggle-res {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  font-size: 20px;
+  bottom: 0px;
+  text-align: center;
+  line-height: 40px;
+  color: rgba(0,0,0, 0.2);
+  width: 60px;
+}
+
+/* Active state adjustments */
+.article .resources .content-node.highlighted .resource-header .toggle-res {
+  color: rgba(255,255,255, 0.5);
+}
+
+/* Hide resize small icon by default */
+#container .article .content-node .fa.fa-eye-slash {
+  display: none;
+}
+
+#container .article .content-node.highlighted .fa.fa-eye-slash {
+  display: inline;
+}
+
+#container .article .content-node.highlighted .fa.fa-eye {
+  display: none;
+}
+
+
+/* Resource Fullscreen Mode
+======================================================================= */
+
+/* Styles for fullscreen toggle on resource cards */
+
+.article .resources .content-node .resource-header .toggle-fullscreen {
+  position: absolute;
+  right: 30px;
+  top: 0px;
+  font-size: 20px;
+  bottom: 0px;
+  text-align: center;
+  line-height: 40px;
+  color: rgba(0,0,0, 0.2);
+  width: 81px;
+}
+
+.article .resources .content-node .resource-header .toggle-fullscreen:hover {
+  color: rgba(0,0,0, 0.5);
+}
+
+/* Active state adjustments */
+.article .resources .content-node.highlighted .resource-header .toggle-fullscreen {
+  color: rgba(255,255,255, 0.5);
+}
+
+.article .resources .content-node.highlighted .resource-header .toggle-fullscreen:hover {
+  color: rgba(255,255,255, 1);
+}
+
+
+/* Hide resize small icon by default */
+#container .article .content-node .fa.fa-compress {
+  display: none;
+}
+
+#container .article .content-node.fullscreen {
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 100000;
+  margin-bottom: 0px;
+  margin-right: 0px;
+  padding: 0px;
+}
+
+#container .article .content-node.fullscreen .fa.fa-compress {
+  display: inline;
+}
+
+#container .article .content-node.fullscreen .fa.fa-expand {
+  display: none;
+}
+
+#container .article .content-node.fullscreen > .content {
+  position: absolute;
+  top: 80px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+
+  overflow: auto;
+}
+
+/* Info panel overrides
+----------------------------------------------------------------------- */
+
+#container .article .surface.info .content-node.caption .content {
+  padding: 20px;
+}
+
+
+/* Annotations
+----------------------------------------------------------------------- */
+
+.article span.annotation {
+  -webkit-transition-property: background, color;
+  -moz-transition-property: background, color;
+  transition-property: background, color;
+
+  -webkit-transition-duration: 0.1s;
+  -moz-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+}
+
+/* Small caps */
+span.annotation.sc {
+  font-variant: small-caps;
+}
+
+span.annotation.formula_reference, span.publication_reference {
+  padding-left: 3px; padding-right: 3px;
+}
+
+.article span.emphasis, .article em {
+  font-style: italic;
+}
+
+.article span.superscript, .article sup {
+  vertical-align: super;
+  font-size: 12px;
+}
+
+.article span.subscript, .article sub {
+  vertical-align: sub;
+  font-size: 12px;
+}
+
+.article .cover span.superscript, .article .cover span.subscript, .article .cover sup, .article .cover sub {
+  font-size: inherit;
+}
+
+.article span.strong, .article strong {
+  font-weight: bold;
+}
+
+.article span.underline {
+  text-decoration: underline;
+}
+
+.article span.label {
+  vertical-align: baseline;
+  position: relative;
+  top: -0.4em;
+  font-size: 12px;
+  padding: 5px;
+  font-weight: bold;
+}
+
+.content-node .idea { background-color: rgba(102, 182, 32, 0.3); }
+.content-node .question { background-color: rgba(16, 167, 222, 0.3); }
+.content-node .error { background-color: rgba(237, 96, 48, 0.3); }
+
+.content-node .link { color: #1B6685; font-weight: bold; }
+.content-node .link:hover, .content-node .link.highlighted { color: rgba(11, 157, 217, 1); }
+
+/* Inline Code Annotations */
+
+.content-node .code {
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+  background: #eee;
+  font-size: 13px;
+  padding: 2px 3px;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+/* Highlighted states */
+.content-node .idea.highlight { background-color: rgba(102, 182, 32, 0.6); }
+.content-node .question.highlight { background-color: rgba(16, 167, 222, 0.6);}
+.content-node .error.highlight { background-color: rgba(237, 96, 48, 0.6); }
+
+/* Selected states */
+.content-node .content span.selected { background: rgba(0,0,0,0.08); }
+.content-node .content .idea.selected { background-color: rgba(102, 182, 32, 0.4); }
+.content-node .content .question.selected { background-color: rgba(16, 167, 222, 0.4);}
+.content-node .content .error.selected { background-color: rgba(237, 96, 48, 0.4); }
+
+/* Em, Strong, Link */
+.content-node .emphasis { font-style: italic; }
+.content-node .strong { font-weight: bold; }
+
+.content-node .figure_reference {
+  background: rgba(145, 187, 4, 0.15);
+  border-bottom: 1px solid rgba(145, 187, 4, 0.6);
+  color: #495A11;
+  cursor: pointer;
+}
+
+.content-node .contributor_reference {
+  padding: 2px 1px;
+  cursor: pointer;
+}
+
+.content-node .citation_reference {
+  background: rgba(11, 157, 217, 0.075);
+  color: #1B6685;
+  border-bottom: 1px solid rgba(11, 157, 217, 0.4);
+  cursor: pointer;
+  padding-right: 3px;
+  padding-left: 3px;
+}
+
+.content-node .cross_reference {
+  background: rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+.content-node .definition_reference {
+  font-style: italic;
+  background: rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+/* Hover states */
+.content-node .figure_reference:hover { background-color: rgba(145, 187, 4, 0.35); }
+.content-node .citation_reference:hover { background-color: rgba(11, 157, 217, 0.30); }
+.content-node .contributor_reference:hover { background-color: rgba(0,0,0, 0.05); }
+.content-node .definition_reference:hover { background-color: rgba(0,0,0, 0.1); }
+
+/* Highlighted states */
+.content-node .figure_reference.highlighted { background: rgba(145, 187, 4, 0.7); }
+.content-node .citation_reference.highlighted { background: rgba(11, 157, 217, 0.6); }
+.content-node .contributor_reference.highlighted { background-color: #5c6570; color: white; }
+.content-node .definition_reference.highlighted { background-color: #5c6570; color: white; }
+
+/* Cross Reference */
+.content-node .cross_reference:hover {
+  background-color: rgba(0, 0, 0, 0.10);
+}
+
+/* Reader-specific overrides for content nodes
+======================================================================= */
+
+/* For the main content area
+----------------------------------------------------------------------- */
+
+.surface.content .nodes > .content-node {
+  padding-top: 10px;
+  padding-bottom: 15px;
+  padding-left: 40px;
+  padding-right: 40px;
+  word-wrap: break-word;
+}
+
+/* Some extra cover spacing */
+.surface.content .nodes > .content-node.cover {
+  padding-top: 20px;
+}
+
+/* For the resources panel
+----------------------------------------------------------------------- */
+
+
+.resources .content-node.image div img {
+  width: auto;
+}
+
+.resources .content-node.paragraph .content-node.image div img {
+  width: auto;
+}
+
+/* padding for the content */
+.resources .nodes > .content-node > .content {
+  padding: 20px;
+}
+
+/* For the resources panel */
+.resources .info .nodes > .content-node.paragraph > .content > .content-node {
+  padding: 20px 0;
+}
+
+.article .document .surface.content::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+.article .document .surface.content::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+
+/* Disable native scrollbar for resources except TOC */
+
+.article .resources .panel::-webkit-scrollbar,
+.article .resources .surface.figures::-webkit-scrollbar,
+.article .resources .surface.citations::-webkit-scrollbar,
+.article .resources .surface.info::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+.article .resources .panel::-webkit-scrollbar-thumb,
+.article .resources .surface.figures::-webkit-scrollbar-thumb,
+.article .resources .surface.citations::-webkit-scrollbar-thumb,
+.article .resources .surface.info::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+
+/* Resources Scrollbar */
+/* ---------------------------------------*/
+
+/* make it overlay the slider for now */
+.surface-scrollbar .overlay {
+  z-index: 3000;
+}
+
+.resources .surface-scrollbar {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  left: auto;
+  bottom: 0px;
+}
+
+#container.touchable .resources .surface-scrollbar {
+  right: 5px;
+}
+
+/* Responsiveness */
+/* ---------------------------------------*/
+
+
+/* Hide fullscreen toggle for small screens */
+#container.touchable .toggle-fullscreen {
+  display: none;
+}
+
+#container.touchable .article .document .surface.content {
+  right: 20px;
+}
+
+/* Only hide for IOS devices because of scrolling issues! */
+#container.touchable.ios .surface-scrollbar .visible-area {
+  display: none;
+}
+
+#container.touchable .surface-scrollbar .node:hover {
+  opacity: 0.15;
+}
+
+#container.touchable .surface-scrollbar .arrow {
+  display: none;
+}
+
+.content-node.heading .top {
+  display: none;
+}
+
+
+
+
+/* Shared styles for selected and mouseover states
+----------------------------------------------------------------------- */
+
+/* This shouldn't live in reader.css, but we'll modularize as soon
+as we have a plugin concept for functionality / panels */
+/* Not... still there is no idea how to 'export' css packages
+
+/* Active resource */
+.article .resources .content-node.highlighted .resource-header .name {
+  color: #fff;
+}
+
+.article .resources .figures .content-node.highlighted .resource-header {
+  background: rgba(145, 187, 4, 1);
+}
+
+/* active citation */
+.article .resources .citations .content-node.highlighted .resource-header {
+  background: rgba(11, 157, 217, 1);
+}
+
+/* active definition */
+.article .resources .definitions .content-node.highlighted .resource-header {
+  background: #5c6570;
+}
+
+/* active contributor */
+.article .resources .info .content-node.highlighted .resource-header {
+  background: #5c6570;
+}
+
+/* Table of contents */
+
+/*
+TOC
+--------------------------------------- */
+
+.resource-view.toc .heading-ref {
+  cursor: pointer;
+  display: block;
+  color: rgba(0,0,0,0.8);
+  font-weight: 600;
+  font-size: 20px;
+  padding: 4px 10px;
+  line-height: 20px;
+  margin-right: 10px;
+  border: 1px solid transparent;
+}
+
+.resource-view.toc .heading-ref .label { display: inline; padding-right: 10px; }
+.resource-view.toc .heading-ref .title, .resource-view.toc .heading .content .title .content { display: inline; }
+
+.resource-view.toc .heading-ref.active {
+  color: rgba(0,0,0,0.9);
+  background: #fff;
+  border: 1px solid #eee;
+}
+
+.resource-view.toc .heading-ref.level-2 {
+  padding-left: 20px;
+  font-size: 17px;
+}
+
+.resource-view.toc .heading-ref.level-3 {
+  padding-left: 40px;
+  font-size: 14px;
+}
+
+.resource-view.toc .heading-ref.level-4 {
+  padding-left: 60px;
+  font-size: 14px;
+}
+
+.resource-view.toc .heading-ref.level-5 {
+  padding-left: 80px;
+  font-size: 14px;
+}
+
+.resource-view.toc .heading-ref:hover {
+  color: rgba(0,0,0,1.0);
+}
+
+
+/* Scrollbar
+--------------------------------------- */
+
+.surface-scrollbar {
+  background: #eee;
+  position: absolute;
+  left: 0px;
+  width:20px;
+  top: 0px;
+  bottom: 0px;
+}
+
+.surface-scrollbar .node.overlay {
+  position: absolute;
+  min-height: 2px;
+}
+
+.surface-scrollbar .visible-area {
+  position: absolute;
+  top: 40px;
+  left: 0px;
+  right: 0px;
+  height: 80px;
+  z-index: 4000;
+  background-color: rgba(0,0,0, 0.2);
+}
+
+.surface-scrollbar:hover .visible-area {
+  background-color: rgba(0,0,0, 0.25);
+}
+
+.surface-scrollbar .visible-area:hover {
+  background-color: rgba(0,0,0, 0.3);
+}
+
+.surface-scrollbar .node {
+  margin: 0 0px;
+  width: 20px;
+}
+
+.surface-scrollbar .node:hover {
+}
+
+
+.surface-scrollbar .text {
+}
+
+.surface-scrollbar .heading {
+}
+
+
+.node.highlighted {
+  background: #5c6570;
+}
+
+/* Colors for scroll-bar overlays */
+
+.article .resources .figures .surface-scrollbar .highlighted,
+.article .content .surface-scrollbar .highlighted.figure_reference
+ { background-color: rgba(145, 187, 4, 1); }
+
+.article .resources .citations .surface-scrollbar .highlighted,
+.article .content .surface-scrollbar .highlighted.citation_reference
+ { background-color: rgba(11, 157, 217, 1); }
+
+.article .resources .definitions .surface-scrollbar .highlighted,
+.article .content .surface-scrollbar .highlighted.definition_reference
+{ background-color: #5c6570; }
+
+
+/* new FOCUS handles */
+
+.panel.document  .nodes > .content-node > .focus-handle {
+  display: none;
+  position: absolute;
+  top: 0px;
+  bottom:2px;
+  left: 0px;
+  width: 30px;
+  background: white;
+  border-left: 3px solid #ccc;
+  cursor: pointer;
+}
+
+.panel.document  .nodes > .content-node > .focus-handle:hover {
+  border-left: 3px solid #bbb;
+}
+/*
+  Typography / Basics
+---------------------------------------------*/
+
+* {
+  margin: 0;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: white;
+  -moz-transition: background-color 200ms linear;
+  -o-transition: background-color 200ms linear;
+  -webkit-transition: background-color 200ms linear;
+  transition: background-color 200ms linear;
+
+}
+
+body.loading {
+}
+
+html {
+  height:100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+body.reader {
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+}
+
+.container::after {
+  content:"";  /* not "."! */
+  display:block;
+  clear:both;
+}
+
+/*
+General Layout 
+--------------------------------------- */
+
+#container {
+  position: relative;
+  margin: 0 auto;
+  min-width: 800px;
+}
+
+/* In reader view */
+body.reader #container {
+  /*max-width: 1400px;*/ /* 988px / 16px = 61.75em */
+  height: 100%;
+}
+
+body, textarea, p, input {
+  font-family: 'Source Sans Pro', Helvetica, Arial, Verdana, sans-serif;
+  color: #505050;
+}
+
+a {
+  color: #1B6685;
+  font-weight: normal;
+  text-decoration: none;
+  -moz-transition: background-color 100ms linear, color 100ms linear, opacity 100ms linear;
+  -o-transition: background-color 100ms linear, color 100ms linear, opacity 100ms linear;
+  -webkit-transition: background-color 100ms linear, color 100ms linear, opacity 100ms linear;
+  transition: background-color 100ms linear, color 100ms linear, opacity 100ms linear;
+}
+
+a:hover {
+  color: rgba(11, 157, 217, 1);
+}
+
+img {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+strong { font-weight: 700; }
+
+h1, h2, h3 { 
+  font-weight: 700;
+}
+
+h1 a { color: white; }
+h1 a:hover { color: white; }
+
+h2 {
+  font-size: 1.75em; 
+  padding-bottom: 20px;
+}
+  
+h3, h4, h5, h6 {
+  margin-bottom: 20px;
+  font-size: 1em;
+  font-weight: 700;
+}
+  
+p {
+  padding-bottom: 20px;
+}
+
+p:last-child { padding-bottom: 0; }
+
+.small {
+  color: #505050;
+  font-size: .75em;
+  font-weight: 400;
+}
+
+/* Use border-box box model */
+
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+/* Article Overrides */
+#container .article .resources .info .content-node.active .resource-header {
+  background: #5c6570;
+}
+
+.article .resources .nodes > #articleinfo > .content {
+  border-top: 1px solid #ddd;
+}
+
+
+.article span.annotation.author-callout-style1 {
+  font-weight: bold;
+  color: rgb(183, 14, 14);
+}
+
+.article span.annotation.author-callout-style2 {
+  font-weight: bold;
+  color: rgb(0, 179, 255);
+}
+
+.article span.annotation.author-callout-style3 {
+  font-weight: bold;
+  color: rgb(4, 195, 4);
+}
+
+.article span.annotation.author-callout-style4 {
+  font-weight: bold;
+  color: gold;
+}
+
+/* main
+   --------------------------------------- */
+
+#main {
+  position: relative;
+}
+
+body.reader #main {
+  height: 100%;
+}
+
+#container .loading {
+  position: absolute;
+  top: 15px;
+  left: 70px;
+  right: 0px;
+  height: 49px;
+  line-height: 50px;
+  font-size: 12px;
+}
+
+
+/* Loading bar */
+
+.spinner-wrapper {
+  position: fixed;
+  display: none;
+  left: 50%;
+  margin-left: -75px;
+  width: 150px;
+  top: 40%;
+  z-index: 5000;
+}
+
+body.loading .spinner-wrapper {
+  display: block;
+}
+
+.spinner-wrapper .spinner {
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;  
+  background: #444;
+  -webkit-animation: rotateplane 1.2s infinite ease-in-out;
+  animation: rotateplane 1.2s infinite ease-in-out;
+}
+
+.spinner-wrapper .message {
+  color: #444;
+  text-align: center;
+  font-size: 12px;
+  padding-top: 20px;
+}
+
+@-webkit-keyframes rotateplane {
+  0% { -webkit-transform: perspective(120px) }
+  50% { -webkit-transform: perspective(120px) rotateY(180deg) }
+  100% { -webkit-transform: perspective(120px) rotateY(180deg)  rotateX(180deg) }
+}
+
+@keyframes rotateplane {
+  0% {
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+  } 50% {
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+  } 100% {
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+  }
+}
+
+#MathJax_Message {
+  display: none;
+}

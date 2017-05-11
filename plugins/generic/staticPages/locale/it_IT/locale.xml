@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/it_IT/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the it_IT (Italiano) locale.
+  *
+  -->
+ 
+<locale name="it_IT" full_name="Italiano">
+	<message key="plugins.generic.staticPages.displayName">Pagine statiche</message>
+	<message key="plugins.generic.staticPages.description">Questo plugin permette la creazione e la gestione di pagine statiche.</message>
+	<message key="plugins.generic.staticPages.pageTitle">Titolo</message>
+	<message key="plugins.generic.staticPages.content">Contenuto</message>
+
+	<message key="plugins.generic.staticPages.path">Path</message>
+	<message key="plugins.generic.staticPages.requirement.tinymce"><![CDATA[<strong>Bisogna aver installato e abilitato il plugin TinyMCE per aggiungere e/o modificare contenuti.</strong>]]></message>
+
+	<message key="plugins.generic.staticPages.editAddContent">Modifica/Aggiungi Contenuto</message>
+
+	<message key="plugins.generic.staticPages.addStaticPage">Aggiungi una pagina Statica</message>
+	<message key="plugins.generic.staticPages.addNewPage">Aggiungi una nuova pagina</message>
+	<message key="plugins.generic.staticPages.editStaticPage">Modifica la Pagina Statica</message>	
+
+	<message key="plugins.generic.staticPages.settingInstructions">Qui di seguito l'elenco delle pagine statiche create. Puoi modificare o cancellare le pagine utilizzando i links sulla destra.</message>
+	<message key="plugins.generic.staticPages.editInstructions">Utilizza il form seguente per aggiungere/editare contenuti.</message>
+	<message key="plugins.generic.staticPages.viewInstructions"><![CDATA[Le pagine possono essere raggiunte all'indirizzo: {$pagesPath}, dove %PATH% &egrave; il valore scelto. <strong>Nota:</strong> Due pagine non possono avere lo stesso path.]]></message>
+	<message key="plugins.generic.staticPages.duplicatePath">Questo path esiste già per una diversa pagina.</message>
+	
+	<message key="plugins.generic.staticPages.pageSaved">Pagina salvata con successo.</message>
+	<message key="plugins.generic.staticPages.pageDeleted">Pagina cancellata con successo.</message>
+	
+	<message key="plugins.generic.staticPages.noneExist">Nessuna pagina creata</message>
+</locale>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization strings for the de_DE (Deutsch (Deutschland)) locale.
+  * Please contact Marco Tullney, marco.tullney@fu-berlin.de, with any questions regarding this translation.
+  -->
+
+<locale name="de_DE" full_name="Deutsch (Deutschland)">
+	<message key="plugins.generic.tinymce.name">TinyMCE-Plug-In</message>
+	<message key="plugins.generic.tinymce.description"><![CDATA[Dieses Plug-In aktiviert eine WSYWIG-Eingabe für Textfelder mittels des <a href="http://tinymce.moxiecode.com" target="_blank">TinyMCE</a>-Editors.]]></message>
+	<message key="plugins.generic.tinymce.settings">Einstellungen</message>
+
+	<message key="plugins.generic.tinymce.pkpTags.listTags">Tag auswählen</message>
+	<message key="plugins.generic.tinymce.pkpTags.noneAvailable">Für dieses Feld sind keine Tags verfügbar.</message>
+	<message key="plugins.generic.tinymce.pkpTags.description">Sie können eines der folgenden Tags einfügen:</message>
+
+	<message key="plugins.generic.tinymce.variables.principalContactName">Name des Hauptkontakts ("{$value}")</message>
+	<message key="plugins.generic.tinymce.variables.principalContactEmail">E-Mail des Hauptkontakts ("{$value}")</message>
+	<message key="plugins.generic.tinymce.variables.supportContactName">Name des Support-Kontakts ("{$value}")</message>
+	<message key="plugins.generic.tinymce.variables.supportContactEmail">E-Mail des Support-Kontakts ("{$value}")</message>
+	<message key="plugins.generic.tinymce.variables.supportContactPhone">Telefonnummer des Support-Kontakts ("{$value}")</message>
+</locale>

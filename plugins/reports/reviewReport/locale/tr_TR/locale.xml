@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/tr_TR/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the tr_TR (Türkçe) locale.
+  *
+  -->
+
+<locale name="tr_TR" full_name="Türkçe">
+	<message key="plugins.reports.reviews.displayName">Değerlendirme Raporu</message>
+	<message key="plugins.reports.reviews.description">Bu eklenti bir dergi için CSV biçiminde değerlendirme atamalarının listesini içeren bir rapor sunar.</message>
+	<message key="plugins.reports.reviews.round">Tur</message>
+	<message key="plugins.reports.reviews.reviewerId">Hakem Numarası</message>
+	<message key="plugins.reports.reviews.reviewer">Hakem</message>
+	<message key="plugins.reports.reviews.dateAssigned">Atama Tarihi</message>
+	<message key="plugins.reports.reviews.dateNotified">Onaylama Tarihi</message>
+	<message key="plugins.reports.reviews.dateConfirmed">Onay Tarihi</message>
+	<message key="plugins.reports.reviews.dateCompleted">Bitirme Tarihi</message>
+	<message key="plugins.reports.reviews.dateReminded">Hatırlatma Tarihi</message>
+</locale>
+

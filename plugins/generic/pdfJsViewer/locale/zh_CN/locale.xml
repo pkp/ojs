@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/pdfJsViewer/locale/zh_CN/locale.xml
+  *
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings
+  -->
+
+<locale name="zh_CN" full_name="简体中文">
+	<message key="plugins.generic.pdfJsViewer.name">PDF.JS 查看器插件</message>
+	<message key="plugins.generic.pdfJsViewer.description"><![CDATA[该款插件使用 <a href="http://mozilla.github.io/pdf.js">pdf.js PDF 查看器</a> 在文章和期次样稿上插入PDFs。]]></message>
+</locale>

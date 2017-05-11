@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/googleAnalytics/locale/id_ID/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Google Analytics plugin localization strings for the en_US (U.S. English) locale.
+  *
+  -->
+ 
+<locale name="id_ID" full_name="Bahasa Indonesia">
+
+	<!-- Google Analytics -->
+	<message key="plugins.generic.googleAnalytics.displayName">Plugin Google Analytics</message>
+	<message key="plugins.generic.googleAnalytics.description"><![CDATA[Mengintegrasikan OJS dengan Google Analytics, aplikasi analisis lalu lintas web site dari Google. Mewajibkan Anda telah men-setup akun Google Analytics. Silahkan lihat <a href="http://www.google.com/analytics/" title="Google Analytics site">Situs Google Analytics</a> untuk informasi lebih lanjut.]]></message>
+
+	<!-- Google Analytics Settings Management -->
+	<message key="plugins.generic.googleAnalytics.manager.settings">Pengaturan</message>
+	<message key="plugins.generic.googleAnalytics.manager.googleAnalyticsSettings">Pengaturan Google Analytics</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.description"><![CDATA[<p>Dengan plugin ini memungkinkan Google Analytics untuk dapat digunakan untuk mengumpulkan dan menganalisa penggunaan situs web dan lalu lintas untuk jurnal ini. Harap perhatikan bahwa plugin ini mewajibkan Anda telah men-setup sebuah akun Google Analytics. Silahkan lihat <a href="http://www.google.com/analytics/" title="Google Analytics site">Situs Google Analytics</a> untuk informasi lebih lanjut.</p><p>Perlu diketahui bahwa Google Analytics mungkin memerlukan hingga 24 jam sebelum statistik dikumpulkan dan dilaporkan. Selama periode ini, fungsi 'Periksa Status' mungkin tidak secara akurat melaporkan apakah telah mendeteksi kode pelacakan yang diperlukan untuk jurnal.</p>]]></message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteId">Nomor Akun</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdInstructions"><![CDATA[Dalam Google Analytics, klik 'Periksa Status' untuk melihat kode pelacakan untuk situs Anda. Untuk kode warisan pelacakan, nomor account ditampilkan dalam kode pelacakan sebagai: _uacct = "###". Untuk kode pelacakan baru, jumlah account ditampilkan dalam kode pelacakan sebagai: var pageTracker = _gat._getTracker ("###"). Masukkan teks yang sesuai dengan ###.]]></message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdRequired">Silahkan masukkan nomor akun.</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCode">Pelacakan Kode</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCodeRequired">Silahkan pilih pelacakan kode yang akan digunakan.</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.urchin">Pelacakan kode warisan (urchin.js)</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.ga">Pelacakan kode baru (ga.js)</message>
+	<message key="plugins.generic.googleAnalytics.authorAccount">Nomor Akun Google Analytics</message>
+	<message key="plugins.generic.googleAnalytics.authorAccount.description">Untuk melacak pembaca artikel yang diterbitkan menggunakan Google Analytics, masukkan nomor akun di sini (e.g. UA-xxxxxx-x).</message>
+	<message key="plugins.generic.googleAnalytics.authorAccountInvalid">Satu atau lebih nomor akun Google Analytics dimasukkan untuk penyampaian penulis tidak valid.</message>
+</locale>

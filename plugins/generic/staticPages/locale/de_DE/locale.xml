@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/de_DE/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization strings for the de_DE (Deutsch (Deutschland)) locale.
+  * Please contact Marco Tullney, marco.tullney@fu-berlin.de, with any questions regarding this translation.
+  -->
+ 
+<locale name="de_DE" full_name="Deutsch (Deutschland)">
+	<message key="plugins.generic.staticPages.displayName">Statische-Seiten-Plug-In</message>
+	<message key="plugins.generic.staticPages.description">Dieses Plug-In erlaubt die Verwaltung statischer Inhalte.</message>
+	<message key="plugins.generic.staticPages.staticPages">Statische Seiten</message>
+	<message key="plugins.generic.staticPages.pageTitle">Titel</message>
+	<message key="plugins.generic.staticPages.content">Inhalt</message>
+
+	<message key="plugins.generic.staticPages.path">Pfad</message>
+	<message key="plugins.generic.staticPages.requirement.tinymce"><![CDATA[<strong>Das TinyMCE-Plug-In muss installiert und aktiviert sein, damit Sie Inhalte hinzufügen/bearbeiten können.</strong>]]></message>
+
+	<message key="plugins.generic.staticPages.editAddContent">Inhalt bearbeiten/hinzufügen</message>
+
+	<message key="plugins.generic.staticPages.addStaticPage">Statische Seite hinzufügen</message>
+	<message key="plugins.generic.staticPages.addNewPage">Neue Seite hinzufügen</message>
+	<message key="plugins.generic.staticPages.editStaticPage">Statische Seite bearbeiten</message>	
+	<message key="plugins.generic.staticPages.noneCreated">Bisher wurden keine statischen Seiten angelegt.</message>
+
+	<message key="plugins.generic.staticPages.settingInstructions">Das unten stehende Formular zeigt Ihnen alle statischen Seiten, die Sie angelegt haben. Sie können die Seiten mittels der Links auf der rechten Seite bearbeiten oder löschen.</message>
+	<message key="plugins.generic.staticPages.editInstructions">Benutzen Sie das unten stehende Formular, um Seiteninhalte hinzuzufügen/zu bearbeiten.</message>
+	<message key="plugins.generic.staticPages.pathRegEx">Die Pfadangabe darf nur Buchstaben und Ziffern sowie '.', '/', '-' und '_' enthalten.</message>
+	<message key="plugins.generic.staticPages.viewInstructions"><![CDATA[<p>Diese Seite wird erreichbar sein unter : <blockquote>{$pagesPath}</blockquote>...wobei %PATH% der oben angegebene Pfad ist. <strong>Hinweis:</strong> Zwei Seiten dürfen nicht den gleichen Pfad haben. Wenn Sie Pfade benutzen, die auch vom System verwendet werden, könnten Sie Zugriff auf wichtige Funktionen verlieren.</p>]]></message>
+	<message key="plugins.generic.staticPages.duplicatePath">Dieser Pfad wird bereits für eine andere statische Seite verwendet.</message>
+	
+	<message key="plugins.generic.staticPages.pageSaved">Seite erfolgreich gespeichert.</message>
+	<message key="plugins.generic.staticPages.pageDeleted">Seite erfolgreich gelöscht.</message>
+	
+	<message key="plugins.generic.staticPages.noneExist">Es wurden keine Seiten angelegt.</message>
+</locale>

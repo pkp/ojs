@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/staticPages/locale/ru_RU/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the ru_RU (Русский) locale.
+  * With updates from Pavel Pisklakov (revising translation). 
+  -->
+ 
+<locale name="ru_RU" full_name="Русский">
+	<message key="plugins.generic.staticPages.displayName">Модуль «Статические страницы»</message>
+	<message key="plugins.generic.staticPages.description">Позволяет управлять статическим контентом.</message>
+	<message key="plugins.generic.staticPages.staticPages">Статические страницы</message>
+	<message key="plugins.generic.staticPages.pageTitle">Название</message>
+	<message key="plugins.generic.staticPages.content">Контент</message>
+
+	<message key="plugins.generic.staticPages.path">Путь</message>
+	<message key="plugins.generic.staticPages.requirement.tinymce"><![CDATA[<p<strong>Модуль «TinyMCE» должен быть установлен и включен для добавления/редактирования контента.</strong></p>]]></message>
+
+	<message key="plugins.generic.staticPages.editAddContent">Редактировать/Добавить контент</message>
+
+	<message key="plugins.generic.staticPages.addStaticPage">Добавить статическую страницу</message>
+	<message key="plugins.generic.staticPages.addNewPage">Добавить новую страницу</message>
+	<message key="plugins.generic.staticPages.editStaticPage">Редактировать статическую страницу</message>	
+	<message key="plugins.generic.staticPages.noneCreated">Статические страницы не были созданы.</message>
+
+	<message key="plugins.generic.staticPages.settingInstructions">Форма ниже показывает все созданные вами статические страницы. Вы можете редактировать или удалять страницы, используя ссылки справа.</message>
+	<message key="plugins.generic.staticPages.editInstructions">Используйте форму ниже для добавления/редактирования контента страницы.</message>
+	<message key="plugins.generic.staticPages.pathRegEx">Поле пути должно содержать только буквы латинского алфавита, цифры, «.», «/», «-» и «_».</message>
+	<message key="plugins.generic.staticPages.viewInstructions"><![CDATA[<p>Эта страница будет доступна по адресу: <blockquote>{$pagesPath}</blockquote>..., где %PATH% — это путь, введенный выше. <strong>Обратите внимание:</strong> Каждая страница должна иметь свой собственный, уникальный путь. Использование путей, которые встроены в систему, может привести к потере доступа к важным функциям.</p>]]></message>
+	<message key="plugins.generic.staticPages.duplicatePath">Этот путь уже используется для другой статической страницы.</message>
+	
+	<message key="plugins.generic.staticPages.pageSaved">Страница успешно сохранена.</message>
+	<message key="plugins.generic.staticPages.pageDeleted">Страница успешно удалена.</message>
+	
+	<message key="plugins.generic.staticPages.noneExist">Страницы не были созданы</message>
+</locale>

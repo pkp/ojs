@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/es_ES/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="es_ES" full_name="Español (España)">
+	<message key="plugins.block.makeSubmission.displayName">Bloque de "Enviar un artículo"</message>
+	<message key="plugins.block.makeSubmission.description">Este plugin provee un bloque en la barra lateral con un enlace para "Realizar un nuevo envío".</message>
+	<message key="plugins.block.makeSubmission.linkLabel">Enviar un artículo</message>
+</locale>

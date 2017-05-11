@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  -->
+
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.generic.tinymce.name">TinyMCE Plugin</message>
+	<message key="plugins.generic.tinymce.description"><![CDATA[This plugin enables WYSIWYG editing of textareas using the <a href="http://tinymce.moxiecode.com" target="_blank">TinyMCE</a> content editor.]]></message>
+	<message key="plugins.generic.tinymce.settings">Settings</message>
+
+	<message key="plugins.generic.tinymce.pkpTags.listTags">Select Tag</message>
+	<message key="plugins.generic.tinymce.pkpTags.noneAvailable">No tags are available for this field.</message>
+	<message key="plugins.generic.tinymce.pkpTags.description">You can insert any of the following tags:</message>
+
+	<message key="plugins.generic.tinymce.variables.principalContactName">Principal Contact Name ("{$value}")</message>
+	<message key="plugins.generic.tinymce.variables.principalContactEmail">Principal Contact Email ("{$value}")</message>
+	<message key="plugins.generic.tinymce.variables.supportContactName">Support Contact Name ("{$value}")</message>
+	<message key="plugins.generic.tinymce.variables.supportContactEmail">Support Contact Email ("{$value}")</message>
+	<message key="plugins.generic.tinymce.variables.supportContactPhone">Support Contact Phone ("{$value}")</message>
+</locale>

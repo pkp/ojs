@@ -1,0 +1,53 @@
+=============================================================
+=== Custom Block Manager Plugin
+=== Version: 1.2
+=== Author: Juan Pablo Alperin <pkp@alperin.ca>
+=== Co-Author: Bozana Bokan <bozana.bokan@cedis.fu-berlin.de>
+=============================================================
+
+About
+-----
+This plugin is intended to enable users to create customizable HTML blocks for
+the sidebars.
+
+License
+-------
+This plugin is licensed under the GNU General Public License v2. See the file
+LICENSE for the complete terms of this license.
+
+System Requirements
+-------------------
+This plugin is compatible with...
+ - OJS 3.0.x
+ - OMP 1.2.x
+ - OMP 1.1.x
+
+Installation
+------------
+To install the plugin:
+ - Unpack the plugin tar.gz file to your plugins/generic directory
+ - From your application's installation directory, run the upgrade script:
+    $ php tools/upgrade.php upgrade
+   (NOTE: It is recommended to back up your database first.)
+ - Enable the plugin by going to:
+   Management > Website Settings > Plugins > Generic Plugins
+   ...and selecting the Enable checkbox beside "Custom Block Manager Plugin"
+
+
+Management
+------------
+The Plugin management interface can be found at:
+Management > Website Settings > Plugins > Generic Plugins > Custom Block Manager
+
+Once the plugin is enabled, blocks can be added, edited and deleted through this
+interface, using the "Manage Custom Blocks" function.
+
+The added custom blocks will per default appear in the right sidebar, but this
+can be changed in:
+Management > Website Settings > Appearance > Layout > Sidebar Management.
+
+
+Contact/Support
+---------------
+Documentation, bug listings, and updates can be found on this plugin's homepage
+at <http://github.com/pkp/customBlockManager>.

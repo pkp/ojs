@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/customBlockManager/locale/ru_RU/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the ru_RU (Русский) locale.
+  -->
+ 
+<locale name="ru_RU" full_name="Русский">
+	<message key="plugins.generic.customBlockManager.displayName">Модуль «Менеджер пользовательских блоков»</message>
+	<message key="plugins.generic.customBlockManager.manage">Управлять пользовательскими блоками</message>
+	<message key="plugins.generic.customBlockManager.description">Позволяет управлять пользовательскими блоками (добавлять, редактировать и удалять) на боковой панели.</message>
+	<message key="plugins.generic.customBlockManager.customBlocks">Пользовательские блоки</message>	
+	<message key="plugins.generic.customBlockManager.blockName">Имя блока</message>	
+	<message key="plugins.generic.customBlockManager.addBlock">Добавить блок</message>	
+	<message key="plugins.generic.customBlockManager.noneCreated">Пользовательские блоки не были созданы.</message>	
+	
+	<message key="plugins.generic.customBlock.content">Контент</message>
+	<message key="plugins.generic.customBlock.nameSuffix">(пользовательский блок)</message>
+	<message key="plugins.generic.customBlock.description">Это пользовательский блок.</message>
+	<message key="plugins.generic.customBlock.nameRequired">Имя пользовательского блока обязательно.</message>
+	<message key="plugins.generic.customBlock.nameRegEx">Имя пользовательского блока должно содержать только буквы, цифры, дефисы и подчеркивания.</message>
+</locale>

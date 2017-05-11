@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/pdfJsViewer/locale/cs_CZ/locale.xml
+  *
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings
+  -->
+
+<locale name="cs_CZ" full_name="Čeština">
+	<message key="plugins.generic.pdfJsViewer.name">Plugin prohlížeče PDF.JS PDF</message>
+	<message key="plugins.generic.pdfJsViewer.description"><![CDATA[Tento plugin používá <a href="http://mozilla.github.io/pdf.js">prohlížeč pdf.js</a> pro vložení PDF sazebnice článku či čísla do prohlížené stránky.]]></message>
+</locale>

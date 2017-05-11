@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/customBlockManager/locale/nl_NL/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the nl_NL locale.
+  *
+  -->
+ 
+<locale name="nl_NL" full_name="Nederlands">
+	<message key="plugins.generic.customBlockManager.displayName">Eigen blokken beheren</message>
+	<message key="plugins.generic.customBlockManager.blockName">Naam van het blok</message>	
+	<message key="plugins.generic.customBlockManager.addBlock">Nieuw blok</message>	
+
+	<message key="plugins.generic.customBlock.content">Inhoud</message>
+	<message key="plugins.generic.customBlock.nameSuffix">(Eigen blokken plugin)</message>
+	<message key="plugins.generic.customBlock.description">Dit is een zelfgemaakt blok.</message>
+</locale>

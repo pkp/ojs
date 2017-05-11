@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/pdfJsViewer/locale/en_US/locale.xml
+  *
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings
+  -->
+
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.generic.pdfJsViewer.name">PDF.JS PDF Viewer</message>
+	<message key="plugins.generic.pdfJsViewer.description"><![CDATA[This plugin uses the <a href="http://mozilla.github.io/pdf.js">pdf.js PDF viewer</a> to embed PDFs on the article and issue galley view pages.]]></message>
+</locale>

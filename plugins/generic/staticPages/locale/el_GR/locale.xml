@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/el_GR/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the el_GR locale.
+  *
+  -->
+ 
+<locale name="el_GR" full_name="ελληνικά">
+	<message key="plugins.generic.staticPages.displayName">Plugin Στατικών Σελίδων</message>
+	<message key="plugins.generic.staticPages.description">Αυτό το plugin επιτρέπει την δημιουργία και διαχείριση στατικών σελίδων.</message>
+	<message key="plugins.generic.staticPages.pageTitle">Τίτλος</message>
+	<message key="plugins.generic.staticPages.content">Περιεχόμενο</message>
+
+	<message key="plugins.generic.staticPages.path">Διαδρομή</message>
+	<message key="plugins.generic.staticPages.requirement.tinymce"><![CDATA[<strong>Θα πρέπει να εγκατασταθεί και ενεργοποιηθεί το TinyMCE Plugin για να είναι δυνατή η προσθήκη/επεξεργασία του περιεχομένου.</strong>]]></message>
+
+	<message key="plugins.generic.staticPages.editAddContent">Προσθήκη/επεξεργασία περιεχομένου</message>
+
+	<message key="plugins.generic.staticPages.addStaticPage">Προσθήκη Στατικής Σελίδας</message>
+	<message key="plugins.generic.staticPages.addNewPage">Προσθήκη Νέας Σελίδας</message>
+	<message key="plugins.generic.staticPages.editStaticPage">Επεξεργασία Στατικής Σελίδας</message>	
+
+	<message key="plugins.generic.staticPages.settingInstructions">Η παρακάτω φόρμα παρουσίαζει όλες τις στατικές σελίδες που έχετε δημιουργήσει. Μπορείτε να επεξεργαστείτε ή διαγράψετε τις σελίδες χρησιμοποιώντας τους συνδέσμους στην δεξιά πλευρά.</message>
+	<message key="plugins.generic.staticPages.editInstructions">Χρησιμοποιήστε την παρακάτω φόρμα για την προσθήκη/επεξεργασία του περιεχομένου μιας στατικής σελίδας.</message>
+	<message key="plugins.generic.staticPages.duplicatePath">Αυτή η διαδρομή (path) χρησιμοποιείται ήδη από άλλη στατική σελίδα.</message>
+	
+	<message key="plugins.generic.staticPages.pageSaved">Η σελίδα αποθηκεύτηκε με επιτυχία.</message>
+	<message key="plugins.generic.staticPages.pageDeleted">Η σελίδα διαγράφηκε με επιτυχία.</message>
+	
+	<message key="plugins.generic.staticPages.noneExist">Δεν έχουν δημιουργηθεί σελίδες</message>
+</locale>

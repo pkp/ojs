@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/customBlockManager/locale/ja_JP/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the ja_JP locale.
+  *
+  -->
+ 
+<locale name="ja_JP" full_name="日本語">
+	<message key="plugins.generic.customBlockManager.displayName">カスタムブロック管理</message>
+	<message key="plugins.generic.customBlockManager.blockName">ブロック名</message>	
+	<message key="plugins.generic.customBlockManager.addBlock">ブロックの追加</message>	
+
+	<message key="plugins.generic.customBlock.content">コンテンツ</message>
+	<message key="plugins.generic.customBlock.nameSuffix">(カスタムブロックプラグイン)</message>
+	<message key="plugins.generic.customBlock.description">これはユーザが生成したブロックです。</message>
+</locale>

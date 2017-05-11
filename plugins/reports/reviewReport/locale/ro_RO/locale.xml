@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/ro_RO/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the ro_RO (Limba Română) locale.
+  *
+  -->
+
+<locale name="ro_RO" full_name="Limba Română">
+	<message key="plugins.reports.reviews.displayName">Raport de evaluare</message>
+	<message key="plugins.reports.reviews.description">Acest modul implementează raportarea CVS ce conține o listă cu sarcinile de evaluare pentru o revistă.</message>
+	<message key="plugins.reports.reviews.round">Sesiune</message>
+	<message key="plugins.reports.reviews.reviewerId">ID-ul evaluatorului</message>
+	<message key="plugins.reports.reviews.reviewer">Evaluator</message>
+	<message key="plugins.reports.reviews.dateAssigned">Data angajării</message>
+	<message key="plugins.reports.reviews.dateNotified">Data înștiințării</message>
+	<message key="plugins.reports.reviews.dateConfirmed">Data confirmării</message>
+	<message key="plugins.reports.reviews.dateCompleted">Data încheierii</message>
+	<message key="plugins.reports.reviews.dateReminded">Dată rapel</message>
+</locale>
+

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/ru_RU/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
+  * Localization strings.
+  -->
+
+<locale name="ru_RU" full_name="Русский">
+	<message key="plugins.block.makeSubmission.displayName">Блок «Отправить материал»</message>
+	<message key="plugins.block.makeSubmission.description">Добавляет блок со ссылкой «Отправить материал» на боковую панель.</message>
+	<message key="plugins.block.makeSubmission.linkLabel">Отправить материал</message>
+</locale>

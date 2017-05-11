@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/googleAnalytics/locale/ru_RU/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Google Analytics plugin localization strings
+  -->
+ 
+<locale name="ru_RU" full_name="Русский">
+
+	<!-- Google Analytics -->
+	<message key="plugins.generic.googleAnalytics.displayName">Модуль «Google Analytics»</message>
+	<message key="plugins.generic.googleAnalytics.description"><![CDATA[Интегрирует OJS с Google Analytics, приложением для анализа трафика веб-сайта от компании Google. Требует наличия у Вас учетной записи в системе Google Analytics. Пожалуйста, просмотрите <a href="http://www.google.com/analytics/" title="сайт Google Analytics">сайт Google Analytics</a> для получения более подробной информации.]]></message>
+
+	<!-- Управление настройками Google Analytics -->
+	<message key="plugins.generic.googleAnalytics.manager.settings.description"><![CDATA[<p>При включении этого модуля можно использовать Google Analytics для сбора и анализа данных об использовании сайта и трафике. Обратите внимание, что этот модуль требует наличия у Вас учетной записи в системе Google Analytics. Пожалуйста, просмотрите <a href="http://www.google.com/analytics/" title="сайт Google Analytics">сайт Google Analytics</a> для получения более подробной информации.</p><p>Пожалуйста, обратите внимание, что Google Analytics может потребоваться до 24 часов для начала сбора статистики и формирования отчетов. В течение этого периода функция «Check Status» может неправильно отображать наличие требуемого для отслеживания кода.</p>]]></message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteId">Номер учетной записи</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdRequired">Пожалуйста введите номер учетной записи.</message>
+	<message key="plugins.generic.googleAnalytics.authorAccount">Номер учетной записи Google Analytics</message>
+	<message key="plugins.generic.googleAnalytics.authorAccount.description">Чтобы отслеживать чтение опубликованной статьи с помощью Google Analytics, введите здесь номер учетной записи (например, UA-xxxxxx-x).</message>
+	<message key="plugins.generic.googleAnalytics.authorAccountInvalid">Один или несколько введенных номеров учетных записей Google Analytics, принадлежащих авторам материала, являются неправильными.</message>
+</locale>

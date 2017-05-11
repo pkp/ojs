@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!-- 
+  * locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the hr_HR (Hrvatski) locale.
+  * Marija Matesic(mmatesi1@ffzg.hr), Tomislav Biscan (info@seofruits.com.hr) Exp $
+  -->
+<locale name="hr_HR" full_name="Hrvatski">
+	<message key="plugins.generic.tinymce.name">TinyMCE dodatak</message>
+	<message key="plugins.generic.tinymce.description"><![CDATA[Ovaj dodatak omogućava vizualno oblikovanje OMP-ovih tekstualnih polja ("kućica") pomoću <a href="http://tinymce.moxiecode.com" target="_blank">TinyMCE</a> programa za uređivanje teksta.]]></message>
+	<message key="plugins.generic.tinymce.settings">Postavke</message>
+</locale>

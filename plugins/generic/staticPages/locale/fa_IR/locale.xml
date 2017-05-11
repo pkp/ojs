@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/fa_IR/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the fa_IR locale.
+  *
+  -->
+ 
+<locale name="fa_IR" full_name="فارسی">
+	<message key="plugins.generic.staticPages.displayName">پلاگین صفحات استاتیک</message>
+	<message key="plugins.generic.staticPages.description">با این پلاگین میتوان محتوای استاتیک را اداره کرد</message>
+	<message key="plugins.generic.staticPages.pageTitle">عنوان</message>
+	<message key="plugins.generic.staticPages.content">محتوا</message>
+
+	<message key="plugins.generic.staticPages.path">مسیر</message>
+	<message key="plugins.generic.staticPages.requirement.tinymce"><![CDATA[<strong>قبل از اینکه بتوانیم محتوائی را اضافه یا حذف کنیم باید پلاگین تینی ام سی ای را فعال سازیم.</strong>]]></message>
+
+	<message key="plugins.generic.staticPages.editAddContent">ویرایش یا افزودن محتوا</message>
+
+	<message key="plugins.generic.staticPages.addStaticPage">افزودن صفحه استاتیک</message>
+	<message key="plugins.generic.staticPages.addNewPage">افزودن صفحه جدید</message>
+	<message key="plugins.generic.staticPages.editStaticPage">ویرایش صفجه استاتیک</message>	
+
+	<message key="plugins.generic.staticPages.settingInstructions">در فرم زیر تمام صفحات استاتیک ایجاد شده را میبینید. با استفاده از لینک های سمت راست میتوانید صفحات را ویرایش یا حذف کنید.</message>
+	<message key="plugins.generic.staticPages.editInstructions">با استفاده از فرم زیر میتوانید محتوای صفحه را اضافه یا ویرایش کنید</message>
+	<message key="plugins.generic.staticPages.duplicatePath">مسیر مشخص شده هم اکنون وجود دارد.</message>
+	
+	<message key="plugins.generic.staticPages.pageSaved">صفحه با موفقیت ذخیره شده.</message>
+	<message key="plugins.generic.staticPages.pageDeleted">صفحه با موفقیت حذف شد.</message>
+	
+	<message key="plugins.generic.staticPages.noneExist">هیج صفحه ای ایجاد نشده است</message>
+</locale>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/ar_IQ/locale.xml
+  *
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings
+  -->
+
+<locale name="ar_IQ" full_name="العربية">
+	<message key="plugins.reports.reviews.displayName">تقرير التحكيم</message>
+	<message key="plugins.reports.reviews.description">هذه الإضافة تعطي تقريراً بصيغة CSV يتضمن قائمة لمهام التحكيم في المجلة.</message>
+	<message key="plugins.reports.reviews.round">الجولة</message>
+	<message key="plugins.reports.reviews.reviewerId">رمز تعريف المحكم</message>
+	<message key="plugins.reports.reviews.reviewer">المحكم</message>
+	<message key="plugins.reports.reviews.dateAssigned">تأريخ التكليف</message>
+	<message key="plugins.reports.reviews.dateNotified">تأريخ الإشعار</message>
+	<message key="plugins.reports.reviews.dateConfirmed">تأريخ التأكيد</message>
+	<message key="plugins.reports.reviews.dateCompleted">تأريخ الإكمال</message>
+	<message key="plugins.reports.reviews.dateReminded">تأريخ التذكير</message>
+</locale>
+

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/googleAnalytics/locale/cs_CZ/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Google Analytics plugin localization strings for the cs_CZ (Čeština) locale.
+  *
+  -->
+ 
+<locale name="cs_CZ" full_name="Čeština">
+
+	<!-- Google Analytics -->
+	<message key="plugins.generic.googleAnalytics.displayName">Plugin Google Analytics</message>
+	<message key="plugins.generic.googleAnalytics.description"><![CDATA[Integruje OJS s Google Analytics, aplikací od Googlu pro sledování provozu webových stránek. Vyžaduje, abyste již měli založený Google Analytics účet. Viz prosím <a href="http://www.google.com/analytics/" title="stránka Google Analytics"> stránky Google Analytics</a> pro více informací.]]></message>
+
+	<!-- Google Analytics Settings Management -->
+	<message key="plugins.generic.googleAnalytics.manager.settings">Nastavení</message>
+	<message key="plugins.generic.googleAnalytics.manager.googleAnalyticsSettings">Nastavení Google Analytics</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.description"><![CDATA[<p>Po zapnutí tohoto pluginu je možné používat Google Analytics pro sběr a analýzu informací o použití a provozu stránek tohoto časopisu. Vězte prosím, že tento pugin vyžaduje, abyste již měli účet Google Analytics. Viz prosím <a href="http://www.google.com/analytics/" title="Stránka Google Analytics">stránku Google Analytics</a> pro více informací.</p><p>Vězte prosím, že Google Analytics může vyžadovat až 24 hodin než začnou být sbírány a statistiky a produkovány reporty. Během této doby nemusí funkce 'Check Status' přesně informovat zda detekovala požadovaný sledovací kód pro časopis.</p>]]></message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteId">Číslo účtu</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdInstructions">V rámci Google Analytics klikněte na 'Check Status' pro zobrazení sledovacího kódu pro vaše stránky. U staršího sledovacího kódu je číslo účtu zobrazeno ve sledovacím kódu jako: _uacct = "###". U nového sledovacího kódu je číslo účtu zobrazeno ve sledovacím kódu jako: var pageTracker = _gat._getTracker("###"). Vložte text, odpovídá ###.</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdRequired">Vložte prosím číslo účtu.</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCode">Sledovací kód</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCodeRequired">Vyberte prosím sledovací kód, který se má použít.</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.urchin">Starší sledovací kód (urchin.js)</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.ga">Nový sledovací kód (ga.js)</message>
+	<message key="plugins.generic.googleAnalytics.authorAccount">číslo účtu Google Analytics</message>
+</locale>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OMP:_Catalan_(ca_ES)
+  * Localization strings for the ca_ES (Català) locale.
+  -->
+
+<locale name="ca_ES" full_name="Català">
+	<message key="plugins.generic.tinymce.name">Mòdul d'integració amb TinyMCE</message>
+	<message key="plugins.generic.tinymce.description"><![CDATA[Aquest mòdul activa l'edició WYSIWYG ("el que veus, és el que tens") a les àrees de text de l'OMP utilitzant l'editor de contingut <a href="http://tinymce.moxiecode.com" target="_blank">TinyMCE</a>.]]></message>
+	<message key="plugins.generic.tinymce.settings">Configuració</message>
+</locale>

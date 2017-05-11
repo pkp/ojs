@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the eu_ES (Euskara) locale.
+  -->
+
+<locale name="eu_ES" full_name="Euskara">
+	<message key="plugins.generic.tinymce.name">TinyMCE plugina</message>
+	<message key="plugins.generic.tinymce.description"><![CDATA[Plugin honek WYSIWYG edizioa gaitzen du,  OMP testu-areetan <a href="http://tinymce.moxiecode.com" target="_blank">TinyMCE</a> editorearekin erabiltzeko .]]></message>
+	<message key="plugins.generic.tinymce.settings">Ezarpenak</message>
+</locale>
+

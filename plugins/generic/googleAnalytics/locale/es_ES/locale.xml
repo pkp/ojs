@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/googleAnalytics/locale/es_ES/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Google Analytics plugin localization strings for the es_ES (Español (España)) locale.
+  *
+  -->
+ 
+<locale name="es_ES" full_name="Español (España)">
+
+	<!-- Google Analytics -->
+	<message key="plugins.generic.googleAnalytics.displayName">Complemento para Google Analytics</message>
+	<message key="plugins.generic.googleAnalytics.description"><![CDATA[Integre OJS con Google Analytics, el sistema de análisis de tráfico web de Google. Requiere una cuenta previa creada en Google Analytics. Vea la página de <a href="http://www.google.com/analytics/" title="Google Analytics site">Google Analytics </a> para más información.]]></message>
+
+	<!-- Google Analytics Settings Management -->
+	<message key="plugins.generic.googleAnalytics.manager.settings">Opciones</message>
+	<message key="plugins.generic.googleAnalytics.manager.googleAnalyticsSettings">Opciones de Google Analytics</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.description"><![CDATA[<p>Con este complemento activado puede usar Google Analytics para recoger y analizar datos de tráfico web de su revista. Requiere una cuenta previa creada en Google Analytics. Vea la página de <a href="http://www.google.com/analytics/" title="Google Analytics site">Google Analytics </a> para más información.</p>]]></message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteId">Número de cuenta</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdInstructions">En Google Analytics, pulse sobre "Check Status" para ver el código de seguimiento de su página. El número de cuenta aparece en el código de seguimiento: _uacct = "###". Introduzca los caracteres que corresponden a ###.</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdRequired">Por favor, intoduzca un número de cuenta.</message>
+
+	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCode">Código de seguimiento</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCodeRequired">Por favor seleccione un código de seguimiento a utilizar.</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.urchin">Código de seguimiento legado (urchin.js)</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.ga">Código de seguimiento nuevo (ga.js)</message>
+	<message key="plugins.generic.googleAnalytics.authorAccount">Número de cuenta de Google Analytics</message>
+	<message key="plugins.generic.googleAnalytics.authorAccountInvalid">Uno o más números de cuenta de Google Analytics introducidos para presentaciones de autores no son válidos.</message>
+	<message key="plugins.generic.googleAnalytics.authorAccount.description">Para realizar el seguimiento del número de lectores del artículo a través de Google Analytics, introduzca un número de cuenta (por ejemplo, UA-xxxxxx-x).</message>
+</locale>

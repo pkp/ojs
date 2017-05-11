@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the pt_PT (Português (Portugal)) locale.
+  -->
+
+<locale name="pt_PT" full_name="Português (Portugal)">
+	<message key="plugins.generic.tinymce.name">Plugin TinyMCE</message>
+	<message key="plugins.generic.tinymce.description"><![CDATA[Este plugin permite edição WYSIWYG (What You See Is What You Get) em campos de texto através do editor de conteúdo <a href="http://tinymce.moxiecode.com" target="_blank">TinyMCE</a>.]]></message>
+	<message key="plugins.generic.tinymce.settings">Configurações</message>
+</locale>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE schema SYSTEM "../../../lib/pkp/dtd/xmlSchema.dtd">
+
+<!--
+  * schema.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Static pages plugin schema in XML.
+  *
+  -->
+
+<schema version="0.2">
+	<!--
+	 *
+	 * TABLE static_pages
+	 *
+	 -->
+	<table name="static_pages">
+		<field name="static_page_id" type="I8">
+			<KEY/>
+			<AUTOINCREMENT/>
+		</field>
+		<field name="path" type="C2" size="255">
+			<NOTNULL/>
+		</field>
+		<field name="context_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<descr>List of static pages for each context</descr>
+	</table>
+
+	<!--
+	  *
+	  * TABLE static_page_settings
+	  *
+	  -->
+	<table name="static_page_settings">
+		<field name="static_page_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="locale" type="C2" size="5">
+			<NOTNULL/>
+			<DEFAULT VALUE=""/>
+		</field>
+		<field name="setting_name" type="C2" size="255">
+			<NOTNULL/>
+		</field>
+		<field name="setting_value" type="XL"/>
+		<field name="setting_type" type="C2" size="6">
+			<NOTNULL/>
+			<descr>(bool|int|float|string|object)</descr>
+		</field>
+		<descr>Static Page settings.</descr>
+		<index name="static_page_settings_static_page_id">
+			<col>static_page_id</col>
+		</index>
+		<index name="static_page_settings_pkey">
+			<col>static_page_id</col>
+			<col>locale</col>
+			<col>setting_name</col>
+			<UNIQUE />
+		</index>
+	</table>
+</schema>

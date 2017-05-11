@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/ro_RO/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the ro_RO (Limba Română) locale.
+  *
+  -->
+ 
+<locale name="ro_RO" full_name="Limba Română">
+	<message key="plugins.generic.staticPages.displayName">Modul pentru pagini statice</message>
+	<message key="plugins.generic.staticPages.description">Acest modul permite managementul paginilor statice.</message>
+	<message key="plugins.generic.staticPages.pageTitle">Titlu</message>
+	<message key="plugins.generic.staticPages.content">Conținut</message>
+
+	<message key="plugins.generic.staticPages.path">Cale</message>
+	<message key="plugins.generic.staticPages.requirement.tinymce"><![CDATA[<strong>Modulul TinyMCE trebuie să fie instalat și activat pentru a adăuga/edita conținut.</strong>]]></message>
+
+	<message key="plugins.generic.staticPages.editAddContent">Editează/Adugă conținut</message>
+
+	<message key="plugins.generic.staticPages.addStaticPage">Adaugă o pagină statică</message>
+	<message key="plugins.generic.staticPages.addNewPage">Adaugă o pagină nouă</message>
+	<message key="plugins.generic.staticPages.editStaticPage">Editează o pagină statică</message>	
+
+	<message key="plugins.generic.staticPages.settingInstructions">Formularul de mai jos îți arată câte pagini statice ai creat. Poți edita sau șterge paginile folosing linkurile din bara din dreapta.</message>
+	<message key="plugins.generic.staticPages.editInstructions">Folosește formularul de mai jos pentru a adăuga/edita conținut în pagină.</message>
+	<message key="plugins.generic.staticPages.duplicatePath">Această cale există deja pentru o altă pagină statică.</message>
+	
+	<message key="plugins.generic.staticPages.pageSaved">Pagină salvată cu succes.</message>
+	<message key="plugins.generic.staticPages.pageDeleted">Pagină ștearsă.</message>
+	
+	<message key="plugins.generic.staticPages.noneExist">Nu au fost create pagini</message>
+</locale>

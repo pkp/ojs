@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/ru_RU/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Russian_(ru_RU)
+  * Localization strings.
+  -->
+
+<locale name="ru_RU" full_name="Русский">
+	<message key="plugins.reports.reviews.displayName">Модуль «Отчет о рецензиях»</message>
+	<message key="plugins.reports.reviews.description">Реализует отчет в формате CSV, содержащий список заданий на рецензирование для журнала.</message>
+	<message key="plugins.reports.reviews.round">Раунд</message>
+	<message key="plugins.reports.reviews.submissionTitle">Название материала</message>
+	<message key="plugins.reports.reviews.submissionId">ID материала</message>
+	<message key="plugins.reports.reviews.reviewer">Рецензент</message>
+	<message key="plugins.reports.reviews.dateAssigned">Дата назначения</message>
+	<message key="plugins.reports.reviews.dateNotified">Дата уведомления</message>
+	<message key="plugins.reports.reviews.dateConfirmed">Дата подтверждения</message>
+	<message key="plugins.reports.reviews.dateCompleted">Дата окончания</message>
+	<message key="plugins.reports.reviews.dateReminded">Дата напоминания</message>
+	<message key="plugins.reports.reviews.recommendation">Рекомендация</message>
+	<message key="plugins.reports.reviews.comments">Комментарии к материалу</message>
+</locale>
+

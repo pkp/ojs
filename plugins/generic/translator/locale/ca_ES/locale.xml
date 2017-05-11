@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Credits: https://pkp.sfu.ca/wiki/index.php?title=OMP:_Catalan_(ca_ES)
+  * Localization strings for the ca_ES (Català) locale.
+  -->
+
+<locale name="ca_ES" full_name="Català">
+	<message key="plugins.generic.translator.name">Mòdul de traducció</message>
+	<message key="plugins.generic.translator.description">Aquest mòdul permet el manteniment web dels fitxers de traducció.</message>
+
+	<message key="plugins.generic.translator.localeName">Nom de la configuració regional</message>
+	<message key="plugins.generic.translator.localeKey">Clau</message>
+	<message key="plugins.generic.translator.localeKey.description">Introduïu una clau regional sencera que vulgueu buscar.</message>
+	<message key="plugins.generic.translator.localeKeyValue">Valor</message>
+	<message key="plugins.generic.translator.translate">Tradueix</message>
+	<message key="plugins.generic.translator.availableLocales">Traduccions disponibles</message>
+	<message key="plugins.generic.translator.check">Comprova</message>
+	<message key="grid.action.checkLocale">Comprova traducció</message>
+	<message key="grid.action.download">Baixa</message>
+	<message key="plugins.generic.translator.miscFile.complete">Completa</message>
+	<message key="plugins.generic.translator.email.complete">Completa</message>
+
+	<message key="plugins.generic.translator.errors">Errors de la configuració regional</message>
+
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_KEY.title">Claus que falten</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_EXTRA_KEY.title">Claus extra</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_DIFFERING_PARAMS.title">Llistes de paràmetres diferents</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_FILE.title">Fitxers de configuració regional que falten</message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_MISSING_EMAIL.title">Missatges de correu electrònic que falten</message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_EXTRA_EMAIL.title">Missatges de correu electrònic extra</message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_DIFFERING_PARAMS.title">Llistes de paràmetres de correu electrònic diferents</message>
+
+	<message key="plugins.generic.translator.locale">Configuració regional {$locale}</message>
+	<message key="plugins.generic.translator.localeFiles">Fitxers de configuració regional</message>
+	<message key="plugins.generic.translator.miscFiles">Fitxers diversos</message>
+	<message key="plugins.generic.translator.emails">Plantilles de correu electrònic</message>
+	<message key="plugins.generic.translator.file.filename">Nom del fitxer</message>
+	<message key="plugins.generic.translator.file.reference">Versió de referència</message>
+	<message key="plugins.generic.translator.file.translation">Traducció</message>
+	<message key="plugins.generic.translator.email.reference">Versió de referència</message>
+	<message key="plugins.generic.translator.email.translation">Traducció</message>
+	<message key="plugins.generic.translator.file.reset">Reinicia</message>
+	<message key="plugins.generic.translator.file.resetToReference">Reinicialitza a la referència</message>
+	<message key="plugins.generic.translator.email.reset">Reinicia</message>
+	<message key="plugins.generic.translator.email.resetToReference">Reinicialitza a la referència</message>
+	<message key="plugins.generic.translator.file.resetConfirm">Esteu segur que voleu reinicialitzar els continguts del fitxer?</message>
+	<message key="plugins.generic.translator.email.resetConfirm">Esteu segur que voleu reinicialitzar els continguts del correu electrònic?</message>
+	<message key="plugins.generic.translator.file.doesNotExistNote">* Aquest fitxer encara no s’ha traduït.</message>
+	<message key="plugins.generic.translator.confirmDelete">Esteu segur/a que voleu eliminar aquest element? Aquesta acció no es pot desfer.</message>
+	<message key="plugins.generic.translator.deleteKey">Suprimeix aquesta clau</message>
+	<message key="plugins.generic.translator.deleteEmail">Suprimeix aquest correu electrònic</message>
+</locale>

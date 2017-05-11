@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/googleAnalytics/locale/eu_ES/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Google Analytics plugin localization strings for the en_US (U.S. English) locale.
+  *
+  -->
+ 
+<locale name="eu_ES" full_name="Euskara">
+
+	<!-- Google Analytics -->
+	<message key="plugins.generic.googleAnalytics.displayName">Google Analytics Plugina</message>
+	<message key="plugins.generic.googleAnalytics.description"><![CDATA[Integratu OJS Google Analytics-ekin, Google-n webguneen trafikoa analizatzeko aplikazioarekin. Google Analytics kontua edukitzea eskatzen du. Informazio gehiago <a href="http://www.google.com/analytics/" title="Google Analytics site">Google Analytics-en gunean</a>.]]></message>
+
+	<!-- Google Analytics Settings Management -->
+	<message key="plugins.generic.googleAnalytics.manager.settings">Ezarpenak</message>
+	<message key="plugins.generic.googleAnalytics.manager.googleAnalyticsSettings">Google Analytics-en ezarpenak</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.description"><![CDATA[<p>Plugin hau gaituz gero, Google Analytics erabili ahal izango da aldizkari honen webgunearen erabilera eta trafikoa jaso eta analizatzeko. Kontuan izan Google Analytics-en kontua edukitzea eskatzen duela. Informazio gehiago <a href="http://www.google.com/analytics/" title="Google Analytics site">Google Analytics-en gunean</a>.</p><p>Gogoan izan Google Analytics-ek 24 ordu ere behar izan ditzakeela estatistikak bildu eta txostena prestatzeko. Denbora horretan, ''Egiaztatu egoera" funtzioa ez da oso zehatza izango aldizkariaren segimendu-kodea detektatu duen ala ez adierazten.</p>]]></message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteId">Kontu-zenbakia</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdInstructions"><![CDATA[Google Analytics-en, sakatu 'Egiaztatu egoera' zure gunearen segimendu-kodea ikusteko. Segimendu-kode heredatuan, kontu-zenbakia honela ikusten da: _uacct = "###". Segimendu-kode berrian, kontu-zenbakia honela ikusten da: var pageTracker = _gat._getTracker("###"). Idatzi ### kateri dagokion testua.]]></message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdRequired">Sartu kontu-zenbakia</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCode">Segimendu-kodea</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCodeRequired">Hautatu erabili nahi den segimendu-kodea</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.urchin">Segimendu-kode heredatua (urchin.js)</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.ga">Segimendu-kode berria (ga.js)</message>
+	<message key="plugins.generic.googleAnalytics.authorAccount">Google Analytics kontu-zenbakia</message>
+	<message key="plugins.generic.googleAnalytics.authorAccount.description">Google Analytics erabiliz argitaratutako artikulu baten irakurleak bilatzeko, sartu kontu-zenbaki bat hemen (adib., UA-xxxxxx-x).</message>
+	<message key="plugins.generic.googleAnalytics.authorAccountInvalid">Egileek egindako aurkezpenerako sartutako Google Analytics kontuko zenbaki bat edo gehiago ez dira baliozkoak.</message>
+</locale>
+

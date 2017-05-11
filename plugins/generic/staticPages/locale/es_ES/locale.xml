@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/es_ES/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Credits: http://pkp.sfu.ca/wiki/index.php?title=OMP:_Spanish_(es_ES)
+  * Localization strings for the es_ES (Español (España)) locale.
+  -->
+ 
+<locale name="es_ES" full_name="Español (España)">
+	<message key="plugins.generic.staticPages.displayName">Plugin para Páginas estáticas</message>
+	<message key="plugins.generic.staticPages.description">Este plugin permite el manejo de contenido estático.</message>
+	<message key="plugins.generic.staticPages.staticPages">Páginas estáticas</message>
+	<message key="plugins.generic.staticPages.pageTitle">Título</message>
+	<message key="plugins.generic.staticPages.content">Contenido</message>
+
+	<message key="plugins.generic.staticPages.path">Ruta</message>
+	<message key="plugins.generic.staticPages.requirement.tinymce"><![CDATA[<p><strong>El complemento TinyMCE debe instalarse y activarse para permitir la adición y edición de contenido.</strong></p>]]></message>
+
+	<message key="plugins.generic.staticPages.editAddContent">Editar/Añadir contenido</message>
+
+	<message key="plugins.generic.staticPages.addStaticPage">Aadñir página estática</message>
+	<message key="plugins.generic.staticPages.addNewPage">Añadir nueva página</message>
+	<message key="plugins.generic.staticPages.editStaticPage">Editar página estática</message>	
+	<message key="plugins.generic.staticPages.noneCreated">No se creó ninguna página estática.</message>
+
+	<message key="plugins.generic.staticPages.settingInstructions">El formulario que aparece a continuación muestra todas las páginas estáticas creadas.  Puede editar o eliminar las páginas usando los enlaces que se muestran a la derecha.</message>
+	<message key="plugins.generic.staticPages.editInstructions">Use el formulario a continuación para añadir/editar una página de contenido.</message>
+	<message key="plugins.generic.staticPages.pathRegEx">El campo de ruta debe contener solo caracteres alfanuméricos además de &apos;.&apos;, &apos;/&apos;, &apos;-&apos;, y &apos;_&apos;.</message>
+	<message key="plugins.generic.staticPages.viewInstructions"><![CDATA[<p>Está página será accesible en:<blockquote>{$pagesPath}</blockquote>...donde %PATH% es la ruta introducida anteriormente. <strong>Nota:</strong> dos páginas no pueden tener la misma ruta. La utilización de rutas integradas en el sistema puede provocar pérdidas de acceso a funciones importantes.</p>]]></message>
+	<message key="plugins.generic.staticPages.duplicatePath">Esta ruta ya existe para otra página estática.</message>
+	
+	<message key="plugins.generic.staticPages.pageSaved">Página grabada con Éxito.</message>
+	<message key="plugins.generic.staticPages.pageDeleted">Página borrada con Éxito.</message>
+	
+	<message key="plugins.generic.staticPages.noneExist">No hay páginas creadas.</message>
+</locale>

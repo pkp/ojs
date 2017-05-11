@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/customBlockManager/locale/cs_CZ/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the cs_CZ locale.
+  *
+  -->
+ 
+<locale name="cs_CZ" full_name="Čeština">
+	<message key="plugins.generic.customBlockManager.displayName">Manažer uživatelských panelů</message>
+	<message key="plugins.generic.customBlockManager.blockName">Název panelu</message>	
+	<message key="plugins.generic.customBlockManager.addBlock">Přidat panel</message>	
+
+	<message key="plugins.generic.customBlock.content">Obsah</message>
+	<message key="plugins.generic.customBlock.nameSuffix">(Plugin uživatelských panelů)</message>
+	<message key="plugins.generic.customBlock.description">Toto je uživatelem vytvořený panel.</message>
+</locale>

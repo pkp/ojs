@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/pt_BR/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the pt_BR locale.
+  *
+  -->
+ 
+<locale name="pt_BR" full_name="Português (Brasil)">
+	<message key="plugins.generic.staticPages.displayName">Páginas estáticas</message>
+	<message key="plugins.generic.staticPages.description">Este plugin permite gerenciar páginas estáticas.</message>
+	<message key="plugins.generic.staticPages.pageTitle">Título</message>
+	<message key="plugins.generic.staticPages.content">Conteúdo</message>
+
+	<message key="plugins.generic.staticPages.path">Caminho</message>
+	<message key="plugins.generic.staticPages.requirement.tinymce"><![CDATA[<strong>O Editor TinyMCE deve estar instalado e habilitado para incluir/editar conteúdo.</strong>]]></message>
+
+	<message key="plugins.generic.staticPages.editAddContent">Editar/incluir conteúdo</message>
+
+	<message key="plugins.generic.staticPages.addStaticPage">Incluir página estática</message>
+	<message key="plugins.generic.staticPages.addNewPage">Incluir nova página</message>
+	<message key="plugins.generic.staticPages.editStaticPage">Editar página estática</message>	
+
+	<message key="plugins.generic.staticPages.settingInstructions">O formulário a seguir mostra todas as páginas estáticas já criadas. Você pode editar ou excluir as páginas por meio dos links disponíveis à direita.</message>
+	<message key="plugins.generic.staticPages.editInstructions">Use o formulário para incluir/editar o conteúdo.</message>
+	<message key="plugins.generic.staticPages.duplicatePath">Este caminho já existe para outra página estática.</message>
+	
+	<message key="plugins.generic.staticPages.pageSaved">Página salva com sucesso.</message>
+	<message key="plugins.generic.staticPages.pageDeleted">Página excluída com sucesso.</message>
+	
+	<message key="plugins.generic.staticPages.noneExist">Nenhuma página criada.</message>
+	<message key="plugins.generic.staticPages.staticPages">Páginas Estáticas</message>
+	<message key="plugins.generic.staticPages.noneCreated">Não há páginas estáticas criadas.</message>
+	<message key="plugins.generic.staticPages.pathRegEx">O campo caminho deve conter apenas caracteres alfanuméricos mais, '/', '.' '-' e '_'.</message>
+	<message key="plugins.generic.staticPages.viewInstructions"><![CDATA[<P> Esta página será acessível em: <blockquote> {$pagesPath} </blockquote> ... onde %PATH% é o caminho digitado acima. <Strong> Nota: </ strong> Duas páginas não podem ter o mesmo caminho. Usar caminhos que já existem no sistema pode causar a perda de acesso a funções importantes. </P>]]></message>
+</locale>

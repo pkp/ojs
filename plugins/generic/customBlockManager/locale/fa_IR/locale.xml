@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/customBlockManager/locale/fa_IR/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the fa_IR locale.
+  *
+  -->
+ 
+<locale name="fa_IR" full_name="فارسی">
+	<message key="plugins.generic.customBlockManager.displayName">اداره بلوک آزاد</message>
+	<message key="plugins.generic.customBlockManager.blockName">نام بلوک</message>	
+	<message key="plugins.generic.customBlockManager.addBlock">افزودن بلوک</message>	
+
+	<message key="plugins.generic.customBlock.content">محتوی</message>
+	<message key="plugins.generic.customBlock.nameSuffix">پلاگین بلوک بومی شده</message>
+	<message key="plugins.generic.customBlock.description">این یک بلوک تولید شده توسط کاربر است.</message>
+</locale>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/cs_CZ/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the cs_CZ locale.
+  *
+  -->
+ 
+<locale name="cs_CZ" full_name="Čeština">
+	<message key="plugins.generic.staticPages.displayName">Plugin statických stránek</message>
+	<message key="plugins.generic.staticPages.description">Tento plugin umožňuje správu statického obsahu.</message>
+	<message key="plugins.generic.staticPages.pageTitle">Název</message>
+	<message key="plugins.generic.staticPages.content">Obsah</message>
+
+	<message key="plugins.generic.staticPages.path">Cesta</message>
+	<message key="plugins.generic.staticPages.requirement.tinymce"><![CDATA[<strong>Pro přidání/editaci obsahu musí být nainstalován plugin TinyMCE.</strong>]]></message>
+
+	<message key="plugins.generic.staticPages.editAddContent">Editovat/přidat obsah</message>
+
+	<message key="plugins.generic.staticPages.addStaticPage">Přidat statickou stránku</message>
+	<message key="plugins.generic.staticPages.addNewPage">Přidat novou stránku</message>
+	<message key="plugins.generic.staticPages.editStaticPage">Editovat statickou stránku</message>	
+
+	<message key="plugins.generic.staticPages.settingInstructions">Formulář níže ukazuje všechny statické stránky, které jste vytvořil. Tyto stránky můžete editovat nebo smazat použitím odkazů na pravé straně.</message>
+	<message key="plugins.generic.staticPages.editInstructions">Pro přidání/editaci obsahu použijte níže dostupný formulář.</message>
+	<message key="plugins.generic.staticPages.duplicatePath">Tato cesta již existuje pro jinou statickou stránku.</message>
+	
+	<message key="plugins.generic.staticPages.pageSaved">Stránka úspěšně uložena.</message>
+	<message key="plugins.generic.staticPages.pageDeleted">Stránka úspěšně smazána.</message>
+	
+	<message key="plugins.generic.staticPages.noneExist">Nebyly vytvořeny žádné stránky</message>
+</locale>

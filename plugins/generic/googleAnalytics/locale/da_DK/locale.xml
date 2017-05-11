@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/googleAnalytics/locale/da_DK/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Google Analytics plugin localization strings for the da_DK (Dansk) locale.
+  *
+  -->
+ 
+<locale name="da_DK" full_name="Dansk">
+
+	<!-- Google Analytics -->
+	<message key="plugins.generic.googleAnalytics.displayName">Google Analytics Plugin</message>
+	<message key="plugins.generic.googleAnalytics.description"><![CDATA[Integrér OJS med Google Analytics, Google's web site trafik-analyse applikation. Kræver at du allerede har oprettet en Google Analytics account. Se <a href="http://www.google.com/analytics/" title="Google Analytics site">Google Analytics site</a> for mere information.]]></message>
+
+	<!-- Google Analytics Settings Management -->
+	<message key="plugins.generic.googleAnalytics.manager.settings">Indstillinger</message>
+	<message key="plugins.generic.googleAnalytics.manager.googleAnalyticsSettings">Google Analytics indstillinger</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.description"><![CDATA[<p>Med dette plugin aktiveret kan Google Analytics bruges til at samle og analysere oplysninger om brugen af sitet for dette tidsskrift. Bemærk, at dette plugin kræver, at du allerede har oprettet en Google Analytics account. Se <a href="http://www.google.com/analytics/" title="Google Analytics site">Google Analytics site</a> for mere  information.</p><p>Bemærk, at der kan gå op til 24 timer før Google Analytics har samlet og rapporteret de statistiske data. I denne periode er det muligt, at 'Check status' funktionen ikke med sikkerhed om den har fundet den nødvendige tracking code for tidsskriftet.</p>]]></message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteId">Kontonummer</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdInstructions">Klik på 'Check status' i Google Analyticsfor at se dit site's tracking code. Når det gælder legacy tracking code, vises kontonummeret i tracking code som: _uacct = "###". For en ny new tracking code, vises kontonummeret i tracking code som: var pageTracker = _gat._getTracker("###"). Indtast teksten som svarer til ###.</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdRequired">Indtast et kontonummer</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCode">Tracking code</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCodeRequired">Vælg en tracking code.</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.urchin">Legacy tracking code (urchin.js)</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.ga">Ny tracking code (ga.js)</message>
+	<message key="plugins.generic.googleAnalytics.authorAccount">Google Analytics-kontonummer</message>
+	<message key="plugins.generic.googleAnalytics.authorAccount.description">Hvis du vil spore antallet af læsere for en udgiven artikel ved hjælp af Google Analytics, skal du indtaste et kontonummer her (fx UA-xxxxxx-x).</message>
+	<message key="plugins.generic.googleAnalytics.authorAccountInvalid">Et eller flere af de Google Analytics-kontonumre, der er indtastet for indleveringsforfattere, er ikke gyldige.</message>
+</locale>

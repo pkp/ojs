@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the nl_NL (Nederlands) locale.
+  *
+  * Translated by Martin van Luijt, m.van.luijt 'at' hccnet.nl
+  -->
+
+<locale name="nl_NL" full_name="Nederlands">
+	<message key="plugins.generic.tinymce.name">TinyMCE Plugin</message>
+	<message key="plugins.generic.tinymce.description"><![CDATA[Deze plugin verzorgt WYSIWYG bewerken in OMP tekstvelden met behulp van de <a href="http://tinymce.moxiecode.com" target="_blank">TinyMCE</a> content editor.]]></message>
+	<message key="plugins.generic.tinymce.settings">Instellingen</message>
+</locale>

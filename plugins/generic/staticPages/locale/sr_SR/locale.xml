@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/sr_SR/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the sr_SR (Cрпски) locale.
+  *
+  -->
+ 
+<locale name="sr_SR" full_name="Cрпски">
+	<message key="plugins.generic.staticPages.displayName">Dodatak Statičke strane</message>
+	<message key="plugins.generic.staticPages.description">Ovaj dodatak omogućuje uređivanje statičkog sadržaja.</message>
+	<message key="plugins.generic.staticPages.pageTitle">Naslov</message>
+	<message key="plugins.generic.staticPages.content">Sadržaj</message>
+
+	<message key="plugins.generic.staticPages.path">Putanja</message>
+	<message key="plugins.generic.staticPages.requirement.tinymce"><![CDATA[<strong>TinyMCE dodatak mora biti instaliran i omogućen da biste uređivali sadržaj.</strong>]]></message>
+
+	<message key="plugins.generic.staticPages.editAddContent">Izmeni/dodaj sadržaj</message>
+
+	<message key="plugins.generic.staticPages.addStaticPage">Dodaj statičku stranicu</message>
+	<message key="plugins.generic.staticPages.addNewPage">Dodaj novu stranicu</message>
+	<message key="plugins.generic.staticPages.editStaticPage">Izmeni statičku stranicu</message>	
+
+	<message key="plugins.generic.staticPages.settingInstructions">Dole su prikazane sve statičke stranice koje ste napravili. Možete ih menjati i brisati koristeći linkove sa desne strane.</message>
+	<message key="plugins.generic.staticPages.editInstructions">Koristite formu ispod da biste dodali ili izmenili sadržaj.</message>
+	<message key="plugins.generic.staticPages.duplicatePath">Ova putanja već postoji za drugu stranicu.</message>
+	
+	<message key="plugins.generic.staticPages.pageSaved">Stranica je uspešno sačuvana.</message>
+	<message key="plugins.generic.staticPages.pageDeleted">Stranica je uspešno obrisana.</message>
+	
+	<message key="plugins.generic.staticPages.noneExist">Stranica nije napravljena.</message>
+</locale>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/googleAnalytics/locale/tr_TR/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Google Analytics plugin localization strings for the tr_TR (Türkçe) locale.
+  *
+  -->
+ 
+<locale name="tr_TR" full_name="Türkçe">
+
+	<!-- Google Analytics -->
+	<message key="plugins.generic.googleAnalytics.displayName">Google Analitk Eklentisi</message>
+	<message key="plugins.generic.googleAnalytics.description"><![CDATA[Google web sayfası trafik analizi uygulaması için ADS ile Google Analitik'i entegre edin. Bu uygulama için bir Google Analitik hesabı gerekir. Daha fazla bilgi için lütfen <a href="http://www.google.com/analytics/" title="Google Analytics site">Google Analitik</a> sitesine bakınız.]]></message>
+
+	<!-- Google Analytics Settings Management -->
+	<message key="plugins.generic.googleAnalytics.manager.settings">Ayarlar</message>
+	<message key="plugins.generic.googleAnalytics.manager.googleAnalyticsSettings">Google Analitik Ayarları</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.description"><![CDATA[<p>Bu eklenti etkinleştirildiğinde Google Analytics bu dergi için kullanım ve trafik analizi toplar ve bu derginin web sitesi için kullanılabilir. Bu eklenti bir Google Analytics hesabının kurulu olmasını gerektirdiğini unutmayın. Daha fazla bilgi için <a href="http://www.google.com/analytics/" title="Google Analytics site">Google Analitik</a> sitesine bakınız.</p></p> Google Analitik 24 saat kadar istatistikleri toplayıp ve raporladığını lütfen unutmayın. Bu süreçte, 'Durumu Kontrol Et' fonksiyonu doğru bir dergi için gerekli izleme kodu tespit edilip edilmediğini rapor etmeyebilir.</p>]]></message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteId">Hesap Numarası</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdInstructions">Google Analytics içinde, siteniz için izleme kodunu görüntülemek için 'Durumu Kontrol Et' üzerine tıklayın. Eski izleme kodu için, hesap numarası olarak izleme kodu içinde görüntülenir: _uacct = "# # #". Yeni izleme kodu için, hesap numarası olarak izleme kodu içinde görüntülenir: var pageTracker = _gat._getTracker ("# # #"). # # # Karşılık metni girin.</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdRequired">Lütfen bir hesap numarası giriniz.</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCode">Kodu izle</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCodeRequired">Kullanmak için lütfen bir izleme kodu seçiniz.</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.urchin">Eski izleme kodu (urchin.js)</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.ga">Yeni izleme kodu (ga.js)</message>
+	<message key="plugins.generic.googleAnalytics.authorAccount">Google Analitik hesap numarası</message>
+	<message key="plugins.generic.googleAnalytics.authorAccount.description">Google Analytics kullanarak yayımlanmış makale okuyucusunu izlemek için, buraya bir hesap numarası girin (Örneğin; UA-xxxxxx-x) .</message>
+	<message key="plugins.generic.googleAnalytics.authorAccountInvalid">Gönderi yazarı için girilen bir veya birden çok Google Analitik hesap numarası geçerli değil.</message>
+</locale>

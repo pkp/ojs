@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/zh_CN/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the zh_CN (简体中文) locale.
+  *
+  -->
+ 
+<locale name="zh_CN" full_name="简体中文">
+	<message key="plugins.generic.staticPages.displayName">静态页面插件(Static Pages Plugin)</message>
+	<message key="plugins.generic.staticPages.description">该插件允许管理静态内容(This plugin allows Static Content Management.)</message>
+	<message key="plugins.generic.staticPages.pageTitle">标题</message>
+	<message key="plugins.generic.staticPages.content">内容</message>
+
+	<message key="plugins.generic.staticPages.path">路径</message>
+	<message key="plugins.generic.staticPages.requirement.tinymce"><![CDATA[<strong>The TinyMCE Plugin must be installed and enabled in order to add/edit content.</strong>]]></message>
+
+	<message key="plugins.generic.staticPages.editAddContent">编辑/添加内容</message>
+
+	<message key="plugins.generic.staticPages.addStaticPage">添加静态页面(Add Static Page)</message>
+	<message key="plugins.generic.staticPages.addNewPage">添加新的页面(Add New Page)</message>
+	<message key="plugins.generic.staticPages.editStaticPage">编辑静态页面(Edit Static Page)</message>	
+
+	<message key="plugins.generic.staticPages.settingInstructions">下面的表格显示出所有你创建的静态页面。你可以使用右手边的链接来编辑或删除页面。(The form below shows you all the static pages you have created.  You can edit or delete the pages using the links on the right-hand side.)</message>
+	<message key="plugins.generic.staticPages.editInstructions">使用下面的表单来添加/编辑页面内容。(Use the form below to add/edit page content.)</message>
+	<message key="plugins.generic.staticPages.duplicatePath">该路径已经被其它静态页面使用。(This path already exists for another static page.)</message>
+	
+	<message key="plugins.generic.staticPages.pageSaved">页面已保存(Page successfully saved.)</message>
+	<message key="plugins.generic.staticPages.pageDeleted">页面已删除(Page successfully deleted.)</message>
+	
+	<message key="plugins.generic.staticPages.noneExist">没有页面被生成(No pages have been created)</message>
+</locale>

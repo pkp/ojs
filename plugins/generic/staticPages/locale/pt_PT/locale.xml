@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/pt_PT/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the pt_PT locale.
+  *
+  -->
+ 
+<locale name="pt_PT" full_name="Português (Portugal)">
+	<message key="plugins.generic.staticPages.displayName">Plugin de Páginas Estáticas</message>
+	<message key="plugins.generic.staticPages.description">Este plugin permite gerir páginas estáticas</message>
+	<message key="plugins.generic.staticPages.pageTitle">Título</message>
+	<message key="plugins.generic.staticPages.content">Conteúdo</message>
+
+	<message key="plugins.generic.staticPages.path">Caminho</message>
+	<message key="plugins.generic.staticPages.requirement.tinymce"><![CDATA[<strong>O Plugin TinyMCE deve estar instalado e activado para incluir/editar conteúdo.</strong>]]></message>
+
+	<message key="plugins.generic.staticPages.editAddContent">Editar/Adicionar Conteúdo</message>
+
+	<message key="plugins.generic.staticPages.addStaticPage">Adicionar página estática</message>
+	<message key="plugins.generic.staticPages.addNewPage">Adicionar nova página</message>
+	<message key="plugins.generic.staticPages.editStaticPage">Editar página estática</message>	
+
+	<message key="plugins.generic.staticPages.settingInstructions">O formulário a seguir mostra todas as páginas estáticas já criadas. Poderá editar ou eliminar as páginas através dos links disponíveis à direita.</message>
+	<message key="plugins.generic.staticPages.editInstructions">Use o formulário para incluir/editar o conteúdo.</message>
+	<message key="plugins.generic.staticPages.duplicatePath">Este caminho já existe para outra página estática.</message>
+	
+	<message key="plugins.generic.staticPages.pageSaved">Página guardada com sucesso.</message>
+	<message key="plugins.generic.staticPages.pageDeleted">Página eliminada com sucesso.</message>
+	
+	<message key="plugins.generic.staticPages.noneExist">Nenhuma página criada.</message>
+</locale>

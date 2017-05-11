@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the de_DE (Deutsch (Deutschland)) locale.
+  -->
+
+<locale name="de_DE" full_name="Deutsch (Deutschland)">
+	<message key="plugins.generic.translator.name">Translator-Plugin</message>
+	<message key="plugins.generic.translator.description">Dieses Plugin ermöglicht die webbasierte Pflege von Sprachdateien.</message>
+	<message key="plugins.generic.translator.longdescription">Dieser Bereich erlaubt der/dem Administrator/in, Übersetzungen zu erzeugen, zu veränder und zu kontrollieren. Dies ist installationsweit und sollte nicht benutzt werden, um eine einzelne Instanz anzupassen. Wenn Sie eine Übersetzung korrigieren oder anlegen, erwägen Sie bitte, sie an das Public Knowledge Project zu übermitteln, damit sie ggf. in künftige Versionen aufgenommen werden kann.</message>
+	<message key="plugins.generic.translator.localeFileContents">Sprachdatei-Inhalte</message>
+	<message key="plugins.generic.translator.localeName">Name der Regionaleinstellung</message>
+	<message key="plugins.generic.translator.localeKey">Schlüssel</message>
+	<message key="plugins.generic.translator.localeKeyValue">Wert</message>
+	<message key="plugins.generic.translator.translate">Übersetzen</message>
+	<message key="plugins.generic.translator.availableLocales">Verfügbare Regionaleinstellungen</message>
+	<message key="plugins.generic.translator.check">Kontrollieren</message>
+	<message key="grid.action.checkLocale">Regionaleinstellung kontrollieren</message>
+	<message key="grid.action.download">Download</message>
+	<message key="plugins.generic.translator.localeFile.complete">Vollständig ({$reference})</message>
+	<message key="plugins.generic.translator.localeFile.incompleteCount">{$complete} / {$reference} ({$percent}%)</message>
+	<message key="plugins.generic.translator.localeFile.doesNotExist">Fehlt ({$reference})</message>
+	<message key="plugins.generic.translator.miscFile.complete">Vollständig</message>
+	<message key="plugins.generic.translator.miscFile.doesNotExist">Fehlt</message>
+	<message key="plugins.generic.translator.email.complete">Vollständig</message>
+	<message key="plugins.generic.translator.email.doesNotExist">Fehlend</message>
+
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_KEY.title">Fehlende Schlüssel</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_EXTRA_KEY.title">Zusätzliche Schlüssel</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_DIFFERING_PARAMS.title">Abweichende Parameter-Listen</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_FILE.title">Fehlende Sprachdateien</message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_MISSING_EMAIL.title">Fehlende E-Mails</message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_EXTRA_EMAIL.title">Zusätzliche E-Mails</message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_DIFFERING_PARAMS.title">Abweichende E-Mail-Parameter-Listen</message>
+
+	<message key="plugins.generic.translator.jumpTo">Springen zu...</message>
+	<message key="plugins.generic.translator.locale">{$locale}-Regionaleinstellung</message>
+	<message key="plugins.generic.translator.localeFiles">Sprachdateien</message>
+	<message key="plugins.generic.translator.miscFiles">Diverse Dateien</message>
+	<message key="plugins.generic.translator.emails">E-Mail-Vorlagen</message>
+	<message key="plugins.generic.translator.file.filename">Dateiname</message>
+	<message key="plugins.generic.translator.file.edit">Bearbeite {$filename}</message>
+	<message key="plugins.generic.translator.email.edit">Bearbeite {$emailKey}</message>
+	<message key="plugins.generic.translator.file.reference">Referenzversion</message>
+	<message key="plugins.generic.translator.file.translation">Übersetzung</message>
+	<message key="plugins.generic.translator.email.reference">Referenzversion</message>
+	<message key="plugins.generic.translator.email.translation">Übersetzung</message>
+	<message key="plugins.generic.translator.file.reset">Zurücksetzen</message>
+	<message key="plugins.generic.translator.file.resetToReference">Auf Referenzwerte zurücksetzen</message>
+	<message key="plugins.generic.translator.email.reset">Zurücksetzen</message>
+	<message key="plugins.generic.translator.email.resetToReference">Auf Referenzwerte zurücksetzen</message>
+	<message key="plugins.generic.translator.file.resetConfirm">Sind Sie sicher, dass Sie die Dateiinhalte zurücksetzen wollen?</message>
+	<message key="plugins.generic.translator.email.resetConfirm">Sind Sie sicher, dass Sie die E-Mail-Inhalte zurücksetzen wollen?</message>
+	<message key="plugins.generic.translator.file.doesNotExistNote">* Diese Datei ist noch nicht übersetzt worden.</message>
+	<message key="plugins.generic.translator.email.description">In den folgenden Feldern können Sie Titel, Body und Beschreibung der E-Mail-Vorlagen übersetzen. Die Beschreibung dient der Information der Verwalter/innen.</message>
+	<message key="plugins.generic.translator.confirmDelete">Sind Sie sicher, dass Sie dieses Element löschen wollen? Diese AKtion kann nicht rückgängig gemacht werden.</message>
+	<message key="plugins.generic.translator.deleteKey">Diesen Schlüssel löschen</message>
+	<message key="plugins.generic.translator.deleteEmail">Diese E-Mail löschen</message>
+	<message key="plugins.generic.translator.saveBeforeContinuing">Bitte stellen Sie sicher, dass Sie alle Änderungen, die Sie auf dieser Seite gemacht haben, speichern, bevor Sie fortfahren. Ansonsten werden sie gelöscht. Möchten Sie fortfahren? In diesem Fall werden alle ungespeicherten Änderungen verloren gehen.</message>
+	<message key="plugins.generic.translator.couldNotWriteFile">Konnte die Datei "{$filename}" nicht schreiben. Kontrollieren Sie bitte, ob die Dateirechte korrekt gesetzt sind.</message>
+	<message key="plugins.generic.translator.errorEditingFile">Es gab ein Problem bei der Bearbeitung der Datei  "{$filename}". Bitte kontrollieren Sie, ob die Datei dem erwarteten Format entspricht.</message>
+</locale>

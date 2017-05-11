@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the vi_VN (Tiếng Việt) locale.
+  -->
+
+<locale name="vi_VN" full_name="Tiếng Việt">
+	<message key="plugins.generic.tinymce.name">Công cụ phụ trợ TinyMCE</message>
+	<message key="plugins.generic.tinymce.description"><![CDATA[Công cụ phụ trợ <a href="http://tinymce.moxiecode.com" target="_blank">TinyMCE</a>cho phép soạn văn bản trên phần mềm OMP bằng giao diện trù phú (WSYWIG).]]></message>
+	<message key="plugins.generic.tinymce.settings">Tham số thiết lập</message>
+</locale>

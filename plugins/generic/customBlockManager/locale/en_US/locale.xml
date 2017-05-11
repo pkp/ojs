@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/customBlockManager/locale/en_US/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.generic.customBlockManager.displayName">Custom Block Manager</message>
+	<message key="plugins.generic.customBlockManager.manage">Manage Custom Blocks</message>
+	<message key="plugins.generic.customBlockManager.description">This Plugin lets you manage (add, edit and delete) custom sidebar blocks.</message>
+	<message key="plugins.generic.customBlockManager.customBlocks">Custom Blocks</message>	
+	<message key="plugins.generic.customBlockManager.blockName">Block Name</message>
+	<message key="plugins.generic.customBlockManager.addBlock">Add Block</message>	
+	<message key="plugins.generic.customBlockManager.noneCreated">No custom blocks have been created.</message>	
+	
+	<message key="plugins.generic.customBlock.content">Content</message>
+	<message key="plugins.generic.customBlock.nameSuffix">(Custom Block)</message>
+	<message key="plugins.generic.customBlock.description">This is a user-generated block.</message>
+	<message key="plugins.generic.customBlock.nameRequired">The custom block name is required.</message>
+	<message key="plugins.generic.customBlock.nameRegEx">The custom block name must contain only letters, numbers, and hyphens/underscores.</message>
+</locale>

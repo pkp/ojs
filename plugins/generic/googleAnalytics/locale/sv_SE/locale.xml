@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/googleAnalytics/locale/sv_SE/locale.xml
+  *
+  * Translated to sv_SE per@funke.com 2010-03-15
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Google Analytics plugin localization strings for the en_US (U.S. English) locale.
+  *
+  -->
+ 
+<locale name="sv_SE" full_name="Svenska">
+
+	<!-- Google Analytics -->
+	<message key="plugins.generic.googleAnalytics.displayName">Tillägg för Google Analytics</message>
+	<message key="plugins.generic.googleAnalytics.description"><![CDATA[Integrerar OJS med Google Analytics, Google's analysverktyg för webbtrafik. Detta kräver att du redan innan har satt upp ett konto hos Google för Google Analytics. Se <a href="http://www.google.com/analytics/" title="Google Analytics sajt">Google Analytics sajt</a> for more information.]]></message>
+
+	<!-- Google Analytics Settings Management -->
+	<message key="plugins.generic.googleAnalytics.manager.settings">Inställningar</message>
+	<message key="plugins.generic.googleAnalytics.manager.googleAnalyticsSettings">Google Analytics Inställningar</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.description"><![CDATA[<p>Med detta tillägg aktiverat kan Google Analytics användas för att samla och analysera websajttrafiken för den här publikationen. Detta kräver att du redan innan har satt upp ett konto hos Google för Google Analytics.  Se <a href="http://www.google.com/analytics/" title="Google Analytics sajt">Google Analytics sajt</a> for more information.</p><p>Notera att kan behöva upp till 24 timmar innan statistik har samlats in och rapporterats. 'Check Status' funktionen är inte tillförlitlig under den här perioden.</p>]]></message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteId">Kontonummer</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdInstructions"><![CDATA[I Google Analytics, klicka på 'Check Status' för att se spåningskoden för din sajt. För äldre spårningskod, visas kontonumret i koden som: _uacct = "###", i nyare kod som: var pageTracker = _gat._getTracker("###"). Skriv in den text som representeras av ###.]]></message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdRequired">Vänligne skriv in ett kontonummer.</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCode">Spårningskod</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCodeRequired">Välj en spårningskod.</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.urchin">Äldre spårningskod (urchin.js)</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.ga">Nyare spårningskod (ga.js)</message>
+</locale>

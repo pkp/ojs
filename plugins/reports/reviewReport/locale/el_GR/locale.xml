@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/el_GR/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the el_GR locale.
+  *
+  -->
+
+<locale name="el_GR" full_name="ελληνικά">
+	<message key="plugins.reports.reviews.displayName">Αναφορά Αξιολογήσεων</message>
+	<message key="plugins.reports.reviews.description">Αυτό το plugin δημιουργεί μια αναφορά σε μορφή CSV που περιλαμβάνει μια λίστα με τις αναθέσεις για αξιολόγηση για ένα περιοδικό.</message>
+	<message key="plugins.reports.reviews.round">Γύρος</message>
+	<message key="plugins.reports.reviews.reviewerId">ID Αξιολογητή</message>
+	<message key="plugins.reports.reviews.reviewer">Αξιολογητής</message>
+	<message key="plugins.reports.reviews.dateAssigned">Ημερομηνία Ανάθεσης</message>
+	<message key="plugins.reports.reviews.dateNotified">Ημερομηνία Ειδοποίησης</message>
+	<message key="plugins.reports.reviews.dateConfirmed">Ημερομηνία Επιβεβαίωσης</message>
+	<message key="plugins.reports.reviews.dateCompleted">Ημερομηνία Ολοκλήρωσης</message>
+	<message key="plugins.reports.reviews.dateReminded">Ημερομηνία Υπενθύμισης</message>
+</locale>
+

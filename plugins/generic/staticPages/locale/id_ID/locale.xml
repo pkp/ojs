@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/id_ID/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the id_ID (Bahasa Indonesia) locale.
+  *
+  -->
+ 
+<locale name="id_ID" full_name="Bahasa Indonesia">
+	<message key="plugins.generic.staticPages.displayName">Plugin Halaman Statis</message>
+	<message key="plugins.generic.staticPages.description">Plugin ini memudahkan Manajemen Konten Statis.</message>
+	<message key="plugins.generic.staticPages.pageTitle">Judul</message>
+	<message key="plugins.generic.staticPages.content">Konten</message>
+
+	<message key="plugins.generic.staticPages.path">Jalan</message>
+	<message key="plugins.generic.staticPages.requirement.tinymce"><![CDATA[<strong>Plugin TinyMCE Plugin harus diinstal dan diaktifkan untuk menambah/ mengedit konten.</strong>]]></message>
+
+	<message key="plugins.generic.staticPages.editAddContent">Edit/Tambah Konten</message>
+
+	<message key="plugins.generic.staticPages.addStaticPage">Tambah Halaman Statis</message>
+	<message key="plugins.generic.staticPages.addNewPage">Tambah Halaman Baru</message>
+	<message key="plugins.generic.staticPages.editStaticPage">Edit Halaman Statis</message>	
+
+	<message key="plugins.generic.staticPages.settingInstructions">Formulir di bawah ini menunjukkan Anda semua halaman statis yang dapat Anda buat. Anda dapat mengedit atau menghapus halaman dengan menggunakan link di sisi tangan kanan.</message>
+	<message key="plugins.generic.staticPages.editInstructions">Gunakan formulir di bawah ini untuk menambah/ mengedit konten halaman. </message>
+	<message key="plugins.generic.staticPages.duplicatePath">Jalan ini sudah ada untuk halaman statis lainnya. This path already exists for another static page.</message>
+	
+	<message key="plugins.generic.staticPages.pageSaved">Halaman sukses disimpan.</message>
+	<message key="plugins.generic.staticPages.pageDeleted">Halaman sukses dihapus.</message>
+	
+	<message key="plugins.generic.staticPages.noneExist">Tidak ada halaman yang dibuat.</message>
+</locale>

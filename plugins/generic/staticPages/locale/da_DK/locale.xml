@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/da_DK/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the da_DK (Dansk) locale.
+  *
+  -->
+ 
+<locale name="da_DK" full_name="Dansk">
+	<message key="plugins.generic.staticPages.displayName">Statisk sideplugin</message>
+	<message key="plugins.generic.staticPages.description">Dette plugin tillader håndtering af statisk indhold</message>
+	<message key="plugins.generic.staticPages.pageTitle">Titel</message>
+	<message key="plugins.generic.staticPages.content">Indhold</message>
+
+	<message key="plugins.generic.staticPages.path">Sti</message>
+	<message key="plugins.generic.staticPages.requirement.tinymce"><![CDATA[<strong>The TinyMCE Plugin skal installers og aktiveres for at gøre det muligt at tilføje og redigere indhold.</strong>]]></message>
+
+	<message key="plugins.generic.staticPages.editAddContent">Redigér/Tilføj indhold</message>
+
+	<message key="plugins.generic.staticPages.addStaticPage">Tilføj statisk side</message>
+	<message key="plugins.generic.staticPages.addNewPage">Tilføj ny side</message>
+	<message key="plugins.generic.staticPages.editStaticPage">Redigér statisk side</message>	
+
+	<message key="plugins.generic.staticPages.settingInstructions">Skemaet nedenfor viser alle de statiske sider, du har oprettet. Du kan redigere eller slette siderne ved at anvende linkene til højre.</message>
+	<message key="plugins.generic.staticPages.editInstructions">Vælg skemaet nedenfor for at tilføje/redigere sideindhold.</message>
+	<message key="plugins.generic.staticPages.duplicatePath">Denne sti er allerede valgt for en anden statisk side</message>
+	
+	<message key="plugins.generic.staticPages.pageSaved">Siden er gemt</message>
+	<message key="plugins.generic.staticPages.pageDeleted">Siden er slettet</message>
+	
+	<message key="plugins.generic.staticPages.noneExist">Ingen sider er blevet oprettet</message>
+</locale>

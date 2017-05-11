@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/customBlockManager/locale/el_GR/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the el_GR locale.
+  *
+  -->
+ 
+<locale name="el_GR" full_name="ελληνικά">
+	<message key="plugins.generic.customBlockManager.displayName">Διαχείριση Custom Block</message>
+	<message key="plugins.generic.customBlockManager.blockName">Όνομα Block</message>	
+	<message key="plugins.generic.customBlockManager.addBlock">Προσθήκη Block</message>	
+
+	<message key="plugins.generic.customBlock.content">Περιεχόμενο</message>
+	<message key="plugins.generic.customBlock.nameSuffix">(Custom Block Plugin)</message>
+	<message key="plugins.generic.customBlock.description">Αυτό είναι block δημιουργημένο από χρήστη.</message>
+</locale>

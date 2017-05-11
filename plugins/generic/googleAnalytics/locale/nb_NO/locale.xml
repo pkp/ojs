@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/googleAnalytics/locale/nb_NO/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Google Analytics plugin localization strings for the en_US (U.S. English) locale.
+  *
+  -->
+ 
+<locale name="nb_NO" full_name="Norsk bokmål">
+
+	<!-- Google Analytics -->
+	<message key="plugins.generic.googleAnalytics.displayName">Programutvidelse for Google Analytics</message>
+	<message key="plugins.generic.googleAnalytics.description"><![CDATA[Integrer OJS og Google Analytics, Googles verktøy for nettstedstrafikkanalyse. Det kreves at du allerede har en konto hos Google Analytics. Se <a href="http://www.google.com/analytics/" title="Google Analytics site">Google Analytics nettsted</a> for mer informasjon.]]></message>
+	<!-- Google Analytics Settings Management -->
+	<message key="plugins.generic.googleAnalytics.manager.settings">Innstillinger</message>
+	<message key="plugins.generic.googleAnalytics.manager.googleAnalyticsSettings">Innstillinger for Google Analytics</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.description"><![CDATA[<p>Når denne programutvidelsen er slått på kan Google Analytics benyttes til å samle og analysere nettstedsbruk og -trafikk for dette tidsskriftet. Merk at denne programutvidelsen forutsetter at du allerede har konto hos Google Analytics. Se <a href="http://www.google.com/analytics/" title="Google Analytics site">Google Analytics nettsted</a> for mer informasjon.</p><p>Merk at det kan ta opptil 24 timer før Google Analytics samler og rapporterer statistikk. I denne perioden er ikke nødvendigvis 'Check Status'-funksjonen korrekt mht. om den har funnet tidsskriftets sporingskode.</p>]]></message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteId">Kontonummer</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdInstructions">Klikke på 'Check Status' i Google Analytics, for å se sporingskoden for ditt nettsted. I eldre sporingskoder vises kontonummer i sporingskoden slik: _uacct = "###". I nye sporingskoder vises kontonummeret i sporingskoden slik: var pageTracker = _gat._getTracker("###"). Skriv inn den teksten som svarer til ###.</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdRequired">Skriv inn et kontonummer.</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCode">Sporingskode</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCodeRequired">Velg en sporingskode.</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.urchin">Gammel sporingskode (urchin.js)</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.ga">Ny sporingskode (ga.js)</message>
+	<message key="plugins.generic.googleAnalytics.authorAccount">Google Analytics kontonummer</message>
+	<message key="plugins.generic.googleAnalytics.authorAccount.description">For å følge med på lesingen av publiserte artikler ved bruk av Google Analytics, kan du legge inn et kontonummer her (på formen UA-xxxxxx-x).</message>
+	<message key="plugins.generic.googleAnalytics.authorAccountInvalid">En eller flere Google Analytics-kontonummer som er lagt inn av innsendende forfattere, er ugyldige.</message>
+</locale>

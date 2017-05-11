@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/customBlockManager/locale/tr_TR/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the tr_TR (Türkçe) locale.
+  *
+  -->
+ 
+<locale name="tr_TR" full_name="Türkçe">
+	<message key="plugins.generic.customBlockManager.displayName">Özelleştirilmiş Blok Yöneticisi</message>
+	<message key="plugins.generic.customBlockManager.description">This Plugin lets you manage custom sidebar blocks.  You can edit the blocks in the settings of each plugin that you create here.</message>
+	<message key="plugins.generic.customBlockManager.blockName">Blok Adı</message>	
+	<message key="plugins.generic.customBlockManager.addBlock">Blok ekle</message>	
+
+	<message key="plugins.generic.customBlock.content">İçerik</message>
+	<message key="plugins.generic.customBlock.nameSuffix">(Özelleştirilmiş Blok Eklentisi)</message>
+	<message key="plugins.generic.customBlock.description">Bu üye tarafından oluşturulmuş bir bloktur.</message>
+</locale>

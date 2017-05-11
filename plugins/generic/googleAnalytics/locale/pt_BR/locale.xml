@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/googleAnalytics/locale/pt_BR/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Google Analytics plugin localization strings for the pt_BR (Português (Brasil)) locale.
+  *
+  -->
+ 
+<locale name="pt_BR" full_name="Português (Brasil)">
+
+	<!-- Google Analytics -->
+	<message key="plugins.generic.googleAnalytics.displayName">Google Analytics</message>
+	<message key="plugins.generic.googleAnalytics.description"><![CDATA[Integre o sistema com o Google Analytics, a aplicação do Google para análise de tráfego do portal. Exige uma conta no Google Analytics. Saiba mais em <a href="http://www.google.com/analytics/" title="Google Analytics site">Google Analytics</a>.]]></message>
+
+	<!-- Google Analytics Settings Management -->
+	<message key="plugins.generic.googleAnalytics.manager.settings">Configurações</message>
+	<message key="plugins.generic.googleAnalytics.manager.googleAnalyticsSettings">Configurações do Google Analytics</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.description"><![CDATA[<p>Com este plugin habilitado, pode-se coletar informações e analisar o tráfego de uso do portal para esta revista. Uma conta no Google Analytics é exigida para seu funcionamento. Saiba mais em <a href="http://www.google.com/analytics/" title="Google Analytics site">Google Analytics</a>.</p>]]></message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteId">Número da conta</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdInstructions">Dentro do Google Analytics, clique em Verificar Status (Check Status) para visualizar o código de acompanhamento do portal. O número da conta é exibido dentro o código de acompanhamento : _uacct = "###". Informe o texto que corresponde a ###.</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdRequired">Informe o número da conta.</message>
+
+	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCode">Código de acompanhamento</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCodeRequired">Escolha um código de acompanhamento</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.urchin">Código de acompanhamento legado (urchin.js)</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.ga">Código de acompanhamento novo (ga.js)</message>
+	<message key="plugins.generic.googleAnalytics.authorAccount">Número de conta Google Analytics</message>
+	<message key="plugins.generic.googleAnalytics.authorAccount.description">Para acompanhar a leitura de artigos publicados usando o Google Analytics, informe um número de conta a seguir (ex.: UA-xxxxxx-x).</message>
+	<message key="plugins.generic.googleAnalytics.authorAccountInvalid">Um ou mais números de contas do Google Analytics informados para autores da submissão são inválidos.</message>
+</locale>

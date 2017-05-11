@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/fa_IR/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the fa_IR locale.
+  *
+  -->
+
+<locale name="fa_IR" full_name="فارسی">
+	<message key="plugins.reports.reviews.displayName">گزارش کارشناسی</message>
+	<message key="plugins.reports.reviews.description">با این پلاگین میتوان میتوان یک گزارش CSV حاوی لیستی از انتسابات کارشناسی برای مجله تولید کرد.</message>
+	<message key="plugins.reports.reviews.round">دور</message>
+	<message key="plugins.reports.reviews.reviewerId">آی دی کارشناس</message>
+	<message key="plugins.reports.reviews.reviewer">کارشناس</message>
+	<message key="plugins.reports.reviews.dateAssigned">تاریخ انتساب</message>
+	<message key="plugins.reports.reviews.dateNotified">تاریخ با خبر سازی</message>
+	<message key="plugins.reports.reviews.dateConfirmed">تاریخ تایید</message>
+	<message key="plugins.reports.reviews.dateCompleted">تاریخ تکمیل</message>
+	<message key="plugins.reports.reviews.dateReminded">تاریخ یادآوری</message>
+</locale>
+

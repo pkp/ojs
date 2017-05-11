@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/en_US/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.generic.staticPages.displayName">Static Pages Plugin</message>
+	<message key="plugins.generic.staticPages.description">This plugin allows Static Content Management.</message>
+	<message key="plugins.generic.staticPages.staticPages">Static Pages</message>
+	<message key="plugins.generic.staticPages.pageTitle">Title</message>
+	<message key="plugins.generic.staticPages.content">Content</message>
+
+	<message key="plugins.generic.staticPages.path">Path</message>
+	<message key="plugins.generic.staticPages.requirement.tinymce"><![CDATA[<p><strong>The TinyMCE Plugin must be installed and enabled in order to add/edit content.</strong></p>]]></message>
+
+	<message key="plugins.generic.staticPages.editAddContent">Edit/Add Content</message>
+
+	<message key="plugins.generic.staticPages.addStaticPage">Add Static Page</message>
+	<message key="plugins.generic.staticPages.addNewPage">Add New Page</message>
+	<message key="plugins.generic.staticPages.editStaticPage">Edit Static Page</message>	
+	<message key="plugins.generic.staticPages.noneCreated">No static pages have been created.</message>
+
+	<message key="plugins.generic.staticPages.settingInstructions">The form below shows you all the static pages you have created.  You can edit or delete the pages using the links on the right-hand side.</message>
+	<message key="plugins.generic.staticPages.editInstructions">Use the form below to add/edit page content.</message>
+	<message key="plugins.generic.staticPages.pathRegEx">The path field must contain only alphanumeric characters plus '.', '/', '-', and '_'.</message>
+	<message key="plugins.generic.staticPages.viewInstructions"><![CDATA[<p>This page will be accessible at: <blockquote>{$pagesPath}</blockquote>...where %PATH% is the path entered above. <strong>Note:</strong> No two pages can have the same path. Using paths that are built into the system may cause you to lose access to important functions.</p>]]></message>
+	<message key="plugins.generic.staticPages.duplicatePath">This path already exists for another static page.</message>
+	
+	<message key="plugins.generic.staticPages.pageSaved">Page successfully saved.</message>
+	<message key="plugins.generic.staticPages.pageDeleted">Page successfully deleted.</message>
+	
+	<message key="plugins.generic.staticPages.noneExist">No pages have been created</message>
+</locale>

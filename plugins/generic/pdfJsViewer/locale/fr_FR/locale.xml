@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/pdfJsViewer/locale/fr_FR/locale.xml
+  *
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings
+  -->
+
+<locale name="fr_FR" full_name="Français (France)">
+	<message key="plugins.generic.pdfJsViewer.name">Plugicie PDF.JS l visionneuse de PDF</message>
+	<message key="plugins.generic.pdfJsViewer.description"><![CDATA[Ce plugin utilise la <a href="http://mozilla.github.io/pdf.js">visionneuse de PDF</a> qui embarque les fichiers PDF de l'article et les pages de visualisation des épreuves.]]></message>
+</locale>

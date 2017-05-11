@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/pdfJsViewer/locale/en_US/locale.xml
+  *
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings
+  -->
+
+<locale name="it_IT" full_name="Italiano">
+	<message key="plugins.generic.pdfJsViewer.name">Visualizzatore PDF.JS</message>
+	<message key="plugins.generic.pdfJsViewer.description"><![CDATA[Questo plugin utilizza <a href="http://mozilla.github.io/pdf.js">pdf.js PDF viewer</a> per visualizzare i PDF nelle pagine degli articoli e dei fascioli.]]></message>
+</locale>

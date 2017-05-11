@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/nl_NL/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the nl_NL locale.
+  *
+  -->
+
+<locale name="nl_NL" full_name="Nederlands">
+	<message key="plugins.reports.reviews.displayName">Review rapport</message>
+	<message key="plugins.reports.reviews.description">Deze plugin maakt een komma-gescheiden rapport met een lijst reviewtaken voor een tijdschrift.</message>
+	<message key="plugins.reports.reviews.round">Ronde</message>
+	<message key="plugins.reports.reviews.reviewerId">Reviewer ID</message>
+	<message key="plugins.reports.reviews.reviewer">Reviewer</message>
+	<message key="plugins.reports.reviews.dateAssigned">Datum toekenning</message>
+	<message key="plugins.reports.reviews.dateNotified">Datum bericht</message>
+	<message key="plugins.reports.reviews.dateConfirmed">Datum bevestiging</message>
+	<message key="plugins.reports.reviews.dateCompleted">Datum gereed</message>
+	<message key="plugins.reports.reviews.dateReminded">Datum herinnering</message>
+</locale>
+

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the da_DK (Dansk) locale.
+  -->
+
+<locale name="da_DK" full_name="Dansk">
+	<message key="plugins.generic.tinymce.name">TinyMCE Plugin</message>
+	<message key="plugins.generic.tinymce.description"><![CDATA[Dette plugin aktiverer WYSIWYG redigering af OMP tekstfelter ved hjælp af <a href="http://tinymce.moxiecode.com" target="_blank">TinyMCE</a> tekstbehandleren.]]></message>
+	<message key="plugins.generic.tinymce.settings">Indstillinger</message>
+</locale>

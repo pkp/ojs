@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/googleAnalytics/locale/ca_ES/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Google Analytics plugin localization strings for the ca_ES (Català) locale.
+  *
+  -->
+ 
+<locale name="ca_ES" full_name="Català">
+
+	<!-- Google Analytics -->
+	<message key="plugins.generic.googleAnalytics.displayName">Connector Google Analytics</message>
+	<message key="plugins.generic.googleAnalytics.description"><![CDATA[Integreu l'OJS amb el Google Analytics, l'aplicació per a l'anàlisi del trànsit de llocs web de Google. Per a utilitzar aquest connector, cal que disposeu d'un compte del Google Analytics. Per a obtenir més informació, vegeu el <a href="http://www.google.com/analytics/" title="lloc web del Google Analytics">lloc web del Google Analytics</a>.]]></message>
+
+	<!-- Google Analytics Settings Management -->
+	<message key="plugins.generic.googleAnalytics.manager.settings">Configuració</message>
+	<message key="plugins.generic.googleAnalytics.manager.googleAnalyticsSettings">Configuració del Google Analytics</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.description"><![CDATA[<p>Si activeu aquest controlador podreu utilitzar el Google Analytics per a recopilar i analitzar dades relatives a l'ús i el trànsit d'aquesta revista. Noteu que per a poder utilitzar aquest connector heu de disposar d'un compte del Google Analytics. Per a obtenir més informació, vegeu el <a href="http://www.google.com/analytics/" title="lloc web del Google Analytics">lloc web del Google Analytics</a>.</p>]]></message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteId">Número de compte</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdInstructions">Dins el Google Analytics, feu clic a Check Status per a visualitzar el codi de seguiment del lloc web. El número de compte es mostra en el codi de seguiment: _uacct = "###". Introduïu el text que correspon a ###.</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdRequired">Introduïu un número de compte.</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCode">Codi de seguiment</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCodeRequired">Trieu el codi de seguiment que vulgueu utilitzar.</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.urchin">Codi de seguiment heretat (urchin.js)</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.ga">Codi de seguiment nou (ga.js)</message>
+</locale>

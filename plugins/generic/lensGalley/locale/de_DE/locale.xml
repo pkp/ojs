@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/lensGalley/locale/de_DE/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="de_DE" full_name="Deutsch">
+	<message key="plugins.generic.lensGalley.displayName">elife Lens Viewer für Artikel</message>
+	<message key="plugins.generic.lensGalley.description">Dieses Plugin stellt Unterstützung für JAT- XML-Fahnen mittels eLife Lens bereit.</message>
+</locale>

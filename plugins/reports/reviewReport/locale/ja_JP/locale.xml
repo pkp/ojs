@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/ja_JP/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the ja_JP locale.
+  *
+  -->
+
+<locale name="ja_JP" full_name="日本語">
+	<message key="plugins.reports.reviews.displayName">査読レポート</message>
+	<message key="plugins.reports.reviews.description">査読の割当とその情報を含むCSV報告書を作成します。</message>
+	<message key="plugins.reports.reviews.round">ラウンド</message>
+	<message key="plugins.reports.reviews.reviewerId">Reviewer ID</message>
+	<message key="plugins.reports.reviews.reviewer">査読者</message>
+	<message key="plugins.reports.reviews.dateAssigned">割当日</message>
+	<message key="plugins.reports.reviews.dateNotified">通知日</message>
+	<message key="plugins.reports.reviews.dateConfirmed">確認日</message>
+	<message key="plugins.reports.reviews.dateCompleted">完了日</message>
+	<message key="plugins.reports.reviews.dateReminded">督促日</message>
+</locale>
+

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/en_US/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
+  * Localization strings.
+  -->
+
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.reports.reviews.displayName">Review Report</message>
+	<message key="plugins.reports.reviews.description">This plugin implements a CSV report containing a list of review assignments for a journal.</message>
+	<message key="plugins.reports.reviews.round">Round</message>
+	<message key="plugins.reports.reviews.submissionTitle">Submission Title</message>
+	<message key="plugins.reports.reviews.submissionId">Submission ID</message>
+	<message key="plugins.reports.reviews.reviewer">Reviewer</message>
+	<message key="plugins.reports.reviews.dateAssigned">Date Assigned</message>
+	<message key="plugins.reports.reviews.dateNotified">Date Notified</message>
+	<message key="plugins.reports.reviews.dateConfirmed">Date Confirmed</message>
+	<message key="plugins.reports.reviews.dateCompleted">Date Completed</message>
+	<message key="plugins.reports.reviews.dateReminded">Date Reminded</message>
+	<message key="plugins.reports.reviews.recommendation">Recommendation</message>
+	<message key="plugins.reports.reviews.comments">Comments On Submission</message>
+</locale>
+

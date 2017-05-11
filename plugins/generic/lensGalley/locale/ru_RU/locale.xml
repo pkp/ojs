@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/lensGalley/locale/ru_RU/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="ru_RU" full_name="Русский">
+	<message key="plugins.generic.lensGalley.displayName">Модуль «Просмотр статей eLife Lens»</message>
+	<message key="plugins.generic.lensGalley.description">Обеспечивает поддержку отображения для гранок JATS XML используя eLife Lens.</message>
+</locale>

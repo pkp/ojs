@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/googleAnalytics/locale/nl_NL/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Google Analytics plugin localization strings for the nl_NL (Nederlands) locale.
+  *
+  * Translated by Martin van Luijt, m.van.luijt 'at' hccnet.nl
+  *
+  -->
+ 
+<locale name="nl_NL" full_name="Nederlands">
+
+	<!-- Google Analytics -->
+	<message key="plugins.generic.googleAnalytics.displayName">Google Analytics Plugin</message>
+	<message key="plugins.generic.googleAnalytics.description"><![CDATA[Integreer OJS met Google Analytics, Het website-gebruik analyse programma van Google. Vereist dat u al een Google Analytics account hebt. Zie <a href="http://www.google.com/analytics/" title="Google Analytics site">Google Analytics site</a> voor meer informatie.]]></message>
+
+	<!-- Google Analytics Settings Management -->
+	<message key="plugins.generic.googleAnalytics.manager.settings">Instellingen</message>
+	<message key="plugins.generic.googleAnalytics.manager.googleAnalyticsSettings">Google Analytics instellingen</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.description"><![CDATA[<p>Door deze plugin in te schakelen kan Google Analytics gebruikt worden voor het verzamelen en analyseren van het gebruik van de website van dit tijdschrift. Deze plugin vereist dat u al een Google Analytics account hebt ingericht. Zie <a href="http://www.google.com/analytics/" title="Google Analytics site">Google Analytics site</a> voor meer informatie.</p>]]></message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteId">Accountnummer</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdInstructions">Klik op Check Status in Google Analytics om de tracking code voor uw site te zien. Voor een oude trackingcode wordt het account nummer getoond binnen de tracking codeals : _uacct = "###". Voor nieuwe tracking code wordt het accountnummer getoond als: vaar pageTracker = _gat.getTracker("###"). Voer de tekst in die correspondeert met ###.</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdRequired">Voer een accountnummer in.</message>
+
+	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCode">Tracking code</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.ga">Nieuwe tracking code (ga.js)</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCodeRequired">Kies de te gebruiken tracking code</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.urchin">Oude tracking code (urchin.js)</message>
+	<message key="plugins.generic.googleAnalytics.authorAccount">Google Analytics account-nummer</message>
+	<message key="plugins.generic.googleAnalytics.authorAccountInvalid">Een of meer van de Google Analytics account-nummers van de auteurs van deze inzending zijn niet geldig.</message>
+	<message key="plugins.generic.googleAnalytics.authorAccount.description">Geef een Google Analytics account-nummer om de lezers van gepubliceerde artikelen te volgen met Google Analytics (bv. UA-xxxxxx-x)</message>
+</locale>

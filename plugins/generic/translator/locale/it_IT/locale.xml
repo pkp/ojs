@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/translator/locale/it_IT/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the it_IT (Italiano) locale.
+  *
+  -->
+ 
+<locale name="it_IT" full_name="Italiano">
+	<message key="plugins.generic.translator.name">Traduzione dell'interfaccia</message>
+	<message key="plugins.generic.translator.description">Questo plugin permette la gestione della traduzione dell'interfaccia.</message>
+	<message key="plugins.generic.translator.longdescription">Questa sezione permette all'amministratore del sistema di costruire, modificare e controllare le traduzioni di OJS. E' globale per tutta la installazione e non può essere usato per personalizzare una singola rivista OJS. Se si corregge o si crea una traduzione, si prega di pensare di sottoporla al Public Knowledge Project per distribuirla con le versioni future di OJS.</message>
+	<message key="plugins.generic.translator.localeDescription">Questa pagina elenca tutti i contenuti dell'interfaccia di OJS e fornisce al traduttore l'opportunità di modificarla.</message>
+
+	<message key="plugins.generic.translator.localeName">Localizzazione</message>
+	<message key="plugins.generic.translator.localeKey">Chiave</message>
+	<message key="plugins.generic.translator.localeKeyValue">Valore</message>
+	<message key="plugins.generic.translator.translate">Traduci</message>
+	<message key="plugins.generic.translator.availableLocales">Localizzazioni disponibili</message>
+	<message key="plugins.generic.translator.check">Controlla</message>
+
+	<message key="plugins.generic.translator.errors">Errori</message>
+
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_KEY.title">Chiavi mancanti</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_EXTRA_KEY.title">Chiavi aggiunte</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_DIFFERING_PARAMS.title">Elenco delle differenze nei parametri</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_FILE.title">File di localizzazione mancanti</message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_MISSING_EMAIL.title">Email mancanti</message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_EXTRA_EMAIL.title">Email aggiunte</message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_DIFFERING_PARAMS.title">Elenco delle email che presentano differenze nei parametri</message>
+
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_KEY.message">La chiave "{$key}" manca in "{$filename}". La versione inglese è fornita come riferimento.</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_EXTRA_KEY.message">La chiave "{$key}" non è più utilizzata e può essere rimossa da "{$filename}".</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_DIFFERING_PARAMS.message"><![CDATA[La chiave della localizazione "{$key}" in <tt>{$filename}</tt> fa un uso dei parametri differente da quello della lingua di riferimento. Si prega di controllare che contenga tutti i parametri rilevanti. I parametri che non coincidono sono:]]></message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_FILE.message"><![CDATA[Il file di localizzazione <tt>{$filename}</tt> è mancante o non leggibile.]]></message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_MISSING_EMAIL.message">Il messaggio email "{$key}" non ha traduzione.</message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_EXTRA_EMAIL.message">Il messaggio email "{$key}" non è più usato e può essere rimosso.</message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_DIFFERING_PARAMS.message">Il messaggio email "{$key}" fa un uso dei parametri differente da quello della lingua di riferimento.  Si prega di controllare che contenga tutti i parametri rilevanti. I parametri che non coincidono sono:</message>
+
+	<message key="plugins.generic.translator.locale">Localizzazione {$locale}</message>
+	<message key="plugins.generic.translator.localeFiles">File di localizzazione</message>
+	<message key="plugins.generic.translator.miscFiles">File vari</message>
+	<message key="plugins.generic.translator.emails">Modelli email</message>
+	<message key="plugins.generic.translator.file.filename">Nome del file</message>
+	<message key="plugins.generic.translator.file.edit">Modifica {$filename}</message>
+	<message key="plugins.generic.translator.email.edit">Modifica {$emailKey}</message>
+	<message key="plugins.generic.translator.file.reference">Versione di riferimento</message>
+	<message key="plugins.generic.translator.file.translation">Traduzione</message>
+	<message key="plugins.generic.translator.email.reference">Versione di riferimento</message>
+	<message key="plugins.generic.translator.email.translation">Traduzione</message>
+	<message key="plugins.generic.translator.file.reset">Reset</message>
+	<message key="plugins.generic.translator.file.resetToReference">Ripristina la versione iniziale</message>
+	<message key="plugins.generic.translator.email.reset">Reset</message>
+	<message key="plugins.generic.translator.email.resetToReference">Cancella le modifiche</message>
+	<message key="plugins.generic.translator.file.resetConfirm">Sei sicuro di cancellare le modifiche e ripristinare  la versione iniziale?</message>
+	<message key="plugins.generic.translator.email.resetConfirm">Sei sicuro di cancellare le modifiche e ripristinare la versione iniziale delle email?</message>
+	<message key="plugins.generic.translator.file.doesNotExistNote">* Questo file non è stato ancora tradotto.</message>
+	<message key="plugins.generic.translator.email.description">Nei seguenti campi, traduci Titolo, Contenuto, e Descrizione del modello di messaggio email. La descrizione è solo per l'Amministratore della rivista.</message>
+	<message key="plugins.generic.translator.confirmDelete">Sei sicuro di voler cancellare questo oggetto? Questa azione non potrà essere annullata.</message>
+	<message key="plugins.generic.translator.deleteKey">Cancella questa chiave</message>
+	<message key="plugins.generic.translator.deleteEmail">Cancella questa email</message>
+	<message key="plugins.generic.translator.saveBeforeContinuing">Assicurati di salvare ogni cambiamento fatto in questa pagina prima di continuare o le modifiche saranno perse. Vuoi continuare? Se sì, ogni modifica non salvata verrà persa.</message>
+	<message key="plugins.generic.translator.localeKey.description">Inserisci una chiave intera.</message>
+	<message key="plugins.generic.translator.fileNotWriteable">Qusto file non è scrivibile dal server. Tutti i cambiamenti andranno perduti.</message>
+	<message key="plugins.generic.translator.filesNotWriteable">Qusti file non sono scrivibili dal server. Tutti i cambiamenti andranno perduti.</message>
+	<message key="plugins.generic.translator.tarMissing"><![CDATA[La funzione di esportazione di questo plugin è stata disattivata perché il corrispondente tar non &#232; disponibile nel sistema. Assicurati di avere il tar installato sul server e configurane il path nella sezione [cli] del file <tt>config.inc.php</tt>.]]></message>
+</locale>

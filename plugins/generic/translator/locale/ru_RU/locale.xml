@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/translator/locale/ru_RU/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the ru_RU (Русский) locale.
+  * With updates from Pavel Pisklakov (revising translation). 
+  -->
+ 
+<locale name="ru_RU" full_name="Русский">
+	<message key="plugins.generic.translator.name">Модуль «Переводчик»</message>
+	<message key="plugins.generic.translator.description">Позволяет работать с файлами перевода через веб-интерфейс.</message>
+	<message key="plugins.generic.translator.longdescription">Эта область позволяет администратору сайта создавать, изменять и проверять переводы. Изменения в этой области затрагивают весь сайт, поэтому данная область не должна использоваться для изменения перевода для одного журнала. Если вы корректируете или создаете перевод, пожалуйста подумайте над его отправкой в Public Knowledge Project для включения в будущие версии OJS.</message>
+	<message key="plugins.generic.translator.localeDescription">Эта страница содержит список всех компонентов перевода OJS и дает возможность переводчику редактировать каждый из них. Полный перевод OJS должен содержать полный перевод всех компонентов.</message>
+	<message key="plugins.generic.translator.localeFileContents">Контент файла перевода</message>
+	<message key="plugins.generic.translator.localeName">Название языка</message>
+	<message key="plugins.generic.translator.localeKey">Ключ</message>
+	<message key="plugins.generic.translator.localeKey.description">Введите полный ключ сообщения, которое нужно найти.</message>
+	<message key="plugins.generic.translator.localeKeyValue">Значение</message>
+	<message key="plugins.generic.translator.translate">Перевести</message>
+	<message key="plugins.generic.translator.availableLocales">Доступные языки</message>
+	<message key="plugins.generic.translator.check">Проверить</message>
+	<message key="grid.action.checkLocale">Проверить язык</message>
+	<message key="grid.action.download">Скачать</message>
+	<message key="plugins.generic.translator.localeFile.complete">Завершено ({$reference})</message>
+	<message key="plugins.generic.translator.localeFile.incompleteCount">{$complete} / {$reference} ({$percent}%)</message>
+	<message key="plugins.generic.translator.localeFile.doesNotExist">Отсутствует ({$reference})</message>
+	<message key="plugins.generic.translator.miscFile.complete">Завершено</message>
+	<message key="plugins.generic.translator.miscFile.doesNotExist">Отсутствует</message>
+	<message key="plugins.generic.translator.email.complete">Завершено</message>
+	<message key="plugins.generic.translator.email.doesNotExist">Отсутствует</message>
+
+	<message key="plugins.generic.translator.errors">Ошибки в файлах перевода</message>
+
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_KEY.title">Отсутствующие ключи</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_EXTRA_KEY.title">Лишние ключи</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_DIFFERING_PARAMS.title">Отличающиеся списки параметров</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_FILE.title">Отсутствующие файлы перевода</message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_MISSING_EMAIL.title">Отсутствующие письма электронной почты</message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_EXTRA_EMAIL.title">Лишние письма электронной почты</message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_DIFFERING_PARAMS.title">Отличающиеся списки параметров в письмах электронной почты</message>
+
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_KEY.message">Ключ «{$key}» отсутствует в файле «{$filename}». Английская версия представлена как версия по умолчанию.</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_EXTRA_KEY.message">Ключ «{$key}» более не используется и может быть удален из файла «{$filename}».</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_DIFFERING_PARAMS.message">Ключ «{$key}» в «{$filename}» использует параметры не так, как это делается в английской версии. Пожалуйста, внимательно проверьте, что он содержит все соответствующие параметры. Несовпадающие параметры:</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_FILE.message">Файл перевода «{$filename}» отстутствует или не доступен для чтения.</message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_MISSING_EMAIL.message">Сообщение электронной почты «{$key}» отсутствует в переводе.</message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_EXTRA_EMAIL.message">Сообщение электронной почты «{$key}» более не используется и может быть удалено.</message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_DIFFERING_PARAMS.message">Сообщение электронной почты «{$key}» использует параметры не так, как это делается в английской версии. Пожалуйста, внимательно проверьте, что оно содержит все соответствующие параметры. Несовпадающие параметры:</message>
+	<message key="plugins.generic.translator.jumpTo">Перейти к...</message>
+	<message key="plugins.generic.translator.locale">Язык {$locale}</message>
+	<message key="plugins.generic.translator.localeFiles">Файлы перевода</message>
+	<message key="plugins.generic.translator.miscFiles">Различные файлы</message>
+	<message key="plugins.generic.translator.emails">Шаблоны электронных писем</message>
+	<message key="plugins.generic.translator.file.filename">Имя файла</message>
+	<message key="plugins.generic.translator.file.edit">Редактирование {$filename}</message>
+	<message key="plugins.generic.translator.email.edit">Редактирование {$emailKey}</message>
+	<message key="plugins.generic.translator.file.reference">Исходная версия</message>
+	<message key="plugins.generic.translator.file.translation">Перевод</message>
+	<message key="plugins.generic.translator.email.reference">Исходная версия</message>
+	<message key="plugins.generic.translator.email.translation">Перевод</message>
+	<message key="plugins.generic.translator.file.reset">Сбросить</message>
+	<message key="plugins.generic.translator.file.resetToReference">Вернуть к исходной</message>
+	<message key="plugins.generic.translator.email.reset">Сбросить</message>
+	<message key="plugins.generic.translator.email.resetToReference">Вернуть к исходной</message>
+	<message key="plugins.generic.translator.file.resetConfirm">Вы уверены, что хотите вернуть содержимое файла к исходной версии?</message>
+	<message key="plugins.generic.translator.email.resetConfirm">Вы уверены, что хотите вернуть содержимое электронные письма к исходной версии?</message>
+	<message key="plugins.generic.translator.file.doesNotExistNote">* Этот файл еще не был переведен.</message>
+	<message key="plugins.generic.translator.email.description">В следующих полях переведите тему, содержимое и описание шаблона письма. Описание используется только для удобства работы управляющего журналом.</message>
+	<message key="plugins.generic.translator.confirmDelete">Вы уверены, что хотите удалить этот элемент? Это действие нельзя отменить.</message>
+	<message key="plugins.generic.translator.deleteKey">Удалить этот ключ</message>
+	<message key="plugins.generic.translator.deleteEmail">Удалить это письмо</message>
+	<message key="plugins.generic.translator.saveBeforeContinuing">Перед тем как продолжить, убедитесь, что вы сохранили все изменения, сделанные на этой странице, в противном случае они будут потеряны. Вы хотите продолжить? Если да, то все несохраненные изменения будут потеряны.</message>
+	<message key="plugins.generic.translator.couldNotWriteFile">Не могу записать файл «{$filename}». Внимательно проверьте, чтобы разрешения для файла были заданы корректно.</message>
+	<message key="plugins.generic.translator.errorEditingFile">Возникла проблема при редактировании файла "{$filename}". Внимательно проверьте, чтобы убедиться, что файл соответствует ожидаемому формату.</message>
+</locale>

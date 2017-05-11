@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/sr_SR/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the sr_SR (Cрпски) locale.
+  *
+  -->
+
+<locale name="sr_SR" full_name="Cрпски">
+	<message key="plugins.reports.reviews.displayName">Izveštaj recenzenata</message>
+	<message key="plugins.reports.reviews.description">Ovaj dodatak implementira CVS izveštaj koji sadrži listu recenzijskih zaduženja za časopis.</message>
+	<message key="plugins.reports.reviews.round">Runda</message>
+	<message key="plugins.reports.reviews.reviewerId">ID recenzenta</message>
+	<message key="plugins.reports.reviews.reviewer">Recenzent</message>
+	<message key="plugins.reports.reviews.dateAssigned">Datum zaduženja</message>
+	<message key="plugins.reports.reviews.dateNotified">Datum obaveštenja</message>
+	<message key="plugins.reports.reviews.dateConfirmed">Datum potvrde</message>
+	<message key="plugins.reports.reviews.dateCompleted">Datum završetka</message>
+	<message key="plugins.reports.reviews.dateReminded">Datum podsetnika</message>
+</locale>
+

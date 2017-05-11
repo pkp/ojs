@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/es_ES/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_(es_ES)
+  * Localization strings.
+  -->
+
+<locale name="es_ES" full_name="Español (España)">
+	<message key="plugins.reports.reviews.displayName">Informe de Revisión</message>
+	<message key="plugins.reports.reviews.description">Este plugin crea un informa en formato CSV que contiene una lista de asignaciones de revisiones para una revista.</message>
+	<message key="plugins.reports.reviews.round">Ronda</message>
+	<message key="plugins.reports.reviews.reviewerId">ID del revisor</message>
+	<message key="plugins.reports.reviews.reviewer">Revisor</message>
+	<message key="plugins.reports.reviews.dateAssigned">Fecha Asignada</message>
+	<message key="plugins.reports.reviews.dateNotified">Fecha Notificada</message>
+	<message key="plugins.reports.reviews.dateConfirmed">Fecha Confirmada</message>
+	<message key="plugins.reports.reviews.dateCompleted">Fecha Completada</message>
+	<message key="plugins.reports.reviews.dateReminded">Fecha Recordada</message>
+</locale>
+

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/pdfJsViewer/locale/de_DE/locale.xml
+  *
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the de_DE (Deutsch (Deutschland)) locale
+  -->
+
+<locale name="de_DE" full_name="Deutsch (Deutschland)">
+	<message key="plugins.generic.pdfJsViewer.name">PDF.JS-PDF-Viewer-Plug-In</message>
+	<message key="plugins.generic.pdfJsViewer.description"><![CDATA[Dieses Plug-In benutzt den <a href="http://mozilla.github.io/pdf.js">pdf.js PDF viewer</a>, um PDFs auf den Fahnenseiten von Artikeln und Ausgaben anzuzeigen.]]></message>
+</locale>

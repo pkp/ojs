@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/de_DE/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_German_(de_DE)
+  * Localization strings.
+  -->
+
+<locale name="de_DE" full_name="Deutsch (Deutschland)">
+	<message key="plugins.reports.reviews.displayName">Begutachtungs-Bericht</message>
+	<message key="plugins.reports.reviews.description">Dieses Plugin implementiert einen CSV-Bericht, der eine Liste von Begutachtungsanweisungen für eine Zeitschrift enthält.</message>
+	<message key="plugins.reports.reviews.round">Durchgang</message>
+	<message key="plugins.reports.reviews.reviewerId">Gutacher/in-ID</message>
+	<message key="plugins.reports.reviews.reviewer">Gutachter/in</message>
+	<message key="plugins.reports.reviews.dateAssigned">Auftragsdatum</message>
+	<message key="plugins.reports.reviews.dateNotified">Benachrichtigungsdatum</message>
+	<message key="plugins.reports.reviews.dateConfirmed">Bestätigungsdatum</message>
+	<message key="plugins.reports.reviews.dateCompleted">Fertigstellungsdatum</message>
+	<message key="plugins.reports.reviews.dateReminded">Erinnerungsdatum</message>
+</locale>
+

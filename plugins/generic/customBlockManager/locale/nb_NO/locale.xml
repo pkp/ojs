@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/customBlockManager/locale/nb_NO/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the nb_NO (Norsk bokmål) locale.
+  *
+  -->
+ 
+<locale name="nb_NO" full_name="Norsk bokmål">
+	<message key="plugins.generic.customBlockManager.displayName">Administrasjon av tilpassede blokker</message>
+	<message key="plugins.generic.customBlockManager.blockName">Blokknavn</message>	
+	<message key="plugins.generic.customBlockManager.addBlock">Legg til blokk</message>	
+
+	<message key="plugins.generic.customBlock.content">Innhold</message>
+	<message key="plugins.generic.customBlock.nameSuffix">(Programutvidelse for tilpassede blokker)</message>
+	<message key="plugins.generic.customBlock.description">Dette er en brukergenerert blokk.</message>
+</locale>

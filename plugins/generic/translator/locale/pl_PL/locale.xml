@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the pl_PL (Polski) locale.
+  * Plik językowy dla pl_PL
+  -->
+
+<locale name="pl_PL" full_name="Język Polski">
+	<message key="plugins.generic.translator.name">Translator Plugin</message>
+	<message key="plugins.generic.translator.description">Ten plugin pozwala na zarządzanie plikami tłumaczeń poprzez przeglądarkę.</message>
+	<message key="plugins.generic.translator.longdescription">This area allows the Site Administrator to build, modify and check translations. This is site-wide and should not be used to customize a single press/journal. If you correct or create a translation, please consider submitting it to the Public Knowledge Project for distribution with future releases.</message>
+	<message key="plugins.generic.translator.localeDescription">Ta strona zawiera listę składników tłumaczeń oprogramowania i pozwala tłumaczowi na ich modyfikację. Pełne tłumaczenie musi obejmować wszystkie te składniki.</message>
+	<message key="plugins.generic.translator.localeFileContents">Zawartość pliku tłumaczenia</message>
+	<message key="plugins.generic.translator.localeName">Nazwa języka</message>
+	<message key="plugins.generic.translator.localeKey">Klucz</message>
+	<message key="plugins.generic.translator.localeKey.description">Wprowadź klucz wiadomości, którą chcesz odnaleźć.</message>
+	<message key="plugins.generic.translator.localeKeyValue">Zawartość</message>
+	<message key="plugins.generic.translator.translate">Tłumacz</message>
+	<message key="plugins.generic.translator.availableLocales">Dostępne języki</message>
+	<message key="plugins.generic.translator.check">Sprawdź</message>
+	<message key="grid.action.checkLocale">Sprawdź język</message>
+	<message key="grid.action.download">Pobierz</message>
+	<message key="plugins.generic.translator.localeFile.complete">Zakończony ({$reference})</message>
+	<message key="plugins.generic.translator.localeFile.incompleteCount">{$complete} / {$reference} ({$percent}%)</message>
+	<message key="plugins.generic.translator.localeFile.doesNotExist">Brak ({$reference})</message>
+	<message key="plugins.generic.translator.miscFile.complete">Zakończony</message>
+	<message key="plugins.generic.translator.miscFile.doesNotExist">Brak</message>
+	<message key="plugins.generic.translator.email.complete">Zakończony</message>
+	<message key="plugins.generic.translator.email.doesNotExist">Brak</message>
+
+	<message key="plugins.generic.translator.errors">Błędy w plikach językowych</message>
+
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_KEY.title">Brakujące klucze</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_EXTRA_KEY.title">Dodatkowe klucze</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_DIFFERING_PARAMS.title">Odmienne listy parametrów</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_FILE.title">Brakujące pliki językowe</message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_MISSING_EMAIL.title">Brakujące emaile</message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_EXTRA_EMAIL.title">Dodatkowe emaile</message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_DIFFERING_PARAMS.title">Odmienne listy parametrów emaili</message>
+
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_KEY.message">Klucz "{$key}" brakuje w pliku"{$filename}". Wersja angielska została ustawiona jako domyślna.</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_EXTRA_KEY.message">Klucz "{$key}" nie jest używany i może być usunięty z "{$filename}".</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_DIFFERING_PARAMS.message">Klucz "{$key}" w "{$filename}" wykorzystuje ustawienia takie, jak w wersji angielskiej. Proszę dokładnie sprawdzić, czy zawiera wszystkie istotne parametry. Sprzeczne opcje:</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_FILE.message">Pliku językowego "{$filename}" brakuje lub jest nieczytelny.</message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_MISSING_EMAIL.message">Treść emaila "{$key}" brakuje w tłumaczeniu.</message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_EXTRA_EMAIL.message">Treść emaila "{$key}" nie jest używana i może być usunięta.</message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_DIFFERING_PARAMS.message">Wiadomość e-mail "{$key}" wykorzystuje ustawienia takie, jak w wersji angielskiej. Proszę dokładnie sprawdzić, że zawiera wszystkie istotne parametry. Sprzeczne opcje:</message>
+	<message key="plugins.generic.translator.jumpTo">Przejdź do...</message>
+	<message key="plugins.generic.translator.locale">{$locale} Język</message>
+	<message key="plugins.generic.translator.localeFiles">Pliki języka</message>
+	<message key="plugins.generic.translator.miscFiles">Różne pliki</message>
+	<message key="plugins.generic.translator.emails">Szablony wiadomości</message>
+	<message key="plugins.generic.translator.file.filename">Nazwa pliku</message>
+	<message key="plugins.generic.translator.file.edit">Edytowanie {$filename}</message>
+	<message key="plugins.generic.translator.email.edit">Edytowanie {$emailKey}</message>
+	<message key="plugins.generic.translator.file.reference">Wersja oryginalna</message>
+	<message key="plugins.generic.translator.file.translation">Tłumaczenie</message>
+	<message key="plugins.generic.translator.email.reference">Wersja oryginalna</message>
+	<message key="plugins.generic.translator.email.translation">Tłumaczenie</message>
+	<message key="plugins.generic.translator.file.reset">Przywróc</message>
+	<message key="plugins.generic.translator.file.resetToReference">Przywróć oryginał</message>
+	<message key="plugins.generic.translator.email.reset">Przywróc</message>
+	<message key="plugins.generic.translator.email.resetToReference">Przywróć oryginał</message>
+	<message key="plugins.generic.translator.file.resetConfirm">Czy na pewno chcesz przywrócić zawartość pliku?</message>
+	<message key="plugins.generic.translator.email.resetConfirm">Czy na pewno chcesz przywrócić zawartość e-mail?</message>
+	<message key="plugins.generic.translator.file.doesNotExistNote">* Ten plik nie został jeszcze przetłumaczony.</message>
+	<message key="plugins.generic.translator.email.description">W następujących pola ustawić temat, treść i opis szablonu listu. Opis jest wykorzystywany tylko w celu ułatwienia pracy w systemie.</message>
+	<message key="plugins.generic.translator.confirmDelete">Czy na pewno chcesz usunąć ten element? Ta czynność nie może być cofnięta.</message>
+	<message key="plugins.generic.translator.deleteKey">Skasuj ten klucz</message>
+	<message key="plugins.generic.translator.deleteEmail">Skasuj ten email</message>
+	<message key="plugins.generic.translator.saveBeforeContinuing">Pamiętaj, aby zapisać zmiany wprowadzone na tej stronie przed kontynuowaniem lub zostaną one utracone. Czy chcesz kontynuować? Jeśli tak, to wszelkie niezapisane zmiany zostaną utracone.</message>
+	<message key="plugins.generic.translator.couldNotWriteFile">Nie można zapisać pliku "{$filename}". Należy dokładnie sprawdzić, czy uprawnienia do pliku są ustawione prawidłowo.</message>
+	<message key="plugins.generic.translator.errorEditingFile">Wystąpił problem podczas edycji pliku "{$filename}". Należy dokładnie sprawdzić czy plik jest w odpowiednim formacie.</message>
+</locale>

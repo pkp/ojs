@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/customBlockManager/locale/fr_CA/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the fr_CA locale.
+  *
+  -->
+ 
+<locale name="fr_CA" full_name="Français (Canada)">
+	<message key="plugins.generic.customBlockManager.displayName">Gestionnaire de bloc personnalisé</message>
+	<message key="plugins.generic.customBlockManager.blockName">Nom du bloc</message>	
+	<message key="plugins.generic.customBlockManager.addBlock">Ajouter un bloc</message>	
+
+	<message key="plugins.generic.customBlock.content">Contenu</message>
+	<message key="plugins.generic.customBlock.nameSuffix">(Plugiciel de bloc personnalisé)</message>
+	<message key="plugins.generic.customBlock.description">Il s'agit d'un bloc créé par l'utilisateur.</message>
+</locale>

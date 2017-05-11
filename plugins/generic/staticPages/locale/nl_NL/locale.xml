@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/nl_NL/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the nl_NL locale.
+  *
+  -->
+ 
+<locale name="nl_NL" full_name="Nederlands">
+	<message key="plugins.generic.staticPages.displayName">Statische pagina's plugin</message>
+	<message key="plugins.generic.staticPages.description">Met deze plugin kunt u statische inhoud toevoegen.</message>
+	<message key="plugins.generic.staticPages.pageTitle">Titel</message>
+	<message key="plugins.generic.staticPages.content">Inhoud</message>
+
+	<message key="plugins.generic.staticPages.path">Pad</message>
+	<message key="plugins.generic.staticPages.requirement.tinymce"><![CDATA[<strong>De TinyMCE plugin moet geïnstalleerd en geactiveerd zijn om inhoud toe te voegen of te bewerken.</strong>]]></message>
+
+	<message key="plugins.generic.staticPages.editAddContent">Inhoud bewerken/toevoegen</message>
+
+	<message key="plugins.generic.staticPages.addStaticPage">Statische pagina toevoegen</message>
+	<message key="plugins.generic.staticPages.addNewPage">Nieuwe pagina toevoegen</message>
+	<message key="plugins.generic.staticPages.editStaticPage">Statische pagina bewerken</message>	
+
+	<message key="plugins.generic.staticPages.settingInstructions">Het formulier hieronder toont alle statische pagina's die u aangemaakt heeft. Gebruik de links aan de rechterkant om de pagina's te bewerken of te verwijderen.</message>
+	<message key="plugins.generic.staticPages.editInstructions">Gebruik het formulier hieronder om pagina-inhoud toe te voegen of te bewerken.</message>
+	<message key="plugins.generic.staticPages.duplicatePath">Dit pad is al in gebruik bij een andere pagina.</message>
+	
+	<message key="plugins.generic.staticPages.pageSaved">Pagina met succes opgeslagen.</message>
+	<message key="plugins.generic.staticPages.pageDeleted">Pagina met succes verwijderd.</message>
+	
+	<message key="plugins.generic.staticPages.noneExist">Geen pagina's aangemaakt</message>
+</locale>

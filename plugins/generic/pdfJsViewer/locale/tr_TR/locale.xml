@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/pdfJsViewer/locale/tr_TR/locale.xml
+  *
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings
+  -->
+
+<locale name="tr_TR" full_name="Türkçe">
+	<message key="plugins.generic.pdfJsViewer.name">PDF.JS PDF Görüntüleyici Eklentisi</message>
+	<message key="plugins.generic.pdfJsViewer.description"><![CDATA[Bu eklenti sayı dizgi tablalarında gömülü PDF'leri görüntülemek için <a href="http://mozilla.github.io/pdf.js">pdf.js PDF görüntüleyici</a> kullanır.]]></message>
+</locale>

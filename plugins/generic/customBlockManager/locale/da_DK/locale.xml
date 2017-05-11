@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/customBlockManager/locale/da_DK/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+ 
+<locale name="da_DK" full_name="Dansk">
+	<message key="plugins.generic.customBlockManager.displayName">Custom Block Manager</message>
+	<message key="plugins.generic.customBlockManager.manage">Administrér 'Custom Blocks'</message>
+	<message key="plugins.generic.customBlockManager.description">Denne plug-in gør dig i stand til håndtere (tilføje, redigere og slette) 'Custom Blocks' (brugerdefinederede blokke) i sidemenuen.</message>
+	<message key="plugins.generic.customBlockManager.customBlocks">Custom Blocks</message>
+	<message key="plugins.generic.customBlockManager.blockName">Elementnavn</message>
+	<message key="plugins.generic.customBlockManager.addBlock">Tilføj element</message>	
+	<message key="plugins.generic.customBlockManager.noneCreated">Der er ikke oprettet nogen 'Custom Blocks'</message>
+	
+	<message key="plugins.generic.customBlock.content">Indhold</message>
+	<message key="plugins.generic.customBlock.nameSuffix">(Custom Block Plugin)</message>
+	<message key="plugins.generic.customBlock.description">Dette er et brugerdefineret element.</message>
+	<message key="plugins.generic.customBlock.nameRequired">Et 'Custom Block' navn er påkrævet.</message>
+	<message key="plugins.generic.customBlock.nameRegEx">'Custom Block' navnet må indeholde bogstaver, numre og bindestreg/understregning.</message>
+</locale>

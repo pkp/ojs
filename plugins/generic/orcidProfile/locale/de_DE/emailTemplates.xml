@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE email_texts SYSTEM "../../../../../lib/pkp/dtd/emailTemplateData.dtd">
+
+<!--
+  * @file plugins/generic/orcidProfile/locale/de_DE/emailTemplates.xml
+  *
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localized email templates XML file.
+  -->
+
+<email_texts locale="de_DE">
+	<email_text key="ORCID_COLLECT_AUTHOR_ID">
+		<subject>ORCID-Meldung</subject>
+		<body>Liebe/r {$authorName},
+
+Sie sind als Co-Autor/in des eingereichten Beitrags "{$articleTitle}" bei der Zeitschrift {$journalName} benannt worden. 
+
+Um Ihre Autor/innenschaft zu bestätigen, geben Sie bitte Ihren ORCID-iD für diese Einreichung an, indem Sie den unten angegebenen Link aufrufen.
+
+{$authorOrcidUrl}
+
+Wenn Sie Fragen dazu haben, melden Sie sich bitte bei mir.
+
+{$editorialContactSignature}
+
+
+</body>
+		<description>Diese E-Mail-Vorlage wird verwendet, um die ORCID-iDs von Co-Autor/innen einzuholen.</description>
+	</email_text>
+</email_texts>

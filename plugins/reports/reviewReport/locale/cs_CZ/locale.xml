@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/cs_CZ/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the cs_CZ locale.
+  *
+  -->
+
+<locale name="cs_CZ" full_name="Čeština">
+	<message key="plugins.reports.reviews.displayName">Report recenzí</message>
+	<message key="plugins.reports.reviews.description">Tento plugin zavádí CSV report obsahující seznam recenzních úkolů zpracovaných pro časopis.</message>
+	<message key="plugins.reports.reviews.round">Kolo</message>
+	<message key="plugins.reports.reviews.reviewerId">ID recenzenta</message>
+	<message key="plugins.reports.reviews.reviewer">Recenzent</message>
+	<message key="plugins.reports.reviews.dateAssigned">Datum přidělení</message>
+	<message key="plugins.reports.reviews.dateNotified">Datum oznámení</message>
+	<message key="plugins.reports.reviews.dateConfirmed">Datum potvrzení</message>
+	<message key="plugins.reports.reviews.dateCompleted">Datum dokončení</message>
+	<message key="plugins.reports.reviews.dateReminded">Datum připomenutí</message>
+</locale>
+

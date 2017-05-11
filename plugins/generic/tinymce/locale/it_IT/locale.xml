@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/tinymce/locale/it_IT/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the it_IT (Italiano) locale.
+  *
+  -->
+ 
+<locale name="it_IT" full_name="Italiano">
+	<message key="plugins.generic.tinymce.name">Editor TinyMCE</message>
+	<message key="plugins.generic.tinymce.description"><![CDATA[Questo plugin attiva la modifica WYSIWYG delle caselle di testo in OJS usando <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a>.]]></message>
+	<message key="plugins.generic.tinymce.settings">Impostazioni</message>
+</locale>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/googleAnalytics/locale/de_DE/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Google Analytics plugin localization strings for the de_DE (Deutsch (Deutschland)) locale.
+  * Please contact Marco Tullney, marco.tullney@fu-berlin.de, with any questions regarding this translation.
+  -->
+ 
+<locale name="de_DE" full_name="Deutsch (Deutschland)">
+
+	<!-- Google Analytics -->
+	<message key="plugins.generic.googleAnalytics.displayName">Google-Analytics-Plugin</message>
+	<message key="plugins.generic.googleAnalytics.description"><![CDATA[Verbinden Sie OJS mit Google Analytics, der Google-Anwendung zur Nutzungsanalyse von Webseiten-Traffic. Voraussetzung ist, dass Sie bereits einen Google-Analytics-Zugang haben. Siehe <a href="http://www.google.com/analytics/" title="Google Analytics site">Google Analytics</a> für weitere Informationen.]]></message>
+
+	<!-- Google Analytics Settings Management -->
+	<message key="plugins.generic.googleAnalytics.manager.settings.description"><![CDATA[<p>Mit diesem Plug-In ist es möglich, Nutzung und Traffic für diese Zeitschrift zu erheben und zu analysieren. Bitte beachten Sie, dass Sie hierfür bereits einen Google-Analytics-Zugang haben müssen. Siehe <a href="http://www.google.com/analytics/" title="Google Analytics site">Google Analytics</a> für weitere Informationen.</p>]]></message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteId">Account-ID</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdRequired">Bitte geben Sie die Account-ID ein.</message>
+	<message key="plugins.generic.googleAnalytics.authorAccount">Google Analytics Account-Nummer</message>
+	<message key="plugins.generic.googleAnalytics.authorAccount.description">Um die Leser/innenschaft veröffentlichter Artikel per Google Analytics zu verfolgen, geben Sie hier eine Account-Nummer ein (z.B. UA-xxxxxx-x).</message>
+	<message key="plugins.generic.googleAnalytics.authorAccountInvalid">Eine oder mehrere Google-Analytics-Accountnummern, die für Autor/innen des Beitrags eingegeben worden sind, sind nicht gültig.</message>
+</locale>

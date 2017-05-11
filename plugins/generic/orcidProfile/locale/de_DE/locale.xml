@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/orcidPlugin/locale/de_DE/locale.xml
+  *
+  * Copyright (c) 2015-2016 University of Pittsburgh
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * ORCID Profile plugin localization strings
+  -->
+ 
+<locale name="de_DE" full_name="Deutsch (Deutschland)">
+
+	<message key="plugins.generic.orcidProfile.displayName">ORCID-Profil-Plugin</message>
+	<message key="plugins.generic.orcidProfile.description"><![CDATA[Ermöglicht das Importieren von Benutzerinformationen von ORCID.]]></message>
+	<message key="plugins.generic.orcidProfile.instructions"><![CDATA[Sie können dieses Formular vorbefüllen mit Informationen aus einem ORCID-Profil. Geben Sie eine E-Mail-Adresse oder ORCID-iD, die mit einem ORCID-Profil verknüpft sind, an und klicken "Abschicken".]]></message>
+	<message key="plugins.generic.orcidProfile.noData">Konnte keine ORCID-Informationen finden.</message>
+	<message key="plugins.generic.orcidProfile.emailOrOrcid">E-Mail-Adresse oder ORCID-iD:</message>
+	<message key="plugins.generic.orcidProfile.submitAction">Abschicken</message>
+	<message key="plugins.generic.orcidProfile.manager.orcidProfileSettings">ORCID-Profil-Einstellungen</message>
+	<message key="plugins.generic.orcidProfile.manager.settings.description">Die ORCID-API konfigurieren, um ORCID-Profilinformationen in Nutzerprofile einlesen zu können.</message>
+	<message key="plugins.generic.orcidProfile.manager.settings.orcidProfileAPIPath">ORCID-API</message>
+	<message key="plugins.generic.orcidProfile.manager.settings.orcidProfileAPIPath.public">Public</message>
+	<message key="plugins.generic.orcidProfile.manager.settings.orcidProfileAPIPath.publicSandbox">Public Sandbox</message>
+	<message key="plugins.generic.orcidProfile.manager.settings.orcidProfileAPIPath.member">Member</message>
+	<message key="plugins.generic.orcidProfile.manager.settings.orcidProfileAPIPath.memberSandbox">Member Sandbox</message>
+	<message key="plugins.generic.orcidProfile.manager.settings.orcidClientId">ClientID</message>
+	<message key="plugins.generic.orcidProfile.manager.settings.orcidClientSecret">Client Secret</message>
+	<message key="plugins.generic.orcidProfile.author.submission">ORCID-Einreichung</message>
+	<message key="plugins.generic.orcidProfile.author.submission.success">Ihre Einreichung wurde erfolgreich mit Ihrem ORCID-Profil verknüpft.</message>
+	<message key="plugins.generic.orcidProfile.author.submission.failure">Ihre Einreichung könnte nicht erfolgreich mit Ihrem ORCID-Profil verknüpft werden. Bitte kontaktieren Sie den/die Zeitschriftenverwalter/in und geben Sie Ihren Namen, ORCID-iD und Details zu Ihrer Einreichung an.</message>
+	<message key="plugins.generic.orcidProfile.authFailure">OJS konnte nicht mit ORCID kommunizieren. Bitte kontaktieren Sie den/die Zeitschriftenverwalter/in und geben Sie Ihren Namen, ORCID-iD und Details zu Ihrer Einreichung an.</message>
+</locale>

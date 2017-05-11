@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/googleAnalytics/locale/it_IT/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Google Analytics plugin localization strings for the it_IT (Italiano) locale.
+  * Contributed by Andrea Marchitelli - CINECA
+  *
+  -->
+ 
+<locale name="it_IT" full_name="Italiano">
+
+	<!-- Google Analytics -->
+	<message key="plugins.generic.googleAnalytics.displayName">Statistiche con Google Analytics</message>
+	<message key="plugins.generic.googleAnalytics.description"><![CDATA[Integra OJS con Google Analytics, il sito web di Google per l'analisi delle statistiche sul  traffico. E' necessario che tu abbia già impostato un account in Google Analytics. Si veda <a href="http://www.google.com/analytics/" title="Google Analytics site">Google Analytics site</a> per maggiori informazioni.]]></message>
+
+	<!-- Google Analytics Settings Management -->
+	<message key="plugins.generic.googleAnalytics.manager.settings">Impostazioni</message>
+	<message key="plugins.generic.googleAnalytics.manager.googleAnalyticsSettings">Impostazioni di Google Analytics</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.description"><![CDATA[<p>Abilitando questo plugin, Google Analytics può raccogliere e analizzare l'utilizzo e il traffico del sito web per questa rivista. Nota che questo plugin richiede che tu abbia già configurato un account di Google Analytics. Si veda <a href="http://www.google.com/analytics/" title="Google Analytics site">Google Analytics site</a> per maggiori informazioni.</p>]]></message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteId">Numero di account</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdInstructions">In Google Analytics, clica su Check Status per vedere il codice di tracciamento del tuo sito. Il numero di account è visualizzato nel codice di tracciamento: _uacct = "###". Inserisci il testo che corrisponde a ###.</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdRequired">Per favore inserisci un numero di account.</message>
+
+	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCode">Codice di monitoraggio</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCodeRequired">Seleziona il codice di monitoraggio da utilizzare</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.urchin">Codice di monitoraggio legacy (urchin.js)</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.ga">Nuovo codice di monitoraggio (ga.js)</message>
+	<message key="plugins.generic.googleAnalytics.authorAccount.description">Per tracciare la lettura degli articoli utilizzando Google Analytics, inserisci il numero dell'account qui (es. UA-xxxxxx-x).</message>
+	<message key="plugins.generic.googleAnalytics.authorAccountInvalid">Uno o più numeri di account inseriti non sono validi.</message>
+	<message key="plugins.generic.googleAnalytics.authorAccount">Numero dell'account Google Analytics</message>
+</locale>

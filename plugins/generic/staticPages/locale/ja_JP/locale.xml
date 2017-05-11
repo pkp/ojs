@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/ja_JP/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the ja_JP locale.
+  *
+  -->
+ 
+<locale name="ja_JP" full_name="日本語">
+	<message key="plugins.generic.staticPages.displayName">統計ページプラグイン</message>
+	<message key="plugins.generic.staticPages.description">このプラグインは統計のコンテンツ管理ができます。</message>
+	<message key="plugins.generic.staticPages.pageTitle">タイトル</message>
+	<message key="plugins.generic.staticPages.content">コンテンツ</message>
+
+	<message key="plugins.generic.staticPages.path">パス</message>
+	<message key="plugins.generic.staticPages.requirement.tinymce"><![CDATA[<strong>コンテンツを編集・追加するためには，TinyMCE プラグインがインストールされていなければなりません。</strong>]]></message>
+
+	<message key="plugins.generic.staticPages.editAddContent">コンテンツの編集・追加</message>
+
+	<message key="plugins.generic.staticPages.addStaticPage">統計ページの追加</message>
+	<message key="plugins.generic.staticPages.addNewPage">新規ページの作成</message>
+	<message key="plugins.generic.staticPages.editStaticPage">統計ページの編集</message>	
+
+	<message key="plugins.generic.staticPages.settingInstructions">下記のフォームには作成された全ての統計ページが表示されています。右のリンクを使用してページの編集および削除が可能です。</message>
+	<message key="plugins.generic.staticPages.editInstructions">ページを追加・編集するために下記のフォームを使用してください。</message>
+	<message key="plugins.generic.staticPages.duplicatePath">この path は他の統計ページで既に使用されています。</message>
+	
+	<message key="plugins.generic.staticPages.pageSaved">ページは正常に保存されました。</message>
+	<message key="plugins.generic.staticPages.pageDeleted">ページは正常に削除されました。</message>
+	
+	<message key="plugins.generic.staticPages.noneExist">ページが作成されていません。</message>
+</locale>

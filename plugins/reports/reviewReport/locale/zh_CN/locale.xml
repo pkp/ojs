@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/zh_CN/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the zh_CN (简体中文) locale.
+  *
+  -->
+
+<locale name="zh_CN" full_name="简体中文">
+	<message key="plugins.reports.reviews.displayName">审查报告(Review Report)</message>
+	<message key="plugins.reports.reviews.description">该插件实现了一个含有一本期刊的一系列审查作业的CSV报告。This plugin implements a CSV report containing a list of review assignments for a journal.</message>
+	<message key="plugins.reports.reviews.round">轮次(Round)</message>
+	<message key="plugins.reports.reviews.reviewerId">审查者ID(Reviewer ID)</message>
+	<message key="plugins.reports.reviews.reviewer">审查者(Reviewer)</message>
+	<message key="plugins.reports.reviews.dateAssigned">指派日期(Date Assigned)</message>
+	<message key="plugins.reports.reviews.dateNotified">通报日期(Date Notified)</message>
+	<message key="plugins.reports.reviews.dateConfirmed">确认日期(Date Confirmed)</message>
+	<message key="plugins.reports.reviews.dateCompleted">完成日期(Date Completed)</message>
+	<message key="plugins.reports.reviews.dateReminded">提醒日期(Date Reminded)</message>
+</locale>
+

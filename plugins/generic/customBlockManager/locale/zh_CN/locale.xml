@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/customBlockManager/locale/zh_CN/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the zh_CN (简体中文) locale.
+  *
+  -->
+ 
+<locale name="zh_CN" full_name="简体中文">
+	<message key="plugins.generic.customBlockManager.displayName">自定义区块管理(Custom Block Manager)</message>
+	<message key="plugins.generic.customBlockManager.description">本插件允许在边栏增加区块，和对边栏区块的重新排序。(This plugin lets you create addition sidebar blocks.  Once they are created, you can edit their content and rearrange them within the sidebars.)</message>	
+	<message key="plugins.generic.customBlockManager.blockName">区块名称(Block Name)</message>	
+	<message key="plugins.generic.customBlockManager.addBlock">添加(Add Block)</message>	
+
+	<message key="plugins.generic.customBlock.content">内容(Content)</message>
+	<message key="plugins.generic.customBlock.nameSuffix">(自定义块插件)(Custom Block Plugin)</message>
+	<message key="plugins.generic.customBlock.description">这是一个用户生成的区块。(This is a user-generated block.)</message>
+</locale>

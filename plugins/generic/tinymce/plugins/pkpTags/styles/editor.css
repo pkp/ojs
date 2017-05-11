@@ -1,0 +1,35 @@
+/**
+ * @file plugins/generic/tinymce/styles/editor.css
+ *
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @brief Additional CSS for TinyMCE content editor UI
+ */
+
+.mce-i-pkpTags {
+    background: url('../img/icon.png');
+    height: 20px;
+    width: 20px;
+}
+
+.mce-floatpanel ul {
+    list-style: none;
+    padding: 0.5em;
+}
+
+.mce-floatpanel li {
+    font-size: 12px;
+}
+.mce-floatpanel li a {
+    display: block;
+    margin: 0 -0.5em;
+    padding: 0.25em 0.5em;
+    font-size: 12px;
+}
+
+.mce-floatpanel li a:hover,
+.mce-floatpanel li a:focus {
+    background: #ddd;
+}

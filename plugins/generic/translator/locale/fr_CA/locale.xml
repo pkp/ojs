@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/translator/locale/fr_CA/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the fr_CA (Français (Canada)) locale.
+  -->
+
+<locale name="fr_CA" full_name="Français (Canada)">
+	<message key="plugins.generic.translator.name">Plugiciel de traduction</message>
+	<message key="plugins.generic.translator.description">Ce plugiciel permet l'entretien en ligne de fichiers de traduction.</message>
+	<message key="plugins.generic.translator.longdescription">Cette zone permet à l'Administrateur du site de créer, modifier et vérifier les traductions de OMP.Elle s'applique à l'ensemble du site et ne devrait pas être utilisée  pour personnaliser une revue en libre accès particulière. Si vous corrigez ou créez une traduction, veuillez la soumettre au Public Knowledge Project pour qu'elle puisse être distribuée dans des versions futures.</message>
+	<message key="plugins.generic.translator.localeDescription">Cette page liste toutes les composantes d'une traduction de l'OMP et permet au traducteur de modifier chacune d'entre elles. Une traduction complète devrait inclure les traductions de toutes les composantes.</message>
+
+	<message key="plugins.generic.translator.localeName">Nom de la langue</message>
+	<message key="plugins.generic.translator.localeKey">Clé</message>
+	<message key="plugins.generic.translator.localeKeyValue">Valeur</message>
+	<message key="plugins.generic.translator.translate">Traduire</message>
+	<message key="plugins.generic.translator.availableLocales">Langues disponibles</message>
+	<message key="plugins.generic.translator.check">Vérifier</message>
+
+	<message key="plugins.generic.translator.errors">Erreurs de langue</message>
+
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_KEY.title">Clés manquantes</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_EXTRA_KEY.title">Clés supplémentaires</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_DIFFERING_PARAMS.title">Listes de paramètres divergents</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_FILE.title">Fichiers de langue manquants</message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_MISSING_EMAIL.title">Courriels manquants</message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_EXTRA_EMAIL.title">Courriels supplémentaires</message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_DIFFERING_PARAMS.title">Listes de paramètres de courriels divergents</message>
+
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_KEY.message">La clé "{$key}" est absente de "{$filename}". La version anglaise a été fournie par défaut.</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_EXTRA_KEY.message">La clé "{$key}" n'est plus utilisée et peut être supprimée de "{$filename}".</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_DIFFERING_PARAMS.message">La clé de langue "{$key}" dans "{$filename}" diffère de la langue de référence dans son utilisation des paramètres. Veuillez vérifier qu'elle contient tous les paramètres pertinents. Le(s)  paramètre(s) qui ne correspond(ent) pas est(sont) :</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_FILE.message">Le fichier de langue "{$filename}" est absent ou illisible.</message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_MISSING_EMAIL.message">Le courriel "{$key}" ne se trouve pas dans la traduction.</message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_EXTRA_EMAIL.message">Le courriel "{$key}" n'est plus utilisé et peut être supprimé.</message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_DIFFERING_PARAMS.message">Le courriel "{$key}" diffère de la langue de référence dans son utilisation des paramètres. Veuillez vérifier qu'elle contient tous les paramètres pertinents. Le(s)  paramètre(s) qui ne correspond(ent) pas est(sont) :</message>
+
+	<message key="plugins.generic.translator.locale">{$locale} Langue</message>
+	<message key="plugins.generic.translator.localeFiles">Fichiers de langue</message>
+	<message key="plugins.generic.translator.miscFiles">Fichiers divers</message>
+	<message key="plugins.generic.translator.emails">Modèles de courriel</message>
+	<message key="plugins.generic.translator.file.filename">Nom de fichier</message>
+	<message key="plugins.generic.translator.file.edit">Modification {$filename}</message>
+	<message key="plugins.generic.translator.email.edit">Modification{$emailKey}</message>
+	<message key="plugins.generic.translator.file.reference">Version de référence</message>
+	<message key="plugins.generic.translator.file.translation">Traduction</message>
+	<message key="plugins.generic.translator.email.reference">Version de référence</message>
+	<message key="plugins.generic.translator.email.translation">Traduction</message>
+	<message key="plugins.generic.translator.file.reset">Réinitialiser</message>
+	<message key="plugins.generic.translator.file.resetToReference">Réinitialiser à la version de référence</message>
+	<message key="plugins.generic.translator.email.reset">Réinitialiser</message>
+	<message key="plugins.generic.translator.email.resetToReference">Réinitialiser à la version de référence</message>
+	<message key="plugins.generic.translator.file.resetConfirm">Êtes-vous certain de vouloir réinitialiser le contenu du fichier?</message>
+	<message key="plugins.generic.translator.email.resetConfirm">Êtes-vous certain de vouloir réinitialiser le contenu du courriel?</message>
+	<message key="plugins.generic.translator.file.doesNotExistNote">Ce fichier n'a pas encore été traduit.</message>
+	<message key="plugins.generic.translator.email.description">Dans les champs suivants, traduisez le titre, le corps et la description du modèle de courriel. La description est à l'usage du gestionnaire de la revue seulement.</message>
+	<message key="plugins.generic.translator.confirmDelete">Êtes-vous certain de vouloir supprimer cet élément? Cette action est irréversible.</message>
+	<message key="plugins.generic.translator.deleteKey">Supprimer cette clé</message>
+	<message key="plugins.generic.translator.deleteEmail">Supprimer ce courriel</message>
+	<message key="plugins.generic.translator.saveBeforeContinuing">Assurez-vous de sauvegarder tous les changements effectués sur cette page avant de continuer ou ils seront perdus. Voulez-vous continuer? Si c'est le cas, tout changement non sauvegardé sera perdu.</message>
+	<message key="plugins.generic.translator.tarMissing">La fonction d'export de ce module d'extension a été désactivée parce que le tar binaire configuré est introuvable dans ce système. Assurez-vous que le programme tar est installé, puis configurez le chemin d'accès au tar binaire dans la section config.inc.php [cli].</message>
+	<message key="plugins.generic.translator.localeKey.description">Entrer la clé de paramètre régional complète que vous souhaitez chercher.</message>
+	<message key="plugins.generic.translator.localeFileContents">Contenu du fichier local</message>
+	<message key="grid.action.checkLocale">Vérifier la langue</message>
+	<message key="grid.action.download">Téléchargement</message>
+	<message key="plugins.generic.translator.localeFile.complete">Complétés ({$reference})</message>
+	<message key="plugins.generic.translator.localeFile.incompleteCount">{$complete} / {$reference} ({$percent}%)</message>
+	<message key="plugins.generic.translator.localeFile.doesNotExist">Manquants ({$reference})</message>
+	<message key="plugins.generic.translator.miscFile.complete">Complet</message>
+	<message key="plugins.generic.translator.miscFile.doesNotExist">Manquant</message>
+	<message key="plugins.generic.translator.email.complete">Complet</message>
+	<message key="plugins.generic.translator.email.doesNotExist">Manquant</message>
+	<message key="plugins.generic.translator.jumpTo">Aller à...</message>
+	<message key="plugins.generic.translator.couldNotWriteFile">Impossible d'enregistrer le fichier "{$filename}". Vérifier que le serveur Apache a les permisssions</message>
+	<message key="plugins.generic.translator.errorEditingFile">Il y a un problème avec le fichier "{$filename}". Vérifier que celui-ci respect le format d'entrée.</message>
+</locale>

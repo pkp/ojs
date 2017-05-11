@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/customBlockManager/locale/pt_BR/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the pt_BR locale.
+  *
+  -->
+ 
+<locale name="pt_BR" full_name="Português (Brasil)">
+	<message key="plugins.generic.customBlockManager.displayName">Administração de blocos personalizados</message>
+	<message key="plugins.generic.customBlockManager.blockName">Nome do bloco</message>	
+	<message key="plugins.generic.customBlockManager.addBlock">Incluir bloco</message>	
+
+	<message key="plugins.generic.customBlock.content">Conteúdo</message>
+	<message key="plugins.generic.customBlock.nameSuffix">(Plugin de bloco personalizado)</message>
+	<message key="plugins.generic.customBlock.description">Bloco produzido pelo usuário.</message>
+	<message key="plugins.generic.customBlockManager.manage">Gerenciar Blocos Personalizados</message>
+	<message key="plugins.generic.customBlockManager.description">Este plug-in permite gerenciar (adicionar, editar e excluir) blocos laterais personalizados.</message>
+	<message key="plugins.generic.customBlockManager.customBlocks">Blocos Personalizados</message>
+	<message key="plugins.generic.customBlockManager.noneCreated">Não há blocos personalizados criados.</message>
+	<message key="plugins.generic.customBlock.nameRequired">O nome do bloco personalizado é necessário.</message>
+	<message key="plugins.generic.customBlock.nameRegEx">O nome do bloco personalizado deve conter apenas letras, números e hífens / sublinhados.</message>
+</locale>

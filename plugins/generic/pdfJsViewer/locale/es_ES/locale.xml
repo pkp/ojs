@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/pdfJsViewer/locale/es_ES/locale.xml
+  *
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings
+  -->
+
+<locale name="es_ES" full_name="Español (España)">
+	<message key="plugins.generic.pdfJsViewer.name">Plugin visor de PDFs  PDF.JS</message>
+	<message key="plugins.generic.pdfJsViewer.description"><![CDATA[Este plugin usa el visor de PDFs <a href="http://mozilla.github.io/pdf.js"> pdf.js </a> para visualizar PDFs embebidos en las páginas de galerada de números y artículos.]]></message>
+</locale>
