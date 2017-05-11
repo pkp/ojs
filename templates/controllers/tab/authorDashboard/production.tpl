@@ -1,5 +1,5 @@
 {**
- * lib/pkp/templates/controllers/tab/authorDashboard/production.tpl
+ * templates/controllers/tab/authorDashboard/production.tpl
  *
  * Copyright (c) 2014-2017 Simon Fraser University
  * Copyright (c) 2003-2017 John Willinsky
