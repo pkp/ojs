@@ -50,7 +50,7 @@
 
 	<message key="plugins.pubIds.doi.manager.settings.doiAssignJournalWide">تعيين معرفات DOI</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiAssignJournalWide.description">قم بتعيين معرفات DOI لجميع المكونات المنشورة في المجلة والتي لم يسبق لها أن حصلت على تلك المعرفات. هذا الإجراء لا يمكن استعماله عند تهيئة اللاحقة بشكل منفرد. إن قمت بتعديل إعدادات DOI أعلاه، لطفاً قم بحفظ التغييرات قبل الشروع بهذا الإجراء. تعيين معرفات DOI قد يستغرق وقتاً طويلاً، إعتماداً على عدد المكونات المنشورة في المجلة.</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiAssignJournalWide.confirm">Are you sure you wish to assign DOIs to all published objects that have not been assigned DOIs?</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiAssignJournalWide.confirm">هل أنت متأكد من رغبتك في تعيين معرفات DOI لكل المكونات المنشورة التي لم يسبق لها الحصول على تلك المعرفات؟</message>
 
 	<!-- metadata form -->
 	<message key="plugins.pubIds.doi.editor.doi">DOI</message>
