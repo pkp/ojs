@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/el_GR/manager.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the el_GR (ελληνικά) locale.
+  *
+  -->
+
+<locale name="el_GR" full_name="ελληνικά">
+	<message key="manager.announcements">Ανακοινώσεις</message>
+	<message key="manager.announcements.confirmDelete">Είστε βέβαιοι ότι επιθυμείτε να διαγράψετε οριστικά τη συγκεκριμένη ανακοίνωση;</message>
+	<message key="manager.announcements.create">Δημιουργία νέας ανακοίνωσης</message>
+	<message key="manager.announcements.createTitle">Δημιουργία </message>
+	<message key="manager.announcements.dateExpire">Ημερομηνία λήξης</message>
+	<message key="manager.announcements.edit">Διαμόρφωση ανακοίνωσης</message>
+	<message key="manager.announcements.editTitle">Διαμόρφωση </message>
+	<message key="manager.announcements.form.dateExpireDayIncompleteDate">Επιλέξτε έτος ή/και μήνα εκτός από την ημέρα της ημερομηνίας λήξης.</message>
+	<message key="manager.announcements.form.dateExpire">Ημερομηνία λήξης</message>
+	<message key="manager.announcements.form.dateExpireInstructions">Η ανακοίνωση θα προβάλλεται στους αναγνώστες μέχρι τη συγκεκριμένη ημερομηνία. Αφήστε κενό σε περίπτωση όπου πρέπει να εμφανίζεται επ’αόριστον.</message>
+	<message key="manager.announcements.form.dateExpireMonthIncompleteDate">Επιλέξτε έτος ή/και ημέρα εκτός από τον μήνα της ημερομηνίας λήξης.</message>
+	<message key="manager.announcements.form.dateExpireValid">Επιλέξτε έγκυρη ημερομηνία λήξης της ανακοίνωσης.</message>
+	<message key="manager.announcements.form.dateExpireYearIncompleteDate">Επιλέξτε μήνα ή/και ημέρα εκτός από το έτος της ημερομηνίας λήξης.</message>
+	<message key="manager.announcements.form.description">Περιγραφή</message>
+	<message key="manager.announcements.form.descriptionInstructions">Πλήρες κείμενο της ανακοίνωσης.</message>
+	<message key="manager.announcements.form.descriptionRequired">Απαιτείται περιγραφή της ανακοίνωσης.</message>
+	<message key="manager.announcements.form.descriptionShortInstructions">Σύντομη περιγραφή που εμφανίζεται μαζί με τον τίτλο της ανακοίνωσης.</message>
+	<message key="manager.announcements.form.descriptionShortRequired">Απαιτείται σύντομη περιγραφή της ανακοίνωσης.</message>
+	<message key="manager.announcements.form.descriptionShort">Σύντομη περιγραφή</message>
+	<message key="manager.announcements.form.saveAndCreateAnother">Αποθήκευση και δημιουργία νέου</message>
+	<message key="manager.announcements.form.titleRequired">Απαιτείται τίτλος ανακοίνωσης.</message>
+	<message key="manager.announcements.form.title">Τίτλος</message>
+	<message key="manager.announcements.form.typeId">Τύπος</message>
+	<message key="manager.announcements.form.typeIdValid">Επιλέξτε έγκυρο τύπο ανακοίνωσης.</message>
+	<message key="manager.announcements.noneCreated">Δεν έχουν δημιουργηθεί ανακοινώσεις.</message>
+	<message key="manager.announcements.title">Τίτλος</message>
+	<message key="manager.announcements.type">Τύπος</message>
+	<message key="manager.announcementTypes">Τύποι Ανακοινώσεων</message>
+	<message key="manager.announcementTypes.confirmDelete">Προσοχή! Όλες οι ανακοινώσεις με τον συγκεκριμένο τύπο ανακοίνωσης θα διαγραφούν επίσης. Είστε βέβαιοι ότι επιθυμείτε να συνεχίσετε και να διαγράψετε τον συγκεκριμένο τύπο ανακοίνωσης;</message>
+	<message key="manager.announcementTypes.create">Δημιουργία τύπου ανακοινώσεων</message>
+	<message key="manager.announcementTypes.createTitle">Δημιουργία </message>
+	<message key="manager.announcementTypes.edit">Διαμόρφωση τύπου ανακοινώσεων</message>
+	<message key="manager.announcementTypes.editTitle">Διαμόρφωση</message>
+	<message key="manager.announcementTypes.form.saveAndCreateAnother"> Αποθήκευση και δημιουργία νέου </message>
+	<message key="manager.announcementTypes.form.typeNameExists">Ένας τύπος ανακοίνωσης με το συγκεκριμένο όνομα υπάρχει ήδη.</message>
+	<message key="manager.announcementTypes.form.typeName">Όνομα</message>
+	<message key="manager.announcementTypes.form.typeNameRequired">Απαιτείται όνομα τύπου ανακοίνωσης.</message>
+	<message key="manager.announcementTypes.noneCreated">Δεν έχουν δημιουργηθεί τύποι ανακοινώσεων.</message>
+	<message key="manager.announcementTypes.typeName">Τύπος ανακοίνωσης</message>
+	<message key="manager.emails.confirmDelete">Είστε βέβαιοι ότι επιθυμείτε να διαγράψετε το συγκεκριμένο πρότυπο μηνύματος?</message>
+	<message key="manager.emails.confirmReset"> Είστε βέβαιοι ότι επιθυμείτε να επαναφέρετε το συγκεκριμένο πρότυπο μηνύματος στις προεπιλεγμένες τιμές του?</message>
+	<message key="manager.emails.createEmail">Δημιουργία μηνύματος</message>
+	<message key="manager.emails.disable">Απενεργοποίηση</message>
+	<message key="manager.emails.editEmail">Επεξεργασία μηνύματος</message>
+	<message key="manager.emails.editTestExample">Επεξεργασία παραδείγματος δοκιμής ηλεκτρονικού ταχυδρομείου</message>
+	<message key="manager.emails.emailKey">Κλειδί ηλεκτρονικού ταχυδρομείου</message>
+	<message key="manager.emails.emailKeyExists">Διεύθυνση ηλεκτρονικού ταχυδρομείου με το συγκεκριμένο κλειδί υπάρχει ήδη. Τα κλειδιά του ηλεκτρονικού ταχυδρομείου πρέπει να είναι μοναδικά.</message>
+	<message key="manager.emails.emailTemplate">Πρότυπο e-mail μήνυμα ηλεκτρονικού ταχυδρομείου</message>
+	<message key="manager.emails.emailTemplates">Πρότυπα e-mail μηνύματα </message>
+	<message key="manager.emails.enabled">Ενεργοποίηση του συγκεκριμένου προτύπου μηνύματος</message>
+	<message key="manager.emails.enable">Ενεργοποίηση</message>
+	<message key="manager.emails.form.bodyRequired"> Απαιτείται η συμπλήρωση του κυρίου σώματος για το μήνυμα.</message>
+	<message key="manager.emails.form.subjectRequired">Απαιτείται ο ορισμός θέματος για το μήνυμα.</message>
+	<message key="manager.emails">Έτοιμα Emails</message>
+	<message key="manager.emails.resetAll">Επαναφορά όλων των προτύπων</message>
+	<message key="manager.emails.reset">Επαναφορά</message>
+	<message key="manager.emails.resetToDefault">Επαναφορά των προεπιλογών</message>
+	<message key="manager.filesBrowser">Ευρετήριο Αρχείων</message>
+	<message key="manager.files.confirmDelete">Διαγραφή του συγκεκριμένου αρχείου ή καταλόγου; Λάβετε υπόψη ότι ο κατάλογος δεν πρέπει να περιέχει δεδομένα πριν από τη διαγραφή του.</message>
+	<message key="manager.files.createDir">Δημιουργία καταλόγου</message>
+	<message key="manager.files.emptyDir">Δεν εντοπίστηκαν αρχεία στον κατάλογο αυτό.</message>
+	<message key="manager.files.indexOfDir">Ευρετήρια για {$dir}</message>
+	<message key="manager.files.parentDir">Γονικός κατάλογος</message>
+	<message key="manager.files.uploadedFiles">Αρχεία που έχουν φορτωθεί</message>
+	<message key="manager.files.uploadFile">Φόρτωση αρχείου</message>
+	<message key="manager.groups.confirmDelete">Είστε βέβαιοι ότι επιθυμείτε να διαγράψετε τη συγκεκριμένη ομάδα;</message>
+	<message key="manager.groups.createTitle">Δημιουργία τίτλου</message>
+	<message key="manager.groups.editTitle">Επεξεργασία τίτλου</message>
+	<message key="manager.groups.form.groupTitleRequired">Απαιτείται τίτλος ομάδας.</message>
+	<message key="manager.groups.membership.addMember">Προσθήκη μελών</message>
+	<message key="manager.groups.membership.confirmDelete">Είστε βέβαιοι ότι επιθυμείτε να διαγράψετε την εγγεγραμμένη ομάδα;</message>
+	<message key="manager.groups.membership">Εγγεγραμμένα μέλη</message>
+	<message key="manager.groups.membership.noneCreated">Η ομάδα αυτή δεν έχει μέλη.</message>
+	<message key="manager.groups.membership.noUsers">Δεν ήταν δυνατός ο εντοπισμός χρηστών.</message>
+	<message key="manager.groups.title">Τίτλος</message>
+	<message key="manager.importExport">Εισαγωγή/Εξαγωγή δεδομένων</message>
+	<message key="manager.languages.alternateLocaleInstructions">Το σύστημα επιτρέπει εναλλακτικά την καταχώριση ορισμένων σημαντικών πληροφοριών και σε δύο πρόσθετες γλώσσες. Για να χρησιμοποιήσετε τη λειτουργία αυτή, επιλέξτε μία ή δυο από τις εναλλακτικές τοπικές ρυθμίσεις και επιλέξτε από τις επιλογές που θα εμφανιστούν παρακάτω.</message>
+	<message key="manager.languages.supportedLocalesInstructions">Επιλέξτε όλες τις τοπικές ρυθμίσεις που θα υποστηρίζονται στον ιστότοπο μέσω του μενού επιλογής γλώσσας να εμφανίζονται σε κάθε σελίδα. Το μενού εμφανίζεται μόνο, εάν έχει επιλεχθεί κάποια από τις τοπικές ρυθμίσεις.</message>
+	<message key="manager.payment.timestamp">Σφραγίδα Ημερομηνίας</message>
+	<message key="manager.people.authSource">Πηγή πιστοποίησης</message>
+	<message key="manager.people.confirmUnenroll">Απαλλάσετε  τον συγκεκριμένο χρήστη από τον ρόλο του;</message>
+	<message key="manager.people.createUser">Δημιουργία νέου χρήστη</message>
+	<message key="manager.people.createUserGeneratePassword">Δημιουργία τυχαίου κωδικού πρόσβασης.</message>
+	<message key="manager.people.createUserSendNotify">Αποστολή μηνύματος ηλεκτρονικού ταχυδρομείου για το καλωσόρισμα του χρήστη μαζί με το όνομα χρήστη και τον κωδικό πρόσβασης.</message>
+	<message key="manager.people.disable">Απενεργοποίηση</message>
+	<message key="manager.people.doNotEnroll">Χωρίς ρόλο</message>
+	<message key="manager.people.editProfile">Επεξεργασία προφίλ  χρήστη</message>
+	<message key="manager.people.editUser">Επεξεργασία χρήστη</message>
+	<message key="manager.people.emailUsers.emailSelectedUsers">Αποστολή μηνύματος στους επιλεγμένους χρήστες</message>
+	<message key="manager.people.emailUsers.emailUsersEnrolledAs">Χρήστες ηλεκτρονικού ταχυδρομείου εγγεγραμμένοι ως</message>
+	<message key="manager.people.emailUsers">Αποστολή μηνύματος σε χρήστες</message>
+	<message key="manager.people.emailUsers.selectLocale">Επιλέξτε τοπική ρύθμιση</message>
+	<message key="manager.people.emailUsers.selectUsers">Επιλέξτε τους χρήστες στους οποίους επιθυμείτε να αποστείλετε μήνυμα ηλεκτρονικού ταχυδρομείου μέσω επιλογής των πλαισίων που βρίσκονται δίπλα από τα ονόματά τους</message>
+	<message key="manager.people.enable">Ενεργοποίηση</message>
+	<message key="manager.people.enroll"> Ανάθεση ρόλου</message>
+	<message key="manager.people.enrollment">Ανάθεση ρόλων</message>
+	<message key="manager.people.enrollSelected">Ανάθεση ρόλου στους επιλεγμένους χρήστες</message>
+	<message key="manager.people.enrollSyncRole">Συγχρονισμός Ρόλου </message>
+	<message key="manager.people.enrollSync">Συγχρονισμένη ανάθεση ρόλων</message>
+	<message key="manager.people.enrollUserAsDescription">Εάν δεν έχουν επιλεγεί ρόλοι, ο χρήστης θα δημιουργηθεί στο σύστημα αλλά δεν θα είναι εγγεγραμμένος σε κάποιον ρόλο στα πλαίσια του συγκεκριμένου περιοδικού. Κατόπιν της δημιουργίας του χρήστη, η ανάθεση ή μη ρόλων μπορεί να πραγματοποιηθεί ανά πάσα στιγμή.</message>
+	<message key="manager.people.enrollUserAs">Ανάθεση ρόλου </message>
+	<message key="manager.people.invalidUser">Ο χρήστης δεν υπάρχει.</message>
+	<message key="manager.people.mergeUser">Συγχώνευση χρήστη</message>
+	<message key="manager.people.mergeUsers.confirm">Είστε βέβαιοι ότι επιθυμείτε να συγχωνεύσετε τον λογαριασμό με το όνομα χρήστη "{$oldUsername}" σε λογαριασμό με το όνομα χρήστη  "{$newUsername}"; Ο λογαριασμός με το όνομα χρήστη "{$oldUsername}" θα διαγραφεί οριστικά. Η ενέργεια αυτή είναι μη αναστρέψιμη.</message>
+	<message key="manager.people.mergeUsers">Συγχώνευση χρηστών</message>
+	<message key="manager.people.mustChooseRole">Σας παρακαλούμε επιλέξτε έναν ρόλο στην κορυφή της σελίδας πριν πατήσετε "Ανάθεση Ρόλου".</message>
+	<message key="manager.people.mustProvideName">Σας παρακαλούμε θα πρέπει πρώτα να συμπληρώσετε τουλάχιστον το επώνυμο του χρήστη.</message>
+	<message key="manager.people.noMatchingUsers">Δεν υπάρχει αντιστοίχηση μεταξύ των χρηστών.</message>
+	<message key="manager.people.noneEnrolled">Δεν υπάρχουν χρήστες με τέτοιο ρόλο.</message>
+	<message key="manager.people">Ανθρώπινοι πόροι</message>
+	<message key="manager.people.remove">Κατάργηση</message>
+	<message key="manager.people.saveAndCreateAnotherUser">Αποθήκευση και δημιουργία νέου</message>
+	<message key="manager.people.signInAs">Σύνδεση ως</message>
+	<message key="manager.people.signInAsUser">Σύνδεση ως χρήστης</message>
+	<message key="manager.people.syncUsers">Συγχρονισμός ανάθεσης ρόλων</message>
+	<message key="manager.people.unenroll">Απαλλαγή </message>
+	<message key="manager.people.userCreatedSuccessfully">Ο χρήστης δημιουργήθηκε επιτυχώς.</message>
+	<message key="manager.people.userMustChangePassword">Ο χρήστης πρέπει να αλλάξει τον κωδικό πρόσβασης στην επόμενη σύνδεσή του.</message>
+	<message key="manager.plugins.action">Ενέργεια:</message>
+	<message key="manager.plugins.disable">Απενεργοποίηση</message>
+	<message key="manager.plugins.enable">Ενεργοποίηση</message>
+	<message key="manager.plugins.pluginManagement">Διαχείριση Plugin</message>
+	<message key="manager.plugins.sitePlugin">Πρόκειται για plugin σχετικά με ολόκληρο τον ιστότοπο. Η διαχείριση του συγκεκριμένου plugin μπορεί να γίνει αποκλειστικά από τον Διαχειριστή Ιστοτόπου.</message>
+	<message key="manager.plugins">Plugins συστήματος</message>
+	<message key="manager.readingTools">Εργαλεία Ανάγνωσης</message>
+	<message key="manager.roles">Ρόλοι</message>
+	<message key="manager.setup.homeHeaderImageInvalid">Μη έγκυρη μορφή αρχείου εικόνας λογοτύπου της κεφαλίδας της αρχικής σελίδας του περιοδικού. Έγκυρες μορφές αρχείων είναι .gif, .jpg, ή .png.</message>
+	<message key="manager.setup.homepageImageInvalid">Μη έγκυρη μορφή αρχείου εικόνας αρχικής σελίδας του περιοδικού. Έγκυρες μορφές αρχείων είναι .gif, .jpg, ή .png.</message>
+	<message key="manager.setup.homeTitleImageInvalid">Μη έγκυρη μορφή αρχείου εικόνας τίτλου της κεφαλίδας της αρχικής σελίδας του περιοδικού. Έγκυρες μορφές αρχείων είναι .gif, .jpg, ή .png.</message>
+	<message key="manager.setup.layout.unselected">Μη επιλεγμένο</message>
+	<message key="manager.setup.loggingAndAuditing">Σύνδεση και έλεγχος</message>
+	<message key="manager.setup.pageHeaderLogoImageInvalid"> Μη έγκυρη μορφή εικόνας λογοτύπου της κεφαλίδας της σελίδας. Έγκυρες μορφές είναι .gif, .jpg, ή .png.</message>
+	<message key="manager.setup.selectOne">Επιλέξτε ένα</message>
+	<message key="manager.statistics"><![CDATA[Στατιστικά &amp; Αναφορές]]></message>
+	<message key="manager.statistics.reports.description">Το σύστημα παράγει τις εκθέσεις που παρακολουθούν τις λεπτομέρειες που σχετίζονται με τη χρήση της ιστοσελίδας και οι παρατηρήσεις σε μια δεδομένη χρονική περίοδο. Οι εκθέσεις που δημιουργούνται σε μορφή CSV που απαιτεί μια εφαρμογή λογιστικών φύλλων για να το δείτε.</message>
+	<message key="manager.statistics.reports">Δημιουργία  Εκθέσεων</message>
+	<message key="manager.statistics.statistics.count.value">{$count}  ({$percentage}F)</message>
+	<message key="manager.statistics.statistics.totalNewValue">{$numTotal} ({$numNew}  new)</message>
+	<message key="manager.users">Χρήστες</message>
+	<message key="plugins.categories.auth">Plugin πιστοποίηση</message>
+	<message key="plugins.categories.blocks">Block Plugins</message>
+	<message key="plugins.categories.blocks.description">Τα Block Plugins είναι προσαρμόσιμα UI συστατικά, όπως τα διάφορα sidebar εργαλεία.</message>
+	<message key="plugins.categories.citationFormats">Plugins Μορφής Βιβλιογραφικής Αναφοράς (citation)</message>
+	<message key="plugins.categories.gateways.description">Τα Plugins πύλης (gateway) επιτρεπούν τη ζωντανή παροχή δεδομένων σε εξωτερικά συστήματα.</message>
+	<message key="plugins.categories.gateways">Plugins πύλης (gateway)</message>
+	<message key="plugins.categories.generic">Γενικά Plugins</message>
+	<message key="plugins.categories.importexport.description">Η εισαγωγή/εξαγωγή των Plugins μπορεί να χρησιμοποιηθεί για τη μεταφορά περιεχομένου από και προς άλλα συστήματα.</message>
+	<message key="plugins.categories.importexport">Εισαγωγή/Εξαγωγή Plugins</message>
+	<message key="plugins.categories.paymethod.description">Τα Plugins Πληρωμών μπορούν να υποστηρίξουν διάφορες μεθόδους Online Πληρωμών.</message>
+	<message key="plugins.categories.paymethod">Plugins Πληρωμών</message>
+	<message key="plugins.categories.reports.description">Τα Plugins Αναφορών χρησιμοποιούνται για την δημιουργία διαφόρων τύπων αναφορών και εξαγωγής δεδομένων.</message>
+	<message key="plugins.categories.reports">Plugins Αναφορών</message>
+	<message key="plugins.categories.themes.description">Τα Theme Plugins μπορούν να χρησιμοποιηθούν για να αλλάξει η εμφάνιση του συστήματος.</message>
+	<message key="plugins.categories.themes">Θεματικά (Theme) Plugins</message>
+	<message key="manager.emails.form.emailKeyRequired">Απαιτείτα ένα μοναδικό κλειδί email για το email.</message>
+	<message key="manager.reviewerSearch.searchByName">Αναζήτηση Αξιολογητή κατά Όνομα</message>
+	<message key="manager.reviewerSearch.doneAmount">Αριθμός ολοκληρωμένης αξιολογήσεων</message>
+	<message key="manager.reviewerSearch.avgAmount">Μέσος αριθμός ημερών ανά αξιολόγηση</message>
+	<message key="manager.reviewerSearch.lastAmount">Ημέρες από την τελευταία αξιολόγηση</message>
+	<message key="manager.reviewerSearch.activeAmount">Αριθμός τρεχόντων ενεργών αξιολογήσεων</message>
+	<message key="manager.reviewerSearch.interests">Ενδιαφέροντα Αξιολόγησης</message>
+	<message key="manager.setup.citationAssistant">Βοηθός Σήμανσης Παραπομπής</message>
+	<message key="manager.setup.citationFilterParser">Εξαγωγή Παραπομπής</message>
+	<message key="manager.setup.citationFilterParserDescription"><![CDATA[<p>Για να αναζητήσετε και να ελέγξετε αναφορές/παραπομπές σε βάσεις αναφορών, θα πρέπει πρώτα αυτές να διαχωριστούν σε κατάλληλη και αναγνώσιμη απόμηχανή μορφή μεταδεδομένων: ο τίτλος, εκδότης, έκδοση, ημερομηνία κλπ. θα πρέπει να εξαχθούν από το πρωτότυπο κείμενο της παραπομπής που παρέχεται από τον συγγραφέα. Σύνδεσμοι (connectors) προς εξωτερικές δικτυακές υπηρεσίες μπορούν να βοηθήσουν σε αυτή τη διαδικασία. Ένας ή περισσότεροι σύνδεσμοι (connectors) μπορούν να προστεθούν επιλέγοντας το κουμπί "Προσθήκη" παρακάτω. Κάποιοι από αυτούς του συνδέσμους μπορεί να χρειάζονται τις κατάλληλες ρυθμίσεις οπότε και θα σας ζητηθούν.</p>
+		<p>Μπορείτε να επεξεργαστείτε ή να διαγράψετε έναν υφιστάμενο σύνδεσμο (Connector) επιλέγοντας τo εικονίδιο δίπλα του.</p>]]></message>
+	<message key="manager.setup.citationFilterLookup">'Ελεγχος παραπομπής</message>
+	<message key="manager.setup.citationFilterLookupDescription"><![CDATA[<p>Θα πρέπει επίσης να ενεργοποιήσετε και ρυθμίσετε τις συνδέσεις προς τις εξωτερικές βάσεις δεδομένων. Αυτό θα σας βοηθήσει να βρίσκετε σφάλματα στις παραπομπές των συγγραφέων ή να προσθέτετε πρόσθετες πληροφορίες (π.χ. DOIs ή PubMed IDs) για την ηλεκτρονική έκδοση ή την αρχειοθέτηση.</p>
+		<p>Παρέχουμε συνδέσεις σε αρκετές εξωτερικές βάσεις δεδομένων όπου μπορείτε να αναζητήσετε αναφορές/παραπομπές. Κάποιες από αυτές απαιτούν εγγραφή ή εισαγωγή πληροφοριών για την είσοδο και χρήση. Σας παρακαλούμε ανατρέξτε στις δημόσιες ιστοσελίδες των βάσεων δεδομένων για περισσότερες πληροφορίες. Μπορείτε να προσθέσετε μια ή περισσότερες βάσεις επιλέγοντας το κουμπί "Προσθήκη" παρακάτω.</p>
+		<p>Μπορείτε να επεξεργαστείτε ή να διαγράψετε μια υφιστάμενη εξωτερική βάση δεδεομένων επιλέγονταςο το εικονίδιο δίπλα στο τίτλο της.</p>
+		<p><strong>Σημείωση:</strong> Για να ολοκλήρωθεί ο έλεγχος των αναφορών/παραπομπών σε ένα εύλογο χρονικό διάστημα, η τιμή για <tt>citation_checking_max_processes</tt> στο αρχείο ρυθμίσεών σας θα πρέπει να πάρει μια λογική τιμή. Δείτε την ενότητα General Settings στο αρχείο <tt>config.inc.php</tt> για περισσότερς πληροφορίες.</p>]]></message>
+	<message key="manager.setup.citationOutput">Απόδοση Παραπομπής</message>
+	<message key="manager.setup.citationOutputStyleDescription">Επιλέξτε τη μορφή αναφοράς που χρησιμοποιείται για τις υποβολές άρθρων στο περιοδικό σας. Ο Βοηθός Σήμανσης Παραπομπής σας επιτρέπει να συγκρίνετε την εκδοχή της αναφοράς του συγγραφέα με μια εκδοχή που παράγεται από το XML που παράγετε για τον εύκολο εντοπισμό σφαλμάτων.</message>
+	<message key="manager.setup.errorDeletingItem">Παρουσιάστηκε σφάλμα κατά την διαγραφή του φίλτρου</message>
+	<message key="manager.setup.filter.grid.errorDeletingFilter">Ένα σφάλμα παρουσιάστηκε ενώ προσπαθούσατε να μετακινήσετε αυτό το φίλτρο. Σας παρακαλούμε αναφέρετε το πρόβλημα.</message>
+	<message key="manager.setup.filter.grid.filterSettings">Πληροφορίες Εγγραφής και Ρυθμίσεις Συνδέσμου</message>
+	<message key="manager.setup.filter.grid.filterTemplateRequired">Σας παρακαλούμε επιλέξτε μία από τις μετατροπές από το μενού επιλογής.</message>
+	<message key="manager.setup.filter.grid.confirmDelete">Θέλετε πραγαμτικά να διαγράψετε το φίλτρο {$filterName};</message>
+	<message key="manager.setup.filter.lookup.grid.descriptionConfirm">Έχετε επιλέξει να προσθέσετε την βάση {$filterDisplayName}. Σας παρακαλούμε πατήστε  'OK' για επιβεβαίωση.</message>
+	<message key="manager.setup.filter.grid.filterDisplayName">Σύνδεσμος (Connector)</message>
+	<message key="manager.setup.filter.lookup.grid.descriptionTemplate">Παρακαλούμε επιλέξτε μια βάση δεδομένων</message>
+	<message key="manager.setup.filter.lookup.grid.description.iSBNdb"><![CDATA[<p>Το φίλτρο αυτό συνδέεται στην βάση βιβλίων και ISBN  <a href="http://isbndb.com/" target="_blank">ISBNdb.com</a> .</p>
+	<p>Ένα ISBNdb API κλειδό είναι υποχρεωτικό. Πληροφορίες για την δημιιουργία ενός τέτοιου κλειδιού, μπορείτε να βρείτε στη <a href="http://isbndb.com/api/v1/docs/keys" target="_blank">σχετική ιστοσελίδα τεκμηρίωσης</a>.</p>]]></message>
+	<message key="manager.setup.filter.lookup.grid.description.crossRef"><![CDATA[<p>Το φίλτρο αυτό συνδέεται με την βάση CrossRef χρησιμοποιώντας το  <a href="http://www.crossref.org/02publishers/openurl_info.html" target="_blank">OpenURL Query Interface</a>.</p>
+	<p>Για να χρησιμοποιήσετε αυτό το φίλτρο, μπορείτε είτε να χρησιμοποιήσετε τον λογαριασμό σας στο CrossRef, ή να εγγραφείτε στο CrossRef <a href="http://www.crossref.org/requestaccount/" target="_blank">ακολουθώντας τη σχετική διαδικασία</a>.</p>]]></message>
+	<message key="manager.setup.filter.lookup.grid.description.pubMed"><![CDATA[<p>Το φίλτρο αυτό συνδέεται στη βάση <a href="http://www.ncbi.nlm.nih.gov/gquery/gquery.fcgi" target="_blank">PubMed's Entrez</a> </p>
+	<p>Η εγγραφή δεν είναι υποχρεωτική, αλλά μπορεί να είναι χρήσιμη σε περίπτωση προβλημάτων σύνδεσης. Δείτε τη σχετική ενότητα στις <a href="http://www.be-md.ncbi.nlm.nih.gov/bookshelf/br.fcgi?book=helpeutils&part=chapter2#chapter2.Usage_Guidelines_and_Requiremen" target="_blank">Οδηγίες και Απαιτήσεις Χρήσης </a> για περισσότερες πληροφορίες.</p>]]></message>
+	<message key="manager.setup.filter.lookup.grid.description.worldCat"><![CDATA[<p>Το φίλτρο αυτό συνδέεται με τις υπηρεσίες της OCLC  <a href="http://www.worldcat.org/affiliate/webservices/xisbn/app.jsp" target="_blank">xISBN</a> και <a href="http://www.worldcat.org/" target="_blank">Worldcat</a> (optional).</p>
+	<p>Αν έχετε ένα <a href="http://oclc.org/developer/develop/web-services.html" target="_blank">Worldcat API κλειδί</a> μπορείτε να συνδεθείτε στη βάση εισάγοντας το κλειδί παρακάτω.</p>]]></message>
+	<message key="manager.setup.filter.lookup.grid.loadMessage">Σας παρακαλούμε περιμένετε μέχρι να φορτωθεί το πλέγμα ρυθμίσεων της βάσης...</message>
+	<message key="manager.setup.filter.lookup.grid.title">Σύνδεσμοι (Connectosrs) Βάσεων Αναφορών/Παραπομπών</message>
+	<message key="manager.setup.filter.noMoreTemplates">Όλες οι διαθεσιμες μετατροπές έχουν ολοκλήρωθεί. Παρακαλούμε πατήσετ "Ακύρωση" για να επιστρέψετε στη σελίδα ρυθμίσεων.</message>
+	<message key="manager.setup.filter.parser.grid.descriptionConfirm">Έχετε επιλέξει να προσθέτες τοn κατατμητή {$filterDisplayName}. Παρακαλούμε πατήστε  'OK' για επιβεβαίωση.</message>
+	<message key="manager.setup.filter.parser.grid.descriptionTemplate">Παρακαλούμε επιλέξτε έναν κατατμητή αναφορών.</message>
+	<message key="manager.setup.filter.parser.grid.description.freeCite"><![CDATA[<p>Αυτό το φίλτρο εξαγωγής συνδέεται με την υπηρεσία <a href="http://freecite.library.brown.edu/" target="_blank">FreeCite</a> .</p>]]></message>
+	<message key="manager.setup.filter.parser.grid.description.paraCite"><![CDATA[<p>Αυτό το φίλτρο εξαγωγής χρησιμοποιεί τα εργαλεία Perl  <a href="http://paracite.eprints.org/developers/" target="_blank">ParaTools</a> για την παροχή της λειτουργίας κατάτμησης αναφορών <a href="http://paracite.eprints.org" target="_blank">ParaCite</a>. Για την λειτουργίας αυτή θα πρέπει να έχετε εγκατεστημένη στο μηχάνημά σας την Perl, μαζί με τις λειτουργίας CPAN <a href="http://search.cpan.org/~mjewell/Biblio-Citation-Parser-1.10/" target="_blank">Biblio::Citation::Parser</a> και <a href="http://search.cpan.org/~sburke/Text-Unidecode-0.04/" target="_blank">Text::Unidecode</a> . Θα πρέπει επίσης να ρυθμίσετε την οδηγία <tt>perl</tt> στο αρχείο των ρυθμίσεών σας. Η οδηγία αυτή μπορεί να βρεθεί στην ενότητα External Commands του αρχείου <tt>config.inc.php</tt>.</p>
+	<p>Μπορείτε επίσης να επιλέξετε ποιο από τα εργαλεία κατάτμησης της ParaTools θα χρησιμοποιήσετε. Μπορείτε να επιλέξετε μεταξύ των <a href="http://search.cpan.org/~mjewell/Biblio-Citation-Parser-1.10/lib/Biblio/Citation/Parser/Jiao.pm" target="_blank">Jiao</a>, και <a href="http://search.cpan.org/~mjewell/Biblio-Citation-Parser-1.10/lib/Biblio/Citation/Parser/Citebase.pm" target="_blank">Citebase</a>.</p>]]></message>
+	<message key="manager.setup.filter.parser.grid.description.parsCit"><![CDATA[<p>Αυτό το φίλτρο εξαγωγής συνδέεται με την υπηρεσία <a href="http://aye.comp.nus.edu.sg/parsCit/" target="_blank">ParsCit</a>.</p>]]></message>
+	<message key="manager.setup.filter.parser.grid.description.regEx">Το φίλτρο εξαγωγής RegEx χρησιμοποιεί μια σειρά συνηθισμένων εκφράσεων για την κατάτμηση αναφορών/παραπομπών.</message>
+	<message key="manager.setup.filter.parser.grid.loadMessage">Σας παρακαλούμε περιμένετε μέχρι να φορτωθούν οι ρυθμίσεις κατάτμησης αναφορών/παραπομπών ..</message>
+	<message key="manager.setup.filter.parser.grid.title">Υπηρεσίες Εξαγωγής Αναφορών</message>
+	<message key="manager.setup.filter.pleaseSelect">Παρακαλούμε περιμένετε...</message>
+	<message key="manager.setup.metaCitationsDescription">Ενεργοποιήστε τις παρακάτω επιλογές για να ενεργοποιήσετε την δυνατότητα επεξεργασίας των αναφορών/παραπομπών. Αυτό θα επιτρέψει στους συγγραφές να συμπεριλαμβάνουν ακατέργαστες αναφορές με τις υποβολές τους. Οι επιμελητές θα έχουν επίσης πρόσβαση στον Βοηθό Σήμανσης Παραπομπής με την βοήθεια του οποίου θα μπορούν να ελέγξουν την ορθότητα ακατέργαστων αναφορών μέσω εξωτερικών βάσεων δεδομένων όπως WorldCat, ISBNdb, PubMed  κλπ. Οι εγκεκριμένες αναφορές/παραπομπές μπορούν να εξαχθούν στα τελικά αρχεία του άρθρου.</message>
+	<message key="plugins.categories.oaiMetadataFormats">OAI Metadata Format Plugins</message>
+	<message key="plugins.categories.oaiMetadataFormats.description">Αυτοί οι τύποι Plugins μεταφέρους τα μεταδεδομένα στις ΟΑΙ επικοινωνίας.</message>
+	<message key="grid.action.addGenre">Προσθήκη Μέρος Βιβλίου</message>
+
+	<!-- Review forms -->
+	<message key="manager.reviewForms">Φόρμες αξιολόγησης</message>
+	<message key="manager.reviewForms.completed">Ολοκληρωμένη</message>
+	<message key="manager.reviewForms.create">Δημιουργία Φόρμας Αξιολόγησης</message>
+	<message key="manager.reviewForms.description">Περιγραφή και Οδηγίες</message>
+	<message key="manager.reviewForms.edit">Φόρμα Αξιολόγησης</message>
+	<message key="manager.reviewForms.form.titleRequired">Ένας τίτλος απαιτείται για τη φόρμα αξιολόγησης.</message>
+	<message key="manager.reviewForms.inReview">Σε αξιολόγηση</message>
+	<message key="manager.reviewForms.list.description">Οι φόρμες αξιολόγησης που δημιουργήθηκαν εδώ, θα εμφανιστούν στους αξιολογητές για να συμπληρωθούν, αντί για τις εξ΄ορισμού φόρμες που συνίστανται από δύο ανοικτά πλαίσια κειμένου, το πρώτο "για τον συγγραφέα και τον επιμελητή" και το δεύτερο "για τον επιμελητή". Οι φόρμες αξιολόγησης μπορούν να χρησιμοποιηθούν σε μια συγκεκριμένη ενότητα της έκδοσης, και οι επιμελητές θα έχουν τη δυνατότητα να επιλέξουν ποια φόρμα θα χρησιμοποιήσουν για την αξιολόγηση. Σε κάθε περίπτωση, οι επιμελητές θα έχουν την επιλογή να συμπεριλάβουν τις αξιολογήσεις στην επικοινωνία τους με τους συγγραφείς.</message>
+	<message key="manager.reviewForms.noneChosen">Καμία/ Ελεύθερη Φόρμα Αξιολόγησης</message>
+	<message key="manager.reviewForms.noneCreated">Καμία φόρμα αξιολόγησης δεν έχει δημιουργηθεί.</message>
+	<message key="manager.reviewForms.noneUsed">Καμία φόρμα αξιολόγησης δεν έχει χρησιμοποιηθεί.</message>
+	<message key="manager.reviewForms.preview">Φόρμα Προεπισκόπησης</message>
+	<message key="manager.reviewForms.reviewFormData">Δεδομένα Φόρμας Αξιολόγησης</message>
+	<message key="manager.reviewForms.title">Τίτλος</message>
+	<message key="manager.reviewFormElement.changeType">Αλλάζοντας τον τύπο πεδίου της φόρμας...</message>
+	<message key="manager.reviewFormElements">Πεδία Φόρμας</message>
+	<message key="manager.reviewFormElements.addResponseItem">Προσθήκη Επιλογής</message>
+	<message key="manager.reviewFormElements.checkboxes">Checkboxes (επιλέξτε ένα ή περισσότερα)</message>
+	<message key="manager.reviewFormElements.chooseType">Επιλέξτε τύπο πεδίου</message>
+	<message key="manager.reviewFormElements.confirmDelete">Είστε σίγουροι ότι επιθυμείτε να διαγράψετε ένα στοιχείο μιας δημοσιευμένης φόρμας αξιολόγησης?</message>
+	<message key="manager.reviewFormElements.copyTo">Αντιγραφή σε:</message>
+	<message key="manager.reviewFormElements.create">Δημιουργία νέου πεδίου</message>
+	<message key="manager.reviewFormElements.dropdownbox">Drop-down box</message>
+	<message key="manager.reviewFormElements.edit">Επεξεργασία Πεδίου Φόρμας</message>
+	<message key="manager.reviewFormElements.elementType">Τύπος πεδίου</message>
+	<message key="manager.reviewFormElements.form.elementTypeRequired">Απαιτείται ένα τύπος πεδίου για το πεδίο της φόρμας.</message>
+	<message key="manager.reviewFormElements.form.questionRequired">Απαιτείται μια ερώτηση για το πεδίο της φόρμας.</message>
+	<message key="manager.reviewFormElements.noneCreated">Δεν έχει δημιουργηθεί πεδίο.</message>
+	<message key="manager.reviewFormElements.possibleResponse">Επιλογή</message>
+	<message key="manager.reviewFormElements.question">Πεδίο</message>
+	<message key="manager.reviewFormElements.radiobuttons">Radio buttons (επιλέξτε ένα ή περισσότερα)</message>
+	<message key="manager.reviewFormElements.required">Απαιτείται οι αξιολογητές να συμπληρώσουν το πεδίο</message>
+	<message key="manager.reviewFormElements.smalltextfield">Πλαίσιο κειμένου μονής λέξης</message>
+	<message key="manager.reviewFormElements.textarea">Εκτεταμένο πλαίσιο κειμένου</message>
+	<message key="manager.reviewFormElements.textfield">Πλαίσιο κειμένου μονής γραμμής</message>
+	<message key="manager.reviewFormElements.viewable">Ορατό (για συγγραφείς)</message>
+
+</locale>

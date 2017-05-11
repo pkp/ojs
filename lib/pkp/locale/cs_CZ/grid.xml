@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/cs_CZ/grid.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the cs_CZ (Čeština) locale.
+  * Translated by Ivo Vesely and Petr Petyovsky (petyovsky 'at' feec.vutbr.cz)
+  *
+  -->
+
+<locale name="cs_CZ" full_name="Čeština">
+	<!-- Common -->
+	<message key="grid.noItems">Žádné položky</message>
+	<message key="grid.settings">Nastavení</message>
+
+	<message key="grid.action.sort">Sort</message>
+	<message key="grid.action.addItem">Přidat položku</message>
+	<message key="grid.action.delete">Smazat</message>
+	<message key="grid.action.edit">Upravit</message>
+	<message key="grid.action.restoreDefaults">Obnovit výchozí</message>
+
+	<!-- Common Grid Column Titles -->
+	<message key="grid.columns.actions">Akce</message>
+	<message key="grid.columns.institution">Organizace</message>
+	<message key="grid.columns.url">URL</message>
+
+	<!-- Sponsors Grid -->
+	<message key="grid.sponsor.title">Sponzoři</message>
+
+	<!-- Masthead Grid -->
+	<message key="grid.masthead.title">Tiráž</message>
+	<message key="grid.masthead.column.groups">Skupiny</message>
+
+	<!-- Contributor Grid -->
+	<message key="grid.contributor.title">Spolupracovník</message>
+
+	<!-- Review Forms Grid -->
+	<message key="grid.reviewForm.title">Recenzní formuláře</message>
+
+	<!-- Book File Types Grid -->
+  <message key="grid.bookFileType.form.sortable">Povolit třídění souborů dle jednotlivých položek (např. dle kapitol)</message>
+
+	<!-- Artwork Files Grid -->
+	<message key="grid.artworkFile.title">Grafické dílo včetně oprávnění k jeho užití</message>
+	<message key="grid.artworkFile.file">Soubor</message>
+	<message key="grid.artworkFile.form.title">Vložit grafické dílo včetně oprávnění k jeho užití</message>
+	<message key="grid.artworkFile.form.metadata">Metadata ke grafickému dílu</message>
+	<message key="grid.artworkFile.caption">Titulek</message>
+	<message key="grid.artworkFile.credit">Autor</message>
+	<message key="grid.artworkFile.copyrightOwner">Vlastník autorských práv</message>
+	<message key="grid.artworkFile.copyrightContact">Kontaktní informace (nejedná-li se o autora nebo vydavatele)</message>
+	<message key="grid.artworkFile.permissionTerms">Podmínky oprávnění k užití díla</message>
+	<message key="grid.artworkFile.permissionForm">Formulář oprávnění k užití díla</message>
+	<message key="grid.artworkFile.type">Typ</message>
+	<message key="grid.artworkFile.type.table">Tabulka</message>
+	<message key="grid.artworkFile.type.figure">Obrázek</message>
+	<message key="grid.artworkFile.placement">Umístění v knize</message>
+	<message key="grid.artworkFile.placementDetail">Tabulka/Obr. č.</message>
+	<message key="grid.artworkFile.contactAuthor">Kontaktovat autora</message>
+
+	<!-- Library Files -->
+	<message key="grid.libraryFiles.column.files">Soubory</message>
+	<message key="grid.libraryFiles.submission.title">Knihovna příspěvků</message>
+	<message key="grid.libraryFiles.editorial.title">Knihovna redakce</message>
+	<message key="grid.libraryFiles.review.title">Knihovna recenzí</message>
+	<message key="grid.libraryFiles.production.title">Knihovna produkce</message>
+	<message key="grid.libraryFiles.productionTemplate.title">Knihovna šablon produkce</message>
+
+	<!-- SubmissionChecklist -->
+	<message key="grid.submissionChecklist.title">Kontrolní seznam příspěvků</message>
+	<message key="grid.submissionChecklist.column.checklistItem">Položka kontrolního seznamu</message>
+
+	<!-- Submission Contributors -->
+	<message key="author.users.contributor.name">Název</message>
+	<message key="author.users.contributor.email">E-mail</message>
+	<message key="author.users.contributor.role">Role</message>
+	<message key="author.users.contributor.principalContact">Hlavní kontakt</message>
+
+	<!-- Chapters -->
+	<message key="grid.chapters.title">Kapitoly</message>
+</locale>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/zh_CN/admin.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (English) locale.
+  *
+  -->
+
+<locale name="zh_CN" full_name="简体中文">
+	<message key="admin.adminFunctions">管理职能</message>
+	<message key="admin.auth.confirmDelete">您确定要永久删除此验证来源?</message>
+	<message key="admin.auth.create">创建验证来源</message>
+	<message key="admin.auth.noneCreated">没有验证来源已经确定.</message>
+	<message key="admin.authSources">验证来源</message>
+	<message key="admin.clearDataCache">清除数据缓存</message>
+	<message key="admin.clearTemplateCache">清除模板缓存</message>
+	<message key="admin.configFileUpdatedInstructions"><![CDATA[您的配置文件已成功更新. 请注意，如果您的网站不能正常工作，您需要直接手动修复编辑 <tt>config.inc.php</tt>.]]></message>
+	<message key="admin.confirmClearTemplateCache">您确定要清除已编译模板缓存?</message>
+	<message key="admin.confirmExpireSessions">A你确定要所有用户会话过期？目前所有登录的用户将被迫重新登录（包括自己）.</message>
+	<message key="admin.contentsOfConfigFile">配置文件的内容</message>
+	<message key="admin.currentVersion">当前版本</message>
+	<message key="admin.dateInstalled">安装日期</message>
+	<message key="admin.displayConfigFileInstructions"><![CDATA[您的更新的配置的内容显示在下面. 要应用配置更改，您必须使用合适的编辑器打开 <tt>config.inc.php</tt>，并替换下面的文本字段的内容.]]></message>
+	<message key="admin.displayNewSystemConfig">显示新的配置</message>
+	<message key="admin.expireSessions">用户会话过期</message>
+	<message key="admin.languages.confirmReload">您确定要重新加载此语言环境？这将删除任何现有的区域设置特定的数据，如定制的电子邮件模板.</message>
+	<message key="admin.languages.installedLocales">已安装的语言环境</message>
+	<message key="admin.languages.installLanguages">管理语言环境</message>
+	<message key="admin.languages.installLocales">安装</message>
+	<message key="admin.languages.installNewLocales">安装新的语言环境</message>
+	<message key="admin.languages.languageSettings">语言设置</message>
+	<message key="admin.languages.noLocalesAvailable">没有额外的语言环境，可用于安装.</message>
+	<message key="admin.languages.reload">刷新语言设置</message>
+	<message key="admin.languages.uninstall">卸载语言设置</message>
+	<message key="admin.phpInfo">扩展PHP的信息</message>
+	<message key="admin.server.apacheVersion">Apache版本</message>
+	<message key="admin.server.dbDriver">数据库驱动</message>
+	<message key="admin.server.dbVersion">数据库版本</message>
+	<message key="admin.serverInformationDescription"><![CDATA[基本的操作系统和服务器软件版本. 点击 <span class="highlight">额外的PHP信息</span>来查看这个服务器的PHP配置扩展详情.]]></message>
+	<message key="admin.serverInformation">服务器信息</message>
+	<message key="admin.server.phpVersion">PHP版本</message>
+	<message key="admin.server.platform">OS平台</message>
+	<message key="admin.settings.aboutDescription">关于网站描述</message>
+	<message key="admin.settings.contactEmail">主要联络的电子邮件</message>
+	<message key="admin.settings.contactName">主要的联系人名</message>
+	<message key="admin.settings.form.contactEmailRequired">主要联系人的电子邮件地址是必需的.</message>
+	<message key="admin.settings.form.contactNameRequired">主要联络人的姓名.</message>
+	<message key="admin.settings.form.minPasswordLengthRequired">您必须输入至少4个字符的最小密码长度.</message>
+	<message key="admin.settings.form.titleRequired">标题是必须的.</message>
+	<message key="admin.settings.homeHeaderImage.altText">网站Logo</message>
+	<message key="admin.settings.homeHeaderImageInvalid">无效的网站Logo图片格式，只有如下格式允许 .gif, .jpg, or .png.</message>
+	<message key="admin.settings.introduction">介绍</message>
+	<message key="admin.settings.minPasswordLength">最小的密码长度</message>
+	<message key="admin.settings.passwordCharacters">字符</message>
+	<message key="admin.settings.siteLanguage">网站语言</message>
+	<message key="admin.settings.siteStyleSheetInvalid">无效的样式表格式，允许的格式有.css.</message>
+	<message key="admin.settings.siteStyleSheet">站点样式表</message>
+	<message key="admin.settings.siteTitle">站点标题</message>
+	<message key="admin.siteAdmin">站点管理</message>
+	<message key="admin.siteManagement">站点管理</message>
+	<message key="admin.siteSettings">站点设置</message>
+	<message key="admin.systemConfigFileReadError"><![CDATA[T配置文件 <tt>config.inc.php</tt> 不存在, 或者不可读, 或者无效.]]></message>
+	<message key="admin.systemInformation">系统信息</message>
+	<message key="admin.versionBuild">Build</message>
+	<message key="admin.version.checkForUpdates">检查更新</message>
+	<message key="admin.version.downloadPackage">下载</message>
+	<message key="admin.version.downloadPatch">现在不定</message>
+	<message key="admin.versionHistory">版本历史</message>
+	<message key="admin.version.latest">最新版本</message>
+	<message key="admin.versionMajor">Major</message>
+	<message key="admin.versionMinor">Minor</message>
+	<message key="admin.version.moreInfo">更多信息</message>
+	<message key="admin.versionRevision">修订版本</message>
+	<message key="admin.version.updateAvailable">一个更新的版本可用</message>
+	<message key="admin.version.upToDate">您的系统是最新</message>
+	<message key="admin.version">版本</message>
+	<message key="admin.settings">设置</message>
+	<message key="admin.siteSetup">整站设置</message>
+	<message key="admin.settings.siteTheme">站点主题</message>
+</locale>

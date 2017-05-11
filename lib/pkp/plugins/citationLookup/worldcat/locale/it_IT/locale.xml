@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../dtd/locale.dtd">
+
+<!--
+  * plugins/citationLookup/worldcat/locale/it_IT/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="it_IT" full_name="Italiano">
+	<message key="plugins.citationLookup.worldcat.displayName">WorldCat Database Connector</message>
+	<message key="plugins.citationLookup.worldcat.description">Connette al database bibliografico WorldCat.</message>
+</locale>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE schema SYSTEM "../../dtd/xmlSchema.dtd">
+
+<!--
+  * xml/schema/tombstone.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Tombstone schema in XML.
+  -->
+
+<schema version="0.2">
+	
+	<!--
+	  *
+	  * TABLE data_object_tombstones
+	  *
+	  -->
+	<table name="data_object_tombstones">
+		<field name="tombstone_id" type="I8">
+			<KEY />
+			<AUTOINCREMENT />
+		</field>
+		<field name="data_object_id" type="I8">
+			<NOTNULL />
+		</field>
+		<field name="date_deleted" type="T">
+			<NOTNULL />
+		</field>
+		<field name="set_spec" type="C2" size="255">
+			<NOTNULL />
+		</field>
+		<field name="set_name" type="C2" size="255">
+			<NOTNULL />
+		</field>
+		<field name="oai_identifier" type="C2" size="255">
+			<NOTNULL />
+		</field>
+		<descr>Unnavailable data object tombstones.</descr>
+		<index name="data_object_tombstones_data_object_id">
+			<col>data_object_id</col>
+		</index>
+	</table>
+	
+	<!--
+	 *
+	 * TABLE data_object_tombstone_settings
+	 *
+	 -->
+	<table name="data_object_tombstone_settings">
+		<field name="tombstone_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="locale" type="C2" size="5">
+			<NOTNULL/>
+			<DEFAULT VALUE=""/>
+		</field>
+		<field name="setting_name" type="C2" size="255">
+			<NOTNULL/>
+		</field>
+		<field name="setting_value" type="X"/>
+		<field name="setting_type" type="C2" size="6">
+			<NOTNULL/>
+			<descr>(bool|int|float|string|object)</descr>
+		</field>
+		<descr>Data object tombstone settings.</descr>
+		<index name="data_object_tombstone_settings_tombstone_id">
+			<col>tombstone_id</col>
+		</index>
+		<index name="data_object_tombstone_settings_pkey">
+			<col>tombstone_id</col>
+			<col>locale</col>
+			<col>setting_name</col>
+			<UNIQUE />
+		</index>
+	</table>
+	
+	<!--
+	  *
+	  * TABLE data_object_tombstone_oai_set_objects
+	  *
+	  -->
+	<table name="data_object_tombstone_oai_set_objects">
+		<field name="object_id" type="I8">
+			<KEY />
+			<AUTOINCREMENT />
+		</field>
+		<field name="tombstone_id" type="I8">
+			<NOTNULL />
+		</field>
+		<field name="assoc_type" type="I8">
+			<NOTNULL />
+		</field>
+		<field name="assoc_id" type="I8">
+			<NOTNULL />
+		</field>
+		<descr>Objects that are part of a data object tombstone OAI set.</descr>
+		<index name="data_object_tombstone_oai_set_objects_tombstone_id">
+			<col>tombstone_id</col>
+		</index>		
+	</table>
+</schema>

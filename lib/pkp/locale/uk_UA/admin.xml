@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/uk_UA/admin.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the uk_UA (Українська) locale.
+  *
+  * Translated by Denys Solovianenko, 2011
+  * V. I. Vernadsky National Library of Ukraine
+  -->
+
+<locale name="uk_UA" full_name="Українська">
+	<message key="admin.adminFunctions">Адміністративні функції</message>
+	<message key="admin.auth.confirmDelete">Ви впевнені, що бажаєте видалити назавжди це джерело аутентифікації?</message>
+	<message key="admin.auth.create">Створити джерело аутентифікації</message>
+	<message key="admin.auth.noneCreated">Жодних джерел аутентифікації не було визначено.</message>
+	<message key="admin.authSources">Джерела аутентифікації</message>
+	<message key="admin.clearDataCache">Очистити кеш даних</message>
+	<message key="admin.clearTemplateCache">Очистити кеш шаблонів</message>
+	<message key="admin.configFileUpdatedInstructions"><![CDATA[Ваш файл конфігурації успішно оновлений. Будь ласка, зауважте, що у разі, якщо Ваш сайт тепер не функціонує коректно, можливо, потрібно вручну виправити Вашу конфігурацію шляхом безпосереднього редагування файлу <tt>config.inc.php</tt>.]]></message>
+	<message key="admin.confirmClearTemplateCache">Ви впевнені, що бажаєте очистити кеш скомпільованих шаблонів?</message>
+	<message key="admin.confirmExpireSessions">Ви впевнені, що бажаєте припинити всі користувацькі сесії? Всі користувачі, які зараз знаходяться у системі (і ви, в тому числі), будуть вимушені заходити знову.</message>
+	<message key="admin.contentsOfConfigFile">Зміст файлу конфігурації</message>
+	<message key="admin.currentVersion">Поточна версія</message>
+	<message key="admin.dateInstalled">Дата встановлення</message>
+	<message key="admin.displayConfigFileInstructions"><![CDATA[Зміст вашої оновленої конфігурації наведено нижче. Для застосування змін конфігурації ви повинні відкрити <tt>config.inc.php</tt> у текстовому редакторі та замінити його зміст змістом текстового поля, наведеного нижче.]]></message>
+	<message key="admin.displayNewSystemConfig">Показати нову конфігурацію</message>
+	<message key="admin.expireSessions">Припинити користувацькі сесії</message>
+	<message key="admin.languages.confirmReload">Ви впевнені, що бажаєте перезавантажити локалізацію? Це призведе до знищення всіх існуючих мовних даних, таких як шаблони листів.</message>
+	<message key="admin.languages.installedLocales">Встановлені локалізації</message>
+	<message key="admin.languages.installLanguages">Керування локалізаціями</message>
+	<message key="admin.languages.installLocales">Встановити</message>
+	<message key="admin.languages.installNewLocales">Встановити нові локалізації</message>
+	<message key="admin.languages.languageSettings">Мовні налаштування</message>
+	<message key="admin.languages.noLocalesAvailable">Жодних локалізацій не доступно для встановлення.</message>
+	<message key="admin.languages.reload">Перезавантажити локалізацію</message>
+	<message key="admin.languages.uninstall">Демонтувати локалізацію</message>
+	<message key="admin.phpInfo">Розширена інформація про PHP</message>
+	<message key="admin.server.apacheVersion">Версія Apache</message>
+	<message key="admin.server.dbDriver">Драйвер бази даних</message>
+	<message key="admin.server.dbVersion">Версія серверу баз даних</message>
+	<message key="admin.serverInformationDescription"><![CDATA[Базова операційна система та версії серверного програмного забезпечення. Посилання <span class="highlight">Розширена інформація про PHP</span> дає змогу переглянути деталізовані дані щодо конфігурації PHP на даному сервері.]]></message>
+	<message key="admin.serverInformation">Інформація про сервер</message>
+	<message key="admin.server.phpVersion">Версія PHP</message>
+	<message key="admin.server.platform">Операційна платформа</message>
+	<message key="admin.settings.aboutDescription">Інформація про сайт</message>
+	<message key="admin.settings.contactEmail">Email основної контактної особи</message>
+	<message key="admin.settings.contactName">Ім'я основної контактної особи</message>
+	<message key="admin.settings.form.contactEmailRequired">Необхідно вказати адресу електронної пошти основної контактної особи.</message>
+	<message key="admin.settings.form.contactNameRequired">Необхідно вказати ім'я основної контактної особи.</message>
+	<message key="admin.settings.form.minPasswordLengthRequired">Необхідно вказати мінімальну довжину пароля (не менше 4 символів).</message>
+	<message key="admin.settings.form.titleRequired">Необхідно вказати назву.</message>
+	<message key="admin.settings.homeHeaderImage.altText">Логотип сайту</message>
+	<message key="admin.settings.homeHeaderImageInvalid">Неприпустимий формат зображення логотипу. Припустимі формати .gif, .jpg, або .png.</message>
+	<message key="admin.settings.introduction">Вступ</message>
+	<message key="admin.settings.minPasswordLength">Мінімальна довжина пароля</message>
+	<message key="admin.settings.passwordCharacters">символів</message>
+	<message key="admin.settings.siteLanguage">Мова сайту</message>
+	<message key="admin.settings.siteStyleSheetInvalid">Неприпустимий формат таблиці стилю сайту. Припустимий формат .css.</message>
+	<message key="admin.settings.siteStyleSheet">Таблиця стилю сайту</message>
+	<message key="admin.settings.siteTitle">Заголовок сайту</message>
+	<message key="admin.siteAdmin">Адміністрування сайту</message>
+	<message key="admin.siteManagement">Керування сайтом</message>
+	<message key="admin.siteSettings">Налаштування сайту</message>
+	<message key="admin.systemConfigFileReadError"><![CDATA[Файл конфігурації <tt>config.inc.php</tt> не існує, не доступний для читання або пошкоджений.]]></message>
+	<message key="admin.systemInformation">Інформація про систему</message>
+	<message key="admin.versionBuild">Збірка</message>
+	<message key="admin.version.checkForUpdates">Перевірити наявність оновлень</message>
+	<message key="admin.version.downloadPackage">Завантажити</message>
+	<message key="admin.version.downloadPatch">Завантажити виправлення</message>
+	<message key="admin.versionHistory">Історія версій</message>
+	<message key="admin.version.latest">Остання версія</message>
+	<message key="admin.versionMajor">Базова</message>
+	<message key="admin.versionMinor">Додаткова</message>
+	<message key="admin.version.moreInfo">Більше інформації</message>
+	<message key="admin.versionRevision">Ревізія</message>
+	<message key="admin.version.updateAvailable">Доступна оновлена версія</message>
+	<message key="admin.version.upToDate">Ваша система використовує поточну версію</message>
+	<message key="admin.version">Версія</message>
+	<message key="admin.settings">Налаштування</message>
+	<message key="admin.settings.siteTheme">Тема сайту</message>
+	<message key="admin.siteSetup">Налаштування сайту</message>
+</locale>

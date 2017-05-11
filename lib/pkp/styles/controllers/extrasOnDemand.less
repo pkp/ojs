@@ -1,0 +1,92 @@
+/**
+ * @defgroup pkp_controllers_extrasOnDemand
+ */
+
+/**
+ * @file styles/controllers/extrasOnDemand.less
+ *
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @ingroup pkp_controllers_extrasOnDemand
+ *
+ * @brief Styles for pkp_controllers_extrasOnDemand
+ */
+
+.pkp_controllers_extrasOnDemand {
+	display: inline-block;
+
+	> a {
+		position: relative;
+		display: block;
+		padding: 0 @base 0 (@double + @double);
+		border: @bg-border;
+		line-height: @double + @base;
+		text-decoration: none;
+
+		.fa {
+			position: absolute;
+			top: 0;
+			left: 0;
+			line-height: @double + @base;
+			width: @double + @base;
+			text-align: center;
+			border-right: @bg-border;
+
+			&:before {
+				display: inline-block;
+				transition: transform 0.3s;
+			}
+		}
+	}
+
+	> .container {
+		padding: 0 @base;
+		max-height: 0;
+		transition: padding 0.3s;
+		overflow: hidden;
+	}
+
+	.toggleExtras-active {
+		display: none;
+	}
+
+	&.active {
+
+		.toggleExtras-active {
+			display: block;
+		}
+
+		.toggleExtras-inactive {
+			display: none;
+		}
+
+
+		> a .fa:before {
+			-webkit-transform: rotate(45deg);
+			-ms-transform: rotate(45deg);
+			transform: rotate(45deg);
+		}
+
+		> .container {
+			padding: @base;
+			max-height: none;
+			border: @bg-border;
+			border-top: none;
+			overflow: auto;
+		}
+	}
+
+	> a:hover,
+	> a:focus,
+	&.active > a {
+		color: #fff;
+		background: @primary;
+		border-color: @primary;
+
+		.fa {
+			border-color: rgba(255,255,255,0.2);
+		}
+	}
+}

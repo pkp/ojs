@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../dtd/locale.dtd">
+
+<!--
+  * plugins/citationParser/freecite/locale/ru_RU/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the ru_RU (Русский) locale.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Russian_(ru_RU)
+  -->
+
+<locale name="ru_RU" full_name="Русский">
+	<message key="plugins.citationParser.freecite.displayName">Модуль извлечения библиографических ссылок FreeCite</message>
+	<message key="plugins.citationParser.freecite.description">Извлекает поля из библиографической ссылки в виде простого текста с помощью службы FreeCite.</message>
+</locale>

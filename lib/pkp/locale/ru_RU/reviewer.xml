@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/ru_RU/reviewer.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the ru_RU (Русский) locale.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Russian_(ru_RU)
+  -->
+
+<locale name="ru_RU" full_name="Русский">
+	<!-- Используется в процессе рецензирования -->
+	<message key="reviewer.reviewSteps.request">1. Запрос</message>
+	<message key="reviewer.reviewSteps.guidelines">2. Руководство</message>
+	<message key="reviewer.reviewSteps.download">3. Скачать и рецензировать</message>
+	<message key="reviewer.reviewSteps.completion">4. Завершение</message>
+	<message key="reviewer.step1.request">Запрос на рецензию</message>
+	<message key="reviewer.step1.requestBoilerplate">Вы были выбраны в качестве потенциального рецензента для следующего материала. Ниже приведено описание материала и сроки выполнения этой рецензии. Мы надеемся, что вы сможете принять участие в рецензировании.</message>
+	<message key="reviewer.step1.viewAllDetails">Показать всю информацию о материале</message>
+	<message key="reviewer.submission.reviewerFiles">Файлы рецензента</message>
+	<message key="reviewer.submission.declineReview">Отклонить запрос на рецензию</message>
+	<message key="reviewer.submission.declineReviewMessage">Вы можете описать для редактора причины вашего отказа от рецензирования этого материала в поле ниже.</message>
+	<message key="reviewer.submission.acceptReview">Согласиться на рецензирование, перейти к шагу №2</message>
+	<message key="reviewer.submission.continueToStepThree">Перейти к шагу №3</message>
+	<message key="reviewer.submission.submitReview">Отправить рецензию</message>
+	<message key="reviewer.submission.reviewerGuidelines">Руководство для рецензентов</message>
+	<message key="reviewer.submission.enterCompetingInterests">У данного издателя есть правила декларирования потенциального конфликта интересов его рецензентов. Пожалуйста, ознакомьтесь с этими правилами.</message>
+	<message key="reviewer.submission.noCompetingInterests">У меня нет конфликта интересов</message>
+	<message key="reviewer.submission.hasCompetingInterests">У меня может быть конфликт интересов (опишите ниже)</message>
+	<message key="reviewer.submission.competingInterests">Конфликт интересов</message>
+	<message key="reviewer.submission.guidelines">Руководство для рецензентов</message>
+	<message key="reviewer.submission.noGuidelines">Данный издатель не создал руководство для рецензентов.</message>
+	<message key="reviewer.submission.downloadDescription">Щелкайте на именах файлов ниже, чтобы скачать файлы, связанные с этим материалом.</message>
+	<message key="reviewer.submission.reviewDescription">Введите (или вставьте) вашу рецензию для этого материала в форму ниже.</message>
+	<message key="reviewer.submission.uploadDescription">Загрузите файлы, которые стоит просмотреть редактору и/или автору, включая откорректированные версии оригинальных файлов для рецензии.</message>
+	<message key="reviewer.complete">Рецензия отправлена</message>
+	<message key="reviewer.confirmSubmit">Вы уверены, что хотите отправить эту рецензию?</message>
+	<message key="reviewer.complete.whatNext">Благодарим вас за рецензирование данного материала. Ваша рецензия была успешно отправлена. Мы высоко ценим ваш вклад в качество работ, которые мы публикуем; если понадобится, редактор может связаться с вами снова для получения более подробной информации.</message>
+	<message key="reviewer.aboutDueDates">О сроках выполнения</message>
+	<message key="reviewer.aboutDueDates.text">Редактор просит вас принять или отклонить запрос на рецензию до даты ответа на запрос и выполнить рецензию до даты предоставления рецензии.</message>
+	<message key="submission.comments.canShareWithAuthor">Для автора и редактора</message>
+	<message key="submission.comments.cannotShareWithAuthor">Только для редактора</message>
+	<message key="user.authorization.submissionReviewer">Данный пользователь не назначен рецензентом для запрошенного документа.</message>
+</locale>

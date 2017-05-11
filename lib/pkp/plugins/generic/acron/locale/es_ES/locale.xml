@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the es_ES (Español (España)) locale.
+  *
+  -->
+ 
+<locale name="es_ES" full_name="Español (España)">
+	<message key="plugins.generic.acron.name">Módulo Acron</message>
+	<message key="plugins.generic.acron.enabled">El plugin Acron ha sido habilitado.</message>
+	<message key="plugins.generic.acron.disabled">El plugin Acron ha sido deshabilitado.</message>
+
+	<message key="plugins.generic.acron.reload">Recargar las tareas programadas</message>
+</locale>

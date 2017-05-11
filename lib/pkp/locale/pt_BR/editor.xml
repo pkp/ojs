@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/pt_BR/editor.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Locale information: https://pkp.sfu.ca/wiki/index.php?title=OMP:_Portuguese_(pt_BR)
+  * Localization strings.
+  -->
+
+<locale name="pt_BR" full_name="Português (Brasil)">	
+	<message key="editor.submissionLibrary">Biblioteca das Submissões</message>
+	<message key="editor.review.notInitiated">A avaliação não foi iniciada.</message>
+	<message key="editor.submission.copyediting.personalMessageToUser">Mensagem ao usuário</message>
+	<message key="editor.submission.externalReviewDescription">Selecione os arquivos abaixo a serem enviados a etapa de avaliação.</message>
+	<!-- Add file or auditor to editor/audit grids -->
+	<message key="editor.submission.fileAuditor.form.userRequired">Você deve selecionar um usuário para designar.</message>
+	<message key="editor.submission.uploadSelectFiles">Enviar/Selecionar Arquivos</message>
+	<message key="editor.submission.selectFiles">Selecionar Arquivos</message>
+	<message key="editor.submission.revisions">Avaliações</message>
+	<message key="editor.submission.addReviewer">Adicionar Avaliador</message>
+	<message key="editor.submission.findAndSelectReviewer">Localizar um Avaliador</message>
+	<message key="editor.submission.fileList.includeAllStages">Mostrar arquivos de todos os estágios de trabalho.</message>
+	<message key="editor.submission.backToSearch">Voltar a Busca</message>
+	<message key="editor.review.createReviewer">Criar Novo Avaliador</message>
+	<message key="editor.review.enrollReviewer.short">Designar Usuário Existente</message>
+	<message key="editor.review.unassignReviewer">Dispensar Avaliador</message>
+	<message key="editor.submissionReview.reviewType">Tipo de avaliação</message>
+	<message key="editor.submissionReview.skipEmail">Não enviar email ao autor</message>
+	<message key="editor.submissionReview.open">Abrir</message>
+	<message key="editor.submissionReview.blind">Cega</message>
+	<message key="editor.submissionReview.doubleBlind">Duplo-cega</message>
+	<message key="editor.submissionReview.restrictFiles">Arquivos a serem avaliados</message>
+	<message key="editor.submissionReview.restrictFiles.hide">Fechar Seleção de Arquivos</message>
+	<message key="editor.submissionReview.editReview">Editar Avaliação</message>
+	<message key="editor.review.personalMessageToReviewer">Email para o avaliador</message>
+	<message key="editor.review.importantDates">Datas Importantes</message>
+	<message key="editor.review.uploadRevision">Envio da Avaliação</message>
+	<message key="editor.review.NotifyAuthorAccept">Notificar o autor que sua submissão foi aceita.</message>
+	<message key="editor.review.NotifyAuthorDecline">Notificar o autor que sua submissão foi recusada.</message>
+	<message key="editor.review.NotifyAuthorRevisions">Solicitar modificações ao autor.</message>
+	<message key="editor.review.NotifyAuthorResubmit">Solicitar modificações ao autor que estarão sujeitos a avaliação futura.</message>
+	<message key="editor.review.NotifyAuthorExternal">Notifica o autora da decisão para iniciar uma avaliação externa.</message>
+	<message key="editor.review.personalMessageToAuthor">Email a ser enviado ao autor</message>
+	<message key="editor.review.dateAccepted">Data de Recebimento da Avaliação</message>
+	<message key="editor.review.noReviews">Sem avaliações por pares para importar</message>
+	<message key="editor.review.reminder">Lembrete ao Avaliador</message>
+	<message key="editor.review.thankReviewer">Agradecer ao Avaliador</message>
+	<message key="editor.review.reminderError">Erro ao enviar lembrete ao avaliador</message>
+	<message key="editor.review.thankReviewerError">Erro ao enviar agradecimento ao avaliador</message>
+	<message key="editor.review.skipEmail">Não enviar email ao avaliador.</message>
+	<message key="editor.review.sendReminder">Enviar Lembrete</message>
+	<message key="editor.review.readReview">Ler Avaliação</message>
+	<message key="editor.review.readNewReview">Ler Nova Avaliação</message>
+	<message key="editor.review.responseDue">Prazo de resposta: {$date}</message>
+	<message key="editor.review.requestSent">Solicitação enviada</message>
+	<message key="editor.review.requestAccepted">Solicitação aceita</message>
+	<message key="editor.review.revertDecision">Reverter decisão</message>
+	<message key="editor.review.reviewDue">Prazo de avaliação: {$date}</message>
+	<message key="editor.review.reviewCompleted">Avaliação Completada</message>
+	<message key="editor.review.reviewConfirmed">Avaliação Confirmada</message>
+	<message key="editor.review.reviewSubmitted">Avaliação Enviada</message>
+	<message key="editor.review.reviewerComments">Comentários do Avaliador</message>
+	<message key="editor.review.days">Médias de Dias</message>
+	<message key="editor.review.mustSelect">Você deve selecionar um avaliador</message>
+	<message key="editor.review.errorAddingReviewer">Houve um erro ao adicionar um avaliador. Por favor tente novamente.</message>
+	<message key="editor.submission.newRound">Nova Rodada de Avaliação</message>
+	<message key="editor.submission.newRoundDescription">You are about to create a new review round for this submission.  Files that have not been used in other review rounds are listed below.  By default, the reviewers from the previous review round have been selected to participate in this new review round.</message>
+	<message key="editor.article.reviewForms">Formulários de Avaliação</message>
+	<message key="editor.article.selectReviewForm">Selecionar Formulário de Avaliação</message>
+	<message key="editor.article.clearReviewForm">Limpar Formulário de Avaliação</message>
+	<message key="grid.action.editQuery">Editar Comentários</message>
+	<message key="editor.submission.fileAuditor.form.fileRequired">Você deve selecionar ao menos um arquivo para designar o usuário.</message>
+	<message key="editor.submission.fileAuditor.form.messageRequired">Você deve incluir uma mensagem pessoal.</message>
+	<message key="editor.submission.fileAuditor.skipEmail">Não enviar mensagem para o Auditor</message>
+	<message key="editor.submission.review.reviewersDescription"><![CDATA[Use <em>+Adicionar Avaliador</em> para convidar avaliadores para revisar os arquivos da submissão. O ícone do bloco de notas indica que uma avaliação foi submetida, que depois é marcada como <em>Reconhecida</em> após ser consultada. Quando avaliações estiverem fora do prazo, clique no ícone do envelope vermelho para notificar os avaliadores.]]></message>
+	<message key="editor.submission.review.currentFiles">Arquivos da avaliação atual para a rodada {$round}</message>
+	<message key="editor.review.reviewDueDate">Data limite para avaliação</message>
+	<message key="editor.review.errorDeletingReviewer">Ocorreu um erro ao excluir o avaliador. Tente novamente.</message>
+	<message key="editor.review.userGroupSelect">Inscrever usuário neste grupo de usuários avaliadores</message>
+	<message key="editor.review.unconsiderReviewText">Você gostaria de marcar esta avaliação como não considerada? O histórico de avaliação será preservado.</message>
+	<message key="editor.review.unconsiderReview">Desconsiderar esta avaliação</message>
+	<message key="editor.review.errorUnconsideringReview">Ocorreu um erro ao marcar esta avaliação como desconsiderada. Tente novamente.</message>
+	<message key="editor.review.readConfirmation">Uma vez que a leitura da avaliação esteja completa, pressione "Confirmar" para sinalizar que o processo de avaliação pode prosseguir.</message>
+	<message key="editor.submission.selectCopyedingFiles">Arquivos da edição de texto</message>
+	<message key="editor.submission.selectReviewer">Selecionar avaliador</message>
+	<message key="editor.submission.taskDueDate">Data limite da tarefa</message>
+	<message key="editor.submission.taskSchedule">Cronograma de tarefas</message>
+	<message key="editor.review.enrollReviewer">Inscrever um usuário existente como avaliador</message>
+	<message key="editor.submission.noAuditRequested">Nenhuma auditoria requisitada para este arquivo</message>
+	<message key="editor.submission.personalMessageToUser">Email a ser enviado ao usuário</message>
+	<message key="editor.submission.proof.reminder">Lembrete de prova</message>
+	<message key="editor.submission.editorial.approveCopyeditDescription">O arquivo da edição de texto precisa ser aprovado antes de ser enviado para a etapa de produção. Você deseja aprovar este arquivo?</message>
+	<message key="editor.submission.editorial.disapproveCopyeditDescription">Rejeitar este arquivo da edição de texto tornará o mesmo indisponível para envio à etapa de produção. Você deseja rejeitar este arquivo?</message>
+	<message key="editor.submission.addAuditor">Designar auditor</message>
+	<message key="editor.review">Avaliação</message>
+	<message key="editor.submission.production.productionReadyFiles">Arquivos prontos para a produção</message>
+	<message key="editor.submissionReview.recordDecision">Gravar decisão editorial</message>
+	<message key="editor.submission.createNewRound">Criar nova rodada de avaliação</message>
+	<message key="editor.article.confirmChangeReviewForm">Atenção: Alterar o formulário de avaliação afetará as respostas dadas pelos avaliadores por meio deste formulário. Deseja continuar?</message>
+	<message key="editor.submission.noReviewerFilesSelected">Nenhum arquivo selecionado</message>
+	<message key="editor.submission.noReviewerFilesSelected.details">Você ainda não selecionou arquivos para o avaliador.</message>
+	<message key="submission.queries.subjectRequired">Um assunto para a discussão é exigido.</message>
+	<message key="submission.queries.messageRequired">Uma mensagem para a discussão é requerida.</message>
+	<message key="submission.queries.attachedFiles">Arquivos anexados</message>
+	<message key="editor.submission.query.manageQueryNoteFilesDescription">Arquivos da lista baixo podem ser anexados para inclusão nesta discussão.</message>
+	<message key="editor.submission.selectedReviewer">Avaliador Selecionado</message>
+	<message key="editor.submission.copyedit.manageCopyeditFilesDescription">Qualquer um dos arquivos que tenham sido carregados em qualquer etapa da submissão podem ser adicionados à listagem de Arquivos da Edição de Texto marcado-se a caixa de seleção Incluir abaixo e clicando-se em Busca: todos os arquivos disponíveis serão listados e podem ser selecionados para inclusão. Arquivos adicionais ainda não carregados para uma etapa podem ser adicionados à listagem clicando-se no link Enviar Arquivo.</message>
+	<message key="editor.review.reviewDetails">Detalhes da avaliação</message>
+	<message key="editor.review.noReviewFilesUploaded">Sem arquivos enviados</message>
+	<message key="editor.review.noReviewFilesUploaded.details">Você não enviou nenhum arquivo da avaliação.</message>
+	<message key="editor.review.emailReviewer">Email ao avaliador</message>
+	<message key="editor.submission.proofreading.approveProof">Aprovar Versão</message>
+	<message key="editor.submission.proofreading.revokeProofApproval">Revogar Aprovação</message>
+	<message key="editor.submission.proofreading.confirmCompletion">Aprove essa versão para indicar que a leitura de prova está completa e o arquivo pode ser publicado.</message>
+	<message key="editor.submission.proofreading.confirmRemoveCompletion">Revogar a aprovação desta versão para indicar que a leitura de prova não está mais completa e que o arquivo não está pronto para ser publicado.</message>
+	<message key="editor.publicIdentificationNumericNotAllowed">O identificador público '{$publicIdentifier}' não pode ser um número.</message>
+	<message key="editor.submission.findAndSelectUser">Localizar Usuário</message>
+	<message key="editor.publicIdentificationPatternNotAllowed">O padrão {$pattern} não é permitido para o identificador público.</message>
+</locale>

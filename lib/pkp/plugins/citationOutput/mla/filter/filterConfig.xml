@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE filterConfig SYSTEM "../../../../dtd/filterConfig.dtd">
+
+<!--
+  * filterConfig.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Filter Configuration.
+  -->
+<filterConfig>
+	<filters>
+		<filter
+			inGroup="nlm30-element-citation=>plaintext"
+			class="lib.pkp.plugins.citationOutput.mla.filter.Nlm30CitationSchemaMlaFilter"
+			isTemplate="0"
+		/>
+		<filter
+			inGroup="submission=>reference-list"
+			class="lib.pkp.classes.citation.PlainTextReferencesListFilter"
+			isTemplate="0" >
+			<setting type="string"><name>displayName</name><value>MLA Reference List</value></setting>
+			<setting type="string"><name>citationOutputFilterName</name><value>lib.pkp.plugins.citationOutput.mla.filter.Nlm30CitationSchemaMlaFilter</value></setting>
+			<setting type="string"><name>metadataSchemaName</name><value>lib.pkp.plugins.metadata.nlm30.schema.Nlm30CitationSchema</value></setting>
+			<setting type="const"><name>ordering</name><value>REFERENCES_LIST_ORDERING_ALPHABETICAL</value></setting>
+		</filter>
+	</filters>
+</filterConfig>

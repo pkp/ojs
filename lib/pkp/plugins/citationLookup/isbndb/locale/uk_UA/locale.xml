@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../dtd/locale.dtd">
+
+<!--
+  * plugins/citationLookup/isbndb/locale/uk_UA/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="uk_UA" full_name="Українська">
+	<!-- plug-in -->
+	<message key="plugins.citationLookup.isbndb.displayName">Шлюз бази даних ISBNdb</message>
+	<message key="plugins.citationLookup.isbndb.description">Забезпечує зв'язок з бібліографічною базою даних ISBNdb.</message>
+
+	<!-- ISBN lookup and extraction services -->
+	<message key="plugins.citationLookup.isbndbExtraction.displayName">Служба екстракції ISBN</message>
+	<message key="plugins.citationLookup.isbndbExtraction.description">Пошук ISBN для об'єкту, вказаного у бібліографічному записі NLM 3.0.</message>
+	<message key="plugins.citationLookup.isbndbLookup.displayName">Служба пошуку ISBN</message>
+	<message key="plugins.citationLookup.isbndbLookup.description">Пошук повного запису NLM 3.0 для об'єкту зі вказаним ISBN.</message>
+</locale>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/eu_ES/reader.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the eu_ES (Euskara) locale.
+  *
+  -->
+
+<locale name="eu_ES" full_name="Euskara">
+	<message key="comments.anonymous">Erabiltzaile anonimoa</message>
+	<message key="comments.anonymousNamed">"{$userName}"</message>
+	<message key="comments.body">Gorputza</message>
+	<message key="comments.confirmDeleteChildren">Iruzkin hau ezabatzen bada, eman zaizkion erantzunak ere ezabatu egingo dira. Ziur zaude ezabatu nahi duzula?</message>
+	<message key="comments.delete">Ezabatu iruzkin hau</message>
+	<message key="comments.email">Helbide el.</message>
+	<message key="comments.emailReply">Mezu bidez erantzun</message>
+	<message key="comments.enterComment">Sartu iruzkina</message>
+	<message key="comments.inResponseTo">Honi erantzunez: <![CDATA[<a href="]]>{$url}<![CDATA[">]]>{$title}<![CDATA[</a>]]></message>
+	<message key="comments.name">Izena</message>
+	<message key="comments.noComments">Irakurleek ez dute iruzkinik egin.</message>
+	<message key="comments.nReplies">({$num} erantzun)</message>
+	<message key="comments.oneReply">(Erantzun 1)</message>
+	<message key="comments.postAnonymously">Jarri iruzkin hau anonimo gisa</message>
+	<message key="comments.postReply">Bidali erantzuna</message>
+	<message key="comments.readerComments">Irakurleen iruzkinak</message>
+	<message key="comments.readMore">Gehiago irakurri</message>
+	<message key="comments.replies">Erantzunak</message>
+	<message key="comments.title">Titulua</message>
+	<message key="comments.viewAllComments">Ikusi iruzkin guztiak</message>
+	<message key="reader.fullText">Testu osoa:</message>
+	<message key="rt.addComment">Gehitu iruzkina</message>
+	<message key="rt.admin.configuration">Konfigurazioa</message>
+	<message key="rt.admin.contexts.confirmDelete">Ziur zaude testuinguru hau eta asoziatuta dituen Bilaketak ezabatu nahi dituzula?</message>
+	<message key="rt.admin.contexts.createContext">Sortu testuingurua</message>
+	<message key="rt.admin.contexts.edit.editContext">Editatu testuingurua</message>
+	<message key="rt.admin.contexts.metadata">Metadatuak</message>
+	<message key="rt.admin.contexts.options.authorTerms">Erabili egile-izena bilaketa-termino gisa, erabiltzaileek egilearen beste lan batzuk bilatu ahal izan ditzaten (adib., "Beste lan batzuk" testuingurua)</message>
+	<message key="rt.admin.contexts.options.citedBy">Erabili egile-izena bilaketa-termino lehenetsi gisa eta deskribatu testuingurua artikuluaren aipamenen bilaketa gisa.</message>
+	<message key="rt.admin.contexts.options.defineTerms"><![CDATA[Erabili irakurleak nabarmendutako hitza bilaketa-termino lehenetsi gisa edo utzi hutsik ezer hautatu ez bada (adib., "Terminoen definizioa" testuingururako). "Terminoen definizioa" aukera <a href="{$settingsUrl}">Irakurtzeko tresnen ezarpenetan</a> gaitu daiteke, hitz batean klik egindakoan testuingurua irekitzeko.]]></message>
+	<message key="rt.admin.contexts.options.geoTerms">Erabili datu geografiko indexatuak bilaketa-termino lehenetsi gisa.</message>
+	<message key="rt.admin.contexts.options">Aukerak</message>
+	<message key="rt.admin.management">Kudeaketa</message>
+	<message key="rt.admin.readingToolsEnabled">Irakurtzeko tresnak</message>
+	<message key="rt.admin.searches.confirmDelete">Ziur zaude bilaketa hau ezabatu nahi duzula?</message>
+	<message key="rt.admin.searches.createSearch">Sortu bilaketa</message>
+	<message key="rt.admin.searches.edit.editSearch">Editatu bilaketa</message>
+	<message key="rt.admin.selectedVersion">Erlazionatutako lanak</message>
+	<message key="rt.admin.settings.abstract">Laburpena (lanaren laburpena edo abstract-a aurkezten du).</message>
+	<message key="rt.admin.settings.authorBio">Egileari buruz (egileak sartutako azalpen biografikoak erakusten ditu).</message>
+	<message key="rt.admin.settings.captureCite">Nola aipatu lanak (lanen bibliografia ematen du).</message>
+	<message key="rt.admin.settings.defineTerms">Kontsultatu terminoak (lan bateko hitz batean klik egin eta hitz hori hiztegi batean bilatzeko aukera ematen die irakurleei).</message>
+	<message key="rt.admin.settings.disableRelatedItems">Desgaitu erlazionatutako lanak</message>
+	<message key="rt.admin.settings.emailAuthor">Bidali mezua egileari (egilearen helbide elektronikoa jarrita daukan mezu-txantiloi batera eramaten du).</message>
+	<message key="rt.admin.settings.emailOthers">Jakinarazi lankide bati (estekatutako mezu-txantiloi batera eramaten du).</message>
+	<message key="rt.admin.settings.findingReferences">Bilatu erreferentziak</message>
+	<message key="rt.admin.settings.supplementaryFiles">Fitxategi osagarriak (egileak lanarekin batera bidali dituen fitxategien zerrenda erakusten du).</message>
+	<message key="rt.admin.settings.viewMetadata">Metadatuak (egileak eta sistemak lana indexatzeko emandako metadatuak erakusten ditu).</message>
+	<message key="rt.admin.status">Egoera</message>
+	<message key="rt.admin.validateUrls.complete">Balidazioa bukatu da.</message>
+	<message key="rt.admin.validateUrls.ok">ADOS</message>
+	<message key="rt.admin.validateUrls.urlIsInvalid">{$url} ez da baliozkoa.</message>
+	<message key="rt.admin.validateUrls">Balidatu Irakurtzeko tresnen URLak</message>
+	<message key="rt.admin.validateUrls.validate">Balidatu</message>
+	<message key="rt.admin.versions.confirmDelete">Ziur zaude bertsio hau eta asoziatuta dituen Testuinguruak eta Bilaketak ezabatu nahi dituzula?</message>
+	<message key="rt.admin.versions.confirmRestore">Ziur zaude bertsio guztiak balio lehenetsietara itzuli nahi dituzula? Horrela bada, Bertsio aktibo bat aukeratu beharko duzu Ezarpenen orrian.</message>
+	<message key="rt.admin.versions.createVersion">Sortu bertsioa</message>
+	<message key="rt.admin.versions.edit.editVersion">Editatu bertsioa</message>
+	<message key="rt.admin.versions.export">Esportatu</message>
+	<message key="rt.admin.versions.importVersion">Inportatu bertsioa</message>
+	<message key="rt.admin.versions.metadata">Metadatuak</message>
+	<message key="rt.admin.versions.restoreVersions">Berrezarri bertsioen balio lehenetsiak</message>
+	<message key="rt.authorBio">Egileari buruz</message>
+	<message key="rt.captureCite.format">Aipamenen formatua</message>
+	<message key="rt.captureCite">Nola aipatu lanak</message>
+	<message key="rt.captureCite.online">Linean</message>
+	<message key="rt.colleague">Jakinarazi lankide bati</message>
+	<message key="rt.context.abbrev">Laburd.</message>
+	<message key="rt.context.and">ETA</message>
+	<message key="rt.context.citesContextDescription">Artikulua Google Scholar-en indexatuta badago, "Xk aipatua" (Cited by X) esteka bat izan dezake, artikulua aipatzen duten lan guztietara joateko. Gainera, titulua eta egilea aipatzen duten lan guztien zerrenda emango du Google Scholar-ek. Zure bilaketa-liburutegitik bakarrik atzi daitezkeen lineako baliabideak badira, Google Scholar-eko Scholar Preferences-era joan eta zure erakunderako liburutegi-estekak aktibatzeko aukera izango duzu normalean.</message>
+	<message key="rt.context">Testuingurua</message>
+	<message key="rt.context.defineTermsDescription">Artikulua HTML fitxategia bada (ez PDFa), testuko edozein hitzetan klik eginda hitzaren definizioa bilatzeko koadroa agertuko da. Bestela, hitzak koadroan idatzi edo itsatsi daitezke. Baliabideari buruzko informazio gehiago ikusteko, sakatu GURI BURUZ. Garrantziren arabera eta eduki osoa edo zati bat atzitzeko sarrera librearen (doakoaren) arabera hautatu dira baliabideak.</message>
+	<message key="rt.context.description">Azalpena</message>
+	<message key="rt.context.order">Ordena</message>
+	<message key="rt.contexts">Testuinguruak</message>
+	<message key="rt.context.searchDescription">Egileak hautatu ditu bilaketa-terminoak. Irakurleak aldatu edo ezabatu ditzake. Bi edo hiru termino edo esaldi labur izaten dira bilaketa boolear (ETA) onenak ematen dituztenak. Baliabideak bilatzeko informazio gehiago ikusteko, sakatu GURI BURUZ. Garrantziren arabera eta eduki osoa edo zati bat atzitzeko sarrera librearen (doakoaren) arabera hautatu dira baliabideak.</message>
+	<message key="rt.context.searchTerms">Bilaketa-terminoak</message>
+	<message key="rt.context.termToDefine">Definitzeko hitza</message>
+	<message key="rt.context.title">Titulua</message>
+	<message key="rt.emailAuthor">Bidali mezua egileari</message>
+	<message key="rt.email.needLogin"><![CDATA[* <a target="_parent" href="{$loginUrl}">Erregistratzea</a> eskatzen du]]></message>
+	<message key="rt.email.sent">Mezua bidali da.</message>
+	<message key="rt.findingReferences">Bilatu erreferentziak</message>
+	<message key="rt.findingReferences.googleScholar">Google Scholar</message>
+	<message key="rt.findingReferences.windowsLiveAcademic">Windows Live Academic</message>
+	<message key="rt.lookUp">Kontsultatu terminoak</message>
+	<message key="rt.metadata.dublinCore.contributor">Ekarpengilea</message>
+	<message key="rt.metadata.dublinCore.coverage">Estaldura</message>
+	<message key="rt.metadata.dublinCore.date">Data</message>
+	<message key="rt.metadata.dublinCore.description">Azalpena</message>
+	<message key="rt.metadata.dublinCore">Dublin Core</message>
+	<message key="rt.metadata.dublinCore.format">Formatua</message>
+	<message key="rt.metadata.dublinCore.identifier">Identifikatzailea</message>
+	<message key="rt.metadata.dublinCore.language">Hizkuntza</message>
+	<message key="rt.metadata.dublinCore.publisher">Argitaratzailea</message>
+	<message key="rt.metadata.dublinCore.relation">Erlazioa</message>
+	<message key="rt.metadata.dublinCore.rights">Eskubideak</message>
+	<message key="rt.metadata.dublinCore.source">Iturburua</message>
+	<message key="rt.metadata.dublinCore.subject">Gaia</message>
+	<message key="rt.metadata.dublinCore.title">Titulua</message>
+	<message key="rt.metadata.dublinCore.type">Mota</message>
+	<message key="rt.metadata.forThisDocument">Dokumentu honen metadatuak</message>
+	<message key="rt.metadata.pkp.abstract">Laburpena</message>
+	<message key="rt.metadata.pkp.copyright">Copyright eta baimenak</message>
+	<message key="rt.metadata.pkp.coverage">Kokapen geo-espaziala, garai kronologikoa, ikerketaren ezaugarriak (generoa, adina, etab.)</message>
+	<message key="rt.metadata.pkp.date">(UUUU-HH-EE)</message>
+	<message key="rt.metadata.pkp.discipline">Diziplina(k)</message>
+	<message key="rt.metadata.pkp.format">Fitxategi-formatua</message>
+	<message key="rt.metadata.pkp.genre">Egoera eta generoa</message>
+	<message key="rt.metadata.pkpItem">PKP metadatuak</message>
+	<message key="rt.metadata.pkp.language">English=en</message>
+	<message key="rt.metadata.pkp.publisher">Agentzia antolatzailea, kokalekua</message>
+	<message key="rt.metadata.pkp.source">Aldizkari/konferentzia titulua; bol., zk. (urtea)</message>
+	<message key="rt.metadata.pkp.sponsors">Babeslea(k)</message>
+	<message key="rt.metadata.pkp.subject">Gako-hitza(k)</message>
+	<message key="rt.metadata.pkp.suppFiles">Fitxat. osag.</message>
+	<message key="rt.metadata.pkp.title">Dokumentuaren titulua</message>
+	<message key="rt.metadata.pkp.type">Mota</message>
+	<message key="rt.metadata.pkp.uri">Universal Resource Indicator (URI)</message>
+	<message key="rt.printVersion">Inprimatzeko bertsioa</message>
+	<message key="rt.readingTools">Irakurtzeko tresnak</message>
+	<message key="rt.relatedItems">Erlazionatutako lanak</message>
+	<message key="rt.reviewPolicy">Ebaluazio-politika</message>
+	<message key="rt.search.description">Azalpena</message>
+	<message key="rt.searches">Bilaketak</message>
+	<message key="rt.search.order">Ordenatu</message>
+	<message key="rt.search">Bilatu</message>
+	<message key="rt.search.searchPost">Bidaltzeko  datuak</message>
+	<message key="rt.search.searchUrl">Bilaketako URLa</message>
+	<message key="rt.search.suggest">Proposatu iturburu bat</message>
+	<message key="rt.search.title">Titulua</message>
+	<message key="rt.search.url">URLa</message>
+	<message key="rt.suppFiles.download">Deskargatu</message>
+	<message key="rt.suppFiles">Fitxategi osagarriak</message>
+	<message key="rt.suppFiles.viewMetadata">Indexatzeko metadatuak</message>
+	<message key="rt.version.description">Azalpena</message>
+	<message key="rt.version.key">Gakoa</message>
+	<message key="rt.version.locale">Localea</message>
+	<message key="rt.versions">Erlazionatutako lanen multzoak</message>
+	<message key="rt.version.title">Titulua</message>
+	<message key="rt.version">Bertsioa</message>
+	<message key="rt.viewMetadata">Indexatzeko metadatuak</message>
+	<message key="rt.admin.settings.printerFriendly">Inprimatzeko bertsioa (lana inprimatzeko moduko bertsioan ematen du).</message>
+	<message key="comments.titleRequired">Iruzkinaren titulua behar da.</message>
+	<message key="rt.admin.sharing">Konpartitzea</message>
+	<message key="rt.admin.sharing.enabled">Konpartitzea gaituta</message>
+	<message key="rt.admin.sharing.description"><![CDATA[Irakurleek egunkariko artikuluak irakurleekin partekatzea gaitzeko, ireki kontu bat <a href="http://www.addthis.com">addthis.com</a> erabiliz, eta kopiatu/itsatsi beheko partekatze botoiaren kodea.]]></message>
+	<message key="rt.admin.sharing.basic">Oinarrizko ezarpenak</message>
+	<message key="rt.admin.sharing.userNameLabel">AddThis.com erabiltzaile-izena</message>
+	<message key="rt.admin.sharing.buttonStyleLabel">Botoi-estiloa</message>
+	<message key="rt.admin.sharing.dropDownMenuLabel">Erabili goitibeherako menua</message>
+	<message key="rt.admin.sharing.advanced">Ezarpen aurreratuak (aukerakoa)</message>
+	<message key="rt.admin.sharing.customizationLink"><![CDATA[Ikusi <a href="http://support.addthis.com/customer/portal/articles/381236-custom-buttons">AddThis.com customization documentation</a> erreferentzia gisa.]]></message>
+	<message key="rt.admin.sharing.brandLabel">Marka</message>
+	<message key="rt.admin.sharing.dropDownLabel"><![CDATA[Goitibeherako aukerak <br/> (komaz bereizitako zerrenda)]]></message>
+	<message key="rt.admin.sharing.languageLabel">Hizkuntza</message>
+	<message key="rt.admin.sharing.logolabel">Logotipoa</message>
+	<message key="rt.admin.sharing.logoBackgroundLabel">Logotipoaren atzeko planoa</message>
+	<message key="rt.admin.sharing.logoColorLabel">Logotipoaren kolorea</message>
+	<message key="rt.admin.configureSharing">Konfiguratu AddThis</message>
+	<message key="rt.captureCite.web">Web</message>
+	<message key="rt.admin.settings.viewReviewPolicy">Ikus berrikuspen politika</message>
+</locale>

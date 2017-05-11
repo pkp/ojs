@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/nl_NL/reader.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the nl_NL (Nederlands) locale.
+  *
+  -->
+
+<locale name="nl_NL" full_name="Nederlands">
+	<message key="comments.anonymous">Anonieme gebruiker</message>
+	<message key="comments.anonymousNamed">"{$userName}"</message>
+	<message key="comments.body">Inhoud</message>
+	<message key="comments.confirmDeleteChildren">Bij het verwijderen van deze reactie gaan ook de antwoorden daarop verloren. Weet u zeker dat u dit wilt doen?</message>
+	<message key="comments.delete">Verwijder dit commentaar</message>
+	<message key="comments.email">E-mail schrijver</message>
+	<message key="comments.emailReply">E-mail antwoord</message>
+	<message key="comments.enterComment">Geef reactie</message>
+	<message key="comments.inResponseTo"><![CDATA[In reactie op <a href="{$url}">{$title}</a>]]></message>
+	<message key="comments.name">Naam schrijver</message>
+	<message key="comments.noComments">Er zijn geen reacties van lezers.</message>
+	<message key="comments.nReplies">({$num} antwoorden)</message>
+	<message key="comments.oneReply">(1 antwoord)</message>
+	<message key="comments.postAnonymously">Plaats deze reactie anoniem</message>
+	<message key="comments.postReply">Plaats antwoord</message>
+	<message key="comments.readerComments">Reacties van lezers</message>
+	<message key="comments.readMore">Lees verder</message>
+	<message key="comments.replies">Antwoorden</message>
+	<message key="comments.title">Titel</message>
+	<message key="comments.viewAllComments">Bekijk alle reacties</message>
+	<message key="reader.fullText">Volledige tekst:</message>
+	<message key="rt.addComment">Commentaar toevoegen</message>
+	<message key="rt.admin.configuration">Configuratie</message>
+	<message key="rt.admin.contexts.confirmDelete">Weet u zeker dat u deze context en de daarmee geassocieerde zoekacties wilt verwijderen?</message>
+	<message key="rt.admin.contexts.createContext">Maak context aan</message>
+	<message key="rt.admin.contexts.edit.editContext">Bewerk context</message>
+	<message key="rt.admin.contexts.metadata">Metadata</message>
+	<message key="rt.admin.contexts.options.authorTerms">Gebruik auteursnamen als standaard zoekterm om gebruikers andere werken van de auteurs van dit item te vinden (bv. voor een "Andere werken" context)</message>
+	<message key="rt.admin.contexts.options.citedBy">Gebruik auteursnamen als standaard zoektermen en beschrijf de context als zoeken naar citaties van het artikel.</message>
+	<message key="rt.admin.contexts.options.defineTerms"><![CDATA[Gebruik het door de gebruiker geaccentueerde woord als standaard zoekterm of laat het leeg als er geen geselecteerd is voor dit item (bv. voor een "Definities" context). De "Definities" optie moet ingeschakeld zijn in de <a href="{$settingsUrl}">RST instellingen</a> om het mogelijk te maken dat dubbelklikken op woorden deze context opent.]]></message>
+	<message key="rt.admin.contexts.options.geoTerms">Gebruik geografische indexgegevens als standaard zoektermen.</message>
+	<message key="rt.admin.contexts.options">Opties</message>
+	<message key="rt.admin.management">Beheer</message>
+	<message key="rt.admin.readingToolsEnabled">Leesgereedschappen</message>
+	<message key="rt.admin.searches.confirmDelete">Weet u zeker dat u deze zoekvraag wilt verwijderen?</message>
+	<message key="rt.admin.searches.createSearch">Zoekvraag aanmaken</message>
+	<message key="rt.admin.searches.edit.editSearch">Bewerk zoekvraag</message>
+	<message key="rt.admin.selectedVersion">Gerelateerde gegevens</message>
+	<message key="rt.admin.settings.abstract">Samenvatting (toont de samenvatting van het item).</message>
+	<message key="rt.admin.settings.authorBio">Over de auteur (toont de biografie die de auteur heeft opgegeven).</message>
+	<message key="rt.admin.settings.captureCite">Hoe te citeren (levert bibliografische details).</message>
+	<message key="rt.admin.settings.defineTerms">Zoek termen op (laat lezer dubbelklikken op ieder woord in een item en stuurt dat woord naar een woordenboek).</message>
+	<message key="rt.admin.settings.disableRelatedItems">Gerelateerde items uitschakelen</message>
+	<message key="rt.admin.settings.emailAuthor">E-mail de auteur (leidt naar een e-mail sjabloon met het e-mail adres van de auteur).</message>
+	<message key="rt.admin.settings.emailOthers">Stuur naar een collega (leidt naar een e-mail sjabloon met een link naar het item).</message>
+	<message key="rt.admin.settings.findingReferences">Zoek referenties</message>
+	<message key="rt.admin.settings.printerFriendly">Afdrukversie (levert een versie die geschikt is voor afdrukken).</message>
+	<message key="rt.admin.settings.supplementaryFiles">Aanvullende bestanden (Toont de lijst bestanden die de auteur aan de inzending heeft toegevoegd).</message>
+	<message key="rt.admin.settings.viewMetadata">Metadata indexeren (toont de metadata voor indexeren zoals geleverd door de auteur en het systeem).</message>
+	<message key="rt.admin.status">Status</message>
+	<message key="rt.admin.validateUrls.complete">Validatie gereed.</message>
+	<message key="rt.admin.validateUrls.ok">OK</message>
+	<message key="rt.admin.validateUrls.urlIsInvalid">{$url} is niet geldig.</message>
+	<message key="rt.admin.validateUrls">Valideer URL's voor leesgereedschappen</message>
+	<message key="rt.admin.validateUrls.validate">Valideer</message>
+	<message key="rt.admin.versions.confirmDelete">Weet u zeker dat u deze versie en alle geassocieerde contexten en zoekacties wilt verwijderen?</message>
+	<message key="rt.admin.versions.confirmRestore">Wet u zeker dat u alle versies naar hun standaardwaarden terug wilt zetten? Als u dat doet moet een actieve versie kiezen op de Instellingen pagina.</message>
+	<message key="rt.admin.versions.createVersion">Versie aanmaken</message>
+	<message key="rt.admin.versions.edit.editVersion">Bewerk versie</message>
+	<message key="rt.admin.versions.export">Exporteer</message>
+	<message key="rt.admin.versions.importVersion">Importeer versie</message>
+	<message key="rt.admin.versions.metadata">Metadata</message>
+	<message key="rt.admin.versions.restoreVersions">Herstel versies naar standaardwaarden</message>
+	<message key="rt.authorBio">Over de Auteur</message>
+	<message key="rt.captureCite.format">Citatie formaat</message>
+	<message key="rt.captureCite">Hoe een item te citeren</message>
+	<message key="rt.captureCite.online">Online</message>
+	<message key="rt.colleague">Bericht aan een collega</message>
+	<message key="rt.context.abbrev">Afk.</message>
+	<message key="rt.context.and">EN</message>
+	<message key="rt.context.citesContextDescription">Als het artikel geïndexeerd is in Google Scholar kan het vergezeld gaan van een "Geciteerd door X" link, wat leidt naar een lijst werken die het citeren. Google Scholar toont ook alle items die de titel en auter citern. Om de online bronnen te benaderen die alleen toegankelijk zijn via uw bibliotheek kunt u naar Google Scholar Preferences in Google Scholar gaan en de  Library Links voor uw instituut activeren.</message>
+	<message key="rt.context">Context</message>
+	<message key="rt.context.defineTermsDescription">Als het item een HTML bestand is (en niet een PDF), doet dubbelklikken op een woord van de tekst het verschijnen in het te-definiëren-woord veld. Verder kunnen woorden in het veld ingevoerd of geplakt worden. Klik op OVER voor meer informatie over de doorzochte bronnen. Deze bronnen zijn uitgekozen vanwege hun relevantie en open (gratis) toegang tot alle of een gedeelte van hun inhoud.</message>
+	<message key="rt.context.description">Beschrijving</message>
+	<message key="rt.context.order">Volgorde</message>
+	<message key="rt.contexts">Contexten</message>
+	<message key="rt.context.searchDescription">De zoektermen zijn geselecteerd door de auteur(s). Ze kunnen gewijzigd of verwijderd worden door de lezer als twee of drie korte precieze termen of zinnen die de beste booleaanse (EN) zoekvraag opleverden. Klik op OVER voor meer informatie over de doorzochte bronnen. Deze bronnen zijn uitgekozen vanwege hun relevantie en open (gratis) toegang tot alle of een gedeelte van hun inhoud.</message>
+	<message key="rt.context.searchTerms">Zoektermen</message>
+	<message key="rt.context.termToDefine">Te definiëren woord</message>
+	<message key="rt.context.title">Titel</message>
+	<message key="rt.emailAuthor">E-mail de auteur</message>
+	<message key="rt.email.needLogin"><![CDATA[* Vereist <a target="_parent" href="{$loginUrl}">registratie<a/>]]></message>
+	<message key="rt.email.sent">Uw bericht is verstuurd.</message>
+	<message key="rt.findingReferences">Referenties vinden</message>
+	<message key="rt.findingReferences.googleScholar">Google Scholar</message>
+	<message key="rt.findingReferences.windowsLiveAcademic">Windows Live Academic</message>
+	<message key="rt.lookUp">Termen opzoeken</message>
+	<message key="rt.metadata.dublinCore.contributor">Meewerker</message>
+	<message key="rt.metadata.dublinCore.coverage">Dekking</message>
+	<message key="rt.metadata.dublinCore.date">Datum</message>
+	<message key="rt.metadata.dublinCore.description">Beschrijving</message>
+	<message key="rt.metadata.dublinCore">Dublin Core</message>
+	<message key="rt.metadata.dublinCore.format">Formaat</message>
+	<message key="rt.metadata.dublinCore.identifier">Identificatie</message>
+	<message key="rt.metadata.dublinCore.language">Taal</message>
+	<message key="rt.metadata.dublinCore.publisher">Uitgever</message>
+	<message key="rt.metadata.dublinCore.relation">Relatie</message>
+	<message key="rt.metadata.dublinCore.rights">Rechten</message>
+	<message key="rt.metadata.dublinCore.source">Bron</message>
+	<message key="rt.metadata.dublinCore.subject">Onderwerp</message>
+	<message key="rt.metadata.dublinCore.title">Titel</message>
+	<message key="rt.metadata.dublinCore.type">Type</message>
+	<message key="rt.metadata.forThisDocument">Metadata voor dit document</message>
+	<message key="rt.metadata.pkp.abstract">Samenvatting</message>
+	<message key="rt.metadata.pkp.copyright">Auteursrecht en permissies</message>
+	<message key="rt.metadata.pkp.coverage">Geo-spatiale locatie, chronologische periode,  steekproef (geslacht, leeftijd, enz.)</message>
+	<message key="rt.metadata.pkp.date">(JJJJ-MM-DD)</message>
+	<message key="rt.metadata.pkp.discipline">Discipline(s)</message>
+	<message key="rt.metadata.pkp.format">Bestandsformaat</message>
+	<message key="rt.metadata.pkp.genre"><![CDATA[Status & genre]]></message>
+	<message key="rt.metadata.pkpItem">PKP Metadata Items</message>
+	<message key="rt.metadata.pkp.language">Engels=en</message>
+	<message key="rt.metadata.pkp.publisher">Organisator, locatie</message>
+	<message key="rt.metadata.pkp.source">Tijdschrift/conferentie titel; vol., no. (jaar)</message>
+	<message key="rt.metadata.pkp.sponsors">Sponsor(s)</message>
+	<message key="rt.metadata.pkp.subject">Trefwoord(en)</message>
+	<message key="rt.metadata.pkp.suppFiles">Aanv. bestanden</message>
+	<message key="rt.metadata.pkp.title">Titel van het document</message>
+	<message key="rt.metadata.pkp.type">Type</message>
+	<message key="rt.metadata.pkp.uri">Universal Resource Indicator</message>
+	<message key="rt.printVersion">Afdrukversie</message>
+	<message key="rt.readingTools">Leesgereedschappen</message>
+	<message key="rt.relatedItems">Gerelateerde items</message>
+	<message key="rt.reviewPolicy">Reviewbeleid</message>
+	<message key="rt.search.description">Beschrijving</message>
+	<message key="rt.searches">Zoekvragen</message>
+	<message key="rt.search.order">Volgorde</message>
+	<message key="rt.search">Zoek</message>
+	<message key="rt.search.searchPost">Ingevoerde gegevens</message>
+	<message key="rt.search.searchUrl">Zoek URL</message>
+	<message key="rt.search.suggest">Suggereer een bron</message>
+	<message key="rt.search.title">Titel</message>
+	<message key="rt.search.url">URL</message>
+	<message key="rt.suppFiles.download">Download</message>
+	<message key="rt.suppFiles">Aanvullende bestanden</message>
+	<message key="rt.suppFiles.viewMetadata">Metadata voor indexering</message>
+	<message key="rt.version.description">Beschrijving</message>
+	<message key="rt.version.key">Sleutel</message>
+	<message key="rt.version.locale">Taal</message>
+	<message key="rt.versions">Sets gerelateerde items</message>
+	<message key="rt.version.title">Titel</message>
+	<message key="rt.version">Versie</message>
+	<message key="rt.viewMetadata">Indexeren van metadata</message>
+	<message key="rt.admin.sharing.advanced">Geavanceerde instellingen (optioneel)</message>
+	<message key="rt.admin.sharing.brandLabel">Merk</message>
+	<message key="rt.admin.sharing.languageLabel">Taal</message>
+	<message key="rt.admin.sharing.logolabel">Logo</message>
+	<message key="rt.admin.sharing.logoBackgroundLabel">Logo-achtergrond</message>
+	<message key="rt.admin.sharing.logoColorLabel">Logo kleur</message>
+	<message key="comments.titleRequired">Een titel is verplicht</message>
+	<message key="rt.admin.sharing">Delen</message>
+	<message key="rt.admin.sharing.enabled">Delen ingeschakeld</message>
+	<message key="rt.admin.sharing.basic">Basisinstellingen</message>
+	<message key="rt.admin.sharing.buttonStyleLabel">Knop-stijl</message>
+	<message key="rt.admin.sharing.dropDownMenuLabel">Gebruik drop-down menu</message>
+	<message key="rt.admin.sharing.dropDownLabel"><![CDATA[Drop-down opties <br /> (lijst met komma's als scheider)]]></message>
+	<message key="rt.admin.sharing.userNameLabel">AddThis.com gebruikersnaam</message>
+	<message key="rt.admin.configureSharing">Configureer AddThis</message>
+	<message key="rt.admin.sharing.customizationLink"><![CDATA[SZie de <a href="http://support.addthis.com/customer/portal/articles/381236-custom-buttons">AddThis.com customization documentation</a> voor naslag.]]></message>
+	<message key="rt.admin.sharing.description"><![CDATA[Om uw lezers in de gellegenheid te stellen om tijdschriftartikelen te delen, kunt u een account nemen bij <a href="http://www.addthis.com">addthis.com</a> en de Sharing knop code hieronder kopiëren en plakken.]]></message>
+	<message key="rt.captureCite.web">Web</message>
+	<message key="rt.admin.settings.viewReviewPolicy">Bekijk reviewbeleid</message>
+</locale>

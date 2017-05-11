@@ -1,0 +1,47 @@
+<!--
+  * dtd/topic.dtd
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * DTD for help topics.
+  *
+  -->
+
+<!--
+  * topic - help topic
+  * id: the topic ID
+  * locale: the key for the locale of this topic
+  * title: the topic title
+  * toc: the ID of the toc this topic belongs to
+  * subtoc: the ID of the toc for this topic's subtopics
+  * key: unique key for this help topic, used for mapping scripts to their associated topic
+  -->
+<!ELEMENT topic (section*,related_topic*)>
+	<!ATTLIST topic
+		id CDATA #REQUIRED
+		locale CDATA #REQUIRED
+		title CDATA #REQUIRED
+		toc CDATA #REQUIRED
+		subtoc CDATA #IMPLIED
+		key CDATA #REQUIRED>
+
+<!--
+  * section - section of help content
+  * title: the title of the section
+  * value is the help content in HTML format
+  -->
+<!ELEMENT section (#PCDATA)>
+	<!ATTLIST section
+		title CDATA #IMPLIED>
+
+<!--
+  * related topic - linking to related topics
+  * id: the id of related topic
+  * title: the link title
+  -->
+<!ELEMENT related_topic (#PCDATA)>
+	<!ATTLIST related_topic
+		id CDATA #REQUIRED
+		title CDATA #REQUIRED>

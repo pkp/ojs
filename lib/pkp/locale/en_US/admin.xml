@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/en_US/admin.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="en_US" full_name="U.S. English">
+	<message key="admin.systemInfo.settingName">Setting Name</message>
+	<message key="admin.systemInfo.settingValue">Setting Value</message>
+	<message key="admin.adminFunctions">Administrative Functions</message>
+	<message key="admin.auth.confirmDelete">Are you sure you want to permanently delete this authentication source?</message>
+	<message key="admin.auth.create">Create authentication source</message>
+	<message key="admin.auth.noneCreated">No authentication sources have been defined.</message>
+	<message key="admin.authSources">Authentication Sources</message>
+	<message key="admin.clearDataCache">Clear Data Caches</message>
+	<message key="admin.clearTemplateCache">Clear Template Cache</message>
+	<message key="admin.configFileUpdatedInstructions"><![CDATA[Your configuration file has been successfully updated. Please note that if your site no longer functions correctly you may need to manually fix your configuration by editing <tt>config.inc.php</tt> directly.]]></message>
+	<message key="admin.confirmClearTemplateCache">Are you sure you want to clear the cache of compiled templates?</message>
+	<message key="admin.confirmExpireSessions">Are you sure you want to expire all user sessions? All users who are currently logged into the system will be forced to log in again (yourself included).</message>
+	<message key="admin.contentsOfConfigFile">Contents of configuration file</message>
+	<message key="admin.currentVersion">Current version</message>
+	<message key="admin.dateInstalled">Date installed</message>
+	<message key="admin.displayConfigFileInstructions"><![CDATA[The contents of your updated configuration are displayed below. To apply the configuration changes you must open <tt>config.inc.php</tt> in a suitable text editor and replace its contents with the contents of the text field below.]]></message>
+	<message key="admin.displayNewSystemConfig">Display New Configuration</message>
+	<message key="admin.expireSessions">Expire User Sessions</message>
+	<message key="admin.languages.download">Download Locale</message>
+	<message key="admin.languages.downloadLocales">Download Locales</message>
+	<message key="admin.languages.download.cannotOpen">Cannot open language descriptor from PKP web site.</message>
+	<message key="admin.languages.download.cannotModifyRegistry">Cannot add the new locale to the locale registry file, typically "registry/locales.xml".</message>
+	<message key="admin.languages.cantDisable">This locale is the primary language of the site. You can't disable it until you choose another primary locale.</message>
+
+	<message key="admin.languages.confirmReload">Are you sure you want to reload this locale? This will erase any existing locale-specific data such as customized email templates.</message>
+	<message key="admin.languages.installedLocales">Installed Locales</message>
+	<message key="admin.languages.installLanguages">Manage Locales</message>
+	<message key="admin.languages.availableLocales">Available Locales</message>
+	<message key="admin.languages.installLocale">Install Locale</message>
+	<message key="admin.languages.installLocales">Install</message>
+	<message key="admin.languages.installNewLocales">Install New Locales</message>
+	<message key="admin.languages.languageSettings">Language Settings</message>
+	<message key="admin.languages.noLocalesAvailable">No additional locales are available for installation.</message>
+	<message key="admin.languages.reload">Reload Locale</message>
+	<message key="admin.languages.uninstall">Uninstall Locale</message>
+	<message key="admin.phpInfo">Extended PHP Information</message>
+	<message key="admin.scheduledTask">Scheduled task</message>
+	<message key="admin.scheduledTask.startTime">Task process started.</message>
+	<message key="admin.scheduledTask.stopTime">Task process stopped.</message>
+	<message key="admin.scheduledTask.noLog">Task produced no log.</message>
+	<message key="admin.scheduledTask.downloadLog">Your {$softwareName} installation automatically executed and finished this task and you can download the log file here: {$url}</message>
+	<message key="admin.scheduledTask.confirmClearLogs">Are you sure you want to delete all scheduled task execution logs?</message>
+	<message key="admin.scheduledTask.clearLogs">Clear Scheduled Task Execution Logs</message>
+	<message key="admin.scheduledTask.reviewReminder">Review reminder</message>
+	<message key="admin.scheduledTask.subscriptionExpiryReminder">Subscription expiry reminder</message>
+	<message key="admin.server.apacheVersion">Apache version</message>
+	<message key="admin.server.dbDriver">Database driver</message>
+	<message key="admin.server.dbVersion">Database server version</message>
+	<message key="admin.serverInformation">Server Information</message>
+	<message key="admin.server.phpVersion">PHP version</message>
+	<message key="admin.server.platform">OS platform</message>
+	<message key="admin.settings">Settings</message>
+	<message key="admin.settings.aboutDescription">About the Site</message>
+	<message key="admin.settings.contactEmail">Email of principal contact</message>
+	<message key="admin.settings.contactName">Name of principal contact</message>
+	<message key="admin.settings.form.contactEmailRequired">The email address of the principal contact is required.</message>
+	<message key="admin.settings.form.contactNameRequired">The name of the principal contact is required.</message>
+	<message key="admin.settings.form.minPasswordLengthRequired">You must enter a minimum password length of at least 4 characters.</message>
+	<message key="admin.settings.form.titleRequired">A title is required.</message>
+	<message key="admin.settings.defaultMetricDescription">
+		Your installation is configured to record more than one usage metric. Usage statistics will be displayed in several contexts.
+		There are cases where a single usage statistic must be used, e.g. to display an ordered list of most-used submissions or to rank
+		search results. Please select one of the configured metrics as a default.
+	</message>
+	<message key="admin.settings.homeHeaderImage.altText">Site Logo</message>
+	<message key="admin.settings.homeHeaderImageInvalid">Invalid site logo image format. Accepted formats are .gif, .jpg, or .png.</message>
+	<message key="admin.settings.introduction">Introduction</message>
+	<message key="admin.settings.minPasswordLength">Minimum password length (characters)</message>
+	<message key="admin.settings.siteLanguage">Site language</message>
+	<message key="admin.settings.siteStyleSheetInvalid">Invalid site style sheet format. Accepted format is .css.</message>
+	<message key="admin.settings.siteStyleSheet">Site style sheet</message>
+	<message key="admin.settings.siteLogo">Site Logo</message>
+	<message key="admin.settings.siteTitle">Site Name</message>
+	<message key="admin.settings.siteTheme">Site Theme</message>
+	<message key="admin.siteAdmin">Site Administration</message>
+	<message key="admin.siteManagement">Site Management</message>
+	<message key="admin.siteSettings">Site Settings</message>
+	<message key="admin.siteSetup">Site Setup</message>
+	<message key="admin.systemConfigFileReadError"><![CDATA[The configuration file <tt>config.inc.php</tt> does not exist, is not readable, or is invalid.]]></message>
+	<message key="admin.systemInformation">System Information</message>
+	<message key="admin.versionBuild">Build</message>
+	<message key="admin.version.checkForUpdates">Check for updates</message>
+	<message key="admin.version.downloadPackage">Download</message>
+	<message key="admin.version.downloadPatch">Download Patch</message>
+	<message key="admin.versionHistory">Version history</message>
+	<message key="admin.version.latest">Latest version</message>
+	<message key="admin.versionMajor">Major</message>
+	<message key="admin.versionMinor">Minor</message>
+	<message key="admin.version.moreInfo">More Information</message>
+	<message key="admin.versionRevision">Revision</message>
+	<message key="admin.version.updateAvailable">An updated version is available</message>
+	<message key="admin.version.upToDate">Your system is up-to-date</message>
+	<message key="admin.version">Version</message>
+
+	<message key="admin.fileLoader.wrongBasePathLocation">Base path {$path} must be inside the public files directory.</message>
+	<message key="admin.fileLoader.pathNotAccessible">Folder {$path} is not a directory or is not readable.</message>
+	<message key="admin.fileLoader.moveFileFailed">File {$filename} could not be moved from {$currentFilePath} to {$destinationPath}</message>
+	<message key="admin.fileLoader.fileProcessed">File {$filename} was processed and archived.</message>
+	<message key="admin.fileLoader.emailSubject">File loader</message>
+
+	<message key="admin.copyAccessLogFileTool.usage">Copy the passed apache access log file(s), filtering the entries related with this installation,
+to the current files directory, inside the UsageStatsPlugin stage directory. Must run under user with enough privilegies to read access apache log files.
+
+This tool will only copy files that aren't already inside the usageStats file loader directories (stage, processing, archive, reject).
+
+Usage: {$scriptName} path/to/apache/log/file.log
+Usage (processing all files inside a directory): {$scriptName} path/to/apache/directory
+	</message>
+	<message key="admin.copyAccessLogFileTool.error.creatingFolder">Error: can't create temporary folder {$tmpDir}</message>
+	<message key="admin.copyAccessLogFileTool.error.acessingFile">Error: File {$filePath} don't exist or can't be accessed.</message>
+	<message key="admin.copyAccessLogFileTool.error.copyingFile">Error: can't copy file from {$filePath} to {$tmpFilePath}</message>
+	<message key="admin.copyAccessLogFileTool.error.deletingFile">Error: can't delete file {$tmpFilePath}</message>
+	<message key="admin.copyAccessLogFileTool.warning.fileAlreadyExists">Warning: file {$filePath} already exists inside the usage stats directory.</message>
+	<message key="admin.copyAccessLogFileTool.success">Success: {$filePath} to {$destinationPath}</message>
+	<message key="admin.error.utilExecutionProblem">The "{$utilPath}" program execution returned the following error: {$output}</message>
+	<message key="admin.error.executingUtil">Error: can't execute "{$utilPath}".  Check your {$utilVar} setting in config.inc.php.</message>
+	<message key="admin.languages.noLocalesToDownload">There are no locales available for download.</message>
+</locale>

@@ -1,0 +1,58 @@
+/**
+ * @defgroup pkp_linkActions
+ */
+
+/**
+ * @file styles/linkActions.less
+ *
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @ingroup pkp_linkActions
+ *
+ * @brief Link action classes
+ */
+
+// Link actions attached to titles
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+	.pkp_controllers_linkAction {
+		margin-left: 1em;
+		font-size: @font-sml;
+		font-weight: @normal;
+		line-height: 1;
+	}
+}
+
+a[class*="pkp_linkaction_uploadFile"] {
+	&:extend(.pkp_button all);
+
+	&:before {
+		&:extend(.fa);
+		content: @fa-var-upload;
+		margin-right: 0.75em;
+	}
+}
+
+// @todo not sure if any of the following is in use. Check and remove if not
+//  needed
+.pkp_linkActions {
+	/* Actions */
+	a.promote {
+		background-image: url(@{baseUrl}/lib/pkp/templates/images/structure/grid_promote.png);
+	}
+
+	a.enable {
+		background-image: url(@{baseUrl}/lib/pkp/templates/images/structure/grid_promote.png);
+	}
+
+	a {
+		display: inline-block;
+	}
+}

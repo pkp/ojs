@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/pt_BR/user.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Locale information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Portuguese_(pt_BR)
+  * Localization strings.
+  -->
+
+<locale name="pt_BR" full_name="Português (Brasil)">
+	<message key="user.accountInformation">Informações de cadastro</message>
+	<message key="user.affiliation">Instituição/Afiliação</message>
+	<message key="user.affiliation.description">(Sua instituição, por exemplo "Simon Fraser University")</message>
+	<message key="user.affiliations">Outras Afiliações</message>
+	<message key="user.authorization.accessDenied">Acesso negado.</message>
+	<message key="user.authorization.processAuthenticationTokenRequired">O verificador do processo de autenticação está faltando ou é inválido.</message>
+	<message key="user.authorization.contextRequired">Não é possível executar esta operação sem um contexto (impresso, periódico, conferência, entre outros).</message>
+	<message key="user.authorization.loginRequired">Login obrigatório.</message>
+	<message key="user.authorization.privateOperation">A operação acessada é privada ou não existe.</message>
+	<message key="user.authorization.restrictedSiteAccess">Seu acesso foi negado. Acesso a esta página está atualmente bloqueado.</message>
+	<message key="user.authorization.roleBasedAccessDenied">O papel atual não possui permissão para realizar esta operação.</message>
+	<message key="user.authorization.userGroupRequired">É necessário definir um grupo de usuário válido para acessar esta operação.</message>
+	<message key="user.authorization.managerRequired">Um usuário com papel de Gerente de Imprensa (Editor de Imprensa ou de Produção, por exemplo) deve ser designado ao estágio antes de proceder.</message>
+	<message key="user.authorization.accessibleWorkflowStage">Atualmente você não possui acesso a este estágio do fluxo de trabalho.</message>
+	<message key="user.authorization.workflowStageRequired">Um estágio do fluxo de trabalho não foi especificado.</message>
+	<message key="user.authorization.pluginRequired">Um plugin não foi especificado mas é requerido.</message>
+	<message key="user.biography">Resumo da Biografia</message>
+	<message key="user.changeMyPassword">Alterar minha senha</message>
+	<message key="user.changePassword">Alterar senha</message>
+	<message key="user.dateLastLogin">Último acesso</message>
+	<message key="user.dateRegistered">Data de cadastro</message>
+	<message key="user.editMyProfile">Editar meu perfil</message>
+	<message key="user.email">E-mail</message>
+	<message key="user.feminine">F</message>
+	<message key="user.firstName">Nome</message>
+	<message key="user.gender">Sexo</message>
+	<message key="user.initialsExample">Joan Alice Smith = JAS</message>
+	<message key="user.initials">Iniciais</message>
+	<message key="user.interests">Área de interesse para avaliação</message>
+	<message key="user.interests.description">(Separe interesses pressionando as teclas enter ou vírgula)</message>
+	<message key="user.gossip">Notas privadas</message>
+	<message key="user.group">Grupo de usuários</message>
+	<message key="user.lastName">Sobrenome</message>
+	<message key="user.profile.form.profileImageInvalid">Formato ou tamanho de imagem inválido para o perfil. Formatos aceitos são .gif, .jpg, ou .png, e a imagem não pode exceder 150x150 pixels.</message>
+	<message key="user.login.accountDisabledWithReason">Sua conta foi desabilitada pelo seguinte motivo: {$reason}</message>
+	<message key="user.login.accountDisabled">Sua conta foi desativada. Entre em contato com o administrador para maiores informações.</message>
+	<message key="user.login.accountNotValidated">É necessário validar seu endereço de e-mail. Verifique sua caixa de correio eletrônico e siga as instruções na mensagem recebida. Caso não tenha recebido a mensagem, entre em contato com o administrador para suporte.</message>
+	<message key="user.login.activate">Ativar cadastro</message>
+	<message key="user.login.activated">Seu cadastro foi ativado, permitindo o acesso ao sistema com os dados informados no momento do cadastro.</message>
+	<message key="user.login.changePasswordInstructions"><![CDATA[Uma nova senha deve ser definida antes de cadastrar-se no sistema.<br /><br />Digite seu login e senhas atual e nova para alterar a senha de acesso à conta.]]></message>
+	<message key="user.login.forgotPassword">Esqueceu a senha?</message>
+	<message key="user.login.loginError">Login e/ou senha inválido(s). Tente novamente.</message>
+	<message key="user.login">Acesso</message>
+	<message key="user.login.lostPassword.confirmationSent">Um e-mail de confirmação foi enviado. Siga as instruções para criar uma nova senha.</message>
+	<message key="user.login.lostPassword.invalidHash">O link acessado expirou ou é inválido. Lamentamos o inconveniente. Tente criar uma senha novamente.</message>
+	<message key="user.login.lostPassword.invalidUser">Nenhum usuário cadastrado com o e-mail especificado.</message>
+	<message key="user.login.lostPassword.passwordSent">Uma nova senha foi enviada. Acesse o sistema com a nova senha.</message>
+	<message key="user.login.registeredEmail">E-mail do usuário cadastrado</message>
+	<message key="user.login.registrationComplete">Registro completo</message>
+	<message key="user.login.registrationComplete.instructions">Obrigado por se registrar! O que você gostaria de fazer agora?</message>
+	<message key="user.login.registrationComplete.manageSubmissions">Ver Envios</message>
+	<message key="user.login.registrationComplete.newSubmission">Fazer uma Novo Envio</message>
+	<message key="user.login.registrationComplete.continueBrowsing">Continuar Navegação</message>
+	<message key="user.login.registrationPendingValidation">Registro aguardando verificação</message>
+	<message key="user.login.resetPassword">Nova senha</message>
+	<message key="user.logOut">Sair do sistema</message>
+	<message key="user.logOutAs">Sair como</message>
+	<message key="user.hello">Olá,</message>
+	<message key="user.mailingAddress">Endereço postal</message>
+	<message key="user.masculine">M</message>
+	<message key="user.middleName">Nome do meio</message>
+	<message key="user.myAccount">Mesclar cadastro</message>
+	<message key="user.name">Nome</message>
+	<message key="user.other">Outro</message>
+	<message key="user.password">Senha</message>
+	<message key="user.repeatPassword">Repetir senha</message>
+	<message key="user.phone">Fone</message>
+	<message key="user.profile.changePasswordInstructions">Digite as senhas atual e nova para alterar a senha de acesso ao cadastro.</message>
+	<message key="user.profile.editProfile">Editar perfil</message>
+	<message key="user.profile.form.countryRequired">O país é obrigatório.</message>
+	<message key="user.profile.form.emailRequired">Endereço de e-mail válido obrigatório.</message>
+	<message key="user.profile.form.affiliationRequired">A instituição/afiliação é obrigatória.</message>
+	<message key="user.profile.form.firstNameRequired">Nome obrigatório.</message>
+	<message key="user.profile.form.lastNameRequired">Sobrenome obrigatório.</message>
+	<message key="user.profile.form.mailingAddressRequired">Um endereço postal é obrigatório.</message>
+	<message key="user.profile.form.newPasswordRequired">Nova senha obrigatória.</message>
+	<message key="user.profile.form.oldPasswordInvalid">Senha atual incorreta.</message>
+	<message key="user.profile.form.openAccessNotifications">Notificações via e-mail de acesso livre à edição</message>
+	<message key="user.profile.form.passwordRequired">Senha obrigatória.</message>
+	<message key="user.profile.form.passwordSameAsOld">Sua nova senha é a mesma que a anterior.</message>
+	<message key="user.profile.form.profileImage">Foto</message>
+	<message key="user.profile.form.publishedNotifications">Notificações via e-mail de publicação de nova edição</message>
+	<message key="user.profile.form.urlInvalid">URL inválida. Verifique a informação e tente novamente (Ajuda: Inclua o protocolo http:// no início da URL.)</message>
+	<message key="user.profile.form.usergroupRequired">Um grupo de usuários é obrigatório.</message>
+	<message key="user.profile.form.usernameRequired">Login obrigatório.</message>
+	<message key="user.profile.leavePasswordBlank">Deixe os campos de senha em branco para manter a senha atual.</message>
+	<message key="user.profile.newPassword">Nova senha</message>
+	<message key="user.profile.oldPassword">Senha atual</message>
+	<message key="user.profile">Perfil</message>
+	<message key="user.profile.publicProfile">Perfil do usuário</message>
+	<message key="user.profile.repeatNewPassword">Repetir nova senha</message>
+	<!-- Login -->
+	<message key="user.login.registerNewAccount">Não é um usuário? Registe-se no site</message>
+	<message key="user.login.resetPasswordInstructions"><![CDATA[Por razões de segurança, este sistema envia por e-mail uma nova senha ao usuário cadastrado, em vez de recordar a senha atual. <br/> <br/> Digite seu email abaixo para redefinir sua senha. Uma confirmação será enviada para este endereço de e-mail.]]></message>
+
+	<message key="user.register.form.emailExists">O endereço de e-mail digitado já está cadastrado.</message>
+	<message key="user.register.form.passwordsDoNotMatch">As senhas não combinam.</message>
+	<message key="user.register.form.emailsDoNotMatch">O e-mail informado nos campos não correspondem.</message>
+	<message key="user.register.form.usernameAlphaNumeric">O nome de usuário pode conter somente caracteres alfanuméricos, sublinhados e hifens, e deve começar e terminar com um caractere alfanumérico (letra ou número).</message>
+	<message key="user.register.form.userGroupRequired">Ao menos um papel deve ser selecionado.</message>
+	<message key="user.register.form.usernameExists">O login digitado já está cadastrado.</message>
+	<message key="user.register.form.passwordLengthRestriction">A senha deve ter no mínimo {$length} caracteres.</message>
+	<message key="user.register.registerAs">Cadastrar em {$contextName} como...</message>
+	<message key="user.register">Cadastrar</message>
+	<message key="user.register.usernameRestriction">O login deve conter apenas letras minúsculas (a-z), números(0-9), sublinhados(_) e hífens(-).</message>
+	<message key="user.register.registrationCompleted"><![CDATA[Cadastro realizado com sucesso. <a href="{$profileUrl}">Clique aqui</a> para completar seu perfil.]]></message>
+	<message key="user.role.author">Autor</message>
+	<message key="user.role.author_s">Autor(es)</message>
+	<message key="user.role.authors">Autores</message>
+	<message key="user.role.editor">Editor</message>
+	<message key="user.role.editors">Editores</message>
+	<message key="user.role.reader">Leitor</message>
+	<message key="user.role.readers">Leitores</message>
+	<message key="user.role.reviewer">Avaliador</message>
+	<message key="user.role.reviewers">Avaliadores</message>
+	<message key="user.role.siteAdmin">Administrador do Portal</message>
+	<message key="user.role.siteAdmins">Administradores do Portal</message>
+	<message key="user.role.copyeditor">Editor de Texto</message>
+	<message key="user.role.copyeditors">Editores de Texto</message>
+	<message key="user.role.proofreader">Leitor de Prova</message>
+	<message key="user.role.proofreaders">Leitores de Prova</message>
+	<message key="user.role.layoutEditor">Editor de Leiaute</message>
+	<message key="user.role.layoutEditors">Editores de Leiaute</message>
+	<message key="user.roles">Papéis</message>
+	<message key="user.salutation">Pronome de tratamento</message>
+	<message key="user.sendPassword">Confirmação</message>
+	<message key="user.sendPassword.description">Enviar e-mail de confirmação incluindo login e senha</message>
+	<message key="user.signature">Assinatura</message>
+	<message key="user.suffix">Sufixo</message>
+	<message key="user.title">Títulação</message>
+	<message key="user.url">URL</message>
+	<message key="user.userHome">Página do usuário</message>
+	<message key="user.username">Login</message>
+	<message key="user.workingLanguages">Idiomas conhecidos</message>
+	<message key="user.orcid">ORCID</message>
+	<message key="user.orcid.orcidInvalid">O ORCID informado é inválido. Por favor inclua a URL completa (ex. "http://orcid.org/0000-0002-1825-0097").</message>
+	<message key="user.profile.identity">Identificação</message>
+	<message key="user.profile.contact">Contato</message>
+	<message key="user.profile.public">Público</message>
+</locale>

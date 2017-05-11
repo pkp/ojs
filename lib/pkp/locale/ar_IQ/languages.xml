@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE languages SYSTEM "../../dtd/languages.dtd">
+<!--
+  * locale/ar_IQ/languages.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localized list of common languages. Based on ISO 639-1.
+  *
+  -->
+<languages>
+	<language code="ab" name="الأبخازية"/>
+	<language code="aa" name="الأفارية"/>
+	<language code="af" name="الأفريقية"/>
+	<language code="ak" name="الأكانية"/>
+	<language code="sq" name="الألبانية"/>
+	<language code="am" name="الأمهرية"/>
+	<language code="ar" name="العربية"/>
+	<language code="an" name="الأراغونية"/>
+	<language code="hy" name="الأرمنية"/>
+	<language code="as" name="الأسامية"/>
+	<language code="av" name="الأفاريكية"/>
+	<language code="ae" name="الآيسلندية الإيطالية"/>
+	<language code="ay" name="الأيمارا"/>
+	<language code="az" name="الآذربيجانية"/>
+	<language code="bm" name="البامبارية"/>
+	<language code="ba" name="الباشكيرية"/>
+	<language code="eu" name="الباسكية"/>
+	<language code="be" name="البيلاروسية"/>
+	<language code="bn" name="البنغالية"/>
+	<language code="bh" name="اللغات البيهارية"/>
+	<language code="bi" name="البيسلامية"/>
+	<language code="bs" name="البوسنية"/>
+	<language code="br" name="البريتونية"/>
+	<language code="bg" name="البلغارية"/>
+	<language code="my" name="البورمية"/>
+	<language code="ca" name="التشيكية"/>
+	<language code="km" name="الخميرية المركزية"/>
+	<language code="ch" name="التشامورية"/>
+	<language code="ce" name="الشيشانية"/>
+	<language code="ny" name="الشيشيوائية"/>
+	<language code="zh" name="الصينية"/>
+	<language code="cu" name="الكنيسة السلافية"/>
+	<language code="cv" name="التشفاشية"/>
+	<language code="kw" name="الكورنيشية"/>
+	<language code="co" name="الكورسيكية"/>
+	<language code="cr" name="الكريئية"/>
+	<language code="hr" name="الكرواتية"/>
+	<language code="cs" name="التشيكوسلوفاكية"/>
+	<language code="da" name="الدانماركية"/>
+	<language code="dv" name="المالديفية"/>
+	<language code="nl" name="الهولندية الفلمنكية"/>
+	<language code="dz" name="الزونخائية"/>
+	<language code="en" name="الإنجليزية"/>
+	<language code="eo" name="الاسبرانتو"/>
+	<language code="et" name="الاستونية"/>
+	<language code="ee" name="الأوية"/>
+	<language code="fo" name="الفاروية"/>
+	<language code="fj" name="الفيجية"/>
+	<language code="fi" name="الفنلندية"/>
+	<language code="fr" name="الفرنسية"/>
+	<language code="ff" name="الفولائية"/>
+	<language code="gd" name="الغالية؛ الغالية الاسكتلندية"/>
+	<language code="gl" name="الجاليكية"/>
+	<language code="lg" name="الغاندائية"/>
+	<language code="ka" name="الجورجية"/>
+	<language code="de" name="الألمانية"/>
+	<language code="el" name="اليونانية"/>
+	<language code="gn" name="الغوارانية"/>
+	<language code="gu" name="الكوجراتية"/>
+	<language code="ht" name="الكريولية الهاييتية"/>
+	<language code="ha" name="الهوسا"/>
+	<language code="he" name="العبرية"/>
+	<language code="hz" name="الهيريرو"/>
+	<language code="hi" name="الهندية"/>
+	<language code="ho" name="الحيري موتو"/>
+	<language code="hu" name="الهنغارية"/>
+	<language code="is" name="الآيسلندية"/>
+	<language code="io" name="الايدو"/>
+	<language code="ig" name="الإيبو"/>
+	<language code="id" name="الإندونيسية"/>
+	<language code="ia" name="اللغة الوسيطة (الرابطة العالمية للغة الثانوية)"/>
+	<language code="ie" name="اللغة الوسيطة؛ الغربية"/>
+	<language code="iu" name="الإنكتيتوتية"/>
+	<language code="ik" name="الاينبياكية"/>
+	<language code="ga" name="الايرلندية"/>
+	<language code="it" name="الإيطالية"/>
+	<language code="ja" name="اليابانية"/>
+	<language code="jv" name="الجاوية"/>
+	<language code="kl" name="الكالاليسوتية"/>
+	<language code="kn" name="الكانادا"/>
+	<language code="kr" name="الكانورية"/>
+	<language code="ks" name="الكشميرية"/>
+	<language code="kk" name="الكازاخستانية"/>
+	<language code="ki" name="الكيكويوئية"/>
+	<language code="rw" name="كينيارواندا"/>
+	<language code="ky" name="القيرغيزية"/>
+	<language code="kv" name="كومي"/>
+	<language code="kg" name="الكونغوئية"/>
+	<language code="ko" name="الكورية"/>
+	<language code="kj" name="الكوانيامائية"/>
+	<language code="ku" name="الكردية"/>
+	<language code="lo" name="اللاوية"/>
+	<language code="la" name="اللاتينية"/>
+	<language code="lv" name="اللاتفية"/>
+	<language code="li" name="الليمبرجيشية"/>
+	<language code="ln" name="اللينغالا"/>
+	<language code="lt" name="الليتوانية"/>
+	<language code="lu" name="لوبا كاتانغا"/>
+	<language code="lb" name="اللوكسمبورغية"/>
+	<language code="mk" name="المقدونية"/>
+	<language code="mg" name="المدغشقرية"/>
+	<language code="ms" name="الملايوية"/>
+	<language code="ml" name="المالايالامية"/>
+	<language code="mt" name="المالطية"/>
+	<language code="gv" name="المانكسية"/>
+	<language code="mi" name="الماوري"/>
+	<language code="mr" name="المهاراتية"/>
+	<language code="mh" name="المارشالية"/>
+	<language code="mn" name="المنغولية"/>
+	<language code="na" name="ناورو"/>
+	<language code="nv" name="نافاهو"/>
+	<language code="ng" name="دونغا"/>
+	<language code="ne" name="النيبالية"/>
+	<language code="nd" name="شمال نديبيلي"/>
+	<language code="se" name="السامية الشمالية"/>
+	<language code="no" name="النرويجية"/>
+	<language code="nb" name="بكما النرويجية"/>
+	<language code="nn" name="النينورسكية النرويجية"/>
+	<language code="oc" name="الأوكيتانية"/>
+	<language code="oj" name="الأوجيبوا"/>
+	<language code="or" name="الأورية"/>
+	<language code="om" name="الأورومية"/>
+	<language code="os" name="الأوسيتية"/>
+	<language code="pi" name="البالية"/>
+	<language code="pa" name="البنجابية"/>
+	<language code="fa" name="الفارسية"/>
+	<language code="pl" name="البولندية"/>
+	<language code="pt" name="البورتوغالية"/>
+	<language code="ps" name="البوشتو"/>
+	<language code="qu" name="الكيشوا"/>
+	<language code="ro" name="الرومانية"/>
+	<language code="rm" name="الرومانشية"/>
+	<language code="rn" name="الرندية"/>
+	<language code="ru" name="الروسية"/>
+	<language code="sm" name="الساموائية"/>
+	<language code="sg" name="السانغو"/>
+	<language code="sa" name="السنسكريتية"/>
+	<language code="sc" name="السردينية"/>
+	<language code="sr" name="الصربية"/>
+	<language code="sn" name="الشونا"/>
+	<language code="ii" name="سيتشوان يي"/>
+	<language code="sd" name="السندية"/>
+	<language code="si" name="السينيغالية"/>
+	<language code="sk" name="السلوفاكية"/>
+	<language code="sl" name="السلوفينية"/>
+	<language code="so" name="الصومالية"/>
+	<language code="st" name="السوتو الجنوبية"/>
+	<language code="nr" name="جنوب نديبيلي"/>
+	<language code="es" name="القشتالية الإسبانية"/>
+	<language code="su" name="السودانية"/>
+	<language code="sw" name="السواحلية"/>
+	<language code="ss" name="السواتي"/>
+	<language code="sv" name="السويدية"/>
+	<language code="tl" name="التاغالوغية"/>
+	<language code="ty" name="التاهيتية"/>
+	<language code="tg" name="الطاجيكية"/>
+	<language code="ta" name="التاميلية"/>
+	<language code="tt" name="التترية"/>
+	<language code="te" name="التيلوغو"/>
+	<language code="th" name="التايلندية"/>
+	<language code="bo" name="التبتية"/>
+	<language code="ti" name="التغرينية"/>
+	<language code="to" name="تونغا (جزر التونغا)"/>
+	<language code="ts" name="تسونجا"/>
+	<language code="tn" name="التسوانية"/>
+	<language code="tr" name="التركية"/>
+	<language code="tk" name="التركمانية"/>
+	<language code="tw" name="التوي"/>
+	<language code="ug" name="الإيغورية"/>
+	<language code="uk" name="الأوكرانية"/>
+	<language code="ur" name="الأردية"/>
+	<language code="uz" name="الأوزبكية"/>
+	<language code="ve" name="الفندا"/>
+	<language code="vi" name="الفيتنامية"/>
+	<language code="vo" name="فولابوك"/>
+	<language code="wa" name="الولونية"/>
+	<language code="cy" name="الويلزية"/>
+	<language code="fy" name="الفريزية الغربية"/>
+	<language code="wo" name="الولوفية"/>
+	<language code="xh" name="الكوزا"/>
+	<language code="yi" name="اليديشية"/>
+	<language code="yo" name="اليوروبية"/>
+	<language code="za" name="التشوانغية"/>
+	<language code="zu" name="الزولوية"/>
+</languages>

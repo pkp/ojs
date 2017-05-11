@@ -1,0 +1,638 @@
+/**
+ * @file styles/controllers/grid/grid.less
+ *
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @ingroup pkp_controllers_grid
+ *
+ * @brief Classes for grid structure
+ */
+
+.pkp_controllers_grid {
+	position: relative;
+	margin-bottom: @double * 2;
+	font-size: @font-sml;
+	box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+	border-radius: @radius;
+
+	.header,
+	.footer {
+		.pkp_helpers_clear;
+	}
+
+	// Header
+	.header {
+		position: relative;
+		background: @grid-border-color;
+		padding: 0 1em;
+		border-top-left-radius: @radius;
+		border-top-right-radius: @radius;
+
+		h4 {
+			display: inline-block;
+			font-size: @font-base;
+			margin: 0;
+			padding-top: @half;
+			padding-bottom: @half;
+		}
+	}
+
+	// Footer
+	.footer {
+		background: @grid-border-color;
+		padding-left: 1em;
+		padding-right: 1em;
+	}
+
+	// Actions (header + footer )
+	.actions {
+		display: inline-block;
+		float: right;
+		margin: 0;
+		padding: 0;
+		padding-top: 6px;
+		list-style: none;
+
+		li {
+			display: inline-block;
+		}
+
+		a {
+			position: relative;
+			top: 1px; // alignment to account for filter toggle offset
+			display: inline-block;
+			border-top: 2px solid transparent;
+			padding: 0 1em @half;
+			line-height: @double;
+			font-weight: @bold;
+			text-decoration: none;
+			background: transparent;
+			transition: all 0.3s ease;
+		}
+	}
+
+	// Search filter
+	.pkp_linkaction_search {
+		padding: 0 1px; // 1px prevents aliased icon from getting clipped at the edge
+
+		&:before {
+			&:extend( .fa );
+			content: @fa-var-search;
+			margin-right: 0.5em;
+		}
+
+		&.is_open {
+			background: @lift;
+			border-color: @primary;
+
+			&:before {
+				content: @fa-var-caret-up;
+			}
+		}
+	}
+
+	// Search filter
+	.filter {
+		padding: @base;
+		font-size: @font-sml;
+
+		label {
+			font-size: @font-sml;
+			font-weight: @normal;
+			font-style: italic;
+		}
+
+		.section {
+			margin-bottom: @half;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		.pkp_controllers_extrasOnDemand {
+
+			> a {
+				line-height: @double;
+				padding-left: @double + @base;
+			}
+
+			> a .fa {
+				line-height: @double;
+				width: @double;
+				height: @double;
+			}
+		}
+	}
+
+	// Grid rows
+	table {
+		width: 100%;
+	}
+
+	tr {
+		position: static;
+
+	}
+
+	// Content rows only
+	.gridRow {
+		border-top: @grid-border;
+	}
+
+	th,
+	td {
+		padding-left: @base;
+		padding-right: @base;
+		vertical-align: top;
+	}
+
+	thead {
+		font-size: @font-tiny;
+		line-height: 16px;
+		color: @text-light-rgba;
+		background: @grid-border-color;
+
+		th {
+			padding-top: @half;
+			padding-bottom: @half;
+			font-weight: @normal;
+		}
+
+		// Go ahead and remove header columns when there's only one column
+		// per header
+		th:first-child:last-child {
+			&:extend(.pkp_screen_reader all);
+		}
+	}
+
+	td {
+		position: relative;
+		padding-top: @half;
+		padding-bottom: @half - 1;
+		line-height: @line-base;
+	}
+
+	// Empty row
+	.empty td {
+		padding: 8px 0;
+		font-size: @font-sml;
+		font-style: italic;
+		line-height: @line-base;
+		color: @text-light;
+		color: @text-light-rgba;
+		text-align: center;
+	}
+
+	// Expand/collapse row actions
+	.has_extras td:first-child,
+	.row_controls td:first-child {
+		padding-left: @double;
+	}
+
+	.show_extras,
+	.hide_extras {
+		position: absolute;
+		top: @half; // matches td padding
+		left: 0;
+		width: @double;
+		height: @line-base; // matches td line-height
+		line-height: @line-base;
+		text-align: center;
+		cursor: pointer;
+		text-decoration: none;
+	}
+
+	.show_extras:before {
+		&:extend(.pkp_caret);
+		&:extend(.pkp_caret_right);
+		margin-top: -4px;
+	}
+
+	.hide_extras:before {
+		&:extend(.pkp_caret);
+		&:extend(.pkp_caret_down);
+	}
+
+	// Ordering items
+	.pkp_linkaction_moveItem {
+		&:extend( .fa );
+
+		&:before {
+			content: @fa-var-sort;
+		}
+	}
+
+	.ordering {
+
+		&.gridRow {
+			border-top: 1px dashed #ddd;
+		}
+
+		&:hover {
+			background: @grid-border-color;
+		}
+
+		.show_extras,
+		.hide_extras {
+			display: none;
+		}
+
+		.row_actions {
+			right: auto;
+			left: 0;
+		}
+	}
+
+	.order_finish_controls {
+		padding: @base;
+		background: @grid-border-color;
+
+		.saveButton {
+			&:extend(.pkp_button all);
+		}
+
+		.cancelFormButton {
+			&:extend(.pkp_button_link_offset all);
+		}
+	}
+
+	.order_message {
+		position: absolute;
+		background-color: lightGrey;
+		padding: 0.5em 0.5em;
+		display: inline-table;
+		top: 2em;
+		width: 15em;
+		z-index: 2;
+	}
+
+	// Labels within a grid cell which appear before a link action in the cell
+	// This is designed for submission and file IDs.
+	[id^="component-grid-submissions"] .first_column .label,
+	[id^="component-grid-pubids"] .first_column + .pkp_helpers_text_left .label,
+	.gridCellContainer .label.before_actions {
+		display: inline-block;
+		margin-right: 0.5em;
+		padding: 0 0.5em;
+		border: @bg-border-light;
+		border-radius: @radius;
+		font-size: @font-tiny; // extra small
+	}
+
+	// Additional handling of file ID labels to display file type icons
+	.gridCellContainer > .label .file_extension {
+		position: relative;
+		display: block;
+		margin: 0 -0.5em;
+		padding: 0 0.5em 0 @double;
+		line-height: @line-sml;
+
+		&:before {
+			&:extend(.fa);
+			content: @fa-var-file-o;
+			display: block;
+			position: absolute;
+			left: 0;
+			width: @line-sml;
+			height: @line-sml;
+			border-right: @bg-border-light;
+			line-height: @line-sml;
+			text-align: center;
+			color: @text-light;
+		}
+
+		&.doc:before,
+		&.docm:before,
+		&.docx:before,
+		&.dot:before,
+		&.dotm:before,
+		&.dotx:before {
+			content: @fa-var-file-word-o;
+		}
+
+		&.rtf:before,
+		&.txt:before,
+		&.odt:before {
+			content: @fa-var-file-text-o;
+		}
+
+		&.gif:before,
+		&.jpg:before,
+		&.jpeg:before,
+		&.png:before {
+			content: @fa-var-file-image-o;
+		}
+
+		&.xml:before,
+		&.htm:before,
+		&.html:before,
+		&.shtml:before {
+			content: @fa-var-file-code-o;
+		}
+
+		&.pdf:before {
+			content: @fa-var-file-pdf-o;
+		}
+
+		&.avi:before,
+		&.mov:before,
+		&.mkv:before {
+			content: @fa-var-file-video-o;
+		}
+
+		&.odp:before,
+		&.pot:before,
+		&.potm:before,
+		&.potx:before,
+		&.ppa:before,
+		&.ppam:before,
+		&.pps:before,
+		&.ppsm:before,
+		&.ppsmx:before,
+		&.ppt:before,
+		&.pptm:before,
+		&.pptx:before {
+			content: @fa-var-file-powerpoint-o;
+		}
+
+		&.mp3:before,
+		&.mp4:before,
+		&.ogg:before,
+		&.wma:before {
+			content: @fa-var-file-audio-o;
+		}
+
+		&.csv:before,
+		&.xls:before,
+		&.ods:before,
+		&.xlsb:before,
+		&.xlsm:before,
+		&.xlsx:before,
+		&.xlt:before,
+		&.xltm:before,
+		&.xltx:before {
+			content: @fa-var-file-excel-o;
+		}
+
+		&.zip:before {
+			content: @fa-var-file-archive-o;
+		}
+	}
+
+	// Infinite scroll
+	.scrollable {
+		position: relative;
+		max-height: 150px;
+		overflow: auto;
+	}
+
+	// Actions inline with the row
+	.row_actions {
+		position: absolute;
+		top: @half;
+		right: 0;
+
+		> a {
+			&:extend(.fa);
+			width: 24px;
+			height: 24px;
+			line-height: 24px;
+			text-align: center;
+			text-decoration: none;
+		}
+	}
+
+	// Secondary row of actions
+	.row_controls {
+		display: none;
+
+		td {
+			line-height: @line-base;
+			padding-top: 3px;
+			padding-bottom: 3px;
+		}
+
+		a {
+			display: inline-block;
+			margin-right: 1em;
+			padding-left: 0.5em;
+			padding-right: 0.5em;
+			font-size: @font-tiny;
+			font-weight: @bold;
+			text-decoration: none;
+		}
+	}
+
+	.pkp_linkaction_disable,
+	.pkp_linkaction_delete,
+	.pkp_linkaction_remove_item ,
+	.pkp_linkaction_deleteFile,
+	.pkp_linkaction_remove,
+	.pkp_linkaction_deleteSection,
+	.pkp_linkaction_deleteGenre,
+	.pkp_linkaction_deleteSubmissionChecklist,
+	.pkp_linkaction_resetAll,
+	.pkp_linkaction_resetEmail,
+	.pkp_linkaction_removeUserGroup,
+	.pkp_linkaction_deleteAuthor,
+	.pkp_linkaction_deleteQuery,
+	.pkp_linkaction_deleteNote,
+	.pkp_linkaction_deleteGalley {
+		color: @no;
+	}
+
+	// Icons
+	.checked,
+	.notChecked {
+		&:extend(.fa);
+	}
+
+	.checked:after {
+		content: @fa-var-check-square-o;
+		color: @yes;
+	}
+
+	.notChecked:after {
+		content: @fa-var-ban;
+		color: @no;
+	}
+
+	// Pagination
+	.gridPaging {
+		.pkp_helpers_clear;
+		padding: @half @base;
+		color: @text-light-rgba;
+		border-top: @grid-border;
+
+		.gridItemsPerPage {
+			float: left;
+
+			select {
+				display: inline-block;
+				width: auto;
+				height: @line-sml;
+				margin-left: 0.5em;
+			}
+		}
+
+		.gridPages {
+			float: right;
+
+			a {
+				&:extend(.pkp_button all);
+			}
+		}
+	}
+
+	// Items shown for infinite scrolling
+	.gridPagingScrolling {
+		position: relative;
+		color: @text-light-rgba;
+		text-align: center;
+		height: @double + @base;
+		line-height: @double + @base;
+		background: @grid-border-color;
+		border-bottom-right-radius: @radius;
+		border-bottom-left-radius: @radius;
+
+		.item_count {
+			position: absolute;
+			right: @base;
+		}
+
+		.pkp_linkaction_icon_more_items {
+			&:extend(.pkp_button_link all);
+
+			&:before {
+				&:extend(.pkp_caret);
+				&:extend(.pkp_caret_down);
+				position: absolute;
+				bottom: 6px;
+				left: 50%;
+				margin-left: -2px;
+				border-top-width: 4px;
+			}
+		}
+
+		.pkp_loading {
+			visibility: hidden;
+			position: absolute;
+			top: 0;
+			width: 100%;
+			background: @grid-border-color;
+			line-height: @double + @base;
+			opacity: 0;
+			transition: 0.3s opacity, 0.3s visibility;
+		}
+	}
+
+	&.loading {
+
+		.gridPagingScrolling {
+
+			.pkp_loading {
+				visibility: visible;
+				opacity: 1;
+			}
+		}
+	}
+}
+
+// Categorized grids
+.pkp_grid_category {
+
+	.gridRow.category,
+	.category_controls {
+		background: @grid-border-color;
+
+		.label {
+			font-weight: @bold;
+		}
+	}
+}
+
+// Listbuilder grids
+.pkp_controllers_listbuilder {
+
+	.gridRow {
+
+		.pkp_linkaction_delete {
+
+			&:before {
+				&:extend(.fa);
+				content: @fa-var-times;
+			}
+		}
+	}
+}
+
+// File grids
+[id^="component-grid-files"] {
+
+	// Headers aren't needed in file grids
+	thead {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+
+	.pkp_linkaction_downloadFile {
+		text-decoration: none;
+	}
+
+	[id^="component-grid-files"] td:not(.first_column),
+	[id^="component-grid-files"] th:not(.first_column) {
+		color: @text-light-rgba;
+		width: 50px;
+	}
+}
+
+// Grids without titles
+.pkp_grid_no_title {
+	box-shadow: none;
+	border-bottom: @grid-border;
+
+	.header {
+		background: transparent;
+	}
+
+	thead {
+		background: transparent;
+	}
+}
+
+
+// TODO check if these styles can be removed
+.pkp_controllers_grid {
+
+	// See TODO at lib/pkp/templates/controllers/grid.tpl:54
+	.options {
+		float: right;
+		line-height: 24px;
+		height: 24px;
+		vertical-align: middle;
+	}
+
+	.options a {
+		font-size: 90%;
+	}
+
+	.options a:before {
+		margin-left: 20px;
+	}
+
+	// See TODO at /var/www/html/ojs/lib/pkp/templates/controllers/grid/common/cell/statusCell.tpl
+	a.task {
+		width: 100%;
+		text-indent: -1500px;
+		overflow: hidden;
+		display: block;
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+		margin: 0;
+		height: 24px;
+	}
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../dtd/locale.dtd">
+
+<!--
+  * plugins/citationLookup/isbndb/locale/pt_BR/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Locale information: https://pkp.sfu.ca/wiki/index.php?title=OMP:_Portuguese_(pt_BR)
+  * Localization strings.
+  -->
+
+<locale name="pt_BR" full_name="Português (Brasil)">
+	<!-- plug-in -->
+	<message key="plugins.citationLookup.isbndb.displayName">Conector à base de dados ISBNdb</message>
+	<message key="plugins.citationLookup.isbndb.description">Conecta à base de dados bibliográfica ISBNdb.</message>
+
+	<!-- ISBN lookup and extraction services -->
+	<message key="plugins.citationLookup.isbndbExtraction.displayName">Serviço de extração ISBN</message>
+	<message key="plugins.citationLookup.isbndbExtraction.description">Encontrar um ISBN para uma dada descrição de elemento de citação NLM 3.0.</message>
+	<message key="plugins.citationLookup.isbndbLookup.displayName">Serviço de consulta ISBN</message>
+	<message key="plugins.citationLookup.isbndbLookup.description">Consultar uma descrição completa de elementos de citação NLM 3.0 a partir de um ISBN.</message>
+</locale>

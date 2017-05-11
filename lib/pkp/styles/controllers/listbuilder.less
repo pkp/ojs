@@ -1,0 +1,64 @@
+/**
+ * @file styles/controllers/listbuilder/listbuilder.less
+ *
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @ingroup pkp_controllers_listbuilder
+ *
+ * @brief Classes for listbuilder structure
+ */
+
+.pkp_controllers_listbuilder {
+
+	thead,
+	tr.empty {
+		border-bottom: @grid-border-color;
+	}
+
+	.wrapper {
+		.pkp_helpers_clear;
+	}
+
+	.list_wrapper {
+		float: left;
+		padding-right: @base;
+
+		// Make room for sorting icon
+		tr:not(.empty) td:first-child {
+			padding-left: @double;
+		}
+	}
+
+	.list_header {
+		margin-right: -@base;
+		padding: 0 1em;
+		background: @grid-border-color;
+		color: @text-light-rgba;
+	}
+
+	// Ensure grid cells are clickable to enter edit mode even if empty
+	.gridCellDisplay {
+		min-height: @line-base;
+		cursor: pointer;
+	}
+
+	// Editable grid row styles
+	// Default: Edit not displayed
+	.gridCellEdit {
+		display: none;
+	}
+
+	.gridRowEdit {
+
+		.gridCellEdit {
+			display: block;
+		}
+
+		.row_actions,
+		.gridCellDisplay {
+			display: none;
+		}
+	}
+}

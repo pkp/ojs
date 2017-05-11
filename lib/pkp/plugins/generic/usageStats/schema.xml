@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE schema SYSTEM "../../../dtd/xmlSchema.dtd">
+
+<!--
+  * plugins/generic/counter/schema.xml
+  *
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Usage stats plugin temporary table for storing temporary stats records.
+  -->
+
+<schema version="0.2">
+	<!--
+	 *
+	 * TABLE usage_stats_temporary_records
+	 *
+	 -->
+	<table name="usage_stats_temporary_records">
+		<field name="assoc_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="assoc_type" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="day" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="entry_time" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="metric" type="I8">
+			<NOTNULL/>
+			<DEFAULT VALUE="1"/>
+		</field>
+		<field name="country_id" type="C2" size="2" />
+		<field name="region" type="C2" size="2" />
+		<field name="city" type="C2" size="255" />
+		<field name="load_id" type="C2" size="255">
+			<NOTNULL/>
+		</field>
+		<field name="file_type" type="I1" />
+		<descr>Usage stats temporary records</descr>
+	</table>
+</schema>

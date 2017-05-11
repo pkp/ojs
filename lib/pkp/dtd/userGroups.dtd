@@ -1,0 +1,19 @@
+<!--
+  * dtd/userGroups.dtd
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * DTD for default user group settings.
+  *
+  -->
+<!ELEMENT groups (group+)>
+<!ELEMENT group EMPTY>
+	<!ATTLIST group
+		roleId CDATA #REQUIRED
+		stages CDATA #IMPLIED
+		name CDATA #REQUIRED
+		plural CDATA #REQUIRED
+		abbrev CDATA #REQUIRED
+		permitSelfRegistration CDATA #IMPLIED>

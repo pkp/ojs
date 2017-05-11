@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/es_ES/editor.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Credits: https://pkp.sfu.ca/wiki/index.php?title=OMP:_Spanish_(es_ES)
+  * Localization strings.
+  -->
+
+<locale name="es_ES" full_name="Español (España)">
+	<message key="editor.review.notInitiated">El proceso de revisión todavía no se ha iniciado.</message>
+	<message key="editor.submission.copyediting.personalMessageToUser">Mensaje al usuario</message>
+	<message key="editor.submission.externalReviewDescription">Está a punto de iniciar una revisión externa para este envío. Los archivos que formen parte de este envío están listados abajo y pueden ser seleccionados para su revisión.</message>
+	<!-- Add file or auditor to editor/audit grids -->
+	<message key="editor.submission.fileAuditor.form.fileRequired">Tienes que seleccionar al menos un archivo al que asignar el usuario.</message>
+	<message key="editor.submission.fileAuditor.form.messageRequired">Tienes que incluir un mensaje privado.</message>
+	<message key="editor.submission.fileAuditor.skipEmail">No enviar correo electrónico al auditor</message>
+	<message key="editor.submission.fileAuditor.form.userRequired">Tienes que seleccionar un usuario al que asignar.</message>
+	<message key="editor.submission.uploadSelectFiles">Subir/Seleccionar archivos</message>
+	<message key="editor.submission.revisions">Revisiones</message>
+	<message key="editor.submission.review.reviewersDescription"><![CDATA[Usa <em>+Añadir revisor</em> para invitar lectores a que revisen los archivos del envío. El icono del cuaderno indica que se ha enviado una revisión, que se comprueba <em>Aceptado</em> tras su consulta. Cuando hay revisiones atrasadas aparece en un iono de un sobre rojo.]]></message>
+	<message key="editor.submission.addReviewer">Añadir revisor</message>
+	<message key="editor.submission.fileList.includeAllStages">Incluir todos los archivos de todas las etapas de flujo de trabajo con acceso.</message>
+	<message key="editor.submission.review.currentFiles">Archivos de revisión en ronda actuales {$round}</message>
+	<message key="editor.submission.backToSearch">Volver a la búsqueda simple</message>
+	<message key="editor.review.createReviewer">Crear nuevo revisor</message>
+	<message key="editor.review.enrollReviewer.short">Inscribir ususario ya existente</message>
+	<message key="editor.review.unassignReviewer">Desasignar revisor</message>
+	<message key="editor.submissionReview.reviewType">Tipo de revisión</message>
+	<message key="editor.submissionReview.skipEmail">No enviar correo electrónico de autor</message>
+	<message key="editor.submissionReview.open">Abrir</message>
+	<message key="editor.submissionReview.blind">Ciego</message>
+	<message key="editor.submissionReview.doubleBlind">Doble ciego</message>
+	<message key="editor.submissionReview.restrictFiles">Restringir archivos disponibles</message>
+	<message key="editor.review.personalMessageToReviewer">Envío del correo electrónico al revisor</message>
+	<message key="editor.review.importantDates">Fechas importantes</message>
+	<message key="editor.review.uploadRevision">Subir revisión</message>
+	<message key="editor.review.NotifyAuthorAccept">Notificar al autor de la aprobación:</message>
+	<message key="editor.review.NotifyAuthorDecline">Notificar al autor de la decisión de rechazar el envío:</message>
+	<message key="editor.review.NotifyAuthorRevisions">Notificar al autor de la necesidad de revisiones:</message>
+	<message key="editor.review.NotifyAuthorResubmit">Notificar al autor de la necesidad de revisiones que se someterán a más revisiones:</message>
+	<message key="editor.review.NotifyAuthorExternal">Notificar al autor de la decisión de una revisión externa:</message>
+	<message key="editor.review.personalMessageToAuthor">Envío del correo electrónico al autor</message>
+	<message key="editor.review.dateAccepted">Fecha de aprobación de la revisión</message>
+	<message key="editor.review.noReviews">No hay revisiones por pares para importar</message>
+	<message key="editor.review.reminder">Recordatorio de revisión</message>
+	<message key="editor.review.thankReviewer">Dar las gracias al revisor</message>
+	<message key="editor.review.reminderError">Error al enviar recordatorio de revisión</message>
+	<message key="editor.review.thankReviewerError">Error al enviar las gracias al revisor</message>
+	<message key="editor.review.skipEmail">No enviar correo electrónico de revisor</message>
+	<message key="editor.review.sendReminder">Enviar recordatorio</message>
+	<message key="editor.review.reviewDueDate">Fecha límite de la revisión</message>
+	<message key="editor.review.reviewCompleted">Revisión completa</message>
+	<message key="editor.review.reviewerComments">Comentarios del revisor</message>
+	<message key="editor.review.days">Promedio de días</message>
+	<message key="editor.review.mustSelect">Debes seleccionar un revisor</message>
+	<message key="editor.review.errorAddingReviewer">Ha ocurrido un error al añadir el revisor. Por favor, inténtalo de nuevo.</message>
+	<message key="editor.review.errorDeletingReviewer">Ha ocurrido un error al eliminar el revisor. Por favor, inténtalo de nuevo.</message>
+	<message key="editor.review.userGroupSelect">Inscribir el usuario con este grupo de usuarios de revisores</message>
+	<message key="editor.review.unconsiderReviewText">¿Deseas marcar esta revisión como descartada? Se conservará el historial de revisión.</message>
+	<message key="editor.review.unconsiderReview">Descartar esta revisión</message>
+	<message key="editor.review.errorUnconsideringReview">Ha ocurrido un error al descartar esta revisión. Por favor, inténtalo de nuevo.</message>
+	<message key="editor.review.readConfirmation">Una vez que esta revisión haya sido leída, pulsa "Confirmar" para indicar que el proceso de revisión puede ser continuado.</message>
+	<message key="editor.submission.selectCopyedingFiles">Archivos de corrección de estilo</message>
+	<message key="editor.submission.selectReviewer">Seleccionar revisor</message>
+	<message key="editor.submission.taskDueDate">Fecha de vencimiento de la tarea</message>
+	<message key="editor.submission.taskSchedule">Planificación de tareas</message>
+	<message key="editor.review.enrollReviewer">Inscribir ususario ya existente como revisor</message>
+	<message key="editor.submission.noAuditRequested">No se requiere auditoría para este archivo</message>
+	<message key="editor.submission.personalMessageToUser">Envío del correo electrónico al usuario</message>
+	<message key="editor.submission.proof.reminder">Recordatorio de corrección</message>
+	<message key="editor.submission.editorial.approveCopyeditDescription">El archivo corregido tiene que ser aprobado antes de poder ser enviado a la etapa de producción. ¿Quieres aprobar este archivo?</message>
+	<message key="editor.submission.editorial.disapproveCopyeditDescription">Al desaprobar este archivo corregido, ya no estará disponible para enviarlo a la etapa de producción. ¿Quieres desaprobar este archivo?</message>
+	<message key="editor.submission.addAuditor">Asignar un auditor</message>
+	<message key="editor.review">Revisión</message>
+	<message key="editor.submission.production.productionReadyFiles">Archivos listos para la producción</message>
+	<message key="editor.submission.newRound">Nueva ronda de revisión</message>
+	<message key="editor.submissionReview.recordDecision">Resgistrar decisión editorial</message>
+	<message key="editor.submission.newRoundDescription">Estás a punto de crear una nueva ronda de revisión para este envío. Los archivos que no se hayan utilizado en otras rondas de revisión están listados a continuación. Por defecto, se han seleccionado los revisores de la ronda de revisión anterior para participar en esta nueva ronda.</message>
+	<message key="editor.submission.createNewRound">Crear nueva ronda de revisión</message>
+	<message key="editor.article.reviewForms">Formularios de Revisión</message>
+	<message key="editor.article.selectReviewForm">Escoger Formulario de Revisión</message>
+	<message key="editor.article.clearReviewForm">Limpiar Formulario de Revisión</message>
+	<message key="editor.submissionLibrary">Biblioteca de envío</message>
+	<message key="editor.submission.selectFiles">Selecciona ficheros</message>
+	<message key="editor.submission.findAndSelectReviewer">Encuentra un revisor</message>
+	<message key="editor.submissionReview.restrictFiles.hide">Cierre la selección de ficheros</message>
+	<message key="editor.submissionReview.editReview">Edita la revisión</message>
+	<message key="editor.review.readReview">Leer la revisión</message>
+	<message key="editor.review.readNewReview">Leer la nueva revisión</message>
+	<message key="editor.review.responseDue">Respuesta prevista: {$date}</message>
+	<message key="editor.review.requestSent">Solicitud enviada</message>
+	<message key="editor.review.requestAccepted">Solicitud aceptada</message>
+	<message key="editor.review.revertDecision">Revertir la decisión</message>
+	<message key="editor.review.reviewDue">Revisión prevista: {$date}</message>
+	<message key="editor.review.reviewConfirmed">Revisión confirmada</message>
+	<message key="editor.review.reviewSubmitted">Revisión enviada</message>
+	<message key="editor.review.reviewDetails">Revisar detalles</message>
+	<message key="editor.review.noReviewFilesUploaded">No hay ningún fichero subido</message>
+	<message key="editor.review.noReviewFilesUploaded.details">No ha subido ningún fichero de revisión.</message>
+	<message key="editor.review.emailReviewer">Revisor de correo electrónico</message>
+	<message key="editor.article.confirmChangeReviewForm">Atención: Cambiar el formulario de revisión afectará a cualquier comentario hecho por los revisores que hayan utilizado este formulario. ¿Está seguro de que desea continuar?</message>
+	<message key="editor.submission.noReviewerFilesSelected">No hay ningún fichero seleccionado</message>
+	<message key="editor.submission.noReviewerFilesSelected.details">No ha seleccionado ningún fichero para enviar al revisor.</message>
+	<message key="submission.queries.subjectRequired">Es necesario especificar un tema de discusión.</message>
+	<message key="submission.queries.messageRequired">Es necesario especificar un mensaje de discusión.</message>
+	<message key="submission.queries.attachedFiles">Ficheros adjuntos</message>
+	<message key="grid.action.editQuery">Editar discusión</message>
+	<message key="editor.submission.query.manageQueryNoteFilesDescription">Puede adjuntar ficheros para incluirlos en esta discusión desde la siguiente lista.</message>
+	<message key="editor.submission.selectedReviewer">Revisor seleccionado</message>
+	<message key="editor.submission.proofreading.approveProof">Aceptar la prueba</message>
+	<message key="editor.submission.proofreading.revokeProofApproval">Anular la aceptación de la prueba</message>
+	<message key="editor.submission.proofreading.confirmCompletion">Acepta esta prueba para indicar que la revisión se ha completado y que el fichero está listo para ser publicado.</message>
+	<message key="editor.submission.proofreading.confirmRemoveCompletion">Anula la aceptación de esta prueba para indicar que la revisión ya no está completa y que el fichero no está listo para ser publicado.</message>
+	<message key="editor.submission.copyedit.manageCopyeditFilesDescription">Cualquier fichero que ya haya sido subido en cualquier fase del envío puede añadirse a la lista de ficheros de corrección marcando la siguiente casilla "Añadir" y pulsando "Buscar": todos los ficheros disponibles serán listados y podrán incluirse. Los ficheros adicionales que todavía no se hayan subido a esta fase se pueden añadir al listado pulsando el enlace "Cargar fichero".</message>
+	<message key="editor.publicIdentificationNumericNotAllowed">El identificador público '{$publicIdentifier}' no puede ser un número.</message>
+</locale>

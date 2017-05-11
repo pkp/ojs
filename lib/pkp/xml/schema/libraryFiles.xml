@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE schema SYSTEM "../../dtd/xmlSchema.dtd">
+
+<!--
+  * xml/schema/libraryFiles.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Library files schema in XML.
+  -->
+
+<schema version="0.2">
+	<!--
+	  *
+	  * TABLE library_files
+	  *
+	  -->
+	<table name="library_files">
+		<field name="file_id" type="I8">
+			<KEY/>
+			<AUTOINCREMENT/>
+		</field>
+		<field name="context_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="file_name" type="C2" size="255">
+			<NOTNULL/>
+		</field>
+		<field name="original_file_name" type="C2" size="255">
+			<NOTNULL/>
+		</field>
+		<field name="file_type" type="C2" size="255">
+			<NOTNULL/>
+		</field>
+		<field name="file_size" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="type" type="I1">
+			<NOTNULL/>
+		</field>
+		<field name="date_uploaded" type="T">
+			<NOTNULL/>
+		</field>
+		<field name="date_modified" type="T">
+			<NOTNULL/>
+		</field>
+		<field name="submission_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<descr>Library files for a context</descr>
+		<index name="library_files_context_id">
+			<col>press_id</col>
+		</index>
+		<index name="library_files_submission_id">
+			<col>submission_id</col>
+		</index>
+	</table>
+
+	<!--
+	  *
+	  * TABLE library_file_settings
+	  *
+	  -->
+	<table name="library_file_settings">
+		<field name="file_id" type="I8">
+			<NOTNULL />
+		</field>
+		<field name="locale" type="C2" size="5">
+			<NOTNULL />
+			<DEFAULT VALUE=""/>
+		</field>
+		<field name="setting_name" type="C2" size="255">
+			<NOTNULL />
+		</field>
+		<field name="setting_value" type="X"/>
+		<field name="setting_type" type="C2" size="6">
+			<NOTNULL/>
+			<descr>(bool|int|float|string|object|date)</descr>
+		</field>
+		<descr>Library file metadata.</descr>
+		<index name="library_file_settings_id">
+			<col>file_id</col>
+		</index>
+		<index name="library_file_settings_pkey">
+			<col>file_id</col>
+			<col>locale</col>
+			<col>setting_name</col>
+			<UNIQUE/>
+		</index>
+	</table>
+</schema>

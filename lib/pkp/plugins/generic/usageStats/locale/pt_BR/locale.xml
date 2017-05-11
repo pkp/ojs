@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../dtd/locale.dtd">
+
+<!--
+  * plugins/generic/usageStats/locale/pt_BR/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Locale information: https://pkp.sfu.ca/wiki/index.php?title=OMP:_Portuguese_(pt_BR)
+  * Localization strings
+  -->
+
+<locale name="pt_BR" full_name="Português (Brasil)">
+	<message key="plugins.generic.usageStats.settings.logging">Opções de log de acessos</message>
+	<message key="plugins.generic.usageStats.settings.createLogFiles">Criar arquivos de log</message>
+	<message key="plugins.generic.usageStats.settings.createLogFiles.description">Ativar esta opção fará com que o plugin crie arquivos de log dentro da sua pasta de arquivos. Os arquivos devem ser usados para extração de dados estatísticos. Caso não deseje criar mais arquivos de log, deixe a opção desabilitada e use os arquivos de log do próprio servidor.</message>
+	<message key="plugins.generic.usageStats.settings.logParseRegex">Expressão regular de tratamento de arquivos de log</message>
+	<message key="plugins.generic.usageStats.settings.logParseRegex.description">A expressão regular padrão pode ser usada para tratar arquivos de log do apache em formato combinado, bem como os arquivos de log do plugin. Caso seus arquivos de log estejam em formato diferente, será necessário inserir uma regex capaz de tratá-los e recuperar os valores esperados. Veja UsageStatsLoader::_getDataFromLogEntry() para mais informações.</message>
+	<message key="plugins.generic.usageStats.settings.saved">Configurações do plugin de estatísticas de uso salvas com sucesso</message>
+	
+	<message key="plugins.generic.usageStats.openFileFailed">O arquivo {$file} não pôde ser aberto e foi rejeitado.</message>
+	<message key="plugins.generic.usageStats.invalidLogEntry">A linha {$lineNumber} do arquivo {$file} não é uma entrada de log válida e o arquivo foi rejeitado.</message>
+	<message key="plugins.generic.usageStats.displayName">Estatísticas de uso</message>
+	<message key="plugins.generic.usageStats.description">Apresentar estatísticas de uso de objetos de dados. Pode usar arquivos de log de acesso para extrair estatísticas.</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption">Opção de privacidade de dados</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.saltFilepath">Caminho de arquivo para entropia de anonimato</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.saltFilepath.invalid">O arquivo não pode ser gravado.</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.requirements">Para garantir a privacidade dos dados, você deve especificar um arquivo legível e gravável pelo usuário do webserver para conter um valor de entropia de senha gerado aleatoriamente. Este arquivo não deve ser incluídos em backups de modo a garantir a proteção da privacidade. O valor é gerado aleatoriamente usando a função mcrypt_create_iv, o que requer a bilbioteca PHP mcrypt; a função openssl_random_pseudo_bytes, que requer o PHP openssl; o arquivo /dev/urandom, que só funciona em sistemas *nix; ou a função mt_rand, que não é criptograficamente segura. Assim, se você estiver usando um servidor Windows, certifique-se que você instale ou o PHP mcrypt ou habilitade o openssl para ter o valor de entropia gerado de forma criptograficamente segura.</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.description">Ative essa opção para usar uma versão do plug-in que respeite as legislações de privacidade, ou seja, que está registrando endereços IP com hash, informa os usuários sobre o rastreamento e fornece uma opção de desabilitar para os usuários. Nota: quando utilizar esta opção, você não será capaz de usar os recursos de geolocalização do plugin.</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.requiresSalt">Habilitar a privacidade dos dados requer um arquivo de entropia (salt).</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.excludesCity">Habilitando a privacidade dos dados exclui Cidade como uma estatística opcional.</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.excludesRegion">Habilitando a privacidade dos dados exclui Região como uma estatística opcional.</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyCheckbox">Respeitar a privacidade dos dados</message>
+	<message key="plugins.generic.usageStats.settings.optionalColumns">Informações estatísticas opcionais</message>
+	<message key="plugins.generic.usageStats.settings.optionalColumns.description">Ativar ou desativar a coleta das seguintes informações opcionais. Isso vai influenciar sobre os possíveis relatórios de estatísticas você pode recuperar, e também terá um impacto sobre o tamanho do banco de dados. NÃO MUDE a menos que você entenda completamente o que você está fazendo.</message>
+	<message key="plugins.generic.usageStats.settings.optionalColumns.cityRequiresRegion">A coluna opcional "Cidade" requer a coluna opcional "Região".</message>
+	<message key="plugins.generic.usageStats.settings.archives">Arquivos</message>
+	<message key="plugins.generic.usageStats.settings.compressArchives.description">Ative essa opção para compactar arquivos de log usando a ferramenta gzip (você terá que definir a configuração gzip dentro config.inc.php). Se você tem um site de alto tráfego, é uma boa ideia permitir isso para economizar algum espaço em disco.</message>
+	<message key="plugins.generic.usageStats.settings.compressArchives">Comprimir arquivos</message>
+	<message key="plugins.generic.usageStats.usageStatsLoaderName">Tarefa do carregador de arquivo de estatísticas de uso</message>
+	<message key="plugins.generic.usageStats.removeUrlError">O número da linha {$lineNumber} do arquivo {$file} contém uma URL que o sistema não pode remover a url base.</message>
+	<message key="plugins.generic.usageStats.loadDataError">Não foi possível carregar os dados extraídos do arquivo {$file}. O arquivo foi transferido para novo processamento.</message>
+	<message key="plugins.generic.usageStats.pluginNotEnabled">O plugin de estatísticas de uso está desativado. Nenhum arquivo de log processado.</message>
+	<message key="plugins.generic.usageStats.processingPathNotEmpty">O diretório {$directory} não está vazio. Isto poderia indicar que um processo falhou anteriormente, ou um processo está executando atualmente. Este arquivo será automaticamente reprocessado se você estiver usando oscheduledTasksAutoStage.xml, caso contrário, você precisará mover manualmente os arquivos órfãos no diretório de processamento de volta para o diretório principal.</message>
+	<message key="plugins.generic.usageStats.noCounterBotList">A lista de bots COUNTER {$botlist} não pode ser usada. Há diferentes razões para isso. Verifique se o arquivo da lista está na pasta 'lib/pkp/plugins/generic/usageStats/lib/counter'. Verifique também as permissões da pasta e que há apenas um arquivo na pasta.</message>
+	<message key="plugins.reports.usageStats.report.displayName">Relatório de estatísticas de uso do OMP</message>
+	<message key="plugins.reports.usageStats.report.description">Relatório padrão de estatísticas de uso (compatível com COUNTER)</message>
+	<message key="plugins.reports.usageStats.optout.displayName">Informações Privadas de Estatística de Uso</message>
+	<message key="plugins.reports.usageStats.optout.description">Informações Privadas de Estatística de Uso</message>
+	<message key="plugins.generic.usageStats.optout.title">Informações de Estatísticas de Uso</message>
+	<message key="plugins.generic.usageStats.optout.shortDesc"><![CDATA[Nós registramos estatísticas de uso de forma anônima. Por favor, leia as <a href="{$privacyInfo}"> informações de privacidade </a> para mais detalhes.]]></message>
+	<message key="plugins.reports.usageStats.metricType">OMP/COUNTER</message>
+	<message key="plugins.reports.usageStats.metricType.full">Estatíticas do Open Monograph Press (compatível com COUNTER)</message>
+	<message key="plugins.generic.usageStats.settings.statsDisplayOptions">Opções para exibição de estatísticas</message>
+	<message key="plugins.generic.usageStats.settings.statsDisplayOptions.display">Mostrar gráfico de estatísticas da submissão para o leitor</message>
+	<message key="plugins.generic.usageStats.settings.statsDisplayOptions.chartType">Escolha o tipo de gráfico para exibir as estatísticas de download</message>
+	<message key="plugins.generic.usageStats.settings.statsDisplayOptions.chartType.bar">Barra</message>
+	<message key="plugins.generic.usageStats.settings.statsDisplayOptions.chartType.line">Linha</message>
+	<message key="plugins.generic.usageStats.settings.statsDisplayOptions.datasetMaxCount">Definir o número máximo de dados para apresentar ao mesmo tempo para um ponto do eixo x-específica. Um valor mais alto pode gerar gráficos difíceis de entender . Algo entre 3 e 5 é adequado.</message>
+	<message key="plugins.generic.usageStats.statsSum">Somar todos os downloads de arquivos</message>
+	<message key="plugins.generic.usageStats.noStats">Não há dados estatísticos.</message>
+	<message key="plugins.generic.usageStats.monthInitials">Jan Fev Mar Abr Mai Jun Jul Ago Set Out Nov Dez</message>
+</locale>

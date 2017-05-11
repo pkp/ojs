@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/ca_ES/default.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Credits: https://pkp.sfu.ca/wiki/index.php?title=OMP:_Catalan_(ca_ES)
+  * Localization strings for default settings for setup items.
+  -->
+
+<locale name="ca_ES" full_name="Català">
+	<!-- Group defaults -->
+	<message key="default.groups.name.siteAdmin">Administrador/a del lloc web</message>
+	<message key="default.groups.plural.siteAdmin">Administradors/ores del lloc web</message>
+	<message key="default.groups.name.productionEditor">Editor/a de producció</message>
+	<message key="default.groups.plural.productionEditor">Editors/ores de producció</message>
+	<message key="default.groups.abbrev.productionEditor">ProdE</message>
+	<message key="default.groups.name.copyeditor">Corrector/a d’originals</message>
+	<message key="default.groups.plural.copyeditor">Correctors/ores d’originals</message>
+	<message key="default.groups.abbrev.copyeditor">CE</message>
+	<message key="default.groups.name.proofreader">Corrector/a de proves</message>
+	<message key="default.groups.plural.proofreader">Correctors/ores de proves</message>
+	<message key="default.groups.abbrev.proofreader">PR</message>
+	<message key="default.groups.name.designer">Dissenyador</message>
+	<message key="default.groups.plural.designer">Dissenyadors</message>
+	<message key="default.groups.abbrev.designer">Disseny</message>
+	<message key="default.groups.name.internalReviewer">Revisor/a intern</message>
+	<message key="default.groups.plural.internalReviewer">Revisors/ores interns</message>
+	<message key="default.groups.abbrev.internalReviewer">IR</message>
+	<message key="default.groups.name.externalReviewer">Revisor/a extern</message>
+	<message key="default.groups.plural.externalReviewer">Revisors/ores externs</message>
+	<message key="default.groups.abbrev.externalReviewer">ER</message>
+	<message key="default.groups.name.marketing">Coordinador/a de màrqueting i vendes</message>
+	<message key="default.groups.plural.marketing">Coordinadors/es de màrqueting i vendes</message>
+	<message key="default.groups.abbrev.marketing">MS</message>
+	<message key="default.groups.name.funding">Coordinador/a de finançament</message>
+	<message key="default.groups.plural.funding">Coordinadors/es de finançament</message>
+	<message key="default.groups.abbrev.funding">FC</message>
+	<message key="default.groups.name.indexer">Indexador/a</message>
+	<message key="default.groups.plural.indexer">Indexadors/es</message>
+	<message key="default.groups.abbrev.indexer">IND</message>
+	<message key="default.groups.name.layoutEditor">Maquetista</message>
+	<message key="default.groups.plural.layoutEditor">Maquetistes</message>
+	<message key="default.groups.abbrev.layoutEditor">LE</message>
+	<message key="default.groups.name.author">Autor/a</message>
+	<message key="default.groups.plural.author">Autors/ores</message>
+	<message key="default.groups.abbrev.author">AU</message>
+	<message key="default.groups.name.translator">Traductor/a</message>
+	<message key="default.groups.plural.translator">Traductors/ores</message>
+	<message key="default.groups.abbrev.translator">Trad</message>
+	<message key="default.groups.name.reader">Lector/a</message>
+	<message key="default.groups.plural.reader">Lectors/es</message>
+	<message key="default.groups.abbrev.reader">Llegir</message>
+
+	<!--  common app genre defaults -->
+	<message key="default.genres.other">Altres</message>
+	<message key="default.genres.multimedia">Multimèdia</message>
+	<message key="default.genres.image">Imatge</message>
+	<message key="default.genres.styleSheet">Full d'estil HTML</message>
+</locale>

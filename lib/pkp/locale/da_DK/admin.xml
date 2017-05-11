@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/da_DK/admin.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the da_DK (Dansk) locale.
+  *
+  -->
+
+<locale name="da_DK" full_name="Dansk">
+	<message key="admin.adminFunctions">Administrative funktioner</message>
+	<message key="admin.auth.confirmDelete">Er du sikker på, at du vil slette denne godkendelseskilde permanent?</message>
+	<message key="admin.auth.create">Opret godkendelseskilde</message>
+	<message key="admin.auth.noneCreated">Der er ikke angivet nogen godkendelseskilder.</message>
+	<message key="admin.authSources">Godkendelseskilder</message>
+	<message key="admin.clearDataCache">Ryd datacache</message>
+	<message key="admin.clearTemplateCache">Ryd skabeloncachen</message>
+	<message key="admin.configFileUpdatedInstructions"><![CDATA[Konfigurationsfilen er blevet opdateret. Vær opmærksom på, at hvis webstedet ikke længere fungerer korrekt, skal du muligvis rette konfigurationen manuelt ved at redigere direkte i filen <tt>config.inc.php</tt>.]]></message>
+	<message key="admin.confirmClearTemplateCache">Er du sikker på, at du vil rydde cachen for kompilerede skabeloner?</message>
+	<message key="admin.confirmExpireSessions">Er du sikker på, at du vil lade alle brugersessioner udløbe? Alle brugere, der i øjeblikket er logget på systemet, vil blive tvunget til at logge på igen (herunder dig selv).</message>
+	<message key="admin.contentsOfConfigFile">Konfigurationsfilens indhold</message>
+	<message key="admin.currentVersion">Aktuel version</message>
+	<message key="admin.dateInstalled">Installationsdato</message>
+	<message key="admin.displayConfigFileInstructions"><![CDATA[Indholdet af den opdaterede konfiguration vises nedenfor. Hvis du vil aktivere konfigurationsændringerne, skal du åbne filen <tt>config.inc.php</tt> i en passende teksteditor og erstatte dens indhold med indholdet i tekstfeltet nedenfor.]]></message>
+	<message key="admin.displayNewSystemConfig">Vis ny konfiguration</message>
+	<message key="admin.expireSessions">Lad brugersessioner udløbe</message>
+	<message key="admin.languages.confirmReload">Er du sikker på, at du vil genindlæse denne landestandard? Denne handling sletter alle eksisterende landestandardspecifikke data, f.eks. tilpassede e-mail-skabeloner.</message>
+	<message key="admin.languages.installedLocales">Installerede landestandarder</message>
+	<message key="admin.languages.installLanguages">Administrer landestandarder</message>
+	<message key="admin.languages.installLocales">Installer</message>
+	<message key="admin.languages.installNewLocales">Installer nye landestandarder</message>
+	<message key="admin.languages.languageSettings">Sprogindstillinger</message>
+	<message key="admin.languages.noLocalesAvailable">Der findes ingen yderligere landestandarder, som skal installeres.</message>
+	<message key="admin.languages.reload">Genindlæs landestandard</message>
+	<message key="admin.languages.uninstall">Fjern landestandard</message>
+	<message key="admin.phpInfo">Detaljerede oplysninger om PHP</message>
+	<message key="admin.server.apacheVersion">Apache-version</message>
+	<message key="admin.server.dbDriver">Databasedriver</message>
+	<message key="admin.server.dbVersion">Version af databaseserver</message>
+	<message key="admin.serverInformationDescription"><![CDATA[Basisoperativsystem og serversoftwareversioner. Klik på <span class="highlight">Detaljerede oplysninger om PHP</span> for at få vist detaljerede oplysninger om denne servers PHP-konfiguration.]]></message>
+	<message key="admin.serverInformation">Serveroplysninger</message>
+	<message key="admin.server.phpVersion">PHP-version</message>
+	<message key="admin.server.platform">Operativsystemplatform</message>
+	<message key="admin.settings.aboutDescription">Om webstedsbeskrivelsen</message>
+	<message key="admin.settings.contactEmail">E-mail-adresse på primær kontaktperson</message>
+	<message key="admin.settings.contactName">Navn på primær kontaktperson</message>
+	<message key="admin.settings.form.contactEmailRequired">E-mail-adressen på den primære kontaktperson er påkrævet.</message>
+	<message key="admin.settings.form.contactNameRequired">Navnet på den primære kontaktperson er påkrævet.</message>
+	<message key="admin.settings.form.minPasswordLengthRequired">Du skal angive en adgangskode, der består af mindst 4 tegn.</message>
+	<message key="admin.settings.form.titleRequired">En titel er påkrævet.</message>
+	<message key="admin.settings.homeHeaderImage.altText">Site logo</message>
+	<message key="admin.settings.homeHeaderImageInvalid">Ugyldigt billedformat for webstedslogo. De accepterede formater er .gif, .jpg eller .png.</message>
+	<message key="admin.settings.introduction">Introduktion</message>
+	<message key="admin.settings.minPasswordLength">Minimumlængde for adgangskode</message>
+	<message key="admin.settings.passwordCharacters">tegn</message>
+	<message key="admin.settings.siteLanguage">Sprog på websted</message>
+	<message key="admin.settings.siteStyleSheetInvalid">Ugyldigt format for typografiark til websted. Det accepterede format er .css.</message>
+	<message key="admin.settings.siteStyleSheet">Typografiark til websted</message>
+	<message key="admin.settings.siteTitle">Titel på websted</message>
+	<message key="admin.siteAdmin">Administration af websted</message>
+	<message key="admin.siteManagement">Administration af websted</message>
+	<message key="admin.siteSettings">Indstillinger for websted</message>
+	<message key="admin.systemConfigFileReadError"><![CDATA[Konfigurationsfilen <tt>config.inc.php</tt> findes ikke, kan ikke læses eller er ugyldig.]]></message>
+	<message key="admin.systemInformation">Systemoplysninger</message>
+	<message key="admin.versionBuild">Build</message>
+	<message key="admin.version.checkForUpdates">Søg efter opdateringer</message>
+	<message key="admin.version.downloadPackage">Hent</message>
+	<message key="admin.version.downloadPatch">Hent programrettelse</message>
+	<message key="admin.versionHistory">Versionsoversigt</message>
+	<message key="admin.version.latest">Nyeste version</message>
+	<message key="admin.versionMajor">Overordnet</message>
+	<message key="admin.versionMinor">Underordnet</message>
+	<message key="admin.version.moreInfo">Flere oplysninger</message>
+	<message key="admin.versionRevision">Revision</message>
+	<message key="admin.version.updateAvailable">Der findes en opdateret version</message>
+	<message key="admin.version.upToDate">Systemet er opdateret</message>
+	<message key="admin.version">Version</message>
+	<message key="admin.settings">Indstillinger</message>
+	<message key="admin.settings.siteTheme">Website tema</message>
+	<message key="admin.siteSetup">Website opsætning</message>
+	<message key="admin.scheduledTask.downloadLog">Din {$softwareName}-installation udførte og afsluttede automatisk denne proces. Du kan downloade logfilen her: {$url}</message>
+	<message key="admin.settings.siteLogo">Webstedets logo</message>
+	<message key="admin.languages.cantDisable">Denne landestandard er valgt som webstedets primære sprog. Den kan ikke deaktiveres før en ny primær landestandard er valgt.</message>
+	<message key="admin.languages.availableLocales">Tilgængelige landestandarder</message>
+	<message key="admin.languages.installLocale">Installér landestandard</message>
+	<message key="admin.copyAccessLogFileTool.error.creatingFolder">Fejl: Kan ikke danne midlertidig mappe {$tmpDir}</message>
+	<message key="admin.copyAccessLogFileTool.error.acessingFile">Fejl: Filen {$filePath} eksisterer ikke eller kan ikke tilgås.</message>
+	<message key="admin.copyAccessLogFileTool.error.copyingFile">Fejl: Kan ikke kopiere filen fra {$filePath} til {$tmpFilePath}</message>
+	<message key="admin.copyAccessLogFileTool.error.deletingFile">Fejl: Kan ikke slette filen {$tmpFilePath}</message>
+	<message key="admin.error.utilExecutionProblem">"{$utilPath}" programudførelse returnerede følgende fejl: {$output}</message>
+	<message key="admin.error.executingUtil">Fejl: Kan ikke eksekvere "{$utilPath}".  Tjek {$utilVar} indstillinger i config.inc.php.</message>
+	<message key="admin.languages.noLocalesToDownload">Ingen landestandarder er tilgængelige for download.</message>
+	<message key="admin.scheduledTask">Planlagt opgave</message>
+	<message key="admin.scheduledTask.startTime">Planlagt opgave påbegyndt.</message>
+	<message key="admin.scheduledTask.stopTime">Planlagt opgave afsluttet.</message>
+	<message key="admin.scheduledTask.noLog">Planlagt opgave genererede ingen log-data.</message>
+	<message key="admin.scheduledTask.confirmClearLogs">Er du sikker på, at du vil slette alle de genererede log-data fra planlagte opgaver?</message>
+	<message key="admin.scheduledTask.reviewReminder">Påmindelse om bedømmelse</message>
+	<message key="admin.scheduledTask.subscriptionExpiryReminder">Påmindelse om abonnementsophør</message>
+
+</locale>

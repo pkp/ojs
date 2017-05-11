@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/ru_RU/default.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for default settings for setup items for the ru_RU (Russian) locale.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Russian_(ru_RU)
+  -->
+
+<locale name="ru_RU" full_name="Русский">
+	<!-- Группы по умолчанию -->
+	<message key="default.groups.name.siteAdmin">Администратор сайта</message>
+	<message key="default.groups.plural.siteAdmin">Администраторы сайта</message>
+	<message key="default.groups.name.productionEditor">Выпускающий редактор</message>
+	<message key="default.groups.plural.productionEditor">Выпускающие редакторы</message>
+	<message key="default.groups.abbrev.productionEditor">ВыпРед</message>
+	<message key="default.groups.name.copyeditor">Литературный редактор</message>
+	<message key="default.groups.plural.copyeditor">Литературные редакторы</message>
+	<message key="default.groups.abbrev.copyeditor">ЛитРед</message>
+	<message key="default.groups.name.proofreader">Корректор</message>
+	<message key="default.groups.plural.proofreader">Корректоры</message>
+	<message key="default.groups.abbrev.proofreader">Корр</message>
+	<message key="default.groups.name.designer">Дизайнер</message>
+	<message key="default.groups.plural.designer">Дизайнеры</message>
+	<message key="default.groups.abbrev.designer">Дизайн</message>
+	<message key="default.groups.name.internalReviewer">Внутренний рецензент</message>
+	<message key="default.groups.plural.internalReviewer">Внутренние рецензенты</message>
+	<message key="default.groups.abbrev.internalReviewer">ВнутрР</message>
+	<message key="default.groups.name.marketing">Координатор по маркетингу и продажам</message>
+	<message key="default.groups.plural.marketing">Координаторы по маркетингу и продажам</message>
+	<message key="default.groups.abbrev.marketing">МиП</message>
+	<message key="default.groups.name.funding">Координатор по фондам</message>
+	<message key="default.groups.plural.funding">Координаторы по фондам</message>
+	<message key="default.groups.abbrev.funding">КФ</message>
+	<message key="default.groups.name.indexer">Индексатор</message>
+	<message key="default.groups.plural.indexer">Индексаторы</message>
+	<message key="default.groups.abbrev.indexer">Инд</message>
+	<message key="default.groups.name.layoutEditor">Верстальщик</message>
+	<message key="default.groups.plural.layoutEditor">Верстальщики</message>
+	<message key="default.groups.abbrev.layoutEditor">Верст</message>
+	<message key="default.groups.name.author">Автор</message>
+	<message key="default.groups.plural.author">Авторы</message>
+	<message key="default.groups.abbrev.author">Авт</message>
+	<message key="default.groups.name.translator">Переводчик</message>
+	<message key="default.groups.plural.translator">Переводчики</message>
+	<message key="default.groups.abbrev.translator">Перев</message>
+	<message key="default.groups.name.reader">Читатель</message>
+	<message key="default.groups.plural.reader">Читатели</message>
+	<message key="default.groups.abbrev.reader">Чит</message>
+
+	<!--  общие жанры по умолчанию -->
+	<message key="default.genres.other">Другое</message>
+	<message key="default.genres.multimedia">Мультимедиа</message>
+	<message key="default.genres.image">Изображение</message>
+	<message key="default.genres.styleSheet">Таблица стилей HTML</message>
+</locale>

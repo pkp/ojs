@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE schema SYSTEM "../../dtd/xmlSchema.dtd">
+
+<!--
+  * xml/schema/reviewForms.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Review Form schema in XML.
+  -->
+
+<schema version="0.2">
+	<!--
+	  *
+	  * TABLE review_forms
+	  *
+	  -->
+	<table name="review_forms">
+		<field name="review_form_id" type="I8">
+			<KEY/>
+			<AUTOINCREMENT/>
+		</field>
+		<field name="assoc_type" type="I8">
+			<!-- NOTNULL constraint omitted for upgrade purposes -->
+		</field>
+		<field name="assoc_id" type="I8">
+			<!-- NOTNULL constraint omitted for upgrade purposes -->
+		</field>
+		<field name="seq" type="F" />
+		<field name="is_active" type="I1" />
+		<descr>Review forms.</descr>
+	</table>
+
+	<!--
+	  *
+	  * TABLE review_form_settings
+	  *
+	  -->
+	<table name="review_form_settings">
+		<field name="review_form_id" type="I8">
+			<NOTNULL />
+		</field>
+		<field name="locale" type="C2" size="5">
+			<NOTNULL />
+			<DEFAULT VALUE=""/>
+		</field>
+		<field name="setting_name" type="C2" size="255">
+			<NOTNULL />
+		</field>
+		<field name="setting_value" type="X"/>
+		<field name="setting_type" type="C2" size="6">
+			<NOTNULL/>
+		</field>
+		<descr>Review form settings</descr>
+		<index name="review_form_settings_review_form_id">
+			<col>review_form_id</col>
+		</index>
+		<index name="review_form_settings_pkey">
+			<col>review_form_id</col>
+			<col>locale</col>
+			<col>setting_name</col>
+			<UNIQUE />
+		</index>
+	</table>
+
+	<!--
+	  *
+	  * TABLE review_form_elements
+	  *
+	  -->
+	<table name="review_form_elements">
+		<field name="review_form_element_id" type="I8">
+			<KEY/>
+			<AUTOINCREMENT/>
+		</field>
+		<field name="review_form_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="seq" type="F" />
+		<field name="element_type" type="I8" />
+		<field name="required" type="I1" />
+		<field name="included" type="I1" />
+		<descr>Review form elements.</descr>
+		<index name="review_form_elements_review_form_id">
+			<col>review_form_id</col>
+		</index>
+	</table>
+
+	<!--
+	  *
+	  * TABLE review_form_element_settings
+	  *
+	  -->
+	<table name="review_form_element_settings">
+		<field name="review_form_element_id" type="I8">
+			<NOTNULL />
+		</field>
+		<field name="locale" type="C2" size="5">
+			<NOTNULL />
+			<DEFAULT VALUE=""/>
+		</field>
+		<field name="setting_name" type="C2" size="255">
+			<NOTNULL />
+		</field>
+		<field name="setting_value" type="X"/>
+		<field name="setting_type" type="C2" size="6">
+			<NOTNULL/>
+		</field>
+		<descr>Review form element settings</descr>
+		<index name="review_form_element_settings_review_form_element_id">
+			<col>review_form_element_id</col>
+		</index>
+		<index name="review_form_element_settings_pkey">
+			<col>review_form_element_id</col>
+			<col>locale</col>
+			<col>setting_name</col>
+			<UNIQUE />
+		</index>
+	</table>
+
+	<!--
+	  *
+	  * TABLE review_form_responses
+	  *
+	  -->
+	<table name="review_form_responses">
+		<field name="review_form_element_id" type="I8">
+			<NOTNULL />
+		</field>
+		<field name="review_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="response_type" type="C2" size="6"/>
+		<field name="response_value" type="X" />
+		<descr>Review form responses.</descr>
+		<index name="review_form_responses_pkey">
+			<col>review_form_element_id</col>
+			<col>review_id</col>
+		</index>
+	</table>
+</schema>

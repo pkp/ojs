@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/nb_NO/grid.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (English) locale.
+  *
+  -->
+
+<locale name="en_US" full_name = "English">
+	<!-- Common -->
+	<message key="grid.noItems">Ingen elementer</message>
+
+	<message key="grid.action.sort">Sorter</message>
+	<message key="grid.action.addItem">Legg til element</message>
+	<message key="grid.action.delete">Slett</message>
+	<message key="grid.action.edit">Rediger</message>
+
+	<!-- Common Grid Column Titles -->
+	<message key="grid.columns.actions">Handlinger</message>
+	<message key="grid.columns.institution">Institusjon</message>
+	<message key="grid.columns.url">URL</message>
+
+	<!-- Sponsors Grid -->
+	<message key="grid.sponsor.title">Sponsorer</message>
+
+	<!-- Masthead Grid -->
+	<!-- Contributor Grid -->
+	<message key="grid.contributor.title">Bidragsyter</message>
+	<message key="grid.settings">Innstillinger</message>
+	<message key="grid.action.remove">Fjern</message>
+	<message key="grid.action.approve">Godkjenn</message>
+	<message key="grid.action.decline">Avslå</message>
+	<message key="grid.action.moreInformation">Mer informasjon</message>
+	<message key="grid.action.restoreDefaults">Tilbakestill til standardinnstillinger</message>
+	<message key="grid.action.addAuthor">Legg til forfatter</message>
+	<message key="grid.libraryFiles.column.files">Filer</message>
+	<message key="author.users.contributor.name">Navn</message>
+	<message key="author.users.contributor.email">E-post</message>
+	<message key="author.users.contributor.role">Rolle</message>
+	<message key="author.users.contributor.principalContact">Primærkontakt</message>
+	<message key="grid.action.addUser">Legg til bruker</message>
+	<message key="grid.action.deleteFile">Slett fil</message>
+	<message key="grid.action.upgrade">Oppdater</message>
+	<message key="grid.action.downloadFile">Last ned denne filen</message>
+	<message key="grid.action.downloadAll">Last ned filene som et arkiv</message>
+	<message key="grid.action.email">Send e-post</message>
+	<message key="grid.action.addFile">Legg til en fil</message>
+	<message key="grid.action.editFile">Endre en fil</message>
+	<message key="grid.action.uploadFile">Last opp en fil</message>
+	<message key="grid.user.selectUser">Velg bruker</message>
+	<message key="grid.user.pleaseSelectUser">Vennligst velg en bruker</message>
+	<message key="grid.action.editAuthor">Endre forfatter</message>
+	<message key="grid.action.deleteAuthor">Slett forfatter</message>
+	<message key="grid.action.addAuditor">Legg til en forfatter</message>
+	<message key="grid.action.moveItem">Flytt elementet</message>
+	<message key="grid.action.accept">Aksepter denne innleveringen</message>
+	<message key="grid.action.requestAccount">Legg til en deltaker</message>
+	<message key="grid.action.expand">Utvid</message>
+	<message key="grid.action.addUserGroup">Legg til en ny brukergruppe</message>
+	<message key="grid.action.editUserGroup">Endre denne brukergruppen</message>
+	<message key="grid.action.addSponsor">Legg til sponsor</message>
+	<message key="grid.action.deleteSponsor">Slett sponsor</message>
+	<message key="grid.action.editSponsor">Endre sponsor</message>
+	<message key="grid.action.addCategory">Legg til kategori</message>
+	<message key="grid.action.editCategory">Endre kategori</message>
+	<message key="grid.action.deleteCategory">Slett kategori</message>
+	<message key="grid.action.addContributor">Legg til bidragsyter</message>
+	<message key="grid.action.editContributor">Endre bidragsyter</message>
+	<message key="grid.action.deleteContributor">Slett bidragsyter</message>
+	<message key="grid.noFiles">Ingen filer</message>
+	<message key="grid.user.add">Legg til bruker</message>
+	<message key="grid.user.edit">Endre bruker</message>
+	<message key="grid.user.email">E-post</message>
+	<message key="grid.user.generatePassword">Generer passord</message>
+	<message key="grid.user.generatePasswordDescription">Generer et tilfeldig passord for denne brukeren.</message>
+	<message key="grid.user.mustChangePassword">Endre passord</message>
+	<message key="grid.user.mustChangePasswordDescription">Bruker må endre passord neste gang det logges inn.</message>
+	<message key="grid.user.userDetails">Brukerdetaljer</message>
+	<message key="grid.user.userRoles">Brukerroller</message>
+	<message key="grid.user.userNoRoles">Denne brukeren har ingen roller.</message>
+	<message key="grid.user.step1">Steg #1: Fyll inn brukerdetaljer</message>
+	<message key="grid.user.step2">Steg #2: Legg til brukerroller til {$userFullName}</message>
+	<message key="grid.user.addRoles">Legg til roller</message>
+	<message key="grid.plugin.allCategories">Alle kategorier</message>
+	<message key="grid.action.disable">Deaktivér</message>
+	<message key="grid.action.details">Vis dette elementet</message>
+	<message key="grid.action.advancedSearch">Avansert søk</message>
+	<message key="grid.action.history">Vis historie</message>
+	<message key="grid.roles.currentRoles">Nåværende roller</message>
+	<message key="grid.roles.add">Legg til rolle</message>
+	<message key="grid.user.currentUsers">Nåværende brukere</message>
+	<message key="grid.user.allRoles">Alle roller</message>
+	<message key="grid.user.enable">Aktivér</message>
+	<message key="grid.user.disable">Deaktivér</message>
+	<message key="grid.preparedEmails.currentList">Nåværende liste</message>
+	<message key="grid.action.order">Bestill</message>
+	<message key="grid.action.cancelOrdering">Avbestill bestilling</message>
+	<message key="grid.action.viewMetadata">Vis metadata for denne innleveringen</message>
+	<message key="grid.action.expandAll">Utvid alle</message>
+	<message key="grid.action.notify">Varsle denne brukeren</message>
+	<message key="grid.task.status.completed">Denne oppgaven er gjennomført</message>
+	<message key="grid.genres.title">Sjangre</message>
+	<message key="grid.submissionChecklist.title">Sjekkliste for innlevering</message>
+	<message key="grid.user.mustProvideName">Vennligst oppgi minst et etternavn for brukeren.</message>
+	<message key="grid.user.notifyUser">Varsle bruker</message>
+	<message key="grid.user.notifyUserDescription">Send velkomstepost til bruker.</message>
+	<message key="grid.user.mustChangePasswordDescriptionOld">Krev at brukeren endrer passordet neste gang de logger inn.</message>
+	<message key="grid.user.moreDetails">Flere brukerdetaljer</message>
+	<message key="grid.user.lessDetails">Mindre brukerdetaljer</message>
+	<message key="grid.plugin.disable">Er du sikker på at vil deaktivere denne programutvidelsen?</message>
+	<message key="grid.action.addPreparedEmail">Legg til ny e-postmal</message>
+	<message key="grid.action.editPreparedEmail">Rediger denne e-postmalen</message>
+	<message key="grid.action.resetEmail">Tilbakestill den e-postmalen til standard</message>
+	<message key="grid.action.enrolExisting">Legg til en eksisterende bruker som fagfellevurderer</message>
+	<message key="grid.action.selectCreate">Lag en ny fagfellevurderer</message>
+	<message key="grid.action.sendReminder">Send en oppgavepåminnelse til denne brukeren</message>
+	<message key="grid.action.viewReviewGuidelines">Se retningslinjene for fagfellevurdering</message>
+	<message key="grid.action.addAnnouncementType">Legg til oppslagstype</message>
+	<message key="grid.action.addAnnouncement">Legg til oppslag</message>
+	<message key="grid.action.mergeUser">Slå sammen brukere</message>
+	<message key="grid.task.status.reviewReady">Denne fagfellevurderingen er ferdig. Klikk på ikonet til venstre for å lese den.</message>
+	<message key="grid.columns.locale">Språk</message>
+	<message key="grid.action.thankReviewer">Send en takk til denne fagfellevurdereren.</message>
+	<message key="grid.user.enroll">Innruller bruker</message>
+	<message key="grid.user.error">Det oppstod en feil under administrering av denne brukeren. Vennligst prøv på nytt.</message>
+	<message key="grid.user.cannotAdminister">Du har ikke tilstrekkelige rettigheter til å kunne endre denne brukeren</message>
+</locale>

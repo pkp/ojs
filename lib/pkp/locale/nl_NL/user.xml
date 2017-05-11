@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/nl_NL/user.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the nl_NL (Nederlands) locale.
+  *
+  -->
+
+<locale name="nl_NL" full_name="Nederlands">
+	<message key="user.affiliation">Affiliatie</message>
+	<message key="user.affiliations">Affiliaties</message>
+	<message key="user.biography">Biografie</message>
+	<message key="user.biography.description">(Bv. Faculteit en functie)</message>
+	<message key="user.changeMyPassword">Wachtwoord veranderen</message>
+	<message key="user.changePassword">Verander wachtwoord</message>
+	<message key="user.dateLastLogin">Laatste login</message>
+	<message key="user.dateRegistered">Datum registratie</message>
+	<message key="user.editMyProfile">Profiel bewerken</message>
+	<message key="user.email">E-mail</message>
+	<message key="user.feminine">V</message>
+	<message key="user.firstName">Voornaam</message>
+	<message key="user.gender">Geslacht</message>
+	<message key="user.initialsExample">Joan Alice Smith = JAS</message>
+	<message key="user.initials">Initialen</message>
+	<message key="user.interests">Review-interesses</message>
+	<message key="user.lastName">Achternaam</message>
+	<message key="user.login.accountDisabledWithReason">Uw toegang is geblokkeerd vanwege de volgende reden: {$reason}</message>
+	<message key="user.login.accountDisabled">Uw toegang is geblokkeerd. Neem contact op met de beheerder voor meer informatie.</message>
+	<message key="user.login.accountNotValidated">Uw e-mail adres is niet gevalideerd. Controleer uw e-mail en volg de gegeven instructies. Als u geen e-mail heeft ontvangen, kunt u contact opnemen met de beheerder.</message>
+	<message key="user.login.activate">Activeer toegang</message>
+	<message key="user.login.activated">Dank u voor het activeren van uw account. U kunt nu inloggen met de gegevens die u heeft opgegeven bij het aanmaken van uw account</message>
+	<message key="user.login.changePasswordInstructions"><![CDATA[U moet een nieuw wachtwoord kiezen voordat u in kunt loggen op de site.<br /><br />Geef uw gebruikersnaam en uw huidige en nieuwe wachtwoord om het wachtwoord voor uw account te veranderen.]]></message>
+	<message key="user.login.forgotPassword">Wachtwoord vergeten?</message>
+	<message key="user.login.loginError">Verkeerde gebruikersnaam of wachtwoord. Probeer het opnieuw</message>
+	<message key="user.login">Inloggen</message>
+	<message key="user.login.lostPassword.confirmationSent">Er is een bevestiging gestuurd naar uw e-mail adres. Volg de instructies in die e-mail om uw wachtwoord terug te zetten</message>
+	<message key="user.login.lostPassword.invalidHash">Helaas, de link waar u op klikte is verlopen of ongeldig. Probeer het terugzetten van uw wachtwoord opnieuw.</message>
+	<message key="user.login.lostPassword.invalidUser">Er is geen gebruiker met dit e-mail adres.</message>
+	<message key="user.login.lostPassword.passwordSent">Er is een nieuw wachtwoord verstuurd naar uw e-mail adres. U kunt nu inloggen met uw nieuwe wachtwoord.</message>
+	<message key="user.login.registeredEmail">E-mail van geregistreerde gebruiker</message>
+	<message key="user.login.resetPassword">Wachtwoord terugzetten</message>
+	<message key="user.logOut">Uitloggen</message>
+	<message key="user.mailingAddress">Postadres</message>
+	<message key="user.masculine">M</message>
+	<message key="user.middleName">Tweede voornaam</message>
+	<message key="user.myAccount">Mijn gegevens</message>
+	<message key="user.name">Naam</message>
+	<message key="user.password">Wachtwoord</message>
+	<message key="user.repeatPassword">Herhaal wachtwoord</message>
+	<message key="user.phone">Telefoon</message>
+	<message key="user.profile.changePasswordInstructions">Geef uw huidige en nieuwe wachtwoord om het wachtwoord voor uw account te veranderen.</message>
+	<message key="user.profile.editProfile">Bewerk profiel</message>
+	<message key="user.profile.form.emailRequired">Een geldig e-mail adres is verplicht.</message>
+	<message key="user.profile.form.firstNameRequired">Een voornaam is verplicht.</message>
+	<message key="user.profile.form.lastNameRequired">Een achternaam is verplicht.</message>
+	<message key="user.profile.form.newPasswordRequired">U moet uw nieuwe wachtwoord opgeven.</message>
+	<message key="user.profile.form.oldPasswordInvalid">Het huidige wachtwoord was niet juist.</message>
+	<message key="user.profile.form.openAccessNotifications">E-mail berichtgeving bij vrij toegankelijk worden van een nummer</message>
+	<message key="user.profile.form.passwordRequired">Een wachtwoord is verplicht.</message>
+	<message key="user.profile.form.profileImage">Profielafbeelding</message>
+	<message key="user.profile.form.publishedNotifications">E-mail berichtgeving bij publicatie nieuw nummer</message>
+	<message key="user.profile.form.urlInvalid">De opgegeven URL is niet geldig. Controleer de URL en probeer het opnieuw. (Tip: probeer http:// vooraan de URL te zetten.)</message>
+	<message key="user.profile.form.usernameRequired">Een gebruikersnaam is verplicht</message>
+	<message key="user.profile.leavePasswordBlank">Laat het wachtwoordveld leeg om het huidige wachtwoord te houden.</message>
+	<message key="user.profile.newPassword">Nieuw wachtwoord</message>
+	<message key="user.profile.oldPassword">Huidig wachtwoord</message>
+	<message key="user.profile">Profiel</message>
+	<message key="user.profile.publicProfile">Gebruikersprofiel</message>
+	<message key="user.profile.repeatNewPassword">Herhaal nieuw wachtwoord</message>
+	<message key="user.register.completeForm">Vul dit formulier in om u te registreren bij dit tijdschrift.</message>
+	<message key="user.register.form.emailExists">Het gekozen e-mailadres is al in gebruik bij een andere gebruiker.</message>
+	<message key="user.register.form.passwordsDoNotMatch">De wachtwoorden komen niet overeen.</message>
+	<message key="user.register.form.usernameExists">De gekozen gebruikersnaam is al in gebruik bij een andere gebruiker.</message>
+	<message key="user.register.passwordLengthRestriction">Het wachtwoord moet minimaal {$length} tekens zijn.</message>
+	<message key="user.register.registerAs">Registreer als</message>
+	<message key="user.register">Registreren</message>
+	<message key="user.register.usernameRestriction">De gebruikersnaam mag alleen kleine letters, cijfers, liggende streepjes en koppeltekens bevatten.</message>
+	<message key="user.role.reader">Lezer</message>
+	<message key="user.role.readers">Lezers</message>
+	<message key="user.role.reviewer">Reviewer</message>
+	<message key="user.role.reviewers">Reviewers</message>
+	<message key="user.role.siteAdmin">Sitebeheerder</message>
+	<message key="user.role.siteAdmins">Sitebeheerders</message>
+	<message key="user.roles">Rollen</message>
+	<message key="user.salutation">Begroeting</message>
+	<message key="user.sendPassword">Bevestiging</message>
+	<message key="user.sendPassword.description">Stuur mij een e-mail met gebruikersnaam en wachtwoord ter bevestiging</message>
+	<message key="user.signature">Ondertekening</message>
+	<message key="user.title">Titel</message>
+	<message key="user.url">URL</message>
+	<message key="user.userHome">Gebruiker</message>
+	<message key="user.username">Gebruikersnaam</message>
+	<message key="user.workingLanguages">Talen</message>
+	<message key="user.other">Overig</message>
+	<message key="user.profile.form.profileImageInvalid">Ongeldig formaat voor de profielafbeelding of te grote afbeelding. Geaccepteerde formaten zijn .gif, .jpg en .png. De afbeelding mag niet groter zijn dan 150x150 pixels.</message>
+	<message key="user.register.form.emailsDoNotMatch">De e-mailadresvelden komen niet overeen</message>
+	<message key="user.affiliation.description">(Uw instituut, bv. "Simon Fraser University")</message>
+	<message key="user.gossip">Prive notities</message>
+	<message key="user.profile.form.affiliationRequired">Een affiliatie is verplciht</message>
+	<message key="user.repeatPassword">Herhaal wachtwoord</message>
+	<message key="user.authorization.loginRequired">Login verplicht.</message>
+	<message key="user.authorization.restrictedSiteAccess">De toegang is geweigerd. Deze site heeft momenteel een beperkte toegang</message>
+	<message key="user.authorization.roleBasedAccessDenied">De huidige rol mag deze bewerking niet uitvoeren.</message>
+	<message key="user.hello">Hallo,</message>
+	<message key="user.profile.form.countryRequired">Een land is verplicht.</message>
+	<message key="user.profile.form.mailingAddressRequired">Een postadres is verplicht.</message>
+	<message key="user.profile.form.passwordSameAsOld">Uw nieuwe wachtwoord is hetzelfde als het oude wachtwoord.</message>
+	<message key="user.suffix">Achtervoegsel</message>
+	<message key="user.accountInformation">Account informatie</message>
+	<message key="user.authorization.accessDenied">Toegang geweigerd.</message>
+	<message key="user.authorization.processAuthenticationTokenRequired">Het process authentication token ontbreekt of is ongeldig.</message>
+	<message key="user.authorization.contextRequired">U kunt deze bewerking niet aanroepen zonder een context (press, journal, conference, enz.).</message>
+	<message key="user.authorization.privateOperation">De bewerking die u wilde uitvoeren is afgeschermd of bestaat niet.</message>
+	<message key="user.authorization.userGroupRequired">U moet een geldige gebruikersgroep instellen om deze bewerking te doen.</message>
+	<message key="user.interests.description">(scheid interesses met de enter- of comma-toets)</message>
+	<message key="user.group">Gebruikersgroep</message>
+	<message key="user.profile.form.usergroupRequired">Een gebruikersgroep is verplicht.</message>
+	<message key="user.authorization.managerRequired">Een gebruiker met de rol Perscontact  (zoals Pers of Productieredacteur) moet aan dit stadium toegekend zijn voor u verder kunt gaan.</message>
+</locale>

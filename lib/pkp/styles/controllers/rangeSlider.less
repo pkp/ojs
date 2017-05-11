@@ -1,0 +1,155 @@
+/**
+ * @file styles/controllers/rangeSlider.less
+ *
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @ingroup pkp_controllers_rangeSlider
+ *
+ * @brief Range slider widget styles
+ */
+
+.pkp_controllers_rangeSlider {
+	position: relative;
+	padding-bottom: @half; // Allow the toggle label to cover the slider
+
+	.ui-slider {
+		position: relative;
+		background: #bbb;
+		border-radius: 2px;
+		text-align: left;
+		cursor: pointer;
+	}
+
+	.ui-slider-horizontal {
+		height: 4px;
+		margin: @half;
+	}
+
+	.ui-slider-range {
+		position: absolute;
+		z-index: 1;
+		top: 0;
+		height: 4px;
+		background: #fff;
+		background-image: linear-gradient(to right, #ccc, #fff);
+		border: @bg-border;
+	}
+
+	.ui-slider-handle {
+		display: block;
+		position: absolute;
+		top: -6px;
+		z-index: 2;
+		background: #fff;
+		border: @bg-border;
+		width: @base;
+		height: @base;
+		margin-left: -@half;
+		background-size: 100%;
+		background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(0, 0, 0, 0.1)));
+		background-image: -moz-linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.1));
+		background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.1));
+		background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.1));
+		-moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+		-webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+		box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+		-moz-border-radius: 50%;
+		-webkit-border-radius: 50%;
+		border-radius: 50%;
+		cursor: pointer;
+
+		&:after {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 3px;
+			left: 3px;
+			width: @half;
+			height: @half;
+			background-size: 100%;
+			background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(0, 0, 0, 0.2)), color-stop(100%, rgba(255, 255, 255, 0)));
+			background-image: -moz-linear-gradient(rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0));
+			background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0));
+			background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0));
+			-moz-border-radius: 50%;
+			-webkit-border-radius: 50%;
+			border-radius: 50%;
+			cursor: pointer;
+		}
+
+		&:focus {
+			outline: 0;
+			box-shadow: 0 0 2px rgba(0,0,0,0.4);
+
+			&:after {
+				background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(0, 0, 0, 0.4)), color-stop(100%, rgba(255, 255, 255, 0)));
+				background-image: -moz-linear-gradient(rgba(0, 0, 0, 0.4), rgba(255, 255, 255, 0));
+				background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.4), rgba(255, 255, 255, 0));
+				background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(255, 255, 255, 0));
+			}
+		}
+	}
+
+	// Enable/disable toggle
+
+	&.is_toggleable {
+
+		.control {
+			padding-left: 24px;
+			opacity: 0.5;
+		}
+
+		.value {
+			display: none;
+		}
+
+		.disabled {
+			display: inline;
+		}
+	}
+
+	.toggle {
+
+		input {
+			position: absolute;
+			top: @half;
+			left: 0;
+			cursor: pointer;
+		}
+
+		label {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: 2;
+
+			.label {
+				&:extend(.pkp_screen_reader);
+			}
+		}
+	}
+
+	&.is_enabled {
+
+		.control {
+			opacity: 1;
+		}
+
+		.toggle label {
+			&:extend(.pkp_screen_reader);
+			right: auto;
+		}
+
+		.value {
+			display: inline;
+		}
+
+		.disabled {
+			display: none;
+		}
+	}
+}

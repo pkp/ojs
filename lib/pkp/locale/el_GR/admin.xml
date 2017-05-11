@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/el_GR/admin.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the el_GR (ελληνικά) locale.
+  *
+  -->
+
+<locale name="el_GR" full_name="ελληνικά">
+	<message key="admin.adminFunctions">Λειτουργίες Διαχείρισης</message>
+	<message key="admin.auth.confirmDelete">Είστε σίγουροι ότι  θέλετε να διαγράψετε μόνιμα αυτή τη πηγή  πιστοποίησης;</message>
+	<message key="admin.auth.create">Δημιουργία Πηγής  Πιστοποίησης</message>
+	<message key="admin.auth.noneCreated">Δεν προσδιοριστεί καμία  πηγή πιστοποίησης.</message>
+	<message key="admin.authSources">Πηγές Πιστοποίησης</message>
+	<message key="admin.clearDataCache">Καθαρισμός μνήμης Cache από τα Δεδομένα</message>
+	<message key="admin.clearTemplateCache">Καθαρισμός μνήμης Cache από τα υπάρχοντα Πρότυπα (Templateς)</message>
+	<message key="admin.configFileUpdatedInstructions"><![CDATA[Το αρχείο ρυθμίσεων ενημερώθηκε επιτυχώς. Λάβετε υπόψη σας ότι σε περίπτωση όπου ο ιστότοπος δεν λειτουργεί σωστά, μπορεί να κριθεί απαραίτηση η μη αυτόματη επιδιόρθωση των ρυθμίσεων μέσω διόρθωσης <tt>config.inc.php</tt> directly.]]></message>
+	<message key="admin.confirmClearTemplateCache">Είστε σίγουρος ότι θέλετε να καθαρίσετε την μνήμη cache από τα υπάρχοντα πρότυπα (templates);</message>
+	<message key="admin.confirmExpireSessions">Είστε σίγουρος ότι θέλετε να τερματίσετε όλες τις συνδέσεις χρηστών στο σύστημα; Όλοι οι χρήστες που αυτή  τη στιγμή είναι συνδεδεμένοι στο σύστημα θα αναγκαστούν να συνδεθούν ξανά (συμπεριλαμβανομένου του εαυτού σας).</message>
+	<message key="admin.contentsOfConfigFile">Περιεχόμενα αρχείου  ρυθμίσεων (configuration)</message>
+	<message key="admin.currentVersion">Τρέχουσα Έκδοση</message>
+	<message key="admin.dateInstalled">Ημερομηνία εγκατάστασης</message>
+	<message key="admin.displayConfigFileInstructions"><![CDATA[Τα περιεχόμενα των ενημερωμένων ρυθμίσεων εμφανίζονται παρακάτω. Για να εφαρμόσετε τις αλλαγές στις ρυθμίσεις πρέπει να ανοίξετε το αρχείο <tt>config.inc.php</tt> με κατάλληλο πρόγραμμα διόρθωσης κειμένων και να αντικαταστήσετε τα περιεχόμενα αυτού με τα περιεχόμενου του πεδίου κειμένου που βρίσκονται παρακάτω.]]></message>
+	<message key="admin.displayNewSystemConfig">Προβολή Νέων  Ρυθμίσεων</message>
+	<message key="admin.expireSessions">Τερματισμός Συνδέσεων Χρηστών</message>
+	<message key="admin.languages.confirmReload">Είστε σίγουροι ότι θέλετε να επαναφορτώσετε αυτή την τοπική ρύθμιση; Αυτό θα έχει ως αποτέλεσμα την διαγραφή όλων των δεδομένων που σχετίζονται με την ρύθμιση αυτή όπως τα προσαρμοσμένα email πρότυπα.</message>
+	<message key="admin.languages.installedLocales">Εγκατεστημένες Τοπικές Ρυθμίσεις</message>
+	<message key="admin.languages.installLanguages">Εγκατάσταση Γλωσσών</message>
+	<message key="admin.languages.installLocales">Εγκατάσταση</message>
+	<message key="admin.languages.installNewLocales">Εγκατάσταση Νέων  Τοπικών Ρυθμίσεων</message>
+	<message key="admin.languages.languageSettings">Ρυθμίσεις Γλωσσών</message>
+	<message key="admin.languages.noLocalesAvailable">Καμία επιπλέον  τοπική ρύθμιση δεν είναι διαθέσιμη για  εγκατάσταση.</message>
+	<message key="admin.languages.reload">Επαναφορτωση Ρυθμισης</message>
+	<message key="admin.languages.uninstall">Απεγκατασταση Ρυθμισης</message>
+	<message key="admin.phpInfo">Αναλυτικές Πληροφορίες για  την PHP</message>
+	<message key="admin.server.apacheVersion">Έκδοση Apache</message>
+	<message key="admin.server.dbDriver">Οδηγός βάσης δεδομένων</message>
+	<message key="admin.server.dbVersion">Έκδοση εξυπηρετητή βάσης δεδομένων</message>
+	<message key="admin.serverInformationDescription"><![CDATA[Βασικές  εκδόσεις του λειτουργικού συστύματος και  λογισμικού του . Πατήστε στο <span  class="highlight">Αναλυτικές Πληροφορίες για την  PHP</span> για περισσότερες πληροφορίες σχετικά  με τις ρυθμίσεις PHP στον server.]]></message>
+	<message key="admin.serverInformation">Πληροφορίες Server </message>
+	<message key="admin.server.phpVersion">Έκδοση PHP </message>
+	<message key="admin.server.platform">Πλατφόρμα λειτουργικού συστήματος</message>
+	<message key="admin.settings.aboutDescription">Σχετικά με τον ιστότοπο</message>
+	<message key="admin.settings.contactEmail">Email Υπεύθυνου Επικοινωνίας</message>
+	<message key="admin.settings.contactName">Όνοματεπώνυμο Υπεύθυνου Επικοινωνίας</message>
+	<message key="admin.settings.form.contactEmailRequired">Το email του Υπεύθυνου Επικοινωνίας είναι υποχρεωτικό.</message>
+	<message key="admin.settings.form.contactNameRequired">Το Ονοματεπώνυμο του Υπεύθυνου Επικοινωνίας είναι υποχρεωτικό.</message>
+	<message key="admin.settings.form.minPasswordLengthRequired">Πρέπει να εισάγετε έναν κωδικό πρόσβασης με ελάχιστο μήκος τουλάχιστον 4 χαρακτήρων.</message>
+	<message key="admin.settings.form.titleRequired">Απαιτείται η συμπλήρωση του τίτλου.</message>
+	<message key="admin.settings.homeHeaderImage.altText">Logo Ιστοτόπου</message>
+	<message key="admin.settings.homeHeaderImageInvalid">Μη έγκυρη μορφή αρχείου εικόνας λογοτύπου περιοδικού. Έγκυρες μορφές αρχείων είναι .gif, .jpg, ή .png.</message>
+	<message key="admin.settings.introduction">Εισαγωγή</message>
+	<message key="admin.settings.minPasswordLength">Ελάχιστο μήκος κωδικού πρόσβασης (password)</message>
+	<message key="admin.settings.passwordCharacters">χαρακτήρες</message>
+	<message key="admin.settings.siteLanguage">Γλώσσα ιστοτόπου</message>
+	<message key="admin.settings.siteStyleSheetInvalid">Μη έγκυρη μορφή αρχείου stylesheet ιστοτόπου. Έγκυρη μορφή αρχείου είναι η  .css.</message>
+	<message key="admin.settings.siteStyleSheet">Style sheet ιστοτόπου</message>
+	<message key="admin.settings.siteTitle">Τίτλος Ιστότοπου</message>
+	<message key="admin.siteAdmin">Διαχειριστής Ιστοτόπου (Συλλογής)</message>
+	<message key="admin.siteManagement">Διαχείριση Ιστοτόπου</message>
+	<message key="admin.siteSettings">Ρυθμίσεις Ιστοτόπου</message>
+	<message key="admin.systemConfigFileReadError"><![CDATA[Το αρχείο  ρυθμίσεων <tt>config.inc.php</tt> δεν υπάρχει, δεν είναι  αναγνώσιμο, ή δεν είναι έγκυρο.]]></message>
+	<message key="admin.systemInformation">Πληροφορίες Συστήματος</message>
+	<message key="admin.versionBuild">Έκδοση</message>
+	<message key="admin.version.checkForUpdates">Ελέγξτε για  ενημερώσεις</message>
+	<message key="admin.version.downloadPackage">Κατέβασμα</message>
+	<message key="admin.version.downloadPatch">Κατέβασμα προγράμματος επιδιόρθωσης (patch)</message>
+	<message key="admin.versionHistory">Ιστορικό Έκδοσης</message>
+	<message key="admin.version.latest">Τελευταία έκδοση</message>
+	<message key="admin.versionMajor">Κύρια</message>
+	<message key="admin.versionMinor">Δευτερεύουσα</message>
+	<message key="admin.version.moreInfo">Περισσότερες  πληροφορίες</message>
+	<message key="admin.versionRevision">Αναθεώρηση</message>
+	<message key="admin.version.updateAvailable">Μια νεώτερη  ενημερωμένη έκδοση είναι διαθέσιμη</message>
+	<message key="admin.version.upToDate">Το σύστημά σας είναι  ενημερωμένο με την τελευταία έκδοση</message>
+	<message key="admin.version">Έκδοση</message>
+</locale>

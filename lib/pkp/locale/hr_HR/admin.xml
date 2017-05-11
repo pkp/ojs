@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/hr_HR/admin.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the hr_HR (Hrvatski) locale.
+  *
+  -->
+
+<locale name="hr_HR" full_name="Hrvatski">
+	<message key="admin.adminFunctions">Administrativne funkcije</message>
+	<message key="admin.auth.confirmDelete">Jeste li sigurni da želite trajno obrisati ovaj izvor autentifikacije?</message>
+	<message key="admin.auth.create">Kreirajte izvor autentifikacije</message>
+	<message key="admin.auth.noneCreated">Niti jedan izvor autentifikacije nije definiran.</message>
+	<message key="admin.authSources">Izvori autentifikacije</message>
+	<message key="admin.clearDataCache">Brisanje pričuvne memorije podataka</message>
+	<message key="admin.clearTemplateCache">Brisanje pričuvne memorije predloška</message>
+	<message key="admin.configFileUpdatedInstructions"><![CDATA[Vaša konfiguracijska datoteka je uspješno ažurirana. Imajte na umu da ukoliko vaša stranica više ne radi ispravno, tada ćete morati ručno podesiti svoju konfiguraciju prilikom direktnog uređivanja <tt>config.inc.php</tt> datoteke.]]></message>
+	<message key="admin.confirmClearTemplateCache">Jeste li sigurni da želite obrisati pričuvnu memoriju izrađenih predložaka?</message>
+	<message key="admin.confirmExpireSessions">Jeste li sigurni da želite da sesije svih korisnika isteknu? Svi korisnici koji su trenutno prijavljeni u sustav bit će prisiljeni da se ponovno prijave (Vi također).</message>
+	<message key="admin.contentsOfConfigFile">Sadržaj konfiguracijske datoteke</message>
+	<message key="admin.currentVersion">Trenutna verzija</message>
+	<message key="admin.dateInstalled">Datum instalacije</message>
+	<message key="admin.displayConfigFileInstructions"><![CDATA[Sustav ne može automatski obaviti prepisivanje preko konfiguracijske datoteke. Kako biste primjenili konfiguracijske izmjene morate otvoriti datoteku <tt>config.inc.php</tt> u prikladnom uređivaču teksta i zamijeniti njegov sadržaj sa sadržajem teksta u polju ispod.]]></message>
+	<message key="admin.displayNewSystemConfig">Prikaži novu konfiguraciju</message>
+	<message key="admin.expireSessions">Učini korisničke sesije nevažećima</message>
+	<message key="admin.languages.confirmReload">Jeste li sigurni da ponovno želite učitati ovaj prijevod? To će obrisati sve izmjene u prijevodu koje su učinjene u pojedinim časopisima (na primjer, prilagođeni predlošci e-pošte).</message>
+	<message key="admin.languages.installedLocales">Instalirani prijevodi</message>
+	<message key="admin.languages.installLanguages">Postavi prijevode sustava</message>
+	<message key="admin.languages.installLocales">Instaliraj</message>
+	<message key="admin.languages.installNewLocales">Instalacija novih prijevoda</message>
+	<message key="admin.languages.noLocalesAvailable">Nema dodatnih prijevoda na raspolaganju za instalaciju.</message>
+	<message key="admin.languages.reload">Ponovno učitavanje prijevoda</message>
+	<message key="admin.languages.uninstall">Deinstalacija prijevoda</message>
+	<message key="admin.phpInfo">Dodatne informacije o PHP instalaciji</message>
+	<message key="admin.server.apacheVersion">Verzija Apache-a</message>
+	<message key="admin.server.dbDriver">Tip baze podataka</message>
+	<message key="admin.server.dbVersion">Verzija poslužitelja baze podataka</message>
+	<message key="admin.serverInformationDescription"><![CDATA[Osnovni operacijski sustav i verzije programske opreme poslužitelja. Kliknite na "proširena  PHP informacija" kako biste vidjeli dodatne detalje PHP konfiguracije ovoga poslužitelja.]]></message>
+	<message key="admin.serverInformation">Informacije poslužitelja</message>
+	<message key="admin.server.phpVersion">Verzija PHP-a</message>
+	<message key="admin.server.platform">Platforma OS-a</message>
+	<message key="admin.settings.aboutDescription">Opis stranice</message>
+	<message key="admin.settings.contactEmail">E-pošta glavnog kontakta</message>
+	<message key="admin.settings.contactName">Ime glavnog kontakta</message>
+	<message key="admin.settings.form.contactEmailRequired">Kontakt e-pošta upravitelja je obavezna.</message>
+	<message key="admin.settings.form.contactNameRequired">Kontakt ime upravitelja je obavezno.</message>
+	<message key="admin.settings.form.minPasswordLengthRequired">Morate unijeti minimalnu duljinu lozinke od najmanje 4 znaka.</message>
+	<message key="admin.settings.form.titleRequired">Naziv je obavezan.</message>
+	<message key="admin.settings.homeHeaderImage.altText">Logotip mrežne stranice</message>
+	<message key="admin.settings.homeHeaderImageInvalid">Neispravni format logotipa stranice. Sustav prihvaća .gif, .jpg ili .png formate.</message>
+	<message key="admin.settings.introduction">Uvod</message>
+	<message key="admin.settings.minPasswordLength">Minimalna duljina lozinke</message>
+	<message key="admin.settings.passwordCharacters">znakova</message>
+	<message key="admin.settings.siteLanguage">Jezik stranice</message>
+	<message key="admin.settings.siteStyleSheetInvalid">Neispravni style sheet format. Sustav prihvaća samo .css format.</message>
+	<message key="admin.settings.siteStyleSheet">Style sheet (CSS) mrežne stranice</message>
+	<message key="admin.settings.siteTitle">Naziv stranice</message>
+	<message key="admin.siteManagement">Upravljanje stranicom</message>
+	<message key="admin.siteSettings">Postavke stranice</message>
+	<message key="admin.systemConfigFileReadError"><![CDATA[Konfiguracijska datoteka <tt>config.inc.php</tt> ne postoji, nije čitljiva ili je neispravna.]]></message>
+	<message key="admin.systemInformation">Informacije o sustavu</message>
+	<message key="admin.versionBuild">Građa</message>
+	<message key="admin.version.checkForUpdates">Provjerite postoje li nove verzije</message>
+	<message key="admin.version.downloadPackage">Preuzmite</message>
+	<message key="admin.version.downloadPatch">Preuzmite zakrpu</message>
+	<message key="admin.versionHistory">Prijašnje verzije</message>
+	<message key="admin.version.latest">Zadnja verzija</message>
+	<message key="admin.versionMajor">Glavna</message>
+	<message key="admin.versionMinor">Sporedna</message>
+	<message key="admin.version.moreInfo">Više informacija</message>
+	<message key="admin.versionRevision">Revizija</message>
+	<message key="admin.version.updateAvailable">Ažurirana verzija je dostupna</message>
+	<message key="admin.version.upToDate">Vaš sustav je ažuran</message>
+	<message key="admin.version">Verzija</message>
+</locale>

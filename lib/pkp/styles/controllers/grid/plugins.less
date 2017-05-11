@@ -1,0 +1,129 @@
+/**
+ * @file styles/controllers/grid/plugins.less
+ *
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @ingroup pkp_controllers_grid
+ *
+ * @brief Classes for the plugin grid and gallery
+ */
+
+.pkp_plugin_details {
+	.pkp_helpers_clear;
+
+	.status {
+		float: right;
+		margin-left: @double;
+		margin-bottom: @double;
+		width: 40%;
+		border: @bg-border-light;
+		border-radius: @radius;
+		font-size: @font-tiny;
+		line-height: @line-tiny;
+
+		> * {
+			margin: 0;
+			padding: @base;
+			border-bottom: @bg-border-light;
+
+			&:last-child {
+				border-bottom: none;
+			}
+		}
+	}
+
+	.action_button a {
+		&:extend(.pkp_button all);
+		display: block;
+		text-align: center;
+	}
+
+	.status_notice {
+		font-weight: @bold;
+	}
+
+	.status.newer,
+	.status.newest {
+
+		.status_notice {
+			color: @yes;
+		}
+	}
+
+	.status.incompatible .status_notice {
+		color: @no;
+	}
+
+	.certifications {
+		&:extend(.pkp_unstyled_list all);
+
+		.label {
+			display: block;
+			font-weight: @bold;
+		}
+	}
+
+	> .maintainer,
+	> .url,
+	> .description,
+	> .installation {
+		font-size: @font-sml;
+		line-height: @line-sml;
+	}
+
+	.url {
+		margin-top: @base;
+	}
+
+	.description,
+	.installation {
+		margin-top: @double;
+	}
+
+	.author,
+	.url {
+		position: relative;
+		padding-left: @double;
+
+		&:before {
+			&:extend(.fa all);
+			position: absolute;
+			top: 50%;
+			left: @base;
+			transform: translate(-50%, -50%);
+			color: @text-light-rgba;
+		}
+
+	}
+
+	.author {
+		font-weight: @bold;
+
+		a {
+			text-decoration: none;
+		}
+
+		&:before {
+			content: @fa-var-user;
+		}
+	}
+
+	.institution {
+		padding-left: @double;
+		color: @text-light;
+	}
+
+	.url {
+
+		a {
+			text-decoration: none;
+		}
+
+		&:before {
+			content: @fa-var-link;
+		}
+
+	}
+}

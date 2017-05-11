@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE collection SYSTEM "dtdsample.dtd">
+<collection>
+  <description>
+     Some recipes used in the XML tutorial.
+  </description>
+  <recipe>
+    <title>Beef Parmesan with Garlic Angel Hair Pasta</title>
+    <ingredient name="beef cube steak" amount="1.5" unit="pound"/>
+    <ingredient name="onion, sliced into thin rings" amount="1"/>
+    <ingredient name="green bell pepper, sliced in rings" amount="1"/>
+    <ingredient name="Italian seasoned bread crumbs" amount="1" unit="cup"/>
+    <ingredient name="grated Parmesan cheese" amount="0.5" unit="cup"/>
+    <ingredient name="olive oil" amount="2" unit="tablespoon"/>
+    <ingredient name="spaghetti sauce" amount="1" unit="jar"/>
+    <ingredient name="shredded mozzarella cheese" amount="0.5" unit="cup"/>
+    <ingredient name="angel hair pasta" amount="12" unit="ounce"/>
+    <ingredient name="minced garlic" amount="2" unit="teaspoon"/>
+    <ingredient name="butter" amount="0.25" unit="cup"/>
+    <preparation>
+      <step>
+        Preheat oven to 350 degrees F (175 degrees C).
+      </step>
+      <step>
+        Cut cube steak into serving size pieces. Coat meat with the bread crumbs
+        and parmesan cheese. Heat olive oil in a large frying pan, and saute 1
+        teaspoon of the garlic for 3 minutes. Quick fry (brown quickly on both sides)
+        meat. Place meat in a casserole baking dish, slightly overlapping edges.
+        Place onion rings and peppers on top of meat, and pour marinara sauce
+        over all.
+      </step>
+      <step>
+        Bake at 350 degrees F (175 degrees C) for 30 to 45 minutes, depending on
+        the thickness of the meat. Sprinkle mozzarella over meat and leave in the
+        oven till bubbly.
+      </step>
+      <step>
+        Boil pasta al dente. Drain, and toss in butter and 1 teaspoon garlic. For a
+        stronger garlic taste, season with garlic powder. Top with grated parmesan
+        and parsley for color. Serve meat and sauce atop a mound of pasta!
+      </step>
+    </preparation>
+    <comment>
+      Make the meat ahead of time, and refrigerate over night, the acid in the
+      tomato sauce will tenderize the meat even more. If you do this, save the
+      mozzarella till the last minute.
+    </comment>
+    <nutrition calories="1167" fat="23" carbohydrates="45" protein="32"/>
+  </recipe>
+  <recipe>
+    <title>Ricotta Pie</title>
+    <ingredient name="filling">
+      <ingredient name="ricotta cheese" amount="3" unit="pound"/>
+      <ingredient name="eggs" amount="12"/>
+      <ingredient name="white sugar" amount="2" unit="cup"/>
+      <ingredient name="vanilla extract" amount="2" unit="teaspoon"/>
+      <ingredient name="semisweet chocolate chips" amount="0.25" unit="cup"/>
+      <preparation>
+        <step>
+          Beat the 12 eggs, 2 cups sugar and vanilla extract together. Stir in
+          the ricotta cheese and the chocolate chips. Set aside.
+        </step>
+      </preparation>
+    </ingredient>
+    <ingredient name="dough">
+      <ingredient name="flour" amount="4" unit="cup"/>
+      <ingredient name="baking powder" amount="5" unit="teaspoon"/>
+      <ingredient name="white sugar" amount="1" unit="cup"/>
+      <ingredient name="shortening" amount="0.5" unit="cup"/>
+      <ingredient name="eggs, lightly beaten" amount="4"/>
+      <ingredient name="vanilla extract" amount="1" unit="teaspoon"/>
+      <preparation>
+        <step>
+          Combine the flour, baking powder, and 1 cup of the sugar together. Cut in the
+          shortening and mix until the mixture resembles coarse crumbs. Mix in 4 of
+          the eggs and 1 teaspoon of the vanilla. Divide dough into 4 balls and chill (if
+          needed).
+        </step>
+      </preparation>
+    </ingredient>
+    <ingredient name="milk" amount="*"/>
+    <preparation>
+      <step>
+        Preheat oven to 325 degrees F (165 degrees C). Grease two deep dish pie
+        plates.
+      </step>
+      <step>
+        Roll out 2 of the balls to fit into the pie pans. Do not make the crust too thick
+        as it will expand during cooking and get too thick. Do not flute the edges of
+        the dough. Roll out the other 2 balls of dough and cut each into 8 narrow
+        strips for the top of the crust. Alternately you can use cookie cutters and
+        place the cutouts on the top of the pies.
+      </step>
+      <step>
+        Pour the filling evenly into the pie crusts. Top each pie with 8 narrow strips
+        of dough or cookie cut-outs. Brush top of pie with milk for shine. Place foil on
+        the edge of crust.
+      </step>
+      <step>
+        Bake at 325 degrees F (165 degrees C) for 20 to 30 minutes then remove
+        foil. Continue to bake for another 25 or 30 minutes or until a knife inserted in
+        the center comes out clean.
+      </step>
+    </preparation>
+    <nutrition calories="349" fat="18" carbohydrates="64" protein="18"/>
+  </recipe>
+  <recipe>
+    <title>Linguine Pescadoro</title>
+    <ingredient name="linguini pasta" amount="16" unit="ounce"/>
+    <ingredient name="sauce">
+      <ingredient name="olive oil" amount="2" unit="tablespoon"/>
+      <ingredient name="minced cloves of garlic" amount="2"/>
+      <ingredient name="Italian seasoning" amount="0.5" unit="teaspoon"/>
+      <ingredient name="dried thyme" amount="0.25" unit="teaspoon"/>
+      <ingredient name="crushed red pepper flakes" amount="0.25" unit="teaspoon"/>
+      <ingredient name="crushed tomatoes" amount="1" unit="can"/>
+      <ingredient name="black olives, drained" amount="6" unit="ounce"/>
+      <ingredient name="whole baby clams" amount="10" unit="ounce"/>
+      <ingredient name="minced clams, with juice" amount="6.5" unit="ounce"/>
+      <ingredient name="small salad shrimp" amount="0.25" unit="pound"/>
+      <ingredient name="scallops" amount="0.25" unit="pound"/>
+      <ingredient name="lemon zest" amount="2.5" unit="teaspoon"/>
+      <ingredient name="salt" amount="*"/>
+      <ingredient name="ground black pepper" amount="*"/>
+      <preparation>
+        <step>
+          In a heavy saucepan over medium heat saute garlic in olive oil
+          until garlic softens.
+        </step>
+        <step>
+          Add Italian seasoning, thyme, crushed red pepper flakes,
+          crushed tomatoes, black olives, and the juice from both cans of clams.
+          Simmer for 15 minutes.
+        </step>
+        <step>
+          Mix in canned clams, shrimp, scallops, lemon zest,
+          and salt and pepper to taste.
+        </step>
+        <step>
+          Simmer for an additional 15 minutes or until
+          shrimp and clams are cooked.
+        </step>
+      </preparation>
+    </ingredient>
+    <preparation>
+      <step>
+        In a large pot of boiling salted water cook linguini until al dente. Drain.
+      </step>
+      <step>
+        Toss cooked and drained linguine pasta over seafood sauce. Serve warm.
+      </step>
+    </preparation>
+    <nutrition calories="532" fat="12" carbohydrates="59" protein="29"/>
+  </recipe>
+  <recipe>
+    <title>Zuppa Inglese</title>
+    <ingredient name="egg yolks" amount="4"/>
+    <ingredient name="milk" amount="2.5" unit="cup"/>
+    <ingredient name="Savoiardi biscuits" amount="21"/>
+    <ingredient name="sugar" amount="0.75" unit="cup"/>
+    <ingredient name="Alchermes liquor" amount="1" unit="cup"/>
+    <ingredient name="lemon zest" amount="*"/>
+    <ingredient name="flour" amount="0.5" unit="cup"/>
+    <ingredient name="fresh whipping cream" amount="*"/>
+    <preparation>
+      <step>
+        Warm up the milk in a nonstick sauce pan
+      </step>
+      <step>
+        In a large bowl beat the egg yolks with the sugar, add the flour
+        and combine the ingredients until well mixed.
+      </step>
+      <step>
+        Add the milk, a little bit at the time to the egg mixture, mixing well.
+      </step>
+      <step>
+        Put the mixture into the sauce pan and cook it on the stove at a medium
+        low heat. Mix the cream continuously with a wooden spoon. When it starts
+        to thicken remove it from the heat and pour it on a large plate to cool off.
+      </step>
+      <step>
+        Stir the cream now and then so that the top doesn't harden.
+      </step>
+      <step>
+        Dip quickly both sides of the lady fingers in the liquor. Layer them one
+        at the time in a glass bowl large enough to contain 7 biscuits.
+      </step>
+      <step>
+        Spread 1/3 of the cream and repeat the layer with lady fingers. Finish
+        with the cream.
+      </step>
+    </preparation>
+    <comment>
+      Refrigerate for at least 4 hours better yet overnight. Before serving
+      decorate the zuppa inglese with whipped cream.
+    </comment>
+    <nutrition calories="612" fat="49" carbohydrates="45" protein="4" alcohol="2"/>
+  </recipe>
+  <recipe>
+    <title>Cailles en Sarcophages</title>
+    <ingredient name="pastry">
+      <ingredient name="chilled unsalted butter" amount="15" unit="ounce"/>
+      <ingredient name="flour" amount="3" unit="cup"/>
+      <ingredient name="salt" amount="1.5" unit="teaspoon"/>
+      <ingredient name="ice water" amount="0.75" unit="cup"/>
+      <preparation>
+        <step>
+          In a large bowl, cut 6 tablespoons of the butter into the flour with
+          a pastry blender until the butter is more or less incorporated. Now
+          coarsely cut the remaining butter into the flour mixture, leaving many
+          visible pieces of butter (about 1/4 inch in diameter should be fine).
+        </step>
+        <step>
+          Dissolve the salt into the ice water. Slowly drizzle the salted water
+          into the flour mixture while tossing gently with a fork. When all the water
+          has been evenly distributed, there will remain many dry crumbs. Don't worry.
+        </step>
+        <step>
+          Empty the dough out onto a large piece of plastic wrap. By folding up the
+          four sides of the wrap and pressing, form a rectangle of dough. Roll the
+          dough out just a bit and fold the sides over the middle, forming a piece
+          one third the former size. Repeat, this time folding the top and bottom
+          to the middle. The butter and flour will not yet be working in harmony, so
+          you will probably have to use the plastic wrap to aid you in the first
+          few folds.
+        </step>
+        <step>
+          Puff pastry requires a somewhat Calvinist submission of the will and a
+          confidence that layers will appear. Roll the dough out again and repeat the
+          folding, lightly dusting with flour between every layer. Discard the plastic
+          wrap as soon as the dough holds together on its own.
+        </step>
+        <step>
+          The dough will become progressively softer as you work on it, with an almost
+          springy texture. After 6 or 10 repetitions of the folding and rolling, cut the
+          dough into 18 equal pieces. Wrap each well in plastic wrap and let rest in the
+          refrigerator for at least 2 hours.
+        </step>
+      </preparation>
+    </ingredient>
+    <ingredient name="filling">
+      <ingredient name="baked chicken">
+        <ingredient name="marinated chicken">
+          <ingredient name="small chickens, cut up" amount="3"/>
+          <ingredient name="Herbes de Provence" amount="*"/>
+          <ingredient name="dry white wine" amount="1.5" unit="cup"/>
+          <ingredient name="orange juice" amount="0.5" unit="cup"/>
+          <ingredient name="minced garlic" amount="4" unit="teaspoon"/>
+          <ingredient name="truffle oil" amount="*"/>
+          <preparation>
+            <step>
+              Place the chicken legs and thighs in one baking dish, the chicken breasts
+              in another. Rub herbes de Provence under the skin of these chicken parts.
+            </step>
+            <step>
+              Combine the wine with the orange juice, garlic and a liberal sprinkling
+              of truffle oil. Chop the onion half and add it.
+            </step>
+            <step>
+              Pour over the chicken parts, cover and refrigerate overnight.
+            </step>
+          </preparation>
+        </ingredient>
+        <ingredient name="stock">
+          <ingredient name="chicken wings, giblets, and kidney" amount="*"/>
+          <ingredient name="onions, peeled" amount="1.5"/>
+          <ingredient name="carrots, peeled and cut lengthwise" amount="5"/>
+          <ingredient name="celery, cut lengthwise" amount="2" unit="ribs"/>
+          <ingredient name="bay leaf" amount="1"/>
+          <ingredient name="small bunch parsley" amount="1"/>
+          <ingredient name="whole peppercorns" amount="0.5" unit="teaspoon"/>
+          <ingredient name="salt" amount="*"/>
+          <preparation>
+            <step>
+              Place the chicken parts in a large stockpot, cover with cold water
+              and bring to a boil. Skim off the foam that rises to top.
+            </step>
+            <step>
+              When the liquid is relatively clear, add the carrots, celery, whole onion,
+              bay leaf, parsley, peppercorns and salt. Reduce the heat, cover and let
+              simmer at least 2 hours to make a hearty stock.
+            </step>
+            <step>
+              Strain, discard the solids, and refrigerate the stock.
+            </step>
+          </preparation>
+        </ingredient>
+        <preparation>
+          <step>
+            Preheat the oven to 350 degrees. Skim any fat off the stock and pour
+            enough over the marinated chicken to cover. Bake the chicken until it's
+            tender and the juices run clear, about 25 minutes for the breasts, a
+            little longer for the legs and thighs.
+          </step>
+          <step>
+            Reserve the juices from one of the baking dishes, skimming the fat off
+            the top.  Skin, bone and chill the chicken.
+          </step>
+        </preparation>
+      </ingredient>
+      <ingredient name="sauteed mushrooms">
+        <ingredient name="white button mushrooms" amount="2" unit="pound"/>
+        <ingredient name="butter" amount="0.25" unit="cup"/>
+        <ingredient name="dry white wine" amount="0.25" unit="cup"/>
+        <ingredient name="minced garlic" amount="3" unit="teaspoon"/>
+        <ingredient name="minced shallots" amount="3"/>
+        <preparation>
+          <step>
+            In a large skillet, saute the mushrooms over medium-high heat in the
+            butter and the wine with the shallots and garlic. Spoon out and reserve
+            the mushrooms.
+          </step>
+        </preparation>
+      </ingredient>
+      <ingredient name="sauce">
+        <ingredient name="chicken juices" amount="*"/>
+        <ingredient name="mushroom juices" amount="*"/>
+        <ingredient name="sherry" amount="0.25" unit="cup"/>
+        <ingredient name="flour" amount="0.25" unit="cup"/>
+        <ingredient name="butter" amount="0.25" unit="cup"/>
+        <preparation>
+          <step>
+            Add to the mushroom juices in the pan the chicken juices and sherry.
+            Cook until reduced by half.
+          </step>
+          <step>
+            In a medium saucepan, melt the butter over low heat and sprinkle in
+            the flour. Cook and stir until light brown. Add the reduced juices and
+            cook until very thick. (This should yield about 1 1/2 cups.)
+          </step>
+        </preparation>
+      </ingredient>
+      <preparation>
+        <step>
+          Combine the sauce with the chicken and mushrooms.
+        </step>
+      </preparation>
+    </ingredient>
+    <ingredient name="package phyllo dough" amount="0.5" unit="package"/>
+    <ingredient name="egg whites, lightly beaten" amount="3"/>
+    <preparation>
+      <step>
+        Cut the stack of phyllo sheets in half and lay between two damp, clean
+        towels. Lightly dust with flour and roll each of the 18 pieces of dough
+        to a diameter of 6 to 8 inches. Set aside.Place about 1/2 cup of the chicken
+        mixture into a half sheet of phyllo and wrap like an egg roll into a neat,
+        tight package. Place the phyllo-wrapped chicken on the rolled dough, and brush
+        the egg white around it.
+      </step>
+      <step>
+        Fold the bottom of the dough up onto the phyllo to form the foot of the
+        coffin. Then fold up the sides and top of the dough, pinching it together
+        to make a cross shape on the top. Repeat for each sarcophage. Cover and
+        chill in the refrigerator for 1 hour.
+      </step>
+      <step>
+        Preheat the oven to 450 degrees. Brush the pastry with egg white and bake
+        for 15 minutes, or till golden brown. 18 servings.
+      </step>
+    </preparation>
+    <nutrition calories="8892" fat="33" carbohydrates="28" protein="39"/>
+  </recipe>
+</collection>

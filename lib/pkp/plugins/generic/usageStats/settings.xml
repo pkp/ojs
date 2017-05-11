@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plugin_settings SYSTEM "../../../dtd/pluginSettings.dtd">
+
+<!--
+  * plugins/generic/usageStats/settings.xml
+  *
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Default plugin settings.
+  *
+  -->
+
+<plugin_settings>
+	<setting type="bool">
+		<name>enabled</name>
+		<value>true</value>
+	</setting>
+	<setting type="bool">
+		<name>createLogFiles</name>
+		<value>true</value>
+	</setting>
+	<setting type="string">
+		<name>accessLogFileParseRegex</name>
+		<value>/^(?P&lt;ip&gt;\S+) \S+ \S+ \[(?P&lt;date&gt;.*?)\] "\S+ (?P&lt;url&gt;\S+).*?" (?P&lt;returnCode&gt;\S+) \S+ ".*?" "(?P&lt;userAgent&gt;.*?)"/</value>
+	</setting>
+	<setting type="object">
+		<name>optionalColumns</name>
+		<value>
+			<array>
+				<element>city</element>
+				<element>region</element>
+			</array>
+		</value>
+	</setting>
+	<setting type="string">
+		<name>chartType</name>
+		<value>bar</value>
+	</setting>
+	<setting type="string">
+		<name>datasetMaxCount</name>
+		<value>4</value>
+	</setting>
+</plugin_settings>
+

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  */locale/sv_SE/admin.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the sv_SE (Svenska) locale.
+  *
+  -->
+
+<locale name="sv_SE" full_name="Svenska">
+	<message key="admin.adminFunctions">Administrativa funktioner</message>
+	<message key="admin.auth.confirmDelete">Är du säker på att du vill ta bort valideringskällan permanent?</message>
+	<message key="admin.auth.create">Skapa valideringskälla</message>
+	<message key="admin.auth.noneCreated">Inga valideringskällor har definierats.</message>
+	<message key="admin.authSources">Valideringskällor</message>
+	<message key="admin.clearDataCache">Töm data-caches</message>
+	<message key="admin.clearTemplateCache">Töm formulär-cache</message>
+	<message key="admin.configFileUpdatedInstructions"><![CDATA[Dina ändringar har sparats. Kom ihåg att om sidan inte längre fungerar korrekt måste du göra ändringar manuellt: <tt>config.inc.php</tt>.]]></message>
+	<message key="admin.confirmClearTemplateCache">Är du säker på att du vill tömma sammanlagda formulär-caches?</message>
+	<message key="admin.confirmExpireSessions">Är du säker på att du vill avsluta alla användarsessioner? Användare som är inloggade i systemet kommer att behöva looga in igen (Även du).</message>
+	<message key="admin.contentsOfConfigFile">Innehållet i konfigurationsfilen</message>
+	<message key="admin.currentVersion">Aktuell version</message>
+	<message key="admin.dateInstalled">Installationsdatum</message>
+	<message key="admin.displayConfigFileInstructions"><![CDATA[Dina ändringar visas nedan. För att spara ändringarna, öppna <tt>config.inc.php</tt> i ett lämpligt textredigeringsprogram och ersätt innehållet med informationen i textfältet nedan.]]></message>
+	<message key="admin.displayNewSystemConfig">Visa nya ändringar</message>
+	<message key="admin.expireSessions">Avsluta användarsessionen</message>
+	<message key="admin.languages.confirmReload">Är du säker på att du vill uppdatera språkfilen? Tillgänglig språkspecifik information ex. anpassade E-postfomrulär kommer att raderas.</message>
+	<message key="admin.languages.installedLocales">Installerade språk</message>
+	<message key="admin.languages.installLanguages">Hantera språk</message>
+	<message key="admin.languages.installLocales">Installera</message>
+	<message key="admin.languages.installNewLocales">Installera nya språk.</message>
+	<message key="admin.languages.languageSettings">Språkinställningar</message>
+	<message key="admin.languages.noLocalesAvailable">Inga ytterligare språk är tillgängliga för installation.</message>
+	<message key="admin.languages.reload">Uppdatera språk</message>
+	<message key="admin.languages.uninstall">Avinstallera språk</message>
+	<message key="admin.phpInfo">Utökad PHP-information</message>
+	<message key="admin.server.apacheVersion">Apache-version</message>
+	<message key="admin.server.dbDriver">Databasdriver</message>
+	<message key="admin.server.dbVersion">Serverversion av databasen</message>
+	<message key="admin.serverInformationDescription"><![CDATA[För information om operativsystem och serverns mjukvaruversioner, klicka här: <span class="highlight">Utökad PHP-information</span> för att visa utökade detaljer av serverns PHP-konfiguration.]]></message>
+	<message key="admin.serverInformation">Serverinformation</message>
+	<message key="admin.server.phpVersion">PHP-version</message>
+	<message key="admin.server.platform">OS-plattform</message>
+	<message key="admin.settings.aboutDescription">Om sidbeskrivningen</message>
+	<message key="admin.settings.contactEmail">E-post till huvudkontaktperson</message>
+	<message key="admin.settings.contactName">Namn på huvudkontaktperson</message>
+	<message key="admin.settings.form.contactEmailRequired">E-postadress till huvudkontaktpersonen är obligatoriskt.</message>
+	<message key="admin.settings.form.contactNameRequired">Namn på huvudkontaktpersonen är obligatoriskt.</message>
+	<message key="admin.settings.form.minPasswordLengthRequired">Du måste ange ett lösenord på minst fyra tecken.</message>
+	<message key="admin.settings.form.titleRequired">Du måste ange titel.</message>
+	<message key="admin.settings.homeHeaderImageInvalid">Ogiltigt bildformat på sidlogotyp. Tillåtna format är: .gif, .jpg, or .png.</message>
+	<message key="admin.settings.introduction">Introduktion</message>
+	<message key="admin.settings.minPasswordLength">Minsta längd på lösenord</message>
+	<message key="admin.settings.passwordCharacters">tecken</message>
+	<message key="admin.settings.siteLanguage">Sidans språk</message>
+	<message key="admin.settings.siteStyleSheetInvalid">Ogiltigt format på sidans stylesheet. Tillåtet format är: .css.</message>
+	<message key="admin.settings.siteStyleSheet">Sidans style sheet</message>
+	<message key="admin.settings.siteTitle">Sidans namn</message>
+	<message key="admin.siteAdmin">Sidadministration</message>
+	<message key="admin.siteManagement">Sidadministration</message>
+	<message key="admin.siteSettings">Sidinställningar</message>
+	<message key="admin.systemConfigFileReadError"><![CDATA[Konfigureringsfilen <tt>config.inc.php</tt> existerar inte, den är ogiltig eller går inte att läsa.]]></message>
+	<message key="admin.systemInformation">Systeminformation</message>
+	<message key="admin.versionBuild">Bygga</message>
+	<message key="admin.version.checkForUpdates">Leta efter uppdateringar</message>
+	<message key="admin.version.downloadPackage">Ladda ned</message>
+	<message key="admin.version.downloadPatch">Ladda ned Patch</message>
+	<message key="admin.versionHistory">Versionshistorik</message>
+	<message key="admin.version.latest">Senaste versionen</message>
+	<message key="admin.versionMajor">Större</message>
+	<message key="admin.versionMinor">Mindre</message>
+	<message key="admin.version.moreInfo">Mer information</message>
+	<message key="admin.versionRevision">Omarbetning</message>
+	<message key="admin.version.updateAvailable">En uppdatared version finns tillgänglig</message>
+	<message key="admin.version.upToDate">Detta är den senaste versionen av systemet</message>
+	<message key="admin.version">Version</message>
+</locale>

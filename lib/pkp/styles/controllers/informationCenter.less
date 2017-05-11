@@ -1,0 +1,82 @@
+/**
+ * @file styles/controllers/informationCenter.less
+ *
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @ingroup pkp_controllers_informationCenter
+ *
+ * @brief Information Center styles
+ */
+.pkp_controllers_informationCenter {
+
+	#notesAccordion {
+		margin-bottom: @double;
+	}
+
+	.ui-accordion {
+		border: @bg-border-light;
+		font-size: @font-sml;
+		line-height: @line-sml;
+	}
+
+	.ui-accordion-header {
+		margin: 0;
+		padding: 4px @base;
+		border-bottom: @bg-border-light;
+		font-size: @font-sml;
+		background: @bg-border-color-light;
+
+		a {
+			text-decoration: none;
+		}
+	}
+
+	.pkp_notes_list {
+		padding: @base;
+
+		p:first-child {
+			margin-top: 0;
+		}
+
+		p:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.note {
+		padding: @base 0;
+		font-size: @font-sml;
+		line-height: @line-sml;
+
+		.details {
+			.pkp_helpers_clear;
+			margin-bottom: @base;
+			border-bottom: @bg-border;
+			line-height: @double + @base - 1;
+
+			.user {
+				margin-right: 0.5em;
+				font-weight: @bold;
+			}
+
+			.date {
+				color: @text-light;
+			}
+
+			.actions {
+				float: right;
+
+				> * {
+					display: inline-block;
+					margin-left: @base;
+				}
+			}
+		}
+	}
+
+	.no_notes {
+		font-size: @font-sml;
+	}
+}

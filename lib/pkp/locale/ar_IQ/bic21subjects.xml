@@ -1,0 +1,2699 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE subjects SYSTEM "../../dtd/bic21subjects.dtd">
+<!--
+  * locale/ar_IQ/bic21subjects.xml
+  *
+  * Copyright BIC and Nielsen Book Services Ltd 2010
+  *
+  * localized list of BIC 2.1 Subjects
+  * Reference:  http://www.bic.org.uk/7/BIC-Standard-Subject-Categories
+  -->
+<subjects>
+	<subject code="A" text="الفنون" />
+	<subject code="AB" text="الفنون: مواضيع عامة" />
+	<subject code="ABA" text="نظرية الفن" />
+	<subject code="ABC" text="صيانة، استعادة، عناية بالأعمال الفنية" />
+	<subject code="ABK" text="التزوير والتزييف وسرقة الأعمال الفنية" />
+	<subject code="ABQ" text="الفنون: النواحي المالية" />
+	<subject code="AC" text="تأريخ الفن / الفن وأنماط التصميم" />
+	<subject code="ACB" text="أنماط فنية غير محددة زمنياً" />
+	<subject code="ACBK" text="فن الشعوب الأصلية" />
+	<subject code="ACBN" text="الفن الساذج" />
+	<subject code="ACBP" text="الفن الشرقي" />
+	<subject code="ACBS" text="الفن الاستعماري" />
+	<subject code="ACC" text="تأريخ الفن: ما قبل التأريخ" />
+	<subject code="ACG" text="تأريخ الفن: الفن القديم والكلاسيكي، ما قبل الميلاد حتى 500 ميلادي" />
+	<subject code="ACK" text="تأريخ الفن: الفن البيزنطي وفن العصور الوسطى، 500 إلى 1400 ميلادي" />
+	<subject code="ACN" text="تأريخ الفن وأنماط التصميم: 1400 إلى 1600 ميلادي" />
+	<subject code="ACND" text="فن عصر النهضة" />
+	<subject code="ACNH" text="الفن وأساليب التصميم: التكلف" />
+	<subject code="ACQ" text="تأريخ الفن وأنماط التصميم: 1600 إلى 1800 ميلادي" />
+	<subject code="ACQB" text="الفن وأنماط التصميم: عصر الباروك" />
+	<subject code="ACQH" text="الفن وأنماط التصميم: الكلاسيكية " />
+	<subject code="ACV" text="تأريخ الفن وأنماط التصميم: 1800 إلى 1900" />
+	<subject code="ACVC" text="الفن وأنماط التصميم: رومانتيكية" />
+	<subject code="ACVM" text="الفن وأنماط التصميم: ما قبل الفن الرافايليتي" />
+	<subject code="ACVN" text="الفن وأنماط التصميم: فنون وأساليب الحرف" />
+	<subject code="ACVT" text="الفن وأنماط التصميم: الإنطباعية وما بعد الانطباعية" />
+	<subject code="ACVY" text="الفن وأنماط التصميم: الفن الحديث" />
+	<subject code="ACX" text="تأريخ الفن وأنماط التصميم: من 1900 حتى الآن" />
+	<subject code="ACXD" text="الفن وأنماط التصميم: 1900 إلى 1960" />
+	<subject code="ACXD1" text="الفن وأنماط التصميم: التعبيرية" />
+	<subject code="ACXD2" text="الفن وأنماط التصميم: التصميم العصري وباوهاوس" />
+	<subject code="ACXD3" text="الفن وأنماط التصميم: فن الديكور" />
+	<subject code="ACXD5" text="الفن وأنماط التصميم: التكعيبية" />
+	<subject code="ACXD7" text="الفن وأنماط التصميم: السريالية والدادائية" />
+	<subject code="ACXD9" text="الفن وأنماط التصميم: التجريدية التعبيرية" />
+	<subject code="ACXJ" text="الفن وأنماط التصميم: من 1960" />
+	<subject code="ACXJ1" text="الفن وأنماط التصميم: الفن الشعبي" />
+	<subject code="ACXJ4" text="الفن وأنماط التصميم: التبسيطية" />
+	<subject code="ACXJ5" text="الفن وأنماط التصميم: الفن المفاهيمي" />
+	<subject code="ACXJ8" text="الفن وأنماط التصميم: ما بعد الحداثة" />
+	<subject code="AF" text="أشكال الفنون" />
+	<subject code="AFC" text="الرسم واللوحات" />
+	<subject code="AFCC" text="الألوان المائية" />
+	<subject code="AFCL" text="الألوان الزيتية" />
+	<subject code="AFF" text="الرسم والروسمات" />
+	<subject code="AFH" text="المطبوعات وصناعة المطبوعات" />
+	<subject code="AFJ" text="أشكال الفنون التخطيطية الأخرى" />
+	<subject code="AFJD" text="الملصقات وتركيب الصور" />
+	<subject code="AFJG" text="الكتابة على الجدران وفن الشوارع" />
+	<subject code="AFK" text="أشكال الفن اللاتخطيطية" />
+	<subject code="AFKB" text="نحت" />
+	<subject code="AFKC" text="المنحوتات: الأعمال الفنية" />
+	<subject code="AFKG" text="المعادن الثمينة، الأحجار الكريمة، المجوهرات: الأعمال الفنية والتصميم" />
+	<subject code="AFKN" text="فن التركيب" />
+	<subject code="AFKP" text="فن الأداء" />
+	<subject code="AFKV" text="الفنون الالكترونية، الثلاثية الأبعاد، و الفديوية" />
+	<subject code="AFP" text="فنون السيراميك والفخار والزجاج" />
+	<subject code="AFPC" text="صناعة الخزف: الأعمال الفنية" />
+	<subject code="AFPM" text="الفسيفساء: الأعمال الفنية" />
+	<subject code="AFPS" text="الزجاج الملون: الأعمال الفنية" />
+	<subject code="AFT" text="فنون الديكور" />
+	<subject code="AFTB" text="الفن الشعبي" />
+	<subject code="AFTC" text="الفنون الحرفية، الصناعات اليدوية" />
+	<subject code="AFW" text="الأعمال الفنية النسيجية" />
+	<subject code="AFWD" text="الأعمال الفنية النسيجية: السجاد والحصير" />
+	<subject code="AFWH" text="الأعمال الفنية النسيجية: مطرزات، وتعاليق ولحفان" />
+	<subject code="AFY" text="فنون الجسد والوشم" />
+	<subject code="AG" text="المعالجات الفنية والمواضيع" />
+	<subject code="AGB" text="الفنانون المنفردون والدراسات الفنية" />
+	<subject code="AGC" text="كتلوكات المعارض والمجموعات الخاصة" />
+	<subject code="AGH" text="الأشكال البشرية المصورة في الفن" />
+	<subject code="AGHF" text="الصور الشخصية في الفن" />
+	<subject code="AGHN" text="تصوير العري في الفن" />
+	<subject code="AGHX" text="الفن الشهواني" />
+	<subject code="AGK" text="المشاهد صغيرة الأبعاد، العلمانية، المحلية في الفن" />
+	<subject code="AGN" text="الحيوانات والطبيعة في الفن (الحياة الجامدة، المناظر الطبيعية، المناظر البحرية... إلخ.)" />
+	<subject code="AGNB" text="الفنون النباتية" />
+	<subject code="AGP" text="تصوير المصنوعات في الفن (مناظر المدن، الآلات... إلخ.)" />
+	<subject code="AGR" text="تصوير الموضوعات الدينية في الفن" />
+	<subject code="AGZ" text="تقنيات الفن ومبادئه" />
+	<subject code="AJ" text="التصوير الفوتوغرافي والصور الفوتوغرافية" />
+	<subject code="AJB" text="المصورون الفوتوغرافيون المنفردون" />
+	<subject code="AJC" text="التصوير الفوتوغرافي: مجموعات" />
+	<subject code="AJCP" text="التصوير الفوتوغرافي: صور شخصية" />
+	<subject code="AJCR" text="التقارير الفوتوغرافية" />
+	<subject code="AJCX" text="التصوير الفوتوغرافي للعري وما يثير الشهوة" />
+	<subject code="AJG" text="المعدات الفوتوغرافية وتقنياتها" />
+	<subject code="AJR" text="أنواع خاصة من التصوير الفوتوغرافي" />
+	<subject code="AJRD" text="أعمال التصوير السينمائي والتلفزيوني" />
+	<subject code="AJRH" text="التصوير الفيديوي" />
+	<subject code="AJRK" text="التصوير الجوي" />
+	<subject code="AK" text="الفن الصناعي / التجاري والتصميم" />
+	<subject code="AKB" text="مصممون منفردون" />
+	<subject code="AKC" text="التصميم التخطيطي" />
+	<subject code="AKD" text="الطباعة والكتابة" />
+	<subject code="AKH" text="تصميم الكتب" />
+	<subject code="AKL" text="الفن التوضيحي والتجاري" />
+	<subject code="AKLB" text="المثال التوضيحي" />
+	<subject code="AKLC" text="فن الكتاب الهزلي والرسوم المتحركة" />
+	<subject code="AKLC1" text="فن الرواية المصورة والمانغا" />
+	<subject code="AKLP" text="فن الملصقات" />
+	<subject code="AKP" text="تصميم المنتجات" />
+	<subject code="AKR" text="تصميم الآثاث" />
+	<subject code="AKT" text="تصميم الأزياء والمنسوجات" />
+	<subject code="AKTA" text="تصميم الأزياء ونظرياتها" />
+	<subject code="AKTH" text="تأريخ تصميم الأزياء" />
+	<subject code="AKTX" text="تصميم المنسوجات ونظرياتها" />
+	<subject code="AM" text="الهندسة المعمارية" />
+	<subject code="AMA" text="نظرية الهندسة المعمارية" />
+	<subject code="AMB" text="المهندسون المعماريون المنفردون وشركات الهندسة المعمارية" />
+	<subject code="AMC" text="البنية والتصميم المعماري" />
+	<subject code="AMCR" text="الهندسة والتصميم المعماري الصديق للبيئة" />
+	<subject code="AMD" text="الهندسة المعمارية: الممارسة المهنية" />
+	<subject code="AMG" text="الأبنية العامة: المدنية، التجارية، الصناعية... إلخ." />
+	<subject code="AMGC" text="قاعات الحفلات الموسيقية، الساحات، الملاعب" />
+	<subject code="AMGD" text="النصب التذكارية والآثار" />
+	<subject code="AMK" text="المباني السكنية والمباني المحلية" />
+	<subject code="AMKD" text="المنازل والشقق وغيرها" />
+	<subject code="AMKH" text="القصور والسرايات، البيوت الريفية" />
+	<subject code="AMKL" text="القلاع والتحصينات" />
+	<subject code="AMN" text="المباني الدينية" />
+	<subject code="AMR" text="التصميم الداخلي الاحترافي" />
+	<subject code="AMV" text="فن المناظر الطبيعية والهندسة المعمارية" />
+	<subject code="AMVD" text="تخطيط المدن والقرى - جوانب معمارية" />
+	<subject code="AMX" text="تأريخ العمارة" />
+	<subject code="AN" text="الدراسات المسرحية" />
+	<subject code="ANB" text="المسرح: ممثلون ومخرجون منفردون" />
+	<subject code="ANC" text="تقنيات التمثيل" />
+	<subject code="ANF" text="الإخراج والإنتاج المسرحي" />
+	<subject code="ANH" text="المسرح: التقنيات والمهارات الأساسية" />
+	<subject code="ANS" text="إدارة المسارح" />
+	<subject code="AP" text="الأفلام، التلفاز، الإذاعة" />
+	<subject code="APB" text="ممثلون ومؤدون منفردون" />
+	<subject code="APF" text="الأفلام والسينما" />
+	<subject code="APFA" text="النظرية والنقد الفلمي" />
+	<subject code="APFB" text="مخرجو أفلام منفردون، صانعو الأفلام" />
+	<subject code="APFD" text="النصوص الفلمية والسينمائية" />
+	<subject code="APFG" text="الإرشادات والتنقيحات الفلمية" />
+	<subject code="APFN" text="الأفلام: الأنماط والأنواع" />
+	<subject code="APFR" text="الأفلام الوثائقية" />
+	<subject code="APFV" text="الأفلام المتحركة" />
+	<subject code="APFX" text="الإنتاج الفلمي: المهارات التقنية الأساسية" />
+	<subject code="APT" text="التلفاز" />
+	<subject code="APTD" text="النصوص التلفازية" />
+	<subject code="APTS" text="المسلسلات التلفزيونية" />
+	<subject code="APTX" text="الإنتاج التلفزيوني: التقنيات والمهارات الأساسية" />
+	<subject code="APW" text="الإذاعة" />
+	<subject code="APWD" text="النصوص الإذاعية" />
+	<subject code="AS" text="الرقص وغيره من الفنون الأدائية" />
+	<subject code="ASD" text="الرقص" />
+	<subject code="ASDC" text="تصميم الرقصات" />
+	<subject code="ASDL" text="رقص الباليه" />
+	<subject code="ASDR" text="صالة الرقص" />
+	<subject code="ASDT" text="الرقص المعاصر" />
+	<subject code="ASDX" text="الرقص الشعبي" />
+	<subject code="ASZ" text="فنون الأداء الأخرى" />
+	<subject code="ASZB" text="فنون الأداء: الهزليات" />
+	<subject code="ASZC" text="التمثيل الصامت" />
+	<subject code="ASZD" text="مسرح الشارع" />
+	<subject code="ASZG" text="السحر والشعوذة" />
+	<subject code="ASZH" text="برامج المنوعات، وقاعات الموسيقى والملاهي الليلية" />
+	<subject code="ASZJ" text="ألعاب الخفة" />
+	<subject code="ASZM" text="مسرح الدمى والألعاب المصغرة theatre" />
+	<subject code="ASZP" text="المواكب، والمسيرات والمهرجانات" />
+	<subject code="ASZW" text="السيرك" />
+	<subject code="ASZX" text="مشاهد الحيوانات" />
+	<subject code="AV" text="الموسيقى" />
+	<subject code="AVA" text="نظرية وعلم الموسيقى" />
+	<subject code="AVC" text="العروض الموسيقية والنقد الموسيقي" />
+	<subject code="AVD" text="ألبومات الفنانين وأدلة المشتري" />
+	<subject code="AVG" text="الموسيقى: الأنماط والأنواع" />
+	<subject code="AVGC" text="الموسيقى الكلاسيكية الغربية" />
+	<subject code="AVGC1" text="الموسيقى الأولى (حتى عام 1000 ميلادي)" />
+	<subject code="AVGC2" text="موسيقى العصور الوسطى وعصر النهضة (1000 حتى 1600)" />
+	<subject code="AVGC3" text="موسيقى الباروك (1600 حتى 1750)" />
+	<subject code="AVGC4" text="الموسيقى الكلاسيكية (1750 حتى 1830)" />
+	<subject code="AVGC5" text="الموسيقى الرومانسية (1830 حتى 1900)" />
+	<subject code="AVGC6" text="موسيقى القرن العشرين والموسيقى الكلاسيكية المعاصرة" />
+	<subject code="AVGC8" text="موسيقى الجوقة" />
+	<subject code="AVGC9" text="دار الأوبرا" />
+	<subject code="AVGD" text="الموسيقى الدينية والشعائرية" />
+	<subject code="AVGE" text="الموسيقى اللاغربية: التقليدية والكلاسيكية" />
+	<subject code="AVGF" text="موسيقى الاوركسترا الصغيرة والفرق الموسيقية الكبيرة" />
+	<subject code="AVGG" text="الفرق الموسيقية العسكرية، الموسيقى العسكرية والمسيرات" />
+	<subject code="AVGH" text="الموسيقى التقليدية والشعبية" />
+	<subject code="AVGJ" text="موسيقى الجاز" />
+	<subject code="AVGK" text="موسيقى البلوز" />
+	<subject code="AVGL" text="الموسيقى الريفية الغربية" />
+	<subject code="AVGM" text="المسرحيات الموسيقية" />
+	<subject code="AVGN" text="الموسيقى الشعبية وسهلة الإصغاء" />
+	<subject code="AVGP" text="موسيقى الروك والبوب" />
+	<subject code="AVGQ" text="Soul &amp; R 'n' B" />
+	<subject code="AVGR" text="موسيقى الراب والهب هوب" />
+	<subject code="AVGS" text="Reggae" />
+	<subject code="AVGT" text="موسيقى المعادن الثقيلة" />
+	<subject code="AVGU" text="Punk, New Wave, Indie" />
+	<subject code="AVGV" text="الموسيقى الإلكترونية" />
+	<subject code="AVGW" text="الموسيقى العالمية" />
+	<subject code="AVGZ" text="موسيقى البيئة المحيطة وموسيقى العصر الجديد" />
+	<subject code="AVH" text="الملحنون والموسيقيون المنفردون، مجموعات وجوقات خاصة" />
+	<subject code="AVQ" text="الدرجات الموسيقية وكلمات الاغاني" />
+	<subject code="AVQS" text="الترانيم" />
+	<subject code="AVR" text="الآلات الموسيقية والفرق الموسيقية" />
+	<subject code="AVRB" text="فرق الأوركسترا" />
+	<subject code="AVRD" text="الفرق الموسيقية في الحجرات" />
+	<subject code="AVRG" text="آلات لوحة المفاتيح" />
+	<subject code="AVRJ" text="الآلات الإيقاعية" />
+	<subject code="AVRL" text="الآلات الوترية" />
+	<subject code="AVRL1" text="القيثارة" />
+	<subject code="AVRN" text="الآلات الهوائية" />
+	<subject code="AVRQ" text="الآلات الموسيقية الميكانيكية" />
+	<subject code="AVRS" text="الآلات الموسيقية الالكترونية" />
+	<subject code="AVS" text="تقنيات الموسيقى / دروس الموسيقى" />
+	<subject code="AVX" text="التسجيل والإنتاج الموسيقي" />
+	<subject code="B" text="السيرة الذاتية وقصص حقيقية" />
+	<subject code="BG" text="السيرة الشخصية: عامة" />
+	<subject code="BGA" text="السيرة الشخصية الذاتية: عامة" />
+	<subject code="BGB" text="السيرة الشخصية: الأعمال والصناعة" />
+	<subject code="BGBA" text="السيرة الشخصية الذاتية: الأعمال والصناعة" />
+	<subject code="BGF" text="السيرة الشخصية: الفن والترفيه" />
+	<subject code="BGFA" text="السيرة الشخصية الذاتية: الفن والترفيه" />
+	<subject code="BGH" text="السيرة الشخصية: تأريخية، سياسية، عسكرية" />
+	<subject code="BGHA" text="السيرة الشخصية الذاتية: تأريخية، سياسية، عسكرية" />
+	<subject code="BGL" text="السيرة الشخصية: الأدب" />
+	<subject code="BGLA" text="السيرة الشخصية الذاتية: الأدب" />
+	<subject code="BGR" text="السيرة الشخصية: الملوك" />
+	<subject code="BGRA" text="السيرة الشخصية الذاتية: الملوك" />
+	<subject code="BGS" text="السيرة الشخصية: الرياضة" />
+	<subject code="BGSA" text="السيرة الشخصية الذاتية: الرياضة" />
+	<subject code="BGT" text="السيرة الشخصية: العلوم، التقنية، الطب" />
+	<subject code="BGTA" text="السيرة الشخصية الذاتية: العلوم، التقنية، الطب" />
+	<subject code="BGX" text="السيرة الشخصية: الدين والروحانيات" />
+	<subject code="BGXA" text="السيرة الشخصية الذاتية: الدين والروحانيات" />
+	<subject code="BJ" text="المذكرات، الرسائل، والصحف" />
+	<subject code="BK" text="السير الشخصية التي تم جمعها" />
+	<subject code="BM" text="المذكرات" />
+	<subject code="BT" text="قصص حقيقية" />
+	<subject code="BTC" text="جرائم حقيقية" />
+	<subject code="BTH" text="قصص حقيقية: استكشافية / تأريخية / علمية" />
+	<subject code="BTM" text="قصص حربية وقتالية حقيقية" />
+	<subject code="BTP" text="قصص حقيقية للبطولات، الجلد، البقاء على قيد الحياة" />
+	<subject code="BTX" text="قصص حقيقية لاعترافات مثيرة" />
+	<subject code="C" text="اللغة" />
+	<subject code="CB" text="اللغة: مراجع عامة" />
+	<subject code="CBD" text="قواميس" />
+	<subject code="CBDX" text="قواميس ثنائية ومتعددة اللغات" />
+	<subject code="CBF" text="المعاجم" />
+	<subject code="CBG" text="إرشادات الاستعمال اللغوي والنحوي" />
+	<subject code="CBP" text="إرشادات الخطابة" />
+	<subject code="CBV" text="الكتابة الإبداعية وإرشاداتها" />
+	<subject code="CBVS" text="تقنيات كتابة السيناريو" />
+	<subject code="CBW" text="إرشادات الكتابة والتحرير" />
+	<subject code="CBWJ" text="إرشادات الأنماط الصحفية" />
+	<subject code="CBWT" text="الكتابة الفنية" />
+	<subject code="CBX" text="اللغة: الأعمال التأريخية والعامة" />
+	<subject code="CF" text="علم اللغة" />
+	<subject code="CFA" text="فلسفة اللغة" />
+	<subject code="CFB" text="علم اللغة الاجتماعي" />
+	<subject code="CFC" text="معرفة القراءة والكتابة" />
+	<subject code="CFD" text="علم اللغة النفسي" />
+	<subject code="CFDC" text="اكتساب اللغة" />
+	<subject code="CFDM" text="الثنائية اللغوية وتعدد اللغات" />
+	<subject code="CFF" text="علم اللغة التأريخي والمقارن" />
+	<subject code="CFFD" text="اللهجة، اللغات العامية والرطانة" />
+	<subject code="CFG" text="علم الدلالة، تحليل الخطاب... الخ." />
+	<subject code="CFGA" text="علم الدلالة والبراغماتية" />
+	<subject code="CFGR" text="تحليل الخطاب" />
+	<subject code="CFH" text="الصوتيات، علم الأصوات" />
+	<subject code="CFK" text="النحو وبناء الجمل والصرف" />
+	<subject code="CFL" text="علم الخطاطة (تأريخ الكتابة)" />
+	<subject code="CFLA" text="أنظمة الكتابة، الحروف الهجائية" />
+	<subject code="CFM" text="الصناعة المعجمية" />
+	<subject code="CFP" text="الترجمة والتأويل" />
+	<subject code="CFX" text="اللغويات الحاسوبية" />
+	<subject code="CFZ" text="لغات الإشارة، طريقة بريل للمكفوفين وغيرها من وسائل التواصل اللغوية" />
+	<subject code="CJ" text="تدريس وتعليم اللغة (من غير تعليم اللغة الإنجليزية)" />
+	<subject code="CJA" text="نظريات تعليم اللغة وطرقها" />
+	<subject code="CJB" text="تعليم اللغة والمواد التعليمية والدورات الدراسية" />
+	<subject code="CJBG" text="النحو ومفردات اللغة" />
+	<subject code="CJBR" text="قراء اللغة" />
+	<subject code="CJBT" text="إختبارات التعلم الذاتي للغة" />
+	<subject code="CJBV" text="تعلم اللغة: السمعمرئي ومتعدد الوسائط" />
+	<subject code="CJC" text="تعلم اللغة: مهارات خاصة" />
+	<subject code="CJCK" text="مهارات التحدث واللفظ" />
+	<subject code="CJCL" text="مهارات الإصغاء" />
+	<subject code="CJCR" text="مهارات القراءة" />
+	<subject code="CJCW" text="مهارات الكتابة" />
+	<subject code="D" text="الأدب والدراسات الأدبية" />
+	<subject code="DB" text="النصوص الكلاسيكية" />
+	<subject code="DC" text="الشعر" />
+	<subject code="DCF" text="أشعار شعراء منفردين" />
+	<subject code="DCQ" text="المختارات الشعرية (مختلف الشعراء)" />
+	<subject code="DD" text="المسرحيات، النصوص المسرحية" />
+	<subject code="DDS" text="مسرحيات شكسبير" />
+	<subject code="DN" text="النثر: غير الروائي" />
+	<subject code="DNF" text="المقالات الأدبية" />
+	<subject code="DNJ" text="التحقيق الصحفي، صحافة منتخبة" />
+	<subject code="DNS" text="الخطب" />
+	<subject code="DQ" text="المقتطفات الأدبية (لا شعرية)" />
+	<subject code="DS" text="الأدب: التأريخ والنقد" />
+	<subject code="DSA" text="نظرية الأدب" />
+	<subject code="DSB" text="دراسات أدبية: عامة" />
+	<subject code="DSBB" text="دراسات أدبية: كلاسيكية، متقدمة، ومن العصور الوسطى" />
+	<subject code="DSBD" text="دراسات أدبية: 1500 حتى 1800" />
+	<subject code="DSBF" text="دراسات أدبية: 1800 حتى 1900 " />
+	<subject code="DSBH" text="دراسات أدبية: من 1900 -" />
+	<subject code="DSBH5" text="دراسات أدبية: أدب مرحلة ما بعد الاستعمار" />
+	<subject code="DSC" text="دراسات أدبية: الشعر والشعراء" />
+	<subject code="DSG" text="دراسات أدبية: المسرحيات والكتاب المسرحيين" />
+	<subject code="DSGS" text="دراسات شكسبير النقدية" />
+	<subject code="DSK" text="دراسات أدبية: الرواية والروائيين وكتاب النثر" />
+	<subject code="DSR" text="المراجع الأدبية" />
+	<subject code="DSRC" text="صحابة الأدب، مراجعات كتبه والأدلته" />
+	<subject code="DSY" text="دراسات أدب الأطفال والمراهقين" />
+	<subject code="DSYC" text="مراجعات الكتب وأدلة أدب الأطفال والمراهقين" />
+	<subject code="E" text="تعليم اللغة الإنجليزية (تعليم اللغة الإنجليزية:)" />
+	<subject code="EB" text="تعليم اللغة الإنجليزية: معلومات أساسية ومواد مرجعية" />
+	<subject code="EBA" text="تعليم اللغة الإنجليزية: نظرية التعليم وطرقه" />
+	<subject code="EBAL" text="اللغويات التطبيقية لتعليم اللغة الإنجليزية" />
+	<subject code="EBAR" text="تعليم اللغة الإنجليزية: مصادر الكتب للتدريسيين" />
+	<subject code="EBD" text="تعليم اللغة الإنجليزية: القواميس والمراجع" />
+	<subject code="EL" text="تعليم اللغة الإنجليزية: مواد التعليم والدورات الدراسية" />
+	<subject code="ELG" text="تعليم اللغة الإنجليزية: القواعد، المفردات، واللفظ" />
+	<subject code="ELGG" text="تعليم اللغة الإنجليزية: القواعد" />
+	<subject code="ELGP" text="تعليم اللغة الإنجليزية: التلفظ" />
+	<subject code="ELGV  " text="تعليم اللغة الإنجليزية: مفردات اللغة" />
+	<subject code="ELH" text="تعليم اللغة الإنجليزية: القراء المتدرجون" />
+	<subject code="ELHB" text="تعليم اللغة الإنجليزية: قراء النتاجات غير الروائية والمعلومات الأساسية" />
+	<subject code="ELHF" text="تعليم اللغة الإنجليزية: قراء الأدب والرواية" />
+	<subject code="ELM" text="تعليم اللغة الإنجليزية: مواد ومصادر من غير الكتب" />
+	<subject code="ELP" text="تعليم اللغة الإنجليزية:المصنفات، وكتب التمارين" />
+	<subject code="ELS" text="تعليم اللغة الإنجليزية: نصوص الدراسة الذاتية" />
+	<subject code="ELV" text="تعليم اللغة الإنجليزية: اختبارات تمارين الفحص" />
+	<subject code="ELX" text="تعليم اللغة الإنجليزية: مهارات خاصة" />
+	<subject code="ELXD" text="تعليم اللغة الإنجليزية: مهارات التحدث" />
+	<subject code="ELXG" text="تعليم اللغة الإنجليزية: مهارات الإصغاء" />
+	<subject code="ELXJ" text="تعليم اللغة الإنجليزية: مهارات القراءة" />
+	<subject code="ELXN" text="تعليم اللغة الإنجليزية: مهارات الكتابة" />
+	<subject code="ES" text="تعليم اللغة الإنجليزية: الإنجليزية لأغراض خاصة" />
+	<subject code="ESB" text="تعليم اللغة الإنجليزية: الإنجليزية للأعمال" />
+	<subject code="ESF" text="تعليم اللغة الإنجليزية: الإنجليزية لأغراض أكاديمية" />
+	<subject code="EST" text="تعليم اللغة الإنجليزية: الإنجليزية لأغراض تقنية وعلمية" />
+	<subject code="ESV" text="تعليم اللغة الإنجليزية: الإنجليزية للسفر والمواصلات" />
+	<subject code="F" text="الرواية وما يتعلق بها" />
+	<subject code="FA" text="الرواية الحديثة والمعاصرة (ما بعد عام 1945)" />
+	<subject code="FC" text="الرواية الكلاسيكية (ما قبل 1945)" />
+	<subject code="FF" text="الجريمة والغموض" />
+	<subject code="FFC" text="الجريمة الكلاسيكية" />
+	<subject code="FFH" text="الألغاز التاريخية" />
+	<subject code="FH" text="الإثارة / التشويق" />
+	<subject code="FHD" text="التجسس وأفلام الجاسوسية" />
+	<subject code="FHP" text="الأفلام السياسية والقانونية" />
+	<subject code="FJ" text="المغامرة" />
+	<subject code="FJH" text="المغامرة التأريخية" />
+	<subject code="FJM" text="روايات الحرب والقتال" />
+	<subject code="FJMC" text="روايات حروب نابلويون" />
+	<subject code="FJMF" text="روايات الحرب العالمية الأولى" />
+	<subject code="FJMS" text="روايات الحرب العالمية الثانية" />
+	<subject code="FJMV" text="روايات حرب فيتنام" />
+	<subject code="FJW" text="أفلام الغرب" />
+	<subject code="FK" text="قصص الرعب والأشباح" />
+	<subject code="FKC" text="الرعب الكلاسيكي وقصص الأشباح" />
+	<subject code="FL" text="الخيال العلمي" />
+	<subject code="FLC" text="الخيال العلمي الكلاسيكي" />
+	<subject code="FLS" text="أوبرا الفضاء" />
+	<subject code="FM" text="الخيال" />
+	<subject code="FMR" text="الرومانسية الخيالية" />
+	<subject code="FP" text="الرواية المثيرة" />
+	<subject code="FQ" text="الخرافة والأسطورة المروية بشكل رواية" />
+	<subject code="FR" text="قصة الحب" />
+	<subject code="FRD" text="الرومانسية المعاصرة والبالغين" />
+	<subject code="FRH" text="الرومانسية التأريخية" />
+	<subject code="FT" text="الملاحم" />
+	<subject code="FV" text="الرواية التأريخية" />
+	<subject code="FW" text="الرواية الدينية والروحانية" />
+	<subject code="FX" text="الروايات المصورة" />
+	<subject code="FXA" text="الروايات المصورة: المانغا" />
+	<subject code="FXL" text="الروايات المصورة: الأدب والمذكرات" />
+	<subject code="FXS" text="الروايات المصورة: الأبطال الخارقون وأوغد الأشرار" />
+	<subject code="FXZ" text="الروايات المصورة: قصص حقيقية لا روائية" />
+	<subject code="FY" text="الرواية: مزايا خاصة" />
+	<subject code="FYB" text="القصص القصيرة" />
+	<subject code="FYT" text="الرواية في الترجمة" />
+	<subject code="FZ" text="الفقرات المتعلقة بالرواية" />
+	<subject code="FZC" text="أصحاب الروايات" />
+	<subject code="FZG" text="الروايات المصورة: التأريخ والنقد" />
+	<subject code="G" text="المعلومات المرجعية وموضوعات متعددة التخصصات" />
+	<subject code="GB" text="الموسوعات والأعمال المرجعية" />
+	<subject code="GBA" text="الموسوعات العامة" />
+	<subject code="GBC" text="الأعمال المرجعية" />
+	<subject code="GBCB" text="قواميس التراجم (من هو من)" />
+	<subject code="GBCQ" text="قواميس الاقتباسات" />
+	<subject code="GBCR" text="فهرس المراجع والكتالوجات" />
+	<subject code="GBCS" text="المسلسلات والدوريات، والملخصات، والفهارس" />
+	<subject code="GBCT" text="القواميس" />
+	<subject code="GBCY" text="الكتب السنوية، الحولية، التقاويم" />
+	<subject code="GBG" text="المراجع الجغرافية" />
+	<subject code="GBGM" text="أطالس العالم / خرائط العالم" />
+	<subject code="GBGP" text="أسماء الأماكن والمعاجم الجغرافية" />
+	<subject code="GL" text="علوم المكتبات والمعلومات" />
+	<subject code="GLC" text="إدارة المكتبات والمحفوظات والمعلومات" />
+	<subject code="GLF" text="تقنيات المعلومات، مصادر الكترونية ومن الإنترنت في المكتبات" />
+	<subject code="GLH" text="تطور الاستحواذ والجمع" />
+	<subject code="GLK" text="السيطرة على السير الشخصية والموضوعية" />
+	<subject code="GLM" text="خدمات المكتبات والمعلومات" />
+	<subject code="GLMA" text="المكتبات الأكاديمية والمتخصصة" />
+	<subject code="GLMB" text="المكتبات العامة" />
+	<subject code="GLMC" text="مكتبات المدارس وخدمات القراء اليافعين" />
+	<subject code="GLMG" text="الخدمات المرجعية" />
+	<subject code="GLML" text="خدمات التداول (مثل: الإعارة بين المكتبات)" />
+	<subject code="GLMX" text="خدمات المجتمع والتوعية" />
+	<subject code="GLP" text="الأرشفة والحفظ والرقمنة" />
+	<subject code="GM" text="دراسات المتاحف والتراث " />
+	<subject code="GP" text="البحوث والمعلومات: عامة" />
+	<subject code="GPF" text="نظرية المعلومات" />
+	<subject code="GPFC" text="نظرية علم التحكم الآلي والأنظمة" />
+	<subject code="GPH" text="تحليل البيانات: عامة" />
+	<subject code="GPJ" text="نظرية الترميز والتشفير" />
+	<subject code="GPQ" text="نظرية القرار: عامة" />
+	<subject code="GPQD" text="تقدير المخاطر" />
+	<subject code="GPS" text="طرق البحث: عامة" />
+	<subject code="GT" text="دراسات متعددة التخصصات" />
+	<subject code="GTB" text="دراسات دينية" />
+	<subject code="GTC" text="دراسات التواصل" />
+	<subject code="GTE" text="السيميائية / علم الأعراض" />
+	<subject code="GTF" text="دراسات التطور" />
+	<subject code="GTG" text="دراسات عامة" />
+	<subject code="GTH" text="الأعلام والشعارات والرموز" />
+	<subject code="GTJ" text="الدراسات السلام  وحل النزاعات" />
+	<subject code="GTN" text="المجتمعات والمؤسسات المتعلمة: عامة" />
+	<subject code="GTR" text="العلوم المعرفية" />
+	<subject code="H" text="العلوم الإنسانية" />
+	<subject code="HB" text="التأريخ" />
+	<subject code="HBA" text="التأريخ: النظرية والأساليب" />
+	<subject code="HBAH" text="علم التأريخ" />
+	<subject code="HBG" text="التأريخ العام وتأريخ العالم" />
+	<subject code="HBJ" text="التأريخ الوطني والمناطقي" />
+	<subject code="HBJD" text="التأريخ الأوربي" />
+	<subject code="HBJD1" text="التأريخ البريطاني والآيرلندي" />
+	<subject code="HBJF" text="التأريخ الآسوي" />
+	<subject code="HBJF1" text="تأريخ الشرق الأوسط" />
+	<subject code="HBJH" text="تأريخ أفريقيا" />
+	<subject code="HBJK" text="تأريخ القارة الأمريكية" />
+	<subject code="HBJM" text="التأريخ الأسترالي وتأريخ المحيط الهادئ" />
+	<subject code="HBJQ" text="تأريخ البلاد الأخرى" />
+	<subject code="HBL" text="التأريخ: الأزمان الغابرة حتى الوقت الحاضر" />
+	<subject code="HBLA" text="التأريخ القديم: ميلاد المسيح حتى 500" />
+	<subject code="HBLA1" text="التأريخ الكلاسيكي / الحضارة الكلاسيكية" />
+	<subject code="HBLC" text="التأريخ القديم: 500 حتى 1450 / 1500" />
+	<subject code="HBLC1" text="تأريخ العصور الوسطى" />
+	<subject code="HBLH" text="التأريخ الحديث المتقدم: 1450 / 1500 حتى 1700" />
+	<subject code="HBLL" text="التأريخ الحديث حتى القرن العشرين: 1700 حتى 1900" />
+	<subject code="HBLW" text="تأريخ القرن العشرين: 1900  حتى 2000" />
+	<subject code="HBLW3" text="تأريخ القرن العشرين ما بعد الحرب، من 1945 حتى 2000" />
+	<subject code="HBLX" text="تأريخ القرن الحادي والعشرين: من 2000 -" />
+	<subject code="HBT" text="التأريخ: أحداث وموضوعات خاصة" />
+	<subject code="HBTB" text="التأريخ الاجتماعي والثقافي" />
+	<subject code="HBTD" text="التأريخ الشفوي" />
+	<subject code="HBTG" text="علم الأنساب، شعارات النبالة، وأسماء مراتب الشرف" />
+	<subject code="HBTK" text="الثورة الصناعية والتأريخ الصناعي" />
+	<subject code="HBTM" text="تأريخ الملاحة البحرية" />
+	<subject code="HBTP" text="الجغرافية التأريخية" />
+	<subject code="HBTP1" text="الخرائط والأطالس التأريخية" />
+	<subject code="HBTQ" text="الاستعمار والإمبريالية" />
+	<subject code="HBTR" text="التحرر الوطني والاستقلال، مرحلة ما بعد الاستعمار" />
+	<subject code="HBTS" text="العبودية وإلغاء العبودية" />
+	<subject code="HBTV" text="الثورات والانتفاضات وحركات التمرد" />
+	<subject code="HBTV2" text="الثورة الفرنسية" />
+	<subject code="HBTV4" text="الثورة الروسية" />
+	<subject code="HBTW" text="الحرب الباردة" />
+	<subject code="HBTZ" text="الإبادة الجماعية والتطهير العرقي" />
+	<subject code="HBTZ1" text="محرقة اليهود" />
+	<subject code="HBW" text="التأريخ العسكري" />
+	<subject code="HBWC" text="الصليبيون" />
+	<subject code="HBWE" text="الحرب الأهلية الإنجليزية" />
+	<subject code="HBWF" text="حرب الاستقلال الأمريكية" />
+	<subject code="HBWH" text="حروب نابليون" />
+	<subject code="HBWJ" text="الحرب الأهلية الأمريكية" />
+	<subject code="HBWL" text="حرب القرم" />
+	<subject code="HBWM" text="حروب البوير" />
+	<subject code="HBWN" text="الحرب العالمية الأولى" />
+	<subject code="HBWP" text="الحرب الأهلية الإسبانية" />
+	<subject code="HBWQ" text="الحرب العالمية الثانية" />
+	<subject code="HBWS" text="التأريخ العسكري: نزاعات ما بعد الحرب العالمية الثانية" />
+	<subject code="HBWS1" text="الحرب الكورية" />
+	<subject code="HBWS2" text="حرب فيتنام" />
+	<subject code="HBWS3" text="حرب الخليج" />
+	<subject code="HBWS4" text="حرب أفغانستان" />
+	<subject code="HBWS5" text="حرب العراق" />
+	<subject code="HD" text="علم الآثار" />
+	<subject code="HDA" text="النظرية الأثرية" />
+	<subject code="HDD" text="علم الآثار حسب المكان والزمان" />
+	<subject code="HDDA" text="علم آثار ما قبل التاريخ" />
+	<subject code="HDDC" text="علم آثار الشرق الأوسط والشرق الأدنى" />
+	<subject code="HDDG" text="علم الآثار المصرية" />
+	<subject code="HDDH" text="علم الآثار التوراتي" />
+	<subject code="HDDK" text="علم الآثار اليونانية والرومانية الكلاسيكي" />
+	<subject code="HDDM" text="علم الآثار الأوروبية في العصور الوسطى" />
+	<subject code="HDL" text="علم آثار المناظر الطبيعية" />
+	<subject code="HDP" text="علم آثار البيئة" />
+	<subject code="HDR" text="علم آثار ما تحت الماء" />
+	<subject code="HDT" text="علم الآثار الصناعي" />
+	<subject code="HDW" text="علم الآثار، الأساليب والتقنيات" />
+	<subject code="HP" text="الفلسفة" />
+	<subject code="HPC" text="تأريخ الفلسفة الغربية" />
+	<subject code="HPCA" text="الفلسفة الغربية: القديمة حتى عام 500" />
+	<subject code="HPCB" text="الفلسفة الغربية: العصور الوسطى وعصر النهضة، 500 حتى 1600" />
+	<subject code="HPCD" text="الفلسفة الغربية: 1600 حتى 1900" />
+	<subject code="HPCD1" text="الفلسفة الغربية: عصر التنوير" />
+	<subject code="HPCF" text="الفلسفة الغربية، من 1900 -" />
+	<subject code="HPCF3" text="علم الظواهر والوجودية" />
+	<subject code="HPCF5" text="الفلسفة التحليلية والوضعية المنطقية" />
+	<subject code="HPCF7" text="اللابنيوية، البنيوية، ما بعد البنيوية" />
+	<subject code="HPD" text="الفلسفة اللاغربية" />
+	<subject code="HPDC" text="الفلسفة العربية والإسلامية" />
+	<subject code="HPDF" text="الفلسفة الشرقية والهندية" />
+	<subject code="HPJ" text="الفلسفة: ما وراء الطبيعة وعلم الوجود" />
+	<subject code="HPK" text="الفلسفة: نظرية المعرفة" />
+	<subject code="HPL" text="الفلسفة: المنطق" />
+	<subject code="HPM" text="فلسفة العقل" />
+	<subject code="HPN" text="الفلسفة: علم الجمال" />
+	<subject code="HPQ" text="الاخلاقيات والفلسفة الأخلاقية" />
+	<subject code="HPS" text="الفلسفة الاجتماعية والسياسية" />
+	<subject code="HPX" text="الفلسفة الشعبية" />
+	<subject code="HR" text="الدين والمعتقدات" />
+	<subject code="HRA" text="الدين: عامة" />
+	<subject code="HRAB" text="فلسفة الدين" />
+	<subject code="HRAB1" text="الطبيعة ووجود الله" />
+	<subject code="HRAC" text="مقارنة الأديان" />
+	<subject code="HRAF" text="العلاقات بين الأديان" />
+	<subject code="HRAM" text="القضايا والمناظرات الدينية" />
+	<subject code="HRAM1" text="الأخلاقيات الدينية" />
+	<subject code="HRAM2" text="الدين والسياسة" />
+	<subject code="HRAM3" text="الدين والعلم" />
+	<subject code="HRAM6" text="الأصولية الدينية" />
+	<subject code="HRAM7 " text="التجديف، الهرطقة والردة" />
+	<subject code="HRAM9" text="التعصب  والاضطهاد والصراع الديني" />
+	<subject code="HRAX" text="تأريخ الدين" />
+	<subject code="HRC" text="المسيحية" />
+	<subject code="HRCA" text="المسيح تأريخياً" />
+	<subject code="HRCC" text="الكنائس والطوائف المسيحية" />
+	<subject code="HRCC1" text="الكنيسة الأولى" />
+	<subject code="HRCC2" text="تأريخ الكنيسة" />
+	<subject code="HRCC7" text="الرومانية الكاثوليكية، وكنيسة الروم الكاثوليك" />
+	<subject code="HRCC8" text="الأرثوذكسية والكنائس الشرقية" />
+	<subject code="HRCC9" text="البروتستانتية والكنائس البروتستانتية" />
+	<subject code="HRCC91" text="الأنجليكانية، الكنائس الأسقفية، كنيسة انجلترا" />
+	<subject code="HRCC92" text="الكنائس المعمدانية" />
+	<subject code="HRCC93" text="الكالفيني، واصلاح الكنائس المشيخية" />
+	<subject code="HRCC95" text="الكنائس الميثودية" />
+	<subject code="HRCC96" text="الكنائس الخمسينية" />
+	<subject code="HRCC97" text="الكويكرز (جمعية الأصدقاء الدينية)" />
+	<subject code="HRCC99" text="المعتزلة وغيرها من الكنائس الإنجيلية" />
+	<subject code="HRCF" text="الأناجيل" />
+	<subject code="HRCF1" text="العهد القديم" />
+	<subject code="HRCF2" text="العهد الجديد" />
+	<subject code="HRCG " text="دراسات وتفسير الكتاب المقدس" />
+	<subject code="HRCG1 " text="التعليقات في الكتاب المقدس" />
+	<subject code="HRCG2" text="جداول تقابل الكتاب المقدس" />
+	<subject code="HRCG3 " text="تفسير وتأويل الكتاب المقدس" />
+	<subject code="HRCG7 " text="دراسات الإنجيل: للدراسة الفردية أو للمجموعات الصغيرة" />
+	<subject code="HRCG9" text="قراءات الإنجيل، مختارات وتأملات" />
+	<subject code="HRCJ" text="الحركة المسكونية" />
+	<subject code="HRCL" text="القداس المسيحي، كتب الصلوات والتراتيل الدينية" />
+	<subject code="HRCL1" text="كتب الصلوات المسيحية" />
+	<subject code="HRCL2" text="التراتيل الدينية المسيحية" />
+	<subject code="HRCM" text="اللاهوت المسيحي" />
+	<subject code="HRCP" text="الخطب المسيحية" />
+	<subject code="HRCR" text="العبادات ، الطقوس والاحتفالات المسيحية" />
+	<subject code="HRCR1" text="الصلاة المسيحية" />
+	<subject code="HRCS" text="الروحانية والتجربة الدينية المسيحية" />
+	<subject code="HRCS1" text="التصوف المسيحي" />
+	<subject code="HRCV" text="الحياة والممارسات المسيحية" />
+	<subject code="HRCV1" text="الطقوس الدينية المسيحية" />
+	<subject code="HRCV2" text="التعاليم المسيحية" />
+	<subject code="HRCV3" text="المجالس المسيحية" />
+	<subject code="HRCV4" text="الجوانب المسيحية للحياة الجنسية والجنس والعلاقات الجنسية" />
+	<subject code="HRCV9" text="الشهادة المسيحية الشخصية وأعمال إلهامية شعبية" />
+	<subject code="HRCX" text="المؤسسات والمنظمات المسيحية" />
+	<subject code="HRCX1" text="القادة والقيادات المسيحية" />
+	<subject code="HRCX4" text="الوزارة المسيحية والنشاط الرعوي" />
+	<subject code="HRCX6" text="الفكر الاجتماعي والنشاط المسيحي" />
+	<subject code="HRCX7" text="الرسالة والتبشير المسيحي" />
+	<subject code="HRCX8" text="المجتمعات المسيحية والرهبنة" />
+	<subject code="HRCZ" text="المسيحية والطوائف والمذاهب شبه المسيحية" />
+	<subject code="HRE" text="البوذية" />
+	<subject code="HREC" text="العبادة البوذية، الطقوس والاحتفالات" />
+	<subject code="HREP" text="الحياة والممارسات البوذية" />
+	<subject code="HRES" text="النصوص البوذية المقدسة" />
+	<subject code="HREX" text="البوذية التبتية" />
+	<subject code="HREZ" text="البوذية الزينية" />
+	<subject code="HRG" text="الهندوسية" />
+	<subject code="HRGC" text="العبادة الهندوسية، الطقوس والاحتفالات" />
+	<subject code="HRGP" text="الحياة والممارسات الهندوسية" />
+	<subject code="HRGS" text="النصوص الهندوسية المقدسة" />
+	<subject code="HRH" text="الإسلام" />
+	<subject code="HRHC" text="العبادة الإسلامية، الطقوس والاحتفالات" />
+	<subject code="HRHP" text="الحياة والممارسات الإسلامية" />
+	<subject code="HRHS" text="القرآن" />
+	<subject code="HRHT" text="اللاهوت الإسلامي" />
+	<subject code="HRHX" text="الصوفية والتصوف الإسلامي" />
+	<subject code="HRJ" text="الديانة اليهودية" />
+	<subject code="HRJC" text="الديانة العبادة الهندوسية، الطقوس والاحتفالات" />
+	<subject code="HRJP" text="الديانة اليهودية: الحياة والممارسات" />
+	<subject code="HRJS" text="الديانة اليهودية: النصوص المقدسة" />
+	<subject code="HRJT" text="الديانة اليهودية: اللاهوت" />
+	<subject code="HRJX" text="الديانة اليهودية: التصوف" />
+	<subject code="HRK" text="ديانات أخرى لا مسيحية" />
+	<subject code="HRKB" text="البهائية" />
+	<subject code="HRKJ" text="اليانية" />
+	<subject code="HRKN" text="الأديان الشرقية" />
+	<subject code="HRKN1" text="الكونفشيوسية" />
+	<subject code="HRKN3" text="الشنتوية" />
+	<subject code="HRKN5" text="الطاوية" />
+	<subject code="HRKP" text="الأديان  والأساطير القديمة" />
+	<subject code="HRKP1" text="الديانة والأساطير المصرية القديمة" />
+	<subject code="HRKP2" text="الكيلتي: الديانة والأساطير" />
+	<subject code="HRKP3" text="الديانة والأساطير اليونانية القديمة" />
+	<subject code="HRKP4" text="الديانة والأساطير الرومانية" />
+	<subject code="HRKP5" text="الديانة والأساطير الإسكندنافية" />
+	<subject code="HRKS" text="السيخية" />
+	<subject code="HRKT" text="الديانات القبلية" />
+	<subject code="HRKZ" text="الزرادشتية" />
+	<subject code="HRL" text="جوانب الدين (غير المسيحي)" />
+	<subject code="HRLB" text="علم اللاهوت" />
+	<subject code="HRLC" text="النصوص المقدسة" />
+	<subject code="HRLC1" text="انتقادات وتفاسير النصوص المقدسة" />
+	<subject code="HRLD" text="الصلوات والمواد الطقوسية" />
+	<subject code="HRLF" text="العبادة والطقوس والاحتفالات" />
+	<subject code="HRLF9" text="الصلاة" />
+	<subject code="HRLK" text="الممارسات الدينية والروحية" />
+	<subject code="HRLK2" text="التصوف" />
+	<subject code="HRLM" text="الحياة والممارسات الدينية" />
+	<subject code="HRLM3" text="التعاليم الدينية" />
+	<subject code="HRLM5" text="الإرشاد الديني" />
+	<subject code="HRLM7" text="جوانب دينية عن الجنس والعلاقات الجنسية" />
+	<subject code="HRLP" text="المؤسسات والمنظمات الدينية" />
+	<subject code="HRLP1" text="القادة الدينيون والروحيون" />
+	<subject code="HRLP5" text="المجتمع والفكر الرعوي والنشاط الديني" />
+	<subject code="HRLP7" text="المجتمعات الدينية والرهبنة" />
+	<subject code="HRQ" text="أنظمة اعتقادية بديلة" />
+	<subject code="HRQA" text="الإنسانية والبدائل العلمانية للدين" />
+	<subject code="HRQA5" text="اللاأدرية والإلحاد" />
+	<subject code="HRQC" text="النظم العقائدية الانتقائية والديانات الباطنية" />
+	<subject code="HRQC1" text="مذهب الغنوسطية" />
+	<subject code="HRQC5" text="التصوف وعلم طبائع البشر" />
+	<subject code="HRQM" text="المذاهب المعاصرة غير المسيحية والطوائف شبه المسيحية" />
+	<subject code="HRQM2" text="الروحانيات" />
+	<subject code="HRQX" text="دراسات التنجيم" />
+	<subject code="HRQX2" text="فكر السحر والكيمياء والفكر المغلق" />
+	<subject code="HRQX5" text="الشعوذة" />
+	<subject code="HRQX9" text="عبادة الشيطان ودراسة الشياطين" />
+	<subject code="J" text="المجتمع والعلوم الاجتماعية" />
+	<subject code="JF" text="المجتمع والثقافة: عامة" />
+	<subject code="JFC" text="دراسات ثقافية" />
+	<subject code="JFCA" text="الثقافة الشعبية" />
+	<subject code="JFCD" text="الثقافة المادية" />
+	<subject code="JFCK" text="الأزياء والمجتمع" />
+	<subject code="JFCV" text="الغذاء والمجتمع" />
+	<subject code="JFCX" text="تأريخ الأفكار" />
+	<subject code="JFD" text="الدراسات الإعلامية" />
+	<subject code="JFDT" text="التلفاز والمجتمع" />
+	<subject code="JFDV" text="الإعلانات والمجتمع" />
+	<subject code="JFF" text="قضايا وعمليات اجتماعية" />
+	<subject code="JFFA" text="الفقر والبطالة" />
+	<subject code="JFFB" text="الإسكان والتشرد" />
+	<subject code="JFFC" text="التأثير الاجتماعي للكوارث" />
+	<subject code="JFFC1" text="المجاعة" />
+	<subject code="JFFD" text="اللاجئون واللجوء السياسي" />
+	<subject code="JFFE" text="العنف في المجتمع" />
+	<subject code="JFFE1" text="سوء معاملة الأطفال" />
+	<subject code="JFFE2" text="الاعتداء والتحرش الجنسي" />
+	<subject code="JFFE3" text="العنف المنزلي" />
+	<subject code="JFFG" text="الإعاقة: جوانب اجتماعية" />
+	<subject code="JFFH" text="المرض والإدمان: جوانب اجتماعية" />
+	<subject code="JFFH1" text="المخدرات وتعاطي المخدرات: جوانب اجتماعية" />
+	<subject code="JFFH2" text="متلازمة نقص المناعة المكتسب / الأيدز: جوانب اجتماعية" />
+	<subject code="JFFJ" text="التمييز واللا مساواة الاجتماعية" />
+	<subject code="JFFK" text="الحركة النسوية ونظرية المساواة بين الجنسين" />
+	<subject code="JFFL" text="اللياقة السياسية" />
+	<subject code="JFFM" text="الحراك الاجتماعي" />
+	<subject code="JFFN" text="الترحيل والهجرة والنزوح" />
+	<subject code="JFFP" text="التواصل الاجتماعي" />
+	<subject code="JFFR" text="التنبؤ الاجتماعي، الدراسات المستقبلية" />
+	<subject code="JFFS" text="العلولمة" />
+	<subject code="JFFT" text="النزعة الاستهلاكية" />
+	<subject code="JFFU" text="قضايا السلامة العامة" />
+	<subject code="JFFX" text="الفساد في المجتمع" />
+	<subject code="JFFZ" text="الحيوانات والمجتمع" />
+	<subject code="JFH" text="المعتقدات العامة والمعرفة المثيرة للجدل" />
+	<subject code="JFHC" text="نظريات المؤامرة" />
+	<subject code="JFHF" text="التراث الشعبي والأساطير والخرافات" />
+	<subject code="JFHX" text="الخدع والمغالطات" />
+	<subject code="JFM" text="القضايا والمناظرات الأخلاقية" />
+	<subject code="JFMA" text="قضايا عرقية: الإجهاض والسيطرة على النسل" />
+	<subject code="JFMC" text="قضايا عرقية: عقوبة الإعدام" />
+	<subject code="JFMD" text="قضايا عرقية: فرض الرقابة" />
+	<subject code="JFME" text="قضايا عرقية: القتل الرحيم وحق الموت" />
+	<subject code="JFMG" text="قضايا عرقية: التطورات التقنية والعلمية" />
+	<subject code="JFMP" text="قضايا عرقية: الإباحية والفاحشة" />
+	<subject code="JFMX" text="قضايا عرقية: الدعارة وتجارة الجنس" />
+	<subject code="JFS" text="الفئات الاجتماعية" />
+	<subject code="JFSC" text="الطبقات الاجتماعية" />
+	<subject code="JFSF" text="المجتمعات الريفية" />
+	<subject code="JFSG" text="المجتمعات الحضرية" />
+	<subject code="JFSJ" text="الدراسات الجنسانية وجماعات الجنسين" />
+	<subject code="JFSJ1" text="الدراسات الجنسانية: النساء" />
+	<subject code="JFSJ2" text="الدراسات الجنسانية: الرجال" />
+	<subject code="JFSJ5" text="الدراسات الجنسانية: المتحولون جنسياً والخنوثة" />
+	<subject code="JFSK" text="دراسات مثليي الجنس" />
+	<subject code="JFSK1" text="دراسات سحاقية" />
+	<subject code="JFSK2" text="دراسات الشواذ (الرجال المثليين)" />
+	<subject code="JFSL" text="الدراسات العرقية" />
+	<subject code="JFSL1" text="الأقليات العرقية ودراسات الثقافات المتعددة " />
+	<subject code="JFSL3" text="دراسات السود والآسويين" />
+	<subject code="JFSL4" text="دراسات الأصول الاسبانية واللاتينية" />
+	<subject code="JFSL9" text="الشعوب الأصلية" />
+	<subject code="JFSP" text="مجموعات عمرية" />
+	<subject code="JFSP1" text="مجموعات عمرية: الأطفال" />
+	<subject code="JFSP2" text="مجموعات عمرية: المراهقين" />
+	<subject code="JFSP3" text="مجموعات عمرية: البالغين" />
+	<subject code="JFSP31" text="مجموعات عمرية: كبار السن" />
+	<subject code="JFSR" text="مجموعات دينية: جوانب اجتماعية وثقافية" />
+	<subject code="JFSR1" text="دراسات يهودية" />
+	<subject code="JFSR2" text="دراسات إسلامية" />
+	<subject code="JFSS" text="أنماط الحياة البديلة" />
+	<subject code="JFSV" text="فئات اجتماعية: النوادي والجمعيات" />
+	<subject code="JFSV1" text="الماسونية والمجتمعات السرية" />
+	<subject code="JH" text="علم الاجتماع وعلم الإنسان" />
+	<subject code="JHB" text="علم الإجتماع" />
+	<subject code="JHBA" text="النظرية الاجتماعية" />
+	<subject code="JHBC" text="الأبحاث والإحصائيات الاجتماعية" />
+	<subject code="JHBD" text="السكان والتركيبة السكانية" />
+	<subject code="JHBF" text="علم الاجتماع: الولادة" />
+	<subject code="JHBK" text="علم الاجتماع: الأسرة والعلاقات" />
+	<subject code="JHBK5" text="علم الاجتماع: العلاقات الجنسية" />
+	<subject code="JHBL" text="علم الاجتماع: العمل والعمالة" />
+	<subject code="JHBS" text="علم الاجتماع: الرياضة والترفيه" />
+	<subject code="JHBT" text="علم الاجتماع: العادات والتقاليد" />
+	<subject code="JHBZ" text="علم الاجتماع: الموت والاحتضار" />
+	<subject code="JHM" text="علم الانسان" />
+	<subject code="JHMC" text="الأنثروبولوجيا الثقافية، الأعراق والثقافات الاجتماعية" />
+	<subject code="JHMP" text="علم الإنسان الجسدي" />
+	<subject code="JK" text="الخدمات الاجتماعية والرعاية الاجتماعية، وعلم الجريمة" />
+	<subject code="JKS" text="الخدمات الاجتماعية والرعاية الاجتماعية" />
+	<subject code="JKSB" text="أنظمة المنفعة والرعاية الاجتماعية" />
+	<subject code="JKSB1" text="حماية الطفولة" />
+	<subject code="JKSF" text="التبني والتكفل" />
+	<subject code="JKSG" text="العناية بكبار السن" />
+	<subject code="JKSM" text="العناية بالمرضى العقليين" />
+	<subject code="JKSN" text="العمل الاجتماعي" />
+	<subject code="JKSN1" text="الجمعيات الخيرية والخدمات التطوعية والإحسان" />
+	<subject code="JKSN2" text="خدمات النصيحة وتقديم المشورة" />
+	<subject code="JKSR" text="المساعدات وبرامج الإغاثة" />
+	<subject code="JKSW" text="خدمات الطوارئ" />
+	<subject code="JKSW1" text="الشرطة والخدمات الأمنية" />
+	<subject code="JKSW2" text="خدمات الإطفائية" />
+	<subject code="JKSW3" text="خدمات الإسعاف والإنقاذ" />
+	<subject code="JKV" text="الإجرام وعلم الجريمة" />
+	<subject code="JKVC" text="أسباب الجريمة ومنعها" />
+	<subject code="JKVF" text="التحقيق والتحري الجنائي" />
+	<subject code="JKVF1" text="علم الطب الشرعي" />
+	<subject code="JKVG" text="تهريب وتجارة المخدرات" />
+	<subject code="JKVJ" text="جرائم الشارع / الجرائم المسلحة" />
+	<subject code="JKVK" text="جرائم الشركات" />
+	<subject code="JKVM" text="الجريمة المنظمة" />
+	<subject code="JKVP" text="العقاب ومعاملة المجرمين" />
+	<subject code="JKVP1" text="السجون" />
+	<subject code="JKVQ" text="مرتكبو الجرائم" />
+	<subject code="JKVQ1" text="إعادة تأهيل المجرمين" />
+	<subject code="JKVQ2" text="الأحداث الجانحون" />
+	<subject code="JKVS" text="خدمات الوضع تحت المراقبة" />
+	<subject code="JM" text="علم النفس" />
+	<subject code="JMA" text="النظرية النفسية والمدارس الفكرية" />
+	<subject code="JMAF" text="نظرية التحليل النفسي (علم النفس الفرويدي)" />
+	<subject code="JMAJ" text="علم النفس اليونغي والتحليلية" />
+	<subject code="JMAL" text="نظرية السلوك (السلوكية)" />
+	<subject code="JMAN" text="علم النفس الإنساني" />
+	<subject code="JMAQ" text="المدرسة المعرفية، والنظرية المعرفية" />
+	<subject code="JMB" text="المنهجية النفسية" />
+	<subject code="JMBT" text="الإختبار والقياس النفسي" />
+	<subject code="JMC" text="نفسية الطفل والنمو" />
+	<subject code="JMD" text="علم نفس النمو" />
+	<subject code="JMF" text="علم نفس الأسرة" />
+	<subject code="JMG" text="علم نفس الجنس" />
+	<subject code="JMH" text="الفئة الاجتماعية أو علم النفس الجماعي" />
+	<subject code="JMJ" text="المهنية وعلم النفس الصناعي" />
+	<subject code="JMK" text="علم النفس الجنائي أو الطب الشرعي" />
+	<subject code="JML" text="علم النفس التجريبي" />
+	<subject code="JMM" text="الفسيولوجية وعلم النفس العصبي والبيولوجيا النفسية" />
+	<subject code="JMP" text="علم النفس غير الطبيعي" />
+	<subject code="JMQ" text="علم النفس: العواطف" />
+	<subject code="JMR" text="الإدراك وعلم النفس المعرفي" />
+	<subject code="JMRL" text="التعلم" />
+	<subject code="JMRM" text="الذاكرة" />
+	<subject code="JMRN" text="الذكاء والمنطق" />
+	<subject code="JMRP" text="الإدراك" />
+	<subject code="JMS" text="الذات، الأنا والهوية والشخصية" />
+	<subject code="JMT" text="حالات الوعي" />
+	<subject code="JMTC" text="الوعي واللاوعي" />
+	<subject code="JMTD" text="النوم والأحلام" />
+	<subject code="JMTH" text="التنويم المغناطيسي" />
+	<subject code="JMTK" text="الحالات التي تسببها المخدرات" />
+	<subject code="JMU" text="السلوك الجنسي" />
+	<subject code="JMX" text="دراسات التخاطر في على النفس" />
+	<subject code="JN" text="التعليم" />
+	<subject code="JNA" text="الفلسفة ونظرية التعليم" />
+	<subject code="JNAM" text="الغرض الاجتماعي والأخلاقي من التعليم" />
+	<subject code="JNB" text="تأريخ التعليم" />
+	<subject code="JNC" text="علم نفس التعليم" />
+	<subject code="JNF" text="استراتيجيات التعليم وسياساته" />
+	<subject code="JNFD" text="استراتيجيات محو الأمية" />
+	<subject code="JNFG" text="استراتيجيات تعلم الحساب" />
+	<subject code="JNFN" text="التعليم الشامل / التعميم التعليمي" />
+	<subject code="JNFR" text="التعليم متعدد الثقافات" />
+	<subject code="JNH" text="التعليم: الإرشاد والتوجيه التربوي للطلبة" />
+	<subject code="JNHB" text="البلطجة واستراتيجيات مكافحة البلطجة" />
+	<subject code="JNHT" text="التغيب عن المدرسة واستراتيجيات مكافحة التغيب عن المدرسة" />
+	<subject code="JNHX" text="الاستبعادات / الانقطاعات عن المدرسة" />
+	<subject code="JNK" text="تنظيم وإدارة التعليم" />
+	<subject code="JNKA" text="إجراءات القبول" />
+	<subject code="JNKC" text="تخطيط المناهج وتطويرها" />
+	<subject code="JNKD" text="الامتحانات والتقييم" />
+	<subject code="JNKF" text="تفتيش المدارس (التحضير للتفتيش)" />
+	<subject code="JNKG" text="تمويل التعليم ومالية الطالب" />
+	<subject code="JNKH" text="أعضاء هيئة التدريس" />
+	<subject code="JNKH1" text="تقييم المدرس" />
+	<subject code="JNKN" text="الهيئة الساندة اللاتعليمية" />
+	<subject code="JNKP" text="علاقات المدرسة والمجتمع وعلاقات المدرسة والبيت" />
+	<subject code="JNKR" text="مدراء المدارس ومجالس إدارة المدارس" />
+	<subject code="JNKS" text="الطلبة والمنظمات الطلابية" />
+	<subject code="JNL" text="المدارس" />
+	<subject code="JNLA" text="مرحلة ما قبل المدرسة ورياض الأطفال" />
+	<subject code="JNLB" text="الابتدائيات والمدارس المتوسطة" />
+	<subject code="JNLC" text="المدارس الثانوية" />
+	<subject code="JNLP" text="المدارس المستقلة، التعليم الخاص" />
+	<subject code="JNLR" text="المدارس الدينية (العقائدية)" />
+	<subject code="JNM" text="التعليم العالي والتعليم التكميلي والتعليم الجامعي" />
+	<subject code="JNMF" text="كليات التعليم التكميلي" />
+	<subject code="JNMH" text="كليات التعليم العالي" />
+	<subject code="JNMN" text="الجامعات" />
+	<subject code="JNMT" text="تدريب المعلمين" />
+	<subject code="JNP" text="تعليم البالغين، التعليم المستمر" />
+	<subject code="JNQ" text="التعليم المفتوح، التعليم المنزلي، التعليم عن بعد" />
+	<subject code="JNR" text="الإرشاد المهني" />
+	<subject code="JNRV" text="التدريب الصناعي أو المهني" />
+	<subject code="JNS" text="تعليم المجموعات الخاصة والأشخاص ذوي الاحتياجات التعليمية الخاصة" />
+	<subject code="JNSC" text="تعليم الطلبة المعاقين فيزيائياً" />
+	<subject code="JNSC1" text="تعليم الطلاب ضعاف السمع" />
+	<subject code="JNSC2" text="تعليم الطلاب ضعاف البصر" />
+	<subject code="JNSG" text="تعليم الطلاب ذوي صعوبات التعلم الخاصة / الاحتياجات الخاصة" />
+	<subject code="JNSG1" text="تدريس الطلاب المعسرين قرائياً" />
+	<subject code="JNSG2" text="تدريس الطلاب الذين يعانون من التوحد" />
+	<subject code="JNSL" text="تدريس الطلاب ذوي الصعوبات السلوكية والعاطفية. " />
+	<subject code="JNSP" text="تدريس الطلبة الموهوبين" />
+	<subject code="JNSV" text="تعليم الطلبة بالإنجليزية كلغة ثانية" />
+	<subject code="JNT" text="مهارات وتقنيات التعليم" />
+	<subject code="JNU" text="تعليم موضوعات خاصة" />
+	<subject code="JNUM" text="مصادر وموارد صفوف المعلمين" />
+	<subject code="JNV" text="معدات التعليم وتقنياته، التعليم المعان بالحاسوب (CAL)" />
+	<subject code="JNW" text="الأنشطة اللاصفية" />
+	<subject code="JNWT" text="الزيارات العلمية والرحلات الحقلية" />
+	<subject code="JNZ" text="مهارات الدراسة والتعلم: عامة" />
+	<subject code="JP" text="السياسة والحكومة" />
+	<subject code="JPA" text="علم السياسة ونظرياته" />
+	<subject code="JPB" text="السياسات المقارنة" />
+	<subject code="JPF" text="الأيديولوجيات السياسية" />
+	<subject code="JPFB" text="الفوضوية" />
+	<subject code="JPFC" text="الماركسية والشيوعية" />
+	<subject code="JPFF" text="الاشتراكية والأيديولوجيات الديمقراطية اليسارية" />
+	<subject code="JPFK" text="الليبرالية والأيديولوجيات الديمقراطية المركزية" />
+	<subject code="JPFM" text="المحافظية والأيديولوجيات الديمقراطية اليمينية" />
+	<subject code="JPFN" text="النزعة القومية" />
+	<subject code="JPFQ" text="الفاشية والنازية" />
+	<subject code="JPFR" text="الأيديولوجيات الدينية" />
+	<subject code="JPH" text="التركيبة والعمليات السياسية" />
+	<subject code="JPHC" text="الدستور: الحكومة والدولة" />
+	<subject code="JPHF" text="الانتخابات والاستفتاءات" />
+	<subject code="JPHL" text="القادة السياسيون وقيادة الدولة" />
+	<subject code="JPHV" text="الهياكل السياسية: الديمقراطية" />
+	<subject code="JPHX" text="الهياكل السياسية: الشمولية والدكتاتورية" />
+	<subject code="JPL" text="الأحزاب السياسية" />
+	<subject code="JPLM" text="البيانات الرسمية السياسية" />
+	<subject code="JPP" text="الإدارة العامة" />
+	<subject code="JPQ" text="الحكومة المركزية" />
+	<subject code="JPQB" text="سياسات الحكومة المركزية" />
+	<subject code="JPR" text="الحكومة الإقليمية" />
+	<subject code="JPRB" text="سياسات الحكومة الإقليمية" />
+	<subject code="JPS" text="العلاقات الدولية" />
+	<subject code="JPSD" text="الدبلوماسية" />
+	<subject code="JPSF" text="مفاوضات مراقبة السلاح" />
+	<subject code="JPSH" text="التجسس والخدمات السرية" />
+	<subject code="JPSL" text="الجغرافية السياسية" />
+	<subject code="JPSN" text="المؤسسات الدولية" />
+	<subject code="JPSN1" text="الأمم المتحدة ووكالاتها" />
+	<subject code="JPSN2" text="الاتحاد الأوربي والمؤسسات الأوربية" />
+	<subject code="JPV" text="السيطرة والحريات السياسية" />
+	<subject code="JPVH" text="حقوق الإنسان" />
+	<subject code="JPVH1" text="الحقوق المدنية والمواطنة" />
+	<subject code="JPVH2" text="حرية المعلومات وحرية التعبير" />
+	<subject code="JPVH3" text="حقوق ملكية الأرض" />
+	<subject code="JPVH4" text="الحرية الدينية / حرية العبادة" />
+	<subject code="JPVK" text="الرأي العام واستطلاعات الرأي" />
+	<subject code="JPVL" text="الحملات والدعايات السياسية" />
+	<subject code="JPVN" text="الدعاية" />
+	<subject code="JPVR" text="القمع  والاضطهاد السياسي" />
+	<subject code="JPW" text="النشاط السياسي" />
+	<subject code="JPWD" text="مجموعات الضغط وحشد التأييد" />
+	<subject code="JPWF" text="المظاهرات والحركات الاحتجاجية" />
+	<subject code="JPWH" text="المنظمات اللاحكومية (NGOs)" />
+	<subject code="JPWJ" text="التخريب السياسي" />
+	<subject code="JPWL" text="الإرهاب، النضال المسلح" />
+	<subject code="JPWL1" text="الاغتيالات السياسية" />
+	<subject code="JPWL2" text="الهجمات الإرهابية" />
+	<subject code="JPWQ" text="الجماعات والحركات الثورية" />
+	<subject code="JPWS" text="النزاع المسلح" />
+	<subject code="JPZ" text="الفساد السياسي" />
+	<subject code="JW" text="الحروب والدفاع" />
+	<subject code="JWA" text="نظرية الحروب والعلوم العسكرية" />
+	<subject code="JWD" text="القوات البرية والحروب" />
+	<subject code="JWDG" text="القوات غير النظامية أو العصابات والحروب" />
+	<subject code="JWF" text="القوات البحرية والحروب" />
+	<subject code="JWG" text="القوات الجوية والحروب" />
+	<subject code="JWH" text="القوات الخاصة" />
+	<subject code="JWJ" text="الإدارة العسكرية" />
+	<subject code="JWK" text="استراتيجيات الدفاع، التخطيط والبحث" />
+	<subject code="JWKF" text="الاستخبارات العسكرية" />
+	<subject code="JWKT" text="الأساليب العسكرية" />
+	<subject code="JWKW" text="الدفاع المدني" />
+	<subject code="JWL" text="عمليات الحرب والدفاع" />
+	<subject code="JWLF" text="المعارك والحملات العسكرية" />
+	<subject code="JWLP" text="عمليات حفظ السلم" />
+	<subject code="JWM" text="الأسلحة والمعدات" />
+	<subject code="JWMC" text="الأسلحة الكيميائية والبايولوجية" />
+	<subject code="JWMN" text="الأسلحة النووية" />
+	<subject code="JWMV" text="المركبات العسكرية" />
+	<subject code="JWMV1" text="الدبابات والعجلات الأرضية العسكرية" />
+	<subject code="JWMV2" text="السفن الحربية والعسكرية" />
+	<subject code="JWMV3" text="الطائرات الحربية" />
+	<subject code="JWT" text="الحياة والمؤسسات العسكرية" />
+	<subject code="JWTR" text="الأفواج" />
+	<subject code="JWTU" text="اللباس الرسمي والشارات" />
+	<subject code="JWTY" text="النصب التذكارية ولفائف الشرف" />
+	<subject code="JWX" text="قضايا الحرب والدفاع الأخرى" />
+	<subject code="JWXF" text="تجارة السلاح" />
+	<subject code="JWXK" text="جرائم الحرب" />
+	<subject code="JWXN" text="المرتزقة" />
+	<subject code="JWXR" text="أسرى الحرب" />
+	<subject code="JWXT" text="العصيان" />
+	<subject code="JWXV" text="قدامى المحاربين في الجيش" />
+	<subject code="JWXZ" text="مهارات القتال والدفاع وكتيباتها" />
+	<subject code="K" text="الاقتصاد، التمويل، الأعمال والإدارة" />
+	<subject code="KC" text="الاقتصاد" />
+	<subject code="KCA" text="نظرية الاقتصاد وفلسفته" />
+	<subject code="KCB" text="الاقتصاد الكلي" />
+	<subject code="KCBM" text="الاقتصاد النقدي" />
+	<subject code="KCC" text="الاقتصاد الجزئي" />
+	<subject code="KCCD" text="التجارة المحلية" />
+	<subject code="KCD" text="اقتصاديات المنظمات الصناعية" />
+	<subject code="KCF" text="اقتصاد سوق العمل" />
+	<subject code="KCFM" text="التوظيف والبطالة" />
+	<subject code="KCG" text="النمو الاقتصادي" />
+	<subject code="KCH" text="الاقتصاد القياسي" />
+	<subject code="KCHS" text="الإحصائيات الاقتصادية" />
+	<subject code="KCJ" text="التنبؤ الاقتصادي" />
+	<subject code="KCK" text="الاقتصاد السلوكي" />
+	<subject code="KCL" text="الاقتصاد الدولي" />
+	<subject code="KCLF" text="التمويل الدولي" />
+	<subject code="KCLT" text="التجارة الدولية" />
+	<subject code="KCLT1" text="اتفاقيات التجارة" />
+	<subject code="KCM" text="الاقتصاديات النامية والصاعدة" />
+	<subject code="KCN" text="اقتصاديات البيئة" />
+	<subject code="KCP" text="الاقتصاد السياسي" />
+	<subject code="KCQ" text="اقتصاديات الصحة" />
+	<subject code="KCR" text="اقتصاد المنفعة العامة" />
+	<subject code="KCS" text="الأنظمة والهياكل الاقتصادية" />
+	<subject code="KCT" text="الاقتصاد الزراعي" />
+	<subject code="KCU" text="الاقتصاد الحضري" />
+	<subject code="KCX" text="الأزمات والكوارث الاقتصادية والمالية" />
+	<subject code="KCY" text="الاقتصاد الشعبي" />
+	<subject code="KCZ" text="تأريخ الاقتصاد" />
+	<subject code="KF" text="التمويل والمحاسبة" />
+	<subject code="KFC" text="المحاسبة المالية" />
+	<subject code="KFCC" text="محاسبة الكلف" />
+	<subject code="KFCF" text="المحاسبة المالية" />
+	<subject code="KFCM" text="المحاسبة الإدارية ومسك الدفاتر" />
+	<subject code="KFCP" text="المحاسبة المالية العامة" />
+	<subject code="KFCR" text="التقارير المالية والبيانات المالية" />
+	<subject code="KFCX" text="المحاسبة: إرشادات للدراسة والمراجعة" />
+	<subject code="KFF" text="التمويل" />
+	<subject code="KFFD" text="التمويل العام" />
+	<subject code="KFFD1" text="فرض الضرائب" />
+	<subject code="KFFH" text="تمويل الشركات" />
+	<subject code="KFFK" text="الخدمات المصرفية" />
+	<subject code="KFFL" text="الائتمان ومؤسسات الائتمان" />
+	<subject code="KFFM" text="الاستثمار والأوراق المالية" />
+	<subject code="KFFM1" text="السلع الأساسية" />
+	<subject code="KFFM2" text="الأرصدة والأسهم" />
+	<subject code="KFFN" text="التأمين والدراسات الاكتوارية" />
+	<subject code="KFFP" text="المعاشات" />
+	<subject code="KFFR" text="الأملاك والعقارات" />
+	<subject code="KFFX" text="الخدمات المصرفية والتمويل: إرشادات للدراسة والمراجعة" />
+	<subject code="KJ" text="الأعمال والإدارة" />
+	<subject code="KJB" text="دراسات الأعمال: عامة" />
+	<subject code="KJBX" text="الأعمال والإدارة: رشادات للدراسة والمراجعة" />
+	<subject code="KJC" text="استراتيجية الأعمال" />
+	<subject code="KJD" text="الابتكار في مجال الأعمال" />
+	<subject code="KJE" text="التجارة الإلكترونية: الجوانب التجارية" />
+	<subject code="KJF" text="المنافسة التجارية" />
+	<subject code="KJG" text="أخلاقيات العمل والمسؤولية الاجتماعية" />
+	<subject code="KJH" text="روح المبادرة" />
+	<subject code="KJJ" text="الأعمال والبيئة، النهج الصديقة للبيئة " />
+	<subject code="KJK" text="الأعمال التجارية الدولية" />
+	<subject code="KJL" text="المنح والاستشارات للشركات" />
+	<subject code="KJM" text="الإدارة وتقنيات الإدارة" />
+	<subject code="KJMB" text="الإدارة: القيادة والتحفيز" />
+	<subject code="KJMD" text="صنع قرار الإدارة" />
+	<subject code="KJMP" text="إدارة المشاريع" />
+	<subject code="KJMQ" text="ضمان الجودة (QA) وإدارة الجودة الشاملة (TQM)" />
+	<subject code="KJMT" text="إدارة الوقت" />
+	<subject code="KJMV" text="إدارة المجالات الخاصة" />
+	<subject code="KJMV1" text="الميزانية والإدارة المالية" />
+	<subject code="KJMV2" text="الموظفون وإدارة الموارد البشرية" />
+	<subject code="KJMV3" text="إدارة المعرفة" />
+	<subject code="KJMV4" text="إدارة العقارات والممتلكات والمصانع" />
+	<subject code="KJMV5" text="الإنتاج وإدارة مراقبة الجودة" />
+	<subject code="KJMV6" text="إدارة البحث والتطوير" />
+	<subject code="KJMV7" text="إدارة المبيعات والتسويق" />
+	<subject code="KJMV8" text="شراء وإدارة الإمدادات" />
+	<subject code="KJMV9" text="التوزيع وإدارة المخازن" />
+	<subject code="KJN" text="المفاوضات التجارية" />
+	<subject code="KJP" text="الاتصالات التجارية وتقديم العروض" />
+	<subject code="KJQ" text="أنظمة ورياضات الأعمال التجارية" />
+	<subject code="KJR" text="حوكمة الشركات" />
+	<subject code="KJRD" text="المجالس والمديرين: الدور والمسؤوليات" />
+	<subject code="KJRS" text="سكرتارية الشركات: الدور والمسؤوليات" />
+	<subject code="KJS" text="المبيعات والتسويق" />
+	<subject code="KJSA" text="الإعلانات" />
+	<subject code="KJSM" text="أبحاث السوق" />
+	<subject code="KJSP" text="العلاقات العامة" />
+	<subject code="KJSU" text="خدمات المستهلكين" />
+	<subject code="KJT" text="بحوث العمليات" />
+	<subject code="KJU" text="نظرية وسلوك المؤسسات" />
+	<subject code="KJV" text="ملكية وتنظيم الشركات" />
+	<subject code="KJVB" text="عمليات الاستيلاء والاندماج وشراء الشركات" />
+	<subject code="KJVD" text="الخصخصة" />
+	<subject code="KJVF" text="الامتيازات" />
+	<subject code="KJVG" text="الشركات متعددة الجنسيات" />
+	<subject code="KJVN" text="الملكية العامة / التأميم" />
+	<subject code="KJVP" text="الاحتكارات" />
+	<subject code="KJVS" text="الشركات الصغيرة وأصحاب المهن الحرة" />
+	<subject code="KJVT" text="الاستعانة بمصادر خارجية" />
+	<subject code="KJVV" text="المشاريع المشتركة" />
+	<subject code="KJVW" text="ملكية الموظفين والتعاونيات" />
+	<subject code="KJVX" text="منظمات غير ربحية" />
+	<subject code="KJW" text="المكتب ومحل العمل" />
+	<subject code="KJWB" text="إدارة المكاتب" />
+	<subject code="KJWF" text="أنظمة المكاتب ومعداتها" />
+	<subject code="KJWS" text="المهارات السكرتارية والمكتبية" />
+	<subject code="KJWX" text="أنماط العمل وممارساتها" />
+	<subject code="KJZ" text="تأريخ شركات معينة / تأريخ الشركات" />
+	<subject code="KN" text="دراسات الصناعة ودراسات صناعية" />
+	<subject code="KNA" text="الصناعات الأولية" />
+	<subject code="KNAC" text="الزراعة والصناعات ذات الصلة" />
+	<subject code="KNAF" text="الثروة السمكية والصناعات ذات الصلة" />
+	<subject code="KNAL" text="الغابات والصناعات ذات الصلة" />
+	<subject code="KNAT" text="صناعة التعدين" />
+	<subject code="KNB" text="صناعات الطاقة ومرافقها" />
+	<subject code="KNBC" text="الفحم وصناعات الوقود الصلب" />
+	<subject code="KNBG" text="صناعات الغاز" />
+	<subject code="KNBL" text="صناعات الطاقة الكهربائية" />
+	<subject code="KNBN" text="صناعات الطاقة النووية" />
+	<subject code="KNBP" text="البترول والصناعات النفطية" />
+	<subject code="KNBT" text="صناعات الطاقة المتجددة والبديلة" />
+	<subject code="KNBW" text="صناعات المياه" />
+	<subject code="KND" text="الصناعات التحويلية" />
+	<subject code="KNDC" text="الصناعات الكيميائية" />
+	<subject code="KNDD" text="الصناعات النسيجية" />
+	<subject code="KNDF" text="تصنيع المواد الغذائية والصناعات المرتبطة بها" />
+	<subject code="KNDF1" text="صناعة التبغ" />
+	<subject code="KNDH" text="صناعات التقنيات العالية" />
+	<subject code="KNDH1" text="صناعات التقانة الحيوية" />
+	<subject code="KNDM" text="صناعة الأسلحة" />
+	<subject code="KNDP" text="الصناعات الدوائية" />
+	<subject code="KNDR" text="صناعة المركبات والعجلات" />
+	<subject code="KNDS" text="صناعة السفن" />
+	<subject code="KNDV" text="صناعة الطائرات" />
+	<subject code="KNG" text="صناعات النقل" />
+	<subject code="KNGR" text="صناعة النقل البري" />
+	<subject code="KNGS" text="صناعة النقل البحري" />
+	<subject code="KNGT" text="صناعة النقل بالسكك الحديدية" />
+	<subject code="KNGV" text="صناعة النقل الجوي" />
+	<subject code="KNGV1" text="المطارات" />
+	<subject code="KNJ" text="البناء والصناعات الثقيلة" />
+	<subject code="KNJC" text="صناعة البناء" />
+	<subject code="KNJH" text="صناعات الحديد والصلب والمعادن" />
+	<subject code="KNP" text="الصناعات التوزيعية" />
+	<subject code="KNPR" text="قطاع التجزئة" />
+	<subject code="KNPW" text="قطاع الجملة" />
+	<subject code="KNS" text="الصناعات الخدمية" />
+	<subject code="KNSG" text="صناعة السياحة" />
+	<subject code="KNSH" text="صناعة السياحة والفندقة" />
+	<subject code="KNSJ" text="صناعات إدارة الأحداث" />
+	<subject code="KNSP" text="صناعات الرياضة والترفيه" />
+	<subject code="KNSS" text="الخدمات الأمنية" />
+	<subject code="KNSS1" text="خدمات المراقبة" />
+	<subject code="KNST" text="صناعة الخدمات المالية" />
+	<subject code="KNSX" text="الأزياء وصناعات التجميل" />
+	<subject code="KNSZ" text="الخدمات الجنائزية" />
+	<subject code="KNT" text="صناعات وسائل الإعلام والمعلومات والاتصالات" />
+	<subject code="KNTC" text="صناعة السينما" />
+	<subject code="KNTD" text="صناعة الإذاعة والتلفاز" />
+	<subject code="KNTF" text="صناعة الموسيقى" />
+	<subject code="KNTJ" text="الصحافة والإعلام" />
+	<subject code="KNTP" text="صناعة النشر وتجارة الكتب" />
+	<subject code="KNTR" text="الطباعة والتغليف وصناعة الاستنساخ" />
+	<subject code="KNTT" text="صناعات البريد والاتصالات السلكية واللاسلكية" />
+	<subject code="KNTX" text="صناعات تقنيات المعلومات" />
+	<subject code="KNTX1" text="الإنترنت وصناعات الشبكة العنكبوتية" />
+	<subject code="KNTY" text="صناعة الإعلانات" />
+	<subject code="KNV" text="الخدمة المدنية والقطاع العام" />
+	<subject code="KNX" text="العلاقات والصحة والسلامة الصناعية" />
+	<subject code="KNXB" text="العلاقات الصناعية" />
+	<subject code="KNXB1" text="الإضرابات" />
+	<subject code="KNXB2" text="الاتحادات التجارية" />
+	<subject code="KNXB3" text="التحكيم الصناعي والتفاوض" />
+	<subject code="KNXC" text="قضايا الصحة والسلامة" />
+	<subject code="L" text="القانون" />
+	<subject code="LA" text="الفقه والقضايا العامة" />
+	<subject code="LAB" text="الفقه وفلسفة القانون" />
+	<subject code="LAF" text="أنظمة القانون" />
+	<subject code="LAFC" text="القانون العام" />
+	<subject code="LAFD" text="القوانين المدنية / القانون المدني" />
+	<subject code="LAFR" text="القانون الروماني" />
+	<subject code="LAFS" text="القانون الإسلامي" />
+	<subject code="LAFX" text="الكنسية (القانون الكنسي)" />
+	<subject code="LAM" text="القانون المقارن" />
+	<subject code="LAQ" text="القانون والمجتمع" />
+	<subject code="LAQG" text="نوع الجنس والقانون" />
+	<subject code="LAR" text="الجريمة: الجوانب القانونية" />
+	<subject code="LAS" text="المهارات والممارسات القانونية" />
+	<subject code="LASD" text="الدعوة القضائية" />
+	<subject code="LASP" text="المساعدون القانونيون والمساعدة القانونية" />
+	<subject code="LAT" text="مهنة المحاماة: عامة" />
+	<subject code="LATC" text="الأخلاق القانونية والسلوك المهني" />
+	<subject code="LAY" text="القانون كما ينطبق على المهن الأخرى" />
+	<subject code="LAZ" text="التأريخ القانوني" />
+	<subject code="LB" text="القانون الدولي" />
+	<subject code="LBB" text="القانون الدولي العام" />
+	<subject code="LBBC" text="المعاهدات وغيرها من مصادر القانون الدولي" />
+	<subject code="LBBC1" text="القانون الخاص" />
+	<subject code="LBBD" text="القانون الدبلوماسي" />
+	<subject code="LBBF" text="الاختصاص والحصانات" />
+	<subject code="LBBJ" text="القانون الدولي للأراضي وإقامة الدولة" />
+	<subject code="LBBK" text="قانون البحار" />
+	<subject code="LBBM" text="قانون الاقتصاد والتجارة الدولية" />
+	<subject code="LBBM1" text="الرسوم الجمركية" />
+	<subject code="LBBM3" text="معاهدات ومنازعات الاستثمار" />
+	<subject code="LBBP" text="قانون البيئة الدولي" />
+	<subject code="LBBR" text="قانون حقوق الإنسان الدولي" />
+	<subject code="LBBS" text="القانون الإنساني الدولي" />
+	<subject code="LBBU" text="المنظمات والمؤسسات الدولية" />
+	<subject code="LBBV" text="مسؤوليات الدول والكيانات الأخرى" />
+	<subject code="LBBZ" text="القانون الجنائي الدولي" />
+	<subject code="LBD" text="القانون الدولي للنقل والاتصالات والتجارة" />
+	<subject code="LBDA" text="القانون الدولي للفضاء والفضاء الجوي" />
+	<subject code="LBDK" text="القانون التجاري عبر الحدود الوطنية" />
+	<subject code="LBDM" text="القانون البحري الدولي" />
+	<subject code="LBDT" text="قانون الاتصالات الدولي" />
+	<subject code="LBG" text="القانون الدولي الخاص وتعارض القوانين" />
+	<subject code="LBH" text="تسوية النزاعات الدولية" />
+	<subject code="LBHG" text="المحاكم الدولية وإجراءاتها" />
+	<subject code="LBHT" text="التحكيم الدولي" />
+	<subject code="LBL" text="تقارير القانون الدولي" />
+	<subject code="LN" text="قوانين السلطات القضائية الخاصة" />
+	<subject code="LNA" text="النظام القضائي: عامة" />
+	<subject code="LNAA" text="المحاكم وإجراءاتها" />
+	<subject code="LNAA1" text="السلطة القضائية" />
+	<subject code="LNAA2" text="النظام القضائي: قانون الازدراء" />
+	<subject code="LNAC" text="الإجراءات المدنية، والتقاضي وتسوية المنازعات" />
+	<subject code="LNAC1" text="سبل الانتصاف المدنية" />
+	<subject code="LNAC12" text="التعويض" />
+	<subject code="LNAC14" text="الأضرار والتعويضات" />
+	<subject code="LNAC16" text="الأوامر القضائية والطلبات الأخرى" />
+	<subject code="LNAC3" text="الإجراءات المدنية: قانون الإثبات" />
+	<subject code="LNAC5" text="التحكيم والوساطة والحلول البديلة لفض المنازعات" />
+	<subject code="LNAF" text="النظام القضائي: التكاليف والتمويل" />
+	<subject code="LNAL" text="تنظيم مهنة المحاماة" />
+	<subject code="LNB" text="القانون المدني الخاص: أعمال عامة" />
+	<subject code="LNC" text="قانون الشركات والتجارة والمنافسة" />
+	<subject code="LNCB" text="قانون التجارة" />
+	<subject code="LNCB1" text="قانون حقوق الامتياز" />
+	<subject code="LNCB2" text="قانون التجارة الالكترونية" />
+	<subject code="LNCB3" text="قانون بيع البضائع" />
+	<subject code="LNCB4" text="قانون التمويل الخارجي" />
+	<subject code="LNCB5" text="قانون الشحن" />
+	<subject code="LNCB6" text="قانون الطيران" />
+	<subject code="LNCD" text="قانون الشركات" />
+	<subject code="LNCD1" text="قانون عمليات الدمج والاستحواذ" />
+	<subject code="LNCF" text="قانون الشراكة" />
+	<subject code="LNCH" text="قانون المنافسة / قانون منع الاحتكار" />
+	<subject code="LNCJ" text="قانون التعاقد" />
+	<subject code="LNCL" text="قانون الوكالة" />
+	<subject code="LNCN" text="قانون المشتريات" />
+	<subject code="LNCQ" text="قانون البناء والهندسة" />
+	<subject code="LNCR" text="قانون الطاقة والموارد الطبيعية" />
+	<subject code="LND" text="القوانين الدستورية والإدارية" />
+	<subject code="LNDA" text="قانون المواطنة والجنسية" />
+	<subject code="LNDA1" text="قانون الهجرة" />
+	<subject code="LNDA3" text="قانون اللجوء" />
+	<subject code="LNDC" text="قانون حقون الإنسان والحريات المدنية" />
+	<subject code="LNDC2" text="قانون الخصوصية" />
+	<subject code="LNDC4" text="قانون حرية التعبير" />
+	<subject code="LNDF" text="قانون حرية المعلومات" />
+	<subject code="LNDH" text="الصلاحيات المخولة للحكومة" />
+	<subject code="LNDK" text="القانون العسكري والدفاع" />
+	<subject code="LNDM" text="المراجعة القضائية" />
+	<subject code="LNDP" text="الممارسة البرلمانية والتشريعية" />
+	<subject code="LNDS" text="قانون الانتخابات" />
+	<subject code="LNDU" text="قانون الحكومة المحلية" />
+	<subject code="LNF" text="القانون الجنائي وإجراءاته" />
+	<subject code="LNFB" text="قانون العدالة الجنائية" />
+	<subject code="LNFG" text="الجرائم ضد الحكومة" />
+	<subject code="LNFJ" text="الجرائم ضد الأفراد" />
+	<subject code="LNFJ1" text="قانون التحرش" />
+	<subject code="LNFL" text="الجرائم ضد الممتلكات" />
+	<subject code="LNFN" text="الاحتيال" />
+	<subject code="LNFQ" text="القانون الجنائي الخاص بالأحداث" />
+	<subject code="LNFR" text="الجرائم ضد الصحة العامة والسلامة والنظام" />
+	<subject code="LNFT" text="قانون حركة المرور على الطرق، وجرائم السيارات" />
+	<subject code="LNFV" text="قانون الإرهاب" />
+	<subject code="LNFX" text="الإجراءات الجنائية" />
+	<subject code="LNFX1" text="إصدار الأحكام والعقوبات" />
+	<subject code="LNFX3" text="الإجراءات الجنائية: قانون الأدلة" />
+	<subject code="LNFX5" text="قانون جهاز الشرطة وإجراءات الشرطة" />
+	<subject code="LNH" text="قوانين التوظيف والعمل" />
+	<subject code="LNHD" text="التمييز في قانون العمل" />
+	<subject code="LNHH" text="قانون الصحة والسلامةالمهنية" />
+	<subject code="LNHR" text="العلاقات الصناعية وقانون غرف التجارة" />
+	<subject code="LNHU" text="عقود التوظيف" />
+	<subject code="LNJ" text="قانون وسائل الترفيه والإعلام" />
+	<subject code="LNJD" text="قانون التشهير (الذم والقذف)" />
+	<subject code="LNJS" text="Sport &amp; the law" />
+	<subject code="LNJX" text="قانون الإعلان والتسويق والرعاية" />
+	<subject code="LNK" text="قانون البيئة والنقل والتخطيط" />
+	<subject code="LNKF" text="القانون الزراعي" />
+	<subject code="LNKG" text="قانون الحيوان" />
+	<subject code="LNKJ" text="قانون البيئة" />
+	<subject code="LNKN" text="قانون حماية الطبيعة" />
+	<subject code="LNKT" text="قانون النقل" />
+	<subject code="LNKV" text="الرطق السريعة" />
+	<subject code="LNKW" text="قانون التخطيط" />
+	<subject code="LNL" text="الأسهم والسندات" />
+	<subject code="LNM" text="قانون الأسرة" />
+	<subject code="LNMB" text="قانون الأسرة: الزواج والطلاق" />
+	<subject code="LNMC" text="قانون الأسرة: المعاشرة" />
+	<subject code="LNMF" text="قانون الأسرة: الشراكة من نفس الجنس" />
+	<subject code="LNMK" text="قانون الأسرة: الأطفال" />
+	<subject code="LNP" text="القانون المالي" />
+	<subject code="LNPA" text="قانون المحاسبة" />
+	<subject code="LNPB" text="قانون المصارف" />
+	<subject code="LNPC" text="الإفلاس والإعسار" />
+	<subject code="LNPD" text="أسواق رأس المال و قانون الأوراق المالية ولوائحها" />
+	<subject code="LNPF" text="قانون الخدمات المالية ولوائحه" />
+	<subject code="LNPN" text="قانون التأمين" />
+	<subject code="LNPP" text="قانون المعاشات" />
+	<subject code="LNQ" text="قانون تقنيات المعلومات والاتصالات" />
+	<subject code="LNQD" text="قانون حماية البيانات" />
+	<subject code="LNR" text="قانون الملكية الفكرية" />
+	<subject code="LNRC" text="قانون حقوق الطبع والنشر" />
+	<subject code="LNRD" text="قانون براءات الاختراع" />
+	<subject code="LNRF" text="قانون العلامات التجارية" />
+	<subject code="LNRL" text="قانون التصاميم" />
+	<subject code="LNRV" text="قانون سرية المعلومات" />
+	<subject code="LNS" text="قانون الملكية" />
+	<subject code="LNSH" text="قانون الأراضي والعقارات" />
+	<subject code="LNSH1" text="قانون الملكية والرهن العقاري" />
+	<subject code="LNSH3" text="قانون المالك والمستأجر" />
+	<subject code="LNSH5" text="قانون نقل الملكية" />
+	<subject code="LNSH7" text="قانون التصنيف والتقييم" />
+	<subject code="LNSH9" text="قانون الإسكان" />
+	<subject code="LNSP" text="قانون الملكية الشخصية" />
+	<subject code="LNT" text="القانون الاجتماعي" />
+	<subject code="LNTC" text="قانون المؤسسات الخيرية" />
+	<subject code="LNTD" text="التعليم والقانون" />
+	<subject code="LNTH" text="قانون الضمان الاجتماعي والرعاية الاجتماعية" />
+	<subject code="LNTH1" text="قانون التأمين الاجتماعي" />
+	<subject code="LNTJ" text="قانون الصحة والسلامة العامة" />
+	<subject code="LNTM" text="قانون الطب والرعاية الصحية" />
+	<subject code="LNTM1" text="قانون الصحة العقلية" />
+	<subject code="LNTM2" text="لوائح الأدوية والأجهزة الطبية" />
+	<subject code="LNTQ" text="العوق والقانون" />
+	<subject code="LNTS" text="القانون وكبار السن" />
+	<subject code="LNTU" text="قانون حماية المستهلك" />
+	<subject code="LNTX" text="قانون التراخيص، والألعاب والنوادي" />
+	<subject code="LNU" text="قانون الضرائب والواجبات" />
+	<subject code="LNUC" text="ضريبة الشركات" />
+	<subject code="LNUP" text="الضرائب الشخصية tax" />
+	<subject code="LNUS" text="ضريبة المبيعات والرسوم الجمركية" />
+	<subject code="LNUT" text="ضرائب الأملاك والعقارات" />
+	<subject code="LNV" text="الأضرار / الجنح" />
+	<subject code="LNVC" text="الإهمال" />
+	<subject code="LNVF" text="الإزعاج" />
+	<subject code="LNVJ" text="الإصابات الشخصية" />
+	<subject code="LNW" text="الوصايا والإرث / الخلافة" />
+	<subject code="LNZ" text="المصادر الأولية للقانون" />
+	<subject code="LNZC" text="قانون السوابق القضائية" />
+	<subject code="LNZL" text="التشريعات" />
+	<subject code="LR" text="القانون: إرشادات للدراسة والمراجعة" />
+	<subject code="M" text="الطب" />
+	<subject code="MB" text="الطب: قضايا عامة" />
+	<subject code="MBD" text="مهنة الطب" />
+	<subject code="MBDC" text="الأخلاقيات الطبية والسلوك المهني" />
+	<subject code="MBDP" text="علاقة الطبيب بالمريض" />
+	<subject code="MBF" text="المعلوماتية الحيوية الطبية" />
+	<subject code="MBG" text="المعدات والتقنيات الطبية" />
+	<subject code="MBGL" text="إختبارات المختبرات الطبية وتقنياتها" />
+	<subject code="MBGR" text="البحث الطبي" />
+	<subject code="MBGR1" text="التجارب السريرية" />
+	<subject code="MBGT" text="التطبيب عن بعد" />
+	<subject code="MBN" text="الصحة العامة والطب الوقائي" />
+	<subject code="MBNC" text="الفحص الطبي" />
+	<subject code="MBNH" text="الصحة العامة والشخصية" />
+	<subject code="MBNH1" text="النظافة الصحية" />
+	<subject code="MBNH2" text="العوامل البيئية" />
+	<subject code="MBNH3" text="علم النظم الغذائية والتغذية" />
+	<subject code="MBNH4" text="تحديد النسل ومنع الحمل وتنظيم الأسرة" />
+	<subject code="MBNH9" text="علم النفس الصحي" />
+	<subject code="MBNS" text="علم الأوبئة والإحصاءات الطبية" />
+	<subject code="MBP" text="الأنظمة والخدمات الصحية" />
+	<subject code="MBPC" text="الممارسة العامة" />
+	<subject code="MBPK" text="خدمات الصحة العقلية" />
+	<subject code="MBPM" text="الإدارة الطبية" />
+	<subject code="MBPR" text="التأمين الطبي" />
+	<subject code="MBQ" text="قضايا طبي شرعي" />
+	<subject code="MBS" text="علم الاجتماع الطبي" />
+	<subject code="MBX" text="تأريخ الطب" />
+	<subject code="MF" text="الطب الوقائي: العلوم الأساسية" />
+	<subject code="MFC" text="علم التشريح" />
+	<subject code="MFCC" text="علم الخلية" />
+	<subject code="MFCH" text="علم الأنسجة" />
+	<subject code="MFCR" text="التشريح الإقليمي" />
+	<subject code="MFCX" text="التشريح" />
+	<subject code="MFG" text="علم وظائف الأعضاء" />
+	<subject code="MFGC" text="وظائف الخلية" />
+	<subject code="MFGG" text="علم وظائف الأعضاء الإقليمي" />
+	<subject code="MFGM" text="الأيض" />
+	<subject code="MFGV" text="الميكانيكا الحيوية، حركية الإنسان" />
+	<subject code="MFK" text="التناسل البشري والنمو والتطوير" />
+	<subject code="MFKC" text="الطب التناسلي" />
+	<subject code="MFKC1" text="العقم والإخصاب" />
+	<subject code="MFKC3" text="علم الأجنة" />
+	<subject code="MFKH" text="نمو الإنسان وتطوره" />
+	<subject code="MFKH3" text="النضج والشيخوخة" />
+	<subject code="MFN" text="علم الوراثة الطبية" />
+	<subject code="MJ" text="الطب الباطني والسريرية" />
+	<subject code="MJA" text="التشخيص الطبي" />
+	<subject code="MJAD" text="فحص المرضى" />
+	<subject code="MJC" text="الأمراض والاضطرابات" />
+	<subject code="MJCG" text="الأمراض  والاضطرابات الخلقية" />
+	<subject code="MJCG1" text="الأمراض  والاضطرابات الوراثية" />
+	<subject code="MJCJ" text="الأمراض السارية والمعدية" />
+	<subject code="MJCJ1" text="الأمراض التناسلية" />
+	<subject code="MJCJ2" text="نقص المناعة المكتسب / الايدز" />
+	<subject code="MJCJ3" text="عدوى المستشفيات" />
+	<subject code="MJCL" text="علم الأورام" />
+	<subject code="MJCL1" text="العلاج الإشعاعي" />
+	<subject code="MJCL2" text="العلاج الكيميائي" />
+	<subject code="MJCM" text="علم المناعة" />
+	<subject code="MJCM1" text="الحساسية" />
+	<subject code="MJD" text="طب القلب والأوعية الدموية" />
+	<subject code="MJE" text="طب العضلات والعظام" />
+	<subject code="MJF" text="أمراض الدم" />
+	<subject code="MJG" text="علم الغدد" />
+	<subject code="MJGD" text="مرض السكري" />
+	<subject code="MJH" text="أمراض الجهاز الهضمي" />
+	<subject code="MJJ" text="أمراض الكبد" />
+	<subject code="MJK" text="طب الأمراض الجلدية" />
+	<subject code="MJL" text="طب الجهاز التنفسي" />
+	<subject code="MJM" text="طب الروماتيزم" />
+	<subject code="MJN" text="علم الأعصاب والفسيولوجيا العصبية السريرية" />
+	<subject code="MJNA" text="مرض التوحد ومتلازمة اسبرجر" />
+	<subject code="MJND" text="مرض الزهايمر والخرف" />
+	<subject code="MJP" text="أمراض الأذن الأنف الحنجرة (ENT)" />
+	<subject code="MJPD" text="علم السمع وطب الأذن" />
+	<subject code="MJQ" text="طب العيون" />
+	<subject code="MJR" text="الطب الكلوي وأمراض الكلى" />
+	<subject code="MJRD" text="التنقية الدموية" />
+	<subject code="MJS" text="جراحة المسالك البولية والطب البولي التناسلي" />
+	<subject code="MJT" text="أمراض النساء وطب التوليد" />
+	<subject code="MJTF" text="طب الأجنة" />
+	<subject code="MJW" text="طب الأطفال" />
+	<subject code="MJWN" text="طب حديثي الولادة" />
+	<subject code="MJX" text="طب الشيخوخة" />
+	<subject code="MJZ" text="العلاج الجيني" />
+	<subject code="MM" text="فروع الطب الأخرى" />
+	<subject code="MMB" text="التخدير" />
+	<subject code="MMBP" text="الألم ومعالجة الألم" />
+	<subject code="MMC" text="طب المسكنات" />
+	<subject code="MMD" text="طب الأسنان" />
+	<subject code="MMDS" text="جراحة الفم والوجه والفكين" />
+	<subject code="MMF" text="علم الأمراض" />
+	<subject code="MMFC" text="علم الأمراض الخلوي" />
+	<subject code="MMFH" text="أمراض الأنسجة" />
+	<subject code="MMFM" text="علم الأحياء المجهرية الطبية والفيروسات" />
+	<subject code="MMFP" text="علم الطفيليات الطبية" />
+	<subject code="MMG" text="علم العقاقير" />
+	<subject code="MMGT" text="علم السموم الطبية" />
+	<subject code="MMGW" text="علم الأدوية النفسية" />
+	<subject code="MMH" text="الطب النفسي" />
+	<subject code="MMJ" text="علم النفس السريري" />
+	<subject code="MMJT" text="العلاج النفسي" />
+	<subject code="MMJT1" text="المعالجة السلوكية الإدراكية" />
+	<subject code="MMK" text="طب الحوادث والطوارئ" />
+	<subject code="MMKB" text="الصدمة والصدمات النفسية" />
+	<subject code="MMKD" text="الحروق" />
+	<subject code="MMKL" text="طب العناية الفائقة" />
+	<subject code="MMN" text="الطب النووي" />
+	<subject code="MMP" text="التصوير الطبي" />
+	<subject code="MMPF" text="الموجات فوق الصوتية" />
+	<subject code="MMPG" text="الرنين المغناطيسي النووي (NMR / MRI)" />
+	<subject code="MMPH" text="الأشعة" />
+	<subject code="MMPJ" text="التصوير المقطعي" />
+	<subject code="MMQ" text="الطب العدلي" />
+	<subject code="MMR" text="الطب البيئي" />
+	<subject code="MMRB" text="طب التحليق والفضاء" />
+	<subject code="MMRD" text="طب الغوص والضغط العالي" />
+	<subject code="MMRP" text="الطب المهني" />
+	<subject code="MMRT" text="الطب الاستوائي" />
+	<subject code="MMS" text="الإصابات الرياضية والطب" />
+	<subject code="MMZ" text="العلاج والتداوي" />
+	<subject code="MMZD" text="اضطرابات الأكل وعلاجاتها" />
+	<subject code="MMZF" text="السمنة: مداواتها وعلاجها" />
+	<subject code="MMZL" text="اضطرابات النطق والتلفظ وعلاجها" />
+	<subject code="MMZR" text="الإدمان وعلاجه" />
+	<subject code="MMZS" text="اضطرابات النوم وعلاجها" />
+	<subject code="MN" text="الجراحة" />
+	<subject code="MNB" text="التقنيات الجراحية" />
+	<subject code="MNC" text="الجراحة العامة" />
+	<subject code="MNG" text="جراحة الجهاز الهضمي والقولون والمستقيم" />
+	<subject code="MNH" text="جراحة القلب والصدر" />
+	<subject code="MNJ" text="جراحة الأوعية الدموية surgery" />
+	<subject code="MNK" text="جراحة الأورام" />
+	<subject code="MNL" text="جراحة العناية المركزة" />
+	<subject code="MNN" text="جراحة المخ والأعصاب" />
+	<subject code="MNP" text="الجراحة الترقيعية والترميمية" />
+	<subject code="MNPC" text="الجراحة التجميلية" />
+	<subject code="MNQ" text="جراحة زرع الأعضاء" />
+	<subject code="MNS" text="جراحة العظام والكسور" />
+	<subject code="MNZ" text="الرعاية المحيطة بالجراحة" />
+	<subject code="MQ" text="التمريض والخدمات المساندة" />
+	<subject code="MQC" text="التمريض" />
+	<subject code="MQCA" text="أساسيات ومهارات التمريض" />
+	<subject code="MQCB" text="البحث والنظرية التمريضية" />
+	<subject code="MQCH" text="علاقة الممرض بالمريض" />
+	<subject code="MQCL" text="تخصصات التمريض" />
+	<subject code="MQCL1" text="تمريض الحوادث والطوارئ" />
+	<subject code="MQCL2" text="تمريض العناية المركزة" />
+	<subject code="MQCL3" text="تمريض ورعاية الطفولة" />
+	<subject code="MQCL4" text="تمريض الشيوخ" />
+	<subject code="MQCL5" text="التمريض النفسي" />
+	<subject code="MQCL6" text="التمريض الجراحي" />
+	<subject code="MQCL9" text="تمريض العناية الطرفية" />
+	<subject code="MQCM" text="الصيدلة التمريضية" />
+	<subject code="MQCW" text="علم الاجتماع التمريضي" />
+	<subject code="MQCX" text="تمريض المجتمع" />
+	<subject code="MQCZ" text="الإدارة والقيادة التمريضية" />
+	<subject code="MQD" text="القبالة" />
+	<subject code="MQDB" text="طرق التوليد" />
+	<subject code="MQF" text="الإسعافات الأولية والخدمات الطبية المساعدة" />
+	<subject code="MQH" text="التصوير بالأشعة" />
+	<subject code="MQK" text="طب الأقدام وعلاج الأرجل" />
+	<subject code="MQP" text="الصيدلة / صرف الدواء" />
+	<subject code="MQR" text="فحص النظر / النظارات" />
+	<subject code="MQS" text="العلاج الطبيعي" />
+	<subject code="MQT" text="العلاج الوظيفي" />
+	<subject code="MQTC" text="العلاج الإبداعي (مثل: الفن، الموسيقى، التمثيل)" />
+	<subject code="MQU" text="الاستشارات الطبية" />
+	<subject code="MQV" text="إعادة التأهيل" />
+	<subject code="MQVB" text="إعادة التأهيل: إصابات المخ والحبل الشوكي" />
+	<subject code="MQW" text="الهندسة الطبية الحيوية" />
+	<subject code="MQWB" text="تقويم العظام" />
+	<subject code="MQWP" text="الأطراف الاصطناعية" />
+	<subject code="MQZ" text="ممارسات حفظ الجثث" />
+	<subject code="MR" text="الدراسة الطبية وإرشادات للمراجعة ومواد مرجعية" />
+	<subject code="MRG" text="دراسات طبية وإرشادات مراجعة" />
+	<subject code="MRGD" text="مساعدات المراجعة الطبية: MRCP" />
+	<subject code="MRGK" text="مساعدات المراجعة الطبية: MRCS" />
+	<subject code="MRGL" text="مساعدات المراجعة الطبية: PLAB" />
+	<subject code="MRT" text="الرسوم البيانية الطبية، الأطالس الملونة" />
+	<subject code="MX" text="الطب التكميلي" />
+	<subject code="MXH" text="العلاج بتقويم العمود الفقري والعظام" />
+	<subject code="MZ" text="الطب البيطري" />
+	<subject code="MZC" text="الطب البيطري: الحيوانات الصغيرة (الحيوانات الأليفة)" />
+	<subject code="MZD" text="الطب البيطري: الحيوانات الكبيرة (المحلية / الزراعية)" />
+	<subject code="MZDH" text="الطب البيطري للخيول" />
+	<subject code="MZF" text="الطب البيطري: حيوانات المختبر" />
+	<subject code="MZG" text="الطب البيطري: الحيوانات الغريبة وحيوانات حدائق الحيوان" />
+	<subject code="MZH" text="التشريح البيطري وعلم وظائف الأعضاء" />
+	<subject code="MZK" text="علم الأمراض  والأنسجة البيطرية" />
+	<subject code="MZL" text="التغذية البيطرية" />
+	<subject code="MZM" text="الطب البيطري: الأمراض المعدية والعلاجات" />
+	<subject code="MZMP" text="علم الجراثيم البيطرية، الفيروسات، الطفيليات" />
+	<subject code="MZP" text="الأدوية البيطرية" />
+	<subject code="MZR" text="الأشعة البيطري" />
+	<subject code="MZS" text="الجراحة البيطرية" />
+	<subject code="MZSN" text="التخدير البيطري" />
+	<subject code="MZT" text="طب الأسنان البيطري" />
+	<subject code="MZV" text="التمريض البيطري" />
+	<subject code="MZX" text="العلاجات التكميلية للحيوان" />
+	<subject code="P" text="الرياضات والعلوم" />
+	<subject code="PB" text="الرياضيات" />
+	<subject code="PBB" text="فلسفة الرياضيات" />
+	<subject code="PBC" text="الأسس الرياضية" />
+	<subject code="PBCD" text="المنطق الرياضي" />
+	<subject code="PBCH" text="نظرية المجموعات" />
+	<subject code="PBCN" text="أنظمة الأرقام" />
+	<subject code="PBD" text="الرياضيات المتقطعة" />
+	<subject code="PBF" text="الجبر الرياضي" />
+	<subject code="PBG" text="المجموعات ونظرية المجموعات" />
+	<subject code="PBH" text="نظرية الأعداد" />
+	<subject code="PBJ" text="الحساب التمهيدي" />
+	<subject code="PBK" text="الحساب والتحليل الرياضي" />
+	<subject code="PBKA" text="الحساب" />
+	<subject code="PBKB" text="التحليل الحقيقي، والمتغيرات الحقيقية" />
+	<subject code="PBKD" text="التحليل المركب، والمتغيرات المركبة" />
+	<subject code="PBKF" text="التحليل الدالي والتحويلات" />
+	<subject code="PBKJ" text="حسابات التفاضل ومعادلاتها" />
+	<subject code="PBKL" text="حسابات التكامل ومعادلاتها" />
+	<subject code="PBKQ" text="حساب المتغيرات" />
+	<subject code="PBKS" text="التحليل العددي" />
+	<subject code="PBM" text="علم الهندسة" />
+	<subject code="PBMB" text="علم المثلثات" />
+	<subject code="PBMH" text="الهندسة الإقليدية" />
+	<subject code="PBML" text="الهندسة اللا إقليدية" />
+	<subject code="PBMP" text="الهندسة التفاضلية والريمانية" />
+	<subject code="PBMS" text="الهندسة التحليلية" />
+	<subject code="PBMW" text="الهندسة الجبرية" />
+	<subject code="PBMX" text="الهندسة الكسيرية" />
+	<subject code="PBP" text="الهندسة اللاكمية" />
+	<subject code="PBPD" text="الطبولوجيا الجبرية" />
+	<subject code="PBPH" text="الطبولوجيا التحليلية" />
+	<subject code="PBT" text="الإحتمالية والإحصاء" />
+	<subject code="PBTB" text="الاستدلال النظري الافتراضية" />
+	<subject code="PBU" text="الأمثلة" />
+	<subject code="PBUD" text="نظرية الألعاب" />
+	<subject code="PBUH" text="البرمجة الخطية" />
+	<subject code="PBV" text="التوافقية ونظرية الرسم البياني" />
+	<subject code="PBW" text="الرياضيات التطبيقية" />
+	<subject code="PBWH" text="النمذجة الرياضية" />
+	<subject code="PBWL" text="مؤشر الستوكاستك" />
+	<subject code="PBWR" text="العلم اللاخطي" />
+	<subject code="PBWS" text="نظرية الفوضى" />
+	<subject code="PBWX" text="نظرية المجموعات الضبابية" />
+	<subject code="PBX" text="تأريخ الرياضيات" />
+	<subject code="PD" text="العلوم: قضايا عامة" />
+	<subject code="PDA" text="فلسفة العلوم" />
+	<subject code="PDC" text="التسميات العلمية وتصنيفها" />
+	<subject code="PDD" text="المعايير العلمية" />
+	<subject code="PDDM" text="فن القياس وأنظمة القياس" />
+	<subject code="PDE" text="الرياضيات للعلماء" />
+	<subject code="PDG" text="التطبيقات الصناعية للأبحاث العلمية وبراءات الاختراع التقنية" />
+	<subject code="PDK" text="التمويل العلمي وسياساته" />
+	<subject code="PDN" text="المعدات والتجارب والتقنيات العلمية" />
+	<subject code="PDND" text="الفحص المجهري" />
+	<subject code="PDR" text="تأثير العلوم والتقنيات على المجتمع" />
+	<subject code="PDX" text="تأريخ العلوم" />
+	<subject code="PDZ" text="العلوم العامة" />
+	<subject code="PDZM" text="الرياضيات الشعبية" />
+	<subject code="PG" text="علم الفلك، الزمان والمكان" />
+	<subject code="PGC" text="علم الفلك النظري والرياضي" />
+	<subject code="PGG" text="الرصد الفلكي: المراصد، المعدات والأساليب" />
+	<subject code="PGK" text="علم الكونيات والكون" />
+	<subject code="PGM" text="المجرات والنجوم" />
+	<subject code="PGS" text="المجموعة الشمسية: الشمس والكواكب" />
+	<subject code="PGT" text="الرسوم البيانية والأطالس الفلكية" />
+	<subject code="PGZ" text="الوقت (التسلسل الزمني)، وأنظمة الوقت والمعايير" />
+	<subject code="PH" text="الفيزياء" />
+	<subject code="PHD" text="علم الميكانيكا الكلاسيكية" />
+	<subject code="PHDB" text="الميكانيكا الأولية" />
+	<subject code="PHDD" text="الميكانيكا التحليلية" />
+	<subject code="PHDF" text="ميكانيكا الموائع" />
+	<subject code="PHDS" text="ميكانيكا الموجات (الاهتزاز والصوتيات)" />
+	<subject code="PHDT" text="المتحركات والسواكن" />
+	<subject code="PHDV" text="الجاذبية" />
+	<subject code="PHDY" text="الطاقة" />
+	<subject code="PHF" text="المواد / حالات المادة" />
+	<subject code="PHFB" text="فيزياء الحرارة الواطئة" />
+	<subject code="PHFC" text="فيزياء المادة المكثفة (الحالة الصلبة وفيزياء الحالة الصلبة)" />
+	<subject code="PHFC1" text="فيزياء الأغشية الرقيقة" />
+	<subject code="PHFC2" text="Mesoscopic physics" />
+	<subject code="PHFG" text="فيزياء الغازات" />
+	<subject code="PHFP" text="فيزياء البلازما" />
+	<subject code="PHH" text="انتقال الحرارة والحرارة" />
+	<subject code="PHJ" text="الفيزياء البصرية" />
+	<subject code="PHJL" text="فيزياء الليزر" />
+	<subject code="PHK" text="الكهربائية، الكهرومغناطيسية، والمغناطيسية" />
+	<subject code="PHM" text="فيزياء الذرات والجزيئات" />
+	<subject code="PHN" text="الفيزياء النووية" />
+	<subject code="PHP" text="فيزياء الجسيمات والطاقة العالية" />
+	<subject code="PHQ" text="فيزياء الكم (ميكانيكا الكم ونظرية الحقل الكمي)" />
+	<subject code="PHR" text="الفيزياء النسبية" />
+	<subject code="PHS" text="الفيزياء الإحصائية" />
+	<subject code="PHU" text="الفيزياء الرياضية" />
+	<subject code="PHV" text="الفيزياء التطبيقية" />
+	<subject code="PHVB" text="الفيزياء الفلكية" />
+	<subject code="PHVD" text="الفيزياء الطبية" />
+	<subject code="PHVG" text="الفيزياء الأرضية" />
+	<subject code="PHVJ" text="فيزياء الغلاف الجوي" />
+	<subject code="PHVN" text="الفيزياء الحيوية" />
+	<subject code="PHVQ" text="الفيزياء الكيمياوية" />
+	<subject code="PHVS" text="فيزياء درجات الحرارة المتدنية" />
+	<subject code="PN" text="الكيمياء" />
+	<subject code="PNF" text="الكيمياء التحليلية" />
+	<subject code="PNFC" text="الفصل اللوني" />
+	<subject code="PNFR" text="الرنين المغناطيسي" />
+	<subject code="PNFS" text="التحليل الطيفي والكيمياء الطيفية، قياس الطيف الكتلي" />
+	<subject code="PNK" text="الكيمياء غير العضوية" />
+	<subject code="PNN" text="الكيمياء العضوية" />
+	<subject code="PNND" text="الكيمياء العضوية الفلزية" />
+	<subject code="PNNP" text="كيمياء البوليمرات" />
+	<subject code="PNR" text="الكيمياء الفيزياوية" />
+	<subject code="PNRC" text="الكيمياء الغروية" />
+	<subject code="PNRD" text="الحفز الكيميائي" />
+	<subject code="PNRH" text="الكيمياء الكهربائية والكيمياء المغناطيسية" />
+	<subject code="PNRL" text="الكيمياء النووية، والكيمياء الضوئية والإشعاع" />
+	<subject code="PNRP" text="الكيمياء الكمية والنظرية" />
+	<subject code="PNRS" text="كيمياء الحالة الصلبة" />
+	<subject code="PNRW" text="الكيمياء الحرارية والديناميكا الحرارية الكيميائية" />
+	<subject code="PNRX" text="الكيمياء السطحية والامتزاز" />
+	<subject code="PNT" text="علم البلوريات" />
+	<subject code="PNV" text="المعادن والأحجار الكريمة" />
+	<subject code="PS" text="علوم الأحياء والحياة" />
+	<subject code="PSA" text="علوم الحياة: قضايا عامة" />
+	<subject code="PSAB" text="التصنيف والنظاميات" />
+	<subject code="PSAD" text="أخلاقيات علوم الحياة" />
+	<subject code="PSAF" text="العلم البيئي، والمحيط الحيوي" />
+	<subject code="PSAG" text="المضادات الحيوية" />
+	<subject code="PSAJ" text="التطور" />
+	<subject code="PSAK" text="علم الجينات (لا طبي)" />
+	<subject code="PSAK1" text="الحامض النووي الرايبي منقوص الأوكسجين DNA والمورثات" />
+	<subject code="PSAN" text="علوم الأعصاب" />
+	<subject code="PSB" text="الكيمياء الحيوية" />
+	<subject code="PSBC" text="البروتينات" />
+	<subject code="PSBF" text="الكاربوهايدرات" />
+	<subject code="PSBH" text="الدهون" />
+	<subject code="PSBM" text="علم المناعة الكيميائية الحيوية" />
+	<subject code="PSBT" text="علم السموم (لا طبي)" />
+	<subject code="PSBZ" text="علم الأنزيمات" />
+	<subject code="PSC" text="علم الأحياء التطوري" />
+	<subject code="PSD" text="علم الأحياء الجزيئي" />
+	<subject code="PSF" text="علم الأحياء الخلوي (علم الخلايا)" />
+	<subject code="PSG" text="علم الأحياء المجهرية (لا طبي)" />
+	<subject code="PSGD" text="علم الجراثيم (لا طبي)" />
+	<subject code="PSGH" text="علم الطفيليات (لا طبي)" />
+	<subject code="PSGL" text="علم الفيروسات (لا طبي)" />
+	<subject code="PSGN" text="الأوليات" />
+	<subject code="PSP" text="علم الأحياء المائية" />
+	<subject code="PSPF" text="علم أحياء المياه العذبة" />
+	<subject code="PSPM" text="علم الأحياء البحرية" />
+	<subject code="PSQ" text="علم الفطريات والفطر (لا طبي)" />
+	<subject code="PST" text="علوم النبات" />
+	<subject code="PSTD" text="علم وظائف النبات" />
+	<subject code="PSTL" text="تكاثر وإكثار النبات" />
+	<subject code="PSTP" text="علم أمراض النبات" />
+	<subject code="PSTS" text="علم البيئة النباتية" />
+	<subject code="PSTV" text="علم الطحالب والطحالب والأشنيات" />
+	<subject code="PSV" text="علم الحيوان والعلوم الحيوانية" />
+	<subject code="PSVD" text="علم وظائف الحيوان" />
+	<subject code="PSVH" text="تكاثر الحيوان" />
+	<subject code="PSVL" text="علم أمراض الحيوان" />
+	<subject code="PSVP" text="السلوك الحيواني" />
+	<subject code="PSVS" text="علم بيئة الحيوان" />
+	<subject code="PSVT" text="علم الحيوان: اللافقاريات" />
+	<subject code="PSVT3" text="الرخويات" />
+	<subject code="PSVT5" text="القشريات" />
+	<subject code="PSVT6" text="العناكب" />
+	<subject code="PSVT7" text="الحشرات (علم الحشرات)" />
+	<subject code="PSVW" text="علم الحيوان: الفقريات" />
+	<subject code="PSVW1" text="الأسماك (علم الأسماك)" />
+	<subject code="PSVW3" text="البرمائيات" />
+	<subject code="PSVW5" text="الزواحف" />
+	<subject code="PSVW6" text="الطيور (علم الطيور)" />
+	<subject code="PSVW7" text="علم الحيوان: الثديات" />
+	<subject code="PSVW71" text="الحيوانات الجرابية ووحيدات المسلك" />
+	<subject code="PSVW73" text="ثدييات المياه العذبة والبحرية" />
+	<subject code="PSVW79" text="الرئيسيات" />
+	<subject code="PSX" text="علم الأحياء البشري" />
+	<subject code="PSXE" text="الإنسان الأول" />
+	<subject code="PSXM" text="الأنثروبولوجيا الطبية" />
+	<subject code="R" text="علوم الأرض، الجغرافية، البيئة، التخطيط" />
+	<subject code="RB" text="علوم الأرض" />
+	<subject code="RBC" text="البراكين وعلم الزلزال" />
+	<subject code="RBG" text="الجيولوجيا والغلاف الصخري" />
+	<subject code="RBGB" text="علم التربة، الرسوبيات" />
+	<subject code="RBGD" text="العمليات السطحية الجيولوجية (علم أشكال الأرض)" />
+	<subject code="RBGF" text="علم الأرض التأريخي" />
+	<subject code="RBGG" text="علم البترول" />
+	<subject code="RBGH" text="علم طبقات الأرض" />
+	<subject code="RBGK" text="الجيوكيمياء" />
+	<subject code="RBGL" text="علم الأرض الاقتصادي" />
+	<subject code="RBK" text="علم المياه والغلاف المائي" />
+	<subject code="RBKC" text="علوم المحيطات (البحار)" />
+	<subject code="RBKF" text="علم المياه العذبة (المياه العذبة)" />
+	<subject code="RBP" text="الأرصاد الجوية وعلم المناخ" />
+	<subject code="RBX" text="علم المتحجرات" />
+	<subject code="RG" text="الجغرافية" />
+	<subject code="RGB" text="الجغرافيا الطبيعية والتضاريس" />
+	<subject code="RGBA" text="المناطق القاحلة والصحاري" />
+	<subject code="RGBC" text="المراعي، المروج، البراري، التندرا" />
+	<subject code="RGBF" text="الأراضي الرطبة والمستنقعات، الفينات" />
+	<subject code="RGBL" text="الغابات، الغابات المطرية" />
+	<subject code="RGBP" text="مناطق الدلتا ومصبات الأنهار والمناطق الساحلية" />
+	<subject code="RGBR" text="الشعاب المرجانية" />
+	<subject code="RGBS" text="الجبال" />
+	<subject code="RGC" text="الجغرافية البشرية" />
+	<subject code="RGCM" text="الجغرافية الاقتصادية" />
+	<subject code="RGCP" text="الجغرافية السياسية" />
+	<subject code="RGL" text="الجغرافية الإقليمية" />
+	<subject code="RGM" text="الجغرافية الحيوية" />
+	<subject code="RGR" text="الاكتشاف الجغرافي والاستكشاف" />
+	<subject code="RGS" text="الخرائط الجغرافية (متخصص)" />
+	<subject code="RGV" text="رسم الخرائط، صنع الخريطة والإسقاطات" />
+	<subject code="RGW" text="نظام المعلومات الجغرافية (GIS) والتحسس النائي" />
+	<subject code="RGY" text="علم المساحة التطبيقية ومسح للخرائط والرسوم البيانية" />
+	<subject code="RN" text="البيئة" />
+	<subject code="RNA" text="الفكر والعقيدة البيئية" />
+	<subject code="RNB" text="حماة البيئة، الحفاظ على البيئة والمنظمات الخضراء" />
+	<subject code="RNC" text="علم البيئة التطبيقي" />
+	<subject code="RNCB" text="التنوع البيولوجي" />
+	<subject code="RND" text="السياسة والبروتوكولات البيئية" />
+	<subject code="RNF" text="إدارة البيئة" />
+	<subject code="RNFD" text="الجفاف ومصادر المياه" />
+	<subject code="RNFF" text="الأمن والتجهيز الغذائي" />
+	<subject code="RNFY" text="مصادر الطاقة" />
+	<subject code="RNH" text="إدارة المخلفات" />
+	<subject code="RNK" text="حفظ البيئة" />
+	<subject code="RNKH" text="الحفاظ على الحياة البرية وسكانها" />
+	<subject code="RNKH1" text="الأنواع المهددة بالانقراض وانقراض الأنواع" />
+	<subject code="RNP" text="التلوث والتهديدات البيئية" />
+	<subject code="RNPD" text="إزالة الغابات" />
+	<subject code="RNPG" text="التغيير المناخي" />
+	<subject code="RNQ" text="القضايا النووية" />
+	<subject code="RNR" text="الكوارث الطبيعية" />
+	<subject code="RNT" text="التأثير الاجتماعي للقضايا البيئية" />
+	<subject code="RNU" text="الاستدامة" />
+	<subject code="RP" text="التخطيط الإقليمي والمحلي" />
+	<subject code="RPC" text="التخطيط الحضري وللبلدات" />
+	<subject code="RPG" text="التخطيط الريفي" />
+	<subject code="RPT" text="تخطيط وسياسة النقل" />
+	<subject code="T" text="التقنية، الهندسة، الزراعة" />
+	<subject code="TB" text="التقنية: قضايا عامة" />
+	<subject code="TBC" text="الهندسة: عامة" />
+	<subject code="TBD" text="التصميم التقني" />
+	<subject code="TBDG" text="بيئة العمل" />
+	<subject code="TBG" text="الرسومات الهندسية والرسم التقني" />
+	<subject code="TBJ" text="الرياضيات للمهندسين" />
+	<subject code="TBM" text="المعدات وهندسة المعدات" />
+	<subject code="TBMM" text="هندسة القياس والمعايرة" />
+	<subject code="TBN" text="تقنيات النانو" />
+	<subject code="TBR" text="التقنيات الوسيطة" />
+	<subject code="TBX" text="تأريخ الهندسة والتقنية" />
+	<subject code="TBY" text="الاختراعات والمخترعين" />
+	<subject code="TC" text="هندسة الكيمياء الحيوية" />
+	<subject code="TCB" text="التقانة الحيوية" />
+	<subject code="TCBG" text="الهندسة الجينية" />
+	<subject code="TCBS" text="المجسات الحيوية" />
+	<subject code="TD" text="الكيمياء الصناعية وتقنيات التصنيع" />
+	<subject code="TDC" text="الكيمياء الصناعية" />
+	<subject code="TDCB" text="الهندسة الكيميائية" />
+	<subject code="TDCC" text="المواد الكيميائية الثقيلة" />
+	<subject code="TDCD" text="تقنية المنظفات" />
+	<subject code="TDCG" text="تقنيات المساحيق" />
+	<subject code="TDCH" text="الحشرات وتقنية مبيدات الأعشاب" />
+	<subject code="TDCJ" text="الأصباغ والصباغة وتقنية الطلاء" />
+	<subject code="TDCJ1" text="تقنية مستحضرات التجميل" />
+	<subject code="TDCK" text="تقنية طلاء الأسطح" />
+	<subject code="TDCP" text="البلاستيك وتقنية البوليمرات" />
+	<subject code="TDCQ" text="السيراميك وتقنية الزجاج" />
+	<subject code="TDCR" text="تقنية المطاط" />
+	<subject code="TDCT" text="تقنية المأكولات والمشروبات " />
+	<subject code="TDCT1" text="تقنية التخمير" />
+	<subject code="TDCT2" text="تقنية صناعة النبيذ" />
+	<subject code="TDCW" text="تقنية الصيدلية" />
+	<subject code="TDG" text="تقنية الجلود والفراء" />
+	<subject code="TDH" text="تقنيات الغزل والنسيج وصناعة الألياف" />
+	<subject code="TDJ" text="الأخشاب وتصنيع الأخشاب" />
+	<subject code="TDJP" text="تقنية اللب والورق" />
+	<subject code="TDM" text="تقنية المعادن / التعدين" />
+	<subject code="TDP" text="تقنيات التصنيع الأخرى" />
+	<subject code="TDPB" text="تصنيع الأجهزة الدقيقة" />
+	<subject code="TDPB1" text="الساعات الجدارية، الكرونومتر والساعات اليدوية (علم قياس الزمن)" />
+	<subject code="TDPD" text="صناعة الأجهزة المنزلية" />
+	<subject code="TDPF" text="صناعة الأثاث والمفروشات" />
+	<subject code="TDPH" text="صناعة الملابس والأحذية" />
+	<subject code="TDPP" text="الطباعة وتقنيات الاستنساخ" />
+	<subject code="TG" text="الهندسة الميكانيكية والمواد" />
+	<subject code="TGB" text="الهندسة الميكانيكية" />
+	<subject code="TGBF" text="علم احتكاك المفاصل (الاحتكاك والتشحيم)" />
+	<subject code="TGBN" text="المحركات ونقل القدرة" />
+	<subject code="TGBN1" text="المحركات البخارية" />
+	<subject code="TGM" text="علم المواد" />
+	<subject code="TGMB" text="الديناميكا الحرارية الهندسية" />
+	<subject code="TGMD" text="ميكانيكا المواد الصلبة" />
+	<subject code="TGMD4" text="الديناميكية والاهتزاز" />
+	<subject code="TGMD5" text="الإجهاد والكسور" />
+	<subject code="TGMF" text="ميكانيكا الموائع" />
+	<subject code="TGMF1" text="الديناميكا الهوائية" />
+	<subject code="TGMF2" text="الهيدروليكية وعلم الخصائص الميكانيكية" />
+	<subject code="TGMF3" text="التدفق، والاضطراب، الريولوجيا" />
+	<subject code="TGMT" text="إختبار المواد" />
+	<subject code="TGMT1" text="الاختبارات غير المتلفة" />
+	<subject code="TGP" text="هندسة الإنتاج" />
+	<subject code="TGPC" text="التصنيع المعان بالحاسوب (CAM)" />
+	<subject code="TGPQ" text="مراقبة الجودة الصناعية" />
+	<subject code="TGPR" text="الهندسة الاعتمادية" />
+	<subject code="TGX" text="المهارات والحرف الهندسية" />
+	<subject code="TGXT" text="صناعة الآلات" />
+	<subject code="TGXW" text="اللحام" />
+	<subject code="TH" text="تقنية وهندسة الطاقة" />
+	<subject code="THF" text="تقنيات الوقود الأحفوري" />
+	<subject code="THFG" text="تقنية الغاز" />
+	<subject code="THFP" text="تقنية البترول" />
+	<subject code="THFS" text="تقنية الوقود الصلب" />
+	<subject code="THK" text="الطاقة والهندسة النووية" />
+	<subject code="THN" text="عمليات انتقال الحرارة" />
+	<subject code="THR" text="الهندسة الكهربائية" />
+	<subject code="THRB" text="توليد وتوزيع الطاقةة" />
+	<subject code="THRD" text="شبكات الطاقة، ونظمها، ومحطاتها ومصانعها" />
+	<subject code="THRF" text="استعمال الطاقة وتطبيقاتها" />
+	<subject code="THRH" text="حفظ وتخزين الطاقة" />
+	<subject code="THRM" text="المحركات الكهربائية" />
+	<subject code="THRS" text="المهارات الكهربائية" />
+	<subject code="THT" text="كفاءة الطاقة" />
+	<subject code="THX" text="مصادر وتقنيات الطاقة البديلة والمتجددة" />
+	<subject code="TJ" text="هندسة الالكترونيك والاتصالات" />
+	<subject code="TJF" text="هندسة الالكترونيك" />
+	<subject code="TJFC" text="الدوائر الكهربائية ومكوناتها" />
+	<subject code="TJFD" text="الأجهزة والمواد الالكترونية" />
+	<subject code="TJFD1" text="المعالجات الدقيقة" />
+	<subject code="TJFD3" text="الترانزسترات" />
+	<subject code="TJFD5" text="أشباه الموصلات والموصلات الفائقة" />
+	<subject code="TJFM" text="هندسة السيطرة الذاتية" />
+	<subject code="TJFM1" text="الإنسان الآلي" />
+	<subject code="TJFN" text="تقنية الموجات الدقيقة" />
+	<subject code="TJK" text="هندسة الاتصالات / الاتصالات السلكية واللاسلكية" />
+	<subject code="TJKD" text="الرادار" />
+	<subject code="TJKR" text="تقنية الراديو" />
+	<subject code="TJKS" text="اتصالات الأقمار الصناعية" />
+	<subject code="TJKT" text="تقنية الهاتف" />
+	<subject code="TJKT1" text="تقنية الهواتف المحمولة" />
+	<subject code="TJKV" text="تقنية التلفاز" />
+	<subject code="TJKW" text="تقنية الاتصالات اللاسلكية WAP" />
+	<subject code="TN" text="الهندسة المدنية، والمسح والبناء" />
+	<subject code="TNC" text="الهندسة الإنشائية" />
+	<subject code="TNCB" text="المسح" />
+	<subject code="TNCB1" text="المسح الكمي" />
+	<subject code="TNCC" text="ميكانيكا التربة والصخور" />
+	<subject code="TNCE" text="هندسة الزلازل" />
+	<subject code="TNCJ" text="الجسور" />
+	<subject code="TNF" text="الهندسة الهيدروليكية" />
+	<subject code="TNFD" text="السدود والخزانات" />
+	<subject code="TNFH" text="المرافئ والموانئ" />
+	<subject code="TNFL" text="السيطرة على الفيضانات" />
+	<subject code="TNFR" text="استصلاح وبزل الأراضي" />
+	<subject code="TNH" text="هندسة الطرق السريعة والمرور" />
+	<subject code="TNK" text="إنشاء المباني وموادها" />
+	<subject code="TNKF" text="الحماية والسلامة من الحرائق" />
+	<subject code="TNKH" text="التدفئة، الإنارة، التهوية" />
+	<subject code="TNKS" text="أنظمة الأمان وإنذار الحريق" />
+	<subject code="TNKX" text="حفظ المباني ومواد البناء" />
+	<subject code="TNT" text="مهارات وحرف البناء" />
+	<subject code="TNTB" text="البناء بالآجر والتجصيص" />
+	<subject code="TNTC" text="النجارة" />
+	<subject code="TNTP" text="السباكة" />
+	<subject code="TNTR" text="التسقيف" />
+	<subject code="TQ" text="العلوم البيئية والهندسة والتقنية" />
+	<subject code="TQD" text="الرصد البيئي" />
+	<subject code="TQK" text="السيطرة على التلوث" />
+	<subject code="TQS" text="الهندسة الصحية والبلدية" />
+	<subject code="TQSR" text="معالجة النفايات والتخلص منها" />
+	<subject code="TQSR1" text="معالجة مياه الصرف الصحي والتخلص منها" />
+	<subject code="TQSR3" text="معالجة النفايات الخطرة والتخلص منها" />
+	<subject code="TQSW" text="إمدادات المياه ومعلجتها" />
+	<subject code="TQSW1" text="تصفية وتعقيم المياه" />
+	<subject code="TR" text="تقنيات وحرف النقل" />
+	<subject code="TRC" text="تقنية وحرف السيارات" />
+	<subject code="TRCS" text="مهارات السيارات (ميكانيكي سيارات)" />
+	<subject code="TRCT" text="النقل البري وحرفة وسائل النقل" />
+	<subject code="TRF" text="تقنية السكك الحديدية، وهندستها وحرفها" />
+	<subject code="TRFT" text="حرف السكك الحديدية" />
+	<subject code="TRL" text="تقنية بناء السفن، وهندستها وحرفها" />
+	<subject code="TRLD" text="تصميم السفن والهندسة المعمارية البحرية" />
+	<subject code="TRLN" text="الملاحة والقيادة البحرية" />
+	<subject code="TRLT" text="البحرية / حرفة البحرية" />
+	<subject code="TRP" text="الفضاء وتقنية الطيران" />
+	<subject code="TRPS" text="مهارات الطيران / ريادته" />
+	<subject code="TRT" text="تقنية أنظمة النقل الآلية الذكية" />
+	<subject code="TT" text="تقنيات أخرى وعلوم تطبيقة" />
+	<subject code="TTA" text="الصوتيات وهندسة الصوت" />
+	<subject code="TTB" text="البصريات التطبيقية" />
+	<subject code="TTBF" text="الألياف الضوئية" />
+	<subject code="TTBL" text="تقنية الليزر والتصوير الثلاثي الأبعاد" />
+	<subject code="TTBM" text="أنظمة التصوير وتقنياته" />
+	<subject code="TTBS" text="أنظمة المسح الضوئي وتقنياته" />
+	<subject code="TTD" text="علم الفضاء" />
+	<subject code="TTDS" text="الملاحة الفضائية" />
+	<subject code="TTM" text="الهندسة العسكرية" />
+	<subject code="TTMW" text="الذخائر، تكنولوجيا الأسلحة" />
+	<subject code="TTP" text="تقنية المتفجرات والألعاب النارية" />
+	<subject code="TTS" text="الهندسة البحرية" />
+	<subject code="TTSH" text="هندسة البحار الخارجية" />
+	<subject code="TTSX" text="السونار" />
+	<subject code="TTU" text="تقنية التعدين وهندسته" />
+	<subject code="TTV" text="التقنيات المهنية الأخرى وحرفها" />
+	<subject code="TTVC" text="خدمات الفنادق والمطاعم وحرفها" />
+	<subject code="TTVH" text="مهارات تصفيف الشعر وأعمال الصالونات" />
+	<subject code="TTVR" text="الحرف التقليدية ومهاراتها" />
+	<subject code="TTX" text="تحنيط الحيوانات" />
+	<subject code="TV" text="الزراعة وأعمال الحقل" />
+	<subject code="TVB" text="علم الزراعة" />
+	<subject code="TVD" text="الهندسة الزراعية وآلاتها" />
+	<subject code="TVDR" text="الري" />
+	<subject code="TVF" text="الزراعة المستدامة" />
+	<subject code="TVG" text="الزراعة العضوية" />
+	<subject code="TVH" text="تربية الحيوانات" />
+	<subject code="TVHB" text="تربية الحيوانات" />
+	<subject code="TVHF" text="إنتاج الألبان" />
+	<subject code="TVHH" text="النحالة (تربية النحل)" />
+	<subject code="TVHP" text="تربية الدواجن" />
+	<subject code="TVK" text="الهندسة الزراعية وإنتاج المحاصيل" />
+	<subject code="TVKC" text="محاصيل الحبوب" />
+	<subject code="TVKF" text="الأسمدة والروث" />
+	<subject code="TVM" text="الحيازات الصغيرة" />
+	<subject code="TVP" text="مكافحة الحشرات" />
+	<subject code="TVQ" text="الزراعة الاستوائية: الممارسة والتقنيات" />
+	<subject code="TVR" text="الغابات وزراعة الأحراج: الممارسة والتقنيات" />
+	<subject code="TVS" text="البستنة" />
+	<subject code="TVSW" text="زراعة الكروم" />
+	<subject code="TVT" text="تربية الأحياء المائية وتربية الأسماك: الممارسة والتقنيات" />
+	<subject code="U" text="الحاسبات وتقنية المعلومات" />
+	<subject code="UB" text="تقنية المعلومات: قضايا عامة" />
+	<subject code="UBH" text="الجوانب الصحية وجوانب السلامة لتقنيات المعلومات" />
+	<subject code="UBJ" text="الجوانب الأخلاقية والاجتماعية لتقنيات المعلومات" />
+	<subject code="UBL" text="الجوانب لاقانونية لتقنيات المعلومات" />
+	<subject code="UBW" text="الإنترنت: أعمال عامة" />
+	<subject code="UD" text="نمط الحياة الرقمية" />
+	<subject code="UDA" text="برامجيات المنظمات الشخصية وتطبيقاتها" />
+	<subject code="UDB" text="إرشادات الإنترنت وخدماتها" />
+	<subject code="UDBA" text="التسوق والمزادات عبر الانترنت" />
+	<subject code="UDBD" text="البحث عبر الإنترنت" />
+	<subject code="UDBG" text="المقامرة عبر الإنترنت" />
+	<subject code="UDBM" text="التمويل والاستثمار عبر الإنترنت" />
+	<subject code="UDBR" text="مستعرضات الإنترنت" />
+	<subject code="UDBS" text="الشبكات الاجتماعية" />
+	<subject code="UDBV" text="العوالم الافتراضية" />
+	<subject code="UDF" text="البريد الالكتروني: إرشادات المستهلك/المستخدم" />
+	<subject code="UDH" text="الأجهزة المتنقلة والمحمولة: إرشادات المستهلك/المستخدم" />
+	<subject code="UDM" text="الموسيقى الرقمية: إرشادات المستهلك/المستخدم" />
+	<subject code="UDP" text="التصوير الرقمي: إرشادات المستهلك/المستخدم" />
+	<subject code="UDQ" text="الفديو الرقمي: إرشادات المستهلك/المستخدم" />
+	<subject code="UDT" text="الهواتف المحمولة: إرشادات المستهلك/المستخدم" />
+	<subject code="UDV" text="التلفاز الرقمي والمراكز الإعلامية: إرشادات المستهلك/المستخدم" />
+	<subject code="UDX" text="ألعاب الحاسبة / ألعاب الإنترنت: إرشادات الاستراتيجية" />
+	<subject code="UF" text="تطبيقات الأعمال" />
+	<subject code="UFB" text="حزم البرامجيات المتكاملة" />
+	<subject code="UFBC" text="Microsoft Office" />
+	<subject code="UFBF" text="أعمال Microsoft" />
+	<subject code="UFBL" text="Lotus Smartsuite" />
+	<subject code="UFBP" text="OpenOffice" />
+	<subject code="UFBS" text="StarOffice" />
+	<subject code="UFBW" text="iWork" />
+	<subject code="UFC" text="برامجيات الجداول" />
+	<subject code="UFCE" text="Excel" />
+	<subject code="UFCL" text="Lotus 1-2-3" />
+	<subject code="UFD" text="برامجيات معالجة النصوص" />
+	<subject code="UFDM" text="Microsoft Word" />
+	<subject code="UFG" text="برامجيات العروض الصورية" />
+	<subject code="UFGP" text="PowerPoint" />
+	<subject code="UFK" text="برامجيات المحاسبة" />
+	<subject code="UFL" text="برمجيات المؤسسات" />
+	<subject code="UFLS" text="SAP (الأنظمة والتطبيقات والمنتجات في قواعد البيانات)" />
+	<subject code="UFM" text="برامجيات الرياضيات والإحصاء" />
+	<subject code="UFP" text="برامجيات إدارة المشاريع" />
+	<subject code="UFS" text="برامجيات العمل التعاوني والمجموعات" />
+	<subject code="UG" text="تطبيقات الرسومات والوسائط الرقمية" />
+	<subject code="UGB" text="رسومات وتصميم مواقع الإنترنت" />
+	<subject code="UGC" text="التصميم المعان بالحاسوب (CAD)" />
+	<subject code="UGD" text="النشر المكتبي" />
+	<subject code="UGG " text="تصميم ألعاب الحاسوب" />
+	<subject code="UGK" text="الرسومات ثلاثية الأبعاد ونمذجتها" />
+	<subject code="UGL" text="برامجيات التوضيح والرسم" />
+	<subject code="UGM" text="الموسيقى الرقمية: إحترافي" />
+	<subject code="UGN" text="الرسوم المتحركة الرقمية" />
+	<subject code="UGP" text="تحرير الصور والرسوم" />
+	<subject code="UGV" text="الفديو الرقمي: إحترافي" />
+	<subject code="UK" text="قطع الغيار للكمبيوتر" />
+	<subject code="UKC" text="الحواسيب الفائقة" />
+	<subject code="UKD" text="الحاسبات الكبرى والحاسبات المتوسطة" />
+	<subject code="UKF" text="الملقمات" />
+	<subject code="UKG" text="حوسبة الشبكة والحوسبة المتوازية" />
+	<subject code="UKM" text="الأنظمة المضمنة" />
+	<subject code="UKN" text="أجهزة شبكة الاتصال" />
+	<subject code="UKP" text="الحاسبات الشخصية" />
+	<subject code="UKPC" text="الحاسبات الشخصية (الحاسبات الشخصية من تجميع IBM)" />
+	<subject code="UKPM" text="Macintosh" />
+	<subject code="UKR" text="الإدامة والتصليح" />
+	<subject code="UKS" text="وسائط الخزن وأجهزة المحيطية" />
+	<subject code="UKX" text="المرافق والأدوات" />
+	<subject code="UL" text="أنظمة التشغيل" />
+	<subject code="ULD" text="Windows وبدائله" />
+	<subject code="ULDF" text="Windows 7" />
+	<subject code="ULDG" text="Windows Vista" />
+	<subject code="ULDL" text="Windows 2003" />
+	<subject code="ULDP" text="Windows XP" />
+	<subject code="ULDT" text="Windows 2000" />
+	<subject code="ULDX" text="Windows NT" />
+	<subject code="ULH" text="Macintosh OS" />
+	<subject code="ULL" text="Linux" />
+	<subject code="ULLD" text="Debian" />
+	<subject code="ULLR" text="Red Hat" />
+	<subject code="ULLS" text="SUSE" />
+	<subject code="ULLU" text="UBUNTU" />
+	<subject code="ULN" text="UNIX" />
+	<subject code="ULNB" text="BSD / FreeBSD" />
+	<subject code="ULNH" text="HP-UX" />
+	<subject code="ULNM" text="IBM AIX" />
+	<subject code="ULNS" text="Sun Solaris" />
+	<subject code="ULP" text="أنظمة التشغيل المحمولة" />
+	<subject code="ULQ" text="أنظمة تشغيل الحاسبات الكبرى من IBM" />
+	<subject code="ULR" text="أنظمة تشغيل الوقت الحقيقي" />
+	<subject code="UM" text="برمجة الحاسبات / تطوير البرامجيات" />
+	<subject code="UMA" text="جوانب البرامج / تعلم البرمجة" />
+	<subject code="UMB" text="الخوارزميات وهياكل البيانات" />
+	<subject code="UMC" text="المترجمات" />
+	<subject code="UMF" text="البرمجة الرشيقة" />
+	<subject code="UMG" text="البرمجة المفاهيمية / AOP" />
+	<subject code="UMH" text="البرمجة القصوى" />
+	<subject code="UMJ" text="البرمجة الوظيفية" />
+	<subject code="UMK" text="تطوير وبرمجة الألعاب" />
+	<subject code="UMKB" text="الصور ثنائية الأبعاد: برمجة الألعاب" />
+	<subject code="UMKC" text="الصور ثلاثية الأبعاد: برمجة الألعاب" />
+	<subject code="UMKL" text="تصميم المستويات: برمجة الألعاب" />
+	<subject code="UML" text="برمجة الرسوم" />
+	<subject code="UMN" text="البرمجة الشيئية (OOP)" />
+	<subject code="UMP" text="برمجة Microsoft" />
+	<subject code="UMPN" text="برمجة .Net" />
+	<subject code="UMPW" text="برمجة Windows" />
+	<subject code="UMQ" text="برمجة Macintosh" />
+	<subject code="UMR" text="برمجة الشبكات" />
+	<subject code="UMS" text="برمجة الهواتف المحمولة وأجهزة اللوحية" />
+	<subject code="UMT" text="برمجة قواعد اليانات" />
+	<subject code="UMW" text="برمجة الإنترنت" />
+	<subject code="UMWS" text="خدمات الإنترنت" />
+	<subject code="UMX" text="لغات البرمجة والتنصيص: عامة" />
+	<subject code="UMZ" text="هندسة البرامجيات" />
+	<subject code="UMZL" text="لغة النمذجة الموحدة (UML)" />
+	<subject code="UMZT" text="اختبار البرمجيات وتحقيقها" />
+	<subject code="UMZW" text="هندسة البرامجيات الشيئية" />
+	<subject code="UN" text="قواعد البيانات" />
+	<subject code="UNA" text="تصميم قواعد البيانات ونظرياتها" />
+	<subject code="UNAR" text="قواعد البيانات العلائقية" />
+	<subject code="UNC" text="جمع البيانات وتحليلها" />
+	<subject code="UND" text="تخزين البيانات" />
+	<subject code="UNF" text="التنقيب عن البيانات" />
+	<subject code="UNH" text="استرجاع المعلومات" />
+	<subject code="UNJ" text="قواعد البيانات الشيئية" />
+	<subject code="UNK" text="قواعد البيانات الموزعة" />
+	<subject code="UNN" text="قواعد البيانات والإنترنت" />
+	<subject code="UNS" text="برامجيات قاعدة البيانات" />
+	<subject code="UNSB" text="Oracle" />
+	<subject code="UNSC" text="Access" />
+	<subject code="UNSF" text="FileMaker" />
+	<subject code="UNSJ" text="SQL Server / MS SQL" />
+	<subject code="UNSK" text="SQLite" />
+	<subject code="UNSM" text="MySQL" />
+	<subject code="UNSP" text="PostgreSQL" />
+	<subject code="UNSX" text="IBM DB2" />
+	<subject code="UNSY" text="Sybase" />
+	<subject code="UQ" text="شهادة الحاسوب" />
+	<subject code="UQF" text="شهادة الحاسوب: Microsoft" />
+	<subject code="UQJ" text="شهادة الحاسوب: Cisco" />
+	<subject code="UQL" text="شهادة الحاسوب: ECDL" />
+	<subject code="UQR" text="شهادة الحاسوب: CompTia" />
+	<subject code="UQT" text="شهادة الحاسوب: CLAiT" />
+	<subject code="UR" text="أمن الحاسبات" />
+	<subject code="URD" text="حفظ الخصوصية والبيانات" />
+	<subject code="URH" text="الاحتيال والقرصنة بالحاسوب" />
+	<subject code="URJ" text="فيروسات وأحصة طروادة وديدان الحاسبات" />
+	<subject code="URQ" text="جدران النار" />
+	<subject code="URS" text="الرسائل غير المرغوب فيها" />
+	<subject code="URW" text="برامج التجسس" />
+	<subject code="URY" text="تشفير البيانات" />
+	<subject code="UT" text="تشبيك الحاسبات واتصالاتها" />
+	<subject code="UTC" text="الحوسبة السحابية" />
+	<subject code="UTD" text="شبكات الملقم - العميل" />
+	<subject code="UTF" text="إدارة الشبكات" />
+	<subject code="UTFB" text="الحفظ الاحتياطي لأنظمة الحاسوب واسترجاع البيانات" />
+	<subject code="UTG" text="الحوسبة الشبكية" />
+	<subject code="UTM" text="البريد الالكتروني (email): إحترافي" />
+	<subject code="UTN" text="أمن الشبكات" />
+	<subject code="UTP" text="معيير التشبيك وبروتوكولاته" />
+	<subject code="UTR" text="الأنطمة المتوزعة" />
+	<subject code="UTS" text="حزم الشبكات" />
+	<subject code="UTV" text="المحاكاة الافتراضية" />
+	<subject code="UTW" text="شبكات WAP وتطبيقاتها" />
+	<subject code="UTX" text="EDI (التبادل الإلكتروني للبيانات)" />
+	<subject code="UY" text="علوم الحاسبات" />
+	<subject code="UYA" text="النظرية الرياضية للحوسبة" />
+	<subject code="UYAM" text="الرياضيات لعلماء الحاسبات" />
+	<subject code="UYD" text="تحليل وتصميم الأنظمة" />
+	<subject code="UYF" text="معمارية الحاسبة والتصميم المنطقي" />
+	<subject code="UYFL" text="لغات التجميع" />
+	<subject code="UYFP" text="المعالجة المتوازية" />
+	<subject code="UYM" text="النمذجة والمحاكاة الحاسوبية" />
+	<subject code="UYQ" text="الذكاء الاصطناعي" />
+	<subject code="UYQE" text="الأنظمة الخبيرة / النظم القائمة على المعرفة" />
+	<subject code="UYQL" text="اللغة الطبيعية والترجمة الآلية" />
+	<subject code="UYQM" text="تعلم الآلة" />
+	<subject code="UYQN" text="الشبكات العصبية والأنظمة المضببة" />
+	<subject code="UYQP" text="تمييز الأنماط" />
+	<subject code="UYQS" text="تمييز الأصوات" />
+	<subject code="UYQV" text="بصريات الحاسب الآلي" />
+	<subject code="UYS" text="معالجة الإشارة" />
+	<subject code="UYT" text="معالجة الصور" />
+	<subject code="UYU" text="معالجة الصوت" />
+	<subject code="UYV" text="الحقيقة الافتراضية" />
+	<subject code="UYZ" text="التفاعل بين الإنسان والحاسوب" />
+	<subject code="UYZF" text="تصور المعلومات" />
+	<subject code="UYZG" text="تصميم واجهة المستخدم وسهولة الاستخدام" />
+	<subject code="UYZM" text="هندسة المعلومات" />
+	<subject code="V" text="الصحة وتطور الشخصية" />
+	<subject code="VF" text="الأسرة والصحة" />
+	<subject code="VFB" text="السلامة الشخصية" />
+	<subject code="VFD" text="الطب الشعبي والصحة" />
+	<subject code="VFDF" text="الإسعافات الأولية المنزلية" />
+	<subject code="VFDM" text="صحة الرجال" />
+	<subject code="VFDW" text="صحة النساء" />
+	<subject code="VFG" text="التمريض والرعاية المنزلية" />
+	<subject code="VFJ" text="التعامل مع المشاكل الشخصية" />
+	<subject code="VFJB" text="التعامل مع المرض وأعراضه الخاصة" />
+	<subject code="VFJD" text="التعامل مع الإعاقة" />
+	<subject code="VFJG" text="التعامل مع الشيخوخة" />
+	<subject code="VFJJ" text="التعامل مع اضطرابات الأكل" />
+	<subject code="VFJK" text="التعامل مع تعاطي المخدرات والكحول" />
+	<subject code="VFJP" text="التعامل مع القلق والرهاب" />
+	<subject code="VFJS" text="التعامل مع الإرهاق" />
+	<subject code="VFJX" text="التعامل مع الوفاة والثكل" />
+	<subject code="VFL" text="الإقلاع عن التدخين" />
+	<subject code="VFM" text="اللياقة البدنية والحمية" />
+	<subject code="VFMD" text="الحمية واتباع النظام غذائي" />
+	<subject code="VFMG" text="التمرين وكتب التمرين البدني" />
+	<subject code="VFMS" text="التدليك" />
+	<subject code="VFV" text="العائلة والعلاقات الأسرية" />
+	<subject code="VFVC" text="الجنس والنشاط الجنسي، كتيبات الجنس" />
+	<subject code="VFVG" text="المواعدة، العلاقات، العيش سوية، الزواج" />
+	<subject code="VFVK" text="التبني" />
+	<subject code="VFVS" text="الانفصال والطلاق" />
+	<subject code="VFVX" text="العلاقات بين الأجيال" />
+	<subject code="VFX" text="المشورة بشأن تربية الأطفال" />
+	<subject code="VFXB" text="الحمل، الولادة، رعاية الأطفال" />
+	<subject code="VFXB1" text="أسماء الأطفال" />
+	<subject code="VFXC" text="رعاية وتنشئة الأطفال" />
+	<subject code="VFXC1" text="المراهقون: نصائح للآباء" />
+	<subject code="VS" text="مساعدة الذات والتطوير الشخصي" />
+	<subject code="VSB" text="التمويل الشخصي" />
+	<subject code="VSC" text="المشورة بشأن الوظائف وتحقيق النجاح" />
+	<subject code="VSD" text="القانون، المواطنة والحقوق بالنسبة للشخص العادي" />
+	<subject code="VSF" text="حرفة الطريق، والقيادة وقانون السير" />
+	<subject code="VSG" text="المشورة المستهلك" />
+	<subject code="VSH" text="الاسكان والممتلكات الفردية - شراء / بيع والجوانب القانونية" />
+	<subject code="VSK" text="المشورة بشأن التعليم" />
+	<subject code="VSL" text="أدلة وكتيبات محو أمية الكبار" />
+	<subject code="VSN" text="أدلة وكتيبات الحساب للكبار" />
+	<subject code="VSP" text="علم النفس الشعبي" />
+	<subject code="VSPM" text="تأكيد الذات، والدافع وإحترام الذات" />
+	<subject code="VSPT" text="تحسين الذاكرة وتقنيات التفكير" />
+	<subject code="VSPX" text="البرمجة اللغوية العصبية (NLP)" />
+	<subject code="VSR" text="التقاعد" />
+	<subject code="VSW" text="العيش والعمل في الخارج" />
+	<subject code="VSZ" text="نمط الحياة الخضراء والاكتفاء الذاتي" />
+	<subject code="VX" text="العقل، الجسد، الروح" />
+	<subject code="VXA" text="العقل، الجسد، الروح: التفكير والممارسة" />
+	<subject code="VXF" text="الكهانة والرجم بالغيب" />
+	<subject code="VXFA" text="علم التنجيم" />
+	<subject code="VXFA1" text="علامات النجوم والأبراج" />
+	<subject code="VXFC" text="قراءة الطالع بالبطاقات" />
+	<subject code="VXFC1" text="بطاقات الطالع" />
+	<subject code="VXFD" text="تشينغ لي" />
+	<subject code="VXFG" text="علم الخطوط" />
+	<subject code="VXFJ" text="قراءة الكف، علم الفراسة" />
+	<subject code="VXFN" text="علم الأعداد" />
+	<subject code="VXFT" text="الإستبصار والعرافة" />
+	<subject code="VXH" text="العلاجات التكميلية، وتضميد الجراح والصحة" />
+	<subject code="VXHA" text="تقنية الكسندر" />
+	<subject code="VXHC" text="الروائح والزيوت الأساسية" />
+	<subject code="VXHH" text="المعالجة المثلية" />
+	<subject code="VXHJ" text="علم الانعكاسات" />
+	<subject code="VXHK" text="الريكي (تقنية علاجية)" />
+	<subject code="VXHT" text="الطب التقليدي والعلاجات العشبية" />
+	<subject code="VXHT1" text="الطب الصيني والوخز بالإبر" />
+	<subject code="VXHT2" text="العلاجات الهندية أيروفيدية" />
+	<subject code="VXM" text="العقل والجسد والروح: التأمل والتصور" />
+	<subject code="VXN" text="الأحلام وتفسيراتها" />
+	<subject code="VXP" text="القوى النفسية والظواهر النفسية" />
+	<subject code="VXPC" text="البلورات والعلاج" />
+	<subject code="VXPH" text="العقد المركزية، الهالات والطاقة الروحية" />
+	<subject code="VXPJ" text="الإسقاط النجمي وخبرات الخروج من الجسد" />
+	<subject code="VXPR" text="الآخرة، والتناسخ. حياة الماضي" />
+	<subject code="VXPS" text="أدلة الروح، والملائكة وتوجيهها" />
+	<subject code="VXQ" text="الظواهر غير المفسرة / الخوارق" />
+	<subject code="VXQB" text="الأجسام الطائرة مجهولة الهوية و الكائنات اللاأرضية" />
+	<subject code="VXQG" text="الأشباح والأرواح الشريرة" />
+	<subject code="VXQM" text="الوحوش والكائنات الأسطورية" />
+	<subject code="VXV" text="Feng Shui فن التناغم مع الفضاء المحيط وتدفقات الطاقة" />
+	<subject code="VXW" text="التصوف والسحر والطقوس" />
+	<subject code="VXWK" text="الكابالا: أعمال شعبية" />
+	<subject code="VXWM" text="السحر، والتعاويذ. الكيمياء" />
+	<subject code="VXWS" text="الشامانية، الوثنية" />
+	<subject code="VXWT" text="السحر والشعوذة" />
+	<subject code="W" text="نمط الحياة، والرياضة والترفيه" />
+	<subject code="WB" text="فن الطهي / المواد الغذائية والمشروبات... الخ." />
+	<subject code="WBA" text="فن الطبخ والوصفات العامة" />
+	<subject code="WBB" text="التلفاز / كتب طبخ مشاهير الطهاة" />
+	<subject code="WBC" text="الطبخ لواحد" />
+	<subject code="WBD" text="الطبخ حسب الميزانية" />
+	<subject code="WBF" text="سريعة وسهلة الطبخ" />
+	<subject code="WBH" text="الصحة وطبخ كل الغذاء" />
+	<subject code="WBHS" text="الطبخ لحميات أو ظروف غذائية معينة" />
+	<subject code="WBJ" text="طبخ الخضراوات" />
+	<subject code="WBN" text="المأكولات الوطنية والإقليمية" />
+	<subject code="WBQ" text="الطبخ من أجل/مع الأطفال" />
+	<subject code="WBR" text="الطبخ للحفلات" />
+	<subject code="WBS" text="الطبخ مع أدوات محددة" />
+	<subject code="WBT" text="الطبخ حسب المكونات" />
+	<subject code="WBTB" text="الطبخ مع اللحوم" />
+	<subject code="WBTC" text="الطبخ مع الدجاج والطيور أخرى" />
+	<subject code="WBTF" text="الطبخ مع الأسماك والأكلات البحرية" />
+	<subject code="WBTH" text="الطبخ مع الأعشاب والتوابل" />
+	<subject code="WBTP" text="أطباق المعكرونة" />
+	<subject code="WBTR" text="الطبخ مع منتجات الألبان" />
+	<subject code="WBTX" text="الطبخ مع الشوكولاتة" />
+	<subject code="WBV" text="أطباق الطبخ وصحونه الأساسية" />
+	<subject code="WBVD" text="الحساء والمقبلات" />
+	<subject code="WBVG" text="السلطات" />
+	<subject code="WBVM" text="الأطباق الرئيسية" />
+	<subject code="WBVQ" text="الحلويات" />
+	<subject code="WBVS" text="الكعك والخبز، وحرفة المثلجات والسكاكر" />
+	<subject code="WBW" text="الحفظ والتجميد" />
+	<subject code="WBX" text="المشروبات" />
+	<subject code="WBXD" text="المشروبات الكحولية" />
+	<subject code="WBXD1" text="النبيذ" />
+	<subject code="WBXD2" text="البيرة" />
+	<subject code="WBXD3" text="المشروبات الروحية والكوكتيلات" />
+	<subject code="WBXN" text="المشروبات غير الروحية" />
+	<subject code="WBZ" text="السجائر والتدخين" />
+	<subject code="WC" text="التحف والمقتنيات" />
+	<subject code="WCB" text="التحف والمقتنيات: إرشادات المشتري" />
+	<subject code="WCC" text="العناية بالتحفيات واستعادتها" />
+	<subject code="WCF" text="القطع النقدية، والأوراق النقدية والميداليات والأختام (علم العملات)" />
+	<subject code="WCG" text="الطوابع وجمع الطوابع" />
+	<subject code="WCJ" text="الساعات العتيقة، والساعات اليدوية، وصناديق الموسيقية والآليات" />
+	<subject code="WCK" text="العسكريات والأسلحة والدروع" />
+	<subject code="WCL" text="تحفيات الآثاث / إقتناء الآثاث" />
+	<subject code="WCN" text="التحف والمقتنيات: السيراميك والزجاج" />
+	<subject code="WCP" text="التحف والمقتنيات: المجوهرات" />
+	<subject code="WCR" text="التحف والمقتنيات: الذهب والفضة (من غير المجوهرات)" />
+	<subject code="WCS" text="التحف والمقتنيات: الكتب والمخطوطات والأشياء الزائلة والمطبوعات" />
+	<subject code="WCU" text="التحف والمقتنيات: الصور والمطبوعات والخرائط" />
+	<subject code="WCV" text="التحف والمقتنيات: السجاد والبسط والمنسوجات" />
+	<subject code="WCW" text="التحف والمقتنيات: الدمى والألعاب والنماذج" />
+	<subject code="WCX" text="التحف والمقتنيات: الأجهزة العلمية والموسيقية" />
+	<subject code="WD" text="الهوايات والمسابقات والألعاب" />
+	<subject code="WDH" text="الهوايات" />
+	<subject code="WDHM" text="نماذج السكك الحديدية" />
+	<subject code="WDHR" text="النماذج الموجهة بالراديو" />
+	<subject code="WDHW" text="لعب الأدوار، وألعاب الحروب والرياضات الخيالية" />
+	<subject code="WDJ" text="الصور ثلاثية البعاد والخدع البصرية" />
+	<subject code="WDK" text="الألغاز والمسابقات" />
+	<subject code="WDKC" text="الكلمات المتقاطعة" />
+	<subject code="WDKN" text="السودوكو وألغاز الأعداد" />
+	<subject code="WDKX" text="الحزورات وكتب مسابقات الأسئلة" />
+	<subject code="WDM" text="الألعاب الداخلية" />
+	<subject code="WDMC" text="ألعاب الورق" />
+	<subject code="WDMC1" text="لعبة البريدج" />
+	<subject code="WDMC2" text="لعبة البوكر" />
+	<subject code="WDMG" text="ألعاب الطاولة" />
+	<subject code="WDMG1" text="الشطرنج" />
+	<subject code="WDP" text="القمار: نظريات وطرق" />
+	<subject code="WF" text="الحرف اليدوية والفنون التزيينية والحرف" />
+	<subject code="WFA" text="كتيبات الرسم والفن" />
+	<subject code="WFB" text="أشغال الإبرة والحرف النسيجية" />
+	<subject code="WFBC" text="التطريز" />
+	<subject code="WFBL" text="الدانتيل وصنع الدانتيل" />
+	<subject code="WFBQ" text="صنع اللحفان، وترقيعه وتزيينه" />
+	<subject code="WFBS" text="الحياكة والحبك" />
+	<subject code="WFBV" text="طباعة المنسوجات ومعادلة الأصباغ" />
+	<subject code="WFC" text="عمل الحبال، والعقد، والرباط الخشن" />
+	<subject code="WFF" text="صناعة السجاد والمفارش" />
+	<subject code="WFG" text="الغزل والنسيج" />
+	<subject code="WFH" text="الدمى: صناعتها وتزيينها" />
+	<subject code="WFJ" text="المجوهرات والتطريز بالنمنم" />
+	<subject code="WFK" text="تشطيبات الديكور والسطوح" />
+	<subject code="WFL" text="الأعمال الخشبية والمعدنية المزخرفة" />
+	<subject code="WFLF" text="تأطير الصور" />
+	<subject code="WFN" text="حرف الفخار والسيراميك والزجاج" />
+	<subject code="WFS" text="النحت والنمذجة والصب والسبك" />
+	<subject code="WFT" text="حرف الورق والكتب" />
+	<subject code="WFTG" text="بطاقات المعايدة" />
+	<subject code="WFTM" text="الأشكال الورقية وهندسة الورق" />
+	<subject code="WFTS" text="حفظ القصاصات" />
+	<subject code="WFU" text="الترقين وخط اليد" />
+	<subject code="WFV" text="الحرف الريفية" />
+	<subject code="WFW" text="ترتيب الزهور والحرف الزهرية" />
+	<subject code="WG" text="النقل: الصالح العام" />
+	<subject code="WGC" text="الطرق والمركبات: الصالح العام" />
+	<subject code="WGCB" text="السيارات: الصالح العام" />
+	<subject code="WGCF" text="الباصات، قطارات الترام والمركبات التجارية: الصالح العام" />
+	<subject code="WGCK" text="الدراجات النارية: الصالح العام" />
+	<subject code="WGCT" text="الجرارات والعجلات الزراعية: الصالح العام" />
+	<subject code="WGCV" text="إدامة العجلات وكراساتها" />
+	<subject code="WGF" text="القطارات والسكك الحديدية: الصالح العام" />
+	<subject code="WGG" text="السفن والمراكب: الصالح العام" />
+	<subject code="WGGN" text="القوارب الضيقة والقنوات المائية" />
+	<subject code="WGGV" text="صناعة القوارب وإدامتها" />
+	<subject code="WGM" text="الطائرات: الصالح العام" />
+	<subject code="WH" text="الفكاهة" />
+	<subject code="WHC" text="الرسوم المتحركة ومجلات الرسوم" />
+	<subject code="WHG" text="برامج التلفاز الهزلية" />
+	<subject code="WHJ" text="النكات والألغاز" />
+	<subject code="WHL" text="الفكاهات باللهجة العامية" />
+	<subject code="WHP" text="المحاكاة الساخرة والسخريات" />
+	<subject code="WHX" text="مجموعات ومختارات الفكاهة" />
+	<subject code="WJ" text="نمط الحياة وأدلة الأسلوب الشخصي" />
+	<subject code="WJF" text="أدلة الأزياء والأنماط" />
+	<subject code="WJH" text="مستحضرات التجميل والشعر والجمال" />
+	<subject code="WJK" text="التصميم الداخلي، والديكور وأدلة الأسلوب" />
+	<subject code="WJS" text="أدلة التسوق" />
+	<subject code="WJW" text="حفلات الزفاف، ومخططي حفلات الزفاف" />
+	<subject code="WJX" text="الحفلات وآداب السلوك والتسالي" />
+	<subject code="WK" text="البيت وإدامة البيت" />
+	<subject code="WKD" text="إصنع بنفسك: عامة" />
+	<subject code="WKDM" text="إصنع بنفسك: كراسات إدامة المنزل" />
+	<subject code="WKDW" text="إصنع بنفسك: النجارة وصناعة الخشب" />
+	<subject code="WKH" text="النصائح المنزلية" />
+	<subject code="WKR" text="تجديد وتوسيع البيت" />
+	<subject code="WM" text="عمل الحدائق" />
+	<subject code="WMB" text="الحدائق (الوصف، والتاريخ... الخ.)" />
+	<subject code="WMD" text="تصميم وتخطيط الحدائق" />
+	<subject code="WMF" text="الدفيئات الزراعية، والمستنبتات الزجاجية، والباحات" />
+	<subject code="WMP" text="عمل الحدائق: النباتات" />
+	<subject code="WMPC" text="عمل الحدائق: الأزهار" />
+	<subject code="WMPF" text="عمل الحدائق: إنماء الفواكه والخضر" />
+	<subject code="WMPH" text="عمل الحدائق: الأعشاب" />
+	<subject code="WMPM" text="العصارة والصبار" />
+	<subject code="WMPS" text="عمل الحدائق: الشجيرات والأشجار" />
+	<subject code="WMPX" text="نباتات المنزل" />
+	<subject code="WMQ" text="أساليب متخصصة لعمل الحدائق" />
+	<subject code="WMQB" text="شجيرات الزينة الصغيرة" />
+	<subject code="WMQF" text="البستنة العضوية" />
+	<subject code="WMQL" text="الحدائق والمناظر الطبيعية" />
+	<subject code="WMQN" text="البستنة الطبيعية والبرية" />
+	<subject code="WMQP" text="عمل الحدائق مع النباتات المحلية" />
+	<subject code="WMQR" text="بستنة الحاويات" />
+	<subject code="WMQW" text="الحدائق المائية والبرك" />
+	<subject code="WMT" text="المخصصات" />
+	<subject code="WN" text="التأريخ الطبيعي" />
+	<subject code="WNA" text="الديناصورات وعالم ما قبل التأريخ" />
+	<subject code="WNC" text="الحياة البرية: الصالح العام" />
+	<subject code="WNCB" text="الحياة البرية: الطيور ومراقبة الطيور" />
+	<subject code="WNCF" text="الحياة البرية: الثدييات" />
+	<subject code="WNCK" text="الحياة البرية: الزواحف والبرمائيات" />
+	<subject code="WNCN" text="الحياة البرية: الفراشات والحشرات والأخرى والعناكب" />
+	<subject code="WNCS" text="الحياة البرية: المخلوقات المائية" />
+	<subject code="WNCS1" text="الحياة البحرية وشاطئ البحر" />
+	<subject code="WNCS2" text="حياة المياه العذبة" />
+	<subject code="WND" text="الريف وحياة الريف" />
+	<subject code="WNF" text="المزارع وحيوانات الحقول" />
+	<subject code="WNG" text="الحيوانات الداجنة والحيوانات الأليفة" />
+	<subject code="WNGC" text="القطط كحيوانات أليفة" />
+	<subject code="WNGD" text="الكلاب كحيوانات أليفة" />
+	<subject code="WNGD1" text="تطويع وتدريب الكلاب" />
+	<subject code="WNGF" text="الأسماك والأحواض المائية" />
+	<subject code="WNGH" text="الخيول والمهور" />
+	<subject code="WNGK" text="الطيور، بما في ذلك طيور الأقفاص، كحيوانات أليفة" />
+	<subject code="WNGR" text="الأرانب والقوارض كحيوانات أليفة" />
+	<subject code="WNGS" text="الزواحف والبرمائيات كحيوانات أليفة" />
+	<subject code="WNGX" text="الحشرات والعناكب كحيوانات أليفة" />
+	<subject code="WNH" text="حدائق الحيوان ومحميات الحياة البرية" />
+	<subject code="WNP" text="الأشجار، والزهور والنباتات البرية" />
+	<subject code="WNR" text="الصخور والمعادن والأحافير" />
+	<subject code="WNW" text="الأرض: التأريخ الطبيعي، عامة" />
+	<subject code="WNWM" text="الطقس" />
+	<subject code="WNX" text="علم الفلك والفضاء الشعبي" />
+	<subject code="WQ" text="الاهتمام المحلي، والتأريخ العائلي والحنين إلى الماضي" />
+	<subject code="WQH" text="التأريخ المحلي" />
+	<subject code="WQN" text="الحنين إلى الماضي: عامة" />
+	<subject code="WQP" text="الأماكن في الصور الفوتوغرافية القديمة" />
+	<subject code="WQY" text="التاريخ العائلي، تتبع الأسلاف" />
+	<subject code="WS" text="الرياضة والاستجمام في الهواء الطلق" />
+	<subject code="WSB" text="الأحداث الرياضية وإدارتها" />
+	<subject code="WSBB" text="الألعاب الأولمبية والألعاب الأولمبية للمعاقين" />
+	<subject code="WSBG" text="الهيئات الرئاسية الرياضية" />
+	<subject code="WSBM" text="الإدارة المرافق الرياضية" />
+	<subject code="WSBT" text="الفرق والنوادي الرياضية" />
+	<subject code="WSBV" text="المرافق الرياضية" />
+	<subject code="WSBX" text="تأريخ الرياضة" />
+	<subject code="WSC" text="رياضات المعاقين" />
+	<subject code="WSD" text="التدريب والإرشاد الرياضي" />
+	<subject code="WSDF" text="علم الرياضة، التربية البدنية" />
+	<subject code="WSDP" text="علم النفس الرياضي" />
+	<subject code="WSDX" text="تعاطي المخدرات في الرياضة" />
+	<subject code="WSE" text="الرياضات المتطرفة" />
+	<subject code="WSF" text="الرياضات الهوائية والاستجمام" />
+	<subject code="WSJ" text="ألعاب الكرة" />
+	<subject code="WSJA" text="كرة القدم (رابطة كرة القدم)" />
+	<subject code="WSJA1" text="كأس العالم" />
+	<subject code="WSJC" text="الكريكيت" />
+	<subject code="WSJF" text="لعبة الركبي" />
+	<subject code="WSJF1" text="غتحاد الركبي" />
+	<subject code="WSJF2" text="دوري الركبي" />
+	<subject code="WSJG" text="الغولف" />
+	<subject code="WSJH" text="الهوكي" />
+	<subject code="WSJJ" text="Lacrosse" />
+	<subject code="WSJK" text="القذف" />
+	<subject code="WSJL" text="كرة القدم الاسكتلندية" />
+	<subject code="WSJM" text="كرة السلة" />
+	<subject code="WSJN" text="كرة الشبكة" />
+	<subject code="WSJQ" text="كرة القدم الأسترالية" />
+	<subject code="WSJR" text="ألعاب المضرب" />
+	<subject code="WSJR2" text="التنس" />
+	<subject code="WSJR3" text="تنس الريشة" />
+	<subject code="WSJR4" text="الاسكواش والمضارب" />
+	<subject code="WSJR5" text="تنس الطاولة" />
+	<subject code="WSJS" text="كرة القدم الأمريكية" />
+	<subject code="WSJT" text="البيسبول" />
+	<subject code="WSJV" text="الكرة الطائرة" />
+	<subject code="WSJY" text="السلطانيات، البولينج، الكرة الحديدية" />
+	<subject code="WSJZ" text="السنوكر والبليارد" />
+	<subject code="WSK" text="المسار والمجال الرياضي، وألعاب القوى" />
+	<subject code="WSKC" text="الماراثون والجري عبر الأرياف" />
+	<subject code="WSKQ" text="الرياضات متعددة الاختصاصات" />
+	<subject code="WSL" text="الجمباز" />
+	<subject code="WSM" text="رفع الأثقال" />
+	<subject code="WSN" text="الفروسية ورياضات الحيوان" />
+	<subject code="WSNB" text="سباق الخيل" />
+	<subject code="WSNF" text="ركوب الخيل، قفز الحواجز والفروسية" />
+	<subject code="WSNP" text="سباق السلوقي" />
+	<subject code="WSP" text="رياضات السيارات" />
+	<subject code="WSPC" text="سباق السيارات" />
+	<subject code="WSPC1" text="الفورمولا 1 وسباق الجائزة الكبرى" />
+	<subject code="WSPG" text="حشد السيارات / القيادة الحاشدة" />
+	<subject code="WSPM" text="سباق الدراجات النارية" />
+	<subject code="WSQ" text="ركوب الدراجات" />
+	<subject code="WSR" text="التزحلق، التزلج... الخ." />
+	<subject code="WSS" text="الرياضات المائية والاستجمام" />
+	<subject code="WSSC" text="السباحة والغطس" />
+	<subject code="WSSC1" text="السباحة الساحلية" />
+	<subject code="WSSG" text="رياضة ركوب الأمواج والتزلج على الماء" />
+	<subject code="WSSN" text="ركوب الزوارق" />
+	<subject code="WSSN1" text="ركوب الزوارق البخارية والعوامات" />
+	<subject code="WSSN3" text="الإبحار" />
+	<subject code="WSSN5" text="ركوب الزوارق والتجديف" />
+	<subject code="WSSN7" text="التجديف" />
+	<subject code="WST" text="الرياضات القتالية والدفاع عن النفس" />
+	<subject code="WSTB" text="الملاكمة" />
+	<subject code="WSTC" text="المصارعة" />
+	<subject code="WSTF" text="المبارزة" />
+	<subject code="WSTM" text="فنون الدفاع عن النفس الشرقية" />
+	<subject code="WSU" text="كمال الأجسام" />
+	<subject code="WSW" text="الرياضات الشتوية" />
+	<subject code="WSWK" text="التزلج" />
+	<subject code="WSWM" text="التزلج على الجليد" />
+	<subject code="WSWS" text="التزحلق على الجليد" />
+	<subject code="WSWY" text="هوكي الجليد" />
+	<subject code="WSX" text="الرياضات الحقلية: صيد الأسماك، والصيد والرماية" />
+	<subject code="WSXF" text="صيد الأسماك، والصيد بالصنارة" />
+	<subject code="WSXH" text="الصيد أو رماية الحيوانات" />
+	<subject code="WSXR" text="القوس والسهم" />
+	<subject code="WSXS" text="الأسلحة النارية الصغيرة، والبنادق وغيرها من المعدات" />
+	<subject code="WSXT" text="إصابة الأهداف" />
+	<subject code="WSZ" text="الرياضات الخارجية النشيطة" />
+	<subject code="WSZC" text="المشي، المشي لمسافات طويلة، والرحلات" />
+	<subject code="WSZG" text="التسلق وتسلق الجبال" />
+	<subject code="WSZK" text="التزلج" />
+	<subject code="WSZN" text="التخييم في المغارات والأاديد" />
+	<subject code="WSZR" text="التخييم والنحت على الخشب" />
+	<subject code="WSZV" text="مهارات البقاء على قيد الحياة في العراء" />
+	<subject code="WT" text="السفر والعطلات" />
+	<subject code="WTD" text="تلميحات السفر ونصائحه: عامة" />
+	<subject code="WTH" text="أدلة السفر والعطلات" />
+	<subject code="WTHA" text="عطلات المغامرات" />
+	<subject code="WTHB" text="رحلات العمل" />
+	<subject code="WTHC" text="أدلة السياحة الاقتصادية" />
+	<subject code="WTHF" text="السفر برفقة الأطفال / عطلات العائلة" />
+	<subject code="WTHH" text="أدلة إقامة الفنادق والعطل" />
+	<subject code="WTHH1" text="أدلة القوافل والتخييم" />
+	<subject code="WTHM" text="إرشادات المتاحف، المواقع التأريخية، والمعارض الفنية" />
+	<subject code="WTHR" text="أدلة المطاعم، المقاهي، والحانات" />
+	<subject code="WTHT" text="الحدائق ومدن الالعاب" />
+	<subject code="WTHX" text="الرحلات البحرية" />
+	<subject code="WTK" text="كتب التراكيب التعبيرية" />
+	<subject code="WTL" text="كتابة السفر" />
+	<subject code="WTLC" text="أدب الرحلات الكلاسيكية" />
+	<subject code="WTLP" text="البعثات" />
+	<subject code="WTM" text="الأماكن والشعوب: الأعمال العامة والتصويرية" />
+	<subject code="WTR" text="خرائط الرحلات وأطالسها" />
+	<subject code="WTRD" text="أطالس الطرق وخرائطها" />
+	<subject code="WTRM" text="خرائط الرحلات" />
+	<subject code="WTRS" text="خرائط المدن ومخططاتها" />
+	<subject code="WZ" text="فقرات متنوعة" />
+	<subject code="WZG" text="كتب الهدايا" />
+	<subject code="WZS" text="القرطاسية" />
+	<subject code="Y" text="تعليم الأطفال والمراهقين" />
+	<subject code="YB" text="الكتب المصورة وكتب الأنشطة، مواد التعلم المبكر" />
+	<subject code="YBC" text="الكتب المصورة" />
+	<subject code="YBCB" text="كتب الأطفال" />
+	<subject code="YBCH" text="الكتب المصورة: كتب الحروف" />
+	<subject code="YBCS" text="كتب القصص المصورة" />
+	<subject code="YBG" text="كتب الأنشطة التفاعلية ورزمها" />
+	<subject code="YBGC" text="كتب أنشطة التلوين والرسم" />
+	<subject code="YBGK" text="كتب تتبع الرسوم والعدد" />
+	<subject code="YBGP" text="الكتب المنبثقة وكتب الرفوف المطوية" />
+	<subject code="YBGS" text="كتب الملصقات والطوابع" />
+	<subject code="YBGT" text="كتب الطرافة والألعاب والكتب المخرمة" />
+	<subject code="YBGT1" text="كتب أصوات القصص، الرنانات، الكتب الموسيقية" />
+	<subject code="YBGT3" text="كتب الملمس البارز" />
+	<subject code="YBGT5" text="الكتب المغناطيسية" />
+	<subject code="YBGT7" text="كتب اللغز" />
+	<subject code="YBL" text="التعليم المبكر / جوانب التعليم المبكر" />
+	<subject code="YBLA" text="التعليم المبكر: كتب أ ب ت / كتب الهجاء" />
+	<subject code="YBLA1" text="التعليم المبكر: كتب الكلمات الأولى" />
+	<subject code="YBLB" text="التعليم المبكر: كتب النظم والتلاعب بالألفاظ" />
+	<subject code="YBLB1" text="التعليم المبكر: كتب الشعر والنظم" />
+	<subject code="YBLC" text="التعليم المبكر: الأرقام والحساب" />
+	<subject code="YBLD" text="التعليم المبكر: الألوان" />
+	<subject code="YBLF" text="التعليم المبكر: الأضداد" />
+	<subject code="YBLH" text="التعليم المبكر: الحجوم، الأشكال، الأنماط" />
+	<subject code="YBLJ" text="التعليم المبكر: الزمن والفصول" />
+	<subject code="YBLJ1" text="التعليم المبكر: الإخبار عن الوقت" />
+	<subject code="YBLN" text="التعليم المبكر: التجارب الأولى" />
+	<subject code="YBLN1" text="التعليم المبكر: الحواس" />
+	<subject code="YBLP" text="التعليم المبكر: الأشخاص الذين يساعدوننا" />
+	<subject code="YBLT" text="التعليم المبكر: الأشياء التي تذهب" />
+	<subject code="YD" text="الشعر للأطفال / ولمن في سن المراهقة، المختارات، الحوليات" />
+	<subject code="YDA" text="الحوليات (للأطفال / المراهقين)" />
+	<subject code="YDC" text="المختارات (للأطفال / المراهقين)" />
+	<subject code="YDP" text="الشعر (للأطفال / المراهقين)" />
+	<subject code="YF" text="روايات للأطفال / المراهقين وقصص حقيقية" />
+	<subject code="YFA" text="الروايات الكلاسيكية (للأطفال / المراهقين)" />
+	<subject code="YFB" text="روايات عامة (للأطفال / المراهقين)" />
+	<subject code="YFC" text="قصص المغامرات (للأطفال / المراهقين)" />
+	<subject code="YFCB" text="القصص المثيرة (للأطفال / المراهقين)" />
+	<subject code="YFCF" text="روايات الجريمة والغموض (للأطفال / المراهقين)" />
+	<subject code="YFD" text="قصص الرعب والأشباح (للأطفال / المراهقين)" />
+	<subject code="YFG" text="الخيال العلمي (للأطفال / المراهقين)" />
+	<subject code="YFH" text="الخيال والواقعية السحرية (للأطفال / المراهقين)" />
+	<subject code="YFHR" text="الرومانسية الخيالية (للمراهقين)" />
+	<subject code="YFJ" text="القصص التقليدية (للأطفال / المراهقين)" />
+	<subject code="YFM" text="قصص الرومانسية والعلاقات (للأطفال / المراهقين)" />
+	<subject code="YFN" text="قصص العائلة والمنزل (للأطفال / المراهقين)" />
+	<subject code="YFP" text="قصص الحيوانات (للأطفال / المراهقين)" />
+	<subject code="YFQ" text="القصص الفكاهية (للأطفال / المراهقين)" />
+	<subject code="YFR" text="القصص الرياضية (للأطفال / المراهقين)" />
+	<subject code="YFS" text="قصص المدرسة (للأطفال / المراهقين)" />
+	<subject code="YFT" text="الروايات التأريخية (للأطفال / المراهقين)" />
+	<subject code="YFU" text="القصص القصيرة (للأطفال / المراهقين)" />
+	<subject code="YFW" text="روايات المقاطع الهزلية / الروايات المصورة (للأطفال / المراهقين)" />
+	<subject code="YFY" text="قصص حقيقية (للأطفال / المراهقين)" />
+	<subject code="YN" text="للأطفال / المراهقين: عامة لا روائية" />
+	<subject code="YNA" text="الفن: الصالح العام (للأطفال / المراهقين)" />
+	<subject code="YNC" text="الموسيقى: الصالح العام (للأطفال / المراهقين)" />
+	<subject code="YNCP" text="موسيقى البوب (للأطفال / المراهقين)" />
+	<subject code="YND" text="التمثيل والأداء (للأطفال / المراهقين)" />
+	<subject code="YNDB" text="الرقص، الباليه (للأطفال / المراهقين)" />
+	<subject code="YNDS" text="النصوص المسرحية (للأطفال / المراهقين)" />
+	<subject code="YNF" text="التلفاز والأفلام (للأطفال / المراهقين)" />
+	<subject code="YNG" text="المعارف والنمانم العامة (للأطفال / المراهقين)" />
+	<subject code="YNGL" text="المكتبات، المتاحف، المدارس (للأطفال / المراهقين)" />
+	<subject code="YNH" text="التأريخ والأحداث الماضية: الصالح العام (للأطفال / المراهقين)" />
+	<subject code="YNJ" text="الحروب، المعارك، القوات المسلحة (للأطفال / المراهقين)" />
+	<subject code="YNK" text="العمل و الصناعة / عالم الأعمال (للأطفال / المراهقين)" />
+	<subject code="YNL" text="الأدب، الكتب، والكتاب (للأطفال / المراهقين)" />
+	<subject code="YNM" text="الأشخاص والأماكن (للأطفال / المراهقين)" />
+	<subject code="YNN" text="التأريخ الطبيعي (للأطفال / المراهقين)" />
+	<subject code="YNNA" text="الديناصورات وعوالم ما قبل التأريخ (للأطفال / المراهقين)" />
+	<subject code="YNND" text="الحيوانات الأليفة (للأطفال / المراهقين)" />
+	<subject code="YNNF" text="الحيوانات الداجنة(للأطفال / المراهقين)" />
+	<subject code="YNNR" text="الحياة البرية (للأطفال / المراهقين)" />
+	<subject code="YNP" text="الاهتمامات العملية (للأطفال / المراهقين)" />
+	<subject code="YNPC" text="الطبخ والغذاء (للأطفال / المراهقين)" />
+	<subject code="YNPG" text="عمل الحدائق (للأطفال / المراهقين)" />
+	<subject code="YNPH" text="الحرف اليدوية (للأطفال / المراهقين)" />
+	<subject code="YNPK" text="المال (للأطفال / المراهقين)" />
+	<subject code="YNR" text="الدين والعقائد: الصالح العام (للأطفال / المراهقين)" />
+	<subject code="YNRB" text="الأناجيل وقصصها (للأطفال / المراهقين)" />
+	<subject code="YNT" text="العلوم والتقنية: الصالح العام (للأطفال / المراهقين)" />
+	<subject code="YNTB" text="الأبنية والإنشاءات (للأطفال / المراهقين)" />
+	<subject code="YNTR" text="النقل (للأطفال / المراهقين)" />
+	<subject code="YNTS" text="الفضاء (للأطفال / المراهقين)" />
+	<subject code="YNU" text="المزح والنكات (للأطفال / المراهقين)" />
+	<subject code="YNUC" text="أفلام الكرتون والمقاطع الهزلية (للأطفال / المراهقين)" />
+	<subject code="YNV" text="الهوايات، المسابقات، والألعاب (للأطفال / المراهقين)" />
+	<subject code="YNVP" text="كتب الحزورات (للأطفال / المراهقين)" />
+	<subject code="YNVU" text="أدلة ألعاب الحاسوب (للأطفال / المراهقين)" />
+	<subject code="YNW" text="الرياضات والاستجمامات خارج المنزل (للأطفال / المراهقين)" />
+	<subject code="YNWA" text="كرة القدم (للأطفال / المراهقين)" />
+	<subject code="YNWB" text="لعبة الركبي (للأطفال / المراهقين)" />
+	<subject code="YNWC" text="الكريكيت (للأطفال / المراهقين)" />
+	<subject code="YNWG" text="الرياضيون وألعاب الجمباز (للأطفال / المراهقين)" />
+	<subject code="YNWW" text="السباحة والرياضات المائية (للأطفال / المراهقين)" />
+	<subject code="YNWY" text="ركوب الدراجات، الصعود والتزحلق (للأطفال / المراهقين)" />
+	<subject code="YNX" text="الأحاجي، الخوارق، الوحوش والمخلوقات الأسطورية (للأطفال / المراهقين)" />
+	<subject code="YNXF" text="الأجسام الطائرة مجهولة الهوية والكائنات اللاأرضية (للأطفال / المراهقين)" />
+	<subject code="YNXW" text="الساحرات والأشباح (للأطفال / المراهقين)" />
+	<subject code="YQ" text="المواد التربوية" />
+	<subject code="YQA" text="تربوي: الفن والتصميم" />
+	<subject code="YQB" text="تربوي: الموسيقى" />
+	<subject code="YQC" text="تربوي: اللغة والأدب الإنجليزي" />
+	<subject code="YQCR" text="تربوي: اللغة الإنجليزية: القراء وأساليب القراءة" />
+	<subject code="YQCR5" text="تربوي: اللغة الإنجليزية: القراء وأساليب القراءة: سماع الأصوات الاصطناعية" />
+	<subject code="YQCS" text="تربوي: اللغة الإنجليزية: مهارات القراءة والكتابة" />
+	<subject code="YQCS1" text="تربوي: مهارات الكتابة: الكتابة اليدوية" />
+	<subject code="YQCS5" text="تربوي: اللغة الإنجليزية: مهارات القراءة: سماع الأصوات الاصطناعية" />
+	<subject code="YQD" text="تربوي: الدراسات الدرامية" />
+	<subject code="YQE" text="تربوي: الأدب الإنجليزي" />
+	<subject code="YQEF" text="طبعات المدارس من النصوص الروائية للأدب الإنجليزي" />
+	<subject code="YQES" text="الطبعات المدرسية لأعمال شكسبير" />
+	<subject code="YQF" text="تربوي: اللغات من غير الإنجليزية" />
+	<subject code="YQFL" text="تربوي: الأدب في اللغات من غير الإنجليزية" />
+	<subject code="YQG" text="تربوي: الجغرافية" />
+	<subject code="YQH" text="تربوي: التأريخ" />
+	<subject code="YQJ" text="تربوي: العلوم الاجتماعية" />
+	<subject code="YQJP" text="تربوي: علم النفس" />
+	<subject code="YQM" text="تربوي: الرياضيات والحساب" />
+	<subject code="YQMT" text="تربوي: الرياضيات والحساب: جداول الضرب" />
+	<subject code="YQN" text="تربوي: المواطنة والتعليم الاجتماعي" />
+	<subject code="YQNP" text="تربوي: التربية الشخصية، الاجتماعية، الصحية (PSHE)" />
+	<subject code="YQR" text="تربوي: دراسات دينية" />
+	<subject code="YQRA" text="تربوي: المواد المرجعية للمقرر المدرسي" />
+	<subject code="YQRC" text="تربوي: دراسات دينية: الديانة المسيحية" />
+	<subject code="YQRN" text="تربوي: دراسات دينية: الأديان غير المسيحية" />
+	<subject code="YQRN1" text="تربوي: دراسات دينية: اليهودية" />
+	<subject code="YQRN2" text="تربوي: دراسات دينية: الإسلام" />
+	<subject code="YQRN3" text="تربوي: دراسات دينية: الهندوسية" />
+	<subject code="YQRN4" text="تربوي: دراسات دينية: البوذية" />
+	<subject code="YQS" text="تربوي: العلوم، العلوم العامة" />
+	<subject code="YQSB" text="تربوي: علوم الحياة" />
+	<subject code="YQSC" text="تربوي: الكيمياء" />
+	<subject code="YQSP" text="تربوي: الفيزياء" />
+	<subject code="YQT" text="تربوي: التقنية" />
+	<subject code="YQTD" text="تربوي: التصميم والتقنية" />
+	<subject code="YQTF" text="تربوي: تقنية الغذاء" />
+	<subject code="YQTU" text="تربوي: تقنيات المعلومات والحوسبة ICT" />
+	<subject code="YQV" text="تربوي: الدراسات التجارية والاقتصاد" />
+	<subject code="YQW" text="تربوي: التربية البدنية (بضمنها الرقص)" />
+	<subject code="YQX" text="تربوي: دراسات عامة / مهارات الدراسة عامة" />
+	<subject code="YQY" text="تربوي: المواضيع المهنية" />
+	<subject code="YQZ" text="تربوي: إرشادات الدراسة والمراجعة" />
+	<subject code="YR" text="مواد مرجعية (للأطفال / المراهقين)" />
+	<subject code="YRD" text="القواميس، قواميس المدارس (للأطفال / المراهقين)" />
+	<subject code="YRDC" text="قواميس الصور (للأطفال / المراهقين)" />
+	<subject code="YRDL" text="القواميس ثنائية ومتعددة اللغات (للأطفال / المراهقين)" />
+	<subject code="YRE" text="الموسوعات (للأطفال / المراهقين)" />
+	<subject code="YRG" text="الأعمال المرجعية (للأطفال / المراهقين)" />
+	<subject code="YRW" text="الأطالس والخرائط (للأطفال / المراهقين)" />
+	<subject code="YX" text="قضايا شخصية واجتماعية (للأطفال / المراهقين)" />
+	<subject code="YXA" text="قضايا شخصية واجتماعية: الجسم والصحة (للأطفال / المراهقين)" />
+	<subject code="YXAX" text="قضايا شخصية واجتماعية: التربية الجنسية وحقائق الحياة (للأطفال / المراهقين)" />
+	<subject code="YXC" text="قضايا شخصية واجتماعية: البلطجة والعنف والاعتداء (للأطفال / المراهقين)" />
+	<subject code="YXF" text="قضايا شخصية واجتماعية: قضايا الأسرة (للأطفال / المراهقين)" />
+	<subject code="YXFD" text="قضايا شخصية واجتماعية: الطلاق، الانفصال، تهدم الأسرة (للأطفال / المراهقين)" />
+	<subject code="YXFM" text="قضايا شخصية واجتماعية: الأخوة والأخوات (للأطفال / المراهقين)" />
+	<subject code="YXFT" text="قضايا شخصية واجتماعية: حمل المراهقات (للأطفال / المراهقين)" />
+	<subject code="YXG" text="قضايا شخصية واجتماعية: الموت والجنائز (للأطفال / المراهقين)" />
+	<subject code="YXJ" text="قضايا شخصية واجتماعية: المخدرات والإدمان (للأطفال / المراهقين)" />
+	<subject code="YXK" text="قضايا شخصية واجتماعية: الإعاقة والاحتياجات الخاصة (للأطفال / المراهقين)" />
+	<subject code="YXL" text="قضايا شخصية واجتماعية: الوعي الذاتي و. إحترام الذات (للأطفال / المراهقين)" />
+	<subject code="YXN" text="قضايا شخصية واجتماعية: العنصرية وتعدد الثقافات (للأطفال / المراهقين)" />
+	<subject code="YXS" text="قضايا شخصية واجتماعية: العلاقات الجنسية (للأطفال / المراهقين)" />
+	<subject code="YXT" text="قضايا شخصية واجتماعية: التغيب عن المدرسة والمشاكل المدرسية (للأطفال / المراهقين)" />
+	<subject code="YXV" text="قضايا شخصية واجتماعية: إرشادات التوظيف (للمراهقين)" />
+	<subject code="YXZ" text="قضايا اجتماعية (للأطفال / المراهقين)" />
+	<subject code="YXZG" text="قضايا اجتماعية: قضايا البيئة والحفاظ عليها (للأطفال / المراهقين)" />
+	<subject code="YXZR" text="قضايا اجتماعية: قضايا دينية (للأطفال / المراهقين)" />
+	<subject code="YXZW" text="قضايا اجتماعية: قضايا الحرب والنزاعات (للأطفال / المراهقين)" />
+	<subject code="YZ" text="القرطاسية والمواد المتنوعة (للأطفال / المراهقين)" />
+</subjects>

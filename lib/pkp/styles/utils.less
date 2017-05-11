@@ -1,0 +1,81 @@
+/**
+ * @file styles/utils.less
+ *
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @brief Mix-ins, animations and other utilities
+ *
+ */
+
+// border-box all the things for your health and wellbeing
+// https://css-tricks.com/international-box-sizing-awareness-day/
+*,
+*:before,
+*:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+// Mix-ins
+.transition(@transition) {
+	-webkit-transition: @transition;
+	-moz-transition: @transition;
+	-ms-transition: @transition;
+	-o-transition: @transition;
+	transition: @transition;
+}
+
+.transform (@transform) {
+	transform: @transform;
+	-webkit-transform: @transform;
+	-moz-transform: @transform;
+	-o-transform: @transform;
+}
+
+.animation(@animation) {
+	-webkit-animation: @animation;
+	-moz-animation: @animation;
+	-ms-animation: @animation;
+	-o-animation: @animation;
+	animation: @animation;
+}
+
+// Animations
+@keyframes pkp_spin {
+	0% {
+		.transform(rotateZ(-360deg));
+	}
+	100% {
+		.transform(rotateZ(0deg));
+	}
+}
+
+@-webkit-keyframes pkp_spin {
+	0% {
+		.transform(rotateZ(-360deg));
+	}
+	100% {
+		.transform(rotateZ(0deg));
+	}
+}
+
+@-moz-keyframes pkp_spin {
+	0% {
+		.transform(rotateZ(-360deg));
+	}
+	100% {
+		.transform(rotateZ(0deg));
+	}
+}
+
+@-o-keyframes pkp_spin {
+	0% {
+		.transform(rotateZ(-360deg));
+	}
+	100% {
+		.transform(rotateZ(0deg));
+	}
+}

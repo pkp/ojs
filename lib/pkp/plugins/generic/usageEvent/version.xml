@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE version SYSTEM "../../../dtd/pluginVersion.dtd">
+
+<!--
+  * plugins/generic/usageEvent/version.xml
+  *
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Plugin version information.
+  -->
+<version>
+	<application>usageEvent</application>
+	<type>plugins.generic</type>
+	<release>1.0.0.0</release>
+	<date>2013-04-15</date>
+	<sitewide>1</sitewide>
+	<class>UsageEventPlugin</class>
+</version>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/pt_BR/installer.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the pt_PT (Português (Portugal)) locale.
+  *
+  -->
+
+<locale name="pt_PT" full_name="Português (Portugal)">
+	<message key="installer.additionalLocales">Idiomas Adicionais</message>
+	<message key="installer.administratorAccount">Conta de Administrador</message>
+	<message key="installer.administratorAccountInstructions">Este utilizador será o Administrador do Portal e terá acesso total ao sistema. Contas adicionais podem ser criadas após a instalação.</message>
+	<message key="installer.checkNo">Não<![CDATA[<span class="pkp_form_error formError">NÃO</span>]]></message>
+	<message key="installer.checkYes">Sim</message>
+	<message key="installer.clientCharset">Conjunto de caracteres do Cliente</message>
+	<message key="installer.clientCharsetInstructions">A codificação utilizada para dados enviados e recebidos pelos navegadores.</message>
+	<message key="installer.configFileError"><![CDATA[O documento de configuração <tt>config.inc.php</tt> não existe ou não possui permissão de leitura.]]></message>
+	<message key="installer.connectionCharset">Conjunto de Caracteres da Conexão</message>
+	<message key="installer.contentsOfConfigFile">Conteúdo para ficheiro de configuração</message>
+	<message key="installer.createDatabase">Criar nova base de dados</message>
+	<message key="installer.createDatabaseInstructions">Para utilizar esta opção o servidor de bases de dados deve permitir criação de bases remotamente e o nome de utilizador e senha deve possuir as permissões necessárias para criação de bases e tabelas. Caso ocorra um erro durante a instalação, crie manualmente a base de dados no servidor e execute novamente o instalador desactivando esta opção.</message>
+	<message key="installer.databaseCharset">Conjunto de Caracteres da Base de Dados</message>
+	<message key="installer.databaseDriver">Driver da Base de Dados</message>
+	<message key="installer.databaseDriverInstructions"><![CDATA[<strong>Drivers de bases de dados relacionados entre chaves ([]) não tiveram as suas extensões PHP reconhecidas pelo sistema, e portanto não devem funcionar.</strong><br />Os drivers não suportados, listados acima, são exibidos apenas em carácter académico e experimental, não devendo funcionar por padrão. Somente poderão ser utilizados pelo sistema os drivers que tiverem as suas extensões PHP prévia e correctamente instaladas no servidor.]]></message>
+	<message key="installer.databaseHost">Servidor</message>
+	<message key="installer.databaseHostInstructions">Deixe o nome do servidor em branco para conectar através de socket de domínio em vez de TCP/IP. Não é necessário para o MySQL, que automaticamente utiliza sockets caso "localhost" seja digitado, porém é obrigatório para outras bases como o PostgreSQL.</message>
+	<message key="installer.databaseName">Nome da Base de Dados</message>
+	<message key="installer.databasePassword">Senha para acesso à base de dados</message>
+	<message key="installer.databaseSettings">Configurações de Bases de Dados</message>
+	<message key="installer.databaseUsername">Utilizador da base de dados</message>
+	<message key="installer.encryption">Algoritmo de criptografia de senha</message>
+	<message key="installer.filesDir">Pasta para Envio de Ficheiros</message>
+	<message key="installer.fileSettings">Configurações de Ficheiros</message>
+	<message key="installer.form.clientCharsetRequired">Deve ser definido um conjunto de caracteres do cliente.</message>
+	<message key="installer.form.databaseDriverRequired">É obrigatório o driver de base de dados.</message>
+	<message key="installer.form.databaseNameRequired">É obrigatório o nome da base de dados.</message>
+	<message key="installer.form.emailRequired">É obrigatório um endereço de e-mail válido.</message>
+	<message key="installer.form.encryptionRequired">É obrigatório o algoritmo de criptografia de senha.</message>
+	<message key="installer.form.filesDirRequired">É obrigatório a pasta para envio de ficheiros.</message>
+	<message key="installer.form.localeRequired">Deve ser definido um idioma.</message>
+	<message key="installer.form.passwordRequired">Senha obrigatória.</message>
+	<message key="installer.form.passwordsDoNotMatch">Senhas inseridas não combinam.</message>
+	<message key="installer.form.separateMultiple">Separe valores múltiplos com vírgulas</message>
+	<message key="installer.form.usernameAlphaNumeric">A autenticação apenas pode conter caracteres alfanuméricos, sublinhados "_" e hífens "-", devendo começar e terminar por um caractere alfanumérico.</message>
+	<message key="installer.form.usernameRequired">Autenticação obrigatória.</message>
+	<message key="installer.installationWrongPhp"><![CDATA[<br/><strong>AVISO: A versão do PHP utilizada não está em conformidade com os requisitos mínimos para instalação do sistema. Recomenda-se usar a versão mais recente do PHP.</strong>]]></message>
+	<message key="installer.installErrorsOccurred">Ocorreram erros durante a instalação</message>
+	<message key="installer.installerSQLStatements">Comandos SQL para instalação</message>
+	<message key="installer.installFileError"><![CDATA[O documento de instalação <tt>dbscripts/xml/install.xml</tt> não existe ou não possui permissão de leitura.]]></message>
+	<message key="installer.installFilesDirError">A pasta indicado não existe ou não possui permissão de escrita.</message>
+	<message key="installer.installParseDBFileError"><![CDATA[Erro na execução do documento de instalação da base de dados <tt>{$file}</tt>.]]></message>
+	<message key="installer.locale">Idioma</message>
+	<message key="installer.localeSettings">Configurações de Idioma (Localização)</message>
+	<message key="installer.miscSettings">Configurações Gerais</message>
+	<message key="installer.oaiRepositoryIdInstructions"><![CDATA[Um identificador único de registos de metadados indexados através do protocolo de Recolha de Metadados do <a href="http://www.openarchives.org/" target="_blank">Open Archives Initiative</a>.]]></message>
+	<message key="installer.oaiRepositoryId">Identificador para repositório OAI</message>
+	<message key="installer.publicFilesDirError">A pasta de documentos públicos não existe ou não possui permissão de escrita.</message>
+	<message key="installer.releaseNotes">Notas de Lançamento</message>
+	<message key="installer.securitySettings">Configurações de Segurança</message>
+	<message key="installer.installParseEmailTemplatesFileError"><![CDATA[Erro ao tentar analisar o ficheiro de e-mail padrão <tt>{$file}</tt>.]]></message>
+	<message key="installer.locale.maybeIncomplete">Traduções marcadas podem estar incompletas.</message>
+</locale>

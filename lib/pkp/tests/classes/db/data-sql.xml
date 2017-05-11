@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../../../dtd/xmlData.dtd">
+
+<!--
+  * tests/classes/db/data-sql.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * XML data test file.
+  -->
+<data>
+	<sql>
+		<query>RAW QUERY</query>
+		<query driver="mysql">RAW MYSQL QUERY</query>
+		<query driver="mysqli">RAW MYSQL QUERY</query>
+		<query driver="postgres7">RAW POSTGRESQL QUERY</query>
+		<query driver="bobs-flatfiles">RAW BOBS-FLATFILE QUERY</query>
+	</sql>
+</data>
+

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE languages SYSTEM "../../dtd/languages.dtd">
+<!--
+  * locale/ca_ES/languages.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localized list of common languages. Based on ISO 639-1.
+  *
+  -->
+<languages>
+	<language code="ab" name="Abkhaz"/>
+	<language code="aa" name="Afar"/>
+	<language code="af" name="Africaans"/>
+	<language code="ak" name="Akan"/>
+	<language code="sq" name="Albanès"/>
+	<language code="am" name="Amhàric"/>
+	<language code="ar" name="Àrab"/>
+	<language code="an" name="Aragonés"/>
+	<language code="hy" name="Armeni"/>
+	<language code="as" name="Assamese"/>
+	<language code="av" name="Avaric"/>
+	<language code="ae" name="Avestan"/>
+	<language code="ay" name="Aimara"/>
+	<language code="az" name="Azerbaidjan"/>
+	<language code="bm" name="Bambara"/>
+	<language code="ba" name="Bashkir"/>
+	<language code="eu" name="Basc"/>
+	<language code="be" name="Bielorús"/>
+	<language code="bn" name="Bengalí"/>
+	<language code="bh" name="Bihari"/>
+	<language code="bi" name="Bislama"/>
+	<language code="bs" name="Bosni"/>
+	<language code="br" name="Bretó"/>
+	<language code="bg" name="Búlgar"/>
+	<language code="my" name="Birmà"/>
+	<language code="ca" name="Català"/>
+	<language code="km" name="Khmer central"/>
+	<language code="ch" name="Chamorro"/>
+	<language code="ce" name="Txetxeni"/>
+	<language code="ny" name="Chichewa"/>
+	<language code="zh" name="Xinès"/>
+	<language code="cu" name="Església Eslava"/>
+	<language code="cv" name="Chuvashia"/>
+	<language code="kw" name="De Cornualles"/>
+	<language code="co" name="Cors"/>
+	<language code="cr" name="Creu"/>
+	<language code="hr" name="Croat"/>
+	<language code="cs" name="Txec"/>
+	<language code="da" name="Danès"/>
+	<language code="dv" name="Divehi"/>
+	<language code="nl" name="Holandès, Flamenc"/>
+	<language code="dz" name="Dzongkha"/>
+	<language code="en" name="Anglès"/>
+	<language code="eo" name="Esperanto"/>
+	<language code="et" name="Estoni"/>
+	<language code="ee" name="Ewe"/>
+	<language code="fo" name="Feroè"/>
+	<language code="fj" name="Fiji"/>
+	<language code="fi" name="Finès"/>
+	<language code="fr" name="Francès"/>
+	<language code="ff" name="Fulah"/>
+	<language code="gl" name="Galleg"/>
+	<language code="lg" name="Ganda"/>
+	<language code="ka" name="Georgià"/>
+	<language code="de" name="Alemany"/>
+	<language code="el" name="Grec"/>
+	<language code="gn" name="Guaraní"/>
+	<language code="gu" name="Gujarati"/>
+	<language code="ht" name="Crioll Haitià"/>
+	<language code="ha" name="Hausa"/>
+	<language code="he" name="Hebreu"/>
+	<language code="hz" name="Herero"/>
+	<language code="hi" name="Hindi"/>
+	<language code="ho" name="Hiri Motu"/>
+	<language code="hu" name="Hongarès"/>
+	<language code="is" name="Islandès"/>
+	<language code="io" name="Ido"/>
+	<language code="ig" name="Igbo"/>
+	<language code="id" name="Indonesi"/>
+	<language code="ia" name="Interlingua"/>
+	<language code="ie" name="Interlingue"/>
+	<language code="iu" name="Inuktitut"/>
+	<language code="ik" name="Inupiaq"/>
+	<language code="ga" name="Irlandès"/>
+	<language code="it" name="Italià"/>
+	<language code="ja" name="Japonès"/>
+	<language code="jv" name="Javanès"/>
+	<language code="kl" name="Kalaallisut"/>
+	<language code="kn" name="Kannada"/>
+	<language code="kr" name="Kanuri"/>
+	<language code="ks" name="Kashmiri"/>
+	<language code="kk" name="Kazakh"/>
+	<language code="ki" name="Kikuyu; Gikuyu"/>
+	<language code="rw" name="Kinyarwanda"/>
+	<language code="ky" name="Kirghiz"/>
+	<language code="kv" name="Komi"/>
+	<language code="kg" name="Kongo"/>
+	<language code="ko" name="Coreà"/>
+	<language code="kj" name="Kuanyama; Kwanyama"/>
+	<language code="ku" name="Kurd"/>
+	<language code="lo" name="Lao"/>
+	<language code="la" name="Llatí"/>
+	<language code="lv" name="Letó"/>
+	<language code="li" name="Limburguès"/>
+	<language code="ln" name="Lingala"/>
+	<language code="lt" name="Lituà"/>
+	<language code="lu" name="Luba-Katanga"/>
+	<language code="lb" name="Luxemburguès"/>
+	<language code="mk" name="Macedoni"/>
+	<language code="mg" name="Malgaix"/>
+	<language code="ms" name="Malai"/>
+	<language code="ml" name="Malayalam"/>
+	<language code="mt" name="Maltès"/>
+	<language code="gv" name="Manx"/>
+	<language code="mi" name="Maori"/>
+	<language code="mr" name="Marathi"/>
+	<language code="mh" name="De Les Illes Marshall"/>
+	<language code="mo" name="Moldau"/>
+	<language code="mn" name="Mongol"/>
+	<language code="na" name="Nauru"/>
+	<language code="nv" name="Navajo"/>
+	<language code="ng" name="Ndonga"/>
+	<language code="ne" name="Nepalès"/>
+	<language code="nd" name="Ndebele Del Nord"/>
+	<language code="se" name="Sami Del Nord"/>
+	<language code="no" name="Noruec"/>
+	<language code="nb" name="Noruec Bokmål"/>
+	<language code="nn" name="Nynorsk"/>
+	<language code="oc" name="Occità"/>
+	<language code="oj" name="Ojibwa"/>
+	<language code="or" name="Oriya"/>
+	<language code="om" name="Oromo"/>
+	<language code="os" name="Ossètia Del Sud; Osseta"/>
+	<language code="pi" name="Pali"/>
+	<language code="pa" name="Panjabi; Punjabi"/>
+	<language code="fa" name="Persa"/>
+	<language code="pl" name="Polonès"/>
+	<language code="pt" name="Portuguès"/>
+	<language code="ps" name="Pushto; Pashto"/>
+	<language code="qu" name="Quechua"/>
+	<language code="ro" name="Romanès"/>
+	<language code="rm" name="Romanche"/>
+	<language code="rn" name="Rundi"/>
+	<language code="ru" name="Rus"/>
+	<language code="ry" name="Rusyn"/>
+	<language code="sm" name="Samoà"/>
+	<language code="sg" name="Sango"/>
+	<language code="sa" name="Sànscrit"/>
+	<language code="sc" name="Sard"/>
+	<language code="gd" name="Scottish Gaelic"/>
+	<language code="sr" name="Serbian"/>
+	<language code="sh" name="Serbo-Croatian"/>
+	<language code="sn" name="Shona"/>
+	<language code="ii" name="Sichuan Yi"/>
+	<language code="sd" name="Sindhi"/>
+	<language code="si" name="Cingalès"/>
+	<language code="sk" name="Eslovac"/>
+	<language code="sl" name="Eslovè"/>
+	<language code="so" name="Somalí"/>
+	<language code="st" name="Sotho, Al Sud"/>
+	<language code="nr" name="Ndebele Del Sud"/>
+	<language code="es" name="Espanyol, Castellà"/>
+	<language code="su" name="Sundanès"/>
+	<language code="sw" name="Suahili"/>
+	<language code="ss" name="Swati"/>
+	<language code="sv" name="Suec"/>
+	<language code="tl" name="Tagalog"/>
+	<language code="ty" name="Tahitià"/>
+	<language code="tg" name="Tadjik"/>
+	<language code="ta" name="Tamil"/>
+	<language code="tt" name="Tatar"/>
+	<language code="te" name="Telugu"/>
+	<language code="th" name="Tailandès"/>
+	<language code="bo" name="Tibetà"/>
+	<language code="ti" name="Tigrinya"/>
+	<language code="to" name="Tonga"/>
+	<language code="ts" name="Tsonga"/>
+	<language code="tn" name="Tswana"/>
+	<language code="tr" name="Turc"/>
+	<language code="tk" name="Turcman"/>
+	<language code="tw" name="Twi"/>
+	<language code="ug" name="Uighur"/>
+	<language code="uk" name="Ucraïnès"/>
+	<language code="ur" name="Urdu"/>
+	<language code="uz" name="Uzbek"/>
+	<language code="ve" name="Venda"/>
+	<language code="vi" name="Vietnamita"/>
+	<language code="vo" name="Volapük"/>
+	<language code="wa" name="Való"/>
+	<language code="cy" name="Gaèl·lic"/>
+	<language code="fy" name="Frisó occidental"/>
+	<language code="wo" name="Wolof"/>
+	<language code="xh" name="Xhosa"/>
+	<language code="yi" name="Yiddish"/>
+	<language code="yo" name="Yoruba"/>
+	<language code="za" name="Zhuang; Chuang"/>
+	<language code="zu" name="Zulú"/>
+</languages>

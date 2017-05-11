@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/de_DE/editor.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Please contact Marco Tullney, marco.tullney@fu-berlin.de, with any questions regarding this translation.
+  * Localization strings.
+  -->
+
+<locale name="de_DE" full_name="Deutsch (Deutschland)">
+	<message key="editor.review.notInitiated">Der Begutachtungsprozess ist noch nicht eingeleitet worden.</message>
+	<message key="editor.submission.copyediting.personalMessageToUser">Nachricht an Benutzer/in</message>
+	<message key="editor.submission.externalReviewDescription">Sie leiten eine externe Begutachtung für diese Einreichung ein.  Dateien, die zu dieser Einreichung gehören, sind unten aufgelistet und können zur Begutachtung ausgewählt werden.</message>
+	<!-- Add file or auditor to editor/audit grids -->
+	<message key="editor.submission.fileAuditor.form.fileRequired">Sie müssen mindestens eine Datei auswählen, der Sie den/die Benutzer/in zuordnen.</message>
+	<message key="editor.submission.fileAuditor.form.messageRequired">Sie müssen ein persönliches Anschreiben verfassen.</message>
+	<message key="editor.submission.fileAuditor.skipEmail">E-Mail nicht an Prüfer/in schicken</message>
+	<message key="editor.submission.fileAuditor.form.userRequired">Sie müssen eine/n Benutzer/in zur Zuordnung auswählen.</message>
+	<message key="editor.submission.uploadSelectFiles">Dateie hochladen/auswählen</message>
+	<message key="editor.submission.revisions">Überarbeitungen</message>
+	<message key="editor.submission.review.reviewersDescription"><![CDATA[Benutzen Sie <em>+Gutachter/in hinzufügen</em>, um Leser/innen um Begutachtung der Einreichung zu bitten. Das Notizbuch-Symbol zeigt an, dass ein Gutachten eingereicht worden ist, das dann als <em>Berücksichtigt</em> markiert wird, nachdem es einbezogen worden ist. Wenn Gutachten überfällig sind, erscheint ein rotes Umschlagsymbol, um Gutachter/innen zu benachrichtigen.]]></message>
+	<message key="editor.submission.addReviewer">Gutachter/in hinzufügen</message>
+	<message key="editor.submission.fileList.includeAllStages">Alle Dateien aus allen verfügbaren Workflow-Phasen berücksichtigen.</message>
+	<message key="editor.submission.review.currentFiles">Aktuelle Begutachtungsdateien für Runde {$round}</message>
+	<message key="editor.submission.backToSearch">Zur einfachen Suche zurückkehren</message>
+	<message key="editor.review.createReviewer">Neue/n Gutachter/in anlegen</message>
+	<message key="editor.review.enrollReviewer.short">Existierende/n Benutzer/in eintragen</message>
+	<message key="editor.review.unassignReviewer">Zuteilung an Gutachter/in aufheben</message>
+	<message key="editor.submissionReview.reviewType">Begutachtungstyp</message>
+	<message key="editor.submissionReview.skipEmail">E-Mail nicht an Autor/in schicken</message>
+	<message key="editor.submissionReview.open">Offen</message>
+	<message key="editor.submissionReview.blind">Blind</message>
+	<message key="editor.submissionReview.doubleBlind">Double-blind</message>
+	<message key="editor.submissionReview.restrictFiles">Zu begutachtende Dateien</message>
+	<message key="editor.review.personalMessageToReviewer">E-Mail, die an Gutachter/in geschickt wird</message>
+	<message key="editor.review.importantDates">Wichtige Daten</message>
+	<message key="editor.review.uploadRevision">Überarbeitung hochladen</message>
+	<message key="editor.review.NotifyAuthorAccept">Autor/in über Annahme informieren:</message>
+	<message key="editor.review.NotifyAuthorDecline">Autor/in über Ablehnung informieren:</message>
+	<message key="editor.review.NotifyAuthorRevisions">Autor/in über Überarbeitungsbedarf informieren:</message>
+	<message key="editor.review.NotifyAuthorResubmit">Autor/in über Überarbeitungsbedarf und erneute Begutachtung informieren:</message>
+	<message key="editor.review.NotifyAuthorExternal">Autor/in über Entscheidung für externe Begutachtung informieren:</message>
+	<message key="editor.review.personalMessageToAuthor">E-Mail, die an Autor/in geschickt wird</message>
+	<message key="editor.review.dateAccepted">Datum der Annahme</message>
+	<message key="editor.review.noReviews">Keine Gutachten zum Importieren</message>
+	<message key="editor.review.reminder">Erinnerung an Begutachtung</message>
+	<message key="editor.review.thankReviewer">Dank an Gutachter/in</message>
+	<message key="editor.review.reminderError">Fehler beim Versenden der Erinnerung an Begutachtung</message>
+	<message key="editor.review.thankReviewerError">Fehler beim Versenden des Dankes an Gutachter/in</message>
+	<message key="editor.review.skipEmail">E-Mail nicht an Gutachter/in schicken</message>
+	<message key="editor.review.sendReminder">Erinnerung senden</message>
+	<message key="editor.review.reviewDueDate">Datum der Fälligkeit des Gutachtens</message>
+	<message key="editor.review.reviewCompleted">Gutachten abgeschlossen</message>
+	<message key="editor.review.reviewerComments">Begutachtungskommentare</message>
+	<message key="editor.review.days">Durchschnittliche Dauer (Tage)</message>
+	<message key="editor.review.mustSelect">Sie müssen eine/n Gutachter/in auswählen</message>
+	<message key="editor.review.errorAddingReviewer">Es gab einen Fehler beim Hinzufügen des/der Gutachter/in. Bitte versuchen Sie es erneut.</message>
+	<message key="editor.review.errorDeletingReviewer">Es gab einen Fehler beim Entfernen des/der Gutachter/in. Bitte versuchen Sie es erneut.</message>
+	<message key="editor.review.userGroupSelect">Diese/n Benutzer/in in diese Gutachter/innengruppe eintragen</message>
+	<message key="editor.review.unconsiderReviewText">Möchten Sie dieses Gutachten als unberücksichtigt markieren? Die Begutachtungshistorie wird erhalten bleiben.</message>
+	<message key="editor.review.unconsiderReview">Dieses Gutachten nicht berücksichtigen</message>
+	<message key="editor.review.readConfirmation">Nachdem dieses Gutachten gelesen worden ist, drücken Sie bitte "Bestätigen", um anzuzeigen, dass der Begutachtungsprozess weitergehen kann.</message>
+	<message key="editor.submission.selectCopyedingFiles">Dateien für das Lektorat</message>
+	<message key="editor.submission.selectReviewer">Gutachter/in auswählen</message>
+	<message key="editor.submission.taskDueDate">Fälligkeit der Aufgabe</message>
+	<message key="editor.submission.taskSchedule">Zeitplan für diese Aufgabe</message>
+	<message key="editor.review.enrollReviewer">Existierende/n Benutzer/in als Gutachter/in eintragen</message>
+	<message key="editor.submission.noAuditRequested">Keine Prüfung für diese Datei verlangt</message>
+	<message key="editor.submission.personalMessageToUser">E-Mail, die an den/die Benutzer/in geschickt wird</message>
+	<message key="editor.submission.proof.reminder">Erinnerung an Prüfung</message>
+	<message key="editor.submission.editorial.approveCopyeditDescription">Die lektorierte Datei muss hier angenommen werden, bevor sie in die Herstellungsphase geschickt werden kann. Möchten Sie diese Datei annehmen?</message>
+	<message key="editor.submission.editorial.disapproveCopyeditDescription">Ablehnung dieser lektorierten Datei wird verhindern, dass sie in die Herstellungsphase geschickt werden kann. Möchten Sie diese Datei ablehnen?</message>
+	<message key="editor.submission.addAuditor">Prüfer/in hinzufügen</message>
+	<message key="editor.review">Überprüfen</message>
+	<message key="editor.submission.production.productionReadyFiles">Produktionsfertige Dateien</message>
+	<message key="editor.submission.newRound">Neue Begutachtungsrunde</message>
+	<message key="editor.submissionReview.recordDecision">Redaktionelle Entscheidung festhalten</message>
+	<message key="editor.submission.newRoundDescription">Sie leiten eine neue Begutachtungsrunde für diese Einreichung ein. Dateien, die noch nicht in anderen Begutachtungsrunden benutzt worden sind, sind unten aufgelistet. Standardgemäß sind die Gutachter/innen der vorherigen Begutachtungsrunde als Gutachter/innen dieser neuen Runde ausgewählt worden.</message>
+	<message key="editor.submission.createNewRound">Neue Begutachtungsrunde anlegen</message>
+	<message key="editor.submission.noReviewerFilesSelected">Keine Dateien ausgewählt</message>
+	<message key="editor.submission.noReviewerFilesSelected.details">Sie haben keine Dateien ausgewählt, die der/die Gutachter/in begutachten soll.</message>
+	<message key="editor.submission.selectedReviewer">Ausgewählte Gutachter/innen</message>
+	<message key="editor.submissionLibrary">Einreichungsbibliothek</message>
+	<message key="editor.submission.findAndSelectReviewer">Gutachter/in finden</message>
+	<message key="editor.submissionReview.restrictFiles.hide">Dateiauswahl schließen</message>
+	<message key="editor.review.readReview">Gutachten lesen</message>
+	<message key="editor.review.readNewReview">Neues Gutachen lesen</message>
+	<message key="editor.review.responseDue">Antwort fällig: {$date}</message>
+	<message key="editor.review.requestSent">Anfrage gesendet</message>
+	<message key="editor.review.requestAccepted">Anfrage akzeptiert</message>
+	<message key="editor.review.revertDecision">Entscheidung zurücksetzen</message>
+	<message key="editor.review.reviewDue">Gutachten fällig: {$date}</message>
+	<message key="editor.review.reviewConfirmed">Gutachten bestätigt</message>
+	<message key="editor.review.reviewSubmitted">Gutachten eingereicht</message>
+	<message key="editor.review.reviewDetails">Gutachten-Details</message>
+	<message key="editor.review.noReviewFilesUploaded">Keine Dateien hochgeladen</message>
+	<message key="editor.review.noReviewFilesUploaded.details">Sie haben keine Dateien zur Begutachtung hochgeladen.</message>
+	<message key="editor.submission.selectFiles">Dateien auswählen</message>
+	<message key="editor.submissionReview.editReview">Gutachten bearbeiten</message>
+	<message key="editor.submission.copyedit.manageCopyeditFilesDescription">Alle Dateien, die schon zu irgendeiner Einreichungsphase hochgeladen worden sind, können zur Liste der Dateien für das Lektorat hinzugefügt werden, indem Sie die Einschließen-Checkbox unten aktivieren und danach auf Suche klicken: Alle verfügbaren Dateien werden angezeigt und können ausgewählt werden, um sie in die Liste aufzunehmen. Zusätzliche Dateien, die noch nicht zu einer Phase hochgeladen worden sind, können der Liste durch Klicken des Datei-Hochladen-Links hinzugefügt werden.</message>
+	<message key="editor.review.emailReviewer">E-Mail an Gutachter/in</message>
+	<message key="editor.article.reviewForms">Begutachtungsformulare</message>
+	<message key="editor.article.selectReviewForm">Begutachtungsformular auswählen</message>
+	<message key="editor.article.clearReviewForm">Begutachtungsformular leeren</message>
+	<message key="editor.article.confirmChangeReviewForm">Achtung: Ein Wechsel des Begutachtungsformular wird alle Antworten, die Gutachter/innen bisher mittels des Formulars eingetragen haben, beeinflussen. Sind Sie sicher, dass Sie fortfahren möchten?</message>
+	<message key="submission.queries.subjectRequired">Die Angabe eines Diskussionsthemas ist erforderlich.</message>
+	<message key="submission.queries.messageRequired">Die Angabe eines Diskussionsbeitrags ist erforderlich.</message>
+	<message key="submission.queries.attachedFiles">Angehängte Dateien</message>
+	<message key="grid.action.editQuery">Diskussion bearbeiten</message>
+	<message key="editor.submission.query.manageQueryNoteFilesDescription">Aus der Liste unten können Dateien für die Aufnahme in die Diskussion ausgewählt werden.</message>
+	<message key="editor.submission.proofreading.approveProof">Korrekturfahne freigeben</message>
+	<message key="editor.submission.proofreading.revokeProofApproval">Freigabe der Korrekturfahne zurücknehmen</message>
+	<message key="editor.submission.proofreading.confirmCompletion">Diese Korrekturfahne freigeben, um zu signalisieren, dass das Korrektorat abgeschlossen ist und die Datei publiziert werden kann.</message>
+	<message key="editor.submission.proofreading.confirmRemoveCompletion">Die Freigabe dieser Korrekturfahne zurücknehmen, um zu signalisieren, dass das Korrektorat nicht mehr abgeschlossen ist und dass die Datei noch nicht publiziert werden kann.</message>
+	<message key="editor.publicIdentificationNumericNotAllowed">Die öffentliche Kennung '{$publicIdentifier}' darf keine Zahl sein.</message>
+	<message key="editor.submission.findAndSelectUser">Nutzer/in finden</message>
+	<message key="editor.publicIdentificationPatternNotAllowed">Das Muster {$pattern} ist für die Bildung der öffentlichen Kennung nicht zulässig.</message>
+</locale>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/el_GR/reader.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the el_GR (ελληνικά) locale.
+  *
+  -->
+
+<locale name="el_GR" full_name="ελληνικά">
+	<message key="comments.anonymous">Ανώνυμος Χρήστης</message>
+	<message key="comments.anonymousNamed">"{$userName}"</message>
+	<message key="comments.body">Μήνυμα</message>
+	<message key="comments.confirmDeleteChildren">Διαγράφοντας το σχόλιο αυτό, διαγράφονται και οι απαντήσεις σε αυτό. Είστε σίγουρος ότι θέλετε να συνεχίσετε;</message>
+	<message key="comments.delete">Διαγραφή σχολίου</message>
+	<message key="comments.email">Email Αποστολέα</message>
+	<message key="comments.emailReply">Απαντητικό Email</message>
+	<message key="comments.enterComment">Εισαγωγή σχόλιου</message>
+	<message key="comments.inResponseTo">Σε απάντηση του <![CDATA[<a href="]]>{$url}<![CDATA[">]]>{$title}<![CDATA[</a>]]></message>
+	<message key="comments.name">Όνομα Αποστολέα</message>
+	<message key="comments.noComments">Κανένα σχόλιο αναγνωστών.</message>
+	<message key="comments.nReplies">({$num} Απαντήσεις)</message>
+	<message key="comments.oneReply">(1 Απάντηση)</message>
+	<message key="comments.postAnonymously">Καταχωρήστε το σχόλιο ανώνυμα</message>
+	<message key="comments.postReply">Στείλτε απάντηση</message>
+	<message key="comments.readerComments">Σχόλια Αναγνωστών</message>
+	<message key="comments.readMore">Διαβάστε περισσότερα</message>
+	<message key="comments.replies">Απαντήσεις</message>
+	<message key="comments.title">Τίτλος</message>
+	<message key="comments.viewAllComments">Προβολή όλων των σχολίων</message>
+	<message key="reader.fullText">Πλήρες Κείμενο:</message>
+	<message key="rt.addComment">Προσθήκη σχολίου</message>
+	<message key="rt.admin.configuration">Ρυθμίσεις</message>
+	<message key="rt.admin.contexts.confirmDelete"> Είστε βέβαιοι ότι επιθυμείτε να διαγράψετε το συγκεκριμένο πλαίσιο και όλες τις σχετικές αναζητήσεις;</message>
+	<message key="rt.admin.contexts.createContext">Δημιουργία πλαισίου αναζήτησης</message>
+	<message key="rt.admin.contexts.edit.editContext">Διαμόρφωση πλαισίου αναζήτησης</message>
+	<message key="rt.admin.contexts.metadata">Μεταδεδομένα </message>
+	<message key="rt.admin.contexts.options.authorTerms"> Χρησιμοποιήστε τα ονόματα συγγραφέα ως προεπιλεγμένους όρους αναζήτησης για να δώσετε δυνατότητα στους χρήστες να βρουν άλλα έργα από συγγραφείς για το συγκεκριμένο τεκμήριο (π.χ., για πλαίσιο «Άλλα έργα»)</message>
+	<message key="rt.admin.contexts.options.citedBy">Χρησιμοποιήστε τα ονόματα συγγραφέα ως προεπιλεγμένους όρους αναζήτησης και περιγράψτε το πλαίσιο ως αναζήτηση για παραθέσεις στο άρθρο.</message>
+	<message key="rt.admin.contexts.options.defineTerms"><![CDATA[Χρησιμοποιήστε τη λέξη που έχει επισημανθεί από τον αναγνώστη ως προεπιλεγμένο όρο αναζήτησης ή που έχει παραμείνει κενή, σε περίπτωση όπου δεν έχει γίνει καμία επιλογή για το συγκεκριμένο τεκμήριο (π.χ., για πλαίσιο "Ορισμός όρων"). Η επιλογή "Ορισμός όρων" πρέπει να είναι ενεγοποιημένη στις <a href="{$settingsUrl}">Ρυθμίσεις RST</a> Για να μπορεί να πραγματοποιηθεί διπλό κλικ στις λέξεις για άνοιγμα του συγκειμένου αυτού.]]></message>
+	<message key="rt.admin.contexts.options.geoTerms">Χρησιμοποιήστε δεδομένα γεωγραφικής ευρετηρίασης προεπιλεγμένους όρους αναζήτησης.</message>
+	<message key="rt.admin.contexts.options">Επιλογές</message>
+	<message key="rt.admin.management">Διαχείριση</message>
+	<message key="rt.admin.readingToolsEnabled">Εργαλεία ανάγνωσης</message>
+	<message key="rt.admin.searches.confirmDelete">Είστε βέβαιοι ότι επιθυμείτε να διαγράψετε τη συγκεκριμένη αναζήτηση;</message>
+	<message key="rt.admin.searches.createSearch">Δημιουργία αναζήτησης</message>
+	<message key="rt.admin.searches.edit.editSearch">Διαμόρφωση αναζήτησης</message>
+	<message key="rt.admin.selectedVersion">Σχετικά τεκμήρια</message>
+	<message key="rt.admin.settings.abstract">Απόσπασμα (παρουσιάζει την περίληψη του άρθρου).</message>
+	<message key="rt.admin.settings.authorBio">Σχετικά με τον συγγραφέα (εμφανίζει βιογραφικά στοιχεία που έχουν καταχωρηθεί από τον συγγραφέα).</message>
+	<message key="rt.admin.settings.captureCite">Πως να δημιουργήσετε βιβλιογραφική αναφορά ενός τεκμηρίου .</message>
+	<message key="rt.admin.settings.defineTerms">Όροι αναζήτησης σε λεξικό (παρέχει τη δυνατότητα στους χρήστες να κάνουν διπλό κλικ σε οποιαδήποτε λέξη σε ένα τεκμήριο και να αποστείλουν τη λέξη σε λεξικό).</message>
+	<message key="rt.admin.settings.disableRelatedItems">Απενεργοποίηση Σχετιζόμεων Τεκμηρίων</message>
+	<message key="rt.admin.settings.emailAuthor">Αποστολή μηνύματος ηλεκτρονικού ταχυδρομείου στον συγγραφέα (προσφέρει πρότυπο μηνύματος ηλεκτρονικού ταχυδρομείου του συγγραφέα με τη διεύθυνση του ηλεκτρονικού του ταχυδρομείου).</message>
+	<message key="rt.admin.settings.emailOthers">Γνωστοποίηση συναδέλφου (προσφέρει πρότυπο μηνύματος ηλεκτρονικού ταχυδρομείου με σύνδεσμο προς το τεκμήριο).</message>
+	<message key="rt.admin.settings.findingReferences">Εύρεση Αναφορών</message>
+	<message key="rt.admin.settings.printerFriendly">Εκτυπώσιμη έκδοση (Δημιουργεί μια καλύτερα εκτυπώσιμη μορφή του τεκμηρίου).</message>
+	<message key="rt.admin.settings.supplementaryFiles">Συμπληρωματικά αρχεία (εμφανίζει λίστα συπληρωτικών αρχείων που περιλαμβάνονται με την υποβολή).</message>
+	<message key="rt.admin.settings.viewMetadata">Ευρετηρίαση μεταδεδομένων (εμφανίζει τα μεταδεδομένα ευρετηρίασης που παρέχονται από τον συγγραφέα και το σύστημα).</message>
+	<message key="rt.admin.status">Κατάσταση</message>
+	<message key="rt.admin.validateUrls.complete">Η επικύρωση ολοκληρώθηκε.</message>
+	<message key="rt.admin.validateUrls.ok">OK</message>
+	<message key="rt.admin.validateUrls.urlIsInvalid">Το {$url} δεν είναι έγκυρο.</message>
+	<message key="rt.admin.validateUrls">Επικύρωση URL για Εργαλεία ανάγνωσης</message>
+	<message key="rt.admin.validateUrls.validate">Επικύρωση</message>
+	<message key="rt.admin.versions.confirmDelete"> Είστε βέβαιοι ότι επιθυμείτε να διαγράψετε τη συγκεκριμένη έκδοση και όλα τα σχετικά περιεχόμενα και τις αναζητήσεις;</message>
+	<message key="rt.admin.versions.confirmRestore"> Είστε βέβαιοι ότι επιθυμείτε να επαναφέρετε οριστικά όλες τις εκδόσεις στις προεπιλεγμένες τιμές τους; Εάν ναι, θα πρέπει να επιλέξτε μια ενεργή έκδοση στη σελίδα Ρυθμίσεις.</message>
+	<message key="rt.admin.versions.createVersion">Δημιουργία έκδοσης</message>
+	<message key="rt.admin.versions.edit.editVersion">Διαμόρφωση έκδοσης</message>
+	<message key="rt.admin.versions.export">Εξαγωγή</message>
+	<message key="rt.admin.versions.importVersion">Εισαγωγή έκδοσης</message>
+	<message key="rt.admin.versions.metadata">Μεταδεδομένα</message>
+	<message key="rt.admin.versions.restoreVersions">Επαναφορά εκδόσεων στις προεπιλεγμένες τιμές</message>
+	<message key="rt.authorBio">Σχετικά με τον συγγραφέα</message>
+	<message key="rt.captureCite.format">Μορφή Παραπομπής</message>
+	<message key="rt.captureCite">Πως γίνεται παραπομπή τεκμηρίου</message>
+	<message key="rt.captureCite.online">Online</message>
+	<message key="rt.colleague">Ενημέρωση συναδέλφου</message>
+	<message key="rt.context.abbrev">Συντομογραφία</message>
+	<message key="rt.context.and">AND</message>
+	<message key="rt.context.citesContextDescription">Εάν το άρθρο έχει ευρετηριαστεί στο Google Scholar, μπορεί να συνοδεύεται από σύνδεσμο "Cited by X", που οδηγεί σε λίστα έργων που παραπέμπουν σε αυτό το άρθρο. Επίσης, το Google Scholar παρουσιάζει όλα τα τεκμήρια που παραθέτουν τον τίτλο και το συγγραφέα. Για πρόσβαση σε online πόρους που είναι αποκλειστικά διαθέσιμοι μέσω της βιβλιοθήκης σας, ενδέχεται να μπορείτε να μεταβείτε στις Προτιμήσεις Scholar στο Google Scholar και να ενεργοποιήσει τους Συνδέσμους βιβλιοθήκης (Library Links) για το ίδρυμα στο οποίο ανήκετε.</message>
+	<message key="rt.context">Πλαίσιο αναζήτησης</message>
+	<message key="rt.context.defineTermsDescription">Εάν το τεκμήριο είναι αρχείο HTML (και όχι PDF), η πραγματοποίηση διπλού κλικ σε οποιαδήποτε λέξη του κειμένου θα την εμφανίζει στο πλαίσιο Λέξη-για-Πριοσδιορισμό (Word-to-Define). Σε διαφορετική περίπτωση, οι λέξεις, μπορούν να εκτυπωθούν ή να επικολληθούν στο πλαίσιο. Για περισσότερες πληροφορίες σχετικά με τους πόρους στους οποίους πραγματοποιήθηκε αναζήτηση, κάντε κλικ στο "ΣΧΕΤΙΚΑ". Οι πόροι αυτοί έχουν επιλεχθεί με βάση τη σχέση τους και την παροχή ανοικτής πρόσβασης σε όλα τα περιεχόμενα ή σε τμήμα αυτών.</message>
+	<message key="rt.context.description">Περιγραφή</message>
+	<message key="rt.context.order">Ταξινόμηση</message>
+	<message key="rt.contexts">Πλαίσια αναζήτησης</message>
+	<message key="rt.context.searchDescription">Οι όροι αναζήτησης έχουν επιλεγεί από τον/τους συγγραφέα(-είς). Μπορούν να τροποποιηθούν ή να διαγραφούν από τον αναγνώστη, καθώς 2 ή 3 σύντομοι και ακριβείς όροι ή φράσεις παρήγαγαν τις καλύτερες Boolean (AND) αναζητήσεις. Για περισσότερες πληροφορίες σχετικά με τους πόρους στους οποίους πραγματοποιήθηκε αναζήτηση, κάντε κλικ στο "ΣΧΕΤΙΚΑ". Οι πόροι αυτοί έχουν επιλεχθεί με βάση τη σχέση τους και την παροχή ανοικτής πρόσβασης σε όλα τα περιεχόμενα ή σε τμήμα αυτών.</message>
+	<message key="rt.context.searchTerms">Όροι αναζήτησης</message>
+	<message key="rt.context.termToDefine">Λέξη για προσδιορισμό</message>
+	<message key="rt.context.title">Τίτλος</message>
+	<message key="rt.emailAuthor">Αποστολή μηνύματος ηλεκτρονικού ταχυδρομείου στον συγγραφέα</message>
+	<message key="rt.email.needLogin"><![CDATA[* Απαιτεί <a target="_parent" href="{$loginUrl}">εγγραφή</a>]]></message>
+	<message key="rt.email.sent">Το μήνυμα εστάλη.</message>
+	<message key="rt.findingReferences">Εύρεση Αναφορών</message>
+	<message key="rt.findingReferences.googleScholar">Google Scholar</message>
+	<message key="rt.findingReferences.windowsLiveAcademic">Windows Live Academic</message>
+	<message key="rt.lookUp">Όροι αναζήτησης</message>
+	<message key="rt.metadata.dublinCore.contributor">Συντελεστής</message>
+	<message key="rt.metadata.dublinCore.coverage">Κάλυψη</message>
+	<message key="rt.metadata.dublinCore.date">Ημερομηνία</message>
+	<message key="rt.metadata.dublinCore.description">Περιγραφή</message>
+	<message key="rt.metadata.dublinCore">Dublin Core</message>
+	<message key="rt.metadata.dublinCore.format">Μορφή</message>
+	<message key="rt.metadata.dublinCore.identifier">Αναγνωριστικό</message>
+	<message key="rt.metadata.dublinCore.language">Γλώσσα</message>
+	<message key="rt.metadata.dublinCore.publisher">Εκδότης</message>
+	<message key="rt.metadata.dublinCore.relation">Σχέση</message>
+	<message key="rt.metadata.dublinCore.rights">Δικαιώματα</message>
+	<message key="rt.metadata.dublinCore.source">Πηγή</message>
+	<message key="rt.metadata.dublinCore.subject">Θέμα</message>
+	<message key="rt.metadata.dublinCore.title">Τίτλος</message>
+	<message key="rt.metadata.dublinCore.type">Τύπος</message>
+	<message key="rt.metadata.forThisDocument">Μεταδεδομένα για το συγκεκριμένο έγγραφο</message>
+	<message key="rt.metadata.pkp.abstract">Περίληψη</message>
+	<message key="rt.metadata.pkp.copyright">Πνευματικά δικαιώματα και άδειες</message>
+	<message key="rt.metadata.pkp.coverage"> Γεω-χωρική τοποθεσία, χρονολογική περίοδος, δείγμα έρευνας (φύλο, ηλικία, κτλ.)</message>
+	<message key="rt.metadata.pkp.date">(ΧΧΧΧ-MM-ΗΗ)</message>
+	<message key="rt.metadata.pkp.discipline">Κλάδος (-οι) </message>
+	<message key="rt.metadata.pkp.format">Μορφή αρχείου</message>
+	<message key="rt.metadata.pkp.genre">Κατάσταση &amp; φύλλο</message>
+	<message key="rt.metadata.pkpItem">Τεκμήρια μεταδεδομένων PKP</message>
+	<message key="rt.metadata.pkp.language">Αγγλικά=en</message>
+	<message key="rt.metadata.pkp.publisher">Φορέας οργάνωσης, τοποθεσία</message>
+	<message key="rt.metadata.pkp.source"> Περιοδικό/τίτλος συνεδρίου, τόμος, αρ. (έτος)</message>
+	<message key="rt.metadata.pkp.sponsors">Χορηγός(-οί)</message>
+	<message key="rt.metadata.pkp.subject">Λέξη-κλειδί (λέξεις-κλειδιά)</message>
+	<message key="rt.metadata.pkp.suppFiles">Συμπλ. Αρχεία </message>
+	<message key="rt.metadata.pkp.title">Τίτλος εγγράφου</message>
+	<message key="rt.metadata.pkp.type">Τύπος</message>
+	<message key="rt.metadata.pkp.uri">Universal Resource Indicator</message>
+	<message key="rt.printVersion">Έντυπη Έκδοση</message>
+	<message key="rt.readingTools">Εργαλεία ανάγνωσης</message>
+	<message key="rt.relatedItems">Σχετιζόμενα τεκμήρια</message>
+	<message key="rt.reviewPolicy">Πολιτική αξιολόγησης</message>
+	<message key="rt.search.description">Περιγραφή</message>
+	<message key="rt.searches">Αναζητήσεις</message>
+	<message key="rt.search.order">Ταξινόμηση</message>
+	<message key="rt.search">Αναζήτηση</message>
+	<message key="rt.search.searchPost">Καταχώριση δεδομένων</message>
+	<message key="rt.search.searchUrl">Αναζήτηση URL</message>
+	<message key="rt.search.suggest">Πρόταση πηγής</message>
+	<message key="rt.search.title"> Τίτλος</message>
+	<message key="rt.search.url">URL</message>
+	<message key="rt.suppFiles.download">Κατέβασμα</message>
+	<message key="rt.suppFiles">Συμπληρωματικά αρχεία</message>
+	<message key="rt.suppFiles.viewMetadata">Μεταδεδομένα ευρετηρίασης</message>
+	<message key="rt.version.description">Περιγραφή</message>
+	<message key="rt.version.key">Κλειδί</message>
+	<message key="rt.version.locale">Τοπική ρύθμιση</message>
+	<message key="rt.versions">Σύνολα σχετικών τεκμηρίων</message>
+	<message key="rt.version.title">Τίτλος</message>
+	<message key="rt.version">Έκδοση</message>
+	<message key="rt.viewMetadata">Ευρετηρίαση μεταδεδομένων</message>
+	<message key="comments.titleRequired">Απαιτείται ένα τίτλος σχολίου.</message>
+	<message key="rt.admin.sharing">Διαμοιρασμός (Sharing)</message>
+	<message key="rt.admin.sharing.enabled">Ενεργοποίηση Διαμοιρασμού</message>
+	<message key="rt.admin.sharing.description"><![CDATA[Για την ενεργοποίηση της δυνατότητας των αναγνωστών σας να μοιράζονται άρθρα περιοδικών, δημιουργήστε έναν λογαριασμό στο <a href="http://www.addthis.com">addthis.com</a>, και Αντιγράψτε και Επικολλήστε τον κώδικο του κουμπιού Διαμοιρασμού παρακάτω.]]></message>
+	<message key="rt.admin.sharing.basic">Βασικές Ρυθμίσες</message>
+	<message key="rt.admin.sharing.userNameLabel">AddThis.com όνομα χρήστη</message>
+	<message key="rt.admin.sharing.buttonStyleLabel">Στύλ κουμπιού</message>
+	<message key="rt.admin.sharing.dropDownMenuLabel">Χρήση drop-down μενού</message>
+	<message key="rt.admin.sharing.advanced">Προωθημένες Ρυθμίσεις (προαιρετικά)</message>
+	<message key="rt.admin.sharing.customizationLink"><![CDATA[Δείτε <a href="http://support.addthis.com/customer/portal/articles/381236-custom-buttons">AddThis.com customization documentation</a> για τεκμηρίωση.]]></message>
+	<message key="rt.admin.sharing.brandLabel">Brand</message>
+	<message key="rt.admin.sharing.dropDownLabel"><![CDATA[Επιλογές Drop-down μενού <br /> (comma separated list)]]></message>
+	<message key="rt.admin.sharing.languageLabel">Γλώσσα</message>
+	<message key="rt.admin.sharing.logolabel">Λογότυπο</message>
+	<message key="rt.admin.sharing.logoBackgroundLabel">Φόντο λογοτύπου</message>
+	<message key="rt.admin.sharing.logoColorLabel">Χρώμα λογοτύπου</message>
+	<message key="rt.admin.configureSharing">Ρύθμιση AddThis</message>
+	<message key="rt.captureCite.web">Web</message>
+</locale>

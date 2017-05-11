@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/it_IT/default.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for default settings for setup items.
+  -->
+
+<locale name="it_IT" full_name="Italiano">
+	<!-- Group defaults -->
+
+	<!--  common app genre defaults -->
+	<message key="default.groups.name.siteAdmin">Amministratore</message>
+	<message key="default.groups.plural.siteAdmin">Amministratori</message>
+	<message key="default.groups.name.productionEditor">Editor di produzione</message>
+	<message key="default.groups.plural.productionEditor">Editor di produzione</message>
+	<message key="default.groups.abbrev.productionEditor">ProdE</message>
+	<message key="default.groups.name.copyeditor">Copyeditor</message>
+	<message key="default.groups.plural.copyeditor">Copyeditor</message>
+	<message key="default.groups.abbrev.copyeditor">CopyE</message>
+	<message key="default.groups.name.proofreader">Correttore di bozze</message>
+	<message key="default.groups.plural.proofreader">Correttori di bozze</message>
+	<message key="default.groups.abbrev.proofreader">ProofR</message>
+	<message key="default.groups.name.designer">Designer</message>
+	<message key="default.groups.plural.designer">Designer</message>
+	<message key="default.groups.abbrev.designer">Design</message>
+	<message key="default.groups.name.internalReviewer">Revisore interno</message>
+	<message key="default.groups.plural.internalReviewer">Revisori interni</message>
+	<message key="default.groups.abbrev.internalReviewer">IR</message>
+	<message key="default.groups.name.marketing">Marketing</message>
+	<message key="default.groups.plural.marketing">Marketing</message>
+	<message key="default.groups.abbrev.marketing">MKTG</message>
+	<message key="default.groups.name.funding">Finanziatore</message>
+	<message key="default.groups.plural.funding">Finanziatori</message>
+	<message key="default.groups.abbrev.funding">FC</message>
+	<message key="default.groups.name.indexer">Indicizzatore</message>
+	<message key="default.groups.plural.indexer">Indicizzatori</message>
+	<message key="default.groups.abbrev.indexer">IND</message>
+	<message key="default.groups.name.layoutEditor">Layout editor</message>
+	<message key="default.groups.plural.layoutEditor">Layout editor</message>
+	<message key="default.groups.abbrev.layoutEditor">LE</message>
+	<message key="default.groups.name.author">Autore</message>
+	<message key="default.groups.plural.author">Autori</message>
+	<message key="default.groups.abbrev.author">AU</message>
+	<message key="default.groups.name.translator">Traduttore</message>
+	<message key="default.groups.plural.translator">Traduttori</message>
+	<message key="default.groups.abbrev.translator">Trans</message>
+	<message key="default.groups.name.reader">Lettore</message>
+	<message key="default.groups.plural.reader">Lettori</message>
+	<message key="default.groups.abbrev.reader">Read</message>
+	<message key="default.genres.other">Altro</message>
+	<message key="default.genres.multimedia">File multimediali</message>
+	<message key="default.genres.image">Immagine</message>
+	<message key="default.genres.styleSheet">Foglio di stile</message>
+</locale>

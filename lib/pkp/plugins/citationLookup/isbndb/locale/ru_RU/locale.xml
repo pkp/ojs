@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../dtd/locale.dtd">
+
+<!--
+  * plugins/citationLookup/isbndb/locale/ru_RU/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the ru_RU (Русский) locale.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Russian_(ru_RU)
+  -->
+
+<locale name="ru_RU" full_name="Русский">
+	<!-- модуль -->
+	<message key="plugins.citationLookup.isbndb.displayName">Модуль подключения к базе данных ISBNdb</message>
+	<message key="plugins.citationLookup.isbndb.description">Подключает к библиографической базе данных ISBNdb.</message>
+
+	<!-- Службы поиска и извлечения ISBN -->
+	<message key="plugins.citationLookup.isbndbExtraction.displayName">Служба извлечения ISBN</message>
+	<message key="plugins.citationLookup.isbndbExtraction.description">Найти ISBN для заданного описания элемента-ссылки NLM 3.0.</message>
+	<message key="plugins.citationLookup.isbndbLookup.displayName">Служба поиска ISBN</message>
+	<message key="plugins.citationLookup.isbndbLookup.description">Поиск полного описания элемента-ссылки NLM 3.0 по заданному ISBN.</message>
+</locale>

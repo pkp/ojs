@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../dtd/locale.dtd">
+
+<!--
+  * plugins/generic/usageStats/locale/ru_RU/locale.xml
+  *
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the ru_RU (Русский) locale.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Russian_(ru_RU)
+  -->
+
+<locale name="ru_RU" full_name="Русский">
+	<message key="plugins.generic.usageStats.settings.logging">Параметры журнала доступа</message>
+	<message key="plugins.generic.usageStats.settings.createLogFiles">Создавать файлы журнала</message>
+	<message key="plugins.generic.usageStats.settings.createLogFiles.description">Активация этого параметра приведет к созданию модулем файлов журнала доступа в каталоге files. Эти файлы должны быть использованы для извлечения данных по статистике использования. Если вы не хотите создавать дополнительные файлы журнала доступа, вы можете оставить этот параметр отключенным и использовать файлы журнала доступа вашего сервера.</message>
+	<message key="plugins.generic.usageStats.settings.logParseRegex">Регулярное выражение для разбора файлов журнала</message>
+	<message key="plugins.generic.usageStats.settings.logParseRegex.description">Регулярное выражение, используемое по умолчанию, может разибрать файлы журнала доступа apache в комбинированном формате, а также файлы журнала, создаваемые модулем. Если ваши файлы журнала доступа формируются в другом формате, то вам необходимо вставить регулярное выражение, которое может разобрать его и выдать ожидаемые значения. Для получения более подробной информации смотрите UsageStatsLoader::_getDataFromLogEntry().</message>
+	<message key="plugins.generic.usageStats.settings.saved">Настройки модуля «Статистика использования» сохранены</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption">Параметр конфиденциальности данных</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.saltFilepath">Путь к файлу для соли (salt), используемой в целях анонимности</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.saltFilepath.invalid">К файлу соли (salt) нет доступа для записи.</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.requirements">Чтобы быть уверенным в конфиденциальности данных, вы должны указать файл, доступный для чтения и записи веб-пользователем, в этом файле будет содержаться случайным образом сгенерированное значение соли (salt). Это файл НЕ ДОЛЖЕН попадать в резервные копии, чтобы быть уверенным в конфиденциальности данных. Соль (salt) генерируется случайным образом, используя один из следующих вариантов: функция mcrypt_create_iv, которая требует расширения mcrypt для PHP; функция openssl_random_pseudo_bytes, которая требует расширения openssl для PHP; файл /dev/urandom, который работает только на *nix-системах; функция mt_rand, которая не является криптографически безопасной. Таким образом, если вы используете сервер под Windows, пожалуйста, удостоверьтесь, что вы установили либо расширение mcrypt для PHP или включили openssl, чтобы получить криптографически безопасно сгенерированную соль (salt).</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.description">Включите этот параметр, если вы хотите использовать версию плагина, которая учитывает требования законов о конфиденциальности, то есть хранит хэшированные IP-адреса, сообщает пользователям об отслеживании информации и дает возможность пользователям отказаться. Обратите внимание: при включении этого параметра нельзя будет воспользоваться возможностями плагина, связанными с географическим местоположением.</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.requiresSalt">Включение конфиденциальности данных требует файла с солью (salt).</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.excludesCity">Включение конфиденциальности данных убирает Город из дополнительных статистик.</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.excludesRegion">Включение конфиденциальности данных убирает Регион из дополнительных статистик.</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyCheckbox">Учитывать требования конфиденциальности данных</message>
+	<message key="plugins.generic.usageStats.settings.optionalColumns">Дополнительная статистическая информация</message>
+	<message key="plugins.generic.usageStats.settings.optionalColumns.description">Включить или отключить сбор следующей дополнительной информации. Это повлияет на возможные статистические отчеты, которые вы можете получить, а также повлияет на размер базы данных. НЕ МЕНЯЙТЕ НАСТРОЙКУ, если вы не до конца понимаете, что вы делаете.</message>
+	<message key="plugins.generic.usageStats.settings.optionalColumns.cityRequiresRegion">Дополнительная колонка «Город» требует наличия дополнительной колонки «Регион».</message>
+	<message key="plugins.generic.usageStats.settings.archives">Архивы</message>
+	<message key="plugins.generic.usageStats.settings.compressArchives.description">Включите этот параметр для сжатия архивированных файлов журнала с помощью инструмента gzip (вам нужно будет настроить параметр gzip в файле config.inc.php). Если у вас сайт с большим трафиком, стоит включить этот параметр, чтобы сэкономить место на диске.</message>
+	<message key="plugins.generic.usageStats.settings.compressArchives">Сжать архивы</message>
+	<message key="plugins.generic.usageStats.settings.statsDisplayOptions">Параметры отображения статистики</message>
+	<message key="plugins.generic.usageStats.settings.statsDisplayOptions.display">Показывать график статистики материалов читателю</message>
+	<message key="plugins.generic.usageStats.settings.statsDisplayOptions.chartType">Выберите тип графика для отображения статистики скачивания</message>
+	<message key="plugins.generic.usageStats.settings.statsDisplayOptions.chartType.bar">Столбики</message>
+	<message key="plugins.generic.usageStats.settings.statsDisplayOptions.chartType.line">Линии</message>
+	<message key="plugins.generic.usageStats.settings.statsDisplayOptions.datasetMaxCount">Задайте максимальное количество данных для одновременного представления в конкретной точке оси x. Большое значение может генерировать малопонятные графики. Безопасное значение — между 3 и 5.</message>
+
+	<message key="plugins.generic.usageStats.usageStatsLoaderName">Задача загрузчика файлов статистики использования</message>
+	<message key="plugins.generic.usageStats.openFileFailed">Файл «{$file}» не может быть открыт и был отклонен.</message>
+	<message key="plugins.generic.usageStats.invalidLogEntry">Строка с номером  {$lineNumber} из файла «{$file}» является некорректной записью журнала и файл был отклонен.</message>
+	<message key="plugins.generic.usageStats.removeUrlError">Строка с номером {$lineNumber} из файла «{$file}» содержит URL-адрес, из которого система не может убрать свой базовый URL-адрес.</message>
+	<message key="plugins.generic.usageStats.loadDataError">Невозможно загрузить данные, извлеченные из файла «{$file}». Файл был перемещен снова в каталог stage.</message>
+	<message key="plugins.generic.usageStats.pluginNotEnabled">Модуль «Статистика использования» отключен. Файлы журнала не обрабатываются.</message>
+	<message key="plugins.generic.usageStats.processingPathNotEmpty">Каталог {$directory} не является пустым. Это может означать, что предыдущая обработка завершилась неудачей или обработка запущена параллельно. Этот файл будет автоматически заново обработан, если вы используете scheduledTasksAutoStage.xml, в противном случае вам необходимо переместить любые оставшиеся файлы в каталоге processing обратно в каталог stage.</message>
+	<message key="plugins.generic.usageStats.noCounterBotList">Список ботов COUNTER «{$botlist}» нельзя использовать. Для этого может быть пара причин. Проверьте, что файл списка в каталоге «lib/pkp/plugins/generic/usageStats/lib/counter». Также проверьте права на эту папку и то, что в ней находится только один файл.</message>
+	<message key="plugins.generic.usageStats.displayName">Модуль «Статистика использования»</message>
+	<message key="plugins.generic.usageStats.description">Представляет данные статистики использования объектов. Может использовать файлы журнала доступа сервера для извлечения статистики.</message>
+
+	<message key="plugins.reports.usageStats.report.displayName">Отчет о статистике использования PKP</message>
+	<message key="plugins.reports.usageStats.report.description">Отчет о статистике использования PKP, формируемый по умолчанию (готовый для COUNTER)</message>
+
+	<message key="plugins.reports.usageStats.optout.displayName">Информация о конфиденциальности модуля «Статистика использования»</message>
+	<message key="plugins.reports.usageStats.optout.description">Информация о конфиденциальности модуля «Статистика использования»</message>
+	<message key="plugins.generic.usageStats.optout.title">Информация о статистике использования</message>
+	<message key="plugins.generic.usageStats.optout.shortDesc"><![CDATA[Мы сохраняем анонимные данные о статистике использования. Пожалуйста прочтите подробности в <a href="{$privacyInfo}">Информации о конфиденциальности</a>.]]></message>	
+
+	<message key="plugins.reports.usageStats.metricType">PKP/COUNTER</message>
+	<message key="plugins.reports.usageStats.metricType.full">Статистика Public Knowledge Project (готовая для COUNTER)</message>
+	<message key="plugins.generic.usageStats.statsSum">Сумма всех скачиваний файла</message>
+	<message key="plugins.generic.usageStats.noStats">Данные скачивания пока не доступны.</message>
+	<message key="plugins.generic.usageStats.monthInitials">Янв Фев Мар Апр Май Июн Июл Авг Сен Окт Ноя Дек</message>
+	<message key="plugins.generic.usageStats.downloads">Скачивания</message>
+</locale>

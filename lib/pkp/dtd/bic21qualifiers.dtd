@@ -1,0 +1,15 @@
+<!--
+  * dtd/bic21qualifiers.dtd
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * DTD for BIC 2.1 Subject Qualifier lists.
+  *
+  -->
+<!ELEMENT qualifiers (qualifier+)>
+<!ELEMENT qualifier EMPTY>
+	<!ATTLIST qualifier 
+		code CDATA #REQUIRED
+		text CDATA #REQUIRED>

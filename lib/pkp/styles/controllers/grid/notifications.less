@@ -1,0 +1,133 @@
+/**
+ * @file styles/controllers/grid/notifications.less
+ *
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @ingroup pkp_controllers_grid_notifications
+ *
+ * @brief Classes for notification grid structure
+ */
+
+#notificationsGrid {
+
+	table {
+		// Prevents table from overflowing parent div
+		table-layout: fixed;
+	}
+
+	a {
+		font-weight: @normal;
+	}
+
+	// Leave the header for screen readers but don't show it
+	thead {
+		position: absolute;
+		top: 0;
+		left: -9999px;
+	}
+
+	// No top border on the first task
+	.gridRow:first-child {
+		border-top: none;
+	}
+
+	// @todo hack on top of a hack. Overrides the padding-left: 32px attached to
+	// .pkp_page_dashboard .pkp_controllers_grid tbody:not(.empty) td:first-child
+	.gridRow td:first-child {
+		padding-left: 0;
+		line-height: @double;
+		min-width: 26px;
+	}
+
+	.gridRow td:nth-child(2) {
+		padding-left: 16px;
+		padding-right: 0;
+	}
+
+	.pkp_controllers_grid {
+		margin-bottom: 0;
+	}
+
+	.footer {
+		background: transparent;
+		padding: 0;
+	}
+
+	// Override <ul> styles attached to navigation menu
+	.actions.btm {
+		position: relative;
+		top: auto;
+		left: auto;
+		background: transparent;
+		width: auto;
+		padding-left: @double;
+		margin-top: @base;
+		float: none;
+		width: 100%;
+		border-top: @grid-border;
+		padding-top: 0;
+
+		a {
+			padding-bottom: 4px;
+			font-weight: @bold;
+
+			&:first-child {
+				padding-left: 0;
+			}
+		}
+
+		.pkp_linkaction_deleteNotifications {
+			color: @offset;
+		}
+	}
+
+	.pkp_grid_no_title {
+		border-bottom: none;
+	}
+
+	.task {
+
+		.message {
+			display: block;
+			line-height: 20px;
+			max-height: 3em;
+			overflow: hidden;
+		}
+
+		.details {
+			position: relative;
+			display: block;
+			font-size: @font-tiny;
+			line-height: 24px;
+			color: @text;
+		}
+
+		.acronym {
+			position: absolute;
+			top: 0;
+			right: 0;
+			background: @lift;
+			padding: 0 0.5em;
+			border: @bg-border;
+			border-radius: @radius;
+			box-shadow: -10px 0 10px @lift;
+			line-height: 22px;
+			color: @text-light;
+		}
+
+		.submission {
+			display: block;
+			white-space: nowrap;
+			overflow: hidden;
+		}
+
+		&.unread {
+
+			.message {
+				font-weight: @bold;
+			}
+		}
+	}
+}

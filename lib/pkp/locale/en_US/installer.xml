@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/en_US/installer.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="en_US" full_name="U.S. English">
+	<message key="installer.additionalLocales">Additional locales</message>
+	<message key="installer.administratorAccount">Administrator Account</message>
+	<message key="installer.administratorAccountInstructions">This user account will become the site administrator and have complete access to the system. Additional user accounts can be created after installation.</message>
+	<message key="installer.checkNo"><![CDATA[<span class="pkp_form_error formError">NO</span>]]></message>
+	<message key="installer.checkYes">Yes</message>
+	<message key="installer.clientCharset">Client character set</message>
+	<message key="installer.clientCharsetInstructions">The encoding to use for data sent to and received from browsers.</message>
+	<message key="installer.configFileError"><![CDATA[The configuration file <tt>config.inc.php</tt> does not exist or is not readable.]]></message>
+	<message key="installer.connectionCharset">Connection character set</message>
+	<message key="installer.contentsOfConfigFile">Contents of configuration file</message>
+	<message key="installer.createDatabase">Create new database</message>
+	<message key="installer.createDatabaseInstructions">To use this option your database system must support remote database creation and your user account must have the appropriate permissions to create new databases. If installation fails with this option selected, manually create the database on your server and run the installer again with this option disabled.</message>
+	<message key="installer.databaseCharset">Database character set</message>
+	<message key="installer.databaseDriver">Database driver</message>
+	<message key="installer.databaseDriverInstructions"><![CDATA[<strong>Database drivers listed in brackets do not appear to have the required PHP extension loaded and installation will likely fail if selected.</strong><br />Any unsupported database drivers listed above are listed solely for academic purposes and are unlikely to work.]]></message>
+	<message key="installer.databaseHost">Host</message>
+	<message key="installer.databaseHostInstructions">Leave the hostname blank to connect using domain sockets instead of over TCP/IP. This is not necessary with MySQL, which will automatically use sockets if "localhost" is entered, but is required with some other database servers such as PostgreSQL.</message>
+	<message key="installer.databaseName">Database name</message>
+	<message key="installer.databasePassword">Password</message>
+	<message key="installer.databaseSettings">Database Settings</message>
+	<message key="installer.databaseUsername">Username</message>
+	<message key="installer.filesDir">Directory for uploads</message>
+	<message key="installer.fileSettings">File Settings</message>
+	<message key="installer.form.clientCharsetRequired">A client character set must be selected.</message>
+	<message key="installer.form.databaseDriverRequired">A database driver must be selected.</message>
+	<message key="installer.form.databaseNameRequired">The database name is required.</message>
+	<message key="installer.form.emailRequired">A valid email address for the administrator account is required.</message>
+	<message key="installer.form.filesDirRequired">The directory to be used for storing uploaded files is required.</message>
+	<message key="installer.form.localeRequired">A locale must be selected.</message>
+	<message key="installer.form.passwordRequired">A password for the administrator account is required.</message>
+	<message key="installer.form.passwordsDoNotMatch">The administrator passwords do not match.</message>
+	<message key="installer.form.separateMultiple">Separate multiple values with commas</message>
+	<message key="installer.form.usernameAlphaNumeric">The administrator username can contain only alphanumeric characters, underscores, and hyphens, and must begin and end with an alphanumeric character.</message>
+	<message key="installer.form.usernameRequired">A username for the administrator account is required.</message>
+	<message key="installer.installationWrongPhp"><![CDATA[<br/><strong>WARNING: Your current version of PHP does not meet the minimum requirements for installation. It is recommended to upgrade to a more recent release of PHP.</strong>]]></message>
+	<message key="installer.installErrorsOccurred">Errors occurred during installation</message>
+	<message key="installer.installerSQLStatements">SQL statements for installation</message>
+	<message key="installer.installFileError"><![CDATA[The installation file <tt>dbscripts/xml/install.xml</tt> does not exist or is not readable.]]></message>
+	<message key="installer.installFilesDirError">The directory specified for uploaded files does not exist or is not writable.</message>
+	<message key="installer.installParseDBFileError"><![CDATA[Error parsing the database installation file <tt>{$file}</tt>.]]></message>
+	<message key="installer.installParseEmailTemplatesFileError"><![CDATA[Error parsing the email template file <tt>{$file}</tt>.]]></message>
+	<message key="installer.installParseFilterConfigFileError"><![CDATA[Error parsing the filter configuration file <tt>{$file}</tt>.]]></message>
+	<message key="installer.unsupportedUpgradeError">Upgrade unsupported. See docs/UPGRADE-UNSUPPORTED for details.</message>
+	<message key="installer.locale">Locale</message>
+	<message key="installer.locale.maybeIncomplete">Marked locales may be incomplete.</message>
+	<message key="installer.localeSettings">Locale Settings</message>
+	<message key="installer.oaiSettings">OAI Settings</message>
+	<message key="installer.oaiRepositoryIdInstructions"><![CDATA[A unique identifier used to identify metadata records indexed from this site using the <a href="http://www.openarchives.org/" target="_blank">Open Archives Initiative</a> Protocol for Metadata Harvesting.]]></message>
+	<message key="installer.oaiRepositoryId">Repository Identifier</message>
+	<message key="installer.publicFilesDirError">The public files directory does not exist or is not writable.</message>
+	<message key="installer.releaseNotes">Release Notes</message>
+	<message key="installer.preInstallationInstructionsTitle">Pre-Installation Steps</message>
+	<message key="installer.preInstallationInstructions"><![CDATA[
+		<p>1. The following files and directories (and their contents) must be made writable:</p>
+		<ul>
+			<li><tt>config.inc.php</tt> is writable (optional): {$writable_config}</li>
+			<li><tt>public/</tt> is writable: {$writable_public}</li>
+			<li><tt>cache/</tt> is writable: {$writable_cache}</li>
+			<li><tt>cache/t_cache/</tt> is writable: {$writable_templates_cache}</li>
+			<li><tt>cache/t_compile/</tt> is writable: {$writable_templates_compile}</li>
+			<li><tt>cache/_db</tt> is writable: {$writable_db_cache}</li>
+		</ul>
+
+		<p>2. A directory to store uploaded files must be created and made writable (see "File Settings" below).</p>]]>
+	</message>
+	<message key="installer.configureXSLMessage"><![CDATA[<p>Your PHP installation does not have the XSL module enabled. Either enable it, or configure the xslt_command parameter in your config.inc.php file.</p>]]></message>
+	<message key="installer.beacon">Beacon</message>
+	<message key="installer.beacon.enable">Provide a unique site ID and OAI base URL to PKP for statistics and security alert purposes only.</message>
+</locale>

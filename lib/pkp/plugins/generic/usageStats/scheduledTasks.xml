@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  * plugins/generic/usageStats/scheduledTasks.xml
+  *
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Usage statistics plugin scheduled tasks registry file.
+  *
+  * This file lists all usage statistics plugin scheduled tasks to be executed by the system.
+  *
+  * Note that this functionality requires scheduled task support to be enabled.
+  * The degree of granularity supported for the task frequency depends on the
+  * frequency the scheduled task script itself is scheduled to run (as
+  * configured in cron, for example).
+  -->
+
+<!DOCTYPE scheduled_tasks SYSTEM "../../../dtd/scheduledTasks.dtd">
+
+<scheduled_tasks>
+	<task class="plugins.generic.usageStats.UsageStatsLoader">
+		<descr>Extract transform and load usage statistics data into database.</descr>
+	</task>
+</scheduled_tasks>

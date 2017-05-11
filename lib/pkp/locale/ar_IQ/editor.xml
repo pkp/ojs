@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/ar_IQ/editor.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the ar_IQ (العربية) locale.
+  -->
+
+<locale name="ar_IQ" full_name="العربية">
+	<message key="editor.submissionLibrary">مكتبة المؤلَّف</message>
+	<message key="editor.review.notInitiated">عملية التحكيم لم يباشر بها بعد.</message>
+	<message key="editor.submission.copyediting.personalMessageToUser">رسالة إلى المستخدم</message>
+	<message key="editor.submission.externalReviewDescription">إختر الملفات أدناه لإرسالها إلى مرحلة التحكيم.</message>
+	<!-- Add file or auditor to editor/audit grids -->
+	<message key="editor.submission.fileAuditor.form.fileRequired">عليك أن تختار ملفاً واحداً على الأقل لتعيينه لأحد المستخدمين.</message>
+	<message key="editor.submission.fileAuditor.form.messageRequired">عليك أن تضمَّن رسالة شخصية.</message>
+	<message key="editor.submission.fileAuditor.skipEmail">لا ترسل الرسالة إلى المتابع</message>
+	<message key="editor.submission.fileAuditor.form.userRequired">عليك أن تختار المستخدم الذي تريد تعيينه.</message>
+	<message key="editor.submission.uploadSelectFiles">رفع/إختيار الملفات</message>
+	<message key="editor.submission.selectFiles">إختيار الملفات</message>
+	<message key="editor.submission.revisions">التحكيمات</message>
+	<message key="editor.submission.review.reviewersDescription"><![CDATA[استعمل <em>+إضافة محكم</em> لدعوة القراء لتحكيم ملفات طلب النشر. إيقونة دفتر الملاحظات تشير إلى أن أحد التحكيمات قد تم تسليمه، وهو بدوره سيدقق <em>يُعلَّم</em> بعد أن يخضع للمشاورة. عندما تتأخر التحكيمات عن موعدها، ستظهر إيقونة الظرف الأحمر لغرض تذكير المحكمين المتأخرين.]]></message>
+	<message key="editor.submission.addReviewer">إضافة محكم</message>
+	<message key="editor.submission.findAndSelectReviewer">حدد محكماً</message>
+	<message key="editor.submission.findAndSelectUser">حدد مستخدماً</message>
+	<message key="editor.submission.fileList.includeAllStages">أظهر الملفات من كل مراحل المخطط الانسيابي المتاحة.</message>
+	<message key="editor.submission.review.currentFiles">ملفات التحكيم الحالية للجولة {$round}</message>
+	<message key="editor.submission.backToSearch">العودة إلى البحث</message>
+	<message key="editor.review.createReviewer">إنشاء محكم جديد</message>
+	<message key="editor.review.enrollReviewer.short">إمنح الدور لمستخدم مسجل</message>
+	<message key="editor.review.unassignReviewer">إلغاء تعيين المحكم</message>
+	<message key="editor.submissionReview.reviewType">نوع التحكيم</message>
+	<message key="editor.submissionReview.skipEmail">لا ترسل الرسالة إلى المؤلف</message>
+	<message key="editor.submissionReview.open">علني</message>
+	<message key="editor.submissionReview.blind">سري</message>
+	<message key="editor.submissionReview.doubleBlind">مضاعف السرية</message>
+	<message key="editor.submissionReview.restrictFiles">الملفات التي في النية تحكيمها</message>
+	<message key="editor.submissionReview.restrictFiles.hide">إنهاء إختيار الملفات</message>
+	<message key="editor.submissionReview.editReview">تعديل التحكيم</message>
+	<message key="editor.review.personalMessageToReviewer">الرسالة المعدة للمحكم</message>
+	<message key="editor.review.importantDates">تواريخ هامة</message>
+	<message key="editor.review.uploadRevision">رفع التحكيم</message>
+	<message key="editor.review.NotifyAuthorAccept">أشعر المؤلف بأن طلبه مقبول.</message>
+	<message key="editor.review.NotifyAuthorDecline">أشعر المؤلف بأن طلبه مرفوض.</message>
+	<message key="editor.review.NotifyAuthorRevisions">إلتمس التنقيحات من المؤلف.</message>
+	<message key="editor.review.NotifyAuthorResubmit">إلتمس التنقيحات من المؤلف والتي ستكون عرضة للمزيد من التحكيم.</message>
+	<message key="editor.review.NotifyAuthorExternal">أشعر المؤلف بأن طلبه سيخضع للتحكيم الخارجي.</message>
+	<message key="editor.review.personalMessageToAuthor">الرسالة المعدة للمؤلف</message>
+	<message key="editor.review.dateAccepted">تاريخ قبول التحكيم</message>
+	<message key="editor.review.noReviews">لا توجد تحكيمات مناظرة لاستيرادها</message>
+	<message key="editor.review.reminder">تذكير التحكيم</message>
+	<message key="editor.review.thankReviewer">أشكر المحكم</message>
+	<message key="editor.review.reminderError">حدث خطأ عند إرسال تذكير التحكيم</message>
+	<message key="editor.review.thankReviewerError">حدث خطأ عند إرسال الشكر إلى المحكم</message>
+	<message key="editor.review.skipEmail">لا ترسل الرسالة إلى المحكم.</message>
+	<message key="editor.review.sendReminder">أرسل تذكيراً</message>
+	<message key="editor.review.readReview">قراءة التحكيم</message>
+	<message key="editor.review.readNewReview">قراءة تحكيم جديد</message>
+	<message key="editor.review.responseDue">موعد الاستجابة: {$date}</message>
+	<message key="editor.review.requestSent">أُرسل الطلب</message>
+	<message key="editor.review.requestAccepted">قُبل الطلب</message>
+	<message key="editor.review.revertDecision">تغيير القرار</message>
+	<message key="editor.review.reviewDue">موعد تسليم التحكيم: {$date}</message>
+	<message key="editor.review.reviewDueDate">تاريخ استيجاب التحكيم</message>
+	<message key="editor.review.reviewCompleted">إكتمل التحكيم</message>
+	<message key="editor.review.reviewConfirmed">التحكيم مؤكد</message>
+	<message key="editor.review.reviewSubmitted">التحكيم مسلَّم</message>
+	<message key="editor.review.reviewerComments">تعليقات المحكم</message>
+	<message key="editor.review.days">معدل الأيام</message>
+	<message key="editor.review.mustSelect">عليك أن تختار محكماً</message>
+	<message key="editor.review.errorAddingReviewer">حدث خطأ عند إضافة المحكم. لطفاً، حاول مرة أخرى.</message>
+	<message key="editor.review.errorDeletingReviewer">حدث خطأ عند إزالة المحكم. لطفاً، حاول مرة أخرى.</message>
+	<message key="editor.review.userGroupSelect">إمنح الدور للمستخدم المسجل ضمن مجموعة المحكم هذه</message>
+	<message key="editor.review.unconsiderReviewText">هل تريد تأشير هذا التحكيم على أنه غير معتبر؟ سيتم الاحتفاظ به ضمن وقائع التحكيم.</message>
+	<message key="editor.review.unconsiderReview">هذا التحكيم غير معتبر</message>
+	<message key="editor.review.readConfirmation">بمجرد قراءة هذا التحكيم، إضغط "تأكيد التحكيم" للإشارة إلى أن عملية التحكيم يمكنها أن تستمر. إذا قدم المحكم تحكيمه بطريقة أخرى، بإمكانك رفع ملفه أدناه ومن ثم الضغط على "تأكيد التحكيم" للمتابعة.</message>
+	<message key="editor.submission.selectCopyedingFiles">تدقيق الملفات</message>
+	<message key="editor.submission.selectReviewer">إختر المحكم</message>
+	<message key="editor.submission.taskDueDate">تاريخ استيجاب المهمة</message>
+	<message key="editor.submission.taskSchedule">جدولة المهمة</message>
+	<message key="editor.review.enrollReviewer">إمنح أحد المستخدمين دور المحكم</message>
+	<message key="editor.submission.noAuditRequested">ليس هناك طلب متابعة لهذا الملف</message>
+	<message key="editor.submission.personalMessageToUser">الرسالة المعدة للمستخدم</message>
+	<message key="editor.submission.proof.reminder">تذكير القراءة التصحيحية</message>
+	<message key="editor.submission.editorial.approveCopyeditDescription">لا بد من المصادقة على الملف المدقق قبل إرساله إلى مرحلة الإنتاج. هل تريد المصادقة على هذا الملف الآن؟</message>
+	<message key="editor.submission.editorial.disapproveCopyeditDescription">رفع المصادقة عن هذا الملف المدقق سيمنع إرساله إلى مرحلة الإنتاج. هل تريد رفع المصادقة عن هذا الملف؟</message>
+	<message key="editor.submission.addAuditor">عيِّن متابعاً</message>
+	<message key="editor.submission.copyedit.manageCopyeditFilesDescription">أي ملفات سبق رفعها إلى أي من مراحل الإنتاج يمكن إضافتها إلى قائمة الملفات المدققة عبر تأشير خانة التضمين أدناه والنقر على أمر البحث. سيتم عرض جميع الملفات ليصير بالإمكان إختيارها. أما أي ملفات أخرى لم يسبق رفعها إلى أي من المراحل، فبالإمكان رفعها الآن عبر النقر على رابط رفع الملف.</message>
+	<message key="editor.review">التحكيم</message>
+	<message key="editor.review.reviewDetails">تفاصيل التحكيم</message>
+	<message key="editor.review.noReviewFilesUploaded">لم تُرفع أي ملفات بعد</message>
+	<message key="editor.review.noReviewFilesUploaded.details">لم يسبق لك رفع أي ملفات تحكيم.</message>
+	<message key="editor.review.emailReviewer">مراسلة المحكم</message>
+	<message key="editor.submission.production.productionReadyFiles">الملفات الجاهزة للإنتاج</message>
+	<message key="editor.submission.newRound">جولة تحكيم جديدة</message>
+	<message key="editor.submissionReview.recordDecision">تسجيل قرار التحرير</message>
+	<message key="editor.submission.newRoundDescription">أنت على وشك إنشاء جولة تحكيم جديدة لطلب النشر هذا. الملفات التي لم تستعمل في جولات تحكيم أخرى مدرجة أدناه.</message>
+	<message key="editor.submission.createNewRound">إنشاء جولة تحكيم جديدة</message>
+	<message key="editor.article.reviewForms">نماذج التحكيم</message>
+	<message key="editor.article.selectReviewForm">إختر نموذج التحكيم</message>
+	<message key="editor.article.clearReviewForm">إزالة نموذج التحكيم</message>
+	<message key="editor.article.confirmChangeReviewForm">تحذير: تغيير نموذج التحكيم سيؤثر على الإجابات التي قدمها المحكمون مستعملين هذا النموذج. هل أنت متأكد من رغبتك في المتابعة؟</message>
+	<message key="editor.submission.noReviewerFilesSelected">لم يتم اختيار أي ملفات بعد</message>
+	<message key="editor.submission.noReviewerFilesSelected.details">لم تم باختيار أي ملفات لتطلب من المحكم تحكيمها.</message>
+	<message key="submission.queries.subjectRequired">موضوع المناقشة مطلوب حتماً.</message>
+	<message key="submission.queries.messageRequired">متن المناقشة مطلوب حتماً.</message>
+	<message key="submission.queries.attachedFiles">الملفات المرفقة</message>
+	<message key="grid.action.editQuery">تعديل المناقشة</message>
+	<message key="editor.submission.query.manageQueryNoteFilesDescription">يمكن إرفاق الملفات ضمن هذه المناقشة من القائمة أدناه.</message>
+	<message key="editor.submission.selectedReviewer">المحكم المختار</message>
+	<message key="editor.submission.proofreading.approveProof">أصادق على القراءة التصحيحية</message>
+	<message key="editor.submission.proofreading.revokeProofApproval">إلغاء المصادقة على القراءة التصحيحية</message>
+	<message key="editor.submission.proofreading.confirmCompletion">صادق على هذه القراءة التصحيحة للإشارة إلى إكتمالها واعتبار الملف جاهزاً للنشر.</message>
+	<message key="editor.submission.proofreading.confirmRemoveCompletion">ألغِ المصادقة على هذه القراءة التصحيحة للإشارة إلى عدم إكتمالها واعتبار الملف غير جاهز للنشر.</message>
+	<message key="editor.publicIdentificationNumericNotAllowed">المعرف العام '{$publicIdentifier}' يجب أن لا يكون رقماً.</message>
+	<message key="editor.publicIdentificationPatternNotAllowed">إن النمط {$pattern} غير مسموح به للمعرفات العامة.</message>
+</locale>

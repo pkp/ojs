@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/fr_CA/reviewer.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the fr_CA (Français (Canada)) locale.
+  *
+  -->
+
+<locale name="fr_CA" full_name="Français (Canada)">
+	<message key="reviewer.submission.reviewerFiles">Fichiers de l'évaluateur</message>
+	<message key="reviewer.reviewSteps.request">1. Requête</message>
+	<message key="reviewer.reviewSteps.guidelines">2. Lignes directrices</message>
+	<message key="reviewer.reviewSteps.download"><![CDATA[3. Télécharger & Examiner]]></message>
+	<message key="reviewer.reviewSteps.completion">4. Terminer</message>
+	<message key="reviewer.step1.request">Requête d'examen</message>
+	<message key="reviewer.step1.requestBoilerplate">Vous avez été choisi(e) en tant qu'évaluateur(trice) potentiel(lle) de la soumission suivante. Voici un aperçu de la soumission, ainsi que les échéanciers associés à son examen. Nous espérons que vous pourrez participer au processus d'examen.</message>
+	<message key="reviewer.step1.viewAllDetails">Voir tous les détails de la soumission</message>
+	<message key="reviewer.submission.declineReview">Refuser la requête d'examen</message>
+	<message key="reviewer.submission.declineReviewMessage">Vous pouvez indiquer au rédacteur, dans le champ ci-dessous, les raisons pour lesquelles vous refusez de participer à ce processus d'examen.</message>
+	<message key="reviewer.submission.acceptReview">Accepter l'examen, continuer à l'étape #2</message>
+	<message key="reviewer.submission.continueToStepThree">Continuer à l'étape #3</message>
+	<message key="reviewer.submission.submitReview">Soumettre l'examen</message>
+	<message key="reviewer.submission.reviewerGuidelines">Lignes directrices des examinateurs</message>
+	<message key="reviewer.submission.enterCompetingInterests">La maison d'édition a adopté une politique de divulgation des intérêts opposés chez ses examinateurs. Veuillez prendre un moment pour lire cette politique.</message>
+	<message key="reviewer.submission.noCompetingInterests">Je n'ai pas d'intérêts opposés.</message>
+	<message key="reviewer.submission.hasCompetingInterests">Il est possible que j'aie des intérêts opposés (veuillez spécifier).</message>
+	<message key="reviewer.submission.competingInterests">Intérêts opposés</message>
+	<message key="reviewer.submission.guidelines">Lignes directrices des examens</message>
+	<message key="reviewer.submission.noGuidelines">Cet éditeur n'a pas établi de lignes directrices pour les examinateurs.</message>
+	<message key="reviewer.submission.downloadDescription">Cliquez sur les noms des fichiers pour télécharger et examiner (sur l'écran ou après les avoir imprimés) les fichiers associés à cette soumission.</message>
+	<message key="reviewer.submission.reviewDescription">Saisir (ou copier/coller) votre examen de cette soumission dans le formulaire ci-dessous.</message>
+	<message key="reviewer.submission.uploadDescription">De plus, vous pouvez téléverser des fichiers que le rédacteur et/ou l'auteur pourront consulter, y compris les versions révisées des fichiers d'examen originaux.</message>
+	<message key="reviewer.complete">Examen envoyé</message>
+	<message key="reviewer.confirmSubmit">Vous voulez vraiment envoyer cet examen?</message>
+	<message key="reviewer.aboutDueDates">À propos des dates d'échéance</message>
+	<message key="reviewer.complete.whatNext">Merci d'avoir examiné cette soumission. Votre examen a bien été reçu. Nous apprécions votre contribution à la qualité du travail que nous publions. L'éditeur pourrait vous contacter à nouveau pour obtenir d'autres renseignements, le cas échéant.</message>
+	<message key="reviewer.aboutDueDates.text">L'éditeur demande que vous acceptiez ou refusiez d'examiner la soumission avant la date d'échéance, et complétiez l'examen avant la date d'échéance.</message>
+	<message key="submission.comments.canShareWithAuthor">Ce texte sera transmis à l'auteur et au rédacteur</message>
+	<message key="submission.comments.cannotShareWithAuthor">Ce texte sera transmis au rédacteur</message>
+</locale>
+

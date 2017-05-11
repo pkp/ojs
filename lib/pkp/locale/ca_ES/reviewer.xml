@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/ca_ES/reviewer.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Credits: https://pkp.sfu.ca/wiki/index.php?title=OMP:_Catalan_(ca_ES)
+  * Localization strings
+  -->
+
+<locale name="ca_ES" full_name="Català">
+	<!-- Used in submission review -->
+	<message key="reviewer.reviewSteps.request">1. Sol·licitud</message>
+	<message key="reviewer.reviewSteps.guidelines">2. Directrius</message>
+	<message key="reviewer.reviewSteps.download">3. Descarrega i revisa</message>
+	<message key="reviewer.reviewSteps.completion">4. Finalització</message>
+	<message key="reviewer.step1.request">Sol·licita una revisió</message>
+	<message key="reviewer.step1.requestBoilerplate">Se us ha seleccionat com a possible revisor/a de la tramesa següent.  A continuació es mostra una visió general de la tramesa, així com la línia temporal d'aquesta revisió.  Esperem que hi pugueu participar.</message>
+	<message key="reviewer.step1.viewAllDetails">Visualitza els detalls de la tramesa</message>
+	<message key="reviewer.submission.reviewerFiles">Fitxers del revisor/a</message>
+	<message key="reviewer.submission.declineReview">Rebutja la sol·licitud de revisió</message>
+	<message key="reviewer.submission.declineReviewMessage">Podeu anotar la raó per la qual heu rebutjat la revisió al quadre de text següent i comunicar-ho a l'editor/a.</message>
+	<message key="reviewer.submission.acceptReview">Accepta la revisió i continua al pas núm. 2</message>
+	<message key="reviewer.submission.continueToStepThree">Continua al pas núm. 3</message>
+	<message key="reviewer.submission.submitReview">Tramet la revisió</message>
+	<message key="reviewer.submission.reviewerGuidelines">Directrius per al revisor/a</message>
+	<message key="reviewer.submission.enterCompetingInterests">Aquesta institució publicadora té una clàusula per impedir la divulgació de continguts en cas de conflicte d'interessos amb els seus revisors/ores.  Preneu-vos un moment per llegir aquesta política.</message>
+	<message key="reviewer.submission.noCompetingInterests">No tinc cap conflicte d'interessos</message>
+	<message key="reviewer.submission.hasCompetingInterests">Tinc un conflicte d'interessos (especifiqueu-ho a continuació)</message>
+	<message key="reviewer.submission.competingInterests">Conflicte d’interessos</message>
+	<message key="reviewer.submission.guidelines">Directrius de revisió</message>
+	<message key="reviewer.submission.noGuidelines">Aquesta institució publicadora no ha establert directrius per al revisor/a.</message>
+	<message key="reviewer.submission.downloadDescription">Feu clic als noms dels fitxers que vulgueu descarregar i reviseu els fitxers associats amb aquesta tramesa. Podeu revisar els fitxers en pantalla o bé imprimir-los.</message>
+	<message key="reviewer.submission.reviewDescription">Introduïu (o enganxeu) la revisió d'aquesta tramesa al formulari que hi ha a continuació.</message>
+	<message key="reviewer.submission.uploadDescription">A més, també podeu carregar fitxers de consulta per a l'editor/a i/o l'autor/a, incloses les versions revisades dels fitxers originals per revisar.</message>
+	<message key="reviewer.complete">S'ha tramès la revisió</message>
+	<message key="reviewer.confirmSubmit">Esteu segur/a que voleu trametre aquesta revisió?</message>
+	<message key="reviewer.complete.whatNext">Gràcies per finalitzar la revisió d'aquesta tramesa. La vostra revisió s'ha tramès correctament. Agraïm que hàgiu contribuït a garantir la qualitat de la feina que publiquem; és possible que l'editor/a us torni a contactar per obtenir més informació.</message>
+	<message key="reviewer.aboutDueDates">Més informació sobre les dates de venciment</message>
+	<message key="reviewer.aboutDueDates.text">L'editor/a us demana que accepteu o rebutgeu la revisió abans de la data de venciment de la resposta i que acabeu la revisió abans de la data de venciment de la revisió.</message>
+
+	<message key="submission.comments.canShareWithAuthor">Per a l'autor i l'editor</message>
+	<message key="submission.comments.cannotShareWithAuthor">Només per a l'editor</message>
+</locale>

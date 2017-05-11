@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/hr_HR/user.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the hr_HR (Hrvatski) locale.
+  *
+  -->
+
+<locale name="hr_HR" full_name="Hrvatski">
+	<message key="user.affiliation">Ustanova</message>
+	<message key="user.affiliations">Ustanove</message>
+	<message key="user.biography">Biografski podaci</message>
+	<message key="user.biography.description">(npr. institucija i zvanje)</message>
+	<message key="user.changeMyPassword">Promjena moje lozinke</message>
+	<message key="user.changePassword">Promjena lozinke</message>
+	<message key="user.dateLastLogin">Zadnja prijava</message>
+	<message key="user.dateRegistered">Datum registracije</message>
+	<message key="user.editMyProfile">Uređivanje mog profila</message>
+	<message key="user.email">E-pošta</message>
+	<message key="user.feminine">Ž</message>
+	<message key="user.firstName">Ime</message>
+	<message key="user.gender">Spol</message>
+	<message key="user.initialsExample">Ivan Goran Kovačić = IGK</message>
+	<message key="user.initials">Inicijali</message>
+	<message key="user.interests">Recenzentski interesi</message>
+	<message key="user.lastName">Prezime</message>
+	<message key="user.login.accountDisabledWithReason">Vaš korisnički račun je onemogućen zbog sljedećeg razloga: {$razlog}</message>
+	<message key="user.login.accountDisabled">Vaš korisnički račun je onemogućen. Molimo kontaktirajte administratora za više informacija.</message>
+	<message key="user.login.accountNotValidated">Vaša adresa e-pošte nije validirana. Molimo provjerite vašu zaprimljenu e-poštu i slijedite zadane naputke. Ukoliko niste zaprimili poruku, pokušajte sa drugom adresom ili kontaktirajte administratora ove stranice.</message>
+	<message key="user.login.activate">Aktivirajte korisnički račun</message>
+	<message key="user.login.activated">Hvala na aktivaciji vašeg korisničkog računa. Sada se možete prijavljivati u sustav korisničkim imenom i lozinkom koje ste prethodno unijeli.</message>
+	<message key="user.login.changePasswordInstructions"><![CDATA[Morate odabrati novu lozinku prije nego što se prijavite na ovu stranicu.<br /><br />Molimo unesite ispod vaše korisničko ime i vašu sadašnju i novu lozinku kako biste promijenili lozinku za vaš korisnički račun.]]></message>
+	<message key="user.login.forgotPassword">Zaboravili ste lozinku?</message>
+	<message key="user.login">Prijava</message>
+	<message key="user.login.lostPassword.confirmationSent">Potvrda je poslana na vašu adresu e-pošte. Molimo slijedite upute u  e-pošti zbog ponovnog uspostavljanja vaše lozinke.</message>
+	<message key="user.login.lostPassword.invalidHash">Oprostite, poveznica na koju ste kliknuli nije važeća ili nije valjana. Molimo pokušajte ponovno zatražiti izmjenu vaše lozinke.</message>
+	<message key="user.login.lostPassword.invalidUser">Ne postoji korisnik s navedenom adresom e-pošte.</message>
+	<message key="user.login.lostPassword.passwordSent">Nova lozinka je poslana na vašu adresu e-pošte. Možete se sada prijaviti na stranici s vašom novom lozinkom.</message>
+	<message key="user.login.registeredEmail">Registrirana e-pošta korisnika</message>
+	<message key="user.login.resetPassword">Izdaj novu lozinku</message>
+	<message key="user.logOut">Odjava</message>
+	<message key="user.mailingAddress">Adresa</message>
+	<message key="user.masculine">M</message>
+	<message key="user.middleName">Srednje ime</message>
+	<message key="user.myAccount">Moji podaci</message>
+	<message key="user.name">Ime</message>
+	<message key="user.password">Lozinka</message>
+	<message key="user.repeatPassword">Ponovite lozinku</message>
+	<message key="user.phone">Telefon</message>
+	<message key="user.profile.form.emailRequired">Važeća adresa e-pošte je obavezna.</message>
+	<message key="user.profile.form.firstNameRequired">Ime je obavezno.</message>
+	<message key="user.profile.form.lastNameRequired">Prezime je obavezno.</message>
+	<message key="user.profile.form.newPasswordRequired">Morate unijeti vašu novu lozinku.</message>
+	<message key="user.profile.form.oldPasswordInvalid">Sadašnja lozinka koju ste unijeli je neispravna.</message>
+	<message key="user.profile.form.openAccessNotifications">Obavijesti e-pošte o brojevima časopisa otvorenog pristupa</message>
+	<message key="user.profile.form.passwordRequired">Lozinka je obavezna.</message>
+	<message key="user.profile.form.profileImage">Korisnička slika</message>
+	<message key="user.profile.form.publishedNotifications">Želim e-poštom primati obavijesti o novim objavljenim brojevima</message>
+	<message key="user.profile.form.urlInvalid">Navedena URL adresa nije valjana. Molimo vas da provjerite adresu i pokušate ponovno. (Savjet: Pokušajte dodati http:// na početak URL-a)</message>
+	<message key="user.profile.form.usernameRequired">Korisničko ime je obavezno.</message>
+	<message key="user.profile.leavePasswordBlank">Ostavite polje za lozinku prazno da biste zadržali sadašnju lozinku.</message>
+	<message key="user.profile.newPassword">Nova lozinka</message>
+	<message key="user.profile.oldPassword">Sadašnja lozinka</message>
+	<message key="user.profile">Profil</message>
+	<message key="user.profile.publicProfile">Korisnički profil</message>
+	<message key="user.profile.repeatNewPassword">Ponovite novu lozinku</message>
+	<message key="user.register.completeForm">Ispunite ovaj formular kako biste se registrirali na ovaj časopis.</message>
+	<message key="user.register.form.emailExists">Odabrana adresa e-pošte već postoji.</message>
+	<message key="user.register.form.passwordsDoNotMatch">Lozinke se ne podudaraju.</message>
+	<message key="user.register.form.usernameExists">Odabrano korisničko ime već postoji.</message>
+	<message key="user.register.passwordLengthRestriction">Lozinka mora imati najmanje {$length} znakova.</message>
+	<message key="user.register.registerAs">Registrirajte se kao</message>
+	<message key="user.register">Registracija</message>
+	<message key="user.register.usernameRestriction">Korisničko ime mora sadržavati samo mala slova (a-ž), brojeve (0-9), crtice (-) i podvlake (_).</message>
+	<message key="user.role.reader">Čitatelj</message>
+	<message key="user.role.readers">Čitatelji</message>
+	<message key="user.role.reviewer">Recenzent</message>
+	<message key="user.role.reviewers">Recenzenti</message>
+	<message key="user.role.siteAdmins">Administratori stranice</message>
+	<message key="user.roles">Uloge</message>
+	<message key="user.salutation">Naslov</message>
+	<message key="user.sendPassword">Potvrda</message>
+	<message key="user.sendPassword.description">Pošaljite mi e-poštom potvrdu registracije sa mojim korisničkim imenom i lozinkom</message>
+	<message key="user.signature">Signatura</message>
+	<message key="user.title">Titula</message>
+	<message key="user.url">URL</message>
+	<message key="user.username">Korisničko ime</message>
+	<message key="user.workingLanguages">Jezici sučelja</message>
+</locale>

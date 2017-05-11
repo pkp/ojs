@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../dtd/locale.dtd">
+
+<!--
+  * plugins/generic/usageStats/locale/es_ES/locale.xml
+  *
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings
+  -->
+
+<locale name="es_ES" full_name="Español (España)">
+	<message key="plugins.generic.usageStats.settings.logging">Opciones de acceso al registro</message>
+	<message key="plugins.generic.usageStats.settings.createLogFiles">Crear archivos de registro</message>
+	<message key="plugins.generic.usageStats.settings.createLogFiles.description">Al activar esta opción, el complemento creará archivos de acceso de registro dentro del directorio de archivos. Estos archivos deben usarse para extraer datos de estadísticas de uso. Si no desea crear más archivos de acceso de registro puede dejar esta opción deshabilitada y usar sus propios archivos de acceso de registro del servidor.</message>
+	<message key="plugins.generic.usageStats.settings.logParseRegex">Analizar los archivos de registro mediante expresiones regulares</message>
+	<message key="plugins.generic.usageStats.settings.logParseRegex.description">La expresión regular utilizada por defecto puede analizar archivos de acceso de registro apache en formato combinado, así como los archivos de registro del complemento. Si sus archivos de acceso de registro están en un formato diferente, deberá introducir una expresión regular capaz de analizarlos y proporcionar los valores esperados. Diríjase a UsageStatsLoader::_getDataFromLogEntry() para obtener más información.</message>
+	<message key="plugins.generic.usageStats.settings.saved">Configuración del módulo de estadísticas de uso guardada</message>
+	
+	<message key="plugins.generic.usageStats.usageStatsLoaderName">La tarea no ha generado ningún registro.</message>
+	<message key="plugins.generic.usageStats.openFileFailed">El archivo {$file} no pudo abrirse y fue rechazado.</message>
+	<message key="plugins.generic.usageStats.invalidLogEntry">El número de línea {$lineNumber} del archivo {$file} no es una entrada de registro válida y el archivo fue rechazado.</message>
+	<message key="plugins.generic.usageStats.removeUrlError">El número de línea {$lineNumber} del archivo {$file} contiene una URL de la que el sistema no puede eliminar la URL base.</message>
+	<message key="plugins.generic.usageStats.loadDataError">No se pueden cargar los datos extraídos del archivo {$file}. El error fue: {$error}. El archivo cambió de fase otra vez.</message>
+	<message key="plugins.generic.usageStats.pluginNotEnabled">El complemento de estadísticas de uso está deshabilitado. No se procesó ningún archivo de registro.</message>
+	<message key="plugins.generic.usageStats.noCounterBotList">La lista COUNTER bot {$botlist} no puede usarse. Existen varias razones por las que esto puede suceder. Compruebe que el archivo de la lista está dentro de la carpeta 'lib/pkp/plugins/generic/usageStats/lib/counter'. Compruebe también los permisos de esta carpeta y que solo hay un archivo dentro.</message>
+	<message key="plugins.generic.usageStats.displayName">Estadísticas de uso</message>
+	<message key="plugins.generic.usageStats.description">Presentar estadísticas de uso de objetos de datos. Puede utilizar archivos de acceso de registro del servidor para extraer estadísticas.</message>
+	
+	<message key="plugins.reports.usageStats.report.displayName">Informe de estadísticas de uso de OMP</message>
+	<message key="plugins.reports.usageStats.report.description">Informe de estadísticas de uso por defecto de OMP (compatibles con COUNTER)</message>
+	
+	<message key="plugins.reports.usageStats.metricType">OMP/COUNTER</message>
+	<message key="plugins.reports.usageStats.metricType.full">Estadísticas de Open Monograph Press (compatibles con COUNTER)</message>
+</locale>

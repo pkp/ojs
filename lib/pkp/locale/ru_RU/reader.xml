@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/ru_RU/reader.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the ru_RU (Русский) locale.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Russian_(ru_RU)
+  -->
+
+<locale name="ru_RU" full_name="Русский">
+	<message key="comments.anonymous">Анонимный пользователь</message>
+	<message key="comments.anonymousNamed">«{$userName}»</message>
+	<message key="comments.body">Текст комментария</message>
+	<message key="comments.titleRequired">Заголовок комментария обязателен.</message>
+	<message key="comments.confirmDeleteChildren">Удаление этого комментария приведет к удалению всех ответов на него. Вы уверены, что хотите это сделать?</message>
+	<message key="comments.delete">Удалить этот комментарий</message>
+	<message key="comments.email">Адрес электронной почты комментатора</message>
+	<message key="comments.emailReply">Ответить письмом электронной почты</message>
+	<message key="comments.enterComment">Ввести комментарий</message>
+	<message key="comments.inResponseTo"><![CDATA[ В ответ на <a href="{$url}">{$title}</a>]]></message>
+	<message key="comments.name">Имя комментатора</message>
+	<message key="comments.noComments">Нет опубликованных комментариев читателей.</message>
+	<message key="comments.nReplies">(Ответов - {$num})</message>
+	<message key="comments.oneReply">(1 ответ)</message>
+	<message key="comments.postAnonymously">Опубликовать этот комментарий анонимно</message>
+	<message key="comments.postReply">Опубликовать ответ</message>
+	<message key="comments.readerComments">Комментарии читателей</message>
+	<message key="comments.readMore">Читать дальше</message>
+	<message key="comments.replies">Ответы</message>
+	<message key="comments.title">Заголовок</message>
+	<message key="comments.viewAllComments">Просмотреть все комментарии</message>
+	<message key="reader.fullText">Полный текст:</message>
+	<message key="rt.addComment">Добавить комментарий</message>
+	<message key="rt.admin.configuration">Настройка</message>
+	<message key="rt.admin.contexts.confirmDelete">Вы уверены, что хотите удалить этот контекст и все связанные с ним поисковые запросы?</message>
+	<message key="rt.admin.contexts.createContext">Создать контекст</message>
+	<message key="rt.admin.contexts.edit.editContext">Редактировать контекст</message>
+	<message key="rt.admin.contexts.metadata">Метаданные</message>
+	<message key="rt.admin.contexts.options.authorTerms">Использовать по умолчанию имена авторов как ключевые слова для поиска, чтобы позволить пользователям найти другие работы авторов этого материала (например, для контекста «Другие работы»)</message>
+	<message key="rt.admin.contexts.options.citedBy">Использовать по умолчанию имена имена авторов как ключевые слова для поиска и описать контекст как поиск ссылок на эту статью.</message>
+	<message key="rt.admin.contexts.options.defineTerms"><![CDATA[Использовать по умолчанию слово, выделенное читателем, как ключевое слово для поиска или оставить пустым, если ничего не было выделено для этого материала (например для контекста «Определение терминов»). Настройка «Определение терминов» должна быть включена в <a href="{$settingsUrl}">Настройках RST</a> для того, чтобы разрешить открытие данного контекста двойным щелчком на словах.]]></message>
+	<message key="rt.admin.contexts.options.geoTerms">Использовать географические индексируемые данные как ключевые слова для поиска по умолчанию.</message>
+	<message key="rt.admin.contexts.options">Параметры</message>
+	<message key="rt.admin.management">Управление</message>
+
+	<message key="rt.admin.sharing">Поделиться</message>
+	<message key="rt.admin.sharing.enabled">Включить возможность поделиться с другими</message>
+	<message key="rt.admin.sharing.description"><![CDATA[Чтобы дать Вашим читателям возможность поделиться информацией о контенте с другими, зарегистрируйтесь на <a href="http://www.addthis.com">addthis.com</a> и вставьте полученный там код кнопки «Sharing» ниже.]]></message>
+
+	<message key="rt.admin.sharing.basic">Основные настройки</message>
+	<message key="rt.admin.sharing.userNameLabel">Имя пользователя AddThis.com</message>
+	<message key="rt.admin.sharing.buttonStyleLabel">Стиль кнопки</message>
+	<message key="rt.admin.sharing.dropDownMenuLabel">Использовать выпадающее меню</message>
+	<message key="rt.admin.sharing.advanced">Дополнительные настройки (не обязательно)</message>
+	<message key="rt.admin.sharing.customizationLink"><![CDATA[Смотрите <a href="http://support.addthis.com/customer/portal/articles/381236-custom-buttons">документацию по настройке AddThis.com</a>.]]></message>
+	<message key="rt.admin.sharing.brandLabel">Бренд</message>
+	<message key="rt.admin.sharing.dropDownLabel"><![CDATA[Параметры выпадающего меню <br /> (список, разделенный запятыми)]]></message>
+	<message key="rt.admin.sharing.languageLabel">Язык</message>
+	<message key="rt.admin.sharing.logolabel">Логотип</message>
+	<message key="rt.admin.sharing.logoBackgroundLabel">Фон логотипа</message>
+	<message key="rt.admin.sharing.logoColorLabel">Цвет логотипа</message>
+
+	<message key="rt.admin.readingToolsEnabled">Инструменты читателя</message>
+	<message key="rt.admin.searches.confirmDelete">Вы уверены, что хотите удалить этот поисковый запрос?</message>
+	<message key="rt.admin.searches.createSearch">Создать поисковый запрос</message>
+	<message key="rt.admin.searches.edit.editSearch">Редактировать поисковый запрос</message>
+	<message key="rt.admin.selectedVersion">Связанные элементы</message>
+	<message key="rt.admin.settings.abstract">Аннотация (представляет аннотацию материала).</message>
+	<message key="rt.admin.settings.viewReviewPolicy">Показать правила рецензирования</message>
+	<message key="rt.admin.settings.authorBio">Об авторе(показывает биографическую информацию, введенную автором).</message>
+	<message key="rt.admin.settings.captureCite">Как процитировать материал (показывает библиографическую ссылку на материал).</message>
+	<message key="rt.admin.settings.defineTerms">Посмотреть термины (дает читателям возможность вызова словаря двойным щелчком мыши на любом слове в материале).</message>
+	<message key="rt.admin.settings.disableRelatedItems">Выключить связанные элементы</message>
+	<message key="rt.admin.settings.emailAuthor">Отправить письмо автору (открывает шаблон письма электронной почты с адресом электронной почты автора).</message>
+	<message key="rt.admin.settings.emailOthers">Сообщить коллеге (открывает шаблон письма электронной почты со ссылкой на материал).</message>
+	<message key="rt.admin.settings.findingReferences">Найти ссылки</message>
+	<message key="rt.admin.settings.printerFriendly">Версия для печати (отображает версию материала, удобную для печати).</message>
+	<message key="rt.admin.settings.supplementaryFiles">Дополнительные файлы (показывает список файлов, включенных автором в отправляемый материал).</message>
+	<message key="rt.admin.settings.viewMetadata">Метаданные для индексации (показывает используемые для индексации метаданные, предоставленные автором и системой).</message>
+	<message key="rt.admin.status">Статус</message>
+	<message key="rt.admin.configureSharing">Настроить AddThis</message>
+	<message key="rt.admin.validateUrls.complete">Проверка завершена.</message>
+	<message key="rt.admin.validateUrls.ok">ОК</message>
+	<message key="rt.admin.validateUrls.urlIsInvalid">{$url} является неправильным.</message>
+	<message key="rt.admin.validateUrls">Проверить URL-адреса для инструментов читателя</message>
+	<message key="rt.admin.validateUrls.validate">Проверить</message>
+	<message key="rt.admin.versions.confirmDelete">Вы уверены, что хотите удалить эту версию и все связанные с ней контексты и поисковые запросы?</message>
+	<message key="rt.admin.versions.confirmRestore">Вы уверены, что хотите вернуть все версии к их стандартным настройкам? Если да, то вам нужно выбрать активную версию на странице «Настройки».</message>
+	<message key="rt.admin.versions.createVersion">Создать версию</message>
+	<message key="rt.admin.versions.edit.editVersion">Редактировать версию</message>
+	<message key="rt.admin.versions.export">Экспортировать</message>
+	<message key="rt.admin.versions.importVersion">Импортировать версию</message>
+	<message key="rt.admin.versions.metadata">Метаданные</message>
+	<message key="rt.admin.versions.restoreVersions">Восстановить версии в значения по умолчанию</message>
+	<message key="rt.authorBio">Об авторе</message>
+	<message key="rt.captureCite.format">Формат библиографической ссылки</message>
+	<message key="rt.captureCite">Как процитировать материал</message>
+	<message key="rt.captureCite.online">Онлайн</message>
+	<message key="rt.captureCite.web">Веб</message>	
+	<message key="rt.colleague">Сообщить коллеге</message>
+	<message key="rt.context.abbrev">Аббрев</message>
+	<message key="rt.context.and">AND</message>
+	<message key="rt.context.citesContextDescription">Если статья индексируется в Академии Google, она может сопровождаться ссылкой вида «Цитируется: X», которая ведет к списку работ, ссылающихся на данную. Так же, Академия Google будет показывать все материалы, где содержится название статьи и автор. Для доступа к онлайн-ресурсам, которые доступны только через вашу библиотеку, вам может потребоваться зайти в Настройки Академии и активировать «Библиотечные ссылки» для вашей организации.</message>
+	<message key="rt.context">Контекст</message>
+	<message key="rt.context.defineTermsDescription">Если материал представлен в формате HTML (а не в формате PDF), двойной щелчок на любом слове в тексте приведет к тому, что оно появится в поле «Термин» (слова также могут быть набраны или скопированы в это поле). Чтобы узнать больше о ресурсе, используемом для поиска, щелкните на «О ресурсе». Эти ресурсы были выбраны исходя из их релевантности и предоставления открытого (свободного) доступа ко всему контенту этого ресурса или его части.</message>
+	<message key="rt.context.description">Описание</message>
+	<message key="rt.context.order">Порядок</message>
+	<message key="rt.contexts">Контексты</message>
+	<message key="rt.context.searchDescription">Ключевые слова были выбраны авторами. Они могут быть изменены или удалены читателем, так как два или три коротких термина или фразы позволяют наиболее точно проводить поиск по сочетанию слов (AND). Чтобы узнать больше о ресурсах, используемых для поиска, щелкните на «О ресурсе». Эти ресурсы были выбраны за их релевантность и предоставление открытого (свободного) доступа ко всему контенту этого ресурса или его части.</message>
+	<message key="rt.context.searchTerms">Ключевые слова</message>
+	<message key="rt.context.termToDefine">Термин</message>
+	<message key="rt.context.title">Название</message>
+	<message key="rt.emailAuthor">Отправить письмо электронной почты автору</message>
+	<message key="rt.email.needLogin"><![CDATA[* Требуется <a target="_parent" href="{$loginUrl}">регистрация</a>]]></message>
+	<message key="rt.email.sent">Ваше сообщение было отправлено.</message>
+	<message key="rt.findingReferences">Найти ссылки</message>
+	<message key="rt.findingReferences.googleScholar">Академия Google</message>
+	<message key="rt.findingReferences.windowsLiveAcademic">Windows Live Academic</message>
+	<message key="rt.lookUp">Посмотреть термины</message>
+	<message key="rt.metadata.dublinCore.contributor">Соисполнитель</message>
+	<message key="rt.metadata.dublinCore.coverage">Охват</message>
+	<message key="rt.metadata.dublinCore.date">Дата</message>
+	<message key="rt.metadata.dublinCore.description">Описание</message>
+	<message key="rt.metadata.dublinCore">Дублинское ядро (Dublin Core)</message>
+	<message key="rt.metadata.dublinCore.format">Формат</message>
+	<message key="rt.metadata.dublinCore.identifier">Идентификатор</message>
+	<message key="rt.metadata.dublinCore.language">Язык</message>
+	<message key="rt.metadata.dublinCore.publisher">Издатель</message>
+	<message key="rt.metadata.dublinCore.relation">Отношение</message>
+	<message key="rt.metadata.dublinCore.rights">Права</message>
+	<message key="rt.metadata.dublinCore.source">Источник</message>
+	<message key="rt.metadata.dublinCore.subject">Предмет</message>
+	<message key="rt.metadata.dublinCore.title">Название</message>
+	<message key="rt.metadata.dublinCore.type">Тип</message>
+	<message key="rt.metadata.forThisDocument">Метаданные для этого документа</message>
+	<message key="rt.metadata.pkp.abstract">Аннотация</message>
+	<message key="rt.metadata.pkp.copyright">Права и разрешения</message>
+	<message key="rt.metadata.pkp.coverage">Геопространственное расположение, хронологический период, исследуемый образец (пол, возраст и т. д.)</message>
+	<message key="rt.metadata.pkp.date">(ГГГГ-ММ-ДД)</message>
+	<message key="rt.metadata.pkp.discipline">Дисциплины</message>
+	<message key="rt.metadata.pkp.format">Формат файла</message>
+	<message key="rt.metadata.pkp.genre"><![CDATA[Статус и жанр]]></message>
+	<message key="rt.metadata.pkpItem">Элементы метаданных PKP</message>
+	<message key="rt.metadata.pkp.language">Russian=ru, English=en</message>
+	<message key="rt.metadata.pkp.publisher">Организатор, место</message>
+	<message key="rt.metadata.pkp.source">Название; том, № (год)</message>
+	<message key="rt.metadata.pkp.sponsors">Спонсоры</message>
+	<message key="rt.metadata.pkp.subject">Ключевые слова</message>
+	<message key="rt.metadata.pkp.suppFiles">Дополнительные файлы</message>
+	<message key="rt.metadata.pkp.title">Название документа</message>
+	<message key="rt.metadata.pkp.type">Тип</message>
+	<message key="rt.metadata.pkp.uri">Универсальный идентификатор ресурса (URI)</message>
+	<message key="rt.printVersion">Версия для печати</message>
+	<message key="rt.readingTools">Инструменты читателя</message>
+	<message key="rt.relatedItems">Связанные элементы</message>
+	<message key="rt.reviewPolicy">Правила рецензирования</message>
+	<message key="rt.search.description">Описание</message>
+	<message key="rt.searches">Поисковые запросы</message>
+	<message key="rt.search.order">Порядок</message>
+	<message key="rt.search">Поиск</message>
+	<message key="rt.search.searchPost">Данные для публикации</message>
+	<message key="rt.search.searchUrl">URL для поиска</message>
+	<message key="rt.search.suggest">Предложить источник</message>
+	<message key="rt.search.title">Название</message>
+	<message key="rt.search.url">URL</message>
+	<message key="rt.suppFiles.download">Скачать</message>
+	<message key="rt.suppFiles">Дополнительные файлы</message>
+	<message key="rt.suppFiles.viewMetadata">Метаданные для индексирования</message>
+	<message key="rt.version.description">Описание</message>
+	<message key="rt.version.key">Ключ</message>
+	<message key="rt.version.locale">Язык</message>
+	<message key="rt.versions">Наборы связанных элементов</message>
+	<message key="rt.version.title">Название</message>
+	<message key="rt.version">Версия</message>
+	<message key="rt.viewMetadata">Метаданные для индексирования</message>
+</locale>

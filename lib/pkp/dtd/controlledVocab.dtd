@@ -1,0 +1,26 @@
+<!--
+  * dtd/controlledVocab.dtd
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2014-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * DTD describing database data and/or operations.
+  -->
+
+<!ELEMENT controlled_vocabs (controlled_vocab+)>
+
+<!ELEMENT controlled_vocab (entry*)>
+	<!ATTLIST controlled_vocab
+		symbolic CDATA #REQUIRED
+		assoc_type CDATA #IMPLIED
+		assoc_id CDATA #IMPLIED>
+<!ELEMENT entry (setting*)>
+	<!ATTLIST entry
+		seq CDATA #IMPLIED>
+<!ELEMENT setting (#PCDATA)>
+	<!ATTLIST setting
+		name CDATA #REQUIRED
+		type (int|string|object|bool) "string"
+		locale CDATA #IMPLIED>
+

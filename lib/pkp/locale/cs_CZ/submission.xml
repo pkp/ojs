@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/cs_CZ/submission.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the cs_CZ (Čeština) locale.
+  * Translated by František Chmelik, frantisek.chmelik 'at' upol.cz
+  * Corrections, migration to the OCS 2.3.x by Ivo Vesely and Petr Petyovsky (petyovsky 'at' feec.vutbr.cz)
+  *
+  -->
+
+<locale name="cs_CZ" full_name="Čeština">
+	<message key="submission.agencies">Agentury</message>
+	<message key="submission.abstractViews">Zobrazení abstraktu</message>
+	<message key="submission.accepted">Přijata</message>
+	<message key="submission.acknowledge">Poděkovat</message>
+	<message key="submission.addSuppFile">Přidat doplňkový soubor</message>
+	<message key="submission.ask">Vyžádáno</message>
+	<message key="submission.backToSubmissionEditing">Zpět na editaci příspěvku</message>
+	<message key="submission.changeComments">Změnit na</message>
+	<message key="submission.citations">Reference</message>
+	<message key="submission.citations.jQueryRequired"><![CDATA[Editace citací vyžaduje doplněk jQuery. Prosím, navštivte <a target="_blank" href="{$genericPluginsUrl}">stránku Obecné doplňky</a> a zde povolte doplněk jQuery.]]></message>
+	<message key="submission.citations.grid.fields">Název pole</message>
+	<message key="submission.citations.grid.values">Hodnota pole</message>
+	<message key="submission.citations.grid.title">Upravit citace</message>
+	<message key="submission.citations.grid.exportCitations">Exportovat citace</message>
+	<message key="submission.citations.grid.editCheckCitation">Upravit/Kontrolovat</message>
+	<message key="submission.citations.grid.editedCitation">Text citace</message>
+	<message key="submission.citations.grid.editedCitationRequired">Je vyžadován text citace</message>
+	<message key="submission.citations.grid.publicationTypeRequired">Prosím ujistěte se, že jste skutečně správně nastavili typ publikace. Možné varianty jsou: kniha (pro knihu nebo kapitolu v knize) a časopis (pro článek v časopise). Jinak nebude citace zobrazena ve správném formátu.</message>
+	<message key="submission.citations.grid.errorDeletingCitation">Při mazání citace došlo k chybě.</message>
+	<message key="submission.citations.form.title">Upravit citaci</message>
+	<message key="submission.citations.form.loadMessage">Prosím, vyčkejte na načtení editoru citací.</message>
+	<message key="submission.citations.form.description">Pokud nejste spokojen(a) s obsahem citací, můžete citace ručně upravit editací jednotlivých položek a poté provést opětovnou kontrolu.</message>
+	<message key="submission.citations.form.unsavedChanges">Citace obsahuje data z externích databází, které nejsou dosud uloženy. Prosím přečtěte si a případně upravte datová pole. Poté zvolte "OK" pro uložení změn, nebo zvolte tlačítko "Zrušit", kterým provedené změny neuložíte.</message>
+	<message key="submission.citations.form.filterError">Analýza nebo vyhledávání nevrátily žádné výsledky. Úpravou textu citace pravděpodobně získáte lepší výsledek.</message>
+	<message key="submission.citations.output.unsupportedPublicationType">Nepodporovaný nebo chybějící typ publikace. Prosím upravte citaci ručně a zadejte typ publikace (buď "book", "journal", "thesis" nebo "conf-proc").</message>
+	<message key="submission.citations.output.exportDescription">Prosím, zkopírujte obsah tohoto dialogového okna a vložte jej do dokumentu.</message>
+	<!-- FIXME: move to meta-data plug-in -->
+	<message key="metadata.property.displayName.author">Autoři</message>
+	<message key="metadata.property.displayName.editor">Editoři</message>
+	<message key="metadata.property.displayName.article-title">Název článku</message>
+	<message key="metadata.property.displayName.source">Název časopisu/knihy</message>
+	<message key="metadata.property.displayName.date">Datum publikace</message>
+	<message key="metadata.property.displayName.access-date">Přístupová data</message>
+	<message key="metadata.property.displayName.issue">Vydání</message>
+	<message key="metadata.property.displayName.volume">Svazek</message>
+	<message key="metadata.property.displayName.season">Ročník</message>
+	<message key="metadata.property.displayName.chapter-title">Název kapitoly</message>
+	<message key="metadata.property.displayName.edition">Vydání</message>
+	<message key="metadata.property.displayName.series">Série</message>
+	<message key="metadata.property.displayName.supplement">Dodatek</message>
+	<message key="metadata.property.displayName.conf-date">Datum konference</message>
+	<message key="metadata.property.displayName.conf-loc">Místo konání konference</message>
+	<message key="metadata.property.displayName.conf-name">Název konference</message>
+	<message key="metadata.property.displayName.conf-sponsor">Sponzor konference</message>
+	<message key="metadata.property.displayName.institution">Organizace</message>
+	<message key="metadata.property.displayName.fpage">První stránka</message>
+	<message key="metadata.property.displayName.lpage">Poslední stránka</message>
+	<message key="metadata.property.displayName.size">Počet stránek</message>
+	<message key="metadata.property.displayName.publisher-loc">Místo vydání</message>
+	<message key="metadata.property.displayName.publisher-name">Vydavatel</message>
+	<message key="metadata.property.displayName.isbn">ISBN</message>
+	<message key="metadata.property.displayName.issn">Tisk ISSN</message>
+	<message key="metadata.property.displayName.eissn">eISSN</message>
+	<message key="metadata.property.displayName.doi">DOI</message>
+	<message key="metadata.property.displayName.publisher-id">ID vlastní publikace</message>
+	<message key="metadata.property.displayName.coden">CODEN</message>
+	<message key="metadata.property.displayName.sici">SICI</message>
+	<message key="metadata.property.displayName.pmid">PMID</message>
+	<message key="metadata.property.displayName.uri">Odkaz na publikaci</message>
+	<message key="metadata.property.displayName.comment">Komentář</message>
+	<message key="metadata.property.displayName.annotation">Anotace</message>
+	<message key="metadata.property.displayName.publication-type">Typ publikace</message>
+	<!-- FIXME: end -->
+	<message key="submission.comments.addComment">Přidat komentář</message>
+	<message key="submission.comments.comments">Komentáře</message>
+	<message key="submission.comments.confirmDelete">Jste si jistý, že chcete smazat tento komentář?</message>
+	<message key="submission.comments.corrections">Korekce</message>
+	<message key="submission.comments.editComment">Upravit komentář</message>
+	<message key="submission.comments.importPeerReviews">Importovat recenzní posudky</message>
+	<message key="submission.comments.importPeerReviews.reviewerLetter">Recenzent {$reviewerLetter}:</message>
+	<message key="submission.comments.noComments">Žádné komentáře</message>
+	<message key="submission.comments.noReviews">Žádné recenze</message>
+	<message key="submission.comments.review">Recenze</message>
+	<message key="submission.comments.sendDecisionToReviewers">Poslat recenzentům rozhodnutí editora</message>
+	<message key="submission.comments.subject">Předmět</message>
+	<message key="submission.complete">Dokončit</message>
+	<message key="submission.done">Hotovo</message>
+	<message key="submission.dueDate">Termín splnění</message>
+	<message key="submission.due">Termín</message>
+	<message key="submission.editing">Editování</message>
+	<message key="submission.editMetadata">Editovat metadata</message>
+	<message key="submission.email.backToEmailLog">Zpět k protokolu emailů</message>
+	<message key="submission.email.confirmClearLog">Jste si jistý, že chcete vyčistit protokol emailů pro tento příspěvek?</message>
+	<message key="submission.email.confirmDeleteLogEntry">Jste si jistý, že chcete smazat tento záznam protokolu emailů?</message>
+	<message key="submission.email.deleteLogEntry">Smazat záznam protokolu</message>
+	<message key="submission.emailLog">Log e-mailů</message>
+	<message key="submission.event.backToEventLog">Zpět k protokolu událostí</message>
+	<message key="submission.event.confirmClearLog">Jste si jistý, že chcete vyčistit protokol událostí pro tento příspěvek?</message>
+	<message key="submission.event.confirmDeleteLogEntry">Jste si jistý, že chcete smazat tento záznam protokolu událostí?</message>
+	<message key="submission.event.deleteLogEntry">Smazat záznam protokolu</message>
+	<message key="submission.event.general.metadataUpdated">Metadata příspěvku aktualizována</message>
+	<message key="submission.event.general.suppFileUpdated">Soubor příspěvku aktualizován</message>
+	<message key="submission.event.reviewer.reviewAcceptedByProxy">Přidělení recenze akceptováno náhradníkem</message>
+	<message key="submission.event.reviewer.reviewAccepted">Přidělení recenze akceptováno</message>
+	<message key="submission.event.reviewer.reviewCancelled">Přidělená recenze zrušena</message>
+	<message key="submission.event.reviewer.reviewDeclined">Přidělení recenze odmítnuto</message>
+	<message key="submission.event.reviewer.reviewDueDate">Změněn termín splnění recenze</message>
+	<message key="submission.event.reviewer.reviewerAssigned">Recenzent přidělen k příspěvku</message>
+	<message key="submission.event.reviewer.reviewerRated">Hodnocení recenzenta odesláno</message>
+	<message key="submission.event.reviewer.reviewerUnassigned">Recenzent odebrán od příspěvku</message>
+	<message key="submission.event.reviewer.reviewFile">Soubor s recenzí aktualizován</message>
+	<message key="submission.event.reviewer.reviewInitiated">Přidělená recenze zahájena</message>
+	<message key="submission.event.reviewer.reviewRecommendation">Soubor s recenzním doporučením</message>
+	<message key="submission.event.reviewer.reviewReinitiated">Přidělená recenze znovu zahájena</message>
+	<message key="submission.event.reviewer.reviewResubmitted">Recenze znovu odeslána</message>
+	<message key="submission.event.reviewer.reviewRevision">Recenzentův soubor s recenzí aktualizován</message>
+	<message key="submission.files">Soubory</message>
+	<message key="submission.galley">Sazebnice</message>
+	<message key="submission.history.clearLog">Vyčistit protokol</message>
+	<message key="submission.history">Historie</message>
+	<message key="submission.history.noLogEntries">Žádné protokolové záznamy.</message>
+	<message key="submission.history.recentLogEntries">Nedávné záznamy</message>
+	<message key="submission.history.submissionEmailLog">Protokol emailů</message>
+	<message key="submission.history.submissionEventLog">Protokol událostí</message>
+	<message key="submission.history.submissionNotes">Poznámky k přípsěvku</message>
+	<message key="submission.history.viewLog">Zobrazit protokol</message>
+	<message key="submission.indexing">Indexace</message>
+	<message key="submission.initiated">Zahájeno</message>
+	<message key="submission.lastModified">Naposledy změněno</message>
+	<message key="submission.layout.addGalley">Přidat sazebnici</message>
+	<message key="submission.layout.confirmDeleteGalley">Jste si jistý, že chcete trvale smazat tuto sazebnici?</message>
+	<message key="submission.layout.confirmDeleteGalleyImage">Jste si jistý, že chcete odstranit tento soubor ze sazebnice?</message>
+	<message key="submission.layout.confirmDeleteSupplementaryFile">Jste si jistý, že chcete trvale smazat tento doplňkový soubor?</message>
+	<message key="submission.layout.deleteGalleyStylesheet">Smazat tento stylesheet.</message>
+	<message key="submission.layout.editGalley">Editovat sazebnici</message>
+	<message key="submission.layout.galleyFileData">Informace o souboru sazebnice</message>
+	<message key="submission.layout.galleyFormat">Formát sazebnice</message>
+	<message key="submission.layout.galleyHTMLData">HTML soubory sazebnice</message>
+	<message key="submission.layout.galleyImages">Obrázky</message>
+	<message key="submission.layout.galleyLabelInstructions">Popisek sazebnice je používán pro identifikaci formátu souboru (např. HTML, PDF atd.).</message>
+	<message key="submission.layout.galleyLabel">Popisek</message>
+	<message key="submission.layout.galleyLabelRequired">Je vyžadován popisek sazebnice.</message>
+	<message key="submission.layout.galleyLanguageRequired">Je vyžadován jazyk sazebnice.</message>
+	<message key="submission.layout.galleyLocaleRequired">Je vyžadováno umístění sazebnice.</message>
+	<message key="submission.layout.galleyNoImages">Žádné obrázky</message>
+	<message key="submission.layout.galleys">Sazebnice</message>
+	<message key="submission.layout.galleyStylesheet">Stylesheet sazebnice</message>
+	<message key="submission.layout.galleyStyle">Styl</message>
+	<message key="submission.layout.initialGalleyCreation">Úvodní vytvoření sazebnice</message>
+	<message key="submission.layout.layoutFile">Soubor pro typografické úpravy</message>
+	<message key="submission.layout">Typografická úprava</message>
+	<message key="submission.layout.layoutVersion">Verze typografa</message>
+	<message key="submission.layout.newGalley">Vytvořit novou sazebnici</message>
+	<message key="submission.layout.newSupplementaryFile">Nahrát nový doplňkový soubor</message>
+	<message key="submission.layout.noStyleFile">K této sazebnici nebyl přidán žádný stylesheet.</message>
+	<message key="submission.layout.supplementaryFiles">Přehled doplňkových souborů</message>
+	<message key="submission.layout.viewingGalley">Prohlížení sazebnice příspěvků</message>
+	<message key="submission.layout.viewProof">Zobrazit pro korekci</message>
+	<message key="submission.metadata">Metadata příspěvku</message>
+	<message key="submission.noReviewAssignments">Žádné přidělené recenze</message>
+	<message key="submission.notes.addNewNote">Přidat novou poznámku</message>
+	<message key="submission.notes.attachedFile">Přiložený soubor</message>
+	<message key="submission.notes.backToSubmissionNotes">Zpět na poznámky k příspěvku</message>
+	<message key="submission.notes.breadcrumb">Poznámky</message>
+	<message key="submission.notes.clearAllNotes">Vyprázdnit všechny poznámky</message>
+	<message key="submission.notes.collapseNotes">Zaklapnout poznámky</message>
+	<message key="submission.notes.confirmDeleteAll">Odstranit všechny poznámky k příspěvku?</message>
+	<message key="submission.notes.confirmDelete">Odstranit tuto poznámku k příspěvku?</message>
+	<message key="submission.notes.createNewNote">Vytvořit novou poznámku</message>
+	<message key="submission.notes.deleteNote">Smazat poznámku</message>
+	<message key="submission.notes.editNote">Upravit poznámku</message>
+	<message key="submission.notes.expandNotes">Rozšířit poznámky</message>
+	<message key="submission.notes.noSubmissionNotes">Žádné poznámky k příspěvku</message>
+	<message key="submission.notes.removeUploadedFile">Odstranit nahraný soubor</message>
+	<message key="submission.notes">Poznámky k příspěvku</message>
+	<message key="submission.notes.updateNote">Aktualizovat poznámku</message>
+	<message key="submission.notes.viewNotes">Zobrazit poznámky</message>
+	<message key="submission.originalFile">Původní soubor</message>
+	<message key="submission.page.editing">#{$id} Editování</message>
+	<message key="submission.page.history">#{$id} Historie</message>
+	<message key="submission.page.review">#{$id} Recenze</message>
+	<message key="submission.page.summary">#{$id} Souhrn</message>
+	<message key="submission.page.citations">#{$id} Citace</message>
+	<message key="submission.peerReview"><![CDATA[Recenzní&nbsp;řízení]]></message>
+	<message key="submission.recommendation">Doporučení: {$recommendation}</message>
+	<message key="submission.rejected">Zamítnut</message>
+	<message key="submission.request">Požádat</message>
+	<message key="submission.response">Odpověď</message>
+	<message key="submission.restrictions">Omezení</message>
+	<message key="submission.reviewMetadata">Zkontrolovat metadata</message>
+	<message key="submission.review">Recenze</message>
+	<message key="submission.reviewVersion">Verze recenze</message>
+	<message key="submissions.active">Aktivní</message>
+	<message key="submissions.archived">Archivované</message>
+	<message key="submission.saveMetadata">Uložit metadata</message>
+	<message key="submissions.completed">Dokončeno</message>
+	<message key="submissions.declined">Nepřijaté</message>
+	<message key="submissions.incomplete">Nekompletní</message>
+	<message key="submissions.noSubmissions">Žádné příspěvky</message>
+	<message key="submissions.queuedEditing">Ve frontě k editování</message>
+	<message key="submissions.queued">Ve frontě</message>
+	<message key="submissions.queuedUnassigned">Čeká na přidělení</message>
+	<message key="submissions.ruling">Rozhodnuto</message>
+	<message key="submissions.submit">Odeslat</message>
+	<message key="submissions.submitted">Odeslané</message>
+	<message key="submission.start">Zahájit</message>
+	<message key="submission.submissionHistory">Historie příspěvku</message>
+	<message key="submission.submissionManuscript">Rukopis příspěvku</message>
+	<message key="submission.submissionReview">Recenze příspěvku</message>
+	<message key="submission.submitter">Odesílatel</message>
+	<message key="submission.summary">Souhrn</message>
+	<message key="submission.supplementaryFiles">Doplňkové soubory</message>
+	<message key="submission.supportingAgencies">Podporující instituce (granty)</message>
+	<message key="submission.currentAgencies">Současné agentury</message>
+	<message key="submission.indexingInformation">Informace o indexování</message>
+	<message key="submission.titleAndAbstract">Název a abstrakt</message>
+	<message key="submission.underway">Zpracovává se</message>
+	<message key="submission.uploadFileTo">Nahrát soubor k</message>
+	<message key="submission.viewMetadata">Zobrazit metadata</message>
+	<message key="submission.views">Zobrazení</message>
+	<message key="submission.uploadSuccessful">Váš soubor byl nahrán</message>
+	<message key="submission.uploadSuccessfulContinue">Váš soubor byl nahrán. Pokračujte na úpravu metadat souboru.</message>
+	<message key="submission.loadMessage">Prosím čekejte, Váš soubor je nahráván na server.</message>
+	<message key="submission.fileDetails">Detaily souboru</message>
+	<message key="submission.nameRequired">Prosím, vyplňte položku jméno.</message>
+
+	<!-- Author Submission -->
+	<message key="author.submit.submissionCitations">Uveďte formátovaný seznam referencí pro práce citované v tomto příspěvku.</message>
+	<message key="log.review.reviewerAssigned">{$reviewerName} byl přidělen pro recenzování příspěvku {$submissionId} v recenzním kole {$round}.</message>
+
+	<message key="submission.reviewForm">Formulář posudku</message>
+	<message key="submission.reviewFormResponse">Odpovědi na formulář posudku</message>
+</locale>

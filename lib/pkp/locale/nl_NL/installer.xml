@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/nl_NL/installer.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the nl_NL (Nederlands) locale.
+  *
+  -->
+
+<locale name="nl_NL" full_name="Nederlands">
+	<message key="installer.additionalLocales">Additionele talen</message>
+	<message key="installer.administratorAccount">Beheerdersaccount</message>
+	<message key="installer.administratorAccountInstructions">Deze gebruiker wordt de sitebeheerder en heeft volledige toegang tot het systeem. Additionele gebruikersaccounts kunnen na installatie aangemaakt worden.</message>
+	<message key="installer.checkNo"><![CDATA[<span class="pkp_form_error formError">NEE</span>]]></message>
+	<message key="installer.checkYes">Ja</message>
+	<message key="installer.clientCharset">Browser karakterset</message>
+	<message key="installer.clientCharsetInstructions">De codering die gebruikt moet worden voor de gegevens die verzonden worden naar en ontvangen worden van browsers.</message>
+	<message key="installer.configFileError"><![CDATA[Het configuratiebestand <tt>config.inc.php</tt> bestaat niet of kan niet gelezen worden.]]></message>
+	<message key="installer.connectionCharset">Connectie karakterset</message>
+	<message key="installer.contentsOfConfigFile">Inhoud van het configuratiebestand</message>
+	<message key="installer.createDatabase">Nieuwe database aanmaken</message>
+	<message key="installer.createDatabaseInstructions">Om deze optie te kunnen gebruiken moet uw databasesysteem het op afstand aanmaken van databases en de opgeven gebruiker moet rechten hebben om nieuwe databases aan  te maken. Als installatie met deze optie mislukt, maak de database dan met de hand aan op uw server en voer de installatie opnieuw uit zonder deze optie in te schakelen.</message>
+	<message key="installer.databaseCharset">Database karakterset</message>
+	<message key="installer.databaseDriver">Database stuurprogramma</message>
+	<message key="installer.databaseDriverInstructions"><![CDATA[<strong>Database stuurprogramma's die tussen haakjes staan lijken de verplichte PHP extensie niet geladen te hebben en doen de installatie waarschijnlijk mislukken als ze geselecteerd worden.</strong><br />De niet-ondersteunde database stuurprogramma's die hierboven getoond worden zijn alleen voor academische toepassingen en werken waarschijnlijk niet.]]></message>
+	<message key="installer.databaseHost">Machine</message>
+	<message key="installer.databaseHostInstructions">Laat de machinenaam leeg om met domain sockets  te werken in plaats van met TCP/IP. Dit is niet nodig bij MySQL, dat automatisch gebruik maakt van sockets als "localhost" opgegeven wordt,  maar het is verplicht bij sommige andere databasesystemen zoals PostgreSQL.</message>
+	<message key="installer.databaseName">Databasenaam</message>
+	<message key="installer.databasePassword">Wachtwoord</message>
+	<message key="installer.databaseSettings">Databaseinstellingen</message>
+	<message key="installer.databaseUsername">Gebruikersnaam</message>
+	<message key="installer.encryption">Wachtwoord-encryptiealgoritme</message>
+	<message key="installer.filesDir">Map voor het laden van bestanden</message>
+	<message key="installer.fileSettings">Bestandsinstellingen</message>
+	<message key="installer.form.clientCharsetRequired">Er moet een karakterset voor de browser gekozen worden.</message>
+	<message key="installer.form.databaseDriverRequired">Er moet een database-stuurprogramma gekozen worden.</message>
+	<message key="installer.form.databaseNameRequired">De databasenaam is verplicht.</message>
+	<message key="installer.form.emailRequired">Een geldig e-mailadres voor de beheerder is verplicht.</message>
+	<message key="installer.form.encryptionRequired">Er moet een wachtwoord-encryptie algoritme gekozen worden.</message>
+	<message key="installer.form.filesDirRequired">De map voor het bewaren van geladen bestanden is verplicht.</message>
+	<message key="installer.form.localeRequired">Er moet een taal gekozen worden.</message>
+	<message key="installer.form.passwordRequired">Het wachtwoord voor de beheerder is verplicht.</message>
+	<message key="installer.form.passwordsDoNotMatch">De beheerderswachtwoorden komen niet overeen.</message>
+	<message key="installer.form.separateMultiple">Scheid meerdere waarden met komma's</message>
+	<message key="installer.form.usernameAlphaNumeric">De gebruikersnaam van de de beheerder mag alleen alfanumerieke tekens, liggende streepjes en koppelstreepjes bevatten en moet beginnen en eindigen met een alfanumeriek teken.</message>
+	<message key="installer.form.usernameRequired">De gebruikersnaam voor de beheerder is verplicht.</message>
+	<message key="installer.installationWrongPhp"><![CDATA[<br/><strong>WAARSCHUWING: Uw huidige PHP versie voldoet niet aan de minimale eisen. Het is aan te bevelen om te upgraden naar een meer recente versie.</strong>]]></message>
+	<message key="installer.installErrorsOccurred">Fouten tijdens de installatie</message>
+	<message key="installer.installerSQLStatements">SQL opdrachten voor installatie</message>
+	<message key="installer.installFileError"><![CDATA[Het installatiebestand <tt>dbscripts/xml/install.xml</tt> bestaat niet of kan niet gelezen worden.]]></message>
+	<message key="installer.installFilesDirError">De map voor het laden van bestanden bestaat niet of er mag niet in geschreven worden.</message>
+	<message key="installer.installParseDBFileError"><![CDATA[Fout bij het parseren van het database installatiebestand <tt>{$file}</tt>.]]></message>
+	<message key="installer.locale">Taal</message>
+	<message key="installer.localeSettings">Taalinstelingen</message>
+	<message key="installer.oaiRepositoryIdInstructions"><![CDATA[Een unieke identificatie om metadatarecords van deze site te indexeren, gebruikmakend van het <a href="http://www.openarchives.org/" target="_blank">Open Archives Initiative</a> Protocol for Metadata Harvesting.]]></message>
+	<message key="installer.oaiRepositoryId">OAI repository identificatie</message>
+	<message key="installer.publicFilesDirError">De map met publieke bestanden bestaat niet of er mag niet in geschreven worden.</message>
+	<message key="installer.releaseNotes">Over deze versie</message>
+	<message key="installer.securitySettings">Security instellingen</message>
+	<message key="installer.installParseEmailTemplatesFileError"><![CDATA[Fout bij het parsen van het e-mail sjabloon <tt>{$file}</tt>.]]></message>
+	<message key="installer.locale.maybeIncomplete">De gemarkeerde talen zijn mogelijk incompleet</message>
+	<message key="installer.oaiSettings">OAI instellingen</message>
+	<message key="installer.installParseFilterConfigFileError"><![CDATA[Fout in het filter configuratiebestand <tt>{$file}</tt>]]></message>
+</locale>

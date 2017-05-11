@@ -1,0 +1,19 @@
+<!--
+  * dtd/currencies.dtd
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * DTD for currency localization definitions.
+  *
+  -->
+
+<!ELEMENT currencies (currency+)>
+	<!ATTLIST currencies
+		locale CDATA #REQUIRED>
+<!ELEMENT currency EMPTY>
+	<!ATTLIST currency
+		code_alpha CDATA #REQUIRED
+		code_numeric CDATA #REQUIRED
+		name CDATA #REQUIRED>

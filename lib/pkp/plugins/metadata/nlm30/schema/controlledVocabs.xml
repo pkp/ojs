@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE controlled_vocabs SYSTEM "../../../../dtd/controlledVocab.dtd">
+
+<!--
+  * controlledVocabs.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Definition of controlled vocabularies
+  -->
+<controlled_vocabs>
+	<controlled_vocab symbolic="nlm30-publication-types">
+		<entry seq="1"><setting name="name" type="string">journal</setting></entry>
+		<entry seq="2"><setting name="name" type="string">book</setting></entry>
+		<entry seq="3"><setting name="name" type="string">conf-proc</setting></entry>
+		<entry seq="4"><setting name="name" type="string">thesis</setting></entry>
+	</controlled_vocab>
+</controlled_vocabs>

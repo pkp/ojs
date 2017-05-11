@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../dtd/locale.dtd">
+
+<!--
+  * plugins/oaiMetadataFormats/dc/locale/nl_NL/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the nl_NL (Nederlands) locale.
+  *
+  -->
+ 
+<locale name="nl_NL" full_name="Nederlands">
+	<message key="plugins.oaiMetadata.dc.displayName">DC Metadata Formaat</message>
+	<message key="plugins.oaiMetadata.dc.description">Structureert metadata volgens het  Dublin Core formaat.</message>
+</locale>

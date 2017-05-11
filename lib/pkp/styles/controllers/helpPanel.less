@@ -1,0 +1,191 @@
+/**
+ * @defgroup pkp_help_panel
+ */
+
+/**
+ * @file styles/controllers/helpPanel.less
+ *
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @ingroup pkp_help_panel
+ *
+ * @brief Styles for pkp_help_panel
+ */
+
+// Hides the outer scrollbar when the help panel is visible
+// Assigned to the <body> when the help panel is visible
+.help_panel_is_visible {
+	overflow: hidden !important;
+}
+
+.pkp_help_panel {
+	&:extend(.pkp_modal);
+	background: rgba(0, 0, 0, 0.3);
+	z-index: 1001; // Always sit on top of other modals
+
+	&.is_visible {
+		&:extend(.pkp_modal.is_visible);
+
+		.panel {
+			.transform(translate3d(0,0,0));
+		}
+	}
+
+	.panel {
+		position: fixed;
+		right: 0;
+		width: 30em;
+		height: 100%;
+		max-width: 100%;
+		background: @lift;
+		cursor: auto;
+		overflow-y: scroll;
+		.transform(translate3d(100%,0,0));
+		-webkit-transition-property: -webkit-transform;
+		-moz-transition-property: -moz-transform;
+		transition-property: transform;
+		-webkit-transition-duration: 0.3s;
+		-moz-transition-duration: 0.3s;
+		transition-duration: 0.3s;
+	}
+
+	.header, .footer {
+		.pkp_helpers_clear();
+		font-size: @font-sml;
+		line-height: @line-sml;
+		padding: 12px @base; // 48px height
+
+		> a {
+			text-decoration: none;
+		}
+	}
+
+	.header {
+		background: @yes;
+
+		a {
+			color: rgba(255,255,255,0.8);
+
+			&:hover,
+			&:focus {
+				color: #fff;
+			}
+		}
+	}
+
+	.close {
+		float: right;
+
+		&:after {
+			&:extend(.fa);
+			content: @fa-var-times;
+			margin-left: 0.25em;
+		}
+	}
+
+	.home {
+		float: left;
+
+		&:before {
+			&:extend(.fa);
+			content: @fa-var-bars;
+			margin-right: 0.25em;
+		}
+	}
+
+	.previous {
+		float: left;
+
+		&:before {
+			&:extend(.fa);
+			content: @fa-var-long-arrow-left;
+			margin-right: 0.25em;
+		}
+	}
+
+	.next {
+		float: right;
+
+		&:after {
+			&:extend(.fa);
+			content: @fa-var-long-arrow-right;
+			margin-left: 0.25em;
+		}
+	}
+
+	.content {
+		padding: 0 @base @double;
+		font-size: @font-sml;
+		line-height: @double;
+	}
+
+	.footer {
+		border-top: @bg-border;
+	}
+
+	h1,
+	h2 {
+		margin: 0 -@base;
+		padding: @base;
+		background: @bg;
+	}
+
+	h1 {
+		padding: 24px @base; // 80px height for 1-line titles
+		font-size: @font-lead;
+		line-height: @line-lead;
+		font-weight: @normal;
+	}
+
+	h2,
+	h3 {
+		font-size: @font-base;
+		line-height: @line-base;
+	}
+
+	h4,
+	h5 {
+		font-size: @font-sml;
+		line-height: @line-sml;
+	}
+
+	h5 {
+		font-weight: @normal;
+		font-style: italic;
+	}
+
+	h2,
+	h3,
+	h4,
+	h5 {
+		margin-top: 2em;
+	}
+
+	// Quick-links within each article
+	h1 + ol {
+		padding-left: 1em;
+	}
+
+	&.is_loading {
+
+		&:after {
+			&:extend(.pkp_spinner:after);
+			position: absolute;
+			top: 50%;
+			right: 225px;
+			opacity: 1;
+		}
+
+		.content {
+			opacity: 0.6;
+		}
+
+		.pkp_loading {
+			padding: 300px 0;
+			text-align: center;
+			text-indent: -9999px;
+		}
+	}
+}

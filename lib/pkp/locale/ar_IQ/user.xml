@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/ar_IQ/user.xml
+  *
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the ar_IQ (العربية) locale.
+  -->
+
+<locale name="ar_IQ" full_name="العربية">
+	<message key="user.accountInformation">معلومات الحساب</message>
+	<message key="user.affiliation">الانتماء</message>
+	<message key="user.affiliation.description">(المؤسسة التي تعمل فيها، مثلاً: "جامعة بغداد")</message>
+	<message key="user.affiliations">الانتماءات</message>
+	<message key="user.authorization.accessDenied">يتعذر الوصول.</message>
+	<message key="user.authorization.processAuthenticationTokenRequired">رمز المصادقة للعملية مفقود أو غير صالح.</message>
+	<message key="user.authorization.contextRequired">لا يمكنك استدعاء هذه العملية خارج السياق المناسب (صحافة، مجلة، مؤتمر... إلخ.).</message>
+	<message key="user.authorization.loginRequired">يتطلب الأمر تسجيل الدخول.</message>
+	<message key="user.authorization.privateOperation">العملية التي تحاول الوصول إليها إما شخصية أو ليس لها وجود.</message>
+	<message key="user.authorization.restrictedSiteAccess">لقد تم رفض وصولك. الدخول إلى الموقع مقيد بالنسبة لك حالياً.</message>
+	<message key="user.authorization.roleBasedAccessDenied">الدور الحالي ليس له صلاحية الوصول إلى هذه العملية.</message>
+	<message key="user.authorization.userGroupRequired">عليك أن تعد مجموعة مستخدمين صحيحة للوصول إلى هذه العملية.</message>
+	<message key="user.authorization.managerRequired">مستخدم بدور مدير (أي: محرر إنتاج) عليه أن يكون معيناً للمرحلة قبل أن تتمكن من المتابعة.</message>
+	<message key="user.authorization.accessibleWorkflowStage">ليس لديك حالياً حق الوصول إلى هذه المرحلة من المخطط الانسيابي.</message>
+	<message key="user.authorization.workflowStageRequired">مرحلة المخطط الانسيابي لم تحدد بعد.</message>
+	<message key="user.authorization.pluginRequired">لم يتم تحديد البرنامج الإضافي رغم أنه مطلوب حتماً.</message>
+	<message key="user.biography">بيان السيرة الذاتية (مثل: القسم والمرتبة العلمية)</message>
+	<message key="user.changeMyPassword">تبديل كلمة مروري</message>
+	<message key="user.changePassword">تبديل كلمة المرور</message>
+	<message key="user.dateLastLogin">آخر عملية دخول</message>
+	<message key="user.dateRegistered">تأريخ التسجيل</message>
+	<message key="user.editMyProfile">تعديل ملفي الشخصي</message>
+	<message key="user.email">البريد الالكتروني</message>
+	<message key="user.feminine">أنثى</message>
+	<message key="user.firstName">الاسم الأول</message>
+	<message key="user.gender">الجنس</message>
+	<message key="user.initialsExample">Mohammed Kamil Najeeb = MKN</message>
+	<message key="user.initials">الحروف الأولى</message>
+	<message key="user.interests">إهتمامات التحكيم</message>
+	<message key="user.interests.description">(إفصل بين الاهتمامات عبر زر enter أو بالفوارز الإنجليزية)</message>
+	<message key="user.gossip">ملاحظات شخصية</message>
+	<message key="user.group">مجموعة المستخدم</message>
+	<message key="user.lastName">الاسم الأخير</message>
+	<message key="user.profile.form.profileImageInvalid">صيغة ملف الصورة الشخصية غير صحيحة أو أن ملف الصورة كبير الحجم جداً. الصيغ المقبولة هي: .gif، .jpg، أو .png، وحجم الصورة ينبغي أن لا يتجاوز 150 × 150 بكسل.</message>
+	<message key="user.login.accountDisabledWithReason">حسابك تم تعطيله للسبب الآتي: {$reason}</message>
+	<message key="user.login.accountDisabled">حسابك تم تعطيله. لطفاً، اتصل بالمشرف الإداري للمزيد من المعلومات.</message>
+	<message key="user.login.accountNotValidated">عنوان بريدك الالكتروني لم يجر التحقق من صحته بنجاح. لطفاً، تأكد من إملائه بالشكل الصحيح واتبع التعليمات الظاهرة أمامك. إن لم تتلق أي رسالة الكترونية رغم كل ذلك، قد تحتاج إلى الاتصال بالمشرف الإداري للموقع لطلب المساعدة.</message>
+	<message key="user.login.activate">تفعيل الحساب</message>
+	<message key="user.login.activated">شكراً لقيامك بتفعيل الحساب. بإمكانك الآن الدخول إلى الموقع مستعملاً بيانات الدخول التي قدمتها عند تسجيلك في الموقع.</message>
+	<message key="user.login.changePasswordInstructions"><![CDATA[عليك أن تختار لنفسك كلمة مرور أخرى قبل أن يتسنى لك الدخول إلى الموقع.<br /><br />لطفاً، أدخل اسم دخولك مع كلمة مرورك الحالية وكلمة مرورك الجديدة التي تريدها لتكون بديلة عن الحالية أدناه.]]></message>
+    	<message key="user.login.forgotPassword">أنسيت كلمة مرورك؟</message>
+	<message key="user.login.loginError">اسم الدخول أو كلمة المرور خاطئين. لطفاً، حاول مجدداً.</message>
+	<message key="user.login">الدخول</message>
+	<message key="user.login.lostPassword.confirmationSent">رسالة تأكيد أُرسلت إلى عنوان بريدك الالكتروني. لطفاً اتبع التعليمات التي تجدها في تلك الرسالة لإعادة تعيين كلمة مرورك.</message>
+	<message key="user.login.lostPassword.invalidHash">عذراً، الرابط الذي اتبعته قد انتهت صلاحيته أو ليس صحيحاً. لطفاً، جرب إعادة تعيين كلمة مرورك مرة أخرى.</message>
+	<message key="user.login.lostPassword.invalidUser">لا يوجد مستخدم مسجل في الموقع باستعمال هذا البريد الالكتروني.</message>
+	<message key="user.login.lostPassword.passwordSent">كلمة مرور جديدة أُرسلت إلى عنوان بريدك الالكتروني. بإمكانك الآن الدخول إلى الموقع مستعملاً كلمة المرور الجديدة.</message>
+	<message key="user.login.registeredEmail">البريد الالكتروني للمستخدم المسجل في الموقع</message>
+	<message key="user.login.registrationComplete">إكتمل التسجيل</message>
+	<message key="user.login.registrationComplete.instructions">شكراً لقيامك بالتسجيل! ما الذي ترغب أن تقوم به لاحقاً؟</message>
+	<message key="user.login.registrationComplete.manageSubmissions">معاينة طلبات النشر</message>
+	<message key="user.login.registrationComplete.newSubmission">إنشاء طلب نشر جديد</message>
+	<message key="user.login.registrationComplete.continueBrowsing">متابعة التصفح</message>
+	<message key="user.login.registrationPendingValidation">التسجيل ينتظر التحقق</message>
+	<message key="user.login.rememberUsernameAndPassword">أبقني مسجلاً لدخولي في الموقع</message>
+	<message key="user.login.resetPassword">إعادة تعيين كلمة المرور</message>
+    	<message key="user.logOut">الخروج</message>
+	<message key="user.logOutAs">الخروج كأنني</message>
+	<message key="user.hello">مرحباً </message>
+	<message key="user.mailingAddress">عنوان المراسلة</message>
+	<message key="user.masculine">ذكر</message>
+	<message key="user.middleName">الاسم الأوسط</message>
+	<message key="user.myAccount">حسابي</message>
+	<message key="user.name">الاسم</message>
+	<message key="user.other">آخر</message>
+	<message key="user.password">كلمة المرور</message>
+	<message key="user.repeatPassword">أعد كلمة المرور</message>
+	<message key="user.phone">الهاتف</message>
+	<message key="user.profile.changePasswordInstructions">أدخل كلمة مرورك الحالية والجديدة أدناه للتمكن من تغيير كلمة مرورك في الموقع.</message>
+	<message key="user.profile.editProfile">تعديل الملف الشخصي</message>
+	<message key="user.profile.form.countryRequired">البلد مطلوب حتماً.</message>
+	<message key="user.profile.form.emailRequired">عنوان بريد الكتروني صحيح مطلوب حتماً.</message>
+	<message key="user.profile.form.affiliationRequired">الانتماء مطلوب حتماً.</message>
+	<message key="user.profile.form.firstNameRequired">الاسم الأول مطلوب حتماً.</message>
+	<message key="user.profile.form.lastNameRequired">الاسم الأخير مطلوب حتماً.</message>
+	<message key="user.profile.form.mailingAddressRequired">عنوان البريد الالكتروني مطلوب حتماً.</message>
+	<message key="user.profile.form.newPasswordRequired">عليك أن تدخل كلمة مرورك الجديدة.</message>
+	<message key="user.profile.form.oldPasswordInvalid">كلمة المرور الحالية التي أدخلتها غير صحيحة.</message>
+	<message key="user.profile.form.openAccessNotifications">إشعار البريد الالكتروني لصدور عدد مجاني</message>
+	<message key="user.profile.form.passwordRequired">كلمة المرور مطلوبة حتماً.</message>
+	<message key="user.profile.form.passwordSameAsOld">كلمة مرورك الجديدة مطابقة للحالية.</message>
+	<message key="user.profile.form.profileImage">صورة الملف الشخصي</message>
+	<message key="user.profile.form.publishedNotifications">إشعار صدور العدد الجديد من المجلة</message>
+	<message key="user.profile.form.urlInvalid">العنوان المحدد غير صحيح. لطفاً، تحقق من صحته جيداً وحاول مجدداً. (تلميح: حاول إضافة http:// إلى بداية العنوان.)</message>
+	<message key="user.profile.form.usergroupRequired">مجموعة المستخدم مطلوبة حتماً.</message>
+	<message key="user.profile.form.usernameRequired">اسم الدخول مطلوب حتماً.</message>
+	<message key="user.profile.leavePasswordBlank">أترك حقول كلمة المرور خالية للحفاظ على كلمة مرورك الحالية.</message>
+	<message key="user.profile.newPassword">كلمة المرور الجديدة</message>
+	<message key="user.profile.oldPassword">كلمة المرور الحالية</message>
+	<message key="user.profile">الملف الشخصي</message>
+	<message key="user.profile.publicProfile">ملف المستخدم الشخصي</message>
+	<message key="user.profile.repeatNewPassword">أعد كلمة المرور الجديدة</message>
+	<!-- Login -->
+	<message key="user.login.registerNewAccount">التسجيل</message>
+	<message key="user.login.resetPasswordInstructions">أدخل عنوان بريدك الالكتروني المتعلق بحسابك أدناه، وستتم مراسلتك برسالة تتضمن تعليمات توضح كيفية تصفير كلمة مرورك.</message>
+
+	<message key="user.register.form.emailExists">عنوان البريد الالكتروني هذا مستعمل سلفاً من قبل مستخدم آخر.</message>
+	<message key="user.register.form.passwordsDoNotMatch">كلمتا المرور لا تتطابقان.</message>
+	<message key="user.register.form.emailsDoNotMatch">حقلا العنوان البريدي لا يتطابقان.</message>
+	<message key="user.register.form.usernameAlphaNumeric">اسم المستخدم يتكون من رموز حرفية ورقمية، خطوط تحتانية، شُرط، وينبغي أن يبدأ وينتهي بحرف أو رقم حصراً.</message>
+	<message key="user.register.form.userGroupRequired">لا بد من اختيار دور واحد على الأقل.</message>
+	<message key="user.register.form.usernameExists">اسم الدخول الذي اخترته مستعمل سلفاً من قبل مستخدم آخر.</message>
+	<message key="user.register.form.passwordLengthRestriction">كلمة المرور ينبغي أن تتكون من {$length} حروف على الأقل.</message>
+	<message key="user.register.registerAs">سجل في {$contextName} بصفة...</message>
+	<message key="user.register">سجل</message>
+	<message key="user.register.usernameRestriction">اسم المستخدم ينبغي أن يتضمن حروفاً صغيرة فقط، أرقام، شُرط، أو خطوط تحتانية.</message>
+	<message key="user.register.registrationCompleted"><![CDATA[لقد سجلت بنجاح. <a href="{$profileUrl}">أنقر هنا</a> لإكمال ملفك الشخصي.]]></message>
+	<message key="user.role.author">مؤلف</message>
+	<message key="user.role.author_s">مؤلف/مؤلفون</message>
+	<message key="user.role.authors">المؤلفون</message>
+	<message key="user.role.editor">محرر</message>
+	<message key="user.role.editors">المحررون</message>
+	<message key="user.role.reader">قارئ</message>
+	<message key="user.role.readers">القراء</message>
+	<message key="user.role.reviewer">محكم</message>
+	<message key="user.role.reviewers">المحكمون</message>
+	<message key="user.role.siteAdmin">الإشراف الإداري العام للموقع</message>
+	<message key="user.role.siteAdmins">مشرفون إداريون للموقع</message>
+	<message key="user.role.copyeditor">مدقق</message>
+	<message key="user.role.copyeditors">المدققون</message>
+	<message key="user.role.proofreader">مصحح لغوي</message>
+	<message key="user.role.proofreaders">مصححو اللغة</message>
+	<message key="user.role.layoutEditor">محرر اللوح الطباعي</message>
+	<message key="user.role.layoutEditors">محررو الألواح الطباعية</message>
+	<message key="user.roles">الأدوار</message>
+	<message key="user.salutation">عبارة التحية</message>
+	<message key="user.sendPassword">التأكيد</message>
+	<message key="user.sendPassword.description">أرسل لي رسالة بالبريد الالكتروني تتضمن اسم دخولي وكلمة مروري</message>
+	<message key="user.signature">التوقيع</message>
+	<message key="user.suffix">اللاحقة</message>
+	<message key="user.title">العنوان</message>
+	<message key="user.url">عنوان الإنترنت</message>
+	<message key="user.userHome">صفحة المستخدم الرئيسية</message>
+	<message key="user.username">اسم الدخول</message>
+	<message key="user.workingLanguages">اللغات العاملة</message>
+	<message key="user.orcid">ORCID iD</message>
+	<message key="user.orcid.orcidInvalid">إن رمز ORCID iD الذي حددته غير صحيح. لطفاً، أدرج الرابط كاملاً (مثلاً: "http://orcid.org/0000-0002-1825-0097").</message>
+	<message key="user.profile.identity">الهوية</message>
+	<message key="user.profile.contact">اسم الاتصال</message>
+	<message key="user.profile.public">عمومي</message>
+</locale>

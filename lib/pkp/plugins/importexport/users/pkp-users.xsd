@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+
+<!--
+  * plugins/importexport/users/pkp-users.xsd
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Schema describing native XML import/export elements specific to OMP
+  -->
+
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://pkp.sfu.ca" xmlns:pkp="http://pkp.sfu.ca" elementFormDefault="qualified">
+
+	<!--
+	  - Base the user import/export on the User database model.
+	  -->
+	<include schemaLocation="../../../plugins/importexport/native/pkp-native.xsd" />
+
+	<!--
+	  - User-related Elements
+	  -->
+
+	<!-- A password complex type -->
+	<complexType name="password">
+		<sequence>
+			<element name="value" type="string" minOccurs="1" maxOccurs="1" />
+		</sequence>
+		<attribute name="is_disabled" type="boolean" default="false" />
+		<attribute name="must_change" type="boolean" default="false" />
+		<attribute name="encryption" type="string" />
+	</complexType>
+
+	<!-- Permit "users" as a root element -->
+	<element name="users">
+		<complexType>
+			<sequence>
+				<element name="user" type="pkp:user" minOccurs="1" maxOccurs="unbounded" />
+			</sequence>
+		</complexType>
+	</element>
+
+	<!-- A user -->
+	<complexType name="user">
+		<complexContent>
+			<extension base="pkp:identity">
+				<sequence>
+					<element name="username" type="string" minOccurs="1" maxOccurs="1" />
+					<element name="gossip" type="pkp:localizedNode" minOccurs="0" maxOccurs="unbounded" />
+					<element name="signature" type="pkp:localizedNode" minOccurs="0" maxOccurs="unbounded" />
+					<element name="password" type="pkp:password" minOccurs="1" maxOccurs="1" />
+					<element name="salutation" type="string" minOccurs="0" maxOccurs="1" />
+					<element name="initials" type="string" minOccurs="0" maxOccurs="1" />
+					<element name="suffix" type="string" minOccurs="0" maxOccurs="1" />
+					<element name="gender" type="string" minOccurs="0" maxOccurs="1" />
+					<element name="date_registered" type="string" minOccurs="0" maxOccurs="1" />
+					<element name="date_last_login" type="string" minOccurs="0" maxOccurs="1" />
+					<element name="date_last_email" type="string" minOccurs="0" maxOccurs="1" />
+					<element name="date_validated" type="string" minOccurs="0" maxOccurs="1" />
+					<element name="inline_help" type="string" minOccurs="0" maxOccurs="1" />
+					<element name="auth_id" type="int" minOccurs="0" maxOccurs="1" />
+					<element name="auth_string" type="string" minOccurs="0" maxOccurs="1" />
+					<element name="phone" type="string" minOccurs="0" maxOccurs="1" />
+					<element name="mailing_address" type="string" minOccurs="0" maxOccurs="1" />
+					<element name="billing_address" type="string" minOccurs="0" maxOccurs="1" />
+					<element name="locales" type="string" minOccurs="0" maxOccurs="1" />
+					<element name="disabled_reason" type="string" minOccurs="0" maxOccurs="1" />
+					<element name="user_group_ref" type="string" maxOccurs="unbounded" />
+					<element name="review_interests" type="string" minOccurs="0" maxOccurs="1" />
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+
+	<!-- Permit "user" as a root element -->
+	<element name="user" type="pkp:user" />
+
+	<!--
+	  - Composite / root elements
+	  -->
+	<element name="PKPUsers">
+		<complexType>
+			<sequence>
+				<element ref="pkp:user_groups" maxOccurs="1" />
+				<element ref="pkp:users" maxOccurs="1" />
+			</sequence>
+		</complexType>
+	</element>
+</schema>

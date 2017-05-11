@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/ca_ES/user.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Credits: https://pkp.sfu.ca/wiki/index.php?title=OMP:_Catalan_(ca_ES)
+  * Localization strings.
+  -->
+
+<locale name="ca_ES" full_name="Català">
+	<message key="user.accountInformation">Informació del compte</message>
+	<message key="user.affiliation">Institució/Empresa</message>
+	<message key="user.affiliation.description">(La institució en què esteu adscrit, p. ex. «Universitat Autònoma de Barcelona»)</message>
+	<message key="user.affiliations">Filiacions</message>
+	<message key="user.authorization.accessDenied">Accés denegat.</message>
+	<message key="user.authorization.processAuthenticationTokenRequired">El testimoni (token) d’autenticació del procés no hi és o no és vàlid.</message>
+	<message key="user.authorization.contextRequired">No podeu dur a terme aquesta operació sense un context (premsa, revista, conferència, etc.).</message>
+	<message key="user.authorization.loginRequired">Inici de sessió obligatori.</message>
+	<message key="user.authorization.privateOperation">L’operació a la qual heu intentat accedir és privada o no existeix.</message>
+	<message key="user.authorization.restrictedSiteAccess">Teniu l'accés denegat. Actualment, l'accés a aquest lloc web està restringit.</message>
+	<message key="user.authorization.roleBasedAccessDenied">El rol actual no té accés a aquesta operació.</message>
+	<message key="user.authorization.userGroupRequired">Cal que configureu un grup d’usuari/ària vàlid per accedir a l’operació.</message>
+	<message key="user.authorization.managerRequired">Un usuari/ària amb el rol d'administrador/a (p. ex., editor/a de producció) ha d'estar assignat a la fase abans de continuar.</message>
+	<message key="user.biography">Resum biogràfic</message>
+	<message key="user.changeMyPassword">Canvia la meva contrasenya</message>
+	<message key="user.changePassword">Canvia la contrasenya</message>
+	<message key="user.dateLastLogin">Darrer inici de sessió</message>
+	<message key="user.dateRegistered">Data de registre</message>
+	<message key="user.editMyProfile">Edita el meu perfil</message>
+	<message key="user.email">Adreça electrònica</message>
+	<message key="user.feminine">Dona</message>
+	<message key="user.firstName">Nom</message>
+	<message key="user.gender">Sexe</message>
+	<message key="user.initialsExample">Pere Martí Valls = PMV</message>
+	<message key="user.initials">Inicials</message>
+	<message key="user.interests">Interessos de revisió</message>
+	<message key="user.interests.description">(Separeu els interessos mitjançant la tecla de retorn o la tecla de coma)</message>
+	<message key="user.gossip">Notes privades</message>
+	<message key="user.group">Grup d'usuaris/àries</message>
+	<message key="user.lastName">Cognoms</message>
+	<message key="user.login.activated">Gràcies per activar el compte. Ara ja podeu iniciar la sessió amb les dades que heu indicat en crear el compte.</message>
+	<message key="user.profile.form.profileImageInvalid">El format de la imatge del perfil no és vàlid o la imatge és massa gran. Els formats admesos són .gif, .jpg i .png. i la imatge no ha de superar els 150x150 píxels.</message>
+	<message key="user.login.accountDisabledWithReason">El vostre compte s'ha inhabilitat pel motiu següent: {$reason}</message>
+	<message key="user.login.accountDisabled">El vostre compte s'ha inhabilitat. Per obtenir més informació, poseu-vos en contacte amb l'administrador/a.</message>
+	<message key="user.login.accountNotValidated">La vostra adreça electrònica no s'ha validat. Comproveu el correu electrònic i seguiu les instruccions. Si no heu rebut cap missatge de correu electrònic, poseu-vos en contacte amb l'administrador/a del lloc web per obtenir ajuda.</message>
+	<message key="user.login.activate">Activa el compte</message>
+	<message key="user.login.changePasswordInstructions"><![CDATA[Heu de triar una nova contrasenya abans d'iniciar sessió.<br /><br />Introduïu el vostre nom d'usuari i les vostres contrasenyes nova i antiga a continuació per canviar la contrasenya del vostre compte.]]></message>
+	<message key="user.login.forgotPassword">Heu oblidat la contrasenya?</message>
+	<message key="user.login.loginError">El nom d'usuari/ària o la contrasenya són no vàlids. Torneu-ho a intentar.</message>
+	<message key="user.login">Inici de la sessió</message>
+	<message key="user.login.lostPassword.confirmationSent">S'ha enviat un missatge de confirmació a la vostra adreça electrònica. Seguiu les instruccions del correu electrònic per restablir la contrasenya.</message>
+	<message key="user.login.lostPassword.invalidHash">L'enllaç que heu seleccionat ha vençut o bé no és vàlid. Intenteu restablir la contrasenya de nou.</message>
+	<message key="user.login.lostPassword.invalidUser">No existeix cap usuari/usuària amb l’adreça electrònica especificada.</message>
+	<message key="user.login.lostPassword.passwordSent">S'ha enviat una nova contrasenya a la vostra adreça electrònica. Ja podeu iniciar la sessió amb aquesta contrasenya.</message>
+	<message key="user.login.registeredEmail">Adreça electrònica de l’usuari/usuària registrat</message>
+	<message key="user.login.resetPassword">Reinicieu la contrasenya</message>
+	<message key="user.logOut">Surt de la sessió</message>
+	<message key="user.logOutAs">Surt de la sessió com a</message>
+	<message key="user.hello">Hola, </message>
+	<message key="user.mailingAddress">Adreça postal</message>
+	<message key="user.masculine">Home</message>
+	<message key="user.middleName">Segon nom</message>
+	<message key="user.myAccount">El meu compte</message>
+	<message key="user.name">Nom</message>
+	<message key="user.other">Altres</message>
+	<message key="user.password">Contrasenya</message>
+	<message key="user.repeatPassword">Repetiu la contrasenya</message>
+	<message key="user.phone">Telèfon</message>
+	<message key="user.profile.changePasswordInstructions">Introduïu la contrasenya actual i la contrasenya nova per a canviar la contrasenya del vostre compte.</message>
+	<message key="user.profile.editProfile">Edició del perfil</message>
+	<message key="user.profile.form.countryRequired">Cal que introduïu un país.</message>
+	<message key="user.profile.form.emailRequired">Heu d’introduir una adreça electrònica vàlida.</message>
+	<message key="user.profile.form.affiliationRequired">Cal que introduïu una institució.</message>
+	<message key="user.profile.form.firstNameRequired">Heu d’introduir un nom.</message>
+	<message key="user.profile.form.lastNameRequired">Heu d’introduir un cognom.</message>
+	<message key="user.profile.form.mailingAddressRequired">Cal que introduïu un correu electrònic vàlid.</message>
+	<message key="user.profile.form.newPasswordRequired">Heu d’introduir la contrasenya nova.</message>
+	<message key="user.profile.form.oldPasswordInvalid">La contrasenya actual que heu introduït és incorrecta.</message>
+	<message key="user.profile.form.openAccessNotifications">Notificacions per correu electrònic de l’accés lliure per a un número</message>
+	<message key="user.profile.form.passwordRequired">Heu d’introduir una contrasenya.</message>
+	<message key="user.profile.form.passwordSameAsOld">La vostra contrasenya nova coincideix amb l'anterior.</message>
+	<message key="user.profile.form.profileImage">Imatge del perfil</message>
+	<message key="user.profile.form.publishedNotifications">Notificacions per correu electrònic de la publicació d’un número nou</message>
+	<message key="user.profile.form.urlInvalid">L'URL especificat no és vàlid. Comproveu l'enllaç URL i torneu-ho a intentar. (Consell: proveu d'afegir «http://» al principi de l'URL).</message>
+	<message key="user.profile.form.usergroupRequired">Cal que introduïu un grup d'usuaris/àries.</message>
+	<message key="user.profile.form.usernameRequired">Heu d’introduir un nom d’usuari.</message>
+	<message key="user.profile.leavePasswordBlank">No empleneu els camps de contrasenya si voleu mantenir la contrasenya actual.</message>
+	<message key="user.profile.newPassword">Contrasenya nova</message>
+	<message key="user.profile.oldPassword">Contrasenya actual</message>
+	<message key="user.profile">Perfil</message>
+	<message key="user.profile.publicProfile">Perfil d’usuari</message>
+	<message key="user.profile.repeatNewPassword">Repetiu la contrasenya nova</message>
+	<!-- Login -->
+	<message key="user.login.registerNewAccount">Encara no sou usuari? Registreu-vos a través d'aquest lloc.</message>
+	<message key="user.login.resetPasswordInstructions"><![CDATA[Per motius de seguretat, aquest sistema envia un missatge de restabliment de contrasenya als usuaris registrats, en lloc de tornar-ho a intentar amb la contrasenya actual.<br /><br />Introduïu la vostra adreça electrònica al camp següent per restablir la vostra contrasenya. S'enviarà un missatge de confirmació a la vostra adreça electrònica.]]></message>
+
+	<message key="user.register.form.emailExists">Ja hi ha un altre usuari/usuària que utilitza l’adreça electrònica seleccionada.</message>
+	<message key="user.register.form.passwordsDoNotMatch">Les contrasenyes no coincideixen.</message>
+	<message key="user.register.form.emailsDoNotMatch">Els camps de correu electrònic no coincideixen.</message>
+	<message key="user.register.form.usernameExists">Ja hi ha un altre usuari/usuària que utilitza el nom d’usuari seleccionat.</message>
+	<message key="user.register.passwordLengthRestriction">La contrasenya ha de tenir {$length} caràcters com a mínim.</message>
+	<message key="user.register.registerAs">Registra’m com a</message>
+	<message key="user.register">Registre</message>
+	<message key="user.register.usernameRestriction">El nom d’usuari només pot contenir lletres minúscules, nombres, guionets i ratlles baixes.</message>
+	<message key="user.role.author">Autor/a</message>
+	<message key="user.role.author_s">Autors/ores</message>
+	<message key="user.role.authors">Autors/ores</message>
+	<message key="user.role.editor">Editor/a</message>
+	<message key="user.role.editors">Editors/ores</message>
+	<message key="user.role.reader">Lector/a</message>
+	<message key="user.role.readers">Lectors/es</message>
+	<message key="user.role.reviewer">Revisor/a</message>
+	<message key="user.role.reviewers">Revisors/es</message>
+	<message key="user.role.siteAdmin">Administrador/a del lloc web</message>
+	<message key="user.role.siteAdmins">Administradors/es de llocs web</message>
+	<message key="user.role.copyeditor">Corrector/a d’originals</message>
+	<message key="user.role.copyeditors">Correctors/ores d’originals</message>
+	<message key="user.role.proofreader">Corrector/a de proves</message>
+	<message key="user.role.proofreaders">Correctors/ores de proves</message>
+	<message key="user.role.layoutEditor">Maquetista</message>
+	<message key="user.role.layoutEditors">Maquetistes</message>
+	<message key="user.roles">Rols</message>
+	<message key="user.salutation">Tractament</message>
+	<message key="user.sendPassword">Confirmació</message>
+	<message key="user.sendPassword.description">Envia’m una confirmació per correu electrònic amb el nom d’usuari i la contrasenya.</message>
+	<message key="user.signature">Signatura</message>
+	<message key="user.suffix">Grau jeràrquic</message>
+	<message key="user.title">Títol</message>
+	<message key="user.url">URL</message>
+	<message key="user.userHome">Pàgina inicial de l’usuari/usuària</message>
+	<message key="user.username">Nom d’usuari</message>
+	<message key="user.workingLanguages">Llengües de treball</message>
+	<message key="user.register.completeForm">Empleneu aquest formulari per registrar-vos en aquesta revista.</message>
+</locale>

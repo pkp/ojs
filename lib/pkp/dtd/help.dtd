@@ -1,0 +1,25 @@
+<!--
+  * dtd/help.dtd
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * DTD for help localization definitions.
+  *
+  -->
+
+<!--
+  * help - container for help topic keys with their associated help topic id referencing its xml file
+  -->
+<!ELEMENT help (topic*)>
+
+<!--
+  * topic - mapping of the help key and its id
+  * key: the reference key used to retrieve the topic id, in the form "(dir)*.page.topic"
+  * id:  the numerical id referencing the xml help file
+  -->
+<!ELEMENT topic EMPTY>
+	<!ATTLIST topic
+		key CDATA #REQUIRED
+		id CDATA #REQUIRED>

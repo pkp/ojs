@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  * locales.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Locales registry file.
+  *
+  * This file lists all locales available to the system.
+  * (i.e., existing under the locales/ directory)
+  -->
+
+<!DOCTYPE locales SYSTEM "../../dtd/locales.dtd">
+
+<locales>
+	<locale key="en_US" name="English" iso639-2b="eng" iso639-3="eng" />
+	<locale key="pt_BR" complete="false" name="Portuguese (Brazil)" iso639-2b="por" iso639-3="por" stylesheet="pt.css" />
+	<locale key="pt_PT" complete="false" name="Portuguese (Portugal)" iso639-2b="por" iso639-3="por" />
+	<locale key="de_DE" complete="false" name="German" iso639-2b="ger"  iso639-3="deu" />
+</locales>

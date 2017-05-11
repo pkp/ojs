@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../dtd/locale.dtd">
+
+<!--
+  * plugins/citationLookup/isbndb/locale/de_DE/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization strings for the de_DE (Deutsch (Deutschland)) locale.
+  * Please contact Marco Tullney, marco.tullney@fu-berlin.de, with any questions regarding this translation.
+  -->
+
+<locale name="de_DE" full_name="Deutsch (Deutschland)">
+	<!-- plug-in -->
+	<message key="plugins.citationLookup.isbndb.displayName">ISBNdb-Datenbankverbindung</message>
+	<message key="plugins.citationLookup.isbndb.description">Verbindet zu der bibliografischen ISBNdb-Datenbank.</message>
+
+	<!-- ISBN lookup and extraction services -->
+	<message key="plugins.citationLookup.isbndbExtraction.displayName">ISBN-Extraktionsdienst</message>
+	<message key="plugins.citationLookup.isbndbExtraction.description">Finden Sie eine ISBN zu einer gegebenen Zitation in NLM 3.0.</message>
+	<message key="plugins.citationLookup.isbndbLookup.displayName">ISBN-Nachschlagedienst</message>
+	<message key="plugins.citationLookup.isbndbLookup.description">Eine vollständige NLM 3.0-Zitation zu einer gegebenen ISBN nachschlagen.</message>
+</locale>

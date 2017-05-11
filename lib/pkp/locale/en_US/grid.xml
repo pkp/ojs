@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/en_US/grid.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="en_US" full_name="U.S. English">
+	<!-- Common -->
+	<message key="grid.noItems">No Items</message>
+	<message key="grid.settings">Settings</message>
+	<message key="grid.noAuditors">No Auditors</message>
+	<message key="grid.remotelyHostedItem">This item is remotely hosted.</message>
+
+	<message key="grid.action.manageAccess">Manage Access</message>
+	<message key="grid.action.sort">Sort</message>
+	<message key="grid.action.addItem">Add Item</message>
+	<message key="grid.action.addNote">Add Note</message>
+	<message key="grid.action.addQuery">Add discussion</message>
+	<message key="grid.action.readQuery">Read discussion</message>
+	<message key="grid.action.deleteQuery">Delete discussion</message>
+	<message key="grid.action.updateQuery">Update discussion</message>
+	<message key="grid.action.addUser">Add User</message>
+	<message key="grid.action.unassignReviewer">Unassign this reviewer</message>
+	<message key="grid.action.approveCopyedit">Approve this copyedit file for sending it to the next stage</message>
+	<message key="grid.action.reload">Reload</message>
+	<message key="grid.action.delete">Delete</message>
+	<message key="grid.action.deleteFile">Delete File</message>
+	<message key="grid.action.deleteMedia">Delete Media</message>
+	<message key="grid.action.editMedia">Edit Media</message>
+	<message key="grid.action.editSection">Edit Section</message>
+	<message key="grid.action.export">Export</message>
+	<message key="grid.action.deleteSection">Delete Section</message>
+	<message key="grid.action.editorialHistory">Editorial History</message>
+	<message key="grid.action.remove">Remove</message>
+	<message key="grid.action.edit">Edit</message>
+	<message key="grid.action.approve">Approve</message>
+	<message key="grid.action.disapprove">Disapprove</message>
+	<message key="grid.action.setApproval">Set Approval</message>
+	<message key="grid.action.moreInformation">More Information</message>
+	<message key="grid.action.restoreDefaults">Restore Defaults</message>
+	<message key="grid.action.restoreDefaults.confirm">Are you sure you wish to restore the defaults?</message>
+	<message key="grid.action.addAuthor">Add Author</message>
+	<message key="grid.action.editAuthor">Edit Author</message>
+	<message key="grid.action.deleteAuthor">Delete Author</message>
+	<message key="grid.action.addAuditor">Add an Auditor</message>
+	<message key="grid.action.upgrade">Upgrade</message>
+	<message key="grid.action.order">Order</message>
+	<message key="grid.action.cancelOrdering">Cancel ordering</message>
+	<message key="grid.action.extendAll">Extend all</message>
+	<message key="grid.action.collapse">Collapse</message>
+	<message key="grid.action.collapseAll">Collapse all</message>
+	<message key="grid.action.wizard">Settings wizard</message>
+	<message key="grid.action.moveItem">Move Item</message>
+	<message key="grid.action.downloadAll">Download all files as an archive</message>
+	<message key="grid.action.readReview">Read this review</message>
+	<message key="grid.action.email">Send email</message>
+	<message key="grid.action.addReviewer">Add a reviewer</message>
+	<message key="grid.action.addFile">Add a file</message>
+	<message key="grid.action.editFile">Edit a file</message>
+	<message key="grid.action.selectFiles">Select files to manage</message>
+	<message key="grid.action.requestRevisions">Request revisions for this submission</message>
+	<message key="grid.action.accept">Accept this submission</message>
+	<message key="grid.action.decline">Decline this Submission</message>
+	<message key="grid.action.internalReview">Send this submission to internal review</message>
+	<message key="grid.action.externalReview">Send this submission to external review</message>
+	<message key="grid.action.sendToProduction">Send this submission to production</message>
+	<message key="grid.action.settings">Settings</message>
+	<message key="grid.action.importexport">Import or export content or site data</message>
+	<message key="grid.action.restoreDefaults">Restore defaults</message>
+	<message key="grid.action.orderItems">Enable ordering mode</message>
+	<message key="grid.action.editSubmissionChecklist">Edit this checklist item</message>
+	<message key="grid.action.deleteSubmissionChecklist">Delete this checklist item</message>
+	<message key="grid.action.resetAll">Reset all items to default values</message>
+	<message key="grid.action.addPreparedEmail">Add a new email template</message>
+	<message key="grid.action.editPreparedEmail">Edit this email template</message>
+	<message key="grid.action.disableEmail">Disable this email template</message>
+	<message key="grid.action.resetEmail">Reset this email template to the default</message>
+	<message key="grid.action.expandAll">Expand All</message>
+	<message key="grid.action.requestAccount">Add a participant</message>
+	<message key="grid.action.expand">Expand</message>
+	<message key="grid.action.notify">Notify this user</message>
+	<message key="grid.action.addUserGroup">Add a new User Group</message>
+	<message key="grid.action.editUserGroup">Edit this user group</message>
+	<message key="grid.action.disable">Disable</message>
+	<message key="grid.action.details">View this item</message>
+	<message key="grid.action.enrolExisting">Enrol an existing user as a reviewer</message>
+	<message key="grid.action.selectCreate">Create a new reviewer</message>
+	<message key="grid.action.search">Search</message>
+	<message key="grid.action.advancedSearch">Advanced Search</message>
+	<message key="grid.action.viewLibrary">View Document Library</message>
+	<message key="grid.action.viewMetadata">View the metadata for this submission</message>
+	<message key="grid.action.sendReminder">Send a task reminder to this user</message>
+	<message key="grid.action.newRound">Create a new round</message>
+	<message key="grid.action.viewReviewGuidelines">View the review guidelines</message>
+	<message key="grid.action.viewCompetingInterestGuidelines">View the competing interests guidelines policy</message>
+	<message key="grid.action.thankReviewer">Send a thank you message to this reviewer</message>
+	<message key="grid.action.uploadFile">Upload a file</message>
+	<message key="grid.action.addAnnouncementType">Add Announcement Type</message>
+	<message key="grid.action.addAnnouncement">Add Announcement</message>
+	<message key="grid.action.mergeUser">Merge user</message>
+	<message key="grid.action.unassignUser">Unassign User</message>
+	<message key="grid.action.history">View History</message>
+	<message key="grid.action.unconsiderReview">This review is complete, but you may unconsider it</message>
+	<message key="grid.action.enable">Enable</message>
+	<message key="grid.action.bookInfo">Submission Info</message>
+	<message key="grid.action.logInAs">Login As</message>
+	<message key="grid.action.exportAllUsers">Export All Users</message>
+	<message key="grid.users.confirmExportAllUsers">Are you sure you wish to export all users?</message>
+	<message key="grid.action.activate">Activate</message>
+	<message key="grid.action.deactivate">Deactivate</message>
+	<message key="grid.action.copy">Copy</message>
+	<message key="grid.action.preview">Preview</message>
+	<message key="grid.action.install">Install</message>
+	<message key="grid.action.moreItems">Load more</message>
+
+	<!--  grid task status -->
+	<message key="grid.task.status.completed">This task is completed</message>
+	<message key="grid.task.status.new">Checked when considered</message>
+	<message key="grid.task.status.uploaded">The column title indicates who uploaded this file</message>
+	<message key="grid.task.status.unfinished">Task unfinished</message>
+	<message key="grid.task.status.reviewReady">This review is ready. Click the note icon to the left to read it.</message>
+
+	<!-- Common Grid Column Titles -->
+	<message key="grid.columns.actions">Actions</message>
+	<message key="grid.columns.institution">Institution</message>
+	<message key="grid.columns.url">URL</message>
+	<message key="grid.columns.auditor">Auditor</message>
+	<message key="grid.columns.locale">Locale</message>
+
+	<!-- Sponsors Grid -->
+	<message key="grid.sponsor.title">Sponsoring Organizations</message>
+	<message key="grid.action.addSponsor">Add Sponsor</message>
+	<message key="grid.action.deleteSponsor">Delete Sponsor</message>
+	<message key="grid.action.editSponsor">Edit Sponsor</message>
+
+	<!-- Series Grid -->
+	<message key="grid.action.addSeries">Add Series</message>
+	<message key="grid.action.editSeries">Edit Series</message>
+	<message key="grid.action.deleteSeries">Delete Series</message>
+
+	<!-- Categories Grid -->
+	<message key="grid.action.addCategory">Add Category</message>
+	<message key="grid.action.editCategory">Edit Category</message>
+	<message key="grid.action.deleteCategory">Delete Category</message>
+
+	<!-- Contributor Grid -->
+	<message key="grid.contributor.title">Sources of Support</message>
+	<message key="grid.action.addContributor">Add Contributor</message>
+	<message key="grid.action.editContributor">Edit Contributor</message>
+	<message key="grid.action.deleteContributor">Delete Contributor</message>
+
+	<!-- Review Forms Grid -->
+	<message key="grid.reviewForm.title">Review Forms</message>
+
+	<!-- Review Form Element Reponse Items Grid -->
+	<message key="grid.reviewFormElement.responseItems">Response Options</message>
+
+	<!-- Files -->
+	<message key="grid.noFiles">No Files</message>
+
+	<!-- Library Files -->
+	<message key="grid.libraryFiles.column.files">Files</message>
+	<message key="grid.libraryFiles.submission.title">Submission Library</message>
+	<message key="grid.libraryFiles.editorial.title">Editorial Library</message>
+	<message key="grid.libraryFiles.review.title">Review Library</message>
+	<message key="grid.libraryFiles.production.title">Production Library</message>
+	<message key="grid.libraryFiles.productionTemplate.title">Production Template Library</message>
+
+	<!-- SubmissionChecklist -->
+	<message key="grid.submissionChecklist.title">Submission Checklist</message>
+	<message key="grid.submissionChecklist.column.checklistItem">Checklist Item</message>
+
+	<!-- Submission Contributors -->
+	<message key="author.users.contributor.name">Name</message>
+	<message key="author.users.contributor.email">E-mail</message>
+	<message key="author.users.contributor.role">Role</message>
+	<message key="author.users.contributor.principalContact">Primary Contact</message>
+	<message key="author.users.contributor.includeInBrowse">In Browse Lists</message>
+
+	<!-- Roles -->
+	<message key="grid.roles.currentRoles">Current Roles</message>
+	<message key="grid.roles.add">Create New Role</message>
+	<message key="grid.roles.stageAssignment">Stage Assignment</message>
+
+	<!-- Users -->
+	<message key="grid.user.currentUsers">Current Users</message>
+	<message key="grid.user.currentEnrollment">Current Enrollment</message>
+	<message key="grid.user.allRoles">All Roles</message>
+	<message key="grid.user.allPermissionLevels">All Permission Levels</message>
+	<message key="grid.user.add">Add User</message>
+	<message key="grid.user.enroll">Enroll User</message>
+	<message key="grid.user.edit">Edit User</message>
+	<message key="grid.user.email">Email</message>
+	<message key="grid.user.enable">Enable</message>
+	<message key="grid.user.disable">Disable</message>
+	<message key="grid.user.disableReason">Reason for disabling user</message>
+	<message key="grid.user.enableReason">Reason for enabling user</message>
+	<message key="grid.user.error">An error was encountered administrating this user. Please try again.</message>
+	<message key="grid.user.errorEmail">An error was encountered sending this email. Please ensure that your email server configuration is working and/or contact your system administrator.</message>
+	<message key="grid.user.cannotAdminister">You do not have sufficient permissions to administer this user. In order to administer a user, you must either be site administrator, or administer all contexts that this user is enrolled in.</message>
+	<message key="grid.user.authSource">Authentication source</message>
+	<message key="grid.user.mustProvideName">Please provide at least a last name for the user first.</message>
+	<message key="grid.user.generatePassword">Generate Password</message>
+	<message key="grid.user.generatePasswordDescription">Generate random password for this user.</message>
+	<message key="grid.user.notifyUser">Notify User</message>
+	<message key="grid.user.notifyUserDescription">Send user a welcome email.</message>
+	<message key="grid.user.mustChangePassword">Change Password</message>
+	<message key="grid.user.mustChangePasswordDescription">User must change password on next log in.</message>
+	<message key="grid.user.mustChangePasswordDescriptionOld">Require the user to change their password the next time they log in.</message>
+	<message key="grid.user.moreDetails">More User Details</message>
+	<message key="grid.user.lessDetails">Less User Details</message>
+	<message key="grid.user.userDetails">User Details</message>
+	<message key="grid.user.userRoles">User Roles</message>
+	<message key="grid.user.userNoRoles">This user does not have any roles.</message>
+	<message key="grid.user.step1">Step #1: Fill in User Details</message>
+	<message key="grid.user.step2">Step #2: Add User Roles to {$userFullName}</message>
+	<message key="grid.user.addRoles">Add Roles</message>
+	<message key="grid.user.addRole">Add Role</message>
+	<message key="grid.user.selectUser">Select User</message>
+	<message key="grid.user.pleaseSelectUser">Please select a user</message>
+	<message key="grid.user.confirmLogInAs">Log in as this user? All actions you perform will be attributed to this user.</message>
+	<message key="grid.user.mergeUsers">Merge Users</message>
+	<message key="grid.user.mergeUsers.mergeUser">Merge User</message>
+	<message key="grid.user.mergeUsers.mergeIntoUser">Merge into this User</message>
+	<message key="grid.user.mergeUsers.into.description">Now, you must select a user to whom to attribute the previous user's authorships, editing assignments, etc.</message>
+	<message key="grid.user.mergeUsers.from.description">Select a user to merge into another user account (e.g., when someone has two user accounts). The account selected first will be deleted and its submissions, assignments, etc. will be attributed to the second account.</message>
+	<message key="grid.user.mergeUsers.allUsers">All Enrolled Users</message>
+	<message key="grid.user.mergeUsers.mergeUserSelect.confirm">Are you sure you wish to merge this user with another one?  You will choose the next user on the following screen.</message>
+	<message key="grid.user.mergeUsers.confirm">Are you sure you wish to merge the account with the username "{$oldUsername}" into the account with the username "{$newUsername}"? The account with the username "{$oldUsername}" will not exist afterwards. This action is not reversible.</message>
+	<message key="grid.user.mergeUsers.noneEnrolled">No users exist with that role.</message>
+
+	<!-- Prepared emails -->
+	<message key="grid.preparedEmails.title">Prepared Email Templates</message>
+	<message key="grid.preparedEmails.currentList">Current List</message>
+
+	<!-- Plugins -->
+	<message key="grid.plugin.allCategories">All Categories</message>
+	<message key="grid.plugin.disable">Are you sure you want to disable this plugin?</message>
+
+	<message key="grid.action.fileUnconsider">Proofing corrections made. You may unconsider this task</message>
+
+	<!-- Artwork Files Grid -->
+	<message key="grid.artworkFile.caption">Caption</message>
+	<message key="grid.artworkFile.credit">Credit</message>
+	<message key="grid.artworkFile.copyrightOwner">Copyright Owner</message>
+	<message key="grid.artworkFile.copyrightContact">Contact Info (if not author/publisher)</message>
+	<message key="grid.artworkFile.permissionTerms">Permission Terms</message>
+	<message key="grid.artworkFile.placement">Placement in submission</message>
+
+	<!-- User Group Grid -->
+	<message key="grid.userGroup.assignStage">Assign stage</message>
+	<message key="grid.userGroup.unassignStage">Unassign stage</message>
+	<message key="grid.userGroup.allStages">All Workflow Stages</message>
+	<message key="grid.userGroup.filter.listRoles">List roles assigned to</message>
+	<message key="grid.userGroup.filter.permissionLevel">With permission level set to</message>
+	<message key="grid.userGroup.cantRemoveDefaultUserGroup">The role {$userGroupName} is a default one and can't be removed.</message>
+	<message key="grid.userGroup.cantRemoveUserGroup">Can't remove {$userGroupName} role. Currently {$usersCount} user(s) is/are assigned to it.</message>
+	<message key="grid.userGroup.removed">{$userGroupName} role removed.</message>
+	<message key="grid.userGroup.assignedStage">{$userGroupName} role assigned to {$stageName} stage.</message>
+	<message key="grid.userGroup.unassignedStage">{$userGroupName} role unassigned from {$stageName} stage.</message>
+
+	<!-- Submission list grids -->
+	<message key="grid.submission.itemTitle">Author; Title</message>
+	<message key="grid.submission.active.selectOrphaned">Include incomplete submissions not submitted by an author.</message>
+</locale>

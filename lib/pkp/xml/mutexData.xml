@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../dtd/xmlData.dtd">
+
+<!--
+  * mutexData.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Mutex help table data.
+  -->
+<data>
+	<sql>
+		<query>DELETE FROM mutex</query>
+	</sql> 
+	<table name="mutex">
+		<row>
+			<field name="i">0</field>
+		</row>
+		<row>
+			<field name="i">1</field>
+		</row>
+		<row>
+			<field name="i">2</field>
+		</row>
+		<row>
+			<field name="i">3</field>
+		</row>
+		<row>
+			<field name="i">4</field>
+		</row>
+		<row>
+			<field name="i">5</field>
+		</row>
+		<row>
+			<field name="i">6</field>
+		</row>
+		<row>
+			<field name="i">7</field>
+		</row>
+		<row>
+			<field name="i">8</field>
+		</row>
+		<row>
+			<field name="i">9</field>
+		</row>
+	</table>
+</data>

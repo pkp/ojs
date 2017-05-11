@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../dtd/locale.dtd">
+
+<!--
+  * plugins/metadata/mods34/locale/ar_IQ/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="ar_IQ" full_name="العربية">
+	<!-- plug-in -->
+	<message key="plugins.metadata.mods34.displayName">البيانات الوصفية MODS 3.4</message>
+	<message key="plugins.metadata.mods34.description">يعاون مخططات MODS 3.4 ومهايئات تطبيقاتها.</message>
+
+	<!-- MODS 3.4 XML output -->
+	<message key="plugins.metadata.mods34.mods34XmlOutput.displayName">مخرجات MODS 3.4</message>
+	<message key="plugins.metadata.mods34.mods34XmlOutput.description">يحول وصف البيانات الوصفية MODS 3.4 إلى رزمتها بصيغة XML.</message>
+</locale>

@@ -1,0 +1,159 @@
+/**
+ * @defgroup pkp_modal
+ */
+
+/**
+ * @file styles/controllers/modal.less
+ *
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @ingroup pkp_modal
+ *
+ * @brief Styles for pkp_modal
+ */
+
+// Hides the outer scrollbar when a modal is visible
+// Assigned to the <body> when a modal is visible
+.modal_is_visible {
+	overflow: hidden !important;
+}
+
+// Screen behind modal
+.pkp_modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.8);
+	z-index: 1000;
+	overflow-y: auto;
+	cursor: pointer;
+	visibility: hidden;
+	opacity: 0;
+	-webkit-transition: opacity 0.3s, visibility 0.3s;
+	-moz-transition: opacity 0.3s, visibility 0.3s;
+	transition: opacity 0.3s, visibility 0.3s;
+
+	&.is_visible {
+		visibility: visible;
+		opacity: 1;
+	}
+}
+
+// Modal
+.pkp_modal_panel {
+	position: relative;
+	width: 90%;
+	max-width: 50em;
+	background: @lift;
+	margin: @base auto;
+	cursor: auto;
+	border-radius: 5px;
+	.transform(translateY(-30px));
+	-webkit-transition-property: -webkit-transform;
+	-moz-transition-property: -moz-transform;
+	transition-property: transform;
+	-webkit-transition-duration: 0.3s;
+	-moz-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+
+}
+
+// Modal when visible
+.is_visible .pkp_modal_panel {
+	-webkit-transform: translateY(0);
+	-moz-transform: translateY(0);
+	-ms-transform: translateY(0);
+	-o-transform: translateY(0);
+	transform: translateY(0);
+}
+
+.pkp_modal_panel {
+
+	// Height and width of the close button (matches height of header)
+	@pkp_modal_panel_close_box_len: @double * 2;
+
+	> .header,
+	> .content {
+		padding: @base;
+	}
+
+	> .header {
+		background: @primary;
+		border-top-left-radius: @radius;
+		border-top-right-radius: @radius;
+		font-weight: @bold;
+		line-height: @double;
+		color: @lift;
+		padding-right: @pkp_modal_panel_close_box_len;
+	}
+
+	> .close {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: @pkp_modal_panel_close_box_len;
+		height: @pkp_modal_panel_close_box_len; // matches height of .header
+		line-height: @pkp_modal_panel_close_box_len;
+		border-top-right-radius: @radius;
+		color: rgba(255,255,255,0.7);
+		color: @bg;
+		text-align: center;
+
+		&:before {
+			&:extend(.fa);
+			content: @fa-var-times;
+			font-size: @double;
+			line-height: @pkp_modal_panel_close_box_len;
+		}
+
+		&:hover,
+		&:focus {
+			background: @bg;
+			color: @offset;
+		}
+	}
+
+	> .footer {
+		padding: @base;
+		background: @bg;
+		border-bottom-left-radius: @radius;
+		border-bottom-right-radius: @radius;
+
+		.ok {
+			&:extend(.pkp_button all);
+		}
+
+		.cancel {
+			&:extend(.pkp_button_link_offset all);
+		}
+	}
+}
+
+// Confirmation modals
+.pkp_modal_confirmation {
+	max-width: 30em;
+}
+
+// Tabs
+.pkp_modal .ui-tabs-nav {
+	margin: -@base -@base 0;
+	padding: @base @base 0;
+}
+
+.pkp_modal .ui-tabs-panel {
+	padding: @double 0 0;
+	border: none;
+}
+
+.modal_buttons {
+	&:extend(.pkp_form .form_buttons all);
+	&:extend(.pkp_modal .pkp_form .form_buttons all);
+
+	.pkp_spinner {
+		&:extend(.pkp_form .pkp_spinner);
+	}
+}

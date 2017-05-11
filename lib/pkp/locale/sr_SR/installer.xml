@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/sr_SR/installer.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the sr_SR (Cрпски) locale.
+  *
+  -->
+
+<locale name="sr_SR" full_name="Cрпски">
+	<message key="installer.additionalLocales">Dodatne lokalizacije</message>
+	<message key="installer.administratorAccount">Administratorski nalog</message>
+	<message key="installer.administratorAccountInstructions">Ovaj korisnički nalog će postati administrator sajta i imati potpuni pristup sistemu. Dodatni korisnički nalozi mogu biti kreirani nakon instalacije.</message>
+	<message key="installer.checkNo"><![CDATA[<span class="formError">NE</span>]]></message>
+	<message key="installer.checkYes">Da</message>
+	<message key="installer.clientCharset">Skup znakova klijenta</message>
+	<message key="installer.clientCharsetInstructions">Enkoding koji se koristi za slanje i primanje podataka iz browser-a.</message>
+	<message key="installer.configFileError"><![CDATA[Konfiguracioni fajl <tt>config.inc.php</tt> ne postoji ili je nečitljiv.]]></message>
+	<message key="installer.connectionCharset">Skup znakova konekcije</message>
+	<message key="installer.contentsOfConfigFile">Sadržaj konfiguracionog fajla</message>
+	<message key="installer.createDatabase">Kreiraj novu bazu podataka</message>
+	<message key="installer.createDatabaseInstructions">Da biste koristili ovu opciju, sistem vaše baze podataka mora podržavati kreiranje udaljene baze podataka i vaš koristički nalog mora imati adekvatne dozvole za kreiranje nove baze podataka. Ukoliko instalacija nije uspela sa ovom odabranom mogućnošću, ručno kreirajte bazu podataka na vašem serveru i ponovno pokrenite instalacioni program bez ove opcije.</message>
+	<message key="installer.databaseCharset">Skup znakova baze podataka</message>
+	<message key="installer.databaseCharsetInstructions"><![CDATA[Enkoding koji se koristi za podatke sačuvane u bazi podataka.]]></message>
+	<message key="installer.databaseDriver">Drajveri baze podataka</message>
+	<message key="installer.databaseDriverInstructions"><![CDATA[<strong>Drajveri baze podataka izlistani u uglastim zagradama nemaju potrebnu PHP ekstenziju i instalacija verovatno neće uspešno završiti ukoliko su odabrani.</strong><br />Bilo koji nepodržani dole izlistani drajveri baza podataka su izlistani isključivo za akademske svrhe i vjerovatno neće raditi.]]></message>
+	<message key="installer.databaseHost">Host</message>
+	<message key="installer.databaseHostInstructions">Ostavite ime glavnog računara prazno da bi se spojili koristeći spojnice domena umesto preko TCP/IP-a. Ovo nije neophodno sa MySQL-om, koji će automatski koristiti spojnice ako je upisano "localhost", ali je obavezno sa nekim drugim serverima baza podataka kao što je PostgreSQL.</message>
+	<message key="installer.databaseName">Ime baze podataka</message>
+	<message key="installer.databasePassword">Lozinka</message>
+	<message key="installer.databaseSettings">Podešavanje baze podataka</message>
+	<message key="installer.databaseUsername">Korisničko ime</message>
+	<message key="installer.encryption">Algoritam enkripcije lozinke</message>
+	<message key="installer.filesDir">Folder za dodate fajlove</message>
+	<message key="installer.fileSettings">Podešavanje fajlova</message>
+	<message key="installer.form.clientCharsetRequired">Klijentski skup znakova mora biti odabran.</message>
+	<message key="installer.form.databaseDriverRequired">Drajver baze podataka mora biti odabran.</message>
+	<message key="installer.form.databaseNameRequired">Ime baze podataka je obavezno.</message>
+	<message key="installer.form.emailRequired">Ispravna imejl adresa za administratorski nalog je obavezna.</message>
+	<message key="installer.form.encryptionRequired">Algoritam koji se koristi za šifriranje korisničkih lozinki mora biti odabran.</message>
+	<message key="installer.form.filesDirRequired">Folder koji će se koristiti za čuvanje poslanih fajlova je obavezan.</message>
+	<message key="installer.form.localeRequired">Barem jedna lokalizacija mora biti odabrana.</message>
+	<message key="installer.form.passwordRequired">Lozinka za administratorski nalog je obavezna.</message>
+	<message key="installer.form.passwordsDoNotMatch">Administratorske lozinke se ne podudaraju.</message>
+	<message key="installer.form.separateMultiple">Razdvojite višestruke vriednosti zarezima.</message>
+	<message key="installer.form.usernameAlphaNumeric">Administratorsko korisničko ime može da sadrži samo slovne i brojčane znake, podvlačenja i crtice, a mora početi i završiti sa slovnim ili brojčanim znakom.</message>
+	<message key="installer.form.usernameRequired">Korisničko ime za administratorski nalog je obavezno.</message>
+	<message key="installer.installationWrongPhp"><![CDATA[<br/><strong>UPOZORENJE: Vaša trenutna verzija PHP-a ne odgovara minimalnim zahtevima instalacije. Preporučujemo da instalirate noviju verziju PHP-a.</strong>]]></message>
+	<message key="installer.installErrorsOccurred">Pojavile su se greške u instalaciji</message>
+	<message key="installer.installerSQLStatements">SQL izjave za instalaciju</message>
+	<message key="installer.installFileError"><![CDATA[Instalacioni folder <tt>dbscripts/xml/install.xml</tt> ne postoji ili je nečitljiv.]]></message>
+	<message key="installer.installFilesDirError">Folder određen za poslate fajlove ne postoji ili se ne može pisati u njega.</message>
+	<message key="installer.installParseDBFileError"><![CDATA[Greška kod sintaksičke analize instalacijskog fajla baze podataka:  <tt>{$file}</tt>.]]></message>
+	<message key="installer.installParseEmailTemplatesFileError"><![CDATA[Greška prilikom analiziranja fajla šablona imejla <tt>{$file}</tt>.]]></message>
+	<message key="installer.locale">Prevod</message>
+	<message key="installer.locale.maybeIncomplete">Označene lokalizacije su nekompletne.</message>
+	<message key="installer.localeSettings">Podešavanje lokalizacije</message>
+	<message key="installer.oaiRepositoryIdInstructions"><![CDATA[Jedinstveni identifikator koji se koristi za identifikaciju zapisa metapodataka indeksiranih na ovom sajtu koristeći <a href="http://www.openarchives.org/" target="_blank">Open Archives Initiative</a>, Protokol za sakupljanje metapodataka.]]></message>
+	<message key="installer.oaiRepositoryId">Identifikator OAI repozitorijuma</message>
+	<message key="installer.publicFilesDirError">Folder javnih fajlova ne postoji ili se ne može pisati po njemu.</message>
+	<message key="installer.releaseNotes">Napomene o izdanju</message>
+	<message key="installer.securitySettings">Sigurnosna podešavanja</message>
+	<message key="installer.oaiSettings">OAI podešavanja</message>
+</locale>

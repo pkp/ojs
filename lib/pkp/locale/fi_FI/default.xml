@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/fi_FI/default.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for default settings for setup items.
+  -->
+
+<locale name="fi_FI" full_name="Suomi">
+	<!-- Group defaults -->
+	<message key="default.groups.name.siteAdmin">Sivuston ylläpitäjä</message>
+	<message key="default.groups.plural.siteAdmin">Sivuston ylläpitäjät</message>
+	<message key="default.groups.name.productionEditor">Tuotantotoimittaja</message>
+	<message key="default.groups.plural.productionEditor">Tuotantotoimittajat</message>
+	<message key="default.groups.abbrev.productionEditor">TuotT</message>
+	<message key="default.groups.name.copyeditor">Tekninen toimittaja</message>
+	<message key="default.groups.plural.copyeditor">Tekniset toimittajat</message>
+	<message key="default.groups.abbrev.copyeditor">TT</message>
+	<message key="default.groups.name.proofreader">Oikolukija</message>
+	<message key="default.groups.plural.proofreader">Oikolukijat</message>
+	<message key="default.groups.abbrev.proofreader">OL</message>
+	<message key="default.groups.name.designer">Suunnittelija</message>
+	<message key="default.groups.plural.designer">Suunnittelijat</message>
+	<message key="default.groups.abbrev.designer">S</message>
+	<message key="default.groups.name.internalReviewer">Sisäinen arvioija</message>
+	<message key="default.groups.plural.internalReviewer">Sisäiset arvioijat</message>
+	<message key="default.groups.abbrev.internalReviewer">SA</message>
+	<message key="default.groups.name.marketing">Markkinointi- ja myyntikoordinaattori</message>
+	<message key="default.groups.plural.marketing">Markkinointi- ja myyntikoordinaattorit</message>
+	<message key="default.groups.abbrev.marketing">MM</message>
+	<message key="default.groups.name.funding">Rahoituskoordinaattori</message>
+	<message key="default.groups.plural.funding">Rahoituskoordinaattorit</message>
+	<message key="default.groups.abbrev.funding">RK</message>
+	<message key="default.groups.name.indexer">Indeksoija</message>
+	<message key="default.groups.plural.indexer">Indeksoijat</message>
+	<message key="default.groups.abbrev.indexer">IND</message>
+	<message key="default.groups.name.layoutEditor">Taittaja</message>
+	<message key="default.groups.plural.layoutEditor">Taittajat</message>
+	<message key="default.groups.abbrev.layoutEditor">T</message>
+	<message key="default.groups.name.author">Kirjoittaja</message>
+	<message key="default.groups.plural.author">Kirjoittajat</message>
+	<message key="default.groups.abbrev.author">K</message>
+	<message key="default.groups.name.translator">Kääntäjä</message>
+	<message key="default.groups.plural.translator">Kääntäjät</message>
+	<message key="default.groups.abbrev.translator">Käänt</message>
+	<message key="default.groups.name.reader">Lukija</message>
+	<message key="default.groups.plural.reader">Lukijat</message>
+	<message key="default.groups.abbrev.reader">Luk</message>
+
+	<!--  common app genre defaults -->
+	<message key="default.genres.other">Muu</message>
+	<message key="default.genres.multimedia">Multimedia</message>
+	<message key="default.genres.image">Kuva</message>
+	<message key="default.genres.styleSheet">HTML-muotoinen tyylitiedosto</message>
+</locale>

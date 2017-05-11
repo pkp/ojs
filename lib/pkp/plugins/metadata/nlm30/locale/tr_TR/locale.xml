@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../dtd/locale.dtd">
+
+<!--
+  * plugins/metadata/nlm30/locale/tr_TR/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+ 
+<locale name="tr_TR" full_name="Türkçe">
+	<message key="plugins.metadata.nlm30.displayName">NLM 3.0 Üst Veri</message>
+	<message key="plugins.metadata.nlm30.citationAdapter.displayName">NLM 3.0 Atıf Adaptörü</message>
+</locale>

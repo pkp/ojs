@@ -1,0 +1,20 @@
+<!--
+  * dtd/emailTexts.dtd
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * DTD for email texts.
+  *
+  -->
+
+<!ELEMENT email_texts (email_text*)>
+	<!ATTLIST email_texts
+		locale CDATA #REQUIRED>
+<!ELEMENT email_text (subject, body, description?)>
+	<!ATTLIST email_text
+		key CDATA #REQUIRED>
+<!ELEMENT subject (#PCDATA)>
+<!ELEMENT body (#PCDATA)>
+<!ELEMENT description (#PCDATA)>

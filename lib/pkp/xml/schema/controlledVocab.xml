@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE schema SYSTEM "../../dtd/xmlSchema.dtd">
+
+<!--
+  * xml/schema/controlledVocab.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Controlled vocabulary schema in XML.
+  -->
+
+<schema version="0.2">
+	<!--
+	  *
+	  * TABLE controlled_vocabs
+	  *
+	  -->
+	<table name="controlled_vocabs">
+		<field name="controlled_vocab_id" type="I8">
+			<KEY />
+			<AUTOINCREMENT/>
+		</field>
+		<field name="symbolic" type="C2" size="64">
+			<NOTNULL/>
+		</field>
+		<field name="assoc_type" type="I8">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+		</field>
+		<field name="assoc_id" type="I8">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+		</field>
+		<descr>Controlled vocabularies</descr>
+		<index name="controlled_vocab_symbolic">
+			<col>symbolic</col>
+			<col>assoc_type</col>
+			<col>assoc_id</col>
+			<UNIQUE />
+		</index>
+	</table>
+
+	<!--
+	  *
+	  * TABLE controlled_vocab_entries
+	  *
+	  -->
+	<table name="controlled_vocab_entries">
+		<field name="controlled_vocab_entry_id" type="I8">
+			<KEY />
+			<AUTOINCREMENT/>
+		</field>
+		<field name="controlled_vocab_id" type="I8">
+			<NOTNULL />
+		</field>
+		<field name="seq" type="F" />
+		<descr>Controlled vocabulary entries</descr>
+		<index name="controlled_vocab_entries_cv_id">
+			<col>controlled_vocab_id</col>
+			<col>seq</col>
+		</index>
+	</table>
+
+	<!--
+	  *
+	  * TABLE controlled_vocab_entry_settings
+	  *
+	  -->
+	<table name="controlled_vocab_entry_settings">
+		<field name="controlled_vocab_entry_id" type="I8">
+			<NOTNULL />
+		</field>
+		<field name="locale" type="C2" size="5">
+			<NOTNULL />
+			<DEFAULT VALUE=""/>
+		</field>
+		<field name="setting_name" type="C2" size="255">
+			<NOTNULL />
+		</field>
+		<field name="setting_value" type="X"/>
+		<field name="setting_type" type="C2" size="6">
+			<NOTNULL/>
+		</field>
+		<descr>Controlled vocabulary entry settings</descr>
+		<index name="c_v_e_s_entry_id">
+			<col>controlled_vocab_entry_id</col>
+		</index>
+		<index name="c_v_e_s_pkey">
+			<col>controlled_vocab_entry_id</col>
+			<col>locale</col>
+			<col>setting_name</col>
+			<UNIQUE />
+		</index>
+	</table>
+
+	<!--
+	  *
+	  * TABLE user_interests
+	  *
+	  -->
+	<table name="user_interests">
+		<field name="user_id" type="I8">
+			<NOTNULL />
+		</field>
+		<field name="controlled_vocab_entry_id" type="I8">
+			<NOTNULL />
+		</field>
+		<descr>Reviewer Interests Associative Table</descr>
+		<index name="u_e_pkey">
+			<col>user_id</col>
+			<col>controlled_vocab_entry_id</col>
+			<UNIQUE />
+		</index>
+	</table>
+</schema>

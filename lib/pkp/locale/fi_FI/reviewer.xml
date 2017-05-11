@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/fi_FI/reviewer.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings
+  -->
+
+<locale name="fi_FI" full_name="Suomi">
+	<!-- Used in submission review -->
+	<message key="reviewer.reviewSteps.request">1. Pyyntö</message>
+	<message key="reviewer.reviewSteps.guidelines">2. Ohjeet</message>
+	<message key="reviewer.reviewSteps.download">3. Lataa &amp; arvioi</message>
+	<message key="reviewer.reviewSteps.completion">4. Lopetus</message>
+	<message key="reviewer.step1.request">Arviointipyyntö</message>
+	<message key="reviewer.step1.requestBoilerplate">Sinut on valittu seuraavan käsikirjoituksen mahdolliseksi arvioijaksi. Alla on yleiskatsaus käsikirjoituksesta sekä tämän arvioinnin aikataulu. Toivomme, että sinulla on mahdollisuus osallistua.</message>
+	<message key="reviewer.step1.viewAllDetails">Näytä kaikki käsikirjoituksen tiedot</message>
+	<message key="reviewer.submission.reviewerFiles">Arvioijan tiedostot</message>
+	<message key="reviewer.submission.declineReview">Kieltäydy arviointipyynnöstä</message>
+	<message key="reviewer.submission.declineReviewMessage">Voit kertoa alla olevassa kentässä toimittajalle syyn, miksi kieltäydyt suorittamasta tätä arviointia.</message>
+	<message key="reviewer.submission.acceptReview">Hyväksy arviointipyyntö, jatka vaiheeseen 2</message>
+	<message key="reviewer.submission.continueToStepThree">Jatka vaiheeseen 3</message>
+	<message key="reviewer.submission.submitReview">Lähetä arviointi</message>
+	<message key="reviewer.submission.reviewerGuidelines">Arvioijan ohjeet</message>
+	<message key="reviewer.submission.enterCompetingInterests">Tämän julkaisijan tiedonantopolitiikka edellyttää, että arvioijat ilmoittavat mahdollisista sidonnaisuuksistaan. Tutustu hetki tähän politiikkaan.</message>
+	<message key="reviewer.submission.noCompetingInterests">Minulla ei ole sidonnaisuuksia</message>
+	<message key="reviewer.submission.hasCompetingInterests">Minulla saattaa olla sidonnaisuuksia (tarkenna alla)</message>
+	<message key="reviewer.submission.competingInterests">Sidonnaisuudet</message>
+	<message key="reviewer.submission.guidelines">Arviointiohjeet</message>
+	<message key="reviewer.submission.noGuidelines">Tämä julkaisija ei ole määritellyt ohjeita arvioijille.</message>
+	<message key="reviewer.submission.downloadDescription">Klikkaa tiedostonimiä alla ladataksesi tähän käsikirjoitukseen liittyvät tiedostot.</message>
+	<message key="reviewer.submission.reviewDescription">Kirjoita (tai liitä) arviosi tästä käsikirjoituksesta alla olevaan lomakkeeseen.</message>
+	<message key="reviewer.submission.uploadDescription">Lataa tiedostot, jotka haluat toimittajan ja/tai kirjoittajan käyvän läpi, mukaan lukien alkuperäisten arviointitiedostojen korjatut versiot.</message>
+	<message key="reviewer.complete">Arviointi lähetetty</message>
+	<message key="reviewer.confirmSubmit">Haluatko varmasti lähettää tämän arvioinnin?</message>
+	<message key="reviewer.complete.whatNext">Kiitos tämän käsikirjoituksen arvioinnin suorittamisesta. Arviointisi on lähetetty onnistuneesti. Arvostamme panostasi julkaisemamme työn laadun hyväksi. Toimittaja ottaa tarvittaessa sinuun uudelleen yhteyttä, esim. jos tarvitaan lisätietoja.</message>
+	<message key="reviewer.aboutDueDates">Tietoa määräpäivistä</message>
+	<message key="reviewer.aboutDueDates.text">Toimittaja pyytää, että hyväksyt arvioinnin tai kieltäydyt siitä ennen vastauksen määräpäivää ja suoritat arvioinnin arvioinnin määräpäivään mennessä.</message>
+	<message key="submission.comments.canShareWithAuthor">Kirjoittajalle ja toimittajalle</message>
+	<message key="submission.comments.cannotShareWithAuthor">Vain toimittajalle</message>
+</locale>

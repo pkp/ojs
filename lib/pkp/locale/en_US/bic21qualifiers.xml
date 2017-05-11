@@ -1,0 +1,953 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE qualifiers SYSTEM "../../dtd/bic21qualifiers.dtd">
+<!--
+  * locale/en_US/bic21qualifiers.xml
+  *
+  * Copyright BIC and Nielsen Book Services Ltd 2010
+  *
+  * localized list of BIC 2.1 Subject Qualifiers
+  * Reference:  http://www.bic.org.uk/7/BIC-Standard-Subject-Categories
+  -->
+<qualifiers>
+	<qualifier code="1D" text="Europe" />
+	<qualifier code="1DB" text="British Isles" />
+	<qualifier code="1DBK" text="United Kingdom, Great Britain" />
+	<qualifier code="1DBKE" text="England" />
+	<qualifier code="1DBKEA" text="East Anglia" />
+	<qualifier code="1DBKEAC" text="Cambridgeshire" />
+	<qualifier code="1DBKEAL" text="Lincolnshire" />
+	<qualifier code="1DBKEAN" text="Norfolk" />
+	<qualifier code="1DBKEAS" text="Suffolk" />
+	<qualifier code="1DBKEAX" text="Essex" />
+	<qualifier code="1DBKEM" text="Midlands" />
+	<qualifier code="1DBKEMD" text="Derbyshire &amp; Peak District" />
+	<qualifier code="1DBKEMF" text="Herefordshire" />
+	<qualifier code="1DBKEML" text="Leicestershire" />
+	<qualifier code="1DBKEMM" text="Northamptonshire" />
+	<qualifier code="1DBKEMN" text="Nottinghamshire" />
+	<qualifier code="1DBKEMP" text="Shropshire" />
+	<qualifier code="1DBKEMR" text="Rutland" />
+	<qualifier code="1DBKEMS" text="Staffordshire" />
+	<qualifier code="1DBKEMT" text="Worcestershire" />
+	<qualifier code="1DBKEMW" text="Warwickshire, West Midlands" />
+	<qualifier code="1DBKEN" text="North West England" />
+	<qualifier code="1DBKENC" text="Cheshire" />
+	<qualifier code="1DBKENL" text="Lancashire, Greater Manchester, Merseyside" />
+	<qualifier code="1DBKENM" text="Cumbria &amp; Lake District" />
+	<qualifier code="1DBKES" text="South &amp; South East England" />
+	<qualifier code="1DBKESB" text="Berkshire" />
+	<qualifier code="1DBKESD" text="Bedfordshire" />
+	<qualifier code="1DBKESF" text="Oxfordshire" />
+	<qualifier code="1DBKESH" text="Hampshire" />
+	<qualifier code="1DBKESK" text="Kent" />
+	<qualifier code="1DBKESL" text="London, Greater London" />
+	<qualifier code="1DBKESR" text="Surrey" />
+	<qualifier code="1DBKEST" text="Hertfordshire" />
+	<qualifier code="1DBKESU" text="Buckinghamshire" />
+	<qualifier code="1DBKESW" text="Isle of Wight" />
+	<qualifier code="1DBKESX" text="Sussex" />
+	<qualifier code="1DBKEW" text="South West England" />
+	<qualifier code="1DBKEWC" text="Cornwall" />
+	<qualifier code="1DBKEWD" text="Devon" />
+	<qualifier code="1DBKEWG" text="Gloucestershire" />
+	<qualifier code="1DBKEWS" text="Somerset, Bristol" />
+	<qualifier code="1DBKEWT" text="Dorset" />
+	<qualifier code="1DBKEWW" text="Wiltshire" />
+	<qualifier code="1DBKEY" text="North &amp; North East England" />
+	<qualifier code="1DBKEYD" text="Durham" />
+	<qualifier code="1DBKEYK" text="Yorkshire" />
+	<qualifier code="1DBKEYN" text="Northumberland, Tyne &amp; Wear" />
+	<qualifier code="1DBKN" text="Northern Ireland" />
+	<qualifier code="1DBKS" text="Scotland" />
+	<qualifier code="1DBKSB" text="Lowland Scotland &amp; Borders" />
+	<qualifier code="1DBKSC" text="Central Scotland" />
+	<qualifier code="1DBKSH" text="Northern Scotland, Highlands &amp; Islands" />
+	<qualifier code="1DBKSHF" text="Orkney Islands" />
+	<qualifier code="1DBKSHJ" text="Shetland Islands" />
+	<qualifier code="1DBKSHL" text="Western Isles, Outer Hebrides" />
+	<qualifier code="1DBKSHQ" text="Isle of Skye" />
+	<qualifier code="1DBKW" text="Wales" />
+	<qualifier code="1DBKWC" text="Mid Wales" />
+	<qualifier code="1DBKWN" text="North Wales" />
+	<qualifier code="1DBKWS" text="South Wales" />
+	<qualifier code="1DBKWV" text="Southwest Wales" />
+	<qualifier code="1DBKX" text="Channel Islands" />
+	<qualifier code="1DBKZ" text="Isle of Man" />
+	<qualifier code="1DBR" text="Ireland" />
+	<qualifier code="1DD" text="Western Continental Europe" />
+	<qualifier code="1DDB" text="Belgium" />
+	<qualifier code="1DDF" text="France" />
+	<qualifier code="1DDFC" text="Corsica" />
+	<qualifier code="1DDFM" text="Monaco" />
+	<qualifier code="1DDL" text="Luxembourg" />
+	<qualifier code="1DDN" text="Netherlands" />
+	<qualifier code="1DF" text="Central Europe" />
+	<qualifier code="1DFA" text="Austria" />
+	<qualifier code="1DFG" text="Germany" />
+	<qualifier code="1DFGE" text="East Germany, DDR" />
+	<qualifier code="1DFGW" text="West Germany" />
+	<qualifier code="1DFH" text="Switzerland" />
+	<qualifier code="1DFHA" text="Alps" />
+	<qualifier code="1DFL" text="Liechtenstein" />
+	<qualifier code="1DN" text="Northern Europe, Scandinavia" />
+	<qualifier code="1DNC" text="Iceland" />
+	<qualifier code="1DND" text="Denmark" />
+	<qualifier code="1DNDF" text="Faroe Islands" />
+	<qualifier code="1DNF" text="Finland" />
+	<qualifier code="1DNN" text="Norway" />
+	<qualifier code="1DNS" text="Sweden" />
+	<qualifier code="1DS" text="Southern Europe" />
+	<qualifier code="1DSE" text="Spain" />
+	<qualifier code="1DSEB" text="Balearic islands" />
+	<qualifier code="1DSEP" text="Pyrenees" />
+	<qualifier code="1DSG" text="Gibraltar" />
+	<qualifier code="1DSM" text="Malta" />
+	<qualifier code="1DSN" text="Andorra" />
+	<qualifier code="1DSP" text="Portugal" />
+	<qualifier code="1DST" text="Italy" />
+	<qualifier code="1DSTA" text="Sardinia" />
+	<qualifier code="1DSTC" text="Sicily" />
+	<qualifier code="1DSU" text="San Marino" />
+	<qualifier code="1DSV" text="Vatican" />
+	<qualifier code="1DV" text="Eastern Europe" />
+	<qualifier code="1DVC" text="Cyprus" />
+	<qualifier code="1DVG" text="Greece" />
+	<qualifier code="1DVGS" text="Greek islands" />
+	<qualifier code="1DVGSC" text="Crete" />
+	<qualifier code="1DVH" text="Hungary" />
+	<qualifier code="1DVK" text="Former Czechoslovakia" />
+	<qualifier code="1DVKC" text="Czech Republic" />
+	<qualifier code="1DVKS" text="Slovakia" />
+	<qualifier code="1DVP" text="Poland" />
+	<qualifier code="1DVT" text="Turkey" />
+	<qualifier code="1DVU" text="Former Soviet Union, USSR (Europe)" />
+	<qualifier code="1DVUA" text="Russia" />
+	<qualifier code="1DVUAC" text="Chechnya" />
+	<qualifier code="1DVUB" text="Belarus (Belorussia)" />
+	<qualifier code="1DVUC" text="Latvia" />
+	<qualifier code="1DVUE" text="Estonia" />
+	<qualifier code="1DVUF" text="Lithuania" />
+	<qualifier code="1DVUG" text="Georgia" />
+	<qualifier code="1DVUK" text="Ukraine" />
+	<qualifier code="1DVUM" text="Moldova (Moldavia)" />
+	<qualifier code="1DVUR" text="Armenia" />
+	<qualifier code="1DVUZ" text="Azerbaijan" />
+	<qualifier code="1DVW" text="Southeast Europe" />
+	<qualifier code="1DVWA" text="Albania" />
+	<qualifier code="1DVWB" text="Bulgaria" />
+	<qualifier code="1DVWR" text="Romania" />
+	<qualifier code="1DVWY" text="Yugoslavia &amp; former Yugoslavia" />
+	<qualifier code="1DVWYB" text="Bosnia-Herzegovina" />
+	<qualifier code="1DVWYC" text="Croatia" />
+	<qualifier code="1DVWYK" text="Kosovo" />
+	<qualifier code="1DVWYM" text="Macedonia" />
+	<qualifier code="1DVWYN" text="Montenegro" />
+	<qualifier code="1DVWYS" text="Serbia" />
+	<qualifier code="1DVWYV" text="Slovenia" />
+	<qualifier code="1F" text="Asia" />
+	<qualifier code="1FB" text="Middle East" />
+	<qualifier code="1FBH" text="Israel" />
+	<qualifier code="1FBJ" text="Jordan" />
+	<qualifier code="1FBL" text="Lebanon" />
+	<qualifier code="1FBN" text="Iran" />
+	<qualifier code="1FBP" text="Palestine" />
+	<qualifier code="1FBQ" text="Iraq" />
+	<qualifier code="1FBS" text="Syria" />
+	<qualifier code="1FBX" text="Arabian peninsula" />
+	<qualifier code="1FBXB" text="Bahrain" />
+	<qualifier code="1FBXK" text="Kuwait" />
+	<qualifier code="1FBXM" text="Oman" />
+	<qualifier code="1FBXQ" text="Qatar" />
+	<qualifier code="1FBXS" text="Saudi Arabia" />
+	<qualifier code="1FBXU" text="United Arab Emirates" />
+	<qualifier code="1FBXY" text="Yemen" />
+	<qualifier code="1FC" text="Central Asia" />
+	<qualifier code="1FCA" text="Afghanistan" />
+	<qualifier code="1FCD" text="Tajikistan (Tadzhikistan)" />
+	<qualifier code="1FCK" text="Kyrgyzstan (Kirghizstan, Kirghizia)" />
+	<qualifier code="1FCS" text="Siberia" />
+	<qualifier code="1FCT" text="Turkmenistan" />
+	<qualifier code="1FCU" text="Uzbekistan" />
+	<qualifier code="1FCZ" text="Kazakhstan" />
+	<qualifier code="1FK" text="Indian sub-continent" />
+	<qualifier code="1FKA" text="India" />
+	<qualifier code="1FKAH" text="Himalayas" />
+	<qualifier code="1FKAS" text="Andaman &amp; Nicobar Islands" />
+	<qualifier code="1FKB" text="Bangladesh" />
+	<qualifier code="1FKH" text="Bhutan" />
+	<qualifier code="1FKN" text="Nepal" />
+	<qualifier code="1FKP" text="Pakistan" />
+	<qualifier code="1FKS" text="Sri Lanka (Ceylon)" />
+	<qualifier code="1FM" text="South East Asia" />
+	<qualifier code="1FMB" text="Myanmar (Burma)" />
+	<qualifier code="1FMC" text="Cambodia" />
+	<qualifier code="1FML" text="Laos" />
+	<qualifier code="1FMM" text="Malaysia" />
+	<qualifier code="1FMN" text="Indonesia" />
+	<qualifier code="1FMNB" text="Bali" />
+	<qualifier code="1FMNT" text="East Timor" />
+	<qualifier code="1FMNX" text="Borneo" />
+	<qualifier code="1FMP" text="Philippines" />
+	<qualifier code="1FMR" text="Brunei" />
+	<qualifier code="1FMS" text="Singapore" />
+	<qualifier code="1FMT" text="Thailand" />
+	<qualifier code="1FMV" text="Vietnam" />
+	<qualifier code="1FP" text="East Asia, Far East" />
+	<qualifier code="1FPC" text="China" />
+	<qualifier code="1FPCH" text="Hong Kong" />
+	<qualifier code="1FPCM" text="Macao" />
+	<qualifier code="1FPCT" text="Tibet" />
+	<qualifier code="1FPCW" text="Taiwan" />
+	<qualifier code="1FPJ" text="Japan" />
+	<qualifier code="1FPK" text="Korea" />
+	<qualifier code="1FPKN" text="North Korea" />
+	<qualifier code="1FPKS" text="South Korea" />
+	<qualifier code="1FPM" text="Mongolia" />
+	<qualifier code="1H" text="Africa" />
+	<qualifier code="1HB" text="North Africa" />
+	<qualifier code="1HBA" text="Algeria" />
+	<qualifier code="1HBC" text="Chad" />
+	<qualifier code="1HBE" text="Egypt" />
+	<qualifier code="1HBEN" text="Nile river" />
+	<qualifier code="1HBES" text="Suez canal" />
+	<qualifier code="1HBL" text="Libya" />
+	<qualifier code="1HBM" text="Morocco" />
+	<qualifier code="1HBMA" text="Atlas Mountains" />
+	<qualifier code="1HBS" text="Sudan" />
+	<qualifier code="1HBT" text="Tunisia" />
+	<qualifier code="1HBW" text="Western Sahara" />
+	<qualifier code="1HBX" text="The Sahara" />
+	<qualifier code="1HF" text="Sub-Saharan Africa" />
+	<qualifier code="1HFD" text="West Africa" />
+	<qualifier code="1HFDA" text="Mauritania" />
+	<qualifier code="1HFDB" text="Benin" />
+	<qualifier code="1HFDE" text="Sierra Leone" />
+	<qualifier code="1HFDF" text="Burkina Faso" />
+	<qualifier code="1HFDG" text="Gambia" />
+	<qualifier code="1HFDH" text="Ghana" />
+	<qualifier code="1HFDL" text="Liberia" />
+	<qualifier code="1HFDM" text="Mali" />
+	<qualifier code="1HFDN" text="Nigeria" />
+	<qualifier code="1HFDR" text="Niger" />
+	<qualifier code="1HFDS" text="Senegal" />
+	<qualifier code="1HFDT" text="Togo" />
+	<qualifier code="1HFDU" text="Guinea" />
+	<qualifier code="1HFDV" text="Cape Verde" />
+	<qualifier code="1HFDX" text="Guinea-Bissau" />
+	<qualifier code="1HFDY" text="Ivory Coast" />
+	<qualifier code="1HFG" text="East Africa" />
+	<qualifier code="1HFGA" text="Ethiopia" />
+	<qualifier code="1HFGD" text="Djibouti" />
+	<qualifier code="1HFGE" text="Eritrea" />
+	<qualifier code="1HFGK" text="Kenya" />
+	<qualifier code="1HFGQ" text="Burundi" />
+	<qualifier code="1HFGR" text="Rwanda" />
+	<qualifier code="1HFGS" text="Somalia" />
+	<qualifier code="1HFGSR" text="Republic of Somaliland" />
+	<qualifier code="1HFGT" text="Tanzania" />
+	<qualifier code="1HFGU" text="Uganda" />
+	<qualifier code="1HFJ" text="Central Africa" />
+	<qualifier code="1HFJA" text="Cameroon" />
+	<qualifier code="1HFJC" text="Congo" />
+	<qualifier code="1HFJG" text="Gabon" />
+	<qualifier code="1HFJQ" text="Equatorial Guinea" />
+	<qualifier code="1HFJR" text="Central African Republic" />
+	<qualifier code="1HFJS" text="Sao Tome &amp; Principe" />
+	<qualifier code="1HFJZ" text="Democratic Republic of Congo (Zaire)" />
+	<qualifier code="1HFM" text="Southern Africa" />
+	<qualifier code="1HFMA" text="Angola" />
+	<qualifier code="1HFMB" text="Botswana" />
+	<qualifier code="1HFMK" text="Swaziland" />
+	<qualifier code="1HFML" text="Lesotho" />
+	<qualifier code="1HFMM" text="Malawi" />
+	<qualifier code="1HFMN" text="Namibia" />
+	<qualifier code="1HFMQ" text="Mozambique" />
+	<qualifier code="1HFMQZ" text="Zambesi river" />
+	<qualifier code="1HFMS" text="Republic of South Africa" />
+	<qualifier code="1HFMW" text="Zimbabwe" />
+	<qualifier code="1HFMZ" text="Zambia" />
+	<qualifier code="1HS" text="South Indian Ocean Islands" />
+	<qualifier code="1HSC" text="Comoros" />
+	<qualifier code="1HSM" text="Madagascar" />
+	<qualifier code="1HSU" text="Mauritius" />
+	<qualifier code="1HSV" text="Maldives" />
+	<qualifier code="1HSY" text="Seychelles" />
+	<qualifier code="1K" text="The Americas" />
+	<qualifier code="1KB" text="North America" />
+	<qualifier code="1KBB" text="USA" />
+	<qualifier code="1KBBE" text="Northeastern &amp; North Atlantic states" />
+	<qualifier code="1KBBEC" text="Connecticut" />
+	<qualifier code="1KBBEH" text="New Hampshire" />
+	<qualifier code="1KBBEJ" text="New Jersey" />
+	<qualifier code="1KBBEN" text="Maine" />
+	<qualifier code="1KBBEP" text="Pennsylvania" />
+	<qualifier code="1KBBER" text="Rhode Island" />
+	<qualifier code="1KBBES" text="Massachusetts" />
+	<qualifier code="1KBBEV" text="Vermont" />
+	<qualifier code="1KBBEY" text="New York" />
+	<qualifier code="1KBBF" text="Southeastern &amp; South Atlantic states" />
+	<qualifier code="1KBBFC" text="District of Columbia (Washington, DC)" />
+	<qualifier code="1KBBFD" text="Delaware" />
+	<qualifier code="1KBBFG" text="Georgia" />
+	<qualifier code="1KBBFL" text="Florida" />
+	<qualifier code="1KBBFM" text="Maryland" />
+	<qualifier code="1KBBFN" text="North Carolina" />
+	<qualifier code="1KBBFS" text="South Carolina" />
+	<qualifier code="1KBBFV" text="Virginia" />
+	<qualifier code="1KBBFW" text="West Virginia" />
+	<qualifier code="1KBBN" text="North Central &amp; Mid-West states" />
+	<qualifier code="1KBBNC" text="Illinois" />
+	<qualifier code="1KBBND" text="Indiana" />
+	<qualifier code="1KBBNF" text="Iowa" />
+	<qualifier code="1KBBNG" text="Michigan" />
+	<qualifier code="1KBBNH" text="Ohio" />
+	<qualifier code="1KBBNK" text="Kansas" />
+	<qualifier code="1KBBNN" text="Nebraska" />
+	<qualifier code="1KBBNR" text="North Dakota" />
+	<qualifier code="1KBBNS" text="South Dakota" />
+	<qualifier code="1KBBNT" text="Minnesota" />
+	<qualifier code="1KBBNU" text="Missouri" />
+	<qualifier code="1KBBNW" text="Wisconsin" />
+	<qualifier code="1KBBS" text="Central Southern states" />
+	<qualifier code="1KBBSB" text="Alabama" />
+	<qualifier code="1KBBSH" text="Oklahoma" />
+	<qualifier code="1KBBSK" text="Kentucky" />
+	<qualifier code="1KBBSL" text="Louisiana" />
+	<qualifier code="1KBBSM" text="Mississippi" />
+	<qualifier code="1KBBSN" text="Tennessee" />
+	<qualifier code="1KBBSR" text="Arkansas" />
+	<qualifier code="1KBBSX" text="Texas" />
+	<qualifier code="1KBBW" text="Western &amp; Pacific Coast states" />
+	<qualifier code="1KBBWC" text="Colorado" />
+	<qualifier code="1KBBWD" text="Idaho" />
+	<qualifier code="1KBBWF" text="California" />
+	<qualifier code="1KBBWK" text="Alaska" />
+	<qualifier code="1KBBWM" text="Montana" />
+	<qualifier code="1KBBWN" text="Nevada" />
+	<qualifier code="1KBBWR" text="Oregon" />
+	<qualifier code="1KBBWS" text="Washington state" />
+	<qualifier code="1KBBWU" text="Utah" />
+	<qualifier code="1KBBWX" text="New Mexico" />
+	<qualifier code="1KBBWY" text="Wyoming" />
+	<qualifier code="1KBBWZ" text="Arizona" />
+	<qualifier code="1KBC" text="Canada" />
+	<qualifier code="1KBCB" text="British Columbia" />
+	<qualifier code="1KBCF" text="Newfoundland" />
+	<qualifier code="1KBCL" text="Alberta" />
+	<qualifier code="1KBCM" text="Manitoba" />
+	<qualifier code="1KBCN" text="Nunavut" />
+	<qualifier code="1KBCO" text="Ontario" />
+	<qualifier code="1KBCP" text="Prince Edward Island" />
+	<qualifier code="1KBCQ" text="Quebec" />
+	<qualifier code="1KBCR" text="New Brunswick" />
+	<qualifier code="1KBCS" text="Saskatchewan" />
+	<qualifier code="1KBCV" text="Nova Scotia" />
+	<qualifier code="1KBCW" text="Northwest Territories" />
+	<qualifier code="1KBCY" text="Yukon Territory" />
+	<qualifier code="1KBG" text="Great Lakes" />
+	<qualifier code="1KJ" text="Caribbean islands" />
+	<qualifier code="1KJC" text="Cuba" />
+	<qualifier code="1KJD" text="Dominican Republic" />
+	<qualifier code="1KJH" text="Haiti" />
+	<qualifier code="1KJM" text="Cayman Islands" />
+	<qualifier code="1KJP" text="Puerto Rico" />
+	<qualifier code="1KJW" text="West Indies" />
+	<qualifier code="1KJWB" text="Bahamas" />
+	<qualifier code="1KJWJ" text="Jamaica" />
+	<qualifier code="1KJWT" text="Turks &amp; Caicos Islands" />
+	<qualifier code="1KJWV" text="Leeward Islands" />
+	<qualifier code="1KJWVA" text="Anguilla" />
+	<qualifier code="1KJWVB" text="Antigua &amp; Barbuda" />
+	<qualifier code="1KJWVG" text="Guadeloupe" />
+	<qualifier code="1KJWVK" text="St Kitts-Nevis" />
+	<qualifier code="1KJWVM" text="Montserrat" />
+	<qualifier code="1KJWVV" text="Virgin Islands" />
+	<qualifier code="1KJWVVK" text="Virgin Islands (UK)" />
+	<qualifier code="1KJWVVS" text="Virgin Islands (USA)" />
+	<qualifier code="1KJWW" text="Windward Islands" />
+	<qualifier code="1KJWWB" text="Barbados" />
+	<qualifier code="1KJWWD" text="Dominica" />
+	<qualifier code="1KJWWG" text="Grenada" />
+	<qualifier code="1KJWWL" text="St Lucia" />
+	<qualifier code="1KJWWM" text="Martinique" />
+	<qualifier code="1KJWWT" text="Trinidad &amp; Tobago" />
+	<qualifier code="1KJWWV" text="St Vincent" />
+	<qualifier code="1KJX" text="Lesser Antilles" />
+	<qualifier code="1KJXA" text="Aruba" />
+	<qualifier code="1KJXN" text="Netherlands Antilles" />
+	<qualifier code="1KL" text="Latin America" />
+	<qualifier code="1KLC" text="Central America" />
+	<qualifier code="1KLCB" text="Belize" />
+	<qualifier code="1KLCG" text="Guatemala" />
+	<qualifier code="1KLCH" text="Honduras" />
+	<qualifier code="1KLCM" text="Mexico" />
+	<qualifier code="1KLCN" text="Nicaragua" />
+	<qualifier code="1KLCP" text="Panama" />
+	<qualifier code="1KLCPC" text="Panama canal" />
+	<qualifier code="1KLCR" text="Costa Rica" />
+	<qualifier code="1KLCS" text="El Salvador" />
+	<qualifier code="1KLS" text="South America" />
+	<qualifier code="1KLSA" text="Argentina" />
+	<qualifier code="1KLSB" text="Brazil" />
+	<qualifier code="1KLSBZ" text="Amazon river" />
+	<qualifier code="1KLSC" text="Colombia" />
+	<qualifier code="1KLSE" text="Ecuador" />
+	<qualifier code="1KLSEG" text="Galapagos Islands" />
+	<qualifier code="1KLSF" text="French Guiana" />
+	<qualifier code="1KLSG" text="Guyana" />
+	<qualifier code="1KLSH" text="Chile" />
+	<qualifier code="1KLSL" text="Bolivia" />
+	<qualifier code="1KLSP" text="Paraguay" />
+	<qualifier code="1KLSR" text="Peru" />
+	<qualifier code="1KLSS" text="Surinam (Suriname)" />
+	<qualifier code="1KLSU" text="Uruguay" />
+	<qualifier code="1KLSV" text="Venezuela" />
+	<qualifier code="1KLSX" text="Andes" />
+	<qualifier code="1M" text="Australasia, Oceania &amp; other land areas" />
+	<qualifier code="1MB" text="Australasia" />
+	<qualifier code="1MBF" text="Australia" />
+	<qualifier code="1MBFC" text="Australian Capital Territory (ACT)" />
+	<qualifier code="1MBFN" text="New South Wales" />
+	<qualifier code="1MBFQ" text="Queensland" />
+	<qualifier code="1MBFS" text="South Australia" />
+	<qualifier code="1MBFT" text="Tasmania" />
+	<qualifier code="1MBFV" text="Victoria" />
+	<qualifier code="1MBFW" text="Western Australia" />
+	<qualifier code="1MBFX" text="Northern Territory" />
+	<qualifier code="1MBN" text="New Zealand" />
+	<qualifier code="1MK" text="Oceania" />
+	<qualifier code="1MKC" text="Micronesia" />
+	<qualifier code="1MKCB" text="Belau (Palau)" />
+	<qualifier code="1MKCC" text="Caroline Islands" />
+	<qualifier code="1MKCF" text="Federated States of Micronesia" />
+	<qualifier code="1MKCG" text="Gilbert Islands" />
+	<qualifier code="1MKCM" text="Marshall Islands" />
+	<qualifier code="1MKCN" text="Nauru" />
+	<qualifier code="1MKCU" text="Guam" />
+	<qualifier code="1MKCV" text="Northern Marianas" />
+	<qualifier code="1MKL" text="Melanesia" />
+	<qualifier code="1MKLF" text="Fiji" />
+	<qualifier code="1MKLN" text="New Caledonia" />
+	<qualifier code="1MKLP" text="Papua New Guinea" />
+	<qualifier code="1MKLS" text="Solomon Islands" />
+	<qualifier code="1MKLV" text="Vanuatu" />
+	<qualifier code="1MKP" text="Polynesia" />
+	<qualifier code="1MKPC" text="Cook Islands" />
+	<qualifier code="1MKPCR" text="Raratonga" />
+	<qualifier code="1MKPE" text="Easter Island" />
+	<qualifier code="1MKPF" text="French Polynesia" />
+	<qualifier code="1MKPFT" text="Tahiti" />
+	<qualifier code="1MKPH" text="Hawaii" />
+	<qualifier code="1MKPK" text="Kiribati" />
+	<qualifier code="1MKPN" text="Niue" />
+	<qualifier code="1MKPP" text="Pitcairn Island" />
+	<qualifier code="1MKPR" text="Samoa" />
+	<qualifier code="1MKPRA" text="American Samoa" />
+	<qualifier code="1MKPRW" text="Western Samoa" />
+	<qualifier code="1MKPT" text="Tonga" />
+	<qualifier code="1MKPV" text="Tuvalu" />
+	<qualifier code="1MKPW" text="Wallis &amp; Futuna" />
+	<qualifier code="1MT" text="Other land areas" />
+	<qualifier code="1MTA" text="Atlantic Ocean islands" />
+	<qualifier code="1MTAN" text="North Atlantic islands" />
+	<qualifier code="1MTANB" text="Bermuda" />
+	<qualifier code="1MTANC" text="Canary Islands" />
+	<qualifier code="1MTANM" text="Madeira" />
+	<qualifier code="1MTANZ" text="Azores" />
+	<qualifier code="1MTAS" text="South Atlantic islands" />
+	<qualifier code="1MTASC" text="Ascension Island" />
+	<qualifier code="1MTASF" text="Falklands" />
+	<qualifier code="1MTASG" text="South Georgia" />
+	<qualifier code="1MTASH" text="St Helena" />
+	<qualifier code="1MTAST" text="Tristan da Cunha" />
+	<qualifier code="1MTN" text="Arctic regions" />
+	<qualifier code="1MTNG" text="Greenland" />
+	<qualifier code="1MTS" text="Antarctica" />
+	<qualifier code="1Q" text="Other geographical groupings, oceans &amp; seas" />
+	<qualifier code="1QD" text="Empires &amp; historical states" />
+	<qualifier code="1QDA" text="Ancient World" />
+	<qualifier code="1QDAA" text="Assyria" />
+	<qualifier code="1QDAB" text="Babylonia" />
+	<qualifier code="1QDAE" text="Ancient Egypt" />
+	<qualifier code="1QDAG" text="Ancient Greece" />
+	<qualifier code="1QDAK" text="Pre-Columbian America" />
+	<qualifier code="1QDAL" text="Ancient / Biblical Israel" />
+	<qualifier code="1QDAM" text="Mesopotamia" />
+	<qualifier code="1QDAP" text="Persian Empire" />
+	<qualifier code="1QDAR" text="Ancient Rome" />
+	<qualifier code="1QDAS" text="Sumeria" />
+	<qualifier code="1QDAZ" text="Byzantine Empire" />
+	<qualifier code="1QDB" text="British Empire" />
+	<qualifier code="1QDH" text="Holy Roman Empire" />
+	<qualifier code="1QDM" text="Mongol Empire" />
+	<qualifier code="1QDT" text="Ottoman Empire" />
+	<qualifier code="1QDU" text="Austro-Hungarian Empire" />
+	<qualifier code="1QF" text="Political, socio-economic &amp; strategic groupings" />
+	<qualifier code="1QFC" text="The Commonwealth" />
+	<qualifier code="1QFE" text="EU (European Union)" />
+	<qualifier code="1QFG" text="Developing countries" />
+	<qualifier code="1QFH" text="Industrialized / developed countries" />
+	<qualifier code="1QFM" text="Islamic countries" />
+	<qualifier code="1QFN" text="NATO" />
+	<qualifier code="1QFP" text="OPEC" />
+	<qualifier code="1QFS" text="ASEAN" />
+	<qualifier code="1QFW" text="Warsaw Pact, Eastern bloc" />
+	<qualifier code="1QM" text="Climatic regions" />
+	<qualifier code="1QMP" text="Polar regions" />
+	<qualifier code="1QMT" text="Tropics" />
+	<qualifier code="1QR" text="Groupings linked by seas" />
+	<qualifier code="1QRM" text="Mediterranean countries" />
+	<qualifier code="1QRP" text="Pacific Rim countries" />
+	<qualifier code="1QS" text="Oceans &amp; seas" />
+	<qualifier code="1QSA" text="Atlantic Ocean" />
+	<qualifier code="1QSAN" text="North Atlantic" />
+	<qualifier code="1QSAS" text="South Atlantic" />
+	<qualifier code="1QSB" text="Baltic Sea" />
+	<qualifier code="1QSC" text="Caribbean Sea" />
+	<qualifier code="1QSD" text="Gulf of Mexico" />
+	<qualifier code="1QSE" text="Irish Sea" />
+	<qualifier code="1QSF" text="North Sea" />
+	<qualifier code="1QSG" text="English Channel" />
+	<qualifier code="1QSH" text="Adriatic Sea" />
+	<qualifier code="1QSJ" text="Caspian Sea" />
+	<qualifier code="1QSK" text="Black Sea" />
+	<qualifier code="1QSL" text="Red Sea" />
+	<qualifier code="1QSM" text="Mediterranean Sea" />
+	<qualifier code="1QSN" text="Indian Ocean" />
+	<qualifier code="1QSP" text="Pacific Ocean" />
+	<qualifier code="1QSPN" text="North Pacific" />
+	<qualifier code="1QSPS" text="South Pacific" />
+	<qualifier code="1QSR" text="Arctic Ocean" />
+	<qualifier code="1QSS" text="Southern Ocean" />
+	<qualifier code="1QST" text="Tasman Sea" />
+	<qualifier code="2A" text="Indo-European languages" />
+	<qualifier code="2AB" text="English" />
+	<qualifier code="2ABA" text="Anglo-Saxon" />
+	<qualifier code="2ABC" text="Middle English" />
+	<qualifier code="2ABM" text="American English" />
+	<qualifier code="2ABU" text="Australian English" />
+	<qualifier code="2AC" text="Germanic &amp; Scandinavian languages" />
+	<qualifier code="2ACC" text="Scots (Lallans, the Doric)" />
+	<qualifier code="2ACCU" text="Ulster Scots (Ullans)" />
+	<qualifier code="2ACD" text="Dutch" />
+	<qualifier code="2ACF" text="Flemish" />
+	<qualifier code="2ACG" text="German" />
+	<qualifier code="2ACK" text="Afrikaans" />
+	<qualifier code="2ACS" text="Scandinavian languages" />
+	<qualifier code="2ACSC" text="Icelandic" />
+	<qualifier code="2ACSD" text="Danish" />
+	<qualifier code="2ACSF" text="Faroese" />
+	<qualifier code="2ACSJ" text="Jutish" />
+	<qualifier code="2ACSN" text="Norwegian" />
+	<qualifier code="2ACSW" text="Swedish" />
+	<qualifier code="2ACSX" text="Old Norse" />
+	<qualifier code="2ACY" text="Yiddish" />
+	<qualifier code="2ACZ" text="Other Germanic languages &amp; dialects" />
+	<qualifier code="2AD" text="Romance, Italic &amp; Rhaeto-Romanic languages" />
+	<qualifier code="2ADC" text="Catalan" />
+	<qualifier code="2ADF" text="French" />
+	<qualifier code="2ADFP" text="Provencal" />
+	<qualifier code="2ADH" text="Corsican" />
+	<qualifier code="2ADL" text="Latin" />
+	<qualifier code="2ADP" text="Portuguese" />
+	<qualifier code="2ADPB" text="Brazilian Portuguese" />
+	<qualifier code="2ADQ" text="Galician (Gallego, Galego)" />
+	<qualifier code="2ADR" text="Romanian" />
+	<qualifier code="2ADS" text="Spanish" />
+	<qualifier code="2ADSL" text="Latin-American Spanish" />
+	<qualifier code="2ADT" text="Italian" />
+	<qualifier code="2ADV" text="Sardinian" />
+	<qualifier code="2AF" text="Celtic languages" />
+	<qualifier code="2AFB" text="Breton" />
+	<qualifier code="2AFC" text="Cornish" />
+	<qualifier code="2AFG" text="Gaulish" />
+	<qualifier code="2AFM" text="Manx" />
+	<qualifier code="2AFR" text="Irish Gaelic" />
+	<qualifier code="2AFS" text="Scottish Gaelic" />
+	<qualifier code="2AFW" text="Welsh" />
+	<qualifier code="2AG" text="Slavic (Slavonic) languages" />
+	<qualifier code="2AGB" text="Bulgarian" />
+	<qualifier code="2AGC" text="Church Slavic" />
+	<qualifier code="2AGK" text="Slovak" />
+	<qualifier code="2AGL" text="Belarusian (Belorussian)" />
+	<qualifier code="2AGM" text="Macedonian" />
+	<qualifier code="2AGP" text="Polish" />
+	<qualifier code="2AGR" text="Russian" />
+	<qualifier code="2AGS" text="Serbo-Croatian" />
+	<qualifier code="2AGSC" text="Croatian" />
+	<qualifier code="2AGSS" text="Serbian" />
+	<qualifier code="2AGU" text="Ukrainian" />
+	<qualifier code="2AGV" text="Slovenian" />
+	<qualifier code="2AGW" text="Wendish (Lusatian, Sorbian)" />
+	<qualifier code="2AGZ" text="Czech" />
+	<qualifier code="2AH" text="Hellenic languages" />
+	<qualifier code="2AHA" text="Ancient (Classical) Greek" />
+	<qualifier code="2AHB" text="Biblical Greek" />
+	<qualifier code="2AHM" text="Modern Greek" />
+	<qualifier code="2AJ" text="Baltic &amp; other Indo-European languages" />
+	<qualifier code="2AJB" text="Baltic languages" />
+	<qualifier code="2AJBL" text="Lithuanian" />
+	<qualifier code="2AJBV" text="Latvian (Lettish)" />
+	<qualifier code="2AJK" text="Other Indo-European languages" />
+	<qualifier code="2AJKL" text="Albanian" />
+	<qualifier code="2AJKR" text="Armenian" />
+	<qualifier code="2B" text="Indic, East Indo-European &amp; Dravidian languages" />
+	<qualifier code="2BB" text="Early Indic languages" />
+	<qualifier code="2BBA" text="Sanskrit" />
+	<qualifier code="2BBP" text="Pali" />
+	<qualifier code="2BM" text="Modern Indic languages" />
+	<qualifier code="2BMB" text="Bengali" />
+	<qualifier code="2BMD" text="Marathi" />
+	<qualifier code="2BMG" text="Gujarati" />
+	<qualifier code="2BMH" text="Hindi" />
+	<qualifier code="2BMJ" text="Rajasthani" />
+	<qualifier code="2BMK" text="Kashmiri" />
+	<qualifier code="2BMN" text="Nepali" />
+	<qualifier code="2BMP" text="Punjabi" />
+	<qualifier code="2BMR" text="Romany" />
+	<qualifier code="2BMS" text="Sinhalese" />
+	<qualifier code="2BMSM" text="Maldivian" />
+	<qualifier code="2BMU" text="Urdu" />
+	<qualifier code="2BR" text="Dravidian languages" />
+	<qualifier code="2BRB" text="Brahui" />
+	<qualifier code="2BRK" text="Kannada (Kanarese)" />
+	<qualifier code="2BRL" text="Telugu" />
+	<qualifier code="2BRM" text="Malayalam" />
+	<qualifier code="2BRT" text="Tamil" />
+	<qualifier code="2BX" text="Indo-Iranian languages" />
+	<qualifier code="2BXF" text="Persian (Farsi)" />
+	<qualifier code="2BXK" text="Kurdish" />
+	<qualifier code="2BXL" text="Pashto (Pushto, Afghan)" />
+	<qualifier code="2BXZ" text="Zend Avestan" />
+	<qualifier code="2C" text="Afro-Asiatic languages" />
+	<qualifier code="2CS" text="Semitic languages" />
+	<qualifier code="2CSA" text="Aramaic" />
+	<qualifier code="2CSB" text="Assyro-Babylonian (Akkadian) languages" />
+	<qualifier code="2CSJ" text="Hebrew" />
+	<qualifier code="2CSM" text="Maltese" />
+	<qualifier code="2CSR" text="Arabic" />
+	<qualifier code="2CSS" text="Syriac" />
+	<qualifier code="2CST" text="Ethiopic" />
+	<qualifier code="2CSTA" text="Amharic" />
+	<qualifier code="2CSTT" text="Tigrinya" />
+	<qualifier code="2CX" text="Non-Semitic Afro-Asiatic languages" />
+	<qualifier code="2CXB" text="Berber (Tuareg)" />
+	<qualifier code="2CXC" text="Coptic" />
+	<qualifier code="2CXG" text="Egyptian" />
+	<qualifier code="2CXH" text="Hausa" />
+	<qualifier code="2CXS" text="Somali" />
+	<qualifier code="2CXSR" text="Oromo" />
+	<qualifier code="2F" text="Ural-Altaic &amp; Hyperborean languages" />
+	<qualifier code="2FC" text="Finno-Ugric languages" />
+	<qualifier code="2FCD" text="Estonian" />
+	<qualifier code="2FCF" text="Finnish (Suomi)" />
+	<qualifier code="2FCL" text="Lappish (Sami)" />
+	<qualifier code="2FCM" text="Hungarian (Magyar)" />
+	<qualifier code="2FM" text="Turkic languages" />
+	<qualifier code="2FMC" text="Turkish" />
+	<qualifier code="2FMH" text="Kirghiz" />
+	<qualifier code="2FMK" text="Kazakh" />
+	<qualifier code="2FMN" text="Turkmen" />
+	<qualifier code="2FMU" text="Uzbek" />
+	<qualifier code="2FMZ" text="Azerbaijani" />
+	<qualifier code="2FV" text="Mongolian" />
+	<qualifier code="2FW" text="Tungusic languages" />
+	<qualifier code="2FWK" text="Evenki" />
+	<qualifier code="2FWM" text="Manchu" />
+	<qualifier code="2FX" text="Hyperborean &amp; Paleosiberian languages" />
+	<qualifier code="2G" text="East &amp; Southeast Asian languages" />
+	<qualifier code="2GD" text="Sino-Tibetan languages" />
+	<qualifier code="2GDB" text="Burmese" />
+	<qualifier code="2GDC" text="Chinese" />
+	<qualifier code="2GDCC" text="Cantonese" />
+	<qualifier code="2GDCK" text="Hokkien" />
+	<qualifier code="2GDCM" text="Mandarin" />
+	<qualifier code="2GDCW" text="Wu" />
+	<qualifier code="2GDCY" text="Amoy" />
+	<qualifier code="2GDK" text="Karen" />
+	<qualifier code="2GDT" text="Tibetan" />
+	<qualifier code="2GJ" text="Japanese" />
+	<qualifier code="2GK" text="Korean" />
+	<qualifier code="2GR" text="Other Southeast Asian languages, Austroasiatic languages" />
+	<qualifier code="2GRH" text="Cambodian (Khmer)" />
+	<qualifier code="2GRL" text="Lao" />
+	<qualifier code="2GRM" text="Hmong (Miao)" />
+	<qualifier code="2GRS" text="Thai (Siamese)" />
+	<qualifier code="2GRV" text="Vietnamese" />
+	<qualifier code="2H" text="African languages" />
+	<qualifier code="2HC" text="Niger-Congo languages" />
+	<qualifier code="2HCB" text="Bantu languages" />
+	<qualifier code="2HCBA" text="Bantu proper (Narrow Bantu)" />
+	<qualifier code="2HCBB" text="Central Bantu languages" />
+	<qualifier code="2HCBBC" text="Chichewa (Chewa)" />
+	<qualifier code="2HCBBF" text="Chilomwe (Lomwe)" />
+	<qualifier code="2HCBBH" text="Chinyanja (Cinyanja, Nyanja)" />
+	<qualifier code="2HCBBJ" text="Chitonga (Tonga)" />
+	<qualifier code="2HCBBL" text="Chitumbuka (Tumbuka)" />
+	<qualifier code="2HCBBN" text="Chiyao (Yao)" />
+	<qualifier code="2HCBBP" text="Icibemba (Bemba)" />
+	<qualifier code="2HCBBQ" text="Kiikaonde (Kaonde)" />
+	<qualifier code="2HCBBR" text="Kongo" />
+	<qualifier code="2HCBBS" text="Lunda" />
+	<qualifier code="2HCBBU" text="Luvale" />
+	<qualifier code="2HCBD" text="kiSwahili (Swahili)" />
+	<qualifier code="2HCBH" text="OtjiHerero (Herero)" />
+	<qualifier code="2HCBK" text="Kikuyu" />
+	<qualifier code="2HCBL" text="Nyoro-Ganda group" />
+	<qualifier code="2HCBLG" text="Luganda (Ganda)" />
+	<qualifier code="2HCBLR" text="Nyankore (Runyankore-Rukiga)" />
+	<qualifier code="2HCBM" text="Fang (Yaunde-Fang)" />
+	<qualifier code="2HCBN" text="Duala" />
+	<qualifier code="2HCBP" text="Tshivenda &amp; Venda group" />
+	<qualifier code="2HCBQ" text="Shona" />
+	<qualifier code="2HCBS" text="Sotho-Tswana group" />
+	<qualifier code="2HCBSA" text="Sesotho (Sotho, Sesotho sa Leboa, Southern Sotho)" />
+	<qualifier code="2HCBSB" text="Sepedi (Northern Sotho)" />
+	<qualifier code="2HCBSD" text="Setswana (Tswana)" />
+	<qualifier code="2HCBSF" text="Silozi" />
+	<qualifier code="2HCBV" text="XiTsonga (Tsonga)" />
+	<qualifier code="2HCBW" text="Siswati (Swazi)" />
+	<qualifier code="2HCBX" text="isiXhosa (Xhosa)" />
+	<qualifier code="2HCBY" text="isiNdebele (Ndebele)" />
+	<qualifier code="2HCBZ" text="isiZulu (Zulu)" />
+	<qualifier code="2HCW" text="West Atlantic &amp; Volta Congo languages" />
+	<qualifier code="2HCWF" text="Fulani (Fulah)" />
+	<qualifier code="2HCWV" text="Volta-Congo languages" />
+	<qualifier code="2HCWVB" text="Ibo (Igbo)" />
+	<qualifier code="2HCWVD" text="Dagbani (Dagomba)" />
+	<qualifier code="2HCWVE" text="Ewe" />
+	<qualifier code="2HCWVG" text="Ga" />
+	<qualifier code="2HCWVN" text="Fante" />
+	<qualifier code="2HCWVS" text="Asante Twi" />
+	<qualifier code="2HCWVT" text="Akwapim Twi" />
+	<qualifier code="2HCWVY" text="Yoruba" />
+	<qualifier code="2HK" text="Khoisan languages" />
+	<qualifier code="2HN" text="Nilo-Saharan &amp; Chari-Nile (Macrosudanic) languages" />
+	<qualifier code="2HND" text="Dinka" />
+	<qualifier code="2HNM" text="Masai" />
+	<qualifier code="2HNR" text="Nubian" />
+	<qualifier code="2HNT" text="Teso (Ateso)" />
+	<qualifier code="2HX" text="Other African languages" />
+	<qualifier code="2J" text="American indigenous languages" />
+	<qualifier code="2JN" text="North &amp; Central American indigenous languages" />
+	<qualifier code="2JNA" text="Aleut" />
+	<qualifier code="2JNB" text="Inuit" />
+	<qualifier code="2JNC" text="Algonkian (Algonquin) languages" />
+	<qualifier code="2JND" text="Na-Dene &amp; Athapascan (Athabascan) languages" />
+	<qualifier code="2JNG" text="Iroquoian &amp; Siouan languages" />
+	<qualifier code="2JNM" text="Mayan" />
+	<qualifier code="2JNN" text="Uto-Aztecan languages" />
+	<qualifier code="2JNZ" text="Zuni" />
+	<qualifier code="2JS" text="South American &amp; Caribbean indigenous languages" />
+	<qualifier code="2JSC" text="Carib (Cariban)" />
+	<qualifier code="2JSG" text="Guarani" />
+	<qualifier code="2JSQ" text="Quechuan" />
+	<qualifier code="2P" text="Oceanic &amp; Austronesian languages" />
+	<qualifier code="2PB" text="Australian Aboriginal languages" />
+	<qualifier code="2PBA" text="Aranda (Arunta)" />
+	<qualifier code="2PBG" text="Murngin" />
+	<qualifier code="2PBJ" text="Pitjantjatjara" />
+	<qualifier code="2PBL" text="Alyawarr" />
+	<qualifier code="2PBM" text="Warumungu" />
+	<qualifier code="2PBP" text="Pintupi" />
+	<qualifier code="2PBR" text="Arrernte" />
+	<qualifier code="2PBT" text="Pertame" />
+	<qualifier code="2PBU" text="Luritja" />
+	<qualifier code="2PBW" text="Warlpiri" />
+	<qualifier code="2PBY" text="Yankunytjatjara" />
+	<qualifier code="2PC" text="Papuan languages" />
+	<qualifier code="2PCS" text="Susuami" />
+	<qualifier code="2PG" text="Austronesian &amp; Malayo-Polynesian languages" />
+	<qualifier code="2PGB" text="Formosan (Taiwanese)" />
+	<qualifier code="2PGG" text="Malagasy" />
+	<qualifier code="2PGJ" text="Tagalog (Filipino)" />
+	<qualifier code="2PGN" text="Indonesian languages" />
+	<qualifier code="2PGNA" text="Indonesian (Bahasa Indonesia)" />
+	<qualifier code="2PGNC" text="Balinese" />
+	<qualifier code="2PGND" text="Javanese" />
+	<qualifier code="2PGNM" text="Malay (Bahasa Malaysia)" />
+	<qualifier code="2PGP" text="Oceanic &amp; Polynesian languages" />
+	<qualifier code="2PGPA" text="Maori" />
+	<qualifier code="2PGPF" text="Fijian" />
+	<qualifier code="2PGPG" text="Tongan" />
+	<qualifier code="2PGPH" text="Tahitian" />
+	<qualifier code="2PGPR" text="Rarotongan" />
+	<qualifier code="2PGPS" text="Samoan" />
+	<qualifier code="2PGPW" text="Hawaiian" />
+	<qualifier code="2PGPX" text="Other Oceanic languages" />
+	<qualifier code="2PGPXK" text="Mokilese" />
+	<qualifier code="2PGPXM" text="Marshallese" />
+	<qualifier code="2PGPXN" text="Ponapean" />
+	<qualifier code="2PGPXP" text="Palauan" />
+	<qualifier code="2PGPXT" text="Tokelauan" />
+	<qualifier code="2Z" text="Other languages" />
+	<qualifier code="2ZB" text="Basque" />
+	<qualifier code="2ZC" text="Caucasian languages" />
+	<qualifier code="2ZCG" text="Georgian" />
+	<qualifier code="2ZM" text="Sumerian" />
+	<qualifier code="2ZP" text="Pidgins &amp; Creoles" />
+	<qualifier code="2ZPT" text="Tok Pisin" />
+	<qualifier code="2ZX" text="Artificial languages" />
+	<qualifier code="2ZXA" text="Afrihili" />
+	<qualifier code="2ZXC" text="Occidental" />
+	<qualifier code="2ZXP" text="Esperanto" />
+	<qualifier code="2ZXT" text="Interlingua" />
+	<qualifier code="3B" text="Prehistory" />
+	<qualifier code="3D" text="BCE to c 500 CE" />
+	<qualifier code="3F" text="c 500 CE to c 1000 CE" />
+	<qualifier code="3H" text="c 1000 CE to c 1500" />
+	<qualifier code="3J" text="Modern period, c 1500 onwards" />
+	<qualifier code="3JB" text="c 1500 to c 1600" />
+	<qualifier code="3JD" text="c 1600 to c 1700" />
+	<qualifier code="3JF" text="c 1700 to c 1800" />
+	<qualifier code="3JH" text="c 1800 to c 1900" />
+	<qualifier code="3JJ" text="20th century" />
+	<qualifier code="3JJC" text="c 1900 - c 1914" />
+	<qualifier code="3JJF" text="c 1914 to c 1918 (including WW1) " />
+	<qualifier code="3JJG" text="c 1918 to c 1939 (Inter-war period)" />
+	<qualifier code="3JJH" text="c 1939 to c 1945 (including WW2)" />
+	<qualifier code="3JJP" text="c 1945 to c 2000 (Post-war period)" />
+	<qualifier code="3JJPG" text="c 1945 to c 1960" />
+	<qualifier code="3JJPK" text="c 1960 to c 1970" />
+	<qualifier code="3JJPL" text="c 1970 to c 1980" />
+	<qualifier code="3JJPN" text="c 1980 to c 1990" />
+	<qualifier code="3JJPR" text="c 1990 to c 2000" />
+	<qualifier code="3JM" text="21st century" />
+	<qualifier code="3JMC" text="c 2000 to c 2010" />
+	<qualifier code="3JMG" text="c 2010 to c 2020" />
+	<qualifier code="4E" text="ELT examinations &amp; certificates" />
+	<qualifier code="4EA" text="Cambridge Young Learners English Tests" />
+	<qualifier code="4EAA" text="Cambridge Young Learners English Tests Level 1 Cambridge Starters" />
+	<qualifier code="4EAM" text="Cambridge Young Learners English Tests Level 2 Cambridge Movers" />
+	<qualifier code="4EAY" text="Cambridge Young Learners English Tests Level 3 Cambridge Flyers" />
+	<qualifier code="4EB" text="Cambridge Level 1 Key English Test (KET)" />
+	<qualifier code="4EC" text="Cambridge Level 2 Preliminary English Test (PET)" />
+	<qualifier code="4ED" text="Cambridge Level 3 First Certificate in English (FCE)" />
+	<qualifier code="4EF" text="Cambridge Level 4 Certificate in Advanced English (CAE)" />
+	<qualifier code="4EG" text="Cambridge Level 5 Certificate of Proficiency in English (CPE)" />
+	<qualifier code="4EL" text="Cambridge International English Language Testing System (IELTS)" />
+	<qualifier code="4EN" text="Test of English as a Foreign Language (TOEFL)" />
+	<qualifier code="4EQ" text="Certificate in Communicative Skills in English (CCSE)" />
+	<qualifier code="4EX" text="ELT examinations in English for specific purposes" />
+	<qualifier code="4EXB" text="Business English Certificate (BEC)" />
+	<qualifier code="4EXC" text="Certificate in English for International Business &amp; Trade (CEIBT)" />
+	<qualifier code="4EXJ" text="Oxford International Business English Certificate (OIBEC)" />
+	<qualifier code="4EXK" text="Cambridge Examination in English for Language Teachers (CEELT)" />
+	<qualifier code="4EXM" text="Test of English for International Communication (TOEIC)" />
+	<qualifier code="4EZ" text="Other ELT examinations" />
+	<qualifier code="4K" text="Designed / suitable for UK curricula &amp; examinations" />
+	<qualifier code="4KD" text="UK educational tests" />
+	<qualifier code="4KDP" text="Standardized educational test" />
+	<qualifier code="4KDQ" text="Non-standardized educational test" />
+	<qualifier code="4KH" text="Designed / suitable for National Curriculum" />
+	<qualifier code="4KHA" text="For National Curriculum Early Years" />
+	<qualifier code="4KHF" text="For National Curriculum Key Stage 1" />
+	<qualifier code="4KHJ" text="For National Curriculum Key Stage 2" />
+	<qualifier code="4KHN" text="For National Curriculum Key Stage 3" />
+	<qualifier code="4KHT" text="For National Curriculum Key Stage 4 &amp; GCSE" />
+	<qualifier code="4KL" text="Designed / suitable for A &amp; AS Level" />
+	<qualifier code="4KLR" text="A/AS Level study &amp; revision guides" />
+	<qualifier code="4KM" text="Designed for Key Skills" />
+	<qualifier code="4KMC" text="Designed for Key Skills: Communication" />
+	<qualifier code="4KMN" text="Designed for Key Skills: Application of number" />
+	<qualifier code="4KMT" text="Designed for Key Skills: Information Technology (IT)" />
+	<qualifier code="4KS" text="Designed / suitable for Scottish examinations &amp; grades" />
+	<qualifier code="4KSC" text="For P1-P3 (Scottish)" />
+	<qualifier code="4KSD" text="For P4-P6 (Scottish)" />
+	<qualifier code="4KSF" text="For P7-S2 (Scottish)" />
+	<qualifier code="4KSL" text="For Access 3 (Scottish)" />
+	<qualifier code="4KSM" text="For Intermediate 2 (Scottish)" />
+	<qualifier code="4KSN" text="For Intermediate 1 (Scottish)" />
+	<qualifier code="4KSS" text="For Standard Grade (Scottish)" />
+	<qualifier code="4KST" text="For Higher Grade (Scottish)" />
+	<qualifier code="4KSV" text="For Advanced Higher Grade (Scottish)" />
+	<qualifier code="4KT" text="Designed / suitable for Scottish Curriculum for Excellence (CfE) Levels" />
+	<qualifier code="4KTB" text="For CfE Early Level (Scottish)" />
+	<qualifier code="4KTG" text="For CfE First Level (Scottish)" />
+	<qualifier code="4KTJ" text="For CfE Second Level (Scottish)" />
+	<qualifier code="4KTP" text="For CfE Third Level (Scottish)" />
+	<qualifier code="4KTR" text="For CfE Fourth Level (Scottish)" />
+	<qualifier code="4KV" text="Designed / suitable for UK vocational qualifications" />
+	<qualifier code="4KVC" text="For NVQ / SVQ (National / Scottish Vocational Qualification)" />
+	<qualifier code="4KVCR" text="For NVQ / SVQ 1" />
+	<qualifier code="4KVCS" text="For NVQ / SVQ 2" />
+	<qualifier code="4KVCT" text="For NVQ / SVQ 3" />
+	<qualifier code="4KVCU" text="For NVQ / SVQ 4" />
+	<qualifier code="4KVN" text="For GNVQ (General National Vocational Qualification)" />
+	<qualifier code="4KVNF" text="For GNVQ Foundation" />
+	<qualifier code="4KVNN" text="For GNVQ Intermediate" />
+	<qualifier code="4KVNV" text="For GNVQ Advanced" />
+	<qualifier code="4KVS" text="For GSVQ (General Scottish Vocational Qualification)" />
+	<qualifier code="4KVSF" text="For GSVQ Foundation" />
+	<qualifier code="4KVSN" text="For QSVQ Intermediate" />
+	<qualifier code="4KVSV" text="For QSVQ Advanced" />
+	<qualifier code="4KVT" text="For BTEC (Business And Technology Education Council) " />
+	<qualifier code="4KVTA" text="BTEC Introductory Certificate - Level 1 qualification" />
+	<qualifier code="4KVTB" text="BTEC Introductory Diploma - Level 1 qualification" />
+	<qualifier code="4KVTF" text="BTEC First Certificate - Level 2 qualification" />
+	<qualifier code="4KVTG" text="BTEC First Diploma - Level 2 qualification" />
+	<qualifier code="4KVTJ" text="BTEC National Award - Level 3 qualification" />
+	<qualifier code="4KVTK" text="BTEC National Certificate - Level 3 qualification" />
+	<qualifier code="4KVTL" text="BTEC National Diploma - Level 3 qualification" />
+	<qualifier code="4KVTQ" text="BTEC Foundation Diploma in Art and Design" />
+	<qualifier code="4KVTX" text="BTEC Higher National Certificate" />
+	<qualifier code="4KVTY" text="BTEC Higher National Diploma" />
+	<qualifier code="4M" text="International curricula &amp; examinations" />
+	<qualifier code="4MB" text="International Baccalaureate (IB) Diploma" />
+	<qualifier code="4MG" text="International GCSE (IGCSE)" />
+	<qualifier code="4P" text="Designed / suitable for other (non-UK) curricula &amp; examinations" />
+	<qualifier code="4PC" text="Designed / suitable for Irish examinations &amp; educational levels" />
+	<qualifier code="4PCJ" text="For Junior Certificate (Irish)" />
+	<qualifier code="4PCN" text="For Transition Year (Irish)" />
+	<qualifier code="4PCR" text="For Leaving Certificate (Irish)" />
+	<qualifier code="4PCV" text="For Post-Leaving Certificate (Irish)" />
+	<qualifier code="4PZ" text="Designed / suitable for South African examinations &amp; educational levels" />
+	<qualifier code="4PZC" text="For General Education &amp; Training (GET) (South Africa)" />
+	<qualifier code="4PZCB" text="Reception / Early Childhood Development Grade R or Grade 0 (South Africa)" />
+	<qualifier code="4PZCD" text="Foundation Phase Grade 1 (South Africa)" />
+	<qualifier code="4PZCF" text="Foundation Phase Grade 2 (South Africa)" />
+	<qualifier code="4PZCH" text="Foundation Phase Grade 3 (South Africa)" />
+	<qualifier code="4PZCJ" text="Intermediate Phase Grade 4 (South Africa)" />
+	<qualifier code="4PZCL" text="Intermediate Phase Grade 5 (South Africa)" />
+	<qualifier code="4PZCN" text="Intermediate Phase Grade 6 (South Africa)" />
+	<qualifier code="4PZCP" text="Senior Phase Grade 7 (South Africa)" />
+	<qualifier code="4PZCR" text="Senior Phase Grade 8 (South Africa)" />
+	<qualifier code="4PZCT" text="Senior Phase Grade 9 (South Africa)" />
+	<qualifier code="4PZF" text="For Further Education &amp; Training (FET): Academic grades (South Africa)" />
+	<qualifier code="4PZFG" text="FET Grade 10 (South Africa)" />
+	<qualifier code="4PZFK" text="FET Grade 11 (South Africa)" />
+	<qualifier code="4PZFM" text="FET Grade 12 (South Africa)" />
+	<qualifier code="4PZT" text="For FET: Technical &amp; Vocational Grades (South Africa)" />
+	<qualifier code="4PZTQ" text="FET Grade N1 (South Africa)" />
+	<qualifier code="4PZTS" text="FET Grade N2 (South Africa)" />
+	<qualifier code="4PZTV" text="FET Grade N3 (South Africa)" />
+	<qualifier code="4W" text="Designed for differentiated learning" />
+	<qualifier code="4Y" text="Designed for home learning" />
+	<qualifier code="5A" text="Interest age / level" />
+	<qualifier code="5AB" text="For children c 0-2 years" />
+	<qualifier code="5AC" text="Interest age: from c 3 years" />
+	<qualifier code="5AD" text="Interest age: from c 4 years" />
+	<qualifier code="5AF" text="Interest age: from c 5 years" />
+	<qualifier code="5AG" text="Interest age: from c 6 years" />
+	<qualifier code="5AH" text="Interest age: from c 7 years" />
+	<qualifier code="5AJ" text="Interest age: from c 8 years" />
+	<qualifier code="5AK" text="Interest age: from c 9 years" />
+	<qualifier code="5AL" text="Interest age: from c 10 years" />
+	<qualifier code="5AM" text="Interest age: from c 11 years" />
+	<qualifier code="5AN" text="Interest age: from c 12 years" />
+	<qualifier code="5AP" text="Interest age: from c 13 years" />
+	<qualifier code="5AQ" text="Interest age: from c 14 years" />
+	<qualifier code="5AR" text="For reluctant readers (children)" />
+	<qualifier code="5AX" text="For emergent readers (adult)" />
+	<qualifier code="5H" text="Holidays &amp; seasonal interest" />
+	<qualifier code="5HC" text="Christmas" />
+	<qualifier code="5HE" text="Easter" />
+	<qualifier code="5HF" text="Father's Day" />
+	<qualifier code="5HH" text="Hallowe'en" />
+	<qualifier code="5HM" text="Mother's Day" />
+	<qualifier code="5HV" text="Valentine's Day" />
+	<qualifier code="5S" text="Of specific Gay &amp; Lesbian interest" />
+	<qualifier code="5SG" text="Of specific Gay interest" />
+	<qualifier code="5SL" text="Of specific Lesbian interest" />
+	<qualifier code="5X" text="Contains explicit material" />
+</qualifiers>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../dtd/locale.dtd">
+
+<!--
+  * plugins/metadata/nlm30/locale/sr_SR/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+ 
+<locale name="sr_SR" full_name="Cрпски">
+	<!-- plug-in -->
+	<message key="plugins.metadata.nlm30.displayName">NLM 3.0 meta-data</message>
+	<message key="plugins.metadata.nlm30.description">Dodaje NLM 3.0 šeme i adaptere aplikacije.</message>
+
+	<!-- citation meta-data adapter -->
+	<message key="plugins.metadata.nlm30.citationAdapter.displayName">NLM 3.0 Citation Adapter</message>
+	<message key="plugins.metadata.nlm30.citationAdapter.description">izdvaja i ubacuje metapodatke iz i u citate.</message>
+
+	<!-- citation parsers (citation extraction services) -->
+	<message key="plugins.metadata.nlm30.citationParsers.displayName">Citation Extraction Services"</message>
+	<message key="plugins.metadata.nlm30.citationParsers.description">Konvertuje tekst citata u NLM 3.0 oznaku."</message>
+
+	<!-- citation lookup (citation database/improvement/lookup services) -->
+	<message key="plugins.metadata.nlm30.citationLookup.displayName">Citation Database Services"</message>
+	<message key="plugins.metadata.nlm30.citationLookup.description">Unapređuje NLM 3.0 oznake, npr. pregledajući citate u eksternim bazama."</message>
+
+	<!-- citation output -->
+	<message key="plugins.metadata.nlm30.citationOutput.displayName">Citation Output Services</message>
+	<message key="plugins.metadata.nlm30.citationOutput.description">Konvertuje NLM 3.0 oznake citata u tekst citata.</message>
+	<message key="plugins.metadata.nlm30Xml.citationOutput.displayName">Citation Output Services (XML)</message>
+	<message key="plugins.metadata.nlm30Xml.citationOutput.description">Konvertuje NLM 3.0 oznake u XML format citata.</message>
+
+	<!-- NLM 3.0 output -->
+	<message key="plugins.metadata.nlm30.nlm30XmlOutput.displayName">NLM 3.0 Journal Publishing Output</message>
+
+	<!-- NLM 2.3 output -->
+	<message key="plugins.metadata.nlm30.nlm23XmlOutput.displayName">NLM 2.3 Journal Publishing Output</message>
+
+	<!-- NLM 3.0 to 2.3 downgrade -->
+	<message key="plugins.metadata.nlm30.nlm30ToNlm23Xml.displayName">NLM 3.0 to 2.3 Journal Publishing Downgrade</message>
+	<message key="plugins.metadata.nlm30.nlm30ToNlm23Xml.description">Spušta NLM 3.0 na NLM 2.3.</message>
+
+	<!-- Plain text reference list output -->
+	<message key="plugins.metadata.nlm30.refList.displayName">Plain text reference list generation</message>
+	<message key="plugins.metadata.nlm30.refList.description">Generiše formatirani tekst liste referenci iz OJS/OCS/OMP referenci predaja</message>
+</locale>

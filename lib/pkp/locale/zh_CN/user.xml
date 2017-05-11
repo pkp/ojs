@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/zh_CN/user.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (English) locale.
+  *
+  -->
+
+<locale name="zh_CN" full_name="简体中文">
+	<message key="user.affiliation">工作单位</message>
+	<message key="user.affiliations">工作单位</message>
+	<message key="user.biography">传记</message>
+	<message key="user.biography.description">(E.g., 部门和职称)</message>
+	<message key="user.changeMyPassword">修改我的密码</message>
+	<message key="user.changePassword">修改密码</message>
+	<message key="user.dateLastLogin">最后登录时间</message>
+	<message key="user.dateRegistered">注册时间</message>
+	<message key="user.editMyProfile">编辑我的信息</message>
+	<message key="user.email">电子邮件</message>
+	<message key="user.feminine">F</message>
+	<message key="user.firstName">名</message>
+	<message key="user.gender">性别</message>
+	<message key="user.initialsExample">张三 = ZS</message>
+	<message key="user.initials">声母</message>
+	<message key="user.interests">回顾利益</message>
+	<message key="user.lastName">姓氏</message>
+	<message key="user.profile.form.profileImageInvalid">无效的照片格式或者文件太大，可接受的格式有 .gif, .jpg, or .png, 而且图片不能超过 150x150 pixels.</message>
+	<message key="user.login.accountDisabledWithReason">您的帐户已被禁用，原因如下: {$reason}</message>
+	<message key="user.login.accountDisabled">您的帐户已被禁用。需要更多帮助，请联系管理员.</message>
+	<message key="user.login.accountNotValidated">您的电子邮件地址未被验证.请检查您的电子邮件以及下面提供的介绍.如果您还没有接受一个邮件，请联系管理员获得更多信息.</message>
+	<message key="user.login.activate">激活帐户</message>
+	<message key="user.login.activated">谢谢您激活帐户. 您现在可以使用当您创建帐户时提供的凭据登录.</message>
+	<message key="user.login.changePasswordInstructions"><![CDATA[您必须在您登录到本站之前选择一个新密码.<br /><br />请在下面输入您的用户名，以及您当前的密码，还有新密码.]]></message>
+	<message key="user.login.forgotPassword">忘记您的密码?</message>
+	<message key="user.login.loginError">无效的用户名或者密码，请重试.</message>
+	<message key="user.login">登录</message>
+	<message key="user.login.lostPassword.confirmationSent">一封确认已发送到您的电子邮件地址,请按照电子邮件中的说明重置您的密码.</message>
+	<message key="user.login.lostPassword.invalidHash">对不起，你点击链接已过期或无效,请尝试再次重置您的密码.</message>
+	<message key="user.login.lostPassword.invalidUser">指定的电子邮件相关用户不存在.</message>
+	<message key="user.login.lostPassword.passwordSent">一个新的密码已发送到您的电子邮件地址.您现在可以使用新的密码登录了.</message>
+	<message key="user.login.registeredEmail">注册的用户电子邮件</message>
+	<message key="user.login.resetPassword">重置密码</message>
+	<message key="user.logOut">登出</message>
+	<message key="user.mailingAddress">通信地址</message>
+	<message key="user.masculine">M</message>
+	<message key="user.middleName">中间名</message>
+	<message key="user.myAccount">我的帐户</message>
+	<message key="user.name">名</message>
+	<message key="user.other">其他</message>
+	<message key="user.password">密码</message>
+	<message key="user.phone">电话</message>
+	<message key="user.profile.changePasswordInstructions">在下面输入您当前的密码和新密码，以修改帐户密码.</message>
+	<message key="user.profile.editProfile">编辑帐户信息</message>
+	<message key="user.profile.form.emailRequired">有效的电子邮件地址.</message>
+	<message key="user.profile.form.firstNameRequired">名是必须的.</message>
+	<message key="user.profile.form.lastNameRequired">姓氏是必须的.</message>
+	<message key="user.profile.form.newPasswordRequired">您必须输入您新的密码.</message>
+	<message key="user.profile.form.oldPasswordInvalid">您输入的密码是不正确的.</message>
+	<message key="user.profile.form.openAccessNotifications">刊期的开放存取电子邮件通知</message>
+	<message key="user.profile.form.passwordRequired">密码是必须的.</message>
+	<message key="user.profile.form.profileImage">照片</message>
+	<message key="user.profile.form.publishedNotifications">新刊期出版的电子邮件通知</message>
+	<message key="user.profile.form.urlInvalid">指定的URL是无效的.请双击URL再试.(提示: 尝试在URL的开始添加 http:// .)</message>
+	<message key="user.profile.form.usernameRequired">用户名是必须的.</message>
+	<message key="user.profile.leavePasswordBlank">将密码字段留空，以保持目前的密码.</message>
+	<message key="user.profile.newPassword">新密码</message>
+	<message key="user.profile.oldPassword">当前密码</message>
+	<message key="user.profile">用户信息</message>
+	<message key="user.profile.publicProfile">用户信息</message>
+	<message key="user.profile.repeatNewPassword">重复新密码</message>
+	<message key="user.register.form.emailExists">选择的电子邮件地址已经被其他用户使用.</message>
+	<message key="user.register.form.passwordsDoNotMatch">密码不相符.</message>
+	<message key="user.register.form.usernameExists">选择的用户名已经被其他用户使用.</message>
+	<message key="user.register.passwordLengthRestriction">密码必须至少含有 {$length} 个字符.</message>
+	<message key="user.register.registerAs">注册为</message>
+	<message key="user.register">注册</message>
+	<message key="user.register.usernameRestriction">用户名只能包含小写字母，数字和连字符/下标线.</message>
+	<message key="user.role.reader">读者</message>
+	<message key="user.role.readers">读者</message>
+	<message key="user.role.reviewer">审稿人</message>
+	<message key="user.role.reviewers">审稿人</message>
+	<message key="user.role.siteAdmin">站点管理员</message>
+	<message key="user.role.siteAdmins">站点管理员</message>
+	<message key="user.roles">角色</message>
+	<message key="user.salutation">招呼</message>
+	<message key="user.sendPassword">确认</message>
+	<message key="user.sendPassword.description">发送给我一个包含我的用户名与密码的确认邮件</message>
+	<message key="user.signature">签名</message>
+	<message key="user.title">标题</message>
+	<message key="user.url">URL</message>
+	<message key="user.userHome">用户中心</message>
+	<message key="user.username">用户名</message>
+	<message key="user.workingLanguages">工作语言</message>
+	<message key="user.register.completeForm">填写这个表格以注册到这个期刊.</message>
+	<message key="user.repeatPassword">重复密码</message>
+	<message key="user.profile.form.affiliationRequired">联系地址是必须的</message>
+	<message key="user.register.form.emailsDoNotMatch">电子邮件地址不匹配</message>
+	<message key="user.authorization.loginRequired">需要登陆</message>
+	<message key="user.accountInformation">帐户信息</message>
+	<message key="user.suffix">后缀</message>
+	<message key="user.authorization.accessDenied">拒绝读取</message>
+	<message key="user.affiliation.description">（您的所在机构，如“西蒙.弗雷泽大学”）</message>
+	<message key="user.authorization.processAuthenticationTokenRequired">过程认证令牌丢失或无效。</message>
+	<message key="user.authorization.contextRequired">您不能在没有背景（出版社、期刊、会议等）的情况下调用该操作。</message>
+	<message key="user.authorization.privateOperation">您试图连接的操作为私有或不存在的。</message>
+	<message key="user.authorization.restrictedSiteAccess">您被拒绝访问。目前禁止访问该网站。</message>
+	<message key="user.authorization.roleBasedAccessDenied">当前的身份无法访问该操作。</message>
+	<message key="user.authorization.userGroupRequired">您必须设立有效的用户群来访问该操作。</message>
+	<message key="user.authorization.managerRequired">在您能够进行下一步前您必须指派一个出版管理身份的用户 （如出版或制作编辑）。</message>
+	<message key="user.interests.description">（按输入或逗号键来分隔兴趣）</message>
+	<message key="user.gossip">个人提醒</message>
+	<message key="user.group">用户群</message>
+	<message key="user.hello">嗨，</message>
+	<message key="user.profile.form.countryRequired">要求国家名</message>
+	<message key="user.profile.form.mailingAddressRequired">要求邮件地址</message>
+	<message key="user.profile.form.passwordSameAsOld">您的新密码同旧密码相同</message>
+	<message key="user.profile.form.usergroupRequired">要求用户群</message>
+</locale>

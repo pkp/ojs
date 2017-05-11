@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/zh_CN/installer.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (English) locale.
+  *
+  -->
+
+<locale name="en_US" full_name = "English">
+	<message key="installer.additionalLocales">额外的语言环境</message>
+	<message key="installer.administratorAccount">管理员帐户</message>
+	<message key="installer.administratorAccountInstructions">这个帐户将成为站点的管理员，并且可以存取整站的所有内容，额外的用户信息可以在安装后添加.</message>
+	<message key="installer.checkNo"><![CDATA[<span class="pkp_form_error formError">未通过</span>]]></message>
+	<message key="installer.checkYes">通过</message>
+	<message key="installer.clientCharset">客户端字符设置</message>
+	<message key="installer.clientCharsetInstructions">从浏览器发送和接受数据的使用的编码.</message>
+	<message key="installer.configFileError"><![CDATA[配置文件 <tt>config.inc.php</tt> 不存在或者不可读.]]></message>
+	<message key="installer.connectionCharset">连接字符集</message>
+	<message key="installer.contentsOfConfigFile">配置文件内容</message>
+	<message key="installer.createDatabase">创建新数据库</message>
+	<message key="installer.createDatabaseInstructions">若要使用此选项，您的数据库系统必须支持远程数据库的建立和您的用户帐户必须具有适当的权限来创建新的数据库.如果选择此选项的时候安装失败，请在服务器上手动创建数据库，并禁用此项后重新执行安装.</message>
+	<message key="installer.databaseCharset">数据库字符设置</message>
+	<message key="installer.databaseDriver">数据库驱动</message>
+	<message key="installer.databaseDriverInstructions"><![CDATA[<strong>如果选择括弧中所列的数据库驱动程序，但没有安装与启用所需的PHP函数的话，可能无法执行。</strong><br />上面个别列出由于学术目的而不支持的数据库驱动程序，而且不太可能运作。]]></message>
+	<message key="installer.databaseHost">主机</message>
+	<message key="installer.databaseHostInstructions">不填入主机名称会使用网域接口代替TCP/IP链接。这对MySQL来说并不必要，如果输入"localhost"它会自动使用接口，不过对某些其他的数据库服务器，好比PostgreSQL来说就是必要的.</message>
+	<message key="installer.databaseName">数据库名</message>
+	<message key="installer.databasePassword">密码</message>
+	<message key="installer.databaseSettings">数据库设置</message>
+	<message key="installer.databaseUsername">用户名</message>
+	<message key="installer.encryption">密码加密算法</message>
+	<message key="installer.filesDir">上传路径</message>
+	<message key="installer.fileSettings">文件设置</message>
+	<message key="installer.form.clientCharsetRequired">客户端字符设置必选.</message>
+	<message key="installer.form.databaseDriverRequired">数据库驱动必须选择一个.</message>
+	<message key="installer.form.databaseNameRequired">数据库名字是必须的.</message>
+	<message key="installer.form.emailRequired">一个有效的管理员帐户的电子邮箱是必须的.</message>
+	<message key="installer.form.encryptionRequired">用户密码加密算法必须选择.</message>
+	<message key="installer.form.filesDirRequired">用于存储上传文件的路径是必须的.</message>
+	<message key="installer.form.localeRequired">至少一个语言环境选择.</message>
+	<message key="installer.form.passwordRequired">管理员的帐号密码是必须的.</message>
+	<message key="installer.form.passwordsDoNotMatch">管理员的密码不相符.</message>
+	<message key="installer.form.separateMultiple">用逗号分隔多个值</message>
+	<message key="installer.form.usernameAlphaNumeric">管理员的用户名能包含数字和字符，下划线和链接符，而且必须以字母和数字开始和结束.</message>
+	<message key="installer.form.usernameRequired">管理员的用户名是必须的.</message>
+	<message key="installer.installationWrongPhp"><![CDATA[<br/><strong>警告：您当前PHP的版本不符合系统安装的最低要求. 推荐您升级系统的PHP版本到最新.</strong>]]></message>
+	<message key="installer.installErrorsOccurred">安装过程报错</message>
+	<message key="installer.installerSQLStatements">安装SQL语句</message>
+	<message key="installer.installFileError"><![CDATA[安装文件 <tt>dbscripts/xml/install.xml</tt> 不存在后者不可读.]]></message>
+	<message key="installer.installFilesDirError">为上传文件指定的目录不存在或者不可读.</message>
+	<message key="installer.installParseDBFileError"><![CDATA[错误解析数据库安装文件模板 <tt>{$file}</tt>.]]></message>
+	<message key="installer.installParseEmailTemplatesFileError"><![CDATA[错误解析电子邮件模板文件<tt>{$file}</tt>.]]></message>
+	<message key="installer.locale">语言设置</message>
+	<message key="installer.locale.maybeIncomplete">标记的语言环境尚未完成.</message>
+	<message key="installer.localeSettings">语言环境设置</message>
+	<message key="installer.oaiRepositoryIdInstructions"><![CDATA[一个独一无二的识别码，用来识别本站使用<a href="http://www.openarchives.org/" target="_blank">开放存档计划(Open Archives Initiative)</a>元数据搜集协定所索引的元数据记录 ]]></message>
+	<message key="installer.oaiRepositoryId">OAI库标识符</message>
+	<message key="installer.publicFilesDirError">Public的文件的目录不存在或不可写.</message>
+	<message key="installer.releaseNotes">发行说明</message>
+	<message key="installer.securitySettings">安全设置</message>
+	<message key="installer.installParseFilterConfigFileError"><![CDATA[错误解析过滤配置文件<tt>{$file}</tt>.]]></message>
+	<message key="installer.oaiSettings">OAI 设置</message>
+</locale>

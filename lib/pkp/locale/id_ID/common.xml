@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/id_ID/common.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="id_ID" full_name="Bahasa Indonesia">
+	<message key="about.aboutSite">Tentang Kami</message>
+	<message key="about.contact">Kontak</message>
+	<message key="about.contact.email">Email</message>
+	<message key="about.contact.phone">Telepon</message>
+	<message key="about.contact.principalContact">Kontak Utama</message>
+	<message key="about.contact.supportContact">Kontak Dukungan</message>
+	<message key="about.other">Lain-lain</message>
+	<message key="about.people">Penata Laksana</message>
+	<message key="about.policies">Kebijakan</message>
+	<message key="about.siteMap">Peta Situs</message>
+	<message key="announcement.announcements">Informasi</message>
+	<message key="announcement.announcementsHome">Informasi</message>
+	<message key="announcement.moreAnnouncements">Lebih banyak informasi...</message>
+	<message key="announcement.noneExist">Belum ada informasi yang diterbitkan.</message>
+	<message key="announcement.posted">Dikirimkan</message>
+	<message key="announcement.viewLink">Lebih Lanjut...</message>
+	<message key="announcement.view">Lihat Pengumuman</message>
+	<message key="common.actingAsUserGroup.userIsNotInTargetUserGroup">Anda tidak ada di grup pengguna ini.</message>
+	<message key="common.action">Aksi</message>
+	<message key="common.activate">Aktivasi</message>
+	<message key="common.active">Aktif</message>
+	<message key="common.add">Tambah</message>
+	<message key="common.addSelf">Tambahkan Diri Sendiri</message>
+	<message key="common.all">Semua</message>
+	<message key="common.alphaList">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</message>
+	<message key="common.alreadyAssigned">Ditugaskan</message>
+	<message key="common.altText">Selang-seling teks</message>
+	<message key="common.altTextInstructions">Merupakan teks pengganti gambar untuk penelusuran dengan perambah text-only.</message>
+	<message key="common.and">dan</message>
+	<message key="common.applyAction">Terapkan Aksi</message>
+	<message key="common.assign">Menugaskan</message>
+	<message key="common.assigned">Ditugaskan</message>
+	<message key="common.back">Kembali</message>
+	<message key="common.between">Antara</message>
+	<message key="common.cancel">Batal</message>
+	<message key="common.cancelled">Dibatalkan</message>
+	<message key="common.captchaField.altText">Gambar Validasi</message>
+	<message key="common.captchaField.badCaptcha">Karakter yang Anda masukkan tidak sesuai dengan karakter di gambar. Cek karakter dan coba lagi.</message>
+	<message key="common.captchaField.description">Masukkan huruf saat mereka ditampilkan di gambar di atas.</message>
+	<message key="common.captchaField">Validasi</message>
+	<message key="common.ccLicense"><![CDATA[
+		<br /><br />
+		<a target="_new" rel="license" href="http://creativecommons.org/licenses/by/3.0/">
+			<img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by/3.0/80x15.png"/>
+		</a>
+		<br/>
+		Bekerja dibawah lisensi <a rel="license" target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0  License</a>.
+	]]></message>
+	<message key="common.ccLicense.rt"><![CDATA[
+	<div class="rtBlock">
+		<br />
+		<a rel="license" href="http://creativecommons.org/licenses/by/3.0/" target="_new"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by/3.0/80x15.png" /></a>
+		<br />
+		Bekerja dibawah lisensi <a rel="license" href="http://creativecommons.org/licenses/by/3.0/" target="_new">Creative Commons Attribution 3.0 License</a>.
+	</div>
+	]]></message>
+	<message key="common.changesSaved">Perubahan yang Anda buat telah disimpan.</message>
+	<message key="common.chooseOne">Pilih satu</message>
+	<message key="common.close">Tutup</message>
+	<message key="common.closeWindow">Tutup Window</message>
+	<message key="common.complete">Selesai</message>
+	<message key="common.completed">Telah selesai</message>
+	<message key="common.continue">Lanjutkan</message>
+	<message key="common.copy">Salin</message>
+	<message key="common.country">Negara</message>
+	<message key="common.create">Buat</message>
+	<message key="common.dateCompleted">Tanggal telah selesai</message>
+	<message key="common.date">Tanggal</message>
+	<message key="common.dateModified">Tanggal Modifikasi</message>
+	<message key="common.dateRequested">Tanggal diminta</message>
+	<message key="common.dateSubmitted">Tanggal dikumpulkan</message>
+	<message key="common.dateUploaded">Tanggal diunggah</message>
+	<message key="common.day">Hari</message>
+	<message key="common.deactivate">Tidak diaktifkan</message>
+	<message key="common.default">Default</message>
+	<message key="common.delete">Hapus</message>
+	<message key="common.deleteSelection">Hapus Pilihan</message>
+	<message key="common.description">Deskripsi</message>
+	<message key="common.disable">Tidak Aktif</message>
+	<message key="common.disabled">sudah Tidak Aktif</message>
+	<message key="common.discipline">Disiplin Ilmu</message>
+	<message key="common.done">selesai</message>
+	<message key="common.download">Unduh</message>
+	<message key="common.edit">Edit</message>
+	<message key="common.enable">Aktif</message>
+	<message key="common.enabled">Sudah Aktif</message>
+	<message key="common.error.databaseError">Kesalahan database telah terjadi: {$error}</message>
+	<message key="common.error.databaseErrorUnknown">Kesalaham koneksi database yang tidak dikenali terjadi.</message>
+	<message key="common.error.framesRequired"><![CDATA[Halaman ini memerlukan bingkai.<a href="{$url}">Klik di sini</a> untuk versi non-frame.]]></message>
+	<message key="common.event">Event</message>
+	<message key="common.export">Ekspor</message>
+	<message key="common.fullscreen">Layar Penuh</message>
+	<message key="common.fullscreenOff">Layar Penuh dimatikan</message>
+	<message key="common.false">Salah</message>
+	<message key="common.file">File</message>
+	<message key="common.fileName">Nama File</message>
+	<message key="common.fileSize">Ukuran File</message>
+	<message key="common.fileType">Tipe File</message>
+	<message key="common.file.namingPattern">{$username}, {$userGroup}, {$originalFilename}</message>
+	<message key="common.file.anonymousNamingPattern">{$userGroup}, {$originalFilename}</message>
+	<message key="common.height">Tinggi</message>
+	<message key="common.homePageHeaderLogo.altText">Logo Header Beranda</message>
+	<message key="common.hour">Jam</message>
+	<message key="common.id">ID</message>
+	<message key="common.import">Impor</message>
+	<message key="common.initiate">Mulai</message>
+	<message key="common.inProgress">Dalam pengerjaan</message>
+	<message key="common.keywords">Kata Kunci</message>
+	<message key="common.language">Bahasa</message>
+	<message key="common.languages">Bahasa</message>
+	<message key="common.manage">Mengatur</message>
+	<message key="common.mailingAddress">Alamat Surat Menyurat</message>
+	<message key="common.minute">Menit</message>
+	<message key="common.modify">Modifikasi</message>
+	<message key="common.month">Bulan</message>
+	<message key="common.noneAssigned">Tidak ada yang ditugaskan</message>
+	<message key="common.none">Tidak Ada</message>
+	<message key="common.no">Tidak Ada</message>
+	<message key="common.noComments">Tidak ada komentar</message>
+	<message key="common.notApplicable">Tidak bisa diterapkan</message>
+	<message key="common.notApplicableShort">N/A</message>
+	<message key="common.notAvailable">Tidak Tersedia</message>
+	<message key="common.note">Rekam</message>
+	<message key="common.notes">Rekam</message>
+	<message key="common.notify">Beritahu</message>
+	<message key="common.off">Mati</message>
+	<message key="common.on">Hidup</message>
+	<message key="common.ok">OK</message>
+	<message key="common.options">Pilihan</message>
+	<message key="common.order">Perintah</message>
+	<message key="common.originalFileName">Nama file asli</message>
+	<message key="common.or">atau</message>
+	<message key="common.other">Yang lain</message>
+	<message key="common.pageHeaderLogo.altText">Logo Header Halaman</message>
+	<message key="common.plugin">Plugin</message>
+	<message key="common.pluginEnabled">Plugin "{$pluginName}" aktif.</message>
+	<message key="common.pluginDisabled">Plugin "{$pluginName}" tidak aktif.</message>
+	<message key="common.preview">Preview</message>
+	<message key="common.publisher">Penerbit</message>
+	<message key="common.re">Bls:</message>
+	<message key="common.record">Rekam</message>
+	<message key="common.refresh">Refresh</message>
+	<message key="common.related">Terkait</message>
+	<message key="common.remove">Hapus</message>
+	<message key="common.removeSelection">Pilihan Hapus</message>
+	<message key="common.replaced">Digantikan</message>
+	<message key="common.replaceFile">Ganti file</message>
+	<message key="common.requiredField">* Harus Diisi</message>
+	<message key="common.required">Dibutuhkan</message>
+	<message key="common.saveAndContinue">Simpan dan lanjutkan</message>
+	<message key="common.saveAndEmail">Simpan dan kirim email</message>
+	<message key="common.save">Simpan</message>
+	<message key="common.search">Cari</message>
+	<message key="common.second">Detik</message>
+	<message key="common.selectAll">Pilih semua</message>
+	<message key="common.selectNone">Pilih tidak ada</message>
+	<message key="common.select">Pilih</message>
+	<message key="common.size">Ukuran</message>
+	<message key="common.source">Sumber</message>
+	<message key="common.status">Status</message>
+	<message key="common.subject">Subjek</message>
+	<message key="common.suggest">Saran</message>
+	<message key="common.title">Judul</message>
+	<message key="common.top">Top</message>
+	<message key="common.true">Benar</message>
+	<message key="common.type">Tipe</message>
+	<message key="common.uninitiated">Belum dimulai</message>
+	<message key="common.untitled">Tidak berjudul</message>
+	<message key="common.updated">Updated</message>
+	<message key="common.uploadedFile">File yang diunggah</message>
+	<message key="common.upload">Unggah</message>
+	<message key="common.uploadFailed">file tidak bisa diunggah. Coba lagi atau hubungi administrator jika masalah tetap ada.</message>
+	<message key="common.up">Up</message>
+	<message key="common.url">URL</message>
+	<message key="common.user">Pengguna</message>
+	<message key="common.view">Lihat</message>
+	<message key="common.weeks">minggu</message>
+	<message key="common.width">Lebar</message>
+	<message key="common.year">Tahun</message>
+	<message key="common.yes">Ya</message>
+	<message key="common.loading">Memuat ...</message>
+	<message key="debug.databaseQueries">Jumlah pertanyaan database</message>
+	<message key="debug.executionTime">Halaman dihasilkan di</message>
+	<message key="debug.memoryUsage">Kegunaan Memori</message>
+	<message key="debug.notes.localeListLoad">Daftar bahasa yang dimuat "{$localeList}" dari XML</message>
+	<message key="debug.notes.localeLoad">File bahasa yang dimuat "{$localeFile}" dari XML</message>
+	<message key="debug.notes.missingLocaleKey">Kunci bahasa yang hilang"{$key}".</message>
+	<message key="debug.notes">Catatan:</message>
+	<message key="email.addAttachment">Tambah lampiran</message>
+	<message key="email.addBccRecipient">Tambah BCC</message>
+	<message key="email.addCcRecipient">Tambah CC</message>
+	<message key="email.addToRecipient">Tambah Penerima</message>
+	<message key="email.attachments">Lampiran</message>
+	<message key="email.bcc">BCC</message>
+	<message key="email.bccSender">Kirim salinan pesan ini ke email saya({$address})</message>
+	<message key="email.body">Badan</message>
+	<message key="email.cc">CC</message>
+	<message key="email.compose">Kirim Email</message>
+	<message key="email.compose.tooManyRecipients">Pesan yang Anda coba kirim punya terlalu banyak penerima.</message>
+	<message key="email.compose.tooSoon">Anda mencoba mengirim pesan terlalu cepat setelah pesan terakhir Anda dikirim. Tunggu sebelum mengirim pesan lain.</message>
+	<message key="email.email">Email</message>
+	<message key="email.from">Dari</message>
+	<message key="email.invalid">Alamat email{$email} tidak valid.</message>
+	<message key="email.multipart">Ini adalah pesan multi-part di format MIME.</message>
+	<message key="email.recipient">Penerima</message>
+	<message key="email.recipients">Penerima-penerima</message>
+	<message key="email.sender">Pengirim</message>
+	<message key="email.send">Kirim</message>
+	<message key="email.skip">Abaikan Email</message>
+	<message key="email.subject">Subjek</message>
+	<message key="email.to">Kepada</message>
+	<message key="form.errorsOccurred">Kesalahan terjadi memproses form ini</message>
+	<message key="form.formLanguage.description">Pilih bahasa yang diinginkan.</message>
+	<message key="form.formLanguage">Bahasa</message>
+	<message key="form.contains">Berisi</message>
+	<message key="form.is">Adalah</message>
+	<message key="form.startsWith">Mulai dengan</message>
+	<message key="form.postRequired">Form tidak diserahkan dengan tepat.</message>
+	<message key="form.required">(* Dibutuhkan)</message>
+	<message key="form.resubmit">Serahkan ulang</message>
+	<message key="form.saveToUpload">Gunakan simpan untuk mengunggah file.</message>
+	<message key="form.send">Kirim</message>
+	<message key="form.submit">Serahkan</message>
+	<message key="help.contents">Konten</message>
+	<message key="help.help">Bantuan</message>
+	<message key="help.helpIndex">Indeks Bantuan</message>
+	<message key="help.matchesFound">{$matches} cocok ditemukan</message>
+	<message key="help.noMatchingTopics">Tidak ada topik bantuan yang cocok ditemukan.</message>
+	<message key="help.relatedTopics">Topik Terkait</message>
+	<message key="help.searchFor">Cari Topik Bantuan untuk</message>
+	<message key="help.searchResultsFor">Hasil untuk</message>
+	<message key="help.searchResults">Hasil Pencarian</message>
+	<message key="help.search">Cari Bantuan</message>
+	<message key="help.toc">Daftar Isi</message>
+	<message key="help.upALevel">Naik satu level</message>
+	<message key="icon.checked.alt">Centang</message>
+	<message key="icon.comment.alt">Komentar</message>
+	<message key="icon.delete.alt">Hapus</message>
+	<message key="icon.edit.alt">Edit</message>
+	<message key="icon.folder.alt">Folder</message>
+	<message key="icon.font_large.alt">Besar</message>
+	<message key="icon.font_medium.alt">Sedang</message>
+	<message key="icon.font_small.alt">Kecil</message>
+	<message key="icon.info.alt">Info</message>
+	<message key="icon.letter.alt">Huruf</message>
+	<message key="icon.mail.alt">Surat</message>
+	<message key="icon.unchecked.alt">Tidak Dicentang</message>
+	<message key="icon.view.alt">Lihat</message>
+	<message key="locale.primary">Locale Utama</message>
+	<message key="locale.supported">Locale Pendukung</message>
+	<message key="navigation.about">Tentang Kami</message>
+	<message key="navigation.browse">Telusuri</message>
+	<message key="navigation.browseByTitle">Berdasarkan Judul</message>
+	<message key="navigation.dashboard">Dashboard</message>
+	<message key="navigation.home">Beranda</message>
+	<message key="navigation.infoForReaders">Untuk Pembaca</message>
+	<message key="navigation.infoForReaders.long">Informasi untuk pembaca</message>
+	<message key="navigation.items">{$from} - {$to} of {$total} Item</message>
+	<message key="navigation.login">Login</message>
+	<message key="navigation.nextPage"><![CDATA[&gt;&gt;]]></message>
+	<message key="navigation.nextStep">Langkah selanjutnya</message>
+	<message key="navigation.previousPage"><![CDATA[&lt;&lt;]]></message>
+	<message key="navigation.previousStep">Langkah sebelumnya</message>
+	<message key="navigation.register">Daftar</message>
+	<message key="navigation.search">Cari</message>
+	<message key="navigation.stepNumber">Langkah{$step}</message>
+	<message key="navigation.userHome"> Beranda Pengguna</message>
+	<message key="navigation.user">Pengguna</message>
+	<message key="notification.allow">Izinkan semua tipe notifikasi ini untuk ditampilkan di fees notifikasi saya.</message>
+	<message key="notification.confirmError">Ada kesalahan saat mengkonfirmasi langganan Anda.</message>
+	<message key="notification.confirmSuccess">Anda telah berlangganan dengan sukses.</message>
+	<message key="notification.email">Kirimi saya email untuk tipe notifikasi ini.</message>
+	<message key="notification.location">Pergi ke URL</message>
+	<message key="notification.mailList">Daftar surat menyurat notifikasi</message>
+	<message key="notification.mailList.emailInvalid">Masukkan alamat email yang valid.</message>
+	<message key="notification.mailList.privacyProtection">Kebijakan Perlindungan Privasi</message>
+	<message key="notification.mailList.protectedContent"><![CDATA[<a href="{$subscribeUrl}">Langganan</a> ke konten yang dilindungi.]]></message>
+	<message key="notification.mailList.submit"><![CDATA[<a href="{$submitUrl}">Kirim</a> artikel]]></message>
+	<message key="notification.mailList.register">Anda dapat mendaftar dengan situs ini ke...</message>
+	<message key="notification.mailList.review"><![CDATA[Berpartisipasi di<a href="{$reviewUrl}">peer review</a> process]]></message>
+	<message key="notification.noneExist">Anda tidak punya notifikasi saat ini.</message>
+	<message key="notification.notification">Notifikasi</message>
+	<message key="notification.notifications">Notifikasi</message>
+	<message key="notification.notificationsNew">({$numNew} new)</message>
+	<message key="notification.notificationsDescription">Anda punya {$unreadCount} notifikasi yang belum dibaca dan  {$readCount} notifikasi yang sudah dibaca .<![CDATA[  <a href="{$settingsUrl}">Klik di sini</a>untuk mengganti pengaturan notifikasi Anda.]]></message>
+	<message key="notification.settings">Pengaturan Notifikasi</message>
+	<message key="notification.settingsDescription">Pilih event sistem yang Anda ingin diberitahu. Melepaskan tanda centang di item akan mencegah notifikasi event dari ditampilkan di feed notifikasi.</message>
+	<message key="notification.subscribe">Langganan</message>
+	<message key="notification.subscribeError">Alamat email Anda telah berlangganan ke notifikasi ini.</message>
+	<message key="notification.subscribeSuccess">Email telah terkirim ke alamat yang dituju. Silahkan klik tautan konfirmasi di email untuk bergabung dalam mailing list.</message>
+	<message key="notification.reminderError">Ada kesalahan saat mengirimkan kata sandi Anda, pastikan Anda memasukkan alamat email dengan benar.</message>
+	<message key="notification.reminderSent">Kata sandi baru Anda telah dikirim ke alamat email yang disediakan.</message>
+	<message key="notification.unsubscribe">Tidak berlangganan</message>
+	<message key="notification.unsubscribeDescription">Masukkan alamat email dan kata sandi Anda untuk tidak berlangganan dari notifikasi email. Jika Anda tidak ingat kata sandi Anda, tinggalkan bidang kata sandi kosong dan yang baru akan dikirimkan melalui email pada alamat email yang diberikan.</message>
+	<message key="notification.unsubscribeError">Ada kesalahan saat proses tidak berlangganan. Pastikan alamat email dan kata sandi Anda benar.</message>
+	<message key="notification.unsubscribeSuccess">Anda telah sukses tidak berlangganan.</message>
+	<message key="search.abstract">Sari</message>
+	<message key="search.author">Penulis</message>
+	<message key="search.coverage">Cakupan</message>
+	<message key="search.date">Tanggal</message>
+	<message key="search.dateFrom">Dari</message>
+	<message key="search.dateTo">Sampai</message>
+	<message key="search.discipline">Disiplin Ilmu</message>
+	<message key="search.fullText">Teks Lengkap</message>
+	<message key="search.indexTerms">Indeks</message>
+	<message key="search.matchAll">Cocok dengan semua kategori</message>
+	<message key="search.noKeywordError">Anda harus masukkan setidaknya satu kata kunci pencarian.</message>
+	<message key="search.noResults">Tidak ada hasil</message>
+	<message key="search.operator.and">dan</message>
+	<message key="search.operator.not">bukan</message>
+	<message key="search.operator.or">atau</message>
+	<message key="search.reviseSearch">Revisi Pencarian</message>
+	<message key="search.searchAllCategories">Cari semua kategori untuk</message>
+	<message key="search.searchCategories">Cari Kategori</message>
+	<message key="search.searchResults">Hasil Pencarian</message>
+	<message key="search.subject">Kata Kunci</message>
+	<message key="search.titleIndex">Menelusuri Indeks Judul</message>
+	<message key="search.title">Judul</message>
+	<message key="search.typeMethodApproach">Tipe (metode/pendekatan)</message>
+</locale>

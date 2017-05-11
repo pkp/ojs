@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE filterConfig SYSTEM "../../../../dtd/filterConfig.dtd">
+
+<!--
+  * filterConfig.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Filter Configuration.
+  -->
+<filterConfig>
+	<filterGroups>
+		<!-- citation meta-data adapter -->
+		<filterGroup
+			symbolic="citation=>nlm30"
+			displayName="plugins.metadata.nlm30.citationAdapter.displayName"
+			description="plugins.metadata.nlm30.citationAdapter.description"
+			inputType="class::lib.pkp.classes.citation.Citation"
+			outputType="metadata::lib.pkp.plugins.metadata.nlm30.schema.Nlm30CitationSchema(CITATION)" />
+		<filterGroup
+			symbolic="nlm30=>citation"
+			displayName="plugins.metadata.nlm30.citationAdapter.displayName"
+			description="plugins.metadata.nlm30.citationAdapter.description"
+			inputType="metadata::lib.pkp.plugins.metadata.nlm30.schema.Nlm30CitationSchema(CITATION)"
+			outputType="class::lib.pkp.classes.citation.Citation" />
+
+		<!-- citation parsers (citation extraction services) -->
+		<filterGroup
+			symbolic="plaintext=>nlm30-element-citation"
+			displayName="plugins.metadata.nlm30.citationParsers.displayName"
+			description="plugins.metadata.nlm30.citationParsers.description"
+			inputType="primitive::string"
+			outputType="metadata::lib.pkp.plugins.metadata.nlm30.schema.Nlm30CitationSchema(CITATION)" />
+
+		<!-- citation lookup (citation database/improvement/lookup services) -->
+		<filterGroup
+			symbolic="nlm30-element-citation=>nlm30-element-citation"
+			displayName="plugins.metadata.nlm30.citationLookup.displayName"
+			description="plugins.metadata.nlm30.citationLookup.description"
+			inputType="metadata::lib.pkp.plugins.metadata.nlm30.schema.Nlm30CitationSchema(CITATION)"
+			outputType="metadata::lib.pkp.plugins.metadata.nlm30.schema.Nlm30CitationSchema(CITATION)" />
+
+		<!-- citation output -->
+		<filterGroup
+			symbolic="nlm30-element-citation=>plaintext"
+			displayName="plugins.metadata.nlm30.citationOutput.displayName"
+			description="plugins.metadata.nlm30.citationOutput.description"
+			inputType="metadata::lib.pkp.plugins.metadata.nlm30.schema.Nlm30CitationSchema(CITATION)"
+			outputType="primitive::string" />
+		<filterGroup
+			symbolic="nlm30-element-citation=>nlm30-xml"
+			displayName="plugins.metadata.nlm30Xml.citationOutput.displayName"
+			description="plugins.metadata.nlm30Xml.citationOutput.description"
+			inputType="metadata::lib.pkp.plugins.metadata.nlm30.schema.Nlm30CitationSchema(CITATION)"
+			outputType="xml::*" />
+			<!-- FIXME: Add NLM citation-element + name validation (requires partial NLM DTD, XSD or RelaxNG), see #5648  -->
+
+		<!-- NLM 3.0 output -->
+		<filterGroup
+			symbolic="submission=>nlm30-article-xml"
+			displayName="plugins.metadata.nlm30.nlm30XmlOutput.displayName"
+			description="plugins.metadata.nlm30.nlm30XmlOutput.description"
+			inputType="class::lib.pkp.classes.submission.Submission"
+			outputType="xml::*" />
+			<!-- FIXME: Add NLM 3.0 tag set schema validation as soon as we implement the full tag set, see #5648 -->
+
+		<!-- NLM 2.3 output -->
+		<filterGroup
+			symbolic="submission=>nlm23-article-xml"
+			displayName="plugins.metadata.nlm30.nlm23XmlOutput.displayName"
+			description="plugins.metadata.nlm30.nlm23XmlOutput.description"
+			inputType="class::lib.pkp.classes.submission.Submission"
+			outputType="xml::*" />
+			<!-- FIXME: Add NLM 2.3 tag set schema validation as soon as we implement the full tag set, see #5648 -->
+
+		<!-- NLM 3.0 to 2.3 downgrade -->
+		<filterGroup
+			symbolic="nlm30-article-xml=>nlm23-article-xml"
+			displayName="plugins.metadata.nlm30.nlm30ToNlm23Xml.displayName"
+			description="plugins.metadata.nlm30.nlm30ToNlm23Xml.description"
+			inputType="xml::*"
+			outputType="xml::*" />
+			<!-- FIXME: Add NLM 2.3 and 3.0 tag set schema validation as soon as we implement the full tag set, see #5648 -->
+
+		<!-- Plain text reference list output -->
+		<filterGroup
+			symbolic="submission=>reference-list"
+			displayName="plugins.metadata.nlm30.refList.displayName"
+			description="plugins.metadata.nlm30.refList.description"
+			inputType="class::lib.pkp.classes.submission.Submission"
+			outputType="class::lib.pkp.classes.citation.PlainTextReferencesList" />
+	</filterGroups>
+	<filters>
+		<!-- NLM 3.0 citation adapter -->
+		<filter
+			inGroup="citation=>nlm30"
+			class="lib.pkp.plugins.metadata.nlm30.filter.Nlm30CitationSchemaCitationAdapter"
+			isTemplate="0" />
+		<filter
+			inGroup="nlm30=>citation"
+			class="lib.pkp.plugins.metadata.nlm30.filter.Nlm30CitationSchemaCitationAdapter"
+			isTemplate="0" />
+
+		<!-- NLM 3.0 meta-data description to XML conversion -->
+		<filter
+			inGroup="nlm30-element-citation=>nlm30-xml"
+			class="lib.pkp.plugins.metadata.nlm30.filter.Nlm30CitationSchemaNlm30XmlFilter"
+			isTemplate="0" />
+
+		<!-- Export of submissions to NLM 3.0 XML -->
+		<!-- FIXME: The following filter is not yet correctly defined, needs to be defined in
+		     apps as soon as Article*/Monograph*/etc. versions of this filter exist, see #5648. -->
+		<filter
+			inGroup="submission=>nlm30-article-xml"
+			class="lib.pkp.plugins.metadata.nlm30.filter.PKPSubmissionNlm30XmlFilter"
+			isTemplate="0" />
+
+		<!-- NLM 2.3 output -->
+		<filter
+			inGroup="submission=>nlm23-article-xml"
+			class="lib.pkp.classes.filter.GenericSequencerFilter"
+			isTemplate="0">
+			<setting type="string"><name>displayName</name><value>NLM Journal Publishing V2.3 ref-list</value></setting>
+
+			<filter
+				inGroup="submission=>nlm30-article-xml"
+				class="lib.pkp.plugins.metadata.nlm30.filter.PKPSubmissionNlm30XmlFilter"
+				isTemplate="0">
+				<setting type="int"><name>seq</name><value>1</value></setting>
+				<setting type="string"><name>displayName</name><value>NLM 2.3: NLM 3.0</value></setting>
+			</filter>
+			<filter
+				inGroup="nlm30-article-xml=>nlm23-article-xml"
+				class="lib.pkp.classes.xslt.XSLTransformationFilter"
+				isTemplate="0">
+				<setting type="int"><name>seq</name><value>2</value></setting>
+				<setting type="string"><name>displayName</name><value>NLM 2.3: NLM 3.0 to 2.3</value></setting>
+				<setting type="const"><name>xslType</name><value>XSL_TRANSFORMER_DOCTYPE_FILE</value></setting>
+				<setting type="string"><name>xsl</name><value>lib/pkp/plugins/metadata/nlm30/filter/nlm30-to-23-ref-list.xsl</value></setting>
+			</filter>
+			<setting type="object">
+				<name>settingsMapping</name>
+				<value><array>
+					<element key="apiKey"><array>
+						<element>seq1_apiKey</element>
+						<element>seq2_apiKey</element>
+					</array></element>
+					<element key="isOptional"><array>
+						<element>seq1_isOptional</element>
+						<element>seq2_isOptional</element>
+					</array></element>
+				</array></value>
+			</setting>
+		</filter>
+	</filters>
+</filterConfig>

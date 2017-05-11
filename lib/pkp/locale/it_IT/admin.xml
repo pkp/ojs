@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/it_IT/admin.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="it_IT" full_name="Italiano">
+	<message key="admin.adminFunctions">Funzioni di amministrazione</message>
+	<message key="admin.auth.confirmDelete">Sei sicuro di voler cancellare permanentemente questa fonte di autenticazione?</message>
+	<message key="admin.auth.create">Crea una fonte di autenticazione</message>
+	<message key="admin.auth.noneCreated">Non sono state definite fonti di autenticazione.</message>
+	<message key="admin.authSources">Autenticazione</message>
+	<message key="admin.clearDataCache">Svuota la cache dei dati</message>
+	<message key="admin.clearTemplateCache">Svuota la cache dei template</message>
+	<message key="admin.configFileUpdatedInstructions"><![CDATA[Il file di configurazione &#x00E8; stato modificato con successo. Da notare che se il sito non dovesse pi&#x00F9; funzionare correttamente dopo queste modifiche sar&#x00E0; necessario sistemare manualmente il file di configurazione <tt>config.inc.php</tt>.]]></message>
+	<message key="admin.confirmClearTemplateCache">Sei sicuro di voler svuotare la cache dei template compilati?</message>
+	<message key="admin.confirmExpireSessions">Sei sicuro di voler chiudere tutte le sessioni utente? Tutti gli utenti attualmente collegati al sistema saranno costretti ad effettuare di nuovo il log in (te compreso).</message>
+	<message key="admin.contentsOfConfigFile">Contenuti del file di configurazione</message>
+	<message key="admin.currentVersion">Versione corrente</message>
+	<message key="admin.dateInstalled">Data d'installazione</message>
+	<message key="admin.displayConfigFileInstructions"><![CDATA[Il contenuto del file di configurazione aggiornato e visualizzato qui di seguito. Per applicare queste modifiche dovete aprire il file <tt>config.inc.php</tt> con un editor di testo e sostituirne il contenuto con il testo della form sottostante.]]></message>
+	<message key="admin.displayNewSystemConfig">Visualizza la nuova configurazione</message>
+	<message key="admin.expireSessions">Fai scadere le sessioni degli utenti</message>
+	<message key="admin.languages.confirmReload">Sei sicuro di voler aggiornare questa lingua aggiuntiva? Questo cancellerà le impostazioni già esistenti, come ad esempio i modelli per le email.</message>
+	<message key="admin.languages.installedLocales">localizzazioni installate</message>
+	<message key="admin.languages.installLanguages">Amministra localizzazioni</message>
+	<message key="admin.languages.installLocales">Installazione</message>
+	<message key="admin.languages.installNewLocales">Installa nuove localizzazioni</message>
+	<message key="admin.languages.languageSettings">Impostazioni per le lingue</message>
+	<message key="admin.languages.noLocalesAvailable">Non è disponibile per l'installazione nessuna lingua aggiuntiva.</message>
+	<message key="admin.languages.reload">Ricarica localizzazione</message>
+	<message key="admin.languages.uninstall">Disinstalla localizzazione</message>
+	<message key="admin.phpInfo">Informazioni dettagliate su PHP</message>
+	<message key="admin.server.apacheVersion">Versione di Apache</message>
+	<message key="admin.server.dbDriver">Driver del database</message>
+	<message key="admin.server.dbVersion">Versione del server di database</message>
+	<message key="admin.serverInformation">Informazioni sul Server</message>
+	<message key="admin.server.phpVersion">Versione di PHP</message>
+	<message key="admin.server.platform">Sistema operativo</message>
+	<message key="admin.settings.aboutDescription">Descrizione del sito</message>
+	<message key="admin.settings.contactEmail">Email del contatto principale</message>
+	<message key="admin.settings.contactName">Nome del contatto principale</message>
+	<message key="admin.settings.form.contactEmailRequired">È richiesto l'indirizzo e-mail del contatto principale.</message>
+	<message key="admin.settings.form.contactNameRequired">È richiesto il nome del contatto principale.</message>
+	<message key="admin.settings.form.minPasswordLengthRequired">Devi inserire una password composta almeno da 4 caratteri.</message>
+	<message key="admin.settings.form.titleRequired">È necessario inserire un titolo.</message>
+	<message key="admin.settings.homeHeaderImage.altText">Logo del sito</message>
+	<message key="admin.settings.homeHeaderImageInvalid">Formato dell'immagine del logo del sito non valido. I formati accettati sono .gif, .jpg, o .png.</message>
+	<message key="admin.settings.introduction">Introduzione</message>
+	<message key="admin.settings.minPasswordLength">Lunghezza minima delle password</message>
+	<message key="admin.settings.passwordCharacters">caratteri</message>
+	<message key="admin.settings.siteLanguage">Lingua del sito</message>
+	<message key="admin.settings.siteStyleSheetInvalid">Formato del foglio di stile del sito non valido. Il formato accettato è .css.</message>
+	<message key="admin.settings.siteStyleSheet">Foglio di stile del sito</message>
+	<message key="admin.settings.siteTitle">Titolo del sito</message>
+	<message key="admin.siteAdmin">Amministrazione del sito</message>
+	<message key="admin.siteManagement">Gestione del sito</message>
+	<message key="admin.siteSettings">Impostazioni</message>
+	<message key="admin.systemConfigFileReadError"><![CDATA[Il file di configurazione <tt>config.inc.php</tt> non esiste, non &#x00E8; leggibile o non &#x00E8; valido.]]></message>
+	<message key="admin.systemInformation">Informazioni sul sistema</message>
+	<message key="admin.versionBuild">Compilazione</message>
+	<message key="admin.version.checkForUpdates">Cerca aggiornamenti</message>
+	<message key="admin.version.downloadPackage">Scarica</message>
+	<message key="admin.version.downloadPatch">Scarica patch</message>
+	<message key="admin.versionHistory">Versioni precedenti</message>
+	<message key="admin.version.latest">Ultima versione</message>
+	<message key="admin.versionMajor">Maggiore</message>
+	<message key="admin.versionMinor">Minore</message>
+	<message key="admin.version.moreInfo">Altre informazioni</message>
+	<message key="admin.versionRevision">Revisione</message>
+	<message key="admin.version.updateAvailable"><![CDATA[&Egrave; disponibile una versione aggiornata]]></message>
+	<message key="admin.version.upToDate">Il tuo sistema è aggiornato</message>
+	<message key="admin.version">Versione</message>
+	<message key="admin.settings">Impostazioni</message>
+	<message key="admin.settings.siteTheme">Tema del sito</message>
+	<message key="admin.siteSetup">Setup del sito</message>
+	<message key="admin.systemInfo.settingName">Nome</message>
+	<message key="admin.systemInfo.settingValue">Valore</message>
+	<message key="admin.languages.installLocale">Installa lingua</message>
+	<message key="admin.scheduledTask.clearLogs">Svuota registro delle attività programmate</message>
+	<message key="admin.settings.siteLogo">Logo</message>
+</locale>

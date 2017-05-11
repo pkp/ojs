@@ -1,0 +1,51 @@
+/**
+ * @file styles/pages/settings.less
+ *
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @brief Styles for the settings pages
+ *
+ */
+
+.pkp_settings_navigation > div {
+	width: 50%;
+	float: left;
+	padding-right: @base;
+}
+
+// 4th child because of extra <script> tags...
+.pkp_settings_navigation > div:nth-child(4) {
+	padding-left: @base;
+	padding-right: 0;
+}
+
+//
+// Hacky workarounds for targetting specific things that aren't that well
+// marked up, or otherwise cause complications
+//
+
+// Reduce prominence of plugin description
+#pluginsTabs .pkp_controllers_grid tbody:not(.empty) .gridRow:not(.category) td:nth-child(2) {
+	font-size: @font-sml;
+	line-height: @line-sml;
+	color: @text-light;
+	color: @text-light-rgba;
+}
+
+#announcementTypeGridContainer {
+	margin-top: @double;
+}
+
+// Settings > Journal > Sponsor
+// Collapses unnecessary grid bottom margins
+#affiliationForm .pkp_controllers_grid {
+	margin-bottom: 0;
+}
+
+// Settings > Workflow > Publication > Review Form Item > Form Items
+#ReviewFormElementsGridContainer tbody:not(.empty) td:first-child p {
+	margin-top: 0;
+	margin-bottom: 0;
+}

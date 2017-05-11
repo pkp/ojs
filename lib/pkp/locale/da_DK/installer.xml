@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/da_DK/installer.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the da_DK (Dansk) locale.
+  *
+  -->
+
+<locale name="da_DK" full_name="Dansk">
+	<message key="installer.additionalLocales">Yderligere landestandarder</message>
+	<message key="installer.administratorAccount">Administratorkonto</message>
+	<message key="installer.administratorAccountInstructions">Denne brugerkonto bliver webstedsadministrator og vil få fuld adgang til systemet. Efter installationen kan der oprettes flere brugerkonti.</message>
+	<message key="installer.checkNo"><![CDATA[<span class="pkp_form_error formError">NEJ</span>]]></message>
+	<message key="installer.checkYes">Ja</message>
+	<message key="installer.clientCharset">Klienttegnsæt</message>
+	<message key="installer.clientCharsetInstructions">Den kode, som skal bruge til data, der sendes til og modtages fra browsere.</message>
+	<message key="installer.configFileError"><![CDATA[Konfigurationsfilen <tt>config.inc.php</tt> findes ikke eller kan ikke læses.]]></message>
+	<message key="installer.connectionCharset">Forbindelsestegnsæt</message>
+	<message key="installer.contentsOfConfigFile">Konfigurationsfilens indhold</message>
+	<message key="installer.createDatabase">Opret ny database</message>
+	<message key="installer.createDatabaseInstructions">Hvis du vil benytte denne indstilling, skal databasesystemet understøtte oprettelse af fjerndatabaser, og din brugerkonto skal have de korrekte tilladelser til at oprette nye databaser. Hvis installationen mislykkes, når denne indstilling er valgt, skal du manuelt oprette databasen på serveren og køre installationsprogrammet igen, hvor denne indstilling er deaktiveret.</message>
+	<message key="installer.databaseCharset">Databasetegnsæt</message>
+	<message key="installer.databaseDriver">Databasedriver</message>
+	<message key="installer.databaseDriverInstructions"><![CDATA[<strong> I de databasedrivere, der er angivet i kantede parenteser, er den påkrævede PHP-udvidelse tilsyneladende ikke indlæst, og installationen vil sandsynligvis mislykkes, hvis den vælges.</strong><br />Eventuelle ikke-understøttede databasedrivere, der er angivet ovenfor, er udelukkende angivet til akademiske formål og vil sandsynligvis ikke fungere.]]></message>
+	<message key="installer.databaseHost">Vært</message>
+	<message key="installer.databaseHostInstructions">Undlad at udfylde værtsnavnet, hvis du vil oprette forbindelse ved hjælp af domænesockets i stedet for via TCP/IP. Dette er ikke nødvendigt i forbindelse med MySQL, der automatisk bruger sockets, hvis "localhost" angives, men det er påkrævet i forbindelse med visse andre databaseservere, f.eks. PostgreSQL.</message>
+	<message key="installer.databaseName">Databasenavn</message>
+	<message key="installer.databasePassword">Adgangskode</message>
+	<message key="installer.databaseSettings">Databaseindstillinger</message>
+	<message key="installer.databaseUsername">Brugernavn</message>
+	<message key="installer.encryption">Algoritme til kryptering af adgangskode</message>
+	<message key="installer.filesDir">Mappe til overførsler</message>
+	<message key="installer.fileSettings">Filindstillinger</message>
+	<message key="installer.form.clientCharsetRequired">Der skal vælges et klienttegnsæt.</message>
+	<message key="installer.form.databaseDriverRequired">Der skal vælges en databasedriver.</message>
+	<message key="installer.form.databaseNameRequired">Databasenavnet er påkrævet.</message>
+	<message key="installer.form.emailRequired">Der kræves en gyldig e-mail-adresse til administratorkontoen.</message>
+	<message key="installer.form.encryptionRequired">Der skal vælges en algoritme, som skal bruges til kryptering af brugeradgangskoder.</message>
+	<message key="installer.form.filesDirRequired">Der kræves en mappe, som skal bruges til lagring af overførte filer.</message>
+	<message key="installer.form.localeRequired">Der skal vælges en landestandard.</message>
+	<message key="installer.form.passwordRequired">Der kræves en adgangskode til administratorkontoen.</message>
+	<message key="installer.form.passwordsDoNotMatch">Administratoradgangskoderne stemmer ikke overens.</message>
+	<message key="installer.form.separateMultiple">Adskil flere værdier med kommaer</message>
+	<message key="installer.form.usernameAlphaNumeric">Administratorbrugernavnet må kun indeholde alfanumeriske tegn, understregningstegn og bindestreger og skal begynde og slutte med et alfanumerisk tegn.</message>
+	<message key="installer.form.usernameRequired">Der kræves et brugernavn til administratorkontoen.</message>
+	<message key="installer.installationWrongPhp"><![CDATA[<br/><strong>ADVARSEL! Din aktuelle version af PHP opfylder ikke minimumkravene til installation. Det anbefales at opgradere til en nyere version af PHP.</strong>]]></message>
+	<message key="installer.installErrorsOccurred">Der opstod fejl under installationen</message>
+	<message key="installer.installerSQLStatements">SQL-sætninger til installation</message>
+	<message key="installer.installFileError"><![CDATA[Installationsfilen <tt>dbscripts/xml/install.xml</tt> findes ikke eller kan ikke læses.]]></message>
+	<message key="installer.installFilesDirError">Den angivne mappe til overførte filer findes ikke eller er ikke skrivbar.</message>
+	<message key="installer.installParseDBFileError"><![CDATA[Der opstod en fejl under parsing af databaseinstallationsfilen <tt>{$file}</tt>.]]></message>
+	<message key="installer.locale">Landestandard</message>
+	<message key="installer.localeSettings">Landestandardindstillinger</message>
+	<message key="installer.oaiRepositoryIdInstructions"><![CDATA[Et entydigt id, som bruges til at identificere metadataposter, der er indekseret fra dette websted ved hjælp af <a href="http://www.openarchives.org/" target="_blank">Open Archives Initiative</a> Protocol for Metadata Harvesting.]]></message>
+	<message key="installer.oaiRepositoryId">Id til OAI-lager</message>
+	<message key="installer.publicFilesDirError">Den offentlige filmappe findes ikke eller er ikke skrivbar.</message>
+	<message key="installer.releaseNotes">Produktbemærkninger</message>
+	<message key="installer.securitySettings">Sikkerhedsindstillinger</message>
+	<message key="installer.installParseEmailTemplatesFileError"><![CDATA[Fejl ved parsing af e-mail-skabelonfil <tt>{$file}</tt>.]]></message>
+	<message key="installer.locale.maybeIncomplete">De markerede landestandarder kan være ufuldstændige.</message>
+	<message key="installer.installParseFilterConfigFileError"><![CDATA[Fejl ved parsing af filter-skabelonfil <tt>{$file}</tt>.]]></message>
+	<message key="installer.oaiSettings">OAI indstilling</message>
+</locale>

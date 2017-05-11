@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/tr_TR/user.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization strings for the tr_TR (Türkçe) locale.
+  -->
+
+<locale name="tr_TR" full_name="Türkçe">
+	<message key="user.affiliation">Kurum</message>
+	<message key="user.affiliation.description">(Kurumunuz, Ör.; Doğuş Üniversitesi, İİBF, İşletme Bölümü)</message>
+	<message key="user.affiliations">Kurumlar</message>
+	<message key="user.authorization.accessDenied">Erişim engellendi.</message>
+	<message key="user.authorization.processAuthenticationTokenRequired">İşlem kimlik belirteci eksik veya geçersiz.</message>
+	<message key="user.authorization.contextRequired">Bir kaynak olmadan bu işlemi çağıramazsınız (dergi, konferans, vb.).</message>
+	<message key="user.authorization.loginRequired">Üye girişi gerekli.</message>
+	<message key="user.authorization.privateOperation">Yapmak istediğiniz işlem özel veya mevcut değil.</message>
+	<message key="user.authorization.restrictedSiteAccess">Erişiminiz engellendi. Bu sayfaya giriş sınırlandırılmıştır.</message>
+	<message key="user.authorization.roleBasedAccessDenied">Mevcut yetkiniz bu işlemi gerçekleştirmek için yeterli değildir.</message>
+	<message key="user.authorization.userGroupRequired">Bu işlemi gerçekleştirebilmek için geçerli bir kullanıcı grubu belirlemelisiniz.</message>
+	<message key="user.biography">Öz Geçmiş</message>
+	<message key="user.biography.description">(Örneğin, bölüm ve kıdem)</message>
+	<message key="user.changeMyPassword">Şifremi Değiştir</message>
+	<message key="user.changePassword">Şifre Değiştir</message>
+	<message key="user.dateLastLogin">Son giriş</message>
+	<message key="user.dateRegistered">Kayıt tarihi</message>
+	<message key="user.editMyProfile">Profilimi Düzenle</message>
+	<message key="user.email">E-posta</message>
+	<message key="user.feminine">F</message>
+	<message key="user.firstName">İlk Adı</message>
+	<message key="user.gender">Cinsiyet</message>
+	<message key="user.initialsExample">Aytuğ Sefa ÇELİK = ASÇ</message>
+	<message key="user.initials">İlk Harfler</message>
+	<message key="user.interests">Uzmanlık Alanı</message>
+	<message key="user.interests.description">(Eğer aradığınız terim listede yoksa yazdıktan sonra "enter" veya "virgül" tuşuna basınız)</message>
+	<message key="user.gossip">Özel notlar</message>
+	<message key="user.lastName">Soyad</message>
+	<message key="user.profile.form.profileImageInvalid">Hatalı görsel formatı ya da büyük görsel. Görseller .gif, .jpg veya .png biçimlerinden biri olmalıdır ve boyutları en fazla 150X150 ebadında olmamalıdır.</message>
+	<message key="user.login.accountDisabledWithReason">Hesabınız aşağıda belirtilen nedenden dolayı pasifleştirilmiştir: {$reason}</message>
+	<message key="user.login.accountDisabled">Hesabınız pasifleştirilmiştir. Daha fazla bilgi için lütfen yönetici ile temasa geçiniz.</message>
+	<message key="user.login.accountNotValidated">E-posta adresiniz geçerli değildir. E-posta adresinizi kontrol edin ve verilen talimatları uygulayın. Eğer herhangi bir mail almazsanız sistem yöneticisine başvurunuz.</message>
+	<message key="user.login.activate">Hesap Etkinleştirme</message>
+	<message key="user.login.activated">Hesabınızı etkinleştirdiğiniz için teşekkür ederiz. Şimdi hesabınızı oluştururken size verilen kimlik bilgilerini kullanarak giriş yapabilirsiniz.</message>
+	<message key="user.login.changePasswordInstructions"><![CDATA[Siteye girmek için öncelikle yeni bir şifre belirlemeniz gerekmektedir. <br /><br />Şifrenizi değiştirmek için lütfen kullanıcı adınızı, mevcut şifrenizi ve yeni şifrenizi giriniz.]]></message>
+	<message key="user.login.forgotPassword">Şifrenizi mi unuttunuz?</message>
+	<message key="user.login.loginError">Kullanıcı adı yada şifre hatalı girildi. Büyük-küçük harf uyumuna dikkat ederek yeniden deneyiniz.</message>
+	<message key="user.login">Giriş</message>
+	<message key="user.login.lostPassword.confirmationSent">E-posta adresinize bir doğrulama mesajı gönderilmiştir. Şifrenizi yenilemek için bu e-postadaki talimatları uygulayınız.</message>
+	<message key="user.login.lostPassword.invalidHash">Üzgünüz, tıklamış olduğunuz bağlantı geçerli değildir. Şifrenizi yenilemek için tekrar deneyiniz.</message>
+	<message key="user.login.lostPassword.invalidUser">Belirtilen e-posta adresiyle kayıtlı bir kullanıcı bulunamamıştır.</message>
+	<message key="user.login.lostPassword.passwordSent">E-posta adresinize yeni şifreniz gönderilmiştir. Yeni şifrenizi kullanarak siteme bağlanabilirsiniz.</message>
+	<message key="user.login.registeredEmail">Kayıtlı kullanıcının e-posta adresi</message>
+	<message key="user.login.resetPassword">Şifreyi Sıfırla</message>
+	<message key="user.logOut">Çıkış</message>
+	<message key="user.mailingAddress">Posta Adresi</message>
+	<message key="user.masculine">M</message>
+	<message key="user.middleName">İkinci adı</message>
+	<message key="user.myAccount">Hesabım</message>
+	<message key="user.name">Ad</message>
+	<message key="user.other">Diğer</message>
+	<message key="user.password">Şifre</message>
+	<message key="user.repeatPassword">Şifre tekrarı</message>
+	<message key="user.phone">Tel</message>
+	<message key="user.profile.changePasswordInstructions">Kullancı hesabınızın şifresini değiştirmek için mevcut ve yeni şifrenizi giriniz.</message>
+	<message key="user.profile.editProfile">Profil Düzenle</message>
+	<message key="user.profile.form.emailRequired">Geçerli bir e-posta adresi gerekli.</message>
+	<message key="user.profile.form.affiliationRequired">Kurum adı girmeniz gerekli.</message>
+	<message key="user.profile.form.firstNameRequired">İlk isimi girmeniz gerekli.</message>
+	<message key="user.profile.form.lastNameRequired">Soyadı girmeniz gerekli.</message>
+	<message key="user.profile.form.newPasswordRequired">Yeni şifrenizi girmeniz gerekli.</message>
+	<message key="user.profile.form.oldPasswordInvalid">Girdiğiniz şifre hatalı.</message>
+	<message key="user.profile.form.openAccessNotifications">Açık erişim e-posta bildirimleri</message>
+	<message key="user.profile.form.passwordRequired">Şifre gerekli.</message>
+	<message key="user.profile.form.profileImage">Profil resmi</message>
+	<message key="user.profile.form.publishedNotifications">Yayılanmış yeni sayıyı e-posta uyarısı</message>
+	<message key="user.profile.form.urlInvalid">Belirtilen URL geçerli değil. Lütfen URL adresni kontrol ederek tekrar deneyin. (İpucu: URL başına http:// eklemeyi deneyin.)</message>
+	<message key="user.profile.form.usernameRequired">Kullanıcı adı girmeniz gerekli.</message>
+	<message key="user.profile.leavePasswordBlank">Mevcut şifreyle devam etmek için şifre alanını boş bırakınız.</message>
+	<message key="user.profile.newPassword">Yeni şifre</message>
+	<message key="user.profile.oldPassword">Mevcut şifre</message>
+	<message key="user.profile">Profil</message>
+	<message key="user.profile.publicProfile">Üye profili</message>
+	<message key="user.profile.repeatNewPassword">Yeni şifreyi tekrar et</message>
+	<message key="user.register.form.emailExists">Seçmiş olduğunuz e-posta adresi halihazırda başka bir kullanıcı tarafından kullanılmaktadır.</message>
+	<message key="user.register.form.passwordsDoNotMatch">Şifreler uyumlu değildir.</message>
+	<message key="user.register.form.emailsDoNotMatch">E-posta adresi alanları eşleşmedi.</message>
+	<message key="user.register.form.usernameExists">Seçmiş olduğunuz kullanıcı adı halihazırda başka biri  tarafından kullanılmaktadır.</message>
+	<message key="user.register.passwordLengthRestriction">Şifre en az {$length} karakter olmalıdır.</message>
+	<message key="user.register.registerAs">Şeklinde kaydol</message>
+	<message key="user.register">Kayıt</message>
+	<message key="user.register.usernameRestriction">Kullanıcı adı sadece küçük harfleri, sayıları, tire işareti ve alt çizi karakterleri içermelidir.</message>
+	<message key="user.role.reader">Okuyucu</message>
+	<message key="user.role.readers">Okuyucular</message>
+	<message key="user.role.reviewer">Hakem</message>
+	<message key="user.role.reviewers">Hakemler</message>
+	<message key="user.role.siteAdmin">Site Yöneticisi</message>
+	<message key="user.role.siteAdmins">Site Yöneticileri</message>
+	<message key="user.roles">Roller</message>
+	<message key="user.salutation">Ünvan</message>
+	<message key="user.sendPassword">Doğrulama</message>
+	<message key="user.sendPassword.description">Kullanıcı adı ve şifremi içeren bir doğrulama e-postası gönder.</message>
+	<message key="user.signature">İmza (kurum ve iletişim bilgisi)</message>
+	<message key="user.title">Başlık</message>
+	<message key="user.url">Web adresi</message>
+	<message key="user.userHome">Üye Sayfası</message>
+	<message key="user.username">Kullanıcı Adı</message>
+	<message key="user.workingLanguages">Çalışama Dilleri</message>
+	<message key="user.register.completeForm">Dergiye kayıt olmak için formu doldurunuz.</message>
+	<message key="user.authorization.managerRequired">Devam etmeden önce aşağıda Baskı Yöneticisi rolüne sahip bir kullanıcı atanmalıdır (Örneğin; baskı veya üretim editörü).</message>
+	<message key="user.group">Üye Grubu</message>
+	<message key="user.hello">Merhaba,</message>
+	<message key="user.profile.form.countryRequired">Bir ülke gerekli.</message>
+	<message key="user.profile.form.mailingAddressRequired">Bir e-posta adresi gerekli</message>
+	<message key="user.profile.form.usergroupRequired">Bir üye grubu gerekli</message>
+	<message key="user.suffix">Son Ek</message>
+	<message key="user.accountInformation">Hesap Bilgisi</message>
+	<message key="user.profile.form.passwordSameAsOld">Yeni şifreniz eski şifrenizle aynıdır.</message>
+</locale>

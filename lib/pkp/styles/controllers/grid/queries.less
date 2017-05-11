@@ -1,0 +1,109 @@
+/**
+ * @file styles/controllers/grid/queries.less
+ *
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @ingroup pkp_controllers_query
+ *
+ * @brief Styles for the query view/edit interfaces
+ */
+
+// Viewing a query
+.pkp_controllers_query {
+
+    > h4 {
+        margin: 0;
+    }
+
+    .participants {
+        &:extend(.pkp_unstyled_list);
+        margin-bottom: @double;
+        font-size: @font-sml;
+    }
+
+    .pkp_controllers_grid {
+        margin-bottom: @double;
+    }
+
+    .add_note {
+        text-align: right;
+
+        a {
+            &:extend(.pkp_button all);
+        }
+
+        .pkp_spinner {
+            opacity: 0;
+            margin-right: 1em;
+        }
+
+        &.is_loading {
+
+            .pkp_spinner {
+                opacity: 1;
+            }
+        }
+    }
+
+    #queryNotesGrid {
+
+        .first_column:not(.no_actions) {
+            padding-left: 32px;
+        }
+
+        tbody {
+
+            p:first-child {
+                margin-top: 0;
+            }
+
+            p:last-child {
+                margin-bottom: 0;
+            }
+
+            td:nth-child(2) {
+                font-size: @font-sml;
+                color: @text-light;
+            }
+        }
+
+        .label.before_actions {
+            display: block;
+            font-size: @font-base;
+            line-height: @line-base;
+            background: none;
+            margin: 0;
+            padding: 0;
+            border: none;
+        }
+
+        .pkp_linkaction_downloadFile {
+            position: relative;
+            display: inline-block;
+            margin: @base @double 0 20px;
+            font-size: @font-sml;
+            line-height: @line-sml;
+            text-decoration: none;
+
+            &:before {
+                &:extend(.fa all);
+                content: @fa-var-file-o;
+                position: absolute;
+                top: 0;
+                left: -18px;
+                line-height: 24px;
+                color: @text-light-rgba;
+            }
+        }
+    }
+}
+
+// Adding/editing a query
+#queryForm {
+
+    .pkp_controllers_grid {
+        margin-bottom: 0;
+    }
+}

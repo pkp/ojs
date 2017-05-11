@@ -1,0 +1,153 @@
+/**
+ * @file styles/structure/body.less
+ *
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @ingroup pkp_structure_page
+ *
+ * @brief Classes for the page structural elements
+ */
+
+html {
+	height: 100%;
+}
+
+body {
+	position: relative;
+	height: auto;
+	min-height: 100%;
+	background: @lift;
+	font-family: @font;
+	font-size: @font-base;
+	line-height: @double;
+	color: @text;
+	color: @text-rgba;
+}
+
+a {
+	color: @primary;
+
+	&:hover,
+	&:focus {
+		color: @primary-lift;
+	}
+
+	&[disabled] {
+		color: @text-light-rgba;
+		cursor: not-allowed;
+	}
+}
+
+// Don't let images exceed containers by default
+img {
+	max-width: 100%;
+	width: auto;
+	height: auto;
+}
+
+.pkp_page_title {
+	background: @bg;
+	padding: @base @double;
+
+	h1 {
+		margin: 0;
+		font-size: @font-base;
+	}
+}
+
+.pkp_structure_page {
+	margin-left: 192px;
+	padding: @double 0 96px;
+}
+
+// Panel wrapper when supporting context sidebar
+.pkp_panel_wrapper {
+	.pkp_helpers_clear;
+}
+
+// Context sidebar
+.pkp_context_sidebar {
+
+	> * {
+		margin-bottom: @double;
+		max-width: 400px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	.pkp_tab_actions {
+
+		li {
+			margin-bottom: @base;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		button {
+			width: 100%;
+			text-align: left;
+		}
+	}
+}
+
+// TODO no responsive breakpoints exist site-wide. This is just a temporary
+// placement until we can work out a more responsive backend
+@media(min-width: 767px) {
+
+	.pkp_context_sidebar {
+		float: right;
+		width: 25%;
+		margin-bottom: @double;
+	}
+
+	.pkp_content_panel {
+		float: left;
+		width: 75%;
+		padding-right: @double;
+	}
+}
+
+@media(min-width: 1700px) {
+
+	.pkp_context_sidebar {
+		width: 20%;
+	}
+
+	.pkp_content_panel {
+		width: 80%;
+	}
+}
+
+// Page content wrapper for pages without tabs
+.pkp_page_content {
+	padding: @double;
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		margin: @double 0 @base;
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}

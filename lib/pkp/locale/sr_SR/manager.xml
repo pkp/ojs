@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/sr_SR/manager.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the sr_SR (Cрпски) locale.
+  *
+  -->
+
+<locale name="sr_SR" full_name="Cрпски">
+	<message key="manager.announcements">Obaveštenja</message>
+	<message key="manager.announcements.confirmDelete">Da li ste sigurni da želite da trajno obrišete ovo obaveštenje?</message>
+	<message key="manager.announcements.create">Napravi novo obaveštenje</message>
+	<message key="manager.announcements.createTitle">Napravi</message>
+	<message key="manager.announcements.dateExpire">Ističe</message>
+	<message key="manager.announcements.edit">Izmeni obaveštenje</message>
+	<message key="manager.announcements.editTitle">Izmeni</message>
+	<message key="manager.announcements.form.dateExpireDayIncompleteDate">Molimo odaberite godinu i/ili mesec kao dodatak datuma dana isticanja.</message>
+	<message key="manager.announcements.form.dateExpire">Datum isticanja</message>
+	<message key="manager.announcements.form.dateExpireInstructions">Obaveštenje će biti prikazano čitaocima do ovog datuma. Ostavite prazno ako želite da obaveštenje bude prikazano bez vremenskog ograničenja.</message>
+	<message key="manager.announcements.form.dateExpireMonthIncompleteDate">Molimo odaberite godinu i/ili dan kao dodatak datumu meseca isticanja.</message>
+	<message key="manager.announcements.form.dateExpireValid">Please select a valid announcement expiry date.</message>
+	<message key="manager.announcements.form.dateExpireYearIncompleteDate">Molimo odaberite ispravan datum isticanja obaveštenje.</message>
+	<message key="manager.announcements.form.description">Opis</message>
+	<message key="manager.announcements.form.descriptionInstructions">Ceo tekst obaveštenja.</message>
+	<message key="manager.announcements.form.descriptionRequired">Opis obaveštenje je obavezan.</message>
+	<message key="manager.announcements.form.descriptionShortInstructions">Kratak opis pojavljuje se uz naslov obaveštenje.</message>
+	<message key="manager.announcements.form.descriptionShortRequired">Kratki opis obaveštenje je obavezan.</message>
+	<message key="manager.announcements.form.descriptionShort">Kratak opis</message>
+	<message key="manager.announcements.form.saveAndCreateAnother">Sačuvaj i napravi drugo</message>
+	<message key="manager.announcements.form.titleRequired">Naslov obaveštenje je obavezan.</message>
+	<message key="manager.announcements.form.title">Naslov</message>
+	<message key="manager.announcements.form.typeId">Tip</message>
+	<message key="manager.announcements.form.typeIdValid">Molimo odaberite ispravan tip obaveštenja.</message>
+	<message key="manager.announcements.noneCreated">Nema napravljenih obaveštenje.</message>
+	<message key="manager.announcements.title">Naslov</message>
+	<message key="manager.announcements.type">Tip</message>
+	<message key="manager.announcementTypes">Tipovi obaveštenje</message>
+	<message key="manager.announcementTypes.confirmDelete">Upozorenje! Sva obaveštenje ovoga tipa će biti obrisana. Da li ste sigurni da želite nastaviti i obrisati ovaj tip obaveštenje?</message>
+	<message key="manager.announcementTypes.create">Napravi tip obaveštenja</message>
+	<message key="manager.announcementTypes.createTitle">Napravi</message>
+	<message key="manager.announcementTypes.edit">Izmeni tip obaveštenja</message>
+	<message key="manager.announcementTypes.editTitle">Izmeni</message>
+	<message key="manager.announcementTypes.form.saveAndCreateAnother">Sačuvaj i napravi drugo</message>
+	<message key="manager.announcementTypes.form.typeNameExists">Tip obaveštenja sa ovim imenom već postoji.</message>
+	<message key="manager.announcementTypes.form.typeName">Naziv</message>
+	<message key="manager.announcementTypes.form.typeNameRequired">Naziv tipa obaveštenja je obavezno.</message>
+	<message key="manager.announcementTypes.noneCreated">Nema kreiranih tipova obaveštenja.</message>
+	<message key="manager.announcementTypes.typeName">Tip obaveštenja</message>
+	<message key="manager.emails.confirmDelete">Da li ste sigurni da želite obrisati ovaj šablon imejla?</message>
+	<message key="manager.emails.confirmReset">Da li ste sigurni da želite vratiti početni šablon imejla na njegove standardne vrednosti?</message>
+	<message key="manager.emails.createEmail">Napravi imejl</message>
+	<message key="manager.emails.disable">Onemogući</message>
+	<message key="manager.emails.editEmail">Izmeni imejl</message>
+	<message key="manager.emails.editTestExample">Uredite probni primer imejla</message>
+	<message key="manager.emails.emailKey">Ključ imejla</message>
+	<message key="manager.emails.emailKeyExists">Imajl s datim ključem već postoji. Ključ imejla mora biti jedinstven.</message>
+	<message key="manager.emails.emailTemplate">Šablon imejla</message>
+	<message key="manager.emails.emailTemplates">Šabloni imejlova</message>
+	<message key="manager.emails.enabled">Omogućite ovaj šablon imejla</message>
+	<message key="manager.emails.enable">Omogući</message>
+	<message key="manager.emails.form.emailKeyRequired">Jedinstveni ključ je obavezan za imejl.</message>
+	<message key="manager.emails.form.bodyRequired">Telo poruke je obavezno u imejlu.</message>
+	<message key="manager.emails.form.subjectRequired">Subjekat je obavezan u imejlu.</message>
+	<message key="manager.emails">Pripremljeni obrasci imejla</message>
+	<message key="manager.emails.resetAll">Vrati tekst svih šablona u početni oblik</message>
+	<message key="manager.emails.reset">Vrati na početno</message>
+	<message key="manager.emails.resetToDefault">Vratite na standardnu vrednost</message>
+	<message key="manager.filesBrowser">Pregledač fajlova</message>
+	<message key="manager.files.confirmDelete">Da li želite da izbrišete ovaj fajl ili direktorijum? Imajte na umu da direktorijum mora biti prazan pre nego što bude obrisan.</message>
+	<message key="manager.files.createDir">Napravi folder</message>
+	<message key="manager.files.emptyDir">Nema fajlova u ovom folderu.</message>
+	<message key="manager.files.indexOfDir">Indeks foldera {$dir}</message>
+	<message key="manager.files.parentDir">Prethodni folder</message>
+	<message key="manager.files.uploadedFiles">Dodati fajlovi</message>
+	<message key="manager.files.uploadFile">Dodaj fajl</message>
+	<message key="manager.groups.confirmDelete">Da li ste sigurni da želite izbrisati ovu grupu?</message>
+	<message key="manager.groups.createTitle">Kreiraj naslov</message>
+	<message key="manager.groups.editTitle">Izmeni naslov</message>
+	<message key="manager.groups.form.groupTitleRequired">Naziv grupe je obavezan.</message>
+	<message key="manager.groups.membership.addMember">Dodaj člana</message>
+	<message key="manager.groups.membership.confirmDelete">Da li ste sigurni da želite da ovog korisnika obrišete iz ove grupe?</message>
+	<message key="manager.groups.membership">Članstvo</message>
+	<message key="manager.groups.membership.noneCreated">Ova grupa nema članova.</message>
+	<message key="manager.groups.membership.noUsers">Članovi nisu pronađeni.</message>
+	<message key="manager.groups.title">Naslov</message>
+	<message key="manager.importExport">Uvoz/izvoz podataka</message>
+	<message key="manager.languages.alternateLocaleInstructions">Ovaj sistem omogućuje da se određene ključne informacije o časopisu i pojedinim prilozima unesu na više jezika. Da biste koristili ovu mogućnost, izaberite dodatne prevode, pa odaberate neku od niže navedenih mogućnosti.</message>
+	<message key="manager.languages.supportedLocalesInstructions">Ukoliko odaberete dva ili više prevoda, na svakoj će stranici biti prisutan meni za izbor jezika. Preko njega možete u svakom trenutku izmeniti trenutno aktivni jezik sistema.</message>
+	<message key="manager.payment.timestamp">Datum uplate</message>
+	<message key="manager.people.authSource">Izvor autentifikacije</message>
+	<message key="manager.people.confirmUnenroll">Želite li da ukloniti ulogu ovom korisniku?</message>
+	<message key="manager.people.createUser">Napravi novog korisnika</message>
+	<message key="manager.people.createUserGeneratePassword">Generiši slučajnu lozinku.</message>
+	<message key="manager.people.createUserSendNotify">Pošalji korisniku imejl dobrodošlice koji sadrži njegovo korisničko ime i lozinku.</message>
+	<message key="manager.people.disable">Onemogući</message>
+	<message key="manager.people.doNotEnroll">Bez uloge</message>
+	<message key="manager.people.editProfile">Uređivanje profila</message>
+	<message key="manager.people.editUser">Uređivanje korisnika</message>
+	<message key="manager.people.emailUsers.emailSelectedUsers">Pošalji imejl odabranim korisnicima</message>
+	<message key="manager.people.emailUsers.emailUsersEnrolledAs">Pošalji imejl korisnicima kojima su dodijeljene uloge</message>
+	<message key="manager.people.emailUsers">Pošalji imejl korisnicima</message>
+	<message key="manager.people.emailUsers.selectLocale">Odaberite jezik</message>
+	<message key="manager.people.emailUsers.selectUsers">Odaberi korisnike kojima želite poslati imejl na način da označite kvačicom potvrdni okvir pored njihovih imena</message>
+	<message key="manager.people.enable">Omogući</message>
+	<message key="manager.people.enroll">Dodaj ulogu korisniku</message>
+	<message key="manager.people.enrollment">Dodeljivanje uloga</message>
+	<message key="manager.people.enrollSelected">Dodeli ulogu odabranim korisnicima</message>
+	<message key="manager.people.enrollSyncRole">Sinhronizuj ulogu</message>
+	<message key="manager.people.enrollSync">Sinhronizuj uloge korisnika</message>
+	<message key="manager.people.enrollUserAsDescription">Uloge mogu biti dodeljene ili oduzete u bilo kojem trenutku nakon kreiranja novog korisnika.</message>
+	<message key="manager.people.enrollUserAs">Dodeli ulogu korisniku kao</message>
+	<message key="manager.people.invalidUser">Izvinite, traženi korisnik ne postoji.</message>
+	<message key="manager.people.mergeUser">Spoji korisnika</message>
+	<message key="manager.people.mergeUsers.confirm">Da li ste sigurni da želite da spojite nalog korisnika "{$oldUsername}" sa nalogom korisnika "{$newUsername}"? Nalog korisničkog imena "{$oldUsername}" više neće postojati nakon toga. Ovo je nepovratna radnja.</message>
+	<message key="manager.people.mergeUsers">Spajanje korisnika</message>
+	<message key="manager.people.mustChooseRole">Molimo odaberite ulogu pri vrhu stranice pre nego pritisnete "Dodeli ulogu korisniku"</message>
+	<message key="manager.people.mustProvideName">Molimo unesite barem prezime korisnika.</message>
+	<message key="manager.people.noMatchingUsers">Nema odgovarajućih korisnika.</message>
+	<message key="manager.people.noneEnrolled">Nema korisnika s dodeljenim ulogama.</message>
+	<message key="manager.people">Ljudi</message>
+	<message key="manager.people.remove">Ukloni</message>
+	<message key="manager.people.saveAndCreateAnotherUser">Sačuvaj i kreiraj drugog</message>
+	<message key="manager.people.signInAs">Prijavi se kao</message>
+	<message key="manager.people.signInAsUser">Prijavite se kao korisnik</message>
+	<message key="manager.people.syncUsers">Sinhronizuj uloge dodeljene korisnicima</message>
+	<message key="manager.people.unenroll">Ukloni ulogu</message>
+	<message key="manager.people.userCreatedSuccessfully">Korisnik uspešno kreiran.</message>
+	<message key="manager.people.userMustChangePassword">Zatraži od korisnika da promeni svoju lozinku prilikom sledećeg prijavljivanja.</message>
+	<message key="manager.plugins.action">Postupak:</message>
+	<message key="manager.plugins.disable">Onemogući</message>
+	<message key="manager.plugins.enable">Omogući</message>
+	<message key="manager.plugins.pluginManagement">Upravljač dodataka</message>
+	<message key="manager.plugins.sitePlugin">Ovaj dodatak utiče na funkcionisanje celog sajta. Samo administrator sajta može upravljati ovim dodatkom.</message>
+	<message key="manager.plugins">Sistemski dodatci</message>
+	<message key="manager.readingTools">Alati za čitanje</message>
+	<message key="manager.reviewerSearch.searchByName">Pronađi recenzenta preko imena</message>
+	<message key="manager.reviewerSearch.doneAmount">Broj završenih recenzija</message>
+	<message key="manager.reviewerSearch.avgAmount">Prosečan broj dana po recenziji</message>
+	<message key="manager.reviewerSearch.lastAmount">Dana od poslednje recenzije</message>
+	<message key="manager.reviewerSearch.activeAmount">Broj trenutno aktivnih recenzija</message>
+	<message key="manager.reviewerSearch.interests">Recenzentski interesi</message>
+	<message key="manager.roles">Uloge</message>
+	<message key="manager.setup.citationAssistant">Pomoćnik za označavanje citata</message>
+	<message key="manager.setup.citationFilterParser">Ekstrakcija citata</message>
+	<message key="manager.setup.citationFilterParserDescription"><![CDATA[<p>Da biste pronašli i proverili citate u citatnim bazama oni prvo moraju biti podeljeni na mašinski čitljive metapodatke: naslov, izdavač, datum izdavanja, itd. moraju biti izdvojeni iz originalnog citatnog teksta koji autor dostavlja. Konektori za spoljne web servise mogu da pomognu u tom procesu. Jedan ili više konektora se mogu dodati klikom na"Dodaj stavku" dugme ispod. Neke od ovih konektora potrebno je konfigurisati; od Vas će to biti zatraženo ako je to slučaj</p>.
+<p>Možete da izmenite ili obrišete neki postojeći konektor klikom na ikonu zupčanika pored njega </ p >.]]></message>
+	<message key="manager.setup.citationFilterLookup">Provera citatnosti</message>
+	<message key="manager.setup.citationFilterLookupDescription"><![CDATA[<p> Takođe morate da omogućite i podesite vezu sa spoljnim citatnim bazama podataka . Ovo vam pomaže da pronađete greške u citatima autora ili dodate dodatne informacije (npr. Dois ili CrossRef IDS) potrebne za elektronsko izdavaštvo ili depozit.</p>
+<p>Ponuđeni su konektore na nekoliko eksternih baza podataka u kojima možete da tražite citate. Neke od ovih baza podataka zahtevaju registraciju ili konfiguraciju da biste im pristupili. Molimo Vas da pogledate na javnim veb sajtovima bazama podataka za više informacija o tome kako da se registrujete . Možete dodati jednu ili više baza podataka tako što ćete kliknuti na " Dodaj stavku " dugme ispod.</p>
+<p>Možete da izmenite ili obrišete neku postojeću eksternu konekciju baze podataka tako što ćete kliknuti na ikonu zupčanika pored nje.</p>
+<p>Napomena:</strong> Da bi se proces citiranja završio blagovremeno, u <tt>citation_checking_max_processes</tt>  direktiva u konfiguracionom fajlu mora biti podešen na razumnu vrednost. Vidi General Settings odeljak u <tt>config.inc.php</tt> za više informacija.</p>]]></message>
+	<message key="manager.setup.citationOutput">Ispis citata</message>
+	<message key="manager.setup.citationOutputStyleDescription">Izaberite stil citata koji se koristi u autorskim radovima vašeg časopisa. Citation Markup Pomoćnik vam omogućava da uporedite autorovu verziju citata i verziju generisanu iz XML-a tako da lako možete uočiti greške:</message>
+	<message key="manager.setup.errorDeletingItem">Došlo je do greške prilikom brisanja stavke.</message>
+	<message key="manager.setup.filter.grid.errorDeletingFilter">Došlo je do greške prilikom brisanja ovog filtera. Molimo vas da ovo prijavite kao "bug".</message>
+	<message key="manager.setup.filter.grid.filterDisplayName">Konektor</message>
+	<message key="manager.setup.filter.grid.filterSettings">Informacije o registraciji i podešavanja konektora</message>
+	<message key="manager.setup.filter.grid.filterTemplateRequired">Molimo vas da odaberete jednu od transformacija iz padajućeg menija</message>
+	<message key="manager.setup.filter.grid.confirmDelete">Da li zaista želite da obrišete {$filterName} filter?</message>
+	<message key="manager.setup.filter.lookup.grid.descriptionConfirm">Izabrali ste da dodate {$filterDisplayName} bazu podataka. Kliknite na "OK" da biste potvrdili..</message>
+	<message key="manager.setup.filter.lookup.grid.descriptionTemplate">Izaberite bazu za pronalaženje podataka.</message>
+	<message key="manager.setup.filter.lookup.grid.description.iSBNdb"><![CDATA[<p> Ovaj filter se povezuje sa <a href="http://isbndb.com/" target="_blank">ISBNdb.com</a> bazom podataka knjiga i ISBN-ova.</p>
+<p>ISBNdb API ključ je obavezan. Za informacije o generisanju ključa, pogledajte <a href="http://isbndb.com/api/v1/docs/keys" target="_blank">online dokumentaciju</a>.</p>]]></message>
+	<message key="manager.setup.filter.lookup.grid.description.crossRef"><![CDATA[<p>Ovaj filter se povezuje sa CrossRef bazom citata koristeći CrossRef <a href="http://www.crossref.org/02publishers/openurl_info.html" target="_blank">OpenURL Query Interface</a>.</p>
+<p> Da biste koristili ovaj filter, možete da koristite svoj nalog CrossRef sistema, ili da registrujte važeću imejl adresu na CrossRef <a href="http://www.crossref.org/requestaccount/" target="_blank">ovde</a>.</p>]]></message>
+	<message key="manager.setup.filter.lookup.grid.description.pubMed"><![CDATA[<p>Ovaj filter se povezuje sa PubMed <a href="http://www.ncbi.nlm.nih.gov/gquery/gquery.fcgi" target="_blank">Entrez</a> bazom za pretragu citata.</p>
+	<p>Registracioni imejl nije obavezan, ali može biti neophodan ukoliko naiđete na probleme sa konekcijom. Pogledajte sekciju <a href="http://www.be-md.ncbi.nlm.nih.gov/bookshelf/br.fcgi?book=helpeutils&part=chapter2#chapter2.Usage_Guidelines_and_Requiremen" target="_blank">Uputstvo za korišćenje i sistemski zahtevi</a> u Entrez dokumentaciji za više informacija.</p>]]></message>
+	<message key="manager.setup.filter.lookup.grid.description.worldCat"><![CDATA[<p>Ovaj filter se povezuje na OCLC servis <a href="http://www.worldcat.org/affiliate/webservices/xisbn/app.jsp" target="_blank">xISBN</a> i <a href="http://www.worldcat.org/" target="_blank">Worldcat</a> (opciono).</p>
+	<p>Ukoliko imate Worldcat <a href="http://oclc.org/developer/develop/web-services.html" target="_blank">API ključ</a> možete se povezati na Worldcat unosom ključa ispod.</p>]]></message>
+	<message key="manager.setup.filter.lookup.grid.loadMessage">Molimo sačekajte dok se konfiguracija baze učita...</message>
+	<message key="manager.setup.filter.lookup.grid.title">Konektori baze citata</message>
+	<message key="manager.setup.filter.noMoreTemplates">Sve moguće transformacije su dodate. Kliknite "Odustani" da biste se vratili na stranicu podešavanja.</message>
+	<message key="manager.setup.filter.parser.grid.descriptionConfirm">Odlučili ste da dodate {$filterDisplayName} raščlanjivač. Kliknite 'OK' za potvrdu.</message>
+	<message key="manager.setup.filter.parser.grid.descriptionTemplate">Odaberite raščlanjivač citata.</message>
+	<message key="manager.setup.filter.parser.grid.description.freeCite"><![CDATA[<p>Ovaj filter za ekstrakciju povezuje se sa <a href="http://freecite.library.brown.edu/" target="_blank">FreeCite</a> web servisom.</p>]]></message>
+	<message key="manager.setup.filter.parser.grid.description.paraCite"><![CDATA[<p>Ovaj filter za ekstrakciju koristi <a href="http://paracite.eprints.org/developers/" target="_blank">ParaTools</a> Perl module da bi obezbedio <a href="http://paracite.eprints.org" target="_blank">ParaCite</a> funkcionalnost raščlanjivanja citata. Da bi ovo radilo morate imati instaliran Perl, zajedno sa <a href="http://search.cpan.org/~mjewell/Biblio-Citation-Parser-1.10/" target="_blank">Biblio::Citation::Parser</a> i <a href="http://search.cpan.org/~sburke/Text-Unidecode-0.04/" target="_blank">Text::Unidecode</a> CPAN modulima. Takođe morate konfigurisati <tt>perl</tt> direktive u konfiguracionom fajlu. Ove direktive mogu se pronaći u External Commands sekciji u <tt>config.inc.php</tt>.</p>
+	<p>Takođe možete odlučiti koji modul raščlanjivača ParaTools treba koristiti. Možete birati izmeđustandardnog, <a href="http://search.cpan.org/~mjewell/Biblio-Citation-Parser-1.10/lib/Biblio/Citation/Parser/Jiao.pm" target="_blank">Jiao</a>, i <a href="http://search.cpan.org/~mjewell/Biblio-Citation-Parser-1.10/lib/Biblio/Citation/Parser/Citebase.pm" target="_blank">Citebase</a> modula.</p>]]></message>
+	<message key="manager.setup.filter.parser.grid.description.parsCit"><![CDATA[<p>Ovaj filter za ekstrakciju povezuje se na <a href="http://aye.comp.nus.edu.sg/parsCit/" target="_blank">ParsCit</a> web servis.</p>]]></message>
+	<message key="manager.setup.filter.parser.grid.description.regEx">RegEx filter za ekstrakciju koristi seriju regularnih ekspresija da bi raščlanio citate.</message>
+	<message key="manager.setup.filter.parser.grid.loadMessage">Sačekajte dok se konfiguraciona mreža raščlanjivača citata učita...</message>
+	<message key="manager.setup.filter.parser.grid.title">Servis ekstrakcije citata</message>
+	<message key="manager.setup.filter.pleaseSelect">Odaberite...</message>
+	<message key="manager.setup.homeHeaderImageInvalid">Neispravan format logoa hedera početne strane ili slanje nije uspelo. Prihvatljivi formati su .gif, .jpg, ili .png.</message>
+	<message key="manager.setup.homepageImageInvalid">Neispravan format slike hedera početne strane ili slanje nije uspelo. Prihvatljivi formati su .gif, .jpg, ili .png.</message>
+	<message key="manager.setup.homeTitleImageInvalid">Neispravan format slike naslova hedera početne strane ili slanje nije uspelo. Prihvatljivi formati su .gif, .jpg, ili .png.</message>
+	<message key="manager.setup.layout.unselected">Nije obeleženo</message>
+	<message key="manager.setup.loggingAndAuditing">Evidentiranje i revizija</message>
+	<message key="manager.setup.metaCitationsDescription">Aktivirajte sledeće polje za potvrdu da biste omogućili uređivanje citata i referenci. Ovo će omogućiti da autori uključuju sirove citate prilikom predaje radova. Urednici će takođe imati pristup pomoćniku citata koji može da proveri sirove citate preko spoljnih baza podataka kao što su WorldCat, ISBNdb, PubMed i druge, za tačnost. Odobreni citati se mogu izvoziti u finalizovane fajlove za prikaz.</message>
+	<message key="manager.setup.pageHeaderLogoImageInvalid">Neispravan format logoa hedera strane ili slanje nije uspelo. Prihvatljivi formati su .gif, .jpg, ili .png.</message>
+	<message key="manager.setup.selectOne">Odaberi jedan</message>
+	<message key="manager.statistics"><![CDATA[Statistike &amp; Izveštaji]]></message>
+	<message key="manager.statistics.statistics.count.value">{$count} ({$percentage}%)</message>
+	<message key="manager.statistics.statistics.totalNewValue">{$numTotal} ({$numNew} novi)</message>
+	<message key="manager.users">Korisnici</message>
+	<message key="plugins.categories.auth">Dodci za autorizaciju</message>
+	<message key="plugins.categories.blocks">Blok dodaci</message>
+	<message key="plugins.categories.blocks.description">Blok dodaci su UI komponente kao što su razne alatke za sidebar.</message>
+	<message key="plugins.categories.citationFormats">Dodci formata citata</message>
+	<message key="plugins.categories.gateways.description">Gateway dodaci obezbeđuju informacije sa udaljenih sistema.</message>
+	<message key="plugins.categories.gateways">Gateway dodaci</message>
+	<message key="plugins.categories.generic">Generički dodaci</message>
+	<message key="plugins.categories.importexport.description">Uvoz/Izvoz dodaci mogu se koristiti za izvoz ili uvoz podataka.</message>
+	<message key="plugins.categories.importexport">Uvoz/Izvoz dodaci</message>
+	<message key="plugins.categories.paymethod.description">Dodaci metoda plaćanja implementiraju podršku za razne načine procesuiranja online plaćanja.</message>
+	<message key="plugins.categories.paymethod">Dodaci za plaćanje</message>
+	<message key="plugins.categories.reports.description">Raport dodaci koriste se za implementaciju različitih tipova izveštaja i ekstrakata podataka.</message>
+	<message key="plugins.categories.reports">Raport dodaci</message>
+	<message key="plugins.categories.themes.description">Dodatak šablona može se koristiti za promenu izgleda celokupnog sistema.</message>
+	<message key="plugins.categories.themes">Dodaci šablona</message>
+	<message key="manager.announcements.datePublish">Objavljeno</message>
+	<message key="manager.emails.addEmail">Dodaj šablon imejla</message>
+	<message key="manager.emails.data">Podaci poruke šablona</message>
+	<message key="manager.emails.details">Detalji šablona</message>
+	<message key="manager.emails.disable.message">Na putu ste da isključite ovaj imejl šablon. Ukoliko postoje procesi koji su ga koristili, više ga neće koristiti. Da li ste sigurni da želite da nastavite?</message>
+	<message key="manager.emails.enable.message">Da li ste sigurni da želite da uključite ovaj šablon?</message>
+	<message key="manager.emails.resetAll.message">Ukoliko resetujete sve šablone, sve modifikacije koje ste uradili biće izgubljene, da li ste sigurni da želite da nastavite?</message>
+	<message key="manager.emails.reset.message">Ukoliko resetujete ovaj šablon, svi podaci biće vraćeni na osnovne vrednosti, a sve promene će biti izgubljene, da li želite da nastavite?</message>
+	<message key="manager.masthead.title">Uprava</message>
+	<message key="manager.reviewerSearch.searchByName.short">Pretraži po imenu</message>
+	<message key="manager.reviewerSearch.form.interests.instructions">Unesite interese recenzenta odvojene zarezom.</message>
+	<message key="manager.setup.layout.blockManagement">Menadžer bočnog menija</message>
+	<message key="plugins.categories.metadata">Dodaci metapodataka</message>
+	<message key="plugins.categories.metadata.description">Dodaci metapodataka implementiraju dodatne standarde meta podataka.</message>
+	<message key="plugins.categories.citationLookup">Dodaci veza baza podataka citata</message>
+	<message key="plugins.categories.citationOutput">Dodaci izlaznog formata citata</message>
+	<message key="plugins.categories.citationParser">Dodaci za ekstrakciju citata</message>
+	<message key="plugins.categories.oaiMetadataFormats">Dodatak OAI formata metapodataka</message>
+	<message key="plugins.categories.oaiMetadataFormats.description">Ovaj dodatak prikazuje metapodatke u formatu OAI komunikacije</message>
+	<message key="manager.website">Sajt</message>
+</locale>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/nb_NO/admin.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the nb_NO (Norsk bokmål) locale.
+  *
+  -->
+
+<locale name="nb_NO" full_name="Norsk bokmål">
+	<message key="admin.adminFunctions">Administrative funksjoner</message>
+	<message key="admin.auth.confirmDelete">Er du sikker på at du vil slette denne valideringskilde for alltid?</message>
+	<message key="admin.auth.create">Opprett valideringskilde</message>
+	<message key="admin.auth.noneCreated">Ingen valideringskilder er definert.</message>
+	<message key="admin.authSources">Valideringskilder</message>
+	<message key="admin.clearDataCache">Tøm data-cacher</message>
+	<message key="admin.clearTemplateCache">Tøm mal-cache</message>
+	<message key="admin.configFileUpdatedInstructions"><![CDATA[Oppdateringen av konfigurasjonen var vellykket. Vennligst merk at hvis nettstedet ikke lenger virker som det skal, så må du kanskje ordne konfigurasjonen manuelt, ved å redigere <tt>config.inc.php</tt> direkte.]]></message>
+	<message key="admin.confirmClearTemplateCache">Er du sikker på at du vil tømme cachen med kompilerte maler?</message>
+	<message key="admin.confirmExpireSessions">Er du sikker på at du vil avbryte alle brukersesjoner? Alle brukere som for øyeblikket er logget inn på systemet vil måtte logge inn igjen (du også).</message>
+	<message key="admin.contentsOfConfigFile">Innholdet i konfigurasjonsfilen</message>
+	<message key="admin.currentVersion">Nyeste versjon</message>
+	<message key="admin.dateInstalled">Installasjonsdato</message>
+	<message key="admin.displayConfigFileInstructions"><![CDATA[Nedenfor vises innholdet i din oppdaterte konfigurasjon. For å iverksette endringene må du åpne <tt>config.inc.php</tt> i et egnet tekstbehandlingsprogram og erstatte innholdet i den med innholdet i tekstfeltet nedenfor.]]></message>
+	<message key="admin.displayNewSystemConfig">Vis ny konfigurasjon</message>
+	<message key="admin.expireSessions">Avbryt brukersesjoner</message>
+	<message key="admin.languages.confirmReload">Er du sikker på at du vil laste opp igjen denne lokalinnstillingen? Dette vil slette alle nåværende lokalinnstilling-spesifikke data som for eksempel tilpassete e-post maler.</message>
+	<message key="admin.languages.installedLocales">Installerte lokalinnstillinger</message>
+	<message key="admin.languages.installLanguages">Installer språk</message>
+	<message key="admin.languages.installLocales">Installer</message>
+	<message key="admin.languages.installNewLocales">Installer nye lokalinnstillinger</message>
+	<message key="admin.languages.languageSettings">Språkinnstillinger</message>
+	<message key="admin.languages.noLocalesAvailable">Ingen øvrige lokalinnstillinger er tilgjengelig for installasjon.</message>
+	<message key="admin.languages.reload">Last opp igjen lokalfilsett</message>
+	<message key="admin.languages.uninstall">Avinstaller lokalinnstilling</message>
+	<message key="admin.phpInfo">Mer PHP-informasjon</message>
+	<message key="admin.server.apacheVersion">Apache versjon</message>
+	<message key="admin.server.dbDriver">Databasedriver</message>
+	<message key="admin.server.dbVersion">Databaseserver versjon</message>
+	<message key="admin.serverInformationDescription"><![CDATA[Operativsystem og serverens programvareversjoner. Klikk på <span class="highlight">Mer PHP-informasjon</span> for å se flere detaljer om denne serverens PHP-konfigurasjon.]]></message>
+	<message key="admin.serverInformation">Serverinformasjon</message>
+	<message key="admin.server.phpVersion">PHP-versjon</message>
+	<message key="admin.server.platform">OS-plattform</message>
+	<message key="admin.settings.aboutDescription">Om beskrivelsen av nettstedet</message>
+	<message key="admin.settings.contactEmail">E-postadresse til hovedkontaktperson</message>
+	<message key="admin.settings.contactName">Navn på hovedkontaktperson</message>
+	<message key="admin.settings.form.contactEmailRequired">E-postadressen til hovedkontaktpersonen er påkrevet.</message>
+	<message key="admin.settings.form.contactNameRequired">Navnet til hovedkontaktpersonen er påkrevet.</message>
+	<message key="admin.settings.form.minPasswordLengthRequired">Du må skrive inn en minste passordlengde på minst 4 tegn.</message>
+	<message key="admin.settings.form.titleRequired">En tittel er påkrevet.</message>
+	<message key="admin.settings.homeHeaderImage.altText">Nettstedets logo</message>
+	<message key="admin.settings.homeHeaderImageInvalid">Ugyldig filformat for nettstedets logobilde. Tillatte filformat er .gif, .jpg, eller .png.</message>
+	<message key="admin.settings.introduction">Innledning</message>
+	<message key="admin.settings.minPasswordLength">Minste passordlengde</message>
+	<message key="admin.settings.passwordCharacters">tegn</message>
+	<message key="admin.settings.siteLanguage">Nettstedspråk</message>
+	<message key="admin.settings.siteStyleSheetInvalid">Ugyldig filformat for nettstedets stilark. Det tillatte filformatet er .css.</message>
+	<message key="admin.settings.siteStyleSheet">Nettstedets stilark (style sheet)</message>
+	<message key="admin.settings.siteTitle">Nettstedets tittel</message>
+	<message key="admin.siteAdmin">Nettstedsadministrasjon</message>
+	<message key="admin.siteManagement">Nettstedadministrasjon</message>
+	<message key="admin.siteSettings">Nettstedsinnstillinger</message>
+	<message key="admin.systemConfigFileReadError"><![CDATA[Konfigurasjonsfilen <tt>config.inc.php</tt> finnes ikke, er ikke lesbar, eller er ugyldig.]]></message>
+	<message key="admin.systemInformation">Systeminformasjon</message>
+	<message key="admin.versionBuild">Build</message>
+	<message key="admin.version.checkForUpdates">Se etter oppdateringer</message>
+	<message key="admin.version.downloadPackage">Last ned</message>
+	<message key="admin.version.downloadPatch">Last ned patch</message>
+	<message key="admin.versionHistory">Versjonshistorikk</message>
+	<message key="admin.version.latest">Siste versjon</message>
+	<message key="admin.versionMajor">Major</message>
+	<message key="admin.versionMinor">Minor</message>
+	<message key="admin.version.moreInfo">Mer informasjon</message>
+	<message key="admin.versionRevision">Revisjon</message>
+	<message key="admin.version.updateAvailable">En oppdatert versjon er tilgjengelig</message>
+	<message key="admin.version.upToDate">Systemet er nyeste versjon</message>
+	<message key="admin.version">Versjon</message>
+	<message key="admin.settings">Innstillinger</message>
+	<message key="admin.settings.siteTheme">Nettstedstema</message>
+	<message key="admin.siteSetup">Nettstedsoppsett</message>
+	<message key="admin.languages.download">Last ned språkfil</message>
+	<message key="admin.languages.availableLocales">Tilgjengelige språk</message>
+	<message key="admin.languages.installLocale">Installer språk</message>
+	<message key="admin.scheduledTask">Planlagt oppgave</message>
+	<message key="admin.scheduledTask.startTime">Oppgave startet.</message>
+	<message key="admin.scheduledTask.stopTime">Oppgave stoppet.</message>
+	<message key="admin.scheduledTask.noLog">Oppgaven skapte ikke noen loggfil.</message>
+	<message key="admin.scheduledTask.downloadLog">Din {$softwareName} installasjon utførte og avsluttet denne oppgaven automatisk, og du kan laste ned loggfila her: {$url}</message>
+	<message key="admin.settings.siteLogo">Nettstedets logo</message>
+	<message key="admin.error.executingUtil">Feil: Kan ikke eksekvere "{$utilPath}".  Sjekk {$utilVar}-innstillingene i config.inc.php.</message>
+</locale>

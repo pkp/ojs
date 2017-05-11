@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/cs_CZ/admin.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the cs_CZ (Čeština) locale.
+  * Translated by František Chmelik, frantisek.chmelik 'at' upol.cz
+  * Corrections, migration to the OCS 2.3.x by Ivo Vesely and Petr Petyovsky (petyovsky 'at' feec.vutbr.cz)
+  *
+  -->
+
+<locale name="cs_CZ" full_name="Čeština">
+	<message key="admin.adminFunctions">Administrátorské funkce</message>
+	<message key="admin.auth.confirmDelete">Jste si jistý, že chcete trvale odstranit tento zdroj ověření?</message>
+	<message key="admin.auth.create">Vytvořit zdroj ověření</message>
+	<message key="admin.auth.noneCreated">Nebyly definovány žádné zdroje ověření.</message>
+	<message key="admin.authSources">Zdroje ověření</message>
+	<message key="admin.clearDataCache">Vyčistit Data Caches</message>
+	<message key="admin.clearTemplateCache">Vyčistit Template Cache</message>
+	<message key="admin.configFileUpdatedInstructions"><![CDATA[Váš konfigurační soubor byl úspěšně aktualizován. Vězte prosím, že pokud již Vaše stránka nefunguje korektně, budete možná muset manuálně opravit Vaši konfiguraci přímo úpravou <tt>config.inc.php</tt>.]]></message>
+	<message key="admin.confirmClearTemplateCache">Jste si jistý, že chcete vyčistit cache zkompilovaných šablon?</message>
+	<message key="admin.confirmExpireSessions">Jste si jistý, že chcete ukončit všechny uživatelské relace? Všichni uživatelé přihlášení do systému budou donuceni se znovu přihlásit (včetně Vás).</message>
+	<message key="admin.contentsOfConfigFile">Obsah konfiguračního souboru</message>
+	<message key="admin.currentVersion">Aktuální verze</message>
+	<message key="admin.dateInstalled">Datum instalace</message>
+	<message key="admin.displayConfigFileInstructions"><![CDATA[Obsah Vaší aktualizované konfigurace je zobrazen níže. K provedení změn konfigurace musíte otevřít <tt>config.inc.php</tt> ve vhodném textovém editoru a nahradit jeho obsah obsahem textového pole níže.]]></message>
+	<message key="admin.displayNewSystemConfig">Zobrazit novou konfiguraci</message>
+	<message key="admin.expireSessions">Vypršení uživatelské relace</message>
+	<message key="admin.languages.confirmReload">Jste si jistý, že chcete znovu načíst tuto lokalizaci? To vymaže všechna existující data vztahující se k lokalizaci jako například přizpůsobené e-mailové šablony.</message>
+	<message key="admin.languages.installedLocales">Instalované lokalizace</message>
+	<message key="admin.languages.installLanguages">Spravovat lokalizace</message>
+	<message key="admin.languages.installLocales">Instalovat</message>
+	<message key="admin.languages.installNewLocales">Instalovat nové lokalizace</message>
+	<message key="admin.languages.languageSettings">Nastavení jazyka</message>
+	<message key="admin.languages.noLocalesAvailable">Žádné další lokalizace nejsou dostupné pro instalaci.</message>
+	<message key="admin.languages.reload">Znovu načíst lokalizace</message>
+	<message key="admin.languages.uninstall">Odinstalovat lokalizaci</message>
+	<message key="admin.phpInfo">Rozšířené informace o PHP</message>
+	<message key="admin.saveSystemConfig">Uložit konfiguraci</message>
+	<message key="admin.server.apacheVersion">Verze Apache</message>
+	<message key="admin.server.dbDriver">Ovladač databáze</message>
+	<message key="admin.server.dbVersion">Verze databázového serveru</message>
+	<message key="admin.serverInformationDescription"><![CDATA[Verze základního operačního systému a software serveru. Klikněte na <span class="highlight">Rozšířené informace o PHP</span> pro zobrazení detailů o PHP konfiguraci serveru.]]></message>
+	<message key="admin.serverInformation">Informace o serveru</message>
+	<message key="admin.server.phpVersion">Verze PHP</message>
+	<message key="admin.server.platform">Platforma OS</message>
+	<message key="admin.settings.aboutDescription">O popisu stránky</message>
+	<message key="admin.settings.contactEmail">E-mail hlavní kontaktní osoby</message>
+	<message key="admin.settings.contactName">Jméno hlavní kontaktní osoby</message>
+	<message key="admin.settings.form.contactEmailRequired">Je vyžadován e-mail hlavní kontaktní osoby.</message>
+	<message key="admin.settings.form.contactNameRequired">Je vyžadováno jméno hlavní kontaktní osoby.</message>
+	<message key="admin.settings.form.minPasswordLengthRequired">Musíte zadat heslo o minimální délce 4 znaky.</message>
+	<message key="admin.settings.form.titleRequired">Je vyžadován název.</message>
+	<message key="admin.settings.homeHeaderImage.altText">Logo stránek</message>
+	<message key="admin.settings.homeHeaderImageInvalid">Neplatný formát obrázku loga stránky. Podporované formáty jsou .gif, .jpg, nebo .png.</message>
+	<message key="admin.settings.introduction">Úvod</message>
+	<message key="admin.settings.minPasswordLength">Minimální délka hesla</message>
+	<message key="admin.settings.passwordCharacters">znaky</message>
+	<message key="admin.settings.siteLanguage">Jazyk stránky</message>
+	<message key="admin.settings.siteStyleSheetInvalid">Neplatný formát stylu stránky. Podporovaný formát je .css.</message>
+	<message key="admin.settings.siteStyleSheet">Styl stránky</message>
+	<message key="admin.settings.siteTitle">Název stránky</message>
+	<message key="admin.siteAdmin">Administrace internetové stránky</message>
+	<message key="admin.siteManagement">Správa stránky</message>
+	<message key="admin.siteSettings">Nastavení stránek</message>
+	<message key="admin.systemConfigFileReadError"><![CDATA[Konfigurační soubor <tt>config.inc.php</tt> neexistuje, není čitelný nebo je neplatný.]]></message>
+	<message key="admin.systemInformation">Systémové informace</message>
+	<message key="admin.versionBuild">Build</message>
+	<message key="admin.version.checkForUpdates">Zkontrolovat aktualizace</message>
+	<message key="admin.version.downloadPackage">Stáhnout</message>
+	<message key="admin.version.downloadPatch">Stáhnout patch</message>
+	<message key="admin.versionHistory">Historie verze</message>
+	<message key="admin.version.latest">Nejaktuálnější verze</message>
+	<message key="admin.versionMajor">Hlavní</message>
+	<message key="admin.versionMinor">Vedlejší</message>
+	<message key="admin.version.moreInfo">Více informací</message>
+	<message key="admin.versionRevision">Revize</message>
+	<message key="admin.version.updateAvailable">Je dostupná aktualizovaná verze systému</message>
+	<message key="admin.version.upToDate">Používáte nejaktuálnější verzi systému</message>
+	<message key="admin.version">Verze</message>
+</locale>

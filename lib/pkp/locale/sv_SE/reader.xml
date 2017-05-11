@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/sv_SE/reader.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the sv_SE (Svenska) locale.
+  *
+  -->
+
+<locale name="sv_SE" full_name="Svenska">
+	<message key="comments.anonymous">Anonym användare</message>
+	<message key="comments.anonymousNamed">"{$userName}"</message>
+	<message key="comments.body">Body</message>
+	<message key="comments.confirmDeleteChildren">Om du raderar kommentaren kommer även alla svar på kommentaren att raderas. Är du säker på att du vill radera?</message>
+	<message key="comments.delete">Ta bort kommentar</message>
+	<message key="comments.email">E-post</message>
+	<message key="comments.emailReply">E-postsvar</message>
+	<message key="comments.enterComment">Kommentera</message>
+	<message key="comments.inResponseTo">Som svar på <![CDATA[<a href="]]>{$url}<![CDATA[">]]>{$title}<![CDATA[</a>]]></message>
+	<message key="comments.name">Namn</message>
+	<message key="comments.noComments">Inga läsarkommentarer har lämnats.</message>
+	<message key="comments.nReplies">({$num} Svar)</message>
+	<message key="comments.oneReply">(1 Svar)</message>
+	<message key="comments.postAnonymously">Kommentera anonymnt</message>
+	<message key="comments.postReply">Skicka svar</message>
+	<message key="comments.readerComments">Läsarkommentarer</message>
+	<message key="comments.readMore">Läs mer</message>
+	<message key="comments.replies">Svar</message>
+	<message key="comments.title">Titel</message>
+	<message key="comments.viewAllComments">Visa alla kommentarer</message>
+	<message key="reader.fullText">Fulltext:</message>
+	<message key="rt.addComment">Lägg till kommentar</message>
+	<message key="rt.admin.configuration">Konfiguration</message>
+	<message key="rt.admin.contexts.confirmDelete">Är du säker på att du vill radera Kontexten och all tillhörande sökhistorik?</message>
+	<message key="rt.admin.contexts.createContext">Skapa Kontext</message>
+	<message key="rt.admin.contexts.edit.editContext">Redigera Kontext</message>
+	<message key="rt.admin.contexts.metadata">Metadata</message>
+	<message key="rt.admin.contexts.options.authorTerms">Använd författarnamn som defaultsöktermer för att underlätta för användarna att hitta annat material av författaren (t.ex., för en "Andra artiklar" kontext)</message>
+	<message key="rt.admin.contexts.options.citedBy">Använd förattarnamn som defaultsöktermer och beskriv kontexten som en sökning av citeringar i artikeln.</message>
+	<message key="rt.admin.contexts.options.defineTerms"><![CDATA[Använd det ord som läsaren har angett som defaultsökterm eller lämna blankt om inga val har gjorts (t.ex., för en "Orddefinitions"-Kontext). Valet "Orddefinition" måste då vara aktiverad i <a href="{$settingsUrl}">RST Inställningar</a> för att tillåta att dubbelklickning på ord ska öppnas i den Kontexten.]]></message>
+	<message key="rt.admin.contexts.options.geoTerms">Använd geografisk indexeringsinformation som defaultsöktermer.</message>
+	<message key="rt.admin.contexts.options">Val</message>
+	<message key="rt.admin.management">Administration</message>
+	<message key="rt.admin.readingToolsEnabled">Läsverktyg</message>
+	<message key="rt.admin.searches.confirmDelete">Är du säker på att du vill rensa den här sökningen?</message>
+	<message key="rt.admin.searches.createSearch">Gör en sökning</message>
+	<message key="rt.admin.searches.edit.editSearch">Redigera Sök</message>
+	<message key="rt.admin.selectedVersion">Relaterat material</message>
+	<message key="rt.admin.settings.abstract">Sammanfattning (visar sammanfattning av materialet).</message>
+	<message key="rt.admin.settings.authorBio">Om Författaren (visar biografisk information som författaren angett).</message>
+	<message key="rt.admin.settings.captureCite">Hur element ska citeras (kräver bibliografisk information om materialet).</message>
+	<message key="rt.admin.settings.defineTerms">Sök på ord (Gör det möjligt för författare att dubbelklicka på vilket ord som helst i materialet för att 'skicka' valt ord till ett uppslagsverk).</message>
+	<message key="rt.admin.settings.disableRelatedItems">Avaktivera relaterade element</message>
+	<message key="rt.admin.settings.emailAuthor">Skicka E-post till författaren (går till ett formulär med författarens E-postadress).</message>
+	<message key="rt.admin.settings.emailOthers">Tipsa en vän (går till ett formulär där man kan länka till materialet).</message>
+	<message key="rt.admin.settings.findingReferences">Sök referenser</message>
+	<message key="rt.admin.settings.printerFriendly">Uskriftsversion (visar en utskriftsvänlig version av materialet).</message>
+	<message key="rt.admin.settings.supplementaryFiles">Supplementerande filer (visar filer som författare har inkluderat med manuskriptet).</message>
+	<message key="rt.admin.settings.viewMetadata">Indexera metadata (visar materialets indexeringsmetadata som angivits av författare och system).</message>
+	<message key="rt.admin.status">Status</message>
+	<message key="rt.admin.validateUrls.complete">Validering utförd.</message>
+	<message key="rt.admin.validateUrls.ok">OK</message>
+	<message key="rt.admin.validateUrls.urlIsInvalid">{$url} är inte giltigt.</message>
+	<message key="rt.admin.validateUrls">Validera URLs för Läsverktyg</message>
+	<message key="rt.admin.validateUrls.validate">Validera</message>
+	<message key="rt.admin.versions.confirmDelete">Är du säker på att du vill radera den här Versionen och all tillhörande kontext och sökhistorik?</message>
+	<message key="rt.admin.versions.confirmRestore">Är du säker på att du vill återskapa alla Versioner till Default? Om ja, välj en aktiv Version under Inställningar.</message>
+	<message key="rt.admin.versions.createVersion">Skapa Version</message>
+	<message key="rt.admin.versions.edit.editVersion">redigera Version</message>
+	<message key="rt.admin.versions.export">Exportera</message>
+	<message key="rt.admin.versions.importVersion">Importera Version</message>
+	<message key="rt.admin.versions.metadata">Metadata</message>
+	<message key="rt.admin.versions.restoreVersions">Återskapa Versioner till Default</message>
+	<message key="rt.authorBio">Om Författaren</message>
+	<message key="rt.captureCite.format">Citeringsformat</message>
+	<message key="rt.captureCite">Hur man citerar materialet</message>
+	<message key="rt.captureCite.online">Online</message>
+	<message key="rt.colleague">Tipsa en vän</message>
+	<message key="rt.context.abbrev">Förkortning</message>
+	<message key="rt.context.and">OCH</message>
+	<message key="rt.context.citesContextDescription">Om artikeln är indexerad i Google Scholar kan artikeln medföljas av en "Cited by X" länk, som leder till alla arbeten som citerar vald artikel. Google Scholar listar även det material som citerar författaren eller titeln. För att komma åt onlinematerial som endast är tillgängligt via ditt bibliotek kan du behöva gå till inställningar i Scholar Preferences i Google Scholar och aktivera Library Links för din institution.</message>
+	<message key="rt.context">Kontext</message>
+	<message key="rt.context.defineTermsDescription">Om materialet är en HTML fil (och inte en PDF), kan man dubbelklicka på valfritt ord i texten och ordet slås automatiskt upp i fältet för ordboksfunktionen. Man kan även skriva eller klistra in ord i fältet manuellt. För ytterligare information om Sökmöjligheter, se OM. De här resurserna är valda för sin relevans och fria tillgång till delar av, eller hela innehållet.</message>
+	<message key="rt.context.description">Beskrivning</message>
+	<message key="rt.context.order">Ordna</message>
+	<message key="rt.contexts">Kontexter</message>
+	<message key="rt.context.searchDescription">Sötermerna är valda av författaren. De kan ändras eller tas bort av läsaren, eftersom två eller tre korta, precisa fraser ger de bästa Boolska (AND) sökningarna. För ytterligare information om Sökmöjligheter, se OM. De här resurserna är valda för sin relevans och fria tillgång till delar av, eller hela innehållet.</message>
+	<message key="rt.context.searchTerms">Söktermer</message>
+	<message key="rt.context.termToDefine">Slå upp</message>
+	<message key="rt.context.title">Titel</message>
+	<message key="rt.emailAuthor">Skicka E-post till författaren</message>
+	<message key="rt.email.needLogin"><![CDATA[* kräver <a target="_parent" href="{$loginUrl}">registrering</a>]]></message>
+	<message key="rt.email.sent">Ditt meddelande har skickats.</message>
+	<message key="rt.findingReferences">Hitta referenser</message>
+	<message key="rt.findingReferences.googleScholar">Google Scholar</message>
+	<message key="rt.findingReferences.windowsLiveAcademic">Windows Live Academic</message>
+	<message key="rt.lookUp">Sök på ord</message>
+	<message key="rt.metadata.dublinCore.contributor">Medverkande</message>
+	<message key="rt.metadata.dublinCore.coverage">Täckning</message>
+	<message key="rt.metadata.dublinCore.date">Datum</message>
+	<message key="rt.metadata.dublinCore.description">Beskrivning</message>
+	<message key="rt.metadata.dublinCore">Dublin Core</message>
+	<message key="rt.metadata.dublinCore.format">Format</message>
+	<message key="rt.metadata.dublinCore.identifier">Identifikator</message>
+	<message key="rt.metadata.dublinCore.language">Språk</message>
+	<message key="rt.metadata.dublinCore.publisher">Förlag</message>
+	<message key="rt.metadata.dublinCore.relation">Relation</message>
+	<message key="rt.metadata.dublinCore.rights">Rättigheter</message>
+	<message key="rt.metadata.dublinCore.source">Källa</message>
+	<message key="rt.metadata.dublinCore.subject">Ämne</message>
+	<message key="rt.metadata.dublinCore.title">Titel</message>
+	<message key="rt.metadata.dublinCore.type">Typ</message>
+	<message key="rt.metadata.forThisDocument">Metadata för det här dokumentet</message>
+	<message key="rt.metadata.pkp.abstract">Sammanfattning</message>
+	<message key="rt.metadata.pkp.copyright">Upphovsrätt och avtal</message>
+	<message key="rt.metadata.pkp.coverage">Geospatial och kronologisk täckning, forskningsurval (kön, ålder, etc.)</message>
+	<message key="rt.metadata.pkp.date">(YYYY-MM-DD)</message>
+	<message key="rt.metadata.pkp.discipline">Ämnen(n)</message>
+	<message key="rt.metadata.pkp.format">Filformat</message>
+	<message key="rt.metadata.pkp.genre">Status &amp; genre</message>
+	<message key="rt.metadata.pkpItem">PKP Metadata enheter</message>
+	<message key="rt.metadata.pkp.language">Svenska=sv</message>
+	<message key="rt.metadata.pkp.publisher">Organisation, stad</message>
+	<message key="rt.metadata.pkp.source">Tidskrift/konferenstitel; vol., no. (år)</message>
+	<message key="rt.metadata.pkp.sponsors">Sponsor(er)</message>
+	<message key="rt.metadata.pkp.subject">Nyckelord</message>
+	<message key="rt.metadata.pkp.suppFiles">Supp. Filer</message>
+	<message key="rt.metadata.pkp.title">Dokumentets titel</message>
+	<message key="rt.metadata.pkp.type">Typ</message>
+	<message key="rt.metadata.pkp.uri">Universal Resource Indicator</message>
+	<message key="rt.printVersion">Utskriftsversion</message>
+	<message key="rt.readingTools">Läsverktyg</message>
+	<message key="rt.relatedItems">Relaterat material</message>
+	<message key="rt.reviewPolicy">Granskningspolicy</message>
+	<message key="rt.search.description">Beskrivning</message>
+	<message key="rt.searches">Sökningar</message>
+	<message key="rt.search.order">Ordna</message>
+	<message key="rt.search">Sök</message>
+	<message key="rt.search.searchPost">Skicka data</message>
+	<message key="rt.search.searchUrl">Sök URL</message>
+	<message key="rt.search.suggest">Föreslå en källa</message>
+	<message key="rt.search.title">Titel</message>
+	<message key="rt.search.url">URL</message>
+	<message key="rt.suppFiles.download">Ladda ned</message>
+	<message key="rt.suppFiles">Supplementerande filer</message>
+	<message key="rt.suppFiles.viewMetadata">Indexeringsmetadata</message>
+	<message key="rt.version.description">Beskrivning</message>
+	<message key="rt.version.key">Nyckel</message>
+	<message key="rt.version.locale">Lokalinställningar</message>
+	<message key="rt.versions">Inställningar för Relaterat material</message>
+	<message key="rt.version.title">Titel</message>
+	<message key="rt.version">Version</message>
+	<message key="rt.viewMetadata">Indexera metadata</message>
+</locale>

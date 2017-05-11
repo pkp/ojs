@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+
+<!--
+  * xml/importexport.xsd
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Schema describing common XML import/export elements shared across PKP applications
+  -->
+
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://pkp.sfu.ca" xmlns:pkp="http://pkp.sfu.ca" elementFormDefault="qualified">
+	<!-- Identifies a particular I18N locale, e.g. en_US -->
+	<simpleType name="locale">
+		<restriction base="string">
+			<pattern value="[a-z][a-z]_[A-Z][A-Z]" />
+		</restriction>
+	</simpleType>
+
+	<!-- A text node with an attribute describing its locale, e.g. title -->
+	<complexType name="localizedNode" mixed="true">
+		<attribute name="locale" type="pkp:locale" use="optional" />
+	</complexType>
+</schema>

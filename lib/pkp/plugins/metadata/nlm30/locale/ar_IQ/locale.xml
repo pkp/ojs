@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../dtd/locale.dtd">
+
+<!--
+  * plugins/metadata/nlm30/locale/ar_IQ/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+ 
+<locale name="ar_IQ" full_name="العربية">
+	<!-- plug-in -->
+	<message key="plugins.metadata.nlm30.displayName">البيانات الوصفية NLM 3.0</message>
+	<message key="plugins.metadata.nlm30.description">يعاون مخططات NLM 3.0 ومهايئات تطبيقاتها.</message>
+
+	<!-- citation meta-data adapter -->
+	<message key="plugins.metadata.nlm30.citationAdapter.displayName">مهايئ الاقتباسات NLM 3.0</message>
+	<message key="plugins.metadata.nlm30.citationAdapter.description">يستقطع/يحقن البيانات الوصفية من/في الاقتباسات.</message>
+
+	<!-- citation parsers (citation extraction services) -->
+	<message key="plugins.metadata.nlm30.citationParsers.displayName">خدمات استقطاع الاقتباسات"</message>
+	<message key="plugins.metadata.nlm30.citationParsers.description">يحول الاقتباس المكتوب بنص صريح إلى معلمات عنصر الاقتباس NLM 3.0 ."</message>
+
+	<!-- citation lookup (citation database/improvement/lookup services) -->
+	<message key="plugins.metadata.nlm30.citationLookup.displayName">خدمات قاعدة بيانات الاقتباسات"</message>
+	<message key="plugins.metadata.nlm30.citationLookup.description">يحسن معلمات عنصر الاقتباس NLM 3.0، مثلاً: عبر تقصي الاقتباسات في قواعد بيانات خارجية."</message>
+
+	<!-- citation output -->
+	<message key="plugins.metadata.nlm30.citationOutput.displayName">خدمات مخرجات الاقتباسات</message>
+	<message key="plugins.metadata.nlm30.citationOutput.description">يحول معلمات عنصر الاقتباس NLM 3.0 إلى اقتباس قياسي مكتوب بنص صريح.</message>
+	<message key="plugins.metadata.nlm30Xml.citationOutput.displayName">خدمات مخرجات الاقتباسات (XML)</message>
+	<message key="plugins.metadata.nlm30Xml.citationOutput.description">يحول معلمات عنصر الاقتباس NLM 3.0 إلى اقتباس قياسي مكتوب بصيغة XML.</message>
+
+	<!-- NLM 3.0 output -->
+	<message key="plugins.metadata.nlm30.nlm30XmlOutput.displayName">مخرجات نشر المجلة NLM 3.0</message>
+	<message key="plugins.metadata.nlm30.nlm30XmlOutput.description">يحول المؤلَّف إلى صيغة NLM 3.0.</message>
+
+	<!-- NLM 2.3 output -->
+	<message key="plugins.metadata.nlm30.nlm23XmlOutput.displayName">مخرجات نشر المجلة NLM 2.3</message>
+	<message key="plugins.metadata.nlm30.nlm23XmlOutput.description">يحول المؤلَّف إلى صيغة NLM 2.3.</message>
+
+	<!-- NLM 3.0 to 2.3 downgrade -->
+	<message key="plugins.metadata.nlm30.nlm30ToNlm23Xml.displayName">محدر منشورات المجلة NLM من 3.0 إلى 2.3</message>
+	<message key="plugins.metadata.nlm30.nlm30ToNlm23Xml.description">يحدر صيغة NLM من 3.0 إلى 2.3.</message>
+
+	<!-- Plain text reference list output -->
+	<message key="plugins.metadata.nlm30.refList.displayName">منشئ قائمة مراجع النص الصريح</message>
+	<message key="plugins.metadata.nlm30.refList.description">ينشئ قائمة منسقة لمراجع النص الصريح من مراجع المؤلفات في نظام المجلات المفتوحة/نظام المؤتمرات المفتوحة... وما شابه</message>
+</locale>

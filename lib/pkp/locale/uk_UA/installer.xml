@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/uk_UA/installer.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the uk_UA (Українська) locale.
+  *
+  * Translated by Denys Solovianenko, 2011
+  * V. I. Vernadsky National Library of Ukraine
+  -->
+
+<locale name="uk_UA" full_name="Українська">
+	<message key="installer.additionalLocales">Додаткові локалізації</message>
+	<message key="installer.administratorAccount">Обліковий запис адміністратора</message>
+	<message key="installer.administratorAccountInstructions">Цей обліковий запис буде використовуватись адміністратором сайту, він надаватиме повний доступ до системи. Ви зможете створити додаткові облікові записи після завершення інсталяції.</message>
+	<message key="installer.checkNo"><![CDATA[<span class="formError">НІ</span>]]></message>
+	<message key="installer.checkYes">Так</message>
+	<message key="installer.clientCharset">Таблиця кодування браузера</message>
+	<message key="installer.clientCharsetInstructions">Кодування, в якому буде проводитись обмін даними з браузерами користувачів.</message>
+	<message key="installer.configFileError"><![CDATA[Файл конфігурації <tt>config.inc.php</tt> не існує або недоступний для читання.]]></message>
+	<message key="installer.connectionCharset">Таблиця кодування для зв'язку з БД</message>
+	<message key="installer.contentsOfConfigFile">Зміст файлу конфігурації</message>
+	<message key="installer.createDatabase">Створити нову базу даних</message>
+	<message key="installer.createDatabaseInstructions">Для використання цієї опції необхідно, щоб ваша СУБД мала підтримку віддаленого створення баз даних та ваш обліковий запис мав права на створення нових баз даних. Якщо ця опція включена і вам не вдається продовжити інсталяцію, вручну створіть базу даних на сервері, запустіть інсталяцію знову та відключіть цю опцію.</message>
+	<message key="installer.databaseCharset">Таблиця кодування БД</message>
+	<message key="installer.databaseDriver">Драйвер бази даних</message>
+	<message key="installer.databaseDriverInstructions"><![CDATA[<strong>Драйвери баз даних, наведені у квадратних дужках, не підтримуються жодним з завантажених розширень PHP і, скоріше всього, якщо буде вибраний один з них, інсталяція завершиться невдало.</strong><br />Всі вказані вище драйвери баз даних, що не підтримуються системою, вказані лише з академічною метою, скоріше всього, вони не будуть працювати належним чином.]]></message>
+	<message key="installer.databaseHost">Хост</message>
+	<message key="installer.databaseHostInstructions">Для з'єднання через domain sockets замість TCP/IP залиште поле імені хоста пустим. Це не є необхідним, якщо використовується MySQL, оскільки в цьому випадку, якщо введений "localhost", сокети будуть використовуватись автоматично. Але для деяких інших драйверів баз даних, наприклад, PostgreSQL, це є потрібним.</message>
+	<message key="installer.databaseName">Ім'я бази даних</message>
+	<message key="installer.databasePassword">Пароль</message>
+	<message key="installer.databaseSettings">Налаштування бази даних</message>
+	<message key="installer.databaseUsername">Ім'я користувача</message>
+	<message key="installer.encryption">Алгоритм шифрування паролів</message>
+	<message key="installer.filesDir">Тека для вивантаження файлів</message>
+	<message key="installer.fileSettings">Параметри файлів</message>
+	<message key="installer.form.clientCharsetRequired">Необхідно вказати таблицю кодування браузера.</message>
+	<message key="installer.form.databaseDriverRequired">Необхідно вказати драйвер бази даних.</message>
+	<message key="installer.form.databaseNameRequired">Необхідно вказати ім'я бази даних.</message>
+	<message key="installer.form.emailRequired">Необхідно вказати коректну адресу email для облікового запису адміністратора.</message>
+	<message key="installer.form.encryptionRequired">Необхідно вказати алгоритм, який буде використовуватись для шифрування паролів користувачів.</message>
+	<message key="installer.form.filesDirRequired">Необхідно вказати теку, в якій будуть зберігатися вивантажені файли.</message>
+	<message key="installer.form.localeRequired">Необхідно визначити локалізацію.</message>
+	<message key="installer.form.passwordRequired">Необхідно вказати пароль для облікового запису адміністратора.</message>
+	<message key="installer.form.passwordsDoNotMatch">Введені паролі адміністратора не відповідають одне одному.</message>
+	<message key="installer.form.separateMultiple">Якщо значень декілька, відокремлюйте їх комами</message>
+	<message key="installer.form.usernameAlphaNumeric">Ім'я користувача адміністратора може складатися лише з літер, цифр, символів підкреслення та дефісів, воно має починатися та закінчуватися літерою або цифрою.</message>
+	<message key="installer.form.usernameRequired">Необхідно вказати ім'я користувача для облікового запису адміністратора.</message>
+	<message key="installer.installationWrongPhp"><![CDATA[<br/><strong>ПОПЕРЕДЖЕННЯ: Встановлена версія PHP не відповідає мінімальним вимогам для інсталяції цієї програми. Рекомендується оновити версію PHP.</strong>]]></message>
+	<message key="installer.installErrorsOccurred">В процесі інсталяції виникли помилки</message>
+	<message key="installer.installerSQLStatements">Оператори SQL для інсталяції</message>
+	<message key="installer.installFileError"><![CDATA[Інсталяційний файл <tt>dbscripts/xml/install.xml</tt>  не існує або недоступний для читання.]]></message>
+	<message key="installer.installFilesDirError">Тека, визначена для збереження вивантажених файлів, не існує або захищена від запису.</message>
+	<message key="installer.installParseDBFileError"><![CDATA[Помилка синтаксичного розбору файлу інсталяції бази даних <tt>{$file}</tt>.]]></message>
+	<message key="installer.installParseEmailTemplatesFileError"><![CDATA[Помилка синтаксичного розбору файлу шаблонів електронної пошти <tt>{$file}</tt>.]]></message>
+	<message key="installer.locale">Локалізація</message>
+	<message key="installer.locale.maybeIncomplete">Позначені локалізації можуть бути неповними.</message>
+	<message key="installer.localeSettings">Налаштування локалізації</message>
+	<message key="installer.oaiRepositoryIdInstructions"><![CDATA[Унікальний ідентифікатор, який буде використовуватись для ідентифікації комплектів метаданих зібраних з цього сховища за протоколом збору метаданих <a href="http://www.openarchives.org/" target="_blank">Open Archives Initiative</a>.]]></message>
+	<message key="installer.oaiRepositoryId">Ідентифікатор сховища OAI</message>
+	<message key="installer.publicFilesDirError">Тека, визначена для збереження файлів, не існує або захищена від запису.</message>
+	<message key="installer.releaseNotes">Примітки версії</message>
+	<message key="installer.securitySettings">Налаштування безпеки</message>
+	<message key="installer.oaiSettings">Налаштування OAI</message>
+	<message key="installer.installParseFilterConfigFileError"><![CDATA[Помилка аналізу файлу фільтра конфігурації <tt>{$file}</tt>.]]></message>
+</locale>

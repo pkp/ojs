@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE filterConfig SYSTEM "../../../../dtd/filterConfig.dtd">
+
+<!--
+  * filterConfig.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Filter Configuration.
+  -->
+<filterConfig>
+	<filterGroups>
+		<!-- MODS 3.4 XML output -->
+		<filterGroup
+			symbolic="mods34=>mods34-xml"
+			displayName="plugins.metadata.mods34.mods34XmlOutput.displayName"
+			description="plugins.metadata.mods34.mods34XmlOutput.description"
+			inputType="metadata::plugins.metadata.mods34.schema.Mods34Schema(*)"
+			outputType="xml::schema(lib/pkp/plugins/metadata/mods34/filter/mods34.xsd)" />
+	</filterGroups>
+	<filters>
+		<!-- MODS 3.4 XML output -->
+		<filter
+			inGroup="mods34=>mods34-xml"
+			class="lib.pkp.plugins.metadata.mods34.filter.Mods34DescriptionXmlFilter"
+			isTemplate="0" />
+	</filters>
+</filterConfig>

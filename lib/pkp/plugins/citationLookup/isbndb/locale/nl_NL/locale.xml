@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../dtd/locale.dtd">
+
+<!--
+  * plugins/citationLookup/isbndb/locale/nl_NL/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="nl_NL" full_name="Nederlands">
+	<!-- plug-in -->
+	<message key="plugins.citationLookup.isbndb.displayName">ISBNdb Database Connector</message>
+	<message key="plugins.citationLookup.isbndb.description">Verbinding met de ISBNdb bibliographic database.</message>
+
+	<!-- ISBN lookup and extraction services -->
+	<message key="plugins.citationLookup.isbndbExtraction.displayName">ISBN extractie service</message>
+	<message key="plugins.citationLookup.isbndbExtraction.description">Zoek een ISBN bij een NLM 3.0 element-citatie beschrijving.</message>
+	<message key="plugins.citationLookup.isbndbLookup.displayName">ISBN opzoek service</message>
+	<message key="plugins.citationLookup.isbndbLookup.description">Zoek een volledige NLM 3.0 element-citatie beschrijving bij een ISBN.</message>
+</locale>

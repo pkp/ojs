@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/de_DE/grid.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Please contact Marco Tullney, marco.tullney@fu-berlin.de, with any questions regarding this translation.
+  * Localization strings.
+  -->
+
+<locale name="de_DE" full_name="Deutsch (Deutschland)">
+	<!-- Common -->
+	<message key="grid.noItems">Keine Einträge</message>
+	<message key="grid.settings">Einstellungen</message>
+	<message key="grid.noAuditors">Kein/e Prüfer/in</message>
+	<message key="grid.remotelyHostedItem">Dieses Element wird liegt an einem Remote-Ort.</message>
+
+	<message key="grid.action.manageAccess">Zugriff verwalten</message>
+	<message key="grid.action.sort">Sortieren</message>
+	<message key="grid.action.addItem">Eintrag hinzufügen</message>
+	<message key="grid.action.addUser">Benutzer/in hinzufügen</message>
+	<message key="grid.action.approveCopyedit">Diese Lektoratsdatei für die nächste Phase akzeptieren</message>
+	<message key="grid.action.reload">Neu laden</message>
+	<message key="grid.action.delete">Löschen</message>
+	<message key="grid.action.deleteFile">Datei löschen</message>
+	<message key="grid.action.deleteMedia">Medium löschen</message>
+	<message key="grid.action.editMedia">Medium bearbeiten</message>
+	<message key="grid.action.editSection">Rubrik bearbeiten</message>
+	<message key="grid.action.export">Exportieren</message>
+	<message key="grid.action.deleteSection">Rubrik löschen</message>
+	<message key="grid.action.editorialHistory">Redaktioneller Verlauf</message>
+	<message key="grid.action.remove">Entfernen</message>
+	<message key="grid.action.edit">Bearbeiten</message>
+	<message key="grid.action.approve">Akzeptieren</message>
+	<message key="grid.action.moreInformation">Mehr Informationen</message>
+	<message key="grid.action.restoreDefaults">Standardeinstellungen wiederherstellen</message>
+	<message key="grid.action.restoreDefaults.confirm">Sind Sie sicher, dass Sie Standardeinstellungen wiederherstellen möchten?</message>
+	<message key="grid.action.addAuthor">Autor/in hinzufügen</message>
+	<message key="grid.action.editAuthor">Autor/in bearbeiten</message>
+	<message key="grid.action.deleteAuthor">Autor/in löschen</message>
+	<message key="grid.action.addAuditor">Prüfer/in hinzufügen</message>
+	<message key="grid.action.upgrade">Upgrade</message>
+	<message key="grid.action.order">Sortieren</message>
+	<message key="grid.action.cancelOrdering">Sortiermodus beenden</message>
+	<message key="grid.action.extendAll">Alles ausdehnen</message>
+	<message key="grid.action.collapse">Einklappen</message>
+	<message key="grid.action.collapseAll">Alles einklappen</message>
+	<message key="grid.action.wizard">Einstellungsassistent</message>
+	<message key="grid.action.moveItem">Element verschieben</message>
+	<message key="grid.action.downloadAll">Alle Dateien als ein Archiv herunterladen</message>
+	<message key="grid.action.readReview">Dieses Gutachten lesen</message>
+	<message key="grid.action.email">E-Mail senden</message>
+	<message key="grid.action.addReviewer">Gutachter/in hinzufügen</message>
+	<message key="grid.action.addFile">Datei hinzufügen</message>
+	<message key="grid.action.editFile">Eine Datei bearbeiten</message>
+	<message key="grid.action.selectFiles">Dateien auswählen, die verwaltet werden sollen</message>
+	<message key="grid.action.requestRevisions">Überarbeitungen für diese Einreichung einfordern</message>
+	<message key="grid.action.accept">Diese Einreichung annehmen</message>
+	<message key="grid.action.decline">Diese Einreichung ablehnen</message>
+	<message key="grid.action.internalReview">Diese Einreichung in die interne Begutachtung schicken</message>
+	<message key="grid.action.externalReview">Diese Einreichung in die externe Begutachtung schicken</message>
+	<message key="grid.action.sendToProduction">Diese Einreichung in die Produktion schicken</message>
+	<message key="grid.action.settings">Einstellungen</message>
+	<message key="grid.action.importexport">Inhalte oder Einstellungen importieren oder exportieren</message>
+	<message key="grid.action.restoreDefaults">Standardeinstellungen wiederherstellen</message>
+	<message key="grid.action.orderItems">Sortiermodus aktivieren</message>
+	<message key="grid.action.editSubmissionChecklist">Dieses Element der Checkliste bearbeiten</message>
+	<message key="grid.action.deleteSubmissionChecklist">Dieses Element der Checkliste löschen</message>
+	<message key="grid.action.resetAll">Alle Elemente auf ihre Standardwerte zurücksetzen</message>
+	<message key="grid.action.addPreparedEmail">Eine neue E-Mail-Vorlage hinzufügen</message>
+	<message key="grid.action.editPreparedEmail">Diese E-Mail-Vorlage bearbeiten</message>
+	<message key="grid.action.disableEmail">Diese E-Mail-Vorlage deaktivieren</message>
+	<message key="grid.action.resetEmail">Diese E-Mail-Vorlage auf den Standardtext zurücksetzen</message>
+	<message key="grid.action.expandAll">Alles ausklappen</message>
+	<message key="grid.action.requestAccount">Teilnehmer/in hinzufügen</message>
+	<message key="grid.action.expand">Ausklappen</message>
+	<message key="grid.action.notify">Diese Benutzer/in benachrichtigen</message>
+	<message key="grid.action.addUserGroup">Eine neue Benutzer/innengruppe hinzufügen</message>
+	<message key="grid.action.editUserGroup">Diese Benutzer/innengruppe bearbeiten</message>
+	<message key="grid.action.disable">Deaktivieren</message>
+	<message key="grid.action.details">Dieses Element ansehen</message>
+	<message key="grid.action.enrolExisting">Eine/n existierende Benutzer/in als Gutachter/in eintragen</message>
+	<message key="grid.action.selectCreate">Neue/n Gutachter/in anlegen</message>
+	<message key="grid.action.advancedSearch">Erweiterte Suche</message>
+	<message key="grid.action.viewLibrary">Dokumentbibliothek ansehen</message>
+	<message key="grid.action.viewMetadata">Die Metadaten zu dieser Einreichung ansehen</message>
+	<message key="grid.action.sendReminder">Dieser Benutzerin/diesem Benutzer eine Erinnerung an die Aufgabe senden</message>
+	<message key="grid.action.newRound">Eine neue Runde anlegen</message>
+	<message key="grid.action.viewReviewGuidelines">Die Begutachtungsrichtlinien ansehen</message>
+	<message key="grid.action.viewCompetingInterestGuidelines">Die Richtlinien für Interessenkonflikte ansehen</message>
+	<message key="grid.action.thankReviewer">Eine Dankesnachricht an diese/n Gutachter/in senden</message>
+	<message key="grid.action.uploadFile">Eine Datei hochladen</message>
+	<message key="grid.action.addAnnouncementType">Mitteilungstyp hinzufügen</message>
+	<message key="grid.action.addAnnouncement">Mitteilung hinzufügen</message>
+	<message key="grid.action.mergeUser">Benutzer/in zusammenführen</message>
+	<message key="grid.action.unassignUser">Zuweisung an Benutzer/in zurücknehmen</message>
+	<message key="grid.action.history">Verlauf ansehen</message>
+	<message key="grid.action.unconsiderReview">Dieses Gutachten ist komplett, aber Sie können es unberücksichtigt lassen.</message>
+	<message key="grid.action.enable">Einschalten</message>
+	<message key="grid.action.bookInfo">Informationen zur Einreichung</message>
+	<message key="grid.action.logInAs">Einloggen als</message>
+	<message key="grid.action.exportAllUsers">Alle Benutzer/innen exportieren</message>
+	<message key="grid.users.confirmExportAllUsers">Sind Sie sicher, dass Sie alle Benutzer/innen exportieren möchten?</message>
+
+	<!--  grid task status -->
+	<message key="grid.task.status.completed">Diese Aufgabe ist erledigt.</message>
+	<message key="grid.task.status.new">Dies ist ein neues Element und bedarf Ihrer Aufmerksamkeit.</message>
+	<message key="grid.task.status.uploaded">Der Spaltentitel gibt an, wer diese Datei hochgeladen hat.</message>
+	<message key="grid.task.status.unfinished">Aufgabe unerledigt</message>
+	<message key="grid.task.status.reviewReady">Dieses Gutachten ist fertig. Klicken Sie das Notizsymbol links, um es zu lesen.</message>
+
+	<!-- Common Grid Column Titles -->
+	<message key="grid.columns.actions">Aktionen</message>
+	<message key="grid.columns.institution">Institution</message>
+	<message key="grid.columns.url">URL</message>
+	<message key="grid.columns.auditor">Prüfer/in</message>
+	<message key="grid.columns.locale">Regionaleinstellung</message>
+
+	<!-- Sponsors Grid -->
+	<message key="grid.sponsor.title">Sponsor/innen</message>
+	<message key="grid.action.addSponsor">Sponsor/in hinzufügen</message>
+	<message key="grid.action.deleteSponsor">Sponsor/in löschen</message>
+	<message key="grid.action.editSponsor">Sponsor/in bearbeiten</message>
+
+	<!-- Series Grid -->
+	<message key="grid.action.addSeries">Reihe hinzufügen</message>
+	<message key="grid.action.editSeries">Reihe bearbeiten</message>
+	<message key="grid.action.deleteSeries">Reihe löschen</message>
+
+	<!-- Categories Grid -->
+	<message key="grid.action.addCategory">Kategorie hinzufügen</message>
+	<message key="grid.action.editCategory">Kategorie bearbeiten</message>
+	<message key="grid.action.deleteCategory">Kategorie löschen</message>
+
+	<!-- Contributor Grid -->
+	<message key="grid.contributor.title">Beiträger/innen</message>
+	<message key="grid.action.addContributor">Beiträger/in hinzufügen</message>
+	<message key="grid.action.editContributor">Beiträger/in bearbeiten</message>
+	<message key="grid.action.deleteContributor">Beiträger/in löschen</message>
+
+	<!-- Genres Grid -->
+	<!-- Review Forms Grid -->
+	<message key="grid.reviewForm.title">Begutachtungsformulare</message>
+
+	<!-- Files -->
+	<message key="grid.noFiles">Keine Dateien</message>
+
+	<!-- Library Files -->
+	<message key="grid.libraryFiles.column.files">Dateien</message>
+	<message key="grid.libraryFiles.submission.title">Einreichungsbibliothek</message>
+	<message key="grid.libraryFiles.editorial.title">Redaktionsbibliothek</message>
+	<message key="grid.libraryFiles.review.title">Gutachtenbibliothek</message>
+	<message key="grid.libraryFiles.production.title">Produktionsbibliothek</message>
+	<message key="grid.libraryFiles.productionTemplate.title">Produktionsvorlagenbibliothek</message>
+
+	<!-- Einreichungscheckliste -->
+	<message key="grid.submissionChecklist.title">Checkliste für Einreichungen</message>
+	<message key="grid.submissionChecklist.column.checklistItem">Eintrag auf Checkliste</message>
+
+	<!-- Beiträger/innen zu einer Einreichung -->
+	<message key="author.users.contributor.name">Name</message>
+	<message key="author.users.contributor.email">E-Mail</message>
+	<message key="author.users.contributor.role">Rolle</message>
+	<message key="author.users.contributor.principalContact">Hauptkontakt</message>
+	<message key="author.users.contributor.includeInBrowse">In Browse Lists</message>
+
+	<!-- Rollen -->
+	<message key="grid.roles.currentRoles">Aktuelle Rollen</message>
+	<message key="grid.roles.add">Neue Rolle anlegen</message>
+	<message key="grid.roles.stageAssignment">Abschnittszuordnung</message>
+
+	<!-- Benutzer/innen -->
+	<message key="grid.user.currentUsers">Aktuelle Benutzer/innen</message>
+	<message key="grid.user.currentEnrollment">Aktuelle Registrierung</message>
+	<message key="grid.user.allRoles">Alle Rollen</message>
+	<message key="grid.user.allPermissionLevels">All Permission Levels</message>
+	<message key="grid.user.add">Benutzer/in hinzufügen</message>
+	<message key="grid.user.enroll">Benutzer/in eintragen</message>
+	<message key="grid.user.edit">Benutzer/in bearbeiten</message>
+	<message key="grid.user.email">E-Mail</message>
+	<message key="grid.user.enable">Aktivieren</message>
+	<message key="grid.user.disable">Deaktivieren</message>
+	<message key="grid.user.disableReason">Grund für Benutzer/in-Deaktivierung</message>
+	<message key="grid.user.enableReason">Grund für Benutzer/in-Aktivierung</message>
+	<message key="grid.user.error">Beim Veralten dieser Benutzerin/dieses Benutzers ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.</message>
+	<message key="grid.user.errorEmail">Beim Senden dieser E-Mail ist ein Fehler aufgetreten. Bitte stellen Sie sicher, dass Ihre Mailserverkonfiguration funktioniert und/oder kontaktieren Sie Ihre/n System-Administrator/in.</message>
+	<message key="grid.user.cannotAdminister">Sie haben keine ausreichenden Berechtigungen, um diese/n Benutzer/in zu bearbeiten.</message>
+	<message key="grid.user.authSource">Authentifizierungsquelle</message>
+	<message key="grid.user.mustProvideName">Bitte geben Sie zunächst wenigstens einen Nachnamen für die/den Benutzer/in an.</message>
+	<message key="grid.user.generatePassword">Passwort erzeugen</message>
+	<message key="grid.user.generatePasswordDescription">Ein Zufallspasswort für diese/n Benutzer/in erzeugen.</message>
+	<message key="grid.user.notifyUser">Benutzer/in benachrichtigen</message>
+	<message key="grid.user.notifyUserDescription">Der/dem Benutzer/in eine Willkommens-E-Mail senden.</message>
+	<message key="grid.user.mustChangePassword">Passwort ändern</message>
+	<message key="grid.user.mustChangePasswordDescription">Der/die Benutzer/in muss das Passwort beim nächsten Einloggen ändern.</message>
+	<message key="grid.user.mustChangePasswordDescriptionOld">Das Ändern des Passworts durch den/die Benutzer/in beim nächsten Einloggen erforderlich machen.</message>
+	<message key="grid.user.moreDetails">Mehr Benutzer/innen-Details</message>
+	<message key="grid.user.lessDetails">Weniger Benutzer/innen-Details</message>
+	<message key="grid.user.userDetails">Benutzer/innen-Details</message>
+	<message key="grid.user.userRoles">Benutzer/innen-Rollen</message>
+	<message key="grid.user.userNoRoles">Diese/r Benutzer/in hat keine Rollen.</message>
+	<message key="grid.user.step1">Schritt #1: Benutzer/innen-Details ausfüllen</message>
+	<message key="grid.user.step2">Schritt #2: Rollen hinzufügen für Benutzer/in {$userFullName}</message>
+	<message key="grid.user.addRoles">Rollen hinzufügen</message>
+	<message key="grid.user.addRole">Rolle hinzufügen</message>
+	<message key="grid.user.selectUser">Benutzer/in auswählen</message>
+	<message key="grid.user.pleaseSelectUser">Bitte wählen Sie eine/n Benutzer/in aus.</message>
+	<message key="grid.user.confirmLogInAs">Log in as this user? All actions you perform will be attributed to this user.</message>
+	<message key="grid.user.mergeUsers">Benutzer/innen zusammenführen</message>
+	<message key="grid.user.mergeUsers.mergeUser">Benutzer/in zusammenführen</message>
+	<message key="grid.user.mergeUsers.mergeIntoUser">Merge into this User</message>
+	<message key="grid.user.mergeUsers.into.description">Wählen Sie jetzt ein Benutzer/innen-Konto, dem die Autor/innenschaft, die Aufgaben usw. der/des vorherigen Benutzer/in zugeschrieben werden sollen.</message>
+	<message key="grid.user.mergeUsers.from.description">Wählen Sie eine/n Benutzer/in aus, deren/dessen Daten in einem anderen Konto zusammengeführt werden sollen (wenn jemand z.B. zwei Konten hat). Das zuerst ausgewählte Konto wird gelöscht, seine Beiträge, Aufgaben usw. werden dem zweiten Konto zugeschrieben.</message>
+	<message key="grid.user.mergeUsers.allUsers">Alle eingetragenen Benutzer/innen</message>
+	<message key="grid.user.mergeUsers.mergeUserSelect.confirm">Are you sure you wish to merge this user with another one?  You will choose the next user on the following screen.</message>
+	<message key="grid.user.mergeUsers.confirm">Sind Sie sicher, dass Sie das Konto mit dem Benutzer/innen-Namen {$oldUsername} in dem Konto mit dem Benutzer/innen-Namen "{$newUsername}" aufgehen lassen wollen? Das Konto mit dem Benutzer/innen-Namen {$oldUsername} wird dann nicht mehr existieren. Der Vorgang kann nicht rückgängig gemacht werden.</message>
+	<message key="grid.user.mergeUsers.noneEnrolled">Es existiert kein/e Benutzer/in mit dieser Rolle.</message>
+	
+	<!-- Prepared emails -->
+	<message key="grid.preparedEmails.title">Vorbereitete E-Mail-Vorlagen</message>
+	<message key="grid.preparedEmails.currentList">Aktuelle Liste</message>
+
+	<!-- Plugins -->
+	<message key="grid.plugin.allCategories">Alle Kategorien</message>
+	<message key="grid.plugin.disable">Sind Sie sicher, dass Sie dieses Plugin deaktivieren wollen?</message>
+
+	<!-- signoffs -->
+	<message key="grid.action.fileUnconsider">Korrekturen gemacht. Sie müssen diese Aufgabe nicht länger berücksichtigen.</message>
+
+	<!-- Artwork Files Grid -->
+	<message key="grid.artworkFile.caption">Bildunterschrift</message>
+	<message key="grid.artworkFile.credit">Nachweis</message>
+	<message key="grid.artworkFile.copyrightOwner">Urheber/in</message>
+	<message key="grid.artworkFile.copyrightContact">Kontakt (sofern nicht Autor/in oder Verlag)</message>
+	<message key="grid.artworkFile.permissionTerms">Nutzungsbedingungen</message>
+	<message key="grid.artworkFile.placement">Platzierung in der Einreichung</message>
+
+	<!-- User Group Grid -->
+	<message key="grid.userGroup.assignStage">Phase zuweisen</message>
+	<message key="grid.userGroup.unassignStage">Phasenzuordnung aufheben</message>
+	<message key="grid.userGroup.allStages">Alle Workflow-Phasen</message>
+	<message key="grid.userGroup.filter.listRoles">Rollen auflisten, denen dies zugeordnet ist</message>
+	<message key="grid.userGroup.filter.permissionLevel">Mit Berechtigungsebene</message>
+	<message key="grid.userGroup.cantRemoveDefaultUserGroup">Die Rolle {$userGroupName} ist eine Standardrolle und kann nicht entfernt werden.</message>
+	<message key="grid.userGroup.cantRemoveUserGroup">Kann Rolle {$userGroupName} nicht entfernen. Momentan gehören {$usersCount} Nutzer/inn(en) zu dieser Rolle.</message>
+	<message key="grid.userGroup.removed">Rolle {$userGroupName} entfernt.</message>
+	<message key="grid.userGroup.assignedStage">Rolle {$userGroupName} der Phase {$stageName} zugeordnet.</message>
+	<message key="grid.userGroup.unassignedStage">Rolle {$userGroupName} nicht länger der Phase {$stageName} zugeordnet.</message>
+	<message key="grid.action.addNote">Notiz hinzufügen</message>
+	<message key="grid.action.addQuery">Diskussion hinzufügen</message>
+	<message key="grid.action.readQuery">Diskussion lesen</message>
+	<message key="grid.action.deleteQuery">Diskussion löschen</message>
+	<message key="grid.action.updateQuery">Diskussion aktualisieren</message>
+	<message key="grid.action.unassignReviewer">Gutachter/in austragen</message>
+	<message key="grid.action.disapprove">Nicht akzeptieren</message>
+	<message key="grid.action.setApproval">Zustimmung geben</message>
+	<message key="grid.action.search">Suche</message>
+	<message key="grid.action.activate">Aktivieren</message>
+	<message key="grid.action.deactivate">Deaktivieren</message>
+	<message key="grid.action.copy">Kopieren</message>
+	<message key="grid.action.preview">Vorschau</message>
+	<message key="grid.action.install">Installieren</message>
+	<message key="grid.action.moreItems">Mehr laden</message>
+	<message key="grid.reviewFormElement.responseItems">Antwortmöglichkeiten</message>
+	<message key="grid.submission.itemTitle">Autor/in; Titel</message>
+</locale>

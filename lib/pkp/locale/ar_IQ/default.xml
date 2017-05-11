@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/ar_IQ/default.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the ar_IQ (العربية) locale.
+  -->
+
+<locale name="ar_IQ" full_name="العربية">
+	<!-- Group defaults -->
+	<message key="default.groups.name.siteAdmin">مدير الموقع</message>
+	<message key="default.groups.plural.siteAdmin">مدراء الموقع</message>
+	<message key="default.groups.name.productionEditor">محرر الإنتاج</message>
+	<message key="default.groups.plural.productionEditor">محررو الإنتاج</message>
+	<message key="default.groups.abbrev.productionEditor">مح إنتاج</message>
+	<message key="default.groups.name.copyeditor">مدقق</message>
+	<message key="default.groups.plural.copyeditor">مدققون</message>
+	<message key="default.groups.abbrev.copyeditor">مدق</message>
+	<message key="default.groups.name.proofreader">مصحح القراءة</message>
+	<message key="default.groups.plural.proofreader">مصححو القراءة</message>
+	<message key="default.groups.abbrev.proofreader">مص قر</message>
+	<message key="default.groups.name.designer">مصمم</message>
+	<message key="default.groups.plural.designer">مصممون</message>
+	<message key="default.groups.abbrev.designer">تصميم</message>
+	<message key="default.groups.name.internalReviewer">محكم داخلي</message>
+	<message key="default.groups.plural.internalReviewer">محكمون داخليون</message>
+	<message key="default.groups.abbrev.internalReviewer">مح دخ</message>
+	<message key="default.groups.name.marketing">منسق تسويق ومبيعات</message>
+	<message key="default.groups.plural.marketing">منسقو تسويق ومبيعات</message>
+	<message key="default.groups.abbrev.marketing">منسق تس بع</message>
+	<message key="default.groups.name.funding">منسق تمويل</message>
+	<message key="default.groups.plural.funding">منسقو تمويل</message>
+	<message key="default.groups.abbrev.funding">منسق تل</message>
+	<message key="default.groups.name.indexer">مفهرس</message>
+	<message key="default.groups.plural.indexer">مفهرسون</message>
+	<message key="default.groups.abbrev.indexer">مفس</message>
+	<message key="default.groups.name.layoutEditor">مصمم طباعي</message>
+	<message key="default.groups.plural.layoutEditor">مصممون طباعيون</message>
+	<message key="default.groups.abbrev.layoutEditor">مصم طع</message>
+	<message key="default.groups.name.author">مؤلف</message>
+	<message key="default.groups.plural.author">مؤلفون</message>
+	<message key="default.groups.abbrev.author">مؤ</message>
+	<message key="default.groups.name.translator">مترجم</message>
+	<message key="default.groups.plural.translator">مترجمون</message>
+	<message key="default.groups.abbrev.translator">متجم</message>
+	<message key="default.groups.name.reader">قارئ</message>
+	<message key="default.groups.plural.reader">قراء</message>
+	<message key="default.groups.abbrev.reader">قرء</message>
+
+	<!--  common app genre defaults -->
+	<message key="default.genres.other">الغير</message>
+	<message key="default.genres.multimedia">متعدد الوسائط</message>
+	<message key="default.genres.image">صورة</message>
+	<message key="default.genres.styleSheet">ملف أنماط HTML</message>
+</locale>

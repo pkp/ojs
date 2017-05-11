@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/tr_TR/manager.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the tr_TR (Türkçe) locale.
+  *
+  -->
+
+<locale name="tr_TR" full_name="Türkçe">
+	<message key="manager.announcements">Duyurular</message>
+	<message key="manager.announcements.confirmDelete">Bu duyuruyu kalıcı olarak silmek istediğinizden emin misiniz?</message>
+	<message key="manager.announcements.create">Yeni Duyuru Oluştur</message>
+	<message key="manager.announcements.createTitle">Oluştur</message>
+	<message key="manager.announcements.dateExpire">Son Tarih</message>
+	<message key="manager.announcements.edit">Duyuruyu Düzenle</message>
+	<message key="manager.announcements.editTitle">Düzenle</message>
+	<message key="manager.announcements.form.dateExpireDayIncompleteDate">Lütfen son tarih için gün bilgisinin yanı sıra ay ve yıl da seçiniz.</message>
+	<message key="manager.announcements.form.dateExpire">Son Tarih</message>
+	<message key="manager.announcements.form.dateExpireInstructions">Duyuru, bu tarihe kadar okuyuculara gösterilir. Duyurunun sürekli görüntülenmesi için boş bırakın.</message>
+	<message key="manager.announcements.form.dateExpireMonthIncompleteDate">Lütfen son tarih için ay bilgisinin yanı sıra gün ve yıl da seçiniz.</message>
+	<message key="manager.announcements.form.dateExpireValid">Lütfen geçerli bir son duyuru tarihi seçiniz.</message>
+	<message key="manager.announcements.form.dateExpireYearIncompleteDate">Lütfen son tarih için yıl bilgisinin yanı sıra son tarih için gün ve ay da belirleyiniz.</message>
+	<message key="manager.announcements.form.description">Açıklama</message>
+	<message key="manager.announcements.form.descriptionInstructions">Duyurunun tam metni.</message>
+	<message key="manager.announcements.form.descriptionRequired">Duyurunun tam metni gerekli.</message>
+	<message key="manager.announcements.form.descriptionShortInstructions">Duyuru başlığı ile birlikte gösterilecek kısa tanım.</message>
+	<message key="manager.announcements.form.descriptionShortRequired">Duyuru için kısa bir tanım gerekli.</message>
+	<message key="manager.announcements.form.descriptionShort">Kısa Tanım</message>
+	<message key="manager.announcements.form.saveAndCreateAnother">Kaydet ve Başka Oluştur</message>
+	<message key="manager.announcements.form.titleRequired">Bir duyuru başlığı gerekli.</message>
+	<message key="manager.announcements.form.title">Başlık</message>
+	<message key="manager.announcements.form.typeId">Tür</message>
+	<message key="manager.announcements.form.typeIdValid">Lütfen geçerli bir duyuru türü seçiniz.</message>
+	<message key="manager.announcements.noneCreated">Duyuru oluşturulmadı.</message>
+	<message key="manager.announcements.title">Başlık</message>
+	<message key="manager.announcements.type">Tür</message>
+	<message key="manager.announcementTypes">Duyuru tipleri</message>
+	<message key="manager.announcementTypes.confirmDelete">Uyarı! Bu duyuru türü ve bu tür ile kayıtlı tüm duyurular silinecektir. Devan etmek ve bu duyuru türlerini silmek itediğinizden emin misiniz?</message>
+	<message key="manager.announcementTypes.create">Duyuru Türü Oluştur</message>
+	<message key="manager.announcementTypes.createTitle">Oluştur</message>
+	<message key="manager.announcementTypes.edit">Duyuru Türünü Düzenle</message>
+	<message key="manager.announcementTypes.editTitle">Düzenle</message>
+	<message key="manager.announcementTypes.form.saveAndCreateAnother">Kaydet ve Başka Oluştur</message>
+	<message key="manager.announcementTypes.form.typeNameExists">Bu isim ile duyuru türü zaten var.</message>
+	<message key="manager.announcementTypes.form.typeName">İsim</message>
+	<message key="manager.announcementTypes.form.typeNameRequired">Duyuru türü için bir isim gerekli.</message>
+	<message key="manager.announcementTypes.noneCreated">Duyuru türü oluşturulmadı.</message>
+	<message key="manager.announcementTypes.typeName">Duyuru Türü</message>
+	<message key="manager.emails.confirmDelete">Bu e-posta şablonunu silmek istediğinizden emin misiniz?</message>
+	<message key="manager.emails.confirmReset">Bu şablonunu ön tanımlı biçimine döndürmek istediğinizden emin misiniz?</message>
+	<message key="manager.emails.createEmail">E-posta Oluştur</message>
+	<message key="manager.emails.disable">Kapat</message>
+	<message key="manager.emails.editEmail">E-posta Düzenle</message>
+	<message key="manager.emails.editTestExample">E-posta Test Örneğini Düzenle</message>
+	<message key="manager.emails.emailKey">E-posta Anahtarı</message>
+	<message key="manager.emails.emailKeyExists">Belirtilen anahtara sahip bir e-posta zaten var. E-posta anahtarları tekil olmalıdır.</message>
+	<message key="manager.emails.emailTemplate">E-posta Şablonu</message>
+	<message key="manager.emails.emailTemplates">E-posta Şablonları</message>
+	<message key="manager.emails.enabled">Bu e-posta şablonu etkinleştir</message>
+	<message key="manager.emails.enable">Etkinleştir</message>
+	<message key="manager.emails.form.emailKeyRequired">E-posta için tekil bir e-posta anahtarı gerekli.</message>
+	<message key="manager.emails.form.bodyRequired">E-posta için bir metin oluşturulması gereklidir.</message>
+	<message key="manager.emails.form.subjectRequired">E-posta için bir konu belirlenmesi gereklidir.</message>
+	<message key="manager.emails">Hazırlanmış E-postalar</message>
+	<message key="manager.emails.resetAll">Bütün Şablonları Sıfırla</message>
+	<message key="manager.emails.reset">Sıfırla</message>
+	<message key="manager.emails.resetToDefault">Ön Tanımlı Biçime Dön</message>
+	<message key="manager.filesBrowser">Dosya Tarayıcı</message>
+	<message key="manager.files.confirmDelete">Bu dosyayı veya dizini silmek istiyor musunuz? Bir dizinin silinebilmesi için boş olması gerekir.</message>
+	<message key="manager.files.createDir">Dizin oluştur</message>
+	<message key="manager.files.emptyDir">Bu dizinde dosya bulunmadı.</message>
+	<message key="manager.files.indexOfDir">{$dir} dizini</message>
+	<message key="manager.files.parentDir">Üst Dizin</message>
+	<message key="manager.files.uploadedFiles">Yüklenmiş Dosyalar</message>
+	<message key="manager.files.uploadFile">Dosya Yükle</message>
+	<message key="manager.groups.confirmDelete">Bu grubu silmek istediğinizden emin misiniz?</message>
+	<message key="manager.groups.createTitle">Başlık Oluştur</message>
+	<message key="manager.groups.editTitle">Başlığı Düzenle</message>
+	<message key="manager.groups.form.groupTitleRequired">Bir grup başlığı gerekli.</message>
+	<message key="manager.groups.membership.addMember">Üye Ekle</message>
+	<message key="manager.groups.membership.confirmDelete">Bu grup üyeliğini silmek istediğinizden emin misiniz?</message>
+	<message key="manager.groups.membership">Üyelik</message>
+	<message key="manager.groups.membership.noneCreated">Bu grupta hiç üye kayıtlı değil.</message>
+	<message key="manager.groups.membership.noUsers">Hiç kullanıcı bulunamadı.</message>
+	<message key="manager.groups.title">Başlık</message>
+	<message key="manager.importExport">Veri Alma/Verme</message>
+	<message key="manager.languages.alternateLocaleInstructions">Bu sistem isteğe bağlı olarak çeşitli dillerde bazı önemli bilgilerin girilmesine izin verir. Bu özelliği kullanmak için, alternatif diller seçin ve aşağıdaki seçeneklerden birini kulanın.</message>
+	<message key="manager.languages.supportedLocalesInstructions">Tüm sayfalarda dil seçimi olanağı ile siteyi geliştirmek için desteklemek istediğiniz dilleri seçiniz. Dil seçimi menüsü yalnızca birden fazla dil desteği seçilir ise sayfalarda sunulacaktır.</message>
+	<message key="manager.payment.timestamp">Zaman Damgası</message>
+	<message key="manager.languages.supportedLocalesInstructions">Tüm sayfalarda dil seçimi olanağı ile siteyi geliştirmek için desteklemek istediğiniz dilleri seçiniz. Dil seçimi menüsü yalnızca birden fazla dil desteği seçilir ise sayfalarda sunulacaktır. </message>
+	<message key="manager.people.authSource">Yetkilenme kaynağı</message>
+	<message key="manager.people.confirmUnenroll">Bu üye kayıt dışı kalsın mı?</message>
+	<message key="manager.people.createUser">Yeni Üye Oluştur</message>
+	<message key="manager.people.createUserGeneratePassword">Rasgele bir şifre oluştur.</message>
+	<message key="manager.people.createUserSendNotify">Üyeye kullanıcı adını ve şifresini içeren bir hoş geldin e-postası gönder.</message>
+	<message key="manager.people.disable">PASİF</message>
+	<message key="manager.people.doNotEnroll">Yetki verme</message>
+	<message key="manager.people.editProfile">Profili Düzenle</message>
+	<message key="manager.people.editUser">Üye Düzenle</message>
+	<message key="manager.people.emailUsers.emailSelectedUsers">Seçilen üylere e-posta gönder</message>
+	<message key="manager.people.emailUsers.emailUsersEnrolledAs">Şu şekilde kaydolmuş üyelere e-posta gönder</message>
+	<message key="manager.people.emailUsers">Üyelere e-posta gönder</message>
+	<message key="manager.people.emailUsers.selectLocale">Dil seç</message>
+	<message key="manager.people.emailUsers.selectUsers">E-posta göndermek istediğiniz üyelerin isimlerinin yanındaki kutuları işaretleyiniz.</message>
+	<message key="manager.people.enable">AKTİF</message>
+	<message key="manager.people.enroll">ÜYE KAYDET</message>
+	<message key="manager.people.enrollment">Kayıt</message>
+	<message key="manager.people.enrollSelected">Seçilen Üyeleri Kaydet</message>
+	<message key="manager.people.enrollSyncRole">ROLÜ EŞZAMANLA</message>
+	<message key="manager.people.enrollSync">EŞZAMANLI KAYIT</message>
+	<message key="manager.people.enrollUserAsDescription">Üyeler herhangi bir rol ile atanabilir veya iptal edilebilir.</message>
+	<message key="manager.people.enrollUserAs">Kullanıcıyı böyle kaydet</message>
+	<message key="manager.people.invalidUser">Üzgünüz, böyle bir kullanıcı yok.</message>
+	<message key="manager.people.mergeUser">Kullanıcıyı birleştir</message>
+	<message key="manager.people.mergeUsers.confirm">{$oldAccountCount} adlı üyenin hesap bilgilerini {$newUsername} alı üyenin hesabına taşımak istediğinizden emin misiniz? {$oldAccountCount} adlı üye hesabı kapatılacaktır ve bu işlemin geri dönüşü yoktur.</message>
+	<message key="manager.people.mergeUsers">Üyeleri Birleştir</message>
+	<message key="manager.people.mustChooseRole">"Üye Kaydı"nı tıklamadan önce lütfen bir rol seçiniz.</message>
+	<message key="manager.people.mustProvideName">Üye için en azından bir soyadı belirtiniz.</message>
+	<message key="manager.people.noMatchingUsers">Eşleşmeyen üyeler.</message>
+	<message key="manager.people.noneEnrolled">Kayıtsız üye.</message>
+	<message key="manager.people">Kişiler</message>
+	<message key="manager.people.remove">ÇIKAR</message>
+	<message key="manager.people.saveAndCreateAnotherUser">Kaydet ve başka bir üye oluştur</message>
+	<message key="manager.people.signInAs">BU KİŞİ GİBİ GİRİŞ YAP</message>
+	<message key="manager.people.signInAsUser">Üye olarak giriş yap</message>
+	<message key="manager.people.syncUsers">Üye kaydını eşzamanlı yap</message>
+	<message key="manager.people.unenroll">Kayıt dışı bırak</message>
+	<message key="manager.people.userCreatedSuccessfully">Üye başarıyla oluşturuldu.</message>
+	<message key="manager.people.userMustChangePassword">Üye için bir sonraki girişte şifre değiştirmeyi zorunlu kıl.</message>
+	<message key="manager.plugins.action">Yapılacak:</message>
+	<message key="manager.plugins.disable">Pasifleştir</message>
+	<message key="manager.plugins.enable">Etkinleştir</message>
+	<message key="manager.plugins.pluginManagement">Eklenti Yönetimi</message>
+	<message key="manager.plugins.sitePlugin">Bu tüm siteyi ilgilendiren bir eklentidir. Yalnız site yöneticisi eklentiyi kullanabilir.</message>
+	<message key="manager.plugins">Sistem Eklentileri</message>
+	<message key="manager.readingTools">Okuma Araçları</message>
+	<message key="manager.reviewerSearch.searchByName">İsime Göre Hakem Arama</message>
+	<message key="manager.reviewerSearch.doneAmount">Tamamlanmış Değerlendirmeler</message>
+	<message key="manager.reviewerSearch.avgAmount">Değerlendirme gün ortalaması</message>
+	<message key="manager.reviewerSearch.lastAmount">Son değerlendirmeden bu yana geçen gün sayısı</message>
+	<message key="manager.reviewerSearch.activeAmount">Aktif değerlendirme sayısı</message>
+	<message key="manager.reviewerSearch.interests">İlgi Alanı</message>
+	<message key="manager.roles">Görevler</message>
+	<message key="manager.setup.citationAssistant">Atıf Biçimlendirme Yardımcısı</message>
+	<message key="manager.setup.citationFilterParser">Atıf Alma</message>
+	<message key="manager.setup.citationFilterParserDescription"><![CDATA[<p>To find and check citations in citation databases they first have to be split into machine readable metadata: title, publisher, publication date, etc. must all be extracted from the original citation text provided by the author. Connectors to external web services can assist in this process. One or several connectors can be added by clicking on the "Add Item" button below. Some of these connectors may need to be configured; you will be prompted if this is the case.</p>
+		<p>You can edit or delete an existing Connector by clicking the gear icon next to it.</p>]]></message>
+	<message key="manager.setup.citationFilterLookup">Atıf Kontrolü</message>
+	<message key="manager.setup.citationFilterLookupDescription"><![CDATA[<p>You must also enable and configure connections to external citation databases. This helps you to find errors in authors' citations or add additional information (e.g. DOIs or PubMed IDs) required for electronic publishing or deposit.</p>
+		<p>We provide connectors to several external databases in which you can search for citations. Some of these databases require registration or configuration information to be entered. Please refer to the public websites of the databases for further information on how to register. You can add one or several databases by clicking on the "Add Item" button below.</p>
+		<p>You can edit or delete an existing external database connection by clicking the gear icon next to it.</p>
+		<p><strong>Note:</strong> In order for the citation checking process to complete in a timely manner, the <tt>citation_checking_max_processes</tt> directive in your configuration file must be set to a reasonable value. See the General Settings section in <tt>config.inc.php</tt> for more information.</p>]]></message>
+	<message key="manager.setup.citationOutput">Atıf Çıktısı</message>
+	<message key="manager.setup.citationOutputStyleDescription">Derginizde kullanılan yazar gönderileri için bir atıf biçimi seçin. Atıf Biçimlendirme Yardımcısı hataları kolayca görmenizi sağlar ve böylece XML olarak oluşturulan bir sürümle yazarın sürümünü karşılaştırabilirsiniz:</message>
+	<message key="manager.setup.errorDeletingItem">Bu öğe silinirken bir hata oluştu.</message>
+	<message key="manager.setup.filter.grid.errorDeletingFilter">Bu filtreyi kaldırırken bir hata oluştu. Lütfen hata mesajı olarak bildiriniz.</message>
+	<message key="manager.setup.filter.grid.filterDisplayName">Bağlayıcı</message>
+	<message key="manager.setup.filter.grid.filterSettings">Kayıt Bilgisi ve Bağlayıcı Ayarları</message>
+	<message key="manager.setup.filter.grid.filterTemplateRequired">Lütfen açılır menüden dönüşümlerden birini seçiniz.</message>
+	<message key="manager.setup.filter.grid.confirmDelete">{$filterName} adlı filitreyi silmek istediğinizden emin misiniz?</message>
+	<message key="manager.setup.filter.lookup.grid.descriptionConfirm">Seçiminiz {$filterDisplayName} adlı veri tabanına eklendi. Lütfen onaylamak için "TAMAM"ı tıklayınız.</message>
+	<message key="manager.setup.filter.lookup.grid.descriptionTemplate">Arama için bir veri tabanı seçiniz.</message>
+	<message key="manager.setup.filter.lookup.grid.description.iSBNdb"><![CDATA[<a href="http://isbndb.com/" target="_blank">ISBNdb.com</a> adlı bu filitre bağlantısı kitap ve ISBN veri tabanı içindir.
+	<p>ISBNdb API anahtarı zorunludur. Bir anahtar oluşturmak için <a href="http://isbndb.com/api/v1/docs/keys" target="_blank">çevrimiçi dokümana</a> bakınız.</p>]]></message>
+	<message key="manager.setup.filter.lookup.grid.description.crossRef"><![CDATA[<p>Bu filtre CrossRef'i kullanarak <a href="http://www.crossref.org/02publishers/openurl_info.html" target="_blank">OpenURL Sorgu Arayüzü</ a> CrossRef atıf veri tabanına bağlanır.</p>
+	</p>Bu filtreyi kullanmak için, CrossRef sistem hesabını kullanabilir veya CrossRef'e  geçerli bir e-posta adresi ile <a href="http://www.crossref.org/requestaccount/" target="_blank">buraya tıklayarak</ a> kayıt olabilirsiniz.</p>]]></message>
+	<message key="manager.setup.filter.lookup.grid.description.pubMed"><![CDATA[<p>Bu filitre çapraz veritabanı arama motoru ile PubMed'e <a href="http://www.ncbi.nlm.nih.gov/gquery/gquery.fcgi" target="_blank"> Giriş</ a> yapar.</ p>
+</ p>Kayıt için e-posta adresi zorunlu değildir, ancak bağlantı sorunlarının giderilmesinde gerekli olabilir. Daha fazla bilgi için giriş dokümanında <a href="http://www.be-md.ncbi.nlm.nih.gov/bookshelf/br.fcgi?book=helpeutils&part=chapter2#chapter2.Usage_Guidelines_and_Requiremen" target="_blank">Kullanım Yönergeleri ve Gereksinimler</ a> bölümüne  bakınız. </ p>]]></message>
+	<message key="manager.setup.filter.lookup.grid.description.worldCat"><![CDATA[<p>Bu filitre  <a href="http://www.worldcat.org/affiliate/webservices/xisbn/app.jsp" target="_blank">xISBN</a> ve <a href="http://www.worldcat.org/" target="_blank">Worldcat</a> seçenekleriyle OCLC servisine bağlanır.</ p>
+	</ p>Eğer bir Worldcad <a href="http://oclc.org/developer/develop/web-services.html" target="_blank">API anahtarı</a>nız varsa, bu anahtarla Wolrdcat'e aşağıdaki girişten bağlantı kurabilirsiniz.</ p>]]></message>
+	<message key="manager.setup.filter.lookup.grid.loadMessage">Atıf veritabanı yapılandırma şebekesi yüklenene kadar bekleyin ...</message>
+	<message key="manager.setup.filter.lookup.grid.title">Atıf Veritabanı Bağlayıcıları</message>
+	<message key="manager.setup.filter.noMoreTemplates">Kullanılabilir tüm dönüşümler zaten eklenmiş. Kurulum sayfasına dönmek için 'İptal'e tıklayınız.</message>
+	<message key="manager.setup.filter.parser.grid.descriptionConfirm">{$filterDisplayName} adlı ayrıştırıcıyı/derleyiciyi eklemek için seçtiniz. Onaylamak için 'TAMAM' tuşuna tıklayınız.</message>
+	<message key="manager.setup.filter.parser.grid.descriptionTemplate">Lütfen bir atıf ayrıştırıcı seçiniz.</message>
+	<message key="manager.setup.filter.parser.grid.description.freeCite"><![CDATA[<p>Bu çıkarma filitresi <a href="http://freecite.library.brown.edu/" target="_blank">FreeCite</a>web servisine bağlantı kurar.</p>]]></message>
+	<message key="manager.setup.filter.parser.grid.description.paraCite"><![CDATA[<p>Bu çıkarma filitresi <a href="http://paracite.eprints.org" target="_blank">ParaCite</ a> atıf ayrıştırma fonksiyonlarına işlevsellik sağlamak için Perl modüllerince desteklenen <a href="http://paracite.eprints.org/developers/" target="_blank">ParaTools</ a>u kullanır. Fonksiyonun düzgün çalışması için <a href="http://search.cpan.org/~mjewell/Biblio-Citation-Parser-1.10/" target="_blank">Biblio::Citation::Parser</a> ve <a href="http://search.cpan.org/~sburke/Text-Unidecode-0.04/" target="_blank">Text::Unidecode</a> CPAN modülleri ile birlikte Perl yüklü olmalıdır. Konfigürasyon dosyanızda <tt>perl</tt> direktiflerini düzenlemelisiniz. Bu direktifler <tt>config.inc.php</tt> dosyasının Dış Komutlar (External Commands) bölümünde bulunabilir.</ p>
+</ p>Ayrıca <a href="http://search.cpan.org/~mjewell/Biblio-Citation-Parser-1.10/lib/Biblio/Citation/Parser/Jiao.pm" target="_blank">Jiao</a> ve <a href="http://search.cpan.org/~mjewell/Biblio-Citation-Parser-1.10/lib/Biblio/Citation/Parser/Citebase.pm" target="_blank">Citebase</a> standart ayrıştırıcı modülleri arasında seçim yapabilirsiniz.</p>]]></message>
+	<message key="manager.setup.filter.parser.grid.description.parsCit"><![CDATA[<p>Bu ihraç filtresi <a href="http://aye.comp.nus.edu.sg/parsCit/" target="_blank">ParsCit</a> web servisine bağlanır.</p>]]></message>
+	<message key="manager.setup.filter.parser.grid.description.regEx">Atıf ayrıştırıcı ifadeler bir dizi düzenli RegEx ihraç filitresi kullanır.</message>
+	<message key="manager.setup.filter.parser.grid.loadMessage">Lütfen atıf ayrıştırıcı yapılandırma şebekesi yüklenene kadar bekleyin ...</message>
+	<message key="manager.setup.filter.parser.grid.title">Atıf Alma Servisi</message>
+	<message key="manager.setup.filter.pleaseSelect">Lütfen Seçiniz...</message>
+	<message key="manager.setup.homeHeaderImageInvalid">Giriş sayfası başlık logosu için geçersiz dosya biçimi. Desteklenen dosya biçimleri .gif, .jpg, veya .png biçimleridir.</message>
+	<message key="manager.setup.homepageImageInvalid">Giriş sayfası şekli için geçersiz dosya biçimi. Desteklenen dosya biçimleri .gif, .jpg, veya .png biçimleridir.</message>
+	<message key="manager.setup.homeTitleImageInvalid">Giriş sayfası şekli için geçersiz dosya biçimi. Desteklenen dosya biçimleri .gif, .jpg, veya .png biçimleridir.</message>
+	<message key="manager.setup.layout.unselected">Seçilmemiş</message>
+	<message key="manager.setup.loggingAndAuditing">Giriş ve Denetim</message>
+	<message key="manager.setup.homeHeaderImageInvalid">Giriş sayfası başlık logosu için geçersiz dosya biçimi. Desteklenen dosya biçimleri .gif, .jpg, veya .png biçimleridir.</message>
+	<message key="manager.setup.metaCitationsDescription">Atıf ve referans düzenlemeyi etkinleştirmek için aşağıdaki onay kutusunu çek ediniz. Bu kabul yazarların ham gönderileri için alıntı yapmalarını sağlayacaktır. Editörler de doğruluk için, WorldCat, ISBNdb, PubMed gibi veri tabanlarından kontrol edebileceklerdir. Onaylı alıntılar dizgi tablası dosyaları içine import edilebilecektir.</message>
+	<message key="manager.setup.homepageImageInvalid">Giriş sayfası şekli için geçersiz dosya biçimi. Desteklenen dosya biçimleri .gif, .jpg, veya .png biçimleridir.</message>
+	<message key="manager.setup.homeTitleImageInvalid">Giriş sayfası şekli için geçersiz dosya biçimi. Desteklenen dosya biçimleri .gif, .jpg, veya .png biçimleridir.</message>
+	<message key="manager.setup.selectOne">Birini seçin</message>
+	<message key="manager.statistics">İstatistikler ve Raporlar</message>
+	<message key="manager.statistics.statistics.count.value">{$count} ({$percentage}%)</message>
+	<message key="manager.statistics.statistics.totalNewValue">{$numTotal} (yeni {$numNew})</message>
+	<message key="manager.users">Üyeler</message>
+	<message key="plugins.categories.auth">Yetkilendirme Eklentileri</message>
+	<message key="plugins.categories.blocks">Blok Eklentileri</message>
+	<message key="plugins.categories.blocks.description">Blok Eklentileri, çeşitli kenar çubuğu araçları gibi eklenip kaldırılabilir kullanıcı ara yüz bileşenleridir.</message>
+	<message key="plugins.categories.citationFormats">Atıf Biçimi Eklentileri</message>
+	<message key="plugins.categories.gateways.description">Geçiş Eklentileri diğer sistemlere anında veri sunulması içindir.</message>
+	<message key="plugins.categories.gateways">Geçiş Eklentileri</message>
+	<message key="plugins.categories.generic">Genel Eklentiler</message>
+	<message key="plugins.categories.importexport.description">Veri Alma/Verme Eklentileri içeriğin başka sistemlere taşınması için kullanılırlar.</message>
+	<message key="plugins.categories.importexport">Veri Alma/Verme Eklentileri</message>
+	<message key="plugins.categories.paymethod.description">Ödeme Yöntemi eklentisi çevrimiçi ödeme sürecini çeşitli yollarla desteklemyi sağlar.</message>
+	<message key="plugins.categories.paymethod">Ödeme Eklentileri</message>
+	<message key="plugins.categories.reports.description">Rapor eklentileri çeşitli türde veri özetleri ve rapor sağlamak için kullanılır.</message>
+	<message key="plugins.categories.reports">Rapor Eklentileri</message>
+	<message key="plugins.categories.themes.description">Tema eklentileri sistemin görünüşünü değiştirmek için kullanılabilir.</message>
+	<message key="plugins.categories.themes">Tema Eklentileri</message>
+	<message key="manager.announcements.datePublish">Yayımlandı</message>
+	<message key="manager.emails.addEmail">E-posta Şablonu Ekle</message>
+	<message key="manager.emails.data">Mesaj Veri Şablonu</message>
+	<message key="manager.emails.details">Şablon Detayları</message>
+	<message key="manager.emails.disable.message">You are about to disable this email template.  If there were system processes using this template, they will not use it anymore.  Do you want to confirm this operation?</message>
+	<message key="manager.emails.enable.message">You are about to enable this email.  Do you want to confirm this operation?</message>
+	<message key="manager.emails.resetAll.message">If you reset all templates, all modifications to the email templates will be lost.  Do you want to confirm this operation?</message>
+	<message key="manager.emails.reset.message">If you reset this template, all message data will be reset to its default value, losing all modifications.  Do you want to confirm this operation?</message>
+	<message key="manager.masthead.title">Yönetici Listesi</message>
+	<message key="manager.reviewerSearch.searchByName.short">Ada Göre Ara</message>
+	<message key="manager.reviewerSearch.form.instructions">Use the form below to set the maximum values for the terms you wish to search for.  The form is pre-populated with the calculated averages of those fields.</message>
+	<message key="manager.reviewerSearch.form.interests.instructions">Enter reviewer interests, separated by commas...</message>
+	<message key="manager.setup.layout.blockManagement">Yan Taraf Yönetimi</message>
+	<message key="manager.setup.pageHeaderLogoImageInvalid">Hatalı sayfa logo görseli veya hatalı yükleme. Kabul edilebilir biçimler: .gif, .jpg veya .png.</message>
+	<message key="plugins.categories.metadata">Üst Veri Eklentileri</message>
+	<message key="plugins.categories.metadata.description">Metadata Plugins implement additional meta-data standards.</message>
+	<message key="plugins.categories.citationLookup">Atıf Veri Tabanı Bağlantı Eklentileri</message>
+	<message key="plugins.categories.citationLookup.description">Citation Database Connector Plugins connect to citation databases to look up citations, e.g. during citation editing.</message>
+	<message key="plugins.categories.citationOutput">Atıf Çıktı Eklentileri</message>
+	<message key="plugins.categories.citationOutput.description">Citation Output Plugins implement citation standards. This supersedes Citation Format Plugins.</message>
+	<message key="plugins.categories.citationParser">Atıf Ayıklama Eklentileri</message>
+	<message key="plugins.categories.citationParser.description">Citation Extraction Plugins extract field-level data from raw citations (e.g. author, title, etc.).</message>
+	<message key="plugins.categories.oaiMetadataFormats">OAI Üst Veri Eklentileri</message>
+	<message key="plugins.categories.oaiMetadataFormats.description">Bu biçim eklentileri OAI iletişiminde hızlı üst veri sağlar.</message>
+	<message key="manager.website">Web Sitesi</message>
+
+	<!-- Review forms -->
+	<message key="manager.reviewFormElement.changeType">Warning: Changing the review form element type from a multiple-choice type to an open-ended type will result in the deletion of the multiple choice options.</message>
+	<message key="manager.reviewFormElements">Form Öğeleri</message>
+	<message key="manager.reviewFormElements.addResponseItem">Seçim ekle</message>
+	<message key="manager.reviewFormElements.checkboxes">Onay Kutuları (Bir veya daha fazla seçebilirsiniz)</message>
+	<message key="manager.reviewFormElements.chooseType">Öğe tipi seçiniz</message>
+	<message key="manager.reviewFormElements.confirmDelete">Yayınlanmış değerlendirme formundan bir öğe silmek istediğinize eminmisiniz?</message>
+	<message key="manager.reviewFormElements.copyTo">Şuraya kopyala:</message>
+	<message key="manager.reviewFormElements.create">Yeni Öğe Oluştur</message>
+	<message key="manager.reviewFormElements.dropdownbox">Açılır Kutu</message>
+	<message key="manager.reviewFormElements.edit">Form Öğelerini Düzenle</message>
+	<message key="manager.reviewFormElements.elementType">Öpe Tipi</message>
+	<message key="manager.reviewFormElements.form.elementTypeRequired">Form öğeleri için öğe tipi gerekli.</message>
+	<message key="manager.reviewFormElements.form.questionRequired">Form öğeleri için bir soru gerekli.</message>
+	<message key="manager.reviewFormElements.noneCreated">Herhangi bir değerlendirme formu oluşturulmadı.</message>
+	<message key="manager.reviewFormElements.possibleResponse">Seçim</message>
+	<message key="manager.reviewFormElements.question">Öğe</message>
+	<message key="manager.reviewFormElements.radiobuttons">Radyo düğmeleri (yalnızca birini seç)</message>
+	<message key="manager.reviewFormElements.required">Hakemlerin maddeleri doldurması zorunlu</message>
+	<message key="manager.reviewFormElements.included">Yazar için mesaj dahil et</message>
+	<message key="manager.reviewFormElements.smalltextfield">Tek kelimelik metin kutusu</message>
+	<message key="manager.reviewFormElements.textarea">Genişletilmiş metin kutusu</message>
+	<message key="manager.reviewFormElements.textfield">Tek satırlık metin kutusu</message>
+	<message key="manager.reviewForms">Değerlendirme Formları</message>
+	<message key="manager.reviewForms.completed">Tamamlandı</message>
+	<message key="manager.reviewForms.create">Değerlendirme Formu Oluştur</message>
+	<message key="manager.reviewForms.description">Açıklamalar ve Talimatlar</message>
+	<message key="manager.reviewForms.edit">Değerlendirme Formu</message>
+	<message key="manager.reviewForms.form.titleRequired">Değerlendirme formu için bir başlık gerekli.</message>
+	<message key="manager.reviewForms.inReview">Değerlendirmede</message>
+	<message key="manager.reviewForms.list.description">Burada oluşturulan değerlendirme formları hazır değerlendirme formu yerine kullanılır. Hazır değerlendirme formu iki tane metin kutusu içerir ve bunlardan iki "editör ve yazar" için, ikincisi "editör" içindir. Değerlendirme formları dergi bölümlerine yönelik ayrı ayrı oluşturulabilir. Oluşturulan formlar hakem ataması sırasında seçilebilir. Her durumda, editörler yazar ile ilgili değerlendirme seçeneğine sahip olabileceklerdir.</message>
+	<message key="manager.reviewForms.noneChosen">Hayır / Serbest Değerlendirme Formu</message>
+	<message key="manager.reviewForms.noneCreated">Herhangi bir değerlendirme formu oluşturulmadı.</message>
+	<message key="manager.reviewForms.preview">Form Önizleme</message>
+	<message key="manager.reviewForms.title">Başlık</message>
+</locale>

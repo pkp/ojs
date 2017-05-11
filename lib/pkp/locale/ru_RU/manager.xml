@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/ru_RU/manager.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the ru_RU (Русский) locale.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Russian_(ru_RU)
+  -->
+
+<locale name="ru_RU" full_name="Русский">
+	<!-- Настройки сайта -->
+	<message key="manager.website.information">Информация</message>
+	<message key="manager.website.appearance">Внешний вид</message>
+	<message key="manager.website.imageFileRequired">Файл с изображением обязателен. Пожалуйста, убедитесь, что вы выбрали и загрузили файл.</message>
+
+	<message key="manager.announcements">Объявления</message>
+	<message key="manager.announcements.confirmDelete">Вы уверены, что хотите навсегда удалить это объявление?</message>
+	<message key="manager.announcements.create">Создать новое объявление</message>
+	<message key="manager.announcements.createTitle">Создать</message>
+	<message key="manager.announcements.dateExpire">Актуально до</message>
+	<message key="manager.announcements.datePublish">Опубликовано</message>
+	<message key="manager.announcements.edit">Редактировать объявление</message>
+	<message key="manager.announcements.editTitle">Редактировать</message>
+	<message key="manager.announcements.form.dateExpireDayIncompleteDate">Пожалуйста, выберите год и/или месяц, а не только день даты потери актуальности.</message>
+	<message key="manager.announcements.form.dateExpire">Актуально до</message>
+	<message key="manager.announcements.form.dateExpireInstructions">Объявление будет показываться читателям до этой даты. Оставьте поле пустым, если объявление должно показываться в течение неопределенного срока.</message>
+	<message key="manager.announcements.form.dateExpireMonthIncompleteDate">Пожалуйста, выберите год и/или день, а не только месяц даты потери актуальности.</message>
+	<message key="manager.announcements.form.dateExpireValid">Пожалуйста, выберите корректную дату потери актуальности объявления.</message>
+	<message key="manager.announcements.form.dateExpireYearIncompleteDate">Пожалуйста, выберите месяц и/или день, а не только год даты потери актуальности.</message>
+	<message key="manager.announcements.form.description">Описание</message>
+	<message key="manager.announcements.form.descriptionInstructions">Полный текст обьявления.</message>
+	<message key="manager.announcements.form.descriptionRequired">Описание объявления обязательно.</message>
+	<message key="manager.announcements.form.descriptionShortInstructions">Краткое описание, которое появится вместе с заголовком объявления.</message>
+	<message key="manager.announcements.form.descriptionShortRequired">Краткое описание объявления обязательно.</message>
+	<message key="manager.announcements.form.descriptionShort">Краткое описание</message>
+	<message key="manager.announcements.form.saveAndCreateAnother">Сохранить и создать другое</message>
+	<message key="manager.announcements.form.titleRequired">Заголовок объявления обязателен.</message>
+	<message key="manager.announcements.form.title">Заголовок</message>
+	<message key="manager.announcements.form.typeId">Тип</message>
+	<message key="manager.announcements.form.typeIdValid">Пожалуйста, выберите правильный тип объявления.</message>
+	<message key="manager.announcements.noneCreated">Объявления не были созданы.</message>
+	<message key="manager.announcements.title">Заголовок</message>
+	<message key="manager.announcements.type">Тип</message>
+	<message key="manager.announcementTypes">Типы объявлений</message>
+	<message key="manager.announcementTypes.confirmDelete">Внимание! Все объявления этого типа также будут удалены. Вы уверены, что хотите продолжить и удалить этот тип объявления?</message>
+	<message key="manager.announcementTypes.create">Создать тип объявления</message>
+	<message key="manager.announcementTypes.createTitle">Создать</message>
+	<message key="manager.announcementTypes.edit">Редактировать тип объявления</message>
+	<message key="manager.announcementTypes.editTitle">Редактировать</message>
+	<message key="manager.announcementTypes.form.saveAndCreateAnother">Сохранить и создать другой</message>
+	<message key="manager.announcementTypes.form.typeNameExists">Тип объявления с таким названием уже существует.</message>
+	<message key="manager.announcementTypes.form.typeName">Название</message>
+	<message key="manager.announcementTypes.form.typeNameRequired">Название типа объявления обязательно.</message>
+	<message key="manager.announcementTypes.noneCreated">Типы объявлений не были созданы.</message>
+	<message key="manager.announcementTypes.typeName">Тип объявления</message>
+
+	<!-- Настройки процесса издания -->
+	<message key="manager.publication.submissionStage">Отправка</message>
+	<message key="manager.publication.reviewStage">Рецензирование</message>
+	<message key="manager.publication.editorialStage">Редактирование</message>
+	<message key="manager.publication.productionStage">Публикация</message>
+	<message key="manager.publication.emails">Письма электронной почты</message>
+	<message key="manager.emails.confirmDelete">Вы уверены, что хотите удалить этот шаблон письма электронной почты?</message>
+	<message key="manager.emails.confirmReset">Вы уверены, что хотите вернуть этот шаблон письма электронной почты к его виду по умолчанию?</message>
+	<message key="manager.emails.addEmail">Добавить шаблон письма</message>
+	<message key="manager.emails.createEmail">Создать письмо</message>
+	<message key="manager.emails.data">Данные шаблона письма</message>
+	<message key="manager.emails.details">Детали шаблона</message>
+	<message key="manager.emails.disable">Выключить</message>
+	<message key="manager.emails.disable.message">Вы собираетесь отключить этот шаблон письма электронной почты. Если в системе есть процессы, использующие этот шаблон, они больше не смогут его использовать. Вы хотите подтвердить эту операцию?</message>
+	<message key="manager.emails.editEmail">Редактировать письмо</message>
+	<message key="manager.emails.editTestExample">Редактировать тестовый пример письма</message>
+	<message key="manager.emails.emailKey">Ключ письма</message>
+	<message key="manager.emails.emailKeyExists">Письмо с таким ключом уже существует. Ключи писем электронной почты должны быть уникальными.</message>
+	<message key="manager.emails.emailTemplate">Шаблон письма</message>
+	<message key="manager.emails.emailTemplates">Шаблоны писем</message>
+	<message key="manager.emails.enabled">Включить этот шаблон письма</message>
+	<message key="manager.emails.enable">Включить</message>
+	<message key="manager.emails.enable.message">Вы собираетесь включить этот шаблон письма электронной почты. Вы хотите подтвердить эту операцию?</message>
+	<message key="manager.emails.form.emailKeyRequired">Уникальный ключ письма электронной почты, не содержащий пробелов или специальных символов, обязателен для письма электронной почты.</message>
+	<message key="manager.emails.form.bodyRequired">Текст письма электронной почты обязателен.</message>
+	<message key="manager.emails.form.subjectRequired">Тема письма электронной почты обязательна.</message>
+	<message key="manager.emails">Подготовленные письма электронной почты</message>
+	<message key="manager.emails.resetAll">Сбросить все шаблоны</message>
+	<message key="manager.emails.resetAll.message">Если вы сбросите все шаблоны, все изменения, сделанные в шаблонах писем электронной почты, будут потеряны. Вы хотите подтвердить эту операцию?</message>
+	<message key="manager.emails.reset">Сбросить</message>
+	<message key="manager.emails.reset.message">Если вы сбросите этот шаблон, все данные сообщения будут заменены на их значения по умолчанию, все изменения будут потеряны. Вы хотите подтвердить эту операцию?</message>
+	<message key="manager.emails.resetToDefault">Сбросить в значение по умолчанию</message>
+	<message key="manager.filesBrowser">Браузер файлов</message>
+	<message key="manager.files.confirmDelete">Удалить этот файл или каталог? Обратите внимание, что удаляемый каталог должен быть пустым до того, как вы попытаетесь его удалить.</message>
+	<message key="manager.files.createDir">Создать каталог</message>
+	<message key="manager.files.emptyDir">Нет файлов в этом каталоге.</message>
+	<message key="manager.files.indexOfDir">Содержимое каталога {$dir}</message>
+	<message key="manager.files.parentDir">Родительский каталог</message>
+	<message key="manager.files.uploadedFiles">Загруженные файлы</message>
+	<message key="manager.files.uploadFile">Загрузить файл</message>
+	<message key="manager.groups.confirmDelete">Вы уверены, что хотите удалить эту группу?</message>
+	<message key="manager.groups.createTitle">Создать название</message>
+	<message key="manager.groups.editTitle">Редактировать название</message>
+	<message key="manager.groups.form.groupTitleRequired">Название группы обязательно.</message>
+	<message key="manager.groups.membership.addMember">Добавить члена группы</message>
+	<message key="manager.groups.membership.confirmDelete">Вы уверены, что хотите удалить членство в этой группе?</message>
+	<message key="manager.groups.membership">Членство</message>
+	<message key="manager.groups.membership.noneCreated">В этой группе нет членов.</message>
+	<message key="manager.groups.membership.noUsers">Пользователи не найдены.</message>
+	<message key="manager.groups.title">Название</message>
+	<message key="manager.importExport">Импорт/экспорт данных</message>
+	<message key="manager.language.ui">Интерфейс пользователя</message>
+	<message key="manager.language.submissions">Отправленные материалы</message>
+	<message key="manager.language.forms">Формы</message>
+	<message key="manager.language.reloadLocalizedDefaultSettings">Перезагрузить значения по умолчанию</message>
+	<message key="manager.languages.alternateLocaleInstructions">Эта система позволяет вводить некоторую важную информацию одновременно на нескольких языках. Для включения этой возможности выберите альтернативные языки и выберите один из вариантов, приведенных ниже.</message>
+	<message key="manager.languages.supportedLocalesInstructions">Выберите все языки, которые будут поддерживаться на сайте через меню выбора языка, появляющееся на каждой странице. Это меню будет отображаться только в том случае, если будет выбрано несколько языков.</message>
+	<message key="manager.masthead.title">Выходные данные</message>
+	<message key="manager.payment.timestamp">Дата/Время</message>
+	<message key="manager.people.authSource">Источник аутентификации</message>
+	<message key="manager.people.confirmUnenroll">Отменить назначение этого пользователя?</message>
+	<message key="manager.people.createUser">Создать нового пользователя</message>
+	<message key="manager.people.createUserGeneratePassword">Создать случайный пароль.</message>
+	<message key="manager.people.createUserSendNotify">Отправить пользователю приветственное письмо, содержащее его имя пользователя и пароль.</message>
+	<message key="manager.people.disable">Отключить</message>
+	<message key="manager.people.doNotEnroll">Без роли</message>
+	<message key="manager.people.editProfile">Редактировать профиль</message>
+	<message key="manager.people.editUser">Редактировать пользователя</message>
+	<message key="manager.people.emailUsers.emailSelectedUsers">Отправить письма электронной почты выбранным пользователям</message>
+	<message key="manager.people.emailUsers.emailUsersEnrolledAs">Отправить письма электронной почты пользователям, назначенным на роль</message>
+	<message key="manager.people.emailUsers">Отправить письма электронной почты пользователям</message>
+	<message key="manager.people.emailUsers.selectLocale">Выберите язык</message>
+	<message key="manager.people.emailUsers.selectUsers">Выберите пользователей, которым вы хотите отправить письмо, поставив галочку рядом с их именами</message>
+	<message key="manager.people.enable">Включить</message>
+	<message key="manager.people.enroll">Назначить пользователя</message>
+	<message key="manager.people.enrollment">Назначение</message>
+	<message key="manager.people.enrollSelected">Назначить выбранных пользователей</message>
+	<message key="manager.people.enrollSyncRole">Синхронизировать роль</message>
+	<message key="manager.people.enrollSync">Синхронизировать назначения</message>
+	<message key="manager.people.enrollUserAsDescription">Пользователям можно назначать любую роль или отменять назначение любой роли в любое время.</message>
+	<message key="manager.people.enrollUserAs">Назначить на роль</message>
+	<message key="manager.people.invalidUser">Извините, данный пользователь не существует.</message>
+	<message key="manager.people.mergeUser">Объединить</message>
+	<message key="manager.people.mergeUsers.confirm">Вы уверены, что хотите объединить выбранные {$oldAccountCount} учетных записей в учетную запись с именем пользователя «{$newUsername}»? Выбранные {$oldAccountCount} учетные записи после этого перестанут существовать. Это действие необратимо.</message>
+	<message key="manager.people.mergeUsers">Объединение пользователей</message>
+	<message key="manager.people.mustChooseRole">Пожалуйста, выберите роль вверху страницы перед тем как нажать «Назначить пользователя».</message>
+	<message key="manager.people.mustProvideName">Пожалуйста, укажите сначала хотя бы фамилию пользователя.</message>
+	<message key="manager.people.noMatchingUsers">Нет совпадающих пользователей.</message>
+	<message key="manager.people.noneEnrolled">Нет назначенных пользователей.</message>
+	<message key="manager.people">Люди</message>
+	<message key="manager.people.remove">Удалить</message>
+	<message key="manager.people.saveAndCreateAnotherUser">Сохранить и создать другой</message>
+	<message key="manager.people.signInAs">Войти как</message>
+	<message key="manager.people.signInAsUser">Войти как пользователь</message>
+	<message key="manager.people.syncUsers">Синхронизировать назначения пользователя</message>
+	<message key="manager.people.unenroll">Отменить назначение</message>
+	<message key="manager.people.userCreatedSuccessfully">Пользователь успешно создан.</message>
+	<message key="manager.people.userMustChangePassword">Требовать, чтобы пользователь сменил свой пароль при следующем входе в систему.</message>
+	<message key="manager.plugins.action">Действие:</message>
+	<message key="manager.plugins.disable">Выключить</message>
+	<message key="manager.plugins.enable">Включить</message>
+	<message key="manager.plugins.pluginManagement">Управление модулями</message>
+	<message key="manager.plugins.sitePlugin">Действие этого модуля распространяется на весь сайт. Только администратор сайта может управлять этим модулем.</message>
+	<message key="manager.plugins">Системные модули</message>
+	<message key="manager.readingTools">Инструменты читателя</message>
+	<message key="manager.userSearch.searchByName">Поиск пользователя по имени</message>
+	<message key="manager.reviewerSearch.change">Изменить</message>
+	<message key="manager.reviewerSearch.searchByName">Поиск рецензента по имени</message>
+	<message key="manager.reviewerSearch.searchByName.short">Поиск по имени</message>
+	<message key="manager.reviewerSearch.doneAmount">Выполненых рецензий: {$current}</message>
+	<message key="manager.reviewerSearch.doneAmountToggle">Включить/выключить фильтр по выполненным рецензиям.</message>
+	<message key="manager.reviewerSearch.avgAmount">Средний срок выполнения рецензии: {$current}</message>
+	<message key="manager.reviewerSearch.avgAmountToggle">Включить/выключить фильтр по среднему числу дней на выполнение рецензии.</message>
+	<message key="manager.reviewerSearch.lastAmount">Дней после последней рецензии: {$current}</message>
+	<message key="manager.reviewerSearch.lastAmountToggle">Включить/выключить фильтр по количеству дней после последней рецензии.</message>
+	<message key="manager.reviewerSearch.activeAmount">Над сколькими рецензиями работает сейчас: {$current}</message>
+	<message key="manager.reviewerSearch.activeAmountToggle">Включить/выключить фильтр по количеству активных рецензий в настоящий момент.</message>
+	<message key="manager.reviewerSearch.interests">Интересы рецензента</message>
+	<message key="manager.reviewerSearch.form.instructions">Используйте форму ниже, чтобы задать максимум значений для терминов, по которым вы хотите произвести поиск. Эта форма предварительно заполняется средними значениями, вычисленными для этих полей.</message>
+	<message key="manager.reviewerSearch.form.interests.instructions">Интересы рецензента (введите для поиска совпадающих интересов)</message>
+	<message key="manager.reviewerSearch.form.previousReviewRounds">Рецензенты с предыдущих раундов рецензирования этого материала</message>
+	<message key="manager.roles">Роли</message>
+	<message key="manager.statistics"><![CDATA[Статистика и отчеты]]></message>
+	<message key="manager.statistics.defaultMetricDescription">
+		Ваша {$contextObjectName} настроен на запись нескольких метрик использования. Статистика использования будет отображаться в нескольких контекстах.
+		Есть случаи, когда должна быть применена только одна статистика использования, например, чтобы отобразить упорядоченный список наиболее используемых статей или отранжировать
+		результаты поиска. Пожалуйста, выберите одну из настроенных метрик в качестве метрики по умолчанию.
+	</message>
+	<message key="manager.statistics.city">Город</message>	
+	<message key="manager.statistics.region">Регион</message>	
+	<message key="manager.statistics.reports">Генератор отчетов</message>
+	<message key="manager.statistics.reports.description">Система генерирует отчеты, которые помогают отследить детали, связанные с использованием сайта и материалов за заданный период времени. Отчеты генерируются в формате CSV, который требует для просмотра наличия табличного процессора.</message>
+	<message key="manager.statistics.reports.aggregationColumns">Агрегировать статистику по:</message>
+	<message key="manager.statistics.reports.optionalColumns.description">Элементы набранные курсивом и отмеченные * представляют собой данные, которые являются необязательными для установленного сейчас способа подсчета статистики в системе (типа метрики). Вы можете получить эти данные или не получить в зависимости от настроек вашего модуля статистики.</message>
+	<message key="manager.statistics.reports.defaultReportTemplates">Шаблоны отчетов по умолчанию</message>
+	<message key="manager.statistics.reports.generateReport">Сгенерировать пользовательский отчет</message>
+	<message key="manager.statistics.reports.advancedOptions">Дополнительные настройки</message>
+	<message key="manager.statistics.reports.advancedOptions.hide">Скрыть дополнительные настройки</message>
+	<message key="manager.statistics.reports.columns">Столбцы</message>
+	<message key="manager.statistics.reports.columns.description">Укажите столбцы, которые будут использоваться для построения отчета. Столбцы, которые вы выберете здесь, не только определяют то, какие данные будут в отчетах, но также определяют уровень агрегирования статистики. Например, если вы выберете столбцы «ID», «Тип» и «Месяц», отчет будет суммировать все просмотры объекта, которые были в один месяц, и представлять данные в одной строке. Если вы выберете «День» вместо «Месяц», каждый объект будет иметь отдельную строку для каждого дня.</message>
+	<message key="manager.statistics.reports.filters">Фильтры</message>
+	<message key="manager.statistics.reports.objectNotFound">Объект не найден в базе данных</message>
+	<message key="manager.statistics.reports.objectType">Тип объекта</message>
+	<message key="manager.statistics.reports.objectId">ID объекта</message>
+	<message key="manager.statistics.reports.objectId.label">Задайте один или несколько ID объектов, разделяя их запятыми (например, 1,2,3,4,5).</message>
+	<message key="manager.statistics.reports.yesterday">Вчера</message>
+	<message key="manager.statistics.reports.currentMonth">Текущий месяц</message>
+	<message key="manager.statistics.reports.orderBy">Сортировка по</message>
+	<message key="manager.statistics.reports.orderDir">Направление</message>
+	<message key="manager.statistics.reports.orderDir.asc">По возрастанию</message>
+	<message key="manager.statistics.reports.orderDir.desc">По убыванию</message>
+	<message key="manager.statistics.reports.month.label">Используйте формат ГГГГММ.</message>
+	<message key="manager.statistics.reports.day.label">Используйте формат ГГГГММДД.</message>
+	<message key="manager.statistics.reports.cities.label">Одно или несколько названий городов, разделенные запятыми(например, Название города 1,Название города 2)</message>
+	<message key="manager.statistics.reports.form.columnsRequired">Вы должны выбрать минимум один столбец для построения отчета.</message>
+	<message key="manager.statistics.reports.reportUrl">URL-адрес отчета</message>
+	<message key="manager.statistics.reports.reportUrl.label">Следующий URL-адрес может быть использован для генерации отчета с заданными на текущий момент настройками в форме. Просто скопируйте этот адрес и откройте его в браузере. Вы также можете сохранить этот адрес в закладках браузера как URL-адрес генератора вашего пользовательского отчета.</message>
+	<message key="manager.statistics.reports.filters.byContext">По контексту</message>
+	<message key="manager.statistics.reports.filters.byObject">По типу объекта и/или ID объекта</message>
+	<message key="manager.statistics.reports.filters.byTime">Выбрать диапазон для отчета</message>
+	<message key="manager.statistics.reports.filters.byTime.dimensionSelector">Или выбирать диапазон по:</message>
+	<message key="manager.statistics.reports.filters.byLocation">По географическому положению</message>
+	<message key="manager.statistics.reports.filters.byLocation.description">Фильтровать результаты по странам, регионам и/или городам.</message>
+	<message key="manager.affiliationAndSupport">Спонсорство</message>
+	<message key="manager.setup.additionalContent">Дополнительный контент</message>
+	<message key="manager.setup.additionalContentDescription">Все, что будет введено здесь, появится на главной странице.</message>
+	<message key="manager.setup.authorCopyrightNotice">Условия передачи авторских прав</message>
+	<message key="manager.setup.authorCopyrightNoticeAgree">Требовать от авторов принятия Условий передачи авторских прав в процессе отправки материала.</message>
+	<message key="manager.setup.authorGuidelines">Руководство для авторов</message>
+	<message key="manager.setup.authorGuidelines.description">Рекомендуемые правила оформления, включая стандарты форматирования текста и библиографических ссылок вместе с примерами оформления ссылок, которые часто встречаются в отправляемых материалах.</message>
+	<message key="manager.setup.citations">Библиографические ссылки</message>
+	<message key="manager.setup.citationAssistant">Помощник разметки библиографических ссылок</message>
+	<message key="manager.setup.citationFilterParser">Извлечение библиографических ссылок</message>
+	<message key="manager.setup.citationFilterParserDescription"><![CDATA[<p>Чтобы найти и проверить библиографические ссылки в базах данных библиографических ссылок, сначала их необходимо преобразовать в читаемые машиной метаданные: название, издатель, дата публикации и т. д. Все эти данные должны быть извлечены из исходного текста библиографической ссылки на источник, предоставленного автором. Помочь в этом процессе могут подключения к внешним веб-сервисам. Один или несколько модулей подключения можно добавить, щелкнув ниже на кнопке «Добавить элемент». Некоторые из этих модулей подключения могут требовать настройки, в этом случае вы увидите сообщение о необходимости настройки модуля.</p>
+		<p>Вы можете отредактировать или удалить существующий модуль подключения, щелкнув на значке шестренки рядом с ним.</p>]]></message>
+	<message key="manager.setup.citationFilterLookup">Проверка библиографических ссылок</message>
+	<message key="manager.setup.citationFilterLookupDescription"><![CDATA[<p>Вы должны включить и настроить модули подключения к внешним базам данных библиографических ссылок. Это поможет вам найти ошибки в библиографических ссылках авторов или добавить дополнительную информацию (например, DOI или PubMed ID), требуемые для электронных публикаций или депонирования.</p>
+		<p>Мы предоставляем модули подключения к нескольким внешним базам данных, в которых вы можете искать библиографические ссылки. Некоторые из этих баз данных требуют регистрации или ввода информации для настройки. Пожалуйста, обратитесь к веб-сайтам баз данных для подробной информации о том, как зарегистрироваться. Вы можете добавить одну или несколько баз данных, щелкнув ниже на кнопке «Добавить элемент».</p>
+		<p>Вы можете отредактировать или удалить существующее подключение к внешней базе данных, щелкнув на значке шестренки рядом с ним.</p>
+		<p><strong>Обратите внимание:</strong> Чтобы процесс проверки библиографических ссылок завершался своевременно, параметр <tt>citation_checking_max_processes</tt> в вашем конфигурационном файле должен иметь приемлемое значение. Смотрите раздел General Settings в <tt>config.inc.php</tt> для получения более подробной информации.</p>]]></message>
+	<message key="manager.setup.citationOutput">Оформление библиографических ссылок</message>
+	<message key="manager.setup.citationOutputStyleDescription">Выберите стиль оформления библиографических ссылок, который используется в ваших публикуемых материалах. Помощник разметки библиографических ссылок позволит вам сравнить авторскую версию оформления библиографической ссылки на источник с версией, построенной на основе сгенерированного вами XML, таким образом вы легко сможете обнаружить ошибки:</message>
+	<message key="manager.setup.competingInterests">Конфликт интересов</message>
+	<message key="manager.setup.competingInterestsDescription">Рецензентов просят следовать Правилам декларирования конфликта интересов, которые вы описали ниже.</message> <!-- FIXME #6843 (JM): should this just reference reviewers? -->
+	<message key="manager.setup.errorDeletingItem">Во время удаления этого объекта возникла ошибка.</message>
+	<message key="manager.setup.favicon">Неправильный формат favicon. Допустимы форматы .ico, .png и .gif.</message>
+	<message key="manager.setup.filter.grid.errorDeletingFilter">При попытке удаления этого фильтра произошла ошибка. Пожалуйста, сообщите об этой ошибке разработчикам.</message>
+	<message key="manager.setup.filter.grid.filterDisplayName">Модуль подключения</message>
+	<message key="manager.setup.filter.grid.filterSettings">Регистрационная информация и настройки модуля подключения</message>
+	<message key="manager.setup.filter.grid.filterTemplateRequired">Пожалуйста, выберите один из способов преобразования в выпадающем меню.</message>
+	<message key="manager.setup.filter.grid.confirmDelete">Вы действительно хотите удалить фильтр «{$filterName}»?</message>
+	<message key="manager.setup.filter.lookup.grid.descriptionConfirm">Вы решили добавить базу данных «{$filterDisplayName}». Пожалуйста, щелкните на «ОК», чтобы потвердить добавление.</message>
+	<message key="manager.setup.filter.lookup.grid.descriptionTemplate">Пожалуйста, выберите базу данных для проверки.</message>
+	<message key="manager.setup.filter.lookup.grid.description.iSBNdb"><![CDATA[<p>Этот фильтр подключается к базе данных книг и ISBN <a href="http://isbndb.com/" target="_blank">ISBNdb.com</a>.</p>
+	<p>Ключ ISBNdb API является обязательным. Информацию о генерации ключа можно найти в <a href="http://isbndb.com/api/v1/docs/keys" target="_blank">документации на сайте</a>.</p>]]></message>
+	<message key="manager.setup.filter.lookup.grid.description.crossRef"><![CDATA[<p>Этот фильтр подключается к базе данных библиографических ссылок CrossRef, используя <a href="http://www.crossref.org/02publishers/openurl_info.html" target="_blank">OpenURL Query Interface</a>.</p>
+	<p>Для использования этого фильтра вы можете использовать вашу учетную запись в системе CrossRef или зарегистрировать правильный адрес электронной почты в CrossRef <a href="http://www.crossref.org/requestaccount/" target="_blank">по этой ссылке</a>.</p>]]></message>
+	<message key="manager.setup.filter.lookup.grid.description.pubMed"><![CDATA[<p>Этот фильтр подключается к поисковой машине <a href="http://www.ncbi.nlm.nih.gov/gquery/gquery.fcgi" target="_blank">Entrez</a> системы PubMed, работающей с несколькими базами данных.</p>
+	<p>Регистрация адреса электронной почты не является обязательной, но может потребоваться, если вы сталкиваетесь с проблемами соединения с поисковой машиной. Смотрите подробную информацию в разделе <a href="http://www.be-md.ncbi.nlm.nih.gov/bookshelf/br.fcgi?book=helpeutils&part=chapter2#chapter2.Usage_Guidelines_and_Requiremen" target="_blank">Usage Guidelines and Requirements</a> документации Entrez.</p>]]></message>
+	<message key="manager.setup.filter.lookup.grid.description.worldCat"><![CDATA[<p>Этот фильтр подключается к сервисам OCLC <a href="http://www.worldcat.org/affiliate/webservices/xisbn/app.jsp" target="_blank">xISBN</a> и <a href="http://www.worldcat.org/" target="_blank">Worldcat</a> (не обязательно).</p>
+	<p>Если у вас есть <a href="http://oclc.org/developer/develop/web-services.html" target="_blank">ключ API</a> Worldcat, вы можете подключиться к Worldcat, введя ключ ниже.</p>]]></message>
+	<message key="manager.setup.filter.lookup.grid.loadMessage">Пожалуйста, подождите, пока таблица конфигурации баз данных библиографических ссылок будет загружена...</message>
+	<message key="manager.setup.filter.lookup.grid.title">Модули подключения к базам данных библиографических ссылок</message>
+	<message key="manager.setup.filter.noMoreTemplates">Все доступные преобразования уже были добавлены. Пожалуйста, щелкните на «Отмена», чтобы вернуться на страницу настройки.</message>
+	<message key="manager.setup.filter.parser.grid.descriptionConfirm">Вы решили добавить синтаксический анализатор «{$filterDisplayName}». Пожалуйста, щелкните на «ОК», чтобы потвердить добавление.</message>
+	<message key="manager.setup.filter.parser.grid.descriptionTemplate">Пожалуйста, выберите синтаксический анализатор библиографических ссылок.</message>
+	<message key="manager.setup.filter.parser.grid.description.freeCite"><![CDATA[<p>Этот фильтр извлечения подключается к веб-сервису <a href="http://freecite.library.brown.edu/" target="_blank">FreeCite</a>.</p>]]></message>
+	<message key="manager.setup.filter.parser.grid.description.paraCite"><![CDATA[<p>Этот фильтр извлечения использует модули Perl <a href="http://paracite.eprints.org/developers/" target="_blank">ParaTools</a> для обеспечения функциональности синтаксического анализа библиографических ссылок <a href="http://paracite.eprints.org" target="_blank">ParaCite</a>. Для работы этого фильтра необходимо, чтобы был установлен Perl, а также модули CPAN <a href="http://search.cpan.org/~mjewell/Biblio-Citation-Parser-1.10/" target="_blank">Biblio::Citation::Parser</a> и <a href="http://search.cpan.org/~sburke/Text-Unidecode-0.04/" target="_blank">Text::Unidecode</a>. Вы также должны настроить параметр <tt>perl</tt> в вашем конфигурационном файле. Этот параметр можно найти в разделе External Commands файла <tt>config.inc.php</tt>.</p>
+	<p>Вы также должны выбрать, какой модуль синтаксического анализа ParaTools использовать. Вы можете выбрать между стандартным модулем синтаксического анализа <a href="http://search.cpan.org/~mjewell/Biblio-Citation-Parser-1.10/lib/Biblio/Citation/Parser/Jiao.pm" target="_blank">Jiao</a> и модулем <a href="http://search.cpan.org/~mjewell/Biblio-Citation-Parser-1.10/lib/Biblio/Citation/Parser/Citebase.pm" target="_blank">Citebase</a>.</p>]]></message>
+	<message key="manager.setup.filter.parser.grid.description.parsCit"><![CDATA[<p>Этот фильтр извлечения подключается к веб-сервису <a href="http://aye.comp.nus.edu.sg/parsCit/" target="_blank">ParsCit</a>.</p>]]></message>
+	<message key="manager.setup.filter.parser.grid.description.regEx">Фильтр извлечения RegEx использует набор регулярных выражений для разбора библиографических ссылок на источники.</message>
+	<message key="manager.setup.filter.parser.grid.loadMessage">Пожалуйста, подождите, пока таблица конфигурации синтаксических анализаторов библиографических ссылок будет загружена...</message>
+	<message key="manager.setup.filter.parser.grid.title">Службы извлечения ссылок</message>
+	<message key="manager.setup.filter.pleaseSelect">Пожалуйста, выберите...</message>
+	<message key="manager.setup.groupType">Группировка типов файлов</message>
+	<message key="manager.setup.homeHeaderImageInvalid">Неверный формат изображения логотипа для верхнего колонтитула домашней страницы или загрузка не удалась. Разрешенные форматы: .gif, .jpg или .png.</message>
+	<message key="manager.setup.homepageImage">Изображение на главной странице</message>
+	<message key="manager.setup.homepageImageDescription">Загрузите изображение для отображения его на главной странице.</message>
+	<message key="manager.setup.homepageImageInvalid">Неверный формат изображения для домашней страницы или загрузка не удалась. Разрешенные форматы: .gif, .jpg или .png.</message>
+	<message key="manager.setup.homeTitleImageInvalid">Неверный формат изображения заголовка для верхнего колонтитула домашней страницы или загрузка не удалась. Разрешенные форматы: .gif, .jpg или .png.</message>
+	<message key="manager.setup.information.descriptionTitle">Описания</message>
+	<message key="manager.setup.layout.theme">Тема оформления</message>
+	<message key="manager.setup.layout.themeDescription">Новые темы могут быть установлены из вкладки «Модули» вверху на этой странице.</message>
+	<message key="manager.setup.layout.blockManagement">Управление боковыми панелями</message>
+	<message key="manager.setup.layout.sidebar">Боковая панель</message>
+	<message key="manager.setup.layout.unselected">Не выбрано</message>
+	<message key="manager.setup.loggingAndAuditing">Ведение журнала и аудит</message>
+	<message key="manager.setup.logo">Логотип</message>
+	<message key="manager.setup.metaCitationsDescription">Поставьте галочку, чтобы включить редактирование библиографических ссылок на источники. Это позволит авторам включать «сырые» библиографические ссылки на источники в отправляемые материалы. Редакторы также будут иметь доступ к Помощнику разметки библиографических ссылок, в котором они могут проверить на точность «сырые» библиографические ссылки с помощью внешних баз данных, таких как WorldCat, ISBNdb, PubMed и других. Одобренные библиографические ссылки могут быть экспортированы в файлы финальных гранок.</message>
+	<message key="manager.setup.notifications">Уведомление об отправке материала автором</message>
+	<message key="manager.setup.notifications.copySpecifiedAddress">Отправить копию на этот адрес электронной почты:</message>
+	<message key="manager.setup.notifications.description">Авторам автоматически отправляется письмо электронной почты с подтверждением отправки их материала. Вы можете отправить копии этого письма электронной почты следующим:</message>
+	<message key="manager.setup.openAccessPolicy">Правила открытого доступа</message>
+	<message key="manager.setup.openAccessPolicy.description">Если журнал предоставляет читателям немедленный свободный доступ ко всему опубликованному контенту, вы можете ввести описание ваших Правил открытого доступа.</message>
+	<message key="manager.setup.pageHeaderLogoImageInvalid">Неверный формат изображения логотипа для верхнего колонтитула страницы или загрузка не удалась. Разрешенные форматы: .gif, .jpg или .png.</message>
+	<message key="manager.setup.pageFooter">Нижний колонтитул страницы</message>
+	<message key="manager.setup.pageFooterDescription">Введите все изображения, текст или код HTML, который вы хотите показать в нижней части вашего сайта.</message>
+	<message key="manager.setup.peerReview.description">Опишите правила рецензирования журнала и процесс рецензирования для читателей и авторов. Это описание обычно включает в себя количество рецензентов, обычно дающих рецензии на материал, критерии, по которым рецензентов просят оценить материалы, примерное время выполнения рецензий и принципы подбора рецензентов.</message>
+	<message key="manager.setup.principalContact">Контактное лицо (общие вопросы)</message>
+	<message key="manager.setup.principalContactDescription">Введите данные контактного лица, обычно это главный редактор, ответственный редактор или сотрудник администрации. Эти данные могут отображаться в открытом доступе на сайте.</message>
+	<message key="manager.setup.privacyStatement">Заявление о конфиденциальности</message>
+	<message key="manager.setup.privacyStatement.description">Это Заявление будет отображаться во время отправки материала автором и на странице сайта с информацией в открытом доступе.</message>
+	<message key="manager.setup.reviewOptions.numWeeksPerResponse">Недель на согласие или отказ в ответ на запрос выполнения рецензии</message>
+	<message key="manager.setup.reviewOptions.numWeeksPerReview">Недель на выполнение рецензии</message>
+	<message key="manager.setup.reviewOptions.neverSendReminder">Никогда не напоминать</message>
+	<message key="manager.setup.reviewOptions.noteOnModification">Значения по умолчанию могут быть изменены для каждой рецензии в ходе редакционного процесса.</message>
+	<message key="manager.setup.reviewOptions.remindForInvite">Отправить напоминание, если рецензент не ответил на запрос рецензии в течение следующего количества дней, после того как срок ответа на запрос прошел:</message>
+	<message key="manager.setup.reviewOptions.remindForSubmit">Отправить напоминание, если рецензент не отправил рекомендацию в течение следующего количества дней, после того как срок отправки рецензии прошел:</message>
+	<message key="manager.setup.reviewOptions.reviewTime">Сроки рецензирования по умолчанию</message>
+	<message key="manager.setup.reviewOptions.showBlindReviewLink">Добавить ссылку на «Обеспечение слепого рецензирования» во время загрузки</message>
+	<message key="manager.setup.sortableByComponent">Можно сортировать по компонентам</message>
+	<message key="manager.setup.sponsors.note">Описание правил и отношений со спонсорами</message>
+	<message key="manager.setup.sponsors.description">Примеры: общества ученых, подразделения университетов, объединения и т.д. Спонсоры показываются в открытом доступе на сайте.</message>
+	<message key="manager.setup.styleSheetDescription">Опытные веб-разработчики могут загрузить файл CSS для дополнительной модификации внешнего вида сайта.</message>
+	<message key="manager.setup.technicalSupportContact">Контактное лицо (техническая поддержка)</message>
+	<message key="manager.setup.technicalSupportContactDescription">Контактное лицо, которое может помочь редакторам, авторам и рецензентам с любыми проблемами, которые у них возникли в процессе отправки, редактирования, рецензирования или публикации материала.</message>
+	<message key="manager.siteAccessOptions.siteAccessOptions">Параметры доступа к сайту</message>
+	<message key="manager.statistics.statistics.count.value">{$count} ({$percentage}%)</message>
+	<message key="manager.statistics.statistics.totalNewValue">{$numTotal} ({$numNew} новых)</message>
+	<message key="manager.users">Пользователи</message>
+	<message key="plugins.categories.metadata">Модули метаданных</message>
+	<message key="plugins.categories.metadata.description">Модули метаданных реализуют дополнительные стандарты метаданных.</message>
+	<message key="plugins.categories.auth">Модули авторизации</message>
+	<message key="plugins.categories.blocks">Модули блоков</message>
+	<message key="plugins.categories.blocks.description">Модули блоков — подключаемые компоненты пользовательского интерфейса, такие как различные инструменты боковой панели.</message>
+	<message key="plugins.categories.citationFormats">Модули форматирования библиографических ссылок</message>
+	<message key="plugins.categories.citationLookup">Модули подключения к базам данных библиографических ссылок</message>
+	<message key="plugins.categories.citationLookup.description">Модули подключения к базам данных библиографических ссылок подключаются к базам данных библиографических ссылок, чтобы найти ссылку на источник, например, во время редактирования библиографических ссылок.</message>
+	<message key="plugins.categories.citationOutput">Модули оформления библиографических ссылок</message>
+	<message key="plugins.categories.citationOutput.description">Модули оформления библиографических ссылок реализуют стандарты оформления библиографических ссылок. Они заменяют модули форматирования библиографических ссылок.</message>
+	<message key="plugins.categories.citationParser">Модули извлечения библиографических ссылок</message>
+	<message key="plugins.categories.citationParser.description">Модули извлечения библиографических ссылок позволяют извлекать данные для полей из «сырых» библиографических ссылок (например, имя автора, название и т. д.).</message>
+	<message key="plugins.categories.gateways.description">Модули шлюзов предоставляют данные в реальном времени внешним системам.</message>
+	<message key="plugins.categories.gateways">Модули шлюзов</message>
+	<message key="plugins.categories.generic">Модули общего назначения</message>
+	<message key="plugins.categories.importexport.description">Модули импорта/экспорта могут использоваться для обмена контентом с другими системами.</message>
+	<message key="plugins.categories.importexport">Модули импорта/экспорта</message>
+	<message key="plugins.categories.paymethod.description">Модули методов платежей реализуют поддержку различных методов обработки онлайн-платежей.</message>
+	<message key="plugins.categories.paymethod">Модули платежей</message>
+	<message key="plugins.categories.reports.description">Модули отчетов используются для реализации различных видов отчетов и извлечения данных.</message>
+	<message key="plugins.categories.reports">Модули отчетов</message>
+	<message key="plugins.categories.themes.description">Модули тем оформления могут использоваться для изменения внешнего вида системы.</message>
+	<message key="plugins.categories.themes">Модули тем оформления</message>
+	<message key="plugins.categories.oaiMetadataFormats">Модули форматирования метаданных OAI</message>
+	<message key="plugins.categories.oaiMetadataFormats.description">Эти модули форматирования преобразуют метаданные для коммуникаций OAI.</message>
+	<message key="plugins.categories.pubIds">Модули открытых идентификаторов</message>
+	<message key="plugins.categories.pubIds.description">Эти модули реализуют поддержку открытого идентификатора.</message>
+
+	<!-- Управление модулями -->
+	<message key="manager.plugins.copyError">Копирование модуля завершилось неудачей. Причиной этого может являться проблема с правами. Пожалуйста, убедитесь что веб-сервер может записывать в каталог «plugins» (включая подкаталоги), но не забудьте после этого защитить директорию, задав соответствующие права.</message>
+	<message key="manager.plugins.delete">Удалить модуль</message>
+	<message key="manager.plugins.installConfirm">Вы уверены, что хотите установить этот модуль?</message>
+	<message key="manager.plugins.upgradeConfirm">Вы уверены, что хотите обновить этот модуль?</message>
+	<message key="grid.action.installPlugin">Установить или обновить этот модуль</message>
+	<message key="manager.plugins.deleteConfirm">Вы уверены, что хотите удалить этот модуль из системы?</message>
+	<message key="manager.plugins.deleteDescription">Щелкнув на «Удалить», вы удалите модуль из файловой системы сервера.</message>
+	<message key="manager.plugins.deleteError">Модуль «{$pluginName}» не может быть удален из файловой системы. Причиной этого может являться проблема с правами. Пожалуйста, убедитесь что веб-сервер может записывать в каталог «plugins» (включая подкаталоги), но не забудьте после этого защитить директорию, задав соответствующие права.</message>
+	<message key="manager.plugins.deleteSuccess">Модуль «{$pluginName}» успешно удален</message>
+	<message key="manager.plugins.description">Эта страница позволяет управляющему просмотреть и, возможно, сконфигурировать модули, которые установлены в данный момент. Модули разбиты по категориям, в соответствии с их функциями. Список категорий приведен ниже; щелкнув на конкретную категорию, вы увидите текущий набор модулей в данной категории.</message>
+	<message key="manager.plugins.doesNotExist">Модуль «{$pluginName}» не существует</message>
+	<message key="manager.plugins.fileSelectError">Пожалуйста, сначала выберите файл</message>
+	<message key="manager.plugins.upload">Загрузить новый модуль</message>
+	<message key="manager.plugins.uploadDescription">Эта форма позволяет вам загрузить на сайт и установить новый модуль. Пожалуйста, убедитесь в том, что файл с модулем заархивирован в формате .tar.gz.</message>
+	<message key="manager.plugins.uploadFailed">Пожалуйста, убедитесь, что файл для загрузки был выбран.</message>
+	<message key="manager.plugins.installed">Установленные модули</message>
+	<message key="manager.plugins.pluginGallery">Галерея модулей</message>
+	<message key="manager.plugins.pluginGallery.overview">Обзор</message>
+	<message key="manager.plugins.pluginGallery.installation">Установка</message>
+	<message key="manager.plugins.pluginGallery.latestCompatible">Последний совместимый релиз</message>
+	<message key="manager.plugins.pluginGallery.certifications.official">Официальный</message>
+	<message key="manager.plugins.pluginGallery.certifications.official.description">Этот модуль разработан и поддерживается командой Public Knowledge Project.</message>
+	<message key="manager.plugins.pluginGallery.certifications.reviewed">Рецензированный</message>
+	<message key="manager.plugins.pluginGallery.certifications.reviewed.description">Этот модуль был отрецензирован и одобрен командой Public Knowledge Project.</message>
+	<message key="manager.plugins.pluginGallery.certifications.partner">Партнерский</message>
+	<message key="manager.plugins.pluginGallery.certifications.partner.description">Этот модуль предоставлен одним из наших партнеров по разработке.</message>
+	<message key="manager.plugins.pluginGallery.maintainer">Разработчик</message>
+	<message key="manager.plugins.pluginGallery.version">Версия {$version} выпущена {$date}</message>
+	<message key="manager.plugins.pluginGallery.homepage">Главная страница</message>
+	<message key="manager.plugins.pluginGallery.summary">Общая информация</message>
+	<message key="manager.plugins.pluginGallery.status">Статус</message>
+	<message key="manager.plugins.noInstalledVersion">Модуль еще не был установлен.</message>
+	<message key="manager.plugins.noCompatibleVersion">В настоящий момент нет совместимой версии для этого модуля.</message>
+	<message key="manager.plugins.installedVersionNewer">Модуль уже установлен, и его версия более новая чем версия, доступная в галерее.</message>
+	<message key="manager.plugins.installedVersionOlder">Модуль уже установлен, но может быть обновлен до более новой версии.</message>
+	<message key="manager.plugins.installedVersionNewest">Модуль уже установлен и его версия актуальная.</message>
+	<message key="manager.plugins.installedVersionNewer.short">Новее, чем доступная версия</message>
+	<message key="manager.plugins.installedVersionOlder.short">Может быть обновлен</message>
+	<message key="manager.plugins.installedVersionNewest.short">Актуальная</message>
+	<message key="manager.plugins.noCompatibleVersion.short">Не доступна</message>
+	<message key="manager.plugins.installFailed">Установка не удалась. {$errorString}</message>
+	<message key="manager.plugins.installSuccessful">Успешно установлена версия {$versionNumber}</message>
+	<message key="manager.plugins.invalidPluginArchive">Загруженный на сайт архив модуля не содержит каталог, который соответствует имени модуля.</message>
+	<message key="manager.plugins.wrongCategory">Загруженный модуль не соответствует категории обновляемого модуля.</message>
+	<message key="manager.plugins.wrongName">Файл version.xml в загруженном модуле содержит имя модуля, которое не соответствует имени обновляемого модуля.</message>
+	<message key="manager.plugins.pleaseInstall">Модуль не существует. Пожалуйста, используйте «Установить»</message>
+	<message key="manager.plugins.pleaseUpgrade">Модуль уже существует, но его версия — более новая, чем установленная на сайте. Пожалуйста, используйте «Обновить»</message>
+	<message key="manager.plugins.settings">Настройки</message>
+	<message key="manager.plugins.tarCommandNotFound">Команда «tar» не доступна. Пожалуйста, правильно настройте ее в вашем «config.inc.php».</message>
+	<message key="manager.plugins.upgrade">Обновить модуль</message>
+	<message key="manager.plugins.upgradeDescription">Эта форма позволяет вам обновить модуль. Пожалуйста, убедитесь в том, что файл с модулем заархивирован в формате .tar.gz.</message>
+	<message key="manager.plugins.upgradeFailed">Обновление не удалось. {$errorString}</message>
+	<message key="manager.plugins.upgradeSuccessful">Успешно обновлен до версии {$versionString}</message>
+	<message key="manager.plugins.uploadError">Ошибка загрузки файла</message>
+	<message key="manager.plugins.uploadPluginDir">Выберите файл модуля</message>
+	<message key="manager.plugins.versionFileInvalid">version.xml в каталоге модуля содержит неверные данные.</message>
+	<message key="manager.plugins.versionFileNotFound">version.xml не найден в каталоге модуля</message>
+
+	<message key="notification.localeEnabled">Язык включен.</message>
+	<message key="notification.localeDisabled">Язык отключен.</message>
+	<message key="notification.primaryLocaleDefined">{$locale} установлен как основной язык.</message>
+	<message key="notification.localeInstalled">Все выбранные языки установлены и активированы.</message>
+	<message key="notification.localeUninstalled">Язык «{$locale}» удален.</message>
+	<message key="notification.localeReloaded">Язык «{$locale}» загружен заново.</message>
+	<message key="notification.localeSettingsSaved">Настройки языка сохранены.</message>
+	<message key="notification.editedUser">Пользователь отредактирован.</message>
+
+	<!-- Настройки процесса распространения -->
+	<message key="manager.distribution.indexing">Индексирование</message>
+
+	<!-- Настройки методов платежей -->
+	<message key="manager.paymentMethod">Платежи</message>
+	<message key="manager.paymentMethod.title">Методы платежей</message>
+	<message key="manager.paymentMethod.none">Метод платежей не выбран</message>
+	<message key="manager.paymentMethod.method">Метод платедей</message>
+	<message key="manager.paymentMethod.currency">Валюта</message>
+	<message key="manager.paymentMethod.currency.description">Платежи, выполненные напрямую через этот сайт, будут выставлены в выбранной валюте.</message>
+
+	<!-- Настройки сетки «Роли» -->
+	<message key="settings.roles.roleOptions">Параметры роли</message>
+	<message key="settings.roles.showTitles">Показать название роли в списке участников</message>
+	<message key="settings.roles.permitSelfRegistration">Разрешить самостоятельную регистрацию пользователя</message>
+	<message key="settings.roles.roleName">Название роли</message>
+	<message key="settings.roles.roleAbbrev">Аббревиатура</message>
+	<message key="settings.roles.assignedStages">Назначенные этапы</message>
+	<message key="settings.roles.stages">Этапы</message>
+	<message key="settings.roles.roleDetails">Подробности о роли</message>
+	<message key="settings.roles.from">Уровень прав</message>
+	<message key="settings.roles.removeText">Вы собираетесь удалить эту роль из этого контекста. Эта операция также удалит установки и назначения пользователей, связанные с этой ролью. Вы хотите продолжить?</message>
+	<message key="settings.roles.nameRequired">Вам нужно задать имя роли.</message>
+	<message key="settings.roles.abbrevRequired">Вам нужно задать аббревиатуру роли.</message>
+	<message key="settings.roles.uniqueName">Вам нужно задать уникальное имя роли.</message>
+	<message key="settings.roles.uniqueAbbrev">Вам нужно задать уникальную аббревиатуру роли.</message>
+	<message key="settings.roles.roleIdRequired">Вам нужно задать уровень прав роли.</message>
+	<message key="settings.roles.stageIdRequired">Вам нужно задать этап для назначения.</message>
+
+	<!-- Файлы библиотеки -->
+	<message key="settings.libraryFiles.fileRequired">Файл библиотеки обязателен. Пожалуйста, убедитесь, что вы выбрали и загрузили файл на сайт.</message>
+	<message key="settings.libraryFiles.nameRequired">Имя для этого файла библиотеки обязательно.</message>
+	<message key="settings.libraryFiles.typeRequired">Тип файла для этого файла библиотеки обязателен.</message>
+	<message key="settings.libraryFiles.category.contracts">Контракты</message>
+	<message key="settings.libraryFiles.category.marketing">Маркетинг</message>
+	<message key="settings.libraryFiles.category.permissions">Разрешения</message>
+	<message key="settings.libraryFiles.category.reports">Отчеты</message>
+	<message key="settings.libraryFiles.category.other">Другое</message>
+
+	<!--  Настройка сетки «Жанры» -->
+	<message key="grid.action.addGenre">Добавить компонент</message>
+	<message key="grid.action.editGenre">Редактировать этот компонент</message>
+	<message key="grid.action.deleteGenre">Удалить этот компонент</message>
+	<message key="grid.action.restoreGenres">Вернуть компоненты к настройкам по умолчанию</message>
+	<message key="manager.setup.genres.sortable">Разрешить файлы этого типа сортировать по главам</message>
+	<message key="manager.setup.genres.dependent">Отметить файлы этого типа как зависимые файлы (например, не показываемые с опубликованным контентом)</message>
+	<message key="manager.setup.genres.supplementary">Отметить файлы этого типа как дополнительные файлы (например, не относящиеся к основному контенту материала)</message>
+	<message key="manager.settings.wizard">Мастер настроек</message>
+	<message key="manager.users.roleRequired">Вам нужно выбрать как минимум одну роль, которая должна быть связана с этим пользователем.</message>
+	<message key="manager.website">Веб-сайт</message>
+	<message key="manager.website.title">Настройки веб-сайта</message>
+	<message key="manager.workflow">Рабочий поток</message>
+	<message key="manager.workflow.title">Настройки рабочего потока</message>
+	<message key="manager.distribution">Распространение</message>
+	<message key="manager.distribution.title">Настройки распространения</message>
+
+	<!-- Формы рецензии -->
+	<message key="manager.reviewForms">Формы рецензии</message>
+	<message key="manager.reviewForms.confirmActivate">Вы уверены, что хотите активировать эту форму рецензии? Как только она будет назначена для рецензирования, вы больше не сможете деактивировать ее.</message>
+	<message key="manager.reviewForms.confirmDeactivate">Вы уверены, что хотите деактивировать эту форму рецензии? Она больше не будет доступна для назначения выполнения новых рецензий.</message>
+	<message key="manager.reviewForms.confirmCopy">Вы уверены, что хотите создать копию этой форму рецензии?</message>
+	<message key="manager.reviewForms.completed">Заполнена</message>
+	<message key="manager.reviewForms.confirmDelete">Вы уверены, что хотите удалить эту форму рецензии?</message>
+	<message key="manager.reviewForms.create">Создать форму рецензии</message>
+	<message key="manager.reviewForms.description">Описание и инструкции</message>
+	<message key="manager.reviewForms.edit">Форма рецензии</message>
+	<message key="manager.reviewForms.form.titleRequired">Название обязательно для формы рецензии.</message>
+	<message key="manager.reviewForms.inReview">На рецензии</message>
+	<message key="manager.reviewForms.list.description">Созданные здесь формы рецензии будут показываться рецензентам для заполнения вместо формы, отображаемой по умолчанию. Форма по умолчанию состоит из двух текстовых полей: первое —  «Для автора и редактора» и второе — «Для редактора». Формы рецензии могут быть присвоены конкретному разделу издания, и редакторы имеют возможность выбрать конкретную форму при назначении рецензии. Во всех случаях редакторы имеют возможность добавить полученные рецензии в переписку с автором.</message>
+	<message key="manager.reviewForms.noneChosen">Нет / Рецензия в свободной форме</message>
+	<message key="manager.reviewForms.noneCreated">Формы рецензии не были созданы.</message>
+	<message key="manager.reviewForms.noneUsed">Ни одна из форм рецензий не была использована.</message>
+	<message key="manager.reviewForms.preview">Предварительный просмотр формы</message>
+	<message key="manager.reviewForms.reviewFormData">Данные формы рецензии</message>
+	<message key="manager.reviewForms.title">Название</message>
+	<message key="manager.reviewFormElement.changeType">Изменение типа элемента формы...</message>
+	<message key="manager.reviewFormElements">Элементы формы</message>
+	<message key="manager.reviewFormElements.addResponseItem">Добавить выбранный</message>
+	<message key="manager.reviewFormElements.checkboxes">Галочки (можно выбрать один или более вариантов)</message>
+	<message key="manager.reviewFormElements.chooseType">Выберите тип элемента</message>
+	<message key="manager.reviewFormElements.confirmDelete">Подтвердить удаление элемента опубликованной формы...</message>
+	<message key="manager.reviewFormElements.copyTo">Скопировать в:</message>
+	<message key="manager.reviewFormElements.create">Создать новый элемент</message>
+	<message key="manager.reviewFormElements.dropdownbox">Выпадающий список</message>
+	<message key="manager.reviewFormElements.edit">Редактировать элемент формы</message>
+	<message key="manager.reviewFormElements.elementType">Тип элемента</message>
+	<message key="manager.reviewFormElements.form.elementTypeRequired">Необходимо выбрать тип элемента для элемента формы.</message>
+	<message key="manager.reviewFormElements.form.questionRequired">Необходимо ввести вопрос, соответствующий элементу формы.</message>
+	<message key="manager.reviewFormElements.noneCreated">Элементы формы не были созданы.</message>
+	<message key="manager.reviewFormElements.possibleResponse">Выбор</message>
+	<message key="manager.reviewFormElements.question">Элемент</message>
+	<message key="manager.reviewFormElements.radiobuttons">Радиокнопки (можно выбрать только один вариант)</message>
+	<message key="manager.reviewFormElements.required">Рецензент обязательно должен заполнить элемент</message>
+	<message key="manager.reviewFormElements.included">Включается в сообщение для автора</message>
+	<message key="manager.reviewFormElements.smalltextfield">Текстовое поле для ввода одного слова</message>
+	<message key="manager.reviewFormElements.textarea">Расширенное текстовое поле</message>
+	<message key="manager.reviewFormElements.textfield">Поле для ввода одной строки</message>
+	<message key="manager.reviewFormElements.viewable">Видимый (для авторов)</message>
+	<message key="grid.action.createReviewForm">Создать новую форму рецензии</message>
+	<message key="manager.setup.reviewerCompetingInterestsRequired.description">Декларация о конфликте интересов рецензента</message>
+	<message key="manager.setup.competingInterests.required">Запросить Декларацию о конфликте интересов во время рецензирования.</message>
+
+	<message key="manager.setup.licenseURLDescription">URL-адрес веб-страницы, описывающей лицензию (если она доступна).</message>
+
+	<message key="manager.setup.metadata.submission">Форма отправки материала</message>
+	<!--  общие ключи импорта/экспорта -->
+	<message key="plugins.importexport.common.validationErrors">Ошибки проверки:</message>
+	<message key="plugins.importexport.common.errorsOccured">Возникшие ошибки:</message>
+	<message key="plugins.importexport.common.error.unknownElement">Неизвестный элемент {$param}</message>
+	<message key="plugins.importexport.common.error.unknownGenre">Неизвестный жанр {$param}</message>
+	<message key="plugins.importexport.common.error.unknownEncoding">Неизвестная кодировка {$param}</message>
+	<message key="plugins.importexport.common.error.unknownUserGroup">Неизвестная группа пользователей {$param}</message>
+	<message key="plugins.importexport.common.error.unknownUploader">Неизвестный загрузчик {$param}</message>
+</locale>

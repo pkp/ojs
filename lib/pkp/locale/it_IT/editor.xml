@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/it_IT/editor.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="it_IT" full_name="Italiano">
+	<!-- Add file or auditor to editor/audit grids -->
+	<message key="editor.submissionLibrary">Archivio delle proposte</message>
+	<message key="editor.review.notInitiated">Il processo di revisione non è ancora iniziato</message>
+	<message key="editor.submission.uploadSelectFiles">Carica/seleziona file</message>
+	<message key="editor.submission.revisions">Revisioni</message>
+	<message key="editor.submission.findAndSelectReviewer">Trova e seleziona un revisore</message>
+	<message key="editor.submission.findAndSelectUser">Trova e seleziona utente</message>
+	<message key="editor.review.createReviewer">Crea un nuovo revisore</message>
+	<message key="editor.review.enrollReviewer.short">Aggiungi un utente già esistente</message>
+	<message key="editor.submissionReview.skipEmail">Non inviare una email all'autore</message>
+	<message key="editor.submissionReview.open">Libera</message>
+	<message key="editor.submissionReview.blind">Cieco</message>
+	<message key="editor.submissionReview.doubleBlind">Doppio cieco</message>
+	<message key="editor.submissionReview.restrictFiles">File in revisione</message>
+	<message key="editor.submissionReview.editReview">Modifica la revisione</message>
+	<message key="editor.review.importantDates">Date importanti</message>
+	<message key="editor.review.NotifyAuthorRevisions">Richiedi modifiche all'autore</message>
+	<message key="editor.review.NotifyAuthorResubmit">Richiedi modifiche all'autore per una nuova valutazione da parte dei revisori</message>
+	<message key="editor.review.personalMessageToAuthor">Email da inviare all'autore</message>
+	<message key="editor.review.readReview">Leggi il parere</message>
+	<message key="editor.review.reviewDueDate">Scadenza per inviare la revisione</message>
+	<message key="editor.review.reviewSubmitted">Revisione ricevuta</message>
+	<message key="editor.review.days">Giorni impiegati, in media</message>
+	<message key="editor.review.readConfirmation">Una volta letto il parere, cliccare "Conferma" per indicare che il processo di revisione può continuare. Se il revisore ha inviato il proprio parere in altro modo, puoi caricare il file qui sotto e cliccare "Conferma" per procedere.</message>
+	<message key="editor.submission.selectReviewer">Seleziona revisore</message>
+	<message key="editor.review.emailReviewer">Scrivi una email al revisore</message>
+	<message key="editor.submission.production.productionReadyFiles">File pronti per la produzione</message>
+	<message key="editor.submissionReview.recordDecision">Registra la decisione</message>
+	<message key="editor.submission.noReviewerFilesSelected">Nessun file selezionato</message>
+	<message key="editor.submission.noReviewerFilesSelected.details">Non hai selezionato alcun file per il revisore</message>
+	<message key="editor.review.reviewDetails">Dettagli</message>
+	<message key="editor.submission.addReviewer">Aggiungi un revisore</message>
+</locale>

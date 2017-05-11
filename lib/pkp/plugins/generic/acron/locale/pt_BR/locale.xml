@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Locale information: https://pkp.sfu.ca/wiki/index.php?title=OMP:_Portuguese_(pt_BR)
+  * Localization strings for the pt_BR locale.
+  *
+  -->
+ 
+<locale name="pt_BR" full_name="Português (Brasil)">
+	<message key="plugins.generic.acron.name">Plugin Acron</message>
+	<message key="plugins.generic.acron.description">Este plugin tem a intenção de reduzir a dependência do OMP em ferramentas de agendamento periódico, tais como a 'cron.'</message>
+
+	<message key="plugins.generic.acron.reload">Recarregar Tarefas Agendadas</message>
+	<message key="plugins.generic.acron.disabled">O Plugin Acron foi desabilitado.</message>
+	<message key="plugins.generic.acron.enabled">O Plugin Acron foi habilitado.</message>
+	<message key="plugins.generic.acron.reloadedCronTab">Guia do Cron recarregada com sucesso.</message>
+	<message key="plugins.generic.acron.tasksReloaded">Tarefas Agendadas foram recarregadas.</message>
+</locale>

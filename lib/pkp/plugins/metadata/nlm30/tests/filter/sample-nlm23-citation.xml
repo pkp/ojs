@@ -1,0 +1,45 @@
+<ref-list>
+  <ref id="B1">
+    <label>1</label>
+    <citation citation-type="confproc">
+      <person-group person-group-type="author">
+        <name>
+          <surname>Bork</surname>
+          <given-names>Peter B</given-names>
+          <prefix>Mr.</prefix>
+          <suffix>Jr</suffix>
+        </name>
+      </person-group>
+      <article-title>PHPUnit in a nutshell</article-title>
+      <source>PHPUnit in a nutshell</source>
+      <day>17</day>
+      <month>8</month>
+      <year>2009</year>
+      <access-date>2009-08</access-date>
+      <season>Summer</season>
+      <article-title>Introduction</article-title>
+      <edition>2nd edition</edition>
+      <supplement>Summer Special</supplement>
+      <conf-date>2009-08-17</conf-date>
+      <conf-loc>Helsinki</conf-loc>
+      <conf-name>PHPUnit Hackfest</conf-name>
+      <conf-sponsor>Basti himself</conf-sponsor>
+      <institution>PKP</institution>
+      <fpage>9</fpage>
+      <lpage>312</lpage>
+      <publisher-loc>Vancouver</publisher-loc>
+      <publisher-name>SFU</publisher-name>
+      <isbn>123456789</isbn>
+      <issn pub-type="ppub">987654321</issn>
+      <issn pub-type="epub">111111111</issn>
+      <pub-id pub-id-type="doi">10420/39406</pub-id>
+      <pub-id pub-id-type="publisher-id">xyz</pub-id>
+      <pub-id pub-id-type="coden">abc</pub-id>
+      <pub-id pub-id-type="sici">def</pub-id>
+      <pub-id pub-id-type="pmid">999999</pub-id>
+      <uri>http://phpunit.org/nutshell</uri>
+      <comment>just nonsense</comment>
+      <annotation>more nonsense</annotation>
+    </citation>
+  </ref>
+</ref-list>

@@ -1,0 +1,137 @@
+/**
+ * @file styles/plupload.less
+ *
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @brief Styles for the plupload plugin used in the file upload handler
+ */
+
+.pkp_controller_fileUpload {
+
+	&.loading {
+
+		.pkp_uploader_drop_zone {
+			display: none;
+		}
+	}
+
+	&:not(.loading) {
+
+		.pkp_uploader_loading {
+			display: none;
+		}
+	}
+
+	.pkp_uploader_drop_zone_label,
+	.pkp_uploader_details,
+	.pkpUploaderError,
+	.pkpUploaderFilename,
+	&.complete .pkpUploaderProgress,
+	&.complete .pkpUploaderFilename,
+	&:not(.complete) .pkp_uploader_button_change,
+	&.complete .pkp_uploader_progress_bar_wrapper,
+	&.uploading .pkp_uploader_button,
+	&.complete .pkp_uploader_button_add {
+		display: none;
+		opacity: 0;
+		.transform(opacity 0.3s);
+	}
+
+	&.complete .pkpUploaderFilename,
+	&.complete .pkp_uploader_button_change {
+		display: block;
+		opacity: 1;
+	}
+
+	&.error .pkpUploaderError,
+	&.uploading .pkp_uploader_details,
+	&.complete .pkp_uploader_details,
+	&.waiting .pkp_uploader_drop_zone_label {
+		display: inline-block;
+		opacity: 1;
+	}
+}
+
+.pkp_uploader_drop_zone {
+	padding: 11px @base;
+	border: 2px dashed @bg;
+	font-size: @font-sml;
+	line-height: @line-sml;
+	color: @text-light;
+	min-height: 34px; // button height
+}
+
+.pkpUploaderError,
+.pkp_uploader_details,
+.pkp_uploader_drop_zone_label {
+	padding: 5px 0;
+}
+
+.pkp_uploader_button {
+	float: right;
+
+	&.in_focus {
+		&:extend(.pkp_button:hover all);
+	}
+}
+
+.pkpUploaderProgress {
+	display: inline-block;
+	min-width: 48px;
+	text-align: right;
+}
+
+.pkp_uploader_progress_bar_wrapper {
+	position: absolute;
+	top: 50%;
+	left: 48px + @double;
+	right: @base;
+	transform: translateY(-50%);
+	height: @half;
+	background: @bg;
+	border-radius: @half / 2;
+}
+
+.pkpUploaderProgressBar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	min-width: @half;
+	height: @half;
+	background: @primary;
+	border-radius: @half / 2;
+}
+
+.pkpUploaderError {
+	color: @no;
+}
+
+.complete {
+
+	 .pkp_uploader_drop_zone {
+		border-style: solid;
+		background: @bg;
+		color: @text;
+	}
+
+	.pkpUploaderFilename:before {
+		&:extend(.fa);
+		content: @fa-var-check;
+		margin-right: 1em;
+		color: @yes;
+	}
+}
+
+.uploading {
+
+	.pkp_uploader_drop_zone {
+		border-style: solid;
+	}
+}
+
+// plupload's input element that's placed over the upload button
+.moxie-shim input {
+	cursor: pointer;
+}

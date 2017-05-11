@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../dtd/locale.dtd">
+
+<!--
+  * plugins/metadata/mods34/locale/pt_BR/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Locale information: https://pkp.sfu.ca/wiki/index.php?title=OMP:_Portuguese_(pt_BR)
+  * Localization strings.
+  -->
+
+<locale name="pt_BR" full_name="Português (Brasil)">
+	<!-- plug-in -->
+	<message key="plugins.metadata.mods34.displayName">Metadados MODS 3.4</message>
+	<message key="plugins.metadata.mods34.description">Contribui com esquemas MODS 3.4 e adaptadores de aplicação.</message>
+
+	<!-- MODS 3.4 XML output -->
+	<message key="plugins.metadata.mods34.mods34XmlOutput.displayName">Saída MODS 3.4</message>
+	<message key="plugins.metadata.mods34.mods34XmlOutput.description">Converter descrição de metadados MODS 3.4 para sua estrutura XML.</message>
+</locale>

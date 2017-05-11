@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/nl_NL/manager.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the nl_NL (Nederlands) locale.
+  *
+  -->
+
+<locale name="nl_NL" full_name="Nederlands">
+	<message key="manager.announcements">Nieuwsberichten</message>
+	<message key="manager.announcements.confirmDelete">Weet u zeker dat u dit nieuwsbericht wilt verwijderen?</message>
+	<message key="manager.announcements.create">Nieuw nieuwsbericht maken</message>
+	<message key="manager.announcements.createTitle">Aanmaken</message>
+	<message key="manager.announcements.dateExpire">Verloopt</message>
+	<message key="manager.announcements.edit">Edit Announcement</message>
+	<message key="manager.announcements.editTitle">Bewerken</message>
+	<message key="manager.announcements.form.dateExpireDayIncompleteDate">Kies een jaar en/of maand naast de dag van de afloopdatum.</message>
+	<message key="manager.announcements.form.dateExpire">Afloopdatum</message>
+	<message key="manager.announcements.form.dateExpireInstructions">Het nieuwsbericht wordt tot de afloopdatum getoond aan de lezers. Leeg laten als het nieuwsbericht blijvend getoond moet worden.</message>
+	<message key="manager.announcements.form.dateExpireMonthIncompleteDate">Kies een jaar en/of dag naast de maand van de afloopdatum.</message>
+	<message key="manager.announcements.form.dateExpireValid">Kies een geldige afloopdatum voor het nieuwsbericht.</message>
+	<message key="manager.announcements.form.dateExpireYearIncompleteDate">Kies een maand en/of dag naast het jaar van de afloopdatum.</message>
+	<message key="manager.announcements.form.description">Beschrijving</message>
+	<message key="manager.announcements.form.descriptionInstructions">De complete tekst van het nieuwsbericht.</message>
+	<message key="manager.announcements.form.descriptionRequired">Een beschrijving is verplicht.</message>
+	<message key="manager.announcements.form.descriptionShortInstructions">Een korte beschrijving die bij de titel van het nieuwsbericht getoond wordt.</message>
+	<message key="manager.announcements.form.descriptionShortRequired">Een korte beschrijving is verplicht.</message>
+	<message key="manager.announcements.form.descriptionShort">Korte beschrijving</message>
+	<message key="manager.announcements.form.saveAndCreateAnother">Bewaar en maak er nog een aan</message>
+	<message key="manager.announcements.form.titleRequired">Een titel voor het nieuwsbericht is verplicht.</message>
+	<message key="manager.announcements.form.title">Titel</message>
+	<message key="manager.announcements.form.typeId">Type</message>
+	<message key="manager.announcements.form.typeIdValid">Kies een geldig nieuwsberichttype.</message>
+	<message key="manager.announcements.noneCreated">Er zijn geen nieuwsberichten aangemaakt.</message>
+	<message key="manager.announcements.title">Titel</message>
+	<message key="manager.announcements.type">Type</message>
+	<message key="manager.announcementTypes">Nieuwsberichttypes</message>
+	<message key="manager.announcementTypes.confirmDelete">Waarschuwing! Alle nieuwsberichten van dit type worden ook verwijderd.Weet u zeker dat u door wilt gaan en dit nieuwsberichttype wilt verwijderen?</message>
+	<message key="manager.announcementTypes.create">Nieuwsberichttype aanmaken</message>
+	<message key="manager.announcementTypes.createTitle">Aanmaken</message>
+	<message key="manager.announcementTypes.edit">Bewerk nieuwsberichttype</message>
+	<message key="manager.announcementTypes.editTitle">Bewerken</message>
+	<message key="manager.announcementTypes.form.saveAndCreateAnother">Bewaar en maak er nog een aan</message>
+	<message key="manager.announcementTypes.form.typeNameExists">Er bestaat al een nieuwsberichttype met deze naam.</message>
+	<message key="manager.announcementTypes.form.typeName">Naam</message>
+	<message key="manager.announcementTypes.form.typeNameRequired">Een naam voor het nieuwsberichttype is verplicht.</message>
+	<message key="manager.announcementTypes.noneCreated">Er zijn geen nieuwsberichttypes aangemaakt.</message>
+	<message key="manager.announcementTypes.typeName">Nieuwsberichttype</message>
+	<message key="manager.emails.confirmDelete">Weet u zeker dat u dit e-mail sjabloon wilt verwijderen?</message>
+	<message key="manager.emails.confirmReset">Weet u zeker da u dit e-mail sjabloon wilt terugzetten naar de standaardwaarde?</message>
+	<message key="manager.emails.createEmail">E-mail aanmaken</message>
+	<message key="manager.emails.disable">Schakel uit</message>
+	<message key="manager.emails.editEmail">E-mail bewerken</message>
+	<message key="manager.emails.editTestExample">Bewerk testvoorbeeld e-mail</message>
+	<message key="manager.emails.emailKey">E-mail sleutel</message>
+	<message key="manager.emails.emailKeyExists">Een e-mail met de opgegeven sleutel bestaat al. E-mail sleutels moeten uniek zijn.</message>
+	<message key="manager.emails.emailTemplate">E-mail sjabloon</message>
+	<message key="manager.emails.emailTemplates">E-mail sjablonen</message>
+	<message key="manager.emails.enabled">Schakel dit e-mail sjabloon in</message>
+	<message key="manager.emails.enable">Schakel in</message>
+	<message key="manager.emails.form.bodyRequired">De e-mail moet tekst bevatten.</message>
+	<message key="manager.emails.form.subjectRequired">De e-mail moet een onderwerp hebben.</message>
+	<message key="manager.emails">Voorbereide e-mails</message>
+	<message key="manager.emails.resetAll">Alle sjablonen terugzetten</message>
+	<message key="manager.emails.reset">Herstel</message>
+	<message key="manager.emails.resetToDefault">Standaard terugzetten</message>
+	<message key="manager.filesBrowser">Bestanden bekijken</message>
+	<message key="manager.files.confirmDelete">Dit bestand of deze map verwijderen? Merk op dat een map leeg moet zijn voor deze verwijderd kan worden.</message>
+	<message key="manager.files.createDir">Creëer map</message>
+	<message key="manager.files.emptyDir">Geen bestanden in deze map.</message>
+	<message key="manager.files.indexOfDir">Index van {$dir}</message>
+	<message key="manager.files.parentDir">Bovenliggende map</message>
+	<message key="manager.files.uploadedFiles">Geladen bestanden</message>
+	<message key="manager.files.uploadFile">Bestand laden</message>
+	<message key="manager.groups.confirmDelete">Weet u zeker dat u deze groep wilt verwijderen?</message>
+	<message key="manager.groups.createTitle">Titel aanmaken</message>
+	<message key="manager.groups.editTitle">Bewerk titel</message>
+	<message key="manager.groups.form.groupTitleRequired">Een groeptitel is verplicht.</message>
+	<message key="manager.groups.membership.addMember">Lid toevoegen</message>
+	<message key="manager.groups.membership.confirmDelete">Weet u zeker dat u het lidmaatschap van deze groep wilt verwijderen?</message>
+	<message key="manager.groups.membership">Lidmaatschap</message>
+	<message key="manager.groups.membership.noneCreated">Deze groep heeft geen leden.</message>
+	<message key="manager.groups.membership.noUsers">Geen gebruikers gevonden.</message>
+	<message key="manager.groups.title">Titel</message>
+	<message key="manager.importExport">Importeer/Exporteer gegevens</message>
+	<message key="manager.languages.alternateLocaleInstructions">Dit systeem biedt de mogelijkheid om bepaalde kritische informatie in een aantal andere talen in te voeren. Kies daarvoor additionele  talen en maak een keuze uit de opties hieronder.</message>
+	<message key="manager.languages.supportedLocalesInstructions">Kies alle gewenste talen voor de site. Gebruikers kunnen een taal kiezen door een keuzemenu dat op iedere pagina getoond wordt. Dit menu wordt alleen getoond als meer dan één taal gekozen wordt.</message>
+	<message key="manager.payment.timestamp">Datum en tijd</message>
+	<message key="manager.people.authSource">Authenticatiebron</message>
+	<message key="manager.people.confirmUnenroll">Deze gebruiker uitschrijven?</message>
+	<message key="manager.people.createUser">Maak een nieuwe gebruiker aan</message>
+	<message key="manager.people.createUserGeneratePassword">Genereer een willekeurig wachtwoord.</message>
+	<message key="manager.people.createUserSendNotify">Stuur de gebruiker een e-mail met hun gebruikersnaam en wachtwoord.</message>
+	<message key="manager.people.disable">Blokkeer</message>
+	<message key="manager.people.doNotEnroll">Zonder rol</message>
+	<message key="manager.people.editProfile">Bewerk profiel</message>
+	<message key="manager.people.editUser">Bewerk gebruiker</message>
+	<message key="manager.people.emailUsers.emailSelectedUsers">E-mail geselecteerde gebruikers</message>
+	<message key="manager.people.emailUsers.emailUsersEnrolledAs">E-mail gebruikers ingeschreven als</message>
+	<message key="manager.people.emailUsers">E-mail gebruikers</message>
+	<message key="manager.people.emailUsers.selectLocale">Kies een taal</message>
+	<message key="manager.people.emailUsers.selectUsers">Kies de gebruikers die u wilt e-mailen door de vakjes naast hun naam aan  te vinken</message>
+	<message key="manager.people.enable">Toelaten</message>
+	<message key="manager.people.enroll">Gebruiker inschrijven</message>
+	<message key="manager.people.enrollment">Inschrijving</message>
+	<message key="manager.people.enrollSelected">Schrijf de geselecteerde gebruikers in</message>
+	<message key="manager.people.enrollSyncRole">Synchroniseer rollen</message>
+	<message key="manager.people.enrollSync">Synchroniseer inschrijving</message>
+	<message key="manager.people.enrollUserAsDescription">Gebruikers kunnen op ieder moment een rol krijgen of daarvan ontheven worden.</message>
+	<message key="manager.people.enrollUserAs">Schrijf gebruiker in als</message>
+	<message key="manager.people.invalidUser">Sorry, de gevraagde gebruiker bestaat niet.</message>
+	<message key="manager.people.mergeUser">Gebruiker samenvoegen</message>
+	<message key="manager.people.mergeUsers.confirm">Weer u zeker dat u de geselecteerde {$oldAccountCount} account(s) wilt samenvoegen met "{$newUsername}"? de geselecteerde {$oldAccountCount} account(s) zullen achteraf niet meer bestaan. Deze actie is onomkeerbaar.</message>
+	<message key="manager.people.mergeUsers">Gebruikers samenvoegen</message>
+	<message key="manager.people.mustChooseRole">Kies een van de rollen bovenaan de pagina voor op "Gebruiker inschrijven" te klikken.</message>
+	<message key="manager.people.mustProvideName">Svp eerst minimaal een achternaam voor de gebruiker opgeven.</message>
+	<message key="manager.people.noMatchingUsers">Geen passende gebruikers.</message>
+	<message key="manager.people.noneEnrolled">Geen gebruikers ingeschreven.</message>
+	<message key="manager.people">Contact</message>
+	<message key="manager.people.remove">Verwijder</message>
+	<message key="manager.people.saveAndCreateAnotherUser">Bewaren en een volgende aanmaken</message>
+	<message key="manager.people.signInAs">Inloggen als</message>
+	<message key="manager.people.signInAsUser">Inloggen als gebruiker</message>
+	<message key="manager.people.syncUsers">Synchroniseer ingeschreven gebruikers</message>
+	<message key="manager.people.unenroll">Uitschrijven</message>
+	<message key="manager.people.userCreatedSuccessfully">Gebruiker met succes aangemaakt.</message>
+	<message key="manager.people.userMustChangePassword">Verplicht de gebruiker om een nieuw wachtwoord te kiezen bij de eerstvolgende inlog.</message>
+	<message key="manager.plugins.action">Actie:</message>
+	<message key="manager.plugins.disable">Uitschakelen</message>
+	<message key="manager.plugins.enable">Inschakelen</message>
+	<message key="manager.plugins.pluginManagement">Plugin beheer</message>
+	<message key="manager.plugins.sitePlugin">Dit is een site-plugin. Alleen de sitebeheerder kan deze plugin beheren.</message>
+	<message key="manager.plugins">Systeemplugins</message>
+	<message key="manager.readingTools">Leesgereedschappen</message>
+	<message key="manager.roles">Rollen</message>
+	<message key="manager.setup.homeHeaderImageInvalid">Onbruikbaar bestandsformaat voor het home-pagina koptekst-logo. Bruikbaar zijn .gif, .jpg of .png.</message>
+	<message key="manager.setup.homepageImageInvalid">Onbruikbaar bestandsformaat voor de home-pagina afbeelding. Bruikbaar zijn .gif, .jpg of .png.</message>
+	<message key="manager.setup.homeTitleImageInvalid">Onbruikbaar bestandsformaat voor de home-pagina koptitel. Bruikbaar zijn .gif, .jpg of .png.</message>
+	<message key="manager.setup.layout.unselected">Niet geselecteerd</message>
+	<message key="manager.setup.loggingAndAuditing">Logboek en controle</message>
+	<message key="manager.setup.pageHeaderLogoImageInvalid">Onbruikbaar bestandsformaat voor het paginakop-logo. Bruikbaar zijn .gif, .jpg of .png.</message>
+	<message key="manager.setup.selectOne">Kies er een</message>
+	<message key="manager.statistics"><![CDATA[Statistieken & rapporten]]></message>
+	<message key="manager.statistics.statistics.count.value">{$count} ({$percentage}%)</message>
+	<message key="manager.statistics.statistics.totalNewValue">{$numTotal} ({$numNew} nieuw)</message>
+	<message key="manager.users">Gebruikers</message>
+	<message key="plugins.categories.auth">Authenticatie plugins</message>
+	<message key="plugins.categories.blocks">Block plugins</message>
+	<message key="plugins.categories.blocks.description">Block plugins zijn inschakelbare gebruikersinterface componenten zoals de gereedschappen in de sidebar.</message>
+	<message key="plugins.categories.citationFormats">Citatieformaat plugins</message>
+	<message key="plugins.categories.gateways.description">Gateway Plugins leveren actuele gegevens aan externe systemen.</message>
+	<message key="plugins.categories.gateways">Gateway plugins</message>
+	<message key="plugins.categories.generic">Generieke plugins</message>
+	<message key="plugins.categories.importexport.description">Import/Export plugins kunnen gebruikt worden om gegevens van en naar andere systemen te verplaatsen.</message>
+	<message key="plugins.categories.importexport">Import/Export plugins</message>
+	<message key="plugins.categories.paymethod.description">Betalingsmethode plugins implementeren de ondersteuning voor verschillende manieren om online te betalen.</message>
+	<message key="plugins.categories.paymethod">Betalingsmethode plugins</message>
+	<message key="plugins.categories.reports.description">Rapportage plugins worden gebruikt voor het implementeren van verschillende soorten rapporten en data-extracties voor conferentiebeheerders</message>
+	<message key="plugins.categories.reports">Rapportage plugins</message>
+	<message key="plugins.categories.themes.description">Thema plugins kunnen gebruikt worden om het uiterlijk van het systeem te veranderen.</message>
+	<message key="plugins.categories.themes">Thema plugins</message>
+	<message key="manager.setup.citationFilterLookup">Citaties controleren</message>
+	<message key="manager.setup.errorDeletingItem">Er is een fout opgetreden bij het verwijderen van dit onderdeel.</message>
+	<message key="manager.setup.filter.grid.errorDeletingFilter">Er is een fout opgetreden bij het verwijderen van het filter. Wilt u dit als probleem melden?</message>
+	<message key="manager.setup.filter.grid.filterDisplayName">Connector</message>
+	<message key="manager.setup.filter.grid.filterSettings">Registratie informatie en connector instellingen</message>
+	<message key="manager.setup.filter.grid.filterTemplateRequired">Kies een van de transformaties uit het menu.</message>
+	<message key="manager.setup.filter.grid.confirmDelete">Wilt u het {$filterName} filter echt verwijderen?</message>
+	<message key="manager.emails.form.emailKeyRequired">Er is een unieke e-mail sleutel nodig voor de e-mail</message>
+	<message key="manager.reviewerSearch.searchByName">Zoek een reviewer op naam</message>
+	<message key="manager.reviewerSearch.doneAmount">Aantal voltooide reviews</message>
+	<message key="manager.reviewerSearch.avgAmount">Gemiddeld aantal dagen per review</message>
+	<message key="manager.reviewerSearch.lastAmount">Dagen sinds laatste review</message>
+	<message key="manager.reviewerSearch.activeAmount">Aantal actieve reviews</message>
+	<message key="manager.reviewerSearch.interests">Review interesses</message>
+	<message key="manager.setup.citationAssistant">Citatie-markering assistent</message>
+	<message key="manager.setup.citationFilterParser">Citaties extraheren</message>
+	<message key="manager.setup.citationFilterParserDescription"><![CDATA[<p>Om citaties te vinden en controleren in citatiedatabanken moeten ze eerst opgesplitst worden tot machineleesbare metadata: titel, uitgever, publicatiedatum enz. moeten geëxtraheerd worden uit de originele citatie van de auteur. Connectors naar externe webservices kunnen assisteren in dit proces. Connectors kunnen toegevoegd worden door hieronder op de "Voeg onderdeel toe" knop te klikken. Sommige connectors moeten verder geconfigureerd worden. Als dat het geval is, zullen nadere vragen gesteld worden.</p>
+		<p>U kunt een bestaande connector bewerken of verwijderen door te klikken op het tandwiel-ikoon ernaast.</p>]]></message>
+	<message key="manager.setup.filter.lookup.grid.descriptionConfirm">Klik op 'OK' om het toevoegen van de {$filterDisplayName} databank te bevestigen.</message>
+	<message key="manager.setup.filter.lookup.grid.descriptionTemplate">Selecteer een databank</message>
+	<message key="manager.setup.filter.lookup.grid.loadMessage">Wacht tot het citatiedatabank configuratie-raster geladen is.</message>
+	<message key="manager.setup.filter.lookup.grid.title">Citatiedatabank connectors</message>
+	<message key="manager.setup.filter.noMoreTemplates">Alle beschikbare transformaties zijn toegevoegd. Klik 'Annuleer' om terug te gaan naar de instelpagina</message>
+	<message key="manager.setup.filter.parser.grid.descriptionConfirm">Klik op 'OK' om het toevoegen van de {$filterDisplayName} parser te bevestigen.</message>
+	<message key="manager.setup.filter.parser.grid.descriptionTemplate">Kies een citatie-parser</message>
+	<message key="manager.setup.filter.pleaseSelect">Kies...</message>
+	<message key="manager.setup.citationOutput">Citatie uitvoer</message>
+	<message key="manager.setup.citationOutputStyleDescription">Kies de citatiestijl die wordt gebruikt in de inzendingen van uw tijdschrift. De citatie markeringsassistent laat u de auteursversie van de citatie vergelijken met de versie die gegenereerd is uit de XML die u maakt zodat u fouten eenvoudig kunt herkennen:</message>
+	<message key="manager.setup.filter.lookup.grid.description.iSBNdb"><![CDATA[<p>Dit filter maakt verbinding met de <a href="http://isbndb.com/" target="_blank">ISBNdb.com</a> boek en ISBN databank.</p>
+	<p>Een ISBNdb API sleutel is een vereiste. Voor meer informatie over het genereren van een sleutel zie de <a href="http://isbndb.com/api/v1/docs/keys" target="_blank">online documentatie</a>.</p>]]></message>
+	<message key="manager.setup.filter.lookup.grid.description.crossRef"><![CDATA[<p>Dit filter maakt verbinding met de CrossRef citatiedatabank middels CrossRef's <a href="http://www.crossref.org/02publishers/openurl_info.html" target="_blank">OpenURL Query Interface</a>.</p>
+	<p>Om dit filter te gebruiken kunt u uw CrossRef systeem account gebruiken. u kunt ook een geldig e-mail adres registreren bij CrossRef <a href="http://www.crossref.org/requestaccount/" target="_blank">hier</a>.</p>]]></message>
+	<message key="manager.setup.filter.parser.grid.description.regEx">Het RegEx extractiefilter gebruikt een reeks reguliere expressies om citaties te parseren.</message>
+	<message key="manager.setup.filter.parser.grid.loadMessage">Wacht terwijl het citatieparser configuratieraster laadt...</message>
+	<message key="manager.setup.filter.parser.grid.title">Citatie-extractie diensten</message>
+	<message key="manager.setup.citationFilterLookupDescription"><![CDATA[<p>U moet ook connectors naar externe citatiedatabanken inschakelen en configureren. Deze helpen u bij het opsporen van fouten in de citaties van de auteurs en het toevoegen van extra informatie (bv. DOI of PubMed ID) die nodig is voor elektronische publicatie of opslag.</p>
+		<p>Wij leveren connectors naar verschillende externe databanken waarin u kunt zoeken naar citaties. Sommige van deze databanken vereisen registratie of configuratie-informatie die moet worden ingesteld. Refereer aan de publieke website van de databank voor informatie over registreren. U kunt één of meerdere databanken toevoegen door op te klikken op de "Voeg onderdeel toe" knop hieronder.</p>
+		<p>U kunt bestaande externe databank-connecties bewerken of verwijderen door te klikken op het tandwiel-ikoon ernaast.</p>
+		<p><strong>Noot:</strong> Om het citatie-controle proces tijdig gereed te laten komen, moet de <tt>citation_checking_max_processes</tt> instelling in uw configuratiebestand op een redelijke waarde staan. Zie de  General Settings sectie in <tt>config.inc.php</tt> voor meer informatie.</p>]]></message>
+	<message key="manager.setup.filter.lookup.grid.description.pubMed"><![CDATA[<p>Dit filter zoekt verbinding met PubMed's <a href="http://www.ncbi.nlm.nih.gov/gquery/gquery.fcgi" target="_blank">Entrez</a> databank-overschrijdende zoekmachine</p>
+	<p>Een registratie e-mail is niet strikt noodzakelijk, kan nodig zijn als er verbindingsproblemen optreden. Zie de sectie over <a href="http://www.be-md.ncbi.nlm.nih.gov/bookshelf/br.fcgi?book=helpeutils&part=chapter2#chapter2.Usage_Guidelines_and_Requiremen" target="_blank">Usage Guidelines and Requirements</a> in de Entrez documentatie voor meer informatie.</p>]]></message>
+	<message key="manager.setup.filter.parser.grid.description.freeCite"><![CDATA[<p>Dit extractiefilter verbindt met de <a href="http://freecite.library.brown.edu/" target="_blank">FreeCite</a> web service.</p>]]></message>
+	<message key="manager.setup.filter.parser.grid.description.parsCit"><![CDATA[<p>Dit extractiefilter gebruikt de <a href="http://aye.comp.nus.edu.sg/parsCit/" target="_blank">ParsCit</a> webservice.</p>]]></message>
+	<message key="manager.setup.filter.lookup.grid.description.worldCat"><![CDATA[<p>Dit filter gebruikt OCLC services <a href="http://www.worldcat.org/affiliate/webservices/xisbn/app.jsp" target="_blank">xISBN</a> en <a href="http://www.worldcat.org/" target="_blank">Worldcat</a> (optioneel).</p>
+	<p>Als u een Worldcat <a href="http://oclc.org/developer/develop/web-services.html" target="_blank">API sleutel</a> heeft kunt uWorldCat gebruiken door de sleutel hieronder in  te voeren.</p>]]></message>
+	<message key="manager.setup.metaCitationsDescription">Kruis het volgende vak aan om het bewerken van citaties en referenties in te schakelen. Dit maakt het mogelijk dat auteurs ruwe citaties in hun inzendingen opnemen. Redacteurs krijgen een citatie-markering assistent tot hun beschikking die de ruwe citaties kan controleren bij externe databanken zoals WorldCat, ISBNdb, PubMed en anderen. Goedgekeurde citaties kunnen geëxporteerd worden naar de proeven.</message>
+	<message key="manager.setup.filter.parser.grid.description.paraCite"><![CDATA[<p>Dit extractiefilter gebruikt de <a href="http://paracite.eprints.org/developers/" target="_blank">ParaTools</a> Perl modules om de <a href="http://paracite.eprints.org" target="_blank">ParaCite</a> citatie parsering te leveren. Om dit naar behoren te laten werken moet u Perl geïnstalleerd hebben, samen met de <a href="http://search.cpan.org/~mjewell/Biblio-Citation-Parser-1.10/" target="_blank">Biblio::Citation::Parser</a> en <a href="http://search.cpan.org/~sburke/Text-Unidecode-0.04/" target="_blank">Text::Unidecode</a> CPAN modules. U moet ook de <tt>perl</tt> instelling configureren in uw configuratiebestand. Deze instelling vindt u in de External Commands sectie van <tt>config.inc.php</tt>.</p>
+	<p>U kun kiezen welke parser-module ParaTools moet gebruiken. U kunt kiezen tussen de standaard, <a href="http://search.cpan.org/~mjewell/Biblio-Citation-Parser-1.10/lib/Biblio/Citation/Parser/Jiao.pm" target="_blank">Jiao</a>, en <a href="http://search.cpan.org/~mjewell/Biblio-Citation-Parser-1.10/lib/Biblio/Citation/Parser/Citebase.pm" target="_blank">Citebase</a> parser modules.</p>]]></message>
+	<message key="manager.announcements.datePublish">Gepubliceerd</message>
+	<message key="manager.emails.addEmail">Voeg e-mail sjabloon toe</message>
+	<message key="manager.emails.details">Sjabloon details</message>
+	<message key="manager.emails.disable.message">U staat op het punt dit sjabloon uit te schakelen. Als er systeemprocessen zijn die dit sjabloon gebruiken, zullen ze het niet meer gebruiken. Wilt u deze bewerking bevestigen?</message>
+	<message key="manager.emails.enable.message">U staat op het punt deze e-mail in te schakelen. Wilt u deze bewerking bevestigen?</message>
+	<message key="manager.emails.resetAll.message">Als u de sjablonen herstelt gaan alle modificaties aan de sjablonen verloren. Wilt deze bewerking bevestigen?</message>
+	<message key="manager.reviewerSearch.searchByName.short">Zoeken op naam</message>
+	<message key="manager.setup.layout.blockManagement">Beheer van de sidebar</message>
+	<message key="plugins.categories.metadata">Metadata plugins</message>
+	<message key="manager.emails.data">Sjabloon berichtinhoud</message>
+	<message key="manager.emails.reset.message">Als u dit sjabloon herstelt, wordt de inhoud teruggezet naar de standaardwaarde. Al uw aanpassingen gaan verloren. Wilt u deze bewerking bevestigen?</message>
+	<message key="manager.reviewerSearch.form.instructions">Gebruik het formulier hieronder om de maximumwaarden op te geven voor de termen waar u op wilt zoeken. Het formulier wordt vooraf gevuld met de gemiddelden voor die velden.</message>
+	<message key="manager.reviewerSearch.form.interests.instructions">Geef de reviewer interesses, gescheiden door komma's</message>
+	<message key="plugins.categories.metadata.description">Metadata Plugins implementeren aanvullende metadata standaards</message>
+	<message key="plugins.categories.citationLookup">Citatie database connector plugins</message>
+	<message key="plugins.categories.citationLookup.description">Citatie database connector plugins maken verbinding met citatie databases om citaties op te zoeken, bijvoorbeeld tijdens het bewerken van citaties.</message>
+	<message key="plugins.categories.citationOutput">Citatie uitvoer plugins</message>
+	<message key="plugins.categories.citationOutput.description">Citatie uitvoer plugins implementeren citatiestandaards. Dit is de opvolger van citatie format plugins.</message>
+	<message key="plugins.categories.citationParser">Citatie extractie plugins</message>
+	<message key="plugins.categories.citationParser.description">Citatie extractie plugins extraheren velden uit citaties (auteur, titel, etc).</message>
+	<message key="manager.masthead.title">Redactieteam</message>
+	<message key="plugins.categories.oaiMetadataFormats">OAI Metadata formaat plugins</message>
+	<message key="subscriptions.individualDescription">Bij individuele abonnementen is inloggen nodig om teogang te krijgen tot de inhoud.</message>
+	<message key="manager.website">Website</message>
+
+	<!-- Review forms -->
+	<message key="manager.reviewFormElement.changeType">Waarschuwing: Het veranderen van elementtype van het reviewformulier van multiple-choice naar open vraag zal resulteren in het verwijderen van de multiple-choice opties.</message>
+	<message key="manager.reviewFormElements">Formulieritems</message>
+	<message key="manager.reviewFormElements.addResponseItem">Selectie toevoegen</message>
+	<message key="manager.reviewFormElements.checkboxes">Aankruisvelden (u kunt één of meer velden aankruisen)</message>
+	<message key="manager.reviewFormElements.chooseType">Kies itemtype</message>
+	<message key="manager.reviewFormElements.confirmDelete">Bevestig het verwijderen van een gepubliceerd item...</message>
+	<message key="manager.reviewFormElements.copyTo">Kopieer naar</message>
+	<message key="manager.reviewFormElements.create">Maak nieuw item</message>
+	<message key="manager.reviewFormElements.dropdownbox">Uitklapmenu</message>
+	<message key="manager.reviewFormElements.edit">Bewerk formulieritem</message>
+	<message key="manager.reviewFormElements.elementType">Elementtype</message>
+	<message key="manager.reviewFormElements.form.elementTypeRequired">Een elementtype is verplicht voor een formulierelement</message>
+	<message key="manager.reviewFormElements.form.questionRequired">En vraag is verplicht bij een formulierelement</message>
+	<message key="manager.reviewFormElements.noneCreated">Er zijn geen items aangemaakt</message>
+	<message key="manager.reviewFormElements.possibleResponse">Selectie</message>
+	<message key="manager.reviewFormElements.question">Item</message>
+	<message key="manager.reviewFormElements.radiobuttons">Radioknoppen (u kunt er slechts één kiezen)</message>
+	<message key="manager.reviewFormElements.required">Reviewers moeten dit item afronden</message>
+	<message key="manager.reviewFormElements.smalltextfield">Tekstveld voor één woord</message>
+	<message key="manager.reviewFormElements.textarea">Uitgebreid tekstveld</message>
+	<message key="manager.reviewFormElements.textfield">Tekstveld voor één regel</message>
+	<message key="manager.reviewForms">Reviewformulieren</message>
+	<message key="manager.reviewForms.completed">Afgerond</message>
+	<message key="manager.reviewForms.create">Maak reviewformulier aan</message>
+	<message key="manager.reviewForms.description">Beschrijving en instructies</message>
+	<message key="manager.reviewForms.edit">Reviewformulier</message>
+	<message key="manager.reviewForms.form.titleRequired">Een titel is verplicht voor het reviewformulier</message>
+	<message key="manager.reviewForms.inReview">Onder review</message>
+	<message key="manager.reviewForms.list.description">Hier aangemaakte reviewformulieren worden aangeboden aan reviewers om verder in te vullen. Ze komen in de plaats van het standaardformulier dat uit twee tekstvelden bestaat, het eerste "voor auteur en redacteur"  en het tweede "voor redacteur". Reviewformulieren kunnen ontworpen worden voor een specifieke sectie van het tijdschrift. Redacteuren kunnen kiezen welk formulier gebruikt moet worden bij het toekennen van de review. In alle gevallen hebben redacteuren de mogelijkheid om de reviews op te nemen in de correspondentie met de auteur.</message>
+	<message key="manager.reviewForms.noneChosen">Geen / Vrije vorm review</message>
+	<message key="manager.reviewForms.noneCreated">Er zijn geen reviewformulieren aangemaakt</message>
+	<message key="manager.reviewForms.preview">Voorvertoningsformulier</message>
+	<message key="manager.reviewForms.title">Titel</message>
+</locale>

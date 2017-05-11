@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/uk_UA/manager.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the uk_UA (Українська) locale.
+  *
+  * Translated by Denys Solovianenko, 2011
+  * V. I. Vernadsky National Library of Ukraine
+  -->
+
+<locale name="uk_UA" full_name="Українська">
+	<message key="manager.announcements">Анонси</message>
+	<message key="manager.announcements.confirmDelete">Ви впевнені, що бажаєте назавжди видалити цей анонс?</message>
+	<message key="manager.announcements.create">Створити новий анонс</message>
+	<message key="manager.announcements.createTitle">Створити</message>
+	<message key="manager.announcements.dateExpire">Актуально до</message>
+	<message key="manager.announcements.edit">Редагувати анонс</message>
+	<message key="manager.announcements.editTitle">Редагувати</message>
+	<message key="manager.announcements.form.dateExpireDayIncompleteDate">Будь ласка, крім дня, коли анонс втратить актуальність, визначте також місяць та/або рік.</message>
+	<message key="manager.announcements.form.dateExpire">Дата втрати актуальності</message>
+	<message key="manager.announcements.form.dateExpireInstructions">Читачі бачитимуть анонс до настання цієї дати. Не заповнюйте, якщо анонс має відображатись невизначений час.</message>
+	<message key="manager.announcements.form.dateExpireMonthIncompleteDate">Будь ласка, крім місяця, коли анонс втратить актуальність, визначте також день та/або рік.</message>
+	<message key="manager.announcements.form.dateExpireValid">Будь ласка, визначте коректну дату втрати актуальності анонсу.</message>
+	<message key="manager.announcements.form.dateExpireYearIncompleteDate">Будь ласка, крім року, коли анонс втратить актуальність, визначте також день та/або місяць.</message>
+	<message key="manager.announcements.form.description">Опис</message>
+	<message key="manager.announcements.form.descriptionInstructions">Повний текст анонсу.</message>
+	<message key="manager.announcements.form.descriptionRequired">Необхідно ввести опис анонсу.</message>
+	<message key="manager.announcements.form.descriptionShortInstructions">Короткий опис відображатиметься разом із назвою анонсу.</message>
+	<message key="manager.announcements.form.descriptionShortRequired">Необхідно ввести короткий опис анонсу.</message>
+	<message key="manager.announcements.form.descriptionShort">Короткий опис</message>
+	<message key="manager.announcements.form.saveAndCreateAnother">Записати та створити інший</message>
+	<message key="manager.announcements.form.titleRequired">Необхідно ввести заголовок анонсу.</message>
+	<message key="manager.announcements.form.title">Заголовок</message>
+	<message key="manager.announcements.form.typeId">Тип</message>
+	<message key="manager.announcements.form.typeIdValid">Будь ласка, оберіть коректний тип анонсу.</message>
+	<message key="manager.announcements.noneCreated">Жодного анонсу не було створено.</message>
+	<message key="manager.announcements.title">Заголовок</message>
+	<message key="manager.announcements.type">Тип</message>
+	<message key="manager.announcementTypes">Типи анонсів</message>
+	<message key="manager.announcementTypes.confirmDelete">Попередження! Всі анонси з цього типу будуть видалені. Ви впевнені, що бажаєте продовжити та видалити цей тип анонсу?</message>
+	<message key="manager.announcementTypes.create">Створити тип анонсу</message>
+	<message key="manager.announcementTypes.createTitle">Створити</message>
+	<message key="manager.announcementTypes.edit">Редагувати тип анаонсу</message>
+	<message key="manager.announcementTypes.editTitle">Редагувати</message>
+	<message key="manager.announcementTypes.form.saveAndCreateAnother">Записати та створити інший</message>
+	<message key="manager.announcementTypes.form.typeNameExists">Тип анонсу з цією назвою вже існує.</message>
+	<message key="manager.announcementTypes.form.typeName">Назва</message>
+	<message key="manager.announcementTypes.form.typeNameRequired">Необхідно вказати назву для типу анонсу.</message>
+	<message key="manager.announcementTypes.noneCreated">Жодних типів анонсів не було створено.</message>
+	<message key="manager.announcementTypes.typeName">Тип анонсу</message>
+	<message key="manager.emails.confirmDelete">Ви впевнені, що хочете видалити цей поштовий шаблон?</message>
+	<message key="manager.emails.confirmReset">Ви впевнені, що хочете відновити значення за замовчуванням для цього поштового шаблону?</message>
+	<message key="manager.emails.createEmail">Створити лист</message>
+	<message key="manager.emails.disable">Відключити</message>
+	<message key="manager.emails.editEmail">Редагувати лист</message>
+	<message key="manager.emails.editTestExample">Редагувати тестовий лист</message>
+	<message key="manager.emails.emailKey">Ключ листа</message>
+	<message key="manager.emails.emailKeyExists">Лист із таким ключем вже існує. Ключі листів повинні бути унікальними.</message>
+	<message key="manager.emails.emailTemplate">Шаблон листа</message>
+	<message key="manager.emails.emailTemplates">Шаблони листів</message>
+	<message key="manager.emails.enabled">Включити цей шаблон листа</message>
+	<message key="manager.emails.enable">Включити</message>
+	<message key="manager.emails.form.emailKeyRequired">Необхідно вказати унікальний ключ листа для цього листа.</message>
+	<message key="manager.emails.form.bodyRequired">Необхідно ввести текст листа.</message>
+	<message key="manager.emails.form.subjectRequired">Необхідно ввести тему листа.</message>
+	<message key="manager.emails">Підготовані листи</message>
+	<message key="manager.emails.resetAll">Скинути всі шаблони</message>
+	<message key="manager.emails.reset">Скинути</message>
+	<message key="manager.emails.resetToDefault">Скинути до стандартних</message>
+	<message key="manager.filesBrowser">Браузер файлів</message>
+	<message key="manager.files.confirmDelete">Видалити цей файл або теку? Зауважте, що тека повинна бути пустою, перш ніж її можна буде видалити.</message>
+	<message key="manager.files.createDir">Створити теку</message>
+	<message key="manager.files.emptyDir">У цій теці не знайдено файлів.</message>
+	<message key="manager.files.indexOfDir">Вміст {$dir}</message>
+	<message key="manager.files.parentDir">Батьківська тека</message>
+	<message key="manager.files.uploadedFiles">Вивантажені файли</message>
+	<message key="manager.files.uploadFile">Вивантажити файл</message>
+	<message key="manager.groups.confirmDelete">Ви впевнені, що хочете видалити цю посаду?</message>
+	<message key="manager.groups.createTitle">Створення посади</message>
+	<message key="manager.groups.editTitle">Редагування посади</message>
+	<message key="manager.groups.form.groupTitleRequired">Необхідно вказати назву групи.</message>
+	<message key="manager.groups.membership.addMember">Додати члена</message>
+	<message key="manager.groups.membership.confirmDelete">Ви впевнені, що хочете видалити членство у цій групі?</message>
+	<message key="manager.groups.membership">Членство</message>
+	<message key="manager.groups.membership.noneCreated">У цій групі немає членів.</message>
+	<message key="manager.groups.membership.noUsers">Жодних користувачів не знайдено.</message>
+	<message key="manager.groups.title">Назва</message>
+	<message key="manager.importExport">Імпорт/Експорт даних</message>
+	<message key="manager.languages.alternateLocaleInstructions">За бажанням, ця система може підтримувати введення всієї важливої інформації одразу кількома мовами. Для того, щоб використовувати цю можливість, оберіть альтернативні локалізації та налаштування для них зі списку нижче.</message>
+	<message key="manager.languages.supportedLocalesInstructions">Визначіть всі локалізації, які будуть включені до меню вибору мов на кожній сторінці сайту. Меню буде відображатись лише у випадку визначення більш ніж однієї локалізації.</message>
+	<message key="manager.payment.timestamp">Дата/Час</message>
+	<message key="manager.people.authSource">Джерело аутентифікації</message>
+	<message key="manager.people.confirmUnenroll">Звільнити цього користувача від призначення?</message>
+	<message key="manager.people.createUser">Створити нового користувача</message>
+	<message key="manager.people.createUserGeneratePassword">Згенерувати випадковий пароль.</message>
+	<message key="manager.people.createUserSendNotify">Надіслати користувачу вітального листа з його іменем користувача і паролем.</message>
+	<message key="manager.people.disable">Деактивувати</message>
+	<message key="manager.people.doNotEnroll">Без ролі</message>
+	<message key="manager.people.editProfile">Редагувати профіль</message>
+	<message key="manager.people.editUser">Редагувати користувача</message>
+	<message key="manager.people.emailUsers.emailSelectedUsers">Надіслати листи вказаним користувачам</message>
+	<message key="manager.people.emailUsers.emailUsersEnrolledAs">Надіслати листи користувачам, які мають роль</message>
+	<message key="manager.people.emailUsers">Надіслати листи користувачам</message>
+	<message key="manager.people.emailUsers.selectLocale">Обрати локалізацію</message>
+	<message key="manager.people.emailUsers.selectUsers">Виберіть користувачів, яким ви хочете надіслати листи</message>
+	<message key="manager.people.enable">Активувати</message>
+	<message key="manager.people.enroll">Призначити користувача</message>
+	<message key="manager.people.enrollment">Призначення</message>
+	<message key="manager.people.enrollSelected">Призначити вказаних користувачів</message>
+	<message key="manager.people.enrollSyncRole">Синхронізувати роль</message>
+	<message key="manager.people.enrollSync">Синхронізація призначень</message>
+	<message key="manager.people.enrollUserAsDescription">Користувачі можуть призначатися і звільнятися від призначень в будь-який час.</message>
+	<message key="manager.people.enrollUserAs">Призначити користувача на роль</message>
+	<message key="manager.people.invalidUser">Вибачте, вказаний користувач не існує.</message>
+	<message key="manager.people.mergeUser">Об'єднати</message>
+	<message key="manager.people.mergeUsers.confirm">Ви впевнені, що хочете об'єднати {$oldAccountCount} вибраних облікових записів у єдиний обліковий запис "{$newUsername}"? Після цього {$oldAccountCount} вибраних облікових записів перестануть існувати. Цю дію не можна буде відмінити.</message>
+	<message key="manager.people.mergeUsers">Об'єднати користувачів</message>
+	<message key="manager.people.mustChooseRole">Будь ласка, перш ніж натиснути кнопку "Призначити користувача", оберіть роль зверху сторінки.</message>
+	<message key="manager.people.mustProvideName">Будь ласка, вкажіть принаймні прізвище користувача.</message>
+	<message key="manager.people.noMatchingUsers">Немає відповідностей.</message>
+	<message key="manager.people.noneEnrolled">Немає призначених користувачів.</message>
+	<message key="manager.people">Редакція</message>
+	<message key="manager.people.remove">Видалити</message>
+	<message key="manager.people.saveAndCreateAnotherUser">Записати та створити іншого</message>
+	<message key="manager.people.signInAs">Зайти як</message>
+	<message key="manager.people.signInAsUser">Зайти як користувач</message>
+	<message key="manager.people.syncUsers">Синхронізація ролей користувачів</message>
+	<message key="manager.people.unenroll">Звільнити</message>
+	<message key="manager.people.userCreatedSuccessfully">Користувач успішно створений.</message>
+	<message key="manager.people.userMustChangePassword">Вимагати, щоб користувач змінив пароль під час наступного входу до системи.</message>
+	<message key="manager.plugins.action">Дія:</message>
+	<message key="manager.plugins.disable">Заборонити</message>
+	<message key="manager.plugins.enable">Дозволити</message>
+	<message key="manager.plugins.pluginManagement">Керування модулями</message>
+	<message key="manager.plugins.sitePlugin">Це загальносистемний модуль. Лише адміністратор сайту може керувати цим модулем.</message>
+	<message key="manager.plugins">Модулі системи</message>
+	<message key="manager.readingTools">Інструментарій для читання</message>
+	<message key="manager.reviewerSearch.searchByName">Пошук рецензента за іменем</message>
+	<message key="manager.reviewerSearch.doneAmount">Кількість завершених рецензій</message>
+	<message key="manager.reviewerSearch.avgAmount">Середня тривалість рецензування (діб)</message>
+	<message key="manager.reviewerSearch.lastAmount">Днів після останньої рецензії</message>
+	<message key="manager.reviewerSearch.activeAmount">Кількість активних рецензій</message>
+	<message key="manager.reviewerSearch.interests">Наукові інтереси</message>
+	<message key="manager.roles">Ролі</message>
+	<message key="manager.setup.citationAssistant">Помічник розмітки цитат</message>
+	<message key="manager.setup.citationFilterParser">Екстракція цитат</message>
+	<message key="manager.setup.citationFilterParserDescription"><![CDATA[<p>Для того, щоб знайти і перевірити за базою даних коректність цитат, спочатку їх потрібно розбити на фрагменти машиночитаних метаданих: з цитат у тексті, отриманому від автора, повинні бути екстраговані такі поля, як назва, видавець, дата публікації тощо. У цьому процесі можуть допомогти шлюзи до зовнішніх веб-сервісів. Ви можете додати один або декілька шлюзів засобами розміщеної нижче кнопки "Додати об'єкт". Деякі з цих шлюзів можуть потребувати додаткових налаштувань; ви будете повідомлені, якщо це так.</p>
+		<p>Для редагування або видалення шлюзу потрібно натиснути на зображення шестерінки поруч з ним.</p>]]></message>
+	<message key="manager.setup.citationFilterLookup">Перевірка цитат</message>
+	<message key="manager.setup.citationFilterLookupDescription"><![CDATA[<p>Також ви повинні дозволити і налаштувати шлюзи до зовнішніх баз даних цитованості. Це допоможе вам знаходити помилки у цитатах авторів та додавати відсутню у оригінальних цитатах, але необхідну для електронного видання, інформацію (наприклад, ідентифікатори DOI або PubMed).</p>
+		<p>Ми забезпечуємо шлюзи до кількох зовнішніх баз даних, у яких може проводитись пошук цитат. Деякі з цих баз даних вимагають реєстрації або налаштування. Для того, щоб отримати додаткову інформацію щодо реєстрації, користуйтеся публічними веб-сайтами відповідних баз даних. Ви можете додати одну або декілька баз даних засобами розміщеної нижче кнопки "Додати об'єкт".</p>
+		<p>Для редагування або видалення шлюзу до зовнішньої бази даних потрібно натиснути на зображення шестерінки поруч з ним.</p>
+		<p><strong>Примітка:</strong> Для того, щоб процес перевірки цитат не займав занадто багато часу, вкажіть помірне значення директиви <tt>citation_checking_max_processes</tt> у вашому файлі конфігурації. Для більш детальної інформації з цього приводу див. розділ General Settings у файлі <tt>config.inc.php</tt>.</p>]]></message>
+	<message key="manager.setup.citationOutput">Вихідний формат цитат</message>
+	<message key="manager.setup.citationOutputStyleDescription">Оберіть стиль цитат, який буде використовуватись у авторських поданнях цього журналу. Ви зможете легко знаходити помилки, оскільки Помічник розмітки цитат дозволяє порівнювати авторську версію цитати з версією, згенерованою з XML:</message>
+	<message key="manager.setup.errorDeletingItem">Під час видалення цього об'єкту виникла помилка.</message>
+	<message key="manager.setup.filter.grid.errorDeletingFilter">Під час спроби видалення цього фільтру виникла помилка. Будь ласка, повідомте про цей випадок розробників.</message>
+	<message key="manager.setup.filter.grid.filterDisplayName">Шлюз</message>
+	<message key="manager.setup.filter.grid.filterSettings">Реєстраційна інформацію та параметри шлюзу</message>
+	<message key="manager.setup.filter.grid.filterTemplateRequired">Будь ласка, виберіть зі спадаючого меню один з типів трансформації.</message>
+	<message key="manager.setup.filter.grid.confirmDelete">Ви справді хочете видалити фільтр {$filterName}?</message>
+	<message key="manager.setup.filter.lookup.grid.descriptionConfirm">Ви вибрали додавання бази даних {$filterDisplayName}. Для підтвердження, будь ласка, натисніть 'OK'.</message>
+	<message key="manager.setup.filter.lookup.grid.descriptionTemplate">Будь ласка, виберіть базу даних для пошуку.</message>
+	<message key="manager.setup.filter.lookup.grid.description.iSBNdb"><![CDATA[<p>Цей фільтр забезпечує зв'язок з базою даних книжок та ISBN <a href="http://isbndb.com/" target="_blank">ISBNdb.com</a>.</p>
+	<p>Ключ ISBNdb API обов'язковий. Для отримання інформації щодо генерації ключа див. <a href="http://isbndb.com/api/v1/docs/keys" target="_blank">онлайнову документацію</a>.</p>]]></message>
+	<message key="manager.setup.filter.lookup.grid.description.crossRef"><![CDATA[<p>Цей фільтр забезпечує зв'язок з базою даних цитованості CrossRef через <a href="http://www.crossref.org/02publishers/openurl_info.html" target="_blank">інтерфейс запитів OpenURL</a> CrossRef.</p>
+	<p>Для використання цього фільтру ви можете використовувати свій обліковий запис CrossRef або за <a href="http://www.crossref.org/requestaccount/" target="_blank">цим посиланням</a> зареєструватися у CrossRef з працездатною адресою e-mail.</p>]]></message>
+	<message key="manager.setup.filter.lookup.grid.description.pubMed"><![CDATA[<p>Цей фільтр забезпечує зв'язок з інструментом федеративного пошуку PubMed <a href="http://www.ncbi.nlm.nih.gov/gquery/gquery.fcgi" target="_blank">Entrez</a>.</p>
+	<p>Реєстраційний e-mail не є вкрай важливим, але він може знадобитись, якщо у вас виникнуть проблеми з'єднання. Для отримання більш детальної інформації щодо цієї теми див. розділ <a href="http://www.be-md.ncbi.nlm.nih.gov/bookshelf/br.fcgi?book=helpeutils&part=chapter2#chapter2.Usage_Guidelines_and_Requiremen" target="_blank">Вимоги та керівництва з використання</a> у документації Entrez.</p>]]></message>
+	<message key="manager.setup.filter.lookup.grid.description.worldCat"><![CDATA[<p>Цей фільтр забезпечує зв'язок зі службами OCLC <a href="http://www.worldcat.org/affiliate/webservices/xisbn/app.jsp" target="_blank">xISBN</a> та <a href="http://www.worldcat.org/" target="_blank">Worldcat</a> (за вибором).</p>
+	<p>Якщо ви маєте <a href="http://oclc.org/developer/develop/web-services.html" target="_blank">ключ API</a> Worldcat, ви можете з'єднатися з Worldcat, ввівши ключ нижче.</p>]]></message>
+	<message key="manager.setup.filter.lookup.grid.loadMessage">Завантажується конфігурація бази даних цитованості. Будь ласка, зачекайте...</message>
+	<message key="manager.setup.filter.lookup.grid.title">Шлюзи баз даних цитованості</message>
+	<message key="manager.setup.filter.noMoreTemplates">Вже додані всі доступні трансформації. Для повернення до сторінки налаштувань, будь ласка, натисніть 'Скасувати'.</message>
+	<message key="manager.setup.filter.parser.grid.descriptionConfirm">Ви вибрали додавання синтаксичного аналізатора {$filterDisplayName}. Для підтвердження, будь ласка, натисніть 'OK'.</message>
+	<message key="manager.setup.filter.parser.grid.descriptionTemplate">Будь ласка, виберіть синтаксичний аналізатор цитат.</message>
+	<message key="manager.setup.filter.parser.grid.description.freeCite"><![CDATA[<p>Цей фільтр екстракції забезпечує зв'язок з веб-сервісом <a href="http://freecite.library.brown.edu/" target="_blank">FreeCite</a>.</p>]]></message>
+	<message key="manager.setup.filter.parser.grid.description.paraCite"><![CDATA[<p>Цей фільтр екстракції використовує Perl-модулі <a href="http://paracite.eprints.org/developers/" target="_blank">ParaTools</a> для синтаксичного аналізу цитат з використанням функціональності <a href="http://paracite.eprints.org" target="_blank">ParaCite</a>. Для того, щоб цей фільтр працював коректно, у вас повинен бути встановлений Perl, а також модулі CPAN <a href="http://search.cpan.org/~mjewell/Biblio-Citation-Parser-1.10/" target="_blank">Biblio::Citation::Parser</a> та <a href="http://search.cpan.org/~sburke/Text-Unidecode-0.04/" target="_blank">Text::Unidecode</a>. Ви повинні також налаштувати директиву <tt>perl</tt> у вашому файлі конфігурації. Ця директива знаходиться у розділі External Commands файлу <tt>config.inc.php</tt>.</p>
+	<p>Також ви повинні визначити, який модуль синтаксичного аналізатора ParaTools має використовуватись. Ви можете вибрати стандартний модуль, <a href="http://search.cpan.org/~mjewell/Biblio-Citation-Parser-1.10/lib/Biblio/Citation/Parser/Jiao.pm" target="_blank">Jiao</a> або <a href="http://search.cpan.org/~mjewell/Biblio-Citation-Parser-1.10/lib/Biblio/Citation/Parser/Citebase.pm" target="_blank">Citebase</a>.</p>]]></message>
+	<message key="manager.setup.filter.parser.grid.description.parsCit"><![CDATA[<p>Цей фільтр екстракції забезпечує зв'язок з веб-сервісом <a href="http://aye.comp.nus.edu.sg/parsCit/" target="_blank">ParsCit</a>.</p>]]></message>
+	<message key="manager.setup.filter.parser.grid.description.regEx">Фільтр екстракції RegEx для синтаксичного аналізу цитат використовує серії регулярних виразів.</message>
+	<message key="manager.setup.filter.parser.grid.loadMessage">Завантажується конфігурація синтаксичного аналізатора цитат. Будь ласка, зачекайте...</message>
+	<message key="manager.setup.filter.parser.grid.title">Служби екстракції цитат</message>
+	<message key="manager.setup.filter.pleaseSelect">Будь ласка, оберіть...</message>
+	<message key="manager.setup.homeHeaderImageInvalid">Вивантаження невдале або неприпустимий формат зображення для логотипу заголовку домашньої сторінки. Припустимими форматами є .gif, .jpg або .png.</message>
+	<message key="manager.setup.homepageImageInvalid">Вивантаження невдале або неприпустимий формат зображення домашньої сторінки. Припустимими форматами є .gif, .jpg або .png.</message>
+	<message key="manager.setup.homeTitleImageInvalid">Вивантаження невдале або неприпустимий формат зображення для заголовку домашньої сторінки. Припустимими форматами є .gif, .jpg або .png.</message>
+	<message key="manager.setup.layout.unselected">Непотрібні</message>
+	<message key="manager.setup.loggingAndAuditing">Журналізація та аудит</message>
+	<message key="manager.setup.metaCitationsDescription">Для того, щоб включити функціональність для редагування пристатейної бібліографії, активуйте прапорець нижче. Це дозволить авторам включати до подань оригінальні списки пристатейної бібліографії. Крім того, редакторам буде надана можливість використовувати помічник розмітки цитат, який дає змогу перевіряти коректність і точність оригінальних цитат шляхом зв'язку з зовнішніми базами даних, такими як WorldCat, ISBNdb, PubMed та інші. Підтверджені цитати можуть експортуватися у файли фінальних гранок.</message>
+	<message key="manager.setup.pageHeaderLogoImageInvalid">Вивантаження невдале або неприпустимий формат зображення для логотипу заголовку сторінки. Припустимими форматами є .gif, .jpg або .png.</message>
+	<message key="manager.setup.selectOne">Оберіть одне з наступного</message>
+	<message key="manager.statistics">Статистика та звіти</message>
+	<message key="manager.statistics.statistics.count.value">{$count} ({$percentage}%)</message>
+	<message key="manager.statistics.statistics.totalNewValue">{$numTotal} ({$numNew} нових)</message>
+	<message key="manager.users">Користувачі</message>
+	<message key="plugins.categories.auth">Модулі авторизації</message>
+	<message key="plugins.categories.blocks">Модулі блоків</message>
+	<message key="plugins.categories.blocks.description">Модулі блоків — це модульні інтерфейсні компоненти, наприклад, різноманітні інструменти бічних панелей і т.і.</message>
+	<message key="plugins.categories.citationFormats">Модулі форматів цитування</message>
+	<message key="plugins.categories.gateways.description">Модулі шлюзів забезпечують онлайновий зв'язок із зовнішніми системами.</message>
+	<message key="plugins.categories.gateways">Модулі шлюзів</message>
+	<message key="plugins.categories.generic">Загальні модулі</message>
+	<message key="plugins.categories.importexport.description">Модулі імпорту/експорту можуть використовуватись для міграції змісту з інших систем та у інші системи.</message>
+	<message key="plugins.categories.importexport">Модулі імпорту/експорту</message>
+	<message key="plugins.categories.paymethod.description">Модулі платіжних компонентів забезпечують підтримку різноманітних способів здійснення онлайнових платежів.</message>
+	<message key="plugins.categories.paymethod">Модулі платіжних компонентів</message>
+	<message key="plugins.categories.reports.description">Модулі звітів використовуються для формування різних типів звітів та масивів статистичних даних.</message>
+	<message key="plugins.categories.reports">Модулі звітів</message>
+	<message key="plugins.categories.themes.description">Модулі тем можуть використовуватись для зміни зовнішнього вигляду системи.</message>
+	<message key="plugins.categories.themes">Модулі тем</message>
+	<message key="manager.emails.addEmail">Додати шаблон листа</message>
+	<message key="manager.emails.details">Інформація шаблону</message>
+	<message key="manager.emails.resetAll.message">Якщо Ви перевантажите всі шаблони, всі зміни шаблонів листів будуть втрачені. Ви підтверджуєте цю дію?</message>
+	<message key="manager.emails.reset.message">Якщо Ви перевантажите цей шаблон, всі фрагменти тексту будуть повернені до стандартних значень, а всі зміни втрачені. Ви підтверджуєте цю дію?</message>
+	<message key="manager.reviewerSearch.form.interests.instructions">Вкажіть наукові інтереси, розділені комами...</message>
+	<message key="plugins.categories.metadata">Модулі метаданих</message>
+	<message key="plugins.categories.metadata.description">Модулі метаданих дозволяють використання додаткових стандартів метаданих.</message>
+	<message key="plugins.categories.citationLookup">Модулі шлюзів до баз даних цитованості</message>
+	<message key="plugins.categories.citationLookup.description">Модулі шлюзів до баз даних цитованості дозволяють зв'язок з базами даних цитованості для пошуку посилань, наприклад, під час редагування пристатейної бібліографії.</message>
+	<message key="manager.announcements.datePublish">Опубліковано</message>
+	<message key="manager.reviewerSearch.searchByName.short">Пошук за іменем</message>
+	<message key="manager.reviewerSearch.form.instructions">Користуйтеся формою нижче, щоб встановити максимальні значення для параметрів, за якими здійснюється пошук. За замовчуванням, форма заповнена вирахуваними середніми значеннями для кожного з полів.</message>
+	<message key="plugins.categories.citationOutput">Модулі відображення цитат</message>
+	<message key="plugins.categories.citationOutput.description">Модулі відображення цитат дозволяють відображати цитати за правилами різних бібліографічних стандартів. Ці модулі раніше називалися "Модулі форматів цитування".</message>
+	<message key="plugins.categories.citationParser">Модулі екстракції цитат</message>
+	<message key="plugins.categories.citationParser.description">Модулі екстракції цитат дозволяють видобувати з оригінальних цитат бібліографічну інформацію (наприклад, імена авторів, назви статей тощо).</message>
+	<message key="manager.emails.data">Дані шаблону повідомлення</message>
+	<message key="manager.emails.disable.message">Ви намагаєтеся відключити цей шаблон листа. Якщо система була налаштована на використання цього шаблону, вона не зможе надалі його використовувати. Ви підтверджуєте цю дію?</message>
+	<message key="manager.emails.enable.message">Ви намагаєтеся включити цей шаблон листа. Ви підтверджуєте цю дію?</message>
+	<message key="manager.masthead.title">Вихідні дані</message>
+	<message key="manager.setup.layout.blockManagement">Налаштування бічних панелей</message>
+       <message key="plugins.categories.oaiMetadataFormats">Модулі форматів метаданих OAI</message>
+       <message key="plugins.categories.oaiMetadataFormats.description">Ці модулі дозволяють генерувати метадані для OAI-комунікації.</message>
+	<message key="manager.website">Веб-сайт</message>
+
+	<!-- Review forms -->
+       <message key="manager.reviewFormElement.changeType">Попередження: Зміна типу елементу форми рецензування з закритого (список з варіантами відповіді) на відкритий (текстове поле) матиме наслідком знищення створених списків варіантів відповіді.</message>
+       <message key="manager.reviewFormElements">Елементи форми</message>
+       <message key="manager.reviewFormElements.addResponseItem">Додати варіант відповіді</message>
+       <message key="manager.reviewFormElements.checkboxes">Прапорці (вибір одного або кількох варіантів з запропонованих)</message>
+       <message key="manager.reviewFormElements.chooseType">Оберіть тип елемента</message>
+       <message key="manager.reviewFormElements.confirmDelete">Ви впевнені, що хочете видалити елемент опублікованої форми рецензування?</message>
+       <message key="manager.reviewFormElements.copyTo">Копіювати до:</message>
+       <message key="manager.reviewFormElements.create">Створити новий елемент</message>
+       <message key="manager.reviewFormElements.dropdownbox">Випадаючий список</message>
+       <message key="manager.reviewFormElements.edit">Редагувати елемент форми</message>
+       <message key="manager.reviewFormElements.elementType">Тип елементу</message>
+       <message key="manager.reviewFormElements.form.elementTypeRequired">Необхідно вказати тип елементу форми.</message>
+       <message key="manager.reviewFormElements.form.questionRequired">Необхідно вказати питання, що відповідає елементу форми.</message>
+       <message key="manager.reviewFormElements.noneCreated">Жодних елементів форми не було створено.</message>
+       <message key="manager.reviewFormElements.possibleResponse">Варіант відповіді</message>
+       <message key="manager.reviewFormElements.question">Питання</message>
+       <message key="manager.reviewFormElements.radiobuttons">Радіокнопка (вибір одного варіанту з запропонованих)</message>
+       <message key="manager.reviewFormElements.required">Рецензент зобов'язаний відповісти на питання</message>
+       <message key="manager.reviewFormElements.included">Включити відповідь до листа автору</message>
+       <message key="manager.reviewFormElements.smalltextfield">Текстове поле для одного слова</message>
+       <message key="manager.reviewFormElements.textarea">Розширене текстове поле</message>
+       <message key="manager.reviewFormElements.textfield">Текстове поле з одним рядком</message>
+       <message key="manager.reviewForms">Форми рецензування</message>
+       <message key="manager.reviewForms.completed">Завершено</message>
+       <message key="manager.reviewForms.create">Створити форму рецензування</message>
+       <message key="manager.reviewForms.description">Опис та інструкції</message>
+       <message key="manager.reviewForms.edit">Форма рецензування</message>
+       <message key="manager.reviewForms.form.titleRequired">Необхідно вказати назву форми рецензування.</message>
+       <message key="manager.reviewForms.inReview">Рецензується</message>
+       <message key="manager.reviewForms.list.description">Створені тут форми рецензування будуть запропоновані рецензентам для заповнення, замість стандартної форми з двома текстовими блоками: "для автора та редактора" та "лише для редактора". Форми рецензування можуть розроблятись для окремих розділів журналу, таким чином редактори матимуть змогу в процесі рецензування обирати, яку форму має заповнити рецензент. В будь-якому випадку, редактори матимуть можливість включати рецензії до кореспонденції з автором.</message>
+       <message key="manager.reviewForms.noneChosen">Жодної / Вільна форма рецензії</message>
+       <message key="manager.reviewForms.noneCreated">Жодної форми рецензування не було створено.</message>
+       <message key="manager.reviewForms.preview">Попередній перегляд форми</message>
+       <message key="manager.reviewForms.title">Назва</message>
+</locale>

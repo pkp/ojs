@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE controlled_vocabs SYSTEM "../../../../dtd/controlledVocab.dtd">
+
+<!--
+  * controlledVocabs.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Definition of controlled vocabularies
+  -->
+<controlled_vocabs>
+	<controlled_vocab symbolic="mods34-name-types">
+		<entry seq="1"><setting name="name" type="string">personal</setting></entry>
+		<entry seq="2"><setting name="name" type="string">corporate</setting></entry>
+		<entry seq="3"><setting name="name" type="string">conference</setting></entry>
+	</controlled_vocab>
+	<controlled_vocab symbolic="mods34-name-role-roleTerms-marcrelator">
+		<entry seq="1">
+			<setting name="name" type="string">aut</setting>
+			<setting name="description" type="string">Author</setting>
+		</entry>
+		<entry seq="2">
+			<setting name="name" type="string">ctb</setting>
+			<setting name="description" type="string">Contributor</setting>
+		</entry>
+		<entry seq="3">
+			<setting name="name" type="string">edt</setting>
+			<setting name="description" type="string">Editor</setting>
+		</entry>
+		<entry seq="4">
+			<setting name="name" type="string">ill</setting>
+			<setting name="description" type="string">Illustrator</setting>
+		</entry>
+		<entry seq="5">
+			<setting name="name" type="string">pht</setting>
+			<setting name="description" type="string">Photographer</setting>
+		</entry>
+		<entry seq="6">
+			<setting name="name" type="string">spn</setting>
+			<setting name="description" type="string">Sponsor</setting>
+		</entry>
+		<entry seq="7">
+			<setting name="name" type="string">trl</setting>
+			<setting name="description" type="string">Translator</setting>
+		</entry>
+	</controlled_vocab>
+	<controlled_vocab symbolic="mods34-typeOfResource">
+		<entry seq="1">
+			<setting name="name" type="string">multimedia</setting>
+		</entry>
+		<entry seq="2">
+			<setting name="name" type="string">still image</setting>
+		</entry>
+		<entry seq="3">
+			<setting name="name" type="string">text</setting>
+		</entry>
+	</controlled_vocab>
+	<controlled_vocab symbolic="mods34-genre-marcgt">
+		<entry seq="1">
+			<setting name="name" type="string">article</setting>
+		</entry>
+		<entry seq="2">
+			<setting name="name" type="string">book</setting>
+		</entry>
+		<entry seq="3">
+			<setting name="name" type="string">conference publication</setting>
+		</entry>
+		<entry seq="4">
+			<setting name="name" type="string">issue</setting>
+		</entry>
+		<entry seq="5">
+			<setting name="name" type="string">journal</setting>
+		</entry>
+		<entry seq="6">
+			<setting name="name" type="string">newspaper</setting>
+		</entry>
+		<entry seq="7">
+			<setting name="name" type="string">picture</setting>
+		</entry>
+		<entry seq="8">
+			<setting name="name" type="string">review</setting>
+		</entry>
+		<entry seq="9">
+			<setting name="name" type="string">periodical</setting>
+		</entry>
+		<entry seq="10">
+			<setting name="name" type="string">series</setting>
+		</entry>
+		<entry seq="11">
+			<setting name="name" type="string">thesis</setting>
+		</entry>
+		<entry seq="12">
+			<setting name="name" type="string">web site</setting>
+		</entry>
+	</controlled_vocab>
+	<controlled_vocab symbolic="mods34-physicalDescription-form-marcform">
+		<entry seq="1">
+			<setting name="name" type="string">electronic</setting>
+		</entry>
+		<entry seq="2">
+			<setting name="name" type="string">print</setting>
+		</entry>
+	</controlled_vocab>
+</controlled_vocabs>

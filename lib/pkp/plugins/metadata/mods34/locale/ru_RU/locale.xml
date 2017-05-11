@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../dtd/locale.dtd">
+
+<!--
+  * plugins/metadata/mods34/locale/ru_RU/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the ru_RU (Русский) locale.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Russian_(ru_RU)
+  -->
+
+<locale name="ru_RU" full_name="Русский">
+	<!-- модуль -->
+	<message key="plugins.metadata.mods34.displayName">Модуль «Метаданные MODS 3.4»</message>
+	<message key="plugins.metadata.mods34.description">Реализует схемы и адаптеры приложений MODS 3.4.</message>
+
+	<!-- MODS 3.4 XML-вывод -->
+	<message key="plugins.metadata.mods34.mods34XmlOutput.displayName">Вывод MODS 3.4</message>
+	<message key="plugins.metadata.mods34.mods34XmlOutput.description">Преобразует описание метаданных MODS 3.4 в его XML-форму.</message>
+</locale>

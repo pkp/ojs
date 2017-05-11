@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/tr_TR/grid.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the tr_TR (Türkçe) locale.
+  *
+  -->
+
+<locale name="tr_TR" full_name="Türkçe">
+	<!-- Common -->
+	<message key="grid.noItems">Öğe Yok</message>
+	<message key="grid.settings">Ayarlar</message>
+
+	<message key="grid.action.sort">Sırala</message>
+	<message key="grid.action.addItem">Öğe Ekle</message>
+	<message key="grid.action.delete">Sil</message>
+	<message key="grid.action.remove">Kaldır</message>
+	<message key="grid.action.edit">Düzelt</message>
+	<message key="grid.action.approve">Onayla</message>
+	<message key="grid.action.decline">Bu  Gönderiyi Geri Çevir</message>
+	<message key="grid.action.moreInformation">Daha Fazla Bilgi</message>
+	<message key="grid.action.restoreDefaults">Varsayılan ayarlara dön</message>
+
+	<!-- Common Grid Column Titles -->
+	<message key="grid.columns.actions">Eylemler</message>
+	<message key="grid.columns.institution">Kurum</message>
+	<message key="grid.columns.url">URL</message>
+
+	<!-- Sponsors Grid -->
+	<message key="grid.sponsor.title">Sponsor</message>
+
+	<!-- Masthead Grid -->
+	<!-- Contributor Grid -->
+	<message key="grid.contributor.title">Katılımcı</message>
+	<message key="grid.action.addAuthor">Yazar Ekle</message>
+
+	<!-- Review Forms Grid -->
+	<message key="grid.reviewForm.title">Değerlendirme Formları</message>
+
+	<!-- Book File Types Grid -->
+	<!-- Artwork Files Grid -->
+	<!-- Library Files -->
+	<message key="grid.libraryFiles.column.files">Dosyalar</message>
+	<message key="grid.libraryFiles.submission.title">Gönderi Kütüphanesi</message>
+	<message key="grid.libraryFiles.editorial.title">Editör Kütüphanesi</message>
+	<message key="grid.libraryFiles.review.title">Değerlendirme Kütüphanesi</message>
+	<message key="grid.libraryFiles.production.title">Ürün Kütüphanesi</message>
+	<message key="grid.libraryFiles.productionTemplate.title">Ürün Şablon Kütüphanesi</message>
+
+	<!-- SubmissionChecklist -->
+	<message key="grid.submissionChecklist.title">Gönderi Kontrol Listesi</message>
+	<message key="grid.submissionChecklist.column.checklistItem">Çek Edilecek Kontrol Listesi</message>
+
+	<!-- Submission Contributors -->
+	<message key="author.users.contributor.name">Ad</message>
+	<message key="author.users.contributor.email">E-posta</message>
+	<message key="author.users.contributor.role">Görev</message>
+	<message key="author.users.contributor.principalContact">Birincil İletişim</message>
+
+	<!-- Review Attachments -->
+	<!-- Chapters -->
+	<message key="grid.action.addUser">Üye Ekle</message>
+	<message key="grid.action.deleteFile">Dosya Sil</message>
+	<message key="grid.action.editAuthor">Yazar Düzenle</message>
+	<message key="grid.action.deleteAuthor">Yazat Sil</message>
+	<message key="grid.action.addAuditor">Denetçi Ekle</message>
+	<message key="grid.action.upgrade">Güncelle</message>
+	<message key="grid.action.order">Sırala</message>
+	<message key="grid.action.cancelOrdering">Sıralamayı İptal Et</message>
+	<message key="grid.action.email">E-posta gönder</message>
+	<message key="grid.action.addReviewer">Hakem ekle</message>
+	<message key="grid.action.addFile">Dosya Ekle</message>
+	<message key="grid.action.editFile">Dosya düzenle</message>
+	<message key="grid.action.selectFiles">Yönetmek için dosyaları seç</message>
+	<message key="grid.action.settings">Ayarlar</message>
+	<message key="grid.user.errorEmail">An error was encountered sending this email. Please ensure that your email server configuration is working and/or contact your system administrator.</message>
+	<message key="grid.preparedEmails.description">The press facilitates work flow communication through the use of prepared email messages. The default wording of these email templates can be easily modified below.</message>
+	<message key="grid.action.deleteMedia">Medya Sil</message>
+	<message key="grid.action.editMedia">Medya Düzelt</message>
+	<message key="grid.action.extendAll">Hepsini Aç</message>
+	<message key="grid.action.collapse">Başarısızlık</message>
+	<message key="grid.action.collapseAll">Tüm Başarısızlık</message>
+	<message key="grid.action.wizard">Ayar Sihirbazı</message>
+	<message key="grid.action.moveItem">Öğe Taşı</message>
+	<message key="grid.action.downloadFile">Bu dosyayı indir</message>
+	<message key="grid.action.downloadAll">tüm dosyaları arşiv olarak indir</message>
+	<message key="grid.action.readReview">Bu değerlenidirmeyi oku</message>
+	<message key="grid.action.requestRevisions">Bu gönerinin istek revizyonu</message>
+	<message key="grid.action.resubmit">Bu gönderiye yeniden istek gönderilecektir</message>
+	<message key="grid.action.accept">Bu gönderiyi kabul et</message>
+	<message key="grid.action.internalReview">Bu gönderiyi iç değerlendirmeye gönder</message>
+	<message key="grid.action.externalReview">Bu gönderiyi dış değerlendirmeye gönder</message>
+	<message key="grid.action.sendToProduction">Bu gönderiyi yapıma gönder</message>
+	<message key="grid.action.importexport">İçeriği veya site verisini al veya gönder</message>
+	<message key="grid.action.orderItems">Sıralama yöntemini etkinleştir</message>
+	<message key="grid.action.editSubmissionChecklist">Kontrol listesini düzenle</message>
+	<message key="grid.action.deleteSubmissionChecklist">Kontrol listesini sil</message>
+	<message key="grid.action.resetAll">Tüm öğeleri varsayılan biçime döndür</message>
+	<message key="grid.action.addPreparedEmail">Yeni bir e-posta şablonu ekle</message>
+	<message key="grid.action.editPreparedEmail">Bu e-posta şablonunu düzenle</message>
+	<message key="grid.action.disableEmail">Bu e-posta şablonunu pasifleştir</message>
+	<message key="grid.action.resetEmail">Bu e-posta şablonunu varsayılan biçime döndür</message>
+	<message key="grid.action.addSignoff">Bu dosya için bir yanıt denetimi ekle</message>
+	<message key="grid.action.expandAll">Tümünü Genişlet</message>
+	<message key="grid.action.requestAccount">Katılımcı Ekle</message>
+	<message key="grid.action.expand">Genişlet</message>
+	<message key="grid.action.notify">Bu üyeyi bilgilendir</message>
+	<message key="grid.action.addUserGroup">Yeni bir Üye Grubu ekle</message>
+	<message key="grid.action.editUserGroup">Üye grubunu düzelt</message>
+	<message key="grid.action.disable">Pasifleştir</message>
+	<message key="grid.action.details">Öğeyi göster</message>
+	<message key="grid.action.enrolExisting">Aktif üyeyi hakem olarak kaydet</message>
+	<message key="grid.action.selectCreate">Yeni hakem oluştur</message>
+	<message key="grid.action.advancedSearch">Gelişmiş arama</message>
+	<message key="grid.action.viewMetadata">Gönderinin Üst Verisini Göster</message>
+	<message key="grid.action.sendReminder">Kullanıcıya görev hatırlatması gönder</message>
+	<message key="grid.action.newRound">Yeni tur oluştur</message>
+	<message key="grid.action.viewReviewGuidelines">Hakem rehberini göster</message>
+	<message key="grid.action.viewCompetingInterestGuidelines">Çıkar Çelişkisi Rehberleri Politikasını Görüntüle</message>
+	<message key="grid.action.thankReviewer">Bu hakeme bir teşekkür mesajı gönder</message>
+	<message key="grid.action.uploadFile">Dosya yükle</message>
+	<message key="grid.action.addAnnouncementType">Duyuru Türü Ekle</message>
+	<message key="grid.action.addAnnouncement">Duyuru Ekle</message>
+	<message key="grid.task.status.completed">Bu göre tamamlandı</message>
+	<message key="grid.task.status.new">Bu yeni bir öğe ve dikkat gerektirir</message>
+	<message key="grid.task.status.uploaded">Sütun başlığı bu dosyayı kimin yüklediğini gösterir</message>
+	<message key="grid.columns.auditor">Denetçi</message>
+	<message key="grid.columns.locale">Yerel</message>
+	<message key="grid.action.addSponsor">Sponsor Ekle</message>
+	<message key="grid.action.deleteSponsor">Sponsor Sil</message>
+	<message key="grid.action.editSponsor">Sponsor Düzelt</message>
+	<message key="grid.action.addSeries">Seri Ekle</message>
+	<message key="grid.action.editSeries">Serileri Düzelt</message>
+	<message key="grid.action.deleteSeries">Serileri Sil</message>
+	<message key="grid.action.addCategory">Kategori Ekle</message>
+	<message key="grid.action.editCategory">Kategori Düzelt</message>
+	<message key="grid.action.deleteCategory">Kategori Sil</message>
+	<message key="grid.action.addContributor">Katkıda Bulunan Kişi Ekle</message>
+	<message key="grid.action.editContributor">Katkıda Bulunan Kişi Düzelt</message>
+	<message key="grid.action.deleteContributor">Katkıda Bulunan Kişi Sil</message>
+	<message key="grid.genres.title">Uslüp</message>
+	<message key="grid.genres.description">These genres are used for file-naming purposes and are presented in a pull-down menu on uploading files. The genres designated ## allow the user to associate the file with either the whole book 99Z or a particular chapter by number (e.g., 02).</message>
+	<message key="grid.noFiles">Dosya yok</message>
+	<message key="grid.roles.currentRoles">Güncel Görevler</message>
+	<message key="grid.roles.add">Görev Ekle</message>
+	<message key="grid.roles.stageAssignment">Sahne Ataması</message>
+	<message key="grid.user.currentUsers">Güncel Üyeler</message>
+	<message key="grid.user.currentEnrollment">Güncel Kayıtlar</message>
+	<message key="grid.user.allRoles">Tüm Görevler</message>
+	<message key="grid.user.add">Üye Ekle</message>
+	<message key="grid.user.enroll">Üye Kaydet</message>
+	<message key="grid.user.edit">Üye Düzelt</message>
+	<message key="grid.user.email">E-posta</message>
+	<message key="grid.user.enable">Etkinleştir</message>
+	<message key="grid.user.disable">Pasifleştir</message>
+	<message key="grid.user.disableReason">Üye pasifleştirmenin nedeni</message>
+	<message key="grid.user.enableReason">Üye etkinleştirmenin nedeni</message>
+	<message key="grid.user.error">Bu üyeyi düzenlerken bir hata oluştu. Lütfen tekrar deneyin.</message>
+	<message key="grid.user.cannotAdminister">Bu üyeyi düzeltmek için gerekli yetkiye sahip değilsiniz.</message>
+	<message key="grid.user.authSource">Yetkilendirme kaynağı</message>
+	<message key="grid.user.mustProvideName">Lütfen ilk üye için en az bir soyadını veriniz.</message>
+	<message key="grid.user.generatePassword">Şifre Pluştur</message>
+	<message key="grid.user.generatePasswordDescription">Bu üye için rastgele bir şifre oluştur.</message>
+	<message key="grid.user.notifyUser">Üye bilgilendir.</message>
+	<message key="grid.user.notifyUserDescription">Üyeye hoş geldin mesajı gönder.</message>
+	<message key="grid.user.mustChangePassword">Şifre Değiştir</message>
+	<message key="grid.user.mustChangePasswordDescription">Üyeye ilk girişte şifre değişikliğini zorunlu yap.</message>
+	<message key="grid.user.mustChangePasswordDescriptionOld">Üyeye sonraki girişte şifre değişikliğini zorunlu yap.</message>
+	<message key="grid.user.moreDetails">Daha Fazla Üye Detayı</message>
+	<message key="grid.user.lessDetails">Daha Az Kullanıcı Detayı</message>
+	<message key="grid.user.userDetails">Üye Detayları</message>
+	<message key="grid.user.userRoles">Üye Rolleri</message>
+	<message key="grid.user.userNoRoles">Bu üyenin herhangi bir rolü yok.</message>
+	<message key="grid.user.step1">Adım #1: Üye Detayını Doldur</message>
+	<message key="grid.user.step2">ADım #2: {$userFullName} adlı üyeye görev ekle</message>
+	<message key="grid.user.addRoles">Görev Ekle</message>
+	<message key="grid.user.selectUser">Üye Seç</message>
+	<message key="grid.user.pleaseSelectUser">Lütfen bir üye seçiniz</message>
+	<message key="grid.preparedEmails.title">Hazırlanmış E-posta Şablonları</message>
+	<message key="grid.preparedEmails.currentList">Güncel Liste</message>
+	<message key="grid.plugin.allCategories">Tüm Kategoriler</message>
+	<message key="grid.plugin.disable">Bu eklentiyi pasifleştirmek istediğinizden emin misiniz?</message>
+	<message key="grid.action.mergeUser">Üye Birleştir</message>
+	<message key="grid.action.unassignUser">Atanmamış Üye</message>
+	<message key="grid.action.history">Geçmişi Göster</message>
+	<message key="grid.task.status.unfinished">Değerlendirme Tamamlanmadı</message>
+	<message key="grid.task.status.reviewReady">Bu değerlendirme hazır.  Okumak için soldaki not simgesine tıklayınız.</message>
+</locale>

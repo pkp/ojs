@@ -1,0 +1,245 @@
+/**
+ * styles/rtl.less
+ *
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2000-2017 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * Stylesheet for flipping content to RTL (e.g. for Arabic, Persian and Hebrew)
+ *
+ */
+
+body[dir="rtl"] {
+	direction: rtl;
+	unicode-bidi: embed;
+
+	// Site structure
+	.pkp_structure_head {
+		left: auto;
+		right: 0;
+	}
+
+	.pkp_nav_context {
+		float: right;
+	}
+
+	.pkp_nav_user {
+		float: left;
+	}
+
+	.pkp_structure_page {
+		margin-left: 0;
+		margin-right: 192px;
+	}
+
+	.pkp_structure_footer {
+		text-align: left;
+	}
+
+	// Global navigation elements
+	.pkp_nav_list {
+
+		ul {
+			left: auto;
+			right: -9999px;
+		}
+
+		a:hover,
+		a:focus,
+		[aria-expanded="true"] > a {
+
+			> ul {
+				left: auto;
+				right: 100%;
+			}
+		}
+
+		[aria-expanded="true"] > ul {
+			left: auto;
+			right: 100%;
+		}
+	}
+
+	.pkp_nav_context {
+
+		.pkp_current_context {
+			padding-right: @base;
+			padding-left: @double;
+		}
+
+		[aria-haspopup] .pkp_current_context:after {
+			right: auto;
+			left: @base;
+		}
+
+		.pkp_contexts {
+			left: 0;
+			right: -(192px * 2) - @double;
+		}
+
+		> [aria-expanded="true"] {
+
+			.pkp_contexts {
+				right: 0;
+			}
+		}
+	}
+
+	.pkp_nav_user {
+
+		> [aria-expanded="true"] > ul,
+		> [aria-expanded="true"] > ul {
+			right: auto;
+			left: 0;
+		}
+
+		.panel {
+			display: none;
+			position: absolute;
+			top: 0;
+			left: auto;
+			right: 100%;
+		}
+	}
+
+	// Tasks
+	.pkp_tasks .panel {
+		left: auto;
+		right: 100%;
+	}
+
+	#notificationsGrid thead {
+		left: auto;
+		right: -9999px;
+	}
+
+	// Help panel
+	.pkp_help_tab,
+	.pkp_help_modal {
+		right: auto;
+		left: @double;
+	}
+
+	.pkp_help_panel {
+
+		.panel {
+			left: 0;
+			right: auto;
+			.transform(translate3d(-100%,0,0));
+		}
+
+		&.is_visible .panel {
+			.transform(translate3d(0,0,0));
+		}
+
+		.header {
+
+			.home {
+				float: right;
+			}
+
+			.close {
+				float: left;
+			}
+		}
+
+		.footer {
+
+			.previous {
+				float: right;
+
+				&:before {
+					content: @fa-var-long-arrow-right;
+					margin: 0;
+					margin-left: 0.25em;
+				}
+			}
+
+			.next {
+				float: left;
+
+				&:after {
+					content: @fa-var-long-arrow-left;
+					margin: 0;
+					margin-right: 0.25em;
+				}
+			}
+		}
+	}
+
+	// Helpers
+	.pkp_helpers_text_left {
+		text-align: right;
+	}
+
+	.pkp_helpers_text_right {
+		text-align: left;
+	}
+
+	.pkp_caret_right,
+	.pkp_controllers_grid .show_extras:before {
+		border-left: 4px solid transparent;
+		border-right: 6px solid;
+	}
+
+	.pkp_caret_left {
+		border-left: 4px solid transparent;
+		border-right: 6px solid;
+	}
+
+	.pkp_screen_reader,
+	.pkp_form label.locale,
+	.ui-datepicker-prev > span,
+	.ui-datepicker-next > span,
+	.pkp_controllers_grid thead th:first-child:last-child,
+	.pkp_controllers_rangeSlider .toggle label .label,
+	.pkp_controllers_rangeSlider.is_enabled .toggle label,
+	[id^="reviewersGrid"] thead {
+		left: auto;
+		right: -2000px;
+	}
+
+	// Forms
+	.pkp_form .inline {
+		float: right;
+		padding-right: inherit;
+		padding-left: @base;
+	}
+
+	.ui-pnotify {
+		right: auto;
+		left: 4px;
+	}
+
+	// Grids
+	.pkp_controllers_grid {
+
+		th[style^="text-align: left"],
+		td[style^="text-align: left"] {
+			// This is necessary due to the inline styles added by grid components
+			text-align: right !important;
+		}
+
+		.actions {
+			float: left;
+		}
+
+		.pkp_linkaction_search:before {
+			margin-right: 0;
+			margin-left: 0.5em;
+		}
+
+		.has_extras td:first-child,
+		.row_controls td:first-child {
+			padding-left: @base;
+			padding-right: @double;
+		}
+
+		.show_extras,
+		.hide_extras {
+			left: auto;
+			right: 0;
+		}
+
+	}
+}

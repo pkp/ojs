@@ -1,0 +1,953 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE qualifiers SYSTEM "../../dtd/bic21qualifiers.dtd">
+<!--
+  * locale/ar_IQ/bic21qualifiers.xml
+  *
+  * Copyright BIC and Nielsen Book Services Ltd 2010
+  *
+  * localized list of BIC 2.1 Subject Qualifiers
+  * Reference:  http://www.bic.org.uk/7/BIC-Standard-Subject-Categories
+  -->
+<qualifiers>
+	<qualifier code="1D" text="أوربا" />
+	<qualifier code="1DB" text="الجزر البريطانية" />
+	<qualifier code="1DBK" text="المملكة المتحدة، بريطانيا العظمى" />
+	<qualifier code="1DBKE" text="إنجلترا" />
+	<qualifier code="1DBKEA" text="East Anglia" />
+	<qualifier code="1DBKEAC" text="Cambridgeshire" />
+	<qualifier code="1DBKEAL" text="Lincolnshire" />
+	<qualifier code="1DBKEAN" text="Norfolk" />
+	<qualifier code="1DBKEAS" text="Suffolk" />
+	<qualifier code="1DBKEAX" text="Essex" />
+	<qualifier code="1DBKEM" text="Midlands" />
+	<qualifier code="1DBKEMD" text="Derbyshire &amp; Peak District" />
+	<qualifier code="1DBKEMF" text="Herefordshire" />
+	<qualifier code="1DBKEML" text="Leicestershire" />
+	<qualifier code="1DBKEMM" text="Northamptonshire" />
+	<qualifier code="1DBKEMN" text="Nottinghamshire" />
+	<qualifier code="1DBKEMP" text="Shropshire" />
+	<qualifier code="1DBKEMR" text="Rutland" />
+	<qualifier code="1DBKEMS" text="Staffordshire" />
+	<qualifier code="1DBKEMT" text="Worcestershire" />
+	<qualifier code="1DBKEMW" text="Warwickshire, West Midlands" />
+	<qualifier code="1DBKEN" text="شمال غرب إنجلترا" />
+	<qualifier code="1DBKENC" text="Cheshire" />
+	<qualifier code="1DBKENL" text="Lancashire, Greater Manchester, Merseyside" />
+	<qualifier code="1DBKENM" text="Cumbria &amp; Lake District" />
+	<qualifier code="1DBKES" text="South &amp; South East England" />
+	<qualifier code="1DBKESB" text="Berkshire" />
+	<qualifier code="1DBKESD" text="Bedfordshire" />
+	<qualifier code="1DBKESF" text="Oxfordshire" />
+	<qualifier code="1DBKESH" text="Hampshire" />
+	<qualifier code="1DBKESK" text="Kent" />
+	<qualifier code="1DBKESL" text="London, Greater London" />
+	<qualifier code="1DBKESR" text="Surrey" />
+	<qualifier code="1DBKEST" text="Hertfordshire" />
+	<qualifier code="1DBKESU" text="Buckinghamshire" />
+	<qualifier code="1DBKESW" text="Isle of Wight" />
+	<qualifier code="1DBKESX" text="Sussex" />
+	<qualifier code="1DBKEW" text="South West England" />
+	<qualifier code="1DBKEWC" text="Cornwall" />
+	<qualifier code="1DBKEWD" text="Devon" />
+	<qualifier code="1DBKEWG" text="Gloucestershire" />
+	<qualifier code="1DBKEWS" text="Somerset, Bristol" />
+	<qualifier code="1DBKEWT" text="Dorset" />
+	<qualifier code="1DBKEWW" text="Wiltshire" />
+	<qualifier code="1DBKEY" text="North &amp; North East England" />
+	<qualifier code="1DBKEYD" text="Durham" />
+	<qualifier code="1DBKEYK" text="Yorkshire" />
+	<qualifier code="1DBKEYN" text="Northumberland, Tyne &amp; Wear" />
+	<qualifier code="1DBKN" text="Northern Ireland" />
+	<qualifier code="1DBKS" text="Scotland" />
+	<qualifier code="1DBKSB" text="Lowland Scotland &amp; Borders" />
+	<qualifier code="1DBKSC" text="Central Scotland" />
+	<qualifier code="1DBKSH" text="Northern Scotland, Highlands &amp; Islands" />
+	<qualifier code="1DBKSHF" text="Orkney Islands" />
+	<qualifier code="1DBKSHJ" text="Shetland Islands" />
+	<qualifier code="1DBKSHL" text="Western Isles, Outer Hebrides" />
+	<qualifier code="1DBKSHQ" text="Isle of Skye" />
+	<qualifier code="1DBKW" text="Wales" />
+	<qualifier code="1DBKWC" text="Mid Wales" />
+	<qualifier code="1DBKWN" text="North Wales" />
+	<qualifier code="1DBKWS" text="South Wales" />
+	<qualifier code="1DBKWV" text="Southwest Wales" />
+	<qualifier code="1DBKX" text="Channel Islands" />
+	<qualifier code="1DBKZ" text="Isle of Man" />
+	<qualifier code="1DBR" text="إيرلندا" />
+	<qualifier code="1DD" text="Western Continental Europe" />
+	<qualifier code="1DDB" text="بلجيكا" />
+	<qualifier code="1DDF" text="فرنسا" />
+	<qualifier code="1DDFC" text="كورسيكا" />
+	<qualifier code="1DDFM" text="موناكو" />
+	<qualifier code="1DDL" text="لكسمبورغ" />
+	<qualifier code="1DDN" text="هولندا" />
+	<qualifier code="1DF" text="مركز أوربا" />
+	<qualifier code="1DFA" text="النمسا" />
+	<qualifier code="1DFG" text="ألمانيا" />
+	<qualifier code="1DFGE" text="شرق ألمانيا, DDR" />
+	<qualifier code="1DFGW" text="غرب ألمانيا" />
+	<qualifier code="1DFH" text="سويسرا" />
+	<qualifier code="1DFHA" text="جبال الألب" />
+	<qualifier code="1DFL" text="لختنشتاين" />
+	<qualifier code="1DN" text="شمال أوروبا، اسكندينافيا" />
+	<qualifier code="1DNC" text="آيسلاند" />
+	<qualifier code="1DND" text="الدنمارك" />
+	<qualifier code="1DNDF" text="جزر فارو" />
+	<qualifier code="1DNF" text="فنلندا" />
+	<qualifier code="1DNN" text="النرويج" />
+	<qualifier code="1DNS" text="السويد" />
+	<qualifier code="1DS" text="جنوب أوروبا" />
+	<qualifier code="1DSE" text="إسبانيا" />
+	<qualifier code="1DSEB" text="Balearic islands" />
+	<qualifier code="1DSEP" text="Pyrenees" />
+	<qualifier code="1DSG" text="جبل طارق" />
+	<qualifier code="1DSM" text="مالطا" />
+	<qualifier code="1DSN" text="أندورا" />
+	<qualifier code="1DSP" text="البرتغال" />
+	<qualifier code="1DST" text="إيطاليا" />
+	<qualifier code="1DSTA" text="سردينيا" />
+	<qualifier code="1DSTC" text="صقلية" />
+	<qualifier code="1DSU" text="San Marino" />
+	<qualifier code="1DSV" text="الفاتيكان" />
+	<qualifier code="1DV" text="شرق أوروبا" />
+	<qualifier code="1DVC" text="قبرص" />
+	<qualifier code="1DVG" text="اليونان" />
+	<qualifier code="1DVGS" text="الجزر اليونانية" />
+	<qualifier code="1DVGSC" text="كريت" />
+	<qualifier code="1DVH" text="هنغارية" />
+	<qualifier code="1DVK" text="تشيكوسلوفاكيا السابقة" />
+	<qualifier code="1DVKC" text="جمهورية التشيك" />
+	<qualifier code="1DVKS" text="سلوفاكيا" />
+	<qualifier code="1DVP" text="بولندا" />
+	<qualifier code="1DVT" text="تركيا" />
+	<qualifier code="1DVU" text="الاتحاد السوفييتي السابق، USSR (Europe)" />
+	<qualifier code="1DVUA" text="روسيا" />
+	<qualifier code="1DVUAC" text="الشيشان" />
+	<qualifier code="1DVUB" text="روسيا البيضاء" />
+	<qualifier code="1DVUC" text="لاتفيا" />
+	<qualifier code="1DVUE" text="استونيا" />
+	<qualifier code="1DVUF" text="لتوانيا" />
+	<qualifier code="1DVUG" text="جورجيا" />
+	<qualifier code="1DVUK" text="أوكرانيا" />
+	<qualifier code="1DVUM" text="ملدافيا" />
+	<qualifier code="1DVUR" text="أرمينيا" />
+	<qualifier code="1DVUZ" text="آذربيجان" />
+	<qualifier code="1DVW" text="جنوب شرق أوربا" />
+	<qualifier code="1DVWA" text="ألبانيا" />
+	<qualifier code="1DVWB" text="بلغاريا" />
+	<qualifier code="1DVWR" text="رومانيا" />
+	<qualifier code="1DVWY" text="يوغوسلافيا ويوغوسلافيا السابقة" />
+	<qualifier code="1DVWYB" text="البوسنة والهرسك" />
+	<qualifier code="1DVWYC" text="كرواتيا" />
+	<qualifier code="1DVWYK" text="كوسوفو" />
+	<qualifier code="1DVWYM" text="مقدونيا" />
+	<qualifier code="1DVWYN" text="الجبل الأسود" />
+	<qualifier code="1DVWYS" text="صربيا" />
+	<qualifier code="1DVWYV" text="سلوفينيا" />
+	<qualifier code="1F" text="آسيا" />
+	<qualifier code="1FB" text="الشرق الأوسط" />
+	<qualifier code="1FBH" text="إسرائيل" />
+	<qualifier code="1FBJ" text="الأردن" />
+	<qualifier code="1FBL" text="لبنان" />
+	<qualifier code="1FBN" text="إيران" />
+	<qualifier code="1FBP" text="فلسطين" />
+	<qualifier code="1FBQ" text="العراق" />
+	<qualifier code="1FBS" text="سوريا" />
+	<qualifier code="1FBX" text="الجزيرة العربية" />
+	<qualifier code="1FBXB" text="البحرين" />
+	<qualifier code="1FBXK" text="الكويت" />
+	<qualifier code="1FBXM" text="عمان" />
+	<qualifier code="1FBXQ" text="قطر" />
+	<qualifier code="1FBXS" text="العربية السعودية" />
+	<qualifier code="1FBXU" text="الإمارات العربية المتحدة" />
+	<qualifier code="1FBXY" text="اليمن" />
+	<qualifier code="1FC" text="مركز آسيا" />
+	<qualifier code="1FCA" text="أفغانستان" />
+	<qualifier code="1FCD" text="طاجكستان" />
+	<qualifier code="1FCK" text="قرغيزستان" />
+	<qualifier code="1FCS" text="سيبيريا" />
+	<qualifier code="1FCT" text="تركمنستان" />
+	<qualifier code="1FCU" text="أوزبكستان" />
+	<qualifier code="1FCZ" text="كازاخزستان" />
+	<qualifier code="1FK" text="شبه القارة الهندية" />
+	<qualifier code="1FKA" text="الهند" />
+	<qualifier code="1FKAH" text="جبال الهملايا" />
+	<qualifier code="1FKAS" text="Andaman &amp; Nicobar Islands" />
+	<qualifier code="1FKB" text="بنغلادش" />
+	<qualifier code="1FKH" text="بوتان" />
+	<qualifier code="1FKN" text="النيبال" />
+	<qualifier code="1FKP" text="باكستان" />
+	<qualifier code="1FKS" text="سيريلانكا" />
+	<qualifier code="1FM" text="جنوب شرق آسيا" />
+	<qualifier code="1FMB" text="ماينمار (بورما)" />
+	<qualifier code="1FMC" text="كمبوديا" />
+	<qualifier code="1FML" text="لاوس" />
+	<qualifier code="1FMM" text="ماليزيا" />
+	<qualifier code="1FMN" text="إندونيسيا" />
+	<qualifier code="1FMNB" text="بالي" />
+	<qualifier code="1FMNT" text="تيمور الشرقية" />
+	<qualifier code="1FMNX" text="بورنيو" />
+	<qualifier code="1FMP" text="الفلبين" />
+	<qualifier code="1FMR" text="بروناي" />
+	<qualifier code="1FMS" text="سنغافورة" />
+	<qualifier code="1FMT" text="تايلاند" />
+	<qualifier code="1FMV" text="فيتنام" />
+	<qualifier code="1FP" text="شرق آسيا، الشرق الأقصى" />
+	<qualifier code="1FPC" text="الصين" />
+	<qualifier code="1FPCH" text="هونغ كونغ" />
+	<qualifier code="1FPCM" text="ماكاو" />
+	<qualifier code="1FPCT" text="التبت" />
+	<qualifier code="1FPCW" text="تايوان" />
+	<qualifier code="1FPJ" text="اليابان" />
+	<qualifier code="1FPK" text="كوريا" />
+	<qualifier code="1FPKN" text="كوريا الشمالية" />
+	<qualifier code="1FPKS" text="كوريا الجنوبيةSouth Korea" />
+	<qualifier code="1FPM" text="منغوليا" />
+	<qualifier code="1H" text="أفريقيا" />
+	<qualifier code="1HB" text="شمال أفريقياNorth Africa" />
+	<qualifier code="1HBA" text="الجزائر" />
+	<qualifier code="1HBC" text="تشاد" />
+	<qualifier code="1HBE" text="مصر" />
+	<qualifier code="1HBEN" text="نهر النيل" />
+	<qualifier code="1HBES" text="قناة السويس" />
+	<qualifier code="1HBL" text="ليبيا" />
+	<qualifier code="1HBM" text="المغرب" />
+	<qualifier code="1HBMA" text="جبال الأطلس" />
+	<qualifier code="1HBS" text="السودان" />
+	<qualifier code="1HBT" text="تونس" />
+	<qualifier code="1HBW" text="الصحراء الغربية" />
+	<qualifier code="1HBX" text="الصحراء الكبرى" />
+	<qualifier code="1HF" text="Sub-Saharan Africa" />
+	<qualifier code="1HFD" text="غرب أفريقيا" />
+	<qualifier code="1HFDA" text="موريتانيا" />
+	<qualifier code="1HFDB" text="بنين" />
+	<qualifier code="1HFDE" text="سيرا ليون" />
+	<qualifier code="1HFDF" text="بوركينا فاسو" />
+	<qualifier code="1HFDG" text="غامبيا" />
+	<qualifier code="1HFDH" text="غانا" />
+	<qualifier code="1HFDL" text="ليبيريا" />
+	<qualifier code="1HFDM" text="مالي" />
+	<qualifier code="1HFDN" text="نيجيريا" />
+	<qualifier code="1HFDR" text="النيجر" />
+	<qualifier code="1HFDS" text="السنغال" />
+	<qualifier code="1HFDT" text="توغو" />
+	<qualifier code="1HFDU" text="غينيا" />
+	<qualifier code="1HFDV" text="الرأس الأخضر" />
+	<qualifier code="1HFDX" text="غينيا بيساو" />
+	<qualifier code="1HFDY" text="ساحل العاج" />
+	<qualifier code="1HFG" text="شرق أفريقيا" />
+	<qualifier code="1HFGA" text="اثيوبيا" />
+	<qualifier code="1HFGD" text="جيبوتي" />
+	<qualifier code="1HFGE" text="اريتيريا" />
+	<qualifier code="1HFGK" text="كينيا" />
+	<qualifier code="1HFGQ" text="بوروندي" />
+	<qualifier code="1HFGR" text="رواندا" />
+	<qualifier code="1HFGS" text="الصومال" />
+	<qualifier code="1HFGSR" text="جمهورية أرض الصومال" />
+	<qualifier code="1HFGT" text="تنزانيا" />
+	<qualifier code="1HFGU" text="أوغندا" />
+	<qualifier code="1HFJ" text="أفريقيا الوسطى" />
+	<qualifier code="1HFJA" text="الكاميرون" />
+	<qualifier code="1HFJC" text="الكونغو" />
+	<qualifier code="1HFJG" text="الغابون" />
+	<qualifier code="1HFJQ" text="غينيا الاستوائية" />
+	<qualifier code="1HFJR" text="جمهورية أفريقيا الوسطى" />
+	<qualifier code="1HFJS" text="Sao Tome &amp; Principe" />
+	<qualifier code="1HFJZ" text="جمهورية الكونغو الديمقراطية (زائير)" />
+	<qualifier code="1HFM" text="جنوب أفريقيا" />
+	<qualifier code="1HFMA" text="أنغولا" />
+	<qualifier code="1HFMB" text="بوتسوانا" />
+	<qualifier code="1HFMK" text="سوازيلاند" />
+	<qualifier code="1HFML" text="ليسوتو" />
+	<qualifier code="1HFMM" text="مالاوي" />
+	<qualifier code="1HFMN" text="ناميبيا" />
+	<qualifier code="1HFMQ" text="الموزمبيق" />
+	<qualifier code="1HFMQZ" text="نهر زامبيسي" />
+	<qualifier code="1HFMS" text="جمهورية جنوب أفريقيا" />
+	<qualifier code="1HFMW" text="زمبابوي" />
+	<qualifier code="1HFMZ" text="زامبيا" />
+	<qualifier code="1HS" text="جزر جنوب المحيط الهندي" />
+	<qualifier code="1HSC" text="جزر القمر" />
+	<qualifier code="1HSM" text="مدغشقر" />
+	<qualifier code="1HSU" text="موريشيوس" />
+	<qualifier code="1HSV" text="جزر المالديف" />
+	<qualifier code="1HSY" text="سيشيل" />
+	<qualifier code="1K" text="القارة الأمريكية" />
+	<qualifier code="1KB" text="أمريكا الشمالية" />
+	<qualifier code="1KBB" text="الولايات المتحدة الأمريكية" />
+	<qualifier code="1KBBE" text="ولايات شمال شرق وشمال المحيط الأطلسي" />
+	<qualifier code="1KBBEC" text="Connecticut" />
+	<qualifier code="1KBBEH" text="New Hampshire" />
+	<qualifier code="1KBBEJ" text="نيوجرسي" />
+	<qualifier code="1KBBEN" text="Maine" />
+	<qualifier code="1KBBEP" text="Pennsylvania" />
+	<qualifier code="1KBBER" text="Rhode Island" />
+	<qualifier code="1KBBES" text="Massachusetts" />
+	<qualifier code="1KBBEV" text="Vermont" />
+	<qualifier code="1KBBEY" text="نيويورك" />
+	<qualifier code="1KBBF" text="ولايات جنوب شرق وجنوب المحيط الأطلسي" />
+	<qualifier code="1KBBFC" text="مقاطعة كولومبيا (واشنطن العاصمة)" />
+	<qualifier code="1KBBFD" text="Delaware" />
+	<qualifier code="1KBBFG" text="Georgia" />
+	<qualifier code="1KBBFL" text="فلوريدا" />
+	<qualifier code="1KBBFM" text="Maryland" />
+	<qualifier code="1KBBFN" text="كارولاينا الشمالية" />
+	<qualifier code="1KBBFS" text="كارولاينا الجنوبية" />
+	<qualifier code="1KBBFV" text="فرجينيا" />
+	<qualifier code="1KBBFW" text="غرب فرجينيا" />
+	<qualifier code="1KBBN" text="ولايات شمال المركز والغرب الأوسط" />
+	<qualifier code="1KBBNC" text="Illinois" />
+	<qualifier code="1KBBND" text="Indiana" />
+	<qualifier code="1KBBNF" text="Iowa" />
+	<qualifier code="1KBBNG" text="مشيغان" />
+	<qualifier code="1KBBNH" text="أوهايو" />
+	<qualifier code="1KBBNK" text="كنساس" />
+	<qualifier code="1KBBNN" text="نبراسكا" />
+	<qualifier code="1KBBNR" text="داكوتا الشمالية" />
+	<qualifier code="1KBBNS" text="داكوتا الجنوبية" />
+	<qualifier code="1KBBNT" text="Minnesota" />
+	<qualifier code="1KBBNU" text="Missouri" />
+	<qualifier code="1KBBNW" text="Wisconsin" />
+	<qualifier code="1KBBS" text="Central Southern states" />
+	<qualifier code="1KBBSB" text="ألاباما" />
+	<qualifier code="1KBBSH" text="أوكلاهوما" />
+	<qualifier code="1KBBSK" text="كنتاكي" />
+	<qualifier code="1KBBSL" text="Louisiana" />
+	<qualifier code="1KBBSM" text="الميسيسيبي" />
+	<qualifier code="1KBBSN" text="Tennessee" />
+	<qualifier code="1KBBSR" text="آركنساس" />
+	<qualifier code="1KBBSX" text="تكساس" />
+	<qualifier code="1KBBW" text="ولايات الغرب والساحل الغربي" />
+	<qualifier code="1KBBWC" text="كولورادو" />
+	<qualifier code="1KBBWD" text="Idaho" />
+	<qualifier code="1KBBWF" text="كاليفورنيا" />
+	<qualifier code="1KBBWK" text="ألاسكا" />
+	<qualifier code="1KBBWM" text="Montana" />
+	<qualifier code="1KBBWN" text="نيفادا" />
+	<qualifier code="1KBBWR" text="Oregon" />
+	<qualifier code="1KBBWS" text="Washington state" />
+	<qualifier code="1KBBWU" text="Utah" />
+	<qualifier code="1KBBWX" text="نيو مكسيكو" />
+	<qualifier code="1KBBWY" text="Wyoming" />
+	<qualifier code="1KBBWZ" text="أريزونا" />
+	<qualifier code="1KBC" text="كندا" />
+	<qualifier code="1KBCB" text="كولومبيا البريطانية" />
+	<qualifier code="1KBCF" text="Newfoundland" />
+	<qualifier code="1KBCL" text="Alberta" />
+	<qualifier code="1KBCM" text="Manitoba" />
+	<qualifier code="1KBCN" text="Nunavut" />
+	<qualifier code="1KBCO" text="Ontario" />
+	<qualifier code="1KBCP" text="Prince Edward Island" />
+	<qualifier code="1KBCQ" text="كويبك" />
+	<qualifier code="1KBCR" text="New Brunswick" />
+	<qualifier code="1KBCS" text="Saskatchewan" />
+	<qualifier code="1KBCV" text="Nova Scotia" />
+	<qualifier code="1KBCW" text="Northwest Territories" />
+	<qualifier code="1KBCY" text="Yukon Territory" />
+	<qualifier code="1KBG" text="البحيرات العظمى" />
+	<qualifier code="1KJ" text="جزر الكاريبي" />
+	<qualifier code="1KJC" text="كوبا" />
+	<qualifier code="1KJD" text="جمهورية الدومينيكان" />
+	<qualifier code="1KJH" text="هاييتي" />
+	<qualifier code="1KJM" text="Cayman Islands" />
+	<qualifier code="1KJP" text="بورتوريكو" />
+	<qualifier code="1KJW" text="جزر الهند الغربية" />
+	<qualifier code="1KJWB" text="جزر الباهاما" />
+	<qualifier code="1KJWJ" text="جامايكا" />
+	<qualifier code="1KJWT" text="Turks &amp; Caicos Islands" />
+	<qualifier code="1KJWV" text="Leeward Islands" />
+	<qualifier code="1KJWVA" text="Anguilla" />
+	<qualifier code="1KJWVB" text="Antigua &amp; Barbuda" />
+	<qualifier code="1KJWVG" text="Guadeloupe" />
+	<qualifier code="1KJWVK" text="St Kitts-Nevis" />
+	<qualifier code="1KJWVM" text="Montserrat" />
+	<qualifier code="1KJWVV" text="Virgin Islands" />
+	<qualifier code="1KJWVVK" text="Virgin Islands (UK)" />
+	<qualifier code="1KJWVVS" text="Virgin Islands (USA)" />
+	<qualifier code="1KJWW" text="Windward Islands" />
+	<qualifier code="1KJWWB" text="Barbados" />
+	<qualifier code="1KJWWD" text="Dominica" />
+	<qualifier code="1KJWWG" text="Grenada" />
+	<qualifier code="1KJWWL" text="St Lucia" />
+	<qualifier code="1KJWWM" text="Martinique" />
+	<qualifier code="1KJWWT" text="Trinidad &amp; Tobago" />
+	<qualifier code="1KJWWV" text="St Vincent" />
+	<qualifier code="1KJX" text="Lesser Antilles" />
+	<qualifier code="1KJXA" text="Aruba" />
+	<qualifier code="1KJXN" text="جزر الأنتيل الهولندية" />
+	<qualifier code="1KL" text="أمريكا اللاتينية" />
+	<qualifier code="1KLC" text="أمريكا الوسطى" />
+	<qualifier code="1KLCB" text="Belize" />
+	<qualifier code="1KLCG" text="غواتيمالا" />
+	<qualifier code="1KLCH" text="الهندوراس" />
+	<qualifier code="1KLCM" text="المكسيك" />
+	<qualifier code="1KLCN" text="نيكاراغوا" />
+	<qualifier code="1KLCP" text="بنما" />
+	<qualifier code="1KLCPC" text="قناة بنما" />
+	<qualifier code="1KLCR" text="كوستاريكا" />
+	<qualifier code="1KLCS" text="السلفادور" />
+	<qualifier code="1KLS" text="جنوب أمريكا" />
+	<qualifier code="1KLSA" text="الأرجنتين" />
+	<qualifier code="1KLSB" text="البرازيل" />
+	<qualifier code="1KLSBZ" text="نهر الأمازون" />
+	<qualifier code="1KLSC" text="كولومبيا" />
+	<qualifier code="1KLSE" text="الإكوادور" />
+	<qualifier code="1KLSEG" text="Galapagos Islands" />
+	<qualifier code="1KLSF" text="غويانا الفرنسية" />
+	<qualifier code="1KLSG" text="غويانا" />
+	<qualifier code="1KLSH" text="تشيلي" />
+	<qualifier code="1KLSL" text="بوليفيا" />
+	<qualifier code="1KLSP" text="باراغواي" />
+	<qualifier code="1KLSR" text="بيرو" />
+	<qualifier code="1KLSS" text="Surinam (Suriname)" />
+	<qualifier code="1KLSU" text="أوروغواي" />
+	<qualifier code="1KLSV" text="فنزويلا" />
+	<qualifier code="1KLSX" text="جبال الأنديز" />
+	<qualifier code="1M" text="أستراليا، أوقيانوسيا والمناطق البرية الأخرى" />
+	<qualifier code="1MB" text="أستراليا" />
+	<qualifier code="1MBF" text="أستراليا" />
+	<qualifier code="1MBFC" text="الأراضي الأسترالية الرئيسية (ACT)" />
+	<qualifier code="1MBFN" text="New South Wales" />
+	<qualifier code="1MBFQ" text="Queensland" />
+	<qualifier code="1MBFS" text="South Australia" />
+	<qualifier code="1MBFT" text="Tasmania" />
+	<qualifier code="1MBFV" text="فكتوريا" />
+	<qualifier code="1MBFW" text="غرب أستراليا" />
+	<qualifier code="1MBFX" text="المقاطعة الشمالية" />
+	<qualifier code="1MBN" text="نيوزيلاند" />
+	<qualifier code="1MK" text="أوقيانوسيا" />
+	<qualifier code="1MKC" text="Micronesia" />
+	<qualifier code="1MKCB" text="Belau (Palau)" />
+	<qualifier code="1MKCC" text="Caroline Islands" />
+	<qualifier code="1MKCF" text="Federated States of Micronesia" />
+	<qualifier code="1MKCG" text="Gilbert Islands" />
+	<qualifier code="1MKCM" text="جزر المارشال" />
+	<qualifier code="1MKCN" text="Nauru" />
+	<qualifier code="1MKCU" text="Guam" />
+	<qualifier code="1MKCV" text="Northern Marianas" />
+	<qualifier code="1MKL" text="Melanesia" />
+	<qualifier code="1MKLF" text="فيجي" />
+	<qualifier code="1MKLN" text="New Caledonia" />
+	<qualifier code="1MKLP" text="Papua New Guinea" />
+	<qualifier code="1MKLS" text="Solomon Islands" />
+	<qualifier code="1MKLV" text="Vanuatu" />
+	<qualifier code="1MKP" text="Polynesia" />
+	<qualifier code="1MKPC" text="Cook Islands" />
+	<qualifier code="1MKPCR" text="Raratonga" />
+	<qualifier code="1MKPE" text="Easter Island" />
+	<qualifier code="1MKPF" text="French Polynesia" />
+	<qualifier code="1MKPFT" text="تاهيتي" />
+	<qualifier code="1MKPH" text="هاوايي" />
+	<qualifier code="1MKPK" text="Kiribati" />
+	<qualifier code="1MKPN" text="Niue" />
+	<qualifier code="1MKPP" text="Pitcairn Island" />
+	<qualifier code="1MKPR" text="Samoa" />
+	<qualifier code="1MKPRA" text="American Samoa" />
+	<qualifier code="1MKPRW" text="Western Samoa" />
+	<qualifier code="1MKPT" text="Tonga" />
+	<qualifier code="1MKPV" text="Tuvalu" />
+	<qualifier code="1MKPW" text="Wallis &amp; Futuna" />
+	<qualifier code="1MT" text="المناطق البرية الأخرى" />
+	<qualifier code="1MTA" text="جزر المحيط الأطلسي" />
+	<qualifier code="1MTAN" text="جزر شمال المحيط الأطلسي" />
+	<qualifier code="1MTANB" text="برمودا" />
+	<qualifier code="1MTANC" text="جزر الكناري" />
+	<qualifier code="1MTANM" text="Madeira" />
+	<qualifier code="1MTANZ" text="Azores" />
+	<qualifier code="1MTAS" text="South Atlantic islands" />
+	<qualifier code="1MTASC" text="Ascension Island" />
+	<qualifier code="1MTASF" text="Falklands" />
+	<qualifier code="1MTASG" text="South Georgia" />
+	<qualifier code="1MTASH" text="St Helena" />
+	<qualifier code="1MTAST" text="Tristan da Cunha" />
+	<qualifier code="1MTN" text="Arctic regions" />
+	<qualifier code="1MTNG" text="غرينلاند" />
+	<qualifier code="1MTS" text="القارة القطبية الجنوبية" />
+	<qualifier code="1Q" text="التجمعات الجغرافية الأخرى، والمحيطات والبحار" />
+	<qualifier code="1QD" text="الإمبراطوريات والدول التأريخية" />
+	<qualifier code="1QDA" text="العالم القديم" />
+	<qualifier code="1QDAA" text="بلاد آشور" />
+	<qualifier code="1QDAB" text="بابل" />
+	<qualifier code="1QDAE" text="مصر القديمة" />
+	<qualifier code="1QDAG" text="اليونان القديمة" />
+	<qualifier code="1QDAK" text="Pre-Columbian America" />
+	<qualifier code="1QDAL" text="إسرائيل القديمة / التوراتية" />
+	<qualifier code="1QDAM" text="بلاد ما بين النهرين" />
+	<qualifier code="1QDAP" text="الإمبراطورية الفارسية" />
+	<qualifier code="1QDAR" text="روما القديمة" />
+	<qualifier code="1QDAS" text="بلاد سومر" />
+	<qualifier code="1QDAZ" text="الإمبراطورية البيزنطية" />
+	<qualifier code="1QDB" text="الإمبراطورية البريطانية" />
+	<qualifier code="1QDH" text="الإمبراطورية الرومانية المقدسة" />
+	<qualifier code="1QDM" text="إمبراطورية المغول" />
+	<qualifier code="1QDT" text="الإمبراطورية العثمانية" />
+	<qualifier code="1QDU" text="الإمبراطورية النمساوية المجرية" />
+	<qualifier code="1QF" text="التجمعات السياسية، الاجتماعية الاقتصادية والاستراتيجية" />
+	<qualifier code="1QFC" text="الكومنولث" />
+	<qualifier code="1QFE" text="EU (الاتحاد الأوربي)" />
+	<qualifier code="1QFG" text="الدول النامية" />
+	<qualifier code="1QFH" text="الدول الصناعية / المتقدمة" />
+	<qualifier code="1QFM" text="الدول الإسلامية" />
+	<qualifier code="1QFN" text="حلف الناتو" />
+	<qualifier code="1QFP" text="منظمة الأوبك" />
+	<qualifier code="1QFS" text="رابطة آسيان" />
+	<qualifier code="1QFW" text="حلف وارسو، الكتلة الشرقية" />
+	<qualifier code="1QM" text="المناطق المناخية" />
+	<qualifier code="1QMP" text="المناطق القطبية" />
+	<qualifier code="1QMT" text="المناطق المدارية" />
+	<qualifier code="1QR" text="تجمعات تربطها البحار" />
+	<qualifier code="1QRM" text="دول البحر المتوسط" />
+	<qualifier code="1QRP" text="الدول المطلة على المحيط الهادئ" />
+	<qualifier code="1QS" text="المحيطات والبحار" />
+	<qualifier code="1QSA" text="المحيط الأطلسي" />
+	<qualifier code="1QSAN" text="شمال الأطلسي" />
+	<qualifier code="1QSAS" text="جنوب الأطلسي" />
+	<qualifier code="1QSB" text="بحر البلطيق" />
+	<qualifier code="1QSC" text="البحر الكاريبي" />
+	<qualifier code="1QSD" text="خليج المكسيك" />
+	<qualifier code="1QSE" text="البحر الايرلندي" />
+	<qualifier code="1QSF" text="بحر الشمال" />
+	<qualifier code="1QSG" text="القنال الإنجليزي" />
+	<qualifier code="1QSH" text="البحر الأدرياتيكي" />
+	<qualifier code="1QSJ" text="بحر قزوين" />
+	<qualifier code="1QSK" text="البحر الأسود" />
+	<qualifier code="1QSL" text="البحر الأحمر" />
+	<qualifier code="1QSM" text="البحر المتوسط" />
+	<qualifier code="1QSN" text="المحيط الهندي" />
+	<qualifier code="1QSP" text="المحيط الهادئ" />
+	<qualifier code="1QSPN" text="شمال المحيط الهادئ" />
+	<qualifier code="1QSPS" text="جنوب المحيط الهادئ" />
+	<qualifier code="1QSR" text="المحيط المتجمد الشمالي" />
+	<qualifier code="1QSS" text="المحيط الجنوبي" />
+	<qualifier code="1QST" text="بحر تاسمان" />
+	<qualifier code="2A" text="اللغات الهندو أوروبية" />
+	<qualifier code="2AB" text="الإنجليزية" />
+	<qualifier code="2ABA" text="الانغلوساكسوني" />
+	<qualifier code="2ABC" text="الإنجليزية الوسطى" />
+	<qualifier code="2ABM" text="الإنجليزية الأمريكية" />
+	<qualifier code="2ABU" text="الإنجليزية الأوسترالية" />
+	<qualifier code="2AC" text="اللغات الجرمانية والاسكندنافية" />
+	<qualifier code="2ACC" text="الأسكتلندية (Lallans، the Doric)" />
+	<qualifier code="2ACCU" text="Ulster Scots (Ullans)" />
+	<qualifier code="2ACD" text="الهولندية" />
+	<qualifier code="2ACF" text="الفلمنكية" />
+	<qualifier code="2ACG" text="الألمانية" />
+	<qualifier code="2ACK" text="اللغات الأفريقية" />
+	<qualifier code="2ACS" text="اللغات الاسكندنافية" />
+	<qualifier code="2ACSC" text="الآيسلندية" />
+	<qualifier code="2ACSD" text="الدنماركية" />
+	<qualifier code="2ACSF" text="الفاروية" />
+	<qualifier code="2ACSJ" text="Jutish" />
+	<qualifier code="2ACSN" text="النرويجية" />
+	<qualifier code="2ACSW" text="السويدية" />
+	<qualifier code="2ACSX" text="الإسكندنافية القديمة" />
+	<qualifier code="2ACY" text="اليديشية" />
+	<qualifier code="2ACZ" text="اللغات واللهجات الجرمانية الأخرى" />
+	<qualifier code="2AD" text="اللغات الرومانية، الإيطالية واللغات الرومانية الأخرى" />
+	<qualifier code="2ADC" text="التشيكية" />
+	<qualifier code="2ADF" text="الفرنسية" />
+	<qualifier code="2ADFP" text="البروفانسية" />
+	<qualifier code="2ADH" text="الكورسيكية" />
+	<qualifier code="2ADL" text="اللاتينية" />
+	<qualifier code="2ADP" text="البرتغالية" />
+	<qualifier code="2ADPB" text="البرتغالية البرازيلية" />
+	<qualifier code="2ADQ" text="الجاليكية" />
+	<qualifier code="2ADR" text="الرومانية" />
+	<qualifier code="2ADS" text="الاسبانية" />
+	<qualifier code="2ADSL" text="الاسبانية لأمريكا اللاتينية" />
+	<qualifier code="2ADT" text="الإيطالية" />
+	<qualifier code="2ADV" text="السردينية" />
+	<qualifier code="2AF" text="اللغات السلتية" />
+	<qualifier code="2AFB" text="البريتونية" />
+	<qualifier code="2AFC" text="الكورنية" />
+	<qualifier code="2AFG" text="الغالية" />
+	<qualifier code="2AFM" text="Manx" />
+	<qualifier code="2AFR" text="الغالية الايرلندية" />
+	<qualifier code="2AFS" text="الغالية الاسكتلندية" />
+	<qualifier code="2AFW" text="الويلزية" />
+	<qualifier code="2AG" text="اللغات السلافية" />
+	<qualifier code="2AGB" text="البلغارية" />
+	<qualifier code="2AGC" text="الكنيسة السلافية" />
+	<qualifier code="2AGK" text="السلوفاكية" />
+	<qualifier code="2AGL" text="البلاروسية" />
+	<qualifier code="2AGM" text="المقدومية" />
+	<qualifier code="2AGP" text="البولندية" />
+	<qualifier code="2AGR" text="الروسية" />
+	<qualifier code="2AGS" text="الصربية الكرواتية" />
+	<qualifier code="2AGSC" text="الكرواتية" />
+	<qualifier code="2AGSS" text="الصربية" />
+	<qualifier code="2AGU" text="الأوكرانية" />
+	<qualifier code="2AGV" text="السلوفينية" />
+	<qualifier code="2AGW" text="Wendish (Lusatian, Sorbian)" />
+	<qualifier code="2AGZ" text="التشيكية" />
+	<qualifier code="2AH" text="اللغات الإغريقية" />
+	<qualifier code="2AHA" text="اليونان القديمة (الكلاسيكية)" />
+	<qualifier code="2AHB" text="اليونانية التوراتية" />
+	<qualifier code="2AHM" text="اليونانية الحديثة" />
+	<qualifier code="2AJ" text="لغات البلطيق وغيرها من اللغات الهندو أوربية" />
+	<qualifier code="2AJB" text="لغات البلطيق" />
+	<qualifier code="2AJBL" text="الليتوانية" />
+	<qualifier code="2AJBV" text="اللاتفية" />
+	<qualifier code="2AJK" text="اللغات الهندو أوربية الأخرى" />
+	<qualifier code="2AJKL" text="الألبانية" />
+	<qualifier code="2AJKR" text="الأرمنية" />
+	<qualifier code="2B" text="اللغات الهندية والشرق الهندو أوروبية والدرافيدية" />
+	<qualifier code="2BB" text="اللغات الهندية الأولى" />
+	<qualifier code="2BBA" text="السنسكريتية" />
+	<qualifier code="2BBP" text="البالية" />
+	<qualifier code="2BM" text="اللغات الهندية الحديثة" />
+	<qualifier code="2BMB" text="البنغلاديشية" />
+	<qualifier code="2BMD" text="المهاراتية" />
+	<qualifier code="2BMG" text="الغوجاراتية" />
+	<qualifier code="2BMH" text="الهندية" />
+	<qualifier code="2BMJ" text="الراجستانية" />
+	<qualifier code="2BMK" text="الكشميرية" />
+	<qualifier code="2BMN" text="النيبالية" />
+	<qualifier code="2BMP" text="البنجابية" />
+	<qualifier code="2BMR" text="الغجرية" />
+	<qualifier code="2BMS" text="السنهالية" />
+	<qualifier code="2BMSM" text="المالديفية" />
+	<qualifier code="2BMU" text="الأردية" />
+	<qualifier code="2BR" text="اللغات الدرافيدية" />
+	<qualifier code="2BRB" text="البراهوية" />
+	<qualifier code="2BRK" text="Kannada (Kanarese)" />
+	<qualifier code="2BRL" text="Telugu" />
+	<qualifier code="2BRM" text="المالايالامية" />
+	<qualifier code="2BRT" text="التاميلية" />
+	<qualifier code="2BX" text="اللغات الهندو إيرانية" />
+	<qualifier code="2BXF" text="الفارسية" />
+	<qualifier code="2BXK" text="الكردية" />
+	<qualifier code="2BXL" text="البشتوية (الأفغانية)" />
+	<qualifier code="2BXZ" text="Zend Avestan" />
+	<qualifier code="2C" text="اللغات الأفرو-آسيوية" />
+	<qualifier code="2CS" text="اللغات السامية" />
+	<qualifier code="2CSA" text="الآرامية" />
+	<qualifier code="2CSB" text="اللغات الآشورية البابلية (الأكدية) " />
+	<qualifier code="2CSJ" text="العبرية" />
+	<qualifier code="2CSM" text="المالطية" />
+	<qualifier code="2CSR" text="العربية" />
+	<qualifier code="2CSS" text="السريانية" />
+	<qualifier code="2CST" text="الاثيوبية" />
+	<qualifier code="2CSTA" text="الأمهرية" />
+	<qualifier code="2CSTT" text="التغرينية" />
+	<qualifier code="2CX" text="اللغات الأفرو-آسيوية اللاسامية" />
+	<qualifier code="2CXB" text="لغاة البربر (الطوارق)" />
+	<qualifier code="2CXC" text="القبطية" />
+	<qualifier code="2CXG" text="المصرية" />
+	<qualifier code="2CXH" text="الهوسا" />
+	<qualifier code="2CXS" text="الصومالية" />
+	<qualifier code="2CXSR" text="الأورومية" />
+	<qualifier code="2F" text="اللغات الأورال-الألطية والمتعلقة بأحد الأصقاع الشمالية" />
+	<qualifier code="2FC" text="اللغات الفنلندية الأوغرية" />
+	<qualifier code="2FCD" text="الاستونية" />
+	<qualifier code="2FCF" text="الفنلندية (سومي)" />
+	<qualifier code="2FCL" text="Lappish (Sami)" />
+	<qualifier code="2FCM" text="الهنغارية" />
+	<qualifier code="2FM" text="اللغات التركية" />
+	<qualifier code="2FMC" text="التركية" />
+	<qualifier code="2FMH" text="القرغيزية" />
+	<qualifier code="2FMK" text="الكازاقية" />
+	<qualifier code="2FMN" text="التركمانية" />
+	<qualifier code="2FMU" text="الأوزبكية" />
+	<qualifier code="2FMZ" text="الآذربيجانية" />
+	<qualifier code="2FV" text="المنغولية" />
+	<qualifier code="2FW" text="Tungusic languages" />
+	<qualifier code="2FWK" text="Evenki" />
+	<qualifier code="2FWM" text="Manchu" />
+	<qualifier code="2FX" text="Hyperborean &amp; Paleosiberian languages" />
+	<qualifier code="2G" text="لغات شرق وجنوب شرق آسيا" />
+	<qualifier code="2GD" text="اللغات بين الصين والتبت" />
+	<qualifier code="2GDB" text="البورمية" />
+	<qualifier code="2GDC" text="الصينية" />
+	<qualifier code="2GDCC" text="الكانتونية" />
+	<qualifier code="2GDCK" text="Hokkien" />
+	<qualifier code="2GDCM" text="Mandarin" />
+	<qualifier code="2GDCW" text="Wu" />
+	<qualifier code="2GDCY" text="Amoy" />
+	<qualifier code="2GDK" text="Karen" />
+	<qualifier code="2GDT" text="التبتية" />
+	<qualifier code="2GJ" text="اليابانية" />
+	<qualifier code="2GK" text="الكورية" />
+	<qualifier code="2GR" text="اللغات جنوب شرق آسيا الأخرى، لغات أسترو آسيوية" />
+	<qualifier code="2GRH" text="الكمبودية" />
+	<qualifier code="2GRL" text="اللاوية" />
+	<qualifier code="2GRM" text="Hmong (Miao)" />
+	<qualifier code="2GRS" text="التايلندية (السيامية)" />
+	<qualifier code="2GRV" text="الفيتنامية" />
+	<qualifier code="2H" text="اللغات الأفريقية" />
+	<qualifier code="2HC" text="لغات النيجر والكونغو" />
+	<qualifier code="2HCB" text="لغات البانتو" />
+	<qualifier code="2HCBA" text="لغات البانتو الصحيحة (البانتو الحصرية)" />
+	<qualifier code="2HCBB" text="لغات البانتو المركزية" />
+	<qualifier code="2HCBBC" text="الشيشيوا" />
+	<qualifier code="2HCBBF" text="Chilomwe (Lomwe)" />
+	<qualifier code="2HCBBH" text="Chinyanja (Cinyanja, Nyanja)" />
+	<qualifier code="2HCBBJ" text="Chitonga (Tonga)" />
+	<qualifier code="2HCBBL" text="Chitumbuka (Tumbuka)" />
+	<qualifier code="2HCBBN" text="Chiyao (Yao)" />
+	<qualifier code="2HCBBP" text="Icibemba (Bemba)" />
+	<qualifier code="2HCBBQ" text="Kiikaonde (Kaonde)" />
+	<qualifier code="2HCBBR" text="الغونغوية" />
+	<qualifier code="2HCBBS" text="Lunda" />
+	<qualifier code="2HCBBU" text="Luvale" />
+	<qualifier code="2HCBD" text="السواحيلية" />
+	<qualifier code="2HCBH" text="OtjiHerero (Herero)" />
+	<qualifier code="2HCBK" text="Kikuyu" />
+	<qualifier code="2HCBL" text="Nyoro-Ganda group" />
+	<qualifier code="2HCBLG" text="اللوغندية (غاندا)" />
+	<qualifier code="2HCBLR" text="Nyankore (Runyankore-Rukiga)" />
+	<qualifier code="2HCBM" text="Fang (Yaunde-Fang)" />
+	<qualifier code="2HCBN" text="Duala" />
+	<qualifier code="2HCBP" text="Tshivenda &amp; Venda group" />
+	<qualifier code="2HCBQ" text="Shona" />
+	<qualifier code="2HCBS" text="Sotho-Tswana group" />
+	<qualifier code="2HCBSA" text="Sesotho (Sotho, Sesotho sa Leboa, Southern Sotho)" />
+	<qualifier code="2HCBSB" text="Sepedi (Northern Sotho)" />
+	<qualifier code="2HCBSD" text="Setswana (Tswana)" />
+	<qualifier code="2HCBSF" text="Silozi" />
+	<qualifier code="2HCBV" text="XiTsonga (Tsonga)" />
+	<qualifier code="2HCBW" text="Siswati (Swazi)" />
+	<qualifier code="2HCBX" text="isiXhosa (Xhosa)" />
+	<qualifier code="2HCBY" text="isiNdebele (Ndebele)" />
+	<qualifier code="2HCBZ" text="isiZulu (Zulu)" />
+	<qualifier code="2HCW" text="لغات غرب المحيط الأطلسي وفولتا الكونغو" />
+	<qualifier code="2HCWF" text="Fulani (Fulah)" />
+	<qualifier code="2HCWV" text="لغات فولتا الكونغو " />
+	<qualifier code="2HCWVB" text="Ibo (Igbo)" />
+	<qualifier code="2HCWVD" text="Dagbani (Dagomba)" />
+	<qualifier code="2HCWVE" text="Ewe" />
+	<qualifier code="2HCWVG" text="Ga" />
+	<qualifier code="2HCWVN" text="Fante" />
+	<qualifier code="2HCWVS" text="Asante Twi" />
+	<qualifier code="2HCWVT" text="Akwapim Twi" />
+	<qualifier code="2HCWVY" text="Yoruba" />
+	<qualifier code="2HK" text="Khoisan languages" />
+	<qualifier code="2HN" text="Nilo-Saharan &amp; Chari-Nile (Macrosudanic) languages" />
+	<qualifier code="2HND" text="Dinka" />
+	<qualifier code="2HNM" text="Masai" />
+	<qualifier code="2HNR" text="النوبية" />
+	<qualifier code="2HNT" text="Teso (Ateso)" />
+	<qualifier code="2HX" text="اللغات الأفريقية الأخرى" />
+	<qualifier code="2J" text="لغات السكان الأصليين الأمريكية" />
+	<qualifier code="2JN" text="لغات السكان الأصليين الأمريكية في الوسط والشمال" />
+	<qualifier code="2JNA" text="Aleut" />
+	<qualifier code="2JNB" text="Inuit" />
+	<qualifier code="2JNC" text="Algonkian (Algonquin) languages" />
+	<qualifier code="2JND" text="Na-Dene &amp; Athapascan (Athabascan) languages" />
+	<qualifier code="2JNG" text="Iroquoian &amp; Siouan languages" />
+	<qualifier code="2JNM" text="لغة المايا" />
+	<qualifier code="2JNN" text="لغات اليوتو أزتيكان" />
+	<qualifier code="2JNZ" text="Zuni" />
+	<qualifier code="2JS" text="اللغات الأصلية الأمريكية في جنوب أمريكا والبحر الكاريبي" />
+	<qualifier code="2JSC" text="Carib (Cariban)" />
+	<qualifier code="2JSG" text="Guarani" />
+	<qualifier code="2JSQ" text="Quechuan" />
+	<qualifier code="2P" text="Oceanic &amp; Austronesian languages" />
+	<qualifier code="2PB" text="لغات السكان الأصليين الأسترالية" />
+	<qualifier code="2PBA" text="Aranda (Arunta)" />
+	<qualifier code="2PBG" text="Murngin" />
+	<qualifier code="2PBJ" text="Pitjantjatjara" />
+	<qualifier code="2PBL" text="Alyawarr" />
+	<qualifier code="2PBM" text="Warumungu" />
+	<qualifier code="2PBP" text="Pintupi" />
+	<qualifier code="2PBR" text="Arrernte" />
+	<qualifier code="2PBT" text="Pertame" />
+	<qualifier code="2PBU" text="Luritja" />
+	<qualifier code="2PBW" text="Warlpiri" />
+	<qualifier code="2PBY" text="Yankunytjatjara" />
+	<qualifier code="2PC" text="Papuan languages" />
+	<qualifier code="2PCS" text="Susuami" />
+	<qualifier code="2PG" text="Austronesian &amp; Malayo-Polynesian languages" />
+	<qualifier code="2PGB" text="Formosan (Taiwanese)" />
+	<qualifier code="2PGG" text="Malagasy" />
+	<qualifier code="2PGJ" text="التغالوغ (الفلبينية)" />
+	<qualifier code="2PGN" text="اللغات الاندونيسية" />
+	<qualifier code="2PGNA" text="الاندونيسية" />
+	<qualifier code="2PGNC" text="البالية" />
+	<qualifier code="2PGND" text="اللغة الجاوية" />
+	<qualifier code="2PGNM" text="لغة الملايو (ماليزيا البهاسا)" />
+	<qualifier code="2PGP" text="اللغات المحيطية والبولينيزية" />
+	<qualifier code="2PGPA" text="الماورية" />
+	<qualifier code="2PGPF" text="الفيجية" />
+	<qualifier code="2PGPG" text="Tongan" />
+	<qualifier code="2PGPH" text="التاهيتية" />
+	<qualifier code="2PGPR" text="Rarotongan" />
+	<qualifier code="2PGPS" text="Samoan" />
+	<qualifier code="2PGPW" text="الهاواييتية" />
+	<qualifier code="2PGPX" text="لغات سكان المحيط الأخرى" />
+	<qualifier code="2PGPXK" text="Mokilese" />
+	<qualifier code="2PGPXM" text="المارشالية" />
+	<qualifier code="2PGPXN" text="Ponapean" />
+	<qualifier code="2PGPXP" text="Palauan" />
+	<qualifier code="2PGPXT" text="Tokelauan" />
+	<qualifier code="2Z" text="اللغات الأخرى" />
+	<qualifier code="2ZB" text="لغة الباسك" />
+	<qualifier code="2ZC" text="اللغات القوقازية" />
+	<qualifier code="2ZCG" text="الجورجية" />
+	<qualifier code="2ZM" text="السومرية" />
+	<qualifier code="2ZP" text="Pidgins &amp; Creoles" />
+	<qualifier code="2ZPT" text="Tok Pisin" />
+	<qualifier code="2ZX" text="اللغات الاصطناعية" />
+	<qualifier code="2ZXA" text="Afrihili" />
+	<qualifier code="2ZXC" text="الغربية" />
+	<qualifier code="2ZXP" text="الاسبرانتو" />
+	<qualifier code="2ZXT" text="اللغة الوسيطة" />
+	<qualifier code="3B" text="لغة ما قبل التأريخ" />
+	<qualifier code="3D" text="قبل الميلاد حتى 500 ميلادي" />
+	<qualifier code="3F" text="500 ميلادي حتى 1000 ميلادي" />
+	<qualifier code="3H" text="1000 ميلادي حتى 1500" />
+	<qualifier code="3J" text="العصر الحديث، 1500 فصاعداً" />
+	<qualifier code="3JB" text="1500 حتى 1600" />
+	<qualifier code="3JD" text="1600 حتى 1700" />
+	<qualifier code="3JF" text="1700 حتى 1800" />
+	<qualifier code="3JH" text="1800 حتى 1900" />
+	<qualifier code="3JJ" text="القرن العشرين" />
+	<qualifier code="3JJC" text="1900 - 1914" />
+	<qualifier code="3JJF" text="1914 حتى 1918 (بضمنها الحرب العالمية الأولى) " />
+	<qualifier code="3JJG" text="1918 حتى 1939 (فترة ما بين الحربين العالميتين)" />
+	<qualifier code="3JJH" text="1939 حتى 1945 (بضمنها الحرب العالمية الثانية)" />
+	<qualifier code="3JJP" text="1945 حتى 2000 (فترة ما بعد الحرب)" />
+	<qualifier code="3JJPG" text="1945 حتى 1960" />
+	<qualifier code="3JJPK" text="1960 حتى 1970" />
+	<qualifier code="3JJPL" text="1970 حتى 1980" />
+	<qualifier code="3JJPN" text="1980 حتى 1990" />
+	<qualifier code="3JJPR" text="1990 حتى 2000" />
+	<qualifier code="3JM" text="القرن الحادي والعشرين" />
+	<qualifier code="3JMC" text="2000 حتى 2010" />
+	<qualifier code="3JMG" text="2010 حتى 2020" />
+	<qualifier code="4E" text="إختبارات تعلم اللغة الإنجليزية وشهاداتها" />
+	<qualifier code="4EA" text="إختبارات صغار المتعلمين للإنجليزية في جامعة كامبرج" />
+	<qualifier code="4EAA" text="إختبارات صغار المتعلمين للإنجليزية في جامعة كامبرج المستوى الأول، مبتدئي كامبرج" />
+	<qualifier code="4EAM" text="إختبارات صغار المتعلمين للإنجليزية في جامعة كامبرج المستوى الثاني، معتمدي كامبرج" />
+	<qualifier code="4EAY" text="إختبارات صغار المتعلمين للإنجليزية في جامعة كامبرج المستوى الثالث، متمكني كامبرج" />
+	<qualifier code="4EB" text="كامبرج، المستوى 1 إختبار الإنجليزية الأولي (KET)" />
+	<qualifier code="4EC" text="كامبرج، المستوى 2 إختبار الإنجليزية التمهيدي (PET)" />
+	<qualifier code="4ED" text="كامبرج، المستوى 3 أول شهادة في الإنجليزية (FCE)" />
+	<qualifier code="4EF" text="كامبرج، المستوى 4 شهادة في الإنجليزية المتقدمة (CAE)" />
+	<qualifier code="4EG" text="كامبرج، المستوى 5 شهادة الاحتراف في الإنجليزية (CPE)" />
+	<qualifier code="4EL" text="نظام اختبار اللغةالإنجليزيةالدولي لكامبردج (IELTS)" />
+	<qualifier code="4EN" text="إختبار اللغة الإنجليزية كلغة أجنبية (TOEFL)" />
+	<qualifier code="4EQ" text="شهادة في مهارات التواصل باللغة الإنجليزية (CCSE)" />
+	<qualifier code="4EX" text="ELT امتحانات في اللغة الإنجليزية لأغراض محددة" />
+	<qualifier code="4EXB" text="شهادة الإنجليزية التجارية (BEC)" />
+	<qualifier code="4EXC" text="شهادة دولية في اللغة الإنجليزية لإدارة الأعمال  والتجارة (CEIBT)" />
+	<qualifier code="4EXJ" text="شهادة اللغة الإنجليزية من أكسفورد في الأعمال الدولية (OIBEC)" />
+	<qualifier code="4EXK" text="إختبار كامبرج في الإنجليزية لمعلمي اللغة (CEELT)" />
+	<qualifier code="4EXM" text="إختبار اللغة الإنجليزية للتواصل الدولي (TOEIC)" />
+	<qualifier code="4EZ" text="إختبارات اللغة الإنجليزية الأخرى" />
+	<qualifier code="4K" text="مصمم / متناسب مع المقررات الدراسية والامتحانات في بريطانيا" />
+	<qualifier code="4KD" text="الاختبارات التعليمية في بريطانيا" />
+	<qualifier code="4KDP" text="الاختبارات التعليمية القياسية" />
+	<qualifier code="4KDQ" text="الاختبارات التعليمية اللاقياسية" />
+	<qualifier code="4KH" text="مصمم / متناسب مع المقررات الدراسية الوطنية" />
+	<qualifier code="4KHA" text="للمقرر الدراسي الوطني السنوات الأولى" />
+	<qualifier code="4KHF" text="للمقرر الدراسي الوطني المرحلة 1" />
+	<qualifier code="4KHJ" text="للمقرر الدراسي الوطني المرحلة 2" />
+	<qualifier code="4KHN" text="للمقرر الدراسي الوطني المرحلة 3" />
+	<qualifier code="4KHT" text="للمقرر الدراسي الوطني المرحلة 4 &amp; GCSE" />
+	<qualifier code="4KL" text="مصمم / متناسب مع المستوى A &amp; AS" />
+	<qualifier code="4KLR" text="مستوى الدراسة A/AS وإرشادات المراجعة" />
+	<qualifier code="4KM" text="مصمم للمهارات الأساسية" />
+	<qualifier code="4KMC" text="مصمم للمهارات الأساسية: التواصل" />
+	<qualifier code="4KMN" text="مصمم للمهارات الأساسية: تطبيق العدد" />
+	<qualifier code="4KMT" text="مصمم للمهارات الأساسية: تقنيات المعلومات (IT)" />
+	<qualifier code="4KS" text="مصمم / متناسب مع الاختبارات الدراسية الاسكتلندية ومراحلها" />
+	<qualifier code="4KSC" text="للمرحلة P1-P3 (الاسكتلندية)" />
+	<qualifier code="4KSD" text="للمرحلة P4-P6 (الاسكتلندية)" />
+	<qualifier code="4KSF" text="للمرحلة P7-S2 (الاسكتلندية)" />
+	<qualifier code="4KSL" text="للمرحلة Access 3 (الاسكتلندية)" />
+	<qualifier code="4KSM" text="للمرحلة المتوسطة 2 (الاسكتلندية)" />
+	<qualifier code="4KSN" text="للمرحلة المتوسطة 1 (الاسكتلندية)" />
+	<qualifier code="4KSS" text="للمرحلة القياسية (الاسكتلندية)" />
+	<qualifier code="4KST" text="للمرحلة العالية (الاسكتلندية)" />
+	<qualifier code="4KSV" text="للمرحلة العالية المتقدمة (الاسكتلندية)" />
+	<qualifier code="4KT" text="مصمم / متناسب مع المقررات الدراسية الاسكتلندية للمراحل الممتازة (CfE)" />
+	<qualifier code="4KTB" text="للمرحلة CfE المرحلة المبكرة (الاسكتلندية)" />
+	<qualifier code="4KTG" text="للمرحلة CfE المرحلة الأولى (الاسكتلندية)" />
+	<qualifier code="4KTJ" text="للمرحلة CfE المرحلة الثانية (الاسكتلندية)" />
+	<qualifier code="4KTP" text="للمرحلة CfE المرحلة الثالثة (الاسكتلندية)" />
+	<qualifier code="4KTR" text="للمرحلة CfE المرحلة الرابعة (الاسكتلندية)" />
+	<qualifier code="4KV" text="مصمم / متناسب مع مؤهلات المهنية في المملكة المتحدة" />
+	<qualifier code="4KVC" text="للمرحلة NVQ / SVQ (الوطنية / الاسكتلندية، المؤهلات المهنية)" />
+	<qualifier code="4KVCR" text="للمرحلة NVQ / SVQ 1" />
+	<qualifier code="4KVCS" text="للمرحلة NVQ / SVQ 2" />
+	<qualifier code="4KVCT" text="للمرحلة NVQ / SVQ 3" />
+	<qualifier code="4KVCU" text="للمرحلة NVQ / SVQ 4" />
+	<qualifier code="4KVN" text="للمرحلة GNVQ (المؤهلات المهنية الوطنية العامة)" />
+	<qualifier code="4KVNF" text="للمرحلة GNVQ الأساسية" />
+	<qualifier code="4KVNN" text="للمرحلة GNVQ المتوسطة" />
+	<qualifier code="4KVNV" text="للمرحلة GNVQ المتقدمة" />
+	<qualifier code="4KVS" text="للمرحلة GSVQ (المؤهلات المهنية الاسكتلندية العامة)" />
+	<qualifier code="4KVSF" text="للمرحلة GSVQ الأساسية" />
+	<qualifier code="4KVSN" text="للمرحلة QSVQ المتوسطة" />
+	<qualifier code="4KVSV" text="للمرحلة QSVQ المتقدمة" />
+	<qualifier code="4KVT" text="لمرحلة BTEC (مجلس التعليم التجاري والتقني) " />
+	<qualifier code="4KVTA" text="BTEC شهادة تمهيدية - المرحلة1 التأهيلية" />
+	<qualifier code="4KVTB" text="BTEC دبلوم تمهيدي - المرحلة1 التأهيلية" />
+	<qualifier code="4KVTF" text="BTEC أول شهادة - المرحلة2 التأهيلية" />
+	<qualifier code="4KVTG" text="BTEC أول دبلوم - المرحلة2 التأهيلية" />
+	<qualifier code="4KVTJ" text="BTEC الجائزة الوطنية - المرحلة3 التأهيلية" />
+	<qualifier code="4KVTK" text="BTEC الشهادة الوطنية - المرحلة3 التأهيلية" />
+	<qualifier code="4KVTL" text="BTEC الدبلوم الوطني - المرحلة3 التأهيلية" />
+	<qualifier code="4KVTQ" text="BTEC دبلوم أساسي في الفنون والتصميم" />
+	<qualifier code="4KVTX" text="BTEC شهادة وطنية عالية" />
+	<qualifier code="4KVTY" text="BTEC دبلوم وطني عال" />
+	<qualifier code="4M" text="المقررات الدراسية العلمية واختباراتها" />
+	<qualifier code="4MB" text="البكالوريوس الدولي (IB) دبلوم" />
+	<qualifier code="4MG" text="شهادة GCSE الدولي (IGCSE)" />
+	<qualifier code="4P" text="مصمم / متناسب للمقررات الدراسية الأخرى (غير بريطانية) واختباراتها" />
+	<qualifier code="4PC" text="مصمم / متناسب للاختبارات الايرلندية ومراحلها التعليمية" />
+	<qualifier code="4PCJ" text="لشهادة الصغار (ايرلندية)" />
+	<qualifier code="4PCN" text="للسنة الانتقالية (ايرلندية)" />
+	<qualifier code="4PCR" text="لشهادة المغادرة (ايرلندية)" />
+	<qualifier code="4PCV" text="لما بعد شهادة المغادرة (ايرلندية)" />
+	<qualifier code="4PZ" text="مصمم / متناسب للاختبارات الدراسية في جنوب أفريقيا ومراحلها التعليمية" />
+	<qualifier code="4PZC" text="للتربية والتدريب العام (GET) (جنوب أفريقيا)" />
+	<qualifier code="4PZCB" text="مرحلة التطوير الأولي / المستقبل للطفولة R أو المرحلة 0 (جنوب أفريقيا)" />
+	<qualifier code="4PZCD" text="طور المرحلة الأساسية 1 (جنوب أفريقيا)" />
+	<qualifier code="4PZCF" text="طور المرحلة الأساسية 2 (جنوب أفريقيا)" />
+	<qualifier code="4PZCH" text="طور المرحلة الأساسية 3 (جنوب أفريقيا)" />
+	<qualifier code="4PZCJ" text="طور المرحلة المتوسطة 4 (جنوب أفريقيا)" />
+	<qualifier code="4PZCL" text="طور المرحلة المتوسطة 5 (جنوب أفريقيا)" />
+	<qualifier code="4PZCN" text="طور المرحلة المتوسطة 6 (جنوب أفريقيا)" />
+	<qualifier code="4PZCP" text="مرحلة تعليم الكبار 7 (جنوب أفريقيا)" />
+	<qualifier code="4PZCR" text="مرحلة تعليم الكبار 8 (جنوب أفريقيا)" />
+	<qualifier code="4PZCT" text="مرحلة تعليم الكبار 9 (جنوب أفريقيا)" />
+	<qualifier code="4PZF" text="لمراحل التعليم والتدريب الإضافية (FET): الدرجات الأكاديمية (جنوب أفريقيا)" />
+	<qualifier code="4PZFG" text="الدرجات الأكاديمية الإضافية 10 (جنوب أفريقيا)" />
+	<qualifier code="4PZFK" text="الدرجات الأكاديمية الإضافية 11 (جنوب أفريقيا)" />
+	<qualifier code="4PZFM" text="الدرجات الأكاديمية الإضافية 12 (جنوب أفريقيا)" />
+	<qualifier code="4PZT" text="للدرجات الأكاديمية الإضافية: الدرجات المهنية والفنية الأخرى (جنوب أفريقيا)" />
+	<qualifier code="4PZTQ" text="الدرجات الأكاديمية الإضافية N1 (جنوب أفريقيا)" />
+	<qualifier code="4PZTS" text="الدرجات الأكاديمية الإضافية N2 (جنوب أفريقيا)" />
+	<qualifier code="4PZTV" text="الدرجات الأكاديمية الإضافية N3 (جنوب أفريقيا)" />
+	<qualifier code="4W" text="مصمم للتعليم التفاضلي" />
+	<qualifier code="4Y" text="مصمم للتعليم المنزلي" />
+	<qualifier code="5A" text="عمر / مرحلة الاهتمام" />
+	<qualifier code="5AB" text="للأطفال 0-2 سنة من العمر" />
+	<qualifier code="5AC" text="المرحلة العمرية الهامة: من 3 سنة من العمر" />
+	<qualifier code="5AD" text="المرحلة العمرية الهامة: من 4 سنة من العمر" />
+	<qualifier code="5AF" text="المرحلة العمرية الهامة: من 5 سنة من العمر" />
+	<qualifier code="5AG" text="المرحلة العمرية الهامة: من 6 سنة من العمر" />
+	<qualifier code="5AH" text="المرحلة العمرية الهامة: من 7 سنة من العمر" />
+	<qualifier code="5AJ" text="المرحلة العمرية الهامة: من 8 سنة من العمر" />
+	<qualifier code="5AK" text="المرحلة العمرية الهامة: من 9 سنة من العمر" />
+	<qualifier code="5AL" text="المرحلة العمرية الهامة: من 10 سنة من العمر" />
+	<qualifier code="5AM" text="المرحلة العمرية الهامة: من 11 سنة من العمر" />
+	<qualifier code="5AN" text="المرحلة العمرية الهامة: من 12 سنة من العمر" />
+	<qualifier code="5AP" text="المرحلة العمرية الهامة: من 13 سنة من العمر" />
+	<qualifier code="5AQ" text="المرحلة العمرية الهامة: من 14 سنة من العمر" />
+	<qualifier code="5AR" text="للقراء المترددين (الأطفال)" />
+	<qualifier code="5AX" text="للقراء الناشئة (الكبار)" />
+	<qualifier code="5H" text="لاهتمامات العطل والمواسم" />
+	<qualifier code="5HC" text="عيد الميلاد" />
+	<qualifier code="5HE" text="عيد الفصح" />
+	<qualifier code="5HF" text="عيد الأب" />
+	<qualifier code="5HH" text="عيد الهالوين" />
+	<qualifier code="5HM" text="عيد الأم" />
+	<qualifier code="5HV" text="عيد الحب" />
+	<qualifier code="5S" text="ذو اهتمام خاص بالشاذين جنسياً" />
+	<qualifier code="5SG" text="ذو اهتمام خاص بالشاذين من الرجال" />
+	<qualifier code="5SL" text="ذو اهتمام خاص بالسحاقيات" />
+	<qualifier code="5X" text="يحتوي على مواد صريحة" />
+</qualifiers>

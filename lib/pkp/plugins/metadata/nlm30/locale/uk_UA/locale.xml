@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../dtd/locale.dtd">
+
+<!--
+  * plugins/metadata/nlm30/locale/uk_UA/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the uk_UA locale.
+  -->
+ 
+<locale name="uk_UA" full_name="Українська">
+	<!-- plug-in -->
+	<message key="plugins.metadata.nlm30.displayName">Метадані NLM 3.0</message>
+	<message key="plugins.metadata.nlm30.description">Підтримка схем та шаблонів NLM 3.0.</message>
+
+	<!-- citation meta-data adapter -->
+	<message key="plugins.metadata.nlm30.citationAdapter.displayName">Шаблон цитат NLM 3.0</message>
+	<message key="plugins.metadata.nlm30.citationAdapter.description">Естрагувати метадані з цитат/ввести метадані у цитати.</message>
+
+	<!-- citation parsers (citation extraction services) -->
+	<message key="plugins.metadata.nlm30.citationParsers.displayName">Служби екстракції цитат"</message>
+	<message key="plugins.metadata.nlm30.citationParsers.description">Ковертувати текстову цитату в цитату з розміткою NLM 3.0."</message>
+
+	<!-- citation lookup (citation database/improvement/lookup services) -->
+	<message key="plugins.metadata.nlm30.citationLookup.displayName">Служби баз даних цитованості"</message>
+	<message key="plugins.metadata.nlm30.citationLookup.description">Вдосконалити розмітку NLM 3.0, наприклад, шляхом пошуку цитат у зовнішніх базах даних".</message>
+
+	<!-- citation output -->
+	<message key="plugins.metadata.nlm30.citationOutput.displayName">Служби відображення цитат</message>
+	<message key="plugins.metadata.nlm30.citationOutput.description">Конвертувати цитату з розміткою NLM 3.0 у цитату в текстовому форматі.</message>
+	<message key="plugins.metadata.nlm30Xml.citationOutput.displayName">Служби відображення цитат (XML)</message>
+	<message key="plugins.metadata.nlm30Xml.citationOutput.description">Конвертувати цитату з розміткою NLM 3.0 у цитату формату XML.</message>
+
+	<!-- NLM 3.0 output -->
+	<message key="plugins.metadata.nlm30.nlm30XmlOutput.displayName">Відображення журналу NLM 3.0</message>
+
+	<!-- NLM 2.3 output -->
+	<message key="plugins.metadata.nlm30.nlm23XmlOutput.displayName">Відображення журналу NLM 2.3</message>
+
+	<!-- NLM 3.0 to 2.3 downgrade -->
+	<message key="plugins.metadata.nlm30.nlm30ToNlm23Xml.displayName">Зниження версії відображення журналу з NLM 3.0 до 2.3</message>
+	<message key="plugins.metadata.nlm30.nlm30ToNlm23Xml.description">Дозволяє повернутись від версії відображення NLM 3.0 до 2.3.</message>
+
+	<!-- Plain text reference list output -->
+	<message key="plugins.metadata.nlm30.refList.displayName">Генерація списку пристатейної бібліографії у текстовому форматі</message>
+	<message key="plugins.metadata.nlm30.refList.description">Дозволяє генерувати форматований текстовий список пристатейної бібліографії з бібліографії подання OJS/OCS/OMP</message>
+</locale>

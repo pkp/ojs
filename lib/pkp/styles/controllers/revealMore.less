@@ -1,0 +1,58 @@
+/**
+ * @file styles/controllers/revealMore.less
+ *
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @ingroup pkp_controllers_revealMore
+ *
+ * @brief Reveal more widget styles
+ */
+
+.pkp_controllers_revealMore {
+	position: relative;
+
+	.reveal_more_wrapper {
+		display: none;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: @double;
+		width: 100%;
+		background: #fff;
+		border-top: @bg-border;
+		text-align: center;
+
+		button {
+			border: none;
+			background: #fff;
+			color: @primary;
+			font-size: @font-sml;
+			line-height: @line-sml;
+			font-weight: @bold;
+
+			&:hover,
+			&:focus {
+				color: @bg-anchor;
+			}
+
+			&:before {
+				&:extend(.pkp_caret);
+				&:extend(.pkp_caret_down);
+				position: relative;
+				top: 1px;
+				margin-right: 0.5em;
+			}
+		}
+	}
+
+	&.isHidden {
+		overflow-y: hidden;
+
+		.reveal_more_wrapper {
+			display: block;
+		}
+	}
+}

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/sr_SR/grid.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the sr_SR (Cрпски) locale.
+  *
+  -->
+
+<locale name="sr_SR" full_name="Cрпски">
+	<!-- Common -->
+	<message key="grid.noItems">Nema stavki</message>
+	<message key="grid.settings">Podešavanja</message>
+
+	<message key="grid.action.sort">Poređaj</message>
+	<message key="grid.action.addItem">Dodaj stavku</message>
+	<message key="grid.action.delete">Obriši</message>
+	<message key="grid.action.remove">Ukloni</message>
+	<message key="grid.action.edit">Izmeni</message>
+	<message key="grid.action.approve">Odobri</message>
+	<message key="grid.action.decline">Odbi</message>
+	<message key="grid.action.moreInformation">Više informacija</message>
+	<message key="grid.action.restoreDefaults">Vrati na osnovne vrednosti</message>
+
+	<!-- Common Grid Column Titles -->
+	<message key="grid.columns.actions">Akcije</message>
+	<message key="grid.columns.institution">Institucija</message>
+	<message key="grid.columns.url">URL</message>
+
+	<!-- Sponsors Grid -->
+	<message key="grid.sponsor.title">Sponzori</message>
+
+	<!-- Masthead Grid -->
+	<!-- Contributor Grid -->
+	<message key="grid.contributor.title">Saradnici</message>
+	<message key="grid.action.addAuthor">Dodaj autora</message>
+
+	<!-- Review Forms Grid -->
+	<message key="grid.reviewForm.title">Forme recenzija</message>
+
+	<!-- Book File Types Grid -->
+	<!-- Artwork Files Grid -->
+	<!-- Library Files -->
+	<message key="grid.libraryFiles.column.files">Fajlovi</message>
+	<message key="grid.libraryFiles.submission.title">Biblioteka predatih radova</message>
+	<message key="grid.libraryFiles.editorial.title">Urednička biblioteka</message>
+	<message key="grid.libraryFiles.review.title">Recezentska biblioteka</message>
+	<message key="grid.libraryFiles.production.title">Proizvodna biblioteka</message>
+	<message key="grid.libraryFiles.productionTemplate.title">Biblioteka proizvodnih šablona</message>
+
+	<!-- SubmissionChecklist -->
+	<message key="grid.submissionChecklist.title">Spisak za proveru predatih radova</message>
+	<message key="grid.submissionChecklist.column.checklistItem">Stavke spiska za proveru</message>
+
+	<!-- Submission Contributors -->
+	<message key="author.users.contributor.name">Ime</message>
+	<message key="author.users.contributor.email">Imejl</message>
+	<message key="author.users.contributor.role">Uloga</message>
+	<message key="author.users.contributor.principalContact">Primarni kontakt</message>
+
+	<!-- Review Attachments -->
+	<!-- Chapters -->
+	<message key="grid.action.addUser">Dodaj korisnika</message>
+	<message key="grid.action.deleteFile">Obriši fajl</message>
+	<message key="grid.action.deleteMedia">Obriši medij.</message>
+	<message key="grid.action.editMedia">Uredi medij</message>
+	<message key="grid.action.editAuthor">Uredi autora</message>
+	<message key="grid.action.deleteAuthor">Obriši autora</message>
+	<message key="grid.action.upgrade">Nadogradi</message>
+	<message key="grid.action.order">Poredak</message>
+	<message key="grid.action.cancelOrdering">Poništi poredak</message>
+	<message key="grid.action.extendAll">Otvori se</message>
+	<message key="grid.action.collapse">Zatvori</message>
+	<message key="grid.action.collapseAll">zatvori sve</message>
+	<message key="grid.action.wizard">Čarobnjak podešavanja</message>
+	<message key="grid.action.moveItem">Premesti stavku</message>
+	<message key="grid.action.downloadFile">Preuzmi fajl</message>
+	<message key="grid.action.downloadAll">Preuzmi sve fajlove kao arhivu</message>
+	<message key="grid.action.readReview">Pročitaj recenziju</message>
+	<message key="grid.action.email">Pošalji imejl</message>
+	<message key="grid.action.addReviewer">Dodaj recenzenta</message>
+	<message key="grid.action.addFile">Dodaj fajl</message>
+	<message key="grid.action.editFile">Izmeni fajl</message>
+	<message key="grid.action.selectFiles">Obeleži fajlove za uređivanje</message>
+	<message key="grid.action.accept">Prihvati predaju</message>
+	<message key="grid.action.settings">Podešavanja</message>
+	<message key="grid.action.importexport">Uvezi ili izvezi sadržaj ili podatke sa sajta</message>
+	<message key="grid.action.addPreparedEmail">Dodaj novi imejl šablon</message>
+	<message key="grid.action.editPreparedEmail">Uredi šablon</message>
+	<message key="grid.action.disableEmail">Isključi šablon</message>
+	<message key="grid.action.resetEmail">Resetuj šablon na osnovne postavke</message>
+	<message key="grid.action.internalReview">Pošalji rad internom recenzentu</message>
+	<message key="grid.action.externalReview">Pošalji rad spoljašnjem recenzentu</message>
+	<message key="grid.action.sendToProduction">Pošalji rad u produkciju</message>
+	<message key="grid.action.orderItems">Onogući mod "poretka"</message>
+</locale>

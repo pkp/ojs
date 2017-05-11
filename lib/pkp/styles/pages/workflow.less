@@ -1,0 +1,434 @@
+/**
+ * @file styles/pages/workflow.less
+ *
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @brief Styles for the workflow pages
+ *
+ */
+
+// Title and author
+.pkp_page_header {
+	position: relative;
+
+	.pkp_submission_author {
+		margin-right: 1em;
+		max-width: 50%; // @todo We can work out a more responsive width system when we improve tablet/phone support
+		overflow: hidden;
+		font-size: @font-sml;
+		font-weight: @normal;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		// This ensures the author will align horizontally with the actions
+		// which follow it. It's complicated: http://stackoverflow.com/a/20566810/1723499
+		vertical-align: bottom;
+	}
+
+	// Adjust the title area for title + author
+	.pkp_page_title {
+		padding-top: @base + @half;
+		padding-bottom: @base + @half;
+	}
+
+	.pkp_submission_title,
+	.pkp_submission_author {
+		line-height: @line-base;
+	}
+
+}
+
+// Action links alongside author
+@pkp_submission_actions_height: @base + @double;
+.pkp_submission_workflow .pkp_page_title {
+	margin-top: @pkp_submission_actions_height;
+}
+
+.pkp_submission_actions {
+	&:extend(.pkp_unstyled_list);
+	position: absolute;
+	top: -@pkp_submission_actions_height;
+	left: 0;
+	right: 0;
+	height: @pkp_submission_actions_height;
+	line-height: @pkp_submission_actions_height;
+	padding-left: @double;
+	padding-right: @double;
+	background: @primary;
+	text-align: right;
+
+	li {
+		display: inline-block;
+	}
+
+	a {
+		display: block;
+		padding-left: 1em;
+		padding-right: 1em;
+		font-size: @font-sml;
+		font-weight: @bold;
+		color: #fff;
+		text-decoration: none;
+		text-shadow: 0 2px 0 rgba(0,0,0,0.2);
+
+		&:hover,
+		&:focus {
+			background: @bg;
+			color: @primary;
+			text-shadow: 0 2px 0 rgba(255,255,255,0.4);
+			outline: 0;
+		}
+	}
+}
+
+// Tabs
+.pkp_submission_workflow {
+
+	.ui-tabs-nav {
+
+		// Stage currently initiated
+		.initiated a:before,
+		.initiated:focus a:before,
+		.initiated a:hover:before,
+		.initiated a:focus:before {
+			width: 100%;
+			background: @offset;
+		}
+
+		.initiated:not(.ui-state-active) a:before {
+			top: @double + @base - 2;
+		}
+	}
+}
+
+.pkp_workflow_decisions {
+
+	a {
+		&:extend(.pkp_button all);
+		width: 100%;
+
+		&.pkp_linkaction_decline {
+			&:extend(.pkp_button_offset all);
+		}
+
+		&.pkp_linkaction_externalReview,
+		&.pkp_linkaction_sendToProduction,
+		&.pkp_linkaction_schedulePublication {
+			&:extend(.pkp_button_primary all);
+		}
+
+	}
+}
+
+.export_actions {
+	padding-left: @double;
+	padding-right: @double;
+
+	.export_action {
+		padding-right: @base;
+		display: inline-block;
+
+		.deposit {
+			&:extend(.pkp_button_primary all);
+			&:extend(.pkp_button all);
+		}
+	}
+}
+
+[id^="reviewDecisionsDiv"] .pkp_linkaction_accept {
+	&:extend(.pkp_button_primary all);
+}
+
+.pkp_participants_grid {
+	margin-bottom: @double;
+
+	.pkp_controllers_grid {
+		margin-bottom: 0;
+	}
+
+	.gridRow:not(.category) td {
+		padding-left: @double; // make room for the drop-down caret
+	}
+
+	thead,
+	thead tr,
+	thead th {
+		border: none;
+		padding: 0;
+	}
+}
+
+//
+// Hacky workarounds for targetting specific things that aren't that well
+// marked up, or otherwise cause complications
+//
+
+// Style reviewer's grid
+[id^="reviewersGrid"] {
+
+	// Hide the table headers
+	thead {
+		&:extend(.pkp_screen_reader);
+	}
+
+	.first_column,
+	th:first-child {
+		width: 40%;
+	}
+
+	tbody td:not(.first_column) {
+		font-size: @font-sml;
+		line-height: @line-sml;
+	}
+
+	tbody td:nth-child(2) {
+		font-weight: @bold;
+
+		.details {
+			display: block;
+			font-size: @font-tiny;
+			font-weight: @normal;
+			line-height: @line-tiny;
+			color: @text-light;
+		}
+	}
+
+	.overdue {
+		color: @no;
+	}
+
+	td:last-child a {
+		&:extend(.pkp_button_link all);
+	}
+}
+
+// Style review display/confirm form
+#readReviewForm {
+
+	.pkp_controllers_informationCenter_itemLastEvent {
+		position: relative;
+		display: block;
+		padding: @base;
+		padding-left: @base + @half;
+		border: @bg-border;
+		border-left: none;
+		font-size: @font-sml;
+		line-height: @line-sml;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: -1px;
+			left: 0;
+			bottom: -1px;
+			width: @half;
+			background: @primary;
+		}
+	}
+
+	.pkp_controllers_grid {
+		margin-bottom: 0;
+	}
+}
+
+// Adjust display of selected reviewer in add reviewer form
+.pkp_reviewer_form .selected_reviewer {
+	&:extend(.pkp_form .section);
+
+	.label {
+		font-weight: @bold;
+	}
+
+	.name {
+		font-style: italic;
+		color: @text-light;
+		color: @text-light-rgba;
+	}
+
+	.actions a {
+		font-size: @font-tiny;
+		margin-left: 1em;
+	}
+}
+
+// Email messages in author review stage
+.pkp_submission_emails {
+	margin-bottom: @double * 2;
+
+	h3 {
+		&:extend(.pkp_controllers_grid .header h4 all);
+	}
+
+	ul {
+		&:extend(.pkp_unstyled_list all);
+		border: @bg-border-light;
+	}
+
+	li {
+		&:extend(.pkp_helpers_clear all);
+		&:extend(.pkp_controllers_grid td);
+		border-bottom: @bg-border-light;
+
+		&:last-child {
+			border-bottom: none;
+		}
+	}
+
+	.message,
+	.date {
+		display: block;
+		float: left;
+		width: 50%;
+	}
+
+	.message {
+		white-space: nowrap;
+		overflow-x: hidden;
+		text-overflow: ellipsis;
+	}
+
+	.date {
+		font-size: @font-sml;
+		color: @text-light;
+		text-align: right;
+	}
+
+	@media(min-width: 992px) {
+
+		.message {
+			width: 60%;
+		}
+
+		.date {
+			width: 40%;
+		}
+	}
+
+	@media(min-width: 1200px) {
+
+		.message {
+			width: 75%;
+		}
+
+		.date {
+			width: 25%;
+		}
+	}
+}
+
+.pkp_submission_email {
+	font-size: @font-sml;
+	line-height: @line-sml;
+
+	h2 {
+		margin: 0;
+		font-size: @font-lead;
+		line-height: @line-lead;
+	}
+
+	.date {
+		margin: @base 0;
+	}
+
+	.email_entry {
+		margin-top: @double;
+		padding: @base;
+		background: @bg-light;
+		border: @bg-border-light;
+	}
+}
+
+// Discussions grids
+#queriesGrid .pkp_controllers_grid {
+
+	td:not(:first-child) {
+		font-size: @font-sml;
+		line-height: @line-sml;
+	}
+}
+
+// @todo
+.pkp_page_header {
+
+	.submission_progress {
+		overflow: hidden;
+		display: table;
+		width: 100%;
+		position: relative;
+	}
+
+	.submission_progress li {
+		height:37px;
+		line-height:12px;
+		width: 19.5%;
+		background-image:url('@{baseUrl}/lib/pkp/templates/images/structure/workflow_inactive.png');
+		text-align: center;
+		color: #ffffff;
+		float: none;
+		vertical-align: middle;
+		display: table-cell;
+	}
+
+	.submission_progress li a {
+		text-decoration:none;
+		font-size: 12px;
+		text-transform: uppercase;
+		color:#ffffff;
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+
+	.submission_progress li.actionNeeded {
+		background-image:url('@{baseUrl}/lib/pkp/templates/images/structure/workflow_actionNeeded.png');
+	}
+
+	.submission_progress li.stageDisabled {
+		background-image:none;
+		background-color:#E5E1DD;
+	}
+
+	.submission_progress li.stageDisabled a {
+		color:#999999;
+	}
+
+	.submission_progress li.productionReady {
+		background-image:url('@{baseUrl}/lib/pkp/templates/images/structure/workflow_productionReady.png');
+	}
+
+	.submission_progress li.current {
+ 		background-image:url('@{baseUrl}/lib/pkp/templates/images/structure/workflow_current.png');
+
+ 		a {
+ 			font-size: 13px;
+ 		}
+
+		&.productionReady {
+			background-image:url('@{baseUrl}/lib/pkp/templates/images/structure/workflow_productionReadyCurrent.png') !important;
+		}
+ 	}
+
+	.submission_progress li.complete a:after {
+		background-color: #e5f4e5;
+	}
+
+	.submission_progress li.current a:after {
+ 		background-color: #EAF3F8;
+ 	}
+
+	.submission_progress li:before {
+		margin-left: 2px;
+		left: 100%;
+		z-index: 1;
+	}
+
+	.submission_progress li a:after {
+		background-color: white;
+		content: " ";
+		display: block;
+		width: 1px;
+		top: 0;
+		height: 37px;
+		position: absolute;
+	}
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the ru_RU (Русский) locale.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Russian_(ru_RU)
+  *
+  -->
+ 
+<locale name="ru_RU" full_name="Русский">
+	<message key="plugins.generic.acron.name">Модуль «Acron»</message>
+	<message key="plugins.generic.acron.description">Пытается уменьшить зависимость приложения от инструментов периодического запуска по расписанию, таких как cron.</message>
+	<message key="plugins.generic.acron.enabled">Модуль «Acron» был включен.</message>
+	<message key="plugins.generic.acron.disabled">Модуль «Acron» был отключен.</message>
+	<message key="plugins.generic.acron.reloadedCronTab">Таблица сron успешно перезагружена.</message>
+	
+	<message key="plugins.generic.acron.reload">Перезагрузить запланированные задачи</message>
+	<message key="plugins.generic.acron.tasksReloaded">Запланированные задачи были перезагружены.</message>
+</locale>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/el_GR/installer.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the el_GR (ελληνικά) locale.
+  *
+  -->
+
+<locale name="el_GR" full_name="ελληνικά">
+	<message key="installer.additionalLocales">Πρόσθετες τοπικές ρυθμίσεις</message>
+	<message key="installer.administratorAccount">Λογαριασμός διαχειριστή</message>
+	<message key="installer.administratorAccountInstructions">Ο συγκεκριμένος λογαριασμός χρήστη θα αποτελεί τον διαχειριστή του ιστοτόπου και θα έχει πλήρη πρόσβαση στο σύστημα. Πρόσθετοι λογαριασμοί χρηστών μπορούν να δημιουργηθούν μετά από την εγκατάσταση.</message>
+	<message key="installer.checkNo"><![CDATA[<span class="pkp_form_error formError">Όχι</span>]]></message>
+	<message key="installer.checkYes">Ναι</message>
+	<message key="installer.clientCharset">Client character set</message>
+	<message key="installer.clientCharsetInstructions">Κωδικοποίηση για τα δεδομένα που αποστέλλονται και λαμβάνονται από προγράμματα φυλλομέτρησης.</message>
+	<message key="installer.configFileError"><![CDATA[Το αρχείο ρυθμίσεων <tt>config.inc.php</tt> δεν υπάρχει ή δεν είναι αναγνώσιμο.]]></message>
+	<message key="installer.connectionCharset"> Connection character set</message>
+	<message key="installer.contentsOfConfigFile">Περιεχόμενα αρχείου ρυθμίσεων</message>
+	<message key="installer.createDatabase">Δημιουργία βάσης δεδομένων</message>
+	<message key="installer.createDatabaseInstructions">Για να χρησιμοποιήσετε αυτή την επιλογή, το σύστημά σας πρέπει να υποστηρίζει την απομακρυσμένη δημιουργία βάσης δεδομένων και ο λογαριασμός χρήστης σας πρέπει να διαθέτει τις απαραίτητες άδειες για τη δημιουργία νέας βάσης δεδομένων. Εάν η εγκατάσταση δεν ολοκληρωθεί επιτυχώς με την συγκεκριμένη επιλογή ενεργοποιημένη, δημιουργήστε βάση δεδομένων στον διακομιστή σας μη αυτόματα και εκτελέστε το πρόγραμμα εγκατάστασης ξανά έχοντας την συγκεκριμένη επιλογή απενεργοποιημένη.</message>
+	<message key="installer.databaseCharset"> Database character set</message>
+	<message key="installer.databaseDriver">Οδηγός βάσης δεδομένων (Database driver)</message>
+	<message key="installer.databaseDriverInstructions"><![CDATA[<strong>Οι οδηγοί (drivers) της βάσης δεδομένων που παρουσιάζονται εντός αγκυλών δεν φαίνεται να έχουν φορτώσει την απαραίτητη επέκταση PHP, και, εάν επιλεχθεί η εγκατάσταση, πιθανώς να μην ολοκληρωθεί επιτυχώς.</strong><br /> Όλοι οι οδηγοί που δεν υποστηρίζονται από τους παραπάνων, παρουσιάζονται αποκλειστικά για ακαδημαϊκή χρήση και δεν είναι πιθανό να λειτουργήσουν.]]></message>
+	<message key="installer.databaseHost">Host</message>
+	<message key="installer.databaseHostInstructions">Αφήστε το όνομα του host κενό χρησιμοποιώντας υποδοχές τομέα αντί μέσω TCP/IP. Η ενέργεια αυτή δεν είναι απαραίτητη με την MySQL, η οποία χρησιμοποιεί αυτόματα υποδοχές (sockets) αν γίνει καταχώριση "localhost", αλλά μπορεί να είναι απαραίτητη με κάποιους άλλους εξυπηρετητές βάσης δεδομένων όπως PostgreSQL.</message>
+	<message key="installer.databaseName">Όνομα βάσης δεδομένων</message>
+	<message key="installer.databasePassword">Κωδικός πρόσβασης</message>
+	<message key="installer.databaseSettings">Ρυθμίσεις βάσης δεδομένων</message>
+	<message key="installer.databaseUsername">Όνομα χρήστη</message>
+	<message key="installer.encryption">Αλγόριθμος κωδικοποίησης (encryption) κωδικού πρόσβασης</message>
+	<message key="installer.filesDir">Κατάλογος για φόρτωση αρχείων</message>
+	<message key="installer.fileSettings">Ρυθμίσεις αρχείου</message>
+	<message key="installer.form.clientCharsetRequired">Πρέπει να επιλεχθεί ένα client character set.</message>
+	<message key="installer.form.databaseDriverRequired"> Πρέπει να επιλεχθεί οδηγός (driver) βάσης δεδομένων.</message>
+	<message key="installer.form.databaseNameRequired">Απαιτείται όνομα βάσης δεδομένων</message>
+	<message key="installer.form.emailRequired">Απαιτείται έγκυρη διεύθυνση ηλεκτρονικού ταχυδρομείου για τον λογαριασμό του διαχειριστή.</message>
+	<message key="installer.form.encryptionRequired"> Πρέπει να επιλεχθεί ο αλγόριθμος που θα χρησιμοποιηθεί για κωδικοποίηση (encryption) των κωδικών πρόσβασης χρηστών.</message>
+	<message key="installer.form.filesDirRequired">Απαιτείται ο ορισμός του φακέλου (directory( που θα χρησιμοποιηθεί για thn αποθήκευση των αρχείων που έχουν φορτωθεί.</message>
+	<message key="installer.form.localeRequired">Πρέπει να επιλεχθεί μια τοπική ρύθμιση.</message>
+	<message key="installer.form.passwordRequired"> Απαιτείται κωδικός πρόσβασης για τον λογαριασμό διαχειριστή.</message>
+	<message key="installer.form.passwordsDoNotMatch">Οι κωδικοί πρόσβασης του διαχειριστή δεν ταιριάζουν</message>
+	<message key="installer.form.separateMultiple">Διαχωρίστε ξεχωριστές τιμές με κόμματα</message>
+	<message key="installer.form.usernameAlphaNumeric"> Το όνομα χρήστη του διαχειριστή μπορεί να περιέχει μόνο αλφαριθμητικούς χαρακτήρες, χαρακτήρες υπογράμμισης, και παύλες και πρέπει να αρχίζει και να τελειώνει με έναν αλφαρηθμητικό χαρακτήρα.</message>
+	<message key="installer.form.usernameRequired">Απαιτείται όνομα χρήστη για τον λογαριασμό διαχειριστή.</message>
+	<message key="installer.installationWrongPhp"><![CDATA[<br/><strong>ΕΙΔΟΠΟΙΗΣΗ: Η τρέχουσα έκδοση της PHP στον υπολογιστή σας δεν ικανοποιεί τις ελάχιστες προδιαγραφές εγκατάστασης. Συνιστάται η αναβάθμιση σε μια νεώτερη έκδοση PHP.</strong>]]></message>
+	<message key="installer.installErrorsOccurred">Σφάλματα που προέκυψαν κατά την εγκατάσταση</message>
+	<message key="installer.installerSQLStatements">SQL Statements για την εγκατάσταση</message>
+	<message key="installer.installFileError"><![CDATA[Το αρχείο εγκατάστασης <tt>dbscripts/xml/install.xml</tt> δεν υπάρχει ή δεν είναι εγγράψιμο (writable).]]></message>
+	<message key="installer.installFilesDirError">Ο καθορισμένος φάκελος (directory) δεν υπάρχει ή δεν είναι εγγράψιμος (writable).</message>
+	<message key="installer.installParseDBFileError"><![CDATA[Σφάλμα κατά την ανάλυση (parsing) του αρχείου εγκατάστασης της βάσης δεδομένων <tt>{$file}</tt>.]]></message>
+	<message key="installer.locale">Τοπικές ρυθμίσεις</message>
+	<message key="installer.localeSettings">Τοπικές ρυθμίσεις</message>
+	<message key="installer.miscSettings">Λοιπές Ρυθμίσεις </message>
+	<message key="installer.oaiRepositoryIdInstructions"><![CDATA[Ένα μοναδικό αναγνωριστικό χρησιμοποιείται για την αναγνώριση των εγγραφών μεταδεδομένων των ευρετηρίων του συγκεκριμένου ιστοτόπου με χρήση του <a href="http://www.openarchives.org/" target="_blank">Open Archives Initiative</a> Protocol for Metadata Harvesting.]]></message>
+	<message key="installer.oaiRepositoryId">Αναγνωριστικό (identifier) OAI καταθετηρίου</message>
+	<message key="installer.publicFilesDirError">Ο κατάλογος των δημόσιων αρχείων δεν υπάρχει ή δεν είναι εγγράψιμος (writable).</message>
+	<message key="installer.releaseNotes">Σημιεώσεις έκδοσης</message>
+	<message key="installer.securitySettings">Ρυθμίσεις ασφαλείας</message>
+	<message key="installer.installParseEmailTemplatesFileError"><![CDATA[Error parsing the email template file <tt>{$file}</tt>.]]></message>
+	<message key="installer.locale.maybeIncomplete">Οι επιλεγμένες τοπικές ρυθμίσεις μπορεί να μην είναι ολοκλήρωμένες</message>
+</locale>

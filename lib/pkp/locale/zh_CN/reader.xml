@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/zh_CN/reader.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (English) locale.
+  *
+  -->
+
+<locale name="zh_CN" full_name="简体中文">
+	<message key="comments.anonymous">匿名用户</message>
+	<message key="comments.anonymousNamed">"{$userName}"</message>
+	<message key="comments.body">正文</message>
+	<message key="comments.titleRequired">评论的标题是必须的.</message>
+	<message key="comments.confirmDeleteChildren">删除此评论将同时删除任何回复。您确定要做到这一点?</message>
+	<message key="comments.delete">删除这个评论</message>
+	<message key="comments.email">提交人电子邮箱</message>
+	<message key="comments.emailReply">回复电子邮件</message>
+	<message key="comments.enterComment">输入评论</message>
+	<message key="comments.inResponseTo">在回应 <![CDATA[<a href="]]>{$url}<![CDATA[">]]>{$title}<![CDATA[</a>]]></message>
+	<message key="comments.name">提交人姓名</message>
+	<message key="comments.noComments">没有已经发布的读者评论.</message>
+	<message key="comments.nReplies">({$num} 回复)</message>
+	<message key="comments.oneReply">(1 回复)</message>
+	<message key="comments.postAnonymously">匿名发布这个评论</message>
+	<message key="comments.postReply">发表回复</message>
+	<message key="comments.readerComments">读者评论</message>
+	<message key="comments.readMore">更多</message>
+	<message key="comments.replies">回复</message>
+	<message key="comments.title">标题</message>
+	<message key="comments.viewAllComments">查看所有评论</message>
+	<message key="reader.fullText">全文:</message>
+	<message key="rt.addComment">添加评论</message>
+	<message key="rt.admin.configuration">配置</message>
+	<message key="rt.admin.contexts.confirmDelete">你确定要删除此语境下所有相关的搜索?</message>
+	<message key="rt.admin.contexts.createContext">创建语境</message>
+	<message key="rt.admin.contexts.edit.editContext">编辑语境</message>
+	<message key="rt.admin.contexts.metadata">源数据</message>
+	<message key="rt.admin.contexts.options.authorTerms">使用作者姓名作为默认的搜索词，可以查找到该作者的其他作品. (例如为"其他作品"语境)</message>
+	<message key="rt.admin.contexts.options.citedBy">使用作者名称作为预设的搜寻项目，并将文章脉络显示成一个搜寻项目以引用本文.</message>
+	<message key="rt.admin.contexts.options.defineTerms"><![CDATA[使用读者所反白的字词作为预设的搜寻项目，或者如果没有选择本文任何项目的话，以留白的区域当作搜寻项目。（例如，在「词汇定义」的情况下）。「词汇定义」选项一定要在<a href="{$settingsUrl}">RST Settings</a>启用才能允许双击文字来开启这个文章脉络。]]></message>
+	<message key="rt.admin.contexts.options.geoTerms">以地理索引资料当作预设的搜寻项目.</message>
+	<message key="rt.admin.contexts.options">选项</message>
+	<message key="rt.admin.management">管理</message>
+
+	<message key="rt.admin.sharing">分享</message>
+	<message key="rt.admin.sharing.enabled">共享启用</message>
+	<message key="rt.admin.sharing.description"><![CDATA[为了让读者分享您的期刊文章，请注册一个账户到网站<a href="http://www.addthis.com">addthis.com</a>, 并且复制/粘帖分享按钮代码到下面.]]></message>
+
+	<message key="rt.admin.sharing.basic">基础设置</message>
+	<message key="rt.admin.sharing.userNameLabel">AddThis.com user name</message>
+	<message key="rt.admin.sharing.buttonStyleLabel">按钮样式</message>
+	<message key="rt.admin.sharing.dropDownMenuLabel">使用下拉菜单</message>
+	<message key="rt.admin.sharing.advanced">高级设置 (可选)</message>
+	<message key="rt.admin.sharing.customizationLink"><![CDATA[参阅关于参考文献的 <a href="http://support.addthis.com/customer/portal/articles/381236-custom-buttons">AddThis.com 定制文档</a>.]]></message>
+	<message key="rt.admin.sharing.brandLabel">Brand</message>
+	<message key="rt.admin.sharing.dropDownLabel"><![CDATA[下拉选项 <br /> (逗号分隔的列表)]]></message>
+	<message key="rt.admin.sharing.languageLabel">语言</message>
+	<message key="rt.admin.sharing.logolabel">Logo</message>
+	<message key="rt.admin.sharing.logoBackgroundLabel">Logo 背景</message>
+	<message key="rt.admin.sharing.logoColorLabel">Logo 颜色</message>
+
+	<message key="rt.admin.readingToolsEnabled">阅读工具</message>
+	<message key="rt.admin.searches.confirmDelete">您确认删除这个搜索?</message>
+	<message key="rt.admin.searches.createSearch">创建搜索</message>
+	<message key="rt.admin.searches.edit.editSearch">编辑搜索</message>
+	<message key="rt.admin.selectedVersion">相关项目</message>
+	<message key="rt.admin.settings.abstract">摘要 (介绍项目的摘要).</message>
+	<message key="rt.admin.settings.authorBio">关于作者 (显示由作者提供的简介).</message>
+	<message key="rt.admin.settings.captureCite">如何印证项目 (提供书目详细项目).</message>
+	<message key="rt.admin.settings.defineTerms">查找名词 (使读者双击单词中的任何一个项目并把单词发送到词典).</message>
+	<message key="rt.admin.settings.disableRelatedItems">禁用相关项目</message>
+	<message key="rt.admin.settings.emailAuthor">电子邮件通知作者(指向一个带有作者邮箱的电子邮件模板).</message>
+	<message key="rt.admin.settings.emailOthers">通知同事 (指向一个的带有链接到项目的电子邮件模板).</message>
+	<message key="rt.admin.settings.findingReferences">查找参考文献</message>
+	<message key="rt.admin.settings.printerFriendly">打印版本 (提供一个项目的友好的打印版本).</message>
+	<message key="rt.admin.settings.supplementaryFiles">附件 (显示作者包含投稿的文件列表).</message>
+	<message key="rt.admin.settings.viewMetadata">索引的源数据 (显示由作者和系统提供的项目索引元数据).</message>
+	<message key="rt.admin.status">状态</message>
+	<message key="rt.admin.configureSharing">配置 AddThis</message>
+	<message key="rt.admin.validateUrls.complete">验证完成.</message>
+	<message key="rt.admin.validateUrls.ok">OK</message>
+	<message key="rt.admin.validateUrls.urlIsInvalid">{$url} 是无效的.</message>
+	<message key="rt.admin.validateUrls">为阅读工具验证URLs</message>
+	<message key="rt.admin.validateUrls.validate">验证</message>
+	<message key="rt.admin.versions.confirmDelete">您确定您希望删除这个版本以及所有相关的文章脉络和搜寻结果？</message>
+	<message key="rt.admin.versions.confirmRestore">您确定您希望进行不可逆的复原动作，回复所有版本到预设值？一旦如此，您将会需要在配置页面选择一个现有的版本.</message>
+	<message key="rt.admin.versions.createVersion">创建版本</message>
+	<message key="rt.admin.versions.edit.editVersion">编辑版本</message>
+	<message key="rt.admin.versions.export">导出</message>
+	<message key="rt.admin.versions.importVersion">导入版本</message>
+	<message key="rt.admin.versions.metadata">源数据</message>
+	<message key="rt.admin.versions.restoreVersions">恢复到默认版本</message>
+	<message key="rt.authorBio">关于作者</message>
+	<message key="rt.captureCite.format">印证格式</message>
+	<message key="rt.captureCite">如何引证项目</message>
+	<message key="rt.captureCite.online">在线</message>
+	<message key="rt.colleague">通知同事</message>
+	<message key="rt.context.abbrev">缩写</message>
+	<message key="rt.context.and">AND</message>
+	<message key="rt.context.citesContextDescription">如果这份文章被Google学术搜寻(Google Scholar)索引，它会随附一个「由X引用」的链接，引导至一份引用本文的作品清单。同时Google学术搜寻会列出所有项目的引用标题与作者。要阅读只能透过您的搜寻数据库才能取得的线上资源，您或许可以到Google学术搜寻的「学术偏好配置」中，启用启用您服务单位的图书馆链接.</message>
+	<message key="rt.context">语境</message>
+	<message key="rt.context.defineTermsDescription">如果这个项目是一个HTML文件（而非PDF档），请双击文章中的任一个字汇，使其显示在「字词定义」对话框中。除此之外，可以在此对话框中键入或者贴上字汇。要学习更多关于搜寻资源的信息，请点击「介绍」。这些资源是基于其关连性与开放（自由）阅读所有或部分内容而被选取的.</message>
+	<message key="rt.context.description">描述</message>
+	<message key="rt.context.order">顺序</message>
+	<message key="rt.contexts">语境</message>
+	<message key="rt.context.searchDescription">作者已经选择了搜寻词汇。读者可以变更或者删除它们，同时以两到三个准确的词汇或片语进行最佳的布尔逻辑(AND)搜寻。要学习更多关于搜寻资源的信息，请点击「介绍」。这些资源是基于其关连性与开放（自由）阅读所有或部分内容而被选取的.</message>
+	<message key="rt.context.searchTerms">搜索项目</message>
+	<message key="rt.context.termToDefine">Word to define</message>
+	<message key="rt.context.title">标题</message>
+	<message key="rt.emailAuthor">发送邮件给作者</message>
+	<message key="rt.email.needLogin"><![CDATA[* 必填 <a target="_parent" href="{$loginUrl}">注册</a>]]></message>
+	<message key="rt.email.sent">您的信息已发送.</message>
+	<message key="rt.findingReferences">查找参考文献</message>
+	<message key="rt.findingReferences.googleScholar">Google Scholar</message>
+	<message key="rt.findingReferences.windowsLiveAcademic">Windows Live 学术</message>
+	<message key="rt.lookUp">查找术语</message>
+	<message key="rt.metadata.dublinCore.contributor">合作者</message>
+	<message key="rt.metadata.dublinCore.coverage">范围</message>
+	<message key="rt.metadata.dublinCore.date">日期</message>
+	<message key="rt.metadata.dublinCore.description">描述</message>
+	<message key="rt.metadata.dublinCore">Dublin Core</message>
+	<message key="rt.metadata.dublinCore.format">格式</message>
+	<message key="rt.metadata.dublinCore.identifier">识别码</message>
+	<message key="rt.metadata.dublinCore.language">语言</message>
+	<message key="rt.metadata.dublinCore.publisher">出版商</message>
+	<message key="rt.metadata.dublinCore.relation">关系</message>
+	<message key="rt.metadata.dublinCore.rights">权力</message>
+	<message key="rt.metadata.dublinCore.source">源</message>
+	<message key="rt.metadata.dublinCore.subject">主题</message>
+	<message key="rt.metadata.dublinCore.title">标题</message>
+	<message key="rt.metadata.dublinCore.type">类型</message>
+	<message key="rt.metadata.forThisDocument">这个文档的源数据</message>
+	<message key="rt.metadata.pkp.abstract">摘要</message>
+	<message key="rt.metadata.pkp.copyright">版权及权限</message>
+	<message key="rt.metadata.pkp.coverage">地理位置、年代时期、调查样本（性别、年纪等等）</message>
+	<message key="rt.metadata.pkp.date">(YYYY-MM-DD)</message>
+	<message key="rt.metadata.pkp.discipline">学科</message>
+	<message key="rt.metadata.pkp.format">文件格式</message>
+	<message key="rt.metadata.pkp.genre">现状与流派</message>
+	<message key="rt.metadata.pkpItem">PKP源数据项目</message>
+	<message key="rt.metadata.pkp.language">English=en</message>
+	<message key="rt.metadata.pkp.publisher">组织机构，地点</message>
+	<message key="rt.metadata.pkp.source">期刊/会议标题 ; 卷., 期. (年)</message>
+	<message key="rt.metadata.pkp.sponsors">主管</message>
+	<message key="rt.metadata.pkp.subject">关键词</message>
+	<message key="rt.metadata.pkp.suppFiles">补充文件</message>
+	<message key="rt.metadata.pkp.title">文档的标题</message>
+	<message key="rt.metadata.pkp.type">类型</message>
+	<message key="rt.metadata.pkp.uri">环球资源指标</message>
+	<message key="rt.printVersion">打印版本</message>
+	<message key="rt.readingTools">阅读工具</message>
+	<message key="rt.relatedItems">相关项目</message>
+	<message key="rt.reviewPolicy">审查政策</message>
+	<message key="rt.search.description">描述</message>
+	<message key="rt.searches">搜索</message>
+	<message key="rt.search.order">顺序</message>
+	<message key="rt.search">搜索</message>
+	<message key="rt.search.searchPost">提交数据</message>
+	<message key="rt.search.searchUrl">搜索URL</message>
+	<message key="rt.search.suggest">推荐一个源</message>
+	<message key="rt.search.title">标题</message>
+	<message key="rt.search.url">URL</message>
+	<message key="rt.suppFiles.download">下载</message>
+	<message key="rt.suppFiles">补充文件</message>
+	<message key="rt.suppFiles.viewMetadata">索引源数据</message>
+	<message key="rt.version.description">描述</message>
+	<message key="rt.version.key">键</message>
+	<message key="rt.version.locale">语言环境</message>
+	<message key="rt.versions">相关项目设置</message>
+	<message key="rt.version.title">标题</message>
+	<message key="rt.version">版本</message>
+	<message key="rt.viewMetadata">索引源数据</message>
+	<message key="rt.captureCite.web">互联网</message>
+	<message key="rt.admin.settings.viewReviewPolicy">审稿政策</message>
+</locale>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE schema SYSTEM "../../dtd/xmlSchema.dtd">
+
+<!--
+  * xml/schema/notes.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Notes schema in XML.
+  -->
+
+<schema version="0.2">
+	<!--
+	  *
+	  * TABLE notes
+	  *
+	  -->
+	<table name="notes">
+		<field name="note_id" type="I8">
+			<KEY />
+			<AUTOINCREMENT/>
+		</field>
+		<field name="assoc_type" type="I8">
+			<!-- Not flagged NOTNULL for upgrade purposes -->
+		</field>
+		<field name="assoc_id" type="I8">
+			<!-- Not flagged NOTNULL for upgrade purposes -->
+		</field>
+		<field name="user_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="date_created" type="T">
+			<NOTNULL/>
+		</field>
+		<field name="date_modified" type="T" />
+		<field name="title" type="C2" size="255" />
+		<field name="contents" type="X"/>
+		<index name="notes_assoc">
+			<col>assoc_type</col>
+			<col>assoc_id</col>
+		</index>
+	</table>
+</schema>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE currencies SYSTEM "../../dtd/currencies.dtd">
+
+<!--
+  * locale/eu_ES/currencies.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Currencies data XML file. Based on ISO 4217.
+  *
+  -->
+
+<currencies locale="eu_ES">
+	<currency name="Dolar estatubatuarra" code_alpha="USD" code_numeric="840" />
+	<currency name="Euroa" code_alpha="EUR" code_numeric="978" />
+	<currency name="Dolar kanadarra" code_alpha="CAD" code_numeric="124" />
+	<currency name="Dirham emirerribatuarra" code_alpha="AED" code_numeric="784" />
+	<currency name="Afghani afganistandarra" code_alpha="AFN" code_numeric="971" />
+	<currency name="Lek albaniarra" code_alpha="ALL" code_numeric="008" />
+	<currency name="Dram armeniarra" code_alpha="AMD" code_numeric="051" />
+	<currency name="Florin antillatarra" code_alpha="ANG" code_numeric="532" />
+	<currency name="Kwanza angolarra" code_alpha="AOA" code_numeric="973" />
+	<currency name="Peso argentinarra" code_alpha="ARS" code_numeric="032" />
+	<currency name="Dolar australiarra" code_alpha="AUD" code_numeric="036" />
+	<currency name="Florin arubarra" code_alpha="AWG" code_numeric="533" />
+	<currency name="Manat azerbaijandarra" code_alpha="AZN" code_numeric="944" />
+	<currency name="Marko bihurgarriak" code_alpha="BAM" code_numeric="977" />
+	<currency name="Dolar barbadostarra" code_alpha="BBD" code_numeric="052" />
+	<currency name="Taka banglasdeshtarra" code_alpha="BDT" code_numeric="050" />
+	<currency name="Lev bulgariarra" code_alpha="BGN" code_numeric="975" />
+	<currency name="Dinar bahraindarra" code_alpha="BHD" code_numeric="048" />
+	<currency name="Franko burundiarra" code_alpha="BIF" code_numeric="108" />
+	<currency name="Dolar bermudatarra" code_alpha="BMD" code_numeric="060" />
+	<currency name="Dolar bruneitarra" code_alpha="BND" code_numeric="096" />
+	<currency name="Boliviano boliviarra" code_alpha="BOB" code_numeric="068" />
+	<currency name="Mvdol boliviarra" code_alpha="BOV" code_numeric="984" />
+	<currency name="Erreal brasildarra" code_alpha="BRL" code_numeric="986" />
+	<currency name="Dolar bahamarra" code_alpha="BSD" code_numeric="044" />
+	<currency name="Ngultrum bhutandarra" code_alpha="BTN" code_numeric="064" />
+	<currency name="Pula botswanarra" code_alpha="BWP" code_numeric="072" />
+	<currency name="Errublo bielorrusiarra" code_alpha="BYR" code_numeric="974" />
+	<currency name="Dolar belizetarra" code_alpha="BZD" code_numeric="084" />
+	<currency name="Franko kongoarra" code_alpha="CDF" code_numeric="976" />
+	<currency name="Franko suitzarra" code_alpha="CHF" code_numeric="756" />
+	<currency name="Peso txiletarra" code_alpha="CLP" code_numeric="152" />
+	<currency name="Renminbi txinatarra" code_alpha="CNY" code_numeric="156" />
+	<currency name="Peso kolonbiarra" code_alpha="COP" code_numeric="170" />
+	<currency name="Unidad de Valor Real kolonbiarra" code_alpha="COU" code_numeric="970" />
+	<currency name="Kolon costarricarra" code_alpha="CRC" code_numeric="188" />
+	<currency name="Peso kubatarra" code_alpha="CUP" code_numeric="192" />
+	<currency name="Eskudo caboverdetarra" code_alpha="CVE" code_numeric="132" />
+	<currency name="Koroa txekiarra" code_alpha="CZK" code_numeric="203" />
+	<currency name="Franko djibutiarra" code_alpha="DJF" code_numeric="262" />
+	<currency name="Koroa danimarkarra" code_alpha="DKK" code_numeric="208" />
+	<currency name="Peso dominikarra" code_alpha="DOP" code_numeric="214" />
+	<currency name="Dinar aljeriarra" code_alpha="DZD" code_numeric="012" />
+	<currency name="Koroa estoniarra" code_alpha="EEK" code_numeric="233" />
+	<currency name="Libera egiptoarra" code_alpha="EGP" code_numeric="818" />
+	<currency name="Nakfa eritrearra" code_alpha="ERN" code_numeric="232" />
+	<currency name="Birr etiopiarra" code_alpha="ETB" code_numeric="230" />
+	<currency name="Dolar fijiarra" code_alpha="FJD" code_numeric="242" />
+	<currency name="Libera falklandarra" code_alpha="FKP" code_numeric="238" />
+	<currency name="Libera esterlina" code_alpha="GBP" code_numeric="826" />
+	<currency name="Lari georgiarra" code_alpha="GEL" code_numeric="981" />
+	<currency name="Cedi ghanatarra" code_alpha="GHS" code_numeric="936" />
+	<currency name="Libera gibraltardarra" code_alpha="GIP" code_numeric="292" />
+	<currency name="Dalasi gambiarra" code_alpha="GMD" code_numeric="270" />
+	<currency name="Franko ginearra" code_alpha="GNF" code_numeric="324" />
+	<currency name="Quetzal guatemalarra" code_alpha="GTQ" code_numeric="320" />
+	<currency name="Dolar guyanarra" code_alpha="GYD" code_numeric="328" />
+	<currency name="Dolar hongkondarra" code_alpha="HKD" code_numeric="344" />
+	<currency name="Lempira hondurastarra" code_alpha="HNL" code_numeric="340" />
+	<currency name="Kuna kroaziarra" code_alpha="HRK" code_numeric="191" />
+	<currency name="Gourde haitiarra" code_alpha="HTG" code_numeric="332" />
+	<currency name="Forint hungariarra" code_alpha="HUF" code_numeric="348" />
+	<currency name="Errupia indonesiarra" code_alpha="IDR" code_numeric="360" />
+	<currency name="Shekel israeldarra" code_alpha="ILS" code_numeric="376" />
+	<currency name="Errupia indiarra" code_alpha="INR" code_numeric="356" />
+	<currency name="Dinar irakiarra" code_alpha="IQD" code_numeric="368" />
+	<currency name="Rial irandarra" code_alpha="IRR" code_numeric="364" />
+	<currency name="Koroa islandiarra" code_alpha="ISK" code_numeric="352" />
+	<currency name="Dolar jamaikarra" code_alpha="JMD" code_numeric="388" />
+	<currency name="Dinar jordaniarra" code_alpha="JOD" code_numeric="400" />
+	<currency name="Yen japoniarra" code_alpha="JPY" code_numeric="392" />
+	<currency name="Txelin kenyarra" code_alpha="KES" code_numeric="404" />
+	<currency name="Som kirgizistandarra" code_alpha="KGS" code_numeric="417" />
+	<currency name="Riel kanbodiarra" code_alpha="KHR" code_numeric="116" />
+	<currency name="Franko komoretarra" code_alpha="KMF" code_numeric="174" />
+	<currency name="Won iparkorearra" code_alpha="KPW" code_numeric="408" />
+	<currency name="Won hegokorearra" code_alpha="KRW" code_numeric="410" />
+	<currency name="Dinar kuwaitarra" code_alpha="KWD" code_numeric="414" />
+	<currency name="Dolar kaimandarra" code_alpha="KYD" code_numeric="136" />
+	<currency name="Tenge kazakhstandarra" code_alpha="KZT" code_numeric="398" />
+	<currency name="Kip laostarra" code_alpha="LAK" code_numeric="418" />
+	<currency name="Libera libanoarra" code_alpha="LBP" code_numeric="422" />
+	<currency name="Errupia srilankarra" code_alpha="LKR" code_numeric="144" />
+	<currency name="Dolar liberiarra" code_alpha="LRD" code_numeric="430" />
+	<currency name="Loti lesothoarra" code_alpha="LSL" code_numeric="426" />
+	<currency name="Litas lituaniarra" code_alpha="LTL" code_numeric="440" />
+	<currency name="Lat letoniarra" code_alpha="LVL" code_numeric="428" />
+	<currency name="Dinar libiarra" code_alpha="LYD" code_numeric="434" />
+	<currency name="Dirham marokoarra" code_alpha="MAD" code_numeric="504" />
+	<currency name="Leu moldaviarra" code_alpha="MDL" code_numeric="498" />
+	<currency name="Ariary madagaskartarra" code_alpha="MGA" code_numeric="969" />
+	<currency name="Dinar mazedoniarra" code_alpha="MKD" code_numeric="807" />
+	<currency name="Kyat birmaniarra" code_alpha="MMK" code_numeric="104" />
+	<currency name="Tugrik mongoliarra" code_alpha="MNT" code_numeric="496" />
+	<currency name="Pataka macautarra" code_alpha="MOP" code_numeric="446" />
+	<currency name="Ouguiya mauritaniarra" code_alpha="MRO" code_numeric="478" />
+	<currency name="Errupia mauriziarra" code_alpha="MUR" code_numeric="480" />
+	<currency name="Rufiyaa maldivarra" code_alpha="MVR" code_numeric="462" />
+	<currency name="Kwacha malawiarra" code_alpha="MWK" code_numeric="454" />
+	<currency name="Peso mexikarra" code_alpha="MXN" code_numeric="484" />
+	<currency name="Ringgit malaysiarra" code_alpha="MYR" code_numeric="458" />
+	<currency name="Metical mozambiketarra" code_alpha="MZN" code_numeric="943" />
+	<currency name="Dolar namibiarra" code_alpha="NAD" code_numeric="516" />
+	<currency name="Naira nigeriarra" code_alpha="NGN" code_numeric="566" />
+	<currency name="Cordoba oro nikaraguarra" code_alpha="NIO" code_numeric="558" />
+	<currency name="Koroa norvegiarra" code_alpha="NOK" code_numeric="578" />
+	<currency name="Errupia nepaldarra" code_alpha="NPR" code_numeric="524" />
+	<currency name="Dolar zeelandaberritarra" code_alpha="NZD" code_numeric="554" />
+	<currency name="Rial omandarra" code_alpha="OMR" code_numeric="512" />
+	<currency name="Balboa panamarra" code_alpha="PAB" code_numeric="590" />
+	<currency name="Sol berria perutarra" code_alpha="PEN" code_numeric="604" />
+	<currency name="Kina gineaberriarra" code_alpha="PGK" code_numeric="598" />
+	<currency name="Peso filipinarra" code_alpha="PHP" code_numeric="608" />
+	<currency name="Errupia pakistandarra" code_alpha="PKR" code_numeric="586" />
+	<currency name="Zloty poloniarra" code_alpha="PLN" code_numeric="985" />
+	<currency name="Guarani paraguaitarra" code_alpha="PYG" code_numeric="600" />
+	<currency name="Riyal qatartarra" code_alpha="QAR" code_numeric="634" />
+	<currency name="Leu berri errumaniarra" code_alpha="RON" code_numeric="946" />
+	<currency name="Dinar serbiarra" code_alpha="RSD" code_numeric="941" />
+	<currency name="Errublo errusiarra" code_alpha="RUB" code_numeric="643" />
+	<currency name="Franko ruandarra" code_alpha="RWF" code_numeric="646" />
+	<currency name="Riyal saudiarabiarra" code_alpha="SAR" code_numeric="682" />
+	<currency name="Dolar salomondarra" code_alpha="SBD" code_numeric="090" />
+	<currency name="Errupia seychelletarra" code_alpha="SCR" code_numeric="690" />
+	<currency name="Libera sudandarra" code_alpha="SDG" code_numeric="938" />
+	<currency name="Koroa suediarra" code_alpha="SEK" code_numeric="752" />
+	<currency name="Dolar singapurtarra" code_alpha="SGD" code_numeric="702" />
+	<currency name="Libera santahelenarra" code_alpha="SHP" code_numeric="654" />
+	<currency name="Koroa eslovakiarra" code_alpha="SKK" code_numeric="703" />
+	<currency name="Leone sierraleonarra" code_alpha="SLL" code_numeric="694" />
+	<currency name="Txelin somaliarra" code_alpha="SOS" code_numeric="706" />
+	<currency name="Dolar surinamdarra" code_alpha="SRD" code_numeric="968" />
+	<currency name="Dobra saotometarra" code_alpha="STD" code_numeric="678" />
+	<currency name="Libera siriarra" code_alpha="SYP" code_numeric="760" />
+	<currency name="Lilangeni swazilandiarra" code_alpha="SZL" code_numeric="748" />
+	<currency name="Baht thailandiarra" code_alpha="THB" code_numeric="764" />
+	<currency name="Somoni tadjikistandarra" code_alpha="TJS" code_numeric="972" />
+	<currency name="Manat turkmenistandarra" code_alpha="TMM" code_numeric="795" />
+	<currency name="Dinar tunisiarra" code_alpha="TND" code_numeric="788" />
+	<currency name="Pa'anga tongatarra" code_alpha="TOP" code_numeric="776" />
+	<currency name="Lira berri turkiarra" code_alpha="TRY" code_numeric="949" />
+	<currency name="Dolar trinitatearra" code_alpha="TTD" code_numeric="780" />
+	<currency name="Dolar berri taiwandarra" code_alpha="TWD" code_numeric="901" />
+	<currency name="Txelin tanzaniarra" code_alpha="TZS" code_numeric="834" />
+	<currency name="Hryvnia ukrainarra" code_alpha="UAH" code_numeric="980" />
+	<currency name="Txelin ugandarra" code_alpha="UGX" code_numeric="800" />
+	<currency name="Peso uruguaitarra" code_alpha="UYU" code_numeric="858" />
+	<currency name="Som uzbekistandarra" code_alpha="UZS" code_numeric="860" />
+	<currency name="Bolívar fuerte venezuelarra" code_alpha="VEF" code_numeric="937" />
+	<currency name="Dong vietnamdarra" code_alpha="VND" code_numeric="704" />
+	<currency name="Vatu vanuatuarra" code_alpha="VUV" code_numeric="548" />
+	<currency name="Tala samoarra" code_alpha="WST" code_numeric="882" />
+	<currency name="CFA frankoa (BEAC)" code_alpha="XAF" code_numeric="950" />
+	<currency name="Dolar eki karibetarra" code_alpha="XCD" code_numeric="951" />
+	<currency name="Igorpen Eskubide Bereziak (IEB)" code_alpha="XDR" code_numeric="960" />
+	<currency name="CFA frankoa (BCEAO)" code_alpha="XOF" code_numeric="952" />
+	<currency name="CFP frankoa" code_alpha="XPF" code_numeric="953" />
+	<currency name="Riyal yemendarra" code_alpha="YER" code_numeric="886" />
+	<currency name="Rand hegoafrikarra" code_alpha="ZAR" code_numeric="710" />
+	<currency name="Kwacha zambiarra" code_alpha="ZMK" code_numeric="894" />
+	<currency name="Dolar zimbawetarra" code_alpha="ZWD" code_numeric="716" />
+</currencies>
+

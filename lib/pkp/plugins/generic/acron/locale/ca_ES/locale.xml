@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Credits: https://pkp.sfu.ca/wiki/index.php?title=OMP:_Catalan_(ca_ES)
+  * Localization strings for the ca_ES (Català) locale.
+  *
+  -->
+ 
+<locale name="ca_ES" full_name="Català">
+	<message key="plugins.generic.acron.name">Acron Plugin</message>
+	<message key="plugins.generic.acron.reload">Recarrega les tasques programades</message>
+</locale>

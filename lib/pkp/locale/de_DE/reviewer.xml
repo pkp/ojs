@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/de_DE/reviewer.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Please contact Marco Tullney, marco.tullney@fu-berlin.de, with any questions regarding this translation.
+  * Localization strings
+  -->
+
+<locale name="de_DE" full_name="Deutsch (Deutschland)">
+	<!-- Used in submission review -->
+	<message key="reviewer.reviewSteps.request">1. Anfrage</message>
+	<message key="reviewer.reviewSteps.guidelines">2. Richtlinien</message>
+	<message key="reviewer.reviewSteps.download">3. Download &amp; Begutachtung</message>
+	<message key="reviewer.reviewSteps.completion">4. Abschluss</message>
+	<message key="reviewer.step1.request">Begutachtungsanfrage</message>
+	<message key="reviewer.step1.requestBoilerplate">Sie sind als mögliche/r Gutachter/in für die folgende Einreichung eingeschätzt worden. Unten finden Sie einen Überblick über die Einreichung und einen Zeitplan für dieses Gutachten. Wir hoffen, dass Sie in der Lage sind, daran mitzuwirken.</message>
+	<message key="reviewer.step1.viewAllDetails">Alle Details der Einreichung anzeigen</message>
+	<message key="reviewer.submission.reviewerFiles">Dateien des/der Gutachter/in</message>
+	<message key="reviewer.submission.declineReview">Begutachtungsanfrage ablehnen</message>
+	<message key="reviewer.submission.declineReviewMessage">Sie können der/dem Redakteur/in Gründe für Ihre Absage dieses Gutachtens nennen.</message>
+	<message key="reviewer.submission.acceptReview">Gutachten annehmen, weiter mit Schritt #2</message>
+	<message key="reviewer.submission.continueToStepThree">Weiter zu Schritt #3</message>
+	<message key="reviewer.submission.submitReview">Gutachten einreichen</message>
+	<message key="reviewer.submission.reviewerGuidelines">Gutachter/innen-Richtlinien</message>
+	<message key="reviewer.submission.enterCompetingInterests">Dieser Verlag hat eine Richtlinie für die Offenlegung potentieller Interessenkonflikte durch die Gutachter/innen. Bitte nehmen Sie sich einen Moment Zeit, um die Richtlinie durchzusehen.</message>
+	<message key="reviewer.submission.noCompetingInterests">Ich habe keine Interessenkonflikte</message>
+	<message key="reviewer.submission.hasCompetingInterests">Ich habe vielleicht Interessenkonflikte (unten angeben)</message>
+	<message key="reviewer.submission.competingInterests">Interessenkonflikte</message>
+	<message key="reviewer.submission.guidelines">Begutachtungsrichtlinien</message>
+	<message key="reviewer.submission.noGuidelines">Dieser Verlag hat keine Begutachtungsrichtlinien erlassen.</message>
+	<message key="reviewer.submission.downloadDescription">Klicken Sie auf die Dateinahmen zum Download und begutachten Sie die zu dieser Einreichung gehörenden Dateien (am Bildschirm oder im Ausdruck).</message>
+	<message key="reviewer.submission.reviewDescription">Geben Sie Ihr Gutachten in das unten stehende Formular ein.</message>
+	<message key="reviewer.submission.uploadDescription">Zusätzlich können Sie Dateien für Redakteur/in oder Autor/in hochladen, inkl. überarbeiteter Fassungen der begutachteten Datei(en).</message>
+	<message key="reviewer.complete">Gutachten eingereicht</message>
+	<message key="reviewer.confirmSubmit">Sind Sie sicher, dass Sie dieses Gutachten jetzt einreichen wollen?</message>
+	<message key="reviewer.complete.whatNext">Vielen Dank für den Abschluss der Begutachtung dieser Einreichung. Ihr Gutachten ist erfolgreich übermittelt worden. Wir schätzen Ihren Beitrag zur Qualität der von uns veröffentlichten Arbeiten sehr. Vielleicht wird der/die Redakteur/in Sie noch einmal kontaktieren, falls weitere Informationen benötigt werden.</message>
+	<message key="reviewer.aboutDueDates">Über die Fälligkeit</message>
+	<message key="reviewer.aboutDueDates.text">Der/die Redakteur/in bittet darum, dass Sie vor der Fälligkeit der Antwort die Begutachtung annehmen oder absagen und dass Sie Ihr Gutachten vor dem Fälligkeitsdatum des Gutachtens abschließen.</message>
+	<message key="submission.comments.canShareWithAuthor">Für Autor/in und Redakteur/in</message>
+	<message key="submission.comments.cannotShareWithAuthor">Nur für Redakteur/in</message>
+</locale>

@@ -1,0 +1,17 @@
+See also composer.json in the repository root.
+
+Third party libraries used:
+
+ADOdb Database Library
+ * URL: <http://adodb.sourceforge.net/>
+ * Version: 4.90 (June 8, 2006)
+ * License: LGPL (see lib/adodb/license.txt)
+
+PHPUTF8 UTF-8 Character Handling Library
+ * URL: <http://phputf8.sourceforge.net/>
+ * Version: 0.5 (Aug 12, 2007)
+ * License: LGPL
+
+SWORD PHP API Library
+ * URL: <https://github.com/swordapp/swordappv2-php-library>
+ * License: Modified BSD

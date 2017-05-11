@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE currencies SYSTEM "../../dtd/currencies.dtd">
+
+<!--
+  * locale/ru_RU/currencies.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Currencies data XML file. Based on ISO 4217:2015.
+  * Translation based on Russian classification of currencies 
+  * ОК (МК (ИСО 4217) 003-97) 014-2000 (with changes dated 02.06.2016).
+  * With updates from Pavel Pisklakov (revising translation). 
+  -->
+
+<currencies locale="ru_RU">
+	<currency name="Доллар США" code_alpha="USD" code_numeric="840" />
+	<currency name="Евро" code_alpha="EUR" code_numeric="978" />
+	<currency name="Канадский доллар" code_alpha="CAD" code_numeric="124" />
+	<currency name="Дирхам (ОАЭ)" code_alpha="AED" code_numeric="784" />
+	<currency name="Афгани" code_alpha="AFN" code_numeric="971" />
+	<currency name="Лек" code_alpha="ALL" code_numeric="008" />
+	<currency name="Армянский драм" code_alpha="AMD" code_numeric="051" />
+	<currency name="Нидерландский антильский гульден" code_alpha="ANG" code_numeric="532" />
+	<currency name="Кванза" code_alpha="AOA" code_numeric="973" />
+	<currency name="Аргентинское песо" code_alpha="ARS" code_numeric="032" />
+	<currency name="Австралийский доллар" code_alpha="AUD" code_numeric="036" />
+	<currency name="Арубанский флорин" code_alpha="AWG" code_numeric="533" />
+	<currency name="Азербайджанский манат" code_alpha="AZN" code_numeric="944" />
+	<currency name="Конвертируемая марка" code_alpha="BAM" code_numeric="977" />
+	<currency name="Барбадосский доллар" code_alpha="BBD" code_numeric="052" />
+	<currency name="Така" code_alpha="BDT" code_numeric="050" />
+	<currency name="Болгарский лев" code_alpha="BGN" code_numeric="975" />
+	<currency name="Бахрейнский динар" code_alpha="BHD" code_numeric="048" />
+	<currency name="Бурундийский франк" code_alpha="BIF" code_numeric="108" />
+	<currency name="Бермудский доллар" code_alpha="BMD" code_numeric="060" />
+	<currency name="Брунейский доллар" code_alpha="BND" code_numeric="096" />
+	<currency name="Боливиано" code_alpha="BOB" code_numeric="068" />
+	<currency name="Бразильский реал" code_alpha="BRL" code_numeric="986" />
+	<currency name="Багамский доллар" code_alpha="BSD" code_numeric="044" />
+	<currency name="Нгултрум" code_alpha="BTN" code_numeric="064" />
+	<currency name="Пула" code_alpha="BWP" code_numeric="072" />
+	<currency name="Белорусский рубль" code_alpha="BYN" code_numeric="933" />
+	<currency name="Белизский доллар" code_alpha="BZD" code_numeric="084" />
+	<currency name="Конголезский франк" code_alpha="CDF" code_numeric="976" />
+	<currency name="Швейцарский франк" code_alpha="CHF" code_numeric="756" />
+	<currency name="Чилийское песо" code_alpha="CLP" code_numeric="152" />
+	<currency name="Юань" code_alpha="CNY" code_numeric="156" />
+	<currency name="Колумбийское песо" code_alpha="COP" code_numeric="170" />
+	<currency name="Костариканский колон" code_alpha="CRC" code_numeric="188" />
+	<currency name="Кубинское песо" code_alpha="CUP" code_numeric="192" />
+	<currency name="Конвертируемое песо" code_alpha="CUC" code_numeric="931" />
+	<currency name="Эскудо Кабо-Верде" code_alpha="CVE" code_numeric="132" />
+	<currency name="Чешская крона" code_alpha="CZK" code_numeric="203" />
+	<currency name="Франк Джибути" code_alpha="DJF" code_numeric="262" />
+	<currency name="Датская крона" code_alpha="DKK" code_numeric="208" />
+	<currency name="Доминиканское песо" code_alpha="DOP" code_numeric="214" />
+	<currency name="Алжирский динар" code_alpha="DZD" code_numeric="012" />
+	<currency name="Египетский фунт" code_alpha="EGP" code_numeric="818" />
+	<currency name="Накфа" code_alpha="ERN" code_numeric="232" />
+	<currency name="Эфиопский быр" code_alpha="ETB" code_numeric="230" />
+	<currency name="Доллар Фиджи" code_alpha="FJD" code_numeric="242" />
+	<currency name="Фунт Фолклендских островов" code_alpha="FKP" code_numeric="238" />
+	<currency name="Фунт стерлингов" code_alpha="GBP" code_numeric="826" />
+	<currency name="Лари" code_alpha="GEL" code_numeric="981" />
+	<currency name="Ганский седи" code_alpha="GHS" code_numeric="936" />
+	<currency name="Гибралтарский фунт" code_alpha="GIP" code_numeric="292" />
+	<currency name="Даласи" code_alpha="GMD" code_numeric="270" />
+	<currency name="Гвинейский франк" code_alpha="GNF" code_numeric="324" />
+	<currency name="Кетсаль" code_alpha="GTQ" code_numeric="320" />
+	<currency name="Гайанский доллар" code_alpha="GYD" code_numeric="328" />
+	<currency name="Гонконгский доллар" code_alpha="HKD" code_numeric="344" />
+	<currency name="Лемпира" code_alpha="HNL" code_numeric="340" />
+	<currency name="Куна" code_alpha="HRK" code_numeric="191" />
+	<currency name="Гурд" code_alpha="HTG" code_numeric="332" />
+	<currency name="Форинт" code_alpha="HUF" code_numeric="348" />
+	<currency name="Рупия" code_alpha="IDR" code_numeric="360" />
+	<currency name="Новый израильский шекель" code_alpha="ILS" code_numeric="376" />
+	<currency name="Индийская рупия" code_alpha="INR" code_numeric="356" />
+	<currency name="Иракский динар" code_alpha="IQD" code_numeric="368" />
+	<currency name="Иранский риал" code_alpha="IRR" code_numeric="364" />
+	<currency name="Исладнская крона" code_alpha="ISK" code_numeric="352" />
+	<currency name="Ямайский доллар" code_alpha="JMD" code_numeric="388" />
+	<currency name="Иорданский динар" code_alpha="JOD" code_numeric="400" />
+	<currency name="Иена" code_alpha="JPY" code_numeric="392" />
+	<currency name="Кенийский шиллинг" code_alpha="KES" code_numeric="404" />
+	<currency name="Сом" code_alpha="KGS" code_numeric="417" />
+	<currency name="Риель" code_alpha="KHR" code_numeric="116" />
+	<currency name="Франк Комор" code_alpha="KMF" code_numeric="174" />
+	<currency name="Северокорейская вона" code_alpha="KPW" code_numeric="408" />
+	<currency name="Вона" code_alpha="KRW" code_numeric="410" />
+	<currency name="Кувейтский динар" code_alpha="KWD" code_numeric="414" />
+	<currency name="Доллар Островов Кайман" code_alpha="KYD" code_numeric="136" />
+	<currency name="Тенге" code_alpha="KZT" code_numeric="398" />
+	<currency name="Кип" code_alpha="LAK" code_numeric="418" />
+	<currency name="Ливанский фунт" code_alpha="LBP" code_numeric="422" />
+	<currency name="Шри-Ланкийская рупия" code_alpha="LKR" code_numeric="144" />
+	<currency name="Либерийский доллар" code_alpha="LRD" code_numeric="430" />
+	<currency name="Лоти" code_alpha="LSL" code_numeric="426" />
+	<currency name="Ливийский динар" code_alpha="LYD" code_numeric="434" />
+	<currency name="Марокканский дирхам" code_alpha="MAD" code_numeric="504" />
+	<currency name="Молдавский лей" code_alpha="MDL" code_numeric="498" />
+	<currency name="Малагасийский ариари" code_alpha="MGA" code_numeric="969" />
+	<currency name="Денар" code_alpha="MKD" code_numeric="807" />
+	<currency name="Кьят" code_alpha="MMK" code_numeric="104" />
+	<currency name="Тугрик" code_alpha="MNT" code_numeric="496" />
+	<currency name="Патака" code_alpha="MOP" code_numeric="446" />
+	<currency name="Угия" code_alpha="MRO" code_numeric="478" />
+	<currency name="Маврикийская рупия" code_alpha="MUR" code_numeric="480" />
+	<currency name="Руфия" code_alpha="MVR" code_numeric="462" />
+	<currency name="Квача" code_alpha="MWK" code_numeric="454" />
+	<currency name="Мексиканское песо" code_alpha="MXN" code_numeric="484" />
+	<currency name="Малайзийский ринггит" code_alpha="MYR" code_numeric="458" />
+	<currency name="Мозамбикский метикал" code_alpha="MZN" code_numeric="943" />
+	<currency name="Доллар Намибии" code_alpha="NAD" code_numeric="516" />
+	<currency name="Найра" code_alpha="NGN" code_numeric="566" />
+	<currency name="Золотая кордоба" code_alpha="NIO" code_numeric="558" />
+	<currency name="Норвежская крона" code_alpha="NOK" code_numeric="578" />
+	<currency name="Непальская рупия" code_alpha="NPR" code_numeric="524" />
+	<currency name="Новозеландский доллар" code_alpha="NZD" code_numeric="554" />
+	<currency name="Оманский риал" code_alpha="OMR" code_numeric="512" />
+	<currency name="Бальбоа" code_alpha="PAB" code_numeric="590" />
+	<currency name="Соль" code_alpha="PEN" code_numeric="604" />
+	<currency name="Кина" code_alpha="PGK" code_numeric="598" />
+	<currency name="Филиппинское песо" code_alpha="PHP" code_numeric="608" />
+	<currency name="Пакистанская рупия" code_alpha="PKR" code_numeric="586" />
+	<currency name="Злотый" code_alpha="PLN" code_numeric="985" />
+	<currency name="Гуарани" code_alpha="PYG" code_numeric="600" />
+	<currency name="Катарский риал" code_alpha="QAR" code_numeric="634" />
+	<currency name="Румынский лей" code_alpha="RON" code_numeric="946" />
+	<currency name="Сербский динар" code_alpha="RSD" code_numeric="941" />
+	<currency name="Российский рубль" code_alpha="RUB" code_numeric="643" />
+	<currency name="Франк Руанды" code_alpha="RWF" code_numeric="646" />
+	<currency name="Саудовский риял" code_alpha="SAR" code_numeric="682" />
+	<currency name="Сальвадорский колон" code_alpha="SVC" code_numeric="222" />
+	<currency name="Доллар Соломоновых Островов" code_alpha="SBD" code_numeric="090" />
+	<currency name="Сейшельская рупия" code_alpha="SCR" code_numeric="690" />
+	<currency name="Суданский фунт" code_alpha="SDG" code_numeric="938" />
+	<currency name="Южносуданский фунт" code_alpha="SSP" code_numeric="728" />
+	<currency name="Шведская крона" code_alpha="SEK" code_numeric="752" />
+	<currency name="Сингапурский доллар" code_alpha="SGD" code_numeric="702" />
+	<currency name="Фунт Святой Елены" code_alpha="SHP" code_numeric="654" />
+	<currency name="Леоне" code_alpha="SLL" code_numeric="694" />
+	<currency name="Сомалийский шиллинг" code_alpha="SOS" code_numeric="706" />
+	<currency name="Суринамский доллар" code_alpha="SRD" code_numeric="968" />
+	<currency name="Добра" code_alpha="STD" code_numeric="678" />
+	<currency name="Сирийский фунт" code_alpha="SYP" code_numeric="760" />
+	<currency name="Лилангени" code_alpha="SZL" code_numeric="748" />
+	<currency name="Бат" code_alpha="THB" code_numeric="764" />
+	<currency name="Сомони" code_alpha="TJS" code_numeric="972" />
+	<currency name="Новый туркменский манат" code_alpha="TMT" code_numeric="934" />
+	<currency name="Тунисский динар" code_alpha="TND" code_numeric="788" />
+	<currency name="Паанга" code_alpha="TOP" code_numeric="776" />
+	<currency name="Турецкая лира" code_alpha="TRY" code_numeric="949" />
+	<currency name="Доллар Тринидада и Тобаго" code_alpha="TTD" code_numeric="780" />
+	<currency name="Новый тайваньский доллар" code_alpha="TWD" code_numeric="901" />
+	<currency name="Танзанийский шиллинг" code_alpha="TZS" code_numeric="834" />
+	<currency name="Гривна" code_alpha="UAH" code_numeric="980" />
+	<currency name="Угандийский шиллинг" code_alpha="UGX" code_numeric="800" />
+	<currency name="Уругвайское песо" code_alpha="UYU" code_numeric="858" />
+	<currency name="Узбекский сум" code_alpha="UZS" code_numeric="860" />
+	<currency name="Боливар" code_alpha="VEF" code_numeric="937" />
+	<currency name="Донг" code_alpha="VND" code_numeric="704" />
+	<currency name="Вату" code_alpha="VUV" code_numeric="548" />
+	<currency name="Тала" code_alpha="WST" code_numeric="882" />
+	<currency name="Франк КФА BEAC" code_alpha="XAF" code_numeric="950" />
+	<currency name="Восточно-карибский доллар" code_alpha="XCD" code_numeric="951" />
+	<currency name="Франк КФА BCEAO" code_alpha="XOF" code_numeric="952" />
+	<currency name="Франк КФП" code_alpha="XPF" code_numeric="953" />
+	<currency name="Йеменский риал" code_alpha="YER" code_numeric="886" />
+	<currency name="Рэнд" code_alpha="ZAR" code_numeric="710" />
+	<currency name="Замбийская квача" code_alpha="ZMW" code_numeric="967" />
+	<currency name="Доллар Зимбабве" code_alpha="ZWL" code_numeric="932" />
+</currencies>

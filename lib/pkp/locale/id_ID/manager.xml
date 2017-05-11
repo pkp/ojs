@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/id_ID/manager.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="id_ID" full_name="Bahasa Indonesia">
+	<message key="manager.announcements">Pengumuman</message>
+	<message key="manager.announcements.confirmDelete">Apakah Anda yakin ingin menghapus pengumuman ini secara permanen?</message>
+	<message key="manager.announcements.create">Buat Pengumuman Baru</message>
+	<message key="manager.announcements.createTitle">Buat</message>
+	<message key="manager.announcements.dateExpire">Masa Berakhir</message>
+	<message key="manager.announcements.edit">Edit Pengumuman</message>
+	<message key="manager.announcements.editTitle">Edit</message>
+	<message key="manager.announcements.form.dateExpireDayIncompleteDate">Pilih tahun dan/atau bulan di samping hari tanggal masa berakhir.</message>
+	<message key="manager.announcements.form.dateExpire">Tanggal Masa Berakhir</message>
+	<message key="manager.announcements.form.dateExpireInstructions">Pengumuman bisa dibaca hingga tanggal ini. Biarkan kosong jika pengumuman bisa dibaca sewaktu-waktu.</message>
+	<message key="manager.announcements.form.dateExpireMonthIncompleteDate">Pilih tahun dan/atau hari di samping bulan tanggal masa berakhir.</message>
+	<message key="manager.announcements.form.dateExpireValid">Pilih tanggal masa berakhir pengumuman yang valid.</message>
+	<message key="manager.announcements.form.dateExpireYearIncompleteDate">Pilih bulan dan/atau hari di samping tahun tanggal masa berakhir.</message>
+	<message key="manager.announcements.form.description">Deskripsi</message>
+	<message key="manager.announcements.form.descriptionInstructions">Teks lengkap pengumuman.</message>
+	<message key="manager.announcements.form.descriptionRequired">Deskripsi pengumuman diperlukan.</message>
+	<message key="manager.announcements.form.descriptionShortInstructions">Deskripsi singkat untuk ditampilkan bersama judul pengumuman.</message>
+	<message key="manager.announcements.form.descriptionShortRequired">Deskripsi pengumuman singkat diperlukan.</message>
+	<message key="manager.announcements.form.descriptionShort">Deskripsi singkat</message>
+	<message key="manager.announcements.form.saveAndCreateAnother">Simpan dan Buat Baru</message>
+	<message key="manager.announcements.form.titleRequired">Judul pengumuman diperlukan.</message>
+	<message key="manager.announcements.form.title">Judul</message>
+	<message key="manager.announcements.form.typeId">Tipe</message>
+	<message key="manager.announcements.form.typeIdValid">Pilih tipe pengumuman yang valid.</message>
+	<message key="manager.announcements.noneCreated">Belum ada pengumuman.</message>
+	<message key="manager.announcements.title">Judul</message>
+	<message key="manager.announcements.type">Tipe</message>
+	<message key="manager.announcementTypes">Tipe Pengumuman</message>
+	<message key="manager.announcementTypes.confirmDelete">Peringatan! Semua pengumuman dengan tipe pengumuman ini juga akan dihapus. Apakah Anda yakin ingin melanjutkan dan menghapus tipe pengumuman ini?</message>
+	<message key="manager.announcementTypes.create">Buat Tipe Pengumuman</message>
+	<message key="manager.announcementTypes.createTitle">Buat</message>
+	<message key="manager.announcementTypes.edit">Edit Tipe Pengumuman</message>
+	<message key="manager.announcementTypes.editTitle">Edit</message>
+	<message key="manager.announcementTypes.form.saveAndCreateAnother">Simpan dan Buat yang lain.</message>
+	<message key="manager.announcementTypes.form.typeNameExists">Tipe pengumuman dengan nama ini yang sudah ada.</message>
+	<message key="manager.announcementTypes.form.typeName">Nama</message>
+	<message key="manager.announcementTypes.form.typeNameRequired">Nama tipe Pengumuman diperlukan.</message>
+	<message key="manager.announcementTypes.noneCreated">Tidak ada tipe pengumuman telah dibuat.</message>
+	<message key="manager.announcementTypes.typeName">Tipe pengumuman</message>
+	<message key="manager.emails.confirmDelete">Apakah Anda ingin menghapus template email ini?</message>
+	<message key="manager.emails.confirmReset">Apakah Anda yakin ingin mengatur ulang template email ini ke nilai defaultnya?</message>
+	<message key="manager.emails.createEmail">Buat Email</message>
+	<message key="manager.emails.disable">Tidak Aktif</message>
+	<message key="manager.emails.editEmail">Edit Email</message>
+	<message key="manager.emails.editTestExample">Contoh tes Edit Email</message>
+	<message key="manager.emails.emailKey">Kunci Email</message>
+	<message key="manager.emails.emailfile:///usr/share/blankon-artwork/home/index.htmlKeyExists">Email dengan kunci yang telah diberikan sudah ada. Kunci email harus unik.</message>
+	<message key="manager.emails.emailTemplate">Template Email</message>
+	<message key="manager.emails.emailTemplates">Templates Email</message>
+	<message key="manager.emails.enabled">Aktifkan template email ini</message>
+	<message key="manager.emails.enable">Aktifkan</message>
+	<message key="manager.emails.form.emailKeyRequired">Kunci email unik dibutuhkan untuk email ini.</message>
+	<message key="manager.emails.form.bodyRequired">Isi dibutuhkan untuk email.</message>
+	<message key="manager.emails.form.subjectRequired">Judul dibutuhkan untuk email.</message>
+	<message key="manager.emails">Email yang Disiapkan </message>
+	<message key="manager.emails.resetAll">Atur ulang semua template</message>
+	<message key="manager.emails.reset">Atur Ulang</message>
+	<message key="manager.emails.resetToDefault">Atur ulang ke Default</message>
+	<message key="manager.filesBrowser">Berkas Penelusuran</message>
+	<message key="manager.files.confirmDelete">Hapus direktori atau file ini?  Perhatikan direktori harus kosong sebelum dapat dihapus.</message>
+	<message key="manager.files.createDir">Buat direktori</message>
+	<message key="manager.files.emptyDir">Tidak ada file yang ditemukan di direktori ini.</message>
+	<message key="manager.files.indexOfDir">Indeks {$dir}</message>
+	<message key="manager.files.parentDir">Parent Directory</message>
+	<message key="manager.files.uploadedFiles">Unggah File</message>
+	<message key="manager.files.uploadFile">Unduh File</message>
+	<message key="manager.groups.confirmDelete">Apakah Anda yakin ingin menghapus grup ini?</message>
+	<message key="manager.groups.createTitle">Buat Judul</message>
+	<message key="manager.groups.editTitle">Edit Judul</message>
+	<message key="manager.groups.form.groupTitleRequired">Judul grup diperlukan.</message>
+	<message key="manager.groups.membership.addMember">Tambah Anggota</message>
+	<message key="manager.groups.membership.confirmDelete">Apakah Anda yakin ingin menghapus keanggotaan grup ini?</message>
+	<message key="manager.groups.membership">Keanggotaan</message>
+	<message key="manager.groups.membership.noneCreated">Grup ini tidak punya anggota.</message>
+	<message key="manager.groups.membership.noUsers">Tidak ada pengguna yang ditemukan.</message>
+	<message key="manager.groups.title">Judul</message>
+	<message key="manager.importExport">Impor/Ekspor Data</message>
+	<message key="manager.languages.alternateLocaleInstructions">Sistem ini membuat informasi kritis tertentu bisa dimasukkan dalam beberapa bahasa tambahan. Untuk menggunakan fitur ini, pilih ubah local dan pilih dari opsi yang terdaftar di bawah ini.</message>
+	<message key="manager.languages.supportedLocalesInstructions">Pilih semua locale untuk mensupport situs melalui sebuah bahasa. Pilih menu untuk ditampilkan di tiap halaman. Menu hanya akan ditampilkan jika ada lebih dari satu locale dipilih.</message>
+	<message key="manager.payment.timestamp">Timestamp</message>
+	<message key="manager.people.authSource">Sumber Pengesahan</message>
+	<message key="manager.people.confirmUnenroll">Membatalkan pendaftaran pengguna ini?</message>
+	<message key="manager.people.createUser">Buat Pengguna Baru</message>
+	<message key="manager.people.createUserGeneratePassword">Hasilkan kata sandi acak</message>
+	<message key="manager.people.createUserSendNotify">Kirim email selamat datang kepada pengguna yang berisi nama pengguna dan kata sandi mereka.</message>
+	<message key="manager.people.disable">Tidak Aktif</message>
+	<message key="manager.people.doNotEnroll">Dengan tidak ada peran</message>
+	<message key="manager.people.editProfile">Edit Profil</message>
+	<message key="manager.people.editUser">Edit Pengguna</message>
+	<message key="manager.people.emailUsers.emailSelectedUsers">Kirim email ke pengguna yang dipilih</message>
+	<message key="manager.people.emailUsers.emailUsersEnrolledAs">Kirim email ke pengguna yang terdaftar sebagai</message>
+	<message key="manager.people.emailUsers">Kirim email ke pengguna</message>
+	<message key="manager.people.emailUsers.selectLocale">Pilih locale</message>
+	<message key="manager.people.emailUsers.selectUsers">Pilih pengguna yang Anda ingin kirimi email dengan mencentang kotak di samping nama mereka</message>
+	<message key="manager.people.enable">Aktifkan</message>
+	<message key="manager.people.enroll">Daftarkan pengguna</message>
+	<message key="manager.people.enrollment">Pendaftaran</message>
+	<message key="manager.people.enrollSelected">Daftarkan Pengguna Terpilih</message>
+	<message key="manager.people.enrollSyncRole">Sinkronisasikan Peran</message>
+	<message key="manager.people.enrollSync">Sync Enrollment</message>
+	<message key="manager.people.enrollUserAsDescription">Pengguna dapat ditugaskan ke, atau dipindahkan dari, satu peran kapanpun.</message>
+	<message key="manager.people.enrollUserAs">Daftarkan pengguna sebagai</message>
+	<message key="manager.people.invalidUser">Maaf, pengguna yang diinginkan tidak ada.</message>
+	<message key="manager.people.mergeUser">Gabungkan Pengguna</message>
+	<message key="manager.people.mergeUsers.confirm">Apakah Anda yakin ingin menggabungkan{$oldAccountCount} akun yang terpilih ke akun dengan nama pengguna "{$newUsername}"? Akun {$oldAccountCount} terpilih tidak akan ada setelahnya. Tindakan ini tidak bisa dilakukan sebaliknya.</message>
+	<message key="manager.people.mergeUsers">Gabungkan pengguna</message>
+	<message key="manager.people.mustChooseRole">Pilih peran di atas halaman sebelum mengklik "Daftarkan Pengguna".</message>
+	<message key="manager.people.mustProvideName">Sediakan minimal satu nama terakhir untuk pengguna.</message>
+	<message key="manager.people.noMatchingUsers">Tidak ada pengguna yang cocok.</message>
+	<message key="manager.people.noneEnrolled">Tidak ada pengguna yang terdaftar.</message>
+	<message key="manager.people">Penata Laksana</message>
+	<message key="manager.people.remove">Hapus</message>
+	<message key="manager.people.saveAndCreateAnotherUser">Simpan dan Buat yang Lain</message>
+	<message key="manager.people.signInAs">Login Sebagai</message>
+	<message key="manager.people.signInAsUser">Login Sebagai Pengguna</message>
+	<message key="manager.people.syncUsers">Sinkronisasikan Pedaftaran Pengguna</message>
+	<message key="manager.people.unenroll">Batalkan Pendaftaran</message>
+	<message key="manager.people.userCreatedSuccessfully">Pengguna telah dibuat dengan sukses.</message>
+	<message key="manager.people.userMustChangePassword">Pengguna perlu mengganti kata sandi mereka lain waktu saat mereka login.</message>
+	<message key="manager.plugins.action">Aksi:</message>
+	<message key="manager.plugins.disable">TIdak Aktif</message>
+	<message key="manager.plugins.enable">Aktif</message>
+	<message key="manager.plugins.pluginManagement">Manajemen Plugin</message>
+	<message key="manager.plugins.sitePlugin">Ini adalah site-wide plugin. Hanya Administrator bisa mengatur plugin ini.</message>
+	<message key="manager.plugins">Sistem Plugins</message>
+	<message key="manager.readingTools">Alat Membaca</message>
+	<message key="manager.reviewerSearch.searchByName">Cari Reviewer dengan Nama</message>
+	<message key="manager.reviewerSearch.doneAmount">Jumlah review yang selesai</message>
+	<message key="manager.reviewerSearch.avgAmount">Jumlah hari rata-rata per review</message>
+	<message key="manager.reviewerSearch.lastAmount">Hari sejak review terakhir</message>
+	<message key="manager.reviewerSearch.activeAmount">Jumlah review aktif sekarang</message>
+	<message key="manager.reviewerSearch.interests">Minat Mereview</message>
+	<message key="manager.roles">Peran</message>
+	<message key="manager.setup.citationAssistant">Bantuan Koreksi Sitiran</message>
+	<message key="manager.setup.citationFilterParser">Ekstrasi Sitiran</message>
+	<message key="manager.setup.citationFilterParserDescription"><![CDATA[<p>Untuk mencari dan mengecek sitiran di database ditiran, pertama-tama mereka harus dibagi menjadi metadata yang dapat dibaca mesin: Judul, Penerbit, Tanggal penerbitan, dll. Semua harus diekstrak dari teks sitiran asli yang disediakan oleh penulis. Konektor ke layanan web eksternal dapat membantu di proses ini. Satu konektor atau lebih dapat ditambahkan dengan mengklik tombol "Tambah Item"  bawah ini. Beberapa dari konektor ini mungkin perlu dikonfigurasi; Anda akan diberitahu jika ini terjadi.</p>
+		<p>Anda dapat mengedit atau menghapus konektor yang ada dengan mengklik ikon gear di sampingnya.</p>]]></message>
+	<message key="manager.setup.citationFilterLookup">Pengecekan Sitiran</message>
+	<message key="manager.setup.citationFilterLookupDescription"><![CDATA[<p>Anda juga harus mengaktifkan dan mengkonfigurasi koneksi ke databse sitiran eksternal. Ini membantu Anda untuk menemukan kesalahan di sitiran penulis atau menambah informasi tambahan (contoh: DOIs atau PubMed Ids)  yang dibutuhkan untuk deposit atau penerbitan elektronik.</p>
+		<p>Kami sediakan konektor ke beberapa database eksternal di mana Anda bisa mencari sitiran. Beberapa databse membutuhkan pendaftaran atau informasi konfigurasi untuk dimasukkan. Lihat website publik database untuk informasi lebih lanjut tentang bagaimana untuk mendaftar. Anda dapat menambah satu atau beberapa database dengan mengklik "Tambah Item" di bawah ini.</p>
+		<p>Anda dapat mengedit atau menghapus koneksi database eksternal yang ada dengan mengklik ikon gear di sampingnya.</p>
+		<p><strong>Catatan:</strong>Agar proses pengecekan sitiran selesai tepat waktu, <tt>citation_checking_max_processes</tt> direktif di file konfigurasi Anda harus diatur ke nilai yang valid. Lihat bagian Pengaturan Umum di <tt>config.inc.php</tt> untuk informasi lebih lanjut.</p>]]></message>
+	<message key="manager.setup.citationOutput">Output Sitiran</message>
+	<message key="manager.setup.citationOutputStyleDescription">Pilih model sitiran yang sedang digunakan di naskah. Bantuan Koreksi Sitiran mengizinkan Anda membandingkan versi sitiran penulis dengan versi yang dihasilkan dari XML sehingga Anda mudah mengenali kesalahan:</message>
+	<message key="manager.setup.errorDeletingItem">Ada kesalahan saat menghapus item ini.</message>
+	<message key="manager.setup.filter.grid.errorDeletingFilter">Eror terjadi saat mencoba memindahkan filter ini. Laporkan ini sebagai bug.</message>
+	<message key="manager.setup.filter.grid.filterDisplayName">Konektor</message>
+	<message key="manager.setup.filter.grid.filterSettings">Informasi Pendaftaran dan Pengaturan Konektor</message>
+	<message key="manager.setup.filter.grid.filterTemplateRequired">Pilih satu dari transformasi ini dari drop-down.</message>
+	<message key="manager.setup.filter.grid.confirmDelete">Apakah Anda benar-benar ingin menghapus filter{$filterName}?</message>
+	<message key="manager.setup.filter.lookup.grid.descriptionConfirm">Anda telah memilih untuk menambah database {$filterDisplayName}. Klik di "OK" untuk mengkonfirmasi.</message>
+	<message key="manager.setup.filter.lookup.grid.descriptionTemplate">Pilih lookup database.</message>
+	<message key="manager.setup.filter.lookup.grid.description.iSBNdb"><![CDATA[<p>Filter ini terkoneksi ke <a href="http://isbndb.com/" target="_blank">ISBNdb.com</a> buku dan database ISBN.</p>
+	<p>Kunci ISBNdb API bersifat mandatori. Untuk informasi tentang menghasilkan kunci, lihat <a href="http://isbndb.com/api/v1/docs/keys" target="_blank">dokumentasi online</a>.</p>]]></message>
+	<message key="manager.setup.filter.lookup.grid.description.crossRef"><![CDATA[<p>Filter ini terkoneksi ke database sitiran CrossRef dengan menggunakan CrossRef<a href="http://www.crossref.org/02publishers/openurl_info.html" target="_blank">OpenURL Query antarmuka</a>.</p>
+	<p>Untuk menggunakan filter ini, Anda dapat menggunakan akun sistem CrossRef Anda, atau mendaftarkan alamat email yang valid dengan CrossRef <a href="http://www.crossref.org/requestaccount/" target="_blank">di sini</a>.</p>]]></message>
+	<message key="manager.setup.filter.lookup.grid.description.pubMed"><![CDATA[<p>Filter ini terkoneksi ke PubMed <a href="http://www.ncbi.nlm.nih.gov/gquery/gquery.fcgi" target="_blank">Entrez</a> cross-database search engine.</p>
+	<p>Email pendaftaran tidak mandatori secara ketat, tapi mungkin perlu jika Anda menghadapi masalah koneksi. Lihat bagian di  <a href="http://www.be-md.ncbi.nlm.nih.gov/bookshelf/br.fcgi?book=helpeutils&part=chapter2#chapter2.Usage_Guidelines_and_Requiremen" target="_blank">Persyaratan dan Petunjuk Penggunaan</a> di dokumentasi Entrez untuk informasi lebih lanjut.</p>]]></message>
+	<message key="manager.setup.filter.lookup.grid.description.worldCat"><![CDATA[<p>Filter ini terkoneksi ke layanan OCLC <a href="http://www.worldcat.org/affiliate/webservices/xisbn/app.jsp" target="_blank">xISBN</a> and <a href="http://www.worldcat.org/" target="_blank">Worldcat</a> (optional).</p>
+	<p>Jika Anda mempunyai Worldcat <a href="http://oclc.org/developer/develop/web-services.html" target="_blank">kunci API</a>Anda dapat terkoneksi dengan Worldcat dengan memasukkan kunci di bawah ini.</p>]]></message>
+	<message key="manager.setup.filter.lookup.grid.loadMessage">Tunggu hingga grid konfigurasi database sitiran telah dimuat...</message>
+	<message key="manager.setup.filter.lookup.grid.title">Konektor Database Sitiran</message>
+	<message key="manager.setup.filter.noMoreTemplates">Semua transformasi yang tersedia telah ditambahkan. Klik "Batal" untuk kembali ke halaman setup.</message>
+	<message key="manager.setup.filter.parser.grid.descriptionConfirm">Anda telah memilih untuk menambah parser {$filterDisplayName} . Klik "OK" untuk mengkonfirmasi.</message>
+	<message key="manager.setup.filter.parser.grid.descriptionTemplate">Pilih parser sitiran.</message>
+	<message key="manager.setup.filter.parser.grid.description.freeCite"><![CDATA[<p>Filter ekstrasi ini terkoneksi ke <a href="http://freecite.library.brown.edu/" target="_blank">FreeCite</a> web service.</p>]]></message>
+	<message key="manager.setup.filter.parser.grid.description.paraCite"><![CDATA[<p>Filter ekstrasi ini menggunakan <a href="http://paracite.eprints.org/developers/" target="_blank">ParaTools</a> Perl modules untuk menyediakan <a href="http://paracite.eprints.org" target="_blank">ParaCite</a> fungsionalitas menguraikan sitiran. Agar dapat bekerja dengan tepat, Anda harus menginstal Per;, bersama dengan <a href="http://search.cpan.org/~mjewell/Biblio-Citation-Parser-1.10/" target="_blank">Biblio::Citation::Parser</a> dan <a href="http://search.cpan.org/~sburke/Text-Unidecode-0.04/" target="_blank">Text::Unidecode</a> CPAN modules. Anda juga harus mengkonfigurasi <tt>perl</tt> directif di file konfigurasi Anda. Direktif ini dapat ditemukan di bagian Perintah Eksternal <tt>config.inc.php</tt>.</p>
+	<p>Anda dapat memilih parser module ParaTools  yang harus digunakan. Anda dapat memilih antara yang standar, <a href="http://search.cpan.org/~mjewell/Biblio-Citation-Parser-1.10/lib/Biblio/Citation/Parser/Jiao.pm" target="_blank">Jiao</a>, dan <a href="http://search.cpan.org/~mjewell/Biblio-Citation-Parser-1.10/lib/Biblio/Citation/Parser/Citebase.pm" target="_blank">Citebase</a> parser modules.</p>]]></message>
+	<message key="manager.setup.filter.parser.grid.description.parsCit"><![CDATA[<p>Filter ekstrasi ini terkoneksi ke <a href="http://aye.comp.nus.edu.sg/parsCit/" target="_blank">ParsCit</a> layanan web.</p>]]></message>
+	<message key="manager.setup.filter.parser.grid.description.regEx">filter ekstrasi RegEx menggunakan serangkaian ekspresi reguler untuk menguraikan sitiran.</message>
+	<message key="manager.setup.filter.parser.grid.loadMessage">Tunggu hingga grid konfigurasi parser sitiran telah dimuat...</message>
+	<message key="manager.setup.filter.parser.grid.title">Layanan Ekstrasi Sitiran</message>
+	<message key="manager.setup.filter.pleaseSelect">Pilih...</message>
+	<message key="manager.setup.homeHeaderImageInvalid">format gambar logo header beranda invalid atau unggahan gagal. Format yang diterima adalah .gif, .jpg, or .png.</message>
+	<message key="manager.setup.homepageImageInvalid">format gambar beranda invalid atau unggahan gagal. Format yang diterima adalah .gif, .jpg, or .png.</message>
+	<message key="manager.setup.homeTitleImageInvalid">format gambar judul header beranda invalid atau unggahan gagal. Format yang diterima adalah .gif, .jpg, or .png.</message>
+	<message key="manager.setup.loggingAndAuditing">Proses Login dan Audit</message>
+	<message key="manager.setup.metaCitationsDescription">Aktifkan checkbox berikut untuk memudahkan pengeditan referensi dan sitiran. Ini akan memudahkan penulis untuk memasukkan sitiran kasar dengan naskah. Editor juga akan mempunyai akses ke bantuan Koreksi sitiran yang dapat mengecek sitiran kasar terhadap database eksternal, seperti WorldCat, ISBNdb, PubMed dan lainnya, untuk keakuratan. Sitiran yang disetujui dapat diekspor ke file galley akhir.</message>
+	<message key="manager.setup.pageHeaderLogoImageInvalid">Format gambar logo header halaman invalid atau unggahan gagal. Format yang diterima adalah .gif, .jpg, or .png.</message>
+	<message key="manager.setup.selectOne">Pilih satu</message>
+	<message key="manager.statistics"><![CDATA[Statistik &amp; Laporan]]></message>
+	<message key="manager.statistics.statistics.count.value">{$count} ({$percentage}%)</message>
+	<message key="manager.statistics.statistics.totalNewValue">{$numTotal} ({$numNew} new)</message>
+	<message key="manager.users">Pengguna</message>
+	<message key="plugins.categories.auth">Plugin Otorisasi</message>
+	<message key="plugins.categories.blocks">Plugin Block</message>
+	<message key="plugins.categories.blocks.description">Block Plugins adalah komponen UI yang dapat di-plug, seperti sidebar tool yang bervariasi.</message>
+	<message key="plugins.categories.citationFormats">Plugin Format Sitiran</message>
+	<message key="plugins.categories.gateways.description">Gateway Plugins menyediakan data langsung ke sistem eksternal.</message>
+	<message key="plugins.categories.gateways">Plugin Gateway</message>
+	<message key="plugins.categories.generic">Plugin Generic</message>
+	<message key="plugins.categories.importexport.description">Impor/Ekspor Plugin dapat digunakan untuk mentransfer konten ke dan dari sistem lain.</message>
+	<message key="plugins.categories.importexport">Plugin Impor/Ekspor</message>
+	<message key="plugins.categories.paymethod.description">Plugin Metode Pembayaran mengimplementasikan dukungan untuk berbagai cara proses pembayaran online.</message>
+	<message key="plugins.categories.paymethod">Plugin Pembayaran</message>
+	<message key="plugins.categories.reports.description">Laporkan Plugin digunakan untuk mengimplementasikan berbagai tipe laporan dan ekstrak data.</message>
+	<message key="plugins.categories.reports">Plugin Laporan</message>
+	<message key="plugins.categories.themes.description">Tema Plugins  dapat digunakan untuk mengubah penampilan sistem.</message>
+	<message key="plugins.categories.themes">Plugin Tema</message>
+	<message key="plugins.categories.oaiMetadataFormats">Plugin Format Metadata OAI</message>
+	<message key="plugins.categories.oaiMetadataFormats.description">Plugin format ini mengekspresikan metadata in komunikasi OAI.</message>
+
+	<!-- Review forms -->
+	<message key="manager.reviewFormElement.changeType"> Peringatan: mengubah tipe elemen form review dari tipe pilihan banyak ke tipe akhir terbuka akan berakibat ke penghapusan opsi pilihan banyak.</message>
+	<message key="manager.reviewFormElements">Item Form</message>
+	<message key="manager.reviewFormElements.addResponseItem"> Tambahkan penyeleksian </message>
+	<message key="manager.reviewFormElements.checkboxes"> Kotak cek? (Anda bisa memilih satu atau lebih)</message>
+	<message key="manager.reviewFormElements.chooseType"> Pilih Tipe Item </message>
+	<message key="manager.reviewFormElements.confirmDelete"> Apakah Anda yakin ingin menghapus elemen dari form review yang diterbitkan?</message>
+	<message key="manager.reviewFormElements.copyTo"> Salin ke:</message>
+	<message key="manager.reviewFormElements.create"> Buat Item Baru </message>
+	<message key="manager.reviewFormElements.dropdownbox">Kotak Drop-down</message>
+	<message key="manager.reviewFormElements.edit"> Edit Tipe Form </message>
+	<message key="manager.reviewFormElements.elementType"> Tipe item </message>
+	<message key="manager.reviewFormElements.form.elementTypeRequired"> Sebuah tipe item diperlukan untuk item form.</message>
+	<message key="manager.reviewFormElements.form.questionRequired"> Pertanyaan diperlukan untuk item form.</message>
+	<message key="manager.reviewFormElements.noneCreated"> Tidak ada item form telah dibuat.</message>
+	<message key="manager.reviewFormElements.possibleResponse"> Penyeleksian </message>
+	<message key="manager.reviewFormElements.question">Item</message>
+	<message key="manager.reviewFormElements.radiobuttons">Radio buttons (Anda hanya bisa memilih satu)</message>
+<message key="manager.reviewFormElements.required"> Reviewer perlu melengkapi/ menyelesaikan item </message>
+	<message key="manager.reviewFormElements.included"> Termasuk di pesan untuk penulis </message>
+	<message key="manager.reviewFormElements.smalltextfield"> Kotak teks satu kata </message>
+	<message key="manager.reviewFormElements.textarea"> Kotak teks lebih besar </message>
+	<message key="manager.reviewFormElements.textfield"> Kotak teks satu garis </message>
+	<message key="manager.reviewForms"> Form Review</message>
+	<message key="manager.reviewForms.completed"> Selesai </message>
+	<message key="manager.reviewForms.create"> Buat Form Review </message>
+	<message key="manager.reviewForms.description"> Deskripsi dan Instruksi </message>
+	<message key="manager.reviewForms.edit"> Form Review </message>
+	<message key="manager.reviewForms.form.titleRequired"> Judul diperlukan untuk form review.</message>
+	<message key="manager.reviewForms.inReview"> Dalam Review </message>
+	<message key="manager.reviewForms.list.description"> Form peer review yang dibuat di sini akan ditampilkan kepada Reviewer untuk dilengkapi, bukan form default yang terdiri dari dua kotak teks terbuka, yang pertama "untuk Penulis dan Editor", dan yang kedua "untuk Editor". Form review dapat dipilih untuk bagian jurnal yang spesifik, dan Editor punya opsi untuk memilih form mana yang akan digunakan dalam penugasan review. Dalam semua kasus, editor punya opsi untuk memasukkan review dalam berkorespondensi dengan penulis.</message>
+	<message key="manager.reviewForms.noneChosen"> Tidak ada form review </message>
+	<message key="manager.reviewForms.noneCreated"> Tidak ada form review dibuat.</message>
+	<message key="manager.reviewForms.preview"> Form Preview </message>
+	<message key="manager.reviewForms.title"> Judul </message>
+</locale>

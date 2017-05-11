@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/id_ID/submission.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="id_ID" full_name="Bahasa Indonesia">
+	<!-- Author Submission -->
+	<message key="author.submit.submissionCitations">Sediakan daftar referensi yang telah diformat untuk karya yang dikutip di penyerahan ini. Pisahkan referensi individu dengan garis kosong.</message>
+
+	<!-- PERBAIKIAKU: pindahkan ke plugin metadata -->
+	<!-- pesan yang digunakan oleh penyaring metadata -->
+	<message key="metadata.filters.crossref.settings.email.displayName">Email Registrasi CrossRef</message>
+	<message key="metadata.filters.crossref.settings.email.validationMessage">Masukkan email registrasi CrossRef yang valid. Anda bisa mendaftarkan email Anda secara gratis di web site CrossRef.</message>
+	<message key="metadata.filters.isbndb.settings.apiKey.displayName">Kunci ISBNdb API</message>
+	<message key="metadata.filters.isbndb.settings.apiKey.validationMessage">Masukkan kunci ISBNdb API Anda. Jika Anda belum mempunyai kunci, Anda dapat meminta satu secara gratis dari proyek ISBNdb.</message>
+	<message key="metadata.filters.pubmed.settings.email.displayName">Email Pendaftaran PubMed</message>
+	<message key="metadata.filters.pubmed.settings.email.validationMessage">Masukkan email pendaftaran PubMed yang valid jika Anda sudah punya.</message>
+	<message key="metadata.filters.worldcat.settings.apiKey.displayName">Kunci WorldCat API</message>
+	<message key="metadata.filters.worldcat.settings.apiKey.validationMessage">Masukkan kunci WorldCat API yang valid jika Anda sudah punya.</message>
+	<message key="metadata.filters.paracite.settings.citationModule.displayName">Modul Sitiran</message>
+	<message key="metadata.filters.paracite.settings.citationModule.validationMessage">Pilih satu modul Sitiran yang diberikan.</message>
+	<message key="metadata.filters.settings.isOptional.displayName">Jangan gunakan by default (akan masih tersedia untuk the editor)</message>
+	<message key="metadata.filters.settings.isOptional.validationMessage">Kesalahan internal. Nilai non-valid telah diposting untuk pengaturan 'penyaringan opsional'. Laporkan ini sebagai bug.</message>
+	
+	<!-- pesan yang dibagi antara skema MD -->
+	<message key="metadata.property.displayName.author">Penulis</message>
+	<message key="metadata.property.validationMessage.author">Untuk hasil terbaik, penulis harus dimasukkan di format berikut ini: Coleman Jr, D. (Ralf) Dr.</message>
+	<message key="metadata.property.displayName.editor">Editor</message>
+	<message key="metadata.property.validationMessage.editor">Untuk hasil terbaik, editor harus dimasukkan di format berikut ini: Coleman Jr, D. (Ralf) Dr.</message>
+	<!-- Pesan spesifik-NLM -->
+	<message key="metadata.property.displayName.article-title">Judul Artikel/ Makalah</message>
+	<message key="metadata.property.validationMessage.article-title">Masukkan judul artikel/ makalah yang valid.</message>
+	<message key="metadata.property.displayName.source">Judul Buku/ Jurnal</message>
+	<message key="metadata.property.validationMessage.source">Masukkan judul buku/jurnal yang valid.</message>
+	<message key="metadata.property.displayName.date">Tanggal Penerbitan</message>
+	<message key="metadata.property.validationMessage.date">Masukkan tanggal penerbitan yang valid (format: YYYY-MM-DD).</message>
+	<message key="metadata.property.displayName.access-date">Data Mengakses</message>
+	<message key="metadata.property.validationMessage.access-date">Masukkan data mengakses yang valid. (format: YYYY-MM-DD).</message>
+	<message key="metadata.property.displayName.issue">Terbitan</message>
+	<message key="metadata.property.validationMessage.issue">Masukkan terbitan yang valid.</message>
+	<message key="metadata.property.displayName.volume">Volume</message>
+	<message key="metadata.property.validationMessage.volume">Masukkan volume yang valid.</message>
+	<message key="metadata.property.displayName.season">Musim</message>
+	<message key="metadata.property.validationMessage.season">Masukkan pengidentifikasi musim yang valid.</message>
+	<message key="metadata.property.displayName.chapter-title">Judul Bab</message>
+	<message key="metadata.property.validationMessage.chapter-title">Masukkan judul bab yang valid.</message>
+	<message key="metadata.property.displayName.edition">Edisi</message>
+	<message key="metadata.property.validationMessage.edition">Masukkan edisi yang valid.</message>
+	<message key="metadata.property.displayName.series">Seri</message>
+	<message key="metadata.property.validationMessage.series">Masukkan seri yang valid.</message>
+	<message key="metadata.property.displayName.supplement">Tambahan</message>
+	<message key="metadata.property.validationMessage.supplement">Masukkan tambahan yang valid.</message>
+	<message key="metadata.property.displayName.conf-date">Tanggal Konferensi</message>
+	<message key="metadata.property.validationMessage.conf-date">Masukkan tanggal konferensi yang valid (format: YYYY-MM-DD).</message>
+	<message key="metadata.property.displayName.conf-loc">Lokasi Konferensi</message>
+	<message key="metadata.property.validationMessage.conf-loc">Masukkan lokasi konferensi yang valid.</message>
+	<message key="metadata.property.displayName.conf-name">Nama konferensi</message>
+	<message key="metadata.property.validationMessage.conf-name">Masukkan nama konferensi yang valid.</message>
+	<message key="metadata.property.displayName.conf-sponsor">Sponsor Konferensi</message>
+	<message key="metadata.property.validationMessage.conf-sponsor">Masukkan sponsor konferensi yang valid.</message>
+	<message key="metadata.property.displayName.institution">Institusi</message>
+	<message key="metadata.property.validationMessage.institution">Masukkan institusi yang valid.</message>
+	<message key="metadata.property.displayName.fpage">Halaman Pertama</message>
+	<message key="metadata.property.validationMessage.fpage">Masukkan halaman pertama yang valid (harus nilai numerik).</message>
+	<message key="metadata.property.displayName.lpage">Halaman Terakhir</message>
+	<message key="metadata.property.validationMessage.lpage">Masukkan halaman terakhir yang valid (harus nilai numerik).</message>
+	<message key="metadata.property.displayName.size">Jumlah Halaman</message>
+	<message key="metadata.property.validationMessage.size">Masukkan jumlah total halaman yang valid (harus nilai numerik).</message>
+	<message key="metadata.property.displayName.publisher-loc">Lokasi Penerbit</message>
+	<message key="metadata.property.validationMessage.publisher-loc">Masukkan lokasi penerbit yang valid.</message>
+	<message key="metadata.property.displayName.publisher-name">Nama Penerbit</message>
+	<message key="metadata.property.validationMessage.publisher-name">Masukkan nama penerbit yang valid.</message>
+	<message key="metadata.property.displayName.isbn">ISBN</message>
+	<message key="metadata.property.validationMessage.isbn">Masukkan ISBN yang valid (9 atau 13 nomor).</message>
+	<message key="metadata.property.displayName.issn">Print ISSN</message>
+	<message key="metadata.property.validationMessage.issn">Masukkan print ISSN yang valid.</message>
+	<message key="metadata.property.displayName.eissn">eISSN</message>
+	<message key="metadata.property.validationMessage.eissn">Masukkan eISSN yang valid.</message>
+	<message key="metadata.property.displayName.doi">DOI</message>
+	<message key="metadata.property.validationMessage.doi">Masukkan DOI yang valid.</message>
+	<message key="metadata.property.displayName.publisher-id">Custom Publication ID</message>
+	<message key="metadata.property.validationMessage.publisher-id">Masukkan custom publication ID valid.</message>
+	<message key="metadata.property.displayName.coden">CODEN</message>
+	<message key="metadata.property.validationMessage.coden">Masukkan CODEN yang valid.</message>
+	<message key="metadata.property.displayName.sici">SICI</message>
+	<message key="metadata.property.validationMessage.sici">Masukkan SICI yang valid.</message>
+	<message key="metadata.property.displayName.pmid">PMID</message>
+	<message key="metadata.property.validationMessage.pmid">Masukkan PMID yang valid.</message>
+	<message key="metadata.property.displayName.uri">tautan  ke penerbitan</message>
+	<message key="metadata.property.validationMessage.uri">Masukkan tautan alternatif yang valid ke penerbitan.</message>
+	<message key="metadata.property.displayName.comment">Komentar</message>
+	<message key="metadata.property.validationMessage.comment">Masukkan komentar yang valid.</message>
+	<message key="metadata.property.displayName.annotation">Catatan Tambahan</message>
+	<message key="metadata.property.validationMessage.annotation">Masukkan Catatan Tambahan yang valid.</message>
+	<message key="metadata.property.displayName.publication-type">Tipe Publikasi</message>
+	<message key="metadata.property.validationMessage.publication-type">Pastikan Anda selalu mengatur tipe penerbitan. Nilai yang didukung sekarang ini adalah tipe penerbitan buku (untuk buku atau bab buku) dan jurnal (untuk artikel jurnal). Jika tidak, pemformatan output sitiran tidak akan bekerja secara benar.</message>
+	
+	<!-- MODS-pesan spesifik-->
+	<message key="metadata.property.displayName.title-type">Tipe Judul</message>
+	<message key="metadata.property.validationMessage.title-type">Pastikan Anda mengatur tipe judul yang valid. 
+Pastikan Anda mengatur tipe judul yang valid. Nilai dukungan adalah "disingkat", "diterjemahkan", "alternatif" dan "seragam".</message>
+	<message key="metadata.property.displayName.nonSort">Bagian judul diabaikan saat menyortir</message>
+	<message key="metadata.property.validationMessage.nonSort">Masukkan hanya karakter awal  judul yang seharusnya diabaikan saat menyortir file.</message>
+	<message key="metadata.property.displayName.title">Judul</message>
+	<message key="metadata.property.validationMessage.title">Masukkan judul yang valid.</message>
+	<message key="metadata.property.displayName.subTitle">Subtitle</message>
+	<message key="metadata.property.validationMessage.subTitle">Masukkan subtitle yang valid.</message>
+	<message key="metadata.property.displayName.partNumber">Nomor Bagian</message>
+	<message key="metadata.property.validationMessage.partNumber">Masukkan nomor bagian yang valid.</message>
+	<message key="metadata.property.displayName.partName">Nama Bagian</message>
+	<message key="metadata.property.validationMessage.partName">Masukkan nama bagian yang valid.</message>
+	<message key="metadata.property.displayName.name-type">Tipe Nama</message>
+	<message key="metadata.property.validationMessage.name-type">Pastikan Anda mengatur tipe nama yang valid. Nilai dukungan adalah 'personal', 'corporate' dan 'conference'.</message>
+	<!-- FIXME: end -->
+	
+	<message key="submission.agencies">Nama Agen</message>
+	<message key="submission.abstractViews">Lihat Sari</message>
+	<message key="submission.accepted">Diterima</message>
+	<message key="submission.acknowledge">Diketahui</message>
+	<message key="submission.addSuppFile">Tambah file tambahan</message>
+	<message key="submission.ask">Tanya</message>
+	<message key="submission.backToSubmissionEditing">Kembali ke Pengeditan Naskah</message>
+	<message key="submission.changeComments">Ubah ke</message>
+	<message key="submission.citations">Referensi</message>
+	<message key="submission.citations.editor.citationlist.deleteCitationConfirmation">Apakah Anda yakin ingin menghapus sitiran ini?</message>
+	<message key="submission.citations.editor.citationlist.errorDeletingCitation">Eror terjadi saat mencoba menghapus sitiran ini. Laporkan ini sebagai bug.</message>
+	<message key="submission.citations.editor.citationlist.newCitation">Sitiran Baru</message>
+	<message key="submission.citations.editor.citationlist.title">Edit Sitiran</message>
+	<message key="submission.citations.editor.clickToEdit">Klik untuk mengedit.</message>
+	<message key="submission.citations.editor.details.authorQuery">Tanya Penulis</message>
+	<message key="submission.citations.editor.details.authorQueryBody">Pesan Anda untuk penulis:</message>
+	<message key="submission.citations.editor.details.authorQueryExplanation">Anda dapat bertanya pada penulis untuk informasi lebih lanjut tentang Sitiran yang sekarang. Mengklik tombol "kirim" di bawah ini akan mengirimkan pesan Anda sebagai email kepada penulis.</message>
+	<message key="submission.citations.editor.details.authorQuerySubject">Subjek:</message>
+	<message key="submission.citations.editor.details.cannotSelectDefaultForLabel">Anda tidak dapat membatalkan pengaturan label bidang. Hapus bidang jika Anda tidak memerlukannya.</message>
+	<message key="submission.citations.editor.details.checkInGoogleScholar">Cek di Google Scholar</message>
+	<message key="submission.citations.editor.details.changeFieldInfo">Ketik terlebih dahulu beberapa huruf untuk memilih...</message>
+	<message key="submission.citations.editor.details.citationExportPreview">Preview Ekspor Sitiran</message>
+	<message key="submission.citations.editor.details.citationImprovementResultsActive">Hasil layanan Sitiran internal ahli (klik untuk menutup)</message>
+	<message key="submission.citations.editor.details.citationImprovementResultsInactive">Hasil layanan Sitiran internal ahli (klik untuk membuka)</message>
+	<message key="submission.citations.editor.details.citationServices">Layanan Sitiran</message>
+	<message key="submission.citations.editor.details.clickToDismissMessage">Anda dapat mengklik teks pesan untuk menghentikannya.</message>
+	<message key="submission.citations.editor.details.dataSaved">Perubahan Anda telah disimpan.</message>
+	<message key="submission.citations.editor.details.editRawCitationDatabaseServices">Pilih Layanan Database Sitiran:</message>
+	<message key="submission.citations.editor.details.editRawCitationExpertSettingsActive">Pengaturan pengeditan Sitiran ahli (klik untuk menutup)</message>
+	<message key="submission.citations.editor.details.editRawCitationExpertSettingsInactive">Pengaturan pengeditan Sitiran ahli (klik untuk membuka)</message>
+	<message key="submission.citations.editor.details.editRawCitationExtractionServices">Pilih layanan ekstrasi Sitiran:</message>
+	<message key="submission.citations.editor.details.editRawCitationFilterValidationError">Kesahalan internal: pemilihan filter yang tidak valid. Serahkan laporan bug.</message>
+	<message key="submission.citations.editor.details.explainImprovementOptions">Jika Anda tidak mendapatkan hasil yang memuaskan by default, maka Anda mempunyai beberapa opsi untu meningkatkan Sitiran. Ini sering membantu untuk mengedit bidang penting secara manual (contoh: judul dan penulis) dan kemudian coba layanan Sitiran lagi. Jika itu tidak membantu, Anda masih dapat mempertanyakan Google Scholar atau bertanya pada penulis untuk detailnya.</message>
+	<message key="submission.citations.editor.details.googleScholar">Google Scholar</message>
+	<message key="submission.citations.editor.details.googleScholarExplanation">Jika Sitiran yang cocok tidak ditemukan di layanan Sitiran terkoneksi manapun, Anda masih dapat mencari  yang cocok di Google Scholar. Sayangnya, Google Scholar tidak menyediakan field-based antarmuka untuk datanya yang akan kita gunakan, yang berarti tidak ada cara untuk mengembalikan data secara otomatis ke Bantuan ini. Anda harus menyalin informasi secara manual dari halaman hasil Google ke bidang Anda.</message>
+	<message key="submission.citations.editor.details.manualEditing">Pengeditan Manual</message>
+	<message key="submission.citations.editor.details.messages">Perhatikan (klik di pesan untuk menghentikannya)</message>
+	<message key="submission.citations.editor.details.newFieldInfo">...klik di sini untuk menambah bidang baru...</message>
+	<message key="submission.citations.editor.details.queryCitation">Layanag Sitiran Pertanyaan ulang</message>
+	<message key="submission.citations.editor.details.queryGoogleScholar">Cari di Google Scholar</message>
+	<message key="submission.citations.editor.details.processRawCitation">Proses</message>
+	<message key="submission.citations.editor.details.processRawCitationGoAhead">Teruskan</message>
+	<message key="submission.citations.editor.details.processRawCitationTitle">Mengubah Sitiran Asli</message>
+	<message key="submission.citations.editor.details.processRawCitationWarning">Anda akan mengubah teks Sitiran asli. Jika Anda melakukannya, maka semua bidang akan digantikan dengan nilai yang baru dihasilkan. Ini menghapus perubahan manual yang mungkin sudah Anda buat.</message>
+
+	
+		<message key="submission.citations.editor.details.saveAndApprove">Simpan dan Setujui</message>
+	<message key="submission.citations.editor.details.saveAndRevokeApproval">Membatalkan Persetujuan</message>
+	<message key="submission.citations.editor.details.sendAuthorQuery">Kirim Pesan</message>
+	<message key="submission.citations.editor.details.sendAuthorQuerySuccess">Pesan Terkirim!</message>
+	<message key="submission.citations.editor.details.sourceResultsUse">Gunakan</message>
+	<message key="submission.citations.editor.details.sourceResultsUseAll">Gunakan Semua</message>
+	<message key="submission.citations.editor.details.sourceResultsUseAllExplanation">Klik untuk mengangkut semua bidang hasil dari sumber langsung ke daftar bidang Anda.</message>
+	<message key="submission.citations.editor.details.sourceResultsUseExplanation">Klik untuk mengangkut bidang hasil ini langsung ke daftar bidang Anda</message>
+	<message key="submission.citations.editor.details.rawCitation">Teks Sitiran Asli</message>
+	<message key="submission.citations.editor.details.rawCitationRequired">Teks Sitiran diperlukan.</message>
+	<message key="submission.citations.editor.details.unsavedChanges">Sitiran ini mengandung data yang belum disimpan. Klik tombol "Simpan" untuk menyimpan perubahan atau tombol "Batal" untuk membatalkan perubahan tersebut.</message>
+	<message key="submission.citations.editor.details.dontShowMessageAgain">Jangan tunjukkan pesan ini lagi.</message>
+	<message key="submission.citations.editor.edit">Edit Sitiran</message>
+	<message key="submission.citations.editor.export">Ekspor Sitiran</message>
+	<message key="submission.citations.editor.export.exportDescription"><![CDATA[<a id="markForExport" href="">Klik di sini</a> untuk memilih semua output yang dihasilkan. Anda dapat menyalinnya ke dalam dokumen Anda.]]></message>
+	<message key="submission.citations.editor.export.filterSelectionDescription">Pilih satu dari  pilihan ekspor berikut ini.</message>
+	<message key="submission.citations.editor.export.filterSelectionError">Anda tidak memilih satu dari pilihan output.</message>
+	<message key="submission.citations.editor.export.foundUnapprovedCitationsMessage"><![CDATA[<p>Anda belum menyetujui semua sitiran. Pergi ke tab <strong>Edit Sitiran</strong> dan pastikan Anda telah menyetujui semua sitiran sebelum Anda mencoba untuk mengekspor mereka. Sitiran yang telah disetujui ditandai dengan garis biru tua di sebelah kiri.</p>]]></message>
+	<message key="submission.citations.editor.export.noExportOutput">Filter output '{$filterName}' menghasilkan kesalahan. Mem-file laporan bug.</message>
+	<message key="submission.citations.editor.export.pleaseSelectXmlFilter">Pilihan output XML:</message>
+	<message key="submission.citations.editor.export.pleaseSelectPlaintextFilter">Output model Sitiran (hanya percobaan!):</message>
+	<message key="submission.citations.editor.introduction">Pendahuluan</message>
+	<message key="submission.citations.editor.introduction.introductionMessage"><![CDATA[<h4>Selamat datang di Bantuan Koreksi Sitiran!</h4>
+	<p>Dengan Bantuan ini Anda dapat mengubah Sitiran yang disediakan oleh penulis untuk ekspor ke  galley NLM 2.3 atau 3.0 XML atau secara bergantian sebagai output text-based. Alat ini terlebih dahulu berusaha secara otomatis mengesktrak dan mengenali kembali Sitiran karena mereka sudah disediakan, tapi Anda dapat masuk dan mengedit hasilnya kapan saja.</p>
+	<ul>
+		<li><p><strong>Mengkonfigurasi Bantuan</strong></p>
+		<p>Bantuan Koreksi Sitiran dikonfigurasi oleh Manajer Jurnal di <a href="{$citationSetupUrl}">Setup Jurnal Langkah 3.7: Bantuan Koreksi Sitiran</a>. Ekstraksi sitiran yang berbeda dan pengecekan alat dapat ditambahkan, dikonfigurasi, dan dihapus. Untuk informasi lebih lanjut, hubungi manajer jurnal.</p></li>
+		<li><p><strong>Menavigasi antarmuka Bantuan</strong></p>
+		<p>Untuk mengubah antara tab <strong>Pendahuluan</strong>, <strong>Edit Sitiran</strong> dan <strong>Ekspor Sitiran</strong> klik di judul tab. Untuk memperluas antarmuka Sitiran, klik <strong>Fullscreen</strong> tombol. Untuk mengembalikan ke antarmuka normal dari antarmuka Sitiran yang diperluas, klik <strong>Fullscreen Off</strong> tombol. Untuk memindahkan tab pendahuluan seluruhnya, klik tombol di bawah ini.</p></li>
+		<li><p><strong>Meminta Sitiran</strong></p>
+		<p>Jika Bantuan Koreksi Sitiran dibuat bisa oleh manajer jurnal, penulis akan diberitahu daftar referensi selama penyerahan artikel. Refrensi ini akan diminta secara terpisah dari dokumen penyerahan itu sendiri. Setelah penyerahan, penulis juga dapat memodifikasi daftar referensi mereka kapanpun dengn mengedit metadata naskah; perhatikan ini akan menimpa modifikasi apapun yang Anda buat ke Sitiran dengan menggunakan alat ini.</p></li>
+		<li><p><strong>Mengedit Sitiran</strong></p>
+		<p>Bantuan Koreksi Sitiran akan mencoba mengidentifikasi dan mengekstrak Sitiran individu dari daftar referensi penulis. Anda dapat mengecek tiap usaha ekstraksi Sitiran secara otomatis untuk keakuratan terhadap sejumlah databse eksternal; mengedit informasi Sitiran yang tidak benar dan menambah informasi baru; menyetujui atau menghapus Sitiran; dan menambah Sitiran baru.</p>
+		<p>Semua Sitiran final untuk penyerahan harus disetujui sebelum mereka dieskpor.</p></li>
+		<li><p><strong>Mengekspor Sitiran</strong></p>
+ 		<p>Sitiran dapat dieskpor sebagai XML atau teks. Pilihan ekspor XML sekarang ini termasuk <a href="http://dtd.nlm.nih.gov/publishing/">Penerbitan Jurnal NLM</a> 2.3 and 3.0 <a href="http://www.ncbi.nlm.nih.gov/pmc/pmcdoc/tagging-guidelines/article/tags.html#el-reflist">ref-list XML</a>. Pilih satu dari output pilihan ini di mana XML-encoded ref-list snippet yang dapat disalin ke dalam galley NLM XML.</p>
+		<p>Pilihan ekspor teks eksperimental termasuk ABNT, APA, MLA dan model output Sitiran vancouver. Pilihan ini menyediakan output teks yang dapat disalin ke dalam galley artikel text-based (sebagai contoh: ke dalam Microsoft Word atau OpenOffice; Adobe InDesign; dll.). Tiap Sitiran termasuk tautan yang dimasukkan untuk secara otomatis mencari Sitiran di Google Scholar.</p></li>
+	</ul>]]></message>
+	<message key="submission.citations.editor.loadMessage">Tunggu bantuan Koreksi Sitiran untuk dimuat.</message>
+	<message key="submission.citations.editor.pleaseImportCitationsFirst"><![CDATA[<p>Tidak ada Sitiran untuk artikel ini.</p><p>Pergi ke <a href="{$articleMetadataUrl}">halaman metadata artikel</a> dan masukkan daftar referensi atau tambahkan referensi secara manual dengan menggunakan tombol tambah item dari editor.</p>]]></message>
+	<message key="submission.citations.editor.pleaseSelect">Pilih...</message>
+	<message key="submission.citations.editor.unprocessedCitations">Sitiran artikel ini sedang diproses di server. Daftar Sitiran yang sekarang hanya berisi Sitiran yang sudah diproses. Klik tombol refresh untuk melihat Sitiran yang telah diproses sementara ini.</message>
+	<message key="submission.citations.editor.unprocessedCitationsButton">Refresh Daftar Sitiran</message>
+	<message key="submission.citations.editor.unprocessedCitationsButtonTitle">Klik untuk merefresh daftar Sitiran.</message>
+	<message key="submission.citations.filter.invalidMetadata">Eror terjadi di{$filterName}: salah satu elemen data yang dikembalikan dari sumber data (contoh: layanan web) One of the data elements returned from the data source (e.g. a web service) tidak mengkonfirmasi ke format meta-data internal. Maka dari itu, hasil sumber data ditolak. File-kan ini sebagai bug.</message>
+	<message key="submission.citations.filter.noResultFromFilterError">Beberapa layanan Sitiran tidak mengembalikan hasil apapun. Anda dapat mencoba untuk mengedit secara manual bidang Sitiran dan kemudian menanyakan layanan Sitiran lagi untuk meningkatkan hasil. Jika ini tidak membantu, maka Sitiran tidak ada di database terkoneksi manapun.</message>
+	<message key="submission.citations.filter.unsupportedPublicationType">Tipe penerbitan yang hilang atau yang tidak didukung. Edit Sitiran secara manual dan masukkan tipe penerbitan (tipe yang diperbolehkan adalah 'book', 'journal', 'thesis' dan 'conf-proc').</message>
+	<message key="submission.citations.filter.webserviceResultTransformationError">Eror terjadi di {$filterName}: Transformasi hasil XML  (contoh: dari layanan web) ke meta-data field-based gagal. Alasannya mungkin karena layanan web mengembalikan data yang tidak lengkap atau tidak valid. File-kan ini sebagai bug.</message>
+	<message key="submission.citations.metadata.changeWarning">Apakah Anda yakin ingin meng-update daftar referensi Anda? Jika Anda klik OK, perubahan apapun yang dibuat oleh Editor akan ditimpa. Jika Anda tidak yakin apakah Anda harus membuat perubahan ke daftar referensi, hubungi Editor yang bertanggung jawab dengan penyerahan Anda.</message>
+	<message key="submission.comments.addComment">Tambahkan Komentar</message>
+	<message key="submission.comments.comments">Komentar</message>
+	<message key="submission.comments.confirmDelete">Apakah Anda yakin ingin menghapus komentar ini?</message>
+	<message key="submission.comments.corrections">Koreksi</message>
+	<message key="submission.comments.editComment">Edit Komentar</message>
+	<message key="submission.comments.importPeerReviews">Impor Peer Review</message>
+	<message key="submission.comments.importPeerReviews.reviewerLetter">Reviewer {$reviewerLetter}:</message>
+	<message key="submission.comments.noComments">Tidak ada komentar</message>
+	<message key="submission.comments.noReviews">Tidak ada review</message>
+	<message key="submission.comments.review">Review</message>
+	<message key="submission.comments.sendDecisionToReviewers">Kirim keputusan editorial Reviewer</message>
+	<message key="submission.comments.subject">Subjek</message>
+	<message key="submission.complete">Lengkap</message>
+	<message key="submission.done">Selesai</message>
+	<message key="submission.dueDate">Tenggat Waktu</message>
+	<message key="submission.due">Jatuh Tempo</message>
+	<message key="submission.editing">Pengeditan</message>
+	<message key="submission.editMetadata">Edit Metadata</message>
+	<message key="submission.email.backToEmailLog">Kembali ke log email</message>
+	<message key="submission.email.confirmClearLog">Apakah Anda yakin ingin membersihkan log email untuk penyerahan ini?</message>
+	<message key="submission.email.confirmDeleteLogEntry">Apakah Anda yakin ingin menghapus entri log email ini?</message>
+	<message key="submission.email.deleteLogEntry">Hapus Entri Log</message>
+	<message key="submission.emailLog">Log Email</message>
+	<message key="submission.event.backToEventLog">Kembali ke Log Event</message>
+	<message key="submission.event.confirmClearLog">Apakah Anda yakin ingin membersihkan log event untuk penyerahan ini?</message>
+	<message key="submission.event.confirmDeleteLogEntry">Apakah Anda yakin ingin menghapus entri log event ini?</message>
+	<message key="submission.event.deleteLogEntry">Hapus entri log</message>
+	<message key="submission.event.general.metadataUpdated">Metadata naskah telah di-update</message>
+	<message key="submission.event.general.suppFileUpdated">File naskah telah di-update</message>
+	<message key="submission.event.reviewer.reviewAcceptedByProxy">tugas review yang diterima oleh proxy</message>
+	<message key="submission.event.reviewer.reviewAccepted">Tugas review diterima</message>
+	<message key="submission.event.reviewer.reviewCancelled">Tugas review dibatalkan</message>
+	<message key="submission.event.reviewer.reviewDeclined">Tugas review ditolak</message>
+	<message key="submission.event.reviewer.reviewDueDate">Tenggat waktu review dimodifikasi</message>
+	<message key="submission.event.reviewer.reviewerAssigned">Reviewer yang ditugaskan untuk naskah</message>
+	<message key="submission.event.reviewer.reviewerRated">Penilaian Reviewer diserahkan</message>
+	<message key="submission.event.reviewer.reviewerUnassigned">Reviewer tidak ditugaskan dari naskah</message>
+	<message key="submission.event.reviewer.reviewFile">file review di-update</message>
+	<message key="submission.event.reviewer.reviewInitiated">Tugas review dimulai</message>
+	<message key="submission.event.reviewer.reviewRecommendation">File Rekomendasi review</message>
+	<message key="submission.event.reviewer.reviewReinitiated">Tugas Review dimulai</message>
+	<message key="submission.event.reviewer.reviewResubmitted">Review diserahkan ulang</message>
+	<message key="submission.event.reviewer.reviewRevision">File revisi Reviewer revisions file di-update</message>
+	<message key="submission.files">File</message>
+	<message key="submission.galley">Galley</message>
+	<message key="submission.history.clearLog">Bersihkan Log</message>
+	<message key="submission.history">Sejarah</message>
+	<message key="submission.history.noLogEntries">Tidak ada log entri.</message>
+	<message key="submission.history.recentLogEntries">Entri yang sekarang</message>
+	<message key="submission.history.submissionEmailLog">Log Email</message>
+	<message key="submission.history.submissionEventLog"> Log Event</message>
+	<message key="submission.history.submissionNotes">Catatan Naskah</message>
+	<message key="submission.history.viewLog">Lihat Log</message>
+	<message key="submission.indexing">Pengindeksan</message>
+	<message key="submission.initiated">Dimulai</message>
+	<message key="submission.lastModified">Terakhir Dimodifikasi</message>
+	<message key="submission.layout.addGalley">Tambahkan Galley Layout</message>
+	<message key="submission.layout.confirmDeleteGalley">Apakah Anda yakin ingin menghapus galley ini secara permanen?</message>
+	<message key="submission.layout.confirmDeleteGalleyImage">Apakah Anda yakin ingin memindahkan gambar ini dari galley?</message>
+	<message key="submission.layout.confirmDeleteSupplementaryFile">Apakah Anda yakin ingin menghapus file tambahan ini secara permanen?</message>
+	<message key="submission.layout.deleteGalleyStylesheet">Hapus stylesheet ini.</message>
+	<message key="submission.layout.editGalley">Edit  Galley Layout</message>
+	<message key="submission.layout.galleyFileData">Informasi File Galley</message>
+	<message key="submission.layout.galleyFormat">Format Galley</message>
+	<message key="submission.layout.galleyHTMLData">File Galley HTML</message>
+	<message key="submission.layout.galleyImages">Gambar</message>
+	<message key="submission.layout.galleyLabelInstructions">Label galley digunakan untuk mengidentifikasi format file item (contoh: HTML, PDF, dll.).</message>
+	<message key="submission.layout.galleyLabel">Label</message>
+	<message key="submission.layout.galleyLabelRequired">Label galley diperlukan.</message>
+	<message key="submission.layout.galleyLanguageRequired">Bahasa galley diperlukan.</message>
+	<message key="submission.layout.galleyLocaleRequired">Galley locale diperlukan.</message>
+	<message key="submission.layout.galleyNoImages">Tidak ada gambar</message>
+	<message key="submission.layout.galleys">Galley</message>
+	<message key="submission.layout.galleyStylesheet">File Stylesheet</message>
+	<message key="submission.layout.galleyStyle">Model</message>
+	<message key="submission.layout.initialGalleyCreation">Kreasi Galley Awal</message>
+	<message key="submission.layout.layoutFile">File Layout</message>
+	<message key="submission.layout">Layout</message>
+	<message key="submission.layout.layoutVersion">Versi Layout</message>
+	<message key="submission.layout.newGalley">Buat Galley Baru</message>
+	<message key="submission.layout.newSupplementaryFile">upload File Tambahan Baru</message>
+	<message key="submission.layout.noStyleFile">Tidak ada file stylesheet yang telah ditambahkan ke galley ini.</message>
+	<message key="submission.layout.supplementaryFiles">Review File Tambahan</message>
+	<message key="submission.layout.viewingGalley">Melihat Galley Naskah</message>
+	<message key="submission.layout.viewProof">Lihat Proof</message>
+	<message key="submission.metadata">Metadata Naskah</message>
+	<message key="submission.noReviewAssignments">Tidak ada tugas review</message>
+	<message key="submission.notes.addNewNote">Tambahkan Catatan Baru</message>
+	<message key="submission.notes.attachedFile">Lampiran File</message>
+	<message key="submission.notes.backToSubmissionNotes">Kembali ke catatan naskah</message>
+	<message key="submission.notes.breadcrumb">Catatan</message>
+	<message key="submission.notes.clearAllNotes">Hapus semua catatan</message>
+	<message key="submission.notes.collapseNotes">Catatan Gagal</message>
+	<message key="submission.notes.confirmDeleteAll">Pindahkan semua catatan naskah?</message>
+	<message key="submission.notes.confirmDelete">Pindahkan catatan naskah ini?</message>
+	<message key="submission.notes.createNewNote">Buat Catatan Baru</message>
+	<message key="submission.notes.deleteNote">Hapus Catatan</message>
+	<message key="submission.notes.editNote">Edit Catatan</message>
+	<message key="submission.notes.expandNotes">Perluas Catatan</message>
+	<message key="submission.notes.noSubmissionNotes">Tidak ada catatan naskah</message>
+	<message key="submission.notes.removeUploadedFile">Hapus File yang diunggah</message>
+	<message key="submission.notes">Catatan naskah</message>
+	<message key="submission.notes.updateNote">Update catatan</message>
+	<message key="submission.notes.viewNotes">Lihat catatan</message>
+	<message key="submission.originalFile">File Asli</message>
+	<message key="submission.page.editing">#{$id} Pengeditan</message>
+	<message key="submission.page.history">#{$id} Sejarah</message>
+	<message key="submission.page.review">#{$id} Review</message>
+	<message key="submission.page.summary">#{$id} Ringkasan</message>
+	<message key="submission.page.citations">#{$id} Sitiran</message>
+	<message key="submission.peerReview">Peer&amp;nbsp;Review</message>
+	<message key="submission.recommendation">Rekomendasi: {$recommendation}</message>
+	<message key="submission.rejected">Tolak</message>
+	<message key="submission.request">Permintaan</message>
+	<message key="submission.response">Respon</message>
+	<message key="submission.restrictions">Pembatasan</message>
+	<message key="submission.reviewMetadata">Metadata Review</message>
+	<message key="submission.review">Tinjauan</message>
+	<message key="submission.reviewVersion">Versi Review</message>
+	<message key="submissions.active">Aktif</message>
+	<message key="submissions.archived">Diarsipkan</message>
+	<message key="submission.saveMetadata">Simpan Metadata</message>
+	<message key="submissions.completed">Lengkap</message>
+	<message key="submissions.declined">Ditolak</message>
+	<message key="submissions.incomplete">Tidak lengkap</message>
+	<message key="submissions.noSubmissions">Tidak ada naskah</message>
+	<message key="submissions.queuedEditing">Dalam proses pengeditan</message>
+	<message key="submissions.queued">Antri</message>
+	<message key="submissions.queuedUnassigned">Menunggu Penugasan</message>
+	<message key="submissions.ruling">Aturan</message>
+	<message key="submissions.submit">Pengajuan</message>
+	<message key="submissions.submitted">Telah diserahkan</message>
+	<message key="submission.start">Mulai</message>
+	<message key="submission.submissionHistory">Sejarah Naskah</message>
+	<message key="submission.submissionManuscript">Manuskrip</message>
+	<message key="submission.submissionReview">Review Naskah</message>
+	<message key="submission.submitter">Naskah</message>
+	<message key="submission.summary">Ringkasan</message>
+	<message key="submission.supplementaryFiles">File Tambahan</message>
+	<message key="submission.supportingAgencies">Agen Pendukung</message>
+	<message key="submission.currentAgencies">Agen Terkini</message>
+	<message key="submission.indexingInformation">Mengindeks Informasi</message>
+	<message key="submission.titleAndAbstract">Judul dan Sari</message>
+	<message key="submission.underway">Sedang Berlangsung</message>
+	<message key="submission.uploadFileTo">Unggah File ke</message>
+	<message key="submission.viewMetadata">Lihat Metadata</message>
+	<message key="submission.views">Lihat</message>
+	<message key="submission.uploadSuccessful">File Anda telah diupload.</message>
+	<message key="submission.uploadSuccessfulContinue">File Anda telah diupload. Tekan lanjutkan untuk mengedit metadata file.</message>
+	<message key="submission.loadMessage">Tunggu sementara file Anda diupload ke server.</message>
+	<message key="submission.artworkFileDetails">Detail File Karya Seni</message>
+	<message key="submission.fileDetails">Detail File</message>
+	<message key="submission.nameRequired">Nama diperlukan untuk item ini.</message>
+	<message key="submission.date.mmdd">MM-DD</message>
+	<message key="submission.date.yyyymmdd">YYYY-MM-DD</message>
+	<message key="log.review.reviewerAssigned">{$reviewerName} telah ditugaskan untuk mereview naskah {$submissionId} untuk tahapan review {$round}.</message>
+
+	<!--  peer review -->
+	<message key="submission.reviewForm">Form Review</message>
+	<message key="submission.reviewFormResponse">Respon Form Review</message>
+</locale>

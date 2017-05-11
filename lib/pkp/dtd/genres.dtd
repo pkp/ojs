@@ -1,0 +1,19 @@
+<!--
+  * dtd/genres.dtd
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * DTD for default genre settings.
+  *
+  -->
+<!ELEMENT genres (genre+)>
+<!ELEMENT genre EMPTY>
+	<!ATTLIST genre
+		key CDATA #REQUIRED
+		sortable CDATA #REQUIRED
+		category CDATA #REQUIRED
+		dependent CDATA #REQUIRED
+		supplementary CDATA #REQUIRED
+		localeKey CDATA #REQUIRED>

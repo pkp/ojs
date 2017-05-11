@@ -1,0 +1,694 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE schema SYSTEM "../../dtd/xmlSchema.dtd">
+
+<!--
+  * xml/schema/common.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Common elements of the PKP database schema in XML.
+  -->
+
+<schema version="0.2">
+	<!--
+	  *
+	  * TABLE versions
+	  *
+	  -->
+	<table name="versions">
+		<field name="major" type="I4">
+			<NOTNULL />
+			<DEFAULT VALUE="0"/>
+			<descr>Major component of version number, e.g. the 2 in OJS 2.3.8-0</descr>
+		</field>
+		<field name="minor" type="I4">
+			<NOTNULL />
+			<DEFAULT VALUE="0"/>
+			<descr>Minor component of version number, e.g. the 3 in OJS 2.3.8-0</descr>
+		</field>
+		<field name="revision" type="I4">
+			<NOTNULL />
+			<DEFAULT VALUE="0"/>
+			<descr>Revision component of version number, e.g. the 8 in OJS 2.3.8-0</descr>
+		</field>
+		<field name="build" type="I4">
+			<NOTNULL />
+			<DEFAULT VALUE="0"/>
+			<descr>Build component of version number, e.g. the 0 in OJS 2.3.8-0</descr>
+		</field>
+		<field name="date_installed" type="T">
+			<NOTNULL/>
+		</field>
+		<field name="current" type="I1">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+			<descr>1 iff the version entry being described is currently active. This permits the table to store past installation history for forensic purposes.</descr>
+		</field>
+		<field name="product_type" type="C2" size="30">
+			<descr>Describes the type of product this row describes, e.g. "plugins.generic" (for a generic plugin) or "core" for the application itelf</descr>
+		</field>
+		<field name="product" type="C2" size="30">
+			<descr>Uniquely identifies the product this version row describes, e.g. "ojs2" for OJS 2.x, "languageToggle" for the language toggle block plugin, etc.</descr>
+		</field>
+		<field name="product_class_name" type="C2" size="80">
+			<descr>Specifies the class name associated with this product, for plugins, or the empty string where not applicable.</descr>
+		</field>
+		<field name="lazy_load" type="I1">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+			<descr>1 iff the row describes a lazy-load plugin; 0 otherwise</descr>
+		</field>
+		<field name="sitewide" type="I1">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+			<descr>1 iff the row describes a site-wide plugin; 0 otherwise</descr>
+		</field>
+		<descr>Describes the installation and upgrade version history for the application and all installed plugins.</descr>
+		<index name="versions_pkey">
+			<col>product_type</col>
+			<col>product</col>
+			<col>major</col>
+			<col>minor</col>
+			<col>revision</col>
+			<col>build</col>
+			<UNIQUE />
+		</index>
+	</table>
+
+	<!--
+	  *
+	  * TABLE site
+	  *
+	  -->
+	<table name="site">
+		<field name="redirect" type="I8">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+			<descr>If not 0, redirect to the specified journal/conference/... site.</descr>
+		</field>
+		<field name="primary_locale" type="C2" size="5">
+			<NOTNULL/>
+			<descr>Primary locale for the site.</descr>
+		</field>
+		<field name="min_password_length" type="I1">
+			<NOTNULL/>
+			<DEFAULT VALUE="6"/>
+		</field>
+		<field name="installed_locales" type="C2" size="255">
+			<NOTNULL/>
+			<DEFAULT VALUE="en_US"/>
+			<descr>Locales for which support has been installed.</descr>
+		</field>
+		<field name="supported_locales" type="C2" size="255">
+			<descr>Locales supported by the site (for hosted journals/conferences/...).</descr>
+		</field>
+		<field name="original_style_file_name" type="C2" size="255"/>
+		<descr>Common site settings.</descr>
+	</table>
+
+	<!--
+	  *
+	  * TABLE site_settings
+	  *
+	  -->
+	<table name="site_settings">
+		<field name="setting_name" type="C2" size="255">
+			<NOTNULL />
+		</field>
+		<field name="locale" type="C2" size="5">
+			<NOTNULL />
+			<DEFAULT VALUE=""/>
+		</field>
+		<field name="setting_value" type="X"/>
+		<field name="setting_type" type="C2" size="6">
+			<NOTNULL />
+			<descr>(bool|int|float|string|object)</descr>
+		</field>
+		<descr>Site settings.</descr>
+		<index name="site_settings_pkey">
+			<col>setting_name</col>
+			<col>locale</col>
+			<UNIQUE />
+		</index>
+	</table>
+
+	<!--
+	  *
+	  * TABLE auth_sources
+	  *
+	  -->
+	<table name="auth_sources">
+		<field name="auth_id" type="I8">
+			<KEY />
+			<AUTOINCREMENT />
+		</field>
+		<field name="title" type="C2" size="60">
+			<NOTNULL/>
+		</field>
+		<field name="plugin" type="C2" size="32">
+			<NOTNULL/>
+		</field>
+		<field name="auth_default" type="I1">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+		</field>
+		<field name="settings" type="X"/>
+		<descr>User authentication sources.</descr>
+	</table>
+
+	<!--
+	  *
+	  * TABLE users
+	  *
+	  -->
+	<table name="users">
+		<field name="user_id" type="I8">
+			<KEY />
+			<AUTOINCREMENT />
+		</field>
+		<field name="username" type="C2" size="32">
+			<NOTNULL/>
+		</field>
+		<field name="password" type="C2" size="255">
+			<NOTNULL/>
+		</field>
+		<field name="salutation" type="C2" size="40"/>
+		<field name="first_name" type="C2" size="40">
+			<NOTNULL/>
+		</field>
+		<field name="middle_name" type="C2" size="40"/>
+		<field name="last_name" type="C2" size="90">
+			<NOTNULL/>
+		</field>
+		<field name="suffix" type="C2" size="40"/>
+		<field name="gender" type="C" size="1"/>
+		<field name="initials" type="C2" size="5"/>
+		<field name="email" type="C2" size="90">
+			<NOTNULL/>
+		</field>
+		<field name="url" type="C2" size="2047"/>
+		<field name="phone" type="C2" size="32"/>
+		<field name="mailing_address" type="C2" size="255"/>
+		<field name="billing_address" type="C2" size="255"/>
+		<field name="country" type="C2" size="90"/>
+		<field name="locales" type="C2" size="255"/>
+		<field name="date_last_email" type="T"/>
+		<field name="date_registered" type="T">
+			<NOTNULL/>
+		</field>
+		<field name="date_validated" type="T"/>
+		<field name="date_last_login" type="T">
+			<NOTNULL/>
+		</field>
+		<field name="must_change_password" type="I1"/>
+		<field name="auth_id" type="I8"/>
+		<field name="auth_str" type="C2" size="255"/>
+		<field name="disabled" type="I1">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+		</field>
+		<field name="disabled_reason" type="X"/>
+		<field name="inline_help" type="I1" />
+		<descr>User authentication credentials and profile data.</descr>
+		<index name="users_username">
+			<col>username</col>
+			<UNIQUE />
+		</index>
+		<index name="users_email">
+			<col>email</col>
+			<UNIQUE />
+		</index>
+	</table>
+
+	<!--
+	  *
+	  * TABLE user_settings
+	  *
+	  -->
+	<table name="user_settings">
+		<field name="user_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="locale" type="C2" size="5">
+			<NOTNULL/>
+			<DEFAULT VALUE=""/>
+		</field>
+		<field name="setting_name" type="C2" size="255">
+			<NOTNULL/>
+		</field>
+		<field name="assoc_type" type="I8">
+			<!-- Not null not specified for sake of upgrade. -->
+			<DEFAULT VALUE="0"/>
+		</field>
+		<field name="assoc_id" type="I8">
+			<!-- Not null not specified for sake of upgrade. -->
+			<DEFAULT VALUE="0"/>
+		</field>
+		<field name="setting_value" type="X"/>
+		<field name="setting_type" type="C2" size="6">
+			<NOTNULL/>
+		</field>
+		<descr>Locale-specific user data</descr>
+		<index name="user_settings_user_id">
+			<col>user_id</col>
+		</index>
+		<index name="user_settings_pkey">
+			<col>user_id</col>
+			<col>locale</col>
+			<col>setting_name</col>
+			<col>assoc_type</col>
+			<col>assoc_id</col>
+			<UNIQUE />
+		</index>
+	</table>
+
+	<!--
+	  *
+	  * TABLE sessions
+	  *
+	  -->
+	<table name="sessions">
+		<field name="session_id" type="C2" size="128">
+			<NOTNULL/>
+		</field>
+		<field name="user_id" type="I8"/>
+		<field name="ip_address" type="C2" size="39">
+			<NOTNULL/>
+		</field>
+		<field name="user_agent" type="C2" size="255"/>
+		<field name="created" type="I8">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+		</field>
+		<field name="last_used" type="I8">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+		</field>
+		<field name="remember" type="I1">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+		</field>
+		<field name="data" type="X">
+			<NOTNULL/>
+			<DEFAULT VALUE=""/>
+		</field>
+		<field name="domain" type="C2" size="255"/>
+		<descr>Browser/user sessions and session data.</descr>
+		<index name="sessions_user_id">
+			<col>user_id</col>
+		</index>
+		<index name="sessions_pkey">
+			<col>session_id</col>
+			<UNIQUE />
+		</index>
+	</table>
+
+	<!--
+	  *
+	  * TABLE access_keys
+	  *
+	  -->
+	<table name="access_keys">
+		<field name="access_key_id" type="I8">
+			<KEY />
+			<AUTOINCREMENT />
+		</field>
+		<field name="context" type="C2" size="40">
+			<NOTNULL/>
+		</field>
+		<field name="key_hash" type="C2" size="40">
+			<NOTNULL/>
+		</field>
+		<field name="user_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="assoc_id" type="I8"/>
+		<field name="expiry_date" type="T">
+			<NOTNULL/>
+		</field>
+		<descr>Access keys are used to provide pseudo-login functionality for security-minimal tasks. Passkeys can be emailed directly to users, who can use them for a limited time in lieu of standard username and password.</descr>
+		<index name="access_keys_hash">
+			<col>key_hash</col>
+			<col>user_id</col>
+			<col>context</col>
+		</index>
+	</table>
+
+
+	<!-- Notification tables -->
+
+	<!--
+	  *
+	  * TABLE notifications
+	  *
+	  -->
+	<table name="notifications">
+		<field name="notification_id" type="I8">
+			<KEY />
+			<AUTOINCREMENT />
+		</field>
+		<field name="context_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="user_id" type="I8">
+		</field>
+		<field name="level" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="type" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="date_created" type="T">
+			<NOTNULL/>
+		</field>
+		<field name="date_read" type="T" />
+		<field name="assoc_type" type="I8" />
+		<field name="assoc_id" type="I8" />
+		<descr>Stores notifications for users as created by the system after certain operations.</descr>
+		<index name="notifications_context_id_user_id">
+			<col>context_id</col>
+			<col>user_id</col>
+			<col>level</col>
+		</index>
+		<index name="notifications_context_id">
+			<col>context_id</col>
+			<col>level</col>
+		</index>
+		<index name="notifications_assoc">
+			<col>assoc_type</col>
+			<col>assoc_id</col>
+		</index>
+	</table>
+
+	<!--
+	  *
+	  * TABLE notification_settings
+	  *
+	  -->
+	<table name="notification_settings">
+		<field name="notification_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="locale" type="C2" size="5" />
+		<field name="setting_name" type="C2" size="64">
+			<NOTNULL/>
+		</field>
+		<field name="setting_value" type="X">
+			<NOTNULL/>
+		</field>
+		<field name="setting_type" type="C2" size="6">
+			<NOTNULL />
+			<descr>(bool|int|float|string|object)</descr>
+		</field>
+		<descr>Stores metadata for specific notifications</descr>
+		<index name="notification_settings_pkey">
+			<col>notification_id</col>
+			<col>locale</col>
+			<col>setting_name</col>
+			<UNIQUE />
+		</index>
+	</table>
+
+	<!--
+	  *
+	  * TABLE notification_subscription_settings
+	  *
+	  -->
+	<table name="notification_subscription_settings">
+		<field name="setting_id" type="I8">
+			<KEY />
+			<AUTOINCREMENT />
+		</field>
+		<field name="setting_name" type="C2" size="64">
+			<NOTNULL/>
+		</field>
+		<field name="setting_value" type="X">
+			<NOTNULL/>
+		</field>
+		<field name="user_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="context" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="setting_type" type="C2" size="6">
+			<NOTNULL />
+			<descr>(bool|int|float|string|object)</descr>
+		</field>
+		<descr>Stores user preferences on what notifications should be blocked and/or emailed to them</descr>
+	</table>
+
+	<!--
+	  *
+	  * TABLE notification_mail_list
+	  *
+	  -->
+	<table name="notification_mail_list">
+		<field name="notification_mail_list_id" type="I8">
+			<KEY />
+			<AUTOINCREMENT/>
+		</field>
+			<field name="email" type="C2" size="90">
+			<NOTNULL/>
+		</field>
+		<field name="confirmed" type="I1">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+		</field>
+		<field name="token" type="C2" size="40">
+			<NOTNULL/>
+		</field>
+		<field name="context" type="I8">
+			<NOTNULL/>
+		</field>
+		<descr>Stores subscriptions to the notification mailing list</descr>
+		<index name="notification_mail_list_email_context">
+			<col>email</col>
+			<col>context</col>
+			<UNIQUE />
+		</index>
+	</table>
+
+
+	<!-- Email tables -->
+
+	<!--
+	  *
+	  * TABLE email_templates_default
+	  *
+	  -->
+	<table name="email_templates_default">
+		<field name="email_id" type="I8">
+			<KEY />
+			<AUTOINCREMENT/>
+		</field>
+		<field name="email_key" type="C2" size="64">
+			<NOTNULL/>
+			<descr>Unique identifier for this email.</descr>
+		</field>
+		<field name="can_disable" type="I1">
+			<NOTNULL/>
+			<DEFAULT VALUE="1"/>
+		</field>
+		<field name="can_edit" type="I1">
+			<NOTNULL/>
+			<DEFAULT VALUE="1"/>
+		</field>
+		<field name="from_role_id" type="I8"/>
+		<field name="to_role_id" type="I8"/>
+		<descr>Default email templates.</descr>
+		<index name="email_templates_default_email_key">
+			<col>email_key</col>
+		</index>
+	</table>
+
+	<!--
+	  *
+	  * TABLE email_templates_default_data
+	  *
+	  -->
+	<table name="email_templates_default_data">
+		<field name="email_key" type="C2" size="64">
+			<NOTNULL />
+			<descr>Unique identifier for this email.</descr>
+		</field>
+		<field name="locale" type="C2" size="5">
+			<NOTNULL />
+			<DEFAULT VALUE="en_US"/>
+		</field>
+		<field name="subject" type="C2" size="120">
+			<NOTNULL/>
+		</field>
+		<field name="body" type="X"/>
+		<field name="description" type="X"/>
+		<descr>Default data for email templates.</descr>
+		<index name="email_templates_default_data_pkey">
+			<col>email_key</col>
+			<col>locale</col>
+			<UNIQUE />
+		</index>
+	</table>
+
+	<!--
+	  *
+	  * TABLE email_templates
+	  *
+	  -->
+	<table name="email_templates">
+		<field name="email_id" type="I8">
+			<KEY />
+			<AUTOINCREMENT/>
+		</field>
+		<field name="email_key" type="C2" size="64">
+			<NOTNULL/>
+			<descr>Unique identifier for this email.</descr>
+		</field>
+		<field name="assoc_type" type="I8">
+			<!-- Not null not specified for sake of upgrade. -->
+			<DEFAULT VALUE="0"/>
+		</field>
+		<field name="assoc_id" type="I8">
+			<!-- Not null not specified for sake of upgrade. -->
+			<DEFAULT VALUE="0"/>
+		</field>
+		<field name="enabled" type="I1">
+			<NOTNULL/>
+			<DEFAULT VALUE="1"/>
+		</field>
+		<descr>Templates for emails.</descr>
+		<index name="email_templates_email_key">
+			<col>email_key</col>
+			<col>assoc_type</col>
+			<col>assoc_id</col>
+			<UNIQUE/>
+		</index>
+		<index name="email_templates_assoc">
+			<col>assoc_type</col>
+			<col>assoc_id</col>
+		</index>
+	</table>
+
+	<!--
+	  *
+	  * TABLE email_templates_data
+	  *
+	  -->
+	<table name="email_templates_data">
+		<field name="email_key" type="C2" size="64">
+			<NOTNULL />
+			<descr>Unique identifier for this email.</descr>
+		</field>
+		<field name="locale" type="C2" size="5">
+			<NOTNULL />
+			<DEFAULT VALUE="en_US"/>
+		</field>
+		<field name="assoc_type" type="I8">
+			<!-- Not null not specified for sake of upgrade. -->
+			<DEFAULT VALUE="0"/>
+		</field>
+		<field name="assoc_id" type="I8">
+			<!-- Not null not specified for sake of upgrade. -->
+			<DEFAULT VALUE="0"/>
+		</field>
+		<field name="subject" type="C2" size="120">
+			<NOTNULL/>
+		</field>
+		<field name="body" type="X"/>
+		<descr>Data for email templates.</descr>
+		<index name="email_templates_data_pkey">
+			<col>email_key</col>
+			<col>locale</col>
+			<col>assoc_type</col>
+			<col>assoc_id</col>
+			<UNIQUE/>
+		</index>
+	</table>
+
+	<!-- OAI Tables -->
+
+	<!--
+	 *
+	 * TABLE oai_resumption_tokens
+	 *
+	 -->
+	<table name="oai_resumption_tokens">
+		<field name="token" type="C2" size="32">
+			<NOTNULL />
+		</field>
+		<field name="expire" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="record_offset" type="I4">
+			<NOTNULL/>
+		</field>
+		<field name="params" type="X" />
+		<descr>Resumption tokens for the OAI protocol interface.</descr>
+		<index name="oai_resumption_tokens_pkey">
+			<col>token</col>
+			<UNIQUE/>
+		</index>
+	</table>
+
+	<!-- Parallel Processing -->
+
+	<!--
+	 *
+	 * TABLE processes
+	 *
+	 -->
+	<table name="processes">
+		<field name="process_id" type="C2" size="23">
+			<NOTNULL />
+		</field>
+		<field name="process_type" type="I1">
+			<NOTNULL/>
+		</field>
+		<field name="time_started" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="additional_data" type="X"/>
+		<field name="obliterated" type="I1">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+		</field>
+		<descr>Currently running processes.</descr>
+		<index name="processes_pkey">
+			<col>process_id</col>
+			<UNIQUE/>
+		</index>
+	</table>
+
+	<!--
+	  *
+	  * TABLE plugin_settings
+	  *
+	  -->
+	<table name="plugin_settings">
+		<field name="plugin_name" type="C2" size="80">
+			<NOTNULL/>
+		</field>
+		<field name="context_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="setting_name" type="C2" size="80">
+			<NOTNULL/>
+		</field>
+		<field name="setting_value" type="X"/>
+		<field name="setting_type" type="C2" size="6">
+			<NOTNULL/>
+			<descr>(bool|int|float|string|object)</descr>
+		</field>
+		<descr>Plugin settings.</descr>
+		<index name="plugin_settings_plugin_name">
+			<col>plugin_name</col>
+		</index>
+		<index name="plugin_settings_pkey">
+			<col>plugin_name</col>
+			<col>context_id</col>
+			<col>setting_name</col>
+			<UNIQUE />
+		</index>
+	</table>
+</schema>

@@ -1,0 +1,21 @@
+{
+	"require": {
+		"components/jqueryui": "1.11.0",
+		"components/jquery": "1.11.0",
+		"oyejorge/less.php": "1.7.0.3",
+		"phpmailer/phpmailer": "5.2.8",
+		"smarty/smarty": "v2.6.28",
+		"ezyang/htmlpurifier": "v4.6.0",
+		"moxiecode/plupload": "v2.1.x",
+		"tinymce/tinymce": "4.1.7",
+		"ircmaxell/password-compat": "v1.0.4",
+		"michelf/php-markdown": "1.5.0"
+	},
+	"require-dev": {
+		"phpunit/phpunit-selenium": "1.4.2"
+	},
+	"config": {
+		"component-dir": "lib/components",
+		"vendor-dir": "lib/vendor"
+	}
+}

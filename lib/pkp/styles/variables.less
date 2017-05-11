@@ -1,0 +1,97 @@
+//
+// Common variables
+//
+// These variables set common standards to be used throughout pkp-lib and its
+// associated projects. Unless a particular project is deliberately supposed
+// to be distinguished in style, such as a custom theme, it should make use of
+// these variables to define common sizing, colors and typography.
+//
+
+//
+// Colors
+//
+
+// Background
+@bg:			 #ddd;
+@bg-dark:		 #bbb;
+@bg-light:		 #eee;
+@shade:			 #888;
+@lift:			 #fff;
+@bg-anchor:      #002C40; // Dark color background
+@bg-anchor-lift: lighten(@bg-anchor, 10%);
+
+// Primary color for links and buttons
+@primary:        #007ab2;
+@primary-lift:   lighten(@primary, 10%);
+@primary-shade:  darken(@primary, 10%);
+
+// Offset "highlight" color
+@offset:         #D00A6C;
+@offset-lift:    lighten(@offset, 20%);
+@offset-shade:   #B50E61;
+
+// Yes/no, success/error, on/off, go/stop, etc
+@yes:			#00B24E;
+@yes-lift:      desaturate(lighten(@yes, 10%), 20%);
+@no:			@offset;
+@no-lift:       desaturate(lighten(@no, 10%), 20%);
+@warn:			@offset;
+@help:          @yes;
+@help-lift:     @yes-lift;
+
+// Text
+@text:			#222;
+@text-rgba:		rgba(0, 0, 0, 0.84);
+@text-light:		#777;
+@text-light-rgba:	rgba(0, 0, 0, 0.54);
+
+// Border colors
+@bg-border-color:       #bbb;
+@bg-border-color-light: #ddd;
+@grid-border-color:     #eee;
+
+//
+// Spacing
+//
+// The baseline size should be used to achieve consistent vertical rhythm. All
+// vertical margins, padding, line-height and block heights should use a
+// multiple of this baseline (or half/quarter). Where appropriate, horizontal
+// spacings should also use this baseline. However, in some cases with inline
+// elements it is more appropriate to use an `em` spacing.
+//
+@base:			16px;
+@half:			@base / 2;
+@double:		@base * 2;
+
+//
+// Typography
+//
+@font:          "Noto Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+@font-tiny:		12px;
+@line-tiny:		16px;
+@font-sml:		14px;
+@line-sml:		24px;
+@font-base:		16px;
+@line-base:		24px;
+@font-lead:		24px;
+@line-lead:		@double;
+@font-header:		36px;
+@line-header:		@double + @base;
+
+// Font weights
+@normal:		400;
+@bold:			700;
+
+//
+// Borders
+//
+@bg-border:       1px solid @bg-border-color;
+@bg-border-light: 1px solid @bg-border-color-light;
+@grid-border:     1px solid @grid-border-color;
+@radius:          2px;
+
+// Base URL
+// The base URL is set appropriately before the LESS stylesheet is compiled and
+// will point to the site's base directory. The variable can be used to point
+// to image and font assets.
+@baseUrl:                   ''; // Leave empty

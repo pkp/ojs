@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE schema SYSTEM "../../dtd/xmlSchema.dtd">
+
+<!--
+  * xml/schema/announcements.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Announcements schema in XML.
+  -->
+
+<schema version="0.2">
+	<!--
+	 *
+	 * TABLE announcement_types
+	 *
+	 -->
+	<table name="announcement_types">
+		<field name="type_id" type="I8">
+			<KEY />
+			<AUTOINCREMENT/>
+		</field>
+		<field name="assoc_type" type="I2">
+			<!-- NOT NULL not included for upgrade purposes -->
+		</field>
+		<field name="assoc_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<descr>Announcement types.</descr>
+		<index name="announcement_types_assoc">
+			<col>assoc_type</col>
+			<col>assoc_id</col>
+		</index>
+	</table>
+
+	<!--
+	  *
+	  * TABLE announcement_type_settings
+	  *
+	  -->
+	<table name="announcement_type_settings">
+		<field name="type_id" type="I8">
+			<NOTNULL />
+		</field>
+		<field name="locale" type="C2" size="5">
+			<NOTNULL />
+			<DEFAULT VALUE=""/>
+		</field>
+		<field name="setting_name" type="C2" size="255">
+			<NOTNULL />
+		</field>
+		<field name="setting_value" type="X"/>
+		<field name="setting_type" type="C2" size="6">
+			<NOTNULL/>
+		</field>
+		<descr>Locale-specific announcement type data</descr>
+		<index name="announcement_type_settings_type_id">
+			<col>type_id</col>
+		</index>
+		<index name="announcement_type_settings_pkey">
+			<col>type_id</col>
+			<col>locale</col>
+			<col>setting_name</col>
+			<UNIQUE/>
+		</index>
+	</table>
+
+	<!--
+	  *
+	  * TABLE announcements
+	  *
+	  -->
+	<table name="announcements">
+		<field name="announcement_id" type="I8">
+			<KEY />
+			<AUTOINCREMENT/>
+		</field>
+		<field name="assoc_type" type="I2">
+			<!-- NOT NULL not included for upgrade purposes -->
+		</field>
+		<field name="assoc_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="type_id" type="I8"/>
+		<field name="date_expire" type="T"/>
+		<field name="date_posted" type="T">
+			<NOTNULL/>
+		</field>
+		<descr>Announcements.</descr>
+		<index name="announcements_assoc">
+			<col>assoc_type</col>
+			<col>assoc_id</col>
+		</index>
+	</table>
+
+	<!--
+	  *
+	  * TABLE announcement_settings
+	  *
+	  -->
+	<table name="announcement_settings">
+		<field name="announcement_id" type="I8">
+			<NOTNULL />
+		</field>
+		<field name="locale" type="C2" size="5">
+			<NOTNULL />
+			<DEFAULT VALUE=""/>
+		</field>
+		<field name="setting_name" type="C2" size="255">
+			<NOTNULL />
+		</field>
+		<field name="setting_value" type="X"/>
+		<field name="setting_type" type="C2" size="6">
+			<NOTNULL/>
+		</field>
+		<descr>Locale-specific announcement data</descr>
+		<index name="announcement_settings_announcement_id">
+			<col>announcement_id</col>
+		</index>
+		<index name="announcement_settings_pkey">
+			<col>announcement_id</col>
+			<col>locale</col>
+			<col>setting_name</col>
+			<UNIQUE />
+		</index>
+	</table>
+</schema>

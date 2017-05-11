@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/en_US/manager.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="en_US" full_name="U.S. English">
+	<!-- Website settings -->
+	<message key="manager.website.information">Information</message>
+	<message key="manager.website.appearance">Appearance</message>
+	<message key="manager.website.imageFileRequired">An image file is required. Please ensure that you have chosen and uploaded a file.</message>
+
+	<message key="manager.announcements">Announcements</message>
+	<message key="manager.announcements.confirmDelete">Are you sure you want to permanently delete this announcement?</message>
+	<message key="manager.announcements.create">Create New Announcement</message>
+	<message key="manager.announcements.createTitle">Create</message>
+	<message key="manager.announcements.dateExpire">Expiry</message>
+	<message key="manager.announcements.datePublish">Published</message>
+	<message key="manager.announcements.edit">Edit Announcement</message>
+	<message key="manager.announcements.editTitle">Edit</message>
+	<message key="manager.announcements.form.dateExpireDayIncompleteDate">Please select a year and/or month in addition to the expiry date day.</message>
+	<message key="manager.announcements.form.dateExpire">Expiry Date</message>
+	<message key="manager.announcements.form.dateExpireInstructions">The announcement will be displayed to readers until this date. Leave blank if the announcement should be displayed indefinitely.</message>
+	<message key="manager.announcements.form.dateExpireMonthIncompleteDate">Please select a year and/or day in addition to the expiry date month.</message>
+	<message key="manager.announcements.form.dateExpireValid">Please select a valid announcement expiry date.</message>
+	<message key="manager.announcements.form.dateExpireYearIncompleteDate">Please select a month and/or day in addition to the expiry date year.</message>
+	<message key="manager.announcements.form.description">Description</message>
+	<message key="manager.announcements.form.descriptionInstructions">The full text of the announcement.</message>
+	<message key="manager.announcements.form.descriptionRequired">An announcement description is required.</message>
+	<message key="manager.announcements.form.descriptionShortInstructions">A brief description to appear along with the announcement title.</message>
+	<message key="manager.announcements.form.descriptionShortRequired">A short announcement description is required.</message>
+	<message key="manager.announcements.form.descriptionShort">Short Description</message>
+	<message key="manager.announcements.form.saveAndCreateAnother">Save and Create Another</message>
+	<message key="manager.announcements.form.titleRequired">An announcement title is required.</message>
+	<message key="manager.announcements.form.title">Title</message>
+	<message key="manager.announcements.form.typeId">Type</message>
+	<message key="manager.announcements.form.typeIdValid">Please select a valid announcement type.</message>
+	<message key="manager.announcements.noneCreated">No announcements have been created.</message>
+	<message key="manager.announcements.title">Title</message>
+	<message key="manager.announcements.type">Type</message>
+	<message key="manager.announcementTypes">Announcement Types</message>
+	<message key="manager.announcementTypes.confirmDelete">Warning! All announcements with this announcement type will also be deleted. Are you sure you want to continue and delete this announcement type?</message>
+	<message key="manager.announcementTypes.create">Create Announcement Type</message>
+	<message key="manager.announcementTypes.createTitle">Create</message>
+	<message key="manager.announcementTypes.edit">Edit Announcement Type</message>
+	<message key="manager.announcementTypes.editTitle">Edit</message>
+	<message key="manager.announcementTypes.form.saveAndCreateAnother">Save and Create Another</message>
+	<message key="manager.announcementTypes.form.typeNameExists">An announcement type with this name already exists.</message>
+	<message key="manager.announcementTypes.form.typeName">Name</message>
+	<message key="manager.announcementTypes.form.typeNameRequired">An announcement type name is required.</message>
+	<message key="manager.announcementTypes.noneCreated">No announcement types have been created.</message>
+	<message key="manager.announcementTypes.typeName">Announcement Type</message>
+
+	<!-- Publication Process settings -->
+	<message key="manager.publication.submissionStage">Submission</message>
+	<message key="manager.publication.reviewStage">Review</message>
+	<message key="manager.publication.editorialStage">Editorial</message>
+	<message key="manager.publication.productionStage">Production</message>
+	<message key="manager.publication.emails">Emails</message>
+	<message key="manager.emails.confirmDelete">Are you sure you want to delete this email template?</message>
+	<message key="manager.emails.confirmReset">Are you sure you want to reset this email template to its default values?</message>
+	<message key="manager.emails.addEmail">Add Email Template</message>
+	<message key="manager.emails.createEmail">Create Email</message>
+	<message key="manager.emails.data">Template Message Data</message>
+	<message key="manager.emails.details">Template Details</message>
+	<message key="manager.emails.disable">Disable</message>
+	<message key="manager.emails.disable.message">You are about to disable this email template.  If there were system processes using this template, they will not use it anymore.  Do you want to confirm this operation?</message>
+	<message key="manager.emails.editEmail">Edit Email</message>
+	<message key="manager.emails.editTestExample">Edit Email Test Example</message>
+	<message key="manager.emails.emailKey">Email Key</message>
+	<message key="manager.emails.emailKeyExists">An email with the given key already exists. Email keys must be unique.</message>
+	<message key="manager.emails.emailTemplate">Email Template</message>
+	<message key="manager.emails.emailTemplates">Email Templates</message>
+	<message key="manager.emails.enabled">Enable this email template</message>
+	<message key="manager.emails.enable">Enable</message>
+	<message key="manager.emails.enable.message">You are about to enable this email.  Do you want to confirm this operation?</message>
+	<message key="manager.emails.form.emailKeyRequired">A unique email key containing no spaces or special characters is required for the email.</message>
+	<message key="manager.emails.form.bodyRequired">A body is required for the email.</message>
+	<message key="manager.emails.form.subjectRequired">A subject is required for the email.</message>
+	<message key="manager.emails">Prepared Emails</message>
+	<message key="manager.emails.resetAll">Reset All Templates</message>
+	<message key="manager.emails.resetAll.message">If you reset all templates, all modifications to the email templates will be lost.  Do you want to confirm this operation?</message>
+	<message key="manager.emails.reset">Reset</message>
+	<message key="manager.emails.reset.message">If you reset this template, all message data will be reset to its default value, losing all modifications.  Do you want to confirm this operation?</message>
+	<message key="manager.emails.resetToDefault">Reset To Default</message>
+	<message key="manager.filesBrowser">Files Browser</message>
+	<message key="manager.files.confirmDelete">Delete this file or directory? Note that a directory must be empty before it can be deleted.</message>
+	<message key="manager.files.createDir">Create Directory</message>
+	<message key="manager.files.emptyDir">No files were found in this directory.</message>
+	<message key="manager.files.indexOfDir">Index of {$dir}</message>
+	<message key="manager.files.parentDir">Parent Directory</message>
+	<message key="manager.files.uploadedFiles">Uploaded Files</message>
+	<message key="manager.files.uploadFile">Upload File</message>
+	<message key="manager.groups.confirmDelete">Are you sure you wish to delete this group?</message>
+	<message key="manager.groups.createTitle">Create Title</message>
+	<message key="manager.groups.editTitle">Edit Title</message>
+	<message key="manager.groups.form.groupTitleRequired">A group title is required.</message>
+	<message key="manager.groups.membership.addMember">Add Member</message>
+	<message key="manager.groups.membership.confirmDelete">Are you sure you wish to delete this group membership?</message>
+	<message key="manager.groups.membership">Membership</message>
+	<message key="manager.groups.membership.noneCreated">This group has no members.</message>
+	<message key="manager.groups.membership.noUsers">No users were found.</message>
+	<message key="manager.groups.title">Title</message>
+	<message key="manager.importExport">Import/Export Data</message>
+	<message key="manager.language.ui">UI</message>
+	<message key="manager.language.submissions">Submissions</message>
+	<message key="manager.language.forms">Forms</message>
+	<message key="manager.language.reloadLocalizedDefaultSettings">Reload defaults</message>
+	<message key="manager.languages.alternateLocaleInstructions">This system optionally allows certain critical information to be entered in several additional languages. To use this feature, select alternate locales and choose from the options listed below.</message>
+	<message key="manager.languages.supportedLocalesInstructions">Select all locales to support on the site via a language select menu to appear on each page. The menu will only appear if more than one locale is selected.</message>
+	<message key="manager.masthead.title">Masthead</message>
+	<message key="manager.payment.timestamp">Timestamp</message>
+	<message key="manager.people.authSource">Authentication source</message>
+	<message key="manager.people.confirmUnenroll">Unenroll this user?</message>
+	<message key="manager.people.createUser">Create New User</message>
+	<message key="manager.people.createUserGeneratePassword">Generate a random password.</message>
+	<message key="manager.people.createUserSendNotify">Send the user a welcome email containing their username and password.</message>
+	<message key="manager.people.disable">Disable</message>
+	<message key="manager.people.doNotEnroll">With no role</message>
+	<message key="manager.people.editProfile">Edit Profile</message>
+	<message key="manager.people.editUser">Edit User</message>
+	<message key="manager.people.emailUsers.emailSelectedUsers">Email selected users</message>
+	<message key="manager.people.emailUsers.emailUsersEnrolledAs">Email users enrolled as</message>
+	<message key="manager.people.emailUsers">Email Users</message>
+	<message key="manager.people.emailUsers.selectLocale">Select a locale</message>
+	<message key="manager.people.emailUsers.selectUsers">Select the users you would like to email by checking the boxes beside their names</message>
+	<message key="manager.people.enable">Enable</message>
+	<message key="manager.people.enroll">Enroll User</message>
+	<message key="manager.people.enrollment">Enrollment</message>
+	<message key="manager.people.enrollSelected">Enroll Selected Users</message>
+	<message key="manager.people.enrollSyncRole">Synchronize role</message>
+	<message key="manager.people.enrollSync">Sync Enrollment</message>
+	<message key="manager.people.enrollUserAsDescription">Users can be assigned to, or removed from, a role at any point.</message>
+	<message key="manager.people.enrollUserAs">Enroll user as</message>
+	<message key="manager.people.invalidUser">Sorry, the requested user does not exist.</message>
+	<message key="manager.people.mergeUser">Merge User</message>
+	<message key="manager.people.mergeUsers.confirm">Are you sure you wish to merge the selected {$oldAccountCount} account(s) into the account with the username "{$newUsername}"? The selected {$oldAccountCount} accounts will not exist afterwards. This action is not reversible.</message>
+	<message key="manager.people.mergeUsers">Merge Users</message>
+	<message key="manager.people.mustChooseRole">Please select a role at the top of the page before clicking "Enroll User".</message>
+	<message key="manager.people.mustProvideName">Please provide at least a last name for the user first.</message>
+	<message key="manager.people.noMatchingUsers">No matching users.</message>
+	<message key="manager.people.noneEnrolled">No enrolled users.</message>
+	<message key="manager.people">People</message>
+	<message key="manager.people.remove">Remove</message>
+	<message key="manager.people.saveAndCreateAnotherUser">Save and Create Another</message>
+	<message key="manager.people.signInAs">Log In As</message>
+	<message key="manager.people.signInAsUser">Log In as User</message>
+	<message key="manager.people.syncUsers">Synchronize User Enrollment</message>
+	<message key="manager.people.unenroll">Unenroll</message>
+	<message key="manager.people.userCreatedSuccessfully">User created successfully.</message>
+	<message key="manager.people.userMustChangePassword">Require the user to change their password the next time they log in.</message>
+	<message key="manager.plugins.action">Action:</message>
+	<message key="manager.plugins.disable">Disable</message>
+	<message key="manager.plugins.enable">Enable</message>
+	<message key="manager.plugins.pluginManagement">Plugin Management</message>
+	<message key="manager.plugins.sitePlugin">This is a site-wide plugin. Only the Site Administrator may manage this plugin.</message>
+	<message key="manager.plugins">System Plugins</message>
+	<message key="manager.readingTools">Reading Tools</message>
+	<message key="manager.userSearch.searchByName">Search User By Name</message>
+	<message key="manager.reviewerSearch.change">Change</message>
+	<message key="manager.reviewerSearch.searchByName">Search Reviewers By Name</message>
+	<message key="manager.reviewerSearch.searchByName.short">Search By Name</message>
+	<message key="manager.reviewerSearch.doneAmount">Reviews completed: {$current}</message>
+	<message key="manager.reviewerSearch.doneAmountToggle">Enable/disable the filter for reviews completed.</message>
+	<message key="manager.reviewerSearch.avgAmount">Average days to complete: {$current}</message>
+	<message key="manager.reviewerSearch.avgAmountToggle">Enable/disable the filter for average days to complete a review.</message>
+	<message key="manager.reviewerSearch.lastAmount">Days since last review: {$current}</message>
+	<message key="manager.reviewerSearch.lastAmountToggle">Enable/disable the filter for days since last review.</message>
+	<message key="manager.reviewerSearch.activeAmount">Currently active reviews: {$current}</message>
+	<message key="manager.reviewerSearch.activeAmountToggle">Enable/disable the filter for currently active reviews.</message>
+	<message key="manager.reviewerSearch.interests">Reviewing Interests</message>
+	<message key="manager.reviewerSearch.form.instructions">Use the form below to set the maximum values for the terms you wish to search for.  The form is pre-populated with the calculated averages of those fields.</message>
+	<message key="manager.reviewerSearch.form.interests.instructions">Reviewer Interests (type to search for matching interests)</message>
+	<message key="manager.reviewerSearch.form.previousReviewRounds">Reviewers from this submission previous review rounds</message>
+	<message key="manager.roles">Roles</message>
+	<message key="manager.statistics"><![CDATA[Stats &amp; Reports]]></message>
+	<message key="manager.statistics.defaultMetricDescription">
+		Your {$contextObjectName} is configured to record more than one usage metric. Usage statistics will be displayed in several contexts.
+		There are cases where a single usage statistic must be used, e.g. to display an ordered list of most-used submissions or to rank
+		search results. Please select one of the configured metrics as a default.
+	</message>
+	<message key="manager.statistics.city">City</message>
+	<message key="manager.statistics.region">Region</message>
+	<message key="manager.statistics.reports">Report Generator</message>
+	<message key="manager.statistics.reports.description">The system generates reports that track the details associated with site usage and submissions over a given period of time. Reports are generated in CSV format which requires a spreadsheet application to view.</message>
+	<message key="manager.statistics.reports.aggregationColumns">Aggregate stats by:</message>
+	<message key="manager.statistics.reports.optionalColumns.description">Items in italic and marked with * represents data that is optional to the current way of counting statistics in the system (metric type). You might have that data or not, depending on your statistics plugin configuration.</message>
+	<message key="manager.statistics.reports.defaultReportTemplates">Default report templates</message>
+	<message key="manager.statistics.reports.generateReport">Generate custom report</message>
+	<message key="manager.statistics.reports.advancedOptions">Advanced Options</message>
+	<message key="manager.statistics.reports.advancedOptions.hide">Hide Advanced Options</message>
+	<message key="manager.statistics.reports.columns">Columns</message>
+	<message key="manager.statistics.reports.columns.description">Define the columns that will be used to build the report. The columns you select here not only define which data will be presented inside the reports, but also defines the aggregation level of the statistics. For example, if you choose ID, Type and Month columns, the report will sum all views from an object from one month and will present that data in one row. If you choose Day instead of Month, each object will have a row for each day.</message>
+	<message key="manager.statistics.reports.filters">Filters</message>
+	<message key="manager.statistics.reports.objectNotFound">Object not found in database</message>
+	<message key="manager.statistics.reports.objectType">Object Type</message>
+	<message key="manager.statistics.reports.objectId">Object id</message>
+	<message key="manager.statistics.reports.objectId.label">Define one or more object ids, comma separated (e.g. 1,2,3,4,5).</message>
+	<message key="manager.statistics.reports.yesterday">Yesterday</message>
+	<message key="manager.statistics.reports.currentMonth">Current month</message>
+	<message key="manager.statistics.reports.orderBy">Order by</message>
+	<message key="manager.statistics.reports.orderDir">Direction</message>
+	<message key="manager.statistics.reports.orderDir.asc">Ascending</message>
+	<message key="manager.statistics.reports.orderDir.desc">Descending</message>
+	<message key="manager.statistics.reports.month.label">Use the YYYYMM format.</message>
+	<message key="manager.statistics.reports.day.label">Use the YYYYMMDD format.</message>
+	<message key="manager.statistics.reports.cities.label">One or more city names, comma separated (e.g. City Name 1,City Name 2)</message>
+	<message key="manager.statistics.reports.form.columnsRequired">You have to select at least one column to generate the report.</message>
+	<message key="manager.statistics.reports.reportUrl">Report URL</message>
+	<message key="manager.statistics.reports.reportUrl.label">The following url can be used to generate the report with the current form settings. Just copy it and open it in your browser. You can also store it as your custom report url generator in your bookmarks.</message>
+	<message key="manager.statistics.reports.filters.byContext">By context</message>
+	<message key="manager.statistics.reports.filters.byObject">By object type and/or object id</message>
+	<message key="manager.statistics.reports.filters.byTime">Select report range</message>
+	<message key="manager.statistics.reports.filters.byTime.dimensionSelector">Or select range by:</message>
+	<message key="manager.statistics.reports.filters.byLocation">By geo location</message>
+	<message key="manager.statistics.reports.filters.byLocation.description">Narrow results by country, region and/or city.</message>
+	<message key="manager.affiliationAndSupport">Sponsor</message>
+	<message key="manager.setup.additionalContent">Additional Content</message>
+	<message key="manager.setup.additionalContentDescription">Anything entered here will appear on your homepage.</message>
+	<message key="manager.setup.authorCopyrightNotice">Copyright Notice</message>
+	<message key="manager.setup.authorCopyrightNoticeAgree">Require authors to agree to the Copyright Notice as part of the submission process.</message>
+	<message key="manager.setup.authorGuidelines">Author Guidelines</message>
+	<message key="manager.setup.authorGuidelines.description">Recommended guidelines include bibliographic and formatting standards alongside examples of common citation formats to be used in submissions.</message>
+	<message key="manager.setup.citations">Citations</message>
+	<message key="manager.setup.citationAssistant">Citation Markup Assistant</message>
+	<message key="manager.setup.citationFilterParser">Citation Extraction</message>
+	<message key="manager.setup.citationFilterParserDescription"><![CDATA[<p>To find and check citations in citation databases they first have to be split into machine readable metadata: title, publisher, publication date, etc. must all be extracted from the original citation text provided by the author. Connectors to external web services can assist in this process. One or several connectors can be added by clicking on the "Add Item" button below. Some of these connectors may need to be configured; you will be prompted if this is the case.</p>
+		<p>You can edit or delete an existing Connector by clicking the gear icon next to it.</p>]]></message>
+	<message key="manager.setup.citationFilterLookup">Citation Checking</message>
+	<message key="manager.setup.citationFilterLookupDescription"><![CDATA[<p>You must also enable and configure connections to external citation databases. This helps you to find errors in authors' citations or add additional information (e.g. DOIs or PubMed IDs) required for electronic publishing or deposit.</p>
+		<p>We provide connectors to several external databases in which you can search for citations. Some of these databases require registration or configuration information to be entered. Please refer to the public websites of the databases for further information on how to register. You can add one or several databases by clicking on the "Add Item" button below.</p>
+		<p>You can edit or delete an existing external database connection by clicking the gear icon next to it.</p>
+		<p><strong>Note:</strong> In order for the citation checking process to complete in a timely manner, the <tt>citation_checking_max_processes</tt> directive in your configuration file must be set to a reasonable value. See the General Settings section in <tt>config.inc.php</tt> for more information.</p>]]></message>
+	<message key="manager.setup.citationOutput">Citation Output</message>
+	<message key="manager.setup.citationOutputStyleDescription">Choose the citation style that is being used in your publication's submissions. The Citation Markup Assistant lets you compare the author's version of the citation to a version generated from the XML you are generating so that you can easily spot errors:</message>
+	<message key="manager.setup.competingInterests">Competing Interests</message>
+	<message key="manager.setup.competingInterestsDescription">Reviewers will be asked to comply with the competing interests disclosure policy you specify below.</message> <!-- FIXME #6843 (JM): should this just reference reviewers? -->
+	<message key="manager.setup.errorDeletingItem">There was an error when deleting this item.</message>
+	<message key="manager.setup.favicon">Invalid favicon format. Accepted formats are .ico, .png, and .gif.</message>
+	<message key="manager.setup.filter.grid.errorDeletingFilter">An error occurred while trying to remove this filter. Please report this as a bug.</message>
+	<message key="manager.setup.filter.grid.filterDisplayName">Connector</message>
+	<message key="manager.setup.filter.grid.filterSettings">Registration Information and Connector Settings</message>
+	<message key="manager.setup.filter.grid.filterTemplateRequired">Please select one of the transformations from the drop-down.</message>
+	<message key="manager.setup.filter.grid.confirmDelete">Do you really want to delete the {$filterName} filter?</message>
+	<message key="manager.setup.filter.lookup.grid.descriptionConfirm">You have chosen to add the {$filterDisplayName} database. Please click on 'OK' to confirm.</message>
+	<message key="manager.setup.filter.lookup.grid.descriptionTemplate">Please select a lookup database.</message>
+	<message key="manager.setup.filter.lookup.grid.description.iSBNdb"><![CDATA[<p>This filter connects to the <a href="http://isbndb.com/" target="_blank">ISBNdb.com</a> book and ISBN database.</p>
+	<p>An ISBNdb API key is mandatory. For information on generating a key, see the <a href="http://isbndb.com/api/v1/docs/keys" target="_blank">online documentation</a>.</p>]]></message>
+	<message key="manager.setup.filter.lookup.grid.description.crossRef"><![CDATA[<p>This filter connects to the CrossRef citation database using CrossRef's <a href="http://www.crossref.org/02publishers/openurl_info.html" target="_blank">OpenURL Query Interface</a>.</p>
+	<p>To use this filter, you can use your CrossRef system account, or register a valid email address with CrossRef <a href="http://www.crossref.org/requestaccount/" target="_blank">here</a>.</p>]]></message>
+	<message key="manager.setup.filter.lookup.grid.description.pubMed"><![CDATA[<p>This filter connects to PubMed's <a href="http://www.ncbi.nlm.nih.gov/gquery/gquery.fcgi" target="_blank">Entrez</a> cross-database search engine.</p>
+	<p>A registration email is not strictly mandatory, but may be necessary if you run into connection problems. See the section on <a href="http://www.be-md.ncbi.nlm.nih.gov/bookshelf/br.fcgi?book=helpeutils&part=chapter2#chapter2.Usage_Guidelines_and_Requiremen" target="_blank">Usage Guidelines and Requirements</a> in the Entrez documentation for more information.</p>]]></message>
+	<message key="manager.setup.filter.lookup.grid.description.worldCat"><![CDATA[<p>This filter connects to OCLC services <a href="http://www.worldcat.org/affiliate/webservices/xisbn/app.jsp" target="_blank">xISBN</a> and <a href="http://www.worldcat.org/" target="_blank">Worldcat</a> (optional).</p>
+	<p>If you have a Worldcat <a href="http://oclc.org/developer/develop/web-services.html" target="_blank">API key</a> you can connect to Worldcat by entering the key below.</p>]]></message>
+	<message key="manager.setup.filter.lookup.grid.loadMessage">Please wait until the citation database configuration grid has been loaded...</message>
+	<message key="manager.setup.filter.lookup.grid.title">Citation Database Connectors</message>
+	<message key="manager.setup.filter.noMoreTemplates">All available transformations have already been added. Please click 'Cancel' to return to the setup page.</message>
+	<message key="manager.setup.filter.parser.grid.descriptionConfirm">You have chosen to add the {$filterDisplayName} parser. Please click on 'OK' to confirm.</message>
+	<message key="manager.setup.filter.parser.grid.descriptionTemplate">Please select a citation parser.</message>
+	<message key="manager.setup.filter.parser.grid.description.freeCite"><![CDATA[<p>This extraction filter connects to the <a href="http://freecite.library.brown.edu/" target="_blank">FreeCite</a> web service.</p>]]></message>
+	<message key="manager.setup.filter.parser.grid.description.paraCite"><![CDATA[<p>This extraction filter uses the <a href="http://paracite.eprints.org/developers/" target="_blank">ParaTools</a> Perl modules to provide <a href="http://paracite.eprints.org" target="_blank">ParaCite</a> citation parsing functionality. In order for this to work properly, you must have Perl installed, along with the <a href="http://search.cpan.org/~mjewell/Biblio-Citation-Parser-1.10/" target="_blank">Biblio::Citation::Parser</a> and <a href="http://search.cpan.org/~sburke/Text-Unidecode-0.04/" target="_blank">Text::Unidecode</a> CPAN modules. You must also configure the <tt>perl</tt> directive in your configuration file. This directive can be found in the External Commands section of <tt>config.inc.php</tt>.</p>
+	<p>You can also choose which parser module ParaTools should use. You can choose between the standard, <a href="http://search.cpan.org/~mjewell/Biblio-Citation-Parser-1.10/lib/Biblio/Citation/Parser/Jiao.pm" target="_blank">Jiao</a>, and <a href="http://search.cpan.org/~mjewell/Biblio-Citation-Parser-1.10/lib/Biblio/Citation/Parser/Citebase.pm" target="_blank">Citebase</a> parser modules.</p>]]></message>
+	<message key="manager.setup.filter.parser.grid.description.parsCit"><![CDATA[<p>This extraction filter connects to the <a href="http://aye.comp.nus.edu.sg/parsCit/" target="_blank">ParsCit</a> web service.</p>]]></message>
+	<message key="manager.setup.filter.parser.grid.description.regEx">The RegEx extraction filter uses a series of regular expressions to parse citations.</message>
+	<message key="manager.setup.filter.parser.grid.loadMessage">Please wait until the citation parser configuration grid has been loaded...</message>
+	<message key="manager.setup.filter.parser.grid.title">Citation Extraction Services</message>
+	<message key="manager.setup.filter.pleaseSelect">Please select...</message>
+	<message key="manager.setup.groupType">File type grouping</message>
+	<message key="manager.setup.homeHeaderImageInvalid">Invalid homepage header logo image format or upload failed. Accepted formats are .gif, .jpg, or .png.</message>
+	<message key="manager.setup.homepageImage">Homepage Image</message>
+	<message key="manager.setup.homepageImageDescription">Upload an image to display prominently on the homepage.</message>
+	<message key="manager.setup.homepageImageInvalid">Invalid homepage image format or upload failed. Accepted formats are .gif, .jpg, or .png.</message>
+	<message key="manager.setup.homeTitleImageInvalid">Invalid homepage header title image format or upload failed. Accepted formats are .gif, .jpg, or .png.</message>
+	<message key="manager.setup.information.descriptionTitle">Descriptions</message>
+	<message key="manager.setup.layout.theme">Theme</message>
+	<message key="manager.setup.layout.themeDescription">New themes may be installed from the Plugins tab at the top of this page.</message>
+	<message key="manager.setup.layout.blockManagement">Sidebar management</message>
+	<message key="manager.setup.layout.sidebar">Sidebar</message>
+	<message key="manager.setup.layout.unselected">Unselected</message>
+	<message key="manager.setup.loggingAndAuditing">Logging and Auditing</message>
+	<message key="manager.setup.logo">Logo</message>
+	<message key="manager.setup.metaCitationsDescription">Activate the following checkbox to enable citation and reference editing. This will allow authors to include raw citations with submissions. Editors will also have access to a citation markup assistant which can check raw citations against external databases, such as WorldCat, ISBNdb, PubMed and others, for accuracy. Approved citations can be exported into final galley files.</message>
+	<message key="manager.setup.notifications">Notification of Author Submission</message>
+	<message key="manager.setup.notifications.copySpecifiedAddress">Send a copy to this email address</message>
+	<message key="manager.setup.notifications.description">Authors are automatically sent an email acknowledging their submission. You may have copies of this email sent to the following:</message>
+	<message key="manager.setup.openAccessPolicy">Open Access Policy</message>
+	<message key="manager.setup.openAccessPolicy.description">If providing immediate free access to all published content, you may enter a description of your Open Access Policy.</message>
+	<message key="manager.setup.pageHeaderLogoImageInvalid">Invalid page header logo image format or upload failed. Accepted formats are .gif, .jpg, or .png.</message>
+	<message key="manager.setup.pageFooter">Page Footer</message>
+	<message key="manager.setup.pageFooterDescription">Enter any images, text or HTML code that you'd like to appear at the bottom of your website.</message>
+	<message key="manager.setup.peerReview.description">Outline the peer review policy and processes for readers and authors. This description often includes the number of reviewers typically used in reviewing a submission, the criteria by which reviewers are asked to judge submissions, expected time required to conduct the reviews, and the principles used to select reviewers.</message>
+	<message key="manager.setup.principalContact">Principal Contact</message>
+	<message key="manager.setup.principalContactDescription">Enter contact details, typically for a principal editorship, managing editorship, or administrative staff position, which can be displayed on your publicly accessible website.</message>
+	<message key="manager.setup.privacyStatement">Privacy Statement</message>
+	<message key="manager.setup.privacyStatement.description">This statement will appear during Author Submission and on the publicly available About page.</message>
+	<message key="manager.setup.reviewOptions.numWeeksPerResponse">Weeks allowed to accept or decline a review request</message>
+	<message key="manager.setup.reviewOptions.numWeeksPerReview">Weeks allowed for review completion</message>
+	<message key="manager.setup.reviewOptions.neverSendReminder">Never Remind</message>
+	<message key="manager.setup.reviewOptions.noteOnModification">Defaults can be modified for each review during the editorial process.</message>
+	<message key="manager.setup.reviewOptions.remindForInvite">Send a reminder if a reviewer has not responded to a review request within the following time (days) after response due date:</message>
+	<message key="manager.setup.reviewOptions.remindForSubmit">Send a reminder if a reviewer has not submitted a recommendation within the following time (days) after review's due date:</message>
+	<message key="manager.setup.reviewOptions.reviewTime">Default Review Deadlines</message>
+	<message key="manager.setup.reviewOptions.showBlindReviewLink">Present a link to "Ensuring a Blind Review" during upload</message>
+	<message key="manager.setup.sortableByComponent">Sortable by component</message>
+	<message key="manager.setup.sponsors.note">Sponsor Relationship and Policy Description</message>
+	<message key="manager.setup.sponsors.description">Examples: scholarly associations, university departments, cooperatives, etc. Sponsors are displayed publicly.</message>
+	<message key="manager.setup.styleSheetDescription">Experienced web developers can upload a CSS file to further customize the website's appearance.</message>
+	<message key="manager.setup.technicalSupportContact">Technical Support Contact</message>
+	<message key="manager.setup.technicalSupportContactDescription">A contact person who can assist editors, authors and reviewers with any problems they have submitting, editing, reviewing or publishing material.</message>
+	<message key="manager.siteAccessOptions.siteAccessOptions">Site Access Options</message>
+	<message key="manager.statistics.statistics.count.value">{$count} ({$percentage}%)</message>
+	<message key="manager.statistics.statistics.totalNewValue">{$numTotal} ({$numNew} new)</message>
+	<message key="manager.users">Users</message>
+	<message key="plugins.categories.metadata">Metadata Plugins</message>
+	<message key="plugins.categories.metadata.description">Metadata Plugins implement additional meta-data standards.</message>
+	<message key="plugins.categories.auth">Authorization Plugins</message>
+	<message key="plugins.categories.blocks">Block Plugins</message>
+	<message key="plugins.categories.blocks.description">Block Plugins are pluggable UI components, such as the various sidebar tools.</message>
+	<message key="plugins.categories.citationFormats">Citation Format Plugins</message>
+	<message key="plugins.categories.citationLookup">Citation Database Connector Plugins</message>
+	<message key="plugins.categories.citationLookup.description">Citation Database Connector Plugins connect to citation databases to look up citations, e.g. during citation editing.</message>
+	<message key="plugins.categories.citationOutput">Citation Output Plugins</message>
+	<message key="plugins.categories.citationOutput.description">Citation Output Plugins implement citation standards. This supersedes Citation Format Plugins.</message>
+	<message key="plugins.categories.citationParser">Citation Extraction Plugins</message>
+	<message key="plugins.categories.citationParser.description">Citation Extraction Plugins extract field-level data from raw citations (e.g. author, title, etc.).</message>
+	<message key="plugins.categories.gateways.description">Gateway Plugins provide live data to external systems.</message>
+	<message key="plugins.categories.gateways">Gateway Plugins</message>
+	<message key="plugins.categories.generic">Generic Plugins</message>
+	<message key="plugins.categories.importexport.description">Import/Export Plugins can be used to transfer content to and from other systems.</message>
+	<message key="plugins.categories.importexport">Import/Export Plugins</message>
+	<message key="plugins.categories.paymethod.description">Payment Method plugins implement support for various ways of processing payments online.</message>
+	<message key="plugins.categories.paymethod">Payment Plugins</message>
+	<message key="plugins.categories.reports.description">Report Plugins are used to implement various types of reports and data extracts.</message>
+	<message key="plugins.categories.reports">Report Plugins</message>
+	<message key="plugins.categories.themes.description">Theme Plugins can be used to change the system's appearance.</message>
+	<message key="plugins.categories.themes">Theme Plugins</message>
+	<message key="plugins.categories.oaiMetadataFormats">OAI Metadata Format Plugins</message>
+	<message key="plugins.categories.oaiMetadataFormats.description">These format plugins express metadata in OAI communications.</message>
+	<message key="plugins.categories.pubIds">Public Identifier Plugins</message>
+	<message key="plugins.categories.pubIds.description">These plugins implement support for a public identifier.</message>
+
+	<!-- Plugin management -->
+	<message key="manager.plugins.copyError">Plugin was not successfully copied. This may be a permissions problem. Please make sure that the web server is able to write to the plugins directory (including subdirectories) but don't forget to secure it again later.</message>
+	<message key="manager.plugins.delete">Delete Plugin</message>
+	<message key="manager.plugins.installConfirm">Are you sure you wish to install this plugin?</message>
+	<message key="manager.plugins.upgradeConfirm">Are you sure you wish to upgrade this plugin?</message>
+	<message key="grid.action.installPlugin">Install or upgrade this plugin</message>
+	<message key="manager.plugins.deleteConfirm">Are you sure you wish to delete this plugin from the system?</message>
+	<message key="manager.plugins.deleteDescription">By clicking delete, you will delete the plugin from the server's file system.</message>
+	<message key="manager.plugins.deleteError">Plugin "{$pluginName}" could not be deleted from the file system. This may be a permissions problem. Please make sure that the web server is able to write to the plugins directory (including subdirectories) but don't forget to secure it again later.</message>
+	<message key="manager.plugins.deleteSuccess">Plugin "{$pluginName}" successfuly deleted</message>
+	<message key="manager.plugins.description">This page allows the Manager to review and potentially configure the plugins that are currently installed. Plugins are divided into categories, according to their function. The categories are listed below, and within each category, its current set of plugins.</message>
+	<message key="manager.plugins.doesNotExist">Plugin "{$pluginName}" does not exist</message>
+	<message key="manager.plugins.fileSelectError">Please select a file first</message>
+	<message key="manager.plugins.upload">Upload A New Plugin</message>
+	<message key="manager.plugins.uploadDescription">This form allows you to upload and install a new plugin.  Please ensure the plugin is compressed as a .tar.gz file.</message>
+	<message key="manager.plugins.uploadFailed">Please ensure a file was selected for upload.</message>
+	<message key="manager.plugins.installed">Installed Plugins</message>
+	<message key="manager.plugins.pluginGallery">Plugin Gallery</message>
+	<message key="manager.plugins.pluginGallery.overview">Overview</message>
+	<message key="manager.plugins.pluginGallery.installation">Installation</message>
+	<message key="manager.plugins.pluginGallery.latestCompatible">Latest Compatible Release</message>
+	<message key="manager.plugins.pluginGallery.certifications.official">Official</message>
+	<message key="manager.plugins.pluginGallery.certifications.official.description">This plugin is developed and maintained by the Public Knowledge Project team.</message>
+	<message key="manager.plugins.pluginGallery.certifications.reviewed">Reviewed</message>
+	<message key="manager.plugins.pluginGallery.certifications.reviewed.description">This plugin has been reviewed and approved by the Public Knowledge Project team.</message>
+	<message key="manager.plugins.pluginGallery.certifications.partner">Partner</message>
+	<message key="manager.plugins.pluginGallery.certifications.partner.description">This plugin is provided by one of our development partners.</message>
+	<message key="manager.plugins.pluginGallery.maintainer">Maintainer</message>
+	<message key="manager.plugins.pluginGallery.version">v{$version} released on {$date}</message>
+	<message key="manager.plugins.pluginGallery.homepage">Homepage</message>
+	<message key="manager.plugins.pluginGallery.summary">Summary</message>
+	<message key="manager.plugins.pluginGallery.status">Status</message>
+	<message key="manager.plugins.noInstalledVersion">The plugin has not yet been installed.</message>
+	<message key="manager.plugins.noCompatibleVersion">There is currently no compatible version of this plugin available.</message>
+	<message key="manager.plugins.installedVersionNewer">Plugin already installed, and is newer than the version available in the gallery.</message>
+	<message key="manager.plugins.installedVersionOlder">Plugin already installed, but can be updated to a newer version.</message>
+	<message key="manager.plugins.installedVersionNewest">Plugin already installed and up-to-date.</message>
+	<message key="manager.plugins.installedVersionNewer.short">Newer than available version</message>
+	<message key="manager.plugins.installedVersionOlder.short">Can be upgraded</message>
+	<message key="manager.plugins.installedVersionNewest.short">Up to date</message>
+	<message key="manager.plugins.noCompatibleVersion.short">Not Available</message>
+	<message key="manager.plugins.installFailed">Installation failed. {$errorString}</message>
+	<message key="manager.plugins.installSuccessful">Successfully installed version {$versionNumber}</message>
+	<message key="manager.plugins.invalidPluginArchive">The uploaded plugin archive does not contain a folder that corresponds to the plugin name.</message>
+	<message key="manager.plugins.wrongCategory">The uploaded plugin does not fit the category of the upgraded plugin.</message>
+	<message key="manager.plugins.wrongName">The version.xml in the uploaded plugin contains a plugin name that does not fit the name of the upgraded plugin.</message>
+	<message key="manager.plugins.pleaseInstall">Plugin does not exist.  Please Install instead</message>
+	<message key="manager.plugins.pleaseUpgrade">Plugin already exists, but is newer than installed version.  Please upgrade instead</message>
+	<message key="manager.plugins.settings">Settings</message>
+	<message key="manager.plugins.tarCommandNotFound">The tar command is not available. Please correctly configure it in your "config.inc.php".</message>
+	<message key="manager.plugins.upgrade">Upgrade Plugin</message>
+	<message key="manager.plugins.upgradeDescription">This form allows you to upgrade a plugin.  Please ensure the plugin is compressed as a .tar.gz file.</message>
+	<message key="manager.plugins.upgradeFailed">Upgrade failed. {$errorString}</message>
+	<message key="manager.plugins.upgradeSuccessful">Successfully upgraded to version {$versionString}</message>
+	<message key="manager.plugins.uploadError">Error uploading file</message>
+	<message key="manager.plugins.uploadPluginDir">Select plugin file</message>
+	<message key="manager.plugins.versionFileInvalid">version.xml in plugin directory contains invalid data.</message>
+	<message key="manager.plugins.versionFileNotFound">version.xml not found in plugin directory</message>
+
+	<message key="notification.localeEnabled">Locale enabled.</message>
+	<message key="notification.localeDisabled">Locale disabled.</message>
+	<message key="notification.primaryLocaleDefined">{$locale} defined as primary locale.</message>
+	<message key="notification.localeInstalled">All selected locale(s) installed and activated.</message>
+	<message key="notification.localeUninstalled">{$locale} locale uninstalled.</message>
+	<message key="notification.localeReloaded">{$locale} locale reloaded.</message>
+	<message key="notification.localeSettingsSaved">Locale settings saved.</message>
+	<message key="notification.editedUser">User edited.</message>
+
+	<!-- Distribution Process settings -->
+	<message key="manager.distribution.indexing">Indexing</message>
+
+	<!-- Payment Method settings -->
+	<message key="manager.paymentMethod">Payments</message>
+	<message key="manager.paymentMethod.title">Payment Methods</message>
+	<message key="manager.paymentMethod.none">No payment method selected</message>
+	<message key="manager.paymentMethod.method">Payment Method</message>
+	<message key="manager.paymentMethod.currency">Currency</message>
+	<message key="manager.paymentMethod.currency.description">Payments made directly through this website will be denominated in the selected currency.</message>
+
+	<!-- Roles grid settings -->
+	<message key="settings.roles.roleOptions">Role Options</message>
+	<message key="settings.roles.showTitles">Show role title in contributor list</message>
+	<message key="settings.roles.permitSelfRegistration">Allow user self-registration</message>
+	<message key="settings.roles.roleName">Role Name</message>
+	<message key="settings.roles.roleAbbrev">Abbreviation</message>
+	<message key="settings.roles.assignedStages">Assigned Stages</message>
+	<message key="settings.roles.stages">Stages</message>
+	<message key="settings.roles.roleDetails">Role details</message>
+	<message key="settings.roles.from">Permission level</message>
+	<message key="settings.roles.removeText">You are about to remove this role from this context. This operation will also delete related settings and all the users assignments to this role. Do you want to continue?</message>
+	<message key="settings.roles.nameRequired">You need to define a role name.</message>
+	<message key="settings.roles.abbrevRequired">You need to define a role abbreviature.</message>
+	<message key="settings.roles.uniqueName">You need to define an unique role name.</message>
+	<message key="settings.roles.uniqueAbbrev">You need to define an unique role abbreviature.</message>
+	<message key="settings.roles.roleIdRequired">You need to define a role permission level.</message>
+	<message key="settings.roles.stageIdRequired">You need to define a stage to assign to.</message>
+
+	<!-- Library Files -->
+	<message key="settings.libraryFiles.fileRequired">A library file is required. Please ensure that you have chosen and uploaded a file.</message>
+	<message key="settings.libraryFiles.nameRequired">A name is required for this library file.</message>
+	<message key="settings.libraryFiles.typeRequired">A file type is required for this library file.</message>
+	<message key="settings.libraryFiles.category.contracts">Contracts</message>
+	<message key="settings.libraryFiles.category.marketing">Marketing</message>
+	<message key="settings.libraryFiles.category.permissions">Permissions</message>
+	<message key="settings.libraryFiles.category.reports">Reports</message>
+	<message key="settings.libraryFiles.category.other">Other</message>
+
+	<!--  Genre grid settings -->
+	<message key="grid.action.addGenre">Add a Component</message>
+	<message key="grid.action.editGenre">Edit this Component</message>
+	<message key="grid.action.deleteGenre">Delete this Component</message>
+	<message key="grid.action.restoreGenres">Restore the components to the default settings</message>
+	<message key="manager.setup.genres.sortable">Allow files of this type to be sorted by chapter</message>
+	<message key="manager.setup.genres.dependent">Mark files of this type as dependent files (e.g. not to be listed with published content)</message>
+	<message key="manager.setup.genres.supplementary">Mark files of this type as supplementary files (e.g. not primary submission content)</message>
+	<message key="manager.settings.wizard">Settings Wizard</message>
+	<message key="manager.users.roleRequired">You need to select at least one role to be associated with this user.</message>
+	<message key="manager.website">Website</message>
+	<message key="manager.website.title">Website Settings</message>
+	<message key="manager.workflow">Workflow</message>
+	<message key="manager.workflow.title">Workflow Settings</message>
+	<message key="manager.distribution">Distribution</message>
+	<message key="manager.distribution.title">Distribution Settings</message>
+
+	<!-- Review forms -->
+	<message key="manager.reviewForms">Review Forms</message>
+	<message key="manager.reviewForms.confirmActivate">Are you sure you wish to activate this review form? Once it's assigned to a review you will no longer be able to deactivate it.</message>
+	<message key="manager.reviewForms.confirmDeactivate">Are you sure you wish to deactivate this review form? It will no longer be available for new review assignments.</message>
+	<message key="manager.reviewForms.confirmCopy">Are you sure you wish to create a copy of this review form?</message>
+	<message key="manager.reviewForms.completed">Completed</message>
+	<message key="manager.reviewForms.confirmDelete">Are you sure you wish to delete this review form?</message>
+	<message key="manager.reviewForms.create">Create Review Form</message>
+	<message key="manager.reviewForms.description">Description and Instructions</message>
+	<message key="manager.reviewForms.edit">Review Form</message>
+	<message key="manager.reviewForms.form.titleRequired">A title is required for the review form.</message>
+	<message key="manager.reviewForms.inReview">In Review</message>
+	<message key="manager.reviewForms.list.description">The peer review forms created here will be presented to reviewers to complete, instead of the default form which consists of two open text boxes, the first "for author and editor," and the second "for editor." Review forms can be designated for a specific press section, and editors will have the option to choose which form to use in assigning the review. In all cases, editors will have the option of including the reviews in corresponding with the author.</message>
+	<message key="manager.reviewForms.noneChosen">None / Free Form Review</message>
+	<message key="manager.reviewForms.noneCreated">No review forms have been created.</message>
+	<message key="manager.reviewForms.noneUsed">No review forms have been used.</message>
+	<message key="manager.reviewForms.preview">Preview Form</message>
+	<message key="manager.reviewForms.reviewFormData">Review Form Data</message>
+	<message key="manager.reviewForms.title">Title</message>
+	<message key="manager.reviewFormElement.changeType">Changing the form item type...</message>
+	<message key="manager.reviewFormElements">Form Items</message>
+	<message key="manager.reviewFormElements.addResponseItem">Add selection</message>
+	<message key="manager.reviewFormElements.checkboxes">Checkboxes (you can choose one or more)</message>
+	<message key="manager.reviewFormElements.chooseType">Choose item type</message>
+	<message key="manager.reviewFormElements.confirmDelete">Confirm delete of a published form item...</message>
+	<message key="manager.reviewFormElements.copyTo">Copy to:</message>
+	<message key="manager.reviewFormElements.create">Create New Item</message>
+	<message key="manager.reviewFormElements.dropdownbox">Drop-down box</message>
+	<message key="manager.reviewFormElements.edit">Edit Form Item</message>
+	<message key="manager.reviewFormElements.elementType">Item type</message>
+	<message key="manager.reviewFormElements.form.elementTypeRequired">An item type is required for the form item.</message>
+	<message key="manager.reviewFormElements.form.questionRequired">A question is required for the form item.</message>
+	<message key="manager.reviewFormElements.noneCreated">No form items have been created.</message>
+	<message key="manager.reviewFormElements.possibleResponse">Selection</message>
+	<message key="manager.reviewFormElements.question">Item</message>
+	<message key="manager.reviewFormElements.radiobuttons">Radio buttons (you can only choose one)</message>
+	<message key="manager.reviewFormElements.required">Reviewers required to complete item</message>
+	<message key="manager.reviewFormElements.included">Included in message to author</message>
+	<message key="manager.reviewFormElements.smalltextfield">Single word text box</message>
+	<message key="manager.reviewFormElements.textarea">Extended text box</message>
+	<message key="manager.reviewFormElements.textfield">Single line text box</message>
+	<message key="manager.reviewFormElements.viewable">Viewable (for authors)</message>
+	<message key="grid.action.createReviewForm">Create a new Review Form</message>
+	<message key="manager.setup.reviewerCompetingInterestsRequired.description">Reviewer Competing Interest statement</message>
+	<message key="manager.setup.competingInterests.required">Request a Competing Interest statement during the peer review.</message>
+
+	<message key="manager.setup.licenseURLDescription">URL to a webpage describing the license, if available.</message>
+
+	<message key="manager.setup.metadata.submission">Submission Form</message>
+	<!--  common importexport keys -->
+	<message key="plugins.importexport.common.validationErrors">Validation errors:</message>
+	<message key="plugins.importexport.common.errorsOccured">Errors occured:</message>
+	<message key="plugins.importexport.common.error.unknownElement">Unknown element {$param}</message>
+	<message key="plugins.importexport.common.error.unknownGenre">Unknown genre {$param}</message>
+	<message key="plugins.importexport.common.error.unknownEncoding">Unknown encoding {$param}</message>
+	<message key="plugins.importexport.common.error.unknownUserGroup">Unknown user group {$param}</message>
+	<message key="plugins.importexport.common.error.unknownUploader">Unknown uploader {$param}</message>
+</locale>

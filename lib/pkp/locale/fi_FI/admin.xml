@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/fi_FI/admin.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="fi_FI" full_name="Suomi">
+	<message key="admin.systemInfo.settingName">Asetuksen nimi</message>
+	<message key="admin.systemInfo.settingValue">Asetuksen arvo</message>
+	<message key="admin.adminFunctions">Ylläpitoon liittyvät toiminnot</message>
+	<message key="admin.auth.confirmDelete">Haluatko varmasti poistaa tämän todentamislähteen pysyvästi?</message>
+	<message key="admin.auth.create">Luo todentamislähde</message>
+	<message key="admin.auth.noneCreated">Yhtään todentamislähdettä ei ole määritelty.</message>
+	<message key="admin.authSources">Todentamislähteet</message>
+	<message key="admin.clearDataCache">Tyhjennä datavälimuistit</message>
+	<message key="admin.clearTemplateCache">Tyhjennä mallipohjien välimuisti</message>
+	<message key="admin.configFileUpdatedInstructions"><![CDATA[Määritystiedostosi on päivitetty onnistuneesti.]]><![CDATA[ ]]><![CDATA[Huomioithan, että jos sivustosi ei enää toimi oikein, saatat joutua korjaamaan määrityksiä manuaalisesti muokkaamalla suoraan <tt>config.inc.php</tt>-tiedostoa.]]></message>
+	<message key="admin.confirmClearTemplateCache">Haluatko varmasti tyhjentää koostettujen mallipohjien välimuistin?</message>
+	<message key="admin.confirmExpireSessions">Haluatko varmasti päättää kaikki käyttäjien istunnot? Kaikkien käyttäjien, jotka ovat parhaillaan kirjautuneena järjestelmään, on pakko kirjautua uudelleen (myös sinun).</message>
+	<message key="admin.contentsOfConfigFile">Määritystiedoston sisältö</message>
+	<message key="admin.currentVersion">Nykyinen versio</message>
+	<message key="admin.dateInstalled">Asennuspäivä</message>
+	<message key="admin.displayConfigFileInstructions"><![CDATA[Päivitetyn määrityksen sisältö näkyy alla.]]><![CDATA[ ]]><![CDATA[Ottaaksesi määritysmuutokset käyttöön avaa <tt>config.inc.php</tt> sopivassa tekstieditorissa ja korvaa sen sisältö alla olevan tekstikentän sisällöllä.]]></message>
+	<message key="admin.displayNewSystemConfig">Näytä uusi määritys</message>
+	<message key="admin.expireSessions">Päätä käyttäjäistunnot</message>
+	<message key="admin.languages.download">Lataa kielialue</message>
+	<message key="admin.languages.downloadLocales">Lataa kielialueita</message>
+	<message key="admin.languages.download.cannotOpen">Kielenkuvausta ei voitu avata PKP:n verkkosivustosta.</message>
+	<message key="admin.languages.download.cannotModifyRegistry">Uutta kielialuetta ei voitu lisätä kielialueiden rekisteritiedostoon, yleensä "registry/locales.xml".</message>
+	<message key="admin.languages.cantDisable">Tämä kielialue on sivuston pääkieli. Et voi poistaa sitä käytöstä, ennen kuin valitset toisen ensisijainen kielialueen.</message>
+
+	<message key="admin.languages.confirmReload">Haluatko varmasti ladata tämän kielialueen uudelleen? Tämä poistaa kaikki aiemmat kielialuekohtaiset tiedot, kuten mukautetut sähköpostipohjat.</message>
+	<message key="admin.languages.installedLocales">Asennetut kielialueet</message>
+	<message key="admin.languages.installLanguages">Hallinnoi kielialueita</message>
+	<message key="admin.languages.availableLocales">Saatavilla olevat kielialueet</message>
+	<message key="admin.languages.installLocale">Asenna kielialue</message>
+	<message key="admin.languages.installLocales">Asenna</message>
+	<message key="admin.languages.installNewLocales">Asentaa uusia kielialueita</message>
+	<message key="admin.languages.languageSettings">Kieliasetukset</message>
+	<message key="admin.languages.noLocalesAvailable">Muita kielialueita ei ole asennettavissa.</message>
+	<message key="admin.languages.reload">Lataa kielialue uudelleen</message>
+	<message key="admin.languages.uninstall">Poista kielialue</message>
+	<message key="admin.phpInfo">Laajat PHP-tiedot</message>
+	<message key="admin.scheduledTask">Ajoitettu tehtävä</message>
+	<message key="admin.scheduledTask.startTime">Tehtäväprosessi alkoi.</message>
+	<message key="admin.scheduledTask.stopTime">Tehtäväprosessi päättyi.</message>
+	<message key="admin.scheduledTask.noLog">Tehtävä ei tuottanut lokia.</message>
+	<message key="admin.scheduledTask.downloadLog">{$softwareName}-asennuksesi suoritti ja lopetti tämän tehtävän automaattisesti. Voit ladata lokitiedoston täällä: {$url}</message>
+	<message key="admin.scheduledTask.confirmClearLogs">Haluatko varmasti poistaa kaikki ajoitettujen tehtävien suorituslokit?</message>
+	<message key="admin.scheduledTask.clearLogs">Poista ajoitettujen tehtävien suorituslokit</message>
+	<message key="admin.scheduledTask.reviewReminder">Muistutus arvioinnista</message>
+	<message key="admin.scheduledTask.subscriptionExpiryReminder">Muistutus tilauksen päättymisestä</message>
+	<message key="admin.server.apacheVersion">Apache-versio</message>
+	<message key="admin.server.dbDriver">Tietokantaohjain</message>
+	<message key="admin.server.dbVersion">Tietokantapalvelimen versio</message>
+	<message key="admin.serverInformation">Palvelimen tiedot</message>
+	<message key="admin.server.phpVersion">PHP-versio</message>
+	<message key="admin.server.platform">Käyttöjärjestelmäalusta</message>
+	<message key="admin.settings">Asetukset</message>
+	<message key="admin.settings.aboutDescription">Tietoa sivustosta</message>
+	<message key="admin.settings.contactEmail">Pääasiallisen yhteyshenkilön sähköposti</message>
+	<message key="admin.settings.contactName">Pääasiallinen yhteyshenkilön nimi</message>
+	<message key="admin.settings.form.contactEmailRequired">Pääasiallisen yhteyshenkilön sähköpostiosoite vaaditaan.</message>
+	<message key="admin.settings.form.contactNameRequired">Pääasiallisen yhteyshenkilön nimi vaaditaan.</message>
+	<message key="admin.settings.form.minPasswordLengthRequired">Anna salasanan vähimmäispituus (väh. 4 merkkiä).</message>
+	<message key="admin.settings.form.titleRequired">Otsikko vaaditaan.</message>
+	<message key="admin.settings.defaultMetricDescription">
+		Asennuksesi on määritetty tallentamaan useita käytön mittareita. Käyttötilastot näytetään useassa yhteydessä. Joissain tapauksissa on käytettävä yksittäistä käyttötilastoa, esim. silloin, kun näytetään käytetyimpien käsikirjoitusten järjestetty lista tai asetettaessa hakutuloksia paremmuusjärjestykseen. Valitse yksi määritetyistä mittareista oletukseksi.
+	</message>
+	<message key="admin.settings.homeHeaderImage.altText">Sivuston logo</message>
+	<message key="admin.settings.homeHeaderImageInvalid">Virheellinen sivuston logon kuvamuoto. Hyväksytyt muodot ovat .gif, .jpg ja .png.</message>
+	<message key="admin.settings.introduction">Esittely</message>
+	<message key="admin.settings.minPasswordLength">Salasanan vähimmäispituus (merkkiä)</message>
+	<message key="admin.settings.oaiRegistration">Rekisteröi sivusto indeksointia varten (metatietojen haravointi)</message>
+	<message key="admin.settings.siteLanguage">Sivuston kieli</message>
+	<message key="admin.settings.siteStyleSheetInvalid">Virheellinen sivuston tyylitiedoston muoto. Hyväksytty muoto on .css.</message>
+	<message key="admin.settings.siteStyleSheet">Sivuston tyylitiedosto</message>
+	<message key="admin.settings.siteLogo">Sivuston logo</message>
+	<message key="admin.settings.siteTitle">Sivuston nimi</message>
+	<message key="admin.settings.siteTheme">Sivuston teema</message>
+	<message key="admin.siteAdmin">Sivuston ylläpito</message>
+	<message key="admin.siteManagement">Sivuston hallinnointi</message>
+	<message key="admin.siteSettings">Sivuston asetukset</message>
+	<message key="admin.siteSetup">Sivuston asetukset</message>
+	<message key="admin.systemConfigFileReadError"><![CDATA[Määritystiedostoa <tt>config.inc.php</tt> ei ole olemassa, ei voi lukea tai se on viallinen.]]></message>
+	<message key="admin.systemInformation">Järjestelmätiedot</message>
+	<message key="admin.versionBuild">Koontiversio</message>
+	<message key="admin.version.checkForUpdates">Tarkista päivitykset</message>
+	<message key="admin.version.downloadPackage">Lataa</message>
+	<message key="admin.version.downloadPatch">Lataa korjaustiedosto</message>
+	<message key="admin.versionHistory">Versiohistoria</message>
+	<message key="admin.version.latest">Viimeisin versio</message>
+	<message key="admin.versionMajor">Pääversio</message>
+	<message key="admin.versionMinor">Aliversio</message>
+	<message key="admin.version.moreInfo">Lisätietoja</message>
+	<message key="admin.versionRevision">Tarkistusversio</message>
+	<message key="admin.version.updateAvailable">Päivitetty versio on saatavilla</message>
+	<message key="admin.version.upToDate">Järjestelmäsi on ajan tasalla</message>
+	<message key="admin.version">Versio</message>
+
+	<message key="admin.fileLoader.wrongBasePathLocation">Peruspolun {$path} on oltava julkisten tiedostojen hakemistossa.</message>
+	<message key="admin.fileLoader.pathNotAccessible">Kansio {$path} ei ole hakemisto tai se ei ole luettavissa.</message>
+	<message key="admin.fileLoader.moveFileFailed">Tiedostoa {$filename} ei voitu siirtää sijainnista {$currentFilePath} sijaintiin {$destinationPath}</message>
+	<message key="admin.fileLoader.fileProcessed">Tiedosto {$filename} käsiteltiin ja arkistoitiin.</message>
+	<message key="admin.fileLoader.emailSubject">Tiedostojen latausohjelma</message>
+
+	<message key="admin.copyAccessLogFileTool.usage">Kopioi suoritetut Apachen käyttölokitiedostot, tähän asennukseen liittyvät merkinnät suodattaen, nykyiseen tiedostohakemistoon UsageStatsPlugin-vaihehakemiston sisällä. Ajettava sellaisen käyttäjän toimesta, jolla on lukuoikeudet Apachen lokitiedostoihin. Tämä työkalu kopioi ainoastaan tiedostot, jotka eivät vielä ole usageStats tiedostojen latausohjelman hakemistoissa (vaihe, käsittely, arkisto, hylkää). Käyttö: {$scriptName} path/to/apache/log/file.log Käyttö (käsitellään kaikki hakemiston sisällä olevat tiedostot): {$scriptName} path/to/apache/directory
+	</message>
+	<message key="admin.copyAccessLogFileTool.error.creatingFolder">Virhe: ei voi luoda väliaikaista kansiota {$tmpDir}</message>
+	<message key="admin.copyAccessLogFileTool.error.acessingFile">Virhe: Tiedostoa {$filePath} ei ole olemassa tai sitä ei voi käyttää.</message>
+	<message key="admin.copyAccessLogFileTool.error.copyingFile">Virhe: tiedostoa ei voi kopioida sijainnista {$filePath} sijaintiin {$tmpFilePath}</message>
+	<message key="admin.copyAccessLogFileTool.error.deletingFile">Virhe: tiedostoa {$tmpFilePath} ei voi poistaa</message>
+	<message key="admin.copyAccessLogFileTool.warning.fileAlreadyExists">Varoitus: tiedosto {$filePath} on jo käyttötilastohakemistossa.</message>
+	<message key="admin.copyAccessLogFileTool.success">Onnistui: {$filePath} sijaintiin {$destinationPath}</message>
+	<message key="admin.error.utilExecutionProblem">"{$utilPath}" ohjelman suoritus tuotti seuraavan virheen: {$output}</message>
+	<message key="admin.error.executingUtil">Virhe: ei voi suorittaa "{$utilPath}". Tarkista {$utilVar}-asetuksesi config.inc.php -tiedostosta.</message>
+	<message key="admin.languages.noLocalesToDownload">Kielialueita ei ole ladattavissa.</message>
+</locale>

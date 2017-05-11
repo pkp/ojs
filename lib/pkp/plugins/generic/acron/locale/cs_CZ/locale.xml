@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the cs_CZ (Čeština) locale.
+  * Translated by Petr Petyovsky (petyovsky 'at' feec.vutbr.cz)
+  *
+  -->
+ 
+<locale name="cs_CZ" full_name="Čeština">
+	<message key="plugins.generic.acron.name">Doplněk Acron</message>
+	<message key="plugins.generic.acron.enabled">Doplněk Acron byl povolen.</message>
+	<message key="plugins.generic.acron.disabled">Doplněk Acron byl zakázán.</message>
+
+	<message key="plugins.generic.acron.reload">Spustit naplánované úlohy</message>
+</locale>

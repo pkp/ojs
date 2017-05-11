@@ -1,0 +1,648 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/ar_IQ/submission.xml
+  *
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the ar_IQ (العربية) locale.
+  -->
+
+<locale name="ar_IQ" full_name="العربية">
+	<!-- Author Submission -->
+	<message key="author.submit.userGroupRequired">حسابك الحالي ليس له دور يسمح بتقديم طلبات جديدة كمؤلف. لطفاً، راجع بيانات حسابك؛ فقد يكون بإمكانك إضافة الدور المناسب لنفسك.</message>
+	<message key="author.submit.submissionCitations">إدرج قائمة منسقة من المراجع للأعمال المقتبس منها ضمن هذا المؤلَّف. لطفاً، إفصل بين المراجع بسطر فارغ.</message>
+	<message key="author.submission.roundStatus.reviewsReady">لقد تم تسليم تحكيمات جديدة وقد تم الأخذ بها من قبل المحرر.</message>
+	<message key="submission.confirm.message">قد تم رفع طلبك وصار جاهزاً للإرسال. بإمكانك العودة من أجل تنقيح وتعديل المعلومات التي سبق لك إدخالها قبل المتابعة. عندما تكون جاهزاً، أنقر "إنهاء طلب النشر".</message>
+	<message key="submission.submit.submissionChecklist">متطلبات طلب النشر</message>
+	<message key="submission.submit.submissionChecklistDescription">عليك قراءة المتطلبات أدناه والإقرار بها قبل المتابعة.</message>
+	<message key="submission.submit.submissionComplete">إنهاء طلب النشر</message>
+	<message key="submission.submit.submissionCompleteThanks">نشكر لك اهتمامك بالنشر لدى {$contextName}.</message>
+	<message key="submission.submit.copyrightNoticeAgreementLabel">الإقرار ببيان الحقوق الفكرية</message>
+	<message key="submission.submit.copyrightNoticeAgree">أنا أوافق على التزامي ببنود بيان الحقوق الفكرية.</message>
+	<message key="submission.submit.whatNext">ماذا سيحدث بعد ذلك؟</message>
+	<message key="submission.submit.whatNext.forNow">حالياً، بإمكانك:</message>
+	<message key="submission.submit.whatNext.review">مراجعة طلب النشر هذا</message>
+	<message key="submission.submit.whatNext.create">إنشاء طلب نشر جديد</message>
+	<message key="submission.submit.whatNext.return">العودة إلى دفة القيادة</message>
+	<message key="submission.submit.extendedMetadata">البيانات الوصفية الموسعة</message>
+
+	<!-- FIXME: move to meta-data plug-ins -->
+	<!-- messages used by meta-data filters -->
+	<message key="metadata.filters.crossref.settings.email.displayName">البريد الالكتروني لتسجيل المراجع المترابطة</message>
+	<message key="metadata.filters.crossref.settings.email.validationMessage">لطفاً، أدخل عنوان البريد الالكتروني الصحيح لتسجيل المراجع المترابطة. بإمكانك تسجيل عنوانك البريدي مجاناً في موقع المراجع المترابطة.</message>
+	<message key="metadata.filters.isbndb.settings.apiKey.displayName">مفتاح ISBNdb API</message>
+	<message key="metadata.filters.isbndb.settings.apiKey.validationMessage">لطفاً، أدخل مفتاح ISBNdb API. إن لم يكن لديك مفتاح بعد، فبإمكانك الحصول على واحد مجاناً من مشروع ISBNdb.</message>
+	<message key="metadata.filters.pubmed.settings.email.displayName">عنوان البريد الالكتروني للتسجيل في PubMed</message>
+	<message key="metadata.filters.pubmed.settings.email.validationMessage">لطفاً، أدخل عنوان البريد الالكتروني الصحيح الذي سجلت به في موقع PubMed إن كان لديك.</message>
+	<message key="metadata.filters.worldcat.settings.apiKey.displayName">مفتاح WorldCat API</message>
+	<message key="metadata.filters.worldcat.settings.apiKey.validationMessage">لطفاً، أدخل المفتاح WorldCat API الصحيح الذي سجلت به إن كان لديك.</message>
+	<message key="metadata.filters.paracite.settings.citationModule.displayName">وحدة الاقتباس</message>
+	<message key="metadata.filters.paracite.settings.citationModule.validationMessage">لطفاً، إختر واحداً من وحدات الاقتباس المتوفرة لك.</message>
+	<message key="metadata.filters.settings.isOptional.displayName">لا تُستعمل إفتراضياً (ستكون مع ذلك متاحة للمحرر)</message>
+	<message key="metadata.filters.settings.isOptional.validationMessage">خطأ داخلي. قيمة غير صحيحة تم تمريرها إلى إعداد 'التصفية الإختيارية' . لطفاً، أبلغ عن هذا الأمر كخطأ برمجي.</message>
+
+	<!-- messages shared between MD schemas -->
+	<message key="metadata.property.displayName.author">المؤلفون</message>
+	<message key="metadata.property.validationMessage.author">لأفضل نتائج، ينبغي إدخال المؤلفين بالصيغة الآتية: Coleman Jr, D. (Ralf) Dr.</message>
+	<message key="metadata.property.displayName.editor">المحررون</message>
+	<message key="metadata.property.validationMessage.editor">لأفضل نتائج، ينبغي إدخال المؤلفين بالصيغة الآتية: Coleman Jr, D. (Ralf) Dr.</message>
+
+	<!-- NLM-specific messages -->
+	<message key="metadata.property.displayName.article-title">عنوان المؤلَّف</message>
+	<message key="metadata.property.validationMessage.article-title">لطفاً، أدخل عنواناً صحيحاً للمؤلَّف.</message>
+	<message key="metadata.property.displayName.source">عنوان النشر</message>
+	<message key="metadata.property.validationMessage.source">لطفاً، أدخل عنواناً صحيحاً للنشر.</message>
+	<message key="metadata.property.displayName.date">تأريخ النشر</message>
+	<message key="metadata.property.validationMessage.date">لطفاً، أدخل تأريخاً صحيحاً للنشر (بصيغة: YYYY-MM-DD).</message>
+	<message key="metadata.property.displayName.access-date">تأريخ الوصول</message>
+	<message key="metadata.property.validationMessage.access-date">لطفاً، أدخل تأريخاً صحيحاً للوصول (بصيغة: YYYY-MM-DD).</message>
+	<message key="metadata.property.displayName.issue">العدد</message>
+	<message key="metadata.property.validationMessage.issue">لطفاً، أدخل عدداً صحيحاً.</message>
+	<message key="metadata.property.displayName.volume">المجلد</message>
+	<message key="metadata.property.validationMessage.volume">لطفاً، أدخل مجلداً صحيحاً.</message>
+	<message key="metadata.property.displayName.season">الموسم</message>
+	<message key="metadata.property.validationMessage.season">لطفاً، أدخل معرفاً صحيحاً للموسم.</message>
+	<message key="metadata.property.displayName.chapter-title">عنوان الفصل</message>
+	<message key="metadata.property.validationMessage.chapter-title">لطفاً، أدخل عنوناً صحيحاً للفصل.</message>
+	<message key="metadata.property.displayName.edition">طبعة</message>
+	<message key="metadata.property.validationMessage.edition">لطفاً، أدخل طبعة صحيحة.</message>
+	<message key="metadata.property.displayName.series">الدورية</message>
+	<message key="metadata.property.validationMessage.series">لطفاً، أدخل دورية صحيحة.</message>
+	<message key="metadata.property.displayName.supplement">المكمل</message>
+	<message key="metadata.property.validationMessage.supplement">لطفاً، أدخل مكملاً صحيحاً.</message>
+	<message key="metadata.property.displayName.conf-date">تأريخ المؤتمر</message>
+	<message key="metadata.property.validationMessage.conf-date">لطفاً، أدخل تأريخاً صحيحاً للمؤتمر (بصيغة: YYYY-MM-DD).</message>
+	<message key="metadata.property.displayName.conf-loc">موقع المؤتمر</message>
+	<message key="metadata.property.validationMessage.conf-loc">لطفاً، أدخل موقعاً صحيحاً للمؤتمر.</message>
+	<message key="metadata.property.displayName.conf-name">اسم المؤتمر</message>
+	<message key="metadata.property.validationMessage.conf-name">لطفاً، أدخل اسماً صحيحاً للمؤتمر.</message>
+	<message key="metadata.property.displayName.conf-sponsor">راعي المؤتمر</message>
+	<message key="metadata.property.validationMessage.conf-sponsor">لطفاً، أدخل راعياً صحيحاً للمؤتمر.</message>
+	<message key="metadata.property.displayName.institution">المؤسسة</message>
+	<message key="metadata.property.validationMessage.institution">لطفاً، أدخل مؤسسة صحيحة.</message>
+	<message key="metadata.property.displayName.fpage">أول صفحة</message>
+	<message key="metadata.property.validationMessage.fpage">لطفاً، أدخل صفحة أولى صحيحة (ينبغي أن تكون قيمة رقمية).</message>
+	<message key="metadata.property.displayName.lpage">آخر صفحة</message>
+	<message key="metadata.property.validationMessage.lpage">لطفاً، أدخل صفحة أخيرة صحيحة (ينبغي أن تكون قيمة رقمية).</message>
+	<message key="metadata.property.displayName.size">عدد الصفحات</message>
+	<message key="metadata.property.validationMessage.size">لطفاً، أدخل عدداً صحيحاً للصفحات (ينبغي أن تكون قيمة رقمية).</message>
+	<message key="metadata.property.displayName.publisher-loc">موقع الناشر</message>
+	<message key="metadata.property.validationMessage.publisher-loc">لطفاً، أدخل موقعاً صحيحاً للناشر.</message>
+	<message key="metadata.property.displayName.publisher-name">اسم الناشر</message>
+	<message key="metadata.property.validationMessage.publisher-name">لطفاً، أدخل اسماً صحيحاً للناشر.</message>
+	<message key="metadata.property.displayName.isbn">ISBN</message>
+	<message key="metadata.property.validationMessage.isbn">لطفاً، أدخل قيمة صحيحة لـ ISBN (9 أو 13 مرتبة رقمية).</message>
+	<message key="metadata.property.displayName.issn">ISSN طباعي</message>
+	<message key="metadata.property.validationMessage.issn">لطفاً، أدخل قيمة صحيحة للرمز الطباعي ISSN.</message>
+	<message key="metadata.property.displayName.eissn">eISSN</message>
+	<message key="metadata.property.validationMessage.eissn">لطفاً، أدخل قيمة صحيحة للرمز eISSN.</message>
+	<message key="metadata.property.displayName.doi">DOI</message>
+	<message key="metadata.property.validationMessage.doi">لطفاً، أدخل قيمة صحيحة للرمز DOI.</message>
+	<message key="metadata.property.displayName.publisher-id">رمز النشر المخصص</message>
+	<message key="metadata.property.validationMessage.publisher-id">لطفاً، أدخل قيمة صحيحة لرمز النشر المخصص.</message>
+	<message key="metadata.property.displayName.coden">CODEN</message>
+	<message key="metadata.property.validationMessage.coden">لطفاً، أدخل قيمة صحيحة للرمز CODEN.</message>
+	<message key="metadata.property.displayName.sici">SICI</message>
+	<message key="metadata.property.validationMessage.sici">لطفاً، أدخل قيمة صحيحة للرمز SICI.</message>
+	<message key="metadata.property.displayName.pmid">PMID</message>
+	<message key="metadata.property.validationMessage.pmid">لطفاً، أدخل قيمة صحيحة للرمز PMID.</message>
+	<message key="metadata.property.displayName.uri">رابط النشر</message>
+	<message key="metadata.property.validationMessage.uri">لطفاً، أدخل قيمة صحيحة لبديل رابط النشر.</message>
+	<message key="metadata.property.displayName.comment">التعليق</message>
+	<message key="metadata.property.validationMessage.comment">لطفاً، أدخل تعليقاً صحيحاً.</message>
+	<message key="metadata.property.displayName.annotation">التأشير</message>
+	<message key="metadata.property.validationMessage.annotation">لطفاً، أدخل تأشيراً صحيحاً.</message>
+	<message key="metadata.property.displayName.publication-type">نوعية النشر</message>
+	<message key="metadata.property.validationMessage.publication-type">لطفاً، تأكد دوماً من تحديد نوعية النشر. النوعيات المدعومة حالياً هي: الكتب (للكتب أو فصول منها)، والمجلات (لمقالات المجلات). خلاف ذلك، سوف لن يعمل تنسيق الاقتباس بالشكل الصحيح.</message>
+
+	<!-- MODS-specific messages -->
+	<message key="metadata.property.displayName.title-type">نوعية العنوان</message>
+	<message key="metadata.property.validationMessage.title-type">لطفاً، تأكد من تحديد نوعية صحيحة للعنوان. النوعيات المدعومة هي: 'abbreviated'، 'translated'، 'alternative' و 'uniform'، ومعانيها على التوالي: مختصر، مترجم، بديل، وموحد.</message>
+	<message key="metadata.property.displayName.nonSort">تم تجاهل جزء من العنوان عند إجراء الفرز</message>
+	<message key="metadata.property.validationMessage.nonSort">لطفاً، فقط أدخل الحروف الأولى من العنوان التي ينبغي تجاهلها عند فرز العناوين.</message>
+	<message key="metadata.property.displayName.title">العنوان</message>
+	<message key="metadata.property.validationMessage.title">لطفاً، أدخل عنواناً صحيحاً.</message>
+	<message key="metadata.property.displayName.subTitle">العنوان الفرعي</message>
+	<message key="metadata.property.validationMessage.subTitle">لطفاً، أدخل عنواناً فرعياً صحيحاً.</message>
+	<message key="metadata.property.displayName.partNumber">رقم الجزء</message>
+	<message key="metadata.property.validationMessage.partNumber">لطفاً، أدخل رقماً صحيحاً للجزء.</message>
+	<message key="metadata.property.displayName.partName">اسم الجزء</message>
+	<message key="metadata.property.validationMessage.partName">لطفاً، أدخل اسماً صحيحاً للجزء.</message>
+	<message key="metadata.property.displayName.name-type">نوعية الاسم</message>
+	<message key="metadata.property.validationMessage.name-type">لطفاً، تأكد من تحديدك نوعية صحيحة للاسم. النوعيات المدعومة هي: 'personal'، 'corporate' و 'conference' ومعانيها على التوالي: شخصي، مؤسساتي، ومؤتمر.</message>
+	<!-- FIXME: end -->
+
+	<message key="common.queue.long.submissionsUnassigned">غير معيّن</message>
+	<message key="common.queue.long.myAssigned">المعيّن لي</message>
+	<message key="common.queue.long.submissionsArchived">طلبات النشر المحفوظة</message>
+	<message key="submission.authors">المؤلفون</message>
+	<message key="submission.authorBiography">السيرة الشخصية للمؤلف</message>
+	<message key="submission.authorBiographies">السير الشخصية للمؤلفين</message>
+	<message key="submission.authorWithAffiliation">{$name}، {$affiliation}</message>
+	<message key="submission.shortAuthor">{$author}.</message>
+	<message key="submission.mySubmissions">طلباتي للنشر</message>
+	<message key="submission.addFile">رفع الملف</message>
+	<message key="submission.agencies">الوكالات</message>
+	<message key="submission.abstractViews">معاينات الملخص</message>
+	<message key="submission.accepted">مقبول</message>
+	<message key="submission.acknowledge">إقرار</message>
+	<message key="submission.addSuppFile">أضف ملفاً تكميلياً</message>
+	<message key="submission.ask">إسأل</message>
+	<message key="submission.attachedFile">الملف المرفق</message>
+	<message key="submission.backToSubmissionEditing">عودة إلى تعديل طلب النشر</message>
+	<message key="submission.changeComments">التغيير إلى</message>
+	<message key="submission.changeFile">تغيير الملف</message>
+	<message key="submission.citations">المراجع</message>
+	<message key="submission.citations.editor.citationlist.approved">موافق عليه</message>
+	<message key="submission.citations.editor.citationlist.deleteCitationConfirmation">هل أنت متأكد من رغبتك في حذف هذا الاقتباس؟</message>
+	<message key="submission.citations.editor.citationlist.errorDeletingCitation">حدث خطأ ما عند محاولة حذف الاقتباس. لطفاً، أبلغ عن الأمر بمثابة خطأ برمجي.</message>
+	<message key="submission.citations.editor.citationlist.newCitation">إقتباس جديد</message>
+	<message key="submission.citations.editor.citationlist.notApproved">غير مصادق عليه</message>
+	<message key="submission.citations.editor.citationlist.title">تعديل الاقتباسات</message>
+	<message key="submission.citations.editor.clickToEdit">أنقر للتعديل.</message>
+	<message key="submission.citations.editor.details.authorQuery">إسأل المؤلف</message>
+	<message key="submission.citations.editor.details.authorQueryBody">رسالتك إلى المؤلف:</message>
+	<message key="submission.citations.editor.details.authorQueryExplanation">بإمكانك مطالبة المؤلف بمعلومات إضافية عن الاقتباس الحالي. النقر على زر "إرسال" سيؤدي إلى إرسال طلبك بشكل بريد الالكتروني إلى المؤلف.</message>
+	<message key="submission.citations.editor.details.authorQuerySubject">الموضوع:</message>
+	<message key="submission.citations.editor.details.cannotSelectDefaultForLabel">ليس بإمكانك إلغاء عنوان الحقل. لطفاً، إحذف محتوى الحقل إذا كنت لا تحتاجه</message>
+	<message key="submission.citations.editor.details.checkInGoogleScholar">التحقق من خدمة الباحث العلمي من Google</message>
+	<message key="submission.citations.editor.details.changeFieldInfo">أدخل قليلاً من الحروف الأولى لتختار...</message>
+	<message key="submission.citations.editor.details.citationExportPreview">معاينة تصدير الاقتباسات</message>
+	<message key="submission.citations.editor.details.citationImprovementResultsActive">تصدير نتائج خدمة الاقتباس الداخلية (أنقر للإغلاق)</message>
+	<message key="submission.citations.editor.details.citationImprovementResultsInactive">تصدير نتائج خدمة الاقتباس الداخلية (أنقر للفتح)</message>
+	<message key="submission.citations.editor.details.citationServices">خدمات الاقتباس</message>
+	<message key="submission.citations.editor.details.clickToDismissMessage">بإمكانك النقر على نص الرسالة لصرفها.</message>
+	<message key="submission.citations.editor.details.dataSaved">تم حفظ التغييرات التي قمت بها.</message>
+	<message key="submission.citations.editor.details.editRawCitationDatabaseServices">إختر خدمات قاعدة بيانات الاقتباسات:</message>
+	<message key="submission.citations.editor.details.editRawCitationExpertSettingsActive">تصدير إعدادات تعديل الاقتباس (أنقر للإغلاق</message>
+	<message key="submission.citations.editor.details.editRawCitationExpertSettingsInactive">تصدير إعدادات تعديل الاقتباس (أنقر للفتح</message>
+	<message key="submission.citations.editor.details.editRawCitationExtractionServices">إختر خدمات استقطاع الاقتباسات:</message>
+	<message key="submission.citations.editor.details.editRawCitationFilterValidationError">خطأ داخلي: إختيار تصفية خاطئ. لطفاً، أبلغ عن الأمر بمثابة خطأ برمجي.</message>
+	<message key="submission.citations.editor.details.explainImprovementOptions">إن لم تحصل على نتائج مرضية بشكل إفتراضي، إذن لديك خيارات متعددة لتحسين الاقتباس. وهي عادة ما تساعد على التعديل اليدوي للحقول المهمة (مثل: العنوان، والمؤلف) ومن ثم جرب خدمات الاقتباس مرة أخرى. إن كان ذلك لا يساعدك أيضاً، بإمكانك دوماً الاستعلام من خدمة الباحث العلمي من Google أو مطالبة المؤلف بالتفاصيل.</message>
+	<message key="submission.citations.editor.details.googleScholar">الباحث العلمي من Google</message>
+	<message key="submission.citations.editor.details.googleScholarExplanation">إن لم يتم العثور على اقتباس مطابق في أي من خدمات الاقتباسات العاملة في الموقع، لا يزال بإمكانك البحث عنه عبر خدمة الباحث العلمي من Google. للأسف، الباحث العلمي من Google لا يقدم واجهة مستخدم مبنية على أساس الحقول للبيانات التي بالإمكان استعمالها، ما يعني، أنه لا سبيل إلى الحصول على البيانات آلياً عبر هذه الخدمة. سيكون عليك نسخ البيانات ولصقها يدوياً من نتائج صفحة Google إلى الحقول الخاصة بك.</message>
+	<message key="submission.citations.editor.details.manualEditing">التعديل اليدوي</message>
+	<message key="submission.citations.editor.details.messages">لطفاً، لاحظ أن (النقر على الرسائل يصرفها)</message>
+	<message key="submission.citations.editor.details.newFieldInfo">...أنقر هنا لإضافة حقل جديد...</message>
+	<message key="submission.citations.editor.details.queryCitation">إعادة طلب خدمات الاقتباس</message>
+	<message key="submission.citations.editor.details.queryGoogleScholar">البحث في خدمة الباحث العلمي من Google</message>
+	<message key="submission.citations.editor.details.processRawCitation">عملية</message>
+	<message key="submission.citations.editor.details.processRawCitationGoAhead">إنطلق قُدماً</message>
+	<message key="submission.citations.editor.details.processRawCitationTitle">تعديل الاقتباس الأصلي</message>
+	<message key="submission.citations.editor.details.processRawCitationWarning">أنت على وشك تعديل النص الأصلي للاقتباس. إذا قمت بهذا، كل الحقول ستُستبدل بقيم مولدة جديدة، وهذا سيحذف التعديلات اليدوية التي قد تكون قمت بها سابقاً.</message>
+	<message key="submission.citations.editor.details.saveAndApprove">الحفظ والمصادقة</message>
+	<message key="submission.citations.editor.details.saveAndRevokeApproval">سحب المصادقة</message>
+	<message key="submission.citations.editor.details.sendAuthorQuery">إرسال الرسالة</message>
+	<message key="submission.citations.editor.details.sendAuthorQuerySuccess">الرسالة أُرسلت!</message>
+	<message key="submission.citations.editor.details.sourceResultsUse">استعمل</message>
+	<message key="submission.citations.editor.details.sourceResultsUseAll">استعمل الكل</message>
+	<message key="submission.citations.editor.details.sourceResultsUseAllExplanation">أنقر لنقل كل حقول النتيجة من هذا المصدر مباشرة إلى قائمة حقولك</message>
+	<message key="submission.citations.editor.details.sourceResultsUseExplanation">أنقر لنقل هذه النتيجة مباشرة إلى قائمة حقولك</message>
+	<message key="submission.citations.editor.details.rawCitation">نص الاقتباس الأصلي</message>
+	<message key="submission.citations.editor.details.rawCitationRequired">نص الاقتباس مطلوب حتماً.</message>
+	<message key="submission.citations.editor.details.unsavedChanges">الاقتباس يتضمن بيانات غير محفوظة. لطفاً، أنقر زر الحفظ للحفاظ على التغييرات، أو على زر الإلغاء للتراجع عن التغييرات.</message>
+	<message key="submission.citations.editor.details.dontShowMessageAgain">لا تعرض هذه النافذة مجدداً.</message>
+	<message key="submission.citations.editor.edit">تعديل الاقتباسات</message>
+	<message key="submission.citations.editor.export">تصدير الاقتباسات</message>
+	<message key="submission.citations.editor.export.exportDescription"><![CDATA[<a id="markForExport" href="">أنقر هنا</a> لاختيار كل حصيلة الناتج. بإمكانك عندها نسخها ولصقها في مستندك.]]></message>
+	<message key="submission.citations.editor.export.filterSelectionDescription">لطفاً، إختر واحداً من خيارات التصدير الآتية.</message>
+	<message key="submission.citations.editor.export.filterSelectionError">لم تختر أياً من خيارات إخراج البيانات.</message>
+	<message key="submission.citations.editor.export.foundUnapprovedCitationsMessage"><![CDATA[<p>لم تصادق بعد على جميع الاقتباسات. لطفاً، إذهب إلى باب <strong>تعديل الاقتباسات</strong> وتأكد من مصادقتك على جميع الاقتباسات قبل محاولتك تصديرها. الاقتباسات المصادق عليها مؤشرة بشريط أزرق داكن على اليسار.</p>]]></message>
+	<message key="submission.citations.editor.export.noExportOutput">إن التصفية '{$filterName}' قد أحدثت خطأ ما. لطفاً، أبلغ عن الأمر بمثابة خطأ برمجي.</message>
+	<message key="submission.citations.editor.export.pleaseSelectXmlFilter">خيارات إخراج ملف XML:</message>
+	<message key="submission.citations.editor.export.pleaseSelectPlaintextFilter">إخراج نمط الاقتباس (قيد التجريب!):</message>
+	<message key="submission.citations.editor.introduction">المقدمة</message>
+	<message key="submission.citations.editor.introduction.introductionMessage"><![CDATA[<h4>مرحباً بك في مساعد توصيف الاقتباسات!</h4>
+	<p>مع هذا المساعد، بإمكانك تأشير الاقتباسات المدرجة من قبل المؤلف لغرض تصديرها إلى ألواح بصيغة NLM 2.3 أو 3.0 XML، أو كبديل عن ذلك، بشكل ملف نصي. هذه الأداة تحاول أولاً استقطاع الاقتباسات والتعرف عليها آلياً بالشكل الذي هي عليه، لكن بإمكانك التدخل وتعديل النتائج في أي وقت.</p>
+	<ul>
+		<li><p><strong>تهيئة المساعد</strong></p>
+		<p>مساعد توصيف الاقتباسات تتم تهيئته من قبل رئيس تحرير المجلة خلال <a href="{$citationSetupUrl}">الخطوة 3.7 من تهيئة المجلة: مساعد توصيف الاقتباسات</a>. بالإمكان إضافة أدوات استقطاع وتدقيق أخرى للاقتباسات، وتهيئتها أو حذفها. للمزيد من المعلومات، إتصل برئيس التحرير.</p></li>
+		<li><p><strong>التنقل في واجهة المساعد</strong></p>
+		<p>للتحويل بين أبواب <strong>المقدمة</strong>، <strong>تعديل الاقتباسات</strong> و <strong>تصدير الاقتباسات</strong>، أنقر عناوين الأبواب. لتوسيع واجهة الاقتباسات، أنقر زر<strong>ملء الشاشة</strong>. للعودة إلى الواجهة الطبيعية، أنقر زر <strong>إلغاء ملء الشاشة</strong>. لإزالة باب المقدمة بالكامل، أنقر الزر أدناه.</p></li>
+		<li><p><strong>المطالبة بالاقتباسات</strong></p>
+		<p>إذا تم تمكين مساعد الاقتباسات من قبل رئيس تحرير المجلة، ستتم مطالبة المؤلفين بقائمة المراجع خلال تقديمهم لطلب النشر. هذه المراجع ستتم المطالبة بها بشكل منفصل عن ملف التقديم. بعد التقديم، بإمكان المؤلفين أيضاً تعديل قائمتهم من المراجع في أي وقت عبر تعديل البيانات الوصفية؛ لاحظ أن ذلك سيستبدل أي تعديلات قمت بها للاقتباسات باستعمال هذه الأداة.</p></li>
+		<li><p><strong>تعديل الاقتباسات</strong></p>
+		<p>مساعد توصيف الاقتباسات سيحاول التعرف على الاقتباسات المنفردة واستقطاعها من قائمة مراجع المؤلف. بإمكانك التحقق من كل اقتباس مستقطع بشكل منظم لزيادة الدقة مستفيداً من مجموعة من قواعد البيانات الخارجية؛ تعديل بيانات الاقتباسات الخاطئة وإضافة معلومات جديدة؛ المصادقة على الاقتباسات وحتى حذفها؛ فضلاً عن إضافة المزيد منها.</p>
+		<p>كل الاقتباسات النهائية لطلب النشر ينبغي المصادقة عليها قبل أن يكون بالإمكان تصديرها.</p></li>
+		<li><p><strong>تصدير الاقتباسات</strong></p>
+		<p>يمكن تصدير الاقتباسات بصيغ ملفات XML أو نصوص. خيار التصدير بشكل ملف XML يتضمن حالياً <a href="http://dtd.nlm.nih.gov/publishing/">NLM Journal Publishing</a> 2.3 و 3.0 <a href="http://www.ncbi.nlm.nih.gov/pmc/pmcdoc/tagging-guidelines/article/tags.html#el-reflist">ref-list XML</a>. إنتخاب واحد من هذه الخيارات يخرج ملفاً بترميز XML فيه قصاصات لقائمة المراجع التي بالإمكان نسخها ولصقها في لوح طباعي بصيغة NLM XML.</p>
+		<p>خيار تصدير النصوص التجريبي يتضمن صيغ الملفات: ABNT، APA، MLA و Vancouver. هذه الخيارات توفر مخرجات نصية يمكن نسخها ولصقها في لوح طباعي قوامه نصي (مثل: Microsoft Word أو OpenOffice؛ Adobe InDesign... إلخ.). كل اقتباس يتضمن رابط مضمن لغرض البحث الآلي عن الاقتباس في خدمة الباحث العلمي من Google.</p></li>
+	</ul>]]></message>
+	<message key="submission.citations.editor.loadMessage">لطفاً، إمنح مساعد توصيف الاقتباسات وقتاً للتحميل.</message>
+	<message key="submission.citations.editor.pleaseImportCitationsFirst"><![CDATA[<p>ليس هناك اقتباسات في هذا المؤلَّف.</p><p>لطفاً، إذهب إلى <a href="{$articleMetadataUrl}">صفحة البيانات الوصفية</a> للمؤلَّف وأدخل قائمة المراجع أو أضف المراجع يدوياً مستعملاً زر إضافة فقرة الخاص بعملية التحرير.</p>]]></message>
+	<message key="submission.citations.editor.pleaseSelect">لطفاً، إختر...</message>
+	<message key="submission.citations.editor.unprocessedCitations">اقتباسات هذا الملَّف لا تزال قيد المعالجة من قبل الملقم. قائمة الاقتباسات الحالية تتضمن فقط الاقتباسات التي سبق وأن تمت معالجتها. لطفاً، أنقر زر التنشيط لمعاينة الاقتباسات التي تمت معالجتها في هذه الأثناء.</message>
+	<message key="submission.citations.editor.unprocessedCitationsButton">تنشيط قائمة الاقتباسات</message>
+	<message key="submission.citations.editor.unprocessedCitationsButtonTitle">أنقر لتنشيط قائمة الاقتباسات.</message>
+	<message key="submission.citations.filter.invalidMetadata">حدث خطأ ما في التصفية {$filterName}: أحد عناصر البيانات المخرجة من مصدر البيانات (مثلاً خدمة إنترنت) لم تتفق مع صيغة البيانات الوصفية الداخلية. لذلك، تم رفض نتائج مصدر البيانات. لطفاً، أبلغ عن الأمر بمثابة خطأ برمجي.</message>
+	<message key="submission.citations.filter.noResultFromFilterError">عدة خدمات اقتباس لم ترجع أي بيانات. بإمكانك محاولة تعديل حقول الاقتباس يدوياً ومن ثم تشغيل خدمات الاقتباس مجدداً لتحسين النتائج. إن لم يساعد ذلك أيضاً، فهذا يعني أن الاقتباس ليس له وجود في أي من قواعد البيانات التي تتصل بها.</message>
+	<message key="submission.citations.filter.unsupportedPublicationType">نوعية النشر غير مدعومة أو مفقودة. لطفاً، قم بتعديل الاقتباس يدوياً وأدخل نوعية النشر (النوعيات المتاحة هي: 'book'، 'journal'، 'thesis' و 'conf-proc'.  معانيها على التوالي: كتاب، مجلة، أطروحة ومؤتمر).</message>
+	<message key="submission.citations.filter.webserviceError">إن خدمة الإنترنت للتصفية {$filterName} قد أنتجت خطأ ما عند استدعائها عبر الرابط: {$webserviceUrl}. قد تكون خدمة الإنترنت هذه غير متاحة حالياً. سيكون بإمكانك العمل مع خدمات الشبكة الأخرى وحفظ التغييرات التي تقوم بها. بإمكانك أيضاً معاودة المحاولة لاحقاً. إذا استمر حدوث الخطأ مراراً، عندها، قم بمطالبة رئيس تحرير المجلة بتعطيل هذه الخدمة والإبلاغ عن وجود خطأ برمجي.</message>
+	<message key="submission.citations.filter.webserviceResultTransformationError">حدث خطأ ما في التصفية {$filterName}: إن تحويل نتائج ملف XML (مثلاً: من خدمة الإنترنت) إلى بيانات وصفية قائمة على حقول، تعرض إلى الفشل. سبب ذلك على الأرجح أن خدمة الإنترنت أعادة بيانات خاطئة أو غير مكتملة. لطفاً، أبلغ عن الأمر بمثابة خطأ برمجي.</message>
+	<message key="submission.citations.metadata.changeWarning">هل أنت متأكد من رغبتك في تحديث قائمتك للمراجع؟ إذا نقرت على "موافق"، فإن أي تعديلات قام بها المحررون سيتم استبدالها. إن كنت غير واثق بأن عليك إجراء تعديلات على قائمة المراجع، لطفاً، تواصل مع المحرر المسؤول على طلب النشر هذا.</message>
+	<message key="submission.comments.addComment">أضف تعليقاً</message>
+	<message key="submission.comments.comments">التعليقات</message>
+	<message key="submission.comments.confirmDelete">هل أنت متأكد من رغبتك في حذف هذا التعليق؟</message>
+	<message key="submission.comments.corrections">التصحيحات</message>
+	<message key="submission.comments.editComment">تعديل التعليق</message>
+	<message key="submission.comments.importPeerReviews">استيراد التحكيمات المناظرة</message>
+	<message key="submission.comments.addReviews">أضف التحكيمات إلى البريد الالكتروني</message>
+	<message key="submission.comments.importPeerReviews.reviewerLetter">المحكم {$reviewerLetter}:</message>
+	<message key="submission.comments.noComments">لا تعليقات</message>
+	<message key="submission.comments.noReviews">لا تحكيمات</message>
+	<message key="submission.comments.review">التحكيم</message>
+	<message key="submission.comments.sendDecisionToReviewers">أرسل قرار التحرير إلى المحكمين</message>
+	<message key="submission.comments.subject">الموضوع</message>
+	<message key="submission.complete">إكمال</message>
+	<message key="submission.contributors">قائمة المساهمين</message>
+	<message key="submission.copyedited">مدقق</message>
+	<message key="submission.copyediting">التدقيق</message>
+	<message key="submission.queryNoteFiles">ملفات المناقشة</message>
+	<message key="submission.coverage">معلومات التغطية</message>
+	<message key="submission.done">تم</message>
+	<message key="submission.dueDate">تأريخ الاستيجاب</message>
+	<message key="submission.due">مستحق</message>
+	<message key="submission.editing">التحرير</message>
+	<message key="submission.editMetadata">تعديل البيانات الوصفية</message>
+	<message key="submission.editorial">التدقيق</message>
+	<message key="submission.email.backToEmailLog">العودة إلى سجل وقائع البريد الالكتروني</message>
+	<message key="submission.email.confirmClearLog">هل أنت متأكد من رغبتك في تصفير سجل وقائع البريد الالكتروني لطلب التقديم هذا؟</message>
+	<message key="submission.email.confirmDeleteLogEntry">هل أنت متأكد من رغبتك في حذف هذه المعلومة من سجل وقائع البريد الالكتروني؟</message>
+	<message key="submission.email.deleteLogEntry">حذف المعلومة من سجل الوقائع</message>
+	<message key="submission.emailLog">وقائع البريد الالكتروني</message>
+	<message key="submission.event.backToEventLog">العودة إلى وقائع الأحداث</message>
+	<message key="submission.event.confirmClearLog">هل أنت متأكد من رغبتك في تصفير سجل وقائع الأحداث لطلب التقديم هذا؟</message>
+	<message key="submission.event.confirmDeleteLogEntry">هل أنت متأكد من رغبتك في حذف هذه المعلومة من سجل وقائع الأحداث؟</message>
+	<message key="submission.event.deleteLogEntry">حذف المعلومة من سجل الوقائع</message>
+	<message key="submission.event.submissionSubmitted">طلب النشر الأساسي إكتمل.</message>
+	<message key="submission.event.fileUploaded">الملف "{$name}" (رمزه {$fileId}-{$revision}) قد رُفع إلى الموقع.</message>
+	<message key="submission.event.fileRevised">التنقيح "{$name}" (رمز الملف {$fileId}-{$revision}) قد رُفع إلى الموقع.</message>
+	<message key="submission.event.general.metadataUpdated">البيانات الوصفية للمؤلَّف تم تحديثها</message>
+	<message key="submission.event.general.suppFileUpdated">ملف المؤلَّف تم تحديثه</message>
+	<message key="submission.event.participantAdded">{$name} قد عُيِّن لطلب النشر هذا بصفة {$userGroupName}.</message>
+	<message key="submission.event.reviewer.reviewAcceptedByProxy">مهمة التحكيم قُبلت من قبل الوكيل</message>
+	<message key="submission.event.reviewer.reviewAccepted">مهمة التحكيم قُبلت</message>
+	<message key="submission.event.reviewer.reviewCancelled">مهمة التحكيم أُلغيت</message>
+	<message key="submission.event.reviewer.reviewDeclined">مهمة التحكيم رُفضت</message>
+	<message key="submission.event.reviewer.reviewDueDate">تأريخ استيجاب التحكيم تم تعديله</message>
+	<message key="submission.event.reviewer.reviewerAssigned">المحكم المتكفل بالمؤلَّف</message>
+	<message key="submission.event.reviewer.reviewerRated">تم تقديم تقييم المحكم</message>
+	<message key="submission.event.reviewer.reviewerUnassigned">تم فك تكليف المحكم من طلب النشر</message>
+	<message key="submission.event.reviewer.reviewFile">ملف التحكيم تم تحديثه</message>
+	<message key="submission.event.reviewer.reviewInitiated">بوشر بالتحكيم</message>
+	<message key="submission.event.reviewer.reviewRecommendation">ملف توصيات التحكيم</message>
+	<message key="submission.event.reviewer.reviewReinitiated">بوشر بالتحكيم مجدداً</message>
+	<message key="submission.event.reviewer.reviewResubmitted">أُعيد تقديم التحكيم</message>
+	<message key="submission.event.reviewer.reviewRevision">ملف التحكيمات تم تحديثه</message>
+	<message key="submission.event.subjectPrefix">الرسالة قد أُرسلت:</message>
+	<message key="submission.event.viewEmail">معاينة الرسالة</message>
+	<message key="submission.files">الملفات</message>
+	<message key="submission.files.downloadAll">تنزيل كل الملفات</message>
+	<message key="submission.galley">ألواح الطباعة</message>
+	<message key="submission.history.clearLog">تصفير سجل الوقائع</message>
+	<message key="submission.history">الماضي</message>
+	<message key="submission.history.noLogEntries">لا مدخلات في سجل الوقائع.</message>
+	<message key="submission.history.recentLogEntries">المدخلات الأخيرة</message>
+	<message key="submission.history.submissionEmailLog">سجل وقائع البريد الالكتروني</message>
+	<message key="submission.history.submissionEventLog">سجل وقائع الأحداث</message>
+	<message key="submission.history.submissionNotes">ملاحظات طلب النشر</message>
+	<message key="submission.history.viewLog">معاينة سجل الوقائع</message>
+	<message key="submission.howToCite">كيفية الاقتباس</message>
+	<message key="submission.howToCite.citationFormats">صيغ الاقتباسات</message>
+	<message key="submission.indexing">الفهرسة</message>
+	<message key="submission.initiated">بوشر به</message>
+
+	<!-- Identifiers -->
+	<message key="submission.identifiers">المعرفات</message>
+	<message key="submission.publisherId">معرفات الرابط العام</message>
+
+	<!-- Information Center -->
+	<message key="submission.informationCenter.submissionInfo">معلومات المؤلَّف</message>
+	<message key="submission.informationCenter.metadata">البيانات الوصفية</message>
+	<message key="submission.informationCenter.notes">الملاحظات</message>
+	<message key="submission.informationCenter.history">الماضي</message>
+	<message key="submission.informationCenter.history.allEvents">أظهر أحداث النسخ السابقة</message>
+
+	<!-- Stage Participants -->
+	<message key="submission.stageParticipants.notify">إشعار</message>
+
+	<message key="submission.lastModified">آخر تعديل</message>
+	<message key="submission.layout.addGalley">أضف تصميماً طباعياً</message>
+	<message key="submission.layout.confirmDeleteGalley">هل أنت متأكد من رغبتك في حذف هذا اللوح الطباعي نهائياً؟</message>
+	<message key="submission.layout.confirmDeleteGalleyImage">هل أنت متأكد من رغبتك في إزالة هذه الصورة من اللوح الطباعي؟</message>
+	<message key="submission.layout.confirmDeleteSupplementaryFile">هل أنت متأكد من رغبتك في حذف هذا الملف التكميلي نهائياً؟</message>
+	<message key="submission.layout.deleteGalleyStylesheet">حذف ملف الأنماط هذا.</message>
+	<message key="submission.layout.editGalley">تعديل اللوح الطباعي</message>
+	<message key="submission.layout.galleyFormat">صيغة اللوح الطباعي</message>
+	<message key="submission.layout.galleyHTMLData">الملفات الطباعية بصيغة HTML</message>
+	<message key="submission.layout.galleyImages">الصور</message>
+	<message key="submission.layout.galleyLabel">التسمية</message>
+	<message key="submission.layout.galleyLabelInstructions">تسمية اللوح الطباعي مستعملة للتعرف على صيغة الملف (مثل: HTML، PDF... إلخ.).</message>
+	<message key="submission.layout.galleyLabelRequired">تسمية اللوح الطباعي مطلوبة حتماً.</message>
+	<message key="submission.layout.galleyLanguageRequired">لغة محتوى اللوح الطباعي مطلوبة حتماً.</message>
+	<message key="submission.layout.galleyLocaleRequired">لغة مسمى اللوح الطباعي مطلوبة حتماً.</message>
+	<message key="submission.layout.galleyRemoteURL">رابط الإنترنت الخارجي</message>
+	<message key="submission.layout.galleyRemoteURLValid">لطفاً، أذكر رابط الإنترنت الخارجي الصحيح (متضمناً http://).</message>
+	<message key="submission.layout.galleyNoImages">لا صور</message>
+	<message key="submission.layout.galleys">الألواح الطباعية</message>
+	<message key="submission.layout.galleyStylesheet">ملف الأنماط</message>
+	<message key="submission.layout.galleyStyle">النمط</message>
+	<message key="submission.layout.initialGalleyCreation">إنشاء اللوح الطباعي الأساسي</message>
+	<message key="submission.layout.layoutFile">ملف التصميم</message>
+	<message key="submission.layout">التصميم</message>
+	<message key="submission.layout.layoutVersion">نسخة التصميم</message>
+	<message key="submission.layout.newGalley">إنشاء لوح طباعي جديد</message>
+	<message key="submission.layout.newSupplementaryFile">رفع ملف تكميلي جديد</message>
+	<message key="submission.layout.noStyleFile">لم تتم إضافة ملف أنماط إلى هذا اللوح الطباعي.</message>
+	<message key="submission.layout.supplementaryFiles">تحكيم الملف التكميلي</message>
+	<message key="submission.layout.viewingGalley">معاينة اللوح الطباعي للمؤلَّف</message>
+	<message key="submission.layout.viewProof">معاينة تجريبية</message>
+	<message key="submission.metadata">البيانات الوصفية لطلب النشر</message>
+	<message key="submission.noReviewAssignments">لا مهام تحكيمية</message>
+	<message key="submission.notes.addNewNote">أضف ملاحظة جديدة</message>
+	<message key="submission.notes.attachedFile">الملف المرفق</message>
+	<message key="submission.notes.backToSubmissionNotes">العودة إلى ملاحظات طلب النشر</message>
+	<message key="submission.notes.breadcrumb">الملاحظات</message>
+	<message key="submission.notes.clearAllNotes">إزالة كل الملاحظات</message>
+	<message key="submission.notes.collapseNotes">طي الملاحظات</message>
+	<message key="submission.notes.confirmDeleteAll">أتريد إزالة كل الملاحظات؟</message>
+	<message key="submission.notes.confirmDelete">أتريد إزالة هذه الملاحظة؟</message>
+	<message key="submission.notes.createNewNote">إنشاء ملاحظة جديدة</message>
+	<message key="submission.notes.deleteNote">حذف الملاحظة</message>
+	<message key="submission.notes.editNote">تعديل الملاحظة</message>
+	<message key="submission.notes.expandNotes">توسيع الملاحظات</message>
+	<message key="submission.notes.noSubmissionNotes">لا ملاحظات على طلب النشر</message>
+	<message key="submission.notes.removeUploadedFile">إزالة الملف المرفوع إلى الموقع</message>
+	<message key="submission.notes">ملاحظات طلب النشر</message>
+	<message key="submission.notes.updateNote">تحديث الملاحظة</message>
+	<message key="submission.notes.viewNotes">معاينة الملاحظات</message>
+	<message key="submission.originalFile">الملف الأصلي</message>
+	<message key="submission.page.editing">تحرير #{$id}</message>
+	<message key="submission.page.history">تأريخ #{$id}</message>
+	<message key="submission.page.review">تحكيم #{$id}</message>
+	<message key="submission.page.summary">موجز #{$id}</message>
+	<message key="submission.page.citations">اقتباسات #{$id}</message>
+	<message key="submission.peerReview">التحكيم المناظر</message>
+	<message key="submission.production">الإنتاج</message>
+	<message key="submission.recommendation">التوصية: {$recommendation}</message>
+	<message key="submission.rejected">مرفوض</message>
+	<message key="submission.request">إلتماس</message>
+	<message key="submission.response">الرد</message>
+	<message key="submission.restrictions">القيود</message>
+	<message key="submission.reviewMetadata">البيانات الوصفية للتحكيم</message>
+	<message key="submission.review">التحكيم</message>
+	<message key="submission.reviewed">محكم</message>
+	<message key="submission.reviewVersion">نسخة التحكيم</message>
+	<message key="submission.rights">الحقوق</message>
+	<message key="submission.rights.tip">إذا رغبت، بإمكانك إدخال عبارة موجزة عن حقوق الوصول التي تتعلق بطلب النشر هذا.</message>
+	<message key="submissions.active">نشط</message>
+	<message key="submissions.archived">محفوظ</message>
+	<message key="submission.saveMetadata">حفظ البيانات الوصفية</message>
+	<message key="submissions.completed">إكتمل</message>
+	<message key="submissions.declined">رفض</message>
+	<message key="submissions.incomplete">غير مكتمل</message>
+	<message key="submissions.noSubmissions">لا طلبات نشر</message>
+	<message key="submissions.queuedEditing">قيد التحرير</message>
+	<message key="submissions.queued">ضمن الطابور</message>
+	<message key="submissions.queuedUnassigned">مهمة منتظرة</message>
+	<message key="submissions.ruling">التحكيم</message>
+	<message key="submission.source">المصدر</message>
+	<message key="submission.source.tip">هل إن هذا المؤلَّف مستقى من مصدر آخر؟ إن كان كذلك، بإمكانك إدخال رابط أو وصف لذلك المصدر.</message>
+	<message key="submissions.submit">التقديم</message>
+	<message key="submissions.submitted">مقدم</message>
+	<message key="submission.submission">تقديم طلب النشر</message>
+	<message key="submission.submissionTitle">عنوان المؤلَّف:</message>
+	<message key="submission.start">إبدأ</message>
+	<message key="submission.submissionHistory">تأريخ طلب النشر</message>
+	<message key="submission.submissionManuscript">مخطوطة طلب النشر</message>
+	<message key="submission.submissionReview">تحكيم طلب النشر</message>
+	<message key="submission.submitter">مقدم طلب النشر</message>
+	<message key="submission.submit.finishSubmission">إنهاء طلب النشر</message>
+	<message key="submission.submit.selectFile">إختر ملفاً</message>
+	<message key="submission.submit.fileInformation">معلومات الملف</message>
+	<message key="submission.submit.fileAdded">الملف أُضيف</message>
+	<message key="submission.submit.includeInBrowse">هل تريد تضمين هذا المساهم في قوائم العرض؟</message>
+	<message key="submission.submit.newFile">أضف ملفاً آخر</message>
+	<message key="submission.submit.metadataForm">تحسينات إضافية</message>
+	<message key="submission.submit.metadataForm.tip">أضف معلومات أخرى عن مؤلَّفِك. إضغط 'enter' بعد كل عبارة.</message>
+	<message key="submission.submit.submissionLocale">لغة المؤلَّف</message>
+	<message key="submission.submit.submissionLocaleDescription">نقبل نشر المؤلفات بعدة لغات. لطفاً إختر اللغة الأساسية لمؤلَّفِك من القائمة المنسدلة.</message>
+	<message key="submission.submit.submissionFiles">ملفات المؤلَّف</message>
+	<message key="submission.submit.dependentFiles">الملفات الملحقة</message>
+	<message key="submission.manageDependentFiles">إدارة الملفات الملحقة</message>
+	<message key="submission.upload.dependent">إرفع ملفاً ملحقاً</message>
+	<message key="submission.upload.query">إرفع ملف مناقشة</message>
+	<message key="submission.summary">الموجز</message>
+	<message key="submission.supplementaryFiles">الملفات التكميلية</message>
+	<message key="submission.supportingAgencies">الوكالات الداعمة</message>
+	<message key="submission.currentAgencies">الوكالات الحالية</message>
+	<message key="submission.indexingInformation">معلومات الفهرسة</message>
+	<message key="submission.titleAndAbstract">العنوان والملخص</message>
+	<message key="submission.type.tip"><![CDATA[نوع التقديم عادة ما يكون واحداً من: صورة، نص، أو غيرهما من متعددات الوسائط التي بضمنها: البرامجات أو الملفات التفاعلية. لطفاً، إختر ما تجده أنسبها لطلبك. أمثلة ذلك قد تجدها في <a target="_blank" href="http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type">http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</a>]]></message>
+	<message key="submission.underway">جارية</message>
+	<message key="submission.uploadFileTo">رفع الملف إلى</message>
+	<message key="submission.createRemote">إنشاء رابط خارجي</message>
+	<message key="submission.viewMetadata">معاينة البيانات الوصفية</message>
+	<message key="submission.views">معاينات</message>
+	<message key="submission.uploadSuccessful">لقد تم رفع ملفك.</message>
+	<message key="submission.loadMessage">لطفاً، إنتظر ريثما يتم رفع ملفك إلى الملقم.</message>
+	<message key="submission.artworkFileDetails">تفاصيل ملف العمل الفني</message>
+	<message key="submission.fileDetails">تفاصيل الملف</message>
+	<message key="submission.nameRequired">الاسم مطلوب لهذه الفقرة.</message>
+	<message key="submission.date.mmdd">MM-DD</message>
+	<message key="submission.date.yyyymmdd">YYYY-MM-DD</message>
+	<message key="submission.submit.selectPrincipalContact">عنوان الاتصال الرئيسي لأغراض تتعلق بالتحرير.</message>
+	<message key="submission.submit.contributorRole">دور المساهم</message>
+	<message key="submission.submit.addAuthor">أضف مساهماً</message>
+
+	<!-- Submission file upload form elements -->
+	<message key="submission.form.name">أعط هذا الملف اسماً يساعد على التعرف عليه</message>
+	<message key="submission.form.replaceExisting">أتريد استبدال الملف الموجود؟</message>
+	
+	<!-- Workflow keys -->
+	<message key="workflow.review.internalReview">التحكيم الداخلي</message>
+	<message key="workflow.stage.any">أية مرحلة</message>
+	<message key="workflow.stage">المرحلة</message>
+
+
+	<!-- Submission status -->
+	<message key="submission.status.editorial">قيد التدقيق</message>
+	<message key="submission.status.production">قيد القراءة التصحيحية</message>
+	<message key="submission.status.review">قيد التحكيم</message>
+	<message key="submission.status.submission">بانتظار قرار المحرر</message>
+	<message key="submission.status.unassigned">غير معيَّن</message>
+	<message key="submission.status.declined">مرفوض</message>
+	<message key="submission.status.published">منشور</message>
+
+	<message key="submission.submit.uploadStep">1. رفع الملف</message>
+	<message key="submission.submit.uploadSubmissionFile">رفع ملف المؤلَّف</message>
+	<message key="submission.submit.metadataStep">2. مراجعة التفاصيل</message>
+	<message key="submission.submit.finishingUpStep">3. التأكيد</message>
+	<message key="submission.submit.fileNameRequired">عليك أن تمنح هذا الملف اسماً</message>
+
+	<!-- File upload wizard -->
+	<message key="submission.upload.noGenre">مكون مفقود أو غير صحيح!</message>
+	<message key="submission.upload.invalidUserGroup">مجموعة المستخدم مفقودة أو غير صحيحة!</message>
+	<message key="submission.upload.possibleRevision">هناك احتمالية تكرار قد تحدث</message>
+	<message key="submission.upload.possibleRevisionDescription"><![CDATA[إن اسم الملف المرفوع يماثل اسم ملف مرفوع سابقاً، "{$revisedFileName}." هل إن الغرض من هذا الملف استبدال "{$revisedFileName}"؟ إن كان الأمر كذلك، إختر الملف أدناه. بخلاف ذلك، إختر "هذه ليست نسخة أخرى من ملف موجود سابقاً" قبل المتابعة.]]></message>
+	<message key="submission.upload.selectMandatoryFileToRevise">لطفاً، إختر الملف الذي تريد تنقيحه.</message>
+	<message key="submission.upload.selectOptionalFileToRevise">إذا كنت ترفع نسخة أخرى من ملف موجود سابقاً، لطفاً، حدد أي ملف تعني.</message>
+	<message key="submission.upload.uploadNewFile">هذه ليست نسخة أخرى من ملف موجود سابقاً</message>
+	<message key="submission.upload.userGroup">إرفع هذا الملف كأنني أمتلك دور...</message>
+	<message key="submission.upload.userGroupDescription">إذا كنت تقدم مجلداً محرراً، عليك أن ترفع فصول المجلد كل على حدة ضمن دورك كمحرر مجلد.</message>
+	<message key="submission.upload.uploadLibraryFile">رفع ملف مكتبة</message>
+	<message key="submission.upload.libraryCategory">تصنيف وثيقة مؤلَّف</message>
+
+	<!-- File uploads -->
+	<message key="submission.upload.finalDraft">رفع الملف</message>
+	<message key="submission.upload.copyeditedVersion">إرفع ملفاً مدققاً</message>
+	<message key="submission.upload.fairCopy">رفع نسخة مصفاة</message>
+	<message key="submission.upload.uploadFiles">رفع الملفات</message>
+	<message key="submission.upload.response.description">بعد تنقيح هذه الملف، سجل أي ملاحظات عنه أدناه، و/أو إرفع نسخة مؤشرة من الملف (أو ملفاً آخر).</message>
+	<message key="submission.upload.productionReady">رفع ملف جاهز للإنتاج</message>
+	<message key="submission.upload.proof">إرفع ملفاً جاهزاً للنشر</message>
+	<message key="submission.upload.noAvailableReviewFiles">ليس لديك ملفات لتحكيمها حالياً.</message>
+
+	<!-- Review Round Status Keys -->
+	<message key="editor.submission.roundStatus.revisionsRequested">تم التماس التحكيمات.</message>
+	<message key="editor.submission.roundStatus.resubmitted">المؤلَّف قد أعيد تقديمه للتحكيم.</message>
+	<message key="editor.submission.roundStatus.sentToExternal">أُرسل للتحكيم الخارجي.</message>
+	<message key="editor.submission.roundStatus.accepted">المؤلَّف مقبول.</message>
+	<message key="editor.submission.roundStatus.declined">المؤلَّف مرفوض.</message>
+	<message key="editor.submission.roundStatus.pendingReviewers">بانتظار إختيار المحكمين.</message>
+	<message key="editor.submission.roundStatus.pendingReviews">بانتظار إجابات المحكمين.</message>
+	<message key="editor.submission.roundStatus.reviewsReady">تحكيمات جديدة قد تم تقديمها.</message>
+	<message key="editor.submission.roundStatus.reviewsCompleted">التحكيمات إكتملت.</message>
+
+	<!-- Participants -->
+	<message key="editor.submission.stageParticipants">المشاركون</message>
+
+	<!-- Stage Participants grid -->
+	<message key="editor.submission.noneAssigned">لا أحد معيَّن</message>
+	<message key="editor.submission.participant">المشارك</message>
+	<message key="editor.submission.addStageParticipant">أضف مشاركاً</message>
+	<message key="editor.submission.addStageParticipant.userGroup">يتم تعيين المستخدمين لمراحل المخطط الانسيابي حسب مجموعاتهم. أي مستخدم معين لهذه المرحلة سيتم تعيينه تلقائياً لمراحل أخرى بناءً على ما تم تعيينه لمجموعته. هذا الأمر عادة ما يكون محفوظاً للمحررين، المؤلفين والمترجمين.</message>
+	<message key="editor.submission.removeStageParticipant">إزالة المشارك</message>
+	<message key="editor.submission.removeStageParticipant.description"><![CDATA[أنت على وشك إزالة هذا المشارك من <strong>كل</strong> المراحل. إن كان لهذا المستخدم أيضاً مهام متابعة معلقة، ستتم إزالتها أيضاً.]]></message>
+	<message key="editor.submission.addStageParticipant.form.userGroupRequired">عليك أن تختار مجموعة مستخدمين.</message>
+	<message key="editor.submission.addStageParticipant.form.userRequired">عليك أن تختار مستخدماً لهذه المجموعة.</message>
+
+	<!--  editor decisions -->
+	<message key="editor.submission.decision">القرار</message>
+	<message key="editor.submission.decision.accept">الإرسال إلى التدقيق</message>
+	<message key="editor.submission.decision.requestRevisions">إلتماس التحكيمات</message>
+	<message key="editor.submission.decision.resubmit">إعادة التقديم للتحكيم</message>
+	<message key="editor.submission.decision.decline">رفض المؤلَّف</message>
+	<message key="editor.submission.decision.sendToProduction">الإرسال إلى الإنتاج</message>
+	<message key="editor.submission.decision.sendInternalReview">الإرسال إلى التحكيم الداخلي</message>
+	<message key="editor.submission.decision.approveProofsDescription">ينبغي تأشير الملف على أنه مصادق عليه ليكون متاحاً. هل تريد المصادقة عليه الآن؟</message>
+	<message key="editor.submission.decision.approveProofs">المصادقة على التصحيحات</message>
+	<message key="editor.submission.decision.disapproveProofsDescription">إن هذا الملف لن يكون متاحاً للعامة لأغراض التنزيل أو الشراء. هل تريد رفع المصادقة منه؟</message>
+
+	<!-- workflow navigation keys -->
+	<message key="submission.currentStage">المرحلة الحالية</message>
+	<message key="submission.noActionRequired">لا يتطلب أي إجراء</message>
+	<message key="submission.actionNeeded">يتطلب إجراءً ما</message>
+
+	<message key="reviewer.submission.reviewFiles">ملفات التحكيم</message>
+	<message key="submission.submit.currentFile">الملف الحالي</message>
+	<message key="submission.finalDraft">ملفات المسودات</message>
+
+	<!-- Auditor keys -->
+	<message key="editor.submission.addAuditorError">حدث خطأ ما عند محاولة تعيين المتابع. لطفاً، حاول مجدداً.</message>
+
+	<!-- Submission event log -->
+	<message key="submission.event.fileUploaded">تم رفع الملف "{$originalFileName}" إلى طلب النشر {$submissionId} من قبل {$username}.</message>
+	<message key="submission.event.fileDeleted">تم حذف الملف "{$originalFileName}" من طلب النشر {$submissionId} من قبل {$username}.</message>
+	<message key="submission.event.revisionUploaded">تم رفع ملف التحكيم "{$originalFileName}" إلى طلب النشر {$submissionId} من قبل {$username}.</message>
+	<message key="submission.event.revisionDeleted">تم حذف ملف التحكيم "{$originalFileName}" من طلب النشر {$submissionId} من قبل {$username}.</message>
+	<message key="submission.event.lastRevisionDeleted">تم حذف آخر ملف تحكيم للعنوان "{$title}" من قبل {$username}.</message>
+	<message key="submission.event.fileAuditorAdded">"{$name}" ({$username}) قد تمت إضافته كمتابع للملف "{$file}."</message>
+	<message key="submission.event.fileAuditorCleared">"{$name}" ({$username}) قد تمت إزالته كمتابع للملف "{$file}."</message>
+	<message key="submission.event.fileAuditUploaded">"{$name}" ({$username}) قد أكمل المتابعة ورفع الملف "{$file}."</message>
+	<message key="submission.event.signoffSignoff">"{$name}" ({$username}) قد سجل خروجه من الملف "{$file}."</message>
+	<message key="submission.event.proofsApproved">"{$name}" ({$username}) قد صادق على الصحيحات للمؤلَّف "{$formatName}."</message>
+	<message key="submission.overview">المؤلَّف بنظرة عامة</message>
+	<message key="submission.description">الوصف</message>
+	<message key="submission.stageNotInitiated">المرحلة لم يباشر بها بعد.</message>
+	<message key="submission.documents">وثائق المؤلَّف</message>
+	<message key="notification.type.copyeditorRequest">لقد تمت مطالبتك بتنقيح التدقيقات للمؤلَّف "{$title}".</message>
+	<message key="notification.type.layouteditorRequest">لقد تمت مطالبتك بتنقيح التصميم الطباعي للمؤلَّف "{$title}".</message>
+	<message key="notification.type.indexRequest">لقد تمت مطالبتك بإنشاء فهرس للمؤلَّف "{$title}".</message>
+	<message key="notification.type.editorDecisionTitle">قرار المحرر النهائي.</message>
+	<message key="notification.type.editorDecisionAccept">المؤلَّف مقبول.</message>
+	<message key="notification.type.editorDecisionExternalReview">بدأت عملية التحكيم الخارجي.</message>
+	<message key="notification.type.editorDecisionPendingRevisions">التحكيم مطلوب.</message>
+	<message key="notification.type.editorDecisionResubmit">أعد التقديم للتحكيم.</message>
+	<message key="notification.type.editorDecisionDecline">طلب النشر مرفوض.</message>
+	<message key="notification.type.editorDecisionSendToProduction">بدأت عملية الإنتاج.</message>
+	<message key="notification.uploadedResponse">تم رفع الإجابة.</message>
+
+	<message key="notification.type.editorAssignment">لا بد من تعيين المحرر قبل الشروع بالتحكيم. لطفاً، أضف محرراً مستعملاً رابط المشاركين أعلاه.</message>
+	<message key="grid.reviewAttachments.title">مرفقات المحكم</message>
+	<message key="submission.productionReady">الكتاب متوافر</message>
+	<message key="submission.review.uploadRevisionToRound">إرفع ملفاً محكماً</message>
+	<message key="log.review.reviewerAssigned">{$reviewerName} قد تم تعيينه لتحكيم المؤلَّف {$submissionId} لجولة التحكيم {$round}.</message>
+	<message key="submission.document">المستند</message>
+	<message key="submission.art">العمل الفني</message>
+	<message key="submission.supplementary">المحتوى التكميلي</message>
+	<message key="submission.supplementary.creator">منشئ (أو مالك) الملف</message>
+	<message key="submission.supplementary.subject">الموضوع</message>
+	<message key="submission.supplementary.publisher">الناشر</message>
+	<message key="submission.supplementary.sponsor">الوكالة المساهمة أو الراعية</message>
+	<message key="grid.action.itemWorkflow">إذهب إلى المخطط الانسيابي لهذا المؤلَّف</message>
+	<message key="notification.type.editorDecisionSendToProduction">بدأت عملية الإنتاج.</message>
+	<message key="notification.type.editorAssignmentProduction">لا بد من تعيين محرر الإنتاج قبل الشروع بعملية الإنتاج. لطفاً، أضف محرراً مستعملاً رابط المشاركين أعلاه.</message>
+	<message key="notification.type.editorAssignmentEditing">لا بد من تعيين محرر الإنتاج قبل الشروع بعملية التحرير. لطفاً، أضف محرراً مستعملاً رابط المشاركين أعلاه.</message>
+
+	<!--  peer review -->
+	<message key="submission.reviewForm">نموذج التحكيم</message>
+	<message key="submission.reviewFormResponse">إجابة نموذج التحكيم</message>
+	<message key="grid.action.createReviewFormElement">إنشاء مكون جديد لنموذج التحكيم</message>
+	<message key="grid.action.editMetadata">تعديل البيانات الوصفية</message>
+
+	<!-- Permissions -->
+	<message key="submission.permissions">الصلاحيات</message>
+	<message key="submission.attachPermissions">إرفق الصلاحيات الآتية بالمؤلَّف:</message>
+	<message key="submission.license">الرخصة</message>
+	<message key="submission.copyright">الحقوق الفكرية</message>
+	<message key="submission.copyrightHolder">مالك الحقوق الفكرية</message>
+	<message key="submission.copyrightYear">سنة الحقوق الفكرية</message>
+	<message key="submission.copyrightStatement">الحقوق الفكرية (c) {$copyrightYear} {$copyrightHolder}</message>
+	<message key="submission.licenseURLValid">لطفاً، أدرج رابط خارجي صحيح (متضمناً http://).</message>
+	<message key="submission.licenseURL">رابط الرخصة</message>
+	<message key="submission.license.cc.by-nc-nd4">CC Attribution-NonCommercial-NoDerivatives 4.0</message>
+	<message key="submission.license.cc.by-nc4">CC Attribution-NonCommercial 4.0</message>
+	<message key="submission.license.cc.by-nc-sa4">CC Attribution-NonCommercial-ShareAlike 4.0</message>
+	<message key="submission.license.cc.by-nd4">CC Attribution-NoDerivatives 4.0</message>
+	<message key="submission.license.cc.by4">CC Attribution 4.0</message>
+	<message key="submission.license.cc.by-sa4">CC Attribution-ShareAlike 4.0</message>
+	<message key="submission.license.cc.by-nc-nd4.footer"><![CDATA[<a rel="الرخصة" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" src="//i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><p>هذا العمل مرخص حسب الرخصة <a rel="الرخصة" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.</p>]]></message>
+	<message key="submission.license.cc.by-nc4.footer"><![CDATA[<a rel="الرخصة" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" src="//i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><p>هذا العمل مرخص حسب الرخصة <a rel="الرخصة" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.</p>]]></message>
+	<message key="submission.license.cc.by-nc-sa4.footer"><![CDATA[<a rel="الرخصة" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" src="//i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><p>هذا العمل مرخص حسب الرخصة <a rel="الرخصة" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>]]></message>
+	<message key="submission.license.cc.by-nd4.footer"><![CDATA[<a rel="الرخصة" href="http://creativecommons.org/licenses/by-nd/4.0/"><img alt="Creative Commons License" src="//i.creativecommons.org/l/by-nd/4.0/88x31.png" /></a><p>هذا العمل مرخص حسب الرخصة <a rel="الرخصة" href="http://creativecommons.org/licenses/by-nd/4.0/">Creative Commons Attribution-NoDerivatives 4.0 International License</a>.</p>]]></message>
+	<message key="submission.license.cc.by4.footer"><![CDATA[<a rel="الرخصة" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" src="//i.creativecommons.org/l/by/4.0/88x31.png" /></a><p>هذا العمل مرخص حسب الرخصة <a rel="الرخصة" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>]]></message>
+	<message key="submission.license.cc.by-sa4.footer"><![CDATA[<a rel="الرخصة" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" src="//i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><p>هذا العمل مرخص حسب الرخصة <a rel="الرخصة" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>]]></message>
+
+	<!-- Submission Queries -->
+	<message key="submission.queries.submission">مناقشات ما قبل التحكيم</message>
+	<message key="submission.queries.review">مناقشات التحكيم</message>
+	<message key="submission.queries.editorial">مناقشات التدقيق</message>
+	<message key="submission.queries.production">مناقشات الإنتاج</message>
+	<message key="submission.query.subject">الموضوع</message>
+	<message key="submission.query.messages">المراسلات</message>
+	<message key="submission.query.replies">الإجابات</message>
+	<message key="submission.query.from">من</message>
+	<message key="submission.query.lastReply">آخر إجابة</message>
+	<message key="submission.query.closed">مغلق</message>
+	<message key="submission.query.addNote">أضف رسالة</message>
+	<message key="grid.action.openNoteForm">أضف رداً جديداً إلى المناقشة</message>
+	<message key="submission.query.activity">{$responderName} أجاب عن {$noteTitle}: {$noteContents}</message>
+	<message key="submission.query.new">{$creatorName} بدأ المناقشة: {$noteTitle}: {$noteContents}</message>
+	<message key="submission.query.activity.contents">هناك نشاط جديد في المناقشة المعنونة "{$queryTitle}" المتعلقة بالمؤلَّف الموسوم "{$submissionTitle}".</message>
+	<message key="submission.query.new.contents">لقد تمت إضافتك إلى المناقشة المعنونة "{$queryTitle}" المتعلقة بالمؤلَّف الموسوم "{$submissionTitle}".</message>
+</locale>

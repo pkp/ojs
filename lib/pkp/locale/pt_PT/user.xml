@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/pt_PT/user.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the pt_PT (Português (Portugal)) locale.
+  *
+  -->
+
+<locale name="pt_PT" full_name="Português (Portugal)">
+	<message key="user.affiliation">Afiliação</message>
+	<message key="user.affiliations">Outras Afiliações</message>
+	<message key="user.biography">Resumo da Biografia Pessoal</message>
+	<message key="user.biography.description">(Ex.: departamento e área)</message>
+	<message key="user.changeMyPassword">Alterar a minha Senha</message>
+	<message key="user.changePassword">Alterar Senha</message>
+	<message key="user.dateLastLogin">Último Acesso</message>
+	<message key="user.dateRegistered">Data do Registo</message>
+	<message key="user.editMyProfile">Editar Perfil</message>
+	<message key="user.email">E-mail</message>
+	<message key="user.feminine">F</message>
+	<message key="user.firstName">Nome</message>
+	<message key="user.gender">Género</message>
+	<message key="user.initialsExample">João Silva Pereira = JSP</message>
+	<message key="user.initials">Iniciais</message>
+	<message key="user.interests">Área de Interesse para Revisão</message>
+	<message key="user.lastName">Apelido</message>
+	<message key="user.login.accountDisabledWithReason">A sua conta foi desactivada pelo seguinte motivo: {$reason}</message>
+	<message key="user.login.accountDisabled">A sua conta foi desactivada. Entre em contacto com o administrador para obter mais informações.</message>
+	<message key="user.login.accountNotValidated">É necessário validar o seu endereço de e-mail. Verifique a sua caixa de correio electrónico e siga as instruções fornecidas na mensagem recebida. Caso não tenha recebido a mensagem, entre em contacto com o administrador para suporte.</message>
+	<message key="user.login.activate">Activar Registo</message>
+	<message key="user.login.activated">O seu registo foi activado, permitindo o acesso ao sistema com os dados de acesso fornecidos.</message>
+	<message key="user.login.changePasswordInstructions"><![CDATA[Uma nova senha deve ser definida antes de registar-se no sistema.<br /><br />Insira o nome de utilizador e senhas actual e nova para alterar a senha de acesso à conta.]]></message>
+	<message key="user.login.forgotPassword">Esqueceu a sua senha?</message>
+	<message key="user.login.loginError">Nome de utilizador e/ou senha inválido(s). Tente novamente.</message>
+	<message key="user.login">Autenticação</message>
+	<message key="user.login.lostPassword.confirmationSent">Foi enviado um e-mail de confirmação. Siga as instruções para criar uma nova senha.</message>
+	<message key="user.login.lostPassword.invalidHash">O link acedido expirou ou é inválido. Lamentamos o inconveniente. Tente criar uma senha novamente.</message>
+	<message key="user.login.lostPassword.invalidUser">Nenhum utilizador registado com o e-mail especificado.</message>
+	<message key="user.login.lostPassword.passwordSent">Foi enviada uma nova senha. Aceda ao sistema com a nova senha.</message>
+	<message key="user.login.registeredEmail">E-mail de utilizador registado</message>
+	<message key="user.login.resetPassword">Nova Senha</message>
+	<message key="user.logOut">Sair do Sistema</message>
+	<message key="user.mailingAddress">Endereço Postal</message>
+	<message key="user.masculine">M</message>
+	<message key="user.middleName">Nome do Meio</message>
+	<message key="user.myAccount">Minha Conta</message>
+	<message key="user.name">Nome</message>
+	<message key="user.password">Senha</message>
+	<message key="user.repeatPassword">Repetir senha</message>
+	<message key="user.phone">Telefone</message>
+	<message key="user.profile.changePasswordInstructions">Insira as senhas actual e nova para alterar a senha de acesso à conta.</message>
+	<message key="user.profile.editProfile">Editar Perfil</message>
+	<message key="user.profile.form.emailRequired">Endereço de e-mail válido obrigatório.</message>
+	<message key="user.profile.form.firstNameRequired">Nome obrigatório.</message>
+	<message key="user.profile.form.lastNameRequired">Apelido obrigatório.</message>
+	<message key="user.profile.form.newPasswordRequired">Nova Senha obrigatória.</message>
+	<message key="user.profile.form.oldPasswordInvalid">Senha Actual incorrecta.</message>
+	<message key="user.profile.form.openAccessNotifications">Notificações via e-mail de Edição de Acesso Livre</message>
+	<message key="user.profile.form.passwordRequired">Senha obrigatória.</message>
+	<message key="user.profile.form.profileImage">Fotografia</message>
+	<message key="user.profile.form.publishedNotifications">Notificações via e-mail de Nova Edição publicada</message>
+	<message key="user.profile.form.urlInvalid">URL inválida. Verifique a informação e tente novamente (Ajuda: Inclua o protocolo http:// no início da URL.)</message>
+	<message key="user.profile.form.usernameRequired">Autenticação obrigatória.</message>
+	<message key="user.profile.leavePasswordBlank">Deixe os campos de senha em branco para manter a senha actual.</message>
+	<message key="user.profile.newPassword">Nova Senha</message>
+	<message key="user.profile.oldPassword">Senha Actual</message>
+	<message key="user.profile">Perfil</message>
+	<message key="user.profile.publicProfile">Perfil do utilizador</message>
+	<message key="user.profile.repeatNewPassword">Repetir Nova Senha</message>
+	<message key="user.register.completeForm">Preencha o formulário para se registar no sistema.</message>
+	<message key="user.register.form.emailExists">O endereço de e-mail inserido já se encontra registado.</message>
+	<message key="user.register.form.passwordsDoNotMatch">As senhas inseridas não são iguais.</message>
+	<message key="user.register.form.usernameExists">O nome de utilizador inserido já se encontra registado.</message>
+	<message key="user.register.passwordLengthRestriction">A senha deve ter no mínimo {$length} caracteres.</message>
+	<message key="user.register.registerAs">Registar-se como</message>
+	<message key="user.register">Registar</message>
+	<message key="user.register.usernameRestriction">O nome de utilizador deve conter apenas letras minúsculas (a-z), números(0-9), sublinhados(_) e hífens(-).</message>
+	<message key="user.role.reader">Leitor</message>
+	<message key="user.role.readers">Leitores</message>
+	<message key="user.role.reviewer">Revisor</message>
+	<message key="user.role.reviewers">Revisores</message>
+	<message key="user.role.siteAdmin">Administrador do Portal</message>
+	<message key="user.role.siteAdmins">Administradores do Portal</message>
+	<message key="user.roles">Funções</message>
+	<message key="user.salutation">Forma de tratamento</message>
+	<message key="user.sendPassword">Confirmação</message>
+	<message key="user.sendPassword.description">Enviar e-mail de confirmação incluindo nome de utilizador e senha</message>
+	<message key="user.signature">Assinatura</message>
+	<message key="user.title">Título académico</message>
+	<message key="user.url">URL</message>
+	<message key="user.userHome">Página do Utilizador</message>
+	<message key="user.username">Nome de utilizador</message>
+	<message key="user.workingLanguages">Idiomas Conhecidos</message>
+	<message key="user.profile.form.profileImageInvalid">Formato ou tamanho de imagem inválido para o perfil. Formatos aceites são .gif, .jpg, ou .png, e a imagem não pode exceder 150x150 pixels.</message>
+	<message key="user.other">Outro</message>
+	<message key="user.affiliation.description">(A sua instituição, e.g. "Instituto Superior de Psicologia Aplicada - Instituto Universitário")</message>
+	<message key="user.gossip">Notas Privadas</message>
+	<message key="user.profile.form.affiliationRequired">É requerido uma afiliação.</message>
+	<message key="user.repeatPassword">Repetir Senha</message>
+	<message key="user.register.form.emailsDoNotMatch">Os campos e-mail não coincidem.</message>
+</locale>

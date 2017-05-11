@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/da_DK/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="da_DK" full_name="Dansk">
+	<message key="reviewer.reviewSteps.request">1. Anmodning</message>
+	<message key="reviewer.reviewSteps.guidelines">2. Retningslinjer</message>
+	<message key="reviewer.reviewSteps.download"><![CDATA[3. Download & bedømmelse]]></message>
+	<message key="reviewer.reviewSteps.completion">4. Afslutning</message>
+	<message key="reviewer.step1.request">Anmodning om bedømmelse</message>
+	<message key="reviewer.step1.requestBoilerplate">Du er blevet valgt som mulig bedømmer på følgende indsendelse. Nedenfor finder du en oversigt over indsendelsen såvel som tidsplanen for denne bedømmelse. Vi håber, du har mulighed for at medvirke.</message>
+	<message key="reviewer.step1.viewAllDetails">Se alle indsendelsesdetaljer</message>
+	<message key="reviewer.aboutDueDates">Om forfaldsdatoer</message>
+	<message key="reviewer.submission.acceptReview">Acceptér anmodningen, forstsæt til trin #2</message>
+	<message key="reviewer.submission.declineReview">Afvis anmodningen</message>
+	<message key="reviewer.aboutDueDates.text">Redaktøren beder dig om enten at acceptere eller afvise anmodningen inden datoen over 'Svar senest' og færdiggøre bedømmelsen inden datoen over 'Bedømmelsen er forfalden'.</message>
+	<message key="reviewer.submission.reviewerGuidelines">Retningslinjer for bedømmelser</message>
+	<message key="reviewer.submission.noGuidelines">Denne udgiver har ikke beskrevet retningslinjer for bedømmelser</message>
+	<message key="reviewer.submission.continueToStepThree">Fortsæt til trin #3</message>
+	<message key="reviewer.submission.reviewDescription">Skriv (eller indsæt) din bedømmelse i feltet nedenfor.</message>
+	<message key="reviewer.submission.uploadDescription">Overfør filer til redaktøren og/eller forfatteren som de kan konsultere, inklusiv reviderede udgaver af den originale bedømmelse.</message>
+	<message key="reviewer.submission.reviewerFiles">Bedømmelsesfiler</message>
+	<message key="reviewer.submission.submitReview">Send bedømmelse</message>
+	<message key="reviewer.confirmSubmit">Er du sikker på, at du vil sende denne bedømmelse?</message>
+	<message key="reviewer.complete">Bedømmelse afsendt</message>
+	<message key="reviewer.complete.whatNext">Tak, fordi du har fuldført bedømmelsen af denne indsendelse. Din bedømmelse er modtaget. Vi påskønner dit bidrag til kvaliteten af de artikler, vi publicerer. Redaktøren vil eventuelt kontakte dig, hvis yderligere information ønskes.</message>
+	<message key="reviewer.submission.declineReviewMessage">Du er velkommen til at give redaktøren en forklaring på hvorfor du afviser denne indsendelse i feltet nedenfor.</message>
+	<message key="reviewer.submission.enterCompetingInterests">Denne udgiver har en poltik om at offentligøre potentielt konkurrerende interesser fra bedømmere. Gennemlæs venligst denne politik.</message>
+	<message key="reviewer.submission.noCompetingInterests">Jeg har ingen konkurrencemæssige interesser</message>
+	<message key="reviewer.submission.hasCompetingInterests">Jeg har muligvis konkurrencemæssige interesser (Uddyb nedenfor)</message>
+	<message key="reviewer.submission.competingInterests">Konkurrencemæssige interesser</message>
+	<message key="reviewer.submission.guidelines">Retningslinjer for bedømmelser</message>
+	<message key="reviewer.submission.downloadDescription">Klik på filnavnene nedenfor for at downloade de filer, der er knyttet til denne indsendelse.</message>
+	<message key="submission.comments.canShareWithAuthor">Til forfatter og redaktør</message>
+	<message key="submission.comments.cannotShareWithAuthor">Kun til redaktør</message>
+</locale>

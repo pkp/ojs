@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE filterConfig SYSTEM "../../../../dtd/filterConfig.dtd">
+
+<!--
+  * filterConfig.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Filter Configuration.
+  -->
+<filterConfig>
+	<filterGroups>
+		<!-- ISBN lookup and extraction services -->
+		<filterGroup
+			symbolic="nlm30-element-citation=>isbn"
+			displayName="plugins.citationLookup.isbndbExtraction.displayName"
+			description="plugins.citationLookup.isbndbExtraction.description"
+			inputType="metadata::lib.pkp.plugins.metadata.nlm30.schema.Nlm30CitationSchema(CITATION)"
+			outputType="primitive::string" />
+		<filterGroup
+			symbolic="isbn=>nlm30-element-citation"
+			displayName="plugins.citationLookup.isbndbLookup.displayName"
+			description="plugins.citationLookup.isbndbLookup.description"
+			inputType="primitive::string"
+			outputType="metadata::lib.pkp.plugins.metadata.nlm30.schema.Nlm30CitationSchema(CITATION)" />
+	</filterGroups>
+	<filters>
+		<filter
+			inGroup="nlm30-element-citation=>nlm30-element-citation"
+			class="lib.pkp.classes.filter.GenericSequencerFilter"
+			isTemplate="1">
+			<setting type="string"><name>displayName</name><value>ISBNdb</value></setting>
+
+			<filter
+				inGroup="nlm30-element-citation=>isbn"
+				class="lib.pkp.plugins.citationLookup.isbndb.filter.IsbndbNlm30CitationSchemaIsbnFilter"
+				isTemplate="0">
+				<setting type="int"><name>seq</name><value>1</value></setting>
+			</filter>
+			<filter
+				inGroup="isbn=>nlm30-element-citation"
+				class="lib.pkp.plugins.citationLookup.isbndb.filter.IsbndbIsbnNlm30CitationSchemaFilter"
+				isTemplate="0">
+				<setting type="int"><name>seq</name><value>2</value></setting>
+			</filter>
+			<setting type="object">
+				<name>settingsMapping</name>
+				<value><array>
+					<element key="apiKey"><array>
+						<element>seq1_apiKey</element>
+						<element>seq2_apiKey</element>
+					</array></element>
+					<element key="isOptional"><array>
+						<element>seq1_isOptional</element>
+						<element>seq2_isOptional</element>
+					</array></element>
+				</array></value>
+			</setting>
+		</filter>
+	</filters>
+</filterConfig>

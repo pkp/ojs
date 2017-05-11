@@ -1,0 +1,49 @@
+<!--
+  * dtd/scheduledTasks.dtd
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * DTD for scheduled tasks.
+  -->
+
+<!--
+  * task - a single task to execute
+  * class: the ScheduledTask class to instantiate and call execute() on
+  * descr: description of the task
+  * frequency: how often the task should be executed
+  * arg: 0 or more arguments to pass in array to the class constructor
+  -->
+<!ELEMENT scheduled_tasks (task*)>
+<!ELEMENT task (descr?,frequency?,arg*)>
+	<!ATTLIST task
+		class CDATA #REQUIRED>
+<!ELEMENT descr (#PCDATA)>
+<!ELEMENT frequency EMPTY>
+	<!--
+	  * The frequency settings take similar values as used in
+	  * crontab entries
+	  * E.g., "1", "2-3", "2-3,5,6", "*/2", "1-6/3", "*", etc.
+	  * ("*" is assumed for any values that are omitted)
+	  *
+	  * The primary difference with crontab entries is that the task
+	  * may not be executed at the exact specified time. E.g., if a
+	  * task is set to execute at minute 0 of every hour, it will be
+	  * executed if it has been more than one hour since the task
+	  * was last run, regardless of the minute at the time the
+	  * script is actually executed.
+	  *
+	  * minute: 0-59
+	  * hour: 0-23
+	  * day: 1-31
+	  * month: 1-12
+	  * dayofweek: 0-6 (Sunday-Saturday)
+	  -->
+	<!ATTLIST frequency
+		minute CDATA #IMPLIED
+		hour CDATA #IMPLIED
+		day CDATA #IMPLIED
+		month CDATA #IMPLIED
+		dayofweek CDATA #IMPLIED>
+<!ELEMENT arg (#PCDATA)>

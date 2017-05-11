@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/el_GR/user.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the el_GR (ελληνικά) locale.
+  *
+  -->
+
+<locale name="el_GR" full_name="ελληνικά">
+	<message key="user.affiliation">Συνεργαζόμενος Οργανισμός</message>
+	<message key="user.affiliations">Συνεργαζόμενοι Οργανισμοί</message>
+	<message key="user.biography">Βιογραφικά Στοιχεία</message>
+	<message key="user.biography.description">(π.χ. τμήμα και βαθμίδα)</message>
+	<message key="user.changeMyPassword">Αλλαγή του προσωπικού μου Κωδικού Πρόσβασης (password)</message>
+	<message key="user.changePassword">Αλλαγή Κωδικού Πρόσβασης (password)</message>
+	<message key="user.dateLastLogin">Τελευταία σύνδεση</message>
+	<message key="user.dateRegistered">Ημερομηνία εγγραφής</message>
+	<message key="user.editMyProfile">Επεξεργασία του Προφίλ μου</message>
+	<message key="user.email">Email</message>
+	<message key="user.feminine">Θ</message>
+	<message key="user.firstName">Όνομα</message>
+	<message key="user.gender">Φύλο</message>
+	<message key="user.initialsExample">Ιωάννης Ανδρέα Παπαδόπουλος = ΙΑΠ</message>
+	<message key="user.initials">Αρχικά</message>
+	<message key="user.interests">Αναθεώρηση ενδιαφερόντων</message>
+	<message key="user.lastName">Επώνυμο</message>
+	<message key="user.login.accountDisabledWithReason">Ο λογαριασμός σας έχει απενεργοποιηθεί για τον παρακάτω λόγο:  {$reason}</message>
+	<message key="user.login.accountDisabled">Ο λογαριασμός σας έχει απενεργοποιηθεί. Σας παρακαλούμε  επικοινωνήστε με τον Διαχειριστή του  συστήματος για περισσότερες  πληροφορίες.</message>
+	<message key="user.login.accountNotValidated">Η ηλεκτρονική σας διεύθυνση δεν έχει επικυρωθεί. Παρακαλούμε ελέγξτε το email σας και ακολουθήστε τις σχετικές οδηγίες. Αν δεν λάβετε ένα τέτοιο email, ίσως θα πρέπει να επικοινωνήσετε με τον διαχειριστή του συστήματος για βοήθεια.</message>
+	<message key="user.login.activate">Ενεργοποίηση λογαριασμού</message>
+	<message key="user.login.activated">Σας ευχαριστούμε για την ενεργοποίηση του λογαριασμού σας. Μπορείτε τώρα να συνδεθείτε (log in) στο σύστημα με την χρήση των κωδικών πιστοποίησης που χρησιμοποιήσατε κατά την δημιουργία του λογαριασμού σας..</message>
+	<message key="user.login.changePasswordInstructions"><![CDATA[Θα πρέπει  να επιλέξετε ένα νέο κωδικό πρόσβασης (password)  πριν να μπορέσετε να συνδεθείτε στην συλλογή.<br /><br />Σας παρακαλούμε εισάγετε το όνομα χρήστη (username) και τον τρέχοντα και τον νέο κωδικό πρόσβασης (passwords) παρακάτω για να αλλάξετε τον κωδικό πρόσβασης (password) για τον λογαριασμό σας.]]></message>
+	<message key="user.login.forgotPassword">Ξεχάσατε τον προσωπικό σας Κωδικό Πρόσβασης;</message>
+	<message key="user.login.loginError">Μη έγκυρο Όνομα Χρήστη ή Κωδικος Πρόσβασης. Παρακαλούμε προσπαθήστε  ξανά.</message>
+	<message key="user.login">Συνδεθείτε</message>
+	<message key="user.login.lostPassword.confirmationSent">Ένα μήνυμα επιβεβαίωσης έχει σταλεί στη διεύθυνση ηλεκτρονικού ταχυδρομείου σας. Παρακαλούμε ακολουθήστε τις οδηγίες του μηνύματος για να αλλάξετε τον προσωπικό σας κωδικό πρόσβασης.</message>
+	<message key="user.login.lostPassword.invalidHash">Η  σύνδεση που επιλέξατε έχει λήξει ή δεν είναι έγκυρη. Σας παρακαλούμε προσπαθήστε να αλλάξετε τον προσωπικό σας κωδικό πρόσβασης ξανά. </message>
+	<message key="user.login.lostPassword.invalidUser">Κανένας χρήστης δεν υπάρχει με τη συγκεκριμένη διεύθυνση ηλεκτρονικού ταχυδρομείου.</message>
+	<message key="user.login.lostPassword.passwordSent">Ένας καινούργιος  κωδικός πρόσβασης έχει σταλεί στη διεύθυνση ηλεκτρονικού ταχυδρομείου  σας. Μπορείτε τώρα να συνδεθείτε στην συλλογή  με την χρήση του νέου σας κωδικού.</message>
+	<message key="user.login.registeredEmail">Διεύθυνση ηλεκτρονικού ταχυδρομείου εγγεγραμμένου χρήστη</message>
+	<message key="user.login.resetPassword">Αλλαγή του προσωπικού σας Κωδικού Πρόσβασης</message>
+	<message key="user.logOut">Αποσυνδεθείτε</message>
+	<message key="user.mailingAddress">Ταχυδρομική Διεύθυνση</message>
+	<message key="user.masculine">Α</message>
+	<message key="user.middleName">Μεσαίο/Πατρικό όνομα</message>
+	<message key="user.myAccount">Ο Λογαριασμός μου</message>
+	<message key="user.name">Όνομα</message>
+	<message key="user.password">Password</message>
+	<message key="user.repeatPassword">Επαναλάβετε τον κωδικό πρόσβασης (password)</message>
+	<message key="user.phone">Τηλέφωνο</message>
+	<message key="user.profile.changePasswordInstructions">Εισαγάγετε τον  τρέχοντα και τον νέο κωδικό πρόσβασης παρακάτω για να  αλλάξετε τον προσωπικό σας κωδικό πρόσβασης.</message>
+	<message key="user.profile.editProfile">Διαμόρφωση Προφίλ</message>
+	<message key="user.profile.form.emailRequired">Απαιτείται η συμπλήρωση ενός έγκυρου email .</message>
+	<message key="user.profile.form.firstNameRequired">Απαιτείται η συμπλήρωση του ονόματός σας.</message>
+	<message key="user.profile.form.lastNameRequired">Απαιτείται η συμπλήρωση του επωνύμου σας</message>
+	<message key="user.profile.form.newPasswordRequired">Πρέπει να εισάγετε τον νέο σας κωδικό πρόσβασης.</message>
+	<message key="user.profile.form.oldPasswordInvalid">Ο τρέχων κωδικός πρόσβασης που εισάγατε είναι λανθασμένος.</message>
+	<message key="user.profile.form.openAccessNotifications">Ενημέρωση με email για τα τεύχη ανοικτής πρόσβασης</message>
+	<message key="user.profile.form.passwordRequired">Απαιτείται η συμπλήρωση ενός προσωπικού κωδικού  πρόσβασης (password).</message>
+	<message key="user.profile.form.profileImage">Εικόνα προφίλ</message>
+	<message key="user.profile.form.publishedNotifications">Ενημέρωση με email για την δημοσίευση νέων τευχών</message>
+	<message key="user.profile.form.urlInvalid">Το συγκεκριμένο URL δεν είναι έγκυρο. Πατήστε διπλό-κλικ στο URL και ξαναπροσπαθήστε . (Συμβουλή : Προσθέστε http:// στην αρχή του URL.)</message>
+	<message key="user.profile.form.usernameRequired">Απαιτείται η συμπλήρωση ενός ονόματος χρήστη (username).</message>
+	<message key="user.profile.leavePasswordBlank">Αφήστε τα πεδία του  κωδικού πρόσβασης (password) κενά για να  διατηρήσετε τον τρέχον κωδικό πρόσβασης.</message>
+	<message key="user.profile.newPassword">Νέος κωδικός πρόσβασης </message>
+	<message key="user.profile.oldPassword">Τρέχων κωδικός πρόσβασης</message>
+	<message key="user.profile">Προφίλ</message>
+	<message key="user.profile.publicProfile">Προφίλ Χρήστη</message>
+	<message key="user.profile.repeatNewPassword">Επαναλάβετε τον νέο κωδικό πρόσβασης </message>
+	<message key="user.register.completeForm">Συμπληρώστε την φόρμα για να εγγραφείτε στο περιοδικό.</message>
+	<message key="user.register.form.emailExists">Η επιλεγμένη διεύθυνση ηλεκτρονικού ταχυδρομείου χρησιμοποιείται ήδη από άλλο χρήστη.</message>
+	<message key="user.register.form.passwordsDoNotMatch">Οι κωδικοί πρόσβασης (passwords) δεν ταιριάζουν.</message>
+	<message key="user.register.form.usernameExists">Το επιλεγμένο όνομα χρήστη (username) χρησιμοποιείται ήδη από άλλον χρήστη.</message>
+	<message key="user.register.passwordLengthRestriction">Ο κωδικός  πρόσβασης πρέπει να περιέχει  τουλάχιστον {$length} χαρακτήρες.</message>
+	<message key="user.register.registerAs">Εγγραφείτε ως</message>
+	<message key="user.register">Εγγραφείτε</message>
+	<message key="user.register.usernameRestriction">Το όνομα χρήστη πρέπει να περιέχει μόνο μικρούς χαρακτήρες, αριθμούς και παύλες(-,_).</message>
+	<message key="user.role.reader">Αναγνώστης</message>
+	<message key="user.role.readers">Αναγνώστες</message>
+	<message key="user.role.reviewer">Αξιολογητής</message>
+	<message key="user.role.reviewers">Αξιολογητές</message>
+	<message key="user.role.siteAdmin">Διαχειριστής Ιστοτόπου (Συλλογής)</message>
+	<message key="user.role.siteAdmins">Διαχειριστές Ιστοτόπου (Συλλογής)</message>
+	<message key="user.roles">Ρόλοι</message>
+	<message key="user.salutation">Προσφώνηση</message>
+	<message key="user.sendPassword">Επιβεβαίωση</message>
+	<message key="user.sendPassword.description">Στείλτε μου ένα μήνυμα επιβεβαίωσης με το Όνομα Χρήστη και τον προσωπικό μου κωδικό πρόσβασης (password)</message>
+	<message key="user.signature">Υπογραφή</message>
+	<message key="user.title">Τίτλος</message>
+	<message key="user.url">URL</message>
+	<message key="user.userHome">Αρχική Σελίδα Χρήστη</message>
+	<message key="user.username">Username</message>
+	<message key="user.workingLanguages">Γλώσσες εργασίας</message>
+	<message key="user.profile.form.profileImageInvalid">Μη έγκυρη μορφή αρχείου εικόνας ή πολύ μεγάλη εικόνα. Επιτρεπτές μορφές αρχείων είναι .gif, .jpg, .png, και το μέγεθος της εικόνας να μην υπερβαίνει τα 150x150 pixels.</message>
+	<message key="user.other">Άλλα</message>
+	<message key="user.affiliation.description">(Το ίδρυμά σας, π.χ. "Πανεπιστήμιο Πατρών")</message>
+	<message key="user.authorization.accessDenied">Η πρόσβαση δεν είναι δυνατή</message>
+	<message key="user.authorization.processAuthenticationTokenRequired">Η διαδικασία ταυτοποίησης λείπει ή δεν είναι έγκυρη.</message>
+	<message key="user.authorization.contextRequired">Δεν μπορείτε να χρησιμοποιήσετε αυτή την υπηρεσία εκτός ενός πλαισίου (τύπος, περιοδικό, συνέδριο κλπ.</message>
+	<message key="user.authorization.loginRequired">Απαιτείται σύνδεση.</message>
+	<message key="user.authorization.privateOperation">Η λειτουργία που προσπαθείτε να προσπελάσετε είναι ιδιωτική ή δεν υπάρχει.</message>
+	<message key="user.authorization.restrictedSiteAccess">Η πρόσβασή σας δεν ήταν δυνατή. Η πρόσβαση στον ιστότοπο αυτό είναι προς το παρόν περιορισμένη.</message>
+	<message key="user.authorization.roleBasedAccessDenied">Ο υφιστάμενος ρόλος δεν έχει δικαίωμα πρόσβασης σε αυτή τη λειτουργία.</message>
+	<message key="user.authorization.userGroupRequired">Πρέπει να δημιουργήσετε μια έγκυρη ομάδα χρηστών για να προσπελάσετε αυτή τη λειτουργία.</message>
+	<message key="user.gossip">Ιδιωτικές σημειώσεις</message>
+	<message key="user.repeatPassword">Επανάληψη Κωδικού</message>
+	<message key="user.profile.form.affiliationRequired">Θα πρέπει να δηλώσετε την ισχέση σας με έναν φορέα.</message>
+	<message key="user.register.form.emailsDoNotMatch">Τα πεδία διευθύνσεων του email δεν ταιριάζουν.</message>
+</locale>

@@ -1,0 +1,335 @@
+<?xml version="1.0"?>
+
+<!--
+  * plugins/importexport/native/pkp-native.xsd
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Schema describing native XML import/export elements shared across PKP applications
+  -->
+
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://pkp.sfu.ca" xmlns:pkp="http://pkp.sfu.ca" elementFormDefault="qualified">
+
+	<!-- Bring in the common PKP import/export content -->
+	<include schemaLocation="../../../xml/importexport.xsd" />
+
+	<!-- *********
+	  -  * Types *
+	  -  ********* -->
+
+	<!--
+	  - Basic Types
+	  -->
+
+	<!-- Identifies a MIME type -->
+	<simpleType name="mimeType">
+		<restriction base="normalizedString" />
+	</simpleType>
+
+	<!-- Identifies a user group -->
+	<simpleType name="user_group_ref">
+		<restriction base="normalizedString" />
+	</simpleType>
+
+	<!-- Identifies a user name -->
+	<simpleType name="username">
+		<restriction base="normalizedString" />
+	</simpleType>
+
+
+	<!--
+	  - File-related Types
+	  -->
+
+	<!-- Describes a filename -->
+	<simpleType name="filename">
+		<restriction base="normalizedString">
+		</restriction>
+	</simpleType>
+
+	<!-- A remote tag defining an remotely hosted representation -->
+	<complexType name="remote">
+		<attribute name="src" type="anyURI" />
+	</complexType>
+
+	<!-- An href tag defining an external URL file resource -->
+	<complexType name="href">
+		<attribute name="src" type="anyURI" />
+		<attribute name="mime_type" type="pkp:mimeType" />
+	</complexType>
+
+	<!-- An embed tag defining an encoded, embedded file resource -->
+	<complexType name="embed" mixed="true">
+		<attribute name="encoding" use="required">
+			<simpleType>
+				<restriction base="string">
+					<enumeration value="base64" />
+				</restriction>
+			</simpleType>
+		</attribute>
+		<attribute name="mime_type" type="pkp:mimeType" />
+	</complexType>
+
+	<!--
+	  - Encapsulate a file, which can be imported from an href,
+	  - or embedded directly in the XML document.
+	  -->
+	<group name="fileContents">
+		<choice>
+			<element name="href" type="pkp:href" />
+			<element name="embed" type="pkp:embed" />
+		</choice>
+	</group>
+
+	<complexType name="submission_file">
+		<sequence>
+			<element name="revision" minOccurs="1" maxOccurs="unbounded" >
+				<complexType>
+					<sequence>
+						<element ref="pkp:id" minOccurs="0" maxOccurs="unbounded" />
+						<element name="name" type="pkp:localizedNode" minOccurs="1" maxOccurs="unbounded" />
+						<group ref="pkp:fileContents" />
+					</sequence>
+					<attribute name="direct_sales_price" type="decimal" />
+					<attribute name="number" type="int" use="required" />
+					<attribute name="source" type="normalizedString" />
+					<attribute name="filename" type="normalizedString" use="required" />
+					<attribute name="viewable" type="boolean" />
+					<attribute name="date_uploaded" type="date" />
+					<attribute name="date_modified" type="date" />
+					<attribute name="user_group_ref" type="pkp:user_group_ref" use="required" />
+					<attribute name="uploader" type="pkp:username" />
+					<attribute name="genre" type="normalizedString" />
+					<attribute name="filesize" type="int" use="required" />
+					<attribute name="filetype" type="normalizedString" use="required" />
+				</complexType>
+			</element>
+		</sequence>
+		<attribute name="id" type="normalizedString" />
+		<attribute name="stage">
+			<simpleType>
+				<restriction base="string">
+					<enumeration value="public" />
+					<enumeration value="submission" />
+					<enumeration value="note" />
+					<enumeration value="review_file" />
+					<enumeration value="review_attachment" />
+					<enumeration value="final" />
+					<enumeration value="fair_copy" />
+					<enumeration value="editor" />
+					<enumeration value="copyedit" />
+					<enumeration value="proof" />
+					<enumeration value="production_ready" />
+					<enumeration value="attachment" />
+					<enumeration value="query" />
+					<enumeration value="review_revision" />
+					<enumeration value="dependent" />
+				</restriction>
+			</simpleType>
+		</attribute>
+	</complexType>
+
+	<!-- A reference to a submission file that is declared elsewhere -->
+	<complexType name="submission_file_ref">
+		<attribute name="id" type="normalizedString" />
+		<attribute name="revision" type="int" />
+	</complexType>
+
+	<!--
+	  - User-related Elements
+	  -->
+
+	<!-- A user group -->
+	<complexType name="user_group">
+		<sequence>
+			<element name="role_id" type="int" />
+			<element name="context_id" type="int" />
+			<element name="is_default" type="boolean" />
+			<element name="show_title" type="boolean" />
+			<element name="permit_self_registration" type="boolean" />
+			<element name="name" type="pkp:localizedNode" minOccurs="0" maxOccurs="unbounded" />
+			<element name="abbrev" type="pkp:localizedNode" minOccurs="0" maxOccurs="unbounded" />
+			<element name="stage_assignments" type="string" minOccurs="1" maxOccurs="1" />
+		</sequence>
+	</complexType>
+
+	<!-- Permit "user_group" as a root element -->
+	<element name="user_group" type="pkp:user_group" />
+
+	<!-- A user group -->
+	<complexType name="user_groups">
+		<sequence>
+			<element name="user_group" type="pkp:user_group" maxOccurs="unbounded" />
+		</sequence>
+	</complexType>
+
+	<!-- Permit "user_groups" as a root element -->
+	<element name="user_groups" type="pkp:user_groups" />
+
+	<!-- An identity (e.g. user, author) -->
+	<complexType name="identity" abstract="true">
+		<sequence>
+			<element name="firstname" type="string" />
+			<element name="middlename" type="string" minOccurs="0" maxOccurs="1" />
+			<element name="lastname" type="string" />
+			<element name="affiliation" type="pkp:localizedNode" minOccurs="0" maxOccurs="unbounded" />
+			<element name="country" type="string" minOccurs="0" maxOccurs="1" />
+			<element name="email" type="string" />
+			<element name="url" type="anyURI" minOccurs="0" maxOccurs="1" />
+			<element name="biography" type="pkp:localizedNode" minOccurs="0" maxOccurs="unbounded" />
+		</sequence>
+	</complexType>
+
+	<complexType name="author">
+		<complexContent>
+			<extension base="pkp:identity">
+				<attribute name="primary_contact" type="boolean" default="false" />
+				<attribute name="user_group_ref" type="pkp:user_group_ref" use="required" />
+				<attribute name="include_in_browse" type="boolean" default="true" />
+			</extension>
+		</complexContent>
+	</complexType>
+
+	<!--
+	  - Representation-related types
+	  -->
+
+	<complexType name="representation">
+		<sequence>
+			<element ref="pkp:id" minOccurs="0" maxOccurs="unbounded" />
+			<element name="name" type="pkp:localizedNode" minOccurs="1" maxOccurs="unbounded" />
+			<element name="seq" type="int" minOccurs="1" maxOccurs="1" />
+			<choice>
+				<element name="submission_file_ref" type="pkp:submission_file_ref" minOccurs="0" maxOccurs="unbounded" />
+				<element name="remote" type="pkp:remote" minOccurs="0" maxOccurs="1" />
+			</choice>
+		</sequence>
+	</complexType>
+
+	<complexType name="submission">
+		<sequence>
+			<element ref="pkp:id" minOccurs="0" maxOccurs="unbounded" />
+
+			<!-- Metadata -->
+			<element ref="pkp:title" minOccurs="1" maxOccurs="unbounded" />
+			<element name="prefix" type="pkp:localizedNode" minOccurs="0" maxOccurs="unbounded" />
+			<element name="subtitle" type="pkp:localizedNode" minOccurs="0" maxOccurs="unbounded" />
+			<element name="abstract" type="pkp:localizedNode" minOccurs="0" maxOccurs="unbounded" />
+			<element name="coverage" type="pkp:localizedNode" minOccurs="0" maxOccurs="unbounded" />
+			<element name="type" type="pkp:localizedNode" minOccurs="0" maxOccurs="unbounded" />
+			<element name="source" type="pkp:localizedNode" minOccurs="0" maxOccurs="unbounded" />
+			<element name="rights" type="pkp:localizedNode" minOccurs="0" maxOccurs="unbounded" />
+			<element ref="pkp:keywords" minOccurs="0" maxOccurs="unbounded" />
+			<element ref="pkp:agencies" minOccurs="0" maxOccurs="unbounded" />
+			<element ref="pkp:disciplines" minOccurs="0" maxOccurs="unbounded" />
+			<element ref="pkp:subjects" minOccurs="0" maxOccurs="unbounded" />
+			<element ref="pkp:authors" minOccurs="1" maxOccurs="1" />
+			<element ref="pkp:submission_file" minOccurs="0" maxOccurs="unbounded" />
+			<element ref="pkp:representation" minOccurs="0" maxOccurs="unbounded" />
+		</sequence>
+		<attribute name="locale" type="string" use="optional" />
+		<attribute name="language" type="string" use="optional" />
+		<attribute name="date_submitted" type="date" use="optional" />
+		<attribute name="date_published" type="date" use="optional" />
+	</complexType>
+
+	<!-- ************
+	  -  * Elements *
+	  -  ************ -->
+
+	<!--
+	  - Identifier elements
+	  -->
+	<element name="id">
+		<complexType mixed="true">
+			<attribute name="type" type="string" use="optional" />
+			<attribute name="advice" default="ignore">
+				<simpleType>
+					<restriction base="string">
+						<enumeration value="update" />
+						<enumeration value="ignore" />
+					</restriction>
+				</simpleType>
+			</attribute>
+		</complexType>
+	</element>
+
+	<!--
+	  - Metadata element types
+	  -->
+	<element name="title" type="pkp:localizedNode" />
+
+	<!--
+	  - Composite / root elements
+	  -->
+	<!-- Permit "submissions" as a root element -->
+	<element name="submissions" abstract="true">
+		<complexType>
+			<sequence>
+				<element ref="pkp:submission" minOccurs="0" maxOccurs="unbounded" />
+			</sequence>
+		</complexType>
+	</element>
+
+	<!-- Permit "authors" as a root element to keep the filters happy -->
+	<element name="authors">
+		<complexType>
+			<sequence>
+				<element name="author" type="pkp:author" minOccurs="1" maxOccurs="unbounded" />
+			</sequence>
+		</complexType>
+	</element>
+
+	<!-- Permit "author" as a root element to keep the filters happy -->
+	<element name="author" type="pkp:author" />
+
+	<!--
+	  - Representation-related elements
+	  -->
+	<!-- Permit "representation" as a root element to keep the filters happy -->
+	<element name="representation" type="pkp:representation" abstract="true" />
+	<element name="submission_file" type="pkp:submission_file" />
+
+	<!--
+	  - Submission-related elements
+	  -->
+	<!-- Permit "submission" as a root element -->
+	<element name="submission" type="pkp:submission" abstract="true" />
+
+	<!-- Controlled vocabularies -->
+	<element name="keywords">
+		<complexType>
+			<sequence>
+				<element name="keyword" type="string" minOccurs="1" maxOccurs="unbounded" />
+			</sequence>
+			<attribute name="locale" type="string" />
+		</complexType>
+	</element>
+	<element name="agencies">
+		<complexType>
+			<sequence>
+				<element name="agency" type="string" minOccurs="1" maxOccurs="unbounded" />
+			</sequence>
+			<attribute name="locale" type="string" />
+		</complexType>
+	</element>
+	<element name="disciplines">
+		<complexType>
+			<sequence>
+				<element name="disciplin" type="string" minOccurs="1" maxOccurs="unbounded" />
+			</sequence>
+			<attribute name="locale" type="string" />
+		</complexType>
+	</element>
+	<element name="subjects">
+		<complexType>
+			<sequence>
+				<element name="subject" type="string" minOccurs="1" maxOccurs="unbounded" />
+			</sequence>
+			<attribute name="locale" type="string" />
+		</complexType>
+	</element>
+
+</schema>

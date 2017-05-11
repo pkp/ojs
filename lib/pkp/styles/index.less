@@ -1,0 +1,109 @@
+/**
+ * @file styles/index.less
+ *
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @brief Main OMP stylesheet wrapper
+ *
+ */
+
+/**
+ * To minimize specificity battles, styles should be loaded in the following
+ * order: fonts, browser reset, variables, mix-ins, helpers, structure,
+ * components, library overrides, particular page styling and one-off exceptions
+ */
+
+// Fonts first - get the files loading as quick as possible
+@import "lib/pkp/styles/fonts.less";
+
+// Normalize.css - Browser reset styles
+@import "lib/pkp/styles/lib/normalize.less";
+
+// Variables
+@import "lib/pkp/styles/variables.less";
+
+// Mix-ins, animations, etc
+@import "lib/pkp/styles/utils.less";
+
+// Helpers etc.
+@import "lib/pkp/styles/helpers.less";
+
+// Structure
+@import "lib/pkp/styles/structure/index.less";
+
+// Controllers
+@import "lib/pkp/styles/controllers/index.less";
+
+// Override styles from imported libraries
+@import "lib/pkp/styles/jlabel.less";
+
+// Link Actions
+@import "lib/pkp/styles/linkActions.less";
+
+// Page Elements
+@import "lib/pkp/styles/pages/index.less";
+
+// Right-to-left styles
+@import "lib/pkp/styles/rtl.less";
+
+/**
+ * Legacy styles needing refactoring
+ */
+
+/* Content Elements */
+@import "lib/pkp/styles/content.less";
+
+@import "lib/pkp/styles/sprites.less";
+
+.grid_actions {
+	padding: 22px 0 22px 0;
+	overflow: hidden;
+
+	a {
+		padding:0;
+		/**
+		 * FIXME: !important elements needed in the event CSS
+		 * application order vis-a-vis jQueryUI is reversed (see
+		 * editor decision actions on review interface in OMP)
+		 */
+		margin:0 -3px 0 0 !important;
+		border-style: none !important;
+		border-color: white !important;
+		border-width: 0 0 0 0 !important;
+		background: #0c3b66 url(@{baseUrl}/lib/pkp/templates/images/button_bg_slice.png) repeat-x;
+		height: 24px;
+		-moz-border-radius-topright: 0px;
+		-webkit-border-radius: 0px;
+		border-radius: 0px;
+	}
+
+	a:first-child {
+		-webkit-top-left-border-radius: 5px;
+		-webkit-bottom-left-border-radius: 5px;
+		border-top-left-radius: 5px;
+		border-bottom-left-radius: 5px;
+	}
+
+	a:last-child {
+		-webkit-top-right-border-radius: 5px;
+		-webkit-bottom-right-border-radius: 5px;
+		border-top-right-radius: 5px;
+		border-bottom-right-radius: 5px;
+	}
+
+}
+
+.action_links {
+	line-height: 24px;
+	height: 24px;
+	vertical-align: middle;
+	padding-bottom: 10px;
+}
+
+.action_links a {
+	font-size: 90%;
+	margin-right: 20px;
+	float: left;
+}

@@ -1,0 +1,264 @@
+/**
+ * @file styles/sprites.less
+ *
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
+ * ePub sprite category added  Leah M Root SUNY Geneseo
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @ingroup pkp_sprites
+ *
+ * @brief Sprite classes
+ */
+
+.sprite {
+	@iconwidth: 24px;
+	@iconheight: 24px;
+
+	line-height: @iconheight;
+
+	&.pkp_common_disabled:before {
+		cursor: default;
+	}
+	&:before {
+		content: " ";
+		display: inline-block;
+		vertical-align: top;
+		width: @iconwidth;
+		height: @iconheight;
+		background: url('@{baseUrl}/lib/pkp/templates/images/structure/sprites.png');
+		background-repeat: no-repeat;
+		cursor: pointer;
+	}
+
+	&.notify:before { margin-right:4px; background-position: (-1*@iconwidth) 0; }
+	&.notify:hover:before { background-position: (-1*@iconwidth) (-1*@iconheight); }
+
+	&.overdue {
+		text-indent: -1500px;
+		padding-left: 5px;
+	}
+
+	&.overdue:before { margin-right:4px; background-position: (-2*@iconwidth) (0*@iconheight); }
+	&.overdue:hover:before { background-position: (-2*@iconwidth) (-1*@iconheight); }
+
+	&.upgrade:before { background-position: (-7*@iconwidth) (0*@iconheight); }
+	&.upgrade:hover:before { background-position: (-7*@iconwidth) (-1*@iconheight); }
+
+	&.information:before { background-position: (-8*@iconwidth) (0*@iconheight); }
+	&.information:hover:before { background-position: (-8*@iconwidth) (-1*@iconheight); }
+
+	&.edit:before { background-position: (-10*@iconwidth) (0*@iconheight); }
+	&.edit:hover:before { background-position: (-10*@iconwidth) (-1*@iconheight); }
+
+	&.notes:before { background-position: (-11*@iconwidth) (0*@iconheight); }
+	&.notes:hover:before { background-position: (-11*@iconwidth) (-1*@iconheight); }
+
+	&.merge_users:before { margin-right:4px; background-position: (-13*@iconwidth) (0*@iconheight); }
+	&.merge_users:hover:before { background-position: (-13*@iconwidth) (-1*@iconheight); }
+
+	&.wrench:before { background-position: (-14*@iconwidth) (0*@iconheight); }
+	&.wrench:hover:before { background-position: (-14*@iconwidth) (-1*@iconheight); }
+
+	&.settings:before { background-position: (-17*@iconwidth) (0*@iconheight); }
+	&.settings:hover:before { background-position: (-17*@iconwidth) (-1*@iconheight); }
+
+	&.add:before { margin-right:4px; background-position: (-21*@iconwidth) (0*@iconheight); }
+	&.add:hover:before { background-position: (-21*@iconwidth) (-1*@iconheight); }
+
+	&.add_user:before { margin-right:4px; background-position: (-22*@iconwidth) (0*@iconheight); }
+	&.add_user:hover:before { background-position: (-22*@iconwidth) (-1*@iconheight); }
+
+	&.add_category:before { margin-right:4px; background-position: (-23*@iconwidth) (0*@iconheight); }
+	&.add_category:hover:before { background-position: (-23*@iconwidth) (-1*@iconheight); }
+
+	&.add_item:before { margin-right:4px; background-position: (-24*@iconwidth) (0*@iconheight); }
+	&.add_item:hover:before { background-position: (-24*@iconwidth) (-1*@iconheight); }
+
+	&.decline:before { margin-right:4px; background-position: (-26*@iconwidth) (0*@iconheight); }
+	&.decline:hover:before { background-position: (-26*@iconwidth) (-1*@iconheight); }
+
+	&.advance:before { margin-right:4px; background-position: (-27*@iconwidth) (0*@iconheight); }
+	&.advance:hover:before { background-position: (-27*@iconwidth) (-1*@iconheight); }
+
+	&.promote:before { margin-right:4px; background-position: (-28*@iconwidth) (0*@iconheight); }
+	&.promote:hover:before { background-position: (-28*@iconwidth) (-1*@iconheight); }
+
+	&.revisions:before { margin-right:4px; background-position: (-29*@iconwidth) (0*@iconheight); }
+	&.revisions:hover:before { background-position: (-29*@iconwidth) (-1*@iconheight); }
+
+	&.resubmit:before { margin-right:4px; background-position: (-30*@iconwidth) (0*@iconheight); }
+	&.resubmit:hover:before { background-position: (-30*@iconwidth) (-1*@iconheight); }
+
+	&.add_item_small:before { height: 14px; margin-right:4px; background-position: (-31*@iconwidth) -5px; }
+	&.add_item_small:hover:before { background-position: (-31*@iconwidth) -29px; }
+
+	&.enroll_user:before { margin-right:4px; background-position: (-32*@iconwidth) (0*@iconheight); }
+	&.enroll_user:hover:before { background-position: (-32*@iconwidth) (-1*@iconheight); }
+
+	&.user_search:before { margin-right:4px; background-position: (-33*@iconwidth) (0*@iconheight); }
+	&.user_search:hover:before { background-position: (-33*@iconwidth) (-1*@iconheight); }
+
+	&.import:before { margin-right:4px; background-position: (-34*@iconwidth) (0*@iconheight); }
+	&.import:hover:before { background-position: (-34*@iconwidth) (-1*@iconheight); }
+
+	&.pdf:before { margin-right:4px; background-position: (-35*@iconwidth) (0*@iconheight); }
+	&.pdf:hover:before { background-position: (-35*@iconwidth) (-1*@iconheight); }
+
+	&.html:before { margin-right:4px; background-position: (-36*@iconwidth) (0*@iconheight); }
+	&.html:hover:before { background-position: (-36*@iconwidth) (-1*@iconheight); }
+
+	&.word:before { margin-right:4px; background-position: (-37*@iconwidth) (0*@iconheight); }
+	&.word:hover:before { background-position: (-37*@iconwidth) (-1*@iconheight); }
+
+	&.image:before { margin-right:4px; background-position: (-38*@iconwidth) (0*@iconheight); }
+	&.image:hover:before { background-position: (-38*@iconwidth) (-1*@iconheight); }
+
+	&.excel:before { margin-right:4px; background-position: (-39*@iconwidth) (0*@iconheight); }
+	&.excel:hover:before { background-position: (-39*@iconwidth) (-1*@iconheight); }
+
+	&.default:before { margin-right:4px; background-position: (-40*@iconwidth) (0*@iconheight); }
+	&.default:hover:before { background-position: (-40*@iconwidth) (-1*@iconheight); }
+
+	&.zip:before { margin-right:4px; background-position: (-41*@iconwidth) (0*@iconheight); }
+	&.zip:hover:before { background-position: (-41*@iconwidth) (-1*@iconheight); }
+
+	&.warning:before { margin-right:4px; background-position: (-42*@iconwidth) (0*@iconheight); }
+	&.warning:hover:before { background-position: (-42*@iconwidth) (-1*@iconheight); }
+
+	&.add_role:before { margin-right:4px; background-position: (-43*@iconwidth) (0*@iconheight); }
+	&.add_role:hover:before { background-position: (-43*@iconwidth) (-1*@iconheight); }
+
+	&.star_highlighted:before { margin-right:4px; background-position: (-44*@iconwidth) (0*@iconheight); }
+	&.star_highlighted:hover:before { background-position: (-44*@iconwidth) (-1*@iconheight); }
+
+	&.star:before { margin-right:4px; background-position: (-45*@iconwidth) (0*@iconheight); }
+	&.star:hover:before { background-position: (-45*@iconwidth) (-1*@iconheight); }
+
+	&.cross:before { margin-right:4px; background-position: (-46*@iconwidth) (0*@iconheight); }
+	&.cross:hover:before { background-position: (-46*@iconwidth) (-1*@iconheight); }
+
+	&.feature:before { margin-right:4px; background-position: (-47*@iconwidth) (0*@iconheight); }
+	&.feature:hover:before { background-position: (-47*@iconwidth) (-1*@iconheight); }
+
+	&.list_view:before { margin-right:4px; background-position: (-48*@iconwidth) (0*@iconheight); }
+	&.list_view:hover:before { background-position: (-48*@iconwidth) (-1*@iconheight); }
+
+	&.grid_view:before { margin-right:4px; background-position: (-49*@iconwidth) (0*@iconheight); }
+	&.grid_view:hover:before { background-position: (-49*@iconwidth) (-1*@iconheight); }
+
+	&.notes_none:before { background-position: (-50*@iconwidth) (0*@iconheight); }
+	&.notes_none:hover:before { background-position: (-50*@iconwidth) (-1*@iconheight); }
+
+	&.notes_new:before { background-position: (-51*@iconwidth) (0*@iconheight); }
+	&.notes_new:hover:before { background-position: (-51*@iconwidth) (-1*@iconheight); }
+
+	&.reset_default:before { margin-right:4px; background-position: (-52*@iconwidth) (0*@iconheight); }
+	&.reset_default:hover:before { background-position: (-52*@iconwidth) (-1*@iconheight); }
+
+	&.send_production:before { margin-right:4px; background-position: (-53*@iconwidth) (0*@iconheight); }
+	&.send_production:hover:before { background-position: (-53*@iconwidth) (-1*@iconheight); }
+
+	&.order_items:before { margin-right:4px; background-position: (-54*@iconwidth) (0*@iconheight); }
+	&.order_items:hover:before { background-position: (-54*@iconwidth) (-1*@iconheight); }
+
+	&.return:before { margin-right:4px; background-position: (-55*@iconwidth) (0*@iconheight); }
+	&.return:hover:before { background-position: (-55*@iconwidth) (-1*@iconheight); }
+
+	&.release:before { margin-right:4px; background-position: (-57*@iconwidth) (0*@iconheight); }
+	&.release:hover:before { background-position: (-57*@iconwidth) (-1*@iconheight); }
+
+	&.release_highlighted:before { margin-right:4px; background-position: (-58*@iconwidth) (0*@iconheight); }
+	&.release_highlighted:hover:before { background-position: (-58*@iconwidth) (-1*@iconheight); }
+
+	&.collapse_all:before { margin-right:4px; background-position: (-59*@iconwidth) (0*@iconheight+5); }
+	&.collapse_all:hover:before { background-position: (-59*@iconwidth) (-1*@iconheight+5); }
+
+	&.expand_all:before { margin-right:4px; background-position: (-60*@iconwidth) (0*@iconheight+5); }
+	&.expand_all:hover:before { background-position: (-60*@iconwidth) (-1*@iconheight+5); }
+
+	&.expanded:before { margin-right:4px; background-position: (-59*@iconwidth) (0*@iconheight); }
+	&.expanded:hover:before { background-position: (-59*@iconwidth) (-1*@iconheight); }
+
+	&.collapsed:before { margin-right:4px; background-position: (-60*@iconwidth) (0*@iconheight); }
+	&.collapsed:hover:before { background-position: (-60*@iconwidth) (-1*@iconheight); }
+
+	&.manage:before { margin-right:4px; background-position: (-63*@iconwidth) (0*@iconheight); }
+	&.manage:hover:before { background-position: (-63*@iconwidth) (-1*@iconheight); }
+
+	&.openaccess:before { margin-right:4px; background-position: (-64*@iconwidth) (0*@iconheight); }
+	&.openaccess:hover:before { background-position: (-64*@iconwidth) (-1*@iconheight); }
+
+	&.epub:before { margin-right:4px; background-position: (-65*@iconwidth) (0*@iconheight); }
+	&.epub:hover:before { background-position: (-65*@iconwidth) (-1*@iconheight); }
+
+	&.copy:before { margin-right:4px; background-position: (-66*@iconwidth) (0*@iconheight); }
+	&.copy:hover:before { background-position: (-66*@iconwidth) (-1*@iconheight); }
+
+	&.preview:before { margin-right:4px; background-position: (-67*@iconwidth) (0*@iconheight); }
+	&.preview:hover:before { background-position: (-67*@iconwidth) (-1*@iconheight); }
+}
+
+/**
+ * Category sprites
+ */
+.category {
+	&.delete:before {
+		margin-left: 5px; background-position: -1008px 0;
+	}
+	&.delete:hover:before {
+		background-position: -1008px -24px;
+	}
+	&.pdf:before, &.html:before, &.word:before, &.image:before, &.excel:before, &.default:before, &.zip:before, &.epub:before {
+		margin-left: 10px; margin-top: 0px;
+	}
+}
+
+/**
+ * Large sprites
+ */
+.large_sprite {
+	@largeSpriteWidth: 48px;
+	@largeSpriteHeight: 48px;
+
+	@largeSpriteVOffset: -48px;
+
+	content: " ";
+	width: @largeSpriteWidth;
+	height: @largeSpriteHeight;
+	margin-right: 10px;
+	margin-left: 10px;
+	float: left;
+	background: url('@{baseUrl}/lib/pkp/templates/images/structure/sprites.png');
+	background-repeat: no-repeat;
+	background-position: 0 @largeSpriteVOffset;
+
+	/* Blank at position 0,0 */
+	&.modal_add_user { background-position: (-1*@largeSpriteWidth) @largeSpriteVOffset; }
+	&.modal_add_role { background-position: (-2*@largeSpriteWidth) @largeSpriteVOffset; }
+	&.modal_add_file { background-position: (-3*@largeSpriteWidth) @largeSpriteVOffset; }
+	&.modal_more_info { background-position: (-4*@largeSpriteWidth) @largeSpriteVOffset; }
+	&.modal_information { background-position: (-5*@largeSpriteWidth) @largeSpriteVOffset; }
+	/* Unused icon at position 6,0 */
+	&.modal_email { background-position: (-7*@largeSpriteWidth) @largeSpriteVOffset; }
+	&.modal_delete { background-position: (-8*@largeSpriteWidth) @largeSpriteVOffset; }
+	&.modal_approve_proofs, &.modal_approve { background-position: (-9*@largeSpriteWidth) @largeSpriteVOffset; }
+	&.modal_edit { background-position: (-10*@largeSpriteWidth) @largeSpriteVOffset; }
+	&.modal_confirm { background-position: (-11*@largeSpriteWidth) @largeSpriteVOffset; }
+	&.modal_add_item { background-position: (-12*@largeSpriteWidth) @largeSpriteVOffset; }
+	&.modal_manage { background-position: (-13*@largeSpriteWidth) @largeSpriteVOffset; }
+	&.modal_settings { background-position: (-14*@largeSpriteWidth) @largeSpriteVOffset; }
+	&.modal_warning { background-position: (-15*@largeSpriteWidth) @largeSpriteVOffset; }
+	&.modal_upgrade { background-position: (-16*@largeSpriteWidth) @largeSpriteVOffset; }
+	&.modal_merge_users { background-position: (-17*@largeSpriteWidth) @largeSpriteVOffset; }
+	&.modal_send_to_production, &.accept_submission { background-position: (-18*@largeSpriteWidth) @largeSpriteVOffset; }
+	&.modal_approve_file { background-position: (-19*@largeSpriteWidth) @largeSpriteVOffset; }
+	&.modal_review { background-position: (-20*@largeSpriteWidth) @largeSpriteVOffset; }
+	&.decline_submission { background-position: (-21*@largeSpriteWidth) @largeSpriteVOffset; }
+	&.please_resubmit { background-position: (-22*@largeSpriteWidth) @largeSpriteVOffset; }
+	&.revisions_required { background-position: (-23*@largeSpriteWidth) @largeSpriteVOffset; }
+	&.review_reminder { background-position: (-24*@largeSpriteWidth) @largeSpriteVOffset; }
+	&.openaccess { background-position: (-25*@largeSpriteWidth) @largeSpriteVOffset; }
+
+	&.modal_wizard { background-position: (-34*@largeSpriteWidth) @largeSpriteVOffset; }
+}

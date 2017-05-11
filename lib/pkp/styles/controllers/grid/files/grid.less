@@ -1,0 +1,39 @@
+/**
+ * @file styles/controllers/grid/files/grid.less
+ *
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * 
+ * @ingroup pkp_controllers_grid_files
+ *
+ * @brief Classes for files grid structure
+ */
+
+.pkp_controllers_grid_files {
+	.pkp_controllers_grid_files_possibleRevision {
+		padding: 10px;  
+		margin: 10px;
+		border: 2px solid black;
+		background-color: #FFFFDD;
+		text-align: left; /* FIXME: Necessary? */
+				
+		#revisedFileId, p, h5 {
+			margin-bottom: 10px;
+		}
+
+		h5 {
+			padding-top: 0px;
+		}
+	}
+
+	#revisionWarningIcon {
+		height: 30px;
+		width: 30px;
+		float: left;
+	}
+
+	#revisionWarningText {
+		margin-left: 35px;
+	}
+}

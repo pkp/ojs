@@ -1,0 +1,21 @@
+/**
+ * plugins/generic/usageStats/css/usageStatsGraph.css
+ *
+ * Copyright (c) 2013-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * Usage stats graph styles.
+ */
+
+#usageStatsGraphContainer li {
+	list-style-type: none;
+	padding-bottom: 5px;
+	display: inline;
+	float: left;
+}
+
+#usageStatsGraphContainer #statsYear {
+	display: inline;
+	float: right;
+}

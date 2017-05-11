@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../dtd/locale.dtd">
+
+<!--
+  * plugins/citationLookup/isbndb/locale/fr_CA/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="fr_CA" full_name="Français (Canada)">
+	<message key="plugins.citationLookup.isbndb.displayName">Connecteur pour la base de données ISBNdb</message>
+	<message key="plugins.citationLookup.isbndb.description">Connexion pour la base de données pour les livres ISBNdb.</message>
+	<message key="plugins.citationLookup.isbndbExtraction.displayName">Service d'extraction ISBN</message>
+	<message key="plugins.citationLookup.isbndbExtraction.description">Trouver un ISBN pour un élément de citation NLM 3.0.</message>
+	<message key="plugins.citationLookup.isbndbLookup.displayName">Service pour recherche d'un ISBN donné</message>
+	<message key="plugins.citationLookup.isbndbLookup.description">Rechercher un élément de citation donné à l'aide d'un ISBN.</message>
+</locale>

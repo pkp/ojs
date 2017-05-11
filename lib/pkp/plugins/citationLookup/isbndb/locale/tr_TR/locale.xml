@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../dtd/locale.dtd">
+
+<!--
+  * plugins/citationLookup/isbndb/locale/tr_TR/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="tr_TR" full_name="Türkçe">
+	<!-- plug-in -->
+	<message key="plugins.citationLookup.isbndb.displayName">ISBNdb Veri Tabanı Bağlayıcısı</message>
+	<message key="plugins.citationLookup.isbndb.description">ISBNdb bibliyografik veri tabanına bağlan.</message>
+
+	<!-- ISBN lookup and extraction services -->
+	<message key="plugins.citationLookup.isbndbExtraction.displayName">ISBN çıkarma servisi</message>
+	<message key="plugins.citationLookup.isbndbExtraction.description">Verilen NLM 3.0 eleman-atıf tanımlayıcı için bir ISBN bul.</message>
+	<message key="plugins.citationLookup.isbndbLookup.displayName">ISBN arama servisi</message>
+	<message key="plugins.citationLookup.isbndbLookup.description">Verilen ISBN ile tam NLM 3.0 eleman-atıf tanımlayıcıya bak.</message>
+</locale>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/sv_SE/manager.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the sv_SE (Svenska) locale.
+  *
+  -->
+
+<locale name="sv_SE" full_name="Svenska">
+	<message key="manager.announcements">Tillkännagivanden</message>
+	<message key="manager.announcements.confirmDelete">Är du säker på att du vill ta bort det här tillkännagivandet permanent?</message>
+	<message key="manager.announcements.create">Skapa nytt tillkännagivande</message>
+	<message key="manager.announcements.createTitle">Skapa</message>
+	<message key="manager.announcements.dateExpire">Upphörande</message>
+	<message key="manager.announcements.edit">Redigera tillkännagivande</message>
+	<message key="manager.announcements.editTitle">Redigera</message>
+	<message key="manager.announcements.form.dateExpireDayIncompleteDate">Vänligen välj ett år och/eller en månad, utöver datum, för upphörande.</message>
+	<message key="manager.announcements.form.dateExpire">Upphör den</message>
+	<message key="manager.announcements.form.dateExpireInstructions">Tillkännagivandet kommer att vara publikt till och med detta datum. Lämna blankt om tillkännagivandet ska visas permanent.</message>
+	<message key="manager.announcements.form.dateExpireMonthIncompleteDate">Vänligen välj ett år och/eller ett datum, utöver månad, för upphörande.</message>
+	<message key="manager.announcements.form.dateExpireValid">Vänligen välj ett giltigt datum för tillkännagivandets upphörande.</message>
+	<message key="manager.announcements.form.dateExpireYearIncompleteDate">Vänligen välj en månad och/eller ett datum, utöver år, för upphörande.</message>
+	<message key="manager.announcements.form.description">Beskrivning</message>
+	<message key="manager.announcements.form.descriptionInstructions">Tillkännagivandet (hela texten).</message>
+	<message key="manager.announcements.form.descriptionRequired">Man måste ange en beskrivning av tillkännagivandet.</message>
+	<message key="manager.announcements.form.descriptionShortInstructions">En kortare beskrivning som kommer att synas bredvid titeln på tillkännagivandet.</message>
+	<message key="manager.announcements.form.descriptionShortRequired">Man måste ange en kortare beskrivning av tillkännagivandet.</message>
+	<message key="manager.announcements.form.descriptionShort">Kort beskrivning</message>
+	<message key="manager.announcements.form.saveAndCreateAnother">Spara och skapa ny</message>
+	<message key="manager.announcements.form.titleRequired">Man måste ange titel på tillkännagivandet.</message>
+	<message key="manager.announcements.form.title">Titel</message>
+	<message key="manager.announcements.form.typeId">Typ</message>
+	<message key="manager.announcements.form.typeIdValid">Vänligen välj en giltig typ av tillkännagivande.</message>
+	<message key="manager.announcements.noneCreated">Inga tillkännagivanden har skapats.</message>
+	<message key="manager.announcements.title">Titel</message>
+	<message key="manager.announcements.type">Typ</message>
+	<message key="manager.announcementTypes">Typer av Tillkännagivanden</message>
+	<message key="manager.announcementTypes.confirmDelete">Varning! Alla meddelanden som ligger under den här typen av tillkännagivanden kommer att raderas. Är du säker på att du vill fortsätta och radera den här typen av tillkännagivanden?</message>
+	<message key="manager.announcementTypes.create">Skapa typ av tillkännagivande</message>
+	<message key="manager.announcementTypes.createTitle">Skapa</message>
+	<message key="manager.announcementTypes.edit">Redigera typ av tillkännagivande</message>
+	<message key="manager.announcementTypes.editTitle">Redigera</message>
+	<message key="manager.announcementTypes.form.saveAndCreateAnother">Spara och skapa ny</message>
+	<message key="manager.announcementTypes.form.typeNameExists">Det finns redan en typ av tillkännagivanden med det här namnet.</message>
+	<message key="manager.announcementTypes.form.typeName">Namn</message>
+	<message key="manager.announcementTypes.form.typeNameRequired">Man måste ange namn på de olika typerna av tillkännagivanden.</message>
+	<message key="manager.announcementTypes.noneCreated">Inga typer av tillkännagivanden har skapats.</message>
+	<message key="manager.announcementTypes.typeName">typ av tillkännagivande</message>
+	<message key="manager.emails.confirmDelete">Är du säker på att du vill radera E-postmallen?</message>
+	<message key="manager.emails.confirmReset">Är du säker på att du vill återställa E-postmallen till dess ursprungliga inställningar?</message>
+	<message key="manager.emails.createEmail">Skriv E-post</message>
+	<message key="manager.emails.disable">Avaktivera</message>
+	<message key="manager.emails.editEmail">Redigera E-post</message>
+	<message key="manager.emails.editTestExample">Redigera E-postexemplet</message>
+	<message key="manager.emails.emailKey">E-postadress</message>
+	<message key="manager.emails.emailKeyExists">E-postadressen existerar redan.</message>
+	<message key="manager.emails.emailTemplate">E-postmall</message>
+	<message key="manager.emails.emailTemplates">E-postmallar</message>
+	<message key="manager.emails.enabled">Aktivera den här E-postmallen</message>
+	<message key="manager.emails.enable">Aktivera</message>
+	<message key="manager.emails.form.bodyRequired">E-posten måste innehålla text.</message>
+	<message key="manager.emails.form.subjectRequired">E-posten måste innehålla ett ämne.</message>
+	<message key="manager.emails">E-postmallar</message>
+	<message key="manager.emails.resetAll">Återställ alla mallar</message>
+	<message key="manager.emails.reset">Återställa</message>
+	<message key="manager.emails.resetToDefault">Återställ till ursprungligt utseende</message>
+	<message key="manager.filesBrowser">Filutforskare</message>
+	<message key="manager.files.confirmDelete">Vill du radera den här katalogen? Observera att katalogen måste vara tom innan den kan raderas.</message>
+	<message key="manager.files.createDir">Skapa katalog</message>
+	<message key="manager.files.emptyDir">Det hittades inga filer i katalogen.</message>
+	<message key="manager.files.indexOfDir">Index för {$dir}</message>
+	<message key="manager.files.parentDir">Moderkatalog</message>
+	<message key="manager.files.uploadedFiles">Uppladdade filer</message>
+	<message key="manager.files.uploadFile">Uppladdad fil.</message>
+	<message key="manager.groups.confirmDelete">Är du säker på att du vill ta bort den här gruppen?</message>
+	<message key="manager.groups.createTitle">Skapa titel</message>
+	<message key="manager.groups.editTitle">Redigera titel</message>
+	<message key="manager.groups.form.groupTitleRequired">Man måste ange namn på gruppen.</message>
+	<message key="manager.groups.membership.addMember">Lägg till medlem</message>
+	<message key="manager.groups.membership.confirmDelete">Är du säker på att du vill radera det här medlemskapet?</message>
+	<message key="manager.groups.membership">Medlemskap</message>
+	<message key="manager.groups.membership.noneCreated">Den här gruppen har inga medlemmar.</message>
+	<message key="manager.groups.membership.noUsers">Inga användare hittades.</message>
+	<message key="manager.groups.title">Titel</message>
+	<message key="manager.importExport">Importera/Exportera data</message>
+	<message key="manager.languages.alternateLocaleInstructions">Systemet tillåter att viss speciell information kan tillgängliggöras på fler språk. För att använda den funktionen, se språkalternativ och välj från listan nedan.</message>
+	<message key="manager.languages.supportedLocalesInstructions">Välj vilka språkinställningar som tidskriften ska stödja via språkvalsmenyn som finns på varje sida. Menyn kommer bara synas om fler än ett språk är valt.</message>
+	<message key="manager.payment.timestamp">Tidsstämpel</message>
+	<message key="manager.people.authSource">Autentiseringkälla</message>
+	<message key="manager.people.confirmUnenroll">Vill du ta bort den här användaren?</message>
+	<message key="manager.people.createUser">Skapa ny användare</message>
+	<message key="manager.people.createUserGeneratePassword">Generera lösenord slumpmässigt.</message>
+	<message key="manager.people.createUserSendNotify">Skicka ett välkomstmail till användaren med användarnamn och lösenord.</message>
+	<message key="manager.people.disable">Avaktivera</message>
+	<message key="manager.people.doNotEnroll">Utan roll</message>
+	<message key="manager.people.editProfile">Redigera profil</message>
+	<message key="manager.people.editUser">Redigera Användare</message>
+	<message key="manager.people.emailUsers.emailSelectedUsers">Maila valda användare</message>
+	<message key="manager.people.emailUsers.emailUsersEnrolledAs">Maila användare aktiverade som</message>
+	<message key="manager.people.emailUsers">Maila användare</message>
+	<message key="manager.people.emailUsers.selectLocale">Välj språkfil</message>
+	<message key="manager.people.emailUsers.selectUsers">Välj användare som du vill maila genom att klicka i rutan vid sidan av respektive namn</message>
+	<message key="manager.people.enable">Aktivera</message>
+	<message key="manager.people.enroll">Lägg till användare</message>
+	<message key="manager.people.enrollment">Lägga till</message>
+	<message key="manager.people.enrollSelected">Lägg till valda användare</message>
+	<message key="manager.people.enrollSyncRole">Synkronisera roll/funktion</message>
+	<message key="manager.people.enrollSync">Synkronisera inläggning av användare</message>
+	<message key="manager.people.enrollUserAsDescription">Användare kan tilldelas, eller bli av med, sin roll/funktion när som helst.</message>
+	<message key="manager.people.enrollUserAs">Lägg till användare som</message>
+	<message key="manager.people.invalidUser">Tyvärr, användaren finns inte.</message>
+	<message key="manager.people.mergeUser">Lägg samman användare</message>
+	<message key="manager.people.mergeUsers.confirm">Är du säker på att du vill lägga samman kontot "{$oldUsername}" med kontot "{$newUsername}"? Kontot "{$oldUsername}" kommer raderas och kan inte återskapas.</message>
+	<message key="manager.people.mergeUsers">Lägg samman flera användare</message>
+	<message key="manager.people.mustChooseRole">Väl en funktion längst upp på sidan innan du klickar "Lägg till användare".</message>
+	<message key="manager.people.mustProvideName">Vänligen lägg till ett efternamn.</message>
+	<message key="manager.people.noMatchingUsers">Inga användare hittades.</message>
+	<message key="manager.people.noneEnrolled">Inga tillagda användare.</message>
+	<message key="manager.people">Personer</message>
+	<message key="manager.people.remove">Ta bort</message>
+	<message key="manager.people.saveAndCreateAnotherUser">Spara och skapa ytterligare</message>
+	<message key="manager.people.signInAs">Logga in som</message>
+	<message key="manager.people.signInAsUser">Logga in som användare</message>
+	<message key="manager.people.syncUsers">Synkronisera inläggning av användare</message>
+	<message key="manager.people.unenroll">Ta bort</message>
+	<message key="manager.people.userCreatedSuccessfully">Ditt användarkonto har skapats.</message>
+	<message key="manager.people.userMustChangePassword">Användaren måste ändra sitt lösenord nästa gång han/hon loggar in.</message>
+	<message key="manager.plugins.action">Handling:</message>
+	<message key="manager.plugins.disable">Avaktivera </message>
+	<message key="manager.plugins.enable">Aktivera</message>
+	<message key="manager.plugins.pluginManagement">Plugin-administration</message>
+	<message key="manager.plugins.sitePlugin">Det här är en generell plugin för hela sidan. Endast sidadministratören kan göra ändringar.</message>
+	<message key="manager.plugins">System Plugins</message>
+	<message key="manager.readingTools">Läsverktyg</message>
+	<message key="manager.roles">Roller</message>
+	<message key="manager.setup.homeHeaderImageInvalid">Ogiltigt bildformat för tidskriftens huvudlogo (Godkända format: .gif, .jpg, eller .png.)</message>
+	<message key="manager.setup.homepageImageInvalid">Ogiltigt bildformat för hemsidan. (Godkända format: .gif, .jpg, eller .png.)</message>
+	<message key="manager.setup.homeTitleImageInvalid">Ogiltigt bildformat för tidskriftens sidhuvud. (Godkända format: .gif, .jpg, eller .png.)</message>
+	<message key="manager.setup.layout.unselected">Ej vald</message>
+	<message key="manager.setup.loggingAndAuditing">Att logga och granska</message>
+	<message key="manager.setup.pageHeaderLogoImageInvalid">Ogiltigt bildformat för sidhuvudets logo (Godkända format: .gif, .jpg, eller .png.)</message>
+	<message key="manager.setup.selectOne">Välj en</message>
+	<message key="manager.statistics"><![CDATA[Statistik &amp; Rapporter]]></message>
+	<message key="manager.statistics.statistics.count.value">{$count} ({$percentage}%)</message>
+	<message key="manager.statistics.statistics.totalNewValue">{$numTotal} ({$numNew} nya)</message>
+	<message key="manager.users">Användare</message>
+	<message key="plugins.categories.auth">Validerings-Plugins</message>
+	<message key="plugins.categories.blocks">Block-Plugins</message>
+	<message key="plugins.categories.blocks.description">Block-Plugins är komponenter för anvädargränssnittet, ex. verktygen i sidomenyerna.</message>
+	<message key="plugins.categories.citationFormats">Citering-Plugins</message>
+	<message key="plugins.categories.gateways.description">Gateway-Plugins tillhandahåller live-data till externa system.</message>
+	<message key="plugins.categories.gateways">Gateway-Plugins</message>
+	<message key="plugins.categories.generic">Generiska Plugins</message>
+	<message key="plugins.categories.importexport.description">Import-/Export-Plugins används för att överföra innehåll från och till andra system.</message>
+	<message key="plugins.categories.importexport">Import-/Export-Plugins</message>
+	<message key="plugins.categories.paymethod.description">Betalning-Plugins fungerar som stöd för olika online-betalningsmöjligheter.</message>
+	<message key="plugins.categories.paymethod">Betalning-Plugins</message>
+	<message key="plugins.categories.reports">Rapport-Plugins</message>
+	<message key="plugins.categories.themes.description">Tema-Plugins används för att ändra tjänstens utseende.</message>
+	<message key="plugins.categories.themes">Tema-Plugins</message>
+
+	<!-- Review forms -->
+	<message key="manager.reviewFormElements">Komponenter</message>
+	<message key="manager.reviewForms">Granskningsformulär </message>
+	<message key="manager.reviewForms.completed">Avslutade</message>
+	<message key="manager.reviewForms.create">Skapa granskningsformulär</message>
+	<message key="manager.reviewForms.description">Beskrivning och instruktion</message>
+	<message key="manager.reviewForms.edit">Formulär</message>
+	<message key="manager.reviewForms.inReview">Under granskning</message>
+	<message key="manager.reviewForms.list.description">Granskningsformulären som skapas här kommer bli tillgängliga för Granskare att och ersätta standardformuläret som består av två text-rutor, den ena för både Författare och Redaktör och den andra för enbart Redaktör. Granskningsformulär kan utformas för en speciell tidskriftssektion och Redaktörer har möjlighet att välja vilket formulär som skall användas när Granskare allokeras.  I båda fall, har Redaktörer möjlighet att inkludera rapporten i korrespondensen med Författaren.</message>
+	<message key="manager.reviewForms.noneChosen">Ingen/Standard granskningsformulär</message>
+	<message key="manager.reviewForms.preview">Förhandsgranska</message>
+	<message key="manager.reviewForms.title">Titel</message>
+</locale>

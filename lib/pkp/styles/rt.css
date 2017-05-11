@@ -1,0 +1,39 @@
+/**
+ * rt.css
+ *
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2000-2017 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * Stylesheet for reading tools
+ * DEPRECATED. Do not modify.
+ *
+ */
+
+#headerTitle {
+	width: 100%;
+}
+
+#header h1 {
+	font-size: 1.2em;
+	padding: 0.25em 1em 0.25em 0em;
+	text-align: right;
+}
+
+#container {
+	min-width: 180px !important;
+}
+
+#main {
+	width: 95%;
+}
+
+#main h2 {
+	font-size: 1.5em;
+	margin: 0em 1em 0.25em 0em;
+	padding-top: 0;
+}
+
+#content h3 {
+	font-size: 1.5em;
+}

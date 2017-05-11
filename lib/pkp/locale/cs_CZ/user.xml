@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/cs_CZ/user.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the cs_CZ (Čeština) locale.
+  * Translated by František Chmelik, frantisek.chmelik 'at' upol.cz
+  * Corrections, migration to the OCS 2.3.x by Ivo Vesely and Petr Petyovsky (petyovsky 'at' feec.vutbr.cz)
+  *
+  -->
+
+<locale name="cs_CZ" full_name="Čeština">
+	<message key="user.affiliation">Pracoviště</message>
+	<message key="user.affiliation.description">(Vaše instituce, např. "Simon Fraser University")</message>
+	<message key="user.affiliations">Pracoviště</message>
+	<message key="user.biography">Biografické údaje</message>
+	<message key="user.biography.description">(Např. pracoviště a pozice)</message>
+	<message key="user.changeMyPassword">Změnit moje heslo</message>
+	<message key="user.changePassword">Změnit heslo</message>
+	<message key="user.dateLastLogin">Poslední přihlášení</message>
+	<message key="user.dateRegistered">Datum registrace</message>
+	<message key="user.editMyProfile">Upravit můj profil</message>
+	<message key="user.email">E-mail</message>
+	<message key="user.feminine">Ž</message>
+	<message key="user.firstName">Jméno</message>
+	<message key="user.gender">Pohlaví</message>
+	<message key="user.initialsExample">Jan Novák = JN</message>
+	<message key="user.initials">Iniciály</message>
+	<message key="user.interests">Zájem o recenzování</message>
+	<message key="user.gossip">Soukromé poznámky</message>
+	<message key="user.lastName">Příjmení</message>
+	<message key="user.profile.form.profileImageInvalid">Neplatný formát obrázku profilu nebo příliš velký obrázek. Akceptované formáty jsou .gif, .jpg nebo .png a obrázek nesmí překročit 150x150 pixelů.</message>
+	<message key="user.login.accountDisabledWithReason">Váš účet byl zablokován z následujícího důvodu: {$reason}</message>
+	<message key="user.login.accountDisabled">Váš účet byl zablokován. Pro více informací kontaktujte prosím administrátora.</message>
+	<message key="user.login.accountNotValidated">Vaše emailová adresa nebyla ověřena. Zkontrolujte prosím Váš email a postupujte podle poskytnutých instrukcí. Pokud Vám email nepřišel, budete možná muset kontaktovat administrátora a požádat o asistenci.</message>
+	<message key="user.login.activate">Aktivovat účet</message>
+	<message key="user.login.activated">Děkujeme za aktivaci Vašeho účtu. Nyní se můžete pomocí údajů poskytnutých při vyváření Vašeho účtu přihlásit.</message>
+	<message key="user.login.changePasswordInstructions"><![CDATA[Musíte si zvolit nové heslo před tím, než se budete moci přihlásit na tuto stránku.<br /><br />Pro změnu hesla k Vašemu účet vložte prosím níže Vaše uživatelské jméno a Vaše současné a nové heslo.]]></message>
+	<message key="user.login.forgotPassword">Zapomenuté heslo?</message>
+	<message key="user.login.loginError">Neplatné uživatelské jméno nebo heslo. Zkuste to prosím znovu.</message>
+	<message key="user.login">Přihlášení</message>
+	<message key="user.logIn">Přihlásit</message>
+	<message key="user.login.lostPassword.confirmationSent">Na Vaši emailovou adresu bylo odesláno potvrzení. Následujte prosím instrukce pro resetování Vašeho hesla uvedené v emailu.</message>
+	<message key="user.login.lostPassword.invalidHash">Promiňte, odkaz, na který jste kliknul, vypršel nebo není platný. Pokuste se prosím znovu resetovat heslo.</message>
+	<message key="user.login.lostPassword.invalidUser">Neexistuje žádný uživatel s uvedenou emailovou adresou.</message>
+	<message key="user.login.lostPassword.passwordSent">Nové heslo bylo odesláno na Vaši emailovou adresu. Nyní se můžete přihlásit pomocí nového hesla.</message>
+	<message key="user.login.registeredEmail">Email registrovaného uživatele</message>
+	<message key="user.login.resetPassword">Resetovat heslo</message>
+	<message key="user.logOut">Odhlásit</message>
+	<message key="user.mailingAddress">Poštovní adresa</message>
+	<message key="user.masculine">M</message>
+	<message key="user.middleName">Druhé jméno</message>
+	<message key="user.myAccount">Můj účet</message>
+	<message key="user.name">Jméno</message>
+	<message key="user.other">Jiný</message>
+	<message key="user.password">Heslo</message>
+	<message key="user.phone">Telefon</message>
+	<message key="user.profile.changePasswordInstructions">Pro změnu hesla k Vašemu účtu vložte níže Vaše současné a nové heslo.</message>
+	<message key="user.profile.editProfile">Editovat profil</message>
+	<message key="user.profile.form.emailRequired">Je vyžadována platná emailová adresa.</message>
+	<message key="user.profile.form.affiliationRequired">Prosím, vyplňte položku pracoviště.</message>
+	<message key="user.profile.form.firstNameRequired">Je vyžadováno jméno.</message>
+	<message key="user.profile.form.lastNameRequired">Je vyžadováno příjmení.</message>
+	<message key="user.profile.form.newPasswordRequired">Musíte vložit Vaše nové heslo.</message>
+	<message key="user.profile.form.oldPasswordInvalid">Současné heslo, které jste vložil nebylo správné.</message>
+	<message key="user.profile.form.openAccessNotifications">Emailová oznámení o otevřeném přístupu k číslu</message>
+	<message key="user.profile.form.passwordRequired">Je vyžadováno heslo.</message>
+	<message key="user.profile.form.profileImage">Obrázek profilu</message>
+	<message key="user.profile.form.publishedNotifications">Emailová oznámení o vydání nového čísla</message>
+	<message key="user.profile.form.urlInvalid">Specifikovaná URL není platná. Překontrolujte URL a zkuste to znovu. (Tip: Zkuste přidat http:// na začátek URL.)</message>
+	<message key="user.profile.form.usernameRequired">Je vyžadováno uživatelské jméno.</message>
+	<message key="user.profile.leavePasswordBlank">Aby bylo zachováno současné heslo, nechte políčka pro zadání hesla prázdná.</message>
+	<message key="user.profile.newPassword">Nové heslo</message>
+	<message key="user.profile.oldPassword">Současné heslo</message>
+	<message key="user.profile">Profil</message>
+	<message key="user.profile.publicProfile">Profil uživatele</message>
+	<message key="user.profile.repeatNewPassword">Nové heslo znovu</message>
+	<message key="user.register.form.emailExists">Zvolenou emailovou adresu již používá jiný uživatel.</message>
+	<message key="user.register.form.passwordsDoNotMatch">Hesla nejsou totožná.</message>
+	<message key="user.register.form.usernameExists">Zvolené uživatelské jméno již používá jiný uživatel.</message>
+	<message key="user.register.passwordLengthRestriction">Heslo musí mít nejméně {$length} znaků.</message>
+	<message key="user.register.registerAs">Zaregistrovat jako</message>
+	<message key="user.register">Registrovat</message>
+	<message key="user.register.usernameRestriction">Uživatelské jméno může obsahovat pouze malá písmena, číslice a pomlčky/podtržítka.</message>
+	<message key="user.role.reader">Čtenář</message>
+	<message key="user.role.readers">Čtenáři</message>
+	<message key="user.role.reviewer">Recenzent</message>
+	<message key="user.role.reviewers">Recenzenti</message>
+	<message key="user.role.siteAdmin">Administrátor stránky</message>
+	<message key="user.role.siteAdmins">Administrátoři stránky</message>
+	<message key="user.roles">Role</message>
+	<message key="user.salutation">Oslovení</message>
+	<message key="user.sendPassword">Potvrzení</message>
+	<message key="user.sendPassword.description">Pošli mi e-mail s potvrzením obsahující mé uživatelské jméno a heslo</message>
+	<message key="user.signature">Podpis</message>
+	<message key="user.title">Titul</message>
+	<message key="user.url">URL</message>
+	<message key="user.userHome">Uživatel</message>
+	<message key="user.username">Uživatelské jméno</message>
+	<message key="user.workingLanguages">Pracovní jazyky</message>
+	<message key="user.register.completeForm">Pro zaregistrování do tohoto systému vyplňte tento formulář.</message>
+</locale>

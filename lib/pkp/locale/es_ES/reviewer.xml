@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/es_ES/reviewer.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Credits: https://pkp.sfu.ca/wiki/index.php?title=OMP:_Spanish_(es_ES)
+  * Localization strings
+  -->
+
+<locale name="es_ES" full_name="Español (España)">
+	<!-- Used in submission review -->
+	<message key="reviewer.reviewSteps.request">1. Solicitud</message>
+	<message key="reviewer.reviewSteps.guidelines">2. Directrices</message>
+	<message key="reviewer.reviewSteps.download">3. Descargar y revisar</message>
+	<message key="reviewer.reviewSteps.completion">4. Finalización</message>
+	<message key="reviewer.step1.request">Solicitud de revisión</message>
+	<message key="reviewer.step1.requestBoilerplate">Ha sido seleccionado como posible revisor/a del siguiente envío.  A continuación encontrará un resumen del envío, así como el cronograma para esta revisión.  Esperamos que pueda participar.</message>
+	<message key="reviewer.step1.viewAllDetails">Ver todos los detalles de la propuesta</message>
+	<message key="reviewer.submission.reviewerFiles">Ficheros del revisor</message>
+	<message key="reviewer.submission.declineReview">Rechazar la solicitud del revisor</message>
+	<message key="reviewer.submission.declineReviewMessage">En el siguiente campo puedes indicarle al editor los motivos por los que has rechazado esta revisión.</message>
+	<message key="reviewer.submission.acceptReview">Aceptar revisión, continuar con Paso #2</message>
+	<message key="reviewer.submission.continueToStepThree">Continuar con Paso #3</message>
+	<message key="reviewer.submission.submitReview">Presentar solicitud</message>
+	<message key="reviewer.submission.reviewerGuidelines">Directrices del revisor</message>
+	<message key="reviewer.submission.enterCompetingInterests">Esta editorial dispone de una política respecto a la divulgación de posibles conflictos de intereses por parte de sus revisores/as.  Lea atentamente esta política.</message>
+	<message key="reviewer.submission.noCompetingInterests">No tengo ningún conflicto de intereses.</message>
+	<message key="reviewer.submission.hasCompetingInterests">Es posible que exista un conflicto de intereses (Especificar a continuación)</message>
+	<message key="reviewer.submission.competingInterests">Conflicto de intereses.</message>
+	<message key="reviewer.submission.guidelines">Directrices de la revisión</message>
+	<message key="reviewer.submission.noGuidelines">Esta editorial no ha estabecido directrices del revisor.</message>
+	<message key="reviewer.submission.downloadDescription">Haz clic en el nombre de los archivos para descargar y revisar (en la pantalla o una vez impresos) los archivos relacionados con esta propuesta.</message>
+	<message key="reviewer.submission.reviewDescription">Introduce (o pega) tu revisión de esta propuesta en el formulario que se muestra a continuación.</message>
+	<message key="reviewer.submission.uploadDescription">Además, puedes subir los archivos para que el editor y/o el autor los consulten, incluyendo las versiones revisadas del archivo(s) de la revisión original.</message>
+	<message key="reviewer.complete">Revisión presentada</message>
+	<message key="reviewer.confirmSubmit">¿Estás seguro de que deseas presentar esta revisión?</message>
+	<message key="reviewer.complete.whatNext">Gracias por completar la revisión de este envío. La revisión se envió con éxito. Le agradecemos que haya contribuido a que el trabajo que publicamos sea de calidad. El editor/a se pondrá en contacto con usted si necesita más información.</message>
+	<message key="reviewer.aboutDueDates">Acerca de las fechas límite</message>
+	<message key="reviewer.aboutDueDates.text">El editor solicita que aceptes o rechaces la revisión antes de la "Fecha límite de respuesta" y finalices la revisión antes de la "Fecha límite de la revisión".</message>
+
+	<message key="submission.comments.canShareWithAuthor">Para el autor y el editor</message>
+	<message key="submission.comments.cannotShareWithAuthor">Solo para el editor</message>
+</locale>

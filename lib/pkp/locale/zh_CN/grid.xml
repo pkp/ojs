@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/zh_CN/grid.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (English) locale.
+  *
+  -->
+
+<locale name="zh_CN" full_name="简体中文">
+	<!-- Common -->
+	<message key="grid.noItems">没有项目</message>
+
+	<message key="grid.action.sort">分类</message>
+	<message key="grid.action.addItem">添加项目</message>
+	<message key="grid.action.delete">删除</message>
+	<message key="grid.action.edit">编辑</message>
+
+	<!-- Common Grid Column Titles -->
+	<message key="grid.columns.actions">行动</message>
+	<message key="grid.columns.institution">机构</message>
+	<message key="grid.columns.url">URL</message>
+
+	<!-- Sponsors Grid -->
+	<message key="grid.sponsor.title">主管</message>
+
+	<!-- Masthead Grid -->
+	<!-- Contributor Grid -->
+	<message key="grid.contributor.title">合作者</message>
+	<message key="grid.settings">设置</message>
+	<message key="grid.action.remove">删除</message>
+	<message key="grid.action.approve">同意</message>
+	<message key="grid.action.decline">还原</message>
+	<message key="grid.action.moreInformation">更多</message>
+	<message key="grid.action.addAuthor">添加作者</message>
+	<message key="grid.reviewForm.title">审查表单</message>
+	<message key="grid.libraryFiles.column.files">文件</message>
+	<message key="grid.submissionChecklist.title">投稿检查列表</message>
+	<message key="grid.submissionChecklist.column.checklistItem">项目清单</message>
+	<message key="author.users.contributor.name">姓名</message>
+	<message key="author.users.contributor.email">电子邮件</message>
+	<message key="author.users.contributor.role">角色</message>
+	<message key="author.users.contributor.principalContact">主要联系人</message>
+	<message key="grid.roles.add">添加角色</message>
+	<message key="grid.roles.stageAssignment">阶段分配</message>
+	<message key="grid.user.currentUsers">当前用户</message>
+	<message key="grid.user.currentEnrollment">当前登记</message>
+	<message key="grid.user.allRoles">所有角色</message>
+	<message key="grid.user.add">添加用户</message>
+	<message key="grid.user.enroll">登记用户</message>
+	<message key="grid.user.edit">编辑用户</message>
+	<message key="grid.user.email">电子邮箱</message>
+	<message key="grid.user.enable">启用</message>
+	<message key="grid.user.disable">禁止</message>
+	<message key="grid.user.step1">第1步：填写用户详细</message>
+	<message key="grid.user.step2">第二步：用户角色添加到{$userFullName}</message>
+	<message key="grid.user.addRoles">添加角色</message>
+	<message key="grid.user.selectUser">选择用户</message>
+	<message key="grid.user.pleaseSelectUser">请选择一个用户</message>
+	<message key="grid.preparedEmails.title">准备的电子邮件模板</message>
+	<message key="grid.preparedEmails.currentList">当前列表</message>
+	<message key="grid.plugin.allCategories">所有类别</message>
+	<message key="grid.plugin.disable">你确定你要禁用这个插件吗?</message>
+	<message key="grid.action.resetAll">将所有项目重置为默认值</message>
+	<message key="grid.action.addPreparedEmail">新建一个电子邮件模板</message>
+	<message key="grid.action.editPreparedEmail">编辑此电子邮件模板</message>
+	<message key="grid.action.disableEmail">禁用此电子邮件模板</message>
+	<message key="grid.action.resetEmail">此电子邮件模板重置默认</message>
+	<message key="grid.action.expandAll">全部展开</message>
+	<message key="grid.user.disableReason">禁止用户的原因</message>
+	<message key="grid.user.enableReason">启用用户的原因</message>
+	<message key="grid.action.addUser">新建用户</message>
+	<message key="grid.action.deleteFile">删除文件</message>
+	<message key="grid.action.deleteMedia">删除媒体</message>
+	<message key="grid.action.editMedia">编辑媒体</message>
+	<message key="grid.action.restoreDefaults">恢复默认值</message>
+	<message key="grid.action.editAuthor">编辑作者</message>
+	<message key="grid.action.deleteAuthor">删除作者</message>
+	<message key="grid.action.addAuditor">新建一个作者</message>
+	<message key="grid.action.upgrade">升级</message>
+	<message key="grid.action.order">排序</message>
+	<message key="grid.action.cancelOrdering">取消排序</message>
+	<message key="grid.action.extendAll">延长所有</message>
+	<message key="grid.action.collapse">崩溃</message>
+	<message key="grid.action.collapseAll">全部崩溃</message>
+	<message key="grid.action.wizard">设置向导</message>
+	<message key="grid.action.moveItem">移动项目</message>
+	<message key="grid.action.downloadFile">下载文件</message>
+	<message key="grid.action.downloadAll">以压缩文档形式下载所有文件</message>
+	<message key="grid.action.readReview">阅读该审稿结果</message>
+	<message key="grid.action.email">发送邮件</message>
+	<message key="grid.action.addReviewer">添加审稿人</message>
+	<message key="grid.action.addFile">添加文件</message>
+	<message key="grid.action.editFile">编辑文件</message>
+	<message key="grid.action.selectFiles">选择管理文件</message>
+	<message key="grid.action.requestRevisions">要求对提交文章进行修改</message>
+	<message key="grid.action.resubmit">要求对提交文章进行重新提交</message>
+	<message key="grid.action.accept">接受提交</message>
+	<message key="grid.action.internalReview">将提交文章发送内审</message>
+	<message key="grid.action.externalReview">将提交文章发送外审</message>
+	<message key="grid.action.sendToProduction">将提交文章发送到生成</message>
+	<message key="grid.action.settings">设置</message>
+	<message key="grid.action.importexport">导入或导出内容或网站数据</message>
+	<message key="grid.action.orderItems">启用排序模式</message>
+	<message key="grid.action.editSubmissionChecklist">编辑清单项目</message>
+	<message key="grid.action.deleteSubmissionChecklist">消除清单项目</message>
+	<message key="grid.action.requestAccount">添加参与者</message>
+	<message key="grid.action.expand">扩展</message>
+	<message key="grid.action.notify">通知该用户</message>
+	<message key="grid.action.addUserGroup">添加新用户群</message>
+	<message key="grid.action.editUserGroup">编辑该用户群</message>
+	<message key="grid.action.disable">停用</message>
+	<message key="grid.action.details">查看该项目</message>
+	<message key="grid.action.enrolExisting">选择现有用户为审稿人</message>
+	<message key="grid.action.selectCreate">创立新审稿人</message>
+	<message key="grid.action.advancedSearch">高级搜索</message>
+	<message key="grid.action.viewMetadata">查看该提交文章的元数据</message>
+	<message key="grid.action.sendReminder">向用户发送任务提醒</message>
+	<message key="grid.action.newRound">创立新一轮</message>
+	<message key="grid.action.viewReviewGuidelines">查看审查指南</message>
+	<message key="grid.action.viewCompetingInterestGuidelines">查看竞争利益指南政策</message>
+	<message key="grid.action.thankReviewer">向审稿人发送感谢信</message>
+	<message key="grid.action.uploadFile">上传文件</message>
+	<message key="grid.action.addAnnouncementType">添加公告类型</message>
+	<message key="grid.action.addAnnouncement">添加公告</message>
+	<message key="grid.task.status.completed">该任务完成</message>
+	<message key="grid.task.status.new">这是新项目需要您注意</message>
+	<message key="grid.task.status.uploaded">列标题标明该文件的上传者</message>
+	<message key="grid.columns.auditor">审计者</message>
+	<message key="grid.columns.locale">地点</message>
+	<message key="grid.action.addSponsor">添加赞助人</message>
+	<message key="grid.action.deleteSponsor">消除赞助人</message>
+	<message key="grid.action.editSponsor">编辑赞助人</message>
+	<message key="grid.action.addSeries">添加系列</message>
+	<message key="grid.action.editSeries">编辑系列</message>
+	<message key="grid.action.deleteSeries">消除系列</message>
+	<message key="grid.action.addCategory">添加范畴</message>
+	<message key="grid.action.editCategory">编辑范畴</message>
+	<message key="grid.action.deleteCategory">消除范畴</message>
+	<message key="grid.action.addContributor">添加合著者</message>
+	<message key="grid.action.editContributor">编辑合著者</message>
+	<message key="grid.action.deleteContributor">消除合著者</message>
+	<message key="grid.genres.title">体裁</message>
+	<message key="grid.genres.description">这些体裁用以对文件命名，并配置在上传文件的下拉清单中。指定的体裁## 允许用户将文件同整本书 99Z 关联或通过页码（如02）同特定章节进行关联。</message>
+	<message key="grid.noFiles">没有文件</message>
+	<message key="grid.libraryFiles.submission.title">提交信息库</message>
+	<message key="grid.libraryFiles.editorial.title">社论信息库</message>
+	<message key="grid.libraryFiles.review.title">审稿信息库</message>
+	<message key="grid.libraryFiles.production.title">作品信息库</message>
+	<message key="grid.libraryFiles.productionTemplate.title">作品模板信息库</message>
+	<message key="grid.roles.currentRoles">当前角色</message>
+	<message key="grid.user.error">在管理该用户时遇到错误。请重试。</message>
+	<message key="grid.user.errorEmail">在发送邮件时遇到错误。请确保您的邮箱服务器的配置处于工作状态和/或联系您的系统管理员。</message>
+	<message key="grid.user.cannotAdminister">您没有足够的权限来编辑该用户。</message>
+	<message key="grid.user.authSource">验证源</message>
+	<message key="grid.user.mustProvideName">请首先至少提供该用户的姓氏。</message>
+	<message key="grid.user.generatePassword">生成密码</message>
+	<message key="grid.user.generatePasswordDescription">为用户生成随机密码</message>
+	<message key="grid.user.notifyUser">通知用户</message>
+	<message key="grid.user.notifyUserDescription">向用户发送欢迎信。</message>
+	<message key="grid.user.mustChangePassword">更改密码</message>
+	<message key="grid.user.mustChangePasswordDescription">用户在下次登录时必须更改密码。</message>
+	<message key="grid.user.mustChangePasswordDescriptionOld">要求用户在下次登录时更改密码</message>
+	<message key="grid.user.moreDetails">更多用户详情</message>
+	<message key="grid.user.lessDetails">少量用户详情</message>
+	<message key="grid.user.userDetails">用户详情</message>
+	<message key="grid.user.userRoles">用户角色</message>
+	<message key="grid.user.userNoRoles">该用户没有任何角色。</message>
+	<message key="grid.preparedEmails.description">期刊通过预制邮件促进工作流程和交流。默认的这些邮件模板可以在下面简便地进行更改。</message>
+	<message key="grid.action.mergeUser">合并用户</message>
+	<message key="grid.action.unassignUser">取消指定用户</message>
+	<message key="grid.action.history">查看历史</message>
+	<message key="grid.task.status.unfinished">未完成的审稿</message>
+	<message key="grid.task.status.reviewReady">审稿完毕。点击左侧的通知按钮进行阅读。</message>
+</locale>

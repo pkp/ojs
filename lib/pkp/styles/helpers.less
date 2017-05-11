@@ -1,0 +1,486 @@
+/**
+ * @file styles/helpers.less
+ *
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @brief Helper classes
+ *
+ */
+
+// Buttons
+.pkp_button {
+	display: inline-block;
+	padding: 7px @base;
+	vertical-align: middle;
+	background-color: #eee;
+	background-image: linear-gradient(#eee, #ddd);
+	border: 1px solid #ccc;
+	border-radius: @radius;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.1), inset 0 1px 1px rgba(255,255,255,0.6);
+	font-size: @font-tiny;
+	font-weight: @bold;
+	line-height: @line-tiny;
+	color: @text-rgba;
+	text-shadow: 0 2px 0 rgba(255,255,255,0.6);
+	cursor: pointer;
+	text-decoration: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-appearance: none;
+
+	&:hover,
+	&:focus {
+		background-color: #fff;
+		background-image: linear-gradient(#fff, #ddd);
+		color: #000;
+	}
+
+	&:active {
+		background-color: #ddd;
+		background-image: linear-gradient(#eee, #ccc);
+	}
+
+	&[disabled] {
+		opacity: 0.5;
+		cursor: default;
+	}
+}
+
+.pkp_button_primary {
+	&:extend(.pkp_button);
+	background-color: @primary;
+	background-image: linear-gradient( lighten( @primary, 10% ), @primary );
+	box-shadow: 0 1px 2px rgba(0,0,0,0.1), inset 0 1px 1px rgba(255,255,255,0.4);
+	color: #fff;
+	text-shadow: 0 2px 0 rgba(0,0,0,0.2);
+	border-color: @primary;
+
+	&:hover,
+	&:focus {
+		text-decoration: none;
+		background-color: @primary-lift;
+		background-image: linear-gradient( lighten( @primary, 20% ), darken( @primary, 5% ) );
+		color: #fff;
+	}
+
+	&:active {
+		background-color: darken( @primary, 10% );
+		background-image: linear-gradient( lighten( @primary, 5% ), darken( @primary, 15% ) );
+	}
+
+	&[disabled] {
+		&:extend(.pkp_button[disabled]);
+	}
+}
+
+.pkp_button_offset {
+	&:extend(.pkp_button);
+	background-color: @offset;
+	background-image: linear-gradient( lighten( @offset, 10% ), @offset );
+	box-shadow: 0 1px 2px rgba(0,0,0,0.1), inset 0 1px 1px rgba(255,255,255,0.4);
+	color: #fff;
+	text-shadow: 0 2px 0 rgba(0,0,0,0.2);
+	border-color: @offset;
+
+	&:hover,
+	&:focus {
+		text-decoration: none;
+		background-color: darken( @offset, 5% );
+		background-image: linear-gradient( lighten( @offset, 20% ), darken( @offset, 5% ) );
+		color: #fff;
+	}
+
+	&:active {
+		background-color: darken( @offset, 10% );
+		background-image: linear-gradient( lighten( @offset, 5% ), darken( @offset, 15% ) );
+	}
+
+	&[disabled] {
+		&:extend(.pkp_button[disabled]);
+	}
+}
+
+.pkp_button_link {
+	display: inline-block;
+	padding: 7px @base;
+	vertical-align: middle;
+	font-size: @font-tiny;
+	font-weight: @bold;
+	line-height: @line-tiny;
+	color: @primary;
+	text-shadow: 0 2px 0 rgba(255,255,255,0.6);
+	cursor: pointer;
+	text-decoration: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-appearance: none;
+
+	&:hover,
+	&:focus {
+		color: @primary-lift;
+	}
+
+	&:active {
+		color: @primary-shade;
+	}
+
+	&[disabled] {
+		opacity: 0.5;
+		cursor: default;
+	}
+}
+
+.pkp_button_link_offset {
+	&:extend(.pkp_button_link all);
+	color: @offset;
+
+	&:hover,
+	&:focus {
+		color: @offset-lift;
+	}
+
+	&:active {
+		color: @offset-shade;
+	}
+}
+
+// Spinner
+.pkp_spinner {
+
+	&:after {
+		display: inline-block;
+		position: relative;
+		width: 20px;
+		height: 20px;
+		vertical-align: middle;
+		.animation( pkp_spin .6s linear infinite );
+		border-radius: 100%;
+		border-top: 1px solid @shade;
+		border-bottom: 1px solid transparent;
+		border-left: 1px solid @shade;
+		border-right: 1px solid transparent;
+		border-top-color: rgba(0,0,0,0.5);
+		border-left-color: rgba(0,0,0,0.5);
+		content: '';
+		opacity: 0.5;
+	}
+}
+
+// Loading component
+.pkp_loading {
+	font-size: @font-sml;
+	line-height: @line-sml;
+
+	.pkp_spinner {
+		margin-right: 0.25em;
+	}
+}
+
+// An unstyled list with default margins, padding and list-style remove
+.pkp_unstyled_list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+// CSS triangle
+// To use, extend .pkp_caret and a direction, like .pkp_caret_down
+.pkp_caret {
+	content: ' ';
+	display: inline-block;
+	width: 0;
+	height: 0;
+	border: 4px solid transparent;
+	vertical-align: middle;
+}
+
+.pkp_caret_down {
+	border-top: 6px solid;
+}
+
+.pkp_caret_right {
+	border-left: 6px solid;
+}
+
+// Screen-reader text
+.pkp_screen_reader {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	left: -2000px;
+
+	&:focus {
+		background-color: #fff;
+		border-radius: 3px;
+		box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+		-webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+		clip: auto !important;
+		color: #000;
+		display: block;
+		font-size: @font-base;
+		height: auto;
+		line-height: normal;
+		padding: @base;
+		position: absolute;
+		left: @half;
+		top: @half;
+		text-decoration: none;
+		width: auto;
+		z-index: 100000;
+	}
+}
+
+// @todo Set this to .pkp_helpers_clear() with parentheses once the class is no
+// longer used anywhere in the markup, so it doesn't print into the rendered
+// stylesheet.
+.pkp_helpers_clear {
+	&:before,
+	&:after {
+		content: " ";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+// A help link
+.pkp_help_link {
+	display: inline-block;
+	padding: 4px 0;
+	font-size: @font-tiny;
+	line-height: @line-tiny;
+	font-weight: @bold;
+	text-decoration: none;
+
+	&:before {
+		&:extend(.fa);
+		content: @fa-var-info-circle;
+		color: @yes;
+		margin-right: 0.5em;
+	}
+
+	&:hover:before,
+	&:focus:before {
+		color: @yes-lift;
+	}
+}
+
+// A small help link that attaches to a tab
+.pkp_help_tab {
+	position: absolute;
+	top: -@double;
+	right: @double;
+	padding: @half 1em;
+	background: @lift;
+	border-top-left-radius: @radius;
+	border-top-right-radius: @radius;
+}
+
+.pkp_help_modal {
+	&:extend(.pkp_help_tab);
+	top: @double;
+	right: @double * 2;
+}
+
+// Summary of an uploaded file
+.pkp_uploadedFile_summary {
+	font-size: @font-sml;
+	line-height: @line-sml;
+
+	.filename {
+		&:extend(.pkp_form .section > .label);
+
+		.display {
+			line-height: @double;
+		}
+
+		.edit {
+			line-height: @line-sml;
+		}
+	}
+
+	.details {
+		margin-top: @half;
+		color: @text-light;
+
+		> span {
+			margin-left: @double;
+
+			&:first-child {
+				margin-left: 0;
+			}
+
+			&:before {
+				&:extend(.fa);
+				padding-right: 0.25em;
+				color: #aaa;
+			}
+		}
+	}
+
+	.pixels:before {
+		content: @fa-var-desktop;
+	}
+
+	.print {
+		margin-left: @double;
+
+		&:before {
+			&:extend(.fa);
+			padding-right: 0.25em;
+			color: #aaa;
+			content: @fa-var-print;
+		}
+	}
+
+	.type:before {
+		content: @fa-var-file-o;
+	}
+
+	.type.pdf:before {
+		content: @fa-var-file-pdf-o;
+	}
+
+	.type.doc:before,
+	.type.docx:before {
+		content: @fa-var-file-word-o;
+	}
+
+	.type.xls:before,
+	.type.xlsx:before {
+		content: @fa-var-file-excel-o;
+	}
+
+	.file_size:before {
+		content: @fa-var-hdd-o;
+	}
+}
+
+// @todo from here on down needs to be evaluated and removed if not useful
+.pkp_helpers_invisible {
+	visibility: hidden;
+}
+
+.pkp_helpers_display_none {
+	display: none !important;
+}
+
+.pkp_helpers_align_left {
+	float: left;
+}
+
+.pkp_helpers_align_right {
+	float: right;
+}
+
+.pkp_helpers_text_left {
+	text-align: left;
+}
+
+.pkp_helpers_text_right {
+	text-align: right;
+}
+
+.pkp_helpers_text_center {
+	text-align: center;
+}
+
+.pkp_helpers_text_justify {
+	text-align: justify;
+}
+
+.pkp_helpers_title_padding {
+	padding: 5px !important;
+}
+
+.pkp_helpers_image_left {
+	float: left;
+	margin: 4px 10px 4px 0;
+}
+
+.pkp_helpers_image_right {
+	float: right;
+	margin: 4px 0 4px 10px;
+}
+
+.pkp_helpers_container_center {
+	margin: 0 auto;
+}
+
+.pkp_helpers_debug, .pkp_helpers_debug div {
+	border: 1px dashed red;
+	padding: 2px;
+}
+
+.pkp_helpers_flatlist {
+	margin: 0;
+	padding: 0;
+
+	li {
+		float: left;
+		position: relative;
+	}
+}
+
+.pkp_helpers_bulletlist {
+	li {
+		list-style: disc;
+	}
+}
+
+.pkp_helpers_icon_link_valign {
+	line-height:24px;
+}
+
+.pkp_helpers_moveicon {
+	cursor: move;
+}
+
+.pkp_helpers_full {
+	width: 100%;
+}
+
+.pkp_helpers_half {
+	width: 50%;
+}
+
+.pkp_helpers_third {
+	width: 33%;
+}
+
+.pkp_helpers_quarter {
+	width: 25%;
+}
+
+.pkp_helpers_fifth {
+	width: 20%;
+}
+
+.pkp_helpers_threeQuarter {
+	width: 75%;
+}
+
+.pkp_helpers_underline:after {
+	border-bottom: 2px solid white;
+	content: " ";
+	display: block;
+}
+
+.pkp_helpers_dotted_underline {
+	border-bottom: 1px dotted #999;
+}
+
+.pkp_helpers_black_bg {
+	background-color: black;
+}
+
+li.show {
+	list-style: disc;
+	margin-left: 1px;
+}

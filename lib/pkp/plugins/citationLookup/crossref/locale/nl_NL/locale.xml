@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../dtd/locale.dtd">
+
+<!--
+  * plugins/citationLookup/crossref/locale/nl_NL/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="nl_NL" full_name="Nederlands">
+	<message key="plugins.citationLookup.crossref.displayName">CrossRef Database Connector</message>
+	<message key="plugins.citationLookup.crossref.description">Verbinding met de CrossRef bibliographic database.</message>
+</locale>

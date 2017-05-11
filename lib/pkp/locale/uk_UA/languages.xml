@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE languages SYSTEM "../../dtd/languages.dtd">
+<!--
+  * locale/uk_UA/languages.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the uk_UA (Українська) locale.
+  *
+  * Translated by Denys Solovianenko, 2010-2011
+  * V. I. Vernadsky National Library of Ukraine
+  *
+  -->
+<languages>
+	<language code="ab" name="Абхазька"/>
+	<language code="aa" name="АФар"/>
+	<language code="af" name="Африкаанс"/>
+	<language code="ak" name="Акан"/>
+	<language code="sq" name="Албанська"/>
+	<language code="am" name="Амхарська"/>
+	<language code="ar" name="Арабська"/>
+	<language code="an" name="Арагонська"/>
+	<language code="hy" name="Вірменська"/>
+	<language code="as" name="Асамська"/>
+	<language code="av" name="Аварська"/>
+	<language code="ae" name="Авестійська"/>
+	<language code="ay" name="Аймара"/>
+	<language code="az" name="Азербайджанська"/>
+	<language code="bm" name="Бамбара"/>
+	<language code="ba" name="Башкирська"/>
+	<language code="eu" name="Баскська"/>
+	<language code="be" name="Білоруська"/>
+	<language code="bn" name="Бенгальська"/>
+	<language code="bh" name="Біхарі"/>
+	<language code="bi" name="Біслама"/>
+	<language code="bs" name="Боснійська"/>
+	<language code="br" name="Бретонська"/>
+	<language code="bg" name="Болгарська"/>
+	<language code="my" name="Бірманська"/>
+	<language code="ca" name="Каталонська"/>
+	<language code="km" name="Кхмерська"/>
+	<language code="ch" name="Чаморро"/>
+	<language code="ce" name="Чеченська"/>
+	<language code="ny" name="Ньянджа"/>
+	<language code="zh" name="Китайська"/>
+	<language code="cu" name="Церковнослов'янська"/>
+	<language code="cv" name="Чуваська"/>
+	<language code="kw" name="Корнська"/>
+	<language code="co" name="Корсиканська"/>
+	<language code="cr" name="Мова крі"/>
+	<language code="hr" name="Хорватська"/>
+	<language code="cs" name="Чеська"/>
+	<language code="da" name="Данська"/>
+	<language code="dv" name="Мальдівська"/>
+	<language code="nl" name="Нідерландська"/>
+	<language code="dz" name="Дзонґ-ке"/>
+	<language code="en" name="Англійська"/>
+	<language code="eo" name="Есперанто"/>
+	<language code="et" name="Естонська"/>
+	<language code="ee" name="Еве"/>
+	<language code="fo" name="Фарерська"/>
+	<language code="fj" name="Фіджійська"/>
+	<language code="fi" name="Фінська"/>
+	<language code="fr" name="Французька"/>
+	<language code="ff" name="Фула"/>
+	<language code="gl" name="Галісійська"/>
+	<language code="lg" name="Луганда"/>
+	<language code="ka" name="Грузинська"/>
+	<language code="de" name="Німецька"/>
+	<language code="el" name="Грецька"/>
+	<language code="gn" name="Гуарані"/>
+	<language code="gu" name="Гуджараті"/>
+	<language code="ht" name="Гаїтянська креольська"/>
+	<language code="ha" name="Хауса"/>
+	<language code="he" name="Іврит"/>
+	<language code="hz" name="Гереро"/>
+	<language code="hi" name="Гінді"/>
+	<language code="ho" name="Гірі-моту"/>
+	<language code="hu" name="Угорська"/>
+	<language code="is" name="Ісландська"/>
+	<language code="io" name="Ідо"/>
+	<language code="ig" name="Ігбо"/>
+	<language code="id" name="Індонезійська"/>
+	<language code="ia" name="Інтерлінгва"/>
+	<language code="ie" name="Окциденталь"/>
+	<language code="iu" name="Інуктитут"/>
+	<language code="ik" name="Аляскинсько-інуїтська"/>
+	<language code="ga" name="Ірландська"/>
+	<language code="it" name="Італійська"/>
+	<language code="ja" name="Японська"/>
+	<language code="jv" name="Яванська"/>
+	<language code="kl" name="Ґренландська"/>
+	<language code="kn" name="Каннада"/>
+	<language code="kr" name="Канурі"/>
+	<language code="ks" name="Кашмірська"/>
+	<language code="kk" name="Казахська"/>
+	<language code="ki" name="Кікуйю"/>
+	<language code="rw" name="Руандійська"/>
+	<language code="ky" name="Киргизька"/>
+	<language code="kv" name="Комі"/>
+	<language code="kg" name="Конго"/>
+	<language code="ko" name="Корейська"/>
+	<language code="kj" name="Кваньяма"/>
+	<language code="ku" name="Курдська"/>
+	<language code="lo" name="Лаоська"/>
+	<language code="la" name="Латина"/>
+	<language code="lv" name="Латиська"/>
+	<language code="li" name="Лімбурзька"/>
+	<language code="ln" name="Лінґала"/>
+	<language code="lt" name="Литовська"/>
+	<language code="lu" name="Луба-Катанга"/>
+	<language code="lb" name="Люксембурзька"/>
+	<language code="mk" name="Македонська"/>
+	<language code="mg" name="Малагасійська"/>
+	<language code="ms" name="Малайська"/>
+	<language code="ml" name="Малаялам"/>
+	<language code="mt" name="Мальтійська"/>
+	<language code="gv" name="Менська"/>
+	<language code="mi" name="Маорі"/>
+	<language code="mr" name="Маратхі"/>
+	<language code="mh" name="Маршальська"/>
+	<language code="mo" name="Молдавська"/>
+	<language code="mn" name="Монгольська"/>
+	<language code="na" name="Науруанська"/>
+	<language code="nv" name="Навахо"/>
+	<language code="ng" name="Ндонга"/>
+	<language code="ne" name="Непальська"/>
+	<language code="nd" name="Північне ндебеле"/>
+	<language code="se" name="Північносаамська"/>
+	<language code="no" name="Норвезька"/>
+	<language code="nb" name="Норвезька букмол"/>
+	<language code="nn" name="Норвезька нюношк"/>
+	<language code="oc" name="Окситанська"/>
+	<language code="oj" name="Оджибва"/>
+	<language code="or" name="Орія"/>
+	<language code="om" name="Оромо"/>
+	<language code="os" name="Осетинська"/>
+	<language code="pi" name="Палі"/>
+	<language code="pa" name="Пенджабська"/>
+	<language code="fa" name="Перська"/>
+	<language code="pl" name="Польська"/>
+	<language code="pt" name="Португальська"/>
+	<language code="ps" name="Пушту"/>
+	<language code="qu" name="Кечуа"/>
+	<language code="ro" name="Румунська"/>
+	<language code="rm" name="Ретороманська"/>
+	<language code="rn" name="Кірунді"/>
+	<language code="ru" name="Російська"/>
+	<language code="ry" name="Русинська"/>
+	<language code="sm" name="Самоанська"/>
+	<language code="sg" name="Санго"/>
+	<language code="sa" name="Санскрит"/>
+	<language code="sc" name="Сардська"/>
+	<language code="gd" name="Шотландська гельська"/>
+	<language code="sr" name="Сербська"/>
+	<language code="sh" name="Сербсько-хорватська"/>
+	<language code="sn" name="Шонська"/>
+	<language code="ii" name="Сичуань Йї"/>
+	<language code="sd" name="Сіндхі"/>
+	<language code="si" name="Сингальська"/>
+	<language code="sk" name="Словацька"/>
+	<language code="sl" name="Словенська"/>
+	<language code="so" name="Сомалійська"/>
+	<language code="st" name="Південний сото"/>
+	<language code="nr" name="Південне ндебеле"/>
+	<language code="es" name="Іспанська"/>
+	<language code="su" name="Сунданська"/>
+	<language code="sw" name="Суахілі"/>
+	<language code="ss" name="Сваті"/>
+	<language code="sv" name="Шведська"/>
+	<language code="tl" name="Тагальська"/>
+	<language code="ty" name="Таїтянська"/>
+	<language code="tg" name="Таджицька"/>
+	<language code="ta" name="Тамільська"/>
+	<language code="tt" name="Татарська"/>
+	<language code="te" name="Телуґу"/>
+	<language code="th" name="Тайська"/>
+	<language code="bo" name="Тибетська"/>
+	<language code="ti" name="Тигринья"/>
+	<language code="to" name="Тонганська"/>
+	<language code="ts" name="Тсонга"/>
+	<language code="tn" name="Сетсвана"/>
+	<language code="tr" name="Турецька"/>
+	<language code="tk" name="Туркменська"/>
+	<language code="tw" name="Акан"/>
+	<language code="ug" name="Уйгурська"/>
+	<language code="uk" name="Українська"/>
+	<language code="ur" name="Урду"/>
+	<language code="uz" name="Узбецька"/>
+	<language code="ve" name="Венда"/>
+	<language code="vi" name="В'єтнамська"/>
+	<language code="vo" name="Волапюк"/>
+	<language code="wa" name="Валлонська"/>
+	<language code="cy" name="Валлійська"/>
+	<language code="fy" name="Фризька"/>
+	<language code="wo" name="Волоф"/>
+	<language code="xh" name="Коса"/>
+	<language code="yi" name="Їдиш"/>
+	<language code="yo" name="Йоруба"/>
+	<language code="za" name="Чжуанська"/>
+	<language code="zu" name="Зулу"/>
+</languages>

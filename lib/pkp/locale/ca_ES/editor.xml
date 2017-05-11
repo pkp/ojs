@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/ca_ES/editor.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Credits: https://pkp.sfu.ca/wiki/index.php?title=OMP:_Catalan_(ca_ES)
+  * Localization strings.
+  -->
+
+<locale name="ca_ES" full_name="Català">
+	<message key="editor.submissionLibrary.description"><![CDATA[Carregueu documents que pertanyin a la revisió i publicació d'aquesta tramesa. Les plantilles per a molts d'aquests documents les podeu trobar fent clic a <em>Veure la biblioteca de documents</em>.]]></message>
+	<message key="editor.review.notInitiated">El procés de revisió encara no s'ha iniciat.</message>
+	<message key="editor.submission.copyediting.personalMessageToUser">Missatge per a l'usuari/ària</message>
+	<message key="editor.submission.externalReviewDescription">Esteu a punt d'iniciar una avaluació externa per a aquesta tramesa.  Els fitxers que formen part de la tramesa s'enumeren a sota i els podeu seleccionar per revisar-los.</message>
+	<message key="editor.submission.review.reviewFilesDescription"><![CDATA[Aquests són els fitxers que es poden seleccionar per a la revisió, quan s'afegeixin revisors/ores a l'apartat <span class="pkp_help_title">Revisors/ores</span>]]>.</message>
+	<!-- Add file or auditor to editor/audit grids -->
+	<message key="editor.submission.fileAuditor.form.fileRequired">Heu de seleccionar almenys un fitxer per assignar a l'usuari/ària.</message>
+	<message key="editor.submission.fileAuditor.form.messageRequired">Heu d'incloure-hi un missatge personal.</message>
+	<message key="editor.submission.fileAuditor.skipEmail">No envieu un correu electrònic a l'auditor/a</message>
+	<message key="editor.submission.fileAuditor.form.userRequired">Heu de seleccionar un usuari a qui assignar-lo.</message>
+	<message key="editor.submission.uploadSelectFiles">Carrega/Selecciona fitxers</message>
+	<message key="editor.submission.revisions">Revisions</message>
+	<message key="editor.submission.revisionsDescription">Els fitxers de les trameses revisades apareixen aquí, amb la icona de carpeta oberta que indica qui ha carregat el fitxer.</message>
+	<message key="editor.submission.review.reviewersDescription"><![CDATA[Utilitzeu <em>+Afegir revisor/a</em> per convidar lectors/ores a revisar els fitxers tramesos. La icona de la llibreta indica que s'ha enviat una revisió, que després es marca com a <em>Revisada</em> quan s'ha revisat. Quan hi hagi comentaris endarrerits, apareixerà una icona de sobres vermells com a recordatori per als revisors/ores.]]></message>
+	<message key="editor.submission.addReviewer">Afegeix un revisor/a</message>
+	<message key="editor.submission.fileList.includeAllStages">Inclou tots els fitxers de totes les fases accessibles del circuit de treball.</message>
+	<message key="editor.submission.review.currentFiles">Últim fitxer de revisions per ronda {$round}</message>
+	<message key="editor.submission.returnToSimpleSearch">Tornar a la cerca simple</message>
+	<message key="editor.review.createReviewer">Crea un revisor/a nou</message>
+	<message key="editor.review.enrollReviewer.short">Assigna un rol a un usuari/ària existent</message>
+	<message key="editor.review.unassignReviewer">Desassigna un revisor/a</message>
+	<message key="editor.submissionReview.reviewType">Tipus de revisió</message>
+	<message key="editor.submissionReview.skipEmail">No envieu un correu electrònic a l'autor</message>
+	<message key="editor.submissionReview.open">Oberts</message>
+	<message key="editor.submissionReview.blind">Cegament</message>
+	<message key="editor.submissionReview.doubleBlind">Doble cegament</message>
+	<message key="editor.submissionReview.restrictFiles">Restringiu els fitxers disponibles</message>
+	<message key="editor.submissionReview.restrictFiles.gridTitle">Fitxers disponibles per a revisió</message>
+	<message key="editor.submissionReview.limitFiles">Administreu el fitxers disponibles</message>
+	<message key="editor.submissionReview.limitFiles.link">Fitxers</message>
+	<message key="editor.submissionReview.restrictFiles.gridDescription">En cas que a aquest revisor/a no se li hagi de proporcionar accés a tots els fitxers de revisió de la llista, comproveu que estiguin seleccionats només els fitxers rellevants.</message>
+	<message key="editor.review.personalMessageToReviewer">Correu electrònic per enviar al revisor/a</message>
+	<message key="editor.review.importantDates">Dates importants</message>
+	<message key="editor.review.uploadRevision">Carrega revisió</message>
+	<message key="editor.review.NotifyAuthorAccept">Notifica l'acceptació a l'autor/a:</message>
+	<message key="editor.review.NotifyAuthorDecline">Notifica l'autor/a de la decisió de rebutjar la tramesa:</message>
+	<message key="editor.review.NotifyAuthorRevisions">Notifica l'autor/a la necessitat de fer revisions:</message>
+	<message key="editor.review.NotifyAuthorResubmit">Notifica l'autor/a la necessitat de fer revisions amb necessitat d'una altra revisió més exhaustiva:</message>
+	<message key="editor.review.NotifyAuthorExternal">Notifica l'autor/a la decisió de dirigir una revisió externa:</message>
+	<message key="editor.review.personalMessageToAuthor">Correu electrònic per enviar a l'autor/a</message>
+	<message key="editor.review.dateAccepted">Data d'acceptació de la revisió</message>
+	<message key="editor.review.noReviews">No hi ha revisions per importar</message>
+	<message key="editor.review.reminder">Recordatori de revisió</message>
+	<message key="editor.review.thankReviewer">Agrair al revisor/a</message>
+	<message key="editor.review.reminderError">Hi ha hagut un error en enviar un recordatori al revisor/a</message>
+	<message key="editor.review.thankReviewerError">Hi ha hagut un error en enviar un agraïment al revisor/a</message>
+	<message key="editor.review.skipEmail">No envieu un correu electrònic al revisor/a</message>
+	<message key="editor.review.sendReminder">Envia un recordatori</message>
+	<message key="editor.review.reviewDueDate">Data de venciment de la revisió</message>
+	<message key="editor.review.reviewCompleted">S'ha completat la revisió</message>
+	<message key="editor.review.reviewerComments">Comentaris del revisor/a</message>
+	<message key="editor.review.days">Mitjana de dies</message>
+	<message key="editor.review.mustSelect">Heu de seleccionar un revisor/a</message>
+	<message key="editor.review.errorAddingReviewer">Hi ha hagut un error en afegir un revisor/a.  Torneu-ho a intentar.</message>
+	<message key="editor.review.errorDeletingReviewer">Hi ha hagut un error en eliminar un revisor/a.  Torneu-ho a intentar.</message>
+	<message key="editor.review.userGroupSelect">Atorgueu un rol a l'usuari/ària amb aquest grup d'usuaris/àries revisors/ores</message>
+	<message key="editor.review.unconsiderReviewText">Esteu segur/a que voleu marcar aquesta revisió com a rebutjada?  Aquest historial de revisió es conservarà.</message>
+	<message key="editor.review.unconsiderReview">Rebutjar aquesta revisió</message>
+	<message key="editor.review.readConfirmation">Un cop us hagueu llegit aquesta revisió, premeu «Confirma» per indicar que aquesta revisió pot continuar.</message>
+	<message key="editor.submission.selectCopyedingFiles">Fitxers de correcció</message>
+	<message key="editor.submission.selectReviewer">Selecciona un revisor/a</message>
+	<message key="editor.submission.taskDueDate">Data de venciment de la tasca</message>
+	<message key="editor.submission.taskSchedule">Planificació de la tasca</message>
+	<message key="editor.review.enrollReviewer">Dóna d'alta un usuari/ària existent com a revisor/a</message>
+	<message key="editor.submission.editorial.introduction"><![CDATA[A Editorial, el corrector/a treballa en esborranys finals abans de carregar els fitxers a <span class="pkp_help_title">Correcció</span>, on l'autor/a i d'altres els revisaran de cara a preparar i carregar una còpia de la tramesa corregida a <span class="pkp_help_title">Correcció</span>, on l'editor/a la marcarà com a <em>Aprovada</em> i l'enviarà a la fase de Producció.]]></message>
+	<message key="editor.submission.noAuditRequested">Aquest fitxer no requereix cap auditoria</message>
+	<message key="editor.submission.personalMessageToUser">Correu electrònic que s'enviarà a l'usuari/ària</message>
+	<message key="editor.submission.proof.reminder">Recordatori de prova</message>
+	<message key="editor.submission.editorial.approveCopyeditDescription">El fitxer corregit ha d'aprovar-se abans d'enviar-se a la fase de producció. Voleu aprovar aquest fitxer?</message>
+	<message key="editor.submission.editorial.disapproveCopyeditDescription">Si rebutjeu aquest fitxer corregit no podreu enviar-lo a la fase de producció. Voleu marcar aquest fitxer com a desaprovat?</message>
+	<message key="editor.submission.editorial.approveCopyeditFile">Aprova el fitxer corregit</message>
+	<message key="editor.submission.addAuditor">Assigna un auditor/a</message>
+	<message key="editor.submission.editorial.copyeditingDescription"><![CDATA[Assigneu els fitxers corregits als autors/ores (i a d'altres, segons calgui) per revisar els canvis i contestar les consultes, les seves respostes de les qualsapareixen a la icona de la llibreta juntament amb els fitxers carregats. Aquests fitxers s'han marcat com a <em>Aprovats</em> pel corrector/a, el qual prepararà una còpia neta corregida per carregar a <span class="pkp_help_title">Correcció</span>, que l'editor/a comprovarà i enviarà a la fase de producció.]]></message>
+	<message key="editor.submission.final.manageFinalDraftFilesDescription">Tots els fitxers que ja s'hagin carregat a qualsevol fase de tramesa es poden afegir a la llista de Fitxers d'esborrany finals en seleccionar la casella Inclou i fer clic a Cercar: tots els fixers disponibles apareixeran en una llista i es podran triar per incloure'ls. Els fitxers addicionals que no s'hagin carregat a cap fase es poden afegir a la llista fent clic a l'enllaç Carrega un esborrany final.</message>
+	<message key="editor.review">Revisió</message>
+	<message key="editor.signoff.approved">Aprovat</message>
+	<message key="editor.submission.production.productionReadyFiles">Fitxers preparats per a producció</message>
+	<message key="editor.submission.newRound">Nova ronda de revisió</message>
+	<message key="editor.submission.selectAttachments">Selecciona els arxius adjunts de revisió perquè l'autor/a els vegi</message>
+	<message key="editor.submissionReview.recordDecision">Enregistra la decisió de l'editor/a</message>
+	<message key="editor.submission.selectFairCopy">Selecciona els fitxers amb correcció aprovats i envia'ls a producció.</message>
+	<message key="editor.submission.newRoundDescription">Esteu a punt de crear una nova ronda de revisió per aquesta tramesa.  Els fitxers que no hagin estat utilitzats a d'altres rondes de revisió s'indiquen a continuació.  Per defecte, els revisors/ores de la ronda de revisió anterior s'han seleccionat per participar en aquesta nova ronda de revisió.</message>
+	<message key="editor.submission.createNewRound">Crea una nova ronda de revisió</message>
+	<message key="editor.submission.review.manageReviewFilesDescription">Tots els fitxers que ja s'hagin carregat a qualsevol fase de tramesa (incloses Editorial i Producció) poden triar-se per a revisar en marcar l'opció Inclou a continuació i fer clic a Cercar: tots els fitxers disponibles apareixeran en una llista i es podran triar per incloure'ls. Els fitxers addicionals que no s'hagin carregat a cap fase es poden afegir a la llista fent clic a l'enllaç Carrega una revisió final.</message>
+	<message key="editor.submission.selectPromoteRevisions">Selecciona revisions per utilitzar a la propera fase</message>
+	<message key="editor.submission.noReviewerFilesSelected">No hi ha fitxers seleccionats</message>
+	<message key="editor.submission.noReviewerFilesSelected.details">No heu seleccionat cap fitxer perquè el revisor/a el revisi.</message>
+</locale>

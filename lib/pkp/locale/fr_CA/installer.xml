@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/fr_CA/installer.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the fr_CA (Français (Canada)) locale.
+  *
+  -->
+
+<locale name="fr_CA" full_name="Français (Canada)">
+	<message key="installer.additionalLocales">Langues supplémentaires</message>
+	<message key="installer.administratorAccount">Compte administrateur</message>
+	<message key="installer.administratorAccountInstructions">Ce compte utilisateur deviendra l'administrateur du site et aura le plein accès à tout le système. D'autres comptes utilisateurs peuvent être créés après l'installation.</message>
+	<message key="installer.checkNo"><![CDATA[<span class="pkp_form_error formError">NON</span>]]></message>
+	<message key="installer.checkYes">Oui</message>
+	<message key="installer.clientCharset">Jeu de caractères du client</message>
+	<message key="installer.clientCharsetInstructions">L'encodage à utiliser pour les données envoyées et reçues des navigateurs.</message>
+	<message key="installer.configFileError"><![CDATA[Le fichier de configuration <tt>config.inc.php</tt> n'existe pas ou n'est pas lisible.]]></message>
+	<message key="installer.connectionCharset">Jeu de caractères pour la connexion</message>
+	<message key="installer.contentsOfConfigFile">Contenu du fichier de configuration</message>
+	<message key="installer.createDatabase">Créer une nouvelle base de données</message>
+	<message key="installer.createDatabaseInstructions">Pour utiliser cette option, votre système de base de données doit prendre en charge la création d'une base de données distante et votre compte utilisateur doit être muni des permissions appropriées pour créer de nouvelles bases de données. Si l'installation ne réussit pas avec cette option sélectionnée, créer manuellement la base de données sur votre serveur et passer l'installateur encore une fois avec cette option désactivée.</message>
+	<message key="installer.databaseCharset">Jeu de caractères de la base de données</message>
+	<message key="installer.databaseDriver">Pilote de la base de données</message>
+	<message key="installer.databaseDriverInstructions"><![CDATA[<strong>Les pilotes de bases de données qui sont listés entre crochets ne semblent pas avoir chargé l'extension PHP requise et l'installation risque donc d'échouer s'ils sont sélectionnés.</strong><br />Tous les pilotes de bases de données qui ne sont pas pris en charge, tel indiqué ci-dessus, sont listés uniquement à des fins académiques et ne fonctionneront vraisemblablement pas.]]></message>
+	<message key="installer.databaseHost">Hébergeur</message>
+	<message key="installer.databaseHostInstructions">Laisser le nom de l'hébergeur vide pour se connecter à l'aide de connecteurs logiciels de domaine au lieu de le faire par TCP/IP. Ce n'est pas nécessaire avec MySQL, qui utilisera automatiquement des connecteurs logiciels si "localhost" a été saisi, mais c'est obligatoire avec d'autres serveurs de bases de données tel que PostgreSQL.</message>
+	<message key="installer.databaseName">Nom de la base de données</message>
+	<message key="installer.databasePassword">Mot de passe</message>
+	<message key="installer.databaseSettings">Paramètres de la base de données</message>
+	<message key="installer.databaseUsername">Nom d'utilisateur</message>
+	<message key="installer.encryption">Algorithme d'encryptage des mots de passe</message>
+	<message key="installer.filesDir">Répertoire pour les téléchargements</message>
+	<message key="installer.fileSettings">Paramètres des fichiers</message>
+	<message key="installer.form.clientCharsetRequired">Un jeu de caractères client doit être sélectionné.</message>
+	<message key="installer.form.databaseDriverRequired">Un pilote de base de données doit être sélectionné.</message>
+	<message key="installer.form.databaseNameRequired">Le nom de la base de données est obligatoire.</message>
+	<message key="installer.form.emailRequired">Un courriel valide pour le compte administrateur est obligatoire.</message>
+	<message key="installer.form.encryptionRequired">L'algorithme à utiliser pour l'encryptage des mots de passe des utilisateurs doit être sélectionné.</message>
+	<message key="installer.form.filesDirRequired">Le répertoire à utiliser pour stocker les fichiers téléchargés est obligatoire.</message>
+	<message key="installer.form.localeRequired">Une langue doit être sélectionnée.</message>
+	<message key="installer.form.passwordRequired">Un mot de passe pour le compte administrateur est obligatoire.</message>
+	<message key="installer.form.passwordsDoNotMatch">Les mots de passe de l'administrateur ne correspondent pas.</message>
+	<message key="installer.form.separateMultiple">Séparer les valeurs multiples par une virgule</message>
+	<message key="installer.form.usernameAlphaNumeric">Le nom d'utilisateur de l'administrateur ne peut contenir que des caractères alphanumériques, traits de soulignement, et traits d'union, et doit commencer et se terminer par un caractère alphanumérique.</message>
+	<message key="installer.form.usernameRequired">Un nom d'utilisateur pour le compte administrateur est obligatoire.</message>
+	<message key="installer.installationWrongPhp"><![CDATA[<br/><strong>AVERTISSEMENT : Votre version actuelle de PHP ne satisfait pas aux exigences minimales d'installation. Nous vous recommandons de faire la mise à jour vers une version plus récente de PHP.</strong>]]></message>
+	<message key="installer.installErrorsOccurred">Des erreurs se sont produites pendant l'installation</message>
+	<message key="installer.installerSQLStatements">énoncés SQL pour l'installation</message>
+	<message key="installer.installFileError"><![CDATA[Le fichier d'installation <tt>dbscripts/xml/install.xml</tt> n'existe pas ou n'est pas lisible.]]></message>
+	<message key="installer.installFilesDirError">Le répertoire précisé pour les fichiers téléchargés n'existe pas ou n'est pas disponible en écriture.</message>
+	<message key="installer.installParseDBFileError"><![CDATA[Erreur d'analyse du fichier d'installation de la base de données <tt>{$file}</tt>.]]></message>
+	<message key="installer.locale">Langue</message>
+	<message key="installer.localeSettings">Paramètres de langue</message>
+	<message key="installer.oaiRepositoryIdInstructions"><![CDATA[Un identifiant unique utilisé pour identifier les enregistrements de métadonnées indexées à partir de ce site à l'aide du protocole<a href="http://www.openarchives.org/" target="_blank">Open Archives Initiative</a> pour la collecte de métadonnées.]]></message>
+	<message key="installer.oaiRepositoryId">Identifiant du dépôt OAI</message>
+	<message key="installer.publicFilesDirError">Le répertoire des fichiers publics n'existe pas ou n'est pas disponible en écriture.</message>
+	<message key="installer.releaseNotes">Instructions d'utilisation</message>
+	<message key="installer.securitySettings">Paramètres de sécurité</message>
+	<message key="installer.installParseEmailTemplatesFileError"><![CDATA[Une erreur s'est produite lors de l'analyse du fichier du modèle de courriel <tt>{$file}</tt>.]]></message>
+	<message key="installer.locale.maybeIncomplete">Les langues sélectionnées peuvent être incomplètes.</message>
+	<message key="installer.oaiSettings">Paramètres OAI</message>
+	<message key="installer.preInstallationInstructionsTitle">Étapes de pré-installation</message>
+	<message key="installer.encryptionInstructions">On recommande SHA1</message>
+	<message key="installer.installParseFilterConfigFileError"><![CDATA[Erreur de traitement du fichier de configuration du filtre <tt>{$file}</tt>.]]></message>
+	<message key="installer.unsupportedUpgradeError">Mise à niveau non supportée. Voir docs/UPGRADE-UNSUPPORTED pour les détails.</message>
+	<message key="installer.configureXSLMessage"><![CDATA[<p>Le module XSL de votre installation PHP n'est pas activé. Veuillez l'activer ou configurer le paramètre xslt_command de votre fichier config.inc.php.</p>]]></message>
+	<message key="installer.preInstallationInstructions"><![CDATA[<p>1. Les fichiers et repertoires suivants (et leur contenu) doivent être accessibles en écriture:</p>
+		<ul>
+			<li><tt>config.inc.php</tt> est accessible en écriture (optionnel): {$writable_config}</li>
+			<li><tt>public/</tt> est accessible en écriture : {$writable_public}</li>
+			<li><tt>cache/</tt> est accessible en écriture : {$writable_cache}</li>
+			<li><tt>cache/t_cache/</tt> est accessible en écriture : {$writable_templates_cache}</li>
+			<li><tt>cache/t_compile/</tt> est accessible en écriture : {$writable_templates_compile}</li>
+			<li><tt>cache/_db</tt> est accessible en écriture : {$writable_db_cache}</li>
+		</ul>
+
+		<p>2. Vous devez créer un repertoire pour conserver les fichiers téléchargés et il doit être accessible en écriture (voir "Paramètres du fichier" ci-dessous).</p>]]></message>
+	<message key="installer.beacon">Balise</message>
+	<message key="installer.beacon.enable">Procure un identifiant unique de site et un URL pour le protocole OAI pour PKP. Ceux-ci utilisés seulement pour des fins de statistiques et de sécurité.</message>
+</locale>

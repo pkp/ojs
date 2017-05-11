@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../dtd/locale.dtd">
+
+<!--
+  * plugins/metadata/nlm30/locale/nl_NL/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+ 
+<locale name="nl_NL" full_name="Nederlands">
+	<!-- plug-in -->
+	<message key="plugins.metadata.nlm30.displayName">NLM 3.0 metadata</message>
+	<message key="plugins.metadata.nlm30.description">Levert NLM 3.0 schema's en applicatie-adapters.</message>
+
+	<!-- citation meta-data adapter -->
+	<message key="plugins.metadata.nlm30.citationAdapter.displayName">NLM 3.0 Citatie-dapter</message>
+	<message key="plugins.metadata.nlm30.citationAdapter.description">Extraheert/injecteert metadata uit/in citaties.</message>
+
+	<!-- citation parsers (citation extraction services) -->
+	<message key="plugins.metadata.nlm30.citationParsers.displayName">Citatie-extractie diensten"</message>
+	<message key="plugins.metadata.nlm30.citationParsers.description">Converteert een tekstgebaseerde citatie naar NLM 3.0 element-citatie opmaak."</message>
+
+	<!-- citation lookup (citation database/improvement/lookup services) -->
+	<message key="plugins.metadata.nlm30.citationLookup.displayName">Citation-databank diensten"</message>
+	<message key="plugins.metadata.nlm30.citationLookup.description">Verbeter de NLM 3.0 element-citatie opmaak, bijvoorbeeld  door het raadplegen van externe citatiedatabanken."</message>
+
+	<!-- citation output -->
+	<message key="plugins.metadata.nlm30.citationOutput.displayName">Citatie-uitvoer diensten</message>
+	<message key="plugins.metadata.nlm30.citationOutput.description">Converteer NLM 3.0 element-citatie opmaak naar tekstgebaseerde uitvoer.</message>
+	<message key="plugins.metadata.nlm30Xml.citationOutput.displayName">Citatie-uitvoer diensten (XML)</message>
+	<message key="plugins.metadata.nlm30Xml.citationOutput.description">Converteer NLM 3.0 element-citatie opmaak naar XML citatie uitvoer.</message>
+
+	<!-- NLM 3.0 output -->
+	<message key="plugins.metadata.nlm30.nlm30XmlOutput.displayName">NLM 3.0 tjdschriftpublicatie uitvoer</message>
+
+	<!-- NLM 2.3 output -->
+	<message key="plugins.metadata.nlm30.nlm23XmlOutput.displayName">NLM 2.3 tijdschriftpublicatie uitvoer</message>
+
+	<!-- NLM 3.0 to 2.3 downgrade -->
+	<message key="plugins.metadata.nlm30.nlm30ToNlm23Xml.displayName">NLM 3.0 naar 2.3 tijdschriftpublicatie omzetting</message>
+	<message key="plugins.metadata.nlm30.nlm30ToNlm23Xml.description">Zet NLM 3.0 terug naar NLM 2.3.</message>
+
+	<!-- Plain text reference list output -->
+	<message key="plugins.metadata.nlm30.refList.displayName">Tekstgebaseerde referentielijst generatie</message>
+	<message key="plugins.metadata.nlm30.refList.description">Genereer een tekstgebaseerde referentielijst uit de OJS/OCS/OMP inzendingsreferenties</message>
+</locale>

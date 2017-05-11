@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../dtd/locale.dtd">
+
+<!--
+  * plugins/generic/usageStats/locale/fr_CA/locale.xml
+  *
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings
+  -->
+
+<locale name="fr_CA" full_name="Français (Canada)">
+	<message key="plugins.generic.usageStats.settings.logging">Options pour les journaux d'accès</message>
+	<message key="plugins.generic.usageStats.settings.createLogFiles">Créer des fichiers de journaux.</message>
+	<message key="plugins.generic.usageStats.settings.createLogFiles.description">En activant cette option, le plugiciel créera des fichiers journaux d'accès dans le répertoire des fichiers. Ces fichiers pourront être utilisés pour extraire les données de statistiques d'utilisation. Si vous ne souhaitez plus créer de fichiers journaux d'accès, vous pouvez désactiver cette option et utiliser vos propres fichiers d'accès au journal du serveur.</message>
+	<message key="plugins.generic.usageStats.settings.logParseRegex">Analyse syntaxique avec expressions régulières</message>
+	<message key="plugins.generic.usageStats.settings.logParseRegex.description">L'expression régulière par défaut utilisée peut analyser les fichiers journaux d'accès apache au format combiné et les fichiers journaux du plugiciel. Si vos fichiers journaux d'accès sont dans un format différent, vous devrez insérer une expression régulière capable de les analyser et de donner les valeurs attendues. Voir UsageStatsLoader :: _ getDataFromLogEntry () pour plus d'informations.</message>
+	<message key="plugins.generic.usageStats.settings.saved">Paramètres des plugiciels statistiques d'utilisation enregistrés</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption">Option de confidentialité pour les données</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.saltFilepath">Chemin de fichier pour le salage anonymisant</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.saltFilepath.invalid">Le fichier anonymiseur ne peut être modifié.</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.requirements">Pour garantir la confidentialité des données, vous devez spécifier un fichier lisible et accessible en écriture par l'utilisateur Web pour contenir une valeur de salt générée de façon aléatoire. Ce fichier ne doit PAS être sauvegardé pour assurer la protection de la vie privée. Le fichier de salage est généré au hasard soit en utilisant la fonction mcrypt_create_iv, qui nécessite le PHP mcrypt; La fonction openssl_random_pseudo_bytes, qui nécessite le PHP openssl; Le fichier /dev/urandom, qui ne fonctionne que sur les systèmes * nix; Ou la fonction mt_rand, qui n'est pas cryptographiquement sûr. Ainsi, si vous utilisez un serveur Windows, assurez-vous d'installer le PHP mcrypt ou openssl activé afin d'avoir le fichier de salt cryptographiquement sécurisé généré.</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.description">Activez cette option pour utiliser une version de plugiciel qui respecte les lois sur la protection de la vie privée, c'est-à-dire l'enregistrement des adresses IP hachées, informe les utilisateurs du suivi et offre une option de retrait aux utilisateurs. Remarque: lorsque vous utilisez cette option, vous ne pourrez pas utiliser les fonctions géolocalisation du plugiciel.</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.requiresSalt">L'activation de la confidentialité des données requiert un fichier salage.</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.excludesCity">L'activation de la confidentialité des données exclut "Ville" comme statistique facultative.</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.excludesRegion">L'activation de la confidentialité des données exclut Region comme statistique facultative.</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyCheckbox">Respect de la confidentialité des données</message>
+	<message key="plugins.generic.usageStats.settings.optionalColumns">Information statistique optionnel</message>
+	<message key="plugins.generic.usageStats.settings.optionalColumns.description">Activez ou désactivez la collecte des informations facultatives suivantes. Cela aura une influence sur les rapports statistiques possibles que vous pouvez récupérer et aura également un impact sur la taille de la base de données. NE PAS CHANGER, sauf si vous comprenez parfaitement ce que vous faites.</message>
+	<message key="plugins.generic.usageStats.settings.optionalColumns.cityRequiresRegion">Si vous cochez la colonne "Ville" vous devez cochez la colonne "Région"</message>
+	<message key="plugins.generic.usageStats.settings.archives">Archives</message>
+	<message key="plugins.generic.usageStats.settings.compressArchives">Compresser les archives</message>
+	<message key="plugins.generic.usageStats.settings.compressArchives.description">Activez cette option pour compresser les fichiers journaux archivés à l'aide de l'outil gzip (vous devrez configurer le paramètre gzip dans config.inc.php). Si vous avez un site à fort trafic, c'est une bonne idée de le faire, vous pouvez donc économiser de l'espace disque supplémentaire.</message>
+	<message key="plugins.generic.usageStats.settings.statsDisplayOptions">Options d'affichage pour les statistques</message>
+	<message key="plugins.generic.usageStats.settings.statsDisplayOptions.display">Afficher les statistiques des soumissions par utilisateur</message>
+	<message key="plugins.generic.usageStats.settings.statsDisplayOptions.chartType">Choisissez le type du graphique pour afficher les statistiques de téléchargement</message>
+	<message key="plugins.generic.usageStats.settings.statsDisplayOptions.chartType.bar">Barre</message>
+	<message key="plugins.generic.usageStats.settings.statsDisplayOptions.chartType.line">Ligne</message>
+	<message key="plugins.generic.usageStats.settings.statsDisplayOptions.datasetMaxCount">Définissez le nombre maximal de données à présenter simultanément pour un point d'axe X spécifique. Une valeur plus élevée peut générer des graphiques difficiles à comprendre. Quelque chose entre 3 et 5 est sûr.</message>
+	<message key="plugins.generic.usageStats.usageStatsLoaderName">Statistiques sur le téléversement de fichier</message>
+	<message key="plugins.generic.usageStats.openFileFailed">Le fichier {$file} n'a pas pu être ouvert et a été rejeté.</message>
+	<message key="plugins.generic.usageStats.invalidLogEntry">La ligne {$lineNumber} du fichier {$file} n'est pas une entrée de journal valide. Le fichier a été rejeté.</message>
+	<message key="plugins.generic.usageStats.removeUrlError">La ligne {$lineNumber} du fichier {$file} contient une url dont le système ne peut pas supprimer l'URL de base.</message>
+	<message key="plugins.generic.usageStats.loadDataError">Impossible de charger les données extraites du fichier {$file}. Le fichier est revenu à l'étape précédente.</message>
+	<message key="plugins.generic.usageStats.pluginNotEnabled">Le plugiciel de statistique d'utilisation est désactivé. Les fichiers journaux n'ont pas été traités.</message>
+	<message key="plugins.generic.usageStats.processingPathNotEmpty">Le répertoire {$directory} n'est pas vide. Cela pourrait indiquer un processus qui a précédemment échoué ou l'existence d'un processus en cours d'exécution simultanément. Ce fichier sera automatiquement retraité si vous utilisez également scheduleTasksAutoStage.xml, sinon vous devrez déplacer manuellement les fichiers orphelins dans le répertoire de traitement dans le répertoire de traitement.</message>
+	<message key="plugins.generic.usageStats.noCounterBotList">Le robot de liste  COUNTER {$botlist} ne peut pas être utilisée. Cela est peut-être dû à certains facteurs : vérifiez si le fichier de liste se trouve dans le dossier 'lib/pkp/plugins/generic/usageStats/lib/counter'. Vérifiez également les permissions sur ce dossier et aussi qu'il n'y a qu'un seul fichier à l'intérieur.</message>
+	<message key="plugins.generic.usageStats.displayName">Statistique d'utilisation</message>
+	<message key="plugins.generic.usageStats.description">Statistiques d'utilisation des objets. Peut utiliser les fichiers journaux d'accès au serveur pour produire les statistiques.</message>
+	<message key="plugins.reports.usageStats.report.displayName">Statistiques d'utilisation PKP</message>
+	<message key="plugins.reports.usageStats.report.description">Statistiques d'utilisation par défaut PKP (COUNTER ready)</message>
+	<message key="plugins.reports.usageStats.optout.displayName">Informations sur la confidentialité des statistiques d'utilisation</message>
+	<message key="plugins.reports.usageStats.optout.description">Informations sur la confidentialité des statistiques d'utilisation</message>
+	<message key="plugins.generic.usageStats.optout.title">Informations sur les statistiques d'utilisation</message>
+	<message key="plugins.generic.usageStats.optout.shortDesc"><![CDATA[Les connexions anonymes sont répertoriées dans les statistiques. Veuillez lire les <a href="{$privacyInfo}">clauses sur la confidentialité</a> pour plus de détails.]]></message>
+	<message key="plugins.reports.usageStats.metricType">PKP/COUNTER</message>
+	<message key="plugins.reports.usageStats.metricType.full">Public Knowledge Project statistics (COUNTER ready)</message>
+	<message key="plugins.generic.usageStats.statsSum">Somme de tous les fichiers téléchargés</message>
+	<message key="plugins.generic.usageStats.noStats">Les données sur le téléchargement ne sont pas encore disponible.</message>
+	<message key="plugins.generic.usageStats.monthInitials">Jan Fév Mar Avr Mai Juin Juil Aoû Sep Oct Nov Déc</message>
+	<message key="plugins.generic.usageStats.downloads">Téléchargements</message>
+</locale>

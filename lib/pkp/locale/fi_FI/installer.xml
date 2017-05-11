@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/fi_FI/installer.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+  
+<locale name="fi_FI" full_name="Suomi">
+	<message key="installer.additionalLocales">Muut kielialueet</message>
+	<message key="installer.administratorAccount">Ylläpitäjätili</message>
+	<message key="installer.administratorAccountInstructions">Tästä käyttäjätilistä tulee sivuston ylläpitäjä, jolla on käyttöoikeudet koko järjestelmään. Lisää käyttäjätilejä voidaan luoda asennuksen jälkeen.</message>
+	<message key="installer.checkNo"><![CDATA[<span class="pkp_form_error formError">EI</span>]]></message>
+	<message key="installer.checkYes">Kyllä</message>
+	<message key="installer.clientCharset">Asiakkaan merkistö</message>
+	<message key="installer.clientCharsetInstructions">Koodaus, jota käytetään selaimiin lähettäviin ja niistä vastaanotettaviin tietoihin.</message>
+	<message key="installer.configFileError"><![CDATA[Määritystiedostoa <tt>config.inc.php</tt> ei ole olemassa tai sitä ei voi lukea.]]></message>
+	<message key="installer.connectionCharset">Yhteyden merkistö</message>
+	<message key="installer.contentsOfConfigFile">Määritystiedoston sisältö</message>
+	<message key="installer.createDatabase">Luo uusi tietokanta</message>
+	<message key="installer.createDatabaseInstructions">Käyttääksesi tätä valintaa tietokantajärjestelmäsi on tuettava tietokannan etäluontia ja käyttäjätililläsi on oltava oikeudet luoda uusia tietokantoja. Jos asennus epäonnistuu tämän vaihtoehdon ollessa valittuna, luo tietokanta palvelimellesi manuaalisesti ja suorita asennusohjelma uudelleen tämän valinnan ollessa pois käytöstä.</message>
+	<message key="installer.databaseCharset">Tietokantamerkistö</message>
+	<message key="installer.databaseDriver">Tietokantaohjain</message>
+	<message key="installer.databaseDriverInstructions"><![CDATA[<strong>Sulkeissa luetelluilla tietokantaohjaimilla ei vaikuta olevan vaadittua PHP-laajennusta ladattuna ja asennus tulee todennäköisesti epäonnistumaan, jos se valitaan.</strong><br>Kaikki yllä luetellut ei-tuetut tietokantaohjaimet on lueteltu yksinomaan akateemisia tarkoituksia varten, eivätkä ne todennäköisesti toimi.]]></message>
+	<message key="installer.databaseHost">Isäntä</message>
+	<message key="installer.databaseHostInstructions">Jätä isäntänimi tyhjäksi muodostaaksesi yhteyden käyttäen verkkoalueliitäntää TCP/IP-protokollien sijaan. Tämä ei ole välttämätöntä MySQL:ssä, joka käyttää liitäntöjä automaattisesti, jos “localhost” syötetään. Jotkin muut tietokantapalvelimet, kuten PostgreSQL, kuitenkin vaativat sen.</message>
+	<message key="installer.databaseName">Tietokannan nimi</message>
+	<message key="installer.databasePassword">Salasana</message>
+	<message key="installer.databaseSettings">Tietokanta-asetukset</message>
+	<message key="installer.databaseUsername">Käyttäjätunnus</message>
+	<message key="installer.filesDir">Hakemisto latauksille</message>
+	<message key="installer.fileSettings">Tiedostoasetukset</message>
+	<message key="installer.form.clientCharsetRequired">Asiakkaan merkistö on valittava.</message>
+	<message key="installer.form.databaseDriverRequired">Tietokantaohjain on valittava.</message>
+	<message key="installer.form.databaseNameRequired">Tietokannan nimi vaaditaan.</message>
+	<message key="installer.form.emailRequired">Ylläpitäjätilille vaaditaan voimassa oleva sähköpostiosoite.</message>
+	<message key="installer.form.filesDirRequired">Hakemisto ladattujen tiedostojen tallentamista varten vaaditaan.</message>
+	<message key="installer.form.localeRequired">Kielialue on valittava.</message>
+	<message key="installer.form.passwordRequired">Ylläpitäjätilille vaaditaan salasana.</message>
+	<message key="installer.form.passwordsDoNotMatch">Ylläpitäjän salasanat eivät täsmää.</message>
+	<message key="installer.form.separateMultiple">Erota arvot pilkuilla</message>
+	<message key="installer.form.usernameAlphaNumeric">Ylläpitäjän käyttäjätunnus voi sisältää vain aakkosnumeerisia merkkejä, alaviivoja ja yhdysmerkkejä, ja sen täytyy alkaa ja päättyä aakkosnumeeriseen merkkiin.</message>
+	<message key="installer.form.usernameRequired">Ylläpitäjätilille vaaditaan käyttäjätunnus.</message>
+	<message key="installer.installationWrongPhp"><![CDATA[<br/><strong>VAROITUS:]]><![CDATA[ ]]><![CDATA[Nykyinen PHP-versiosi ei täytä asennusta koskevia vähimmäisvaatimuksia.]]><![CDATA[ ]]><![CDATA[On suositeltavaa päivittää PHP uudempaan versioon.</strong>]]></message>
+	<message key="installer.installErrorsOccurred">Asennuksen aikana tapahtui virheitä</message>
+	<message key="installer.installerSQLStatements">SQL-lauseet asennusta varten</message>
+	<message key="installer.installFileError"><![CDATA[Asennustiedostoa <tt>dbscripts/xml/install.xml</tt> ei ole olemassa tai se ei ole luettavissa.]]></message>
+	<message key="installer.installFilesDirError">Ladatuille tiedostoille tarkoitettua hakemistoa ei ole olemassa tai se ei ole kirjoituskelpoinen.</message>
+	<message key="installer.installParseDBFileError"><![CDATA[Virhe jäsennettäessä tietokannan asennustiedostoa <tt>{$file}</tt>.]]></message>
+	<message key="installer.installParseEmailTemplatesFileError"><![CDATA[Virhe jäsennettäessä sähköpostipohjatiedostoa <tt>{$file}</tt>.]]></message>
+	<message key="installer.installParseFilterConfigFileError"><![CDATA[Virhe jäsennettäessä suodattimen määritystiedostoa <tt>{$file}</tt>.]]></message>
+	<message key="installer.unsupportedUpgradeError">Päivitystä ei tueta. Katso docs/UPGRADE-UNSUPPORTED saadaksesi lisätietoja.</message>
+	<message key="installer.locale">Kielialue</message>
+	<message key="installer.locale.maybeIncomplete">Merkityt kielialueet saattavat olla vaillinaisia.</message>
+	<message key="installer.localeSettings">Kielialueiden asetukset</message>
+	<message key="installer.oaiSettings">OAI-asetukset</message>
+	<message key="installer.oaiRepositoryIdInstructions"><![CDATA[Yksilöivä tunniste, jota käytetään sellaisten metatietorekisterien tunnistamiseen, jotka on indeksoitu tältä sivustolta <a href="http://www.openarchives.org/" target="_blank">Open Archives Initiativen</a> protokollaa metatietojen haravoinnista käyttäen.]]></message>
+	<message key="installer.oaiRepositoryId">Tietovaraston tunniste</message>
+	<message key="installer.publicFilesDirError">Julkista tiedostohakemistoa ei ole olemassa tai se ei ole kirjoituskelpoinen.</message>
+	<message key="installer.releaseNotes">Julkistamiseen liittyvät muistiinpanot</message>
+	<message key="installer.preInstallationInstructionsTitle">Esiasennuksen vaiheet</message>
+	<message key="installer.preInstallationInstructions"><![CDATA[
+		]]><![CDATA[<p>1.]]><![CDATA[ ]]><![CDATA[Seuraavista tiedostoista ja hakemistoista (ja niiden sisällöstä) on tehtävä kirjoituskelpoisia:</p> <ul> <li><tt>config.inc.php</tt> on kirjoituskelpoinen (valinnainen): {$writable_config}</li> <li><tt>public/</tt> on kirjoituskelpoinen: {$writable_public}</li> <li><tt>cache/</tt> on kirjoituskelpoinen: {$writable_cache}</li> <li><tt>cache/t_cache/</tt> on kirjoituskelpoinen: {$writable_templates_cache}</li> <li><tt>cache/t_compile/</tt> on kirjoituskelpoinen: {$writable_templates_compile}</li> <li><tt>cache/_db</tt> on kirjoituskelpoinen: {$writable_db_cache}</li> </ul> <p>2.]]><![CDATA[ ]]><![CDATA[Ladattujen tiedostojen tallentamista varten on luotava hakemisto ja se on tehtävä kirjoituskelpoiseksi (ks. “Tiedostoasetukset” alla).</p>]]><![CDATA[
+	]]></message>
+	<message key="installer.configureXSLMessage"><![CDATA[<p>PHP-asennuksellasi ei ole XSL-moduulia käytössä.]]><![CDATA[ ]]><![CDATA[Ota se käyttöön tai määritä xslt_command -parametri config.inc.php -tiedostossa.</p>]]></message>
+	<message key="installer.beacon">Jäljite</message>
+	<message key="installer.beacon.enable">Anna yksilöivä sivuston tunniste ja OAI:n perus-URL-osoite PKP:lle ainoastaan tilastointia ja suojavaroitustarkoituksia varten.</message>
+</locale>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/pt_BR/default.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Locale information: https://pkp.sfu.ca/wiki/index.php?title=OMP:_Portuguese_(pt_BR)
+  * Localization strings for default settings for setup items.
+  -->
+
+<locale name="pt_BR" full_name="Português (Brasil)">
+	<!-- Group defaults -->
+	<message key="default.groups.name.siteAdmin">Administrador do site</message>
+	<message key="default.groups.plural.siteAdmin">Administradores do site</message>
+	<message key="default.groups.name.productionEditor">Editor de produção</message>
+	<message key="default.groups.plural.productionEditor">Editores de produção</message>
+	<message key="default.groups.abbrev.productionEditor">EP</message>
+	<message key="default.groups.name.copyeditor">Editor de texto</message>
+	<message key="default.groups.plural.copyeditor">Editores de texto</message>
+	<message key="default.groups.abbrev.copyeditor">ET</message>
+	<message key="default.groups.name.proofreader">Leitor de Prova</message>
+	<message key="default.groups.plural.proofreader">Leitores de prova</message>
+	<message key="default.groups.abbrev.proofreader">LP</message>
+	<message key="default.groups.name.designer">Designer</message>
+	<message key="default.groups.plural.designer">Designers</message>
+	<message key="default.groups.abbrev.designer">DE</message>
+	<message key="default.groups.name.internalReviewer">Avaliador Interno</message>
+	<message key="default.groups.plural.internalReviewer">Avaliadores Internos</message>
+	<message key="default.groups.abbrev.internalReviewer">AI</message>
+	<message key="default.groups.name.marketing">Coordenador de Vendas e Marketing</message>
+	<message key="default.groups.plural.marketing">Coordenadores de Vendas e Marketing</message>
+	<message key="default.groups.abbrev.marketing">CVM</message>
+	<message key="default.groups.name.funding">Coordenador de Financiamento</message>
+	<message key="default.groups.plural.funding">Coordenadores de Financiamento</message>
+	<message key="default.groups.abbrev.funding">CF</message>
+	<message key="default.groups.name.indexer">Indexador</message>
+	<message key="default.groups.plural.indexer">Indexadores</message>
+	<message key="default.groups.abbrev.indexer">IND</message>
+	<message key="default.groups.name.layoutEditor">Editor de Leiaute</message>
+	<message key="default.groups.plural.layoutEditor">Editores de Leiaute</message>
+	<message key="default.groups.abbrev.layoutEditor">EL</message>
+	<message key="default.groups.name.author">Autor</message>
+	<message key="default.groups.plural.author">Autores</message>
+	<message key="default.groups.abbrev.author">AU</message>
+	<message key="default.groups.name.translator">Tradutor</message>
+	<message key="default.groups.plural.translator">Tradutores</message>
+	<message key="default.groups.abbrev.translator">TR</message>
+	<message key="default.groups.name.reader">Leitor</message>
+	<message key="default.groups.plural.reader">Leitores</message>
+	<message key="default.groups.abbrev.reader">LE</message>
+
+	<!--  common app genre defaults -->
+	<message key="default.genres.other">Outros</message>
+	<message key="default.genres.multimedia">Multimedia</message>
+	<message key="default.genres.image">Imagem</message>
+	<message key="default.genres.styleSheet">Folha de Estilos</message>
+</locale>

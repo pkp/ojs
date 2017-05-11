@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE schema SYSTEM "../../dtd/xmlSchema.dtd">
+
+<!--
+  * xml/schema/submissions.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Submission-related schema (e.g. authors) in XML.
+  -->
+
+<schema version="0.2">
+	<!--
+	  *
+	  * TABLE authors
+	  *
+	  -->
+	<table name="authors">
+		<field name="author_id" type="I8">
+			<KEY />
+			<AUTOINCREMENT/>
+		</field>
+		<field name="submission_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="primary_contact" type="I1">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+		</field>
+		<field name="seq" type="F">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+		</field>
+		<field name="first_name" type="C2" size="40">
+			<NOTNULL/>
+		</field>
+		<field name="middle_name" type="C2" size="40"/>
+		<field name="last_name" type="C2" size="90">
+			<NOTNULL/>
+		</field>
+		<field name="suffix" type="C2" size="40"/>
+		<field name="country" type="C2" size="90"/>
+		<field name="email" type="C2" size="90">
+			<NOTNULL/>
+		</field>
+		<field name="url" type="C2" size="2047"/>
+		<field name="user_group_id" type="I8" />
+		<field name="include_in_browse" type="I1">
+			<NOTNULL/>
+			<DEFAULT VALUE="1"/>
+		</field>
+		<descr>Author metadata for submissions.</descr>
+		<index name="authors_submission_id">
+			<col>submission_id</col>
+		</index>
+	</table>
+
+	<!--
+	  *
+	  * TABLE author_settings
+	  *
+	  -->
+	<table name="author_settings">
+		<field name="author_id" type="I8">
+			<NOTNULL />
+		</field>
+		<field name="locale" type="C2" size="5">
+			<NOTNULL />
+			<DEFAULT VALUE=""/>
+		</field>
+		<field name="setting_name" type="C2" size="255">
+			<NOTNULL />
+		</field>
+		<field name="setting_value" type="X"/>
+		<field name="setting_type" type="C2" size="6">
+			<NOTNULL/>
+			<descr>(bool|int|float|string|object)</descr>
+		</field>
+		<descr>Language dependent author metadata.</descr>
+		<index name="author_settings_author_id">
+			<col>author_id</col>
+		</index>
+		<index name="author_settings_pkey">
+			<col>author_id</col>
+			<col>locale</col>
+			<col>setting_name</col>
+			<UNIQUE/>
+		</index>
+	</table>
+
+	<!--
+	  *
+	  * TABLE edit_decisions
+	  *
+	  -->
+	<table name="edit_decisions">
+		<field name="edit_decision_id" type="I8">
+			<KEY />
+			<AUTOINCREMENT/>
+		</field>
+		<field name="submission_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="review_round_id" type="I8">
+			<!-- NOTNULL/ --><!-- For upgrades -->
+		</field>
+		<field name="stage_id" type="I8" />
+		<field name="round" type="I1">
+			<NOTNULL/>
+		</field>
+		<field name="editor_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="decision" type="I1">
+			<NOTNULL/>
+		</field>
+		<field name="date_decided" type="T">
+			<NOTNULL/>
+		</field>
+		<descr>Editor decisions.</descr>
+		<index name="edit_decisions_submission_id">
+			<col>submission_id</col>
+		</index>
+		<index name="edit_decisions_editor_id">
+			<col>editor_id</col>
+		</index>
+	</table>
+
+	<!--
+	  *
+	  * TABLE submission_comments
+	  *
+	  -->
+	<table name="submission_comments">
+		<field name="comment_id" type="I8">
+			<KEY />
+			<AUTOINCREMENT/>
+		</field>
+		<field name="comment_type" type="I8"/>
+		<field name="role_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="submission_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="assoc_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="author_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="comment_title" type="X">
+			<NOTNULL/>
+		</field>
+		<field name="comments" type="X"/>
+		<field name="date_posted" type="T"/>
+		<field name="date_modified" type="T"/>
+		<field name="viewable" type="I1" />
+		<descr>Comments posted on submissions</descr>
+		<index name="submission_comments_submission_id">
+			<col>submission_id</col>
+		</index>
+	</table>
+
+	<!--
+	  *
+	  * TABLE section_editors
+	  *
+	  -->
+	<table name="section_editors">
+		<field name="context_id" type="I8">
+			<NOTNULL />
+		</field>
+		<field name="section_id" type="I8">
+			<NOTNULL />
+		</field>
+		<field name="user_id" type="I8">
+			<NOTNULL />
+		</field>
+		<descr>Assignments of sub editors to sections/series.</descr>
+		<index name="section_editors_context_id">
+			<col>context_id</col>
+		</index>
+		<index name="section_editors_section_id">
+			<col>section_id</col>
+		</index>
+		<index name="section_editors_user_id">
+			<col>user_id</col>
+		</index>
+		<index name="section_editors_pkey">
+			<col>context_id</col>
+			<col>section_id</col>
+			<col>user_id</col>
+			<UNIQUE />
+		</index>
+	</table>
+
+	<!--
+	  *
+	  * TABLE queries
+	  *
+	  -->
+	<table name="queries">
+		<field name="query_id" type="I8">
+			<KEY />
+			<AUTOINCREMENT/>
+		</field>
+		<field name="assoc_type" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="assoc_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="stage_id" type="I1">
+			<NOTNULL/>
+			<DEFAULT VALUE="1"/>
+		</field>
+		<field name="seq" type="F">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+		</field>
+		<field name="date_posted" type="T"/>
+		<field name="date_modified" type="T"/>
+		<field name="closed" type="I2">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+		</field>
+		<descr>queries posted on submission workflow</descr>
+		<index name="queries_assoc_id">
+			<col>assoc_type</col>
+			<col>assoc_id</col>
+		</index>
+	</table>
+
+	<!--
+	  *
+	  * TABLE query_participants
+	  *
+	  -->
+	<table name="query_participants">
+		<field name="query_id" type="I8">
+			<NOTNULL />
+		</field>
+		<field name="user_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<descr>queries posted on submission workflow</descr>
+		<index name="query_participants_pkey">
+			<col>query_id</col>
+			<col>user_id</col>
+			<UNIQUE />
+		</index>
+	</table>
+</schema>

@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/ru_RU/grid.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the ru_RU (Русский) locale.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Russian_(ru_RU)
+  -->
+
+<locale name="ru_RU" full_name="Русский">
+	<!-- Общие -->
+	<message key="grid.noItems">Нет элементов</message>
+	<message key="grid.settings">Настройки</message>
+	<message key="grid.noAuditors">Нет аудиторов</message>
+	<message key="grid.remotelyHostedItem">Этот элемент размещается на удаленном сервере.</message>
+
+	<message key="grid.action.manageAccess">Управлять доступом</message>
+	<message key="grid.action.sort">Сортировать</message>
+	<message key="grid.action.addItem">Добавить элемент</message>
+	<message key="grid.action.addNote">Добавить заметку</message>
+	<message key="grid.action.addQuery">Добавить обсуждение</message>
+	<message key="grid.action.readQuery">Прочитать обсуждение</message>
+	<message key="grid.action.deleteQuery">Удалить обсуждение</message>
+	<message key="grid.action.updateQuery">Обновить обсуждение</message>
+	<message key="grid.action.addUser">Добавить пользователя</message>
+	<message key="grid.action.unassignReviewer">Отменить назначение этого рецензента</message>
+	<message key="grid.action.approveCopyedit">Одобрить этот файл, прошедший литературное редактирование, для отправки на следующий этап</message>
+	<message key="grid.action.reload">Перезагрузить</message>
+	<message key="grid.action.delete">Удалить</message>
+	<message key="grid.action.deleteFile">Удалить файл</message>
+	<message key="grid.action.deleteMedia">Удалить медиа</message>
+	<message key="grid.action.editMedia">Редактировать медиа</message>
+	<message key="grid.action.editSection">Редактировать раздел</message>
+	<message key="grid.action.export">Экспортировать</message>
+	<message key="grid.action.deleteSection">Удалить раздел</message>
+	<message key="grid.action.editorialHistory">Редакционная история</message>
+	<message key="grid.action.remove">Удалить</message>
+	<message key="grid.action.edit">Редактировать</message>
+	<message key="grid.action.approve">Одобрить</message>
+	<message key="grid.action.disapprove">Отменить одобрение</message>
+	<message key="grid.action.setApproval">Задать одобрение</message>
+	<message key="grid.action.moreInformation">Дополнительная информация</message>
+	<message key="grid.action.restoreDefaults">Восстановить настройки по умолчанию</message>
+	<message key="grid.action.restoreDefaults.confirm">Вы уверены, что хотите восстановить настройки по умолчанию?</message>
+	<message key="grid.action.addAuthor">Добавить автора</message>
+	<message key="grid.action.editAuthor">Редактировать автора</message>
+	<message key="grid.action.deleteAuthor">Удалить автора</message>
+	<message key="grid.action.addAuditor">Добавить аудитора</message>
+	<message key="grid.action.upgrade">Обновить</message>
+	<message key="grid.action.order">Упорядочить</message>
+	<message key="grid.action.cancelOrdering">Отменить упорядочивание</message>
+	<message key="grid.action.extendAll">Показать все</message>
+	<message key="grid.action.collapse">Свернуть</message>
+	<message key="grid.action.collapseAll">Свернуть все</message>
+	<message key="grid.action.wizard">Мастер настройки</message>
+	<message key="grid.action.moveItem">Переместить элемент</message>
+	<message key="grid.action.downloadAll">Скачать все файлы одним архивом</message>
+	<message key="grid.action.readReview">Прочитать эту рецензию</message>
+	<message key="grid.action.email">Отправить письмо электронной почтой</message>
+	<message key="grid.action.addReviewer">Добавить рецензента</message>
+	<message key="grid.action.addFile">Добавить файл</message>
+	<message key="grid.action.editFile">Редактировать файл</message>
+	<message key="grid.action.selectFiles">Выбрать файлы для работы с ними</message>
+	<message key="grid.action.requestRevisions">Запросить новые версии для этого материала</message>
+	<message key="grid.action.accept">Принять этот материал</message>
+	<message key="grid.action.decline">Отклонить этот материал</message>
+	<message key="grid.action.internalReview">Отправить этот материал на внутреннюю рецензию</message>
+	<message key="grid.action.externalReview">Отправить этот материал на внешнюю рецензию</message>
+	<message key="grid.action.sendToProduction">Отправить этот материал на публикацию</message>
+	<message key="grid.action.settings">Настройки</message>
+	<message key="grid.action.importexport">Импорт/экспорт контента или данных сайта</message>
+	<message key="grid.action.restoreDefaults">Восстановить настройки по умолчанию</message>
+	<message key="grid.action.orderItems">Включить режим упорядочивания</message>
+	<message key="grid.action.editSubmissionChecklist">Редактировать этот элемент контрольного списка</message>
+	<message key="grid.action.deleteSubmissionChecklist">Удалить этот элемент контрольного списка</message>
+	<message key="grid.action.resetAll">Установить всем элементам значения по умолчанию</message>
+	<message key="grid.action.addPreparedEmail">Добавить новый шаблон письма электронной почты</message>
+	<message key="grid.action.editPreparedEmail">Редактировать этот шаблон письма электронной почты</message>
+	<message key="grid.action.disableEmail">Отключить этот шаблон письма электронной почты</message>
+	<message key="grid.action.resetEmail">Восстановить значение по умолчанию для этого шаблона письма электронной почты</message>
+	<message key="grid.action.expandAll">Развернуть все</message>
+	<message key="grid.action.requestAccount">Добавить участника</message>
+	<message key="grid.action.expand">Развернуть</message>
+	<message key="grid.action.notify">Уведомить этого пользователя</message>
+	<message key="grid.action.addUserGroup">Добавить новую группу пользователей</message>
+	<message key="grid.action.editUserGroup">Редактировать эту группу пользователей</message>
+	<message key="grid.action.disable">Отключить</message>
+	<message key="grid.action.details">Показать этот элемент</message>
+	<message key="grid.action.enrolExisting">Записать существующего пользователя в рецензенты</message>
+	<message key="grid.action.selectCreate">Создать нового рецензента</message>
+	<message key="grid.action.search">Искать</message>
+	<message key="grid.action.advancedSearch">Расширенный поиск</message>
+	<message key="grid.action.viewLibrary">Показать библиотеку документов</message>
+	<message key="grid.action.viewMetadata">Показать метаданные для этого материала</message>
+	<message key="grid.action.sendReminder">Отправить напоминание о задании этому пользователю</message>
+	<message key="grid.action.newRound">Создать новый раунд</message>
+	<message key="grid.action.viewReviewGuidelines">Показать Руководство для рецензента</message>
+	<message key="grid.action.viewCompetingInterestGuidelines">Показать Правила декларирования конфликта интересов</message>
+	<message key="grid.action.thankReviewer">Отправить сообщение с благодарностью этому рецензенту</message>
+	<message key="grid.action.uploadFile">Загрузить файл на сервер</message>
+	<message key="grid.action.addAnnouncementType">Добавить тип объявления</message>
+	<message key="grid.action.addAnnouncement">Добавить объявление</message>
+	<message key="grid.action.mergeUser">Объединить пользователя</message>
+	<message key="grid.action.unassignUser">Отменить назначение пользователя</message>
+	<message key="grid.action.history">Показать историю</message>
+	<message key="grid.action.unconsiderReview">Эта рецензия завершена, но вы ее еще не просмотрели</message>
+	<message key="grid.action.enable">Включить</message>
+	<message key="grid.action.bookInfo">Информация о материале</message>
+	<message key="grid.action.logInAs">Войти под именем</message>
+	<message key="grid.action.exportAllUsers">Экспортировать всех пользователей</message>
+	<message key="grid.users.confirmExportAllUsers">Вы уверены, что хотите экспортировать всех пользователей?</message>
+	<message key="grid.action.activate">Активировать</message>
+	<message key="grid.action.deactivate">Деактивировать</message>
+	<message key="grid.action.copy">Копировать</message>
+	<message key="grid.action.preview">Предварительный просмотр</message>
+	<message key="grid.action.install">Установить</message>
+	<message key="grid.action.moreItems">Загрузить еще</message>
+
+	<!-- статус задач в сетке -->
+	<message key="grid.task.status.completed">Эта задача выполнена</message>
+	<message key="grid.task.status.new">Отмечено после рассмотрения</message>
+	<message key="grid.task.status.uploaded">Заголовок столбца показывает, кто загрузил этот файл</message>
+	<message key="grid.task.status.unfinished">Задача не завершена</message>
+	<message key="grid.task.status.reviewReady">Эта рецензия готова. Щелкните на значке заметки слева, чтобы прочитать рецензию.</message>
+
+	<!-- Общие заголовки столбцов сетки -->
+	<message key="grid.columns.actions">Действия</message>
+	<message key="grid.columns.institution">Организация</message>
+	<message key="grid.columns.url">URL</message>
+	<message key="grid.columns.auditor">Аудитор</message>
+	<message key="grid.columns.locale">Язык</message>
+
+	<!-- Сетка «Спонсоры» -->
+	<message key="grid.sponsor.title">Спонсоры</message>
+	<message key="grid.action.addSponsor">Добавить спонсора</message>
+	<message key="grid.action.deleteSponsor">Удалить спонсора</message>
+	<message key="grid.action.editSponsor">Редактировать спонсора</message>
+
+	<!-- Сетка «Серии» -->
+	<message key="grid.action.addSeries">Добавить серию</message>
+	<message key="grid.action.editSeries">Редактировать серию</message>
+	<message key="grid.action.deleteSeries">Удалить серию</message>
+
+	<!-- Сетка «Категории» -->
+	<message key="grid.action.addCategory">Добавить категорию</message>
+	<message key="grid.action.editCategory">Редактировать категорию</message>
+	<message key="grid.action.deleteCategory">Удалить укатегорию</message>
+
+	<!-- Сетка «Поддерживающие» -->
+	<message key="grid.contributor.title">Поддерживающие</message>
+	<message key="grid.action.addContributor">Добавить поддерживающего</message>
+	<message key="grid.action.editContributor">Редактировать поддерживающего</message>
+	<message key="grid.action.deleteContributor">Удалить поддерживающего</message>
+
+	<!-- Сетка «Формы рецензии» -->
+	<message key="grid.reviewForm.title">Формы рецензии</message>
+
+	<!-- Сетка «Формы рецензии», элемент «Варианты ответа» -->
+	<message key="grid.reviewFormElement.responseItems">Варианты ответа</message>
+
+	<!-- Файлы -->
+	<message key="grid.noFiles">Нет файлов</message>
+
+	<!-- Файлы библиотеки -->
+	<message key="grid.libraryFiles.column.files">Файлы</message>
+	<message key="grid.libraryFiles.submission.title">Поступившие материалы: библиотека</message>
+	<message key="grid.libraryFiles.editorial.title">Редактирование: библиотека</message>
+	<message key="grid.libraryFiles.review.title">Рецензирование: библиотека</message>
+	<message key="grid.libraryFiles.production.title">Публикация: библиотека</message>
+	<message key="grid.libraryFiles.productionTemplate.title">Шаблоны для публикации: библиотека</message>
+
+	<!-- Контрольный список подготовки к отправке -->
+	<message key="grid.submissionChecklist.title">Контрольный список подготовки материала к отправке</message>
+	<message key="grid.submissionChecklist.column.checklistItem">Элемент контрольного списка</message>
+
+	<!-- Отправители материалов -->
+	<message key="author.users.contributor.name">Имя</message>
+	<message key="author.users.contributor.email">Адрес электронной почты</message>
+	<message key="author.users.contributor.role">Роль</message>
+	<message key="author.users.contributor.principalContact">Контактное лицо</message>
+	<message key="author.users.contributor.includeInBrowse">В списки просмотра</message>
+
+	<!-- Роли -->
+	<message key="grid.roles.currentRoles">Текущие роли</message>
+	<message key="grid.roles.add">Создать новую роль</message>
+	<message key="grid.roles.stageAssignment">Назначение этапа</message>
+
+	<!-- Пользователи -->
+	<message key="grid.user.currentUsers">Текущие пользователи</message>
+	<message key="grid.user.currentEnrollment">Текущие записи</message>
+	<message key="grid.user.allRoles">Все роли</message>
+	<message key="grid.user.allPermissionLevels">Все уровни прав</message>
+	<message key="grid.user.add">Добавить пользователя</message>
+	<message key="grid.user.enroll">Записать пользователя</message>
+	<message key="grid.user.edit">Редактировать пользователя</message>
+	<message key="grid.user.email">Адрес электронной почты</message>
+	<message key="grid.user.enable">Включить</message>
+	<message key="grid.user.disable">Отключить</message>
+	<message key="grid.user.disableReason">Причина отключения пользователя</message>
+	<message key="grid.user.enableReason">Причина включения пользователя</message>
+	<message key="grid.user.error">При администрировании этого пользователя произошла ошибка. Пожалуйста, попробуйте снова.</message>
+	<message key="grid.user.errorEmail">При отправке этого письма произошла ошибка. Пожалуйста, убедитесь, что ваша настройка сервера электронной почты работает и/или свяжитесь с вашим системным администратором.</message>
+	<message key="grid.user.cannotAdminister">У вас нет достаточных прав для администрирования этого пользователя. Для администрирования пользователя вы должны быть либо администратором сайта, либо администрировать все контексты, в которые записан этот пользователь.</message>
+	<message key="grid.user.authSource">Источник аутентификации</message>
+	<message key="grid.user.mustProvideName">Пожалуйста, укажите сначала хотя бы фамилию пользователя.</message>
+	<message key="grid.user.generatePassword">Сгенерировать пароль</message>
+	<message key="grid.user.generatePasswordDescription">Сгенерировать случайный пароль для этого пользователя.</message>
+	<message key="grid.user.notifyUser">Уведомить пользователя</message>
+	<message key="grid.user.notifyUserDescription">Отправить пользователю приветственное письмо электронной почтой.</message>
+	<message key="grid.user.mustChangePassword">Изменить пароль</message>
+	<message key="grid.user.mustChangePasswordDescription">Пользователь должен изменить пароль при следующем входе в систему.</message>
+	<message key="grid.user.mustChangePasswordDescriptionOld">Требовать от пользователя изменить пароль при следующем входе в систему.</message>
+	<message key="grid.user.moreDetails">Данные пользователя (подробней)</message>
+	<message key="grid.user.lessDetails">Данные пользователя (кратко)</message>
+	<message key="grid.user.userDetails">Данные пользователя</message>
+	<message key="grid.user.userRoles">Роли пользователя</message>
+	<message key="grid.user.userNoRoles">Этому пользователю не назначены роли.</message>
+	<message key="grid.user.step1">Шаг №1: Заполнить данные пользователя</message>
+	<message key="grid.user.step2">Шаг №2: Добавить роли пользователю {$userFullName}</message>
+	<message key="grid.user.addRoles">Добавить роли</message>
+	<message key="grid.user.addRole">Добавить роль</message>
+	<message key="grid.user.selectUser">Выбрать пользователя</message>
+	<message key="grid.user.pleaseSelectUser">Пожалуйста, выберите пользователя</message>
+	<message key="grid.user.confirmLogInAs">Войти в систему под этим пользователем? Все действия, которые вы сделаете, будут от лица этого пользователя.</message>
+	<message key="grid.user.mergeUsers">Объединить пользователей</message>
+	<message key="grid.user.mergeUsers.mergeUser">Объединить пользователя</message>
+	<message key="grid.user.mergeUsers.mergeIntoUser">Объединить в этого пользователя</message>
+	<message key="grid.user.mergeUsers.into.description">Теперь вы должны выбрать пользователя, которому передать авторства предыдущего пользователя, редакционные задания и т. д.</message>
+	<message key="grid.user.mergeUsers.from.description">Выбрать пользователя для объединения в другую учетную запись пользователя (например, когда у кого-то есть две учетных записи пользователя). Учетная запись, выбранная первой, будет удалена и все материалы, назначения и пр. будут переданы второй учетной записи.</message>
+	<message key="grid.user.mergeUsers.allUsers">Все записанные пользователи</message>
+	<message key="grid.user.mergeUsers.mergeUserSelect.confirm">Вы уверены, что хотите объединить этого пользователя с другим? Вы выберете пользователя на следующей странице.</message>
+	<message key="grid.user.mergeUsers.confirm">Вы уверены, что хотите объединить учетную запись с именем пользователя «{$oldUsername}» в учетную запись с именем пользователя «{$newUsername}»? Учетная запись с именем пользователя «{$oldUsername}» перестанет существовать. Это действие нельзя отменить.</message>
+	<message key="grid.user.mergeUsers.noneEnrolled">Нет пользователей с этой ролью.</message>
+
+	<!-- Подготовленные письма электронной почты -->
+	<message key="grid.preparedEmails.title">Подготовленные шаблоны писем электронной почты</message>
+	<message key="grid.preparedEmails.currentList">Текущий список</message>
+
+	<!-- Модули -->
+	<message key="grid.plugin.allCategories">Все категории</message>
+	<message key="grid.plugin.disable">Вы уверены, что хотите отключить этот модуль?</message>
+	
+	<message key="grid.action.fileUnconsider">Сделана корректурная правка. Вы можете убрать эту задачу с рассмотрения</message>
+
+	<!-- Сетка «Файлы изображений» -->
+	<message key="grid.artworkFile.caption">Подпись</message>
+	<message key="grid.artworkFile.credit">Автор</message>
+	<message key="grid.artworkFile.copyrightOwner">Владелец авторских прав</message>
+	<message key="grid.artworkFile.copyrightContact">Контактная информация (если не автор/издатель)</message>
+	<message key="grid.artworkFile.permissionTerms">Условия использования</message>
+	<message key="grid.artworkFile.placement">Размещение в материале</message>
+
+	<!-- Сетка «Группа пользователей» -->
+	<message key="grid.userGroup.assignStage">Назначить этап</message>
+	<message key="grid.userGroup.unassignStage">Отменить назначение этапа</message>
+	<message key="grid.userGroup.allStages">Все этапы рабочего процесса</message>
+	<message key="grid.userGroup.filter.listRoles">Показать роли, назначенные</message>
+	<message key="grid.userGroup.filter.permissionLevel">С уровнем прав</message>
+	<message key="grid.userGroup.cantRemoveDefaultUserGroup">Роль «{$userGroupName}» — роль по умолчанию и не может быть удалена.</message>
+	<message key="grid.userGroup.cantRemoveUserGroup">Не могу удалить роль «{$userGroupName}». В настоящий момент она назначена {$usersCount} пользователям.</message>
+	<message key="grid.userGroup.removed">Роль «{$userGroupName}» удалена.</message>
+	<message key="grid.userGroup.assignedStage">Роль «{$userGroupName}» назначена на этап «{$stageName}».</message>
+	<message key="grid.userGroup.unassignedStage">Отменено назначение роли «{$userGroupName}» с этапа «{$stageName}».</message>
+
+	<!-- Сетки «Список поступивших материалов» -->
+	<message key="grid.submission.itemTitle">Автор; Название</message>
+	<message key="grid.submission.active.selectOrphaned">Включать неполные материалы, не отправленные автором.</message>
+</locale>

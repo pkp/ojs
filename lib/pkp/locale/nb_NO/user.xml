@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/nb_NO/user.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the nb_NO (Norsk bokmål) locale.
+  *
+  -->
+
+<locale name="nb_NO" full_name="Norsk bokmål">
+	<message key="user.affiliation">Tilknyttet</message>
+	<message key="user.affiliations">Tilknyttet</message>
+	<message key="user.biography">Biografiske opplysninger</message>
+	<message key="user.biography.description">(F.eks. institutt og stilling)</message>
+	<message key="user.changeMyPassword">Endre passordet mitt</message>
+	<message key="user.changePassword">Endre passord</message>
+	<message key="user.dateLastLogin">Sist innlogget</message>
+	<message key="user.dateRegistered">Registrert dato</message>
+	<message key="user.editMyProfile">Rediger min profil</message>
+	<message key="user.email">E-post</message>
+	<message key="user.feminine">K</message>
+	<message key="user.firstName">Fornavn</message>
+	<message key="user.gender">Kjønn</message>
+	<message key="user.initialsExample">Jan Anders Svendsen = JAS</message>
+	<message key="user.initials">Initialer</message>
+	<message key="user.interests">Fagvurderingsinteresse</message>
+	<message key="user.lastName">Etternavn</message>
+	<message key="user.login.accountDisabledWithReason">Kontoen din er slått av av følgende grunn: {$reason}</message>
+	<message key="user.login.accountDisabled">Kontoen din er slått av. Vennligst kontakt administratoren for mer informasjon.</message>
+	<message key="user.login.accountNotValidated">E-postadressen din er ikke bekreftet. Vennligst sjekk e-posten du har fått, og følg instruksjonene der. Hvis du ikke har mottatt noen e-post bør du kontakte dette nettstedets administrator for å få hjelp.</message>
+	<message key="user.login.activate">Aktiver konto</message>
+	<message key="user.login.activated">Takk for at du aktiverer kontoen din. Du kan nå logge inn med de samme påloggingsdataene du oppga når du opprettet kontoen.</message>
+	<message key="user.login.changePasswordInstructions"><![CDATA[Du må velge et nytt passord before du kan logge inn på dette nettstedet.<br /><br />Vennligst skriv inn brukernavnet ditt, og det nåværende og det nye passordet ditt nedenfor, for å endre passordet for kontoen din.]]></message>
+	<message key="user.login.forgotPassword">Har du glemt passordet?</message>
+	<message key="user.login.loginError">Ugyldig brukernavn eller passord. Vennligst prøv igjen.</message>
+	<message key="user.login">Logg inn</message>
+	<message key="user.login.lostPassword.confirmationSent">En bekreftelse er nå sendt til din e-postadresse. Vennligst følg instruksjonene i e-posten for å tilbakestille passordet ditt.</message>
+	<message key="user.login.lostPassword.invalidHash">Beklager, lenken du klikket på har utløpt eller er ugyldig. Vennligst prøv å tilbakestille passordet ditt igjen.</message>
+	<message key="user.login.lostPassword.invalidUser">Det finnes ingen bruker med denne e-postadressen.</message>
+	<message key="user.login.lostPassword.passwordSent">Et nytt passord er nå sendt til din e-postadresse. Du kan nå logge inn på nettstedet med det nye passordet ditt.</message>
+	<message key="user.login.registeredEmail">Den registrerte brukerens e-post</message>
+	<message key="user.login.resetPassword">Tilbakestill passordet</message>
+	<message key="user.logOut">Logg ut</message>
+	<message key="user.mailingAddress">Postadresse</message>
+	<message key="user.masculine">M</message>
+	<message key="user.middleName">Mellomnavn</message>
+	<message key="user.myAccount">Min brukerkonto</message>
+	<message key="user.name">Navn</message>
+	<message key="user.password">Passord</message>
+	<message key="user.repeatPassword">Gjenta passord</message>
+	<message key="user.phone">Telefon</message>
+	<message key="user.profile.changePasswordInstructions">Skriv inn ditt nåværende og ditt nye passord nedenfor for å endre passordet for kontoen din.</message>
+	<message key="user.profile.editProfile">Rediger profil</message>
+	<message key="user.profile.form.emailRequired">En gyldig e-postadresse er påkrevet.</message>
+	<message key="user.profile.form.firstNameRequired">Et fornavn er påkrevet.</message>
+	<message key="user.profile.form.lastNameRequired">Et etternavn er påkrevet.</message>
+	<message key="user.profile.form.newPasswordRequired">Du må skrive inn det nye passordet ditt.</message>
+	<message key="user.profile.form.oldPasswordInvalid">Det nåværende passordet du skrev inn ukorrekt.</message>
+	<message key="user.profile.form.openAccessNotifications">E-post varsel når ny utgave er blitt Open Access</message>
+	<message key="user.profile.form.passwordRequired">Et passord er påkrevet.</message>
+	<message key="user.profile.form.profileImage">Profilbilde</message>
+	<message key="user.profile.form.publishedNotifications">E-postvarsel når ny utgave er publisert</message>
+	<message key="user.profile.form.urlInvalid">Den oppgitte URLen er ikke gyldig. Vennligst kontroller URLen, og prøv igjen. (Tips: kanskje det hjelper å føye til http:// først i URLen)</message>
+	<message key="user.profile.form.usernameRequired">Et brukernavn er påkrevet.</message>
+	<message key="user.profile.leavePasswordBlank">La passordfeltene stå tomme, hvis du vil beholde nåværende passord.</message>
+	<message key="user.profile.newPassword">Nytt passord</message>
+	<message key="user.profile.oldPassword">Nåværende passord</message>
+	<message key="user.profile">Profil</message>
+	<message key="user.profile.publicProfile">Brukerprofil</message>
+	<message key="user.profile.repeatNewPassword">Gjenta nytt passord</message>
+	<message key="user.register.completeForm">Fyll ut dette skjemaet for å registrere deg hos tidsskriftet.</message>
+	<message key="user.register.form.emailExists">Den valgte e-postadressen er allerede i bruk av en annen bruker.</message>
+	<message key="user.register.form.passwordsDoNotMatch">Passordene var ulike.</message>
+	<message key="user.register.form.usernameExists">Det valgte brukernavnet er allerede tatt i bruk av en annen bruker.</message>
+	<message key="user.register.passwordLengthRestriction">Passordet må være minst {$length} tegn.</message>
+	<message key="user.register.registerAs">Registrer som</message>
+	<message key="user.register">Registrer</message>
+	<message key="user.register.usernameRestriction">Brukernavnet må inneholde bare små bokstaver, tall og bindestrek/understrek.</message>
+	<message key="user.role.reader">Leser</message>
+	<message key="user.role.readers">Lesere</message>
+	<message key="user.role.reviewer">Fagkonsulent</message>
+	<message key="user.role.reviewers">Fagkonsulenter</message>
+	<message key="user.role.siteAdmin">Nettstedsadministrator</message>
+	<message key="user.role.siteAdmins">Nettstedsadministratorer</message>
+	<message key="user.roles">Roller</message>
+	<message key="user.salutation">Tiltaleform</message>
+	<message key="user.sendPassword">Bekreftelse</message>
+	<message key="user.sendPassword.description">Send meg en bekreftelse med brukernavn og passord</message>
+	<message key="user.signature">Signatur</message>
+	<message key="user.title">Tittel</message>
+	<message key="user.url">URL</message>
+	<message key="user.userHome">Min side</message>
+	<message key="user.username">Brukernavn</message>
+	<message key="user.workingLanguages">Arbeidsspråk</message>
+	<message key="user.profile.form.profileImageInvalid">Ugyldig profilbildeformat eller et for stort bilde. Mulige formater er .gif, .jpg, eller .png, og bildet kan ikke være større enn 150x150 pixler.</message>
+	<message key="user.other">Annet</message>
+	<message key="user.affiliation.description">(Din institusjon, f.eks. «Det Kongelige Frederiks Universitet»</message>
+	<message key="user.profile.form.affiliationRequired">Institusjonstilhørighet må angis.</message>
+	<message key="user.accountInformation">Kontoinformasjon</message>
+	<message key="user.authorization.loginRequired">Pålogging kreves.</message>
+	<message key="user.group">Brukergruppe</message>
+	<message key="user.hello">Hei,</message>
+	<message key="user.profile.form.passwordSameAsOld">Ditt nye passord er det samme som ditt gamle passord.</message>
+	<message key="user.authorization.accessDenied">Ingen tilgang.</message>
+	<message key="user.authorization.restrictedSiteAccess">Du har blitt nektet adgang. Adgang til denne siden er på nåværende tidspunkt begrenset.</message>
+	<message key="user.gossip">Private notater</message>
+	<message key="user.profile.form.usergroupRequired">En brukergruppe påkreves.</message>
+	<message key="user.authorization.privateOperation">Operasjonen du prøvde å få tilgang er enten privat eller eksisterer ikke.</message>
+	<message key="user.profile.form.countryRequired">Land må oppgis.</message>
+	<message key="user.profile.form.mailingAddressRequired">En postadresse må oppgis.</message>
+	<message key="user.register.form.emailsDoNotMatch">E-postadressene samsvarer ikke med hverandre.</message>
+	<message key="user.suffix">Suffiks</message>
+</locale>

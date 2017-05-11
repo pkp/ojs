@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/ar_IQ/installer.xml
+  *
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the ar_IQ (العربية) locale.
+  -->
+
+<locale name="ar_IQ" full_name="العربية">
+	<message key="installer.additionalLocales">لغات إضافية</message>
+	<message key="installer.administratorAccount">حساب المشرف الإداري</message>
+	<message key="installer.administratorAccountInstructions">حساب هذا المستخدم سيكون بمثابة المشرف الإداري الذي ستكون له حرية الوصول الكاملة للنظام. المزيد من حسابات المستخدمين يمكن إنشاؤها بعد إكمال التنصيب.</message>
+	<message key="installer.checkNo"><![CDATA[<span class="pkp_form_error formError">لا</span>]]></message>
+	<message key="installer.checkYes">نعم</message>
+	<message key="installer.clientCharset">نظام الحروف للزبون</message>
+	<message key="installer.clientCharsetInstructions">الترميز المستعمل عند إرسال البيانات واستلامها من المستعرض.</message>
+	<message key="installer.configFileError"><![CDATA[ملف الإعدادات <tt>config.inc.php</tt> لا وجود له أو تتعذر قراءته.]]></message>
+	<message key="installer.connectionCharset">نظام حروف الاتصال</message>
+	<message key="installer.contentsOfConfigFile">محتويات ملف الإعدادات</message>
+	<message key="installer.createDatabase">إنشاء قاعدة بيانات جديدة</message>
+	<message key="installer.createDatabaseInstructions">لاستعمال هذا الخيار، على نظام قاعدة البيانات عندك أن يدعم إنشاء قاعدة بيانات عن بعد وأن يمتلك حساب المستخدم لديك الصلاحيات الكافية لإنشاء قاعدة بيانات جديدة. إن فشلت عملية التنصيب عند تفعيل هذا الخيار، عليك بإنشاء قاعدة البيانات يدوياً على الملقم، ثم شغل برنامج التنصيب مجدداً مع تعطيل هذا الخيار.</message>
+	<message key="installer.databaseCharset">نظام الحروف لقاعدة للبيانات</message>
+	<message key="installer.databaseDriver">مشغل قاعدة البيانات</message>
+	<message key="installer.databaseDriverInstructions"><![CDATA[<strong>قواعد البيانات الظاهرة بين الأقواس المربعة لا يبدو أنها تمتلك ما يوائمها مع لغة البرمجة PHP ولذلك، فإن التنصيب باستعمالها سيفشل على الأرجح.</strong><br />أي قاعدة بيانات غير مدعومة مدرجة أعلاه ذُكرت لمجرد العرض الأكاديمي وهي لا يُتوقع منها العمل مع النظام.]]></message>
+	<message key="installer.databaseHost">المضيف</message>
+	<message key="installer.databaseHostInstructions">أترك اسم المضيف فارغاً للاتصال مستعملاً مقابس المجال بدلاً عن بروتوكول TCP/IP. هذا الأمر ليس ضرورياً مع MySQL، التي ستستعمل تلقائياً مقابس الاتصال إذا تم إدخال عبارة "localhost"، ولكنه مطلوب مع بعض ملقمات قواعد البيانات الأخرى، مثل: PostgreSQL.</message>
+	<message key="installer.databaseName">اسم قاعدة البيانات</message>
+	<message key="installer.databasePassword">كلمة المرور</message>
+	<message key="installer.databaseSettings">إعدادات قاعدة البيانات</message>
+	<message key="installer.databaseUsername">اسم المستخدم</message>
+	<message key="installer.filesDir">حافظة الملفات المرفوعة إلى الموقع</message>
+	<message key="installer.fileSettings">إعدادات الملفات</message>
+	<message key="installer.form.clientCharsetRequired">ينبغي اختيار نظام الحروف للزبون.</message>
+	<message key="installer.form.databaseDriverRequired">ينبغي اختيار مشغل قاعدة البيانات.</message>
+	<message key="installer.form.databaseNameRequired">اسم قاعدة البيانات مطلوب حتماً.</message>
+	<message key="installer.form.emailRequired">عنوان بريد الكتروني صحيح مطلوب حتماً لحساب المشرف الإداري.</message>
+	<message key="installer.form.filesDirRequired">ينبغي اختيار حافظة الملفات التي سيتم رفعها إلى الموقع.</message>
+	<message key="installer.form.localeRequired">ينبغي اختيار لغة الموقع.</message>
+	<message key="installer.form.passwordRequired">ينبغي تحديد كلمة المرور لحساب المشرف الإداري.</message>
+	<message key="installer.form.passwordsDoNotMatch">كلمتا المرور لا تتطابقان.</message>
+	<message key="installer.form.separateMultiple">إفصل بين الكلمات المتعددة بفوارز إنجليزية</message>
+	<message key="installer.form.usernameAlphaNumeric">اسم الدخول للمشرف الإداري يمكن أن يتضمن حروفاً وأرقاماً، خطوط تحتانية، وشُرط، وينبغي أن يبدأ وينتهي بحرف أو رقم حصراً.</message>
+	<message key="installer.form.usernameRequired">ينبغي إدخال اسم الدخول للمشرف الإداري حتماً.</message>
+	<message key="installer.installationWrongPhp"><![CDATA[<br/><strong>تحذير: نسختك من برنامج PHP لا تلبي متطلبات الحد الأدنى المطلوبة للتنصيب. ننصح بترقيتها إلى نسخة أحدث تتوافق مع متطلبات تشغيل النظام.</strong>]]></message>
+	<message key="installer.installErrorsOccurred">حدثت أخطاء خلال عملية التنصيب</message>
+	<message key="installer.installerSQLStatements">عبارات SQL للتنصيب</message>
+	<message key="installer.installFileError"><![CDATA[ملف التنصيب <tt>dbscripts/xml/install.xml</tt> مفقود أو تتعذر قراءته.]]></message>
+	<message key="installer.installFilesDirError">حافظة الملفات المخصصة لحفظ الملفات المرفوعة إلى الموقع غير موجودة أو أنها لا تقبل الكتابة عليها.</message>
+	<message key="installer.installParseDBFileError"><![CDATA[حدث خطأ عند تحليل ملف تنصيب قاعدة البيانات <tt>{$file}</tt>.]]></message>
+	<message key="installer.installParseEmailTemplatesFileError"><![CDATA[حدث خطأ عند تحليل ملف قوالب الرسائل الالكترونية <tt>{$file}</tt>.]]></message>
+	<message key="installer.installParseFilterConfigFileError"><![CDATA[حدث خطأ عند تحليل ملف إعدادات التصفية <tt>{$file}</tt>.]]></message>
+	<message key="installer.unsupportedUpgradeError">الترقية غير مدعومة. أنظر الملف: docs/UPGRADE-UNSUPPORTED للمزيد من التفاصيل.</message>
+	<message key="installer.locale">اللغة</message>
+	<message key="installer.locale.maybeIncomplete">اللغات المعلمة قد تكون غير مكتملة تماماً.</message>
+	<message key="installer.localeSettings">إعدادات اللغة</message>
+	<message key="installer.oaiSettings">إعدادات OAI</message>
+	<message key="installer.oaiRepositoryIdInstructions"><![CDATA[يتم استعمال معرَّف فريد لتعريف سجلات البيانات الوصفية المفهرسة في هذا الموقع باستعمال بروتوكول<a href="http://www.openarchives.org/" target="_blank">مبادرة المحفوظات المفتوحة</a> لحصاد البيانات الوصفية.]]></message>
+	<message key="installer.oaiRepositoryId">معرَّف المستودع</message>
+	<message key="installer.publicFilesDirError">حافظة الملفات العمومية غير موجودة أو أنها لا تقبل الكتابة عليها.</message>
+	<message key="installer.releaseNotes">ملاحظات الإطلاق</message>
+	<message key="installer.preInstallationInstructionsTitle">خطوات ما قبل التنصيب</message>
+	<message key="installer.preInstallationInstructions"><![CDATA[
+		<p>1. الملفات وحوافظ الملفات الآتية (ومحتوياتها) يجب أن تكون قابلة للتعديل:</p>
+		<ul>
+			<li><tt>config.inc.php</tt> قابل للتعديل (إختيارياً): {$writable_config}</li>
+			<li><tt>public/</tt> قابل للتعديل: {$writable_public}</li>
+			<li><tt>cache/</tt> قابل للتعديل: {$writable_cache}</li>
+			<li><tt>cache/t_cache/</tt> قابل للتعديل: {$writable_templates_cache}</li>
+			<li><tt>cache/t_compile/</tt> قابل للتعديل: {$writable_templates_compile}</li>
+			<li><tt>cache/_db</tt> قابل للتعديل: {$writable_db_cache}</li>
+		</ul>
+
+		<p>2. ينبغي إنشاء حافظة ملفات مخصصة لحفظ الملفات المرفوعة إلى الموقع، مع جعلها قابلة للتعديل (أنظر "إعدادات الملفات" أدناه).</p>]]>
+	</message>
+	<message key="installer.configureXSLMessage"><![CDATA[<p>إن تنصيبك الحالي لبرنامج PHP لا يمتلك وحدة مممكنة لمعالجة XSL. عليك إما أن تقوم بتمكينها، أو تعديل معيار الأمر xslt_command في ملف التهيئة config.inc.php.</p>]]></message>
+	<message key="installer.beacon">المرشد</message>
+	<message key="installer.beacon.enable">زود الموقع برمز تعريفي فريد ورابط أساسي لـ OAI فقط لأغراض إحصائية وما يتعلق بإشعارات الأمان لمشروع المعرفة العامة.</message>
+</locale>

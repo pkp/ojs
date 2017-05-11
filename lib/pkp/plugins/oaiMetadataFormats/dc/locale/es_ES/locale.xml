@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../dtd/locale.dtd">
+
+<!--
+  * plugins/oaiMetadataFormats/dc/locale/es_ES/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Credits: https://pkp.sfu.ca/wiki/index.php?title=OMP:_Spanish_(es_ES)
+  * Localization strings.
+  -->
+ 
+<locale name="es_ES" full_name="Español (España)">
+	<message key="plugins.oaiMetadata.dc.displayName">Formato de metadatos DC</message>
+	<message key="plugins.oaiMetadata.dc.description">Estructura los metadatos con consistencia con el formato Dublin Core.</message>
+</locale>

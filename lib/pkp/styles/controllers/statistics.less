@@ -1,0 +1,30 @@
+/**
+ * @file styles/controllers/statistics.less
+ *
+ * Copyright (c) 2013-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * 
+ * @ingroup styles_controllers
+ *
+ * @brief Statistics report generator page styles
+ */
+
+#reportGeneratorContainer {
+	.pkp_form {
+		#columns, #countries, #regions, #objectTypes, #fileTypes {
+			height:150px;
+		}
+		
+		#reportTimeFilterArea .selectMenu {
+			width: auto;
+		}
+		.optionalColumn {
+			font-style: italic;
+		}
+		.optionalColumn:after {
+			content:"*";
+		}
+	}
+}
+

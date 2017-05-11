@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/ru_RU/user.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the ru_RU (Русский) locale.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Russian_(ru_RU)
+  -->
+
+<locale name="ru_RU" full_name="Русский">
+	<message key="user.accountInformation">Информация учетной записи</message>
+	<message key="user.affiliation">Организация</message>
+	<message key="user.affiliation.description">(Ваша организация, например, «Московский государственный университет имени М.В. Ломоносова»)</message>
+	<message key="user.affiliations">Организации</message>
+	<message key="user.authorization.accessDenied">Доступ запрещен.</message>
+	<message key="user.authorization.processAuthenticationTokenRequired">Ключ (token) процесса аутентификации отсутствует или является неправильным.</message>
+	<message key="user.authorization.contextRequired">Вы не можете вызвать эту операцию без контекста (издательства, журнала, конференции и т. д.).</message>
+	<message key="user.authorization.loginRequired">Имя пользователя обязательно.</message>
+	<message key="user.authorization.privateOperation">Операция, которую вы пытались выполнить, недоступна вам или отсутствует.</message>
+	<message key="user.authorization.restrictedSiteAccess">Доступ вам был запрещен. Доступ на этот сайт в настоящий момент ограничен.</message>
+	<message key="user.authorization.roleBasedAccessDenied">Данная роль не имеет доступа к этой операции.</message>
+	<message key="user.authorization.userGroupRequired">Вам нужно задать правильную группу пользователя для доступа к этой операции.</message>
+	<message key="user.authorization.managerRequired">Пользователь с ролью управляющего (то есть Выпускающий редактор) должен быть назначен на этот этап, прежде чем вы сможете продолжить.</message>
+	<message key="user.authorization.accessibleWorkflowStage">Сейчас у вас нет доступа на этот этап рабочего потока.</message>
+	<message key="user.authorization.workflowStageRequired">Этап рабочего потока не указан.</message>
+	<message key="user.authorization.pluginRequired">Модуль обязателен, но не указан.</message>
+	<message key="user.biography">Биография (например, кафедра и должность)</message>
+	<message key="user.changeMyPassword">Изменить мой пароль</message>
+	<message key="user.changePassword">Изменить пароль</message>
+	<message key="user.dateLastLogin">Последний вход</message>
+	<message key="user.dateRegistered">Дата регистрации</message>
+	<message key="user.editMyProfile">Редактировать мой профиль</message>
+	<message key="user.email">Адрес (E-mail)</message>
+	<message key="user.feminine">Ж</message>
+	<message key="user.firstName">Имя</message>
+	<message key="user.gender">Пол</message>
+	<message key="user.initialsExample">Алексей Алексеевич Бородин = ААБ</message>
+	<message key="user.initials">Инициалы</message>
+	<message key="user.interests">Интересы как рецензента</message>
+	<message key="user.interests.description">(Разделяйте интересы запятой или нажимайте «Enter»)</message>
+	<message key="user.gossip">Личные заметки</message>
+	<message key="user.group">Группа пользователя</message>
+	<message key="user.lastName">Фамилия</message>
+	<message key="user.profile.form.profileImageInvalid">Неверный формат изображения профиля или изображение слишком большое. Разрешенные форматы — .gif, .jpg, или .png, размер изображения не более 150x150 пикселей.</message>
+	<message key="user.login.accountDisabledWithReason">Ваша учетная запись была отключена по следующей причине: {$reason}</message>
+	<message key="user.login.accountDisabled">Ваша учетная запись была отключена. Пожалуйста, свяжитесь с администратором для получения более подробной информации.</message>
+	<message key="user.login.accountNotValidated">Мы отправили вам письмо электронной почты с подтверждением на адрес {$email}. Пожалуйста, следуйте инструкциям в этом письме, чтобы активировать вашу новую учетную запись. Если вы не видите письмо, пожалуйста, проверьте, свою папку спама.</message>
+	<message key="user.login.activate">Активировать учетную запись</message>
+	<message key="user.login.activated">Спасибо за активацию вашей учетной записи. Теперь вы можете войти в систему, используя имя пользователя и пароль, указанные вами при создании учетной записи.</message>
+	<message key="user.login.changePasswordInstructions"><![CDATA[Вы должны выбрать новый пароль, прежде чем войдете на этот сайт.<br /><br />Пожалуйста, введите ниже ваше имя пользователя, ваши текущий и новый пароли, чтобы изменить пароль для вашей учетной записи.]]></message>
+	<message key="user.login.forgotPassword">Забыли пароль?</message>
+	<message key="user.login.loginError">Неправильное имя пользователя или пароль. Попробуйте еще раз.</message>
+	<message key="user.login">Войти в систему</message>
+	<message key="user.login.lostPassword.confirmationSent">Подтверждение было отправлено на ваш адрес электронной почты. Пожалуйста, следуйте инструкциям в письме, чтобы сбросить пароль.</message>
+	<message key="user.login.lostPassword.invalidHash">Извините, ссылка на которой вы щелкнули, просрочена или неправильна. Пожалуйста, попробуйте сбросить ваш пароль еще раз.</message>
+	<message key="user.login.lostPassword.invalidUser">Пользователя с таким адресом электронной почты не существует.</message>
+	<message key="user.login.lostPassword.passwordSent">Новый пароль был отправлен на ваш адрес электронной почты. Теперь вы можете войти на сайт с вашим новым паролем.</message>
+	<message key="user.login.registeredEmail">Адрес электронной почты зарегистрированного пользователя</message>
+	<message key="user.login.registrationComplete">Регистрация завершена</message>
+	<message key="user.login.registrationComplete.instructions">Спасибо за регистрацию! Что вы хотите сделать дальше?</message>
+	<message key="user.login.registrationComplete.manageSubmissions">Просмотреть материалы</message>
+	<message key="user.login.registrationComplete.newSubmission">Отправить новый материал</message>
+	<message key="user.login.registrationComplete.continueBrowsing">Продолжить изучать информацию на сайте</message>
+	<message key="user.login.registrationPendingValidation">Регистрация ожидает верификации</message>
+	<message key="user.login.rememberUsernameAndPassword">Запомнить меня</message>
+	<message key="user.login.resetPassword">Сбросить пароль</message>
+	<message key="user.logOut">Выйти из системы</message>
+	<message key="user.logOutAs">Выйти из системы как</message>
+	<message key="user.hello">Добро пожаловать, </message>
+	<message key="user.mailingAddress">Почтовый адрес</message>
+	<message key="user.masculine">М</message>
+	<message key="user.middleName">Отчество</message>
+	<message key="user.myAccount">Мой профиль</message>
+	<message key="user.name">Фамилия</message>
+	<message key="user.other">Иное</message>
+	<message key="user.password">Пароль</message>
+	<message key="user.repeatPassword">Повторите пароль</message>
+	<message key="user.phone">Телефон</message>
+	<message key="user.profile.changePasswordInstructions">Введите ниже ваши текущий и новый пароли для изменения пароля вашей учетной записи.</message>
+	<message key="user.profile.editProfile">Редактировать профиль</message>
+	<message key="user.profile.form.countryRequired">Страна обязательна.</message>
+	<message key="user.profile.form.emailRequired">Правильный адрес электронной почты обязателен.</message>
+	<message key="user.profile.form.affiliationRequired">Организация обязательна.</message>
+	<message key="user.profile.form.firstNameRequired">Имя обязательно.</message>
+	<message key="user.profile.form.lastNameRequired">Фамилия обязательна.</message>
+	<message key="user.profile.form.mailingAddressRequired">Почтовый адрес обязателен.</message>
+	<message key="user.profile.form.newPasswordRequired">Вы должны ввести ваш новый пароль.</message>
+	<message key="user.profile.form.oldPasswordInvalid">Текущий пароль, введенный вами, является неправильным.</message>
+	<message key="user.profile.form.openAccessNotifications">Уведомлять по электронной почте о предоставлении открытого доступа к выпуску</message>
+	<message key="user.profile.form.passwordRequired">Пароль обязателен.</message>
+	<message key="user.profile.form.passwordSameAsOld">Ваш новый пароль совпадает со старым.</message>
+	<message key="user.profile.form.profileImage">Изображение профиля</message>
+	<message key="user.profile.form.publishedNotifications">Уведомлять по электронной почте о выходе нового выпуска</message>
+	<message key="user.profile.form.urlInvalid">Указанный URL-адрес является неправильным. Пожалуйста, внимательно проверьте URL и попробуйте снова. (Подсказка: попробуйте добавить http:// в начало URL-адреса).</message>
+	<message key="user.profile.form.usergroupRequired">Группа пользователя обзательна.</message>
+	<message key="user.profile.form.usernameRequired">Имя пользователя обязательно.</message>
+	<message key="user.profile.leavePasswordBlank">Оставьте поля пароля пустыми, если хотите сохранить текущий пароль.</message>
+	<message key="user.profile.newPassword">Новый пароль</message>
+	<message key="user.profile.oldPassword">Текущий пароль</message>
+	<message key="user.profile">Профиль</message>
+	<message key="user.profile.publicProfile">Профиль пользователя</message>
+	<message key="user.profile.repeatNewPassword">Повторить новый пароль</message>
+	<!-- Вход в систему -->
+	<message key="user.login.registerNewAccount">Регистрация</message>
+	<message key="user.login.resetPasswordInstructions">Введите адрес электронной почты вашей учетной записи ниже и вам будет отправлено письмо с инструкциями по сбросу вашего пароля.</message>
+
+	<message key="user.register.form.emailExists">Выбранный адрес электронной почты уже используется другим пользователем сайта.</message>
+	<message key="user.register.form.passwordsDoNotMatch">Пароли не совпадают.</message>
+	<message key="user.register.form.emailsDoNotMatch">Поля адресов электронной почты не совпадают.</message>
+	<message key="user.register.form.usernameAlphaNumeric">Имя пользователя может содержать только строчные латинские буквы, цифры, подчеркивания и дефисы, оно должно начинаться и заканчиваться буквой или цифрой.</message>
+	<message key="user.register.form.userGroupRequired">Должна быть выбрана хотя бы одна роль.</message>
+	<message key="user.register.form.usernameExists">Выбранное имя пользователя уже используется другим пользователем сайта.</message>
+	<message key="user.register.form.passwordLengthRestriction">Пароль должен содержать не менее {$length} символов.</message>
+	<message key="user.register.registerAs">Зарегистрироваться в «{$contextName}» как...</message>
+	<message key="user.register">Регистрация</message>
+	<message key="user.register.usernameRestriction">Имя пользователя должно содержать только строчные латинские буквы, цифры и дефисы/подчеркивания.</message>
+	<message key="user.register.registrationCompleted"><![CDATA[Вы успешно зарегистрировались. <a href="{$profileUrl}">Щелкните здесь</a>, чтобы заполнить свой профиль пользователя.]]></message>
+	<message key="user.role.author">Автор</message>
+	<message key="user.role.author_s">Автор(ы)</message>
+	<message key="user.role.authors">Авторы</message>
+	<message key="user.role.editor">Редактор</message>
+	<message key="user.role.editors">Редакторы</message>
+	<message key="user.role.reader">Читатель</message>
+	<message key="user.role.readers">Читатели</message>
+	<message key="user.role.reviewer">Рецензент</message>
+	<message key="user.role.reviewers">Рецензенты</message>
+	<message key="user.role.siteAdmin">Администратор сайта</message>
+	<message key="user.role.siteAdmins">Администраторы сайта</message>
+	<message key="user.role.copyeditor">Литературный редактор</message>
+	<message key="user.role.copyeditors">Литературные редакторы</message>
+	<message key="user.role.proofreader">Корректор</message>
+	<message key="user.role.proofreaders">Корректоры</message>
+	<message key="user.role.layoutEditor">Верстальщик</message>
+	<message key="user.role.layoutEditors">Верстальщики</message>
+	<message key="user.roles">Роли</message>
+	<message key="user.salutation">Обращение (г-н., г-жа и пр.)</message>
+	<message key="user.sendPassword">Подтверждение</message>
+	<message key="user.sendPassword.description">Отправить мне подтверждение по электронной почте, содержащее мои имя пользователя и пароль</message>
+	<message key="user.signature">Подпись</message>
+	<message key="user.suffix">Суффикс</message>
+	<message key="user.title">Обращение</message>
+	<message key="user.url">URL</message>
+	<message key="user.userHome">Страница пользователя</message>
+	<message key="user.username">Имя пользователя</message>
+	<message key="user.workingLanguages">Рабочие языки</message>
+	<message key="user.orcid">ORCID iD</message>
+	<message key="user.orcid.orcidInvalid">Указанный вами ORCID iD не корректен. Пожалуйста, добавьте полный URI (например, «http://orcid.org/0000-0002-1825-0097»).</message>
+	<message key="user.profile.identity">Идентификация</message>
+	<message key="user.profile.contact">Контакты</message>
+	<message key="user.profile.public">Открытый</message>
+</locale>

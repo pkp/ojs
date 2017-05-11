@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/sv_SE/user.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the sv_SE (Svenska) locale.
+  *
+  -->
+
+<locale name="sv_SE" full_name="Svenska">
+	<message key="user.affiliation">Tillhörighet</message>
+	<message key="user.affiliation.description">(Din institution, e.g. "Karlstads universitet")</message>
+	<message key="user.affiliations">Tillhörigheter</message>
+	<message key="user.biography">Biografiska upplysningar</message>
+	<message key="user.biography.description">(t.ex. institution och titel)</message>
+	<message key="user.changeMyPassword">Ändra Mitt lösenord</message>
+	<message key="user.changePassword">Ändra lösenord</message>
+	<message key="user.dateLastLogin">Senaste inloggning</message>
+	<message key="user.dateRegistered">Datum för registrering</message>
+	<message key="user.editMyProfile">Redigera Min profil</message>
+	<message key="user.email">E-post</message>
+	<message key="user.fax">Fax</message>
+	<message key="user.feminine">F</message>
+	<message key="user.firstName">Förnamn</message>
+	<message key="user.gender">Kön</message>
+	<message key="user.initialsExample">Lars Erik Johansson = LEJ</message>
+	<message key="user.initials">Initialer</message>
+	<message key="user.interests">Intressanta granskningsområden</message>
+	<message key="user.lastName">Efternamn</message>
+	<message key="user.login.accountDisabledWithReason">Ditt konto har avaktiverats av följande orsak: {$reason}</message>
+	<message key="user.login.accountDisabled">Ditt konto har avaktiverats. Vänligen kontakta tidskriftens Administratörer för ytterligare information.</message>
+	<message key="user.login.accountNotValidated">Din E-postadress har inte kunnat verifieras. Vänligen kontrollera adressen och följ instruktionerna. Om du inte har mottagit någo E-post, kontakta Administratören för hjälp.</message>
+	<message key="user.login.activate">Aktivera konto</message>
+	<message key="user.login.activated">Tack för att du har aktiverat ditt konto. Du kan nu logga in med de uppgifter du angav när du skapade kontot.</message>
+	<message key="user.login.changePasswordInstructions"><![CDATA[Du måste välja ett nytt lösenord innan du kan logga in på sidan.<br /><br />Vänligen ange ditt användarnamn och det nuvarande och nya lösenordet nedan, för att ändra lösenord.]]></message>
+	<message key="user.login.forgotPassword">Har du glömt lösenordet?</message>
+	<message key="user.login.loginError">Ogiltigt användarnamn och lösenord. Vänligen försök igen.</message>
+	<message key="user.login">Logga in</message>
+	<message key="user.login.lostPassword.confirmationSent">Bekräftelsemail har skickats till din E-postadress. Följ instruktionerna i E-posten för att återställa ditt lösenord.</message>
+	<message key="user.login.lostPassword.invalidHash">Tyvärr, länken du har klickat på har upphört eller är inte längre giltig. Prova att återställ lösenorden en gång till.</message>
+	<message key="user.login.lostPassword.invalidUser">Det finns ingen användare med den här E-postadressen.</message>
+	<message key="user.login.lostPassword.passwordSent">Ett nytt lösenord har skickats till din E-postadress. Du kan nu logga in med det nya lösenordet.</message>
+	<message key="user.login.registeredEmail">Registrerade användares E-post</message>
+	<message key="user.login.resetPassword">Återställ lösenordet</message>
+	<message key="user.logOut">Logga ut</message>
+	<message key="user.mailingAddress">E-postadresser</message>
+	<message key="user.masculine">M</message>
+	<message key="user.middleName">Mellannamn</message>
+	<message key="user.myAccount">Mitt användarkonto</message>
+	<message key="user.name">Namn</message>
+	<message key="user.password">Lösenord</message>
+	<message key="user.repeatPassword">Upprepa lösenord</message>
+	<message key="user.phone">Telefon</message>
+	<message key="user.profile.changePasswordInstructions">Ange ditt aktuella lösenord samt nytt lösenord för att ändra lösenordsinställningarna för ditt konto.</message>
+	<message key="user.profile.editProfile">Redigera Profil</message>
+	<message key="user.profile.form.emailRequired">Man måste ange en giltig E-postadress.</message>
+	<message key="user.profile.form.firstNameRequired">Man måste ange förnamn.</message>
+	<message key="user.profile.form.lastNameRequired">Man måste ange efternamn.</message>
+	<message key="user.profile.form.newPasswordRequired">Du måste ange ett nytt lösenord.</message>
+	<message key="user.profile.form.oldPasswordInvalid">Det aktuella lösenordet är inkorrekt.</message>
+	<message key="user.profile.form.openAccessNotifications">E-postmeddelande när nytt nummer utkommit Open Access.</message>
+	<message key="user.profile.form.passwordRequired">Man måste ange lösenord.</message>
+	<message key="user.profile.form.profileImage">Profilsignatur</message>
+	<message key="user.profile.form.publishedNotifications">E-postmeddelande när nytt nummer kommer ut</message>
+	<message key="user.profile.form.urlInvalid">Angiven URL är inte giltig. Vänligen kontrollera URL:en och försök igen. (Tips: Lägg till http:// i början av URL:en.)</message>
+	<message key="user.profile.form.usernameRequired">Man måste ange användarnamn.</message>
+	<message key="user.profile.leavePasswordBlank">Lämna lösenordsfältet tomt om du vill behålla det gamla lösenordet.</message>
+	<message key="user.profile.newPassword">Nytt lösenord</message>
+	<message key="user.profile.oldPassword">Nuvarande lösenord</message>
+	<message key="user.profile">Profil</message>
+	<message key="user.profile.repeatNewPassword">Upprepa det nya lösenordet.</message>
+	<message key="user.register.completeForm">Fyll i formuläret för att registrera dig hos den här tidskriften.</message>
+	<message key="user.register.form.emailExists">Vald E-postadress används redan.</message>
+	<message key="user.register.form.passwordsDoNotMatch">Lösenorden matchar inte.</message>
+	<message key="user.register.form.usernameExists">Det valda användarnamnet används redan av en annan användare.</message>
+	<message key="user.register.passwordLengthRestriction">Lösenordet måste minst innehålla {$length} tecken.</message>
+	<message key="user.register.registerAs">Registrera som</message>
+	<message key="user.register">Registrera</message>
+	<message key="user.register.usernameRestriction">Användarnamnet får bara innehålla gemener, siffror, och under-/bindestreck.</message>
+	<message key="user.role.reader">Läsare</message>
+	<message key="user.role.readers">Läsare</message>
+	<message key="user.role.reviewer">Granskare</message>
+	<message key="user.role.reviewers">Granskare</message>
+	<message key="user.role.siteAdmin">Huvudadministratör</message>
+	<message key="user.role.siteAdmins">Huvudadministratörer</message>
+	<message key="user.roles">Roller</message>
+	<message key="user.salutation">Titel vid tilltal</message>
+	<message key="user.sendPassword">Bekräftelse</message>
+	<message key="user.sendPassword.description">Skicka mig bekräftelsemail med användarnamn och lösenord</message>
+	<message key="user.signature">Signatur</message>
+	<message key="user.title">Titel</message>
+	<message key="user.url">URL</message>
+	<message key="user.userHome">Min sida</message>
+	<message key="user.username">Användarnamn</message>
+	<message key="user.workingLanguages">Arbetsspråk</message>
+</locale>

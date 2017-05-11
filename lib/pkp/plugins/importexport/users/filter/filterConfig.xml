@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE filterConfig SYSTEM "../../../../dtd/filterConfig.dtd">
+
+<!--
+  * filterConfig.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Filter Configuration.
+  -->
+<filterConfig>
+	<filterGroups>
+		<filterGroup
+			symbolic="user=>user-xml"
+			displayName="plugins.importexport.users.displayName"
+			description="plugins.importexport.users.description"
+			inputType="class::classes.user.User[]"
+			outputType="xml::schema(lib/pkp/plugins/importexport/users/pkp-users.xsd)" />
+		<!-- Native XML Users input -->
+		<filterGroup
+			symbolic="user-xml=>user"
+			displayName="plugins.importexport.users.displayName"
+			description="plugins.importexport.users.description"
+			inputType="xml::schema(lib/pkp/plugins/importexport/users/pkp-users.xsd)"
+			outputType="class::classes.users.User[]" />
+		<!-- Native XML usergroup output -->
+		<filterGroup
+			symbolic="usergroup=>user-xml"
+			displayName="plugins.importexport.users.displayName"
+			description="plugins.importexport.users.description"
+			inputType="class::lib.pkp.classes.security.UserGroup[]"
+			outputType="xml::schema(lib/pkp/plugins/importexport/users/pkp-users.xsd)" />
+		<!-- Native XML usergroup input -->
+		<filterGroup
+			symbolic="user-xml=>usergroup"
+			displayName="plugins.importexport.native.displayName"
+			description="plugins.importexport.native.description"
+			inputType="xml::schema(lib/pkp/plugins/importexport/users/pkp-users.xsd)"
+			outputType="class::lib.pkp.classes.security.UserGroup[]" />
+	</filterGroups>
+	<filters>
+		<!-- Native XML users output -->
+		<filter
+			inGroup="user=>user-xml"
+			class="lib.pkp.plugins.importexport.users.filter.PKPUserUserXmlFilter"
+			isTemplate="0" />
+		<!-- Native XML users input -->
+		<filter
+			inGroup="user-xml=>user"
+			class="lib.pkp.plugins.importexport.users.filter.UserXmlPKPUserFilter"
+			isTemplate="0" />
+		<!-- Native XML usergroup output -->
+		<filter
+			inGroup="usergroup=>user-xml"
+			class="lib.pkp.plugins.importexport.users.filter.UserGroupNativeXmlFilter"
+			isTemplate="0" />
+		<!-- Native XML usergroup input -->
+		<filter
+			inGroup="user-xml=>usergroup"
+			class="lib.pkp.plugins.importexport.users.filter.NativeXmlUserGroupFilter"
+			isTemplate="0" />
+	</filters>
+</filterConfig>

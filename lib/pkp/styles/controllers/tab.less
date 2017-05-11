@@ -1,0 +1,173 @@
+/**
+ * @file styles/controllers/tab.less
+ *
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @ingroup pkp_controllers_tab
+ *
+ * @brief Styles for pkp_controllers_tab
+ */
+
+.ui-tabs-nav {
+	&:extend(.pkp_unstyled_list);
+	padding: 0 96px 0 @double; // 96 = space for help tab
+	background: @bg;
+	font-size: @font-sml;
+
+	li {
+		position: relative;
+		display: inline-block;
+
+		a {
+			display: block;
+			padding: 0 @base;
+			line-height: @double + @base;
+			font-weight: @bold;
+			text-decoration: none;
+
+			&:before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 50%;
+				transform: translateX(-50%);
+				width: 25%;
+				height: 2px;
+				background: transparent;
+				transition: all 0.2s;
+			}
+		}
+
+		&:focus,
+		&:focus a,
+		a:hover,
+		a:focus {
+			outline: 0;
+		}
+
+		&:focus a:before,
+		a:hover:before,
+		a:focus:before {
+			background: @primary-lift;
+			width: 100%;
+		}
+	}
+
+	.ui-state-active {
+		background: @lift;
+
+		a {
+			color: @text-light-rgba;
+			cursor: default;
+
+			&:before {
+				width: 100%;
+				background: @primary;
+				border-top-left-radius: @radius;
+				border-top-right-radius: @radius;
+			}
+		}
+	}
+
+	// Close button
+	.close {
+		&:extend(.fa);
+		position: absolute;
+		top: 50%;
+		left: 100%;
+		width: @double;
+		height: @double;
+		overflow: hidden;
+		margin-top: -@base;
+		padding: 0;
+		line-height: @double;
+		color: @no;
+		text-decoration: none;
+
+		&:before {
+			content: @fa-var-minus-circle;
+			display: block;
+			width: @double;
+			height: @double;
+			text-align: center;
+		}
+
+		&:hover {
+			border: none;
+		}
+	}
+
+	// Win a specificity battle
+	.ui-state-active .close {
+		color: @no;
+		cursor: pointer;
+	}
+}
+
+.ui-tabs-panel {
+	.pkp_helpers_clear;
+	position: relative;
+	padding: @double;
+	background: @lift;
+}
+
+/**
+ * Nested tabs
+ *
+ * If tabs appear inside of a tab panel, use a different visual paradigm to
+ * better distinguish the hierarchy.
+ */
+@pkp_nested_tab_line_height: @double + @base - 2; // account for border
+.ui-tabs-panel {
+
+	.ui-tabs-nav {
+		margin-left: -@double;
+		margin-right: -@double;
+		margin-bottom: @double;
+		padding-left: @double;
+		border-bottom: @bg-border;
+		font-size: @font-sml;
+		line-height: @pkp_nested_tab_line_height;
+		background: transparent;
+
+		li {
+			top: 1px;
+			border: 1px solid transparent;
+			border-top: none;
+
+			a {
+				padding: 0 @base;
+				line-height: @pkp_nested_tab_line_height;
+				background: @lift;
+
+				&:before {
+					top: -2px;
+				}
+			}
+		}
+
+		.ui-state-active {
+			border-color: @bg-border-color;
+			border-bottom-color: transparent;
+			border-top: none;
+
+			a {
+
+				&:before {
+					left: -1px;
+					right: -1px;
+					transform: none;
+					width: auto;
+				}
+			}
+		}
+	}
+
+	.ui-tabs-panel {
+		padding: 0;
+		border: none;
+		background: transparent;
+	}
+}

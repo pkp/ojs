@@ -1,0 +1,182 @@
+<ref-list>
+  <ref id="B1">
+    <label>1</label>
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name>
+          <surname>Bork</surname>
+          <given-names>Peter B</given-names>
+          <prefix>Mr.</prefix>
+        </name>
+      </person-group>
+      <article-title>PHPUnit in a nutshell</article-title>
+      <day>17</day>
+      <month>8</month>
+      <year>2009</year>
+      <size>320</size>
+      <uri>http://phpunit.org/nutshell</uri>
+    </element-citation>
+  </ref>
+  <ref id="B2">
+    <label>2</label>
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name>
+          <surname>Bork</surname>
+          <given-names>Peter B</given-names>
+          <prefix>Mr.</prefix>
+        </name>
+      </person-group>
+      <article-title>PHPUnit in a nutshell</article-title>
+      <day>17</day>
+      <month>8</month>
+      <year>2009</year>
+      <size>320</size>
+      <uri>http://phpunit.org/nutshell</uri>
+    </element-citation>
+  </ref>
+  <ref id="B3">
+    <label>3</label>
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name>
+          <surname>Bork</surname>
+          <given-names>Peter B</given-names>
+          <prefix>Mr.</prefix>
+        </name>
+      </person-group>
+      <article-title>PHPUnit in a nutshell</article-title>
+      <day>17</day>
+      <month>8</month>
+      <year>2009</year>
+      <size>320</size>
+      <uri>http://phpunit.org/nutshell</uri>
+    </element-citation>
+  </ref>
+  <ref id="B4">
+    <label>4</label>
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name>
+          <surname>Bork</surname>
+          <given-names>Peter B</given-names>
+          <prefix>Mr.</prefix>
+        </name>
+      </person-group>
+      <article-title>PHPUnit in a nutshell</article-title>
+      <day>17</day>
+      <month>8</month>
+      <year>2009</year>
+      <size>320</size>
+      <uri>http://phpunit.org/nutshell</uri>
+    </element-citation>
+  </ref>
+  <ref id="B5">
+    <label>5</label>
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name>
+          <surname>Bork</surname>
+          <given-names>Peter B</given-names>
+          <prefix>Mr.</prefix>
+        </name>
+      </person-group>
+      <article-title>PHPUnit in a nutshell</article-title>
+      <day>17</day>
+      <month>8</month>
+      <year>2009</year>
+      <size>320</size>
+      <uri>http://phpunit.org/nutshell</uri>
+    </element-citation>
+  </ref>
+  <ref id="B6">
+    <label>6</label>
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name>
+          <surname>Bork</surname>
+          <given-names>Peter B</given-names>
+          <prefix>Mr.</prefix>
+        </name>
+      </person-group>
+      <article-title>PHPUnit in a nutshell</article-title>
+      <day>17</day>
+      <month>8</month>
+      <year>2009</year>
+      <size>320</size>
+      <uri>http://phpunit.org/nutshell</uri>
+    </element-citation>
+  </ref>
+  <ref id="B7">
+    <label>7</label>
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name>
+          <surname>Bork</surname>
+          <given-names>Peter B</given-names>
+          <prefix>Mr.</prefix>
+        </name>
+      </person-group>
+      <article-title>PHPUnit in a nutshell</article-title>
+      <day>17</day>
+      <month>8</month>
+      <year>2009</year>
+      <size>320</size>
+      <uri>http://phpunit.org/nutshell</uri>
+    </element-citation>
+  </ref>
+  <ref id="B8">
+    <label>8</label>
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name>
+          <surname>Bork</surname>
+          <given-names>Peter B</given-names>
+          <prefix>Mr.</prefix>
+        </name>
+      </person-group>
+      <article-title>PHPUnit in a nutshell</article-title>
+      <day>17</day>
+      <month>8</month>
+      <year>2009</year>
+      <size>320</size>
+      <uri>http://phpunit.org/nutshell</uri>
+    </element-citation>
+  </ref>
+  <ref id="B9">
+    <label>9</label>
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name>
+          <surname>Bork</surname>
+          <given-names>Peter B</given-names>
+          <prefix>Mr.</prefix>
+        </name>
+      </person-group>
+      <article-title>PHPUnit in a nutshell</article-title>
+      <day>17</day>
+      <month>8</month>
+      <year>2009</year>
+      <size>320</size>
+      <uri>http://phpunit.org/nutshell</uri>
+    </element-citation>
+  </ref>
+  <ref id="B10">
+    <label>10</label>
+    <element-citation publication-type="book">
+      <person-group person-group-type="author">
+        <name>
+          <surname>Bork</surname>
+          <given-names>Peter B</given-names>
+          <prefix>Mr.</prefix>
+        </name>
+      </person-group>
+      <article-title>PHPUnit in a nutshell</article-title>
+      <day>17</day>
+      <month>8</month>
+      <year>2009</year>
+      <size>320</size>
+      <uri>http://phpunit.org/nutshell</uri>
+    </element-citation>
+  </ref>
+</ref-list>

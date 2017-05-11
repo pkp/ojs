@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/cs_CZ/installer.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the cs_CZ (Čeština) locale.
+  * Translated by František Chmelik, frantisek.chmelik 'at' upol.cz
+  * Corrections, migration to the OCS 2.3.x by Ivo Vesely and Petr Petyovsky (petyovsky 'at' feec.vutbr.cz)
+  *
+  -->
+
+<locale name="cs_CZ" full_name="Čeština">
+	<message key="installer.additionalLocales">Doplňkové lokalizace</message>
+	<message key="installer.administratorAccount">Účet administrátora</message>
+	<message key="installer.administratorAccountInstructions">Tento uživatelský účet se stane administrátorem stránek a bude mít kompletní přístup do systému. Další uživatelské účty mohou být vytvořeny po instalaci.</message>
+	<message key="installer.checkNo"><![CDATA[<span class="formError">NE</span>]]></message>
+	<message key="installer.checkYes">Ano</message>
+	<message key="installer.clientCharset">Znaková sada klienta</message>
+	<message key="installer.clientCharsetInstructions">Kódování, které má být použito pro data posílaná a přijímaná z prohlížečů.</message>
+	<message key="installer.configFileError"><![CDATA[Konfigurační soubor <tt>config.inc.php</tt> neexistuje nebo není čitelný.]]></message>
+	<message key="installer.connectionCharset">Znaková sada pro připojení</message>
+	<message key="installer.contentsOfConfigFile">Obsah konfiguračního souboru</message>
+	<message key="installer.createDatabase">Vytvořit novou databázi</message>
+	<message key="installer.createDatabaseInstructions">Pro použití této možnosti musí Váš databázový systém podporovat vzdálené vytvoření databáze a Váš uživatelský účet musí mít potřebná oprávnění pro vytváření nových databází. Pokud byla tato možnost vybrána a instalace selže, vytvořte ručně databázi na Vašem serveru a s spusťte znovu instalaci s touto volbou vypnutou.</message>
+	<message key="installer.databaseCharset">Znaková sada databáze</message>
+	<message key="installer.databaseDriver">Ovladač databáze</message>
+	<message key="installer.databaseDriverInstructions"><![CDATA[<strong>Ovladače databází uvedené v závorkách zřejmě nemají nahrané požadované PHP rozšíření a instalace pravděpodobně selže.</strong><br />Jakékoliv nepodporované ovladače databází uvedené výše, jsou uvedeny pouze pro akademické účely a nebudou pravděpodobně pracovat.]]></message>
+	<message key="installer.databaseHost">Host</message>
+	<message key="installer.databaseHostInstructions">Nechejte hostname prázdné pro připojení s použitím domain sockets namísto přes TCP/IP. Toto není nutné s MySQL, které použije automaticky sockets pokud je vložen "localhost", ale je vyžadováno jinými databázovými servery jako např. PostgreSQL.</message>
+	<message key="installer.databaseName">Název databáze</message>
+	<message key="installer.databasePassword">Heslo</message>
+	<message key="installer.databaseSettings">Nastavení databáze</message>
+	<message key="installer.databaseUsername">Uživatelské jméno</message>
+	<message key="installer.encryption">Algoritmus šifrování hesla</message>
+	<message key="installer.filesDir">Adresář pro nahrávání souborů</message>
+	<message key="installer.fileSettings">Nastavení souboru</message>
+	<message key="installer.form.clientCharsetRequired">Musí být zvolena znaková sada klienta.</message>
+	<message key="installer.form.databaseDriverRequired">Musí být zvolen ovladač databáze.</message>
+	<message key="installer.form.databaseNameRequired">Je vyžadován název databáze.</message>
+	<message key="installer.form.emailRequired">Je vyžadována platná emailová adresa pro účet administrátora.</message>
+	<message key="installer.form.encryptionRequired">Musí být zvolen algoritmus pro šifrování hesel uživatelů.</message>
+	<message key="installer.form.filesDirRequired">Je vyžadován adresář pro ukládání nahraných souborů.</message>
+	<message key="installer.form.localeRequired">Musí být zvolena lokalizace.</message>
+	<message key="installer.form.passwordRequired">Je vyžadováno heslo pro účet administrátora.</message>
+	<message key="installer.form.passwordsDoNotMatch">Hesla administrátora si neodpovídají.</message>
+	<message key="installer.form.separateMultiple">Více hodnot oddělte čárkami</message>
+	<message key="installer.form.usernameAlphaNumeric">Uživatelské jméno administrátora může obsahovat pouze alfanumerické znaky, podtržítka a pomlčky a musí začínat a končit alfanumerickým znakem.</message>
+	<message key="installer.form.usernameRequired">Je vyžadováno uživatelské jméno pro účet administrátora.</message>
+	<message key="installer.installationWrongPhp"><![CDATA[<br/><strong>VAROVÁNÍ: Vaše současná verze PHP nesplňuje minimální požadavky pro instalaci. Doporučuje se upgrade na novější vydání PHP.</strong>]]></message>
+	<message key="installer.installErrorsOccurred">Chyby, ke kterým došlo v průběhu instalace</message>
+	<message key="installer.installerSQLStatements">SQL příkazy pro instalaci</message>
+	<message key="installer.installFileError"><![CDATA[Instalační soubor <tt>dbscripts/xml/install.xml</tt> neexistuje nebo není čitelný.]]></message>
+	<message key="installer.installFilesDirError">Adresář určený pro nahrané soubory neexistuje nebo není zapsatelný.</message>
+	<message key="installer.installParseDBFileError"><![CDATA[Chyba při rozebírání (parsing) instalačního souboru databáze <tt>{$file}</tt>.]]></message>
+	<message key="installer.installParseEmailTemplatesFileError"><![CDATA[Chyba při rozebírání souboru šablony emailu <tt>{$file}</tt>.]]></message>
+	<message key="installer.locale">Lokalizace</message>
+	<message key="installer.locale.maybeIncomplete">Označené soubory lokalizace mohou být nekompletní.</message>
+	<message key="installer.localeSettings">Nastavení lokalizace</message>
+	<message key="installer.manualInstall">Instalovat ručně</message>
+	<message key="installer.miscSettings">Různá nastavení</message>
+	<message key="installer.oaiRepositoryIdInstructions"><![CDATA[jedinečný identifikátor použitý pro identifikaci záznamů metadat indexovaných z těchto stránek s využitím <a href="http://www.openarchives.org/" target="_blank">Open Archives Initiative</a> protokolu pro shromažďování metadat (Protocol for Metadata Harvesting).]]></message>
+	<message key="installer.oaiRepositoryId">Identifikátor OAI úložiště</message>
+	<message key="installer.publicFilesDirError">Adresář veřejných souborů (public) neexistuje nebo není zapsatelný.</message>
+	<message key="installer.releaseNotes">Poznámky k vydání</message>
+	<message key="installer.securitySettings">Bezpečnostní nastavení</message>
+	<message key="installer.manualUpgrade">Upgradovat ručně</message>
+</locale>

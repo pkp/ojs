@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/eu_ES/manager.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the eu_ES (Euskara) locale.
+  *
+  -->
+
+<locale name="eu_ES" full_name="Euskara">
+	<message key="manager.announcements">Anuntzioak</message>
+	<message key="manager.announcements.confirmDelete">Ziur zaude betiko ezabatu nahi duzula anuntzio hau?</message>
+	<message key="manager.announcements.create">Sortu Anuntzio berria</message>
+	<message key="manager.announcements.createTitle">Sortu</message>
+	<message key="manager.announcements.dateExpire">Iraungitze-data</message>
+	<message key="manager.announcements.edit">Editatu anuntzioa</message>
+	<message key="manager.announcements.editTitle">Editatu</message>
+	<message key="manager.announcements.form.dateExpireDayIncompleteDate">Iraungitze-egunaz gain, urtea eta hila hautatu behar dira.</message>
+	<message key="manager.announcements.form.dateExpire">Iraungitze-data</message>
+	<message key="manager.announcements.form.dateExpireInstructions">Egun horretara arte bistaratuko da anuntzioa. Utzi hutsik anuntzioak denbora-mugarik ez badu.</message>
+	<message key="manager.announcements.form.dateExpireMonthIncompleteDate">Iraungitze-hilaz gain, urtea eta eguna hautatu behar dira.</message>
+	<message key="manager.announcements.form.dateExpireValid">Hautatu baliozko iraungitze-data bat</message>
+	<message key="manager.announcements.form.dateExpireYearIncompleteDate">Iraungitze-urteaz gain, hila eta eguna hautatu behar dira.</message>
+	<message key="manager.announcements.form.description">Azalpena</message>
+	<message key="manager.announcements.form.descriptionInstructions">Anuntzioaren testu osoa.</message>
+	<message key="manager.announcements.form.descriptionRequired">Anuntzioaren azalpena eman behar da.</message>
+	<message key="manager.announcements.form.descriptionShortInstructions">Anuntzioaren tituluarekin batera erakusteko azalpen laburra.</message>
+	<message key="manager.announcements.form.descriptionShortRequired">Anuntzioaren azalpen laburra eman behar da.</message>
+	<message key="manager.announcements.form.descriptionShort">Azalpen laburra</message>
+	<message key="manager.announcements.form.saveAndCreateAnother">Gorde eta sortu beste bat</message>
+	<message key="manager.announcements.form.titleRequired">Anuntzioaren titulua eman behar da.</message>
+	<message key="manager.announcements.form.title">Titulua</message>
+	<message key="manager.announcements.form.typeId">Mota</message>
+	<message key="manager.announcements.form.typeIdValid">Hautatu baliozko anuntzio mota bat</message>
+	<message key="manager.announcements.noneCreated">Ez da anuntziorik sortu.</message>
+	<message key="manager.announcements.title">Titulua</message>
+	<message key="manager.announcements.type">Mota</message>
+	<message key="manager.announcementTypes">Anuntzio motak</message>
+	<message key="manager.announcementTypes.confirmDelete">Kontuz! Mota honetako anuntzio guztiak ezabatu egingo dira. Ziur zaude anuntzio mota hau ezabatu nahi duzula?</message>
+	<message key="manager.announcementTypes.create">Sortu anuntzio mota</message>
+	<message key="manager.announcementTypes.createTitle">Sortu</message>
+	<message key="manager.announcementTypes.edit">Editatu anuntzio mota</message>
+	<message key="manager.announcementTypes.editTitle">Editatu</message>
+	<message key="manager.announcementTypes.form.saveAndCreateAnother">Gorde eta sortu beste bat</message>
+	<message key="manager.announcementTypes.form.typeNameExists">Izen hori beste anuntzio mota batena da.</message>
+	<message key="manager.announcementTypes.form.typeName">Izena</message>
+	<message key="manager.announcementTypes.form.typeNameRequired">Anuntzio motaren izena eman behar da.</message>
+	<message key="manager.announcementTypes.noneCreated">Ez da anuntzio motarik sortu.</message>
+	<message key="manager.announcementTypes.typeName">Anuntzio mota</message>
+	<message key="manager.emails.confirmDelete">Ziur zaude mezu-txantiloi hau ezabatu nahi duzula?</message>
+	<message key="manager.emails.confirmReset">Ziur zaude mezu-txantiloi hau berrezarri nahi duzula balio lehenetsiekin?</message>
+	<message key="manager.emails.createEmail">Sortu mezu elektronikoa</message>
+	<message key="manager.emails.disable">Desgaitu</message>
+	<message key="manager.emails.editEmail">Editatu mezu elektronikoa</message>
+	<message key="manager.emails.editTestExample">Editatu mezua probatzeko adibidea</message>
+	<message key="manager.emails.emailKey">Posta elektronikoko gakoa</message>
+	<message key="manager.emails.emailKeyExists">Gako hori beste posta elektroniko batek erabiltzen du. Gako unibokoa izan behar du.</message>
+	<message key="manager.emails.emailTemplate">Mezu elektronikoen txantiloia</message>
+	<message key="manager.emails.emailTemplates">Mezu elektronikoen txantiloiak</message>
+	<message key="manager.emails.enabled">Gaitu mezu-txantiloi hau</message>
+	<message key="manager.emails.enable">Gaitu</message>
+	<message key="manager.emails.form.bodyRequired">Mezuak gorputza eduki behar du.</message>
+	<message key="manager.emails.form.subjectRequired">Mezuak gaia eduki behar du.</message>
+	<message key="manager.emails">Prestatutako mezu elektronikoak</message>
+	<message key="manager.emails.resetAll">Berrezarri txantiloi guztiak</message>
+	<message key="manager.emails.reset">Berrezarri</message>
+	<message key="manager.emails.resetToDefault">Berrezarri lehenetsia</message>
+	<message key="manager.filesBrowser">Fitxategi-arakatzailea</message>
+	<message key="manager.files.confirmDelete">Fitxategi edo direktorio hau ezabatu nahi duzu? Kontuan izan, direktorio bat ezabatu ahal izateko, hutsik egon behar dela.</message>
+	<message key="manager.files.createDir">Sortu direktorioa</message>
+	<message key="manager.files.emptyDir">Ez da fitxategirik aurkitu direktorio honetan.</message>
+	<message key="manager.files.indexOfDir">{$dir} direktorioaren indizea</message>
+	<message key="manager.files.parentDir">Direktorio gurasoa</message>
+	<message key="manager.files.uploadedFiles">Kargatutako fitxategiak</message>
+	<message key="manager.files.uploadFile">Kargatu fitxategia</message>
+	<message key="manager.groups.confirmDelete">Ziur zaude talde hau ezabatu nahi duzula?</message>
+	<message key="manager.groups.createTitle">Sortu kargua</message>
+	<message key="manager.groups.editTitle">Editatu kargua</message>
+	<message key="manager.groups.form.groupTitleRequired">Taldearen titulua eman behar da.</message>
+	<message key="manager.groups.membership.addMember">Gehitu kidea</message>
+	<message key="manager.groups.membership.confirmDelete">Ziur zaude talde honetako kidetza ezabatu nahi duzula?</message>
+	<message key="manager.groups.membership">Kideak</message>
+	<message key="manager.groups.membership.noneCreated">Talde honek ez dauka kiderik.</message>
+	<message key="manager.groups.membership.noUsers">Ez da erabiltzailerik aurkitu.</message>
+	<message key="manager.groups.title">Kargua</message>
+	<message key="manager.importExport">Inportatu/Esportatu datuak</message>
+	<message key="manager.languages.alternateLocaleInstructions">Sistemak aukera ematen du, gainera, informazio garrantzitsua hainbat hizkuntzatan sartzeko. Eginbide hori erabiltzeko, hautatu localeak eta aukeratu beheko aukeren artean.</message>
+	<message key="manager.languages.supportedLocalesInstructions">Hautatu orri bakoitzean hizkuntza aukeratzeko menuan erabilgarri egongo diren locale hizkuntza-paketeak. Hizkuntza bat  baino gehiago hautatzen bada bakarrik agertuko da hizkuntzen menua.</message>
+	<message key="manager.payment.timestamp">Data</message>
+	<message key="manager.people.authSource">Autentifikazio-iturburua</message>
+	<message key="manager.people.confirmUnenroll">Erabiltzaile hau desinskribatu?</message>
+	<message key="manager.people.createUser">Sortu erabiltzaile berria</message>
+	<message key="manager.people.createUserGeneratePassword">Sortu ausazko pasahitz bat.</message>
+	<message key="manager.people.createUserSendNotify">Bidali ongietorri-mezu bat erabiltzaile-izenarekin eta pasahitzarekin.</message>
+	<message key="manager.people.disable">Desgaitu</message>
+	<message key="manager.people.doNotEnroll">Funtziorik gabe</message>
+	<message key="manager.people.editProfile">Editatu profila</message>
+	<message key="manager.people.editUser">Editatu erabiltzailea</message>
+	<message key="manager.people.emailUsers.emailSelectedUsers">Bidali mezua hautatutako erabiltzaileei</message>
+	<message key="manager.people.emailUsers.emailUsersEnrolledAs">Bidali mezua honela inskribatutako erabiltzaileei:</message>
+	<message key="manager.people.emailUsers">Bidali mezu elektronikoa erabiltzaileei</message>
+	<message key="manager.people.emailUsers.selectLocale">Hautatu locale hizkuntza-pakete bat</message>
+	<message key="manager.people.emailUsers.selectUsers">Mezua bidali nahi diezun erabiltzaileak hautatzeko, markatu izenaren ondoko laukia</message>
+	<message key="manager.people.enable">Gaitu</message>
+	<message key="manager.people.enroll">Inskribatu erabiltzailea</message>
+	<message key="manager.people.enrollment">Inskripzioa</message>
+	<message key="manager.people.enrollSelected">Inskribatu hautatutako erabiltzaileak</message>
+	<message key="manager.people.enrollSyncRole">Sinkronizatu funtzio hau</message>
+	<message key="manager.people.enrollSync">Sinkronizatu inskripzioa</message>
+	<message key="manager.people.enrollUserAsDescription">Edozein unetan eslei (edo ken) dakioke funtzio bat erabiltzaile bati.</message>
+	<message key="manager.people.enrollUserAs">Inskribatu erabiltzailea honela:</message>
+	<message key="manager.people.invalidUser">Eskatutako erabiltzailea ez dago.</message>
+	<message key="manager.people.mergeUser">Batu erabiltzailea</message>
+	<message key="manager.people.mergeUsers.confirm">Ziur zaude "{$oldUsername}" erabiltzaile-izena duen kontua ezabatu eta "{$newUsername}" erabiltzaile-izena duen kontuarekin batu nahi duzula? "{$oldUsername}" kontua galdu egingo da. Ekintza hau ezingo da desegin.</message>
+	<message key="manager.people.mergeUsers">Batu erabiltzaileak</message>
+	<message key="manager.people.mustProvideName">Lehenengo, erabiltzailearen abizen bat eman behar duzu.</message>
+	<message key="manager.people.noMatchingUsers">Ez dago bat datorren erabiltzailerik.</message>
+	<message key="manager.people.noneEnrolled">Inskribatutako erabiltzailerik ez.</message>
+	<message key="manager.people">Jendea</message>
+	<message key="manager.people.remove">Kendu</message>
+	<message key="manager.people.saveAndCreateAnotherUser">Gorde eta sortu beste bat</message>
+	<message key="manager.people.signInAs">Hasi erabiltzaile-saioa</message>
+	<message key="manager.people.signInAsUser">Hasi saioa erabiltzaile gisa</message>
+	<message key="manager.people.syncUsers">Sinkronizatu erabiltzaile-inskripzioa</message>
+	<message key="manager.people.unenroll">Desinskribatu</message>
+	<message key="manager.people.userCreatedSuccessfully">Erabiltzailea ondo sortu da.</message>
+	<message key="manager.people.userMustChangePassword">Esan erabiltzaileari pasahitza aldatu behar duela hurrengo sartzen den aldian.</message>
+	<message key="manager.plugins.action">Ekintza:</message>
+	<message key="manager.plugins.disable">Desgaitu</message>
+	<message key="manager.plugins.enable">Gaitu</message>
+	<message key="manager.plugins.pluginManagement">Pluginen kudeaketa</message>
+	<message key="manager.plugins.sitePlugin">Plugin hau gune osorako da. Gune-administratzaileak bakarrik kudea dezake.</message>
+	<message key="manager.plugins">Sistemaren pluginak</message>
+	<message key="manager.readingTools">Irakurtzeko tresnak</message>
+	<message key="manager.roles">Funtzioak</message>
+	<message key="manager.setup.homeHeaderImageInvalid">Hasierako orriaren goiburuko logoaren irudi-formatua ez da baliozkoa: .gif, .jpg, edo .png formatuak bakarrik onartzen dira.</message>
+	<message key="manager.setup.homepageImageInvalid">Hasierako orriaren goiburuko irudi-formatua ez da baliozkoa: .gif, .jpg, edo .png formatuak bakarrik onartzen dira.</message>
+	<message key="manager.setup.homeTitleImageInvalid">Hasierako orriaren goiburuko tituluaren irudi-formatua ez da baliozkoa: .gif, .jpg, edo .png formatuak bakarrik onartzen dira.</message>
+	<message key="manager.setup.layout.unselected">Hautatu gabe</message>
+	<message key="manager.setup.loggingAndAuditing">Log-erregistroa eta kontrola</message>
+	<message key="manager.setup.pageHeaderLogoImageInvalid">Orri-buruko logoaren irudi-formatua ez da baliozkoa: .gif, .jpg, edo .png formatuak bakarrik onartzen dira.</message>
+	<message key="manager.setup.selectOne">Hautatu bat</message>
+	<message key="manager.statistics"><![CDATA[Estatistikak eta txostenak]]></message>
+	<message key="manager.statistics.statistics.count.value">{$count} (% {$percentage})</message>
+	<message key="manager.statistics.statistics.totalNewValue">{$numTotal} ({$numNew} berri)</message>
+	<message key="manager.users">Erabiltzaileak</message>
+	<message key="plugins.categories.auth">Baimena emateko pluginak</message>
+	<message key="plugins.categories.blocks">Blokeko pluginak</message>
+	<message key="plugins.categories.blocks.description">Blokeko pluginak, erabiltzaile-interfazearen osagai gehigarriak dira, esate baterako, alboko barrako tresnak.</message>
+	<message key="plugins.categories.citationFormats">Aipamen-formatuen pluginak</message>
+	<message key="plugins.categories.gateways.description">Atebide-pluginek zuzeneko datuak pasatzen dituzte kanpoko sistemetara</message>
+	<message key="plugins.categories.gateways">Atebide-pluginak</message>
+	<message key="plugins.categories.generic">Plugin generikoak</message>
+	<message key="plugins.categories.importexport.description">Inportatu eta Esportatzeko pluginak edukia beste sistema batzuetatik eta batzuetara transferitzeko erabiltzen dira.</message>
+	<message key="plugins.categories.importexport">Inportatu eta Esportatzeko pluginak</message>
+	<message key="plugins.categories.paymethod.description">Ordaintzeko moduen pluginekin, lineako ordainketak hainbat modutan prozesatu ahal izango dira.</message>
+	<message key="plugins.categories.paymethod">Ordainketen pluginak</message>
+	<message key="plugins.categories.reports.description">Txostenen pluginak Konferentzia-kudeatzaileentzako txostenak eta datu-aterakinak prestatzeko erabiltzen dira.</message>
+	<message key="plugins.categories.reports">Txostenen pluginak</message>
+	<message key="plugins.categories.themes.description">Sistemaren itxura aldatzeko erabiltzen dira Temen pluginak.</message>
+	<message key="plugins.categories.themes">Temen pluginak</message>
+	<message key="manager.people.mustChooseRole">Hautatu funtzio bat orriaren goialdean "Inskribatu erabiltzailea"n klik egin aurretik.</message>
+	<message key="manager.emails.form.emailKeyRequired">Posta elektronikoko gako bakarra behar da posta elektronikorako.</message>
+	<message key="manager.setup.errorDeletingItem">Errorea elementu hau ezabatzean.</message>
+	<message key="manager.setup.citationFilterParserDescription">Datu-basea instalatu ondoren, exekutatu ezazu berritze-tresna, mesedez. Exekutatu ezazu 'php tools/upgrade.php upgrade' horretarako dagoen instalazio-direktorio nagusian.</message>
+	<message key="manager.setup.citationAssistant">Aipua markatzeko laguntzailea</message>
+	<message key="manager.reviewerSearch.searchByName">Ebaluatzailea izenez bilatu</message>
+	<message key="manager.reviewerSearch.doneAmount">Amaitutako ebaluazio kopurua</message>
+	<message key="manager.reviewerSearch.avgAmount">Ebaluazioa egiteko egunak</message>
+	<message key="manager.reviewerSearch.lastAmount">Azken ebaluaziotik igarotako egunak</message>
+	<message key="manager.reviewerSearch.activeAmount">Ebaluazio aktiboen kopurua</message>
+	<message key="manager.reviewerSearch.interests">Interesak ebaluatzen</message>
+	<message key="manager.setup.citationFilterParser">Aipuak erauztea</message>
+	<message key="manager.setup.citationFilterLookup">Aipuak egiaztatzen</message>
+	<message key="manager.setup.citationFilterLookupDescription"><![CDATA[<p> Aipuen kanpoko datu-baseetarako konexioak ere gaitu eta konfiguratu behar dituzu. Horrek egilearen aipuetan akatsak aurkitzen edo informazioa gehitzen lagunduko dizu, eta beharrezkoa da elektronikoki argitaratzeko edo bertan uzteko (adib., DOI edo PubMed-en ID-ak). </p>
+		<p>Kanpoko hainbat datu-baseetarako konektore ditugu, eta horietan aipuak bilatu ahal izango dituzu. Datu-base horietako zenbaitek erregistratzeko edo konfiguratzeko informazioa eskatzen dute. Mesedez, begiratu datu-baseen web orri publikoak, erregistratzeari buruzko informazio gehiago izateko. Datu-base bat edo gehiago gehitu ditzakezu azpian agertzen den “Gehitu elementua” botoia sakatuz gero. </p>
+		<p> Kanpoko datu-baseetako konexioak editatzeko edo ezabatzeko, egin klik haren ondoko engranaje-ikonoan. </p>
+		<p><strong>Oharra: </strong>Aipua egiaztatzeko prozesua modu egokian amaitzeko, zure konfigurazio-fitxategiko <tt>citation_checking_max_processes</tt> direktiba balio egokian ezarri behar da. Informazio gehiago izateko, begiratu “Ezarpen Orokorrak” atala helbide honetan: <tt>config.inc.php</tt>.</p>]]></message>
+	<message key="manager.setup.citationOutput">Aipuen irteera</message>
+	<message key="manager.setup.citationOutputStyleDescription">Aukeratu zure aldizkariko egilearen aurkezpenetan erabilitako aipuen estiloa. Aipuak markatzeko laguntzaileak egileak egindako aipuaren bertsioa eta egiten ari zaren XML-tik sortutako bertsioa alderatzeko aukera ematen dizu, eta, beraz, erroreak erraz ikus ditzakezu:</message>
+	<message key="manager.setup.filter.grid.errorDeletingFilter">Errore bat gertatu da iragazkia kentzen saiatzean. Mesedez, eman errorearen berri.</message>
+	<message key="manager.setup.filter.grid.filterDisplayName">Konektorea</message>
+	<message key="manager.setup.filter.grid.filterSettings">Erregistratzeko Informazioa eta Konektorearen Ezarpenak</message>
+	<message key="manager.setup.filter.grid.filterTemplateRequired">Mesedez, hautatu goitibeheran dauden eraldaketetako bat.</message>
+	<message key="manager.setup.filter.grid.confirmDelete">Ziur zaude {$filterName} iragazkia ezabatu nahi duzula?</message>
+	<message key="manager.setup.filter.lookup.grid.descriptionConfirm">{$filterDisplayName} datu-basea gehitzea aukeratu duzu. Mesedez, egin klik “OK” botoian baieztatzeko.</message>
+	<message key="manager.setup.filter.lookup.grid.descriptionTemplate">Mesedez, hautatu bilaketa egiteko datu-basea.</message>
+	<message key="manager.setup.filter.lookup.grid.description.iSBNdb"><![CDATA[<p> Iragazki honek <a href="http://isbndb.com/" target="_blank">ISBNdb.com</a> liburuaren eta ISBN-aren datu-basearekin konektatzen du. <p>ISBNdb API gakoa nahitaezkoa da. Gakoa sortzeari buruzko informazioa eskuratzeko, begiratu <a href="http://isbndb.com/api/v1/docs/keys" target="_blank"> linean dagoen dokumentazioa </a>.</p>]]></message>
+	<message key="manager.setup.filter.lookup.grid.description.crossRef"><![CDATA[<p> Iragazki honek CrossRef aipuaren datu-basera konektatzen du, CrossRef-en <a href="http://www.crossref.org/02publishers/openurl_info.html" target="_blank"> OpenURL Query Interface interfazea erabiliz. </p>
+	<p>Iragazki hori erabiltzeko, CrossRef sistemako zure kontua erabil dezakezu, edo baliozko helbide elektronikoa erregistra dezakezu CrossRef-en <a href="http://w ww.crossref.org/requestaccount/" target="_blank">, hemen</a>.</p>]]></message>
+	<message key="manager.setup.filter.lookup.grid.description.pubMed"><![CDATA[<p> Iragazki honek PubMed-en  <a href="http://www.ncbi.nlm.nih.gov/gquery/gquery.fcgi" target="_blank">Entrez</a> datu-baseen arteko bilatzailearekin konektatzen du. </p>
+	<p>Erregistratzeko helbide elektronikoa ez da guztiz nahitaezkoa, baina beharrezkoa izan daiteke konexio-arazoak izanez gero. Informazio gehiago izateko, begiratu <a href="http://www.be-md.ncbi.nlm.nih.gov/bookshelf/br.fcgi?book=helpeutils&part=chapter2#chapter2.Usage_Guidelines_and_Requiremen" target="_blank"> atala Entrez dokumentazioan.]]></message>
+	<message key="manager.setup.filter.lookup.grid.description.worldCat"><![CDATA[<p> Iragazki honek OCLC zerbitzuetara <a href="http://www.worldcat.org/affiliate/webservices/xisbn/app.jsp" target="_blank">xISBN</a> eta Worldcat-era <a href="http://www.worldcat.org/" target="_blank"> </a> (aukerakoa) konektatzen du. </p>
+	<p>Worldcat  <a href="http://oclc.org/developer/develop/web-services.html" target="_blank"> API gakoa baduzu, Worldcat-era konektatu zaitezke, beheran agertzen den gakoa sartuz.</p>]]></message>
+	<message key="manager.setup.filter.lookup.grid.loadMessage">Mesedez, itxaron aipuen datu-baseen konfigurazio-sareta kargatu arte…</message>
+	<message key="manager.setup.filter.lookup.grid.title">Aipuen Datu-baseen Konektoreak</message>
+	<message key="manager.setup.filter.noMoreTemplates">Eskuragarri dauden eraldaketa guztiak gehitu dira. Mesedez, egin klik “Ezeztatu” botoian konfigurazio-orrira itzultzeko.</message>
+	<message key="manager.setup.filter.parser.grid.descriptionConfirm">{$filterDisplayName} sintaxi-analizatzailea gehitzea aukeratu duzu. Mesedez, egin klik “OK” botoian baieztatzeko.</message>
+	<message key="manager.setup.filter.parser.grid.descriptionTemplate">Mesedez, hautatu aipuen sintaxi-analizatzaile bat.</message>
+	<message key="manager.setup.filter.parser.grid.description.freeCite"><![CDATA[<p>Erauzketa-iragazki honek <a href="http://freecite.library.brown.edu/" target="_blank">FreeCite</a> sareko zerbitzuara konektatzen du.</p>]]></message>
+	<message key="manager.setup.filter.parser.grid.description.paraCite"><![CDATA[<p>Erauzketa-iragazki honek <a href="http://paracite.eprints.org/developers/" target="_blank">ParaTools</a> Perl moduluak erabiltzen ditu <a href="http://paracite.eprints.org" target="_blank">ParaCite</a> aipuen sintaxi-analizatzailearen funtzionalitatea emateko. Horrek ondo lan egin dezan, Perl instalatuta izan behar duzu, baita<a href="http://search.cpan.org/~mjewell/Biblio-Citation-Parser-1.10/" target="_blank"> Biblio::Citation::Parser</a> eta <a href="http://search.cpan.org/~sburke/Text-Unidecode-0.04/" target="_blank"> Text::Unicode</a>CPAN moduluak ere. <tt>Perl</tt> direktiba ere instalatu behar duzu zure konfigurazio-fitxategian. Direktiba hori Kanpoko Komandoak <tt>config.inc.php</tt> atalean aurkituko duzu. </p>
+	<p>Era berean, zein sintaxi-analizatzaile modulu erabili hauta dezakezu. <a href="http://search.cpan.org/~mjewell/Biblio-Citation-Parser-1.10/lib/Biblio/Citation/Parser/Jiao.pm" target="_blank"> Jiao</a>,  estandarra, edo <a href="http://search.cpan.org/~mjewell/Biblio-Citation-Parser-1.10/lib/Biblio/Citation/Parser/Citebase.pm" target="_blank"> Citebase </a>, sintaxi-analizatzaileen modulua, hauta dezakezu. </p>]]></message>
+	<message key="manager.setup.filter.parser.grid.description.parsCit"><![CDATA[<p> Erauzketa-iragazki honek <a href="http://aye.comp.nus.edu.sg/parsCit/" target="_blank"> ParsCit </a> sareko zerbitzura konektatzen du.]]></message>
+	<message key="manager.setup.filter.parser.grid.description.regEx">RegEx erauzketa-iragazkiak hainbat hitz arrunt erabiltzen ditu aipuak analizatzeko.</message>
+	<message key="manager.setup.filter.parser.grid.loadMessage">Mesedez, itxaron aipuen sintaxi-analizatzailearen konfigurazio-sareta kargatu arte…</message>
+	<message key="manager.setup.filter.parser.grid.title">Aipuen Erauzketa Zerbitzuak</message>
+	<message key="manager.setup.filter.pleaseSelect">Mesedez, hautatu…</message>
+	<message key="manager.setup.metaCitationsDescription">Aktibatu hurrengo kontrol-laukia aipua eta erreferentzia editatzea gaitzeko. Egileei aurkezpenetan aipu gordinak sartzeko aukera ematen die. Editoreek aipuak markatzeko laguntzailera sartu ahal izango dute; tresna horrek aipu gordinak eta kanpoko datu-baseak (hala nola WorldCat, ISBNdb, PubMed eta beste zenbait) alderatzeko bide ematen du, zehaztasun gehiagorako. Onartutako aipuak azken galerada-fitxategietara esportatu daitezke.</message>
+	<message key="manager.announcements.datePublish">Argitaratua</message>
+	<message key="manager.emails.addEmail">Erantsi helbide elektronikoaren txantiloia</message>
+	<message key="manager.emails.details">Txantiloiaren xehetasunak</message>
+	<message key="manager.emails.data">Txantiloiko mezuaren datuak</message>
+	<message key="manager.emails.disable.message">Posta elektronikoaren txantiloi hau desaktibatzeko zorian zaude. Sistemaren prozesu batzuk baleude txantiloi hau erabiltzen, ez lukete aurrerantzean erabiliko. Eragiketa baieztatu nahi duzu?</message>
+	<message key="manager.emails.enable.message">Posta elektroniko hau aktibatzeko zorian zaude. Eragiketa baieztatu nahi duzu?</message>
+	<message key="manager.emails.resetAll.message">Txantiloi guztiak berrezartzen badituzu, posta elektronikoaren txantiloi guztien aldaketak galduko dira. Eragiketa baieztatu nahi duzu?</message>
+	<message key="manager.emails.reset.message">Txantiloi hau berrezartzen baduzu, mezuko datu guztiak berrezarriko dira lehenetsitako balioetan, eta aldaketa guztiak galduko dira. Eragiketa baieztatu nahi duzu?</message>
+	<message key="manager.masthead.title">Idazpurua</message>
+	<message key="manager.reviewerSearch.searchByName.short">Izenaren araberako bilaketa</message>
+	<message key="manager.reviewerSearch.form.instructions">Erabili beheko inprimakia bilatu nahi dituzun hitzentzako gehienezko balioak ezartzeko. Inprimakiak eremu horietako batez besteko kalkulatuak ditu.</message>
+	<message key="manager.reviewerSearch.form.interests.instructions">Sartu berrikuslearen interesak, komek bananduta...</message>
+	<message key="plugins.categories.metadata">Metadatuen pluginak</message>
+	<message key="plugins.categories.metadata.description">Metadatuen pluginek metadatu estandar gehigarriak inplementatzen dituzte,</message>
+	<message key="plugins.categories.citationLookup">Aipuen datu basearen konektore pluginak</message>
+	<message key="plugins.categories.citationLookup.description">Aipuen datu basearen konektore pluginak aipuen datu baseetara konektatzen dira aipuak bilatzeko, adib., aipuak editatzen diren bitartean.</message>
+	<message key="plugins.categories.citationOutput">Aipuen irteerarako pluginak</message>
+	<message key="plugins.categories.citationOutput.description">Aipuen irteerarako pluginek aipu estandarrak inplementatzen dituzte. Horrek aipuen formatu pluginak ordezten ditu.</message>
+	<message key="plugins.categories.citationParser">Aipuak erauzteko pluginak</message>
+	<message key="plugins.categories.citationParser.description">Aipuak erauzteko pluginek eremu mailako datuak erauzten dituzte aipu gordinetatik (adib., egilea, titulua, etab.).</message>
+	<message key="manager.setup.layout.blockManagement">Alboko barraren kudeaketa</message>
+	<message key="plugins.categories.oaiMetadataFormats">OAI Metadatuen Formatuen Pluginak</message>
+	<message key="plugins.categories.oaiMetadataFormats.description">Formatuen plugin horiek metadatuak adierazten dituzte OAI komunikazioetan.</message>
+	<message key="manager.website">Webgunea</message>
+
+	<!-- Review forms -->
+	<message key="manager.reviewFormElement.changeType">Kontuz: Ebaluazio-inprimakiko elementu mota aldatzen baduzu aukera multzo bat izatetik irekia izatera, aukera multzoa ezabatu egingo da.</message>
+	<message key="manager.reviewFormElements">Inprimakiko elementuak</message>
+	<message key="manager.reviewFormElements.addResponseItem">Gehitu hautapena</message>
+	<message key="manager.reviewFormElements.checkboxes">Kontrol-laukiak (bat edo gehiago aukera daitezke)</message>
+	<message key="manager.reviewFormElements.chooseType">Aukeratu elementu mota</message>
+	<message key="manager.reviewFormElements.confirmDelete">Ziur zaude ebaluazio-inprimaki argitaratu bateko elementu bat ezabatu nahi duzula?</message>
+	<message key="manager.reviewFormElements.copyTo">Kopiatu hona:</message>
+	<message key="manager.reviewFormElements.create">Sortu elementu berria</message>
+	<message key="manager.reviewFormElements.dropdownbox">Goitibehera</message>
+	<message key="manager.reviewFormElements.edit">Editatu inprimaki-elementua</message>
+	<message key="manager.reviewFormElements.elementType">Elementu mota</message>
+	<message key="manager.reviewFormElements.form.elementTypeRequired">Inprimaki-elementu honek elementu mota bat behar du.</message>
+	<message key="manager.reviewFormElements.form.questionRequired">Inprimaki-elementu honek galdera bat behar du.</message>
+	<message key="manager.reviewFormElements.noneCreated">Ez da inprimaki-elementurik sortu</message>
+	<message key="manager.reviewFormElements.possibleResponse">Hautapena</message>
+	<message key="manager.reviewFormElements.question">Elementua</message>
+	<message key="manager.reviewFormElements.radiobuttons">Aukera-botoiak (bakarra aukera daiteke)</message>
+	<message key="manager.reviewFormElements.required">Ebaluatzaileek bete egin behar dute elementua</message>
+	<message key="manager.reviewFormElements.smalltextfield">Hitz bakarreko testu-koadroa</message>
+	<message key="manager.reviewFormElements.textarea">Testu-koadro hedatua</message>
+	<message key="manager.reviewFormElements.textfield">Lerro bakarreko testu-koadroa</message>
+	<message key="manager.reviewForms">Ebaluazio-inprimakiak</message>
+	<message key="manager.reviewForms.completed">Bukatuta</message>
+	<message key="manager.reviewForms.create">Sortu Ebaluazio-inprimakia</message>
+	<message key="manager.reviewForms.description">Azalpena eta Instrukzioak</message>
+	<message key="manager.reviewForms.edit">Ebaluazio-inprimakia</message>
+	<message key="manager.reviewForms.form.titleRequired">Titulua eman behar zaio ebaluazio-inprimakiari.</message>
+	<message key="manager.reviewForms.inReview">Ebaluatzen</message>
+	<message key="manager.reviewForms.list.description">Hemen sortzen diren ebaluazio-inprimakiak emango zaizkie adituei ebaluazioa egiteko, bi testu-koadroz ("egilearentzat eta editorearentzat" lehenengoa eta "editorearentzat" bigarrena) osatutako inprimaki lehenetsiaren ordez. Ebaluazio-inprimakiak aldizkariaren atal jakin batean erabiltzeko jar daitezke, eta ataleko editoreek zein inprimaki erabili aukeratu ahal izango dute ebaluazioa esleitzean. Kasu guzietan, editoreek ebaluazio-txostenak sartzeko aukera izango dute egilearekin izaten duten korrespondentzian.</message>
+	<message key="manager.reviewForms.noneChosen">Bat ere ez / Inprimaki librea</message>
+	<message key="manager.reviewForms.noneCreated">Ez da ebaluazio-inprimakirik sortu</message>
+	<message key="manager.reviewForms.preview">Inprimakiaren aurrebista</message>
+	<message key="manager.reviewForms.title">Titulua</message>
+</locale>

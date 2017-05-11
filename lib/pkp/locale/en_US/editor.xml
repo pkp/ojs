@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/en_US/editor.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="en_US" full_name="U.S. English">
+	<message key="editor.submissionLibrary">Submission Library</message>
+	<message key="editor.review.notInitiated">The review process has not yet been initiated.</message>
+	<message key="editor.submission.copyediting.personalMessageToUser">Message to user</message>
+	<message key="editor.submission.externalReviewDescription">Select files below to send them to the review stage.</message>
+	<!-- Add file or auditor to editor/audit grids -->
+	<message key="editor.submission.fileAuditor.form.fileRequired">You must select at least one file to assign the user to.</message>
+	<message key="editor.submission.fileAuditor.form.messageRequired">You must include a personal message.</message>
+	<message key="editor.submission.fileAuditor.skipEmail">Do not send email to the Auditor</message>
+	<message key="editor.submission.fileAuditor.form.userRequired">You must select a user to assign.</message>
+	<message key="editor.submission.uploadSelectFiles">Upload/Select Files</message>
+	<message key="editor.submission.selectFiles">Select Files</message>
+	<message key="editor.submission.revisions">Revisions</message>
+	<message key="editor.submission.review.reviewersDescription"><![CDATA[Use <em>+Add Reviewer</em> to invite readers to review the submission files. The notebook icon indicates that a review has been submitted, which is then checked <em>Acknowledged</em> after it has been consulted. When reviews are overdue, a red envelope icon appears for reminding reviewers.]]></message>
+	<message key="editor.submission.addReviewer">Add Reviewer</message>
+	<message key="editor.submission.findAndSelectReviewer">Locate a Reviewer</message>
+	<message key="editor.submission.findAndSelectUser">Locate a User</message>
+	<message key="editor.submission.fileList.includeAllStages">Show files from all accessible workflow stages.</message>
+	<message key="editor.submission.review.currentFiles">Current Review Files For Round {$round}</message>
+	<message key="editor.submission.backToSearch">Back to Search</message>
+	<message key="editor.review.createReviewer">Create New Reviewer</message>
+	<message key="editor.review.enrollReviewer.short">Enroll Existing User</message>
+	<message key="editor.review.unassignReviewer">Unassign Reviewer</message>
+	<message key="editor.submissionReview.reviewType">Review Type</message>
+	<message key="editor.submissionReview.skipEmail">Do not send author email</message>
+	<message key="editor.submissionReview.open">Open</message>
+	<message key="editor.submissionReview.blind">Blind</message>
+	<message key="editor.submissionReview.doubleBlind">Double-blind</message>
+	<message key="editor.submissionReview.restrictFiles">Files To Be Reviewed</message>
+	<message key="editor.submissionReview.restrictFiles.hide">Close File Selection</message>
+	<message key="editor.submissionReview.editReview">Edit Review</message>
+	<message key="editor.review.personalMessageToReviewer">Email to be sent to reviewer</message>
+	<message key="editor.review.importantDates">Important Dates</message>
+	<message key="editor.review.uploadRevision">Upload Revision</message>
+	<message key="editor.review.NotifyAuthorAccept">Notify the author that their submission has been accepted.</message>
+	<message key="editor.review.NotifyAuthorDecline">Notify the author that their submission has been declined.</message>
+	<message key="editor.review.NotifyAuthorRevisions">Request revisions from the author.</message>
+	<message key="editor.review.NotifyAuthorResubmit">Request revisions from the author that will be subject to further review.</message>
+	<message key="editor.review.NotifyAuthorExternal">Notify the author of the decision to initiate an external review.</message>
+	<message key="editor.review.personalMessageToAuthor">Email to be sent to author</message>
+	<message key="editor.review.dateAccepted">Review Acceptance Date</message>
+	<message key="editor.review.noReviews">No peer reviews to import</message>
+	<message key="editor.review.reminder">Review Reminder</message>
+	<message key="editor.review.thankReviewer">Thank Reviewer</message>
+	<message key="editor.review.reminderError">Error sending review reminder</message>
+	<message key="editor.review.thankReviewerError">Error sending thank you to reviewer</message>
+	<message key="editor.review.skipEmail">Do not send email to Reviewer.</message>
+	<message key="editor.review.sendReminder">Send Reminder</message>
+	<message key="editor.review.readReview">Read Review</message>
+	<message key="editor.review.readNewReview">Read New Review</message>
+	<message key="editor.review.responseDue">Response due: {$date}</message>
+	<message key="editor.review.requestSent">Request Sent</message>
+	<message key="editor.review.requestAccepted">Request Accepted</message>
+	<message key="editor.review.revertDecision">Revert Decision</message>
+	<message key="editor.review.reviewDue">Review due: {$date}</message>
+	<message key="editor.review.reviewDueDate">Review Due Date</message>
+	<message key="editor.review.reviewCompleted">Review Completed</message>
+	<message key="editor.review.reviewConfirmed">Review Confirmed</message>
+	<message key="editor.review.reviewSubmitted">Review Submitted</message>
+	<message key="editor.review.reviewerComments">Reviewer Comments</message>
+	<message key="editor.review.days">Average Days</message>
+	<message key="editor.review.mustSelect">You must select a reviewer</message>
+	<message key="editor.review.errorAddingReviewer">There was an error adding the reviewer.  Please try again.</message>
+	<message key="editor.review.errorDeletingReviewer">There was an error deleting the reviewer.  Please try again.</message>
+	<message key="editor.review.userGroupSelect">Enroll the user with this reviewer user group</message>
+	<message key="editor.review.unconsiderReviewText">Do you wish to mark this review as unconsidered?  The review history will be preserved.</message>
+	<message key="editor.review.unconsiderReview">Unconsider this Review</message>
+	<message key="editor.review.readConfirmation">Once this review has been read, press "Confirm" to indicate that the review process may proceed. If the reviewer has submitted their review elsewhere, you may upload the file below and then press "Confirm" to proceed.</message>
+	<message key="editor.submission.selectCopyedingFiles">Copyediting Files</message>
+	<message key="editor.submission.selectReviewer">Select Reviewer</message>
+	<message key="editor.submission.taskDueDate">Task Due Date</message>
+	<message key="editor.submission.taskSchedule">Task schedule</message>
+	<message key="editor.review.enrollReviewer">Enroll an Existing User as Reviewer</message>
+	<message key="editor.submission.noAuditRequested">No audit requested for this file</message>
+	<message key="editor.submission.personalMessageToUser">Email to be sent to user</message>
+	<message key="editor.submission.proof.reminder">Proof reminder</message>
+	<message key="editor.submission.editorial.approveCopyeditDescription">The copyedited file needs to be approved before it can be sent to the Production stage. Do you want to approve this file?</message>
+	<message key="editor.submission.editorial.disapproveCopyeditDescription">Disapproving this copyedited file will make it unavailable to send to production stage. Do you want to disapprove this file?</message>
+	<message key="editor.submission.addAuditor">Assign Auditor</message>
+	<message key="editor.submission.copyedit.manageCopyeditFilesDescription">Any files that have already been uploaded to any submission stage can be added to the Copyedit Files listing by checking the Include checkbox below and clicking Search: all available files will be listed and can be chosen for inclusion. Additional files not already uploaded to a stage can be added to the listing by clicking the Upload File link.</message>
+	<message key="editor.review">Review</message>
+	<message key="editor.review.reviewDetails">Review Details</message>
+	<message key="editor.review.noReviewFilesUploaded">No Files Uploaded</message>
+	<message key="editor.review.noReviewFilesUploaded.details">You have not uploaded any review files.</message>
+	<message key="editor.review.emailReviewer">Email Reviewer</message>
+	<message key="editor.submission.production.productionReadyFiles">Production Ready Files</message>
+	<message key="editor.submission.newRound">New Review Round</message>
+	<message key="editor.submissionReview.recordDecision">Record Editorial Decision</message>
+	<message key="editor.submission.newRoundDescription">You are about to create a new review round for this submission.  Files that have not been used in other review rounds are listed below.</message>
+	<message key="editor.submission.createNewRound">Create New Review Round</message>
+	<message key="editor.article.reviewForms">Review Forms</message>
+	<message key="editor.article.selectReviewForm">Select Review Form</message>
+	<message key="editor.article.clearReviewForm">Clear Review Form</message>
+	<message key="editor.article.confirmChangeReviewForm">Warning: Changing the review form will affect any answers reviewers have made using this form. Are you sure you wish to continue?</message>
+	<message key="editor.submission.noReviewerFilesSelected">No Files Selected</message>
+	<message key="editor.submission.noReviewerFilesSelected.details">You have not selected any files for the reviewer to review.</message>
+	<message key="submission.queries.subjectRequired">A discussion subject is required.</message>
+	<message key="submission.queries.messageRequired">A discussion message is required.</message>
+	<message key="submission.queries.attachedFiles">Attached Files</message>
+	<message key="grid.action.editQuery">Edit Discussion</message>
+	<message key="editor.submission.query.manageQueryNoteFilesDescription">Files can be attached for inclusion in this discussion from the list below.</message>
+	<message key="editor.submission.selectedReviewer">Selected Reviewer</message>
+	<message key="editor.submission.proofreading.approveProof">Approve Proof</message>
+	<message key="editor.submission.proofreading.revokeProofApproval">Revoke Proof Approval</message>
+	<message key="editor.submission.proofreading.confirmCompletion">Approve this proof to indicate proofreading is complete and the file is ready to be published.</message>
+	<message key="editor.submission.proofreading.confirmRemoveCompletion">Revoke approval for this proof to indicate proofreading is no longer complete and the file is not ready to be published.</message>
+	<message key="editor.publicIdentificationNumericNotAllowed">The public identifier '{$publicIdentifier}' must not be a number.</message>
+	<message key="editor.publicIdentificationPatternNotAllowed">The pattern {$pattern} is not allowed for the public identifier.</message>
+</locale>

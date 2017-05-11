@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/sv_SE/submission.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the sv_SE (Svenska) locale.
+  *
+  -->
+
+<locale name="sv_SE" full_name="Svenska">
+	<message key="submission.abstractViews">Visningar av sammanfattning</message>
+	<message key="submission.accepted">Accepterad</message>
+	<message key="submission.acknowledge">Bekräfta</message>
+	<message key="submission.addSuppFile">Bifoga tilläggsfil</message>
+	<message key="submission.ask">Fråga</message>
+	<message key="submission.backToSubmissionEditing">Tillbaka till redigering av manuskript</message>
+	<message key="submission.comments.addComment">Lägg till kommentar</message>
+	<message key="submission.comments.comments">Kommentarer</message>
+	<message key="submission.comments.confirmDelete">Är du säker på att du vill ta bort den här kommentaren?</message>
+	<message key="submission.comments.corrections">Korrigeringar</message>
+	<message key="submission.comments.editComment">Redigera kommentar</message>
+	<message key="submission.comments.importPeerReviews">Importera granskningar</message>
+	<message key="submission.comments.importPeerReviews.reviewerLetter">Granskare {$reviewerLetter}:</message>
+	<message key="submission.comments.noComments">Inga kommentarer</message>
+	<message key="submission.comments.noReviews">Inga granskningar</message>
+	<message key="submission.comments.review">Granskning</message>
+	<message key="submission.comments.sendDecisionToReviewers">Skicka redaktörsbesked till Granskare</message>
+	<message key="submission.comments.subject">Ämne</message>
+	<message key="submission.complete">Avslutad</message>
+	<message key="submission.done">Färdig</message>
+	<message key="submission.dueDate">Sista datum för inlämning/registrering</message>
+	<message key="submission.due">Förväntat</message>
+	<message key="submission.editing">Redigera</message>
+	<message key="submission.editMetadata">Redigera metadata</message>
+	<message key="submission.email.backToEmailLog">Tillbaka till E-postlogg</message>
+	<message key="submission.email.confirmClearLog">Är du säker på att vill rensa E-post loggen för den här manuskriptinlämningen?</message>
+	<message key="submission.email.confirmDeleteLogEntry">Är du säker på att du vill ta bort inlagd E-post logg?</message>
+	<message key="submission.email.deleteLogEntry">Ta bort inlagd E-postlogg</message>
+	<message key="submission.emailLog">E-postlogg</message>
+	<message key="submission.event.backToEventLog">Tillbaka till Händelselogg</message>
+	<message key="submission.event.confirmClearLog">Är du säker på att du vill ta bort händelseloggen för den här manuskriptinlämningen?</message>
+	<message key="submission.event.confirmDeleteLogEntry">Är du säker på att du vill ta bort tillagd händelselogg?</message>
+	<message key="submission.event.deleteLogEntry">Ta bort inlagd händelselogg</message>
+	<message key="submission.event.general.metadataUpdated">Inskickad metadata uppdaterad</message>
+	<message key="submission.event.general.suppFileUpdated">Inskickad fil uppdaterad</message>
+	<message key="submission.event.reviewer.reviewAcceptedByProxy">Granskningsarbete accepterat av annan</message>
+	<message key="submission.event.reviewer.reviewAccepted">Granskningsarbete accepterat</message>
+	<message key="submission.event.reviewer.reviewCancelled">Granskningsarbete avbrutet</message>
+	<message key="submission.event.reviewer.reviewDeclined">Granskningsarbete avslaget</message>
+	<message key="submission.event.reviewer.reviewDueDate">Sista datum för granskning ändrat</message>
+	<message key="submission.event.reviewer.reviewerAssigned">Granskare har tilldelats manuskript</message>
+	<message key="submission.event.reviewer.reviewerRated">Granskares omdöme inskickat</message>
+	<message key="submission.event.reviewer.reviewerUnassigned">Granskare har avaktiverats från manuskriptet</message>
+	<message key="submission.event.reviewer.reviewFile">Granskningsfil uppdaterad</message>
+	<message key="submission.event.reviewer.reviewInitiated">Granskningsarbete påbörjat</message>
+	<message key="submission.event.reviewer.reviewRecommendation">Granskares rekommendationsfil</message>
+	<message key="submission.event.reviewer.reviewReinitiated">Granskningsarbete återupptaget</message>
+	<message key="submission.event.reviewer.reviewResubmitted">Granskning skickad in igen</message>
+	<message key="submission.event.reviewer.reviewRevision">Granskares reviderade fil uppdaterad</message>
+	<message key="submission.files">Filer</message>
+	<message key="submission.galley">Korrekturversion</message>
+	<message key="submission.history.clearLog">Rensa logg</message>
+	<message key="submission.history">Historik</message>
+	<message key="submission.history.noLogEntries">Inga loggar.</message>
+	<message key="submission.history.recentLogEntries">Nyligen tillagda loggar</message>
+	<message key="submission.history.submissionEmailLog">E-postlogg</message>
+	<message key="submission.history.submissionEventLog">Händelselogg</message>
+	<message key="submission.history.submissionNotes">Manuskriptanteckningar</message>
+	<message key="submission.history.viewLog">Visa logg</message>
+	<message key="submission.indexing">Indexera</message>
+	<message key="submission.initiated">Påbörjad</message>
+	<message key="submission.lastModified">Senast ändrad</message>
+	<message key="submission.layout.addGalley">Add a Layout Galley</message>
+	<message key="submission.layout.confirmDeleteGalley">Are you sure you want to permanently delete this galley?</message>
+	<message key="submission.layout.confirmDeleteGalleyImage">Are you sure you want to remove this image from the galley?</message>
+	<message key="submission.layout.confirmDeleteSupplementaryFile">Är du säker på att du vill ta bort den komplementerande filen permanent?</message>
+	<message key="submission.layout.deleteGalleyStylesheet">Ta bort stylesheet.</message>
+	<message key="submission.layout.editGalley">Edit a Layout Galley</message>
+	<message key="submission.layout.galleyFileData">Galley File Information</message>
+	<message key="submission.layout.galleyFormat">Galley Format</message>
+	<message key="submission.layout.galleyHTMLData">HTML Galley Files</message>
+	<message key="submission.layout.galleyImages">Bilder</message>
+	<message key="submission.layout.galleyLabelInstructions">The galley label is used to identify the item's file format (e.g. HTML, PDF, etc.).</message>
+	<message key="submission.layout.galleyLabel">Etikett</message>
+	<message key="submission.layout.galleyLabelRequired">A galley label is required.</message>
+	<message key="submission.layout.galleyLanguageRequired">A galley language is required.</message>
+	<message key="submission.layout.galleyLocaleRequired">A galley locale is required.</message>
+	<message key="submission.layout.galleyNoImages">Inga bilder</message>
+	<message key="submission.layout.galleys">Galleys</message>
+	<message key="submission.layout.galleyStylesheet">Stylesheetfil</message>
+	<message key="submission.layout.galleyStyle">Stil</message>
+	<message key="submission.layout.initialGalleyCreation">Initial Galley Creation</message>
+	<message key="submission.layout.layoutFile">Layoutfil</message>
+	<message key="submission.layout">Layout</message>
+	<message key="submission.layout.layoutVersion">Layoutversion</message>
+	<message key="submission.layout.newGalley">Create New Galley</message>
+	<message key="submission.layout.newSupplementaryFile">Ladda upp ny komplementerande fil</message>
+	<message key="submission.layout.noStyleFile">No stylesheet file has been added to this galley.</message>
+	<message key="submission.layout.supplementaryFiles">Granskning av komplementerande filer</message>
+	<message key="submission.layout.viewingGalley">Viewing Submission Galley</message>
+	<message key="submission.layout.viewProof">Visa korrektur</message>
+	<message key="submission.metadata">Manuskript Metadata</message>
+	<message key="submission.noReviewAssignments">Inga manuskript för granskning</message>
+	<message key="submission.notes.addNewNote">Lägg till ny anteckning</message>
+	<message key="submission.notes.attachedFile">Filtillägg</message>
+	<message key="submission.notes.backToSubmissionNotes">Tillbaka till manuskriptsanteckningar</message>
+	<message key="submission.notes.breadcrumb">Anteckning</message>
+	<message key="submission.notes.clearAllNotes">Rensa alla anteckningar</message>
+	<message key="submission.notes.collapseNotes">Minimera anteckningar</message>
+	<message key="submission.notes.confirmDeleteAll">Ta bort alla manuskriptanteckningar?</message>
+	<message key="submission.notes.confirmDelete">Ta bort den här anteckningen?</message>
+	<message key="submission.notes.createNewNote">Skapa ny anteckning</message>
+	<message key="submission.notes.deleteNote">Radera anteckning</message>
+	<message key="submission.notes.editNote">Redigera anteckning</message>
+	<message key="submission.notes.expandNotes">Expand Notes</message>
+	<message key="submission.notes.noSubmissionNotes">Inga manuskriptanteckningar</message>
+	<message key="submission.notes.removeUploadedFile">Ta bort uppladdad fil</message>
+	<message key="submission.notes">Anmärkning på manuskript</message>
+	<message key="submission.notes.updateNote">Uppdatera anteckning</message>
+	<message key="submission.notes.viewNotes">Visa anteckningar</message>
+	<message key="submission.originalFile">Originalfil</message>
+	<message key="submission.page.editing">#{$id} Redigera</message>
+	<message key="submission.page.history">#{$id} Historik</message>
+	<message key="submission.page.review">#{$id} Granska</message>
+	<message key="submission.page.summary">#{$id} Sammandrag</message>
+	<message key="submission.peerReview">Sakkunnig&amp;nbsp;granskning</message>
+	<message key="submission.recommendation">Rekommendation: {$recommendation}</message>
+	<message key="submission.rejected">Avvisad</message>
+	<message key="submission.request">Beställa</message>
+	<message key="submission.response">Svar</message>
+	<message key="submission.restrictions">Begränsningar</message>
+	<message key="submission.reviewMetadata">Granska metadata</message>
+	<message key="submission.review">Granska</message>
+	<message key="submission.reviewVersion">Version för granskning</message>
+	<message key="submissions.active">Aktiv</message>
+	<message key="submissions.archived">Arkiverad</message>
+	<message key="submission.saveMetadata">Spara metadata</message>
+	<message key="submissions.completed">Avslutad</message>
+	<message key="submissions.declined">Refuserad</message>
+	<message key="submissions.incomplete">Ofullständig</message>
+	<message key="submissions.noSubmissions">Inga manuskript</message>
+	<message key="submissions.queuedEditing">Avvaktar redigering</message>
+	<message key="submissions.queued">I kö</message>
+	<message key="submissions.queuedUnassigned">Avvaktar tilldelning</message>
+	<message key="submissions.ruling">Utslag</message>
+	<message key="submissions.submit">Skicka in</message>
+	<message key="submissions.submitted">Inskickad</message>
+	<message key="submission.start">Start</message>
+	<message key="submission.submissionHistory">Manuskripthistorik</message>
+	<message key="submission.submissionManuscript">Manuskript</message>
+	<message key="submission.submissionReview">Manuskriptgranskning</message>
+	<message key="submission.submitter">Insändare</message>
+	<message key="submission.summary">Sammandrag</message>
+	<message key="submission.supplementaryFiles">Tilläggsfiler</message>
+	<message key="submission.titleAndAbstract">Titel och sammanfattning</message>
+	<message key="submission.underway">På väg</message>
+	<message key="submission.uploadFileTo">Ladda upp fil till</message>
+	<message key="submission.viewMetadata">Visa metadata</message>
+	<message key="submission.views">Visningar</message>
+	<message key="log.review.reviewerAssigned">{$reviewerName} har tilldelats ett manuskript att granska {$submissionId} för granskningsomgång {$round}.</message>
+	<message key="submission.reviewForm">Granskningsformulär</message> 
+</locale>

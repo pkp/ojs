@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/fr_CA/editor.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="fr_CA" full_name="Français (Canada)">
+	<message key="editor.submissionLibrary.description"><![CDATA[Télécharger les documents qui concernent la révision et la publication de cette soumission. Des modèles ont été créés pour plusieurs de ces documents. Il suffit de cliquer sur <em>Visionner la bibliothèque de documents</em>.]]></message>
+	<message key="editor.review.notInitiated">Le processus de révision n'a pas encore débuté.</message>
+	<message key="editor.submission.copyediting.personalMessageToUser">Message à l'utilisateur</message>
+	<message key="editor.submission.externalReviewDescription">Vous entamez le processus d'évaluation externe de cette soumission. La liste des fichiers faisant partie de cette soumission est affichée ci-dessous. Ils peuvent être sélectionnés pour être révisés.</message>
+	<message key="editor.submission.review.reviewFilesDescription"><![CDATA[Voici les fichiers qui peuvent être sélectionnés pour l'évaluation, lorsque vous ajoutez des évaluateurs dans la section <span class="pkp_help_title">Évaluateurs</span>]]>.</message>
+	<message key="editor.submission.uploadSelectFiles">Téléverser/Sélectionner les fichiers</message>
+
+	<!-- Add file or auditor to editor/audit grids -->
+	<message key="editor.submission.fileAuditor.form.fileRequired">Vous devez choisir au moins un fichier qui sera assigné à l'utilisateur.</message>
+	<message key="editor.submission.fileAuditor.form.messageRequired">Vous devez ajouter un message personnalisé.</message>
+	<message key="editor.submission.fileAuditor.skipEmail">N'envoyez pas de courriels au vérificateur.</message>
+	<message key="editor.submission.fileAuditor.form.userRequired">Vous devez choisir un utilisateur à qui l'ouvrage sera attribué.</message>
+	<message key="editor.submission.revisions">Révisions</message>
+	<message key="editor.submission.revisionsDescription">Les fichiers révisés de la soumission sont affichés ici. L'icône Ouvrir le dossier indique qui a téléchargé le fichier.</message>
+	<message key="editor.submission.review.reviewersDescription"><![CDATA[Utilisez <em>Ajouter un évaluateur</em> pour inviter des lecteurs à examiner les fichiers soumis. L'icône en forme de carnet indique qu'on a soumis un fichier pour l'évaluation. Celui-ci indiquera <em>Considéré</em> lorsqu'il aura été consulté. Si les évaluations sont en retard, l'icône d'une enveloppe rouge s'affichera à titre de rappel pour les évaluateurs.]]></message>	
+	<message key="editor.submission.addReviewer">Ajouter un évaluateur</message>
+	<message key="editor.submission.fileList.includeAllStages">Inclure tous les fichiers de toutes les étapes de production accessibles.</message>
+	<message key="editor.submission.review.currentFiles">{$round}e série de révision des fichiers.</message>
+	<message key="editor.submission.backToSearch">Revenir en mode de recherche simple</message>
+	<message key="editor.review.createReviewer">Créer un nouvel évaluateur</message>
+	<message key="editor.review.enrollReviewer.short">Enregistrer un évaluateur actuel</message>
+	<message key="editor.submissionReview.reviewType">Type d'évaluation</message>
+	<message key="editor.submissionReview.skipEmail">Ne pas envoyer un courriel à l'auteur</message>
+	<message key="editor.submissionReview.open">Évaluation ouverte</message>
+	<message key="editor.submissionReview.blind">Évaluation à l'aveugle</message>
+	<message key="editor.submissionReview.doubleBlind">Évaluation en double aveugle</message>
+	<message key="editor.review.skipEmail">Ne pas envoyer un courriel à l'évaluateur</message>
+	<message key="editor.review.sendReminder">Envoyer un rappel</message>
+	<message key="editor.review.reviewDueDate">Date d'échéance de l'évaluation</message>
+	<message key="editor.review.reviewCompleted">Évaluation terminée</message>
+	<message key="editor.review.personalMessageToReviewer">Envoyer un courriel à l'évaluateur</message>
+	<message key="editor.review.importantDates">Dates importantes</message>
+	<message key="editor.submission.selectCopyedingFiles">Fichiers de travail éditorial</message>
+	<message key="editor.submission.selectReviewer">Choisir un évaluateur</message>
+	<message key="editor.submission.taskDueDate">Date d'échéance de la tâche</message>
+	<message key="editor.submission.taskSchedule">Calendrier de la tâche</message>
+	<message key="editor.review.enrollReviewer">Enregistrer un utilisateur actuel à titre d'évaluateur</message>
+	<message key="editor.submission.editorial.introduction"><![CDATA[Dans la section Rédaction, le réviseur de textes examine les épreuves finales avant de les télécharger dans la rubrique <span class="pkp_help_title">Révision</span>. L'auteur et d'autres personnes ont accès aux fichiers dans <span class="pkp_help_title">Révision</span> afin que l'on puisse éventuellement préparer et télécharger les copies au net de la soumission. Elles seront ensuite <em>Approuvées</em> par un rédacteur en chef, et passeront à l'étape de publication.]]></message>
+	<message key="editor.submission.noAuditRequested">Aucune demande de vérification n'a été faite pour ce fichier.</message>
+	<message key="editor.review.reminderError">Erreur d'envoi du rappel d'évaluation</message>
+	<message key="editor.submission.personalMessageToUser">Un courriel sera envoyé à l'utilisateur</message>
+	<message key="editor.submission.proof.reminder">Rappel d'épreuve</message>
+	<message key="editor.submission.editorial.approveCopyeditDescription">Le fichier révisé doit être approuvé avant de passer à l'étape de publication. Souhaitez-vous approuver ce fichier?</message>
+	<message key="editor.submission.editorial.disapproveCopyeditDescription">Si ce fichier n'est pas approuvé, il ne pourra pas passer à l'étape de publication. Souhaitez-vous désapprouver ce fichier?</message>
+	<message key="editor.submission.editorial.approveCopyeditFile">Approuver le fichier révisé</message>
+	<message key="editor.submission.addAuditor">Ajout d'un vérificateur</message>
+	<message key="editor.submission.editorial.copyeditingDescription"><![CDATA[Assigner les fichiers révisés à leurs auteurs (et à d'autres personnes, le cas échéant) afin qu'ils examinent les modifications et répondent aux questions. Leurs réponses et fichiers téléchargés s'afficheront dans l'icône Carnet. Ils seront identifiés <em>Considéré</em> par le réviseur, qui préparera ensuite une copie au net finale qui pourra être téléchargée dans <span class="pkp_help_title">Révision</span>. Le rédacteur en chef vérifiera cette copie et l'approuvera, puis elle passera à l'étape de publication.]]></message>
+	<message key="editor.submission.final.manageFinalDraftFilesDescription">Un fichier qui a été téléchargé à une étape du processus de soumission, peu importe laquelle, peut être ajouté à la liste des fichiers d'épreuves finales. Il suffit de cocher la case Ajouter ci-dessous, puis de cliquer Recherche: tous les fichiers disponibles seront affichés et peuvent être choisis pour être ajoutés. Les autres fichiers qui n'ont pas déjà été téléchargés à une certaine étape du processus peuvent être ajoutés à cette liste en cliquant sur le lien Télécharger une épreuve finale.</message>
+	<message key="editor.review">Évaluation</message>
+	<message key="editor.signoff.approved">Approuvé</message>
+	<message key="editor.submission.production.productionReadyFiles">Fichiers publiables</message>
+	<message key="editor.submission.newRound">Nouvelle série de révisions</message>
+	<message key="editor.submission.selectAttachments">Choisir les fichiers d'évaluation que l'auteur pourra consulter</message>
+	<message key="editor.submissionReview.recordDecision">Enregistrement des décisions éditoriales</message>
+	<message key="editor.submission.selectFairCopy">Choisir les fichiers de révision approuvés qui seront envoyés pour la publication.</message>
+	<message key="editor.submission.createNewRound">Créer une nouvelle série de révisions.</message>
+	<message key="editor.submission.review.manageReviewFilesDescription">Tous les fichiers qui ont déjà été téléchargés à une étape du processus de soumission (même à une étape d'édition ou de publication) peuvent être choisis pour révision. Il suffit de cocher la case Ajouter ci-dessous, puis de cliquer Recherche: tous les fichiers disponibles seront affichés et peuvent être choisis pour être ajoutés. Les autres fichiers qui n'ont pas déjà été téléchargés à une certaine étape du processus peuvent être ajoutés à cette liste en cliquant sur le lien Télécharger le fichier d'évaluation.</message>
+	<message key="editor.submission.selectPromoteRevisions">Choisir les révisions qui seront utilisées à la prochaine étape</message>
+	<message key="editor.review.unassignReviewer">Retirer le privilège de l'examinateur.</message>
+	<message key="editor.submissionReview.restrictFiles">Restreindre les fichiers disponibles.</message>
+	<message key="editor.submissionReview.restrictFiles.gridDescription">Si cet examinateur ne devrait pas avoir le droit de réviser tous les fichiers apparaissant dans cette liste, assurez-vous de cocher uniquement les fichiers pertinents.</message>
+	<message key="editor.review.uploadRevision">Télécharger la révision</message>
+	<message key="editor.review.NotifyAuthorAccept">Avertir l'auteur de l'acceptation:</message>
+	<message key="editor.review.NotifyAuthorDecline">Avertir l'auteur que sa soumission a été refusée:</message>
+	<message key="editor.review.NotifyAuthorRevisions">Avertir l'auteur que la soumission doit être révisée:</message>
+	<message key="editor.review.NotifyAuthorResubmit">Avertir l'auteur que la soumission doit être révisée et examinée à nouveau:</message>
+	<message key="editor.review.NotifyAuthorExternal">Avertir l'auteur que l'on a décidé de mener un examen externe:</message>
+	<message key="editor.review.personalMessageToAuthor">Envoyer un courriel à l'auteur</message>
+	<message key="editor.review.dateAccepted">Date d'acceptation de la révision</message>
+	<message key="editor.review.noReviews">Aucune révision des pairs à importer</message>
+	<message key="editor.review.reminder">Rappel d'examen de la soumission</message>
+	<message key="editor.review.thankReviewer">Remercier l'examinateur</message>
+	<message key="editor.review.thankReviewerError">Erreur d'envoi du remerciement à l'examinateur</message>
+	<message key="editor.review.reviewerComments">Commentaires de l'examinateur</message>
+	<message key="editor.review.days">Moyenne des jours</message>
+	<message key="editor.review.mustSelect">Vous devez sélectionner un examinateur</message>
+	<message key="editor.review.errorAddingReviewer">Il y a eu une erreur au moment d'ajouter l'examinateur. Essayez de nouveau.</message>
+	<message key="editor.review.errorDeletingReviewer">Il y a eu une erreur au moment de supprimer l'examinateur. Essayez de nouveau.</message>
+	<message key="editor.review.userGroupSelect">Ajouter l'utilisateur à ce groupe d'examinateurs</message>
+	<message key="editor.review.unconsiderReviewText">Vous souhaitez indiquer que cet examen n'a pas été considéré? L'historique des révisions sera conservé.</message>
+	<message key="editor.review.unconsiderReview">Ne pas considérer cet examen.</message>
+	<message key="editor.review.readConfirmation">Après avoir lu cet examen, choisissez "Confirmer" pour indiquer que le processus d'examen peut se poursuivre.</message>
+	<message key="editor.submission.newRoundDescription">Vous êtes sur le point de créer une nouvelle ronde d'examens pour cette soumission. Les fichiers qui n'ont pas été utilisés dans les autres rondes d'examens sont indiqués ci-dessous. Par défaut, les examinateurs de la ronde d'examens précédente ont été sélectionnés pour participer à cette nouvelle ronde.</message>
+	<message key="editor.article.reviewForms">Formulaires d'évaluation</message>
+	<message key="editor.article.selectReviewForm">Sélectionner un formulaire d'évaluation</message>
+	<message key="editor.article.clearReviewForm">Réinitialiser le formulaire d'évaluation</message>
+	<message key="editor.submission.selectedReviewer">Evaluateur sélectionné</message>
+	<message key="editor.submissionLibrary">Bibliothèque de soumission</message>
+	<message key="editor.submission.selectFiles">Sélectionner les fichiers</message>
+	<message key="editor.submission.findAndSelectReviewer">Trouver un évaluateur</message>
+	<message key="editor.submission.findAndSelectUser">Trouver un utilisateur</message>
+	<message key="editor.submissionReview.restrictFiles.hide">Fermer la sélection</message>
+	<message key="editor.submissionReview.editReview">Modifier l'évaluation</message>
+	<message key="editor.review.readReview">Lire l'évaluation</message>
+	<message key="editor.review.readNewReview">Lire la nouvelle évaluation</message>
+	<message key="editor.review.responseDue">Réponse due pour le {$date}</message>
+	<message key="editor.review.requestSent">Requête envoyée</message>
+	<message key="editor.review.requestAccepted">Requête acceptée</message>
+	<message key="editor.review.revertDecision">Renverser la décision</message>
+	<message key="editor.review.reviewDue">Évaluation due pour le: {$date}</message>
+	<message key="editor.review.reviewConfirmed">Évaluation confirmée</message>
+	<message key="editor.review.reviewSubmitted">Évaluation soumise</message>
+	<message key="editor.submission.copyedit.manageCopyeditFilesDescription">Tous les fichiers qui ont déjà été téléchargés dans une étape de soumission peuvent être ajoutés à la liste des fichiers de copie en cochant la case Inclure ci-dessous et en cliquant sur Rechercher: tous les fichiers disponibles seront répertoriés et peuvent être choisis pour inclusion. Les fichiers supplémentaires qui ne sont pas déjà chargés sur une étape peuvent être ajoutés à la liste en cliquant sur le lien Télécharger un fichier.</message>
+	<message key="editor.review.reviewDetails">Détails de l'évaluation</message>
+	<message key="editor.review.noReviewFilesUploaded">Aucun fichier téléchargé</message>
+	<message key="editor.review.noReviewFilesUploaded.details">Vous n'avez téléverser aucun fichier d'évaluation</message>
+	<message key="editor.review.emailReviewer">Courriel de l'évaluateur</message>
+	<message key="editor.article.confirmChangeReviewForm">Avertissement: La modification du formulaire d'évaluation aura une incidence sur les réponses que les examinateurs auront faites en utilisant ce formulaire. Êtes-vous sûr de vouloir continuer?</message>
+	<message key="editor.submission.noReviewerFilesSelected">Aucun fichier sélectionné</message>
+	<message key="editor.submission.noReviewerFilesSelected.details">Vous n'avez pas sélectionné de fichiers pour que l'évaluateur puisse les examiner.</message>
+	<message key="submission.queries.subjectRequired">Un sujet de discussion est requis</message>
+	<message key="submission.queries.messageRequired">Un message pour une discussion est requis</message>
+	<message key="submission.queries.attachedFiles">Fichiers attachés</message>
+	<message key="grid.action.editQuery">Éditer la discussion</message>
+	<message key="editor.submission.proofreading.approveProof">Approuver la preuve</message>
+	<message key="editor.submission.proofreading.revokeProofApproval">Retirer l’approbation de la preuve</message>
+	<message key="editor.submission.query.manageQueryNoteFilesDescription">Les fichiers peuvent être inclus dans cette discussion à partir de la liste ci-dessous.</message>
+	<message key="editor.submission.proofreading.confirmCompletion">Accepter la preuve pour indiquer que le document est prêt à être publié.</message>
+	<message key="editor.submission.proofreading.confirmRemoveCompletion">Retirer l'approbation de la preuve et indiquer que ce document n'est pas prêt pour la publication.</message>
+	<message key="editor.publicIdentificationNumericNotAllowed">Le public identifié comme '{$publicIdentifier}' ne peut être un numéro.</message>
+	<message key="editor.publicIdentificationPatternNotAllowed">Le modèle {$pattern} ne peut pas être utilisé comme public identifié.</message>
+</locale>

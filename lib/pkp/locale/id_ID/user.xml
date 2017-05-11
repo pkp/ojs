@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/id_ID/user.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="id_ID" full_name="Bahasa Indonesia">
+	<message key="user.affiliation">Afiliasi</message>
+	<message key="user.affiliation.description">(Institusi Anda, contoh: "Pusat Dokumentasi dan Informasi Ilmiah - LIPI")</message>
+	<message key="user.affiliations">Afiliasi</message>
+	<message key="user.authorization.accessDenied">Akses ditolak.</message>
+	<message key="user.authorization.processAuthenticationTokenRequired">Bukti pengesahan proses hilang atau tidak valid.</message>
+	<message key="user.authorization.contextRequired">Anda tidak bisa menggunakan operasi ini tanpa konteks (wartawan, jurnal, konferensi, dll).</message>
+	<message key="user.authorization.loginRequired">Login diperlukan.</message>
+	<message key="user.authorization.privateOperation">Operasi yang Anda coba untuk akses mungkin bersifat privasi atau tidak ada.</message>
+	<message key="user.authorization.restrictedSiteAccess">Akses Anda ditolak. Akses ke situs ini sekarang dilarang.</message>
+	<message key="user.authorization.roleBasedAccessDenied">Peran sekarang tidak mempunyai akses ke operasi ini.</message>
+	<message key="user.authorization.userGroupRequired">Anda harus mengatur grup pengguna valid untuk mengakses operasi ini.</message>
+	<message key="user.biography">Biografi</message>
+	<message key="user.biography.description">(Contoh: departemen dan pangkat)</message>
+	<message key="user.changeMyPassword">Ganti Kata Sandi Saya</message>
+	<message key="user.changePassword">Ganti Kata Sandi</message>
+	<message key="user.dateLastLogin">Login Terakhir</message>
+	<message key="user.dateRegistered">Tanggal Terdaftar</message>
+	<message key="user.editMyProfile">Edit Profil Saya</message>
+	<message key="user.email">Email</message>
+	<message key="user.feminine">P</message>
+	<message key="user.firstName">Nama Depan</message>
+	<message key="user.gender">Jenis Kelamin</message>
+	<message key="user.initialsExample"><![CDATA[Ratih Keumala Sari = RKS atau <a href=http://slametriyanto.net>Slamet Riyanto = SLM</a>]]></message>
+	<message key="user.initials">Inisial</message>
+	<message key="user.interests">Bidang Minat Review</message>
+	<message key="user.interests.description">(Pisahkan masing-masing bidang dengan spasi atau koma)</message>
+	<message key="user.gossip">Catatan Tambahan</message>
+	<message key="user.lastName">Nama Belakang</message>
+	<message key="user.profile.form.profileImageInvalid">Format gambar profil invalid atau gambar terlalu besar. Format yang diterima adalah .gif, .jpg, atau .png, dan gambar tidak boleh melebih 150x150 pixel.</message>
+	<message key="user.login.accountDisabledWithReason">Akun Anda tidak bisa karena alasan berikut ini: {$reason}</message>
+	<message key="user.login.accountDisabled">Akun Anda tidak bisa. Hubungi administrator untuk informasi lebih lanjut.</message>
+	<message key="user.login.accountNotValidated">Alamat email Anda belum divalidasi. Cek email Anda dan ikuti instruksi yang tersedia. Jika Anda belum menerima email. Anda mungkin perlu menghubungi administrator situs untuk bantuan.</message>
+	<message key="user.login.activate">Aktivasi akun</message>
+	<message key="user.login.activated">Terima kasih untuk mengaktifkan akun Anda. Anda sekarang mungkin login dengan menggunakan credential yang Anda berikan saat membuat Akun ini.</message>
+	<message key="user.login.changePasswordInstructions"><![CDATA[Anda harus memilih kata sandi baru sebelum Anda login ke situs ini.<br /><br />Masukkan Nama Pengguna Anda dan kata sandi yang sekarang dan yang baru di bawah ini untuk mengganti kata sandi untuk akun Anda.]]></message>
+	<message key="user.login.forgotPassword">Lupa kata sandi Anda?</message>
+	<message key="user.login.loginError">Nama Pengguna atau kata sandi tidak valid. Coba lagi.</message>
+	<message key="user.login">Login</message>
+	<message key="user.logIn">Login</message>
+	<message key="user.login.lostPassword.confirmationSent">Konfirmasi telah dikirim ke alamat email Anda. Ikuti instruksi di email untuk mengatur ulang kata sandi Anda.</message>
+	<message key="user.login.lostPassword.invalidHash">Maaf, tautan yang Anda klik telah berakhir atau tidak valid. Coba mengatur ulang kata sandi lagi.</message>
+	<message key="user.login.lostPassword.invalidUser">Tidak ada pengguna dengan alamat email yang spesifik.</message>
+	<message key="user.login.lostPassword.passwordSent">Kata sandi baru telah dikirim ke alamat emal Anda. Anda sekarang bisa login ke situs dengan kata sandi baru Anda.</message>
+	<message key="user.login.registeredEmail">Email pengguna yang sudah terdaftar</message>
+	<message key="user.login.resetPassword">Atur ulang kata sandi</message>
+	<message key="user.logOut">Log Out</message>
+	<message key="user.mailingAddress">Alamat Surat Menyurat</message>
+	<message key="user.masculine">L</message>
+	<message key="user.middleName">Nama Tengah</message>
+	<message key="user.myAccount">Akun Saya</message>
+	<message key="user.name">Nama</message>
+	<message key="user.other">Pilih</message>
+	<message key="user.password">Kata Sandi</message>
+	<message key="user.repeatPassword">Ulangi Kata Sandi</message>
+	<message key="user.phone">Telepon</message>
+	<message key="user.profile.changePasswordInstructions">Masukkan kata sandi Anda saat ini dan yang baru di bawah ini untuk mengganti kata sandi akun Anda.</message>
+	<message key="user.profile.editProfile">Edit Profil</message>
+	<message key="user.profile.form.emailRequired">Alamat email yang valid diperlukan.</message>
+	<message key="user.profile.form.affiliationRequired">Afiliasi diperlukan.</message>
+	<message key="user.profile.form.firstNameRequired">Nama depan diperlukan.</message>
+	<message key="user.profile.form.lastNameRequired">Nama belakang diperlukan.</message>
+	<message key="user.profile.form.newPasswordRequired">Anda harus memasukkan kata sandi baru.</message>
+	<message key="user.profile.form.oldPasswordInvalid">Kata sandi yang sekarang Anda masukkan salah.</message>
+	<message key="user.profile.form.openAccessNotifications">Notifikasi emal akses terbuka terbitan</message>
+	<message key="user.profile.form.passwordRequired">Kata sandi diperlukan.</message>
+	<message key="user.profile.form.profileImage">Gambar profil</message>
+	<message key="user.profile.form.publishedNotifications">Notifikasi email terbitan baru yang telah diterbitkan</message>
+	<message key="user.profile.form.urlInvalid">URL spesifik tidak valid. Cek dua kali URL dan coba lagi. (Petunjuk: coba tambahkan http:// ke awal URL.)</message>
+	<message key="user.profile.form.usernameRequired">Nama pengguna diperlukan.</message>
+	<message key="user.profile.leavePasswordBlank">Biarkan bidang kata sandi kosong untuk menyimpan kata sandi yang sekarang.</message>
+	<message key="user.profile.newPassword">Kata Sandi Baru</message>
+	<message key="user.profile.oldPassword">Kata Sandi Saat Ini</message>
+	<message key="user.profile">Profil</message>
+	<message key="user.profile.publicProfile">Profil Pengguna</message>
+	<message key="user.profile.repeatNewPassword">Ulangi Kata Sandi Baru</message>
+	<message key="user.register.form.emailExists">Alamat email yang dipilih sudah digunakan oleh pengguna lain.</message>
+	<message key="user.register.form.passwordsDoNotMatch">Kata Sandi tidak cocok.</message>
+	<message key="user.register.form.emailsDoNotMatch">Bidang alamat email tidak cocok.</message>
+	<message key="user.register.form.usernameExists">Nama pengguna yang dipilih sudah digunakan oleh pengguna lain.</message>
+	<message key="user.register.passwordLengthRestriction">Kata sandi minimal {$length} karakter.</message>
+	<message key="user.register.registerAs">Daftar sebagai</message>
+	<message key="user.register">Daftar</message>
+	<message key="user.register.usernameRestriction">Nama pengguna hanya bisa terdiri dari huruf kecil, nomor, dan tanda penghubung/ garis bawah atau kombinasi ketiganya.</message>
+	<message key="user.role.reader">Pembaca</message>
+	<message key="user.role.readers">Pembaca</message>
+	<message key="user.role.reviewer">Reviewer</message>
+	<message key="user.role.reviewers">Reviewer</message>
+	<message key="user.role.siteAdmin">Administrasi Situs</message>
+	<message key="user.role.siteAdmins">Administrasi Situs</message>
+	<message key="user.roles">Peran</message>
+	<message key="user.salutation">Sapaan</message>
+	<message key="user.sendPassword">Konfirmasi</message>
+	<message key="user.sendPassword.description">Kirimi saya email konfirmasi termasuk nama pengguna dan kata sandi saya</message>
+	<message key="user.signature">Signature</message>
+	<message key="user.title">Gelar</message>
+	<message key="user.url">URL</message>
+	<message key="user.userHome">Beranda Pengguna</message>
+	<message key="user.username">Nama Pengguna</message>
+	<message key="user.workingLanguages">Bahasa</message>
+	<message key="user.register.completeForm">Isi form di bawah ini untuk mendaftar ke jurnal ini.</message>
+</locale>

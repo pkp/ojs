@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../dtd/locale.dtd">
+
+<!--
+  * plugins/metadata/mods34/locale/fr_CA/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="fr_CA" full_name="Français (Canada)">
+	<message key="plugins.metadata.mods34.displayName">Schéma de métadonnées MODS 3.4</message>
+	<message key="plugins.metadata.mods34.description">Pour utiliser le schéma et les adaptateurs de MODS 3.4</message>
+	<message key="plugins.metadata.mods34.mods34XmlOutput.displayName">Export MODS 3.4</message>
+	<message key="plugins.metadata.mods34.mods34XmlOutput.description">Convertis les métadonnées sous le schéma MODS 3.4 en son équivalent XML.</message>
+</locale>

@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/uk_UA/submission.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the uk_UA (Українська) locale.
+  *
+  * Translated by Denys Solovianenko, 2011
+  * V. I. Vernadsky National Library of Ukraine
+  -->
+
+<locale name="uk_UA" full_name="Українська">
+	<!-- Author Submission -->
+	<message key="author.submit.submissionCitations">Надайте форматований список посилань на роботи, процитовані у цьому рукописі. Будь ласка, відокремлюйте посилання одне від одного пустими рядками.</message>
+
+	<!-- FIXME: move to meta-data plug-ins -->
+	<!-- messages used by meta-data filters -->
+	<message key="metadata.filters.crossref.settings.email.displayName">Email реєстрації у CrossRef</message>
+	<message key="metadata.filters.crossref.settings.email.validationMessage">Будь ласка, введіть працездатну адресу email, з якою був зареєстрований обліковий запис у CrossRef. Ви можете безкоштовно зареєструвати ваш email на веб-сайті CrossRef.</message>
+	<message key="metadata.filters.isbndb.settings.apiKey.displayName">Ключ API ISBNdb</message>
+	<message key="metadata.filters.isbndb.settings.apiKey.validationMessage">Будь ласка, введіть ваш Ключ API ISBNdb. Якщо поки ви не маєте ключа, ви можете безкоштовно його замовити у проекті ISBNdb.</message>
+	<message key="metadata.filters.pubmed.settings.email.displayName">Email реєстрації у PubMed</message>
+	<message key="metadata.filters.pubmed.settings.email.validationMessage">Будь ласка, введіть працездатну адресу email, з якою був зареєстрований обліковий запис у PubMed.</message>
+	<message key="metadata.filters.worldcat.settings.apiKey.displayName">Ключ API WorldCat</message>
+	<message key="metadata.filters.worldcat.settings.apiKey.validationMessage">Будь ласка, якщо ви маєте ключ API WorldCat, введіть його.</message>
+	<message key="metadata.filters.paracite.settings.citationModule.displayName">Модуль цитат</message>
+	<message key="metadata.filters.paracite.settings.citationModule.validationMessage">Будь ласка, виберіть один з модулів цитат.</message>
+	<message key="metadata.filters.settings.isOptional.displayName">Не використовувати за замовчуванням (служба залишатиметься доступною редактору)</message>
+	<message key="metadata.filters.settings.isOptional.validationMessage">Внутрішня помилка. Для налаштування 'optional filter' було завантажено некоректне значення. Будь ласка, повідомте розробників про цю помилку.</message>
+	
+	<!-- messages shared between MD schemas -->
+	<message key="metadata.property.displayName.author">Автори</message>
+	<message key="metadata.property.validationMessage.author">Для найкращих результатів рекомендується вводити імена авторів у наступному форматі: Coleman Jr, D. (Ralf) Dr.</message>
+	<message key="metadata.property.displayName.editor">Редактори</message>
+	<message key="metadata.property.validationMessage.editor">Для найкращих результатів рекомендується вводити імена редакторів у наступному форматі: Coleman Jr, D. (Ralf) Dr.</message>
+	
+	<!-- NLM-specific messages -->
+	<message key="metadata.property.displayName.article-title">Назва статті/праці</message>
+	<message key="metadata.property.validationMessage.article-title">Будь ласка, вкажіть коректну назву статті/праці.</message>
+	<message key="metadata.property.displayName.source">Назва журналу/книги</message>
+	<message key="metadata.property.validationMessage.source">Будь ласка, вкажіть коректну назву журналу/книги.</message>
+	<message key="metadata.property.displayName.date">Дата публікації</message>
+	<message key="metadata.property.validationMessage.date">Будь ласка, вкажіть коректну дату публікації (формат: РРРР-ММ-ДД).</message>
+	<message key="metadata.property.displayName.access-date">Дата доступу</message>
+	<message key="metadata.property.validationMessage.access-date">Будь ласка, вкажіть коректну дату доступу (формат: РРРР-ММ-ДД).</message>
+	<message key="metadata.property.displayName.issue">Випуск</message>
+	<message key="metadata.property.validationMessage.issue">Будь ласка, вкажіть коректний номер випуску.</message>
+	<message key="metadata.property.displayName.volume">Том</message>
+	<message key="metadata.property.validationMessage.volume">Будь ласка, вкажіть коректний номер тому.</message>
+	<message key="metadata.property.displayName.season">Сезон</message>
+	<message key="metadata.property.validationMessage.season">Будь ласка, вкажіть коректний ідентифікатор сезону.</message>
+	<message key="metadata.property.displayName.chapter-title">Назва глави</message>
+	<message key="metadata.property.validationMessage.chapter-title">Будь ласка, вкажіть коректну назву глави.</message>
+	<message key="metadata.property.displayName.edition">Видання</message>
+	<message key="metadata.property.validationMessage.edition">Будь ласка, вкажіть коректний номер видання.</message>
+	<message key="metadata.property.displayName.series">Серії</message>
+	<message key="metadata.property.validationMessage.series">Будь ласка, вкажіть коректні серії.</message>
+	<message key="metadata.property.displayName.supplement">Додаток</message>
+	<message key="metadata.property.validationMessage.supplement">Будь ласка, коректно вкажіть додаток.</message>
+	<message key="metadata.property.displayName.conf-date">Дата конференції</message>
+	<message key="metadata.property.validationMessage.conf-date">Будь ласка, вкажіть коректну дату конференції (формат: РРРР-ММ-ДД).</message>
+	<message key="metadata.property.displayName.conf-loc">Місце проведення конференції</message>
+	<message key="metadata.property.validationMessage.conf-loc">Будь ласка, вкажіть коректне місце проведення конференції.</message>
+	<message key="metadata.property.displayName.conf-name">Назва конференції</message>
+	<message key="metadata.property.validationMessage.conf-name">Будь ласка, вкажіть коректну назву конференції.</message>
+	<message key="metadata.property.displayName.conf-sponsor">Спонсор конференції</message>
+	<message key="metadata.property.validationMessage.conf-sponsor">Будь ласка, вкажіть коректні дані про спонсора конференції.</message>
+	<message key="metadata.property.displayName.institution">Установа</message>
+	<message key="metadata.property.validationMessage.institution">Будь ласка, вкажіть коректні дані про установу.</message>
+	<message key="metadata.property.displayName.fpage">Перша сторінка</message>
+	<message key="metadata.property.validationMessage.fpage">Будь ласка, вкажіть коректний номер першої сторінки (має бути цифровим значенням).</message>
+	<message key="metadata.property.displayName.lpage">Остання сторінка</message>
+	<message key="metadata.property.validationMessage.lpage">Будь ласка, вкажіть коректний номер останньої сторінки (має бути цифровим значенням).</message>
+	<message key="metadata.property.displayName.size">Кількість сторінок</message>
+	<message key="metadata.property.validationMessage.size">Будь ласка, вкажіть коректну загальну кількість сторінок (має бути цифровим значенням).</message>
+	<message key="metadata.property.displayName.publisher-loc">Місце видання</message>
+	<message key="metadata.property.validationMessage.publisher-loc">Будь ласка, вкажіть коректне місце видання.</message>
+	<message key="metadata.property.displayName.publisher-name">Назва/ім'я видавця</message>
+	<message key="metadata.property.validationMessage.publisher-name">Будь ласка, вкажіть коректну назву/ім'я видавця.</message>
+	<message key="metadata.property.displayName.isbn">ISBN</message>
+	<message key="metadata.property.validationMessage.isbn">Будь ласка, вкажіть коректний номер ISBN (9 або 13 цифр).</message>
+	<message key="metadata.property.displayName.issn">Друкований ISSN</message>
+	<message key="metadata.property.validationMessage.issn">Будь ласка, вкажіть коректний номер друкованого ISSN.</message>
+	<message key="metadata.property.displayName.eissn">eISSN</message>
+	<message key="metadata.property.validationMessage.eissn">Будь ласка, вкажіть коректний номер eISSN.</message>
+	<message key="metadata.property.displayName.doi">DOI</message>
+	<message key="metadata.property.validationMessage.doi">Будь ласка, вкажіть коректний ідентифікатор DOI.</message>
+	<message key="metadata.property.displayName.publisher-id">Власний ID видавця</message>
+	<message key="metadata.property.validationMessage.publisher-id">Будь ласка, вкажіть коректний ідентифікатор видавця.</message>
+	<message key="metadata.property.displayName.coden">CODEN</message>
+	<message key="metadata.property.validationMessage.coden">Будь ласка, вкажіть коректний ідентифікатор CODEN.</message>
+	<message key="metadata.property.displayName.sici">SICI</message>
+	<message key="metadata.property.validationMessage.sici">Будь ласка, вкажіть коректний ідентифікатор SICI.</message>
+	<message key="metadata.property.displayName.pmid">PMID</message>
+	<message key="metadata.property.validationMessage.pmid">Будь ласка, вкажіть коректний ідентифікатор PMID.</message>
+	<message key="metadata.property.displayName.uri">Посилання на публікацію</message>
+	<message key="metadata.property.validationMessage.uri">Будь ласка, вкажіть працездатне альтернативне посилання на публікацію.</message>
+	<message key="metadata.property.displayName.comment">Коментар</message>
+	<message key="metadata.property.validationMessage.comment">Будь ласка, введіть коректний коментар.</message>
+	<message key="metadata.property.displayName.annotation">Анотація</message>
+	<message key="metadata.property.validationMessage.annotation">Будь ласка, введіть коректну анотацію.</message>
+	<message key="metadata.property.displayName.publication-type">Тип публікації</message>
+	<message key="metadata.property.validationMessage.publication-type">Будь ласка, обов'язково вказуйте тип публікації. Зараз підтримуються два значення типу публікацій: book (для книжок і розділів книжок) та journal (для журнальних статей). В іншому випадку вихідний формат цитати буде некоректним.</message>
+
+	<!-- MODS-specific messages -->
+	<message key="metadata.property.displayName.title-type">Тип назви</message>
+	<message key="metadata.property.validationMessage.title-type">Будь ласка, завжди коректно вказуйте тип назви. Підтримуються наступні значення: 'abbreviated' (абревіатура), 'translated' (перекладена назва), 'alternative' (альтернативна назва) та 'uniform' (уніфікована назва).</message>
+	<message key="metadata.property.displayName.nonSort">Частина назви, яку слід ігнорувати під час сортування</message>
+	<message key="metadata.property.validationMessage.nonSort">Будь ласка, вказуйте лише початкові символи назви, які повинні ігноруватися під час сортування за назвою.</message>
+	<message key="metadata.property.displayName.title">Назва</message>
+	<message key="metadata.property.validationMessage.title">Будь ласка, вкажіть коректну назву.</message>
+	<message key="metadata.property.displayName.subTitle">Підзаголовок</message>
+	<message key="metadata.property.validationMessage.subTitle">Будь ласка, вкажіть коректний підзаголовок.</message>
+	<message key="metadata.property.displayName.partNumber">Номер частини</message>
+	<message key="metadata.property.validationMessage.partNumber">Будь ласка, вкажіть коректний номер частини.</message>
+	<message key="metadata.property.displayName.partName">Назва частини</message>
+	<message key="metadata.property.validationMessage.partName">Будь ласка, вкажіть коректну назву частини.</message>
+	<message key="metadata.property.displayName.name-type">Name Type</message>
+	<message key="metadata.property.validationMessage.name-type">Please make sure that you set a valid name type. Supported values are 'personal', 'corporate' and 'conference'.</message>
+	<!-- FIXME: end -->
+
+	<message key="submission.agencies">Агенції</message>
+	<message key="submission.abstractViews">Переглядів анотації</message>
+	<message key="submission.accepted">Прийнято</message>
+	<message key="submission.acknowledge">Подяка</message>
+	<message key="submission.addSuppFile">Додати супровідний файл</message>
+	<message key="submission.ask">Запитати</message>
+	<message key="submission.backToSubmissionEditing">Повернутися до редагування подання</message>
+	<message key="submission.changeComments">Змінити на</message>
+	<message key="submission.citations">Посилання</message>
+	<message key="submission.citations.editor.citationlist.deleteCitationConfirmation">Ви впевнені, що хочете видалити цю цитату?</message>
+	<message key="submission.citations.editor.citationlist.errorDeletingCitation">Під час видалення цитати сталася помилка. Будь ласка, повідомте про цю помилку розробникам.</message>
+	<message key="submission.citations.editor.citationlist.newCitation">Нова цитата</message>
+	<message key="submission.citations.editor.citationlist.title">Редагувати цитати</message>
+	<message key="submission.citations.editor.clickToEdit">Натисніть для редагування.</message>
+	<message key="submission.citations.editor.details.authorQuery">Запитати автора</message>
+	<message key="submission.citations.editor.details.authorQueryBody">Ваше повідомлення автору:</message>
+	<message key="submission.citations.editor.details.authorQueryExplanation">Ви можете запитати у автора додаткову інформацію про цю цитату. Ваше повідомлення буде надіслане автору електронною поштою після натискання кнопки "Надіслати" нижче.</message>
+	<message key="submission.citations.editor.details.authorQuerySubject">Тема:</message>
+	<message key="submission.citations.editor.details.cannotSelectDefaultForLabel">Ви не можете скинути мітку вибору поля. Якщо це поле непотрібне, будь ласка, видаліть його</message>
+	<message key="submission.citations.editor.details.checkInGoogleScholar">Перевірити у Google Академії</message>
+	<message key="submission.citations.editor.details.changeFieldInfo">Для вибору введіть перші кілька літер...</message>
+	<message key="submission.citations.editor.details.citationExportPreview">Попередній перегляд експорту цитати</message>
+	<message key="submission.citations.editor.details.citationImprovementResultsActive">Результати експертної служби внутрішніх цитувань (натисніть для закриття)</message>
+	<message key="submission.citations.editor.details.citationImprovementResultsInactive">Результати експертної служби внутрішніх цитувань (натисніть для відкриття)</message>
+	<message key="submission.citations.editor.details.citationServices">Служби цитувань</message>
+	<message key="submission.citations.editor.details.clickToDismissMessage">Ви можете натиснути на тексті повідомлення, щоб очистити його.</message>
+	<message key="submission.citations.editor.details.dataSaved">Ваші зміни були збережені.</message>
+	<message key="submission.citations.editor.details.editRawCitationDatabaseServices">Виберіть бази даних цитованості:</message>
+	<message key="submission.citations.editor.details.editRawCitationExpertSettingsActive">Експертні налаштування редагування цитат (натисніть для закриття)</message>
+	<message key="submission.citations.editor.details.editRawCitationExpertSettingsInactive">Експертні налаштування редагування цитат (натисніть для відкриття)</message>
+	<message key="submission.citations.editor.details.editRawCitationExtractionServices">Виберіть служби екстракції цитат:</message>
+	<message key="submission.citations.editor.details.editRawCitationFilterValidationError">Внутрішня помилка: Невдалий вибір фільтру. Будь ласка, надішліть розробникам звіт про помилку.</message>
+	<message key="submission.citations.editor.details.explainImprovementOptions">Якщо за замовчуванням ви отримали незадовільні результати, все одно існує декілька шляхів покращення цитати. Часто допомагає ручне редагування важливих полів (таких як назва й автор) та повторний запит до баз даних цитованості. Якщо і це не допомагає, ви можете спробувати здійснити пошук у Google Академії або звернутися до автора для уточнення цитати.</message>
+	<message key="submission.citations.editor.details.googleScholar">Google Академія</message>
+	<message key="submission.citations.editor.details.googleScholarExplanation">Якщо необхідна цитата не була знайдена у жодній з підключених баз даних цитованості, ви можете спробувати знайти цю цитату у Google Академії. На жаль, Google Академія не має інтерфейсу для експорту комплектів метаданих знайдених документів; це означає, що неможливо автоматично завантажити дані відповіді у цей Помічник. Вам прийдеться вручну копіювати та вставляти у відповідні поля дані зі сторінки Google.</message>
+	<message key="submission.citations.editor.details.manualEditing">Ручне редагування</message>
+	<message key="submission.citations.editor.details.messages">Будь ласка, зауважте (повідомлення очищуються насисканням на них)</message>
+	<message key="submission.citations.editor.details.newFieldInfo">...натисніть сюди, щоб додати нове поле...</message>
+	<message key="submission.citations.editor.details.queryCitation">Повторний запит до служб цитованості</message>
+	<message key="submission.citations.editor.details.queryGoogleScholar">Пошук у Google Академії</message>
+	<message key="submission.citations.editor.details.processRawCitation">Опрацювати</message>
+	<message key="submission.citations.editor.details.processRawCitationGoAhead">Вперед</message>
+	<message key="submission.citations.editor.details.processRawCitationTitle">Зміна оригінальної цитати</message>
+	<message key="submission.citations.editor.details.processRawCitationWarning">Ви намагаєтеся змінити оригінальний текст цитати. Якщо ви зробите це, в усі поля будуть підставлені щойно згенеровані значення. Це знищить ручні зміни, які можливо ви вже зробили.</message>
+	<message key="submission.citations.editor.details.saveAndApprove">Записати та підтвердити</message>
+	<message key="submission.citations.editor.details.saveAndRevokeApproval">Анулювати підтвердження</message>
+	<message key="submission.citations.editor.details.sendAuthorQuery">Надіслати повідомлення</message>
+	<message key="submission.citations.editor.details.sendAuthorQuerySuccess">Повідомлення надіслано!</message>
+	<message key="submission.citations.editor.details.sourceResultsUse">Використати</message>
+	<message key="submission.citations.editor.details.sourceResultsUseAll">Використати все</message>
+	<message key="submission.citations.editor.details.sourceResultsUseAllExplanation">Натисніть для того, щоб перемістити весь зміст полів безпосередньо до вашого списку полів</message>
+	<message key="submission.citations.editor.details.sourceResultsUseExplanation">Натисніть для того, щоб перемістити зміст цього поля безпосередньо до вашого списку полів</message>
+	<message key="submission.citations.editor.details.rawCitation">Оригінальний текст цитати</message>
+	<message key="submission.citations.editor.details.rawCitationRequired">Необхідно ввести текст цитати.</message>
+	<message key="submission.citations.editor.details.unsavedChanges">Цитата містить незбережені дані. Будь ласка, натисніть кнопку "Записати" для того, щоб зберегти зміни або кнопку "Скасувати", щоб відмінити правку.</message>
+	<message key="submission.citations.editor.details.dontShowMessageAgain">Більше не показувати це повідомлення.</message>
+	<message key="submission.citations.editor.edit">Редагування цитат</message>
+	<message key="submission.citations.editor.export">Експорт цитат</message>
+	<message key="submission.citations.editor.export.exportDescription"><![CDATA[<a id="markForExport" href="">Натисніть сюди</a>, щоб відмітити весь згенерований зміст. Потім ви зможете скопіювати та вставити його у свій документ.]]></message>
+	<message key="submission.citations.editor.export.filterSelectionDescription">Будь ласка, виберіть одне з наступних налаштувань експорту.</message>
+	<message key="submission.citations.editor.export.filterSelectionError">Ви не вибрали одне з налаштувань експорту.</message>
+	<message key="submission.citations.editor.export.foundUnapprovedCitationsMessage"><![CDATA[<p>Ви поки не підтвердили всі цитати. Будь ласка, перш ніж намагатися експортувати цитати, перейдіть до вкладки <strong>Редагування цитат</strong> та переконайтеся, що всі цитати підтверджені. Підтверджені цитати позначаються темно-синьою смугою зліва.</p>]]></message>
+	<message key="submission.citations.editor.export.noExportOutput">Фільтр виводу '{$filterName}' повідомив про помилку. Будь ласка, надішліть звіт про помилку розробникам.</message>
+	<message key="submission.citations.editor.export.pleaseSelectXmlFilter">Налаштування виводу XML:</message>
+	<message key="submission.citations.editor.export.pleaseSelectPlaintextFilter">Вихідний формат цитування (поки тестується!):</message>
+	<message key="submission.citations.editor.introduction">Вступ</message>
+	<message key="submission.citations.editor.introduction.introductionMessage"><![CDATA[<h4>Вас вітає Помічник розмітки цитат!</h4>
+	<p>Цей помічник допомагає розмічати цитати, надані автором, для їх подальшого експорту у XML-гранки NLM 2.3 або 3.0, чи оформлення як текстових блоків. Інструмент робить спробу автоматичної екстракції та розпізнавання цитат у тому вигляді, як вони надані автором. Але ви можете редагувати отримані результати у будь-який час.</p>
+	<ul>
+		<li><p><strong>Конфігурація помічника</strong></p>
+		<p>Помічник розмітки цитат конфігурує менеджер журналу під час налаштування журналу: <a href="{$citationSetupUrl}">Крок 3.7: Помічник розмітки цитат</a>. Він має змогу додавати, конфігурувати або видаляти різноманітні служби та інструменти для екстракції та перевірки цитат. Для отримання більшої інформації щодо конфігурації, контактуйте з менеджером журналу.</p></li>
+		<li><p><strong>Пояснення інтерфейсу</strong></p>
+		<p>Для зміни вкладки натисніть потрібний заголовок: <strong>Вступ</strong>, <strong>Редагування цитат</strong> або <strong>Експорт цитат</strong>. Щоб максимізувати інтерфейс натисніть кнопку <strong>Повноекранний режим</strong>. Щоб повернутися з повноекранного режиму до нормального інтерфейсу натисніть кнопку <strong>Вихід з повноекранного режиму</strong>. Для того, щоб назавжди прибрати цю вкладку привітання натисніть кнопку нижче.</p></li>
+		<li><p><strong>Запит цитат</strong></p>
+		<p>Якщо менеджер журналу увімкнув Помічник розмітки цитат, автори матимуть змогу в процесі подання рукопису надсилати списки пристатейної бібліографії власних робіт. Ці списки будуть надсилатися окремо від файлів з текстами статей. Автори можуть редагувати ці списки (як і інші метадані) навіть після завершення процесу подання рукопису. Зауважте, що в цьому випадку будуть змінені всі редагування, зроблені вами за допомогою цього інструменту.</p></li>
+		<li><p><strong>Редагування цитат</strong></p>
+		<p>Помічник розмітки цитат робить спробу ідентифікувати та розпізнати кожну окрему цитату з авторського списку пристатейної бібліографії. Ви можете перевіряти коректність екстрагованих цитат у численних зовнішніх базах даних; редагувати некоректну бібліографічну інформацію; підтверджувати або видаляти цитати; та додавати нові цитати.</p>
+		<p>Всі цитати подання мають бути підтверджені перш ніж вони зможуть бути експортовані.</p></li>
+		<li><p><strong>Експорт цитат</strong></p>
+ 		<p>Цитати можуть експортуватися як XML або як текст. Наразі налаштування експорту XML включають підтримку елементу <a href="http://www.ncbi.nlm.nih.gov/pmc/pmcdoc/tagging-guidelines/article/tags.html#el-reflist">ref-list XML</a> формату <a href="http://dtd.nlm.nih.gov/publishing/">NLM Journal Publishing</a> версій 2.3 та 3.0. Вибір одного з цих варіантів забезпечує виведення XML-кодованого фрагменту ref-list, який можна копіювати та вставити у гранку NLM XML.</p>
+		<p>Експериментальна опція експорту цитат як тексту включає підтримку форматів цитування ABNT, APA, MLA та Vancouver. В цьому випадку ви отримаєте текстовий блок, який можна копіювати та вставити у текстову гранку статті (наприклад, у файл Microsoft Word або OpenOffice; Adobe InDesign тощо). Кожна цитата має вбудоване посилання для автоматичного пошуку посилань у Google Академії.</p></li>
+	</ul>]]></message>
+	<message key="submission.citations.editor.loadMessage">Будь ласка, зачекайте поки завантажиться Помічник розмітки цитат.</message>
+	<message key="submission.citations.editor.pleaseImportCitationsFirst"><![CDATA[<p>Ця стаття не має цитат.</p><p>Будь ласка, перейдіть до <a href="{$articleMetadataUrl}">сторінки метаданих</a> статті та введіть список пристатейної бібліографії або вручну додайте посилання, скориставшись кнопкою "Нова цитата" цього редактора.</p>]]></message>
+	<message key="submission.citations.editor.pleaseSelect">Будь ласка, оберіть...</message>
+	<message key="submission.citations.editor.unprocessedCitations">Цитати цієї статті все ще обробляються на сервері. Поточний список цитат містить лише ті цитати, які наразі вже оброблені. Для оновлення цього списку використовуйте відповідну кнопку.</message>
+	<message key="submission.citations.editor.unprocessedCitationsButton">Оновити список цитат</message>
+	<message key="submission.citations.editor.unprocessedCitationsButtonTitle">Натисніть, щоб оновити список цитат.</message>
+	<message key="submission.citations.filter.invalidMetadata">У фільтрі {$filterName} сталася помилка: Один з елементів даних, що надійшли з джерела даних (наприклад, від веб-сервісу), не відповідає внутрішньому формату метаданих. Тому результати, отримані з джерела даних, були відхилені. Будь ласка, повідомте про цю помилку розробникам.</message>
+	<message key="submission.citations.filter.noResultFromFilterError">Служби цитування не повернули жодних результатів. Щоб покращити результати спробуйте вручну відредагувати поля цитати, а потім знову надішліть запит службам цитування. Якщо це не допомогло, це означає, що цитати не існує у жодній з підключених баз даних.</message>
+	<message key="submission.citations.filter.unsupportedPublicationType">Тип публікації не вірно вказаний або не підтримується. Будь ласка, вручну відредагуйте цитату та введіть тип публікації (дозволені типи 'book', 'journal', 'thesis' та 'conf-proc').</message>
+	<message key="submission.citations.filter.webserviceResultTransformationError">У фільтрі {$filterName} сталася помилка: Не вдалася трансформація результатів XML (наприклад, від веб-сервісу) у поля метаданих. Напевно, веб-сервіс повернув помилкові або неповні дані. Будь ласка, повідомте розробників про цю помилку.</message>
+	<message key="submission.citations.metadata.changeWarning">Ви справді хочете оновити список посилань? Якщо ви натиснете OK всі зміни, зроблені редакторами, будуть перезаписані. Якщо ви не впевнені, що ваше редагування справді потрібне, будь ласка, зв'яжіться з редактором, відповідальним за ваше подання.</message>
+	<message key="submission.comments.addComment">Додати коментар</message>
+	<message key="submission.comments.comments">Коментарі</message>
+	<message key="submission.comments.confirmDelete">Ви впевнені, що хочете видалити цей коментар?</message>
+	<message key="submission.comments.corrections">Виправлення</message>
+	<message key="submission.comments.editComment">Редагувати коментар</message>
+	<message key="submission.comments.importPeerReviews">Імпорт рецензій</message>
+	<message key="submission.comments.importPeerReviews.reviewerLetter">Рецензент {$reviewerLetter}:</message>
+	<message key="submission.comments.noComments">Немає коментарів</message>
+	<message key="submission.comments.noReviews">Немає рецензій</message>
+	<message key="submission.comments.review">Рецензія</message>
+	<message key="submission.comments.sendDecisionToReviewers">Надіслати рецензентам рішення редактора</message>
+	<message key="submission.comments.subject">Тема</message>
+	<message key="submission.complete">Завершення</message>
+	<message key="submission.done">Зроблено</message>
+	<message key="submission.dueDate">Строк до</message>
+	<message key="submission.due">До</message>
+	<message key="submission.editing">Редагування</message>
+	<message key="submission.editMetadata">Редагування метаданих</message>
+	<message key="submission.email.backToEmailLog">Повернутися до журналу пошти</message>
+	<message key="submission.email.confirmClearLog">Ви впевнені, що хочете очистити журнал пошти цього подання?</message>
+	<message key="submission.email.confirmDeleteLogEntry">Ви впевнені, що хочете видалити цей запис з журналу пошти?</message>
+	<message key="submission.email.deleteLogEntry">Видалити запис журналу</message>
+	<message key="submission.emailLog">Журнал пошти</message>
+	<message key="submission.event.backToEventLog">Повернутися до журналу подій</message>
+	<message key="submission.event.confirmClearLog">Ви впевнені, що хочете очистити журнал подій цього подання?</message>
+	<message key="submission.event.confirmDeleteLogEntry">Ви впевнені, що хочете видалити цей запис з журналу подій?</message>
+	<message key="submission.event.deleteLogEntry">Видалити запис журналу</message>
+	<message key="submission.event.general.metadataUpdated">Метадані подання оновлені</message>
+	<message key="submission.event.general.suppFileUpdated">Супровідний файл подання оновлений</message>
+	<message key="submission.event.reviewer.reviewAcceptedByProxy">Від імені рецензента призначення було прийняте</message>
+	<message key="submission.event.reviewer.reviewAccepted">Рецензент прийняв призначення</message>
+	<message key="submission.event.reviewer.reviewCancelled">Призначення рецензента відмінене</message>
+	<message key="submission.event.reviewer.reviewDeclined">Рецензент відмовився від призначення</message>
+	<message key="submission.event.reviewer.reviewDueDate">Строк рецензування змінений</message>
+	<message key="submission.event.reviewer.reviewerAssigned">Рецензент для подання призначений</message>
+	<message key="submission.event.reviewer.reviewerRated">Рецензент оцінений</message>
+	<message key="submission.event.reviewer.reviewerUnassigned">Рецензент звільнений від роботи над поданням</message>
+	<message key="submission.event.reviewer.reviewFile">Файл рецензії оновлений</message>
+	<message key="submission.event.reviewer.reviewInitiated">Процес рецензування розпочатий</message>
+	<message key="submission.event.reviewer.reviewRecommendation">Файл рекомендацій рецензента</message>
+	<message key="submission.event.reviewer.reviewReinitiated">Процес рецензування розпочатий повторно</message>
+	<message key="submission.event.reviewer.reviewResubmitted">Рецензія надіслана повторно</message>
+	<message key="submission.event.reviewer.reviewRevision">Файл правок рецензента оновлений</message>
+	<message key="submission.files">Файли</message>
+	<message key="submission.galley">Гранка</message>
+	<message key="submission.history.clearLog">Очистити журнал</message>
+	<message key="submission.history">Історія</message>
+	<message key="submission.history.noLogEntries">У журналі немає записів.</message>
+	<message key="submission.history.recentLogEntries">Останні записи</message>
+	<message key="submission.history.submissionEmailLog">Журнал пошти</message>
+	<message key="submission.history.submissionEventLog">Журнал подій</message>
+	<message key="submission.history.submissionNotes">Примітки подання</message>
+	<message key="submission.history.viewLog">Дивитися журнал</message>
+	<message key="submission.indexing">Індексна інформація</message>
+	<message key="submission.initiated">Розпочато</message>
+	<message key="submission.lastModified">Остання редакція</message>
+	<message key="submission.layout.addGalley">Додати гранку</message>
+	<message key="submission.layout.confirmDeleteGalley">Ви впевнені, що хочете назавжди видалити цю гранку?</message>
+	<message key="submission.layout.confirmDeleteGalleyImage">Ви впевнені, що хочете видалити це зображення з гранки?</message>
+	<message key="submission.layout.confirmDeleteSupplementaryFile">Ви впевнені, що хочете назавжди видалити цей супровідний файл?</message>
+	<message key="submission.layout.deleteGalleyStylesheet">Видалити цю таблицю стилів.</message>
+	<message key="submission.layout.editGalley">Редагувати гранку</message>
+	<message key="submission.layout.galleyFileData">Інформація про файл гранки</message>
+	<message key="submission.layout.galleyFormat">Формат гранки</message>
+	<message key="submission.layout.galleyHTMLData">Файли гранки HTML</message>
+	<message key="submission.layout.galleyImages">Зображення</message>
+	<message key="submission.layout.galleyLabelInstructions">Мітка гранки використовується для ідентифікації формату файлу об'єкту (наприклад, HTML, PDF тощо).</message>
+	<message key="submission.layout.galleyLabel">Мітка</message>
+	<message key="submission.layout.galleyLabelRequired">Необхідно вказати мітку гранки.</message>
+	<message key="submission.layout.galleyLanguageRequired">Необхідно вказати мову гранки.</message>
+	<message key="submission.layout.galleyLocaleRequired">Необхідно вказати локалізацію гранки.</message>
+	<message key="submission.layout.galleyNoImages">Немає зображень</message>
+	<message key="submission.layout.galleys">Гранки</message>
+	<message key="submission.layout.galleyStylesheet">Файл таблиці стилів</message>
+	<message key="submission.layout.galleyStyle">Стиль</message>
+	<message key="submission.layout.initialGalleyCreation">Початок створення гранки</message>
+	<message key="submission.layout.layoutFile">Файл верстки</message>
+	<message key="submission.layout">Верстка</message>
+	<message key="submission.layout.layoutVersion">Версія верстки</message>
+	<message key="submission.layout.newGalley">Створити нову гранку</message>
+	<message key="submission.layout.newSupplementaryFile">Вивантажити новий супровідний файл</message>
+	<message key="submission.layout.noStyleFile">Для цієї гранки не було додано файлу таблиці стилів.</message>
+	<message key="submission.layout.supplementaryFiles">Перегляд супровідного файлу</message>
+	<message key="submission.layout.viewingGalley">Перегляд гранки подання</message>
+	<message key="submission.layout.viewProof">Переглянути верстку</message>
+	<message key="submission.metadata">Метадані подання</message>
+	<message key="submission.noReviewAssignments">Немає призначень рецензентів</message>
+	<message key="submission.notes.addNewNote">Додати нову нотатку</message>
+	<message key="submission.notes.attachedFile">Додатковий файл</message>
+	<message key="submission.notes.backToSubmissionNotes">Повернутися до нотаток подання</message>
+	<message key="submission.notes.breadcrumb">Нотатки</message>
+	<message key="submission.notes.clearAllNotes">Очистити всі нотатки</message>
+	<message key="submission.notes.collapseNotes">Згорнути нотатки</message>
+	<message key="submission.notes.confirmDeleteAll">Видалити всі нотатки подання?</message>
+	<message key="submission.notes.confirmDelete">Видалити цю нотатку подання?</message>
+	<message key="submission.notes.createNewNote">Створити нову нотатку</message>
+	<message key="submission.notes.deleteNote">Видалити нотатку</message>
+	<message key="submission.notes.editNote">Редагувати нотатку</message>
+	<message key="submission.notes.expandNotes">Розгорнути нотатки</message>
+	<message key="submission.notes.noSubmissionNotes">Немає нотаток</message>
+	<message key="submission.notes.removeUploadedFile">Видалити вивантажений файл</message>
+	<message key="submission.notes">Нотатки подання</message>
+	<message key="submission.notes.updateNote">Оновити нотатку</message>
+	<message key="submission.notes.viewNotes">Дивитися нотатки</message>
+	<message key="submission.originalFile">Оригінальний файл</message>
+	<message key="submission.page.editing">#{$id} Редагування</message>
+	<message key="submission.page.history">#{$id} Історія</message>
+	<message key="submission.page.review">#{$id} Рецензування</message>
+	<message key="submission.page.summary">#{$id} Резюме</message>
+	<message key="submission.page.citations">#{$id} Цитати</message>
+	<message key="submission.peerReview">Наукове рецензування</message>
+	<message key="submission.recommendation">Рекомендація: {$recommendation}</message>
+	<message key="submission.rejected">Відхилено</message>
+	<message key="submission.request">Запит</message>
+	<message key="submission.response">Відповідь</message>
+	<message key="submission.restrictions">Обмеження</message>
+	<message key="submission.reviewMetadata">Перегляд метаданих</message>
+	<message key="submission.review">Рецензування</message>
+	<message key="submission.reviewVersion">Версія рецензії</message>
+	<message key="submissions.active">Активне</message>
+	<message key="submissions.archived">Архівоване</message>
+	<message key="submission.saveMetadata">Зберегти метадані</message>
+	<message key="submissions.completed">Завершене</message>
+	<message key="submissions.declined">Відхилене</message>
+	<message key="submissions.incomplete">Незавершене</message>
+	<message key="submissions.noSubmissions">Немає подань</message>
+	<message key="submissions.queuedEditing">редагуються</message>
+	<message key="submissions.queued">В черзі</message>
+	<message key="submissions.queuedUnassigned">Подання, що очікують прийняття</message>
+	<message key="submissions.ruling">Правила</message>
+	<message key="submissions.submit">Надіслати</message>
+	<message key="submissions.submitted">Надіслано</message>
+	<message key="submission.start">Початок</message>
+	<message key="submission.submissionHistory">Історія подання</message>
+	<message key="submission.submissionManuscript">Рукопис подання</message>
+	<message key="submission.submissionReview">Рецензування подання</message>
+	<message key="submission.submitter">Надіслав</message>
+	<message key="submission.summary">Резюме</message>
+	<message key="submission.supplementaryFiles">Супровідні файли</message>
+	<message key="submission.supportingAgencies">Спонсори</message>
+	<message key="submission.currentAgencies">Поточні агенції</message>
+	<message key="submission.indexingInformation">Індексна інформація</message>
+	<message key="submission.titleAndAbstract">Назва та анотація</message>
+	<message key="submission.underway">Прогрес</message>
+	<message key="submission.uploadFileTo">Вивантажити файл у</message>
+	<message key="submission.viewMetadata">Перегляд метаданих</message>
+	<message key="submission.views">переглядів</message>
+	<message key="submission.uploadSuccessful">Ваш файл був вивантажений.</message>
+	<message key="submission.loadMessage">Файл вивантажується на сервер. Будь ласка, зачекайте.</message>
+	<message key="submission.artworkFileDetails">Деталі файлу твору</message>
+	<message key="submission.fileDetails">Деталі файлу</message>
+	<message key="submission.nameRequired">Необхідно вказати назву для цього об'єкту.</message>
+	<message key="submission.date.mmdd">ММ-ДД</message>
+	<message key="submission.date.yyyymmdd">РРРР-ММ-ДД</message>
+	<message key="submission.comments.addReviews">Додати рецензії до листа</message>
+	<message key="submission.layout.galleyRemoteURL">Зовнішня адреса URL</message>
+	<message key="submission.layout.galleyRemoteURLValid">Будь ласка, вкажіть коректну зовнішню адресу URL (з префіксом http://).</message>
+	<message key="submission.form.replaceExisting">Замінити існуючий файл?</message>
+	<message key="submission.citations.editor.citationlist.approved">Підтверджені</message>
+	<message key="submission.citations.editor.citationlist.notApproved">Непідтверджені</message>
+	<message key="submission.form.name">Дайте цьому файлу зручну назву</message>
+	<message key="submission.addFile">Вивантажити файл</message>
+	<message key="submission.copyedited">Відрегаговані</message>
+	<message key="submission.reviewed">Рецензовані</message>
+	<message key="submission.createRemote">Створити віддалене</message>
+       <message key="log.review.reviewerAssigned">{$reviewerName} був призначений для проведення {$round} раунду рецензування подання {$submissionId}.</message>
+
+       <!--  peer review -->
+       <message key="submission.reviewForm">Форма рецензування</message>
+       <message key="submission.reviewFormResponse">Заповнена форма рецензування</message>
+</locale>

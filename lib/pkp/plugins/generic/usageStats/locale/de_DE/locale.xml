@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../dtd/locale.dtd">
+
+<!--
+  * plugins/generic/usageStats/locale/de_DE/locale.xml
+  *
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization strings for the de_DE (Deutsch (Deutschland)) locale.
+  * Please contact Marco Tullney, marco.tullney@fu-berlin.de, with any questions regarding this translation.
+  -->
+
+<locale name="de_DE" full_name="Deutsch (Deutschland)">
+	<message key="plugins.generic.usageStats.settings.logging">Zugriffsprotokoll-Optionen</message>
+	<message key="plugins.generic.usageStats.settings.createLogFiles">Logdateien anlegen</message>
+	<message key="plugins.generic.usageStats.settings.createLogFiles.description">Das Aktivieren dieser Option lässt das Plugin Zugriffsprotokolldateien innerhalb des Dateienverzeichnisses anlegen. Diese Dateien sollten benutzt werden, um Daten zur Nutzungsstatistik zu extrahieren. Wenn Sie keine weiteren Zugriffsprotokolldateien erzeugen wollen, können Sie diese Option deaktiviert lassen und ihre eigenen Server-Logdateien benutzen.</message>
+	<message key="plugins.generic.usageStats.settings.logParseRegex">Regex zum Parsen der Logdateien</message>
+	<message key="plugins.generic.usageStats.settings.logParseRegex.description">Der standardmäßig benutzte reguläre Ausdruck kann Apache-Logdateien im Combined-Format und außerdem die Logdateien des Plugins parsen. Wenn Ihre Zugriffsprotokolldateien in einem anderen Format sind, müssen Sie einen regulären Ausdruck einfügen, mit dem die Dateien geparst werden können und der die erwarteten Werte liefert. Vgl. UsageStatsLoader::_getDataFromLogEntry() für weitere Informationen.</message>
+	<message key="plugins.generic.usageStats.settings.saved">Einstellungen des Zugriffsstatistik-Plugins gespeichert</message>
+	
+	<message key="plugins.generic.usageStats.openFileFailed">Die Datei {$file} konnte nicht geöffnet werden und wurde zurückgewiesen.</message>
+	<message key="plugins.generic.usageStats.invalidLogEntry">Die Zeile {$lineNumber} aus der Datei {$file} stellt keinen gültigen Logeintrag dar, und die Datei wurde zurückgewiesen.</message>
+	<message key="plugins.generic.usageStats.displayName">Nutzungsstatistik</message>
+	<message key="plugins.generic.usageStats.description">Zeigt Nutzungsstatistik zu Objekten an. Kann Server-Logdateien benutzen, um Statistiken zu extrahieren.</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption">Datenschutz-Option</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.saltFilepath">Pfad zum Salt (für die Anonymisierung)</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.saltFilepath.invalid">Die Salt-Datei ist nicht schreibbar.</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.requirements">Um den Datenschutz zu gewährleisten, müssen Sie eine Datei angeben, die für den Webnutzer les- und schreibbar ist und die einen zufällig erzeugten Salt-Wert enthält. Diese Datei darf NICHT nicht im Backup gesichert werden, um den Datenschutz zu garantieren. Das Salt wird zufällig mittels einer der folgenden Methoden erzeugt: durch die Funktion mcrypt_create_iv, die PHP-mycrypt benötigt; die Funktion openssl_random_pseudo_bytes, die PHP-openssl benötigt; die Datei /dev/urandom, die nur in *nix-Systemen existiert, oder die Funktion function mt_rand, die nicht kryptografisch sicher ist. Deshalb sollten Sie, wenn Sie einen Windows-Server nutzen, sicherstellen, dass Sie in PHP entweder mcrypt oder openssl aktiviert haben, um einen kryptografisch sicheren Salt benutzen.</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.description">Aktivieren Sie diese Option, um eine Verson des Plugins zu benutzen, die Datenschutzregeln berücksichtigt, indem nur gehashte IP-Adressen protokolliert werden, Benutzer/innen über das Tracking informiert werden und eine Opt-Out-Möglichkeit für Nutzer/innen angeboten wird. Hinweis: Bei Nutzung dieser Option können Sie nicht die Geo-Funktionalitäten des Plugins benutzen.</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.requiresSalt">Um die Datenschutz-Option zu aktivieren, wird eine Salt-Datei benötigt.</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.excludesCity">Die Datenschutz-Option zu aktivieren, schließt die Erhebung von Statistiken zu "Stadt" aus.</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyOption.excludesRegion">Die Datenschutz-Option zu aktivieren, schließt die Erhebung von Statistiken zu "Region" aus.</message>
+	<message key="plugins.generic.usageStats.settings.dataPrivacyCheckbox">Datenschutz-Option aktivieren</message>
+	<message key="plugins.generic.usageStats.settings.optionalColumns">Optionale statistische Informationen</message>
+	<message key="plugins.generic.usageStats.settings.optionalColumns.description">Die Sammlung folgender optionaler Daten aktivieren oder deaktivieren.  Dies beeinflusst, welche Berichte Sie erhalten können und wie groß die Datenbank wird. Ändern Sie diese Einstellungen NICHT, wenn Sie nicht genau wissen, was Sie tun.</message>
+	<message key="plugins.generic.usageStats.settings.optionalColumns.cityRequiresRegion">Die optionale Spalte "Stadt" erfordert die optionale Spalte "Region".</message>
+	<message key="plugins.generic.usageStats.settings.archives">Archive</message>
+	<message key="plugins.generic.usageStats.settings.compressArchives.description">Aktivieren Sie diese Option, um archivierte Logdateien mit gzip zu komprimieren (Sie werden Einstellungen zu gzip in config.inc.php eintragen müssen.). Wenn Sie eine stark genutzte Website haben, ist die Aktivierung dieser Option anzuraten, damit Speicherplatz gespart wird.</message>
+	<message key="plugins.generic.usageStats.settings.compressArchives">Archive komprimieren</message>
+	<message key="plugins.generic.usageStats.settings.statsDisplayOptions">Anzeigeoptionen für die Statistiken</message>
+	<message key="plugins.generic.usageStats.settings.statsDisplayOptions.display">Eine Statistik-Grafik für die Leser/innen anzeigen</message>
+	<message key="plugins.generic.usageStats.settings.statsDisplayOptions.chartType">Wählen Sie die Art des Diagramms, um die Download-Statistiken anzuzeigen.</message>
+	<message key="plugins.generic.usageStats.settings.statsDisplayOptions.chartType.bar">Balkengrafik</message>
+	<message key="plugins.generic.usageStats.settings.statsDisplayOptions.chartType.line">Liniengrafik</message>
+	<message key="plugins.generic.usageStats.settings.statsDisplayOptions.datasetMaxCount">Geben Sie die maximale Anzahl von Datenpunkten an, die gleichzeitig an einer X-Achsen-Position angezeigt werden sollen. Ein höherer Wert kann schwer verständliche Diagramme verursachen. Werte zwischen 3 und 5 sollten sicher sein.</message>
+	<message key="plugins.generic.usageStats.usageStatsLoaderName">Task zum Laden der Nutzungsstatistik-Datei</message>
+	<message key="plugins.generic.usageStats.removeUrlError">Die Zeile {$lineNumber} aus der Datei {$file} enthält eine Adresse, aus der das System nicht den Basis-URL entfernen kann.</message>
+	<message key="plugins.generic.usageStats.loadDataError">Konnte keine extrahierten Daten aus Datei {$file} laden. Die Datei wurde entfernt, um sie erneut zu bearbeiten.</message>
+	<message key="plugins.generic.usageStats.pluginNotEnabled">Das Nutzungsstatistik-Plugin ist deaktiviert. Es wurden keine Logdateien verarbeitet.</message>
+	<message key="plugins.generic.usageStats.processingPathNotEmpty">Das Verzeichnis {$directory} ist nicht leer. Dies kann auf einen zuvor gescheiterten oder einen momentan laufenden Prozess hinweisen. Diese Datei wird automatisch erneut verarbeitet, falls Sie auch scheduledTasksAutoStage.xml benutzen; ansonsten werden Sie manuell alle verwaisten Dateien aus dem Verarbeitungsverzeichnis zurück in das Bereitstellungsverzeichnis verschieben müssen.</message>
+	<message key="plugins.generic.usageStats.noCounterBotList">Die COUNTER-Bot-Liste {$botlist} konnte nicht benutzt werden. Dies kann verschiedene Gründe haben. Stellen Sie sicher, dass die Listendatei im Verzeichnis 'lib/pkp/plugins/generic/usageStats/lib/counter' liegt. Prüfen Sie bitte auch die Zugriffsrechte dieses Ordners und stellen Sie sicher, dass nur eine Datei in diesem Ordner liegt.</message>
+	<message key="plugins.reports.usageStats.report.displayName">Nutzungsstatistik-Bericht</message>
+	<message key="plugins.reports.usageStats.report.description">Standardbericht zur Nutzungsstatistik (COUNTER-fähig)</message>
+	<message key="plugins.reports.usageStats.optout.displayName">Datenschutz-Informationen zur Nutzungsstatistik</message>
+	<message key="plugins.reports.usageStats.optout.description">Datenschutz-Informationen zur Nutzungsstatistik</message>
+	<message key="plugins.generic.usageStats.optout.title">Nutzungsstatistik-Informationen</message>
+	<message key="plugins.generic.usageStats.optout.shortDesc"><![CDATA[Wir führen eine anonymisierte Nutzungsstatistik. Bitte lesen Sie die <a href="{$privacyInfo}">Datenschutz-Informationen</a>, um mehr zu erfahren.]]></message>
+	<message key="plugins.reports.usageStats.metricType">COUNTER</message>
+	<message key="plugins.reports.usageStats.metricType.full">Nutzungsstatistik (COUNTER-fähig)</message>
+	<message key="plugins.generic.usageStats.statsSum">Summe aller Downloads</message>
+	<message key="plugins.generic.usageStats.noStats">Keine Nutzungsdaten vorhanden.</message>
+	<message key="plugins.generic.usageStats.monthInitials">Jan Feb Mär Apr Mai Jun Jul Aug Sep Okt Nov Dez</message>
+	<message key="plugins.generic.usageStats.downloads">Downloads</message>
+</locale>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="3.4" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-4.xsd">
+  <titleInfo>
+    <nonSort>the</nonSort>
+    <title>new submission title</title>
+    <subTitle>subtitle</subTitle>
+    <partNumber>part I</partNumber>
+    <partName>introduction</partName>
+  </titleInfo>
+  <titleInfo lang="ger">
+    <nonSort>ein</nonSort>
+    <title>neuer Titel</title>
+    <subTitle>Subtitel</subTitle>
+    <partNumber>Teil I</partNumber>
+    <partName>Einführung</partName>
+  </titleInfo>
+  <name type="personal">
+    <namePart type="family">some family name</namePart>
+    <namePart type="given">given names</namePart>
+    <namePart type="termsOfAddress">Jr</namePart>
+    <namePart type="date">1900-1988</namePart>
+    <affiliation>affiliation</affiliation>
+    <role>
+      <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+    </role>
+  </name>
+  <name type="corporate">
+    <namePart>Some Sponsor</namePart>
+    <role>
+      <roleTerm type="code" authority="marcrelator">spn</roleTerm>
+    </role>
+  </name>
+  <typeOfResource>text</typeOfResource>
+  <genre authority="marcgt">book</genre>
+  <originInfo>
+    <place>
+      <placeTerm type="text">Vancouver</placeTerm>
+      <placeTerm type="code" authority="iso3166">CA</placeTerm>
+    </place>
+    <publisher>Public Knowledge Project</publisher>
+    <dateIssued keyDate="yes" encoding="w3cdtf">2010-09</dateIssued>
+    <dateCreated encoding="w3cdtf">2010-07-07</dateCreated>
+    <copyrightDate encoding="w3cdtf">2010</copyrightDate>
+    <edition>second revised edition</edition>
+  </originInfo>
+  <originInfo lang="ger">
+    <place>
+      <placeTerm type="text">Vancouver</placeTerm>
+      <placeTerm type="code" authority="iso3166">CA</placeTerm>
+    </place>
+    <publisher>Public Knowledge Project</publisher>
+    <dateIssued keyDate="yes" encoding="w3cdtf">2010-09</dateIssued>
+    <dateCreated encoding="w3cdtf">2010-07-07</dateCreated>
+    <copyrightDate encoding="w3cdtf">2010</copyrightDate>
+    <edition>zweite überarbeitete Ausgabe</edition>
+  </originInfo>
+  <language>
+    <languageTerm type="code" authority="iso639-2b">eng</languageTerm>
+  </language>
+  <physicalDescription>
+    <form authority="marcform">electronic</form>
+    <internetMediaType>application/pdf</internetMediaType>
+    <extent>215</extent>
+  </physicalDescription>
+  <abstract>some abstract</abstract>
+  <abstract lang="ger">eine Zusammenfassung</abstract>
+  <note>some note</note>
+  <note>another note</note>
+  <note lang="ger">übersetzte Anmerkung</note>
+  <subject>
+    <topic>some subject</topic>
+    <topic>some other subject</topic>
+    <geographic>some geography</geographic>
+    <temporal encoding="w3cdtf" point="start">1950</temporal>
+    <temporal encoding="w3cdtf" point="end">1954</temporal>
+  </subject>
+  <subject lang="ger">
+    <topic>ein Thema</topic>
+    <temporal encoding="w3cdtf" point="start">1950</temporal>
+    <temporal encoding="w3cdtf" point="end">1954</temporal>
+  </subject>
+  <identifier type="isbn">01234567890123</identifier>
+  <identifier type="doi">40/2010ff</identifier>
+  <identifier type="uri">urn://xyz.resolver.org/12345</identifier>
+  <location>
+    <url usage="primary display">http://www.sfu.ca/test-article</url>
+  </location>
+  <recordInfo>
+    <recordCreationDate encoding="w3cdtf">2010-12-24</recordCreationDate>
+    <recordIdentifier source="pkp">3049</recordIdentifier>
+    <languageOfCataloging>
+      <languageTerm authority="iso639-2b">eng</languageTerm>
+    </languageOfCataloging>
+  </recordInfo>
+</mods>

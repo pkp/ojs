@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/id_ID/installer.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+
+
+<locale name="id_ID" full_name="Bahasa Indonesia">
+<message key="installer.additionalLocales">Bahasa Tambahan</message>
+<message key="installer.administratorAccount">Akun Administrator</message>
+	<message key="installer.administratorAccountInstructions">Akun pengguna ini akan menjadi administrator situs dan memiliki akses penuh ke sistem. Akun pengguna tambahan dapat dibuat setelah instalasi. </message>
+<message key="installer.checkNo"><![CDATA[<span class="formError">Tidak</span>]]></message>
+	<message key="installer.checkYes">Ya</message>
+	<message key="installer.clientCharset">Klien karakter set</message>
+	<message key="installer.clientCharsetInstructions">Kode karakter yang dikirim dan diterima perambah.</message>
+	<message key="installer.configFileError"><![CDATA[Konfigurasi file <tt>config.inc.php</tt> tidak ada atau tidak terbaca.]]></message>
+	<message key="installer.connectionCharset">Koneksi karakter set </message>
+	<message key="installer.contentsOfConfigFile">Isi file konfigurasi</message>
+	<message key="installer.createDatabase">Membuat database baru</message>
+	<message key="installer.createDatabaseInstructions">Untuk menggunakan opsi ini sistem database Anda harus support pembuatan database dengan kendali jauh dan akun Anda harus memiliki hak akses yang sesuai untuk membuat database baru. Jika instalasi gagal dengan opsi ini, buat database secara manual pada server Anda dan lakukan instalasi lagi dengan menonaktifkan pilihan ini.</message>
+	<message key="installer.databaseCharset">Database karakter set</message>
+	<message key="installer.databaseDriver">Database Driver</message>
+	<message key="installer.databaseDriverInstructions"><![CDATA[<strong>Driver database yang tercantum dalam tanda kurung tidak memiliki ekstensi PHP yang diperlukan dan instalasi mungkin akan gagal.</strong><br />Setiap driver database yang tidak didukung diatas hanya untuk tujuan akademi dan tidak akan bekerja baik pada OJS.]]></message>
+	<message key="installer.databaseHost">Host</message>
+	<message key="installer.databaseHostInstructions">Biarkan nama host kosong untuk terhubung menggunakan soket domain dan bukan melalui TCP/IP. Tidak perlu melakukan perubahan nama host jika Anda menggunakan MySQL yang secara otomatis menggunakan soket jika [localhost] dimasukkan, namun perubahan nama host diperlukan jika server database Anda adalah PostgreSQL atau yang lainnya.</message>
+	<message key="installer.databaseName">Database</message>
+	<message key="installer.databasePassword">Kata Sandi</message>
+	<message key="installer.databaseSettings">Pengaturan Database</message>
+	<message key="installer.databaseUsername">Nama Pengguna</message>
+	<message key="installer.encryption">Algoritma Enkripsi Kata Sandi</message>
+	<message key="installer.filesDir">Direktori untuk unggah</message>
+	<message key="installer.fileSettings">Pengaturan File</message>
+	<message key="installer.form.clientCharsetRequired">Klien karakter set harus.</message>
+	<message key="installer.form.databaseDriverRequired">Driver database harus dipilih.</message>
+	<message key="installer.form.databaseNameRequired">Nama database diperlukan.</message>
+	<message key="installer.form.emailRequired">Alamat email yang valid untuk akun administrator diperlukan.</message>
+	<message key="installer.form.encryptionRequired">Algoritma untuk enkripsi kata sandi harus dipilih.</message>
+	<message key="installer.form.filesDirRequired">Direktori untuk menyimpan file unggahan.</message>
+	<message key="installer.form.localeRequired">Bahasa harus dipilih.</message>
+	<message key="installer.form.passwordRequired">Kata Sandi untuk akun administrator diperlukan.</message>
+	<message key="installer.form.passwordsDoNotMatch">Kata Sandi administrator tersebut tidak cocok.</message>
+	<message key="installer.form.separateMultiple">Pisahkan beberapa nilai dengan koma.</message>
+	<message key="installer.form.usernameAlphaNumeric">Nama administrator hanya dapat berisi karakter alfanumeik, garis bawah, dan tanda hubung, dan harus dimulai dan diakhiri dengan karakter alfanumerik.</message>
+	<message key="installer.form.usernameRequired">Nama pengguna untuk akun administrator diperlukan.</message>
+	<message key="installer.installationWrongPhp"><![CDATA[<br/><strong>PERINGATAN: Versi PHP Anda saat ini tidak memenuhi persyaratan minimum untuk instalasi. Disarankan untuk memperbaharui menjadi versi PHP terbaru.</strong>]]></message>
+	<message key="installer.installErrorsOccurred">Kesalahan terjadi pada saat instalasi</message>
+	<message key="installer.installerSQLStatements">Laporan SQL untuk instalasi</message>
+	<message key="installer.installFileError"><![CDATA[File instalasi <tt>dbscripts/xml/install.xml</tt> Tidak ada atau tidak dapat terbaca.]]></message>
+	<message key="installer.installFilesDirError">Direktori khusus untuk file unggah tidak ada atau tidak dapat diisi</message>
+	<message key="installer.installParseDBFileError"><![CDATA[Kesalahan penguraian file instalasi database<tt>{$file}</tt>.]]></message>
+	<message key="installer.installParseEmailTemplatesFileError"><![CDATA[Kesalaha penguraian file template email<tt>{$file}</tt>.]]></message>
+	<message key="installer.locale">Bahasa</message>
+	<message key="installer.locale.maybeIncomplete">Bahasa yang ditandai mungkin tidak lengkap.</message>
+	<message key="installer.localeSettings">Setting Bahasa</message>
+	<message key="installer.manualInstall">Instal Manual</message>
+	<message key="installer.miscSettings">Pengaturan Lain</message>
+	<message key="installer.oaiRepositoryIdInstructions"><![CDATA[Repositori yang menyimpan OAI identifier untuk memudahkan metadata harvesting situs Anda oleh <a href="http://www.openarchives.org/" target="_blank">Open Archives Initiative</a> Protokol untuk Metadata Harvesting.]]></message>
+	<message key="installer.oaiRepositoryId">Repositori identifier OAI</message>
+	<message key="installer.pleaseUpgradeAfterManualInstall">Silahkan jalankan alat upgrade setelah Anda menginstal database Anda. Jalankan 'php tools/upgrade.php upgrade' dari dalam direktori instalasi utama untuk upgrade ini.</message>
+	<message key="installer.publicFilesDirError">Direktori file umum tidak ada atau tidak dapat diisi.</message>
+</locale>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../dtd/locale.dtd">
+
+<!--
+  * plugins/metadata/nlm30/locale/de_DE/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization strings for the de_DE (Deutsch (Deutschland)) locale.
+  * Please contact Marco Tullney, marco.tullney@fu-berlin.de, with any questions regarding this translation.
+  -->
+ 
+<locale name="de_DE" full_name="Deutsch (Deutschland)">
+	<!-- plug-in -->
+	<message key="plugins.metadata.nlm30.displayName">NLM 3.0 Metadaten</message>
+	<message key="plugins.metadata.nlm30.description">Stellt Schemata und Anwendungsschnittstellen für NLM 3.0 bereit.</message>
+
+	<!-- citation meta-data adapter -->
+	<message key="plugins.metadata.nlm30.citationAdapter.displayName">NLM 3.0 Zitationsschnittstelle</message>
+	<message key="plugins.metadata.nlm30.citationAdapter.description">Extrahiert Metadaten aus Zitationen oder fügt Metadaten den Zitationen hinzu.</message>
+
+	<!-- citation parsers (citation extraction services) -->
+	<message key="plugins.metadata.nlm30.citationParsers.displayName">Zitationsextraktion"</message>
+	<message key="plugins.metadata.nlm30.citationParsers.description">Konvertiere eine Literaturliste im Klartext in NLM 3.0-Zitationsauszeichnung."</message>
+
+	<!-- citation lookup (citation database/improvement/lookup services) -->
+	<message key="plugins.metadata.nlm30.citationLookup.displayName">Zitationsdatenbankdienste"</message>
+	<message key="plugins.metadata.nlm30.citationLookup.description">Verbesserung der NLM 3.0-Zitationsauszeichnung, z.B. durch das Nachschlagen von Zitationen in externen Datenbanken."</message>
+
+	<!-- citation output -->
+	<message key="plugins.metadata.nlm30.citationOutput.displayName">Zitationsausgabedienste</message>
+	<message key="plugins.metadata.nlm30.citationOutput.description">Konvertiere NLM 3.0-Zitationsauszeichnung in eine Standardausgabe im Klartext.</message>
+	<message key="plugins.metadata.nlm30Xml.citationOutput.displayName">Zitationsausgabedienste (XML)</message>
+	<message key="plugins.metadata.nlm30Xml.citationOutput.description">Konvertiere NLM 3.0-Zitationsauszeichnung in eine Standardausgabe in XML.</message>
+
+	<!-- NLM 3.0 output -->
+	<message key="plugins.metadata.nlm30.nlm30XmlOutput.displayName">NLM 3.0 Zeitschriftenausgabe</message>
+
+	<!-- NLM 2.3 output -->
+	<message key="plugins.metadata.nlm30.nlm23XmlOutput.displayName">NLM 2.3 Zeitschriftenausgabe</message>
+
+	<!-- NLM 3.0 to 2.3 downgrade -->
+	<message key="plugins.metadata.nlm30.nlm30ToNlm23Xml.displayName">NLM 3.0 zu 2.3 Zeitschriftenausgabe-Downgrade</message>
+	<message key="plugins.metadata.nlm30.nlm30ToNlm23Xml.description">Stuft NLM 3.0 auf NLM 2.3 zurück.</message>
+
+	<!-- Plain text reference list output -->
+	<message key="plugins.metadata.nlm30.refList.displayName">Erzeugung einer Klartext-Literaturliste</message>
+	<message key="plugins.metadata.nlm30.refList.description">Erzeuge eine formatierte Klartext-Literaturliste aus den Verweisen einer Einreichung in OJS/OCS/OMP</message>
+	<message key="plugins.metadata.nlm30.nlm30XmlOutput.description">Einen Beitrag nach NLM 3.0 konvertieren.</message>
+	<message key="plugins.metadata.nlm30.nlm23XmlOutput.description">Einen Beitrag nach NLM 2.3 konvertieren.</message>
+</locale>

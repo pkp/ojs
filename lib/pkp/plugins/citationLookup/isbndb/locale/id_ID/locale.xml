@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../dtd/locale.dtd">
+
+<!--
+  * plugins/citationLookup/isbndb/locale/id_ID/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the id_ID (Bahasa Indonesia) locale.
+  -->
+
+<locale name="id_ID" full_name="Bahasa Indonesia">
+	<!-- plug-in -->
+	<message key="plugins.citationLookup.isbndb.displayName">Konektor Database ISBNdb</message>
+	<message key="plugins.citationLookup.isbndb.description">Koneksi ke database bibliografi ISBNdb.</message>
+
+	<!-- ISBN lookup and extraction services -->
+	<message key="plugins.citationLookup.isbndbExtraction.displayName">Layanan ekstraksi ISBN</message>
+	<message key="plugins.citationLookup.isbndbExtraction.description">Temukan ISBN untuk memberikan deskripsi elemen-sitiran NLM 3.0.</message>
+	<message key="plugins.citationLookup.isbndbLookup.displayName">Layanan pencarian ISBN</message>
+	<message key="plugins.citationLookup.isbndbLookup.description">Cari keseluruhan deskripsi elemen-sitiran NLM 3.0 dengan memberikan sebuah ISBN.</message>
+</locale>

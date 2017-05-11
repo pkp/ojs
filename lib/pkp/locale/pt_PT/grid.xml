@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/pt_PT/grid.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (English) locale.
+  *
+  -->
+
+<locale name="en_US" full_name = "English">
+	<!-- Common -->
+	<message key="grid.noItems">Nenhuns Itens</message>
+	<message key="grid.settings">Configurações</message>
+
+	<message key="grid.action.sort">Ordenar</message>
+	<message key="grid.action.addItem">Adicionar Item</message>
+	<message key="grid.action.delete">Eliminar</message>
+	<message key="grid.action.remove">Remover</message>
+	<message key="grid.action.edit">Editar</message>
+	<message key="grid.action.approve">Aprovar</message>
+	<message key="grid.action.approveForReview">Submeter para Fase de Revisão</message>
+	<message key="grid.action.approveForPub">Aprovar para Publicação</message>
+	<message key="grid.action.decline">Declinar</message>
+	<message key="grid.action.moreInformation">Mais Informação</message>
+	<message key="grid.action.restoreDefaults">Restaurar Padrão</message>
+
+	<!-- Common Grid Column Titles -->
+	<message key="grid.columns.actions">Acções</message>
+	<message key="grid.columns.institution">Instituição</message>
+	<message key="grid.columns.url">URL</message>
+
+	<!-- Sponsors Grid -->
+	<message key="grid.sponsor.title">Patrocinadores</message>
+
+	<!-- Masthead Grid -->
+	<message key="grid.masthead.title">Masthead</message>
+	<message key="grid.masthead.column.groups">Grupos</message>
+
+	<!-- Contributor Grid -->
+	<message key="grid.contributor.title">Contribuidor</message>
+	<message key="grid.action.addAuthor">Adicionar Autor</message>
+
+	<!-- Review Forms Grid -->
+	<message key="grid.reviewForm.title">Formulários de Revisão</message>
+
+	<!-- Artwork Files Grid -->
+	<message key="grid.artworkFile.title">Artwork c/Permissões</message>
+	<message key="grid.artworkFile.file">Ficheiro</message>
+	<message key="grid.artworkFile.form.title">Adicionar Artwork c/Permissões</message>
+	<message key="grid.artworkFile.form.metadata">Metadados Artwork</message>
+	<message key="grid.artworkFile.caption">Caption</message>
+	<message key="grid.artworkFile.credit">Crédito</message>
+	<message key="grid.artworkFile.captionAndCredit">Caption e Crédito (Se não for Incluído no Ficheiro)</message>
+	<message key="grid.artworkFile.copyrightOwner">Proprietário do Copyright</message>
+	<message key="grid.artworkFile.copyrightContact">Info de Contacto (se não for autor/editor)</message>
+	<message key="grid.artworkFile.permissionTerms">Termos de Permissão</message>
+	<message key="grid.artworkFile.permissionForm">Formulário de Permissão</message>
+	<message key="grid.artworkFile.type">Tipo</message>
+	<message key="grid.artworkFile.type.table">Tabela</message>
+	<message key="grid.artworkFile.type.figure">Figura</message>
+	<message key="grid.artworkFile.placement">Localização no livro</message>
+	<message key="grid.artworkFile.placementDetail">Tabela/Fig. Nr.</message>
+	<message key="grid.artworkFile.contactAuthor">Contacto Autor</message>
+
+	<!-- Library Files -->
+	<message key="grid.libraryFiles.column.files">Ficheiros</message>
+	<message key="grid.libraryFiles.submission.title">Livraria Submissão</message>
+	<message key="grid.libraryFiles.editorial.title">Livraria Editorial</message>
+	<message key="grid.libraryFiles.review.title">Livraria Revisão</message>
+	<message key="grid.libraryFiles.production.title">Livraria Produção</message>
+	<message key="grid.libraryFiles.productionTemplate.title">Template da Livraria de Produção</message>
+
+	<!-- SubmissionChecklist -->
+	<message key="grid.submissionChecklist.title">Checklist da Submissão</message>
+	<message key="grid.submissionChecklist.column.checklistItem">Item da Checklist</message>
+
+	<!-- Submission Contributors -->
+	<message key="author.users.contributor.name">Nome</message>
+	<message key="author.users.contributor.email">E-mail</message>
+	<message key="author.users.contributor.role">Papel</message>
+	<message key="author.users.contributor.principalContact">Contacto Principal</message>
+
+	<!-- Review Attachments -->
+	<message key="grid.reviewAttachments.title">Anexos do Revisor</message>
+	<message key="grid.reviewAttachments.add">Adicionar Anexos à Revisão</message>
+
+	<!-- Chapters -->
+	<message key="grid.chapters.title">Capítulos</message>
+</locale>

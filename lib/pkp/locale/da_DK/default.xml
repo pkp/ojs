@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/da_DK/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="da_DK" full_name="Dansk">
+	<message key="default.genres.other">Andet</message>
+	<message key="default.groups.name.siteAdmin">Site admin</message>
+	<message key="default.groups.plural.siteAdmin">Site admins</message>
+	<message key="default.groups.name.productionEditor">Produktionsredaktør</message>
+	<message key="default.groups.plural.productionEditor">Produktionsredaktører</message>
+	<message key="default.groups.abbrev.productionEditor">ProdE</message>
+	<message key="default.groups.name.copyeditor">Manuskriptredaktører</message>
+	<message key="default.groups.plural.copyeditor">Manuskriptredaktører</message>
+	<message key="default.groups.abbrev.copyeditor">CE</message>
+	<message key="default.groups.name.proofreader">Korrekturlæser</message>
+	<message key="default.groups.plural.proofreader">Korrekturlæsere</message>
+	<message key="default.groups.abbrev.proofreader">PR</message>
+	<message key="default.groups.name.designer">Designer</message>
+	<message key="default.groups.plural.designer">Designere</message>
+	<message key="default.groups.abbrev.designer">Design</message>
+	<message key="default.groups.name.internalReviewer">Intern bedømmer</message>
+	<message key="default.groups.plural.internalReviewer">Interne bedømmere</message>
+	<message key="default.groups.abbrev.internalReviewer">IR</message>
+	<message key="default.groups.name.marketing">Marketings- og salgskoordinator</message>
+	<message key="default.groups.plural.marketing">Marketings- og salgskoordinatorer</message>
+	<message key="default.groups.abbrev.marketing">MS</message>
+	<message key="default.groups.name.funding">Finansieringskoordinator</message>
+	<message key="default.groups.plural.funding">Finansieringskoordinatorer</message>
+	<message key="default.groups.abbrev.funding">FC</message>
+	<message key="default.groups.name.indexer">Kartotekfører</message>
+	<message key="default.groups.plural.indexer">Kartotekførere</message>
+	<message key="default.groups.abbrev.indexer">IND</message>
+	<message key="default.groups.name.layoutEditor">Layoutredaktør</message>
+	<message key="default.groups.plural.layoutEditor">Layoutredaktører</message>
+	<message key="default.groups.abbrev.layoutEditor">LE</message>
+	<message key="default.groups.name.author">Forfatter</message>
+	<message key="default.groups.plural.author">Forfattere</message>
+	<message key="default.groups.abbrev.author">AU</message>
+	<message key="default.groups.name.translator">Oversætter</message>
+	<message key="default.groups.plural.translator">Oversættere</message>
+	<message key="default.groups.abbrev.translator">Trans</message>
+	<message key="default.groups.name.reader">Læser</message>
+	<message key="default.groups.plural.reader">Læsere</message>
+	<message key="default.groups.abbrev.reader">Read</message>
+	<message key="default.genres.multimedia">Multimedia</message>
+	<message key="default.genres.image">Billede</message>
+	<message key="default.genres.styleSheet">HTML style-sheet</message>
+</locale>

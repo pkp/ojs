@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/nb_NO/reader.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the nb_NO (Norsk bokmål) locale.
+  *
+  -->
+
+<locale name="nb_NO" full_name="Norsk bokmål">
+	<message key="comments.anonymous">Anonym bruker</message>
+	<message key="comments.anonymousNamed">"{$userName}"</message>
+	<message key="comments.body">Meldingstekst</message>
+	<message key="comments.confirmDeleteChildren">Ved å slette denne kommentaren vil du også slette alle svar til den. Er du sikker på at du vil gjøre dette?</message>
+	<message key="comments.delete">Slett denne kommentaren</message>
+	<message key="comments.email">Innsenderens e-postadresse</message>
+	<message key="comments.emailReply">E-post svar</message>
+	<message key="comments.enterComment">Skriv inn kommentar</message>
+	<message key="comments.inResponseTo"><![CDATA[Som svar til <a href="{$url}">{$title}</a>]]></message>
+	<message key="comments.name">Innsenderens navn</message>
+	<message key="comments.noComments">Ingen leserkommentarer er gitt.</message>
+	<message key="comments.nReplies">({$num} Svar)</message>
+	<message key="comments.oneReply">(1 Svar)</message>
+	<message key="comments.postAnonymously">Send inn denne kommentaren anonymt</message>
+	<message key="comments.postReply">Send inn svar</message>
+	<message key="comments.readerComments">Leserkommentarer</message>
+	<message key="comments.readMore">Les mer</message>
+	<message key="comments.replies">Svar</message>
+	<message key="comments.title">Tittel</message>
+	<message key="comments.viewAllComments">Vis alle kommentarer</message>
+	<message key="reader.fullText">Fulltekst:</message>
+	<message key="rt.addComment">Legg til kommentar</message>
+	<message key="rt.admin.configuration">Konfigurasjon</message>
+	<message key="rt.admin.contexts.confirmDelete">Er du sikker på at du vil slette denne kontekst og alle tilknyttede søk?</message>
+	<message key="rt.admin.contexts.createContext">Opprett kontekst</message>
+	<message key="rt.admin.contexts.edit.editContext">Rediger kontekst</message>
+	<message key="rt.admin.contexts.metadata">Metadata</message>
+	<message key="rt.admin.contexts.options.authorTerms">Bruk forfatternavn som default søkeord for å hjelpe brukere med å finne andre arbeider av forfatterene for dette elementet (for eks. for en "Andre arbeider"-kontekst)</message>
+	<message key="rt.admin.contexts.options.citedBy">Bruk forfatternavn som default søkeord, og beskriv konteksten som søk etter siteringer av artikkelen.</message>
+	<message key="rt.admin.contexts.options.defineTerms"><![CDATA[Bruk det ordet leseren har markert som default søkeord eller la stå tom hvis ingen er valgt for dette elementet (for eks. for en "Orddefinisjoner"-kontekst). "Orddefinisjoner" valgmuligheten må være slått på i <a href="{$settingsUrl}">RST innstillinger</a> for å tillate å dobbelklikke på ord for å åpne denne konteksten.]]></message>
+	<message key="rt.admin.contexts.options.geoTerms">Bruk greografiske indekseringsdata som default søkeord.</message>
+	<message key="rt.admin.contexts.options">Valg</message>
+	<message key="rt.admin.management">Administrasjon</message>
+	<message key="rt.admin.readingToolsEnabled">Leseverktøy</message>
+	<message key="rt.admin.searches.confirmDelete">Er du sikker på at du vil slette dette søket?</message>
+	<message key="rt.admin.searches.createSearch">Opprett søk</message>
+	<message key="rt.admin.searches.edit.editSearch">Rediger søk</message>
+	<message key="rt.admin.selectedVersion">Relaterte elementer</message>
+	<message key="rt.admin.settings.abstract">Sammendrag (viser elementets sammendrag).</message>
+	<message key="rt.admin.settings.authorBio">Om forfatteren (viser biografiske opplysninger forfatteren har skrevet inn).</message>
+	<message key="rt.admin.settings.captureCite">Hvordan element skal siteres (gir bibliografiske detaljer for elementet).</message>
+	<message key="rt.admin.settings.defineTerms">Søk på ord (leseren kan dobbelklikke på ord i et element, og ordet blir sendt til et ordbokssøk).</message>
+	<message key="rt.admin.settings.disableRelatedItems">Slå av relaterte elementer</message>
+	<message key="rt.admin.settings.emailAuthor">E-post til forfatteren (åpner en e-postmal med forfatterens e-post).</message>
+	<message key="rt.admin.settings.emailOthers">Send beskjed til en kollega (åpner en e-postmal med lenke til elementet).</message>
+	<message key="rt.admin.settings.findingReferences">Finn henvisninger</message>
+	<message key="rt.admin.settings.printerFriendly">Utskriftsversjon (Åpner en utskriftsvennlig versjon av elementet).</message>
+	<message key="rt.admin.settings.supplementaryFiles">Tilleggsfiler (viser liste over de filene forfatteren har lagt ved manuskriptet).</message>
+	<message key="rt.admin.settings.viewMetadata">Metadata for indeksering (viser elementets indekseringsmetadata, som er gitt av forfatteren og systemet).</message>
+	<message key="rt.admin.status">Status</message>
+	<message key="rt.admin.validateUrls.complete">Validering fullført.</message>
+	<message key="rt.admin.validateUrls.ok">OK</message>
+	<message key="rt.admin.validateUrls.urlIsInvalid">{$url} er ikke gyldig.</message>
+	<message key="rt.admin.validateUrls">Valider URL for leseverktøy</message>
+	<message key="rt.admin.validateUrls.validate">Valider</message>
+	<message key="rt.admin.versions.confirmDelete">Er du sikker på at du vil slette denne versjonen og alle tilknyttete kontekster og søk?</message>
+	<message key="rt.admin.versions.confirmRestore">Er du sikker på at du vil gjenopprette alle versjoner til default? NB: Denne handlingen kan ikke omgjøres. I så fall kommer du til å måtte velge en aktiv versjon på Innstillinger-siden.</message>
+	<message key="rt.admin.versions.createVersion">Opprett versjon</message>
+	<message key="rt.admin.versions.edit.editVersion">Rediger versjon</message>
+	<message key="rt.admin.versions.export">Eksporter</message>
+	<message key="rt.admin.versions.importVersion">Importer versjon</message>
+	<message key="rt.admin.versions.metadata">Metadata</message>
+	<message key="rt.admin.versions.restoreVersions">Gjenopprett versjonene til default</message>
+	<message key="rt.authorBio">Om forfatteren</message>
+	<message key="rt.captureCite.format">Siteringsformat</message>
+	<message key="rt.captureCite">Hvordan element skal siteres</message>
+	<message key="rt.captureCite.online">Online</message>
+	<message key="rt.colleague">Send beskjed til kollega</message>
+	<message key="rt.context.abbrev">Fork.</message>
+	<message key="rt.context.and">AND</message>
+	<message key="rt.context.citesContextDescription">Hvis artikkelen er indeksert i Google Scholar, kan den være vedlagt en "Cited by X" lenke, som fører til en liste av arbeider der artikkelen er sitert. Google Scholar kommer dessuten til å liste alle elementer både etter tittelen og forfatternavnet. For å få tilgang til nettressurser som du bare har tilgangsrett til gjennom biblioteket ditt, kan du gå til Scholar Preferences i Google Scholar og aktivere bibliotekslenker for din institusjon.</message>
+	<message key="rt.context">Kontekst</message>
+	<message key="rt.context.defineTermsDescription">Hvis elementet er en HTML fil (heller enn en PDF), kan du ved å dobbelklikke et ord i teksten hente ordet til Ordboksøk-boksen. Du kan også skrive eller lime inn ord i boksen. For å få vite mer om søkeressursene, klikk på OM. Disse ressursene er valgt for sin relevans og frie tilgang til noe eller alt innhold.</message>
+	<message key="rt.context.description">Beskrivelse</message>
+	<message key="rt.context.order">Ordne</message>
+	<message key="rt.contexts">Kontekster</message>
+	<message key="rt.context.searchDescription">Søkeordene er valgt av forfatteren(e). De kan endres eller slettes av leseren, fordi to eller tre korte, presise ord eller fraser gir de beste Boolske (AND) søkene. For å få vite mer om søkeressursene, klikk på OM. Disse ressursene er valgt for sin relevans og frie tilgang til noe eller alt innhold.</message>
+	<message key="rt.context.searchTerms">Søkeord</message>
+	<message key="rt.context.termToDefine">Søkeord til ordbokssøk</message>
+	<message key="rt.context.title">Tittel</message>
+	<message key="rt.emailAuthor">E-post til forfatteren</message>
+	<message key="rt.email.needLogin"><![CDATA[* krever <a target="_parent" href="{$loginUrl}">registrering</a>]]></message>
+	<message key="rt.email.sent">Din melding er sendt.</message>
+	<message key="rt.findingReferences">Finn henvisninger</message>
+	<message key="rt.findingReferences.googleScholar">Google Scholar</message>
+	<message key="rt.findingReferences.windowsLiveAcademic">Windows Live Academic</message>
+	<message key="rt.lookUp">Ordboksøk</message>
+	<message key="rt.metadata.dublinCore.contributor">Bidragsyter</message>
+	<message key="rt.metadata.dublinCore.coverage">Dekning</message>
+	<message key="rt.metadata.dublinCore.date">Dato</message>
+	<message key="rt.metadata.dublinCore.description">Beskrivelse</message>
+	<message key="rt.metadata.dublinCore">Dublin Core</message>
+	<message key="rt.metadata.dublinCore.format">Format</message>
+	<message key="rt.metadata.dublinCore.identifier">Identifikator</message>
+	<message key="rt.metadata.dublinCore.language">Språk</message>
+	<message key="rt.metadata.dublinCore.publisher">Utgiver</message>
+	<message key="rt.metadata.dublinCore.relation">Sammenheng</message>
+	<message key="rt.metadata.dublinCore.rights">Rettigheter</message>
+	<message key="rt.metadata.dublinCore.source">Kilde</message>
+	<message key="rt.metadata.dublinCore.subject">Emne</message>
+	<message key="rt.metadata.dublinCore.title">Tittel</message>
+	<message key="rt.metadata.dublinCore.type">Type</message>
+	<message key="rt.metadata.forThisDocument">Metadata for dette dokumentet</message>
+	<message key="rt.metadata.pkp.abstract">Sammendrag</message>
+	<message key="rt.metadata.pkp.copyright">Copyright og lisenser</message>
+	<message key="rt.metadata.pkp.coverage">Dekning i både tid og rom, eller karakteristika ved materialet/utvalget</message>
+	<message key="rt.metadata.pkp.date">(ÅÅÅÅ-MM-DD)</message>
+	<message key="rt.metadata.pkp.discipline">Fag</message>
+	<message key="rt.metadata.pkp.format">Filformat</message>
+	<message key="rt.metadata.pkp.genre">Status og genre</message>
+	<message key="rt.metadata.pkpItem">PKP metadataelement</message>
+	<message key="rt.metadata.pkp.language">Norsk=no</message>
+	<message key="rt.metadata.pkp.publisher">Organisasjon, sted</message>
+	<message key="rt.metadata.pkp.source">Tidsskrift/konferansetittel; vol., nr. (år)</message>
+	<message key="rt.metadata.pkp.sponsors">Sponsor(er)</message>
+	<message key="rt.metadata.pkp.subject">Emneord</message>
+	<message key="rt.metadata.pkp.suppFiles">Tilleggsfiler</message>
+	<message key="rt.metadata.pkp.title">Dokumenttittel</message>
+	<message key="rt.metadata.pkp.type">Type</message>
+	<message key="rt.metadata.pkp.uri">Universal Resource Indicator</message>
+	<message key="rt.printVersion">Utskriftsversjon</message>
+	<message key="rt.readingTools">Leseverktøy</message>
+	<message key="rt.relatedItems">Relaterte elementer</message>
+	<message key="rt.reviewPolicy">Om fagvurderingsprosessen</message>
+	<message key="rt.search.description">Beskrivelse</message>
+	<message key="rt.searches">Søk</message>
+	<message key="rt.search.order">Ordne</message>
+	<message key="rt.search">Søk</message>
+	<message key="rt.search.searchPost">Send inn data</message>
+	<message key="rt.search.searchUrl">Søk URL</message>
+	<message key="rt.search.suggest">Foreslå en kilde</message>
+	<message key="rt.search.title">Tittel</message>
+	<message key="rt.search.url">URL</message>
+	<message key="rt.suppFiles.download">Last ned</message>
+	<message key="rt.suppFiles">Tilleggsfiler</message>
+	<message key="rt.suppFiles.viewMetadata">Indekseringsmetadata</message>
+	<message key="rt.version.description">Beskrivelse</message>
+	<message key="rt.version.key">Nøkkel</message>
+	<message key="rt.version.locale">Lokalinnstilling</message>
+	<message key="rt.versions">Relaterte elementsett</message>
+	<message key="rt.version.title">Tittel</message>
+	<message key="rt.version">Versjon</message>
+	<message key="rt.viewMetadata">Indekseringsmetadata</message>
+	<message key="comments.titleRequired">En kommentartittel er påkrevd.</message>
+	<message key="rt.admin.sharing">Deling</message>
+	<message key="rt.admin.sharing.enabled">Deling er slått på</message>
+	<message key="rt.admin.sharing.description"><![CDATA[For å gjøre det mulig for dine lesere å dele artikler må du opprette en konto hos <a href="http://www.addthis.com">addthis.com</a>, og kopiere inn nødvendig (program-)kode for Delingsknapp nedenfor.]]></message>
+	<message key="rt.admin.sharing.basic">Basisinnstillinger</message>
+	<message key="rt.admin.sharing.userNameLabel">Brukernavn hos AddThis.com</message>
+	<message key="rt.admin.sharing.buttonStyleLabel">Knappestil</message>
+	<message key="rt.admin.sharing.dropDownMenuLabel">Bruk rullegardinmeny</message>
+	<message key="rt.admin.sharing.advanced">Avanserte innstillinger (valgfritt)</message>
+	<message key="rt.admin.sharing.customizationLink"><![CDATA[Se <a href="http://support.addthis.com/customer/portal/articles/381236-custom-buttons">AddThis.com tilpasningsdokumentasjon</a> for informasjon.]]></message>
+	<message key="rt.admin.sharing.brandLabel">Merke</message>
+	<message key="rt.admin.sharing.dropDownLabel"><![CDATA[Rullegardinmenyvalg <br /> (kommaseparert liste)]]></message>
+	<message key="rt.admin.sharing.languageLabel">Språk</message>
+	<message key="rt.admin.sharing.logolabel">Logo</message>
+	<message key="rt.admin.sharing.logoBackgroundLabel">Logobakgrunn</message>
+	<message key="rt.admin.sharing.logoColorLabel">Logofarge</message>
+	<message key="rt.admin.configureSharing">Konfigurer AddThis</message>
+	<message key="rt.admin.settings.viewReviewPolicy">Se retningslinjer for fagfellevurdering i dette tidsskriftet</message>
+	<message key="rt.captureCite.web">Internett</message>
+</locale>

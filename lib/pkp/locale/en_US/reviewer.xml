@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/en_US/reviewer.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings
+  -->
+
+<locale name="en_US" full_name="U.S. English">
+	<!-- Used in submission review -->
+	<message key="reviewer.reviewSteps.request">1. Request</message>
+	<message key="reviewer.reviewSteps.guidelines">2. Guidelines</message>
+	<message key="reviewer.reviewSteps.download">3. Download &amp; Review</message>
+	<message key="reviewer.reviewSteps.completion">4. Completion</message>
+	<message key="reviewer.step1.request">Request for Review</message>
+	<message key="reviewer.step1.requestBoilerplate">You have been selected as a potential reviewer of the following submission.  Below is an overview of the submission, as well as the timeline for this review.  We hope that you are able to participate.</message>
+	<message key="reviewer.step1.viewAllDetails">View All Submission Details</message>
+	<message key="reviewer.submission.reviewerFiles">Reviewer Files</message>
+	<message key="reviewer.submission.declineReview">Decline Review Request</message>
+	<message key="reviewer.submission.declineReviewMessage">You may provide the editor with any reasons why you are declining this review in the field below.</message>
+	<message key="reviewer.submission.acceptReview">Accept Review, Continue to Step #2</message>
+	<message key="reviewer.submission.continueToStepThree">Continue to Step #3</message>
+	<message key="reviewer.submission.submitReview">Submit Review</message>
+	<message key="reviewer.submission.reviewerGuidelines">Reviewer Guidelines</message>
+	<message key="reviewer.submission.enterCompetingInterests">This publisher has a policy for disclosure of potential competing interests from its reviewers.  Please take a moment to review this policy.</message>
+	<message key="reviewer.submission.noCompetingInterests">I do not have any competing interests</message>
+	<message key="reviewer.submission.hasCompetingInterests">I may have competing interests (Specify below)</message>
+	<message key="reviewer.submission.competingInterests">Competing Interests</message>
+	<message key="reviewer.submission.guidelines">Review Guidelines</message>
+	<message key="reviewer.submission.noGuidelines">This publisher has not set any reviewer guidelines.</message>
+	<message key="reviewer.submission.downloadDescription">Click on the file names below to download the files associated with this submission.</message>
+	<message key="reviewer.submission.reviewDescription">Enter (or paste) your review of this submission into the form below.</message>
+	<message key="reviewer.submission.uploadDescription">Upload files you would like the editor and/or author to consult, including revised versions of the original review file(s).</message>
+	<message key="reviewer.complete">Review Submitted</message>
+	<message key="reviewer.confirmSubmit">Are you sure you want to submit this review?</message>
+	<message key="reviewer.complete.whatNext">Thank you for completing the review of this submission. Your review has been submitted successfully. We appreciate your contribution to the quality of the work that we publish; the editor may contact you again for more information if needed.</message>
+	<message key="reviewer.aboutDueDates">About Due Dates</message>
+	<message key="reviewer.aboutDueDates.text">The editor asks that you either accept or decline the review before the Response Due Date and complete the review by the Review Due Date.</message>
+	<message key="submission.comments.canShareWithAuthor">For author and editor</message>
+	<message key="submission.comments.cannotShareWithAuthor">For editor only</message>
+	<message key="user.authorization.submissionReviewer">The current user is not assigned as a reviewer for the requested document.</message>
+</locale>

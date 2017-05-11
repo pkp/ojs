@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/da_DK/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="da_DK" full_name="Dansk">
+	<message key="editor.submissionReview.doubleBlind">Double-blind</message>
+	<message key="editor.submissionReview.blind">Blind</message>
+	<message key="editor.submissionReview.open">Åben</message>
+	<message key="editor.submissionLibrary">Indsendelsesbibliotek</message>
+	<message key="editor.submission.findAndSelectUser">Vælg en bruger</message>
+	<message key="editor.review.notInitiated">Bedømmelsesprocessen er endnu ikke påbegyndt.</message>
+	<message key="editor.submission.uploadSelectFiles">Upload/vælg filer</message>
+	<message key="submission.queries.attachedFiles">Vedhæftede filer</message>
+	<message key="editor.submission.selectFiles">Vælg filer</message>
+	<message key="editor.submission.production.productionReadyFiles">Produktionsklare filer</message>
+	<message key="editor.submission.externalReviewDescription">Vælg filer nedenfor og send dem videre til bedømmelsestrinnet</message>
+	<message key="editor.submission.newRound">Ny bedømmelsesrunde</message>
+	<message key="editor.submission.addReviewer">Tilføj bedømmer</message>
+	<message key="editor.submission.revisions">Revisioner</message>
+	<message key="editor.review.NotifyAuthorRevisions">Anmod om revision fra forfatteren.</message>
+	<message key="editor.review.personalMessageToAuthor">E-mail, der skal sendes til forfatteren</message>
+	<message key="editor.submissionReview.skipEmail">Spring e-mail over</message>
+	<message key="editor.submissionReview.recordDecision">Registrér beslutning</message>
+	<message key="editor.review.NotifyAuthorResubmit">Anmod forfatteren om at sende manuskripttilretninger, der efterfølgende vil undergå yderligere bedømmelse.</message>
+	<message key="editor.review.NotifyAuthorAccept">Underret forfatteren om, at indsendelsen er blevet accepteret.</message>
+	<message key="editor.review.NotifyAuthorDecline">Underret forfatteren om, at indsendelsen er blevet afvist.</message>
+	<message key="editor.submission.findAndSelectReviewer">Find en bedømmer</message>
+	<message key="editor.review.days">Antal dage i gennemsnit</message>
+	<message key="editor.submission.selectReviewer">Vælg bedømmer</message>
+	<message key="editor.review.createReviewer">Opret ny bedømmer</message>
+	<message key="editor.review.enrollReviewer.short">Tilmeld en allerede registreret bruger</message>
+	<message key="editor.submission.backToSearch">Tilbage til Søg</message>
+	<message key="editor.review.personalMessageToReviewer">E-mail, der skal sendes til bedømmeren</message>
+	<message key="editor.review.skipEmail">Spring e-mail over</message>
+	<message key="editor.review.importantDates">Vigtige datoer</message>
+	<message key="editor.review.reviewDueDate">Bedømmelsen er forfalden</message>
+	<message key="editor.submissionReview.restrictFiles">Filer, der skal bedømmes</message>
+	<message key="editor.submissionReview.reviewType">Form for bedømmelse (review)</message>
+	<message key="editor.review.enrollReviewer">Tilføj en allerede registreret bruger som bedømmer</message>
+	<message key="editor.review.userGroupSelect">Enroll the user with this reviewer user group</message>
+	<message key="editor.review.requestSent">Anmodning sendt</message>
+	<message key="editor.review.responseDue">Svar senest: {$date}</message>
+	<message key="editor.submission.review.currentFiles">Gældende bedømmelsesfiler for runde {$round}</message>
+	<message key="editor.submission.fileList.includeAllStages">Vis filer fra alle tilgængelige redaktionelle trin.</message>
+	<message key="editor.submission.newRoundDescription">Her starter du en ny bedømmelsesrunde. Filer, der ikke er blevet brugt i tidligere bedømmelsesrunder er anført nedenfor.</message>
+	<message key="editor.submission.createNewRound">Start en ny bedømmelsesrunde</message>
+	<message key="editor.submission.selectedReviewer">Udvalgte bedømmer</message>
+	<message key="editor.submission.query.manageQueryNoteFilesDescription">Filer fra nedenstående liste kan vedhæftes og indgå i denne drøftelse.</message>
+	<message key="editor.submission.copyediting.personalMessageToUser">Besked til bruger</message>
+	<message key="editor.submission.fileAuditor.form.fileRequired">Vælg mindst én fil, der skal tildeles brugeren.</message>
+	<message key="editor.submission.fileAuditor.form.messageRequired">Personlig besked skal inkluderes.</message>
+	<message key="editor.submission.fileAuditor.skipEmail">Send ikke e-mail til auditøren</message>
+	<message key="editor.submission.fileAuditor.form.userRequired">For at tildele skal der vælges bruger.</message>
+	<message key="editor.submission.review.reviewersDescription"><![CDATA[Brug <em>+Tilføj bedømmer</em> for at invitere læsere til at bedømme indsendelsesfilerne. Notebook-ikonet indikerer, at der er indløbet en bedømmelse, som efterfølgende bliver markeret <em>Godtaget</em> efter det er blevet inddraget. Når bedømmelserne er forfalden fremkommer et rødt brevikon for at rykke bedømmerne.]]></message>
+	<message key="editor.review.unassignReviewer">Fjern bedømmer</message>
+	<message key="editor.submissionReview.restrictFiles.hide">Luk filvalg</message>
+	<message key="editor.submissionReview.editReview">Redigér bedømmelse</message>
+	<message key="editor.review.uploadRevision">Upload revision</message>
+	<message key="editor.review.NotifyAuthorExternal">Giv forfatteren besked om afgørelsen for at påbegynde en ekstern bedømmelse.</message>
+	<message key="editor.review.dateAccepted">Dato for accept af bedømmelse</message>
+	<message key="editor.review.noReviews">Ingen peer reviews at importere</message>
+	<message key="editor.review.reminder">Påmindelse til bedømmer</message>
+	<message key="editor.review.thankReviewer">Tak bedømmer</message>
+	<message key="editor.review.reminderError">Fejl i forbindelsen med påmindelse til bedømmer</message>
+	<message key="editor.review.thankReviewerError">Fejl i forbindelse med afsendelse af tak til bedømmer</message>
+	<message key="editor.review.readReview">Læs bedømmelse</message>
+	<message key="editor.review.readNewReview">Læs ny bedømmelse</message>
+	<message key="editor.review.requestAccepted">Anmodning accepteret</message>
+	<message key="editor.review.revertDecision">Fortryd afgørelse</message>
+	<message key="editor.review.sendReminder">Send påmindelse</message>
+	<message key="editor.review.reviewDue">Bedømmelse forfalden: {$date}</message>
+	<message key="editor.review.reviewCompleted">Bedømmelse afsluttet</message>
+	<message key="editor.review.reviewConfirmed">Bedømmelse bekræftet</message>
+	<message key="editor.review.reviewSubmitted">Bedømmelse indsendt</message>
+	<message key="editor.review.reviewerComments">Kommentarer fra bedømmer</message>
+	<message key="editor.review.mustSelect">Bedømmer skal udvælges</message>
+	<message key="editor.review.errorAddingReviewer">En fejl indtrådte i forbindelse med valg af bedømmer. Prøv igen.</message>
+	<message key="editor.review.errorDeletingReviewer">En fejl indtrådte i forbindelse med fjernelse af bedømmer. Prøv igen.</message>
+	<message key="editor.review.unconsiderReviewText">Ønsker du at markere denne bedømmelse som værende tilsidesat? Bedømmelsesforløbet bliver gemt.</message>
+	<message key="editor.review.unconsiderReview">Tilsidesæt denne bedømmelse</message>
+	<message key="editor.review.readConfirmation">Klik "Bekræft" efter at have læst denne bedømmelse for at markere at bedømmelsesprocessen kan fortsætte. Hvis bedømmeren har indsendt sin bedømmelse andetsteds, kan du uploade filen nedenfor og dernæst klikke "Bekræft" for at fortsætte.</message>
+	<message key="editor.submission.selectCopyedingFiles">Manuskriptredigerede filer</message>
+	<message key="editor.submission.taskDueDate">Opgavens forfaldsdato</message>
+	<message key="editor.submission.taskSchedule">Opgavens tidsplan</message>
+	<message key="editor.submission.noAuditRequested">Ingen revision påkrævet i forbindelse med denne fil</message>
+	<message key="editor.submission.personalMessageToUser">E-mail, der skal sendes til bruger</message>
+	<message key="editor.submission.proof.reminder">Påmindelse om korrektur</message>
+	<message key="editor.submission.editorial.approveCopyeditDescription">Den manuskriptredigerede fil skal godkendes før den kan blive sendt til produktions-trinnet. Ønsker du at godkende denne fil?</message>
+	<message key="editor.submission.editorial.disapproveCopyeditDescription">En afvisning af den manuskriptredigerede fil vil forhindre den i at blive sendt til produktionstrinnet. Ønsker du at afvise denne fil?</message>
+	<message key="editor.submission.addAuditor">Tilføj auditør</message>
+	<message key="editor.submission.copyedit.manageCopyeditFilesDescription">Enhver fil, der allerede er blevet uploadet til et af indsendelsestrinnene kan tilføjes manuskriptredigeringslisten ved nedenfor at markere afkrydsningsfeltet ud for 'Inkludér' og klikke 'Søg': Alle tilgængelige filer vil stå opført og kan tilvælges. Ekstra filer, der ikke allerede er uplodet til et af trinnene, kan tilføjes listen ved at klikke på linket 'Upload fil'.</message>
+	<message key="editor.review">Bedømmelse</message>
+	<message key="editor.review.reviewDetails">Bedømmelsesdetaljer</message>
+	<message key="editor.review.noReviewFilesUploaded">Ingen filer er uploadet</message>
+	<message key="editor.review.noReviewFilesUploaded.details">Du har ikke uploadet nogen bedømmelsesfiler.</message>
+	<message key="editor.review.emailReviewer">Send bedømmer en e-mail</message>
+	<message key="editor.article.reviewForms">Bedømmelsesformular</message>
+	<message key="editor.article.selectReviewForm">Vælg bedømmelsesformular</message>
+	<message key="editor.article.clearReviewForm">Ryd bedømmelsesformular</message>
+	<message key="editor.article.confirmChangeReviewForm">Advarsel: Ved at ændre bedømmelsesformularen påvirkes alle de svar, hvor bedømmeren har anvendt denne formular. Er du sikker på, at du vil fortsætte?</message>
+	<message key="editor.submission.noReviewerFilesSelected">Ingen fil er valgt</message>
+	<message key="editor.submission.noReviewerFilesSelected.details">Du har ikke valgt nogen fil til bedømmelse.</message>
+	<message key="submission.queries.subjectRequired">Et emnenavn skal tilføjes indlægget.</message>
+	<message key="submission.queries.messageRequired">En besked skal tilføjes indlægget.</message>
+	<message key="grid.action.editQuery">Redigér indlægget</message>
+	<message key="editor.submission.proofreading.approveProof">Godkend korrekturen</message>
+	<message key="editor.submission.proofreading.revokeProofApproval">Tilbagekaldt godkendelse af korrektur</message>
+	<message key="editor.submission.proofreading.confirmCompletion">Godkend denne korrektur for at markere, at korrekturlæsningen er afsluttet og filen er klar til at blive publiceret.</message>
+	<message key="editor.submission.proofreading.confirmRemoveCompletion">Tilbagekald denne godkendelse af korrekturen for at markere, at korrekturlæsningen ikke længere er afsluttet og at filen ikke er klar til publicering.</message>
+
+</locale>

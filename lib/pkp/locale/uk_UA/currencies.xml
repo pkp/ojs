@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE currencies SYSTEM "../../dtd/currencies.dtd">
+
+<!--
+  * locale/uk_UA/currencies.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the uk_UA (Українська) locale.
+  *
+  * Translated by Denys Solovianenko, 2010-2011
+  * V. I. Vernadsky National Library of Ukraine
+  -->
+
+<currencies locale="uk_UA">
+	<currency name="Долар США" code_alpha="USD" code_numeric="840" />
+	<currency name="Євро" code_alpha="EUR" code_numeric="978" />
+	<currency name="Канадський долар" code_alpha="CAD" code_numeric="124" />
+	<currency name="Дірхем ОАЕ" code_alpha="AED" code_numeric="784" />
+	<currency name="Афгані" code_alpha="AFN" code_numeric="971" />
+	<currency name="Лек" code_alpha="ALL" code_numeric="008" />
+	<currency name="Вірменський драм" code_alpha="AMD" code_numeric="051" />
+	<currency name="Нідерландський Антильський Гульден" code_alpha="ANG" code_numeric="532" />
+	<currency name="Кванза" code_alpha="AOA" code_numeric="973" />
+	<currency name="Аргентинський песо" code_alpha="ARS" code_numeric="032" />
+	<currency name="Австралійський долар" code_alpha="AUD" code_numeric="036" />
+	<currency name="Арубський ґульден" code_alpha="AWG" code_numeric="533" />
+	<currency name="Азербайджанський манат" code_alpha="AZN" code_numeric="944" />
+	<currency name="Конвертована марка" code_alpha="BAM" code_numeric="977" />
+	<currency name="Барбадоський долар" code_alpha="BBD" code_numeric="052" />
+	<currency name="Така" code_alpha="BDT" code_numeric="050" />
+	<currency name="Болгарський лев" code_alpha="BGN" code_numeric="975" />
+	<currency name="Бахрейнський динар" code_alpha="BHD" code_numeric="048" />
+	<currency name="Бурундійський франк" code_alpha="BIF" code_numeric="108" />
+	<currency name="Бермудський долар" code_alpha="BMD" code_numeric="060" />
+	<currency name="Брунейський долар" code_alpha="BND" code_numeric="096" />
+	<currency name="Болівіано" code_alpha="BOB" code_numeric="068" />
+	<currency name="Мвдол" code_alpha="BOV" code_numeric="984" />
+	<currency name="Бразильський ріал" code_alpha="BRL" code_numeric="986" />
+	<currency name="Багамський долар" code_alpha="BSD" code_numeric="044" />
+	<currency name="Нгултрум" code_alpha="BTN" code_numeric="064" />
+	<currency name="Пула" code_alpha="BWP" code_numeric="072" />
+	<currency name="Білоруський рубль" code_alpha="BYR" code_numeric="974" />
+	<currency name="Белізький долар" code_alpha="BZD" code_numeric="084" />
+	<currency name="Конґолезький франк" code_alpha="CDF" code_numeric="976" />
+	<currency name="Швейцарський франк" code_alpha="CHF" code_numeric="756" />
+	<currency name="Чилійський песо" code_alpha="CLP" code_numeric="152" />
+	<currency name="Юань Женьміньбі" code_alpha="CNY" code_numeric="156" />
+	<currency name="Колумбійський песо" code_alpha="COP" code_numeric="170" />
+	<currency name="Унiдад де валор рiал" code_alpha="COU" code_numeric="970" />
+	<currency name="Костариканський колон" code_alpha="CRC" code_numeric="188" />
+	<currency name="Кубинський песо" code_alpha="CUP" code_numeric="192" />
+	<currency name="Ескудо Кабо-Верде" code_alpha="CVE" code_numeric="132" />
+	<currency name="Чеська крона" code_alpha="CZK" code_numeric="203" />
+	<currency name="Джибутійський франк" code_alpha="DJF" code_numeric="262" />
+	<currency name="Данська крона" code_alpha="DKK" code_numeric="208" />
+	<currency name="Домініканський песо" code_alpha="DOP" code_numeric="214" />
+	<currency name="Алжирський динар" code_alpha="DZD" code_numeric="012" />
+	<currency name="Естонська крона" code_alpha="EEK" code_numeric="233" />
+	<currency name="Єгипетський фунт" code_alpha="EGP" code_numeric="818" />
+	<currency name="Накфа" code_alpha="ERN" code_numeric="232" />
+	<currency name="Ефіопський бір" code_alpha="ETB" code_numeric="230" />
+	<currency name="Фіджійський долар" code_alpha="FJD" code_numeric="242" />
+	<currency name="Фунт Фолклендських островів" code_alpha="FKP" code_numeric="238" />
+	<currency name="Фунт стерлінгів" code_alpha="GBP" code_numeric="826" />
+	<currency name="Ларі" code_alpha="GEL" code_numeric="981" />
+	<currency name="Седі" code_alpha="GHS" code_numeric="936" />
+	<currency name="Гібралтарський фунт" code_alpha="GIP" code_numeric="292" />
+	<currency name="Даласі" code_alpha="GMD" code_numeric="270" />
+	<currency name="Ґвінейський франк" code_alpha="GNF" code_numeric="324" />
+	<currency name="Кетсал" code_alpha="GTQ" code_numeric="320" />
+	<currency name="Ґаянський долар" code_alpha="GYD" code_numeric="328" />
+	<currency name="Долар Гонконґу" code_alpha="HKD" code_numeric="344" />
+	<currency name="Лемпіра" code_alpha="HNL" code_numeric="340" />
+	<currency name="Хорватська куна" code_alpha="HRK" code_numeric="191" />
+	<currency name="Гурд" code_alpha="HTG" code_numeric="332" />
+	<currency name="Форинт" code_alpha="HUF" code_numeric="348" />
+	<currency name="Рупія" code_alpha="IDR" code_numeric="360" />
+	<currency name="Новий ізраїльський шекель" code_alpha="ILS" code_numeric="376" />
+	<currency name="Індійська рупія" code_alpha="INR" code_numeric="356" />
+	<currency name="Іракський динар" code_alpha="IQD" code_numeric="368" />
+	<currency name="Іранський ріал" code_alpha="IRR" code_numeric="364" />
+	<currency name="Ісландська крона" code_alpha="ISK" code_numeric="352" />
+	<currency name="Ямайський долар" code_alpha="JMD" code_numeric="388" />
+	<currency name="Йорданський динар" code_alpha="JOD" code_numeric="400" />
+	<currency name="Єна" code_alpha="JPY" code_numeric="392" />
+	<currency name="Кенійський шилінг" code_alpha="KES" code_numeric="404" />
+	<currency name="Сом" code_alpha="KGS" code_numeric="417" />
+	<currency name="Рієл" code_alpha="KHR" code_numeric="116" />
+	<currency name="Коморський франк" code_alpha="KMF" code_numeric="174" />
+	<currency name="Північнокорейський вон" code_alpha="KPW" code_numeric="408" />
+	<currency name="Вон" code_alpha="KRW" code_numeric="410" />
+	<currency name="Кувейтський динар" code_alpha="KWD" code_numeric="414" />
+	<currency name="Долар Кайманових островів" code_alpha="KYD" code_numeric="136" />
+	<currency name="Тенге" code_alpha="KZT" code_numeric="398" />
+	<currency name="Кіп" code_alpha="LAK" code_numeric="418" />
+	<currency name="Ліванський фунт" code_alpha="LBP" code_numeric="422" />
+	<currency name="Рупія Шрі-Ланки" code_alpha="LKR" code_numeric="144" />
+	<currency name="Ліберійський долар" code_alpha="LRD" code_numeric="430" />
+	<currency name="Лоті" code_alpha="LSL" code_numeric="426" />
+	<currency name="Литовський літ" code_alpha="LTL" code_numeric="440" />
+	<currency name="Латвійський лат" code_alpha="LVL" code_numeric="428" />
+	<currency name="Лівійський динар" code_alpha="LYD" code_numeric="434" />
+	<currency name="Марокканський дірхем" code_alpha="MAD" code_numeric="504" />
+	<currency name="Молдовський лей" code_alpha="MDL" code_numeric="498" />
+	<currency name="Малаґасійський аріарі" code_alpha="MGA" code_numeric="969" />
+	<currency name="Денар" code_alpha="MKD" code_numeric="807" />
+	<currency name="К'ят" code_alpha="MMK" code_numeric="104" />
+	<currency name="Тугрик" code_alpha="MNT" code_numeric="496" />
+	<currency name="Патака" code_alpha="MOP" code_numeric="446" />
+	<currency name="Агвія" code_alpha="MRO" code_numeric="478" />
+	<currency name="Маврикійська рупія" code_alpha="MUR" code_numeric="480" />
+	<currency name="Руфія" code_alpha="MVR" code_numeric="462" />
+	<currency name="Малавійська квача" code_alpha="MWK" code_numeric="454" />
+	<currency name="Мексиканський песо" code_alpha="MXN" code_numeric="484" />
+	<currency name="Малайзійський рінгіт" code_alpha="MYR" code_numeric="458" />
+	<currency name="Метікал" code_alpha="MZN" code_numeric="943" />
+	<currency name="Намібійський долар" code_alpha="NAD" code_numeric="516" />
+	<currency name="Наїра" code_alpha="NGN" code_numeric="566" />
+	<currency name="Кордоба Оро" code_alpha="NIO" code_numeric="558" />
+	<currency name="Норвезька крона" code_alpha="NOK" code_numeric="578" />
+	<currency name="Непальська рупія" code_alpha="NPR" code_numeric="524" />
+	<currency name="Новозеландський долар" code_alpha="NZD" code_numeric="554" />
+	<currency name="Оманський ріал" code_alpha="OMR" code_numeric="512" />
+	<currency name="Бальбоа" code_alpha="PAB" code_numeric="590" />
+	<currency name="Новий сол" code_alpha="PEN" code_numeric="604" />
+	<currency name="Кіна" code_alpha="PGK" code_numeric="598" />
+	<currency name="Філіппінський песо" code_alpha="PHP" code_numeric="608" />
+	<currency name="Пакистанська рупія" code_alpha="PKR" code_numeric="586" />
+	<currency name="Злотий" code_alpha="PLN" code_numeric="985" />
+	<currency name="Гуарані" code_alpha="PYG" code_numeric="600" />
+	<currency name="Катарський ріал" code_alpha="QAR" code_numeric="634" />
+	<currency name="Нова румунська лея" code_alpha="RON" code_numeric="946" />
+	<currency name="Сербський динар" code_alpha="RSD" code_numeric="941" />
+	<currency name="Російський рубль" code_alpha="RUB" code_numeric="643" />
+	<currency name="Руандійський франк" code_alpha="RWF" code_numeric="646" />
+	<currency name="Саудівський ріал" code_alpha="SAR" code_numeric="682" />
+	<currency name="Долар Соломонових островів" code_alpha="SBD" code_numeric="090" />
+	<currency name="Сейшельська рупія" code_alpha="SCR" code_numeric="690" />
+	<currency name="Суданський фунт" code_alpha="SDG" code_numeric="938" />
+	<currency name="Шведська крона" code_alpha="SEK" code_numeric="752" />
+	<currency name="Синґапурський долар" code_alpha="SGD" code_numeric="702" />
+	<currency name="Фунт Святої Єлени" code_alpha="SHP" code_numeric="654" />
+	<currency name="Словацька крона" code_alpha="SKK" code_numeric="703" />
+	<currency name="Леоне" code_alpha="SLL" code_numeric="694" />
+	<currency name="Сомалійський шилінг" code_alpha="SOS" code_numeric="706" />
+	<currency name="Сурінамський долар" code_alpha="SRD" code_numeric="968" />
+	<currency name="Добра" code_alpha="STD" code_numeric="678" />
+	<currency name="Сирійський фунт" code_alpha="SYP" code_numeric="760" />
+	<currency name="Ліланджені" code_alpha="SZL" code_numeric="748" />
+	<currency name="Бат" code_alpha="THB" code_numeric="764" />
+	<currency name="Сомоні" code_alpha="TJS" code_numeric="972" />
+	<currency name="Туркменський манат" code_alpha="TMM" code_numeric="795" />
+	<currency name="Туніський динар" code_alpha="TND" code_numeric="788" />
+	<currency name="Паанґа" code_alpha="TOP" code_numeric="776" />
+	<currency name="Нова турецька ліра" code_alpha="TRY" code_numeric="949" />
+	<currency name="Долар Тринідаду і Тобаго" code_alpha="TTD" code_numeric="780" />
+	<currency name="Новий тайванський долар" code_alpha="TWD" code_numeric="901" />
+	<currency name="Танзанійський шилінг" code_alpha="TZS" code_numeric="834" />
+	<currency name="Гривня" code_alpha="UAH" code_numeric="980" />
+	<currency name="Уґандійський шилінг" code_alpha="UGX" code_numeric="800" />
+	<currency name="Уруґвайський песо" code_alpha="UYU" code_numeric="858" />
+	<currency name="Узбецький сум" code_alpha="UZS" code_numeric="860" />
+	<currency name="Болівар" code_alpha="VEF" code_numeric="937" />
+	<currency name="Донг" code_alpha="VND" code_numeric="704" />
+	<currency name="Вату" code_alpha="VUV" code_numeric="548" />
+	<currency name="Тала" code_alpha="WST" code_numeric="882" />
+	<currency name="КФА франк BEAC" code_alpha="XAF" code_numeric="950" />
+	<currency name="Східнокарибський долар" code_alpha="XCD" code_numeric="951" />
+	<currency name="СДР (Спеціальні права запозичення)" code_alpha="XDR" code_numeric="960" />
+	<currency name="КФА франк BCEAO" code_alpha="XOF" code_numeric="952" />
+	<currency name="КФП франк" code_alpha="XPF" code_numeric="953" />
+	<currency name="Єменський ріал" code_alpha="YER" code_numeric="886" />
+	<currency name="Ренд" code_alpha="ZAR" code_numeric="710" />
+	<currency name="Замбійська квача" code_alpha="ZMK" code_numeric="894" />
+	<currency name="Долар Зімбабве" code_alpha="ZWD" code_numeric="716" />
+</currencies>

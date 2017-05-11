@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/es_ES/admin.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Credits: https://pkp.sfu.ca/wiki/index.php?title=OMP:_Spanish_(es_ES)
+  * Localization strings.
+  -->
+
+<locale name="es_ES" full_name="Español (España)">
+	<message key="admin.systemInfo.settingName">Nombre de configuración</message>
+	<message key="admin.systemInfo.settingValue">Valor de configuración</message>
+	<message key="admin.adminFunctions">Funciones administrativas</message>
+	<message key="admin.auth.confirmDelete">¿Seguro que quieres borrar esta fuente de autenticación definitivamente?</message>
+	<message key="admin.auth.create">Crear fuente de autenticación</message>
+	<message key="admin.auth.noneCreated">No se ha definido ninguna fuente de autenticación.</message>
+	<message key="admin.authSources">Fuentes de autenticación</message>
+	<message key="admin.clearDataCache">Borrar caché de datos</message>
+	<message key="admin.clearTemplateCache">Borrar caché de la plantilla</message>
+	<message key="admin.configFileUpdatedInstructions"><![CDATA[El archivo de configuración se ha actualizado con éxito. Es posible que, si su sitio ya no funciona correctamente, tenga que arreglar la configuración de forma manual mediante la edición de <tt>config.inc.php</tt> directamente.]]></message>
+	<message key="admin.confirmClearTemplateCache">¿Seguro que quieres borrar la caché de las plantillas confeccionadas?</message>
+	<message key="admin.confirmExpireSessions">¿Está seguro de que desea que todas las sesiones de los usuarios/as caduquen? Todos los usuarios/as que actualmente estén registrados en el sistema estarán obligados a volver a registrarse (usted incluido).</message>
+	<message key="admin.contentsOfConfigFile">Contenidos del fichero de configuración</message>
+	<message key="admin.copyAccessLogFileTool.usage">Copie el archivo o los archivos de acceso de registro apache y filtre las entradas relacionadas con esta instalación en el directorio de archivo actual, dentro del directorio de fase UsageStatsPlugin. Debe ejecutarlo un usuario/a que tenga los permisos necesarios para la lectura de archivos de acceso de registro apache.
+
+La herramienta solo copiará los archivos que aún no estén en los directorios del cargador de archivo\n usageStats (fase, procesamiento, archivo, rechazar).
+
+Uso: {$scriptName} ruta/a/apache/log/file.log
+Uso (procesar todos los archivos de un directorio): {$scriptName} ruta/a/apache/directorio
+Uso (procesar todos los archivos de un directorio que empieza con la cadena pasada): {$scriptName} ruta/a/apache/directorio empieza_con_cadena 
+	</message>
+	<message key="admin.copyAccessLogFileTool.error.creatingFolder">Error: no se puede crear la carpeta temporal {$tmpDir}</message>
+	<message key="admin.copyAccessLogFileTool.error.acessingFile">Error: el archivo {$filePath} no existe o no se puede acceder a él.</message>
+	<message key="admin.copyAccessLogFileTool.error.copyingFile">Error: no se puede copiar el archivo de {$filePath} a {$tmpFilePath}</message>
+	<message key="admin.copyAccessLogFileTool.error.deletingFile">Error: no se puede eliminar el archivo {$tmpFilePath}</message>
+	<message key="admin.copyAccessLogFileTool.warning.fileAlreadyExists">Advertencia: el archivo {$filePath} ya existe en el directorio de estadísticas de uso.</message>
+	<message key="admin.copyAccessLogFileTool.success">Operación realizada con éxito: {$filePath} a {$destinationPath}</message>
+	<message key="admin.currentVersion">Versión actual</message>
+	<message key="admin.dateInstalled">Fecha de instalación</message>
+	<message key="admin.displayConfigFileInstructions"><![CDATA[Los contenidos de su configuración actualizada se muestran a continuación. Para aplicar los cambios de configuración debe abrir <tt>config.inc.php</tt> en un editor de texto adecuado y reemplazar el contenido por los contenidos del campo de texto que aparecen a continuación.]]></message>
+	<message key="admin.displayNewSystemConfig">Mostrar nueva configuración</message>
+	<message key="admin.expireSessions">Caducidad de las sesiones</message>
+	<message key="admin.languages.download">Descargar configuración regional</message>
+	<message key="admin.languages.downloadLocales">Descargar configuraciones regionales</message>
+	<message key="admin.languages.download.cannotOpen">No se puede abrir el descriptor de idiomas del sitio web PKP.</message>
+	<message key="admin.languages.download.cannotModifyRegistry">No se puede añadir la nueva configuración regional al archivo de registro de configuraciones locales, normalmente "registry/locales.xml".</message>
+	<message key="admin.languages.cantDisable">La configuración regional es el idioma principal del sitio. No se puede deshabilitar hasta que elija otra configuración regional principal.</message>
+
+	<message key="admin.languages.confirmReload">¿Está seguro de que quiere volver a cargar esta configuración regional? Esta opción borrará los datos de configuración específica existentes, como las plantillas de correo electrónico personalizadas.</message>
+	<message key="admin.languages.installedLocales">Ficheros de idioma instalados</message>
+	<message key="admin.languages.installLanguages">Gestionar ficheros de idioma</message>
+	<message key="admin.languages.availableLocales">Idiomas disponibles</message>
+	<message key="admin.languages.installLocale">Instalar configuración regional</message>
+	<message key="admin.languages.installLocales">Instalar</message>
+	<message key="admin.languages.installNewLocales">Instalar nuevos ficheros de idioma</message>
+	<message key="admin.languages.languageSettings">Configuración de idioma</message>
+	<message key="admin.languages.noLocalesAvailable">No existen archivos locales adicionales disponibles para la instalación.</message>
+	<message key="admin.languages.reload">Volver a cargar ficheros de idiomas</message>
+	<message key="admin.languages.uninstall">Desinstalar fichero de idiomas</message>
+	<message key="admin.phpInfo">Información PHP ampliada</message>
+	<message key="admin.scheduledTask">Tarea programada</message>
+	<message key="admin.scheduledTask.startTime">Se ha iniciado la tarea.</message>
+	<message key="admin.scheduledTask.stopTime">Se ha detenido la tarea.</message>
+	<message key="admin.scheduledTask.noLog">La tarea no ha generado ningún registro.</message>
+	<message key="admin.scheduledTask.reviewReminder">Recordatorio de revisión</message>
+	<message key="admin.scheduledTask.subscriptionExpiryReminder">Recordatorio de caducidad de subscripción</message>
+	<message key="admin.server.apacheVersion">Versión Apache</message>
+	<message key="admin.server.dbDriver">Driver de la base de datos</message>
+	<message key="admin.server.dbVersion">Versión del servidor de bases de datos</message>
+	<message key="admin.serverInformation">Información del servidor</message>
+	<message key="admin.server.phpVersion">Versión PHP</message>
+	<message key="admin.server.platform">Plataforma SO</message>
+	<message key="admin.settings">Preferéncias</message>
+	<message key="admin.settings.aboutDescription">Descripción del sitio</message>
+	<message key="admin.settings.contactEmail">Correo electrónico del contacto principal</message>
+	<message key="admin.settings.contactName">Nombre del contacto principal</message>
+	<message key="admin.settings.form.contactEmailRequired">Se necesita la dirección de correo electrónico del contacto principal.</message>
+	<message key="admin.settings.form.contactNameRequired">Se necesita el nombre del contacto principal.</message>
+	<message key="admin.settings.form.minPasswordLengthRequired">Debes introducir una contraseña de 4 caracteres como mínimo.</message>
+	<message key="admin.settings.form.titleRequired">Es necesario introducir el título.</message>
+	<message key="admin.settings.defaultMetricDescription">
+		Se ha configurado su instalación para registrar más de una métrica de uso. Se mostrarán las estadísticas de uso en varios contextos.
+		En algunos casos deberá utilizarse una sola estadística de uso, p. ej., para mostrar una lista ordenada de los envíos más utilizados o para clasificar resultados de búsqueda. Seleccione una de las medidas configuradas como predeterminadas.
+	</message>
+	<message key="admin.settings.homeHeaderImage.altText">Logotipo del sitio</message>
+	<message key="admin.settings.homeHeaderImageInvalid">Formato de imagen del logotipo del sitio inválido. Formatos aceptados: .gif, .jpg y .png.</message>
+	<message key="admin.settings.introduction">Introducción</message>
+	<message key="admin.settings.minPasswordLength">Longitud mínima de la contraseña</message>
+	<message key="admin.settings.passwordCharacters">caracteres</message>
+	<message key="admin.settings.siteLanguage">Idioma</message>
+	<message key="admin.settings.siteStyleSheetInvalid">Formato inválido de hoja de estilo del sitio. El formato aceptado es .css.</message>
+	<message key="admin.settings.siteStyleSheet">Hoja de estilo del sitio</message>
+	<message key="admin.settings.siteTheme">Tema del sitio</message>
+	<message key="admin.settings.siteTitle">Título</message>
+	<message key="admin.siteAdmin">Administración del sitio</message>
+	<message key="admin.siteManagement">Gestión del sitio</message>
+	<message key="admin.siteSettings">Configuración del sitio</message>
+	<message key="admin.siteSetup">Configuración del sitio</message>
+	<message key="admin.systemConfigFileReadError"><![CDATA[El archivo de configuración <tt>config.inc.php</tt> no existe, no se puede leer o no es válido.]]></message>
+	<message key="admin.systemInformation">Información del sistema</message>
+	<message key="admin.versionBuild">Crear</message>
+	<message key="admin.version.checkForUpdates">Buscar actualizaciones</message>
+	<message key="admin.version.downloadPackage">Descargar</message>
+	<message key="admin.version.downloadPatch">Descargar parche</message>
+	<message key="admin.versionHistory">Historial de versiones</message>
+	<message key="admin.version.latest">Última versión</message>
+	<message key="admin.versionMajor">Principal</message>
+	<message key="admin.versionMinor">Secudario</message>
+	<message key="admin.version.moreInfo">Más información</message>
+	<message key="admin.versionRevision">Revisión</message>
+	<message key="admin.version.updateAvailable">Hay una nueva versión disponible</message>
+	<message key="admin.version.upToDate">Su sistema está actualizado</message>
+	<message key="admin.version">Versión</message>
+
+	<message key="admin.fileLoader.wrongBasePathLocation">La ruta base {$path} debe estar dentro del directorio de archivos públicos.</message>
+	<message key="admin.fileLoader.pathNotAccessible">La carpeta {$path} no es un directorio o no se puede leer.</message>
+	<message key="admin.fileLoader.moveFileFailed">El archivo {$filename} no se pudo mover de {$currentFilePath} a {$destinationPath}</message>
+	<message key="admin.fileLoader.fileProcessed">El archivo {$filename} se ha procesado y archivado.</message>
+	<message key="admin.fileLoader.emailSubject">Cargador de archivos</message>
+	
+	<message key="admin.copyAccessLogFileTool.usage">Copie el archivo o los archivos de acceso de registro apache y filtre las entradas relacionadas con esta instalación en el directorio de archivo actual, dentro del directorio de fase UsageStatsPlugin. Debe ejecutarlo un usuario/a que tenga los permisos necesarios para la lectura de archivos de acceso de registro apache.
+
+La herramienta solo copiará archivos que aún no estén en los directorios de carga de archivo usageStats (fase, procesamiento, archivo, rechazar).
+
+Uso: {$scriptName} ruta/a/apache/log/file.log
+Uso (procesamiento de todos los archivos dentro de un directorio): {$scriptName} ruta/a/apache/directorio 
+	</message>
+	<message key="admin.copyAccessLogFileTool.error.creatingFolder">Error: no se puede crear la carpeta temporal {$tmpDir}</message>
+	<message key="admin.copyAccessLogFileTool.error.acessingFile">Error: el archivo {$filePath} no existe o no se puede acceder a él.</message>
+	<message key="admin.copyAccessLogFileTool.error.copyingFile">Error: no se puede copiar el archivo de {$filePath} a {$tmpFilePath}</message>
+	<message key="admin.copyAccessLogFileTool.error.deletingFile">Error: no se puede eliminar el archivo {$tmpFilePath}</message>
+	<message key="admin.copyAccessLogFileTool.warning.fileAlreadyExists">Advertencia: el archivo {$filePath} ya existe en el directorio de estadísticas de uso.</message>
+	<message key="admin.copyAccessLogFileTool.success">Operación realizada con éxito: {$filePath} a {$destinationPath}</message>
+	<message key="admin.scheduledTask.clearLogs">Limpiar el registro de ejecución de tareas programadas</message>
+	<message key="admin.error.utilExecutionProblem">La ejecución del programa "{$utilPath}" produjo el siguiente error: {$output}</message>
+	<message key="admin.error.executingUtil">Error: no se puede ejecutar "{$utilPath}". Compruebe su configuración {$utilVar} en config.inc.php.</message>
+	<message key="admin.scheduledTask.downloadLog">Su instalación de {$softwareName} ejecutó y finalizó automáticamente esta tarea y  puede descargarse el fichero de registro aquí: {$url}</message>
+	<message key="admin.scheduledTask.confirmClearLogs">Está seguro de que quiere eliminar todos los registros de ejecución de tareas programados?</message>
+</locale>

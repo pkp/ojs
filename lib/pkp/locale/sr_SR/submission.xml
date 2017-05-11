@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/sr_SR/submission.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the sr_SR (Cрпски) locale.
+  -->
+
+<locale name="sr_SR" full_name="Cрпски">
+	<!-- Author Submission -->
+	<message key="author.submit.submissionCitations">Daje formatiranu listu referenci za radove citiran dokumentu. Odvojte reference prazninama.</message>
+
+	<!-- FIXME: move to meta-data plug-ins -->
+	<!-- messages used by meta-data filters -->
+	<message key="metadata.filters.crossref.settings.email.displayName">CrossRef registracioni imejl</message>
+	<message key="metadata.filters.crossref.settings.email.validationMessage">Unesite imejl za koji je urađena registracija na CrossRef sajtu.</message>
+	<message key="metadata.filters.isbndb.settings.apiKey.displayName">ISBNdb API ključ</message>
+	<message key="metadata.filters.isbndb.settings.apiKey.validationMessage">Unesite ISBNdb API ključ. Ukoliko ga nemate, možete ga dobiti besplatno an ISBNdb projektu.</message>
+	<message key="metadata.filters.pubmed.settings.email.displayName">PubMed registracioni imejl</message>
+	<message key="metadata.filters.pubmed.settings.email.validationMessage">Unesite PubMed registracioni imejl ukoliko ga imate.</message>
+	<message key="metadata.filters.worldcat.settings.apiKey.displayName">WorldCat API ključ</message>
+	<message key="metadata.filters.worldcat.settings.apiKey.validationMessage">Unesite ispravan WorldCat API ključ ukoliko ga imate.</message>
+	<message key="metadata.filters.paracite.settings.citationModule.displayName">Citatni modul</message>
+	<message key="metadata.filters.paracite.settings.citationModule.validationMessage">Izaberite jedan od ponuđenih citatnih modula.</message>
+	<message key="metadata.filters.settings.isOptional.displayName">Po pravilu ne koristi (i dalje će biti dostupno uredniku)</message>
+	<message key="metadata.filters.settings.isOptional.validationMessage">Interna greška. Neispravna vrednost je uneta za 'optional filter' podešavanja. Molimo vas da ovo prijavite kao bug.</message>
+	
+	<!-- messages shared between MD schemas -->
+	<message key="metadata.property.displayName.author">Autori</message>
+	<message key="metadata.property.validationMessage.author">Za najbolje rezultate, autori bi trebali biti unešeni u formatu: Coleman Jr, D. (Ralf) Dr.</message>
+	<message key="metadata.property.displayName.editor">Urednici</message>
+	<message key="metadata.property.validationMessage.editor">Za najbolje rezultate, urednici bi trebali biti unešeni u formatu: Coleman Jr, D. (Ralf) Dr.</message>
+	
+	<!-- NLM-specific messages -->
+	<message key="metadata.property.displayName.article-title">Naslov rada</message>
+	<message key="metadata.property.validationMessage.article-title">Molimo Vas da unesete ispravan naslov rada</message>
+	<message key="metadata.property.displayName.source">Naslov časopisa/knjige</message>
+	<message key="metadata.property.validationMessage.source">Molimo Vas da unesete ispravan naslov časopisa/knjige.</message>
+	<message key="metadata.property.displayName.date">Datum izdavanja</message>
+	<message key="metadata.property.validationMessage.date">Molimo Vas da unesete ispravan datum izdavanja (format: dd.mm.gggg.).</message>
+	<message key="metadata.property.displayName.access-date">Datum pristupanja</message>
+	<message key="metadata.property.validationMessage.access-date">Unesite ispravan datum pristupanja (format: dd.mm.gggg.).</message>
+	<message key="metadata.property.displayName.issue">Izdanje</message>
+	<message key="metadata.property.validationMessage.issue">Unesite ispravno izdanje.</message>
+	<message key="metadata.property.displayName.volume">Knjiga</message>
+	<message key="metadata.property.validationMessage.volume">Unesite ispravan broj knjige.</message>
+	<message key="metadata.property.displayName.season">Sezona</message>
+	<message key="metadata.property.validationMessage.season">Unesite ispravan identifikator sezone.</message>
+	<message key="metadata.property.displayName.chapter-title">Naslov poglavlja</message>
+	<message key="metadata.property.validationMessage.chapter-title">Unesite ispravan naslov poglavlja.</message>
+	<message key="metadata.property.displayName.edition">Edicija</message>
+	<message key="metadata.property.validationMessage.edition">Unesite ispravnu ediciju.</message>
+	<message key="metadata.property.displayName.series">Serija</message>
+	<message key="metadata.property.validationMessage.series">Unesite ispravnu seriju.</message>
+	<message key="metadata.property.displayName.supplement">Dodatak</message>
+	<message key="metadata.property.validationMessage.supplement">Unesite ispravan dodatak.</message>
+	<message key="metadata.property.displayName.conf-date">Datum konferencije</message>
+	<message key="metadata.property.validationMessage.conf-date">Unesite ispravan datum koncerencije (format: YYYY-MM-DD).</message>
+	<message key="metadata.property.displayName.conf-loc">Mesto održavanja konferencije</message>
+	<message key="metadata.property.validationMessage.conf-loc">Unesite mesto održavanja konferencije.</message>
+	<message key="metadata.property.displayName.conf-name">Naziv konferencije</message>
+	<message key="metadata.property.validationMessage.conf-name">Unesite ispravan naziv konferencije.</message>
+	<message key="metadata.property.displayName.conf-sponsor">Sponzor konferencije</message>
+	<message key="metadata.property.validationMessage.conf-sponsor">Unesite sponzora konferencije.</message>
+	<message key="metadata.property.displayName.institution">Institucija</message>
+	<message key="metadata.property.validationMessage.institution">Unesite naziv institucije.</message>
+	<message key="metadata.property.displayName.fpage">Prva strana</message>
+	<message key="metadata.property.validationMessage.fpage">Unesite ispravnu prvu stranu (mora biti numerička vrednost).</message>
+	<message key="metadata.property.displayName.lpage">Poslednja strana</message>
+	<message key="metadata.property.validationMessage.lpage">Unesite ispravnu poslednju stranu (mora biti numerička vrednost).</message>
+	<message key="metadata.property.displayName.size">Broj strana</message>
+	<message key="metadata.property.validationMessage.size">Unesite broj strana (mora biti numerička vrednost).</message>
+	<message key="metadata.property.displayName.publisher-loc">Mesto izdavača</message>
+	<message key="metadata.property.validationMessage.publisher-loc">Unesite mesto izdavača.</message>
+	<message key="metadata.property.displayName.publisher-name">Naziv izdavača</message>
+	<message key="metadata.property.validationMessage.publisher-name">Unesite naziv izdavača.</message>
+	<message key="metadata.property.displayName.isbn">ISBN</message>
+	<message key="metadata.property.validationMessage.isbn">Unesite ispravan ISBN.</message>
+	<message key="metadata.property.displayName.issn">Štampani ISSN</message>
+	<message key="metadata.property.validationMessage.issn">Unesite štampani ISSN.</message>
+	<message key="metadata.property.displayName.eissn">eISSN</message>
+	<message key="metadata.property.validationMessage.eissn">Unesite ispravan eISSN</message>
+	<message key="metadata.property.displayName.doi">DOI</message>
+	<message key="metadata.property.validationMessage.doi">Unesite ispravan DOI.</message>
+	<message key="metadata.property.displayName.publisher-id">Prilagođeni ID publikacije</message>
+	<message key="metadata.property.validationMessage.publisher-id">Unesite ispravan prilagođeni ID publikacije.</message>
+	<message key="metadata.property.displayName.coden">CODEN</message>
+	<message key="metadata.property.validationMessage.coden">Unesite ispravan CODEN.</message>
+	<message key="metadata.property.displayName.sici">SICI</message>
+	<message key="metadata.property.validationMessage.sici">Unesite ispravan SICI.</message>
+	<message key="metadata.property.displayName.pmid">PMID</message>
+	<message key="metadata.property.validationMessage.pmid">Unesite ispravan PMID.</message>
+	<message key="metadata.property.displayName.uri">Link ka publikaciji</message>
+	<message key="metadata.property.validationMessage.uri">Unesite alternativni link ka publikaciji.</message>
+	<message key="metadata.property.displayName.comment">Komentar</message>
+	<message key="metadata.property.validationMessage.comment">Unesite ispravan komentar.</message>
+	<message key="metadata.property.displayName.annotation">Beleške</message>
+	<message key="metadata.property.validationMessage.annotation">Unesite ispravne beleške.</message>
+	<message key="metadata.property.displayName.publication-type">Tip publikacije.</message>
+	<message key="metadata.property.validationMessage.publication-type">Uvek podesite tip publikacije. Trenutno su podržani tipovi: knjiga (za knjige i poglavlja) časopisi. U suprotnom formatiranje citata neće raditi ispravno.</message>
+	
+	<!-- MODS-specific messages -->
+	<message key="metadata.property.displayName.title-type">Tip naslova</message>
+	<message key="metadata.property.validationMessage.title-type">Unesite ispravan tip naslova. Podržani tipovi su: 'skraćen', 'preveden', 'alternativan' i 'uniforman'.</message>
+	<message key="metadata.property.displayName.nonSort">Deo naslova koji će se ignorisati kod sortiranja</message>
+	<message key="metadata.property.validationMessage.nonSort">Unesite početne karaktere naslova koji bi trebali biti ignorisani prilikom sortiranja.</message>
+	<message key="metadata.property.displayName.title">Naslov</message>
+	<message key="metadata.property.validationMessage.title">Unesite ispravan naslov.</message>
+	<message key="metadata.property.displayName.subTitle">Podnaslov</message>
+	<message key="metadata.property.validationMessage.subTitle">Unesite ispravan podnaslov.</message>
+	<message key="metadata.property.displayName.partNumber">Broj dela</message>
+	<message key="metadata.property.validationMessage.partNumber">Unesite ispravan broj dela.</message>
+	<message key="metadata.property.displayName.partName">Ime dela</message>
+	<message key="metadata.property.validationMessage.partName">Unesite ispravno ime dela.</message>
+	<message key="metadata.property.displayName.name-type">Tip imena</message>
+	<message key="metadata.property.validationMessage.name-type">Molimo proverite da li ste podesili ispravan tip imena. Podržane vrednosti su 'lično', 'korporativno' i 'konferencija'.</message>
+	<!-- FIXME: end -->
+	
+	<message key="submission.agencies">Ustanove</message>
+	<message key="submission.abstractViews">Pristupa apstraktu</message>
+	<message key="submission.accepted">Prihvaćeno</message>
+	<message key="submission.acknowledge">Potvrđeno</message>
+	<message key="submission.addSuppFile">Dodaj dodatni fajl</message>
+	<message key="submission.ask">Zahtevaj</message>
+	<message key="submission.backToSubmissionEditing">Povratak na uređivanje prijave</message>
+	<message key="submission.changeComments">Promeni u</message>
+	<message key="submission.citations">Reference</message>
+	<message key="submission.citations.editor.citationlist.deleteCitationConfirmation">Da li ste sigurni da želite da obrišete sve citate?</message>
+	<message key="submission.citations.editor.citationlist.errorDeletingCitation">Došlo je do greške prilikom brisanja citata. Prijavite ovo kao bug.</message>
+	<message key="submission.citations.editor.citationlist.newCitation">Novo citiranje</message>
+	<message key="submission.citations.editor.citationlist.title">Izmeni citiranja</message>
+	<message key="submission.citations.editor.clickToEdit">Klikni za izmenu.</message>
+	<message key="submission.citations.editor.details.authorQuery">Pitaj autora</message>
+	<message key="submission.citations.editor.details.authorQueryBody">Vaša poruka autoru:</message>
+	<message key="submission.citations.editor.details.authorQueryExplanation">Možete pitati autora za više informacija o citatu. Klikom na "Pošalji" vaša poruka će biti poslata na autorovu imejl adresu.</message>
+	<message key="submission.citations.editor.details.authorQuerySubject">Tema:</message>
+	<message key="submission.citations.editor.details.cannotSelectDefaultForLabel">Ukoliko vam polje oznaka ne treba, obrišite ga.</message>
+	<message key="submission.citations.editor.details.checkInGoogleScholar">Proveri u Google Scholar</message>
+	<message key="submission.citations.editor.details.changeFieldInfo">Upišite prvih par slova da biste selektovali...</message>
+	<message key="submission.citations.editor.details.citationExportPreview">Prikaz eksporta citata</message>
+	<message key="submission.citations.editor.details.citationImprovementResultsActive">Rezultati Expert internal citation servisa (klikni da zatvoriš)</message>
+	<message key="submission.citations.editor.details.citationImprovementResultsInactive">Rezultati Expert internal citation servisa (klikni da otvoriš)</message>
+	<message key="submission.citations.editor.details.citationServices">Servis citata</message>
+	<message key="submission.citations.editor.details.clickToDismissMessage">Možete da kliknete na tekst da poništite.</message>
+	<message key="submission.citations.editor.details.dataSaved">Vaše izmene su sačuvane.</message>
+	<message key="submission.citations.editor.details.editRawCitationDatabaseServices">Odaberite servis baze citatnosti:</message>
+	<message key="submission.citations.editor.details.editRawCitationExpertSettingsActive">Podešavanja Expert citation editing (Klikni da zatvoriš)</message>
+	<message key="submission.citations.editor.details.editRawCitationExpertSettingsInactive">Podešavanja Expert citation editing (Klikni da otvoriš)</message>
+	<message key="submission.citations.editor.details.editRawCitationExtractionServices">Odaberite servis za ekstrakciju citata</message>
+	<message key="submission.citations.editor.details.editRawCitationFilterValidationError">Unutrašnja greška: Neispravan filter selekcije. Molimo da prijavite bug.</message>
+	<message key="submission.citations.editor.details.explainImprovementOptions">Ukoliko niste dobili zadovoljavajuće rezultate, imate mogućnosti da unapredite citatnost. Često pomaže ručno uređivanje bitnih polja kao što su naslov ili autor.</message>
+	<message key="submission.citations.editor.details.googleScholar">Google Scholar</message>
+	<message key="submission.citations.editor.details.googleScholarExplanation">Ukoliko niste pronašli citat ni na jednom ponuđenom servisu možete da potražite na Google Scholar. Na žalost, Google Scholar ne nudi automatski interfejs tako da ne postoji mogućnost automatskog povlačenja podataka već je potrebno ručno kopirati podatke.</message>
+	<message key="submission.citations.editor.details.manualEditing">Ručne izmene</message>
+	<message key="submission.citations.editor.details.messages">Imajte na umu (kliknite na poruke da ih sklonite)</message>
+	<message key="submission.citations.editor.details.newFieldInfo">...kliknite ovde da dodate novo polje...</message>
+	<message key="submission.citations.editor.details.queryCitation">Re-Query citatni servis</message>
+	<message key="submission.citations.editor.details.queryGoogleScholar">Potražite u Google Scholar</message>
+	<message key="submission.citations.editor.details.processRawCitation">Proces</message>
+	<message key="submission.citations.editor.details.processRawCitationGoAhead">Nastavi</message>
+	<message key="submission.citations.editor.details.processRawCitationTitle">Izmeni originalno citiranje</message>
+	<message key="submission.citations.editor.details.processRawCitationWarning">You are about to change the original citation text. If you do that then all fields will be replaced with newly generated values. This deletes manual changes you might already have made.</message>
+	<message key="submission.citations.editor.details.saveAndApprove">Sačuvaj i odobri</message>
+	<message key="submission.citations.editor.details.saveAndRevokeApproval">Opozovi odobrenje</message>
+	<message key="submission.citations.editor.details.sendAuthorQuery">Pošalji poruku</message>
+	<message key="submission.citations.editor.details.sendAuthorQuerySuccess">Poruka poslata!</message>
+	<message key="submission.citations.editor.details.sourceResultsUse">Koristi</message>
+	<message key="submission.citations.editor.details.sourceResultsUseAll">Koristi sve</message>
+	<message key="submission.citations.editor.details.sourceResultsUseAllExplanation">Klikni za transportovanje svih rezultata iz ovog izvora u listu</message>
+	<message key="submission.citations.editor.details.sourceResultsUseExplanation">Klikni da transportuješ ovo polje rezultata u svoju listu</message>
+	<message key="submission.citations.editor.details.rawCitation">Origlinalni tekst citata</message>
+	<message key="submission.citations.editor.details.rawCitationRequired">Tekst citata je obavezan.</message>
+	<message key="submission.citations.editor.details.unsavedChanges">Citat sadrži podatke koji nisu sačuvani. Kliknite "Sačuvaj" da biste sačuvali izmene ili "Odustani" da biste se vratili na stare postavke.</message>
+	<message key="submission.citations.editor.details.dontShowMessageAgain">Ne prikazuj više ovu poruku.</message>
+	<message key="submission.citations.editor.edit">Izmeni citate</message>
+	<message key="submission.citations.editor.export">Izvezi citate</message>
+	<message key="submission.date.mmdd">MM-DD</message>
+	<message key="submission.date.yyyymmdd">YYYY-MM-DD</message>
+	<message key="submission.addFile">Dodaj fajl</message>
+	<message key="submission.citations.editor.citationlist.approved">Odobreno</message>
+	<message key="submission.citations.editor.citationlist.notApproved">Nije odobreno</message>
+	<message key="submission.comments.addReviews">Dodaj recenzije u imejl</message>
+	<message key="submission.layout.galleyRemoteURL">Udaljeni URL</message>
+	<message key="submission.layout.galleyRemoteURLValid">Molimo dodajte ispravan URL (uključujući http://).</message>
+	<message key="submission.reviewed">Recenzirano</message>
+	<message key="submission.createRemote">Napravi udaljeno</message>
+	<message key="submission.form.name">Dajte fajlu ime od pomoći</message>
+	<message key="submission.form.replaceExisting">Zameniti postojeći fajl?</message>
+	<message key="log.review.reviewerAssigned">{$reviewerName} je dodeljen(a) kao recenzent priloga {$submissionId} u {$round}. krugu recenzije.</message>
+	<message key="submission.reviewForm">Recenzijski obrazac</message>
+	<message key="submission.reviewFormResponse">Odgovor na recenziju</message>
+</locale>

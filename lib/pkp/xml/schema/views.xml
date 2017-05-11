@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE schema SYSTEM "../../dtd/xmlSchema.dtd">
+
+<!--
+  * xml/schema/views.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Item Views.
+  -->
+
+<schema version="0.2">
+	<!--
+	  *
+	  * TABLE item_views
+	  *
+	  -->
+	<table name="item_views">
+		<field name="assoc_type" type="I8">
+			<NOTNULL />
+		</field>
+		<field name="assoc_id" type="C2" size="32">
+			<NOTNULL />
+		</field>
+		<field name="user_id" type="I8" />
+		<field name="date_last_viewed" type="T" />
+		<descr>Tracking of views for various types of objects such as files, reviews, etc</descr>
+		<index name="item_views_pkey">
+			<col>assoc_type</col>
+			<col>assoc_id</col>
+			<col>user_id</col>
+			<UNIQUE />
+		</index>
+	</table>
+</schema>

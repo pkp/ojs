@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/nb_NO/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="nb_NO" full_name="Norsk Bokmål">
+	<message key="default.groups.name.siteAdmin">Nettstedsadministrator</message>
+	<message key="default.groups.plural.siteAdmin">Nettstedsadministratorer</message>
+	<message key="default.groups.name.productionEditor">Produksjonsredaktør</message>
+	<message key="default.groups.plural.productionEditor">Produksjonsredaktører</message>
+	<message key="default.groups.abbrev.productionEditor">ProdR</message>
+	<message key="default.groups.name.proofreader">Korrekturleser</message>
+	<message key="default.groups.plural.proofreader">Korrekturleser</message>
+	<message key="default.groups.abbrev.proofreader">KL</message>
+	<message key="default.groups.name.designer">Designer</message>
+	<message key="default.groups.plural.designer">Designere</message>
+	<message key="default.groups.abbrev.designer">Design</message>
+	<message key="default.groups.name.internalReviewer">Intern fagfelle</message>
+	<message key="default.groups.plural.internalReviewer">Interne fagfeller</message>
+	<message key="default.groups.abbrev.internalReviewer">IF</message>
+	<message key="default.groups.name.marketing">Markedsførings- og salgskoordinator</message>
+	<message key="default.groups.plural.marketing">Markedsførings- og salgskoordinatorer</message>
+	<message key="default.groups.abbrev.marketing">MS</message>
+	<message key="default.groups.name.funding">Finansieringskoordinator</message>
+	<message key="default.groups.plural.funding">Finansieringskoordinatorer</message>
+	<message key="default.groups.abbrev.funding">FK</message>
+	<message key="default.groups.name.indexer">Indekserer</message>
+</locale>

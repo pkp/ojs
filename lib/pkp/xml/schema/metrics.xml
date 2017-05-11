@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE schema SYSTEM "../../dtd/xmlSchema.dtd">
+
+<!--
+  * xml/schema/metrics.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Metrics schema in XML.
+  -->
+
+<schema version="0.2">
+	<!--
+	  *
+	  * TABLE metrics
+	  *
+	  -->
+	<table name="metrics">
+		<field name="load_id" type="C2" size="255">
+			<NOTNULL />
+		</field>
+		<field name="context_id" type="I8">
+			<NOTNULL />
+		</field>
+		<field name="pkp_section_id" type="I8" />
+		<field name="assoc_object_type" type="I8" />
+		<field name="assoc_object_id" type="I8" />
+		<field name="submission_id" type="I8" />
+		<field name="representation_id" type="I8" />
+		<field name="assoc_type" type="I8">
+			<NOTNULL />
+		</field>
+		<field name="assoc_id" type="I8">
+			<NOTNULL />
+		</field>
+		<field name="day" type="C" size="8" />
+		<field name="month" type="C" size="6"/>
+		<field name="file_type" type="I1" />
+		<field name="country_id" type="C2" size="2" />
+		<field name="region" type="C2" size="2" />
+		<field name="city" type="C2" size="255" />
+		<field name="metric_type" type="C2" size="255">
+			<NOTNULL />
+		</field>
+		<field name="metric" type="I4">
+			<NOTNULL />
+		</field>
+
+		<descr>OLAP statistics data table.</descr>
+		<index name="metrics_load_id">
+			<col>load_id</col>
+		</index>
+		<index name="metrics_metric_type_context_id">
+			<col>metric_type</col>
+			<col>context_id</col>
+		</index>
+		<index name="metrics_metric_type_submission_id_assoc_type">
+			<col>metric_type</col>
+			<col>submission_id</col>
+			<col>assoc_type</col>
+		</index>
+		<!-- TODO: more indexes, depending on use cases. -->
+	</table>
+</schema>

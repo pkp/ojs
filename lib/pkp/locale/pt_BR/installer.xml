@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/pt_BR/installer.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Locale information: https://pkp.sfu.ca/wiki/index.php?title=OMP:_Portuguese_(pt_BR)
+  * Localization strings for the pt_BR (Português (Brasil)) locale.
+  -->
+
+<locale name="pt_BR" full_name="Português (Brasil)">
+	<message key="installer.additionalLocales">Idiomas adicionais</message>
+	<message key="installer.administratorAccount">Conta do administrador</message>
+	<message key="installer.administratorAccountInstructions">Este usuário será o Administrador do Portal e terá acesso completo ao sistema. Contas adicionais podem ser criadas após a instalação.</message>
+	<message key="installer.checkNo"><![CDATA[<span class="formError">NÃO</span>]]></message>
+	<message key="installer.checkYes">Sim</message>
+	<message key="installer.clientCharset">Conjunto de caracteres do Cliente</message>
+	<message key="installer.clientCharsetInstructions">A codificação utilizada para dados enviados e recebidos pelos navegadores.</message>
+	<message key="installer.configFileError"><![CDATA[O documento de configuração <tt>config.inc.php</tt> não existe ou não possui permissão de leitura.]]></message>
+	<message key="installer.connectionCharset">Conjunto de caracteres da conexão</message>
+	<message key="installer.contentsOfConfigFile">Conteúdo para o arquivo de configuração</message>
+	<message key="installer.createDatabase">Criar nova base de dados</message>
+	<message key="installer.createDatabaseInstructions">Para utilizar esta opção, o servidor de bases de dados deve permitir criação de bases remotamente e o nome de usuário e senha devem possuir as permissões necessárias para criação de bases e tabelas. Caso ocorra um erro durante a instalação, crie manualmente a base de dados no servidor e execute novamente o instalador desabilitando esta opção.</message>
+	<message key="installer.databaseCharset">Conjunto de caracteres da base de dados</message>
+	<message key="installer.databaseDriver">Driver da base de dados</message>
+	<message key="installer.databaseDriverInstructions"><![CDATA[<strong>Drivers de bases de dados relacionados entre chaves ([]) não tiveram suas extensões PHP reconhecidas pelo sistema, e portanto não devem funcionar.</strong><br />Os drivers não suportados, listados acima, são exibidos apenas em caráter acadêmico e experimental, não devendo funcionar por padrão. Somente poderão ser utilizados pelo sistema os drivers que tiverem suas extensões PHP prévia e corretamente instaladas no servidor.]]></message>
+	<message key="installer.databaseHost">Servidor</message>
+	<message key="installer.databaseHostInstructions">Deixe o nome do servidor em branco para conectar através de socket de domínio em vez de TCP/IP. Não é necessário para o MySQL, que automaticamente utiliza sockets caso "localhost" seja digitado, porém é obrigatório para outras bases como o PostgreSQL.</message>
+	<message key="installer.databaseName">Nome da base de dados</message>
+	<message key="installer.databasePassword">Senha para acesso à base de dados</message>
+	<message key="installer.databaseSettings">Configurações de bases de dados</message>
+	<message key="installer.databaseUsername">Usuário da base de dados</message>
+	<message key="installer.filesDir">Diretório para envio de arquivos</message>
+	<message key="installer.fileSettings">Configurações de arquivos</message>
+	<message key="installer.form.clientCharsetRequired">O conjunto de caracteres do cliente deve ser definido.</message>
+	<message key="installer.form.databaseDriverRequired">O driver de base de dados é obrigatório.</message>
+	<message key="installer.form.databaseNameRequired">O nome da base de dados é obrigatório.</message>
+	<message key="installer.form.emailRequired">Um endereço de e-mail válido é obrigatório.</message>
+	<message key="installer.form.filesDirRequired">O diretório para envio de arquivos é obrigatório.</message>
+	<message key="installer.form.localeRequired">Um idioma deve ser definido.</message>
+	<message key="installer.form.passwordRequired">Senha obrigatória.</message>
+	<message key="installer.form.passwordsDoNotMatch">As senhas informadas não combinam.</message>
+	<message key="installer.form.separateMultiple">Separe valores múltiplos com vírgulas</message>
+	<message key="installer.form.usernameAlphaNumeric">O login pode conter apenas caracteres alfanuméricos, sublinhados "_" e hífens "-", devendo começar e terminar por um caractere alfanumérico.</message>
+	<message key="installer.form.usernameRequired">Login obrigatório.</message>
+	<message key="installer.installationWrongPhp"><![CDATA[<br/><strong>AVISO: A versão do PHP utilizada não está em conformidade com os requisitos mínimos para instalação do sistema. Recomenda-se usar a versão mais recente do PHP.</strong>]]></message>
+	<message key="installer.installErrorsOccurred">Ocorreram erros durante a instalação</message>
+	<message key="installer.installerSQLStatements">Comandos SQL para instalação</message>
+	<message key="installer.installFileError"><![CDATA[O documento de instalação <tt>dbscripts/xml/install.xml</tt> não existe ou não possui permissão de leitura.]]></message>
+	<message key="installer.installFilesDirError">O diretório informado não existe ou não possui permissão de escrita.</message>
+	<message key="installer.installParseDBFileError"><![CDATA[Erro na execução do documento de instalação do banco de dados <tt>{$file}</tt>.]]></message>
+	<message key="installer.installParseEmailTemplatesFileError"><![CDATA[Erro ao tentar analisar o arquvo de e-mail padrão <tt>{$file}</tt>.]]></message>
+	<message key="installer.installParseFilterConfigFileError"><![CDATA[Erro ao processar o arquivo de configuração de filtros <tt>{$file}</tt>.]]></message>
+	<message key="installer.unsupportedUpgradeError">Atualização não suportada. Veja docs/UPGRADE-UNSUPPORTED para detalhes.</message>
+	<message key="installer.locale">Idioma</message>
+	<message key="installer.locale.maybeIncomplete">Traduções marcadas podem estar incompletas.</message>
+	<message key="installer.localeSettings">Configurações de idioma (Localização)</message>
+	<message key="installer.oaiSettings">Configurações OAI</message>
+	<message key="installer.oaiRepositoryIdInstructions"><![CDATA[Um identificador único de registros de metadados indexados através do protocolo de Coleta de Metadados do <a href="http://www.openarchives.org/" target="_blank">Open Archives Initiative</a>.]]></message>
+	<message key="installer.oaiRepositoryId">Identificador para repositório OAI</message>
+	<message key="installer.publicFilesDirError">O diretório de documentos públicos não existe ou não possui permissão de escrita.</message>
+	<message key="installer.releaseNotes">Notas de lançamento</message>
+	<message key="installer.preInstallationInstructionsTitle">Passos de pré-instalação</message>
+	<message key="installer.preInstallationInstructions"><![CDATA[<p>1. Os seguintes arquivos e diretórios (e seus conteúdos) devem ter permissão de escrita:</p>
+		<ul>
+			<li><tt>config.inc.php</tt> é gravável (opcional): {$writable_config}</li>
+			<li><tt>público/</tt> é gravável: {$writable_public}</li>
+			<li><tt>cache/</tt> é gravável: {$writable_cache}</li>
+			<li><tt>cache/t_cache/</tt> é gravável: {$writable_templates_cache}</li>
+			<li><tt>cache/t_compile/</tt> é gravável: {$writable_templates_compile}</li>
+			<li><tt>cache/_db</tt> é gravável: {$writable_db_cache}</li>
+		</ul>
+
+		<p>2. Um diretório para armazenar os arquivos de submissão deve ser criado e com permissão de escrita (consulte "Configurações do arquivo" abaixo).</p>]]></message>
+	<message key="installer.configureXSLMessage"><![CDATA[<p>Sua instalação do PHP não tem o módulo XSL habilitado. Ou habilite-o, ou configure o parâmetro xslt_command em seu arquivo config.inc.php.</p>]]></message>
+	<message key="installer.beacon">Sinalizador</message>
+	<message key="installer.beacon.enable">Fornece um ID único ao site e a URL OAI exclusivamente para estatísticas do PKP e alertas de segurança.</message>
+</locale>

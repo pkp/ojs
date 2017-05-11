@@ -1,0 +1,170 @@
+# This file contains a list, one per line, of regular expressions to be applied
+# to browser user agents to determine whether or not the browser is a "bot" or
+# not (i.e. should not be counted in article view counts). If any regexp
+# matches, the browser will be considered a bot.
+
+/008/
+/ABACHOBot/
+/Accoona\-AI\-Agent/
+/AddSugarSpiderBot/
+/AnyApexBot/
+/Arachmo/
+/B\-l\-i\-t\-z\-B\-O\-T/
+/Baiduspider/
+/BecomeBot/
+/BeslistBot/
+/BillyBobBot/
+/Bimbot/
+/[Bb]ingbot/
+/Blekkobot/
+/BlitzBOT/
+/boitho.com\-dc/
+/boitho.com\-robot/
+/btbot/
+/CatchBot/
+/Cerberian Drtrs/
+/Charlotte/
+/ConveraCrawler/
+/cosmos/
+/Covario IDS/
+/DataparkSearch/
+/DiamondBot/
+/Discobot/
+/Dotbot/
+/EsperanzaBot/
+/Exabot/
+/FAST Enterprise Crawler/
+/FAST\-WebCrawler/
+/FDSE robot/
+/FindLinks/
+/FurlBot/
+/FyberSpider/
+/g2crawler/
+/Gaisbot/
+/GalaxyBot/
+/genieBot/
+/Gigabot/
+/Girafabot/
+/Google[Bb]ot/
+/gsa\-crawler/
+/GurujiBot/
+/HappyFunBot/
+/Holmes/
+/htdig/
+/iaskspider/
+/ia_archiver/
+/iCCrawler/
+/ichiro/
+/igdeSpyder/
+/IRLbot/
+/IssueCrawler/
+/Jaxified Bot/
+/Jyxobot/
+/KoepaBot/
+/LapozzBot/
+/Larbin/
+/LDSpider/
+/LexxeBot/
+/Linguee Bot/
+/LinkWalker/
+/lmspider/
+/LOCKSS/
+/lwp\-trivial/
+/mabontland/
+/magpie\-crawler/
+/Mediapartners\-Google/
+/MJ12bot/
+/MLBot/
+/Mnogosearch/
+/mogimogi/
+/MojeekBot/
+/Moreoverbot/
+/Morning Paper/
+/msnbot/
+/MSRBot/
+/MVAClient/
+/mxbot/
+/NetResearchServer/
+/NetSeer Crawler/
+/NewsGator/
+/NG\-Search/
+/nicebot/
+/noxtrumbot/
+/Nusearch Spider/
+/NutchCVS/
+/Nymesis/
+/obot/
+/oegp/
+/omgilibot/
+/OmniExplorer_Bot/
+/OOZBOT/
+/Orbiter/
+/PageBitesHyperBot/
+/Peew/
+/polybot/
+/Pompos/
+/PostPost/
+/Psbot/
+/PycURL/
+/Qseero/
+/Radian6/
+/RAMPyBot/
+/RufusBot/
+/SandCrawler/
+/SBIder/
+/ScoutJet/
+/Scrubby/
+/SearchSight/
+/Seekbot/
+/semanticdiscovery/
+/Sensis Web Crawler/
+/SeznamBot/
+/Shim\-Crawler/
+/ShopWiki/
+/Shoula robot/
+/silk/
+/Sitebot/
+/Snappy/
+/sogou spider/
+/Sosospider/
+/Speedy Spider/
+/Sqworm/
+/StackRambler/
+/suggybot/
+/SurveyBot/
+/SynooBot/
+/Teoma/
+/TerrawizBot/
+/TheSuBot/
+/Thumbnail.CZ robot/
+/TinEye/
+/truwoGPS/
+/TurnitinBot/
+/TweetedTimes Bot/
+/TwengaBot/
+/Twitterbot/
+/Urlfilebot/
+/Vagabondo/
+/VoilaBot/
+/Vortex/
+/voyager/
+/VYU2/
+/webcollage/
+/Websquash.com/
+/wf84/
+/WoFindeIch Robot/
+/WomlpeFactory/
+/Xaldon_WebSpider/
+/yacy/
+/Yahoo! Slurp/
+/YahooSeeker/
+/Yandex/
+/Yasaklibot/
+/Yeti/
+/YodaoBot/
+/yoogliFetchAgent/
+/YoudaoBot/
+/Zao/
+/Zealbot/
+/zspider/
+/ZyBorg/

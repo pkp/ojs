@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/ar_IQ/admin.xml
+  *
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the ar_IQ (العربية) locale.
+  -->
+
+<locale name="ar_IQ" full_name="العربية">
+	<message key="admin.systemInfo.settingName">اسم الإعداد</message>
+	<message key="admin.systemInfo.settingValue">قيمة الإعداد</message>
+	<message key="admin.adminFunctions">الوظائف الإدارية</message>
+	<message key="admin.auth.confirmDelete">هل أنت متأكد من رغبتك في حذف مصدر التوثيق هذا نهائياً؟?</message>
+	<message key="admin.auth.create">إنشاء مصدر توثيق</message>
+	<message key="admin.auth.noneCreated">لم يتم تعريف أي مصادر توثيق بعد.</message>
+	<message key="admin.authSources">مصادر التوثيق</message>
+	<message key="admin.clearDataCache">إزالة البيانات المخبأة</message>
+	<message key="admin.clearTemplateCache">إزالة القوالب المخبأة</message>
+	<message key="admin.configFileUpdatedInstructions"><![CDATA[ملف التعريف الخاص بك تم تحديثه بنجاح. لطفاً، لاحظ أنه إن لم يعد موقعك عاملاً بالشكل الصحيح، فقد تضطر إلى إجراء التصحيح على ملف التعريف يدوياً عبر التعديل المباشر على الملف<tt>config.inc.php</tt>.]]></message>
+	<message key="admin.confirmClearTemplateCache">هل أنت متأكد من رغبتك في إزالة الملفات المخبأة الخاصة بالقوالب المجمَّعة؟</message>
+	<message key="admin.confirmExpireSessions">هل أنت متأكد من رغبتك في إنهاء صلاحية جلسات التشغيل لجميع المستخدمين؟ إذ أن جميع المستخدمين الداخلين إلى الموقع سيُجبرون على الدخول إليه مجدداً (بضمنهم أنت).</message>
+	<message key="admin.contentsOfConfigFile">محتويات ملف التعريف</message>
+	<message key="admin.currentVersion">النسخة الحالية</message>
+	<message key="admin.dateInstalled">تأريخ التنصيب</message>
+	<message key="admin.displayConfigFileInstructions"><![CDATA[إن محتويات ملفك التعريفي المحدث معروضة أدناه. لتطبيق التعديلات في الإعدادات، عليك بفتح الملف<tt>config.inc.php</tt> مستعملاً برنامج تحرير نصوص مناسب وتبديل محتوياته بمحتويات مربع النص أدناه.]]></message>
+	<message key="admin.displayNewSystemConfig">إعرض الإعدادات الجديدة</message>
+	<message key="admin.expireSessions">إنهاء صلاحية جلسات التشغيل للمستخدمين</message>
+	<message key="admin.languages.download">تنزيل اللغة</message>
+	<message key="admin.languages.downloadLocales">تنزيل اللغات</message>
+	<message key="admin.languages.download.cannotOpen">تعذر فتح موصف اللغة من موقع مشروع المعرفة العامة.</message>
+	<message key="admin.languages.download.cannotModifyRegistry">تعذرت إضافة اللغة الجديدة إلى ملف سجل اللغات، والذي هو عادة: "registry/locales.xml".</message>
+	<message key="admin.languages.cantDisable">هذه اللغة هي اللغة الأولية للموقع. لا يمكنك تعطيلها ما لم تختر لغة أولية أخرى.</message>
+
+	<message key="admin.languages.confirmReload">هل أنت متأكد من رغبتك في إعادة تحميل هذه اللغة؟ هذا من شأنه حذف أي بيانات تخصيصية للغة مثل قوالب المراسلات الالكترونية المخصصة.</message>
+	<message key="admin.languages.installedLocales">اللغات المنصبة</message>
+	<message key="admin.languages.installLanguages">إدارة اللغات</message>
+	<message key="admin.languages.availableLocales">اللغات المتوفرة</message>
+	<message key="admin.languages.installLocale">تنصيب لغة</message>
+	<message key="admin.languages.installLocales">تنصيب</message>
+	<message key="admin.languages.installNewLocales">تنصيب لغات أخرى</message>
+	<message key="admin.languages.languageSettings">إعدادات اللغة</message>
+	<message key="admin.languages.noLocalesAvailable">لا يتوفر المزيد من اللغات لغرض التنصيب.</message>
+	<message key="admin.languages.reload">إعادة تحميل اللغة</message>
+	<message key="admin.languages.uninstall">إلغاء تنصيب اللغة</message>
+	<message key="admin.phpInfo">معلومات PHP الإضافية</message>
+	<message key="admin.scheduledTask">مهمة مجدولة</message>
+	<message key="admin.scheduledTask.startTime">بدأت المهمة.</message>
+	<message key="admin.scheduledTask.stopTime">توقفت المهمة.</message>
+	<message key="admin.scheduledTask.noLog">المهمة لم تقدم سجل عمل لها.</message>
+    	<message key="admin.scheduledTask.downloadLog">تنصيبك الحالي من نظام المجلات المفتوحة يقوم تلقائياً بتنفيذ هذه المهمة وإنهائها، وبإمكانك الحصول على ملف توثيق المهام من هنا: {$url}</message>
+    	<message key="admin.scheduledTask.confirmClearLogs">هل أنت متأكد من رغبتك في حذف بيانات توثيق المهام المجدولة جميعاً؟</message>
+    	<message key="admin.scheduledTask.clearLogs">إزالة بيانات توثيق المهام المجدولة</message>
+	<message key="admin.scheduledTask.reviewReminder">تذكير التحكيم</message>
+	<message key="admin.scheduledTask.subscriptionExpiryReminder">تذكير انتهاء صلاحية الاشتراك</message>
+	<message key="admin.server.apacheVersion">رقم نسخة Apache</message>
+	<message key="admin.server.dbDriver">مشغل قاعدة البيانات</message>
+	<message key="admin.server.dbVersion">رقم نسخة ملقم قاعدة البيانات</message>
+	<message key="admin.serverInformation">معلومات الملقم</message>
+	<message key="admin.server.phpVersion">رقم نسخة PHP</message>
+	<message key="admin.server.platform">منصة نظام التشغيل</message>
+	<message key="admin.settings">الإعدادات</message>
+	<message key="admin.settings.aboutDescription">عن أوصاف الموقع</message>
+	<message key="admin.settings.contactEmail">البريد الالكتروني لعنوان الاتصال الأساسي</message>
+	<message key="admin.settings.contactName">اسم عنوان الاتصال الأساسي</message>
+	<message key="admin.settings.form.contactEmailRequired">البريد الالكتروني لعنوان الاتصال الأساسي مطلوب حتماً.</message>
+	<message key="admin.settings.form.contactNameRequired">اسم عنوان الاتصال الأساسي مطلوب حتماً.</message>
+	<message key="admin.settings.form.minPasswordLengthRequired">عليك أن تحدد أقل طول مسموح به لكلمة المرور في الموقع بما لا يقل عن 4 حروف.</message>
+	<message key="admin.settings.form.titleRequired">العنوان مطلوب حتماً.</message>
+	<message key="admin.settings.defaultMetricDescription">
+		إن نظامك مهيأ لتسجيل أكثر من مقياس استعمال واحد. إحصائيات الاستعمال سيتم عرضها في عدة سياقات.
+		هناك حالات لا بد فيها من استعمال إحصائية واحدة، مثلاً: عرض قائمة مرتبة بأكثر طلبات النشر استعمالاً
+		أو عند تقييم نتائج البحث في الموقع. لطفاً، عليك اختيار أحد هذه المقاييس ليكون بمثابة المقياس الافتراضي.
+	</message>
+	<message key="admin.settings.homeHeaderImage.altText">شعار الموقع</message>
+	<message key="admin.settings.homeHeaderImageInvalid">صيغة ملف شعار الموقع غير صحيحة. الصيغ المقبولة هي .gif، .jpg، أو .png.</message>
+	<message key="admin.settings.introduction">المقدمة</message>
+	<message key="admin.settings.minPasswordLength">أقل طول لكلمة المرور</message>
+	<message key="admin.settings.siteLanguage">لغة الموقع</message>
+	<message key="admin.settings.siteStyleSheetInvalid">صيغة ملف أنماط الموقع غير صحيحة. الصيغة المقبولة هي .css.</message>
+	<message key="admin.settings.siteStyleSheet">ملف أنماط الموقع</message>
+	<message key="admin.settings.siteLogo">شعار الموقع</message>
+	<message key="admin.settings.siteTitle">عنوان الموقع</message>
+	<message key="admin.settings.siteTheme">نمط الموقع</message>
+	<message key="admin.siteAdmin">إدارة الموقع</message>
+	<message key="admin.siteManagement">إدارة الموقع</message>
+	<message key="admin.siteSettings">إعدادات الموقع</message>
+	<message key="admin.siteSetup">تهيئة الموقع</message>
+	<message key="admin.systemConfigFileReadError"><![CDATA[إن ملف الإعدادات <tt>config.inc.php</tt> غير موجود، أو تتعذر قراءته، أو غير صحيح.]]></message>
+	<message key="admin.systemInformation">معلومات النظام</message>
+	<message key="admin.versionBuild">بناء</message>
+	<message key="admin.version.checkForUpdates">التحقق من وجود تحديثات</message>
+	<message key="admin.version.downloadPackage">التنزيل</message>
+	<message key="admin.version.downloadPatch">حزمة التنزيل</message>
+	<message key="admin.versionHistory">تأريخ النسخ</message>
+	<message key="admin.version.latest">النسخة الأخيرة</message>
+	<message key="admin.versionMajor">الرئيسي</message>
+	<message key="admin.versionMinor">الفرعي</message>
+	<message key="admin.version.moreInfo">مزيد من المعلومات</message>
+	<message key="admin.versionRevision">المراجعة</message>
+	<message key="admin.version.updateAvailable">تتوفر نسخة محدثة</message>
+	<message key="admin.version.upToDate">إن نظامك مواكب لأحدث نسخة</message>
+	<message key="admin.version">النسخة</message>
+	
+	<message key="admin.fileLoader.wrongBasePathLocation">المسار الأساسي {$path} ينبغي أن يكون ضمن حافظة الملفات العمومية.</message>
+	<message key="admin.fileLoader.pathNotAccessible">حافظة الملفات {$path} ليست مساراً صحيحاً أو تتعذر قراءتها.</message>
+	<message key="admin.fileLoader.moveFileFailed">الملف {$filename} تعذر نقله من {$currentFilePath} إلى {$destinationPath}</message>
+	<message key="admin.fileLoader.fileProcessed">الملف {$filename} قد تمت معالجته وحفظه.</message>
+	<message key="admin.fileLoader.emailSubject">محمِّل الملفات</message>
+	<message key="admin.copyAccessLogFileTool.usage">
+		إنسخ ملفات سجل التوثيق السابقة للملقم apache مع قيامك بتصفية الإدخالات المتعلقة بهذا التنصيب،
+		وضعها في حافظة الملفات الحالية ضمن موضع الإضافة UsageStatsPlugin. هذا يجب أن يقوم به مستخدم يمكل صلاحيات كافية تسمح له بقراءة هذا النوع من الملفات.
+
+		هذه الأداة ستقوم بمجرد نسخ الملفات التي لم يسبق لها أن تكون ضمن حوافظة ملفات الإضافة usageStats وهي: (stage, processing, archive, reject).
+
+		Usage: {$scriptName} path/to/apache/log/file.log
+		Usage (processing all files inside a directory): {$scriptName} path/to/apache/directory
+	</message>
+	<message key="admin.copyAccessLogFileTool.error.creatingFolder">خطأ: تعذر إنشاء حافظة ملفات مؤقتة بالمسار {$tmpDir}</message>
+	<message key="admin.copyAccessLogFileTool.error.acessingFile">خطأ: إن الملف {$filePath} لا وجود له أو لا يمكن الوصول إليه.</message>
+	<message key="admin.copyAccessLogFileTool.error.copyingFile">خطأ: تعذر نسخ الملف من المسار {$filePath} إلى المسار {$tmpFilePath}</message>
+	<message key="admin.copyAccessLogFileTool.error.deletingFile">خطأ: تعذر حذف الملف {$tmpFilePath}</message>
+	<message key="admin.copyAccessLogFileTool.warning.fileAlreadyExists">تحذير: إن الملف {$filePath} موجود مسبقاً ضمن حافظة ملفات إحصائيات الاستعمال.</message>
+	<message key="admin.copyAccessLogFileTool.success">نجحت العملية: {$filePath} إلى {$destinationPath}</message>
+	<message key="admin.error.utilExecutionProblem">إن تنفيذ البرنامج عند المسار "{$utilPath}" أدى إلى الخطأ الآتي: {$output}</message>
+    	<message key="admin.error.executingUtil">خطأ: يتعذر تنفيذ "{$utilPath}". تحقق من إعدادات {$utilVar} في ملف التهيئة config.inc.php.</message>
+	<message key="admin.languages.noLocalesToDownload">ليست هناك لغات متاحة للتنزيل من الموقع.</message>
+</locale>

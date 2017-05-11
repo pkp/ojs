@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/fi_FI/editor.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="fi_FI" full_name="Suomi">
+	<message key="editor.submissionLibrary">Liitekirjasto</message>
+	<message key="editor.review.notInitiated">Tarkistusprosessia ei ole vielä aloitettu.</message>
+	<message key="editor.submission.copyediting.personalMessageToUser">Viesti käyttäjälle</message>
+	<message key="editor.submission.externalReviewDescription">Valitse tiedostot alla lähettääksesi ne arviointivaiheeseen.</message>
+	<!-- Add file or auditor to editor/audit grids -->
+	<message key="editor.submission.fileAuditor.form.fileRequired">Valitse vähintään yksi tiedosto, johon käyttäjä valitaan.</message>
+	<message key="editor.submission.fileAuditor.form.messageRequired">Sinun täytyy kirjoittaa henkilökohtainen viesti.</message>
+	<message key="editor.submission.fileAuditor.skipEmail">Älä lähetä sähköpostia tarkastajalle</message>
+	<message key="editor.submission.fileAuditor.form.userRequired">Sinun on valikoitava käyttäjä, joka valitaan.</message>
+	<message key="editor.submission.uploadSelectFiles">Lataa/Valitse tiedostot</message>
+	<message key="editor.submission.selectFiles">Valitse tiedostot</message>
+	<message key="editor.submission.revisions">Korjaukset</message>
+	<message key="editor.submission.review.reviewersDescription"><![CDATA[Käytä <em>+Lisää arvioija</em>-kohtaa kutsuaksesi lukijoita arvioimaan käsikirjoitustiedostoja.]]><![CDATA[ ]]><![CDATA[Lehtiö-kuvake ilmaisee, että arvio on lähetetty. Kun arvio on käyty läpi, kuvake rastitetaan <em>vastaanotetuksi</em>.]]><![CDATA[ ]]><![CDATA[Kun arviot ovat myöhässä, punainen kirjekuori-kuvake ilmestyy arvioijien muistuttamista varten.]]></message>
+	<message key="editor.submission.addReviewer">Lisää arvioija</message>
+	<message key="editor.submission.findAndSelectReviewer">Etsi arvioija</message>
+	<message key="editor.submission.findAndSelectUser">Etsi käyttäjä</message>
+	<message key="editor.submission.fileList.includeAllStages">Näytä tiedostot kaikista käytettävissä olevista työnkulun vaiheista.</message>
+	<message key="editor.submission.review.currentFiles">Tämänhetkiset kierroksen {$round} arviointitiedostot</message>
+	<message key="editor.submission.backToSearch">Takaisin hakuun</message>
+	<message key="editor.review.createReviewer">Luo uusi arvioija</message>
+	<message key="editor.review.enrollReviewer.short">Lisää olemassa oleva käyttäjä rooliin</message>
+	<message key="editor.review.unassignReviewer">Peru arviointipyyntö</message>
+	<message key="editor.submissionReview.reviewType">Arviointityyppi</message>
+	<message key="editor.submissionReview.skipEmail">Älä lähetä kirjoittajalle sähköpostia</message>
+	<message key="editor.submissionReview.open">Avoin</message>
+	<message key="editor.submissionReview.blind">Sokko</message>
+	<message key="editor.submissionReview.doubleBlind">Kaksoissokko</message>
+	<message key="editor.submissionReview.restrictFiles">Arvioitavat tiedostot</message>
+	<message key="editor.submissionReview.restrictFiles.hide">Sulje tiedostojen valinta</message>
+	<message key="editor.submissionReview.editReview">Muokkaa arviointia</message>
+	<message key="editor.review.personalMessageToReviewer">Arvioijalle lähetettävä sähköposti</message>
+	<message key="editor.review.importantDates">Tärkeitä päivämääriä</message>
+	<message key="editor.review.uploadRevision">Lataa korjattu versio</message>
+	<message key="editor.review.NotifyAuthorAccept">Ilmoita kirjoittajalle käsikirjoituksen hyväksymisestä.</message>
+	<message key="editor.review.NotifyAuthorDecline">Ilmoita kirjoittajalle käsikirjoituksen hylkäämisestä.</message>
+	<message key="editor.review.NotifyAuthorRevisions">Pyydä kirjoittajalta korjauksia.</message>
+	<message key="editor.review.NotifyAuthorResubmit">Pyydä kirjoittajalta korjaukset, jotka on arvioitava uudelleen.</message>
+	<message key="editor.review.NotifyAuthorExternal">Ilmoita kirjoittajalle päätöksestä aloittaa ulkopuolinen arviointi.</message>
+	<message key="editor.review.personalMessageToAuthor">Kirjoittajalle lähetettävä sähköposti</message>
+	<message key="editor.review.dateAccepted">Arvioinnin hyväksymispäivämäärä</message>
+	<message key="editor.review.noReviews">Ei tuotavia vertaisarviointeja</message>
+	<message key="editor.review.reminder">Muistutus arvioinnista</message>
+	<message key="editor.review.thankReviewer">Kiitä arvioijaa</message>
+	<message key="editor.review.reminderError">Virhe lähetettäessä muistutusta arvioinnista</message>
+	<message key="editor.review.thankReviewerError">Virhe lähetettäessä kiitosviestiä arvioijalle</message>
+	<message key="editor.review.skipEmail">Älä lähetä sähköpostia arvioijalle.</message>
+	<message key="editor.review.sendReminder">Lähetä muistutus</message>
+	<message key="editor.review.readReview">Lue arviointi</message>
+	<message key="editor.review.readNewReview">Lue uusi arviointi</message>
+	<message key="editor.review.responseDue">Vastauksen määräpäivä: {$date}</message>
+	<message key="editor.review.requestSent">Pyyntö lähetetty</message>
+	<message key="editor.review.requestAccepted">Pyyntö hyväksytty</message>
+	<message key="editor.review.revertDecision">Peru päätös</message>
+	<message key="editor.review.reviewDue">Arvioinnin määräpäivä: {$date}</message>
+	<message key="editor.review.reviewDueDate">Arvioinnin määräpäivä</message>
+	<message key="editor.review.reviewCompleted">Arviointi suoritettu</message>
+	<message key="editor.review.reviewConfirmed">Arviointi vahvistettu</message>
+	<message key="editor.review.reviewSubmitted">Arviointi lähetetty</message>
+	<message key="editor.review.reviewerComments">Arvioijan kommentit</message>
+	<message key="editor.review.days">Päiviä keskimäärin</message>
+	<message key="editor.review.mustSelect">Sinun on valittava arvioija</message>
+	<message key="editor.review.errorAddingReviewer">Arvioijaa lisättäessä tapahtui virhe. Yritä uudelleen.</message>
+	<message key="editor.review.errorDeletingReviewer">Arvioijaa poistettaessa tapahtui virhe. Yritä uudelleen.</message>
+	<message key="editor.review.userGroupSelect">Lisää käyttäjä tähän arvioijien käyttäjäryhmään</message>
+	<message key="editor.review.unconsiderReviewText">Haluatko merkitä tämän arvioinnin käsittelemättömäksi? Arviointihistoria säilytetään.</message>
+	<message key="editor.review.unconsiderReview">Merkitse tämä arviointi käsittelemättömäksi</message>
+	<message key="editor.review.readConfirmation">Kun tämä arviointi on luettu, paina "Vahvista" osoittaaksesi, että arviointiprosessi voi jatkua. Jos arvioija on lähettänyt arviointinsa muualle, voit ladata tiedoston alla ja painaa "Vahvista" edetäksesi.</message>
+	<message key="editor.submission.selectCopyedingFiles">Teknisen toimittamisen tiedostot</message>
+	<message key="editor.submission.selectReviewer">Valitse arvioija</message>
+	<message key="editor.submission.taskDueDate">Tehtävän määräpäivä</message>
+	<message key="editor.submission.taskSchedule">Tehtävän aikataulu</message>
+	<message key="editor.review.enrollReviewer">Lisää olemassa oleva käyttäjä arvioijaksi</message>
+	<message key="editor.submission.noAuditRequested">Tälle tiedostolle ei ole pyydetty tarkastusta</message>
+	<message key="editor.submission.personalMessageToUser">Käyttäjälle lähetettävä sähköposti</message>
+	<message key="editor.submission.proof.reminder">Muistutus oikoluvusta</message>
+	<message key="editor.submission.editorial.approveCopyeditDescription">Teknisesti toimitettu tiedosto on hyväksyttävä, ennen kuin se voidaan lähettää tuotantovaiheeseen. Haluatko hyväksyä tämän tiedoston?</message>
+	<message key="editor.submission.editorial.disapproveCopyeditDescription">Jos et hyväksy tätä teknisesti toimitettua tiedostoa, sitä ei voida lähettää tuotantovaiheeseen. Haluatko jättää hyväksymättä tämän tiedoston?</message>
+	<message key="editor.submission.addAuditor">Valitse tarkastaja</message>
+	<message key="editor.submission.copyedit.manageCopyeditFilesDescription">Mitä tahansa tiedostoja, joita on ladattu käsikirjoituksen eri lähetysvaiheissa, voidaan lisätä teknisen toimittamisen tiedostoluetteloon rastittamalla Sisällytä-valintaruutu alla ja klikkaamalla Hae: kaikki saatavilla olevat tiedostot näytetään ja voidaan valita lisättäväksi. Muita tiedostoja, joita ei ole vielä ladattu vaiheeseen, voidaan lisätä luetteloon klikkaamalla Lataa tiedosto-linkkiä.</message>
+	<message key="editor.review">Arviointi</message>
+	<message key="editor.review.reviewDetails">Arvioinnin tiedot</message>
+	<message key="editor.review.noReviewFilesUploaded">Ei ladattuja tiedostoja</message>
+	<message key="editor.review.noReviewFilesUploaded.details">Et ole ladannut yhtään arviointitiedostoa.</message>
+	<message key="editor.review.emailReviewer">Lähetä sähköposti arvioijalle</message>
+	<message key="editor.submission.production.productionReadyFiles">Tuotantovalmiit tiedostot</message>
+	<message key="editor.submission.newRound">Uusi arviointikierros</message>
+	<message key="editor.submissionReview.recordDecision">Tallenna toimituksellinen päätös</message>
+	<message key="editor.submission.newRoundDescription">Olet luomassa uuden arviointikierroksen tälle käsikirjoitukselle. Tiedostot, joita ei ole käytetty muilla arviointikierroksilla, ovat listattuna alla.</message>
+	<message key="editor.submission.createNewRound">Luo uusi arviointikierros</message>
+	<message key="editor.article.reviewForms">Arviointilomakkeet</message>
+	<message key="editor.article.selectReviewForm">Valitse arviointilomake</message>
+	<message key="editor.article.clearReviewForm">Tyhjennä arviointilomake</message>
+	<message key="editor.article.confirmChangeReviewForm">Varoitus: Arviointilomakkeen vaihtaminen vaikuttaa kaikkiin vastauksiin, joita arvioijat ovat jo antaneet tätä lomaketta käyttäen. Haluatko varmasti jatkaa?</message>
+	<message key="editor.submission.noReviewerFilesSelected">Ei valittuja tiedostoja</message>
+	<message key="editor.submission.noReviewerFilesSelected.details">Et ole valinnut yhtään tiedostoa arvioijan arvioitavaksi.</message>
+	<message key="submission.queries.subjectRequired">Keskustelun aihe vaaditaan.</message>
+	<message key="submission.queries.messageRequired">Keskusteluviesti vaaditaan.</message>
+	<message key="submission.queries.attachedFiles">Liitetyt tiedostot</message>
+	<message key="grid.action.editQuery">Muokkaa keskustelua</message>
+	<message key="editor.submission.query.manageQueryNoteFilesDescription">Tähän keskusteluun voidaan liittää tiedostoja alla olevasta luettelosta.</message>
+	<message key="editor.submission.selectedReviewer">Valittu arvioija</message>
+	<message key="editor.submission.proofreading.approveProof">Hyväksy korjausvedos</message>
+	<message key="editor.submission.proofreading.revokeProofApproval">Kumoa korjausvedoksen hyväksyntä</message>
+	<message key="editor.submission.proofreading.confirmCompletion">Hyväksy tämä korjausvedos osoittaaksesi, että oikoluku on valmis ja tiedosto on valmis julkaistavaksi.</message>
+	<message key="editor.submission.proofreading.confirmRemoveCompletion">Kumoa tämän korjausvedoksen hyväksyntä osoittaaksesi, että oikoluku ei ole enää valmis ja tiedosto ei ole valmis julkaistavaksi.</message>
+	<message key="editor.publicIdentificationNumericNotAllowed">Julkinen tunnus {$publicIdentifier} ei saa olla numero.</message>
+	<message key="editor.publicIdentificationPatternNotAllowed">Muotoilua {$pattern} ei sallita julkisessa tunnisteessa.</message>
+</locale>

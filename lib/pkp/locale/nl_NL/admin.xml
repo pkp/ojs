@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/nl_NL/admin.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the nl_NL (Nederlands) locale.
+  *
+  -->
+
+<locale name="nl_NL" full_name="Nederlands">
+	<message key="admin.adminFunctions">Administratieve functies</message>
+	<message key="admin.auth.confirmDelete">Weet u zeker dat u deze authenticatiebron wilt verwijderen?</message>
+	<message key="admin.auth.create">Creëer authenticatiebron</message>
+	<message key="admin.auth.noneCreated">Er zijn geen authenticatiebronnen gedefinieerd.</message>
+	<message key="admin.authSources">Authenticatievoorzieningen</message>
+	<message key="admin.clearDataCache">Leeg data caches</message>
+	<message key="admin.clearTemplateCache">Leeg template cache</message>
+	<message key="admin.configFileUpdatedInstructions"><![CDATA[Uw instellingenbestand is gewijzigd. Merk op dat u <tt>config.inc.php</tt> mogelijk met de hand moet aanpassen als uw site niet meer correct werkt.]]></message>
+	<message key="admin.confirmClearTemplateCache">Weet u zeker dat u de cache met  gecompileerde templates wilt legen?</message>
+	<message key="admin.confirmExpireSessions">Weet u seker dat u alle gebruikerssessies wilt laten verlopen? Alle gebruikes die momenteel ingelogd zijn zullen opnieuw in moeten inloggen (inclusief uzelf).</message>
+	<message key="admin.contentsOfConfigFile">Inhoud van het instellingenbestand</message>
+	<message key="admin.currentVersion">Actuele versie</message>
+	<message key="admin.dateInstalled">Installatiedatum</message>
+	<message key="admin.displayConfigFileInstructions"><![CDATA[Uw gewijzigde instellingen worden hieronder getoond. Om uw wijzigingen te effectueren moet u <tt>config.inc.php</tt> openen in een geschikte teksteditor en de inhoud van het bestand vervangen door de inhoud van het tekstveld hieronder.]]></message>
+	<message key="admin.displayNewSystemConfig">Bekijk nieuwe instellingen</message>
+	<message key="admin.expireSessions">Laat gebruikerssessies verlopen</message>
+	<message key="admin.languages.confirmReload">Weet u zeker dat u deze taalbestanden opnieuw wilt laden? Eigen aanpassingen zoals in e-mail sjablonen zullen verloren gaan.</message>
+	<message key="admin.languages.installedLocales">Geïnstalleerde talen</message>
+	<message key="admin.languages.installLanguages">Beheer talen</message>
+	<message key="admin.languages.installLocales">Installeer</message>
+	<message key="admin.languages.installNewLocales">Installeer nieuwe talen</message>
+	<message key="admin.languages.languageSettings">Taalinstellingen</message>
+	<message key="admin.languages.noLocalesAvailable">Er zijn geen additionele talen die geïnstalleerd kunnen worden.</message>
+	<message key="admin.languages.reload">Taalbestanden opnieuw laden</message>
+	<message key="admin.languages.uninstall">De-installeer taal</message>
+	<message key="admin.phpInfo">Uitgebreide PHP informatie</message>
+	<message key="admin.server.apacheVersion">Apache versie</message>
+	<message key="admin.server.dbDriver">Database driver</message>
+	<message key="admin.server.dbVersion">Database server versie</message>
+	<message key="admin.serverInformationDescription"><![CDATA[Besturingssysteem en server programmatuur versies. Klik op <span class="highlight">Uitgebreide PHP informatie</span> om de details van de PHP configuratie van de server te bekijken.]]></message>
+	<message key="admin.serverInformation">Server informatie</message>
+	<message key="admin.server.phpVersion">PHP versie</message>
+	<message key="admin.server.platform">Besturingssysteem</message>
+	<message key="admin.settings.aboutDescription">Over de site-beschrijving</message>
+	<message key="admin.settings.contactEmail">E-mail van de eerste contactpersoon</message>
+	<message key="admin.settings.contactName">Naam van de eerste contactpersoon</message>
+	<message key="admin.settings.form.contactEmailRequired">Het e-mail adres van de eerste contactpersoon is verplicht.</message>
+	<message key="admin.settings.form.contactNameRequired">De naam van de eerste contactpersoon is verplicht.</message>
+	<message key="admin.settings.form.minPasswordLengthRequired">U moet een wachtwoordlengte van minimaal 4 tekens opgeven.</message>
+	<message key="admin.settings.form.titleRequired">Een titel is vereist.</message>
+	<message key="admin.settings.homeHeaderImage.altText">Site logo</message>
+	<message key="admin.settings.homeHeaderImageInvalid">Onjuist bestandstype voor het site logo. Geldige types zijn .gif, .jpg, en .png.</message>
+	<message key="admin.settings.introduction">Introductie</message>
+	<message key="admin.settings.minPasswordLength">Minimale wachtwoordlengte</message>
+	<message key="admin.settings.passwordCharacters">tekens</message>
+	<message key="admin.settings.siteLanguage">Taal van de site</message>
+	<message key="admin.settings.siteStyleSheetInvalid">Onjuist bestandstype voor site stylesheet. Geldig bestandstype is .css.</message>
+	<message key="admin.settings.siteStyleSheet">Site stylesheet</message>
+	<message key="admin.settings.siteTitle">Site titel</message>
+	<message key="admin.siteAdmin">Sitebeheer</message>
+	<message key="admin.siteManagement">Sitebeheer</message>
+	<message key="admin.siteSettings">Site instellingen</message>
+	<message key="admin.systemConfigFileReadError"><![CDATA[Het instellingenbestand <tt>config.inc.php</tt> bestaat niet, is niet leesbaar of is onbruikbaar.]]></message>
+	<message key="admin.systemInformation">Systeeminformatie</message>
+	<message key="admin.versionBuild">Build</message>
+	<message key="admin.version.checkForUpdates">Zoek naar verbeteringen</message>
+	<message key="admin.version.downloadPackage">Download</message>
+	<message key="admin.version.downloadPatch">Download verbetering</message>
+	<message key="admin.versionHistory">Versiehistorie</message>
+	<message key="admin.version.latest">Nieuwste versie</message>
+	<message key="admin.versionMajor">Majeur</message>
+	<message key="admin.versionMinor">Mineur</message>
+	<message key="admin.version.moreInfo">Meer Informatie</message>
+	<message key="admin.versionRevision">Revisie</message>
+	<message key="admin.version.updateAvailable">Er is een bijgewerkte versie beschikbaar</message>
+	<message key="admin.version.upToDate">Uw systeem is up-to-date</message>
+	<message key="admin.version">Versie</message>
+	<message key="admin.settings">Instelligen</message>
+	<message key="admin.settings.siteTheme">Site thema</message>
+	<message key="admin.siteSetup">Site instellingen</message>
+</locale>

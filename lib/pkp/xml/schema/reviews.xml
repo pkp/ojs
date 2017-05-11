@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE schema SYSTEM "../../dtd/xmlSchema.dtd">
+
+<!--
+  * xml/schema/reviews.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Review assignment schema in XML.
+  -->
+
+<schema version="0.2">
+	<!--
+	  *
+	  * TABLE review_assignments
+	  *
+	  -->
+	<table name="review_assignments">
+		<field name="review_id" type="I8">
+			<KEY />
+			<AUTOINCREMENT/>
+		</field>
+		<field name="submission_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="reviewer_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="competing_interests" type="X"/>
+		<field name="recommendation" type="I1"/>
+		<field name="date_assigned" type="T"/>
+		<field name="date_notified" type="T"/>
+		<field name="date_confirmed" type="T"/>
+		<field name="date_completed" type="T"/>
+		<field name="date_acknowledged" type="T"/>
+		<field name="date_due" type="T"/>
+		<field name="date_response_due" type="T"/>
+		<field name="last_modified" type="T"/>
+		<field name="reminder_was_automatic" type="I1">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+		</field>
+		<field name="declined" type="I1">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+		</field>
+		<field name="replaced" type="I1">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+		</field>
+		<field name="cancelled" type="I1">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+		</field>
+		<field name="reviewer_file_id" type="I8"/>
+		<field name="date_rated" type="T"/>
+		<field name="date_reminded" type="T"/>
+		<field name="quality" type="I1"/>
+		<field name="review_round_id" type="I8">
+			<!-- NOTNULL constraint not included b/c of bug #8247 -->
+		</field>
+		<field name="stage_id" type="I1">
+			<NOTNULL/>
+			<DEFAULT VALUE="1"/>
+		</field>
+		<field name="review_method" type="I1">
+			<NOTNULL/>
+			<DEFAULT VALUE="1"/>
+		</field>
+		<field name="round" type="I1">
+			<NOTNULL/>
+			<DEFAULT VALUE="1"/>
+		</field>
+		<field name="step" type="I1">
+			<NOTNULL/>
+			<DEFAULT VALUE="1"/>
+		</field>
+		<field name="review_form_id" type="I8"/>
+		<field name="unconsidered" type="I1"/>
+		<descr>Reviewing assignments.</descr>
+		<index name="review_assignments_submission_id">
+			<col>submission_id</col>
+		</index>
+		<index name="review_assignments_reviewer_id">
+			<col>reviewer_id</col>
+		</index>
+		<index name="review_assignments_form_id">
+			<col>review_form_id</col>
+		</index>
+	</table>
+
+	<!--
+	  *
+	  * TABLE review_rounds
+	  *
+	  -->
+	<table name="review_rounds">
+		<field name="review_round_id" type="I8">
+			<KEY />
+			<AUTOINCREMENT/>
+		</field>
+		<field name="submission_id" type="I8">
+			<NOTNULL />
+		</field>
+		<field name="stage_id" type="I8" />
+		<field name="round" type="I1">
+			<NOTNULL />
+		</field>
+		<field name="review_revision" type="I8" />
+		<field name="status" type="I8" />
+		<descr>Review rounds.</descr>
+		<index name="review_rounds_submission_id">
+			<col>submission_id</col>
+		</index>
+		<index name="review_rounds_submission_id_stage_id_round_pkey">
+			<col>submission_id</col>
+			<col>stage_id</col>
+			<col>round</col>
+			<UNIQUE/>
+		</index>
+	</table>
+
+	<!--
+	  *
+	  * TABLE review_round_files
+	  *
+	  -->
+	<table name="review_round_files">
+		<field name="submission_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="review_round_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="stage_id" type="I1">
+			<NOTNULL/>
+		</field>
+		<field name="file_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="revision" type="I8">
+			<NOTNULL/>
+			<DEFAULT VALUE="1"/>
+		</field>
+		<descr>Submission Files for each review round</descr>
+		<index name="review_round_files_submission_id">
+			<col>submission_id</col>
+		</index>
+		<index name="review_round_files_pkey">
+			<col>submission_id</col>
+			<col>review_round_id</col>
+			<col>file_id</col>
+			<col>revision</col>
+			<UNIQUE/>
+		</index>
+	</table>
+
+	<!--
+	  *
+	  * TABLE review_files
+	  *
+	  -->
+	<table name="review_files">
+		<field name="review_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="file_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<descr>Associates reviewable submission files with reviews</descr>
+		<index name="review_files_review_id">
+			<col>review_id</col>
+		</index>
+		<index name="review_files_pkey">
+			<col>review_id</col>
+			<col>file_id</col>
+			<UNIQUE/>
+		</index>
+	</table>
+</schema>

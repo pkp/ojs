@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/id_ID/admin.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="id_ID" full_name="Bahasa Indonesia">
+	<message key="admin.adminFunctions">Fungsi Administratif</message>
+	<message key="admin.auth.confirmDelete"> Apakah Anda yakin ingin menghapus sumber pengesahan ini secara permanen?</message>
+	<message key="admin.auth.create">Buat Sumber Pengesahan</message>
+	<message key="admin.auth.noneCreated">Tidak ada sumber pengesahan yang ditemukan.</message>
+	<message key="admin.authSources">Sumber Pengesahan</message>
+	<message key="admin.clearDataCache">Hapus Data Cache</message>
+	<message key="admin.clearTemplateCache">Hapus Template Cache</message>
+	<message key="admin.configFileUpdatedInstructions"><![CDATA[File konfigurasi Anda telah sukses diupdate. Jika situs Anda tidak lagi berfungsi dengan benar, Anda mungkin perlu memperbaiki konfigurasi Anda secara manual dengan mengedit <tt>config.inc.php</tt> secara langsung.]]></message>
+	<message key="admin.confirmClearTemplateCache">Apakah Anda yakin ingin membersihkan template cache yang disusun?</message>
+	<message key="admin.confirmExpireSessions"><![CDATA[Apakah Anda yakin ingin mengakhiri seluruh sesi pengguna? Semua pengguna yang sedang <em>log in</em> ke sistem akan dipaksa untuk <em>log in</em> lagi (termasuk diri Anda). ]]></message>
+	<message key="admin.contentsOfConfigFile">File konfigurasi isi</message>
+	<message key="admin.currentVersion">Versi Terkini</message>
+	<message key="admin.dateInstalled">Tanggal penginstalan</message>
+	<message key="admin.displayConfigFileInstructions"><![CDATA[Isi dari konfigurasi yang sudah diupdate milik Anda ditampilkan sekarang. Untuk menerapkan perubahan konfigurasi Anda harus membuka <tt>config.inc.php</tt> di text editor yang sesuai dan mengganti isinya dengan isi text editor di bawah ini.]]></message>
+	<message key="admin.displayNewSystemConfig">Tampilkan Konfigurasi Baru</message>
+	<message key="admin.expireSessions">Akhiri Sesi Pengguna</message>
+	<message key="admin.languages.confirmReload">Apakah Anda yakin ingin memuat ulang locale ini? Ini akan menghapus semua data spesifik-locale yang sudah ada seperti template email yang disesuaikan.</message>
+	<message key="admin.languages.installedLocales">Locale yang diinstal</message>
+	<message key="admin.languages.installLanguages">Mengatur Locale</message>
+	<message key="admin.languages.installLocales">Instal</message>
+	<message key="admin.languages.installNewLocales">Instal Locale</message>
+	<message key="admin.languages.languageSettings">Pengaturan Locale</message>
+	<message key="admin.languages.noLocalesAvailable">Tidak ada locale tambahan yang tersedia untuk instalasi.</message>
+	<message key="admin.languages.reload">Reload locale</message>
+	<message key="admin.languages.uninstall">Uninstal locale</message>
+	<message key="admin.phpInfo"> Informasi Detail PHP</message>
+	<message key="admin.saveSystemConfig">Simpan Konfigurasi</message>
+	<message key="admin.server.apacheVersion">Versi Apache</message>
+	<message key="admin.server.dbDriver">Database driver</message>
+	<message key="admin.server.dbVersion">Versi server database</message>
+	<message key="admin.serverInformationDescription"><![CDATA[Informasi mengenai sistem operasi dan versi perangkat lunak server. Klik <span class="highlight">Informasi Detail PHP</span> untuk melihat detail konfigurasi server PHP.]]></message>
+	<message key="admin.serverInformation">Informasi Server</message>
+	<message key="admin.server.phpVersion">Versi PHP</message>
+	<message key="admin.server.platform">Platform OS</message>
+	<message key="admin.settings.aboutDescription">Deskripsi Situs</message>
+	<message key="admin.settings.contactEmail">Email Kontak Utama</message>
+	<message key="admin.settings.contactName">Nama Kontak Utama</message>
+	<message key="admin.settings.form.contactEmailRequired">Alamat email kontak utama diperlukan.</message>
+	<message key="admin.settings.form.contactNameRequired"> Nama kontak utama diperlukan.</message>
+	<message key="admin.settings.form.minPasswordLengthRequired"> Anda harus memasukkan panjang minimal kata sandi yaitu 4 karakter.</message>
+	<message key="admin.settings.form.titleRequired">Judul diperlukan.</message>
+	<message key="admin.settings.homeHeaderImage.altText"> Logo Situs </message>
+	<message key="admin.settings.homeHeaderImageInvalid">Format gambar logo invalid. Format yang diterima adalah .gif, .jpg, atau .png.</message>
+	<message key="admin.settings.introduction">Pendahuluan</message>
+	<message key="admin.settings.minPasswordLength">Panjang Kata Sandi Min</message>
+	<message key="admin.settings.passwordCharacters">Karakter</message>
+	<message key="admin.settings.siteLanguage">Bahasa Situs</message>
+	<message key="admin.settings.siteStyleSheetInvalid"> Format lembar model situs invalid. Format yang dapat diterima adalah .css.</message>
+	<message key="admin.settings.siteStyleSheet">Style Sheet</message>
+	<message key="admin.settings.siteTitle">Nama Situs</message>
+	<message key="admin.siteAdmin">Administrasi Situs</message>
+	<message key="admin.siteManagement">Manajemen Situs</message>
+	<message key="admin.siteSettings">Pengaturan Situs</message>
+	<message key="admin.systemConfigFileReadError"><![CDATA[File konfigurasi <tt>config.inc.php</tt> tidak ada, tidak terbaca, atau invalid.]]></message>
+	<message key="admin.systemInformation">Informasi Sistem</message>
+	<message key="admin.versionBuild">Tubuh</message>
+	<message key="admin.version.checkForUpdates">Cek untuk update</message>
+	<message key="admin.version.downloadPackage">Unduh</message>
+	<message key="admin.version.downloadPatch">Download Patch</message>
+	<message key="admin.versionHistory">Sejarah Versi</message>
+	<message key="admin.version.latest">Versi Terbaru</message>
+	<message key="admin.versionMajor">Mayor</message>
+	<message key="admin.versionMinor">Minor</message>
+	<message key="admin.version.moreInfo">Informasi lebih lanjut</message>
+	<message key="admin.versionRevision">Revisi</message>
+	<message key="admin.version.updateAvailable">Versi yang telah diupdate sudah tersedia</message>
+	<message key="admin.version.upToDate">Sistem Anda up-to-date</message>
+	<message key="admin.version">Versi</message>
+</locale>

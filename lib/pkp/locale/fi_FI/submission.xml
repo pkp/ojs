@@ -1,0 +1,631 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/fi_FI/submission.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="fi_FI" full_name="Suomi">
+	<!-- Author Submission -->
+	<message key="author.submit.userGroupRequired">Tililläsi ei ole tällä hetkellä roolia, kuten kirjoittaja, jolle sallitaan uusien käsikirjoitusten lähettäminen. Tarkista tilisi. Voit ehkä itse lisätä sopivan roolin muokkaamalla profiiliasi.</message>
+	<message key="author.submit.submissionCitations">Anna muotoiltu lähdeluettelo, joka sisältää työt, joihin tässä käsikirjoituksessa viitataan. Erottele lähteet toisistaan yhdellä tyhjällä rivillä.</message>
+	<message key="author.submission.roundStatus.reviewsReady">Uusia arvioita on lähetetty ja ne ovat toimittajan käsittelyssä.</message>
+	<message key="submission.confirm.message">Käsikirjoituksesi on ladattu ja valmis lähetettäväksi. Voit palata tietojen tarkistusvaiheeseen ja muuttaa syöttämiäsi tietoja, ennen kuin jatkat. Kun olet valmis, klikkaa "Suorita lähetys".</message>
+	<message key="submission.submit.submissionChecklist">Käsikirjoituksen lähettämiseen liittyvät vaatimukset</message>
+	<message key="submission.submit.submissionChecklistDescription">Sinun täytyy lukea ja vahvistaa, että täytät alla mainitut vaatimukset, ennen kuin jatkat.</message>
+	<message key="submission.submit.submissionComplete">Käsikirjoitus on lähetetty</message>
+	<message key="submission.submit.submissionCompleteThanks">Kiitos mielenkiinnostasi julkaista {$contextName} -julkaisussa.</message>
+	<message key="submission.submit.copyrightNoticeAgreementLabel">Hyväksy tekijänoikeushuomautus</message>
+	<message key="submission.submit.copyrightNoticeAgree">Suostun noudattamaan tekijänoikeushuomautuksen ehtoja.</message>
+	<message key="submission.submit.whatNext">Mitä seuraavaksi?</message>
+	<message key="submission.submit.whatNext.forNow">Nyt voit:</message>
+	<message key="submission.submit.whatNext.review">Tarkastella lähetettyä käsikirjoitusta</message>
+	<message key="submission.submit.whatNext.create">Luoda uuden käsikirjoituksen</message>
+	<message key="submission.submit.whatNext.return">Palata hallintapaneeliin</message>
+	<message key="submission.submit.extendedMetadata">Laajat metatiedot</message>
+
+	<!-- FIXME: move to meta-data plug-ins -->
+	<!-- messages used by meta-data filters -->
+	<message key="metadata.filters.crossref.settings.email.displayName">CrossRefiin rekisteröity sähköposti</message>
+	<message key="metadata.filters.crossref.settings.email.validationMessage">Anna voimassa oleva CrossRefiin rekisteröity sähköpostiosoite. Voit rekisteröidä sähköpostiosoitteesi ilmaiseksi CrossRefin verkkosivustolla.</message>
+	<message key="metadata.filters.isbndb.settings.apiKey.displayName">ISBNdb API -avain</message>
+	<message key="metadata.filters.isbndb.settings.apiKey.validationMessage">Anna ISBNdb API -avaimesi. Jos sinulla ei vielä ole avainta, voit pyytää sellaisen ilmaiseksi ISBNdb-projektilta.</message>
+	<message key="metadata.filters.pubmed.settings.email.displayName">PubMediin rekisteröity sähköposti</message>
+	<message key="metadata.filters.pubmed.settings.email.validationMessage">Anna voimassa oleva PubMediin rekisteröity sähköpostiosoitteesi, jos sinulla sellainen on.</message>
+	<message key="metadata.filters.worldcat.settings.apiKey.displayName">WorldCat API -avain</message>
+	<message key="metadata.filters.worldcat.settings.apiKey.validationMessage">Anna voimassa oleva WorldCat API -avain, jos sinulla sellainen on.</message>
+	<message key="metadata.filters.paracite.settings.citationModule.displayName">Viittausmoduuli</message>
+	<message key="metadata.filters.paracite.settings.citationModule.validationMessage">Valitse yksi annetuista viittausmoduuleista.</message>
+	<message key="metadata.filters.settings.isOptional.displayName">Älä käytä oletuksena (on kuitenkin toimittajan käytettävissä)</message>
+	<message key="metadata.filters.settings.isOptional.validationMessage">Sisäinen virhe. Valinnaisten suodattimien asetuksiin on lähetetty epäkelpo arvo. Ilmoita virheestä.</message>
+
+	<!-- messages shared between MD schemas -->
+	<message key="metadata.property.displayName.author">Kirjoittajat</message>
+	<message key="metadata.property.validationMessage.author">Parhaiden tulosten saamiseksi, kirjoittajien nimet tulee antaa seuraavassa muodossa: Coleman Jr, D. (Ralf) Dr.</message>
+	<message key="metadata.property.displayName.editor">Toimittajat</message>
+	<message key="metadata.property.validationMessage.editor">Parhaiden tulosten saamiseksi, toimittajien nimet tulee antaa seuraavassa muodossa: Coleman Jr, D. (Ralf) Dr.</message>
+
+	<!-- NLM-specific messages -->
+	<message key="metadata.property.displayName.article-title">Artikkelin/Työn otsikko</message>
+	<message key="metadata.property.validationMessage.article-title">Anna kelvollinen artikkelin/työn otsikko.</message>
+	<message key="metadata.property.displayName.source">Julkaisun nimi</message>
+	<message key="metadata.property.validationMessage.source">Anna kelvollinen julkaisun nimi.</message>
+	<message key="metadata.property.displayName.date">Julkaisupäivämäärä</message>
+	<message key="metadata.property.validationMessage.date">Anna kelvollinen julkaisupäivämäärä (muodossa: VVVV-KK-PP). </message>
+	<message key="metadata.property.displayName.access-date">Saatavilla (pvm)</message>
+	<message key="metadata.property.validationMessage.access-date">Anna kelvollinen päivämäärä, jolloin julkaisu on saatavilla (muodossa: VVVV-KK-PP). </message>
+	<message key="metadata.property.displayName.issue">Numero</message>
+	<message key="metadata.property.validationMessage.issue">Anna kelvollinen numero.</message>
+	<message key="metadata.property.displayName.volume">Volyymi</message>
+	<message key="metadata.property.validationMessage.volume">Anna kelvollinen volyymi.</message>
+	<message key="metadata.property.displayName.season">Kausi</message>
+	<message key="metadata.property.validationMessage.season">Anna kelvollinen kauden tunniste.</message>
+	<message key="metadata.property.displayName.chapter-title">Luvun otsikko</message>
+	<message key="metadata.property.validationMessage.chapter-title">Anna kelvollinen luvun otsikko.</message>
+	<message key="metadata.property.displayName.edition">Painos</message>
+	<message key="metadata.property.validationMessage.edition">Anna kelvollinen painos (laitos).</message>
+	<message key="metadata.property.displayName.series">Sarja</message>
+	<message key="metadata.property.validationMessage.series">Anna kelvollinen sarja.</message>
+	<message key="metadata.property.displayName.supplement">Suplementti</message>
+	<message key="metadata.property.validationMessage.supplement">Anna kelvollinen suplementti.</message>
+	<message key="metadata.property.displayName.conf-date">Konferenssin päivämäärä</message>
+	<message key="metadata.property.validationMessage.conf-date">Anna kelvollinen konferenssin päivämäärä (muodossa: VVVV-KK-PP). </message>
+	<message key="metadata.property.displayName.conf-loc">Konferenssipaikka</message>
+	<message key="metadata.property.validationMessage.conf-loc">Anna kelvollinen konferenssipaikka.</message>
+	<message key="metadata.property.displayName.conf-name">Konferenssin nimi</message>
+	<message key="metadata.property.validationMessage.conf-name">Anna kelvollinen konferenssin nimi.</message>
+	<message key="metadata.property.displayName.conf-sponsor">Konferenssin tukija</message>
+	<message key="metadata.property.validationMessage.conf-sponsor">Anna kelvollinen konferenssin tukija.</message>
+	<message key="metadata.property.displayName.institution">Instituutio</message>
+	<message key="metadata.property.validationMessage.institution">Anna kelvollinen instituutio.</message>
+	<message key="metadata.property.displayName.fpage">Ensimmäinen sivu</message>
+	<message key="metadata.property.validationMessage.fpage">Anna ensimmäinen sivu (numeerinen arvo).</message>
+	<message key="metadata.property.displayName.lpage">Viimeinen sivu</message>
+	<message key="metadata.property.validationMessage.lpage">Anna viimeinen sivu (numeerinen arvo).</message>
+	<message key="metadata.property.displayName.size">Sivumäärä</message>
+	<message key="metadata.property.validationMessage.size">Anna sivujen kokonaismäärä (numeerinen arvo).</message>
+	<message key="metadata.property.displayName.publisher-loc">Julkaisijan sijainti</message>
+	<message key="metadata.property.validationMessage.publisher-loc">Anna kelvollinen julkaisijan sijainti.</message>
+	<message key="metadata.property.displayName.publisher-name">Julkaisijan nimi</message>
+	<message key="metadata.property.validationMessage.publisher-name">Anna kelvollinen julkaisijan nimi.</message>
+	<message key="metadata.property.displayName.isbn">ISBN</message>
+	<message key="metadata.property.validationMessage.isbn">Kirjoita kelvollinen ISBN-tunnus (9 tai 13 numeroa).</message>
+	<message key="metadata.property.displayName.issn">Painetun julkaisun ISSN</message>
+	<message key="metadata.property.validationMessage.issn">Kirjoita kelvollinen painetun julkaisun ISSN-tunnus.</message>
+	<message key="metadata.property.displayName.eissn">Elektronisen julkaisun ISSN</message>
+	<message key="metadata.property.validationMessage.eissn">Anna kelvollinen elektronisen julkaisun ISSN-tunnus.</message>
+	<message key="metadata.property.displayName.doi">DOI</message>
+	<message key="metadata.property.validationMessage.doi">Anna kelvollinen DOI-tunniste.</message>
+	<message key="metadata.property.displayName.publisher-id">Mukautettu julkaisun identifiointitunnus</message>
+	<message key="metadata.property.validationMessage.publisher-id">Anna kelvollinen mukautettu julkaisun identifiointitunnus.</message>
+	<message key="metadata.property.displayName.coden">CODEN</message>
+	<message key="metadata.property.validationMessage.coden">Anna kelvollinen CODEN-koodi.</message>
+	<message key="metadata.property.displayName.sici">SICI</message>
+	<message key="metadata.property.validationMessage.sici">Anna kelvollinen SICI-tunnus.</message>
+	<message key="metadata.property.displayName.pmid">PMID</message>
+	<message key="metadata.property.validationMessage.pmid">Anna kelvollinen PMID.</message>
+	<message key="metadata.property.displayName.uri">Julkaisun linkki</message>
+	<message key="metadata.property.validationMessage.uri">Anna kelvollinen vaihtoehtoinen linkki julkaisuun.</message>
+	<message key="metadata.property.displayName.comment">Kommentti</message>
+	<message key="metadata.property.validationMessage.comment">Kirjoita kelvollinen kommentti.</message>
+	<message key="metadata.property.displayName.annotation">Huomautus</message>
+	<message key="metadata.property.validationMessage.annotation">Kirjoita kelvollinen huomautus.</message>
+	<message key="metadata.property.displayName.publication-type">Julkaisun tyyppi</message>
+	<message key="metadata.property.validationMessage.publication-type">Varmistathan, että asetat aina julkaisun tyypin. Tuettuja arvoja ovat kirja (kirjat ja kirjojen luvut) ja lehti (lehtien artikkelit). Muuten viittaustavan muotoilu ei toimi oikein.</message>
+
+	<!-- MODS-specific messages -->
+	<message key="metadata.property.displayName.title-type">Otsikon tyyppi</message>
+	<message key="metadata.property.validationMessage.title-type">Varmistathan, että asetat kelvollisen otsikko-tyypin. Tuettua arvoja ovat "lyhennetty", "käännetty", "vaihtoehtoinen" ja "yhdenmukainen".</message>
+	<message key="metadata.property.displayName.nonSort">Lajittelussa sivuutettava otsikon osa</message>
+	<message key="metadata.property.validationMessage.nonSort">Anna vain alkumerkit otsikosta, joka pitäisi jättää huomiotta otsikkoa lajiteltaessa.</message>
+	<message key="metadata.property.displayName.title">Otsikko</message>
+	<message key="metadata.property.validationMessage.title">Anna kelvollinen otsikko.</message>
+	<message key="metadata.property.displayName.subTitle">Alaotsikko</message>
+	<message key="metadata.property.validationMessage.subTitle">Anna kelvollinen alaotsikko.</message>
+	<message key="metadata.property.displayName.partNumber">Osan numero</message>
+	<message key="metadata.property.validationMessage.partNumber">Anna kelvollinen osan numero.</message>
+	<message key="metadata.property.displayName.partName">Osan nimi</message>
+	<message key="metadata.property.validationMessage.partName">Anna kelvollinen osan nimi.</message>
+	<message key="metadata.property.displayName.name-type">Nimen tyyppi</message>
+	<message key="metadata.property.validationMessage.name-type">Varmistathan, että asetat kelvollisen nimityypin. Tuettuja arvoja ovat "henkilö" ja "yritys" ja "konferenssi".</message>
+	<!-- FIXME: end -->
+
+	<message key="common.queue.long.submissionsUnassigned">Osoittamattomat</message>
+	<message key="common.queue.long.myAssigned">Minulle osoitetut</message>
+	<message key="common.queue.long.submissionsArchived">Arkistoidut käsikirjoitukset</message>
+	<message key="submission.authors">Kirjoittajat</message>
+	<message key="submission.authorBiographies">Kirjoittajien biografiat</message>
+	<message key="submission.shortAuthor">{$author} ym.</message>
+	<message key="submission.mySubmissions">Omat kirjoitukseni</message>
+	<message key="submission.addFile">Lataa tiedosto</message>
+	<message key="submission.agencies">Järjestöt</message>
+	<message key="submission.abstractViews">Abstraktin katselukerrat</message>
+	<message key="submission.accepted">Hyväksytty</message>
+	<message key="submission.acknowledge">Kuittaa vastaanotetuksi</message>
+	<message key="submission.addSuppFile">Lisää liitetiedosto</message>
+	<message key="submission.ask">Kysy</message>
+	<message key="submission.attachedFile">Liitetty tiedosto</message>
+	<message key="submission.backToSubmissionEditing">Takaisin käsikirjoituksen toimittamiseen</message>
+	<message key="submission.changeComments">Muuta</message>
+	<message key="submission.changeFile">Vaihda tiedosto</message>
+	<message key="submission.citations">Lähdeviitteet</message>
+	<message key="submission.citations.editor.citationlist.approved">Hyväksytty</message>
+	<message key="submission.citations.editor.citationlist.deleteCitationConfirmation">Haluatko varmasti poistaa tämän viittauksen?</message>
+	<message key="submission.citations.editor.citationlist.errorDeletingCitation">Viittausta poistettaessa tapahtui virhe. Ilmoita virheestä.</message>
+	<message key="submission.citations.editor.citationlist.newCitation">Uusi viittaus</message>
+	<message key="submission.citations.editor.citationlist.notApproved">Ei hyväksytty</message>
+	<message key="submission.citations.editor.citationlist.title">Muokkaa viittauksia</message>
+	<message key="submission.citations.editor.clickToEdit">Klikkaa muokataksesi.</message>
+	<message key="submission.citations.editor.details.authorQuery">Kysy kirjoittajalta</message>
+	<message key="submission.citations.editor.details.authorQueryBody">Viestisi kirjoittajalle:</message>
+	<message key="submission.citations.editor.details.authorQueryExplanation">Voit pyytää kirjoittajalta lisätietoja nykyisestä viittauksesta. Alla olevan "Lähetä"-painikkeen klikkaaminen lähettää viestisi sähköpostitse kirjoittajalle.</message>
+	<message key="submission.citations.editor.details.authorQuerySubject">Aihe:</message>
+	<message key="submission.citations.editor.details.cannotSelectDefaultForLabel">Et voi jättää kentän selitettä tyhjäksi. Poista kenttä, jos et tarvitse sitä</message>
+	<message key="submission.citations.editor.details.checkInGoogleScholar">Tarkista Google Scholarista</message>
+	<message key="submission.citations.editor.details.changeFieldInfo">Kirjoita muutama ensimmäinen kirjain valitaksesi...</message>
+	<message key="submission.citations.editor.details.citationExportPreview">Viittauksen viennin esikatselu</message>
+	<message key="submission.citations.editor.details.citationImprovementResultsActive">Sisäisen viittauspalvelun tulokset (sulje klikkaamalla)</message>
+	<message key="submission.citations.editor.details.citationImprovementResultsInactive">Sisäisen viittauspalvelun tulokset (avaa klikkaamalla)</message>
+	<message key="submission.citations.editor.details.citationServices">Viittauspalvelut</message>
+	<message key="submission.citations.editor.details.clickToDismissMessage">Voit hylätä viestin klikkaamalla sen tekstiä.</message>
+	<message key="submission.citations.editor.details.dataSaved">Tekemäsi muutokset on tallennettu.</message>
+	<message key="submission.citations.editor.details.editRawCitationDatabaseServices">Valitse viittaustietokantojen palvelut:</message>
+	<message key="submission.citations.editor.details.editRawCitationExpertSettingsActive">Viittausten muokkauksen asetukset (sulje klikkaamalla)</message>
+	<message key="submission.citations.editor.details.editRawCitationExpertSettingsInactive">Viittausten muokkauksen asetukset (avaa klikkaamalla)</message>
+	<message key="submission.citations.editor.details.editRawCitationExtractionServices">Valitse viittausten poimintapalvelut:</message>
+	<message key="submission.citations.editor.details.editRawCitationFilterValidationError">Sisäinen virhe: Virheellinen suodatinvalinta. Lähetä virheraportti.</message>
+	<message key="submission.citations.editor.details.explainImprovementOptions">Jos et saanut tyydyttäviä tuloksia oletuksena, sinulla on useita vaihtoehtoja viittauksen parantamiseksi. Usein kannattaa muokata tärkeitä kenttiä (esim. otsikko ja kirjoittaja) manuaalisesti, ja kokeilla sen jälkeen viittauspalveluita uudelleen. Mikäli siitä ei ole apua, voit vielä tehdä haun Google Scholarissa tai kysyä kirjoittajalta.</message>
+	<message key="submission.citations.editor.details.googleScholar">Google Scholar</message>
+	<message key="submission.citations.editor.details.googleScholarExplanation">Mikäli vastaavaa viittausta ei löytynyt mistään tarjolla olevista viittauspalveluista, voit vielä etsiä vastinetta Google Scholarista. Valitettavasti Google Scholar ei tarjoa kenttäpohjaista käyttöliittymää, minkä vuoksi sieltä ei saada automaattisesti tuotettua tietoja tähän työkaluun. Tiedot pitää kopioida ja liittää manuaalisesti Googlen tulossivulta ao. kenttiin.</message>
+	<message key="submission.citations.editor.details.manualEditing">Manuaalinen muokkaaminen</message>
+	<message key="submission.citations.editor.details.messages">Huomaa (hylkää viestit klikkaamalla niitä)</message>
+	<message key="submission.citations.editor.details.newFieldInfo">...klikkaa tästä lisätäksesi uuden kentän...</message>
+	<message key="submission.citations.editor.details.queryCitation">Hae uudelleen viittauspalveluista</message>
+	<message key="submission.citations.editor.details.queryGoogleScholar">Hae Google Scholarista</message>
+	<message key="submission.citations.editor.details.processRawCitation">Käsittele</message>
+	<message key="submission.citations.editor.details.processRawCitationGoAhead">Aloita</message>
+	<message key="submission.citations.editor.details.processRawCitationTitle">Alkuperäisen viittauksen muuttaminen</message>
+	<message key="submission.citations.editor.details.processRawCitationWarning">Olet muuttamassa alkuperäisen viittauksen tekstiä. Jos jatkat, kaikki kenttien tiedot korvataan juuri luoduilla arvoilla. Tämä poistaa kaikki manuaaliset muutokset, jotka olet jo mahdollisesti tehnyt.</message>
+	<message key="submission.citations.editor.details.saveAndApprove">Tallenna ja hyväksy</message>
+	<message key="submission.citations.editor.details.saveAndRevokeApproval">Kumoa hyväksyntä</message>
+	<message key="submission.citations.editor.details.sendAuthorQuery">Lähetä viesti</message>
+	<message key="submission.citations.editor.details.sendAuthorQuerySuccess">Viesti on lähetetty!</message>
+	<message key="submission.citations.editor.details.sourceResultsUse">Käytä</message>
+	<message key="submission.citations.editor.details.sourceResultsUseAll">Käytä kaikkia</message>
+	<message key="submission.citations.editor.details.sourceResultsUseAllExplanation">Klikkaa siirtääksesi kaikki tämän lähteen tuloskentät suoraan kenttäluetteloosi</message>
+	<message key="submission.citations.editor.details.sourceResultsUseExplanation">Klikkaa siirtääksesi tämän tuloskentän suoraan kenttäluetteloosi</message>
+	<message key="submission.citations.editor.details.rawCitation">Alkuperäinen viittauksen teksti</message>
+	<message key="submission.citations.editor.details.rawCitationRequired">Viittauksen teksti vaaditaan.</message>
+	<message key="submission.citations.editor.details.unsavedChanges">Viittaus sisältää tallentamattomia tietoja. Klikkaa “Tallenna” säilyttääksesi tai “Peruuta” peruaksesi muutokset.</message>
+	<message key="submission.citations.editor.details.dontShowMessageAgain">Älä näytä tätä viestiä uudelleen.</message>
+	<message key="submission.citations.editor.edit">Muokkaa viittauksia</message>
+	<message key="submission.citations.editor.export">Vie viittauksia</message>
+	<message key="submission.citations.editor.export.exportDescription"><![CDATA[<a id="markForExport" href="">Klikkaa tästä</a> valitaksesi kaikki luodut viittaustuotokset.]]><![CDATA[ ]]><![CDATA[Sitten voit kopioida ja liittää ne omaan asiakirjaasi.]]></message>
+	<message key="submission.citations.editor.export.filterSelectionDescription">Valitse yksi seuraavista vientivaihtoehdoista.</message>
+	<message key="submission.citations.editor.export.filterSelectionError">Et valinnut yhtään viittaustuotosvaihtoehtoa.</message>
+	<message key="submission.citations.editor.export.foundUnapprovedCitationsMessage"><![CDATA[<p>Et ole vielä hyväksynyt kaikkia viittauksia.]]><![CDATA[ ]]><![CDATA[Siirry <strong>Muokkaa viittauksia</strong> -välilehdelle ja varmista, että olet hyväksynyt kaikki viittaukset, ennen kuin yrität viedä niitä.]]><![CDATA[ ]]><![CDATA[Hyväksytyt viittaukset on merkitty vasemmalla olevalla tumman sinisellä raidalla.</p>]]></message>
+	<message key="submission.citations.editor.export.noExportOutput">{$filterName} -suodatin on aiheuttanut virheen. Lähetä virheraportti.</message>
+	<message key="submission.citations.editor.export.pleaseSelectXmlFilter">XML-viittaustuotosvaihtoehdot:</message>
+	<message key="submission.citations.editor.export.pleaseSelectPlaintextFilter">Viittauksen tyyli (vain koekäytössä!):</message>
+	<message key="submission.citations.editor.introduction">Esittely</message>
+	<message key="submission.citations.editor.introduction.introductionMessage"><![CDATA[<h4>Tervetuloa viittaustenhallintatyökaluun!</h4> <p>Työkalun avulla voit korjata kirjoittajan tekemiä viittauksia NLM 2.3 tai 3.0 XML -muotoiseen julkaistavaan tiedostoon vientiä varten tai vaihtoehtoisesti tekstipohjaisiksi tuotoksiksi.]]><![CDATA[ ]]><![CDATA[Tämä työkalu yrittää ensin automaattisesti poimia ja tunnistaa viittaukset sellaisena kuin ne on annettu, mutta voit muokata tuloksia milloin tahansa.</p> <ul> <li><p><strong>Työkalun määrittäminen</strong></p> <p>Julkaisun hallinnoija määrittää viittaustenhallintatyökalun kohdassa <a href="{$citationSetupUrl}">Julkaisun asetukset, vaihe 3.7:]]><![CDATA[ ]]><![CDATA[Viittaustenhallintatyökalu</a>.]]><![CDATA[ ]]><![CDATA[Erilaisia viittausten poimintaan ja tarkistukseen liittyviä työkaluja voidaan lisätä, määrittää ja poistaa.]]><![CDATA[ ]]><![CDATA[Ota yhteyttä julkaisun hallinnoijaan saadaksesi lisätietoja.</p></li> <li><p><strong>Työkalun käyttöliittymässä navigointi</strong></p> <p>Liikkuaksesi <strong>”Esittely”<strong>, <strong/>”Muokkaa viittauksia”</strong> ja <strong>”Vie viittauksia”</strong> -välilehtien välillä klikkaa niiden otsikoita.]]><![CDATA[ ]]><![CDATA[Voit laajentaa viittauskäyttöliittymän klikkaamalla <strong>Koko näyttö</strong> -painiketta.]]><![CDATA[ ]]><![CDATA[Palataksesi laajennetusta viittauskäyttöliittymästä normaaliin liittymään klikkaa <strong>Koko näyttö pois</strong> -painiketta.]]><![CDATA[ ]]><![CDATA[Jos haluat poistaa tämän esittelyvälilehden kokonaan, klikkaa alla olevaa painiketta.</p></li> <li><p><strong>Viittausten pyytäminen</strong></p> <p>Jos viittaustenhallintatyökalu on otettu käyttöön julkaisun hallinnoijan toimesta, kirjoittajia muistutetaan lähdeluettelosta artikkelin lähetyksen yhteydessä.]]><![CDATA[ ]]><![CDATA[Lähdeviitteet pyydetään toimittamaan käsikirjoitusasiakirjasta erillisenä.]]><![CDATA[ ]]><![CDATA[Käsikirjoituksen lähettämisen jälkeen kirjoittajat voivat muuttaa lähdeluetteloaan milloin tahansa muokkaamalla käsikirjoituksen metatietoja. Huomaa, että tämä korvaa kaikki muutokset, jotka olet tehnyt viittauksiin tällä työkalulla.</p></li> <li><p><strong>Viittausten muokkaaminen</strong></p> <p>Viittaustenhallintatyökalu yrittää tunnistaa ja poimia yksittäiset viittaukset kirjoittajan lähdeluettelosta.]]><![CDATA[ ]]><![CDATA[Voit tarkistaa järjestelmällisesti jokaisen poimitun viittauksen virheettömyyden vertaamalla sitä useisiin ulkoisiin tietokantoihin. Voit myös muokata virheellisiä viittaustietoja ja lisätä uusia tietoja, hyväksyä tai poistaa viittauksia sekä lisätä uusia viittauksia.</p> <p>Kaikki käsikirjoituksen lopulliset viittaukset on hyväksyttävä, ennen kuin niitä voidaan viedä.</p><li> <li><p><strong>Viittausten vieminen</strong></p> <p>Viittaukset voidaan viedä XML- tai tekstimuotoisina.]]><![CDATA[ ]]><![CDATA[XML-viennin vaihtoehtoihin kuuluvat tällä hetkellä <a href="http://dtd.nlm.nih.gov/publishing/">NLM Journal Publishing</a> 2.3 ja 3.0 versioiden<a href="http://www.ncbi.nlm.nih.gov/pmc/pmcdoc/tagging-guidelines/article/tags.html#el-reflist">XML-”ref-list”-muodot</a>.]]><![CDATA[ ]]><![CDATA[Jommankumman vaihtoehdon valinta tuottaa XML-koodatun “ref-list”-katkelman, joka voidaan kopioida ja liittää NLM:n XML-muotoiseen julkaistavaan tiedostoon.</p> <p>Kokeellisiin tekstin vientivaihtoehtoihin kuuluvat ABNT, APA, MLA ja Vancouver -viittaustyylit.]]><![CDATA[ ]]><![CDATA[Nämä vaihtoehdot antavat tekstituotoksen, joka voidaan kopioida ja liittää tekstipohjaiseen artikkelitiedostoon (esim. Microsoft Wordissä, OpenOfficessa, Adobe InDesignissa jne.).]]><![CDATA[ ]]><![CDATA[Jokainen viittaus sisältää upotetun linkin, jonka avulla voidaan automaattisesti hakea kyseistä viittausta Google Scholarissa.</p></li> </ul>]]></message>
+	<message key="submission.citations.editor.loadMessage">Viittaustenhallintatyökalu latautuu, odota hetki.</message>
+	<message key="submission.citations.editor.pleaseImportCitationsFirst"><![CDATA[<p>Tälle artikkelille ei ole viittauksia.</p><p>Mene artikkelin <a href="{$articleMetadataUrl}">metatietosivulle</a> ja syötä lähdeluettelo tai lisää lähdeviitteet manuaalisesti Lisää kohta -painiketta käyttäen.</p>]]></message>
+	<message key="submission.citations.editor.pleaseSelect">Valitse...</message>
+	<message key="submission.citations.editor.unprocessedCitations">Tämän artikkelin viittauksia käsitellään edelleen. Tämänhetkinen viittausluettelo sisältää ainoastaan jo käsitellyt viittaukset. Klikkaa päivitä-painiketta nähdäksesi tällä välin käsitellyt viittaukset.</message>
+	<message key="submission.citations.editor.unprocessedCitationsButton">Päivitä viittausluettelo</message>
+	<message key="submission.citations.editor.unprocessedCitationsButtonTitle">Klikkaa päivittääksesi viittausluettelon.</message>
+	<message key="submission.citations.filter.invalidMetadata">Sijainnissa {$filterName} tapahtui virhe: Yksi datalähteestä (esim. verkkopalvelusta) löydetyistä dataelementeistä ei noudata sisäistä metatietomuotoa. Sen vuoksi datalähteen tulokset hylättiin. Ilmoita virheestä.</message>
+	<message key="submission.citations.filter.noResultFromFilterError">Useat viittauspalvelut eivät tuottaneet tuloksia. Voit koittaa muokata viittauskenttiä manuaalisesti ja tehdä uuden haun viittauspalveluista parantaaksesi tuloksia. Jos tämä ei auta, niin silloin viittausta ei ole missään saatavilla olevista tietokannoista.</message>
+	<message key="submission.citations.filter.unsupportedPublicationType">Ei-tuettu tai puuttuva julkaisun tyyppi. Muokkaa viittausta manuaalisesti ja anna julkaisun tyyppi (sallitut tyypit ovat ‘kirja’, ‘lehti’, ‘opinnäyte’ ja ‘konferenssijulkaisu’).</message>
+	<message key="submission.citations.filter.webserviceError">{$filterName}n verkkopalvelukutsu on tuottanut virheen seuraavalla URL-osoitteella {$webserviceUrl} kutsuttaessa. Verkkopalvelu saattaa olla väliaikaisesti pois käytöstä. Voit silti käyttää muita palveluita ja tallentaa tulokset. Voit myös kokeilla myöhemmin uudelleen. Jos virhe toistuu, pyydä hallinnoijaa poistamaan tämä palvelu käytöstä ja avaamaan virheraportti.</message>
+	<message key="submission.citations.filter.webserviceResultTransformationError">Sijainnissa {$filterName} tapahtui virhe: XML-tulosten (esim. verkkopalvelusta) muuttaminen kenttäpohjaisiksi metatiedoiksi epäonnistui. Syynä on luultavasti, että verkkopalvelu tuotti virheellisiä tai puutteellisia tietoja. Ilmoita virheestä.</message>
+	<message key="submission.citations.metadata.changeWarning">Haluatko varmasti päivittää lähdeluettelosi? Jos painat OK, kaikki toimittajien tekemät muutokset poistetaan. Jos et ole varma pitäisikö sinun tehdä lähdeluetteloon muutoksia, ota yhteyttä käsikirjoituksestasi vastaavaan toimittajaan.</message>
+	<message key="submission.comments.addComment">Lisää kommentti</message>
+	<message key="submission.comments.comments">Kommentit</message>
+	<message key="submission.comments.confirmDelete">Haluatko varmasti poistaa tämän kommentin?</message>
+	<message key="submission.comments.corrections">Korjaukset</message>
+	<message key="submission.comments.editComment">Muokkaa kommenttia</message>
+	<message key="submission.comments.importPeerReviews">Tuo vertaisarviointeja</message>
+	<message key="submission.comments.addReviews">Lisää arvioinnit sähköpostiin</message>
+	<message key="submission.comments.importPeerReviews.reviewerLetter">Arvioija {$reviewerLetter}:</message>
+	<message key="submission.comments.noComments">Ei kommentteja</message>
+	<message key="submission.comments.noReviews">Ei arviointeja</message>
+	<message key="submission.comments.review">Arviointi</message>
+	<message key="submission.comments.sendDecisionToReviewers">Lähetä toimituksellinen päätös arvioijille</message>
+	<message key="submission.comments.subject">Aihe</message>
+	<message key="submission.complete">Valmis</message>
+	<message key="submission.contributors">Tekijäluettelo</message>
+	<message key="submission.copyedited">Teknisesti toimitettu</message>
+	<message key="submission.copyediting">Tekninen toimittaminen</message>
+	<message key="submission.queryNoteFiles">Keskustelutiedostot</message>
+	<message key="submission.coverage">Kattavuustiedot</message>
+	<message key="submission.done">Valmis</message>
+	<message key="submission.dueDate">Määräpäivä</message>
+	<message key="submission.due">Määräpäivä</message>
+	<message key="submission.editing">Toimittaminen</message>
+	<message key="submission.editMetadata">Muokkaa metatietoja</message>
+	<message key="submission.editorial">Tekninen toimittaminen</message>
+	<message key="submission.email.backToEmailLog">Takaisin sähköpostilokiin</message>
+	<message key="submission.email.confirmClearLog">Haluatko varmasti tyhjentää tämän käsikirjoituksen sähköpostilokin?</message>
+	<message key="submission.email.confirmDeleteLogEntry">Haluatko varmasti poistaa tämän sähköpostilokin merkinnän?</message>
+	<message key="submission.email.deleteLogEntry">Poista lokimerkintä</message>
+	<message key="submission.emailLog">Sähköpostiloki</message>
+	<message key="submission.event.backToEventLog">Takaisin tapahtumalokiin</message>
+	<message key="submission.event.confirmClearLog">Haluatko varmasti tyhjentää tämän käsikirjoituksen tapahtumalokin?</message>
+	<message key="submission.event.confirmDeleteLogEntry">Haluatko varmasti poistaa tämän tapahtumalokin merkinnän?</message>
+	<message key="submission.event.deleteLogEntry">Poista lokimerkintä</message>
+	<message key="submission.event.submissionSubmitted">Käsikirjoituksen ensimmäinen lähetys suoritettu.</message>
+	<message key="submission.event.fileUploaded">Tiedosto "{$name}" (tiedoston tunniste {$fileId}-{$fileRevision}) ladattiin.</message>
+	<message key="submission.event.fileRevised">Korjaus "{$name}" (tiedoston tunniste {$fileId}-{$fileRevision}) ladattiin.</message>
+	<message key="submission.event.general.metadataUpdated">Käsikirjoituksen metatiedot päivitetty</message>
+	<message key="submission.event.general.suppFileUpdated">Käsikirjoitustiedosto päivitetty</message>
+	<message key="submission.event.participantAdded">{$name} valittiin tämän käsikirjoituksen {$userGroupName}ksi.</message>
+	<message key="submission.event.reviewer.reviewAcceptedByProxy">Arviointitoimeksianto hyväksytty valtuutetun välityksellä</message>
+	<message key="submission.event.reviewer.reviewAccepted">Arviointitoimeksianto hyväksytty</message>
+	<message key="submission.event.reviewer.reviewCancelled">Arviointitoimeksianto peruutettu</message>
+	<message key="submission.event.reviewer.reviewDeclined">Arviointitoimeksiannosta kieltäydytty</message>
+	<message key="submission.event.reviewer.reviewDueDate">Arvioinnin määräpäivää muutettu</message>
+	<message key="submission.event.reviewer.reviewerAssigned">Arvioija valittu käsikirjoitukselle</message>
+	<message key="submission.event.reviewer.reviewerRated">Arvioijan arvostelu lähetetty</message>
+	<message key="submission.event.reviewer.reviewerUnassigned">Käsikirjoituksen arvioija poistettu</message>
+	<message key="submission.event.reviewer.reviewFile">Arviointitiedosto päivitetty</message>
+	<message key="submission.event.reviewer.reviewInitiated">Toimeksiannon arviointi aloitettu</message>
+	<message key="submission.event.reviewer.reviewRecommendation">Arviointisuositustiedosto</message>
+	<message key="submission.event.reviewer.reviewReinitiated">Toimeksiannon arviointi aloitettu uudelleen</message>
+	<message key="submission.event.reviewer.reviewResubmitted">Arviointi lähetetty uudelleen</message>
+	<message key="submission.event.reviewer.reviewRevision">Arvioijan korjaama tiedosto päivitetty</message>
+	<message key="submission.event.subjectPrefix">Sähköposti on lähetetty:</message>
+	<message key="submission.event.viewEmail">Näytä sähköposti</message>
+	<message key="submission.files">Tiedostot</message>
+	<message key="submission.files.downloadAll">Lataa kaikki tiedostot</message>
+	<message key="submission.galley">Julkaistava tiedosto</message>
+	<message key="submission.history.clearLog">Tyhjennä loki</message>
+	<message key="submission.history">Historia</message>
+	<message key="submission.history.noLogEntries">Ei lokimerkintöjä.</message>
+	<message key="submission.history.recentLogEntries">Viimeisimmät merkinnät</message>
+	<message key="submission.history.submissionEmailLog">Sähköpostiloki</message>
+	<message key="submission.history.submissionEventLog">Tapahtumaloki</message>
+	<message key="submission.history.submissionNotes">Käsikirjoitukseen liittyvät muistiinpanot</message>
+	<message key="submission.history.viewLog">Näytä loki</message>
+	<message key="submission.howToCite">Viittaaminen</message>
+	<message key="submission.howToCite.citationFormats">Viittausmuodot</message>
+	<message key="submission.indexing">Indeksointi</message>
+	<message key="submission.initiated">Aloitettu</message>
+
+	<!-- Identifiers -->
+	<message key="submission.identifiers">Tunnisteet</message>
+	<message key="submission.publisherId">Julkinen URL-tunniste</message>
+
+	<!-- Information Center -->
+	<message key="submission.informationCenter.submissionInfo">Käsikirjoituksen tiedot</message>
+	<message key="submission.informationCenter.metadata">Metatiedot</message>
+	<message key="submission.informationCenter.notes">Muistiinpanot</message>
+	<message key="submission.informationCenter.history">Historia</message>
+	<message key="submission.informationCenter.history.allEvents">Näytä edellisten versioiden tapahtumat</message>
+
+	<!-- Stage Participants -->
+	<message key="submission.stageParticipants.notify">Ilmoita</message>
+
+	<message key="submission.lastModified">Muutettu viimeksi</message>
+	<message key="submission.layout.addGalley">Lisää julkaistava tiedosto</message>
+	<message key="submission.layout.confirmDeleteGalley">Haluatko varmasti poistaa tämän julkaistavan tiedoston pysyvästi?</message>
+	<message key="submission.layout.confirmDeleteGalleyImage">Haluatko varmasti poistaa tämän kuvan julkaistavasta tiedostosta?</message>
+	<message key="submission.layout.confirmDeleteSupplementaryFile">Haluatko varmasti poistaa tämän liitetiedoston pysyvästi?</message>
+	<message key="submission.layout.deleteGalleyStylesheet">Poista tämä tyylitiedosto.</message>
+	<message key="submission.layout.editGalley">Muokkaa julkaistavaa tiedostoa</message>
+	<message key="submission.layout.galleyFormat">Julkaistava tiedosto</message>
+	<message key="submission.layout.galleyHTMLData">HTML-muotoiset julkaistavat tiedostot</message>
+	<message key="submission.layout.galleyImages">Kuvat</message>
+	<message key="submission.layout.galleyLabel">Julkaistavan tiedoston selite</message>
+	<message key="submission.layout.galleyLabelInstructions">Käytetään tyypillisesti identifioimaan tiedostomuotoa (PDF, HTML jne.).</message>
+	<message key="submission.layout.galleyLabelRequired">Julkaistavan tiedoston selite vaaditaan.</message>
+	<message key="submission.layout.galleyLanguageRequired">Julkaistavan tiedoston kieli vaaditaan.</message>
+	<message key="submission.layout.galleyLocaleRequired">Julkaistavan tiedoston kielialue vaaditaan.</message>
+	<message key="submission.layout.galleyRemoteURL">Etä-URL-osoite</message>
+	<message key="submission.layout.galleyRemoteURLValid">Anna kelvollinen etä-URL-osoite (sisällytä http://).</message>
+	<message key="submission.layout.galleyNoImages">Ei kuvia</message>
+	<message key="submission.layout.galleys">Julkaistavat tiedostot</message>
+	<message key="submission.layout.galleyStylesheet">Tyylitiedosto</message>
+	<message key="submission.layout.galleyStyle">Tyyli</message>
+	<message key="submission.layout.initialGalleyCreation">Julkaistavan tiedoston ensimmäinen luominen</message>
+	<message key="submission.layout.layoutFile">Taittotiedosto</message>
+	<message key="submission.layout">Taitto</message>
+	<message key="submission.layout.layoutVersion">Taittoversio</message>
+	<message key="submission.layout.newGalley">Luo uusi julkaistava tiedosto</message>
+	<message key="submission.layout.newSupplementaryFile">Lataa uusi liitetiedosto</message>
+	<message key="submission.layout.noStyleFile">Tyylitiedostoa ei ole lisätty tähän julkaistavaan tiedostoon.</message>
+	<message key="submission.layout.supplementaryFiles">Liitetiedoston arviointi</message>
+	<message key="submission.layout.viewingGalley">Julkaistavan tiedoston katselu</message>
+	<message key="submission.layout.viewProof">Näytä korjausvedos</message>
+	<message key="submission.metadata">Käsikirjoituksen metatiedot</message>
+	<message key="submission.noReviewAssignments">Ei arviointitoimeksiantoja</message>
+	<message key="submission.notes.addNewNote">Lisää uusi muistiinpano</message>
+	<message key="submission.notes.attachedFile">Liitetiedosto</message>
+	<message key="submission.notes.backToSubmissionNotes">Takaisin käsikirjoituksen muistiinpanoihin</message>
+	<message key="submission.notes.breadcrumb">Muistiinpanot</message>
+	<message key="submission.notes.clearAllNotes">Poista kaikki muistiinpanot</message>
+	<message key="submission.notes.collapseNotes">Kutista muistiinpanot</message>
+	<message key="submission.notes.confirmDeleteAll">Poistetaanko kaikki käsikirjoitukseen liittyvät muistiinpanot?</message>
+	<message key="submission.notes.confirmDelete">Poistetaanko tämä käsikirjoitukseen liittyvä muistiinpano?</message>
+	<message key="submission.notes.createNewNote">Luo uusi muistiinpano</message>
+	<message key="submission.notes.deleteNote">Poista muistiinpano</message>
+	<message key="submission.notes.editNote">Muokkaa muistiinpanoa</message>
+	<message key="submission.notes.expandNotes">Laajenna muistiinpanot</message>
+	<message key="submission.notes.noSubmissionNotes">Ei käsikirjoitukseen liittyviä muistiinpanoja</message>
+	<message key="submission.notes.removeUploadedFile">Poista ladattu tiedosto</message>
+	<message key="submission.notes">Käsikirjoitukseen liittyvät muistiinpanot</message>
+	<message key="submission.notes.updateNote">Päivitä muistiinpano</message>
+	<message key="submission.notes.viewNotes">Näytä muistiinpanot</message>
+	<message key="submission.originalFile">Alkuperäinen tiedosto</message>
+	<message key="submission.page.editing">Sivun {$id} toimittaminen</message>
+	<message key="submission.page.history">Sivun {$id} historia</message>
+	<message key="submission.page.review">Sivun {$id} arviointi</message>
+	<message key="submission.page.summary">Sivun {$id} yhteenveto</message>
+	<message key="submission.page.citations">Sivun {$id} viittaukset</message>
+	<message key="submission.peerReview">Vertaisarviointi</message>
+	<message key="submission.production">Tuotanto</message>
+	<message key="submission.recommendation">Suositus: {$recommendation}</message>
+	<message key="submission.rejected">Hylätty</message>
+	<message key="submission.request">Pyyntö</message>
+	<message key="submission.response">Vastaus</message>
+	<message key="submission.restrictions">Rajoitukset</message>
+	<message key="submission.reviewMetadata">Tarkista metatiedot</message>
+	<message key="submission.review">Arviointi</message>
+	<message key="submission.reviewed">Arvioitu</message>
+	<message key="submission.reviewVersion">Arviointiversio</message>
+	<message key="submission.rights">Oikeudet</message>
+	<message key="submission.rights.tip">Voit halutessasi kertoa lyhyesti tämän käsikirjoituksen käyttöoikeuksista.</message>
+	<message key="submissions.active">Aktiiviset</message>
+	<message key="submissions.archived">Arkistoidut</message>
+	<message key="submission.saveMetadata">Tallenna metatiedot</message>
+	<message key="submissions.completed">Valmiit</message>
+	<message key="submissions.declined">Hylätyt</message>
+	<message key="submissions.incomplete">Keskeneräiset</message>
+	<message key="submissions.noSubmissions">Ei käsikirjoituksia</message>
+	<message key="submissions.queuedEditing">Toimitettavana</message>
+	<message key="submissions.queued">Jonossa</message>
+	<message key="submissions.queuedUnassigned">Odottaa osoittamista</message>
+	<message key="submissions.ruling">Määräys</message>
+	<message key="submission.source">Lähde</message>
+	<message key="submission.source.tip">Onko tämä käsikirjoitus peräisin toisesta resurssista? Siinä tapauksessa voit antaa URL-osoitteen tai kuvauksen kyseisestä resurssista.</message>
+	<message key="submissions.submit">Lähetä</message>
+	<message key="submissions.submitted">Lähetetyt</message>
+	<message key="submission.submission">Käsikirjoitus</message>
+	<message key="submission.submissionTitle">Käsikirjoituksen otsikko:</message>
+	<message key="submission.start">Aloita</message>
+	<message key="submission.submissionHistory">Käsikirjoituksen historia</message>
+	<message key="submission.submissionManuscript">Lähetyksen käsikirjoitus</message>
+	<message key="submission.submissionReview">Käsikirjoituksen arviointi</message>
+	<message key="submission.submitter">Lähettäjä</message>
+	<message key="submission.submit.finishSubmission">Suorita lähetys</message>
+	<message key="submission.submit.selectFile">Valitse tiedosto</message>
+	<message key="submission.submit.fileInformation">Tiedoston tiedot</message>
+	<message key="submission.submit.fileAdded">Tiedosto lisätty</message>
+	<message key="submission.submit.includeInBrowse">Sisällytetäänkö tämä tekijä selausluetteloihin?</message>
+	<message key="submission.submit.newFile">Lisää toinen tiedosto</message>
+	<message key="submission.submit.metadataForm">Lisätarkennuksia</message>
+	<message key="submission.submit.metadataForm.tip">Lisää käsikirjoitukseesi lisätietoja. Paina enteriä jokaisen termin jälkeen.</message>
+	<message key="submission.submit.submissionLocale">Käsikirjoituksen kieli</message>
+	<message key="submission.submit.submissionLocaleDescription">Tämä paino hyväksyy käsikirjoituksia useilla kielillä. Valitse käsikirjoituksen ensisijainen kieli yllä olevasta vetovalikosta.</message>
+	<message key="submission.submit.submissionFiles">Käsikirjoitustiedostot</message>
+	<message key="submission.submit.dependentFiles">Riippuvat tiedostot</message>
+	<message key="submission.manageDependentFiles">Hallinnoi riippuvia tiedostoja</message>
+	<message key="submission.upload.dependent">Lataa riippuva tiedosto</message>
+	<message key="submission.upload.query">Lataa keskustelutiedosto</message>
+	<message key="submission.summary">Yhteenveto</message>
+	<message key="submission.supplementaryFiles">Liitetiedostot</message>
+	<message key="submission.supportingAgencies">Kannattajajärjestöt</message>
+	<message key="submission.currentAgencies">Nykyiset järjestöt</message>
+	<message key="submission.indexingInformation">Indeksointitiedot</message>
+	<message key="submission.titleAndAbstract">Otsikko ja abstrakti</message>
+	<message key="submission.type.tip"><![CDATA[Käsikirjoitustiedosto on yleensä muodoltaan "kuva", "teksti" tai muu multimediamuoto, kuten "ohjelmisto" tai "interaktiivinen".]]><![CDATA[ ]]><![CDATA[Valitse käsikirjoituksesi kannalta oleellisin muoto.]]><![CDATA[ ]]><![CDATA[Esimerkkejä löytyy osoitteesta <a target="_blank" href="http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type">http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</a>]]></message>
+	<message key="submission.underway">Käynnissä</message>
+	<message key="submission.uploadFileTo">Lataa tiedosto sijaintiin</message>
+	<message key="submission.createRemote">Luo etä-</message>
+	<message key="submission.viewMetadata">Näytä metatiedot</message>
+	<message key="submission.views">Katselukerrat</message>
+	<message key="submission.uploadSuccessful">Tiedostosi on ladattu.</message>
+	<message key="submission.loadMessage">Odota, kunnes tiedosto on ladattu palvelimelle.</message>
+	<message key="submission.artworkFileDetails">Kuvamateriaalitiedoston tiedot</message>
+	<message key="submission.fileDetails">Tiedoston tiedot</message>
+	<message key="submission.nameRequired">Tälle kohteelle vaaditaan nimi.</message>
+	<message key="submission.date.mmdd">KK-PP</message>
+	<message key="submission.date.yyyymmdd">VVVV-KK-PP</message>
+	<message key="submission.submit.selectPrincipalContact">Pääasiallinen yhteyshenkilö toimituksellisissa yhteydenotoissa.</message>
+	<message key="submission.submit.contributorRole">Tekijän rooli</message>
+	<message key="submission.submit.addAuthor">Lisää tekijä</message>
+
+	<!-- Submission file upload form elements -->
+	<message key="submission.form.name">Nimeä tiedosto (esim. Käsikirjoitus; Taulukko 1)</message>
+	<message key="submission.form.replaceExisting">Korvataanko olemassa oleva tiedosto?</message>
+
+	<!-- Workflow keys -->
+	<message key="workflow.review.internalReview">Sisäinen arviointi</message>
+	<message key="workflow.stage.any">Mikä tahansa vaihe</message>
+	<message key="workflow.stage">Vaihe</message>
+
+
+	<!-- Submission status -->
+	<message key="submission.status.editorial">Teknisesti toimitettavana</message>
+	<message key="submission.status.production">Oikoluettavana</message>
+	<message key="submission.status.review">Arvioitavana</message>
+	<message key="submission.status.submission">Odottaa toimittajan päätöstä</message>
+	<message key="submission.status.unassigned">Osoittamaton</message>
+	<message key="submission.status.declined">Hylätty</message>
+	<message key="submission.status.published">Julkaistu</message>
+
+	<message key="submission.submit.uploadStep">1. Lataa tiedosto</message>
+	<message key="submission.submit.uploadSubmissionFile">Lataa käsikirjoitustiedosto</message>
+	<message key="submission.submit.metadataStep">2. Tarkista tiedot</message>
+	<message key="submission.submit.finishingUpStep">3. Vahvista</message>
+	<message key="submission.submit.fileNameRequired">Sinun on annettava tiedostonimi tälle tiedostolle</message>
+
+	<!-- File upload wizard -->
+	<message key="submission.upload.noGenre">Puuttuva tai virheellinen osa!</message>
+	<message key="submission.upload.invalidUserGroup">Puuttuva tai virheellinen käyttäjäryhmä!</message>
+	<message key="submission.upload.possibleRevision">Mahdollinen päällekkäisyys tai korjattu versio havaittu</message>
+	<message key="submission.upload.possibleRevisionDescription"><![CDATA[Ladatun tiedoston nimi muistuttaa aiemmin ladatun tiedoston nimeä, "{$revisedFileName}."]]><![CDATA[ ]]><![CDATA[Onko tämän tiedoston tarkoitus korvata "{$revisedFileName}"?]]><![CDATA[ ]]><![CDATA[Jos näin on, valitse tiedosto alla.]]><![CDATA[ ]]><![CDATA[Muussa tapauksessa valitse "Tämä ei ole olemassa olevan tiedoston korjattu versio", ennen kuin jatkat.]]></message>
+	<message key="submission.upload.selectMandatoryFileToRevise">Valitse tiedosto, johon haluat tehdä korjauksia.</message>
+	<message key="submission.upload.selectOptionalFileToRevise">Jos olet lataamassa olemassa olevan tiedoston korjattua versiota, ilmoita mikä tiedosto on kyseessä.</message>
+	<message key="submission.upload.uploadNewFile">Tämä ei ole olemassa olevan tiedoston korjattu versio</message>
+	<message key="submission.upload.userGroup">Lataa tämä tiedosto roolissani...</message>
+	<message key="submission.upload.userGroupDescription">Jos olet lähettämässä editoitua volyymiä, kaikki volyymin luvut tulisi ladata yksitellen volyymin toimittajan roolissa.</message>
+	<message key="submission.upload.uploadLibraryFile">Lataa kirjastotiedosto</message>
+	<message key="submission.upload.libraryCategory">Käsikirjoitusasiakirjan kategoria</message>
+
+	<!-- File uploads -->
+	<message key="submission.upload.finalDraft">Lataa tiedosto</message>
+	<message key="submission.upload.copyeditedVersion">Lataa teknisesti toimitettu tiedosto</message>
+	<message key="submission.upload.fairCopy">Lataa puhtaaksikirjoitettu teksti</message>
+	<message key="submission.upload.uploadFiles">Lataa tiedostot</message>
+	<message key="submission.upload.response.description">Arvioituasi osoitetun tiedoston tallenna kommentit alla olevaan tiedostoon ja/tai lataa selityksin varustettu tiedostoversio (tai muu tiedosto).</message>
+	<message key="submission.upload.productionReady">Lataa tuotantovalmis tiedosto</message>
+	<message key="submission.upload.proof">Lataa tiedosto, joka on valmis julkaistavaksi</message>
+	<message key="submission.upload.noAvailableReviewFiles">Tällä hetkellä sinulla ei ole korjattavia tiedostoja.</message>
+
+	<!-- Review Round Status Keys -->
+	<message key="editor.submission.roundStatus.revisionsRequested">Korjauksia on pyydetty.</message>
+	<message key="editor.submission.roundStatus.resubmitted">Käsikirjoitus on lähetetty uudelleen arvioitavaksi.</message>
+	<message key="editor.submission.roundStatus.sentToExternal">Lähetetty ulkopuoliseen arviointiin.</message>
+	<message key="editor.submission.roundStatus.accepted">Käsikirjoitus hyväksytty.</message>
+	<message key="editor.submission.roundStatus.declined">Käsikirjoitus hylätty.</message>
+	<message key="editor.submission.roundStatus.pendingReviewers">Odottaa arvioijien valintaa.</message>
+	<message key="editor.submission.roundStatus.pendingReviews">Odottaa vastauksia arvioijilta.</message>
+	<message key="editor.submission.roundStatus.reviewsReady">Uusia arviointeja on lähetetty.</message>
+	<message key="editor.submission.roundStatus.reviewsCompleted">Arvioinnit suoritettu.</message>
+
+	<!-- Participants -->
+	<message key="editor.submission.stageParticipants">Osallistujat</message>
+
+	<!-- Stage Participants grid -->
+	<message key="editor.submission.noneAssigned">Ei osoitettuja</message>
+	<message key="editor.submission.participant">Osallistuja</message>
+	<message key="editor.submission.addStageParticipant">Lisää osallistuja</message>
+	<message key="editor.submission.addStageParticipant.userGroup">Käyttäjät valitaan työnkulun vaiheisiin käyttäjäryhmän perusteella. Kaikki tähän vaiheeseen valitut käyttäjät liitetään automaattisesti muihin vaiheisiin, joihin heidän käyttäjäryhmänsä on valittu. Tämä koskee yleensä toimittajia, kirjoittajia ja kääntäjiä.</message>
+	<message key="editor.submission.removeStageParticipant">Poista osallistuja</message>
+	<message key="editor.submission.removeStageParticipant.description"><![CDATA[Olet poistamassa tämän osallistujan <strong>kaikista</strong> vaiheista.]]><![CDATA[ ]]><![CDATA[Jos käyttäjällä on avoimia tarkastajan tehtäviä, myös ne poistetaan.]]></message>
+	<message key="editor.submission.addStageParticipant.form.userGroupRequired">Sinun on valittava käyttäjäryhmä.</message>
+	<message key="editor.submission.addStageParticipant.form.userRequired">Sinun on valittava käyttäjä määritettyyn käyttäjäryhmään.</message>
+
+	<!--  editor decisions -->
+	<message key="editor.submission.decision">Päätös</message>
+	<message key="editor.submission.decision.accept">Lähetä teknisesti toimitettavaksi</message>
+	<message key="editor.submission.decision.requestRevisions">Pyydä korjauksia</message>
+	<message key="editor.submission.decision.resubmit">Lähetä uudelleen arvioitavaksi</message>
+	<message key="editor.submission.decision.decline">Hylkää käsikirjoitus</message>
+	<message key="editor.submission.decision.sendToProduction">Lähetä tuotantoon</message>
+	<message key="editor.submission.decision.sendInternalReview">Lähetä sisäiseen arviointiin</message>
+	<message key="editor.submission.decision.approveProofsDescription">Sivun korjausvedostiedosto on merkittävä hyväksytyksi, jotta se tulee saataville. Haluatko hyväksyä sen?</message>
+	<message key="editor.submission.decision.approveProofs">Hyväksy korjausvedokset</message>
+	<message key="editor.submission.decision.disapproveProofsDescription">Tämä tiedoston korjausvedos ei ole enää julkistettava ladattavissa tai ostettavissa. Haluatko jättää sen hyväksymättä?</message>
+
+	<!-- workflow navigation keys -->
+	<message key="submission.currentStage">Nykyinen vaihe</message>
+	<message key="submission.noActionRequired">Ei vaadi toimenpiteitä</message>
+	<message key="submission.actionNeeded">Vaatii toimenpiteitä</message>
+
+	<message key="reviewer.submission.reviewFiles">Arviointitiedostot</message>
+	<message key="submission.submit.currentFile">Nykyinen tiedosto</message>
+	<message key="submission.finalDraft">Luonnostiedostot</message>
+
+	<!-- Auditor keys -->
+	<message key="editor.submission.addAuditorError">Tarkastajaa valittaessa tapahtui virhe. Yritä uudelleen.</message>
+
+	<!-- Submission event log -->
+	<message key="submission.event.fileUploaded">{$username} latasi tiedoston "{$originalFileName}" käsikirjoitukseen {$submissionId} liittyen.</message>
+	<message key="submission.event.fileDeleted">{$username} poisti tiedoston "{$originalFileName}" käsikirjoitukseen {$submissionId} liittyen.</message>
+	<message key="submission.event.revisionUploaded">{$username} latasi korjatun tiedoston "{$originalFileName}" käsikirjoitukseen {$submissionId} liittyen.</message>
+	<message key="submission.event.revisionDeleted">{$username} poisti korjatun tiedoston "{$originalFileName}" käsikirjoitukseen {$submissionId} liittyen.</message>
+	<message key="submission.event.lastRevisionDeleted">{$username} poisti tiedoston "{$title}" viimeisimmän korjatun version.</message>
+	<message key="submission.event.fileAuditorAdded">"{$name}" ({$username}) lisättiin tiedoston "{$file}" tarkastajaksi.</message>
+	<message key="submission.event.fileAuditorCleared">"{$name}" ({$username}) on poistettiin tiedoston "{$file}" tarkastajan roolista.</message>
+	<message key="submission.event.fileAuditUploaded">"{$name}" ({$username}) on suorittanut tarkastuksen ja on ladannut tiedoston "{$file}."</message>
+	<message key="submission.event.signoffSignoff">"{$name}" ({$username}) on kirjautunut ulos tiedoston "{$file}" uloskirjauksessa.</message>
+	<message key="submission.event.proofsApproved">"{$name}" ({$username}) on hyväksynyt "{$formatName}":n korjausvedokset.</message>
+	<message key="submission.overview">Käsikirjoituksen yleiskatsaus</message>
+	<message key="submission.description">Kuvaus</message>
+	<message key="submission.stageNotInitiated">Vaihetta ei aloitettu.</message>
+	<message key="submission.documents">Käsikirjoituksen asiakirjat</message>
+	<message key="notification.type.copyeditorRequest">Sinua on pyydetty arvioimaan nimikkeen "{$title}" teknisesti toimitetut tiedostot.</message>
+	<message key="notification.type.layouteditorRequest">Sinua on pyydetty arvioimaan nimikkeen "{$title}" taitot.</message>
+	<message key="notification.type.indexRequest">Sinua on pyydetty luomaan indeksi nimikkeelle "{$title}".</message>
+	<message key="notification.type.editorDecisionTitle">Viimeisin toimittajan päätös.</message>
+	<message key="notification.type.editorDecisionAccept">Käsikirjoitus hyväksytty.</message>
+	<message key="notification.type.editorDecisionExternalReview">Ulkopuolinen arviointiprosessi aloitettu.</message>
+	<message key="notification.type.editorDecisionPendingRevisions">Korjattu versio vaaditaan.</message>
+	<message key="notification.type.editorDecisionResubmit">Lähetä uudelleen arvioitavaksi.</message>
+	<message key="notification.type.editorDecisionDecline">Käsikirjoitus hylätty.</message>
+	<message key="notification.type.editorDecisionSendToProduction">Tuotantoprosessi aloitettu.</message>
+	<message key="notification.uploadedResponse">Vastaus ladattu.</message>
+
+	<message key="notification.type.editorAssignment">Toimittaja on valittava, ennen kuin arviointi aloitetaan. Lisää toimittaja yllä olevaa Osallistujat-linkkiä käyttäen.</message>
+	<message key="grid.reviewAttachments.title">Arvioijan liitteet</message>
+	<message key="submission.productionReady">Varaa saatavilla oleva</message>
+	<message key="submission.review.uploadRevisionToRound">Lataa korjattu tiedosto</message>
+	<message key="log.review.reviewerAssigned">{$reviewerName} on valittu käsikirjoituksen {$submissionId} arviointiin arviointikierroksella {$round}.</message>
+	<message key="submission.document">Asiakirja</message>
+	<message key="submission.art">Kuvamateriaali</message>
+	<message key="submission.supplementary">Lisäsisältö</message>
+	<message key="submission.supplementary.creator">Tiedoston tekijä (tai omistaja)</message>
+	<message key="submission.supplementary.subject">Aihe</message>
+	<message key="submission.supplementary.publisher">Julkaisija</message>
+	<message key="submission.supplementary.sponsor">Avustaja tai tukijärjestö</message>
+	<message key="grid.action.itemWorkflow">Siirry tämän käsikirjoituksen työnkulkuun</message>
+	<message key="notification.type.editorDecisionSendToProduction">Tuotantoprosessi aloitettu.</message>
+	<message key="notification.type.editorAssignmentProduction">Tuotantotoimittaja on valittava, ennen kuin tuotantoprosessi voidaan aloittaa. Lisää tuotantotoimittaja yllä olevan Osallistujat-linkin kautta.</message>
+	<message key="notification.type.editorAssignmentEditing">Tuotantotoimittaja on valittava, ennen kuin toimitusprosessi aloitetaan. Lisää tuotantotoimittaja yllä olevaa Osallistujat-linkkiä käyttäen.</message>
+
+	<!--  peer review -->
+	<message key="submission.reviewForm">Arviointilomake</message>
+	<message key="submission.reviewFormResponse">Arviointilomakevastaus</message>
+	<message key="grid.action.createReviewFormElement">Luo uusi arviointilomakkeen elementti</message>
+	<message key="grid.action.editMetadata">Muokkaa metatietoja</message>
+
+	<!-- Permissions -->
+	<message key="submission.permissions">Luvat</message>
+	<message key="submission.attachPermissions">Liitä käsikirjoitukseen seuraavat luvat:</message>
+	<message key="submission.license">Lisenssi</message>
+	<message key="submission.copyright">Tekijänoikeus</message>
+	<message key="submission.copyrightHolder">Tekijänoikeuden haltija</message>
+	<message key="submission.copyrightYear">Tekijänoikeusvuosi</message>
+	<message key="submission.copyrightStatement">Copyright (c) {$copyrightYear} {$copyrightHolder}</message>
+	<message key="submission.licenseURLValid">Anna kelvollinen etä-URL-osoite (sisällytä http://).</message>
+	<message key="submission.licenseURL">Lisenssin URL-osoite</message>
+	<message key="submission.license.cc.by-nc-nd4">CC Nimeä-EiKaupallinen-EiMuutoksia 4.0 Kansainvälinen Julkinen Lisenssi</message>
+	<message key="submission.license.cc.by-nc4">CC Nimeä-EiKaupallinen 4.0 Kansainvälinen Julkinen Lisenssi</message>
+	<message key="submission.license.cc.by-nc-sa4">CC Nimeä-EiKaupallinen-JaaSamoin 4.0 Kansainvälinen Julkinen Lisenssi</message>
+	<message key="submission.license.cc.by-nd4">CC Nimeä-EiMuutoksia 4.0 Kansainvälinen Julkinen Lisenssi</message>
+	<message key="submission.license.cc.by4">CC Nimeä 4.0 Kansainvälinen Julkinen Lisenssi</message>
+	<message key="submission.license.cc.by-sa4">CC Nimeä-JaaSamoin 4.0 Kansainvälinen Julkinen Lisenssi</message>
+	<message key="submission.license.cc.by-nc-nd4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" src="//i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><p>Tämä työ on lisensoitu <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/deed.fi">Creative Commons Nimeä-EiKaupallinen-EiMuutoksia 4.0 Kansainvälinen Julkinen -lisenssillä</a>.</p>]]></message>
+	<message key="submission.license.cc.by-nc4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" src="//i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><p>Tämä työ on lisensoitu <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/deed.fi">Creative Commons Nimeä-EiKaupallinen 4.0 Kansainvälinen Julkinen -lisenssillä</a>.</p>]]></message>
+	<message key="submission.license.cc.by-nc-sa4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" src="//i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><p>Tämä työ on lisensoitu <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.fi">Creative Commons Nimeä-EiKaupallinen-JaaSamoin 4.0 Kansainvälinen Julkinen -lisenssillä</a>.</p>]]></message>
+	<message key="submission.license.cc.by-nd4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/"><img alt="Creative Commons License" src="//i.creativecommons.org/l/by-nd/4.0/88x31.png" /></a><p>Tämä työ on lisensoitu <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/deed.fi">Creative Commons Nimeä-EiMuutoksia 4.0 Kansainvälinen Julkinen -lisenssillä</a>.</p>]]></message>
+	<message key="submission.license.cc.by4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" src="//i.creativecommons.org/l/by/4.0/88x31.png" /></a><p>Tämä työ on lisensoitu <a rel="license" href="http://creativecommons.org/licenses/by/4.0/deed.fi">Creative Commons Nimeä 4.0 Kansainvälinen Julkinen -lisenssillä</a>.</p>]]></message>
+	<message key="submission.license.cc.by-sa4.footer"><![CDATA[<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" src="//i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><p>Tämä työ on lisensoitu <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.fi">Creative Commons Nimeä-JaaSamoin 4.0 Kansainvälinen Julkinen-lisenssillä</a>.</p>]]></message>
+
+	<!-- Submission Queries -->
+	<message key="submission.queries.submission">Arviointia edeltävät keskustelut</message>
+	<message key="submission.queries.review">Arviointiin liittyvät keskustelut</message>
+	<message key="submission.queries.editorial">Tekniseen toimittamiseen liittyvät keskustelut</message>
+	<message key="submission.queries.production">Tuotantoon liittyvät keskustelut</message>
+	<message key="submission.query.subject">Aihe</message>
+	<message key="submission.query.messages">Viestit</message>
+	<message key="submission.query.replies">Vastauksia</message>
+	<message key="submission.query.from">Keneltä</message>
+	<message key="submission.query.lastReply">Viimeisin vastaus</message>
+	<message key="submission.query.closed">Suljettu</message>
+	<message key="submission.query.addNote">Lisää viesti</message>
+	<message key="grid.action.openNoteForm">Lisää uusi vastaus keskusteluun</message>
+	<message key="submission.query.activity">{$responderName} vastasi viestiin {$noteTitle}: {$noteContents}</message>
+	<message key="submission.query.new">{$creatorName} aloitti keskustelun: {$noteTitle}: {$noteContents}</message>
+	<message key="submission.query.activity.contents">Käsikirjoitusta "{$submissionTitle}" koskevassa keskustelussa "{$queryTitle}" on uusia tapahtumia.</message>
+	<message key="submission.query.new.contents">Sinut on lisätty käsikirjoitusta "{$submissionTitle}" koskevaan keskusteluun "{$queryTitle}".</message>
+</locale>

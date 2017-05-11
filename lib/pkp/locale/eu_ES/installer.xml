@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/eu_ES/installer.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the eu_ES (Euskara) locale.
+  *
+  -->
+
+<locale name="eu_ES" full_name="Euskara">
+	<message key="installer.additionalLocales">Locale gehiago</message>
+	<message key="installer.administratorAccount">Administratzailearen kontua</message>
+	<message key="installer.administratorAccountInstructions">Erabiltzaile-kontu hau gune-administratzaile bihurtuko da eta sistemarako sarbide osoa izango du. Erabiltzaile-kontu gehiago sortu ahal izango dira instalazioa egin ondoren.</message>
+	<message key="installer.checkNo"><![CDATA[<span class="pkp_form_error formError">EZ</span>]]></message>
+	<message key="installer.checkYes">Bai</message>
+	<message key="installer.clientCharset">Bezeroaren karaktere-jokoa</message>
+	<message key="installer.clientCharsetInstructions">Arakatzaileetara bidaltzen eta arakatzaileetatik jasotzen diren datuetan erabiltzeko kodeketa.</message>
+	<message key="installer.configFileError"><![CDATA[<tt>config.inc.php</tt>konfigurazio-fitxategia ez dago edo ezin da irakurri.]]></message>
+	<message key="installer.connectionCharset">Konexioko karaktere-jokoa</message>
+	<message key="installer.contentsOfConfigFile">Konfigurazio-fitxategiaren edukia</message>
+	<message key="installer.createDatabase">Sortu datu-base berria</message>
+	<message key="installer.createDatabaseInstructions">Aukera hau erabili ahal izateko, zure datu-base sistemak datu-baseak urrunetik sortzea onartu behar du eta zure erabiltzaile-kontuak datu-base berriak sortzeko baimena izan behar du. Aukera hau hautatuta instalazioak huts egiten badu, eskuz sortu beharko duzu datu-basea zure zerbitzarian eta instalatzailea berriro exekutatu, aukera hori desgaituta.</message>
+	<message key="installer.databaseCharset">Datu-basearen karaktere-jokoa</message>
+	<message key="installer.databaseDriver">Datu-basearen kontrolatzailea</message>
+	<message key="installer.databaseDriverInstructions"><![CDATA[<strong>Kortxete artean dauden datu-base kontrolatzaileek ez du ematen behar den PHP hedapena kargatuta daukatenik eta, hautatzen badira, instalazioak huts egingo du segurutik.</strong><br />Goian zerrendatutako euskarri gabeko kontrolatzaileak xede akademikoetarako soilik zerrendatzen dira, normalean ez dute funtzionatuko.]]></message>
+	<message key="installer.databaseHost">Ostalaria</message>
+	<message key="installer.databaseHostInstructions">TCP/IP bidez konektatu beharrean domeinuko socket-en bidez konektatzeko, utzi hutsik ostalari-izena. MySQL badaukazu ez da beharrezkoa izango, automatikoki erabiltzen dituelako socket-ak "localhost" sartzen denean, baina beste datu-base zerbitzari batzuekin (PostgreSQL eta horrelakoekin) beharrezkoa da.</message>
+	<message key="installer.databaseName">Datu-basearen izena</message>
+	<message key="installer.databasePassword">Pasahitza</message>
+	<message key="installer.databaseSettings">Datu-basearen ezarpenak</message>
+	<message key="installer.databaseUsername">Erabiltzaile-izena</message>
+	<message key="installer.encryption">Pasahitza enkriptatzeko algoritmoa</message>
+	<message key="installer.filesDir">Kargak egiteko direktorioa</message>
+	<message key="installer.fileSettings">Fitxategi-ezarpenak</message>
+	<message key="installer.form.clientCharsetRequired">Bezeroaren karaktere-joko bat hautatu behar da.</message>
+	<message key="installer.form.databaseDriverRequired">Datu-basearen kontrolatzailea hautatu behar da.</message>
+	<message key="installer.form.databaseNameRequired">Datu-basearen izena eman behar da.</message>
+	<message key="installer.form.emailRequired">Administratzaile-kontuaren helbide elektroniko baliozko bat eman behar da.</message>
+	<message key="installer.form.encryptionRequired">Erabiltzaileen pasahitzak enkriptatzeko erabiliko den algoritmoa hautatu behar da.</message>
+	<message key="installer.form.filesDirRequired">Kargatutako fitxategiak gordetzeko direktorio bat zehaztu behar da.</message>
+	<message key="installer.form.localeRequired">Locale bat hautatu behar da.</message>
+	<message key="installer.form.passwordRequired">Administratzaile-kontuaren pasahitza eman behar da.</message>
+	<message key="installer.form.passwordsDoNotMatch">Administratzailearen pasahitzak ez datoz bat.</message>
+	<message key="installer.form.separateMultiple">Balio bat baino gehiago direnean, bereizi koma bidez</message>
+	<message key="installer.form.usernameAlphaNumeric">Administratzailearen erabiltzaile-izenean alfazenbakizko karaktereak, azpimarra eta marratxoak bakarrik onartzen dira, eta lehen karakterea eta azkena alfazenbakizkoak izan behar dira.</message>
+	<message key="installer.form.usernameRequired">Administratzaile-kontuaren erabiltzaile-izena eman behar da.</message>
+	<message key="installer.installationWrongPhp"><![CDATA[<br/><strong>KONTUZ: Zure oraingo PHP bertsioak ez ditu betetzen instalazioa egiteko eskakizunak. PHP bertsio berriagora aldatzea gomendatzen dizugu.</strong>]]></message>
+	<message key="installer.installErrorsOccurred">Erroreak gertatu dira instalazioan</message>
+	<message key="installer.installerSQLStatements">Instalazioa egiteko SQL instrukzioak</message>
+	<message key="installer.installFileError"><![CDATA[<tt>dbscripts/xml/install.xml</tt> instalazio-fitxategia ez dago edo ezin da irakurri.]]></message>
+	<message key="installer.installFilesDirError">Fitxategiak kargatzeko zehaztutako direktorioa ez dago edo ez da idazgarria.</message>
+	<message key="installer.installParseDBFileError"><![CDATA[Errorea datu-basea instalatzeko <tt>{$file}</tt> fitxategia analizatzean.]]></message>
+	<message key="installer.locale">Localea</message>
+	<message key="installer.localeSettings">Localearen ezarpenak</message>
+	<message key="installer.oaiRepositoryIdInstructions"><![CDATA[Metadatuak Biltzeko <a href="http://www.openarchives.org/" target="_blank">Open Archives Initiative</a> Protocol for Metadata Harvesting protokoloaren bidez gune honetan indexatutako metadatuen erregistroak identifikatzeko erabiltzen da identifikatzaile uniboko hau.]]></message>
+	<message key="installer.oaiRepositoryId">OAI gordailu-identifikatzailea</message>
+	<message key="installer.publicFilesDirError">Fitxategi publikoen direktorioa ez dago edo ez da idazgarria.</message>
+	<message key="installer.releaseNotes">Bertsio-oharrak</message>
+	<message key="installer.securitySettings">Segurtasun-ezarpenak</message>
+	<message key="installer.installParseEmailTemplatesFileError"><![CDATA[Errorea <tt>{$file}</tt> txantiloia analizatzean.]]></message>
+	<message key="installer.locale.maybeIncomplete">Markatutako lokalak osatu gabe egon daitezke.</message>
+	<message key="installer.oaiSettings">OAI ezarpenak</message>
+	<message key="installer.installParseFilterConfigFileError"><![CDATA[Errorea <tt>{$file}</tt> iragazki konfigurazio fitxategia analizatzean.]]></message>
+</locale>

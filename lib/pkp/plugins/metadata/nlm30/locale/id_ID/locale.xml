@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../dtd/locale.dtd">
+
+<!--
+  * plugins/metadata/nlm30/locale/id_ID/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the id_ID (Bahasa Indonesia) locale.
+  -->
+ 
+<locale name="id_ID" full_name="Bahasa Indonesia">
+	<!-- plug-in -->
+	<message key="plugins.metadata.nlm30.displayName">Metadata NLM 3.0</message>
+	<message key="plugins.metadata.nlm30.description">Berkontribusi terhadap dan adapter aplikasi NLM 3.0.</message>
+
+	<!-- citation meta-data adapter -->
+	<message key="plugins.metadata.nlm30.citationAdapter.displayName">Adapter sitiran NLM 3.0</message>
+	<message key="plugins.metadata.nlm30.citationAdapter.description">Ekstraki/injeksi metadata dari/kedalam sitiran.</message>
+
+	<!-- citation parsers (citation extraction services) -->
+	<message key="plugins.metadata.nlm30.citationParsers.displayName">Layanan Ekstraksi Sitiran"</message>
+	<message key="plugins.metadata.nlm30.citationParsers.description">Konversi teks sitiran biasa ke dalam mark-up elemen-sitasi NLM 3.0."</message>
+
+	<!-- citation lookup (citation database/improvement/lookup services) -->
+	<message key="plugins.metadata.nlm30.citationLookup.displayName">Layanan Database Sitiran"</message>
+	<message key="plugins.metadata.nlm30.citationLookup.description">Meningkatkan markup elemen-sitiran NLM 3.0, contoh: dengan mencari sitiran di database ekternal."</message>
+
+	<!-- citation output -->
+	<message key="plugins.metadata.nlm30.citationOutput.displayName">Layanan Output Sitiran</message>
+	<message key="plugins.metadata.nlm30.citationOutput.description">Konversi markup elemen-sitiran NLM 3.0 ke dalam standar output sitiran biasa.</message>
+	<message key="plugins.metadata.nlm30Xml.citationOutput.displayName">Layanan Output Sitiran (XML)</message>
+	<message key="plugins.metadata.nlm30Xml.citationOutput.description">Konversi markup elemen-sitasi NLM 3.0 ke dalam standar output sitiran XML.</message>
+
+	<!-- NLM 3.0 output -->
+	<message key="plugins.metadata.nlm30.nlm30XmlOutput.displayName">Output Penerbitan Jurnal NLM 3.0</message>
+
+	<!-- NLM 2.3 output -->
+	<message key="plugins.metadata.nlm30.nlm23XmlOutput.displayName">Output Penerbitan Jurnal NLM 2.3</message>
+
+	<!-- NLM 3.0 to 2.3 downgrade -->
+	<message key="plugins.metadata.nlm30.nlm30ToNlm23Xml.displayName">Penurunan Versi Penerbitan Jurnal NLM 3.0 ke 2.3</message>
+	<message key="plugins.metadata.nlm30.nlm30ToNlm23Xml.description">Penurunan Versi NLM 3.0 ke NLM 2.3.</message>
+
+	<!-- Plain text reference list output -->
+	<message key="plugins.metadata.nlm30.refList.displayName">Daftar menciptakan teks referensi</message>
+	<message key="plugins.metadata.nlm30.refList.description">Menciptakan daftar teks referensi yang terformat dari penyerahan referensi OJS/OCS/OMP</message>
+</locale>

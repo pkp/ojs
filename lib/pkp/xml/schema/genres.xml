@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE schema SYSTEM "../../dtd/xmlSchema.dtd">
+
+<!--
+  * xml/schema/genres.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Genre list schema in XML.
+  -->
+
+<schema version="0.2">
+	<!--
+	  *
+	  * TABLE genres
+	  *
+	  -->
+	<table name="genres">
+		<field name="genre_id" type="I8">
+			<KEY/>
+			<AUTOINCREMENT/>
+		</field>
+		<field name="context_id" type="I8">
+			<NOTNULL />
+		</field>
+		<field name="seq" type="I8">
+			<!-- NOTNULL --><!-- For upgrades; see bug #8585 -->
+		</field>
+		<field name="sortable" type="I1">
+			<NOTNULL/>
+			<DEFAULT VALUE="1"/>
+		</field>
+		<field name="enabled" type="I1">
+			<NOTNULL/>
+			<DEFAULT VALUE="1"/>
+		</field>
+		<field name="category" type="I8">
+			<NOTNULL/>
+			<DEFAULT VALUE="1"/>
+		</field>
+		<field name="dependent" type="I1">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+		</field>
+		<field name="supplementary" type="I1">
+			<!-- NOTNULL/ --><!-- Commented for upgrade purposes -->
+			<DEFAULT VALUE="0"/>
+		</field>
+		<field name="entry_key" type="C2" size="30"/>
+		<descr>A context's submission file genres.</descr>
+	</table>
+
+	<!--
+	  *
+	  * TABLE genre_settings
+	  *
+	  -->
+	<table name="genre_settings">
+		<field name="genre_id" type="I8">
+			<NOTNULL />
+		</field>
+		<field name="locale" type="C2" size="5">
+			<NOTNULL />
+			<DEFAULT VALUE=""/>
+		</field>
+		<field name="setting_name" type="C2" size="255">
+			<NOTNULL />
+		</field>
+		<field name="setting_value" type="X"/>
+		<field name="setting_type" type="C2" size="6">
+			<NOTNULL/>
+			<descr>(bool|int|float|string|object)</descr>
+		</field>
+		<descr>Genre settings</descr>
+		<index name="genre_settings_genre_id">
+			<col>genre_id</col>
+		</index>
+		<index name="genre_settings_pkey">
+			<col>genre_id</col>
+			<col>locale</col>
+			<col>setting_name</col>
+			<UNIQUE />
+		</index>
+	</table>
+</schema>

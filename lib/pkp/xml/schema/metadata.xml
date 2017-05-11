@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE schema SYSTEM "../../dtd/xmlSchema.dtd">
+
+<!--
+  * xml/schema/metadata.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Citation tables.
+  -->
+
+<schema version="0.2">
+	<!--
+	  *
+	  * TABLE citations
+	  *
+	  -->
+	<table name="citations">
+		<field name="citation_id" type="I8">
+			<KEY />
+			<AUTOINCREMENT/>
+		</field>
+		<field name="assoc_type" type="I8">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+		</field>
+		<field name="assoc_id" type="I8">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+		</field>
+		<field name="citation_state" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="raw_citation" type="X">
+			<NOTNULL/>
+		</field>
+		<field name="seq" type="I8">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+		</field>
+		<field name="lock_id" type="C2" size="23" />
+		<descr>Citations</descr>
+		<index name="citations_assoc">
+			<col>assoc_type</col>
+			<col>assoc_id</col>
+		</index>
+		<index name="citations_assoc_seq">
+			<col>assoc_type</col>
+			<col>assoc_id</col>
+			<col>seq</col>
+			<UNIQUE/>
+		</index>
+	</table>
+
+	<!--
+	  *
+	  * TABLE citation_settings
+	  *
+	  -->
+	<table name="citation_settings">
+		<field name="citation_id" type="I8">
+			<NOTNULL />
+		</field>
+		<field name="locale" type="C2" size="5">
+			<NOTNULL />
+			<DEFAULT VALUE=""/>
+		</field>
+		<field name="setting_name" type="C2" size="255">
+			<NOTNULL />
+		</field>
+		<field name="setting_value" type="X"/>
+		<field name="setting_type" type="C2" size="6">
+			<NOTNULL/>
+		</field>
+		<descr>Citation settings</descr>
+		<index name="citation_settings_citation_id">
+			<col>citation_id</col>
+		</index>
+		<index name="citation_settings_pkey">
+			<col>citation_id</col>
+			<col>locale</col>
+			<col>setting_name</col>
+			<UNIQUE />
+		</index>
+	</table>
+
+	<!--
+	  *
+	  * TABLE metadata_descriptions
+	  *
+	  -->
+	<table name="metadata_descriptions">
+		<field name="metadata_description_id" type="I8">
+			<KEY />
+			<AUTOINCREMENT/>
+		</field>
+		<field name="assoc_type" type="I8">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+		</field>
+		<field name="assoc_id" type="I8">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+		</field>
+		<field name="schema_namespace" type="C2" size="255">
+			<NOTNULL />
+		</field>
+		<field name="schema_name" type="C2" size="255">
+			<NOTNULL />
+		</field>
+		<field name="display_name" type="C2" size="255" />
+		<field name="seq" type="I8">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+		</field>
+		<descr>Metadata Descriptions</descr>
+		<index name="metadata_descriptions_assoc">
+			<col>assoc_type</col>
+			<col>assoc_id</col>
+		</index>
+	</table>
+
+	<!--
+	  *
+	  * TABLE metadata_description_settings
+	  *
+	  -->
+	<table name="metadata_description_settings">
+		<field name="metadata_description_id" type="I8">
+			<NOTNULL />
+		</field>
+		<field name="locale" type="C2" size="5">
+			<NOTNULL />
+			<DEFAULT VALUE=""/>
+		</field>
+		<field name="setting_name" type="C2" size="255">
+			<NOTNULL />
+		</field>
+		<field name="setting_value" type="X"/>
+		<field name="setting_type" type="C2" size="6">
+			<NOTNULL/>
+		</field>
+		<descr>Metadata Description Settings</descr>
+		<index name="metadata_description_settings_id">
+			<col>metadata_description_id</col>
+		</index>
+		<index name="metadata_descripton_settings_pkey">
+			<col>metadata_description_id</col>
+			<col>locale</col>
+			<col>setting_name</col>
+			<UNIQUE />
+		</index>
+	</table>
+
+	<!--
+	  *
+	  * TABLE filter_groups
+	  *
+	  -->
+	<table name="filter_groups">
+		<field name="filter_group_id" type="I8">
+			<KEY/>
+			<AUTOINCREMENT/>
+		</field>
+		<field name="symbolic" type="C2" size="255" />
+		<field name="display_name" type="C2" size="255" />
+		<field name="description" type="C2" size="255" />
+		<field name="input_type" type="C2" size="255" />
+		<field name="output_type" type="C2" size="255" />
+		<descr>Filter groups</descr>
+		<index name="filter_groups_symbolic">
+			<col>symbolic</col>
+			<UNIQUE/>
+		</index>
+	</table>
+
+	<!--
+	  *
+	  * TABLE filters
+	  *
+	  -->
+	<table name="filters">
+		<field name="filter_id" type="I8">
+			<KEY/>
+			<AUTOINCREMENT/>
+		</field>
+		<field name="filter_group_id" type="I8">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+		</field>
+		<field name="context_id" type="I8">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+		</field>
+		<field name="display_name" type="C2" size="255" />
+		<field name="class_name" type="C2" size="255"/>
+		<field name="is_template" type="I1">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+		</field>
+		<field name="parent_filter_id" type="I8">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+		</field>
+		<field name="seq" type="I8">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+		</field>
+		<descr>Configured filter instances (transformations)</descr>
+	</table>
+
+	<!--
+	  *
+	  * TABLE filter_settings
+	  *
+	  -->
+	<table name="filter_settings">
+		<field name="filter_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="locale" type="C2" size="5">
+			<NOTNULL/>
+			<DEFAULT VALUE=""/>
+		</field>
+		<field name="setting_name" type="C2" size="255">
+			<NOTNULL/>
+		</field>
+		<field name="setting_value" type="X"/>
+		<field name="setting_type" type="C2" size="6">
+			<NOTNULL/>
+		</field>
+		<descr>Filter Settings</descr>
+		<index name="filter_settings_id">
+			<col>filter_id</col>
+		</index>
+		<index name="filter_settings_pkey">
+			<col>filter_id</col>
+			<col>locale</col>
+			<col>setting_name</col>
+			<UNIQUE/>
+		</index>
+	</table>
+</schema>

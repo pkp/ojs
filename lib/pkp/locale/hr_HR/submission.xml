@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/hr_HR/submission.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the hr_HR (Hrvatski) locale.
+  *
+  -->
+
+<locale name="hr_HR" full_name="Hrvatski">
+	<message key="submission.agencies">Ustanove</message>
+	<message key="submission.abstractViews">Pristupa sažetku</message>
+	<message key="submission.accepted">Prihvaćena</message>
+	<message key="submission.acknowledge">Potvrđeno</message>
+	<message key="submission.addSuppFile">Dodavanje dopunske datoteke</message>
+	<message key="submission.ask">Upit</message>
+	<message key="submission.backToSubmissionEditing">Nazad na uređivanje prijave</message>
+	<message key="submission.changeComments">Promjeni u</message>
+	<message key="submission.comments.addComment">Dodaj komentar</message>
+	<message key="submission.comments.confirmDelete">Jeste li sigurni da želite obrisati ovaj komentar?</message>
+	<message key="submission.comments.corrections">Ispravke</message>
+	<message key="submission.comments.editComment">Uredi komentar</message>
+	<message key="submission.comments.importPeerReviews">Uvedi stručne recenzije</message>
+	<message key="submission.comments.importPeerReviews.reviewerLetter">Recenzent {$reviewerLetter}:</message>
+	<message key="submission.comments.noComments">Bez komentara</message>
+	<message key="submission.comments.noReviews">Bez recenzije</message>
+	<message key="submission.comments.review">Recenzija</message>
+	<message key="submission.comments.sendDecisionToReviewers">Pošalji recenzentima lektorsku odluku</message>
+	<message key="submission.comments.subject">Naslov</message>
+	<message key="submission.complete">Završeno</message>
+	<message key="submission.done">Učinjena</message>
+	<message key="submission.dueDate">Rok</message>
+	<message key="submission.due">Rok</message>
+	<message key="submission.editing">Uređivanje</message>
+	<message key="submission.editMetadata">Uređivanje metapodataka</message>
+	<message key="submission.email.backToEmailLog">Nazad na zapis e-pošte</message>
+	<message key="submission.email.confirmDeleteLogEntry">Jeste li sigurni da želite obrisati ovu stavku zapisa e-pošte?</message>
+	<message key="submission.email.deleteLogEntry">Obriši stavku zapisa</message>
+	<message key="submission.emailLog">Zapis E-pošte</message>
+	<message key="submission.event.backToEventLog">Nazad na zapis događaja</message>
+	<message key="submission.event.confirmDeleteLogEntry">Jeste li sigurni da želite obrisati ovu stavku zapisa događaja?</message>
+	<message key="submission.event.deleteLogEntry">Obriši stavku zapisa</message>
+	<message key="submission.event.general.metadataUpdated">Metapodaci prijave su ažurirani</message>
+	<message key="submission.event.general.suppFileUpdated">Datoteka prijave je ažurirana</message>
+	<message key="submission.event.reviewer.reviewAcceptedByProxy">Dodjelu recenzije je prihvatio zamjenik</message>
+	<message key="submission.event.reviewer.reviewAccepted">Dodjela recenzije je prihvaćena</message>
+	<message key="submission.event.reviewer.reviewCancelled">Otkazana je dodjela recenzije</message>
+	<message key="submission.event.reviewer.reviewDeclined">Dodjela recenzije je odbijena</message>
+	<message key="submission.event.reviewer.reviewDueDate">Izmjenjen je rok recenzije</message>
+	<message key="submission.event.reviewer.reviewerAssigned">Recenzentu je dodijeljena prijava</message>
+	<message key="submission.event.reviewer.reviewerRated">Evidentirana je recenzentova ocjena</message>
+	<message key="submission.event.reviewer.reviewerUnassigned">Recenzentu je povučena prijava</message>
+	<message key="submission.event.reviewer.reviewFile">Datoteka recenzije je ažurirana</message>
+	<message key="submission.event.reviewer.reviewInitiated">Pokrenuta je dodjela recenzije</message>
+	<message key="submission.event.reviewer.reviewRecommendation">Unesena recenzentska preporuka</message>
+	<message key="submission.event.reviewer.reviewReinitiated">Ponovno je pokrenuta dodjela recenzije</message>
+	<message key="submission.event.reviewer.reviewResubmitted">Recenzija je ponovno prijavljena</message>
+	<message key="submission.event.reviewer.reviewRevision">Recenzentova revidirana datoteka je ažuririrana</message>
+	<message key="submission.files">Datoteke</message>
+	<message key="submission.galley">Prijelom</message>
+	<message key="submission.history.clearLog">Očisti zapis</message>
+	<message key="submission.history">Kronologija priloga</message>
+	<message key="submission.history.noLogEntries">Nema zabilježenih prijava.</message>
+	<message key="submission.history.recentLogEntries">Kronologija događaja (noviji unosi)</message>
+	<message key="submission.history.submissionEmailLog">Korespondencija e-poštom</message>
+	<message key="submission.history.submissionNotes">Bilješke o prijavi</message>
+	<message key="submission.history.viewLog">Pregled zapisa</message>
+	<message key="submission.indexing">Ključne riječi</message>
+	<message key="submission.initiated">Započeto</message>
+	<message key="submission.lastModified">Zadnja izmjena</message>
+	<message key="submission.layout.addGalley">Dodajte prijelom</message>
+	<message key="submission.layout.confirmDeleteGalley">Jeste li sigurni da želite trajno izbrisati ovaj prijelom?</message>
+	<message key="submission.layout.confirmDeleteGalleyImage">Jeste li sigurni da želite ukloniti ovu sliku iz prijeloma?</message>
+	<message key="submission.layout.confirmDeleteSupplementaryFile">Jeste li sigurni da želite trajno izbrisati ovu dopunsku datoteku?</message>
+	<message key="submission.layout.deleteGalleyStylesheet">Obrišite ovu stilsku tablicu.</message>
+	<message key="submission.layout.editGalley">Uređivanje prijeloma</message>
+	<message key="submission.layout.galleyFileData">Informacije o datoteci prijeloma</message>
+	<message key="submission.layout.galleyFormat">Konačni prijelom</message>
+	<message key="submission.layout.galleyHTMLData">HTML datoteke prijeloma</message>
+	<message key="submission.layout.galleyImages">Slike</message>
+	<message key="submission.layout.galleyLabelInstructions">Ekstenzijom se označava format datoteke prijeloma (npr. HTML, PDF, itd.).</message>
+	<message key="submission.layout.galleyLabel">Ekstenzija</message>
+	<message key="submission.layout.galleyLabelRequired">Oznaka prijeloma.</message>
+	<message key="submission.layout.galleyLanguageRequired">Potrebno je navesti jezik prijeloma.</message>
+	<message key="submission.layout.galleyLocaleRequired">Potrebno je navesti lokalizaciju prijeloma.</message>
+	<message key="submission.layout.galleyNoImages">Nema slika</message>
+	<message key="submission.layout.galleys">Prijelomi</message>
+	<message key="submission.layout.galleyStylesheet">Stilska tablica datoteke </message>
+	<message key="submission.layout.galleyStyle">Stil</message>
+	<message key="submission.layout.initialGalleyCreation">Početak stvaranje prijeloma</message>
+	<message key="submission.layout.layoutFile">Datoteka prijeloma</message>
+	<message key="submission.layout">Prijelom</message>
+	<message key="submission.layout.layoutVersion">Verzija za prijelom</message>
+	<message key="submission.layout.newGalley">Kreirajte novu prijelom</message>
+	<message key="submission.layout.newSupplementaryFile">Postavite novu dopunsku datoteku</message>
+	<message key="submission.layout.noStyleFile">Stilska tablica datoteke nije dodana ovom prijelomu.</message>
+	<message key="submission.layout.supplementaryFiles">Recenzija dopunske datoteke</message>
+	<message key="submission.layout.viewingGalley">Pregled prijave za prijelom</message>
+	<message key="submission.layout.viewProof">Pogledajte</message>
+	<message key="submission.metadata">Metapodaci prijave</message>
+	<message key="submission.noReviewAssignments">Recenzija nije dodijeljena</message>
+	<message key="submission.notes.addNewNote">Dodavanje nove bilješke</message>
+	<message key="submission.notes.attachedFile">Datoteka privitka</message>
+	<message key="submission.notes.backToSubmissionNotes">Nazad na bilješke uz prijave</message>
+	<message key="submission.notes.breadcrumb">Bilješke</message>
+	<message key="submission.notes.clearAllNotes">Brisanje svih bilježaka</message>
+	<message key="submission.notes.collapseNotes">ukloni tekst bilježaka</message>
+	<message key="submission.notes.confirmDeleteAll">Ukloniti sve bilješke uz prijavu?</message>
+	<message key="submission.notes.confirmDelete">Ukloniti ovu bilješku uz prijavu?</message>
+	<message key="submission.notes.createNewNote">Kreiranje nove bilješke</message>
+	<message key="submission.notes.deleteNote">Bilješka obrisanog</message>
+	<message key="submission.notes.editNote">Uređivanje bilješke</message>
+	<message key="submission.notes.expandNotes">Prikaži</message>
+	<message key="submission.notes.noSubmissionNotes">Nema bilježaka uz prijavu</message>
+	<message key="submission.notes.removeUploadedFile">Uklanjanje poslane datoteke</message>
+	<message key="submission.notes.updateNote">Bilješka ažuriranja</message>
+	<message key="submission.notes.viewNotes">Pregled bilježaka</message>
+	<message key="submission.originalFile">Izvorna datoteka</message>
+	<message key="submission.page.editing">Uređivanje br.{$id}</message>
+	<message key="submission.page.history">Kronologija priloga br.{$id}</message>
+	<message key="submission.page.review">Recenzija br.{$id}</message>
+	<message key="submission.page.summary">Pregled priloga br.{$id}</message>
+	<message key="submission.peerReview">Recenzija</message>
+	<message key="submission.recommendation">Preporuka: {$recommendation}</message>
+	<message key="submission.rejected">Odbijena</message>
+	<message key="submission.request">Zahtjev</message>
+	<message key="submission.response">Odgovor</message>
+	<message key="submission.restrictions">Ograničenja</message>
+	<message key="submission.reviewMetadata">Pregled metapodataka</message>
+	<message key="submission.review">Recenzija</message>
+	<message key="submission.reviewVersion">Verzija u recenziji</message>
+	<message key="submissions.active">Aktivno</message>
+	<message key="submissions.archived">Arhivirano</message>
+	<message key="submission.saveMetadata">Spremanje metapodataka</message>
+	<message key="submissions.completed">Završeno</message>
+	<message key="submissions.declined">Odbijeno</message>
+	<message key="submissions.incomplete">Nedovršeno</message>
+	<message key="submissions.noSubmissions">Nema prijava</message>
+	<message key="submissions.queuedEditing">Uređuje se</message>
+	<message key="submissions.queued">Na čekanju</message>
+	<message key="submissions.queuedUnassigned">Čeka dodijeljivanje</message>
+	<message key="submissions.ruling">Odluka</message>
+	<message key="submissions.submit">prijave</message>
+	<message key="submission.start">Početak</message>
+	<message key="submission.submissionHistory">Kronologija događaja (noviji unosi)</message>
+	<message key="submission.submissionManuscript">Rukopis priloga</message>
+	<message key="submission.submissionReview">Recenzija prijave</message>
+	<message key="submission.submitter">Podnositelj</message>
+	<message key="submission.supplementaryFiles">Dopunske datoteke</message>
+	<message key="submission.titleAndAbstract">Naslov i sažetak</message>
+	<message key="submission.underway">U tijeku</message>
+	<message key="submission.uploadFileTo">Slanje datoteke kao</message>
+	<message key="submission.viewMetadata">Pregled metapodataka</message>
+	<message key="submission.views">Pristupa datoteci</message>
+	<message key="log.review.reviewerAssigned">{$reviewerName} je dodijeljen(a) kao recenzent priloga {$submissionId} u {$round}. krugu recenzije.</message>
+	<message key="submission.reviewForm">Recenzijski obrazac</message>
+	<message key="submission.reviewFormResponse">Odgovor na recenziju</message>
+</locale>

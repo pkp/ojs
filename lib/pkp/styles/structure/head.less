@@ -1,0 +1,334 @@
+/**
+ * @file styles/structure/head.less
+ *
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @ingroup pkp_structure_head
+ *
+ * @brief Classes for the page header structural elements
+ */
+
+// Left navigation panel
+.pkp_structure_head {
+	width: 192px;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	padding-top: @double;
+	z-index: 3;
+	background: @bg-anchor;
+
+	.pkp_navigation {
+		width: 100%;
+	}
+
+	.pkp_site_name {
+		width: 100%;
+		max-width: 100%;
+		margin: 0;
+		padding: 0;
+
+		a {
+			display: block;
+
+			&.is_img {
+				padding: @base 0;
+				min-height: 80px;
+			}
+
+			&.is_text {
+				padding: @base;
+				font-size: @font-sml;
+				line-height: @line-sml;
+				font-weight: @bold;
+				text-align: center;
+				text-decoration: none;
+			}
+		}
+
+		img {
+			display: block;
+			margin: 0 auto;
+			padding: 0;
+			max-height: 80px;
+		}
+	}
+}
+
+.pkp_nav_list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	li {
+		position: relative;
+		display: block;
+	}
+
+	ul {
+		position: absolute;
+		top: 0;
+		left: -9999px;
+		z-index: 1000;
+		width: 192px;
+		padding: 0;
+		background: @bg-anchor-lift;
+	}
+
+	a {
+		display: block;
+		padding: 12px @base 12px 12px; // 48 height with line height
+		line-height: @line-base;
+		border-left: 4px solid transparent;
+		font-size: @font-sml;
+		font-weight: @bold;
+		color: rgba(255,255,255,0.8);
+		text-shadow: 0 2px 0 rgba(0,0,0,0.8);
+		text-decoration: none;
+
+		&:focus {
+			outline: none;
+		}
+	}
+
+	a:hover,
+	a:focus,
+	[aria-expanded="true"] > a {
+		border-color: @bg;
+		background: @bg-anchor-lift;
+		color: #fff;
+
+		.fa {
+			color: #fff;
+		}
+
+		> ul {
+			left: 100%;
+		}
+	}
+
+	[aria-expanded="true"] > ul {
+		left: 100%;
+	}
+
+	ul a:hover,
+	ul a:focus {
+		background: @bg-anchor;
+	}
+
+	.fa {
+		margin-right: 0.5em;
+	}
+}
+
+// Primary navigation menu
+.pkp_navigation_primary {
+	position: relative;
+	bottom: auto;
+	left: auto;
+
+	.pkp_tasks {
+
+		a {
+			background: @offset;
+			text-shadow: 0 2px 0 rgb(0,0,0,0.2);
+
+			&:hover,
+			&:focus {
+				color: #fff;
+				background: @offset-shade;
+			}
+		}
+	}
+}
+
+// User-specific navigation menu
+.pkp_navigation_user {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: auto;
+	height: @double;
+	background: @bg-anchor;
+	line-height: @double;
+
+	// Loading placeholder
+	.pkp_loading {
+		position: relative;
+		width: 100%;
+		height: @double;
+		line-height: @double;
+		text-align: center;
+		color: rgba(255,255,255,0.5);
+
+		.pkp_spinner:after {
+			border-color: #fff;
+			border-top-color: rgba(255,255,255,0.5);
+			border-left-color: rgba(255,255,255,0.5);
+		}
+	}
+
+	a {
+		padding: 4px @base;
+		border: none;
+		font-size: @font-tiny;
+		line-height: @line-base;
+	}
+}
+
+// Context-switcher
+.pkp_nav_context {
+	position: relative;
+	float: left;
+	min-width: 192px;
+	max-width: 192px * 2;
+	width: auto;
+	height: @double;
+
+	.pkp_current_context {
+		display: block;
+		padding-right: @double;
+		text-overflow: ellipsis;
+		overflow-x: hidden;
+		white-space: nowrap;
+	}
+
+	[aria-haspopup] .pkp_current_context:after {
+		&:extend(.pkp_caret);
+		border-top-color: #fff;
+		position: absolute;
+		top: @base - 2px;
+		right: @base;
+	}
+
+	.pkp_contexts {
+		position: absolute;
+		top: @double;
+		left: -(192px * 2) - @double;
+		right: 0;
+		max-width: (192px * 2) + @double;
+		background: @bg-anchor-lift;
+
+		ul {
+			&:extend(.pkp_unstyled_list);
+		}
+
+		a {
+			display: block;
+			text-overflow: ellipsis;
+			overflow-x: hidden;
+			white-space: nowrap;
+
+			&:hover,
+			&:focus {
+				background: @bg-anchor;
+			}
+		}
+	}
+
+	> [aria-expanded="true"] {
+
+		> a {
+			background: @bg-anchor-lift;
+		}
+
+		.pkp_contexts {
+			left: 0;
+		}
+	}
+}
+
+// User login menu
+.pkp_nav_user {
+	float: right;
+	font-size: @font-tiny;
+
+	> li {
+		display: inline-block;
+	}
+
+	.fa {
+		color: #fff;
+	}
+
+	ul {
+		width: 12em;
+	}
+
+	> [aria-expanded="true"] > ul,
+	> [aria-expanded="true"] > ul {
+		top: @double;
+		left: 0;
+	}
+
+	// Ensure a dropdown doesn't open beyond the edge of the screen by aligning
+	// such dropdowns to the right rather than the left.
+	li.align_right:hover > ul,
+	li.align_right.in_focus > ul {
+		left: auto;
+		right: 0;
+	}
+}
+
+// Tasks panel
+.pkp_tasks {
+	position: relative;
+
+	.task-count {
+		display: inline-block;
+		width: 22px;
+		height: 22px;
+		line-height: 22px;
+		border-radius: 50%;
+		background: rgba(255,255,255,0.8);
+		color: rgba(0,0,0,0.8);
+		text-shadow: none;
+		vertical-align: middle;
+		text-align: center;
+	}
+
+	&:hover,
+	&:focus {
+
+		.task_count {
+			background: #fff;
+			color: #000;
+		}
+	}
+
+	.pkp_spinner,
+	.task-count {
+		margin-left: 0.25em;
+	}
+
+	.panel {
+		display: none;
+		position: absolute;
+		top: 0;
+		left: 100%;
+		width: 600px; // Keep wide for ease-of-use until we can make grids responsive
+		padding: @base @base 0; // Account for grid footer padding
+		background: @lift;
+		text-shadow: none;
+		box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+
+		a {
+			padding: 0;
+			border: none;
+			background: transparent;
+			color: @primary;
+			text-shadow: none;
+
+			&:hover,
+			&:focus {
+				background: transparent;
+				color: @primary-lift;
+			}
+		}
+	}
+}

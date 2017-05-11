@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/sv_SE/installer.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the sv_SE (Svenska) locale.
+  *
+  -->
+
+<locale name="sv_SE" full_name="Svenska">
+	<message key="installer.additionalLocales">Fler lokalinställningar</message>
+	<message key="installer.administratorAccount">Administratörskonto</message>
+	<message key="installer.administratorAccountInstructions">Det här användarkontot kommer att bli Sidaministratörens och kommer att ha fullständig tillgång till systemet. Ytterligare konton kan skapas efter installationen.</message>
+	<message key="installer.checkNo"><![CDATA[<span class="pkp_form_error formError">NEJ</span>]]></message>
+	<message key="installer.checkYes">Ja</message>
+	<message key="installer.clientCharset">Teckeninställningar för klienten</message>
+	<message key="installer.clientCharsetInstructions">Encoding för data som skickas till och mottas av webbläsaren.</message>
+	<message key="installer.configFileError"><![CDATA[Konfigurationsfilen <tt>config.inc.php</tt> existerar inte eller går inte att läsa.]]></message>
+	<message key="installer.connectionCharset">Connection teckeninställning</message>
+	<message key="installer.contentsOfConfigFile">Contents of configuration file</message>
+	<message key="installer.createDatabase">Skapa ny databas</message>
+	<message key="installer.createDatabaseInstructions">För att göra det här valet så måste din databas stödja remote database creation och ditt användarkonto måste ha befogenhet att skapa nya databaser. Om installationen skulle misslyckas, skapa databasen manuellt på din server och kör installationen igen, med det här valet inaktiverat.</message>
+	<message key="installer.databaseCharset">Database teckeninställning</message>
+	<message key="installer.databaseDriver">Databasdriver</message>
+	<message key="installer.databaseDriverInstructions"><![CDATA[<strong>Databasdrivers listade inom hakparanteser verkar inte ha nödvändig PHP extension och installationen kommer troligtvis misslyckas om dessa väljs.</strong><br />Databasdrivers som inte stöds och listas ovan, listas endast för pedagogisk upplysning och fungerar inte med nödvändighet.]]></message>
+	<message key="installer.databaseHost">Värd</message>
+	<message key="installer.databaseHostInstructions">Lämna värdnamnet blankt för att upprätta förbindelse genom domänsockets istället för över TCP/IP. Detta är inte nödvändigt med MySQL, som med automatik kommer använda sockets om "localhost" är angett, men är obligatoriskt hos andra databaserservrar, t.ex. PostgreSQL.</message>
+	<message key="installer.databaseName">Namn på databasen</message>
+	<message key="installer.databasePassword">Lösenord</message>
+	<message key="installer.databaseSettings">Databasinställningar</message>
+	<message key="installer.databaseUsername">Användarnamn</message>
+	<message key="installer.encryption">Krypteringsalgoritm för lösenord</message>
+	<message key="installer.filesDir">Mapp för uppladdade filer</message>
+	<message key="installer.fileSettings">Filinställningar</message>
+	<message key="installer.form.clientCharsetRequired">Teckensnittsinställningar för klienten måste anges.</message>
+	<message key="installer.form.databaseDriverRequired">En databasdriver måste anges.</message>
+	<message key="installer.form.databaseNameRequired">Ett namn på databasen måste anges.</message>
+	<message key="installer.form.emailRequired">En giltig E-postadress för administratörskontot är obligatoriskt.</message>
+	<message key="installer.form.encryptionRequired">Algoritm för kryptering av användarlösenord måste anges.</message>
+	<message key="installer.form.filesDirRequired">En mapp för lagring av uppladdade filer är obligatoriskt.</message>
+	<message key="installer.form.localeRequired">En lokalinställning måste anges.</message>
+	<message key="installer.form.passwordRequired">Ett lösenord för administratörskontot måste anges.</message>
+	<message key="installer.form.passwordsDoNotMatch">Administratörens lösenord är felaktigt.</message>
+	<message key="installer.form.separateMultiple">Separera flera värden med kommatecken (,)</message>
+	<message key="installer.form.usernameAlphaNumeric">Administratörens användarnamn får endast innehålla alfanumeriska tecken, understreck eller bindestreck, och måste inledas och avslutas med ett alfanumeriskt tecken.</message>
+	<message key="installer.form.usernameRequired">Ett användarnamn för administratörskontot måste anges.</message>
+	<message key="installer.installationWrongPhp"><![CDATA[<br/><strong>VARNING: Din nuvarande version av PHP uppfyller inte minimikraven för installation. Vi rekommenderar att du uppgraderar till en nyare version av PHP.</strong>]]></message>
+	<message key="installer.installErrorsOccurred">Det uppstod fel under installationen</message>
+	<message key="installer.installerSQLStatements">SQL statements för installation</message>
+	<message key="installer.installFileError"><![CDATA[Installationsfilen <tt>dbscripts/xml/install.xml</tt> existerar inte, eller går inte att läsa.]]></message>
+	<message key="installer.installFilesDirError">Vald mapp för uppladdade filer existerar inte, eller är inte överskrivbar.</message>
+	<message key="installer.installParseDBFileError"><![CDATA[Error parsing the database installation file <tt>{$file}</tt>.]]></message>
+	<message key="installer.locale">Lokalinställningar</message>
+	<message key="installer.localeSettings">Lokala inställningar</message>
+	<message key="installer.miscSettings">Diverse inställningar</message>
+	<message key="installer.oaiRepositoryIdInstructions"><![CDATA[En unik identifikator används för att identifiera metadata-poster som indexerats från den här sidan med hjälp av <a href="http://www.openarchives.org/" target="_blank">Open Archives Initiative</a> Protocol for Metadata Harvesting.]]></message>
+	<message key="installer.oaiRepositoryId">OAI repository identifikator</message>
+	<message key="installer.publicFilesDirError">Mappen för publika filer existerar inte eller är inte överskrivningsbar.</message>
+	<message key="installer.releaseNotes">Releasenyheter</message>
+	<message key="installer.securitySettings">Säkerhetsinställningar</message>
+</locale>

@@ -1,0 +1,73 @@
+<!--
+  * dtd/filterConfig.dtd
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * DTD for filter definitions.
+  -->
+
+<!--
+  * filterConfig - container for filter configuration
+  -->
+<!ELEMENT filterConfig (filterGroups?, filters?)>
+
+<!--
+  * filterGroups - a collection of filterGroup elements (see there)
+  -->
+<!ELEMENT filterGroups (filterGroup+)>
+
+<!--
+  * filterGroup - a group of transformations with a common semantic and common input/output types.
+  *
+  * symbolic: a unique symbolic name for the group, see FilterGroup for more information on the nomenclature.
+  * displayName: a translation key that points to a short label for the filter.
+  * description: a translation key that points to a description of the filter.
+  * inputType: a codified input type (see TypeDescription and its sub-classes for further information)
+  * outputType: a codified output type (see TypeDescription and its sub-classes for further information)
+  -->
+<!ELEMENT filterGroup EMPTY>
+	<!ATTLIST filterGroup
+		symbolic CDATA #REQUIRED
+		displayName CDATA #REQUIRED
+		description CDATA #REQUIRED
+		inputType CDATA #REQUIRED
+		outputType CDATA #REQUIRED>
+
+
+<!--
+  * filters - a collection of filter elements (see there)
+  -->
+<!ELEMENT filters (filter+)>
+
+<!--
+  * filter - a transformation to be registered with the filter registry.
+  *   NB: Only composite filters can have nested filters (see CompositeFilter).
+  *
+  * class: the filter class
+  * inGroup: a symbolic group name (see filterGroup above)
+  * isTemplate: whether this is a template for other transformations or a transformation itself.
+  -->
+<!ELEMENT filter (setting*, filter*)*>
+	<!ATTLIST filter
+		class CDATA #REQUIRED
+		inGroup CDATA #REQUIRED
+		isTemplate (0|1) #REQUIRED>
+
+<!--
+  * setting - a filter parameter (see FilterSetting class for details).
+  *   similar to pluginSettings.dtd, can be extended to arrays/objects
+  *   in the same way if required
+  *
+  * type: the type of the setting (string, integer, boolean, object/array or constant),
+  *   NB: const is an additional type not present in pluginSettings.dtd
+  *   which can be used to refer to a defined constant.
+  -->
+<!ELEMENT setting (name, value)>
+<!ATTLIST setting type (int|string|bool|object|const) #REQUIRED>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT value (#PCDATA | array)*>
+<!ELEMENT element (#PCDATA | array)*>
+<!ATTLIST element key CDATA #IMPLIED>
+<!ELEMENT array (element+)>

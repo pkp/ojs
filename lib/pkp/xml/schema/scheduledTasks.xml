@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE schema SYSTEM "../../dtd/xmlSchema.dtd">
+
+<!--
+  * xml/schema/scheduledTasks.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Scheduled tasks schema descriptor in XML.
+  -->
+
+<schema version="0.2">
+	<!--
+	  *
+	  * TABLE scheduled_tasks
+	  *
+	  -->
+	<table name="scheduled_tasks">
+		<field name="class_name" type="C2" size="255">
+			<NOTNULL/>
+		</field>
+		<field name="last_run" type="T" />
+		<descr>The last run times of all scheduled tasks.</descr>
+		<index name="scheduled_tasks_pkey">
+			<col>class_name</col>
+			<UNIQUE />
+		</index>
+	</table>
+</schema>

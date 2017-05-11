@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../dtd/locale.dtd">
+
+<!--
+  * plugins/citationParser/paracite/locale/sr_SR/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="sr_SR" full_name="Cрпски">
+	<message key="plugins.citationParser.paracite.displayName">ParaCite Citation Extractor</message>
+	<message key="plugins.citationParser.paracite.description">Izdvaja polja iz teksta citata putem ParaCite servisa.</message>
+</locale>

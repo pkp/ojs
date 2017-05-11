@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE schema SYSTEM "../../dtd/xmlSchema.dtd">
+
+<!--
+  * xml/schema/gifts.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Gifts schema in XML.
+  -->
+
+<schema version="0.2">
+	<!--
+	 *
+	 * TABLE gifts
+	 *
+	 -->
+	<table name="gifts">
+		<field name="gift_id" type="I8">
+			<KEY />
+			<AUTOINCREMENT/>
+		</field>
+		<field name="assoc_type" type="I2">
+			<NOTNULL/>
+		</field>
+		<field name="assoc_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="status" type="I1">
+			<NOTNULL/>
+		</field>
+		<field name="gift_type" type="I2">
+			<NOTNULL/>
+		</field>
+		<field name="gift_assoc_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="buyer_first_name" type="C2" size="40">
+			<NOTNULL/>
+		</field>
+		<field name="buyer_middle_name" type="C2" size="40"/>
+		<field name="buyer_last_name" type="C2" size="90">
+			<NOTNULL/>
+		</field>
+		<field name="buyer_email" type="C2" size="90">
+			<NOTNULL/>
+		</field>
+		<field name="buyer_user_id" type="I8" />
+		<field name="recipient_first_name" type="C2" size="40">
+			<NOTNULL/>
+		</field>
+		<field name="recipient_middle_name" type="C2" size="40"/>
+		<field name="recipient_last_name" type="C2" size="90">
+			<NOTNULL/>
+		</field>
+		<field name="recipient_email" type="C2" size="90">
+			<NOTNULL/>
+		</field>
+		<field name="recipient_user_id" type="I8" />
+		<field name="date_redeemed" type="T" />
+		<field name="locale" type="C2" size="5">
+			<NOTNULL/>
+			<DEFAULT VALUE=""/>
+		</field>
+		<field name="gift_note_title" type="C2" size="90"/>
+		<field name="gift_note" type="X"/>
+		<field name="notes" type="X"/>
+		<descr>Gifts.</descr>
+		<index name="gifts_assoc">
+			<col>assoc_type</col>
+			<col>assoc_id</col>
+		</index>
+	</table>
+</schema>

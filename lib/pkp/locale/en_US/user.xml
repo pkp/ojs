@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/en_US/user.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="en_US" full_name="U.S. English">
+	<message key="user.accountInformation">Account Information</message>
+	<message key="user.affiliation">Affiliation</message>
+	<message key="user.affiliation.description">(Your institution, e.g. "Simon Fraser University")</message>
+	<message key="user.affiliations">Affiliations</message>
+	<message key="user.authorization.accessDenied">Access denied.</message>
+	<message key="user.authorization.processAuthenticationTokenRequired">The process authentication token is missing or invalid.</message>
+	<message key="user.authorization.contextRequired">You cannot call this operation without a context (press, journal, conference, etc).</message>
+	<message key="user.authorization.loginRequired">Login required.</message>
+	<message key="user.authorization.privateOperation">The operation you tried to access is either private or doesn't exist.</message>
+	<message key="user.authorization.restrictedSiteAccess">You have been denied access. Access to this site is currently restricted.</message>
+	<message key="user.authorization.roleBasedAccessDenied">The current role does not have access to this operation.</message>
+	<message key="user.authorization.userGroupRequired">You have to set a valid user group to access this operation.</message>
+	<message key="user.authorization.managerRequired">A user with a Manager role (i.e. Production Editor) must be assigned to the stage before you can proceed.</message>
+	<message key="user.authorization.accessibleWorkflowStage">You don't currently have access to that stage of the workflow.</message>
+	<message key="user.authorization.workflowStageRequired">A workflow stage was not specified.</message>
+	<message key="user.authorization.pluginRequired">A plugin was not specified and is required.</message>
+	<message key="user.biography">Bio Statement (e.g., department and rank)</message>
+	<message key="user.changeMyPassword">Change My Password</message>
+	<message key="user.changePassword">Change Password</message>
+	<message key="user.dateLastLogin">Last login</message>
+	<message key="user.dateRegistered">Date registered</message>
+	<message key="user.editMyProfile">Edit My Profile</message>
+	<message key="user.email">Email</message>
+	<message key="user.feminine">F</message>
+	<message key="user.firstName">First Name</message>
+	<message key="user.gender">Gender</message>
+	<message key="user.initialsExample">Joan Alice Smith = JAS</message>
+	<message key="user.initials">Initials</message>
+	<message key="user.interests">Reviewing interests</message>
+	<message key="user.interests.description">(Separate interests by pressing the enter or comma key)</message>
+	<message key="user.gossip">Private Notes</message>
+	<message key="user.group">User Group</message>
+	<message key="user.lastName">Last Name</message>
+	<message key="user.profile.form.profileImageInvalid">Invalid profile image format or image too big. Accepted formats are .gif, .jpg, or .png, and the image must not exceed 150x150 pixels.</message>
+	<message key="user.login.accountDisabledWithReason">Your account has been disabled for the following reason: {$reason}</message>
+	<message key="user.login.accountDisabled">Your account has been disabled. Please contact the administrator for more information.</message>
+	<message key="user.login.accountNotValidated">We've sent a confirmation email to you at {$email}. Please follow the instructions in that email to activate your new account. If you do not see an email, please check to see if it was put in your spam folder.</message>
+	<message key="user.login.activate">Activate Account</message>
+	<message key="user.login.activated">Thank you for activating your account. You may now log in using the credentials you supplied when you created your account.</message>
+	<message key="user.login.changePasswordInstructions"><![CDATA[You must choose a new password before you can log in to this site.<br /><br />Please enter your username and your current and new passwords below to change the password for your account.]]></message>
+	<message key="user.login.forgotPassword">Forgot your password?</message>
+	<message key="user.login.loginError">Invalid username or password. Please try again.</message>
+	<message key="user.login">Login</message>
+	<message key="user.login.lostPassword.confirmationSent">A confirmation has been sent to your email address. Please follow the instructions in the email to reset your password.</message>
+	<message key="user.login.lostPassword.invalidHash">Sorry, the link you clicked on has expired or is not valid. Please try resetting your password again.</message>
+	<message key="user.login.lostPassword.invalidUser">No user exists with the specified email address.</message>
+	<message key="user.login.lostPassword.passwordSent">A new password has been sent to your email address. You may now login to the site with your new password.</message>
+	<message key="user.login.registeredEmail">Registered user's email</message>
+	<message key="user.login.registrationComplete">Registration complete</message>
+	<message key="user.login.registrationComplete.instructions">Thanks for registering! What would you like to do next?</message>
+	<message key="user.login.registrationComplete.manageSubmissions">View Submissions</message>
+	<message key="user.login.registrationComplete.newSubmission">Make a New Submission</message>
+	<message key="user.login.registrationComplete.continueBrowsing">Continue Browsing</message>
+	<message key="user.login.registrationPendingValidation">Registration awaiting verification</message>
+	<message key="user.login.rememberUsernameAndPassword">Keep me logged in</message>
+	<message key="user.login.resetPassword">Reset Password</message>
+	<message key="user.logOut">Logout</message>
+	<message key="user.logOutAs">Logout as</message>
+	<message key="user.hello">Hello, </message>
+	<message key="user.mailingAddress">Mailing Address</message>
+	<message key="user.masculine">M</message>
+	<message key="user.middleName">Middle Name</message>
+	<message key="user.myAccount">My Account</message>
+	<message key="user.name">Name</message>
+	<message key="user.other">Other</message>
+	<message key="user.password">Password</message>
+	<message key="user.repeatPassword">Repeat password</message>
+	<message key="user.phone">Phone</message>
+	<message key="user.profile.changePasswordInstructions">Enter your current and new passwords below to change the password for your account.</message>
+	<message key="user.profile.editProfile">Edit Profile</message>
+	<message key="user.profile.form.countryRequired">A country is required.</message>
+	<message key="user.profile.form.emailRequired">A valid email address is required.</message>
+	<message key="user.profile.form.affiliationRequired">An affiliation is required.</message>
+	<message key="user.profile.form.firstNameRequired">A first name is required.</message>
+	<message key="user.profile.form.lastNameRequired">A last name is required.</message>
+	<message key="user.profile.form.mailingAddressRequired">A mailing address is required.</message>
+	<message key="user.profile.form.newPasswordRequired">You must enter your new password.</message>
+	<message key="user.profile.form.oldPasswordInvalid">The current password you entered was incorrect.</message>
+	<message key="user.profile.form.openAccessNotifications">Issue open access email notifications</message>
+	<message key="user.profile.form.passwordRequired">A password is required.</message>
+	<message key="user.profile.form.passwordSameAsOld">Your new password is the same as your old password.</message>
+	<message key="user.profile.form.profileImage">Profile Image</message>
+	<message key="user.profile.form.publishedNotifications">New issue published email notifications</message>
+	<message key="user.profile.form.urlInvalid">The specified URL is not valid. Please double-check the URL and try again. (Hint: Try adding http:// to the beginning of the URL.)</message>
+	<message key="user.profile.form.usergroupRequired">A user group is required.</message>
+	<message key="user.profile.form.usernameRequired">A username is required.</message>
+	<message key="user.profile.leavePasswordBlank">Leave the password fields blank to keep the current password.</message>
+	<message key="user.profile.newPassword">New password</message>
+	<message key="user.profile.oldPassword">Current password</message>
+	<message key="user.profile">Profile</message>
+	<message key="user.profile.publicProfile">User Profile</message>
+	<message key="user.profile.repeatNewPassword">Repeat new password</message>
+	<!-- Login -->
+	<message key="user.login.registerNewAccount">Register</message>
+	<message key="user.login.resetPasswordInstructions">Enter your account email address below and an email will be sent with instructions on how to reset your password.</message>
+
+	<message key="user.register.form.emailExists">The selected email address is already in use by another user.</message>
+	<message key="user.register.form.passwordsDoNotMatch">The passwords do not match.</message>
+	<message key="user.register.form.emailsDoNotMatch">The email address fields do not match.</message>
+	<message key="user.register.form.usernameAlphaNumeric">The username can contain only lower-case alphanumeric characters, underscores, and hyphens, and must begin and end with an alphanumeric character.</message>
+	<message key="user.register.form.userGroupRequired">At least one role must be selected.</message>
+	<message key="user.register.form.usernameExists">The selected username is already in use by another user.</message>
+	<message key="user.register.form.passwordLengthRestriction">The password must be at least {$length} characters.</message>
+	<message key="user.register.registerAs">Register in {$contextName} as...</message>
+	<message key="user.register">Register</message>
+	<message key="user.register.usernameRestriction">The username must contain only lowercase letters, numbers, and hyphens/underscores.</message>
+	<message key="user.register.registrationCompleted"><![CDATA[You have successfully registered. <a href="{$profileUrl}">Click here</a> to complete your user profile.]]></message>
+	<message key="user.role.author">Author</message>
+	<message key="user.role.author_s">Author(s)</message>
+	<message key="user.role.authors">Authors</message>
+	<message key="user.role.editor">Editor</message>
+	<message key="user.role.editors">Editors</message>
+	<message key="user.role.reader">Reader</message>
+	<message key="user.role.readers">Readers</message>
+	<message key="user.role.reviewer">Reviewer</message>
+	<message key="user.role.reviewers">Reviewers</message>
+	<message key="user.role.siteAdmin">Site Administrator</message>
+	<message key="user.role.siteAdmins">Site Administrators</message>
+	<message key="user.role.copyeditor">Copyeditor</message>
+	<message key="user.role.copyeditors">Copyeditors</message>
+	<message key="user.role.proofreader">Proofreader</message>
+	<message key="user.role.proofreaders">Proofreaders</message>
+	<message key="user.role.layoutEditor">Layout Editor</message>
+	<message key="user.role.layoutEditors">Layout Editors</message>
+	<message key="user.roles">Roles</message>
+	<message key="user.salutation">Salutation</message>
+	<message key="user.sendPassword">Confirmation</message>
+	<message key="user.sendPassword.description">Send me a confirmation email including my username and password</message>
+	<message key="user.signature">Signature</message>
+	<message key="user.suffix">Suffix</message>
+	<message key="user.title">Title</message>
+	<message key="user.url">URL</message>
+	<message key="user.userHome">User Home</message>
+	<message key="user.username">Username</message>
+	<message key="user.workingLanguages">Working Languages</message>
+	<message key="user.orcid">ORCID iD</message>
+	<message key="user.orcid.orcidInvalid">The ORCID iD you specified is invalid. Please include the full URI (e.g. "http://orcid.org/0000-0002-1825-0097").</message>
+	<message key="user.profile.identity">Identity</message>
+	<message key="user.profile.contact">Contact</message>
+	<message key="user.profile.public">Public</message>
+</locale>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/tr_TR/installer.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the tr_TR (Türkçe) locale.
+  *
+  -->
+
+<locale name="tr_TR" full_name="Türkçe">
+	<message key="installer.additionalLocales">Ek diller</message>
+	<message key="installer.administratorAccount">Yönetici Hesabı</message>
+	<message key="installer.administratorAccountInstructions">Bu kullanıcı hesabı site yöneticisi olacaktır ve sisteme tam giriş yetkisi olacaktır. Ek kullanıcı hesapları kurulumdan sonra oluşturulabilir.</message>
+	<message key="installer.checkNo"><![CDATA[<span class="pkp_form_error formError">HAYIR</span>]]></message>
+	<message key="installer.checkYes">Evet</message>
+	<message key="installer.clientCharset">Kullanıcı karakter seti</message>
+	<message key="installer.clientCharsetInstructions">Hizmet vericiden veri gönderme ve alma için şifreleme.</message>
+	<message key="installer.configFileError"><![CDATA[<tt>config.inc.php</tt> adlı konfigürasyon dosyası mevcut değil veya okunabilir değil.]]></message>
+	<message key="installer.connectionCharset">Bağlantı karakter seti</message>
+	<message key="installer.contentsOfConfigFile">Konfigürasyon dosyasının içeriği</message>
+	<message key="installer.createDatabase">Yeni veri tabanı oluştur</message>
+	<message key="installer.createDatabaseInstructions">Bu seçeneği kullanmak için veri tabanı sisteminiz uzaktan erişilebilir sistemi desteklemeli ve kullanıcı hesabınız yeni veri tabanı oluşturmak için giriş iznine sahip olmalıdır. Eğer bu seçenek kullanıldığında yükleme başarısız olursa veri tabanını sunucunuzda manuel olarak oluşturun. Daha sonra bu seçeneği pasif durumda bırakarak kurulumu yeniden çalıştırın.</message>
+	<message key="installer.databaseCharset">Veri tabanı karakter seti</message>
+	<message key="installer.databaseDriverInstructions"><![CDATA[<strong>Parentez içinde belirtilen veri tabanı sürücüleri, gerekli olan PHP uzantısını göstermez ve eğer o seçilirse yükleme muhtemelen başarısız olacaktır. </strong><br />Yukarıda belirtilen desteklenmeyen veri tabanı sürücülerinden her hangi biri yalnızca akademik amaçlar için listelenmiştir ve muhtemelen işlemeyecektir.]]></message>
+	<message key="installer.databaseDriver">Veri tabanı sürücüsü</message>
+	<message key="installer.databaseHostInstructions">Alan (domain) soketleri yerine TCP/IP üzerinden bağlanmak için"hostname"i boş bırakın. "localhost" bilgisi girildiyse soketler otomatik olarak kullanılacaktır. Bu MySQL için gerekli değildir, fakat PstgreSQL gibi bazı veri tabanı sunucuları için gereklidir.</message>
+	<message key="installer.databaseHost">Ana Bilgisayar</message>
+	<message key="installer.databaseName">Veri tabanı adı</message>
+	<message key="installer.databasePassword">Şifre</message>
+	<message key="installer.databaseSettings">Veri Tabanı Ayarları</message>
+	<message key="installer.databaseUsername">Kullanıcı adı</message>
+	<message key="installer.encryptionInstructions"><![CDATA[Eğer sisteminiz destekliyorsa SHA1 önerilir (PHP>=4.3.0 gerekir)]]></message>
+	<message key="installer.encryption">Şifre yazma şeması</message>
+	<message key="installer.filesDir">Yüklemeler için dizin</message>
+	<message key="installer.fileSettings">Dosya Ayarları</message>
+	<message key="installer.form.clientCharsetRequired">Bir kullanıcı karakter seti seçilmiş olmalıdır.</message>
+	<message key="installer.form.databaseDriverRequired">Bir veri tabanı sürücüsü seçilmiş olmalıdır.</message>
+	<message key="installer.form.databaseNameRequired">Veri tabanı ismi gereklidir.</message>
+	<message key="installer.form.emailRequired">Yönetici hesabı için geçerli bir e-posta adresi gereklidir.</message>
+	<message key="installer.form.encryptionRequired">Kullanıcı şifrelerini kodlamak için kullanılacak algoritma seçilmelidir.</message>
+	<message key="installer.form.filesDirRequired">Yüklenen dosyaları saklamak için kullanılacak dizin gereklidir.</message>
+	<message key="installer.form.localeRequired">Bir yer seçilmeli.</message>
+	<message key="installer.form.passwordRequired">Yönetici hesabı için bir şifre gereklidir.</message>
+	<message key="installer.form.passwordsDoNotMatch">Yönetici şifresi eşleşmedi.</message>
+	<message key="installer.form.separateMultiple">Çoklu değerleri virgül ile ayırın.</message>
+	<message key="installer.form.usernameAlphaNumeric">Yöneticinin kullanıcı adı yalnızca alfanümerik karakterleri, alt çizgileri ve tire işaretlerini içerebilir ve mutlaka bir alfanümerik karakter ile başlayıp sonlanmalıdır.</message>
+	<message key="installer.form.usernameRequired">Yönetici hesabı için bir kullanıcı adı gereklidir.</message>
+	<message key="installer.installationWrongPhp"><![CDATA[<br/><strong>UYARI: Kullanmakta olduğunuz PHP sürümü kurulum için minimum gereksinimleri karşılamıyor. Daha güncel bir PHP sürümü yüklemeniz önerilir.</strong>]]></message>
+	<message key="installer.installErrorsOccurred">Yükleme sırasında hata oluştu.</message>
+	<message key="installer.installerSQLStatements">Kurulum için SQL açıklamaları</message>
+	<message key="installer.installFileError"><![CDATA[<tt>dbscripts/xml/install.xml</tt> adlı kurulum dosyası mevcut değil veya okunabilir değil.]]></message>
+	<message key="installer.installFilesDirError">Yüklenen dosyalara özgü dizin mevcut veya yazılabilir değil.</message>
+	<message key="installer.installParseDBFileError"><![CDATA[<tt>{$file}</tt> adlı veri tabanı kurulum dosyasında ayrıştırma hatası oluştu.]]></message>
+	<message key="installer.installParseEmailTemplatesFileError"><![CDATA[<tt>{$file}</tt> adlı e-posta şablon dosyasında ayrıştırma hatası oluştu.]]></message>
+	<message key="installer.locale">Kurulum dili yeri</message>
+	<message key="installer.locale.maybeIncomplete">İşaretli diller tamamlanmamış olabilir.</message>
+	<message key="installer.localeSettings">Yerel Ayarlar</message>
+	<message key="installer.oaiRepositoryIdInstructions"><![CDATA[Bu sitede <a href="http://www.openarchives.org/" target="_blank">Open Archives Initiative</a> üst veri harmanlama protokolüne uygun olarak meta verilerini tanımlamak için tekil bir tanımlama kullanılır.]]></message>
+	<message key="installer.oaiRepositoryId">Kurumsal Arşiv Belirleyici</message>
+	<message key="installer.publicFilesDirError">Genel dosya dizini mevcut değil veya yazılabilir değil.</message>
+	<message key="installer.releaseNotes">Sürüm Notları</message>
+	<message key="installer.securitySettings">Güvenlik Ayarları</message>
+	<message key="installer.databaseCharsetInstructions"><![CDATA[Kodlama veri tabanında depolanan veriler için kullanılacaktır.]]></message>
+	<message key="installer.installParseFilterConfigFileError"><![CDATA[Filitre konfigürasyon dosyası <tt>{$file}</tt> ayrıştırma hatası.]]></message>
+	<message key="installer.oaiSettings">OAI Ayarları</message>
+</locale>

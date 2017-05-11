@@ -1,0 +1,30 @@
+/**
+ * @file styles/structure/foot.less
+ *
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @ingroup pkp_structure_foot
+ *
+ * @brief Classes for the page footer structural elements
+ */
+
+.pkp_structure_footer {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 96px;
+	padding: @base @double;
+	background: @bg;
+	text-align: right;
+}
+
+.pkp_brand_footer {
+	display: inline-block;
+
+	> a {
+		display: block;
+	}
+}

@@ -1,0 +1,32 @@
+/**
+ * rtEmbedded.css
+ *
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2000-2017 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * Stylesheet for reading tools
+ * DEPRECATED. Do not modify.
+ *
+ */
+
+#rt {
+	float: right;
+	width: 14%;
+	height: 100%;
+	font-size: 0.7em;
+	margin-top: 1em;
+}
+
+#main {
+	float: left;
+	width: 84%;
+	display: inline;
+	overflow: hidden;
+}
+
+#rt h5 {
+	margin: 0em 1em 0.25em 0em;
+	font-size: 1em;
+}
+

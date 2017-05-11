@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://pkp.sfu.ca" xmlns:pkp="http://pkp.sfu.ca" elementFormDefault="qualified">
+	<element name="plugins">
+		<complexType>
+			<sequence>
+				<element name="plugin" type="pkp:pluginType" minOccurs="0" maxOccurs="unbounded" />
+			</sequence>
+		</complexType>
+	</element>
+	<complexType name="pluginType">
+		<sequence>
+			<element name="name" type="pkp:localizedNode" minOccurs="1" maxOccurs="unbounded" />
+			<element name="homepage" type="anyURI" minOccurs="1" maxOccurs="1" />
+			<element name="summary" type="pkp:localizedNode" minOccurs="1" maxOccurs="unbounded" />
+			<element name="description" type="pkp:localizedNode" minOccurs="1" maxOccurs="unbounded" />
+			<element name="installation" type="pkp:localizedNode" minOccurs="0" maxOccurs="unbounded" />
+			<element name="maintainer" type="pkp:entityType" minOccurs="1" maxOccurs="1" />
+			<element name="release" type="pkp:releaseType" minOccurs="1" maxOccurs="unbounded" />
+		</sequence>
+		<attribute name="category" use="required">
+			<simpleType>
+				<restriction base="string">
+					<enumeration value="metadata" />
+					<enumeration value="auth" />
+					<enumeration value="blocks" />
+					<enumeration value="gateways" />
+					<enumeration value="generic" />
+					<enumeration value="importexport" />
+					<enumeration value="oaiMetadataFormats" />
+					<enumeration value="paymethod" />
+					<enumeration value="pubIds" />
+					<enumeration value="reports" />
+					<enumeration value="themes" />
+				</restriction>
+			</simpleType>
+		</attribute>
+		<attribute name="product" use="required" type="string" />
+	</complexType>
+
+	<complexType name="entityType">
+		<sequence>
+			<element name="name" type="string" />
+			<element name="institution" type="string" />
+			<element name="email" type="pkp:emailAddressType" />
+		</sequence>
+	</complexType>
+
+	<complexType name="releaseType">
+		<sequence>
+			<element name="package" type="anyURI" minOccurs="1" maxOccurs="1" />
+			<element name="compatibility" type="pkp:compatibilityType" minOccurs="1" maxOccurs="unbounded" />
+			<element name="certification" type="pkp:certificationType" minOccurs="0" maxOccurs="unbounded" />
+			<element name="description" type="pkp:localizedNode" minOccurs="1" maxOccurs="unbounded" />
+		</sequence>
+		<attribute name="date" type="date" use="required" />
+		<attribute name="version" type="string" use="required" />
+		<attribute name="md5" use="required">
+			<simpleType>
+				<restriction base="hexBinary">
+					<pattern value="[0-9A-Fa-f]{32}"/>
+				</restriction>
+			</simpleType>
+		</attribute>
+	</complexType>
+
+	<complexType name="compatibilityType">
+		<sequence>
+			<element name="version" minOccurs="1" maxOccurs="unbounded">
+				<simpleType>
+					<restriction base="string">
+						<pattern value="\d+\.\d+\.\d+\.\d+" />
+					</restriction>
+				</simpleType>
+			</element>
+		</sequence>
+		<attribute name="application" use="required">
+			<simpleType>
+				<restriction base="string">
+					<enumeration value="ojs2" />
+					<enumeration value="ocs2" />
+					<enumeration value="omp" />
+					<enumeration value="ohs" />
+				</restriction>
+			</simpleType>
+		</attribute>
+	</complexType>
+
+	<complexType name="certificationType">
+		<attribute name="type" use="required">
+			<simpleType>
+				<restriction base="string">
+					<enumeration value="official" />
+					<enumeration value="reviewed" />
+					<enumeration value="partner" />
+				</restriction>
+			</simpleType>
+		</attribute>
+	</complexType>
+
+	<simpleType name="emailAddressType">
+		<restriction base="string">
+			<pattern value="[^@]+@[^\.]+\..+" />
+		</restriction>
+	</simpleType>
+
+	<!-- FIXME: These are duplicated from importexport.xsd. Better way? -->
+	<!-- Identifies a particular I18N locale, e.g. en_US -->
+	<simpleType name="locale">
+		<restriction base="string">
+			<pattern value="[a-z][a-z]_[A-Z][A-Z]" />
+		</restriction>
+	</simpleType>
+
+	<!-- A text node with an attribute describing its locale, e.g. title -->
+	<complexType name="localizedNode" mixed="true">
+		<attribute name="locale" type="pkp:locale" use="optional" />
+	</complexType>
+</schema>

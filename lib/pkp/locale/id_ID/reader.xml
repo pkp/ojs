@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/id_ID/reader.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="id_ID" full_name="Bahasa Indonesia">
+	<message key="comments.anonymous">Pengguna Anonim</message>
+	<message key="comments.anonymousNamed">"{$userName}"</message>
+	<message key="comments.body">Badan</message>
+	<message key="comments.titleRequired">Judul komentar diperlukan.</message>
+	<message key="comments.confirmDeleteChildren">Menghapus komentar ini juga akan menghapus balasan untuk komentar ini. Apakah Anda yakin ingin melakukan ini?</message>
+	<message key="comments.delete">Hapus komentar ini</message>
+	<message key="comments.email">Email Poster</message>
+	<message key="comments.emailReply">Balas Email</message>
+	<message key="comments.enterComment">Masukkan komentar</message>
+	<message key="comments.inResponseTo"><![CDATA[Merespon<a href="{$url}">{$title}</a>]]></message>
+	<message key="comments.name">Nama Poster</message>
+	<message key="comments.noComments">Tidak ada komentar pembaca yang telah diposting.</message>
+	<message key="comments.nReplies">({$num} Balasan)</message>
+	<message key="comments.oneReply">(1 Balasan)</message>
+	<message key="comments.postAnonymously">Post komentar ini secara anonim</message>
+	<message key="comments.postReply">Post Balasan</message>
+	<message key="comments.readerComments">Komentar Pembaca</message>
+	<message key="comments.readMore">Baca Lebih Lanjut</message>
+	<message key="comments.replies">Balasan</message>
+	<message key="comments.title">Judul</message>
+	<message key="comments.viewAllComments">Lihat semua komentar</message>
+	<message key="reader.fullText">Teks Lengkap:</message>
+	<message key="rt.addComment">Tambah Komentar</message>
+	<message key="rt.admin.configuration">Konfigurasi</message>
+	<message key="rt.admin.contexts.confirmDelete">Apakah Anda yakin Anda ingin menghapus konteks ini dan semua pencarian yang terkait?</message>
+	<message key="rt.admin.contexts.createContext">Buat Konteks</message>
+	<message key="rt.admin.contexts.edit.editContext">Edit Konteks</message>
+	<message key="rt.admin.contexts.metadata">Metadata</message>
+	<message key="rt.admin.contexts.options.authorTerms">Gunakan nama penulis sebagai istilah pencarian default untuk memudahkan pengguna mencari karya penulis lain untuk item ini (contoh: untuk konteks "Karya Lain")</message>
+	<message key="rt.admin.contexts.options.citedBy">Gunakan nama penulis sebagai istilah pencarian default dan mendeskripsikan konteks sebagai pencarian untuk sitiran ke artikel.</message>
+	<message key="rt.admin.contexts.options.defineTerms"><![CDATA[Gunakan kata yang sudah dihighlight oleh pembaca sebagai istilah pencarian default atau biarkan kosong jika tidak ada yang dipilih untuk item ini (contoh: untuk konteks "Definisi Istilah"). Pilihan "Definisi Istilah" harus bisa di <a href="{$settingsUrl}">Pengaturan RST</a> untuk mengizinkan klik dua kali di kata untuk membuka konteks ini.]]></message>
+	<message key="rt.admin.contexts.options.geoTerms">Gunakan data pengindeksan geografis sebagai istilah pencarian default.</message>
+	<message key="rt.admin.contexts.options">Pilihan</message>
+	<message key="rt.admin.management">Manajemen</message>
+
+	<message key="rt.admin.sharing">Berbagi</message>
+	<message key="rt.admin.sharing.enabled">Berbagi bisa</message>
+	<message key="rt.admin.sharing.description"><![CDATA[Untuk memudahkan pembaca Anda untuk berbagi artikel jurnal, sign up untuk akun dengan <a href="http://www.addthis.com">addthis.com</a>, dan salin kode tombol Berbagi di bawah ini.]]></message>
+
+	<message key="rt.admin.sharing.basic">Pengaturan Dasar</message>
+	<message key="rt.admin.sharing.userNameLabel">AddThis.com Nama pengguna </message>
+	<message key="rt.admin.sharing.buttonStyleLabel">Model Tombol</message>
+	<message key="rt.admin.sharing.dropDownMenuLabel">Gunakan menu drop-down</message>
+	<message key="rt.admin.sharing.advanced">Pengaturan Tingkat Tinggi (pilihan)</message>
+	<message key="rt.admin.sharing.customizationLink"><![CDATA[Lihat <a href="http://support.addthis.com/customer/portal/articles/381236-custom-buttons">AddThis.com dokumentasi penyesuaian</a> untuk referensi.]]></message>
+	<message key="rt.admin.sharing.brandLabel">Merek</message>
+	<message key="rt.admin.sharing.dropDownLabel"><![CDATA[Pilihan Drop-down<br /> (gunakan koma untuk memisahkan daftar)]]></message>
+	<message key="rt.admin.sharing.languageLabel">Bahasa</message>
+	<message key="rt.admin.sharing.logolabel">Logo</message>
+	<message key="rt.admin.sharing.logoBackgroundLabel">Latar Belakang Logo</message>
+	<message key="rt.admin.sharing.logoColorLabel">Warna Logo</message>
+
+	<message key="rt.admin.readingToolsEnabled">Alat Membaca</message>
+	<message key="rt.admin.searches.confirmDelete">Apakah Anda yakin ingin menghapus pencarian ini?</message>
+	<message key="rt.admin.searches.createSearch">Buat Pencarian</message>
+	<message key="rt.admin.searches.edit.editSearch">Edit Pencarian</message>
+	<message key="rt.admin.selectedVersion">Item Terkait</message>
+	<message key="rt.admin.settings.abstract">Sari (menampilkan sari item).</message>
+	<message key="rt.admin.settings.authorBio">Tentang penulis (menampilkan biografi yang dimasukkan oleh penulis).</message>
+	<message key="rt.admin.settings.captureCite">Bagaimana mengutip item (menyediakan detail bibliografi untuk item).</message>
+	<message key="rt.admin.settings.defineTerms">Mencari istilah (memudahkan pembaca untuk meng-klik dua kali di kata apapun di item dan mengirimkan kata tersebut ke kamus).</message>
+	<message key="rt.admin.settings.disableRelatedItems">Membuat item terkait tidak aktif</message>
+	<message key="rt.admin.settings.emailAuthor">Mengirimkan email ke penulis (terarah ke template email dengan email penulis).</message>
+	<message key="rt.admin.settings.emailOthers">Beritahu rekan kerja (terarah ke template email dengan tautan ke item).</message>
+	<message key="rt.admin.settings.findingReferences">Temukan Referensi</message>
+	<message key="rt.admin.settings.printerFriendly">Versi Print (menyediakan versi item yang ramah-printer).</message>
+	<message key="rt.admin.settings.supplementaryFiles">File Tambahan (menampilkan daftar file tambahan naskah).</message>
+	<message key="rt.admin.settings.viewMetadata">Pengindeksan metadata (menampilkan pengindeksan metadata item yang disediakan oleh penulis dan sistem).</message>
+	<message key="rt.admin.status">Status</message>
+	<message key="rt.admin.configureSharing">Konfigurasi AddThis</message>
+	<message key="rt.admin.validateUrls.complete">Validasi selesai.</message>
+	<message key="rt.admin.validateUrls.ok">OK</message>
+	<message key="rt.admin.validateUrls.urlIsInvalid">{$url} tidak valid.</message>
+	<message key="rt.admin.validateUrls">Validasi URL untuk Alat Membaca</message>
+	<message key="rt.admin.validateUrls.validate">Validasi</message>
+	<message key="rt.admin.versions.confirmDelete">Apakah Anda yakin ingin menghapus versi ini dan semua pencarian dan konteks yang terkait?</message>
+	<message key="rt.admin.versions.confirmRestore">Apakah Anda yakin ingin menyimpan ulang semua versi ke default mereka? Jika iya, Anda akan perlu memilih Versi aktif di halaman Pengaturan.</message>
+	<message key="rt.admin.versions.createVersion">Buat Versi</message>
+	<message key="rt.admin.versions.edit.editVersion">Edit Versi</message>
+	<message key="rt.admin.versions.export">Ekspor</message>
+	<message key="rt.admin.versions.importVersion">Impor Versi</message>
+	<message key="rt.admin.versions.metadata">Metadata</message>
+	<message key="rt.admin.versions.restoreVersions">Menyimpan ulang Versi ke Default</message>
+	<message key="rt.authorBio">Tentang Penulis</message>
+	<message key="rt.captureCite.format">Format Sitiran</message>
+	<message key="rt.captureCite">Bagaimana mengutip item</message>
+	<message key="rt.captureCite.online">Online</message>
+	<message key="rt.captureCite.web">Web</message>	
+	<message key="rt.colleague">Beritahu rekan kerja</message>
+	<message key="rt.context.abbrev">Singkatan</message>
+	<message key="rt.context.and">DAN</message>
+	<message key="rt.context.citesContextDescription">Jika artikel diindeks di Google Scholar, artikel ini bisa disertai dengan tautan "Dikutip oleh X", yang terarah ke daftar karya yang mengutipnya. Google Scholar juga akan mendaftar semua item yang mengutip judul dan penulis. Untuk mengakses sumber online yang hanya tersedia melalui perpustakaan riset Anda, Anda mungkin bisa ke Scholar Preferences di Google Scholar  an mengaktifkan Library Links untuk institusi Anda.</message>
+	<message key="rt.context">Konteks</message>
+	<message key="rt.context.defineTermsDescription">Jika item adalah file HTML (bukan PDF), klik dua kali di kata apapun di teks akan membuatnya ditampilkan di kotak Kata-untuk-didefinisikan. Sebaliknya, kata bisa diketik dan disalin di kotak. Untuk mempelajari lebih jauh tentang sumber yang dicari, klik TENTANG KAMI. Sumber ini telah dipilih karena relevansi mereka dan akses (bebas biaya) terbuka milik mereka ke seluruh atau sebagian isi mereka.</message>
+	<message key="rt.context.description">Deskripsi</message>
+	<message key="rt.context.order">Urutan</message>
+	<message key="rt.contexts">Konteks</message>
+	<message key="rt.context.searchDescription">Istilah pencarian telah dipilih oleh penulis (s). Mereka dapat diubah atau dihapus oleh pembaca, sebagai dua atau tiga singkat, tepat istilah atau frase menghasilkan Boolean terbaik (DAN) pencarian. Untuk mempelajari lebih lanjut tentang sumber daya dicari, klik pada TENTANG KAMI. Sumber daya ini telah dipilih untuk relevansi dan terbuka (gratis) akses ke semua atau sebagian dari isinya.</message>
+	<message key="rt.context.searchTerms">Cari Istilah</message>
+	<message key="rt.context.termToDefine">Kata untuk didefinisikan</message>
+	<message key="rt.context.title">Judul</message>
+	<message key="rt.emailAuthor">Kirim email ke penulis</message>
+	<message key="rt.email.needLogin"><![CDATA[* Perlu <a target="_parent" href="{$loginUrl}">registrasi</a>]]></message>
+	<message key="rt.email.sent">Pesan Anda telah dikirim.</message>
+	<message key="rt.findingReferences">Temukan referensi</message>
+	<message key="rt.findingReferences.googleScholar">Google Scholar</message>
+	<message key="rt.findingReferences.windowsLiveAcademic">Windows Akademik Langsung</message>
+	<message key="rt.lookUp">Cari Istilah</message>
+	<message key="rt.metadata.dublinCore.contributor">Kontributor</message>
+	<message key="rt.metadata.dublinCore.coverage">Cakupan</message>
+	<message key="rt.metadata.dublinCore.date">Tanggal</message>
+	<message key="rt.metadata.dublinCore.description">Deskripsi</message>
+	<message key="rt.metadata.dublinCore">Dublin Core</message>
+	<message key="rt.metadata.dublinCore.format">Format</message>
+	<message key="rt.metadata.dublinCore.identifier">Pengidentifikasi</message>
+	<message key="rt.metadata.dublinCore.language">Bahasa</message>
+	<message key="rt.metadata.dublinCore.publisher">Penerbit</message>
+	<message key="rt.metadata.dublinCore.relation">Hubungan</message>
+	<message key="rt.metadata.dublinCore.rights">Hak</message>
+	<message key="rt.metadata.dublinCore.source">Sumber</message>
+	<message key="rt.metadata.dublinCore.subject">Subjek</message>
+	<message key="rt.metadata.dublinCore.title">Judul</message>
+	<message key="rt.metadata.dublinCore.type">Tipe</message>
+	<message key="rt.metadata.forThisDocument">Metadata untuk dokumen ini</message>
+	<message key="rt.metadata.pkp.abstract">Sari</message>
+	<message key="rt.metadata.pkp.copyright">Hak cipta dan izin</message>
+	<message key="rt.metadata.pkp.coverage">Lokasi geo-spasial, periode kronologis, sampel riset (jenis kelamin, umur, dll.)</message>
+	<message key="rt.metadata.pkp.date">(YYYY-MM-DD)</message>
+	<message key="rt.metadata.pkp.discipline">Disiplin</message>
+	<message key="rt.metadata.pkp.format">Format file</message>
+	<message key="rt.metadata.pkp.genre"><![CDATA[Status & aliran]]></message>
+	<message key="rt.metadata.pkpItem">Item metadata PKP</message>
+	<message key="rt.metadata.pkp.language">English=en</message>
+	<message key="rt.metadata.pkp.publisher">Agen Pengorganisasian, lokasi</message>
+	<message key="rt.metadata.pkp.source">Jurnal/ Konferensi judul; vol., no. (tahun)</message>
+	<message key="rt.metadata.pkp.sponsors">Sponsor</message>
+	<message key="rt.metadata.pkp.subject">Kata Kunci</message>
+	<message key="rt.metadata.pkp.suppFiles">File tambahan</message>
+	<message key="rt.metadata.pkp.title">Judul dokumen</message>
+	<message key="rt.metadata.pkp.type">Tipe</message>
+	<message key="rt.metadata.pkp.uri">Pengidentifikasi Sumber Seragam</message>
+	<message key="rt.printVersion">Versi Print</message>
+	<message key="rt.readingTools">Alat Membaca</message>
+	<message key="rt.relatedItems">Item terkait</message>
+	<message key="rt.reviewPolicy">Kebijakan Review</message>
+	<message key="rt.search.description">Deskripsi</message>
+	<message key="rt.searches">Pencarian</message>
+	<message key="rt.search.order">Perintah</message>
+	<message key="rt.search">Cari</message>
+	<message key="rt.search.searchPost">Memposting data</message>
+	<message key="rt.search.searchUrl">Cari URL</message>
+	<message key="rt.search.suggest">Sarankan sebuah sumber</message>
+	<message key="rt.search.title">Judul</message>
+	<message key="rt.search.url">URL</message>
+	<message key="rt.suppFiles.download">Unduh</message>
+	<message key="rt.suppFiles">File tambahan</message>
+	<message key="rt.suppFiles.viewMetadata">metadata pengindeksan</message>
+	<message key="rt.version.description">Deskripsi</message>
+	<message key="rt.version.key">Kunci</message>
+	<message key="rt.version.locale">Bahasa</message>
+	<message key="rt.versions">Rangkaian item terkait</message>
+	<message key="rt.version.title">Judul</message>
+	<message key="rt.version">Versi</message>
+	<message key="rt.viewMetadata">metadata pengindeksan</message>
+</locale>

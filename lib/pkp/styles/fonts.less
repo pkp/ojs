@@ -1,0 +1,28 @@
+/**
+ * @file styles/fonts.less
+ *
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @brief Loads custom fonts
+ *
+ */
+
+/**
+ * Font Awesome - icon font
+ *
+ * The full font awesome styles can be found in /styles/fontawesome
+ */
+@font-face {
+	font-family: 'FontAwesome';
+	src: url('@{baseUrl}/lib/pkp/fonts/fontawesome/fontawesome-webfont.eot?v=@{fa-version}');
+	src: url('@{baseUrl}/lib/pkp/fonts/fontawesome/fontawesome-webfont.eot?#iefix&v=@{fa-version}') format('embedded-opentype'),
+		url('@{baseUrl}/lib/pkp/fonts/fontawesome/fontawesome-webfont.woff2?v=@{fa-version}') format('woff2'),
+		url('@{baseUrl}/lib/pkp/fonts/fontawesome/fontawesome-webfont.woff?v=@{fa-version}') format('woff'),
+		url('@{baseUrl}/lib/pkp/fonts/fontawesome/fontawesome-webfont.ttf?v=@{fa-version}') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@import "lib/pkp/styles/fontawesome/fontawesome.less";

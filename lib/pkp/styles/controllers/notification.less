@@ -1,0 +1,142 @@
+/**
+ * @defgroup pkp_controllers_notification
+ */
+
+/**
+ * @file styles/controllers/notification.less
+ *
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @ingroup pkp_controllers_notification
+ *
+ * @brief Styles for pkp_controllers_notification
+ */
+
+.pkp_notification {
+	position: relative;
+
+	.title {
+		display: block;
+		font-weight: @bold;
+	}
+
+	// Override .pkp_form .description
+	.description {
+		color: @text;
+		color: @text-rgba;
+	}
+
+	> div {
+		position: relative;
+		margin-bottom: @double;
+		padding: @base;
+		padding-left: @base + @half;
+		border: @bg-border;
+		font-size: @font-sml;
+		line-height: @line-sml;
+
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			top: -1px;
+			bottom: -1px;
+			left: -1px;
+			width: @half;
+			background: @primary;
+		}
+	}
+
+	> .notifySuccess:before {
+		background: @yes;
+	}
+
+	> .notifyWarning:before {
+		background: @warn;
+	}
+
+	> .notifyError:before,
+	> .notifyFormError:before,
+	> .notifyForbidden:before {
+		background: @no;
+	}
+}
+
+// Small notification panels that float above the screen
+.ui-pnotify {
+	z-index: 1001; // above modal backgrounds
+	position: fixed;
+	top: @double + 4;
+	right: 4px;
+	width: 20em;
+	max-width: 80%;
+	background: @bg-anchor;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+	border-bottom: 2px solid @bg-anchor;
+	font-size: @font-sml;
+	line-height: @line-sml;
+	color: #fff;
+}
+
+.ui-pnotify-sticker span,
+.ui-pnotify-closer span {
+	&:extend(.fa);
+	visibility: visible !important; // override inline styles from lib...
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: @double;
+	height: @double;
+	line-height: @double;
+	color: rgba(255,255,255,0.5);
+	text-align: center;
+	cursor: pointer;
+
+	&:hover,
+	&:focus,
+	// pinned
+	&.ui-icon-pin-s {
+		color: #fff;
+	}
+}
+
+.ui-pnotify-closer span:before {
+	content: @fa-var-times-circle;
+}
+
+.ui-pnotify-sticker span {
+	right: @double;
+
+	&:before {
+		content: @fa-var-thumb-tack;
+	}
+}
+
+.ui-pnotify-title {
+	min-height: @double; // most titles will be empty but we want the title bar
+	margin: 0;
+	padding: 0 (@double * 2) 0 @base;
+	line-height: @double;
+}
+
+.ui-pnotify-text {
+	padding: @base;
+	background: @primary;
+
+	a {
+		color: #fff;
+	}
+}
+
+.notifyError .ui-pnotify-text,
+.notifyFormError .ui-pnotify-text,
+.notifyWarning .ui-pnotify-text,
+.notifyForbidden .ui-pnotify-text {
+	background: @no;
+}
+
+.notifySuccess .ui-pnotify-text {
+	background: @yes;
+}

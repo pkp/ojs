@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/hr_HR/manager.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the hr_HR (Hrvatski) locale.
+  *
+  -->
+
+<locale name="hr_HR" full_name="Hrvatski">
+	<message key="manager.announcements">Obavijesti</message>
+	<message key="manager.announcements.confirmDelete">Jeste li sigurni da želite trajno izbrisati ovu obavijest?</message>
+	<message key="manager.announcements.create">Kreiraj novu obavijest</message>
+	<message key="manager.announcements.createTitle">Kreiraj</message>
+	<message key="manager.announcements.dateExpire">Istek</message>
+	<message key="manager.announcements.edit">Uredi obavijest</message>
+	<message key="manager.announcements.editTitle">Uredi</message>
+	<message key="manager.announcements.form.dateExpireDayIncompleteDate">Molimo odaberite godinu i/ili mjesec kao dodatak datuma isteka dana.</message>
+	<message key="manager.announcements.form.dateExpire">Datum isteka</message>
+	<message key="manager.announcements.form.dateExpireInstructions">Obavijest će biti prikazana čitateljima do ovog datuma. Ostavite prazno želite li da obavijest bude prikazana bez vremenskog ograničenja.</message>
+	<message key="manager.announcements.form.dateExpireMonthIncompleteDate">Molimo odaberite godinu i/ili dan kao dodatak datuma isteka mjeseca.</message>
+	<message key="manager.announcements.form.dateExpireValid">Molimo odaberite ispravan datum isteka obavijesti.</message>
+	<message key="manager.announcements.form.dateExpireYearIncompleteDate">Molimo odaberite mjesec i/ili dan kao dodatak datuma isteka godine.</message>
+	<message key="manager.announcements.form.description">Tekst obavijesti</message>
+	<message key="manager.announcements.form.descriptionInstructions">Pun tekst obavijesti</message>
+	<message key="manager.announcements.form.descriptionRequired">Opis obavijesti je obavezan.</message>
+	<message key="manager.announcements.form.descriptionShortInstructions">Kratak opis pojavljuje se uz naslov obavijesti.</message>
+	<message key="manager.announcements.form.descriptionShortRequired">Kratki opis obavijesti je obavezan.</message>
+	<message key="manager.announcements.form.descriptionShort">Kratak opis</message>
+	<message key="manager.announcements.form.saveAndCreateAnother">Spremi i kreiraj drugi</message>
+	<message key="manager.announcements.form.titleRequired">Naslov obavijesti je obavezan.</message>
+	<message key="manager.announcements.form.title">Naslov</message>
+	<message key="manager.announcements.form.typeId">Tip</message>
+	<message key="manager.announcements.form.typeIdValid">Molimo odaberite ispravan tip obavijesti.</message>
+	<message key="manager.announcements.noneCreated">Nema kreiranih obavijesti.</message>
+	<message key="manager.announcements.title">Naslov</message>
+	<message key="manager.announcementTypes">Tipovi obavijesti</message>
+	<message key="manager.announcementTypes.confirmDelete">Upozorenje! Sve obavijesti ovoga tipa će biti izbrisane. Jeste li sigurni da želite nastaviti i obrisati ovaj tip obavijesti?</message>
+	<message key="manager.announcementTypes.create">Kreiraj tip obavijesti</message>
+	<message key="manager.announcementTypes.createTitle">Kreiraj</message>
+	<message key="manager.announcementTypes.editTitle">Uredi</message>
+	<message key="manager.announcementTypes.form.saveAndCreateAnother">Spremi i kreiraj drugi</message>
+	<message key="manager.announcementTypes.form.typeNameExists">Tip obavijesti s ovim imenom već postoji.</message>
+	<message key="manager.announcementTypes.form.typeName">Naziv</message>
+	<message key="manager.announcementTypes.form.typeNameRequired">Ime tipa obavijesti je obavezno.</message>
+	<message key="manager.announcementTypes.noneCreated">Nema kreiranih tipova obavijesti.</message>
+	<message key="manager.announcementTypes.typeName">Tip obavijesti</message>
+	<message key="manager.emails.confirmDelete">Jeste li sigurni da želite obrisati ovaj predložak e-pošte?</message>
+	<message key="manager.emails.confirmReset">Jeste li sigurni da želite vratiti izvorni predložak e-pošte na njegove standardne vrijednosti?</message>
+	<message key="manager.emails.createEmail">Izradi novi obrazac</message>
+	<message key="manager.emails.disable">Onemogući</message>
+	<message key="manager.emails.editEmail">Uredi e-poštu</message>
+	<message key="manager.emails.editTestExample">Uredite testni primjer e-pošte</message>
+	<message key="manager.emails.emailKeyExists">E-pošta s datim ključem već postoji. Ključe e-pošte mora biti jedinstven.</message>
+	<message key="manager.emails.emailTemplate">Predložak e-pošte</message>
+	<message key="manager.emails.emailTemplates">Predlošci e-pošte</message>
+	<message key="manager.emails.enabled">Omogućite ovaj predložak e-pošte</message>
+	<message key="manager.emails.enable">Omogući</message>
+	<message key="manager.emails.form.bodyRequired">Tijelo poruke je obavezno u e-pošti.</message>
+	<message key="manager.emails.form.subjectRequired">Naslov je obavezan u e-pošti.</message>
+	<message key="manager.emails">Pripremljeni obrasci e-pošte</message>
+	<message key="manager.emails.resetAll">Vrati tekst svih predložaka u izvorni oblik</message>
+	<message key="manager.emails.reset">Vrati izvorno</message>
+	<message key="manager.emails.resetToDefault">Vratite na standardnu vrijednost</message>
+	<message key="manager.filesBrowser">Preglednik datoteka</message>
+	<message key="manager.files.confirmDelete">Želite li izbrisati ovu datoteku ili direktorij? Imajte na umu da direktorij mora biti prazan prije nego što bude izbrisan.</message>
+	<message key="manager.files.createDir">Kreiraj direktorij</message>
+	<message key="manager.files.emptyDir">Nema datoteka u ovom direktoriju.</message>
+	<message key="manager.files.parentDir">Glavni direktorij</message>
+	<message key="manager.files.uploadedFiles">Poslane datoteke</message>
+	<message key="manager.files.uploadFile">Pošalji datoteku</message>
+	<message key="manager.groups.confirmDelete">Jeste li sigurni da želite izbrisati ovu grupu?</message>
+	<message key="manager.groups.createTitle">Kreirajte naslov</message>
+	<message key="manager.groups.form.groupTitleRequired">Naziv grupe je obavezan.</message>
+	<message key="manager.groups.membership.addMember">Dodaj člana</message>
+	<message key="manager.groups.membership.confirmDelete">Jeste li sigurni da želite ovog korisnika isključiti iz ove grupe?</message>
+	<message key="manager.groups.membership">Članstvo</message>
+	<message key="manager.groups.membership.noneCreated">Ova grupa nema članova.</message>
+	<message key="manager.groups.membership.noUsers">Članovi nisu pronađeni.</message>
+	<message key="manager.groups.title">Naslov</message>
+	<message key="manager.languages.alternateLocaleInstructions">Ovaj sustav omogućuje da se određene ključne informacije o časopisu i pojedinim prilozima unesu na više jezika. Da biste koristili ovu mogućnost, izaberite dodatne prijevode, te odaberate neku od niže navedenih mogućnosti.</message>
+	<message key="manager.languages.supportedLocalesInstructions">Ukoliko odaberete dva ili više prijevoda, na svakoj će stranici biti prisutan izbornik jezika. Preko njega možete u svakom trenutku izmijeniti trenutno aktivni jezik sustava.</message>
+	<message key="manager.payment.timestamp">Datum uplate</message>
+	<message key="manager.people.authSource">Izvor autentifikacije</message>
+	<message key="manager.people.confirmUnenroll">Želite li ukloniti ulogu ovom korisniku?</message>
+	<message key="manager.people.createUser">Kreiraj novog korisnika</message>
+	<message key="manager.people.createUserGeneratePassword">Generiraj slučajnu lozinku.</message>
+	<message key="manager.people.createUserSendNotify">Pošalji korisniku e-poštu dobrodošlice koja sadrži njegovo korisničko ime i lozinku.</message>
+	<message key="manager.people.disable">Onemogući</message>
+	<message key="manager.people.doNotEnroll">Bez uloge</message>
+	<message key="manager.people.editProfile">Uređivanje osobnog profila</message>
+	<message key="manager.people.editUser">Uredite korisnika</message>
+	<message key="manager.people.emailUsers.emailSelectedUsers">Pošalji e-poštu odabranim korisnicima</message>
+	<message key="manager.people.emailUsers.emailUsersEnrolledAs">Pošalji e-poštu korisnicima kojima su dodijeljene uloge kao</message>
+	<message key="manager.people.emailUsers">Pošalji e-poštu korisnicima</message>
+	<message key="manager.people.emailUsers.selectLocale">Odaberite jezik</message>
+	<message key="manager.people.emailUsers.selectUsers">Odaberi korisnike kojima želite poslati e-poštu na način da označite kvačicom potvrdni okvir pored njihovih imena</message>
+	<message key="manager.people.enable">Omogući</message>
+	<message key="manager.people.enroll">Dodaj ulogu korisniku</message>
+	<message key="manager.people.enrollment">Dodijeljivanje uloga</message>
+	<message key="manager.people.enrollSelected">Dodijeli ulogu odabranim korisnicima</message>
+	<message key="manager.people.enrollSyncRole">Sinkroniziraj ulogu</message>
+	<message key="manager.people.enrollSync">Sinkroniziraj uloge korisnika</message>
+	<message key="manager.people.enrollUserAsDescription">Uloge mogu biti dodijeljene ili oduzete u bilo kojem trenutku nakon kreiranja novog korisnika.</message>
+	<message key="manager.people.enrollUserAs">Dodijeli ulogu korisniku kao</message>
+	<message key="manager.people.invalidUser">Oprostite, traženi korisnik ne postoji.</message>
+	<message key="manager.people.mergeUser">Spoji korisnika</message>
+	<message key="manager.people.mergeUsers.confirm">Jeste li sigurni da želite spojiti račun korisnika "{$oldUsername}" s računom korisnika "{$newUsername}"? Račun korisničkog imena "{$oldUsername}" više neće postojati nakon toga. Ovo je nepovratna radnja.</message>
+	<message key="manager.people.mergeUsers">Spajanje korisnika</message>
+	<message key="manager.people.mustChooseRole">Molimo odaberite ulogu pri vrhu stranice prije nego pritisnete "dodaj ulogu korisniku"</message>
+	<message key="manager.people.mustProvideName">Molimo unesite barem prezime korisnika.</message>
+	<message key="manager.people.noMatchingUsers">Nema odgovarajućih korisnika.</message>
+	<message key="manager.people.noneEnrolled">Nema korisnika s dodijeljenim ulogama.</message>
+	<message key="manager.people">Osobe</message>
+	<message key="manager.people.remove">Ukloni</message>
+	<message key="manager.people.saveAndCreateAnotherUser">Spremi i kreiraj drugog</message>
+	<message key="manager.people.signInAs">Prijava kao</message>
+	<message key="manager.people.signInAsUser">Prijavite se kao korisnik</message>
+	<message key="manager.people.syncUsers">Sinkroniziranje uloge dodijeljene korisnicima</message>
+	<message key="manager.people.unenroll">Ukloni ulogu</message>
+	<message key="manager.people.userCreatedSuccessfully">Korisnik uspješno kreiran.</message>
+	<message key="manager.people.userMustChangePassword">Zatraži od korisnika da promijeni svoju lozinku prilikom sljedećeg prijavljivanja.</message>
+	<message key="manager.plugins.action">Postupak:</message>
+	<message key="manager.plugins.disable">Onemogući</message>
+	<message key="manager.plugins.enable">Omogući</message>
+	<message key="manager.plugins.sitePlugin">Ovaj dodatak utječe na funkcioniranje cjelokupne stranice. Samo administrator stranice može upravljati ovim dodatkom.</message>
+	<message key="manager.plugins">Funkcionalni dodaci sustava</message>
+	<message key="manager.readingTools">Alati za čitanje</message>
+	<message key="manager.roles">Uloge</message>
+	<message key="manager.setup.homeHeaderImageInvalid">Neispravan format slike logotipa zaglavlja naslovne stranice. Prihvaćeni formati su .gif, .jpg, ili .png.</message>
+	<message key="manager.setup.homepageImageInvalid">Neispravan format slike naslovne stranice. Prihvaćeni formati su .gif, .jpg, ili .png.</message>
+	<message key="manager.setup.homeTitleImageInvalid">Neispravan format slike zaglavlja naslovne stranice. Prihvaćeni formati su .gif, .jpg, ili .png.</message>
+	<message key="manager.setup.loggingAndAuditing">Bilježenje uređivačkog postupka</message>
+	<message key="manager.setup.pageHeaderLogoImageInvalid">Neispravan format slike logotipa zaglavlja. Prihvaćeni formati su .gif, .jpg, ili .png.</message>
+	<message key="manager.setup.selectOne">Izaberite</message>
+	<message key="manager.statistics">Statistike i izvještaji</message>
+	<message key="manager.statistics.statistics.count.value">{$count} ({$percentage}%)</message>
+	<message key="manager.statistics.statistics.totalNewValue">{$numTotal} ({$numNew} novih)</message>
+	<message key="manager.users">Korisnici</message>
+	<message key="plugins.categories.auth">Autorizacijski dodaci</message>
+	<message key="plugins.categories.blocks">Blok dodaci</message>
+	<message key="plugins.categories.blocks.description">Blok dodaci su adaptibilne komponente korisničkog sučelja.</message>
+	<message key="plugins.categories.citationFormats">Dodaci za oblikovanje referenci</message>
+	<message key="plugins.categories.gateways.description">Poveznički dodaci omogućuju izravan prijenos podataka prema vanjskim sustavima.</message>
+	<message key="plugins.categories.gateways">Poveznički dodaci</message>
+	<message key="plugins.categories.importexport.description">Dodaci za Unošenje/Iznošenje koriste se za prijenos sadržaja prema drugom sustavu ili iz drugog sustava.</message>
+	<message key="plugins.categories.importexport">Dodaci za Unošenje/Iznošenje</message>
+	<message key="plugins.categories.paymethod.description">Dodaci za modele plaćanja implementiraju podršku za različite oblike on-line plaćanja.</message>
+	<message key="plugins.categories.paymethod">Dodaci za plaćanje</message>
+	<message key="plugins.categories.reports.description">Dodaci za izvješća se koriste za generiranje raznih izvješća i izvadaka iz baze časopisa za potrebe uredništva.</message>
+	<message key="plugins.categories.reports">Dodaci za izvješća</message>
+	<message key="plugins.categories.themes.description">Dodatci za stilske teme mijenjaju izgled sistema.</message>
+	<message key="plugins.categories.themes">Dodatci za stilske teme</message>
+
+	<!-- Review forms -->
+	<message key="manager.reviewFormElements">Stavke obrasca</message>
+	<message key="manager.reviewFormElements.addResponseItem">Dodaj izbor</message>
+	<message key="manager.reviewFormElements.checkboxes">Ponuđeni odgovori (moguć odabir jednog ili više)</message>
+	<message key="manager.reviewFormElements.chooseType">Odaberite tip stavke</message>
+	<message key="manager.reviewFormElements.copyTo">Kopiraj u:</message>
+	<message key="manager.reviewFormElements.create">Kreiraj novu stavku</message>
+	<message key="manager.reviewFormElements.dropdownbox">Izbornik s listom odgovora</message>
+	<message key="manager.reviewFormElements.edit">Uredi stavku obrasca</message>
+	<message key="manager.reviewFormElements.elementType">Tip stavke</message>
+	<message key="manager.reviewFormElements.form.elementTypeRequired">Potrebno je odrediti tip stavke.</message>
+	<message key="manager.reviewFormElements.form.questionRequired">Stavka obrasca treba sadržavati pitanje.</message>
+	<message key="manager.reviewFormElements.noneCreated">Stavke recenzijskog obrasca nisu kreirane.</message>
+	<message key="manager.reviewFormElements.possibleResponse">Izbor</message>
+	<message key="manager.reviewFormElements.question">Stavka</message>
+	<message key="manager.reviewFormElements.radiobuttons">Ponuđeni odgovori (moguć odabir samo jednog)</message>
+	<message key="manager.reviewFormElements.required">Recenzenti moraju ispuniti ovu stavku</message>
+	<message key="manager.reviewFormElements.smalltextfield">Jedna riječ teksta</message>
+	<message key="manager.reviewFormElements.textarea">Proizvoljna količina teksta</message>
+	<message key="manager.reviewFormElements.textfield">Jedna linija teksta</message>
+	<message key="manager.reviewForms">Recenzijski obrasci</message>
+	<message key="manager.reviewForms.completed">Završeni</message>
+	<message key="manager.reviewForms.create">Kreiraj recenzijski obrazac</message>
+	<message key="manager.reviewForms.description">Opis i upute</message>
+	<message key="manager.reviewForms.edit">Recenzijski obrazac</message>
+	<message key="manager.reviewForms.form.titleRequired">Recenzijskom obrascu nedostaje naslov.</message>
+	<message key="manager.reviewForms.inReview">U recenziji</message>
+	<message key="manager.reviewForms.list.description">Ovdje se mogu kreirati specifični obrasci za recenzije koji će biti zadani recenzentima umjesto standardnog oblika koji sadrži dva tekstualna polja ("za autora i urednika" te "za urednika"). Različiti recenzijski obrasci mogu biti dodijeljeni pojedinim  rubrikama časopisa, a urednici imaju mogućnost određivanja koji će obrazac koristiti prilikom dodjeljivanja recenzijskog zaduženja. U svim slučajevima, urednici imaju mogućnost uključivanja sadržaja recenzija u korespondenciju s autorom.</message>
+	<message key="manager.reviewForms.noneChosen">Nema / Standardna recenzijska polja</message>
+	<message key="manager.reviewForms.noneCreated">Nema kreiranih recenzijskih obrazaca.</message>
+	<message key="manager.reviewForms.preview">Pregled obrasca</message>
+	<message key="manager.reviewForms.title">Naslov</message>
+</locale>

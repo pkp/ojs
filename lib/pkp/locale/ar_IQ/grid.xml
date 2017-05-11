@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/ar_IQ/grid.xml
+  *
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the ar_IQ (العربية) locale.
+  -->
+
+<locale name="ar_IQ" full_name="العربية">
+	<!-- Common -->
+	<message key="grid.noItems">لا فقرات</message>
+	<message key="grid.settings">الإعدادات</message>
+	<message key="grid.noAuditors">بلا مراقبين</message>
+	<message key="grid.remotelyHostedItem">هذه الفقرة مستضافة خارجياً.</message>
+
+	<message key="grid.action.manageAccess">إدارة الوصول</message>
+	<message key="grid.action.sort">الفرز</message>
+	<message key="grid.action.addItem">إضافة فقرة</message>
+	<message key="grid.action.addNote">إضافة ملاحظة</message>
+	<message key="grid.action.addQuery">إضافة مناقشة</message>
+	<message key="grid.action.readQuery">قراءة المناقشة</message>
+	<message key="grid.action.deleteQuery">حذف المناقشة</message>
+	<message key="grid.action.updateQuery">تعديل المناقشة</message>
+	<message key="grid.action.addUser">إضافة مستخدم</message>
+	<message key="grid.action.unassignReviewer">ألغ تعيين هذا المحكم</message>
+	<message key="grid.action.approveCopyedit">وافق على هذا الملف المدقق لإرساله إلى المرحلة الآتية</message>
+	<message key="grid.action.reload">إعادة تحميل</message>
+	<message key="grid.action.delete">حذف</message>
+	<message key="grid.action.deleteFile">حذف ملف</message>
+	<message key="grid.action.deleteMedia">حذف الوسط</message>
+	<message key="grid.action.editMedia">تعديل الوسط</message>
+	<message key="grid.action.editSection">تعديل المقطع</message>
+	<message key="grid.action.export">تصدير</message>
+	<message key="grid.action.deleteSection">حذف المقطع</message>
+	<message key="grid.action.editorialHistory">تاريخ هيئة التحرير</message>
+	<message key="grid.action.remove">إزالة</message>
+	<message key="grid.action.edit">تعديل</message>
+	<message key="grid.action.approve">موافقة</message>
+	<message key="grid.action.disapprove">رفض</message>
+	<message key="grid.action.setApproval">ضع الموافقة</message>
+	<message key="grid.action.moreInformation">مزيد من المعلومات</message>
+	<message key="grid.action.restoreDefaults">استعادة الإفتراضات</message>
+	<message key="grid.action.restoreDefaults.confirm">هل أنت متأكد من رغبتك في استعادة الإعدادات الإفتراضية؟</message>
+	<message key="grid.action.addAuthor">أضف مؤلف</message>
+	<message key="grid.action.editAuthor">تعديل المؤلف</message>
+	<message key="grid.action.deleteAuthor">حذف المؤلف</message>
+	<message key="grid.action.addAuditor">أضف مدقق</message>
+	<message key="grid.action.upgrade">ترقية</message>
+	<message key="grid.action.order">أطلب</message>
+	<message key="grid.action.cancelOrdering">إلغاء الطلب</message>
+	<message key="grid.action.extendAll">توسيع الكل</message>
+	<message key="grid.action.collapse">طي</message>
+	<message key="grid.action.collapseAll">طي الكل</message>
+	<message key="grid.action.wizard">معالج الإعدادات</message>
+	<message key="grid.action.moveItem">نقل الفقرة</message>
+	<message key="grid.action.downloadAll">تنزيل كل الملفات ضمن أرشيف</message>
+	<message key="grid.action.readReview">إقرأ هذا التحكيم</message>
+	<message key="grid.action.email">أرسل البريد الالكتروني</message>
+	<message key="grid.action.addReviewer">أضف محكماً</message>
+	<message key="grid.action.addFile">أضف ملفاً</message>
+	<message key="grid.action.editFile">عدل ملفاً</message>
+	<message key="grid.action.selectFiles">إختر الملفات التي ترغب بإدارتها</message>
+	<message key="grid.action.requestRevisions">طالب بتحكيمات لطلب النشر هذا</message>
+	<message key="grid.action.accept">إقبل طلب النشر هذا</message>
+	<message key="grid.action.decline">أرفض طلب النشر هذا</message>
+	<message key="grid.action.internalReview">أرسل طلب النشر هذا للتحكيم الداخلي</message>
+	<message key="grid.action.externalReview">أرسل طلب النشر هذا للتحكيم الخارجي</message>
+	<message key="grid.action.sendToProduction">أرسل طلب النشر هذا لمرحلة الإنتاج</message>
+	<message key="grid.action.settings">الإعدادات</message>
+	<message key="grid.action.importexport">استيراد أو تصدير محتوى أو بيانات الموقع</message>
+	<message key="grid.action.restoreDefaults">استعادة الإعدادات الإفتراضية</message>
+	<message key="grid.action.orderItems">تمكين نمط الفرز</message>
+	<message key="grid.action.editSubmissionChecklist">تعديل فقرة التأشير هذه</message>
+	<message key="grid.action.deleteSubmissionChecklist">حذف فقرة التأشير هذه</message>
+	<message key="grid.action.resetAll">استعادة الإعدادات الإفتراضية لجميع الفقرات</message>
+	<message key="grid.action.addPreparedEmail">إضافة قالب جديد لرسالة الكترونية</message>
+	<message key="grid.action.editPreparedEmail">تعديل قالب الرسالة الالكترونية هذا</message>
+	<message key="grid.action.disableEmail">تعطيل قالب الرسالة الالكترونية هذا</message>
+	<message key="grid.action.resetEmail">استعادة الوضع الإفتراضي لقالب الرسالة الالكترونية هذا</message>
+	<message key="grid.action.expandAll">توسيع الكل</message>
+	<message key="grid.action.requestAccount">أضف مشاركاً</message>
+	<message key="grid.action.expand">توسيع</message>
+	<message key="grid.action.notify">بلِّغ هذا المستخدم</message>
+	<message key="grid.action.addUserGroup">أضف مجموعة مستخدمين جديدة</message>
+	<message key="grid.action.editUserGroup">تعديل مجموعة المستخدمين هذه</message>
+	<message key="grid.action.disable">تعطيل</message>
+	<message key="grid.action.details">معاينة هذه الفقرة</message>
+	<message key="grid.action.enrolExisting">كلف مستخدماً مسجلاً بدور المحكم</message>
+	<message key="grid.action.selectCreate">أنشئ محكماً جديداً</message>
+	<message key="grid.action.search">البحث</message>
+	<message key="grid.action.advancedSearch">البحث المتقدم</message>
+	<message key="grid.action.viewLibrary">معاينة مكتبة الوثائق</message>
+	<message key="grid.action.viewMetadata">معاينة البيانات الوصفية لطلب النشر هذا</message>
+	<message key="grid.action.sendReminder">أرسل تذكيراً بالمهمة لهذا المستخدم</message>
+	<message key="grid.action.newRound">أنشئ جولة جديدة</message>
+	<message key="grid.action.viewReviewGuidelines">معاينة إرشادات التحكيم</message>
+	<message key="grid.action.viewCompetingInterestGuidelines">معاينة سياسة إرشادات تضارب المصالح</message>
+	<message key="grid.action.thankReviewer">إبعث برسالة شكر لهذا المحكم</message>
+	<message key="grid.action.uploadFile">رفع ملف</message>
+	<message key="grid.action.addAnnouncementType">أضف نوعية إعلان</message>
+	<message key="grid.action.addAnnouncement">أضف إعلاناً</message>
+	<message key="grid.action.mergeUser">دمج المستخدم</message>
+	<message key="grid.action.unassignUser">فُكَّ تعيين المستخدم</message>
+	<message key="grid.action.history">معاينة التأريخ</message>
+	<message key="grid.action.unconsiderReview">هذا التحكيم مكتمل، لكنك قد تطعن به</message>
+	<message key="grid.action.enable">تمكين</message>
+	<message key="grid.action.bookInfo">معلومات طلب النشر</message>
+	<message key="grid.action.logInAs">سجلت دخولك باسم</message>
+	<message key="grid.action.exportAllUsers">تصدير كل المستخدمين</message>
+	<message key="grid.users.confirmExportAllUsers">هل أنت متأكد من رغبتك في تصدير كل المستخدمين؟</message>
+	<message key="grid.action.activate">تفعيل</message>
+	<message key="grid.action.deactivate">إبطال</message>
+	<message key="grid.action.copy">نسخ</message>
+	<message key="grid.action.preview">معاينة</message>
+	<message key="grid.action.install">تنصيب</message>
+	<message key="grid.action.moreItems">تحميل المزيد</message>
+
+	<!--  grid task status -->
+	<message key="grid.task.status.completed">هذه المهمة إكتملت</message>
+	<message key="grid.task.status.new">هذه فقرة جديدة وتستدعي الانتباه</message>
+	<message key="grid.task.status.uploaded">عنوان العمود يشير إلى من قام برفع الملف إلى الموقع</message>
+	<message key="grid.task.status.unfinished">المهمة لم تُنجز</message>
+	<message key="grid.task.status.reviewReady">هذا التحكيم جاهز. أنقر إيقونة الملاحظات على اليسار لقراءته.</message>
+
+	<!-- Common Grid Column Titles -->
+	<message key="grid.columns.actions">أفعال</message>
+	<message key="grid.columns.institution">مؤسسة</message>
+	<message key="grid.columns.url">رابط إنترنت</message>
+	<message key="grid.columns.auditor">مدقق</message>
+	<message key="grid.columns.locale">اللغة</message>
+
+	<!-- Sponsors Grid -->
+	<message key="grid.sponsor.title">الرعاة</message>
+	<message key="grid.action.addSponsor">أضف جهة راعية</message>
+	<message key="grid.action.deleteSponsor">حذف الجهة الراعية</message>
+	<message key="grid.action.editSponsor">تعديل الجهة الراعية</message>
+
+	<!-- Series Grid -->
+	<message key="grid.action.addSeries">إضافة متسلسلة</message>
+	<message key="grid.action.editSeries">تعديل المتسلسلة</message>
+	<message key="grid.action.deleteSeries">حذف المتسلسلة</message>
+
+	<!-- Categories Grid -->
+	<message key="grid.action.addCategory">إضافة فئة</message>
+	<message key="grid.action.editCategory">تعديل الفئة</message>
+	<message key="grid.action.deleteCategory">حذف الفئة</message>
+
+	<!-- Contributor Grid -->
+	<message key="grid.contributor.title">المساهمون</message>
+	<message key="grid.action.addContributor">إضافة مساهم</message>
+	<message key="grid.action.editContributor">تعديل المساهم</message>
+	<message key="grid.action.deleteContributor">حذف المساهم</message>
+	
+	<!-- Review Forms Grid -->
+	<message key="grid.reviewForm.title">معاينة النماذج</message>
+	
+	<!-- Review Form Element Reponse Items Grid -->
+	<message key="grid.reviewFormElement.responseItems">خيارات الاستجابة</message>
+
+	<!-- Files -->
+	<message key="grid.noFiles">لا ملفات</message>
+
+	<!-- Library Files -->
+	<message key="grid.libraryFiles.column.files">الملفات</message>
+	<message key="grid.libraryFiles.submission.title">مكتبة طلبات النشر</message>
+	<message key="grid.libraryFiles.editorial.title">مكتبة التحرير</message>
+	<message key="grid.libraryFiles.review.title">مكتبة التحكيم</message>
+	<message key="grid.libraryFiles.production.title">مكتبة الإنتاج</message>
+	<message key="grid.libraryFiles.productionTemplate.title">مكتبة قوالب الإنتاج</message>
+
+	<!-- SubmissionChecklist -->
+	<message key="grid.submissionChecklist.title">قائمة تأشيرات طلب النشر</message>
+	<message key="grid.submissionChecklist.column.checklistItem">فقرة قائمة التأشير</message>
+
+	<!-- Submission Contributors -->
+	<message key="author.users.contributor.name">الاسم</message>
+	<message key="author.users.contributor.email">البريد الالكتروني</message>
+	<message key="author.users.contributor.role">الدور</message>
+	<message key="author.users.contributor.principalContact">عنوان الاتصال الرئيسي</message>
+	<message key="author.users.contributor.includeInBrowse">ضمن قوائم التصفح</message>
+	
+	<!-- Roles -->
+	<message key="grid.roles.currentRoles">الأدوار الحالية</message>
+	<message key="grid.roles.add">إنشاء دور جديد</message>
+	<message key="grid.roles.stageAssignment">تعيين المرحلة</message>
+
+	<!-- Users -->
+	<message key="grid.user.currentUsers">المستخدمون الحاليون</message>
+	<message key="grid.user.currentEnrollment">توزيع الأدوار الحالي</message>
+	<message key="grid.user.allRoles">كل الأدوار</message>
+	<message key="grid.user.allPermissionLevels">كل مستويات الصلاحيات</message>
+	<message key="grid.user.add">إضافة مستخدم</message>
+	<message key="grid.user.enroll">تكليف المستخدم</message>
+	<message key="grid.user.edit">تعديل المستخدم</message>
+	<message key="grid.user.email">بريد الكتروني</message>
+	<message key="grid.user.enable">تمكين</message>
+	<message key="grid.user.disable">تعطيل</message>
+	<message key="grid.user.disableReason">سبب تعطيل المستخدم</message>
+	<message key="grid.user.enableReason">سبب تمكين المستخدم</message>
+	<message key="grid.user.error">حدث خطأ ما عند الإجراء الإداري لهذا المستخدم. لطفاً، حاول مجدداً.</message>
+	<message key="grid.user.errorEmail">حدث خطأ ما عند إرسال هذه الرسالة الالكترونية. لطفاً، تحقق من كون إعدادات ملقم البريد الالكتروني عندك تعمل بالشكل الصحيح و/أو اتصل بالمشرف الإداري للنظام.</message>
+	<message key="grid.user.cannotAdminister">ليس لديك الصلاحيات الكافية لتعديل هذا المستخدم.</message>
+	<message key="grid.user.authSource">مصدر المصادقة</message>
+	<message key="grid.user.mustProvideName">لطفاً، أعطِ على الأقل الاسم الأخير للمستخدم أولاً.</message>
+	<message key="grid.user.generatePassword">توليد كلمة المرور</message>
+	<message key="grid.user.generatePasswordDescription">أوجد كلمة مرور عشوائية لهذا المستخدم.</message>
+	<message key="grid.user.notifyUser">أبلغ المستخدم</message>
+	<message key="grid.user.notifyUserDescription">إبعث للمستخدم رسالة ترحيب.</message>
+	<message key="grid.user.mustChangePassword">غيِّر كلمة المرور</message>
+	<message key="grid.user.mustChangePasswordDescription">على المستخدم تغيير كلمة مروره عند دخوله الموقع المرة القادمة.</message>
+	<message key="grid.user.mustChangePasswordDescriptionOld">يتطلب من المستخدم تغيير كلمة مروره عند دخوله الموقع المرة القادمة.</message>
+	<message key="grid.user.moreDetails">المزيد من التفاصيل عن المستخدم</message>
+	<message key="grid.user.lessDetails">تفاصيل أقل عن المستخدم</message>
+	<message key="grid.user.userDetails">تفاصيل المستخدم</message>
+	<message key="grid.user.userRoles">أدوار المستخدم</message>
+	<message key="grid.user.userNoRoles">ليس لهذا المستخدم أي دور حالياً.</message>
+	<message key="grid.user.step1">الخطوة الأولى: إملأ تفاصيل بيانات المستخدم</message>
+	<message key="grid.user.step2">الخطوة الثانية: أضف أدواراً للمستخدم{$userFullName}</message>
+	<message key="grid.user.addRoles">أضف الأدوار</message>
+	<message key="grid.user.addRole">أضف دوراً</message>
+	<message key="grid.user.selectUser">إختر المستخدم</message>
+	<message key="grid.user.pleaseSelectUser">لطفاً، إختر مستخدماً</message>
+	<message key="grid.user.confirmLogInAs">هل تريد دخول الموقع كأنك هذا المستخدم؟ كل ما ستقوم به من أفعال، سيتم إلحاقها بهذا المستخدم.</message>
+	<message key="grid.user.mergeUsers">دمج المستخدمين</message>
+	<message key="grid.user.mergeUsers.mergeUser">دمج المستخدم</message>
+	<message key="grid.user.mergeUsers.mergeIntoUser">إدمجه بهذا المستخدم</message>
+	<message key="grid.user.mergeUsers.into.description">الآن، عليك اختيار مستخدم ما لإلحاق صلاحيات المستخدم السابق به، مع مهام التحرير... وما إلى ذلك.</message>
+	<message key="grid.user.mergeUsers.from.description">إختر مستخدماً ما لدمجه مع حساب مستخدم آخر (أي عندما يكون لأحد المستخدمين حسابين في الموقع). الحساب الذي ستختاره أولاً سيتم حذفه، وكل ما يتصل به من طلبات نشر وتعيينات... وما شابه سيتم إلحاقها بالحساب الثاني.</message>
+	<message key="grid.user.mergeUsers.allUsers">كل المستخدمين الممنوحين أدواراً</message>
+	<message key="grid.user.mergeUsers.mergeUserSelect.confirm">هل أنت متأكد من رغبتك في دمج هذا المستخدم مع مستخدم آخر؟ ستقوم باختيار المستخدم الثاني في النافذة القادمة.</message>
+	<message key="grid.user.mergeUsers.confirm">هل أنت متأكد من رغبتك في دمج هذا الحساب صاحب اسم الدخول "{$oldUsername}" مع الحساب صاحب اسم الدخول "{$newUsername}"؟ إن الحساب ذو الاسم "{$oldUsername}" لن يكون له وجود بعد ذلك. هذا الإجراء لا يمكن التراجع عنه.</message>
+	<message key="grid.user.mergeUsers.noneEnrolled">لا مستخدمين بهذا الدور بعد.</message>
+
+	<!-- Prepared emails -->
+	<message key="grid.preparedEmails.title">قوالب الرسائل الالكترونية المحضرة</message>
+	<message key="grid.preparedEmails.currentList">القائمة الحالية</message>
+	
+	<!-- Plugins -->
+	<message key="grid.plugin.allCategories">كل الفئات</message>
+	<message key="grid.plugin.disable">هل أنت متأكد من رغبتك في تعطيل هذا البرنامج الإضافي؟</message>
+	
+	<message key="grid.action.fileUnconsider">إجراءات القراءة التصحيحة أنجزت. بإمكانك تجاهل هذه المهمة</message>
+
+	<!-- Artwork Files Grid -->
+	<message key="grid.artworkFile.caption">العبارة التوضيحية</message>
+	<message key="grid.artworkFile.credit">الرصيد</message>
+	<message key="grid.artworkFile.copyrightOwner">مالك الحقوق الفكرية</message>
+	<message key="grid.artworkFile.copyrightContact">معلومات الاتصال (إن لم يكن المؤلف/الناشر)</message>
+	<message key="grid.artworkFile.permissionTerms">شروط الترخيص</message>
+	<message key="grid.artworkFile.placement">الموضع ضمن طلب النشر</message>
+
+	<!-- User Group Grid -->
+	<message key="grid.userGroup.assignStage">مرحلة التعيين</message>
+	<message key="grid.userGroup.unassignStage">مرحلة اللاتعيين</message>
+	<message key="grid.userGroup.allStages">كل مراحل المخطط الانسيابي</message>
+	<message key="grid.userGroup.filter.listRoles">عرض الأدوار الممنوحة إلى</message>
+	<message key="grid.userGroup.filter.permissionLevel">مع ضبط مستوى الصلاحيات على</message>
+	<message key="grid.userGroup.cantRemoveDefaultUserGroup">إن دور {$userGroupName} هو دور إفتراضي ولا يمكن حذفه.</message>
+	<message key="grid.userGroup.cantRemoveUserGroup">تعذر حذف دور {$userGroupName}. حالياً، {$usersCount} مستخدم/مستخدمون يضطلعون به.</message>
+	<message key="grid.userGroup.removed">دور {$userGroupName} تم حذفه.</message>
+	<message key="grid.userGroup.assignedStage">دور {$userGroupName} تم تعيينه لمرحلة {$stageName}.</message>
+	<message key="grid.userGroup.unassignedStage">دور {$userGroupName} تم إلغاء تعيينه لمرحلة {$stageName}.</message>
+
+	<!-- Submission list grids -->
+	<message key="grid.submission.itemTitle">المؤلف؛ العنوان</message>
+	<message key="grid.submission.active.selectOrphaned">إشمل طلبات النشر غير المكتملة التي لم تقدم من قبل أي مؤلف.</message>
+</locale>

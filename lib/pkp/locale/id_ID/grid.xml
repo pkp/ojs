@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/id_ID/grid.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="id_ID" full_name="Bahasa Indonesia">
+	<!-- Common -->
+	<message key="grid.noItems">Tidak Ada Item</message>
+	<message key="grid.settings">Pengaturan</message>
+
+	<message key="grid.action.sort">Sortir</message>
+	<message key="grid.action.addItem">Tambah Item</message>
+	<message key="grid.action.delete">Hapus</message>
+	<message key="grid.action.remove">Hapus</message>
+	<message key="grid.action.edit">Edit</message>
+	<message key="grid.action.approve">Setujui</message>
+	<message key="grid.action.approveForReview">Serahkan ke Tahap Review</message>
+	<message key="grid.action.approveForPub">Setujui untuk Penerbitan</message>
+	<message key="grid.action.decline">Tolak</message>
+	<message key="grid.action.moreInformation">Lebih Banyak Informasi</message>
+	<message key="grid.action.restoreDefaults">Simpan Kembali Default</message>
+
+	<!-- Common Grid Column Titles -->
+	<message key="grid.columns.actions">Aksi</message>
+	<message key="grid.columns.institution">Institusi</message>
+	<message key="grid.columns.url">URL</message>
+
+	<!-- Sponsors Grid -->
+	<message key="grid.sponsor.title">Sponsor</message>
+
+	<!-- Masthead Grid -->
+	<message key="grid.masthead.title">Dewan Redaksi</message>
+	<message key="grid.masthead.column.groups">Grup</message>
+
+	<!-- Contributor Grid -->
+	<message key="grid.contributor.title">Kontributor</message>
+	<message key="grid.action.addAuthor">Tambah Penulis</message>
+
+	<!-- Review Forms Grid -->
+	<message key="grid.reviewForm.title">Form Review</message>
+
+	<!-- Book File Types Grid -->
+	<message key="grid.bookFileType.form.sortable">Izinkan file tipe ini untuk dipilih berdasarkan komponen (contoh: berdasarkan bab)</message>
+
+	<!-- Artwork Files Grid -->
+	<message key="grid.artworkFile.title">Karya seni dengan izin</message>
+	<message key="grid.artworkFile.file">File</message>
+	<message key="grid.artworkFile.form.title">Tambah karya seni dengan izin</message>
+	<message key="grid.artworkFile.form.metadata">Metadata Karya seni</message>
+	<message key="grid.artworkFile.caption">Tulisan</message>
+	<message key="grid.artworkFile.credit">Kredit</message>
+	<message key="grid.artworkFile.captionAndCredit">Tulisan dan kredit (Jika tidak termasuk di File)</message>
+	<message key="grid.artworkFile.copyrightOwner">Pemilik Hak Cipta</message>
+	<message key="grid.artworkFile.copyrightContact">Info Kontak (jika bukan Penulis/Penerbit)</message>
+	<message key="grid.artworkFile.permissionTerms">Masa Izin</message>
+	<message key="grid.artworkFile.permissionForm">Form Izin</message>
+	<message key="grid.artworkFile.type">Tipe</message>
+	<message key="grid.artworkFile.type.table">Tabel</message>
+	<message key="grid.artworkFile.type.figure">Figur</message>
+	<message key="grid.artworkFile.placement">Penempatan di buku</message>
+	<message key="grid.artworkFile.placementDetail">Tabel/Fig. No.</message>
+	<message key="grid.artworkFile.contactAuthor">Hubungi Penulis</message>
+
+	<!-- Library Files -->
+	<message key="grid.libraryFiles.column.files">File</message>
+	<message key="grid.libraryFiles.submission.title">Perpustakaan Naskah</message>
+	<message key="grid.libraryFiles.editorial.title">Perpustakaan Editorial</message>
+	<message key="grid.libraryFiles.review.title">Perpustakaan Review</message>
+	<message key="grid.libraryFiles.production.title">Perpustakaan Produksi</message>
+	<message key="grid.libraryFiles.productionTemplate.title">Perpustakaan Template Produksi</message>
+
+	<!-- Checklist Naskah -->
+	<message key="grid.submissionChecklist.title"> Checklist Naskah</message>
+	<message key="grid.submissionChecklist.column.checklistItem">Checklist Item</message>
+
+	<!-- Kontributor Naskah  -->
+	<message key="author.users.contributor.name">Nama</message>
+	<message key="author.users.contributor.email">E-mail</message>
+	<message key="author.users.contributor.role">Peran</message>
+	<message key="author.users.contributor.principalContact">Kontak Utama</message>
+
+	<!-- Lampiran-->
+	<message key="grid.reviewAttachments.title">Lampiran Reviewer</message>
+	<message key="grid.reviewAttachments.add">Tambahkan lampiran ke review</message>
+
+	<!-- Bab -->
+	<message key="grid.chapters.title">Bab</message>
+</locale>

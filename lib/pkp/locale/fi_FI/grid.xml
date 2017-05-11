@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/fi_FI/grid.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="fi_FI" full_name="Suomi">
+	<!-- Common -->
+	<message key="grid.noItems">Ei kohteita</message>
+	<message key="grid.settings">Asetukset</message>
+	<message key="grid.noAuditors">Ei tarkastajia</message>
+	<message key="grid.remotelyHostedItem">Tämä on etäylläpidetty kohde.</message>
+
+	<message key="grid.action.manageAccess">Hallinnoi saatavuutta</message>
+	<message key="grid.action.sort">Lajittele</message>
+	<message key="grid.action.addItem">Lisää kohde</message>
+	<message key="grid.action.addNote">Lisää muistiinpano</message>
+	<message key="grid.action.addQuery">Lisää keskustelu</message>
+	<message key="grid.action.readQuery">Lue keskustelu</message>
+	<message key="grid.action.deleteQuery">Poista keskustelu</message>
+	<message key="grid.action.updateQuery">Päivitä keskustelu</message>
+	<message key="grid.action.addUser">Lisää käyttäjä</message>
+	<message key="grid.action.unassignReviewer">Peru arviointipyyntö</message>
+	<message key="grid.action.approveCopyedit">Hyväksy tämä teknisen toimittamisen tiedosto seuraavaan vaiheeseen lähetettäväksi</message>
+	<message key="grid.action.reload">Lataa uudelleen</message>
+	<message key="grid.action.delete">Poista</message>
+	<message key="grid.action.deleteFile">Poista tiedosto</message>
+	<message key="grid.action.deleteMedia">Poista media</message>
+	<message key="grid.action.editMedia">Muokkaa mediaa</message>
+	<message key="grid.action.editSection">Muokkaa osastoa</message>
+	<message key="grid.action.export">Vie</message>
+	<message key="grid.action.deleteSection">Poista osasto</message>
+	<message key="grid.action.editorialHistory">Toimituksellinen historia</message>
+	<message key="grid.action.remove">Poista</message>
+	<message key="grid.action.edit">Muokkaa</message>
+	<message key="grid.action.approve">Hyväksy</message>
+	<message key="grid.action.disapprove">Älä hyväksy</message>
+	<message key="grid.action.setApproval">Aseta hyväksyntä</message>
+	<message key="grid.action.moreInformation">Lisätietoja</message>
+	<message key="grid.action.restoreDefaults">Palauta oletusarvot</message>
+	<message key="grid.action.restoreDefaults.confirm">Oletko varma, että haluat palauttaa oletusarvot?</message>
+	<message key="grid.action.addAuthor">Lisää kirjoittaja</message>
+	<message key="grid.action.editAuthor">Muokkaa kirjoittajaa</message>
+	<message key="grid.action.deleteAuthor">Poista kirjoittaja</message>
+	<message key="grid.action.addAuditor">Lisää tarkastaja</message>
+	<message key="grid.action.upgrade">Päivitä</message>
+	<message key="grid.action.order">Järjestä</message>
+	<message key="grid.action.cancelOrdering">Peruuta järjestys</message>
+	<message key="grid.action.extendAll">Laajenna kaikki</message>
+	<message key="grid.action.collapse">Kutista</message>
+	<message key="grid.action.collapseAll">Kutista kaikki</message>
+	<message key="grid.action.wizard">Ohjattu asetusten luonti</message>
+	<message key="grid.action.moveItem">Siirrä kohde</message>
+	<message key="grid.action.downloadAll">Lataa kaikki tiedostot pakettina</message>
+	<message key="grid.action.readReview">Lue tämä arviointi</message>
+	<message key="grid.action.email">Lähetä sähköpostia</message>
+	<message key="grid.action.addReviewer">Lisää arvioija</message>
+	<message key="grid.action.addFile">Lisää tiedosto</message>
+	<message key="grid.action.editFile">Muokkaa tiedostoa</message>
+	<message key="grid.action.selectFiles">Valitse hallinnoitavat tiedostot</message>
+	<message key="grid.action.requestRevisions">Pyydä korjauksia tähän käsikirjoitukseen</message>
+	<message key="grid.action.accept">Hyväksy tämä käsikirjoitus</message>
+	<message key="grid.action.decline">Hylkää tämä käsikirjoitus</message>
+	<message key="grid.action.internalReview">Lähetä tämä käsikirjoitus sisäiseen arviointiin</message>
+	<message key="grid.action.externalReview">Lähetä tämä käsikirjoitus ulkopuoliseen arviointiin</message>
+	<message key="grid.action.sendToProduction">Lähetä tämä käsikirjoitus tuotantoon</message>
+	<message key="grid.action.settings">Asetukset</message>
+	<message key="grid.action.importexport">Tuo tai vie sisältöä tai sivuston tietoja</message>
+	<message key="grid.action.restoreDefaults">Palauta oletusarvot</message>
+	<message key="grid.action.orderItems">Ota järjestämistila käyttöön</message>
+	<message key="grid.action.editSubmissionChecklist">Muokkaa tätä tarkistuslistan kohtaa</message>
+	<message key="grid.action.deleteSubmissionChecklist">Poista tämä tarkistuslistan kohta</message>
+	<message key="grid.action.resetAll">Palauta kaikki kohteet oletusarvoisiksi</message>
+	<message key="grid.action.addPreparedEmail">Lisää uusi sähköpostipohja</message>
+	<message key="grid.action.editPreparedEmail">Muokkaa tätä sähköpostipohjaa</message>
+	<message key="grid.action.disableEmail">Poista tämä sähköpostipohja käytöstä</message>
+	<message key="grid.action.resetEmail">Palauta tämä sähköpostipohja oletusarvoiseksi</message>
+	<message key="grid.action.expandAll">Laajenna kaikki</message>
+	<message key="grid.action.requestAccount">Lisää osallistuja</message>
+	<message key="grid.action.expand">Laajenna</message>
+	<message key="grid.action.notify">Ilmoita tälle käyttäjälle</message>
+	<message key="grid.action.addUserGroup">Lisää uusi käyttäjäryhmä</message>
+	<message key="grid.action.editUserGroup">Muokkaa tätä käyttäjäryhmää</message>
+	<message key="grid.action.disable">Poista käytöstä</message>
+	<message key="grid.action.details">Näytä tämä kohde</message>
+	<message key="grid.action.enrolExisting">Lisää olemassa oleva käyttäjä arvioijaksi</message>
+	<message key="grid.action.selectCreate">Luo uusi arvioija</message>
+	<message key="grid.action.search">Hae</message>
+	<message key="grid.action.advancedSearch">Tarkennettu haku</message>
+	<message key="grid.action.viewLibrary">Näytä tiedostokirjasto</message>
+	<message key="grid.action.viewMetadata">Näytä tämän käsikirjoituksen metatiedot</message>
+	<message key="grid.action.sendReminder">Lähetä tälle käyttäjälle muistutus tehtävästä</message>
+	<message key="grid.action.newRound">Luo uusi kierros</message>
+	<message key="grid.action.viewReviewGuidelines">Näytä arviointiohjeet</message>
+	<message key="grid.action.viewCompetingInterestGuidelines">Näytä sidonnaisuuksien ilmoittamisen ohjeet</message>
+	<message key="grid.action.thankReviewer">Lähetä kiitosviesti tälle arvioijalle</message>
+	<message key="grid.action.uploadFile">Lataa tiedosto</message>
+	<message key="grid.action.addAnnouncementType">Lisää ilmoitustyyppi</message>
+	<message key="grid.action.addAnnouncement">Lisää ilmoitus</message>
+	<message key="grid.action.mergeUser">Yhdistä käyttäjä</message>
+	<message key="grid.action.unassignUser">Poista käyttäjän valinta</message>
+	<message key="grid.action.history">Näytä historia</message>
+	<message key="grid.action.unconsiderReview">Tämä arviointi on valmis, mutta voit merkitä sen käsittelemättömäksi</message>
+	<message key="grid.action.enable">Ota käyttöön</message>
+	<message key="grid.action.bookInfo">Käsikirjoituksen tiedot</message>
+	<message key="grid.action.logInAs">Kirjaudu käyttäjänä</message>
+	<message key="grid.action.exportAllUsers">Vie kaikki käyttäjät</message>
+	<message key="grid.users.confirmExportAllUsers">Haluatko varmasti viedä kaikki käyttäjät?</message>
+	<message key="grid.action.activate">Aktivoi</message>
+	<message key="grid.action.deactivate">Poista aktivointi</message>
+	<message key="grid.action.copy">Kopioi</message>
+	<message key="grid.action.preview">Esikatselu</message>
+	<message key="grid.action.install">Asenna</message>
+	<message key="grid.action.moreItems">Lataa lisää</message>
+
+	<!--  grid task status -->
+	<message key="grid.task.status.completed">Tämä tehtävä on suoritettu</message>
+	<message key="grid.task.status.new">Rastitetaan, kun käsitelty</message>
+	<message key="grid.task.status.uploaded">Sarakkeen otsikko ilmaisee tämän tiedoston lataajan</message>
+	<message key="grid.task.status.unfinished">Tehtävä keskeneräinen</message>
+	<message key="grid.task.status.reviewReady">Tämä arviointi on valmis. Klikkaa muistiinpanokuvaketta vasemmalle lukeaksesi sen.</message>
+
+	<!-- Common Grid Column Titles -->
+	<message key="grid.columns.actions">Toimenpiteet</message>
+	<message key="grid.columns.institution">Instituutio</message>
+	<message key="grid.columns.url">URL-osoite</message>
+	<message key="grid.columns.auditor">Tarkastaja</message>
+	<message key="grid.columns.locale">Kielialue</message>
+
+	<!-- Sponsors Grid -->
+	<message key="grid.sponsor.title">Tukiorganisaatiot</message>
+	<message key="grid.action.addSponsor">Lisää tukija</message>
+	<message key="grid.action.deleteSponsor">Poista tukija</message>
+	<message key="grid.action.editSponsor">Muokkaa tukijaa</message>
+
+	<!-- Series Grid -->
+	<message key="grid.action.addSeries">Lisää sarja</message>
+	<message key="grid.action.editSeries">Muokkaa sarjaa</message>
+	<message key="grid.action.deleteSeries">Poista sarja</message>
+
+	<!-- Categories Grid -->
+	<message key="grid.action.addCategory">Lisää kategoria</message>
+	<message key="grid.action.editCategory">Muokkaa kategoriaa</message>
+	<message key="grid.action.deleteCategory">Poista kategoria</message>
+
+	<!-- Contributor Grid -->
+	<message key="grid.contributor.title">Kannatuslähteet</message>
+	<message key="grid.action.addContributor">Lisää tekijä</message>
+	<message key="grid.action.editContributor">Muokkaa tekijää</message>
+	<message key="grid.action.deleteContributor">Poista tekijä</message>
+
+	<!-- Review Forms Grid -->
+	<message key="grid.reviewForm.title">Arviointilomakkeet</message>
+
+	<!-- Review Form Element Reponse Items Grid -->
+	<message key="grid.reviewFormElement.responseItems">Vastausvaihtoehdot</message>
+
+	<!-- Files -->
+	<message key="grid.noFiles">Ei tiedostoja</message>
+
+	<!-- Library Files -->
+	<message key="grid.libraryFiles.column.files">Tiedostot</message>
+	<message key="grid.libraryFiles.submission.title">Käsikirjoituskirjasto</message>
+	<message key="grid.libraryFiles.editorial.title">Toimituksen kirjasto</message>
+	<message key="grid.libraryFiles.review.title">Arviointikirjasto</message>
+	<message key="grid.libraryFiles.production.title">Tuotannon kirjasto</message>
+	<message key="grid.libraryFiles.productionTemplate.title">Tuotannon mallipohjakirjasto</message>
+
+	<!-- SubmissionChecklist -->
+	<message key="grid.submissionChecklist.title">Käsikirjoituksen tarkistuslista</message>
+	<message key="grid.submissionChecklist.column.checklistItem">Tarkistuslistan kohta</message>
+
+	<!-- Submission Contributors -->
+	<message key="author.users.contributor.name">Nimi</message>
+	<message key="author.users.contributor.email">Sähköposti</message>
+	<message key="author.users.contributor.role">Rooli</message>
+	<message key="author.users.contributor.principalContact">Ensisijainen yhteyshenkilö</message>
+	<message key="author.users.contributor.includeInBrowse">Näkyy luetteloissa</message>
+
+	<!-- Roles -->
+	<message key="grid.roles.currentRoles">Nykyiset roolit</message>
+	<message key="grid.roles.add">Luo uusi rooli</message>
+	<message key="grid.roles.stageAssignment">Työvaiheiden valinta</message>
+
+	<!-- Users -->
+	<message key="grid.user.currentUsers">Nykyiset käyttäjät</message>
+	<message key="grid.user.currentEnrollment">Nykyiset roolit</message>
+	<message key="grid.user.allRoles">Kaikki roolit</message>
+	<message key="grid.user.allPermissionLevels">Kaikki käyttöoikeustasot</message>
+	<message key="grid.user.add">Lisää käyttäjä</message>
+	<message key="grid.user.enroll">Lisää käyttäjälle rooli</message>
+	<message key="grid.user.edit">Muokkaa käyttäjää</message>
+	<message key="grid.user.email">Sähköposti</message>
+	<message key="grid.user.enable">Salli</message>
+	<message key="grid.user.disable">Estä</message>
+	<message key="grid.user.disableReason">Syy käyttäjän estämiseen</message>
+	<message key="grid.user.enableReason">Syy käyttäjän sallimiseen</message>
+	<message key="grid.user.error">Tätä käyttäjää hallinnoitaessa ilmeni virhe. Yritä uudelleen.</message>
+	<message key="grid.user.errorEmail">Tätä sähköpostia lähetettäessä ilmeni virhe. Varmista, että sähköpostipalvelimesi määritykset toimivat ja/tai ota yhteyttä järjestelmäsi ylläpitäjään.</message>
+	<message key="grid.user.cannotAdminister">Sinulla ei ole riittäviä oikeuksia hallinnoida tätä käyttäjää. Hallinnoidaksesi käyttäjää sinun tulee olla sivuston ylläpitäjä tai hallinnoida kaikkia niitä konteksteja, joihin tämä käyttäjä on lisätty.</message>
+	<message key="grid.user.authSource">Todentamislähde</message>
+	<message key="grid.user.mustProvideName">Anna käyttäjälle ensin ainakin sukunimi.</message>
+	<message key="grid.user.generatePassword">Luo salasana</message>
+	<message key="grid.user.generatePasswordDescription">Luo tälle käyttäjälle satunnainen salasana.</message>
+	<message key="grid.user.notifyUser">Ilmoita käyttäjälle</message>
+	<message key="grid.user.notifyUserDescription">Lähetä käyttäjälle tervetuloviesti sähköpostilla.</message>
+	<message key="grid.user.mustChangePassword">Vaihda salasana</message>
+	<message key="grid.user.mustChangePasswordDescription">Käyttäjän on vaihdettava salasana seuraavan kirjautumisen yhteydessä.</message>
+	<message key="grid.user.mustChangePasswordDescriptionOld">Vaadi, että käyttäjä vaihtaa salasanansa kirjautuessaan sisään seuraavan kerran.</message>
+	<message key="grid.user.moreDetails">Lisää tietoja käyttäjästä</message>
+	<message key="grid.user.lessDetails">Vähemmän tietoja käyttäjästä</message>
+	<message key="grid.user.userDetails">Käyttäjätiedot</message>
+	<message key="grid.user.userRoles">Käyttäjäroolit</message>
+	<message key="grid.user.userNoRoles">Tällä käyttäjällä ei ole rooleja.</message>
+	<message key="grid.user.step1">Vaihe 1: Täytä käyttäjätiedot</message>
+	<message key="grid.user.step2">Vaihe 2: Lisää rooleja käyttäjälle {$userFullName}</message>
+	<message key="grid.user.addRoles">Lisää rooleja</message>
+	<message key="grid.user.addRole">Lisää rooli</message>
+	<message key="grid.user.selectUser">Valitse käyttäjä</message>
+	<message key="grid.user.pleaseSelectUser">Valitse käyttäjä</message>
+	<message key="grid.user.confirmLogInAs">Kirjaudu sisään tällä käyttäjätunnuksella? Kaikkia toimenpiteitä, joita teet, pidetään tämän käyttäjän tekeminä.</message>
+	<message key="grid.user.mergeUsers">Yhdistä käyttäjät</message>
+	<message key="grid.user.mergeUsers.mergeUser">Yhdistä käyttäjä</message>
+	<message key="grid.user.mergeUsers.mergeIntoUser">Yhdistä tähän käyttäjään</message>
+	<message key="grid.user.mergeUsers.into.description">Sinun on valittava käyttäjä, kenelle aiemman käyttäjän kirjoittajahenkilöllisyys, toimitustoimeksiannot jne. siirretään.</message>
+	<message key="grid.user.mergeUsers.from.description">Valitse käyttäjä, joka yhdistetään toiseen käyttäjätiliin (esim. kun jollakulla on kaksi käyttäjätiliä). Ensin valittu tili poistetaan ja sen käsikirjoitukset, toimeksiannot jne. siirretään toiselle tilille.</message>
+	<message key="grid.user.mergeUsers.allUsers">Kaikki käyttäjät, joilla on rooleja</message>
+	<message key="grid.user.mergeUsers.mergeUserSelect.confirm">Haluatko varmasti yhdistää tämän käyttäjän toiseen? Valitset seuraavan käyttäjän seuraavalla näytöllä.</message>
+	<message key="grid.user.mergeUsers.confirm">Haluatko varmasti yhdistää tilin käyttäjätunnuksella "{$oldUsername}" tiliin, jonka käyttäjätunnus on "{$newUsername}"? Tili, jonka käyttäjätunnus on "{$oldUsername}", poistetaan kokonaan. Tätä toimintoa ei voi kumota.</message>
+	<message key="grid.user.mergeUsers.noneEnrolled">Yhdelläkään käyttäjällä ei ole tätä roolia.</message>
+
+	<!-- Prepared emails -->
+	<message key="grid.preparedEmails.title">Valmiit sähköpostipohjat</message>
+	<message key="grid.preparedEmails.currentList">Nykyinen lista</message>
+
+	<!-- Plugins -->
+	<message key="grid.plugin.allCategories">Kaikki kategoriat</message>
+	<message key="grid.plugin.disable">Haluatko varmasti poistaa tämän lisäosan käytöstä?</message>
+
+	<message key="grid.action.fileUnconsider">Oikoluvun korjaukset tehty. Voit merkitä tämän tehtävän käsittelemättömäksi</message>
+
+	<!-- Artwork Files Grid -->
+	<message key="grid.artworkFile.caption">Kuvateksti</message>
+	<message key="grid.artworkFile.credit">Tekijätieto</message>
+	<message key="grid.artworkFile.copyrightOwner">Tekijänoikeuden omistaja</message>
+	<message key="grid.artworkFile.copyrightContact">Yhteystiedot (jos ei kirjoittaja/julkaisija)</message>
+	<message key="grid.artworkFile.permissionTerms">Lupaehdot</message>
+	<message key="grid.artworkFile.placement">Sijoitus käsikirjoitukseen</message>
+
+	<!-- User Group Grid -->
+	<message key="grid.userGroup.assignStage">Valitse työvaihe</message>
+	<message key="grid.userGroup.unassignStage">Poista työvaihe</message>
+	<message key="grid.userGroup.allStages">Kaikki työnkulun vaiheet</message>
+	<message key="grid.userGroup.filter.listRoles">Listaa roolit, jotka on valittu seuraaviin työvaiheisiin</message>
+	<message key="grid.userGroup.filter.permissionLevel">Joilla on seuraava käyttöoikeustaso</message>
+	<message key="grid.userGroup.cantRemoveDefaultUserGroup">{$userGroupName}-rooli on oletusasetus ja sitä ei voi poistaa.</message>
+	<message key="grid.userGroup.cantRemoveUserGroup">{$userGroupName}-roolia ei voi poistaa. Rooliin on tällä hetkellä valittu {$usersCount} käyttäjä(ä).</message>
+	<message key="grid.userGroup.removed">{$userGroupName}-rooli poistettu.</message>
+	<message key="grid.userGroup.assignedStage">{$userGroupName}-rooli valittu {$stageName}-vaiheeseen.</message>
+	<message key="grid.userGroup.unassignedStage">{$userGroupName}-rooli poistettu {$stageName}-vaiheesta.</message>
+
+	<!-- Submission list grids -->
+	<message key="grid.submission.itemTitle">Kirjoittaja; Otsikko</message>
+</locale>

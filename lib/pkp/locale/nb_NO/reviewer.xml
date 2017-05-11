@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/nb_NO/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="nb_NO" full_name="Norsk Bokmål">
+	<message key="reviewer.reviewSteps.request">1. Forespørsel</message>
+	<message key="reviewer.reviewSteps.guidelines">2. Retningslinjer</message>
+	<message key="reviewer.reviewSteps.download">3. Last ned og vurder</message>
+	<message key="reviewer.reviewSteps.completion">4. Fullføring</message>
+	<message key="reviewer.step1.request">Forespørsel om fagfellevurdering</message>
+	<message key="reviewer.step1.requestBoilerplate">Du har blitt vurdert som en potensiell fagfellevurderer av følgende publikasjon. Nedenfor finner du en oversikt over innlevert materiale og en tidsplan for gjennomføring av vurderingen. Vi håper du har mulighet til å påta deg vurderingen.</message>
+	<message key="reviewer.step1.viewAllDetails">Se alle innleveringsdetaljer</message>
+	<message key="reviewer.submission.reviewerFiles">Filer for fagfellevurdering</message>
+	<message key="reviewer.submission.declineReview">Avvis forespørsel om fagfellevurdering</message>
+	<message key="reviewer.submission.declineReviewMessage">I feltet under kan du informere redaktøren om eventuelle grunner for avslaget av fagfellevurderingen.</message>
+	<message key="reviewer.submission.acceptReview">Godta fagfellevurdering, fortsett til steg #2.</message>
+	<message key="reviewer.submission.continueToStepThree">Fortsett til steg #3</message>
+	<message key="reviewer.submission.submitReview">Send inn fagfellevurdering</message>
+	<message key="reviewer.submission.reviewerGuidelines">Retningslinjer for fagfellevurdering</message>
+	<message key="reviewer.submission.enterCompetingInterests">Utgiveren har retningslinjer for åpenhet rundt potensielt konkurrerende interesser fra sine fagfellevurderere. Vennligst se igjennom disse retningslinjene.</message>
+	<message key="reviewer.submission.noCompetingInterests">Jeg har ingen konkurrerende interesser</message>
+	<message key="reviewer.submission.hasCompetingInterests">Jeg har mulige konkurrerende interesser (spesifiser under)</message>
+	<message key="reviewer.submission.competingInterests">Konkurrerende interesser</message>
+	<message key="reviewer.submission.guidelines">Retningslinjer for fagfellevurdering</message>
+	<message key="reviewer.submission.noGuidelines">Utgiveren har ikke laget noen retningslinjer for fagfellevurdering</message>
+	<message key="reviewer.submission.downloadDescription">Klikk p¨å filnavnene under for å laste ned filene som hører til innleveringen</message>
+	<message key="reviewer.submission.reviewDescription">Skriv inn (eller lim inn) din vurdering av denne innleveringen i skjemaet under.</message>
+	<message key="reviewer.submission.uploadDescription">Last opp filene du ønsker at redaktør og/eller forfatter skal se, inkludert reviderte versjoner av originalfilen(e).</message>
+	<message key="reviewer.complete">Fagfellevurdering sendt inn</message>
+	<message key="reviewer.confirmSubmit">Er du sikker på at du ønsker å sende inn denne fagfellevurderingen?</message>
+	<message key="reviewer.complete.whatNext">Takk for at du fullførte fagfellevurderingen, innleveringen var vellykket. Vi setter stor pris på ditt bidrag til å opprettholde kvaliteten i vår publikasjon. Redaktøren tar kontakt dersom mer informasjon eller avklaring er nødvendig.</message>
+	<message key="reviewer.aboutDueDates">Om tidsfrister</message>
+	<message key="reviewer.aboutDueDates.text">Redaktøren ber deg om å enten akseptere eller avvise fagfellevurderingen innen tidsfristen for besvaring av forespørsel om fagfellevurdering, og levere den ferdige fagfellevurderingen innen tidssfristen for fullføring av fagfellevurdering.</message>
+	<message key="submission.comments.canShareWithAuthor">Til forfatter og redaktør</message>
+	<message key="submission.comments.cannotShareWithAuthor">Kun til redaktør</message>
+</locale>

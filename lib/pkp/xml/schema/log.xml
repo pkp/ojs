@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE schema SYSTEM "../../dtd/xmlSchema.dtd">
+
+<!--
+  * xml/schema/log.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Event and email log schema in XML.
+  -->
+
+<schema version="0.2">
+	<!--
+	  *
+	  * TABLE event_log
+	  *
+	  -->
+	<table name="event_log">
+		<field name="log_id" type="I8">
+			<KEY />
+			<AUTOINCREMENT/>
+		</field>
+		<field name="assoc_type" type="I8">
+			<!-- Nullable for upgrade purposes only -->
+		</field>
+		<field name="assoc_id" type="I8">
+			<!-- Nullable for upgrade purposes only -->
+		</field>
+		<field name="user_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="date_logged" type="T">
+			<NOTNULL/>
+		</field>
+		<field name="ip_address" type="C2" size="39">
+			<NOTNULL/>
+		</field>
+		<field name="event_type" type="I8"/>
+		<field name="message" type="X"/>
+		<field name="is_translated" type="I1"/>
+		<descr>A log of all events associated with an object.</descr>
+		<index name="event_log_assoc">
+			<col>assoc_type</col>
+			<col>assoc_id</col>
+		</index>
+	</table>
+	
+	<!--
+	  *
+	  * TABLE event_log_settings
+	  *
+	  -->
+	<table name="event_log_settings">
+		<field name="log_id" type="I8">
+			<NOTNULL />
+		</field>
+		<field name="setting_name" type="C2" size="255">
+			<NOTNULL />
+		</field>
+		<field name="setting_value" type="X"/>
+		<field name="setting_type" type="C2" size="6">
+			<NOTNULL/>
+			<descr>(bool|int|float|string|object)</descr>
+		</field>
+		<descr>Event log associative data</descr>
+		<index name="event_log_settings_log_id">
+			<col>log_id</col>
+		</index>
+		<index name="event_log_settings_pkey">
+			<col>log_id</col>
+			<col>locale</col>
+			<col>setting_name</col>
+			<UNIQUE/>
+		</index>
+	</table>
+
+	<!--
+	  *
+	  * TABLE email_log
+	  *
+	  -->
+	<table name="email_log">
+		<field name="log_id" type="I8">
+			<KEY />
+			<AUTOINCREMENT/>
+		</field>
+		<field name="assoc_type" type="I8">
+			<!-- Nullable for upgrade purposes only -->
+		</field>
+		<field name="assoc_id" type="I8">
+			<!-- Nullable for upgrade purposes only -->
+		</field>
+		<field name="sender_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="date_sent" type="T">
+			<NOTNULL/>
+		</field>
+		<field name="ip_address" type="C2" size="39"/>
+		<field name="event_type" type="I8"/>
+		<field name="from_address" type="C2" size="255"/>
+		<field name="recipients" type="X"/>
+		<field name="cc_recipients" type="X"/>
+		<field name="bcc_recipients" type="X"/>
+		<field name="subject" type="C2" size="255"/>
+		<field name="body" type="X"/>
+		<descr>A log of all emails sent out related to an object.</descr>
+		<index name="email_log_assoc">
+			<col>assoc_type</col>
+			<col>assoc_id</col>
+		</index>
+	</table>
+	
+	<!--
+	  *
+	  * TABLE email_log_users
+	  *
+	  -->
+	<table name="email_log_users">
+		<field name="email_log_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="user_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<descr>Associations for email logs within a user.</descr>
+		<index name="email_log_user_id">
+			<col>email_log_id</col>
+			<col>user_id</col>
+			<UNIQUE/>
+		</index>
+	</table>
+</schema>

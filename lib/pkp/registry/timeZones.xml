@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  * timeZones.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Time zone list.
+  *
+  * This file lists all time zones available to the system.
+  -->
+
+<!DOCTYPE timezones [
+	<!ELEMENT timezones (entry+)>
+	<!ELEMENT entry EMPTY>
+	<!ATTLIST entry
+		key CDATA #REQUIRED
+		name CDATA #REQUIRED>
+]>
+
+<timezones>
+	<entry key="Africa/Abidjan" name="Abidjan" />
+	<entry key="Africa/Accra" name="Accra" />
+	<entry key="Africa/Addis_Ababa" name="Addis Ababa" />
+	<entry key="Africa/Algiers" name="Algiers" />
+	<entry key="Africa/Asmara" name="Asmara" />
+	<entry key="Africa/Bamako" name="Bamako" />
+	<entry key="Africa/Bangui" name="Bangui" />
+	<entry key="Africa/Banjul" name="Banjul" />
+	<entry key="Africa/Bissau" name="Bissau" />
+	<entry key="Africa/Blantyre" name="Blantyre" />
+	<entry key="Africa/Brazzaville" name="Brazzaville" />
+	<entry key="Africa/Bujumbura" name="Bujumbura" />
+	<entry key="Africa/Cairo" name="Cairo" />
+	<entry key="Africa/Casablanca" name="Casablanca" />
+	<entry key="Africa/Ceuta" name="Ceuta" />
+	<entry key="Africa/Conakry" name="Conakry" />
+	<entry key="Africa/Dakar" name="Dakar" />
+	<entry key="Africa/Dar_es_Salaam" name="Dar es Salaam" />
+	<entry key="Africa/Djibouti" name="Djibouti" />
+	<entry key="Africa/Douala" name="Douala" />
+	<entry key="Africa/El_Aaiun" name="El Aaiun" />
+	<entry key="Africa/Freetown" name="Freetown" />
+	<entry key="Africa/Gaborone" name="Gaborone" />
+	<entry key="Africa/Harare" name="Harare" />
+	<entry key="Africa/Johannesburg" name="Johannesburg" />
+	<entry key="Africa/Juba" name="Juba" />
+	<entry key="Africa/Kampala" name="Kampala" />
+	<entry key="Africa/Khartoum" name="Khartoum" />
+	<entry key="Africa/Kigali" name="Kigali" />
+	<entry key="Africa/Kinshasa" name="Kinshasa" />
+	<entry key="Africa/Lagos" name="Lagos" />
+	<entry key="Africa/Libreville" name="Libreville" />
+	<entry key="Africa/Lome" name="Lome" />
+	<entry key="Africa/Luanda" name="Luanda" />
+	<entry key="Africa/Lubumbashi" name="Lubumbashi" />
+	<entry key="Africa/Lusaka" name="Lusaka" />
+	<entry key="Africa/Malabo" name="Malabo" />
+	<entry key="Africa/Maputo" name="Maputo" />
+	<entry key="Africa/Maseru" name="Maseru" />
+	<entry key="Africa/Mbabane" name="Mbabane" />
+	<entry key="Africa/Mogadishu" name="Mogadishu" />
+	<entry key="Africa/Monrovia" name="Monrovia" />
+	<entry key="Africa/Nairobi" name="Nairobi" />
+	<entry key="Africa/Ndjamena" name="Ndjamena" />
+	<entry key="Africa/Niamey" name="Niamey" />
+	<entry key="Africa/Nouakchott" name="Nouakchott" />
+	<entry key="Africa/Ouagadougou" name="Ouagadougou" />
+	<entry key="Africa/Porto-Novo" name="Porto-Novo" />
+	<entry key="Africa/Sao_Tome" name="Sao Tome" />
+	<entry key="Africa/Tripoli" name="Tripoli" />
+	<entry key="Africa/Tunis" name="Tunis" />
+	<entry key="Africa/Windhoek" name="Windhoek" />
+
+	<entry key="America/Adak" name="Adak" />
+	<entry key="America/Anchorage" name="Anchorage" />
+	<entry key="America/Anguilla" name="Anguilla" />
+	<entry key="America/Antigua" name="Antigua" />
+	<entry key="America/Araguaina" name="Araguaina" />
+	<entry key="America/Argentina/Buenos_Aires" name="Argentina/Buenos Aires" />
+	<entry key="America/Argentina/Catamarca" name="Argentina/Catamarca" />
+	<entry key="America/Argentina/Cordoba" name="Argentina/Cordoba" />
+	<entry key="America/Argentina/Jujuy" name="Argentina/Jujuy" />
+	<entry key="America/Argentina/La_Rioja" name="Argentina/La Rioja" />
+	<entry key="America/Argentina/Mendoza" name="Argentina/Mendoza" />
+	<entry key="America/Argentina/Rio_Gallegos" name="Argentina/Rio Gallegos" />
+	<entry key="America/Argentina/Salta" name="Argentina/Salta" />
+	<entry key="America/Argentina/San_Juan" name="Argentina/San Juan" />
+	<entry key="America/Argentina/San_Luis" name="Argentina/San Luis" />
+	<entry key="America/Argentina/Tucuman" name="Argentina/Tucuman" />
+	<entry key="America/Argentina/Ushuaia" name="Argentina/Ushuaia" />
+	<entry key="America/Aruba" name="Aruba" />
+	<entry key="America/Asuncion" name="Asuncion" />
+	<entry key="America/Atikokan" name="Atikokan" />
+	<entry key="America/Bahia" name="Bahia" />
+	<entry key="America/Bahia_Banderas" name="Bahia Banderas" />
+	<entry key="America/Barbados" name="Barbados" />
+	<entry key="America/Belem" name="Belem" />
+	<entry key="America/Belize" name="Belize" />
+	<entry key="America/Blanc-Sablon" name="Blanc-Sablon" />
+	<entry key="America/Boa_Vista" name="Boa Vista" />
+	<entry key="America/Bogota" name="Bogota" />
+	<entry key="America/Boise" name="Boise" />
+	<entry key="America/Cambridge_Bay" name="Cambridge Bay" />
+	<entry key="America/Campo_Grande" name="Campo Grande" />
+	<entry key="America/Cancun" name="Cancun" />
+	<entry key="America/Caracas" name="Caracas" />
+	<entry key="America/Cayenne" name="Cayenne" />
+	<entry key="America/Cayman" name="Cayman" />
+	<entry key="America/Chicago" name="Chicago" />
+	<entry key="America/Chihuahua" name="Chihuahua" />
+	<entry key="America/Costa_Rica" name="Costa Rica" />
+	<entry key="America/Creston" name="Creston" />
+	<entry key="America/Cuiaba" name="Cuiaba" />
+	<entry key="America/Curacao" name="Curacao" />
+	<entry key="America/Danmarkshavn" name="Danmarkshavn" />
+	<entry key="America/Dawson" name="Dawson" />
+	<entry key="America/Dawson_Creek" name="Dawson Creek" />
+	<entry key="America/Denver" name="Denver" />
+	<entry key="America/Detroit" name="Detroit" />
+	<entry key="America/Dominica" name="Dominica" />
+	<entry key="America/Edmonton" name="Edmonton" />
+	<entry key="America/Eirunepe" name="Eirunepe" />
+	<entry key="America/El_Salvador" name="El Salvador" />
+	<entry key="America/Fortaleza" name="Fortaleza" />
+	<entry key="America/Glace_Bay" name="Glace Bay" />
+	<entry key="America/Godthab" name="Godthab" />
+	<entry key="America/Goose_Bay" name="Goose Bay" />
+	<entry key="America/Grand_Turk" name="Grand Turk" />
+	<entry key="America/Grenada" name="Grenada" />
+	<entry key="America/Guadeloupe" name="Guadeloupe" />
+	<entry key="America/Guatemala" name="Guatemala" />
+	<entry key="America/Guayaquil" name="Guayaquil" />
+	<entry key="America/Guyana" name="Guyana" />
+	<entry key="America/Halifax" name="Halifax" />
+	<entry key="America/Havana" name="Havana" />
+	<entry key="America/Hermosillo" name="Hermosillo" />
+	<entry key="America/Indiana/Indianapolis" name="Indiana/Indianapolis" />
+	<entry key="America/Indiana/Knox" name="Indiana/Knox" />
+	<entry key="America/Indiana/Marengo" name="Indiana/Marengo" />
+	<entry key="America/Indiana/Petersburg" name="Indiana/Petersburg" />
+	<entry key="America/Indiana/Tell_City" name="Indiana/Tell City" />
+	<entry key="America/Indiana/Vevay" name="Indiana/Vevay" />
+	<entry key="America/Indiana/Vincennes" name="Indiana/Vincennes" />
+	<entry key="America/Indiana/Winamac" name="Indiana/Winamac" />
+	<entry key="America/Inuvik" name="Inuvik" />
+	<entry key="America/Iqaluit" name="Iqaluit" />
+	<entry key="America/Jamaica" name="Jamaica" />
+	<entry key="America/Juneau" name="Juneau" />
+	<entry key="America/Kentucky/Louisville" name="Kentucky/Louisville" />
+	<entry key="America/Kentucky/Monticello" name="Kentucky/Monticello" />
+	<entry key="America/Kralendijk" name="Kralendijk" />
+	<entry key="America/La_Paz" name="La Paz" />
+	<entry key="America/Lima" name="Lima" />
+	<entry key="America/Los_Angeles" name="Los Angeles" />
+	<entry key="America/Lower_Princes" name="Lower Princes" />
+	<entry key="America/Maceio" name="Maceio" />
+	<entry key="America/Managua" name="Managua" />
+	<entry key="America/Manaus" name="Manaus" />
+	<entry key="America/Marigot" name="Marigot" />
+	<entry key="America/Martinique" name="Martinique" />
+	<entry key="America/Matamoros" name="Matamoros" />
+	<entry key="America/Mazatlan" name="Mazatlan" />
+	<entry key="America/Menominee" name="Menominee" />
+	<entry key="America/Merida" name="Merida" />
+	<entry key="America/Metlakatla" name="Metlakatla" />
+	<entry key="America/Mexico_City" name="Mexico City" />
+	<entry key="America/Miquelon" name="Miquelon" />
+	<entry key="America/Moncton" name="Moncton" />
+	<entry key="America/Monterrey" name="Monterrey" />
+	<entry key="America/Montevideo" name="Montevideo" />
+	<entry key="America/Montreal" name="Montreal" />
+	<entry key="America/Montserrat" name="Montserrat" />
+	<entry key="America/Nassau" name="Nassau" />
+	<entry key="America/New_York" name="New York" />
+	<entry key="America/Nipigon" name="Nipigon" />
+	<entry key="America/Nome" name="Nome" />
+	<entry key="America/Noronha" name="Noronha" />
+	<entry key="America/North_Dakota/Beulah" name="North Dakota/Beulah" />
+	<entry key="America/North_Dakota/Center" name="North Dakota/Center" />
+	<entry key="America/North_Dakota/New_Salem" name="North Dakota/New Salem" />
+	<entry key="America/Ojinaga" name="Ojinaga" />
+	<entry key="America/Panama" name="Panama" />
+	<entry key="America/Pangnirtung" name="Pangnirtung" />
+	<entry key="America/Paramaribo" name="Paramaribo" />
+	<entry key="America/Phoenix" name="Phoenix" />
+	<entry key="America/Port-au-Prince" name="Port-au-Prince" />
+	<entry key="America/Port_of_Spain" name="Port of Spain" />
+	<entry key="America/Porto_Velho" name="Porto Velho" />
+	<entry key="America/Puerto_Rico" name="Puerto Rico" />
+	<entry key="America/Rainy_River" name="Rainy River" />
+	<entry key="America/Rankin_Inlet" name="Rankin Inlet" />
+	<entry key="America/Recife" name="Recife" />
+	<entry key="America/Regina" name="Regina" />
+	<entry key="America/Resolute" name="Resolute" />
+	<entry key="America/Rio_Branco" name="Rio Branco" />
+	<entry key="America/Santa_Isabel" name="Santa Isabel" />
+	<entry key="America/Santarem" name="Santarem" />
+	<entry key="America/Santiago" name="Santiago" />
+	<entry key="America/Santo_Domingo" name="Santo Domingo" />
+	<entry key="America/Sao_Paulo" name="Sao Paulo" />
+	<entry key="America/Scoresbysund" name="Scoresbysund" />
+	<entry key="America/Shiprock" name="Shiprock" />
+	<entry key="America/Sitka" name="Sitka" />
+	<entry key="America/St_Barthelemy" name="St Barthelemy" />
+	<entry key="America/St_Johns" name="St Johns" />
+	<entry key="America/St_Kitts" name="St Kitts" />
+	<entry key="America/St_Lucia" name="St Lucia" />
+	<entry key="America/St_Thomas" name="St Thomas" />
+	<entry key="America/St_Vincent" name="St Vincent" />
+	<entry key="America/Swift_Current" name="Swift Current" />
+	<entry key="America/Tegucigalpa" name="Tegucigalpa" />
+	<entry key="America/Thule" name="Thule" />
+	<entry key="America/Thunder_Bay" name="Thunder Bay" />
+	<entry key="America/Tijuana" name="Tijuana" />
+	<entry key="America/Toronto" name="Toronto" />
+	<entry key="America/Tortola" name="Tortola" />
+	<entry key="America/Vancouver" name="Vancouver" />
+	<entry key="America/Whitehorse" name="Whitehorse" />
+	<entry key="America/Winnipeg" name="Winnipeg" />
+	<entry key="America/Yakutat" name="Yakutat" />
+	<entry key="America/Yellowknife" name="Yellowknife" />
+
+	<entry key="Antarctica/Casey" name="Casey" />
+	<entry key="Antarctica/Davis" name="Davis" />
+	<entry key="Antarctica/DumontDUrville" name="DumontDUrville" />
+	<entry key="Antarctica/Macquarie" name="Macquarie" />
+	<entry key="Antarctica/Mawson" name="Mawson" />
+	<entry key="Antarctica/McMurdo" name="McMurdo" />
+	<entry key="Antarctica/Palmer" name="Palmer" />
+	<entry key="Antarctica/Rothera" name="Rothera" />
+	<entry key="Antarctica/South_Pole" name="South Pole" />
+	<entry key="Antarctica/Syowa" name="Syowa" />
+	<entry key="Antarctica/Vostok" name="Vostok" />
+
+	<entry key="Arctic/Longyearbyen" name="Longyearbyen" />
+
+	<entry key="Asia/Aden" name="Aden" />
+	<entry key="Asia/Almaty" name="Almaty" />
+	<entry key="Asia/Amman" name="Amman" />
+	<entry key="Asia/Anadyr" name="Anadyr" />
+	<entry key="Asia/Aqtau" name="Aqtau" />
+	<entry key="Asia/Aqtobe" name="Aqtobe" />
+	<entry key="Asia/Ashgabat" name="Ashgabat" />
+	<entry key="Asia/Baghdad" name="Baghdad" />
+	<entry key="Asia/Bahrain" name="Bahrain" />
+	<entry key="Asia/Baku" name="Baku" />
+	<entry key="Asia/Bangkok" name="Bangkok" />
+	<entry key="Asia/Beirut" name="Beirut" />
+	<entry key="Asia/Bishkek" name="Bishkek" />
+	<entry key="Asia/Brunei" name="Brunei" />
+	<entry key="Asia/Choibalsan" name="Choibalsan" />
+	<entry key="Asia/Chongqing" name="Chongqing" />
+	<entry key="Asia/Colombo" name="Colombo" />
+	<entry key="Asia/Damascus" name="Damascus" />
+	<entry key="Asia/Dhaka" name="Dhaka" />
+	<entry key="Asia/Dili" name="Dili" />
+	<entry key="Asia/Dubai" name="Dubai" />
+	<entry key="Asia/Dushanbe" name="Dushanbe" />
+	<entry key="Asia/Gaza" name="Gaza" />
+	<entry key="Asia/Harbin" name="Harbin" />
+	<entry key="Asia/Hebron" name="Hebron" />
+	<entry key="Asia/Ho_Chi_Minh" name="Ho Chi Minh" />
+	<entry key="Asia/Hong_Kong" name="Hong Kong" />
+	<entry key="Asia/Hovd" name="Hovd" />
+	<entry key="Asia/Irkutsk" name="Irkutsk" />
+	<entry key="Asia/Jakarta" name="Jakarta" />
+	<entry key="Asia/Jayapura" name="Jayapura" />
+	<entry key="Asia/Jerusalem" name="Jerusalem" />
+	<entry key="Asia/Kabul" name="Kabul" />
+	<entry key="Asia/Kamchatka" name="Kamchatka" />
+	<entry key="Asia/Karachi" name="Karachi" />
+	<entry key="Asia/Kashgar" name="Kashgar" />
+	<entry key="Asia/Kathmandu" name="Kathmandu" />
+	<entry key="Asia/Kolkata" name="Kolkata" />
+	<entry key="Asia/Krasnoyarsk" name="Krasnoyarsk" />
+	<entry key="Asia/Kuala_Lumpur" name="Kuala Lumpur" />
+	<entry key="Asia/Kuching" name="Kuching" />
+	<entry key="Asia/Kuwait" name="Kuwait" />
+	<entry key="Asia/Macau" name="Macau" />
+	<entry key="Asia/Magadan" name="Magadan" />
+	<entry key="Asia/Makassar" name="Makassar" />
+	<entry key="Asia/Manila" name="Manila" />
+	<entry key="Asia/Muscat" name="Muscat" />
+	<entry key="Asia/Nicosia" name="Nicosia" />
+	<entry key="Asia/Novokuznetsk" name="Novokuznetsk" />
+	<entry key="Asia/Novosibirsk" name="Novosibirsk" />
+	<entry key="Asia/Omsk" name="Omsk" />
+	<entry key="Asia/Oral" name="Oral" />
+	<entry key="Asia/Phnom_Penh" name="Phnom Penh" />
+	<entry key="Asia/Pontianak" name="Pontianak" />
+	<entry key="Asia/Pyongyang" name="Pyongyang" />
+	<entry key="Asia/Qatar" name="Qatar" />
+	<entry key="Asia/Qyzylorda" name="Qyzylorda" />
+	<entry key="Asia/Rangoon" name="Rangoon" />
+	<entry key="Asia/Riyadh" name="Riyadh" />
+	<entry key="Asia/Sakhalin" name="Sakhalin" />
+	<entry key="Asia/Samarkand" name="Samarkand" />
+	<entry key="Asia/Seoul" name="Seoul" />
+	<entry key="Asia/Shanghai" name="Shanghai" />
+	<entry key="Asia/Singapore" name="Singapore" />
+	<entry key="Asia/Taipei" name="Taipei" />
+	<entry key="Asia/Tashkent" name="Tashkent" />
+	<entry key="Asia/Tbilisi" name="Tbilisi" />
+	<entry key="Asia/Tehran" name="Tehran" />
+	<entry key="Asia/Thimphu" name="Thimphu" />
+	<entry key="Asia/Tokyo" name="Tokyo" />
+	<entry key="Asia/Ulaanbaatar" name="Ulaanbaatar" />
+	<entry key="Asia/Urumqi" name="Urumqi" />
+	<entry key="Asia/Vientiane" name="Vientiane" />
+	<entry key="Asia/Vladivostok" name="Vladivostok" />
+	<entry key="Asia/Yakutsk" name="Yakutsk" />
+	<entry key="Asia/Yekaterinburg" name="Yekaterinburg" />
+	<entry key="Asia/Yerevan" name="Yerevan" />
+
+	<entry key="Atlantic/Azores" name="Azores" />
+	<entry key="Atlantic/Bermuda" name="Bermuda" />
+	<entry key="Atlantic/Canary" name="Canary" />
+	<entry key="Atlantic/Cape_Verde" name="Cape Verde" />
+	<entry key="Atlantic/Faroe" name="Faroe" />
+	<entry key="Atlantic/Madeira" name="Madeira" />
+	<entry key="Atlantic/Reykjavik" name="Reykjavik" />
+	<entry key="Atlantic/South_Georgia" name="South Georgia" />
+	<entry key="Atlantic/Stanley" name="Stanley" />
+	<entry key="Atlantic/St_Helena" name="St Helena" />
+
+	<entry key="Australia/Adelaide" name="Adelaide" />
+	<entry key="Australia/Brisbane" name="Brisbane" />
+	<entry key="Australia/Broken_Hill" name="Broken Hill" />
+	<entry key="Australia/Currie" name="Currie" />
+	<entry key="Australia/Darwin" name="Darwin" />
+	<entry key="Australia/Eucla" name="Eucla" />
+	<entry key="Australia/Hobart" name="Hobart" />
+	<entry key="Australia/Lindeman" name="Lindeman" />
+	<entry key="Australia/Lord_Howe" name="Lord Howe" />
+	<entry key="Australia/Melbourne" name="Melbourne" />
+	<entry key="Australia/Perth" name="Perth" />
+	<entry key="Australia/Sydney" name="Sydney" />
+
+	<entry key="Europe/Amsterdam" name="Amsterdam" />
+	<entry key="Europe/Andorra" name="Andorra" />
+	<entry key="Europe/Athens" name="Athens" />
+	<entry key="Europe/Belgrade" name="Belgrade" />
+	<entry key="Europe/Berlin" name="Berlin" />
+	<entry key="Europe/Bratislava" name="Bratislava" />
+	<entry key="Europe/Brussels" name="Brussels" />
+	<entry key="Europe/Bucharest" name="Bucharest" />
+	<entry key="Europe/Budapest" name="Budapest" />
+	<entry key="Europe/Chisinau" name="Chisinau" />
+	<entry key="Europe/Copenhagen" name="Copenhagen" />
+	<entry key="Europe/Dublin" name="Dublin" />
+	<entry key="Europe/Gibraltar" name="Gibraltar" />
+	<entry key="Europe/Guernsey" name="Guernsey" />
+	<entry key="Europe/Helsinki" name="Helsinki" />
+	<entry key="Europe/Isle_of_Man" name="Isle of Man" />
+	<entry key="Europe/Istanbul" name="Istanbul" />
+	<entry key="Europe/Jersey" name="Jersey" />
+	<entry key="Europe/Kaliningrad" name="Kaliningrad" />
+	<entry key="Europe/Kiev" name="Kiev" />
+	<entry key="Europe/Lisbon" name="Lisbon" />
+	<entry key="Europe/Ljubljana" name="Ljubljana" />
+	<entry key="Europe/London" name="London" />
+	<entry key="Europe/Luxembourg" name="Luxembourg" />
+	<entry key="Europe/Madrid" name="Madrid" />
+	<entry key="Europe/Malta" name="Malta" />
+	<entry key="Europe/Mariehamn" name="Mariehamn" />
+	<entry key="Europe/Minsk" name="Minsk" />
+	<entry key="Europe/Monaco" name="Monaco" />
+	<entry key="Europe/Moscow" name="Moscow" />
+	<entry key="Europe/Oslo" name="Oslo" />
+	<entry key="Europe/Paris" name="Paris" />
+	<entry key="Europe/Podgorica" name="Podgorica" />
+	<entry key="Europe/Prague" name="Prague" />
+	<entry key="Europe/Riga" name="Riga" />
+	<entry key="Europe/Rome" name="Rome" />
+	<entry key="Europe/Samara" name="Samara" />
+	<entry key="Europe/San_Marino" name="San Marino" />
+	<entry key="Europe/Sarajevo" name="Sarajevo" />
+	<entry key="Europe/Simferopol" name="Simferopol" />
+	<entry key="Europe/Skopje" name="Skopje" />
+	<entry key="Europe/Sofia" name="Sofia" />
+	<entry key="Europe/Stockholm" name="Stockholm" />
+	<entry key="Europe/Tallinn" name="Tallinn" />
+	<entry key="Europe/Tirane" name="Tirane" />
+	<entry key="Europe/Uzhgorod" name="Uzhgorod" />
+	<entry key="Europe/Vaduz" name="Vaduz" />
+	<entry key="Europe/Vatican" name="Vatican" />
+	<entry key="Europe/Vienna" name="Vienna" />
+	<entry key="Europe/Vilnius" name="Vilnius" />
+	<entry key="Europe/Volgograd" name="Volgograd" />
+	<entry key="Europe/Warsaw" name="Warsaw" />
+	<entry key="Europe/Zagreb" name="Zagreb" />
+	<entry key="Europe/Zaporozhye" name="Zaporozhye" />
+	<entry key="Europe/Zurich" name="Zurich" />
+
+	<entry key="Indian/Antananarivo" name="Antananarivo" />
+	<entry key="Indian/Chagos" name="Chagos" />
+	<entry key="Indian/Christmas" name="Christmas" />
+	<entry key="Indian/Cocos" name="Cocos" />
+	<entry key="Indian/Comoro" name="Comoro" />
+	<entry key="Indian/Kerguelen" name="Kerguelen" />
+	<entry key="Indian/Mahe" name="Mahe" />
+	<entry key="Indian/Maldives" name="Maldives" />
+	<entry key="Indian/Mauritius" name="Mauritius" />
+	<entry key="Indian/Mayotte" name="Mayotte" />
+	<entry key="Indian/Reunion" name="Reunion" />
+
+	<entry key="Pacific/Apia" name="Apia" />
+	<entry key="Pacific/Auckland" name="Auckland" />
+	<entry key="Pacific/Chatham" name="Chatham" />
+	<entry key="Pacific/Chuuk" name="Chuuk" />
+	<entry key="Pacific/Easter" name="Easter" />
+	<entry key="Pacific/Efate" name="Efate" />
+	<entry key="Pacific/Enderbury" name="Enderbury" />
+	<entry key="Pacific/Fakaofo" name="Fakaofo" />
+	<entry key="Pacific/Fiji" name="Fiji" />
+	<entry key="Pacific/Funafuti" name="Funafuti" />
+	<entry key="Pacific/Galapagos" name="Galapagos" />
+	<entry key="Pacific/Gambier" name="Gambier" />
+	<entry key="Pacific/Guadalcanal" name="Guadalcanal" />
+	<entry key="Pacific/Guam" name="Guam" />
+	<entry key="Pacific/Honolulu" name="Honolulu" />
+	<entry key="Pacific/Johnston" name="Johnston" />
+	<entry key="Pacific/Kiritimati" name="Kiritimati" />
+	<entry key="Pacific/Kosrae" name="Kosrae" />
+	<entry key="Pacific/Kwajalein" name="Kwajalein" />
+	<entry key="Pacific/Majuro" name="Majuro" />
+	<entry key="Pacific/Marquesas" name="Marquesas" />
+	<entry key="Pacific/Midway" name="Midway" />
+	<entry key="Pacific/Nauru" name="Nauru" />
+	<entry key="Pacific/Niue" name="Niue" />
+	<entry key="Pacific/Norfolk" name="Norfolk" />
+	<entry key="Pacific/Noumea" name="Noumea" />
+	<entry key="Pacific/Pago_Pago" name="Pago Pago" />
+	<entry key="Pacific/Palau" name="Palau" />
+	<entry key="Pacific/Pitcairn" name="Pitcairn" />
+	<entry key="Pacific/Pohnpei" name="Pohnpei" />
+	<entry key="Pacific/Port_Moresby" name="Port Moresby" />
+	<entry key="Pacific/Rarotonga" name="Rarotonga" />
+	<entry key="Pacific/Saipan" name="Saipan" />
+	<entry key="Pacific/Tahiti" name="Tahiti" />
+	<entry key="Pacific/Tarawa" name="Tarawa" />
+	<entry key="Pacific/Tongatapu" name="Tongatapu" />
+	<entry key="Pacific/Wake" name="Wake" />
+	<entry key="Pacific/Wallis" name="Wallis" />
+</timezones>

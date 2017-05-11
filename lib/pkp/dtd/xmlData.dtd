@@ -1,0 +1,42 @@
+<!--
+  * dtd/xmlData.dtd
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2014-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * DTD describing database data and/or operations.
+  -->
+
+<!ELEMENT data (table?, sql?)*>
+
+<!-- Table data -->
+<!ELEMENT table (field_default*, row*)+>
+	<!ATTLIST table
+		name CDATA #REQUIRED>
+<!ELEMENT field_default (#PCDATA)>
+	<!ATTLIST field_default
+		name CDATA #REQUIRED
+		null (0|1) #IMPLIED>
+<!ELEMENT row (field+)>
+<!ELEMENT field (#PCDATA)>
+	<!ATTLIST field
+		name CDATA #REQUIRED
+		null (0|1) #IMPLIED>
+
+<!-- Raw SQL -->
+<!ELEMENT sql (query|drop|rename)*>
+<!ELEMENT query (#PCDATA)>
+	<!ATTLIST query
+		driver CDATA #IMPLIED>
+
+<!-- Schema operations -->
+<!ELEMENT drop EMPTY>
+	<!ATTLIST drop
+		table CDATA #REQUIRED
+		column CDATA #IMPLIED>
+<!ELEMENT rename EMPTY>
+	<!ATTLIST rename
+		table CDATA #REQUIRED
+		column CDATA #IMPLIED
+		to CDATA #REQUIRED>

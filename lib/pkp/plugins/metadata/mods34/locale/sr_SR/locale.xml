@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../dtd/locale.dtd">
+
+<!--
+  * plugins/metadata/mods34/locale/sr_SR/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="sr_SR" full_name="Cрпски">
+	<!-- plug-in -->
+	<message key="plugins.metadata.mods34.displayName">MODS 3.4 meta-data</message>
+	<message key="plugins.metadata.mods34.description">Dodaje MODS 3.4 šeme i adaptere aplikacije.</message>
+
+	<!-- MODS 3.4 XML output -->
+	<message key="plugins.metadata.mods34.mods34XmlOutput.displayName">MODS 3.4 Output</message>
+	<message key="plugins.metadata.mods34.mods34XmlOutput.description">Konvertuje MODS 3.4 opise metapodataka u XML.</message>
+</locale>

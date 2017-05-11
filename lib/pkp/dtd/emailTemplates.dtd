@@ -1,0 +1,19 @@
+<!--
+  * dtd/emails.dtd
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * DTD for emails.
+  *
+  -->
+
+<!ELEMENT emails (email+)>
+<!ELEMENT email EMPTY>
+	<!ATTLIST email
+		key CDATA #REQUIRED
+		can_edit CDATA #IMPLIED
+		can_disable CDATA #IMPLIED
+		to_role_id CDATA #IMPLIED
+		from_role_id CDATA #IMPLIED>

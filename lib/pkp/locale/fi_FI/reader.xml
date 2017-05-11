@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/fi_FI/reader.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+  
+<locale name="fi_FI" full_name="Suomi">
+	<message key="comments.anonymous">Anonyymi käyttäjä</message>
+	<message key="comments.anonymousNamed">"{$userName}"</message>
+	<message key="comments.body">Teksti</message>
+	<message key="comments.titleRequired">Kommentin otsikko vaaditaan.</message>
+	<message key="comments.confirmDeleteChildren">Tämä kommentin poistaminen poistaa myös kaikki siihen liittyvät vastaukset. Haluatko varmasti poistaa kommentin?</message>
+	<message key="comments.delete">Poista tämä kommentti</message>
+	<message key="comments.email">Lähettäjän sähköposti</message>
+	<message key="comments.emailReply">Lähetä sähköpostivastaus</message>
+	<message key="comments.enterComment">Kirjoita kommentti</message>
+	<message key="comments.inResponseTo"><![CDATA[Vastauksena viestiin <a href="{$url}">{$title}</a>]]></message>
+	<message key="comments.name">Lähettäjän nimi</message>
+	<message key="comments.noComments">Yhtään lukijakommenttia ei ole lähetetty.</message>
+	<message key="comments.nReplies">({$num} vastausta)</message>
+	<message key="comments.oneReply">(1 vastaus)</message>
+	<message key="comments.postAnonymously">Lähetä tämä kommentti anonyymina</message>
+	<message key="comments.postReply">Lähetä vastaus</message>
+	<message key="comments.readerComments">Lukijakommentit</message>
+	<message key="comments.readMore">Lue lisää</message>
+	<message key="comments.replies">Vastaukset</message>
+	<message key="comments.title">Otsikko</message>
+	<message key="comments.viewAllComments">Näytä kaikki kommentit</message>
+	<message key="reader.fullText">Kokoteksti:</message>
+	<message key="rt.addComment">Lisää kommentti</message>
+	<message key="rt.admin.configuration">Määritys</message>
+	<message key="rt.admin.contexts.confirmDelete">Haluatko varmasti poistaa tämän kontekstin ja kaikki siihen liittyvät haut?</message>
+	<message key="rt.admin.contexts.createContext">Luo konteksti</message>
+	<message key="rt.admin.contexts.edit.editContext">Muokkaa kontekstia</message>
+	<message key="rt.admin.contexts.metadata">Metatiedot</message>
+	<message key="rt.admin.contexts.options.authorTerms">Käytä kirjoittajien nimiä oletushakusanoina, jotta käyttäjät voivat löytää muita tämän kohteen kirjoittajien töitä (esim. "Tekijän muita julkaisuja" -kohdassa).</message>
+	<message key="rt.admin.contexts.options.citedBy">Käytä kirjoittajien nimiä oletushakusanoina ja kuvaile kontekstia artikkeliin tehtyjen viittausten hakuna.</message>
+	<message key="rt.admin.contexts.options.defineTerms"><![CDATA[Käytä lukijan korostamaa sanaa oletushakusanana, tai jätä tyhjäksi, jos mitään ei ole valittu tälle kohteelle (esim. “Termien määritys” -kohdassa).]]><![CDATA[ ]]><![CDATA[“Termien määritys” -valinta täytyy olla käytössä <a href="{$settingsUrl}">RST-asetukset</a> -kohdassa, jotta sanoja kaksoisklikkaamalla voidaan avata tämä konteksti.]]></message>
+	<message key="rt.admin.contexts.options.geoTerms">Käytä maantieteellisiä indeksointitietoja oletushakusanoina.</message>
+	<message key="rt.admin.contexts.options">Valinnat</message>
+	<message key="rt.admin.management">Hallinnointi</message>
+
+	<message key="rt.admin.sharing">Jakaminen</message>
+	<message key="rt.admin.sharing.enabled">Jakaminen otettu käyttöön</message>
+	<message key="rt.admin.sharing.description"><![CDATA[Jotta lukijasi voivat jakaa sisältöä, rekisteröidy osoitteessa <a href="http://www.addthis.com">addthis.com</a> saadaksesi tilin, ja kopioi/liitä jakamispainikkeen koodi alle.]]></message>
+
+	<message key="rt.admin.sharing.basic">Perusasetukset</message>
+	<message key="rt.admin.sharing.userNameLabel">AddThis.com -käyttäjätunnus</message>
+	<message key="rt.admin.sharing.buttonStyleLabel">Painikkeen tyyli</message>
+	<message key="rt.admin.sharing.dropDownMenuLabel">Käytä pudotusvalikkoa</message>
+	<message key="rt.admin.sharing.advanced">Lisäasetukset (valinnainen)</message>
+	<message key="rt.admin.sharing.customizationLink"><![CDATA[Katso lisätietoja <a href="http://support.addthis.com/customer/portal/articles/381236-custom-buttons">AddThis.comin mukautusohjeista</a>.]]></message>
+	<message key="rt.admin.sharing.brandLabel">Tuotemerkki</message>
+	<message key="rt.admin.sharing.dropDownLabel"><![CDATA[Pudotusvalikon vaihtoehdot <br /> (pilkuin eroteltu luettelo)]]></message>
+	<message key="rt.admin.sharing.languageLabel">Kieli</message>
+	<message key="rt.admin.sharing.logolabel">Logo</message>
+	<message key="rt.admin.sharing.logoBackgroundLabel">Logon tausta</message>
+	<message key="rt.admin.sharing.logoColorLabel">Logon väri</message>
+
+	<message key="rt.admin.readingToolsEnabled">Lukutyökalut</message>
+	<message key="rt.admin.searches.confirmDelete">Haluatko varmasti poistaa tämän haun?</message>
+	<message key="rt.admin.searches.createSearch">Luo haku</message>
+	<message key="rt.admin.searches.edit.editSearch">Muokkaa hakua</message>
+	<message key="rt.admin.selectedVersion">Samankaltaiset sisällöt</message>
+	<message key="rt.admin.settings.abstract">Abstrakti (näyttää kohteen abstraktin).</message>
+	<message key="rt.admin.settings.viewReviewPolicy">Näytä arviointiperiaatteet</message>
+	<message key="rt.admin.settings.authorBio">Tietoa kirjoittajasta (näyttää kirjoittajan itsestään antamat tiedot).</message>
+	<message key="rt.admin.settings.captureCite">Kohteeseen viittaaminen (antaa kohteelle bibliografiset tiedot).</message>
+	<message key="rt.admin.settings.defineTerms">Etsi termejä (sallii lukijoiden kaksoisklikata mitä tahansa kohteen sanaa ja lähettää sanan sanakirjaan).</message>
+	<message key="rt.admin.settings.disableRelatedItems">Poista “samankaltaiset sisällöt” käytöstä</message>
+	<message key="rt.admin.settings.emailAuthor">Lähetä kirjoittajalle sähköpostia (vie sähköpostipohjaan, jossa on kirjoittajan sähköpostiosoite valmiina).</message>
+	<message key="rt.admin.settings.emailOthers">Ilmoita kollegalle (vie sähköpostipohjaan, jossa on valmiina linkki kohteeseen).</message>
+	<message key="rt.admin.settings.findingReferences">Etsi lähdeviitteitä</message>
+	<message key="rt.admin.settings.printerFriendly">Tulostettava versio (kohteen tulostettavaksi sopiva versio).</message>
+	<message key="rt.admin.settings.supplementaryFiles">Liitetiedostot (näyttää listan kirjoittajan käsikirjoitukseen liittämistä tiedostoista).</message>
+	<message key="rt.admin.settings.viewMetadata">Indeksoinnin metatiedot (näyttää kirjoittajan ja järjestelmän kohteelle antamat indeksoinnin metatiedot).</message>
+	<message key="rt.admin.status">Tila</message>
+	<message key="rt.admin.configureSharing">Määritä AddThis</message>
+	<message key="rt.admin.validateUrls.complete">Vahvistus suoritettu.</message>
+	<message key="rt.admin.validateUrls.ok">OK</message>
+	<message key="rt.admin.validateUrls.urlIsInvalid">{$url} ei ole kelvollinen.</message>
+	<message key="rt.admin.validateUrls">Vahvista lukutyökalujen URL-osoitteet</message>
+	<message key="rt.admin.validateUrls.validate">Vahvista</message>
+	<message key="rt.admin.versions.confirmDelete">Haluatko varmasti poistaa tämän version ja kaikki siihen liittyvät kontekstit ja haut?</message>
+	<message key="rt.admin.versions.confirmRestore">Haluatko varmasti palauttaa peruuttamattomasti kaikki versiot oletusarvoisiksi? Siinä tapauksessa sinun on valittava aktiivinen versio Asetukset-sivulta.</message>
+	<message key="rt.admin.versions.createVersion">Luo versio</message>
+	<message key="rt.admin.versions.edit.editVersion">Muokkaa versiota</message>
+	<message key="rt.admin.versions.export">Vie</message>
+	<message key="rt.admin.versions.importVersion">Tuo versio</message>
+	<message key="rt.admin.versions.metadata">Metatiedot</message>
+	<message key="rt.admin.versions.restoreVersions">Palauta versiot oletusarvoisiksi</message>
+	<message key="rt.authorBio">Tietoa kirjoittajasta</message>
+	<message key="rt.captureCite.format">Viittausmuoto</message>
+	<message key="rt.captureCite">Kohteeseen viittaaminen</message>
+	<message key="rt.captureCite.online">Online</message>
+	<message key="rt.captureCite.web">Verkko</message>	
+	<message key="rt.colleague">Ilmoita kollegalle</message>
+	<message key="rt.context.abbrev">Lyhenne</message>
+	<message key="rt.context.and">AND</message>
+	<message key="rt.context.citesContextDescription">Jos artikkeli on indeksoitu Google Scholarissa, sen yhteydessä saattaa olla "Viittausten määrä X"-linkki, joka johtaa artikkeliin viitanneiden töiden luetteloon. Lisäksi Google Scholar listaa kaikki kohteet, joissa mainitaan kyseinen artikkeli ja sen kirjoittaja. Päästäksesi sellaisiin online-nimikkeisiin, jotka ovat saatavilla vain oman tiedekirjastosi kautta, aktivoi ao. kirjastolinkit Google Scholarin asetuksissa.</message>
+	<message key="rt.context">Konteksti</message>
+	<message key="rt.context.defineTermsDescription">Jos kohde on HTML-tiedosto (ei PDF), kaksoisklikkaamalla mitä tahansa sanaa tekstissä, saat sanan Määriteltävä sana -kenttään. Muussa tapauksessa sanat voidaan kirjoittaa tai liittää ruutuun. Saadaksesi lisätietoja haetusta resurssista klikkaa TIETOA-kohtaa. Nämä resurssit on valittu asiaankuuluvuutensa takia sekä siksi, että niiden sisältö on kokonaan tai osittain vapaasti (ilmaiseksi) saatavilla.</message>
+	<message key="rt.context.description">Kuvaus</message>
+	<message key="rt.context.order">Järjestys</message>
+	<message key="rt.contexts">Kontekstit</message>
+	<message key="rt.context.searchDescription">Hakusanat on valittu kirjoittajien toimesta. Lukija voi muuttaa tai poistaa niitä, sillä kaksi tai kolme lyhyttä ja tarkkaa termiä tai lauseketta tuottavat parhaan haun Boolen AND-operaattorilla. Saadaksesi lisätietoja haetuista resursseista klikkaa TIETOA-kohtaa. Nämä resurssit on valittu asiaankuuluvuutensa takia sekä siksi, että niiden sisältö on kokonaan tai osittain vapaasti (ilmaiseksi) saatavilla.</message>
+	<message key="rt.context.searchTerms">Hakusanat</message>
+	<message key="rt.context.termToDefine">Määriteltävä sana</message>
+	<message key="rt.context.title">Otsikko</message>
+	<message key="rt.emailAuthor">Lähetä kirjoittajalle sähköpostia</message>
+	<message key="rt.email.needLogin"><![CDATA[*Vaatii <a target="_parent" href="{$loginUrl}">rekisteröitymisen</a>]]></message>
+	<message key="rt.email.sent">Viestisi on lähetetty.</message>
+	<message key="rt.findingReferences">Lähdeviitteiden etsiminen</message>
+	<message key="rt.findingReferences.googleScholar">Google Scholar</message>
+	<message key="rt.findingReferences.windowsLiveAcademic">Windows Live Academic</message>
+	<message key="rt.lookUp">Etsi termejä</message>
+	<message key="rt.metadata.dublinCore.contributor">Muu tekijä</message>
+	<message key="rt.metadata.dublinCore.coverage">Kattavuus</message>
+	<message key="rt.metadata.dublinCore.date">Päivämäärä</message>
+	<message key="rt.metadata.dublinCore.description">Kuvaus</message>
+	<message key="rt.metadata.dublinCore">Dublin Core</message>
+	<message key="rt.metadata.dublinCore.format">Formaatti</message>
+	<message key="rt.metadata.dublinCore.identifier">Identifiointitunnus</message>
+	<message key="rt.metadata.dublinCore.language">Kieli</message>
+	<message key="rt.metadata.dublinCore.publisher">Julkaisija</message>
+	<message key="rt.metadata.dublinCore.relation">Suhde</message>
+	<message key="rt.metadata.dublinCore.rights">Oikeudet</message>
+	<message key="rt.metadata.dublinCore.source">Lähde</message>
+	<message key="rt.metadata.dublinCore.subject">Aihe</message>
+	<message key="rt.metadata.dublinCore.title">Otsikko</message>
+	<message key="rt.metadata.dublinCore.type">Laji</message>
+	<message key="rt.metadata.forThisDocument">Tämän asiakirjan metatiedot</message>
+	<message key="rt.metadata.pkp.abstract">Abstrakti</message>
+	<message key="rt.metadata.pkp.copyright">Tekijänoikeudet ja luvat</message>
+	<message key="rt.metadata.pkp.coverage">Geospatiaalinen sijainti, kronologinen kausi, tutkimusotos (sukupuoli, ikä jne.)</message>
+	<message key="rt.metadata.pkp.date">(VVVV-KK-PP)</message>
+	<message key="rt.metadata.pkp.discipline">Tieteenala(t)</message>
+	<message key="rt.metadata.pkp.format">Tiedostomuoto</message>
+	<message key="rt.metadata.pkp.genre"><![CDATA[Tila & genre]]></message>
+	<message key="rt.metadata.pkpItem">PKP:n metatietojen kohdat</message>
+	<message key="rt.metadata.pkp.language">suomi=fi</message>
+	<message key="rt.metadata.pkp.publisher">Organisoiva taho, sijainti</message>
+	<message key="rt.metadata.pkp.source">Otsikko; vol, nro (vuosi)</message>
+	<message key="rt.metadata.pkp.sponsors">Tukija(t)</message>
+	<message key="rt.metadata.pkp.subject">Avainsana(t)</message>
+	<message key="rt.metadata.pkp.suppFiles">Liitetied. Tiedostot</message>
+	<message key="rt.metadata.pkp.title">Asiakirjan otsikko</message>
+	<message key="rt.metadata.pkp.type">Laji</message>
+	<message key="rt.metadata.pkp.uri">URI-tunniste (Uniform Resource Identifier)</message>
+	<message key="rt.printVersion">Tulostettava versio</message>
+	<message key="rt.readingTools">Lukutyökalut</message>
+	<message key="rt.relatedItems">Samankaltaiset sisällöt</message>
+	<message key="rt.reviewPolicy">Arviointiperiaatteet</message>
+	<message key="rt.search.description">Kuvaus</message>
+	<message key="rt.searches">Haut</message>
+	<message key="rt.search.order">Järjestys</message>
+	<message key="rt.search">Hae</message>
+	<message key="rt.search.searchPost">Lähetä tiedot</message>
+	<message key="rt.search.searchUrl">Hae URL-osoitetta</message>
+	<message key="rt.search.suggest">Ehdota lähdettä</message>
+	<message key="rt.search.title">Otsikko</message>
+	<message key="rt.search.url">URL-osoite</message>
+	<message key="rt.suppFiles.download">Lataa</message>
+	<message key="rt.suppFiles">Liitetiedostot</message>
+	<message key="rt.suppFiles.viewMetadata">Indeksoinnin metatiedot</message>
+	<message key="rt.version.description">Kuvaus</message>
+	<message key="rt.version.key">Avain</message>
+	<message key="rt.version.locale">Kielialue</message>
+	<message key="rt.versions">Samankaltaisten sisältöjen joukot</message>
+	<message key="rt.version.title">Otsikko</message>
+	<message key="rt.version">Versio</message>
+	<message key="rt.viewMetadata">Indeksoinnin metatiedot</message>
+</locale>

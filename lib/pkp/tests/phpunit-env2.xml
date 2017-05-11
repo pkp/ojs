@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.github.com/sebastianbergmann/phpunit/master/phpunit.xsd"
+	convertErrorsToExceptions="true"
+	convertNoticesToExceptions="true"
+	convertWarningsToExceptions="true"
+	bootstrap="phpunit-bootstrap.php">
+	<php>
+		<server name="PKP_MOCK_ENV" value="env2"/>
+	</php>
+	<filter>
+		<blacklist>
+			<directory suffix=".php">../../../cache</directory>
+			<directory suffix=".php">../../../lib/pkp/lib</directory>
+		</blacklist>
+	</filter>
+</phpunit>

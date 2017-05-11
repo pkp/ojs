@@ -1,0 +1,638 @@
+/**
+ * @defgroup pkp_form
+ */
+
+/**
+ * @file styles/form.less
+ *
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @ingroup pkp_form
+ *
+ * @brief Form Builder Vocabulary classes
+ */
+
+/**
+ * FBV styles
+ */
+.pkp_form {
+	font-size: @font-sml;
+	line-height: @line-sml;
+
+	fieldset {
+		margin: 0 0 @double 0;
+		padding: 0;
+		border: none;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	// At the moment we don't really differentiate in the way we use these
+	// elements
+	legend,
+	label,
+	.section > .label // Prevents it from effecting .label elements in grids
+	{
+		display: block;
+		font-size: @base;
+		font-weight: @bold;
+	}
+
+	// error
+	label.error, span.error {
+		margin-top: 4px;
+		margin-bottom: 4px;
+		padding-left: 0.5em;
+		border-left: @half solid @no;
+		font-size: @font-sml;
+		line-height: @line-sml;
+		color: @no;
+	}
+
+	.section {
+		margin-bottom: @double;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&:not(.inline) {
+			.pkp_helpers_clear();
+		}
+	}
+
+	// Inline sections
+	.inline {
+		float: left;
+		padding-right: @base;
+
+		&:last-child {
+			padding-right: 0;
+		}
+	}
+
+	label {
+		cursor: pointer;
+	}
+
+	input[type="date"],
+	input[type="email"],
+	input[type="file"],
+	input[type="month"],
+	input[type="number"],
+	input[type="password"],
+	input[type="search"],
+	input[type="tel"],
+	input[type="text"],
+	input[type="url"],
+	input[type="week"],
+	textarea,
+	select {
+		display: block;
+		width: 100%;
+		height: @double; // browser-compatibility for select fields
+		background-color: @lift;
+		padding: 0 0.25em;
+		font-size: @font-sml;
+		line-height: @double;
+		border: @bg-border;
+	}
+
+	textarea {
+		height: 10em;
+		line-height: @line-sml;
+	}
+
+	// Textarea size modifiers
+	.short {
+		height: 6em;
+	}
+
+	.medium {
+		height: 12em;
+	}
+
+	.tall {
+		height: 18em;
+	}
+
+	// Checkbox and radio lists
+	.checkbox_and_radiobutton {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+		input {
+			display: inline-block;
+			margin-right: 0.5em;
+		}
+
+		li label {
+			font-size: @font-sml;
+			font-weight: @normal;
+		}
+	}
+
+	// Required feilds
+	.req {
+		font-weight: @bold;
+		color: @no;
+		padding-left: 0.25em;
+	}
+
+	// Disabled fields
+	input[disabled],
+	textarea[disabled],
+	select[disabled] {
+		background: @bg;
+		color: @text-light;
+		color: @text-light-rgba;
+	}
+
+	// Field descriptions and labels beneath fields
+	.description,
+	.sub_label {
+		font-size: @font-sml;
+		line-height: @line-sml;
+		font-weight: @normal;
+		color: @text-light;
+		color: @text-light-rgba;
+	}
+
+	.description {
+		margin-bottom: @half;
+	}
+
+	.sub_label {
+		font-style: italic;
+	}
+
+	// When a .description element is followed by another .description
+	.description + .description,
+	// When a .description element is attached to a fieldset and followed
+	// by a section
+	.description + .section {
+		margin-top: @double;
+	}
+
+	// Form controls that toggle between display and editing states
+	[data-pkp-editable] {
+
+		[data-pkp-editable-view="input"],
+		[data-pkp-editable-view="input"] label:not(.error),
+		&.isEditing [data-pkp-editable-view="display"] {
+			position: absolute;
+			top: -9999px;
+			left: -9999px;
+		}
+
+		[data-pkp-editable-view="display"],
+		&.isEditing [data-pkp-editable-view="input"] {
+			position: relative;
+			top: auto;
+			left: auto;
+		}
+
+		.edit {
+			font-size: @font-sml;
+			margin-left: 1em;
+			text-decoration: none;
+
+			&:before {
+				&:extend(.fa);
+				content: @fa-var-pencil;
+				margin-right: 0.25em;
+			}
+		}
+	}
+
+	// Localization popovers
+	.localization_popover_container {
+		position: relative;
+		// fix collapsed div in firefox, which caused the translation icon to
+		// appear in the wrong space
+		display: block;
+
+		// Localization globe icon within TinyMce
+		&:after {
+			&:extend(.fa);
+			content: @fa-var-globe;
+			position: absolute;
+			top: @half - 2;
+			right: @base;
+			z-index: 2;
+			width: 20px;
+			height: 20px;
+			font-size: 20px;
+			text-align: center;
+			color: @text-light;
+		}
+	}
+
+	.localization_popover_container_focus {
+		display: block;
+		padding: @half;
+		background-color: @bg;
+
+		&:after {
+			top: @base - 2;
+			color: @text;
+		}
+	}
+
+	.localizationIncomplete:after {
+		color: @warn;
+	}
+
+	.localizationComplete:after {
+		color: @yes;
+	}
+
+	.localization_popover {
+		display: none;
+		position: absolute;
+		left: 0;
+		z-index: 999;
+		padding: @half;
+		background-color: @bg;
+	}
+
+	// Position locale label off-screen but accessible to screen readers
+	label.locale {
+		&:extend(.pkp_screen_reader);
+
+		&:focus {
+			&:extend(.pkp_screen_reader:focus);
+		}
+	}
+
+	// Loading indicator
+	.pkp_spinner {
+		opacity: 0;
+		float: right;
+		margin-right: 0.5em;
+		.transition(opacity 0.3s ease-in-out);
+
+		&.is_visible {
+			opacity: 1;
+		}
+	}
+
+	// Hide form elements when in wizard mode
+	.is_wizard_mode {
+		display: none;
+	}
+}
+
+// Row of buttons
+.form_buttons {
+
+	a {
+		&:extend(.pkp_button_link all);
+
+		&.cancelButton {
+			&:extend(.pkp_button_link_offset all);
+		}
+	}
+}
+
+a[id^="publicIdentifiersForm-clearPubId-button"],
+a[id^="publicIdentifiersForm-clearObjectsPubIds-button"] {
+	&:extend(.pkp_button all);
+	&:extend(.pkp_button_offset all);
+}
+
+// Required fields notice
+.formRequired {
+	display: inline-block;
+	margin-top: @double;
+	padding: 12px 1em;
+	background: @bg-light;
+	border-left: 2px solid @primary;
+	font-size: @font-sml;
+	font-style: italic;
+	line-height: @line-sml;
+}
+
+// Form file view
+.pkp_form_file_view {
+	.pkp_helpers_clear;
+	margin-bottom: @base;
+	padding: @double;
+	background: @bg-light;
+
+	.data {
+
+		span {
+			display: block;
+			font-size: @font-sml;
+			line-height: @line-sml;
+		}
+
+		.title {
+			font-weight: @bold;
+		}
+
+		.value {
+			margin-bottom: @base;
+			color: @text-light;
+			color: @text-light-rgba;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	input {
+		color: @text;
+		color: @text-rgba;
+	}
+}
+
+// To be used alongside .pkp_form_file_view (both classes assigned)
+.pkp_form_image_view {
+
+	.img {
+		text-align: center;
+
+		img {
+			max-width: 100%;
+		}
+	}
+
+	// @todo use common breakpoints
+	@media(min-width: 767px) {
+
+		> div {
+			width: 50%;
+			float: right;
+		}
+
+		.data {
+			float: left;
+			padding-right: @double;
+		}
+	}
+}
+
+// Link action links that should have a warning color
+[class*=pkp_linkaction_deleteFile] {
+	color: @no;
+}
+
+// jQuery UI datepicker
+.ui-datepicker {
+	width: 25em;
+	padding: @base;
+	max-width: 100%;
+	background: @bg;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.ui-datepicker-prev,
+.ui-datepicker-next {
+	display: block;
+	position: absolute;
+	top: @base;
+	left: @base;
+	width: @double;
+	height: @double;
+	text-align: center;
+	cursor: pointer;
+
+	&:before {
+		&:extend(.fa);
+		content: @fa-var-arrow-left;
+	}
+
+
+	> span {
+		&:extend(.pkp_screen_reader);
+	}
+}
+
+.ui-datepicker-next {
+	left: auto;
+	right: @base;
+
+	&:before {
+		content: @fa-var-arrow-right;
+	}
+}
+
+.ui-datepicker-title {
+	margin-bottom: @base;
+	font-size: @font-sml;
+	font-weight: @bold;
+	text-align: center;
+}
+
+.ui-datepicker-calendar {
+	width: 100%;
+	text-align: center;
+
+	thead {
+		font-size: @font-sml;
+	}
+
+	tbody {
+		background: @lift;
+
+		tr {
+			border-top: 1px solid @bg;
+
+			&:first-child {
+				border-top: none;
+			}
+		}
+	}
+
+	a {
+		display: block;
+		text-decoration: none;
+
+		&:hover,
+		&:focus {
+			background: @primary;
+			color: #fff;
+		}
+	}
+}
+
+// Autocomplete fields
+// @todo the UI could probably be improved. When several results appear, you
+//  can loop through them with up and down keys, but that's not really intuitive
+//  with the UI pattern that's been implemented. Also, the suggestions panel
+//  could be absolutely positioned. Right now it causes a lot of jankiness when
+//  it comes in and out.
+.pkp_form input.ui-autocomplete-input {
+	display: inline-block; // Allow the label to sit on top
+}
+
+.ui-autocomplete {
+	&:extend(.pkp_unstyled_list);
+	max-width: 200px;
+	border: @bg-border;
+	border-top: none;
+	background: @lift;
+	font-size: @font-tiny;
+	line-height: @line-tiny;
+	box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+	z-index: 99999;
+
+	> li {
+		display: block;
+		padding: @half;
+		cursor: pointer;
+		text-overflow: ellipsis;
+		overflow-x: hidden;
+		white-space: nowrap;
+		cursor: pointer;
+
+		&.ui-state-focus {
+			background: @bg;
+		}
+	}
+}
+
+.ui-autocomplete-loading {
+	background-image: url(data:image/gif;base64,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);
+	background-position: center right;
+	background-size: @base;
+	background-repeat: no-repeat;
+}
+
+// Tag-it component
+.tagit {
+	&:extend(.pkp_unstyled_list);
+	&:extend(.pkp_form input[type="text"]);
+	.pkp_helpers_clear();
+	height: auto; // overwrite text field styles
+	cursor: text;
+
+	> li {
+		display: inline-block;
+
+		&.tagit-choice {
+			margin-right: 0.5em;
+			padding-left: 0.5em;
+			background: @bg;
+			border-radius: @radius;
+			line-height: @double - @half;
+		}
+	}
+
+	input[type="text"] {
+		display: inline-block;
+		border: none;
+		width: inherit;
+		line-height: 30px;
+		height: 30px;
+		vertical-align: top;
+		padding: 0 0.5em;
+	}
+
+	.tagit-new input:focus {
+		outline: 0;
+	}
+}
+
+.tagit-close {
+	padding: 0 0.5em;
+	color: @no;
+	cursor: pointer;
+}
+
+// Fixes the positioning of tinymce tooltips
+// skin.min.css (the tinymce we're loading) sets their position to absolute,
+// but the tooltips seem to set position relative to the viewport, not the
+// document. This causes problems for textareas in modals, where the scroll
+// position of the modal differs from the scroll position of the document.
+// "I'm almost definitely pretty sure that might be the explanation." ~NW
+.mce-widget.mce-tooltip {
+	position: fixed;
+}
+
+// Forms in modals
+.pkp_modal .pkp_form {
+
+	.form_buttons {
+		&:extend(.pkp_modal_panel > .footer all);
+		margin: @base -@base -@base;
+	}
+
+	// Override grid filter form buttons which appear in modals
+	.pkp_form.filter .form_buttons {
+		margin: 0;
+		padding: 0;
+		background: none;
+	}
+}
+
+.pkp_form {
+
+	// @todo all below
+	span.pkp_form_success {
+		color: #090;
+		font-weight: bold;
+		font-size: 100%;
+	}
+
+	.pkp_form_file_input_container {
+		height: 30px;
+		width: 350px;
+		position:relative;
+		float:left;
+
+		.pkp_form_fakeFile {
+			left:0;
+			line-height:90%;
+			margin:0;
+			padding:0;
+			position:absolute;
+			top:0;
+			width:350px;
+			z-index:1;
+		}
+
+		.pkp_form_fakeInput {
+			margin-bottom:5px;
+			margin-left:0;
+			height:15px;
+			padding-left:3px;
+			padding-top:1px;
+			width:241px;
+		}
+
+		.pkp_form_fakeButton {
+			line-height:90%;
+		}
+
+		.pkp_form_uploadFile {
+			line-height: 90%;
+			height: 29px;
+		}
+	}
+
+	input.pkp_form_upload_field {
+		padding: 3px;
+		margin: 0;
+		height: 30px;
+		width: 350px;
+		position: relative;
+		z-index: 2;
+		text-align:right;
+		-moz-opacity:0;
+		filter:alpha(opacity=0);
+		opacity: 0;
+	}
+
+	.pkp_form_hidden {
+		display:none !important;
+	}
+}

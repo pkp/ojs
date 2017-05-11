@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/eu_ES/user.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the eu_ES (Euskara) locale.
+  *
+  -->
+
+<locale name="eu_ES" full_name="Euskara">
+	<message key="user.affiliation">Erakundea</message>
+	<message key="user.affiliations">Erakundeak</message>
+	<message key="user.biography">Biografia</message>
+	<message key="user.biography.description">(Adib., saila eta kargua)</message>
+	<message key="user.changeMyPassword">Aldatu nire pasahitza</message>
+	<message key="user.changePassword">Aldatu pasahitza</message>
+	<message key="user.dateLastLogin">Azken saio-hasiera</message>
+	<message key="user.dateRegistered">Erregistratze-data</message>
+	<message key="user.editMyProfile">Editatu nire profila</message>
+	<message key="user.email">Helb. el.</message>
+	<message key="user.feminine">E</message>
+	<message key="user.firstName">Izena</message>
+	<message key="user.gender">Generoa</message>
+	<message key="user.initialsExample">Juan Mari Agirre = JMA</message>
+	<message key="user.initials">Inizialak</message>
+	<message key="user.interests">Ebaluatzeko interesak</message>
+	<message key="user.lastName">Abizena</message>
+	<message key="user.login.accountDisabledWithReason">Zure kontua arrazoi honengatik desgaitu da: {$reason}</message>
+	<message key="user.login.accountDisabled">Zure kontua desgaituta dago. Administratzaileak emango dizu informazio gehiago.</message>
+	<message key="user.login.accountNotValidated">Zure helbide elektronikoa ez da balidatu ahal izan. Begiratu helbidea ondo dagoen, eta jarraitu emandako instrukzioak. Ez baduzu mezu elektronikorik jaso, gune-administratzaileari galdetzea komeniko da.</message>
+	<message key="user.login.activate">Aktibatu kontua</message>
+	<message key="user.login.activated">Eskerrik asko kontua aktibatzeagatik. Kontua sortu zenuenean eman zenituen datuekin sartu ahal izango zara aurrerantzean.</message>
+	<message key="user.login.changePasswordInstructions"><![CDATA[Pasahitz berri bat aukeratu behar duzu gune honetan saioa hasi ahal izateko.<br /><br />Pasahitz berria eskuratzeko, idatzi zure erabiltzaile-izena eta oraingo pasahitza behean.]]></message>
+	<message key="user.login.forgotPassword">Pasahitza ahaztu zaizu?</message>
+	<message key="user.login.loginError">Erabiltzaile-izena edo pasahitza ez da baliozkoa. Saiatu berriro.</message>
+	<message key="user.login">Hasi saioa</message>
+	<message key="user.login.lostPassword.confirmationSent">Berrespen bat bidali da zure helbide elektronikora. Jarraitu mezuan emandako azalpenak pasahitza berrezartzeko.</message>
+	<message key="user.login.lostPassword.invalidHash">Sakatu duzun esteka iraungita dago edo ez da baliozkoa. Saiatu zure pasahitza berriro berrezartzen.</message>
+	<message key="user.login.lostPassword.invalidUser">Ez dago helbide elektroniko hori duen erabiltzailerik.</message>
+	<message key="user.login.lostPassword.passwordSent">Pasahitz berri bat bidali da zure helbide elektronikora. Pasahitz berriarekin sartuko zara orain webgunean.</message>
+	<message key="user.login.registeredEmail">Erabiltzaile erregistratuaren helbide elektronikoa</message>
+	<message key="user.login.resetPassword">Berrezarri pasahitza</message>
+	<message key="user.logOut">Amaitu saioa</message>
+	<message key="user.mailingAddress">Posta-helbidea</message>
+	<message key="user.masculine">G</message>
+	<message key="user.middleName">Bigarren izena</message>
+	<message key="user.myAccount">Nire kontua</message>
+	<message key="user.name">Izen-abizenak</message>
+	<message key="user.password">Pasahitza</message>
+	<message key="user.repeatPassword">Errepikatu pasahitza</message>
+	<message key="user.phone">Telefonoa</message>
+	<message key="user.profile.changePasswordInstructions">Zure kontuaren pasahitza aldatzeko, idatzi zure oraingo pasahitza eta pasahitz berria behean.</message>
+	<message key="user.profile.editProfile">Editatu profila</message>
+	<message key="user.profile.form.emailRequired">Baliozko helbide elektroniko bat eman behar da.</message>
+	<message key="user.profile.form.firstNameRequired">Izena eman behar da.</message>
+	<message key="user.profile.form.lastNameRequired">Abizena eman behar da.</message>
+	<message key="user.profile.form.newPasswordRequired">Pasahitz berria idatzi behar duzu.</message>
+	<message key="user.profile.form.oldPasswordInvalid">Idatzi duzun uneko pasahitza ez da zuzena.</message>
+	<message key="user.profile.form.openAccessNotifications">Zenbakia sarrera librekoa dela jakinarazteko mezua</message>
+	<message key="user.profile.form.passwordRequired">Pasahitza eman behar da.</message>
+	<message key="user.profile.form.profileImage">Profil-irudia</message>
+	<message key="user.profile.form.publishedNotifications">Zenbaki berria atera dela jakinarazteko mezua</message>
+	<message key="user.profile.form.urlInvalid">Adierazitako URLa ez da baliozkoa. Begiratu URL helbidea ondo idatzita dagoen, eta saiatu berriro. (Aholkua: Gehitu http:// URLaren hasieran).</message>
+	<message key="user.profile.form.usernameRequired">Erabiltzaile-izena eman behar da.</message>
+	<message key="user.profile.leavePasswordBlank">Oraingo pasahitza mantentzeko, utzi hutsik pasahitzaren eremuak.</message>
+	<message key="user.profile.newPassword">Pasahitz berria</message>
+	<message key="user.profile.oldPassword">Uneko pasahitza</message>
+	<message key="user.profile">Profila</message>
+	<message key="user.profile.publicProfile">Erabiltzailearen profila</message>
+	<message key="user.profile.repeatNewPassword">Errepikatu pasahitz berria</message>
+	<message key="user.register.completeForm">Aldizkari honetan erregistratzeko, inprimaki hau bete behar duzu.</message>
+	<message key="user.register.form.emailExists">Hautatutako helbide elektronikoa beste erabiltzaile batena da.</message>
+	<message key="user.register.form.passwordsDoNotMatch">Pasahitzak ez datoz bat.</message>
+	<message key="user.register.form.usernameExists">Hautatutako erabiltzaile-izena beste erabiltzaile batena da.</message>
+	<message key="user.register.passwordLengthRestriction">Pasahitzak {$length} karaktere izan behar ditu gutxienez.</message>
+	<message key="user.register.registerAs">Erregistratu honela:</message>
+	<message key="user.register">Erregistratu</message>
+	<message key="user.register.usernameRestriction">Erabiltzaile-izenak letra minuskulak, zenbakiak, eta marratxoak/azpimarrak bakarrik eduki ditzake.</message>
+	<message key="user.role.reader">Irakurlea</message>
+	<message key="user.role.readers">Irakurleak</message>
+	<message key="user.role.reviewer">Ebaluatzailea</message>
+	<message key="user.role.reviewers">Ebaluatzaileak</message>
+	<message key="user.role.siteAdmin">Gune-administratzailea</message>
+	<message key="user.role.siteAdmins">Gune-administratzaileak</message>
+	<message key="user.roles">Funtzioak</message>
+	<message key="user.salutation">Tratamendua</message>
+	<message key="user.sendPassword">Berrespena</message>
+	<message key="user.sendPassword.description">Bidal iezadazue berresteko mezu elektronikoa nire erabiltzaile-izen eta pasahitzarekin</message>
+	<message key="user.signature">Sinadura</message>
+	<message key="user.title">Titulua</message>
+	<message key="user.url">URLa</message>
+	<message key="user.userHome">Erabiltzailearen hasierako orria</message>
+	<message key="user.username">Erabiltzaile-izena</message>
+	<message key="user.workingLanguages">Laneko hizkuntzak</message>
+	<message key="user.affiliation.description">(Zure erakundea, adibidez, "Simon Fraser University")</message>
+	<message key="user.gossip">Ohar pribatuak</message>
+	<message key="user.profile.form.profileImageInvalid">Irudi-formatu profil baliogabea edo irudi handiegia. Formatu onartuak .gif, .jpg, eta .png dira, eta irudiak ezin du 150x150 pixeleko tamaina gainditu.</message>
+	<message key="user.other">Beste batzuk</message>
+	<message key="user.profile.form.affiliationRequired">Afiliatzea behar da.</message>
+	<message key="user.repeatPassword">Errepikatu pasahitza</message>
+	<message key="user.register.form.emailsDoNotMatch">Helbide elektronikoaren eremuak ez datoz bat.</message>
+	<message key="user.authorization.accessDenied">Sarbidea ukatuta.</message>
+	<message key="user.authorization.processAuthenticationTokenRequired">Prozesua autentifikatzeko fitxa falta da edo ez da baliozkoa.</message>
+	<message key="user.authorization.contextRequired">Ezin duzu eragiketa hori egin testuingururik gabe (prentsa, aldizkaria, kongresua, etab.).</message>
+	<message key="user.authorization.loginRequired">Beharrezkoa da saioa hastea.</message>
+	<message key="user.authorization.privateOperation">Egiten saiatu zaren eragiketa pribatua da edo ez da existitzen.</message>
+	<message key="user.authorization.restrictedSiteAccess">Sarbidea ukatu zaizu. Une honetan, orri honetarako sarbidea murriztuta dago.</message>
+	<message key="user.authorization.roleBasedAccessDenied">Une honetako eginkizunak ez du eragiketa hori egiteko baimenik.</message>
+	<message key="user.authorization.userGroupRequired">Eragiketa hori egin ahal izateko, baliozko erabiltzaile taldea ezarri behar duzu.</message>
+	<message key="user.group">Erabiltzaile taldea</message>
+	<message key="user.hello">Kaixo,</message>
+	<message key="user.profile.form.countryRequired">Beharrezkoa da herrialde bat.</message>
+	<message key="user.profile.form.mailingAddressRequired">Beharrezkoa da helbide elektroniko bat.</message>
+	<message key="user.profile.form.passwordSameAsOld">Zure pasahitz berria aurreko pasahitz berbera da.</message>
+	<message key="user.profile.form.usergroupRequired">Beharrezkoa da erabiltzaile talde bat.</message>
+	<message key="user.accountInformation">Kontuaren informazioa</message>
+	<message key="user.authorization.managerRequired">Mailari Prentsa Arduradun eginkizuna (adib., Prentsa edo Produkzio Editorea) duen erabiltzaile bat esleitu behar zaio, aurrera jarraitu aurretik.</message>
+	<message key="user.interests.description">(Interesak banandu enter edo koma tekla sakatuz)</message>
+	<message key="user.suffix">Atzizkia</message>
+</locale>

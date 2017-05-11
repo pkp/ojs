@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/ca_ES/manager.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Credits: https://pkp.sfu.ca/wiki/index.php?title=OMP:_Catalan_(ca_ES)
+  * Localization strings.
+  -->
+
+<locale name="ca_ES" full_name="Català">
+	<!-- Website settings -->
+	<message key="manager.website.information">Informació</message>
+	<message key="manager.website.appearance">Aparença</message>
+	<message key="manager.website.imageFileRequired">Heu d'introduir un fitxer d'imatge. Comproveu que hàgiu seleccionat un fitxer carregat.</message>
+
+	<message key="manager.announcements">Avisos</message>
+	<message key="manager.announcements.confirmDelete">Esteu segur/a que voleu suprimir aquest avís de manera permanent?</message>
+	<message key="manager.announcements.create">Crea un avís nou</message>
+	<message key="manager.announcements.createTitle">Crea</message>
+	<message key="manager.announcements.dateExpire">Venciment</message>
+	<message key="manager.announcements.datePublish">Publicat</message>
+	<message key="manager.announcements.edit">Edita l’avís</message>
+	<message key="manager.announcements.editTitle">Edita</message>
+	<message key="manager.announcements.form.dateExpireDayIncompleteDate">Seleccioneu un any i/o un mes a més del dia per a la data de venciment.</message>
+	<message key="manager.announcements.form.dateExpire">Data de venciment</message>
+	<message key="manager.announcements.form.dateExpireInstructions">L'avís es mostrarà als lectors/ores fins a aquesta data. Deixeu aquest camp en blanc si voleu que l'avís es mostri indefinidament.</message>
+	<message key="manager.announcements.form.dateExpireMonthIncompleteDate">Seleccioneu un any i/o un dia a més del mes per a la data de venciment.</message>
+	<message key="manager.announcements.form.dateExpireValid">Seleccioneu una data vàlida per al venciment de l’avís.</message>
+	<message key="manager.announcements.form.dateExpireYearIncompleteDate">Seleccioneu un mes i/o un dia a més de l’any per a la data de venciment.</message>
+	<message key="manager.announcements.form.description">Descripció</message>
+	<message key="manager.announcements.form.descriptionInstructions">Text complet de l’avís.</message>
+	<message key="manager.announcements.form.descriptionRequired">Heu d’introduir una descripció per a l’avís.</message>
+	<message key="manager.announcements.form.descriptionShortInstructions">Descripció breu que es mostrarà juntament amb el títol de l’avís.</message>
+	<message key="manager.announcements.form.descriptionShortRequired">Heu d’introduir una descripció breu per a l’avís.</message>
+	<message key="manager.announcements.form.descriptionShort">Descripció breu</message>
+	<message key="manager.announcements.form.saveAndCreateAnother">Desa’l i crea’n un altre</message>
+	<message key="manager.announcements.form.titleRequired">Heu d’introduir un títol per a l’avís.</message>
+	<message key="manager.announcements.form.title">Títol</message>
+	<message key="manager.announcements.form.typeId">Tipus</message>
+	<message key="manager.announcements.form.typeIdValid">Seleccioneu un tipus d’avís vàlid.</message>
+	<message key="manager.announcements.noneCreated">No s’ha creat cap avís.</message>
+	<message key="manager.announcements.title">Títol</message>
+	<message key="manager.announcements.type">Tipus</message>
+	<message key="manager.announcementTypes">Tipus d’avís</message>
+	<message key="manager.announcementTypes.confirmDelete">Advertiment! Tots els avisos pertanyents a aquest tipus d'avís també s'eliminaran. Esteu segur/a que voleu eliminar aquest avís de manera permanent?</message>
+	<message key="manager.announcementTypes.create">Crea un tipus d’avís</message>
+	<message key="manager.announcementTypes.createTitle">Crea</message>
+	<message key="manager.announcementTypes.edit">Edita el tipus d’avís</message>
+	<message key="manager.announcementTypes.editTitle">Edita</message>
+	<message key="manager.announcementTypes.form.saveAndCreateAnother">Desa’l i crea’n un altre</message>
+	<message key="manager.announcementTypes.form.typeNameExists">Ja existeix un tipus d’avís amb aquest nom.</message>
+	<message key="manager.announcementTypes.form.typeName">Nom</message>
+	<message key="manager.announcementTypes.form.typeNameRequired">Cal que introduïu un nom per al tipus d’avís.</message>
+	<message key="manager.announcementTypes.noneCreated">No s’ha creat cap tipus d’avís.</message>
+	<message key="manager.announcementTypes.typeName">Tipus d’avís</message>
+
+	<!-- Publication Process settings -->
+	<message key="manager.publication.submissionStage">Tramesa</message>
+	<message key="manager.publication.reviewStage">Revisió</message>
+	<message key="manager.publication.editorialStage">Editorial</message>
+	<message key="manager.publication.productionStage">Producció</message>
+	<message key="manager.publication.emails">Correus electrònics</message>
+	<message key="manager.publication.libraryDescription"><![CDATA[Aquests fitxers s'han preparat per utilitzar-los com a plantilles i guies i formen part dels <span class="pkp_help_title">Documents enviats</span>.]]></message>
+	<message key="manager.emails.confirmDelete">Esteu segur/a que voleu suprimir aquesta plantilla de missatge de correu electrònic?</message>
+	<message key="manager.emails.confirmReset">Esteu segur/a que voleu reiniciar aquesta plantilla de missatge de correu electrònic als seus valors predeterminats?</message>
+	<message key="manager.emails.addEmail">Afegeix una plantilla de missatge de correu electrònic</message>
+	<message key="manager.emails.createEmail">Crea un missatge de correu electrònic</message>
+	<message key="manager.emails.data">Dades de plantilla de correu electrònic</message>
+	<message key="manager.emails.details">Detalls de plantilla</message>
+	<message key="manager.emails.disable">Inhabilita</message>
+	<message key="manager.emails.disable.message">Ara es desactivarà aquesta plantilla de missatge de correu electrònic.  Els processos del sistema que facin servir aquesta plantilla ho deixaran de fer.  Voleu confirmar aquesta operació?</message>
+	<message key="manager.emails.editEmail">Edita el missatge de correu electrònic</message>
+	<message key="manager.emails.editTestExample">Edita l’exemple de missatge de correu electrònic de prova</message>
+	<message key="manager.emails.emailKey">Clau per al missatge de correu electrònic</message>
+	<message key="manager.emails.emailKeyExists">Ja existeix un missatge de correu electrònic amb la clau indicada. Les claus de correu electrònic han de ser úniques.</message>
+	<message key="manager.emails.emailTemplate">Plantilla de missatge de correu electrònic</message>
+	<message key="manager.emails.emailTemplates">Plantilles de missatges de correu electrònic</message>
+	<message key="manager.emails.enabled">Habilita aquesta plantilla de missatge de correu electrònic</message>
+	<message key="manager.emails.enable">Habilita</message>
+	<message key="manager.emails.enable.message">Ara s'activarà aquest correu electrònic.  Voleu confirmar aquesta operació?</message>
+	<message key="manager.emails.form.emailKeyRequired">Heu d'introduir-hi una clau per al missatge de correu electrònic que no contingui espais ni caràcters especials.</message>
+	<message key="manager.emails.form.bodyRequired">Heu d’introduir un cos per al missatge de correu electrònic.</message>
+	<message key="manager.emails.form.subjectRequired">Heu d’introduir un assumpte per al missatge de correu electrònic.</message>
+	<message key="manager.emails">Plantilles de missatges de correu electrònic</message>
+	<message key="manager.emails.resetAll">Reinicia totes les plantilles</message>
+	<message key="manager.emails.resetAll.message">Si restabliu totes les plantilles, es perdran totes les modificacions fetes a les plantilles de missatge de correu electrònic.  Voleu confirmar aquesta operació?</message>
+	<message key="manager.emails.reset">Reinicia</message>
+	<message key="manager.emails.reset.message">Si restabliu aquesta plantilla, totes les dades del missatge es restabliran als valors per defecte i es perdran totes les modificacions.  Voleu confirmar aquesta operació?</message>
+	<message key="manager.emails.resetToDefault">Reinicia als valors predeterminats</message>
+	<message key="manager.filesBrowser">Navegador de fitxers</message>
+	<message key="manager.files.confirmDelete">Voleu eliminar aquest fitxer o directori? Per poder eliminar un directori cal que estigui buit.</message>
+	<message key="manager.files.createDir">Crea un directori</message>
+	<message key="manager.files.emptyDir">No s’ha trobat cap fitxer en aquest directori.</message>
+	<message key="manager.files.indexOfDir">Índex de {$dir}</message>
+	<message key="manager.files.parentDir">Directori principal</message>
+	<message key="manager.files.uploadedFiles">Fitxers penjats</message>
+	<message key="manager.files.uploadFile">Puja un fitxer</message>
+	<message key="manager.groups.confirmDelete">Esteu segur/a que voleu suprimir aquest grup?</message>
+	<message key="manager.groups.createTitle">Crea un títol</message>
+	<message key="manager.groups.editTitle">Edita el títol</message>
+	<message key="manager.groups.form.groupTitleRequired">Heu d’introduir un títol de grup.</message>
+	<message key="manager.groups.membership.addMember">Afegeix un membre</message>
+	<message key="manager.groups.membership.confirmDelete">Esteu segur/a que voleu suprimir aquest membre del grup?</message>
+	<message key="manager.groups.membership">Membres</message>
+	<message key="manager.groups.membership.noneCreated">Aquest grup no té cap membre.</message>
+	<message key="manager.groups.membership.noUsers">No s’ha trobat cap usuari/usuària.</message>
+	<message key="manager.groups.title">Títol</message>
+	<message key="manager.importExport">Importació i exportació de dades</message>
+	<message key="manager.language.ui">Interfície d’usuari</message>
+	<message key="manager.language.submissions">Trameses</message>
+	<message key="manager.language.forms">Formularis</message>
+	<message key="manager.language.reloadLocalizedDefaultSettings">Torna a carregar els valors predeterminats</message>
+	<message key="manager.languages.alternateLocaleInstructions">Aquest sistema permet introduir determinades informacions crítiques en diverses llengües addicionals. Per utilitzar aquesta característica, seleccioneu configuracions regionals alternatives i trieu alguna de les opcions que es mostren a continuació.</message>
+	<message key="manager.languages.supportedLocalesInstructions">Seleccioneu totes les configuracions regionals que seran compatibles amb el lloc web mitjançant un menú de selecció de llengua que apareixerà a totes les pàgines. Aquest menú només es mostrarà si heu seleccionat més d'una configuració regional.</message>
+	<message key="manager.masthead.title">Capçalera</message>
+	<message key="manager.navigation">Navegació</message>
+	<message key="manager.payment.timestamp">Data i hora</message>
+	<message key="manager.people.authSource">Font d’autenticació</message>
+	<message key="manager.people.confirmUnenroll">Voleu donar de baixa aquest usuari/usuària?</message>
+	<message key="manager.people.createUser">Crea un usuari/usuària nou</message>
+	<message key="manager.people.createUserGeneratePassword">Genera una contrasenya aleatòria.</message>
+	<message key="manager.people.createUserSendNotify">Envia a l’usuari/usuària un missatge de correu electrònic de benvinguda amb el seu nom d’usuari i la seva contrasenya.</message>
+	<message key="manager.people.disable">Inhabilita</message>
+	<message key="manager.people.doNotEnroll">Sense cap rol</message>
+	<message key="manager.people.editProfile">Edició del perfil</message>
+	<message key="manager.people.editUser">Edita l’usuari/usuària</message>
+	<message key="manager.people.emailUsers.emailSelectedUsers">Envia un missatge de correu electrònic als usuaris/usuàries seleccionats</message>
+	<message key="manager.people.emailUsers.emailUsersEnrolledAs">Envia un missatge de correu electrònic als usuaris/usuàries donats d’alta com a</message>
+	<message key="manager.people.emailUsers">Envia un missatge de correu electrònic als usuaris/usuàries</message>
+	<message key="manager.people.emailUsers.selectLocale">Selecciona una configuració regional</message>
+	<message key="manager.people.emailUsers.selectUsers">Seleccioneu els usuaris/usuàries als quals voleu enviar un missatge de correu electrònic activant les caselles de selecció que hi ha al costat dels seus noms.</message>
+	<message key="manager.people.enable">Habilita</message>
+	<message key="manager.people.enroll">Dóna d’alta l’usuari/usuària</message>
+	<message key="manager.people.enrollment">Altes</message>
+	<message key="manager.people.enrollSelected">Dóna d’alta els usuaris/usuàries seleccionats</message>
+	<message key="manager.people.enrollSyncRole">Sincronitza el rol</message>
+	<message key="manager.people.enrollSync">Sincronització d’altes</message>
+	<message key="manager.people.enrollUserAsDescription">Podeu assignar i desassignar rols als usuaris/usuàries en qualsevol moment.</message>
+	<message key="manager.people.enrollUserAs">Dóna d’alta l’usuari/usuària com a</message>
+	<message key="manager.people.invalidUser">L’usuari/usuària sol·licitat no existeix.</message>
+	<message key="manager.people.mergeUser">Fusiona l’usuari/usuària</message>
+	<message key="manager.people.mergeUsers.confirm">Esteu segur/a que voleu fusionar els comptes seleccionats amb nom d'usuari «{$oldAccountCount}» amb el compte amb nom d'usuari «{$newUsername}»?  Si ho feu, els comptes seleccionats amb nom d'usuari {$oldAccountCount} deixaran d'existir. Aquesta acció és irreversible.</message>
+	<message key="manager.people.mergeUsers">Fusió d’usuaris/usuàries</message>
+	<message key="manager.people.mustChooseRole">Seleccioneu un rol a la part superior de la pàgina abans de fer clic a «Assigneu un rol a l'usuari/ària».</message>
+	<message key="manager.people.mustProvideName">Indiqueu un cognom per a l’usuari/usuària com a mínim.</message>
+	<message key="manager.people.noMatchingUsers">No s’han trobat usuaris/usuàries.</message>
+	<message key="manager.people.noneEnrolled">No hi ha cap usuari/usuària donat d’alta.</message>
+	<message key="manager.people">Persones</message>
+	<message key="manager.people.remove">Suprimeix</message>
+	<message key="manager.people.saveAndCreateAnotherUser">Desa’l i crea’n un altre</message>
+	<message key="manager.people.signInAs">Inicia la sessió com a</message>
+	<message key="manager.people.signInAsUser">Inicia la sessió com a usuari/usuària</message>
+	<message key="manager.people.syncUsers">Sincronització de les altes d’usuari/usuària</message>
+	<message key="manager.people.unenroll">Dóna de baixa</message>
+	<message key="manager.people.userCreatedSuccessfully">L’usuari/usuària s’ha creat amb èxit.</message>
+	<message key="manager.people.userMustChangePassword">Demana a l’usuari/usuària que canviï la contrasenya quan torni a iniciar la sessió.</message>
+	<message key="manager.plugins.action">Acció:</message>
+	<message key="manager.plugins.disable">Inhabilita</message>
+	<message key="manager.plugins.enable">Habilita</message>
+	<message key="manager.plugins.pluginManagement">Administració dels connectors</message>
+	<message key="manager.plugins.sitePlugin">Aquest mòdul s'utilitza a tot el lloc web. Només l'administrador/a del lloc web pot administrar aquest mòdul.</message>
+	<message key="manager.plugins">Connectors del sistema</message>
+	<message key="manager.readingTools">Eines de lectura</message>
+	<message key="manager.reviewerSearch.advancedSearch">Cerca avançada de revisor/a</message>
+	<message key="manager.reviewerSearch.advancedSearch.short">Cerca avançada</message>
+	<message key="manager.reviewerSearch.searchByName">Cerca un revisor/a pel nom</message>
+	<message key="manager.reviewerSearch.searchByName.short">Cerca per nom</message>
+	<message key="manager.reviewerSearch.doneAmount">Revisions completades</message>
+	<message key="manager.reviewerSearch.avgAmount">Mitjana de dies per la compleció</message>
+	<message key="manager.reviewerSearch.lastAmount">Dies des de l’última revisió</message>
+	<message key="manager.reviewerSearch.activeAmount">Revisions actives actualment</message>
+	<message key="manager.reviewerSearch.interests">Interessos de revisió</message>
+	<message key="manager.reviewerSearch.form.instructions">Utilitzeu el formulari següent per establir els valors màxims per als termes que voleu cercar.  El formulari està precompletat amb les mitjanes calculades de cada camp.</message>
+	<message key="manager.reviewerSearch.form.interests.instructions">Introduïu els vostres interessos de revisió, separats per comes...</message>
+	<message key="manager.roles">Rols</message>
+	<message key="manager.statistics"><![CDATA[Estadístiques i informes]]></message>
+	<message key="manager.statistics.defaultMetricDescription">
+		El vostre {$contextObjectName} està configurat per registrar més d'una analítica web. Les estadístiques d'ús es mostraran en diversos contextos.
+		Hi ha casos en què heu d'utilitzar una sola estadística d'ús, p. ex., per mostrar una llista ordenada de les tramses més utilitzades o per classificar
+		els resultats de la cerca. Seleccioneu una de les analítiques configurades com a analítica per defecte.
+	</message>
+	<message key="manager.statistics.city">Ciutat</message>
+	<message key="manager.statistics.region">Província</message>
+	<message key="manager.statistics.reports">Generador d’informes</message>
+	<message key="manager.statistics.reports.description">El sistema genera informes que fan un seguiment dels detalls relacionats amb l'ús del lloc i de les comunicacions durant un període determinat de temps. Els informes es generen en format CSV. Aquest format es pot visualitzar amb una aplicació de full de càlcul.</message>
+	<message key="manager.statistics.reports.aggregationColumns">Agrupa les estadístiques per:</message>
+	<message key="manager.statistics.reports.defaultReportTemplates">Plantilles d'informe predeterminades</message>
+	<message key="manager.statistics.reports.generateReport">Genera un informe personalitzat</message>
+	<message key="manager.statistics.reports.advancedOptions">Opcions avançades</message>
+	<message key="manager.statistics.reports.advancedOptions.label">Personalitzeu les opcions relacionades amb les columnes, els filtres i la distribució del contingut. Si canvieu alguna d'aquestes opcions, és possible que la plantilla de l'informe no es generi de la forma esperada.</message>
+	<message key="manager.statistics.reports.columns">Columnes</message>
+	<message key="manager.statistics.reports.columns.description">Indiqueu el nombre de columnes que voleu que tingui l'informe. El nombre de columnes que seleccioneu no només determina quina informació s'inclourà als informes mateixos, sinó que també indica el nivell d'agrupació de les estadístiques. Per exemple, si trieu les columnes Identificació, Tipus i Mes, l'informe sumarà totes les visualitzacions d'un objecte en un mes i mostrarà aquesta dada en una sola fila. Si trieu la columna Dia en lloc de la columna Mes, cada objecte tindrà una fila per dia.</message>
+	<message key="manager.statistics.reports.filters">Filtres</message>
+	<message key="manager.statistics.reports.objectType">Tipus d'objecte</message>
+	<message key="manager.statistics.reports.objectId">Id. de l'objecte</message>
+	<message key="manager.statistics.reports.objectId.label">Indiqueu la identificació d'un o més objectes, separats per una coma (p. ex. 1,2,3,4,5).</message>
+	<message key="manager.statistics.reports.today">Avui</message>
+	<message key="manager.statistics.reports.currentMonth">Mes actual</message>
+	<message key="manager.statistics.reports.orderBy">Ordena per</message>
+	<message key="manager.statistics.reports.orderDir">Direcció</message>
+	<message key="manager.statistics.reports.orderDir.asc">Ascendent</message>
+	<message key="manager.statistics.reports.orderDir.desc">Descendent</message>
+	<message key="manager.statistics.reports.month.label">Feu servir el format AAAAMM.</message>
+	<message key="manager.statistics.reports.day.label">Feu servir el format AAAAMMDD.</message>
+	<message key="manager.statistics.reports.cities.label">El nom d'una o més ciutats, separats per una coma (p. ex. Nom de la ciutat 1,Nom de la ciutat 2)</message>
+	<message key="manager.statistics.reports.form.columnsRequired">Cal que seleccioneu com a mínim una columna per generar l'informe.</message>
+	<message key="manager.statistics.reports.reportUrl">URL de l'informe</message>
+	<message key="manager.statistics.reports.reportUrl.label">Podeu utilitzar l'URL següent per generar l'informe a partir de la configuració d'aquest formulari. Només l'heu de copiar, enganxar-lo a la barra del navegador i prémer la tecla d'introducció. Podeu desar l'URL que genera el vostre informe personalitzat a favorits.</message>
+	<message key="manager.statistics.reports.filters.byContext">Per context</message>
+	<message key="manager.statistics.reports.filters.byObject">Per tipus d'objecte i/o identificador de l'objecte</message>
+	<message key="manager.statistics.reports.filters.byTime">Selecciona l'interval de l'informe</message>
+	<message key="manager.statistics.reports.filters.byTime.dimensionSelector">O bé selecciona l'interval per:</message>
+	<message key="manager.statistics.reports.filters.byLocation">Per geolocalització</message>
+	<message key="manager.statistics.reports.filters.byLocation.description">Redueix els resultats per país, regió i/o ciutat.</message>
+	<message key="manager.affiliationAndSupport">Patrocinadors</message>
+	<message key="manager.setup.authorGuidelines">Directrius per a l’autor/a</message>
+	<message key="manager.setup.competingInterests">Conflicte d’interessos</message>
+	<message key="manager.setup.competingInterestsDescription">Es demanarà als revisors/oresque compleixin amb la política de divulgació de conflicte d'interessos que especifiqueu a continuació.</message> <!-- FIXME #6843 (JM): should this just reference reviewers? -->
+	<message key="manager.setup.groupType">Classificació dels tipus de fitxers</message>
+	<message key="manager.setup.reviewOptions.numWeeksPerResponse">Temps permès per rebre respostes de revisió (setmanes)</message>
+	<message key="manager.setup.reviewOptions.numWeeksPerReview">Temps permès per completar les revisions (setmanes)</message>
+	<message key="manager.setup.reviewOptions.neverSendReminder">No m'ho recordis</message>
+	<message key="manager.setup.reviewOptions.remindForInvite">Envia un recordatori si el revisor/a no ha respost a una sol·licitud de revisió en el període següent (dies):</message>
+	<message key="manager.setup.reviewOptions.remindForSubmit">Envia un recordatori si el revisor/a no ha tramès una recomanació en el període següent (dies):</message>
+	<message key="manager.setup.sortableByComponent">Classificable per component</message>
+	<message key="manager.setup.dependentGenre">Gèneres dependents</message>
+	<message key="manager.setup.sponsors">Organitzacions patrocinadores</message>
+	<message key="manager.setup.sponsors.note">Podeu afegir una nota per descriure la vostra política i relació de patrocini, que apareixerà amb la llista de patrocinadors/ores a la vostra pàgina d'Informació personal.</message>
+	<message key="manager.setup.contributors.note">Podeu afegir una nota per descriure la política i la relació que heu establert amb les vostres fonts de finançament, que apareixerà amb la llista de Fonts de finançament a la vostra pàgina d'Informació personal.</message>
+	<message key="manager.setup.styleSheetDescription">Podeu carregar un fitxer de full d'estil en cascada (CSS) addicional per canviar l'aparença.</message>
+	<message key="manager.setup.citations">Citacions</message>
+	<message key="manager.setup.citationAssistant">Assistent de marcatge de citacions</message>
+	<message key="manager.setup.citationFilterParser">Extracció de citacions</message>
+	<message key="manager.setup.citationFilterParserDescription"><![CDATA[<p>Per poder trobar i comprovar les citacions en bases de dades de citacions, han d'estar dividides en metadades llegibles per la màquina: el títol, la institució publicadora, la data de publicació, etc., són dades que s'han d'extreure del text de la citació original proporcionat per l'autor. Els mòduls per als serveis web externs poden ajudar en aquest procés. Es poden afegir un o més mòduls fent clic al botó «Afegeix un element» que hi ha a continuació. És possible que calgui configurar alguns d'aquests mòduls. Rebreu un avís si és el cas.</p>
+		<p>Podeu editar o eliminar un mòdul existent fent clic a la icona que té al costat.</p>]]></message>
+	<message key="manager.setup.citationFilterLookup">Comprovació de citacions</message>
+	<message key="manager.setup.citationFilterLookupDescription"><![CDATA[<p>També heu d'activar i configurar les connexions de les bases de dades de citacions externes. Això us permet trobar errors en les citacions dels autors/ores o afegir iformació addicional (p. ex., DOI o ID de PubMed) necessària per fer publicacions electròniques o per al dipòsit.</p>
+		<p>Proporcionem mòduls a diverses bases de dades externes en les quals podeu buscar citacions. Per entrar en algunes d'aquestes bases de dades, us hi haureu de registrar o configurar la informació. Consulteu els llocs web públics de les bases de dades per obtenir més informació sobre com registrar-s'hi. Podeu afegir una o més bases de dades fent clic al botó «Afegeix un element» que hi ha a continuació.</p>
+		<p>Podeu editar o eliminar una base de dades externa existent fent clic a la icona que té al costat.</p>
+		<p><strong>Nota:</strong> per permetre que el procés de comprovació de les citacions es completi al més aviat possible, heu d'establir el directiu <tt>citation_checking_max_processes</tt> del vostre fitxer de configuració en un valor raonable. Consulteu la secció Configuració general a <tt>config.inc.php</tt> por obtenir-ne més informació.</p>]]></message>
+	<message key="manager.setup.citationOutput">Sortida de la citació</message>
+	<message key="manager.setup.citationOutputStyleDescription">Trieu l'estil de citacions que s'utilitza a la vostra revista en les trameses. L'Assistent de marcatge de citacions us permet comparar la versió de la citació de l'autor/a amb una versió generada a partir del fitxer XML que esteu generant perquè pugueu detectar errors fàcilment:</message>
+	<message key="manager.setup.errorDeletingItem">S’ha produït un error en suprimir aquest element.</message>
+	<message key="manager.setup.filter.grid.errorDeletingFilter">S'ha produït un error en eliminar aquest filtre. Informeu d'aquest error.</message>
+	<message key="manager.setup.filter.grid.filterDisplayName">Mòdul</message>
+	<message key="manager.setup.filter.grid.filterSettings">Informació de registre i Configuració dels connectors</message>
+	<message key="manager.setup.filter.grid.filterTemplateRequired">Seleccioneu una de les transformacions de la llista desplegable.</message>
+	<message key="manager.setup.filter.grid.confirmDelete">Esteu segur/a que voleu eliminar el filtre {$filterName}?</message>
+	<message key="manager.setup.filter.lookup.grid.descriptionConfirm">Heu decidit afegir la base de dades {$filterDisplayName}. Feu clic a «Accepta» per confirmar-ho.</message>
+	<message key="manager.setup.filter.lookup.grid.descriptionTemplate">Seleccioneu una base de dades per fer la cerca.</message>
+	<message key="manager.setup.filter.lookup.grid.description.iSBNdb"><![CDATA[<p>Aquest filtre es connecta al llibre <a href="http://isbndb.com/" target="_blank">ISBNdb.com</a> i amb la base de dades bibliogràfica d'ISBNdb.</p>
+	<p>Heu d'introduir-hi una clau API d'ISBNdb. Per otenir més informació sobre com generar una clau, consulteu la <a href="http://isbndb.com/docs/api/30-keys.html" target="_blank">documentació en línia</a>.</p>]]></message>
+	<message key="manager.setup.filter.lookup.grid.description.crossRef"><![CDATA[<p>Aquest filtre es connecta a la base de dades de citacions de CrossRef i utilitza la <a href="http://www.crossref.org/02publishers/openurl_info.html" target="_blank">Interfície de conulta OpenURL</a> de CrossRef.</p>
+	<p>Per utilitzar aquest filtre, podeu utilitzar un compte del sistema CrossRef o registrar una adreça electrònica vàlida de CrossRef <a href="http://www.crossref.org/requestaccount/" target="_blank">aquí</a>.</p>]]></message>
+	<message key="manager.setup.filter.lookup.grid.description.pubMed"><![CDATA[<p>Aquest filtre es connecta al motor de cerca de PubMed <a href="http://www.ncbi.nlm.nih.gov/gquery/gquery.fcgi" target="_blank">Entrez</a> de bases de dades creuades.</p>
+	<p>No és estrictament necessari un correu electrònic de registre, però ho pot ser si us trobeu amb problemes de connexió. Consulteu la secció <a href="http://www.be-md.ncbi.nlm.nih.gov/bookshelf/br.fcgi?book=helpeutils&part=chapter2#chapter2.Usage_Guidelines_and_Requiremen" target="_blank">Directrius i requisits d'ús</a> en la documentació d'Entrez por obtenir-ne més informació.</p>]]></message>
+	<message key="manager.setup.filter.lookup.grid.description.worldCat"><![CDATA[<p>Aquest filtre es connecta als serveis d'OCLC <a href="http://www.worldcat.org/affiliate/webservices/xisbn/app.jsp" target="_blank">xISBN</a> i <a href="http://www.worldcat.org/" target="_blank">Worldcat</a> (opcional).</p>
+	<p>Si teniu una <a href="http://www.worldcat.org/devnet/wiki/SearchAPIWhoCanUse" target="_blank">clau API</a> de Worldcat, us podeu connectar a Worldcat introduïnt la clau següent.</p>]]></message>
+	<message key="manager.setup.filter.lookup.grid.loadMessage">Espereu fins que s’hagi carregat la graella de configuració de la base de dades de citacions...</message>
+	<message key="manager.setup.filter.lookup.grid.title">Connectors de la base de dades de citacions</message>
+	<message key="manager.setup.filter.noMoreTemplates">Ja s'han afegit totes les transformacions disponibles. Feu clic a «Cancel·la» per tornar a la pàgina de configuració.</message>
+	<message key="manager.setup.filter.parser.grid.descriptionConfirm">Heu decidit afegir l'analitzador de citacions {$filterDisplayName}. Feu clic a «Accepta» per confirmar-ho.</message>
+	<message key="manager.setup.filter.parser.grid.descriptionTemplate">Seleccioneu un analitzador de citacions.</message>
+	<message key="manager.setup.filter.parser.grid.description.freeCite"><![CDATA[<p>Aquest filtre d'extracció es connecta al servei web <a href="http://freecite.library.brown.edu/" target="_blank">FreeCite</a>.</p>]]></message>
+	<message key="manager.setup.filter.parser.grid.description.paraCite"><![CDATA[<p>Aquest filtre d'extracció utilitza els mòduls Perl <a href="http://paracite.eprints.org/developers/" target="_blank">ParaTools</a> per proporcionar la funció <a href="http://paracite.eprints.org" target="_blank">ParaCite</a> d'anàlisi de citacions. Perquè funcioni correctament, he de tenir el Perl instal·lat, a més dels mòduls CPAN <a href="http://search.cpan.org/~mjewell/Biblio-Citation-Parser-1.10/" target="_blank">Biblio::Citation::Parser</a> i <a href="http://search.cpan.org/~sburke/Text-Unidecode-0.04/" target="_blank">Text::Unidecode</a>. També heu de configurar el directiu de <tt>perl</tt> en el vostre fitxer de configuració. Podeu trobar aquest directiu a la secció d'Ordres externes de <tt>config.inc.php</tt>.</p>
+	<p>També podeu triar quin mòdul d'anàlisis ParaTools voleu utilitzar. Podeu triar entre un mòdul d'anàlisis estàndard, <a href="http://search.cpan.org/~mjewell/Biblio-Citation-Parser-1.10/lib/Biblio/Citation/Parser/Jiao.pm" target="_blank">Jiao</a> i <a href="http://search.cpan.org/~mjewell/Biblio-Citation-Parser-1.10/lib/Biblio/Citation/Parser/Citebase.pm" target="_blank">Citebase</a>.</p>]]></message>
+	<message key="manager.setup.filter.parser.grid.description.parsCit"><![CDATA[<p>Aquest filtre d'extracció es connecta al servei web <a href="http://aye.comp.nus.edu.sg/parsCit/" target="_blank">ParsCit</a>.</p>]]></message>
+	<message key="manager.setup.filter.parser.grid.description.regEx">El filtre d’extracció RegEx utilitza expressions regulars per analitzar les citacions.</message>
+	<message key="manager.setup.filter.parser.grid.loadMessage">Espereu fins que s’hagi carregat la graella de configuració de l'analitzador de citacions...</message>
+	<message key="manager.setup.filter.parser.grid.title">Serveis d’extracció de citacions</message>
+	<message key="manager.setup.filter.pleaseSelect">Seleccioneu...</message>
+	<message key="manager.setup.homeHeaderImageInvalid">Ha fallat la càrrega de la imatge utilitzada com a logotip per a la capçalera de la pàgina inicial, o bé el format no és vàlid. Els formats acceptats són .gif, .jpg i .png.</message>
+	<message key="manager.setup.homepageImageInvalid">Ha fallat la càrrega de la imatge per a la capçalera de la pàgina inicial, o bé el format no és vàlid. Els formats acceptats són .gif, .jpg i .png.</message>
+	<message key="manager.setup.homeTitleImageInvalid">Ha fallat la càrrega de la imatge del títol per a la capçalera de la pàgina inicial, o bé el format no és vàlid. Els formats acceptats són .gif, .jpg i .png.</message>
+	<message key="manager.setup.layout.theme">Tema</message>
+	<message key="manager.setup.layout.themeDescription">Trieu un tema d'entre els mòduls de tema disponibles.</message>
+	<message key="manager.setup.layout.blockManagement">Administració de la barra lateral</message>
+	<message key="manager.setup.layout.unselected">No seleccionada</message>
+	<message key="manager.setup.loggingAndAuditing">Registre i control</message>
+	<message key="manager.setup.metaCitationsDescription">Activeu la casella de selecció següent per activar l'edició de citacions i referències.  D'aquesta manera els autors/ores podran incloure a les seves trameses citacions sense processar. Els editors/ores també tindran accés a l'assistent de marcatge de citacions, que comprova les citacions sense processar amb bases de dades externes com WorldCat, ISBNdb, PubMed, etc. per aconseguir més precisió. Les citacions aprovades es poden exportar als fitxers de galerades finals.</message>
+	<message key="manager.setup.pageHeaderLogoImageInvalid">Ha fallat la càrrega de la imatge utilitzada com a logotip per a la capçalera de la pàgina, o bé el format no és vàlid. Els formats acceptats són .gif, .jpg i .png.</message>
+	<message key="manager.setup.pageHeaderTitleImageInvalid">Ha fallat la càrrega de la imatge del títol per a la capçalera de la pàgina inicial, o bé el format no és vàlid. Els formats acceptats són .gif, .jpg i .png.</message>
+	<message key="manager.setup.selectOne">Seleccioneu una de les opcions següents:</message>
+	<message key="manager.siteAccessOptions.siteAccessOptions">Opcions d'accés del lloc</message>
+	<message key="manager.statistics.statistics.count.value">{$count} ({$percentage}%)</message>
+	<message key="manager.statistics.statistics.totalNewValue">{$numTotal} ({$numNew} nou)</message>
+	<message key="manager.users">Usuaris/usuàries</message>
+	<message key="plugins.categories.metadata">Mòduls de metadades</message>
+	<message key="plugins.categories.metadata.description">Els mòduls de metadades implementen estàndards addicionals de metadades.</message>
+	<message key="plugins.categories.auth">Connectors d’autorització</message>
+	<message key="plugins.categories.blocks">Connectors de bloc</message>
+	<message key="plugins.categories.blocks.description">Els connectors de bloc són components connectables de la interfície d’usuari/usuària, com ara les eines de les barres laterals.</message>
+	<message key="plugins.categories.citationFormats">Connectors de format de citació</message>
+	<message key="plugins.categories.citationLookup">Mòduls de la base de dades de citacions</message>
+	<message key="plugins.categories.citationLookup.description">Els mòduls de la base de dades de citacions es connecten a bases de dades de citacions per cercar citacions, p. ex. durant l'edició de les citacions.</message>
+	<message key="plugins.categories.citationOutput">Mòduls de sortida de la citació</message>
+	<message key="plugins.categories.citationOutput.description">Els mòduls de format de citació implementen estàndards de sortida. Això substitueix els mòduls de format de citació.</message>
+	<message key="plugins.categories.citationParser">Mòduls d'extracció de citacions</message>
+	<message key="plugins.categories.citationParser.description">Els mòduls d'extracció de la citacions extreuen dades a nivell de camp des de citacions sense processar (p. ex. autor/a, títol, etc.).</message>
+	<message key="plugins.categories.gateways.description">Els connectors de passarel·la proporcionen dades actives als sistemes externs.</message>
+	<message key="plugins.categories.gateways">Connectors de passarel·la</message>
+	<message key="plugins.categories.generic">Connectors genèrics</message>
+	<message key="plugins.categories.importexport.description">Podeu utilitzar els connectors d’importació i exportació per a transferir continguts a altres sistemes i des d’altres sistemes.</message>
+	<message key="plugins.categories.importexport">Connectors d’importació i exportació</message>
+	<message key="plugins.categories.paymethod.description">Els connectors de mètode de pagament us proporcionen diversos sistemes per a processar els pagaments en línia.</message>
+	<message key="plugins.categories.paymethod">Connectors de pagament</message>
+	<message key="plugins.categories.reports.description">Els connectors per a informes implementen diversos tipus d’informes i extractes de dades per a administradors/es de conferències.</message>
+	<message key="plugins.categories.reports">Connectors per a informes</message>
+	<message key="plugins.categories.themes.description">Podeu utilitzar els connectors de tema per a canviar l’aparença del sistema.</message>
+	<message key="plugins.categories.themes">Connectors de tema</message>
+	<message key="plugins.categories.oaiMetadataFormats">Mòduls de format de metadades OAI</message>
+	<message key="plugins.categories.oaiMetadataFormats.description">Aquests mòduls de format expressen metadades en les comunicacions OAI.</message>
+	<message key="plugins.categories.pubIds">Mòduls d'identificació pública</message>
+	<message key="plugins.categories.pubIds.description">Aquests mòduls implementen la compatibilitat amb identificadors públics.</message>
+
+	<!-- Plugin management -->
+	<message key="manager.plugins.copyError">El mòdul no s'ha copiat correctament. És possible que es tracti d'un problema de permisos. Comproveu que el servidor web pot escriure al directori de mòduls (inclosos els subdirectoris), però recordeu de tornar a protegir-lo més endavant.</message>
+	<message key="manager.plugins.delete">Elimina</message>
+	<message key="manager.plugins.deleteConfirm">Esteu segur/a que voleu eliminar aquest mòdul del sistema?</message>
+	<message key="manager.plugins.deleteDescription">Fent clic a Elimina, elimineu el mòdul del sistema de fitxers del servidor.</message>
+	<message key="manager.plugins.deleteError">El mòdul «{$pluginName}» no es pot eliminar del sistema de fitxers. És possible que es tracti d'un problema de permisos. Comproveu que el servidor web pot escriure al directori de mòduls (inclosos els subdirectoris), però recordeu de tornar a protegir-lo més endavant.</message>
+	<message key="manager.plugins.deleteSuccess">S'ha eliminat el mòdul «{$pluginName}» correctament</message>
+	<message key="manager.plugins.description">Des d'aquesta pàgina l'administrador/a de la revista pot revisar i configurar els mòduls que hi ha instal·lats. Els mòduls es divideixen en categories, segons la seva funció. A continuació hi ha la llista de les categories i, dins de cadascuna, hi ha els grups de mòduls que s'hi inclouen.</message>
+	<message key="manager.plugins.doesNotExist">El mòdul «{$pluginName}» no existeix</message>
+	<message key="manager.plugins.fileSelectError">Primer seleccioneu un fitxer</message>
+	<message key="manager.plugins.install">Instal·la un mòdul nou</message>
+	<message key="manager.plugins.installDescription">Aquest formulari us permet carregar i instal·lar un mòdul nou.  Comproveu que el mòdul estigui comprimit com a fitxer .tar.gz.</message>
+	<message key="manager.plugins.installedVersionNewer">El mòdul ja existeix, i la versió instal·lada és la mateixa o més nova</message>
+	<message key="manager.plugins.installedVersionOlder">El mòdul ja existeix, i la versió instal·lada és la mateixa o més antiga</message>
+	<message key="manager.plugins.installFailed">S'ha produït un error durant la instal·lació {$errorString}</message>
+	<message key="manager.plugins.installSuccessful">La versió {$versionNumber} s'ha instal·lat correctament</message>
+	<message key="manager.plugins.invalidPluginArchive">El fitxer de mòduls que heu carregat no conté cap carpeta que es correspongui amb el nom del mòdul.</message>
+	<message key="manager.plugins.wrongCategory">El mòdul que heu carregat no correspon a la categoria del mòdul actualitzat.</message>
+	<message key="manager.plugins.wrongName">L’arxiu version.xml del mòdul actualitzat conté el nom d'un mòdul que no correspon al nom del mòdul actualitzat.</message>
+	<message key="manager.plugins.pleaseInstall">El mòdul no existeix.  Instal·leu-lo</message>
+	<message key="manager.plugins.pleaseUpgrade">El mòdul ja existeix, però aquesta versió és més nova que la que teniu instal·lada.  Actualitzeu-lo</message>
+	<message key="manager.plugins.settings">Configuració</message>
+	<message key="manager.plugins.tarCommandNotFound">L'ordre tar no està disponible. Configureu-la correctament al fitxer «config.inc.php».</message>
+	<message key="manager.plugins.upgrade">Actualitza</message>
+	<message key="manager.plugins.upgradeDescription">Aquest formulari us permet actualitzar un mòdul.  Comproveu que el mòdul estigui comprimit com a fitxer .tar.gz.</message>
+	<message key="manager.plugins.upgradeFailed">S'ha produït un error durant l'actualització. {$errorString}</message>
+	<message key="manager.plugins.upgradeSuccessful">Actualització correcta a la versió {$versionString}</message>
+	<message key="manager.plugins.uploadError">Hi ha hagut un error durant la càrrega del fitxer</message>
+	<message key="manager.plugins.uploadPluginDir">Seleccioneu el fitxer del mòdul</message>
+	<message key="manager.plugins.versionFileInvalid">El fitxer version.xml del directori de mòduls conté dades invàlides.</message>
+	<message key="manager.plugins.versionFileNotFound">No s’ha trobat l'arxiu version.xml al directori de mòduls</message>
+
+	<message key="notification.localeEnabled">S'ha activat la configuració regional.</message>
+	<message key="notification.localeDisabled">S'ha desactivat la configuració regional.</message>
+	<message key="notification.primaryLocaleDefined">S'ha establert {$locale} com a configuració regional principal.</message>
+	<message key="notification.localeInstalled">Totes les configuracions regionals seleccionades s'han instal·lat i activat.</message>
+	<message key="notification.localeUninstalled">S'ha desinstal·lat la configuració regional {$locale}.</message>
+	<message key="notification.localeReloaded">S'ha actualitzat la configuració regional {$locale}.</message>
+	<message key="notification.localeSettingsSaved">S'han desat els paràmetres de configuració regional.</message>
+	<message key="notification.editedUser">Editat per l'usuari/ària</message>
+
+	<!-- Distribution Process settings -->
+	<message key="manager.distribution.indexing">Indexació</message>
+
+	<!-- Payment Method settings -->
+	<message key="manager.paymentMethod">Pagaments</message>
+	<message key="manager.paymentMethod.title">Mètodes de pagament</message>
+	<message key="manager.paymentMethod.description">Trieu un mètode de pagament de la llista.  S'actualitzarà la secció següent.</message>
+	<message key="manager.paymentMethod.none">No s'ha seleccionat cap mètode de pagament</message>
+	<message key="manager.paymentMethod.method">Mètode de pagament</message>
+	<message key="manager.paymentMethod.currency">Moneda</message>
+	<message key="manager.paymentMethod.currency.description">Els pagaments efectuats mitjançant aquest lloc web es denominaran en la moneda seleccionada.</message>
+
+	<!-- Roles grid settings -->
+	<message key="settings.roles.roleOptions">Opcions de rol</message>
+	<message key="settings.roles.showTitles">Mostra el títol del rol a la llista de contribuïdors</message>
+	<message key="settings.roles.permitSelfRegistration">Permet l'autoregistre dels usuaris </message>
+	<message key="settings.roles.roleName">Nom del rol</message>
+	<message key="settings.roles.roleAbbrev">Abreviació</message>
+	<message key="settings.roles.assignedStages">Fases assignades</message>
+	<message key="settings.roles.stages">Fases</message>
+	<message key="settings.roles.roleDetails">Detalls del rol</message>
+	<message key="settings.roles.from">Nivell de permisos</message>
+	<message key="settings.roles.removeText">Ara s'eliminarà el rol d'aquest context. Aquesta operació també eliminarà les configuracions relacionades i tots les assignacions del usuaris a aquest rol. Voleu continuar?</message>
+	<message key="settings.roles.nameRequired">Heu d'establir el nom del rol.</message>
+	<message key="settings.roles.abbrevRequired">Heu d'establir l'abreviatura del rol.</message>
+	<message key="settings.roles.uniqueName">Heu d'establir un nom únic per al rol.</message>
+	<message key="settings.roles.uniqueAbbrev">Heu d'establir una abreviatura única per al rol.</message>
+	<message key="settings.roles.roleIdRequired">Heu d'establir un nivell de permisos per al rol.</message>
+	<message key="settings.roles.stageIdRequired">Heu d'establir una fase per assignar.</message>
+
+	<!-- Content Management - Footer grid keys -->
+	<message key="grid.content.navigation.footer">Peu de pàgina</message>
+	<message key="grid.content.navigation.footer.noneExist">No hi ha cap peu de pàgina.</message>
+	<message key="grid.content.navigation.footer.addCategory">Afegeix categoria</message>
+	<message key="grid.action.deleteFooterCategory">Elimina la categoria del peu de pàgina</message>
+	<message key="grid.content.navigation.footer.FooterLink">Enllaços al peu de pàgina</message>
+	<message key="grid.content.navigation.footer.editCategory">Edita categoria</message>
+	<message key="grid.content.navigation.footer.deleteCategory">Esborra categoria</message>
+	<message key="grid.content.navigation.footer.deleteCategoryConfirm">Esteu segurs que voleu suprimir aquesta categoria? Aquesta acció no es pot desfer. També s'eliminaran els enllaços a aquesta categoria.</message>
+	<message key="grid.content.navigation.footer.titleRequired">Cal que introduïu un títol.</message>
+	<message key="grid.content.navigation.footer.descriptionRequired">Heu d'introduir-hi una descripció.</message>
+	<message key="grid.content.navigation.footer.pathRequired">Heu d'introduir-hi una ruta única.</message>
+	<message key="grid.content.navigation.footer.pathInUse">Ja hi ha una altra categoria que utilitza aquesta ruta.</message>
+	<message key="grid.action.addFooterCategoryLink">Afegeix una nova categoria de peu de pàgina</message>
+	<message key="grid.action.editFooterCategory">Edita la categoria del peu de pàgina</message>
+
+	<!-- Content Management - Social Media keys -->
+	<message key="grid.content.navigation.socialMedia">Mitjans socials</message>
+	<message key="grid.content.navigation.socialMedia.platform">Plataforma</message>
+	<message key="grid.content.navigation.socialMedia.code">Bloc de codi social per compartir</message>
+	<message key="grid.content.navigation.socialMedia.platformRequired">Heu d'introduir un títol per a la plataforma (Facebook, Google+, etc.).</message>
+	<message key="grid.content.navigation.socialMedia.codeRequired">Heu d'introduir el codi que voleu que s'utilitzi per mostrar aquesta xarxa social.</message>
+	<message key="grid.content.navigation.socialMedia.addSocialLink">Afegeix un enllaç al mitjà social</message>
+	<message key="grid.content.navigation.socialMedia.includeInCatalog">Vols que s'utilitzi per a cada element publicat en el catàleg?</message>
+	<message key="grid.content.navigation.socialMedia.inCatalog">S'ha utilitzat al catàleg</message>
+	<message key="grid.action.addMedia">Afegeix un tipus de mitjà social</message>
+
+	<message key="notification.addedFooterCategory">S'ha afegit la categoria.</message>
+	<message key="notification.editedFooterCategory">S'ha editat la categoria.</message>
+	<message key="notification.removedFooterCategory">S'ha eliminat la categoria.</message>
+	<message key="notification.addedSocialMedia">S'ha afegit la xarxa social.</message>
+	<message key="notification.editedSocialMedia">S'ha editat la xarxa social.</message>
+	<message key="notification.removedSocialMedia">S'ha eliminat la xarxa social.</message>
+
+	<!-- Library Files -->
+	<message key="settings.libraryFiles.fileRequired">Heu d'introduir-hi un fitxer de biblioteca. Comproveu que hàgiu seleccionat un fitxer carregat.</message>
+	<message key="settings.libraryFiles.nameRequired">Heu d'introduir un nom per al fitxer de biblioteca.</message>
+	<message key="settings.libraryFiles.typeRequired">Heu d'introduir un tipus de fitxer per al fitxer de biblioteca.</message>
+	<message key="settings.libraryFiles.category.contracts">Contractes</message>
+	<message key="settings.libraryFiles.category.marketing">Màrqueting</message>
+	<message key="settings.libraryFiles.category.permissions">Permisos</message>
+	<message key="settings.libraryFiles.category.reports">Informes</message>
+	<message key="settings.libraryFiles.category.other">Altres</message>
+
+	<!--  Genre grid settings -->
+	<message key="grid.action.addGenre">Afegeix un gènere</message>
+	<message key="grid.action.editGenre">Edita aquest gènere</message>
+	<message key="grid.action.deleteGenre">Elimina aquest gènere</message>
+	<message key="grid.action.restoreGenres">Restableix els gèneres a la configuració per defecte</message>
+	<message key="manager.setup.genres.sortable">Permet que els fitxers d'aquest tipus es puguin classificar per component (p. ex., per capítol)</message>
+	<message key="manager.setup.genres.dependent">Marca els fitxers d'aquest tipus com a fitxers dependents (p. ex., tramesa no principal)</message>
+	<message key="manager.settings.wizard">Assistent de configuració</message>
+	<message key="manager.users.roleRequired">Heu d'associar com a mínim un rol a aquest usuari.</message>
+	<message key="manager.website">Lloc web</message>
+	<message key="manager.website.title">Configuració del lloc web</message>
+	<message key="manager.workflow">Circuit de treball</message>
+	<message key="manager.workflow.title">Configuració del circuit de treball</message>
+	<message key="manager.distribution">Distribució</message>
+	<message key="manager.distribution.title">Configuració de la distribució</message>
+</locale>

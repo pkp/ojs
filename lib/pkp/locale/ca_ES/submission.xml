@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/ca_ES/submission.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Credits: https://pkp.sfu.ca/wiki/index.php?title=OMP:_Catalan_(ca_ES)
+  * Localization strings.
+  -->
+
+<locale name="ca_ES" full_name="Català">
+	<!-- Author Submission -->
+	<message key="author.submit.userGroupRequired">Actualment, el vostre compte no té un rol que permeti noves trameses, a diferència del d'Autor/a. Repasseu el vostre compte per editar el vostre perfil i afegir-vos un rol adequat.</message>
+	<message key="author.submit.submissionCitations">Proporcioneu una llista de referències amb format per als treballs citats en aquesta tramesa. Separeu les referències individuals amb una línia en blanc.</message>
+	<message key="submission.submit.submissionComplete">S'ha completat la tramesa</message>
+	<message key="submission.submit.submissionCompleteThanks">Us agraïm el vostre interès de publicar a {$contextName}.</message>
+	<message key="submission.submit.whatNext">Què cal fer a continuació?</message>
+	<message key="submission.submit.whatNext.forNow">En aquest moment, podeu:</message>
+	<message key="submission.submit.whatNext.review">Revisar la tramesa</message>
+	<message key="submission.submit.whatNext.create">Crear una nova tramesa</message>
+	<message key="submission.submit.whatNext.return">Tornar a l'escriptori</message>
+	<message key="submission.submit.uploadExpeditedFiles">Com a editor/a, podeu carregar un PDF i accelerar-ne la producció a l'últim pas de la tramesa.</message>
+	<message key="submission.submit.extendedMetadata">Metadades avançades</message>
+	<message key="submission.submit.expediteSubmission">Accelera la tramesa</message>
+
+	<!-- FIXME: move to meta-data plug-ins -->
+	<!-- messages used by meta-data filters -->
+	<message key="metadata.filters.crossref.settings.email.displayName">Correu electrònic de registre de CrossRef</message>
+	<message key="metadata.filters.crossref.settings.email.validationMessage">Introduïu un correu electrònic de registre a CrossRef vàlid. Podeu registrar el vostre correu electrònic gratuïtament al lloc web de CrossRef.</message>
+	<message key="metadata.filters.isbndb.settings.apiKey.displayName">Clau API d'ISBNdb</message>
+	<message key="metadata.filters.isbndb.settings.apiKey.validationMessage">Introduïu la vostra clau d'ISBNdb API. Si encara no teniu cap clau, la podeu sol·licitar de manera gratuïta al projecte ISBNdb.</message>
+	<message key="metadata.filters.pubmed.settings.email.displayName">Correu electrònic de registre de PubMed</message>
+	<message key="metadata.filters.pubmed.settings.email.validationMessage">Introduïu un correu electrònic de registre de PubMed vàlid si en teniu un.</message>
+	<message key="metadata.filters.worldcat.settings.apiKey.displayName">Clau API de Worldcat</message>
+	<message key="metadata.filters.worldcat.settings.apiKey.validationMessage">Introduïu una clau API de WorldCat vàlida si en teniu una.</message>
+	<message key="metadata.filters.paracite.settings.citationModule.displayName">Mòdul de citació</message>
+	<message key="metadata.filters.paracite.settings.citationModule.validationMessage">Seleccioneu un dels mòduls de citació següents.</message>
+	<message key="metadata.filters.settings.isOptional.displayName">No l'utilitzeu per defecte (encara està disponible per a l'editor/a)</message>
+	<message key="metadata.filters.settings.isOptional.validationMessage">Error intern. S'ha publicat un valor no vàlid per al paràmetre «filtre opcional». Informeu d'aquest error.</message>
+
+	<!-- messages shared between MD schemas -->
+	<message key="metadata.property.displayName.author">Autors/ores</message>
+	<message key="metadata.property.validationMessage.author">Per obtenir millors resultats, els autors/ores s'han d'introduir amb el format següent: Coleman Jr, D. (Ralf) Dr.</message>
+	<message key="metadata.property.displayName.editor">Editors/ores</message>
+	<message key="metadata.property.validationMessage.editor">Per obtenir millors resultats, els editors/ores s'han d'introduir amb el format següent: Coleman Jr, D. (Ralf) Dr.</message>
+
+	<!-- NLM-specific messages -->
+	<message key="metadata.property.displayName.article-title">Títol de l'article/document</message>
+	<message key="metadata.property.validationMessage.article-title">Introduïu un títol d'article/document vàlid.</message>
+	<message key="metadata.property.displayName.source">Títol de la publicació</message>
+	<message key="metadata.property.validationMessage.source">Introduïu un títol de publicació vàlid.</message>
+	<message key="metadata.property.displayName.date">Data</message>
+	<message key="metadata.property.validationMessage.date">Introduïu una data de publicació vàlida (format: DD-MM-AAAA).</message>
+	<message key="metadata.property.displayName.access-date">Data d’accés</message>
+	<message key="metadata.property.validationMessage.access-date">Introduïu una data d'accés vàlida (format: DD-MM-AAAA).</message>
+	<message key="metadata.property.displayName.issue">Número</message>
+	<message key="metadata.property.validationMessage.issue">Introduïu un número vàlid.</message>
+	<message key="metadata.property.displayName.volume">Volum</message>
+	<message key="metadata.property.validationMessage.volume">Introduïu un volum vàlid.</message>
+	<message key="metadata.property.displayName.season">Temporada</message>
+	<message key="metadata.property.validationMessage.season">Introduïu un identificador de temporada vàlid.</message>
+	<message key="metadata.property.displayName.chapter-title">Títol de capítol</message>
+	<message key="metadata.property.validationMessage.chapter-title">Introduïu un títol de capítol vàlid.</message>
+	<message key="metadata.property.displayName.edition">Edició</message>
+	<message key="metadata.property.validationMessage.edition">Introduïu una edició vàlida.</message>
+	<message key="metadata.property.displayName.series">Sèries</message>
+	<message key="metadata.property.validationMessage.series">Introduïu una sèrie vàlida.</message>
+	<message key="metadata.property.displayName.supplement">Suplement</message>
+	<message key="metadata.property.validationMessage.supplement">Introduïu un suplement vàlid.</message>
+	<message key="metadata.property.displayName.conf-date">Data de la conferència</message>
+	<message key="metadata.property.validationMessage.conf-date">Introduïu una data de conferència vàlida (format: DD-MM-AAAA).</message>
+	<message key="metadata.property.displayName.conf-loc">Ubicació de la conferència</message>
+	<message key="metadata.property.validationMessage.conf-loc">Introduïu una ubicació de conferència vàlida.</message>
+	<message key="metadata.property.displayName.conf-name">Nom de la conferència</message>
+	<message key="metadata.property.validationMessage.conf-name">Introduïu un nom de conferència vàlid.</message>
+	<message key="metadata.property.displayName.conf-sponsor">Patrocinador de la conferència</message>
+	<message key="metadata.property.validationMessage.conf-sponsor">Introduïu un patrocinador de conferència vàlid.</message>
+	<message key="metadata.property.displayName.institution">Institució</message>
+	<message key="metadata.property.validationMessage.institution">Introduïu una institució vàlida.</message>
+	<message key="metadata.property.displayName.fpage">Primera pàgina</message>
+	<message key="metadata.property.validationMessage.fpage">Introduïu una primera pàgina vàlida (ha de ser un valor numèric).</message>
+	<message key="metadata.property.displayName.lpage">Última pàgina</message>
+	<message key="metadata.property.validationMessage.lpage">Introduïu una última pàgina vàlida (ha de ser un valor numèric).</message>
+	<message key="metadata.property.displayName.size">Nombre de pàgines</message>
+	<message key="metadata.property.validationMessage.size">Introduïu un nombre total de pàgines vàlid (ha de ser un valor numèric).</message>
+	<message key="metadata.property.displayName.publisher-loc">Ubicació de l'editorial</message>
+	<message key="metadata.property.validationMessage.publisher-loc">Introduïu una ubicació de l'editorial vàlida.</message>
+	<message key="metadata.property.displayName.publisher-name">Nom de l'editorial</message>
+	<message key="metadata.property.validationMessage.publisher-name">Introduïu un nom d'editorial vàlid.</message>
+	<message key="metadata.property.displayName.isbn">ISBN</message>
+	<message key="metadata.property.validationMessage.isbn">Introduïu un ISBN vàlid (9 o 13 números).</message>
+	<message key="metadata.property.displayName.issn">ISSN en paper</message>
+	<message key="metadata.property.validationMessage.issn">Introduïu un ISSN en paper vàlid.</message>
+	<message key="metadata.property.displayName.eissn">ISSN electrònic</message>
+	<message key="metadata.property.validationMessage.eissn">Introduïu un ISSN electrònic vàlid.</message>
+	<message key="metadata.property.displayName.doi">Mòdul DOI</message>
+	<message key="metadata.property.validationMessage.doi">Introduïu un DOI vàlid.</message>
+	<message key="metadata.property.displayName.publisher-id">Identificador de publicació personalitzat</message>
+	<message key="metadata.property.validationMessage.publisher-id">Introduïu un identificador de publicació personalitzat vàlid.</message>
+	<message key="metadata.property.displayName.coden">CODEN</message>
+	<message key="metadata.property.validationMessage.coden">Introduïu un CODEN vàlid.</message>
+	<message key="metadata.property.displayName.sici">SICI</message>
+	<message key="metadata.property.validationMessage.sici">Introduïu un SICI vàlid.</message>
+	<message key="metadata.property.displayName.pmid">PMID</message>
+	<message key="metadata.property.validationMessage.pmid">Introduïu un PMID vàlid.</message>
+	<message key="metadata.property.displayName.uri">Enllaç a la publicació</message>
+	<message key="metadata.property.validationMessage.uri">Introduïu un enllaç alternatiu vàlid a la publicació.</message>
+	<message key="metadata.property.displayName.comment">Comentari</message>
+	<message key="metadata.property.validationMessage.comment">Introduïu un comentari vàlid.</message>
+	<message key="metadata.property.displayName.annotation">Anotació</message>
+	<message key="metadata.property.validationMessage.annotation">Introduïu una anotació vàlida.</message>
+	<message key="metadata.property.displayName.publication-type">Tipus de publicació</message>
+	<message key="metadata.property.validationMessage.publication-type">Assegureu-vos d'establir sempre un tipus de publicació. Actualment, els valors admesos són «llibre» (per a llibres o capítols de llibres) i «revista» (per a articles de revista). En cas contrari, el format de sortida de la cita no funcionarà correctament.</message>
+
+	<!-- MODS-specific messages -->
+	<message key="metadata.property.displayName.title-type">Tipus de títol</message>
+	<message key="metadata.property.validationMessage.title-type">Comproveu que heu introduït un tipus de nom vàlid. Els valors admesos són «abreviat», «traduït», «alternatiu» i «uniforme».</message>
+	<message key="metadata.property.displayName.nonSort">Una part del títol s'ha ignorat mentre s'estava ordenant</message>
+	<message key="metadata.property.validationMessage.nonSort">Introduïu només els caràcters inicials del títol que han de ser ignorats en ordenar-lo.</message>
+	<message key="metadata.property.displayName.title">Títol</message>
+	<message key="metadata.property.validationMessage.title">Introduïu un títol vàlid.</message>
+	<message key="metadata.property.displayName.subTitle">Subtítol</message>
+	<message key="metadata.property.validationMessage.subTitle">Introduïu un subtítol vàlid.</message>
+	<message key="metadata.property.displayName.partNumber">Número de part</message>
+	<message key="metadata.property.validationMessage.partNumber">Introduïu un número de part vàlid.</message>
+	<message key="metadata.property.displayName.partName">Nom de part</message>
+	<message key="metadata.property.validationMessage.partName">Introduïu un nom de part vàlid.</message>
+	<message key="metadata.property.displayName.name-type">Tipus de nom</message>
+	<message key="metadata.property.validationMessage.name-type">Comproveu que heu introduït un tipus de nom vàlid. Els valors admesos són «personal», «corporatiu» i «conferència».</message>
+	<!-- FIXME: end -->
+
+	<message key="common.queue.long.submissionsUnassigned">Trameses desassignades</message>
+	<message key="common.queue.long.myAssigned">Les meves trameses assignades</message>
+	<message key="common.queue.long.submissionsArchived">Trameses arxivades</message>
+	<message key="submission.authors">Autors/ores</message>
+	<message key="submission.mySubmissions">Les meves trameses d'autor/a</message>
+	<message key="submission.addFile">Puja un fitxer</message>
+	<message key="submission.agencies">Entitats</message>
+	<message key="submission.abstractViews">Visualitzacions dels resums</message>
+	<message key="submission.accepted">Acceptada</message>
+	<message key="submission.acknowledge">Rebuda</message>
+	<message key="submission.addSuppFile">Afegeix un fitxer addicional</message>
+	<message key="submission.ask">Sol·licita</message>
+	<message key="submission.attachedFile">Fitxer adjunt</message>
+	<message key="submission.backToSubmissionEditing">Torna a l’edició de la tramesa</message>
+	<message key="submission.changeComments">Canvia a</message>
+	<message key="submission.citations">Referències</message>
+	<message key="submission.citations.editor.citationlist.approved">Aprovat</message>
+	<message key="submission.citations.editor.citationlist.deleteCitationConfirmation">Esteu segur/a que voleu suprimir aquesta citació?</message>
+	<message key="submission.citations.editor.citationlist.errorDeletingCitation">S'ha produït un error mentre s'intentava eliminar la citació.  Informeu d'aquest error.</message>
+	<message key="submission.citations.editor.citationlist.newCitation">Nova citació</message>
+	<message key="submission.citations.editor.citationlist.notApproved">No aprovat</message>
+	<message key="submission.citations.editor.citationlist.title">Edita les citacions</message>
+	<message key="submission.citations.editor.clickToEdit">Feu clic per editar.</message>
+	<message key="submission.citations.editor.details.authorQuery">Pregunteu a l'autor/a</message>
+	<message key="submission.citations.editor.details.authorQueryBody">El vostre missatge per a l'autor/a:</message>
+	<message key="submission.citations.editor.details.authorQueryExplanation">Podeu sol·licitar a l'autor/a més informació sobre la citació en curs. Si feu clic al botó «Envia» de més avall s'enviarà el vostre missatge a l'autor/a com a correu electrònic.</message>
+	<message key="submission.citations.editor.details.authorQuerySubject">Assumpte:</message>
+	<message key="submission.citations.editor.details.cannotSelectDefaultForLabel">No es poden eliminar les etiquetes de camp. Elimineu el camp si no el necessiteu</message>
+	<message key="submission.citations.editor.details.checkInGoogleScholar">Comproveu a Google Acadèmic</message>
+	<message key="submission.citations.editor.details.changeFieldInfo">Escriviu les primeres lletres per seleccionar...</message>
+	<message key="submission.citations.editor.details.citationExportPreview">Vista prèvia de l'exportació de la citació</message>
+	<message key="submission.citations.editor.details.citationImprovementResultsActive">Resultats del servei de citació interna d'experts (feu clic per tancar)</message>
+	<message key="submission.citations.editor.details.citationImprovementResultsInactive">Resultats del servei de citació interna d'experts (feu clic per obrir)</message>
+	<message key="submission.citations.editor.details.citationServices">Serveis de citació</message>
+	<message key="submission.citations.editor.details.clickToDismissMessage">Podeu fer clic al text d'un missatge per descartar-lo.</message>
+	<message key="submission.citations.editor.details.dataSaved">S’han desat els canvis.</message>
+	<message key="submission.citations.editor.details.editRawCitationDatabaseServices">Seleccioneu serveis de bases de dades de citacions:</message>
+	<message key="submission.citations.editor.details.editRawCitationExpertSettingsActive">Ajustos d'edició de citacions d'experts (feu clic per tancar)</message>
+	<message key="submission.citations.editor.details.editRawCitationExpertSettingsInactive">Ajustos d'edició de citacions d'experts (feu clic per obrir)</message>
+	<message key="submission.citations.editor.details.editRawCitationExtractionServices">Seleccioneu serveis d'extracció de citacions:</message>
+	<message key="submission.citations.editor.details.editRawCitationFilterValidationError">Error intern: Selecció de filtres no vàlida. Envieu un informe d'error.</message>
+	<message key="submission.citations.editor.details.explainImprovementOptions">Si no obteniu resultats satisfactoris amb les opcions per defecte, hi ha altres opcions per millorar la citació. L'edició manual de camps importants (p. ex., títol i autor/a) sol ser una bona opció; després d'editar-los manualment, podeu provar de nou els serveis de citació. Si això no us ajuda, encara podeu fer una consulta a Google Acadèmic o demanar més informació a l'autor/a.</message>
+	<message key="submission.citations.editor.details.googleScholar">Google Acadèmic</message>
+	<message key="submission.citations.editor.details.googleScholarExplanation">Si la citació corresponent no s'ha trobat en cap dels serveis de citació, podeu buscar-ne una correspondència a Google Acadèmic. Malauradament, Google Acadèmic no proporciona una interfície basada en camps per les seves dades, la qual cosa vol dir que no hi ha cap manera automàtica de retornar les dades a aquest assistent. Haureu de copiar i enganxar la informació manualment de la pàgina de resultats de Google als camps.</message>
+	<message key="submission.citations.editor.details.manualEditing">Edició manual</message>
+	<message key="submission.citations.editor.details.messages">Tingueu en compte (feu clic als missatges per descartar-los)</message>
+	<message key="submission.citations.editor.details.newFieldInfo">...feu clic aquí per afegir un camp nou...</message>
+	<message key="submission.citations.editor.details.queryCitation">Serveis de nova consulta de citació</message>
+	<message key="submission.citations.editor.details.queryGoogleScholar">Cerqueu a Google Acadèmic</message>
+	<message key="submission.citations.editor.details.processRawCitation">Procés</message>
+	<message key="submission.citations.editor.details.processRawCitationGoAhead">Continueu</message>
+	<message key="submission.citations.editor.details.processRawCitationTitle">Canvieu la citació original</message>
+	<message key="submission.citations.editor.details.processRawCitationWarning">Esteu canviant el text de la citació original. Si ho feu, tots els camps nous es reemplaçaran amb els valors generats més recentment. Aquesta acció eliminarà els canvis manuals que hàgiu fet.</message>
+	<message key="submission.citations.editor.details.saveAndApprove">Desa i aprova</message>
+	<message key="submission.citations.editor.details.saveAndRevokeApproval">Revoca l'aprovació</message>
+	<message key="submission.citations.editor.details.sendAuthorQuery">Envia missatge</message>
+	<message key="submission.citations.editor.details.sendAuthorQuerySuccess">Missatge enviat!</message>
+	<message key="submission.citations.editor.details.sourceResultsUse">Utilitza</message>
+	<message key="submission.citations.editor.details.sourceResultsUseAll">Utilitza'ls tots</message>
+	<message key="submission.citations.editor.details.sourceResultsUseAllExplanation">Feu clic per transportar directament tots els camps de resultat d'aquesta font a la vostra llista de camps.</message>
+	<message key="submission.citations.editor.details.sourceResultsUseExplanation">Feu clic per transportar directament aquest camp de resultat a la vostra llista de camps.</message>
+	<message key="submission.citations.editor.details.rawCitation">Text de citació original</message>
+	<message key="submission.citations.editor.details.rawCitationRequired">Es requereix un text de citació.</message>
+	<message key="submission.citations.editor.details.unsavedChanges">La citació conté dades sense desar. Feu clic a «Desa» per mantenir els canvis, o bé a «Cancel·la» per desfer-los.</message>
+	<message key="submission.citations.editor.details.dontShowMessageAgain">No tornis a mostrar aquest missatge.</message>
+	<message key="submission.citations.editor.edit">Edita les citacions</message>
+	<message key="submission.citations.editor.export">Exporta les citacions</message>
+	<message key="submission.citations.editor.export.exportDescription"><![CDATA[<a id="markForExport" href="">Feu clic aquí</a> per seleccionar totes les sortides generades. A continuació, podreu copiar-ho i enganxar-ho al vostre document.]]></message>
+	<message key="submission.citations.editor.export.filterSelectionDescription">Seleccioneu una de les opcions d'exportació següents.</message>
+	<message key="submission.citations.editor.export.filterSelectionError">No heu seleccionat cap de les opcions de sortida.</message>
+	<message key="submission.citations.editor.export.foundUnapprovedCitationsMessage"><![CDATA[<p>Encara no heu aprovat totes les citacions. Aneu a la pestanya <strong>Edita les citacions</strong> i assegureu-vos que heu aprovat totes les citacions abans d'exportar-les. Les citacions aprovades es marquen amb una franja blau fosc a l'esquerra.</p>]]></message>
+	<message key="submission.citations.editor.export.noExportOutput">El filtre de sortida «{$filterName}» ha produït un error. Envieu un informe d'error.</message>
+	<message key="submission.citations.editor.export.pleaseSelectXmlFilter">Opcions de sortida de XML:</message>
+	<message key="submission.citations.editor.export.pleaseSelectPlaintextFilter">Sortida d'estil de citació (només experimental):</message>
+	<message key="submission.citations.editor.introduction">Introducció</message>
+	<message key="submission.citations.editor.introduction.introductionMessage"><![CDATA[<h4>Benvingut/da a l'assistent de marcatge de citacions.</h4>
+	<p>Amb aquest assistent podeu marcar les citacions que l'autor/a ha proporcionat i exportar-les a galerades en format NLM 2.3 o 3.0 XML, o bé en format text. Aquesta eina us permet extreure i reconèixer les citacions tal com s'han proporcionat, però podeu entrar-hi i editar-ne els resultats en qualsevol moment.</p>
+	<ul>
+		<li><p><strong>Configuració de l'assistent</strong></p>
+		<p>L'assistent de marcatge de citacions està configurat per l'administrador/a de la revista al <a href="{$citationSetupUrl}">Pas de configuració de la revista 3.7: assistent de marcatge de citacions</a>. S'hi poden afegir, configurar i eliminar diferents extraccions de citacions i eines de comprovació. Per obtenir-ne més informació, contacteu amb l'administrador/a de la revista.</p></li>
+		<li><p><strong>Navegació per la interfície de l'assistent</strong></p>
+		<p>Per canviar entre les pestanyes <strong>Introducció</strong>, <strong>Edita les citacions</strong> i<strong>Exporta les citacions</strong>, feu clic als títols de les pestanyes. Per ampliar la interfície de la cita, feu clic al botó <strong>Pantalla completa</strong>. Per tornar a la interfície normal des de la interfície de citació ampliada, feu clic al botó <strong>Desactiva la pantalla completa</strong>. Per eliminar completament aquesta pestanya introductòria, feu clic al botó següent.</p></li>
+		<li><p><strong>Sol·licitud de citacions</strong></p>
+		<p>Si l'administrador/a de la revista ha habilitat l'assistent de marcatge de citació, es sol·licitarà als autors/ores una llista de referències durant la tramesa de l'article. Aquestes referències es sol·licitaran a banda del document de tramesa. Després de la tramesa, els autors/ores poden modificar la seva llista de referències en qualsevol moment en editar les metadades de la tramesa. Tingueu en compte que això sobrescriurà qualsevol modificació que hi hàgiu fet amb aquesta eina.</p></li>
+		<li><p><strong>Edició de les citations</strong></p>
+		<p>L'assistent de marcatge de citacions intentarà identificar i extreure citacions individuals de la llista de referències de l'autor/a. Podeu comprovar de manera automàtica cada intent d'extracció de citacions per consultar-ne la precisió amb un nombre de bases de dades externes, editar-ne la informació incorrecta i afegir-hi informació nova, a més d'aprovar o eliminar citacions i afegir-ne de noves.</p>
+		<p>Totes les citacions de la tramesa s'han d'haver aprovat per poder-les exportar.</p></li>
+		<li><p><strong>Exportació de les citacions</strong></p>
+ 		<p>Les citacions es poden exportar com a XML o com a text. Les opcions d'exportació d'XML inclouen la <a href="http://dtd.nlm.nih.gov/publishing/">Publicació de revistes NLM</a> 2.3 i 3.0 <a href="http://www.ncbi.nlm.nih.gov/pmc/pmcdoc/tagging-guidelines/article/tags.html#el-reflist">ref-list XML</a>. Si seleccioneu una d'aquestes opcions, sortirà un fragment d'una llista de referències codificada en XML que es pot copiar i enganxar en una galerada NLM XML.</p>
+		<p>Les opcions d'exportació de text experimental inclouen els estils de sortida de citacións ABNT, APA, MLA i Vancouver. Aquestes opcions proporcionen un text de sortida que es pot copiar i enganxar en una galerada d'article de text (p. ex., a Microsoft Word o OpenOffice, Adobe InDesign, etc.). Cada citació inclou un enllaç incrustat que cerca automàticament la citació a Google Acadèmic.</p></li>
+	</ul>]]></message>
+	<message key="submission.citations.editor.loadMessage">Espereu que es carregui l'Assistent de marcatge de citacions.</message>
+	<message key="submission.citations.editor.pleaseImportCitationsFirst"><![CDATA[<p>No hi ha citacions en aquest article.</p><p>Aneu a la <a href="{$articleMetadataUrl}">pàgina de metadades</a> de l'article i introduïu-hi una llista de referències o afegiu-hi referències manualment utilitzant el botó d'afegir article de l'editor/a.</p>]]></message>
+	<message key="submission.citations.editor.pleaseSelect">Seleccioneu...</message>
+	<message key="submission.citations.editor.unprocessedCitations">Les citacions d'aquest article encara s'estan processant al servidor. La llista actual de citacions només conté citacions que ja s'han processat. Feu clic al botó d'actualitzar la pàgina per veure les citacions que ja s'han processat.</message>
+	<message key="submission.citations.editor.unprocessedCitationsButton">Actualitzeu llista de citacions</message>
+	<message key="submission.citations.editor.unprocessedCitationsButtonTitle">Feu clic per actualitzar la llista de citacions.</message>
+	<message key="submission.citations.filter.invalidMetadata">S'ha produït un error a {$filterName}: un element de dades que s'ha retornat de la font de dades (p. ex., un servei web) no s'ajusta al format intern de metadades. Per tant, s'han rebutjat els resultats de la font de dades. Informeu d'aquest error.</message>
+	<message key="submission.citations.filter.noResultFromFilterError">Diversos serveis de citació no han retornat cap resultat. Podeu intentar editar manualment els camps de citació i, a continuació, tornar a sol·licitar una consulta als serveis de citació per millorar-ne els resultats. Si això no us ajuda, la citació no existeix a cap de les bases de dades connectades.</message>
+	<message key="submission.citations.filter.unsupportedPublicationType">No s'admet el tipus de publicació o no n'hi ha cap. Editeu manualment la citació i introduïu un tipus de publicació (els tipus admesos són «llibre», «revista», «tesi» i «actes del congrés»).</message>
+	<message key="submission.citations.filter.webserviceError">La crida al servei web {$filterName} ha retornat un error quan s'ha fet amb l'URL següent: {$webserviceUrl}. És possible que el servei web no estigui disponible temporalment. Tot i això, encara podeu treballar amb la resta de serveis i desar els resultats. També podeu tornar-ho a intentar més tard. Si l'error persisteix, demaneu a l'administrador/a que desactivi aquest servei i que creï un informe d'error.</message>
+	<message key="submission.citations.filter.webserviceResultTransformationError">S'ha produït un error a {$filterName}: no s'ha pogut fer la transformació dels resultats XML (p. ex., d'un servei web) a metadades basades en camps. Probablement, la causa és que el servei web retorna dades no vàlides o incompletes. Informeu d'aquest error.</message>
+	<message key="submission.citations.metadata.changeWarning">Esteu segur/a que voleu actualitzar la llista de referències? Si feu clic a «Accepta», tots els canvis que hagin fet els editors/ores se sobreescriuran. Si no teniu clar si haureu de fer canvis a la llista de referències, contacteu amb l'editor/a a càrrec de la vostra tramesa.</message>
+	<message key="submission.comments.addComment">Vull afegir un comentari</message>
+	<message key="submission.comments.comments">Comentaris</message>
+	<message key="submission.comments.confirmDelete">Esteu segur/a que voleu suprimir aquest comentari?</message>
+	<message key="submission.comments.corrections">Correccions</message>
+	<message key="submission.comments.editComment">Edita el comentari</message>
+	<message key="submission.comments.importPeerReviews">Importa les revisions de persones expertes</message>
+	<message key="submission.comments.addReviews">Afegeix revisions al correu electrònic</message>
+	<message key="submission.comments.importPeerReviews.reviewerLetter">Revisor/a {$reviewerLetter}:</message>
+	<message key="submission.comments.noComments">No hi ha cap comentari.</message>
+	<message key="submission.comments.noReviews">No hi ha cap revisió.</message>
+	<message key="submission.comments.review">Revisió</message>
+	<message key="submission.comments.sendDecisionToReviewers">Envia la decisió de l’editor/a als revisors/es</message>
+	<message key="submission.comments.subject">Matèria</message>
+	<message key="submission.complete">Completa</message>
+	<message key="submission.contributors">Llista de contribuïdors/ores</message>
+	<message key="submission.contributorsDescription">La llista de contribuïdors/ores associada a aquesta tramesa pot incloure altres autors/ores, autors/ores de capítols individuals d'un volum editat, editors/ores de volums i/o traductors/ores. Es podria assignar un contribuïdor/a de la llista com a contacte principal per a la correspondència amb una editorial, atès que aquest contacte no ha de ser per força l'autor/a que l'ha enviat.</message>
+	<message key="submission.copyedited">Original corregit</message>
+	<message key="submission.copyediting">Correcció</message>
+	<message key="submission.coverage">Informació de la cobertura</message>
+	<message key="submission.coverage.tip">Els camps següents proporcionen informació sobre la cobertura de la vostra tramesa.  La cobertura pot incloure períodes cronològics (1920-1940, segle XVII) i ubicacions geogràfiques («Boston, Massachussets» o «Nord d'Anglaterra»).  Podeu fer servir el camp de cobertura de mostra per incloure un exemple important del vostre treball.</message>
+	<message key="submission.coverage.chron">Cobertura cronològica o històrica</message>
+	<message key="submission.coverage.geo">Cobertura geoespacial</message>
+	<message key="submission.coverage.sample">Cobertura de mostra</message>
+	<message key="submission.done">Acabada</message>
+	<message key="submission.dueDate">Data de venciment</message>
+	<message key="submission.due">Venciment</message>
+	<message key="submission.editing">Edició</message>
+	<message key="submission.editMetadata">Edita les metadades</message>
+	<message key="submission.editorial">Editorial</message>
+	<message key="submission.email.backToEmailLog">Torna al registre del correu electrònic</message>
+	<message key="submission.email.confirmClearLog">Esteu segur/a que voleu esborrar el registre del correu electrònic per a aquesta tramesa?</message>
+	<message key="submission.email.confirmDeleteLogEntry">Esteu segur/a que voleu suprimir aquesta entrada del registre del correu electrònic?</message>
+	<message key="submission.email.deleteLogEntry">Suprimeix l’entrada del registre</message>
+	<message key="submission.emailLog">Registre del correu electrònic</message>
+	<message key="submission.event.participantAdded">S'ha afegit«{$name}» ({$username}) com a {$userGroupName}.</message>
+	<message key="submission.event.participantRemoved">Suprimeix «{$name}» ({$username}) com a {$userGroupName}.</message>
+	<message key="submission.event.backToEventLog">Torna al registre d’esdeveniments</message>
+	<message key="submission.event.confirmClearLog">Esteu segur/a que voleu esborrar el registre d’esdeveniments per a aquesta tramesa?</message>
+	<message key="submission.event.confirmDeleteLogEntry">Esteu segur/a que voleu suprimir aquesta entrada del registre d’esdeveniments?</message>
+	<message key="submission.event.deleteLogEntry">Suprimeix l’entrada del registre</message>
+	<message key="submission.event.submissionSubmitted">La tramesa inicial s'ha completat.</message>
+	<message key="submission.event.fileUploaded">S'ha carregat el fitxer «{$name}» (amb l'identificador de fitxer {$fileId}-{$fileRevision}).</message>
+	<message key="submission.event.fileRevised">S'ha carregat la revisió «{$name}» (amb l'identificador de fitxer {$fileId}-{$fileRevision}).</message>
+	<message key="submission.event.general.metadataUpdated">Metadades de tramesa actualitzades</message>
+	<message key="submission.event.general.suppFileUpdated">Fitxer de tramesa actualitzat</message>
+	<message key="submission.event.reviewer.reviewAcceptedByProxy">Assignació de la revisió acceptada per poders</message>
+	<message key="submission.event.reviewer.reviewAccepted">Assignació de la revisió acceptada</message>
+	<message key="submission.event.reviewer.reviewCancelled">Assignació de la revisió cancel·lada</message>
+	<message key="submission.event.reviewer.reviewDeclined">Assignació de la revisió rebutjada</message>
+	<message key="submission.event.reviewer.reviewDueDate">Data de venciment de la revisió modificada</message>
+	<message key="submission.event.reviewer.reviewerAssigned">Revisor/a assignat a la tramesa</message>
+	<message key="submission.event.reviewer.reviewerRated">Valoració de la revisió tramesa</message>
+	<message key="submission.event.reviewer.reviewerUnassigned">Revisor/a desassignat de la tramesa</message>
+	<message key="submission.event.reviewer.reviewFile">Fitxer de revisió actualitzat</message>
+	<message key="submission.event.reviewer.reviewInitiated">Assignació de la revisió iniciada</message>
+	<message key="submission.event.reviewer.reviewRecommendation">Fitxer de recomanacions per a la revisió</message>
+	<message key="submission.event.reviewer.reviewReinitiated">Assignació de la revisió reiniciada</message>
+	<message key="submission.event.reviewer.reviewResubmitted">Revisió tornada a trametre</message>
+	<message key="submission.event.reviewer.reviewRevision">Fitxer de revisions del revisor/a actualitzat</message>
+	<message key="submission.files">Fitxers</message>
+	<message key="submission.files.downloadAll">Descarrega tots els fitxers</message>
+	<message key="submission.galley">Galerades</message>
+	<message key="submission.history.clearLog">Esborra el registre</message>
+	<message key="submission.history">Historial</message>
+	<message key="submission.history.noLogEntries">No hi ha cap entrada al registre.</message>
+	<message key="submission.history.recentLogEntries">Entrades recents</message>
+	<message key="submission.history.submissionEmailLog">Registre del correu electrònic</message>
+	<message key="submission.history.submissionEventLog">Registre d’esdeveniments</message>
+	<message key="submission.history.submissionNotes">Notes de la tramesa</message>
+	<message key="submission.history.viewLog">Visualitza el registre</message>
+	<message key="submission.indexing">Indexació</message>
+	<message key="submission.initiated">Iniciada</message>
+
+	<!-- Information Center -->
+	<message key="submission.informationCenter.submissionInfo">Informació de la tramesa</message>
+	<message key="submission.informationCenter.metadata">Metadades</message>
+	<message key="submission.informationCenter.notes">Notes</message>
+	<message key="submission.informationCenter.history">Historial</message>
+	<message key="submission.informationCenter.history.allEvents">Mostra esdeveniments de versions anteriors</message>
+
+	<!-- Stage Participants -->
+	<message key="submission.stageParticipants.notify">Notifica</message>
+
+	<message key="submission.lastModified">Modificada per darrera vegada</message>
+	<message key="submission.layout.addGalley">Afegeix galerades de maquetació</message>
+	<message key="submission.layout.confirmDeleteGalley">Esteu segur/a que voleu suprimir aquestes galerades de manera permanent?</message>
+	<message key="submission.layout.confirmDeleteGalleyImage">Esteu segur/a que voleu suprimir aquesta imatge de les galerades?</message>
+	<message key="submission.layout.confirmDeleteSupplementaryFile">Esteu segur/a que voleu suprimir aquest fitxer addicional de manera permanent?</message>
+	<message key="submission.layout.deleteGalleyStylesheet">Suprimeix aquestes galerades.</message>
+	<message key="submission.layout.editGalley">Edita les galerades de maquetació</message>
+	<message key="submission.layout.galleyFileData">Informació del fitxer de galerades</message>
+	<message key="submission.layout.galleyFormat">Format de les galerades</message>
+	<message key="submission.layout.galleyHTMLData">Fitxers HTML de les galerades</message>
+	<message key="submission.layout.galleyImages">Imatges</message>
+	<message key="submission.layout.galleyLabelInstructions">L’etiqueta de les galerades s’utilitza per a identificar el format de fitxer de l’element (p. ex. HTML, PDF, etc.).</message>
+	<message key="submission.layout.galleyLabel">Etiqueta</message>
+	<message key="submission.layout.galleyLabelRequired">Heu d’introduir una etiqueta per a les galerades.</message>
+	<message key="submission.layout.galleyLanguageRequired">Heu d’introduir una llengua per a les galerades.</message>
+	<message key="submission.layout.galleyLocaleRequired">Heu d’introduir una configuració regional per a les galerades.</message>
+	<message key="submission.layout.galleyRemoteURL">URL remota</message>
+	<message key="submission.layout.galleyRemoteURLValid">Proporcioneu una URL remota vàlida (incloent-hi http://).</message>
+	<message key="submission.layout.galleyNoImages">No s’ha afegit cap imatge a aquesta galerada.</message>
+	<message key="submission.layout.galleys">Galerades</message>
+	<message key="submission.layout.galleyStylesheet">Fitxer del full d’estil</message>
+	<message key="submission.layout.galleyStyle">Estil</message>
+	<message key="submission.layout.initialGalleyCreation">Creació de les galerades inicials</message>
+	<message key="submission.layout.layoutFile">Fitxer de maquetació</message>
+	<message key="submission.layout">Maquetació</message>
+	<message key="submission.layout.layoutVersion">Versió maquetada</message>
+	<message key="submission.layout.newGalley">Crea galerades noves</message>
+	<message key="submission.layout.newSupplementaryFile">Penja un fitxer addicional nou</message>
+	<message key="submission.layout.noStyleFile">No s’ha afegit cap fitxer de full d’estil a aquestes galerades.</message>
+	<message key="submission.layout.supplementaryFiles">Revisió del fitxer addicional</message>
+	<message key="submission.layout.viewingGalley">Visualitza les galerades de la tramesa</message>
+	<message key="submission.layout.viewProof">Visualitza la prova</message>
+	<message key="submission.metadata">Metadades de la tramesa</message>
+	<message key="submission.noReviewAssignments">No hi ha cap assignació de revisió</message>
+	<message key="submission.notes.addNewNote">Afegeix una nota nova</message>
+	<message key="submission.notes.attachedFile">Fitxer adjunt</message>
+	<message key="submission.notes.backToSubmissionNotes">Torna a les notes de tramesa</message>
+	<message key="submission.notes.breadcrumb">Notes</message>
+	<message key="submission.notes.clearAllNotes">Esborra totes les notes</message>
+	<message key="submission.notes.collapseNotes">Redueix les notes</message>
+	<message key="submission.notes.confirmDeleteAll">Voleu suprimir totes les notes de tramesa?</message>
+	<message key="submission.notes.confirmDelete">Voleu suprimir aquesta nota de tramesa?</message>
+	<message key="submission.notes.createNewNote">Crea una nota nova</message>
+	<message key="submission.notes.deleteNote">Suprimeix la nota</message>
+	<message key="submission.notes.editNote">Edita la nota</message>
+	<message key="submission.notes.expandNotes">Amplia les notes</message>
+	<message key="submission.notes.noSubmissionNotes">No hi ha cap nota de tramesa</message>
+	<message key="submission.notes.removeUploadedFile">Suprimeix el fitxer penjat</message>
+	<message key="submission.notes">Notes de la tramesa</message>
+	<message key="submission.notes.updateNote">Actualitza la nota</message>
+	<message key="submission.notes.viewNotes">Visualitza les notes</message>
+	<message key="submission.originalFile">Fitxer original</message>
+	<message key="submission.page.editing">#{$id} Edició</message>
+	<message key="submission.page.history">#{$id} Historial</message>
+	<message key="submission.page.review">#{$id} Revisió</message>
+	<message key="submission.page.summary">#{$id} Resum</message>
+	<message key="submission.page.citations">#{$id} Citacions</message>
+	<message key="submission.peerReview">Revisió d'experts/ertes</message>
+	<message key="submission.production">Producció</message>
+	<message key="submission.recommendation">Recomanació</message>
+	<message key="submission.rejected">Rebutjada</message>
+	<message key="submission.request">Sol·licitud</message>
+	<message key="submission.response">Resposta</message>
+	<message key="submission.restrictions">Restriccions</message>
+	<message key="submission.reviewMetadata">Revisa les metadades</message>
+	<message key="submission.review">Revisió</message>
+	<message key="submission.reviewed">Revisada</message>
+	<message key="submission.reviewVersion">Versió de revisió</message>
+	<message key="submission.rights">Drets</message>
+	<message key="submission.rights.tip">Si ho voleu, podeu introduir una breu declaració sobre els drets d'accés a aquesta tramesa.</message>
+	<message key="submissions.active">Activa</message>
+	<message key="submissions.archived">Arxivada</message>
+	<message key="submission.saveMetadata">Desa les metadades</message>
+	<message key="submissions.completed">Completada</message>
+	<message key="submissions.declined">Rebutjada</message>
+	<message key="submissions.incomplete">Incompleta</message>
+	<message key="submissions.noSubmissions">No hi ha cap tramesa</message>
+	<message key="submissions.queuedEditing">Enviada a la cua per a l’edició</message>
+	<message key="submissions.queued">Enviada a la cua</message>
+	<message key="submissions.queuedUnassigned">Esperant l’assignació</message>
+	<message key="submissions.ruling">Decisió</message>
+	<message key="submission.source">Font</message>
+	<message key="submission.source.tip">Aquesta tramesa deriva d'un altre recurs? Si és així, podeu introduir un URL o una descripció del recurs.</message>
+	<message key="submission.subjectClass">Tema de la tramesa</message>
+	<message key="submission.subjectClass.tip">Descriviu la tramesa amb algunes frases clau.  Podeu redefinir-ne el tema amb paraules clau específiques al final del formulari.</message>
+	<message key="submissions.submit">Tramet</message>
+	<message key="submissions.submitted">Tramesa</message>
+	<message key="submission.submission">Tramesa</message>
+	<message key="submission.start">Inicia</message>
+	<message key="submission.submissionHistory">Historial de la tramesa</message>
+	<message key="submission.submissionManuscript">Manuscrit de la tramesa</message>
+	<message key="submission.submissionReview">Revisió de la tramesa</message>
+	<message key="submission.submitter">Remitent</message>
+	<message key="submission.submit.finishSubmission">Finalitza la tramesa</message>
+	<message key="submission.submit.selectFile">Seleccioneu un fitxer</message>
+	<message key="submission.submit.fileInformation">Informació del fitxer</message>
+	<message key="submission.submit.fileAdded">El fitxer s'ha afegit.</message>
+	<message key="submission.submit.includeInBrowse">Voleu incloure aquest contribuïdor/a a la llista de navegació?</message>
+	<message key="submission.submit.newFile">Envia un fitxer nou</message>
+	<message key="submission.submit.errorDeletingAuthor">S'ha produït un error en eliminar l'autor/a.</message>
+	<message key="submission.submit.metadataForm">Ajustos addicionals</message>
+	<message key="submission.submit.metadataForm.tip">Afegiu informació addicional a la tramesa.  Feu clic a «Introdueix» després de cada terme.</message>
+	<message key="submission.submit.submissionLocale">Llengua de la tramesa</message>
+	<message key="submission.submit.submissionFiles">Fitxers de la tramesa</message>
+	<message key="submission.submit.dependentFiles">Fitxers dependents</message>
+	<message key="submission.manageDependentFiles">Administra els fitxers dependents</message>
+	<message key="submission.upload.dependent">Carrega un fitxer dependent</message>
+	<message key="submission.dependent.upload.description">Carrega fitxers que aquest fitxer de producció necessita per mostrar-los correctament (HTML, CSS, etc.)</message>
+	<message key="submission.summary">Resum</message>
+	<message key="submission.supplementaryFiles">Fitxers addicionals</message>
+	<message key="submission.supportingAgencies">Agències de suport</message>
+	<message key="submission.currentAgencies">Agències actuals</message>
+	<message key="submission.indexingInformation">Informació d'indexació</message>
+	<message key="submission.titleAndAbstract">Títol i resum</message>
+	<message key="submission.type.tip"><![CDATA[El tipus de tramesa normalment és un tipus d'imatge, text o qualsevol altre tipus d'element multimèdia que pot ser programari o interactiu. Seleccioneu el més rellevant per a la tramesa. Podeu trobar-ne exemples a <a target="_blank" href="http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type">http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</a>]]></message>
+	<message key="submission.underway">En procés</message>
+	<message key="submission.uploadFileTo">Puja el fitxer a</message>
+	<message key="submission.createRemote">Creació remota</message>
+	<message key="submission.viewMetadata">Visualitza les metadades</message>
+	<message key="submission.views">Visualitzacions</message>
+	<message key="submission.uploadSuccessful">El fitxer s'ha carregat.</message>
+	<message key="submission.loadMessage">Espereu mentre el fitxer es carrega al servidor.</message>
+	<message key="submission.artworkFileDetails">Detalls del fitxer d'il·lustració</message>
+	<message key="submission.fileDetails">Detalls del fitxer</message>
+	<message key="submission.nameRequired">Es requereix un nom per a aquest element.</message>
+	<message key="submission.date.mmdd">DD-MM</message>
+	<message key="submission.date.yyyymmdd">DD-MM-AAAA</message>
+	<message key="submission.submit.selectPrincipalContact">Contacte principal per a la correspondència editorial.</message>
+	<message key="submission.submit.contributorRole">Rol del contribuïdor</message>
+	<message key="submission.submit.addAuthor">Afegeix col·laborador</message>
+
+	<!-- Submission file upload form elements -->
+	<message key="submission.form.name">Poseu un nom al fitxer (p.ex., Tramesa Smith, Taula Smith 1)</message>
+	<message key="submission.form.replaceExisting">Voleu substituir un fitxer existent?</message>
+
+	<!-- Workflow keys -->
+	<message key="workflow.review.internalReview">Revisió interna</message>
+	<message key="workflow.review.externalReview">Revisió externa</message>
+
+	<!-- Submission status -->
+	<message key="submission.status.editorial">Enviada a la cua per a la correcció</message>
+	<message key="submission.status.production">Enviada a la cua per a la correcció de proves</message>
+	<message key="submission.status.review">En revisió</message>
+	<message key="submission.status.submission">En espera de la decisió de l'editor/a</message>
+	<message key="submission.status.unassigned">No s'ha assignat</message>
+	<message key="submission.status.declined">Rebutjada</message>
+	<message key="submission.status.published">Publicat</message>
+
+	<message key="submission.submit.uploadStep">1. Carrega la tramesa</message>
+	<message key="submission.submit.uploadSubmissionFile">Carrega el fitxer de la tramesa</message>
+	<message key="submission.submit.metadataStep">2. Metadades</message>
+	<message key="submission.submit.finishingUpStep">3. Finalització</message>
+	<message key="submission.submit.fileNameRequired">Heu d'introduir un nom per a aquest fitxer.</message>
+	<message key="submission.submit.howToSubmit"><![CDATA[Si és necessari, contacteu amb <a href="mailto:{$supportEmail}">{$supportName}</a> per obtenir ajuda ({$supportPhone}).]]></message>
+	<message key="submission.submit.howToSubmitNoPhone"><![CDATA[Si és necessari, contacteu amb <a href="mailto:{$supportEmail}">{$supportName}</a> per obtenir ajuda.]]></message>
+
+	<!-- File upload wizard -->
+	<message key="submission.upload.noteToAccompanyFile">Nota per al fitxer d'acompanyament</message>
+	<message key="submission.upload.noGenre">No hi ha cap gènere o el que hi ha no és vàlid.</message>
+	<message key="submission.upload.invalidUserGroup">No hi ha cap grup d'usuaris/àries o el que hi ha no és vàlid.</message>
+	<message key="submission.upload.possibleRevision">S'ha detectat una possible revisió o un possible duplicat.</message>
+	<message key="submission.upload.possibleRevisionDescription"><![CDATA[<p>El nom del fitxer seleccionat s'assembla al nom del fitxer «{$revisedFileName}» que heu carregat abans. Si el fitxer que acabeu de carregar és per reemplaçar l'anterior, seleccioneu el fitxer del desplegable per reemplaçar-lo. Si el fitxer carregat no en substitueix un de més antic, configureu el desplegable a «Seleccioneu el fitxer» (per conservar l'historial).</p>]]></message>
+	<message key="submission.upload.selectMandatoryFileToRevise">Seleccioneu el fitxer que voleu revisar.</message>
+	<message key="submission.upload.selectOptionalFileToRevise">Si esteu carregant la revisió d'un fitxer existent, indiqueu a quin fitxer fa referència.</message>
+	<message key="submission.upload.uploadNewFile">Seleccioneu un fitxer (per conservar l'historial).</message>
+	<message key="submission.upload.fileContents">Continguts del fitxer</message>
+	<message key="submission.upload.userGroup">Carrega el fitxer amb el meu rol com a...</message>
+	<message key="submission.upload.userGroupDescription">Si esteu carregant un volum editat, haureu de carregar cadascun dels capítols individuals del volum amb el rol d'editor/a de volums.</message>
+	<message key="submission.upload.uploadLibraryFile">Carrega un fitxer de biblioteca</message>
+	<message key="submission.upload.libraryCategory">Categoria de documentació de la tramesa</message>
+
+	<!-- File uploads -->
+	<message key="submission.upload.finalDraft">Puja un fitxer</message>
+	<message key="submission.upload.copyeditedVersion">Carrega un fitxer corregit</message>
+	<message key="submission.upload.fairCopy">Carrega una còpia en net</message>
+	<message key="submission.upload.uploadFiles">Carrega fitxers</message>
+	<message key="submission.upload.signoff">Carrega una resposta</message>
+	<message key="submission.upload.response.description">Després de revisar el fitxer assignat, deseu tots els comentaris al fitxer següent i/o carregueu una còpia anotada del fitxer (o d'un altre fitxer).</message>
+	<message key="submission.upload.productionReady">Carrega un fitxer de producció llest</message>
+	<message key="submission.upload.noAvailableReviewFiles">No hi ha fitxers pendents de revisar en aquest moment.</message>
+
+	<!-- Review Round Status Keys -->
+	<message key="editor.submission.roundStatus.revisionsRequested">S'han sol·licitat les revisions.</message>
+	<message key="editor.submission.roundStatus.resubmitted">La tramesa s'ha tornat a enviar per a la revisió.</message>
+	<message key="editor.submission.roundStatus.sentToExternal">S'ha enviat per a la revisió externa.</message>
+	<message key="editor.submission.roundStatus.accepted">S'ha acceptat la tramesa.</message>
+	<message key="editor.submission.roundStatus.declined">S'ha rebutjat la tramesa.</message>
+	<message key="editor.submission.roundStatus.pendingReviewers">En espera de revisors/ores.</message>
+	<message key="editor.submission.roundStatus.pendingReviews">En espera de respostes dels revisors/ores.</message>
+	<message key="editor.submission.roundStatus.reviewsReady">Hi ha noves revisions preparades.</message>
+	<message key="editor.submission.roundStatus.reviewsCompleted">Revisions completades</message>
+
+	<!-- Participants -->
+	<message key="editor.submission.stageParticipants">Participants</message>
+
+	<!-- Stage Participants grid -->
+	<message key="editor.submission.noneAssigned">No n'hi ha cap d'assignat.</message>
+	<message key="editor.submission.participant">Participant</message>
+	<message key="editor.submission.addStageParticipant">Afegeix un participant</message>
+	<message key="editor.submission.addStageParticipant.description"><![CDATA[Per afegir un participant a aquesta fase de la tramesa, seleccioneu un grup d'usuaris/àries del menú desplegable i després afegiu-hi un usuari/ària.<br /><br />Nota: l'usuari/ària s'afegirà a totes les fases a les quals el grup d'usuaris/àries estigui assignat.]]></message>
+	<message key="editor.submission.removeStageParticipant">Elimina el participant</message>
+	<message key="editor.submission.removeStageParticipant.description"><![CDATA[S'eliminarà el participant de <strong>totes</strong> les fases. Si l'usuari/ària també té tasques d'auditoria pendents, també s'eliminaran.]]></message>
+	<message key="editor.submission.addStageParticipant.form.userGroupRequired">Heu de seleccionar un grup d'usuaris.</message>
+	<message key="editor.submission.addStageParticipant.form.userRequired">Heu de seleccionar un usuari/ària per al grup d'usuaris especificat.</message>
+
+	<!--  editor decisions -->
+	<message key="editor.submission.decision">Decisió</message>
+	<message key="editor.submission.decision.accept">Accepta la tramesa</message>
+	<message key="editor.submission.decision.requestRevisions">Sol·licita revisions</message>
+	<message key="editor.submission.decision.resubmit">Torna-ho a trametre per a revisió</message>
+	<message key="editor.submission.decision.decline">Rebutja la tramesa</message>
+	<message key="editor.submission.decision.sendToProduction">Envia a producció</message>
+	<message key="editor.submission.decision.sendInternalReview">Envia a revisió interna</message>
+	<message key="editor.submission.decision.sendExternalReview">Envia a revisió externa</message>
+	<message key="editor.submission.decision.approveProofs">Aprova galerades</message>
+	<message key="editor.submission.decision.approveProofsDescription">El fitxer de galerades ha de comprovar-se i aprovar-se per passar a estar disponible. Voleu aprovar-lo?</message>
+	<message key="editor.submission.decision.disapproveProofsDescription">Aquest fitxer de galerades ja no es podrà descarregar o comprar. Voleu rebutjar-les?</message>
+
+	<!-- workflow navigation keys -->
+	<message key="submission.currentStage">Fase actual</message>
+	<message key="submission.noActionRequired">No cal que feu cap acció</message>
+	<message key="submission.actionNeeded">Necessita acció</message>
+
+	<message key="reviewer.submission.reviewFiles">Fitxers de revisió</message>
+	<message key="submission.submit.currentFile">Fitxer actual</message>
+	<message key="submission.finalDraft">Fitxers d'esborranys finals</message>
+
+	<!-- Auditor keys -->
+	<message key="editor.submission.addAuditorError">S'ha produït un error quan s'intentava assignar l'auditor/a. Torneu-ho a intentar.</message>
+
+	<!-- Submission event log -->
+	<message key="submission.event.fileUploaded">El fitxer «{$originalFileName}» s'ha carregat per a la tramesa {$submissionId} per {$username}.</message>
+	<message key="submission.event.fileDeleted">El fitxer «{$originalFileName}» s'ha eliminat per a la tramesa {$submissionId} per {$username}.</message>
+	<message key="submission.event.revisionUploaded">S'ha carregat una revisió «{$originalFileName}» per a la tramesa {$submissionId} per {$username}.</message>
+	<message key="submission.event.revisionDeleted">S'ha eliminat una revisió «{$originalFileName}» per a la tramesa {$submissionId} per {$username}.</message>
+	<message key="submission.event.lastRevisionDeleted">S'ha eliminat la darrera revisió del fitxer «{$title}» per {$username}.</message>
+	<message key="submission.event.fileAuditorAdded">«{$name}» ({$username}) s'ha afegit a un auditor per al fitxer «{$file}».</message>
+	<message key="submission.event.fileAuditorCleared">«{$name}» ({$username}) s'ha eliminat com a auditor del fitxer «{$file}».</message>
+	<message key="submission.event.fileAuditUploaded">«{$name}» ({$username}) ha completat una auditoria i ha carregat «{$file}».</message>
+	<message key="submission.event.signoffSignoff">«{$name}» ({$username}) ha tancat la sessió per a «{$file}/».</message>
+	<message key="submission.event.proofsApproved">«{$name}» ({$username}) ha aprovat les galerades per a «{$formatName}».</message>
+	<message key="submission.overview">Vista general de la tramesa</message>
+	<message key="submission.description">Descripció</message>
+	<message key="submission.stageNotInitiated">La fase no s'ha iniciat.</message>
+	<message key="submission.documents">Documents de la tramesa</message>
+	<message key="notification.type.editorDecisionTitle">Darrera decisió de l'editor/a.</message>
+	<message key="notification.type.editorDecisionAccept">S'ha acceptat la tramesa.</message>
+	<message key="notification.type.editorDecisionExternalReview">El procés de revisió externa ha començat.</message>
+	<message key="notification.type.editorDecisionPendingRevisions">Calen revisions.</message>
+	<message key="notification.type.editorDecisionResubmit">Torna-ho a trametre per a revisió.</message>
+	<message key="notification.type.editorDecisionDecline">S'ha rebutjat la tramesa.</message>
+	<message key="notification.type.editorDecisionSendToProduction">Ha començat el procés de producció.</message>
+	<message key="notification.type.signoff">Teniu una auditoria pendent.</message>
+	<message key="notification.uploadedResponse">S'ha carregat la resposta.</message>
+	<message key="submission.authorDashboard.description">En cada fase iniciada del circuit de treball que es mostra a continuació, trobareu informació de l'estat de la fase, així com els fitxers de la tramesa associats i la correspondència associada a cada fase. Se us demanarà que carregueu un fitxer revisat en una fase concreta o que auditeu un fitxer que ja es va carregar prèviament; aquestes accions es poden completar dins de la secció de la fase especificada.</message>
+
+ 	<!-- Read/Upload/Perform Signoff -->
+ 	<message key="submission.signoff.selectFile">Seleccioneu el fitxer que voleu tancar.</message>
+ 	<message key="submission.signoff.signoffOnFile">Subscriu aquest fitxer</message>
+	<message key="submission.signoff.signedOffOnFile">S'ha tancat aquest fitxer.</message>
+	<message key="submission.signoff.noAvailableSignoffs">No teniu cap fitxer pendent de respondre.</message>
+	<message key="submission.signoff.fileResponse">Resposta del fitxer</message>
+	<message key="grid.copyediting.deleteSignoff">Dessasigna l'usuari/ària</message>
+	<message key="notification.type.editorAssignment">S'ha d'assignar un editor/a abans de començar la revisió. Afegiu un editor/a amb l'enllaç de participants anterior.</message>
+	<message key="grid.reviewAttachments.title">Fitxers adjunts del revisor/a</message>
+	<message key="submission.productionReady">Llibre disponible</message>
+	<message key="submission.review.uploadRevisionToRound">Carrega un fitxer de revisió</message>
+	<message key="log.review.reviewerAssigned">S'ha assignat a {$reviewerName} la revisió de la tramesa {$submissionId} per a la ronda de revisió {$round}.</message>
+	<message key="submission.document">Document</message>
+	<message key="submission.art">Il·lustració</message>
+	<message key="grid.action.itemWorkflow">Aneu al circuit de treball d'aquesta tramesa</message>
+	<message key="editor.review.personalMessageFromEditor">Missatge per a l'editor/a</message>
+	<message key="submission.previousAuthorMessages">Missatges previs</message>
+	<message key="notification.type.editorDecisionSendToProduction">Ha començat el procés de producció.</message>
+	<message key="notification.type.editorAssignmentProduction">S'ha d'assignar un editor/a abans de començar el procés de producció. Afegiu un editor/a de producció amb l'enllaç de participants anterior.</message>
+	<message key="notification.type.editorAssignmentEditing">S'ha d'assignar un editor/a de producció abans de començar el procés editorial. Afegiu un editor/a de producció amb l'enllaç de participants anterior.</message>
+</locale>

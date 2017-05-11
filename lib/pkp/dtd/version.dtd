@@ -1,0 +1,22 @@
+<!--
+  * dtd/version.dtd
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * DTD describing PKP application version information.
+  *
+  -->
+
+<!ELEMENT version (application, type, release, tag, date, info, package, patch*)>
+<!ELEMENT application (#PCDATA)>
+<!ELEMENT type (#PCDATA)>
+<!ELEMENT release (#PCDATA)>
+<!ELEMENT tag (#PCDATA)>
+<!ELEMENT date (#PCDATA)>
+<!ELEMENT info (#PCDATA)>
+<!ELEMENT package (#PCDATA)>
+<!ELEMENT patch (#PCDATA)>
+	<!ATTLIST patch
+		from CDATA #REQUIRED>

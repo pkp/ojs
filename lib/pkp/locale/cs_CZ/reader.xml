@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/cs_CZ/reader.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the cs_CZ (Čeština) locale.
+  * Translated by František Chmelik, frantisek.chmelik 'at' upol.cz
+  * Corrections, migration to the OCS 2.3.x by Ivo Vesely and Petr Petyovsky (petyovsky 'at' feec.vutbr.cz)
+  *
+  -->
+
+<locale name="cs_CZ" full_name="Čeština">
+	<message key="comments.anonymous">Anonymní uživatel</message>
+	<message key="comments.anonymousNamed">"{$userName}"</message>
+	<message key="comments.body">Tělo</message>
+	<message key="comments.titleRequired">Je vyžadován název komentáře.</message>
+	<message key="comments.confirmDeleteChildren">Smazáním tohoto komentáře smažete také všechny odpovědi na něj. Jste si jistý, že to chcete udělat?</message>
+	<message key="comments.delete">Smazat tento komentář</message>
+	<message key="comments.email">E-mail odesílatele</message>
+	<message key="comments.emailReply">Odpověď e-mailem</message>
+	<message key="comments.enterComment">Vložit komentář</message>
+	<message key="comments.inResponseTo">V odpovědi na <![CDATA[<a href="]]>{$url}<![CDATA[">]]>{$title}<![CDATA[</a>]]></message>
+	<message key="comments.name">Jméno odesílatele</message>
+	<message key="comments.noComments">Nebyly odeslány žádné komentáře čtenářů.</message>
+	<message key="comments.nReplies">({$num} Odpovědí)</message>
+	<message key="comments.oneReply">(1 Odpověď)</message>
+	<message key="comments.postAnonymously">Odeslat tento komentář anonymně</message>
+	<message key="comments.postReply">Odeslat odpověď</message>
+	<message key="comments.readerComments">Komentáře čtenáře</message>
+	<message key="comments.readMore">Číst více</message>
+	<message key="comments.replies">Odpovědi</message>
+	<message key="comments.title">Titul</message>
+	<message key="comments.viewAllComments">Zobrazit všechny komentáře</message>
+	<message key="reader.fullText">Full Text:</message>
+	<message key="rt.addComment">Přidat komentář</message>
+	<message key="rt.admin.configuration">Konfigurace</message>
+	<message key="rt.admin.contexts.confirmDelete">Jste si jistý, že chcete smazat tento Kontext a všechna související vyhledávání?</message>
+	<message key="rt.admin.contexts.createContext">Vytvořit kontext</message>
+	<message key="rt.admin.contexts.edit.editContext">Upravit kontext</message>
+	<message key="rt.admin.contexts.metadata">Metadata</message>
+	<message key="rt.admin.contexts.options.authorTerms">Použít jména autora jako výchozí hledané výrazy s cílem umožnit uživatelům najít další práce autora této položky (např. pro kontext "Další práce")</message>
+	<message key="rt.admin.contexts.options.citedBy">Použít jména autora jako výchozí hledané výrazy a popsat kontext jako vyhledávání citací tohoto článku.</message>
+	<message key="rt.admin.contexts.options.defineTerms"><![CDATA[Použít slovo zvýrazněné čtenářem jako výchozí vyhledávaný výraz nebo ponechat prázdné, pokud pro tuto položku nebylo nic zvoleno (např.: pro kontext "Definice termínů"). Musí být povolena možnost "Definice termínů" v <a href="{$settingsUrl}">RST Nastavení</a>, aby bylo umožněno dvojitým kliknutím na slovo otevřít tento kontext.]]></message>
+	<message key="rt.admin.contexts.options.geoTerms">Použít geografická indexační data jako výchozí termíny vyhledávání.</message>
+	<message key="rt.admin.contexts.options">Možnosti</message>
+	<message key="rt.admin.management">Správa</message>
+
+	<message key="rt.admin.sharing">Sdílení</message>
+	<message key="rt.admin.sharing.enabled">Sdílení povoleno</message>
+	<message key="rt.admin.sharing.description"><![CDATA[Abyste umožnili vašim čtenářům sdílet články, vytvořte si účet u <a href="http://www.addthis.com">addthis.com</a>, a zkopírujte/vložte kód tlačítka Sdílení níže.]]></message>
+
+	<message key="rt.admin.sharing.basic">Základní nastavení</message>
+	<message key="rt.admin.sharing.userNameLabel">AddThis.com uživatelské jméno</message>
+	<message key="rt.admin.sharing.buttonStyleLabel">Styl tlačítka</message>
+	<message key="rt.admin.sharing.dropDownMenuLabel">Použít rozevírací seznam</message>
+	<message key="rt.admin.sharing.advanced">Pokročilá nastavení (volitelné)</message>
+	<message key="rt.admin.sharing.customizationLink"><![CDATA[Viz <a href="http://support.addthis.com/customer/portal/articles/381236-custom-buttons">AddThis.com customization documentation</a> pro odkazy.]]></message>
+	<message key="rt.admin.sharing.brandLabel">Značka</message>
+	<message key="rt.admin.sharing.dropDownLabel"><![CDATA[Možnosti rozbalovacího seznamu <br /> (seznam oddělený čárkou)]]></message>
+	<message key="rt.admin.sharing.languageLabel">Jazyk</message>
+	<message key="rt.admin.sharing.logolabel">Logo</message>
+	<message key="rt.admin.sharing.logoBackgroundLabel">Pozadí loga</message>
+	<message key="rt.admin.sharing.logoColorLabel">Barva loga</message>
+
+	<message key="rt.admin.readingToolsEnabled">Nástroje pro čtení</message>
+	<message key="rt.admin.searches.confirmDelete">Jste si jistý, že chcete smazat toto vyhledávání?</message>
+	<message key="rt.admin.searches.createSearch">Vytvořit vyhledávání</message>
+	<message key="rt.admin.searches.edit.editSearch">Upravit vyhledávání</message>
+	<message key="rt.admin.selectedVersion">Související položky</message>
+	<message key="rt.admin.settings.abstract">Abstrakt (představuje abstrakt položky).</message>
+	<message key="rt.admin.settings.authorBio">O autorovi (zobrazí biografické údaje, které o sobě poskytl autor).</message>
+	<message key="rt.admin.settings.captureCite">Jak citovat položku (poskytuje bibliografické podrobnosti pro položku).</message>
+	<message key="rt.admin.settings.defineTerms">Vyhledat pojmy (umožňuje čtenáři odeslat dvojklikem jakékoliv slovo v položce do slovníku).</message>
+	<message key="rt.admin.settings.disableRelatedItems">Zakázat související položky</message>
+	<message key="rt.admin.settings.emailAuthor">Poslat email autorovi (vede k šabloně emailu s emailovou adresou autora).</message>
+	<message key="rt.admin.settings.emailOthers">Oznámit kolegovi (vede k šabloně emailu s odkazem na položku).</message>
+	<message key="rt.admin.settings.findingReferences">Najít reference</message>
+	<message key="rt.admin.settings.printerFriendly">Verze pro tisk (poskytne verzi položky optimalizovanou pro tisk).</message>
+	<message key="rt.admin.settings.supplementaryFiles">Doplňkové soubory (zobrazí seznam souborů, které autor zaslal spolu s příspěvkem).</message>
+	<message key="rt.admin.settings.viewMetadata">Metadata pro indexování (zobrazí metadata položky pro indexování dodaná autorem nebo systémem).</message>
+	<message key="rt.admin.status">Status</message>
+	<message key="rt.admin.configureSharing">Konfigurovat AddThis</message>
+	<message key="rt.admin.validateUrls.complete">Ověřování dokončeno.</message>
+	<message key="rt.admin.validateUrls.ok">OK</message>
+	<message key="rt.admin.validateUrls.urlIsInvalid">{$url} není platná.</message>
+	<message key="rt.admin.validateUrls">Zkontrolovat platnost URL adres pro nástroje pro čtení</message>
+	<message key="rt.admin.validateUrls.validate">Ověřit</message>
+	<message key="rt.admin.versions.confirmDelete">Jste si jistý, že chcete smazat tuto verzi a všechny související Kontexty a Vyhledávání?</message>
+	<message key="rt.admin.versions.confirmRestore">Jste si jistý, že chcete nevratně obnovit všechny verze do jejich výchozí podoby? Pokud ano, budete muset vybrat aktivní verzi na stránce Nastavení.</message>
+	<message key="rt.admin.versions.createVersion">Vytvořit verzi</message>
+	<message key="rt.admin.versions.edit.editVersion">Upravit verzi</message>
+	<message key="rt.admin.versions.export">Exportovat</message>
+	<message key="rt.admin.versions.importVersion">Importovat verzi</message>
+	<message key="rt.admin.versions.metadata">Metadata</message>
+	<message key="rt.admin.versions.restoreVersions">Obnovit výchozí verze</message>
+	<message key="rt.authorBio">O autorovi</message>
+	<message key="rt.captureCite.format">Citační formát</message>
+	<message key="rt.captureCite">Jak citovat položku</message>
+	<message key="rt.captureCite.online">Online</message>
+	<message key="rt.captureCite.web">Web</message>	
+	<message key="rt.colleague">Oznámit kolegovi</message>
+	<message key="rt.context.abbrev">Zkratka</message>
+	<message key="rt.context.and">AND</message>
+	<message key="rt.context.citesContextDescription">Pokud je článek indexován v Google Scholar, může být doprovázen odkazem "Citováno X", který vede k seznamu prací, které ho citují. Stejně tak zobrazí Google Scholar všechny položky citující název a autora. Abyste se dostali k online zdrojům, které jsou dostupné pouze přes vaši knihovnu, budete možná moci aktivovat pro vaši instituci odkazy pro knihovnu v nastavení Google Scholar.</message>
+	<message key="rt.context">Kontext</message>
+	<message key="rt.context.defineTermsDescription">Pokud je položka HTML soubor (spíše než PDF), zobrazí se slovo, na které poklepete, v políčku Word-to-Define. Jinak lze slova do políčka vepsat nebo nakopírovat. Více o vyhledaných zdrojích se dozvíte klinutím na O ZDROJÍCH. Tyto zdroje byly vybrány pro svou relevantnost a otevřený (volný) přístup k části nebo k celému svému obsahu.</message>
+	<message key="rt.context.description">Popis</message>
+	<message key="rt.context.order">Pořadí</message>
+	<message key="rt.contexts">Kontexty</message>
+	<message key="rt.context.searchDescription">Výrazy pro vyhledávání byly vybrány autorem(y). Čtenář je může upravit nebo smazat; dva nebo tři krátké přesné termíny nebo fráze přináší nejlepší Boolean (AND) vyhledávání. Více o vyhledaných zdrojích se dozvíte klinutím na O ZDROJÍCH. Tyto zdroje byly vybrány pro svou relevantnost a otevřený (volný) přístup k části nebo k celému svému obsahu.</message>
+	<message key="rt.context.searchTerms">Termíny vyhledávání</message>
+	<message key="rt.context.termToDefine">Slovo pro definování</message>
+	<message key="rt.context.title">Název</message>
+	<message key="rt.emailAuthor">Napsat email autorovi</message>
+	<message key="rt.email.needLogin"><![CDATA[* Vyžaduje <a target="_parent" href="{$loginUrl}">registraci</a>]]></message>
+	<message key="rt.email.sent">Vaše zpráva byla odeslána.</message>
+	<message key="rt.findingReferences">Hledání referencí</message>
+	<message key="rt.findingReferences.googleScholar">Google Scholar</message>
+	<message key="rt.findingReferences.windowsLiveAcademic">Windows Live Academic</message>
+	<message key="rt.lookUp">Vyhledat termíny</message>
+	<message key="rt.metadata.dublinCore.contributor">Přispěvatel</message>
+	<message key="rt.metadata.dublinCore.coverage">Pokrytí</message>
+	<message key="rt.metadata.dublinCore.date">Datum</message>
+	<message key="rt.metadata.dublinCore.description">Popis</message>
+	<message key="rt.metadata.dublinCore">Dublin Core</message>
+	<message key="rt.metadata.dublinCore.format">Formát</message>
+	<message key="rt.metadata.dublinCore.identifier">Identifikátor</message>
+	<message key="rt.metadata.dublinCore.language">Jazyk</message>
+	<message key="rt.metadata.dublinCore.publisher">Vydavatel</message>
+	<message key="rt.metadata.dublinCore.relation">Vztah</message>
+	<message key="rt.metadata.dublinCore.rights">Práva</message>
+	<message key="rt.metadata.dublinCore.source">Zdroj</message>
+	<message key="rt.metadata.dublinCore.subject">Předmět</message>
+	<message key="rt.metadata.dublinCore.title">Název</message>
+	<message key="rt.metadata.dublinCore.type">Typ</message>
+	<message key="rt.metadata.forThisDocument">Metadata pro tento dokument</message>
+	<message key="rt.metadata.pkp.abstract">Abstrakt</message>
+	<message key="rt.metadata.pkp.copyright">Copyright a oprávnění</message>
+	<message key="rt.metadata.pkp.coverage">Zeměpisná lokalizace, časové období, výzkumný soubor (pohlaví, věk atd.)</message>
+	<message key="rt.metadata.pkp.date">(YYYY-MM-DD)</message>
+	<message key="rt.metadata.pkp.discipline">Obor(y)</message>
+	<message key="rt.metadata.pkp.format">Formát souboru</message>
+	<message key="rt.metadata.pkp.genre"><![CDATA[Status & žánr]]></message>
+	<message key="rt.metadata.pkpItem">Položky PKP metadat</message>
+	<message key="rt.metadata.pkp.language">English=en</message>
+	<message key="rt.metadata.pkp.publisher">Organizující agentura, umístění</message>
+	<message key="rt.metadata.pkp.source">Název časopisu/konference; vol., no. (rok)</message>
+	<message key="rt.metadata.pkp.sponsors">Sponzor(ři)</message>
+	<message key="rt.metadata.pkp.subject">Klíčové slovo(a)</message>
+	<message key="rt.metadata.pkp.suppFiles">Doplň. soubory</message>
+	<message key="rt.metadata.pkp.title">Název dokumentu</message>
+	<message key="rt.metadata.pkp.type">Typ</message>
+	<message key="rt.metadata.pkp.uri">Univerzální identifikátor zdroje</message>
+	<message key="rt.printVersion">Tištěná verze</message>
+	<message key="rt.readingTools">Nástroje pro čtení</message>
+	<message key="rt.relatedItems">Související položky</message>
+	<message key="rt.reviewPolicy">Pravidla recenze</message>
+	<message key="rt.search.description">Popis</message>
+	<message key="rt.searches">Vyhledávání</message>
+	<message key="rt.search.order">Pořadí</message>
+	<message key="rt.search">Vyhledávání</message>
+	<message key="rt.search.searchPost">Odeslat data</message>
+	<message key="rt.search.searchUrl">Hledat URL</message>
+	<message key="rt.search.suggest">Navrhnout zdroj</message>
+	<message key="rt.search.title">Název</message>
+	<message key="rt.search.url">URL</message>
+	<message key="rt.suppFiles.download">Download</message>
+	<message key="rt.suppFiles">Doplňkové soubory</message>
+	<message key="rt.suppFiles.viewMetadata">Metadata pro indexaci</message>
+	<message key="rt.version.description">Popis</message>
+	<message key="rt.version.key">Klíč</message>
+	<message key="rt.version.locale">Lokalizace</message>
+	<message key="rt.versions">Sada souvisejících položek</message>
+	<message key="rt.version.title">Název</message>
+	<message key="rt.version">Verze</message>
+	<message key="rt.viewMetadata">Metadata pro indexaci</message>
+</locale>

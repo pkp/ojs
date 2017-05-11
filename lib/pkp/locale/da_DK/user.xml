@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/da_DK/user.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the da_DK (Dansk) locale.
+  *
+  -->
+
+<locale name="da_DK" full_name="Dansk">
+	<message key="user.affiliation">Tilhørsforhold</message>
+	<message key="user.affiliations">Tilhørsforhold</message>
+	<message key="user.biography">Biografierklæring</message>
+	<message key="user.biography.description">(f.eks. afdeling og rang)</message>
+	<message key="user.changeMyPassword">Rediger min adgangskode</message>
+	<message key="user.changePassword">Skift adgangskode</message>
+	<message key="user.dateLastLogin">Seneste logon</message>
+	<message key="user.dateRegistered">Registreringsdato</message>
+	<message key="user.editMyProfile">Rediger min profil</message>
+	<message key="user.email">E-mail</message>
+	<message key="user.feminine">K</message>
+	<message key="user.firstName">Fornavn</message>
+	<message key="user.gender">Køn</message>
+	<message key="user.initialsExample">Jens Peter Skov = JPS</message>
+	<message key="user.initials">Initialer</message>
+	<message key="user.interests">Bedømmelsesinteresser</message>
+	<message key="user.lastName">Efternavn</message>
+	<message key="user.login.accountDisabledWithReason">Din konto er blevet deaktiveret af følgende årsag: {$reason}</message>
+	<message key="user.login.accountDisabled">Din konto er blevet deaktiveret. Kontakt administratoren for at få flere oplysninger.</message>
+	<message key="user.login.accountNotValidated">Vi har sendt en bekræftelses-e-mail til dig på {$email}. For at aktivere din nye konto skal du følge de angivne instruktioner i e-mailen. Hvis du ikke kan se nogen e-mail, bedes du tjekke din spam-mappe.</message>
+	<message key="user.login.activate">Aktiver konto</message>
+	<message key="user.login.activated">Tak, fordi du har aktiveret din konto. Du kan nu logge på ved hjælp af de legitimationsoplysninger, du angav, da du oprettede kontoen.</message>
+	<message key="user.login.changePasswordInstructions"><![CDATA[Du skal vælge en ny adgangskode, inden du kan logge på dette websted.<br /><br />Angiv dit brugernavn samt din aktuelle og din nye adgangskode nedenfor for at ændre adgangskoden til din konto.]]></message>
+	<message key="user.login.forgotPassword">Har du glemt din adgangskode?</message>
+	<message key="user.login.loginError">Ugyldigt brugernavn eller ugyldig adgangskode. Forsøg igen.</message>
+	<message key="user.login">Log på</message>
+	<message key="user.login.lostPassword.confirmationSent">Der er sendt en bekræftelse til din e-mail-adresse. Følg instruktionerne i e-mailen for at nulstille din adgangskode.</message>
+	<message key="user.login.lostPassword.invalidHash">Det link, du har klikket på, er udløbet eller er ikke gyldigt. Forsøg at nulstille din adgangskode igen.</message>
+	<message key="user.login.lostPassword.invalidUser">Der findes ingen brugere med den angivne e-mail-adresse.</message>
+	<message key="user.login.lostPassword.passwordSent">Der er sendt en ny adgangskode til din e-mail-adresse. Du kan nu logge på webstedet med din nye adgangskode.</message>
+	<message key="user.login.registeredEmail">E-mail-adresse på registreret bruger</message>
+	<message key="user.login.resetPassword">Nulstil adgangskode</message>
+	<message key="user.logOut">Log af</message>
+	<message key="user.mailingAddress">Postadresse</message>
+	<message key="user.masculine">M</message>
+	<message key="user.middleName">Mellemnavn</message>
+	<message key="user.myAccount">Min konto</message>
+	<message key="user.name">Navn</message>
+	<message key="user.password">Adgangskode</message>
+	<message key="user.repeatPassword">Gentag adgangskode</message>
+	<message key="user.phone">Telefon</message>
+	<message key="user.profile.changePasswordInstructions">Angiv din aktuelle og din nye adgangskode nedenfor for at ændre adgangskoden til din konto.</message>
+	<message key="user.profile.editProfile">Rediger profil</message>
+	<message key="user.profile.form.emailRequired">En gyldig e-mail-adresse er påkrævet.</message>
+	<message key="user.profile.form.firstNameRequired">Et fornavn er påkrævet.</message>
+	<message key="user.profile.form.lastNameRequired">Et efternavn er påkrævet.</message>
+	<message key="user.profile.form.newPasswordRequired">Du skal angive din nye adgangskode.</message>
+	<message key="user.profile.form.oldPasswordInvalid">Den aktuelle adgangskode, du har angivet, er forkert.</message>
+	<message key="user.profile.form.openAccessNotifications">E-mail-beskeder om Open Access til udgave</message>
+	<message key="user.profile.form.passwordRequired">En adgangskode er påkrævet.</message>
+	<message key="user.profile.form.profileImage">Profilbillede</message>
+	<message key="user.profile.form.publishedNotifications">E-mail-beskeder om publicering af ny udgave</message>
+	<message key="user.profile.form.urlInvalid">Den angivne URL-adresse er ikke gyldig. Kontroller URL-adressen, og forsøg igen. (Tip: Sæt http:// foran URL-adressen).</message>
+	<message key="user.profile.form.usernameRequired">Et brugernavn er påkrævet.</message>
+	<message key="user.profile.leavePasswordBlank">Undlad at udfylde adgangskodefelterne, hvis du vil bevare den aktuelle adgangskode.</message>
+	<message key="user.profile.newPassword">Ny adgangskode</message>
+	<message key="user.profile.oldPassword">Aktuel adgangskode</message>
+	<message key="user.profile">Profil</message>
+	<message key="user.profile.publicProfile">Brugerprofil</message>
+	<message key="user.profile.repeatNewPassword">Gentag ny adgangskode</message>
+	<message key="user.register.completeForm">Udfyld denne formular for at registrere hos dette tidsskrift.</message>
+	<message key="user.register.form.emailExists">Den valgte e-mail-adresse benyttes allerede af en anden bruger.</message>
+	<message key="user.register.form.passwordsDoNotMatch">Adgangskoderne stemmer ikke overens.</message>
+	<message key="user.register.form.usernameExists">Det valgte brugernavn benyttes allerede af en anden bruger.</message>
+	<message key="user.register.passwordLengthRestriction">Adgangskoden skal bestå af mindst {$length} tegn.</message>
+	<message key="user.register.registerAs">Registrer i {$contextName} som...</message>
+	<message key="user.register">Registrer</message>
+	<message key="user.register.usernameRestriction">Brugernavnet må kun indeholde små bogstaver, tal og bindestreger/understregningstegn.</message>
+	<message key="user.role.reader">Læser</message>
+	<message key="user.role.readers">Læsere</message>
+	<message key="user.role.reviewer">Bedømmer</message>
+	<message key="user.role.reviewers">Bedømmere</message>
+	<message key="user.role.siteAdmin">Webstedsadministrator</message>
+	<message key="user.role.siteAdmins">Webstedsadministratorer</message>
+	<message key="user.roles">Roller</message>
+	<message key="user.salutation">Starthilsen</message>
+	<message key="user.sendPassword">Bekræftelse</message>
+	<message key="user.sendPassword.description">Send mig en bekræftelse via e-mail med mit brugernavn og min adgangskode</message>
+	<message key="user.signature">Signatur</message>
+	<message key="user.title">Titel</message>
+	<message key="user.url">URL-adresse</message>
+	<message key="user.userHome">Brugerstartside</message>
+	<message key="user.username">Brugernavn</message>
+	<message key="user.workingLanguages">Arbejdssprog</message>
+	<message key="user.affiliation.description">(Din institution, fx "Aarhus Universitet")</message>
+	<message key="user.authorization.accessDenied">Adgang nægtet.</message>
+	<message key="user.authorization.processAuthenticationTokenRequired">Procesgodkendelse mangler eller er ugyldig</message>
+	<message key="user.authorization.contextRequired">Du kan ikke vælge den handling uden en kontekst (presse, tidsskrift, konference osv.)</message>
+	<message key="user.authorization.loginRequired">Kræver login.</message>
+	<message key="user.authorization.privateOperation">Den handling, du forsøgte at få adgang til, er enten privat eller eksisterer ikke.</message>
+	<message key="user.authorization.restrictedSiteAccess">Du er blevet nægtet adgang. Der er i øjeblikket begrænset adgang til dette websted.</message>
+	<message key="user.authorization.roleBasedAccessDenied">Den nuværende rolle har ikke adgang til denne handling.</message>
+	<message key="user.authorization.userGroupRequired">Du skal oprette en gyldig brugergruppe for at få adgang til denne handling.</message>
+	<message key="user.gossip">Private bemærkninger</message>
+	<message key="user.profile.form.profileImageInvalid">Profilbilledets format er ugyldigt, eller også er billedet for stort. De accepterede formater er .gif, .jpg og .png, og billedet må ikke overskrive 150 x 150 pixler.</message>
+	<message key="user.other">Andet</message>
+	<message key="user.repeatPassword">Gentag adgangskode</message>
+	<message key="user.profile.form.affiliationRequired">Kræver et tilhørsforhold.</message>
+	<message key="user.register.form.emailsDoNotMatch">Felterne for e-mail-adresse stemmer ikke overens.</message>
+	<message key="user.accountInformation">Kontoinformation</message>
+	<message key="user.authorization.managerRequired">En bruger med rollen som pressechef (f.eks. presse- eller produktionsredaktør) skal indskrives, før du kan gå videre.</message>
+	<message key="user.interests.description">(Adskil interesser ved at trykke på Enter- eller komma-tasten)</message>
+	<message key="user.group">Brugergruppe</message>
+	<message key="user.hello">Hej</message>
+	<message key="user.profile.form.countryRequired">Et land er påkrævet</message>
+	<message key="user.profile.form.mailingAddressRequired">En e-mailadresse er påkrævet.</message>
+	<message key="user.profile.form.passwordSameAsOld">Din nye adgangskode er den samme som din gamle adgangskode.</message>
+	<message key="user.profile.form.usergroupRequired">En brugergruppe er påkrævet.</message>
+	<message key="user.suffix">Suffiks</message>
+	<message key="user.profile.identity">Identitet</message>
+	<message key="user.profile.contact">Kontakt</message>
+	<message key="user.profile.public">Offentlig</message>
+	<message key="user.register.form.passwordLengthRestriction">Adgangskoden skal være på mindst {$length} tegn.</message>
+	<message key="user.role.editor">Redaktør</message>
+	<message key="user.role.editors">Redaktører</message>
+	<message key="user.role.author">Forfatter</message>
+	<message key="user.role.author_s">Forfatter(e)</message>
+	<message key="user.role.authors">Forfattere</message>
+	<message key="user.orcid">ORCID iD</message>
+	<message key="user.orcid.orcidInvalid">Den ORCID iD du angav er ikke gyldig. Husk at inkludere den hele URI (e.g. "http://orcid.org/0000-0002-1825-0097").</message>
+	<message key="user.login.registerNewAccount">Registrér</message>
+	<message key="user.authorization.accessibleWorkflowStage">Du har på nuværende tidspunkt ikke adgang til dette workflow-trin.</message>
+	<message key="user.authorization.workflowStageRequired">Der blev ikke angivet et workflow-trin.</message>
+	<message key="user.authorization.pluginRequired">Der mangler at blive anvist et plug-in.</message>
+	<message key="user.login.registrationComplete">Registrering fuldført</message>
+	<message key="user.login.registrationComplete.instructions">Tak for registreringen! Hvad ønsker du at foretage dig efterfølgende?</message>
+	<message key="user.login.registrationComplete.manageSubmissions">Se indsendelser</message>
+	<message key="user.login.registrationComplete.newSubmission">Foretag en ny indsendelse</message>
+	<message key="user.login.registrationComplete.continueBrowsing">Fortsæt browsing</message>
+	<message key="user.login.registrationPendingValidation">Registrering afventer bekræftelse</message>
+	<message key="user.login.resetPasswordInstructions">Registrér din kontos e-mailadresse nedenfor. Du vil efterfølgende modtage en e-mail med en vejledning i, hvordan du nulstiller dit password.</message>
+	<message key="user.register.form.userGroupRequired">Du skal vælge mindst én rolle.</message>
+	<message key="user.register.registrationCompleted"><![CDATA[Registreringen er gennemført. <a href="{$profileUrl}">Klik her</a> for at færdigredigere din profil.]]></message>
+	<message key="user.role.copyeditor">Manuskriptredaktør</message>
+	<message key="user.role.copyeditors">Manuskriptredaktører</message>
+	<message key="user.role.proofreader">Korrekturlæser</message>
+	<message key="user.role.proofreaders">Korrekturlæsere</message>
+	<message key="user.role.layoutEditor">Layoutredaktør</message>
+	<message key="user.role.layoutEditors">Layoutredaktører</message>
+	<message key="user.logOutAs">Log ud som</message>
+</locale>

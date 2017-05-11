@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/fr_CA/admin.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the fr_CA (Français (Canada)) locale.
+  *
+  -->
+
+<locale name="fr_CA" full_name="Français (Canada)">
+	<message key="admin.systemInfo.settingName">Fixation du nom</message>
+	<message key="admin.systemInfo.settingValue">Fixation de la valeur</message>
+	<message key="admin.adminFunctions">Fonctions administratives</message>
+	<message key="admin.auth.confirmDelete">Êtes-vous certain de vouloir supprimer définitivement cette source d'authentification?</message>
+	<message key="admin.auth.create">Créer une source d'authentification</message>
+	<message key="admin.auth.noneCreated">Aucune source d'authentification définie.</message>
+	<message key="admin.authSources">Sources d'authentification</message>
+	<message key="admin.clearDataCache">Vider les caches de données</message>
+	<message key="admin.clearTemplateCache">Vider le cache de modèles</message>
+	<message key="admin.configFileUpdatedInstructions"><![CDATA[Votre fichier de configuration a été mis à jour avec succès. Noter que si votre site ne fonctionne plus correctement, vous aurez peut être à réparer manuellement votre configuration en modifiant directement le <tt>config.inc.php</tt>.]]></message>
+	<message key="admin.confirmClearTemplateCache">Êtes-vous sûr de vouloir effacer le cache des modèles compilés?</message>
+	<message key="admin.confirmExpireSessions">Êtes-vous sûr de vouloir fermer toutes les sessions utilisateurs? Tous les utilisateurs actuellement connectés devront se reconnecter (vous y compris).</message>
+	<message key="admin.contentsOfConfigFile">Contenu du fichier de configuration</message>
+	<message key="admin.currentVersion">Version actuelle</message>
+	<message key="admin.dateInstalled">Date d'installation</message>
+	<message key="admin.displayConfigFileInstructions"><![CDATA[Le contenu de votre configuration mise à jour est affiché ci-dessous. Pour appliquer les modifications affectées à cette configuration, vous devez ouvrir le <tt>config.inc.php</tt> dans un éditeur de texte adéquat et remplacer son contenu par le contenu de la zone de texte ci-dessous.]]></message>
+	<message key="admin.displayNewSystemConfig">Afficher la nouvelle configuration</message>
+	<message key="admin.expireSessions">Fermer les sessions utilisateurs</message>
+	<message key="admin.languages.confirmReload">Êtes-vous sûr de vouloir réinitialiser cette langue? Ceci effacera toute donnée spécifique à cette langue tels que les modèles de courriel personnalisés.</message>
+	<message key="admin.languages.installedLocales">Langues installées</message>
+	<message key="admin.languages.installLanguages">Gérer les langues</message>
+	<message key="admin.languages.installLocales">Installer</message>
+	<message key="admin.languages.installNewLocales">Installer de nouvelles langues</message>
+	<message key="admin.languages.languageSettings">Paramètres de langue</message>
+	<message key="admin.languages.noLocalesAvailable">Aucune langue supplémentaire disponible.</message>
+	<message key="admin.languages.reload">Recharger la langue</message>
+	<message key="admin.languages.uninstall">Désinstaller la langue</message>
+	<message key="admin.phpInfo">Information détaillée concernant PHP</message>
+	<message key="admin.scheduledTask.startTime">Début du processus.</message>
+	<message key="admin.scheduledTask.stopTime">Arrêt du processus.</message>
+	<message key="admin.scheduledTask.noLog">La tâche n'a produit aucun journal d'événement.</message>
+	<message key="admin.scheduledTask.reviewReminder">Rappel d'examen</message>
+	<message key="admin.scheduledTask.subscriptionExpiryReminder">Rappel d'expiration d'abonnement</message>
+	<message key="admin.server.apacheVersion">Version Apache</message>
+	<message key="admin.server.dbDriver">Pilote de base de données</message>
+	<message key="admin.server.dbVersion">Version du serveur de bases de données</message>
+	<message key="admin.serverInformationDescription"><![CDATA[Versions du système d'exploitation de base et du logiciel serveur. Cliquer sur <span class="highlight">Information détaillée concernant PHP</span> pour avoir plus de détails sur la configuration PHP de ce serveur.]]></message>
+	<message key="admin.serverInformation">Information sur le serveur</message>
+	<message key="admin.server.phpVersion">Version PHP</message>
+	<message key="admin.server.platform">Système d'exploitation</message>
+	<message key="admin.settings.aboutDescription">Description "À propos du site"</message>
+	<message key="admin.settings.contactEmail">Courriel du contact principal</message>
+	<message key="admin.settings.contactName">Nom du contact principal</message>
+	<message key="admin.settings.form.contactEmailRequired">Le courriel de la personne-ressource principale est obligatoire.</message>
+	<message key="admin.settings.form.contactNameRequired">Le nom du contact principal est obligatoire.</message>
+	<message key="admin.settings.form.minPasswordLengthRequired">Vous devez entrer un mot de passe d'au moins 4 caractères.</message>
+	<message key="admin.settings.form.titleRequired">Le titre est obligatoire.</message>
+	<message key="admin.settings.defaultMetricDescription">
+
+
+
+		*Votre installation est configurée pour enregistrer plus d'une métrique d'utilisation. Les statistiques d'utilisation seront affichées dans plusieurs contextes.
+		Il y a des cas où une seule statistique d'utilisation doit être utilisée, par exemple pour afficher une liste ordonnée des soumissions les plus utilisées ou pour classer
+		Les résultats de la recherche. Sélectionnez l'une des métriques configurées par défaut.
+	</message>
+	<message key="admin.settings.homeHeaderImage.altText">Logo du site</message>
+	<message key="admin.settings.homeHeaderImageInvalid">Le format de l'image du logo du site est invalide. Seuls les formats .gif, .jpg ou .png sont acceptés.</message>
+	<message key="admin.settings.introduction">Introduction</message>
+	<message key="admin.settings.minPasswordLength">Longueur minimum du mot de passe</message>
+	<message key="admin.settings.passwordCharacters">caractères</message>
+	<message key="admin.settings.siteLanguage">Langue du site</message>
+	<message key="admin.settings.siteStyleSheetInvalid">Format de la feuille de style du site invalide. Le format accepté est .css.</message>
+	<message key="admin.settings.siteStyleSheet">Feuille de style du site</message>
+	<message key="admin.settings.siteLogo">Logo du site</message>
+	<message key="admin.settings.siteTitle">Titre du site</message>
+	<message key="admin.siteAdmin">Administration du site</message>
+	<message key="admin.siteManagement">Gestion du site</message>
+	<message key="admin.siteSettings">Paramètres du site</message>
+	<message key="admin.systemConfigFileReadError"><![CDATA[Le fichier de configuration <tt>config.inc.php</tt> n'existe pas, n'est pas lisible, ou n'est pas valide.]]></message>
+	<message key="admin.systemInformation">Information sur le système</message>
+	<message key="admin.versionBuild">Assemblage</message>
+	<message key="admin.version.checkForUpdates">Rechercher les mises à jour</message>
+	<message key="admin.version.downloadPackage">Télécharger</message>
+	<message key="admin.version.downloadPatch">Télécharger un correctif</message>
+	<message key="admin.versionHistory">Historique de version</message>
+	<message key="admin.version.latest">Dernière version</message>
+	<message key="admin.versionMajor">Majeure</message>
+	<message key="admin.versionMinor">Mineure</message>
+	<message key="admin.version.moreInfo">Pour en savoir plus</message>
+	<message key="admin.versionRevision">Révision</message>
+	<message key="admin.version.updateAvailable">Une mise à jour est disponible</message>
+	<message key="admin.version.upToDate">Votre système est à jour</message>
+	<message key="admin.version">Version</message>
+
+
+
+
+
+
+
+
+
+	<message key="admin.copyAccessLogFileTool.usage">Copier le(s) fichier(s) journal(aux) d'accès Apache, en filtrant les entrées liées à cette installation, vers le répertoire de fichiers actuel, à l'intérieur du répertoire UsageStatsPlugin stage. Doit être exécuté par un utilisateur ayant suffisamment de privilèges pour lire les fichiers journaux d'accès Apache.
+
+Cet outil ne copiera que les fichiers qui ne sont pas déjà dans les répertoires chargeurs usageStats file/n (étape, traitement, archive, rejet).
+
+Usage: {$scriptName} path/to/apache/log/file.log
+Usage (traitement de tous les fichiers dans le répertoire): {$scriptName} path/to/apache/directory</message>
+	<message key="admin.copyAccessLogFileTool.error.creatingFolder">Erreur: le dossier temporaire {$tmpDir} ne peut être créé.</message>
+	<message key="admin.copyAccessLogFileTool.error.acessingFile">Erreur: Le fichier {$filePath} n'existe pas ou n'est pas accessible.</message>
+	<message key="admin.copyAccessLogFileTool.error.copyingFile">Erreur: vous ne pouvez pas copier {$filePath} dans {$tmpFilePath}</message>
+	<message key="admin.copyAccessLogFileTool.error.deletingFile">Erreur: vous ne pouvez pas effacer le fichier {$tmpFilePath}</message>
+	<message key="admin.copyAccessLogFileTool.warning.fileAlreadyExists">Attention: le fichier {$filePath} existe déjà dans le répertoire des statistiques d'utilisation.</message>
+	<message key="admin.copyAccessLogFileTool.success">Succès: {$filePath} dans {$destinationPath}</message>
+	<message key="admin.languages.download">Télécharger le paramètre régional</message>
+	<message key="admin.languages.downloadLocales">Télécharger les paramètres régionaux</message>
+	<message key="admin.languages.download.cannotOpen">Ne peut pas ouvrir le descripteur de langue du site Web PKP</message>
+	<message key="admin.languages.download.cannotModifyRegistry">Ne peut pas ajouter le nouveau paramètre régional au fichier de registre du paramètre régional, normalement "registry/locales.xml".</message>
+	<message key="admin.languages.cantDisable">Ce paramètre régional est la langue principale du site. Vous ne pouvez pas le désactiver avant d'avoir choisi un autre paramètre régional principal.</message>
+	<message key="admin.languages.availableLocales">Paramètres régionaux disponibles</message>
+	<message key="admin.languages.installLocale">Installer le paramètre régional</message>
+	<message key="admin.languages.noLocalesToDownload">Il n'y a pas de paramètre régional disponible pour l'installation.</message>
+	<message key="admin.scheduledTask">Tâche programmée</message>
+	<message key="admin.settings">Paramètres</message>
+	<message key="admin.settings.defaultMetricDescription">Votre installation a été configurée pour enregistrer plus d'une mesure d'utilisation. Les statistiques d'utilisation seront affichées dans plusieurs contextes.
+
+Vous devez parfois utiliser une seule statistique d'utilisation pour, par exemple, afficher une liste ordonnée des soumissions les plus utilisées ou classer les résultats des recherches. Veuillez choisir l'une des mesures configurées à titre de mesure par défaut.</message>
+	<message key="admin.settings.siteTheme">Thème du site</message>
+	<message key="admin.siteSetup">Réglage du site</message>
+	<message key="admin.fileLoader.wrongBasePathLocation">Le chemin d'accès de base {$path} doit se trouver à l'intérieur du répertoire des fichiers publics.</message>
+	<message key="admin.fileLoader.pathNotAccessible">Le dossier {$path} n'est pas un répertoire ou ne peut être lu.</message>
+	<message key="admin.fileLoader.moveFileFailed">Le fichier {$filename} ne peut être déplacé de {$currentFilePath} à {$destinationPath}</message>
+	<message key="admin.fileLoader.fileProcessed">Le fichier {$filename} a été traité et archivé.</message>
+	<message key="admin.fileLoader.emailSubject">Chargeur de fichier</message>
+	<message key="admin.scheduledTask.downloadLog">Votre installation de {$softwareName} a complété l'exécution de cette tâche. Vous pouvez télécharger le journal d'exécution ici: {$url}</message>
+	<message key="admin.scheduledTask.confirmClearLogs">Êtes-vous certain de vouloir supprimer le journal d'exécution des tâches planifiées ?</message>
+	<message key="admin.scheduledTask.clearLogs">Supprimer le journal d'exécution des tâches planifiées</message>
+	<message key="admin.error.utilExecutionProblem">L'exécution de "{$utilPath}" s'est terminée avec l'erreur suivante: {$output}</message>
+	<message key="admin.error.executingUtil">Erreur: impossible de lancer "{$utilPath}". Veuillez vérifier la configuration de {$utilVar} dans le fichier config.inc.php</message>
+</locale>

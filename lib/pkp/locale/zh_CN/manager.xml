@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/zh_CN/manager.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (English) locale.
+  *
+  -->
+
+<locale name="zh_CN" full_name="简体中文">
+	<message key="manager.announcements">公告</message>
+	<message key="manager.announcements.confirmDelete">您确定要永久删除此公告?</message>
+	<message key="manager.announcements.create">创建新的公告</message>
+	<message key="manager.announcements.createTitle">创建</message>
+	<message key="manager.announcements.dateExpire">到期</message>
+	<message key="manager.announcements.edit">编辑公告</message>
+	<message key="manager.announcements.editTitle">编辑</message>
+	<message key="manager.announcements.form.dateExpireDayIncompleteDate">根据到期日期请选择一个年和（或）月份.</message>
+	<message key="manager.announcements.form.dateExpire">到期日期</message>
+	<message key="manager.announcements.form.dateExpireInstructions">在这个日期之前公告将正常显示给读者，若是留空的公告的显示没有限期..</message>
+	<message key="manager.announcements.form.dateExpireMonthIncompleteDate">根据到期月份请选择一个年和（或）日.</message>
+	<message key="manager.announcements.form.dateExpireValid">请选择一个有效的公告期满之日.</message>
+	<message key="manager.announcements.form.dateExpireYearIncompleteDate">根据到期日年选择一个月份和（或）日.</message>
+	<message key="manager.announcements.form.description">描述</message>
+	<message key="manager.announcements.form.descriptionInstructions">公告的全文.</message>
+	<message key="manager.announcements.form.descriptionRequired">公告的描述是必须的.</message>
+	<message key="manager.announcements.form.descriptionShortInstructions">简要的说明出现在公告的标题下.</message>
+	<message key="manager.announcements.form.descriptionShortRequired">一个简短的公告说明是必须的.</message>
+	<message key="manager.announcements.form.descriptionShort">简短的描述</message>
+	<message key="manager.announcements.form.saveAndCreateAnother">保存并创建其他的</message>
+	<message key="manager.announcements.form.titleRequired">公告标题是必须的.</message>
+	<message key="manager.announcements.form.title">标题</message>
+	<message key="manager.announcements.form.typeId">类别</message>
+	<message key="manager.announcements.form.typeIdValid">请选择一个有效的公告类别.</message>
+	<message key="manager.announcements.noneCreated">没有公告已创建.</message>
+	<message key="manager.announcements.title">标题</message>
+	<message key="manager.announcements.type">类别</message>
+	<message key="manager.announcementTypes">公告类别</message>
+	<message key="manager.announcementTypes.confirmDelete">警告! 所有相关公告类别的公告都将被删除.您确认删除这个公告类别并继续吗?</message>
+	<message key="manager.announcementTypes.create">创建公告类别</message>
+	<message key="manager.announcementTypes.createTitle">创建</message>
+	<message key="manager.announcementTypes.edit">编辑公告类别</message>
+	<message key="manager.announcementTypes.editTitle">编辑</message>
+	<message key="manager.announcementTypes.form.saveAndCreateAnother">保存并创建其他</message>
+	<message key="manager.announcementTypes.form.typeNameExists">具有此名称的公告类别已经存在.</message>
+	<message key="manager.announcementTypes.form.typeName">名称</message>
+	<message key="manager.announcementTypes.form.typeNameRequired">一个公告类别是必须的.</message>
+	<message key="manager.announcementTypes.noneCreated">没有公告类别已经创建.</message>
+	<message key="manager.announcementTypes.typeName">公告类别</message>
+	<message key="manager.emails.confirmDelete">你确定要删除此电子邮件范本?</message>
+	<message key="manager.emails.confirmReset">你确定要以默认值重置此电子邮件模板?</message>
+	<message key="manager.emails.createEmail">创建邮件</message>
+	<message key="manager.emails.disable">禁用</message>
+	<message key="manager.emails.editEmail">编辑电子邮件</message>
+	<message key="manager.emails.editTestExample">编辑电子邮件测试例子</message>
+	<message key="manager.emails.emailKey">电子邮件键</message>
+	<message key="manager.emails.emailKeyExists">一个给定的电子邮件键已经存在，电子邮件键必须是唯一的.</message>
+	<message key="manager.emails.emailTemplate">电子邮件模板</message>
+	<message key="manager.emails.emailTemplates">电子邮件模板</message>
+	<message key="manager.emails.enabled">启用此电子邮件模板</message>
+	<message key="manager.emails.enable">启用</message>
+	<message key="manager.emails.form.emailKeyRequired">一个唯一的电子邮件键是必须的.</message>
+	<message key="manager.emails.form.bodyRequired">这个电子邮件的内容是必须的.</message>
+	<message key="manager.emails.form.subjectRequired">这个电子邮件的主题是必须的.</message>
+	<message key="manager.emails">编写电子邮件</message>
+	<message key="manager.emails.resetAll">重置所有模板</message>
+	<message key="manager.emails.reset">重置</message>
+	<message key="manager.emails.resetToDefault">重置到默认</message>
+	<message key="manager.filesBrowser">文件浏览</message>
+	<message key="manager.files.confirmDelete">删除这个文件或者目录？请注意要删除的目录是否为空.</message>
+	<message key="manager.files.createDir">创建目录</message>
+	<message key="manager.files.emptyDir">这个目录下没有找到文件.</message>
+	<message key="manager.files.indexOfDir">目录{$dir} 索引</message>
+	<message key="manager.files.parentDir">父目录</message>
+	<message key="manager.files.uploadedFiles">已经上传的文件</message>
+	<message key="manager.files.uploadFile">上传文件</message>
+	<message key="manager.groups.confirmDelete">您确认要删除这个群组?</message>
+	<message key="manager.groups.createTitle">创建标题</message>
+	<message key="manager.groups.editTitle">编辑标题</message>
+	<message key="manager.groups.form.groupTitleRequired">群组标题是必须的.</message>
+	<message key="manager.groups.membership.addMember">添加成员</message>
+	<message key="manager.groups.membership.confirmDelete">你确定要删除此组成员?</message>
+	<message key="manager.groups.membership">会籍</message>
+	<message key="manager.groups.membership.noneCreated">这个群组没有会员.</message>
+	<message key="manager.groups.membership.noUsers">没有用户被发现.</message>
+	<message key="manager.groups.title">标题</message>
+	<message key="manager.importExport">导入／导出 数据</message>
+	<message key="manager.languages.alternateLocaleInstructions">这个系统可以选择性地允许某些重要信息，以额外的两个语言进行输入。要使用这个功能，请选择一个或两个额外的语系，并从下面列出的选项进行选择。</message>
+	<message key="manager.languages.supportedLocalesInstructions">选择支持本站的所有语系，可透过一个出现在每个页面上的语言选单来加以选择。只有在选择了两个语系以上的时候，这个选单才会显示出来。</message>
+	<message key="manager.payment.timestamp">时间戳</message>
+	<message key="manager.people.authSource">验证源</message>
+	<message key="manager.people.confirmUnenroll">取消注册这个用户?</message>
+	<message key="manager.people.createUser">创建新的用户</message>
+	<message key="manager.people.createUserGeneratePassword">生成一个随机密码.</message>
+	<message key="manager.people.createUserSendNotify">发送给用户一个包含用户名和密码的欢迎电子邮件.</message>
+	<message key="manager.people.disable">禁止</message>
+	<message key="manager.people.doNotEnroll">没有角色</message>
+	<message key="manager.people.editProfile">编辑帐户信息</message>
+	<message key="manager.people.editUser">编辑用户</message>
+	<message key="manager.people.emailUsers.emailSelectedUsers">发送电子邮件给选择的用户</message>
+	<message key="manager.people.emailUsers.emailUsersEnrolledAs">发送电子邮件以注册为</message>
+	<message key="manager.people.emailUsers">发送电子邮件给用户</message>
+	<message key="manager.people.emailUsers.selectLocale">选择一个语言环境</message>
+	<message key="manager.people.emailUsers.selectUsers">通过点选他们名字边上的框，来确定您要发送的电子邮件的用户.</message>
+	<message key="manager.people.enable">激活</message>
+	<message key="manager.people.enroll">注册用户</message>
+	<message key="manager.people.enrollment">注册</message>
+	<message key="manager.people.enrollSelected">注册选择的用户</message>
+	<message key="manager.people.enrollSyncRole">同步角色</message>
+	<message key="manager.people.enrollSync">同步注册</message>
+	<message key="manager.people.enrollUserAsDescription">用户可以被指派，或者从角色中删除.</message>
+	<message key="manager.people.enrollUserAs">注册用户为</message>
+	<message key="manager.people.invalidUser">抱歉，请求的用户不存在.</message>
+	<message key="manager.people.mergeUser">合并用户</message>
+	<message key="manager.people.mergeUsers.confirm">您确认合并帐户名为 "{$oldUsername}" 到帐户名为 "{$newUsername}"? 帐户名为 "{$oldUsername}" 将不再存在，这个操作不可恢复.</message>
+	<message key="manager.people.mergeUsers">合并用户</message>
+	<message key="manager.people.mustChooseRole">请在点击“注册用户”之前选择一个在页面顶部的角色.</message>
+	<message key="manager.people.mustProvideName">请首先提供一个姓氏给用户.</message>
+	<message key="manager.people.noMatchingUsers">没有符合的用户.</message>
+	<message key="manager.people.noneEnrolled">没有注册的用户.</message>
+	<message key="manager.people">成员</message>
+	<message key="manager.people.remove">删除</message>
+	<message key="manager.people.saveAndCreateAnotherUser">保存并创建其他</message>
+	<message key="manager.people.signInAs">登录为</message>
+	<message key="manager.people.signInAsUser">登录为用户</message>
+	<message key="manager.people.syncUsers">同步用户注册</message>
+	<message key="manager.people.unenroll">取消注册</message>
+	<message key="manager.people.userCreatedSuccessfully">用户成功创建.</message>
+	<message key="manager.people.userMustChangePassword">要求用户在下一次登入的时候更改密码.</message>
+	<message key="manager.plugins.action">活动:</message>
+	<message key="manager.plugins.disable">禁止</message>
+	<message key="manager.plugins.enable">激活</message>
+	<message key="manager.plugins.pluginManagement">插件管理</message>
+	<message key="manager.plugins.sitePlugin">这是整个网站的插件。只有网站管理员可以管理此插件.</message>
+	<message key="manager.plugins">系统插件</message>
+	<message key="manager.readingTools">阅读工具</message>
+	<message key="manager.roles">角色</message>
+	<message key="manager.setup.homeHeaderImageInvalid">无效的首页头部图片格式或者上传失败，有效的格式有 .gif, .jpg, or .png.</message>
+	<message key="manager.setup.homepageImageInvalid">无效的首页图片格式或者上传失败，有效的格式有 .gif, .jpg, or .png.</message>
+	<message key="manager.setup.homeTitleImageInvalid">无效的首页头部标题图片格式或者上传失败，有效的格式有 .gif, .jpg, or .png.</message>
+	<message key="manager.setup.layout.unselected">没有选择的</message>
+	<message key="manager.setup.loggingAndAuditing">日志记录与审计</message>
+	<message key="manager.setup.pageHeaderLogoImageInvalid">无效的页面头部Logo图片格式或者上传失败，有效的格式有 .gif, .jpg, or .png.</message>
+	<message key="manager.setup.selectOne">选择</message>
+	<message key="manager.statistics"><![CDATA[状态 &amp; 报告]]></message>
+	<message key="manager.statistics.statistics.count.value">{$count} ({$percentage}%)</message>
+	<message key="manager.statistics.statistics.totalNewValue">{$numTotal} ({$numNew} new)</message>
+	<message key="manager.users">用户</message>
+	<message key="plugins.categories.auth">验证插件</message>
+	<message key="plugins.categories.blocks">单元插件</message>
+	<message key="plugins.categories.blocks.description">单元插件是可插入的UI组件，例如各种边栏工具.</message>
+	<message key="plugins.categories.citationFormats">引证格式插件</message>
+	<message key="plugins.categories.gateways.description">网关插件提供实时数据到外部系统.</message>
+	<message key="plugins.categories.gateways">网关插件</message>
+	<message key="plugins.categories.generic">通用插件</message>
+	<message key="plugins.categories.importexport.description">导入/导出插件可以用来与其他系统传输内容.</message>
+	<message key="plugins.categories.importexport">导入／导出 插件</message>
+	<message key="plugins.categories.paymethod.description">支付插件落实处理各种在线支付流程.</message>
+	<message key="plugins.categories.paymethod">支付插件</message>
+	<message key="plugins.categories.reports.description">报告插件是用来实现各种形式的报告和数据提取.</message>
+	<message key="plugins.categories.reports">报告插件</message>
+	<message key="plugins.categories.themes.description">主题插件用户更改系统显示样式.</message>
+	<message key="plugins.categories.themes">主题插件</message>
+	<message key="manager.reviewerSearch.searchByName">使用名字检索审稿人</message>
+	<message key="manager.reviewerSearch.doneAmount">已完成审阅的数量</message>
+	<message key="manager.reviewerSearch.avgAmount">同行评议的平均天数</message>
+	<message key="manager.reviewerSearch.lastAmount">自从最后一次审阅的天数</message>
+	<message key="manager.reviewerSearch.activeAmount">当前正在审阅的数量</message>
+	<message key="manager.reviewerSearch.interests">审阅兴趣</message>
+	<message key="manager.setup.citationAssistant">引文标记助理</message>
+	<message key="manager.setup.citationFilterParser">引文提取</message>
+	<message key="manager.setup.citationFilterLookup">引文检查</message>
+	<message key="manager.setup.citationOutput">引文输出</message>
+	<message key="manager.setup.errorDeletingItem">在删除这个项目过程中发生了一个错误</message>
+	<message key="manager.setup.filter.grid.errorDeletingFilter">当删除这个过滤器的时候发生了一个错误，请将其作为一个BUG报告给我们。</message>
+	<message key="manager.setup.filter.grid.filterDisplayName">连接器</message>
+	<message key="manager.setup.filter.grid.filterSettings">注册信息与连接器设置</message>
+	<message key="manager.setup.filter.grid.filterTemplateRequired">请在下拉菜单里选择一个转换</message>
+	<message key="manager.setup.filter.grid.confirmDelete">您确认要删除{$filterName}过滤器吗？</message>
+	<message key="manager.setup.filter.lookup.grid.title">引文数据库连接器</message>
+	<message key="manager.setup.filter.noMoreTemplates">所有可用的转换已经被添加，请点击取消返回到设置页面</message>
+	<message key="manager.setup.filter.parser.grid.descriptionTemplate">请选择一个引文解析器</message>
+	<message key="manager.setup.filter.pleaseSelect">请选择...</message>
+	<message key="manager.setup.filter.lookup.grid.descriptionConfirm">您已经选择添加到 {$filterDisplayName}数据库，请点击“OK”确认</message>
+	<message key="manager.setup.filter.lookup.grid.descriptionTemplate">请选择一个查找数据库</message>
+	<message key="manager.setup.filter.lookup.grid.loadMessage">请等待引文数据库配置网格加载成功...</message>
+	<message key="manager.setup.filter.parser.grid.descriptionConfirm">您已经选择添加 {$filterDisplayName} 解析器，请点击“OK”确认</message>
+	<message key="manager.setup.filter.parser.grid.loadMessage">请等待引文解析器配置已加载...</message>
+	<message key="manager.setup.filter.parser.grid.title">引文提取服务</message>
+	<message key="manager.announcements.datePublish">已出版</message>
+	<message key="manager.emails.addEmail">添加电子邮件模版</message>
+	<message key="manager.emails.details">模板详细</message>
+	<message key="manager.reviewerSearch.searchByName.short">根据名字检索</message>
+	<message key="manager.emails.data">模板信息数据</message>
+	<message key="manager.emails.disable.message">你是要禁用此电子邮件模板。如果有使用此模板的系统进程，他们不会用它了。你要确认此操作？</message>
+	<message key="manager.emails.enable.message">你是即将启用此电子邮件。你要确认此操作？</message>
+	<message key="manager.emails.resetAll.message">如果您重置所有模板，所有的电子邮件模板的修改都将丢失。你要确认此操作？</message>
+	<message key="manager.emails.reset.message">如果重置这个模板，所有的消息数据将被重置为其默认值，失去了所有的修改。你要确认此操作？</message>
+	<message key="manager.reviewerSearch.form.interests.instructions">输入审稿兴趣，以逗号分隔...</message>
+	<message key="manager.setup.layout.blockManagement">边栏管理</message>
+	<message key="plugins.categories.metadata">元数据插件</message>
+	<message key="plugins.categories.citationLookup">引文数据库连接器插件</message>
+	<message key="plugins.categories.citationOutput">引文输出插件</message>
+	<message key="manager.masthead.title">职务名称</message>
+	<message key="plugins.categories.citationParser">引文提取插件</message>
+	<message key="plugins.categories.citationParser.description">引提取插件提取字段级数据（如作者，标题等）</message>
+	<message key="manager.reviewerSearch.form.instructions">使用下表来设定您希望用来查询术语的最大值。此表已预先填充了这些领域的计算平均值。</message>
+	<message key="manager.setup.citationFilterParserDescription"><![CDATA[<p>To find and check citations in citation databases they first have to be split into machine readable metadata: title, publisher, publication date, etc. must all be extracted from the original citation text provided by the author. Connectors to external web services can assist in this process. One or several connectors can be added by clicking on the "Add Item" button below. Some of these connectors may need to be configured; you will be prompted if this is the case.</p>
+		<p>You can edit or delete an existing Connector by clicking the gear icon next to it.</p>]]></message>
+	<message key="manager.setup.citationFilterLookupDescription"><![CDATA[<p>您必须还要启动和配置同外部引用数据库的连接。这可以帮助您发现作者引用中的错误或添加电子出版或存档所要求的其他信息（如 DOIs 或PubMed IDs）。</p>
+		<p>我们向您提供多个外部数据库的连接，通过这些数据库您可以搜寻相关引用。其中某些数据库要求注册或输入配置信息。有关如何进行注册的详细信息，请参照数据库的公共网站。您可以通过点击下面的“新增项目”按钮添加一个或多个数据库。</p>
+		<p>您可以点击其旁边的齿轮形状按钮来对已有的外部数据库连接进行编辑或删除。</p>
+		<p><strong>注释：</strong> 为了保证引用检查过程及时有效地完成， <tt>引用_检查_最大值_进程</tt> 您配置文件中的导则必须设置成合理值。更多信息请参阅<tt>config.inc.php</tt>中的常规设置部分。</p>]]></message>
+	<message key="manager.setup.citationOutputStyleDescription">选择您出版提交中使用的引用样式。引用标记助理工具帮您将作者的引用版本和您从XML中生成的版本进行对比，如此您可以轻而易举地发现错误：</message>
+	<message key="manager.setup.filter.lookup.grid.description.iSBNdb"><![CDATA[<p>该过滤器连接到<a href="http://isbndb.com/" target="_blank">ISBNdb.com</a> 书和ISBN数据库。</p>
+	<p>ISBNdb API 密匙为强制性的。有关生成密匙的信息，请参阅<a href="http://isbndb.com/api/v1/docs/keys" target="_blank">在线文档</a>.</p>]]></message>
+	<message key="manager.setup.filter.lookup.grid.description.crossRef"><![CDATA[<p>该文件连接到CrossRef 引用数据库，采用CrossRef的 <a href="http://www.crossref.org/02publishers/openurl_info.html" target="_blank">OpenURL 查询界面</a>.</p>
+	<p>您可以使用您的CrossRef系统账户，或注册一个CrossRef有效电子信箱来使用该过滤器<a]]></message>
+	<message key="manager.setup.filter.lookup.grid.description.pubMed"><![CDATA[<p>该过滤器连接到PubMed<a href="http://www.ncbi.nlm.nih.gov/gquery/gquery.fcgi" target="_blank">Entrez</a>的 跨数据库搜索引擎。</p>
+	<p>注册邮箱不是强制性的，但如果您碰到连接问题的时候会需要它。更多信息请参阅<a href="http://www.be-md.ncbi.nlm.nih.gov/bookshelf/br.fcgi?book=helpeutils&part=chapter2#chapter2.Usage_Guidelines_and_Requiremen" target="_blank">Entrez文档中的</a>使用准则和要求部分。</p>]]></message>
+	<message key="manager.setup.filter.lookup.grid.description.worldCat"><![CDATA[<p>该过滤器连接到OCLC服务上<a href="http://www.worldcat.org/affiliate/webservices/xisbn/app.jsp" target="_blank">xISBN</a> and <a href="http://www.worldcat.org/" target="_blank">Worldcat</a> (optional).</p>
+	<p>如果您有 Worldcat <a href="http://oclc.org/developer/develop/web-services.html" target="_blank">API key</a> 您可以通过输入下列密匙来连接到Worldcat。</p>]]></message>
+	<message key="manager.setup.filter.parser.grid.description.freeCite"><![CDATA[<p>该提取过滤器连接到<a href="http://freecite.library.brown.edu/" target="_blank">FreeCite</a> web服务上。</p>]]></message>
+	<message key="manager.setup.filter.parser.grid.description.paraCite"><![CDATA[<p>该提取过滤器使用 <a href="http://paracite.eprints.org/developers/" target="_blank">ParaTools</a> Perl 模块来提供 <a href="http://paracite.eprints.org" target="_blank">ParaCite</a> 引文分析功能。为了使其恰当运作，您必须安装Perl, 和<a href="http://search.cpan.org/~mjewell/Biblio-Citation-Parser-1.10/" target="_blank">Biblio::Citation::Parser</a> 和 <a href="http://search.cpan.org/~sburke/Text-Unidecode-0.04/" target="_blank">Text::Unidecode</a> CPAN 模块。您必须还要对您配置文件中的<tt>perl</tt>导则进行配置。该导则可以在<tt>config.inc.php</tt>外部指令部分中找到。</p>
+	<p>您还可以选择使用哪种分析模块。您可以在标准， <a href="http://search.cpan.org/~mjewell/Biblio-Citation-Parser-1.10/lib/Biblio/Citation/Parser/Jiao.pm" target="_blank">Jiao</a>, 和 <a href="http://search.cpan.org/~mjewell/Biblio-Citation-Parser-1.10/lib/Biblio/Citation/Parser/Citebase.pm" target="_blank">Citebase</a> 间选择分析模块。</p>]]></message>
+	<message key="manager.setup.filter.parser.grid.description.parsCit"><![CDATA[<p>该提取过滤器连接到<a href="http://aye.comp.nus.edu.sg/parsCit/" target="_blank">ParsCit</a> web服务上。</p>]]></message>
+	<message key="manager.setup.filter.parser.grid.description.regEx">RegEx提取过滤器使用一系列常规表达式来对引用进行分析。</message>
+	<message key="manager.setup.metaCitationsDescription">激活下面的checkbox来使引用和参考编辑能够进行。这将会允许作者提交包含原始引用的文件。编辑也将可以通过引用标记助理工具来协助其检查比对原始引用和外部数据库，例如WorldCat， ISBNdb，PubMed和其它一些数据库来保证其准确性。审核过的引用可以导入到最终的校样文件中。</message>
+	<message key="plugins.categories.metadata.description">元数据插件采用附加的元数据标准。</message>
+	<message key="plugins.categories.citationLookup.description">引用数据库连接插件，在如引用编辑的过程中，连接到引用数据库中来查询引用。</message>
+	<message key="plugins.categories.citationOutput.description">引用输出插件采用引用标准。这取代了引用格式插件。</message>
+	<message key="plugins.categories.oaiMetadataFormats">OAI源数据插件</message>
+	<message key="plugins.categories.oaiMetadataFormats.description">这些格式插件表达OAI通信的元数据.</message>
+	<message key="manager.website">网站</message>
+
+	<!-- Review forms -->
+	<message key="manager.reviewFormElement.changeType">警告：将审稿表单元素类型从一个多选修改为开放式类型，会导致多选选项被删除。</message>
+	<message key="manager.reviewFormElements">表单项目</message>
+	<message key="manager.reviewFormElements.addResponseItem">添加选择</message>
+	<message key="manager.reviewFormElements.checkboxes">多选框(你可以选择一个或者多个)</message>
+	<message key="manager.reviewFormElements.chooseType">选择项目类型</message>
+	<message key="manager.reviewFormElements.confirmDelete">您确认删除正在使用中的审稿表单元素?</message>
+	<message key="manager.reviewFormElements.copyTo">复制到:</message>
+	<message key="manager.reviewFormElements.create">创建新项目</message>
+	<message key="manager.reviewFormElements.dropdownbox">下拉框</message>
+	<message key="manager.reviewFormElements.edit">编辑表单项目</message>
+	<message key="manager.reviewFormElements.elementType">项目类型</message>
+	<message key="manager.reviewFormElements.form.elementTypeRequired">要求一个项目类型</message>
+	<message key="manager.reviewFormElements.form.questionRequired">要求一个问题</message>
+	<message key="manager.reviewFormElements.noneCreated">没有表单项目被创建</message>
+	<message key="manager.reviewFormElements.possibleResponse">选择</message>
+	<message key="manager.reviewFormElements.question">项目</message>
+	<message key="manager.reviewFormElements.radiobuttons">单选框 (你只能选择一个)</message>
+	<message key="manager.reviewFormElements.required">R要求审稿人完成项目</message>
+	<message key="manager.reviewFormElements.smalltextfield">单字文本框</message>
+	<message key="manager.reviewFormElements.textarea">扩展文本框</message>
+	<message key="manager.reviewFormElements.textfield">单行文本框</message>
+	<message key="manager.reviewForms">审稿表单管理</message>
+	<message key="manager.reviewForms.completed">完成</message>
+	<message key="manager.reviewForms.create">创建审阅表单</message>
+	<message key="manager.reviewForms.description">描述</message>
+	<message key="manager.reviewForms.edit">审稿表单</message>
+	<message key="manager.reviewForms.form.titleRequired">审稿表单的标题是必须的。</message>
+	<message key="manager.reviewForms.inReview">审阅中</message>
+	<message key="manager.reviewForms.list.description">在这里创建的审稿表单是专门为审稿人准备的。在这里可以创建专门为期刊的某个栏目而设计的审稿表单，编辑可以在指派审稿的时候选择不同的表单。所有的表单都提供了一个选择功能，让编辑可以根据需要把审稿表单的内容与作者分享。</message>
+	<message key="manager.reviewForms.noneChosen">None / Free Form Review</message>
+	<message key="manager.reviewForms.noneCreated">无已创建表单</message>
+	<message key="manager.reviewForms.preview">预览表单</message>
+	<message key="manager.reviewForms.title">名称</message>
+</locale>

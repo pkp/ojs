@@ -1,0 +1,36 @@
+Changed files from the standard ADOdb distribution, based on ADOdb 5.18
+
+== Added ==
+CHANGED_FILES
+diff
+diff/unified.diff
+
+== Removed ==
+contrib
+cute_icons_for_site
+docs
+pear
+session
+server.php
+tests
+xsl
+
+== Modified ==
+[ Removed DOS-style linebreaks from several files ]
+
+[ Modified parameter binding in Execute to map false to 0 ]
+[ Added variable to record number of queries executed ]
+adodb.inc.php
+
+[ Added character encoding support ]
+adodb-datadict.inc.php
+adodb-xmlschema.inc.php
+datadict/datadict-mysql.inc.php
+datadict/datadict-postgres.inc.php
+drivers/adodb-mysql.inc.php
+
+[ Added custom PO_Insert_ID routine ]
+drivers/adodb-postgres64.inc.php
+
+[ Changed schema to avoid using SERIAL column types for PostgreSQL < 7.3 ]
+datadict/datadict-postgres.inc.php

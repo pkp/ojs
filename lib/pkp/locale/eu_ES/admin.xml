@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/eu_ES/admin.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the eu_ES (Euskara) locale.
+  *
+  -->
+
+<locale name="eu_ES" full_name="Euskara">
+	<message key="admin.adminFunctions">Funtzio administratiboak</message>
+	<message key="admin.auth.confirmDelete">Ziur zaude betiko ezabatu nahi duzula autentifikazio-iturburu hau?</message>
+	<message key="admin.auth.create">Sortu autentifikazio-iturburua</message>
+	<message key="admin.auth.noneCreated">Ez da autentifikazio-iturbururik definitu.</message>
+	<message key="admin.authSources">Autentifikazio-iturburuak</message>
+	<message key="admin.clearDataCache">Garbitu datu-cacheak</message>
+	<message key="admin.clearTemplateCache">Garbitu txantiloi-cachea</message>
+	<message key="admin.configFileUpdatedInstructions"><![CDATA[Zure konfigurazio-fitxategia ondo eguneratu da. Kontuan izan, zure guneak ez badu ondo funtzionatzen, behar bada eskuz konpondu beharko duzula konfigurazioa, zuzenean <tt>config.inc.php</tt>editatuz.]]></message>
+	<message key="admin.confirmClearTemplateCache">Ziur zaude konpilatutako txantiloien cachea garbitu nahi duzula?</message>
+	<message key="admin.confirmExpireSessions">Ziur zaude erabiltzaile-saio guztiak iraungi nahi dituzula? Sisteman sartuta dauden erabiltzaile guztiak berriro sartzera behartuko dituzu (zeure burua barne).</message>
+	<message key="admin.contentsOfConfigFile">Konfigurazio-fitxategiaren edukia</message>
+	<message key="admin.currentVersion">Uneko bertsioa</message>
+	<message key="admin.dateInstalled">Instalatze-data</message>
+	<message key="admin.displayConfigFileInstructions"><![CDATA[Zure konfigurazio eguneratua behean bistaratzen da. Konfigurazio-aldaketak aplikatzeko, testu-editore egoki batekin ireki beharko duzu <tt>config.inc.php</tt> eta bertako edukia aldatu beheko testu-eremuaren edukiarekin.]]></message>
+	<message key="admin.displayNewSystemConfig">Bistaratu konfigurazio berria</message>
+	<message key="admin.expireSessions">Iraungi erabiltzaileen saioak</message>
+	<message key="admin.languages.confirmReload">Ziur zaude hizkuntza hau birkargatu nahi duzula? Hizkuntza horretan definitutako datu guztiak borratu egingo dira, esate baterako, posta elektronikoko txantiloi pertsonalizatuak.</message>
+	<message key="admin.languages.installedLocales">Instalatutako hizkuntzak</message>
+	<message key="admin.languages.installLanguages">Kudeatu localeak</message>
+	<message key="admin.languages.installLocales">Instalatu</message>
+	<message key="admin.languages.installNewLocales">Instalatu hizkuntza gehiago</message>
+	<message key="admin.languages.languageSettings">Hizkuntza-ezarpenak</message>
+	<message key="admin.languages.noLocalesAvailable">Ez dago hizkuntza gehiago instalatzeko.</message>
+	<message key="admin.languages.reload">Birkargatu hizkuntza</message>
+	<message key="admin.languages.uninstall">Desinstalatu hizkuntza</message>
+	<message key="admin.phpInfo">PHP informazio xehea</message>
+	<message key="admin.server.apacheVersion">Apache bertsioa</message>
+	<message key="admin.server.dbDriver">Datu-basearen kontrolatzailea</message>
+	<message key="admin.server.dbVersion">Datu-base zerbitzariaren bertsioa</message>
+	<message key="admin.serverInformationDescription"><![CDATA[Oinarrizko sistema eragilearen eta zerbitzari-softwarearen bertsioak. Zerbitzari honen PHP konfigurazioaren xehetasunak ikusteko, egin klik <span class="highlight">PHP Informazio xehean</span>.]]></message>
+	<message key="admin.serverInformation">Zerbitzariari buruzko informazioa</message>
+	<message key="admin.server.phpVersion">PHP bertsioa</message>
+	<message key="admin.server.platform">SE plataforma</message>
+	<message key="admin.settings.aboutDescription">Guneari buruz</message>
+	<message key="admin.settings.contactEmail">Kontaktu nagusiaren helb. el.</message>
+	<message key="admin.settings.contactName">Kontaktu nagusiaren izena</message>
+	<message key="admin.settings.form.contactEmailRequired">Kontaktu nagusiaren helbide elektronikoa eman behar da.</message>
+	<message key="admin.settings.form.contactNameRequired">Kontaktu nagusiaren izena eman behar da.</message>
+	<message key="admin.settings.form.minPasswordLengthRequired">Gutxienez 4 karaktereko pasahitza idatzi behar duzu.</message>
+	<message key="admin.settings.form.titleRequired">Titulu bat eman behar da.</message>
+	<message key="admin.settings.homeHeaderImage.altText">Gunearen logoa</message>
+	<message key="admin.settings.homeHeaderImageInvalid">Logoaren irudi-formatua ez da baliozkoa: .gif, .jpg, edo .png formatuak bakarrik onartzen dira.</message>
+	<message key="admin.settings.introduction">Aurkezpenaa</message>
+	<message key="admin.settings.minPasswordLength">Pasahitzaren gutxieneko luzera</message>
+	<message key="admin.settings.passwordCharacters">karaktere</message>
+	<message key="admin.settings.siteLanguage">Gunearen hizkuntza</message>
+	<message key="admin.settings.siteStyleSheetInvalid">Gunearen estilo-orriaren formatua ez da baliozkoa: .css formatua izan behar du.</message>
+	<message key="admin.settings.siteStyleSheet">Gunearen estilo-orria</message>
+	<message key="admin.settings.siteTitle">Gunearen titulua</message>
+	<message key="admin.siteAdmin">Gune-administrazioa</message>
+	<message key="admin.siteManagement">Gunearen kudeaketa</message>
+	<message key="admin.siteSettings">Gunearen ezarpenak</message>
+	<message key="admin.systemConfigFileReadError"><![CDATA[<tt>config.inc.php</tt> konfigurazio-fitxategia ez dago, ezin da irakurri, edo ez da baliozkoa.]]></message>
+	<message key="admin.systemInformation">Sistema-informazioa</message>
+	<message key="admin.versionBuild">Konpilazio-bertsioa</message>
+	<message key="admin.version.checkForUpdates">Begiratu eguneratzerik dagoen</message>
+	<message key="admin.version.downloadPackage">Deskargatu</message>
+	<message key="admin.version.downloadPatch">Deskargatu adabakia</message>
+	<message key="admin.versionHistory">Bertsio-historia</message>
+	<message key="admin.version.latest">Azken bertsioa</message>
+	<message key="admin.versionMajor">Nagusia</message>
+	<message key="admin.versionMinor">Txikia</message>
+	<message key="admin.version.moreInfo">Informazio gehiago</message>
+	<message key="admin.versionRevision">Berrikuspena</message>
+	<message key="admin.version.updateAvailable">Bertsio eguneratu bat erabilgarri dago</message>
+	<message key="admin.version.upToDate">Zure sistema eguneratuta dago</message>
+	<message key="admin.version">Bertsioa</message>
+	<message key="admin.settings">Ezarpenak</message>
+	<message key="admin.settings.siteTheme">Gunearen gaia</message>
+	<message key="admin.siteSetup">Gunearen konfigurazioa</message>
+</locale>

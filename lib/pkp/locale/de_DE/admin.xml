@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/de_DE/admin.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization strings for the de_DE (Deutsch (Deutschland)) locale.
+  * Please contact Marco Tullney, marco.tullney@fu-berlin.de, with any questions regarding this translation.
+  -->
+
+<locale name="de_DE" full_name="Deutsch (Deutschland)">
+	<message key="admin.systemInfo.settingName">Name der Einstellung</message>
+	<message key="admin.systemInfo.settingValue">Wert der Einstellung</message>
+	<message key="admin.adminFunctions">Administrationsaufgaben</message>
+	<message key="admin.auth.confirmDelete">Sind Sie sicher, dass Sie diese Authentifizierungsquelle endgültig löschen möchten?</message>
+	<message key="admin.auth.create">Authentifizierungsquelle erstellen</message>
+	<message key="admin.auth.noneCreated">Keine Authentifizierungsquelle definiert.</message>
+	<message key="admin.authSources">Authentifizierungsquellen</message>
+	<message key="admin.clearDataCache">Den Datenspeicher leeren</message>
+	<message key="admin.clearTemplateCache">Den Vorlagenspeicher leeren</message>
+	<message key="admin.configFileUpdatedInstructions"><![CDATA[Ihre Konfigurationsdatei wurde erfolgreich aktualisiert. Beachten Sie bitte, dass Sie, falls Ihre Seite nicht mehr richtig arbeitet, eventuell die Konfiguration manuell wiederherstellen müssen, indem Sie direkt <tt>config.inc.php</tt> bearbeiten.]]></message>
+	<message key="admin.confirmClearTemplateCache">Sind Sie sicher, dass Sie den Vorlagenspeicher leeren wollen?</message>
+	<message key="admin.confirmExpireSessions">Sind Sie sicher, dass Sie alle Benutzer/innensitzungen schließen wollen? Alle Benutzer/innen, die gerade arbeiten (auch Sie selbst), müssen sich danach neu einloggen.</message>
+	<message key="admin.contentsOfConfigFile">Inhalt der Konfigurationsdatei</message>
+	<message key="admin.currentVersion">Aktuelle Version</message>
+	<message key="admin.dateInstalled">Installiert am</message>
+	<message key="admin.displayConfigFileInstructions"><![CDATA[Der Inhalt Ihrer aktualisierten Konfiguration wird nachstehend angezeigt. Öffnen Sie <tt>config.inc.php</tt> mit einem geeigneten Texteditor und ersetzen Sie den Inhalt durch den Text im nachstehenden Textfeld.]]></message>
+	<message key="admin.displayNewSystemConfig">Neue Konfiguration anzeigen</message>
+	<message key="admin.expireSessions">Benutzer/innensitzungen schließen</message>
+	<message key="admin.languages.download">Regionaleinstellung herunterladen</message>
+	<message key="admin.languages.downloadLocales">Regionaleinstellungen herunterladen</message>
+	<message key="admin.languages.download.cannotOpen">Die Sprachbeschreibung von der PKP-Webseite kann nicht geöffnet werden.</message>
+	<message key="admin.languages.download.cannotModifyRegistry">Die neue Regionaleinstellung kann nicht zu der Registrierungsdatei für Regionaleinstellungen (üblicherweise "registry/locales.xml") hinzugefügt werden.</message>
+	<message key="admin.languages.cantDisable">Diese Sprache ist die primäre Sprache dieser Website. Sie können sie erst deaktivieren, wenn Sie eine andere primäre Regionalausstellung ausgewählt haben.</message>
+
+	<message key="admin.languages.confirmReload">Sind Sie sicher, dass Sie diese Regionaleinstellung neu laden wollen? Dadurch werden alle regionalspezifischen Daten (wie z.B. angepasste E-Mail-Vorlagen) gelöscht.</message>
+	<message key="admin.languages.installedLocales">Eingerichtete Regionaleinstellungen</message>
+	<message key="admin.languages.installLanguages">Regionaleinstellungen verwalten</message>
+	<message key="admin.languages.availableLocales">Verfügbare Regionaleinstellungen</message>
+	<message key="admin.languages.installLocale">Regionaleinstellungen installieren</message>
+	<message key="admin.languages.installLocales">Installieren</message>
+	<message key="admin.languages.installNewLocales">Neue Regionaleinstellungen installieren</message>
+	<message key="admin.languages.languageSettings">Spracheinstellungen</message>
+	<message key="admin.languages.noLocalesAvailable">Keine weiteren Regionaleinstellungen verfügbar.</message>
+	<message key="admin.languages.reload">Regionaleinstellung neu laden</message>
+	<message key="admin.languages.uninstall">Regionaleinstellung deinstallieren</message>
+	<message key="admin.phpInfo">Ausführliche Informationen zu PHP</message>
+	<message key="admin.scheduledTask">Geplante Aufgabe</message>
+	<message key="admin.scheduledTask.startTime">Geplante Aufgabe wurde gestartet.</message>
+	<message key="admin.scheduledTask.stopTime">Geplante Aufgabe wurde beendet.</message>
+	<message key="admin.scheduledTask.noLog">Geplante Aufgabe hat keine Logdatei erzeugt.</message>
+	<message key="admin.scheduledTask.downloadLog">Ihre {$softwareName}-Installation hat diese Aufgabe automatisch ausgeführt und beendet. Sie können die Logdatei hier herunterladen: {$url}</message>
+	<message key="admin.scheduledTask.confirmClearLogs">Sind Sie sicher, dass Sie alle Logdateien zu geplanten Aufgaben löschen möchten?</message>
+	<message key="admin.scheduledTask.clearLogs">Logdateien zur Ausführung geplanter Aufgaben löschen</message>
+	<message key="admin.scheduledTask.reviewReminder">Erinnerung an Begutachtung</message>
+	<message key="admin.scheduledTask.subscriptionExpiryReminder">Erinnerung an Ende des Abonnements</message>
+	<message key="admin.server.apacheVersion">Apache-Version</message>
+	<message key="admin.server.dbDriver">Datenbanktreiber</message>
+	<message key="admin.server.dbVersion">Version des Datenbankservers</message>
+	<message key="admin.serverInformation">Serverinformationen</message>
+	<message key="admin.server.phpVersion">PHP-Version</message>
+	<message key="admin.server.platform">OS-Plattform</message>
+	<message key="admin.settings">Einstellungen</message>
+	<message key="admin.settings.aboutDescription">Beschreibung Über uns</message>
+	<message key="admin.settings.contactEmail">E-Mail-Adresse des Hauptkontakts</message>
+	<message key="admin.settings.contactName">Name des Hauptkontakts</message>
+	<message key="admin.settings.form.contactEmailRequired">E-Mail-Adresse des Hauptkontakts erforderlich</message>
+	<message key="admin.settings.form.contactNameRequired">Name des Hauptkontakts erforderlich</message>
+	<message key="admin.settings.form.minPasswordLengthRequired">Ihr Passwort muss mindestens 4 Zeichen lang sein.</message>
+	<message key="admin.settings.form.titleRequired">Ein Titel ist erforderlich.</message>
+	<message key="admin.settings.defaultMetricDescription">
+		Ihre Installation ist so eingestellt, dass sie mehr als eine Nutzungsstatistik aufzeichnet. Nutzungsstatistiken werden in verschiedenen Kontexten angezeigt.
+		Es gibt Fälle, in denen eine einzige Nutzungsstatistik benutzt werden muss, z.B. wenn eine sortierte Liste der am häufigsten genutzten Beiträge angezeigt werden soll oder um
+		Suchergebnisse zu gewichten. Bitte wählen Sie eine der Nutzungsmetriken als Standard aus.
+	</message>
+	<message key="admin.settings.homeHeaderImage.altText">Logo der Website</message>
+	<message key="admin.settings.homeHeaderImageInvalid">Ungültiges Dateiformat für Logo der Website. Zulässige Formate sind .gif, .jpg und .png.</message>
+	<message key="admin.settings.introduction">Einführung</message>
+	<message key="admin.settings.minPasswordLength">Mindestlänge des Passworts</message>
+	<message key="admin.settings.siteLanguage">Sprache der Website</message>
+	<message key="admin.settings.siteStyleSheetInvalid">Ungültiges Format für die Formatvorlage der Website. Gültiges Format ist .css.</message>
+	<message key="admin.settings.siteStyleSheet">Formatvorlage der Website</message>
+	<message key="admin.settings.siteTheme">Thema der Website</message>
+	<message key="admin.settings.siteTitle">Titel der Website</message>
+	<message key="admin.siteAdmin">Administration der Website</message>
+	<message key="admin.siteManagement">Management der Website</message>
+	<message key="admin.siteSettings">Einstellungen der Website</message>
+	<message key="admin.siteSetup">Einrichtung der Website</message>
+	<message key="admin.systemConfigFileReadError"><![CDATA[Die Konfigurationsdatei <tt>config.inc.php</tt> ist nicht vorhanden, nicht lesbar oder ungültig.]]></message>
+	<message key="admin.systemInformation">Systeminformationen</message>
+	<message key="admin.versionBuild">Build</message>
+	<message key="admin.version.checkForUpdates">Nach Aktualisierungen suchen</message>
+	<message key="admin.version.downloadPackage">Herunterladen</message>
+	<message key="admin.version.downloadPatch">Patch herunterladen</message>
+	<message key="admin.versionHistory">Bisherige Versionen</message>
+	<message key="admin.version.latest">Neueste Version</message>
+	<message key="admin.versionMajor">Hauptversion</message>
+	<message key="admin.versionMinor">Unterversion</message>
+	<message key="admin.version.moreInfo">Nähere Informationen</message>
+	<message key="admin.versionRevision">Revision</message>
+	<message key="admin.version.updateAvailable">Eine aktuellere Version ist verfügbar.</message>
+	<message key="admin.version.upToDate">Ihr System ist auf dem aktuellen Stand.</message>
+	<message key="admin.version">Version</message>
+
+	<message key="admin.fileLoader.wrongBasePathLocation">Der Basispfad {$path} muss im Verzeichnis der öffentlichen Dateien liegen.</message>
+	<message key="admin.fileLoader.pathNotAccessible">Der Ordner {$path} ist kein Verzeichnis oder ist nicht lesbar.</message>
+	<message key="admin.fileLoader.moveFileFailed">Die Datei {$filename} konnte nicht von {$currentFilePath} nach {$destinationPath} verschoben werden.</message>
+	<message key="admin.fileLoader.fileProcessed">Die Datei {$filename} wurde verarbeitet und archiviert.</message>
+	<message key="admin.fileLoader.emailSubject">Fileloader</message>
+
+	<message key="admin.copyAccessLogFileTool.usage">Kopiere die übergebenen Apache-Zugriffsdatei(en), woraus die mit dieser Installation zusammenhängenden Einträge ausgewählt werden,
+in das aktuelle Dateiverzeichnis innerhalb des Vorbereitungs-Verzeichnisses des UsageStats-Plugins. Muss unter einem Benutzer mit ausreichenden Rechten für den Lesezugriff auf Apache-Log-Dateien ausgeführt werden.
+
+Dieses Werkzeug wird nur Dateien kopieren, die nicht bereits in den usageStats-Verzeichnissen (Vorbereitung, Bearbeitung, Archiv, zurückgewiesen) sind.
+
+Benutzung: {$scriptName} path/to/apache/log/file.log
+Benutzung (verarbeite alle Dateien in einem Verzeichnis): {$scriptName} path/to/apache/directory 
+	</message>
+	<message key="admin.copyAccessLogFileTool.error.creatingFolder">Fehler: kann temporären Ordner {$tmpDir} nicht anlegen</message>
+	<message key="admin.copyAccessLogFileTool.error.acessingFile">Fehler: Datei {$filePath} existiert nicht, oder es kann nicht auf sie zugegriffen werden.</message>
+	<message key="admin.copyAccessLogFileTool.error.copyingFile">Fehler: kann Datei nicht von {$filePath} nach {$tmpFilePath} kopieren</message>
+	<message key="admin.copyAccessLogFileTool.error.deletingFile">Fehler: kann Datei {$tmpFilePath} nicht löschen</message>
+	<message key="admin.copyAccessLogFileTool.warning.fileAlreadyExists">Warnung: Datei {$filePath} gibt es bereits im Verzeichnis der Nutzungsstatistiken.</message>
+	<message key="admin.copyAccessLogFileTool.success">Erfolgreich kopiert: {$filePath} nach {$destinationPath}</message>
+	<message key="admin.error.utilExecutionProblem">Die Ausführung des Programms "{$utilPath}" hat den folgenden Fehler geliefert: {$output}</message>
+	<message key="admin.error.executingUtil">Fehler: Ausführung von "{$utilPath}" nicht möglich. Überprüfen Sie die {$utilVar}-Einstellung in config.inc.php.</message>
+	<message key="admin.settings.siteLogo">Logo der Website</message>
+</locale>

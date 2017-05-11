@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
+
+<!--
+  * locale/ar_IQ/reader.xml
+  *
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2000-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the ar_IQ (العربية) locale.
+  -->
+
+<locale name="ar_IQ" full_name="العربية">
+	<message key="comments.anonymous">مستخدم مجهول</message>
+	<message key="comments.anonymousNamed">"{$userName}"</message>
+	<message key="comments.body">المتن</message>
+	<message key="comments.titleRequired">عنوان التعليق مطلوب حتماً.</message>
+	<message key="comments.confirmDeleteChildren">حذف هذا التعليق يتطلب حذف كل التعقيبات المرتبطة به. هل أنت متأكد من رغبتك في عمل ذلك؟</message>
+	<message key="comments.delete">حذف هذا التعليق</message>
+	<message key="comments.email">البريد الالكتروني لصاحب الطرح</message>
+	<message key="comments.emailReply">الإجابة عبر البريد الالكتروني</message>
+	<message key="comments.enterComment">أدخل تعليقاً</message>
+	<message key="comments.inResponseTo"><![CDATA[إجابة إلى <a href="{$url}">{$title}</a>]]></message>
+	<message key="comments.name">اسم صاحب الطرح</message>
+	<message key="comments.noComments">لم يتم طرح أي من تعليقات القراء بعد.</message>
+	<message key="comments.nReplies">({$num} إجابة/إجابات)</message>
+	<message key="comments.oneReply">(إجابة واحدة)</message>
+	<message key="comments.postAnonymously">إطرح هذا التعليق بصفة مجهول</message>
+	<message key="comments.postReply">إطرح إجابة</message>
+	<message key="comments.readerComments">تعليقات القراء</message>
+	<message key="comments.readMore">قراءة المزيد</message>
+	<message key="comments.replies">الإجابات</message>
+	<message key="comments.title">العنوان</message>
+	<message key="comments.viewAllComments">معاينة كل التعليقات</message>
+	<message key="reader.fullText">النص الكامل:</message>
+	<message key="rt.addComment">أضف تعليقاً</message>
+	<message key="rt.admin.configuration">الإعدادات</message>
+	<message key="rt.admin.contexts.confirmDelete">هل أنت متأكد من رغبتك في حذف هذا السياق وكل عمليات البحث المتعلقة به؟</message>
+	<message key="rt.admin.contexts.createContext">إنشاء سياق</message>
+	<message key="rt.admin.contexts.edit.editContext">تعديل السياق</message>
+	<message key="rt.admin.contexts.metadata">البيانات الوصفية</message>
+	<message key="rt.admin.contexts.options.authorTerms">استعمل أسماء المؤلفين كعبارات بحث إفتراضية لتمكين المستخدمين من العثور على الأعمال الأخرى لهؤلاء المؤلفين بشأن هذه الفقرة (أي، لسياق "الأعمال الأخرى")</message>
+	<message key="rt.admin.contexts.options.citedBy">استعمل أسماء المؤلفين كعبارات بحث إفتراضية وصِف السياق كعملية بحث عن الاقتباسات للمؤلَّف.</message>
+	<message key="rt.admin.contexts.options.defineTerms"><![CDATA[استعمل الكلمة المسلط عليها الضوء من قبل القارئ كعبارة البحث الإفتراضية، أو أتركها فارغة إن لم يتم اختيار أي كلمة لهذه الفقرة (أي، لسياق "تعريف المصطلحات"). إن خيار "تعريف المصطلحات" يجب تمكينه ضمن <a href="{$settingsUrl}">إعدادات أدوات القراءة</a> للسماح بالنقر المزدوج على الكلمات لفتح هذا السياق.]]></message>
+	<message key="rt.admin.contexts.options.geoTerms">استعمل بيانات الفهرسة الجغرافية كعبارات البحث الإفتراضية.</message>
+	<message key="rt.admin.contexts.options">الخيارات</message>
+	<message key="rt.admin.management">الإدارة</message>
+
+	<message key="rt.admin.sharing">المشاركة</message>
+	<message key="rt.admin.sharing.enabled">المشاركة ممكَّنة</message>
+	<message key="rt.admin.sharing.description"><![CDATA[لتمكين قرائك من مشاركة المحتوى، سجل حساباً لدى <a href="http://www.addthis.com">addthis.com</a>، ثم استعمل نسخ/لصق للنص البرمجي الخاص بالمشاركة من الزر أدناه.]]></message>
+
+	<message key="rt.admin.sharing.basic">الإعدادات الأساسية</message>
+	<message key="rt.admin.sharing.userNameLabel">اسم المستخدم لدى AddThis.com</message>
+	<message key="rt.admin.sharing.buttonStyleLabel">نمط الزر</message>
+	<message key="rt.admin.sharing.dropDownMenuLabel">استعمل القائمة المنسدلة</message>
+	<message key="rt.admin.sharing.advanced">الإعدادات المتقدمة (إختيارية)</message>
+	<message key="rt.admin.sharing.customizationLink"><![CDATA[أنظر <a href="http://support.addthis.com/customer/portal/articles/381236-custom-buttons">أدبيات تخصيص AddThis.com</a> كمرجع.]]></message>
+	<message key="rt.admin.sharing.brandLabel">العلامة</message>
+	<message key="rt.admin.sharing.dropDownLabel"><![CDATA[خيارات القائمة المنسدلة <br /> (قائمة تفصل مكوناتها الفارزة الإنجليزية)]]></message>
+	<message key="rt.admin.sharing.languageLabel">اللغة</message>
+	<message key="rt.admin.sharing.logolabel">الشعار</message>
+	<message key="rt.admin.sharing.logoBackgroundLabel">خلفية الشعار</message>
+	<message key="rt.admin.sharing.logoColorLabel">لون الشعار</message>
+
+	<message key="rt.admin.readingToolsEnabled">أدوات القراءة</message>
+	<message key="rt.admin.searches.confirmDelete">هل أنت متأكد من رغبتك في حذف عملية البحث هذه؟</message>
+	<message key="rt.admin.searches.createSearch">إنشاء عملية بحث</message>
+	<message key="rt.admin.searches.edit.editSearch">تعديل عملية البحث</message>
+	<message key="rt.admin.selectedVersion">الفقرات ذات الصلة</message>
+	<message key="rt.admin.settings.abstract">الملخص (يعرض ملخص الفقرة).</message>
+	<message key="rt.admin.settings.viewReviewPolicy">معاينة سياسة التحكيم.</message>
+	<message key="rt.admin.settings.authorBio">عن المؤلف (يعرض عبارات السيرة الذاتية التي أدخلها المؤلف).</message>
+	<message key="rt.admin.settings.captureCite">كيفية الاقتباس من الفقرة (يقدم تفاصيل سيرة الفقرة).</message>
+	<message key="rt.admin.settings.defineTerms">عبارات البحث (يتيح للقراء النقر المزدوج على أي كلمة ضمن الفقرة ومن ثم إرسال الكلمة إلى قاموس).</message>
+	<message key="rt.admin.settings.disableRelatedItems">تعطيل الفقرات ذات الصلة</message>
+	<message key="rt.admin.settings.emailAuthor">أبلغ المؤلف عبر البريد الالكتروني (يقود إلى قالب رسالة الكترونية معنونة إلى المؤلف).</message>
+	<message key="rt.admin.settings.emailOthers">إشعار زميل (يقود إلى قالب رسالة الكترونية تتضمن رابطاً إلى الفقرة).</message>
+	<message key="rt.admin.settings.findingReferences">العثور على المراجع.</message>
+	<message key="rt.admin.settings.printerFriendly">نسخة الطباعة (يقدم نسخة قابلة للطبع للفقرة).</message>
+	<message key="rt.admin.settings.supplementaryFiles">الملفات التكميلية (يعرض قائمة الملفات التي ضمنها المؤلف في طلبه للنشر).</message>
+	<message key="rt.admin.settings.viewMetadata">فهرسة البيانات الوصفية (يعرض البيانات الوصفية لفهرسة الفقرة التي أدرجها المؤلف والنظام).</message>
+	<message key="rt.admin.status">الحالة</message>
+	<message key="rt.admin.configureSharing">إعداد AddThis</message>
+	<message key="rt.admin.validateUrls.complete">إكتملت المصادقة.</message>
+	<message key="rt.admin.validateUrls.ok">صحيح</message>
+	<message key="rt.admin.validateUrls.urlIsInvalid">{$url} غير صالح.</message>
+	<message key="rt.admin.validateUrls">مصادقة روابط الإنترنت لأدوات القراءة</message>
+	<message key="rt.admin.validateUrls.validate">المصادقة</message>
+	<message key="rt.admin.versions.confirmDelete">هل أنت متأكد من رغبتك في حذف هذه النسخة وكل السياقات وعمليات البحث ذات الصلة؟</message>
+	<message key="rt.admin.versions.confirmRestore">هل أنت متأكد من رغبتك في إجراء الاستعادة غير القابلة للتراجع لجميع النسخ عوداً إلى إفتراضاتها؟ إن كان كذلك، فعليك باختيار نسخة نشطة في صفحة الإعدادات.</message>
+	<message key="rt.admin.versions.createVersion">إنشاء نسخة</message>
+	<message key="rt.admin.versions.edit.editVersion">تعديل النسخة</message>
+	<message key="rt.admin.versions.export">تصدير</message>
+	<message key="rt.admin.versions.importVersion">استيراد نسخة</message>
+	<message key="rt.admin.versions.metadata">البيانات الوصفية</message>
+	<message key="rt.admin.versions.restoreVersions">استعادة النُسخ إلى إفتراضياتها</message>
+	<message key="rt.authorBio">عن المؤلف</message>
+	<message key="rt.captureCite.format">صيغة الاقتباس</message>
+	<message key="rt.captureCite">كيفية الاقتباس من الفقرة</message>
+	<message key="rt.captureCite.online">على الإنترنت</message>
+	<message key="rt.captureCite.web">الشبكة العنكبوتية</message>	
+	<message key="rt.colleague">إشعار زميل</message>
+	<message key="rt.context.abbrev">الاختصار</message>
+	<message key="rt.context.and">AND</message>
+	<message key="rt.context.citesContextDescription">إذا تمت فهرسة الفقرة في الباحث العلمي من Google، قد يُصاحبه رابط "مقتبس من قبل س"، الذي يقود إلى قائمة من الأعمال التي اقتبست منه. فضلاً عن ذلك، سيقوم الباحث العلمي من Google بإدراج كل الفقرات التي استشهدت بالعنوان والمؤلف. للوصول إلى المصادر على الإنترنت المتاحة حصرياً عبر مكتبتك البحثية، بإمكانك الذهاب إلى تفضيلاتك لخدمة الباحث العلمية وتفعيل روابط المكتبة لمؤسستك.</message>
+	<message key="rt.context">السياق</message>
+	<message key="rt.context.defineTermsDescription">إذا كانت الفقرة هي ملف HTML (بدلاً من PDF)، النقر المزدوج على أي كلمة ضمن النص سيظهرها في إطار "تعريف الكلمة". بخلاف ذلك، يمكن إدخال الكلمات أو لصقها ضمن ذلك الإطار. لمعرفة المزيد عن المصدر الخاضع للبحث، أنقر على (عن). تم انتخاب هذه المصادر لعلاقتها بالموضوع ولكونها مفتوحة (مجانية) في كل أو بعض محتوياتها.</message>
+	<message key="rt.context.description">الوصف</message>
+	<message key="rt.context.order">الفرز</message>
+	<message key="rt.contexts">السياقات</message>
+	<message key="rt.context.searchDescription">عبارات البحث تم اختيارها من قبل المؤلف/المؤلفين. بالإمكان تعديلها أو حذفها من قبل القارئ، حيث أن عبارتين أو ثلاث قصار ودقيقة تنتج أفضل النتائج لعمليات البحث المكونة من تجميعها بأداة الاتحاد (AND). لمعرفة المزيد عن المصادر الخاضعة للبحث، أنقر على (عن). تم انتخاب هذه المصادر لعلاقتها بالموضوع ولكونها مفتوحة (مجانية) في كل أو بعض محتوياتها.</message>
+	<message key="rt.context.searchTerms">عبارات البحث</message>
+	<message key="rt.context.termToDefine">تحديد الكلمة</message>
+	<message key="rt.context.title">العنوان</message>
+	<message key="rt.emailAuthor">مراسلة المؤلف</message>
+	<message key="rt.email.needLogin"><![CDATA[* يتطلب <a target="_parent" href="{$loginUrl}">التسجيل</a>]]></message>
+	<message key="rt.email.sent">تم إرسال رسالتك.</message>
+	<message key="rt.findingReferences">العثور على المراجع</message>
+	<message key="rt.findingReferences.googleScholar">الباحث العلمي من Google</message>
+	<message key="rt.findingReferences.windowsLiveAcademic">أكاديمية Windows Live</message>
+	<message key="rt.lookUp">عبارات البحث</message>
+	<message key="rt.metadata.dublinCore.contributor">مساهم</message>
+	<message key="rt.metadata.dublinCore.coverage">التغطية</message>
+	<message key="rt.metadata.dublinCore.date">التأريخ</message>
+	<message key="rt.metadata.dublinCore.description">الوصف</message>
+	<message key="rt.metadata.dublinCore">Dublin Core</message>
+	<message key="rt.metadata.dublinCore.format">الصيغة</message>
+	<message key="rt.metadata.dublinCore.identifier">المعرَّف</message>
+	<message key="rt.metadata.dublinCore.language">اللغة</message>
+	<message key="rt.metadata.dublinCore.publisher">الناشر</message>
+	<message key="rt.metadata.dublinCore.relation">الصلة</message>
+	<message key="rt.metadata.dublinCore.rights">الحقوق</message>
+	<message key="rt.metadata.dublinCore.source">المصدر</message>
+	<message key="rt.metadata.dublinCore.subject">الموضوع</message>
+	<message key="rt.metadata.dublinCore.title">العنوان</message>
+	<message key="rt.metadata.dublinCore.type">النوع</message>
+	<message key="rt.metadata.forThisDocument">البيانات الوصفية لهذه الوثيقة</message>
+	<message key="rt.metadata.pkp.abstract">الملخص</message>
+	<message key="rt.metadata.pkp.copyright">الحقوق الفكرية والصلاحيات</message>
+	<message key="rt.metadata.pkp.coverage">الموقع المكاني الجغرافي، الحقبة الزمنية، عينة البحث (الجنس، العمر... إلخ.).</message>
+	<message key="rt.metadata.pkp.date">(YYYY-MM-DD)</message>
+	<message key="rt.metadata.pkp.discipline">التخصصات العلمية</message>
+	<message key="rt.metadata.pkp.format">صيغة الملف</message>
+	<message key="rt.metadata.pkp.genre"><![CDATA[الحالة والنوع]]></message>
+	<message key="rt.metadata.pkpItem">فقرات البيانات الوصفية لمشروع المعرفة العامة</message>
+	<message key="rt.metadata.pkp.language">English=en</message>
+	<message key="rt.metadata.pkp.publisher">الوكالة المنظِّمة، الموقع</message>
+	<message key="rt.metadata.pkp.source">العنوان؛ المجلد؛ العدد (السنة)</message>
+	<message key="rt.metadata.pkp.sponsors">الجهات الراعية</message>
+	<message key="rt.metadata.pkp.subject">الكلمات المفتاحية</message>
+	<message key="rt.metadata.pkp.suppFiles">الملفات التكميلية</message>
+	<message key="rt.metadata.pkp.title">عنوان الوثيقة</message>
+	<message key="rt.metadata.pkp.type">النوع</message>
+	<message key="rt.metadata.pkp.uri">معرَّف الموارد الموحد</message>
+	<message key="rt.printVersion">نسخة الطباعة</message>
+	<message key="rt.readingTools">أدوات القراءة</message>
+	<message key="rt.relatedItems">الفقرات ذات الصلة</message>
+	<message key="rt.reviewPolicy">سياسة التحكيم</message>
+	<message key="rt.search.description">الوصف</message>
+	<message key="rt.searches">عمليات البحث</message>
+	<message key="rt.search.order">الفرز</message>
+	<message key="rt.search">عملية البحث</message>
+	<message key="rt.search.searchPost">البيانات المطروحة</message>
+	<message key="rt.search.searchUrl">رابط البحث على الإنترنت</message>
+	<message key="rt.search.suggest">إفترح مصدراً</message>
+	<message key="rt.search.title">العنوان</message>
+	<message key="rt.search.url">رابط الإنترنت</message>
+	<message key="rt.suppFiles.download">تنزيل</message>
+	<message key="rt.suppFiles">الملفات التكميلية</message>
+	<message key="rt.suppFiles.viewMetadata">فهرسة البيانات الوصفية</message>
+	<message key="rt.version.description">الوصف</message>
+	<message key="rt.version.key">المفتاح</message>
+	<message key="rt.version.locale">اللغة</message>
+	<message key="rt.versions">مجاميع الفقرات ذات الصلة</message>
+	<message key="rt.version.title">العنوان</message>
+	<message key="rt.version">النسخة</message>
+	<message key="rt.viewMetadata">فهرسة البيانات الوصفية</message>
+</locale>
