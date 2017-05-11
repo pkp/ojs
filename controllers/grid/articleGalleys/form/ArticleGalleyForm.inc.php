@@ -52,7 +52,7 @@ class ArticleGalleyForm extends Form {
 				'$galleyLocale, $availableLocales',
 				'return in_array($galleyLocale, $availableLocales);'
 			),
-			array_keys($journal->getSupportedLocaleNames())
+			array_keys($journal->getSupportedSubmissionLocaleNames())
 		);
 	}
 
@@ -68,7 +68,7 @@ class ArticleGalleyForm extends Form {
 			'articleGalleyFile' => $this->_articleGalley->getFile(),
 		));
 		$templateMgr->assign(array(
-			'supportedLocales' => $journal->getSupportedLocaleNames(),
+			'supportedLocales' => $journal->getSupportedSubmissionLocaleNames(),
 			'submissionId' => $this->_submission->getId(),
 		));
 
