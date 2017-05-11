@@ -58,7 +58,7 @@
 	<message key="admin.journals.noneCreated">لم تتم استضافة أي مجلة بعد</message>
 	<message key="admin.contexts.confirmDelete">هل أنت متأكد من رغبتك في إزالة هذه المجلة من الموقع ومحو جميع متعلقاتها؟</message>
 	<message key="admin.contexts.create">استضف مجلة</message>
-	<message key="admin.journals.urlWillBe">ينبغي أن يكون بشكل كلمة واحدة قصيرة أو اختصاراً يعرِّف المجلة رابط المجلة سيكون {$sampleUrl}</message>
+	<message key="admin.journals.urlWillBe">ينبغي أن يكون بشكل كلمة واحدة قصيرة أو اختصاراً يعرِّف المجلة. رابط المجلة سيكون {$sampleUrl}.</message>
 	<message key="admin.contexts.form.titleRequired">العنوان مطلوب حتماً.</message>
 	<message key="admin.contexts.form.pathRequired">المسار مطلوب حتماً</message>
 	<message key="admin.contexts.form.pathAlphaNumeric">تسمية المسار متوقع لها أن تتكون من سلسلة حروف إنجليزية وأرقام وشُرط تحتية وواصلات، ولا بد لها أن تبدأ وتنتهي بحرف إنجليزي أو رقم حصراً</message>
