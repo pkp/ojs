@@ -592,6 +592,7 @@
 	<message key="plugins.importexport.common.error.validation">Could not convert selected objects.</message>
 	<message key="plugins.importexport.common.invalidXML">Invalid XML:</message>
 	<message key="plugins.importexport.common.export.error.outputFileNotWritable">The output file {$param} is not writable.</message>
+	<message key="plugins.importexport.common.export.error.inputFileNotReadable">The input file {$param} is not readable.</message>
 	<message key="plugins.importexport.common.register.error.mdsError">Registration was not successful! The DOI registration server returned an error: '{$param}'.</message>
 	<message key="plugins.importexport.common.register.success">Registration successful!</message>
 	<message key="plugins.importexport.common.senderTask.warning.noDOIprefix">DOI prefix is missing for the journal with the path {$path}.</message>
