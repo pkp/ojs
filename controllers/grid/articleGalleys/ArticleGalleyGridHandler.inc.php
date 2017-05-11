@@ -30,8 +30,11 @@ class ArticleGalleyGridHandler extends GridHandler {
 	function __construct() {
 		parent::__construct();
 		$this->addRoleAssignment(
+			array(ROLE_ID_AUTHOR, ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR, ROLE_ID_ASSISTANT),
+			array('fetchGrid', 'fetchRow'));
+		$this->addRoleAssignment(
 			array(ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR, ROLE_ID_ASSISTANT),
-			array('fetchGrid', 'fetchRow', 'addGalley', 'editGalley', 'editGalleyTab', 'updateGalley', 'deleteGalley', 'identifiers', 'updateIdentifiers', 'clearPubId', 'saveSequence'));
+			array('addGalley', 'editGalley', 'editGalleyTab', 'updateGalley', 'deleteGalley', 'identifiers', 'updateIdentifiers', 'clearPubId', 'saveSequence'));
 	}
 
 
@@ -110,16 +113,19 @@ class ArticleGalleyGridHandler extends GridHandler {
 		));
 
 		$router = $request->getRouter();
-		$this->addAction(new LinkAction(
-			'addGalley',
-			new AjaxModal(
-				$router->url($request, null, null, 'addGalley', null, $this->getRequestArgs()),
-				__('submission.layout.newGalley'),
-				'modal_add_item'
-			),
-			__('grid.action.addGalley'),
-			'add_item'
-		));
+		$userRoles = $this->getAuthorizedContextObject(ASSOC_TYPE_USER_ROLES);
+		if (0 != count(array_intersect($userRoles, array(ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR, ROLE_ID_ASSISTANT)))) {
+			$this->addAction(new LinkAction(
+				'addGalley',
+				new AjaxModal(
+					$router->url($request, null, null, 'addGalley', null, $this->getRequestArgs()),
+					__('submission.layout.newGalley'),
+					'modal_add_item'
+				),
+				__('grid.action.addGalley'),
+				'add_item'
+			));
+		}
 	}
 
 	//
