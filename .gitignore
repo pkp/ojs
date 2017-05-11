@@ -7,3 +7,4 @@ temp
 .buildpath
 .settings
 .DS_Store
+lib/pkp/lib/components

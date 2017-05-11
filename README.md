@@ -2,7 +2,7 @@
 
 > Open Journal Systems (OJS) has been developed by the Public Knowledge Project. For general information about OJS and other open research systems, visit the [PKP web site][pkp].
 
-[![Build Status](https://travis-ci.org/pkp/ojs.svg?branch=master)](https://travis-ci.org/pkp/ojs)
+[![Build Status](https://travis-ci.org/jdgriffith/ojs.svg?branch=master)](https://travis-ci.org/jdgriffith/ojs)
 
 ## Documentation
 
