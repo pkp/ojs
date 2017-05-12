@@ -592,6 +592,7 @@
 	<message key="plugins.importexport.common.error.validation">Невозможно конвертировать выбранные объекты.</message>
 	<message key="plugins.importexport.common.invalidXML">Неправильный XML:</message>
 	<message key="plugins.importexport.common.export.error.outputFileNotWritable">Выходной файл {$param} не доступен для записи.</message>
+	<message key="plugins.importexport.common.export.error.inputFileNotReadable">Входной файл {$param} не доступен для чтения.</message>
 	<message key="plugins.importexport.common.register.error.mdsError">Регистрация завершилась неудачей! Сервер регистрации DOI вернул ошибку: «{$param}».</message>
 	<message key="plugins.importexport.common.register.success">Регистрация прошла успешно!</message>
 	<message key="plugins.importexport.common.senderTask.warning.noDOIprefix">Отсутствует префикс DOI для журнала с адресом {$path}.</message>
