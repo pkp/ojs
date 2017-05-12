@@ -40,8 +40,8 @@ class SubmissionSubmitStep4Form extends PKPSubmissionSubmitStep4Form {
 		$submission = $this->submission;
 		// Send author notification email
 		import('classes.mail.ArticleMailTemplate');
-		$mail = new ArticleMailTemplate($submission, 'SUBMISSION_ACK');
-		$authorMail = new ArticleMailTemplate($submission, 'SUBMISSION_ACK_NOT_USER');
+		$mail = new ArticleMailTemplate($submission, 'SUBMISSION_ACK', null, null, false);
+		$authorMail = new ArticleMailTemplate($submission, 'SUBMISSION_ACK_NOT_USER', null, null, false);
 
 		$context = $request->getContext();
 		$router = $request->getRouter();
