@@ -32,15 +32,6 @@ class ArticleHandler extends Handler {
 	/** @var $submissionRevision int: submission(article) revision ID associated with the request **/
 	var $submissionRevision;
 
-	/** @var $latestSubmissionRevision int: the highest metadata revision ID of a submission **/
-	var $latestSubmissionRevision;
-
-	/** @var $isPreviousRevision boolean: true if current submission is an old revision **/
-	var $isPreviousRevision = false;
-
-	/** @var $previousRevisions array: precedent revisions of the current submission **/
-	var $previousRevisions;
-
 	/**
 	 * Constructor
 	 * @param $request Request
@@ -76,18 +67,6 @@ class ArticleHandler extends Handler {
 
 		// get published article object (handle pub ids)
 		$publishedArticle = $publishedArticleDao->getPublishedArticleByBestArticleId((int) $this->journal->getId(), $articleId, false, null);
-
-		// get all published previous article versions
-		$this->previousRevisions = $publishedArticleDao->getPublishedSubmissionRevisions($publishedArticle->getId(), $this->journal->getId(), SORT_DIRECTION_DESC);
-
-		// get the most recent article version
-		$this->latestSubmissionRevision = $publishedArticleDao->getLatestRevisionId($publishedArticle->getId(), $this->journal->getId());
-
-		// set latest submission revision as default
-		$this->submissionRevision = $this->latestSubmissionRevision;
-
-		// get metadata of the latest version
-		$publishedArticle = $publishedArticleDao->getPublishedArticleByBestArticleId((int) $this->journal->getId(), $articleId, false, $this->latestSubmissionRevision);
 
 		// get data of publishedArticle
 		if (isset($publishedArticle)) {
@@ -125,11 +104,6 @@ class ArticleHandler extends Handler {
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 		$this->article = $publishedArticleDao->getPublishedArticleByBestArticleId((int) $this->journal->getId(), $articleId, false, $this->submissionRevision);
 
-		// check of this is an old version
-		if ($this->submissionRevision && ($this->submissionRevision < $this->latestSubmissionRevision)) {
-			$this->isPreviousRevision = true;
-		}
-
 		$this->view($args, $request);
 	}
 
@@ -139,10 +113,10 @@ class ArticleHandler extends Handler {
 	 * @param $request Request
 	 */
 	function view($args, $request) {
-		$articleId = array_shift($args);
-		$galleyId = array_shift($args);
-		$fileId = array_shift($args);
-		$fileRevision = array_shift($args);
+		$articleId = $args[0];
+		$galleyId = $args[1];
+		$fileId = isset($args[2]) ? $args[2] : 0;
+		$fileRevision = isset($args[3]) ? $args[3] : 0;
 
 		$journal = $request->getJournal();
 		$issue = $this->issue;
@@ -225,11 +199,18 @@ class ArticleHandler extends Handler {
 			}
 
 			// article versioning
-			if ($this->isPreviousRevision) {
+			$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
+
+			// check if this is an old version
+			if ($this->submissionRevision && ($this->submissionRevision < $article->getCurrentVersionId())) {
 				$templateMgr->assign('isPreviousRevision', true);
 			}
+
+			// get all published previous article versions
+			$previousRevisions = $publishedArticleDao->getPublishedSubmissionRevisions($this->article->getId(), $this->journal->getId(), SORT_DIRECTION_DESC);
+
 			$templateMgr->assign('submissionRevision', $this->submissionRevision);
-			$templateMgr->assign('previousRevisions', $this->previousRevisions);
+			$templateMgr->assign('previousRevisions', $previousRevisions);
 
 			if (!HookRegistry::call('ArticleHandler::view', array(&$request, &$issue, &$article))) {
 				return $templateMgr->display('frontend/pages/article.tpl');
@@ -237,8 +218,7 @@ class ArticleHandler extends Handler {
 		} else {
 			// Galley: Prepare the galley file download.
 			if (!HookRegistry::call('ArticleHandler::view::galley', array(&$request, &$issue, &$galley, &$article))) {
-				$request->redirect(null, null, 'download', array($articleId, $this->submissionRevision, $galleyId, $fileId, $fileRevision));
-			
+				$this->download($args, $request);
 			}
 
 		}
@@ -293,12 +273,11 @@ class ArticleHandler extends Handler {
 	 */
 	function download($args, $request) {
 		$articleId = isset($args[0]) ? $args[0] : 0;
-		$submissionRevision = isset($args[1]) ? (int) $args[1] : 0;
-		$galleyId = isset($args[2]) ? $args[2] : 0;
-		$fileId = isset($args[3]) ? (int) $args[3] : 0;
+		$galleyId = isset($args[1]) ? $args[1] : 0;
+		$fileId = isset($args[2]) ? (int) $args[2] : 0;
 
 		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
-		$this->galley = $galleyDao->getByBestGalleyId($galleyId, $articleId, $submissionRevision);
+		$this->galley = $galleyDao->getByBestGalleyId($galleyId, $this->article->getId(), $this->submissionRevision);
 
 		if ($this->galley->getRemoteURL()) $request->redirectUrl($this->galley->getRemoteURL());
 		if ($this->userCanViewGalley($request, $articleId, $galleyId)) {

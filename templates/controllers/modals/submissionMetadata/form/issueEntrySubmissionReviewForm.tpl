@@ -53,7 +53,7 @@
 	{if !$formParams.revision}
 		{assign var=submissionRevision value=$latestRevisionId}
 	{/if}
-	<input type="hidden" name="submissionRevision" id="submissionRevision" value="{$submissionRevision}" />
+	<input type="hidden" name="submissionRevision" id="submissionRevision" value="{$submissionRevision|escape}" />
 
 	{include file="submission/form/section.tpl" readOnly=$formParams.readOnly}
 

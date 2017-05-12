@@ -226,7 +226,5 @@
 			return null;
 		}
 	};
-
-
 /** @param {jQuery} $ jQuery closure. */
 }(jQuery));

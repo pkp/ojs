@@ -177,6 +177,14 @@ class ArticleGalleyDAO extends RepresentationDAO implements PKPPubIdPluginDAO {
 	 */
 	function getByBestGalleyId($galleyId, $articleId, $submissionRevision = null) {
 		$galley = null;
+
+		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
+
+		if(!isset($submissionRevision)){
+			// get the most recent article version
+			$submissionRevision = $publishedArticleDao->getLatestRevisionId($articleId, $journalId);
+		}
+
 		if ($galleyId != '') $galley = $this->getGalleyByPubId('publisher-id', $galleyId, $articleId, $submissionRevision);
 		if (!isset($galley) && ctype_digit("$galleyId")) $galley = $this->getById((int) $galleyId, $articleId, null, $submissionRevision);
 		return $galley;
@@ -333,14 +341,13 @@ class ArticleGalleyDAO extends RepresentationDAO implements PKPPubIdPluginDAO {
 	 * @param $galley ArticleGalley
 	 */
 	function deleteObject($galley) {
-		return $this->deleteById($galley->getId(), null, $galley->getCurrentVersionId());
+		return $this->deleteById($galley->getId(), $galley->getSubmissionId(), $galley->getCurrentVersionId());
 	}
 
 	/**
 	 * Delete a galley by ID.
 	 * @param $galleyId int Galley ID.
 	 * @param $articleId int Optional article ID.
-	 * TODO delete entry in submission_galley_files
 	 */
 	function deleteById($galleyId, $articleId = null, $submissionRevision = null) {
 
@@ -358,6 +365,11 @@ class ArticleGalleyDAO extends RepresentationDAO implements PKPPubIdPluginDAO {
 			$this->update('
 				DELETE FROM submission_galley_settings
 				WHERE galley_id = ? AND version = ?', array((int) $galleyId, (int)$submissionRevision));
+			// delete entry in submission_galley_files
+			$this->update('
+				DELETE FROM submission_galley_files
+				WHERE galley_id = ? AND version = ?', array((int) $galleyId, (int)$submissionRevision));
+
 			$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
 			import('lib.pkp.classes.submission.SubmissionFile'); // Import constants
 

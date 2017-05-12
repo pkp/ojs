@@ -127,20 +127,21 @@ class ArticleGalleyGridHandler extends GridHandler {
 		$userRoles = $this->getAuthorizedContextObject(ASSOC_TYPE_USER_ROLES);
 		if (0 != count(array_intersect($userRoles, array(ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR, ROLE_ID_ASSISTANT)))) {
 
-		// Add addGalley action to the latest version
-		if($this->getSubmissionRevision() == $this->getSubmission()->getCurrentVersionId()){
-			$router = $request->getRouter();
+			// Add addGalley action to the latest version
+			if($this->getSubmissionRevision() == $this->getSubmission()->getCurrentVersionId()){
+				$router = $request->getRouter();
 
-			$this->addAction(new LinkAction(
-				'addGalley',
-				new AjaxModal(
-					$router->url($request, null, null, 'addGalley', null, $this->getRequestArgs()),
-					__('submission.layout.newGalley'),
-					'modal_add_item'
-				),
-				__('grid.action.addGalley'),
-				'add_item'
-			));
+				$this->addAction(new LinkAction(
+					'addGalley',
+					new AjaxModal(
+						$router->url($request, null, null, 'addGalley', null, $this->getRequestArgs()),
+						__('submission.layout.newGalley'),
+						'modal_add_item'
+					),
+					__('grid.action.addGalley'),
+					'add_item'
+				));
+			}
 		}
 	}
 
@@ -285,8 +286,7 @@ class ArticleGalleyGridHandler extends GridHandler {
 		import('controllers.grid.articleGalleys.form.ArticleGalleyForm');
 		$galleyForm = new ArticleGalleyForm(
 			$request,
-			$this->getSubmission(),
-			$this->getSubmissionRevision()
+			$this->getSubmission()
 		);
 		$galleyForm->initData();
 		return new JSONMessage(true, $galleyForm->fetch($request, $this->getRequestArgs()));
@@ -360,7 +360,6 @@ class ArticleGalleyGridHandler extends GridHandler {
 		$galleyForm = new ArticleGalleyForm(
 			$request,
 			$this->getSubmission(),
-			$this->getSubmissionRevision(),
 			$this->getGalley()
 		);
 		$galleyForm->initData();
@@ -377,7 +376,7 @@ class ArticleGalleyGridHandler extends GridHandler {
 		$galley = $this->getGalley();
 
 		import('controllers.grid.articleGalleys.form.ArticleGalleyForm');
-		$galleyForm = new ArticleGalleyForm($request, $this->getSubmission(), $this->getSubmissionRevision(), $galley);
+		$galleyForm = new ArticleGalleyForm($request, $this->getSubmission(), $galley);
 		$galleyForm->readInputData();
 
 		if ($galleyForm->validate($request)) {

@@ -2,7 +2,7 @@
 <!DOCTYPE data SYSTEM "../../../lib/pkp/dtd/xmlData.dtd">
 
 <!--
-  * dbscripts/xml/upgrade/3.0.2_preupdate_versioning.xml
+  * dbscripts/xml/upgrade/3.1.0_preupdate_versioning.xml
   *
   * Copyright (c) 2013-2017 Simon Fraser University
   * Copyright (c) 2003-2017 John Willinsky

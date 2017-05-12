@@ -142,7 +142,7 @@ abstract class PubIdPlugin extends PKPPubIdPlugin {
 			$contextId = $submission->getJournalId();
 		}
 		// Get the latest submission revision
-		$latestRevision = $submissionDao->getLatestRevisionId($submission->getId());
+		$latestRevision = $submission->getCurrentVersionId();
 
 		// Check the context
 		$context = $this->getContext($contextId);

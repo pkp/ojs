@@ -3,8 +3,8 @@
 /**
  * @file controllers/tab/workflow/VersioningTabHandler.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class VersioningTabHandler
@@ -83,8 +83,8 @@ class VersioningTabHandler extends PKPVersioningTabHandler {
 
 	/**
 	 * Handle version info (tab content).
-	 * @param $request PKPRequest
 	 * @param $args array
+	 * @param $request PKPRequest
 	 * @return JSONMessage JSON object
 	 */
 	function versioning($args, $request) {
@@ -121,6 +121,24 @@ class VersioningTabHandler extends PKPVersioningTabHandler {
 		);
 
 		$templateMgr->assign('schedulePublicationLinkAction', $schedulePublicationLinkAction);
+
+		// Create edit metadata link action.
+		$dispatcher = $request->getDispatcher();
+		import('lib.pkp.classes.linkAction.request.AjaxModal');
+		$editMetadataLinkAction = new LinkAction(
+			'editMetadata',
+			new AjaxModal(
+				$dispatcher->url(
+					$request, ROUTE_COMPONENT, null,
+					'modals.submissionMetadata.IssueEntryHandler',
+					'fetch', null,
+					array('submissionId' => $submission->getId(), 'stageId' => $stageId, 'submissionRevision' => $submissionRevision)
+				),
+				__('submission.issueEntry.submissionMetadata')
+			),
+			__('submission.production.editMetadata')
+		);
+		$templateMgr->assign('editMetadataLinkAction', $editMetadataLinkAction);
 
 		return parent::versioning($args, $request);
 	}

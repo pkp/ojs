@@ -242,19 +242,17 @@
 				</div>
 
 				{* Display article versions *}
-				{if $versioningEnabled && (@count($previousRevisions) > 1)}
-					{if $previousRevisions|@count > 0}
-						<div class="item versioning">
-							<div class="label">
-								{translate key="submission.versioning.versionHistory"}
-							</div>
-							<div class="value">
-								{foreach from=$previousRevisions item=submissionRevision}
-									<a href="{url op="version" path=$article->getBestArticleId()|to_array:$submissionRevision->getSubmissionRevision()|escape}">{translate key="submission.versioning.version" version=$submissionRevision->getSubmissionRevision() date=$submissionRevision->getDatePublished()|date_format:$dateFormatShort}</a><br>
-								{/foreach}
-							</div>
+				{if $versioningEnabled && $previousRevisions|@count > 1}
+					<div class="item versioning">
+						<div class="label">
+							{translate key="submission.versioning.versionHistory"}
 						</div>
-					{/if}
+						<div class="value">
+							{foreach from=$previousRevisions item=submissionRevision}
+								<a href="{url op="version" path=$article->getBestArticleId()|to_array:$submissionRevision->getSubmissionRevision()|escape}">{translate key="submission.versioning.version" version=$submissionRevision->getSubmissionRevision() date=$submissionRevision->getDatePublished()|date_format:$dateFormatShort}</a><br>
+							{/foreach}
+						</div>
+					</div>
 				{/if}
 			{/if}
 

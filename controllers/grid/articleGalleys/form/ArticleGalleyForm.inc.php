@@ -17,13 +17,10 @@
 import('lib.pkp.classes.form.Form');
 
 class ArticleGalleyForm extends Form {
-	/** @var $_submission object the article */
+	/** @var $_submission submission the article */
 	var $_submission = null;
 
-	/** @var $_submissionRevision int the article version */
-	var $_submissionRevision = null;
-
-	/** @var $_articleGalley object current galley */
+	/** @var $_articleGalley representation current galley */
 	var $_articleGalley = null;
 
 	/**
@@ -32,10 +29,9 @@ class ArticleGalleyForm extends Form {
 	 * @param $submissionRevision int (optional)
 	 * @param $articleGalley ArticleGalley (optional)
 	 */
-	function __construct($request, $submission, $submissionRevision = null, $articleGalley = null) {
+	function __construct($request, $submission, $articleGalley = null) {
 		parent::__construct('controllers/grid/articleGalleys/form/articleGalleyForm.tpl');
 		$this->_submission = $submission;
-		$this->_submissionRevision = $submissionRevision;
 		$this->_articleGalley = $articleGalley;
 
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR, LOCALE_COMPONENT_PKP_SUBMISSION);
@@ -75,7 +71,7 @@ class ArticleGalleyForm extends Form {
 		$templateMgr->assign(array(
 			'supportedLocales' => $journal->getSupportedSubmissionLocaleNames(),
 			'submissionId' => $this->_submission->getId(),
-			'submissionRevision' => $this->_submissionRevision,
+			'submissionRevision' => $this->_submission->getSubmissionRevision(),
 		));
 
 		return parent::fetch($request);
@@ -132,7 +128,7 @@ class ArticleGalleyForm extends Form {
 			// Create a new galley
 			$articleGalley = $articleGalleyDao->newDataObject();
 			$articleGalley->setSubmissionId($this->_submission->getId());
-			$articleGalley->setSubmissionRevision($this->_submissionRevision);
+			$articleGalley->setSubmissionRevision($this->_submission->getSubmissionRevision());
 			$articleGalley->setLabel($this->getData('label'));
 			$articleGalley->setLocale($this->getData('galleyLocale'));
 			$articleGalley->setRemoteURL($this->getData('remoteURL'));

@@ -111,7 +111,6 @@ class PublishedArticleDAO extends ArticleDAO {
 			WHERE	ps.submission_id = s.submission_id
 				AND ps.issue_id = ?
 				AND ss.setting_name = \'datePublished\'
-				AND MAX(ss.submission_revision)
 				AND s.status <> ' . STATUS_DECLINED . '
 			ORDER BY section_seq ASC, ps.seq ASC';
 
@@ -150,11 +149,13 @@ class PublishedArticleDAO extends ArticleDAO {
 			ORDER BY ss.submission_revision ' . $this->getDirectionMapping($order);
 
 		$result = $this->retrieve($sql, $params);
-		$submissionRevisions = array();
 
-		foreach($result as $submission) {
-			$submissionRevisions[] = $submission['submission_revision'];
+		while(!$result->EOF){
+			$row = $result->getRowAssoc(false);
+			$submissionRevisions[] = $row['submission_revision'];
+			$result->moveNext();
 		}
+		$result->close();
 
 		return $submissionRevisions;
 	}
@@ -227,7 +228,7 @@ class PublishedArticleDAO extends ArticleDAO {
 		$params = $this->getFetchParameters();
 		if ($journalId) $params[] = (int) $journalId;
 		$result = $this->retrieveRange(
-			'SELECT	ps.*,
+			'SELECT	DISTINCT ps.*,
 				s.*,
 				' . $this->getFetchColumns() . '
 			FROM	published_submissions ps
@@ -323,7 +324,7 @@ class PublishedArticleDAO extends ArticleDAO {
 	 */
 	function getPublishedArticlesBySectionId($sectionId, $issueId) {
 		$result = $this->retrieve(
-			'SELECT	ps.*,
+			'SELECT	DISTINCT ps.*,
 				s.*,
 				' . $this->getFetchColumns() . '
 			FROM	published_submissions ps
@@ -355,31 +356,6 @@ class PublishedArticleDAO extends ArticleDAO {
 	}
 
 	/**
-	 * Retrieve Published Article by pub id
-	 * @param $publishedArticleId int
-	 * @return PublishedArticle object
-	 */
-	function getPublishedArticleById($publishedArticleId) {
-		$result = $this->retrieve(
-			'SELECT ps.*, ss.setting_value FROM published_submissions ps
-				JOIN 	submissions_settings ss ON (ss.submission_id = ps.submission_id) 					WHERE 	ss.setting_name = \'datePublished\' AND
-					ps.published_submission_id = ?', (int) $publishedArticleId
-		);
-		$row = $result->GetRowAssoc(false);
-
-		$publishedArticle = $this->newDataObject();
-		$publishedArticle->setPublishedArticleId($row['published_submission_id']);
-		$publishedArticle->setId($row['submission_id']);
-		$publishedArticle->setIssueId($row['issue_id']);
-		$publishedArticle->setDatePublished($this->datetimeFromDB($row['setting_value']));
-		$publishedArticle->setSequence($row['seq']);
-		$publishedArticle->setAccessStatus($row['access_status']);
-
-		$result->Close();
-		return $publishedArticle;
-	}
-
-	/**
 	 * Retrieve published article by article id
 	 * @param $articleId int
 	 * @param $journalId int optional
@@ -401,7 +377,7 @@ class PublishedArticleDAO extends ArticleDAO {
 		if ($submissionRevision) $params[] = (int) $submissionRevision;
 
 		$result = $this->retrieve(
-			'SELECT	ps.*,
+			'SELECT DISTINCT ps.*,
 				s.*,
 				' . $this->getFetchColumns() . '
 			FROM	published_submissions ps
@@ -461,7 +437,7 @@ class PublishedArticleDAO extends ArticleDAO {
 		$params = $this->getFetchParameters();
 		$params[] = $settingName;
 
-		$sql = 'SELECT	ps.*,
+		$sql = 'SELECT DISTINCT ps.*,
 				s.*,
 				sst.*,
 				' . $this->getFetchColumns() . '
@@ -502,6 +478,12 @@ class PublishedArticleDAO extends ArticleDAO {
 	 * @return PublishedArticle object
 	 */
 	function getPublishedArticleByBestArticleId($journalId, $articleId, $useCache = false, $submissionRevision = null) {
+
+		if(!isset($submissionRevision)){
+			// get the most recent article version
+			$submissionRevision = $this->getLatestRevisionId($articleId, $journalId);
+		}
+
 		$article = $this->getPublishedArticleByPubId('publisher-id', $articleId, $journalId, $useCache, $submissionRevision);
 		if (!$article && ctype_digit("$articleId")) {
 			return $this->getByArticleId($articleId, $journalId, $useCache, $submissionRevision);	
@@ -606,7 +588,7 @@ class PublishedArticleDAO extends ArticleDAO {
 				JOIN issues i ON ps.issue_id = i.issue_id
 			WHERE	i.published = 1 AND
 				s.section_id = ? AND
-				ss.setting_name = \'datePublished\' AND
+				ss.setting_name = \'datePublished\'
 			ORDER BY ss.setting_value DESC',
 			(int) $sectionId
 		);

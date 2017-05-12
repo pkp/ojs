@@ -16,7 +16,7 @@
 import('lib.pkp.classes.controllers.grid.GridRow');
 
 class ArticleGalleyGridRow extends GridRow {
-	/** @var $_submission object the article **/
+	/** @var $_submission submission the article **/
 	var $_submission;
 
 	/** @var $_submissionRevision int the article version */
