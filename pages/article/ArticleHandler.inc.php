@@ -48,7 +48,6 @@ class ArticleHandler extends Handler {
 	 */
 	function initialize($request, $args) {
 		$articleId = isset($args[0]) ? $args[0] : 0;
-		$galleyId = isset($args[1]) ? $args[1] : 0;
 
 		$journal = $request->getContext();
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
@@ -67,9 +66,12 @@ class ArticleHandler extends Handler {
 
 		if (!isset($this->article)) $request->getDispatcher()->handle404();
 
-		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
-		$this->galley = $galleyDao->getByBestGalleyId($galleyId, $this->article->getId());
-		if ($galleyId && !$this->galley) $request->getDispatcher()->handle404();
+		if (in_array($request->getRequestedOp(), array('view', 'download'))) {
+			$galleyId = isset($args[1]) ? $args[1] : 0;
+			$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
+			$this->galley = $galleyDao->getByBestGalleyId($galleyId, $this->article->getId());
+			if ($galleyId && !$this->galley) $request->getDispatcher()->handle404();
+		}
 	}
 
 	/**
