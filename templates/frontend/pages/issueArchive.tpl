@@ -22,8 +22,8 @@
 	{include file="frontend/components/breadcrumbs.tpl" currentTitle=$pageTitle}
 
 	{* No issues have been published *}
-	{if !$issues}
-		{translate key="current.noCurrentIssueDesc"}
+	{if $issues->wasEmpty()}
+		<p>{translate key="current.noCurrentIssueDesc"}</p>
 
 	{* List issues *}
 	{else}
