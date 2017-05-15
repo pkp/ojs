@@ -36,9 +36,9 @@ class OpenAIREPlugin extends GenericPlugin {
 			$openAIREDao = new OpenAIREDAO();
 			DAORegistry::registerDAO('OpenAIREDAO', $openAIREDao);
 
-            // Insert openAIRE callback
-            HookRegistry::register('LoadHandler', array(&$this, 'setupCallbackHandler'));
-            
+			// Insert openAIRE callback
+			HookRegistry::register('LoadHandler', array(&$this, 'setupCallbackHandler'));
+
 			// Insert new field into author metadata submission form (submission step 3) and metadata form
 			HookRegistry::register('Templates::Author::Submit::AdditionalMetadata', array($this, 'metadataFieldEdit'));
 			HookRegistry::register('Templates::Submission::MetadataEdit::AdditionalMetadata', array($this, 'metadataFieldEdit'));
@@ -88,37 +88,37 @@ class OpenAIREPlugin extends GenericPlugin {
 	function getDescription() {
 		return __('plugins.generic.openAIRE.description');
 	}
-    
-    /**
-     * Get page handler path for this plugin.
-     * @return string Path to plugin's page handler
-     */
-    function getHandlerPath() {
-        return $this->getPluginPath() . DIRECTORY_SEPARATOR . 'pages';
-    }
-    
-    /**
-     * Get the template path for this plugin.
-     */
-    function getTemplatePath() {
-        return parent::getTemplatePath() . 'templates/';
-    } 
 
-    /**
-     * Hook callback: register pages for each sushi-lite method
-     * This URL is of the form: openaireapi/{$openAIRErequest}
-     * @see PKPPageRouter::route()
-     */
-    function setupCallbackHandler($hookName, $params) {
-        $page = $params[0];
-        if ($this->getEnabled() && $page == 'openaireapi') {
-            $this->import('pages/OpenAIREHandler');
-            define('HANDLER_CLASS', 'OpenAIREHandler');
-            return true;
-        }
-        return false;
-    }  
-    
+	/**
+	 * Get page handler path for this plugin.
+	  * @return string Path to plugin's page handler
+	   */
+	function getHandlerPath() {
+		return $this->getPluginPath() . DIRECTORY_SEPARATOR . 'pages';
+	}
+
+	/**
+	 * Get the template path for this plugin.
+	 */
+	function getTemplatePath() {
+		return parent::getTemplatePath() . 'templates/';
+	} 
+
+	/**
+	 * Hook callback: register pages for each sushi-lite method
+	 * This URL is of the form: openaireapi/{$openAIRErequest}
+	 * @see PKPPageRouter::route()
+	 */
+	function setupCallbackHandler($hookName, $params) {
+		$page = $params[0];
+		if ($this->getEnabled() && $page == 'openaireapi') {
+			$this->import('pages/OpenAIREHandler');
+			define('HANDLER_CLASS', 'OpenAIREHandler');
+			return true;
+		}
+		return false;
+	}
+
 	/*
 	 * Metadata
 	 */
@@ -150,9 +150,9 @@ class OpenAIREPlugin extends GenericPlugin {
 	 */
 	function articleSubmitGetFieldNames($hookName, $params) {
 		$fields =& $params[1];
-        $fields[] = 'projectID';
-        $fields[] = 'projectTitle';
-        $fields[] = 'projectFunder';
+		$fields[] = 'projectID';
+		$fields[] = 'projectTitle';
+		$fields[] = 'projectFunder';
 		$fields[] = 'projectFundingProgram';
 		return false;
 	}
@@ -163,13 +163,13 @@ class OpenAIREPlugin extends GenericPlugin {
 	function metadataExecute($hookName, $params) { 
 		$form =& $params[0];
 		$article =& $form->article;
-        $formProjectID = $form->getData('projectID');
-        $formProjectTitle = $form->getData('projectTitle');
-        $formFunder = $form->getData('projectFunder');
+		$formProjectID = $form->getData('projectID');
+		$formProjectTitle = $form->getData('projectTitle');
+		$formFunder = $form->getData('projectFunder');
 		$formFunderProgram = $form->getData('projectFundingProgram');
-        $article->setData('projectID', $formProjectID);
-        $article->setData('projectTitle', $formProjectTitle);
-        $article->setData('projectFunder', $formFunder);
+		$article->setData('projectID', $formProjectID);
+		$article->setData('projectTitle', $formProjectTitle);
+		$article->setData('projectFunder', $formFunder);
 		$article->setData('projectFundingProgram', $formFunderProgram);
 		return false;
 	}
@@ -192,12 +192,12 @@ class OpenAIREPlugin extends GenericPlugin {
 		$form =& $params[0];
 		$article =& $form->article;
 		$articleProjectID      = $article->getData('projectID');
-        $articleProjectTitle   = $article->getData('projectTitle');
-        $articleFunder         = $article->getData('projectFunder');
-        $articleFundingProgram = $article->getData('projectFundingProgram');
-        $form->setData('projectID', $articleProjectID);
-        $form->setData('projectTitle', $articleProjectTitle);
-        $form->setData('projectFunder', $articleFunder);
+		$articleProjectTitle   = $article->getData('projectTitle');
+		$articleFunder         = $article->getData('projectFunder');
+		$articleFundingProgram = $article->getData('projectFundingProgram');
+		$form->setData('projectID', $articleProjectID);
+		$form->setData('projectTitle', $articleProjectTitle);
+		$form->setData('projectFunder', $articleFunder);
 		$form->setData('projectFundingProgram', $articleFundingProgram);
 		return false;
 	}
@@ -207,13 +207,12 @@ class OpenAIREPlugin extends GenericPlugin {
 	 */
 	function metadataReadUserVars($hookName, $params) {
 		$userVars =& $params[1];
-        $userVars[] = 'projectID';
-        $userVars[] = 'projectTitle';
-        $userVars[] = 'projectFunder';
+		$userVars[] = 'projectID';
+		$userVars[] = 'projectTitle';
+		$userVars[] = 'projectFunder';
 		$userVars[] = 'projectFundingProgram';
 		return false;
 	}
-
 
 	/*
 	 * OAI interface
@@ -287,8 +286,8 @@ class OpenAIREPlugin extends GenericPlugin {
 
 			// Determine OpenAIRE DC elements values
 			// OpenAIRE DC Relation
-            $articleProjectID = $article->getData('projectID');
-            $articleProjectFunder = $article->getData('projectFunder');
+			$articleProjectID = $article->getData('projectID');
+			$articleProjectFunder = $article->getData('projectFunder');
 			$articleProjectFundingProgram = $article->getData('projectFundingProgram');
 			$openAIRERelation = 'info:eu-repo/grantAgreement/' . $articleProjectFunder . '/' . $articleProjectFundingProgram . '/' . $articleProjectID;
 
@@ -373,4 +372,3 @@ class OpenAIREPlugin extends GenericPlugin {
 		return false;
 	} 
 }
-?>
