@@ -123,7 +123,6 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 				$xmlString = file_get_contents($temporaryFilePath);
 				$document = new DOMDocument();
 				$document->loadXml($xmlString);
-				$requirementsErrors = null;
 				if (in_array($document->documentElement->tagName, array('article', 'articles'))) {
 					$filter = 'native-xml=>article';
 				}
@@ -345,6 +344,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 				$deployment = new NativeImportExportDeployment($journal, $user);
 				$deployment->setImportPath(dirname($xmlFile));
 				$content = $this->importSubmissions($xmlString, $filter, $deployment);
+				$validationErrors = array_filter(libxml_get_errors(), create_function('$a', 'return $a->level == LIBXML_ERR_ERROR ||  $a->level == LIBXML_ERR_FATAL;'));
 
 				// Are there any issues import errors, display them
 				$processedIssuesIds = $deployment->getProcessedObjectsIds(ASSOC_TYPE_ISSUE);

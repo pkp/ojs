@@ -26,7 +26,7 @@
 						<element ref="pkp:issue_identification" minOccurs="0" maxOccurs="1" />
 						<element maxOccurs="1" minOccurs="0" name="pages" type="string" />
 					</sequence>
-					<attribute name="section_ref" type="string" />
+					<attribute name="section_ref" type="string" use="required" />
 					<attribute name="seq" type="int" />
 					<attribute name="access_status" type="int" />
 					<attribute name="stage" use="required">

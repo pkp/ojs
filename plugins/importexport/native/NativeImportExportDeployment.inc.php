@@ -91,8 +91,10 @@ class NativeImportExportDeployment extends PKPNativeImportExportDeployment {
 				if (!empty($processedIssuesIds)) {
 					$issueDao = DAORegistry::getDAO('IssueDAO');
 					foreach ($processedIssuesIds as $issueId => $errorMessages) {
-						$issue = $issueDao->getById($issueId);
-						$issueDao->deleteObject($issue);
+						if ($issueId) {
+							$issue = $issueDao->getById($issueId);
+							$issueDao->deleteObject($issue);
+						}
 					}
 				}
 				break;

@@ -52,6 +52,26 @@ class NativeXmlArticleFilter extends NativeXmlSubmissionFilter {
 	}
 
 	/**
+	 * Handle an Article import.
+	 * The Article must have a valid section in order to be imported
+	 * @param $node DOMElement
+	 */
+	function handleElement($node) {
+		$deployment = $this->getDeployment();
+		$context = $deployment->getContext();
+		$sectionAbbrev = $node->getAttribute('section_ref');
+		if ($sectionAbbrev !== '') {
+			$sectionDao = DAORegistry::getDAO('SectionDAO');
+			$section = $sectionDao->getByAbbrev($sectionAbbrev, $context->getId());
+			if (!$section) {
+				$deployment->addError(ASSOC_TYPE_SUBMISSION, NULL, __('plugins.importexport.native.error.unknownSection', array('param' => $sectionAbbrev)));
+			} else {
+				parent::handleElement($node);
+			}
+		}
+	}
+
+	/**
 	 * @see Filter::process()
 	 * @param $document DOMDocument|string
 	 * @return array Array of imported documents
