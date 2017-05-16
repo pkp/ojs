@@ -1,0 +1,127 @@
+body {
+    background-color: #fff;
+    margin: 40px;
+    font-family: 'LucidaGrande','Lucida Grande','Lucida Sans Unicode',sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    color: #4F5155;
+}
+
+a {
+    color: #4F5155;
+    background-color: transparent;
+    font-weight: normal;
+}
+
+h1 {
+    color: #900;
+    background-color: transparent;
+    border-bottom: 1px solid #D0D0D0;
+    font-family: 'HelveticaNeue-Light','Helvetica Neue','Arial',sans-serif;
+    font-size: 36px;
+    font-weight:100;
+    letter-spacing: 0;
+    line-height: 44px;
+    margin: 24px 0 2px 0;
+    padding: 5px 0 6px 0;
+}
+
+br {
+    clear: left;
+    margin-bottom: 10px;
+}
+
+code {
+    font-family: Monaco, Verdana, Sans-serif;
+    font-size: 12px;
+    background-color: #f9f9f9;
+    border: 1px solid #D0D0D0;
+    color: #002166;
+    display: block;
+    margin: 14px 0 14px 0;
+    padding: 12px 10px 12px 10px;
+}
+
+label {
+    text-align: right;
+    display: block;
+    float: left;
+    font-weight: bold;
+    padding-right: 5px;
+}
+
+label.fixedwidthlabel {
+    padding-right: 20px;
+    width: 225px;    
+}
+
+#header {
+    
+}
+
+#header h1 {
+    padding-top: 30px;
+}
+
+#footer {
+    border-top: 1px solid #D0D0D0;
+    text-align: center;
+    font-size: 10px;
+}
+
+div.positive {
+    border: 2px solid #063;
+    background-color: #cec;
+    margin: 10px 150px 10px 150px;
+    padding: 5px;
+    text-align: center;
+}
+
+div.error {
+    border: 2px solid #600;
+    background-color: #f99;
+    margin: 10px 150px 10px 150px;
+    padding: 5px;
+    text-align: center;
+}
+
+div.rightdiv {
+    float: right;
+    padding-top: 10px;
+    padding-right: 10px;
+}
+
+div.section {
+    background-color: #eee;
+    border: 1px solid #ccc;
+    color: #34322c;
+    position: relative;
+    padding: 5px;
+    margin: 5px;
+    line-height: 1.5;
+    font-size: 12px;
+    overflow: auto;
+    width: 100%;
+}
+
+div.formtext {
+    float: left;
+    margin-right: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+div.formtextnext {
+    float: left;
+    margin-right: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+li.showmore {
+    color: #900;
+    font-size: 10px;
+    font-style: italic;
+}
+
+input.smallbutton {
+    font-size: 8px;
+}

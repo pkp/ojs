@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:dcterms="http://purl.org/dc/terms/">
+	<title>A file deposited from Archivematica via SWORD</title>
+	<id>archivematica:id:123456</id>
+	<author><name>Joe Bloggs</name></author>
+	<summary>A deposit from Archivematica</summary>
+	<dcterms:abstract>Abstract text here</dcterms:abstract>
+	<dcterms:available>2016</dcterms:available>
+	<dcterms:creator>Bloggs, J</dcterms:creator>
+	<dcterms:identifier>archivematica:id:123456</dcterms:identifier>
+	<dcterms:title>A file deposited from Archivematica via SWORD</dcterms:title>
+</entry>
