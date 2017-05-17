@@ -52,4 +52,5 @@ The following formats are accepted:
 	<message key="plugins.importexport.native.import.error.sectionAbbrevMatch">The section abbreviation "{$sectionAbbrev}" in the "{$issueTitle}" issue matched an existing journal section, but another abbreviation of this section doesn't match with another abbreviation of the existing journal section.</message>
 	<message key="plugins.importexport.native.import.error.issueIdentificationMatch">None or more than one issue matches the given issue identification "{$issueIdentification}".</message>
 	<message key="plugins.importexport.native.import.error.issueIdentificationMissing">The issue identification element is missing for the article "{$articleTitle}".</message>
+	<message key="plugins.importexport.native.import.error.publishedDateMissing">The article "{$articleTitle}" is contained within an issue, but has no published date.</message>
 </locale>

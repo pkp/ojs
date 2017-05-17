@@ -92,7 +92,7 @@ class NativeXmlArticleFilter extends NativeXmlSubmissionFilter {
 	}
 
 	/**
-	 * Populate the submission object from the node
+	 * Populate the submission object from the node, checking first for a valid section and published_date/issue relationship
 	 * @param $submission Submission
 	 * @param $node DOMElement
 	 * @return Submission
@@ -108,6 +108,14 @@ class NativeXmlArticleFilter extends NativeXmlSubmissionFilter {
 			} else {
 				$submission->setSectionId($section->getId());
 			}
+		}
+		// check if article is related to an issue, but has no published date
+		$datePublished = $node->getAttribute('date_published');
+		$issue = $deployment->getIssue();
+		$issue_identification = $node->getElementsByTagName('issue_identification');
+		if (!$datePublished && ($issue || $issue_identification->length)) {
+			$titleNodes = $node->getElementsByTagName('title');
+			$deployment->addError(ASSOC_TYPE_SUBMISSION, $submission->getId(), __('plugins.importexport.native.import.error.publishedDateMissing', array('articleTitle' => $titleNodes->item(0)->textContent)));
 		}
 
 		return parent::populateObject($submission, $node);
