@@ -136,30 +136,40 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 				$templateMgr->assign('validationErrors', $validationErrors);
 				libxml_clear_errors();
 
-				// Are there any submissions import errors
-				$processedSubmissionsIds = $deployment->getProcessedObjectsIds(ASSOC_TYPE_SUBMISSION);
-				if (!empty($processedSubmissionsIds)) {
-					$submissionsErrors = array_filter($processedSubmissionsIds, create_function('$a', 'return !empty($a);'));
-					if (!empty($submissionsErrors)) {
-						$templateMgr->assign('submissionsErrors', $processedSubmissionsIds);
+				// Are there any import warnings? Display them.
+				$warningTypes = array(
+					ASSOC_TYPE_ISSUE => 'issuesWarnings',
+					ASSOC_TYPE_SUBMISSION => 'submissionsWarnings',
+					ASSOC_TYPE_SECTION => 'sectionWarnings',
+				);
+				foreach ($warningTypes as $assocType => $templateVar) {
+					$foundWarnings = $deployment->getProcessedObjectsWarnings($assocType);
+					if (!empty($foundWarnings)) {
+						$templateMgr->assign($templateVar, $foundWarnings);
 					}
 				}
-				// Are there any issues import errors
-				$processedIssuesIds = $deployment->getProcessedObjectsIds(ASSOC_TYPE_ISSUE);
-				if (!empty($processedIssuesIds)) {
-					$issuesErrors = array_filter($processedIssuesIds, create_function('$a', 'return !empty($a);'));
-					if (!empty($issuesErrors)) {
-						$templateMgr->assign('issuesErrors', $processedIssuesIds);
+
+				// Are there any import errors? Display them.
+				$errorTypes = array(
+					ASSOC_TYPE_ISSUE => 'issuesErrors',
+					ASSOC_TYPE_SUBMISSION => 'submissionsErrors',
+					ASSOC_TYPE_SECTION => 'sectionErrors',
+				);
+				$foundErrors = false;
+				foreach ($errorTypes as $assocType => $templateVar) {
+					$currentErrors = $deployment->getProcessedObjectsErrors($assocType);
+					if (!empty($currentErrors)) {
+						$templateMgr->assign($templateVar, $currentErrors);
+						$foundErrors = true;
 					}
 				}
-				// If there are any submissions or validataion errors
-				// delete imported submissions and issues.
-				// Issues errors can be ignored here, because they only contain section mismatch errors,
-				// that shall only be displayed to the user but that do not influence the import objects.
-				if (!empty($submissionsErrors) || !empty($validationErrors)) {
+				// If there are any data or validataion errors
+				// delete imported objects.
+				if ($foundErrors || !empty($validationErrors)) {
 					// remove all imported issues and sumissions
-					$deployment->removeImportedObjects(ASSOC_TYPE_ISSUE);
-					$deployment->removeImportedObjects(ASSOC_TYPE_SUBMISSION);
+					foreach (array_keys($errorTypes) as $assocType) {
+						$deployment->removeImportedObjects($assocType);
+					}
 				}
 				// Display the results
 				$json = new JSONMessage(true, $templateMgr->fetch($this->getTemplatePath() . 'results.tpl'));
@@ -346,48 +356,53 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 				$content = $this->importSubmissions($xmlString, $filter, $deployment);
 				$validationErrors = array_filter(libxml_get_errors(), create_function('$a', 'return $a->level == LIBXML_ERR_ERROR ||  $a->level == LIBXML_ERR_FATAL;'));
 
-				// Are there any issues import errors, display them
-				$processedIssuesIds = $deployment->getProcessedObjectsIds(ASSOC_TYPE_ISSUE);
-				if (!empty($processedIssuesIds)) {
-					$issuesErrors = array_filter($processedIssuesIds, create_function('$a', 'return !empty($a);'));
-					if (!empty($issuesErrors)) {
-						echo __('plugins.importexport.common.errorsOccured') . "\n";
+				// Are there any import warnings? Display them.
+				$errorTypes = array(
+					ASSOC_TYPE_ISSUE => 'issue.issue',
+					ASSOC_TYPE_SUBMISSION => 'submission.submission',
+					ASSOC_TYPE_SECTION => 'section.section',
+				);
+				foreach ($errorTypes as $assocType => $localeKey) {
+					$foundWarnings = $deployment->getProcessedObjectsWarnings($assocType);
+					if (!empty($foundWarnings)) {
+						echo __('plugins.importexport.common.warningsEncountered') . "\n";
 						$i = 0;
-						foreach ($issuesErrors as $issuesErrorMessages) {
-							if (count($issuesErrorMessages) > 0) {
-								echo ++$i . '.' . __('issue.issue') . "\n";
-								foreach ($issuesErrorMessages as $issuesErrorMessage) {
-									echo '- ' . $issuesErrorMessage . "\n";
+						foreach ($foundWarnings as $foundWarningMessages) {
+							if (count($foundWarningMessages) > 0) {
+								echo ++$i . '.' . __($localeKey) . "\n";
+								foreach ($foundWarningMessages as $foundWarningMessage) {
+									echo '- ' . $foundWarningMessage . "\n";
 								}
 							}
 						}
 					}
 				}
-				// Are there any submissions import errors, display them
-				$processedSubmissionsIds = $deployment->getProcessedObjectsIds(ASSOC_TYPE_SUBMISSION);
-				if (!empty($processedSubmissionsIds)) {
-					$submissionsErrors = array_filter($processedSubmissionsIds, create_function('$a', 'return !empty($a);'));
-					if (!empty($submissionsErrors)) {
+
+				// Are there any import errors? Display them.
+				$foundErrors = false;
+				foreach ($errorTypes as $assocType => $localeKey) {
+					$currentErrors = $deployment->getProcessedObjectsErrors($assocType);
+					if (!empty($currentErrors)) {
 						echo __('plugins.importexport.common.errorsOccured') . "\n";
 						$i = 0;
-						foreach ($submissionsErrors as $submissionsErrorMessages) {
-							if (count($submissionsErrorMessages) > 0) {
-								echo ++$i . '.' . __('submission.submission') . "\n";
-								foreach ($submissionsErrorMessages as $submissionsErrorMessage) {
-									echo '- ' . $submissionsErrorMessage . "\n";
+						foreach ($currentErrors as $currentErrorMessages) {
+							if (count($currentErrorMessages) > 0) {
+								echo ++$i . '.' . __($localeKey) . "\n";
+								foreach ($currentErrorMessages as $currentErrorMessage) {
+									echo '- ' . $currentErrorMessage . "\n";
 								}
 							}
 						}
+						$foundErrors = true;
 					}
 				}
-				// If there are any submissions or validataion errors
-				// delete imported submissions and issues.
-				// Issues errors can be ignored here, because they only contain section mismatch errors,
-				// that shall only be displayed to the user but that do not influence the import objects.
-				if (!empty($submissionsErrors) || !empty($validationErrors)) {
+				// If there are any data or validataion errors
+				// delete imported objects.
+				if ($foundErrors || !empty($validationErrors)) {
 					// remove all imported issues and sumissions
-					$deployment->removeImportedObjects(ASSOC_TYPE_ISSUE);
-					$deployment->removeImportedObjects(ASSOC_TYPE_SUBMISSION);
+					foreach (array_keys($errorTypes) as $assocType) {
+						$deployment->removeImportedObjects($assocType);
+					}
 				}
 				return;
 			case 'export':

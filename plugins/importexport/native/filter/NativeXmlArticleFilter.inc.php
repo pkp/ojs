@@ -161,7 +161,7 @@ class NativeXmlArticleFilter extends NativeXmlSubmissionFilter {
 				break;
 			default:
 				$importClass=null; // Suppress scrutinizer warn
-				$deployment->addError(ASSOC_TYPE_SUBMISSION, $submission->getId(), __('plugins.importexport.common.error.unknownElement', array('param' => $elementName)));
+				$deployment->addWarning(ASSOC_TYPE_SUBMISSION, $submission->getId(), __('plugins.importexport.common.error.unknownElement', array('param' => $elementName)));
 		}
 		// Caps on class name for consistency with imports, whose filter
 		// group names are generated implicitly.
@@ -244,6 +244,8 @@ class NativeXmlArticleFilter extends NativeXmlSubmissionFilter {
 						$titles[$locale] = $value;
 						$givenIssueIdentification[] = 'title (' .$locale .') = ' .$value .' ';
 						break;
+					default:
+						$deployment->addWarning(ASSOC_TYPE_SUBMISSION, $submission->getId(), __('plugins.importexport.common.error.unknownElement', array('param' => $n->tagName)));
 				}
 			}
 		}
