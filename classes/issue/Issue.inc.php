@@ -503,7 +503,10 @@ class Issue extends DataObject {
 	 * @return string
 	 */
 	function getIssueSeries() {
-		return $this->getIssueIdentification(array('showTitle' => false));
+		if ($this->getShowVolume() || $this->getShowNumber() || $this->getShowYear()) {
+			return $this->getIssueIdentification(array('showTitle' => false));
+		}
+		return null;
 	}
 
 	/**
