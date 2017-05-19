@@ -169,6 +169,7 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 	 * @param $issue Issue
 	 */
 	function parseIssueGalleys($node, $issue) {
+		$deployment = $this->getDeployment();
 		for ($n = $node->firstChild; $n !== null; $n=$n->nextSibling) {
 			if (is_a($n, 'DOMElement')) {
 				switch ($n->tagName) {
@@ -204,6 +205,7 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 	 * @param $issue Issue
 	 */
 	function parseArticles($node, $issue) {
+		$deployment = $this->getDeployment();
 		for ($n = $node->firstChild; $n !== null; $n=$n->nextSibling) {
 			if (is_a($n, 'DOMElement')) {
 				switch ($n->tagName) {
@@ -239,6 +241,7 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 	 * @param $issue Issue
 	 */
 	function parseSections($node, $issue) {
+		$deployment = $this->getDeployment();
 		for ($n = $node->firstChild; $n !== null; $n=$n->nextSibling) {
 			if (is_a($n, 'DOMElement')) {
 				switch ($n->tagName) {
@@ -324,6 +327,7 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 	 * @param $object Issue
 	 */
 	function parseIssueCovers($node, $object) {
+		$deployment = $this->getDeployment();
 		for ($n = $node->firstChild; $n !== null; $n=$n->nextSibling) {
 			if (is_a($n, 'DOMElement')) {
 				switch ($n->tagName) {
