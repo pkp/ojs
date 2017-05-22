@@ -52,7 +52,10 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 	 */
 	function register($category, $path) {
 		$success = parent::register($category, $path);
-		$this->addLocaleData();
+		if ($success) {
+			$this->addLocaleData();
+			HookRegistry::register('AcronPlugin::parseCronTab', array($this, 'callbackParseCronTab'));
+		}
 		return $success;
 	}
 
