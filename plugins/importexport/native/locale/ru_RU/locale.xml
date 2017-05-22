@@ -52,4 +52,5 @@
 	<message key="plugins.importexport.native.import.error.sectionAbbrevMatch">Аббревиатура раздела «{$sectionAbbrev}» в выпуске «{$issueTitle}» совпала с существующим разделом журнала, но другая аббревиатура этого раздела не совпала с другой аббревиатурой существующего раздела журнала.</message>
 	<message key="plugins.importexport.native.import.error.issueIdentificationMatch">Ни одного выпуска или более одного выпуска совпало с указанной идентификацией выпуска «{$issueIdentification}».</message>
 	<message key="plugins.importexport.native.import.error.issueIdentificationMissing">Элемент идентификации выпуска отсутствует для статьи «{$articleTitle}».</message>
+	<message key="plugins.importexport.native.import.error.publishedDateMissing">Статья «{$articleTitle}» есть в выпуске, но для нее не указана дата публикации.</message>
 </locale>
