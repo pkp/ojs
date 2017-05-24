@@ -54,7 +54,7 @@
 		<td class="value">
 			<strong>{translate key=$logEntry->getEventTitle()}</strong>
 			<br /><br />
-			{$logEntry->getMessage()|strip_unsafe_html|nl2br}
+			{$logEntry->getTranslatedMessage()|strip_unsafe_html|nl2br}
 		</td>
 	</tr>
 </table>
