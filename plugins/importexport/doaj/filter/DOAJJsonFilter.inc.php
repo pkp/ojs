@@ -141,7 +141,8 @@ class DOAJJsonFilter extends NativeImportExportFilter {
 			// Keywords
 			$dao = DAORegistry::getDAO('SubmissionKeywordDAO');
 			$keywords = $dao->getKeywords($pubObject->getId(), array($pubObject->getLocale()));
-			if (!empty($keywords[$pubObject->getLocale()])) $article['bibjson']['keywords'] = $keywords[$pubObject->getLocale()];
+			$allowedNoOfKeywords = array_slice($keywords[$pubObject->getLocale()], 0, 6);
+			if (!empty($keywords[$pubObject->getLocale()])) $article['bibjson']['keywords'] = $allowedNoOfKeywords;
 
 			/* not needed here:
 			// Language

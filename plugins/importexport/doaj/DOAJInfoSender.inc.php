@@ -40,7 +40,7 @@ class DOAJInfoSender extends ScheduledTask {
 	 * @copydoc ScheduledTask::getName()
 	 */
 	function getName() {
-		return __('plugins.importexport.datacite.senderTask.name');
+		return __('plugins.importexport.doaj.senderTask.name');
 	}
 
 	/**
