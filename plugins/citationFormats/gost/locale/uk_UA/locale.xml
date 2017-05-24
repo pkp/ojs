@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/citationFormats/GOST/locale/uk_UA/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the uk_UA (Українська) locale.
+  *
+  * Translated by Denys Solovianenko, 2011
+  * V. I. Vernadsky National Library of Ukraine
+  -->
+ 
+<locale name="uk_UA" full_name="Українська">
+       <message key="plugins.citationFormats.GOST.displayName">Модуль формату цитат GOST</message>
+       <message key="plugins.citationFormats.GOST.citationFormatName">GOST</message>
+       <message key="plugins.citationFormats.GOST.description">Цей модуль дозволяє використання формату цитат GOST.</message>
+       <message key="plugins.citationFormats.GOST.retrieved"><![CDATA[URL: <a href="{$url}" target="_new">{$url}</a> (дата доступу: {$retrievedDate})]]></message>
+	<message key="plugins.citationFormats.GOST.manager.settings">Налаштування</message>
+	<message key="plugins.citationFormats.GOST.manager.GOSTCitationSettings">Налаштування модуля формату цитат GOST</message>
+	<message key="plugins.citationFormats.GOST.manager.settings.description">Налаштування, потрібні для створення цитат формату GOST.</message>
+	<message key="plugins.citationFormats.GOST.manager.settings.location">Розташування</message>
+</locale>
