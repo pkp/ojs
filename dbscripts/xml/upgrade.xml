@@ -150,6 +150,10 @@
 		<note file="docs/release-notes/README-3.0.2" />
 	</upgrade>
 
+	<upgrade minversion="3.0.0.0" maxversion="3.0.9.9">
+		<code function="installEmailTemplate" key="PASSWORD_RESET" locales="ca_ES,cs_CZ,da_DK,de_DE,en_US,es_ES,eu_ES,fi_FI,fr_CA,hr_HR,id_ID,it_IT,nb_NO,nl_NL,pt_BR,pt_PT,ru_RU,sv_SE,tr_TR,uk_UA,zh_CN" />
+	</upgrade>
+
 	<upgrade minversion="2.4.0.0" maxversion="3.0.9.9">
 		<!--  the order of the next two lines is important -->
 		<code function="moveReviewerFiles" />
