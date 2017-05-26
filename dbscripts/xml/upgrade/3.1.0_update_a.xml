@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../../../lib/pkp/dtd/xmlData.dtd">
+
+<!--
+  * 3.1.0_update_a.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * 3.1.0.0 general updates only for installations using 3.x.
+  -->
+<data>
+	<sql>
+		<!-- issue #2506: repair migrated files genre ids -->
+		<query driver="mysql">UPDATE submission_files sf, genres g, submissions s SET sf.genre_id = g.genre_id WHERE sf.genre_id = 1 AND g.entry_key = 'SUBMISSION' AND g.context_id = s.context_id AND s.submission_id = sf.submission_id</query>
+		<query driver="mysqli">UPDATE submission_files sf, genres g, submissions s SET sf.genre_id = g.genre_id WHERE sf.genre_id = 1 AND g.entry_key = 'SUBMISSION' AND g.context_id = s.context_id AND s.submission_id = sf.submission_id</query>
+		<query driver="postgres7">UPDATE submission_files SET genre_id = g.genre_id FROM genres g, submissions s WHERE submission_files.genre_id = 1 AND g.entry_key = 'SUBMISSION' AND g.context_id = s.context_id AND s.submission_id = submission_files.submission_id</query>
+	</sql>
+</data>
+
