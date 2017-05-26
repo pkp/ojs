@@ -102,7 +102,6 @@
 		<query>UPDATE email_templates_default_data SET locale='nb_NO' WHERE locale='no_NO'</query>
 		<query>UPDATE email_templates_data SET locale='nb_NO' WHERE locale='no_NO'</query>
 		<query>UPDATE controlled_vocab_entry_settings SET locale='nb_NO' WHERE locale='no_NO'</query>
-		<query>UPDATE gifts SET locale='nb_NO' WHERE locale='no_NO'</query>
 		<query>UPDATE citation_settings SET locale='nb_NO' WHERE locale='no_NO'</query>
 		<query>UPDATE metadata_description_settings SET locale='nb_NO' WHERE locale='no_NO'</query>
 		<query>UPDATE filter_settings SET locale='nb_NO' WHERE locale='no_NO'</query>

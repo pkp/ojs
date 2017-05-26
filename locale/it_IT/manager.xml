@@ -500,9 +500,6 @@ I valori ammessi sono i nomi di dominio (es. www.cilea.it).</message>
 	<message key="manager.setup.categories">Categorie</message>
 	<message key="manager.payment.options.purchaseIssueFee">Acquista il fascicolo</message>
 	<message key="manager.sections.alertDelete">Prima di cancellare questa sezione, devi spostare in un'altra tutti gli articoli pubblicati che contiene.</message>
-	<message key="manager.payment.giftFees">Tariffe per i regali</message>
-	<message key="manager.payment.giftFeesDescription">Un link ad abbonamenti-dono apparirà nella pagina degli abbonamenti e come componente del blocco abbonamenti nella barra laterale</message>
-	<message key="manager.payment.options.acceptGiftSubscriptionPayments">Attivare i pagamenti per abbonamenti-dono, permettendo ai lettori della rivista di acquistare abbonamenti-dono per altri lettori.</message>
 	<message key="manager.setup.categories.description">Scegli le categorie più appropriate nella lista sottostante. I lettori potranno navigare le riviste ospitate nel sito per categorie.</message>
 	<message key="manager.setup.resetPermissions">Cancella i permessi dell'articolo</message>
 	<message key="manager.setup.resetPermissions.description">La dichiarazione di copyright e le informazioni sulla licenza saranno collegati in modo permanente al contenuto pubblicato, assicurando che questi dati non cambieranno nel caso che la rivista cambi le politiche per le nuove proposte. Per reimpostare le informazioni sulle autorizzazioni memorizzate e già collegate al contenuto pubblicato, utilizzare il pulsante qui sotto.</message>

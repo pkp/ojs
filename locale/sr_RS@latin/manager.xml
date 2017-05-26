@@ -20,9 +20,6 @@
 	<message key="manager.setup.useThumbnail">Mala slika</message>
 	<message key="manager.statistics.reports.today">Danas</message>
 	<message key="manager.setup.categories">Kategorije</message>
-	<message key="manager.payment.giftFees">Cene poklona</message>
-	<message key="manager.payment.giftFeesDescription">Veza na poklonjenu pretplatu će se pojaviti na strani za pretplatu u delu O časopisu u delu bočnog bloka za pretplate.</message>
-	<message key="manager.payment.options.acceptGiftSubscriptionPayments">Ovo će aktivirati plaćanja za poklonjene pretplate omogućavajući čitaocima da kupe poklon pretplate i poklone ih drugim čitaocima.</message>
 	<message key="manager.sections.alertDelete">Pre nego što obrišete ovu rubriku morate članke prethodno objavljene u njoj premestiti u drugu rubriku.</message>
 	<message key="manager.setup.resetPermissions.description">Izjava o autorskim pravima i informacija o licenci će biti trajno priključene uz objavljeni sadržaj tako da se ta informacija neće promeniti u slučaju da časopis promeni svoju politiku tokom novih podnošenja članaka. Ako želite vratiti na početno stanje sačuvane dozvole priključene uz objavljeni sadržaj pritisnite donje dugme.</message>
 	<message key="manager.setup.copyrightYearBasis">Postavi godinu autorskih prava članka na</message>

@@ -37,8 +37,6 @@
 	<message key="manager.payment.enable">Tidak Bisa</message>
 	<message key="manager.payment.feePaymentOptions">Pilihan Pembayaran Biaya</message> 
 	<message key="manager.payment.form.numeric">Semua biaya harus dalam nilai numerik positif (desimal dibolehkan)</message>
-	<message key="manager.payment.giftFees">Biaya Hadiah</message>
-	<message key="manager.payment.giftFeesDescription">Tautan hadiah langganan akan muncul di halaman Langganan pada Tentang Jurnal dan sebagai bagian dari blok langganan sidebar.</message>
 	<message key="manager.payment.generalFees">Biaya Umum</message> 
 	<message key="manager.payment.generalFeesDescription">Keanggotaan Asosiasi akan ditampilkan di Tentang Jurnal di bawah kebijakan, dan tautan donasi akan muncul di atas fungsi cari di frame sebelah kanan.</message> 
 	<message key="manager.payment.generalOptions">Opsi Umum</message> 
@@ -46,7 +44,6 @@
 	<message key="manager.payment.notFound">Tidak ditemukan</message>
 	<message key="manager.payment.options">Opsi</message> 
 	<message key="manager.payment.options.acceptSubscriptionPayments">Aktifkan pembayaran untuk Langganan, di mana tipe, biaya, durasi dan langganan diatur oleh Manajer (Langganan) Jurnal.</message>	
-	<message key="manager.payment.options.acceptGiftSubscriptionPayments">Tindakan ini akan mengaktifkan pembayaran untuk hadiah langganan sehingga pembaca dapat membeli hadiah langganan untuk pembaca lain.</message>
 	<message key="manager.payment.options.donationFee">Donasi untuk Jurnal</message> 
 	<message key="manager.payment.options.enablePayments">Klik di sini untuk memungkinkan modul Pembayaran. Anda harus mengkonfigurasi pengaturan pembayaran dengan mengisi form di bawah ini. Catatan: Pengguna harus log in untuk melakukan pembayaran.</message>
 	<message key="manager.payment.options.fastTrackFee">Fast-Track Review</message> 

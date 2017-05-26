@@ -493,9 +493,6 @@ I begge tilfælde har redaktøren mulighed for at inkludere bedømmelseskommenta
 	<message key="manager.setup.useThumbnail">Thumbnail</message>
 	<message key="manager.setup.categories">Kategorier</message>
 	<message key="manager.payment.options.purchaseIssueFee">Køb nummer</message>
-	<message key="manager.payment.giftFees">Gavegebyr</message>
-	<message key="manager.payment.giftFeesDescription">Et link til gaveabonnement vil fremkomme på siden 'Abonnementer' under 'Om tidsskriftet' og som del af abonnementsoplysningerne i sidemenuen.</message>
-	<message key="manager.payment.options.acceptGiftSubscriptionPayments">Dette vil gøre det muligt for læserne at købe gaveabonnementer til andre læsere.</message>
 	<message key="manager.sections.alertDelete">Før denne sektion kan slettes, skal de artikler, der er publiceret i sektionen overføres til andre sektioner.</message>
 	<message key="manager.setup.categories.description">Vælg den mest passende kategori blandt de ovenfor anførte. Læserne kan herefter browse gennem hele tidsskriftet via kategorier.</message>
 	<message key="manager.setup.resetPermissions">Genindstil artikelbegrænsning</message>

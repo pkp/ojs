@@ -468,12 +468,9 @@
 	<message key="manager.sections.noneCreated">Nema napravljenih rubrika.</message>
 	<message key="manager.setup.journalSetup">Podešavanje časopisa</message>
 	<message key="manager.language.forms">Obrasci</message>
-	<message key="manager.payment.options.acceptGiftSubscriptionPayments">Ovim će se aktivirati poklon pretplate čime će čitatelji časopisa moći kupiti poklon pretplate za druge čitatelje.</message>
 	<message key="manager.language.ui">UI</message>
 	<message key="manager.language.submissions">Podneseni članci</message>
 	<message key="manager.languages.languageInstructions"><![CDATA[OJS može biti dostupan korisnicima na bilo kojem od mnogo podržanih jezika. OJS, može funkcionirati kao multilingvalni sustav i omogućiti korisnicima lak prelazak između jezika na svakoj strani i da se određeni podaci unesu na nekoliko dodatnih jezika.<br /><br />  Ako nije dole izlistan jezik koji podržava OJS pitajte vašeg administratora sustava OJS da instalira jezik iz sučelja za administraciju. Pogledajte u OJS dokumentima instrukcije kako se dodaje podrška za nove jezike.]]></message>
-	<message key="manager.payment.giftFees">Plaćanja poklona</message>
-	<message key="manager.payment.giftFeesDescription">Veza za poklonjenu pretplatu će se pojaviti u stranici Pretplate u O časopisu i u bloku u rubnom stupcu.</message>
 	<message key="manager.people.allUsers">Svi upisani korisnici</message>
 	<message key="manager.setup.historyDescription">Ovaj tekst će se pojaviti u "O časopisu" rubrici na sajtučasopisa i može biti upotrebljen za opis promjena u naslovu, uredništvu i drugim stvarima važnim za povijest izdavanja časopisa.</message>
 	<message key="manager.setup.resetPermissions.description">Izjava o autorskim pravima i informacija o licenci će bititrajno priključena uz objavljen sadržaj, kako se tipodaci ne bi promijenili u slučaju da časopis izmijeni pravila za nove podneske članaka. Pritisni donje dugme da bi se vratile na početno stanje informacije o spremljenim dozvolama uz objavljen sadržaj članka.</message>

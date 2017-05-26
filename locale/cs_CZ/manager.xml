@@ -493,14 +493,11 @@
 	<message key="manager.statistics.reports.defaultReport.articleDownloads">Stažení souborů článku</message>
 	<message key="manager.statistics.reports.filters.byContext.description">Zúžení výsledků podle kontextu (vydání a/nebo článek).</message>
 	<message key="manager.language.submissions">Příspěvky</message>
-	<message key="manager.payment.giftFees">Darovací poplatek</message>
 	<message key="manager.payment.options.purchaseIssueFee">Zakoupit přístup k číslu</message>
 	<message key="manager.setup.resetPermissions.description">Informace o autorský právech a licenci budou stále připojeny k publikovanému obsahu a budou zajišťovat, že se nezmění ani v případě, že časopis změní autorská práva nových příspěvků. K změně autorských práv na standardní hodnostu použijte tlačítko níže.</message>
 	<message key="manager.setup.copyrightYearBasis">Založit rok copyrightu nového článku na</message>
 	<message key="manager.statistics.defaultMetricDescription">Váš časopis je nakonfigurován k využívaní více metrik. Statistiky čtenosti budou zobrazovány ve více souvislostech. Jsou případy, kdy musí být zobrazovány jednotlivé statistiky, např. pro zobrazení seznamu nejčtenějších článků, nebo pro zobrazení rozsahu vyhledávání. Vyberte si, prosím, jednu z nakonfigurovaných metrik jako standardní.</message>
 	<message key="manager.statistics.reports.filters.byObject.description">Upřesněte výsledy podle typu objektu (časopis, číslo, článek, pdf sazebnice, ostatní sazebnice) a/nebo podle jednoho, nebo více id.</message>
-	<message key="manager.payment.giftFeesDescription">Odkaz na dárkové předplatné se objeví v sekci Předplatné na stránce O časopise a také jako součást postranního bloku Předplatné.</message>
-	<message key="manager.payment.options.acceptGiftSubscriptionPayments">Toto aktivuje platby pro dárkové předplatné a umožní čtenářům časopisu zakoupit dárkové předplatné pro jiné čtenáře.</message>
 
 	<!-- Categories -->
 	<message key="manager.setup.categories">Kategorie</message>

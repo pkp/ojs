@@ -37,8 +37,6 @@
 	<message key="manager.payment.enable">Enable</message>
 	<message key="manager.payment.feePaymentOptions">Fee Payment Options</message>
 	<message key="manager.payment.form.numeric">All costs must be positive numeric values (decimal points are allowed)</message>
-	<message key="manager.payment.giftFees">Gift Fees</message>
-	<message key="manager.payment.giftFeesDescription">A gift subscriptions link will appear on the Subscriptions page in About the Journal and as part of the subscriptions sidebar block.</message>
 	<message key="manager.payment.generalFees">General Fees</message>
 	<message key="manager.payment.generalFeesDescription">The Association Membership will appear in About the Journal under Policies, and the donations link will appear above the search function in the right-hand frame.</message>
 	<message key="manager.payment.generalOptions">General Options</message>
@@ -46,7 +44,6 @@
 	<message key="manager.payment.notFound">Not Found</message>
 	<message key="manager.payment.options">Options</message>
 	<message key="manager.payment.options.acceptSubscriptionPayments">This will activate payments for Subscriptions, where types, cost, duration and subscriptions are managed by the Journal (Subscription) Manager.</message>
-	<message key="manager.payment.options.acceptGiftSubscriptionPayments">This will activate payments for gift subscriptions, allowing journal readers to buy gift subscriptions for other readers.</message>
 	<message key="manager.payment.options.donationFee">Donations to journal</message>
 	<message key="manager.payment.options.enablePayments">Click here to enable the Payments module.  You must configure payment settings by filling in the form below.  Note Users will be required to log in to make payments.</message>
 	<message key="manager.payment.options.fastTrackFee">Fast-Track Review</message>

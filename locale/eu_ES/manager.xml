@@ -482,9 +482,6 @@
 	<message key="manager.subscriptionTypes.form.subscriptions">Harpidetzak</message>
 	<message key="manager.subscriptionTypes.form.individual">Indibiduala (erabiltzaileak saioa hastearekin balioztatzen dira)</message>
 	<message key="manager.subscriptionTypes.form.options">Aukerak</message>
-	<message key="manager.payment.giftFees">Opari kuotak</message>
-	<message key="manager.payment.giftFeesDescription">Opari gisako harpidetzen esteka agertuko da Harpidetzen orrian, Aldizkariari buruzko atalean, eta alboko barraren multzoko harpidetzen zati gisa.</message>
-	<message key="manager.payment.options.acceptGiftSubscriptionPayments">Honek opari gisako harpidetzak egiteko ordainketak aktibatuko ditu, eta aldizkariaren irakurleei utziko die beste irakurle batzuentzako opari gisako harpidetzak erosten.</message>
 	<message key="manager.payment.options.purchaseIssueFee">Erosi ale bat</message>
 	<message key="manager.sections.confirmDelete">Ziur al zaude atal hau behin betiko ezabatu nahi duzula?</message>
 	<message key="manager.sections.alertDelete">Atal hau ezabatu aurretik, bertan argitaratutako artikuluak beste atal batzuetara mugitu behar dituzu.</message>

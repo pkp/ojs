@@ -37,8 +37,6 @@
 	<message key="manager.payment.enable">تمكين</message>
 	<message key="manager.payment.feePaymentOptions">خيارات دفع الرسوم</message>
 	<message key="manager.payment.form.numeric">كل التكاليف ينبغي أن تكون بقيم رقمية موجبة (الفوارز العشرية مسموح بها)</message>
-	<message key="manager.payment.giftFees">رسوم الهدايا</message>
-	<message key="manager.payment.giftFeesDescription">رابط إهداء الاشتراكات سيظهر في صفحة الاشتراكات ضمن (عن المجلة) وكجزء من العمود الجانبي للاشتراكات.</message>
 	<message key="manager.payment.generalFees">رسوم عامة</message>
 	<message key="manager.payment.generalFeesDescription">رابطة العضوية ستظهر ضمن (عن المجلة) تحت باب السياسات، ورابط الهبات سيظهر فوق آلية البحث في الإطار الأيمن.</message>
 	<message key="manager.payment.generalOptions">خيارات عامة</message>
@@ -46,7 +44,6 @@
 	<message key="manager.payment.notFound">لم يُعثر عليه</message>
 	<message key="manager.payment.options">الخيارات</message>
 	<message key="manager.payment.options.acceptSubscriptionPayments">هذا الأمر سيُمكن مدفوعات الاشتراكات حيث ستكون: أنواعها ومبالغها ومددها واشتراكاتها مدارة من قبل المجلة عبر (مدير الاشتراكات).</message>
-	<message key="manager.payment.options.acceptGiftSubscriptionPayments">هذا الأمر سيُمكن مدفوعات إهداء الاشتراكات، حيث سيتمكن قراء المجلة من دفع ثمن الاشتراك المُهدى إلى مستخدمين آخرين.</message>
 	<message key="manager.payment.options.donationFee">تقديم الهبات للمجلة</message>
 	<message key="manager.payment.options.enablePayments">أنقر هنا لتمكين وحدة المدفوعات. عليك ضبط إعدادات الدفع عبر إملاء النموذج أدناه. لاحظ أن المستخدمين عليهم الدخول إلى الموقع للقيام بدفع المال.</message>
 	<message key="manager.payment.options.fastTrackFee">التحكيم السريع</message>

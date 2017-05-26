@@ -1055,7 +1055,6 @@ Form verisi gönderilen bağlantılarda başarısız olma olasılığı fazladı
 	<message key="installer.maxFileUploadSize"><![CDATA[Sunucunuz en fazla <strong>{$maxFileUploadSize}</strong> büyüklüğünde dosya yüklenmesini kabul ediyor.]]></message>
 	<message key="site.upgradeAvailable.admin"><![CDATA[ADS'nin kullanılabilir yeni bir sürümü var! Şu halde ADS'nin {$currentVersion} sürümünü kullanıyorsunuz.  {$latestVersion} ADS'nin daha güncel sürümüdür. Güncel sürümü indirmek  ve güncelleme talimatları bulmak için lütfen <a href="http://pkp.sfu.ca/ojs_download" target="_new">bu sayfa</a/yı ziyaret ediniz.]]></message>
 	<message key="site.upgradeAvailable.manager"><![CDATA[ADS'nin kullanılabilir yeni bir sürümü var! Şu halde ADS'nin {$currentVersion} sürümünü kullanıyorsunuz.  {$latestVersion} ADS'nin daha güncel sürümüdür. Yeni sürümü bildirmek için Site Yöneticiniz ({$siteAdminName} <a href="mailto:{$siteAdminEmail}">{$siteAdminEmail}</a>) ile irtibate geçiniz. Daha fazla bilgi edinmek için <a href="http://pkp.sfu.ca/ojs_download" target="_new">buraya</a> tıklayınız.]]></message>
-	<message key="gifts.thankYou">Teşekkürler</message>
 	<message key="navigation.categories">Kategoriler</message>
 	<message key="navigation.categories.browse">Listele</message>
 	<message key="issue.fullIssue">Tüm sayı</message>
@@ -1065,35 +1064,7 @@ Form verisi gönderilen bağlantılarda başarısız olma olasılığı fazladı
 
 İsteğe bağlı hesapları devre dışı bırakmak için bir sebep ile kullanıcıyı pasifleştirebilir.</message>
 	<message key="site.noJournals">Kullanılabilir dergi yoktur.</message>
-	<message key="gifts.buyer">den</message>
-	<message key="gifts.buyerDescription">Bu bağış kimden?</message>
-	<message key="gifts.recipient">ye/ya</message>
-	<message key="gifts.recipientDescription">Bu gağış kime?</message>
-	<message key="gifts.purchaseGiftIndividualSubscription">Bağış Aboneliği</message>
-	<message key="gifts.details">Bağış Detayı</message>
-	<message key="gifts.gift">Bağış</message>
-	<message key="gifts.noteTitle">Başlık</message>
-	<message key="gifts.note">Bağış Notu</message>
-	<message key="gifts.noteTitleRequired">Kişisel mesaj için lütfen başlık giriniz.</message>
-	<message key="gifts.noteRequired">Kişisel bir mesaj giriniz.</message>
-	<message key="gifts.localeRequired">Kişisel mesajınız için lütfen bir dil seçiniz.</message>
-	<message key="gifts.myGifts">Bağışlarım</message>
-	<message key="gifts.manageMyGifts">Bağışlarımı Yönet</message>
-	<message key="gifts.redeemGift">Bağış Bedelini Ödeme</message>
-	<message key="gifts.status.notRedeemed">Kullanılabilir</message>
-	<message key="gifts.status.redeemed">Ödemek</message>
-	<message key="gifts.status.redeemGift">Bağış Bedelini Ödeme</message>
-	<message key="gifts.subscriptions">Abonelikler</message>
-	<message key="gifts.purchaseGiftSubscription">Bağış Aboneliği Ver</message>
-	<message key="gifts.noSubscriptions">Bağış aoneliği yok</message>
-	<message key="gifts.giftRedeemed">Bağış ödemesi başarılı.</message>
-	<message key="gifts.noGiftToRedeem">Bağış ödemesi başarısız.</message>
-	<message key="gifts.giftAlreadyRedeemed">Bu bağış ödemesi zaten yapıldı.</message>
-	<message key="gifts.giftNotValid">Bu bağış geçerli değil ve ödemesi yapılmadı.</message>
-	<message key="gifts.subscriptionTypeNotValid">Bu bağış için abonelik türü geçerli değil. Lütfen abone yöneticisiyle iletişime geçiniz.</message>
 	<message key="payment.type.purchaseIssue">Yayın Ücreti</message>
-	<message key="payment.type.gift">Bağış</message>
-	<message key="payment.type.gift.subscription">Abonelik</message>
 	<message key="installer.allowFileUploads"><![CDATA[Sunucunuz güncel dosya yüklemesini kabul etti: <strong>{$allowFileUploads}</strong>]]></message>
 	<message key="user.profile.profileImage">Profil Resmi</message>
     

@@ -615,9 +615,6 @@
 	<message key="manager.payment.options.purchaseIssueFee">Kjøp nummer</message>
 	<message key="manager.website.archiving">Arkivering</message>
 	<message key="manager.language.submissions">Manuskript</message>
-	<message key="manager.payment.giftFees">Avgift på gaveabonnement</message>
-	<message key="manager.payment.giftFeesDescription">En lenke til gaveabonnement vil vises på Abonnementsiden under Om tidsskriftet og som del av abonnementsidespalten.</message>
-	<message key="manager.payment.options.acceptGiftSubscriptionPayments">Dette vil slå på betalingsverktøy for gaveabonnement, som tillater lesere å kjøpe gaveabonnement for andre lesere.</message>
 	<message key="manager.section.noSectionEditors"><![CDATA[Det er ikke oppnevnt en seksjonsredaktør. Tildel denne rollen til minst en bruker under Administrasjon > Innstillinger > Brukere &amp; roller først.]]></message>
 	<message key="manager.setup.masthead">Kolofon</message>
 	<message key="manager.setup.masthead.description">Opprett en liste over redaktører, redaksjonsledere  og andre personer tilknyttet tidsskriftet.</message>

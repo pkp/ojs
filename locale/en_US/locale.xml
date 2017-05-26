@@ -828,41 +828,6 @@ Active is how many reviews are currently being considered or underway.]]></messa
 	<message key="donations.thankYou">Thank You</message>
 	<message key="donations.thankYouMessage">Thank you for making a contribution.  Your contribution is much appreciated.</message>
 
-	<!-- Gifts -->
-	<message key="gifts.buyer">From</message>
-	<message key="gifts.buyerDescription">Who is this gift from?</message>
-	<message key="gifts.recipient">To</message>
-	<message key="gifts.recipientDescription">Who is this gift to?</message>
-	<message key="gifts.thankYou">Thank You</message>
-	<message key="gifts.thankYouMessage">Your gift purchase has been completed. You will receive a copy of the gift email sent to the recipient once your payment has been processed.</message>
-	<message key="gifts.purchaseGiftIndividualSubscription">Gift Subscription</message>
-	<message key="gifts.subscriptionFormIntroduction">Please fill out the form below. The provided contact information, along with your gift note, will be used to email the recipient and inform them of their new gift subscription (you will also receive a copy of this email).</message>
-	<message key="gifts.details">Gift Details</message>
-	<message key="gifts.detailsDescription">Please select the gift below and include a personalized message that will be emailed to the recipient (you will receive a copy of this email).</message>
-	<message key="gifts.gift">Gift</message>
-	<message key="gifts.noteTitle">Title</message>
-	<message key="gifts.note">Gift Note</message>
-	<message key="gifts.noteTitleRequired">Please provide a title for your personalized message.</message>
-	<message key="gifts.noteRequired">Please provide a personalized message.</message>
-	<message key="gifts.localeRequired">Please select a language for your personalized message.</message>
-	<message key="gifts.myGifts">My Gifts</message>
-	<message key="gifts.manageMyGifts">Manage My Gifts</message>
-	<message key="gifts.redeemGift">Redeem Gift</message>
-	<message key="gifts.status.notRedeemed">Available</message>
-	<message key="gifts.status.redeemed">Redeemed</message>
-	<message key="gifts.status.redeemGift">Redeem Gift</message>
-	<message key="gifts.subscriptions">Subscriptions</message>
-	<message key="gifts.subscriptionsDescription">A gift subscription redeemed here will replace your existing subscription (if you have one). Subscriptions will begin on the redemption date and will be valid for the duration of the subscription type.</message>
-	<message key="gifts.purchaseGiftSubscription">Give a gift subscription</message>
-	<message key="gifts.giftSubscriptionsAvailable">Gift subscriptions are also available. Gift subscriptions can be redeemed at any time by the recipient and are a great way to support this journal.</message>
-	<message key="gifts.noSubscriptions">No gift subscriptions</message>
-	<message key="gifts.giftRedeemed">The gift was successfully redeemed.</message>
-	<message key="gifts.noGiftToRedeem">This gift is not available to be redeemed.</message>
-	<message key="gifts.giftAlreadyRedeemed">This gift has already been redeemed.</message>
-	<message key="gifts.giftNotValid">This gift is not valid and could not be redeemed.</message>
-	<message key="gifts.subscriptionTypeNotValid">The subscription type for this gift is not valid. Please contact the subscription manager.</message>
-	<message key="gifts.subscriptionNonExpiring">The gift was not redeemed since you already have a non-expiring subscription with this journal.</message>
-
 	<!-- Payments -->
 	<message key="payment.loginRequired">You must be logged in to make a payment.</message>
 	<message key="payment.loginRequired.forArticle">Subscription or article purchase required to access item. To verify subscription, access previous purchase, or purchase article, log in to journal.</message>
@@ -885,8 +850,6 @@ Active is how many reviews are currently being considered or underway.]]></messa
 	<message key="payment.type.purchaseIssue">Purchase Issue Fee</message>
 	<message key="payment.type.subscription">Subscription Fee</message>
 	<message key="payment.type.donation">Donations</message>
-	<message key="payment.type.gift">Gift</message>
-	<message key="payment.type.gift.subscription">Subscription</message>
 
 	<message key="payment.donation.makeDonation">Make a donation</message>
 

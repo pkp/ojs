@@ -785,67 +785,6 @@
 ]]></body>
 		<description>هذه الرسالة تسمح لمدققي المجلة بالمطالبة بمعلومات إضافية عن المراجع من المؤلفين.</description>
 	</email_text>
-	<email_text key="GIFT_AVAILABLE">
-		<subject>{$giftNoteTitle}</subject>
-		<body><![CDATA[عزيزنا {$recipientFirstName},<br />
-<br />
-{$buyerFullName} يود مشاركة هدية معك على {$giftJournalName}:<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-{$giftNote}<br />
-<br />
-<br />
-ستتسلم رسالة متابعة تتضمن معلومات الدخول وتوجيهات تستحصل بها هديتك.<br />
-<br />
-نأمل أن تحوز الهدية على رضاك!<br />
-<br />
-{$giftContactSignature}<br />
-]]></body>
-		<description>هذه الرسالة تُشعر متلقي هدية بأن هديته قد تم شراؤها وصارت جاهزة لاستحصالها.</description>
-	</email_text>
-	<email_text key="GIFT_USER_REGISTER">
-		<subject>استحصل هديتك: بيانات الولوج</subject>
-		<body><![CDATA[عزيزنا {$recipientFirstName},<br />
-<br />
-{$buyerFullName} يود مشاركة هدية معك على {$giftJournalName}:<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-لتستحصل هديتك، لطفاً أدخل موقع المجلة على الرابط: {$giftUrl}<br />
-<br />
-اسم الدخول: {$username}<br />
-كلمة مرورك: {$password}<br />
-<br />
-بمجرد دخولك الموقع، سيكون بإمكانك تبديل كلمة المرور في أي وقت.<br />
-<br />
-نأمل أن تحوز الهدية على رضاك!<br />
-<br />
-{$giftContactSignature}<br />
-]]></body>
-		<description>هذه الرسالة تُعلم مستلم الهدية بمعلومات الدخول إلى حساب مسجل جديد.</description>
-	</email_text>
-	<email_text key="GIFT_USER_LOGIN">
-		<subject>استحصل هديتك: بيانات الولوج</subject>
-		<body><![CDATA[عزيزنا {$recipientFirstName},<br />
-<br />
-{$buyerFullName} يود مشاركة هدية معك على {$giftJournalName}:<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-لتستحصل هديتك، لطفاً أدخل موقع المجلة على الرابط: {$giftUrl}<br />
-<br />
-اسم الدخول: {$username}<br />
-<br />
-نأمل أن تحوز الهدية على رضاك!<br />
-<br />
-{$giftContactSignature}<br />
-]]></body>
-		<description>هذه الرسالة تُعلم مستلم الهدية بمعلومات الدخول إلى حساب في الموقع.</description>
-	</email_text>
 	<email_text key="REVISED_VERSION_NOTIFY">
 		<subject>تم رفع نسخة منقحة</subject>
 		<body><![CDATA[{$editorialContactName}:<br />

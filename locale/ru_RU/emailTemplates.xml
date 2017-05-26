@@ -785,67 +785,6 @@ URL подписки: {$subscriptionUrl}<br />
 ]]></body>
 		<description>Это письмо позволяет литературным редакторам запрашивать дополнительную информацию о ссылках у авторов.</description>
 	</email_text>
-	<email_text key="GIFT_AVAILABLE">
-		<subject>{$giftNoteTitle}</subject>
-		<body><![CDATA[Здравствуйте, {$recipientFirstName}!<br />
-<br />
-Наш пользователь, {$buyerFullName}, хотел бы подарить Вам следующий подарок в журнале «{$giftJournalName}»:<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-{$giftNote}<br />
-<br />
-<br />
-Вы получите еще одно письмо, в котором будет информация о входе на сайт журнала и инструкции по получению Вашего подарка.<br />
-<br />
-Мы надеемся, что Вам понравится этот подарок!<br />
-<br />
-{$giftContactSignature}<br />
-]]></body>
-		<description>Это письмо уведомляет получателя подарка о том, что подарок был куплен и доступен для получения.</description>
-	</email_text>
-	<email_text key="GIFT_USER_REGISTER">
-		<subject>Получите Ваш подарок: информация для входа в систему</subject>
-		<body><![CDATA[Здравствуйте, {$recipientFirstName}!<br />
-<br />
-Наш пользователь, {$buyerFullName}, хотел бы подарить Вам следующий подарок в журнале «{$giftJournalName}»:<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-Для получения Вашего подарка войдите на сайт журнала по адресу {$giftUrl}<br />
-<br />
-Имя пользователя: {$username}<br />
-Пароль: {$password}<br />
-<br />
-После входа на сайт Вы можете в любой момент изменить свой пароль.<br />
-<br />
-Мы надеемся, что Вам понравится этот подарок!<br />
-<br />
-{$giftContactSignature}<br />
-]]></body>
-		<description>Это письмо уведомляет получателя подарка о данных для входа на сайт для вновь созданной учетной записи.</description>
-	</email_text>
-	<email_text key="GIFT_USER_LOGIN">
-		<subject>Получите Ваш подарок: информация для входа в систему</subject>
-		<body><![CDATA[Здравствуйте, {$recipientFirstName}!<br />
-<br />
-Наш пользователь, {$buyerFullName}, хотел бы подарить Вам следующий подарок в журнале «{$giftJournalName}»:<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-Для получения Вашего подарка войдите на сайт журнала по адресу {$giftUrl}<br />
-<br />
-Имя пользователя: {$username}<br />
-<br />
-Мы надеемся, что Вам понравится этот подарок!<br />
-<br />
-{$giftContactSignature}<br />
-]]></body>
-		<description>Это письмо уведомляет получателя подарка о данных для входа на сайт.</description>
-	</email_text>
 	<email_text key="REVISED_VERSION_NOTIFY">
 		<subject>Загружена исправленная версия</subject>
 		<body><![CDATA[Здравствуйте, {$editorialContactName}!<br />

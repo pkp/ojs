@@ -486,7 +486,6 @@
 	<message key="manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully">Abonelik türü başarıyla oluşturuldu.</message>
 	<message key="manager.sections.alertDelete">Bu bölümü silmeden önce yayımlanmış makaleleri diğer bölümlere taşımalısınız.</message>
 	<message key="manager.setup.categories.description">Yukarıda listelenen kümelerden uygun kategorileri seçiniz. Okuyucular tamamlanmış dergi kümelerinden kategoriye göre listeleme yapabilirler.</message>
-	<message key="manager.payment.giftFees">Bağış Tutarı</message>
 	<message key="manager.payment.options.purchaseIssueFee">Sayı Satın Al</message>
 	<message key="manager.setup.journalLogo.altText">Dergi Logosu</message>
 	<message key="manager.setup.journalThumbnail">Dergi Görseli (Küçük)</message>

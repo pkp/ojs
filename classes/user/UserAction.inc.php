@@ -107,14 +107,6 @@ class UserAction {
 			$institutionalSubscriptionDao->updateSubscription($oldUserSubscription);
 		}
 
-		// Transfer old user's gifts to new user
-		$giftDao = DAORegistry::getDAO('GiftDAO');
-		$gifts = $giftDao->getAllGiftsByRecipient(ASSOC_TYPE_JOURNAL, $oldUserId);
-		while ($gift = $gifts->next()) {
-			$gift->setRecipientUserId($newUserId);
-			$giftDao->updateObject($gift);
-		}
-
 		// Transfer completed payments.
 		$paymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO');
 		$paymentFactory = $paymentDao->getByUserId($oldUserId);

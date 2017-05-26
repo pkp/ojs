@@ -136,17 +136,6 @@ class OJSQueuedPayment extends QueuedPayment {
 				} else {
 					return __('payment.type.publication');
 				}
-			case PAYMENT_TYPE_GIFT:
-				$giftDao = DAORegistry::getDAO('GiftDAO');
-				$gift =& $giftDao->getGift($this->assocId);
-
-				// Try to return gift details in name
-				if ($gift) {
-					return $gift->getGiftName();
-				}
-
-				// Otherwise, generic gift name
-				return __('payment.type.gift');
 			default:
 				// Invalid payment type
 				assert(false);
@@ -221,28 +210,6 @@ class OJSQueuedPayment extends QueuedPayment {
 				} else {
 					return __('payment.type.publication');
 				}
-			case PAYMENT_TYPE_GIFT:
-				$giftDao = DAORegistry::getDAO('GiftDAO');
-				$gift =& $giftDao->getGift($this->assocId);
-
-				// Try to return gift details in description
-				if ($gift) {
-					import('classes.gift.Gift');
-
-					if ($gift->getGiftType() == GIFT_TYPE_SUBSCRIPTION) {
-						$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
-						$subscriptionType =& $subscriptionTypeDao->getSubscriptionType($gift->getAssocId());
-
-						if ($subscriptionType) {
-							return $subscriptionType->getSubscriptionTypeDescription();	
-						} else {
-							return __('payment.type.gift') . ' ' . __('payment.type.gift.subscription');								
-						}
-					}
-				}
-
-				// Otherwise, generic gift name
-				return __('payment.type.gift');
 			default:
 				// Invalid payment type
 				assert(false);

@@ -129,17 +129,6 @@ class OJSCompletedPayment extends Payment {
 				} else {
 					return __('payment.type.publication');
 				}
-			case PAYMENT_TYPE_GIFT:
-				$giftDao = DAORegistry::getDAO('GiftDAO');
-				$gift =& $giftDao->getGift($this->assocId);
-
-				// Try to return gift details in name
-				if ($gift) {
-					return $gift->getGiftName();
-				}
-
-				// Otherwise, generic gift name
-				return __('payment.type.gift');
 		}
 	}
 
@@ -211,28 +200,6 @@ class OJSCompletedPayment extends Payment {
 				} else {
 					return __('payment.type.publication');
 				}
-			case PAYMENT_TYPE_GIFT:
-				$giftDao = DAORegistry::getDAO('GiftDAO');
-				$gift =& $giftDao->getGift($this->assocId);
-
-				// Try to return gift details in description
-				if ($gift) {
-					import('classes.gift.Gift');
-
-					if ($gift->getGiftType() == GIFT_TYPE_SUBSCRIPTION) {
-						$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
-						$subscriptionType =& $subscriptionTypeDao->getSubscriptionType($gift->getAssocId());
-
-						if ($subscriptionType) {
-							return $subscriptionType->getSubscriptionTypeDescription();
-						} else {
-							return __('payment.type.gift') . ' ' . __('payment.type.gift.subscription');
-						}
-					}
-				}
-
-				// Otherwise, generic gift name
-				return __('payment.type.gift');
 		}
 	}
 
@@ -329,16 +296,6 @@ class OJSCompletedPayment extends Payment {
 				$issue = $issueDao->getById($this->assocId, $this->journalId);
 				if (!$issue) return __('manager.payment.notFound');
 				return $issue->getIssueIdentification();
-			case PAYMENT_TYPE_GIFT:
-				$giftDao = DAORegistry::getDAO('GiftDAO');
-				$gift =& $giftDao->getGift($this->assocId);
-
-				// Try to get buyer and recipient details
-				if ($gift) {
-					return __('gifts.buyer') . ': ' . $gift->getBuyerFullName() . ' (' . $gift->getBuyerEmail() . ') ' . __('gifts.recipient') . ': ' . $gift->getRecipientFullName() . ' (' . $gift->getRecipientEmail() . ')';
-				} else {
-					return false;
-				}
 			case PAYMENT_TYPE_MEMBERSHIP:
 			case PAYMENT_TYPE_DONATION:
 				return false;

@@ -828,41 +828,6 @@
 	<message key="donations.thankYou">Спасибо</message>
 	<message key="donations.thankYouMessage">Спасибо вам за ваш вклад. Мы высоко ценим вашу поддержку.</message>
 
-	<!-- Подарки -->
-	<message key="gifts.buyer">От</message>
-	<message key="gifts.buyerDescription">От кого этот подарок?</message>
-	<message key="gifts.recipient">Кому</message>
-	<message key="gifts.recipientDescription">Для кого этот подарок?</message>
-	<message key="gifts.thankYou">Спасибо</message>
-	<message key="gifts.thankYouMessage">Вы завершили покупку подарка. Вы получите копию письма с информацией о подарке, отправленной получателю подарка, как только ваш платеж будет обработан.</message>
-	<message key="gifts.purchaseGiftIndividualSubscription">Подписка в подарок</message>
-	<message key="gifts.subscriptionFormIntroduction">Пожалуйста, заполните форму ниже. Указанная Вами контактная информация вместе с личным сообщением получателю подарка будут использованы для отправки письма получателю подарка электронной почтой и информирования его о новой, подаренной подписке (вы также получите копию этого письма).</message>
-	<message key="gifts.details">Информация о подарке</message>
-	<message key="gifts.detailsDescription">Пожалуйста, выберите ниже подарок и добавьте личное сообщение, которое будет отправлено получателю (вы получите копию этого письма).</message>
-	<message key="gifts.gift">Подарок</message>
-	<message key="gifts.noteTitle">Заголовок</message>
-	<message key="gifts.note">Личное сообщение</message>
-	<message key="gifts.noteTitleRequired">Пожалуйста, введите заголовок для личного сообщения.</message>
-	<message key="gifts.noteRequired">Пожалуйста, введите личное сообщение.</message>
-	<message key="gifts.localeRequired">Пожалуйста, выберите язык для личного сообщения.</message>
-	<message key="gifts.myGifts">Мои подарки</message>
-	<message key="gifts.manageMyGifts">Управление моими подарками</message>
-	<message key="gifts.redeemGift">Активировать подарок</message>
-	<message key="gifts.status.notRedeemed">Доступен</message>
-	<message key="gifts.status.redeemed">Активирован</message>
-	<message key="gifts.status.redeemGift">Активировать подарок</message>
-	<message key="gifts.subscriptions">Подписки</message>
-	<message key="gifts.subscriptionsDescription">Подарочная подписка, активированная здесь, заменит Вашу существующую подписку (если она у Вас есть). Подписки начинают действовать с даты получения и действительны в течение срока действия данного типа подписки.</message>
-	<message key="gifts.purchaseGiftSubscription">Подарить подписку</message>
-	<message key="gifts.giftSubscriptionsAvailable">Также доступны подарочные подписки. Подарочные подписки могут быть активированы получателем в любой момент и являются прекрасным способом поддержки этого журнала.</message>
-	<message key="gifts.noSubscriptions">Нет подарочных подписок</message>
-	<message key="gifts.giftRedeemed">Этот подарок был успешно активирован.</message>
-	<message key="gifts.noGiftToRedeem">Это подарок не доступен для активации.</message>
-	<message key="gifts.giftAlreadyRedeemed">Этот подарок уже был активирован.</message>
-	<message key="gifts.giftNotValid">Этот подарок не действителен и не может быть активирован.</message>
-	<message key="gifts.subscriptionTypeNotValid">Тип подписки для этого подарка не действителен. Пожалуйста, свяжитесь с менеджером по подписке.</message>
-	<message key="gifts.subscriptionNonExpiring">Подарок не может быть активирован, так как у вас уже есть бессрочная подписка на этот журнал.</message>
-
 	<!-- Платежи -->
 	<message key="payment.loginRequired">Для осуществления платежа вам необходимо войти в систему.</message>
 	<message key="payment.loginRequired.forArticle">Для доступа требуется подписка или приобретенный доступ к этой статье. Чтобы проверить Вашу подписку, получить доступ к предыдущим покупкам или купить статью, пожалуйста, войдите в систему.</message>
@@ -885,8 +850,6 @@
 	<message key="payment.type.purchaseIssue">Плата за покупку номера</message>
 	<message key="payment.type.subscription">Плата за подписку</message>
 	<message key="payment.type.donation">Пожертвования</message>
-	<message key="payment.type.gift">Подарок</message>
-	<message key="payment.type.gift.subscription">Подписка</message>
 
 	<message key="payment.donation.makeDonation">Сделать пожертвование</message>
 

@@ -1005,43 +1005,8 @@ Pode-se opcionalmente informar o motivo pelo qual está sendo desativado o cadas
 	</li>
 </ol>]]></message>
 	<message key="site.noJournals">Não há publicações disponíveis.</message>
-	<message key="gifts.buyer">Remetente</message>
-	<message key="gifts.buyerDescription">De quem é este presente?</message>
-	<message key="gifts.recipient">Para</message>
-	<message key="gifts.recipientDescription">Para quem é este presente?</message>
-	<message key="gifts.thankYou">Obrigado</message>
-	<message key="gifts.thankYouMessage">A compra do seu presente foi concluída. Será enviada uma cópia da mensagem de presente ao destinatário assim que o pagamento for processado.</message>
-	<message key="gifts.purchaseGiftIndividualSubscription">Assinatura de presentes</message>
-	<message key="gifts.subscriptionFormIntroduction">Preencha o formulário a seguir. Os dados de contato, assim como o texto sobre o presente, serão usados na mensagem ao destinatário, informando sobre a nova assinatura de presente (uma cópia da mensagem também lhe será enviada).</message>
-	<message key="gifts.details">Detalhes do presente</message>
-	<message key="gifts.detailsDescription">Escolha o presente da lista e inclua uma mensagem personalizada que será enviada ao destinatário (você receberá uma cópia da mensagem).</message>
-	<message key="gifts.gift">Presente</message>
-	<message key="gifts.noteTitle">Título</message>
-	<message key="gifts.note">Nota sobre o presente</message>
-	<message key="gifts.noteTitleRequired">Informe o título de sua mensagem personalizada.</message>
-	<message key="gifts.noteRequired">Informe o texto de sua mensagem personalizada.</message>
-	<message key="gifts.localeRequired">Informe o idioma de sua mensagem personalizada.</message>
-	<message key="gifts.myGifts">Meus presentes</message>
-	<message key="gifts.manageMyGifts">Gerenciar presentes</message>
-	<message key="gifts.redeemGift">Resgatar presente</message>
-	<message key="gifts.status.notRedeemed">Disponível</message>
-	<message key="gifts.status.redeemed">Resgatado</message>
-	<message key="gifts.status.redeemGift">Resgatar presente</message>
-	<message key="gifts.subscriptions">Assinaturas</message>
-	<message key="gifts.subscriptionsDescription">Uma assinatura de presente resgatada aqui substituirá sua assinatura atual (caso possua uma). Assinaturas iniciam na data de resgate e serão válidas pelo período do tipo de assinatura.</message>
-	<message key="gifts.purchaseGiftSubscription">Oferecer uma assinatura de presente</message>
-	<message key="gifts.giftSubscriptionsAvailable">Assinaturas de presentes também estão disponíveis. Elas podem ser resgatadas a qualquer tempo pelo destinatário e são uma forma de apoio à esta publicação.</message>
-	<message key="gifts.noSubscriptions">Sem assinaturas de presente</message>
-	<message key="gifts.giftRedeemed">O presente foi resgatado com sucesso.</message>
-	<message key="gifts.noGiftToRedeem">O presente não está disponível para resgate.</message>
-	<message key="gifts.giftAlreadyRedeemed">O presente já foi resgatado.</message>
-	<message key="gifts.giftNotValid">O presente não é válido e não pode ser resgatado.</message>
-	<message key="gifts.subscriptionTypeNotValid">O tipo de assinatura para este presente não é válido. Entre em contato com o gerente de assinaturas.</message>
-	<message key="gifts.subscriptionNonExpiring">O presente não foi resgatado pois já possui uma assinatura permanente para esta publicação.</message>
 	<message key="payment.loginRequired.forIssue">Aquisição de assinatura ou edição obrigatório para acessar este item. Acesse o sistema para verificar assinaturas, acessar compras anteriores ou adquirir edições.</message>
 	<message key="payment.type.purchaseIssue">Taxa de aquisição de edição</message>
-	<message key="payment.type.gift">Presente</message>
-	<message key="payment.type.gift.subscription">Assinatura</message>
 	<message key="installer.allowFileUploads"><![CDATA[Seu servidor permite envio de arquivos: <strong>{$allowFileUploads}</strong>]]></message>
 	<message key="installer.maxFileUploadSize"><![CDATA[Seu servidor permite atualmente envio de arquivos no tamanho máximo de: <strong>{$maxFileUploadSize}</strong>]]></message>
 	<message key="site.upgradeAvailable.admin"><![CDATA[Uma nova versão do sistema está disponível! Sua versão atual é OJS {$currentVersion}. A versão mais recente é OJS {$latestVersion}. Acesse <a href="http://pkp.sfu.ca/ojs_download" target="_new">esta página</a> para baixar a nova versão e para instruções sobre atualização.]]></message>

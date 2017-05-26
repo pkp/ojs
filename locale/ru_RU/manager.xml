@@ -37,8 +37,6 @@
 	<message key="manager.payment.enable">Включить</message>
 	<message key="manager.payment.feePaymentOptions">Параметры платежей</message>
 	<message key="manager.payment.form.numeric">Все цены должны быть положительными числами (можно использовать дробные значения)</message>
-	<message key="manager.payment.giftFees">Платежи за подарки</message>
-	<message key="manager.payment.giftFeesDescription">Ссылка на подарочные подписки появится в разделе «Подписки» на странице «О журнале», а также будет частью блока «Подписки» на боковой панели.</message>
 	<message key="manager.payment.generalFees">Общие платежи</message>
 	<message key="manager.payment.generalFeesDescription">Ссылка «Ассоциированное членство» появится на странице «О журнале» в разделе «Правила», а ссылка для пожертвований появится над полем поиска во фрейме справа.</message>
 	<message key="manager.payment.generalOptions">Общие параметры</message>
@@ -46,7 +44,6 @@
 	<message key="manager.payment.notFound">Не найдено</message>
 	<message key="manager.payment.options">Параметры</message>
 	<message key="manager.payment.options.acceptSubscriptionPayments">Это активирует платежи в разделе «Подписки», где типы подписки, их стоимость и продолжительность управляются менеджером по подписке данного журнала.</message>
-	<message key="manager.payment.options.acceptGiftSubscriptionPayments">Это активирует платежи для подарочных подписок, позволяя читателям журнала покупать подарочные подписки для других читателей.</message>
 	<message key="manager.payment.options.donationFee">Пожертвования журналу</message>
 	<message key="manager.payment.options.enablePayments">Щелкните здесь, чтобы включить модуль «Платежи». Вам нужно сконфигурировать настройки платежей, заполнив форму ниже. Обратите внимание, что для осуществления платежей пользователи должны будут войти на сайт под своей учетной записью.</message>
 	<message key="manager.payment.options.fastTrackFee">Ускоренное рассмотрение</message>
