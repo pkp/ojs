@@ -173,8 +173,8 @@ class WebFeedPlugin extends GenericPlugin {
 				$templateMgr = TemplateManager::getManager($request);
 				$templateMgr->register_function('plugin_url', array($this, 'smartyPluginUrl'));
 
-				$this->import('SettingsForm');
-				$form = new SettingsForm($this, $context->getId());
+				$this->import('WebFeedSettingsForm');
+				$form = new WebFeedSettingsForm($this, $context->getId());
 
 				if ($request->getUserVar('save')) {
 					$form->readInputData();

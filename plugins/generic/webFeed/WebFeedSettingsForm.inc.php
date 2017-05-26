@@ -1,13 +1,13 @@
 <?php
 
 /**
- * @file plugins/generic/webFeed/SettingsForm.inc.php
+ * @file plugins/generic/webFeed/WebFeedSettingsForm.inc.php
  *
  * Copyright (c) 2014-2017 Simon Fraser University
  * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @class SettingsForm
+ * @class WebFeedSettingsForm
  * @ingroup plugins_generic_webFeed
  *
  * @brief Form for managers to modify web feeds plugin settings
@@ -15,7 +15,7 @@
 
 import('lib.pkp.classes.form.Form');
 
-class SettingsForm extends Form {
+class WebFeedSettingsForm extends Form {
 
 	/** @var int Associated context ID */
 	private $_contextId;
@@ -76,7 +76,7 @@ class SettingsForm extends Form {
 	}
 
 	/**
-	 * Save settings. 
+	 * Save settings.
 	 */
 	function execute() {
 		$plugin = $this->_plugin;

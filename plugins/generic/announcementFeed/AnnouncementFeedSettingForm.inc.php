@@ -1,13 +1,13 @@
 <?php
 
 /**
- * @file plugins/generic/announcementFeed/SettingsForm.inc.php
+ * @file plugins/generic/announcementFeed/AnnouncementFeedSettingsForm.inc.php
  *
  * Copyright (c) 2014-2017 Simon Fraser University
  * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @class SettingsForm
+ * @class AnnouncementFeedSettingsForm
  * @ingroup plugins_generic_annoucementFeed
  *
  * @brief Form for journal managers to modify announcement feed plugin settings
@@ -15,7 +15,7 @@
 
 import('lib.pkp.classes.form.Form');
 
-class SettingsForm extends Form {
+class AnnouncementFeedSettingsForm extends Form {
 
 	/** @var int */
 	var $_journalId;
@@ -69,7 +69,7 @@ class SettingsForm extends Form {
 	}
 
 	/**
-	 * Save settings. 
+	 * Save settings.
 	 */
 	function execute() {
 		$plugin = $this->_plugin;
