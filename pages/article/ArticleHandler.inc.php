@@ -203,7 +203,6 @@ class ArticleHandler extends Handler {
 				$articleGalleys = $articleGalleyDao->getBySubmissionId($articleId);
 				while ($articleGalley = $articleGalleys->next()) {
 					$galleyFile = $articleGalley->getFile();
-print_r($galleyFile);
 					if ($galleyFile && $galleyFile->getFileId() == $submissionFile->getFileId()) {
 						header('HTTP/1.1 301 Moved Permanently');
 						$request->redirect(null, null, 'download', array($articleId, $articleGalley->getId(), $submissionFile->getFileId()));
