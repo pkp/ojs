@@ -13,7 +13,7 @@
  * @brief Manual payment plugin class
  */
 
-import('classes.plugins.PaymethodPlugin');
+import('lib.pkp.classes.plugins.PaymethodPlugin');
 
 class ManualPaymentPlugin extends PaymethodPlugin {
 
@@ -50,26 +50,20 @@ class ManualPaymentPlugin extends PaymethodPlugin {
 	}
 
 	/**
-	 * @see PaymentPlugin::getSettingsFormFieldNames
+	 * @copydoc PaymentPlugin::getSettingsForm()
 	 */
-	function getSettingsFormFieldNames() {
-		return array('manualInstructions');
+	function getSettingsForm($context) {
+		$this->import('ManualPaymentSettingsForm');
+		return new ManualPaymentSettingsForm($this, $context->getId());
 	}
 
 	/**
 	 * @see PaymentPlugin::isConfigured
 	 */
 	function isConfigured() {
-		$request = $this->getRequest();
-		$journal = $request->getJournal();
+		$journal = $this->getRequest()->getJournal();
 		if (!$journal) return false;
-
-		// Make sure that all settings form fields have been filled in
-		foreach ($this->getSettingsFormFieldNames() as $settingName) {
-			$setting = $this->getSetting($journal->getId(), $settingName);
-			if (empty($setting)) return false;
-		}
-
+		if ($this->getSetting($journal->getId(), 'manualInstructions') == '') return false;
 		return true;
 	}
 
@@ -158,6 +152,13 @@ class ManualPaymentPlugin extends PaymethodPlugin {
 	 */
 	function getInstallEmailTemplateDataFile() {
 		return ($this->getPluginPath() . '/locale/{$installedLocale}/emailTemplates.xml');
+	}
+
+	/**
+	 * @copydoc Plugin::getTemplatePath()
+	 */
+	function getTemplatePath($inCore = false) {
+		return parent::getTemplatePath($inCore) . 'templates/';
 	}
 }
 
