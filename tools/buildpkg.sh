@@ -112,13 +112,18 @@ echo -n "Checking out corresponding submodules ... "
 git submodule -q update --init --recursive >/dev/null || exit 1
 echo "Done"
 
-echo -n "Installing composer dependencies ... "
+echo "Installing composer dependencies:"
+echo -n " - lib/pkp ... "
 cd lib/pkp
 composer.phar update
-cd lib/vendor/oyejorge/less.php
-composer.phar install
-cd ../../../..
 cd ../..
+echo "Done"
+
+echo -n " - plugins/paymethod/paypal ... "
+cd plugins/paymethod/paypal
+composer.phar install
+cd ../../..
+echo "Done"
 
 echo -n "Preparing package ... "
 cp config.TEMPLATE.inc.php config.inc.php

@@ -1,0 +1,5 @@
+{
+	"require": {
+		"omnipay/paypal": "~2.0"
+	}
+}
