@@ -162,6 +162,7 @@
 		<data file="dbscripts/xml/upgrade/3.0.0_reviewer_files.xml" />
 		<code function="removeCancelledReviewAssignments" condition="return $installer->tableExists('review_assignments_tmp');" />
 		<data file="dbscripts/xml/upgrade/3.1.0_notes.xml" condition="return $installer->tableExists('notes_tmp');" />
+		<data file="dbscripts/xml/upgrade/3.1.0_galley_settings.xml" condition="return $installer->tableExists('article_galley_settings');" />
 		<data file="dbscripts/xml/upgrade/3.1.0_update.xml" />
 		<note file="docs/release-notes/README-3.1.0" />
 	</upgrade>
