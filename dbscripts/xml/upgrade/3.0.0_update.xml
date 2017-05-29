@@ -88,8 +88,10 @@
 	</sql>
 	<!--   Bug #8148: Submission process into PKP lib  -->
 	<sql>
-		<!-- the genre_id for 'article' from genres.xml -->
-		<query>UPDATE submission_files SET genre_id = '1'</query>
+		<!-- issue #2506: the genre_id for 'article' from genres.xml -->
+		<query driver="mysql">UPDATE submission_files sf, genres g, submissions s SET sf.genre_id = g.genre_id WHERE g.entry_key = 'SUBMISSION' AND g.context_id = s.context_id AND s.submission_id = sf.submission_id</query>
+		<query driver="mysqli">UPDATE submission_files sf, genres g, submissions s SET sf.genre_id = g.genre_id WHERE g.entry_key = 'SUBMISSION' AND g.context_id = s.context_id AND s.submission_id = sf.submission_id</query>
+		<query driver="postgres7">UPDATE submission_files SET genre_id = g.genre_id FROM genres g, submissions s WHERE g.entry_key = 'SUBMISSION' AND g.context_id = s.context_id AND s.submission_id = submission_files.submission_id</query>
 	</sql>
 	<!-- Bug #7745: Change no_NO to nb_NO -->
 	<sql>

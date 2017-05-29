@@ -69,11 +69,5 @@
 		<!-- remove old, removed journal settings migrated/concatenated to the new, existing -->
 		<query>DELETE FROM journal_settings WHERE setting_name IN ('focusScopeDesc', 'reviewPolicy', 'pubFreqPolicy', 'openAccessPolicy', 'customAboutItems', 'contributorNote', 'contributors', 'sponsorNote', 'sponsors', 'history')</query>
 	</sql>
-	<sql><!-- pkp/pkp-lib#2537 -->
-		<!-- copy article_galley_settings into submission_galley_settings -->
-		<query>INSERT INTO submission_galley_settings (galley_id, locale, setting_name, setting_value, setting_type) SELECT galley_id, locale, setting_name, setting_value, setting_type FROM article_galley_settings WHERE setting_name &lt;&gt; 'excludeDoi' AND setting_name &lt;&gt; 'excludeURN'</query>
-		<!-- delete old/unused settings from  submission_settings -->
-		<query>DELETE FROM submission_settings WHERE setting_name IN ('excludeDoi', 'excludeURN')</query>
-	</sql>
 </data>
 
