@@ -236,7 +236,7 @@ class ArticleSearch extends SubmissionSearch {
 	 * @return array An array with the articles, published articles,
 	 *  issue, journal, section and the issue availability.
 	 */
-	static function formatResults(&$results) {
+	static function formatResults($results) {
 		$articleDao = DAORegistry::getDAO('ArticleDAO');
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 		$issueDao = DAORegistry::getDAO('IssueDAO');

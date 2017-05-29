@@ -32,6 +32,8 @@
 		<data file="dbscripts/xml/upgrade/3.0.0_adaptBooksForReview.xml" condition="return $installer->tableExists('books_for_review');" />
 		<data file="dbscripts/xml/upgrade/remove_timed_views_bots.xml" condition="return $installer->tableExists('timed_views_log');" />
 		<data file="dbscripts/xml/upgrade/3.0.0_preupdate_commentsToEditor.xml" condition="return $installer->columnExists('submissions', 'comments_to_ed');" />
+		<code function="concatenateIntoAbout" />
+		<code function="concatenateIntoMasthead" />
 	</upgrade>
 
 	<upgrade minversion="3.0.0.0" maxversion="3.0.1.9">
@@ -151,6 +153,7 @@
 	<upgrade minversion="2.4.0.0" maxversion="3.0.9.9">
 		<!--  the order of the next two lines is important -->
 		<code function="moveReviewerFiles" />
+		<code function="fixAuthorGroup" />
 		<data file="dbscripts/xml/upgrade/3.0.0_reviewer_files.xml" />
 		<code function="removeCancelledReviewAssignments" condition="return $installer->tableExists('review_assignments_tmp');" />
 		<data file="dbscripts/xml/upgrade/3.1.0_notes.xml" condition="return $installer->tableExists('notes_tmp');" />
