@@ -103,7 +103,7 @@ class RecommendByAuthorPlugin extends GenericPlugin {
 		$orderBy = array(STATISTICS_METRIC => STATISTICS_ORDER_DESC);
 		$statsReport = $application->getMetrics($metricType, $column, $filter, $orderBy);
 		$orderedResults = array();
-		foreach ($statsReport as $reportRow) {
+		foreach ((array) $statsReport as $reportRow) {
 			$orderedResults[] = $reportRow['submission_id'];
 		}
 		// Make sure we even get results that have no statistics (yet) and that
