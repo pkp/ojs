@@ -51,7 +51,7 @@ class ExportPublishedSubmissionsListGridCellProvider extends DataObjectGridCellP
 				if (empty($title)) $title = __('common.untitled');
 				$authorsInTitle = $publishedSubmission->getShortAuthorString();
 				$title = $authorsInTitle . '; ' . $title;
-				import('lib.pkp.classes.core.ServicesContainer');
+				import('classes.core.ServicesContainer');
 				return array(
 					new LinkAction(
 						'itemWorkflow',
