@@ -61,7 +61,7 @@ class PubIdExportRepresentationsListGridCellProvider extends DataObjectGridCellP
 						new RedirectAction(
 							ServicesContainer::instance()
 									->get('submission')
-									->getWorklowUrlByUserRoles($publishedSubmission)
+									->getWorkflowUrlByUserRoles($publishedSubmission)
 						),
 						$title
 					)
