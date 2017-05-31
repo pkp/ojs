@@ -19,16 +19,10 @@ import('lib.pkp.classes.handler.APIHandler');
 class SubmissionHandler extends APIHandler {
 
 	/**
-	 * The unique endpoint string for this handler
-	 *
-	 * @param string
-	 */
-	protected $_handlerPath = 'submissions';
-
-	/**
 	 * Constructor
 	 */
 	public function __construct() {
+		$this->_handlerPath = 'submissions';
 		$roles = array(ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR, ROLE_ID_ASSISTANT, ROLE_ID_REVIEWER, ROLE_ID_AUTHOR);
 		$this->_endpoints = array(
 			'GET' => array (
