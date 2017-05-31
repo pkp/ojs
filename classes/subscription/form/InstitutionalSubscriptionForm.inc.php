@@ -19,10 +19,9 @@ class InstitutionalSubscriptionForm extends SubscriptionForm {
 	/**
 	 * Constructor
 	 * @param $subscriptionId int leave as default for new subscription
-	 * @param $userId int?
 	 */
-	function __construct($subscriptionId = null, $userId = null) {
-		parent::__construct('subscription/institutionalSubscriptionForm.tpl', $subscriptionId, $userId);
+	function __construct($subscriptionId = null) {
+		parent::__construct('subscriptions/institutionalSubscriptionForm.tpl', $subscriptionId);
 
 		$subscriptionId = isset($subscriptionId) ? (int) $subscriptionId : null;
 		$userId = isset($userId) ? (int) $userId : null;

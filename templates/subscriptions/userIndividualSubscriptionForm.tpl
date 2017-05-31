@@ -1,5 +1,5 @@
 {**
- * templates/subscription/userIndividualSubscriptionForm.tpl
+ * templates/subscriptions/userIndividualSubscriptionForm.tpl
  *
  * Copyright (c) 2014-2017 Simon Fraser University
  * Copyright (c) 2003-2017 John Willinsky
@@ -8,14 +8,6 @@
  * User purchase individual subscription form
  *
  *}
-{strip}
-{assign var="pageTitle" value="user.subscriptions.purchaseIndividualSubscription"}
-{assign var="pageId" value="user.subscriptions.userIndividualSubscriptionForm"}
-{include file="common/header.tpl"}
-{/strip}
-
-<br/>
-
 <script>
 	$(function() {ldelim}
 		// Attach the form handler.
@@ -57,6 +49,3 @@
 </form>
 
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>
-
-{include file="common/footer.tpl"}
-

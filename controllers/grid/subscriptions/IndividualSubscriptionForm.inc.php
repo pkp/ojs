@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file classes/subscription/form/IndividualSubscriptionForm.inc.php
+ * @file controllers/grid/subscriptions/IndividualSubscriptionForm.inc.php
  *
  * Copyright (c) 2014-2017 Simon Fraser University
  * Copyright (c) 2003-2017 John Willinsky
@@ -22,8 +22,8 @@ class IndividualSubscriptionForm extends SubscriptionForm {
 	 * @param $subscriptionId int leave as default for new subscription
 	 * @param $userId int?
 	 */
-	function __construct($subscriptionId = null, $userId = null) {
-		parent::__construct('subscription/individualSubscriptionForm.tpl', $subscriptionId, $userId);
+	function __construct($request, $subscriptionId = null) {
+		parent::__construct('subscriptions/individualSubscriptionForm.tpl', $subscriptionId);
 
 		$subscriptionId = isset($subscriptionId) ? (int) $subscriptionId : null;
 		$userId = isset($userId) ? (int) $userId : null;

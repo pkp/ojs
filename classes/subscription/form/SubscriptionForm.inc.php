@@ -79,15 +79,16 @@ class SubscriptionForm extends Form {
 
 	/**
 	 * Display the form.
+	 * @param $request PKPRequest
 	 */
-	function display() {
+	function fetch($request) {
 		if (isset($this->subscription)) {
 			$subscriptionId = $this->subscription->getId();
 		} else {
 			$subscriptionId = null;
 		}
 
-		$templateMgr = TemplateManager::getManager();
+		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign('subscriptionId', $subscriptionId);
 		$templateMgr->assign('yearOffsetPast', SUBSCRIPTION_YEAR_OFFSET_PAST);
 		$templateMgr->assign('yearOffsetFuture', SUBSCRIPTION_YEAR_OFFSET_FUTURE);
@@ -95,28 +96,30 @@ class SubscriptionForm extends Form {
 		$userDao = DAORegistry::getDAO('UserDAO');
 		$user =& $userDao->getById(isset($this->userId)?$this->userId:$this->getData('userId'));
 
-		$templateMgr->assign('userId', $user->getId());
-		$templateMgr->assign('username', $user->getUsername());
-		$templateMgr->assign('userSalutation', $user->getSalutation());
-		$templateMgr->assign('userFirstName', $user->getFirstName());
-		$templateMgr->assign('userMiddleName', $user->getMiddleName());
-		$templateMgr->assign('userLastName', $user->getLastName());
-		$templateMgr->assign('userInitials', $user->getInitials());
-		$templateMgr->assign('userGender', $user->getGender());
-		$templateMgr->assign('userAffiliation', $user->getAffiliation(null)); // Localized
-		$templateMgr->assign('userUrl', $user->getUrl());
-		$templateMgr->assign('userFullName', $user->getFullName());
-		$templateMgr->assign('userEmail', $user->getEmail());
-		$templateMgr->assign('userPhone', $user->getPhone());
-		$templateMgr->assign('userMailingAddress', $user->getMailingAddress());
-		$templateMgr->assign('userCountry', $user->getCountry());
+		if ($user) {
+			$templateMgr->assign('userId', $user->getId());
+			$templateMgr->assign('username', $user->getUsername());
+			$templateMgr->assign('userSalutation', $user->getSalutation());
+			$templateMgr->assign('userFirstName', $user->getFirstName());
+			$templateMgr->assign('userMiddleName', $user->getMiddleName());
+			$templateMgr->assign('userLastName', $user->getLastName());
+			$templateMgr->assign('userInitials', $user->getInitials());
+			$templateMgr->assign('userGender', $user->getGender());
+			$templateMgr->assign('userAffiliation', $user->getAffiliation(null)); // Localized
+			$templateMgr->assign('userUrl', $user->getUrl());
+			$templateMgr->assign('userFullName', $user->getFullName());
+			$templateMgr->assign('userEmail', $user->getEmail());
+			$templateMgr->assign('userPhone', $user->getPhone());
+			$templateMgr->assign('userMailingAddress', $user->getMailingAddress());
+			$templateMgr->assign('userCountry', $user->getCountry());
+		}
 		$templateMgr->assign('genderOptions', $userDao->getGenderOptions());
 
 		$templateMgr->assign('validStatus', $this->validStatus);
 		$templateMgr->assign('subscriptionTypes', $this->subscriptionTypes);
 		$templateMgr->assign('validCountries', $this->validCountries);
 
-		parent::display();
+		return parent::fetch($request);
 	}
 
 	/**

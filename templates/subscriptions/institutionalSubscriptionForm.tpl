@@ -1,5 +1,5 @@
 {**
- * templates/subscription/institutionalSubscriptionForm.tpl
+ * templates/subscriptions/institutionalSubscriptionForm.tpl
  *
  * Copyright (c) 2014-2017 Simon Fraser University
  * Copyright (c) 2003-2017 John Willinsky
@@ -8,19 +8,6 @@
  * Individual subscription form under journal management.
  *
  *}
-{strip}
-{if $subscriptionId}
-	{assign var="pageTitle" value="manager.subscriptions.edit"}
-	{url|assign:"currentUrl" op="editSubscription" path="institutional"|to_array:$subscriptionId userId=$userId}
-{else}
-	{assign var="pageTitle" value="manager.subscriptions.create"}
-	{url|assign:"currentUrl" op="createSubscription" path="institutional" userId=$userId}
-{/if}
-{assign var="pageId" value="manager.subscriptions.institutionalSubscriptionForm"}
-{include file="common/header.tpl"}
-{/strip}
-
-<br/>
 <script>
 	$(function() {ldelim}
 		// Attach the form handler.
@@ -129,8 +116,7 @@
 	<td class="label">{fieldLabel name="userId" required="true" key="manager.subscriptions.form.userContact"}</td>
 	<td class="value">
 		{assign var=emailString value="$userFullName <$userEmail>"}
-		{url|assign:"url" page="user" op="email" to=$emailString|to_array redirectUrl=$currentUrl}
-		{$username|escape}&nbsp;&nbsp;{icon name="mail" url=$url}&nbsp;&nbsp;<a href="{if $subscriptionId}{url op="selectSubscriber" path="institutional" subscriptionId=$subscriptionId}{else}{url op="selectSubscriber" path="institutional"}{/if}" class="action">{translate key="common.select"}</a>
+		{$username|escape}&nbsp;&nbsp;<a href="{if $subscriptionId}{url op="selectSubscriber" path="institutional" subscriptionId=$subscriptionId}{else}{url op="selectSubscriber" path="institutional"}{/if}" class="action">{translate key="common.select"}</a>
 		<input type="hidden" name="userId" id="userId" value="{$userId|escape}"/>
 	</td>
 </tr>
@@ -153,6 +139,3 @@
 </form>
 
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>
-
-{include file="common/footer.tpl"}
-

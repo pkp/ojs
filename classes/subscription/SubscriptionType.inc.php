@@ -28,22 +28,6 @@ class SubscriptionType extends DataObject {
 	//
 
 	/**
-	 * Get the ID of the subscription type.
-	 * @return int
-	 */
-	function getTypeId() {
-		return $this->getData('typeId');
-	}
-
-	/**
-	 * Set the ID of the subscription type.
-	 * @param $typeId int
-	 */
-	function setTypeId($typeId) {
-		return $this->setData('typeId', $typeId);
-	}
-
-	/**
 	 * Get the journal ID of the subscription type.
 	 * @return int
 	 */
@@ -63,7 +47,7 @@ class SubscriptionType extends DataObject {
 	 * Get the localized subscription type name
 	 * @return string
 	 */
-	function getSubscriptionTypeName() {
+	function getLocalizedName() {
 		return $this->getLocalizedData('name');
 	}
 

@@ -1,5 +1,5 @@
 {**
- * templates/subscription/subscriptionTypes.tpl
+ * templates/subscriptions/subscriptionTypes.tpl
  *
  * Copyright (c) 2014-2017 Simon Fraser University
  * Copyright (c) 2003-2017 John Willinsky
@@ -8,11 +8,6 @@
  * Display list of subscription types in journal management.
  *
  *}
-{strip}
-{assign var="pageTitle" value="manager.subscriptionTypes"}
-{assign var="pageId" value="manager.subscriptionTypes"}
-{include file="common/header.tpl"}
-{/strip}
 <script>
 {literal}
 $(document).ready(function() { setupTableDND("#subscriptionTypesTable", "moveSubscriptionType"); });
@@ -74,6 +69,3 @@ $(document).ready(function() { setupTableDND("#subscriptionTypesTable", "moveSub
 
 <a href="{url op="createSubscriptionType"}" class="action">{translate key="manager.subscriptionTypes.create"}</a>
 </div>
-
-{include file="common/footer.tpl"}
-

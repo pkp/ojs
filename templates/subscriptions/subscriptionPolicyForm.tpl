@@ -1,5 +1,5 @@
 {**
- * templates/subscription/subscriptionPolicyForm.tpl
+ * templates/subscriptions/subscriptionPolicyForm.tpl
  *
  * Copyright (c) 2014-2017 Simon Fraser University
  * Copyright (c) 2003-2017 John Willinsky
@@ -8,21 +8,6 @@
  * Setup subscription policies.
  *
  *}
-{strip}
-{assign var="pageTitle" value="manager.subscriptionPolicies"}
-{assign var="pageId" value="manager.subscriptionPolicies"}
-{include file="common/header.tpl"}
-{/strip}
-
-<ul class="menu">
-	<li><a href="{url op="subscriptionsSummary"}">{translate key="manager.subscriptions.summary"}</a></li>
-	<li><a href="{url op="subscriptions" path="individual"}">{translate key="manager.individualSubscriptions"}</a></li>
-	<li><a href="{url op="subscriptions" path="institutional"}">{translate key="manager.institutionalSubscriptions"}</a></li>
-	<li><a href="{url op="subscriptionTypes"}">{translate key="manager.subscriptionTypes"}</a></li>
-	<li class="current"><a href="{url op="subscriptionPolicies"}">{translate key="manager.subscriptionPolicies"}</a></li>
-	<li><a href="{url op="payments"}">{translate key="manager.payments"}</a></li>
-</ul>
-
 {if $subscriptionPoliciesSaved}
 <br/>
 {translate key="manager.subscriptionPolicies.subscriptionPoliciesSaved"}<br />
@@ -257,6 +242,3 @@
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>
 
 </form>
-
-{include file="common/footer.tpl"}
-
