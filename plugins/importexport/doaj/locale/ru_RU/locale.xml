@@ -22,6 +22,7 @@
 	<message key="plugins.importexport.doaj.settings.form.automaticRegistration.description">OJS будет автоматически депонировать статьи в DOAJ. Обратите внимание, что это может потребовать небольшого количества времени после публикации для обработки. Вы можете проверить все незарегистрированные статьи.</message>
 	<message key="plugins.importexport.doaj.settings.form.testMode.description">Использовать тестовый API DOAJ (среда тестирования) для регистрации. Пожалуйста, не забудьте убрать этот параметр для реальной работы.</message>
 	  
+	<message key="plugins.importexport.doaj.senderTask.name">Задача автоматической регистрации DOAJ</message>
 	<message key="plugins.importexport.doaj.register.error.mdsError">Депонирование не удалось! API DOAJ  вернул ошибку : «{$param}».</message>
 	
 	<message key="plugins.importexport.doaj.cliUsage"><![CDATA[Вызов:
