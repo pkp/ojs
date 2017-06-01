@@ -20,9 +20,11 @@
 	/** @type {Object} */
 	$.pkp.controllers.grid.issues = $.pkp.controllers.grid.issues || {};
 
+
 	/** @type {Object} */
 	$.pkp.controllers.grid.issues.BackIssueGridHandler =
 			$.pkp.controllers.grid.issues.BackIssueGridHandler || {};
+
 
 
 	/**
@@ -38,7 +40,7 @@
 			function($grid, options) {
 		this.parent($grid, options);
 
-		this.bindGlobal('issuePublished', this.refreshGridHandler );
+		this.bindGlobal('issuePublished', this.refreshGridHandler);
 	};
 	$.pkp.classes.Helper.inherits(
 			$.pkp.controllers.grid.issues.BackIssueGridHandler,
