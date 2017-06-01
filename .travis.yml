@@ -29,6 +29,12 @@ before_install:
   # Install composer dependencies
   - cd lib/pkp && composer update && cd ../..
 
+  # Install node depenencies
+  - . $HOME/.nvm/nvm.sh
+  - nvm install stable
+  - nvm use stable
+  - npm install && npm run build
+
   # Configure the webserver
   - if [[ "$TEST" != "validation" ]]; then ./lib/pkp/tools/travis/prepare-webserver.sh; fi
 
