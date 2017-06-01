@@ -21,11 +21,6 @@
 	$.pkp.controllers.grid.issues = $.pkp.controllers.grid.issues || {};
 
 
-	/** @type {Object} */
-	$.pkp.controllers.grid.issues.BackIssueGridHandler =
-			$.pkp.controllers.grid.issues.BackIssueGridHandler || {};
-
-
 
 	/**
 	 * @constructor
