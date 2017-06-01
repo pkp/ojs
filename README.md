@@ -22,6 +22,12 @@ Install or update dependencies via Composer:
     curl -sS https://getcomposer.org/installer | php
     php composer.phar update
 
+Install or update dependencies via [NPM](https://www.npmjs.com/):
+
+    # install [nodejs](https://nodejs.org/en/) if you don't already have it
+    npm install
+    npm run build
+
 If your PHP version supports built-in development server :
 
     php -S localhost:8000
