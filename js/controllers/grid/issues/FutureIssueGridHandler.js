@@ -17,14 +17,6 @@
  */
 (function($) {
 
-	/** @type {Object} */
-	$.pkp.controllers.grid.issues = $.pkp.controllers.grid.issues || {};
-
-
-	/** @type {Object} */
-	$.pkp.controllers.grid.issues.FutureIssueGridHandler =
-			$.pkp.controllers.grid.issues.FutureIssueGridHandler || {};
-
 
 
 	/**
