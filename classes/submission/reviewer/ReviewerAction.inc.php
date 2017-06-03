@@ -68,7 +68,13 @@ class ReviewerAction extends Action {
 
 				// Add log
 				import('classes.article.log.ArticleLog');
-				ArticleLog::logEvent($request, $reviewerSubmission, $decline?ARTICLE_LOG_REVIEW_DECLINE:ARTICLE_LOG_REVIEW_ACCEPT, $decline?'log.review.reviewDeclined':'log.review.reviewAccepted', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $reviewAssignment->getSubmissionId(), 'round' => $reviewAssignment->getRound(), 'reviewId' => $reviewAssignment->getId()));
+				// Check if there is a user logged in, or if this was called via an access key
+				$requestUser = $request->getUser();
+				if (!$requestUser) {
+					$requestUser = $reviewer;
+				}
+				$journal = $request->getJournal();
+				ArticleLog::logEventHeadless($journal, $requestUser->getId(), $reviewerSubmission, $decline?ARTICLE_LOG_REVIEW_DECLINE:ARTICLE_LOG_REVIEW_ACCEPT, $decline?'log.review.reviewDeclined':'log.review.reviewAccepted', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $reviewAssignment->getSubmissionId(), 'round' => $reviewAssignment->getRound(), 'reviewId' => $reviewAssignment->getId()));
 				return true;
 			} else {
 				if (!$request->getUserVar('continued')) {
@@ -147,7 +153,13 @@ class ReviewerAction extends Action {
 
 				// Add log
 				import('classes.article.log.ArticleLog');
-				ArticleLog::logEvent($request, $reviewerSubmission, ARTICLE_LOG_REVIEW_RECOMMENDATION, 'log.review.reviewRecommendationSet', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $reviewAssignment->getSubmissionId(), 'round' => $reviewAssignment->getRound(), 'reviewId' => $reviewAssignment->getId()));
+				// Check if there is a user logged in, or if this was called via an access key
+				$requestUser = $request->getUser();
+				if (!$requestUser) {
+					$requestUser = $reviewer;
+				}
+				$journal = $request->getJournal();
+				ArticleLog::logEventHeadless($journal, $requestUser->getId(), $reviewerSubmission, ARTICLE_LOG_REVIEW_RECOMMENDATION, 'log.review.reviewRecommendationSet', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $reviewAssignment->getSubmissionId(), 'round' => $reviewAssignment->getRound(), 'reviewId' => $reviewAssignment->getId()));
 			} else {
 				if (!$request->getUserVar('continued')) {
 					$assignedEditors = $email->ccAssignedEditors($reviewerSubmission->getId());
@@ -218,7 +230,13 @@ class ReviewerAction extends Action {
 
 			// Add log
 			import('classes.article.log.ArticleLog');
-			ArticleLog::logEvent($request, $reviewerSubmission, ARTICLE_LOG_REVIEW_FILE, 'log.review.reviewerFile', array('reviewId' => $reviewAssignment->getId()));
+			// Check if there is a user logged in, or if this was called via an access key
+			$requestUser = $request->getUser();
+			if (!$requestUser) {
+				$requestUser = $reviewer;
+			}
+			$journal = $request->getJournal();
+			ArticleLog::logEventHeadless($journal, $requestUser->getId(), $reviewerSubmission, ARTICLE_LOG_REVIEW_FILE, 'log.review.reviewerFile', array('reviewId' => $reviewAssignment->getId()));
 		}
 	}
 
