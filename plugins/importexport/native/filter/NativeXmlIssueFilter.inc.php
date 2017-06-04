@@ -64,25 +64,33 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 	function handleElement($node) {
 		$deployment = $this->getDeployment();
 		$context = $deployment->getContext();
-		$user = $deployment->getUser();
 
-		// Create and insert the issue (ID needed for other entities)
 		$issueDao = DAORegistry::getDAO('IssueDAO');
-		$issue = $issueDao->newDataObject();
-		$issue->setJournalId($context->getId());
-		$issue->setPublished($node->getAttribute('published'));
-		$issue->setCurrent($node->getAttribute('current'));
-		$issue->setAccessStatus($node->getAttribute('access_status'));
-
-		$issueDao->insertObject($issue);
+		// if the issue identification matches an existing issue, flag to process only child objects
+		$issueExists = false;
+		$issue = $this->_issueExists($node);
+		if ($issue) {
+			$issueExists = true;
+		} else {
+			// Create and insert the issue (ID needed for other entities)
+			$issue = $issueDao->newDataObject();
+			$issue->setJournalId($context->getId());
+			$issue->setPublished($node->getAttribute('published'));
+			$issue->setCurrent($node->getAttribute('current'));
+			$issue->setAccessStatus($node->getAttribute('access_status'));
+			$issueDao->insertObject($issue);
+			$deployment->addProcessedObjectId(ASSOC_TYPE_ISSUE, $issue->getId());
+		}
 		$deployment->setIssue($issue);
 
 		for ($n = $node->firstChild; $n !== null; $n=$n->nextSibling) {
 			if (is_a($n, 'DOMElement')) {
-				$this->handleChildElement($n, $issue);
+				$this->handleChildElement($n, $issue, $issueExists);
 			}
 		}
-		$issueDao->updateObject($issue); // Persist setters
+		if (!$issueExists) {
+			$issueDao->updateObject($issue); // Persist setters
+		}
 		return $issue;
 	}
 
@@ -90,8 +98,9 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 	 * Handle an element whose parent is the issue element.
 	 * @param $n DOMElement
 	 * @param $issue Issue
+	 * @param $processOnlyChildren boolean Do not modify the issue itself, only generate child objects
 	 */
-	function handleChildElement($n, $issue) {
+	function handleChildElement($n, $issue, $processOnlyChildren) {
 		$deployment = $this->getDeployment();
 		$context = $deployment->getContext();
 
@@ -99,34 +108,46 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 		$dateSetterMappings = $this->_getDateIssueSetterMappings();
 
 		if (isset($localizedSetterMappings[$n->tagName])) {
-			// If applicable, call a setter for localized content.
-			$setterFunction = $localizedSetterMappings[$n->tagName];
-			list($locale, $value) = $this->parseLocalizedContent($n);
-			if (empty($locale)) $locale = $context->getPrimaryLocale();
-			$issue->$setterFunction($value, $locale);
+			if (!$processOnlyChildren) {
+				// If applicable, call a setter for localized content.
+				$setterFunction = $localizedSetterMappings[$n->tagName];
+				list($locale, $value) = $this->parseLocalizedContent($n);
+				if (empty($locale)) $locale = $context->getPrimaryLocale();
+				$issue->$setterFunction($value, $locale);
+			}
 		} else if (isset($dateSetterMappings[$n->tagName])) {
-			// Not a localized element?  Check for a date.
-			$setterFunction = $dateSetterMappings[$n->tagName];
-			$issue->$setterFunction(strtotime($n->textContent));
+			if (!$processOnlyChildren) {
+				// Not a localized element?  Check for a date.
+				$setterFunction = $dateSetterMappings[$n->tagName];
+				$issue->$setterFunction(strtotime($n->textContent));
+			}
 		} else switch ($n->tagName) {
 			// Otherwise, delegate to specific parsing code
 			case 'id':
-				$this->parseIdentifier($n, $issue);
+				if (!$processOnlyChildren) {
+					$this->parseIdentifier($n, $issue);
+				}
 				break;
 			case 'articles':
 				$this->parseArticles($n, $issue);
 				break;
 			case 'issue_galleys':
-				$this->parseIssueGalleys($n, $issue);
+				if (!$processOnlyChildren) {
+					$this->parseIssueGalleys($n, $issue);
+				}
 				break;
 			case 'sections':
 				$this->parseSections($n, $issue);
 				break;
 			case 'issue_covers':
-				$this->parseIssueCovers($n, $issue);
+				if (!$processOnlyChildren) {
+					$this->parseIssueCovers($n, $issue);
+				}
 				break;
 			case 'issue_identification':
-				$this->parseIssueIdentification($n, $issue);
+				if (!$processOnlyChildren) {
+					$this->parseIssueIdentification($n, $issue);
+				}
 				break;
 			default:
 				$deployment->addWarning(ASSOC_TYPE_ISSUE, $issue->getId(), __('plugins.importexport.common.error.unknownElement', array('param' => $n->tagName)));
@@ -243,7 +264,7 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 			if (is_a($n, 'DOMElement')) {
 				switch ($n->tagName) {
 					case 'section':
-						$this->parseSection($n, $issue);
+						$this->parseSection($n);
 						break;
 					default:
 						$deployment->addWarning(ASSOC_TYPE_ISSUE, $issue->getId(), __('plugins.importexport.common.error.unknownElement', array('param' => $n->tagName)));
@@ -255,13 +276,10 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 	/**
 	 * Parse a section stored in an issue.
 	 * @param $node DOMElement
-	 * @param $issue Issue
 	 */
-	function parseSection($node, $issue) {
+	function parseSection($node) {
 		$deployment = $this->getDeployment();
 		$context = $deployment->getContext();
-		$issue = $deployment->getIssue();
-		assert(is_a($issue, 'Issue'));
 
 		// Create the data object
 		$sectionDao = DAORegistry::getDAO('SectionDAO');
@@ -369,8 +387,9 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 	 * Parse out the issue identification and store it in an issue.
 	 * @param $node DOMElement
 	 * @param $issue Issue
+	 * @param $allowWarnings boolean Warnings should be suppressed if this function is not being used to populate a new issue
 	 */
-	function parseIssueIdentification($node, $issue) {
+	function parseIssueIdentification($node, $issue, $allowWarnings = true) {
 		$deployment = $this->getDeployment();
 		$context = $deployment->getContext();
 		for ($n = $node->firstChild; $n !== null; $n=$n->nextSibling) {
@@ -395,7 +414,9 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 						$issue->setShowTitle(1);
 						break;
 					default:
-						$deployment->addWarning(ASSOC_TYPE_ISSUE, $issue->getId(), __('plugins.importexport.common.error.unknownElement', array('param' => $n->tagName)));
+						if ($allowWarnings) {
+							$deployment->addWarning(ASSOC_TYPE_ISSUE, $issue->getId(), __('plugins.importexport.common.error.unknownElement', array('param' => $n->tagName)));
+						}
 				}
 			}
 		}
@@ -425,6 +446,27 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 			'last_modified'		=> 'setLastModified',
 			'open_access_date'	=> 'setOpenAccessDate',
 		);
+	}
+
+	/**
+	 * Check if the issue already exists.
+	 * @param $node DOMNode issue node
+	 * return Issue|null matching issue, or null if no match
+	**/
+	function _issueExists($node) {
+		$deployment = $this->getDeployment();
+		$context = $deployment->getContext();
+		$issue = null;
+		$issueDao = DAORegistry::getDAO('IssueDAO');
+		foreach ($node->getElementsByTagName('issue_identification') as $n) {
+			$searchIssue = $issueDao->newDataObject();
+			$this->parseIssueIdentification($n, $searchIssue, false);
+			$foundIssues = $issueDao->getIssuesByIdentification($context->getId(), $searchIssue->getVolume(), $searchIssue->getNumber(), $searchIssue->getYear(), $searchIssue->getTitle(null));
+			foreach ($foundIssues->toArray() as $issue) {
+				$deployment->addWarning(ASSOC_TYPE_ISSUE, $issue->getId(), __('plugins.importexport.native.import.error.issueIdentificationDuplicate', array('issueId' => $issue->getId(), 'issueIdentification' => $n->ownerDocument->saveXML($n))));
+			}
+		}
+		return $issue;
 	}
 
 	/**

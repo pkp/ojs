@@ -337,14 +337,15 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 					return;
 				}
 
-				$filter = 'native-xml=>issue';
-				// is this articles import:
 				if (!file_exists($xmlFile)) {
 					echo __('plugins.importexport.common.cliError') . "\n";
 					echo __('plugins.importexport.common.export.error.inputFileNotReadable', array('param' => $xmlFile)) . "\n\n";
 					$this->usage($scriptName);
 					return;
 				}
+
+				$filter = 'native-xml=>issue';
+				// is this articles import:
 				$xmlString = file_get_contents($xmlFile);
 				$document = new DOMDocument();
 				$document->loadXml($xmlString);
