@@ -1,0 +1,320 @@
+swagger: '2.0'
+info:
+  version: '1.0'
+  title: Open Journal Systems API
+  description: API to interact with Open Journal Systems
+  contact:
+    name: Public Knowledge Project
+    url: 'http://pkp.sfu.ca'
+produces:
+  - application/json
+securityDefinitions:
+  ApiTokenQueryParam:
+    type: apiKey
+    in: query
+    name: apiToken
+security:
+  - ApiTokenQueryParam: []
+host: localhost:8000
+basePath: /index.php/publicknowledge/api/v1
+schemes:
+  - http
+  - https
+tags:
+  - name: "Submissions"
+    description: "It's all about submissions"
+  - name: "Files"
+    description: "Submission files"
+  - name: "Galleys"
+    description: "Submission galleys"
+  - name: "Issues"
+    description: "Issue listing"
+  - name: "Articles"
+    description: "Published articles"
+  - name: "Backend"
+    description: "OJS UI sustaining endpoints"
+paths:
+  '/submissions/{submissionId}':
+    get:
+      tags:
+        - Submissions
+      summary: Submission metadata
+      description: |
+        Get submission metadata
+      parameters:
+        - name: submissionId
+          in: path
+          description: Submission ID
+          required: true
+          type: integer
+        - name: format
+          in: query
+          description: Stage ID
+          required: false
+          type: string
+          default: 'dc11'
+      responses:
+        '200':
+          description: submission metadata
+          
+  '/submissions/{submissionId}/files':
+    get:
+      tags:
+        - Submissions
+      summary: Submission files by stage
+      description: |
+        Retrieve all submission files for the given file stage
+      parameters:
+        - name: submissionId
+          in: path
+          description: Submission ID
+          required: true
+          type: integer
+        - name: fileStage
+          in: query
+          description: File stage ID
+          required: false
+          type: integer
+      responses:
+        '200':
+          description: array of submission file metadata
+          
+  '/submissions/{submissionId}/participants':
+    get:
+      tags:
+        - Submissions
+      summary: Submission participants
+      description: |
+        Retrieve all participants for a given file stage
+      parameters:
+        - name: submissionId
+          in: path
+          description: Submission ID
+          required: true
+          type: integer
+        - name: stageId
+          in: query
+          description: Stage ID
+          required: false
+          type: integer
+          default: 1
+      responses:
+        '200':
+          description: array of user metadata
+        
+  '/submissions/{submissionId}/galleys':
+    get:
+      tags:
+        - Submissions
+      summary: Submission galleys
+      description: |
+        Retrieve all the submission's galleys
+      parameters:
+        - name: submissionId
+          in: path
+          description: Submission ID
+          required: true
+          type: integer
+      responses:
+        '200':
+          description: array of galley metadata
+  
+  '/files/{fileId}':
+    get:
+      tags:
+        - Files
+      summary: Submission file download
+      description: |
+        Handle submission file download
+      parameters:
+        - name: fileId
+          in: path
+          description: File ID
+          required: true
+          type: integer
+        - name: submissionId
+          in: query
+          description: Submission ID
+          required: true
+          type: integer
+        - name: revision
+          in: query
+          description: Revision
+          required: false
+          type: integer
+      responses:
+        '200':
+          description: binary file
+          
+  '/galleys/{representationId}':
+    get:
+      tags:
+        - Galleys
+      summary: Galley file download
+      description: |
+        Handle galley file download
+      parameters:
+        - name: representationId
+          in: path
+          description: Galley ID
+          required: true
+          type: integer
+        - name: submissionId
+          in: query
+          description: Submission ID
+          required: true
+          type: integer
+      responses:
+        '200':
+          description: binary file
+          
+  '/issues/':
+    get:
+      tags:
+        - Issues
+      summary: Issue listing
+      description: |
+        Get the issue listing
+      parameters:
+        - name: volume
+          in: query
+          description: Volume
+          required: false
+          type: integer
+        - name: number
+          in: query
+          description: Volume
+          required: false
+          type: integer
+        - name: year
+          in: query
+          description: Volume
+          required: false
+          type: integer
+      responses:
+        '200':
+          description: array of issues
+      
+  '/issues/{issueId}':
+    get:
+      tags:
+        - Issues
+      summary: Issue details
+      description: |
+        Get information about a specific issue
+      parameters:
+        - name: issueId
+          in: path
+          description: Issue ID
+          required: true
+          type: integer
+      responses:
+        '200':
+          description: issue metadata
+          
+  '/articles/{articleId}':
+    get:
+      tags:
+        - Articles
+      summary: Article details
+      description: |
+        Get information about a specific published article
+      parameters:
+        - name: articleId
+          in: path
+          description: Article ID
+          required: true
+          type: integer
+      responses:
+        '200':
+          description: published article
+  
+  '/backend/submissions':
+    get:
+      tags:
+        - Backend
+      summary: Submission list
+      description: |
+        Retrieve submission list
+      parameters:
+        - name: orderColumn
+          in: query
+          description: Field to order by 
+          required: false
+          type: string
+          default: id
+        - name: orderDirection
+          in: query
+          description: Order direction
+          required: false
+          type: string
+          default: 'DESC'
+        - name: assignedTo
+          in: query
+          description: Assignee user ID
+          required: false
+          type: integer
+        - name: statuses
+          in: query
+          description: Status list
+          required: false
+          type: array
+          items:
+            type: integer
+        - name: searchPhrase
+          in: query
+          description: Search phrase
+          required: false
+          type: string
+        - name: count
+          in: query
+          description: Number of submission to return
+          required: false
+          type: integer
+        - name: page
+          in: query
+          description: Page number for pagination
+          required: false
+          type: integer
+      responses:
+        '200':
+          description: array of submissions
+          
+  '/backend/users':
+    get:
+      tags:
+        - Backend
+      summary: Users list
+      description: |
+        Retrieve user list
+      parameters:
+        - name: userGroupId
+          in: query
+          description: User group ID 
+          required: false
+          type: integer
+        - name: includeNoRole
+          in: query
+          description: Include users with no roles in this journal
+          required: false
+          type: boolean
+          default: false
+        - name: searchField
+          in: query
+          description: Search field
+          required: false
+          type: string
+        - name: search
+          in: query
+          description: Search
+          required: false
+          type: string
+        - name: searchMatch
+          in: query
+          description: Search match
+          required: false
+          type: string
+          enum: ["is", "contains", "startsWith"]
+      responses:
+        '200':
+          description: array of users
