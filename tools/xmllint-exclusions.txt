@@ -18,4 +18,5 @@
 ./plugins/importexport/native/tests/functional
 ./plugins/importexport/users/sample.xml
 ./plugins/importexport/pubIds/tests/functional
-./lib/pkp/tests/
+./lib/pkp/tests
+./node_modules
