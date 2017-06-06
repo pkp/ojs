@@ -69,7 +69,6 @@ class NativeImportExportDeployment extends PKPNativeImportExportDeployment {
 	 */
 	function setIssue($issue) {
 		$this->_issue = $issue;
-		if ($issue) $this->addProcessedObjectId(ASSOC_TYPE_ISSUE, $issue->getId());
 	}
 
 	/**
