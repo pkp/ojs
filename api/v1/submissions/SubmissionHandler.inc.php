@@ -63,10 +63,8 @@ class SubmissionHandler extends APIHandler {
 			$routeName = $route->getName();
 		}
 		
-		if (in_array($routeName, array('getFiles', 'submissionMetadata'))) {
-			import('lib.pkp.classes.security.authorization.SubmissionAccessPolicy');
-			$this->addPolicy(new SubmissionAccessPolicy($request, $args, $roleAssignments));
-		}
+		import('lib.pkp.classes.security.authorization.SubmissionAccessPolicy');
+		$this->addPolicy(new SubmissionAccessPolicy($request, $args, $roleAssignments));
 		
 		if (in_array($routeName, array('getFiles','getParticipants'))) {
 			$stageId = $slimRequest->getQueryParam('stageId', WORKFLOW_STAGE_ID_SUBMISSION);
@@ -100,9 +98,9 @@ class SubmissionHandler extends APIHandler {
 		$submissionService = $sContainer->get('submission');
 		
 		try {
-			$submissionId = $this->getParameter('submissionId');
+			$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
 			$fileStage = $slimRequest->getQueryParam('fileStage');
-			$submissionFiles = $submissionService->getFiles($context->getId(), $submissionId, $fileStage);
+			$submissionFiles = $submissionService->getFiles($context->getId(), $submission, $fileStage);
 			foreach ($submissionFiles as $submissionFile) {
 				$data[] = array(
 					'fileId'			=> $submissionFile->getFileId(),
@@ -140,14 +138,9 @@ class SubmissionHandler extends APIHandler {
 		$sContainer = ServicesContainer::instance();
 		$submissionService = $sContainer->get('submission');
 	
-		try {
-			$submissionId = $this->getParameter('submissionId');
-			$stageId = $slimRequest->getQueryParam('stageId', WORKFLOW_STAGE_ID_SUBMISSION);
-			$data = $submissionService->getParticipantsByStage($context->getId(), $submissionId, $stageId);
-		}
-		catch (App\Services\Exceptions\InvalidSubmissionException $e) {
-			return $response->withStatus(404)->withJsonError('api.submissions.404.resourceNotFound');
-		}
+		$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
+		$stageId = $slimRequest->getQueryParam('stageId', WORKFLOW_STAGE_ID_SUBMISSION);
+		$data = $submissionService->getParticipantsByStage($context->getId(), $submission, $stageId);
 	
 		return $response->withJson($data, 200);
 	}
@@ -170,14 +163,11 @@ class SubmissionHandler extends APIHandler {
 		$submissionService = $sContainer->get('submission');
 	
 		try {
-			$submissionId = $this->getParameter('submissionId');
-			$data = $submissionService->getGalleys($context->getId(), $submissionId);
+			$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
+			$data = $submissionService->getGalleys($context->getId(), $submission);
 		}
 		catch (App\Services\Exceptions\SubmissionStageNotValidException $e) {
 			return $response->withStatus(400)->withJsonError('api.submissions.400.stageNotValid');
-		}
-		catch (App\Services\Exceptions\InvalidSubmissionException $e) {
-			return $response->withStatus(404)->withJsonError('api.submissions.404.resourceNotFound');
 		}
 	
 		return $response->withJson($data, 200);
