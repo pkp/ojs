@@ -59,7 +59,7 @@ after_script:
 
   # Print logs and outputs for debugging.
   # - cat access.log
-  - cat error.log
+  - tail -c 1048576 error.log
   # - cat xvfb-output
   # - cat selenium-output
   - cat ./lib/pkp/tests/results/error.log
