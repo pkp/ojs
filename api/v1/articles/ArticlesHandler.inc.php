@@ -28,7 +28,7 @@ class ArticlesHandler extends APIHandler {
 		$this->_endpoints = array(
 			'GET' => array (
 					array(
-						'pattern' => $this->getEndpointPattern() . '/{articleId}',
+						'pattern' => $this->getEndpointPattern() . '/{submissionId}',
 						'handler' => array($this,'getArticle'),
 						'roles' => $roles
 					),
@@ -54,6 +54,9 @@ class ArticlesHandler extends APIHandler {
 		import('classes.security.authorization.OjsJournalMustPublishPolicy');
 		$this->addPolicy(new OjsJournalMustPublishPolicy($request));
 		
+		import('lib.pkp.classes.security.authorization.SubmissionAccessPolicy');
+		$this->addPolicy(new SubmissionAccessPolicy($request, $args, $roleAssignments));
+
 		return parent::authorize($request, $args, $roleAssignments);
 	}
 	
@@ -75,27 +78,22 @@ class ArticlesHandler extends APIHandler {
 		$context = $request->getContext();
 		$journal = $request->getJournal();
 
-		$articleId = $this->getParameter('articleId');
+		$article = $this->getAuthorizedContextObject(ASSOC_TYPE_ARTICLE);
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-		$publishedArticle = $publishedArticleDao->getPublishedArticleByBestArticleId((int) $journal->getId(), $articleId, true);
+		$publishedArticle = $publishedArticleDao->getPublishedArticleByBestArticleId((int) $journal->getId(), $article->getId(), true);
 		
 		$issue = null;
-		$article = null;
 		$issueDao = DAORegistry::getDAO('IssueDAO');
 		if (isset($publishedArticle)) {
 			$issue = $issueDao->getById($publishedArticle->getIssueId(), $publishedArticle->getJournalId(), true);
 			$article = $publishedArticle;
-		} else {
-			$articleDao = DAORegistry::getDAO('ArticleDAO');
-			$article = $articleDao->getById((int) $articleId, $journal->getId(), true);
 		}
 		
-		// 404 if article not found
-		if (!$article) {
+		// 404 if article or issue not found
+		if (!$article || !$issue) {
 			return $response->withStatus(404)->withJsonError('api.submissions.404.resourceNotFound');
 		}
 		
-
 		$sectionDao = DAORegistry::getDAO('SectionDAO');
 		$section = $sectionDao->getById($article->getSectionId(), $journal->getId(), true);
 		
@@ -113,8 +111,8 @@ class ArticlesHandler extends APIHandler {
 			}
 			
 			return array(
-				'pubId'			=> $$pubId,
-				'doiUrl'		=> $doiUrl,
+				'pubId'             => $$pubId,
+				'doiUrl'            => $doiUrl,
 			);
 		}, $pubIdPlugins);
 		
@@ -127,13 +125,13 @@ class ArticlesHandler extends APIHandler {
 		
 		$authors = array_map(function($author) {
 			return array(
-				'name'			=> $author->getFullName(),
-				'affiliation'	=> $author->getLocalizedAffiliation(),
-				'orcid'			=> $author->getOrcid(),
+				'name'              => $author->getFullName(),
+				'affiliation'       => $author->getLocalizedAffiliation(),
+				'orcid'             => $author->getOrcid(),
 			);
 		}, $article->getAuthors());
 		
-		$cover_image = $article->getLocalizedCoverImage() ? 
+		$coverImage = $article->getLocalizedCoverImage() ?
 							$article->getLocalizedCoverImageUrl() :
 							$issue->getLocalizedCoverImageUrl();
 		
@@ -147,27 +145,27 @@ class ArticlesHandler extends APIHandler {
 						array($articleId, $galley->getBestGalleyId()));
 			}
 			return array(
-				'id'			=> $galley->getBestGalleyId(),
-				'label'			=> $galley->getGalleyLabel(),
-				'filetype'		=> $galley->getFileType(),
-				'url'			=> $url,
+				'id'                => $galley->getBestGalleyId(),
+				'label'             => $galley->getGalleyLabel(),
+				'filetype'          => $galley->getFileType(),
+				'url'               => $url,
 			);
 		}, $article->getGalleys());
 
 		$data = array(
-			'issueId'			=> $issue->getId(),
-			'issue'				=> $issue->getIssueIdentification(),
-			'section'			=> $section->getLocalizedTitle(),
-			'title' 			=> $article->getLocalizedTitle(),
-			'subtitle'			=> $article->getLocalizedSubtitle(),
-			'authors'			=> $authors,
-			'pubIds'			=> $pubIds,
-			'abstract'			=> $article->getLocalizedAbstract(),
-			'citations'			=> $article->getCitations(),
-			'cover_image'		=> $cover_image,
-			'galleys'			=> $galleys,
-			'datePublished'		=> $article->getDatePublished(),
-			'citations'			=> $citations,
+			'issueId'                    => $issue->getId(),
+			'issue'                      => $issue->getIssueIdentification(),
+			'section'                    => $section->getLocalizedTitle(),
+			'title'                      => $article->getLocalizedTitle(),
+			'subtitle'                   => $article->getLocalizedSubtitle(),
+			'authors'                    => $authors,
+			'pubIds'                     => $pubIds,
+			'abstract'                   => $article->getLocalizedAbstract(),
+			'citations'                  => $article->getCitations(),
+			'cover_image'                => $coverImage,
+			'galleys'                    => $galleys,
+			'datePublished'              => $article->getDatePublished(),
+			'citations'                  => $citations,
 		);
 		
 		return $response->withJson($data, 200);
