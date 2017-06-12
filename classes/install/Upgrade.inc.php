@@ -543,7 +543,7 @@ class Upgrade extends Installer {
 		$tempStatsDao = new UsageStatsTemporaryRecordDAO();
 		$tempStatsDao->deleteByLoadId($loadId);
 
-		import('plugins.generic.usageStats.GeoLocationTool');
+		import('lib.pkp.plugins.generic.usageStats.GeoLocationTool');
 		$geoLocationTool = new GeoLocationTool();
 
 		while(!$result->EOF) {
