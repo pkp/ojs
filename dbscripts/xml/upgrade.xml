@@ -165,6 +165,7 @@
 		<data file="dbscripts/xml/upgrade/3.1.0_notes.xml" condition="return $installer->tableExists('notes_tmp');" />
 		<data file="dbscripts/xml/upgrade/3.1.0_galley_settings.xml" condition="return $installer->tableExists('article_galley_settings');" />
 		<data file="dbscripts/xml/upgrade/3.1.0_update.xml" />
+		<code function="repairImageAssociations" condition="return $installer->tableExists('submission_html_galley_images');" />
 		<note file="docs/release-notes/README-3.1.0" />
 	</upgrade>
 

@@ -2238,6 +2238,30 @@ class Upgrade extends Installer {
 		}
 		return true;
 	}
+
+	/**
+	 * Fix galley image associations (https://github.com/pkp/pkp-lib/issues/2582)
+	 * @return boolean
+	 */
+	function repairImageAssociations() {
+		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
+		$result = $submissionFileDao->retrieve('SELECT df.file_id AS dependent_file_id, gf.file_id AS galley_file_id FROM submission_files df, submission_files gf, submission_html_galley_images i, submission_galleys g WHERE i.galley_id = g.galley_id AND g.file_id = gf.file_id AND i.file_id = df.file_id');
+		while (!$result->EOF) {
+			$row = $result->GetRowAssoc(false);
+			$submissionFiles = $submissionFileDao->getAllRevisions($row['dependent_file_id']);
+			foreach ((array) $submissionFiles as $submissionFile) {
+				if ($submissionFile->getFileStage() != SUBMISSION_FILE_PUBLIC) continue;
+
+				$submissionFile->setFileStage(SUBMISSION_FILE_DEPENDENT);
+				$submissionFile->setAssocType(ASSOC_TYPE_SUBMISSION_FILE);
+				$submissionFile->setAssocId($row['galley_file_id']);
+				$submissionFileDao->updateObject($submissionFile);
+			}
+			$result->MoveNext();
+		}
+		return true;
+	}
+
 	/**
 	 * For 2.4.x - 3.1.0 upgrade: repair already migrated keywords and subjects.
 	 * @return boolean
