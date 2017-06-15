@@ -27,7 +27,7 @@
 	<message key="plugins.pubIds.doi.manager.settings.enableRepresentationDoi">Galleys</message>
 
 	<message key="plugins.pubIds.doi.manager.settings.doiPrefix">DOI Prefix</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiPrefix.description"><![CDATA[The DOI Prefix is assigned by registration agencies (e.g. <a href="http://www.crossref.org" target="_new">CrossRef</a>) and is in the format 10.xxxx (e.g. 10.1234):]]></message>
+	<message key="plugins.pubIds.doi.manager.settings.doiPrefix.description"><![CDATA[The DOI Prefix is assigned by registration agencies (e.g. <a href="http://www.crossref.org" target="_new">Crossref</a>) and is in the format 10.xxxx (e.g. 10.1234):]]></message>
 	<message key="plugins.pubIds.doi.manager.settings.doiPrefixPattern">The DOI prefix is mandatory and must be in the form 10.xxxx.</message>
 
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffix">DOI Suffix</message>
