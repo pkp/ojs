@@ -1096,8 +1096,8 @@ Die Prüfung kann bei Such-URLs, die Formularausfüllung verlangen, fehlschlagen
 	<message key="notification.type.userComment">Ein/e Leser/in hat "{$title}" kommentiert.</message>
 	<message key="notification.savedIssueMetadata">Ausgabenmetadaten gespeichert.</message>
 	<message key="notification.type.editorAssignmentTask">Ein neuer Artikel wurde eingereicht, dem ein/e Redakteur/in zugewiesen werden muss.</message>
-
-
+	<message key="notification.type.assignProductionUser">Nutzen Sie den Hinzufügen-Link in der Teilnehmer/innen-Liste, um eine/n Nutzer/in zum Erzeugen von Fahnen einzutragen.</message>
+	<message key="notification.type.awaitingRepresentations">Warte auf Fahnen.</message>
 
 	<!--
 	 *
