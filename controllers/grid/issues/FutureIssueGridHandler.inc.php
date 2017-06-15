@@ -54,6 +54,14 @@ class FutureIssueGridHandler extends IssueGridHandler {
 		$issueDao = DAORegistry::getDAO('IssueDAO');
 		return $issueDao->getUnpublishedIssues($journal->getId());
 	}
+
+	/**
+	 * Get the js handler for this component.
+	 * @return string
+	 */
+	public function getJSHandler() {
+		return '$.pkp.controllers.grid.issues.FutureIssueGridHandler';
+	}
 }
 
 ?>

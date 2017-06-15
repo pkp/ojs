@@ -82,6 +82,14 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 		switch (array_shift($args)) {
 			case 'index':
 			case '':
+				import('lib.pkp.controllers.list.submissions.SelectSubmissionsListHandler');
+				$exportSubmissionsListHandler = new SelectSubmissionsListHandler(array(
+					'title' => 'plugins.importexport.native.exportSubmissionsSelect',
+					'count' => 100,
+					'inputName' => 'selectedSubmissions[]',
+					'lazyLoad' => true,
+				));
+				$templateMgr->assign('exportSubmissionsListData', json_encode($exportSubmissionsListHandler->getConfig()));
 				$templateMgr->display($this->getTemplatePath() . 'index.tpl');
 				break;
 			case 'uploadImportXML':

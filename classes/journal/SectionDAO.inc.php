@@ -134,6 +134,27 @@ class SectionDAO extends PKPSectionDAO {
 	}
 
 	/**
+	 * Retrieve section a submission is assigned to.
+	 * @param $submissionId int Submission id
+	 * @return Section
+	 */
+	public function getBySubmissionId($submissionId) {
+		$result = $this->retrieve('SELECT sections.* FROM sections
+				LEFT JOIN submissions
+				ON (submissions.section_id = sections.section_id)
+				WHERE submissions.submission_id = ?',
+			array((int) $submissionId));
+
+		$returner = null;
+		if ($result->RecordCount() != 0) {
+			$returner = $this->_fromRow($result->GetRowAssoc(false));
+		}
+		$result->Close();
+
+		return $returner;
+	}
+
+	/**
 	 * Return a new data object.
 	 */
 	function newDataObject() {
