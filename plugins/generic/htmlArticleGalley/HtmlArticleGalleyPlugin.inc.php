@@ -66,14 +66,6 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 
 		if ($galley && $galley->getFileType() == 'text/html') {
 			$templateMgr = TemplateManager::getManager($request);
-			$templateMgr->addStyleSheet(
-				'htmlArticleGalleyStyles',
-				$request->getBaseUrl() . '/plugins/generic/htmlArticleGalley/display.css',
-				array(
-					'priority' => STYLE_SEQUENCE_CORE,
-					'contexts' => 'frontend',
-				)
-			);
 			$templateMgr->assign(array(
 				'issue' => $issue,
 				'article' => $article,
