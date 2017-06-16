@@ -455,6 +455,8 @@ class IssueGridHandler extends GridHandler {
 			$issue->setOpenAccessDate(date('Y-m-d H:i:s',mktime(0,0,0,$delayOpenAccessMonth,$curDay,$delayOpenAccessYear)));
 		}
 
+		HookRegistry::call('IssueGridHandler::publishIssue', array(&$issue));
+
 		$issueDao = DAORegistry::getDAO('IssueDAO');
 		$issueDao->updateCurrent($journalId,$issue);
 
@@ -501,6 +503,8 @@ class IssueGridHandler extends GridHandler {
 		$issue->setCurrent(0);
 		$issue->setPublished(0);
 		$issue->setDatePublished(null);
+
+		HookRegistry::call('IssueGridHandler::unpublishIssue', array(&$issue));
 
 		$issueDao = DAORegistry::getDAO('IssueDAO');
 		$issueDao->updateObject($issue);
