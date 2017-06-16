@@ -102,16 +102,37 @@ class SubmissionHandler extends APIHandler {
 			$fileStage = $slimRequest->getQueryParam('fileStage');
 			$submissionFiles = $submissionService->getFiles($context->getId(), $submission, $fileStage);
 			foreach ($submissionFiles as $submissionFile) {
-				$data[] = array(
-					'fileId'			=> $submissionFile->getFileId(),
-					'revision'			=> $submissionFile->getRevision(),
-					'submissionId'		=> $submissionFile->getSubmissionId(),
-					'filename'			=> $submissionFile->getName(),
-					'fileLabel'			=> $submissionFile->getFileLabel(),
-					'fileStage'			=> $submissionFile->getFileStage(),
-					'uploaderUserId'	=> $submissionFile->getUploaderUserId(),
-					'userGroupId'		=> $submissionFile->getUserGroupId()
+				$entry = array(
+					'fileId'           => $submissionFile->getFileId(),
+					'revision'         => $submissionFile->getRevision(),
+					'submissionId'     => $submissionFile->getSubmissionId(),
+					'filename'         => $submissionFile->getName(),
+					'fileLabel'        => $submissionFile->getFileLabel(),
+					'fileStage'        => $submissionFile->getFileStage(),
+					'uploaderUserId'   => $submissionFile->getUploaderUserId(),
+					'userGroupId'      => $submissionFile->getUserGroupId()
 				);
+				if (is_a($submissionFile, 'SupplementaryFile')) {
+				        $entry['metadata'] = array(
+                                                'description'   => $submissionFile->getDescription(null),
+                                                'creator'       => $submissionFile->getCreator(null),
+                                                'publisher'     => $submissionFile->getPublisher(null),
+                                                'source'        => $submissionFile->getSource(null),
+                                                'subject'       => $submissionFile->getSubject(null),
+                                                'sponsor'       => $submissionFile->getSponsor(null),
+                                                'date'          => $submissionFile->getDateCreated(null),
+                                                'language'      => $submissionFile->getLanguage(),
+				        );
+				}
+				if (is_a($submissionFile, 'SubmissionArtworkFile')) {
+				        $entry['metadata'] = array(
+                                                'caption'               => $submissionFile->getCaption(),
+                                                'credit'                => $submissionFile->getCredit(),
+                                                'copyrightOwner'        => $submissionFile->getCopyrightOwner(),
+                                                'permissionTerms'       => $submissionFile->getPermissionTerms(),
+				        );
+				}
+				$data[] = $entry;
 			}
 		}
 		catch (App\Services\Exceptions\InvalidSubmissionException $e) {
