@@ -10,7 +10,7 @@
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_German_(de_DE)
   * Localization strings.
   -->
-  
+ 
 <locale name="de_DE" full_name="Deutsch (Deutschland)">
 	<message key="plugins.generic.webfeed.displayName">Web-Feed-Plugin</message>
 	<message key="plugins.generic.webfeed.description">Dieses Plugin erzeugt RSS/Atom-Feeds für die aktuelle Ausgabe.</message>
@@ -21,6 +21,7 @@
 	<message key="plugins.generic.webfeed.settings.all">>Links zu Web-Feeds auf allen Zeitschriftenseiten anzeigen.</message>
 
 	<message key="plugins.generic.webfeed.settings.currentIssue">Items in der aktuellen Ausgabe anzeigen.</message>
+	<message key="plugins.generic.webfeed.settings.recent">Eine feste Anzahl der aktuellsten Elemente anzeigen.</message>
 	<message key="plugins.generic.webfeed.settings.recentArticles">Aktuelle Veröffentlichungen.</message>
 	<message key="plugins.generic.webfeed.settings.recentItemsRequired">Bitte geben sie eine positive, ganze Zahl für aktuelle Veröffentlichungen an.</message>
 	<message key="plugins.generic.webfeed.atom.altText">Atom-Logo</message>
