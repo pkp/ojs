@@ -95,6 +95,7 @@
 	<message key="editor.issues.preview">(Voransicht)</message>
 	<message key="editor.issues.confirmPublish">Sind Sie sicher, dass Sie die neue Ausgabe veröffentlichen wollen?</message>
 	<message key="editor.issues.confirmUnpublish">Sind sie sicher, dass Sie diese bereits veröffentlichte Ausgabe zurückziehen wollen?</message>
+	<message key="editor.issues.confirmSetCurrentIssue">Sind Sie sicher, dass Sie diese Ausgabe als aktuelle Ausgabe festlegen möchten?</message>
 	<message key="editor.issues.publicArticleIdExists">Die öffentliche Kennzeichnung für den folgenden Beitrag konnte nicht gespeichert werden:</message>
 	<message key="editor.issues.noLiveIssues">Keine aktuelle Ausgabe</message>
 	<message key="editor.issues.open">Offen</message>
@@ -118,6 +119,7 @@
 	<message key="grid.action.viewIssue">Ansehen</message>
 	<message key="grid.action.previewIssue">Preview</message>
 	<message key="grid.action.addIssueGalley">Ausgabenfahne anlegen</message>
+	<message key="grid.action.setCurrentIssue">Aktuelle Ausgabe festlegen</message>
 	<message key="editor.navigation.issueArchive">Frühere Ausgaben</message>
 	<message key="editor.article.designateReviewVersion">Die ursprüngliche Datei zur Begutachtungsversion machen</message>
 	<message key="editor.article.uploadReviewVersion">Eine überarbeitete Begutachtungsversion hochladen</message>
