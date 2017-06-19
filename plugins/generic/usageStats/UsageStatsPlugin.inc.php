@@ -52,23 +52,31 @@ class UsageStatsPlugin extends PKPUsageStatsPlugin {
 		$smarty =& $params[1];
 		$output =& $params[2];
 
-		$pubObject =& $smarty->get_template_vars('article');
-		assert(is_a($pubObject, 'PublishedArticle'));
-		$pubObjectId = $pubObject->getID();
-		$pubObjectType = 'PublishedArticle';
+		$context = $smarty->get_template_vars('currentContext');
+		$pluginSettingsDao = DAORegistry::getDAO('PluginSettingsDAO');
+		$contextDisplaySettingExists = $pluginSettingsDao->settingExists($context->getId(), $this->getName(), 'displayStatistics');
+		$contextDisplaySetting = $this->getSetting($context->getId(), 'displayStatistics');
+		$siteDisplaySetting = $this->getSetting(CONTEXT_ID_NONE, 'displayStatistics');
+		if (($contextDisplaySettingExists && $contextDisplaySetting) ||
+			(!$contextDisplaySettingExists && $siteDisplaySetting)) {
 
-		$output .= $this->getTemplate(
-			array(
-				'pubObjectType' => $pubObjectType,
-				'pubObjectId'   => $pubObjectId,
-			),
-			'outputFrontend.tpl',
-			$smarty
-		);
+			$pubObject =& $smarty->get_template_vars('article');
+			assert(is_a($pubObject, 'PublishedArticle'));
+			$pubObjectId = $pubObject->getID();
+			$pubObjectType = 'PublishedArticle';
 
-		$this->addJavascriptData($this->getAllDownloadsStats($pubObjectId), $pubObjectType, $pubObjectId, 'frontend-article-view');
-		$this->loadJavascript('frontend-article-view' );
+			$output .= $this->getTemplate(
+				array(
+					'pubObjectType' => $pubObjectType,
+					'pubObjectId'   => $pubObjectId,
+				),
+				'outputFrontend.tpl',
+				$smarty
+			);
 
+			$this->addJavascriptData($this->getAllDownloadsStats($pubObjectId), $pubObjectType, $pubObjectId, 'frontend-article-view');
+			$this->loadJavascript('frontend-article-view' );
+		}
 		return false;
 	}
 }
