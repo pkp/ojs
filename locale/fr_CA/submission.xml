@@ -36,7 +36,7 @@
 	<message key="submission.submit.form.authorRequired">Au moins un auteur est requis.</message>
 	<message key="submission.submit.title">Soumettre un article</message>
 	<message key="submission.submit.userGroup">Rôle</message>
-	<message key="submission.submit.userGroupDescription">Choisir la section dans laquelle vous soumettez votre article.</message>
+	<message key="submission.submit.userGroupDescription">Choisissez le rôle sous lequel vous soumettez votre article.</message>
 	<message key="submission.upload.selectComponent">Sélectionner l'élément de l'article</message>
 	<message key="submission.title">Titre de l'article</message>
 	<message key="submission.title.tip">voici une variable avec une valeur erronée</message>
