@@ -27,7 +27,7 @@
 	<message key="plugins.pubIds.doi.manager.settings.enableRepresentationDoi">Гранки</message>
 
 	<message key="plugins.pubIds.doi.manager.settings.doiPrefix">Префикс DOI</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiPrefix.description"><![CDATA[Префикс DOI назначается регистрационными агентствами (например, <a href="http://www.crossref.org" target="_new">CrossRef</a>) и представляется в формате 10.xxxx (например, 10.1234):]]></message>
+	<message key="plugins.pubIds.doi.manager.settings.doiPrefix.description"><![CDATA[Префикс DOI назначается регистрационными агентствами (например, <a href="http://www.crossref.org" target="_new">Crossref</a>) и представляется в формате 10.xxxx (например, 10.1234):]]></message>
 	<message key="plugins.pubIds.doi.manager.settings.doiPrefixPattern">Префикс DOI обязателен и должен быть в форме 10.xxxx.</message>
 
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffix">Суффикс DOI</message>
