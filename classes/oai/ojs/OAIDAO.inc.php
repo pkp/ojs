@@ -200,16 +200,24 @@ class OAIDAO extends PKPOAIDAO {
 			LEFT JOIN issues i ON (i.issue_id = pa.issue_id)
 			LEFT JOIN sections s ON (s.section_id = a.section_id)
 			LEFT JOIN journals j ON (j.journal_id = a.context_id)
-			LEFT JOIN data_object_tombstones dot ON (m.i = 1' . (isset($articleId) ? ' AND dot.data_object_id = ?' : '') . (isset($set) ? ' AND dot.set_spec = ?' : '') .')
-			LEFT JOIN data_object_tombstone_oai_set_objects tsoj ON ' . (isset($journalId) ? '(tsoj.tombstone_id = dot.tombstone_id AND tsoj.assoc_type = ' . ASSOC_TYPE_JOURNAL . ' AND tsoj.assoc_id = ?)' : 'tsoj.assoc_id = null') .
-			' LEFT JOIN data_object_tombstone_oai_set_objects tsos ON ' . (isset($sectionId) ? '(tsos.tombstone_id = dot.tombstone_id AND tsos.assoc_type = ' . ASSOC_TYPE_SECTION . ' AND tsos.assoc_id = ?)' : 'tsos.assoc_id = null');
+			LEFT JOIN data_object_tombstones dot ON (m.i = 1' . (isset($articleId) ? ' AND dot.data_object_id = ?' : '') . (isset($set) ? ' AND (dot.set_spec = ? OR dot.set_spec LIKE ?)' : '') .')
+			LEFT JOIN data_object_tombstone_oai_set_objects tsoj ON ' . (isset($journalId) ? '(tsoj.tombstone_id = dot.tombstone_id AND tsoj.assoc_type = ' . ASSOC_TYPE_JOURNAL . ')' : 'tsoj.assoc_id = null') .
+			' LEFT JOIN data_object_tombstone_oai_set_objects tsos ON ' . (isset($sectionId) ? '(tsos.tombstone_id = dot.tombstone_id AND tsos.assoc_type = ' . ASSOC_TYPE_SECTION . ')' : 'tsos.assoc_id = null');
 	}
 
 	/**
 	 * @see lib/pkp/classes/oai/PKPOAIDAO::getAccessibleRecordWhereClause()
 	 */
-	function getAccessibleRecordWhereClause() {
-		return 'WHERE ((s.section_id IS NOT NULL AND i.published = 1 AND j.enabled = 1 AND a.status <> ' . STATUS_DECLINED . ') OR dot.data_object_id IS NOT NULL)';
+	function getAccessibleRecordWhereClause($setIds = array()) {
+		if (isset($setIds[1])) {
+			list($journalId, $sectionId) = $setIds;
+		} else {
+			list($journalId) = $setIds;
+		}
+		return 'WHERE ((s.section_id IS NOT NULL AND i.published = 1 AND j.enabled = 1 AND a.status <> ' . STATUS_DECLINED . ') OR (dot.data_object_id IS NOT NULL'
+				. (isset($journalId) ? ' AND tsoj.assoc_id = ?' : '')
+				. (isset($sectionId) ? ' AND tsos.assoc_id = ?' : '')
+				.'))';
 	}
 
 	/**
