@@ -143,6 +143,7 @@
 	<message key="editor.article.assignEditor">Ajouter un rédacteur</message>
 	<message key="editor.article.selectEditor">Sélectionner {$roleName}</message>
 	<message key="editor.article.selectDecision">Sélectionner une décision</message>
+	<message key="editor.article.decision.resubmit">Soumettre à nouveau pour évaluation</message>
 	<message key="editor.article.selectLayoutEditor">Sélectionner le responsable de la mise en page</message>
 	<message key="editor.article.replaceLayoutEditor">Remplacer le responsable de la mise en page</message>
 	<message key="editor.article.reviewSubmission">Évaluer la soumission</message>
@@ -226,5 +227,12 @@
 	<message key="editor.submission.selectGalleyFiles">Sélectionner les fichiers d'épreuves</message>
 	<message key="editor.submission.editorial.finalDraftDescription"><![CDATA[Les versions finales sur cette liste sont transformées par un Réviseur en versions révisées, téléversées dans <span class = "pkp_help_title">Révision</ span>.]]></message>
 	<message key="editor.submission.proof.manageProofFilesDescription">Tous les fichiers qui ont déjà été téléversés à n'importe quelle étape de soumission peuvent être ajoutés à la liste de vérification des épreuves en cochant la case "Inclure" ci-dessous et en cliquant sur "Rechercher". Tous les fichiers disponibles seront répertoriés et pourront être sélectionnés pour inclusion.</message>
+<<<<<<< HEAD
 	<message key="editor.publicIdentificationExistsForTheSameType">Le public identifié comme '{$publicIdentifier}' existe déjà pour un autre objet de même type. Veuillez indiquer un public unique pour l'objet de même type à l'intérieur de votre revue.</message>
 </locale>
+=======
+	<message key="editor.article.decision.accept">Soumission acceptée</message>
+	<message key="editor.article.decision.pendingRevisions">une révision est requise</message>
+	<message key="editor.article.decision.decline">Décliner la soumission</message>
+</locale>
+>>>>>>> 8eeb8e2... Updating local files fr_CA
