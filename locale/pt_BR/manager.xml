@@ -348,7 +348,6 @@ Exemplo:
 	<message key="manager.subscriptionPolicies.subscriptionContact">Gerente de assinaturas</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactDescription">O contato a seguir será exibido em Assinaturas, na página Sobre a revista.</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactEmailValid">Informe um e-mail válido.</message>
-	<message key="manager.subscriptionPolicies.subscriptionPoliciesSaved">As configurações da política da assinatura foram atualizadas.</message>
 	<message key="manager.subscriptions">Assinaturas</message>
 	<message key="manager.subscriptions.confirmDelete">Deseja realmente excluir esta assinatura?</message>
 	<message key="manager.subscriptions.create">Incluir assinatura</message>

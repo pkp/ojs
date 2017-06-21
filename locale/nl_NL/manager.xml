@@ -345,7 +345,6 @@
 	<message key="manager.subscriptionPolicies.subscriptionContact">Abonnementenbeheerder</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactDescription">De contactpersoon die genoemd wordt onder Abonnementen bij Over dit tijdschrift.</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactEmailValid">Geef een geldig e-mailadres op.</message>
-	<message key="manager.subscriptionPolicies.subscriptionPoliciesSaved">De instellingen voor abonnementenbeleid zijn bijgewerkt.</message>
 	<message key="manager.subscriptions">Abonnementen</message>
 	<message key="manager.subscriptions.confirmDelete">Weet u zeker dat u dit abonnement wilt verwijderen?</message>
 	<message key="manager.subscriptions.create">Nieuw abonnement aanmaken</message>

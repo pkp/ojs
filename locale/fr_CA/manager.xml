@@ -344,7 +344,6 @@
 	<message key="manager.subscriptionPolicies.subscriptionContact">Responsable des abonnements</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactDescription">Le contact indiqué sous Abonnements dans À propos de la revue.</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactEmailValid">Veuillez saisir un courriel valide.</message>
-	<message key="manager.subscriptionPolicies.subscriptionPoliciesSaved">Votre politique d'abonnement a été mise à jour.</message>
 	<message key="manager.subscriptions">Abonnements</message>
 	<message key="manager.subscriptions.confirmDelete">Êtes-vous certain de vouloir supprimer cet abonnement?</message>
 	<message key="manager.subscriptions.create">Créer un nouvel abonnement</message>

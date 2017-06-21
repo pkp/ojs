@@ -376,7 +376,6 @@
 	<message key="manager.subscriptionPolicies.subscriptionContact">Administrador/a de subscripcions</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactDescription">Contacte llistat a la secció «Subscripcions» de la pàgina «Sobre la revista».</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactEmailValid">Introduïu una adreça de correu electrònic vàlida.</message>
-	<message key="manager.subscriptionPolicies.subscriptionPoliciesSaved">S’han actualitzat els paràmetres de la política de subscripció.</message>
 	<message key="manager.subscriptions">Subscripcions</message>
 	<message key="manager.individualSubscriptions">Subscripcions individuals</message>
 	<message key="manager.institutionalSubscriptions">Subscripcions institucionals</message>

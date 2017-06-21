@@ -415,7 +415,6 @@
 	<message key="manager.subscriptionPolicies.subscriptionContact">Manajer Langganan</message> 
 	<message key="manager.subscriptionPolicies.subscriptionContactDescription">Kontak yang ditampilkan pada informasi Langganan di Tentang Jurnal.</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactEmailValid">Masukkan email yang valid.</message> 
-	<message key="manager.subscriptionPolicies.subscriptionPoliciesSaved">Pengaturan kebijakan langganan Anda telah diperbaharui.</message>	
 	<message key="manager.subscriptions">Langganan</message> 
 	<message key="manager.individualSubscriptions">Langganan Individu</message> 
 	<message key="manager.institutionalSubscriptions">Langganan Institusi</message> 

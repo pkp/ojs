@@ -350,7 +350,6 @@
 	<message key="manager.subscriptionPolicies.subscriptionContact">订阅管理员</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactDescription">这份联系信息会列在「期刊介绍」的「订阅」下面。</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactEmailValid">请输入一个有效的电子邮件地址</message>
-	<message key="manager.subscriptionPolicies.subscriptionPoliciesSaved">您的订阅方针配置已经被更新</message>
 	<message key="manager.subscriptions">订阅</message>
 	<message key="manager.subscriptions.confirmDelete">您确定您要删除掉这个订户？</message>
 	<message key="manager.subscriptions.create">建立新的订户</message>

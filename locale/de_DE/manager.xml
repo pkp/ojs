@@ -415,7 +415,6 @@
 	<message key="manager.subscriptionPolicies.subscriptionContact">Abonnementverwalter/in</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactDescription">Kontakt, der im "Über uns" der Zeitschrift erscheint.</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactEmailValid">Geben Sie bitte eine gültige E-Mail-Adresse ein.</message>
-	<message key="manager.subscriptionPolicies.subscriptionPoliciesSaved">Ihre Abonnementeinstellungen wurden aktualisiert</message>
 	<message key="manager.subscriptions">Abonnements</message>
 	<message key="manager.individualSubscriptions">Individuelle Abonnements</message>
 	<message key="manager.institutionalSubscriptions">Institutionelle Abonnements</message>

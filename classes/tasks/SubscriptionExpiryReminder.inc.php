@@ -82,9 +82,7 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 			$curDay = $curDate['day'];
 
 			// Check if expiry notification before months is enabled
-			if ($journal->getSetting('enableSubscriptionExpiryReminderBeforeMonths')) {
-
-				$beforeMonths = $journal->getSetting('numMonthsBeforeSubscriptionExpiryReminder');
+			if ($beforeMonths = $journal->getSetting('numMonthsBeforeSubscriptionExpiryReminder')) {
 				$beforeYears = (int)floor($beforeMonths/12);
 				$beforeMonths = (int)fmod($beforeMonths,12);
 
@@ -109,9 +107,7 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 			}
 
 			// Check if expiry notification before weeks is enabled
-			if ($journal->getSetting('enableSubscriptionExpiryReminderBeforeWeeks')) {
-
-				$beforeWeeks = $journal->getSetting('numWeeksBeforeSubscriptionExpiryReminder');
+			if ($beforeWeeks = $journal->getSetting('numWeeksBeforeSubscriptionExpiryReminder')) {
 				$beforeDays = $beforeWeeks * 7;
 
 				$expiryMonth = $curMonth + (int)floor(($curDay+$beforeDays)/31);
@@ -136,9 +132,7 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 			}
 
 			// Check if expiry notification after months is enabled
-			if ($journal->getSetting('enableSubscriptionExpiryReminderAfterMonths')) {
-
-				$afterMonths = $journal->getSetting('numMonthsAfterSubscriptionExpiryReminder');
+			if ($afterMonths = $journal->getSetting('numMonthsAfterSubscriptionExpiryReminder')) {
 				$afterYears = (int)floor($afterMonths/12);
 				$afterMonths = (int)fmod($afterMonths,12);
 
@@ -169,9 +163,7 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 			}
 
 			// Check if expiry notification after weeks is enabled
-			if ($journal->getSetting('enableSubscriptionExpiryReminderAfterWeeks')) {
-
-				$afterWeeks = $journal->getSetting('numWeeksAfterSubscriptionExpiryReminder');
+			if ($afterWeeks = $journal->getSetting('numWeeksAfterSubscriptionExpiryReminder')) {
 				$afterDays = $afterWeeks * 7;
 
 				if (($curDay - $afterDays) <= 0) {

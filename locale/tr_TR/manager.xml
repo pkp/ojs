@@ -363,7 +363,6 @@
 	<message key="manager.subscriptionPolicies.subscriptionContact">Abone Yöneticisi</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactDescription">Dergi Hakkında sayfasında abonelik hakkında bilgi vermek üzere gösterilecek.</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactEmailValid">Lütfen geçerli bir e-posta adresi giriniz.</message>
-	<message key="manager.subscriptionPolicies.subscriptionPoliciesSaved">Abonelik politikası ayarlarınız güncellendi.</message>
 	<message key="manager.subscriptions">Abonelikler</message>
 	<message key="manager.individualSubscriptions">Bireysel Abonelikler</message>
 	<message key="manager.institutionalSubscriptions">Kurumsal Abonelikler</message>

@@ -415,7 +415,6 @@
 	<message key="manager.subscriptionPolicies.subscriptionContact">Менеджер по подписке</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactDescription">Информация о контактном лице, размещаемая в разделе «Подписки» страницы «О журнале».</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactEmailValid">Пожалуйста, введите правильный адрес электронной почты.</message>
-	<message key="manager.subscriptionPolicies.subscriptionPoliciesSaved">Ваши настройки правил подписки были обновлены.</message>
 	<message key="manager.subscriptions">Подписки</message>
 	<message key="manager.individualSubscriptions">Индивидуальные подписки</message>
 	<message key="manager.institutionalSubscriptions">Подписки на организацию</message>

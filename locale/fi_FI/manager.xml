@@ -415,7 +415,6 @@ Julkaisusi on määritetty tallentamaan useita käytön mittareita. Käyttötila
 	<message key="manager.subscriptionPolicies.subscriptionContact">Tilaussihteeri</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactDescription">Yhteyshenkilö, joka merkitään Tilaukset-kohtaan Tietoa julkaisusta -sivulle.</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactEmailValid">Anna kelvollinen sähköpostiosoite.</message>
-	<message key="manager.subscriptionPolicies.subscriptionPoliciesSaved">Tilauskäytäntöihin liittyvät asetukset on päivitetty.</message>
 	<message key="manager.subscriptions">Tilaukset</message>
 	<message key="manager.individualSubscriptions">Yksittäistilaukset</message>
 	<message key="manager.institutionalSubscriptions">Instituutiotilaukset</message>

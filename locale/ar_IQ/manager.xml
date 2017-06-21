@@ -415,7 +415,6 @@
 	<message key="manager.subscriptionPolicies.subscriptionContact">مدير الاشتراكات</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactDescription">عنوان الاتصال المدرج تحت بند الاشتراكات في (عن المجلة).</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactEmailValid">لطفاً، أدخل عنواناً بريدياً صحيحاً.</message>
-	<message key="manager.subscriptionPolicies.subscriptionPoliciesSaved">تم تحديث إعداداتك لسياسة الاشتراك.</message>
 	<message key="manager.subscriptions">الاشتراكات</message>
 	<message key="manager.individualSubscriptions">الاشتراكات المنفردة</message>
 	<message key="manager.institutionalSubscriptions">الاشتراكات المؤسساتية</message>

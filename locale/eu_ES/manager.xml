@@ -342,7 +342,6 @@
 	<message key="manager.subscriptionPolicies.subscriptionContact">Harpidetza-kudeatzailea</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactDescription">Aldizkariari buruz orriko Harpidetzak izenburuan agertzen den kontaktua.</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactEmailValid">Idatzi baliozko helbide elektroniko bat.</message>
-	<message key="manager.subscriptionPolicies.subscriptionPoliciesSaved">Zure harpidetza-politikaren ezarpenak eguneratu dira.</message>
 	<message key="manager.subscriptions">Harpidetzak</message>
 	<message key="manager.subscriptions.confirmDelete">Ziur zaude harpidetza hau ezabatu nahi duzula?</message>
 	<message key="manager.subscriptions.create">Sortu harpidetza berri bat</message>

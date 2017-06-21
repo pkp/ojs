@@ -357,7 +357,6 @@ Al momento di concludere una revisione, ai revisori vengono presentate due box, 
 	<message key="manager.subscriptionPolicies.subscriptionContact">Amministratore degli abbonamenti</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactDescription">Contatto elencato sotto la voce 'Abbonamenti' nella pagina delle informazioni sulla rivista..</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactEmailValid">Inserire un indirizzo email valido.</message>
-	<message key="manager.subscriptionPolicies.subscriptionPoliciesSaved">Le politiche di abbonamento sono state aggiornate.</message>
 	<message key="manager.subscriptions">Abbonamenti</message>
 	<message key="manager.subscriptions.confirmDelete">Sei sicuro di voler cancellare questo abbonamento?</message>
 	<message key="manager.subscriptions.create">Crea un nuovo abbonamento</message>

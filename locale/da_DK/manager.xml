@@ -352,7 +352,6 @@ I begge tilfælde har redaktøren mulighed for at inkludere bedømmelseskommenta
 	<message key="manager.subscriptionPolicies.subscriptionContact">Abonnementschef</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactDescription">Kontaktpersonen, der er angivet under Abonnementer under Om tidsskriftet.</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactEmailValid">Angiv en gyldig e-mail-adresse.</message>
-	<message key="manager.subscriptionPolicies.subscriptionPoliciesSaved">Abonnementspolitikindstillingerne er blevet opdateret.</message>
 	<message key="manager.subscriptions">Abonnementer</message>
 	<message key="manager.subscriptions.confirmDelete">Er du sikker på, at du vil slette dette abonnement?</message>
 	<message key="manager.subscriptions.create">Opret nyt abonnement</message>

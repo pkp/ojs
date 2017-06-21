@@ -333,7 +333,6 @@
 	<message key="manager.subscriptionPolicies.subscriptionAdditionalInformationDescription">Tipovi i iznosi pretplate će se automatski postaviti kao rubrika "pretplate" pod "o časopisu", zajedno s kontaktnim informacijama o administratoru pretplate. Dodatne informacije o pretplatama, kao što su metode plaćanja ili sheme za pretplatnike iz zemalja u razvoju, mogu biti dodane ovdje.</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactDescription">Kontakt administratora pretplate naveden je unutar stranice "o časopisu" u rubrici "pretplate".</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactEmailValid">Molimo unesite ispravnu e-poštu.</message>
-	<message key="manager.subscriptionPolicies.subscriptionPoliciesSaved">Postavke politike pretplate su ažurirane.</message>
 	<message key="manager.subscriptions">Pretplate</message>
 	<message key="manager.subscriptions.confirmDelete">Jeste li sigurni da želite izbrisati ovu pretplatu?</message>
 	<message key="manager.subscriptions.create">Kreiraj novu pretplatu</message>

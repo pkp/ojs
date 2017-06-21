@@ -501,7 +501,6 @@
 	<message key="manager.subscriptionPolicies.subscriptionContact">Upravnik za pretplatu</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactDescription">Kontakt naveden u Pretplate u strani O časopisu</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactEmailValid">Unesite ispravnu imejl adresu.</message>
-	<message key="manager.subscriptionPolicies.subscriptionPoliciesSaved">Vaša podešavanja za pretplate su sačuvane.</message>
 	<message key="manager.subscriptions">Pretplate</message>
 	<message key="manager.setup.reviewPolicy">Politika recenzije</message>
 	<message key="manager.setup.searchEngineIndexing">Indeksiranje pretraživačima</message>

@@ -353,7 +353,6 @@
 	<message key="manager.subscriptionPolicies.subscriptionContact">Abonnementskontakt</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactDescription">Kontaktpersonen som er oppført under Abonnement i 'Om' tidsskriftet.</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactEmailValid">Vennligst skriv inn en gyldig e-post.</message>
-	<message key="manager.subscriptionPolicies.subscriptionPoliciesSaved">Dine innstillinger for abonnement er nå oppdatert.</message>
 	<message key="manager.subscriptions">Abonnement</message>
 	<message key="manager.subscriptions.confirmDelete">Er du sikker på at du vil slette dette abonnementet?</message>
 	<message key="manager.subscriptions.create">Opprett nytt abonnement</message>

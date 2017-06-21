@@ -502,7 +502,6 @@
 	<message key="manager.subscriptionPolicies.subscriptionContact">Управник за претплату</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactDescription">Контакт наведен у Претплате у страни О часопису</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactEmailValid">Унесите исправну имејл адресу.</message>
-	<message key="manager.subscriptionPolicies.subscriptionPoliciesSaved">Ваша подешавања за претплате су сачуване.</message>
 	<message key="manager.subscriptions">Претплате</message>
 	<message key="manager.setup.reviewPolicy">Политика рецензије</message>
 	<message key="manager.setup.searchEngineIndexing">Иидексирање претраживачима</message>

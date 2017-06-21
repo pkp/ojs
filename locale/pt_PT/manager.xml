@@ -345,7 +345,6 @@
 	<message key="manager.subscriptionPolicies.subscriptionContact">Gestor de Subscrições</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactDescription">O contacto a seguir será exibido em Subscrições, em Sobre a Revista.</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactEmailValid">Forneça um e-mail válido.</message>
-	<message key="manager.subscriptionPolicies.subscriptionPoliciesSaved">As políticas de subscrição foram actualizadas.</message>
 	<message key="manager.subscriptions">Subscrições</message>
 	<message key="manager.subscriptions.confirmDelete">Deseja realmente eliminar esta subscrição?</message>
 	<message key="manager.subscriptions.create">Criar Novo Subscritor</message>
