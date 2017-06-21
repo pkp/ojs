@@ -429,11 +429,17 @@ font_location = /usr/share/fonts/truetype/freefont/FreeSerif.ttf
 ; Whether to use reCaptcha instead of default Captcha
 recaptcha = off
 
+; Version of ReCaptcha to use: 0: Legacy (default), 2: ReCAPTCHA v2
+recaptcha_version = 0
+
 ; Public key for reCaptcha (see http://www.google.com/recaptcha)
 ; recaptcha_public_key = your_public_key
 
 ; Private key for reCaptcha (see http://www.google.com/recaptcha)
 ; recaptcha_private_key = your_private_key
+
+; Validate the hostname in the ReCaptcha v2 response
+recaptcha_enforce_hostname = Off
 
 
 ;;;;;;;;;;;;;;;;;;;;;
