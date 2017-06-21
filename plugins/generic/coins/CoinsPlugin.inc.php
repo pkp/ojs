@@ -55,7 +55,6 @@ class CoinsPlugin extends GenericPlugin {
 	 */
 	function insertFooter($hookName, $params) {
 		if ($this->getEnabled()) {
-			$smarty = $params[1];
 			$output =& $params[2];
 			$request = $this->getRequest();
 			$templateMgr = TemplateManager::getManager($request);
