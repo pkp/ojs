@@ -80,7 +80,13 @@ class RegistrationForm extends Form {
 				$this->addCheck(new FormValidatorCustom($this, 'email', 'required', 'user.register.form.emailExists', array(DAORegistry::getDAO('UserDAO'), 'userExistsByEmail'), array(), true));
 				if ($this->captchaEnabled) {
 					if ($this->reCaptchaEnabled) {
-						$this->addCheck(new FormValidatorReCaptcha($this, 'recaptcha_challenge_field', 'recaptcha_response_field', Request::getRemoteAddr(), 'common.captchaField.badCaptcha'));
+						if (Config::getVar('captcha', 'recaptcha_enforce_hostname')) {
+							$host = Request::getServerHost();
+						} else { 
+							$host = '';
+						}
+						$reCaptchaVersion = intval(Config::getVar('captcha', 'recaptcha_version', 0));
+						$this->addCheck(new FormValidatorReCaptcha($this, 'recaptcha_challenge_field', ($reCaptchaVersion === 1 ? 'recaptcha_response_field' : 'g-recaptcha-response'), Request::getRemoteAddr(), 'common.captchaField.badCaptcha', $host));
 					} else {
 						$this->addCheck(new FormValidatorCaptcha($this, 'captcha', 'captchaId', 'common.captchaField.badCaptcha'));
 					}
@@ -110,9 +116,10 @@ class RegistrationForm extends Form {
 			$templateMgr->assign('reCaptchaEnabled', $this->reCaptchaEnabled);
 			if ($this->reCaptchaEnabled) {
 				import('lib.pkp.lib.recaptcha.recaptchalib');
+				$reCaptchaVersion = intval(Config::getVar('captcha', 'recaptcha_version', 0));
 				$publicKey = Config::getVar('captcha', 'recaptcha_public_key');
 				$useSSL = Config::getVar('security', 'force_ssl')||Request::getProtocol()=='https'?true:false;
-				$reCaptchaHtml = recaptcha_get_html($publicKey, null, $useSSL);
+				$reCaptchaHtml = recaptcha_versioned_get_html($reCaptchaVersion, $publicKey, null, $useSSL);
 				$templateMgr->assign('reCaptchaHtml', $reCaptchaHtml);
 				$templateMgr->assign('captchaEnabled', $this->captchaEnabled);
 			} else {
@@ -181,8 +188,13 @@ class RegistrationForm extends Form {
 		);
 		if ($this->captchaEnabled) {
 			if ($this->reCaptchaEnabled) {
-				$userVars[] = 'recaptcha_challenge_field';
-				$userVars[] = 'recaptcha_response_field';
+				$reCaptchaVersion = intval(Config::getVar('captcha', 'recaptcha_version', 0));
+				if ($reCaptchaVersion === 0) {
+					$userVars[] = 'recaptcha_challenge_field';
+					$userVars[] = 'recaptcha_response_field';
+				} else {
+					$userVars[] = 'g-recaptcha-response';
+				}
 			} else {
 				$userVars[] = 'captchaId';
 				$userVars[] = 'captcha';
