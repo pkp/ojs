@@ -64,6 +64,8 @@ class CoinsPlugin extends GenericPlugin {
 			$journal = $templateMgr->get_template_vars('currentJournal');
 			$issue = $templateMgr->get_template_vars('issue');
 
+			if (!$issue || !$journal || !$article) return false;
+
 			$vars = array(
 				array('ctx_ver', 'Z39.88-2004'),
 				array('rft_id', $request->url(null, 'article', 'view', $article->getId())),
