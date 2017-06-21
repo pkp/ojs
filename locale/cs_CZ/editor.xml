@@ -196,7 +196,6 @@
 	<message key="editor.notifyUsers.allAuthors">Všem autorům článků ({$count} uživatelů)</message>
 	<message key="editor.notifyUsers.allIndividualSubscribers">Všem individuálním předplatitelům ({$count} uživatelů)</message>
 	<message key="editor.notifyUsers.allInstitutionalSubscribers">Všem institucionálnám předplatitelům ({$count} uživatelů)</message>
-	<message key="editor.submissionReview.sendToCopyediting">Poslat k redigování</message>
 	<message key="editor.issues.galleys">Sazebnice čísla</message>
 	<message key="editor.issues.galley">Sazebnice čísla</message>
 	<message key="editor.issues.viewingGalley">Prohlédnout sazebnici čísla</message>

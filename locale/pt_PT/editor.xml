@@ -192,7 +192,6 @@
 	<message key="editor.issues.confirmUnpublish">Deseja realmente despublicar esta edição?</message>
 	<message key="editor.article.archiveSubmission">Rejeitar e Arquivar submissão</message>
 	<message key="editor.submissionReview.cannotSendToCopyediting">Antes de enviar a submissão para Copyediting, use o link Notificar Autor para informá-lo sobre a decisão e seleccionar a versão que vai ser enviada.</message>
-	<message key="editor.submissionReview.sendToCopyediting">Enviar para Copyediting</message>
 	<message key="editor.notifyUsers.allReaders">Todos os leitores ({$count} utilizadores)</message>
 	<message key="editor.notifyUsers.allAuthors">Todos os autores publicados ({$count} utilizadores)</message>
 	<message key="editor.notifyUsers.allIndividualSubscribers">Todos os assinantes individuais ({$count} utilizadores)</message>

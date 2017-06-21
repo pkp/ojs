@@ -16,12 +16,6 @@
 import('lib.pkp.classes.controllers.grid.users.reviewer.PKPReviewerGridHandler');
 
 class ReviewerGridHandler extends PKPReviewerGridHandler {
-	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 
 	/**
 	 * @copydoc PKPReviewerGridHandler::reviewRead()

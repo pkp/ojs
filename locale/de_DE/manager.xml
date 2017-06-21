@@ -592,6 +592,7 @@
 	<message key="plugins.importexport.common.error.validation">Konnte ausgewählte Objekte nicht konvertieren.</message>
 	<message key="plugins.importexport.common.invalidXML">XML ungültig:</message>
 	<message key="plugins.importexport.common.export.error.outputFileNotWritable">Die Ausgabedatei {$param} ist nicht beschreibbar.</message>
+	<message key="plugins.importexport.common.export.error.inputFileNotReadable">Die Eingabedatei {$param} is nicht lesbar.</message>
 	<message key="plugins.importexport.common.register.error.mdsError">Die Registrierung war nicht erfolgreich! Der DOI-Registrierungsserver hat einen Fehler zurückgeliefert: '{$param}'.</message>
 	<message key="plugins.importexport.common.register.success">Registrierung erfolgreich!</message>
 	<message key="plugins.importexport.common.senderTask.warning.noDOIprefix">DOI-Präfix fehlt für die Zeitschrift mit dem Pfad {$path}.</message>

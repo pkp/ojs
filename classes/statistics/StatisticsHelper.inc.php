@@ -20,10 +20,6 @@ define('STATISTICS_DIMENSION_ISSUE_ID', STATISTICS_DIMENSION_ASSOC_OBJECT_ID);
 
 class StatisticsHelper extends PKPStatisticsHelper {
 
-	function __construct() {
-		parent::__construct();
-	}
-
 	/**
 	 * @see PKPStatisticsHelper::getAppColumnTitle()
 	 */

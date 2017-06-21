@@ -20,12 +20,6 @@ class ArticleGalley extends Representation {
 	/** @var SubmissionFile */
 	var $_submissionFile;
 
-	/**
-	 * Constructor.
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 
 	//
 	// Get/set methods

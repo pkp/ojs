@@ -19,12 +19,6 @@ import('lib.pkp.classes.gift.PKPGift');
 define('GIFT_TYPE_SUBSCRIPTION', 0x01);
 
 class Gift extends PKPGift {
-	/**
-	 * Constructor.
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 
 	/**
 	 * Get the name of the gift based on gift type.

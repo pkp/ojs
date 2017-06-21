@@ -21,12 +21,6 @@ class CounterHandler extends Handler {
 	/** Plugin associated with this request **/
 	var $plugin;
 	
-	/**
-	 * Constructor
-	 **/
-	function __construct() {
-		parent::__construct();
-	}
 	
 	/**
 	 * Display the main log analyzer page.

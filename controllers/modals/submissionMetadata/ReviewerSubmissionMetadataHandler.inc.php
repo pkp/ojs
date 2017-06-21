@@ -16,12 +16,6 @@
 import('lib.pkp.classes.controllers.modals.submissionMetadata.PKPReviewerSubmissionMetadataHandler');
 
 class ReviewerSubmissionMetadataHandler extends PKPReviewerSubmissionMetadataHandler {
-	/**
-	 * Constructor.
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 
 	//
 	// Implement template methods from PKPHandler.

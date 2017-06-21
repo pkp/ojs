@@ -23,13 +23,6 @@ define('ARTICLE_ACCESS_OPEN', 1);
 class PublishedArticle extends Article {
 
 	/**
-	 * Constructor.
-	 */
-	function __construct() {
-		parent::__construct();
-	}
-
-	/**
 	 * Get ID of published article.
 	 * @return int
 	 */

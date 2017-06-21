@@ -39,13 +39,6 @@ import('lib.pkp.classes.notification.PKPNotification');
 import('lib.pkp.classes.notification.NotificationDAO');
 
 class Notification extends PKPNotification {
-
-	/**
-	 * Constructor.
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 }
 
 ?>

@@ -17,12 +17,6 @@
 import('lib.pkp.classes.log.PKPSubmissionEmailLogEntry');
 
 class SubmissionEmailLogEntry extends PKPSubmissionEmailLogEntry {
-	/**
-	 * Constructor.
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 
 	function setArticleId($articleId) {
 		return $this->setAssocId($articleId);

@@ -88,6 +88,7 @@ class Upgrade extends Installer {
 
 		// controlled vocabulary DAOs.
 		$submissionSubjectDao = DAORegistry::getDAO('SubmissionSubjectDAO');
+		$submissionKeywordDao = DAORegistry::getDAO('SubmissionKeywordDAO');
 		$submissionDisciplineDao = DAORegistry::getDAO('SubmissionDisciplineDAO');
 		$submissionAgencyDao = DAORegistry::getDAO('SubmissionAgencyDAO');
 		$submissionLanguageDao = DAORegistry::getDAO('SubmissionLanguageDAO');
@@ -95,7 +96,7 @@ class Upgrade extends Installer {
 
 		// check to see if there are any existing controlled vocabs for submissionAgency, submissionDiscipline, submissionSubject, or submissionLanguage.
 		// IF there are, this implies that this code has run previously, so return.
-		$vocabTestResult = $controlledVocabDao->retrieve('SELECT count(*) AS total FROM controlled_vocabs WHERE symbolic = \'submissionAgency\' OR symbolic = \'submissionDiscipline\' OR symbolic = \'submissionSubject\' OR symbolic = \'submissionLanguage\'');
+		$vocabTestResult = $controlledVocabDao->retrieve('SELECT count(*) AS total FROM controlled_vocabs WHERE symbolic = \'submissionAgency\' OR symbolic = \'submissionDiscipline\' OR symbolic = \'submissionSubject\' OR symbolic = \'submissionKeyword\' OR symbolic = \'submissionLanguage\'');
 		$testRow = $vocabTestResult->GetRowAssoc(false);
 		if ($testRow['total'] > 0) return true;
 
@@ -113,7 +114,7 @@ class Upgrade extends Installer {
 				$row = $result->GetRowAssoc(false);
 				$articleId = (int)$row['submission_id'];
 				$settings = array();
-				$settingResult = $articleDao->retrieve('SELECT setting_value, setting_name, locale FROM submission_settings WHERE submission_id = ? AND (setting_name = \'discipline\' OR setting_name = \'subject\' OR setting_name = \'sponsor\');', array((int)$articleId));
+				$settingResult = $articleDao->retrieve('SELECT setting_value, setting_name, locale FROM submission_settings WHERE submission_id = ? AND setting_value <> \'\' AND (setting_name = \'discipline\' OR setting_name = \'subject\' OR setting_name = \'subjectClass\' OR setting_name = \'sponsor\')', array((int)$articleId));
 				while (!$settingResult->EOF) {
 					$settingRow = $settingResult->GetRowAssoc(false);
 					$locale = $settingRow['locale'];
@@ -132,13 +133,14 @@ class Upgrade extends Installer {
 				// test for locales for each field since locales may have been modified since
 				// the article was last edited.
 
-				$disciplines = $subjects = $agencies = array();
+				$disciplines = $subjects = $keywords = $agencies = array();
 
 				if (array_key_exists('discipline', $settings)) {
 					$disciplineLocales = array_keys($settings['discipline']);
 					if (is_array($disciplineLocales)) {
 						foreach ($disciplineLocales as &$locale) {
 							$disciplines[$locale] = preg_split('/[,;:]/', $settings['discipline'][$locale]);
+							$disciplines[$locale] = array_map('trim', $disciplines[$locale]);
 						}
 						$submissionDisciplineDao->insertDisciplines($disciplines, $articleId, false);
 					}
@@ -146,16 +148,30 @@ class Upgrade extends Installer {
 					unset($disciplines);
 				}
 
-				if (array_key_exists('subject', $settings)) {
-					$subjectLocales = array_keys($settings['subject']);
+				if (array_key_exists('subjectClass', $settings)) {
+					$subjectLocales = array_keys($settings['subjectClass']);
 					if (is_array($subjectLocales)) {
 						foreach ($subjectLocales as &$locale) {
-							$subjects[$locale] = preg_split('/[,;:]/', $settings['subject'][$locale]);
+							$subjects[$locale] = preg_split('/[,;:]/', $settings['subjectClass'][$locale]);
+							$subjects[$locale] = array_map('trim', $subjects[$locale]);
 						}
 						$submissionSubjectDao->insertSubjects($subjects, $articleId, false);
 					}
 					unset($subjectLocales);
 					unset($subjects);
+				}
+
+				if (array_key_exists('subject', $settings)) {
+					$keywordLocales = array_keys($settings['subject']);
+					if (is_array($keywordLocales)) {
+						foreach ($keywordLocales as &$locale) {
+							$keywords[$locale] = preg_split('/[,;:]/', $settings['subject'][$locale]);
+							$keywords[$locale] = array_map('trim', $keywords[$locale]);
+						}
+						$submissionKeywordDao->insertKeywords($keywords, $articleId, false);
+					}
+					unset($keywordLocales);
+					unset($keywords);
 				}
 
 				if (array_key_exists('sponsor', $settings)) {
@@ -164,6 +180,7 @@ class Upgrade extends Installer {
 						foreach ($sponsorLocales as &$locale) {
 							// note array name change.  Sponsor -> Agency
 							$agencies[$locale] = preg_split('/[,;:]/', $settings['sponsor'][$locale]);
+							$agencies[$locale] = array_map('trim', $agencies[$locale]);
 						}
 						$submissionAgencyDao->insertAgencies($agencies, $articleId, false);
 					}
@@ -174,10 +191,9 @@ class Upgrade extends Installer {
 				$languages = array();
 				foreach ($supportedLocales as &$locale) {
 					$languages[$locale] = preg_split('/\s+/', $language);
+					$languages[$locale] = array_map('trim', $languages[$locale]);
 				}
-
 				$submissionLanguageDao->insertLanguages($languages, $articleId, false);
-
 				unset($languages);
 				unset($language);
 				unset($settings);
@@ -188,6 +204,9 @@ class Upgrade extends Installer {
 			unset($result);
 			unset($journal);
 		}
+
+		// delete old settings
+		$articleDao->update('DELETE FROM submission_settings WHERE setting_name = \'discipline\' OR setting_name = \'subject\' OR setting_name = \'subjectClass\' OR setting_name = \'sponsor\'');
 
 		return true;
 	}
@@ -300,7 +319,7 @@ class Upgrade extends Installer {
 
 			// Section Editors.
 			$sectionEditorGroup = $userGroupDao->getDefaultByRoleId($journal->getId(), ROLE_ID_SUB_EDITOR);
-			$userResult = $journalDao->retrieve('SELECT DISTINCT user_id FROM section_editors WHERE context_id = ?', array((int) $journal->getId()));;
+			$userResult = $journalDao->retrieve('SELECT user_id FROM roles WHERE journal_id = ? AND role_id = ?', array((int) $journal->getId(), OJS2_ROLE_ID_SECTION_EDITOR));
 			while (!$userResult->EOF) {
 				$row = $userResult->GetRowAssoc(false);
 				$userGroupDao->assignUserToGroup($row['user_id'], $sectionEditorGroup->getId());
@@ -524,7 +543,7 @@ class Upgrade extends Installer {
 		$tempStatsDao = new UsageStatsTemporaryRecordDAO();
 		$tempStatsDao->deleteByLoadId($loadId);
 
-		import('plugins.generic.usageStats.GeoLocationTool');
+		import('lib.pkp.plugins.generic.usageStats.GeoLocationTool');
 		$geoLocationTool = new GeoLocationTool();
 
 		while(!$result->EOF) {
@@ -2217,6 +2236,102 @@ class Upgrade extends Installer {
 			$journalSettingsDao->updateSetting($journal->getId(), 'masthead', $masthead, 'string', true);
 			unset($journal);
 		}
+		return true;
+	}
+	/**
+	 * For 2.4.x - 3.1.0 upgrade: repair already migrated keywords and subjects.
+	 * @return boolean
+	 */
+	function repairKeywordsAndSubjects() {
+		$request = Application::getRequest();
+		$site = $request->getSite();
+		$installedLocales = $site->getInstalledLocales();
+		$submissionSubjectDao = DAORegistry::getDAO('SubmissionSubjectDAO');
+		$submissionKeywordDao = DAORegistry::getDAO('SubmissionKeywordDAO');
+		$submissionSubjectEntryDao = DAORegistry::getDAO('SubmissionSubjectEntryDAO');
+
+		// insert and correct old keywords migration:
+		// get old keywords
+		$subjectsToKeep = array();
+		$oldKeywordsFound = false;
+		$result = $submissionKeywordDao->retrieve('SELECT * FROM submission_settings WHERE setting_name = \'subject\' AND setting_value <> \'\'');
+		if ($result->RecordCount() > 0) $oldKeywordsFound = true;
+		while (!$result->EOF) {
+			$row = $result->GetRowAssoc(false);
+			$submissionId = $row['submission_id'];
+			$locale = $row['locale'];
+			$oldKeywordsArray = preg_split('/[,;:]/', $row['setting_value']);
+			$oldKeywords = array_map('trim', $oldKeywordsArray);
+			// get current keywords
+			$newKeywords = array();
+			$newKeywordsArray = $submissionKeywordDao->getKeywords($submissionId, array($locale));
+			if (array_key_exists($locale, $newKeywordsArray)) {
+				$newKeywords = array_map('trim', $newKeywordsArray[$locale]);
+			}
+			// get the difference and insert them
+			$keywordsToAdd = array_diff($oldKeywords, $newKeywords);
+			if (!empty($keywordsToAdd)) {
+				$submissionKeywordDao->insertKeywords(array($locale => $keywordsToAdd), $submissionId, false);
+			}
+
+			// correct the old keywords migration:
+			// because the old keywords were already migrated as subjects earlier:
+			// get current subjects for all possible locales, in order to also
+			// consider locales other than old keywords locales (for example if added after the migration),
+			// in order not to remove those when inserting below
+			if (!array_key_exists($submissionId, $subjectsToKeep)) {
+				$newSubjectsArray = $submissionSubjectDao->getSubjects($submissionId, $installedLocales);
+				$subjectsToKeep[$submissionId] = $newSubjectsArray;
+			}
+			// if subjects for the current locale exist
+			if (array_key_exists($locale, $subjectsToKeep[$submissionId])) {
+				// get current subjects for the current locale
+				$newSubjects = array_map('trim', $subjectsToKeep[$submissionId][$locale]);
+				// get the difference to keep only them
+				$subjectsToKeep[$submissionId][$locale] = array_diff($newSubjects, $oldKeywords);
+			}
+			$result->MoveNext();
+		}
+		$result->Close();
+		unset($newSubjects);
+		unset($newSubjectsArray);
+
+		// if old keywords were found, it means that this this function is executed for the first time
+		// i.e. the subjects should be corrected
+		if ($oldKeywordsFound) {
+			// insert the subjects that should be kept, overriding the existing ones
+			// also if they are empty, because then they should be deleted
+			foreach ($subjectsToKeep as $submissionId => $submissionSubjects) {
+				$submissionSubjectDao->insertSubjects($submissionSubjects, $submissionId);
+			}
+		}
+
+		// insert old subjects
+		$result = $submissionKeywordDao->retrieve('SELECT * FROM submission_settings WHERE setting_name = \'subjectClass\' AND setting_value <> \'\'');
+		while (!$result->EOF) {
+			$row = $result->GetRowAssoc(false);
+			$submissionId = $row['submission_id'];
+			$locale = $row['locale'];
+			$oldSubjectsArray = preg_split('/[,;:]/', $row['setting_value']);
+			$oldSubjects = array_map('trim', $oldSubjectsArray);
+			// get current subjects
+			$newSubjects = array();
+			$newSubjectsArray = $submissionSubjectDao->getSubjects($submissionId, array($locale));
+			if (array_key_exists($locale, $newSubjectsArray)) {
+				$newSubjects = array_map('trim', $newSubjectsArray[$locale]);
+			}
+			// get the difference and insert them
+			$subjectsToAdd = array_diff($oldSubjects, $newSubjects);
+			if (!empty($subjectsToAdd)) {
+				$submissionSubjectDao->insertSubjects(array($locale => $subjectsToAdd), $submissionId, false);
+			}
+			$result->MoveNext();
+		}
+		$result->Close();
+
+		// delete old settings
+		$submissionKeywordDao->update('DELETE FROM submission_settings WHERE setting_name = \'discipline\' OR setting_name = \'subject\' OR setting_name = \'subjectClass\' OR setting_name = \'sponsor\'');
+
 		return true;
 	}
 

@@ -21,13 +21,6 @@ define('ISSUE_FILE_PUBLIC', 0x000001);
 
 class IssueFile extends PKPFile {
 
-	/**
-	 * Constructor.
-	 */
-	function __construct() {
-		parent::__construct();
-	}
-
 	//
 	// Get/set methods
 	//

@@ -18,12 +18,6 @@ import('classes.search.ArticleSearch');
 import('lib.pkp.classes.search.SubmissionSearchDAO');
 
 class ArticleSearchDAO extends SubmissionSearchDAO {
-	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 
 	/**
 	 * Retrieve the top results for a phrases with the given

@@ -17,12 +17,6 @@
 import('lib.pkp.plugins.citationParser.paracite.PKPParaciteCitationParserPlugin');
 
 class ParaciteCitationParserPlugin extends PKPParaciteCitationParserPlugin {
-	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 }
 
 ?>

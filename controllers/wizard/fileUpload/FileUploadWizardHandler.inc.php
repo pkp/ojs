@@ -24,13 +24,6 @@ import('lib.pkp.controllers.wizard.fileUpload.PKPFileUploadWizardHandler');
 
 class FileUploadWizardHandler extends PKPFileUploadWizardHandler {
 
-	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-	}
-
 	//
 	// Implement template methods from PKPHandler
 	//

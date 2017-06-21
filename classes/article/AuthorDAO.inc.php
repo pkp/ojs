@@ -19,12 +19,6 @@ import('classes.article.Article');
 import('lib.pkp.classes.submission.PKPAuthorDAO');
 
 class AuthorDAO extends PKPAuthorDAO {
-	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 
 	/**
 	 * Retrieve all published submissions associated with authors with

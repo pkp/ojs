@@ -17,13 +17,6 @@ import('lib.pkp.controllers.grid.admin.context.ContextGridHandler');
 import('controllers.grid.admin.journal.form.JournalSiteSettingsForm');
 
 class JournalGridHandler extends ContextGridHandler {
-	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-	}
-
 
 	//
 	// Public grid actions.

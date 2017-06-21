@@ -16,12 +16,6 @@
 import('classes.handler.Handler');
 
 class GiftsHandler extends Handler {
-	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 
 	/**
 	 * Display payment form for buying a gift subscription

@@ -16,12 +16,6 @@
 import('pages.manager.ManagerHandler');
 
 class SubscriptionHandler extends ManagerHandler {
-	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 
 	/**
 	 * Display subscriptions summary page for the current journal.

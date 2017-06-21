@@ -18,12 +18,6 @@ import('classes.article.Article');
 import('lib.pkp.classes.submission.SubmissionDAO');
 
 class ArticleDAO extends SubmissionDAO {
-	/**
-	 * Constructor.
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 
 	/**
 	 * Get a list of fields for which localized data is supported

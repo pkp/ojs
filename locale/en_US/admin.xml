@@ -56,7 +56,6 @@
 	<message key="admin.journals.createInstructions">You will automatically be enrolled as the manager of this journal. After creating a new journal, you will be redirected to its settings wizard, to complete the initial journal setup.</message>
 	<message key="admin.journals.journalSettings">Journal Settings</message>
 	<message key="admin.journals.noneCreated">No journals have been created.</message>
-	<message key="admin.contexts.confirmDelete">Are you sure you want to permanently delete this journal and all of its contents?</message>
 	<message key="admin.contexts.create">Create Journal</message>
 	<message key="admin.journals.urlWillBe">This should be a single short word or acronym that identifies the journal. The journal's URL will be {$sampleUrl}.</message>
 	<message key="admin.contexts.form.titleRequired">A title is required.</message>

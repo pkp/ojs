@@ -16,12 +16,6 @@
 import('classes.handler.Handler');
 
 class PaymentHandler extends Handler {
-	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 		 
 	/**
 	 * Pass request to plugin.

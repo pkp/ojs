@@ -20,13 +20,6 @@ import('lib.pkp.classes.user.PKPUserDAO');
 class UserDAO extends PKPUserDAO {
 
 	/**
-	 * Constructor.
-	 */
-	function __construct() {
-		parent::__construct();
-	}
-
-	/**
 	 * Construct a new User object.
 	 * @return User
 	 */

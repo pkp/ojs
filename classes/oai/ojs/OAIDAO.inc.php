@@ -213,12 +213,15 @@ class OAIDAO extends PKPOAIDAO {
 		$sectionId = array_shift($setIds);
 
 		$params = array();
-		if ($journalId) $params[] = (int) $journalId;
-		if ($sectionId) $params[] = (int) $sectionId;
+		if (isset($journalId)) $params[] = (int) $journalId;
+		if (isset($sectionId)) $params[] = (int) $sectionId;
 		if ($submissionId) $params[] = (int) $submissionId;
-		if ($journalId) $params[] = (int) $journalId;
-		if ($sectionId) $params[] = (int) $sectionId;
-		if (isset($set)) $params[] = $set;
+		if (isset($journalId)) $params[] = (int) $journalId;
+		if (isset($sectionId)) $params[] = (int) $sectionId;
+		if (isset($set)) {
+			$params[] = $set;
+			$params[] = $set . ':%';
+		}
 		if ($submissionId) $params[] = (int) $submissionId;
 		$result = $this->retrieve(
 			'SELECT	LEAST(a.last_modified, i.last_modified) AS last_modified,
@@ -236,25 +239,25 @@ class OAIDAO extends PKPOAIDAO {
 				JOIN sections s ON (s.section_id = a.section_id)
 				JOIN journals j ON (j.journal_id = a.context_id)
 			WHERE	i.published = 1 AND j.enabled = 1 AND a.status <> ' . STATUS_DECLINED . '
-				' . ($journalId?' AND j.journal_id = ?':'') . '
-				' . ($sectionId?' AND s.section_id = ?':'') . '
+				' . (isset($journalId) ?' AND j.journal_id = ?':'') . '
+				' . (isset($sectionId) ?' AND s.section_id = ?':'') . '
 				' . ($from?' AND GREATEST(a.last_modified, i.last_modified) >= ' . $this->datetimeToDB($from):'') . '
 				' . ($until?' AND LEAST(a.last_modified, i.last_modified) <= ' . $this->datetimeToDB($until):'') . '
 				' . ($submissionId?' AND a.submission_id = ?':'') . '
 			UNION
 			SELECT	dot.date_deleted AS last_modified,
 				dot.data_object_id AS submission_id,
-				tsoj.assoc_id AS assoc_id,
-				tsos.assoc_id AS section_id,
+				' . (isset($journalId) ? 'tsoj.assoc_id' : 'NULL') . ' AS assoc_id,' . '
+				' . (isset($sectionId)? 'tsos.assoc_id' : 'NULL') . ' AS section_id,
 				NULL AS issue_id,
 				dot.tombstone_id,
 				dot.set_spec,
 				dot.oai_identifier
-			FROM	data_object_tombstones dot
-				JOIN data_object_tombstone_oai_set_objects tsoj ON ' . (isset($journalId) ? '(tsoj.tombstone_id = dot.tombstone_id AND tsoj.assoc_type = ' . ASSOC_TYPE_JOURNAL . ' AND tsoj.assoc_id = ?)' : 'tsoj.assoc_id = null') . '
-				JOIN data_object_tombstone_oai_set_objects tsos ON ' . (isset($sectionId) ? '(tsos.tombstone_id = dot.tombstone_id AND tsos.assoc_type = ' . ASSOC_TYPE_SECTION . ' AND tsos.assoc_id = ?)' : 'tsos.assoc_id = null') . '
+			FROM	data_object_tombstones dot' . '
+				' . (isset($journalId) ? 'JOIN data_object_tombstone_oai_set_objects tsoj ON (tsoj.tombstone_id = dot.tombstone_id AND tsoj.assoc_type = ' . ASSOC_TYPE_JOURNAL . ' AND tsoj.assoc_id = ?)' : '') . '
+				' . (isset($sectionId)? 'JOIN data_object_tombstone_oai_set_objects tsos ON (tsos.tombstone_id = dot.tombstone_id AND tsos.assoc_type = ' . ASSOC_TYPE_SECTION . ' AND tsos.assoc_id = ?)' : '') . '
 			WHERE	1=1
-				' . (isset($set)?' AND dot.set_spec = ?':'') . '
+				' . (isset($set)?' AND (dot.set_spec = ? OR dot.set_spec LIKE ?)':'') . '
 				' . ($from?' AND dot.date_deleted >= ' . $this->datetimeToDB($from):'') . '
 				' . ($until?' AND dot.date_deleted <= ' . $this->datetimeToDB($until):'') . '
 				' . ($submissionId?' AND dot.data_object_id = ?':'') . '

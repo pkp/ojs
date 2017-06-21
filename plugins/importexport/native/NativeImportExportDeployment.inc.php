@@ -69,7 +69,6 @@ class NativeImportExportDeployment extends PKPNativeImportExportDeployment {
 	 */
 	function setIssue($issue) {
 		$this->_issue = $issue;
-		if ($issue) $this->addProcessedObjectId(ASSOC_TYPE_ISSUE, $issue->getId());
 	}
 
 	/**
@@ -90,9 +89,23 @@ class NativeImportExportDeployment extends PKPNativeImportExportDeployment {
 				$processedIssuesIds = $this->getProcessedObjectsIds(ASSOC_TYPE_ISSUE);
 				if (!empty($processedIssuesIds)) {
 					$issueDao = DAORegistry::getDAO('IssueDAO');
-					foreach ($processedIssuesIds as $issueId => $errorMessages) {
-						$issue = $issueDao->getById($issueId);
-						$issueDao->deleteObject($issue);
+					foreach ($processedIssuesIds as $issueId) {
+						if ($issueId) {
+							$issue = $issueDao->getById($issueId);
+							$issueDao->deleteObject($issue);
+						}
+					}
+				}
+				break;
+			case ASSOC_TYPE_SECTION:
+				$processedSectionIds = $this->getProcessedObjectsIds(ASSOC_TYPE_SECTION);
+				if (!empty($processedSectionIds)) {
+					$sectionDao = DAORegistry::getDAO('SectionDAO');
+					foreach ($processedSectionIds as $sectionId) {
+						if ($sectionId) {
+							$section = $sectionDao->getById($sectionId);
+							$sectionDao->deleteObject($section);
+						}
 					}
 				}
 				break;

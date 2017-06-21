@@ -16,12 +16,6 @@
 import('lib.pkp.pages.user.PKPUserHandler');
 
 class UserHandler extends PKPUserHandler {
-	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 
 	/**
 	 * Display user gifts page

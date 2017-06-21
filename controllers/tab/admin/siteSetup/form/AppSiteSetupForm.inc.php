@@ -16,12 +16,6 @@
 import('lib.pkp.controllers.tab.settings.siteSetup.form.SiteSetupForm');
 
 class AppSiteSetupForm extends SiteSetupForm {
-	/**
-	 * Constructor.
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 
 	/**
 	 * @copydoc SiteSetupForm::fetch()

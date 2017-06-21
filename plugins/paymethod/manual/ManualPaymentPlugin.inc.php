@@ -16,12 +16,6 @@
 import('classes.plugins.PaymethodPlugin');
 
 class ManualPaymentPlugin extends PaymethodPlugin {
-	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 
 	/**
 	 * @see Plugin::getName

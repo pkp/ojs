@@ -15,21 +15,15 @@
 
 import('classes.plugins.PubObjectsExportPlugin');
 
-define('DOAJ_XSD_URL', 'http://www.doaj.org/schemas/doajArticles.xsd');
+define('DOAJ_XSD_URL', 'https://www.doaj.org/schemas/doajArticles.xsd');
 
 define('DOAJ_API_DEPOSIT_OK', 201);
 
-define('DOAJ_API_URL', 'http://doaj.org/api/v1/');
-define('DOAJ_API_URL_DEV', 'http://testdoaj.cottagelabs.com/api/v1/');
+define('DOAJ_API_URL', 'https://doaj.org/api/v1/');
+define('DOAJ_API_URL_DEV', 'https://testdoaj.cottagelabs.com/api/v1/');
 define('DOAJ_API_OPERATION', 'bulk/articles');
 
 class DOAJExportPlugin extends PubObjectsExportPlugin {
-	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 
 	/**
 	 * @copydoc Plugin::getName()

@@ -29,7 +29,6 @@
 	<message key="editor.submissionReview.confirmDecision">Haluatko varmasti tallentaa tämän päätöksen?</message>
 	<message key="editor.submissionReview.emailWillArchive">Tämä käsikirjoitus arkistoidaan sen jälkeen, kun Ilmoita kirjoittajalle -sähköposti on lähetetty tai sen Ohita sähköposti-painiketta on painettu.</message>
 	<message key="editor.submissionReview.cannotSendToCopyediting">Ennen käsikirjoituksen lähettämistä teknisesti toimitettavaksi, ilmoita kirjoittajalle päätöksestä (käytä Ilmoita kirjoittajalle -linkkiä) ja valitse lähetettävä versio.</message>
-	<message key="editor.submissionReview.sendToCopyediting">Lähetä teknisesti toimitettavaksi</message>
 	<message key="editor.notifyUsers">Ilmoita käyttäjille</message>
 	<message key="editor.notifyUsers.allUsers">Kaikki tähän konferenssiin liittyvät käyttäjät ({$count})</message>
 	<message key="editor.notifyUsers.allReaders">Kaikki lukijat ({$count} käyttäjää)</message>

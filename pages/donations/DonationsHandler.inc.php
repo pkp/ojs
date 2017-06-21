@@ -17,12 +17,6 @@
 import('classes.handler.Handler');
 
 class DonationsHandler extends Handler {
-	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 
 	/**
 	 * Display the donations page.

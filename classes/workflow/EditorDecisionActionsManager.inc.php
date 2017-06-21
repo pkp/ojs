@@ -112,7 +112,7 @@ class EditorDecisionActionsManager {
 			SUBMISSION_EDITOR_DECISION_ACCEPT => array(
 				'name' => 'accept',
 				'operation' => 'promote',
-				'title' => 'editor.submission.decision.accept',
+				'title' => 'editor.submission.decision.skipReview',
 				'image' => 'promote',
 				'help' => 'editor.review.NotifyAuthorAccept',
 				'titleIcon' => 'accept_submission',

@@ -17,12 +17,6 @@
 import('lib.pkp.classes.file.PKPPublicFileManager');
 
 class PublicFileManager extends PKPPublicFileManager {
-	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 
 	/**
 	 * Get the path to a journal's public files directory.

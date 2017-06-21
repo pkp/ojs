@@ -22,12 +22,6 @@ define('GIFT_REDEEM_STATUS_ERROR_SUBSCRIPTION_NON_EXPIRING', 0x11);
 
 
 class GiftDAO extends PKPGiftDAO {
-	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 
 	/**
 	 * Construct a new data object corresponding to this DAO.

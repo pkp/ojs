@@ -17,12 +17,6 @@
 import('lib.pkp.plugins.citationOutput.vancouver.PKPVancouverCitationOutputPlugin');
 
 class VancouverCitationOutputPlugin extends PKPVancouverCitationOutputPlugin {
-	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 }
 
 ?>

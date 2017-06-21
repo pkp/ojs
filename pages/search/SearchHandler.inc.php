@@ -17,12 +17,6 @@ import('classes.search.ArticleSearch');
 import('classes.handler.Handler');
 
 class SearchHandler extends Handler {
-	/**
-	 * Constructor
-	 **/
-	function __construct() {
-		parent::__construct();
-	}
 
 	/**
 	 * @copydoc PKPHandler::authorize()

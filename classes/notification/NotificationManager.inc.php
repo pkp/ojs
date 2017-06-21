@@ -20,13 +20,6 @@ class NotificationManager extends PKPNotificationManager {
 	/* @var array Cache each user's most privileged role for each submission */
 	var $privilegedRoles;
 
-	/**
-	 * Constructor.
-	 */
-	function __construct() {
-		parent::__construct();
-	}
-
 
 	/**
 	 * Construct a URL for the notification based on its type and associated object

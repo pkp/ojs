@@ -29,13 +29,6 @@ class ArticleHandler extends Handler {
 	/** galley associated with the request **/
 	var $galley;
 
-	/**
-	 * Constructor
-	 * @param $request Request
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 
 	/**
 	 * @copydoc PKPHandler::authorize()
@@ -55,7 +48,6 @@ class ArticleHandler extends Handler {
 	 */
 	function initialize($request, $args) {
 		$articleId = isset($args[0]) ? $args[0] : 0;
-		$galleyId = isset($args[1]) ? $args[1] : 0;
 
 		$journal = $request->getContext();
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
@@ -72,8 +64,14 @@ class ArticleHandler extends Handler {
 			$this->article = $article;
 		}
 
-		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
-		$this->galley = $galleyDao->getByBestGalleyId($galleyId, $this->article->getId());
+		if (!isset($this->article)) $request->getDispatcher()->handle404();
+
+		if (in_array($request->getRequestedOp(), array('view', 'download'))) {
+			$galleyId = isset($args[1]) ? $args[1] : 0;
+			$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
+			$this->galley = $galleyDao->getByBestGalleyId($galleyId, $this->article->getId());
+			if ($galleyId && !$this->galley) $request->getDispatcher()->handle404();
+		}
 	}
 
 	/**
@@ -205,7 +203,6 @@ class ArticleHandler extends Handler {
 				$articleGalleys = $articleGalleyDao->getBySubmissionId($articleId);
 				while ($articleGalley = $articleGalleys->next()) {
 					$galleyFile = $articleGalley->getFile();
-print_r($galleyFile);
 					if ($galleyFile && $galleyFile->getFileId() == $submissionFile->getFileId()) {
 						header('HTTP/1.1 301 Moved Permanently');
 						$request->redirect(null, null, 'download', array($articleId, $articleGalley->getId(), $submissionFile->getFileId()));

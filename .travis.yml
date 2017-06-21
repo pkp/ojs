@@ -11,6 +11,7 @@ php:
   - 5.3
   - 5.6
   - 7.1
+group: deprecated-2017Q1
 python:
   - 3.3
 addons:
@@ -58,7 +59,7 @@ after_script:
 
   # Print logs and outputs for debugging.
   # - cat access.log
-  - cat error.log
+  - tail -c 1048576 error.log
   # - cat xvfb-output
   # - cat selenium-output
   - cat ./lib/pkp/tests/results/error.log

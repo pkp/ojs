@@ -18,7 +18,7 @@
 {assign var=authorCount value=$authors|@count}
 {foreach from=$authors item=author name=authors key=i}
 	{assign var=firstName value=$author->getFirstName()}
-	{$author->getLastName()|escape}, {$firstName|escape|truncate:1:""}.{if $i==$authorCount-2}, &amp; {elseif $i<$authorCount-1}, {/if}
+	{$author->getLastName()|escape}, {$firstName|String_substr:0:1|escape}.{if $i==$authorCount-2}, &amp; {elseif $i<$authorCount-1}, {/if}
 {/foreach}
 
 ({if $article->getDatePublished()}{$article->getDatePublished()|date_format:'%Y'}{elseif $issue->getDatePublished()}{$issue->getDatePublished()|date_format:'%Y'}{else}{$issue->getYear()|escape}{/if}).

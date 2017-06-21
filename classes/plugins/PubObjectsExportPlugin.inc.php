@@ -48,18 +48,14 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 	}
 
 	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-	}
-
-	/**
 	 * @copydoc Plugin::register()
 	 */
 	function register($category, $path) {
 		$success = parent::register($category, $path);
-		$this->addLocaleData();
+		if ($success) {
+			$this->addLocaleData();
+			HookRegistry::register('AcronPlugin::parseCronTab', array($this, 'callbackParseCronTab'));
+		}
 		return $success;
 	}
 

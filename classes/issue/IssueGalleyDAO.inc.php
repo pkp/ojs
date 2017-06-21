@@ -19,13 +19,6 @@ import('classes.issue.IssueGalley');
 class IssueGalleyDAO extends DAO {
 
 	/**
-	 * Constructor.
-	 */
-	function __construct() {
-		parent::__construct();
-	}
-
-	/**
 	 * Retrieve a galley by ID.
 	 * @param $galleyId int
 	 * @param $issueId int optional

@@ -20,14 +20,6 @@ define('RECOMMEND_BY_AUTHOR_PLUGIN_COUNT', 10);
 
 class RecommendByAuthorPlugin extends GenericPlugin {
 
-	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-	}
-
-
 	//
 	// Implement template methods from Plugin.
 	//
@@ -111,7 +103,7 @@ class RecommendByAuthorPlugin extends GenericPlugin {
 		$orderBy = array(STATISTICS_METRIC => STATISTICS_ORDER_DESC);
 		$statsReport = $application->getMetrics($metricType, $column, $filter, $orderBy);
 		$orderedResults = array();
-		foreach ($statsReport as $reportRow) {
+		foreach ((array) $statsReport as $reportRow) {
 			$orderedResults[] = $reportRow['submission_id'];
 		}
 		// Make sure we even get results that have no statistics (yet) and that

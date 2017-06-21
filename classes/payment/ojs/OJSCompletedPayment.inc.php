@@ -23,12 +23,6 @@ class OJSCompletedPayment extends Payment {
 	var $timestamp;
 	var $payMethod;
 
-	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 
 	//
 	// Get/set methods

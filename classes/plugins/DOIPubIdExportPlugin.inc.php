@@ -23,23 +23,6 @@ define('DOI_EXPORT_REGISTERED_DOI', 'registeredDoi');
 
 abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin {
 
-	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-	}
-
-	/**
-	 * @copydoc Plugin::register()
-	 */
-	function register($category, $path) {
-		$success = parent::register($category, $path);
-		if ($success) {
-			HookRegistry::register('AcronPlugin::parseCronTab', array($this, 'callbackParseCronTab'));
-		}
-		return $success;
-	}
 
 	/**
 	 * @copydoc ImportExportPlugin::display()

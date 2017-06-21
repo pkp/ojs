@@ -27,13 +27,6 @@ class IssueGalley extends IssueFile {
 
 
 	/**
-	 * Constructor.
-	 */
-	function __construct() {
-		parent::__construct();
-	}
-
-	/**
 	 * Check if galley is a PDF galley.
 	 * @return boolean
 	 */

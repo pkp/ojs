@@ -17,12 +17,6 @@
 import('lib.pkp.plugins.citationParser.regex.PKPRegexCitationParserPlugin');
 
 class RegexCitationParserPlugin extends PKPRegexCitationParserPlugin {
-	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 }
 
 ?>

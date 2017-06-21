@@ -16,12 +16,6 @@
 import('classes.plugins.PaymethodPlugin');
 
 class PayPalPlugin extends PaymethodPlugin {
-	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 
 	/**
 	 * Get the Plugin's internal name

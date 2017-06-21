@@ -197,8 +197,6 @@
 	<message key="editor.article.designateReviewVersion">Odredi izvornu datoteku kao  Recenzijsku verziju</message>
 	<message key="editor.publicIdentificationExists">Ovaj javni identifikator '{$publicIdentifier}' već postoji za drugi objekt (izdanje, članak, korekturna kopija ili dopunska datoteka). ODaberite druge jedinstvene identifikatore za ovaj časopis.</message>
 	<message key="editor.submissionReview.cannotSendToCopyediting">Prije nego počaljete članak za urednika iskoristite Obavijesti autora vezu i informirajte autora o odluci i odaberite verziju koju ćete poslati.</message>
-	<message key="editor.submissionReview.sendToCopyediting">Pošalji uredniku</message>
-	<message key="editor.issues.galleys">Korekturne kopije izdanja</message>
 	<message key="editor.issues.galley">Korekturna kopija izdanja</message>
 	<message key="editor.issues.viewingGalley">Pregledavanje korekturne kopije izdanja</message>
 	<message key="editor.issues.issueGalleysDescription">Objaviti korekturne kopije sa cijelim sadržajem.</message>
