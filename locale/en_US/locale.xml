@@ -1103,4 +1103,5 @@ Validation may fail on search URLs that require posted form data.]]></message>
 
 	<message key="editor.issues.backIssues">Back Issues</message>
 	<message key="editor.issues.futureIssues">Future Issues</message>
+	<message key="navigation.subscriptions">Subscriptions</message>
 </locale>
