@@ -303,12 +303,7 @@ class ArticleGalleyGridHandler extends GridHandler {
 		if (!$galley || !$request->checkCSRF()) return new JSONMessage(false);
 
 		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
-		$galleyDao->deleteById($galley->getId(), $this->getSubmission()->getId(), $this->getSubmissionRevision());
-
-		if ($galley->getFileId()) {
-			$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
-			$submissionFileDao->deleteAllRevisionsById($galley->getFileId());
-		}
+		$galleyDao->deleteById($galley->getId(), $this->getSubmission()->getId(), $this->getSubmissionRevision(), $galley->getFileId());
 
 		$notificationDao = DAORegistry::getDAO('NotificationDAO');
 		$notificationDao->deleteByAssoc(ASSOC_TYPE_REPRESENTATION, $galley->getId());

@@ -349,18 +349,23 @@ class ArticleGalleyDAO extends RepresentationDAO implements PKPPubIdPluginDAO {
 	 * @param $galleyId int Galley ID.
 	 * @param $articleId int Optional article ID.
 	 */
-	function deleteById($galleyId, $articleId = null, $submissionRevision = null) {
+	function deleteById($galleyId, $articleId = null, $submissionRevision = null, $fileId = null) {
 
 		HookRegistry::call('ArticleGalleyDAO::deleteById', array(&$galleyId, &$articleId, &$submissionRevision));
 
 		$params = array((int) $galleyId);
 		if ($articleId) $params[] = (int) $articleId;
-		$this->update(
-			'DELETE FROM submission_galleys
-			WHERE galley_id = ?'
-			. ($articleId?' AND submission_id = ?':''),
-			$params
-		);
+
+		// delete the galley if it is the first version only
+		if($submissionRevision == 1){
+			$this->update(
+				'DELETE FROM submission_galleys
+				WHERE galley_id = ?'
+				. ($articleId?' AND submission_id = ?':''),
+				$params
+			);
+		}
+
 		if ($this->getAffectedRows()) {
 			$this->update('
 				DELETE FROM submission_galley_settings
@@ -373,13 +378,19 @@ class ArticleGalleyDAO extends RepresentationDAO implements PKPPubIdPluginDAO {
 			$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
 			import('lib.pkp.classes.submission.SubmissionFile'); // Import constants
 
-			$galleyFiles = $submissionFileDao->getLatestRevisionsByAssocId(ASSOC_TYPE_GALLEY, $galleyId, $articleId, SUBMISSION_FILE_PROOF);
-			foreach ($galleyFiles as $file) {
-				// delete dependent files for each galley file
-				$submissionFileDao->deleteAllRevisionsByAssocId(ASSOC_TYPE_SUBMISSION_FILE, $file->getFileId(), SUBMISSION_FILE_DEPENDENT);
+			// delete all files or only the one given via parameter
+			if($fileId == null){
+				$galleyFiles = $submissionFileDao->getLatestRevisionsByAssocId(ASSOC_TYPE_GALLEY, $galleyId, $articleId, SUBMISSION_FILE_PROOF);
+				foreach ($galleyFiles as $file) {
+					// delete dependent files for each galley file
+					$submissionFileDao->deleteAllRevisionsByAssocId(ASSOC_TYPE_SUBMISSION_FILE, $file->getFileId(), SUBMISSION_FILE_DEPENDENT);
+				}
+				// delete the galley files.
+				$submissionFileDao->deleteAllRevisionsByAssocId(ASSOC_TYPE_GALLEY, $galleyId, SUBMISSION_FILE_PROOF);
+			}else{
+				$submissionFileDao->deleteAllRevisionsByAssocId(ASSOC_TYPE_SUBMISSION_FILE, $fileId, SUBMISSION_FILE_DEPENDENT);
 			}
-			// delete the galley files.
-			$submissionFileDao->deleteAllRevisionsByAssocId(ASSOC_TYPE_GALLEY, $galleyId, SUBMISSION_FILE_PROOF);
+
 		}
 	}
 
