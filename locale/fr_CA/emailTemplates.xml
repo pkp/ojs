@@ -153,11 +153,7 @@ Veuillez accéder au site Web de la revue avant le {$responseDueDate} pour nous 
 <br />
 La date d'échéance de l'évaluation a été fixée au {$reviewDueDate}.<br />
 <br />
-<<<<<<< HEAD
 Si vous n'avez pas de nom d'utilisateur et de mot de passe pour le site Web de la revue, cliquer sur le lien ci-dessous pour réinitialiser votre mot de passe (qui vous sera envoyé par courriel avec votre nom d'utilisateur). {$psasswordResetUrl}<br />
-=======
-Si vous n'avez pas de nom d'utilisateur et de mot de passe pour le site Web de la revue, cliquer sur le lien ci-dessous pour réinitialiser votre mot de passe (qui vous sera envoyé par courriel avec votre nom d'utilisateur). <a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
->>>>>>> 8eeb8e2... Updating local files fr_CA
 <br />
 URL de la soumission : {$submissionReviewUrl}<br />
 <br />
