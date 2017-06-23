@@ -591,6 +591,7 @@
 	  -->
 	<table name="submission_galley_files">
 		<field name="galley_id" type="I8">
+			<KEY />
 			<AUTOINCREMENT/>
 		</field>
 		<field name="version" type="I8">
