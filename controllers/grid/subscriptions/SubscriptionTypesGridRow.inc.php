@@ -60,7 +60,7 @@ class SubscriptionTypesGridRow extends GridRow {
 					'delete',
 					new RemoteActionConfirmationModal(
 						$request->getSession(),
-						__('subscriptionManager.subscriptionType.confirmRemove'),
+						__('manager.subscriptionTypes.confirmDelete'),
 						__('common.delete'),
 						$router->url($request, null, null, 'deleteSubscriptionType', null, $actionArgs),
 						'modal_delete'

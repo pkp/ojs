@@ -179,7 +179,7 @@ class SubscriptionTypeForm extends Form {
 		$subscriptionType->setDisablePublicDisplay($this->getData('disable_public_display') == null ? 0 : $this->getData('disable_public_display'));
 
 		// Update or insert subscription type
-		if ($subscriptionType->getTypeId() != null) {
+		if ($subscriptionType->getId() != null) {
 			$subscriptionTypeDao->updateSubscriptionType($subscriptionType);
 		} else {
 			$subscriptionType->setSequence(REALLY_BIG_NUMBER);

@@ -22,7 +22,7 @@
 	{/if}
 
 	{fbvFormArea id="subscriptionTypeFormArea"}
-		{fbvElement type="text" required=true name="name" id="typeName" value=$name label="manager.subscriptionTypes.form.typeName" size=$fbvStyles.size.MEDIUM rich=true}
+		{fbvElement type="text" required=true name="name" id="typeName" value=$name label="manager.subscriptionTypes.form.typeName" size=$fbvStyles.size.MEDIUM multilingual=true}
 		{fbvElement type="textarea" name="description" id="description" value=$description label="manager.subscriptionTypes.form.description" size=$fbvStyles.size.LARGE rich=true}
 
 		{fbvFormSection}
@@ -36,8 +36,8 @@
 		{/fbvFormSection}
 
 		{fbvFormSection title="manager.subscriptionTypes.form.subscriptions" list=true}
-			{fbvElement type="radio" name="institutional" id="instititional" checked=$institutional label="manager.subscriptionTypes.form.individual"}
-			{fbvElement type="radio" name="institutional" id="individual" checked=$institutional|compare:0 label="manager.subscriptionTypes.form.institutional"}
+			{fbvElement type="radio" name="institutional" id="instititional" checked=$institutional label="manager.subscriptionTypes.form.individual" value=1}
+			{fbvElement type="radio" name="institutional" id="individual" checked=$institutional|compare:0 label="manager.subscriptionTypes.form.institutional" value=0}
 		{/fbvFormSection}
 
 		{fbvFormSection title="manager.subscriptionTypes.form.options" list=true}
