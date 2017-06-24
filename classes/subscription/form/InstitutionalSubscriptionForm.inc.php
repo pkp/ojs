@@ -37,11 +37,13 @@ class InstitutionalSubscriptionForm extends SubscriptionForm {
 		}
 
 		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
-		$subscriptionTypes =& $subscriptionTypeDao->getSubscriptionTypesByInstitutional($journalId, true);
-		$this->subscriptionTypes =& $subscriptionTypes->toArray();
+		$subscriptionTypesIterator = $subscriptionTypeDao->getSubscriptionTypesByInstitutional($journalId, true);
+		$this->subscriptionTypes = array();
+		while ($subscriptionType = $subsctiptionTypesIterator->next()) {
+			$subscriptionTypes[$subscriptionType->getId()] = $subscriptionType->getSummaryString();
+		}
 
-		$subscriptionTypeCount = count($this->subscriptionTypes);
-		if ($subscriptionTypeCount == 0) {
+		if (count($this->subscriptionTypes) == 0) {
 			$this->addError('typeId', __('manager.subscriptions.form.typeRequired'));
 			$this->addErrorField('typeId');
 		}

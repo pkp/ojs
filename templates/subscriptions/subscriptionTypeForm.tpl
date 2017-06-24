@@ -21,6 +21,8 @@
 		<input type="hidden" name="typeId" value="{$typeId|escape}" />
 	{/if}
 
+	{include file="controllers/notification/inPlaceNotification.tpl" notificationId="subscriptionTypeNotification"}
+
 	{fbvFormArea id="subscriptionTypeFormArea"}
 		{fbvElement type="text" required=true name="name" id="typeName" value=$name label="manager.subscriptionTypes.form.typeName" size=$fbvStyles.size.MEDIUM multilingual=true}
 		{fbvElement type="textarea" name="description" id="description" value=$description label="manager.subscriptionTypes.form.description" size=$fbvStyles.size.LARGE rich=true}

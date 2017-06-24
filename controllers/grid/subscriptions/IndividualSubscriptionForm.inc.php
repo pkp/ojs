@@ -19,15 +19,13 @@ class IndividualSubscriptionForm extends SubscriptionForm {
 
 	/**
 	 * Constructor
+	 * @param $request PKPRequest
 	 * @param $subscriptionId int leave as default for new subscription
-	 * @param $userId int?
 	 */
 	function __construct($request, $subscriptionId = null) {
 		parent::__construct('subscriptions/individualSubscriptionForm.tpl', $subscriptionId);
 
 		$subscriptionId = isset($subscriptionId) ? (int) $subscriptionId : null;
-		$userId = isset($userId) ? (int) $userId : null;
-
 		$journal = Request::getJournal();
 		$journalId = $journal->getId();
 
@@ -39,11 +37,13 @@ class IndividualSubscriptionForm extends SubscriptionForm {
 		}
 
 		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
-		$subscriptionTypes =& $subscriptionTypeDao->getSubscriptionTypesByInstitutional($journalId, false);
-		$this->subscriptionTypes =& $subscriptionTypes->toArray();
+		$subscriptionTypeIterator = $subscriptionTypeDao->getSubscriptionTypesByInstitutional($journalId, false);
+		$this->subscriptionTypes = array();
+		while ($subscriptionType = $subscriptionTypeIterator->next()) {
+			$this->subscriptionTypes[$subscriptionType->getId()] = $subscriptionType->getSummaryString();
+		}
 
-		$subscriptionTypeCount = count($this->subscriptionTypes);
-		if ($subscriptionTypeCount == 0) {
+		if (count($this->subscriptionTypes) == 0) {
 			$this->addError('typeId', __('manager.subscriptions.form.typeRequired'));
 			$this->addErrorField('typeId');
 		}

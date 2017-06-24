@@ -322,7 +322,8 @@ class SubscriptionType extends DataObject {
 	 * @return string
 	 */
 	function getSummaryString() {
-		return $this->getSubscriptionTypeName() . ' - ' . $this->getDurationYearsMonths() . ' - ' . sprintf('%.2f', $this->getCost()) . ' ' . $this->getCurrencyStringShort();
+		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
+		return $this->getLocalizedName() . ' - ' . $this->getDurationYearsMonths() . ' - ' . sprintf('%.2f', $this->getCost()) . ' ' . $this->getCurrencyStringShort();
 	}
 }
 

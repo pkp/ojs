@@ -12,58 +12,35 @@
 <script>
 	$(function() {ldelim}
 		// Attach the form handler.
-		$('#subscriptionForm').pkpHandler('$.pkp.controllers.form.AjaxFormHandler');
+		$('#individualSubscriptionForm').pkpHandler('$.pkp.controllers.form.AjaxFormHandler');
 	{rdelim});
 </script>
 <form class="pkp_form" method="post" id="individualSubscriptionForm" action="{url op="updateSubscription"}">
-{if $subscriptionId}
-	<input type="hidden" name="subscriptionId" value="{$subscriptionId|escape}" />
-{/if}
-{csrf}
+	{if $subscriptionId}
+		<input type="hidden" name="subscriptionId" value="{$subscriptionId|escape}" />
+	{/if}
+	{csrf}
 
-{include file="common/formErrors.tpl"}
+	{include file="controllers/notification/inPlaceNotification.tpl" notificationId="individualSubscriptionNotification"}
 
-<table class="data">
-{include file="subscriptions/subscriptionForm.tpl"}
+	{url|assign:subscriberSelectGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.users.subscriberSelect.SubscriberSelectGridHandler" op="fetchGrid" escape=false}
+	{load_url_in_div id='subscriberSelectGridContainer' url=$subscriberSelectGridUrl}
 
-{* For new subscriptions, select end date for default subscription type *}
-{if !$subscriptionId}
-	<script>
-	<!--
-	chooseEndDate();
-	// -->
-	</script>
-{/if}
-</table>
+	{fbvFormArea id="subscriptionFormArea"}
+		{fbvFormSection}
+			{fbvElement type="select" required=true name="status" id="status" value=$status from=$validStatus label="manager.subscriptions.form.status" size=$fbvStyles.size.MEDIUM inline=true}
+			{fbvElement type="select" required=true name="typeId" id="typeId" value=$typeId from=$subscriptionTypes label="manager.subscriptions.form.typeId" size=$fbvStyles.size.MEDIUM inline=true translate=false}
+			{fbvElement type="text" required=true name="dateStart" id="dateStart" value=$dateStart label="manager.subscriptions.form.dateStart" size=$fbvStyles.size.MEDIUM inline=true class="datepicker"}
+			{fbvElement type="text" required=true name="dateEnd" id="dateEnd" value=$dateEnd label="manager.subscriptions.form.dateEnd" size=$fbvStyles.size.MEDIUM inline=true class="datepicker"}
+			{fbvElement type="text" name="membership" id="membership" value=$membership label="manager.subscriptions.form.membership" size=$fbvStyles.size.MEDIUM inline=true}
+			{fbvElement type="text" name="referenceNumber" id="referenceNumber" value=$referenceNumber label="manager.subscriptions.form.referenceNumber" size=$fbvStyles.size.MEDIUM inline=true}
+		{/fbvFormSection}
+		{fbvFormSection}
+			{fbvElement type="textarea" name="notes" id="notes" value=$notes label="manager.subscriptions.form.notes" size=$fbvStyles.size.LARGE rich=true}
+		{/fbvFormSection}
+	{/fbvFormArea}
 
-<br />
-<div class="separator"></div>
-<br />
+	<span class="formRequired">{translate key="common.requiredField"}</span>
 
-<table class="data">
-<tr>
-	<td class="label">{fieldLabel name="userId" required="true" key="manager.subscriptions.form.userId"}</td>
-	<td class="value">
-		{$username|escape}
-		<input type="hidden" name="userId" id="userId" value="{$userId|escape}"/>
-	</td>
-</tr>
-{include file="subscriptions/subscriptionFormUser.tpl"}
-</table>
-
-<br />
-<div class="separator"></div>
-<br />
-
-<table class="data">
-<tr>
-	<td class="label">{fieldLabel name="notes" key="manager.subscriptions.form.notes"}</td>
-	<td class="value"><textarea name="notes" id="notes" cols="40" rows="6" class="textArea richContent">{$notes|escape}</textarea></td>
-</tr>
-</table>
-
-<p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> {if not $subscriptionId}<input type="submit" name="createAnother" value="{translate key="manager.subscriptions.form.saveAndCreateAnother"}" class="button" /> {/if}
-
+	{fbvFormButtons id="mastheadFormSubmit" submitText="common.save" hideCancel=true}
 </form>
-
-<p><span class="formRequired">{translate key="common.requiredField"}</span></p>

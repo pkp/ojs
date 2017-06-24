@@ -257,7 +257,7 @@ class IndividualSubscriptionsGridHandler extends GridHandler {
 	 */
 	function editSubscription($args, $request) {
 		// Form handling.
-		$subscriptionForm = new IndividualSubscriptionForm($request, $request->getUserVar('subscriptionId'));
+		$subscriptionForm = new IndividualSubscriptionForm($request, $request->getUserVar('rowId'));
 		$subscriptionForm->initData($args, $request);
 
 		return new JSONMessage(true, $subscriptionForm->fetch($request));
@@ -282,7 +282,7 @@ class IndividualSubscriptionsGridHandler extends GridHandler {
 			// Prepare the grid row data.
 			return DAO::getDataChangedEvent($subscriptionId);
 		} else {
-			return new JSONMessage(false);
+			return new JSONMessage(true, $subscriptionForm->fetch($request));
 		}
 	}
 
