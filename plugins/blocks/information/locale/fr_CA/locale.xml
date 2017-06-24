@@ -12,7 +12,7 @@
   -->
  
 <locale name = "fr_CA" full_name = "Français (Canada)">
-	<message key="plugins.block.information.displayName">Bloc d'informations</message>
+	<message key="plugins.block.information.displayName">Bloc "Renseignements"</message>
 	<message key="plugins.block.information.description">Ce plugiciel offre un lien d'information dans l'encadré latéral.</message>
 	<message key="plugins.block.information.link">Informations</message>
 </locale>
