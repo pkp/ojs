@@ -62,7 +62,7 @@ class SubscriberSelectGridHandler extends GridHandler {
 		$this->setTitle('editor.submission.findAndSelectUser');
 
 		// Columns
-		$cellProvider = new UserSelectGridCellProvider();
+		$cellProvider = new UserSelectGridCellProvider($request->getUserVar('userId'));
 		$this->addColumn(
 			new GridColumn(
 				'select',
@@ -104,20 +104,14 @@ class SubscriberSelectGridHandler extends GridHandler {
 	 * @copydoc GridHandler::loadData()
 	 */
 	protected function loadData($request, $filter) {
-		// Get the context.
-		$context = $request->getContext();
-
-		// Get all users for this context that match search criteria.
 		$userGroupDao = DAORegistry::getDAO('UserGroupDAO');
-		$rangeInfo = $this->getGridRangeInfo($request, $this->getId());
-
 		return $users = $userGroupDao->getUsersById(
 			$filter['userGroup'],
-			$context->getId(),
+			$request->getContext()->getId(),
 			$filter['searchField'],
 			$filter['search']?$filter['search']:null,
 			$filter['searchMatch'],
-			$rangeInfo
+			$this->getGridRangeInfo($request, $this->getId())
 		);
 	}
 
@@ -133,27 +127,12 @@ class SubscriberSelectGridHandler extends GridHandler {
 			$userGroupOptions[$userGroup->getId()] = $userGroup->getLocalizedName();
 		}
 
-		// Import PKPUserDAO to define the USER_FIELD_* constants.
-		import('lib.pkp.classes.user.PKPUserDAO');
-		$fieldOptions = array(
-			USER_FIELD_FIRSTNAME => 'user.firstName',
-			USER_FIELD_LASTNAME => 'user.lastName',
-			USER_FIELD_USERNAME => 'user.username',
-			USER_FIELD_EMAIL => 'user.email'
+		return parent::renderFilter(
+			$request,
+			array(
+				'userGroupOptions' => $userGroupOptions,
+			)
 		);
-
-		$matchOptions = array(
-			'contains' => 'form.contains',
-			'is' => 'form.is'
-		);
-
-		$filterData = array(
-			'userGroupOptions' => $userGroupOptions,
-			'fieldOptions' => $fieldOptions,
-			'matchOptions' => $matchOptions
-		);
-
-		return parent::renderFilter($request, $filterData);
 	}
 
 	/**
@@ -161,17 +140,24 @@ class SubscriberSelectGridHandler extends GridHandler {
 	 * @return array Filter selection data.
 	 */
 	function getFilterSelectionData($request) {
-		// Get the search terms.
-		$userGroup = $request->getUserVar('userGroup') ? (int)$request->getUserVar('userGroup') : null;
-		$searchField = $request->getUserVar('searchField');
-		$searchMatch = $request->getUserVar('searchMatch');
-		$search = $request->getUserVar('search');
+		// If we're editing an existing subscription, use the filter form to ensure that
+		// the already-selected user is chosen.
+		if (($userId = $request->getUserVar('userId')) && !$request->getUserVar('clientSubmit')) {
+			$userDao = DAORegistry::getDAO('UserDAO');
+			$user = $userDao->getById($userId);
+			return array(
+				'userGroup' => null,
+				'searchField' => USER_FIELD_USERNAME,
+				'searchMatch' => 'is',
+				'search' => $user->getUsername(),
+			);
+		}
 
-		return $filterSelectionData = array(
-			'userGroup' => $userGroup,
-			'searchField' => $searchField,
-			'searchMatch' => $searchMatch,
-			'search' => $search ? $search : ''
+		return array(
+			'userGroup' => $request->getUserVar('userGroup') ? (int)$request->getUserVar('userGroup') : null,
+			'searchField' => $request->getUserVar('searchField'),
+			'searchMatch' => $request->getUserVar('searchMatch'),
+			'search' => (string) $request->getUserVar('search'),
 		);
 	}
 
@@ -197,6 +183,16 @@ class SubscriberSelectGridHandler extends GridHandler {
 	 */
 	protected function getItemsNumber() {
 		return 5;
+	}
+
+	/**
+	 * @copydoc GridHandler::getRequestArgs()
+	 */
+	function getRequestArgs() {
+		$request = Application::getRequest();
+		return array_merge(parent::getRequestArgs(), array(
+			'userId' => $request->getUserVar('userId'),
+		));
 	}
 }
 
