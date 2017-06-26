@@ -101,7 +101,7 @@ class ArticleGalleyGridHandler extends GridHandler {
 		);
 
 		import('controllers.grid.articleGalleys.ArticleGalleyGridCellProvider');
-		$cellProvider = new ArticleGalleyGridCellProvider($this->getSubmission());
+		$cellProvider = new ArticleGalleyGridCellProvider($request, $this->getSubmission());
 
 		// Columns
 		$this->addColumn(new GridColumn(
