@@ -48,11 +48,11 @@ class SubscriptionTypesGridRow extends GridRow {
 					'edit',
 					new AjaxModal(
 						$router->url($request, null, null, 'editSubscriptionType', null, $actionArgs),
-						__('grid.subscriptionTypes.edit'),
+						__('manager.subscriptionTypes.edit'),
 						'modal_edit',
 						true
 						),
-					__('grid.subscriptionTypes.edit'),
+					__('common.edit'),
 					'edit')
 			);
 			$this->addAction(
