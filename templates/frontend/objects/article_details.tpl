@@ -91,6 +91,7 @@
 							{/if}
 							{if $author->getOrcid()}
 								<span class="orcid">
+									{$orcidIcon}
 									<a href="{$author->getOrcid()|escape}" target="_blank">
 										{$author->getOrcid()|escape}
 									</a>
