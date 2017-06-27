@@ -45,8 +45,8 @@ class SubscriptionForm extends Form {
 		$this->subscription = null;
 		$this->subscriptionTypes = null;
 
-		$subscriptionDao = DAORegistry::getDAO('SubscriptionDAO');
-		$this->validStatus =& $subscriptionDao->getStatusOptions();
+		import('classes.subscription.SubscriptionDAO');
+		$this->validStatus = SubscriptionDAO::getStatusOptions();
 
 		$countryDao = DAORegistry::getDAO('CountryDAO');
 		$this->validCountries =& $countryDao->getCountries();
@@ -173,7 +173,7 @@ class SubscriptionForm extends Form {
 		$journalName = $journal->getLocalizedTitle();
 		$journalId = $journal->getId();
 		$user = $userDao->getById($this->subscription->getUserId());
-		$subscriptionType =& $subscriptionTypeDao->getSubscriptionType($this->subscription->getTypeId());
+		$subscriptionType = $subscriptionTypeDao->getById($this->subscription->getTypeId());
 
 		$subscriptionName = $journalSettingsDao->getSetting($journalId, 'subscriptionName');
 		$subscriptionEmail = $journalSettingsDao->getSetting($journalId, 'subscriptionEmail');

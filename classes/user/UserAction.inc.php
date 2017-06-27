@@ -72,15 +72,15 @@ class UserAction {
 		// Transfer old user's individual subscriptions for each journal if new user
 		// does not have a valid individual subscription for a given journal.
 		$individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
-		$oldUserSubscriptions = $individualSubscriptionDao->getSubscriptionsByUser($oldUserId);
+		$oldUserSubscriptions = $individualSubscriptionDao->getByUserId($oldUserId);
 
 		while ($oldUserSubscription = $oldUserSubscriptions->next()) {
 			$subscriptionJournalId = $oldUserSubscription->getJournalId();
 			$oldUserValidSubscription = $individualSubscriptionDao->isValidIndividualSubscription($oldUserId, $subscriptionJournalId);
 			if ($oldUserValidSubscription) {
 				// Check if new user has a valid subscription for current journal
-				$newUserSubscriptionId = $individualSubscriptionDao->getSubscriptionIdByUser($newUserId, $subscriptionJournalId);
-				if (empty($newUserSubscriptionId)) {
+				$newUserSubscription = $individualSubscriptionDao->getByUserId($newUserId, $subscriptionJournalId);
+				if (!$newUserSubscription)) {
 					// New user does not have this subscription, transfer old user's
 					$oldUserSubscription->setUserId($newUserId);
 					$individualSubscriptionDao->updateSubscription($oldUserSubscription);
@@ -100,7 +100,7 @@ class UserAction {
 		// Transfer all old user's institutional subscriptions for each journal to
 		// new user. New user now becomes the contact person for these.
 		$institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
-		$oldUserSubscriptions = $institutionalSubscriptionDao->getSubscriptionsByUser($oldUserId);
+		$oldUserSubscriptions = $institutionalSubscriptionDao->getByUserId($oldUserId);
 
 		while ($oldUserSubscription = $oldUserSubscriptions->next()) {
 			$oldUserSubscription->setUserId($newUserId);

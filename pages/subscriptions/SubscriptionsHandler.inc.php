@@ -172,7 +172,7 @@ class SubscriptionsHandler extends Handler {
 
 		// Ensure subscription is for this journal
 		if ($subscriptionDao->getSubscriptionJournalId($subscriptionId) == $journal->getId()) {
-			$subscription = $subscriptionDao->getSubscription($subscriptionId);
+			$subscription = $subscriptionDao->getById($subscriptionId);
 			if ($subscription) $subscriptionDao->renewSubscription($subscription);
 		}
 

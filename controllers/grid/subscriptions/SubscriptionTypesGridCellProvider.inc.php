@@ -35,7 +35,7 @@ class SubscriptionTypesGridCellProvider extends GridCellProvider {
 			case 'name':
 				return array('label' => $subscriptionType->getLocalizedName());
 			case 'type':
-				return array('label' => __($subscriptionType->getInstitutional?'manager.subscriptionTypes.institutional':'manager.subscriptionTypes.individual'));
+				return array('label' => __($subscriptionType->getInstitutional()?'manager.subscriptionTypes.institutional':'manager.subscriptionTypes.individual'));
 			case 'duration':
 				return array('label' => $subscriptionType->getDurationYearsMonths());
 			case 'cost':

@@ -46,7 +46,7 @@ class UserInstitutionalSubscriptionForm extends Form {
 		if (isset($subscriptionId)) {
 			$subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO'); 
 			if ($subscriptionDao->subscriptionExists($subscriptionId)) {
-				$this->subscription =& $subscriptionDao->getSubscription($subscriptionId);
+				$this->subscription = $subscriptionDao->getById($subscriptionId);
 			}
 		}
 
@@ -54,8 +54,8 @@ class UserInstitutionalSubscriptionForm extends Form {
 		$journalId = $journal->getId();
 
 		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
-		$subscriptionTypes =& $subscriptionTypeDao->getSubscriptionTypesByInstitutional($journalId, true, false);
-		$this->subscriptionTypes =& $subscriptionTypes->toArray();
+		$subscriptionTypes = $subscriptionTypeDao->getByInstitutional($journalId, true, false);
+		$this->subscriptionTypes = $subscriptionTypes->toArray();
 
 		// Ensure subscription type is valid
 		$this->addCheck(new FormValidatorCustom($this, 'typeId', 'required', 'user.subscriptions.form.typeIdValid', create_function('$typeId, $journalId', '$subscriptionTypeDao = DAORegistry::getDAO(\'SubscriptionTypeDAO\'); return ($subscriptionTypeDao->subscriptionTypeExistsByTypeId($typeId, $journalId) && $subscriptionTypeDao->getSubscriptionTypeInstitutional($typeId) == 1) && $subscriptionTypeDao->getSubscriptionTypeDisablePublicDisplay($typeId) == 0;'), array($journal->getId())));
@@ -204,7 +204,7 @@ class UserInstitutionalSubscriptionForm extends Form {
 		}
 
 		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
-		$subscriptionType =& $subscriptionTypeDao->getSubscriptionType($this->getData('typeId'));
+		$subscriptionType = $subscriptionTypeDao->getById($this->getData('typeId'));
 
 		$queuedPayment =& $paymentManager->createQueuedPayment($journalId, PAYMENT_TYPE_PURCHASE_SUBSCRIPTION, $this->userId, $subscription->getId(), $subscriptionType->getCost(), $subscriptionType->getCurrencyCodeAlpha());
 		$queuedPaymentId = $paymentManager->queuePayment($queuedPayment);

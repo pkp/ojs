@@ -48,13 +48,13 @@ class UserHandler extends PKPUserHandler {
 		// Get subscriptions and options for current journal
 		if ($individualSubscriptionTypesExist) {
 			$subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
-			$userIndividualSubscription = $subscriptionDao->getSubscriptionByUserForJournal($userId, $journalId);
+			$userIndividualSubscription = $subscriptionDao->getByUserForJournal($userId, $journalId);
 			$templateMgr->assign('userIndividualSubscription', $userIndividualSubscription);
 		}
 
 		if ($institutionalSubscriptionTypesExist) {
 			$subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
-			$userInstitutionalSubscriptions = $subscriptionDao->getSubscriptionsByUserForJournal($userId, $journalId);
+			$userInstitutionalSubscriptions = $subscriptionDao->getByUserForJournal($userId, $journalId);
 			$templateMgr->assign('userInstitutionalSubscriptions', $userInstitutionalSubscriptions);
 		}
 
@@ -152,7 +152,7 @@ class UserHandler extends PKPUserHandler {
 			}
 
 			// Ensure subscription can be updated
-			$subscription = $subscriptionDao->getSubscription($subscriptionId);
+			$subscription = $subscriptionDao->getById($subscriptionId);
 			$subscriptionStatus = $subscription->getStatus();
 			import('classes.subscription.Subscription');
 			$validStatus = array(
@@ -231,7 +231,7 @@ class UserHandler extends PKPUserHandler {
 			}
 
 			// Ensure subscription can be updated
-			$subscription = $subscriptionDao->getSubscription($subscriptionId);
+			$subscription = $subscriptionDao->getById($subscriptionId);
 			$subscriptionStatus = $subscription->getStatus();
 			import('classes.subscription.Subscription');
 			$validStatus = array(
@@ -322,7 +322,7 @@ class UserHandler extends PKPUserHandler {
 
 		if (!$subscriptionDao->subscriptionExistsByUser($subscriptionId, $userId)) $request->redirect(null, 'dashboard');
 
-		$subscription = $subscriptionDao->getSubscription($subscriptionId);
+		$subscription = $subscriptionDao->getById($subscriptionId);
 		$subscriptionStatus = $subscription->getStatus();
 		import('classes.subscription.Subscription');
 		$validStatus = array(SUBSCRIPTION_STATUS_ACTIVE, SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT);
@@ -330,7 +330,7 @@ class UserHandler extends PKPUserHandler {
 		if (!in_array($subscriptionStatus, $validStatus)) $request->redirect(null, 'dashboard');
 
 		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
-		$subscriptionType = $subscriptionTypeDao->getSubscriptionType($subscription->getTypeId());
+		$subscriptionType = $subscriptionTypeDao->getById($subscription->getTypeId());
 
 		$queuedPayment = $paymentManager->createQueuedPayment($journal->getId(), PAYMENT_TYPE_PURCHASE_SUBSCRIPTION, $user->getId(), $subscriptionId, $subscriptionType->getCost(), $subscriptionType->getCurrencyCodeAlpha());
 		$queuedPaymentId = $paymentManager->queuePayment($queuedPayment);
@@ -371,7 +371,7 @@ class UserHandler extends PKPUserHandler {
 
 		if (!$subscriptionDao->subscriptionExistsByUser($subscriptionId, $userId)) $request->redirect(null, 'dashboard');
 
-		$subscription = $subscriptionDao->getSubscription($subscriptionId);
+		$subscription = $subscriptionDao->getById($subscriptionId);
 
 		if ($subscription->isNonExpiring()) $request->redirect(null, 'dashboard');
 
@@ -386,7 +386,7 @@ class UserHandler extends PKPUserHandler {
 		if (!in_array($subscriptionStatus, $validStatus)) $request->redirect(null, 'dashboard');
 
 		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
-		$subscriptionType = $subscriptionTypeDao->getSubscriptionType($subscription->getTypeId());
+		$subscriptionType = $subscriptionTypeDao->getById($subscription->getTypeId());
 
 		$queuedPayment = $paymentManager->createQueuedPayment($journal->getId(), PAYMENT_TYPE_RENEW_SUBSCRIPTION, $user->getId(), $subscriptionId, $subscriptionType->getCost(), $subscriptionType->getCurrencyCodeAlpha());
 		$queuedPaymentId = $paymentManager->queuePayment($queuedPayment);

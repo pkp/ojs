@@ -73,7 +73,7 @@ class SubscriptionType extends DataObject {
 	 * Get the localized subscription type description
 	 * @return string
 	 */
-	function getSubscriptionTypeDescription() {
+	function getLocalizedDescription() {
 		return $this->getLocalizedData('description');
 	}
 

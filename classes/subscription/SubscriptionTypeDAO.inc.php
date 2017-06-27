@@ -334,7 +334,7 @@ class SubscriptionTypeDAO extends DAO {
 	 * @param $disablePublicDisplay bool
 	 * @return object DAOResultFactory containing matching SubscriptionTypes
 	 */
-	function getSubscriptionTypesByInstitutional($journalId, $institutional = false, $disablePublicDisplay = null, $rangeInfo = null) {
+	function getByInstitutional($journalId, $institutional = false, $disablePublicDisplay = null, $rangeInfo = null) {
 		if ($institutional) $institutional = 1; else $institutional = 0;
 
 		if ($disablePublicDisplay === null) {

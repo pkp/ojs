@@ -83,17 +83,17 @@ class OJSQueuedPayment extends QueuedPayment {
 				$institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
 
 				if ($institutionalSubscriptionDao->subscriptionExists($this->assocId)) {
-					$subscription =& $institutionalSubscriptionDao->getSubscription($this->assocId);
+					$subscription = $institutionalSubscriptionDao->getById($this->assocId);
 				} else {
 					$individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
-					$subscription =& $individualSubscriptionDao->getSubscription($this->assocId);
+					$subscription = $individualSubscriptionDao->getById($this->assocId);
 				}
 				if (!$subscription) return __('payment.type.subscription');
 
 				$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
-				$subscriptionType =& $subscriptionTypeDao->getSubscriptionType($subscription->getTypeId());
+				$subscriptionType = $subscriptionTypeDao->getById($subscription->getTypeId());
 
-				return __('payment.type.subscription') . ' (' . $subscriptionType->getSubscriptionTypeName() . ')';
+				return __('payment.type.subscription') . ' (' . $subscriptionType->getLocalizedName() . ')';
 			case PAYMENT_TYPE_DONATION:
 				if ($journal->getLocalizedSetting('donationFeeName') != '') {
 					return $journal->getLocalizedSetting('donationFeeName');
@@ -158,16 +158,16 @@ class OJSQueuedPayment extends QueuedPayment {
 				$institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
 
 				if ($institutionalSubscriptionDao->subscriptionExists($this->assocId)) {
-					$subscription =& $institutionalSubscriptionDao->getSubscription($this->assocId);
+					$subscription = $institutionalSubscriptionDao->getById($this->assocId);
 				} else {
 					$individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
-					$subscription =& $individualSubscriptionDao->getSubscription($this->assocId);
+					$subscription = $individualSubscriptionDao->getById($this->assocId);
 				}
 				if (!$subscription) return __('payment.type.subscription');
 
 				$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
-				$subscriptionType =& $subscriptionTypeDao->getSubscriptionType($subscription->getTypeId());
-				return $subscriptionType->getSubscriptionTypeDescription();
+				$subscriptionType = $subscriptionTypeDao->getById($subscription->getTypeId());
+				return $subscriptionType->getLocalizedDescription();
 			case PAYMENT_TYPE_DONATION:
 				if ($journal->getLocalizedSetting('donationFeeDescription') != '') {
 					return $journal->getLocalizedSetting('donationFeeDescription');

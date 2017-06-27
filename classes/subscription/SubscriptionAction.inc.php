@@ -46,7 +46,7 @@ class SubscriptionAction {
 		$user = $userDao->getById($subscription->getUserId());
 
 		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
-		$subscriptionType = $subscriptionTypeDao->getSubscriptionType($subscription->getTypeId());
+		$subscriptionType = $subscriptionTypeDao->getById($subscription->getTypeId(), $journal->getId());
 
 		$roleDao = DAORegistry::getDAO('RoleDAO');
 		$role = $roleDao->newDataObject();

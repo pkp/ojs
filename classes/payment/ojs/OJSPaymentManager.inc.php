@@ -239,15 +239,14 @@ class OJSPaymentManager extends PaymentManager {
 				$institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
 				$individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
 				if ($institutionalSubscriptionDao->subscriptionExists($subscriptionId)) {
-					$subscription =& $institutionalSubscriptionDao->getSubscription($subscriptionId);
+					$subscription = $institutionalSubscriptionDao->getById($subscriptionId);
 					$institutional = true;
 				} else {
-					$subscription =& $individualSubscriptionDao->getSubscription($subscriptionId);
+					$subscription = $individualSubscriptionDao->getById($subscriptionId);
 					$institutional = false;
 				}
 				if (!$subscription || $subscription->getUserId() != $queuedPayment->getUserId() || $subscription->getJournalId() != $queuedPayment->getJournalId()) {
-					// FIXME: Is this supposed to be here?
-					error_log(print_r($subscription, true));
+					fatalError('Subscription integrity checks fail!');
 					return false;
 				}
 				// Update subscription end date now that payment is completed
@@ -289,10 +288,10 @@ class OJSPaymentManager extends PaymentManager {
 				$institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
 				$individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
 				if ($institutionalSubscriptionDao->subscriptionExists($subscriptionId)) {
-					$subscription =& $institutionalSubscriptionDao->getSubscription($subscriptionId);
+					$subscription = $institutionalSubscriptionDao->getById($subscriptionId);
 					$institutional = true;
 				} else {
-					$subscription =& $individualSubscriptionDao->getSubscription($subscriptionId);
+					$subscription = $individualSubscriptionDao->getById($subscriptionId);
 					$institutional = false;
 				}
 				if (!$subscription || $subscription->getUserId() != $queuedPayment->getUserId() || $subscription->getJournalId() != $queuedPayment->getJournalId()) {

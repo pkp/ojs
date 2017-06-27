@@ -170,7 +170,7 @@ class IndividualSubscriptionsGridHandler extends GridHandler {
 
 		$subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
 		$rangeInfo = $this->getGridRangeInfo($request, $this->getId());
-		return $subscriptionDao->getSubscriptionsByJournalId($journal->getId());
+		return $subscriptionDao->getByJournalId($journal->getId());
 		// FIXME: , $filterStatus, $searchField, $searchMatch, $search, $dateSearchField, $fromDate, $toDate, $rangeInfo);
 		/* return $userGroupDao->getUsersById(
 			$filter['userGroup'],

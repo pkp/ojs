@@ -32,12 +32,12 @@ class IndividualSubscriptionForm extends SubscriptionForm {
 		if (isset($subscriptionId)) {
 			$subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO'); 
 			if ($subscriptionDao->subscriptionExists($subscriptionId)) {
-				$this->subscription =& $subscriptionDao->getSubscription($subscriptionId);
+				$this->subscription = $subscriptionDao->getById($subscriptionId);
 			}
 		}
 
 		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
-		$subscriptionTypeIterator = $subscriptionTypeDao->getSubscriptionTypesByInstitutional($journalId, false);
+		$subscriptionTypeIterator = $subscriptionTypeDao->getByInstitutional($journalId, false);
 		$this->subscriptionTypes = array();
 		while ($subscriptionType = $subscriptionTypeIterator->next()) {
 			$this->subscriptionTypes[$subscriptionType->getId()] = $subscriptionType->getSummaryString();
@@ -55,7 +55,7 @@ class IndividualSubscriptionForm extends SubscriptionForm {
 		if (!isset($subscriptionId)) {
 			$this->addCheck(new FormValidatorCustom($this, 'userId', 'required', 'manager.subscriptions.form.subscriptionExists', array(DAORegistry::getDAO('IndividualSubscriptionDAO'), 'subscriptionExistsByUserForJournal'), array($journalId), true));
 		} else {
-			$this->addCheck(new FormValidatorCustom($this, 'userId', 'required', 'manager.subscriptions.form.subscriptionExists', create_function('$userId, $journalId, $subscriptionId', '$subscriptionDao = DAORegistry::getDAO(\'IndividualSubscriptionDAO\'); $checkId = $subscriptionDao->getSubscriptionIdByUser($userId, $journalId); return ($checkId == 0 || $checkId == $subscriptionId) ? true : false;'), array($journalId, $subscriptionId)));
+			$this->addCheck(new FormValidatorCustom($this, 'userId', 'required', 'manager.subscriptions.form.subscriptionExists', create_function('$userId, $journalId, $subscriptionId', '$subscriptionDao = DAORegistry::getDAO(\'IndividualSubscriptionDAO\'); $checkSubscription = $subscriptionDao->getByUserIdForJournal($userId, $journalId); return (!$checkSubscription || $checkSubscription->getId() == $subscriptionId) ? true : false;'), array($journalId, $subscriptionId)));
 		}
 	}
 
@@ -74,9 +74,9 @@ class IndividualSubscriptionForm extends SubscriptionForm {
 		$individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
 
 		if ($insert) {
-			$individualSubscriptionDao->insertSubscription($this->subscription);
+			$individualSubscriptionDao->insertObject($this->subscription);
 		} else {
-			$individualSubscriptionDao->updateSubscription($this->subscription);
+			$individualSubscriptionDao->updateObject($this->subscription);
 		} 
 
 		// Send notification email

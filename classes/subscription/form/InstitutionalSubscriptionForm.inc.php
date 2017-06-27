@@ -32,12 +32,12 @@ class InstitutionalSubscriptionForm extends SubscriptionForm {
 		if (isset($subscriptionId)) {
 			$subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO'); 
 			if ($subscriptionDao->subscriptionExists($subscriptionId)) {
-				$this->subscription =& $subscriptionDao->getSubscription($subscriptionId);
+				$this->subscription = $subscriptionDao->getById($subscriptionId);
 			}
 		}
 
 		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
-		$subscriptionTypesIterator = $subscriptionTypeDao->getSubscriptionTypesByInstitutional($journalId, true);
+		$subscriptionTypesIterator = $subscriptionTypeDao->getByInstitutional($journalId, true);
 		$this->subscriptionTypes = array();
 		while ($subscriptionType = $subsctiptionTypesIterator->next()) {
 			$subscriptionTypes[$subscriptionType->getId()] = $subscriptionType->getSummaryString();
@@ -102,7 +102,7 @@ class InstitutionalSubscriptionForm extends SubscriptionForm {
 		}
 
 		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
-		$subscriptionType =& $subscriptionTypeDao->getSubscriptionType($this->getData('typeId'));
+		$subscriptionType = $subscriptionTypeDao->getById($this->getData('typeId'));
 
 		// If online or print + online, domain or at least one IP range has been provided
 		if ($subscriptionType->getFormat() != SUBSCRIPTION_TYPE_FORMAT_PRINT) {
