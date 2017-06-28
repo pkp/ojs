@@ -31,7 +31,7 @@
 	<message key="admin.auth.enableCreateUsers">Habilitar criação de usuários (caso suportado pelo plugin de autenticação!). Usuários criados no sistema serão automaticamente incluídos na fonte de autenticação remota, caso não existam ainda. Inclusive, usuários criados através do cadastro de usuários também serão incluídos automaticamente na fonte remota, caso esta seja a fonte de autenticação padrão.</message>
 	<message key="admin.systemVersion">Versão do OJS</message>
 	<message key="admin.systemConfiguration">Configuração do OJS</message>
-	<message key="admin.systemConfigurationDescription"><![CDATA[Configurações do OJS no documento <tt>config.inc.php</tt>.]]></message>
+	<message key="admin.systemConfigurationDescription"><![CDATA[Configurações do OJS no arquivo <<config.inc.php>>.]]></message>
 	<message key="admin.journals.journalSettings">Configurações da revista</message>
 	<message key="admin.journals.noneCreated">Nenhuma revista foi criada.</message>
 	<message key="admin.contexts.confirmDelete">Deseja realmente excluir permanentemente esta revista e seu conteúdo?</message>
