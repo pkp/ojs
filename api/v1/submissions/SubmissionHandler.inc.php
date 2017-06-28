@@ -34,7 +34,7 @@ class SubmissionHandler extends APIHandler {
 				),
 				array(
 					'pattern' => $this->getEndpointPattern() . '/{submissionId}',
-					'handler' => array($this,'submissionMetadata'),
+					'handler' => array($this,'getSubmission'),
 					'roles' => $roles
 				),
 				array(
@@ -201,7 +201,7 @@ class SubmissionHandler extends APIHandler {
 	 * @param array $args arguments
 	 * @return Response
 	 */
-	public function submissionMetadata($slimRequest, $response, $args) {
+	protected function submissionMetadata($slimRequest, $response, $args) {
 		$request = $this->_request;
 		$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
 		assert($submission);
@@ -234,5 +234,111 @@ class SubmissionHandler extends APIHandler {
 			}
 		}
 		return json_encode($metadata);
+	}
+
+	/**
+	 * Get submission metadata
+	 * @param $slimRequest Request Slim request object
+	 * @param $response Response object
+	 * @param array $args arguments
+	 *
+	 * @return Response
+	 */
+	public function getSubmission($slimRequest, $response, $args) {
+		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_READER, LOCALE_COMPONENT_PKP_SUBMISSION);
+
+		$request = $this->getRequest();
+		$dispatcher = $request->getDispatcher();
+		$context = $request->getContext();
+		$journal = $request->getJournal();
+
+		$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
+		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
+		$publishedArticle = $publishedArticleDao->getPublishedArticleByBestArticleId((int) $journal->getId(), $submission->getId(), true);
+
+		// simply return basic metadata for unpublished submissions
+		if (!isset($publishedArticle)) {
+			return $this->submissionMetadata($slimRequest, $response, $args);
+		}
+
+		$articleId = $publishedArticle->getId();
+		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$issue = $issueDao->getById($publishedArticle->getIssueId(), $publishedArticle->getJournalId(), true);
+
+		$sectionDao = DAORegistry::getDAO('SectionDAO');
+		$section = $sectionDao->getById($publishedArticle->getSectionId(), $journal->getId(), true);
+
+		// public identifiers
+		$pubIdPlugins = PluginRegistry::loadCategory('pubIds', true);
+		$pubIds = array_map(function($pubIdPlugin) use($issue,$publishedArticle) {
+			if ($pubIdPlugin->getPubIdType() != 'doi')
+				continue;
+			$doiUrl = null;
+			$pubId = $issue->getPublished() ?
+					$publishedArticle->getStoredPubId($pubIdPlugin->getPubIdType()) :
+					$pubIdPlugin->getPubId($publishedArticle);
+			if($pubId) {
+				$doiUrl = $pubIdPlugin->getResolvingURL($currentJournal->getId(), $pubId);
+			}
+
+			return array(
+				'pubId'		=> $pubId,
+				'doiUrl'	=> $doiUrl,
+			);
+		}, $pubIdPlugins);
+
+		// Citation formats
+		$citationPlugins = PluginRegistry::loadCategory('citationFormats');
+		uasort($citationPlugins, create_function('$a, $b', 'return strcmp($a->getDisplayName(), $b->getDisplayName());'));
+		$citations = array_map(function($citationPlugin) use($publishedArticle, $issue, $context) {
+			return $citationPlugin->fetchCitation($publishedArticle, $issue, $context);
+		}, $citationPlugins);
+
+		$authors = array_map(function($author) {
+			return array(
+				'name'		=> $author->getFullName(),
+				'affiliation'	=> $author->getLocalizedAffiliation(),
+				'orcid'		=> $author->getOrcid(),
+			);
+		}, $publishedArticle->getAuthors());
+
+		$coverImage = $publishedArticle->getLocalizedCoverImage() ?
+					$publishedArticle->getLocalizedCoverImageUrl() :
+					$issue->getLocalizedCoverImageUrl();
+
+		$galleys = array_map(function($galley) use ($context, $request, $dispatcher, $articleId) {
+			$url = null;
+			if ($galley->getRemoteURL()) {
+				$url = $galley->getRemoteURL();
+			}
+			else {
+				$url = $dispatcher->url($request, ROUTE_PAGE, $context, 'article', 'download',
+						array($articleId, $galley->getBestGalleyId()));
+			}
+			return array(
+				'id'		=> $galley->getBestGalleyId(),
+				'label'		=> $galley->getGalleyLabel(),
+				'filetype'	=> $galley->getFileType(),
+				'url'		=> $url,
+			);
+		}, $publishedArticle->getGalleys());
+
+		$data = array(
+			'issueId'	=> $issue->getId(),
+			'issue'		=> $issue->getIssueIdentification(),
+			'section'	=> $section->getLocalizedTitle(),
+			'title'		=> $publishedArticle->getLocalizedTitle(),
+			'subtitle'	=> $publishedArticle->getLocalizedSubtitle(),
+			'authors'	=> $authors,
+			'pubIds'	=> $pubIds,
+			'abstract'	=> $publishedArticle->getLocalizedAbstract(),
+			'citations'	=> $publishedArticle->getCitations(),
+			'cover_image'	=> $coverImage,
+			'galleys'	=> $galleys,
+			'datePublished'	=> $publishedArticle->getDatePublished(),
+			'citations'	=> $citations,
+		);
+
+		return $response->withJson($data, 200);
 	}
 }
