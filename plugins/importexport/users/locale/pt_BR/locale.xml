@@ -43,4 +43,5 @@ Comandos:
 	<message key="plugins.importexport.users.import.encryptionMismatch">Não é possível criptografados com {$importHash}; o sisema está configurado para utilizar {$ompHash}. Caso continue, será necessário recriar todas as senhas de usuários importados.</message>
 	<message key="plugins.importexport.users.results">Resultados</message>
 	<message key="plugins.importexport.users.importComplete">A importação foi concluída com êxito. Usuários com nomes de usuários e endereços de e-mail que ainda não estão em uso foram importados, juntamente com os grupos de usuários que os acompanham.</message>
+  <message key="plugins.importexport.users.cliUsage.examples">Importar Cadastros</message>
 </locale>
