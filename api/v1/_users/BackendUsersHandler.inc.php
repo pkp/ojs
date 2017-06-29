@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file api/v1/backend/users/BackendUsersHandler.inc.php
+ * @file api/v1/_users/BackendUsersHandler.inc.php
  *
  * Copyright (c) 2014-2017 Simon Fraser University
  * Copyright (c) 2003-2016 John Willinsky
@@ -23,11 +23,11 @@ class BackendUsersHandler extends APIHandler {
 	 * Constructor
 	 */
 	public function __construct() {
-		$this->_handlerPath = 'backend';
+		$this->_handlerPath = '_users';
 		$this->_endpoints = array(
 			'GET' => array(
 				array(
-					'pattern' => $this->getEndpointPattern() . '/users',
+					'pattern' => $this->getEndpointPattern(),
 					'handler' => array($this, 'getUserList'),
 					'roles' => array(
 						ROLE_ID_MANAGER,
@@ -100,34 +100,34 @@ class BackendUsersHandler extends APIHandler {
 			{
 				$roleId = $role->getId();
 				return array(
-						'id' 	=> $roleId,
-						'name' 	=> __($roleNames[$roleId]),
+					'id' 	=> $roleId,
+					'name' 	=> __($roleNames[$roleId]),
 				);
 			}, $roles);
 			
 			$items[] = array(
-				'id' 					=> $user->getId(),
-				'userName' 				=> $user->getUsername(),
-				'fullName' 				=> $user->getFullName(),
-				'firstName' 			=> $user->getFirstName(),
-				'middleName' 			=> $user->getMiddleName(),
-				'lastName' 				=> $user->getLastName(),
-				'email' 				=> $user->getEmail(),
-				'suffix' 				=> $user->getSuffix(),
-				'country' 				=> $user->getCountry(),
-				'orcid'					=> $user->getOrcid(),
-				'url'					=> $user->getUrl(),
-				'affiliation'			=> $user->getAffiliation(null),
-				'initials'				=> $user->getInitials(),
-				'signature'				=> $user->getSignature(null),
-				'gender' 				=> $user->getGender(),
-				'userUrl' 				=> $user->getUrl(),
-				'phone' 				=> $user->getPhone(),
-				'mailingAddress' 		=> $user->getMailingAddress(),
-				'biography' 			=> $user->getBiography(null),
-				'interests' 			=> $interestManager->getInterestsForUser($user),
-				'userLocales' 			=> $user->getLocales(),
-				'roles' 				=> $userRoles,
+				'id'			=> $user->getId(),
+				'userName'		=> $user->getUsername(),
+				'fullName'		=> $user->getFullName(),
+				'firstName'		=> $user->getFirstName(),
+				'middleName'		=> $user->getMiddleName(),
+				'lastName'		=> $user->getLastName(),
+				'email'			=> $user->getEmail(),
+				'suffix'		=> $user->getSuffix(),
+				'country'		=> $user->getCountry(),
+				'orcid'			=> $user->getOrcid(),
+				'url'			=> $user->getUrl(),
+				'affiliation'		=> $user->getAffiliation(null),
+				'initials'		=> $user->getInitials(),
+				'signature'		=> $user->getSignature(null),
+				'gender'		=> $user->getGender(),
+				'userUrl'		=> $user->getUrl(),
+				'phone'			=> $user->getPhone(),
+				'mailingAddress'	=> $user->getMailingAddress(),
+				'biography'		=> $user->getBiography(null),
+				'interests'		=> $interestManager->getInterestsForUser($user),
+				'userLocales'		=> $user->getLocales(),
+				'roles'			=> $userRoles,
 			);
 		}
 		

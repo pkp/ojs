@@ -1,11 +1,11 @@
 <?php
 
 /**
- * @defgroup api_v1_backend_users Backend API requests for users list
+ * @defgroup api_v1_backend Backend API requests for users list
  */
 
 /**
- * @file api/v1/backend/users/index.php
+ * @file api/v1/_users/index.php
  *
  * Copyright (c) 2014-2017 Simon Fraser University
  * Copyright (c) 2003-2016 John Willinsky
@@ -16,5 +16,5 @@
  *
  */
 
-import('api.v1.backend.users.BackendUsersHandler');
+import('api.v1._users.BackendUsersHandler');
 return new BackendUsersHandler();
