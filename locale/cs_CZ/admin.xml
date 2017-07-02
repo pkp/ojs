@@ -34,7 +34,6 @@
 	<message key="admin.systemConfigurationDescription"><![CDATA[Nastavení konfigurace OJS z <tt>config.inc.php</tt>.]]></message>
 	<message key="admin.journals.journalSettings">Nastavení časopisu</message>
 	<message key="admin.journals.noneCreated">Žádné časopisy nebyly vytvořeny.</message>
-	<message key="admin.contexts.confirmDelete">Jste si jistý, že chcete trvale odstranit tento časopis a veškerý jeho obsah?</message>
 	<message key="admin.contexts.create">Vytvořit časopis</message>
 	<message key="admin.journals.createInstructions">Budete automaticky zaregistrován jako manažer tohoto časopisu. Poté, co vytvoříte nový časopis, vstupte do něj jako manažer a pokračujte v jeho nastavení a zápisu uživatelů.</message>
 	<message key="admin.journals.urlWillBe">Toto má být krátké slovo nebo akronym, které identifikuje časopis. URL časopisu bude {$sampleUrl}</message>
@@ -77,4 +76,16 @@
 	<message key="admin.categories.enable.description">Administrátor webu se může rozhodnout definovat sadu kategorií, aby mohlo být zorganizováno více časopisů. Manažer časopisu se pak může rozhodnou pro jednu či více kategorií, do kterých časopis spadá.</message>
 	<message key="admin.categories.confirmDelete">Přejete si smazat tuto kategorii?</message>
 	
+	<message key="admin.languages.confirmDisable">Jste si jisti, že chcete zakázat tuto lokalizaci? Bude to mít vliv na všechny časopisy, které tuto lokalizaci využívají.</message>
+	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Stahování jazykových balíčků z webu Public Knowledge Project je momentálně nedostupné protože:</p>
+	<ul>
+		<li>Váš server nemá, nebo nepovoluje využití GNU utility "tar".</li>
+		<li>OJS nemůže změnit lokální soubor registrace lokalizace, typicky "registry/locales.xml".</li>
+	</ul>
+<p>Jazykové balíčky lze stáhnout manuálně z <a href="http://pkp.sfu.ca">webu PKP</a>.</p>]]></message>
+	<message key="admin.contexts.form.titleRequired">Je třeba zadat název.</message>
+	<message key="admin.presses.createInstructions">Automaticky vám bude přidělena role správce tohoto časopisu. Poté, co vytvoříte nový časopis, budete přesměrováni na průvodce nastavením, abyste dokončili počáteční nastavení tohoto časopisu.</message>
+	<message key="admin.scheduledTask.subscriptionExpiryReminder">Připomenutí vypršení předplatného</message>
+	<message key="admin.scheduledTask.openAccessNotification">Upozornění na otevřený přístup (Open Access)</message>
+	<message key="admin.scheduledTask.reviewReminder">Připomínka recenze</message>
 </locale>

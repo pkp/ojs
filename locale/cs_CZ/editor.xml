@@ -34,8 +34,6 @@
 	<message key="editor.notifyUsers.includeToc">Připojit obsah tohoto čísla:</message>
 	<message key="editor.editorAdministration">Editorská administrace</message>
 	<message key="editor.issues.createIssue">Vytvořit číslo</message>
-	<message key="editor.issues.backIssues">Minulá čísla</message>
-	<message key="editor.issues.futureIssues">Budoucí čísla</message>
 	<message key="editor.issues.currentIssue">Aktuální číslo</message>
 	<message key="editor.issues.numArticles">Položky</message>
 	<message key="editor.issues.noArticles">Pro toto číslo nejsou aktuálně naplánovány žádné položky.</message>
@@ -59,15 +57,12 @@
 	<message key="editor.issues.remove">Odstranit</message>
 	<message key="editor.issues.proofed">Schválené</message>
 	<message key="editor.issues.removeCoverPage">Odstranit obrázek titulní stránky?</message>
-	<message key="editor.issues.invalidCoverPageFormat">Neplatný formát titulní stránky. Podporované formáty jsou .gif, .jpg nebo .png.</message>
 	<message key="editor.issues.styleFile">Soubor stylu</message>
 	<message key="editor.issues.invalidStyleFormat">Neplatný formát souboru stylu. Přesvědčte se, že odeslaný soubor je platný CSS. (Vězte že soubory stylu s komentářem na začátku mohou být odmítnuty.)</message>
 	<message key="editor.issues.removeStyleFile">Odstranit soubor stylu?</message>
 	<message key="editor.issues.coverPageCaption">Legenda k titulní stránce</message>
 	<message key="editor.issues.showCoverPage">Vytvořit titulní stránku pro toto číslo s následujícími prvky.</message>
 	<message key="editor.issues.coverPageDisplay">Zobrazit</message>
-	<message key="editor.issues.hideCoverPageArchives">Nezobrazovat náhled titulního obrázku v seznamu čísel.</message>
-	<message key="editor.issues.hideCoverPageCover">Nezobrazovat titulní obrázek před obsahem.</message>
 	<message key="editor.issues.openAccess">Otevřený přístup</message>
 	<message key="editor.issues.subscription">Předplatné</message>
 	<message key="editor.issues.identification">Identifikace</message>
@@ -177,12 +172,7 @@
 	<message key="editor.article.hideTocAuthorHide">Vypustit</message>
 	<message key="editor.article.hideTocAuthorShow">Zobrazit</message>
 	<message key="editor.article.cover">Obal</message>
-	<message key="editor.article.showCoverPage">Vytvořit obal (titulní stránku) tomuto článku pomocí následujících prvků.</message>
-	<message key="editor.article.coverImageDisplay">Zobrazit</message>
-	<message key="editor.article.hideCoverPageToc">Nezobrazovat náhled titulního obrázku v obsahu.</message>
-	<message key="editor.article.hideCoverPageAbstract">Nezobrazovat titulní obrázek při zobrazení abstraktu článku.</message>
 	<message key="editor.article.coverImage">Titulní obrázek</message>
-	<message key="editor.article.coverImageInstructions">(Povolené formáty: .gif, .jpg neho .png)</message>
 	<message key="editor.article.uploaded">Nahráno</message>
 	<message key="editor.article.removeCoverPage">Odstranit titulní obrázek?</message>
 	<message key="editor.article.remove">Odstranit</message>
@@ -207,4 +197,25 @@
 	<message key="editor.issues.galleyPublicIdentificationExists">Veřejný identifikátor sazebnice čísla již existuje.</message>
 	<message key="editor.issues.backToIssueGalleys">Zpět na sazebnice čísla</message>
 	<message key="editor.issues.confirmDeleteGalley">Jste si jisti, že chcete smazat tuto sazebnici čísla?</message>
+	<message key="editor.issues.editIssue">Správa čísla: {$issueIdentification}</message>
+	<message key="editor.issues.datePublished">Datum publikace</message>
+	<message key="editor.issues.removeCoverImageFileNameMismatch">Obrázek obálky, který jste požadovali odstranit, neodpovídá obrázku obalu tohoto čísla. Znovu načtěte stránku a zkuste to znovu.</message>
+	<message key="editor.issues.removeCoverImageFileNotFound">Obrázek obálky čísla, který chcete odstranit, nebyl nalezen. Možná již byl smazán. Zkuste znovu načíst stránku.</message>
+	<message key="editor.issues.invalidCoverImageFormat">Nepřípustný formát obrázku obálky. Přijatelné formáty jsou .gif, .jpg a .png.</message>
+	<message key="editor.issues.identifiers">Identifikátory</message>
+	<message key="grid.action.addGalley">Přidat sazebnici</message>
+	<message key="grid.action.publish">Publikovat číslo</message>
+	<message key="grid.action.addIssue">Vytvořit číslo</message>
+	<message key="grid.action.viewIssue">Zobrazit</message>
+	<message key="grid.action.previewIssue">Náhled</message>
+	<message key="grid.action.addIssueGalley">Vytvořit sazebnici čísla</message>
+	<message key="editor.article.schedulePublication">Naplánováno k publikování</message>
+	<message key="editor.article.removeCoverImageFileNotFound">Obrázek obálky, který chcete smazat, nebyl nalezen. Možná již byl smazána. Zkuste znovu načíst stránku.</message>
+	<message key="grid.action.removeArticle">Odebrat článek z čísla</message>
+	<message key="editor.article.remove.confirm">Opravdu chcete odstranit tento článek z čísla? Článek bude k dispozici pro vydání v jiném čísle.</message>
+	<message key="editor.issues.editIssueGalley">Upravit sazebnici čísla</message>
+	<message key="editor.submission.production.productionReadyFilesDescription"><![CDATA[Editor rozvržení připravuje tyto soubory pro každou sazebnic a poté je nahrává na příslušné <span class = "pkp_help_title">Korektury</ span> pro korekturu.]]></message>
+	<message key="editor.submission.selectGalleyFiles">Vyberte soubory sazebnice</message>
+	<message key="editor.submission.editorial.finalDraftDescription"><![CDATA[Konečné návrhy souborů v tomto seznamu jsou převedeny redaktorem do redakčních verzí, nahrany níže pod <span class = "pkp_help_title">Redakce</ span>.¨]]></message>
+	<message key="editor.submission.proof.manageProofFilesDescription">Jakékoli soubory, které již byly nahrány do libovolné etapy podání článku, mohou být přidány do seznamu Korektury zaškrtnutím políčka Zahrnout a klepnutím na tlačítko Hledat: budou uvedeny všechny dostupné soubory a mohou být vybrány k zařazení.</message>
 </locale>

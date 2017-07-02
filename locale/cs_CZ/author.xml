@@ -36,12 +36,8 @@
 	<message key="author.submissions.confirmDelete">Jste si jistý, že chcete smazat tento nedokončený příspěvek?</message>
 	<message key="author.submissions.viewStatus">Zobrazit stav</message>
 	<message key="author.submissions.noSubmissions">Žádné příspěvky.</message>
-	<message key="author.submit.howToSubmit"><![CDATA[Potýkáte se s obtížemi? Kontaktujte <a href="mailto:{$supportEmail}">{$supportName}</a> pro pomoc ({$supportPhone}).]]></message>
-	<message key="author.submit.howToSubmitNoPhone"><![CDATA[Potýkáte se s obtížemi? Kontaktujte <a href="mailto:{$supportEmail}">{$supportName}</a> pro pomoc.]]></message>
 	<message key="author.submit.journalSection">Sekce časopisu</message>
 	<message key="author.submit.journalSectionDescription"><![CDATA[Zvolte vhodnou sekci pro tento příspěvek (viz Sekce a Pravidla v části <a href="{$aboutUrl}" target="_new">O časopisu</a>).]]></message>
-	<message key="submission.submit.selectSection">Prosím zvolte sekci...</message>
-	<message key="author.submit.submissionChecklist">Zaškrtávací seznam příspěvku</message>
 	<message key="author.submit.verifyChecklist">Než budete pokračovat, musíte zajistit splnění všech položek zaškrtávacího seznamu.</message>
 	<message key="author.submit.copyrightNoticeAgree">Autoři souhlasí s podmínkami uvedenými v Oznámení o copyrightu, které budou aplikovány na tento příspěvek, jakmile bude publikován tímto časopisem (níže je možné přidat komentář pro editora).</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">Než budete pokračovat, musíte souhlasit s podmínkami uvedenými v Oznámení o copyrightu.</message>
@@ -118,4 +114,5 @@
 	<message key="author.submit.form.wordCountAlert">Překročil jste maximální limit slov pro abstrakt v této sekci.</message>
 	<message key="author.submit.form.localeRequired">Zvolte si, prosím, jazyk příspěvku.</message>
 	<message key="author.submit.submissionIndexingDescription">Doplňte, prosím, klíčová slova pro indexování příspěvku: oddělte jednotlivá klíčová slova středníkem (klíčové slovo1; klíčové slovo 2; klíčové slovo 3)</message>
+	<message key="author.submit.nextSteps">Další kroky</message>
 </locale>
