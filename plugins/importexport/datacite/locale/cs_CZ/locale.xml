@@ -8,7 +8,7 @@
   * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings
+  * Localization strings.
   -->
  
 <locale name="cs_CZ" full_name="Čeština">
@@ -25,4 +25,8 @@
 {$scriptName} {$pluginName} export [outputFileName] [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...
 {$scriptName} {$pluginName} register [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...
 ]]></message>
+	<message key="plugins.importexport.datacite.settings.description">Nakonfigurujte, prosím, plugin pro DataCite export před jeho prvním použitím.</message>
+	<message key="plugins.importexport.datacite.settings.form.automaticRegistration.description">OJS automaticky uloží DOI do DataCite. Vezměte prosím na vědomí, že to může trvat krátkou dobu po zpracování publikace. Můžete zkontrolovat všechny neregistrované DOI.</message>
+	<message key="plugins.importexport.datacite.settings.form.testMode.description">Použijte testovací prefix DataCite pro registraci DOI. Nezapomeňte tuto možnost odstranit pro produkční fázi.</message>
+	<message key="plugins.importexport.datacite.senderTask.name">Automatická úloha registrace DataCite.</message>
 </locale>

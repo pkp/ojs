@@ -18,4 +18,5 @@
 	<message key="plugins.citationFormats.mla.displayName">Plugin pro citační formát MLA</message>
 	<message key="plugins.citationFormats.mla.citationFormatName">MLA</message>
 	<message key="plugins.citationFormats.mla.description">Tento plugin zavádí citační formát MLA.</message>
+	<message key="plugins.citationFormats.mla.noPages">poč. str.</message>
 </locale>

@@ -4,19 +4,23 @@
 <!--
   * plugins/importexport/doaj/locale/cs_CZ/locale.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2013-2017 Simon Fraser University
   * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the cs_CZ (Čeština) locale.
-  *
+  * Localization strings
   -->
 
 <locale name="cs_CZ" full_name="Čeština">
 	<message key="plugins.importexport.doaj.displayName">Plugin exportu pro DOAJ</message>
 	<message key="plugins.importexport.doaj.description">Export časopisu pro DOAJ a odeslání emailu s informacemi o časopisu zástupci DOAJ</message>
 	<message key="plugins.importexport.doaj.export.contact">Kontaktujte DOAJ pro vložení</message>
-	<message key="plugins.importexport.doaj.cliUsage"><![CDATA[Použití:
-{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...
-]]></message>
+	<message key="plugins.importexport.doaj.cliUsage">Použití:
+{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...</message>
+	<message key="plugins.importexport.doaj.registrationIntro">Chcete-li zaregistrovat články z OJS, zadejte prosím klíč DOAJ API. Jinak budete i nadále moci exportovat do formátu DOAJ XML, ale nebudete moci zaregistrovat své články s DOAJ z OJS.</message>
+	<message key="plugins.importexport.doaj.settings.form.apiKey">DOAJ API klíč</message>
+	<message key="plugins.importexport.doaj.settings.form.apiKey.description">Klíč API naleznete na uživatelské stránce DOAJ.</message>
+	<message key="plugins.importexport.doaj.settings.form.automaticRegistration.description">OJS automaticky uloží články do DOAJ. Vezměte prosím na vědomí, že to může trvat krátkou dobu po zpracování publikace. Můžete si prohlédnout všechny nezaregistrované články.</message>
+	<message key="plugins.importexport.doaj.settings.form.testMode.description">Pro registraci použijte testovací rozhraní API (testovací prostředí) DOAJ. Nezapomeňte tuto možnost odstranit před produkční fází.</message>
+	<message key="plugins.importexport.doaj.register.error.mdsError">Uložení nebylo úspěšné! DOAJ API vrátilo následující chybu: '{$param}'.</message>
 </locale>

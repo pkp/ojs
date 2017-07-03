@@ -19,4 +19,8 @@
 	<message key="plugins.citationFormats.abnt.citationFormatName">ABNT</message>
 	<message key="plugins.citationFormats.abnt.description">Tento plugin zavádí citační formát ABNT.</message>
 	<message key="plugins.citationFormats.abnt.retrieved"><![CDATA[Available at: &lt;<a href="{$url}" target="_new">{$url}</a>&gt;. Date accessed: {$retrievedDate}]]></message>
+	<message key="plugins.citationFormats.abnt.manager.settings">Nastavení</message>
+	<message key="plugins.citationFormats.abnt.manager.AbntCitationSettings">Nastavení pluginu citačního formátu ABNT</message>
+	<message key="plugins.citationFormats.abnt.manager.settings.description">Nastavení je použito k tvorbě citací dle ABNT.</message>
+	<message key="plugins.citationFormats.abnt.manager.settings.location">Umístění</message>
 </locale>
