@@ -25,17 +25,17 @@
 		<li>Navegador</li>
 		</ul>
 		<p>Os dados coletados são usados apenas para propósitos de avaliação. Nenhum endereço de IP é mapeado a IDs de usuário. É tecnicamente impossível rastrear um conjunto específicos de dados a um IP específico.</p>]]></message>
-  <message key="plugins.generic.usageStats.settings.statsDisplayOptions.siteWide">&lt;h3&gt;Informações gerais sobre privacidade&lt;/h3&gt;
-		&lt;p&gt;Veja nossa &lt;a href="{$privacyStatementUrl}"&gt;política geral de privacidade&lt;/a&gt;.&lt;/p&gt;
-		&lt;h3&gt;Estatísticas de uso&lt;/h3&gt;
-		&lt;p&gt;Para permitir a análise de uso e impacto do periódico e dos artigos publicados, são coletados e registrados os acessos as páginas: página inicial, edições, artigos, composições finais e arquivos suplementares. No processo de coleta, todos os dados são tornados anônimos. Nenhuma informação pessoal é registrada. Os endereços de IP são obfuscados por meio de uma criptografia (usando &lt;em&gt;SHA 256&lt;/em&gt;) combinada com uma &lt;em&gt;chave de segurança de 64 caracteres&lt;/em&gt; que é &lt;em&gt;gerada randomicamente e alterada diariamente&lt;/em&gt; de forma automática. Portanto, não há como reconstruir os endereços de IP.&lt;/p&gt;
-		&lt;p&gt;As seguintes informações são coletadas, além do endereço de IP a ser obfuscado:&lt;/p&gt;
-		&lt;ul&gt;
-		&lt;li&gt;Tipo de acesso (administração, leitura, etc.)&lt;/li&gt;
-		&lt;li&gt;Hora da acessoo&lt;/li&gt;
-		&lt;li&gt;Endereço acessado&lt;/li&gt;
-		&lt;li&gt;Código de status HTTP&lt;/li&gt;
-		&lt;li&gt;Navegador&lt;/li&gt;
-		&lt;/ul&gt;
-		&lt;p&gt;Os dados coletados são usados apenas para propósitos de avaliação. Nenhum endereço de IP é mapeado a IDs de usuário. É tecnicamente impossível rastrear um conjunto específicos de dados a um IP específico.&lt;/p&gt;</message>
+  <message key="plugins.generic.usageStats.settings.statsDisplayOptions.siteWide"><h3>Informações gerais sobre privacidade</h3>
+		<p>Veja nossa <a href="{$privacyStatementUrl}">política geral de privacidade</a>.</p>
+		<h3>Estatísticas de uso</h3>
+		<p>Para permitir a análise de uso e impacto do periódico e dos artigos publicados, são coletados e registrados os acessos as páginas: página inicial, edições, artigos, composições finais e arquivos suplementares. No processo de coleta, todos os dados são tornados anônimos. Nenhuma informação pessoal é registrada. Os endereços de IP são obfuscados por meio de uma criptografia (usando <em>SHA 256</em>) combinada com uma <em>chave de segurança de 64 caracteres</em> que é <em>gerada randomicamente e alterada diariamente</em> de forma automática. Portanto, não há como reconstruir os endereços de IP.</p>
+		<p>As seguintes informações são coletadas, além do endereço de IP a ser obfuscado:</p>
+		<ul>
+		<li>Tipo de acesso (administração, leitura, etc.)</li>
+		<li>Hora da acessoo</li>
+		<li>Endereço acessado</li>
+		<li>Código de status HTTP</li>
+		<li>Navegador</li>
+		</ul>
+		<p>Os dados coletados são usados apenas para propósitos de avaliação. Nenhum endereço de IP é mapeado a IDs de usuário. É tecnicamente impossível rastrear um conjunto específicos de dados a um IP específico.</p></message>
 </locale>
