@@ -7,11 +7,8 @@
   * Copyright (c) 2014-2017 Simon Fraser University
   * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Czech_(cs_CZ)
   * Localization strings for this plugin in Czech.
-  *
-  * Translated by František Chmelik, frantisek.chmelik 'at' upol.cz
-  *
   -->
  
 <locale name="cs_CZ" full_name="Čeština">
