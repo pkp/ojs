@@ -564,7 +564,7 @@ Ativo indica avaliação em consideração ou andamento.]]></message>
 
 	<!-- Interstitial page for non-PDF non-HTML galleys -->
 	<message key="article.nonpdf.title">Baixar artigo</message>
-	<message key="article.nonpdf.note"><![CDATA[O documento selecionado deverá ser baixado automaticamente. Em caso negativo, clique no atalho abaixo. Note que o documento pode requerer um visualizador especial ou plugin para ser executado.<br/><br/>Caso o documento não seja baixado automaticamente, <a href="{$url}">clique aqui</a>.]]></message>
+	<message key="article.nonpdf.note"><![CDATA[O documento selecionado deverá ser baixado automaticamente. Em caso negativo, clique no atalho abaixo. Note que o documento pode requerer um visualizador especial ou plugin para ser executado.<br /><br />Caso o documento não seja baixado automaticamente, <a href="{$url}">clique aqui</a>.]]></message>
 
 	<!-- Site index -->
 	<message key="site.journalsHosted">Revistas hospedadas no portal</message>
