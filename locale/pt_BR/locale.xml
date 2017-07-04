@@ -1129,8 +1129,8 @@ Pode-se opcionalmente informar o motivo pelo qual está sendo desativado o cadas
 	<message key="notification.type.assignProductionUser">Designe um usuário para criar as composições finais usando o link "Adicionar" na lista Participantes.</message>
 	<message key="notification.type.awaitingRepresentations">Esperando Composições Finais</message>
 	<message key="journal.viewAllIssues">Ver Todas as Edições</message>
-  <message key="about.onlineSubmissions.submissionActions">Diretrizes para Autores</message>
-  <message key="installer.appInstallation">Atualização do sistema</message>
-  <message key="about.onlineSubmissions.newSubmission">ver suas submissões pendentes</message>
-  <message key="about.onlineSubmissions.viewSubmissions">Diretrizes para Autores</message>
+  <message key="about.onlineSubmissions.submissionActions">{$newSubmission} ou {$viewSubmissions}.</message>
+  <message key="installer.appInstallation">Instalação do OJS</message>
+  <message key="about.onlineSubmissions.newSubmission">Fazer nova submissão</message>
+  <message key="about.onlineSubmissions.viewSubmissions">ver suas submissões pendentes</message>
 </locale>
