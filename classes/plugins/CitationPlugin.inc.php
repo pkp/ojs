@@ -16,40 +16,6 @@
 import('lib.pkp.classes.plugins.Plugin');
 
 abstract class CitationPlugin extends Plugin {
-	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-
-		if ($this->getEnabled()) {
-			HookRegistry::register('TemplateManager::display', array($this, 'loadJavaScript'));
-		}
-	}
-
-	/**
-	 * Get the citation format name for this plugin.
-	 */
-	abstract function getCitationFormatName();
-
-	/**
-	 * Load the JavaScript file to retrieve citation formats
-	 *
-	 * @param $hookName string Hook name
-	 * @param $args array Hook arguments. See `TemplateManager::display`
-	 * @return null
-	 */
-	function loadJavaScript($hookName, $args) {
-		$templateMgr =& $args[0];
-
-		$templateMgr->addJavaScript(
-			'citationFormats',
-			$this->getRequest()->getBaseUrl() . '/js/plugins/citationFormats.js',
-			array(
-				'context' => 'frontend-article-view',
-			)
-		);
-	}
 
 	/**
 	 * Return an HTML-formatted citation. Default implementation displays

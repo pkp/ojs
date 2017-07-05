@@ -168,25 +168,80 @@
 		}
 	}
 
-	.citation_display .value {
-		font-size: @font-tiny;
-	}
+	.citation_display {
 
-	.citation_format_options ul {
-		&:extend(.pkp_unstyled_list all);
-	}
-
-	// RefWorks form
-	.citation_display form {
-
-		textarea {
-			max-width: 100%;
-			max-height: 19em;
-			white-space: nowrap;
+		.value {
+			font-size: @font-tiny;
 		}
 
-		input[type="submit"] {
-			&:extend(.cmp_button);
+		// Hide the bibliography number produced by some CSL styles
+		.csl-left-margin {
+			display: none;
+		}
+
+		[aria-hidden="true"] {
+			display: none;
+		}
+
+		.citation_formats {
+			margin-top: 1em;
+			border: @form-border;
+			border-radius: @radius;
+		}
+
+		.citation_formats_button {
+			position: relative;
+			background: transparent;
+			border: none;
+			border-bottom-left-radius: 0;
+			border-bottom-right-radius: 0;
+			box-shadow: none;
+			padding: 0 1em;
+			width: 100%;
+			font-weight: @normal;
+			text-align: left;
+
+			&:after {
+				&:extend(.fa);
+				content: @fa-var-caret-down;
+				position: absolute;
+				top: 50%;
+				right: 1em;
+				transform: translateY(-50%);
+			}
+
+			&[aria-expanded="true"] {
+				border: @bg-border;
+
+				&:after {
+					content: @fa-var-caret-up;
+				}
+			}
+
+			&:focus {
+				background: @bg-shade;
+				outline: 0;
+			}
+		}
+
+		.citation_formats_styles {
+			.pkp_unstyled_list;
+
+			a {
+				display: block;
+				padding: 0.5em 1em;
+				border-bottom: @bg-border;
+				text-decoration: none;
+
+				&:focus {
+					background: @bg-shade;
+					outline: 0;
+				}
+			}
+
+			li:last-child a {
+				border-bottom: none;
+			}
 		}
 	}
 
