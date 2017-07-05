@@ -283,7 +283,7 @@
 									</ul>
 									{if count($citationDownloads)}
 										<div class="label">
-											Download Citation
+											{translate key="submission.howToCite.downloadCitation"}
 										</div>
 										<ul class="citation_formats_styles">
 											{foreach from=$citationDownloads key="citationDownloadId" item="citationDownload"}
