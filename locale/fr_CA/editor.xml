@@ -143,6 +143,7 @@
 	<message key="editor.article.assignEditor">Ajouter un rédacteur</message>
 	<message key="editor.article.selectEditor">Sélectionner {$roleName}</message>
 	<message key="editor.article.selectDecision">Sélectionner une décision</message>
+	<message key="editor.article.decision.resubmit">Soumettre à nouveau pour évaluation</message>
 	<message key="editor.article.selectLayoutEditor">Sélectionner le responsable de la mise en page</message>
 	<message key="editor.article.replaceLayoutEditor">Remplacer le responsable de la mise en page</message>
 	<message key="editor.article.reviewSubmission">Évaluer la soumission</message>

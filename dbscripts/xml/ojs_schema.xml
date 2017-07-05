@@ -615,26 +615,6 @@
 	</table>
 
 	<!--
-	  *
-	  * TABLE submission_html_galley_images
-	  *
-	  -->
-	<table name="submission_html_galley_images">
-		<field name="galley_id" type="I8">
-			<NOTNULL />
-		</field>
-		<field name="file_id" type="I8">
-			<NOTNULL />
-		</field>
-		<descr>Images associated with an submission HTML galley.</descr>
-		<index name="submission_html_galley_images_pkey">
-			<col>galley_id</col>
-			<col>file_id</col>
-			<UNIQUE/>
-		</index>
-	</table>
-
-	<!--
 	 *
 	 * TABLE submission_search_keyword_list
 	 *

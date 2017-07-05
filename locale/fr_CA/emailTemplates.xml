@@ -103,20 +103,6 @@ Si vous avez des questions, n'hésitez pas à communiquer avec nous. Nous vous r
 {$editorialContactSignature}]]></body>
 		<description>Ce courriel, lorsqu'activé, est envoyé automatiquement à un auteur quand il ou elle a complété le processus de soumission d'un manuscrit à la revue. Il fournit les informations sur comment suivre la soumission à travers le processus éditorial, et remercie l'auteur de sa soumission.</description>
 	</email_text>
-	<email_text key="SUBMISSION_ACK">
-		<subject>Accusé de réception d'une soumission</subject>
-		<body><![CDATA[{$authorName}:<br />
-<br />
-Merci d'avoir envoyé votre manuscrit &quot;{$submissionTitle}&quot; à la presse {$contextName}. Le système de gestion virtuel de la presse que nous utilisons vous permet de suivre les progrès de votre article tout au long du processus de publication. Il suffit d'ouvrir une session sur le site Web:<br />
-<br />
-URL du manuscrit: {$submissionUrl}<br />
-Nom d'utilisateur: {$authorUsername}<br />
-<br />
-Si vous avez des questions, n'hésitez pas à me contacter. Merci d'avoir envoyé votre article à cette presse.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Lorsqu'il est activé, ce courriel est envoyé automatiquement à l'auteur lorsqu'il soumet son manuscrit à la presse. Il fournit des renseignements sur le suivi de la soumission tout au long du processus de publication et remercie l'auteur d'avoir envoyé une soumission.</description>
-	</email_text>
 	<email_text key="SUBMISSION_UNSUITABLE">
 		<subject>Soumission non conforme</subject>
 		<body><![CDATA[{$authorName}:<br />
@@ -175,10 +161,7 @@ En espérant que vous accepterez notre demande, veuillez agréer l'expression de
 <br />
 {$editorialContactSignature}<br />
 <br />
-<br />
-<br />
 « {$submissionTitle} »<br />
-<br />
 <br />
 {$submissionAbstract}]]></body>
 		<description>Ce courriel du Rédacteur de rubrique à un Évaluateur demande que l'évaluateur accepte ou refuse la tâche d'évaluation d'une soumission. Il fournit de l'information sur la soumission, tel son titre et un résumé, la date d'échéance pour l'évaluation, et comment accéder à la soumission elle-même. Ce message est utilisé quand « Processus d'évaluation standard » est sélectionné à l'Étape 2, dans la Configuration de la revue. (Autrement voir « Demande d'évaluation », en pièce jointe).</description>
@@ -920,5 +903,16 @@ Critères pour l'évaluation<br />
 <br />
 {$reviewGuidelines}<br />]]></body>
 		<description><![CDATA[Ce courriel de l'éditeur de section à un réviseur demande que l'évaluateur accepte ou refuse la tâche d'examiner une soumission pour une deuxième fois ou plus. Il fournit des informations sur la soumission, comme le titre et le résumé, la date d'échéance de l'évaluation et la façon d'accéder à la soumission elle-même. Ce message est utilisé lorsque le processus de révision avec pièce jointe est sélectionné dans Administration> Paramètres> Flux des travaux> Révision.(Autrement voir REVIEW_REQUEST_SUBSEQUENT.)]]></description>
+	</email_text>
+	<email_text key="SUBMISSION_ACK_NOT_USER">
+		<subject>Accusé de réception de la soumission</subject>
+		<body><![CDATA[Bonjour,<br />
+<br />
+Le manuscrit intitulé , &quot;{$submissionTitle}&quot;, a été soumis par {$submitterName} à {$contextName}.<br />
+<br />
+Si vous avez des questions, n'hésitez pas à communiquer avec nous. Nous vous remercions d'avoir pensé à {$contextName} pour la publication de vos travaux.<br />
+<br />
+{$editorialContactSignature}]]></body>
+		<description>Ce courriel, lorsque activé, est envoyé automatiquement aux autres auteurs, i.e. ceux qui ne sont pas l'utilisateur enregistré faisant la soumission.</description>
 	</email_text>
 </email_texts>
