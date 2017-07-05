@@ -275,10 +275,27 @@
 									<ul class="citation_formats_styles">
 										{foreach from=$citationStyles key="citationStyleId" item="citationStyle"}
 											<li>
-												<a aria-controls="citationOutput" href="{url page="citationstylelanguage" op="get" path=$citationStyleId params=$citationArgs}" data-load-citation>{$citationStyle.label}</a>
+												<a aria-controls="citationOutput" href="{url page="citationstylelanguage" op="get" path=$citationStyleId params=$citationArgs}" data-load-citation>
+													{$citationStyle.label}
+												</a>
 											</li>
 										{/foreach}
 									</ul>
+									{if count($citationDownloads)}
+										<div class="label">
+											Download Citation
+										</div>
+										<ul class="citation_formats_styles">
+											{foreach from=$citationDownloads key="citationDownloadId" item="citationDownload"}
+												<li>
+													<a href="{url page="citationstylelanguage" op="download" path=$citationDownloadId params=$citationArgs}">
+														<span class="fa fa-download"></span>
+														{$citationDownload.label}
+													</a>
+												</li>
+											{/foreach}
+										</ul>
+									{/if}
 								</div>
 							</div>
 						</div>
