@@ -7,218 +7,240 @@
   * Copyright (c) 2014-2017 Simon Fraser University
   * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Swedish_(sv_SE)
   * Localized email templates XML file.
-  *
   -->
 
 <email_texts locale="sv_SE">
-	<email_text key="PASSWORD_RESET_CONFIRM">
-		<subject>Bekräftelse på nytt lösenord</subject>
-		<body><![CDATA[Vi har mottagit önskemål om ändring av lösenord för {$siteTitle}.<br />
+	<email_text key="NOTIFICATION">
+		<subject>Ny avisering från {$siteTitle}</subject>
+		<body><![CDATA[Du har en ny avisering från {$siteTitle}:<br />
 <br />
-Om du inte har gjort det här önskemålet, vänligen bortse från mailet, ditt lösenord kommer inte att ändras. Om du vill ändra lösenordet, klicka på länken nedan.<br />
+{$notificationContents}<br />
 <br />
-Ändra lösenordet: {$url}<br />
+Länk: {$url}<br />
 <br />
 {$principalContactSignature}]]></body>
-		<description>Det här meddelandet skickas till registrerade användare som har glömt lösenordet eller har misslyckats med inloggning. Mailet innehåller en länk för ändring av lösenord.</description>
+		<description>Det här e-postmeddelandet skickas till registrerade användare som har valt att få den här typen av aviseringar skickade till sig via e-post.</description>
+	</email_text>
+	<email_text key="NOTIFICATION_MAILLIST">
+		<subject>Ny avisering från {$siteTitle}</subject>
+		<body><![CDATA[Du har en ny avisering från  {$siteTitle}:<br />
+--<br />
+{$notificationContents}<br />
+<br />
+Länk: {$url}<br />
+--<br />
+<br />
+Om du inte vill få dessa aviseringsmail längre, gå till {$unsubscribeLink}.<br />
+<br />
+{$principalContactSignature}]]></body>
+		<description>Det här e-postmeddelandet skickas till oregistrerade användare som står med på e-postlistan för aviseringar.</description>
+	</email_text>
+	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
+		<subject>Välkommen till e-postlistan för {$siteTitle}!</subject>
+		<body><![CDATA[Du har registrerat dig för att få aviseringar från {$siteTitle}.<br />
+<br />
+Klicka på den här länken för att bekräfta din anmälan och lägga till din e-postadress till e-postlistan: {$confirmLink}<br />
+<br />
+Om du inte vill få aviseringar längre, gå till {$unsubscribeLink}.<br />
+<br />
+{$principalContactSignature}]]></body>
+		<description>Det här e-postmeddelandet skickas till oregistrerade användare som enbart registrerat sig för aviseringar via e-postlistan.</description>
+	</email_text>    
+	<email_text key="PASSWORD_RESET_CONFIRM">
+		<subject>Bekräfta återställning av lösenord</subject>
+		<body><![CDATA[Vi har mottagit en begäran om att återställa ditt lösenord för webbplatsen {$siteTitle}.<br />
+<br />
+Om det inte var du som skickade begäran, vänligen bortse från det här e-postmeddelandet så kommer ditt lösenord fortsätta vara samma som förut. Om du vill återställa ditt lösenord, klicka på URL:en nedan.<br />
+<br />
+Återställ mitt lösenord: {$url}<br />
+<br />
+{$principalContactSignature}]]></body>
+		<description>Det här meddelandet skickas till registrerade användare som meddelar att de har glömt sitt lösenord eller inte kan logga in. E-postmeddelandet innehåller en URL som leder till återställning av lösenordet.</description>
 	</email_text>
 	<email_text key="PASSWORD_RESET">
-		<subject>Ändring av lösenord</subject>
-		<body><![CDATA[Ditt lösenord för {$siteTitle} har ändrats. Vänligen spara inloggningsuppgifterna eftersom dessa är nödvändiga för allt arbete med tidskriften.<br />
+		<subject>Lösenord återställt</subject>
+		<body><![CDATA[Ditt lösenord för {$siteTitle} har återställts. Spara nedanstående användarnamn och lösenord, de är nödvändiga för allt arbete med tidskriften.<br />
 <br />
 Ditt användarnamn: {$username}<br />
 Lösenord: {$password}<br />
 <br />
 {$principalContactSignature}]]></body>
-		<description>Det här meddelandet skickas till registrerade användare som bekräftelse på ändrat lösenord (enligt beskrivning i PASSWORD_RESET_CONFIRM -mailet).</description>
+		<description>Det här e-postmeddelandet skickas till registrerade användare som bekräftelse på återställt lösenord (enligt beskrivning i PASSWORD_RESET_CONFIRM-mailet).</description>
 	</email_text>
 	<email_text key="USER_REGISTER">
-		<subject>Du är nu registrerad användare</subject>
+		<subject>Registrering hos tidskrift</subject>
 		<body><![CDATA[{$userFullName}<br />
 <br />
-Tack för att du har registrerat dig hos tidskriften: {$contextName}. Dina inloggningsuppgifter bifogas i mailet. Du kan när som helst välja att lämna tidskriften genom att kontakta mig.<br />
+Du har nu blivit registrerad som användare hos {$contextName}. Ditt användarnamn och lösenord bifogas i det här e-postmeddelandet. Inloggningsuppgifterna är nödvändiga för allt arbete med tidskriften genom dess webbplats. Du kan när som helst välja att få ditt användarkonto borttaget från tidskriften genom att kontakta mig.<br />
 <br />
 Användarnamn: {$username}<br />
 Lösenord: {$password}<br />
 <br />
 Vänligen,<br />
 {$principalContactSignature}]]></body>
-		<description>Det här välkomstmeddelandet som skickas till nyregistrerade användare innehåller inloggningsuppgifter för tidskriften.</description>
+		<description>Det här e-postmeddelandet skickas till nyregistrerade användare för att välkomna dem till systemet och förse dem med dokumentation på deras användarnamn och lösenord.</description>
 	</email_text>
 	<email_text key="USER_VALIDATE">
-		<subject>Bekräfta användarkonto</subject>
+		<subject>Bekräfta ditt användarkonto</subject>
 		<body><![CDATA[{$userFullName}<br />
 <br />
-Du har skapat ett användarkonto hos {$contextName}, innan du kan logga in måste du bekräfta kontot genom att klicka på länken nedan:<br />
+Du har skapat ett användarkonto hos {$contextName}, men innan du kan börja använda det behöver du bekräfta din e-post. För att bekräfta din e-post, följ bara länken nedan:<br />
 <br />
 {$activateUrl}<br />
 <br />
 Vänligen,<br />
 {$principalContactSignature}]]></body>
-		<description>Det här meddelandet, som innehåller välkomstinformation och kontouppgifter skickas till nyregistrerade användare.</description>
+		<description>Det här e-postmeddelandet skickas till nyregistrerade användare för att bekräfta deras e-post.</description>
 	</email_text>
 	<email_text key="REVIEWER_REGISTER">
-		<subject>Registrering som Sakkunnigedömare hos {$contextName}</subject>
-		<body><![CDATA[Baserad på den ämnesexpertis du besitter har vi tagit oss friheten att registrera ditt namn i Sakkunnigbedömningsdatabasen hos {$contextName}. Detta innebär inga förplikelser från din sida utan innebär endast att vi har möjlighet att höra av oss till dig för relevanta manuskriptbedömningar. När du erbjuds att sakkunniggranska ett manuskript kommer du få tillgång till titeln och sammanfattningen av berörd artikel, och du har därefter möjlighet att antingen acceptera eller avböja inbjudan. Du kan även när som helst be om att få ditt namn bortplockat från listan över sakkunnigbedömare.<br />
+		<subject>Registrering som granskare hos {$contextName}</subject>
+		<body><![CDATA[Baserat på den ämnesexpertis du besitter har vi tagit oss friheten att registrera ditt namn i granskardatabasen hos {$contextName}. Detta innebär inga förplikelser från din sida utan innebär endast att vi har möjlighet att höra av oss till dig med ett potentiellt granskningsuppdrag. I samband med inbjudan till granskning kommer du att kunna se titel och sammanfattning för artikeln i fråga och du har alltid möjlighet att antingen acceptera eller avböja inbjudan. Du kan även när som helst be om att få ditt namn bortplockat från listan över granskare.<br />
 <br />
-Inloggningsuppgifterna nedan används för all nödvändig interaktion med tidskriften. Till exempel kan du logga in och uppdatera din profil och ange intresseområden för sakkunigbedömning.<br />
+Här förser vi dig med användarnamn och lösenord, som används i all interaktion med tidskriften via webbplatsen. Till exempel kan du logga in och uppdatera din profil och ange intresseområden för granskning.<br />
 <br />
 Användarnamn: {$username}<br />
 Lösenord: {$password}<br />
 <br />
 Vänligen,<br />
 {$principalContactSignature}]]></body>
-		<description>Det här meddelandet skickas till nyligen registrerade sakkuniggbedömare och innehåller välkomstinformation och nödvändiga inloggningsuppgifter.</description>
+		<description>Det här e-postmeddelandet skickas till nyregistrerade granskare för välkomna demtill systemet och förse dem med dokumentation på deras användarnamn och lösenord.</description>
 	</email_text>
 	<email_text key="PUBLISH_NOTIFY">
-		<subject>Nytt nummer</subject>
+		<subject>Nytt nummer publicerat</subject>
 		<body><![CDATA[Till registrerade läsare:<br />
 <br />
-{$contextName} har nyligen publicerat ett nytt nummer {$contextUrl}. Nedan följer innehållsförteckningen, klicka dig vidare till tidskriftens hemsida för att läsa de artiklar som kan vara av intresse.<br />
+{$contextName} publicerade precis ett nytt nummer på {$contextUrl}. Här bifogas numrets innehållsförteckning. Klicka dig vidare till vår webbplats för att läsa de artiklar och texter som kan vara av intresse.<br />
 <br />
 Tack för visat intresse för vårt arbete,<br />
 {$editorialContactSignature}]]></body>
-		<description>Det här meddelandet skickas till registrerade läsare via "Meddela användare"-länken under Redakötrens användarprofil. Meddelandet innehåller information om nytt nummer och en länk till tidskriftens hemsida.</description>
+		<description>Det här e-postmeddelandet skickas till registrerade läsare via "Meddela användare"-länken under Redaktörens användarprofil. Det innehåller information om att det publicerats ett nytt nummer och välkomnar dem genom en länk att besöka tidskriften.</description>
 	</email_text>
 	<email_text key="LOCKSS_EXISTING_ARCHIVE">
-		<subject>Begäran om arkivering för {$contextName}</subject>
-		<body><![CDATA[Hej [Ange namn på universitetsbibliotekarie]<br />
+		<subject>Förfrågan om arkivering för {$contextName}</subject>
+		<body><![CDATA[Hej [universitetsbibliotekarie]!<br />
 <br />
-{$contextName} &amp;lt;{$contextUrl}&amp;gt;, är en tidskrift där fakultetsmedlemmen, [ange namn på medlemmen], bistår som [ange position]. Tidskriften vill etablera ett LOCKSS- (Lots of Copies Keep Stuff Safe) kompatibelt arkiv vid det här och andra universitetsbibliotek.<br />
+{$contextName} &amp;lt;{$contextUrl}&amp;gt; är en tidskrift där en medarbetare på ditt lärosäte, [namn på medarbetaren], bistår som [namn på position]. Tidskriften vill etablera ett LOCKSS-kompatibelt (Lots of Copies Keep Stuff Safe) arkiv vid det här och andra universitetsbibliotek.<br />
 <br />
-[Ange en kortare beskrivning av tidskriften]<br />
+[Kortfattad beskrivning av tidskriften]<br />
 <br />
-URL till LOCKSS Publisher Manifest för vår tidskrift är: {$contextUrl}/gateway/lockss<br />
+URL:en till LOCKSS Publisher Manifest för vår tidskrift är: {$contextUrl}/gateway/lockss<br />
 <br />
-Vi har förstått att ni redan deltar i LOCKSS. Om vi får leverera utförligare metadata för att registrera vår tidskrift i er LOCKSS-version så bistår vi gärna med detta.<br />
+Vi har förstått att ni redan deltar i LOCKSS. Vi bistår gärna med ytterligare metadata som eventuellt behövs för att registrera vår tidskrift i er LOCKSS-version.<br />
 <br />
-Tack! Vänligen,<br />
+Tack och med vänliga hälsningar,<br />
 {$principalContactSignature}]]></body>
-		<description>Det här meddelandet är en förfrågan till LOCKSS-användare att överväga inkluderandet av den här tidskriften i deras arkiv. Meddelandet innehåller även en länk till tidskriftens LOCKSS Publisher Manifest.</description>
+		<description>Det här e-postmeddelandet är en förfrågan till den som administrerar ett LOCKSS-arkiv att överväga inkludering av den här tidskriften i deras arkiv. Meddelandet innehåller URL:en till tidskriftens LOCKSS Publisher Manifest.</description>
 	</email_text>
 	<email_text key="LOCKSS_NEW_ARCHIVE">
-		<subject>Begäran om arkivering för {$contextName}</subject>
-		<body><![CDATA[<br />
-				Hej [Ange namn på universitetsbibliotekarie]<br />
+		<subject>Förfrågan om arkivering för {$contextName}</subject>
+		<body><![CDATA[Hej [universitetsbibliotekarie]!<br />
 <br />
-{$contextName} &amp;lt;{$contextUrl}&amp;gt;, är en tidskrift där fakultetsmedlemmen, [ange namn på medlemmen], bistår som [ange position]. Tidskriften vill etablera ett LOCKSS- (Lots of Copies Keep Stuff Safe) kompatibelt arkiv vid det här och andra universitetsbibliotek.<br />
+{$contextName} &amp;lt;{$contextUrl}&amp;gt; är en tidskrift där en medarbetare på ditt lärosäte, [namn på medarbetaren], bistår som [namn på position]. Tidskriften vill etablera ett LOCKSS-kompatibelt (Lots of Copies Keep Stuff Safe) arkiv vid det här och andra universitetsbibliotek.<br />
 <br />
-[Ange en kortare beskrivning av tidskriften]<br />
+[Kortfattad beskrivning av tidskriften]<br />
 <br />
-LOCKSS-samarbetet &amp;lt;http://lockss.stanford.edu/&amp;gt;, är ett internationellt biblioteks/publiceringsinitiativ, som syftar till distribuerad lagring och arkivering av digitalt material (se nedan för ytterligare information). Mjukvaran är gratis och kan köras på en vanlig pc. Systemet hämtas från nätet och kräver väldigt litet kontinuerligt underhåll.<br />
+LOCKSS-samarbetet &amp;lt;http://lockss.org/&amp;gt;, ett internationellt biblioteks- och utgivarinitiativ, är ett exempel på ett distribuerat arkiv för bevarande (se nedan för ytterligare information). Mjukvaran är gratis och kan köras på en vanlig dator. Systemet hämtas från nätet och kräver väldigt litet kontinuerligt underhåll.<br />
 <br />
-Det ligger i vårt intresse att vår tidskrift blir arkiverad och distribuerad med hjälp av LOCKSS. Därför uppmuntrar vi er att delta i LOCKSS-samarbetet för att enkelt samla och bevara digitala publikationer av era forskare och forskare över hela världen. Vänligen se LOCKSS egen hemsida för ytterligare information om systemet. Vi ser fram emot att höra av er.<br />
+Det skulle vara till stor hjälp för oss i sökandet efter bevarandelösningar för vår tidskrift om ni ville överväga att bli medlemmar i LOCKSS-gemenskapen och på det sättet hjälpa till att samla och bevara titlar producerade vid lärosätet och av andra forskare runt om i världen. Om ni vill gå vidare med detta, vänligen se LOCKSS webbplats för mer information om hur systemet fungerar. Jag ser fram emot att höra från er angående möjligheterna för er att stödja arkiveringen av vår tidskrift genom detta.<br />
 <br />
-Tack, vänliga hälsningar:<br />
+Tack och med vänliga hälsningar,<br />
 {$principalContactSignature}]]></body>
-		<description>Det här meddelandet rekommenderar mottagaren att delta i LOCKSS-samarbetet och uppmuntrar mottagaren att inkludera tidskriften i arkivet. Meddelandet innehåller även generell information om LOCKSS.</description>
+		<description>Det här e-postmeddelandet rekommenderar mottagaren att delta i LOCKSS-initiativet och att inkludera tidskriften i arkivet. Meddelandet innehåller även generell information om LOCKSS och hur man gör för att delta.</description>
 	</email_text>
 	<email_text key="SUBMISSION_ACK">
-		<subject>Vi har mottagit ditt manuskript</subject>
+		<subject>Bekräftelse på mottaget bidrag</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Tack för att du har skickat in manuskriptet, &quot;{$submissionTitle}&quot; till {$contextName}. I det publiceringssystem vi använder har du möjlighet att följa den redaktionella processen av manuskriptet genom att logga in på sidan:<br />
+Tack för att du har skickat in manuskriptet &quot;{$submissionTitle}&quot; till {$contextName}. I det publiceringssystem vi använder har du möjlighet att följa dess väg i den redaktionella processen genom att logga in på tidskriftens webbplats:<br />
 <br />
-Manuskript URL: {$submissionUrl}<br />
+Bidragets URL: {$submissionUrl}<br />
 Användarnamn: {$authorUsername}<br />
 <br />
-Om du har frågor, vänligen kontakta mig, tack för att du har valt att skicka manuskriptet till den här tidskriften.<br />
+Om du har några frågor, vänligen kontakta mig. Tack för att du har valt att skicka ditt bidrag till den här tidskriften.<br />
 <br />
 {$editorialContactSignature}]]></body>
-		<description>Det här meddelandet skickas automatiskt till författare som skickat manuskript till tidskriften. Meddelandet innehåller information om hur författaren följer den redaktionella processen samt ett tack för att författaren valt tidskriften för publicering.</description>
+		<description>Det här e-postmeddelandet skickas, om det är aktiverat, automatiskt till författaren när hen skickar in sitt manuskript till tidskriften. Meddelandet innehåller information om hur författaren kan följa bidraget genom redaktionella processen samt ett tack för för inskickat bidrag.</description>
+	</email_text>
+	<email_text key="SUBMISSION_ACK_NOT_USER">
+	  <subject>Bekräftelse på mottaget bidrag</subject>
+	  <body><![CDATA[Hej!<br />
+<br />
+{$submitterName} har skickat in manuskriptet &quot;{$submissionTitle}&quot; till {$contextName}.<br />
+<br />
+Om du har några frågor, vänligen kontakta mig. Tack för att ni har valt att skicka ert bidrag till den här tidskriften.<br />
+<br />
+{$editorialContactSignature}]]></body>
+		<description>Det här e-postmeddelandet skickas, om det är aktiverat, automatiskt till andra författare knutna till bidraget i inskickningsprocessen men som inte är OJS-användare.</description>
 	</email_text>
 	<email_text key="SUBMISSION_UNSUITABLE">
-		<subject>Olämpligt manuskript</subject>
+		<subject>Bidrag olämpligt</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Vid den redaktionella granskningen av manuskriptet &quot;{$submissionTitle}&quot; har vi dessvärre funnit att manuskriptet inte överensstämmer med tidskriftens {$contextName} ämnesfokus. Jag rekommenderar att du tar del av beskrivningen av tidskriften under Om, liksom av tidskriftens innehållsförteckning, för att få en bild av det material vi publicerar. Du bör även överväga att skicka manuskriptet till en annan, mer passande tidskrift.<br />
+En första redaktionell granskning &quot;{$submissionTitle}&quot; har visat att det här bidraget inte överensstämmer med tidskriften {$contextName}s ämnesfokus. Jag rekommenderar att du tar del av beskrivningen av tidskriften under Om liksom tidskriftens hittills publicerade material för att få en bild av vilken typ av innehåll vi publicerar. Du kan också överväga att skicka manuskriptet till en annan, mer passande, tidskrift.<br />
 <br />
 {$editorialContactSignature}]]></body>
 	</email_text>
-	<email_text key="SUBMISSION_COMMENT">
-		<subject>Kommentar till manuskript</subject>
-		<body><![CDATA[{$name}:<br />
-<br />
-{$commentName} har kommenterat manuskriptet, &quot;{$submissionTitle}&quot; i {$contextName}:<br />
-<br />
-{$comments}]]></body>
-		<description>Det här mailet meddelar de olika personer som är inblandade i redigeringsprocessen att en ny kommentar lagts till.</description>
-	</email_text>
-	<email_text key="SUBMISSION_DECISION_REVIEWERS">
-		<subject>Redaktionellt besked rörande "{$submissionTitle}"</subject>
-		<body><![CDATA[Som en av sakkunigbedömarna för manuskriptet: &quot;{$submissionTitle},&quot; i {$contextName}, bifogar jag härmed de bedömningar och det redaktionella utlåtande som skickats till författaren. Tack återigen för ditt viktiga bidrag i redaktionsprocessen.<br />
- <br />
-{$editorialContactSignature}<br />
-<br />
-{$comments}]]></body>
-		<description>Det här mailet meddelar manuskriptets sakkunnigbedömare att bedömningsprocessen är avslutad. Mailet innehåller ett redaktionellt utlåtade och information om publicering, och tackar sakkunnigbedömaren för arbetet i den redaktionella processen.</description>
-	</email_text>
 	<email_text key="EDITOR_ASSIGN">
-		<subject>Redaktionellt uppdragt</subject>
-		<body><![CDATA[<br />
-				{$editorialContactName}:<br />
+		<subject>Redaktionellt uppdrag</subject>
+		<body><![CDATA[{$editorialContactName}:<br />
 <br />
-				Som sektionsredaktör för {$contextName} har du fått i uppdrag att föra manuskriptet &quot;{$submissionTitle},&quot; genom den redaktionella processen.<br />
+Som sektionsredaktör för {$contextName} har du fått i uppdrag att föra bidraget &quot;{$submissionTitle},&quot; genom den redaktionella processen.<br />
 <br />
-				Manuskriptets URL: {$submissionUrl}<br />
-				Användarnamn: {$editorUsername}<br />
+Bidragets URL: {$submissionUrl}<br />
+Användarnamn: {$editorUsername}<br />
 <br />
-				Tack, vänligen:<br />
-				{$editorialContactSignature}]]></body>
-		<description>Det här mailet meddelar att Redaktören har gett Sektionsredaktör i uppdrag att föra ett manuskriopt genom den redaktionella processen. Mailet innehåller även information om manuskriptet och hur man loggar in i tidskriften.</description>
+Tack och med vänliga hälsningar,<br />
+{$editorialContactSignature}]]></body>
+		<description>Det här e-postmeddelandet meddelar en Sektionsredaktör att Redaktören har utsett hen att ansvara för ett bidrag genom den redaktionella processen. Det innehåller även information om bidraget och hur man loggar in på tidskriftens webbplats.</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST">
-		<subject>Article Review Request</subject>
-		<body><![CDATA[<br />
-				{$reviewerName}:<br />
+		<subject>Förfrågan om granskning av artikel</subject>
+		<body><![CDATA[{$reviewerName}:<br />
 <br />
-			Vår tidskrift {$contextName} har fått manuskriptet &quot;{$submissionTitle}&quot; tillskickat oss, och vi hoppas att du har möjlighet att göra en sakkunnigbdömning av manuskriptet eftersom vi anser att manuskriptets ämne matchar ditt kompetensområde. Manuskriptets sammanfattning är bifogad nedan.<br />
-			<br />
-			Vänligen logga in på tidskriftens hemsida innan {$responseDueDate}, för att bekräfta om du har möjlighet att åta dig uppdraget eller inte. Om du väljer att granska manuskriptet ska du också använda tidkriftens hemsida för att lämna kommentarer och bedömning. Adressen till hemsidan är: {$contextUrl}<br />
-			<br />
-			Sista dag för bedömning är {$reviewDueDate}.<br />
-			<br />
-			Om du har glömt ditt användarnamn och/eller lösenord, använd följande länk för att förnya lösenordet. Dina inloggningsuppgifter mailas då till dig. {$passwordResetUrl}<br />
-			<br />
-			Manuskriptets URL: {$submissionReviewUrl}<br />
+Jag tror att du skulle passa utmärkt som sakkunniggranskare av manuskriptet &quot;{$submissionTitle}&quot;, som har skickats in till {$contextName}. Bidragets sammanfattning bifogas nedan. Jag hoppas att du kan överväga att genomföra granskningen åt oss, det vore mycket värdefullt.<br />
 <br />
-Tack för hjälp, vänligen<br />
+Vänligen logga in på tidskriftens webbplats senast {$responseDueDate} och svara om du har möjlighet att åta dig granskningsuppdraget eller inte. Det är också där du får tillgång till bidraget och lägger in din granskning och rekommendation. Adressen till webbplatsen är {$contextUrl}.<br />
+<br />
+Deadline för själva granskningen är {$reviewDueDate}.<br />
+<br />
+Om du har glömt ditt användarnamn och/eller lösenord till tidskriftens webbplats, använd följande länk för att återställa lösenordet: {$passwordResetUrl}. Dina inloggningsuppgifter skickas då till dig per e-post.<br />
+<br />
+Bidragets URL: {$submissionReviewUrl}<br />
+<br />
+Tack för ditt övervägande av granskningsuppdraget.<br />
+<br />
 {$editorialContactSignature}<br />
 <br />
+&quot;{$submissionTitle}&quot;<br />
 <br />
-<br />
-				&quot;{$submissionTitle}&quot;<br />
-<br />
-				<br />
-				{$submissionAbstract}]]></body>
-		<description>Det här meddelandet från Sektionsredaktören till Sakkuniggbedömare innehåller begäran om att mottagaren ska acceptera eller avböja att granska ett manuskript. Mailet innehåller information om manuskriptet, titel och sammanfattning, sista-datum för bedömning, samt information om inloggning till tidskriften. Meddelandet används när Standardbedömningsprocessen är vald i Tidskriftsinställningar, Steg 2. (Annars, se mailet: REVIEW_REQUEST_ATTACHED.)</description>
+{$submissionAbstract}]]></body>
+		<description>Det här e-postmeddelandet från Sektionsredaktören till en granskar ber granskaren att acceptera eller tacka nej till uppdraget att sakkunniggranska ett bidrag. Det innehåller information om bidraget i form av titel och sammanfattning, en deadline för granskning och instruktioner för hur man kommer åt bidraget. Meddelandet används när granskningsprocess Standard är valt i Administration &gt; Inställningar &gt; Arbetsflöde &gt; Granskning. (Annars, se REVIEW_REQUEST_ATTACHED.)</description>
 	</email_text>
-	<email_text key="REVIEW_REQUEST_ONECLICK">
-		<subject>Begäran om sakkunigbedömning</subject>
-		<body><![CDATA[<br />
-				{$reviewerName}:<br />
+	<email_text key="REVIEW_REQUEST_REMIND_AUTO">
+		<subject>Förfrågan om granskning av artikel</subject>
+		<body><![CDATA[{$reviewerName}:<br />
+Det här är bara en påminnelse om vår förfrågan om huruvida du skulle vara villig att granska bidraget &quot;{$submissionTitle}&quot; för {$contextName}. Vi hade hoppats på svar innan {$responseDueDate}, och i samband med att datumet passerade genererade och skickades det här meddelandet.
 <br />
-				Vår tidskrift {$contextName} har fått manuskriptet &quot;{$submissionTitle},&quot; tillskickat oss. Utifrån dina ämneskunskaper tror vi att du skulle sakkunnigbedöma manuskriptet på ett ypperligt sätt. Manuskriptets sammanfattning är bifogat nedan, och vi hoppas att du har möjlighet att genomföra detta viktiga arbete.<br />
+Jag tror att du skulle passa utmärkt som sakkunniggranskare av manuskriptet &quot;{$submissionTitle}&quot;, som har skickats in till {$contextName}. Bidragets sammanfattning bifogas nedan. Jag hoppas att du kan överväga att genomföra granskningen åt oss, det vore mycket värdefullt.<br />
 <br />
-				Vänligen logga in i tidskriften senast {$responseDueDate} för att meddela om du avser granska manuskriptet eller inte. Väl inloggad kan du även läsa manuskriptet, avge bedömning samt lämna kommnetarer och rekommendationer.<br />
+Vänligen logga in på tidskriftens webbplats senast {$responseDueDate} och svara om du har möjlighet att åta dig granskningsuppdraget eller inte. Det är också där du får tillgång till bidraget och lägger in din granskning och rekommendation. Adressen till webbplatsen är {$contextUrl}.<br />
 <br />
-				Bedömningen ska vara genomförd innan {$reviewDueDate}.<br />
+Deadline för själva granskningen är {$reviewDueDate}.<br />
 <br />
-				Manuskriptets URL: {$submissionReviewUrl}<br />
+Om du har glömt ditt användarnamn och/eller lösenord till tidskriftens webbplats, använd följande länk för att återställa lösenordet: {$passwordResetUrl}. Dina inloggningsuppgifter skickas då till dig per e-post.<br />
 <br />
-				Tack för din tid.<br />
+Bidragets URL: {$submissionReviewUrl}<br />
 <br />
-				{$editorialContactSignature}<br />
+Tack för ditt övervägande av granskningsuppdraget.<br />
 <br />
+{$editorialContactSignature}<br />
 <br />
+&quot;{$submissionTitle}&quot;<br />
 <br />
-				&quot;{$submissionTitle}&quot;<br />
-<br />
-				<br />
-				{$submissionAbstract}]]></body>
-		<description>Det här meddelandet från Sektionsredaktören till Sakkunnigbedömare innehåller begäran om att mottagaren ska acceptera eller avböja att granska ett manuskript. Meddelandet innehåller information om manuskriptet, titel och sammanfattning, ett sista-datum för bedömning och inloggningsinformation. Meddelandet används när Standardbedömningsprocessen är vald i Tidskriftsinställningar, Steg 2, och med one-click bedömning är aktiverad.</description>
+{$submissionAbstract}]]></body>
+		<description>Det här e-postmeddelandet skickas automatiskt när en granskares deadline för bekräftelse på granskningsförfrågan löper ut (se Granskningsalternativ under Inställningar &gt; Arbetsflöde &gt; Granskning) och Granskartillgång med ett klick är avaktiverat. Schemalagda aktiviteter måste vara aktiverat och konfigurerat (se serverns konfigurationsfil).</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ATTACHED">
 		<subject>Begäran om sakkunigbedömning</subject>
