@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE groups SYSTEM "../lib/pkp/dtd/navigationMenuItems.dtd">
+
+<!--
+  * registry/navigationMenuItems.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Default NavigationMenuItems XML file.
+  *
+  -->
+
+<navigationMenuItems>
+	<!-- Main -->
+	<navigationMenuItem title="navigation.current" path="current" page="issue" default="true" />
+	<navigationMenuItem title="navigation.about" path="" page="about" default="true" />
+	<navigationMenuItem title="about.aboutContext" path="" page="about" default="true" />
+	<navigationMenuItem title="navigation.archives" path="archive" page="issue" default="true" />
+	<navigationMenuItem title="navigation.submissions" path="submissions" page="about" default="true" />
+	<navigationMenuItem title="about.editorialTeam" path="editorialTeam" page="about" default="true" />
+	<navigationMenuItem title="about.contact" path="contact" page="about" default="true" />
+</navigationMenuItems>
