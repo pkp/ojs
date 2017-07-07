@@ -1,21 +1,21 @@
 <?php
 
 /**
- * @file controllers/grid/subscriptions/IndividualSubscriptionsGridCellProvider.inc.php
+ * @file controllers/grid/subscriptions/SubscriptionsGridCellProvider.inc.php
  *
  * Copyright (c) 2014-2017 Simon Fraser University
  * Copyright (c) 2000-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @class IndividualSubscriptionsGridCellProvider
+ * @class SubscriptionsGridCellProvider
  * @ingroup controllers_grid_subscriptions
  *
- * @brief Class for a cell provider to display information about individual subscriptions
+ * @brief Class for a cell provider to display information about subscriptions
  */
 
 import('lib.pkp.classes.controllers.grid.GridCellProvider');
 
-class IndividualSubscriptionsGridCellProvider extends GridCellProvider {
+class SubscriptionsGridCellProvider extends GridCellProvider {
 
 	//
 	// Template methods from GridCellProvider
@@ -33,8 +33,16 @@ class IndividualSubscriptionsGridCellProvider extends GridCellProvider {
 
 		switch ($column->getId()) {
 			case 'name':
-				return array('label' => $subscription->getUserFullName());
+				switch (1) {
+					case is_a($subscription, 'IndividualSubscription'):
+						return array('label' => $subscription->getUserFullName());
+					case is_a($subscription, 'InstitutionalSubscription'):
+						return array('label' => $subscription->getInstitutionName());
+				}
+				assert(false);
+				break;
 			case 'email':
+				assert(is_a($subscription, 'IndividualSubscription'));
 				return array('label' => $subscription->getUserEmail());
 			case 'subscriptionType':
 				return array('label' => $subscription->getSubscriptionTypeName());

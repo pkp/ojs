@@ -26,7 +26,7 @@ class IndividualSubscriptionForm extends SubscriptionForm {
 		parent::__construct('subscriptions/individualSubscriptionForm.tpl', $subscriptionId);
 
 		$subscriptionId = isset($subscriptionId) ? (int) $subscriptionId : null;
-		$journal = Request::getJournal();
+		$journal = $request->getJournal();
 		$journalId = $journal->getId();
 
 		if (isset($subscriptionId)) {

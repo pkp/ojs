@@ -36,10 +36,9 @@
 			{fbvElement type="select" required=true name="format" id="format" value=$format from=$validFormats label="manager.subscriptionTypes.form.format" size=$fbvStyles.size.MEDIUM translate=false inline=true}
 			{fbvElement type="text" name="duration" id="duration" value=$duration label="manager.subscriptionTypes.form.duration" size=$fbvStyles.size.MEDIUM label="manager.subscriptionTypes.form.durationInstructions" inline=true}
 		{/fbvFormSection}
-
 		{fbvFormSection title="manager.subscriptionTypes.form.subscriptions" list=true}
-			{fbvElement type="radio" name="institutional" id="instititional" checked=$institutional label="manager.subscriptionTypes.form.individual" value=1}
-			{fbvElement type="radio" name="institutional" id="individual" checked=$institutional|compare:0 label="manager.subscriptionTypes.form.institutional" value=0}
+			{fbvElement type="radio" name="institutional" id="individual" checked=$institutional|compare:"0" label="manager.subscriptionTypes.form.individual" value="0" disabled=$typeId}
+			{fbvElement type="radio" name="institutional" id="institutional" checked=$institutional|compare:"1" label="manager.subscriptionTypes.form.institutional" value="1" disabled=$typeId}
 		{/fbvFormSection}
 
 		{fbvFormSection title="manager.subscriptionTypes.form.options" list=true}

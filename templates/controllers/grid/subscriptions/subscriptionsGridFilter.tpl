@@ -7,17 +7,18 @@
  *
  * Filter template for individual subscriptions grid.
  *}
+{assign var=formId value="filterForm-"|concat:$grid->getId()}
 <script type="text/javascript">
 	// Attach the form handler to the form.
-	$('#individualSubscriptionsSearchForm').pkpHandler('$.pkp.controllers.form.ClientFormHandler',
+	$('#{$formId}').pkpHandler('$.pkp.controllers.form.ClientFormHandler',
 		{ldelim}
 			trackFormChanges: false
 		{rdelim}
 	);
 </script>
-<form class="pkp_form filter" id="individualSubscriptionsSearchForm" action="{url router=$smarty.const.ROUTE_COMPONENT component="grid.subscriptions.IndividualSubscriptionsGridHandler" op="fetchGrid"}" method="post">
+<form class="pkp_form filter" id="{$formId}" action="{url op="fetchGrid"}" method="post">
 	{csrf}
-	{fbvFormArea id="individualSubscriptionsSearchFormArea"}
+	{fbvFormArea id="subscriptionsSearchFormArea"}
 		{fbvFormSection title="common.search" for="search"}
 			{fbvElement type="text" name="search" id="search" value=$filterSelectionData.search size=$fbvStyles.size.LARGE inline="true"}
 		{/fbvFormSection}

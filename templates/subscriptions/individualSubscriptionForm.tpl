@@ -8,7 +8,6 @@
  * Individual subscription form under journal management.
  *
  *}
-<br/>
 <script>
 	$(function() {ldelim}
 		// Attach the form handler.
@@ -42,5 +41,5 @@
 
 	<span class="formRequired">{translate key="common.requiredField"}</span>
 
-	{fbvFormButtons id="mastheadFormSubmit" submitText="common.save" hideCancel=true}
+	{fbvFormButtons id="individualSubscriptionFormSubmit" submitText="common.save" hideCancel=true}
 </form>

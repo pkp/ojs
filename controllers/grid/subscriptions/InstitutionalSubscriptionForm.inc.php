@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file classes/subscription/form/InstitutionalSubscriptionForm.inc.php
+ * @file controllers/grid/subscriptions/InstitutionalSubscriptionForm.inc.php
  *
  * Copyright (c) 2014-2017 Simon Fraser University
  * Copyright (c) 2003-2017 John Willinsky
@@ -18,15 +18,16 @@ import('classes.subscription.form.SubscriptionForm');
 class InstitutionalSubscriptionForm extends SubscriptionForm {
 	/**
 	 * Constructor
+	 * @param $request PKPRequest
 	 * @param $subscriptionId int leave as default for new subscription
 	 */
-	function __construct($subscriptionId = null) {
+	function __construct($request, $subscriptionId = null) {
 		parent::__construct('subscriptions/institutionalSubscriptionForm.tpl', $subscriptionId);
 
 		$subscriptionId = isset($subscriptionId) ? (int) $subscriptionId : null;
 		$userId = isset($userId) ? (int) $userId : null;
 
-		$journal = Request::getJournal();
+		$journal = $request->getJournal();
 		$journalId = $journal->getId();
 
 		if (isset($subscriptionId)) {
@@ -37,10 +38,10 @@ class InstitutionalSubscriptionForm extends SubscriptionForm {
 		}
 
 		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
-		$subscriptionTypesIterator = $subscriptionTypeDao->getByInstitutional($journalId, true);
+		$subscriptionTypeIterator = $subscriptionTypeDao->getByInstitutional($journalId, true);
 		$this->subscriptionTypes = array();
-		while ($subscriptionType = $subsctiptionTypesIterator->next()) {
-			$subscriptionTypes[$subscriptionType->getId()] = $subscriptionType->getSummaryString();
+		while ($subscriptionType = $subscriptionTypeIterator->next()) {
+			$this->subscriptionTypes[$subscriptionType->getId()] = $subscriptionType->getSummaryString();
 		}
 
 		if (count($this->subscriptionTypes) == 0) {
@@ -150,9 +151,9 @@ class InstitutionalSubscriptionForm extends SubscriptionForm {
 
 		$institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
 		if ($insert) {
-			$institutionalSubscriptionDao->insertSubscription($this->subscription);
+			$institutionalSubscriptionDao->insertObject($this->subscription);
 		} else {
-			$institutionalSubscriptionDao->updateSubscription($this->subscription);
+			$institutionalSubscriptionDao->updateObject($this->subscription);
 		} 
 
 		// Send notification email
