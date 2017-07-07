@@ -27,7 +27,7 @@ class CounterHandler extends Handler {
 	 */
 	function index($args, $request) {
 		$this->validate();
-		$this->setupTemplate();
+		$this->setupTemplate($request);
 		$plugin =& $this->plugin;
 
 		$counterReportDao = DAORegistry::getDAO('CounterReportDAO');
@@ -107,7 +107,7 @@ class CounterHandler extends Handler {
 	function reportXML($args, $request) {
 		$this->validate();
 		$plugin = $this->plugin;
-		$this->setupTemplate();
+		$this->setupTemplate($request);
 
 		$templateManager = TemplateManager::getManager($request);
 
@@ -128,7 +128,7 @@ class CounterHandler extends Handler {
 	function sushiXML($args, $request) {
 		$this->validate();
 		$plugin = $this->plugin;
-		$this->setupTemplate();
+		$this->setupTemplate($request);
 
 		$templateManager = TemplateManager::getManager($request);
 
@@ -238,7 +238,7 @@ class CounterHandler extends Handler {
 	function report($args, $request) {
 		$this->validate();
 		$plugin = $this->plugin;
-		$this->setupTemplate();
+		$this->setupTemplate($request);
 
 		$journal = $request->getJournal();
 		$year = $request->getUserVar('year');
