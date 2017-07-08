@@ -13,7 +13,7 @@
   -->
 
 <navigationMenus>
-	<navigationMenu title="User" area="User" />
-	<navigationMenu title="Main" area="Main" />
-	<navigationMenu title="Footer" area="Footer" />
+	<navigationMenu title="User" area="user" />
+	<navigationMenu title="Primary" area="primary" />
+	<navigationMenu title="Footer" area="footer" />
 </navigationMenus>
