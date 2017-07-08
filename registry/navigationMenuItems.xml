@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE groups SYSTEM "../lib/pkp/dtd/navigationMenuItems.dtd">
+<!DOCTYPE groups SYSTEM "../lib/pkp/dtd/navigationMenus.dtd">
 
 <!--
   * registry/navigationMenuItems.xml
@@ -13,12 +13,9 @@
   -->
 
 <navigationMenuItems>
-	<!-- Main -->
-	<navigationMenuItem title="navigation.current" path="current" page="issue" default="1" />
-	<navigationMenuItem title="navigation.about" path="" page="about" default="1" />
-	<navigationMenuItem title="about.aboutContext" path="" page="about" default="1" />
-	<navigationMenuItem title="navigation.archives" path="archive" page="issue" default="1" />
-	<navigationMenuItem title="navigation.submissions" path="submissions" page="about" default="1" />
-	<navigationMenuItem title="about.editorialTeam" path="editorialTeam" page="about" default="1" />
-	<navigationMenuItem title="about.contact" path="contact" page="about" default="1" />
+	<!-- User -->
+	<navigationMenuItem title="user.logOut" op="signOut" page="login" default="1">
+		<navigationMenuItem title="navigation.admin" op="index" page="admin" default="1" />
+		<navigationMenuItem title="common.viewProfile" op="profile" page="user" default="1" />
+	</navigationMenuItem>
 </navigationMenuItems>

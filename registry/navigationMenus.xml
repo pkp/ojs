@@ -14,6 +14,17 @@
 
 <navigationMenus>
 	<navigationMenu title="User" area="user" />
-	<navigationMenu title="Primary" area="primary" />
+		
+	<navigationMenu title="Primary" area="primary">
+		<navigationMenuItem title="navigation.current" op="current" page="issue" default="1" />
+		<navigationMenuItem title="navigation.archives" op="archive" page="issue" default="1" />
+		<navigationMenuItem title="navigation.about" op="" page="about" default="1">
+			<navigationMenuItem title="about.aboutContext" op="" page="about" default="1" />
+			<navigationMenuItem title="navigation.submissions" op="submissions" page="about" default="1" />
+			<navigationMenuItem title="about.editorialTeam" op="editorialTeam" page="about" default="1" />
+			<navigationMenuItem title="about.contact" op="contact" page="about" default="1" />
+		</navigationMenuItem>
+	</navigationMenu>
+	
 	<navigationMenu title="Footer" area="footer" />
 </navigationMenus>
