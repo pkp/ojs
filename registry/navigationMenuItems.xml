@@ -14,11 +14,11 @@
 
 <navigationMenuItems>
 	<!-- Main -->
-	<navigationMenuItem title="navigation.current" path="current" page="issue" default="true" />
-	<navigationMenuItem title="navigation.about" path="" page="about" default="true" />
-	<navigationMenuItem title="about.aboutContext" path="" page="about" default="true" />
-	<navigationMenuItem title="navigation.archives" path="archive" page="issue" default="true" />
-	<navigationMenuItem title="navigation.submissions" path="submissions" page="about" default="true" />
-	<navigationMenuItem title="about.editorialTeam" path="editorialTeam" page="about" default="true" />
-	<navigationMenuItem title="about.contact" path="contact" page="about" default="true" />
+	<navigationMenuItem title="navigation.current" path="current" page="issue" default="1" />
+	<navigationMenuItem title="navigation.about" path="" page="about" default="1" />
+	<navigationMenuItem title="about.aboutContext" path="" page="about" default="1" />
+	<navigationMenuItem title="navigation.archives" path="archive" page="issue" default="1" />
+	<navigationMenuItem title="navigation.submissions" path="submissions" page="about" default="1" />
+	<navigationMenuItem title="about.editorialTeam" path="editorialTeam" page="about" default="1" />
+	<navigationMenuItem title="about.contact" path="contact" page="about" default="1" />
 </navigationMenuItems>
