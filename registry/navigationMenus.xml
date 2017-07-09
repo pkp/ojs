@@ -13,18 +13,18 @@
   -->
 
 <navigationMenus>
-	<navigationMenu title="User" area="user" />
+	<navigationMenu title="User" area="user" default_id="1" />
 		
-	<navigationMenu title="Primary" area="primary">
-		<navigationMenuItem title="navigation.current" op="current" page="issue" default="1" />
-		<navigationMenuItem title="navigation.archives" op="archive" page="issue" default="1" />
-		<navigationMenuItem title="navigation.about" op="" page="about" default="1">
-			<navigationMenuItem title="about.aboutContext" op="" page="about" default="1" />
-			<navigationMenuItem title="navigation.submissions" op="submissions" page="about" default="1" />
-			<navigationMenuItem title="about.editorialTeam" op="editorialTeam" page="about" default="1" />
-			<navigationMenuItem title="about.contact" op="contact" page="about" default="1" />
+	<navigationMenu title="Primary" area="primary" default_id="2">
+		<navigationMenuItem title="navigation.current" op="current" page="issue" default="1" default_id="1" />
+		<navigationMenuItem title="navigation.archives" op="archive" page="issue" default="1" default_id="2" />
+		<navigationMenuItem title="navigation.about" op="" page="about" default="1" default_id="3">
+			<navigationMenuItem title="about.aboutContext" op="" page="about" default="1" default_id="4" />
+			<navigationMenuItem title="navigation.submissions" op="submissions" page="about" default="1" default_id="5" />
+			<navigationMenuItem title="about.editorialTeam" op="editorialTeam" page="about" default="1" default_id="6" />
+			<navigationMenuItem title="about.contact" op="contact" page="about" default="1" default_id="7" />
 		</navigationMenuItem>
 	</navigationMenu>
 	
-	<navigationMenu title="Footer" area="footer" />
+	<navigationMenu title="Footer" area="footer" default_id="0x00000003" />
 </navigationMenus>

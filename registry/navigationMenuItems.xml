@@ -14,8 +14,8 @@
 
 <navigationMenuItems>
 	<!-- User -->
-	<navigationMenuItem title="user.logOut" op="signOut" page="login" default="1">
-		<navigationMenuItem title="navigation.admin" op="index" page="admin" default="1" />
-		<navigationMenuItem title="common.viewProfile" op="profile" page="user" default="1" />
+	<navigationMenuItem title="user.logOut" op="signOut" page="login" default="1" default_id="8">
+		<navigationMenuItem title="navigation.admin" op="index" page="admin" default="1" default_id="10" />
+		<navigationMenuItem title="common.viewProfile" op="profile" page="user" default="1" default_id="11" />
 	</navigationMenuItem>
 </navigationMenuItems>
