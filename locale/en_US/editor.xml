@@ -109,7 +109,6 @@
 	<message key="editor.issues.galleyLocaleRequired">An issue galley locale is required.</message>
 	<message key="editor.issues.galleyPublicIdentificationExists">Public issue galley identification already exists.</message>
 	<message key="editor.issues.backToIssueGalleys">Back to issue galleys</message>
-	<message key="editor.issues.viewingGalley">Viewing Issue Galley</message>
 	<message key="editor.issues.confirmDeleteGalley">Are you sure you want to delete this issue galley?</message>
 	<message key="editor.issues.identifiers">Identifiers</message>
 	<message key="editor.navigation.futureIssues">Future Issues</message>
