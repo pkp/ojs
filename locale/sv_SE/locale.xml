@@ -156,14 +156,14 @@
 	<message key="submission.copyediting">Manusredigering</message>
 	<message key="submission.copyedit">Manusredigera</message>
 	<message key="submission.proofreading">Korrekturläsning</message>
-	<message key="submission.scheduling">Planera</message>
-	<message key="submission.scheduledIn">Planerad för publicering i {$issueName}.</message>
+	<message key="submission.scheduling">Planläggning</message>
+	<message key="submission.scheduledIn">Planlagd för publicering i {$issueName}.</message>
 	<message key="submission.scheduledIn.tba">(TBA)</message>
 	<message key="submissions.sec">Sektion</message>
 	<message key="submissions.step1">Steg 1</message>
 	<message key="submissions.step3">Steg 3</message>
 	<message key="submissions.queuedReview">Under granskning</message>
-	<message key="submissions.scheduled">Planerad</message>
+	<message key="submissions.scheduled">Planlagd</message>
 	<message key="submissions.published">Publicerad</message>
 	<message key="submissions.initial">Första</message>
 	<message key="submissions.proofread">Korrekturläsa</message>
