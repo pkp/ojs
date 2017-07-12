@@ -44,6 +44,7 @@ class Application extends PKPApplication {
 			customAutoload($rootPath, $prefix, $class);
 		});
 	}
+
 	/**
 	 * Get the "context depth" of this application, i.e. the number of
 	 * parts of the URL after index.php that represent the context of
