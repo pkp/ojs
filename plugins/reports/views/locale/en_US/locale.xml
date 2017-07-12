@@ -14,10 +14,9 @@
 <locale name="en_US" full_name="U.S. English">
 	<message key="plugins.reports.views.displayName">View Report</message>
 	<message key="plugins.reports.views.description">This plugin implements a CSV report describing readership for each article.</message>
-
-  <message key="plugins.reports.views.articleId">Article ID</message>
-  <message key="plugins.reports.views.articleTitle">Article Title</message>
-  <message key="plugins.reports.views.datePublished">Date Published</message>
-  <message key="plugins.reports.views.abstractViews">Abstract Views</message>
-  <message key="plugins.reports.views.galleyViews">Total Galley Views</message>
+	<message key="plugins.reports.views.articleId">Article ID</message>
+	<message key="plugins.reports.views.articleTitle">Article Title</message>
+	<message key="plugins.reports.views.datePublished">Date Published</message>
+	<message key="plugins.reports.views.abstractViews">Abstract Views</message>
+	<message key="plugins.reports.views.galleyViews">Total Galley Views</message>
 </locale>

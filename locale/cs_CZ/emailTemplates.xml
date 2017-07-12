@@ -7,7 +7,7 @@
   * Copyright (c) 2014-2017 Simon Fraser University
   * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Czech_(cs_CZ)
   * Localized email templates XML file.
   -->
 <email_texts locale="cs_CZ">
@@ -259,7 +259,7 @@ Mohu a jsem ochotný zpracovat recenzi příspěvku &quot;{$submissionTitle}&quo
 Obávám se, že tentokrát nejsem schopen zpracovat recenzi příspěvku &quot;{$submissionTitle}&quot; pro {$contextName}. Děkuji, že jste mě oslovili a neváhejte mě jindy opět kontaktovat.<br />
 <br />
 {$reviewerName}]]></body>
-		<description> Tento email posílá recenzent editorovi sekce v odpovědi na žádost o zpracování recenze, aby mu oznámil, že recenzi nemůže zpracovat.</description>
+		<description>Tento email posílá recenzent editorovi sekce v odpovědi na žádost o zpracování recenze, aby mu oznámil, že recenzi nemůže zpracovat.</description>
 	</email_text>
 	<email_text key="REVIEW_ACK">
 		<subject>Poděkování za zpracování recenze článku</subject>
@@ -344,6 +344,134 @@ Uživatelské jméno: {$participantUsername}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Tento email posílá editor sekce redaktorovi, aby ho požádal o zahájení procesu redigování. Obsahuje informace o příspěvku a jek se k němu dostat.</description>
+	</email_text>
+	<email_text key="COPYEDIT_COMPLETE">
+		<subject>Redigování dokončeno </subject>
+		<body><![CDATA[{$editorialContactName}:<br />
+<br />
+Právě jsme provedli redigování Vašeho příspěvku &quot;{$submissionTitle}&quot; pro {$contextName}. Pro posouzení navrhovaných změn a zodpovězení požadavků na autora postupujte prosím podle následujících kroků:<br />
+<br />
+1. Přes níže uvedenou URL adresu a pomocí vašeho uživatelského jména hesla se přihlaste do časopisu (v případě potřeby použijte odkaz Zapomenuté heslo).<br />
+2. Stáhněte zredigovanou verzi souboru kliknutím na Úvodní redigovaný soubor a otevřete ho.<br />
+3. Projděte redakční zásahy a proveďte změny s použitím funkce sledování změn ve Wordu. Zodpovězte také požadavky na autora.<br />
+4. Uložte soubor na plochu a nahrajte ho do 2. Redigovaná verze autora.<br />
+5. Klikněte na ikonu emailu pod DOKONČIT a pošlete email editorovi.<br />
+<br />
+Toto je poslední příležitost, kterou máte, abyste provedl výraznější změny. Později budete požádán, abyste provedl korekturu sazebnic, ale v tom okamžiku již budete moci opravit pouze drobné typografické a grafické chyby.<br />
+<br />
+URL příspěvku: <a href="{$submissionEditingUrl}">{$submissionEditingUrl}</a><br />
+<br />
+Pokud nyní nemůžete tuto práci provést nebo máte nějaké otázky, kontaktujte mě prosím. Děkujeme za Vaše přispění do tohoto časopisu.<br />
+<br />
+<br />
+{$participantName}]]></body>
+	</email_text>
+	<email_text key="COPYEDIT_ACK">
+		<subject>Poděkování za redigování </subject>
+		<body><![CDATA[{$participantName}:<br />
+<br />
+Děkujeme vám za zredigování příspěvku &quot;{$submissionTitle}&quot; pro {$contextName}. Významně tím pomáháte udržet kvalitu tohoto časopisu.<br />
+<br />
+{$editorialContactSignature}]]></body>
+		<description>Tento email posílá editor sekce redaktorovi příspěvku, aby mu poděkoval za úspěšně dokončený proces redigování článku.</description>
+	</email_text>
+	<email_text key="COPYEDIT_AUTHOR_REQUEST">
+		<subject>Žádost o kontrolu redigování</subject>
+		<body><![CDATA[{$authorName}:<br />
+<br />
+Váš příspěvek &quot;{$submissionTitle}&quot; pro {$contextName} prošel prvním krokem redigování a máte ho přístupný pro kontrolu. Postupujte podle následujících kroků.<br />
+<br />
+1. Klikněte na níže uvedenou URL adresu příspěvku.<br />
+2. Přihlaste se do časopisu a klikněte na Soubor, který se zobrazí v Kroku 1.<br />
+3. Otevřete stažený příspěvek.<br />
+4. Překontrolujte text včetně návrhů redaktora a požadavků na autora.<br />
+5. Proveďte všechny úpravy, které vylepší text<br />
+6. Po dokončení nahrajte soubor do Kroku 2.<br />
+7. klikněte na METADATA a zkontrolujte úplnost a přesnost informací pro indexování.<br />
+8. Pošlete email DOKONČENO editorovi a redaktorovi.<br />
+<br />
+URL příspěvku: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+<br />
+Toto je poslední možnost udělat v příspěvku podstatnější redakční zásahy. Fáze korektur, která následuje po přípravě sazebnic, je omezena na opravy typografických a grafických chyb.<br />
+<br />
+Pokud nyní nemůžete tuto práci provést nebo máte nějaké otázky, kontaktujte mě prosím. Děkujeme za Vaše přispění do tohoto časopisu.<br />
+<br />
+{$editorialContactSignature}]]></body>
+		<description>Tento email posílá editor sekce autorovi příspěvku, aby ho požádal o kontrolu práce redaktora. Obsahuje informace o přístupu k článku a upozorňuje, že toto je poslední příležitost pro autora, aby udělal podstatnější změny.</description>
+	</email_text>
+	<email_text key="COPYEDIT_AUTHOR_COMPLETE">
+		<subject>Dokončena kontrola redigování </subject>
+		<body><![CDATA[{$editorialContactName}:<br />
+<br />
+Právě jsem zkontrolovat zredigovaný příspěvek &quot;{$submissionTitle}&quot; pro {$contextName}. Příspěvek je připraven pro finální kolo redigování a grafické úpravy.<br />
+<br />
+Děkuji za Vaše přispění k mojí práci<br />
+{$authorName}]]></body>
+		<description>Tento email posílá autor editorovi sekce, aby mu oznámil, že dokončil proces redigování.</description>
+	</email_text>
+	<email_text key="COPYEDIT_AUTHOR_ACK">
+		<subject>Poděkování za kontrolu redigování </subject>
+		<body><![CDATA[{$authorName}:<br />
+<br />
+Děkujeme za kontrolu redigování Vašeho příspěvku &quot;{$submissionTitle}&quot; pro {$contextName}. Těšíme se na opublikování této práce.<br />
+<br />
+{$editorialContactSignature}]]></body>
+		<description>Tento email posílá editor sekce autorovi příspěvku, aby mu potvrdil dokončení procesu redigování a poděkoval mu za jeho práci.</description>
+	</email_text>
+	<email_text key="COPYEDIT_FINAL_REQUEST">
+		<subject>Finální kontrola redigování </subject>
+		<body><![CDATA[{$participantName}:<br />
+<br />
+Autor a editor právě dokončili kontrolu redigování příspěvku&quot;{$submissionTitle}&quot; pro {$contextName}. Nyní je třeba připravit &quot;čistou kopii&quot; pro grafické zpracování. K tomu je třeba postupovat podle následujících kroků:<br />
+1. Klikněte na níže uvedenou URL adresu příspěvku.<br />
+2. Přihlaste se do časopisu a klikněte na Soubor, který se zobrazí v Kroku 2.<br />
+3. Otevřete stažený soubor a zapracujte všechny redaktorské úpravy a reakce na požadavky.<br />
+4. Uložte vyčištěný soubor a nahrajte ho do Kroku 3 redigování.<br />
+5. Klikněte na METADATA a zkontrolujte informace pro indexování (uložte případné opravy).<br />
+6. Pošlete email DOKONČENO editorovi.<br />
+<br />
+{$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
+URL příspěvku: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Uživatelské jméno: {$participantUsername}<br />
+<br />
+{$editorialContactSignature}]]></body>
+		<description>Tento email posílá editor sekce redaktorovi a žádá ho, aby provedl finální kolo redigování před tím, než příspěvek vstoupí do fáze grafických úprav.</description>
+	</email_text>
+	<email_text key="COPYEDIT_FINAL_COMPLETE">
+		<subject>Dokončena finální kontrola redigování </subject>
+		<body><![CDATA[{$editorialContactName}:<br />
+<br />
+Právě jsem připravil čistou redigovanou verzi příspěvku &quot;{$submissionTitle}&quot; pro {$contextName}. Je připravena pro grafické úpravy a přípravu sazebnic.<br />
+<br />
+{$participantName}]]></body>
+		<description>Tento email posílá redaktor editorovi sekce, aby mu oznámil, že bylo dokončeno finální kolo redigování, a že nyní může začít fáze grafických úprav.</description>
+	</email_text>
+	<email_text key="COPYEDIT_FINAL_ACK">
+		<subject>Poděkování za finální kontrolu redigování </subject>
+		<body><![CDATA[{$participantName}:<br />
+<br />
+Děkujeme za dokončení redigování příspěvku &quot;{$submissionTitle}&quot; pro {$contextName}. Tato příprava &quot;čisté kopie&quot; pro grafické úpravy je důležitý krok v redakčním procesu.<br />
+<br />
+{$editorialContactSignature}]]></body>
+		<description>Tento email posílá editor sekce redaktorovi, aby mu poděkoval za dokončení finálního kola redigování a ocenil jeho práci.</description>
+	</email_text>
+	<email_text key="LAYOUT_REQUEST">
+		<subject>Žádost o sazebnice</subject>
+		<body><![CDATA[{$participantName}:<br />
+<br />
+Příspěvek &quot;{$submissionTitle}&quot; pro {$contextName} je nyní třeba připravit do sazenicového formátu podle následujících instrukcí.<br />
+1. Klikněte níže na URL příspěvku.<br />
+2. Přihlaste se do časopisu a pro vytvoření sazebnice podle standardů časopisu použijte verzi souboru pro grafické úpravy.<br />
+3. Pošlete editorovi email DOKONČENO.<br />
+<br />
+{$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
+URL příspěvku: <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a><br />
+Uživatelské jméno: {$participantUsername}<br />
+<br />
+Pokud nyní nemůžete tento úkol provést nebo máte nějaké dotazy, kontaktujte mě prosím. Děkujeme za Vaši pomoc našemu časopisu.<br />
+<br />
+{$editorialContactSignature}]]></body>
+		<description>Tento email posílá editor sekce typografovi, aby mu oznámil, že mu byl přidělen úkol provést typografické úpravy příspěvku. Obsahuje informace o příspěvku a přístupu k němu.</description>
 	</email_text>
 	<email_text key="LAYOUT_COMPLETE">
 		<subject>Sazebnice dokončeny </subject>
@@ -594,6 +722,7 @@ Pokud si přejete ukončit odebírání informačních emailů, přejděte pros�
 Vaše heslo pro zakázání informačních emailů je: {$password}<br />
 <br />
 {$principalContactSignature}]]></body>
+		<description>Tento e-mail je odeslán neregistrovanému uživateli, který se právě zaregistroval do mailového seznamu oznámeními.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_ACCEPT">
 		<subject>Rozhodnutí editora</subject>
@@ -721,6 +850,244 @@ Informace o členství (pokud byla uvedena):<br />
 <br />
 Pro zobrazení nebo editaci tohoto předplatného použijte prosím následující URL.<br />
 <br />
-URL předplatného: {$subscriptionUrl}]]></body>
+URL předplatného: <a href="{$subscriptionUrl}">{$subscriptionUrl}</a>]]></body>
+	</email_text>
+	<email_text key="CITATION_EDITOR_AUTHOR_QUERY">
+		<subject>Zpracování citací</subject>
+		<body><![CDATA[Vážený(á) {$authorFirstName},<br />
+<br />
+Můžete, prosím, ověřit, nebo potvrdit správnou citaci pro následující referenci z vašeho článku {$submissionTitle}:<br />
+<br />
+{$rawCitation}<br />
+<br />
+Děkuji!<br />
+<br />
+{$userFirstName}<br />
+Redaktor {$contextName}<br />]]></body>
+		<description>Tento e-mail umožňuje redaktorům vyžádat si další informace o referencích od autorů.</description>
+	</email_text>
+	<email_text key="EDITOR_DECISION_SEND_TO_EXTERNAL">
+		<subject>Rozhodnutí editora</subject>
+		<body><![CDATA[Vážený(á) {$authorName}:<br />
+<br />
+Dosáhli jsme rozhodnutí, které se týká vašeho příspěvku do {$contextName}, &quot;{$submissionTitle}&quot;.<br />
+<br />
+Naše rozhodnutí je: Poslat k recenzi<br />
+<br />
+Webová adresa příspěvku: {$submissionUrl}<br />
+<br />
+{$editorialContactSignature}<br />]]></body>
+		<description>Tento email od editora nebo editora sekce autorovi sděluje, že jejich příspěvek je odesílán k externí recenzi.</description>
+	</email_text>
+	<email_text key="EDITOR_DECISION_SEND_TO_PRODUCTION">
+		<subject>Rozhodnutí editora</subject>
+		<body><![CDATA[{$authorName}:<br />
+<br />
+Editace vašeho příspěvku, &quot;{$submissionTitle},&quot; je hotová.  Posíláme ho nyní do produkční fáze.<br />
+<br />
+Webová adresa příspěvku: {$submissionUrl}<br />
+<br />
+{$editorialContactSignature}<br />]]></body>
+		<description>Tento e-mail od editora nebo editora sekce autorovi oznamuje, že jejich podání je odesláno do produkční fáze.</description>
+	</email_text>
+	<email_text key="GIFT_AVAILABLE">
+		<subject>{$giftNoteTitle}</subject>
+		<body><![CDATA[Vážený(á) {$recipientFirstName},<br />
+<br />
+{$buyerFullName} by vám rád dal dar v časopise {$giftJournalName}:<br />
+<br />
+{$giftDetails}<br />
+<br />
+<br />
+{$giftNote}<br />
+<br />
+<br />
+V následujícím emailu dostanete podrobnosti včetně detailu o loginu včetně pokynů, jak si dar převzít.<br />
+<br />
+Doufáme, že vám dárek udělá radost!<br />
+<br />
+{$giftContactSignature}<br />]]></body>
+		<description>Tento e-mail oznamuje příjemci daru, že byl zakoupen a je k dispozici k vyzvednutí.</description>
+	</email_text>
+	<email_text key="GIFT_USER_LOGIN">
+		<subject>Vyzvednutí dárku: Detaily loginu</subject>
+		<body><![CDATA[Vážený(á) {$recipientFirstName},<br />
+<br />
+{$buyerFullName} by s vámi rád sdílel(a) dárek v rámci časopisu {$giftJournalName}:<br />
+<br />
+{$giftDetails}<br />
+<br />
+<br />
+K vyzvednutí vašeho dárku se, prosím, zalogujte na webových stránkách časopisu <a href="{$giftUrl}">{$giftUrl}</a><br />
+<br />
+Vaše uživatelské jméno je: {$username}<br />
+<br />
+Doufáme, že váš dárek potěší!<br />
+<br />
+{$giftContactSignature}<br />]]></body>
+		<description>Tento e-mail sděluje příjemci daru jeho přihlašovací údaje.</description>
+	</email_text>
+	<email_text key="GIFT_USER_REGISTER">
+		<subject>Vyzvednutí dárku: Detaily loginu</subject>
+		<body><![CDATA[Vážený(á) {$recipientFirstName},<br />
+<br />
+{$buyerFullName} by s vámi rád sdílel dárek v rámci časopisu {$giftJournalName}:<br />
+<br />
+{$giftDetails}<br />
+<br />
+<br />
+K vyzvednutí dárku se, prosím, zalogujte na stránkách časopisu <a href="{$giftUrl}">{$giftUrl}</a><br />
+<br />
+Vaše uživatelské jméno: {$username}<br />
+Vaše heslo: {$password}<br />
+<br />
+Jakmile se zalogujete, můžete kdykoliv změnit heslo.<br />
+<br />
+Doufáme, že vás dárek potěší!<br />
+<br />
+{$giftContactSignature}<br />]]></body>
+		<description>Tento e-mail oznamuje příjemci daru své přihlašovací údaje k novému účtu.</description>
+	</email_text>
+	<email_text key="NOTIFICATION_CENTER_DEFAULT">
+		<subject>Zpráva týkající se {$contextName}</subject>
+		<body>Vložte, prosím, vaši zprávu.</body>
+		<description>Výchozí (prázdná) zpráva použitá v nástroji List Builder Message Center Message Builder.</description>
+	</email_text>
+	<email_text key="REVIEW_REQUEST_ATTACHED_SUBSEQUENT">
+		<subject>Požadavek na recenzi článku</subject>
+		<body><![CDATA[{$reviewerName}:<br />
+<br />
+Tento email se týká rukopisu &quot;{$submissionTitle},&quot; předkládaného autorem {$contextName}.<br />
+<br />
+Na základě recenze předchozí verze rukopisu podali autoři nyní opravenou verzi tohoto článku. Byly bychom rádi, kdybyste nám pomohli tuto revidovanou verzi ohodnotit.<br />
+<br />
+Pokyny pro recenzenty tohoto časopisu jsou připojeny níže, a samotný opravený příspěvek je vložen do tohoto emailu jako příloha. Vaše recenze opraveného příspěvku spolu s vašemi doporučeními by měla být odeslána emailem do {$reviewDueDate}.<br />
+<br />
+Prosíme vás, abyste v odpovědi na tento email uvedl(a) do {$responseDueDate}, zda jste schopen(a) a ochoten(na) udělat tuto recenzi.<br />
+<br />
+Děkujeme předem za vaši ochotu.<br />
+<br />
+{$editorialContactSignature}<br />
+<br />
+<br />
+Pokyny pro recenzenty<br />
+<br />
+{$reviewGuidelines}<br />]]></body>
+		<description><![CDATA[Tento email je zaslán Editorem sekce recenzentovi, aby ho požádal o přijetí nebo odmítnutí opakované recenze příspěvku v druhém či dalším kole recenzního řízení. Zahrnuje příspěvek jako přílohu. Tato zpráva se používá v případě, že je v části Správa> Nastavení> Pracovní postup> Kontrola vybrána možnost Prověřování příloh emailu. (Jinak viz REVIEW_REQUEST_SUBSEQUENT.)]]></description>
+	</email_text>
+	<email_text key="SUBMISSION_ACK_NOT_USER">
+		<subject>Poděkování za příspěvek</subject>
+		<body><![CDATA[Dobrý den,<br />
+<br />
+{$submitterName} nahrál rukopis, &quot;{$submissionTitle}&quot; do časopisu {$contextName}. <br />
+<br />
+Pokud máte nějaké dotazy, kontaktujte mne, prosím. Děkujeme vám za využívání našeho příspěvku pro vaše práce.<br />
+<br />
+{$editorialContactSignature}]]></body>
+		<description>Tento email, je-li povolen, je automaticky odeslán ostatním autorům článku, kteří nejsou uživateli v rámci OJS uvedenými během procesu podání příspěvku.</description>
+	</email_text>
+	<email_text key="REVISED_VERSION_NOTIFY">
+		<subject>Nahrána opravená verze příspěvku</subject>
+		<body><![CDATA[{$editorialContactName}:<br />
+<br />
+Opravená verze příspěvku &quot;{$submissionTitle}&quot; byla nahrána autorem {$authorName}.<br />
+<br />
+Webová adresa příspěvku: {$submissionUrl}<br />
+<br />
+{$editorialContactSignature}]]></body>
+		<description>Tento email je automaticky odeslán příslušnému editorovi článku, pokud autor odešle revidovanou verzi článku.</description>
+	</email_text>
+	<email_text key="REVIEW_REQUEST_SUBSEQUENT">
+		<subject>Požadavek na recenzi článku</subject>
+		<body><![CDATA[{$reviewerName}:<br />
+<br />
+Tento email se týká rukopisu &quot;{$submissionTitle},&quot; podávaného autorem {$contextName}.<br />
+<br />
+Na základě recenzí předchozí verze nahráli autoři opravenou verzi tohoto příspěvku. Byli bychom rádi, kdybyste nám pomohl(a) tuto verzi zkontrolovat.<br />
+<br />
+Zalogujte se, prosím, do {$responseDueDate} a dejte nám vědět, zda jste schopen(a) a ochoten(a) udělat recenzi této opravené verze, na webu máte také dostupný přístup k článku a najdete tam také odkaz k odeslání své recenze a formulář pro vaše doporučení. Webová stránka je <a href="{$contextUrl}">{$contextUrl}</a><br />
+<br />
+Termín na dokončení recenze je  {$reviewDueDate}.<br />
+<br />
+Pokud jste zapomněli svůj login a heslo na stránky časopisu, můžete použít následující odkaz na reset vašeho hesla (které vám poté bude zasláno spolu s loginem). <a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
+<br />
+Adresa příspěvku: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+<br />
+Děkujeme mnohokrát za spolupráci.<br />
+<br />
+{$editorialContactSignature}<br />
+<br />
+&quot;{$submissionTitle}&quot;<br />
+<br />
+{$submissionAbstract}]]></body>
+		<description><![CDATA[Tento email od editora sekce recenzentovi požaduje, aby recenzent přijal nebo odmítl úlohu přezkoumání příspěvku pro druhé nebo další kolo recenzí. Poskytuje informace o podání, jako je název a abstrakt, datum dokončení recenze a přístup k samotnému příspěvku. Tato zpráva se používá v případě, že je v části Správa> Nastavení> Pracovní postup> Kontrola vybrána možnost Standardní kontrola. (Jinak viz REVIEW_REQUEST_ATTACHED_SUBSEQUENT.)]]></description>
+	</email_text>
+	<email_text key="REVIEW_REQUEST_REMIND_AUTO_ONECLICK">
+		<subject>Požadavek na recenzi článku</subject>
+		<body><![CDATA[{$reviewerName}:<br />
+Rádi bychom se vám připomněli s naší prosbou o recenzi příspěvku &quot;{$submissionTitle},&quot; do časopisu {$contextName}. Rádi bychom obdrželi vaši odpověď do {$responseDueDate}. Tento email byl automaticky vygenerován a zaslán vám, s ohledem na to, že termín již uplynul. 
+<br />
+Věříme, že budete dobrým recenzentem tohoto rukopisu. Abstrakt rukopisu je vložen níže. Budeme velmi rádi, pokud se ujmete této důležité úlohy.<br />
+<br />
+Zalogujte se, prosím, na webové stránky časopisu a dejte nám vědět, jestli přijmete pozvání k recenzi. Na stránkách máte přístup jak k oznámení vašeho rozhodnutí o recenzi, ale také tam máte přístup k vlastnímu rukopisu a můžete tam nahrát recenzovanou verzi článku a doporučení recenzenta.<br />
+<br />
+Datum pro dokončení recenze je {$reviewDueDate}.<br />
+<br />
+Webová adresa příspěvku: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+<br />
+Děkujeme mnohokrát za spolupráci.<br />
+<br />
+{$editorialContactSignature}<br />
+<br />
+&quot;{$submissionTitle}&quot;<br />
+<br />
+{$submissionAbstract}]]></body>
+		<description><![CDATA[Tento email je automaticky odeslán, jakmile uplyne datum stanovené pro reakci  recenzenta (viz Možnosti kontroly v sekci Nastavení> Pracovní postup> Kontrola) a je povolen přístup jednoho recenzenta k recenzím. Plánované úlohy musí být povoleny a konfigurovány (viz konfigurační soubor webu).]]></description>
+	</email_text>
+	<email_text key="REVIEW_REQUEST_REMIND_AUTO">
+		<subject>Požadavek na recenzi článku</subject>
+		<body><![CDATA[{$reviewerName}:<br />
+Rádi bychom se vám připomněli s naší prosbou o recenzi rukopisu &quot;{$submissionTitle},&quot; pro časopis {$contextName}. Rádi bychom dostali vaši odpověď do  {$responseDueDate}., Tento email byl vygenerován automaticky, s ohledem na to, že tento termín již uplynul.
+<br />
+Věříme, že byste byl výborný recenzent tohoto rukopisu. Níže najdete abstrakt tohoto příspěvku a doufáme, že se ujmete tohoto důležitého úkolu.<br />
+<br />
+Zalogujte se, prosím, na stránkách časopisu  a dejte nám vědět, zda jste schopen(a) a ochoten(a) udělat recenzi této opravené verze, na webu máte také dostupný přístup k článku a najdete tam také odkaz k odeslání své recenze a formulář pro vaše doporučení. Webová stránka je <a href="{$contextUrl}">{$contextUrl}</a><br /><br />
+Termín pro odevzdání samotné recenze je {$reviewDueDate}.<br />
+<br />
+Pokud jste zapomněli svůj login a heslo na stránky časopisu, můžete použít následující odkaz na reset vašeho hesla (které vám poté bude zasláno spolu s loginem). <a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
+<br />
+Webová adresa příspěvku: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+<br />
+Děkujeme vám mnohokrát za spolupráci.<br />
+<br />
+{$editorialContactSignature}<br />
+<br />
+&quot;{$submissionTitle}&quot;<br />
+<br />
+{$submissionAbstract}]]></body>
+		<description><![CDATA[Tento email se automaticky odesílá, jakmile uplyne datum splatnosti potvrzení recenzenta (viz Možnosti kontroly v sekci Nastavení> Pracovní postup> Kontrola) a přístup k recenznímu kontrole je zakázán. Plánované úlohy musí být povoleny a konfigurovány (viz konfigurační soubor webu).]]></description>
+	</email_text>
+	<email_text key="REVIEW_REQUEST_ONECLICK_SUBSEQUENT">
+		<subject>Požadavek na recenzi článku</subject>
+		<body><![CDATA[{$reviewerName}:<br />
+<br />
+Tento email se týká rukopisu &quot;{$submissionTitle},&quot; podávaného autorem {$contextName}.<br />
+<br />
+Na základě recenzí předchozí verze nahráli autoři opravenou verzi tohoto příspěvku. Byli bychom rádi, kdybyste nám pomohl(a) tuto verzi zkontrolovat.<br />
+<br />
+Zalogujte se, prosím do  {$responseDueDate} na stránky našeho časopisu a dejte nám vědět zda jste schopen(a) a ochoten(a) udělat pro nás recenzi. Na webu najdete také přístup k vlastnímu příspěvku a můžete tam nahrát obsah recenze a doporučení autorovi.<br />
+<br />
+Samotná recenze by měla být odevzdána do {$reviewDueDate}.<br />
+<br />
+Webová adresa příspěvku: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+<br />
+Děkujeme mnohokrát za spolupráci.<br />
+<br />
+{$editorialContactSignature}<br />
+<br />
+&quot;{$submissionTitle}&quot;<br />
+<br />
+{$submissionAbstract}]]></body>
+		<description><![CDATA[Tento e-mail od editoru sekce k recenzentovi požaduje, aby recenzent přijal nebo odmítl úlohu přezkoumání příspěvku pro druhé nebo větší kolo recenzí. Poskytuje informace o podání, jako je název a abstrakt, datum splatnosti kontroly a přístup k samotnému podání. Tato zpráva se používá v případě, že je ve Správci> Nastavení> Pracovní postup> Kontrola vybrán proces Standardní kontrola a je povolen přístup jednoho recenzenta k recenzím.]]></description>
 	</email_text>
 </email_texts>
