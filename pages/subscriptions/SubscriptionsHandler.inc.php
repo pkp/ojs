@@ -143,6 +143,22 @@ class SubscriptionsHandler extends Handler {
 		return new JSONMessage(true, $subscriptionPolicyForm->fetch($request));
 	}
 
+	/**
+	 * Display a list of payments for the current journal.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
+	function payments($args, $request) {
+		$templateMgr = TemplateManager::getManager($request);
+		$dispatcher = $request->getDispatcher();
+		return $templateMgr->fetchAjax(
+			'paymentsGridContainer',
+			$dispatcher->url(
+				$request, ROUTE_COMPONENT, null,
+				'grid.subscriptions.PaymentsGridHandler', 'fetchGrid'
+			)
+		);
+	}
 	// ----------------------- 8< CRUFT LINE ------------------------------------
 
 	/**
