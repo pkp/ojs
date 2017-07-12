@@ -456,7 +456,7 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 	 * Check if the issue already exists.
 	 * @param $node DOMNode issue node
 	 * return Issue|null matching issue, or null if no match
-	**/
+	 */
 	function _issueExists($node) {
 		$deployment = $this->getDeployment();
 		$context = $deployment->getContext();
@@ -465,7 +465,7 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 		foreach ($node->getElementsByTagName('issue_identification') as $n) {
 			$searchIssue = $issueDao->newDataObject();
 			$this->parseIssueIdentification($n, $searchIssue, false);
-			$foundIssues = $issueDao->getIssuesByIdentification($context->getId(), $searchIssue->getVolume(), $searchIssue->getNumber(), $searchIssue->getYear(), $searchIssue->getTitle(null));
+			$foundIssues = $issueDao->getIssuesByIdentification($context->getId(), $searchIssue->getVolume(), $searchIssue->getNumber(), $searchIssue->getYear(), (array) $searchIssue->getTitle(null));
 			foreach ($foundIssues->toArray() as $issue) {
 				$deployment->addWarning(ASSOC_TYPE_ISSUE, $issue->getId(), __('plugins.importexport.native.import.error.issueIdentificationDuplicate', array('issueId' => $issue->getId(), 'issueIdentification' => $n->ownerDocument->saveXML($n))));
 			}
