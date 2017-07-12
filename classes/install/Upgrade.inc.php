@@ -683,7 +683,6 @@ class Upgrade extends Installer {
 			'email_templates',
 			'email_templates_data',
 			'controlled_vocabs',
-			'gifts',
 			'event_log',
 			'email_log',
 			'metadata_descriptions',

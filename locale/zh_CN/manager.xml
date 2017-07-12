@@ -350,7 +350,6 @@
 	<message key="manager.subscriptionPolicies.subscriptionContact">订阅管理员</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactDescription">这份联系信息会列在「期刊介绍」的「订阅」下面。</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactEmailValid">请输入一个有效的电子邮件地址</message>
-	<message key="manager.subscriptionPolicies.subscriptionPoliciesSaved">您的订阅方针配置已经被更新</message>
 	<message key="manager.subscriptions">订阅</message>
 	<message key="manager.subscriptions.confirmDelete">您确定您要删除掉这个订户？</message>
 	<message key="manager.subscriptions.create">建立新的订户</message>
@@ -465,9 +464,6 @@
 	<message key="manager.subscriptionTypes.noneCreated">没有建立任何的订阅类型。</message>
 	<message key="manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully">成功建立订阅类型</message>
 	<message key="manager.language.submissions">投稿</message>
-	<message key="manager.payment.giftFees">礼品费用</message>
-	<message key="manager.payment.giftFeesDescription">在“有关期刊”中的订购页面上会出现一条礼品订购的链接。这同时也是订购边栏块的一部分。</message>
-	<message key="manager.payment.options.acceptGiftSubscriptionPayments">这将激活对礼品订购的款项支付，允许读者为其他读者购买礼品订购服务。</message>
 	<message key="manager.payment.options.purchaseIssueFee">购买事项</message>
 	<message key="manager.sections.confirmDelete">您确定要永久删除该栏目吗？</message>
 	<message key="manager.sections.alertDelete">在该栏目能够被删除之前，您必须将栏目中已经出版过的文章移动到另一个栏目中。</message>

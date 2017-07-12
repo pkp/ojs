@@ -2,20 +2,15 @@
  * plugins/paymethod/paypal/templates/settingsForm.tpl
  *
  * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2006-2009 Gunther Eysenbach, Juan Pablo Alperin, MJ Suhonos
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * Form for PayPal settings.
+ * Form for paypal payment settings.
  *}
 
-{fbvFormSection label="plugins.paymethod.paypal.settings.paypalurl" for="paypalurl" description="plugins.paymethod.paypal.settings.paypalurl.description"}
-	{fbvElement required="true" type="text" name="paypalurl" id="paypalurl" value=$paypalurl}
+{fbvFormSection title="plugins.paymethod.paypal.settings"}
+	{fbvElement type="text" name="accountName" id="accountName" value=$accountName label="plugins.paymethod.paypal.settings.accountName"}
 {/fbvFormSection}
-{fbvFormSection label="plugins.paymethod.paypal.settings.selleraccount" for="selleraccount" description="plugins.paymethod.paypal.settings.selleraccount.description"}
-	{fbvElement required="true" type="text" name="selleraccount" id="selleraccount" value=$selleraccount}
+{fbvFormSection for="testMode" list=true}
+	{fbvElement type="checkbox" name="testMode" id="testMode" checked=$testMode label="plugins.paymethod.paypal.settings.testMode" inline=true}
 {/fbvFormSection}
-{if !$isCurlInstalled}
-	{fbvFormSection}
-		{translate key="plugins.paymethod.paypal.settings.curlNotInstalled"}
-	{/fbvFormSection}
-{/if}

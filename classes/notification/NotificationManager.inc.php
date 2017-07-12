@@ -56,18 +56,6 @@ class NotificationManager extends PKPNotificationManager {
 		switch ($notification->getType()) {
 			case NOTIFICATION_TYPE_PUBLISHED_ISSUE:
 				return __('notification.type.issuePublished');
-			case NOTIFICATION_TYPE_GIFT_REDEEM_STATUS_SUCCESS:
-				return __('gifts.giftRedeemed');
-			case NOTIFICATION_TYPE_GIFT_REDEEM_STATUS_ERROR_NO_GIFT_TO_REDEEM:
-				return __('gifts.noGiftToRedeem');
-			case NOTIFICATION_TYPE_GIFT_REDEEM_STATUS_ERROR_GIFT_ALREADY_REDEEMED:
-				return __('gifts.giftAlreadyRedeemed');
-			case NOTIFICATION_TYPE_GIFT_REDEEM_STATUS_ERROR_GIFT_INVALID:
-				return __('gifts.giftNotValid');
-			case NOTIFICATION_TYPE_GIFT_REDEEM_STATUS_ERROR_SUBSCRIPTION_TYPE_INVALID:
-				return __('gifts.subscriptionTypeNotValid');
-			case NOTIFICATION_TYPE_GIFT_REDEEM_STATUS_ERROR_SUBSCRIPTION_NON_EXPIRING:
-				return __('gifts.subscriptionNonExpiring');
 			case NOTIFICATION_TYPE_BOOK_REQUESTED:
 				return __('plugins.generic.booksForReview.notification.bookRequested');
 			case NOTIFICATION_TYPE_BOOK_CREATED:
@@ -124,14 +112,7 @@ class NotificationManager extends PKPNotificationManager {
 			case NOTIFICATION_TYPE_BOOK_AUTHOR_ASSIGNED:
 			case NOTIFICATION_TYPE_BOOK_AUTHOR_DENIED:
 			case NOTIFICATION_TYPE_BOOK_AUTHOR_REMOVED:
-			case NOTIFICATION_TYPE_GIFT_REDEEM_STATUS_SUCCESS:
 					return 'notifySuccess';
-			case NOTIFICATION_TYPE_GIFT_REDEEM_STATUS_ERROR_NO_GIFT_TO_REDEEM:
-			case NOTIFICATION_TYPE_GIFT_REDEEM_STATUS_ERROR_GIFT_ALREADY_REDEEMED:
-			case NOTIFICATION_TYPE_GIFT_REDEEM_STATUS_ERROR_GIFT_INVALID:
-			case NOTIFICATION_TYPE_GIFT_REDEEM_STATUS_ERROR_SUBSCRIPTION_TYPE_INVALID:
-			case NOTIFICATION_TYPE_GIFT_REDEEM_STATUS_ERROR_SUBSCRIPTION_NON_EXPIRING:
-					return 'notifyError';
 			default: return parent::getStyleClass($notification);
 		}
 	}
@@ -157,14 +138,7 @@ class NotificationManager extends PKPNotificationManager {
 			case NOTIFICATION_TYPE_BOOK_AUTHOR_ASSIGNED:
 			case NOTIFICATION_TYPE_BOOK_AUTHOR_DENIED:
 			case NOTIFICATION_TYPE_BOOK_AUTHOR_REMOVED:
-			case NOTIFICATION_TYPE_GIFT_REDEEM_STATUS_SUCCESS:
 				return 'notifyIconSuccess';
-			case NOTIFICATION_TYPE_GIFT_REDEEM_STATUS_ERROR_NO_GIFT_TO_REDEEM:
-			case NOTIFICATION_TYPE_GIFT_REDEEM_STATUS_ERROR_GIFT_ALREADY_REDEEMED:
-			case NOTIFICATION_TYPE_GIFT_REDEEM_STATUS_ERROR_GIFT_INVALID:
-			case NOTIFICATION_TYPE_GIFT_REDEEM_STATUS_ERROR_SUBSCRIPTION_TYPE_INVALID:
-			case NOTIFICATION_TYPE_GIFT_REDEEM_STATUS_ERROR_SUBSCRIPTION_NON_EXPIRING:
-				return 'notifyIconError';
 			default: return parent::getIconClass($notification);
 		}
 	}

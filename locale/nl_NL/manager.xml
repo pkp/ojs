@@ -345,7 +345,6 @@
 	<message key="manager.subscriptionPolicies.subscriptionContact">Abonnementenbeheerder</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactDescription">De contactpersoon die genoemd wordt onder Abonnementen bij Over dit tijdschrift.</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactEmailValid">Geef een geldig e-mailadres op.</message>
-	<message key="manager.subscriptionPolicies.subscriptionPoliciesSaved">De instellingen voor abonnementenbeleid zijn bijgewerkt.</message>
 	<message key="manager.subscriptions">Abonnementen</message>
 	<message key="manager.subscriptions.confirmDelete">Weet u zeker dat u dit abonnement wilt verwijderen?</message>
 	<message key="manager.subscriptions.create">Nieuw abonnement aanmaken</message>
@@ -487,11 +486,8 @@
 	<message key="manager.setup.categories">Categorieën</message>
 	<message key="manager.setup.journalThumbnail">Miniatuur voor het tijdschrift</message>
 	<message key="manager.setup.useThumbnail">Miniatuur</message>
-	<message key="manager.payment.giftFeesDescription">Een 'schenk abonnement' link zal getoond worden op de Abonnementen pagina in 'Over dit tijdschrift'  en bij de abonnementen-blok in de sidebarS</message>
-	<message key="manager.payment.options.acceptGiftSubscriptionPayments">Dit activeert betalingen voor het schenken van abonnementen, waarmee lezers abonnementen kunne kopen om aan andere lezers te schenken.</message>
 	<message key="manager.sections.alertDelete">Voordat u deze sectie kunt verwijderen, moet u de erin gepubliceerde artikelen verplaatsen naar andere secties.</message>
 	<message key="manager.setup.categories.description">Kies de meest toepasselijke categorieën uit de hierboven getoonde set. Lezers kunnen op categorie door de tijdschriften bladeren.</message>
-	<message key="manager.payment.giftFees">Gift kosten</message>
 
 	<message key="manager.setup.resetPermissions">Artikel-toestemmingen terugzetten</message>
 	<message key="manager.setup.resetPermissions.description">Het copyright statement en de licentie-informatie zullen permanent gekoppeld zijn aan de gepubliceerde inhoud, wat garandeert dat deze informatie niet wijzigt als het tijdschrift zijn beleid voor nieuwe inzendingen zou wijzigen. Klik op de knop hieronder om de reeds opgeslagen toestemmingen te terug te zetten</message>

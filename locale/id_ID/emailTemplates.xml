@@ -784,67 +784,6 @@ Copy-Editor, {$contextName}<br />
 ]]></body>
 		<description>Email ini memungkinkan copyeditor untuk meminta informasi tambahan tentang rujukan dari penulis.</description>
 	</email_text>
-	<email_text key="GIFT_AVAILABLE">
-		<subject>{$giftNoteTitle}</subject>
-		<body><![CDATA[Yang terhormat {$recipientFirstName},<br />
-<br />
-{$buyerFullName} memberikan hadiah untuk Anda di {$giftJournalName}:<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-{$giftNote}<br />
-<br />
-<br />
-Anda akan menerima email lanjutan yang memuat rincian login dan petunjuk untuk menukarkan hadiah Anda.<br />
-<br />
-Selamat menggunakan hadiah Anda!<br />
-<br />
-{$giftContactSignature}<br />
-]]></body>
-		<description>Email ini memberitahu seorang penerima hadiah bahwa sebuah hadiah telah dibeli dan dapat ditukarkan.</description>
-	</email_text>
-	<email_text key="GIFT_USER_REGISTER">
-		<subject>Tukarkan Hadiah Anda: Rincian Login</subject>
-		<body><![CDATA[Yang terhormat {$recipientFirstName},<br />
-<br />
-{$buyerFullName} memberikan hadiah untuk Anda di {$giftJournalName}:<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-Untuk menukarkan hadiah Anda, silakan login ke website jurnal di {$giftUrl}<br />
-<br />
-Nama pengguna Anda: {$username}<br />
-Sandi Anda: {$password}<br />
-<br />
-Setelah login, Anda dapat mengganti sandi Anda kapanpun Anda kehendaki.<br />
-<br />
-Selamat menggunakan hadiah Anda!<br />
-<br />
-{$giftContactSignature}<br />
-]]></body>
-		<description>Email ini memberitahu seorang penerima hadiah tentang rincian login untuk akun barunya.</description>
-	</email_text>
-	<email_text key="GIFT_USER_LOGIN">
-		<subject>Tukarkan Hadiah Anda: Rincian Login</subject>
-		<body><![CDATA[Yang terhormat {$recipientFirstName},<br />
-<br />
-{$buyerFullName} memberikan hadiah untuk Anda di {$giftJournalName}:<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-Untuk menukarkan hadiah Anda, silakan login ke website jurnal di {$giftUrl}<br />
-<br />
-Nama pengguna Anda: {$username}<br />
-<br />
-Selamat menggunakan hadiah Anda!<br />
-<br />
-{$giftContactSignature}<br />
-]]></body>
-		<description>Email ini memberitahu seorang penerima hadiah tentang rincian loginnya.</description>
-	</email_text>
 	<email_text key="REVISED_VERSION_NOTIFY">
 		<subject>Versi Revisi telah Diunggah</subject>
 		<body><![CDATA[{$editorialContactName}:<br />

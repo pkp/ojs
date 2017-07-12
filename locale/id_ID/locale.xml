@@ -828,41 +828,6 @@ Aktif berarti berapa jumlah review yang sedang dipertimbangkan atau sedang berla
 	<message key="donations.thankYou">Terima Kasih</message>
 	<message key="donations.thankYouMessage">Terima kasih untuk kontribusi Anda. Kontribusi Anda sangat kami hargai.</message>
 
-	<!-- Gifts -->
-	<message key="gifts.buyer">Dari</message>
-	<message key="gifts.buyerDescription">Dari siapa hadiah ini?</message>
-	<message key="gifts.recipient">Untuk</message>
-	<message key="gifts.recipientDescription">Untuk siapa hadiah ini?</message>
-	<message key="gifts.thankYou">Terima Kasih</message>
-	<message key="gifts.thankYouMessage">Pembelian hadiah Anda telah selesai. Anda akan menerima salinan email hadiah yang dikirimkan ke penerima hadiah saat pembayaran Anda selesai diproses.</message>
-	<message key="gifts.purchaseGiftIndividualSubscription">Hadiah Langganan</message>
-	<message key="gifts.subscriptionFormIntroduction">Mohon isi form berikut. Kontak yang dituliskan, bersama dengan pesan Anda, akan digunakan untuk mengirim email ke penerima dan memberitahu mereka tentang pendaftaran hadiah mereka (Anda juga akan memperoleh salinan email tersebut).</message>
-	<message key="gifts.details">Rincian Hadiah</message>
-	<message key="gifts.detailsDescription">Mohon pilih hadiah berikut dan tuliskan pesan Anda untuk diemailkan ke penerima (Anda akan menerima salinan email tersebut).</message>
-	<message key="gifts.gift">Hadiah</message>
-	<message key="gifts.noteTitle">Judul</message>
-	<message key="gifts.note">Pesan</message>
-	<message key="gifts.noteTitleRequired">Mohon berikan judul untuk pesan Anda.</message>
-	<message key="gifts.noteRequired">Mohon tuliskan pesan Anda.</message>
-	<message key="gifts.localeRequired">Pilih bahasa untuk pesan Anda.</message>
-	<message key="gifts.myGifts">Hadiah Saya</message>
-	<message key="gifts.manageMyGifts">Kelola Hadiah Saya</message>
-	<message key="gifts.redeemGift">Ambil Hadiah</message>
-	<message key="gifts.status.notRedeemed">Tersedia</message>
-	<message key="gifts.status.redeemed">Sudah Diambil</message>
-	<message key="gifts.status.redeemGift">Ambil Hadiah</message>
-	<message key="gifts.subscriptions">Langganan</message>
-	<message key="gifts.subscriptionsDescription">Hadiah langganan yang diambil akan menggantikan langganan Anda sebelumnya (bila ada). Subscriptions will begin on the redemption date and will be valid for the duration of the subscription type.</message>
-	<message key="gifts.purchaseGiftSubscription">Berikan hadiah langganan</message>
-	<message key="gifts.giftSubscriptionsAvailable">Hadiah langganan juga tersedia. Hadiah langganan dapat diambil kapan saja oleh penerima dan merupakan cara yang baik untuk mendukung jurnal ini.</message>
-	<message key="gifts.noSubscriptions">Tidak ada hadiah langganan</message>
-	<message key="gifts.giftRedeemed">Hadiah telah berhasil diambil.</message>
-	<message key="gifts.noGiftToRedeem">Hadiah ini tidak dapat diambil.</message>
-	<message key="gifts.giftAlreadyRedeemed">Hadiah ini telah diambil.</message>
-	<message key="gifts.giftNotValid">Hadiah ini tidak valid dan tidak dapat diambil.</message>
-	<message key="gifts.subscriptionTypeNotValid">Jenis langganan di hadiah ini tidak valid. Mohon hubungi manajer langganan.</message>
-	<message key="gifts.subscriptionNonExpiring">Hadiah tidak diberikan karena Anda telah memiliki langganan abadi di jurnal ini.</message>
-
 	<!-- Payments -->
 	<message key="payment.loginRequired">Anda harus login untuk melakukan pembayaran.</message>
 	<message key="payment.loginRequired.forArticle">Langganan atau pembelian artikel dibutuhkan untuk mengakses judul ini. Untuk verifikasi langganan, akses pembelian sebelumnya, atau untuk membeli artikel, silakan login ke jurnal.</message>
@@ -885,8 +850,6 @@ Aktif berarti berapa jumlah review yang sedang dipertimbangkan atau sedang berla
 	<message key="payment.type.purchaseIssue">Biaya Pembelian Terbitan</message>
 	<message key="payment.type.subscription">Biaya Langganan</message>
 	<message key="payment.type.donation">Donasi</message>
-	<message key="payment.type.gift">Hadiah</message>
-	<message key="payment.type.gift.subscription">Langganan</message>
 
 	<message key="payment.donation.makeDonation">Berikan donasi</message>
 

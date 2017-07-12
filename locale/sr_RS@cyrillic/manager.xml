@@ -21,9 +21,6 @@
 	<message key="manager.setup.useThumbnail">Мала слика</message>
 	<message key="manager.statistics.reports.today">Данас</message>
 	<message key="manager.setup.categories">Категорије</message>
-	<message key="manager.payment.giftFees">Цене поклона</message>
-	<message key="manager.payment.giftFeesDescription">Веза на поклоњену претплату ће се појавити на страни за претплату у делу О часопису у делу бочног блока за претплате.</message>
-	<message key="manager.payment.options.acceptGiftSubscriptionPayments">Ово ће активирати плаћања за поклоњене претплате омогућавајући читаоцима да купе поклон претплате и поклоне их другим читаоцима.</message>
 	<message key="manager.sections.alertDelete">Пре него што обришете ову рубрику морате чланке претходно објављене у њој преместити у другу рубрику.</message>
 	<message key="manager.setup.resetPermissions.description">Изјава о ауторским правима и информација о лиценци ће бити трајно прикључене уз објављени садржај тако да се та информација неће променити у случају да часопис промени своју политику током нових подношења чланака. Ако желите вратити на почетно стање сачуване дозволе прикључене уз објављени садржај притисните доње дугме.</message>
 	<message key="manager.setup.copyrightYearBasis">Постави годину ауторских права чланка на</message>
@@ -505,7 +502,6 @@
 	<message key="manager.subscriptionPolicies.subscriptionContact">Управник за претплату</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactDescription">Контакт наведен у Претплате у страни О часопису</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactEmailValid">Унесите исправну имејл адресу.</message>
-	<message key="manager.subscriptionPolicies.subscriptionPoliciesSaved">Ваша подешавања за претплате су сачуване.</message>
 	<message key="manager.subscriptions">Претплате</message>
 	<message key="manager.setup.reviewPolicy">Политика рецензије</message>
 	<message key="manager.setup.searchEngineIndexing">Иидексирање претраживачима</message>

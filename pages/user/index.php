@@ -37,8 +37,6 @@ switch ($op) {
 	// Misc.
 	//
 	case 'index':
-	case 'gifts':
-	case 'redeemGift':
 	case 'subscriptions':
 	case 'setLocale':
 	case 'authorizationDenied':

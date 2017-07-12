@@ -348,7 +348,6 @@ Exemplo:
 	<message key="manager.subscriptionPolicies.subscriptionContact">Gerente de assinaturas</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactDescription">O contato a seguir será exibido em Assinaturas, na página Sobre a revista.</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactEmailValid">Informe um e-mail válido.</message>
-	<message key="manager.subscriptionPolicies.subscriptionPoliciesSaved">As configurações da política da assinatura foram atualizadas.</message>
 	<message key="manager.subscriptions">Assinaturas</message>
 	<message key="manager.subscriptions.confirmDelete">Deseja realmente excluir esta assinatura?</message>
 	<message key="manager.subscriptions.create">Incluir assinatura</message>
@@ -485,9 +484,6 @@ Exemplo:
 	<message key="manager.subscriptionTypes.form.individual">Individual (usuários validados via login)</message>
 	<message key="manager.subscriptionTypes.form.options">Opções</message>
 	<message key="manager.language.submissions">Submissões</message>
-	<message key="manager.payment.giftFees">Taxas de presentes</message>
-	<message key="manager.payment.giftFeesDescription">Um link para as assinaturas de presente aparecerá na página Assinaturas, em Sobre a revista e como parte do bloco lateral de assinaturas.</message>
-	<message key="manager.payment.options.acceptGiftSubscriptionPayments">Isto ativará pagamentos para assinaturas de presente, permitindo aos leitores presentearem outros leitores com assinaturas desta publicação.</message>
 	<message key="manager.payment.options.purchaseIssueFee">Adquirir edição</message>
 	<message key="manager.sections.confirmDelete">Deseja realmente exluir permanentemente esta seção?</message>
 	<message key="manager.sections.alertDelete">Antes de pode excluir esta seção, é necessário mover os artigos publicados nela para outras seções.</message>

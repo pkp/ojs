@@ -1037,47 +1037,12 @@
 		</ul>
 	</li>
 </ol>]]></message>
-	<message key="gifts.buyer">Від</message>
-	<message key="gifts.buyerDescription">Від кого цей подарунок?</message>
-	<message key="gifts.recipient">Для</message>
-	<message key="gifts.recipientDescription">Для кого цей подарунок?</message>
-	<message key="gifts.thankYou">Дякую</message>
-	<message key="gifts.thankYouMessage">Процес купівлі подарунку завершений. Коли Ваш платіж буде оброблений, Ви отримаєте копію листа з подарунком, надіслану адресату.</message>
-	<message key="gifts.gift">Подарунок</message>
-	<message key="gifts.myGifts">Мої подарунки</message>
-	<message key="gifts.manageMyGifts">Керувати моїми подарунками</message>
-	<message key="gifts.subscriptions">Передплати</message>
-	<message key="payment.type.gift">Подарунок</message>
-	<message key="payment.type.gift.subscription">Передплата</message>
 	<message key="site.upgradeAvailable.admin"><![CDATA[Доступна нова версія OJS! Зараз Ви використовуєте OJS {$currentVersion}. Найновіша версія OJS {$latestVersion}. Будь ласка, завітайте на <a href="http://pkp.sfu.ca/ojs_download" target="_new">цю сторінку</a>, щоб завантажити найновішу версію системи та знайти інструкції щодо оновлення.]]></message>
 	<message key="site.upgradeAvailable.manager"><![CDATA[Доступна нова версія OJS! Зараз Ви використовуєте OJS {$currentVersion}. Найновіша версія OJS {$latestVersion}. Будь ласка, контактуйте з адміністратором сайту ({$siteAdminName}, <a href="mailto:{$siteAdminEmail}">{$siteAdminEmail}</a>), щоб повідомити йому про це важливе оновлення. Більше інформації можна знайти <a href="http://pkp.sfu.ca/ojs_download" target="_new">тут</a>.]]></message>
 	<message key="navigation.categories.browse">Переглянути</message>
 	<message key="issue.fullIssue">Весь випуск</message>
 	<message key="issue.nonpdf.title">Завантаження випуску</message>
 	<message key="site.noJournals">Немає доступних журналів.</message>
-	<message key="gifts.purchaseGiftIndividualSubscription">Подарункова передплата</message>
-	<message key="gifts.subscriptionFormIntroduction">Будь ласка, заповніть форму нижче. Надана контактна інформація та Ваша супровідна записка до подарунку будуть включені до листа отримувачу та інформування його про нову подарункову передплату (Ви також отримаєте копію цього листа).</message>
-	<message key="gifts.details">Інформація про подарунок</message>
-	<message key="gifts.detailsDescription">Будь ласка, оберіть один з подарунків нижче та напишіть особисте повідомлення, яке буде відправлено отримувачу (Ви також отримаєте копію цього листа).</message>
-	<message key="gifts.noteTitle">Заголовок</message>
-	<message key="gifts.note">Супровідна записка до подарунку</message>
-	<message key="gifts.noteTitleRequired">Будь ласка, вкажіть заголовок своєї супровідної записки.</message>
-	<message key="gifts.noteRequired">Будь ласка, напишіть особисте повідомлення.</message>
-	<message key="gifts.localeRequired">Будь ласка, оберіть мову Вашого особистого повідомлення.</message>
-	<message key="gifts.redeemGift">Активувати подарунок</message>
-	<message key="gifts.status.notRedeemed">Доступний</message>
-	<message key="gifts.status.redeemed">Активований</message>
-	<message key="gifts.status.redeemGift">Активувати подарунок</message>
-	<message key="gifts.subscriptionsDescription">Ваша поточна передплата (якщо така є) буде замінена активованою тут подарунковою передплатою. Передплата розпочнеться з дня активації і буде активною протягом стандартного терміну передплати відповідного типу.</message>
-	<message key="gifts.purchaseGiftSubscription">Купити подарункову передплату</message>
-	<message key="gifts.giftSubscriptionsAvailable">Також доступні подарункові передплати. Подарункові передплати можуть бути активовані у будь-який час. Купівля передплати у подарунок - це чудовий спосіб підтримати цей журнал.</message>
-	<message key="gifts.noSubscriptions">Немає подарункових передплат</message>
-	<message key="gifts.giftRedeemed">Подарунок був успішно активований.</message>
-	<message key="gifts.noGiftToRedeem">Цей подарунок не доступний для активації.</message>
-	<message key="gifts.giftAlreadyRedeemed">Цей подарунок вже був активований.</message>
-	<message key="gifts.giftNotValid">Цей подарунок недійсний, він не може бути активований.</message>
-	<message key="gifts.subscriptionTypeNotValid">Тип передплати для цього подарунку недійсний. Будь ласка, контактуйте з менеджером передплати.</message>
-	<message key="gifts.subscriptionNonExpiring">Подарунок не був активований, оскільки Ви вже маєте безстрокову передплату на цей журнал.</message>
 	<message key="payment.loginRequired.forIssue">Для доступу до цієї статті необхідно мати передплату або купити випуск. Для того, щоб підтвердити передплату, отримати доступ до куплених випусків або купити випуск, будь ласка, увійдіть на сайт журналу.</message>
 	<message key="payment.type.purchaseIssue">Плата за купівлю випуску</message>
 	<message key="installer.allowFileUploads"><![CDATA[Ваш сервер зараз дозволяє вивантаження файлів: <strong>{$allowFileUploads}</strong>]]></message>

@@ -27,7 +27,6 @@ define('PAYMENT_TYPE_FASTTRACK',		0x000000006);
 define('PAYMENT_TYPE_PUBLICATION',		0x000000007);
 define('PAYMENT_TYPE_PURCHASE_SUBSCRIPTION',	0x000000008);
 define('PAYMENT_TYPE_PURCHASE_ISSUE',		0x000000009);
-define('PAYMENT_TYPE_GIFT',			0x000000010);
 
 class OJSPaymentManager extends PaymentManager {
 	/**
@@ -93,9 +92,6 @@ class OJSPaymentManager extends PaymentManager {
 				} else {
 					$payment->setRequestUrl($dispatcher->url($this->request, ROUTE_PAGE, null, 'author'));
 				}
-				break;
-			case PAYMENT_TYPE_GIFT:
-				$payment->setRequestUrl($dispatcher->url($this->request, ROUTE_PAGE, null, 'gifts', 'thankYou'));
 				break;
 			default:
 				// Invalid payment type
@@ -208,23 +204,6 @@ class OJSPaymentManager extends PaymentManager {
 	}
 
 	/**
-	 * Determine whether gift payments are enabled.
-	 * @return boolean true iff this fee is enabled.
-	 */
-	function acceptGiftPayments() {
-		return $this->acceptGiftSubscriptionPayments();
-	}
-
-	/**
-	 * Determine whether gift subscription payments are enabled.
-	 * @return boolean true iff this fee is enabled.
-	 */
-	function acceptGiftSubscriptionPayments() {
-		$journal = $this->request->getJournal();
-		return $this->isConfigured() && $journal->getSetting('acceptGiftSubscriptionPayments');
-	}
-
-	/**
 	 * Get the payment plugin.
 	 * @return PaymentPlugin
 	 */
@@ -260,15 +239,14 @@ class OJSPaymentManager extends PaymentManager {
 				$institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
 				$individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
 				if ($institutionalSubscriptionDao->subscriptionExists($subscriptionId)) {
-					$subscription =& $institutionalSubscriptionDao->getSubscription($subscriptionId);
+					$subscription = $institutionalSubscriptionDao->getById($subscriptionId);
 					$institutional = true;
 				} else {
-					$subscription =& $individualSubscriptionDao->getSubscription($subscriptionId);
+					$subscription = $individualSubscriptionDao->getById($subscriptionId);
 					$institutional = false;
 				}
 				if (!$subscription || $subscription->getUserId() != $queuedPayment->getUserId() || $subscription->getJournalId() != $queuedPayment->getJournalId()) {
-					// FIXME: Is this supposed to be here?
-					error_log(print_r($subscription, true));
+					fatalError('Subscription integrity checks fail!');
 					return false;
 				}
 				// Update subscription end date now that payment is completed
@@ -277,7 +255,7 @@ class OJSPaymentManager extends PaymentManager {
 					import('classes.subscription.InstitutionalSubscription');
 					$subscription->setStatus(SUBSCRIPTION_STATUS_NEEDS_APPROVAL);
 					if ($subscription->isNonExpiring()) {
-						$institutionalSubscriptionDao->updateSubscription($subscription);
+						$institutionalSubscriptionDao->updateObject($subscription);
 					} else {
 						$institutionalSubscriptionDao->renewSubscription($subscription);
 					}
@@ -292,7 +270,7 @@ class OJSPaymentManager extends PaymentManager {
 					import('classes.subscription.IndividualSubscription');
 					$subscription->setStatus(SUBSCRIPTION_STATUS_ACTIVE);
 					if ($subscription->isNonExpiring()) {
-						$individualSubscriptionDao->updateSubscription($subscription);
+						$individualSubscriptionDao->updateObject($subscription);
 					} else {
 						$individualSubscriptionDao->renewSubscription($subscription);
 					}
@@ -310,10 +288,10 @@ class OJSPaymentManager extends PaymentManager {
 				$institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
 				$individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
 				if ($institutionalSubscriptionDao->subscriptionExists($subscriptionId)) {
-					$subscription =& $institutionalSubscriptionDao->getSubscription($subscriptionId);
+					$subscription = $institutionalSubscriptionDao->getById($subscriptionId);
 					$institutional = true;
 				} else {
-					$subscription =& $individualSubscriptionDao->getSubscription($subscriptionId);
+					$subscription = $individualSubscriptionDao->getById($subscriptionId);
 					$institutional = false;
 				}
 				if (!$subscription || $subscription->getUserId() != $queuedPayment->getUserId() || $subscription->getJournalId() != $queuedPayment->getJournalId()) {
@@ -347,127 +325,6 @@ class OJSPaymentManager extends PaymentManager {
 				$article = $articleDao->getById($queuedPayment->getAssocId(), $queuedPayment->getJournalId());
 				$article->setFastTracked(true);
 				$articleDao->updateObject($article);
-				$returner = true;
-				break;
-			case PAYMENT_TYPE_GIFT:
-				$giftId = $queuedPayment->getAssocId();
-				$giftDao = DAORegistry::getDAO('GiftDAO');
-				$gift =& $giftDao->getGift($giftId);
-				if (!$gift) return false;
-				$password = null; // Suppress scrutinizer warn
-
-				$journalDao = DAORegistry::getDAO('JournalDAO');
-				$journalId = $gift->getAssocId();
-				$journal = $journalDao->getById($journalId);
-				if (!$journal) return false;
-
-				// Check if user account corresponding to recipient email exists in the system
-				$userDao = DAORegistry::getDAO('UserDAO');
-				$roleDao = DAORegistry::getDAO('RoleDAO');
-				$recipientFirstName = $gift->getRecipientFirstName();
-				$recipientEmail = $gift->getRecipientEmail();
-
-				$newUserAccount = false;
-
-				if ($userDao->userExistsByEmail($recipientEmail)) {
-					// User already has account, check if enrolled as reader in journal
-					$user = $userDao->getUserByEmail($recipientEmail);
-					$userId = $user->getId();
-
-					if (!$roleDao->userHasRole($journalId, $userId, ROLE_ID_READER)) {
-						// User not enrolled as reader, enroll as reader
-						$role = new Role();
-						$role->setJournalId($journalId);
-						$role->setUserId($userId);
-						$role->setRoleId(ROLE_ID_READER);
-						$roleDao->insertRole($role);
-					}
-				} else {
-					// User does not have an account. Create one and enroll as reader.
-					$recipientLastName = $gift->getRecipientLastName();
-
-					$username = Validation::suggestUsername($recipientFirstName, $recipientLastName);
-					$password = Validation::generatePassword();
-
-					$user = $userDao->newDataObject();
-					$user->setUsername($username);
-					$user->setPassword(Validation::encryptCredentials($username, $password));
-					$user->setFirstName($recipientFirstName);
-					$user->setMiddleName($gift->getRecipientMiddleName());
-					$user->setLastName($recipientLastName);
-					$user->setEmail($recipientEmail);
-					$user->setDateRegistered(Core::getCurrentDate());
-
-					$userDao->insertObject($user);
-					$userId = $user->getId();
-
-					$role = new Role();
-					$role->setJournalId($journalId);
-					$role->setUserId($userId);
-					$role->setRoleId(ROLE_ID_READER);
-					$roleDao->insertRole($role);
-
-					$newUserAccount = true;
-				}
-
-				// Update gift status (make it redeemable) and add recipient user account reference
-				import('classes.gift.Gift');
-				$gift->setStatus(GIFT_STATUS_NOT_REDEEMED);
-				$gift->setRecipientUserId($userId);
-				$giftDao->updateObject($gift);
-
-				// Send gift available email to recipient, cc buyer
-				$giftNoteTitle = $gift->getGiftNoteTitle();
-				$buyerFullName = $gift->getBuyerFullName();
-				$giftNote = $gift->getGiftNote();
-				$giftLocale = $gift->getLocale();
-
-				AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON, $giftLocale);
-				$giftDetails = $gift->getGiftName($giftLocale);
-				$giftJournalName = $journal->getName($giftLocale);
-				$giftContactSignature = $journal->getSetting('contactName');
-
-				import('lib.pkp.classes.mail.MailTemplate');
-				$mail = new MailTemplate('GIFT_AVAILABLE', $giftLocale);
-				$mail->setReplyTo(null);
-				$mail->assignParams(array(
-					'giftJournalName' => $giftJournalName,
-					'giftNoteTitle' => $giftNoteTitle,
-					'recipientFirstName' => $recipientFirstName,
-					'buyerFullName' => $buyerFullName,
-					'giftDetails' => $giftDetails,
-					'giftNote' => $giftNote,
-					'giftContactSignature' => $giftContactSignature
-				));
-				$mail->addRecipient($recipientEmail, $user->getFullName());
-				$mail->addCc($gift->getBuyerEmail(), $gift->getBuyerFullName());
-				$mail->send();
-				unset($mail);
-
-				// Send gift login details to recipient
-				$params = array(
-					'giftJournalName' => $giftJournalName,
-					'recipientFirstName' => $recipientFirstName,
-					'buyerFullName' => $buyerFullName,
-					'giftDetails' => $giftDetails,
-					'giftUrl' => $request->url($journal->getPath(), 'user', 'gifts'),
-					'username' => $user->getUsername(),
-					'giftContactSignature' => $giftContactSignature
-				);
-
-				if ($newUserAccount) {
-					$mail = new MailTemplate('GIFT_USER_REGISTER', $giftLocale);
-					$params['password'] = $password;
-				} else {
-					$mail = new MailTemplate('GIFT_USER_LOGIN', $giftLocale);
-				}
-
-				$mail->setReplyTo(null);
-				$mail->assignParams($params);
-				$mail->addRecipient($recipientEmail, $user->getFullName());
-				$mail->send();
-				unset($mail);
-
 				$returner = true;
 				break;
 			case PAYMENT_TYPE_PURCHASE_ARTICLE:

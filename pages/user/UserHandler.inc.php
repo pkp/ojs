@@ -18,116 +18,6 @@ import('lib.pkp.pages.user.PKPUserHandler');
 class UserHandler extends PKPUserHandler {
 
 	/**
-	 * Display user gifts page
-	 * @param $args array
-	 * @param $request PKPRequest
-	 */
-	function gifts($args, $request) {
-		$this->validate(null, $request);
-
-		$journal = $request->getJournal();
-		if (!$journal) $request->redirect(null, 'dashboard');
-
-		// Ensure gift payments are enabled
-		import('classes.payment.ojs.OJSPaymentManager');
-		$paymentManager = new OJSPaymentManager($request);
-		$acceptGiftPayments = $paymentManager->acceptGiftPayments();
-		if (!$acceptGiftPayments) $request->redirect(null, 'dashboard');
-
-		$acceptGiftSubscriptionPayments = $paymentManager->acceptGiftSubscriptionPayments();
-		$journalId = $journal->getId();
-		$user = $request->getUser();
-		$userId = $user->getId();
-
-		// Get user's redeemed and unreedemed gift subscriptions
-		$giftDao = DAORegistry::getDAO('GiftDAO');
-		$giftSubscriptions = $giftDao->getGiftsByTypeAndRecipient(
-			ASSOC_TYPE_JOURNAL,
-			$journalId,
-			GIFT_TYPE_SUBSCRIPTION,
-			$userId
-		);
-
-		$this->setupTemplate($request);
-		$templateMgr = TemplateManager::getManager($request);
-
-		$templateMgr->assign(array(
-			'journalTitle' => $journal->getLocalizedName(),
-			'journalPath' => $journal->getPath(),
-			'acceptGiftSubscriptionPayments' => $acceptGiftSubscriptionPayments,
-			'giftSubscriptions' => $giftSubscriptions,
-		));
-		$templateMgr->display('user/gifts.tpl');
-
-	}
-
-	/**
-	 * User redeems a gift
-	 * @param $args array
-	 * @param $request PKPRequest
-	 */
-	function redeemGift($args, $request) {
-		$this->validate(null, $request);
-
-		if (empty($args)) $request->redirect(null, 'dashboard');
-
-		$journal = $request->getJournal();
-		if (!$journal) $request->redirect(null, 'dashboard');
-
-		// Ensure gift payments are enabled
-		import('classes.payment.ojs.OJSPaymentManager');
-		$paymentManager = new OJSPaymentManager($request);
-		$acceptGiftPayments = $paymentManager->acceptGiftPayments();
-		if (!$acceptGiftPayments) $request->redirect(null, 'dashboard');
-
-		$journalId = $journal->getId();
-		$user = $request->getUser();
-		$userId = $user->getId();
-		$giftId = isset($args[0]) ? (int) $args[0] : 0;
-
-		// Try to redeem the gift
-		$giftDao = DAORegistry::getDAO('GiftDAO');
-		$status = $giftDao->redeemGift(
-			ASSOC_TYPE_JOURNAL,
-			$journalId,
-			$userId,
-			$giftId
-		);
-
-		// Report redeem status to user
-		import('classes.notification.NotificationManager');
-		$notificationManager = new NotificationManager();
-
-		switch ($status) {
-			case GIFT_REDEEM_STATUS_SUCCESS:
-				$notificationType = NOTIFICATION_TYPE_GIFT_REDEEM_STATUS_SUCCESS;
-				break;
-			case GIFT_REDEEM_STATUS_ERROR_NO_GIFT_TO_REDEEM:
-				$notificationType = NOTIFICATION_TYPE_GIFT_REDEEM_STATUS_ERROR_NO_GIFT_TO_REDEEM;
-				break;
-			case GIFT_REDEEM_STATUS_ERROR_GIFT_ALREADY_REDEEMED:
-				$notificationType = NOTIFICATION_TYPE_GIFT_REDEEM_STATUS_ERROR_GIFT_ALREADY_REDEEMED;
-				break;
-			case GIFT_REDEEM_STATUS_ERROR_GIFT_INVALID:
-				$notificationType = NOTIFICATION_TYPE_GIFT_REDEEM_STATUS_ERROR_GIFT_INVALID;
-				break;
-			case GIFT_REDEEM_STATUS_ERROR_SUBSCRIPTION_TYPE_INVALID:
-				$notificationType = NOTIFICATION_TYPE_GIFT_REDEEM_STATUS_ERROR_SUBSCRIPTION_TYPE_INVALID;
-				break;
-			case GIFT_REDEEM_STATUS_ERROR_SUBSCRIPTION_NON_EXPIRING:
-				$notificationType = NOTIFICATION_TYPE_GIFT_REDEEM_STATUS_ERROR_SUBSCRIPTION_NON_EXPIRING;
-				break;
-			default:
-				$notificationType = NOTIFICATION_TYPE_NO_GIFT_TO_REDEEM;
-		}
-
-		$user = $request->getUser();
-
-		$notificationManager->createTrivialNotification($user->getId(), $notificationType);
-		$request->redirect(null, 'user', 'gifts');
-	}
-
-	/**
 	 * Display subscriptions page
 	 * @param $args array
 	 * @param $request PKPRequest
@@ -158,13 +48,13 @@ class UserHandler extends PKPUserHandler {
 		// Get subscriptions and options for current journal
 		if ($individualSubscriptionTypesExist) {
 			$subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
-			$userIndividualSubscription = $subscriptionDao->getSubscriptionByUserForJournal($userId, $journalId);
+			$userIndividualSubscription = $subscriptionDao->getByUserForJournal($userId, $journalId);
 			$templateMgr->assign('userIndividualSubscription', $userIndividualSubscription);
 		}
 
 		if ($institutionalSubscriptionTypesExist) {
 			$subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
-			$userInstitutionalSubscriptions = $subscriptionDao->getSubscriptionsByUserForJournal($userId, $journalId);
+			$userInstitutionalSubscriptions = $subscriptionDao->getByUserForJournal($userId, $journalId);
 			$templateMgr->assign('userInstitutionalSubscriptions', $userInstitutionalSubscriptions);
 		}
 
@@ -185,6 +75,7 @@ class UserHandler extends PKPUserHandler {
 			'acceptSubscriptionPayments' => $acceptSubscriptionPayments,
 			'individualSubscriptionTypesExist' => $individualSubscriptionTypesExist,
 			'institutionalSubscriptionTypesExist' => $institutionalSubscriptionTypesExist,
+			'journalPaymentsEnabled' => $paymentManager->isConfigured(),
 		));
 		$templateMgr->display('user/subscriptions.tpl');
 
@@ -261,7 +152,7 @@ class UserHandler extends PKPUserHandler {
 			}
 
 			// Ensure subscription can be updated
-			$subscription = $subscriptionDao->getSubscription($subscriptionId);
+			$subscription = $subscriptionDao->getById($subscriptionId);
 			$subscriptionStatus = $subscription->getStatus();
 			import('classes.subscription.Subscription');
 			$validStatus = array(
@@ -340,7 +231,7 @@ class UserHandler extends PKPUserHandler {
 			}
 
 			// Ensure subscription can be updated
-			$subscription = $subscriptionDao->getSubscription($subscriptionId);
+			$subscription = $subscriptionDao->getById($subscriptionId);
 			$subscriptionStatus = $subscription->getStatus();
 			import('classes.subscription.Subscription');
 			$validStatus = array(
@@ -431,7 +322,7 @@ class UserHandler extends PKPUserHandler {
 
 		if (!$subscriptionDao->subscriptionExistsByUser($subscriptionId, $userId)) $request->redirect(null, 'dashboard');
 
-		$subscription = $subscriptionDao->getSubscription($subscriptionId);
+		$subscription = $subscriptionDao->getById($subscriptionId);
 		$subscriptionStatus = $subscription->getStatus();
 		import('classes.subscription.Subscription');
 		$validStatus = array(SUBSCRIPTION_STATUS_ACTIVE, SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT);
@@ -439,7 +330,7 @@ class UserHandler extends PKPUserHandler {
 		if (!in_array($subscriptionStatus, $validStatus)) $request->redirect(null, 'dashboard');
 
 		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
-		$subscriptionType = $subscriptionTypeDao->getSubscriptionType($subscription->getTypeId());
+		$subscriptionType = $subscriptionTypeDao->getById($subscription->getTypeId());
 
 		$queuedPayment = $paymentManager->createQueuedPayment($journal->getId(), PAYMENT_TYPE_PURCHASE_SUBSCRIPTION, $user->getId(), $subscriptionId, $subscriptionType->getCost(), $subscriptionType->getCurrencyCodeAlpha());
 		$queuedPaymentId = $paymentManager->queuePayment($queuedPayment);
@@ -480,7 +371,7 @@ class UserHandler extends PKPUserHandler {
 
 		if (!$subscriptionDao->subscriptionExistsByUser($subscriptionId, $userId)) $request->redirect(null, 'dashboard');
 
-		$subscription = $subscriptionDao->getSubscription($subscriptionId);
+		$subscription = $subscriptionDao->getById($subscriptionId);
 
 		if ($subscription->isNonExpiring()) $request->redirect(null, 'dashboard');
 
@@ -495,7 +386,7 @@ class UserHandler extends PKPUserHandler {
 		if (!in_array($subscriptionStatus, $validStatus)) $request->redirect(null, 'dashboard');
 
 		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
-		$subscriptionType = $subscriptionTypeDao->getSubscriptionType($subscription->getTypeId());
+		$subscriptionType = $subscriptionTypeDao->getById($subscription->getTypeId());
 
 		$queuedPayment = $paymentManager->createQueuedPayment($journal->getId(), PAYMENT_TYPE_RENEW_SUBSCRIPTION, $user->getId(), $subscriptionId, $subscriptionType->getCost(), $subscriptionType->getCurrencyCodeAlpha());
 		$queuedPaymentId = $paymentManager->queuePayment($queuedPayment);

@@ -824,43 +824,11 @@ Autori koji objavljuju u ovom časopisu pristaju na sledeće uslove:
 	<message key="issue.nonpdf.title">Preuzmi izdanje</message>
 	<message key="issue.viewIssue">Pogledaj izdanje</message>
 	<message key="site.noJournals">Nema dostupnih časopisa.</message>
-	<message key="gifts.buyer">Od</message>
-	<message key="gifts.buyerDescription">Od koga je ovaj poklon?</message>
-	<message key="gifts.recipient">Za</message>
-	<message key="gifts.recipientDescription">Za koga je ovaj poklon?</message>
-	<message key="gifts.thankYou">Hvala</message>
-	<message key="gifts.purchaseGiftIndividualSubscription">Poklonjena pretplata</message>
-	<message key="gifts.details">Detalji poklona</message>
-	<message key="gifts.gift">Poklon</message>
-	<message key="gifts.noteTitle">Naslov</message>
-	<message key="gifts.note">Beleška o poklonu</message>
-	<message key="gifts.noteTitleRequired">Upišite naslov vaše personalizovane poruke.</message>
-	<message key="gifts.noteRequired">Upišite personalizovanu poruku.</message>
-	<message key="gifts.localeRequired">Odaberite jezik vaše personalizovane poruke.</message>
-	<message key="gifts.myGifts">Moji pokloni</message>
-	<message key="gifts.manageMyGifts">Upravlja mojim poklonima</message>
-	<message key="gifts.redeemGift">Iskoristi poklon</message>
-	<message key="gifts.status.notRedeemed">Dostupno</message>
-	<message key="gifts.status.redeemGift">Iskoristi poklon</message>
-	<message key="gifts.subscriptions">Pretplate</message>
-	<message key="gifts.purchaseGiftSubscription">Daj poklonjenu pretplatu</message>
-	<message key="gifts.noSubscriptions">Nema poklonjenih pretplata</message>
-	<message key="gifts.giftRedeemed">Poklonjena pretplata je uspešno upotrebljena.</message>
-	<message key="gifts.noGiftToRedeem">Ovaj poklon nije dostupan za upotrebu.</message>
-	<message key="gifts.giftAlreadyRedeemed">Ovaj poklon jeveć bio upotrebljen.</message>
-	<message key="gifts.giftNotValid">Ovaj poklon nije važeći i ne može biti upotrebljen.</message>
-	<message key="payment.type.gift">Poklon</message>
-	<message key="payment.type.gift.subscription">Pretplata</message>
 	<message key="installer.allowFileUploads"><![CDATA[Vaš server podržava postavljanje datoteka: <strong>{$allowFileUploads}</strong>]]></message>
 	<message key="installer.maxFileUploadSize"><![CDATA[Vaš server trenutno podržava postavljanje maksimalnu veličinu datoteke: <strong>{$maxFileUploadSize}</strong>]]></message>
 	<message key="site.upgradeAvailable.admin"><![CDATA[Dostupna je nova verzija OJS! Trenutno koristite OJS {$currentVersion}.
  Najnovija verzija ОЈС је {$latestVersion}. Poslednja verzija OJS {$latestVersion}. Posetite <a href="http://pkp.sfu.ca/ojs_download" target="_new">ovu stranu</a>da preuzmete poslednju verziju i da nađete uputstvo za nadogradnju.]]></message>
 	<message key="site.upgradeAvailable.manager"><![CDATA[Dostupna je nova verzija OJS! Trenutno koristite OJS {$currentVersion}. Poslednja verzija OJS je {$latestVersion}. Obratite se vašem administratoru sajta ({$siteAdminName}, <a href="mailto:{$siteAdminEmail}">{$siteAdminEmail}</a>) i obavestite ga o novom izdanju. Više informacija možete naći <a href="http://pkp.sfu.ca/ojs_download" target="_new">ovde</a>.]]></message>
-	<message key="gifts.thankYouMessage">Vaša kupovina poklona je završena. Dobićete kopiju e-poruke u vezi poklona koja je poslata primaocu odmah nakon obrade plaćanja.</message>
-	<message key="gifts.subscriptionFormIntroduction">Ispunite obrazac dole. Upisana informacija o kontaktu sa vašom porukom o poklonu će biti poslata primaocu poklona i biće informisan o poklonjenoj pretplati (vi ćete dobiti kopiju ove poruke).</message>
-	<message key="gifts.detailsDescription">Odaberite poklon dole i uključite personalizovanu poruku koja će bitiposlata primaocu (vi ćete dobiti kopiju ove poruke).</message>
-	<message key="gifts.giftSubscriptionsAvailable">Poklon pretplate su u ponudi.  Primaoci poklon pretplate mogu je upotrebiti u bilo koje vreme. Poklonjene pretplate su odličan način da se podrži časopis.</message>
-	<message key="gifts.subscriptionTypeNotValid">Ovaj tip pretplate nije važeći za ovaj poklon. Kontaktirajte upravnika za pretplate.</message>
 	<message key="editor.submissionEditing.notes"><![CDATA[<ol>
 	<li>Наглашене ставке показују да је уредник тражио да се изврше активности као што је доле назначено:
 		<ul>
@@ -870,9 +838,6 @@ Autori koji objavljuju u ovom časopisu pristaju na sledeće uslove:
 		</ul>
 	</li>
 </ol>]]></message>
-	<message key="gifts.status.redeemed">Upotrebljen</message>
-	<message key="gifts.subscriptionsDescription">Poklonjena pretplata koju ste upotrebili će zameniti vašu postojeću pretplatu (ako je imate). Pretplate će početi sa važenjem na dan početka pretplate i biće važeće do isteka trajanja u skladu sa tipom pretplate.</message>
-	<message key="gifts.subscriptionNonExpiring">Poklon nije iskorišten zato što imate u toku pretplatu na časopis koja još nije istekla.</message>
 	<message key="payment.loginRequired.forIssue">Da bi pristupili ovoj stavki potrebna je pretplata ili da kupite izdanje. Prijavite se u časopis da bi verifikovali pretplatu, pristupili prethodnim kupovinama ili kupili izdanje.</message>
 	<message key="payment.type.purchaseIssue">Cena kupovine izdanja</message>
 	<message key="context.current">Trenutni časopis:</message>

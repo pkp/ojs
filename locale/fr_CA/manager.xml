@@ -344,7 +344,6 @@
 	<message key="manager.subscriptionPolicies.subscriptionContact">Responsable des abonnements</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactDescription">Le contact indiqué sous Abonnements dans À propos de la revue.</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactEmailValid">Veuillez saisir un courriel valide.</message>
-	<message key="manager.subscriptionPolicies.subscriptionPoliciesSaved">Votre politique d'abonnement a été mise à jour.</message>
 	<message key="manager.subscriptions">Abonnements</message>
 	<message key="manager.subscriptions.confirmDelete">Êtes-vous certain de vouloir supprimer cet abonnement?</message>
 	<message key="manager.subscriptions.create">Créer un nouvel abonnement</message>
@@ -482,9 +481,6 @@
 	<message key="manager.subscriptionTypes.form.options">Options</message>
 	<message key="manager.language.submissions">Soumissions</message>
 	<message key="manager.setup.addNavItem">Ajouter un élément</message>
-	<message key="manager.payment.giftFees">Tarif des formules cadeau</message>
-	<message key="manager.payment.giftFeesDescription">Un lien vers les abonnements en cadeau apparaîtra sur la page des abonnements dans À propos de la revue et dans la barre latérale des abonnements.</message>
-	<message key="manager.payment.options.acceptGiftSubscriptionPayments">Cela activera le règlement des abonnements en cadeau, permettant aux lecteurs de la revue d'acheter des abonnements en cadeau pour d'autres lecteurs.</message>
 	<message key="manager.payment.options.purchaseIssueFee">Acheter un numéro</message>
 	<message key="manager.sections.confirmDelete">Êtes-vous sûr de vouloir définitivement supprimer cette section?</message>
 	<message key="manager.sections.alertDelete">Pour supprimer cette section, déplacez les articles qui la composent dans d'autres sections.</message>

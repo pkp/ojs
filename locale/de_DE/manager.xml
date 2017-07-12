@@ -37,8 +37,6 @@
 	<message key="manager.payment.enable">Einschalten</message>
 	<message key="manager.payment.feePaymentOptions">Zahlungsoptionen</message>
 	<message key="manager.payment.form.numeric">Alle Kosten müssen durch positive Zahlenwerte ausgedrückt werden, Dezimalstellen sind möglich.</message>
-	<message key="manager.payment.giftFees">Geschenkgebühren</message>
-	<message key="manager.payment.giftFeesDescription">Ein Link zu Geschenkabonnements wird auf der Abonnementseite in ‚Über uns‘ und als Teil des Abonnement-Blocks in der Sidebar.</message>
 	<message key="manager.payment.generalFees">Allgemeine Gebühren</message>
 	<message key="manager.payment.generalFeesDescription">"Institutionelle Mitgliedschaft" steht im "Über uns" der Zeitschrift unter "Zur Zeitschrift", der Link für Spenden befindet sich oberhalb der Suchfunktion im rechten Frame.</message>
 	<message key="manager.payment.generalOptions">Allgemeine Optionen</message>
@@ -46,7 +44,6 @@
 	<message key="manager.payment.notFound">Nicht gefunden</message>
 	<message key="manager.payment.options">Optionen</message>
 	<message key="manager.payment.options.acceptSubscriptionPayments">Hier werden Abonnementzahlungen aktiviert. Art, Kosten, Dauer und Abonnent/innen werden durch die Abonnementverwaltung verwaltet.</message>
-	<message key="manager.payment.options.acceptGiftSubscriptionPayments">Hier werden Zahlungen für Geschenkabonnements aktiviert, um Zeitschriftenleser/innen in die Lage zu versetzen, Geschenkabonnements für andere Leser/innen zu kaufen.</message>
 	<message key="manager.payment.options.donationFee">Spenden an die Zeitschrift</message>
 	<message key="manager.payment.options.enablePayments">Klicken Sie hier, um das Zahlungsmodul zu aktivieren. Sie müssen die Zahlungsmodalitäten im Formular unten konfigurieren. Bitte beachten Sie, dass die Benutzer/innen eingeloggt sein müssen, um Zahlungen vornehmen zu können.</message>
 	<message key="manager.payment.options.fastTrackFee">Beschleunigte Begutachtung</message>
@@ -418,7 +415,6 @@
 	<message key="manager.subscriptionPolicies.subscriptionContact">Abonnementverwalter/in</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactDescription">Kontakt, der im "Über uns" der Zeitschrift erscheint.</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactEmailValid">Geben Sie bitte eine gültige E-Mail-Adresse ein.</message>
-	<message key="manager.subscriptionPolicies.subscriptionPoliciesSaved">Ihre Abonnementeinstellungen wurden aktualisiert</message>
 	<message key="manager.subscriptions">Abonnements</message>
 	<message key="manager.individualSubscriptions">Individuelle Abonnements</message>
 	<message key="manager.institutionalSubscriptions">Institutionelle Abonnements</message>

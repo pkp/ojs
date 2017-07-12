@@ -367,7 +367,6 @@
        <message key="manager.subscriptionPolicies.subscriptionContact">Менеджер передплати</message>
        <message key="manager.subscriptionPolicies.subscriptionContactDescription">Ця контактна особа буде вказана у розділі "Передплати" сторінки "Про журнал".</message>
        <message key="manager.subscriptionPolicies.subscriptionContactEmailValid">Будь ласка, вкажіть коректну адресу email.</message>
-       <message key="manager.subscriptionPolicies.subscriptionPoliciesSaved">Ваші налаштування політики передплати були оновлені.</message>
        <message key="manager.subscriptions">Передплати</message>
        <message key="manager.individualSubscriptions">Індивідуальні передплати</message>
        <message key="manager.institutionalSubscriptions">Передплати установ</message>
@@ -489,9 +488,6 @@
        <message key="manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully">Тип передплати створений успішно.</message>
 	<message key="manager.payment.options.purchaseIssueFee">Купити випуск</message>
 	<message key="manager.setup.categories">Категорії</message>
-	<message key="manager.payment.giftFees">Платежі за подарунки</message>
-	<message key="manager.payment.giftFeesDescription">Посилання на подарункові передплати з'явиться на сторінці "Передплати" розділу "Про журнал" разом з іншою інформацією стосовно передплат.</message>
-	<message key="manager.payment.options.acceptGiftSubscriptionPayments">У цьому пункті активуються платежі за подарункові передплати. Це дозволяє читачам журналу купувати передплати як подарунки іншим читачам.</message>
 	<message key="manager.sections.alertDelete">Перш, ніж Ви зможете видалити цей розділ, потрібно перенести всі опубліковані у ньому статті до інших розділів.</message>
 	<message key="manager.setup.journalThumbnail">Мініатюрне зображення журналу</message>
 	<message key="manager.setup.useThumbnail">Мініатюра</message>

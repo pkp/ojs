@@ -17,10 +17,14 @@ Checkout submodules and copy default configuration :
 
 Install or update dependencies via Composer:
 
-    cd lib/pkp
     # if you don't already have Composer installed:
     curl -sS https://getcomposer.org/installer | php
-    php composer.phar update
+    cd lib/pkp
+    php ../../composer.phar update
+    cd ../..
+    cd plugins/paymethod/paypal
+    php ../../../composer.phar update
+    cd ../../..
 
 If your PHP version supports built-in development server :
 

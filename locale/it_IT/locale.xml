@@ -789,41 +789,6 @@ Attive indica quante revisioni sono attualmente in corso.]]></message>
 	<message key="donations.thankYou">Grazie</message>
 	<message key="donations.thankYouMessage">Grazie per il tuo contributo, lo apprezziamo molto.</message>
 
-	<!-- Gifts -->
-	<message key="gifts.buyer">Da</message>
-	<message key="gifts.buyerDescription">Da parte di chi è il dono?</message>
-	<message key="gifts.recipient">A</message>
-	<message key="gifts.recipientDescription">A chi è destinato il dono?</message>
-	<message key="gifts.thankYou">Grazie</message>
-	<message key="gifts.thankYouMessage">L'acquisto del tuo dono si è concluso. Riceverai una copia del messaggio email inviato al destinatario del dono non appena verrà completato il pagamento.</message>
-	<message key="gifts.purchaseGiftIndividualSubscription">Regala un abbonamento</message>
-	<message key="gifts.subscriptionFormIntroduction">Compila il modulo sottostante. Le informazioni di contatto fornite, insieme alle note sul dono, verranno utilizzate per informare il destinatario via posta elettronica del nuovo abbonamento in dono (anche tu riceverai copia di questa email).</message>
-	<message key="gifts.details">Dettagli del dono</message>
-	<message key="gifts.detailsDescription">Seleziona il dono qui sotto e includi un messaggio personalizzato che verrà inviato per posta elettronica al destinatario (anche tu riceverai copia di questa email).</message>
-	<message key="gifts.gift">Dono</message>
-	<message key="gifts.noteTitle">Titolo</message>
-	<message key="gifts.note">Note</message>
-	<message key="gifts.noteTitleRequired">Dai un titolo al messaggio personalizzato.</message>
-	<message key="gifts.noteRequired">Inserisci un messaggio personalizzato.</message>
-	<message key="gifts.localeRequired">Seleziona la lingua del emssaggio personalizzato.</message>
-	<message key="gifts.myGifts">I miei doni</message>
-	<message key="gifts.manageMyGifts">Gestisci doni</message>
-	<message key="gifts.redeemGift">Riscatta un dono</message>
-	<message key="gifts.status.notRedeemed">Disponibile</message>
-	<message key="gifts.status.redeemed">Riscattato</message>
-	<message key="gifts.status.redeemGift">Riscatta</message>
-	<message key="gifts.subscriptions">Abbonamenti</message>
-	<message key="gifts.subscriptionsDescription">Un abbonamento dono riscattato andrà a sostituire il tuo abbonamento (se ne hai uno). Gli abbonamenti partiranno alla data di riscatto e saranno validi per tutta la durata prevista dalla tipologia di abbonamento.</message>
-	<message key="gifts.purchaseGiftSubscription">Regala un abbonamento</message>
-	<message key="gifts.giftSubscriptionsAvailable">Sono disponibili anche abbonamenti dono. Gli abbonamenti dono possono essere riscattati in ogni momento e sono un modo molto valido per sostenere questa rivista.</message>
-	<message key="gifts.noSubscriptions">Non ci sono abbonamenti dono</message>
-	<message key="gifts.giftRedeemed">Il dono è stato riscattato con successo.</message>
-	<message key="gifts.noGiftToRedeem">Questo dono non è disponibile e non può essere riscattato.</message>
-	<message key="gifts.giftAlreadyRedeemed">Questo dono è già stato riscattato.</message>
-	<message key="gifts.giftNotValid">Questo dono non è valido e non può essere riscattato.</message>
-	<message key="gifts.subscriptionTypeNotValid">La tipologia di abbonamento di questo dono non è valida. Contatta il gestore degli abbonamenti.</message>
-	<message key="gifts.subscriptionNonExpiring">L'abbonamento non è stato riscattato perché hai già un abbonamento senza scadenza in corso.</message>
-
 	<!-- Payments -->
 	<message key="payment.loginRequired">Devi essere autenticato per eseguire un pagamento.</message>
 	<message key="payment.loginRequired.forArticle">Per accedere a questo elemento è necessario avere un abbonamento o acquistare l'articolo. Per verificare l'abbonamento o precedenti acquisti, oppure per comprare l'articolo, accedi alla rivista.</message>
@@ -846,8 +811,6 @@ Attive indica quante revisioni sono attualmente in corso.]]></message>
 	<message key="payment.type.purchaseIssue">Acquisto di un fascicolo</message>
 	<message key="payment.type.subscription">Quota di abbonamento</message>
 	<message key="payment.type.donation">Donazioni</message>
-	<message key="payment.type.gift">Regali</message>
-	<message key="payment.type.gift.subscription">Abbonamenti</message>
 
 	<message key="payment.donation.makeDonation">Fai una donazione</message>
 

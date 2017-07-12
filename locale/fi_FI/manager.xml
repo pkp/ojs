@@ -37,8 +37,6 @@
 	<message key="manager.payment.enable">Ota käyttöön</message>
 	<message key="manager.payment.feePaymentOptions">Maksuihin liittyvät valinnat</message>
 	<message key="manager.payment.form.numeric">Kaikkien hintojen tulee olla positiivia numeerisia arvoja (desimaalipilkut sallitaan)</message>
-	<message key="manager.payment.giftFees">Lahjamaksut</message>
-	<message key="manager.payment.giftFeesDescription">Lahjatilausten linkki näkyy Tilaukset-sivulla Tietoa julkaisusta -kohdassa sekä osana tilaus-sivupalkkia.</message>
 	<message key="manager.payment.generalFees">Yleiset maksut</message>
 	<message key="manager.payment.generalFeesDescription">Yhdistyksen jäsenyys näkyy Tietoa julkaisusta -sivulla Toimintaperiaatteet-kohdassa ja lahjoituslinkki näkyy hakutoiminnon yläpuolella, oikeanpuoleisessa kehyksessä.</message>
 	<message key="manager.payment.generalOptions">Yleiset valinnat</message>
@@ -46,7 +44,6 @@
 	<message key="manager.payment.notFound">Ei löydetty</message>
 	<message key="manager.payment.options">Valinnat</message>
 	<message key="manager.payment.options.acceptSubscriptionPayments">Tämä aktivoi sellaisten tilausten maksut, joissa julkaisun hallinnoija (tai tilaussihteeri) hallinnoi tilausvaihtoehtoja, hintoja, kestoja ja tilauksia.</message>
-	<message key="manager.payment.options.acceptGiftSubscriptionPayments">Tämä aktivoi lahjatilausten maksut, mikä antaa julkaisun lukijoille mahdollisuuden ostaa lahjatilauksia toisille lukijoille.</message>
 	<message key="manager.payment.options.donationFee">Lahjoitukset julkaisulle</message>
 	<message key="manager.payment.options.enablePayments">Klikkaa tästä ottaaksesi maksutoiminnot käyttöön.  Maksuasetukset on määritettävä täyttämällä alla oleva lomake.  Huomaa, että käyttäjien täytyy kirjautua sisään suorittaakseen maksuja.</message>
 	<message key="manager.payment.options.fastTrackFee">Nopeutettu arviointi</message>
@@ -418,7 +415,6 @@ Julkaisusi on määritetty tallentamaan useita käytön mittareita. Käyttötila
 	<message key="manager.subscriptionPolicies.subscriptionContact">Tilaussihteeri</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactDescription">Yhteyshenkilö, joka merkitään Tilaukset-kohtaan Tietoa julkaisusta -sivulle.</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactEmailValid">Anna kelvollinen sähköpostiosoite.</message>
-	<message key="manager.subscriptionPolicies.subscriptionPoliciesSaved">Tilauskäytäntöihin liittyvät asetukset on päivitetty.</message>
 	<message key="manager.subscriptions">Tilaukset</message>
 	<message key="manager.individualSubscriptions">Yksittäistilaukset</message>
 	<message key="manager.institutionalSubscriptions">Instituutiotilaukset</message>

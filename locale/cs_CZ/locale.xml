@@ -793,41 +793,6 @@ Aktivní udává kolik recenzí je právě zvažováno nebo zpracováváno.]]></
 	<message key="donations.thankYou">Děkujeme</message>
 	<message key="donations.thankYouMessage">Děkujeme za Váš příspěvek. Velice si vážíme Vaší pomoci.</message>
 
-	<!-- Gifts -->
-	<message key="gifts.buyer">Od</message>
-	<message key="gifts.buyerDescription">Od koho je tento dárek?</message>
-	<message key="gifts.recipient">Pro</message>
-	<message key="gifts.recipientDescription">Pro koho je tento dárek?</message>
-	<message key="gifts.thankYou">Děkujeme</message>
-	<message key="gifts.thankYouMessage">Vaše dárkové předplatné bylo dokončeno. Dostanete kopii dárkového emailu, který dostane obdarovaný, jakmile bude zakončen proces úhrady předplatného.</message>
-	<message key="gifts.purchaseGiftIndividualSubscription">Dárkové předplatné</message>
-	<message key="gifts.subscriptionFormIntroduction">Vyplňte, prosím, následující formulář. Kontaktní informace, spolu s vaší poznámkou k daru budou použity v emailu pro obdarované, aby byl informován o dárkovém předplatném (také vy obdržíte kopii tohoto e-mailu).</message>
-	<message key="gifts.details">Podrobnosti o daru</message>
-	<message key="gifts.detailsDescription">Zvolte dar níže a přidejte vaši vlastní zprávu, kterou obdrží obdarovaný (také vy obdržíte kopii tohoto e-mailu).</message>
-	<message key="gifts.gift">Dar</message>
-	<message key="gifts.noteTitle">Název</message>
-	<message key="gifts.note">Poznámka k daru</message>
-	<message key="gifts.noteTitleRequired">Vložte, prosím, název vaší osobní zprávy obdarovanému.</message>
-	<message key="gifts.noteRequired">Vložte, prosím, vaši osobní zprávu pro obdarovaného.</message>
-	<message key="gifts.localeRequired">Zvolte, prosím, jazyk vaší zprávy pro obdarovaného.</message>
-	<message key="gifts.myGifts">Mé dary</message>
-	<message key="gifts.manageMyGifts">Správa mých darů</message>
-	<message key="gifts.redeemGift">Uplatnit dar</message>
-	<message key="gifts.status.notRedeemed">Dostupný</message>
-	<message key="gifts.status.redeemed">Dar uplatněn</message>
-	<message key="gifts.status.redeemGift">Uplatnit dar</message>
-	<message key="gifts.subscriptions">Předplatné</message>
-	<message key="gifts.subscriptionsDescription">Zde uplatněné dárkové předplatné nahradí vaše již existující předplatné (pokud nějaké máte). Předplatné započne dnem uplatnění a bude platné podle vyznačeného typu předplatného.</message>
-	<message key="gifts.purchaseGiftSubscription">Dejte dárkové předplatné</message>
-	<message key="gifts.giftSubscriptionsAvailable">Jsou k dispozici také dárkové předplatné. Dárkové předplatné může příjemce uplatnit kdykoliv a je to to dobrá cesta, jak podpořit tento časopis.</message>
-	<message key="gifts.noSubscriptions">Dárkové předplatné není dostupné</message>
-	<message key="gifts.giftRedeemed">Dar byl úspěšně uplatněn.</message>
-	<message key="gifts.noGiftToRedeem">Tento dar nelze uplatnit.</message>
-	<message key="gifts.giftAlreadyRedeemed">Tento dar byl již uplatněn.</message>
-	<message key="gifts.giftNotValid">Tento dar není platný a nelze ho uplatnit.</message>
-	<message key="gifts.subscriptionTypeNotValid">Typ předplatného pro tento dar není dostupné. Kontaktujte, prosím, správce předplatného.</message>
-	<message key="gifts.subscriptionNonExpiring">Tento dar nebyl uplatněn, protože již máte stálé předplatné tohoto časopisu.</message>
-
 	<!-- Payments -->
 	<message key="payment.loginRequired">Pro provedení platby musíte být přihlášený.</message>
 	<message key="payment.loginRequired.forArticle">Pro přístup k položce je vyžadováno předplatné nebo platba za shlédnutí. Přihlaste se do časopisu, aby mohlo být ověřeno předplatné nebo zaplacen polatek.</message>
@@ -850,8 +815,6 @@ Aktivní udává kolik recenzí je právě zvažováno nebo zpracováváno.]]></
 	<message key="payment.type.purchaseIssue">Zakoupení přístupu k číslu</message>
 	<message key="payment.type.subscription">Předplatné</message>
 	<message key="payment.type.donation">Dary</message>
-	<message key="payment.type.gift">Dar</message>
-	<message key="payment.type.gift.subscription">Předplatné</message>
 
 	<message key="payment.donation.makeDonation">Darovat</message>
 
