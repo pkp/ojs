@@ -83,13 +83,13 @@ class UserAction {
 				if (!$newUserSubscription)) {
 					// New user does not have this subscription, transfer old user's
 					$oldUserSubscription->setUserId($newUserId);
-					$individualSubscriptionDao->updateSubscription($oldUserSubscription);
+					$individualSubscriptionDao->updateObject($oldUserSubscription);
 				} elseif (!$individualSubscriptionDao->isValidIndividualSubscription($newUserId, $subscriptionJournalId)) {
 					// New user has a subscription but it's invalid. Delete it and
 					// transfer old user's valid one
 					$individualSubscriptionDao->deleteSubscriptionsByUserIdForJournal($newUserId, $subscriptionJournalId);
 					$oldUserSubscription->setUserId($newUserId);
-					$individualSubscriptionDao->updateSubscription($oldUserSubscription);
+					$individualSubscriptionDao->updateObject($oldUserSubscription);
 				}
 			}
 		}
@@ -104,7 +104,7 @@ class UserAction {
 
 		while ($oldUserSubscription = $oldUserSubscriptions->next()) {
 			$oldUserSubscription->setUserId($newUserId);
-			$institutionalSubscriptionDao->updateSubscription($oldUserSubscription);
+			$institutionalSubscriptionDao->updateObject($oldUserSubscription);
 		}
 
 		// Transfer completed payments.

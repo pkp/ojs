@@ -28,7 +28,7 @@ abstract class SubscriptionsGridHandler extends GridHandler {
 		$this->addRoleAssignment(array(
 			ROLE_ID_MANAGER, ROLE_ID_SUBSCRIPTION_MANAGER),
 			array('fetchGrid', 'fetchRow', 'editSubscription', 'updateSubscription',
-				'deleteSubscription', 'addSubscription')
+				'deleteSubscription', 'addSubscription', 'renewSubscription')
 		);
 	}
 
@@ -157,6 +157,20 @@ abstract class SubscriptionsGridHandler extends GridHandler {
 	function addSubscription($args, $request) {
 		// Calling editSubscription with an empty row id will add a new subscription.
 		return $this->editSubscription($args, $request);
+	}
+
+	/**
+	 * Renew a subscription.
+	 * @param $args array first parameter is the ID of the subscription to renew
+	 * @param $request PKPRequest
+	 */
+	function renewSubscription($args, $request) {
+		$subscriptionDao = DAORegistry::getDAO($request->getUserVar('institutional')?'InstitutionalSubscriptionDAO':'IndividualSubscriptionDAO');
+		$subscriptionId = $request->getUserVar('rowId');
+		if ($subscription = $subscriptionDao->getById($subscriptionId, $request->getJournal()->getId())) {
+			$subscriptionDao->renewSubscription($subscription);
+		}
+		return DAO::getDataChangedEvent($subscriptionId);
 	}
 }
 

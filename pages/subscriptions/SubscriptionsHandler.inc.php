@@ -159,41 +159,6 @@ class SubscriptionsHandler extends Handler {
 			)
 		);
 	}
-	// ----------------------- 8< CRUFT LINE ------------------------------------
-
-	/**
-	 * Renew a subscription.
-	 * @param $args array first parameter is the ID of the subscription to renew
-	 */
-	function renewSubscription($args, $request) {
-		if (array_shift($args) == 'individual') {
-			$institutional  = false;
-			$redirect = 'individual';
-		} else {
-			$institutional = true;
-			$redirect = 'institutional';
-		}
-
-		$this->validate();
-		$this->setupTemplate($request);
-
-		$journal = $request->getJournal();
-		$subscriptionId = empty($args[0]) ? null : (int) $args[0];
-
-		if ($institutional) {
-			$subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
-		} else {
-			$subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
-		}
-
-		// Ensure subscription is for this journal
-		if ($subscriptionDao->getSubscriptionJournalId($subscriptionId) == $journal->getId()) {
-			$subscription = $subscriptionDao->getById($subscriptionId);
-			if ($subscription) $subscriptionDao->renewSubscription($subscription);
-		}
-
-		$request->redirect(null, null, 'subscriptions', $redirect);
-	}
 }
 
 ?>

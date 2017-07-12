@@ -65,9 +65,6 @@ class SubscriptionTypeForm extends Form {
 		$this->addCheck(new FormValidator($this, 'currency', 'required', 'manager.subscriptionTypes.form.currencyRequired'));
 		$this->addCheck(new FormValidatorInSet($this, 'currency', 'required', 'manager.subscriptionTypes.form.currencyValid', array_keys($this->validCurrencies)));
 
-		// Non-expiring flag is valid value
-		$this->addCheck(new FormValidatorInSet($this, 'nonExpiring', 'optional', 'manager.subscriptionTypes.form.nonExpiringValid', array('0', '1')));
-
 		// Format is provided and is valid value
 		$this->addCheck(new FormValidator($this, 'format', 'required', 'manager.subscriptionTypes.form.formatRequired'));
 		$this->addCheck(new FormValidatorInSet($this, 'format', 'required', 'manager.subscriptionTypes.form.formatValid', array_keys($this->validFormats)));
@@ -121,7 +118,6 @@ class SubscriptionTypeForm extends Form {
 					'description' => $subscriptionType->getDescription(null), // Localized
 					'cost' => $subscriptionType->getCost(),
 					'currency' => $subscriptionType->getCurrencyCodeAlpha(),
-					'nonExpiring' => $subscriptionType->getNonExpiring(),
 					'duration' => $subscriptionType->getDuration(),
 					'format' => $subscriptionType->getFormat(),
 					'institutional' => $subscriptionType->getInstitutional(),
@@ -139,13 +135,9 @@ class SubscriptionTypeForm extends Form {
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-		$this->readUserVars(array('name', 'description', 'cost', 'currency', 'nonExpiring', 'duration', 'format', 'institutional', 'membership', 'disable_public_display'));
+		$this->readUserVars(array('name', 'description', 'cost', 'currency', 'duration', 'format', 'institutional', 'membership', 'disable_public_display'));
 
-		// If expiring subscription type, ensure duration is provided and valid
-		if ($this->getData('nonExpiring') === 0) {
-			$this->addCheck(new FormValidator($this, 'duration', 'required', 'manager.subscriptionTypes.form.durationRequired'));
-			$this->addCheck(new FormValidatorCustom($this, 'duration', 'required', 'manager.subscriptionTypes.form.durationNumeric', create_function('$duration', 'return (is_numeric($duration) && $duration >= 0);')));
-		}
+		$this->addCheck(new FormValidatorCustom($this, 'duration', 'optional', 'manager.subscriptionTypes.form.durationNumeric', create_function('$duration', 'return (is_numeric($duration) && $duration >= 0);')));
 	}
 
 	/**
@@ -153,17 +145,13 @@ class SubscriptionTypeForm extends Form {
 	 */
 	function execute() {
 		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
-		$nonExpiring = null; // Suppress scrutinizer warn
 
 		if (isset($this->typeId)) {
 			$subscriptionType = $subscriptionTypeDao->getById($this->typeId, $this->journalId);
-			$nonExpiring = $subscriptionType->getNonExpiring();
 		}
 
 		if (!isset($subscriptionType)) {
-			$subscriptionType = new SubscriptionType();
-			$nonExpiring = $this->getData('nonExpiring') == null ? 0 : $this->getData('nonExpiring');
-			$subscriptionType->setNonExpiring($nonExpiring);
+			$subscriptionType = $subscriptionTypeDao->newDataObject();
 			$subscriptionType->setInstitutional($this->getData('institutional') == null ? 0 : $this->getData('institutional'));
 		}
 
@@ -173,17 +161,17 @@ class SubscriptionTypeForm extends Form {
 		$subscriptionType->setDescription($this->getData('description'), null); // Localized
 		$subscriptionType->setCost(round($this->getData('cost'), 2));
 		$subscriptionType->setCurrencyCodeAlpha($this->getData('currency'));
-		$subscriptionType->setDuration($nonExpiring ? null : (int)$this->getData('duration'));
+		$subscriptionType->setDuration(($duration=$this->getData('duration'))?(int) $duration:null);
 		$subscriptionType->setFormat($this->getData('format'));
 		$subscriptionType->setMembership($this->getData('membership') == null ? 0 : $this->getData('membership'));
 		$subscriptionType->setDisablePublicDisplay($this->getData('disable_public_display') == null ? 0 : $this->getData('disable_public_display'));
 
 		// Update or insert subscription type
 		if ($subscriptionType->getId() != null) {
-			$subscriptionTypeDao->updateSubscriptionType($subscriptionType);
+			$subscriptionTypeDao->updateObject($subscriptionType);
 		} else {
 			$subscriptionType->setSequence(REALLY_BIG_NUMBER);
-			$subscriptionTypeDao->insertSubscriptionType($subscriptionType);
+			$subscriptionTypeDao->insertObject($subscriptionType);
 
 			// Re-order the subscription types so the new one is at the end of the list.
 			$subscriptionTypeDao->resequenceSubscriptionTypes($subscriptionType->getJournalId());

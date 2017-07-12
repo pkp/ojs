@@ -39,7 +39,7 @@ class UserIndividualSubscriptionForm extends Form {
 
 		$this->userId = isset($userId) ? (int) $userId : null;
 		$this->subscription = null;
-		$this->request =& $request;
+		$this->request = $request;
 
 		$subscriptionId = isset($subscriptionId) ? (int) $subscriptionId : null;
 
@@ -54,8 +54,8 @@ class UserIndividualSubscriptionForm extends Form {
 		$journalId = $journal->getId();
 
 		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
-		$subscriptionTypes =& $subscriptionTypeDao->getByInstitutional($journalId, false, false);
-		$this->subscriptionTypes =& $subscriptionTypes->toArray();
+		$subscriptionTypes = $subscriptionTypeDao->getByInstitutional($journalId, false, false);
+		$this->subscriptionTypes = $subscriptionTypes->toArray();
 
 		// Ensure subscription type is valid
 		$this->addCheck(new FormValidatorCustom($this, 'typeId', 'required', 'user.subscriptions.form.typeIdValid', create_function('$typeId, $journalId', '$subscriptionTypeDao = DAORegistry::getDAO(\'SubscriptionTypeDAO\'); return ($subscriptionTypeDao->subscriptionTypeExistsByTypeId($typeId, $journalId) && $subscriptionTypeDao->getSubscriptionTypeInstitutional($typeId) == 0) && $subscriptionTypeDao->getSubscriptionTypeDisablePublicDisplay($typeId) == 0;'), array($journal->getId())));
@@ -76,7 +76,7 @@ class UserIndividualSubscriptionForm extends Form {
 	 */
 	function initData() {
 		if (isset($this->subscription)) {
-			$subscription =& $this->subscription;
+			$subscription = $this->subscription;
 
 			$this->_data = array(
 				'typeId' => $subscription->getTypeId(),
@@ -123,14 +123,15 @@ class UserIndividualSubscriptionForm extends Form {
 		$journal = $this->request->getJournal();
 		$journalId = $journal->getId();
 		$typeId = $this->getData('typeId');
+		$individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
 		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
-		$nonExpiring = $subscriptionTypeDao->getSubscriptionTypeNonExpiring($typeId);
+		$subscriptionType = $subscriptionTypeDao->getById($typeId, $journalId);
+		$nonExpiring = $subscriptionType->getNonExpiring();
 		$today = date('Y-m-d');
 		$insert = false;
 
 		if (!isset($this->subscription)) {
-			import('classes.subscription.IndividualSubscription');
-			$subscription = new IndividualSubscription();
+			$subscription = $individualSubscriptionDao->newDataObject();
 			$subscription->setJournalId($journalId);
 			$subscription->setUserId($this->userId);
 			$subscription->setReferenceNumber(null);
@@ -138,12 +139,12 @@ class UserIndividualSubscriptionForm extends Form {
 
 			$insert = true;
 		} else {
-			$subscription =& $this->subscription;
+			$subscription = $this->subscription;
 		}
 
 		import('classes.payment.ojs.OJSPaymentManager');
 		$paymentManager = new OJSPaymentManager($this->request);
-		$paymentPlugin =& $paymentManager->getPaymentPlugin();
+		$paymentPlugin = $paymentManager->getPaymentPlugin();
 		
 		if ($paymentPlugin->getName() == 'ManualPayment') {
 			$subscription->setStatus(SUBSCRIPTION_STATUS_AWAITING_MANUAL_PAYMENT);
@@ -156,15 +157,11 @@ class UserIndividualSubscriptionForm extends Form {
 		$subscription->setDateStart($nonExpiring ? null : $today);
 		$subscription->setDateEnd($nonExpiring ? null : $today);
 
-		$individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
-		if ($insert) {
-			$individualSubscriptionDao->insertSubscription($subscription);
+		if ($subscription->getId()) {
+			$individualSubscriptionDao->updateObject($subscription);
 		} else {
-			$individualSubscriptionDao->updateSubscription($subscription);
+			$individualSubscriptionDao->insertObject($subscription);
 		}
-
-		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
-		$subscriptionType = $subscriptionTypeDao->getById($this->getData('typeId'));
 
 		$queuedPayment = $paymentManager->createQueuedPayment($journalId, PAYMENT_TYPE_PURCHASE_SUBSCRIPTION, $this->userId, $subscription->getId(), $subscriptionType->getCost(), $subscriptionType->getCurrencyCodeAlpha());
 		$queuedPaymentId = $paymentManager->queuePayment($queuedPayment);

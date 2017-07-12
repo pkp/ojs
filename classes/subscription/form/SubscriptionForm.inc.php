@@ -117,7 +117,8 @@ class SubscriptionForm extends Form {
 		}
 
 		// If subscription type requires it, start and end dates are provided
-		$nonExpiring = $subscriptionTypeDao->getSubscriptionTypeNonExpiring($this->getData('typeId'));
+		$subscriptionType = $subscriptionTypeDao->getById($this->getData('typeId'));
+		$nonExpiring = $subscriptionType->getNonExpiring();
 
 		if (!$nonExpiring) {
 			// Start date is provided and is valid
@@ -155,9 +156,11 @@ class SubscriptionForm extends Form {
 		$subscription->setNotes($this->getData('notes') ? $this->getData('notes') : null);
 
 		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
-		$nonExpiring = $subscriptionTypeDao->getSubscriptionTypeNonExpiring($this->getData('typeId'));
-		$subscription->setDateStart($nonExpiring ? null : $this->getData('dateStart'));
-		$subscription->setDateEnd($nonExpiring ? null : $this->getData('dateEnd'));
+		$subscriptionType = $subscriptionTypeDao->getById($subscription->getTypeId());
+		if (!$subscriptionType->getNonExpiring()) {
+			$subscription->setDateStart($this->getData('dateStart'));
+			$subscription->setDateEnd($this->getData('dateEnd'));
+		}
 	}
 
 	/**

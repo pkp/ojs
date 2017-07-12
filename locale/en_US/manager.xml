@@ -416,6 +416,7 @@
 	<message key="manager.subscriptions">Subscriptions</message>
 	<message key="manager.individualSubscriptions">Individual Subscriptions</message>
 	<message key="manager.institutionalSubscriptions">Institutional Subscriptions</message>
+	<message key="manager.subscriptions.confirmRenew">Are you sure you want to renew this subscription?</message>
 	<message key="manager.subscriptions.confirmDelete">Are you sure you want to delete this subscription?</message>
 	<message key="manager.subscriptions.summary">Subscriptions Summary</message>
 	<message key="manager.subscriptions.create">Create New Subscription</message>

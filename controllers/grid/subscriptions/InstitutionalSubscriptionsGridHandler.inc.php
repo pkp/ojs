@@ -80,7 +80,7 @@ class InstitutionalSubscriptionsGridHandler extends SubscriptionsGridHandler {
 		$this->addColumn(
 			new GridColumn(
 				'dateEnd',
-				'manager.subscriptions.dateStart',
+				'manager.subscriptions.dateEnd',
 				null,
 				null,
 				$cellProvider

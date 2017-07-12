@@ -18,6 +18,14 @@ import('classes.subscription.SubscriptionType');
 
 class SubscriptionTypeDAO extends DAO {
 	/**
+	 * Create a new subscription type.
+	 * @return SubscriptionType
+	 */
+	function newDataObject() {
+		return new SubscriptionType();
+	}
+
+	/**
 	 * Retrieve a subscription type by ID.
 	 * @param $typeId int
 	 * @param $journalId int optional
@@ -95,22 +103,6 @@ class SubscriptionTypeDAO extends DAO {
 	}
 
 	/**
-	 * Retrieve nonExpiring flag by ID.
-	 * @param $typeId int
-	 * @return int
-	 */
-	function getSubscriptionTypeNonExpiring($typeId) {
-		$result = $this->retrieve(
-			'SELECT non_expiring FROM subscription_types WHERE type_id = ?', (int) $typeId
-		);
-
-		$returner = isset($result->fields[0]) ? $result->fields[0] : false;
-
-		$result->Close();
-		return $returner;
-	}
-
-	/**
 	 * Retrieve public display flag by ID.
 	 * @param $typeId int
 	 * @return int
@@ -155,12 +147,11 @@ class SubscriptionTypeDAO extends DAO {
 	 * @return SubscriptionType
 	 */
 	function _fromRow($row) {
-		$subscriptionType = new SubscriptionType();
+		$subscriptionType = $this->newDataObject();
 		$subscriptionType->setId($row['type_id']);
 		$subscriptionType->setJournalId($row['journal_id']);
 		$subscriptionType->setCost($row['cost']);
 		$subscriptionType->setCurrencyCodeAlpha($row['currency_code_alpha']);
-		$subscriptionType->setNonExpiring($row['non_expiring']);
 		$subscriptionType->setDuration($row['duration']);
 		$subscriptionType->setFormat($row['format']);
 		$subscriptionType->setInstitutional($row['institutional']);
@@ -187,7 +178,7 @@ class SubscriptionTypeDAO extends DAO {
 	 * Update the localized settings for this object
 	 * @param $subscriptionType object
 	 */
-	function updateLocaleFields(&$subscriptionType) {
+	function updateLocaleFields($subscriptionType) {
 		$this->updateDataObjectSettings('subscription_type_settings', $subscriptionType, array(
 			'type_id' => $subscriptionType->getId()
 		));
@@ -196,25 +187,24 @@ class SubscriptionTypeDAO extends DAO {
 	/**
 	 * Insert a new SubscriptionType.
 	 * @param $subscriptionType SubscriptionType
-	 * @return boolean 
+	 * @return int Inserted subscription type ID
 	 */
-	function insertSubscriptionType(&$subscriptionType) {
+	function insertObject($subscriptionType) {
 		$this->update(
 			'INSERT INTO subscription_types
-				(journal_id, cost, currency_code_alpha, non_expiring, duration, format, institutional, membership, disable_public_display, seq)
+				(journal_id, cost, currency_code_alpha, duration, format, institutional, membership, disable_public_display, seq)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
-				$subscriptionType->getJournalId(),
-				$subscriptionType->getCost(),
+				(int) $subscriptionType->getJournalId(),
+				(float) $subscriptionType->getCost(),
 				$subscriptionType->getCurrencyCodeAlpha(),
-				$subscriptionType->getNonExpiring(),
 				$subscriptionType->getDuration(),
 				$subscriptionType->getFormat(),
-				$subscriptionType->getInstitutional(),
+				(int) $subscriptionType->getInstitutional(),
 				$subscriptionType->getMembership(),
-				$subscriptionType->getDisablePublicDisplay(),
-				$subscriptionType->getSequence()
+				(int) $subscriptionType->getDisablePublicDisplay(),
+				(float) $subscriptionType->getSequence(),
 			)
 		);
 
@@ -226,16 +216,14 @@ class SubscriptionTypeDAO extends DAO {
 	/**
 	 * Update an existing subscription type.
 	 * @param $subscriptionType SubscriptionType
-	 * @return boolean
 	 */
-	function updateSubscriptionType(&$subscriptionType) {
-		$returner = $this->update(
+	function updateObject($subscriptionType) {
+		$this->update(
 			'UPDATE subscription_types
 				SET
 					journal_id = ?,
 					cost = ?,
 					currency_code_alpha = ?,
-					non_expiring = ?,
 					duration = ?,
 					format = ?,
 					institutional = ?,
@@ -244,21 +232,19 @@ class SubscriptionTypeDAO extends DAO {
 					seq = ?
 				WHERE type_id = ?',
 			array(
-				$subscriptionType->getJournalId(),
+				(int) $subscriptionType->getJournalId(),
 				$subscriptionType->getCost(),
 				$subscriptionType->getCurrencyCodeAlpha(),
-				$subscriptionType->getNonExpiring(),
 				$subscriptionType->getDuration(),
 				$subscriptionType->getFormat(),
-				$subscriptionType->getInstitutional(),
+				(int) $subscriptionType->getInstitutional(),
 				$subscriptionType->getMembership(),
-				$subscriptionType->getDisablePublicDisplay(),
-				$subscriptionType->getSequence(),
-				$subscriptionType->getId()
+				(int) $subscriptionType->getDisablePublicDisplay(),
+				(float) $subscriptionType->getSequence(),
+				(int) $subscriptionType->getId(),
 			)
 		);
 		$this->updateLocaleFields($subscriptionType);
-		return $returner;
 	}
 
 	/**
@@ -266,29 +252,21 @@ class SubscriptionTypeDAO extends DAO {
 	 * type ID are also deleted.
 	 * @param $typeId int Subscription type ID
 	 * @param $journalId int Optional journal ID
-	 * @return boolean true for success
 	 */
 	function deleteById($typeId, $journalId = null) {
 		$subscriptionType = $this->getById($typeId, $journalId);
 		if ($subscriptionType) {
-			if ($subscriptionType->getInstitutional()) {
-				$subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
-			} else {
-				$subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
-			}
+			$subscriptionDao = DAORegistry::getDAO($subscriptionType->getInstitutional()?'InstitutionalSubscriptionDAO':'IndividualSubscriptionDAO');
 			$subscriptionDao->deleteById($typeId);
-			$returner = $this->update('DELETE FROM subscription_types WHERE type_id = ?', (int) $typeId);
+			$this->update('DELETE FROM subscription_types WHERE type_id = ?', (int) $typeId);
 			$this->update('DELETE FROM subscription_type_settings WHERE type_id = ?', (int) $typeId);
-			return true;
 		}
-		return false;
 	}
 
 	/**
 	 * Delete subscription types by journal ID. Note that all subscriptions with
 	 * corresponding types are also deleted.
 	 * @param $journalId int
-	 * @return boolean
 	 */
 	function deleteByJournal($journalId) {
 		$result = $this->retrieve(
@@ -297,20 +275,14 @@ class SubscriptionTypeDAO extends DAO {
 			 WHERE  journal_id = ?',
 			 (int) $journalId
 		);
-
-		$returner = false;
-
 		if ($result->RecordCount() != 0) {
-			$returner = true;
 			while (!$result->EOF && $returner) {
 				$typeId = $result->fields[0];
 				$returner = $this->deleteSubscriptionTypeById($typeId);
 				$result->MoveNext();
 			}
 		}
-
 		$result->Close();
-		return $returner;
 	}
 
 	/**
@@ -331,34 +303,21 @@ class SubscriptionTypeDAO extends DAO {
 	 * Retrieve subscription types matching a particular journal ID and institutional flag.
 	 * @param $journalId int
 	 * @param $institutional bool
-	 * @param $disablePublicDisplay bool
+	 * @param $disablePublicDisplay bool|null
 	 * @return object DAOResultFactory containing matching SubscriptionTypes
 	 */
 	function getByInstitutional($journalId, $institutional = false, $disablePublicDisplay = null, $rangeInfo = null) {
-		if ($institutional) $institutional = 1; else $institutional = 0;
-
-		if ($disablePublicDisplay === null) {
-			$disablePublicDisplaySql = '';
-		} elseif ($disablePublicDisplay) {
-			$disablePublicDisplaySql = 'AND disable_public_display = 1';
-		} else {
-			$disablePublicDisplaySql = 'AND disable_public_display = 0';
-		}
-
 		$result = $this->retrieveRange(
-			'SELECT *
-			FROM
-			subscription_types
-			WHERE journal_id = ?
-			AND institutional = ? '
-			. $disablePublicDisplaySql .
-			' ORDER BY seq',
-			array(
-				$journalId,
-				$institutional
-			),
+			'SELECT	*
+			FROM subscription_types
+			WHERE	journal_id = ?
+				AND institutional = ?
+				' . ($disablePublicDisplaySql===true?'AND disable_public_display = 1':'') . '
+				' . ($disablePublicDisplaySql===false?'AND disable_public_display = 0':'') . '
+			ORDER BY seq',
+			array((int) $journalId, (int) $institutional),
 			$rangeInfo
-			);
+		);
 
 		return new DAOResultFactory($result, $this, '_fromRow');
 	}
@@ -370,22 +329,15 @@ class SubscriptionTypeDAO extends DAO {
 	 * @return boolean
 	 */
 	function subscriptionTypesExistByInstitutional($journalId, $institutional = false) {
-		if ($institutional) $institutional = 1; else $institutional = 0;
-
 		$result = $this->retrieve(
 			'SELECT COUNT(*)
 			FROM
 			subscription_types st
 			WHERE st.journal_id = ?
 			AND st.institutional = ?',
-			array(
-				$journalId,
-				$institutional
-			)
+			array((int) $journalId, (int) $institutional)
 		);
-
 		$returner = isset($result->fields[0]) && $result->fields[0] != 0 ? true : false;
-
 		$result->Close();
 		return $returner;
 	}
@@ -404,7 +356,7 @@ class SubscriptionTypeDAO extends DAO {
 	function resequenceSubscriptionTypes($journalId) {
 		$result = $this->retrieve(
 			'SELECT type_id FROM subscription_types WHERE journal_id = ? ORDER BY seq',
-			$journalId
+			(int) $journalId
 		);
 
 		for ($i=1; !$result->EOF; $i++) {
@@ -412,8 +364,8 @@ class SubscriptionTypeDAO extends DAO {
 			$this->update(
 				'UPDATE subscription_types SET seq = ? WHERE type_id = ?',
 				array(
-					$i,
-					$subscriptionTypeId
+					(int) $i,
+					(int) $subscriptionTypeId
 				)
 			);
 

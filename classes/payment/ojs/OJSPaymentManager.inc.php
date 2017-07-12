@@ -255,7 +255,7 @@ class OJSPaymentManager extends PaymentManager {
 					import('classes.subscription.InstitutionalSubscription');
 					$subscription->setStatus(SUBSCRIPTION_STATUS_NEEDS_APPROVAL);
 					if ($subscription->isNonExpiring()) {
-						$institutionalSubscriptionDao->updateSubscription($subscription);
+						$institutionalSubscriptionDao->updateObject($subscription);
 					} else {
 						$institutionalSubscriptionDao->renewSubscription($subscription);
 					}
@@ -270,7 +270,7 @@ class OJSPaymentManager extends PaymentManager {
 					import('classes.subscription.IndividualSubscription');
 					$subscription->setStatus(SUBSCRIPTION_STATUS_ACTIVE);
 					if ($subscription->isNonExpiring()) {
-						$individualSubscriptionDao->updateSubscription($subscription);
+						$individualSubscriptionDao->updateObject($subscription);
 					} else {
 						$individualSubscriptionDao->renewSubscription($subscription);
 					}
