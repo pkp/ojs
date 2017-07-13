@@ -13,11 +13,11 @@
  * @brief Submission list Query builder
  */
 
-namespace App\Services\QueryBuilders;
+namespace OJS\Services\QueryBuilders;
 
 use Illuminate\Database\Capsule\Manager as Capsule;
 
-class SubmissionListQueryBuilder extends PKPSubmissionListQueryBuilder {
+class SubmissionListQueryBuilder extends \PKP\Services\QueryBuilders\PKPSubmissionListQueryBuilder {
 
 	/** @var int|array Section ID(s) */
 	protected $sectionIds = null;
@@ -27,7 +27,7 @@ class SubmissionListQueryBuilder extends PKPSubmissionListQueryBuilder {
 	 *
 	 * @param int|array $sectionIds
 	 *
-	 * @return \App\Services\QueryBuilders\SubmissionListQueryBuilder
+	 * @return \OJS\Services\QueryBuilders\SubmissionListQueryBuilder
 	 */
 	public function filterBySections($sectionIds) {
 		if (!is_null($sectionIds) && !is_array($sectionIds)) {

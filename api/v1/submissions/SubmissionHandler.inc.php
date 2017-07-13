@@ -135,7 +135,7 @@ class SubmissionHandler extends APIHandler {
 				$data[] = $entry;
 			}
 		}
-		catch (App\Services\Exceptions\InvalidSubmissionException $e) {
+		catch (PKP\Services\Exceptions\InvalidSubmissionException $e) {
 			return $response->withStatus(404)->withJsonError('api.submissions.404.resourceNotFound');
 		}
 
@@ -187,7 +187,7 @@ class SubmissionHandler extends APIHandler {
 			$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
 			$data = $submissionService->getGalleys($context->getId(), $submission);
 		}
-		catch (App\Services\Exceptions\SubmissionStageNotValidException $e) {
+		catch (PKP\Services\Exceptions\SubmissionStageNotValidException $e) {
 			return $response->withStatus(400)->withJsonError('api.submissions.400.stageNotValid');
 		}
 
