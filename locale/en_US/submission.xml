@@ -11,7 +11,7 @@
   * Localization strings.
   -->
 
-<locale name="en_US" full_name = "English">
+<locale name="en_US" full_name="English">
 	<!-- Submission wizard -->
 	<message key="submission.submit.title">Submit an Article</message>
 	<message key="submission.submit.userGroup">Submit in my role as...</message>
