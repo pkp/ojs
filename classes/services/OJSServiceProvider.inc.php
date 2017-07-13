@@ -16,6 +16,7 @@
 namespace OJS\Services;
 
 use \Pimple\Container;
+use \OJS\Services\IssueService;
 
 class OJSServiceProvider implements \Pimple\ServiceProviderInterface {
 
