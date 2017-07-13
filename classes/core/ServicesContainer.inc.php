@@ -22,7 +22,7 @@ class ServicesContainer extends PKPServicesContainer  {
 	 * container initialization
 	 */
 	protected function init() {
-		$this->container->register(new App\Services\OJSServiceProvider());
+		$this->container->register(new OJS\Services\OJSServiceProvider());
 	}
 
 }

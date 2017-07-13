@@ -13,10 +13,7 @@
  * @brief Utility class to package all OJS services
  */
 
-namespace App\Services;
-
-require_once(dirname(__FILE__) . '/../../lib/pkp/lib/vendor/pimple/pimple/src/Pimple/Container.php');
-require_once(dirname(__FILE__) . '/../../lib/pkp/lib/vendor/pimple/pimple/src/Pimple/ServiceProviderInterface.php');
+namespace OJS\Services;
 
 use \Pimple\Container;
 
