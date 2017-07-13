@@ -109,7 +109,6 @@
 	<message key="editor.issues.galleyLocaleRequired">Язык гранки выпуска обязателен.</message>
 	<message key="editor.issues.galleyPublicIdentificationExists">Открытая идентификация гранки выпуска уже существует.</message>
 	<message key="editor.issues.backToIssueGalleys">Назад к гранкам выпуска</message>
-	<message key="editor.issues.viewingGalley">Просмотр гранки выпуска</message>
 	<message key="editor.issues.confirmDeleteGalley">Вы уверены, что хотите удалить эту гранку выпуска?</message>
 	<message key="editor.issues.identifiers">Идентификаторы</message>
 	<message key="editor.navigation.futureIssues">Будущие выпуски</message>

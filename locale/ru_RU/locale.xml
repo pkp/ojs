@@ -1103,4 +1103,5 @@
 
 	<message key="editor.issues.backIssues">Прошлые выпуски</message>
 	<message key="editor.issues.futureIssues">Будущие выпуски</message>
+	<message key="navigation.subscriptions">Подписки</message>
 </locale>
