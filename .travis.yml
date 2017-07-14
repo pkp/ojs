@@ -10,7 +10,7 @@ language: php
 php:
   - 5.3
   - 5.6
-  - 7.1
+#  - 7.1 DISABLED pending ADODB upgrade or other phpunit warning resolution
 group: deprecated-2017Q1
 python:
   - 3.3
