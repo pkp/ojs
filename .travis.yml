@@ -11,7 +11,8 @@ php:
   - 5.3
   - 5.6
 #  - 7.1 DISABLED pending ADODB upgrade or other phpunit warning resolution
-group: deprecated-2017Q1
+# group: deprecated-2017Q1
+dist: trusty
 python:
   - 3.3
 addons:
