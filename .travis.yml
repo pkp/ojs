@@ -19,8 +19,10 @@ addons:
 git:
   # We have to init submodules ourselves to make it recursive
   submodules: false
-
+addons:
+  firefox: "49.0"
 before_install:
+
   # Start submodules
   - ./tools/startSubmodulesTRAVIS.sh
 
