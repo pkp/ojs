@@ -20,7 +20,7 @@ git:
   # We have to init submodules ourselves to make it recursive
   submodules: false
 addons:
-  firefox: "49.0"
+  firefox: "45.9.0esr"
 before_install:
 
   # Start submodules
