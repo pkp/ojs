@@ -8,10 +8,10 @@ env:
   - secure: "nxosaZUBRaYhk8+LHaDnVgMIveiK4zewiXW5Fw5TtB/D6V67oASufil1uhcayyzIBwnrZZmrFPLhXm0Lm1RiQHrsftffcMB5JlWK9R9EyWpyd87ewqWy3kXBAvsXXTU6ihGiaFpklhVCKt7XcDSR8bWEb2NVWrM7JS7dHDKMwaA="
 language: php
 php:
-  - 5.3
   - 5.6
-#  - 7.1 DISABLED pending ADODB upgrade or other phpunit warning resolution
-group: deprecated-2017Q1
+  - 7.1
+# group: deprecated-2017Q1
+dist: trusty
 python:
   - 3.3
 addons:
@@ -19,8 +19,10 @@ addons:
 git:
   # We have to init submodules ourselves to make it recursive
   submodules: false
-
+addons:
+  firefox: "45.9.0esr"
 before_install:
+
   # Start submodules
   - ./tools/startSubmodulesTRAVIS.sh
 
