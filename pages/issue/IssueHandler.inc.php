@@ -101,7 +101,7 @@ class IssueHandler extends Handler {
 				$request->redirect(null, null, 'download', array($issue->getBestIssueId($journal), $galley->getBestGalleyId($journal)));
 			}
 		} else {
-			$this->_setupIssueTemplate($request, $issue, $request->getUserVar('showToc') ? true : false);
+			self::_setupIssueTemplate($request, $issue, $request->getUserVar('showToc') ? true : false);
 			$templateMgr->assign('issueId', $issue->getBestIssueId());
 
 			// consider public identifiers
@@ -253,16 +253,12 @@ class IssueHandler extends Handler {
 	 * 	the cover page will be displayed. Otherwise table of contents
 	 * 	will be displayed.
 	 */
-	function _setupIssueTemplate($request, $issue, $showToc = false) {
+	static function _setupIssueTemplate($request, $issue, $showToc = false) {
 		$journal = $request->getJournal();
 		$templateMgr = TemplateManager::getManager($request);
 
 		// Determine pre-publication access
 		// FIXME: Do that. (Bug #8278)
-
-		if (!$issue) {
-			$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
-		}
 
 		$templateMgr->assign(array(
 			'issueIdentification' => $issue->getIssueIdentification(),
