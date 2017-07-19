@@ -80,14 +80,14 @@ class UserAction {
 			if ($oldUserValidSubscription) {
 				// Check if new user has a valid subscription for current journal
 				$newUserSubscription = $individualSubscriptionDao->getByUserId($newUserId, $subscriptionJournalId);
-				if (!$newUserSubscription)) {
+				if (!$newUserSubscription) {
 					// New user does not have this subscription, transfer old user's
 					$oldUserSubscription->setUserId($newUserId);
 					$individualSubscriptionDao->updateObject($oldUserSubscription);
 				} elseif (!$individualSubscriptionDao->isValidIndividualSubscription($newUserId, $subscriptionJournalId)) {
 					// New user has a subscription but it's invalid. Delete it and
 					// transfer old user's valid one
-					$individualSubscriptionDao->deleteSubscriptionsByUserIdForJournal($newUserId, $subscriptionJournalId);
+					$individualSubscriptionDao->deleteByUserIdForJournal($newUserId, $subscriptionJournalId);
 					$oldUserSubscription->setUserId($newUserId);
 					$individualSubscriptionDao->updateObject($oldUserSubscription);
 				}
@@ -95,7 +95,7 @@ class UserAction {
 		}
 
 		// Delete any remaining old user's subscriptions not transferred to new user
-		$individualSubscriptionDao->deleteSubscriptionsByUserId($oldUserId);
+		$individualSubscriptionDao->deleteByUserId($oldUserId);
 
 		// Transfer all old user's institutional subscriptions for each journal to
 		// new user. New user now becomes the contact person for these.
