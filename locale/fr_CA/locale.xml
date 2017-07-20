@@ -681,7 +681,6 @@ Actuellement, votre serveur prend en charge mbstring: <strong>{$supportsMBString
 	<message key="reader.openAccess">Accès libre</message>
 	<message key="reader.subscriptionAccess">Accès sous abonnement</message>
 	<message key="reader.subscriptionOrFeeAccess">Accès sous abonnement ou avec frais</message>
-	<message key="plugins.categories.citationFormats.description">Les plugiciels de format de citation fournissent aux utilisateurs différents formats par lesquels ils peuvent accéder aux citations d'articles.</message>
 	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Le téléchargement des modules linguistiques à partir du serveur Web du Public Knowledge Project n'est pas disponible présentement car :</p>
 	<ul>
 		<li>Votre serveur n'a pas ou ne permet pas l'exécution de l'utilitaire "tar" de GNU</li>

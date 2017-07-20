@@ -370,7 +370,6 @@
        <message key="plugins.categories.viewableFiles">Модулі гранок статей</message>
        <message key="plugins.categories.viewableFiles.description">Модулі гранок статей додають підтримку відображення документів різних типів як гранок статті.</message>
        <message key="plugins.categories.auth.description">Модулі авторизації дозволяють Open Journal Systems делегувати завдання щодо аутентифікації користувачів іншим системам, таким як сервери LDAP.</message>
-       <message key="plugins.categories.citationFormats.description">Модулі форматів цитування дозволяють користувачам використовувати різні формати цитування статей.</message>
        <message key="plugins.categories.generic.description">Загальні модулі дозволяють багатьма шляхами розширити функціональність Open Journal Systems.</message>
 
 
@@ -1132,6 +1131,3 @@
        <message key="editor.issues.futureIssues">Наступні випуски</message>
 
 </locale>
-
-
-

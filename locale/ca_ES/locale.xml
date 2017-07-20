@@ -339,7 +339,6 @@
 
 	<!-- General plugin information -->
 	<message key="plugins.categories.auth.description">Els mòduls d’autorització permeten que l’Open Journal Systems delegui les tasques d’autenticació d’usuaris/àries a altres sistemes, com ara els servidors LDAP.</message>
-	<message key="plugins.categories.citationFormats.description">Els mòduls de format de citació permeten als usuaris/àries accedir a les citacions d’articles amb diversos formats.</message>
 	<message key="plugins.categories.generic.description">Els mòduls genèrics s’utilitzen per ampliar les funcionalitats de l’Open Journal Systems no incloses en altres categories de mòduls.</message>
 
 	<!-- Files Browser -->

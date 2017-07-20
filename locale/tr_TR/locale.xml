@@ -409,7 +409,6 @@
 	<message key="plugins.categories.auth.description">ADS Yetkilendirme Eklentileri, LDAP sunucuları gibi diğer sistemlere kullanıcı kimlik doğrulaması için izin verir.</message>
 
 
-	<message key="plugins.categories.citationFormats.description">Atıf biçimi eklentileri çeşitli biçimler ile makale atıflarına erişimde kullanıcılara destek sağlar.</message>
 
 
 	<message key="plugins.categories.generic.description">Genel eklentiler, diğer eklenti kategorileri tarafından desteklenmeyen çeşitli yollarla Açık Dergi Sistemleri kullanımını genişletmekte kullanılır.</message>

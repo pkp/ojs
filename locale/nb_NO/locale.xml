@@ -826,7 +826,6 @@ Valideringen kan for eksempel svikte på søkesteder som krever utfylling av skj
 		<li>OJS greier ikke å modifisere registerfilen for lokalfiler, som vanligvis heter "registry/locales.xml".</li>
 	</ul>
 <p>Pakkene med oversatte lokalfiler kan lastes ned manuelt fra <a href="http://pkp.sfu.ca">PKP-nettstedet</a>.</p>]]></message>
-	<message key="plugins.categories.citationFormats.description">Siteringsformat-programutvidelser gir brukerne forskjellige formater for referanse til artiklene.</message>
 	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Forslag til <i>Creative Commons Copyright Notices</i> på engelsk</h3>
 <h4>1. Forslag til retningslinjer for tidsskrift som tilbyr <i>Open Access</i></h4>
 Authors who publish with this journal agree to the following terms:
