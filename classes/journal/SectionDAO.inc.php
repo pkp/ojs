@@ -140,7 +140,7 @@ class SectionDAO extends PKPSectionDAO {
 	 */
 	public function getBySubmissionId($submissionId) {
 		$result = $this->retrieve('SELECT sections.* FROM sections
-				LEFT JOIN submissions
+				JOIN submissions
 				ON (submissions.section_id = sections.section_id)
 				WHERE submissions.submission_id = ?',
 			array((int) $submissionId));
