@@ -161,7 +161,7 @@
 		<code function="fixAuthorGroup" />
 		<data file="dbscripts/xml/upgrade/3.0.0_reviewer_files.xml" />
 		<code function="removeCancelledReviewAssignments" condition="return $installer->tableExists('review_assignments_tmp');" />
-		<data file="dbscripts/xml/upgrade/3.1.0_notifications.xml" condition="return $installer->tableExists('notifications');" />
+		<data file="dbscripts/xml/upgrade/3.1.0_notifications.xml" />
 		<data file="dbscripts/xml/upgrade/3.1.0_notes.xml" condition="return $installer->tableExists('notes_tmp');" />
 		<data file="dbscripts/xml/upgrade/3.1.0_galley_settings.xml" condition="return $installer->tableExists('article_galley_settings');" />
 		<data file="dbscripts/xml/upgrade/3.1.0_update.xml" />
