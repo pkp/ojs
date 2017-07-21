@@ -263,7 +263,7 @@
 						<div class="label">
 							{translate key="submission.howToCite"}
 						</div>
-						<div class="value" data-csl-citation="1" data-csl-citation-label="More Citation Formats" data-csl-download-label="Download Citation">
+						<div class="value">
 							<div id="citationOutput" role="region" aria-live="polite">
 								{$citation}
 							</div>
