@@ -18,6 +18,18 @@ import('classes.plugins.PubIdPlugin');
 
 class DOIPubIdPlugin extends PubIdPlugin {
 
+	/**
+	 * @copydoc Plugin::register()
+	 */
+	public function register($category, $path) {
+		$success = parent::register($category, $path);
+		if (!Config::getVar('general', 'installed') || defined('RUNNING_UPGRADE')) return $success;
+		if ($success && $this->getEnabled()) {
+			HookRegistry::register('CitationStyleLanguage::citation', array($this, 'getCitationData'));
+		}
+		return $success;
+	}
+
 	//
 	// Implement template methods from Plugin.
 	//
@@ -213,6 +225,36 @@ class DOIPubIdPlugin extends PubIdPlugin {
 	 */
 	function validatePubId($pubId) {
 		return preg_match('/^\d+(.\d+)+\//', $pubId);
+	}
+
+	/*
+	 * Public methods
+	 */
+	/**
+	 * Add DOI to citation data used by the CitationStyleLanguage plugin
+	 *
+	 * @see CitationStyleLanguagePlugin::getCitation()
+	 * @param $hookname string
+	 * @param $args array
+	 * @return false
+	 */
+	public function getCitationData($hookname, $args) {
+		$citationData = $args[0];
+		$article = $args[2];
+		$issue = $args[3];
+		$journal = $args[4];
+
+		if ($issue && $issue->getPublished()) {
+			$pubId = $article->getStoredPubId($this->getPubIdType());
+		} else {
+			$pubId = $this->getPubId($article);
+		}
+
+		if (!$pubId) {
+			return;
+		}
+
+		$citationData->DOI = $this->getResolvingURL($journal->getId(), $pubId);
 	}
 
 
