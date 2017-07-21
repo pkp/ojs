@@ -368,9 +368,7 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 
 		$this->updateLocaleFields($issue);
 
-		if ($this->customIssueOrderingExists($issue->getJournalId())) {
-			$this->resequenceCustomIssueOrders($issue->getJournalId());
-		}
+		$this->resequenceCustomIssueOrders($issue->getJournalId());
 
 		return $issue->getId();
 	}
@@ -446,9 +444,7 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 
 		$this->updateLocaleFields($issue);
 
-		if ($this->customIssueOrderingExists($issue->getJournalId())) {
-			$this->resequenceCustomIssueOrders($issue->getJournalId());
-		}
+		$this->resequenceCustomIssueOrders($issue->getJournalId());
 
 		$this->flushCache();
 	}
@@ -672,6 +668,10 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 	 * @param $journalId int
 	 */
 	function resequenceCustomIssueOrders($journalId) {
+		// If no custom issue ordering already exists, there is nothing to do
+		if (!$this->customIssueOrderingExists($journalId)) {
+			return;
+		}
 		$result = $this->retrieve(
 			'SELECT i.issue_id FROM issues i LEFT JOIN custom_issue_orders o ON (o.issue_id = i.issue_id) WHERE i.journal_id = ? ORDER BY o.seq',
 			(int) $journalId
