@@ -61,10 +61,10 @@ class PaypalPaymentPlugin extends PaymethodPlugin {
 	 * @see PaymentPlugin::isConfigured
 	 */
 	function isConfigured() {
-		$journal = $this->getRequest()->getJournal();
-		if (!$journal) return false;
-		if ($this->getSetting($journal->getId(), 'serviceUrl') == '') return false;
-		if ($this->getSetting($journal->getId(), 'accountName') == '') return false;
+		$context = $this->getRequest()->getContext();
+		if (!$context) return false;
+		if ($this->getSetting($context->getId(), 'serviceUrl') == '') return false;
+		if ($this->getSetting($context->getId(), 'accountName') == '') return false;
 		return true;
 	}
 
