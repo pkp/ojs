@@ -143,7 +143,7 @@ class ArticleHandler extends Handler {
 			$issueAction = new IssueAction();
 			$subscriptionRequired = false;
 			if ($issue) {
-				$subscriptionRequired = $issueAction->subscriptionRequired($issue);
+				$subscriptionRequired = $issueAction->subscriptionRequired($issue, $journal);
 			}
 
 			$subscribedUser = $issueAction->subscribedUser($journal, isset($issue) ? $issue->getId() : null, isset($article) ? $article->getId() : null);
@@ -265,13 +265,13 @@ class ArticleHandler extends Handler {
 
 		// If this is an editorial user who can view unpublished/unscheduled
 		// articles, bypass further validation. Likewise for its author.
-		if ($publishedArticle && $issueAction->allowedPrePublicationAccess($journal, $publishedArticle)) {
+		if ($publishedArticle && $issueAction->allowedPrePublicationAccess($journal, $publishedArticle, $user)) {
 			return true;
 		}
 
 		// Make sure the reader has rights to view the article/issue.
 		if ($issue && $issue->getPublished() && $publishedArticle->getStatus() == STATUS_PUBLISHED) {
-			$subscriptionRequired = $issueAction->subscriptionRequired($issue);
+			$subscriptionRequired = $issueAction->subscriptionRequired($issue, $journal);
 			$isSubscribedDomain = $issueAction->subscribedDomain($journal, $issue->getId(), $publishedArticle->getId());
 
 			// Check if login is required for viewing.

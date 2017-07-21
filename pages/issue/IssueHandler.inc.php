@@ -179,11 +179,11 @@ class IssueHandler extends Handler {
 
 		// If this is an editorial user who can view unpublished issue galleys,
 		// bypass further validation
-		if ($issueAction->allowedIssuePrePublicationAccess($journal)) return true;
+		if ($issueAction->allowedIssuePrePublicationAccess($journal, $user)) return true;
 
 		// Ensure reader has rights to view the issue galley
 		if ($issue->getPublished()) {
-			$subscriptionRequired = $issueAction->subscriptionRequired($issue);
+			$subscriptionRequired = $issueAction->subscriptionRequired($issue, $journal);
 			$isSubscribedDomain = $issueAction->subscribedDomain($journal, $issue->getId());
 
 			// Check if login is required for viewing.
@@ -284,7 +284,7 @@ class IssueHandler extends Handler {
 		// Subscription Access
 		import('classes.issue.IssueAction');
 		$issueAction = new IssueAction();
-		$subscriptionRequired = $issueAction->subscriptionRequired($issue);
+		$subscriptionRequired = $issueAction->subscriptionRequired($issue, $journal);
 		$subscribedUser = $issueAction->subscribedUser($journal);
 		$subscribedDomain = $issueAction->subscribedDomain($journal);
 
