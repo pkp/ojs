@@ -13,6 +13,7 @@ python:
   - 3.3
 addons:
   postgresql: "9.1"
+dist: precise
 git:
   # We have to init submodules ourselves to make it recursive
   submodules: false
