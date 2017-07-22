@@ -19,6 +19,7 @@ define('SUBMISSION_EDITOR_DECISION_EXTERNAL_REVIEW', 8);
 // Submission and review stages decision actions.
 define('SUBMISSION_EDITOR_DECISION_ACCEPT', 1);
 define('SUBMISSION_EDITOR_DECISION_DECLINE', 4);
+define('SUBMISSION_EDITOR_INITIAL_DECLINE', 9);
 
 // Review stage decisions actions.
 define('SUBMISSION_EDITOR_DECISION_PENDING_REVISIONS', 2);
@@ -117,7 +118,7 @@ class EditorDecisionActionsManager {
 				'help' => 'editor.review.NotifyAuthorAccept',
 				'titleIcon' => 'accept_submission',
 			),
-			SUBMISSION_EDITOR_DECISION_DECLINE => array(
+			SUBMISSION_EDITOR_INITIAL_DECLINE => array(
 				'name' => 'decline',
 				'operation' => 'sendReviews',
 				'title' => 'editor.submission.decision.decline',
