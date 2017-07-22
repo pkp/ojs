@@ -800,4 +800,13 @@ Submission URL: {$submissionUrl}<br />
 		<body><![CDATA[Please enter your message.]]></body>
 		<description>The default (blank) message used in the Notification Center Message Listbuilder.</description>
 	</email_text>
+	<email_text key="EDITOR_INITIAL_DECLINE">
+		<subject>Your submission has been declined</subject>
+		<body>
+			<![CDATA[Your submission has been declined
+<br />
+{$editorialContactSignature}]]>
+		</body>
+		<description>This email is send to the author if the editor declines his submission initially, before the review stage</description>
+	</email_text>
 </email_texts>
