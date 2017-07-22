@@ -25,7 +25,7 @@
 					baseUrl: {$baseUrl|json_encode},
 					filters: {ldelim}
 						mime_types : [
-							{ldelim} title : "Image files", extensions : "jpg,jpeg,png" {rdelim}
+							{ldelim} title : "Image files", extensions : "jpg,jpeg,png,svg" {rdelim}
 						]
 					{rdelim},
 					multipart_params: {ldelim}
