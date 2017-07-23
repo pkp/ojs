@@ -42,4 +42,7 @@
 
 	<!-- Reader Role -->
 	<group roleId="0x00100000" stages="" name="default.groups.name.reader" plural="default.groups.plural.reader" abbrev="default.groups.abbrev.reader" permitSelfRegistration="true" />
+
+	<!-- Subscription Manager Role -->
+	<group roleId="0x00200000" stages="" name="default.groups.name.subscriptionManager" plural="default.groups.plural.subscriptionManager" abbrev="default.groups.abbrev.subscriptionManager" />
 </groups>

@@ -188,7 +188,6 @@
 	<message key="editor.article.removeCoverPage">Azaleko irudia kendu?</message>
 	<message key="editor.article.remove">Kendu</message>
 	<message key="editor.submissionReview.cannotSendToCopyediting">Aurkezpena zuzentzera bidali baino lehen, erabili “Egileari Jakinarazi” esteka egileari erabakiaren berri emateko eta bidali behar den bertsioa hautatzeko.</message>
-	<message key="editor.submissionReview.sendToCopyediting">Bidali Zuzentzera</message>
 	<message key="editor.notifyUsers.allReaders">Irakurle guztiak ({$count} erabiltzaileak)</message>
 	<message key="editor.notifyUsers.allAuthors">Argitaratutako egile guztiak ({$count} users)</message>
 	<message key="editor.notifyUsers.allIndividualSubscribers">Harpidedun indibidual guztiak ({$count} erabiltzaileak)</message>

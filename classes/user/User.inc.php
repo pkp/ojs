@@ -18,10 +18,6 @@ import('lib.pkp.classes.user.PKPUser');
 
 class User extends PKPUser {
 
-	function __construct() {
-		parent::__construct();
-	}
-
 	/**
 	 * Retrieve array of user settings.
 	 * @param journalId int

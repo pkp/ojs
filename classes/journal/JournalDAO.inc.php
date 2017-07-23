@@ -22,12 +22,6 @@ define('JOURNAL_FIELD_TITLE', 1);
 define('JOURNAL_FIELD_SEQUENCE', 2);
 
 class JournalDAO extends ContextDAO {
-	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 
 	/**
 	 * Construct a new Journal.
@@ -90,15 +84,12 @@ class JournalDAO extends ContextDAO {
 		$emailTemplateDao->deleteEmailTemplatesByContext($journalId);
 
 		$subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
-		$subscriptionDao->deleteSubscriptionsByJournal($journalId);
+		$subscriptionDao->deleteByJournalId($journalId);
 		$subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
-		$subscriptionDao->deleteSubscriptionsByJournal($journalId);
+		$subscriptionDao->deleteByJournalId($journalId);
 
 		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
 		$subscriptionTypeDao->deleteSubscriptionTypesByJournal($journalId);
-
-		$giftDao = DAORegistry::getDAO('GiftDAO');
-		$giftDao->deleteGiftsByAssocId(ASSOC_TYPE_JOURNAL, $journalId);
 
 		$announcementDao = DAORegistry::getDAO('AnnouncementDAO');
 		$announcementDao->deleteByAssoc(ASSOC_TYPE_JOURNAL, $journalId);

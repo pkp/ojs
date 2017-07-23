@@ -37,12 +37,6 @@ define('CROSSREF_DEPOSIT_STATUS', 'depositStatus');
 
 
 class CrossRefExportPlugin extends DOIPubIdExportPlugin {
-	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 
 	/**
 	 * @copydoc Plugin::getName()

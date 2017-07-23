@@ -17,12 +17,6 @@
 import('lib.pkp.plugins.citationParser.parscit.PKPParscitCitationParserPlugin');
 
 class ParscitCitationParserPlugin extends PKPParscitCitationParserPlugin {
-	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 }
 
 ?>

@@ -27,48 +27,22 @@ class IssueAction {
 	 */
 
 	/**
-	 * Smarty usage: {print_issue_id articleId="$articleId"}
-	 *
-	 * Custom Smarty function for printing the issue id
-	 * @return string
-	 */
-	function smartyPrintIssueId($params, &$smarty) {
-		if (isset($params) && !empty($params)) {
-			if (isset($params['articleId'])) {
-				$issueDao = DAORegistry::getDAO('IssueDAO');
-				$issue = $issueDao->getByArticleId($params['articleId']);
-				if ($issue != null) {
-					return $issue->getIssueIdentification();
-				}
-			}
-		}
-	}
-
-	/**
 	 * Checks if subscription is required for viewing the issue
 	 * @param $issue Issue
 	 * @param $journal Journal
 	 * @return bool
 	 */
-	function subscriptionRequired(&$issue, $journal = null) {
-		// Check the issue.
-		if (!$issue) return false;
-
-		// Get the journal.
-		if (is_null($journal)) {
-			$journal = Request::getJournal();
-		}
-		if (!$journal || $journal->getId() !== $issue->getJournalId()) {
-			$journalDao = DAORegistry::getDAO('JournalDAO');
-			$journal = $journalDao->getById($issue->getJournalId());
-		}
-		if (!$journal) return false;
+	function subscriptionRequired($issue, $journal) {
+		assert(is_a($issue, 'Issue'));
+		assert(is_a($journal, 'Journal'));
+		assert($journal->getId() == $issue->getJournalId());
 
 		// Check subscription state.
 		$result = $journal->getSetting('publishingMode') == PUBLISHING_MODE_SUBSCRIPTION &&
-			$issue->getAccessStatus() != ISSUE_ACCESS_OPEN &&
-			(is_null($issue->getOpenAccessDate()) ||
-			strtotime($issue->getOpenAccessDate()) > time());
+			$issue->getAccessStatus() != ISSUE_ACCESS_OPEN && (
+				is_null($issue->getOpenAccessDate()) ||
+				strtotime($issue->getOpenAccessDate()) > time()
+			);
 		HookRegistry::call('IssueAction::subscriptionRequired', array(&$journal, &$issue, &$result));
 		return $result;
 	}
@@ -76,14 +50,14 @@ class IssueAction {
 	/**
 	 * Checks if this user is granted reader access to pre-publication articles
 	 * based on their roles in the journal (i.e. Manager, Editor, etc).
-	 * @param $journal object
-	 * @param $article object
+	 * @param $journal Journal
+	 * @param $article Article
+	 * @param $user User
 	 * @return bool
 	 */
-	function allowedPrePublicationAccess($journal, $article) {
-		if ($this->_roleAllowedPrePublicationAccess($journal)) return true;
+	function allowedPrePublicationAccess($journal, $article, $user) {
+		if ($this->_roleAllowedPrePublicationAccess($journal, $user)) return true;
 
-		$user = Request::getUser();
 		if ($user && $journal) {
 			$journalId = $journal->getId();
 			$userId = $user->getId();
@@ -103,8 +77,8 @@ class IssueAction {
 	 * @param $issue object
 	 * @return bool
 	 */
-	function allowedIssuePrePublicationAccess($journal) {
-		return $this->_roleAllowedPrePublicationAccess($journal);
+	function allowedIssuePrePublicationAccess($journal, $user) {
+		return $this->_roleAllowedPrePublicationAccess($journal, $user);
 	}
 
 	/**
@@ -118,7 +92,7 @@ class IssueAction {
 		$publishedArticle = $publishedArticleDao->getByArticleId($articleId, null, true);
 		$result = false;
 		if (isset($user) && isset($journal)) {
-			if ($publishedArticle && $this->allowedPrePublicationAccess($journal, $publishedArticle)) {
+			if ($publishedArticle && $this->allowedPrePublicationAccess($journal, $publishedArticle, $user)) {
 				 $result = true;
 			} else {
 				$result = $subscriptionDao->isValidIndividualSubscription($user->getId(), $journal->getId());
@@ -183,13 +157,12 @@ class IssueAction {
 	/**
 	 * Checks if this user is granted access to pre-publication galleys based on role
 	 * based on their roles in the journal (i.e. Manager, Editor, etc).
-	 * @param $journal object
-	 * @param $issue object
+	 * @param $journal Journal
+	 * @param $user User
 	 * @return bool
 	 */
-	function _roleAllowedPrePublicationAccess($journal) {
+	function _roleAllowedPrePublicationAccess($journal, $user) {
 		$roleDao = DAORegistry::getDAO('RoleDAO');
-		$user = Request::getUser();
 		if ($user && $journal) {
 			$journalId = $journal->getId();
 			$userId = $user->getId();

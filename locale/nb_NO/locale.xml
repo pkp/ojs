@@ -1003,17 +1003,6 @@ Authors who publish with this journal agree to the following terms:
 	<message key="issue.viewIssue">Vis nummeret</message>
 	<message key="issue.viewIssueDescription">Vis eller last ned hele nummeret</message>
 	<message key="site.noJournals">Det er ingen tidsskrift tilgjengelig.</message>
-	<message key="gifts.buyer">Fra</message>
-	<message key="gifts.buyerDescription">Hvem er denne gaven fra?</message>
-	<message key="gifts.recipient">Til</message>
-	<message key="gifts.recipientDescription">Hvem er denne gaven til?</message>
-	<message key="gifts.thankYou">Takk</message>
-	<message key="gifts.details">Gavedetaljer</message>
-	<message key="gifts.gift">Gave</message>
-	<message key="gifts.noteTitle">Tittel</message>
-	<message key="gifts.myGifts">Mine gaver</message>
-	<message key="gifts.status.notRedeemed">Tilgjengelig</message>
-	<message key="payment.type.gift">Gave</message>
 	<message key="payment.authorFees">Forfatteravgifter</message>
 	<message key="user.authorization.sectionAssignment">Du forsøker å få tilgang til en artikkel som ikke er en del av din seksjon.</message>
 	<message key="user.subscriptions.statusInformation">Aktive og utløpte abonnementer vises nedenfor sammen med sine utløpsdatoer. I tillegg kan følgende statusinformasjoner også vises med hvert abonnement.</message>

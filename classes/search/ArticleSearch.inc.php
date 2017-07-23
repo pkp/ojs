@@ -17,12 +17,6 @@
 import('lib.pkp.classes.search.SubmissionSearch');
 
 class ArticleSearch extends SubmissionSearch {
-	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 
 	/**
 	 * See SubmissionSearch::getSparseArray()
@@ -236,7 +230,7 @@ class ArticleSearch extends SubmissionSearch {
 	 * @return array An array with the articles, published articles,
 	 *  issue, journal, section and the issue availability.
 	 */
-	static function formatResults(&$results) {
+	static function formatResults($results) {
 		$articleDao = DAORegistry::getDAO('ArticleDAO');
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 		$issueDao = DAORegistry::getDAO('IssueDAO');
@@ -279,7 +273,7 @@ class ArticleSearch extends SubmissionSearch {
 					$issueCache[$issueId] = $issue;
 					import('classes.issue.IssueAction');
 					$issueAction = new IssueAction();
-					$issueAvailabilityCache[$issueId] = !$issueAction->subscriptionRequired($issue) || $issueAction->subscribedUser($journalCache[$journalId], $issueId, $articleId) || $issueAction->subscribedDomain($journalCache[$journalId], $issueId, $articleId);
+					$issueAvailabilityCache[$issueId] = !$issueAction->subscriptionRequired($issue, $journalCache[$journalId]) || $issueAction->subscribedUser($journalCache[$journalId], $issueId, $articleId) || $issueAction->subscribedDomain($journalCache[$journalId], $issueId, $articleId);
 				}
 
 				// Only display articles from published issues.

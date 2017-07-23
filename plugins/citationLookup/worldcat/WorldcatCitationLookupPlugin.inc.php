@@ -17,12 +17,6 @@
 import('lib.pkp.plugins.citationLookup.worldcat.PKPWorldcatCitationLookupPlugin');
 
 class WorldcatCitationLookupPlugin extends PKPWorldcatCitationLookupPlugin {
-	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 }
 
 ?>

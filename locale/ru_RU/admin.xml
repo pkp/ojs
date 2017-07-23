@@ -56,7 +56,6 @@
 	<message key="admin.journals.createInstructions">Вы будете автоматически записаны управляющим этого журнала. После создания нового журнала вы будете перенаправлены на мастер настройки журнала для завершения первоначальной настройки журнала.</message>
 	<message key="admin.journals.journalSettings">Настройки журнала</message>
 	<message key="admin.journals.noneCreated">Ни один журнал не был создан.</message>
-	<message key="admin.contexts.confirmDelete">Вы уверены, что хотите навсегда удалить этот журнал и все его содержимое?</message>
 	<message key="admin.contexts.create">Создать журнал</message>
 	<message key="admin.journals.urlWillBe">Это должно быть одно короткое слово или аббревиатура, которая идентифицирует журнал. URL-адрес журнала будет {$sampleUrl}.</message>
 	<message key="admin.contexts.form.titleRequired">Название обязательно.</message>

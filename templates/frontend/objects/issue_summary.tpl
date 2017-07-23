@@ -9,7 +9,9 @@
  *
  * @uses $issue Issue The issue
  *}
+{if $issue->getShowTitle()}
 {assign var=issueTitle value=$issue->getLocalizedTitle()}
+{/if}
 {assign var=issueSeries value=$issue->getIssueSeries()}
 {assign var=issueCover value=$issue->getLocalizedCoverImageUrl()}
 
@@ -28,7 +30,7 @@
 			{$issueSeries|escape}
 		{/if}
 	</a>
-	{if $issueTitle}
+	{if $issueTitle && $issueSeries}
 		<div class="series">
 			{$issueSeries|escape}
 		</div>

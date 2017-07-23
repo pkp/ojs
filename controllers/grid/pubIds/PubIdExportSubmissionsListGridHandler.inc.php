@@ -16,12 +16,6 @@
 import('controllers.grid.submissions.ExportPublishedSubmissionsListGridHandler');
 
 class PubIdExportSubmissionsListGridHandler extends ExportPublishedSubmissionsListGridHandler {
-	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 
 	/**
 	 * @copydoc GridHandler::loadData()

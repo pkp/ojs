@@ -1,22 +1,22 @@
-<?php 
+<?php
 
 /**
- * @defgroup paypalPlugin PayPal Plugin
- * Implements a payment handling plugin using the PayPal service.
+ * @defgroup plugins_paymethod_paypal PayPal Payment Processing Plugin
  */
  
 /**
  * @file plugins/paymethod/paypal/index.php
  *
  * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2006-2009 Gunther Eysenbach, Juan Pablo Alperin, MJ Suhonos
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @ingroup paypalPlugin
- * @brief Wrapper for PayPal plugin.
+ * @ingroup plugins_paymethod_paypal
+ * @brief Wrapper for PayPal payment plugin.
  */
- 
-require_once('PayPalPlugin.inc.php'); 
-return new PayPalPlugin();
- 
+
+require_once('PaypalPaymentPlugin.inc.php');
+
+return new PaypalPaymentPlugin();
+
 ?> 

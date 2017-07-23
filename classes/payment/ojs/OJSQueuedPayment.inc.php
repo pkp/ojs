@@ -83,17 +83,17 @@ class OJSQueuedPayment extends QueuedPayment {
 				$institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
 
 				if ($institutionalSubscriptionDao->subscriptionExists($this->assocId)) {
-					$subscription =& $institutionalSubscriptionDao->getSubscription($this->assocId);
+					$subscription = $institutionalSubscriptionDao->getById($this->assocId);
 				} else {
 					$individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
-					$subscription =& $individualSubscriptionDao->getSubscription($this->assocId);
+					$subscription = $individualSubscriptionDao->getById($this->assocId);
 				}
 				if (!$subscription) return __('payment.type.subscription');
 
 				$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
-				$subscriptionType =& $subscriptionTypeDao->getSubscriptionType($subscription->getTypeId());
+				$subscriptionType = $subscriptionTypeDao->getById($subscription->getTypeId());
 
-				return __('payment.type.subscription') . ' (' . $subscriptionType->getSubscriptionTypeName() . ')';
+				return __('payment.type.subscription') . ' (' . $subscriptionType->getLocalizedName() . ')';
 			case PAYMENT_TYPE_DONATION:
 				if ($journal->getLocalizedSetting('donationFeeName') != '') {
 					return $journal->getLocalizedSetting('donationFeeName');
@@ -136,17 +136,6 @@ class OJSQueuedPayment extends QueuedPayment {
 				} else {
 					return __('payment.type.publication');
 				}
-			case PAYMENT_TYPE_GIFT:
-				$giftDao = DAORegistry::getDAO('GiftDAO');
-				$gift =& $giftDao->getGift($this->assocId);
-
-				// Try to return gift details in name
-				if ($gift) {
-					return $gift->getGiftName();
-				}
-
-				// Otherwise, generic gift name
-				return __('payment.type.gift');
 			default:
 				// Invalid payment type
 				assert(false);
@@ -169,16 +158,16 @@ class OJSQueuedPayment extends QueuedPayment {
 				$institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
 
 				if ($institutionalSubscriptionDao->subscriptionExists($this->assocId)) {
-					$subscription =& $institutionalSubscriptionDao->getSubscription($this->assocId);
+					$subscription = $institutionalSubscriptionDao->getById($this->assocId);
 				} else {
 					$individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
-					$subscription =& $individualSubscriptionDao->getSubscription($this->assocId);
+					$subscription = $individualSubscriptionDao->getById($this->assocId);
 				}
 				if (!$subscription) return __('payment.type.subscription');
 
 				$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
-				$subscriptionType =& $subscriptionTypeDao->getSubscriptionType($subscription->getTypeId());
-				return $subscriptionType->getSubscriptionTypeDescription();
+				$subscriptionType = $subscriptionTypeDao->getById($subscription->getTypeId());
+				return $subscriptionType->getLocalizedDescription();
 			case PAYMENT_TYPE_DONATION:
 				if ($journal->getLocalizedSetting('donationFeeDescription') != '') {
 					return $journal->getLocalizedSetting('donationFeeDescription');
@@ -221,28 +210,6 @@ class OJSQueuedPayment extends QueuedPayment {
 				} else {
 					return __('payment.type.publication');
 				}
-			case PAYMENT_TYPE_GIFT:
-				$giftDao = DAORegistry::getDAO('GiftDAO');
-				$gift =& $giftDao->getGift($this->assocId);
-
-				// Try to return gift details in description
-				if ($gift) {
-					import('classes.gift.Gift');
-
-					if ($gift->getGiftType() == GIFT_TYPE_SUBSCRIPTION) {
-						$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
-						$subscriptionType =& $subscriptionTypeDao->getSubscriptionType($gift->getAssocId());
-
-						if ($subscriptionType) {
-							return $subscriptionType->getSubscriptionTypeDescription();	
-						} else {
-							return __('payment.type.gift') . ' ' . __('payment.type.gift.subscription');								
-						}
-					}
-				}
-
-				// Otherwise, generic gift name
-				return __('payment.type.gift');
 			default:
 				// Invalid payment type
 				assert(false);

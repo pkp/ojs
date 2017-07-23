@@ -19,12 +19,6 @@ import('lib.pkp.classes.submission.RepresentationDAO');
 import('lib.pkp.classes.plugins.PKPPubIdPluginDAO');
 
 class ArticleGalleyDAO extends RepresentationDAO implements PKPPubIdPluginDAO {
-	/**
-	 * Constructor.
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 
 	/**
 	 * Return a new data object.

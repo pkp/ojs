@@ -828,41 +828,6 @@ Die Bewertung erfolgt auf einer Skala von 1-5 (Ausgezeichnet).<br />
 	<message key="donations.thankYou">Danke</message>
 	<message key="donations.thankYouMessage">Vielen Dank für Ihre Spende. Wir wissen sie sehr zu schätzen.</message>
 
-	<!-- Gifts -->
-	<message key="gifts.buyer">Von</message>
-	<message key="gifts.buyerDescription">Von wem ist dieses Geschenk?</message>
-	<message key="gifts.recipient">Für</message>
-	<message key="gifts.recipientDescription">Für wen ist dieses Geschenk?</message>
-	<message key="gifts.thankYou">Danke</message>
-	<message key="gifts.thankYouMessage">Sie haben ein Geschenk erworben. Sie werden eine Kopie der Geschenk-E-Mail erhalten, die an den/die Empfänger/in geschickt wird, nachdem Ihre Zahlung verarbeitet worden ist.</message>
-	<message key="gifts.purchaseGiftIndividualSubscription">Geschenk-Abonnement</message>
-	<message key="gifts.subscriptionFormIntroduction">Bitte füllen Sie das unten stehende Formular aus. Die angegebenen Kontaktinformationen werden zusammen mit Ihrer Geschenknachricht benutzt, um den/die Empfänger/in anzuschreiben und ihn/sie über ihr neues Geschenkabonnement zu informieren. (Sie werden auch eine Kopie dieser E-Mail erhalten.)</message>
-	<message key="gifts.details">Geschenk-Details</message>
-	<message key="gifts.detailsDescription">Bitte wählen Sie das Geschenk unten aus und fügen Sie eine persönliche Nachricht hinzu, die an den/die Empfänger/in geschickt werden wird. (Sie werden auch eine Kopie dieser E-Mail erhalten.)</message>
-	<message key="gifts.gift">Geschenk</message>
-	<message key="gifts.noteTitle">Titel</message>
-	<message key="gifts.note">Geschenknachricht</message>
-	<message key="gifts.noteTitleRequired">Bitte geben Sie einen Titel für Ihre persönliche Nachricht an.</message>
-	<message key="gifts.noteRequired">Bitte geben Sie eine persönliche Nachricht an.</message>
-	<message key="gifts.localeRequired">Bitte wählen Sie eine Sprache für Ihre persönliche Nachricht aus.</message>
-	<message key="gifts.myGifts">Meine Geschenke</message>
-	<message key="gifts.manageMyGifts">Meine Geschenke verwalten</message>
-	<message key="gifts.redeemGift">Geschenk einlösen</message>
-	<message key="gifts.status.notRedeemed">Verfügbar</message>
-	<message key="gifts.status.redeemed">Eingelöst</message>
-	<message key="gifts.status.redeemGift">Geschenk einlösen</message>
-	<message key="gifts.subscriptions">Abonnements</message>
-	<message key="gifts.subscriptionsDescription">Ein hier eingelöstes Geschenkabonnement wird Ihr existierendes Abonnement ersetzen (wenn Sie eines haben). Abonnements werden mit dem Datum der Einlösung beginnen und werden für die Dauer des Abonnementtyps gültig sein.</message>
-	<message key="gifts.purchaseGiftSubscription">Ein Geschenkabonnement geben</message>
-	<message key="gifts.giftSubscriptionsAvailable">Es sind auch Geschenkabonnements erhältlich. Geschenkabonnements können zu jeder Zeit durch den/die Empfänger/in eingelöst werden und sind ein guter Weg, diese Zeitschrift zu unterstützen.</message>
-	<message key="gifts.noSubscriptions">Keine Geschenkabonnements</message>
-	<message key="gifts.giftRedeemed">Das Geschenk wurde erfolgreich eingelöst.</message>
-	<message key="gifts.noGiftToRedeem">Dieses Geschenk ist nicht zur Einlösung verfügbar.</message>
-	<message key="gifts.giftAlreadyRedeemed">Dieses Geschenk ist bereits eingelöst worden.</message>
-	<message key="gifts.giftNotValid">Dieses Geschenk ist nicht gültig und kann nicht eingelöst werden.</message>
-	<message key="gifts.subscriptionTypeNotValid">Der Abonnementtyp für dieses Geschenk ist ungültig. Bitte kontaktieren Sie den/die Abonnementverwalter/in.</message>
-	<message key="gifts.subscriptionNonExpiring">Das Geschenk wurde nicht eingelöst, da Sie bereits ein nicht auslaufendes Abonnement für diese Zeitschrift haben.</message>
-
 	<!-- Payments -->
 	<message key="payment.loginRequired">Sie müssen angemeldet sein, um Zahlungen durchführen zu können.</message>
 	<message key="payment.loginRequired.forArticle">Ein Abonnement oder der Erwerb des Artikels sind für den Zugang notwendig. Loggen Sie sich bei der Zeitschrift ein, um Ihr Abonnement zu überprüfen, auf frühere Erwerbungen zuzugreifen oder den Artikel zu erwerben.</message>
@@ -885,8 +850,6 @@ Die Bewertung erfolgt auf einer Skala von 1-5 (Ausgezeichnet).<br />
 	<message key="payment.type.purchaseIssue">Ausgabengebühr</message>
 	<message key="payment.type.subscription">Abonnementgebühr</message>
 	<message key="payment.type.donation">Spenden</message>
-	<message key="payment.type.gift">Geschenk</message>
-	<message key="payment.type.gift.subscription">Abonnement</message>
 
 	<message key="payment.donation.makeDonation">Spenden</message>
 
@@ -1096,8 +1059,8 @@ Die Prüfung kann bei Such-URLs, die Formularausfüllung verlangen, fehlschlagen
 	<message key="notification.type.userComment">Ein/e Leser/in hat "{$title}" kommentiert.</message>
 	<message key="notification.savedIssueMetadata">Ausgabenmetadaten gespeichert.</message>
 	<message key="notification.type.editorAssignmentTask">Ein neuer Artikel wurde eingereicht, dem ein/e Redakteur/in zugewiesen werden muss.</message>
-
-
+	<message key="notification.type.assignProductionUser">Nutzen Sie den Hinzufügen-Link in der Teilnehmer/innen-Liste, um eine/n Nutzer/in zum Erzeugen von Fahnen einzutragen.</message>
+	<message key="notification.type.awaitingRepresentations">Warte auf Fahnen.</message>
 
 	<!--
 	 *

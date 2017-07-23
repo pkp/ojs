@@ -19,12 +19,6 @@ import('classes.oai.ojs.JournalOAI');
 import('classes.handler.Handler');
 
 class OAIHandler extends Handler {
-	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 
 	/**
 	 * @param $args array

@@ -29,13 +29,6 @@ class ArticleHandler extends Handler {
 	/** galley associated with the request **/
 	var $galley;
 
-	/**
-	 * Constructor
-	 * @param $request Request
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 
 	/**
 	 * @copydoc PKPHandler::authorize()
@@ -55,7 +48,6 @@ class ArticleHandler extends Handler {
 	 */
 	function initialize($request, $args) {
 		$articleId = isset($args[0]) ? $args[0] : 0;
-		$galleyId = isset($args[1]) ? $args[1] : 0;
 
 		$journal = $request->getContext();
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
@@ -72,8 +64,14 @@ class ArticleHandler extends Handler {
 			$this->article = $article;
 		}
 
-		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
-		$this->galley = $galleyDao->getByBestGalleyId($galleyId, $this->article->getId());
+		if (!isset($this->article)) $request->getDispatcher()->handle404();
+
+		if (in_array($request->getRequestedOp(), array('view', 'download'))) {
+			$galleyId = isset($args[1]) ? $args[1] : 0;
+			$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
+			$this->galley = $galleyDao->getByBestGalleyId($galleyId, $this->article->getId());
+			if ($galleyId && !$this->galley) $request->getDispatcher()->handle404();
+		}
 	}
 
 	/**
@@ -145,7 +143,7 @@ class ArticleHandler extends Handler {
 			$issueAction = new IssueAction();
 			$subscriptionRequired = false;
 			if ($issue) {
-				$subscriptionRequired = $issueAction->subscriptionRequired($issue);
+				$subscriptionRequired = $issueAction->subscriptionRequired($issue, $journal);
 			}
 
 			$subscribedUser = $issueAction->subscribedUser($journal, isset($issue) ? $issue->getId() : null, isset($article) ? $article->getId() : null);
@@ -205,7 +203,6 @@ class ArticleHandler extends Handler {
 				$articleGalleys = $articleGalleyDao->getBySubmissionId($articleId);
 				while ($articleGalley = $articleGalleys->next()) {
 					$galleyFile = $articleGalley->getFile();
-print_r($galleyFile);
 					if ($galleyFile && $galleyFile->getFileId() == $submissionFile->getFileId()) {
 						header('HTTP/1.1 301 Moved Permanently');
 						$request->redirect(null, null, 'download', array($articleId, $articleGalley->getId(), $submissionFile->getFileId()));
@@ -268,13 +265,13 @@ print_r($galleyFile);
 
 		// If this is an editorial user who can view unpublished/unscheduled
 		// articles, bypass further validation. Likewise for its author.
-		if ($publishedArticle && $issueAction->allowedPrePublicationAccess($journal, $publishedArticle)) {
+		if ($publishedArticle && $issueAction->allowedPrePublicationAccess($journal, $publishedArticle, $user)) {
 			return true;
 		}
 
 		// Make sure the reader has rights to view the article/issue.
 		if ($issue && $issue->getPublished() && $publishedArticle->getStatus() == STATUS_PUBLISHED) {
-			$subscriptionRequired = $issueAction->subscriptionRequired($issue);
+			$subscriptionRequired = $issueAction->subscriptionRequired($issue, $journal);
 			$isSubscribedDomain = $issueAction->subscribedDomain($journal, $issue->getId(), $publishedArticle->getId());
 
 			// Check if login is required for viewing.

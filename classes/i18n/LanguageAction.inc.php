@@ -19,12 +19,6 @@ define('LANGUAGE_PACK_TAR_URL', 'http://pkp.sfu.ca/ojs/xml/%s/%s.tar.gz');
 import('lib.pkp.classes.i18n.PKPLanguageAction');
 
 class LanguageAction extends PKPLanguageAction {
-	/**
-	 * Constructor.
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 }
 
 ?>

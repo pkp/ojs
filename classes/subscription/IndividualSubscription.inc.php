@@ -18,10 +18,6 @@ import('classes.subscription.Subscription');
 
 class IndividualSubscription extends Subscription {
 
-	function __construct() {
-		parent::__construct();
-	}
-
 	/**
 	 * Check whether subscription is valid
 	 */

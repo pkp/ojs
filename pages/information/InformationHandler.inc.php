@@ -16,12 +16,6 @@
 import('classes.handler.Handler');
 
 class InformationHandler extends Handler {
-	/**
-	 * Constructor
-	 **/
-	function __construct() {
-		parent::__construct();
-	}
 
 	/**
 	 * Display the information page for the journal.

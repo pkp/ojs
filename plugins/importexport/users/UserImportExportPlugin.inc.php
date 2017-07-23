@@ -16,12 +16,6 @@
 import('lib.pkp.plugins.importexport.users.PKPUserImportExportPlugin');
 
 class UserImportExportPlugin extends PKPUserImportExportPlugin {
-	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 
 	/**
 	 * Called as a plugin is registered to the registry

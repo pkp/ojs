@@ -19,13 +19,6 @@ import('lib.pkp.controllers.tab.workflow.PKPWorkflowTabHandler');
 class WorkflowTabHandler extends PKPWorkflowTabHandler {
 
 	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-	}
-
-	/**
 	 * @copydoc PKPWorkflowTabHandler::fetchTab
 	 */
 	function fetchTab($args, $request) {

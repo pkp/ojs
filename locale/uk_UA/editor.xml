@@ -21,6 +21,7 @@
        
        <message key="editor.home">Тека редактора</message>
        <message key="editor.reassign">Повторно призначити</message>
+
        <message key="editor.submissionsAndPublishing">Подання та публікація</message>
        <message key="editor.submissionQueue">Редакційна черга</message>
        <message key="editor.submissionArchive">Архів матеріалів</message>

@@ -22,8 +22,8 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 	function register($category, $path) {
 		if (parent::register($category, $path)) {
 			if ($this->getEnabled()) {
-				HookRegistry::register('ArticleHandler::view::galley', array($this, 'articleViewCallback'));
-				HookRegistry::register('ArticleHandler::download', array($this, 'articleDownloadCallback'));
+				HookRegistry::register('ArticleHandler::view::galley', array($this, 'articleViewCallback'), HOOK_SEQUENCE_LATE);
+				HookRegistry::register('ArticleHandler::download', array($this, 'articleDownloadCallback'), HOOK_SEQUENCE_LATE);
 			}
 			return true;
 		}
@@ -66,14 +66,6 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 
 		if ($galley && $galley->getFileType() == 'text/html') {
 			$templateMgr = TemplateManager::getManager($request);
-			$templateMgr->addStyleSheet(
-				'htmlArticleGalleyStyles',
-				$request->getBaseUrl() . '/plugins/generic/htmlArticleGalley/display.css',
-				array(
-					'priority' => STYLE_SEQUENCE_CORE,
-					'contexts' => 'frontend',
-				)
-			);
 			$templateMgr->assign(array(
 				'issue' => $issue,
 				'article' => $article,

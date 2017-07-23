@@ -28,13 +28,6 @@ define ('AUTHOR_TOC_SHOW', 2);
 import('lib.pkp.classes.submission.Submission');
 
 class Article extends Submission {
-	/**
-	 * Constructor.
-	 */
-	function __construct() {
-		parent::__construct();
-	}
-
 
 	//
 	// Get/set methods

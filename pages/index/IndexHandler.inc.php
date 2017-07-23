@@ -16,12 +16,6 @@
 import('classes.handler.Handler');
 
 class IndexHandler extends Handler {
-	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 
 	/**
 	 * If no journal is selected, display list of journals.

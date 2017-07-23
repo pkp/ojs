@@ -143,6 +143,7 @@
 	<message key="editor.article.assignEditor">Ajouter un rédacteur</message>
 	<message key="editor.article.selectEditor">Sélectionner {$roleName}</message>
 	<message key="editor.article.selectDecision">Sélectionner une décision</message>
+	<message key="editor.article.decision.resubmit">Soumettre à nouveau pour évaluation</message>
 	<message key="editor.article.selectLayoutEditor">Sélectionner le responsable de la mise en page</message>
 	<message key="editor.article.replaceLayoutEditor">Remplacer le responsable de la mise en page</message>
 	<message key="editor.article.reviewSubmission">Évaluer la soumission</message>
@@ -189,7 +190,6 @@
 	<message key="editor.issues.confirmUnpublish">Êtes-vous certain que vous souhaitez retirer ce numéro publié?</message>
 	<message key="editor.article.archiveSubmission">Rejeter et archiver la soumission</message>
 	<message key="editor.submissionReview.cannotSendToCopyediting">Avant d'envoyer une soumission en Révision, utiliser le lien Aviser l'auteur pour informer l'auteur de la décision et sélectionner la version à envoyer.</message>
-	<message key="editor.submissionReview.sendToCopyediting">Envoyer en Révision</message>
 	<message key="editor.notifyUsers.allReaders">Tous les lecteurs ({$count} utilisateurs)</message>
 	<message key="editor.notifyUsers.allAuthors">Tous les auteurs publiés ({$count} utilisateurs)</message>
 	<message key="editor.notifyUsers.allIndividualSubscribers">Tous les abonnés individuels ({$count} utilisateurs)</message>

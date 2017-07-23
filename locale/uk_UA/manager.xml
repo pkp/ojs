@@ -541,6 +541,12 @@
        <message key="manager.subscriptionTypes.name">Тип передплати</message>
        <message key="manager.subscriptionTypes.noneCreated">Жодного типу передплати не було створено.</message>
        <message key="manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully">Тип передплати створений успішно.</message>
+       <message key="manager.payment.options.purchaseIssueFee">Купити випуск</message>
+	     <message key="manager.setup.categories">Категорії</message>
+	     <message key="manager.sections.alertDelete">Перш, ніж Ви зможете видалити цей розділ, потрібно перенести всі опубліковані у ньому статті до інших розділів.</message>
+	     <message key="manager.setup.journalThumbnail">Мініатюрне зображення журналу</message>
+	     <message key="manager.setup.useThumbnail">Мініатюра</message>
+	     <message key="manager.setup.categories.description">Зі списку нижче оберіть найбільш відповідні категорії. Читачі зможуть переглядати статті за обраними категоріями.</message>
 
        <!-- Categories -->
        <message key="manager.setup.categories">Категорії</message>

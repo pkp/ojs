@@ -51,14 +51,6 @@ class IssueForm extends Form {
 		$templateMgr = TemplateManager::getManager($request);
 		$journal = $request->getJournal();
 
-		// set up the accessibility options pulldown
-		$templateMgr->assign('enableDelayedOpenAccess', $journal->getSetting('enableDelayedOpenAccess'));
-
-		$templateMgr->assign('accessOptions', array(
-			ISSUE_ACCESS_OPEN => __('editor.issues.openAccess'),
-			ISSUE_ACCESS_SUBSCRIPTION => __('editor.issues.subscription')
-		));
-
 		if ($this->issue) {
 			$templateMgr->assign('issue', $this->issue);
 			$templateMgr->assign('issueId', $this->issue->getId());

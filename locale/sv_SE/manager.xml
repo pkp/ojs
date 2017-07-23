@@ -339,7 +339,6 @@
 	<message key="manager.subscriptionPolicies.subscriptionContact">Abonnemangsansvarig</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactDescription">Kontaktinformationn listad under Abonnemang i Om tidskriften.</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactEmailValid">Vänligen fyll i E-postadress.</message>
-	<message key="manager.subscriptionPolicies.subscriptionPoliciesSaved">Dina inställningar för abonnemangspolicy har ändrats.</message>
 	<message key="manager.subscriptions">Abonnemang</message>
 	<message key="manager.subscriptions.confirmDelete">Är du säker på att du vill ta bort det här abonnemanget?</message>
 	<message key="manager.subscriptions.create">Skapa nytt abonnemang</message>

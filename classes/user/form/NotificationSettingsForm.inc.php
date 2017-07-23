@@ -17,12 +17,6 @@
 import('lib.pkp.classes.notification.form.PKPNotificationSettingsForm');
 
 class NotificationSettingsForm extends PKPNotificationSettingsForm {
-	/**
-	 * Constructor.
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 
 	/**
 	 * Assign form data to user-submitted data.

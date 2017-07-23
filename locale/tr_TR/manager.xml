@@ -363,7 +363,6 @@
 	<message key="manager.subscriptionPolicies.subscriptionContact">Abone Yöneticisi</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactDescription">Dergi Hakkında sayfasında abonelik hakkında bilgi vermek üzere gösterilecek.</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactEmailValid">Lütfen geçerli bir e-posta adresi giriniz.</message>
-	<message key="manager.subscriptionPolicies.subscriptionPoliciesSaved">Abonelik politikası ayarlarınız güncellendi.</message>
 	<message key="manager.subscriptions">Abonelikler</message>
 	<message key="manager.individualSubscriptions">Bireysel Abonelikler</message>
 	<message key="manager.institutionalSubscriptions">Kurumsal Abonelikler</message>
@@ -486,7 +485,6 @@
 	<message key="manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully">Abonelik türü başarıyla oluşturuldu.</message>
 	<message key="manager.sections.alertDelete">Bu bölümü silmeden önce yayımlanmış makaleleri diğer bölümlere taşımalısınız.</message>
 	<message key="manager.setup.categories.description">Yukarıda listelenen kümelerden uygun kategorileri seçiniz. Okuyucular tamamlanmış dergi kümelerinden kategoriye göre listeleme yapabilirler.</message>
-	<message key="manager.payment.giftFees">Bağış Tutarı</message>
 	<message key="manager.payment.options.purchaseIssueFee">Sayı Satın Al</message>
 	<message key="manager.setup.journalLogo.altText">Dergi Logosu</message>
 	<message key="manager.setup.journalThumbnail">Dergi Görseli (Küçük)</message>

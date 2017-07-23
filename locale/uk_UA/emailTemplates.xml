@@ -912,25 +912,6 @@ URL подання: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><
 {$submissionAbstract}]]></body>
 		<description>Цим листом редактор розділу просить рецензента взятися за виконання другого раунду рецензування подання або відмовитись від цієї роботи. У листі міститься інформація про подання (назва та анотація), про кінцевий термін рецензування та про те, як отримати доступ безпосередньо до подання. Цей шаблон використовується, якщо на кроці 2 Налаштування журналу обраний Стандартний процес рецензування (у іншому випадку див. REVIEW_REQUEST_ATTACHED_SUBSEQUENT.)</description>
 	</email_text>
-	<email_text key="GIFT_AVAILABLE">
-		<subject>{$giftNoteTitle}</subject>
-		<body><![CDATA[Шановний {$recipientFirstName},<br />
-<br />
-{$buyerFullName} бажає зробити Вам подарунок у виданні {$giftJournalName}:<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-{$giftNote}<br />
-<br />
-<br />
-Окремим листом Вам буде надана інформація, необхідна для авторизації, та інструкції щодо активації Вашого подарунку.<br />
-<br />
-Сподіваємося, цей подарунок Вам сподобається!<br />
-<br />
-{$giftContactSignature}]]></body>
-		<description>Цим листом отримувач подарунку сповіщається про те, що подарунок для нього був куплений і доступний для активації.</description>
-	</email_text>
 	<email_text key="REVIEW_REQUEST_ONECLICK_SUBSEQUENT">
 		<subject>Запит на рецензування статті</subject>
 		<body><![CDATA[{$reviewerName}:<br />
@@ -978,6 +959,7 @@ URL подання: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><
 {$reviewGuidelines}]]></body>
 		<description>Цим листом редактор розділу просить рецензента виконати другий раунд рецензування подання або відмовитись від цієї роботи. У додатку до листа міститься рукопис, поданий до редакції. Цей шаблон використовується, якщо на кроці 2 Налаштування журналу обраний доступ рецензента "єдиним натисканням" (у іншому випадку див. REVIEW_REQUEST_SUBSEQUENT.)</description>
 	</email_text>
+
 	<email_text key="GIFT_USER_REGISTER">
 		<subject>Активуйте свій подарунок: Інформація для авторизації</subject>
 		<body><![CDATA[Шановний {$recipientFirstName},<br />

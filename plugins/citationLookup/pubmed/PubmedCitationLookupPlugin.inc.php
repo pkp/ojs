@@ -17,12 +17,6 @@
 import('lib.pkp.plugins.citationLookup.pubmed.PKPPubmedCitationLookupPlugin');
 
 class PubmedCitationLookupPlugin extends PKPPubmedCitationLookupPlugin {
-	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 }
 
 ?>

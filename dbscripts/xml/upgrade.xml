@@ -25,13 +25,15 @@
 	<upgrade minversion="2.4.0.0" maxversion="2.4.9.9">
 		<code function="syncSeriesAssocType" />
 		<data file="dbscripts/xml/upgrade/2.4.0_preupdate_usageStatistics.xml" condition="return $installer->columnExists('article_galleys', 'views');" />
-		<data file="dbscripts/xml/upgrade/2.4.0_preupdate_usageStatistics2.xml" condition="return $installer->tableExists('issue_galleys');" />
+		<data file="dbscripts/xml/upgrade/2.4.0_preupdate_usageStatistics2.xml" condition="return $installer->columnExists('issue_galleys', 'views');" />
 		<data file="dbscripts/xml/upgrade/3.0.0_preupdate.xml" condition="return $installer->columnExists('edit_decisions', 'article_id');" />	
 		<data file="dbscripts/xml/upgrade/3.0.0_adaptTimedViews.xml" condition="return $installer->tableExists('timed_views_log');" />
 		<data file="dbscripts/xml/upgrade/3.0.0_adaptReferrals.xml" condition="return $installer->tableExists('referrals');" />
 		<data file="dbscripts/xml/upgrade/3.0.0_adaptBooksForReview.xml" condition="return $installer->tableExists('books_for_review');" />
 		<data file="dbscripts/xml/upgrade/remove_timed_views_bots.xml" condition="return $installer->tableExists('timed_views_log');" />
 		<data file="dbscripts/xml/upgrade/3.0.0_preupdate_commentsToEditor.xml" condition="return $installer->columnExists('submissions', 'comments_to_ed');" />
+		<code function="concatenateIntoAbout" />
+		<code function="concatenateIntoMasthead" />
 	</upgrade>
 
 	<upgrade minversion="3.0.0.0" maxversion="3.0.1.9">
@@ -58,8 +60,6 @@
 	<schema file="lib/pkp/xml/schema/notes.xml" />
 	<schema file="lib/pkp/xml/schema/views.xml" />
 	<schema file="lib/pkp/xml/schema/genres.xml" />
-	<schema file="lib/pkp/xml/schema/gifts.xml" />
-	<schema file="lib/pkp/xml/schema/mutex.xml" />
 	<schema file="lib/pkp/xml/schema/tombstone.xml" />
 	<schema file="lib/pkp/xml/schema/rolesAndUserGroups.xml" />
 	<schema file="lib/pkp/xml/schema/metrics.xml" />
@@ -83,11 +83,11 @@
 		<data file="dbscripts/xml/upgrade/3.0.0_change_assoc_type.xml" />
 		<data file="dbscripts/xml/upgrade/3.0.0_change_assoc_type_metrics.xml" condition="return $installer->tableExists('metrics');" />
 		<data file="dbscripts/xml/upgrade/3.0.0_settings.xml" />
+		<code function="installDefaultGenres" />
 		<code function="migrateArticleMetadata" />
 		<data file="dbscripts/xml/upgrade/3.0.0_update.xml" />
 		<code function="clearDataCache" />
 		<code function="migrateUserRoles" />
-		<code function="installDefaultGenres" />
 		<code function="fixReviewForms" />
 		<code function="htmlifyEmailTemplates" />
 		<note file="docs/release-notes/README-BEACON" />
@@ -149,13 +149,22 @@
 		<note file="docs/release-notes/README-3.0.2" />
 	</upgrade>
 
+	<upgrade minversion="3.0.0.0" maxversion="3.0.9.9">
+		<code function="installEmailTemplate" key="PASSWORD_RESET" locales="ca_ES,cs_CZ,da_DK,de_DE,en_US,es_ES,eu_ES,fi_FI,fr_CA,hr_HR,id_ID,it_IT,nb_NO,nl_NL,pt_BR,pt_PT,ru_RU,sv_SE,tr_TR,uk_UA,zh_CN" />
+		<data file="dbscripts/xml/upgrade/3.1.0_update_a.xml" />
+		<code function="repairKeywordsAndSubjects" />
+	</upgrade>
+
 	<upgrade minversion="2.4.0.0" maxversion="3.0.9.9">
 		<!--  the order of the next two lines is important -->
 		<code function="moveReviewerFiles" />
+		<code function="fixAuthorGroup" />
 		<data file="dbscripts/xml/upgrade/3.0.0_reviewer_files.xml" />
 		<code function="removeCancelledReviewAssignments" condition="return $installer->tableExists('review_assignments_tmp');" />
 		<data file="dbscripts/xml/upgrade/3.1.0_notes.xml" condition="return $installer->tableExists('notes_tmp');" />
+		<data file="dbscripts/xml/upgrade/3.1.0_galley_settings.xml" condition="return $installer->tableExists('article_galley_settings');" />
 		<data file="dbscripts/xml/upgrade/3.1.0_update.xml" />
+		<code function="repairImageAssociations" condition="return $installer->tableExists('submission_html_galley_images');" />
 		<note file="docs/release-notes/README-3.1.0" />
 	</upgrade>
 

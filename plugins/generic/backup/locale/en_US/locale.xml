@@ -20,7 +20,7 @@
 	<message key="plugins.generic.backup.db">Database</message>
 	<message key="plugins.generic.backup.files">Files</message>
 	<message key="plugins.generic.backup.code">Code</message>
-	<message key="plugins.generic.backup.db.config"><![CDATA[{$footNoteNum}. <strong>WARNING:</strong> The database dump tool has not been configured in the config.inc.php configuration file. The configuration will depend on your server configuration and the type of database you use. It should be specified in a section called [cli], in a configuration option called "dump". For MySQL, use the mysqldump tool, i.e.:<br/>
+	<message key="plugins.generic.backup.db.config"><![CDATA[{$footNoteNum}. <strong>WARNING:</strong> The database dump tool has not been configured in the config.inc.php configuration file. The configuration will depend on your server configuration and the type of database you use. It should be specified in a section called [cli], in a configuration option called "dump". For MySQL, use the mysqldump tool, i.e.:<br />
 <pre>[cli]
 dump = "/usr/bin/mysqldump -h %s -u %s -p%s %s"
 </pre>
@@ -30,10 +30,10 @@ The "%s" tokens will be replaced with, in order:<ol>
 	<li>Database password</li>
 	<li>Database name</li>
 </ol>
-Note that this involves specifying the database password in the command line, which may be a security concern.<br/><br/>]]></message>
-	<message key="plugins.generic.backup.tar.config"><![CDATA[{$footNoteNum}. <strong>WARNING:</strong> The "tar" tool has not been configured in the config.inc.php configuration file. The configuration will depend on your server configuration. It should be specified in a section called [cli], in a configuration option called "tar", specifying the path to the "tar" utility, i.e.:<br/>
+Note that this involves specifying the database password in the command line, which may be a security concern.<br /><br />]]></message>
+	<message key="plugins.generic.backup.tar.config"><![CDATA[{$footNoteNum}. <strong>WARNING:</strong> The "tar" tool has not been configured in the config.inc.php configuration file. The configuration will depend on your server configuration. It should be specified in a section called [cli], in a configuration option called "tar", specifying the path to the "tar" utility, i.e.:<br />
 <pre>[cli]
 tar = "/bin/tar"
-</pre><br/>]]></message>
+</pre><br />]]></message>
 	<message key="plugins.generic.backup.failure"><![CDATA[<strong>WARNING: </strong>An error may have occurred during the backup process. The most common cause is file permissions.]]></message>
 </locale>

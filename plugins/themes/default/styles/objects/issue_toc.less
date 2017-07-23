@@ -79,7 +79,7 @@
 	}
 
 	.sections:not(:first-child) {
-		margin-toP: @triple * 2;
+		margin-top: @triple * 2;
 	}
 
 	.section:last-child .articles > li:last-child {
@@ -105,12 +105,20 @@
 			position: relative;
 			margin: @triple -@double;
 			padding: @triple;
-			border-top: @bg-border;
+
+			&:before {
+				content: '';
+				position: absolute;
+				top: 45px;
+				left: 0;
+				width: 100%;
+				border-top: @bg-border;
+			}
 
 			h2 {
-				position: absolute;
-				top: -15px;
-				left: @triple / 2;
+				display: inline-block;
+				position: relative;
+				left: -15px;
 				margin-top: 0;
 				padding: 0 (@triple / 2);
 				background: @lift;

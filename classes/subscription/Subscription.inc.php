@@ -31,10 +31,6 @@ define('SUBSCRIPTION_YEAR_OFFSET_FUTURE',	'+10');
 
 class Subscription extends DataObject {
 
-	function __construct() {
-		parent::__construct();
-	}
-
 	//
 	// Get/set methods
 	//
@@ -139,7 +135,8 @@ class Subscription extends DataObject {
 	 */
 	function isNonExpiring() {
 		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
-		return $subscriptionTypeDao->getSubscriptionTypeNonExpiring($this->getData('typeId')) ? true : false;
+		$subscriptionType = $subscriptionTypeDao->getById($this->getTypeId());
+		return $subscriptionType->getNonExpiring();
 	}
 
 	/**

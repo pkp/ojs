@@ -18,12 +18,6 @@
 import('lib.pkp.controllers.grid.admin.languages.PKPAdminLanguageGridHandler');
 
 class AdminLanguageGridHandler extends PKPAdminLanguageGridHandler {
-	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 
 	/**
 	 * @see PKPHandler::initialize()

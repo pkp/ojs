@@ -438,9 +438,7 @@ class IssueGridHandler extends GridHandler {
 
 		// If subscriptions with delayed open access are enabled then
 		// update open access date according to open access delay policy
-		if ($journal->getSetting('publishingMode') == PUBLISHING_MODE_SUBSCRIPTION && $journal->getSetting('enableDelayedOpenAccess')) {
-
-			$delayDuration = $journal->getSetting('delayedOpenAccessDuration');
+		if ($journal->getSetting('publishingMode') == PUBLISHING_MODE_SUBSCRIPTION && ($delayDuration = $journal->getSetting('delayedOpenAccessDuration'))) {
 			$delayYears = (int)floor($delayDuration/12);
 			$delayMonths = (int)fmod($delayDuration,12);
 
@@ -454,6 +452,8 @@ class IssueGridHandler extends GridHandler {
 			$issue->setAccessStatus(ISSUE_ACCESS_SUBSCRIPTION);
 			$issue->setOpenAccessDate(date('Y-m-d H:i:s',mktime(0,0,0,$delayOpenAccessMonth,$curDay,$delayOpenAccessYear)));
 		}
+
+		HookRegistry::call('IssueGridHandler::publishIssue', array(&$issue));
 
 		$issueDao = DAORegistry::getDAO('IssueDAO');
 		$issueDao->updateCurrent($journalId,$issue);
@@ -501,6 +501,8 @@ class IssueGridHandler extends GridHandler {
 		$issue->setCurrent(0);
 		$issue->setPublished(0);
 		$issue->setDatePublished(null);
+
+		HookRegistry::call('IssueGridHandler::unpublishIssue', array(&$issue));
 
 		$issueDao = DAORegistry::getDAO('IssueDAO');
 		$issueDao->updateObject($issue);

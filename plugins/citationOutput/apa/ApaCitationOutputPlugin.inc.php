@@ -17,12 +17,6 @@
 import('lib.pkp.plugins.citationOutput.apa.PKPApaCitationOutputPlugin');
 
 class ApaCitationOutputPlugin extends PKPApaCitationOutputPlugin {
-	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 }
 
 ?>

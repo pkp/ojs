@@ -353,7 +353,6 @@
 	<message key="manager.subscriptionPolicies.subscriptionContact">Abonnementskontakt</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactDescription">Kontaktpersonen som er oppført under Abonnement i 'Om' tidsskriftet.</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactEmailValid">Vennligst skriv inn en gyldig e-post.</message>
-	<message key="manager.subscriptionPolicies.subscriptionPoliciesSaved">Dine innstillinger for abonnement er nå oppdatert.</message>
 	<message key="manager.subscriptions">Abonnement</message>
 	<message key="manager.subscriptions.confirmDelete">Er du sikker på at du vil slette dette abonnementet?</message>
 	<message key="manager.subscriptions.create">Opprett nytt abonnement</message>
@@ -615,9 +614,6 @@
 	<message key="manager.payment.options.purchaseIssueFee">Kjøp nummer</message>
 	<message key="manager.website.archiving">Arkivering</message>
 	<message key="manager.language.submissions">Manuskript</message>
-	<message key="manager.payment.giftFees">Avgift på gaveabonnement</message>
-	<message key="manager.payment.giftFeesDescription">En lenke til gaveabonnement vil vises på Abonnementsiden under Om tidsskriftet og som del av abonnementsidespalten.</message>
-	<message key="manager.payment.options.acceptGiftSubscriptionPayments">Dette vil slå på betalingsverktøy for gaveabonnement, som tillater lesere å kjøpe gaveabonnement for andre lesere.</message>
 	<message key="manager.section.noSectionEditors"><![CDATA[Det er ikke oppnevnt en seksjonsredaktør. Tildel denne rollen til minst en bruker under Administrasjon > Innstillinger > Brukere &amp; roller først.]]></message>
 	<message key="manager.setup.masthead">Kolofon</message>
 	<message key="manager.setup.masthead.description">Opprett en liste over redaktører, redaksjonsledere  og andre personer tilknyttet tidsskriftet.</message>

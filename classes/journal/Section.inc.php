@@ -19,13 +19,6 @@ import('lib.pkp.classes.context.PKPSection');
 class Section extends PKPSection {
 
 	/**
-	 * Constructor.
-	 */
-	function __construct() {
-		parent::__construct();
-	}
-
-	/**
 	 * Get localized abbreviation of journal section.
 	 * @return string
 	 */

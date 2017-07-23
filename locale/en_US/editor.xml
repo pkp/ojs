@@ -29,7 +29,6 @@
 	<message key="editor.submissionReview.confirmDecision">Are you sure you wish to record this decision?</message>
 	<message key="editor.submissionReview.emailWillArchive">This submission will be archived after the Notify Author email is either sent or its Skip Email button is pressed.</message>
 	<message key="editor.submissionReview.cannotSendToCopyediting">Before sending a submission to Copyediting, use Notify Author link to inform author of decision and select the version to be sent.</message>
-	<message key="editor.submissionReview.sendToCopyediting">Send to Copyediting</message>
 	<message key="editor.notifyUsers">Notify Users</message>
 	<message key="editor.notifyUsers.allUsers">All users associated with this journal ({$count} users)</message>
 	<message key="editor.notifyUsers.allReaders">All readers ({$count} users)</message>
@@ -110,7 +109,6 @@
 	<message key="editor.issues.galleyLocaleRequired">An issue galley locale is required.</message>
 	<message key="editor.issues.galleyPublicIdentificationExists">Public issue galley identification already exists.</message>
 	<message key="editor.issues.backToIssueGalleys">Back to issue galleys</message>
-	<message key="editor.issues.viewingGalley">Viewing Issue Galley</message>
 	<message key="editor.issues.confirmDeleteGalley">Are you sure you want to delete this issue galley?</message>
 	<message key="editor.issues.identifiers">Identifiers</message>
 	<message key="editor.navigation.futureIssues">Future Issues</message>

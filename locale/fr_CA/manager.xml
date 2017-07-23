@@ -85,8 +85,8 @@
 	<message key="manager.sections.form.mustAllowPermission">Veuillez vous assurer qu'au moins une case à cocher est sélectionnée pour chaque assignation à un Rédacteur de rubrique.</message>
 	<message key="manager.sections.form.reviewFormId">Veuillez vous assurer que vous avez choisi un formulaire d'évaluation valide.</message>
 	<message key="manager.sections.form.titleRequired">Un titre est obligatoire pour la rubrique.</message>
-	<message key="manager.sections.hideTocAuthor">Omettre les noms d'auteur pour les articles de rubriques des sommaires de numéros.</message>
-	<message key="manager.sections.hideTocTitle">Omettre le titre de cette rubrique des sommaires de numéros.</message>
+	<message key="manager.sections.hideTocAuthor">Omettre les noms des auteurs pour les articles de cette rubrique dans les sommaires des numéros.</message>
+	<message key="manager.sections.hideTocTitle">Omettre le titre de cette rubrique dans les sommaires des numéros.</message>
 	<message key="manager.sections.identifyType">Identifier les articles publiés dans cette rubrique en tant que un(e)</message>
 	<message key="manager.sections.identifyTypeExamples">Par exemple, « Article évalué par des pairs », « Compte-rendu de livre », « Note de recherche », etc.</message>
 	<message key="manager.sections.indexed">Indexé</message>
@@ -344,7 +344,6 @@
 	<message key="manager.subscriptionPolicies.subscriptionContact">Responsable des abonnements</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactDescription">Le contact indiqué sous Abonnements dans À propos de la revue.</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactEmailValid">Veuillez saisir un courriel valide.</message>
-	<message key="manager.subscriptionPolicies.subscriptionPoliciesSaved">Votre politique d'abonnement a été mise à jour.</message>
 	<message key="manager.subscriptions">Abonnements</message>
 	<message key="manager.subscriptions.confirmDelete">Êtes-vous certain de vouloir supprimer cet abonnement?</message>
 	<message key="manager.subscriptions.create">Créer un nouvel abonnement</message>
@@ -482,9 +481,6 @@
 	<message key="manager.subscriptionTypes.form.options">Options</message>
 	<message key="manager.language.submissions">Soumissions</message>
 	<message key="manager.setup.addNavItem">Ajouter un élément</message>
-	<message key="manager.payment.giftFees">Tarif des formules cadeau</message>
-	<message key="manager.payment.giftFeesDescription">Un lien vers les abonnements en cadeau apparaîtra sur la page des abonnements dans À propos de la revue et dans la barre latérale des abonnements.</message>
-	<message key="manager.payment.options.acceptGiftSubscriptionPayments">Cela activera le règlement des abonnements en cadeau, permettant aux lecteurs de la revue d'acheter des abonnements en cadeau pour d'autres lecteurs.</message>
 	<message key="manager.payment.options.purchaseIssueFee">Acheter un numéro</message>
 	<message key="manager.sections.confirmDelete">Êtes-vous sûr de vouloir définitivement supprimer cette section?</message>
 	<message key="manager.sections.alertDelete">Pour supprimer cette section, déplacez les articles qui la composent dans d'autres sections.</message>
@@ -588,4 +584,5 @@ Il existe cinq niveaux d'autorisation : Les Directeurs de revue ont accès à to
 	<message key="plugins.importexport.common.error.unknownObjects">L'objet spécifié est introuvable.</message>
 	<message key="manager.setup.notifications.copyPrimaryContact">Envoyer une copie au contact principal, identifié dans les paramètres de la revue.</message>
 	<message key="plugins.importexport.common.error.unknownJournal">Le chemin pour la revue, "{$journalPath}", n'existe pas.</message>
+	<message key="manager.sections.hideAbout">Omettre cette section dans "À propos" de cette revue.</message>
 </locale>

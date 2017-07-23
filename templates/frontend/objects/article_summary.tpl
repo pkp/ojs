@@ -13,6 +13,7 @@
  * @uses $showDatePublished bool Show the date this article was published?
  *}
 {assign var=articlePath value=$article->getBestArticleId()}
+
 {if (!$section.hideAuthor && $article->getHideAuthor() == $smarty.const.AUTHOR_TOC_DEFAULT) || $article->getHideAuthor() == $smarty.const.AUTHOR_TOC_SHOW}
 	{assign var="showAuthor" value=true}
 {/if}
@@ -20,14 +21,14 @@
 <div class="obj_article_summary">
 	{if $article->getLocalizedCoverImage()}
 		<div class="cover">
-			<a href="{url page="article" op="view" path=$articlePath}" class="file">
+			<a {if $journal}href="{url journal=$journal->getPath() page="article" op="view" path=$articlePath}"{else}href="{url page="article" op="view" path=$articlePath}"{/if} class="file">
 				<img src="{$article->getLocalizedCoverImageUrl()|escape}"{if $article->getLocalizedCoverImageAltText() != ''} alt="{$article->getLocalizedCoverImageAltText()|escape}"{else} alt="{translate key="article.coverPage.altText"}"{/if}>
 			</a>
 		</div>
 	{/if}
 
 	<div class="title">
-		<a href="{url page="article" op="view" path=$articlePath}">
+		<a {if $journal}href="{url journal=$journal->getPath() page="article" op="view" path=$articlePath}"{else}href="{url page="article" op="view" path=$articlePath}"{/if}>
 			{$article->getLocalizedTitle()|strip_unsafe_html}
 		</a>
 	</div>

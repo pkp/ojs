@@ -13,8 +13,8 @@
  
 <locale name="ru_RU" full_name="Русский">
 	<message key="plugins.generic.openAIRE.displayName">Модуль «OpenAIRE»</message>
-	<message key="plugins.generic.openAIRE.description">Добавляет элемент projectID к метаданным статьи и расширяет интерфейс OAI-PMH в соответствии с OpenAIRE Guidelines 1.1, помогая журналам OJS становиться OpenAIRE-совместимыми.</message>
+	<message key="plugins.generic.openAIRE.description">Добавляет элемент ProjectID к метаданным статьи и расширяет интерфейс OAI-PMH в соответствии с OpenAIRE Guidelines 1.1, помогая журналам OJS становиться OpenAIRE-совместимыми.</message>
 	<message key="plugins.generic.openAIRE.projectID">OpenAIRE ProjectID</message>
 	<message key="plugins.generic.openAIRE.projectID.description"><![CDATA[Если это исследование является результатом инициативы Евросоюза, которая совместима с платформой метаданных <a href="https://www.openaire.eu/" target="_blank">OpenAIRE</a>, пожалуйста введите ProjectID — шестизначный номер, который соответствует номеру Соглашения о гранте.]]></message>
-	<message key="plugins.generic.openAIRE.projectIDValid">Пожалуйста, введите правильный projectID (6 цифр)</message>
+	<message key="plugins.generic.openAIRE.projectIDValid">Пожалуйста, введите правильный ProjectID (6 цифр)</message>
 </locale>

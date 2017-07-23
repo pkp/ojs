@@ -88,8 +88,10 @@
 	</sql>
 	<!--   Bug #8148: Submission process into PKP lib  -->
 	<sql>
-		<!-- the genre_id for 'article' from genres.xml -->
-		<query>UPDATE submission_files SET genre_id = '1'</query>
+		<!-- issue #2506: the genre_id for 'article' from genres.xml -->
+		<query driver="mysql">UPDATE submission_files sf, genres g, submissions s SET sf.genre_id = g.genre_id WHERE g.entry_key = 'SUBMISSION' AND g.context_id = s.context_id AND s.submission_id = sf.submission_id</query>
+		<query driver="mysqli">UPDATE submission_files sf, genres g, submissions s SET sf.genre_id = g.genre_id WHERE g.entry_key = 'SUBMISSION' AND g.context_id = s.context_id AND s.submission_id = sf.submission_id</query>
+		<query driver="postgres7">UPDATE submission_files SET genre_id = g.genre_id FROM genres g, submissions s WHERE g.entry_key = 'SUBMISSION' AND g.context_id = s.context_id AND s.submission_id = submission_files.submission_id</query>
 	</sql>
 	<!-- Bug #7745: Change no_NO to nb_NO -->
 	<sql>
@@ -100,7 +102,6 @@
 		<query>UPDATE email_templates_default_data SET locale='nb_NO' WHERE locale='no_NO'</query>
 		<query>UPDATE email_templates_data SET locale='nb_NO' WHERE locale='no_NO'</query>
 		<query>UPDATE controlled_vocab_entry_settings SET locale='nb_NO' WHERE locale='no_NO'</query>
-		<query>UPDATE gifts SET locale='nb_NO' WHERE locale='no_NO'</query>
 		<query>UPDATE citation_settings SET locale='nb_NO' WHERE locale='no_NO'</query>
 		<query>UPDATE metadata_description_settings SET locale='nb_NO' WHERE locale='no_NO'</query>
 		<query>UPDATE filter_settings SET locale='nb_NO' WHERE locale='no_NO'</query>
@@ -174,7 +175,8 @@
 
 	<sql><!-- Set submission stages based on progress through the 2.4.x workflow. WARNING: These cascade; they cannot be moved out of sequence. -->
 		<!-- All submissions will begin with workflow stage 1 (WORKFLOW_STAGE_ID_SUBMISSION), per schema descriptor -->
-		<query>UPDATE submissions SET stage_id=3 WHERE submission_id IN (SELECT DISTINCT submission_id FROM review_assignments);</query><!-- WORKFLOW_STAGE_ID_EXTERNAL_REVIEW -->
+		<query>UPDATE submissions SET stage_id=3 WHERE submission_id IN (SELECT DISTINCT submission_id FROM review_assignments)</query><!-- WORKFLOW_STAGE_ID_EXTERNAL_REVIEW -->
+		<query>UPDATE submissions SET stage_id=3 WHERE stage_id = 1 AND submission_id IN (SELECT DISTINCT submission_id FROM review_rounds)</query><!-- WORKFLOW_STAGE_ID_EXTERNAL_REVIEW -->
 		<query>UPDATE submissions SET stage_id=4 WHERE submission_id IN (SELECT e1.submission_id FROM edit_decisions e1 LEFT JOIN edit_decisions e2 ON (e2.edit_decision_id > e1.edit_decision_id AND e2.submission_id = e1.submission_id) WHERE e2.edit_decision_id IS NULL AND e1.decision = 1)</query><!-- WORKFLOW_STAGE_ID_EDITING; SUBMISSION_EDITOR_DECISION_ACCEPT -->
 	</sql>
 	<sql><!-- Update review schema to suit OJS 3.0 -->

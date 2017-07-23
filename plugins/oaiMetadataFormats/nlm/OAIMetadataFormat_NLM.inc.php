@@ -209,7 +209,7 @@ class OAIMetadataFormat_NLM extends OAIMetadataFormat {
 		// provide the full-text.
 		import('classes.issue.IssueAction');
 		$issueAction = new IssueAction();
-		$subscriptionRequired = $issueAction->subscriptionRequired($issue);
+		$subscriptionRequired = $issueAction->subscriptionRequired($issue, $journal);
 		$isSubscribedDomain = $issueAction->subscribedDomain($journal, $issue->getId(), $article->getId());
 
 		if (!$subscriptionRequired || $isSubscribedDomain) foreach ($galleys as $galley) {

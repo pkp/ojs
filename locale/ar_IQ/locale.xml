@@ -828,41 +828,6 @@
 	<message key="donations.thankYou">شكراً لكم</message>
 	<message key="donations.thankYouMessage">شكراً لمساهمتك. نثمن دعمكم لنا</message>
 
-	<!-- Gifts -->
-	<message key="gifts.buyer">من</message>
-	<message key="gifts.buyerDescription">ممن هذه الهدية؟</message>
-	<message key="gifts.recipient">إلى</message>
-	<message key="gifts.recipientDescription">إلى مَن هذه الهدية؟</message>
-	<message key="gifts.thankYou">شكراً جزيلاً</message>
-	<message key="gifts.thankYouMessage">إكتمل شراؤك للهدية. ستتلقى نسخة من رسالة الهدية المعنونة إلى المستلم بمجرد تسديد مبلغها</message>
-	<message key="gifts.purchaseGiftIndividualSubscription">إهداء اشتراك</message>
-	<message key="gifts.subscriptionFormIntroduction">لطفاً، إملأ النموذج أدناه. معلومات الاتصال التي ستذكرها مع عبارة التذييل للهدية ستستعمل لمراسلة المستلم عبر البريد الالكتروني وإشعاره بإهدائه اشتراكاً في المجلة (كما أنك ستتلقى نسخة من هذه الرسالة).</message>
-	<message key="gifts.details">تفاصيل الرسالة</message>
-	<message key="gifts.detailsDescription">لطفاً، إختر الهدية أدناه، وضمِّنها رسالة شخصية تخاطب بها المتلقي (ستتلقى نسخة من هذه الرسالة).</message>
-	<message key="gifts.gift">الهدية</message>
-	<message key="gifts.noteTitle">العنوان</message>
-	<message key="gifts.note">تذييل الهدية</message>
-	<message key="gifts.noteTitleRequired">لطفاً، زودنا بعنوان لرسالتك الشخصية.</message>
-	<message key="gifts.noteRequired">لطفاً، أنشئ رسالة تخاطب بها المتلقي.</message>
-	<message key="gifts.localeRequired">لطفاً، إختر لغة رسالتك.</message>
-	<message key="gifts.myGifts">هداياي</message>
-	<message key="gifts.manageMyGifts">إدارة هداياي</message>
-	<message key="gifts.redeemGift">تلقِ الهدية</message>
-	<message key="gifts.status.notRedeemed">متوافرة</message>
-	<message key="gifts.status.redeemed">متلقاة</message>
-	<message key="gifts.status.redeemGift">تلقِ الهدية</message>
-	<message key="gifts.subscriptions">اشتراكات</message>
-	<message key="gifts.subscriptionsDescription">إهداء الاشتراك المتلقى هنا سيستبدل اشتراكك الحالي (إن كان لديك اشتراك). الاشتراكات ستبدأ من تاريخ التلقي وستكون متاحة للمدة المحددة من قبل نوع الاشتراك.</message>
-	<message key="gifts.purchaseGiftSubscription">أهدِ اشتراكاً</message>
-	<message key="gifts.giftSubscriptionsAvailable">إهداء الاشتراكات متاح أيضاً. الاشتراكات المهداة يمكن لمستلمها تلقيها في أي وقت، وهي طريقة رائعة لدعم المجلة.</message>
-	<message key="gifts.noSubscriptions">لا اشتراكات مهداة</message>
-	<message key="gifts.giftRedeemed">تم تلقي الهدية بنجاح</message>
-	<message key="gifts.noGiftToRedeem">هذه الهدية غير متاحة لتلقيها</message>
-	<message key="gifts.giftAlreadyRedeemed">هذه الهدية تم تلقيها مسبقاً</message>
-	<message key="gifts.giftNotValid">هذه الهدية غير صحيحة ولا يمكن تلقيها</message>
-	<message key="gifts.subscriptionTypeNotValid">نوعية الاشتراك لهذه الهدية غير صحيحة. لطفاً، إتصل بمدير الاشتراكات</message>
-	<message key="gifts.subscriptionNonExpiring">لم يتم تلقي هذه الهدية نظراً لكونك تمتلك مسبقاً اشتراكاً نافذاً في هذه المجلة</message>
-
 	<!-- Payments -->
 	<message key="payment.loginRequired">ينبغي عليك الدخول إلى الموقع لتقوم بالدفع</message>
 	<message key="payment.loginRequired.forArticle">الاشتراك أو شراء مؤلَّف يتطلب الدخول إلى الموقع، فبهذا يمكن التحقق من حالة الاشتراك واستعراض عمليات الشراء السابقة.</message>
@@ -885,8 +850,6 @@
 	<message key="payment.type.purchaseIssue">رسوم شراء إصدار (عدد من المجلة)</message>
 	<message key="payment.type.subscription">رسوم الاشتراك</message>
 	<message key="payment.type.donation">الهبات</message>
-	<message key="payment.type.gift">هدية</message>
-	<message key="payment.type.gift.subscription">اشتراك</message>
 
 	<message key="payment.donation.makeDonation">قدِّم هبة</message>
 

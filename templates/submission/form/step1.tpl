@@ -7,8 +7,12 @@
  *
  * Step 1 of author monograph submission.
  *}
-{capture assign="additionalFormContent2"}
-	{include file="submission/form/section.tpl"}
-{/capture}
+{if $sectionOptions|@count == 1}
+	 {translate key="author.submit.notAccepting"}
+{else}
+	{capture assign="additionalFormContent2"}
+		{include file="submission/form/section.tpl"}
+	{/capture}
 
-{include file="core:submission/form/step1.tpl"}
+	{include file="core:submission/form/step1.tpl"}
+{/if}

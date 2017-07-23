@@ -29,7 +29,6 @@ switch ($op) {
 	//
 	case 'register':
 	case 'registerUser':
-	case 'registrationComplete':
 	case 'activateUser':
 		define('HANDLER_CLASS', 'RegistrationHandler');
 		import('lib.pkp.pages.user.RegistrationHandler');
@@ -38,8 +37,6 @@ switch ($op) {
 	// Misc.
 	//
 	case 'index':
-	case 'gifts':
-	case 'redeemGift':
 	case 'subscriptions':
 	case 'setLocale':
 	case 'authorizationDenied':

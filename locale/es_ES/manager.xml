@@ -36,8 +36,6 @@
 	<message key="manager.payment.enable">Habilitar</message>
 	<message key="manager.payment.feePaymentOptions">Opciones de pago de la cuota</message>
 	<message key="manager.payment.form.numeric">Todos los costes deben tener un valor numérico positivo (se permite el uso de decimales)</message>
-	<message key="manager.payment.giftFees">Donación de cuotas</message>
-	<message key="manager.payment.giftFeesDescription">Un enlace de donación de suscripciones aparecerá en la página de suscripciones en la sección Acerca de la revista y como elemento del bloque de la barra lateral de suscripciones.</message>
 	<message key="manager.payment.generalFees">Cuotas generales</message>
 	<message key="manager.payment.generalFeesDescription">La sección de Miembros de la asociación se mostrará en la sección Acerca de la revista, debajo de Políticas, y el enlace para realizar donaciones aparecerá sobre el buscador, en la parte derecha de la ventana.</message>
 	<message key="manager.payment.generalOptions">Opciones generales</message>
@@ -45,7 +43,6 @@
 	<message key="manager.payment.notFound">No se pudo encontrar</message>
 	<message key="manager.payment.options">Opciones</message>
 	<message key="manager.payment.options.acceptSubscriptionPayments">Esta opción activa el pago para suscribirse a la revista. Los tipos de suscripción, el coste, la duración y las suscripciones en sí las administra el gestor/a (de suscripciones) de la revista.</message>
-	<message key="manager.payment.options.acceptGiftSubscriptionPayments">Esta opción activa el pago para donación de suscripciones y permite a los lectores/as de la revista comprar donaciones de suscripciones para otros lectores/as.</message>
 	<message key="manager.payment.options.donationFee">Donaciones a la revista</message>
 	<message key="manager.payment.options.enablePayments">Haga clic aquí para habilitar el módulo de pagos. Debe configurar las opciones de pago. Para ello, rellene el siguiente formulario. Tenga en cuenta que debe iniciar sesión para realizar cualquier pago.</message>
 	<message key="manager.payment.options.fastTrackFee">Revisión rápida</message>
@@ -378,7 +375,6 @@
 	<message key="manager.subscriptionPolicies.subscriptionContact">Gestor/a de suscripciones</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactDescription">El contacto se encuentra en el apartado Suscripciones de la sección Acerca de la revista.</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactEmailValid">Introduzca una dirección de correo electrónico válida.</message>
-	<message key="manager.subscriptionPolicies.subscriptionPoliciesSaved">La configuración de la política de suscripción se actualizó.</message>
 	<message key="manager.subscriptions">Suscripciones</message>
 	<message key="manager.individualSubscriptions">Suscripciones individuales</message>
 	<message key="manager.institutionalSubscriptions">Suscripciones institucionales</message>

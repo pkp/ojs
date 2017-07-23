@@ -49,9 +49,6 @@
 		<!--<a href="{$subscriptionUrl}">{$subscriptionUrl}</a>-->
 		<query>UPDATE email_templates_default_data SET body=REPLACE(body, '&lt;a href=&quot;{$subscriptionUrl}&quot;&gt;{$subscriptionUrl}&lt;/a&gt;', '{$subscriptionUrl}')</query>
 		<query>UPDATE email_templates_data SET body=REPLACE(body, '&lt;a href=&quot;{$subscriptionUrl}&quot;&gt;{$subscriptionUrl}&lt;/a&gt;', '{$subscriptionUrl}')</query>
-		<!--<a href="{$giftUrl}">{$giftUrl}</a>-->
-		<query>UPDATE email_templates_default_data SET body=REPLACE(body, '&lt;a href=&quot;{$giftUrl}&quot;&gt;{$giftUrl}&lt;/a&gt;', '{$giftUrl}')</query>
-		<query>UPDATE email_templates_data SET body=REPLACE(body, '&lt;a href=&quot;{$giftUrl}&quot;&gt;{$giftUrl}&lt;/a&gt;', '{$giftUrl}')</query>
 	</sql>
 	<sql>
 		<!-- #2159 add missing first editor decision SUBMISSION_EDITOR_DECISION_EXTERNAL_REVIEW (changing the stage from WORKFLOW_STAGE_ID_SUBMISSION to WORKFLOW_STAGE_ID_EXTERNAL_REVIEW) for those migrated from OJS 2.4.x -->
@@ -65,5 +62,25 @@
 		<query>UPDATE email_templates_default_data SET body=REPLACE(body, '{$submissionEditingUrl}', '{$submissionUrl}'), subject=REPLACE(subject, '{$submissionEditingUrl}', '{$submissionUrl}')</query>
 		<query>UPDATE email_templates_data SET body=REPLACE(body, '{$submissionEditingUrl}', '{$submissionUrl}'), subject=REPLACE(subject, '{$submissionEditingUrl}', '{$submissionUrl}')</query>
 	</sql>
+	<sql><!-- pkp/pkp-lib#2392 -->
+		<!-- remove old, removed journal settings migrated/concatenated to the new, existing -->
+		<query>DELETE FROM journal_settings WHERE setting_name IN ('focusScopeDesc', 'reviewPolicy', 'pubFreqPolicy', 'openAccessPolicy', 'customAboutItems', 'contributorNote', 'contributors', 'sponsorNote', 'sponsors', 'history')</query>
+	</sql>
+	<sql><!-- pkp/pkp-lib#2537 -->
+		<!-- copy article_galley_settings into submission_galley_settings -->
+		<query>INSERT INTO submission_galley_settings (galley_id, locale, setting_name, setting_value, setting_type) SELECT galley_id, locale, setting_name, setting_value, setting_type FROM article_galley_settings WHERE setting_name &lt;&gt; 'excludeDoi' AND setting_name &lt;&gt; 'excludeURN'</query>
+		<!-- delete old/unused settings from  submission_settings -->
+		<query>DELETE FROM submission_settings WHERE setting_name IN ('excludeDoi', 'excludeURN')</query>
+	</sql>
+	<sql><!-- pkp/pkp-lib#1816 Payments/subscriptions -->
+		<!-- Remove gifts -->
+		<drop table="gifts" />
+		<query>DELETE FROM email_templates_default WHERE email_key IN ('GIFT_AVAILABLE', 'GIFT_USER_REGISTER', 'GIFT_USER_LOGIN')</query>
+		<query>DELETE FROM email_templates_default_data WHERE email_key IN ('GIFT_AVAILABLE', 'GIFT_USER_REGISTER', 'GIFT_USER_LOGIN')</query>
+		<query>DELETE FROM email_templates WHERE email_key IN ('GIFT_AVAILABLE', 'GIFT_USER_REGISTER', 'GIFT_USER_LOGIN')</query>
+		<query>DELETE FROM email_templates_data WHERE email_key IN ('GIFT_AVAILABLE', 'GIFT_USER_REGISTER', 'GIFT_USER_LOGIN')</query>
+		<query>DELETE FROM notifications WHERE type IN (33554433, 33554434, 33554435, 33554436, 33554437, 33554438)</query><!-- NOTIFICATION_TYPE_GIFT_REDEEM_STATUS_SUCCESS, NOTIFICATION_TYPE_GIFT_REDEEM_STATUS_ERROR_NO_GIFT_TO_REDEEM, NOTIFICATION_TYPE_GIFT_REDEEM_STATUS_ERROR_GIFT_ALREADY_REDEEMED, NOTIFICATION_TYPE_GIFT_REDEEM_STATUS_ERROR_GIFT_INVALID, NOTIFICATION_TYPE_GIFT_REDEEM_STATUS_ERROR_SUBSCRIPTION_TYPE_INVALID, NOTIFICATION_TYPE_GIFT_REDEEM_STATUS_ERROR_SUBSCRIPTION_NON_EXPIRING -->
+		<query>DELETE FROM queued_payments WHERE type=16</query><!-- PAYMENT_TYPE_GIFT -->
+		<query>DELETE FROM completed_payments WHERE type=16</query><!-- PAYMENT_TYPE_GIFT -->
+	</sql>
 </data>
-

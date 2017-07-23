@@ -1114,7 +1114,6 @@
 
        <!-- Debug messages -->
        <message key="debug.notes.currencyListLoad">З XML-файлу завантажений список валют "{$filename}"</message>
-
        <!-- Grid Actions -->
        <message key="grid.action.createContext">Створити новий журнал</message>
 
@@ -1139,6 +1138,7 @@
 
        <message key="editor.issues.backIssues">Попередні випуски</message>
        <message key="editor.issues.futureIssues">Наступні випуски</message>
+
 </locale>
 
 

@@ -17,12 +17,6 @@
 import('lib.pkp.plugins.citationOutput.abnt.PKPAbntCitationOutputPlugin');
 
 class AbntCitationOutputPlugin extends PKPAbntCitationOutputPlugin {
-	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 }
 
 ?>

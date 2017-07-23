@@ -21,12 +21,6 @@ class IssueEntryHandler extends PublicationEntryHandler {
 	/** the selected galley id **/
 	var $_selectedGalleyId;
 
-	/**
-	 * Constructor.
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 
 	//
 	// Public handler methods

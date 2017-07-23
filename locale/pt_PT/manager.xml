@@ -345,7 +345,6 @@
 	<message key="manager.subscriptionPolicies.subscriptionContact">Gestor de Subscrições</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactDescription">O contacto a seguir será exibido em Subscrições, em Sobre a Revista.</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactEmailValid">Forneça um e-mail válido.</message>
-	<message key="manager.subscriptionPolicies.subscriptionPoliciesSaved">As políticas de subscrição foram actualizadas.</message>
 	<message key="manager.subscriptions">Subscrições</message>
 	<message key="manager.subscriptions.confirmDelete">Deseja realmente eliminar esta subscrição?</message>
 	<message key="manager.subscriptions.create">Criar Novo Subscritor</message>
@@ -482,9 +481,6 @@
 	<message key="manager.subscriptionTypes.form.individual">Individual (utilizadores validados via autenticação)</message>
 	<message key="manager.subscriptionTypes.form.options">Opções</message>
 	<message key="manager.language.submissions">Submissões</message>
-	<message key="manager.payment.giftFees">Valores dos Donativos</message>
-	<message key="manager.payment.giftFeesDescription">Será exibido um link para donativos das assinaturas na página das Asssinaturas em Sobre a Revista e integrado no bloco lateral de assinaturas.</message>
-	<message key="manager.payment.options.acceptGiftSubscriptionPayments">Esta acção activará os pagamentos para a assinatura de donativos, permitindo aos leitores oferecer assinaturas a outros leitores.</message>
 	<message key="manager.payment.options.purchaseIssueFee">Comprar Número</message>
 	<message key="manager.sections.confirmDelete">Tem a certeza que pretende eliminar permanentemente esta secção?</message>
 	<message key="manager.sections.alertDelete">Antes de ser eliminada esta secção, tem de remover os artigos publicados noutras secções.</message>

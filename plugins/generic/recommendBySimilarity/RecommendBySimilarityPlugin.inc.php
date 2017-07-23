@@ -20,14 +20,6 @@ define('RECOMMEND_BY_SIMILARITY_PLUGIN_COUNT', 10);
 
 class RecommendBySimilarityPlugin extends GenericPlugin {
 
-	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-	}
-
-
 	//
 	// Implement template methods from Plugin.
 	//

@@ -18,13 +18,6 @@ import('lib.pkp.classes.scheduledTask.ScheduledTask');
 class SubscriptionExpiryReminder extends ScheduledTask {
 
 	/**
-	 * Constructor.
-	 */
-	function __construct() {
-		parent::__construct();
-	}
-
-	/**
 	 * @see ScheduledTask::getName()
 	 */
 	function getName() {
@@ -40,7 +33,7 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 		$user = $userDao->getById($subscription->getUserId());
 		if (!isset($user)) return false;
 
-		$subscriptionType = $subscriptionTypeDao->getSubscriptionType($subscription->getTypeId());
+		$subscriptionType = $subscriptionTypeDao->getById($subscription->getTypeId());
 
 		$subscriptionName = $journal->getSetting('subscriptionName');
 		$subscriptionEmail = $journal->getSetting('subscriptionEmail');
@@ -50,7 +43,7 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 		$subscriptionContactSignature = $subscriptionName;
 
 		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_USER, LOCALE_COMPONENT_APP_COMMON);
-		
+
 		if ($subscriptionMailingAddress != '') {
 			$subscriptionContactSignature .= "\n" . $subscriptionMailingAddress;
 		}
@@ -66,7 +59,7 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 			'subscriptionType' => $subscriptionType->getSummaryString(),
 			'expiryDate' => $subscription->getDateEnd(),
 			'username' => $user->getUsername(),
-			'subscriptionContactSignature' => $subscriptionContactSignature 
+			'subscriptionContactSignature' => $subscriptionContactSignature
 		);
 
 		import('lib.pkp.classes.mail.MailTemplate');
@@ -89,9 +82,7 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 			$curDay = $curDate['day'];
 
 			// Check if expiry notification before months is enabled
-			if ($journal->getSetting('enableSubscriptionExpiryReminderBeforeMonths')) {
-
-				$beforeMonths = $journal->getSetting('numMonthsBeforeSubscriptionExpiryReminder');
+			if ($beforeMonths = $journal->getSetting('numMonthsBeforeSubscriptionExpiryReminder')) {
 				$beforeYears = (int)floor($beforeMonths/12);
 				$beforeMonths = (int)fmod($beforeMonths,12);
 
@@ -103,8 +94,8 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 				$individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
 				$institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
 				$dateEnd = $expiryYear . '-' . $expiryMonth . '-' . $expiryDay;
-				$individualSubscriptions = $individualSubscriptionDao->getSubscriptionsByDateEnd($dateEnd, $journal->getId()); 
-				$institutionalSubscriptions = $institutionalSubscriptionDao->getSubscriptionsByDateEnd($dateEnd, $journal->getId()); 
+				$individualSubscriptions = $individualSubscriptionDao->getByDateEnd($dateEnd, $journal->getId());
+				$institutionalSubscriptions = $institutionalSubscriptionDao->getByDateEnd($dateEnd, $journal->getId());
 
 				while ($subscription = $individualSubscriptions->next()) {
 					$this->sendReminder($subscription, $journal, 'SUBSCRIPTION_BEFORE_EXPIRY');
@@ -116,22 +107,20 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 			}
 
 			// Check if expiry notification before weeks is enabled
-			if ($journal->getSetting('enableSubscriptionExpiryReminderBeforeWeeks')) {
-
-				$beforeWeeks = $journal->getSetting('numWeeksBeforeSubscriptionExpiryReminder');
+			if ($beforeWeeks = $journal->getSetting('numWeeksBeforeSubscriptionExpiryReminder')) {
 				$beforeDays = $beforeWeeks * 7;
 
 				$expiryMonth = $curMonth + (int)floor(($curDay+$beforeDays)/31);
 				$expiryYear = $curYear + (int)floor($expiryMonth/12);
 				$expiryDay = (int)fmod($curDay+$beforeDays,31);
-				$expiryMonth = (int)fmod($expiryMonth,12);				
+				$expiryMonth = (int)fmod($expiryMonth,12);
 
 				// Retrieve all subscriptions that match expiry date
 				$individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
 				$institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
 				$dateEnd = $expiryYear . '-' . $expiryMonth . '-' . $expiryDay;
-				$individualSubscriptions = $individualSubscriptionDao->getSubscriptionsByDateEnd($dateEnd, $journal->getId()); 
-				$institutionalSubscriptions = $institutionalSubscriptionDao->getSubscriptionsByDateEnd($dateEnd, $journal->getId()); 
+				$individualSubscriptions = $individualSubscriptionDao->getByDateEnd($dateEnd, $journal->getId());
+				$institutionalSubscriptions = $institutionalSubscriptionDao->getByDateEnd($dateEnd, $journal->getId());
 
 				while ($subscription = $individualSubscriptions->next()) {
 					$this->sendReminder($subscription, $journal, 'SUBSCRIPTION_BEFORE_EXPIRY');
@@ -143,9 +132,7 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 			}
 
 			// Check if expiry notification after months is enabled
-			if ($journal->getSetting('enableSubscriptionExpiryReminderAfterMonths')) {
-
-				$afterMonths = $journal->getSetting('numMonthsAfterSubscriptionExpiryReminder');
+			if ($afterMonths = $journal->getSetting('numMonthsAfterSubscriptionExpiryReminder')) {
 				$afterYears = (int)floor($afterMonths/12);
 				$afterMonths = (int)fmod($afterMonths,12);
 
@@ -163,8 +150,8 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 				$individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
 				$institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
 				$dateEnd = $expiryYear . '-' . $expiryMonth . '-' . $expiryDay;
-				$individualSubscriptions = $individualSubscriptionDao->getSubscriptionsByDateEnd($dateEnd, $journal->getId()); 
-				$institutionalSubscriptions = $institutionalSubscriptionDao->getSubscriptionsByDateEnd($dateEnd, $journal->getId()); 
+				$individualSubscriptions = $individualSubscriptionDao->getByDateEnd($dateEnd, $journal->getId());
+				$institutionalSubscriptions = $institutionalSubscriptionDao->getByDateEnd($dateEnd, $journal->getId());
 
 				while ($subscription = $individualSubscriptions->next()) {
 					$this->sendReminder($subscription, $journal, 'SUBSCRIPTION_AFTER_EXPIRY_LAST');
@@ -176,9 +163,7 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 			}
 
 			// Check if expiry notification after weeks is enabled
-			if ($journal->getSetting('enableSubscriptionExpiryReminderAfterWeeks')) {
-
-				$afterWeeks = $journal->getSetting('numWeeksAfterSubscriptionExpiryReminder');
+			if ($afterWeeks = $journal->getSetting('numWeeksAfterSubscriptionExpiryReminder')) {
 				$afterDays = $afterWeeks * 7;
 
 				if (($curDay - $afterDays) <= 0) {
@@ -203,8 +188,8 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 				$individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
 				$institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
 				$dateEnd = $expiryYear . '-' . $expiryMonth . '-' . $expiryDay;
-				$individualSubscriptions = $individualSubscriptionDao->getSubscriptionsByDateEnd($dateEnd, $journal->getId()); 
-				$institutionalSubscriptions = $institutionalSubscriptionDao->getSubscriptionsByDateEnd($dateEnd, $journal->getId()); 
+				$individualSubscriptions = $individualSubscriptionDao->getByDateEnd($dateEnd, $journal->getId());
+				$institutionalSubscriptions = $institutionalSubscriptionDao->getByDateEnd($dateEnd, $journal->getId());
 
 				while ($subscription = $individualSubscriptions->next()) {
 					$this->sendReminder($subscription, $journal, 'SUBSCRIPTION_AFTER_EXPIRY');

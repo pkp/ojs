@@ -491,17 +491,15 @@ Unsere Entscheidung lautet: Beitrag ablehnen<br />
 {$editorialContactSignature}<br />]]></body>
 		<description>Diese E-Mail von der/dem Redakteur/in oder Rubrikredakteur/in an eine/n Autor/in informiert diese/n über eine getroffene Entscheidung zu ihrer/seiner Einreichung.</description>
 	</email_text>
-		<email_text key="COPYEDIT_REQUEST">
+	<email_text key="COPYEDIT_REQUEST">
 		<subject>Bitte um ein Lektorat</subject>
 		<body><![CDATA[{$participantName},<br />
 <br />
 ich bitte Sie, das Manuskript &quot;{$submissionTitle}&quot; für {$contextName} zu lektorieren. Bitte gehen Sie dabei folgendermaßen vor:<br />
 1. Klicken Sie auf die unten stehende URL des Beitrags.<br />
-2. Loggen Sie sich bei der Zeitschrift ein und klicken Sie auf den Dateinamen in Schritt 1.<br />
-3. Beachten Sie die Hinweise zum Lektorat auf der Webseite.<br />
-4. Öffnen Sie die heruntergeladene Datei und lektorieren Sie den Text; fügen Sie, falls nötig, Fragen an die Autorin/den Autor hinzu.<br />
-5. Sichern Sie die lektorierte Version und laden Sie sie zu Schritt 1 des Lektorats hoch.<br />
-6. Schicken Sie die ABGESCHLOSSEN-E-Mail an die Redaktion.<br />
+2. Öffnen Sie alle Dateien, die unter Entwurf für Lektorat verfügbar sind, und beginnen Sie Ihr Lektorat. Fügen Sie neue Diskussionen zum Lektorat nach Bedarf hinzu.<br />
+3. Sichern Sie die lektorierte(n) Dateien und laden Sie sie unter Lektoriert hoch.<br />
+4. Benachrichtigen Sie die/den Redakteur/in, dass alle Dateien fertig sind und dass der Herstellungsprozess beginnen kann.<br />
 <br />
 URL {$contextName}: {$contextUrl}<br />
 URL des Beitrags: {$submissionUrl}<br />
@@ -853,67 +851,6 @@ Vielen Dank!<br />
 Lektor/in, {$contextName}<br />
 ]]></body>
 		<description>Diese E-Mail ermöglicht es Lektor/innen, zusätzliche Informationen über Verweise von Autor/innen anzufordern.</description>
-	</email_text>
-	<email_text key="GIFT_AVAILABLE">
-		<subject>{$giftNoteTitle}</subject>
-		<body><![CDATA[Liebe/r {$recipientFirstName},<br />
-<br />
-{$buyerFullName} möchte mit Ihnen ein Geschenk bei {$giftJournalName} teilen:<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-{$giftNote}<br />
-<br />
-<br />
-Sie werden eine Folgemail erhalten, die Login-Details und eine Anleitung zum Einlösen des Geschenks enthält.<br />
-<br />
-Wir hoffen, dass Sie sich über Ihr Geschenk freuen!<br />
-<br />
-{$giftContactSignature}<br />
-]]></body>
-		<description>Diese E-Mail benachrichtigt eine/n Geschenkempfänger/in, dass ein Geschenk erworben worden ist und zur Einlösung bereit steht.</description>
-	</email_text>
-	<email_text key="GIFT_USER_REGISTER">
-		<subject>Lösen Sie Ihr Geschenk ein: Login-Details</subject>
-		<body><![CDATA[Liebe/r {$recipientFirstName},<br />
-<br />
-{$buyerFullName} möchte mit Ihnen ein Geschenk bei {$giftJournalName} teilen:<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-Um Ihr Geschenk einzulösen, loggen Sie sich bitte auf der Website der Zeitschrift unter {$giftUrl} ein.<br />
-<br />
-Ihr Benutzer/innenname: {$username}<br />
-Ihr Passwort: {$password}<br />
-<br />
-Sobald Sie sich eingeloggt haben, können Sie Ihr Passwort jederzeit ändern.<br />
-<br />
-Wir hoffen, dass Sie sich über Ihr Geschenk freuen!<br />
-<br />
-{$giftContactSignature}<br />
-]]></body>
-		<description>Diese E-Mail informiert eine/n Geschenkempfänger/in über die Login-Details für einen neuen Account.</description>
-	</email_text>
-	<email_text key="GIFT_USER_LOGIN">
-		<subject>Lösen Sie Ihr Geschenk ein: Login-Details</subject>
-		<body><![CDATA[Liebe/r {$recipientFirstName},<br />
-<br />
-{$buyerFullName} möchte mit Ihnen ein Geschenk bei {$giftJournalName} teilen:<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-Um Ihr Geschenk einzulösen, loggen Sie sich bitte auf der Website der Zeitschrift unter {$giftUrl} ein.<br />
-<br />
-Ihr Benutzer/innenname: {$username}<br />
-<br />
-Wir hoffen, dass Sie sich über Ihr Geschenk freuen!<br />
-<br />
-{$giftContactSignature}<br />
-]]></body>
-		<description>Diese E-Mail informiert eine/n Geschenkempfänger/in über seine/ihre Login-Details.</description>
 	</email_text>
 <email_text key="REVISED_VERSION_NOTIFY">
         <subject>Überarbeitete Version hochgeladen</subject>

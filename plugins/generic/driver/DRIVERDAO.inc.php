@@ -18,13 +18,6 @@ import('classes.oai.ojs.OAIDAO');
 
 class DRIVERDAO extends OAIDAO {
 
- 	/**
-	 * Constructor.
-	 */
-	function __construct() {
-		parent::__construct();
-	}
-
 	/**
 	 * Set parent OAI object.
 	 * @param JournalOAI

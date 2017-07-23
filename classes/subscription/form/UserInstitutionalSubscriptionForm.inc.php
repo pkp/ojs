@@ -39,14 +39,14 @@ class UserInstitutionalSubscriptionForm extends Form {
 
 		$this->userId = isset($userId) ? (int) $userId : null;
 		$this->subscription = null;
-		$this->request =& $request;
+		$this->request = $request;
 
 		$subscriptionId = isset($subscriptionId) ? (int) $subscriptionId : null;
 
 		if (isset($subscriptionId)) {
 			$subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO'); 
 			if ($subscriptionDao->subscriptionExists($subscriptionId)) {
-				$this->subscription =& $subscriptionDao->getSubscription($subscriptionId);
+				$this->subscription = $subscriptionDao->getById($subscriptionId);
 			}
 		}
 
@@ -54,8 +54,8 @@ class UserInstitutionalSubscriptionForm extends Form {
 		$journalId = $journal->getId();
 
 		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
-		$subscriptionTypes =& $subscriptionTypeDao->getSubscriptionTypesByInstitutional($journalId, true, false);
-		$this->subscriptionTypes =& $subscriptionTypes->toArray();
+		$subscriptionTypes = $subscriptionTypeDao->getByInstitutional($journalId, true, false);
+		$this->subscriptionTypes = $subscriptionTypes->toArray();
 
 		// Ensure subscription type is valid
 		$this->addCheck(new FormValidatorCustom($this, 'typeId', 'required', 'user.subscriptions.form.typeIdValid', create_function('$typeId, $journalId', '$subscriptionTypeDao = DAORegistry::getDAO(\'SubscriptionTypeDAO\'); return ($subscriptionTypeDao->subscriptionTypeExistsByTypeId($typeId, $journalId) && $subscriptionTypeDao->getSubscriptionTypeInstitutional($typeId) == 1) && $subscriptionTypeDao->getSubscriptionTypeDisablePublicDisplay($typeId) == 0;'), array($journal->getId())));
@@ -80,7 +80,7 @@ class UserInstitutionalSubscriptionForm extends Form {
 	 */
 	function initData() {
 		if (isset($this->subscription)) {
-			$subscription =& $this->subscription;
+			$subscription = $this->subscription;
 			$this->_data = array(
 				'institutionName' => $subscription->getInstitutionName(),
 				'institutionMailingAddress' => $subscription->getInstitutionMailingAddress(),
@@ -95,14 +95,10 @@ class UserInstitutionalSubscriptionForm extends Form {
 	 */
 	function display() {
 		$templateMgr = TemplateManager::getManager();
-		if (isset($this->subscription)) {
-			$subscriptionId = $this->subscription->getId();
-		} else {
-			$subscriptionId = null;
-		}
-
-		$templateMgr->assign('subscriptionId', $subscriptionId);
-		$templateMgr->assign('subscriptionTypes', $this->subscriptionTypes);
+		$templateMgr->assign(array(
+			'subscriptionId' => $this->subscription?$this->subscription->getId():null,
+			'subscriptionTypes' => $this->subscriptionTypes,
+		));
 		parent::display();
 	}
 
@@ -160,26 +156,24 @@ class UserInstitutionalSubscriptionForm extends Form {
 		$journalId = $journal->getId();
 		$typeId = $this->getData('typeId');
 		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
-		$nonExpiring = $subscriptionTypeDao->getSubscriptionTypeNonExpiring($typeId);
+		$institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
+		$subscriptionType = $subscriptionTypeDao->getById($typeId);
+		$nonExpiring = $subscriptionType->getNonExpiring();
 		$today = date('Y-m-d');
-		$insert = false;
 
 		if (!isset($this->subscription)) {
-			import('classes.subscription.InstitutionalSubscription');
-			$subscription = new InstitutionalSubscription();
+			$subscription = $institutionalSubscriptionDao->newDataObject();
 			$subscription->setJournalId($journalId);
 			$subscription->setUserId($this->userId);
 			$subscription->setReferenceNumber(null);
 			$subscription->setNotes(null);
-
-			$insert = true;
 		} else {
-			$subscription =& $this->subscription;
+			$subscription = $this->subscription;
 		}
 
 		import('classes.payment.ojs.OJSPaymentManager');
 		$paymentManager = new OJSPaymentManager($this->request);
-		$paymentPlugin =& $paymentManager->getPaymentPlugin();
+		$paymentPlugin = $paymentManager->getPaymentPlugin();
 		
 		if ($paymentPlugin->getName() == 'ManualPayment') {
 			$subscription->setStatus(SUBSCRIPTION_STATUS_AWAITING_MANUAL_PAYMENT);
@@ -196,17 +190,13 @@ class UserInstitutionalSubscriptionForm extends Form {
 		$subscription->setDomain($this->getData('domain'));
 		$subscription->setIPRanges($this->getData('ipRanges'));
 
-		$institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
-		if ($insert) {
-			$institutionalSubscriptionDao->insertSubscription($subscription);
+		if ($subscription->getId()) {
+			$institutionalSubscriptionDao->updateObject($subscription);
 		} else {
-			$institutionalSubscriptionDao->updateSubscription($subscription);
+			$institutionalSubscriptionDao->insertSubscription($subscription);
 		}
 
-		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
-		$subscriptionType =& $subscriptionTypeDao->getSubscriptionType($this->getData('typeId'));
-
-		$queuedPayment =& $paymentManager->createQueuedPayment($journalId, PAYMENT_TYPE_PURCHASE_SUBSCRIPTION, $this->userId, $subscription->getId(), $subscriptionType->getCost(), $subscriptionType->getCurrencyCodeAlpha());
+		$queuedPayment = $paymentManager->createQueuedPayment($journalId, PAYMENT_TYPE_PURCHASE_SUBSCRIPTION, $this->userId, $subscription->getId(), $subscriptionType->getCost(), $subscriptionType->getCurrencyCodeAlpha());
 		$queuedPaymentId = $paymentManager->queuePayment($queuedPayment);
 
 		$paymentManager->displayPaymentForm($queuedPaymentId, $queuedPayment);

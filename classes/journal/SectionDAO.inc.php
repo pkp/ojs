@@ -20,9 +20,6 @@ import ('lib.pkp.classes.context.PKPSectionDAO');
 class SectionDAO extends PKPSectionDAO {
 	var $cache;
 
-	function __construct() {
-		parent::__construct();
-	}
 
 	function _cacheMiss($cache, $id) {
 		$section = $this->getById($id, null, false);
@@ -41,7 +38,7 @@ class SectionDAO extends PKPSectionDAO {
 	/**
 	 * Retrieve a section by ID.
 	 * @param $sectionId int
-	 * @param $journalId int optional
+	 * @param $journalId int Journal ID optional
 	 * @param $useCache boolean optional
 	 * @return Section
 	 */
@@ -73,6 +70,7 @@ class SectionDAO extends PKPSectionDAO {
 	/**
 	 * Retrieve a section by abbreviation.
 	 * @param $sectionAbbrev string
+	 * @param $journalId int Journal ID
 	 * @param $locale string optional
 	 * @return Section
 	 */
@@ -105,6 +103,8 @@ class SectionDAO extends PKPSectionDAO {
 	/**
 	 * Retrieve a section by title.
 	 * @param $sectionTitle string
+	 * @param $journalId int Journal ID
+	 * @param $locale string optional
 	 * @return Section
 	 */
 	function getByTitle($sectionTitle, $journalId, $locale = null) {
@@ -188,6 +188,7 @@ class SectionDAO extends PKPSectionDAO {
 	/**
 	 * Insert a new section.
 	 * @param $section Section
+	 * @return int new Section ID
 	 */
 	function insertObject($section) {
 		$this->update(
@@ -250,7 +251,7 @@ class SectionDAO extends PKPSectionDAO {
 
 	/**
 	 * Delete a section by ID.
-	 * @param $sectionId int
+	 * @param $sectionId int Section ID
 	 * @param $contextId int optional
 	 */
 	function deleteById($sectionId, $contextId = null) {
@@ -275,7 +276,7 @@ class SectionDAO extends PKPSectionDAO {
 	 * Delete sections by journal ID
 	 * NOTE: This does not delete dependent entries EXCEPT from section_editors. It is intended
 	 * to be called only when deleting a journal.
-	 * @param $journalId int
+	 * @param $journalId int Journal ID
 	 */
 	function deleteByJournalId($journalId) {
 		$this->deleteByContextId($journalId);
@@ -284,6 +285,7 @@ class SectionDAO extends PKPSectionDAO {
 	/**
 	 * Retrieve an array associating all section editor IDs with
 	 * arrays containing the sections they edit.
+	 * @param $journalId int Journal ID
 	 * @return array editorId => array(sections they edit)
 	 */
 	function &getEditorSections($journalId) {
@@ -312,6 +314,7 @@ class SectionDAO extends PKPSectionDAO {
 	/**
 	 * Retrieve all sections in which articles are currently published in
 	 * the given issue.
+	 * @param $issueId int Issue ID
 	 * @return array
 	 */
 	function getByIssueId($issueId) {
@@ -333,6 +336,8 @@ class SectionDAO extends PKPSectionDAO {
 
 	/**
 	 * Retrieve all sections for a journal.
+	 * @param $journalId int Journal ID
+	 * @param $rangeInfo DBResultRange optional
 	 * @return DAOResultFactory containing Sections ordered by sequence
 	 */
 	function getByJournalId($journalId, $rangeInfo = null) {
@@ -342,7 +347,7 @@ class SectionDAO extends PKPSectionDAO {
 	/**
 	 * Retrieve all sections for a journal.
 	 * @param $journalId int Journal ID
-	 * @param $rangeInfo Object
+	 * @param $rangeInfo DBResultRange optional
 	 * @return DAOResultFactory containing Sections ordered by sequence
 	 */
 	function getByContextId($journalId, $rangeInfo = null) {
@@ -356,6 +361,7 @@ class SectionDAO extends PKPSectionDAO {
 
 	/**
 	 * Retrieve all sections.
+	 * @param $rangeInfo DBResultRange optional
 	 * @return DAOResultFactory containing Sections ordered by journal ID and sequence
 	 */
 	function getAll($rangeInfo = null) {
@@ -369,6 +375,7 @@ class SectionDAO extends PKPSectionDAO {
 
 	/**
 	 * Retrieve all empty (without articles) section ids for a journal.
+	 * @param $journalId int Journal ID
 	 * @return array
 	 */
 	function getEmptyByJournalId($journalId) {
@@ -388,6 +395,8 @@ class SectionDAO extends PKPSectionDAO {
 
 	/**
 	 * Retrieve the IDs and titles of the sections for a journal in an associative array.
+	 * @param $journalId int Journal ID
+	 * @param $submittableOnly boolean optional
 	 * @return array
 	 */
 	function getTitles($journalId, $submittableOnly = false) {
@@ -402,8 +411,8 @@ class SectionDAO extends PKPSectionDAO {
 
 	/**
 	 * Check if a section exists with the specified ID.
-	 * @param $sectionId int
-	 * @param $journalId int
+	 * @param $sectionId int Section ID
+	 * @param $journalId int Journal ID
 	 * @return boolean
 	 */
 	function sectionExists($sectionId, $journalId) {
@@ -419,7 +428,7 @@ class SectionDAO extends PKPSectionDAO {
 
 	/**
 	 * Sequentially renumber sections in their sequence order.
-	 * @param $journalId int
+	 * @param $journalId int Journal ID
 	 */
 	function resequenceSections($journalId) {
 		$result = $this->retrieve(
@@ -453,6 +462,7 @@ class SectionDAO extends PKPSectionDAO {
 	/**
 	 * Delete the custom ordering of an issue's sections.
 	 * @param $issueId int
+	 * @return boolean
 	 */
 	function deleteCustomSectionOrdering($issueId) {
 		return $this->update(

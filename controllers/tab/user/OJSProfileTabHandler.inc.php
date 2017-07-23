@@ -17,12 +17,6 @@
 import('lib.pkp.controllers.tab.user.ProfileTabHandler');
 
 class OJSProfileTabHandler extends ProfileTabHandler {
-	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 
 	/**
 	 * Display form to edit user's notification settings.

@@ -20,12 +20,6 @@ class IssueHandler extends Handler {
 	/** @var IssueGalley retrieved issue galley */
 	var $_galley = null;
 
-	/**
-	 * Constructor
-	 **/
-	function __construct() {
-		parent::__construct();
-	}
 
 	/**
 	 * @copydoc PKPHandler::authorize()
@@ -107,7 +101,7 @@ class IssueHandler extends Handler {
 				$request->redirect(null, null, 'download', array($issue->getBestIssueId($journal), $galley->getBestGalleyId($journal)));
 			}
 		} else {
-			$this->_setupIssueTemplate($request, $issue, $request->getUserVar('showToc') ? true : false);
+			self::_setupIssueTemplate($request, $issue, $request->getUserVar('showToc') ? true : false);
 			$templateMgr->assign('issueId', $issue->getBestIssueId());
 
 			// consider public identifiers
@@ -185,11 +179,11 @@ class IssueHandler extends Handler {
 
 		// If this is an editorial user who can view unpublished issue galleys,
 		// bypass further validation
-		if ($issueAction->allowedIssuePrePublicationAccess($journal)) return true;
+		if ($issueAction->allowedIssuePrePublicationAccess($journal, $user)) return true;
 
 		// Ensure reader has rights to view the issue galley
 		if ($issue->getPublished()) {
-			$subscriptionRequired = $issueAction->subscriptionRequired($issue);
+			$subscriptionRequired = $issueAction->subscriptionRequired($issue, $journal);
 			$isSubscribedDomain = $issueAction->subscribedDomain($journal, $issue->getId());
 
 			// Check if login is required for viewing.
@@ -259,16 +253,12 @@ class IssueHandler extends Handler {
 	 * 	the cover page will be displayed. Otherwise table of contents
 	 * 	will be displayed.
 	 */
-	function _setupIssueTemplate($request, $issue, $showToc = false) {
+	static function _setupIssueTemplate($request, $issue, $showToc = false) {
 		$journal = $request->getJournal();
 		$templateMgr = TemplateManager::getManager($request);
 
 		// Determine pre-publication access
 		// FIXME: Do that. (Bug #8278)
-
-		if (!$issue) {
-			$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
-		}
 
 		$templateMgr->assign(array(
 			'issueIdentification' => $issue->getIssueIdentification(),
@@ -294,7 +284,7 @@ class IssueHandler extends Handler {
 		// Subscription Access
 		import('classes.issue.IssueAction');
 		$issueAction = new IssueAction();
-		$subscriptionRequired = $issueAction->subscriptionRequired($issue);
+		$subscriptionRequired = $issueAction->subscriptionRequired($issue, $journal);
 		$subscribedUser = $issueAction->subscribedUser($journal);
 		$subscribedDomain = $issueAction->subscribedDomain($journal);
 
