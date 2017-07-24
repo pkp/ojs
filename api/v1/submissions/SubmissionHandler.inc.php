@@ -203,24 +203,28 @@ class SubmissionHandler extends APIHandler {
 	 */
 	protected function submissionMetadata($slimRequest, $response, $args) {
 		$request = $this->_request;
+		$journal = $request->getContext();
 		$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
 		assert($submission);
 
 		$queryParams = $slimRequest->getQueryParams();
 		$format = isset($queryParams['format'])?$queryParams['format']:'';
-		import('plugins.metadata.dc11.schema.Dc11Schema');
-		if ($format == 'dc11' || $format == '') {
-			$schema = new Dc11Schema();
-			return $this->getMetadaJSON($submission, $schema);
+
+		$metadataPlugins = (array) PluginRegistry::loadCategory('metadata', true, $journal->getId());
+		$schema = null;
+		foreach($metadataPlugins as $plugin) {
+			if (method_exists($plugin, 'getFormatId') && $format === $plugin->getFormatId()) {
+				$schema = $plugin->getSchemaObject();
+			}
 		}
-		import('plugins.metadata.mods34.schema.Mods34Schema');
-		if ($format == 'mods34') {
-			$schema = new Mods34Schema();
-			return $this->getMetadaJSON($submission, $schema);
+		if (!$schema && array_key_exists('Dc11MetadataPlugin', $metadataPlugins)) {
+			$schema = $metadataPlugins['Dc11MetadataPlugin']->getSchemaObject();
 		}
+		assert(is_a($schema, 'MetadataSchema'));
+		return $this->getMetadata($submission, $schema);
 	}
 
-	function getMetadaJSON($submission, $schema) {
+	function getMetadata($submission, $schema) {
 		$metadata = array();
 		$dcDescription = $submission->extractMetadata($schema);
 		foreach ($dcDescription->getProperties() as $propertyName => $property) {
@@ -233,7 +237,7 @@ class SubmissionHandler extends APIHandler {
 				$metadata[$propertyName][] = $values;
 			}
 		}
-		return json_encode($metadata);
+		return $metadata;
 	}
 
 	/**
@@ -258,7 +262,7 @@ class SubmissionHandler extends APIHandler {
 
 		// simply return basic metadata for unpublished submissions
 		if (!isset($publishedArticle)) {
-			return $this->submissionMetadata($slimRequest, $response, $args);
+			return $response->withJson($this->submissionMetadata($slimRequest, $response, $args), 200);
 		}
 
 		$articleId = $publishedArticle->getId();
