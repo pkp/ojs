@@ -1,3 +1,4 @@
+
 swagger: '2.0'
 info:
   version: '1.0'
@@ -33,37 +34,154 @@ tags:
     description: "Published articles"
   - name: "Backend"
     description: "OJS UI sustaining endpoints"
+definitions:
+  Author:
+    type: object
+    properties:
+      name:
+        type: string
+      affiliation:
+        type: string
+      orcid:
+        type: string
+  GalleyInSubmission:
+    type: object
+    properties:
+      id:
+        type: string
+      label:
+        type: string
+      filetype:
+        type: string
+      url:
+        type: string
+  Galley:
+    type: object
+    properties:
+      id:
+        type: string
+      submissionId:
+        type: string
+      locale:
+        type: string
+      label:
+        type: string
+      seq:
+        type: string
+      remoteUrl:
+        type: string
+      fileId:
+        type: string
+      revision:
+        type: integer
+      fileType:
+        type: string
+  File:
+    type: object
+    properties:
+      fileId:
+        type: integer
+      revision:
+        type: integer
+      submissionId:
+        type: integer
+      fileName:
+        type: object
+        $ref: '#/definitions/LocaleObject'
+      fileLabel:
+        type: string
+      fileStage:
+        type: integer
+      uploaderUserId:
+        type: integer
+      userGroupId:
+        type: integer
+      metadata:
+        type: object
+  User:
+    type: object
+    properties:
+      roleId:
+        type: string
+      roleName:
+        type: string
+      userId:
+        type: string
+      userFullName:
+        type: string
+  LocaleObject:
+    type: object
+    description: Key/value pairs containing strings by locale key.
+    example:
+      en_US: Filename
+      fr_CA: Nom de fichier
+  ErrorResponse:
+    type: object
+    description: A response object that will be returned when the request could not be fulfilled.
+    properties:
+      error:
+        type: string
+      errorMessage:
+        type: string
 paths:
   '/submissions/{submissionId}':
     get:
       tags:
         - Submissions
-      summary: Submission metadata
-      description: |
-        Get submission metadata
+      summary: Get a submission by ID.
       parameters:
         - name: submissionId
           in: path
           description: Submission ID
           required: true
           type: integer
-        - name: format
-          in: query
-          description: Stage ID
-          required: false
-          type: string
-          default: 'dc11'
       responses:
         '200':
-          description: submission metadata
-          
+          description: Submission details.
+          schema:
+            type: object
+            properties:
+              issueId:
+                type: integer
+              issue:
+                type: string
+              section:
+                type: string
+              title:
+                type: string
+              subtitle:
+                type: string
+              authors:
+                type: array
+                items:
+                  type: object
+                  $ref: '#/definitions/Author'
+              pubIds:
+                type: object
+                properties:
+                  doipubidplugin:
+                    type: object
+                    properties:
+                      pubId: string
+                      doiUrl: string
+              abstract:
+                type: string
+              citations:
+                type: object
+              cover_image: string
+              galleys:
+                type: array
+                items:
+                  type: object
+                  $ref: '#/definitions/GalleyInSubmission'
+              datePublished: string
   '/submissions/{submissionId}/files':
     get:
       tags:
         - Submissions
-      summary: Submission files by stage
+      summary: Get files attached to a submission.
       description: |
-        Retrieve all submission files for the given file stage
+        Get all submission files attached to a submission. Optionally filter returned files by a file stage ID.
       parameters:
         - name: submissionId
           in: path
@@ -77,15 +195,24 @@ paths:
           type: integer
       responses:
         '200':
-          description: array of submission file metadata
-          
+          description: Array of submission files.
+          schema:
+            type: array
+            items:
+              type: object
+              $ref: '#/definitions/File'
+        '404':
+          description: Submission file could not be found.
+          schema:
+            type: object
+            $ref: '#/definitions/ErrorResponse'
   '/submissions/{submissionId}/participants':
     get:
       tags:
         - Submissions
-      summary: Submission participants
+      summary: Get participants assigned to a submission.
       description: |
-        Retrieve all participants for a given file stage
+        Get all participants assigned to a submission. Optionally filter returned participants by a stage ID.
       parameters:
         - name: submissionId
           in: path
@@ -100,15 +227,19 @@ paths:
           default: 1
       responses:
         '200':
-          description: array of user metadata
-        
+          description: Array of users.
+          schema:
+            type: array
+            items:
+              type: object
+              $ref: '#/definitions/User'
   '/submissions/{submissionId}/galleys':
     get:
       tags:
         - Submissions
-      summary: Submission galleys
+      summary: Get submission galleys.
       description: |
-        Retrieve all the submission's galleys
+        Get all of a submission's download galleys.
       parameters:
         - name: submissionId
           in: path
@@ -117,8 +248,17 @@ paths:
           type: integer
       responses:
         '200':
-          description: array of galley metadata
-  
+          description: Array of galleys.
+          schema:
+            type: array
+            items:
+              type: object
+              $ref: '#/definitions/Galley'
+        '400':
+          description: Invalid stage ID
+          schema:
+            type: object
+            $ref: '#/definitions/ErrorResponse'
   '/files/{fileId}':
     get:
       tags:
@@ -145,7 +285,7 @@ paths:
       responses:
         '200':
           description: binary file
-          
+
   '/galleys/{representationId}':
     get:
       tags:
@@ -167,7 +307,7 @@ paths:
       responses:
         '200':
           description: binary file
-          
+
   '/issues/':
     get:
       tags:
@@ -194,7 +334,7 @@ paths:
       responses:
         '200':
           description: array of issues
-      
+
   '/issues/{issueId}':
     get:
       tags:
@@ -211,7 +351,7 @@ paths:
       responses:
         '200':
           description: issue metadata
-          
+
   '/articles/{articleId}':
     get:
       tags:
@@ -228,7 +368,7 @@ paths:
       responses:
         '200':
           description: published article
-  
+
   '/backend/submissions':
     get:
       tags:
@@ -239,7 +379,7 @@ paths:
       parameters:
         - name: orderColumn
           in: query
-          description: Field to order by 
+          description: Field to order by
           required: false
           type: string
           default: id
@@ -279,7 +419,7 @@ paths:
       responses:
         '200':
           description: array of submissions
-          
+
   '/backend/users':
     get:
       tags:
@@ -290,7 +430,7 @@ paths:
       parameters:
         - name: userGroupId
           in: query
-          description: User group ID 
+          description: User group ID
           required: false
           type: integer
         - name: includeNoRole
