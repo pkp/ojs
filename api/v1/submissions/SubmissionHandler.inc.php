@@ -270,15 +270,15 @@ class SubmissionHandler extends APIHandler {
 
 		// public identifiers
 		$pubIdPlugins = PluginRegistry::loadCategory('pubIds', true);
-		$pubIds = array_map(function($pubIdPlugin) use($issue,$publishedArticle) {
+		$pubIds = array_map(function($pubIdPlugin) use($issue, $publishedArticle, $journal) {
 			if ($pubIdPlugin->getPubIdType() != 'doi')
-				continue;
+				return;
 			$doiUrl = null;
 			$pubId = $issue->getPublished() ?
 					$publishedArticle->getStoredPubId($pubIdPlugin->getPubIdType()) :
 					$pubIdPlugin->getPubId($publishedArticle);
 			if($pubId) {
-				$doiUrl = $pubIdPlugin->getResolvingURL($currentJournal->getId(), $pubId);
+				$doiUrl = $pubIdPlugin->getResolvingURL($journal->getId(), $pubId);
 			}
 
 			return array(
