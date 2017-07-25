@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/importexport/users/locale/pt_BR/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Portuguese_(pt_BR)
+  * Localization strings.
+  -->
+
+<locale name="pt_BR" full_name="Português (Brasil)">
+	<message key="plugins.importexport.users.displayName">Plugin de Utilizadores em XML</message>
+	<message key="plugins.importexport.users.description">Importar e exportar utilizadores no formato XML</message>
+
+	<message key="plugins.importexport.users.cliUsage"><![CDATA[Uso: {$scriptName} {$pluginName} [comando] ...
+	Comandos:
+	import [xmlFileName] [journal_path]
+	export [xmlFileName] [journal_path]
+	export [xmlFileName] [journal_path] [userId1] [userId2] ...
+]]></message>
+	<message key="plugins.importexport.users.cliUsage.examples">
+		<![CDATA[
+			Exemplos:
+			Importar utilizadores para a minha Revista a partir do ficheiro import.xml:
+			{$scriptName} {$pluginName} import import.xml nomeDaRevista
+
+			Export todos os utilizadores da minha revista:
+			{$scriptName} {$pluginName} export export.xml nomeDaRevista
+
+			Export utilizadores por ID:
+			{$scriptName} {$pluginName} export export.xml nomeDaRevista 1 2
+		]]>
+	</message>
+	<message key="plugins.importexport.users.import.importUsers">Importar Utilizadores</message>
+	<message key="plugins.importexport.users.import.instructions"><![CDATA[Escolha um documento XML contendo as informações de registo para importação nesta revista. Veja a ajuda do sistema para detalhes sobre o formato do documento.<br /><br />Caso o documento possua logins ou e-mails já registados no sistema, os dados de registo não serão importados e quaisquer funções adicionais serão designadas aos registos existentes.]]></message>
+	<message key="plugins.importexport.users.import.dataFile">Arquivo de dados do Utilizador</message>
+	<message key="plugins.importexport.users.import.sendNotify">Enviar notificação via e-mail para cada utilizador importado, com login e senha do utilizador.</message>
+	<message key="plugins.importexport.users.import.continueOnError">Continuar a importação de outros utilizadores caso ocorra uma falha.</message>
+	<message key="plugins.importexport.users.import.usersWereImported">Os seguintes utilizadores foram importados com sucesso para o sistema</message>
+	<message key="plugins.importexport.users.import.errorsOccurred">Erros ocorridos durante a importação</message>
+	<message key="plugins.importexport.users.import.confirmUsers">Deseja importar os utilizadores listados para o sistema</message>
+	<message key="plugins.importexport.users.unknownPress">Caminho de revista inválido: "{$journalPath}"</message>
+
+	<message key="plugins.importexport.users.export.exportUsers">Exportar Utilizadores</message>
+	<message key="plugins.importexport.users.export.exportByRole">Exportar Por Papel</message>
+	<message key="plugins.importexport.users.export.exportAllUsers">Exportar Todos</message>
+	<message key="plugins.importexport.users.export.errorsOccurred">Error ocorridos durante a exportação</message>
+	<message key="plugins.importexport.users.export.couldNotWriteFile">Não foi possível escrever para o arquivo  "{$fileName}".</message>
+	<message key="plugins.importexport.users.import.warning">Aviso</message>
+	<message key="plugins.importexport.users.import.encryptionMismatch">Não é possível criptografar com {$importHash}; o sisema está configurado para utilizar {$ojsHash}. Caso continue, será necessário recriar todas as senhas de usuários importados.</message>
+	<message key="plugins.importexport.users.results">Resultados</message>
+	<message key="plugins.importexport.users.uploadFile">Por favor carrega um ficheiro na secção "Importar" de forma a continuar</message>
+	<message key="plugins.importexport.users.importComplete">A importação foi concluída com sucesso. Os utilizadores com nomes e endereços de e-mail que ainda não estão em uso foram importados, juntamente com os grupos de utilizadores que os acompanham.</message>
+</locale>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/importexport/datacite/locale/pt_PT/locale.xml
+  *
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Portuguese_(pt_PT)
+  * Localization strings.
+  -->
+ 
+<locale name="pt_PT" full_name="Português (Portugal)">
+
+	<message key="plugins.importexport.datacite.displayName">Plugin de Exportação/Registo do DataCite</message>
+	<message key="plugins.importexport.datacite.description">Exporte ou registe os metadados de uma edição, artigo, galeria e outros ficheiros suplementares no formato do DataCite.</message>
+	<message key="plugins.importexport.datacite.settings.description">Por favor configure o plugin DataCite antes de o utilizar pela primeira vez.</message>
+	<message key="plugins.importexport.datacite.intro"><![CDATA[Para registar DOIs com o DataCite, por favor contacte o Gestor do <a href="http://datacite.org/contact" target="_blank">DataCite</a>]]></message>
+	<message key="plugins.importexport.datacite.settings.form.username">Nome do Utilizador (simbolo)</message>
+	<message key="plugins.importexport.datacite.settings.form.usernameRequired">Por favor introduza o nome de utilizador (symbol) que possuí do DataCite. O nome de utilizador não pode conter vírgulas.</message>
+	<message key="plugins.importexport.datacite.settings.form.automaticRegistration.description">o OJS irá depositar DOIs automáticamente para o DataCite. De nota que esta tarefa pode demorar um pouco, após o periodo de submissão. É possível verificar todos os DOIs que não foram registados.</message>
+	<message key="plugins.importexport.datacite.settings.form.testMode.description">Utilize o prefixo de teste do DataCite para o registo do DOI. Por favor não se esqueça de remover esta opção para produção.</message>
+	<message key="plugins.importexport.datacite.senderTask.name">Registo Automático de Tarefa do DataCite</message>
+	<message key="plugins.importexport.datacite.cliUsage">Utilização: 
+{$scriptName} {$pluginName} export [outputFileName] [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...
+{$scriptName} {$pluginName} register [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...</message>
+</locale>

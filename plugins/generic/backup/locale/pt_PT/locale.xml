@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/pt_PT/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="pt_PT" full_name="Português (Portugal)">
+	<message key="plugins.generic.backup.name">Plugin de Cópias de Segurança</message>
+	<message key="plugins.generic.backup.description">Este plugin criar uma cópia de segurança da instalação.</message>
+	<message key="plugins.generic.backup.link">Descarregar Cópia de Segurança</message>
+	<message key="plugins.generic.backup.longdescription"><![CDATA[<p>As seguintes ligações permitem, ao Administrador do Portal, descarregar uma cópia de segurança completa de variados elementos da instalação. Uma cópia completa contém <strong>os seguintes componentes</strong>. Por favor consulte a informação tecnica para mais informação sobre como se relacionam estes componentes.</p>]]></message>
+	<message key="plugins.generic.backup.db">Base de Dados</message>
+	<message key="plugins.generic.backup.files">Ficheiros</message>
+	<message key="plugins.generic.backup.code">Código</message>
+	<message key="plugins.generic.backup.db.config"><![CDATA[{$footNoteNum}. <strong>Aviso:</strong> A ferramenta para descarregar a base de dados não se encontra configurada no ficheiro "config.inc.php" de configuração. A sua configuração irá depender do motor de base de dados que utiliza. Deverá ser especificado na secção [cli], num parametro com o nome "dump". Para o MySQL utilize o mysqldump, i.e.:<br />
+<pre>[cli]
+dump = "/usr/bin/mysqldump -h %s -u %s -p%s %s"
+</pre>
+Os tokens "%s" serão substituidos, por ordem:<ol>
+	<li>Domínio</li>
+	<li>Nome de Utilizador</li>
+	<li>Password</li>
+	<li>Nome</li>
+</ol>
+<br /><br />]]></message>
+	<message key="plugins.generic.backup.failure"><![CDATA[<strong>AVISO: </strong>Ocorreu um erro durante o processo. A sua cópia de segurança pode não estar completa. A causa mais provável são permissões de ficheiro.]]></message>
+	<message key="plugins.generic.backup.tar.config"><![CDATA[{$footNoteNum}. <strong>AVISO:</strong> A ferramenta de descompressão "tar" não foi configurada no ficheiro "config.inc.php". A sua configuração vai depender do sistema operativo em uso. Deverá ser especificado na secção [cli], num parametro com o nome "tar".
+<pre>[cli]
+tar = "/bin/tar"
+</pre><br />]]></message>
+</locale>

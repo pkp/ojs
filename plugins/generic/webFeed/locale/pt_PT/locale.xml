@@ -19,6 +19,7 @@
 	<message key="plugins.generic.webfeed.settings.issue">Exibir canais somente nas páginas da edição.</message>
 	<message key="plugins.generic.webfeed.settings.all">Exibir canais em todas as páginas da revista.</message>
 	<message key="plugins.generic.webfeed.settings.currentIssue">Exibir itens da edição actual.</message>
+	<message key="plugins.generic.webfeed.settings.recent"> Exibir um número fixo de items recentes</message>
 	<message key="plugins.generic.webfeed.settings.recentArticles">itens mais recentes.</message>
 	<message key="plugins.generic.webfeed.settings.recentItemsRequired">Indique um inteiro positivo para o número de itens mais recentes.</message>
 	<message key="plugins.generic.webfeed.settings.homepage">Exibir links de canais nas páginas inicial e das edições apenas</message>

@@ -16,4 +16,5 @@
 	<message key="plugins.generic.openAIRE.description">O plugin OpenAIRE inclui o elemento projectID nos metadados do artigo e estende a interface OAI-PMH para se adequar às Orientações do OpenAIRE 1.1, auxiliando as revistas que usam o OJS a serem compatíveis com o OpenAIRE.</message>
 	<message key="plugins.generic.openAIRE.projectID">OpenAIRE Número de Projeto (Project ID)</message>
 	<message key="plugins.generic.openAIRE.projectIDValid">Indique um número de projeto válido (6 números)</message>
+	<message key="plugins.generic.openAIRE.projectID.description"><![CDATA[Se esta investigação resultou de uma iniciativa Europeia que cumpra com a <a href="https://www.openaire.eu/" target="_blank">OpenAIRE</a> plataforma de metadados, por favor inclua o ID do projecto, um número com seis digitos que coresponde ao o Identificador de Cedência de Concordância.]]></message>
 </locale>

@@ -31,30 +31,34 @@
 	<message key="author.submit.metadata">Inclusão de metadados</message>
 	<message key="author.submit.supplementaryFiles">Transferência de documentos suplementares</message>
 	<message key="author.submit.confirmation">Confirmação</message>
+	<message key="author.submit.nextSteps">Próximos Passos</message>
 	<message key="submission.submit.cancelSubmission">A submissão pode ser concluída numa data posterior, clicando em Submissões Activas nas opções da página do Autor.</message>
 	<message key="author.submit.notAccepting">Neste momento esta revista não aceita submissões.</message>
 	<message key="author.submit.requestWaiver">Solicitar isenção de taxas</message>
 	<message key="author.submit.qualifyForWaiver">Solicito considerar isenção de Taxa de Submissão para este artigo</message>
 	<message key="author.submit.addReasonsForWaiver">Indique no campo de comentários a motivação para a isenção de taxa</message>
+	<message key="author.submit.mustEnterWaiverReason">Indique a razão no espaço disponível, caso tenha solicitado isenção de taxa.</message>	
+	<message key="author.submissions.queuedReviewSubsequent">Em Revisão: Ronda {$round}</message>
+	<message key="author.submissions.queuedReviewRevisions">Em Revisão: Revisões Requeridas</message>
+	<message key="author.submissions.queuedEditingCopyedit">Em Edição: Edição de Texto solicitada</message>
+	<message key="author.submissions.queuedEditingProofread">Em Edição: Leitura de provas solicitada</message>
 	<message key="author.submissions.uploadCopyeditedVersion">Transferir cópia editada</message>
 	<message key="author.submissions.proofreadingCorrections">Correcções da Leitura de Prova</message>
 	<message key="author.submissions.confirmDelete">Deseja realmente eliminar esta submissão incompleta?</message>
 	<message key="author.submissions.viewStatus">Verificar situação</message>
 	<message key="author.submissions.noSubmissions">Nenhuma submissão.</message>
-	<message key="author.submit.howToSubmit"><![CDATA[Em caso de dificuldades com o processo, entre em contato com <a href="mailto:{$supportEmail}">{$supportName}</a> via e-mail ou pelo telefone {$supportPhone} para suporte.]]></message>
-	<message key="author.submit.howToSubmitNoPhone"><![CDATA[Em caso de dificuldades com o processo, entre em contacto com <a href="mailto:{$supportEmail}">{$supportName}</a> via e-mail para suporte.]]></message>
 	<message key="author.submit.journalSection">Secção</message>
 	<message key="author.submit.journalSectionDescription"><![CDATA[Escolha a secção apropriada para a submissão (leia Secções e Políticas em <a href="{$aboutUrl}">Sobre</a> a revista).]]></message>
-	<message key="submission.submit.selectSection">Escolha uma secção...</message>
-	<message key="author.submit.submissionChecklist">Condições para submissão</message>
 	<message key="author.submit.verifyChecklist">Todas as condições devem ser satisfeitas antes de continuar</message>
 	<message key="author.submit.copyrightNoticeAgree">Os autores concordam com os termos da Declaração de Direitos de Autor, que se aplicará a esta submissão caso seja publicada nesta revista (comentários ao editor podem ser incluídos a seguir).</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">É obrigatório aceitar a Declaração de Direitos de Autor para continuar!</message>
 	<message key="submission.submit.coverNote">Comentários ao Editor</message>
 	<message key="author.submit.comments">Insira o texto (opcional)</message>
 	<message key="author.submit.form.sectionRequired">Escolha a secção apropriada para a submissão.</message>
+	<message key="author.submit.form.localeRequired">Seleccione o idioma de submissão</message>
 	<message key="submission.submit.privacyStatement">Política de Privacidade</message>
 	<message key="author.submit.reorderInstructions">Utilize as setas para alterar a ordem pela qual aparecerão os nomes dos autores na publicação.</message>
+	<message key="author.submit.reorder">Reordenar nome do autor</message>
 	<message key="author.submit.selectPrincipalContact">Contacto principal para correspondência.</message>
 	<message key="author.submit.addAuthor">Adicionar autor</message>
 	<message key="author.submit.deleteAuthor">Eliminar autor</message>
@@ -65,6 +69,7 @@
 	<message key="author.submit.form.authorRequiredFields">São campos obrigatórios o nome, apelido e e-mail para cada autor.</message>
 	<message key="author.submit.form.titleRequired">Insira o título do documento.</message>
 	<message key="author.submit.form.abstractRequired">Indique o resumo do documento</message>
+	<message key="author.submit.form.wordCountAlert">O limite de palavras de resumo para esta secção foi excedido.</message>
 	<message key="author.submit.submissionFile">Ficheiro submetido</message>
 	<message key="author.submit.uploadSubmissionFile">Transferir ficheiro</message>
 	<message key="author.submit.replaceSubmissionFile">Substituir ficheiro</message>
@@ -111,12 +116,8 @@
 	<message key="author.article.copyeditedFile">Documento Editado</message>
 	<message key="author.article.authorRevisedFile">Versão do Autor</message>
 	<message key="author.submit.authorSubmitLoginMessage">É necessário registar-se no portal para submeter documentos à revista. O registo permite aos editores acompanhar a submissão e notificá-lo das mudanças na situação da submissão, ou caso informações adicionais sejam necessárias para dar continuidade ao processo editorial.</message>
-	<message key="author.submit.mustEnterWaiverReason">Indique a razão no espaço disponível, caso tenha solicitado isenção de taxa.</message>
-	<message key="author.submissions.queuedReviewSubsequent">Em Revisão: Ronda {$round}</message>
-	<message key="author.submissions.queuedReviewRevisions">Em Revisão: Revisões Requeridas</message>
-	<message key="author.submissions.queuedEditingCopyedit">Em Edição: Edição de Texto solicitada</message>
-	<message key="author.submissions.queuedEditingProofread">Em Edição: Leitura de provas solicitada</message>
-	<message key="author.submit.reorder">Reordenar nome do autor</message>
-	<message key="author.submit.form.wordCountAlert">O limite de palavras de resumo para esta secção foi excedido.</message>
-	<message key="author.submit.form.localeRequired">Seleccione o idioma de submissão</message>
+	<message key="author.submit.howToSubmit"><![CDATA[Em caso de dificuldades com o processo, entre em contato com <a href="mailto:{$supportEmail}">{$supportName}</a> via e-mail ou pelo telefone {$supportPhone} para suporte.]]></message>
+	<message key="author.submit.howToSubmitNoPhone"><![CDATA[Em caso de dificuldades com o processo, entre em contacto com <a href="mailto:{$supportEmail}">{$supportName}</a> via e-mail para suporte.]]></message>
+	<message key="submission.submit.selectSection">Escolha uma secção...</message>
+	<message key="author.submit.submissionChecklist">Condições para submissão</message>
 </locale>
