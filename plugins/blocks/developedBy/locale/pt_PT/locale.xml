@@ -7,11 +7,11 @@
   * Copyright (c) 2014-2017 Simon Fraser University
   * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Portuguese_(pt_BR)
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Portuguese_(pt_PT)
   * Localization strings.
   -->
 
-<locale name="pt_BR" full_name="Português (Brasil)">
+<locale name="pt_PT" full_name="Português (Portugal)">
 	<message key="plugins.block.developedBy.displayName">Bloco "Desenvolvido por"</message>
 	<message key="plugins.block.developedBy.description">Este plugin oferece um link para "Desenvolvido por" na barra lateral.</message>
 </locale>

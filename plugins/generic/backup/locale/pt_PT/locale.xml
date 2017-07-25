@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE locale SYSTEM "../../../../lib/pkp/dtd/locale.dtd">
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
   * locale/pt_PT/locale.xml
@@ -19,6 +19,7 @@
 	<message key="plugins.generic.backup.db">Base de Dados</message>
 	<message key="plugins.generic.backup.files">Ficheiros</message>
 	<message key="plugins.generic.backup.code">Código</message>
+<<<<<<< HEAD
 	<message key="plugins.generic.backup.db.config"><![CDATA[{$footNoteNum}. <strong>Aviso:</strong> A ferramenta para descarregar a base de dados não se encontra configurada no ficheiro "config.inc.php" de configuração. A sua configuração irá depender do motor de base de dados que utiliza. Deverá ser especificado na secção [cli], num parametro com o nome "dump". Para o MySQL utilize o mysqldump, i.e.:<br />
 <pre>[cli]
 dump = "/usr/bin/mysqldump -h %s -u %s -p%s %s"
@@ -34,5 +35,22 @@ Os tokens "%s" serão substituidos, por ordem:<ol>
 	<message key="plugins.generic.backup.tar.config"><![CDATA[{$footNoteNum}. <strong>AVISO:</strong> A ferramenta de descompressão "tar" não foi configurada no ficheiro "config.inc.php". A sua configuração vai depender do sistema operativo em uso. Deverá ser especificado na secção [cli], num parametro com o nome "tar".
 <pre>[cli]
 tar = "/bin/tar"
+=======
+	<message key="plugins.generic.backup.db.config"><![CDATA[{$footNoteNum}. <strong>Aviso:</strong> A ferramenta para descarregar a base de dados não se encontra configurada no ficheiro "config.inc.php" de configuração. A sua configuração irá depender do motor de base de dados que utiliza. Deverá ser especificado na secção [cli], num parametro com o nome "dump". Para o MySQL utilize o mysqldump, i.e.:<br />
+<pre>[cli]
+dump = "/usr/bin/mysqldump -h %s -u %s -p%s %s"
+</pre>
+Os tokens "%s" serão substituidos, por ordem:<ol>
+	<li>Domínio</li>
+	<li>Nome de Utilizador</li>
+	<li>Password</li>
+	<li>Nome</li>
+</ol>
+<br /><br />]]></message>
+	<message key="plugins.generic.backup.failure"><![CDATA[<strong>AVISO: </strong>Ocorreu um erro durante o processo. A sua cópia de segurança pode não estar completa. A causa mais provável são permissões de ficheiro.]]></message>
+	<message key="plugins.generic.backup.tar.config"><![CDATA[{$footNoteNum}. <strong>AVISO:</strong> A ferramenta de descompressão "tar" não foi configurada no ficheiro "config.inc.php". A sua configuração vai depender do sistema operativo em uso. Deverá ser especificado na secção [cli], num parametro com o nome "tar".
+<pre>[cli]
+tar = "/bin/tar"
+>>>>>>> 6cb8b87601db3228e72e7f381221bc1585d8354d
 </pre><br />]]></message>
 </locale>

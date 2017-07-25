@@ -7,11 +7,11 @@
   * Copyright (c) 2014-2017 Simon Fraser University
   * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Portuguese_(pt_BR)
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Portuguese_(pt_PT)
   * Localization strings.
   -->
 
-<locale name="pt_BR" full_name="Português (Brasil)">
+<locale name="pt_PT" full_name="Português (Portugal)">
 	<message key="plugins.importexport.users.displayName">Plugin de Utilizadores em XML</message>
 	<message key="plugins.importexport.users.description">Importar e exportar utilizadores no formato XML</message>
 

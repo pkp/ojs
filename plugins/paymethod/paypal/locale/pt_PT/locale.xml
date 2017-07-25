@@ -8,10 +8,10 @@
   * Copyright (c) 2006-2009 Gunther Eysenbach, Juan Pablo Alperin, MJ Suhonos
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the pt_BR (Português (Brasil)) locale.
+  * Localization strings for the pt_PT (Português (Portugal)) locale.
   -->
  
-<locale name="pt_BR" full_name="Português do Brasil">
+<locale name="pt_PT" full_name="Português (Portugal)">
 	<message key="plugins.paymethod.paypal.displayName">Plugin de Pagamento via Paypal</message>
 
 	<!-- PayPal Settings Form -->
