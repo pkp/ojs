@@ -96,6 +96,7 @@
 		<code function="installEmailTemplate" key="REVIEW_REQUEST_REMIND_AUTO_ONECLICK" locales="en_US" />
 		<code function="installEmailTemplate" key="EDITOR_DECISION_SEND_TO_EXTERNAL" locales="en_US" />
 		<code function="installEmailTemplate" key="EDITOR_DECISION_SEND_TO_PRODUCTION" locales="en_US" />
+		<code function="installEmailTemplate" key="EDITOR_DECISION_INITIAL_DECLINE" locales="en_US" />
 		<code function="installEmailTemplate" key="SUBMISSION_ACK_NOT_USER" locales="en_US,ca_ES,es_ES,fr_CA,pt_BR" />
 		<data file="dbscripts/xml/upgrade/3.0.0_scheduledTasks.xml" />
 		<code function="localizeCustomBlockSettings" />
