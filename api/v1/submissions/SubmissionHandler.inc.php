@@ -199,7 +199,7 @@ class SubmissionHandler extends APIHandler {
 	 * @param $slimRequest Request Slim request object
 	 * @param $response Response object
 	 * @param array $args arguments
-	 * @return Response
+	 * @return array
 	 */
 	protected function submissionMetadata($slimRequest, $response, $args) {
 		$request = $this->_request;
@@ -213,15 +213,18 @@ class SubmissionHandler extends APIHandler {
 		$metadataPlugins = (array) PluginRegistry::loadCategory('metadata', true, $journal->getId());
 		$schema = null;
 		foreach($metadataPlugins as $plugin) {
-			if (method_exists($plugin, 'getFormatId') && $format === $plugin->getFormatId()) {
-				$schema = $plugin->getSchemaObject();
+			if ($plugin->supportsFormat($format)) {
+				$schema = $plugin->getSchemaObject($format);
 			}
 		}
 		if (!$schema && array_key_exists('Dc11MetadataPlugin', $metadataPlugins)) {
-			$schema = $metadataPlugins['Dc11MetadataPlugin']->getSchemaObject();
+			$schema = $metadataPlugins['Dc11MetadataPlugin']->getSchemaObject('dc11');
 		}
-		assert(is_a($schema, 'MetadataSchema'));
-		return $this->getMetadata($submission, $schema);
+		if (is_a($schema, 'MetadataSchema') && in_array(ASSOC_TYPE_SUBMISSION, $schema->getAssocTypes())) {
+			return $this->getMetadata($submission, $schema);
+		};
+		assert(false);
+		return array();
 	}
 
 	function getMetadata($submission, $schema) {
