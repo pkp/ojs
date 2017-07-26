@@ -11,14 +11,69 @@
   * Localization strings for the LOC (LOC) locale.
   -->
 
-<locale name="LOC" full_name = "LOC">
+<locale name="pt_PT" full_name="Português (Portugal)">
 	<!-- Submission wizard -->
+  <message key="submission.submit.title">Submeta um Artigo</message>
+  <message key="submission.submit.userGroup">Submeta, com o papel de...</message>
+  <message key="submission.submit.userGroupDescription">Escolha a forma de submissão deste artigo.</message>
+  <message key="submission.upload.selectComponent">Escolha o componente do Artigo</message>
+  <message key="submission.title">Título do Artigo</message>
+  <message key="submission.title.tip"><![CDATA[O tipo de submissão é, geralmente, um dos seguintes: 'imagem', 'texto', ou outro formato multimédia incluíndo 'software' ou 'interactivo'.  Por favor escolha o mais indicado para a sua submissão.  Exemplos podem ser encontrados em <a target="_blank" href="http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type">http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</a>]]></message>
+  <message key="submission.submit.newSubmissionMultiple">Nova submissão como</message>
+  <message key="submission.submit.newSubmissionSingle">Nova Submissão</message>
+  <message key="grid.action.workflow">Fluxo da Submissão</message>
+
+  <message key="submission.issueEntry">Metadata</message>
+  <message key="submission.submit.whatNext.description">A revista foi notificada da sua submissão, e deverá receber um email a confirmar com os seus registos. Assim que o Editor faça a revisão, será contactado.</message>
+  <message key="grid.action.galleyInIssueEntry">A Galeria aparece uma entrada de uma Edição</message>
+  <message key="grid.action.issueEntry">Consultar os metadados da Submissão</message>
 
 	<!-- Submission Information Modal -->
+  <message key="submission.issueEntry.modalTitle">Metadados de Submissão e Publicação</message>
+  <message key="submission.issueEntry.submissionMetadata">Submissão</message>
+  <message key="submission.issueEntry.publicationMetadata">Publicação</message>
+  <message key="submission.issueEntry.confirm">Criar um registo na Edição do artigo, utilizando os metadados abaixo.</message>
 
-	<!-- events -->
+  <!-- events -->
+  <message key="submission.event.articleGalleyMadeAvailable"> A galeria "{$galleyFormatName}" do artigo encontra-se disponível.</message>
+  <message key="submission.event.articleGalleyMadeUnavailable">A galeria "{$galleyFormatName}" do artigo is made unavailable.</message>
+  <message key="submission.event.publicIdentifiers">Os identificadores publicos da submissão foram actualizados.</message>
 
-	<!-- galleys grid -->
+  <!-- galleys grid -->
+  <message key="grid.issueEntry.availableGalley.title">Aprovação do Formato</message>
+  <message key="grid.issueEntry.availableGalley.removeMessage"><![CDATA[<p>Esta galeria <em>não estará disponível</em> para os leitores.</p>]]></message>
+  <message key="grid.issueEntry.availableGalley.message"><![CDATA[<p>Esta galeria <em>estará disponível</em> para os leitores.</p>]]></message>
+  <message key="grid.action.availableArticleGalley">Disponibilizar Galeria </message>
 
-	<!-- galley files grid -->
+  <!-- galley files grid -->
+  <message key="submission.galleyFiles">Ficheiros da Galeria</message>
+  <message key="submission.proofReadingDescription"><![CDATA[O Editor de Layout carrega os documentos finais que foram preparados para publicação aqui. Utilize <em>Atribuir Auditor</em> para designar autores e outras entidades para validarem as galerias, mantendo assim os ficheiros correctos actualizados para aprovação antes da publicação.]]></message>
+  <message key="grid.action.approveProof">Aprovar esta demonstração para inclusão na galeria.</message>
+  <message key="grid.action.pageProofApproved">Esta demonstração foi aprovada para inclusão na galeria.</message>
+  <message key="submission.submit.titleAndSummary">Título e Resumo</message>
+  <message key="submission.submit.upload.description">Carrega os ficheiros relacionados com esta submissão, incluindo o artigo, ficheiros multimedia, conjuntos de dados, obras de arte, etc.</message>
+  <message key="submission.pageProofs">Demonstração de Prova</message>
+  <message key="submission.confirmSubmit">Tem a certeza que deseja submeter este artigo para a Revista?</message>
+  <message key="workflow.review.externalReview">Revisão</message>
+  <message key="editor.submission.decision.sendExternalReview">Enviar para Revisão</message>
+  <message key="submission.event.issueMetadataUpdated">Os metadados de submissão desta Edição foram actualizados.</message>
+
+  <message key="submission.upload.fileContents">Componentes do Artigo</message>
+  <message key="submission.complete">Aprovado</message>
+  <message key="submission.incomplete">À Espera de Aprovação</message>
+  <message key="submission.submit.form.localeRequired">Por favor, escolha um idioma de submissão.</message>
+  <message key="submission.submit.submissionChecklist">Lista de Submissão</message>
+  <message key="submission.submit.submissionChecklistDescription">Deverá ler e tomar conhecimento que cumpre todos os requisitos descritos em baixo antes de proceder.</message>
+  <message key="submission.submit.privacyStatement">Política de Privacidade</message>
+  <message key="submission.submit.contributorRole">Papel do Colaborador</message>
+  <message key="submission.submit.form.authorRequired">É necessário pelo menos um autor.</message>
+  <message key="submission.submit.form.authorRequiredFields"> É necessário o primeiro e o último nome assim como o endereço de email de cada autor.</message>
+  <message key="submission.submit.form.titleRequired">Por Favor introduza o título do seu artigo.</message>
+  <message key="submission.submit.form.abstractRequired">Por favor introduza o resumo do seu artigo.</message>
+  <message key="submission.submit.form.contributorRoleRequired">Por favor seleccione o papel do Colaborador.</message>
+
+  <message key="submission.citationFormat.notFound">Não foi possível obter o formato de citação pedido.</message>
+
+  <message key="submission.metadataDescription">Estas especificações tem origem no conjunto de metadados do Dublin Core, um padrão internacional utilizado para descrever o conteúdo de revistas.</message>
+  <message key="section.any">Qualquer Secção</message>
 </locale>

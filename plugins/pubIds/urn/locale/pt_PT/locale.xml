@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/pubIds/urn/locale/pt_PT/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Portuguese_(pt_PT)
+  * Localization strings.
+  -->
+ 
+<locale name="pt_PT" full_name="Português (Portugal)">
+	<message key="plugins.pubIds.urn.displayName">URN</message>
+	<message key="plugins.pubIds.urn.description">Este plugin activa a tarefa de Uniformizar Nomes de Recursos nas edições, artigos e galerias no OJS.</message>
+
+	<!-- settings form -->
+	<message key="plugins.pubIds.urn.manager.settings.description">Por favor configure o plugin URN para que seja capaz de administrar e utilizar URNs no OJS:</message>
+
+	<message key="plugins.pubIds.urn.manager.settings.urnObjects">Conteúdo do Jornal</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnObjectsRequired">Por favor escolha os objectos aos quais devem ser atribuidos URNs.</message>
+	<message key="plugins.pubIds.urn.manager.settings.explainURNs">Por favor seleccione os objectos de publicação que terão URN (Nomes de Recursos Uniformizados) atribuidos:</message>
+	<message key="plugins.pubIds.urn.manager.settings.enableIssueURN">Edições</message>
+	<message key="plugins.pubIds.urn.manager.settings.enableSubmissionURN">Artigos</message>
+	<message key="plugins.pubIds.urn.manager.settings.enableRepresentationURN">Galerias</message>
+
+	<message key="plugins.pubIds.urn.manager.settings.urnPrefix">Prefixo URN</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnPrefix.description"><![CDATA[O prefixo URN é a correção, nunca altere o URN (e.g. "urn:nbn:de:0000-").]]></message>
+	<message key="plugins.pubIds.urn.manager.settings.form.urnPrefixPattern"><![CDATA[O padrão do prefixo URN deve estar sobre a seguinte forma "urn:"&lt;NID&gt;":"&lt;NSS&gt;.]]></message>
+
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix">Sufixo URN</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.description">Um sufixo URN pode ter qualquer formato, porém deve ser único entre todos os objectos de publicação com o mesmo prefixo URN atribuído:</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffixPattern">
+		Utilize o padrão introduzido abaixo para gerar sufixos URN. Utilize %j para as iniciais da Revista, %v para o número do volume, %i para o número da edição, %Y para o ano, %a para o ID do artigo do OJS, %g para o ID da Galeria do OJS, %f para o ID do ficheiro OJS, %p para o número da página e %x para o "Identificador Personalizado".</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffixPattern.example">Por exemplo, vol%viss%ipp%p iria criar o sufixo URN "vol3iss2pp230".</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffixPattern.issues">para edições</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffixPattern.submissions">para artigos</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffixPattern.representations">para galerias</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnIssueSuffixPatternRequired">Por favor introduza o padrão do sufixo URN para Edições.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSubmissionSuffixPatternRequired">Por favor introduza o padrão do sufixo URN para Artigos.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnRepresentationSuffixPatternRequired">Por favor introduza o padrão do sufixo URN para Galerias</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffixDefault">Utilizar padrões por omissão.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffixDefault.description"><![CDATA[%j.v%vi%i para edições<br />%j.v%vi%i.%a para artigos<br />%j.v%vi%i.%a.g%g para galerias.]]></message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffixCustomIdentifier">
+		Introduza um sufixo URN individual para cada item publicado. Irá encontrar um campo para preenchimento adicional do URN na página de metadados de cada item.</message>
+	<message key="plugins.pubIds.urn.manager.settings.checkNo">Verificar Número</message>
+	<message key="plugins.pubIds.urn.manager.settings.checkNo.label">Verificar se o número será automáticamente calculado e adicionar no final, como ultimos digitos do URN.</message>
+	<message key="plugins.pubIds.urn.manager.settings.namespace">Namespace</message>
+	<message key="plugins.pubIds.urn.manager.settings.namespace.choose">Escolher</message>
+	<message key="plugins.pubIds.urn.manager.settings.namespace.description">O identificador persistente do namespace necessita normalmente de um registo (e.g. código interno da Biblioteca).</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnResolver">Resolver URL</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnResolver.description">(e.g. http://dx.doi.org/)</message>
+	<message key="plugins.pubIds.urn.manager.settings.form.urnResolverRequired">Por favor introduza a ligação para o portal que resolve.</message>
+
+	<message key="plugins.pubIds.urn.manager.settings.urnReassign">Re-atribuir URNs</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnReassign.description">Se alterar a sua configuração do URN, os URNs que já tiverem sido atribuidos não serão afectados. Assim que a configuração esteja guardada, utilize este botão para apagar todos os URN existentes para que possam ser criados outros com as novas definições.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnReassign.confirm">Tem a certeza que deseja remover todos os URNs existentes?</message>
+
+	<!-- metadata form -->
+	<message key="plugins.pubIds.urn.editor.urn">URN</message>
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeIssue">edição</message>
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeSubmission">artigo</message>
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeRepresentation">Galeria</message>
+	<message key="plugins.pubIds.urn.editor.customSuffixMissing">O URN não pode ser atribuido porque o sufixo não foi atribuido.</message>
+	<message key="plugins.pubIds.urn.editor.patternNotResolved">O RUN não pode ser atribuido porque contem um padrão impossível de resolver.</message>
+	<message key="plugins.pubIds.urn.editor.canBeAssigned">O que vê aqui é uma pré-visualização do URN. Por favor assinale esta caixa e grave o formato para atribuir o URN.</message>
+	<message key="plugins.pubIds.urn.editor.assigned">o URN está atribuido a {$pubObjectType}.</message>
+	<message key="plugins.pubIds.urn.editor.urnSuffixCustomIdentifierNotUnique">O sufixo fornecido já se encontra em uso por outro objecto de publicação. Por favor introduza um sufixo de URN unico para cada item.</message>
+	<message key="plugins.pubIds.urn.editor.clearObjectsURN">Remover URN</message>
+	<message key="plugins.pubIds.urn.editor.clearObjectsURN.confirm">Tem a certeza que deseja remover o URN actual?</message>
+	<message key="plugins.pubIds.urn.editor.clearIssueObjectsURN">Limpar URNs de Objectos de Edição Issue</message>
+	<message key="plugins.pubIds.urn.editor.clearIssueObjectsURN.confirm">Tem a certeza que deseja apagar os URN's dos objectos de Edição existentes?</message>
+	<message key="plugins.pubIds.urn.editor.clearIssueObjectsURN.description">Por favor utilize a seguinte opção para remover URNs de todos os objectos (artigos e galerias) que estão neste momento reservados para esta Edição.</message>
+	<message key="plugins.pubIds.urn.editor.addCheckNo">Adicionar Número de Verificação</message>
+	<!-- assignment form -->
+	<message key="plugins.pubIds.urn.editor.assignURN">Atribua o URN {$pubId} a este(a) {$pubObjectType}</message>
+	<message key="plugins.pubIds.urn.editor.assignURN.emptySuffix">O URN não pode ser atribuido porque o sufixo está em falta.</message>
+	<message key="plugins.pubIds.urn.editor.assignURN.pattern">O URN {$pubId} não pode ser atribuido porque contem um padrão impossível de resolver..</message>
+	<message key="plugins.pubIds.urn.editor.assignURN.assigned">The URN {$pubId} foi atribuído.</message>
+	<!-- errors -->
+	<message key="plugins.pubIds.urn.form.checkNoRequired">O número de verificação encontra-se em falta.</message>
+
+</locale>

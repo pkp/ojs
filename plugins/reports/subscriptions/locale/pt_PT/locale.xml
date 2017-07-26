@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/pt_PT/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="pt_PT" full_name="Português (Portugal)">
+	<message key="plugins.reports.subscriptions.displayName">Relatório de Subscrições</message>
+	<message key="plugins.reports.subscriptions.description">Este plugin implementa um relatório em CSV que contém a lista de subscritores e a sua informação.</message>
+	<message key="plugins.reports.subscriptions.institutionMailingAddress">Endereço de Email da Instituição</message>
+	<message key="plugins.reports.subscriptions.ipRanges">Variação do IP</message>
+</locale>

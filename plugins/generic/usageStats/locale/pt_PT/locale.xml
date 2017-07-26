@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/usageStats/locale/en_US/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
+  * Localization strings.
+  -->
+
+<locale name="pt_PT" full_name="Português (Portugal)">
+	<message key="plugins.generic.usageStats.settings.logging">Opções de Registo de Acesso</message>
+	<message key="plugins.generic.usageStats.settings.createLogFiles">Criar ficheiros de registo</message>
+	<message key="plugins.generic.usageStats.settings.createLogFiles.description">Ativar esta opção fará com que o plugin crie ficheiros de registo dentro do diretorio de ficheiros. Esses ficheiros devem ser utilizados para extrair dados estatísticas. Se não desejar criar mais registos, pode deixar esta opção desativada e utilizar os registos de acesso do servidor.</message>
+	<message key="plugins.generic.usageStats.settings.logParseRegex">Expressão regular de análise dos ficheiros de registo de acesso</message>
+	<message key="plugins.generic.usageStats.settings.logParseRegex.description">A expressão regular por omissão utilizada consegue analisar registos do Apache assim como o formato utilizado pelo plugin. Se o seu registo de acesso tiver um formato diferente, terá de inserir uma expressão regular capaz de analisar e extrair os valores esperados. Ver UsageStatsLoader::_getDataFromLogEntry() para mais informação.</message>
+	<message key="plugins.generic.usageStats.settings.saved">Configurações do Plugin de Estatísticas de Utilização gravadas com sucesso</message>
+	
+	<message key="plugins.generic.usageStats.openFileFailed">O ficheiro {$file} não pode ser aberto e foi rejeitado.</message>
+	<message key="plugins.generic.usageStats.invalidLogEntry">O número de linha {$lineNumber} do ficheiro {$file} não é uma entrada de registo válida e o ficheiro foi rejeitado.</message>
+	<message key="plugins.generic.usageStats.displayName">Estatísticas de Utilização</message>
+	<message key="plugins.generic.usageStats.description">Estatísticas de Utilização dos objectos de dados atuais. Pode utilizar o registo de acessos do servidor para extrair estatísticas.</message>
+	
+	<message key="plugins.reports.usageStats.report.displayName">Relatório de Estatísticas de Utilização do OJS</message>
+	<message key="plugins.reports.usageStats.report.description">Relatório de Estatísticas de Utilização do OJS por omissão (Contador Pronto)</message>
+	
+	<message key="plugins.reports.usageStats.metricType">OJS/Contador</message>
+	<message key="plugins.reports.usageStats.metricType.full">Estatísticas do Open Journal Systems (Contador Pronto)</message>
+	<message key="plugins.generic.usageStats.settings.statsDisplayOptions.siteWide">Cada Revista pode sobrepor as configuração a partir da Página de Plugins da Revista</message>
+	<message key="plugins.generic.usageStats.optout.description"><![CDATA[<h3>Informação Geral de Privacidade</h3>
+		<p>Por favor consulte a <a href="{$privacyStatementUrl}">declaração de privacidade</a>.</p>
+		<h3>Estatísticas de Utilização</h3>
+		<p>Para que seja possível analisar a utilização e o impacto desta revista, assim como dos artigos públicados, são registados dados de acesso à Página Inicial da Revista, as Edições, artigos, galerias e outros ficheiros. Neste processo todos os dados são anonimzados.</p>
+		<p>A seguinte informação é obtida juntamente com os Endereços de IP anonimizados:</p>
+		<ul>
+		<li>Tipo de Acesso</li>
+		<li>Tempo do Pedido</li>
+		<li>URL Pedido</li>
+		<li>Código HTTP do Pedido</li>
+		<li>Browser</li>
+		</ul>
+		<p>Os dados obtidos serão utilizados apenas para avaliação. Nenhum endereço de IP é mapeado a um utilizador. É impossível localizar um determinado tipo de dados, de volta a um utilizador.</p>]]></message>
+</locale>
