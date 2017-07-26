@@ -110,12 +110,12 @@ class ArticleHandler extends Handler {
 		// Copyright and license info
 		$templateMgr->assign(array(
 			'copyright' => $journal->getLocalizedSetting('copyrightNotice'),
-			'copyrightHolder' => $journal->getLocalizedSetting('copyrightHolder'),
-			'copyrightYear' => $journal->getSetting('copyrightYear')
 		));
 		if ($article->getLicenseURL()) $templateMgr->assign(array(
 			'licenseUrl' => $article->getLicenseURL(),
 			'ccLicenseBadge' => Application::getCCLicenseBadge($article->getLicenseURL()),
+			'copyrightHolder' => $article->getLocalizedCopyrightHolder(),
+			'copyrightYear' => $article->getCopyrightYear(),
 		));
 
 		// Keywords
