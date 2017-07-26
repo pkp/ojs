@@ -4,19 +4,128 @@
 <!--
   * locale/uk_UA/submission.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
+  * Translation by Vitaliy Bezsheiko, MD
   * Localization strings for the uk_UA (Українська) locale.
   -->
 
-<locale name="uk_UA" full_name="Українська">
-	<!-- Submission wizard -->
+<locale name="uk_UA" full_name = "Українська">
 
-	<!-- Submission Information Modal -->
+	<!-- Submission wizard -->
+    <message key="submission.submit.title">Подати статтю</message>
+    <message key="submission.submit.userGroup">Подати у моїй ролі як...</message>
+    <message key="submission.submit.userGroupDescription">Вибіріть свою роль у журналі, від якої ви подаєте цю статтю.</message>
+    <message key="submission.upload.selectComponent">Виберіть компонент статті</message>
+    <message key="submission.title">Назва статті</message>
+    <message key="submission.title.tip"><![CDATA[Зазвичай тип подання - це "графіка", "текст" або інші мультимедійні типи, включаючи "інтерактивні файли". Будь ласка, виберіть найбільш актуальний тип для вашого подання.  Приклади можна знайти за посиланням <a target="_blank" href="http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type">http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</a>]]></message>
+    <message key="submission.submit.newSubmissionMultiple">Почати нове подання в</message>
+    <message key="submission.submit.newSubmissionSingle">Нове подання</message>
+    <message key="grid.action.workflow">Робочий процес над поданням</message>
+
+    <message key="submission.issueEntry">Метадані</message>
+    <message key="submission.submit.whatNext.description">Редактори журналу повідомленні про ваше подання. Очікуйте підтвердження на вашу електронну пошту. Як тільки редактор перегляне подання, він дасть вам про це знати.</message>
+    <message key="grid.action.galleyInIssueEntry">Гранка з'явиться у випуску</message>
+    <message key="grid.action.issueEntry">Переглянути метадані цього подання</message>
+
+    <!-- Submission Information Modal -->
+    <message key="submission.issueEntry.modalTitle">Метадані подання та публікації</message>
+    <message key="submission.issueEntry.submissionMetadata">Подання</message>
+    <message key="submission.issueEntry.publicationMetadata">Публікація</message>
+    <message key="submission.issueEntry.confirm">Створити запис у випуску для цієї статті на основі метаданих, представлених нижче.</message>
+
+    <!-- events -->
+    <message key="submission.event.articleGalleyMadeAvailable">Гранка статті "{$galleyFormatName}" тепер доступна.</message>
+    <message key="submission.event.articleGalleyMadeUnavailable">Гранка статті "{$galleyFormatName}" тепер недоступна.</message>
+    <message key="submission.event.publicIdentifiers">Публічні ідентифікатори подання оновлено.</message>
+
+    <!-- galleys grid -->
+    <message key="grid.issueEntry.availableGalley.title">Ухвалення формату</message>
+    <message key="grid.issueEntry.availableGalley.removeMessage"><![CDATA[<p>Ця гранка стане <em>недоступною</em> для читачів.</p>]]></message>
+    <message key="grid.issueEntry.availableGalley.message"><![CDATA[<p>Ця гранка стане <em>доступною</em> для читачів.</p>]]></message>
+    <message key="grid.action.availableArticleGalley">Зробити цю гранку доступною</message>
+
+    <!-- galley files grid -->
+    <message key="submission.galleyFiles">Файли гранки</message>
+    <message key="submission.proofReadingDescription"><![CDATA[Верстальник завантажує сюди готові до публікації файли. Використовуйте <em>Призначити аудитора</em> для того, щоб визначити автора та інших осіб для коректури гранок, із завантаженням відкорегованих файлів для ухвали перед публікацією.]]></message>
+    <message key="grid.action.approveProof">Схвалити цю чернетку для включення в гранки.</message>
+    <message key="grid.action.pageProofApproved">Ця чернетка схвалена для включення у гранки.</message>
+    <message key="submission.submit.titleAndSummary">Назва та анотація</message>
+    <message key="submission.submit.upload.description">Завантажити файли, асоційовані із цим поданням, включаючи статтю, мультимедіа, набори даних, графічні матеріали тощо.</message>
+    <message key="submission.pageProofs">Коректура</message>
+    <message key="submission.confirmSubmit">Ви впевнені, що хочете надіслати цю статтю до журналу?</message>
+    <message key="workflow.review.externalReview">Рецензування</message>
+    <message key="editor.submission.decision.sendExternalReview">Направити на рецензування</message>
+    <message key="submission.event.issueMetadataUpdated">Метадані подання було овновлено.</message>
+
+    <message key="submission.upload.fileContents">Компоненти статті</message>
+    <message key="submission.complete">Ухвалено</message>
+    <message key="submission.incomplete">Чекає схвалення</message>
+    <message key="submission.submit.form.localeRequired">Будь ласка, вкажіть мову подання.</message>
+    <message key="submission.submit.submissionChecklist">Перелік вимог</message>
+    <message key="submission.submit.submissionChecklistDescription">Ви повинні прочитати та ознайомитись з необхідними вимогами для статті. Перед продовженням впевніться, що ваша стаття їм відповідає.</message>
+    <message key="submission.submit.privacyStatement">Заява про конфіденційність</message>
+    <message key="submission.submit.contributorRole">Роль особи</message>
+    <message key="submission.submit.form.authorRequired">Вкажіть хоча б одного автора.</message>
+    <message key="submission.submit.form.authorRequiredFields">Вкажіть ім'я, прізвище та email кожного автора.</message>
+    <message key="submission.submit.form.titleRequired">Будь-ласка, вкажіть заголовок своєї статті.</message>
+    <message key="submission.submit.form.abstractRequired">Будь-ласка, введіть анотацію своєї статті.</message>
+    <message key="submission.submit.form.contributorRoleRequired">Будь-ласка, виберіть роль задіяної особи.</message>
+
+    <message key="submission.citationFormat.notFound">Формат цитування за запитом не може бути отриманим.</message>
+
+    <message key="submission.metadataDescription">Ці специфікації базуються на наборі метаданних "Dublin Core", міжнародного стандарту, який використовується для опису вмісту журналу.</message>
+
+
+    <!-- custom -->
+    <message key="submission.contributors">Список авторів</message>
+    <message key="submission.submit.metadataForm">Додаткова інформація</message>
+    <message key="submission.submit.metadataForm.tip">Будь-ласка, вкажіть також додаткову інформацію стостовно вашого подання. Після кожного терміну/ключового слова натискайте 'enter'.</message>
+    <message key="submission.submit.selectPrincipalContact">Основна контактна особа</message>
+    <message key="submission.submit.includeInBrowse">Включити цю особу до переліку авторів на сторінці статті?</message>
+    <message key="submission.submit.submissionLocaleDescription">Цей журнал підтримує подання статей на декількох мовах. Виберіть основну мову для вашого подання із вказаних у меню. Слід зазначити, що всі метаданні в поданні (назва, анотація, ключові слова тощо) вводяться обов'язково англійською та українською мовами</message>
+    <message key="submission.submit.submissionLocale">Завантажити файл</message>
+
+    <message key="submission.submit.submissionFiles">Файли подання</message>
+    <message key="submission.submit.uploadStep">1. Завантажити файл</message>
+	<message key="submission.submit.uploadSubmissionFile">Завантажити файл подання</message>
+	<message key="submission.submit.metadataStep">2. Переглянути деталі</message>
+	<message key="submission.submit.finishingUpStep">3. Підтвердити</message>
+	<message key="submission.submit.fileNameRequired">Ви повинні вказати ім'я файлу для цього файлу</message>
+    <message key="submission.upload.fileContents">Складова статті</message>
+
+    <message key="common.upload.dragFile">Перетягніть сюди файл для початку завантаження</message>
+    <message key="common.upload.addFile">Завантажити файл</message>
+    <message key="common.upload.changeFile">Змінити файл</message>
+    <message key="submission.submit.fileAdded">Файл додано</message>
+    <message key="submission.submit.newFile">Додати інший файл</message>
+    <message key="submission.upload.selectOptionalFileToRevise">Якщо ви завантажуєте перероблений варіант існуючого файлу, вкажіть якого саме файлу.</message>
+    <message key="submission.upload.uploadNewFile">Цей файл новий, а не змінений (допрацьований) існуючий.</message>
+    <message key="submission.informationCenter.submissionInfo">Інформація про подання</message>
+	<message key="submission.informationCenter.metadata">Метаданні</message>
+	<message key="submission.informationCenter.notes">Примітки</message>
+	<message key="submission.informationCenter.history">Історія</message>
+    <message key="submission.informationCenter.history.allEvents">Показати попередні версії</message>
+    <message key="submission.howToCite.citationFormats">Як цитувати</message>
 
 	<!-- events -->
+    <message key="author.submit.userGroupRequired">Наразі ваш акаунт не має ролі, яка дозволяє подавати статті до журналу. Будь-ласка, перевірте свій акаунт; можливо ви можете додати собі відповідні ролі шляхом редагування вашого профілю.</message>
+	<message key="author.submit.submissionCitations">Внесіть відповідно оформлений бібліографічний список посилань для цієї статті. Будь-ласка, відокремте кожне окреме посилання порожнім рядком.</message>
+	<message key="author.submission.roundStatus.reviewsReady">Надіслані нові рецензії для розгляду редактором.</message>
+	<message key="submission.confirm.message">Ваше подання завантажене та готове до відправки. Ви можете повернутись до рецензування та змінити будь-яку внесену інформацію перед продовженням. Коли будете готові, натисніть "Завершити подання".</message>
+    <message key="submission.submit.finishSubmission">Завершити подання</message>
+	<message key="submission.submit.submissionComplete">Подання завершене</message>
+	<message key="submission.submit.submissionCompleteThanks">Дякуємо за ваш інтерес до публікування в журналі {$contextName}.</message>
+	<message key="submission.submit.copyrightNoticeAgreementLabel">Ознайомитись із заявою про авторські права</message>
+	<message key="submission.submit.copyrightNoticeAgree">Я згоден дотимуватись умов заяви про авторські права.</message>
+	<message key="submission.submit.whatNext">Що далі?</message>
+	<message key="submission.submit.whatNext.forNow">Наразі, ви можете:</message>
+	<message key="submission.submit.whatNext.review">Переглянути це подання</message>
+	<message key="submission.submit.whatNext.create">Створити нове подання</message>
+	<message key="submission.submit.whatNext.return">Повернутись до панелі інструментів</message>
+	<message key="submission.submit.extendedMetadata">Роширені метаданні</message>
+    <message key="submission.confirmSubmit">Ви впевнені, що хочете подати статтю до журналу?</message>
 
 	<!-- galleys grid -->
 
