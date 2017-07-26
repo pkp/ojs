@@ -14,14 +14,7 @@
 <locale name="pt_PT" full_name="Português (Portugal)">
 	<message key="plugins.importexport.medra.displayName">Plugin de Exportação/Registo mEDDRA</message>
 	<message key="plugins.importexport.medra.description">Exporta metadados do número, artigo e composição no formato Onix para DOI (O4DOI) e regista DOIs junto da agência de registo mEDRA.</message>
-	<message key="plugins.importexport.medra.intro"><![CDATA[If you want to register DOIs with mEDRA, please follow the directions on the
-		<a href="http://www.medra.org/en/guide.htm" target="_blank">mEDRA homepage</a>
-		to receive a username and password. If you do not have your own username and
-		password you'll still be able to export into the mEDRA XML format (Onix for DOI)
-		but you cannot register your DOIs with mEDRA from within OJS. 
-		Please note that the password will be saved as plain text, i.e. not encrypted, due
-		to the mEDRA registration service requirements.]]></message>
-	<message key="plugins.importexport.medra.settings.form.description">Configure o plugin de exportação mEDRA:</message>
+	<message key="plugins.importexport.medra.settings.form.description">Configure o plugin de exportação mEDRA:</message>d
 	<message key="plugins.importexport.medra.settings.form.username">Utilizador</message>
 	<message key="plugins.importexport.medra.settings.form.usernameRequired">Insira o nome de utilizador mEDRA. O nome de utilizador pode não conter dois pontos.</message>
 	<message key="plugins.importexport.medra.settings.form.registrantName">O nome da instituição registada no mEDDRA</message>
