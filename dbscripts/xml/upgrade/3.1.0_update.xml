@@ -75,4 +75,12 @@
 		<query>DELETE FROM email_templates_data WHERE email_key IN ('GIFT_AVAILABLE', 'GIFT_USER_REGISTER', 'GIFT_USER_LOGIN')</query>
 		<query>DELETE FROM notifications WHERE type IN (33554433, 33554434, 33554435, 33554436, 33554437, 33554438)</query><!-- NOTIFICATION_TYPE_GIFT_REDEEM_STATUS_SUCCESS, NOTIFICATION_TYPE_GIFT_REDEEM_STATUS_ERROR_NO_GIFT_TO_REDEEM, NOTIFICATION_TYPE_GIFT_REDEEM_STATUS_ERROR_GIFT_ALREADY_REDEEMED, NOTIFICATION_TYPE_GIFT_REDEEM_STATUS_ERROR_GIFT_INVALID, NOTIFICATION_TYPE_GIFT_REDEEM_STATUS_ERROR_SUBSCRIPTION_TYPE_INVALID, NOTIFICATION_TYPE_GIFT_REDEEM_STATUS_ERROR_SUBSCRIPTION_NON_EXPIRING -->
 	</sql>
+	<sql><!-- pkp/pkp-lib#2671 migrate crossref deposit status setting names -->
+		<!-- First remove the old settings if the new ones already exist, e.g. if already migrated and updated the statuses -->
+		<query>DELETE FROM submission_settings WHERE setting_name = 'crossref::depositStatus' AND submission_id IN (SELECT submission_id FROM (SELECT * FROM submission_settings) AS ss2 WHERE setting_name = 'crossref::status')</query>
+		<query>DELETE FROM submission_settings WHERE setting_name = 'crossref::depositStatusUrl' AND submission_id IN (SELECT submission_id FROM (SELECT * FROM submission_settings) AS ss2 WHERE setting_name = 'crossref::statusUrl')</query>
+		<!-- Then change the old setting names -->
+		<query>UPDATE submission_settings SET setting_name = 'crossref::status' WHERE setting_name = 'crossref::depositStatus' </query>
+		<query>UPDATE submission_settings SET setting_name = 'crossref::statusUrl' WHERE setting_name = 'crossref::depositStatusUrl' </query>
+	</sql>
 </data>
