@@ -7,15 +7,8 @@
   * Copyright (c) 2014-2017 Simon Fraser University
   * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Localized email templates XML file.
-  *
-  * Translated by Denys Solovianenko, 2011-2012
-  * V. I. Vernadsky National Library of Ukraine
-
-  * Edited by Liliia Luparenko, 2017
-  * Institute of Information Technologies and Learning Tools of NAES of Ukraine
-
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Ukrainian_(uk_UA)
+  * Localization strings.
   -->
 
 <email_texts locale="uk_UA">
