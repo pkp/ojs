@@ -13,25 +13,25 @@
 * @brief Helper class that encapsulates issue business logic
 */
 
-namespace PKP\Services;
+namespace OJS\Services;
 
 class IssueService {
 
 	/**
-	 * Determine if a user can access galleys for a specific issue 
-	 * 
+	 * Determine if a user can access galleys for a specific issue
+	 *
 	 * @param \Journal $journal
 	 * @param \Issue $issue
-	 * 
+	 *
 	 * @return boolean
 	 */
 	public function userHasAccessToGalleys(\Journal $journal, \Issue $issue) {
 		import('classes.issue.IssueAction');
 		$issueAction = new \IssueAction();
 
-		$subscriptionRequired = $issueAction->subscriptionRequired($issue);
-		$subscribedUser = $issueAction->subscribedUser($journal);
-		$subscribedDomain = $issueAction->subscribedDomain($journal);
+		$subscriptionRequired = $issueAction->subscriptionRequired($issue, $journal);
+		$subscribedUser = $issueAction->subscribedUser($journal, $issue);
+		$subscribedDomain = $issueAction->subscribedDomain($journal, $issue);
 
 		return !$subscriptionRequired || $issue->getAccessStatus() == ISSUE_ACCESS_OPEN || $subscribedUser || $subscribedDomain;
 	}
