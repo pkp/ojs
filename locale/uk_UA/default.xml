@@ -203,7 +203,3 @@
 ________________________________________________________________________<br/>
 <a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>]]></message>
 </locale>
-
-
-
-</locale>
