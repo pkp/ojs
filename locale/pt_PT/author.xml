@@ -119,4 +119,5 @@
 	<message key="author.submit.reorder">Reordenar nome do autor</message>
 	<message key="author.submit.form.wordCountAlert">O limite de palavras de resumo para esta secção foi excedido.</message>
 	<message key="author.submit.form.localeRequired">Seleccione o idioma de submissão</message>
+	<message key="author.submit.nextSteps">Próximos Passos</message>
 </locale>

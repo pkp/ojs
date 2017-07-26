@@ -34,10 +34,10 @@
 	<message key="admin.systemConfiguration">Configuração do OJS</message>
 	<message key="admin.systemConfigurationDescription"><![CDATA[Configurações do OJS no documento <tt>config.inc.php</tt>.]]></message>
 	<message key="admin.journals.journalSettings">Configurações da Revista</message>
-	<message key="admin.journals.noneCreated">Nenhuma revista foi criada.</message>
+	<message key="admin.journals.noneCreated">Não foram criadas revistas.</message>
 	<message key="admin.contexts.confirmDelete">Deseja realmente eliminar permanentemente esta revista e o seu conteúdo?</message>
 	<message key="admin.contexts.create">Criar revista</message>
-	<message key="admin.journals.createInstructions">O seu registo como Editor-Gestor da revista será automático. Após a criação de uma revista, aceda-a como gestor e continue com as configurações da revista e registo de utilizadores.</message>
+	<message key="admin.journals.createInstructions">O seu registo como Director da revista será automático. Após a criação de uma revista, aceda-a como director e continue com as configurações da revista e registo de utilizadores.</message>
 	<message key="admin.journals.urlWillBe">Geralmente é usado um acrónimo que identifica a revista. O URL da revista será: {$sampleUrl}</message>
 	<message key="admin.contexts.form.pathRequired">Caminho obrigatório.</message>
 	<message key="admin.contexts.form.pathAlphaNumeric">O caminho deve conter apenas caracteres alfanuméricos, sublinhado, hífens, e deve começar e terminar com um caractere alfanumérico.</message>
@@ -53,21 +53,21 @@
 	<message key="admin.mergeUsers">Juntar utilizadores</message>
 	<message key="admin.mergeUsers.mergeUser">Juntar utilizador</message>
 	<message key="admin.mergeUsers.into.description">Escolha um utilizador a quem deseja atribuir as submissões e histórico de tarefas do registo anterior.</message>
-	<message key="admin.mergeUsers.from.description">Escolha um utilizador para juntar o registo com o de outra conta (quando um utilizador possui duas contas distintas, em vez de acumular funções editoriais). O registo seleccionado primeiro será excluído e as suas submissões e histórico de tarefas atribuídas ao segundo registo escolhido.</message>
+	<message key="admin.mergeUsers.from.description">Escolha um utilizador para fundir o registo com o de outra conta (quando um utilizador possui duas contas distintas, em vez de acumular funções editoriais). O registo seleccionado primeiro será eliminado e as suas submissões e histórico de tarefas atribuídas ao segundo registo escolhido.</message>
 	<message key="admin.mergeUsers.allUsers">Todos os utilizadores</message>
 	<message key="admin.mergeUsers.confirm">Deseja realmente juntar o registo do utilizador "{$oldAccountCount}" no registo do utilizador "{$newUsername}"? O registo de "{$oldAccountCount}" será eliminado permanentemente. Esta acção é irreversível!</message>
 	<message key="admin.mergeUsers.noneEnrolled">Nenhum utilizador registado.</message>
 	<message key="admin.locale.maybeIncomplete">Idiomas marcados podem estar incompletos.</message>
 	<message key="admin.settings.options">Opções</message>
-	<message key="admin.settings.usePaging">Para plataformas cm muitas revistas, distribuir as revistas por diferentes páginas.</message>
+	<message key="admin.settings.usePaging">Para plataformas com muitas revistas, distribuir as revistas por diferentes páginas.</message>
 	<message key="admin.settings.journalsList">Elementos da revista</message>
-	<message key="admin.settings.journalsList.description">Por favor seleccione os elementos da revista que serão apresentados em cada página da respectiva revista.</message>
+	<message key="admin.settings.journalsList.description">Por favor, seleccione os elementos da revista que serão apresentados em cada página da respectiva revista.</message>
 	<message key="admin.settings.journalsList.showThumbnail">Thumbnail da revista</message>
 	<message key="admin.settings.journalsList.showTitle">Título da revista</message>
 	<message key="admin.settings.journalsList.showDescription">Descrição da revista</message>
 	<message key="admin.settings.defaultMetricDescription">A instalação do OJS foi configurada para guardar mais do que uma métrica. As estatísticas de utilização serão exibidas em diferentes contextos.
 		Nalgumas situações será usada apenas uma única métrica, e.g. mostrar uma lista ordenada dos artigos mais usados ou ordenar 
-		resultados da pesquisa. Por favor seleccione um das métricas configuradas como padrão.</message>
+		resultados da pesquisa. Por favor, seleccione um das métricas configuradas como padrão.</message>
 	<message key="admin.categories">Categorias</message>
 	<message key="admin.categories.enable.description">O administrador pode escolher definir um mapa de categorias para ajudar na organização de plataformas que alojam muitas revistas. Os directores de revista poderão escolher diversas categorias para cada revista, e leitores pode pesquisar os conteúdos das revistas por categoria.</message>
 	<message key="admin.categories.disableCategories">Não organizar as revistas por categorias</message>
@@ -79,4 +79,16 @@
 	<message key="admin.categories.confirmDelete">Tem a certeza que pretende eliminar esta categoria?</message>
 	<message key="admin.categories.name">Nome</message>
 	<message key="admin.categories.nameRequired">É obrigatório indicar um nome da categoria</message>
+	<message key="admin.languages.confirmDisable">Tem a certeza de que deseja desactivar este idioma? Esta acção pode afectar todas as revistas hospedadas actualmente usando este idioma.</message>
+	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Downloading language packs from the Public Knowledge Project web server is not currently available because:</p>
+	<ul>
+		<li>Your server does not have or allow execution of the GNU "tar" utility.</li>
+		<li>OJS is unable to modify the locale registry file, typically "registry/locales.xml".</li>
+	</ul>
+<p>Language packs can be manually downloaded from the <a href="http://pkp.sfu.ca">PKP web site</a>.</p>]]></message>
+	<message key="admin.contexts.form.titleRequired">É obrigatório um título.</message>
+	<message key="admin.presses.createInstructions">Será automaticamente inscrito como director desta revista. Após a edição de uma nova revista, será redirecionado para o assistente de configurações, para completar a configuração inicial da revista.</message>
+	<message key="admin.scheduledTask.subscriptionExpiryReminder">Lembrete de caducidade de subscrição/assinatura</message>
+	<message key="admin.scheduledTask.openAccessNotification">Notificação de Acesso Aberto</message>
+	<message key="admin.scheduledTask.reviewReminder">Lembrete de Revisão</message>
 </locale>
