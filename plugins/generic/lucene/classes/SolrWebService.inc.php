@@ -1968,7 +1968,7 @@ class SolrWebService extends XmlWebService {
 		$issueAction = new IssueAction();
 		$subscriptionRequired = $issueAction->subscriptionRequired($issue, $journal);
 		if ($subscriptionRequired) {
-			$isSubscribedDomain = $issueAction->subscribedDomain($journal, $issue->getId(), $article->getId());
+			$isSubscribedDomain = $issueAction->subscribedDomain(Application::getRequest(), $journal, $issue->getId(), $article->getId());
 			if (!$isSubscribedDomain) return false;
 		}
 

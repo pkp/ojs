@@ -35,6 +35,7 @@ class OAIMetadataFormat_NLM extends OAIMetadataFormat {
 		$issue =& $record->getData('issue');
 		$galleys =& $record->getData('galleys');
 		$articleId = $article->getId();
+		$request = Application::getRequest();
 
 		// Cache issue ordering information.
 		static $issueId;
@@ -158,11 +159,11 @@ class OAIMetadataFormat_NLM extends OAIMetadataFormat {
 			(($s = Application::getCCLicenseBadge($article->getLicenseURL()))?"\t\t\t\t\t<license-p>" . strip_tags($s) . "</license-p>\n":'') .
 			"\t\t\t\t</license>\n" .
 			"\t\t\t</permissions>\n" .
-			"\t\t\t<self-uri xlink:href=\"" . htmlspecialchars(Core::cleanVar(Request::url($journal->getPath(), 'article', 'view', $article->getBestArticleId()))) . "\" />\n";
+			"\t\t\t<self-uri xlink:href=\"" . htmlspecialchars(Core::cleanVar($request->url($journal->getPath(), 'article', 'view', $article->getBestArticleId()))) . "\" />\n";
 
 		// Include galley links
 		foreach ($article->getGalleys() as $galley) {
-			$response .= "\t\t\t<self-uri content-type=\"" . htmlspecialchars(Core::cleanVar($galley->getFileType())) . "\" xlink:href=\"" . htmlspecialchars(Core::cleanVar(Request::url($journal->getPath(), 'article', 'view', array($article->getBestArticleId(), $galley->getId())))) . "\" />\n";
+			$response .= "\t\t\t<self-uri content-type=\"" . htmlspecialchars(Core::cleanVar($galley->getFileType())) . "\" xlink:href=\"" . htmlspecialchars(Core::cleanVar($request->url($journal->getPath(), 'article', 'view', array($article->getBestArticleId(), $galley->getId())))) . "\" />\n";
 		}
 
 		// Include abstract(s)
@@ -210,7 +211,7 @@ class OAIMetadataFormat_NLM extends OAIMetadataFormat {
 		import('classes.issue.IssueAction');
 		$issueAction = new IssueAction();
 		$subscriptionRequired = $issueAction->subscriptionRequired($issue, $journal);
-		$isSubscribedDomain = $issueAction->subscribedDomain($journal, $issue->getId(), $article->getId());
+		$isSubscribedDomain = $issueAction->subscribedDomain($request, $journal, $issue->getId(), $article->getId());
 
 		if (!$subscriptionRequired || $isSubscribedDomain) foreach ($galleys as $galley) {
 			$parser =& SearchFileParser::fromFile($galley);

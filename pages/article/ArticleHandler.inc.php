@@ -85,6 +85,7 @@ class ArticleHandler extends Handler {
 		$fileId = array_shift($args);
 
 		$journal = $request->getJournal();
+		$user = $request->getUser();
 		$issue = $this->issue;
 		$article = $this->article;
 		$templateMgr = TemplateManager::getManager($request);
@@ -146,8 +147,8 @@ class ArticleHandler extends Handler {
 				$subscriptionRequired = $issueAction->subscriptionRequired($issue, $journal);
 			}
 
-			$subscribedUser = $issueAction->subscribedUser($journal, isset($issue) ? $issue->getId() : null, isset($article) ? $article->getId() : null);
-			$subscribedDomain = $issueAction->subscribedDomain($journal, isset($issue) ? $issue->getId() : null, isset($article) ? $article->getId() : null);
+			$subscribedUser = $issueAction->subscribedUser($user, $journal, isset($issue) ? $issue->getId() : null, isset($article) ? $article->getId() : null);
+			$subscribedDomain = $issueAction->subscribedDomain($request, $journal, isset($issue) ? $issue->getId() : null, isset($article) ? $article->getId() : null);
 
 			$templateMgr->assign('hasAccess', !$subscriptionRequired || (isset($article) && $article->getAccessStatus() == ARTICLE_ACCESS_OPEN) || $subscribedUser || $subscribedDomain);
 
@@ -272,7 +273,7 @@ class ArticleHandler extends Handler {
 		// Make sure the reader has rights to view the article/issue.
 		if ($issue && $issue->getPublished() && $publishedArticle->getStatus() == STATUS_PUBLISHED) {
 			$subscriptionRequired = $issueAction->subscriptionRequired($issue, $journal);
-			$isSubscribedDomain = $issueAction->subscribedDomain($journal, $issue->getId(), $publishedArticle->getId());
+			$isSubscribedDomain = $issueAction->subscribedDomain($request, $journal, $issue->getId(), $publishedArticle->getId());
 
 			// Check if login is required for viewing.
 			if (!$isSubscribedDomain && !Validation::isLoggedIn() && $journal->getSetting('restrictArticleAccess') && isset($galleyId) && $galleyId) {
@@ -284,7 +285,7 @@ class ArticleHandler extends Handler {
 			if ( (!$isSubscribedDomain && $subscriptionRequired) && (isset($galleyId) && $galleyId) ) {
 
 				// Subscription Access
-				$subscribedUser = $issueAction->subscribedUser($journal, $issue->getId(), $publishedArticle->getId());
+				$subscribedUser = $issueAction->subscribedUser($user, $journal, $issue->getId(), $publishedArticle->getId());
 
 				import('classes.payment.ojs.OJSPaymentManager');
 				$paymentManager = new OJSPaymentManager($request);
