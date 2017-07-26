@@ -54,12 +54,14 @@ class PubIdExportRepresentationsListGridCellProvider extends DataObjectGridCellP
 				if (empty($title)) $title = __('common.untitled');
 				$authorsInTitle = $publishedSubmission->getShortAuthorString();
 				$title = $authorsInTitle . '; ' . $title;
-				import('lib.pkp.controllers.grid.submissions.SubmissionsListGridCellProvider');
+				import('classes.core.ServicesContainer');
 				return array(
 					new LinkAction(
 						'itemWorkflow',
 						new RedirectAction(
-							SubmissionsListGridCellProvider::getUrlByUserRoles($request, $publishedSubmission)
+							ServicesContainer::instance()
+									->get('submission')
+									->getWorkflowUrlByUserRoles($publishedSubmission)
 						),
 						$title
 					)

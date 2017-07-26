@@ -18,9 +18,6 @@
 switch($op) {
 	case 'index':
 	case 'tasks':
-	case 'myQueue':
-	case 'active':
-	case 'archives':
 		define('HANDLER_CLASS', 'DashboardHandler');
 		import('lib.pkp.pages.dashboard.DashboardHandler');
 		break;
