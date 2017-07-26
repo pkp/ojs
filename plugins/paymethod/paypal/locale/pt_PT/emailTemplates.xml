@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE email_texts SYSTEM "../../../../../lib/pkp/dtd/emailTemplateData.dtd">
+
 <!--
-  * plugins/paymethod/paypal/locale/pt_PT/emailTemplateData.xml
+  * @file plugins/paymethod/paypal/locale/pt_PT/emailTemplates.xml
   *
   * Copyright (c) 2014-2017 Simon Fraser University
   * Copyright (c) 2003-2017 John Willinsky
