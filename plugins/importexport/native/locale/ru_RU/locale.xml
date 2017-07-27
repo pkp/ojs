@@ -16,6 +16,7 @@
 	<message key="plugins.importexport.native.description">Импортирует и экспортирует статьи и выпуски в собственном XML-формате OJS.</message>
 	<message key="plugins.importexport.native.import">Импортировать</message>
 	<message key="plugins.importexport.native.import.instructions">Загрузите файл XML для импорта</message>
+	<message key="plugins.importexport.native.exportSubmissionsSelect">Выберите статьи для экспорта</message>
 	<message key="plugins.importexport.native.exportSubmissions">Экспортировать статьи</message>
 	<message key="plugins.importexport.native.exportIssues">Экспортировать выпуски</message>
 	<message key="plugins.importexport.native.results">Результаты</message>

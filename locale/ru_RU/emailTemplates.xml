@@ -801,4 +801,16 @@ URL материала: {$submissionUrl}<br />
 		<body><![CDATA[Пожалуйста, введите свое сообщение.]]></body>
 		<description>Сообщение по умолчанию (пустое) используется в редакторе списка сообщений Центра уведомлений.</description>
 	</email_text>
+	<email_text key="EDITOR_DECISION_INITIAL_DECLINE">
+		<subject>Решение редакции</subject>
+		<body>
+			<![CDATA[Здравствуйте, {$authorName}!<br />
+<br />
+Мы приняли решение относительно Вашего материала «{$submissionTitle}», направленного в журнал «{$contextName}».<br />
+<br />
+Наше решение: Отклонить материал<br />
+<br />
+{$editorialContactSignature}<br />]]></body>
+		<description>Это письмо отправляется автору, если редактор решает отклонить его материал на начальной стадии, до этапа рецензирования</description>
+	</email_text>
 </email_texts>
