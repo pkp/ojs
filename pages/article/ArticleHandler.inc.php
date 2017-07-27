@@ -114,7 +114,7 @@ class ArticleHandler extends Handler {
 	 */
 	function view($args, $request) {
 		$articleId = $args[0];
-		$galleyId = $args[1];
+		$galleyId = isset($args[1]) ? $args[1] : 0;
 		$fileId = isset($args[2]) ? $args[2] : 0;
 		$fileRevision = isset($args[3]) ? $args[3] : 0;
 
