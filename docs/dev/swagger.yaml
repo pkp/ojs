@@ -1,4 +1,3 @@
-
 swagger: '2.0'
 info:
   version: '1.0'
@@ -23,18 +22,361 @@ schemes:
   - https
 tags:
   - name: "Submissions"
-    description: "It's all about submissions"
-  - name: "Files"
-    description: "Submission files"
-  - name: "Galleys"
-    description: "Submission galleys"
+    description: "All submissions, published or unpublished."
   - name: "Issues"
-    description: "Issue listing"
+    description: "All issues, published or unpublished."
   - name: "Articles"
-    description: "Published articles"
+    description: "All published articles."
+  - name: "Files"
+    description: "Download submission files."
+  - name: "Galleys"
+    description: "Download submission galley files."
   - name: "Backend"
-    description: "OJS UI sustaining endpoints"
+    description: "Warning: these endpoints are used internally by the application and may change unexpectedly."
+paths:
+  '/submissions/{submissionId}':
+    get:
+      tags:
+        - Submissions
+      summary: Get a submission by ID.
+      parameters:
+        - name: submissionId
+          in: path
+          description: Submission ID
+          required: true
+          type: integer
+      responses:
+        '200':
+          description: OK
+          schema:
+            type: object
+            $ref: '#/definitions/Submission'
+  '/submissions/{submissionId}/files':
+    get:
+      tags:
+        - Submissions
+      summary: Get files attached to a submission.
+      description: |
+        Get all submission files attached to a submission. Optionally filter returned files by a file stage ID.
+      parameters:
+        - name: submissionId
+          in: path
+          description: Submission ID
+          required: true
+          type: integer
+        - name: fileStage
+          in: query
+          description: File stage ID. See `SUBMISSION_FILE_...` constants.
+          required: false
+          type: integer
+      responses:
+        '200':
+          description: OK
+          schema:
+            type: array
+            items:
+              type: object
+              $ref: '#/definitions/File'
+        '404':
+          description: Submission file could not be found.
+          schema:
+            type: object
+            $ref: '#/definitions/ErrorResponse'
+  '/submissions/{submissionId}/participants':
+    get:
+      tags:
+        - Submissions
+      summary: Get participants assigned to a submission.
+      description: |
+        Get all participants assigned to a submission. Optionally filter returned participants by a stage ID.
+      parameters:
+        - name: submissionId
+          in: path
+          description: Submission ID
+          required: true
+          type: integer
+        - name: stageId
+          in: query
+          description: Filter returned participants by workflow stage ID. See `WORKFLOW_STAGE_...` constants.
+          required: false
+          type: integer
+          default: 1
+      responses:
+        '200':
+          description: OK
+          schema:
+            type: array
+            items:
+              type: object
+              $ref: '#/definitions/User'
+  '/submissions/{submissionId}/galleys':
+    get:
+      tags:
+        - Submissions
+      summary: Get submission galleys.
+      description: |
+        Get all of a submission's download galleys.
+      parameters:
+        - name: submissionId
+          in: path
+          description: Submission ID
+          required: true
+          type: integer
+      responses:
+        '200':
+          description: OK
+          schema:
+            type: array
+            items:
+              type: object
+              $ref: '#/definitions/Galley'
+        '400':
+          description: Invalid request parameters.
+          schema:
+            type: object
+            $ref: '#/definitions/ErrorResponse'
+  '/issues/':
+    get:
+      tags:
+        - Issues
+      summary: Get all issues.
+      parameters:
+        - name: volume
+          in: query
+          description: Filter returned issues by issue volume.
+          required: false
+          type: integer
+        - name: number
+          in: query
+          description: Filter returned issues by issue number.
+          required: false
+          type: integer
+        - name: year
+          in: query
+          description: Filter returned issues by published year.
+          required: false
+          type: integer
+      responses:
+        '200':
+          description: OK
+          schema:
+            type: array
+            items:
+              type: object
+              $ref: '#/definitions/IssueSummary'
+  '/issues/{issueId}':
+    get:
+      tags:
+        - Issues
+      summary: Issue details
+      description: |
+        Get details about an issue and the submissions published within it.
+      parameters:
+        - name: issueId
+          in: path
+          description: Issue ID
+          required: true
+          type: integer
+      responses:
+        '200':
+          description: OK
+          schema:
+            type: object
+            $ref: '#/definitions/IssueComplete'
+  '/files/{fileId}':
+    get:
+      tags:
+        - Files
+      summary: Download a submission file.
+      parameters:
+        - name: fileId
+          in: path
+          description: File ID
+          required: true
+          type: integer
+        - name: submissionId
+          in: query
+          description: Submission ID
+          required: true
+          type: integer
+        - name: revision
+          in: query
+          description: Revision
+          required: false
+          type: integer
+      responses:
+        '200':
+          description: Binary file.
+        '500':
+          description: File does not exist or is not readable.
+  '/galleys/{representationId}':
+    get:
+      tags:
+        - Galleys
+      summary: Download a galley file.
+      parameters:
+        - name: representationId
+          in: path
+          description: Galley ID
+          required: true
+          type: integer
+        - name: submissionId
+          in: query
+          description: Submission ID
+          required: true
+          type: integer
+      responses:
+        '302':
+          description: Redirects to `/files/{fileId}`
+  '/articles/{articleId}':
+    get:
+      tags:
+        - Articles
+      summary: Get a published article.
+      parameters:
+        - name: articleId
+          in: path
+          description: Article ID
+          required: true
+          type: integer
+      responses:
+        '200':
+          description: OK
+  '/_submissions':
+    get:
+      tags:
+        - Backend
+      summary: Get a list of submissions.
+      description: |
+        This endpoint serves the `SubmissionsListPanel` component.
+      parameters:
+        - name: orderBy
+          in: query
+          description: Database column to order results. One of `dateSubmitted`, `lastModified`, `title`.
+          required: false
+          type: string
+          default: dateSubmitted
+        - name: orderDirection
+          in: query
+          description: Sort results. One of `ASC` or `DESC`.
+          required: false
+          type: string
+          default: DESC
+        - name: assignedTo
+          in: query
+          description: Filter results assigned to a user ID.
+          required: false
+          type: integer
+        - name: status
+          in: query
+          description: Filter results with this status. Can be an `integer` or `array`.
+          required: false
+          type: array
+          items:
+            type: integer
+        - name: searchPhrase
+          in: query
+          description: Filter results which include the words in this phrase. A submission will be included if it matches all of the words in the phrase in any order.
+          required: false
+          type: string
+        - name: count
+          in: query
+          description: Number of results to return. Max 100.
+          required: false
+          type: integer
+        - name: offset
+          in: query
+          description: Return results starting at the offset (eg - 10-19).
+          required: false
+          type: integer
+        - name: sectionIds
+          in: query
+          description: Filter results assigned to these section IDs. Can be an `integer` or `array`.
+          required: false
+          type: integer
+      responses:
+        '200':
+          description: OK
+  '/_users':
+    get:
+      tags:
+        - Backend
+      summary: Get a list of users
+      description: |
+        This endpoint is not currently used and the documentation may not be up-to-date.
+      parameters:
+        - name: userGroupId
+          in: query
+          description: User group ID
+          required: false
+          type: integer
+        - name: includeNoRole
+          in: query
+          description: Include users with no roles in this journal
+          required: false
+          type: boolean
+          default: false
+        - name: searchField
+          in: query
+          description: Search field
+          required: false
+          type: string
+        - name: search
+          in: query
+          description: Search
+          required: false
+          type: string
+        - name: searchMatch
+          in: query
+          description: Search match
+          required: false
+          type: string
+          enum: ["is", "contains", "startsWith"]
+      responses:
+        '200':
+          description: OK
 definitions:
+  Submission:
+    type: object
+    properties:
+      issueId:
+        type: integer
+      issue:
+        type: string
+      section:
+        type: string
+      title:
+        type: string
+      subtitle:
+        type: string
+      authors:
+        type: array
+        items:
+          type: object
+          $ref: '#/definitions/Author'
+      pubIds:
+        type: object
+        properties:
+          doipubidplugin:
+            type: object
+            properties:
+              pubId:
+                type: string
+              doiUrl:
+                type: string
+      abstract:
+        type: string
+      citations:
+        type: object
+      cover_image:
+        type: string
+      galleys:
+        type: array
+        items:
+          type: object
+          $ref: '#/definitions/GalleyInSubmission'
+      datePublished:
+        type: string
   Author:
     type: object
     properties:
@@ -109,6 +451,126 @@ definitions:
         type: string
       userFullName:
         type: string
+  IssueSummary:
+    type: object
+    properties:
+      id:
+        type: string
+      title:
+        type: string
+      series:
+        type: string
+      datePublished:
+        type: string
+      lastModified:
+        type: string
+      current:
+        type: boolean
+  IssueComplete:
+    type: object
+    properties:
+      id:
+        type: string
+      volume:
+        type: string
+      number:
+        type: string
+      year:
+        type: string
+      current:
+        type: boolean
+      title:
+        type: string
+      series:
+        type: string
+      issueCover:
+        type: string
+      overImageAltText:
+        type: string|null
+      description:
+        type: string
+      datePublished:
+        type: string
+      lastModified:
+        type: string
+      pubId:
+        type: string|null
+      issueGalleys:
+        type: array
+        items:
+          type: object
+          properties:
+            _issueFile:
+              type: IssueFile|null
+            _data:
+              type: object
+              properties:
+                id:
+                  type: string
+                issueId:
+                  type: string
+                locale:
+                  type: string
+                fileId:
+                  type: string
+                label:
+                  type: string
+                sequence:
+                  type: string
+                fileName:
+                  type: string
+                originalFileName:
+                  type: string
+                filetype:
+                  type: string
+                fileSize:
+                  type: string
+                contentType:
+                  type: string
+                dateModified:
+                  type: string
+                dateUploaded:
+                  type: string
+                'pub-id::publisher-id':
+                  type: string
+            _hasLoadableAdapters:
+              type: boolean
+            _metadataExtractionAdapters:
+              type: array
+              items:
+                type: MetadataSchema
+            _extractionAdaptersLoaded:
+              type: boolean
+            _metadataInjectionAdapters:
+              type: array
+              items:
+                type: MetadataSchema
+            _injectionAdaptersLoaded:
+              type: boolean
+      articles:
+        type: array
+        items:
+          type: object
+          properties:
+            id:
+              type: integer
+            title:
+              type: string
+            author:
+              type: string
+            datePublished:
+              type: string
+            galleys:
+              type: array
+              items:
+                type: object
+                properties:
+                  id:
+                    type: string
+                  label:
+                    type: string
+                  submissionId:
+                    type: string
   LocaleObject:
     type: object
     description: Key/value pairs containing strings by locale key.
@@ -123,338 +585,3 @@ definitions:
         type: string
       errorMessage:
         type: string
-paths:
-  '/submissions/{submissionId}':
-    get:
-      tags:
-        - Submissions
-      summary: Get a submission by ID.
-      parameters:
-        - name: submissionId
-          in: path
-          description: Submission ID
-          required: true
-          type: integer
-      responses:
-        '200':
-          description: Submission details.
-          schema:
-            type: object
-            properties:
-              issueId:
-                type: integer
-              issue:
-                type: string
-              section:
-                type: string
-              title:
-                type: string
-              subtitle:
-                type: string
-              authors:
-                type: array
-                items:
-                  type: object
-                  $ref: '#/definitions/Author'
-              pubIds:
-                type: object
-                properties:
-                  doipubidplugin:
-                    type: object
-                    properties:
-                      pubId: string
-                      doiUrl: string
-              abstract:
-                type: string
-              citations:
-                type: object
-              cover_image: string
-              galleys:
-                type: array
-                items:
-                  type: object
-                  $ref: '#/definitions/GalleyInSubmission'
-              datePublished: string
-  '/submissions/{submissionId}/files':
-    get:
-      tags:
-        - Submissions
-      summary: Get files attached to a submission.
-      description: |
-        Get all submission files attached to a submission. Optionally filter returned files by a file stage ID.
-      parameters:
-        - name: submissionId
-          in: path
-          description: Submission ID
-          required: true
-          type: integer
-        - name: fileStage
-          in: query
-          description: File stage ID
-          required: false
-          type: integer
-      responses:
-        '200':
-          description: Array of submission files.
-          schema:
-            type: array
-            items:
-              type: object
-              $ref: '#/definitions/File'
-        '404':
-          description: Submission file could not be found.
-          schema:
-            type: object
-            $ref: '#/definitions/ErrorResponse'
-  '/submissions/{submissionId}/participants':
-    get:
-      tags:
-        - Submissions
-      summary: Get participants assigned to a submission.
-      description: |
-        Get all participants assigned to a submission. Optionally filter returned participants by a stage ID.
-      parameters:
-        - name: submissionId
-          in: path
-          description: Submission ID
-          required: true
-          type: integer
-        - name: stageId
-          in: query
-          description: Stage ID
-          required: false
-          type: integer
-          default: 1
-      responses:
-        '200':
-          description: Array of users.
-          schema:
-            type: array
-            items:
-              type: object
-              $ref: '#/definitions/User'
-  '/submissions/{submissionId}/galleys':
-    get:
-      tags:
-        - Submissions
-      summary: Get submission galleys.
-      description: |
-        Get all of a submission's download galleys.
-      parameters:
-        - name: submissionId
-          in: path
-          description: Submission ID
-          required: true
-          type: integer
-      responses:
-        '200':
-          description: Array of galleys.
-          schema:
-            type: array
-            items:
-              type: object
-              $ref: '#/definitions/Galley'
-        '400':
-          description: Invalid stage ID
-          schema:
-            type: object
-            $ref: '#/definitions/ErrorResponse'
-  '/files/{fileId}':
-    get:
-      tags:
-        - Files
-      summary: Submission file download
-      description: |
-        Handle submission file download
-      parameters:
-        - name: fileId
-          in: path
-          description: File ID
-          required: true
-          type: integer
-        - name: submissionId
-          in: query
-          description: Submission ID
-          required: true
-          type: integer
-        - name: revision
-          in: query
-          description: Revision
-          required: false
-          type: integer
-      responses:
-        '200':
-          description: binary file
-
-  '/galleys/{representationId}':
-    get:
-      tags:
-        - Galleys
-      summary: Galley file download
-      description: |
-        Handle galley file download
-      parameters:
-        - name: representationId
-          in: path
-          description: Galley ID
-          required: true
-          type: integer
-        - name: submissionId
-          in: query
-          description: Submission ID
-          required: true
-          type: integer
-      responses:
-        '200':
-          description: binary file
-
-  '/issues/':
-    get:
-      tags:
-        - Issues
-      summary: Issue listing
-      description: |
-        Get the issue listing
-      parameters:
-        - name: volume
-          in: query
-          description: Volume
-          required: false
-          type: integer
-        - name: number
-          in: query
-          description: Volume
-          required: false
-          type: integer
-        - name: year
-          in: query
-          description: Volume
-          required: false
-          type: integer
-      responses:
-        '200':
-          description: array of issues
-
-  '/issues/{issueId}':
-    get:
-      tags:
-        - Issues
-      summary: Issue details
-      description: |
-        Get information about a specific issue
-      parameters:
-        - name: issueId
-          in: path
-          description: Issue ID
-          required: true
-          type: integer
-      responses:
-        '200':
-          description: issue metadata
-
-  '/articles/{articleId}':
-    get:
-      tags:
-        - Articles
-      summary: Article details
-      description: |
-        Get information about a specific published article
-      parameters:
-        - name: articleId
-          in: path
-          description: Article ID
-          required: true
-          type: integer
-      responses:
-        '200':
-          description: published article
-
-  '/backend/submissions':
-    get:
-      tags:
-        - Backend
-      summary: Submission list
-      description: |
-        Retrieve submission list
-      parameters:
-        - name: orderColumn
-          in: query
-          description: Field to order by
-          required: false
-          type: string
-          default: id
-        - name: orderDirection
-          in: query
-          description: Order direction
-          required: false
-          type: string
-          default: 'DESC'
-        - name: assignedTo
-          in: query
-          description: Assignee user ID
-          required: false
-          type: integer
-        - name: statuses
-          in: query
-          description: Status list
-          required: false
-          type: array
-          items:
-            type: integer
-        - name: searchPhrase
-          in: query
-          description: Search phrase
-          required: false
-          type: string
-        - name: count
-          in: query
-          description: Number of submission to return
-          required: false
-          type: integer
-        - name: page
-          in: query
-          description: Page number for pagination
-          required: false
-          type: integer
-      responses:
-        '200':
-          description: array of submissions
-
-  '/backend/users':
-    get:
-      tags:
-        - Backend
-      summary: Users list
-      description: |
-        Retrieve user list
-      parameters:
-        - name: userGroupId
-          in: query
-          description: User group ID
-          required: false
-          type: integer
-        - name: includeNoRole
-          in: query
-          description: Include users with no roles in this journal
-          required: false
-          type: boolean
-          default: false
-        - name: searchField
-          in: query
-          description: Search field
-          required: false
-          type: string
-        - name: search
-          in: query
-          description: Search
-          required: false
-          type: string
-        - name: searchMatch
-          in: query
-          description: Search match
-          required: false
-          type: string
-          enum: ["is", "contains", "startsWith"]
-      responses:
-        '200':
-          description: array of users
