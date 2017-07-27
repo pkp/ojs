@@ -78,12 +78,18 @@ class ArticleDAO extends SubmissionDAO {
 		$article = parent::_fromRow($row);
 
 		$article->setSectionId($row['section_id']);
-		$article->setSectionTitle($row['section_title']);
-		$article->setSectionAbbrev($row['section_abbrev']);
 		$article->setCitations($row['citations']);
 		$article->setPages($row['pages']);
 		$article->setFastTracked($row['fast_tracked']);
 		$article->setHideAuthor($row['hide_author']);
+
+		if (isset($row['section_title'])) {
+			$article->setSectionTitle($row['section_title']);
+		}
+
+		if (isset($row['section_abbrev'])) {
+			$article->setSectionAbbrev($row['section_abbrev']);
+		}
 
 		HookRegistry::call('ArticleDAO::_fromRow', array(&$article, &$row));
 		return $article;
