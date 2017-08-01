@@ -138,6 +138,9 @@ class SubscriptionsHandler extends Handler {
 		$subscriptionPolicyForm->readInputData();
 		if ($subscriptionPolicyForm->validate()) {
 			$subscriptionPolicyForm->execute();
+			$notificationManager = new NotificationManager();
+			$user = $request->getUser();
+			$notificationManager->createTrivialNotification($user->getId());
 			return new JSONMessage(true);
 		}
 		return new JSONMessage(true, $subscriptionPolicyForm->fetch($request));
