@@ -23,10 +23,6 @@
 		<query>DELETE FROM notifications WHERE type=16777235</query><!-- NOTIFICATION_TYPE_EDITOR_DECISION_COMMENT WARNING: This type ID conflicts with others! -->
 		<query>DELETE FROM notifications WHERE type=268435476</query><!-- NOTIFICATION_TYPE_USER_COMMENT WARNING: This type ID conflicts with others! -->
 	</sql>
-	<!-- Bug #6324: Issue Access Status = 0 -->
-	<sql>
-		<query>UPDATE issues SET access_status=1 WHERE access_status=0</query>
-	</sql>
 	<!-- Bug #6968: Check review_type constant behavior. -->
 	<sql>
 		<query>UPDATE review_assignments SET stage_id=1 WHERE stage_id=0</query>
