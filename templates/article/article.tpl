@@ -103,7 +103,7 @@
 		<br />
 		<div>
 			{iterate from=citationFactory item=citation}
-				<p>{$citation->getRawCitation()|strip_unsafe_html}</p>
+				<p>{$citation->getRawCitation()|escape}</p>
 			{/iterate}
 		</div>
 		<br />
