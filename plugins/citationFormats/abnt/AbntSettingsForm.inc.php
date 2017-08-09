@@ -20,19 +20,19 @@ import('lib.pkp.classes.form.Form');
 class AbntSettingsForm extends Form {
 
 	/** @var int */
-	var $journalId;
+	var $_journalId;
 
 	/** @var object */
-	var $plugin;
+	var $_plugin;
 
 	/**
 	 * Constructor
 	 * @param $plugin object
 	 * @param $journalId int
 	 */
-	function __construct(&$plugin, $journalId) {
-		$this->journalId = $journalId;
-		$this->plugin =& $plugin;
+	function __construct($plugin, $journalId) {
+		$this->_journalId = $journalId;
+		$this->_plugin = $plugin;
 
 		parent::__construct($plugin->getTemplatePath() . 'settingsForm.tpl');
 	}
@@ -41,11 +41,8 @@ class AbntSettingsForm extends Form {
 	 * Initialize form data.
 	 */
 	function initData() {
-		$journalId = $this->journalId;
-		$plugin =& $this->plugin;
-
 		$this->_data = array(
- 			'location' => $plugin->getSetting($journalId, 'location')
+			'location' => $this->_plugin->getSetting($this->_journalId, 'location')
 		);
 	}
 
@@ -61,19 +58,24 @@ class AbntSettingsForm extends Form {
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
- 		$this->readUserVars(array('location'));
+		$this->readUserVars(array('location'));
+	}
+
+	/**
+	 * Fetch the form.
+	 * @copydoc Form::fetch()
+	 */
+	function fetch($request) {
+		$templateMgr = TemplateManager::getManager($request);
+		$templateMgr->assign('pluginName', $this->_plugin->getName());
+		return parent::fetch($request);
 	}
 
 	/**
 	 * Save settings.
 	 */
 	function execute() {
-		$plugin =& $this->plugin;
-
-		$value = $this->getData('location');
-		if (is_array($value)) {
-			$plugin->updateSetting($this->journalId, 'location', $value, 'object');
-		}
+		$this->_plugin->updateSetting($this->_journalId, 'location', $this->getData('location'), 'object');
 	}
 }
 
