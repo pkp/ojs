@@ -174,7 +174,7 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin {
 					NOTIFICATION_TYPE_SUCCESS
 				);
 			} else {
-				foreach($resultErrors as $error) {
+				foreach($resultErrors as $errors) {
 					foreach ($errors as $error) {
 						assert(is_array($error) && count($error) >= 1);
 						$this->_sendNotification(
