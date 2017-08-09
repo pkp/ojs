@@ -169,7 +169,7 @@ class WebFeedPlugin extends GenericPlugin {
 			case 'settings':
 				AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON,  LOCALE_COMPONENT_PKP_MANAGER);
 				$this->import('WebFeedSettingsForm');
-				$form = new WebFeedSettingsForm($this, $context->getId());
+				$form = new WebFeedSettingsForm($this, $request->getContext()->getId());
 
 				if ($request->getUserVar('save')) {
 					$form->readInputData();
