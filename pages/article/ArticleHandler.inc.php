@@ -365,10 +365,13 @@ class ArticleHandler extends Handler {
 			$galley =& $galleyDao->getGalley($galleyId, $article->getId());
 		}
 
-		if ($article && $galley && !HookRegistry::call('ArticleHandler::downloadFile', array(&$article, &$galley))) {
-			import('classes.file.ArticleFileManager');
-			$articleFileManager = new ArticleFileManager($article->getId());
-			$articleFileManager->downloadFile($galley->getFileId());
+		if ($article && $galley) {
+			$fileId = $galley->getFileId();
+			if (!HookRegistry::call('ArticleHandler::downloadFile', array(&$article, &$galley, &$fileId))) {
+				import('classes.file.ArticleFileManager');
+				$articleFileManager = new ArticleFileManager($article->getId());
+				$articleFileManager->downloadFile($fileId);
+			}
 		}
 	}
 

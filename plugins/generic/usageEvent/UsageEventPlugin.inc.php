@@ -218,10 +218,13 @@ class UsageEventPlugin extends GenericPlugin {
 			// Article galley (except for HTML and remote galley).
 			case 'ArticleHandler::viewFile':
 			case 'ArticleHandler::downloadFile':
+				$article =& $args[0];
 				$pubObject =& $args[1];
+				$fileId =& $args[2];
+				// if file is not a gallay file (e.g. CSS or images), there is no usage event.
+				if ($pubObject->getFileId() != $fileId) return false;
 				$assocType = ASSOC_TYPE_GALLEY;
 				$canonicalUrlOp = 'download';
-				$article =& $args[0];
 				$canonicalUrlParams = array($article->getId(), $pubObject->getId($journal));
 				$idParams = array('a' . $article->getId(), 'g' . $pubObject->getId());
 				break;
