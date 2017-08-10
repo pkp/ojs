@@ -95,7 +95,7 @@
 	<message key="manager.setup.competingInterests.requireAuthors">Wymagaj od autorów oświadczenia o zbieżności zainteresowań.</message>
 	<message key="manager.setup.competingInterests.requireReviewers">Wymagaj od recenzentów oświadczenia o zbieżności zainteresowań.</message>
 	<message key="manager.setup.history">Historia czasopisma</message>
-	<message key="manager.setup.historyDescription">Ten tekst będzie widoczny na stronie &bdquo;O czasopiśmie&rdquo;, pod nagłówkiem "Wsparcie" i nad nazwą/URL organizacji wspierającej.</message>
+	<message key="manager.setup.historyDescription">Ten tekst będzie widoczny na stronie "O czasopiśmie", pod nagłówkiem "Wsparcie" i nad nazwą/URL organizacji wspierającej.</message>
 	<message key="manager.setup.copyeditInstructions">Wytyczne dla redaktorów technicznych</message>
 	<message key="manager.setup.copyeditInstructionsDescription">Wytyczne dla redaktorów technicznych będą widoczne dla wszystkich redaktorów oraz autorów na poziomie edycji wysłanych tekstów.</message>
 	<message key="manager.setup.copyrightNotice">Prawa autorskie</message>
