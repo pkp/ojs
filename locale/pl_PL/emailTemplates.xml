@@ -130,38 +130,6 @@ Dziękujemy za zainteresowanie działalnością czasopisma,<br />
 {$editorialContactSignature}<br />]]></body>
 		<description>Wiadomość jest wysyłana do zarejestrowanych czytelników. Zawiera informację o nowym numerze czasopisma.</description>
 	</email_text>
-	<email_text key="LOCKSS_EXISTING_ARCHIVE">
-		<subject>Archiving Request for {$journalName}</subject>
-		<body>Dear [University Librarian]
-
-{$journalName} &lt;{$journalUrl}&gt;, is a journal for which a member of your faculty, [name of member], serves as a [title of position]. The journal is seeking to establish a LOCKSS (Lots of Copies Keep Stuff Safe) compliant archive with this and other university libraries.
-
-[Brief description of journal]
-
-The URL to the LOCKSS Publisher Manifest for our journal is: {$journalUrl}/gateway/lockss
-
-We understand that you are already participating in LOCKSS. If we can provide any additional metadata for purposes of registering our journal with your version of LOCKSS, we would be happy to provide it.
-
-Thank you,
-{$principalContactSignature}</body>
-		<description>This email requests the keeper of a LOCKSS archive to consider including this journal in their archive. It provides the URL to the journal's LOCKSS Publisher Manifest.</description>
-	</email_text>
-	<email_text key="LOCKSS_NEW_ARCHIVE">
-		<subject>Archiving Request for {$journalName}</subject>
-		<body>Dear [University Librarian]
-
-{$journalName} &lt;{$journalUrl}&gt;, is a journal for which a member of your faculty, [name of member] serves as a [title of position]. The journal is seeking to establish a LOCKSS (Lots of Copies Keep Stuff Safe) compliant archive with this and other university libraries.
-
-[Brief description of journal]
-
-The LOCKSS Program &lt;http://lockss.org/&gt;, an international library/publisher initiative, is a working example of a distributed preservation and archiving repository, additional details are below. The software, which runs on an ordinary personal computer is free; the system is easily brought on-line; very little ongoing maintenance is required.
-
-To assist in the archiving of our journal, we invite you to become a member of the LOCKSS community, to help collect and preserve titles produced by your faculty and by other scholars worldwide. To do so, please have someone on your staff visit the LOCKSS site for information on how this system operates. I look forward to hearing from you on the feasibility of providing this archiving support for this journal.
-
-Thank you,
-{$principalContactSignature}</body>
-		<description>This email encourages the recipient to participate in the LOCKSS initiative and include this journal in the archive. It provides information about the LOCKSS initiative and ways to become involved.</description>
-	</email_text>
 	<email_text key="SUBMISSION_ACK">
 		<subject>Potwierdzenie zgłoszenia tekstu</subject>
 		<body><![CDATA[Szanowna Pani/ Szanowny Panie,<br />
@@ -873,25 +841,7 @@ Nr: {$year}, Wol. {$volume}({$number})
 Pozdrawiam</body>
 		<description>Wiadomość wysyłana przez zalogowanego na stronie czasopisma czytelnika, która zawiera zachętę do zapoznania się z treścią artykułu wraz z linkiem do tekstu.</description>
 	</email_text>
-	<email_text key="SUBSCRIPTION_NOTIFY">
-		<subject>Subscription Notification</subject>
-		<body>Do: {$subscriberName}
 
-You have now been registered as a subscriber in our online journal management system for {$journalName}, with the following subscription:
-
-{$subscriptionType}
-
-To access content that is available only to subscribers, simply log in to the system with your username, "{$username}".
-
-Once you have logged in to the system you can change your profile details and password at any point.
-
-Please note that if you have an institutional subscription, there is no need for users at your institution to log in, since requests for subscription content will be automatically authenticated by the system.
-
-If you have any questions, please feel free to contact me.
-
-{$subscriptionContactSignature}</body>
-		<description>This email notifies a registered reader that the Manager has created a subscription for them. It provides the journal's URL along with instructions for access.</description>
-	</email_text>
 	<email_text key="OPEN_ACCESS_NOTIFY">
 		<subject>Numer czasopisma teraz w otwartym dostępie</subject>
 		<body><![CDATA[Szanowni Państwo,<br />
@@ -902,151 +852,7 @@ Dziękujemy za zainteresowanie naszym czasopismem,<br />
 {$editorialContactSignature}<br />]]></body>
 		<description>Wiadomość wysyłana do zarejestrowanych użytkowników, którzy zadeklarowali chęć otrzymywania powiadomień o nowych numerach w otwartym dostępie.</description>
 	</email_text>
-	<email_text key="SUBSCRIPTION_BEFORE_EXPIRY">
-		<subject>Notice of Subscription Expiry</subject>
-		<body>{$subscriberName}:
 
-Your {$journalName} subscription is about to expire.
-
-{$subscriptionType}
-Expiry date: {$expiryDate}
-
-To ensure the continuity of your access to this journal, please go to the journal website and renew your subscription. You are able to log in to the system with your username, "{$username}".
-
-If you have any questions, please feel free to contact me.
-
-{$subscriptionContactSignature}</body>
-		<description>This email notifies a subscriber that their subscription will soon expire. It provides the journal's URL along with instructions for access.</description>
-	</email_text>
-	<email_text key="SUBSCRIPTION_AFTER_EXPIRY">
-		<subject>Subscription Expired</subject>
-		<body>{$subscriberName}:
-
-Your {$journalName} subscription has expired.
-
-{$subscriptionType}
-Expiry date: {$expiryDate}
-
-To renew your subscription, please go to the journal website. You are able to log in to the system with your username, "{$username}".
-
-If you have any questions, please feel free to contact me.
-
-{$subscriptionContactSignature}</body>
-		<description>This email notifies a subscriber that their subscription has expired. It provides the journal's URL along with instructions for access.</description>
-	</email_text>
-	<email_text key="SUBSCRIPTION_AFTER_EXPIRY_LAST">
-		<subject>Subscription Expired - Final Reminder</subject>
-		<body>{$subscriberName}:
-
-Your {$journalName} subscription has expired.
-Please note that this is the final reminder that will be emailed to you.
-
-{$subscriptionType}
-Expiry date: {$expiryDate}
-
-To renew your subscription, please go to the journal website. You are able to log in to the system with your username, "{$username}".
-
-If you have any questions, please feel free to contact me.
-
-{$subscriptionContactSignature}</body>
-		<description>This email notifies a subscriber that their subscription has expired. It provides the journal's URL along with instructions for access.</description>
-	</email_text>
-	<email_text key="SUBSCRIPTION_PURCHASE_INDL">
-		<subject>Subscription Purchase: Individual</subject>
-		<body>An individual subscription has been purchased online for {$journalName} with the following details.
-
-Subscription Type:
-{$subscriptionType}
-
-User:
-{$userDetails}
-
-Membership Information (if provided):
-{$membership}
-
-To view or edit this subscription, please use the following URL.
-
-Subscription URL: {$subscriptionUrl}
-</body>
-		<description>This email notifies the Subscription Manager that an individual subscription has been purchased online. It provides summary information about the subscription and a quick access link to the purchased subscription.</description>
-	</email_text>
-	<email_text key="SUBSCRIPTION_PURCHASE_INSTL">
-		<subject>Subscription Purchase: Institutional</subject>
-		<body>An institutional subscription has been purchased online for {$journalName} with the following details. To activate this subscription, please use the provided Subscription URL and set the subscription status to 'Active'.
-
-Subscription Type:
-{$subscriptionType}
-
-Institution:
-{$institutionName}
-{$institutionMailingAddress}
-
-Domain (if provided):
-{$domain}
-
-IP Ranges (if provided):
-{$ipRanges}
-
-Contact Person:
-{$userDetails}
-
-Membership Information (if provided):
-{$membership}
-
-To view or edit this subscription, please use the following URL.
-
-Subscription URL: {$subscriptionUrl}
-</body>
-		<description>This email notifies the Subscription Manager that an institutional subscription has been purchased online. It provides summary information about the subscription and a quick access link to the purchased subscription.</description>
-	</email_text>
-	<email_text key="SUBSCRIPTION_RENEW_INDL">
-		<subject>Subscription Renewal: Individual</subject>
-		<body>An individual subscription has been renewed online for {$journalName} with the following details.
-
-Subscription Type:
-{$subscriptionType}
-
-User:
-{$userDetails}
-
-Membership Information (if provided):
-{$membership}
-
-To view or edit this subscription, please use the following URL.
-
-Subscription URL: {$subscriptionUrl}
-</body>
-		<description>This email notifies the Subscription Manager that an individual subscription has been renewed online. It provides summary information about the subscription and a quick access link to the renewed subscription.</description>
-	</email_text>
-	<email_text key="SUBSCRIPTION_RENEW_INSTL">
-		<subject>Subscription Renewal: Institutional</subject>
-		<body>An institutional subscription has been renewed online for {$journalName} with the following details.
-
-Subscription Type:
-{$subscriptionType}
-
-Institution:
-{$institutionName}
-{$institutionMailingAddress}
-
-Domain (if provided):
-{$domain}
-
-IP Ranges (if provided):
-{$ipRanges}
-
-Contact Person:
-{$userDetails}
-
-Membership Information (if provided):
-{$membership}
-
-To view or edit this subscription, please use the following URL.
-
-Subscription URL: {$subscriptionUrl}
-</body>
-		<description>This email notifies the Subscription Manager that an institutional subscription has been renewed online. It provides summary information about the subscription and a quick access link to the renewed subscription.</description>
-	</email_text>
 	<email_text key="CITATION_EDITOR_AUTHOR_QUERY">
 		<subject>Redakcja bibliografii</subject>
 		<body><![CDATA[Szanowna Pani/ Szanowny Panie,<br />
@@ -1133,64 +939,7 @@ Z wyrazami szacunku,<br />
 {$submissionAbstract}<br />]]></body>
 		<description>Wiadomość od redaktora prowadzącego do recenzenta. Zawiera prośbę o przygotowanie recenzji tekstu, jego tytuł i abstrakt, a także zalecenie dot. zresetowania hasła w sytuacji, gdy recenzent nie pamięta danych do logowania. Wysyłana, jeżeli recenzent pracować będzie w systemie.</description>
 	</email_text>
-	<email_text key="GIFT_AVAILABLE">
-		<subject>{$giftNoteTitle}</subject>
-		<body>Dear {$recipientFirstName},
 
-{$buyerFullName} would like to share a gift with you at {$giftJournalName}:
-
-{$giftDetails}
-
-
-{$giftNote}
-
-
-You will receive a follow-up email that includes login details and instructions for redeeming your gift.
-
-We hope that you enjoy your gift!
-
-{$giftContactSignature}</body>
-		<description>This email notifies a gift recipient that a gift has been purchased and is available for redemption.</description>
-	</email_text>
-	<email_text key="GIFT_USER_REGISTER">
-		<subject>Redeem Your Gift: Login Details</subject>
-		<body>Dear {$recipientFirstName},
-
-{$buyerFullName} would like to share a gift with you at {$giftJournalName}:
-
-{$giftDetails}
-
-
-To redeem your gift, please login to the journal website at {$giftUrl}
-
-Your username: {$username}
-Your password: {$password}
-
-Once logged in, you can change your password at any time.
-
-We hope that you enjoy your gift!
-
-{$giftContactSignature}</body>
-		<description>This email notifies a gift recipient of their login details for a new account.</description>
-	</email_text>
-	<email_text key="GIFT_USER_LOGIN">
-		<subject>Redeem Your Gift: Login Details</subject>
-		<body>Dear {$recipientFirstName},
-
-{$buyerFullName} would like to share a gift with you at {$giftJournalName}:
-
-{$giftDetails}
-
-
-To redeem your gift, please login to the journal website at {$giftUrl}
-
-Your username: {$username}
-
-We hope that you enjoy your gift!
-
-{$giftContactSignature}</body>
-		<description>This email notifies a gift recipient of their login details.</description>
-	</email_text>
 	<email_text key="REVISED_VERSION_NOTIFY">
 		<subject>Poprawiona wersja przesłana do systemu</subject>
 		<body><![CDATA[Szanowna Pani/ Szanowny Panie,<br />

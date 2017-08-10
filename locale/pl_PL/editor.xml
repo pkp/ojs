@@ -26,10 +26,7 @@
 	<message key="editor.submissionArchive.confirmDelete">Czy na pewno chcesz usunąć przesłane teksty?</message>
 	<message key="editor.submissionReview.confirmDecision">Czy na pewno?</message>
 	<message key="editor.submissionReview.emailWillArchive">Przesłane teksty zostaną zarchiwizowane po przesłaniu powiadomienia do autora (możesz pominąć przesłanie powiadomienia klikając w "Pomiń wysłanie wiadomości".</message>
-	<message key="editor.submissionReview.cannotSendToCopyediting">Zanim prześlesz tekst do 
-
-
-Przed przesłaniem tekstu do redakcji techniczne, powiadom autora o decyzji i wyborze wersji do przesłania.</message>
+	<message key="editor.submissionReview.cannotSendToCopyediting">Zanim prześlesz tekst do Przed przesłaniem tekstu do redakcji techniczne, powiadom autora o decyzji i wyborze wersji do przesłania.</message>
 	<message key="editor.submissionReview.sendToCopyediting">Prześli do redakcji technicznej</message>
 	<message key="editor.notifyUsers">Powiadom użytkowników o nowym numerze</message>
 	<message key="editor.notifyUsers.allUsers">Wszyscy użytkownicy związani z tą konferencją ({$count})</message>
@@ -42,7 +39,6 @@ Przed przesłaniem tekstu do redakcji techniczne, powiadom autora o decyzji i wy
 	<message key="editor.notifyUsers.allUsers">Wszyscy użytkownicy zarejestrowani na stronie czasopisma ({$count})</message>
 	<message key="editor.notifyUsers.interestedUsers">Wszyscy użytkownicy zarejestrowani na stronie czasopisma, którzy oznaczyli chęć otrzymywania ogłoszeń ({$count})</message>
 	<message key="editor.notifyUsers.includeToc">Zamieść w numerze spis treści:</message>
-	<message key="editor.editorAdministration">???Editor Administration</message>
 	<message key="editor.issues.createIssue">Stwórz nowy numer</message>
 	<message key="editor.issues.currentIssue">Aktualny numer</message>
 	<message key="editor.issues.numArticles">Teksty</message>
