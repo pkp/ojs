@@ -153,6 +153,7 @@
 		<code function="installEmailTemplate" key="PASSWORD_RESET" locales="ca_ES,cs_CZ,da_DK,de_DE,en_US,es_ES,eu_ES,fi_FI,fr_CA,hr_HR,id_ID,it_IT,nb_NO,nl_NL,pt_BR,pt_PT,ru_RU,sv_SE,tr_TR,uk_UA,zh_CN" />
 		<data file="dbscripts/xml/upgrade/3.1.0_update_a.xml" />
 		<code function="repairKeywordsAndSubjects" />
+		<code function="enabledSitePlugins" />
 	</upgrade>
 
 	<upgrade minversion="2.4.0.0" maxversion="3.0.9.9">

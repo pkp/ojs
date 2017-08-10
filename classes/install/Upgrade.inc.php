@@ -2358,6 +2358,22 @@ class Upgrade extends Installer {
 		return true;
 	}
 
+	/**
+	 * For 3.0.x - 3.1.0 upgrade: repair enabled plugin setting for site plugins.
+	 * @return boolean
+	 */
+	function enabledSitePlugins() {
+		$allPlugins =& PluginRegistry::getAllPlugins();
+		$pluginSettings = DAORegistry::getDAO('PluginSettingsDAO');
+		foreach ($allPlugins as $plugin) {
+			if ($plugin->isSitePlugin()) {
+				$result = $pluginSettings->update('DELETE FROM plugin_settings WHERE setting_name = \'enabled\' AND context_id <> 0');
+			}
+		}
+		return true;
+	}
+
+
 }
 
 ?>
