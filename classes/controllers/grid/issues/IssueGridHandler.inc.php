@@ -37,6 +37,7 @@ class IssueGridHandler extends GridHandler {
 				'issueGalleys',
 				'deleteIssue', 'publishIssue', 'unpublishIssue', 'setCurrentIssue',
 				'identifiers', 'updateIdentifiers', 'clearPubId', 'clearIssueObjectsPubIds',
+				'access', 'updateAccess',
 			)
 		);
 	}
@@ -132,7 +133,7 @@ class IssueGridHandler extends GridHandler {
 	}
 
 	/**
-	 * An action to edit a issue
+	 * An action to edit an issue
 	 * @param $args array
 	 * @param $request PKPRequest
 	 * @return JSONMessage JSON object
@@ -145,7 +146,7 @@ class IssueGridHandler extends GridHandler {
 	}
 
 	/**
-	 * An action to edit a issue's identifying data
+	 * An action to edit an issue's identifying data
 	 * @param $args array
 	 * @param $request PKPRequest
 	 * @return JSONMessage JSON object
@@ -222,7 +223,7 @@ class IssueGridHandler extends GridHandler {
 
 
 	/**
-	 * Update a issue
+	 * Update an issue
 	 * @param $args array
 	 * @param $request PKPRequest
 	 * @return JSONMessage JSON object
@@ -235,10 +236,50 @@ class IssueGridHandler extends GridHandler {
 		$issueForm->readInputData();
 
 		if ($issueForm->validate($request)) {
-			$issueId = $issueForm->execute($request);
-			return DAO::getDataChangedEvent($issueId);
+			$issueForm->execute($request);
+			$notificationManager = new NotificationManager();
+			$notificationManager->createTrivialNotification($request->getUser()->getId());
+			return DAO::getDataChangedEvent();
 		} else {
 			return new JSONMessage(true, $issueForm->fetch($request));
+		}
+	}
+
+	/**
+	 * An action to edit an issue's access settings
+	 * @param $args array
+	 * @param $request PKPRequest
+	 * @return JSONMessage JSON object
+	 */
+	function access($args, $request) {
+		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
+
+		import('controllers.grid.issues.form.IssueAccessForm');
+		$issueAccessForm = new IssueAccessForm($issue);
+		$issueAccessForm->initData($request);
+		return new JSONMessage(true, $issueAccessForm->fetch($request));
+	}
+
+	/**
+	 * Update an issue's access settings
+	 * @param $args array
+	 * @param $request PKPRequest
+	 * @return JSONMessage JSON object
+	 */
+	function updateAccess($args, $request) {
+		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
+
+		import('controllers.grid.issues.form.IssueAccessForm');
+		$issueAccessForm = new IssueAccessForm($issue);
+		$issueAccessForm->readInputData();
+
+		if ($issueAccessForm->validate($request)) {
+			$issueAccessForm->execute($request);
+			$notificationManager = new NotificationManager();
+			$notificationManager->createTrivialNotification($request->getUser()->getId());
+			return DAO::getDataChangedEvent();
+		} else {
+			return new JSONMessage(true, $issueAccessForm->fetch($request));
 		}
 	}
 
@@ -390,8 +431,6 @@ class IssueGridHandler extends GridHandler {
 	 */
 	function publishIssue($args, $request) {
 		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
-		$issueId = $issue->getId();
-
 		$journal = $request->getJournal();
 		$journalId = $journal->getId();
 

@@ -37,8 +37,39 @@ class TocGridCellProvider extends GridCellProvider {
 		switch ($columnId) {
 			case 'title':
 				return array('label' => $element->getLocalizedTitle());
+			case 'access':
+				return array('selected' => $element->getAccessStatus()==ARTICLE_ACCESS_OPEN);
 			default: assert(false);
 		}
+	}
+
+	/**
+	 * @copydoc GridCellProvider::getCellActions()
+	 */
+	function getCellActions($request, $row, $column, $position = GRID_ACTION_POSITION_DEFAULT) {
+		switch ($column->getId()) {
+			case 'access':
+				$article = $row->getData(); /* @var $article PublishedArticle */
+				return array(new LinkAction(
+					'disable',
+					new AjaxAction(
+						$request->url(
+							null, null, 'setAccessStatus', null,
+							array_merge(
+								array(
+									'articleId' => $article->getId(),
+									'status' => ($article->getAccessStatus() == ARTICLE_ACCESS_OPEN) ? ARTICLE_ACCESS_DEFAULT : ARTICLE_ACCESS_OPEN,
+									'csrfToken' => $request->getSession()->getCSRFToken(),
+								),
+								$row->getRequestArgs()
+							)
+						)
+					),
+					__('manager.plugins.disable'),
+					null
+				));
+		}
+		return parent::getCellActions($request, $row, $column, $position);
 	}
 }
 

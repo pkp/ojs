@@ -18,14 +18,19 @@ import('lib.pkp.classes.scheduledTask.ScheduledTask');
 class SubscriptionExpiryReminder extends ScheduledTask {
 
 	/**
-	 * @see ScheduledTask::getName()
+	 * @copydoc ScheduledTask::getName()
 	 */
 	function getName() {
 		return __('admin.scheduledTask.subscriptionExpiryReminder');
 	}
 
-	function sendReminder ($subscription, $journal, $emailKey) {
-
+	/**
+	 * Send a particular subscription expiry reminder.
+	 * @param $subscription Subscription
+	 * @param $journal Journal
+	 * @param $emailKey string Email template key
+	 */
+	protected function sendReminder ($subscription, $journal, $emailKey) {
 		$userDao = DAORegistry::getDAO('UserDAO');
 		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
 
@@ -72,8 +77,12 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 		$mail->send();
 	}
 
-	function sendJournalReminders ($journal, $curDate) {
-
+	/**
+	 * Send a journal's subscription expiry reminders.
+	 * @param $journal Journal
+	 * @param $curDate array The current date
+	 */
+	protected function sendJournalReminders ($journal, $curDate) {
 		// Only send reminders if subscriptions are enabled
 		if ($journal->getSetting('publishingMode') == PUBLISHING_MODE_SUBSCRIPTION) {
 
@@ -203,7 +212,7 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 	}
 
 	/**
-	 * @see ScheduledTask::executeActions()
+	 * @copydoc ScheduledTask::executeActions()
 	 */
 	protected function executeActions() {
 		$journalDao = DAORegistry::getDAO('JournalDAO');
