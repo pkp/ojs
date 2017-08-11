@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2013-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for this citation plugin in en_US.
+  *
+  -->
+ 
+<locale name="pl_PL" full_name="Język Polski">
+	<message key="plugins.citationFormats.endNote.displayName">Wtyczka dla formatu cytowań ENDNOTE</message>
+	<message key="plugins.citationFormats.endNote.citationFormatName">EndNote - EndNote format (Macintosh &amp; Windows)</message>
+	<message key="plugins.citationFormats.endNote.description">Wtyczka implementuje format cytowań EndNote.</message>
+</locale>
