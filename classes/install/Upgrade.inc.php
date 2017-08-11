@@ -79,6 +79,69 @@ class Upgrade extends Installer {
 	}
 
 	/**
+	 * For 3.0.0 upgrade: Remove the review round and the review file if editor is not assigned.
+	 * @return boolean
+	 */
+	function removeReviewEntries() {
+		import('lib.pkp.classes.file.SubmissionFileManager');
+
+		$articleDao = DAORegistry::getDAO('ArticleDAO');
+		// Get review file IDs to be removed (from articles that have no editor assigned)
+		$reviewFileResult = $articleDao->retrieve('SELECT article_id, journal_id, review_file_id FROM articles WHERE article_id NOT IN (SELECT article_id FROM edit_assignments)');
+		while (!$reviewFileResult->EOF) {
+			$row = $reviewFileResult->GetRowAssoc(false);
+			$articleId = (int)$row['article_id'];
+			$journalId = (int)$row['journal_id'];
+			$fileId = (int)$row['review_file_id'];
+
+			// Delete the files in the files_dir:
+			$submissionFileManager = new SubmissionFileManager($journalId, $articleId);
+			$basePath = $submissionFileManager->getBasePath() . '/';
+			// Get all file revisions
+			$fileResult = $articleDao->retrieve('SELECT file_id, revision, file_name FROM article_files WHERE file_id = ?', array($fileId));
+			while (!$fileResult->EOF) {
+				$fileRow = $fileResult->GetRowAssoc(false);
+				$globPattern = $fileRow['file_name'];
+				// Search for the file name in the appropriate journal and article folder of the files_dir
+				$pattern1 = glob($basePath . '*/*/' . $globPattern);
+				$pattern2 = glob($basePath . '*/' . $globPattern);
+				if (!is_array($pattern1)) $pattern1 = array();
+				if (!is_array($pattern2)) $pattern2 = array();
+				$matchedResults = array_merge($pattern1, $pattern2);
+				if (count($matchedResults)>1) {
+					// Too many filenames matched. Continue with the first; this is just a warning.
+					error_log("WARNING: Duplicate potential files for \"$globPattern\" in \"" . $submissionFileManager->getBasePath() . "\". Taking the first.");
+				} elseif (count($matchedResults)==0) {
+					// No filenames matched. Skip migrating.
+					error_log("WARNING: Unable to find a match for \"$globPattern\" in \"" . $submissionFileManager->getBasePath() . "\". Skipping this file.");
+					continue;
+				}
+				$discoveredFilename = array_shift($matchedResults);
+				// If the file exists, delete it
+				if (file_exists($discoveredFilename)) {
+					unlink($discoveredFilename);
+				} else {
+					error_log("WARNING: File \"$discoveredFilename\" does not exist.");
+					continue;
+				}
+				$fileResult->MoveNext();
+			}
+			$fileResult->Close();
+
+			// Delete the file entries in the DB
+			$articleDao->update('DELETE FROM article_files WHERE file_id = ?', array($fileId));
+			// Set review_file_id to NULL
+			$articleDao->update('UPDATE articles SET review_file_id=NULL WHERE review_file_id = ?', array($fileId));
+			// Delete the review round for that article
+			$articleDao->update('DELETE FROM review_rounds WHERE submission_id = ?', array($articleId));
+
+			$reviewFileResult->MoveNext();
+		}
+		$reviewFileResult->Close();
+		return true;
+	}
+
+	/**
 	 * For 3.0.0 upgrade: Convert string-field semi-colon separated metadata to controlled vocabularies.
 	 * @return boolean
 	 */
