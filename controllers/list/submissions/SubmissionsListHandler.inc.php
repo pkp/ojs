@@ -25,13 +25,21 @@ class SubmissionsListHandler extends PKPSubmissionsListHandler {
 
 		$request = Application::getRequest();
 		if ($request->getContext()) {
-			import('classes.core.ServicesContainer');
-			$config['sections'] = ServicesContainer::instance()
-			->get('section')
-			->getSectionList($request->getContext());
-		}
+			if (!isset($config['filters'])) {
+				$config['filters'] = array();
+			}
+			$config['filters']['sectionIds'] = array(
+				'heading' => __('section.sections'),
+				'filters' => $this->getSectionFilters(),
+			);
 
-		$config['i18n']['sections'] = __('section.sections');
+			// Put the incomplete filter at the end
+			if (isset($config['filters']['isIncomplete'])) {
+				$isIncompleteFilter = $config['filters']['isIncomplete'];
+				unset($config['filters']['isIncomplete']);
+				$config['filters']['isIncomplete'] = $isIncompleteFilter;
+			}
+		}
 
 		return $config;
 	}
@@ -42,21 +50,47 @@ class SubmissionsListHandler extends PKPSubmissionsListHandler {
 	public function getWorkflowStages() {
 		return array(
 			array(
-				'id' => WORKFLOW_STAGE_ID_SUBMISSION,
+				'val' => WORKFLOW_STAGE_ID_SUBMISSION,
 				'title' => __('manager.publication.submissionStage'),
 			),
 			array(
-				'id' => WORKFLOW_STAGE_ID_EXTERNAL_REVIEW,
+				'val' => WORKFLOW_STAGE_ID_EXTERNAL_REVIEW,
 				'title' => __('manager.publication.reviewStage'),
 			),
 			array(
-				'id' => WORKFLOW_STAGE_ID_EDITING,
-				'title' => __('manager.publication.editorialStage'),
+				'val' => WORKFLOW_STAGE_ID_EDITING,
+				'title' => __('submission.copyediting'),
 			),
 			array(
-				'id' => WORKFLOW_STAGE_ID_PRODUCTION,
+				'val' => WORKFLOW_STAGE_ID_PRODUCTION,
 				'title' => __('manager.publication.productionStage'),
 			),
 		);
+	}
+
+	/**
+	 * Compile the sections for passing as filters
+	 *
+	 * @return array
+	 */
+	public function getSectionFilters() {
+		$request = Application::getRequest();
+		$context = $request->getContext();
+
+		if (!$context) {
+			return array();
+		}
+
+		import('classes.core.ServicesContainer');
+		$sections = ServicesContainer::instance()
+				->get('section')
+				->getSectionList($context->getId());
+
+		return array_map(function($section) {
+			return array(
+				'val' => $section['id'],
+				'title' => $section['title'],
+			);
+		}, $sections);
 	}
 }

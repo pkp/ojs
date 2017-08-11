@@ -20,13 +20,13 @@ class SectionService {
 	/**
 	 * Get array of sections
 	 *
-	 * @param \Journal $journal
+	 * @param int $contextId
 	 *
 	 * @return array
 	 */
-	public function getSectionList(\Journal $journal) {
+	public function getSectionList(int $contextId) {
 		$sectionDao = \DAORegistry::getDAO('SectionDAO');
-		$sectionIterator = $sectionDao->getByContextId($journal);
+		$sectionIterator = $sectionDao->getByContextId($contextId);
 
 		$sections = array();
 		while ($section = $sectionIterator->next()) {
