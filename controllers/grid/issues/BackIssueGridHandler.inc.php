@@ -34,7 +34,7 @@ class BackIssueGridHandler extends IssueGridHandler {
 	/**
 	 * @copydoc PKPHandler::initialize()
 	 */
-	function initialize($request, $args) {
+	function initialize($request, $args = null) {
 		parent::initialize($request, $args);
 
 		// Basic grid configuration.

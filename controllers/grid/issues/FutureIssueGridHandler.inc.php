@@ -23,7 +23,7 @@ class FutureIssueGridHandler extends IssueGridHandler {
 	/**
 	 * @copydoc PKPHandler::initialize()
 	 */
-	function initialize($request, $args) {
+	function initialize($request, $args = null) {
 		// Basic grid configuration.
 		$this->setTitle('editor.issues.futureIssues');
 
