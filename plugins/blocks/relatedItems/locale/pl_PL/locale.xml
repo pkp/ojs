@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * Copyright (c) 2013-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Plik językowy dla pl_PL
+  *
+  -->
+
+<locale name="pl_PL" full_name="Język Polski">
+	<message key="plugins.block.relatedItems.displayName">Powiązane elementy</message>
+	<message key="plugins.block.relatedItems.description">Wtyczka wyświetla elementy powiązane w kontekście treści wyświetlanej w oknie głównym.</message>
+	<message key="plugins.block.relatedItems.title">Powiązane elementy</message>
+	<message key="plugins.block.relatedItems.hide">Ukryj</message>
+	<message key="plugins.block.relatedItems.show">Pokaż wszystkie</message>
+</locale>
