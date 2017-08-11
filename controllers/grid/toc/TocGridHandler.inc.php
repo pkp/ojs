@@ -27,7 +27,7 @@ class TocGridHandler extends CategoryGridHandler {
 		parent::__construct();
 		$this->addRoleAssignment(
 			array(ROLE_ID_MANAGER),
-			array('fetchGrid', 'fetchCategory', 'fetchRow', 'saveSequence', 'removeArticle')
+			array('fetchGrid', 'fetchCategory', 'fetchRow', 'saveSequence', 'removeArticle', 'setAccessStatus')
 		);
 		$this->publishedArticlesBySectionId = array();
 	}
@@ -73,6 +73,21 @@ class TocGridHandler extends CategoryGridHandler {
 				$tocGridCellProvider
 			)
 		);
+
+		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
+		if ($request->getJournal()->getSetting('publishingMode') == PUBLISHING_MODE_SUBSCRIPTION && $issue->getAccessStatus() == ISSUE_ACCESS_SUBSCRIPTION) {
+			// Article access status
+			$this->addColumn(
+				new GridColumn(
+					'access',
+					'reader.openAccess',
+					null,
+					'controllers/grid/common/cell/selectStatusCell.tpl',
+					$tocGridCellProvider,
+					array('width' => 20, 'alignment' => COLUMN_ALIGNMENT_CENTER)
+				)
+			);
+		}
 	}
 
 	/**
@@ -222,6 +237,30 @@ class TocGridHandler extends CategoryGridHandler {
 			}
 			$publishedArticleDao->deletePublishedArticleByArticleId($articleId);
 			$publishedArticleDao->resequencePublishedArticles($article->getSectionId(), $issue->getId());
+			return DAO::getDataChangedEvent();
+		}
+
+		// If we've fallen through, it must be a badly-specified article
+		return new JSONMessage(false);
+	}
+
+	/**
+	 * Set access status on an article.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 * @return JSONMessage JSON object
+	 */
+	function setAccessStatus($args, $request) {
+		$journal = $request->getJournal();
+		$articleId = (int) $request->getUserVar('articleId');
+		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
+		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
+		$article = $publishedArticleDao->getByArticleId($articleId);
+		if ($article && $article->getIssueId() == $issue->getId() && $request->checkCSRF()) {
+			$article->setAccessStatus($request->getUserVar('status'));
+			$article->stampStatusModified();
+			$publishedArticleDao->updatePublishedArticle($article);
 			return DAO::getDataChangedEvent();
 		}
 
