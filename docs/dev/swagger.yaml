@@ -441,6 +441,11 @@ paths:
           in: query
           required: false
           type: string
+        - name: isIncomplete
+          description: Filter the results by those for which the author has not yet completed the submission process.
+          in: query
+          required: false
+          type: boolean
         - name: sectionIds
           description: Filter the results by those assigned to a section.
           in: query
