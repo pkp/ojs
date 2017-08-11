@@ -787,7 +787,7 @@ class NativeImportDom {
 
 		if (($node = $articleNode->getChildByName('pages'))) $article->setPages($node->getValue());
 		if (($language = $articleNode->getAttribute('language'))) $article->setLanguage($language);
-
+		if (($node = $articleNode->getChildByName('citations'))) $article->setCitations($node->getValue());
 		/* --- Handle covers --- */
 		$hasErrors = false;
 		for ($index = 0; ($node = $articleNode->getChildByName('cover', $index)); $index++) {
@@ -812,6 +812,10 @@ class NativeImportDom {
 			}
 		}
 		if ($hasErrors) return false;
+		
+		$citationDao =& DAORegistry::getDAO('CitationDAO');
+		$request =& Application::getRequest(); 
+		if (!($request->getDispatcher() == NULL)) $citationDao->importCitations($request, ASSOC_TYPE_ARTICLE, $article->getId(), $article->getCitations()); 
 		
 		// Create submission mangement records
 		$signoffDao =& DAORegistry::getDAO('SignoffDAO');
