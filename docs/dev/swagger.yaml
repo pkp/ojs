@@ -353,7 +353,7 @@ definitions:
       volume:
         type: integer
       number:
-        type: integer
+        type: string
       year:
         type: integer
       isPublished:
