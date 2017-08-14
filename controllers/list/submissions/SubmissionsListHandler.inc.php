@@ -32,13 +32,6 @@ class SubmissionsListHandler extends PKPSubmissionsListHandler {
 				'heading' => __('section.sections'),
 				'filters' => $this->getSectionFilters(),
 			);
-
-			// Put the incomplete filter at the end
-			if (isset($config['filters']['isIncomplete'])) {
-				$isIncompleteFilter = $config['filters']['isIncomplete'];
-				unset($config['filters']['isIncomplete']);
-				$config['filters']['isIncomplete'] = $isIncompleteFilter;
-			}
 		}
 
 		return $config;
@@ -50,18 +43,22 @@ class SubmissionsListHandler extends PKPSubmissionsListHandler {
 	public function getWorkflowStages() {
 		return array(
 			array(
+				'param' => 'stageIds',
 				'val' => WORKFLOW_STAGE_ID_SUBMISSION,
 				'title' => __('manager.publication.submissionStage'),
 			),
 			array(
+				'param' => 'stageIds',
 				'val' => WORKFLOW_STAGE_ID_EXTERNAL_REVIEW,
 				'title' => __('manager.publication.reviewStage'),
 			),
 			array(
+				'param' => 'stageIds',
 				'val' => WORKFLOW_STAGE_ID_EDITING,
 				'title' => __('submission.copyediting'),
 			),
 			array(
+				'param' => 'stageIds',
 				'val' => WORKFLOW_STAGE_ID_PRODUCTION,
 				'title' => __('manager.publication.productionStage'),
 			),
@@ -88,6 +85,7 @@ class SubmissionsListHandler extends PKPSubmissionsListHandler {
 
 		return array_map(function($section) {
 			return array(
+				'param' => 'sectionIds',
 				'val' => $section['id'],
 				'title' => $section['title'],
 			);
