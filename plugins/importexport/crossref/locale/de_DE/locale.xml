@@ -33,8 +33,6 @@
 	<!-- descriptions -->
 	<message key="plugins.importexport.crossref.issues.description">Hinweis: Nur Ausgaben (aber nicht ihre Artikel) werden hier für Export und Registrierung berücksichtigt.</message>
 	<!-- statuses -->
-	<message key="plugins.importexport.crossref.status.submitted">Übermittelt</message>
-	<message key="plugins.importexport.crossref.status.completed">Abgeliefert</message>
 	<message key="plugins.importexport.crossref.status.failed">Fehlgeschlagen</message>
 	<message key="plugins.importexport.crossref.status.registered">Aktiv</message>
 	<message key="plugins.importexport.crossref.status.markedRegistered">Als aktiv markiert</message>
@@ -43,8 +41,6 @@
 		<p>Ablieferungsstatus:</p>
 		<p>
 		- Nicht abgeliefert: noch kein Ablieferungsversuch für diesen DOI.<br />
-		- Übermittelt: DOI wurde zur Ablieferung übermittelt.<br />
-		- Abgeliefert: DOI wurde an Crossref geliefert, ist aber vielleicht noch nicht aktiv.<br />
 		- Aktiv: Der DOI wurde abgeliefert und wird korrekt aufgelöst.<br />
 		- Fehlgeschlagen: DOI-Ablieferung ist fehlgeschlagen.<br />
 		- Als aktiv markiert: Der DOI wurde manuell als aktiv markiert.
@@ -54,11 +50,8 @@
 	<!-- actions -->
 	<message key="plugins.importexport.crossref.action.export">XML herunterladen</message>
 	<message key="plugins.importexport.crossref.action.markRegistered">Als aktiv markieren</message>
-	<message key="plugins.importexport.crossref.action.register">Übermitteln</message>
-	<message key="plugins.importexport.crossref.action.checkStatus">Status checken</message>
 	<!-- scheduled task -->
 	<message key="plugins.importexport.crossref.senderTask.name">Crossref automatic registration task</message>
-	<message key="plugins.importexport.crossref.notification.failed">Ein DOI konnte nicht registriert werden. Bitte gehen Sie zu Werkzeuge > Import/Export > Crossref-Export/Registrierungs-Plugin, um die fehlgeschlagenen Ablieferungen anzusehen.</message>
 
 	<!-- CLI -->
 	<message key="plugins.importexport.crossref.cliUsage"><![CDATA[Verwendung:
@@ -67,8 +60,6 @@
 ]]></message>
 
 	<!--  notifications -->
-	<message key="plugins.importexport.crossref.register.error.mdsError">Registrierung war nicht erfolgreich! Der DOI-Registrierungsserver gab einen Fehler zurück.</message>
-	<message key="plugins.importexport.crossref.register.success.warning">Registrierung war erfolgreich, aber die folgende Warnung wurde ausgegeben: '{$param}'.</message>
 	<message key="plugins.importexport.crossref.export.error.issueNotFound">Angegebene Ausgabenkennung "{$issueId}" passt zu keiner Ausgabe.</message>
 	<message key="plugins.importexport.crossref.export.error.articleNotFound">Angegebene Artikelkennung "{$articleId}" passt zu keinem Artikel.</message>
 
