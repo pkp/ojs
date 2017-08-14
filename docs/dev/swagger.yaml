@@ -32,10 +32,12 @@ definitions:
     properties:
       id:
         type: integer
-      issueId:
-        type: integer
-      sectionId:
-        type: integer
+      _href:
+        type: string
+      issue:
+        $ref: '#/definitions/IssueSummary'
+      section:
+        $ref: '#/definitions/SectionSummary'
       title:
         $ref: '#/definitions/LocaleObject'
       subtitle:
@@ -53,6 +55,10 @@ definitions:
         items:
           $ref: '#/definitions/Author'
       abstract:
+        $ref: '#/definitions/LocaleObject'
+      coverImageUrl:
+        $ref: '#/definitions/LocaleObject'
+      coverImageAltText:
         $ref: '#/definitions/LocaleObject'
       discipline:
         $ref: '#/definitions/LocaleObject'
@@ -143,10 +149,10 @@ definitions:
         type: integer
       _href:
         type: string
-      issueId:
-        type: integer
-      sectionId:
-        type: integer
+      issue:
+        $ref: '#/definitions/IssueSummary'
+      section:
+        $ref: '#/definitions/SectionSummary'
       title:
         $ref: '#/definitions/LocaleObject'
       subtitle:
@@ -159,11 +165,15 @@ definitions:
         type: string
       shortAuthorString:
         type: string
-      authorIds:
+      authors:
         type: array
         items:
-          type: integer
+          $ref: '#/definitions/AuthorSummary'
       abstract:
+        $ref: '#/definitions/LocaleObject'
+      coverImageUrl:
+        $ref: '#/definitions/LocaleObject'
+      coverImageAltText:
         $ref: '#/definitions/LocaleObject'
       language:
         type: string
@@ -191,10 +201,10 @@ definitions:
         type: string
       urlPublished:
         type: string
-      galleyIds:
+      galleys:
         type: array
         items:
-          type: integer
+          $ref: '#/definitions/GalleySummary'
       doi:
         type: string
   Author:
@@ -202,6 +212,8 @@ definitions:
     properties:
       id:
         type: integer
+      _href:
+        type: string
       seq:
         type: integer
       firstName:
@@ -230,11 +242,32 @@ definitions:
         $ref: '#/definitions/LocaleObject'
       orcid:
         type: string
+  AuthorSummary:
+    type: object
+    properties:
+      id:
+        type: integer
+      _href:
+        type: string
+      seq:
+        type: integer
+      firstName:
+        type: string
+      middleName:
+        type: string
+      lastName:
+        type: string
+      suffix:
+        type: string
+      orcid:
+        type: string
   Galley:
     type: object
     properties:
       id:
         type: integer
+      _href:
+        type: string
       parent:
         type: string
       locale:
@@ -249,11 +282,32 @@ definitions:
         type: string
       file:
         $ref: '#/definitions/File'
+  GalleySummary:
+    type: object
+    properties:
+      id:
+        type: integer
+      _href:
+        type: string
+      parent:
+        type: string
+      locale:
+        type: string
+      label:
+        type: string
+      seq:
+        type: integer
+      remoteUrl:
+        type: string
+      publishedUrl:
+        type: string
   File:
     type: object
     properties:
       id:
         type: integer
+      _href:
+        type: string
       revision:
         type: integer
       submissionId:
@@ -288,6 +342,8 @@ definitions:
     properties:
       id:
         type: integer
+      _href:
+        type: string
       title:
         $ref: '#/definitions/LocaleObject'
       description:
@@ -340,6 +396,35 @@ definitions:
         type: array
         items:
           $ref: '#/definitions/Galley'
+  IssueSummary:
+    type: object
+    properties:
+      id:
+        type: integer
+      _href:
+        type: string
+      title:
+        $ref: '#/definitions/LocaleObject'
+      description:
+        $ref: '#/definitions/LocaleObject'
+      identification:
+        type: string
+      volume:
+        type: integer
+      number:
+        type: integer
+      year:
+        type: integer
+      doi:
+        type: string
+      coverImageUrl:
+        $ref: '#/definitions/LocaleObject'
+      coverImageAltText:
+        $ref: '#/definitions/LocaleObject'
+      galleys:
+        type: array
+        items:
+          $ref: '#/definitions/GalleySummary'
   SectionSummary:
     type: object
     properties:
