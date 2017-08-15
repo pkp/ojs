@@ -24,7 +24,7 @@ class SectionService {
 	 *
 	 * @return array
 	 */
-	public function getSectionList(int $contextId) {
+	public function getSectionList($contextId) {
 		$sectionDao = \DAORegistry::getDAO('SectionDAO');
 		$sectionIterator = $sectionDao->getByContextId($contextId);
 
