@@ -260,84 +260,13 @@ class SubmissionHandler extends APIHandler {
 		$journal = $request->getJournal();
 
 		$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
-		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-		$publishedArticle = $publishedArticleDao->getPublishedArticleByBestArticleId((int) $journal->getId(), $submission->getId(), true);
 
-		// simply return basic metadata for unpublished submissions
-		if (!isset($publishedArticle)) {
-			return $response->withJson($this->submissionMetadata($slimRequest, $response, $args), 200);
-		}
-
-		$articleId = $publishedArticle->getId();
-		$issueDao = DAORegistry::getDAO('IssueDAO');
-		$issue = $issueDao->getById($publishedArticle->getIssueId(), $publishedArticle->getJournalId(), true);
-
-		$sectionDao = DAORegistry::getDAO('SectionDAO');
-		$section = $sectionDao->getById($publishedArticle->getSectionId(), $journal->getId(), true);
-
-		// public identifiers
-		$pubIdPlugins = PluginRegistry::loadCategory('pubIds', true);
-		$pubIds = array_map(function($pubIdPlugin) use($issue, $publishedArticle, $journal) {
-			if ($pubIdPlugin->getPubIdType() != 'doi')
-				return;
-			$doiUrl = null;
-			$pubId = $issue->getPublished() ?
-					$publishedArticle->getStoredPubId($pubIdPlugin->getPubIdType()) :
-					$pubIdPlugin->getPubId($publishedArticle);
-			if($pubId) {
-				$doiUrl = $pubIdPlugin->getResolvingURL($journal->getId(), $pubId);
-			}
-
-			return array(
-				'pubId'		=> $pubId,
-				'doiUrl'	=> $doiUrl,
-			);
-		}, $pubIdPlugins);
-
-		$authors = array_map(function($author) {
-			return array(
-				'name'		=> $author->getFullName(),
-				'affiliation'	=> $author->getLocalizedAffiliation(),
-				'orcid'		=> $author->getOrcid(),
-			);
-		}, $publishedArticle->getAuthors());
-
-		$coverImage = $publishedArticle->getLocalizedCoverImage() ?
-					$publishedArticle->getLocalizedCoverImageUrl() :
-					$issue->getLocalizedCoverImageUrl();
-
-		$galleys = array_map(function($galley) use ($context, $request, $dispatcher, $articleId) {
-			$url = null;
-			if ($galley->getRemoteURL()) {
-				$url = $galley->getRemoteURL();
-			}
-			else {
-				$url = $dispatcher->url($request, ROUTE_PAGE, $context, 'article', 'download',
-						array($articleId, $galley->getBestGalleyId()));
-			}
-			return array(
-				'id'		=> $galley->getBestGalleyId(),
-				'label'		=> $galley->getGalleyLabel(),
-				'filetype'	=> $galley->getFileType(),
-				'url'		=> $url,
-			);
-		}, $publishedArticle->getGalleys());
-
-		$data = array(
-			'issueId'	=> $issue->getId(),
-			'issue'		=> $issue->getIssueIdentification(),
-			'section'	=> $section->getLocalizedTitle(),
-			'title'		=> $publishedArticle->getLocalizedTitle(),
-			'subtitle'	=> $publishedArticle->getLocalizedSubtitle(),
-			'authors'	=> $authors,
-			'pubIds'	=> $pubIds,
-			'abstract'	=> $publishedArticle->getLocalizedAbstract(),
-			'citations'	=> $publishedArticle->getCitations(),
-			'cover_image'	=> $coverImage,
-			'galleys'	=> $galleys,
-			'datePublished'	=> $publishedArticle->getDatePublished(),
+		import('classes.core.ServicesContainer');
+		$args = array(
+			'journal' 	=> $journal,
+			'slimRequest' 	=> $slimRequest
 		);
-
+		$data = ServicesContainer::instance()->get('submission')->getFullProperties($submission, $args);
 		return $response->withJson($data, 200);
 	}
 }

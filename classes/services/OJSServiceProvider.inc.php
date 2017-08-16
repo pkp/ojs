@@ -17,6 +17,7 @@ namespace OJS\Services;
 
 use \Pimple\Container;
 use \OJS\Services\IssueService;
+use \OJS\Services\AuthorService;
 
 class OJSServiceProvider implements \Pimple\ServiceProviderInterface {
 
@@ -44,6 +45,11 @@ class OJSServiceProvider implements \Pimple\ServiceProviderInterface {
 		// NavigationMenus service
 		$pimple['navigationMenu'] = function() {
 			return new NavigationMenuService();
+		};
+
+		// Author service
+		$pimple['author'] = function() {
+			return new AuthorService();
 		};
 	}
 }

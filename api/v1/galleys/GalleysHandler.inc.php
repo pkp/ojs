@@ -73,7 +73,7 @@ class GalleysHandler extends APIHandler {
 		$submissionFile = $galley->getFile();
 		$urlData = array(
 			'submissionId' 	=> $this->getParameter('submissionId'),
-			'revision'		=> $submissionFile->getRevision(),
+			'revision'	=> $submissionFile->getRevision(),
 		);
 		
 		$uri = "/{$contextPath}/api/{$version}/files/{$fileId}?" . http_build_query($urlData);
