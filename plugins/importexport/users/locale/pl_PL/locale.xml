@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * Copyright (c) 2013-2015 Simon Fraser University Library
+  * Copyright (c) 2003-2015 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Plik językowy dla pl_PL
+  *
+  -->
+ 
+<locale name="pl_PL" full_name="Język Polski">
+	<message key="plugins.importexport.users.displayName">Import/eksport użytkowników do formatu XML</message>
+	<message key="plugins.importexport.users.description">Wtyczka umożliwia importowanie oraz eksportowanie użytkowników</message>
+
+	<message key="plugins.importexport.users.cliUsage">Usage: {$scriptName} {$pluginName} [command] ...
+Commands:
+	import [xmlFileName] [journal_path] [optional flags]
+	export [xmlFileName] [journal_path]
+	export [xmlFileName] [journal_path] [role_path1] [role_path2] ...
+
+Optional flags:
+	continue_on_error: If specified, do not stop importing users if an error occurs
+
+	send_notify: If specified, send notification emails containing usernames
+		and passwords to imported users
+
+Examples:
+	Import users into myJournal from myImportFile.xml, continuing on error:
+	{$scriptName} {$pluginName} import myImportFile.xml myJournal continue_on_error
+
+	Export all users from myJournal:
+	{$scriptName} {$pluginName} export myExportFile.xml myJournal
+
+	Export all users registered as reviewers, along with their reviewer roles only:
+	{$scriptName} {$pluginName} export myExportFile.xml myJournal reviewer</message>
+	<message key="plugins.importexport.users.import.importUsers">Importuj użytkowników</message>
+	<message key="plugins.importexport.users.import.instructions"><![CDATA[Select an XML data file containing user information to import into this journal. See the journal help for details on the format of this file.<br /><br />Note that if the imported file contains any usernames or email addresses that already exist in the system, the user data for those users will not be imported and any new roles to be created will be assigned to the existing users.]]></message>
+	<message key="plugins.importexport.users.import.failedToImportUser">Błąd importowania użytkowników</message>
+	<message key="plugins.importexport.users.import.failedToImportRole">Błąd przydzielania roli dla użytkownika</message>
+	<message key="plugins.importexport.users.import.dataFile">Plik danych użytkownika</message>
+	<message key="plugins.importexport.users.import.sendNotify">Send a notification email to each imported user containing the user's username and password.</message>
+	<message key="plugins.importexport.users.import.continueOnError">Continue to import other users if a failure occurs.</message>
+	<message key="plugins.importexport.users.import.noFileError">No file was uploaded!</message>
+	<message key="plugins.importexport.users.import.usersWereImported">The following users were successfully imported into the system</message>
+	<message key="plugins.importexport.users.import.errorsOccurred">Errors occurred during the import</message>
+	<message key="plugins.importexport.users.import.confirmUsers">Confirm that these are the users you would like to import into the system</message>
+	<message key="plugins.importexport.users.import.warning">Warning</message>
+	<message key="plugins.importexport.users.import.encryptionMismatch">Cannot use passwords hashed with {$importHash}; OJS is configured to use {$ojsHash}. If you continue, you will need to reset the imported users' passwords.</message>
+	<message key="plugins.importexport.users.unknownJournal">An unknown journal path "{$journalPath}" was specified.</message>
+
+	<message key="plugins.importexport.users.export.exportUsers">Export Users</message>
+	<message key="plugins.importexport.users.export.exportByRole">Export By Role</message>
+	<message key="plugins.importexport.users.export.exportAllUsers">Export All</message>
+	<message key="plugins.importexport.users.export.errorsOccurred">Errors occurred during the export</message>
+	<message key="plugins.importexport.users.export.couldNotWriteFile">Could not write to the file "{$fileName}".</message>
+</locale>

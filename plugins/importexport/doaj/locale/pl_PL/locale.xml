@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2013-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the pl_PL (Język Polski) locale.
+  *
+  -->
+
+<locale name="pl_PL" full_name="Język Polski">
+	<message key="plugins.importexport.doaj.displayName">DOAJ Export Plugin</message>
+	<message key="plugins.importexport.doaj.description">Export Journal for DOAJ and supply journal information for inclusion</message>
+
+	
+	<message key="plugins.importexport.doaj.export">Export Journal Data to DOAJ</message>
+	<message key="plugins.importexport.doaj.export.contact">Contact DOAJ for inclusion</message>
+	<message key="plugins.importexport.doaj.export.contactInfo">For your journal's consideration in the DOAJ, please submit this partially autofilled form to the DOAJ, and fill out incomplete information as best you can.</message>
+
+	<message key="plugins.importexport.doaj.markRegistered.success">Wybrane elementy zostały zasnaczone jako zarejestrowane!</message>
+	<message key="plugins.importexport.doaj.export.issue">Eksportuj numery</message>
+	<message key="plugins.importexport.doaj.export.issueInfo">Eksportuj numery w formacie XML</message>
+	<message key="plugins.importexport.doaj.export.article">Eksportuj artykuły</message>
+	<message key="plugins.importexport.doaj.export.articleInfo">Eksportuj wybrane artykuły w XML</message>
+</locale>
