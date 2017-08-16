@@ -2,15 +2,15 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * plugins/importexport/datacite/locale/en_US/locale.xml
+  * plugins/importexport/datacite/locale/pl_PL/locale.xml
   *
-  * Copyright (c) 2013-2015 Simon Fraser University Library
-  * Copyright (c) 2003-2015 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Localization strings
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Polish_(pl_PL)
+  * Localization strings.
   -->
- 
+
 <locale name="pl_PL" full_name="Język Polski">
 	<message key="plugins.importexport.datacite.displayName">DataCite Export/Registration Plugin</message>
 	<message key="plugins.importexport.datacite.description">Export or register issue, article, galley and supplementary file metadata in DataCite format.</message>
@@ -36,11 +36,11 @@
 	<message key="plugins.importexport.datacite.settings.form.passwordRequired">Please enter the password you got from DataCite.</message>
 	<message key="plugins.importexport.datacite.settings.form.automaticRegistration">Register DOIs automatically</message>
 	<message key="plugins.importexport.datacite.settings.form.automaticRegistration.description"><![CDATA[OJS will deposit DOIs automatically to DataCite as articles are published. Please note that this may take a short amount of time after publication to process. You can check for all unregistered DOIs in the <a href="{$unregisteredURL}">unregistered articles listing</a>.]]></message>
- 
+
 	<message key="plugins.importexport.datacite.export.suppFiles">Export specific supplementary files</message>
 	<message key="plugins.importexport.datacite.export.selectSuppFile">Select Supplementary Files</message>
 	<message key="plugins.importexport.datacite.export.noSuppFiles">No supplementary files currently have DOIs assigned.</message>
- 
+
 	<message key="plugins.importexport.datacite.export.error.suppFileNotFound">No supplementary file matched the specified suppfile ID: {$param}.</message>
  
 	<message key="plugins.importexport.datacite.cliUsage"><![CDATA[Usage: 

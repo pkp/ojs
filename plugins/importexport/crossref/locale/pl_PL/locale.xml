@@ -4,16 +4,14 @@
 <!--
   * plugins/importexport/crossref/locale/pl_PL/locale.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Localization strings for the pl_PL (Język Polski) locale.
-  *
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Polish_(pl_PL)
+  * Localization strings.
   -->
- 
-<locale name="pl_PL" full_name="Język Polski">
 
+ <locale name="pl_PL" full_name="Język Polski">
 	<message key="plugins.importexport.crossref.description">Eksportuj lub zarejestruj metadane artykułu w formacie CrossRef.</message>
 	<message key="plugins.importexport.crossref.displayName">Wtyczka eksportu/rejestracji CrossRef</message>
 	<message key="plugins.importexport.crossref.requirements">Wymagania</message>
