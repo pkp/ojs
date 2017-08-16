@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2013-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the pl_PL (Język Polski) locale.
+  *
+  -->
+
+<locale name="pl_PL" full_name="Język Polski">
+	<message key="plugins.reports.articles.displayName">Raport z artykułami</message>
+	<message key="plugins.reports.articles.description">Wtyczka umożliwia wygenerowanie raportu w formacie CSV zawierającego listę wszystkich artykułów oraz informacji o nich.</message>
+	<message key="plugins.reports.articles.nodecision">Brak decyzji</message>
+</locale>
