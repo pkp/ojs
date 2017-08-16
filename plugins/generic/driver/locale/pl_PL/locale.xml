@@ -2,16 +2,16 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * plugins/generic/driver/locale/en_US/locale.xml
+  * plugins/generic/driver/locale/pl_PL/locale.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * DRIVER plugin localization strings
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Polish_(pl_PL)
+  * Localization strings.
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="pl_PL" full_name="Język Polski">
 	<message key="plugins.generic.driver.displayName">DRIVER</message>
 	<message key="plugins.generic.driver.description">Wtyczka DRIVER rozszerza interfejs OAI-PMH o reguły DRIVER 2.0.</message>
 </locale>

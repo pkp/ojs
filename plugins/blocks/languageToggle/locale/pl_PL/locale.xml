@@ -14,5 +14,4 @@
 <locale name="pl_PL" full_name="Język Polski">
 	<message key="plugins.block.languageToggle.displayName">Wyświetlany język</message>
 	<message key="plugins.block.languageToggle.description">Wtyczka elementu blokowego umożliwiającego zmianę wyświetlanego języka.</message>
-	<message key="plugins.block.languageToggle.selectLabel">Wybierz język</message>
 </locale>

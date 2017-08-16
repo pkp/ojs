@@ -11,7 +11,7 @@
   * Localization strings.
   -->
 
- <locale name="pl_PL" full_name="Język Polski">
+<locale name="pl_PL" full_name="Język Polski">
 	<message key="plugins.importexport.crossref.description">Eksportuj lub zarejestruj metadane artykułu w formacie CrossRef.</message>
 	<message key="plugins.importexport.crossref.displayName">Wtyczka eksportu/rejestracji CrossRef</message>
 	<message key="plugins.importexport.crossref.requirements">Wymagania</message>
