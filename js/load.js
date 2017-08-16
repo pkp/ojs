@@ -20,6 +20,7 @@ window.pkp = Object.assign(PkpLoad, {
 	controllers: {
 		ListPanel,
 		SubmissionsListPanel,
+		SelectListPanel,
 		SelectSubmissionsListPanel,
 	},
 });
