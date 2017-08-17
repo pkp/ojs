@@ -256,6 +256,8 @@
 				</div>
 			{/if}
 
+
+			{$test}
 			{* How to cite *}
 			{if $citation}
 				<div class="item citation">
@@ -273,10 +275,10 @@
 								</button>
 								<div id="cslCitationFormats" class="citation_formats_list" aria-hidden="true">
 									<ul class="citation_formats_styles">
-										{foreach from=$citationStyles key="citationStyleId" item="citationStyle"}
+										{foreach from=$citationStyles item="citationStyle"}
 											<li>
-												<a aria-controls="citationOutput" href="{url page="citationstylelanguage" op="get" path=$citationStyleId params=$citationArgs}" data-load-citation>
-													{$citationStyle.label}
+												<a aria-controls="citationOutput" href="{url page="citationstylelanguage" op="get" path=$citationStyle.id params=$citationArgs}" data-load-citation>
+													{$citationStyle.title}
 												</a>
 											</li>
 										{/foreach}
@@ -286,11 +288,11 @@
 											{translate key="submission.howToCite.downloadCitation"}
 										</div>
 										<ul class="citation_formats_styles">
-											{foreach from=$citationDownloads key="citationDownloadId" item="citationDownload"}
+											{foreach from=$citationDownloads item="citationDownload"}
 												<li>
-													<a href="{url page="citationstylelanguage" op="download" path=$citationDownloadId params=$citationArgs}">
+													<a href="{url page="citationstylelanguage" op="download" path=$citationDownload.id params=$citationArgs}">
 														<span class="fa fa-download"></span>
-														{$citationDownload.label}
+														{$citationDownload.title}
 													</a>
 												</li>
 											{/foreach}
