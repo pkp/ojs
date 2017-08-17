@@ -224,6 +224,8 @@ definitions:
         type: string
       suffix:
         type: string
+      fullName:
+        type: string
       country:
         type: string
       email:
@@ -251,13 +253,7 @@ definitions:
         type: string
       seq:
         type: integer
-      firstName:
-        type: string
-      middleName:
-        type: string
-      lastName:
-        type: string
-      suffix:
+      fullName:
         type: string
       orcid:
         type: string
