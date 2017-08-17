@@ -282,6 +282,10 @@ definitions:
         type: string
       file:
         $ref: '#/definitions/File'
+      dependentFiles:
+        type: array
+        items:
+          $ref: '#/definitions/File'
   GalleySummary:
     type: object
     properties:
