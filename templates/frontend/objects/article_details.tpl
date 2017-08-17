@@ -256,8 +256,6 @@
 				</div>
 			{/if}
 
-
-			{$test}
 			{* How to cite *}
 			{if $citation}
 				<div class="item citation">
