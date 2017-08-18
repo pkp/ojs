@@ -11,6 +11,8 @@
  * @uses $issue Issue The issue this article is assigned to
  * @uses $section Section The journal section this article is assigned to
  * @uses $journal Journal The journal currently being viewed.
+ * @uses $primaryGalleys array List of article galleys that are not supplementary or dependent
+ * @uses $supplementaryGalleys array List of article galleys that are supplementary
  *}
 {include file="frontend/components/header.tpl" pageTitleTranslated=$article->getLocalizedTitle()|escape}
 
