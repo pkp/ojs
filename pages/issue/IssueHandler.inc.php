@@ -276,10 +276,17 @@ class IssueHandler extends Handler {
 		$issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO');
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 
+		$genreDao = DAORegistry::getDAO('GenreDAO');
+		$primaryGenres = $genreDao->getPrimaryByContextId($journal->getId())->toArray();
+		$primaryGenreIds = array_map(function($genre) {
+			return $genre->getId();
+		}, $primaryGenres);
+
 		$templateMgr->assign(array(
 			'issue' => $issue,
 			'issueGalleys' => $issueGalleyDao->getByIssueId($issue->getId()),
 			'publishedArticles' => $publishedArticleDao->getPublishedArticlesInSections($issue->getId(), true),
+			'primaryGenreIds' => $primaryGenreIds,
 		));
 
 		// Subscription Access

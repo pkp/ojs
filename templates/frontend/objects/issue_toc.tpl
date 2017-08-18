@@ -14,6 +14,7 @@
  * @uses $hasAccess bool Can this user access galleys for this context?
  * @uses $publishedArticles array Lists of articles published in this issue
  *   sorted by section.
+ * @uses $primaryGenreIds array List of file genre ids for primary file types
  *}
 <div class="obj_issue_toc">
 
