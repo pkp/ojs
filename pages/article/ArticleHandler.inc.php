@@ -115,6 +115,9 @@ class ArticleHandler extends Handler {
 
 			foreach ($galleys as $galley) {
 				$file = $galley->getFile();
+				if (!$file) {
+					continue;
+				}
 				if (in_array($file->getGenreId(), $primaryGenreIds)) {
 					$primaryGalleys[] = $galley;
 				} elseif (in_array($file->getGenreId(), $supplementaryGenreIds)) {
