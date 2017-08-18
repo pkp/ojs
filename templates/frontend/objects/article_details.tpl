@@ -209,26 +209,26 @@
 
 			{* Article Galleys *}
 			{assign var=galleys value=$article->getGalleys()}
-			{if $primaryGalleys || $supplementaryGalleys}
+			{if $primaryGalleys}
 				<div class="item galleys">
-					{if $primaryGalleys}
-						<ul class="value galleys_links">
-							{foreach from=$primaryGalleys item=galley}
-								<li>
-									{include file="frontend/objects/galley_link.tpl" parent=$article galley=$galley}
-								</li>
-							{/foreach}
-						</ul>
-					{/if}
-					{if $supplementaryGalleys}
-						<ul class="value supplementary_galleys_links">
-							{foreach from=$supplementaryGalleys item=galley}
-								<li>
-									{include file="frontend/objects/galley_link.tpl" parent=$article galley=$galley isSupplementary="1"}
-								</li>
-							{/foreach}
-						</ul>
-					{/if}
+					<ul class="value galleys_links">
+						{foreach from=$primaryGalleys item=galley}
+							<li>
+								{include file="frontend/objects/galley_link.tpl" parent=$article galley=$galley}
+							</li>
+						{/foreach}
+					</ul>
+				</div>
+			{/if}
+			{if $supplementaryGalleys}
+				<div class="item galleys">
+					<ul class="value supplementary_galleys_links">
+						{foreach from=$supplementaryGalleys item=galley}
+							<li>
+								{include file="frontend/objects/galley_link.tpl" parent=$article galley=$galley isSupplementary="1"}
+							</li>
+						{/foreach}
+					</ul>
 				</div>
 			{/if}
 
