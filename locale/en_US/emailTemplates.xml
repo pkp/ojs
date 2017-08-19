@@ -543,6 +543,16 @@ Our decision is to: Decline Submission<br />
 ]]></body>
 		<description>This email from the Editor or Section Editor to an Author notifies them of a final "decline" decision regarding their submission.</description>
 	</email_text>
+	<email_text key="EDITOR_RECOMMENDATION">
+		<subject>Editor Recommendation</subject>
+		<body><![CDATA[{$editors}:<br />
+<br />
+The recommendation regarding the submission to {$contextName}, &quot;{$submissionTitle}&quot; is: {$recommendation}<br />
+<br />
+{$editorialContactSignature}<br />
+]]></body>
+		<description>This email from the recommending Editor or Section Editor to the decision making Editors or Section Editors notifies them of a final recommendation regarding the submission.</description>
+	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
 		<subject>Copyediting Request</subject>
 		<body><![CDATA[{$participantName}:<br />

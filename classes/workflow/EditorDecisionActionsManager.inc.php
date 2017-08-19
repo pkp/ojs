@@ -25,6 +25,12 @@ define('SUBMISSION_EDITOR_DECISION_INITIAL_DECLINE', 9);
 define('SUBMISSION_EDITOR_DECISION_PENDING_REVISIONS', 2);
 define('SUBMISSION_EDITOR_DECISION_RESUBMIT', 3);
 
+// Review stage recommendation actions.
+define('SUBMISSION_EDITOR_RECOMMEND_ACCEPT', 11);
+define('SUBMISSION_EDITOR_RECOMMEND_DECLINE', 14);
+define('SUBMISSION_EDITOR_RECOMMEND_PENDING_REVISIONS', 12);
+define('SUBMISSION_EDITOR_RECOMMEND_RESUBMIT', 13);
+
 // Editorial stage decision actions.
 define('SUBMISSION_EDITOR_DECISION_SEND_TO_PRODUCTION', 7);
 
@@ -92,6 +98,22 @@ class EditorDecisionActionsManager {
 			default:
 				assert(false);
 		}
+	}
+
+	/**
+	 * Get an associative array matching editor recommendation codes with locale strings.
+	 * (Includes default '' => "Choose One" string.)
+	 * @return array recommendation => localeString
+	 */
+	function getRecommendationOptions() {
+		static $recommendationOptions = array(
+			'' => 'common.chooseOne',
+			SUBMISSION_EDITOR_RECOMMEND_PENDING_REVISIONS => 'editor.submission.decision.requestRevisions',
+			SUBMISSION_EDITOR_RECOMMEND_RESUBMIT => 'editor.submission.decision.resubmit',
+			SUBMISSION_EDITOR_RECOMMEND_ACCEPT => 'editor.submission.decision.accept',
+			SUBMISSION_EDITOR_RECOMMEND_DECLINE => 'editor.submission.decision.decline',
+		);
+		return $recommendationOptions;
 	}
 
 	//

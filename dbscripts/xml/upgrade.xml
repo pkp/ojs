@@ -171,6 +171,7 @@
 		<code function="repairImageAssociations" condition="return $installer->tableExists('submission_html_galley_images');" />
 		<note file="docs/release-notes/README-3.1.0" />
 		<code function="installEmailTemplate" key="EDITOR_DECISION_INITIAL_DECLINE" locales="en_US" />
+		<code function="installEmailTemplate" key="EDITOR_RECOMMENDATION" locales="en_US" />
 	</upgrade>
 
 	<!-- update plugin configuration - should be done as the final upgrade task -->
