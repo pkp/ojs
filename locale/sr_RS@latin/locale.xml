@@ -853,7 +853,6 @@ Autori koji objavljuju u ovom časopisu pristaju na sledeće uslove:
 	<message key="about.onlineSubmissions.register">Registracija</message>
 	<message key="about.onlineSubmissions.submissionActions">{$newSubmission} ili {$viewSubmissions}.</message>
 	<message key="about.onlineSubmissions.newSubmission">Nova predaja članka</message>
-	<message key=""><![CDATA[]]></message>
 	<message key="user.reviewerPrompt">Da li biste želeli da budete recenzent radova koji se objavljuju u ovom časopisu?</message>
 	<message key="user.reviewerPrompt.userGroup">Da, zahtevam ulogu {$userGroup}.</message>
 	<message key="user.register.otherContextRoles">Zahtevaj sledeće uloge.</message>
@@ -861,7 +860,6 @@ Autori koji objavljuju u ovom časopisu pristaju na sledeće uslove:
 	<message key="user.register.contextsPrompt">Za koje časopise na ovom sajtu želite da se registrujete?</message>
 	<message key="user.profile.form.hideOtherContexts">Sakrij ostale časopise</message>
 	<message key="user.profile.form.showOtherContexts">Registruj se i za ostale časopise</message>
-	<message key=""><![CDATA[]]></message>
 	<message key="notification.type.submissionSubmitted">Novi članak "{$title}" je predat.</message>
 	<message key="reviewer.article.selectRecommendation.byEditor">Podesi ili izmeni preporuku recenzenta.</message>
 	<message key="article.return">Povratak na detalje članka</message>

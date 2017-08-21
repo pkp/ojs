@@ -507,13 +507,11 @@ I begge tilfælde har redaktøren mulighed for at inkludere bedømmelseskommenta
 	<message key="manager.statistics.reports.filters.byObject.description">Indsnævre resultatet ud fra elementtype (tidsskrift, nummer, artikel, pdf-format, andrepubliceringsformater) og/eller ud fra et eller flere element-id'er.</message>
 	<message key="manager.setup.copyrightYearBasis">Basér ny artikels ophavsretsår på</message>
 	<message key="manager.setup.contextName">Titel på tidsskrift</message>
-	<message key=""><![CDATA[]]></message>
 	<message key="manager.setup.journalSummary">Tidsskriftsbeskrivelse</message>
 	<message key="manager.setup.journalSummary.description">Tilføj en kort beskrivelse på 20-25 ord, der vises lige under tidsskriftets links på den fælles hjemmeside sammen med de øvrige tidsskrifter.</message>
 	<message key="manager.setup.masthead.description">Opret liste over redaktører, tidsskriftschefer og andre personer tilknyttet tidsskriftet.</message>
 	<message key="manager.setup.journalAbout">Om tidsskriftet</message>
 	<message key="manager.setup.journalAbout.description">Her indskrives alle de informationer, som kan være af interesse for læsere, forfattere eller bedømmere. Det gælder f.eks. tidsskriftets fokusområde, oplysninger om ophavsret, open access politik, en erklæring om beskyttelse af personlige oplysninger, tidsskriftets historie mm.</message>
-	<message key=""><![CDATA[]]></message>
 	<message key="manager.setup.masthead">Kolofon</message>
 	<message key="manager.setup.Issn">ISSN</message>
 	<message key="manager.website.archiving">Arkivering</message>

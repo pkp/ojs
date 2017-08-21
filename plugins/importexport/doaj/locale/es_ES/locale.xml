@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
 <!--
   * plugins/importexport/doaj/locale/es_ES/locale.xml
   *
@@ -13,7 +14,7 @@
   -->
 
 <locale name="es_ES" full_name="Español (España)">
-  <message key="plugins.importexport.doaj.displayName">Módulo de exportación DOAJ</message>
+	<message key="plugins.importexport.doaj.displayName">Módulo de exportación DOAJ</message>
 	<message key="plugins.importexport.doaj.description">Exportar la revista al DOAJ y añadir información sobre la revista para incluirla</message>
 	<message key="plugins.importexport.doaj.export.contact">Contactar con el DOAJ para la inclusión</message>
 	<message key="plugins.importexport.doaj.cliUsage"><![CDATA[Uso:
