@@ -208,7 +208,6 @@
 			{/if}
 
 			{* Article Galleys *}
-			{assign var=galleys value=$article->getGalleys()}
 			{if $primaryGalleys}
 				<div class="item galleys">
 					<ul class="value galleys_links">
