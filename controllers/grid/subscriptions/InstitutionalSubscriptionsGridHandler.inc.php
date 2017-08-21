@@ -140,7 +140,7 @@ class InstitutionalSubscriptionsGridHandler extends SubscriptionsGridHandler {
 	 * @return JSONMessage JSON object
 	 */
 	function updateSubscription($args, $request) {
-		$subscriptionId = $request->getUserVar('subscriptionId');
+		$subscriptionId = (int) $request->getUserVar('subscriptionId');
 		// Form handling.
 		$subscriptionForm = new InstitutionalSubscriptionForm($request, $subscriptionId);
 		$subscriptionForm->readInputData();
@@ -172,7 +172,7 @@ class InstitutionalSubscriptionsGridHandler extends SubscriptionsGridHandler {
 		$subscriptionId = $request->getUserVar('rowId');
 		$subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
 		$subscriptionDao->deleteById($subscriptionId, $context->getId());
-		return DAO::getDataChangedEvent($subscriptionId);
+		return DAO::getDataChangedEvent();
 	}
 }
 

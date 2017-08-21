@@ -172,7 +172,7 @@ class IndividualSubscriptionsGridHandler extends SubscriptionsGridHandler {
 		$subscriptionId = $request->getUserVar('rowId');
 		$subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
 		$subscriptionDao->deleteById($subscriptionId, $context->getId());
-		return DAO::getDataChangedEvent($subscriptionId);
+		return DAO::getDataChangedEvent();
 	}
 }
 
