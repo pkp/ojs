@@ -43,6 +43,7 @@
 	<upgrade minversion="2.4.0.0" maxversion="3.0.9.9">
 		<data file="dbscripts/xml/upgrade/3.1.0_preupdate_review_assignments.xml" condition="return $installer->columnExists('review_assignments', 'cancelled');" />
 		<data file="dbscripts/xml/upgrade/3.1.0_preupdate_notes.xml" condition="return $installer->columnExists('notes', 'file_id');" />
+		<data file="dbscripts/xml/upgrade/3.1.0_preupdate_payments.xml" condition="return $installer->columnExists('completed_payments', 'journal_id');" />
 	</upgrade>
 
 	<!-- PKP schema components -->

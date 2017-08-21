@@ -56,7 +56,7 @@ class OJSPaymentManager extends PaymentManager {
 	 * @param $currencyCode string optional ISO 4217 currency code
 	 * @return QueuedPayment
 	 */
-	function &createQueuedPayment($journalId, $type, $userId, $assocId, $amount, $currencyCode = null) {
+	function createQueuedPayment($journalId, $type, $userId, $assocId, $amount, $currencyCode = null) {
 		$journalSettingsDao = DAORegistry::getDAO('JournalSettingsDAO');
 		if (is_null($currencyCode)) $currencyCode = $journalSettingsDao->getSetting($journalId, 'currency');
 		$payment = new OJSQueuedPayment($amount, $currencyCode, $userId, $assocId);
@@ -106,12 +106,12 @@ class OJSPaymentManager extends PaymentManager {
 	 * Create a completed payment from a queued payment.
 	 * @param $queuedPayment QueuedPayment Payment to complete.
 	 * @param $payMethod string Name of payment plugin used.
-	 * @return OJSCompletedPayment
+	 * @return CompletedPayment
 	 */
-	function &createCompletedPayment($queuedPayment, $payMethod) {
-		import('classes.payment.ojs.OJSCompletedPayment');
-		$payment = new OJSCompletedPayment();
-		$payment->setJournalId($queuedPayment->getJournalId());
+	function createCompletedPayment($queuedPayment, $payMethod) {
+		import('lib.pkp.classes.payment.CompletedPayment');
+		$payment = new CompletedPayment();
+		$payment->setContextId($queuedPayment->getJournalId());
 		$payment->setType($queuedPayment->getType());
 		$payment->setAmount($queuedPayment->getAmount());
 		$payment->setCurrencyCode($queuedPayment->getCurrencyCode());
@@ -207,13 +207,13 @@ class OJSPaymentManager extends PaymentManager {
 	 * Get the payment plugin.
 	 * @return PaymentPlugin
 	 */
-	function &getPaymentPlugin() {
+	function getPaymentPlugin() {
 		$journal = $this->request->getJournal();
 		$paymentMethodPluginName = $journal->getSetting('paymentMethodPluginName');
 		$paymentMethodPlugin = null;
 		if (!empty($paymentMethodPluginName)) {
-			$plugins =& PluginRegistry::loadCategory('paymethod');
-			if (isset($plugins[$paymentMethodPluginName])) $paymentMethodPlugin =& $plugins[$paymentMethodPluginName];
+			$plugins = PluginRegistry::loadCategory('paymethod');
+			if (isset($plugins[$paymentMethodPluginName])) $paymentMethodPlugin = $plugins[$paymentMethodPluginName];
 		}
 		return $paymentMethodPlugin;
 	}
@@ -225,12 +225,12 @@ class OJSPaymentManager extends PaymentManager {
 	 * @param $payMethodPluginName string Name of payment plugin.
 	 * @return mixed Dependent on payment type.
 	 */
-	function fulfillQueuedPayment($request, &$queuedPayment, $payMethodPluginName = null) {
+	function fulfillQueuedPayment($request, $queuedPayment, $payMethodPluginName = null) {
 		$returner = false;
 		if ($queuedPayment) switch ($queuedPayment->getType()) {
 			case PAYMENT_TYPE_MEMBERSHIP:
 				$userDao = DAORegistry::getDAO('UserDAO');
-				$user =& $userDao->getById($queuedPayment->getuserId());
+				$user = $userDao->getById($queuedPayment->getuserId());
 				$userDao->renewMembership($user);
 				$returner = true;
 				break;
@@ -339,8 +339,8 @@ class OJSPaymentManager extends PaymentManager {
 				assert(false);
 		}
 		$completedPaymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO');
-		$completedPayment =& $this->createCompletedPayment($queuedPayment, $payMethodPluginName);
-		$completedPaymentDao->insertCompletedPayment($completedPayment);
+		$completedPayment = $this->createCompletedPayment($queuedPayment, $payMethodPluginName);
+		$completedPaymentDao->insertObject($completedPayment);
 
 		$queuedPaymentDao = DAORegistry::getDAO('QueuedPaymentDAO');
 		$queuedPaymentDao->deleteQueuedPayment($queuedPayment->getId());

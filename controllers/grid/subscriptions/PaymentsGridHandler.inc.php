@@ -120,7 +120,7 @@ class PaymentsGridHandler extends GridHandler {
 	protected function loadData($request, $filter) {
 		$paymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO');
 		$rangeInfo = $this->getGridRangeInfo($request, $this->getId());
-		return $paymentDao->getPaymentsByJournalId($request->getContext()->getId(), $rangeInfo);
+		return $paymentDao->getByContextId($request->getContext()->getId(), $rangeInfo);
 	}
 
 	//
