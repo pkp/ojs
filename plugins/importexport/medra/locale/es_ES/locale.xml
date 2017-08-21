@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
 <!--
   * plugins/importexport/medra/locale/es_ES/locale.xml
   *
@@ -11,7 +12,7 @@
   -->
  
 <locale name="es_ES" full_name="Español (España)">
-    <message key="plugins.importexport.medra.displayName">Módulo de exportación/registro de mEDRA</message>
+	<message key="plugins.importexport.medra.displayName">Módulo de exportación/registro de mEDRA</message>
 	<message key="plugins.importexport.medra.description">Exportar metadatos de un número, un artículo y una galerada en formato Onix para DOI (O4DOI) y registrar los DOI en la agencia de registro mEDRA.</message>
 
 	<message key="plugins.importexport.medra.intro"><![CDATA[
@@ -36,7 +37,7 @@
 	<message key="plugins.importexport.medra.settings.form.manifestation">Manifestación</message>
 
 	<message key="plugins.importexport.medra.workOrProduct"><![CDATA[Nota: Los DOI asignados a los artículos se exportarán a mEDRA como <a href="http://www.medra.org/en/metadata_td.htm" target="_blank">'obras'</a>. Los DOI asignados a las galeradas se exportarán como <a href="http://www.medra.org/en/metadata_td.htm" target="_blank">'manifestación'</a>.]]></message>
-		
+
 	<message key="plugins.importexport.medra.cliUsage"><![CDATA[Uso:
 {$scriptName} {$pluginName} export [xmlFileName] [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...
 {$scriptName} {$pluginName} register [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...

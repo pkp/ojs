@@ -10,7 +10,7 @@
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_(es_ES)
   * Localization strings.
   -->
- 
+
 <locale name="es_ES" full_name="Español (España)">
 	<message key="plugins.paymethod.manual.displayName">Pago Manual</message>
 	<message key="plugins.paymethod.manual.description">El gestor registra manualmente el pago de los usuarios (fuera de este software).</message>
