@@ -224,4 +224,13 @@
 	<message key="editor.submission.editorial.finalDraftDescription"><![CDATA[Los borradores finales de esta lista son transformados por el corrector/a de originales en versiones revisadas, cargadas a continuación en <span class="pkp_help_title">Corrección de originales</span>.]]></message>
 	<message key="editor.submission.proof.manageProofFilesDescription">Cualquier archivo que ya haya sido asignado a una fase del envío puede añadirse a la lista de corrección de originales marcando la casilla "Añadir" y haciendo clic en "Buscar": se listarán todos los archivos disponibles y podrán ser seleccionados para su inclusión.</message>
 	<message key="editor.publicIdentificationExistsForTheSameType">El identificador público '{$publicIdentifier}' ya existe para otro objeto del mismo tipo. Por favor, elija identificadores únicos para los objetos del mismo tipo en su revista.</message>
+	<message key="editor.issues.removeCoverImageFileNameMismatch">La imagen de portada que deseaba eliminar no coincidía con la de este número. Recargue la página y vuelva a intentarlo.</message>
+	<message key="editor.issues.removeCoverImageFileNotFound">La imagen de portada que deseaba eliminar no se ha podido encontrar, puede que ya haya sido eliminada. Inténtelo recargando la página.</message>
+	<message key="editor.issues.invalidCoverImageFormat">Formato de portada inválido. Los formatos aceptados son .gif, .jpg, or .png.</message>
+	<message key="editor.issues.confirmSetCurrentIssue">¿Está seguro de que desea establecer este número como el actual?</message>
+	<message key="grid.action.setCurrentIssue">Establecer número actual</message>
+	<message key="editor.article.schedulePublication">Programar para publicación</message>
+	<message key="editor.article.coverImage">Imagen de portada</message>
+	<message key="editor.article.removeCoverImageFileNotFound">La imagen de portada que deseaba eliminar no se ha podido encontrar, puede que ya haya sido eliminada. Inténtelo recargando la página.</message>
+	<message key=""><![CDATA[]]></message>
 </locale>

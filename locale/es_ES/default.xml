@@ -37,9 +37,9 @@ al.</strong> El corrector/a de la revista editará el texto para mejorar la flui
 
 	<message key="default.journalSettings.proofingInstructions"><![CDATA[<p>La fase de corrección de pruebas tiene el propósito de detectar errores ortográficos en la galerada, así como gramaticales y de formato. En esta fase no se realizan más cambios importantes, a menos que se haya acordado con el editor/a de sección. En Maquetación, haga clic en VER PRUEBA para ver los HTML, PDF y otros formatos de archivo disponibles utilizados en la edición de este elemento.</p> <h4>Para errores ortográficos y gramaticales</h4> <p>Copie la palabra o grupo de palabras problemáticas y péguelas en el cuadro de correciones de pruebas con instrucciones al editor/a "CAMBIAR-POR" como sigue:</p> <pre>1. CAMBIAR... entonces los otras POR... entonces los otros</pre> <br /> <pre>2. CAMBIAR... Malinowsky POR... Malinowski</pre> <br /> <h4>Para errores de formato</h4> <p>Describa la ubicación y naturaleza del problema en el cuadro de correcciones de pruebas después de escribir en el título "FORMATO" como sigue:</p> <br /> <pre>3. FORMATO Los números de la Tabla 3 no están alineados en la tercera columna.</pre> <br /> <pre>4. FORMATO El párrafo que comienza con "Este último tema..." no está sangrado.</pre>]]></message>
 
-	<message key="default.journalSettings.emailSignature">________________________________________________________________________
-{$journalName}
-{$indexUrl}/{$journalPath}</message>
+	<message key="default.journalSettings.emailSignature"><![CDATA[<br/>
+________________________________________________________________________<br/>
+<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>]]></message>
 	<message key="default.journalSettings.forReaders"><![CDATA[Animamos a los lectores/as a registrarse en el servicio de notificación de publicaciones de la revista. Utilice el enlace <a href="{$indexUrl}/{$journalPath}/user/register">Registro</a> de la parte superior de la página de inicio de la revista. Como resultado del registro, el lector/a recibirá por correo electrónico la Tabla de contenidos de cada número de la revista. Esta lista también permite que se le atribuya a la revista un cierto nivel de apoyo o número de lectores/as. Consulte la <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">Declaración de privacidad</a> de la revista, que garantiza a los lectores/as que sus nombres y direcciones de correo electrónico no se usarán con otros fines.]]></message>
 	<message key="default.journalSettings.forAuthors"><![CDATA[¿Está interesado en publicar en la revista? Se recomienda revisar la página <a href="{$indexUrl}/{$journalPath}/about">Acerca de la revista</a> para consultar las políticas de sección de la revista, así como las <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Directrices del autor/a</a>. Los autores/as deben <a href="{$indexUrl}/{$journalPath}/user/register">registrarse</a> en la revista antes de publicar o, si ya están registrados, pueden simplemente <a href="{$indexUrl}/index/login">iniciar sesión</a> y comenzar el proceso de cinco pasos.]]></message>
 	<message key="default.journalSettings.forLibrarians"><![CDATA[Se recomienda a los investigadores/as bibliotecarios/as que incluyan esta revista en su listado de revistas electrónicas. Asimismo, cabría destacar que el sistema de publicación de código abierto de esta revista es apto para bibliotecas con personal docente que desee editar sus propias revistas (ver <a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></message>
@@ -64,7 +64,7 @@ al.</strong> El corrector/a de la revista editará el texto para mejorar la flui
 	<message key="default.journalSettings.emailHeader">El siguiente mensaje se está enviando a nombre de {$journalName}.
 ________________________________________________________________________</message>
 	<message key="default.genres.article">Texto del artículo</message>
-	<message key="default.journalSettings.clockssLicense"><![CDATA[Esta revista utiliza el sistema CLOCKSS para crear un sistema de archivos distribuido entre las bibliotecas participantes y permite a estas bibliotecas crear archivos permanentes de la revista con finalidad de preservación y restauración. <a href="http://clockss.org/">More...</a>]]></message>
+	<message key="default.journalSettings.clockssLicense"><![CDATA[Esta revista utiliza el sistema CLOCKSS para crear un sistema de archivos distribuido entre las bibliotecas participantes y permite a estas bibliotecas crear archivos permanentes de la revista con finalidad de preservación y restauración. <a href="http://clockss.org/">Saber más...</a>]]></message>
 	<message key="default.groups.name.manager">Gestor/a de la revista</message>
 	<message key="default.groups.plural.manager">Gestores/as de la revista</message>
 	<message key="default.groups.abbrev.manager">GR</message>
@@ -89,4 +89,5 @@ ________________________________________________________________________</messag
 	<message key="default.groups.name.externalReviewer">Revisor/a</message>
 	<message key="default.groups.plural.externalReviewer">Revisores/as</message>
 	<message key="default.groups.abbrev.externalReviewer">R</message>
+	<message key="default.groups.abbrev.guestEditor">EI</message>
 </locale>
