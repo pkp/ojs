@@ -232,5 +232,4 @@
 	<message key="editor.article.schedulePublication">Programar para publicación</message>
 	<message key="editor.article.coverImage">Imagen de portada</message>
 	<message key="editor.article.removeCoverImageFileNotFound">La imagen de portada que deseaba eliminar no se ha podido encontrar, puede que ya haya sido eliminada. Inténtelo recargando la página.</message>
-	<message key=""><![CDATA[]]></message>
 </locale>
