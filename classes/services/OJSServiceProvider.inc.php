@@ -35,5 +35,10 @@ class OJSServiceProvider implements \Pimple\ServiceProviderInterface {
 		$pimple['issue'] = function() {
 			return new IssueService();
 		};
+
+		// Section service
+		$pimple['section'] = function() {
+			return new SectionService();
+		};
 	}
 }

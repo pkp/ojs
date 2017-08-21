@@ -36,5 +36,7 @@ window.pkp = {
 				return true;
 			}
 		}
+
+		return false;
 	}
 };
