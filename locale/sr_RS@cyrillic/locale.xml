@@ -889,7 +889,6 @@ Postavljanje LOCKSS podrške za Open Journal Systems није потребно �
 	<message key="about.onlineSubmissions.register">Регистрација</message>
 	<message key="about.onlineSubmissions.submissionActions">{$newSubmission} или {$viewSubmissions}.</message>
 	<message key="about.onlineSubmissions.newSubmission">Направи нову предају</message>
-	<message key=""><![CDATA[]]></message>
 	<message key="user.reviewerPrompt">Да ли бисте желели да будете рецензент радова који се објављују у овом часопису?</message>
 	<message key="user.reviewerPrompt.userGroup">Да, захтевам улогу {$userGroup}.</message>
 	<message key="user.register.otherContextRoles">Захтевај следеће улоге.</message>
@@ -897,7 +896,6 @@ Postavljanje LOCKSS podrške za Open Journal Systems није потребно �
 	<message key="user.register.contextsPrompt">За које часописе на овом сајту желите да се региструјете?</message>
 	<message key="user.profile.form.hideOtherContexts">Сакриј остале часописе</message>
 	<message key="user.profile.form.showOtherContexts">Региструј се и за остале часописе</message>
-	<message key=""><![CDATA[]]></message>
 	<message key="notification.type.submissionSubmitted">Нови чланак "{$title}" је предат.</message>
 	<message key="reviewer.article.selectRecommendation.byEditor">Подеси или измени препоруку рецензента.</message>
 	<message key="article.return">Повратак на детаље чланка</message>
