@@ -11,7 +11,7 @@
   -->
 
 <version>
-	<application>ojs2</application>
+	<application>ojs</application>
 	<type>core</type>
 	<release>3.0.2.0</release>
 	<tag>ojs-3_0_2-0</tag>
