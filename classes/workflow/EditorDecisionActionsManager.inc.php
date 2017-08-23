@@ -130,18 +130,18 @@ class EditorDecisionActionsManager {
 				'operation' => 'externalReview',
 				'name' => 'externalReview',
 				'title' => 'editor.submission.decision.sendExternalReview',
+				'toStage' => 'editor.review',
 			),
 			SUBMISSION_EDITOR_DECISION_ACCEPT => array(
 				'name' => 'accept',
 				'operation' => 'promote',
 				'title' => 'editor.submission.decision.skipReview',
-				'help' => 'editor.review.NotifyAuthorAccept',
+				'toStage' => 'submission.copyediting',
 			),
 			SUBMISSION_EDITOR_DECISION_INITIAL_DECLINE => array(
 				'name' => 'decline',
 				'operation' => 'sendReviews',
 				'title' => 'editor.submission.decision.decline',
-				'help' => 'editor.review.NotifyAuthorDecline',
 			),
 		);
 
@@ -163,13 +163,12 @@ class EditorDecisionActionsManager {
 				'operation' => 'promoteInReview',
 				'name' => 'accept',
 				'title' => 'editor.submission.decision.accept',
-				'help' => 'editor.review.NotifyAuthorAccept',
+				'toStage' => 'submission.copyediting',
 			),
 			SUBMISSION_EDITOR_DECISION_DECLINE => array(
 				'operation' => 'sendReviewsInReview',
 				'name' => 'decline',
 				'title' => 'editor.submission.decision.decline',
-				'help' => 'editor.review.NotifyAuthorDecline',
 			),
 		);
 
@@ -186,6 +185,7 @@ class EditorDecisionActionsManager {
 				'operation' => 'promote',
 				'name' => 'sendToProduction',
 				'title' => 'editor.submission.decision.sendToProduction',
+				'toStage' => 'submission.production',
 			),
 		);
 
