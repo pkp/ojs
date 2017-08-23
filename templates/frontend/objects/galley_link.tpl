@@ -10,6 +10,7 @@
  *
  * @uses $galley Galley
  * @uses $parent Issue|Article Object which these galleys are attached to
+ * @uses $isSupplementary bool Is this a supplementary file?
  * @uses $hasAccess bool Can this user access galleys for this context?
  * @uses $restrictOnlyPdf bool Is access only restricted to PDF galleys?
  * @uses $purchaseArticleEnabled bool Can this article be purchased?
@@ -49,7 +50,7 @@
 {/if}
 
 {* Don't be frightened. This is just a link *}
-<a class="obj_galley_link {$type}{if $restricted} restricted{/if}" href="{url page=$page op="view" path=$parentId|to_array:$galley->getBestGalleyId()}">
+<a class="{if $isSupplementary}obj_galley_link_supplementary{else}obj_galley_link{/if} {$type}{if $restricted} restricted{/if}" href="{url page=$page op="view" path=$parentId|to_array:$galley->getBestGalleyId()}">
 
 	{* Add some screen reader text to indicate if a galley is restricted *}
 	{if $restricted}

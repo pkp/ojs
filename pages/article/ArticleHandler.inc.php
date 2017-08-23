@@ -98,6 +98,38 @@ class ArticleHandler extends Handler {
 
 		if (!$this->userCanViewGalley($request, $articleId, $galleyId)) fatalError('Cannot view galley.');
 
+		// Get galleys sorted into primary and supplementary groups
+		$galleys = $article->getGalleys();
+		$primaryGalleys = array();
+		$supplementaryGalleys = array();
+		if ($galleys) {
+			$genreDao = DAORegistry::getDAO('GenreDAO');
+			$primaryGenres = $genreDao->getPrimaryByContextId($journal->getId())->toArray();
+			$primaryGenreIds = array_map(function($genre) {
+				return $genre->getId();
+			}, $primaryGenres);
+			$supplementaryGenres = $genreDao->getBySupplementaryAndContextId(true, $journal->getId())->toArray();
+			$supplementaryGenreIds = array_map(function($genre) {
+				return $genre->getId();
+			}, $supplementaryGenres);
+
+			foreach ($galleys as $galley) {
+				$file = $galley->getFile();
+				if (!$file) {
+					continue;
+				}
+				if (in_array($file->getGenreId(), $primaryGenreIds)) {
+					$primaryGalleys[] = $galley;
+				} elseif (in_array($file->getGenreId(), $supplementaryGenreIds)) {
+					$supplementaryGalleys[] = $galley;
+				}
+			}
+		}
+		$templateMgr->assign(array(
+			'primaryGalleys' => $primaryGalleys,
+			'supplementaryGalleys' => $supplementaryGalleys,
+		));
+
 		// Fetch and assign the section to the template
 		$sectionDao = DAORegistry::getDAO('SectionDAO');
 		$section = $sectionDao->getById($article->getSectionId(), $journal->getId(), true);

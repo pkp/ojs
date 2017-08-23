@@ -52,6 +52,8 @@
  * @uses $article Article This article
  * @uses $issue Issue The issue this article is assigned to
  * @uses $section Section The journal section this article is assigned to
+ * @uses $primaryGalleys array List of article galleys that are not supplementary or dependent
+ * @uses $supplementaryGalleys array List of article galleys that are supplementary
  * @uses $keywords array List of keywords assigned to this article
  * @uses $pubIdPlugins Array of pubId plugins which this article may be assigned
  * @uses $citationPlugins Array of citation format plugins
@@ -206,13 +208,23 @@
 			{/if}
 
 			{* Article Galleys *}
-			{assign var=galleys value=$article->getGalleys()}
-			{if $galleys}
+			{if $primaryGalleys}
 				<div class="item galleys">
 					<ul class="value galleys_links">
-						{foreach from=$galleys item=galley}
+						{foreach from=$primaryGalleys item=galley}
 							<li>
 								{include file="frontend/objects/galley_link.tpl" parent=$article galley=$galley}
+							</li>
+						{/foreach}
+					</ul>
+				</div>
+			{/if}
+			{if $supplementaryGalleys}
+				<div class="item galleys">
+					<ul class="value supplementary_galleys_links">
+						{foreach from=$supplementaryGalleys item=galley}
+							<li>
+								{include file="frontend/objects/galley_link.tpl" parent=$article galley=$galley isSupplementary="1"}
 							</li>
 						{/foreach}
 					</ul>
