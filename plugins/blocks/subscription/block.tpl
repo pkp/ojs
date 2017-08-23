@@ -8,14 +8,15 @@
  * Common site sidebar menu -- subscription info.
  *
  *}
-<div class="block" id="sidebarSubscription">
-	<span class="blockTitle">{translate key="plugins.block.subscription.blockTitle"}</span>
+<div class="pkp_block block_subscription">
+	<span class="title">{translate key="plugins.block.subscription.blockTitle"}</span>
 	{if $individualSubscription}
 		{assign var=individualSubscriptionValid value=$individualSubscription->isValid()}
 	{else}
 		{assign var=individualSubscriptionValid value=false}
 	{/if}
-	{if $individualSubscription && $individualSubscriptionValid}
+	<div class="content">
+	{if $individualSubscriptionValid}
 		{assign var=subscriptionStatus value=$individualSubscription->getStatus()}
 		<strong>{$individualSubscription->getSubscriptionTypeName()|escape}</strong>
 		{if $individualSubscription->getMembership()}({$individualSubscription->getMembership()|escape}){/if}<br />
@@ -55,4 +56,5 @@
 	{if $userLoggedIn}
 		<a href="{url page="user" op="subscriptions"}">{translate key="user.subscriptions.mySubscriptions"}</a>
 	{/if}
+	</div>
 </div>
