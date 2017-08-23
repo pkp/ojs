@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/blocks/subscription/locale/de_DE/locale.xml
+  *
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Credits: https://pkp.sfu.ca/wiki/index.php?title=OJS:_German_(de_DE)
+  *
+  * Localization strings.
+  -->
+
+<locale name="de_DE" full_name="Deutsch (Deutschland)">
+	<message key="plugins.block.subscription.displayName">Abonnement-Block</message>
+	<message key="plugins.block.subscription.description">Dieses Plug-In stellt Informationen zum Abonnement in der Sidebar bereit.</message>
+	<message key="plugins.block.subscription.blockTitle">Abonnement</message>
+	<message key="plugins.block.subscription.expires">Läuft ab</message>
+	<message key="plugins.block.subscription.providedBy">Zugriff bereitgestellt durch: </message>
+	<message key="plugins.block.subscription.comingFromIP">Sie kommen von IP:</message>
+	<message key="plugins.block.subscription.about">Abonnements</message>
+	<message key="plugins.block.subscription.loginToVerifySubscription">Loggen Sie sich ein, um das Abonnement zu verifizieren</message>
+</locale>

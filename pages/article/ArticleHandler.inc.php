@@ -258,7 +258,7 @@ class ArticleHandler extends Handler {
 		$fileId = isset($args[2]) ? (int) $args[2] : 0;
 
 		if ($this->galley->getRemoteURL()) $request->redirectUrl($this->galley->getRemoteURL());
-		if ($this->userCanViewGalley($request, $articleId, $galleyId)) {
+		else if ($this->userCanViewGalley($request, $articleId, $galleyId)) {
 			if (!$fileId) {
 				$submissionFile = $this->galley->getFile();
 				if ($submissionFile) {
@@ -266,7 +266,9 @@ class ArticleHandler extends Handler {
 					// The file manager expects the real article id.  Extract it from the submission file.
 					$articleId = $submissionFile->getSubmissionId();
 				} else { // no proof files assigned to this galley!
-					return null;
+					header('HTTP/1.0 403 Forbidden');
+					echo '403 Forbidden<br>';
+					return;
 				}
 			}
 
@@ -275,6 +277,9 @@ class ArticleHandler extends Handler {
 				$submissionFileManager = new SubmissionFileManager($this->article->getContextId(), $this->article->getId());
 				$submissionFileManager->downloadFile($fileId, null, $request->getUserVar('inline')?true:false);
 			}
+		} else {
+			header('HTTP/1.0 403 Forbidden');
+			echo '403 Forbidden<br>';
 		}
 	}
 

@@ -48,13 +48,13 @@ class UserHandler extends PKPUserHandler {
 		// Get subscriptions and options for current journal
 		if ($individualSubscriptionTypesExist) {
 			$subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
-			$userIndividualSubscription = $subscriptionDao->getByUserForJournal($userId, $journalId);
+			$userIndividualSubscription = $subscriptionDao->getByUserIdForJournal($userId, $journalId);
 			$templateMgr->assign('userIndividualSubscription', $userIndividualSubscription);
 		}
 
 		if ($institutionalSubscriptionTypesExist) {
 			$subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
-			$userInstitutionalSubscriptions = $subscriptionDao->getByUserForJournal($userId, $journalId);
+			$userInstitutionalSubscriptions = $subscriptionDao->getByUserIdForJournal($userId, $journalId);
 			$templateMgr->assign('userInstitutionalSubscriptions', $userInstitutionalSubscriptions);
 		}
 
