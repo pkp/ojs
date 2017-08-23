@@ -148,7 +148,7 @@ PHP script found at tools/runScheduledTasks.php in your OJS directory:
 
 On *nix operating systems, this can be done by adding a simple cron task:
 	# crontab -e www
-	0 * * * *	php /path/to/ojs2/tools/runScheduledTasks.php
+	0 * * * *	php /path/to/ojs/tools/runScheduledTasks.php
 In this example the script would be executed every hour.
 
 On Windows XP systems, this can be done by using the Windows Task Scheduler:
@@ -156,7 +156,7 @@ On Windows XP systems, this can be done by using the Windows Task Scheduler:
 	2) Right-click within the Scheduled Tasks window and choose:
 		New > Scheduled Task
 	3) Under the Task tab, in the Run field, enter:
-		php c:\path\to\ojs2\tools\runScheduledTasks.php
+		php c:\path\to\ojs\tools\runScheduledTasks.php
 	4) You will also be asked to specify the folder to start this task in
 	   (which will usually be the folder that PHP was installed into) and
 	   the user under which the task will be executed as.
