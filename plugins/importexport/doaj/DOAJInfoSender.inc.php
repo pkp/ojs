@@ -94,9 +94,9 @@ class DOAJInfoSender extends ScheduledTask {
 		$plugin = $this->_plugin;
 		foreach ($objects as $object) {
 			// Get the JSON
-			$exportJson = $this->exportJSON($object, $filter, $context);
+			$exportJson = $plugin->exportJSON($object, $filter, $journal);
 			// Deposit the JSON
-			$result = $this->depositXML($object, $context, $exportJson);
+			$result = $plugin->depositXML($object, $journal, $exportJson);
 			if ($result !== true) {
 				$this->_addLogEntry($result);
 			}
