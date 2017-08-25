@@ -202,7 +202,22 @@ class IssueEntryTabHandler extends PublicationEntryTabHandler {
 		$stageId = $this->getStageId();
 		$identifiersForm = new PublicIdentifiersForm($submission, $stageId, array('displayedInContainer' => true));
 		$identifiersForm->clearPubId($request->getUserVar('pubIdPlugIn'));
-		return new JSONMessage(true);
+		$json = new JSONMessage(true);
+		$json->setEvent('containerReloadRequested', array(
+			'tabsUrl' => $request->getRouter()->getDispatcher()->url(
+				$request,
+				ROUTE_COMPONENT,
+				null,
+				'modals.submissionMetadata.IssueEntryHandler',
+				'fetch',
+				null,
+				array(
+					'submissionId' => $submission->getId(),
+					'stageId' => $stageId
+				)
+			)
+		));
+		return $json;
 	}
 
 	/**
