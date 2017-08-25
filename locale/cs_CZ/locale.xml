@@ -819,8 +819,6 @@ Aktivní udává kolik recenzí je právě zvažováno nebo zpracováváno.]]></
 	<message key="payment.donation.makeDonation">Darovat</message>
 
 	<message key="payment.submission.paySubmission">Zaplatit poplatek za příspěvek</message>
-	<message key="payment.fastTrack.payFastTrack">Poplatek za rychlé zpracování</message>
-	<message key="payment.fastTrack.inFastTrack">v rychlém zpracování</message>
 	<message key="payment.publication.payPublication">Zaplatit za publikování</message>
 	<message key="payment.publication.publicationPaid">Poplatek za publikování zaplacen</message>
 

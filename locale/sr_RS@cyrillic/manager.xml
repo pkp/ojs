@@ -148,7 +148,6 @@
 	<message key="manager.payment.authorFeesDescription">Одабране опције са њиховим описима и накнадама (које могу бити измењене испод) ће се појавити у Корак 1 процесу пријаве чланка и у О часопису и Пријаве делу као и уделовима где је плаћање накнада назначено.</message>
 	<message key="manager.payment.generalFeesDescription">Чланство асоцијације ће се појавити у страници О часопису у делу Политике,а линк за донације ће се појавити изнад функције за претрагу у оквиру са десне стране.</message>
 	<message key="manager.payment.options.enablePayments">Кликните овде да укључите модул Плаћања. Морате конфигурисати подешавања за плаћања компшлетирањем обрасца испод.  Корисници ће морати да се пријаве у систем да би извршили плаћање.</message>
-	<message key="manager.payment.options.fastTrackFee">Брза рецензија</message>
 	<message key="manager.payment.options.publicationFee">Објављивање чланка</message>
 	<message key="manager.payment.options.purchaseArticleFee">Купи чланак</message>
 	<message key="manager.payment.options.text">Опис метода плаћања</message>

@@ -41,7 +41,6 @@
 	<message key="manager.payment.options">Opções</message>
 	<message key="manager.payment.options.acceptSubscriptionPayments">Esta acção activará o pagamento para Subscrições, sendo responsabilidade do Gestor de Subscrições definir e gerir os tipos, taxas, duração e assinantes</message>
 	<message key="manager.payment.options.enablePayments">Clique aqui para activar o módulo de pagamentos. Em seguida, configure as opções de pagamento através do formulário disponível. Utilizadores deverão estar registados e ligados ao sistema para realizar pagamentos.</message>
-	<message key="manager.payment.options.fastTrackFee">Avaliação Fast-Track</message>
 	<message key="manager.payment.options.fee">Taxa</message>
 	<message key="manager.payment.options.feeDescription">Descrição da Taxa</message>
 	<message key="manager.payment.options.feeName">Título da Taxa</message>

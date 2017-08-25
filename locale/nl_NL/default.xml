@@ -150,8 +150,6 @@ De paragraaf die begint met  "Dit laatste onderwerp..." is niet ingesprongen.</p
 	<message key="default.journalSettings.lockssLicense"><![CDATA[Dit tijdschrift gebruikt het LOCKSS systeem om een gedistribueerd archief te maken tussen de deelnemende bibliotheken waarmee deze bibliotheken een permanent archief van het tijdschrift maken ten behoeve van bescherming en herstel. <a href="http://www.lockss.org/">Meer...</a>]]></message>
 
 	<!-- Default settings for payment items. -->
-	<message key="default.journalSettings.fastTrackFee">Snelle review</message>
-	<message key="default.journalSettings.fastTrackFeeDescription">Met de betaling van dit bedrag wordt gegarandeerd dat de review, beslissing van de redactie en berichtgeving over dit maniscript binnen 4 weken zal plaatsvinden.</message>
 	<message key="default.journalSettings.publicationFee">Artikelpublicatie</message>
 	<message key="default.journalSettings.publicationFeeDescription">Als dit artikel geaccepteerd wordt voor publicatie, vragen we u om een bijdrage om de publicatiekosten te helpen dekken.</message>
 	<message key="default.journalSettings.waiverPolicy">Als u niet de middelen heeft om dit bedrag te betalen, kunt u om kwijtschelding krijgen. We willen niet dat de kosten publicatie van geschikt werk in de weg staan.</message>

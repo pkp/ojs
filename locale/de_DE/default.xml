@@ -138,8 +138,6 @@ Befolgen Sie bitte den folgenden Ablauf, um Ihr Manuskript elektronisch zu bearb
 	<message key="default.journalSettings.clockssLicense"><![CDATA[Diese Zeitschrift benutzt das CLOCKSS-System, um ein verteiltes Archivsystem zwischen teilnehmenden Bibliotheken zu ermöglichen. Sie erlaubt diesen Bibliotheken, dauerhafte Archive der Zeitschrift zu Zwecken des Bewahrens und Wiederherstellens anzulegen. <a href="http://clockss.org/">Mehr...</a>]]></message>
 
 	<!-- Default settings for payment items. -->
-	<message key="default.journalSettings.fastTrackFee">Beschleunigte Begutachtung</message>
-	<message key="default.journalSettings.fastTrackFeeDescription">Wenn Sie diese Gebühr zahlen, garantieren wir Ihnen, dass die Begutachtung, die Redaktionsentscheidung und die Benachrichtigung der Autorin/des Autors bezüglich dieses Manuskripts innerhalb der nächsten vier Wochen stattfinden wird.</message>
 	<message key="default.journalSettings.publicationFee">Veröffentlichung des Beitrags</message>
 	<message key="default.journalSettings.publicationFeeDescription">Sollte dieser Beitrag zur Veröffentlichung kommen, ist eine Veröffentlichungsgebühr zu zahlen, um die Kosten der Veröffentlichung zu decken.</message>
 	<message key="default.journalSettings.waiverPolicy">Sollten Ihnen die nötigen Mittel für die Bezahlung solcher Gebühren nicht zur Verfügung stehen, haben Sie die Möglichkeit, jede dieser Gebühren erlassen zu bekommen. Wir wollen vermeiden, dass Gebühren der Veröffentlichung wertvoller Beiträge im Weg stehen.</message>

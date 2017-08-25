@@ -46,8 +46,6 @@ ________________________________________________________________________<br/>
 	<message key="default.journalSettings.lockssLicense"><![CDATA[Esta revista utiliza el sistema LOCKSS para crear un sistema de archivo distribuido entre bibliotecas colaboradoras, a las que permite crear archivos permanentes de la revista con fines de conservación y restauración. <a href="http://lockss.org/">Más...</a>]]></message>
 
 	<!-- Default settings for payment items. -->
-	<message key="default.journalSettings.fastTrackFee">Revisión rápida</message>
-	<message key="default.journalSettings.fastTrackFeeDescription">Con el pago de esta cuota, se garantiza que la revisión, la decisión editorial y la notificación al autor/a del manuscrito tendrán lugar dentro de un plazo de 4 semanas.</message>
 	<message key="default.journalSettings.publicationFee">Publicar un artículo</message>
 	<message key="default.journalSettings.publicationFeeDescription">Si se acepta la publicación del artículo, se le pedirá el pago de una cuota de publicación de artículo para cubrir los costes de publicación.</message>
 	<message key="default.journalSettings.waiverPolicy">En caso de no disponer de fondos para pagar dichas cuotas, existe la posibilidad de eximirse del pago. El impago de las cuotas no impedirá la publicación de aquellas obras que lo merezcan.</message>

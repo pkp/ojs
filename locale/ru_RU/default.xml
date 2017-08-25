@@ -138,8 +138,6 @@
 	<message key="default.journalSettings.clockssLicense"><![CDATA[Этот журнал использует систему CLOCKSS для создания распределенной архивной системы между участвующими в этой системе библиотеками и разрешает этим библиотекам создавать постоянные архивы журнала в целях сохранения и восстановления. <a href="http://clockss.org/">Подробнее...</a>]]></message>
 
 	<!-- Значения по умолчанию для элементов оплаты. -->
-	<message key="default.journalSettings.fastTrackFee">Ускоренное рассмотрение</message>
-	<message key="default.journalSettings.fastTrackFeeDescription">Оплата этой суммы гарантирует, что рецензирование, принятие решения редакцией и уведомление автора по этой рукописи пройдут в течение 4-х недель.</message>
 	<message key="default.journalSettings.publicationFee">Публикация статьи</message>
 	<message key="default.journalSettings.publicationFeeDescription">Если статья будет принята к публикации, вас попросят внести оплату за публикацию статьи для покрытия издательских расходов.</message>
 	<message key="default.journalSettings.waiverPolicy">Если у вас нет финансовой возможности внести эти платежи, вы можете обратиться с просьбой об отмене каждого из этих платежей. Мы не хотим, чтобы платежи стали барьером для публикации достойной работы.</message>

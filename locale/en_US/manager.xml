@@ -45,7 +45,6 @@
 	<message key="manager.payment.options">Options</message>
 	<message key="manager.payment.options.acceptSubscriptionPayments">This will activate payments for Subscriptions, where types, cost, duration and subscriptions are managed by the Journal (Subscription) Manager.</message>
 	<message key="manager.payment.options.enablePayments">Click here to enable the Payments module.  You must configure payment settings by filling in the form below.  Note Users will be required to log in to make payments.</message>
-	<message key="manager.payment.options.fastTrackFee">Fast-Track Review</message>
 	<message key="manager.payment.options.fee">Fee</message>
 	<message key="manager.payment.options.feeDescription">Fee Description</message>
 	<message key="manager.payment.options.feeName">Fee Name</message>

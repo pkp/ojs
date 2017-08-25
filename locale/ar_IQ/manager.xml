@@ -45,7 +45,6 @@
 	<message key="manager.payment.options">الخيارات</message>
 	<message key="manager.payment.options.acceptSubscriptionPayments">هذا الأمر سيُمكن مدفوعات الاشتراكات حيث ستكون: أنواعها ومبالغها ومددها واشتراكاتها مدارة من قبل المجلة عبر (مدير الاشتراكات).</message>
 	<message key="manager.payment.options.enablePayments">أنقر هنا لتمكين وحدة المدفوعات. عليك ضبط إعدادات الدفع عبر إملاء النموذج أدناه. لاحظ أن المستخدمين عليهم الدخول إلى الموقع للقيام بدفع المال.</message>
-	<message key="manager.payment.options.fastTrackFee">التحكيم السريع</message>
 	<message key="manager.payment.options.fee">الرسم</message>
 	<message key="manager.payment.options.feeDescription">وصف الرسم</message>
 	<message key="manager.payment.options.feeName">اسم الرسم</message>

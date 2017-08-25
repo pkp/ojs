@@ -854,8 +854,6 @@
 	<message key="payment.donation.makeDonation">Сделать пожертвование</message>
 
 	<message key="payment.submission.paySubmission">Оплатить отправку материала</message>
-	<message key="payment.fastTrack.payFastTrack">Оплатить укоренное рассмотрение</message>
-	<message key="payment.fastTrack.inFastTrack">в ускоренном порядке</message>
 	<message key="payment.publication.payPublication">Оплатить публикацию</message>
 	<message key="payment.publication.publicationPaid">Публикация оплачена</message>
 

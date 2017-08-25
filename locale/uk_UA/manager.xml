@@ -47,7 +47,6 @@
        <message key="manager.payment.options">Налаштування</message>
        <message key="manager.payment.options.acceptSubscriptionPayments">Активація платежів за передплати; типи, вартість, тривалість передплат та переліки передплатників налаштовуються менеджером передплати.</message>
        <message key="manager.payment.options.enablePayments">Оберіть цей пункт, щоб включити модуль платежів. Заповніть форму нижче, щоб налаштувати платежі. Зауважте, що користувачі повинні увійти до системи, щоб здійснити платіж.</message>
-       <message key="manager.payment.options.fastTrackFee">Прискорене рецензування</message>
        <message key="manager.payment.options.fee">Розмір платежу</message>
        <message key="manager.payment.options.feeDescription">Опис платежу</message>
        <message key="manager.payment.options.feeName">Назва платежу</message>

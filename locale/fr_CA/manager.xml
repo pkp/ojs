@@ -41,7 +41,6 @@
 	<message key="manager.payment.options">Options</message>
 	<message key="manager.payment.options.acceptSubscriptionPayments">Cela activera l'application des paiements d'abonnements où les types, les frais et les utilisateurs sont gérés par le responsable des abonnements.</message>
 	<message key="manager.payment.options.enablePayments">Cliquez ici pour activer le module de Paiements. Vous devez remplir le formulaire ci-dessous pour configurer les paramètres de paiements. Veuillez noter que les utilisateurs doivent se connecter pour effectuer leurs paiements.</message>
-	<message key="manager.payment.options.fastTrackFee">Évaluation accélérée</message>
 	<message key="manager.payment.options.fee">Frais</message>
 	<message key="manager.payment.options.feeDescription">Description des frais</message>
 	<message key="manager.payment.options.feeName">Nom des frais</message>

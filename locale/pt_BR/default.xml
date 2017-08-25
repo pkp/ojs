@@ -116,14 +116,12 @@ Siga o seguinte protocolo para fazer revisões eletrônicas em seu manuscrito:
         <br />
         <pre>4. FORMATAÇÃO
         O parágrafo iniciado em "Este último elemento..." não está recuado.</pre>]]></message>
-	<message key="default.journalSettings.fastTrackFeeDescription">O pagamento desta taxa garante que a avaliação, decisão editorial, e notificação do autor ocorram em no máximo 4 semanas.</message>
 	<message key="default.journalSettings.publicationFeeDescription">Caso este documento seja aceito para publicação, será necessário o pagamento de uma taxa de publicação de artigo para auxiliar nos custos de publicação. Consulte a política de isenção de taxas.</message>
 	<message key="default.journalSettings.waiverPolicy">Caso não possa arcar com as taxas descritas, notifique a equipe editorial por meio do campo Comentários, pois não é de interesse da revista que quaisquer taxas impeçam a publicação de trabalhos de alta relevância para o público.</message>
 	<message key="default.journalSettings.membershipFeeDescription">O pagamento desta taxa garante sua inscrição nesta associação durante um ano, com acesso livre a esta revista.</message>
 	<message key="default.journalSettings.purchaseArticleFeeDescription">O pagamento da taxa permitirá visualizar, baixar e imprimir este artigo.</message>
 	<message key="section.default.title">Artigos</message>
 	<message key="section.default.abbrev">ART</message>
-	<message key="default.journalSettings.fastTrackFee">Avaliação agilizada</message>
 	<message key="default.journalSettings.publicationFee">Publicação de artigo</message>
 	<message key="default.journalSettings.purchaseArticleFee">Adquirir artigo</message>
 	<message key="default.journalSettings.membershipFee">Registro em entidade de classe</message>

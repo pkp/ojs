@@ -636,8 +636,6 @@ aktuelle adgangskode.<br /><br />Angiv din e-mail-adresse nedenfor for at nulsti
 	<message key="payment.donation.makeDonation">Foretag en donation</message>
 
 	<message key="payment.submission.paySubmission">Betal manuskriptgebyr</message>
-	<message key="payment.fastTrack.payFastTrack">Betal for FastTrack</message>
-	<message key="payment.fastTrack.inFastTrack">i FastTrack</message>
 	<message key="payment.publication.payPublication">Betal for publicering</message>
 	<message key="payment.publication.publicationPaid">Publiceringsgebyret er betalt</message>
 

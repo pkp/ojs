@@ -629,8 +629,6 @@ Actief is het aantal reviews die momenteel in overweging of behandeling zijn.]]>
 	<message key="payment.donation.makeDonation">Doe een donatie</message>
 
 	<message key="payment.submission.paySubmission">Betaal inzendingskosten</message>
-	<message key="payment.fastTrack.payFastTrack">Betaal voor snelle beoordeling</message>
-	<message key="payment.fastTrack.inFastTrack">In snelle beoordeling</message>
 	<message key="payment.publication.payPublication">Betaal om te publiceren</message>
 	<message key="payment.publication.publicationPaid">Publicatiekosten betaald</message>
 

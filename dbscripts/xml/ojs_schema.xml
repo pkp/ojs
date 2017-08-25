@@ -461,10 +461,6 @@
 		</field>
 
 		<field name="pages" type="C2" size="255"/>
-		<field name="fast_tracked" type="I1">
-			<NOTNULL/>
-			<DEFAULT VALUE="0"/>
-		</field>
 		<field name="hide_author" type="I1">
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>

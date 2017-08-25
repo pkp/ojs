@@ -795,8 +795,6 @@ Autori koji objavljuju u ovom časopisu pristaju na sljedeće uvijete:
 	<message key="payment.type.donation">Donacije</message>
 	<message key="payment.donation.makeDonation">Uplatite donaciju</message>
 	<message key="payment.submission.paySubmission">Uplatite naknadu za prijavu članka</message>
-	<message key="payment.fastTrack.payFastTrack">Uplatite naknadu za ubrzani recenzijski postupak</message>
-	<message key="payment.fastTrack.inFastTrack">Ubrzani recenzijski postupak</message>
 	<message key="payment.publication.payPublication">Uplatite naknadu za objavljivanje</message>
 	<message key="payment.publication.publicationPaid">Naknada za objavljivanje uplaćena.</message>
 	<message key="payment.membership.buyMembership">Kupite individualno članstvo</message>

@@ -40,7 +40,6 @@
 	<message key="manager.payment.options">Opcije</message>
 	<message key="manager.payment.options.acceptSubscriptionPayments">Ovo će aktivirati naplate u modulu pretplata, gdje administrator pretplate određuje tipove, iznose i trajanje pretplata te održava listu pretplatnika.</message>
 	<message key="manager.payment.options.enablePayments">Kako biste aktivirali modul za naplatu odaberite ovu opciju. Potom je potrebno kroz niže priložene opcije odrediti na koga i što se naplate odnose. Napomena: korisnici će se morati prijaviti u sustav žele li izvršiti uplatu.</message>
-	<message key="manager.payment.options.fastTrackFee">Ubrzani recenzijski postupak</message>
 	<message key="manager.payment.options.fee">Iznos</message>
 	<message key="manager.payment.options.feeDescription">Opis</message>
 	<message key="manager.payment.options.feeName">Naziv</message>

@@ -738,8 +738,6 @@ le droit de première publication, avec l’ouvrage disponible simultanément [S
 	<message key="payment.type.donation">Dons</message>
 	<message key="payment.donation.makeDonation">Faire un don</message>
 	<message key="payment.submission.paySubmission">Payer les frais de soumission</message>
-	<message key="payment.fastTrack.payFastTrack">Payer pour le mode accéléré</message>
-	<message key="payment.fastTrack.inFastTrack">en mode accéléré</message>
 	<message key="payment.publication.payPublication">Payer pour publier</message>
 	<message key="payment.publication.publicationPaid">Frais de publication payés</message>
 	<message key="payment.membership.buyMembership">Acheter une adhésion individuelle</message>

@@ -41,7 +41,6 @@
 	<message key="manager.payment.options">Alternativ</message>
 	<message key="manager.payment.options.acceptSubscriptionPayments">Detta aktiverar abonnemangsbetalningar där typer, kostnader, abonnemangsstid och abonnenter hanteras av abonnemangsansvarig.</message>
 	<message key="manager.payment.options.enablePayments">Klicka här för att akivera betalningsmodulen. Fyll i följande formulär för att konfigurera betalningsinställningarna. Obserera att Användare måste logga in för att använda betalningstjänsten.</message>
-	<message key="manager.payment.options.fastTrackFee">Snabb granskning</message>
 	<message key="manager.payment.options.fee">Avgift</message>
 	<message key="manager.payment.options.feeDescription">Avgiftsbeskrivning</message>
 	<message key="manager.payment.options.feeName">Namn på avgift</message>

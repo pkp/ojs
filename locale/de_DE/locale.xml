@@ -854,8 +854,6 @@ Die Bewertung erfolgt auf einer Skala von 1-5 (Ausgezeichnet).<br />
 	<message key="payment.donation.makeDonation">Spenden</message>
 
 	<message key="payment.submission.paySubmission">Einreichungsgebühr zahlen</message>
-	<message key="payment.fastTrack.payFastTrack">Gebühr für beschleunigte Begutachtung zahlen</message>
-	<message key="payment.fastTrack.inFastTrack">in beschleunigter Begutachtung</message>
 	<message key="payment.publication.payPublication">Veröffentlichungsgebühr zahlen</message>
 	<message key="payment.publication.publicationPaid">Veröffentlichungsgebühr bezahlt</message>
 

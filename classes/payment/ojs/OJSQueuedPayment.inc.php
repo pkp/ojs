@@ -119,11 +119,8 @@ class OJSQueuedPayment extends QueuedPayment {
 				// DEPRECATED: This is only for display of OJS 2.x data.
 				return __('payment.type.submission');
 			case PAYMENT_TYPE_FASTTRACK:
-				if ($journal->getLocalizedSetting('fastTrackFeeName') != '') {
-					return $journal->getLocalizedSetting('fastTrackFeeName');
-				} else {
-					return __('payment.type.fastTrack');
-				}
+				// DEPRECATED: This is only for display of OJS 2.x data.
+				return __('payment.type.fastTrack');
 			case PAYMENT_TYPE_PUBLICATION:
 				if ($journal->getLocalizedSetting('publicationFeeName') != '') {
 					return $journal->getLocalizedSetting('publicationFeeName');
@@ -187,11 +184,8 @@ class OJSQueuedPayment extends QueuedPayment {
 				// DEPRECATED: This is only for the display of OJS 2.x data.
 				return __('payment.type.submission');
 			case PAYMENT_TYPE_FASTTRACK:
-				if ($journal->getLocalizedSetting('fastTrackFeeDescription') != '') {
-					return $journal->getLocalizedSetting('fastTrackFeeDescription');
-				} else {
-					return __('payment.type.fastTrack');
-				}
+				// DEPRECATED: This is only for display of OJS 2.x data.
+				return __('payment.type.fastTrack');
 			case PAYMENT_TYPE_PUBLICATION:
 				if ($journal->getLocalizedSetting('publicationFeeDescription') != '') {
 					return $journal->getLocalizedSetting('publicationFeeDescription');

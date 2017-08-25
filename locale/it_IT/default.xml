@@ -74,7 +74,6 @@ Dopo che avete finito con le vostre revisioni, rinominare il file da NomeAutoreQ
 	<message key="default.journalSettings.forAuthors"><![CDATA[Interessato a proporre contributi a questa rivista? Raccomandiamo di rivedere la pagina <a href="{$indexUrl}/{$journalPath}/about">Info</a>, in particolare le politiche delle sezioni della  rivista, e le <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">linee guida per l'autore</a>. Gli autori devono <a href="{$indexUrl}/{$journalPath}/user/register">registrarsi</a> per  effettuare la prima submission alla rivista, o se gi&#x00E0; registrato pu&#x00F9; semplicemente fare il <a href="{$indexUrl}/index/login">log in</a> e cominciare il processo guidato in 5 fasi.]]></message>
 	<message key="default.journalSettings.forLibrarians"><![CDATA[Suggeriamo ai bibliotecari di aggiungere questa rivista nel loro sistema di reference linking. Inoltre, segnaliamo che il sistema open source utilizzato per la pubblicazione di questa rivista potrebbe essere proposto anche per la gestione di riviste nelle quali i bibliotecari siano coinvolti (vedi <a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a> per ulteriori dettagli).]]></message>
 	<message key="default.journalSettings.lockssLicense"><![CDATA[Questa rivista partecipa a LOCKSS  per creare un sistema di archiviazione distribuito tra biblioteche e permette a queste  di creare archivi permanenti della rivista a scopo di conservazione. <a href="http://www.lockss.org/">Prosegui...</a>]]></message>
-	<message key="default.journalSettings.fastTrackFeeDescription">Con il pagamento di questa quota, la revisione, la decisione editoriale e la notifica all'autore su questo lavoro sono garantite entro 4 settimane.</message>
 	<message key="default.journalSettings.publicationFeeDescription">Se questo articolo venisse accettato per la pubblicazione, ti sarà chiesto di pagare una quota per coprirne i costi di pubblicazione.</message>
 	<message key="default.journalSettings.checklist.addressesLinked">Dove possibile, sono stati fornite le URL dei riferimenti</message>
 	<message key="default.journalSettings.refLinkInstructions"><![CDATA[<h4>Per aggiungere link di riferimento al processo di layout</h4>
@@ -129,7 +128,6 @@ Il numero nella tabella 3 non è allineato nella prima colonna
 Il paragrafo che comincia con "Questo ultimo argomento..." non è allineato</pre></pre>]]></message>
 	<message key="section.default.title">Articoli</message>
 	<message key="section.default.abbrev">ART</message>
-	<message key="default.journalSettings.fastTrackFee">Revisione rapida</message>
 	<message key="default.journalSettings.publicationFee">Pubblicazione di un articolo</message>
 	<message key="default.journalSettings.purchaseArticleFee">Acquisto di un articolo</message>
 	<message key="default.journalSettings.membershipFee">Iscrizione</message>

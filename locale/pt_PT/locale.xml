@@ -736,8 +736,6 @@ Autores que publicam nesta revista concordam com os seguintes termos:
 	<message key="payment.type.subscription">Taxa de Subscrição</message>
 	<message key="payment.type.donation">Doações</message>
 	<message key="payment.donation.makeDonation">Realizar doação</message>
-	<message key="payment.fastTrack.payFastTrack">Pagar Acompanhamento Rápido</message>
-	<message key="payment.fastTrack.inFastTrack">em Acompanhamento Rápido</message>
 	<message key="payment.publication.payPublication">Pagar para Publicar</message>
 	<message key="payment.publication.publicationPaid">Taxa de Publicação paga</message>
 	<message key="payment.membership.buyMembership">Pagar Subscrição Individual</message>

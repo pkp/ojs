@@ -45,7 +45,6 @@
 	<message key="manager.payment.options">Параметры</message>
 	<message key="manager.payment.options.acceptSubscriptionPayments">Это активирует платежи в разделе «Подписки», где типы подписки, их стоимость и продолжительность управляются менеджером по подписке данного журнала.</message>
 	<message key="manager.payment.options.enablePayments">Щелкните здесь, чтобы включить модуль «Платежи». Вам нужно сконфигурировать настройки платежей, заполнив форму ниже. Обратите внимание, что для осуществления платежей пользователи должны будут войти на сайт под своей учетной записью.</message>
-	<message key="manager.payment.options.fastTrackFee">Ускоренное рассмотрение</message>
 	<message key="manager.payment.options.fee">Платеж</message>
 	<message key="manager.payment.options.feeDescription">Описание платежа</message>
 	<message key="manager.payment.options.feeName">Название платежа</message>

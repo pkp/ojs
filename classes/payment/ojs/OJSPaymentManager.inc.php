@@ -123,15 +123,6 @@ class OJSPaymentManager extends PaymentManager {
 	}
 
 	/**
-	 * Determine whether fast track fees are enabled.
-	 * @return boolean true iff this fee is enabled.
-	 */
-	function fastTrackEnabled() {
-		$journal = $this->request->getJournal();
-		return $this->isConfigured() && $journal->getSetting('fastTrackFeeEnabled') && $journal->getSetting('fastTrackFee') > 0;
-	}
-
-	/**
 	 * Determine whether publication fees are enabled.
 	 * @return boolean true iff this fee is enabled.
 	 */
@@ -300,13 +291,6 @@ class OJSPaymentManager extends PaymentManager {
 						SubscriptionAction::sendOnlinePaymentNotificationEmail($request, $subscription, 'SUBSCRIPTION_RENEW_INDL');
 					}
 				}
-				$returner = true;
-				break;
-			case PAYMENT_TYPE_FASTTRACK:
-				$articleDao = DAORegistry::getDAO('ArticleDAO');
-				$article = $articleDao->getById($queuedPayment->getAssocId(), $queuedPayment->getJournalId());
-				$article->setFastTracked(true);
-				$articleDao->updateObject($article);
 				$returner = true;
 				break;
 			case PAYMENT_TYPE_PURCHASE_ARTICLE:

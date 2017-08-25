@@ -147,7 +147,6 @@
 	<message key="manager.payment.authorFeesDescription">Odabrane opcije sa njihovim opisima i naknadama (koje mogu biti izmenjene ispod) će se pojaviti u Korak 1 procesu prijave članka i u O časopisu i Prijave delu kao i udelovima gde je plaćanje naknada naznačeno.</message>
 	<message key="manager.payment.generalFeesDescription">Članstvo asocijacije će se pojaviti u stranici O časopisu u delu Politike,a link za donacije će se pojaviti iznad funkcije za pretragu u okviru sa desne strane.</message>
 	<message key="manager.payment.options.enablePayments">Kliknite ovde da uključite modul Plaćanja. Morate konfigurisati podešavanja za plaćanja kompšletiranjem obrasca ispod.  Korisnici će morati da se prijave u sistem da bi izvršili plaćanje.</message>
-	<message key="manager.payment.options.fastTrackFee">Brza recenzija</message>
 	<message key="manager.payment.options.publicationFee">Objavljivanje članka</message>
 	<message key="manager.payment.options.purchaseArticleFee">Kupi članak</message>
 	<message key="manager.payment.options.text">Opis metoda plaćanja</message>

@@ -43,7 +43,6 @@
 	<message key="manager.payment.options">Opzioni</message>
 	<message key="manager.payment.options.acceptSubscriptionPayments">Questo attiverà i pagamenti per gli abbonamenti, dove le tipologie, il costo, la durata e gli abbonati sono gestiti dall'Amministratore degli abbonamenti.</message>
 	<message key="manager.payment.options.enablePayments">Clicca qui per abilitare il modulo dei pagamenti. Devi configurare le impostazioni di pagamento riempiendo il modulo qui di seguito. Si noti che agli utenti verrà richiesto di effettuare il log in per eseguire i pagamenti.</message>
-	<message key="manager.payment.options.fastTrackFee">Revisione rapida</message>
 	<message key="manager.payment.options.fee">Quota</message>
 	<message key="manager.payment.options.feeDescription">Descrizione della quota</message>
 	<message key="manager.payment.options.feeName">Nome della quota</message>

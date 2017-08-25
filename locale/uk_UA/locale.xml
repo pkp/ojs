@@ -897,8 +897,6 @@
        <message key="payment.donation.makeDonation">Зробити пожертву</message>
 
        <message key="payment.submission.paySubmission">Сплатити за подання</message>
-       <message key="payment.fastTrack.payFastTrack">Сплатити за прискорене рецензування</message>
-       <message key="payment.fastTrack.inFastTrack">поза чергою</message>
        <message key="payment.publication.payPublication">Сплатити за публікацію</message>
        <message key="payment.publication.publicationPaid">За публікацію статті сплачено</message>
 

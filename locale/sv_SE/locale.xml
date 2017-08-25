@@ -778,8 +778,6 @@ Aktiva visar antalet granskare som för tillfället arbetar med granskning.]]></
 	<message key="payment.donation.makeDonation">Gör en donation</message>
 
 	<message key="payment.submission.paySubmission">Betala abonnemangsavgift</message>
-	<message key="payment.fastTrack.payFastTrack">Betala för snabbspår</message>
-	<message key="payment.fastTrack.inFastTrack">i snabbspåret</message>
 	<message key="payment.publication.payPublication">Betala för Publicering</message>
 	<message key="payment.publication.publicationPaid">Publiceringsavgift betald</message>
 
@@ -1163,7 +1161,6 @@ The paragraph that begins "This last topic..." is not indented.</pre>]]></messag
 	<message key="about.subscriptions.institutional">Institutionella abonnemang</message>
 	<message key="installer.installApplication">Installera Open Journal Systems</message>
 	<message key="installer.upgradeApplication">Uppgradera Open Journal Systems</message>
-	<message key="default.journalSettings.fastTrackFeeDescription">Med den här avgiften garanteras att granskning och besked från redaktören sker inom fyra veckor.</message>
 	<message key="default.journalSettings.publicationFeeDescription">Om artikeln accepteras för publicering, kommer du ombedjas att betala en publiceringsavgift för att täcka publiceringskostnaderna.</message>
 	<message key="default.journalSettings.waiverPolicy">Om du inte har möjligheter att betala denna avgift finns möjlighet att avstå. Vi vill inte att eventuella finansieringsaspekter ska förhindra spridning av god forskning.</message>
 	<message key="default.journalSettings.payPerViewFeeDescription">Betalning av den här avgiften innebär att du kan läsa, ladda ner och skriva ut artikeln.</message>

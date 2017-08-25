@@ -889,8 +889,6 @@ Authors who publish with this journal agree to the following terms:
 	<message key="payment.type.donation">Donasjoner</message>
 	<message key="payment.donation.makeDonation">Gi en donasjon</message>
 	<message key="payment.submission.paySubmission">Betal innsendingsgebyr</message>
-	<message key="payment.fastTrack.payFastTrack">Betal for ekspress-fagvurdering</message>
-	<message key="payment.fastTrack.inFastTrack">til ekspress-fagvurdering</message>
 	<message key="payment.publication.payPublication">Betal publiseringsgebyr</message>
 	<message key="payment.publication.publicationPaid">Publiseringsgebyr er betalt</message>
 	<message key="payment.membership.buyMembership">Kjøp individuelt medlemskap</message>

@@ -122,8 +122,6 @@ Avsnittet som begynner med "På den annen side ..." mangler tabulatorinnrykk.]]>
 	<message key="section.default.title">Artikler</message>
 	<message key="section.default.abbrev">ART</message>
 	<message key="default.journalSettings.membershipFeeDescription">Betaling av denne avgiften gir deg medlemsskap i foreningen for ett år og gir deg gratis tilgang til dette tidsskriftet.</message>
-	<message key="default.journalSettings.fastTrackFee">Raskere fagfellevurdering</message>
-	<message key="default.journalSettings.fastTrackFeeDescription">Om du betaler denne avgiften garanterer vi at fagfellevurdering, redaksjonell vurdering og melding til forfatteren skjer i løpet av fire uker.</message>
 	<message key="default.journalSettings.publicationFee">Artikkelpublisering</message>
 	<message key="default.journalSettings.publicationFeeDescription">Om denne artikkelen blir akseptert for publisering, vil du bli bedt om å betale en publiseringsavgift for å finansiere publiseringskostnadene.</message>
 	<message key="default.journalSettings.waiverPolicy">Om du ikke har midler til å betale slike avgifter, har du mulighet til å slippe avgiften. Vi ønsker ikke at avgifter skal hindre publisering av kvalifiserte arbeider.</message>

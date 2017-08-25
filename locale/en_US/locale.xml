@@ -854,8 +854,6 @@ Active is how many reviews are currently being considered or underway.]]></messa
 	<message key="payment.donation.makeDonation">Make a donation</message>
 
 	<message key="payment.submission.paySubmission">Pay Submission Fee</message>
-	<message key="payment.fastTrack.payFastTrack">Pay to FastTrack</message>
-	<message key="payment.fastTrack.inFastTrack">in FastTrack</message>
 	<message key="payment.publication.payPublication">Pay to Publish</message>
 	<message key="payment.publication.publicationPaid">Publication Fee Paid</message>
 

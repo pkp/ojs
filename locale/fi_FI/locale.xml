@@ -856,8 +856,6 @@ Arvostelu on asteikolla 1-5 (5 = erinomainen).<br/>
 	<message key="payment.donation.makeDonation">Tee lahjoitus</message>
 
 	<message key="payment.submission.paySubmission">Maksa käsikirjoituksen lähetysmaksu</message>
-	<message key="payment.fastTrack.payFastTrack">Maksa saadaksesi nopeutetun arvioinnin</message>
-	<message key="payment.fastTrack.inFastTrack">Nopeutetussa arvioinnissa</message>
 	<message key="payment.publication.payPublication">Maksa, jotta voit julkaista</message>
 	<message key="payment.publication.publicationPaid">Julkaisumaksu maksettu</message>
 

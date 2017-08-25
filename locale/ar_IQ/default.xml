@@ -138,8 +138,6 @@
 	<message key="default.journalSettings.clockssLicense"><![CDATA[هذه المجلة تستعمل نظام CLOCKSS لخلق نظام أرشفة متوزع على المكتبات المشاركة فيه، والتي بإمكانها عبره صنع أرشيف دائم للمجلة لأغراض الحفظ والاسترجاع. <a href="http://clockss.org/">للمزيد أنظر...</a>]]></message>
 
 	<!-- Default settings for payment items. -->
-	<message key="default.journalSettings.fastTrackFee">التحكيم السريع</message>
-	<message key="default.journalSettings.fastTrackFeeDescription">بمجرد تسديد هذا الرسم، تضمن بمشيئة الله الحصول على تحكيم، قرار هيئة التحرير، وإشعار للمولفين خلال فترة 4 أسابيع تقريباً.</message>
 	<message key="default.journalSettings.publicationFee">نشر المؤلَّف العلمي</message>
 	<message key="default.journalSettings.publicationFeeDescription">إن تم قبول هذا المؤلَّف للنشر، ستتم مطالبتك بتسديد رسوم النشر لتغطية نفقات النشر.</message>
 	<message key="default.journalSettings.waiverPolicy">إن لم يكن لك تمويل يسمح بدفع هذه الرسوم، ستكون لك فرصة للمطالبة بتخفيض كل رسم منها. نحن لا نريد لتلك الرسوم أن تكون عائقاً أمام الأعمال القيمة والنافعة.</message>

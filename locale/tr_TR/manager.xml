@@ -44,7 +44,6 @@
 	<message key="manager.payment.options">Seçenekler</message>
 	<message key="manager.payment.options.acceptSubscriptionPayments">Bu abonelikler için ödemeyi aktif hale getirir. Abone Yöneticisi tarafından tür, maliyet süre ve abnelikler yönetilir.</message>
 	<message key="manager.payment.options.enablePayments">Ödeme modülünü etkinleştirmek için buraya tıklayınız. Aşağıdaki formu doldurmak için ödeme ayarları konfigürasyonunu yapmalısınız. Not: Kullanıcılar ödeme yapabilmek için giriş yapmak zorundadırlar.</message>
-	<message key="manager.payment.options.fastTrackFee">Hızlı Değerlendirme</message>
 	<message key="manager.payment.options.fee">Ücret</message>
 	<message key="manager.payment.options.feeDescription">Ücret Tanımlama</message>
 	<message key="manager.payment.options.feeName">Ücret Adı</message>

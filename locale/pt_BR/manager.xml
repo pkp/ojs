@@ -41,7 +41,6 @@
 	<message key="manager.payment.options">Opções</message>
 	<message key="manager.payment.options.acceptSubscriptionPayments">Esta ação ativará pagamento para assinaturas, sendo responsabilidade do gerente de assinaturas definir e gerenciar os tipos, taxas, duração e assinantes.</message>
 	<message key="manager.payment.options.enablePayments">Clique aqui para habilitar o módulo de pagamentos. Em seguida, configure as opções de pagamento através do formulário disponível. Usuários deverão estar cadastrados e logados no sistema para realizar pagamentos.</message>
-	<message key="manager.payment.options.fastTrackFee">Avaliação agilizada</message>
 	<message key="manager.payment.options.fee">Taxa</message>
 	<message key="manager.payment.options.feeDescription">Descrição da taxa</message>
 	<message key="manager.payment.options.feeName">Título da taxa</message>

@@ -177,18 +177,6 @@
 		<value>true</value>
 	</setting>
 	<setting type="int" locale="0">
-		<name>fastTrackFee</name>
-		<value>0</value>
-	</setting>
-	<setting type="string" locale="1">
-		<name>fastTrackFeeName</name>
-		<value>{translate key="default.journalSettings.fastTrackFee"}</value>
-	</setting>
-	<setting type="string" locale="1">
-		<name>fastTrackFeeDescription</name>
-		<value>{translate key="default.journalSettings.fastTrackFeeDescription"}</value>
-	</setting>
-	<setting type="int" locale="0">
 		<name>publicationFee</name>
 		<value>0</value>
 	</setting>

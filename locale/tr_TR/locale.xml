@@ -824,8 +824,6 @@ Artı (+) işareti ile hakemin şu anda değerlendirdiği yazılar belirtilmişt
 	<message key="payment.donation.makeDonation">Bağış Yap</message>
 
 	<message key="payment.submission.paySubmission">Gönderi Ücreti Ödeme</message>
-	<message key="payment.fastTrack.payFastTrack">Hızlandırılmış Ödeme</message>
-	<message key="payment.fastTrack.inFastTrack">Hızlandırılmış Öemede</message>
 	<message key="payment.publication.payPublication">Yayın için Ödeme</message>
 	<message key="payment.publication.publicationPaid">Yayın Ücreti Ödendi</message>
 

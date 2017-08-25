@@ -743,8 +743,6 @@ Prozesu editoriala eta argitaratze-prozesua</message>
 	<message key="payment.donation.makeDonation">Egin dohaintza bat</message>
 
 	<message key="payment.submission.paySubmission">Ordaindu bidalketa-tarifa</message>
-	<message key="payment.fastTrack.payFastTrack">Ordaindu ebaluazio azkarra</message>
-	<message key="payment.fastTrack.inFastTrack">Ebaluazio azkarrean</message>
 	<message key="payment.publication.payPublication">Ordaindu argitaratzeko</message>
 	<message key="payment.publication.publicationPaid">Argitalpen-tarifa ordainduta</message>
 

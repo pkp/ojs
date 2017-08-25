@@ -854,8 +854,6 @@ Aktif berarti berapa jumlah review yang sedang dipertimbangkan atau sedang berla
 	<message key="payment.donation.makeDonation">Berikan donasi</message>
 
 	<message key="payment.submission.paySubmission">Bayar Biaya Penyerahan Naskah</message>
-	<message key="payment.fastTrack.payFastTrack">Bayar FastTrack</message>
-	<message key="payment.fastTrack.inFastTrack">di FastTrack</message>
 	<message key="payment.publication.payPublication">Bayar Publikasi</message>
 	<message key="payment.publication.publicationPaid">Biaya Publikasi Lunas</message>
 

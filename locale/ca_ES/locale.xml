@@ -753,8 +753,6 @@
 	<message key="payment.donation.makeDonation">Fes una donació</message>
 
 	<message key="payment.submission.paySubmission">Paga la quota de tramesa</message>
-	<message key="payment.fastTrack.payFastTrack">Paga per fer la revisió ràpida</message>
-	<message key="payment.fastTrack.inFastTrack">en revisió ràpida</message>
 	<message key="payment.publication.payPublication">Paga per publicar</message>
 	<message key="payment.publication.publicationPaid">S'ha pagat la quota de publicació</message>
 

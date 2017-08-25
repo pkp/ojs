@@ -45,7 +45,6 @@
 	<message key="manager.payment.options">Opsi</message> 
 	<message key="manager.payment.options.acceptSubscriptionPayments">Aktifkan pembayaran untuk Langganan, di mana tipe, biaya, durasi dan langganan diatur oleh Manajer (Langganan) Jurnal.</message>	
 	<message key="manager.payment.options.enablePayments">Klik di sini untuk memungkinkan modul Pembayaran. Anda harus mengkonfigurasi pengaturan pembayaran dengan mengisi form di bawah ini. Catatan: Pengguna harus log in untuk melakukan pembayaran.</message>
-	<message key="manager.payment.options.fastTrackFee">Fast-Track Review</message> 
 	<message key="manager.payment.options.fee">Biaya</message> 
 	<message key="manager.payment.options.feeDescription">Deskripsi Biaya</message> 
 	<message key="manager.payment.options.feeName">Nama Biaya</message> 

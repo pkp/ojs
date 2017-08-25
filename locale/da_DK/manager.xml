@@ -42,7 +42,6 @@
 	<message key="manager.payment.options">Indstillinger</message>
 	<message key="manager.payment.options.acceptSubscriptionPayments">Dette aktiverer betalinger for abonnementer, hvor typer, omkostning, varighed og abonnenter administreres af abonnementschefen.</message>
 	<message key="manager.payment.options.enablePayments">Klik her for at aktivere betalingsmodulet. Du skal konfigurere betalingsindstillinger ved at udfylde formularen nedenfor. Bemærk! Brugere skal logge på for at kunne foretage betalinger.</message>
-	<message key="manager.payment.options.fastTrackFee">Fast Track-bedømmelse</message>
 	<message key="manager.payment.options.fee">Gebyr</message>
 	<message key="manager.payment.options.feeDescription">Beskrivelse af gebyr</message>
 	<message key="manager.payment.options.feeName">Navn på gebyr</message>

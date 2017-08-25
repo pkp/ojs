@@ -854,8 +854,6 @@
 	<message key="payment.donation.makeDonation">قدِّم هبة</message>
 
 	<message key="payment.submission.paySubmission">إدفع رسم التقديم</message>
-	<message key="payment.fastTrack.payFastTrack">إدفع للتقييم السريع</message>
-	<message key="payment.fastTrack.inFastTrack">قيد التقييم السريع</message>
 	<message key="payment.publication.payPublication">إدفع للنشر</message>
 	<message key="payment.publication.publicationPaid">تم دفع رسم النشر</message>
 

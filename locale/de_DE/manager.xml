@@ -45,7 +45,6 @@
 	<message key="manager.payment.options">Optionen</message>
 	<message key="manager.payment.options.acceptSubscriptionPayments">Hier werden Abonnementzahlungen aktiviert. Art, Kosten, Dauer und Abonnent/innen werden durch die Abonnementverwaltung verwaltet.</message>
 	<message key="manager.payment.options.enablePayments">Klicken Sie hier, um das Zahlungsmodul zu aktivieren. Sie müssen die Zahlungsmodalitäten im Formular unten konfigurieren. Bitte beachten Sie, dass die Benutzer/innen eingeloggt sein müssen, um Zahlungen vornehmen zu können.</message>
-	<message key="manager.payment.options.fastTrackFee">Beschleunigte Begutachtung</message>
 	<message key="manager.payment.options.fee">Gebühr</message>
 	<message key="manager.payment.options.feeDescription">Beschreibung der Gebühr</message>
 	<message key="manager.payment.options.feeName">Art der Gebühr</message>

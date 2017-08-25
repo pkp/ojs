@@ -110,8 +110,6 @@ ________________________________________________________________________<br/>
 	<message key="default.journalSettings.lockssLicense"><![CDATA[Dette tidsskrift benytter LOCKSS-systemet til at oprette et distribueret arkiveringssystem blandt deltagende biblioteker og tillader disse biblioteker at oprette permanente arkiver af tidsskriftet med henblik på bevaring og genskabelse. <a href="http://lockss.stanford.edu/">Mere...</a>]]></message>
 	
 	<!-- Default settings for payment items. -->
-	<message key="default.journalSettings.fastTrackFee">Fremskyndet bedømmelse</message>
-	<message key="default.journalSettings.fastTrackFeeDescription">Når gebyret er betalt, garanteres det, at bedømmelsen, den redaktionelle beslutning og forfatterunderretningen i forbindelse med dette manuskript vil blive udført i løbet af 4 uger.</message>
 	<message key="default.journalSettings.publicationFee">Publicering af artiklen</message>
 	<message key="default.journalSettings.publicationFeeDescription">Hvis dette manuskript accepteres med henblik på publicering, vil du blive bedt om at betale et artikelpubliceringsgebyr til dækning af publiceringsomkostningerne.</message>
 	<message key="default.journalSettings.waiverPolicy">Hvis du ikke har tilstrækkelige midler til betale sådanne gebyrer, har du mulighed for at give afkald på de enkelte gebyrer. Vi ønsker ikke, at gebyrer skal forhindre et værdigt værk i at blive publiceret.</message>

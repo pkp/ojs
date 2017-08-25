@@ -793,8 +793,6 @@
 	<message key="payment.donation.makeDonation">捐献</message>
 
 	<message key="payment.submission.paySubmission">支付投稿费</message>
-	<message key="payment.fastTrack.payFastTrack">支付加急费用</message>
-	<message key="payment.fastTrack.inFastTrack">加急中</message>
 	<message key="payment.publication.payPublication">支付出版费</message>
 	<message key="payment.publication.publicationPaid">出版费已经支付</message>
 

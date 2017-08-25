@@ -41,7 +41,6 @@
 	<message key="manager.payment.options">Možnosti</message>
 	<message key="manager.payment.options.acceptSubscriptionPayments">Toto aktivuje platby předplatného; typy, ceny, trvání a předplatitelé jsou spravováni manažerem předplatného.</message>
 	<message key="manager.payment.options.enablePayments">Klikněte zde pro povolení modulu plateb. Musíte nakonfigurovat nastavení plateb vyplněním níže uvedeného formuláře. Uživatelé se budou muset přihlásit, aby mohli provést platby.</message>
-	<message key="manager.payment.options.fastTrackFee">Rychlá recenze</message>
 	<message key="manager.payment.options.fee">Poplatek</message>
 	<message key="manager.payment.options.feeDescription">Popis poplatku</message>
 	<message key="manager.payment.options.feeName">Název poplatku</message>

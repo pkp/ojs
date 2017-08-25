@@ -712,8 +712,6 @@ Postavljanje LOCKSS podrške za Open Journal Systems није потребно �
 	<message key="payment.type.donation">Донације</message>
 	<message key="payment.donation.makeDonation">Уплатите донацију</message>
 	<message key="payment.submission.paySubmission">Уплатите накнаду за пријаву чланка</message>
-	<message key="payment.fastTrack.payFastTrack">Уплатите накнаду за убрзани рецензијски поступак</message>
-	<message key="payment.fastTrack.inFastTrack">Убрзани рецензијски поступак</message>
 	<message key="payment.publication.payPublication">Уплатите накнаду за објављивање</message>
 	<message key="payment.publication.publicationPaid">Накнада за објављивање уплаћена.</message>
 	<message key="payment.membership.buyMembership">Купите индивидуално чланство</message>

@@ -127,8 +127,6 @@
 		这份期刊使用LOCKSS系统建立一份在参与之图书馆之间流通的存档系统，并且允许那些图书馆基于保存和储藏的目的，建立本期刊的永久性存档文件<a href="http://lockss.stanford.edu/">更多信息...</a>]]></message>
 	
 	<!-- Default settings for payment items. -->
-	<message key="default.journalSettings.fastTrackFee">加急审阅</message>
-	<message key="default.journalSettings.fastTrackFeeDescription">随着这项费用的支付，稿件审阅，作者通知等保证4个星期内完成。</message>
 	<message key="default.journalSettings.publicationFee">论文出版</message>
 	<message key="default.journalSettings.publicationFeeDescription">如果文章被杂志录用，您将被要求支付文章出版费.</message>
 	<message key="default.journalSettings.waiverPolicy">如果你没有资金来支付这些费用，你将有机会申请免除每个费用。我们不想因为收费问题阻止了有价值的作品的发表.</message>

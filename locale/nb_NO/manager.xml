@@ -457,7 +457,6 @@
 	<message key="manager.payment.options">Alternativer</message>
 	<message key="manager.payment.options.acceptSubscriptionPayments">Dette vil slå på betalingsverktøy for abonnement. Der kan abonnementstyper, priser, varighet og abonnenter redigeres av abonnementskontakten.</message>
 	<message key="manager.payment.options.enablePayments">Klikk her for å slå på betalingsmodulen. Du må konfigurere betalingsinnstillingene ved å fylle ut skjemaet nedenfor. Vær oppmerksom på at brukerne må logge inn for å foreta betaling.</message>
-	<message key="manager.payment.options.fastTrackFee">Hurtig vurderingsprosess</message>
 	<message key="manager.payment.options.fee">Priskategori</message>
 	<message key="manager.payment.options.feeDescription">Priskategori: beskrivelse</message>
 	<message key="manager.payment.options.feeName">Priskategori: navn</message>

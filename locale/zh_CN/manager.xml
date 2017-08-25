@@ -43,7 +43,6 @@
 	<message key="manager.payment.notFound">没有找到</message>
 	<message key="manager.payment.options">支付选项管理</message>
 	<message key="manager.payment.options.enablePayments">点击这里启用支付模块.你必须填写下面的支付配置表单  注意：用户必须登录到付款.</message>
-	<message key="manager.payment.options.fastTrackFee">加急费</message>
 	<message key="manager.payment.options.fee">费用</message>
 	<message key="manager.payment.options.feeDescription">费用描述</message>
 	<message key="manager.payment.options.feeName">费用名称</message>

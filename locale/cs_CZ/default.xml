@@ -151,8 +151,6 @@ ________________________________________________________________________<br/>
 	<message key="default.journalSettings.lockssLicense"><![CDATA[Tento časopis využívá systém LOCKSS pro vytvoření distribuovaného archivačního systému mezi zúčastněnými knihovnami a dovoluje těmto knihovnám vytvářet trvalé archivy časopisu pro účely jeho uchování a obnovení. <a href="http://lockss.org/">Více...</a>]]></message>
 
 	<!-- Default settings for payment items. -->
-	<message key="default.journalSettings.fastTrackFee">Zrychlené recenzní řízení</message>
-	<message key="default.journalSettings.fastTrackFeeDescription">Po zaplacení tohoto poplatku je garantováno zpracování recenze, rozhodnutí editora a informování autora o tomto článku během 4 týdnů.</message>
 	<message key="default.journalSettings.publicationFee">Publikování článku</message>
 	<message key="default.journalSettings.publicationFeeDescription">Pokud bude tento článek přijat k publikaci, budete požádán o zaplacení Poplatku za publikování článku, který pokrývá náklady na publikování.</message>
 	<message key="default.journalSettings.waiverPolicy">Pokud nemáte prostředky na uhrazení těchto poplatků, budete mít možnost požádat o prominutí každého poplatku. Nechceme, aby poplatky zabránily odpublikování hodnotných prací.</message>

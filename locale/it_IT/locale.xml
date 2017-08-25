@@ -815,8 +815,6 @@ Attive indica quante revisioni sono attualmente in corso.]]></message>
 	<message key="payment.donation.makeDonation">Fai una donazione</message>
 
 	<message key="payment.submission.paySubmission">Paga la quota per l'invio della proposta (Submission Fee)</message>
-	<message key="payment.fastTrack.payFastTrack">Paga la quota della Revisione veloce (Fast Track Review Fee)</message>
-	<message key="payment.fastTrack.inFastTrack">Paga la quota per Revisione veloce (Fast Track Review Fee)</message>
 	<message key="payment.publication.payPublication">Paga la quota per Pubblicazione (Publication Fee)</message>
 	<message key="payment.publication.publicationPaid">Quota per la Pubblicazione (Publication Fee) pagata</message>
 

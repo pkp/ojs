@@ -154,8 +154,6 @@
 
 
        <!-- Default settings for payment items. -->
-       <message key="default.journalSettings.fastTrackFee">Прискорене рецензування</message>
-       <message key="default.journalSettings.fastTrackFeeDescription">Платникам гарантується, що їх подання буде відрецензоване і вони отримають повідомлення про рішення редактора впродовж 4 тижнів.</message>
        <message key="default.journalSettings.publicationFee">Публікація статті</message>
        <message key="default.journalSettings.publicationFeeDescription">Якщо робота буде прийнята до публікації, Вам буде необхідно перерахувати журналу оплату за публікацію статті для компенсування витрат на видання.</message>
        <message key="default.journalSettings.waiverPolicy">Якщо Ви не маєте коштів на оплату публікації, Ви можете звернутися з проханням про виняток у сплаті. Ми не хочемо, щоб оплата ставала перешкодою для публікації якісних наукових робіт.</message>

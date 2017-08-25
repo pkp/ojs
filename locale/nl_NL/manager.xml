@@ -42,7 +42,6 @@
 	<message key="manager.payment.options">Opties</message>
 	<message key="manager.payment.options.acceptSubscriptionPayments">Dit zal betaling voor abonnementen activeren. De types, kosten, duur en abonnees worden beheerd door de abonnementenbeheerder.</message>
 	<message key="manager.payment.options.enablePayments">Klik hier om de betalingsmodule in te schakelen.  U moet de betalingsinstellingen configureren door het formulier hieronder in te vullen. Merk op dat gebruikers in moeten loggen om betalingen te kunnen doen.</message>
-	<message key="manager.payment.options.fastTrackFee">Snelle review</message>
 	<message key="manager.payment.options.fee">Betaling</message>
 	<message key="manager.payment.options.feeDescription">Beschrijving van de betaling</message>
 	<message key="manager.payment.options.feeName">Naam van de betaling</message>

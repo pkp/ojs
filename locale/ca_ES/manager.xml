@@ -45,7 +45,6 @@
 	<message key="manager.payment.options">Opcions</message>
 	<message key="manager.payment.options.acceptSubscriptionPayments">Amb aquesta casella s'activen els pagaments per a les subscripcions. Això permet l’administrador/a (de subscripcions) gestionar-ne els tipus, els costos i la durada.</message>
 	<message key="manager.payment.options.enablePayments">Feu clic aquí per habilitar el mòdul «Pagaments». Empleneu el formulari que es mostra a continuació per configurar els paràmetres del pagament. Nota: els usuaris/àries han d’iniciar la sessió per poder fer pagaments.</message>
-	<message key="manager.payment.options.fastTrackFee">Revisió ràpida</message>
 	<message key="manager.payment.options.fee">Quota</message>
 	<message key="manager.payment.options.feeDescription">Descripció de la quota</message>
 	<message key="manager.payment.options.feeName">Nom de la quota</message>

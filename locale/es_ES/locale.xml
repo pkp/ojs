@@ -782,8 +782,6 @@
 	<message key="payment.donation.makeDonation">Hacer una donación</message>
 
 	<message key="payment.submission.paySubmission">Pagar cuota de envío</message>
-	<message key="payment.fastTrack.payFastTrack">Pagar para la revisión rápida</message>
-	<message key="payment.fastTrack.inFastTrack">en revisión rápida</message>
 	<message key="payment.publication.payPublication">Pagar para publicar</message>
 	<message key="payment.publication.publicationPaid">Cuota de publicación pagada</message>
 
