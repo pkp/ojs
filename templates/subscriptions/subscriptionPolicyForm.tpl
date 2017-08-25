@@ -16,7 +16,7 @@
 </script>
 <form class="pkp_form" id="subscriptionPolicies" method="post" action="{url op="saveSubscriptionPolicies"}">
 	{csrf}
-	{include file="controllers/notification/inPlaceNotification.tpl" notificationId="contactFormNotification"}
+	{include file="controllers/notification/inPlaceNotification.tpl" notificationId="subscriptionPolicyFormNotification"}
 
 	{fbvFormSection label="manager.subscriptionPolicies.subscriptionContact"}
 		<p>{translate key="manager.subscriptionPolicies.subscriptionContactDescription"}</p>
