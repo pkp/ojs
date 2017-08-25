@@ -20,7 +20,7 @@ The Dataverse plugin uses the [SWORD v2 PHP API library](https://github.com/swor
 + SimpleXML
 + Zip
 
-### OJS 2.4.4
+### OJS 2.4.4+
 
 The Dataverse plugin is included in OJS 2.4.4. Enable the plugin as usual and configure settings according to the [Dataverse Plugin Guide](https://docs.google.com/document/d/1QgxtxMaWdSZ8gI3wHDkE5EfP4W3M2Za-4DhmX_x3pY0/edit?disco=AAAAAGd77n8#).
 
