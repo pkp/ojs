@@ -40,21 +40,14 @@ See [Wiki][wiki-dev] for more complete development guide.
 
 ## Running Tests
 
-Specific requirements : [PHPunit][php-unit]. Installing with pear for example :
+We recommend using [Travis](https://travis-ci.org/) for continuous-integration
+based testing. Review the Travis configuration file (.travis.yml) as a
+reference for running the test locally, should you choose to do so.
 
-    wget https://phar.phpunit.de/phpunit.phar
-    chmod +x phpunit.phar
-    sudo mv phpunit.phar /usr/local/bin/phpunit
-
-Setting up test environment :
-
-    mysql -u root -e 'create database ojs'
-    mysql -u root ojs < tests/functional/testserver.sql
-    cp config.TRAVIS.inc.php config.inc.php
-
-Running the tests :
-
-    ./lib/pkp/tools/runAllTests.sh -Cc
+The tests include an integration test suite that builds a data environment from
+scratch, including the installation process. (This is the "-b" flag to the test
+script lib/pkp/tools/runAllTests.sh; this is also executed in the Travis
+environment.)
 
 ## Bugs / Issues
 
