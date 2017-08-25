@@ -151,8 +151,6 @@ ________________________________________________________________________<br/>
 	<message key="default.journalSettings.lockssLicense"><![CDATA[Tento časopis využívá systém LOCKSS pro vytvoření distribuovaného archivačního systému mezi zúčastněnými knihovnami a dovoluje těmto knihovnám vytvářet trvalé archivy časopisu pro účely jeho uchování a obnovení. <a href="http://lockss.org/">Více...</a>]]></message>
 
 	<!-- Default settings for payment items. -->
-	<message key="default.journalSettings.submissionFee">Odeslání příspěvku</message>
-	<message key="default.journalSettings.submissionFeeDescription">Je požadováno, aby autoři zaplatili poplatek za odeslání příspěvku jako součást procesu odesílání článku. Tento poplatek přispěje k uhrazení nákladů na recenzní řízení.</message>
 	<message key="default.journalSettings.fastTrackFee">Zrychlené recenzní řízení</message>
 	<message key="default.journalSettings.fastTrackFeeDescription">Po zaplacení tohoto poplatku je garantováno zpracování recenze, rozhodnutí editora a informování autora o tomto článku během 4 týdnů.</message>
 	<message key="default.journalSettings.publicationFee">Publikování článku</message>
@@ -162,8 +160,6 @@ ________________________________________________________________________<br/>
 	<message key="default.journalSettings.purchaseArticleFeeDescription">Zaplacení tohoto poplatku Vám zpřístupní článek pro prohlížení, stažení a vytisknutí.</message>
 	<message key="default.journalSettings.membershipFee">Členství v asociaci</message>
 	<message key="default.journalSettings.membershipFeeDescription">Zaplacení tohoto poplatku Vás přihlásí jako člena této asociace na jeden rok a poskytne Vám volný přístup k tomuto časopisu.</message>
-	<message key="default.journalSettings.donationFee">Dary časopisu</message>
-	<message key="default.journalSettings.donationFeeDescription">Dary tomuto časopisu v jakékoliv výši jsou s vděčností přijímány a poskytují editorům prostředky, které jim umožní pokračovat v poskytování časopisu nejvyšší kvality svým čtenářům.</message>
 	<message key="default.journalSettings.purchaseIssueFee">Zakoupit číslo</message>
 	<message key="default.journalSettings.purchaseIssueFeeDescription">Zaplacení tohoto poplatku vám umožní vidět, stáhnout a tisknout toto číslo.</message>
 	<message key="default.genres.article">Text článku</message>

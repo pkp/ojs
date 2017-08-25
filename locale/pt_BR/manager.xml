@@ -40,7 +40,6 @@
 	<message key="manager.payment.notFound">Não encontrado</message>
 	<message key="manager.payment.options">Opções</message>
 	<message key="manager.payment.options.acceptSubscriptionPayments">Esta ação ativará pagamento para assinaturas, sendo responsabilidade do gerente de assinaturas definir e gerenciar os tipos, taxas, duração e assinantes.</message>
-	<message key="manager.payment.options.donationFee">Doações à revista</message>
 	<message key="manager.payment.options.enablePayments">Clique aqui para habilitar o módulo de pagamentos. Em seguida, configure as opções de pagamento através do formulário disponível. Usuários deverão estar cadastrados e logados no sistema para realizar pagamentos.</message>
 	<message key="manager.payment.options.fastTrackFee">Avaliação agilizada</message>
 	<message key="manager.payment.options.fee">Taxa</message>
@@ -50,7 +49,6 @@
 	<message key="manager.payment.options.onlypdf">Restringir acesso apenas a versões PDF dos artigos</message>
 	<message key="manager.payment.options.publicationFee">Publicação de artigo</message>
 	<message key="manager.payment.options.purchaseArticleFee">Adquirir artigo</message>
-	<message key="manager.payment.options.submissionFee">Submissão de artigo</message>
 	<message key="manager.payment.options.text">Descrição do método de pagamento</message>
 	<message key="manager.payment.options.waiverPolicy">Política de isenção de taxas</message>
 	<message key="manager.payment.paymentId">Código do pagamento</message>

@@ -123,24 +123,6 @@ class OJSPaymentManager extends PaymentManager {
 	}
 
 	/**
-	 * Determine whether donations are enabled.
-	 * @return boolean true iff this fee is enabled.
-	 */
-	function donationEnabled() {
-		$journal = $this->request->getJournal();
-		return $this->isConfigured() && $journal->getSetting('donationFeeEnabled');
-	}
-
-	/**
-	 * Determine whether submission fees are enabled.
-	 * @return boolean true iff this fee is enabled.
-	 */
-	function submissionEnabled() {
-		$journal = $this->request->getJournal();
-		return $this->isConfigured() && $journal->getSetting('submissionFeeEnabled') && $journal->getSetting('submissionFee') > 0;
-	}
-
-	/**
 	 * Determine whether fast track fees are enabled.
 	 * @return boolean true iff this fee is enabled.
 	 */

@@ -138,8 +138,6 @@
 	<message key="default.journalSettings.clockssLicense"><![CDATA[Этот журнал использует систему CLOCKSS для создания распределенной архивной системы между участвующими в этой системе библиотеками и разрешает этим библиотекам создавать постоянные архивы журнала в целях сохранения и восстановления. <a href="http://clockss.org/">Подробнее...</a>]]></message>
 
 	<!-- Значения по умолчанию для элементов оплаты. -->
-	<message key="default.journalSettings.submissionFee">Отправка статьи</message>
-	<message key="default.journalSettings.submissionFeeDescription">Авторы должны оплатить отправку статьи в процессе подачи ее в журнал для компенсации затрат по организации ее рассмотрения.</message>
 	<message key="default.journalSettings.fastTrackFee">Ускоренное рассмотрение</message>
 	<message key="default.journalSettings.fastTrackFeeDescription">Оплата этой суммы гарантирует, что рецензирование, принятие решения редакцией и уведомление автора по этой рукописи пройдут в течение 4-х недель.</message>
 	<message key="default.journalSettings.publicationFee">Публикация статьи</message>
@@ -151,8 +149,6 @@
 	<message key="default.journalSettings.purchaseIssueFeeDescription">Оплата этой суммы позволит вам просматривать, скачивать и распечатывать данный выпуск.</message>
 	<message key="default.journalSettings.membershipFee">Ассоциированное членство</message>
 	<message key="default.journalSettings.membershipFeeDescription">Оплата этой суммы включит вас в список членов данной ассоциации сроком на один год и даст свободный доступ к этому журналу.</message>
-	<message key="default.journalSettings.donationFee">Добровольные пожертвования журналу</message>
-	<message key="default.journalSettings.donationFeeDescription">Мы с благодарностью принимаем любые суммы пожертвований этому журналу, они дают возможность редакторам продолжать поддерживать высокое качество журнала для своих читателей.</message>
 
 	<!-- Значения по умолчанию для групп -->
 	<message key="default.groups.name.manager">Управляющий журналом</message>

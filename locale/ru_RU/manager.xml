@@ -44,7 +44,6 @@
 	<message key="manager.payment.notFound">Не найдено</message>
 	<message key="manager.payment.options">Параметры</message>
 	<message key="manager.payment.options.acceptSubscriptionPayments">Это активирует платежи в разделе «Подписки», где типы подписки, их стоимость и продолжительность управляются менеджером по подписке данного журнала.</message>
-	<message key="manager.payment.options.donationFee">Пожертвования журналу</message>
 	<message key="manager.payment.options.enablePayments">Щелкните здесь, чтобы включить модуль «Платежи». Вам нужно сконфигурировать настройки платежей, заполнив форму ниже. Обратите внимание, что для осуществления платежей пользователи должны будут войти на сайт под своей учетной записью.</message>
 	<message key="manager.payment.options.fastTrackFee">Ускоренное рассмотрение</message>
 	<message key="manager.payment.options.fee">Платеж</message>
@@ -55,7 +54,6 @@
 	<message key="manager.payment.options.publicationFee">Публикация статьи</message>
 	<message key="manager.payment.options.purchaseArticleFee">Купить статью</message>
 	<message key="manager.payment.options.purchaseIssueFee">Купить выпуск</message>
-	<message key="manager.payment.options.submissionFee">Отправка статьи</message>
 	<message key="manager.payment.options.text">Описание метода платежа</message>
 	<message key="manager.payment.options.waiverPolicy">Правила отмены платежей</message>
 	<message key="manager.payment.paymentId">ID платежа</message>

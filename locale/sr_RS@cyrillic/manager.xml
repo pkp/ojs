@@ -104,7 +104,6 @@
 	<message key="manager.payment.noPayments">Нема плаћања</message>
 	<message key="manager.payment.notFound">Није пронађено</message>
 	<message key="manager.payment.options">Опције</message>
-	<message key="manager.payment.options.donationFee">Донације часопису</message>
 	<message key="manager.subscriptionTypes.form.durationRequired">Потребно је унети трајање.</message>
 	<message key="manager.subscriptionTypes.form.format">Формат</message>
 	<message key="manager.subscriptionTypes.form.formatRequired">Потребан је формат типа претплате.</message>
@@ -152,7 +151,6 @@
 	<message key="manager.payment.options.fastTrackFee">Брза рецензија</message>
 	<message key="manager.payment.options.publicationFee">Објављивање чланка</message>
 	<message key="manager.payment.options.purchaseArticleFee">Купи чланак</message>
-	<message key="manager.payment.options.submissionFee">Пријава чланка</message>
 	<message key="manager.payment.options.text">Опис метода плаћања</message>
 	<message key="manager.payment.options.waiverPolicy">Политика изузећа од плаћања</message>
 	<message key="manager.payment.paymentId">ID плаћања</message>

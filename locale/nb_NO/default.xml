@@ -122,9 +122,6 @@ Avsnittet som begynner med "På den annen side ..." mangler tabulatorinnrykk.]]>
 	<message key="section.default.title">Artikler</message>
 	<message key="section.default.abbrev">ART</message>
 	<message key="default.journalSettings.membershipFeeDescription">Betaling av denne avgiften gir deg medlemsskap i foreningen for ett år og gir deg gratis tilgang til dette tidsskriftet.</message>
-	<message key="default.journalSettings.donationFee">Gaver til tidsskriftet</message>
-	<message key="default.journalSettings.donationFeeDescription">Gaver - uansett beløp - til tidsskriftet tas imot med glede. Gaver gir redaktørene muligheter til å fortsette å utgi et kvalitetstidsskrift, til glede for leserne.</message>
-	<message key="default.journalSettings.submissionFeeDescription">Forfattere må betale en artikkelinnsendingsavgift som del av innsendingsprosessen, for å bidra til dekking av kostnadene ved fagfellevurdering.</message>
 	<message key="default.journalSettings.fastTrackFee">Raskere fagfellevurdering</message>
 	<message key="default.journalSettings.fastTrackFeeDescription">Om du betaler denne avgiften garanterer vi at fagfellevurdering, redaksjonell vurdering og melding til forfatteren skjer i løpet av fire uker.</message>
 	<message key="default.journalSettings.publicationFee">Artikkelpublisering</message>
@@ -133,7 +130,6 @@ Avsnittet som begynner med "På den annen side ..." mangler tabulatorinnrykk.]]>
 	<message key="default.journalSettings.purchaseArticleFee">Kjøp artikkel</message>
 	<message key="default.journalSettings.purchaseArticleFeeDescription">Betaling av denne avgiften gir deg mulighet til å se, laste ned og skrive ut denne artikkelen.</message>
 	<message key="default.journalSettings.membershipFee">Foreningsmedlemskap</message>
-	<message key="default.journalSettings.submissionFee">Artikkelinnlevering</message>
 	<message key="default.journalSettings.refLinkInstructions"><![CDATA[<h4>Å legge til lenker til referanser som del av layoutprosessen</h4>
 	<p>Når et manus gjøres om til HTML eller PDF, må du sørge for at alle hyperlenker i manuset er aktive.</p>
 	<h4>A. Når forfatteren oppgir en lenke med referansen</h4>

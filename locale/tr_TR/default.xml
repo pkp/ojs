@@ -113,8 +113,6 @@ Yeni dosyada <strong>[silinmiş sözcük]</strong> değiştirilmiş bölümler k
 	<message key="default.journalSettings.forLibrarians"><![CDATA[Kütüphanelere, bu açık erişimli dergiyi elektronik dergileri içine almaları önerilir. Açık Dergi Sitemleri ile ilgili ayrıntılı bilgi <a href="http://pkp.sfu.ca">Public Knowledge Project</a> bağlantısından elde edilebilir.]]></message>
 	<message key="default.journalSettings.lockssLicense"><![CDATA[Bu dergi, katılan kütüphanelerin koruma ve restorasyon amaçlı dağıtık kalıcı arşivler yaratmasına izin vermek için LOCKSS sistemi kullanmaktadır. <a href="http://www.lockss.org/"> LOCKSS sistemi konusunda daha fazla bilgi almak isterseniz.</a>]]></message>
 	<!-- Default settings for payment items. -->
-	<message key="default.journalSettings.submissionFee">Makale Gönderisi</message>
-	<message key="default.journalSettings.submissionFeeDescription">Yazarların, hakem değerlendirmesi için gönderi sürecinin bir parçası olarak Makale Gönderi Üceti ödemesi gereklidir.</message>
 	<message key="default.journalSettings.fastTrackFee">Hızlandırılmış Değerlendirme</message>
 	<message key="default.journalSettings.fastTrackFeeDescription">Bu ücretinin ödenmesi, gönderinin hakem değerlendirmesini, editoryal kararı ve yazar bildirimini 4 hafta içinde gerçekleştirilmesini garanti eder.</message>
 	<message key="default.journalSettings.publicationFee">Makale Yayını</message>
@@ -124,8 +122,6 @@ Yeni dosyada <strong>[silinmiş sözcük]</strong> değiştirilmiş bölümler k
 	<message key="default.journalSettings.purchaseArticleFeeDescription">Bu ücretin ödenmesi, makalenin yazdırılması, indirilmesi ve görüntülenmesine izin verir.</message>
 	<message key="default.journalSettings.membershipFee">Dernek Üyeliği</message>
 	<message key="default.journalSettings.membershipFeeDescription">Bu ücretin ödemesi bir yıl boyunca derneğin bir üyesi olarak kaydolmanızı ve bu dergiye ücretsiz erişimenizi sağlayacaktır.</message>
-	<message key="default.journalSettings.donationFee">Dergiye Bağış</message>
-	<message key="default.journalSettings.donationFeeDescription">Bu derginin herhangi bir miktarı bağış olarak alması ve okurlarına yüksek kalitede bir dergi sunmaya devam etmek istemesi düzenleyiciler için bir araç sağlamaktadır.</message>
 	<message key="default.journalSettings.purchaseIssueFee">Sayı Satın Al</message>
 	<message key="default.journalSettings.purchaseIssueFeeDescription">Ücretin ödemesi, bu sayının yazdırılması, indirilmesi ve görüntülenmesine izin verir.</message>
 	<message key="default.journalSettings.emailHeader">Aşağıdaki mesaj {$journalName} adına teslim edilecektir.

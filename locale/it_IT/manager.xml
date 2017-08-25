@@ -42,7 +42,6 @@
 	<message key="manager.payment.notFound">Non trovato</message>
 	<message key="manager.payment.options">Opzioni</message>
 	<message key="manager.payment.options.acceptSubscriptionPayments">Questo attiverà i pagamenti per gli abbonamenti, dove le tipologie, il costo, la durata e gli abbonati sono gestiti dall'Amministratore degli abbonamenti.</message>
-	<message key="manager.payment.options.donationFee">Donazioni alla rivista</message>
 	<message key="manager.payment.options.enablePayments">Clicca qui per abilitare il modulo dei pagamenti. Devi configurare le impostazioni di pagamento riempiendo il modulo qui di seguito. Si noti che agli utenti verrà richiesto di effettuare il log in per eseguire i pagamenti.</message>
 	<message key="manager.payment.options.fastTrackFee">Revisione rapida</message>
 	<message key="manager.payment.options.fee">Quota</message>
@@ -52,7 +51,6 @@
 	<message key="manager.payment.options.onlypdf">Chiudi l'accesso solo alla versione PDF degli articoli</message>
 	<message key="manager.payment.options.publicationFee">Pubblicazione di un articolo accettato</message>
 	<message key="manager.payment.options.purchaseArticleFee">Compra l'articolo</message>
-	<message key="manager.payment.options.submissionFee">Invio di una proposta (indipendentemente dall'accettazione)</message>
 	<message key="manager.payment.options.text">Descrizione del metodo di pagamento</message>
 	<message key="manager.payment.options.waiverPolicy">Politica di esenzione</message>
 	<message key="manager.payment.paymentId">ID del pagamento</message>

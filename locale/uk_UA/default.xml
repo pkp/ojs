@@ -154,8 +154,6 @@
 
 
        <!-- Default settings for payment items. -->
-       <message key="default.journalSettings.submissionFee">Подання статті</message>
-       <message key="default.journalSettings.submissionFeeDescription">Автори частково компенсують витрати на рецензування, перераховуючи журналу оплату за подання статті.</message>
        <message key="default.journalSettings.fastTrackFee">Прискорене рецензування</message>
        <message key="default.journalSettings.fastTrackFeeDescription">Платникам гарантується, що їх подання буде відрецензоване і вони отримають повідомлення про рішення редактора впродовж 4 тижнів.</message>
        <message key="default.journalSettings.publicationFee">Публікація статті</message>
@@ -165,8 +163,6 @@
        <message key="default.journalSettings.purchaseArticleFeeDescription">Платники мають змогу переглядати, завантажувати та роздруковувати цю статтю.</message>
        <message key="default.journalSettings.membershipFee">Членство у асоціації</message>
        <message key="default.journalSettings.membershipFeeDescription">Сплата цього платежу дозволить Вам на один рік стати членом цієї асоціації та отримати повний  доступ до цього журналу.</message>
-       <message key="default.journalSettings.donationFee">Пожертви журналу</message>
-       <message key="default.journalSettings.donationFeeDescription">Ми з вдячністю приймаємо пожертви будь-яких сум на розвиток журналу. Вони дають редакції додаткові можливості тримати видання на високому професійному рівні та постачати якісний контент нашій аудиторії читачів.</message>
 	<message key="default.journalSettings.purchaseIssueFee">Купити випуск</message>
 	<message key="default.journalSettings.purchaseIssueFeeDescription">Сплата цього платежу дозволить Вам переглядати, завантажувати та роздруковувати статті цього випуску.</message>
 

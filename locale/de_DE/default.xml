@@ -138,8 +138,6 @@ Befolgen Sie bitte den folgenden Ablauf, um Ihr Manuskript elektronisch zu bearb
 	<message key="default.journalSettings.clockssLicense"><![CDATA[Diese Zeitschrift benutzt das CLOCKSS-System, um ein verteiltes Archivsystem zwischen teilnehmenden Bibliotheken zu ermöglichen. Sie erlaubt diesen Bibliotheken, dauerhafte Archive der Zeitschrift zu Zwecken des Bewahrens und Wiederherstellens anzulegen. <a href="http://clockss.org/">Mehr...</a>]]></message>
 
 	<!-- Default settings for payment items. -->
-	<message key="default.journalSettings.submissionFee">Beitragseinreichung</message>
-	<message key="default.journalSettings.submissionFeeDescription">Autor/innen müssen als Teil des Einreichungsprozesses eine Einreichungsgebühr bezahlen, um sich an den Begutachtungskosten zu beteiligen.</message>
 	<message key="default.journalSettings.fastTrackFee">Beschleunigte Begutachtung</message>
 	<message key="default.journalSettings.fastTrackFeeDescription">Wenn Sie diese Gebühr zahlen, garantieren wir Ihnen, dass die Begutachtung, die Redaktionsentscheidung und die Benachrichtigung der Autorin/des Autors bezüglich dieses Manuskripts innerhalb der nächsten vier Wochen stattfinden wird.</message>
 	<message key="default.journalSettings.publicationFee">Veröffentlichung des Beitrags</message>
@@ -151,8 +149,6 @@ Befolgen Sie bitte den folgenden Ablauf, um Ihr Manuskript elektronisch zu bearb
 	<message key="default.journalSettings.purchaseIssueFeeDescription">Die Zahlung dieser Gebühr ermöglicht Ihnen, die Ausgabe anzuzeigen, herunterzuladen und auszudrucken.</message>
 	<message key="default.journalSettings.membershipFee">Mitgliedschaft</message>
 	<message key="default.journalSettings.membershipFeeDescription">Durch Zahlung dieser Gebühr werden Sie für ein Jahr Mitglied. Während dieser Zeit haben Sie kostenlosen Zugang zu dieser Zeitschrift.</message>
-	<message key="default.journalSettings.donationFee">Spenden an die Zeitschrift</message>
-	<message key="default.journalSettings.donationFeeDescription">Spenden jeglicher Höhe an diese Zeitschrift werden dankend angenommen. Sie ermöglichen es den Redakteur/innen, weiterhin eine Zeitschrift von höchster Qualität für ihre Leser/innen bereitzustellen.</message>
 
 	<!-- Group defaults -->
 	<message key="default.groups.name.manager">Zeitschriftenverwalter/in</message>

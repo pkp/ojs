@@ -95,11 +95,8 @@ class OJSQueuedPayment extends QueuedPayment {
 
 				return __('payment.type.subscription') . ' (' . $subscriptionType->getLocalizedName() . ')';
 			case PAYMENT_TYPE_DONATION:
-				if ($journal->getLocalizedSetting('donationFeeName') != '') {
-					return $journal->getLocalizedSetting('donationFeeName');
-				} else {
-					return __('payment.type.donation');
-				}
+				// DEPRECATED: This is only for display of OJS 2.x data.
+				return __('payment.type.donation');
 			case PAYMENT_TYPE_MEMBERSHIP:
 				if ($journal->getLocalizedSetting('membershipFeeName') != '') {
 					return $journal->getLocalizedSetting('membershipFeeName');
@@ -119,11 +116,8 @@ class OJSQueuedPayment extends QueuedPayment {
 					return __('payment.type.purchaseIssue');
 				}
 			case PAYMENT_TYPE_SUBMISSION:
-				if ($journal->getLocalizedSetting('submissionFeeName') != '') {
-					return $journal->getLocalizedSetting('submissionFeeName');
-				} else {
-					return __('payment.type.submission');
-				}
+				// DEPRECATED: This is only for display of OJS 2.x data.
+				return __('payment.type.submission');
 			case PAYMENT_TYPE_FASTTRACK:
 				if ($journal->getLocalizedSetting('fastTrackFeeName') != '') {
 					return $journal->getLocalizedSetting('fastTrackFeeName');
@@ -169,11 +163,8 @@ class OJSQueuedPayment extends QueuedPayment {
 				$subscriptionType = $subscriptionTypeDao->getById($subscription->getTypeId());
 				return $subscriptionType->getLocalizedDescription();
 			case PAYMENT_TYPE_DONATION:
-				if ($journal->getLocalizedSetting('donationFeeDescription') != '') {
-					return $journal->getLocalizedSetting('donationFeeDescription');
-				} else {
-					return __('payment.type.donation');
-				}
+				// DEPRECATED: This is only for display of OJS 2.x data.
+				return __('payment.type.donation');
 			case PAYMENT_TYPE_MEMBERSHIP:
 				if ($journal->getLocalizedSetting('membershipFeeDescription') != '') {
 					return $journal->getLocalizedSetting('membershipFeeDescription');
@@ -193,11 +184,8 @@ class OJSQueuedPayment extends QueuedPayment {
 					return __('payment.type.purchaseIssue');
 				}
 			case PAYMENT_TYPE_SUBMISSION:
-				if ($journal->getLocalizedSetting('submissionFeeDescription') != '') {
-					return $journal->getLocalizedSetting('submissionFeeDescription');
-				} else {
-					return __('payment.type.submission');
-				}
+				// DEPRECATED: This is only for the display of OJS 2.x data.
+				return __('payment.type.submission');
 			case PAYMENT_TYPE_FASTTRACK:
 				if ($journal->getLocalizedSetting('fastTrackFeeDescription') != '') {
 					return $journal->getLocalizedSetting('fastTrackFeeDescription');

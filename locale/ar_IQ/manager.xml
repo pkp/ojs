@@ -44,7 +44,6 @@
 	<message key="manager.payment.notFound">لم يُعثر عليه</message>
 	<message key="manager.payment.options">الخيارات</message>
 	<message key="manager.payment.options.acceptSubscriptionPayments">هذا الأمر سيُمكن مدفوعات الاشتراكات حيث ستكون: أنواعها ومبالغها ومددها واشتراكاتها مدارة من قبل المجلة عبر (مدير الاشتراكات).</message>
-	<message key="manager.payment.options.donationFee">تقديم الهبات للمجلة</message>
 	<message key="manager.payment.options.enablePayments">أنقر هنا لتمكين وحدة المدفوعات. عليك ضبط إعدادات الدفع عبر إملاء النموذج أدناه. لاحظ أن المستخدمين عليهم الدخول إلى الموقع للقيام بدفع المال.</message>
 	<message key="manager.payment.options.fastTrackFee">التحكيم السريع</message>
 	<message key="manager.payment.options.fee">الرسم</message>
@@ -55,7 +54,6 @@
 	<message key="manager.payment.options.publicationFee">نشر المؤلفات</message>
 	<message key="manager.payment.options.purchaseArticleFee">شراء مؤلَّف</message>
 	<message key="manager.payment.options.purchaseIssueFee">شراء عدد</message>
-	<message key="manager.payment.options.submissionFee">تقديم طلب نشر</message>
 	<message key="manager.payment.options.text">وصف طريقة الدفع</message>
 	<message key="manager.payment.options.waiverPolicy">سياسة الخصم</message>
 	<message key="manager.payment.paymentId">معرَّف الدفع</message>

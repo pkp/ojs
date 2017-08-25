@@ -46,8 +46,6 @@ ________________________________________________________________________<br/>
 	<message key="default.journalSettings.lockssLicense"><![CDATA[Esta revista utiliza el sistema LOCKSS para crear un sistema de archivo distribuido entre bibliotecas colaboradoras, a las que permite crear archivos permanentes de la revista con fines de conservación y restauración. <a href="http://lockss.org/">Más...</a>]]></message>
 
 	<!-- Default settings for payment items. -->
-	<message key="default.journalSettings.submissionFee">Enviar un artículo</message>
-	<message key="default.journalSettings.submissionFeeDescription">Los autores/as deben pagar una cuota de envío del artículo como parte del proceso de envío para contribuir con los costes de revisión.</message>
 	<message key="default.journalSettings.fastTrackFee">Revisión rápida</message>
 	<message key="default.journalSettings.fastTrackFeeDescription">Con el pago de esta cuota, se garantiza que la revisión, la decisión editorial y la notificación al autor/a del manuscrito tendrán lugar dentro de un plazo de 4 semanas.</message>
 	<message key="default.journalSettings.publicationFee">Publicar un artículo</message>
@@ -59,8 +57,6 @@ ________________________________________________________________________<br/>
 	<message key="default.journalSettings.purchaseIssueFeeDescription">El pago de esta cuota le permitirá visualizar, descargar e imprimir el número.</message>
 	<message key="default.journalSettings.membershipFee">Afiliación a una asociación</message>
 	<message key="default.journalSettings.membershipFeeDescription">El pago de esta cuota garantiza el alta como miembro de la asociación durante un año y le proporciona acceso gratuito a la revista.</message>
-	<message key="default.journalSettings.donationFee">Donaciones a la revista</message>
-	<message key="default.journalSettings.donationFeeDescription">Toda donación será gratamente recibida y se empleará en proporcionar recursos a los editores/as para seguir ofreciendo a los lectores/as una revista de alta calidad.</message>
 	<message key="default.journalSettings.emailHeader">El siguiente mensaje se está enviando a nombre de {$journalName}.
 ________________________________________________________________________</message>
 	<message key="default.genres.article">Texto del artículo</message>

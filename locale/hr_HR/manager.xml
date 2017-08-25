@@ -39,7 +39,6 @@
 	<message key="manager.payment.notFound">Nije pronađeno</message>
 	<message key="manager.payment.options">Opcije</message>
 	<message key="manager.payment.options.acceptSubscriptionPayments">Ovo će aktivirati naplate u modulu pretplata, gdje administrator pretplate određuje tipove, iznose i trajanje pretplata te održava listu pretplatnika.</message>
-	<message key="manager.payment.options.donationFee">Donacije časopisu</message>
 	<message key="manager.payment.options.enablePayments">Kako biste aktivirali modul za naplatu odaberite ovu opciju. Potom je potrebno kroz niže priložene opcije odrediti na koga i što se naplate odnose. Napomena: korisnici će se morati prijaviti u sustav žele li izvršiti uplatu.</message>
 	<message key="manager.payment.options.fastTrackFee">Ubrzani recenzijski postupak</message>
 	<message key="manager.payment.options.fee">Iznos</message>
@@ -49,7 +48,6 @@
 	<message key="manager.payment.options.onlypdf">Ograniči pristup samo na PDF verzije članaka</message>
 	<message key="manager.payment.options.publicationFee">Objavljivanje članka</message>
 	<message key="manager.payment.options.purchaseArticleFee">Kupovina članka</message>
-	<message key="manager.payment.options.submissionFee">Prijava članka</message>
 	<message key="manager.payment.options.text">Opis metode plaćanja</message>
 	<message key="manager.payment.options.waiverPolicy">Mogućnost izuzeća</message>
 	<message key="manager.payment.paymentId">Identifikator naplate</message>

@@ -44,7 +44,6 @@
 	<message key="manager.payment.notFound">Not Found</message>
 	<message key="manager.payment.options">Options</message>
 	<message key="manager.payment.options.acceptSubscriptionPayments">This will activate payments for Subscriptions, where types, cost, duration and subscriptions are managed by the Journal (Subscription) Manager.</message>
-	<message key="manager.payment.options.donationFee">Donations to journal</message>
 	<message key="manager.payment.options.enablePayments">Click here to enable the Payments module.  You must configure payment settings by filling in the form below.  Note Users will be required to log in to make payments.</message>
 	<message key="manager.payment.options.fastTrackFee">Fast-Track Review</message>
 	<message key="manager.payment.options.fee">Fee</message>
@@ -55,7 +54,6 @@
 	<message key="manager.payment.options.publicationFee">Article Publication</message>
 	<message key="manager.payment.options.purchaseArticleFee">Purchase Article</message>
 	<message key="manager.payment.options.purchaseIssueFee">Purchase Issue</message>
-	<message key="manager.payment.options.submissionFee">Article Submission</message>
 	<message key="manager.payment.options.text">Description of Payment Method</message>
 	<message key="manager.payment.options.waiverPolicy">Waiver Policy</message>
 	<message key="manager.payment.paymentId">Payment ID</message>
@@ -67,6 +65,7 @@
 	<message key="manager.payment.readerFeesDescription">Selected options, along with their descriptions and fees (which can be edited below), will appear in About the Journal under Policies, as well as at points where payment is required.</message>
 	<message key="manager.payment.records">Records</message>
 	<message key="manager.payments">Payments</message>
+	<message key="manager.paymentTypes">Payment Types</message>
 	<message key="manager.payment.userName">Payment ID</message>
 	<message key="manager.people.allEnrolledUsers">Users Enrolled in this Journal</message>
 	<message key="manager.people.allJournals">All Journals</message>

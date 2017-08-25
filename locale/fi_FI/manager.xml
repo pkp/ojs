@@ -44,7 +44,6 @@
 	<message key="manager.payment.notFound">Ei löydetty</message>
 	<message key="manager.payment.options">Valinnat</message>
 	<message key="manager.payment.options.acceptSubscriptionPayments">Tämä aktivoi sellaisten tilausten maksut, joissa julkaisun hallinnoija (tai tilaussihteeri) hallinnoi tilausvaihtoehtoja, hintoja, kestoja ja tilauksia.</message>
-	<message key="manager.payment.options.donationFee">Lahjoitukset julkaisulle</message>
 	<message key="manager.payment.options.enablePayments">Klikkaa tästä ottaaksesi maksutoiminnot käyttöön.  Maksuasetukset on määritettävä täyttämällä alla oleva lomake.  Huomaa, että käyttäjien täytyy kirjautua sisään suorittaakseen maksuja.</message>
 	<message key="manager.payment.options.fastTrackFee">Nopeutettu arviointi</message>
 	<message key="manager.payment.options.fee">Maksu</message>
@@ -55,7 +54,6 @@
 	<message key="manager.payment.options.publicationFee">Artikkelin julkaiseminen</message>
 	<message key="manager.payment.options.purchaseArticleFee">Osta artikkeli</message>
 	<message key="manager.payment.options.purchaseIssueFee">Osta numero</message>
-	<message key="manager.payment.options.submissionFee">Artikkelin lähetys</message>
 	<message key="manager.payment.options.text">Maksutavan kuvaus</message>
 	<message key="manager.payment.options.waiverPolicy">Maksuista luopuminen</message>
 	<message key="manager.payment.paymentId">Maksun tunniste</message>

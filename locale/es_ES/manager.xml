@@ -46,7 +46,6 @@
 	<message key="manager.payment.options">Opciones</message>
 	<message key="manager.payment.options.acceptSubscriptionPayments">Esta opción activa el pago para suscribirse a la revista. Los tipos de suscripción, el coste, la duración y las suscripciones en sí las administra el gestor/a (de suscripciones) de la revista.</message>
 	<message key="manager.payment.options.acceptGiftSubscriptionPayments">Esta opción activa el pago para donación de suscripciones y permite a los lectores/as de la revista comprar donaciones de suscripciones para otros lectores/as.</message>
-	<message key="manager.payment.options.donationFee">Donaciones a la revista</message>
 	<message key="manager.payment.options.enablePayments">Haga clic aquí para habilitar el módulo de pagos. Debe configurar las opciones de pago. Para ello, rellene el siguiente formulario. Tenga en cuenta que debe iniciar sesión para realizar cualquier pago.</message>
 	<message key="manager.payment.options.fastTrackFee">Revisión rápida</message>
 	<message key="manager.payment.options.fee">Cuota</message>
@@ -57,7 +56,6 @@
 	<message key="manager.payment.options.publicationFee">Publicar un artículo</message>
 	<message key="manager.payment.options.purchaseArticleFee">Comprar un artículo</message>
 	<message key="manager.payment.options.purchaseIssueFee">Comprar un número</message>
-	<message key="manager.payment.options.submissionFee">Enviar un artículo</message>
 	<message key="manager.payment.options.text">Descripción de la forma de pago</message>
 	<message key="manager.payment.options.waiverPolicy">Política de exención de pago</message>
 	<message key="manager.payment.paymentId">Id. del pago</message>

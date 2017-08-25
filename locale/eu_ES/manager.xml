@@ -40,7 +40,6 @@
 	<message key="manager.payment.notFound">Ez da aurkitu</message>
 	<message key="manager.payment.options">Aukerak</message>
 	<message key="manager.payment.options.acceptSubscriptionPayments">Aukera honek Harpidetzen ordainketa aktibatuko du. Motak, kostua, iraupena eta harpidedunak Harpidetzen kudeatzaileak kudeatuko ditu.</message>
-	<message key="manager.payment.options.donationFee">Aldizkarirako dohaintzak</message>
 	<message key="manager.payment.options.enablePayments">Egin klik hemen Ordainketen modulua gaitzeko.  Ordainketen ezarpenak konfiguratzeko, beheko inprimakia bete behar duzu.  Kontuan izan erabiltzaileek saioa hasi beharko dutela ordainketak egiteko.</message>
 	<message key="manager.payment.options.fastTrackFee">Ebaluazio azkarra</message>
 	<message key="manager.payment.options.fee">Tarifa</message>
@@ -50,7 +49,6 @@
 	<message key="manager.payment.options.onlypdf">Artikuluen PDF bertsiorako sarbidea bakarrik murriztu</message>
 	<message key="manager.payment.options.publicationFee">Artikulua argitaratzea</message>
 	<message key="manager.payment.options.purchaseArticleFee">Artikulua erostea</message>
-	<message key="manager.payment.options.submissionFee">Artikulua bidaltzea</message>
 	<message key="manager.payment.options.text">Ordaintzeko metodoaren azalpena</message>
 	<message key="manager.payment.options.waiverPolicy">Salbuespen-politika</message>
 	<message key="manager.payment.paymentId">Ordainketa ID</message>

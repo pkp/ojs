@@ -29,17 +29,14 @@
 	<message key="section.default.policy">Правила за рубрику</message>
 	
 	<!-- Default settings for payment items. -->
-	<message key="default.journalSettings.submissionFee">Предаја радова</message>
 	<message key="default.journalSettings.publicationFee">Објављивање радова</message>
 	<message key="default.journalSettings.publicationFeeDescription">Ако овај чланак буде прихваћен за објављивање, од вас ће се тражити да плате накнаду за објављивање.</message>
 	<message key="default.journalSettings.purchaseArticleFee">Куповина чланака</message>
 	<message key="default.journalSettings.membershipFee">Чланство асоцијација</message>
-	<message key="default.journalSettings.donationFee">Донације часопису</message>
 	<message key="default.journalSettings.purchaseIssueFee">Купи издање</message>
 	<message key="default.journalSettings.purchaseIssueFeeDescription">Плаћање овог износа ће вам омогућити да видите, преузмете или одштампате издање броја.</message>
 	<message key="default.journalSettings.privacyStatement">Имена и имејл адресе унете на овом сајту биће коришћене искључиво за наведене потребе овог часописа и неће бити доступни ни за једну другу сврху или некој другој страни.</message>
 	<message key="default.journalSettings.openAccessPolicy">Овај часопис пружа отворени приступ садржају по принципу који омогућује истраживачки рад бесплатно доступан јавности, а све у циљу веће глобалне размене знања.</message>
-	<message key="default.journalSettings.submissionFeeDescription">Аутори су дужни да плате накнаду за предају радова као део процеса предаје у сврху доприноса трошковима рецензирања.</message>
 	<message key="default.journalSettings.fastTrackFeeDescription">Са плаћањем ове надокнаде рецензентска одлука, одлука уредника и обавештење аутору биће засигурно доступни у року од 4 недеље.</message>
 	<message key="default.groups.name.manager">Технички секретар</message>
 	<message key="default.groups.plural.manager">Технички секретари</message>
@@ -75,7 +72,6 @@ ________________________________________________________________________<br/>
 	<message key="default.journalSettings.waiverPolicy">Ако немате средства да платите накнаду имаћете прилику да трађите изузеће од тих дажбина. Ми не желимо да да спречимо објављивање вредног рада.</message>
 	<message key="default.journalSettings.purchaseArticleFeeDescription">Плаћање овог износа ће вам омогућити да видите, преузмете или одштампате издање броја.</message>
 	<message key="default.journalSettings.membershipFeeDescription">Плаћање ове накнаде ће вам омогућити да постанете члан у овој асоцијацији за једну години и омогућити вам слободан приступ часопису.</message>
-	<message key="default.journalSettings.donationFeeDescription">Донација часопису у било ком износу ће бити са захвалношћу примљена и омогућити уредницима да наставе да издају часопис највишег квалитета својим читаоцима.</message>
 	<message key="default.journalSettings.lockssLicense"><![CDATA[Овај часопис користи LOCKSS систем за креирање дистрибуираног система архивирања међу библиотекама учесницама и дозвољава тим библиотекама да креирају сталне архиве часописа у сврху чувања и рестаурације.<a href="http://www.lockss.org/">Вишe...</a>]]></message>
 	<message key="default.journalSettings.clockssLicense"><![CDATA[Овај часопис користи LOCKSS систем за креирање дистрибуираног система архивирања међу библиотекама учесницама и дозвољава тим библиотекама да креирају сталне архиве часописа у сврху чувања и рестаурације.<a href="http://www.lockss.org/">Вишe...</a>]]></message>
 	<message key="default.journalSettings.copyeditInstructions">Фаза коректуре је намењена да побољша ток, јасноћу, граматику, фразе и форматирање чланка. У овој фази аутор има последњу шансу да учини суштинске измене на тексту јер је следећа фаза ограничена само на словне грешкe и исправке у форматирању.</message>

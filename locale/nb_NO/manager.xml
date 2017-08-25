@@ -456,7 +456,6 @@
 	<message key="manager.payment.notFound">Ikke funnet</message>
 	<message key="manager.payment.options">Alternativer</message>
 	<message key="manager.payment.options.acceptSubscriptionPayments">Dette vil slå på betalingsverktøy for abonnement. Der kan abonnementstyper, priser, varighet og abonnenter redigeres av abonnementskontakten.</message>
-	<message key="manager.payment.options.donationFee">Donasjoner til tidsskriftet</message>
 	<message key="manager.payment.options.enablePayments">Klikk her for å slå på betalingsmodulen. Du må konfigurere betalingsinnstillingene ved å fylle ut skjemaet nedenfor. Vær oppmerksom på at brukerne må logge inn for å foreta betaling.</message>
 	<message key="manager.payment.options.fastTrackFee">Hurtig vurderingsprosess</message>
 	<message key="manager.payment.options.fee">Priskategori</message>
@@ -466,7 +465,6 @@
 	<message key="manager.payment.options.onlypdf">Bare begrens tilgangen til PDF-versjonen av artiklene</message>
 	<message key="manager.payment.options.publicationFee">Publisering av artikkel</message>
 	<message key="manager.payment.options.purchaseArticleFee">Kjøp artikkel</message>
-	<message key="manager.payment.options.submissionFee">Innsending av artikkel</message>
 	<message key="manager.payment.options.text">Beskrivelse av betalingsmåte</message>
 	<message key="manager.payment.options.waiverPolicy">Policy mht. betalingsfrafall</message>
 	<message key="manager.payment.paymentId">Betalings-ID</message>

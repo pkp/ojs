@@ -40,7 +40,6 @@
 	<message key="manager.payment.notFound">Nenalezeno</message>
 	<message key="manager.payment.options">Možnosti</message>
 	<message key="manager.payment.options.acceptSubscriptionPayments">Toto aktivuje platby předplatného; typy, ceny, trvání a předplatitelé jsou spravováni manažerem předplatného.</message>
-	<message key="manager.payment.options.donationFee">Dary časopisu</message>
 	<message key="manager.payment.options.enablePayments">Klikněte zde pro povolení modulu plateb. Musíte nakonfigurovat nastavení plateb vyplněním níže uvedeného formuláře. Uživatelé se budou muset přihlásit, aby mohli provést platby.</message>
 	<message key="manager.payment.options.fastTrackFee">Rychlá recenze</message>
 	<message key="manager.payment.options.fee">Poplatek</message>
@@ -50,7 +49,6 @@
 	<message key="manager.payment.options.onlypdf">Pouze omezit přístup k PDF verzím čísel a článků</message>
 	<message key="manager.payment.options.publicationFee">Pulikování článku</message>
 	<message key="manager.payment.options.purchaseArticleFee">Koupit článek</message>
-	<message key="manager.payment.options.submissionFee">Odeslání článku</message>
 	<message key="manager.payment.options.text">Popis metody platby</message>
 	<message key="manager.payment.options.waiverPolicy">Pravidla odpuštění plateb</message>
 	<message key="manager.payment.paymentId">ID platby</message>

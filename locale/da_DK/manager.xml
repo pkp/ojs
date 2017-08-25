@@ -41,7 +41,6 @@
 	<message key="manager.payment.notFound">Blev ikke fundet</message>
 	<message key="manager.payment.options">Indstillinger</message>
 	<message key="manager.payment.options.acceptSubscriptionPayments">Dette aktiverer betalinger for abonnementer, hvor typer, omkostning, varighed og abonnenter administreres af abonnementschefen.</message>
-	<message key="manager.payment.options.donationFee">Donationer til tidsskrift</message>
 	<message key="manager.payment.options.enablePayments">Klik her for at aktivere betalingsmodulet. Du skal konfigurere betalingsindstillinger ved at udfylde formularen nedenfor. Bemærk! Brugere skal logge på for at kunne foretage betalinger.</message>
 	<message key="manager.payment.options.fastTrackFee">Fast Track-bedømmelse</message>
 	<message key="manager.payment.options.fee">Gebyr</message>
@@ -51,7 +50,6 @@
 	<message key="manager.payment.options.onlypdf">Begræns kun adgang til artiklers PDF-version</message>
 	<message key="manager.payment.options.publicationFee">Artikelpublicering</message>
 	<message key="manager.payment.options.purchaseArticleFee">Køb artikel</message>
-	<message key="manager.payment.options.submissionFee">Artikelmanuskript</message>
 	<message key="manager.payment.options.text">Beskrivelse af betalingsmåde</message>
 	<message key="manager.payment.options.waiverPolicy">Politik om afkald</message>
 	<message key="manager.payment.paymentId">Betalings-id</message>

@@ -138,8 +138,6 @@ Noudata seuraavaa protokollaa tehdessäsi elektronisia korjauksia käsikirjoituk
 	<message key="default.journalSettings.clockssLicense"><![CDATA[Tämä julkaisu hyödyntää CLOCKSS-järjestelmää luodakseen hajautetun arkistointijärjestelmän osallistuville kirjastoille, sekä antaa näille kirjastoille luvan luoda julkaisusta pysyviä arkistoja säilytys- ja palautustarkoituksiin. <a href="http://clockss.org/">Lisää...</a>]]></message>
 
 	<!-- Default settings for payment items. -->
-	<message key="default.journalSettings.submissionFee">Artikkelin lähetys</message>
-	<message key="default.journalSettings.submissionFeeDescription">Osana lähetysprosessia kirjoittajilta vaaditaan artikkelin lähetysmaksu, jolla katetaan arvioinnista syntyviä kustannuksia.</message>
 	<message key="default.journalSettings.fastTrackFee">Nopeutettu arviointi</message>
 	<message key="default.journalSettings.fastTrackFeeDescription">Tämän maksun maksaminen takaa sen, että arviointi, toimitukselliset päätökset sekä kirjoittajalle lähetettävät, tätä käsikirjoitusta koskevat ilmoitukset suoritetaan neljän viikon kuluessa.</message>
 	<message key="default.journalSettings.publicationFee">Artikkelin julkaiseminen</message>
@@ -151,8 +149,6 @@ Noudata seuraavaa protokollaa tehdessäsi elektronisia korjauksia käsikirjoituk
 	<message key="default.journalSettings.purchaseIssueFeeDescription">Kun maksat tämän maksun, voit katsella tätä numeroa sekä ladata ja tulostaa sen.</message>
 	<message key="default.journalSettings.membershipFee">Yhdistyksen jäsenyys</message>
 	<message key="default.journalSettings.membershipFeeDescription">Kun maksat tämän maksun, sinut lisätään tämän yhdistyksen jäseneksi yhden vuoden ajaksi. Jäsenyys antaa sinulle vapaan pääsyn tähän julkaisuun.</message>
-	<message key="default.journalSettings.donationFee">Lahjoitukset julkaisulle</message>
-	<message key="default.journalSettings.donationFeeDescription">Kaikensuuruiset, tälle julkaisulle tehdyt lahjoitukset otetaan kiitollisena vastaan. Lahjoitusten avulla toimittajat voivat jatkossakin tarjota lukijoilleen korkealaatuisen julkaisun.</message>
 
 	<!-- Group defaults -->
 	<message key="default.groups.name.manager">Julkaisun hallinnoija</message>

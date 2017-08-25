@@ -44,7 +44,6 @@
 	<message key="manager.payment.notFound">Nicht gefunden</message>
 	<message key="manager.payment.options">Optionen</message>
 	<message key="manager.payment.options.acceptSubscriptionPayments">Hier werden Abonnementzahlungen aktiviert. Art, Kosten, Dauer und Abonnent/innen werden durch die Abonnementverwaltung verwaltet.</message>
-	<message key="manager.payment.options.donationFee">Spenden an die Zeitschrift</message>
 	<message key="manager.payment.options.enablePayments">Klicken Sie hier, um das Zahlungsmodul zu aktivieren. Sie müssen die Zahlungsmodalitäten im Formular unten konfigurieren. Bitte beachten Sie, dass die Benutzer/innen eingeloggt sein müssen, um Zahlungen vornehmen zu können.</message>
 	<message key="manager.payment.options.fastTrackFee">Beschleunigte Begutachtung</message>
 	<message key="manager.payment.options.fee">Gebühr</message>
@@ -55,7 +54,6 @@
 	<message key="manager.payment.options.publicationFee">Veröffentlichung von Artikeln</message>
 	<message key="manager.payment.options.purchaseArticleFee">Artikel erwerben</message>
 	<message key="manager.payment.options.purchaseIssueFee">Ausgabe erwerben</message>
-	<message key="manager.payment.options.submissionFee">Einreichen von Artikeln</message>
 	<message key="manager.payment.options.text">Beschreibung der Zahlungsmethode</message>
 	<message key="manager.payment.options.waiverPolicy">Richtlinien zum Verzicht auf Gebühren</message>
 	<message key="manager.payment.paymentId">Zahlungs-ID</message>
