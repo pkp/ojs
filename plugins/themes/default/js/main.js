@@ -19,10 +19,14 @@
 			.attr('pkp-touch-state', '');
 	});
 
-	// Taps on nav menu items with submenus should expand on first tap
-	$('.navDropdownMenu a').on('touchstart', function(e) {
+	// Nav menu items with submenus should expand on first click/tap
+	// The `click` listener is necessary. Some phones (eg - iPhone 5 in Chrome's
+	// emulator) try to "help" when a touch is slightly off-target by firing
+	// an event on the adjacent element. However, it fires the `click` event,
+	// not the `touchstart` event when doing so.
+	$('.navDropdownMenu a').on('touchstart, click', function(e) {
 		var target = $(e.target),
-			li = target.parent('li');
+			li = target.parents('li').first();
 		if (li.length && li.attr('aria-haspopup')) {
 			var state = li.attr('pkp-touch-state') || '';
 			if (state != 'open') {
@@ -31,7 +35,8 @@
 				e.preventDefault();
 			}
 		}
-	})
+		return true;
+	});
 
 	// Register click handlers for the search panel
 	var headerSearchPanelIsClosing = false,
