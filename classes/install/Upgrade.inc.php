@@ -2367,7 +2367,8 @@ class Upgrade extends Installer {
 		$pluginSettings = DAORegistry::getDAO('PluginSettingsDAO');
 		foreach ($allPlugins as $plugin) {
 			if ($plugin->isSitePlugin()) {
-				$result = $pluginSettings->update('DELETE FROM plugin_settings WHERE setting_name = \'enabled\' AND context_id <> 0');
+				$pluginName = strtolower_codesafe($plugin->getName());
+				$result = $pluginSettings->update('DELETE FROM plugin_settings WHERE plugin_name = ? AND setting_name = \'enabled\' AND context_id <> 0', array($pluginName));
 			}
 		}
 		return true;
