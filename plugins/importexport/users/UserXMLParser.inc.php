@@ -354,7 +354,7 @@ class UserXMLParser {
 		if (empty($baseUsername)) {
 			$baseUsername = String::regexp_replace('/[^A-Z0-9]/i', '', $user->getFirstName());
 		}
-		if (empty($username)) {
+		if (empty($baseUsername)) {
 			// Default username if we can't use the user's last or first name
 			$baseUsername = 'user';
 		}
