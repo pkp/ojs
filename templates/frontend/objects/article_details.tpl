@@ -275,7 +275,12 @@
 									<ul class="citation_formats_styles">
 										{foreach from=$citationStyles item="citationStyle"}
 											<li>
-												<a aria-controls="citationOutput" href="{url page="citationstylelanguage" op="get" path=$citationStyle.id params=$citationArgs}" data-load-citation>
+												<a
+													aria-controls="citationOutput"
+													href="{url page="citationstylelanguage" op="get" path=$citationStyle.id params=$citationArgs}"
+													data-load-citation
+													data-json-href="{url page="citationstylelanguage" op="get" path=$citationStyle.id params=$citationArgsJson}"
+												>
 													{$citationStyle.title|escape}
 												</a>
 											</li>
