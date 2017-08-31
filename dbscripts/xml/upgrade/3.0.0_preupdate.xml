@@ -38,6 +38,11 @@
 		<query>CREATE TABLE article_files_migration AS (SELECT * FROM article_files)</query>
 	</sql>
 
+	<!-- Article HTML galley CSS file migration -->
+	<sql>
+		<query>CREATE TABLE article_galleys_migration AS (SELECT galley_id, file_id, style_file_id FROM article_galleys)</query>
+	</sql>
+
 	<!-- Bug #8235: Rename article* submission* -->
 	<sql>
 		<!-- article_files to submission_files -->
