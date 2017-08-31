@@ -276,7 +276,7 @@
 										{foreach from=$citationStyles item="citationStyle"}
 											<li>
 												<a aria-controls="citationOutput" href="{url page="citationstylelanguage" op="get" path=$citationStyle.id params=$citationArgs}" data-load-citation>
-													{$citationStyle.title}
+													{$citationStyle.title|escape}
 												</a>
 											</li>
 										{/foreach}
@@ -290,7 +290,7 @@
 												<li>
 													<a href="{url page="citationstylelanguage" op="download" path=$citationDownload.id params=$citationArgs}">
 														<span class="fa fa-download"></span>
-														{$citationDownload.title}
+														{$citationDownload.title|escape}
 													</a>
 												</li>
 											{/foreach}
