@@ -64,6 +64,7 @@
 	<message key="manager.payment.readerFeesDescription">Выбранные варианты, вместе с их описаниями и ценами (они могут быть изменены ниже), появятся на странице «О журнале» в разделе «Правила», а также во всех местах, где требуется оплата.</message>
 	<message key="manager.payment.records">Записи</message>
 	<message key="manager.payments">Платежи</message>
+	<message key="manager.paymentTypes">Виды платежей</message>
 	<message key="manager.payment.userName">ID платежа</message>
 	<message key="manager.people.allEnrolledUsers">Пользователи, записанные в этот журнал</message>
 	<message key="manager.people.allJournals">Все журналы</message>
