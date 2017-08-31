@@ -1057,7 +1057,7 @@
 	<message key="notification.type.userComment">Читатель добавил комментарий к «{$title}»</message>
 	<message key="notification.savedIssueMetadata">Сохранены метаданные публикации выпуска.</message>
 	<message key="notification.type.editorAssignmentTask">Была отправлена новая статья, которой нужно назначить редактора.</message>
-	<message key="notification.type.assignProductionUser">Назначить пользователя для создания гранок с помощью ссылки «Добавить» в списке «Участники».</message>
+	<message key="notification.type.assignProductionUser">Назначить пользователя для создания гранок с помощью ссылки «Назначить» в списке «Участники».</message>
 	<message key="notification.type.awaitingRepresentations">Ожидающие гранок.</message>
 
 	<!--
