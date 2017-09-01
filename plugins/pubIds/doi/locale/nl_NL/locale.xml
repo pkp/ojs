@@ -13,6 +13,7 @@
  
 <locale name="nl_NL" full_name="Nederlands">
 	<message key="plugins.pubIds.doi.displayName">DOI</message>
+	<message key="plugins.pubIds.doi.readerDisplayName">DOI</message>
 
 	<!-- settings form -->
 	<message key="plugins.pubIds.doi.manager.settings.description">Configureer de DOI plugin om DOIs in OJS te kunnen beheren en gebruiken:</message>

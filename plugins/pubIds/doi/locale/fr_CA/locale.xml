@@ -14,7 +14,7 @@
 <locale name="fr_CA" full_name="Français (Canada)">
 	<message key="plugins.pubIds.doi.displayName">DOI</message>
 	<message key="plugins.pubIds.doi.description">Ce plugiciel permet l'attribution d'identifiants numériques d'objets (DOI) à des articles, numéro ou épreuve crées dans OJS.</message>
-	<message key="plugins.pubIds.doi.readerDisplayName">DOI:</message>
+	<message key="plugins.pubIds.doi.readerDisplayName">DOI</message>
 	<message key="plugins.pubIds.doi.manager.settings.description">Veuillez configurer le plugiciel DOI pour ainsi pouvoir utiliser et gérer les DOI dans OJS:</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiObjects">Contenu de la revue</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiObjectsRequired">Veuillez choisir les objets auxquels des DOIs seront attribués.</message>

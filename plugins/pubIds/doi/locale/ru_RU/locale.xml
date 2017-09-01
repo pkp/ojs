@@ -14,7 +14,7 @@
 <locale name="ru_RU" full_name="Русский">
 	<message key="plugins.pubIds.doi.displayName">Модуль «DOI»</message>
 	<message key="plugins.pubIds.doi.description">Включает присвоение идентификаторов цифровых объектов (Digital Object Identifier) выпускам, статьям и гранкам в OJS.</message>
-	<message key="plugins.pubIds.doi.readerDisplayName">DOI:</message>
+	<message key="plugins.pubIds.doi.readerDisplayName">DOI</message>
 
 	<!-- форма настройки -->
 	<message key="plugins.pubIds.doi.manager.settings.description">Пожалуйста, настройте модуль «DOI», чтобы иметь возможность использовать DOI в OJS и управлять ими:</message>

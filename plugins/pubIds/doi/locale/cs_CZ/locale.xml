@@ -14,7 +14,7 @@
 <locale name="cs_CZ" full_name="Čeština">
 	<message key="plugins.pubIds.doi.displayName">DOI</message>
 	<message key="plugins.pubIds.doi.description">Tento plugin umožňuje přiřazení identifikátorů digitálních objektů DOI k číslům, článkům a sazebnicím v rámci OJS.</message>
-	<message key="plugins.pubIds.doi.readerDisplayName">DOI:</message>
+	<message key="plugins.pubIds.doi.readerDisplayName">DOI</message>
 	<message key="plugins.pubIds.doi.manager.settings.description">Naonfigurujte, prosím, plugin DOI, abyste mohli spravovat a používat DOI v OJS:</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiObjects">Obsah časopisu</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiObjectsRequired">Zvolte, prosím, které objekty mají mít přiděleno DOI.</message>

@@ -61,7 +61,7 @@
 	<message key="plugins.pubIds.doi.editor.clearIssueObjectsDoi">Limpar DOI da Edição</message>
 	<message key="plugins.pubIds.doi.editor.clearIssueObjectsDoi.description">Use este botão para remover todos os DOIs associados a todas as publicações (artigos, números completos, e ficheiros suplementares) actualmetne agendados para esta edição/número.</message>
 	<message key="plugins.pubIds.doi.description">Este plugin permite a atribuição do DOI a números, artigos e composições no OJS.</message>
-	<message key="plugins.pubIds.doi.readerDisplayName">DOI:</message>
+	<message key="plugins.pubIds.doi.readerDisplayName">DOI</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixCustomIdentifier">Insira um sufixo DOI individual para cada publicação. Encontrará um campo de entrada DOI adicional na página de metadados de cada publicação.</message>
 	<message key="plugins.pubIds.doi.editor.assignDoi.assigned">Foi atribuído o DOI {$pubId}.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiReassign.description">Se alterar a configuração DOI, os DOIs atribuídos não serão afectados. Uma vez guardada a configuração do DOI, use este botão para limpar todos os DOI existentes para que as novas configurações tenham efeito com as publicações existentes.</message>
