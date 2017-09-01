@@ -10,7 +10,7 @@
 {capture assign="appSpecificMenuItems"}
 	{if array_intersect(array(ROLE_ID_MANAGER), (array)$userRoles)}
 		<li aria-haspopup="true" aria-expanded="false">
-			<a name="issues" href="{url router=$smarty.const.ROUTE_PAGE page="manageIssues"}">{translate key="editor.navigation.issues"}</a>
+			<a name="issues" href="#">{translate key="editor.navigation.issues"}</a>
 			<ul>
 				<li><a href="{url router=$smarty.const.ROUTE_PAGE page="manageIssues" anchor="futureIssues"}">{translate key="editor.issues.futureIssues"}</a></li>
 				<li><a href="{url router=$smarty.const.ROUTE_PAGE page="manageIssues" anchor="backIssues"}">{translate key="editor.issues.backIssues"}</a></li>
