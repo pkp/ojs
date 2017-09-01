@@ -13,6 +13,7 @@
  
 <locale name="uk_UA" full_name="Українська">
 	<message key="plugins.pubIds.doi.displayName">DOI</message>
+	<message key="plugins.pubIds.doi.readerDisplayName">DOI</message>
 
 	<!-- settings form -->
 	<message key="plugins.pubIds.doi.manager.settings.description">Щоб мати можливість використовувати DOI у OJS, будь ласка, налаштуйте модуль DOI:</message>

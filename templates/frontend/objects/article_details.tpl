@@ -118,7 +118,8 @@
 					{assign var="doiUrl" value=$pubIdPlugin->getResolvingURL($currentJournal->getId(), $pubId)|escape}
 					<div class="item doi">
 						<span class="label">
-							{translate key="plugins.pubIds.doi.readerDisplayName"}
+							{capture assign=translatedDOI}{translate key="plugins.pubIds.doi.readerDisplayName"}{/capture}
+							{translate key="semicolon" label=$translatedDOI}
 						</span>
 						<span class="value">
 							<a href="{$doiUrl}">
@@ -128,6 +129,23 @@
 					</div>
 				{/if}
 			{/foreach}
+
+			{* Keywords *}
+			{if !empty($keywords[$currentLocale])}
+			<div class="item keywords">
+				<span class="label">
+					{capture assign=translatedKeywords}{translate key="article.subject"}{/capture}
+					{translate key="semicolon" label=$translatedKeywords}
+				</span>
+				<span class="value">
+					{foreach from=$keywords item=keyword}
+						{foreach name=keywords from=$keyword item=keywordItem}
+							{$keywordItem|escape}{if !$smarty.foreach.keywords.last}, {/if}
+						{/foreach}
+					{/foreach}
+				</span>
+			</div>
+			{/if}
 
 			{* Abstract *}
 			{if $article->getLocalizedAbstract()}
@@ -301,21 +319,6 @@
 					</div>
 				{/if}
 			</div>
-
-			{* Keywords *}
-			{* @todo keywords not yet implemented *}
-
-			{* Article Subject *}
-			{if $article->getLocalizedSubject()}
-				<div class="item subject">
-					<h3 class="label">
-						{translate key="article.subject"}
-					</h3>
-					<div class="value">
-						{$article->getLocalizedSubject()|escape}
-					</div>
-				</div>
-			{/if}
 
 			{* PubIds (requires plugins) *}
 			{foreach from=$pubIdPlugins item=pubIdPlugin}

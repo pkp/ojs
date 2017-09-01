@@ -14,7 +14,7 @@
 <locale name="ar_IQ" full_name="العربية">
 	<message key="plugins.pubIds.doi.displayName">DOI</message>
 	<message key="plugins.pubIds.doi.description">هذه الإضافة تقوم بتعيين معرفات المكونات الرقمية للمقالات، الأعداد، الألواح الطباعية، والملفات التكميلية في نظام المجلات المفتوحة.</message>
-	<message key="plugins.pubIds.doi.readerDisplayName">DOI:</message>
+	<message key="plugins.pubIds.doi.readerDisplayName">DOI</message>
 	
 	<!-- settings form -->
 	<message key="plugins.pubIds.doi.manager.settings.description">لطفاً، قم بتهيئة إضافة DOI لتتمكن من إدارة واستعمال DOI في نظام المجلات المفتوحة:</message>
