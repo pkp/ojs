@@ -129,6 +129,22 @@
 				{/if}
 			{/foreach}
 
+			{* Keywords *}
+			{if !empty($keywords[$currentLocale])}
+			<div class="item keywords">
+				<span class="label">
+					{translate key="article.subject"}
+				</span>
+				<span class="value">
+					{foreach from=$keywords item=keyword}
+						{foreach name=keywords from=$keyword item=keywordItem}
+							{$keywordItem|escape}{if !$smarty.foreach.keywords.last}, {/if}
+						{/foreach}
+					{/foreach}
+				</span>
+			</div>
+			{/if}
+
 			{* Abstract *}
 			{if $article->getLocalizedAbstract()}
 				<div class="item abstract">
