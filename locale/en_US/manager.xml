@@ -234,8 +234,9 @@
 	<message key="manager.setup.enableArchive">Enable Archiving</message>
 	<message key="manager.setup.plnPluginEnable">PLN Plugin enabled</message>
 	<message key="manager.setup.enablePLNArchive">PLN Plugin Area</message>
-	<message key="manager.setup.plnPluginNotInstalled">The PLN Plugin has not yet been installed</message>
-	<message key="manager.setup.otherLockss">Other Archiving Options</message>
+	<message key="manager.setup.plnPluginArchiving">PKP Private LOCKSS Network (PLN)</message>
+	<message key="manager.setup.plnPluginNotInstalled">The PKP Private LOCKSS Network (PLN) provides free preservation services for any OJS journal that meets a few basic criteria. The PKP PLN plugin for OJS 3 is currently in development and will be available soon.</message>
+	<message key="manager.setup.otherLockss">Alternate Archiving Options</message>
 	<message key="manager.setup.lockssEnable"><![CDATA[Enable LOCKSS to store and distribute journal content at participating libraries via a LOCKSS <a href="{$lockssUrl}" target="_blank">Publisher Manifest</a> page.]]></message>
 	<message key="manager.setup.lockssLicenseDescription"><![CDATA[A LOCKSS license will appear in About the Journal under Archiving: <a href="http://www.lockss.org/community/publishers-titles-gln/" target="_blank">LOCKSS License</a>]]></message>
 	<message key="manager.setup.lockssLicenseLabel">LOCKSS License Description</message>
