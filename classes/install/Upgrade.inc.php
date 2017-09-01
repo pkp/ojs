@@ -2434,6 +2434,7 @@ class Upgrade extends Installer {
 				$result = $pluginSettings->update('DELETE FROM plugin_settings WHERE plugin_name = ? AND setting_name = \'enabled\' AND context_id <> 0', array($pluginName));
 			}
 		}
+
 		return true;
 	}
 
@@ -2493,7 +2494,23 @@ class Upgrade extends Installer {
 		return true;
 	}
 
+	/**
+	 * For 3.1.0 upgrade.  DefaultMenus Defaults
+	 */
+	function installDefaultNavigationMenus() {
+		$journalDao = DAORegistry::getDAO('JournalDAO');
+		$navigationMenuDao = DAORegistry::getDAO('NavigationMenuDAO');
+		$navigationMenuItemDao = DAORegistry::getDAO('NavigationMenuItemDAO');
 
+		$journals = $journalDao->getAll();
+		while ($journal = $journals->next()) {
+			$navigationMenuDao->installSettings($journal->getId(), 'registry/navigationMenus.xml');
+			$navigationMenuItemDao->installSettings($journal->getId(), 'registry/navigationMenuItems.xml');
+			$navigationMenuItemDao->installSettings($journal->getId(), 'registry/announcementNavigationMenuItems.xml');
+		}
+
+		return true;
+	}
 }
 
 ?>
