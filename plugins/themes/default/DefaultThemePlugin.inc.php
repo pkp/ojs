@@ -149,6 +149,11 @@ class DefaultThemePlugin extends ThemePlugin {
 		$this->addScript('jQueryUI', $jqueryUI, array('baseUrl' => ''));
 		$this->addScript('jQueryTagIt', $request->getBaseUrl() . '/lib/pkp/js/lib/jquery/plugins/jquery.tag-it.js', array('baseUrl' => ''));
 
+		// Load Bootsrap's dropdown
+		$this->addScript('popper', 'js/lib/popper/popper.js');
+		$this->addScript('bsUtil', 'js/lib/bootstrap/util.js');
+		$this->addScript('bsDropdown', 'js/lib/bootstrap/dropdown.js');
+
 		// Load custom JavaScript for this theme
 		$this->addScript('default', 'js/main.js');
 	}
