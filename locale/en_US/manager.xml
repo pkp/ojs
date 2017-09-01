@@ -247,6 +247,8 @@
 	<message key="manager.setup.clockssLicenseLabel">CLOCKSS License Description</message>
 	<message key="manager.setup.clockssRegister"><![CDATA[Sign up for the CLOCKSS service by visiting <a href="http://clockss.org/" target="_blank">the CLOCKSS website</a>.]]></message>
 	<message key="manager.setup.clockssTitle">CLOCKSS</message>
+	<message key="manager.setup.porticoEnable"><![CDATA[Enable Portico]]></message>
+	<message key="manager.setup.porticoTitle">Portico</message>
 	<message key="manager.setup.Issn">ISSN</message>
 	<message key="manager.setup.look">The Look</message>
 	<message key="manager.setup.look.description">Homepage header, content, journal header, footer, navigation bar, and style sheet.</message>
