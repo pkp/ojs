@@ -67,7 +67,7 @@ class DublinCoreMetaPlugin extends GenericPlugin {
 		}
 
 		$i=0;
-		foreach (explode($article->getAuthorString(), ', ') as $author) {
+		foreach (explode(', ', $article->getAuthorString()) as $author) {
 			$templateMgr->addHeader('dublinCoreAuthor' . $i++, '<meta name="DC.Creator.PersonalName" content="' . htmlspecialchars($author) . '"/>');
 		}
 
@@ -119,9 +119,11 @@ class DublinCoreMetaPlugin extends GenericPlugin {
 		$templateMgr->addHeader('dublinCoreSourceUri', '<meta name="DC.Source.URI" content="' . $request->url($journal->getPath()) . '"/>');
 
 		$i=0;
-		if ($subjects = $article->getSubject(null)) foreach ($subjects as $locale => $localeSubject) {
-			foreach (explode($localeSubject, '; ') as $subject) if ($subject) {
-				$templateMgr->addHeader('dublinCoreSubject' . $i++, '<meta name="DC.Subject" xml:lang="' . htmlspecialchars(substr($locale, 0, 2)) . '" content="' . htmlspecialchars($subject) . '"/>');
+		$dao = DAORegistry::getDAO('SubmissionKeywordDAO');
+		$keywords = $dao->getKeywords($article->getId(), array(AppLocale::getLocale()));
+		foreach ($keywords as $locale => $localeKeywords) {
+			foreach ($localeKeywords as $keyword) {
+				$templateMgr->addHeader('dublinCoreSubject' . $i++, '<meta name="DC.Subject" xml:lang="' . htmlspecialchars(substr($locale, 0, 2)) . '" content="' . htmlspecialchars($keyword) . '"/>');
 			}
 		}
 
