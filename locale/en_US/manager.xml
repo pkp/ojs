@@ -233,7 +233,6 @@
 	<message key="manager.setup.listsDescription">Limit the number of items (for example, submissions, users, or editing assignments) to show in a list before showing subsequent items in another page. Also, limit the number of links to display to subsequent pages of the list.</message>
 	<message key="manager.setup.enableArchive">Enable Archiving</message>
 	<message key="manager.setup.plnPluginEnable">PLN Plugin enabled</message>
-	<message key="manager.setup.enablePLNArchive">PLN Plugin Area</message>
 	<message key="manager.setup.plnPluginArchiving">PKP Private LOCKSS Network (PLN)</message>
 	<message key="manager.setup.plnPluginNotInstalled">The PKP Private LOCKSS Network (PLN) provides free preservation services for any OJS journal that meets a few basic criteria. The PKP PLN plugin for OJS 3 is currently in development and will be available soon.</message>
 	<message key="manager.setup.otherLockss">Alternate Archiving Options</message>
