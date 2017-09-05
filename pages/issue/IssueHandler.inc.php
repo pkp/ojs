@@ -310,7 +310,7 @@ class IssueHandler extends Handler {
 
 			$articleExpiryPartial = array();
 			foreach ($publishedArticlesTemp as $publishedArticle) {
-				$partial = $issueAction->subscribedUser($journal, $issue->getId(), $publishedArticle->getId());
+				$partial = $issueAction->subscribedUser($user, $journal, $issue->getId(), $publishedArticle->getId());
 				if (!$partial) $issueAction->subscribedDomain($request, $journal, $issue->getId(), $publishedArticle->getId());
 				$articleExpiryPartial[$publishedArticle->getId()] = $partial;
 			}
