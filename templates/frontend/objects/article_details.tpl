@@ -109,11 +109,7 @@
 				{if $pubIdPlugin->getPubIdType() != 'doi'}
 					{php}continue;{/php}
 				{/if}
-				{if $issue->getPublished()}
-					{assign var=pubId value=$article->getStoredPubId($pubIdPlugin->getPubIdType())}
-				{else}
-					{assign var=pubId value=$pubIdPlugin->getPubId($article)}{* Preview pubId *}
-				{/if}
+				{assign var=pubId value=$article->getStoredPubId($pubIdPlugin->getPubIdType())}
 				{if $pubId}
 					{assign var="doiUrl" value=$pubIdPlugin->getResolvingURL($currentJournal->getId(), $pubId)|escape}
 					<div class="item doi">
@@ -325,11 +321,7 @@
 				{if $pubIdPlugin->getPubIdType() == 'doi'}
 					{php}continue;{/php}
 				{/if}
-				{if $issue->getPublished()}
-					{assign var=pubId value=$article->getStoredPubId($pubIdPlugin->getPubIdType())}
-				{else}
-					{assign var=pubId value=$pubIdPlugin->getPubId($article)}{* Preview pubId *}
-				{/if}
+				{assign var=pubId value=$article->getStoredPubId($pubIdPlugin->getPubIdType())}
 				{if $pubId}
 					<div class="item pubid">
 						<div class="label">
