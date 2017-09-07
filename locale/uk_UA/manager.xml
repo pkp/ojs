@@ -37,7 +37,6 @@
        <message key="manager.payment.enable">Дозволити</message>
        <message key="manager.payment.feePaymentOptions">Налаштування платежів</message>
        <message key="manager.payment.form.numeric">Всі розміри платежів повинні мати позитивні цифрові значення (дозволяються крапкові десяткові розділювачі)</message>
-       <message key="manager.payment.giftFeesDescription">Посилання на подарункові платежі з'явиться на сторінці "Передплати" розділу "Про журнал" разом з іншою інформацією щодо передплат.</message>
        <message key="manager.payment.options.acceptGiftSubscriptionPayments">У цьому пункті активуються платежі за подарункові передплати. Це дозволить читачам журналу купувати передплати як подарунки іншим читачам.</message>
        <message key="manager.payment.generalFees">Загальні платежі</message>
        <message key="manager.payment.generalFeesDescription">Посилання "Членство у асоціації" з'явиться у розділі "Політика" сторінки "Про журнал", кнопка для пожертв з'явиться над блоком пошуку правої бічної панелі.</message>

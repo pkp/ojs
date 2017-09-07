@@ -477,8 +477,6 @@
 	<message key="manager.subscriptionTypes.form.individual">Individual (utilizadores validados via autenticação)</message>
 	<message key="manager.subscriptionTypes.form.options">Opções</message>
 	<message key="manager.language.submissions">Submissões</message>
-	<message key="manager.payment.giftFees">Valores dos Donativos</message>
-	<message key="manager.payment.giftFeesDescription">Será exibido um link para donativos das assinaturas na página das Asssinaturas em Sobre a Revista e integrado no bloco lateral de assinaturas.</message>
 	<message key="manager.payment.options.acceptGiftSubscriptionPayments">Esta acção activará os pagamentos para a assinatura de donativos, permitindo aos leitores oferecer assinaturas a outros leitores.</message>
 	<message key="manager.payment.options.purchaseIssueFee">Comprar Número</message>
 	<message key="manager.sections.confirmDelete">Tem a certeza que pretende eliminar permanentemente esta secção?</message>

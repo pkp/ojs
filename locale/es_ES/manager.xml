@@ -36,8 +36,6 @@
 	<message key="manager.payment.enable">Habilitar</message>
 	<message key="manager.payment.feePaymentOptions">Opciones de pago de la cuota</message>
 	<message key="manager.payment.form.numeric">Todos los costes deben tener un valor numérico positivo (se permite el uso de decimales)</message>
-	<message key="manager.payment.giftFees">Donación de cuotas</message>
-	<message key="manager.payment.giftFeesDescription">Un enlace de donación de suscripciones aparecerá en la página de suscripciones en la sección Acerca de la revista y como elemento del bloque de la barra lateral de suscripciones.</message>
 	<message key="manager.payment.generalFees">Cuotas generales</message>
 	<message key="manager.payment.generalFeesDescription">La sección de Miembros de la asociación se mostrará en la sección Acerca de la revista, debajo de Políticas, y el enlace para realizar donaciones aparecerá sobre el buscador, en la parte derecha de la ventana.</message>
 	<message key="manager.payment.generalOptions">Opciones generales</message>
