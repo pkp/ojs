@@ -84,16 +84,15 @@ class AcronPlugin extends GenericPlugin {
 	/**
 	 * @see GenericPlugin::getManagementVerbs()
 	 */
-	function getManagementVerbs() {
+	function getManagementVerbs($verbs = array()) {
 		$isEnabled = $this->getSetting(0, 'enabled');
 
-		$verbs = array();
 		$verbs[] = array(
-		($isEnabled?'disable':'enable'),
-		__($isEnabled?'manager.plugins.disable':'manager.plugins.enable')
+			($isEnabled?'disable':'enable'),
+			__($isEnabled?'manager.plugins.disable':'manager.plugins.enable')
 		);
 		$verbs[] = array(
-				'reload', __('plugins.generic.acron.reload')
+			'reload', __('plugins.generic.acron.reload')
 		);
 		return $verbs;
 	}
@@ -101,7 +100,7 @@ class AcronPlugin extends GenericPlugin {
 	/**
 	 * @see GenericPlugin::manage()
 	 */
-	function manage($verb, $args, &$message) {
+	function manage($verb, $args, &$message, &$messageParams, $request = null) {
 		switch ($verb) {
 			case 'enable':
 				$this->updateSetting(0, 'enabled', true);

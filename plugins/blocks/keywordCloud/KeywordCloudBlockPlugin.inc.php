@@ -61,7 +61,7 @@ class KeywordCloudBlockPlugin extends BlockPlugin {
 	 * @param $templateMgr object
 	 * @return $string
 	 */
-	function getContents(&$templateMgr) {
+	function getContents($templateMgr, $request = null) {
 		$journal =& Request::getJournal();
 
 		$cacheManager =& CacheManager::getManager();
@@ -81,7 +81,7 @@ class KeywordCloudBlockPlugin extends BlockPlugin {
 		$templateMgr->assign_by_ref('cloudKeywords', $keywords);
 		$templateMgr->assign_by_ref('maxOccurs', $maxOccurs);
 
-		return parent::getContents($templateMgr);
+		return parent::getContents($templateMgr, $request);
 	}
 }
 

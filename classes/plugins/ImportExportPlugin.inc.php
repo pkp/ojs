@@ -86,7 +86,7 @@ class ImportExportPlugin extends Plugin {
 	 * @param $args array The array of arguments the user supplied.
 	 * @param $request Request
 	 */
-	function display(&$args, $request) {
+	function display($args, $request) {
 		$templateManager =& TemplateManager::getManager();
 		$templateManager->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
 	}
@@ -111,19 +111,19 @@ class ImportExportPlugin extends Plugin {
 	/**
 	 * Display verbs for the management interface.
 	 */
-	function getManagementVerbs() {
-		return array(
+	function getManagementVerbs($verbs = array()) {
+		return array_merge($verbs, array(
 			array(
 				'importexport',
 				__('manager.importExport')
 			)
-		);
+		));
 	}
 
 	/**
 	 * Perform management functions
 	 */
-	function manage($verb, $args, $message, $messageParams = null, $request = null) {
+	function manage($verb, $args, &$message, &$messageParams, $request = null) {
 		if ($verb === 'importexport') {
 			Request::redirect(null, 'manager', 'importexport', array('plugin', $this->getName()));
 		}

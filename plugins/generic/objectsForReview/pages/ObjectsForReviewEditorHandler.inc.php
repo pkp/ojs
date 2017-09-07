@@ -413,7 +413,7 @@ class ObjectsForReviewEditorHandler extends Handler {
 			$searchMatch = $request->getUserVar('searchMatch');
 
 		} else if (isset($searchInitial)) {
-			$searchInitial = String::strtoupper($searchInitial);
+			$searchInitial = PKPString::strtoupper($searchInitial);
 			$searchField = USER_FIELD_INITIAL;
 			$search = $searchInitial;
 		}
@@ -1106,33 +1106,33 @@ class ObjectsForReviewEditorHandler extends Handler {
 				$dueDateTimestamp = time() + ($dueWeeks * 7 * 24 * 60 * 60);
 				$paramArray = array(
 					'authorName' => strip_tags($userFullName),
-					'authorMailingAddress' => String::html2text($userMailingAddress),
+					'authorMailingAddress' => PKPString::html2text($userMailingAddress),
 					'objectForReviewTitle' => '"' . strip_tags($objectForReview->getTitle()) . '"',
 					'objectForReviewDueDate' => date('l, F j, Y', $dueDateTimestamp),
 					'userProfileUrl' => $request->url(null, 'user', 'profile'),
 					'submissionUrl' => $request->url(null, 'author', 'submit'),
-					'editorialContactSignature' => String::html2text($editorContactSignature)
+					'editorialContactSignature' => PKPString::html2text($editorContactSignature)
 				);
 			} elseif ($action == 'OFR_OBJECT_DENIED') {
 				$paramArray = array(
 					'authorName' => strip_tags($userFullName),
 					'objectForReviewTitle' => '"' . strip_tags($objectForReview->getTitle()) . '"',
 					'submissionUrl' => $request->url(null, 'author', 'submit'),
-					'editorialContactSignature' => String::html2text($editorContactSignature)
+					'editorialContactSignature' => PKPString::html2text($editorContactSignature)
 				);
 			} elseif ($action == 'OFR_OBJECT_MAILED') {
 				$paramArray = array(
 					'authorName' => strip_tags($userFullName),
-					'authorMailingAddress' => String::html2text($userMailingAddress),
+					'authorMailingAddress' => PKPString::html2text($userMailingAddress),
 					'objectForReviewTitle' => '"' . strip_tags($objectForReview->getTitle()) . '"',
 					'submissionUrl' => $request->url(null, 'author', 'submit'),
-					'editorialContactSignature' => String::html2text($editorContactSignature)
+					'editorialContactSignature' => PKPString::html2text($editorContactSignature)
 				);
 			} elseif ($action == 'OFR_REVIEWER_REMOVED') {
 				$paramArray = array(
 					'authorName' => strip_tags($userFullName),
 					'objectForReviewTitle' => '"' . strip_tags($objectForReview->getTitle()) . '"',
-					'editorialContactSignature' => String::html2text($editorContactSignature)
+					'editorialContactSignature' => PKPString::html2text($editorContactSignature)
 				);
 			}
 			$email->addRecipient($userEmail, $userFullName);

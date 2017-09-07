@@ -116,8 +116,7 @@ class ThesisPlugin extends GenericPlugin {
 	/**
 	 * Display verbs for the management interface.
 	 */
-	function getManagementVerbs() {
-		$verbs = array();
+	function getManagementVerbs($verbs = array()) {
 		if ($this->getEnabled()) {
 			$verbs[] = array('theses', __('plugins.generic.thesis.manager.theses'));
 			$verbs[] = array('settings', __('plugins.generic.thesis.manager.settings'));
@@ -176,8 +175,8 @@ class ThesisPlugin extends GenericPlugin {
 	 * @param $messageParams array Parameters for the message key
 	 * @return boolean
 	 */
-	function manage($verb, $args, &$message, &$messageParams) {
-		if (!parent::manage($verb, $args, $message, $messageParams)) return false;
+	function manage($verb, $args, &$message, &$messageParams, $request = null) {
+		if (!parent::manage($verb, $args, $message, $messageParams, $request)) return false;
 
 		AppLocale::requireComponents(LOCALE_COMPONENT_APPLICATION_COMMON,  LOCALE_COMPONENT_PKP_MANAGER, LOCALE_COMPONENT_PKP_USER);
 		$templateMgr =& TemplateManager::getManager();

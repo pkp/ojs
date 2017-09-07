@@ -92,7 +92,7 @@ class FunctionalEditingBaseTestCase extends WebTestCase {
 		// We should now have the article ID in the URL.
 		$url = $this->getLocation();
 		$matches = null;
-		String::regexp_match_get('/articleId=([0-9]+)/', $url, $matches);
+		PKPString::regexp_match_get('/articleId=([0-9]+)/', $url, $matches);
 		self::assertTrue(count($matches) == 2);
 		$articleId = $matches[1];
 		self::assertTrue(is_numeric($articleId));

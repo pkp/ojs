@@ -57,7 +57,7 @@ class NotificationBlockPlugin extends BlockPlugin {
 	}
 
 
-	function getContents(&$templateMgr) {
+	function getContents($templateMgr, $request = null) {
 		$user =& Request::getUser();
 		$journal =& Request::getJournal();
 
@@ -67,7 +67,7 @@ class NotificationBlockPlugin extends BlockPlugin {
 			$templateMgr->assign('unreadNotifications',  $notificationDao->getNotificationCount(false, $userId, $journal->getId()));
 		}
 
-		return parent::getContents($templateMgr);
+		return parent::getContents($templateMgr, $request);
 	}
 }
 

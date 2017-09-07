@@ -140,7 +140,7 @@ class UsageStatsOptoutBlockPlugin extends BlockPlugin {
 	/**
 	 * @see BlockPlugin::getContents()
 	 */
-	function getContents(&$templateMgr, $request) {
+	function getContents($templateMgr, $request = null) {
 		$router = $request->getRouter(); /* @var $router PageRouter */
 		$privacyInfoUrl = $router->url($request, null, 'usageStats', 'privacyInformation');
 		$templateMgr->assign('privacyInfoUrl', $privacyInfoUrl);

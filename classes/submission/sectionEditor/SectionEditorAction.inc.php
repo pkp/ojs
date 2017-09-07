@@ -269,7 +269,7 @@ class SectionEditorAction extends Action {
 						'reviewerUsername' => $reviewer->getUsername(),
 						'reviewerPassword' => $reviewer->getPassword(),
 						'editorialContactSignature' => $user->getContactSignature(),
-						'reviewGuidelines' => String::html2text($journal->getLocalizedSetting('reviewGuidelines')),
+						'reviewGuidelines' => PKPString::html2text($journal->getLocalizedSetting('reviewGuidelines')),
 						'submissionReviewUrl' => $submissionUrl,
 						'abstractTermIfEnabled' => ($sectionEditorSubmission->getLocalizedAbstract() == ''?'':__('article.abstract')),
 						'passwordResetUrl' => $request->url(null, 'login', 'resetPassword', $reviewer->getUsername(), array('confirm' => Validation::generatePasswordResetHash($reviewer->getId())))
@@ -2122,11 +2122,11 @@ class SectionEditorAction extends Action {
 						$articleComments =& $articleCommentDao->getArticleComments($sectionEditorSubmission->getId(), COMMENT_TYPE_PEER_REVIEW, $reviewAssignment->getId());
 						if($articleComments) {
 							$body .= "------------------------------------------------------\n";
-							$body .= __('submission.comments.importPeerReviews.reviewerLetter', array('reviewerLetter' => String::enumerateAlphabetically($reviewIndexes[$reviewAssignment->getReviewId()]))) . "\n";
+							$body .= __('submission.comments.importPeerReviews.reviewerLetter', array('reviewerLetter' => PKPString::enumerateAlphabetically($reviewIndexes[$reviewAssignment->getReviewId()]))) . "\n";
 							if (is_array($articleComments)) {
 								foreach ($articleComments as $comment) {
 									// If the comment is viewable by the author, then add the comment.
-									if ($comment->getViewable()) $body .= String::html2text($comment->getComments()) . "\n\n";
+									if ($comment->getViewable()) $body .= PKPString::html2text($comment->getComments()) . "\n\n";
 								}
 							}
 							$body .= "------------------------------------------------------\n\n";
@@ -2135,9 +2135,9 @@ class SectionEditorAction extends Action {
 							$reviewId = $reviewAssignment->getId();
 							if(!$articleComments) {
 								$body .= "------------------------------------------------------\n";
-								$body .= __('submission.comments.importPeerReviews.reviewerLetter', array('reviewerLetter' => String::enumerateAlphabetically($reviewIndexes[$reviewAssignment->getReviewId()]))) . "\n\n";
+								$body .= __('submission.comments.importPeerReviews.reviewerLetter', array('reviewerLetter' => PKPString::enumerateAlphabetically($reviewIndexes[$reviewAssignment->getReviewId()]))) . "\n\n";
 							}
-							$body .= String::html2text(strip_tags(SectionEditorAction::getReviewFormResponses($reviewId, $reviewFormId)));
+							$body .= PKPString::html2text(strip_tags(SectionEditorAction::getReviewFormResponses($reviewId, $reviewFormId)));
 							$body .= "------------------------------------------------------\n\n";
 						}
 					}
@@ -2183,7 +2183,7 @@ class SectionEditorAction extends Action {
 				$commentsText = "";
 				if ($article->getMostRecentEditorDecisionComment()) {
 					$comment = $article->getMostRecentEditorDecisionComment();
-					$commentsText = String::html2text($comment->getComments()) . "\n\n";
+					$commentsText = PKPString::html2text($comment->getComments()) . "\n\n";
 				}
 				$user =& $request->getUser();
 

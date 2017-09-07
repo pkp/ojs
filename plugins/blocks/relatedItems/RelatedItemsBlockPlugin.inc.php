@@ -44,10 +44,10 @@ class RelatedItemsBlockPlugin extends BlockPlugin {
 	 * @param $templateMgr object
 	 * @return $string
 	 */
-	function getContents(&$templateMgr) {
+	function getContents($templateMgr, $request = null) {
 		$journal =& Request::getJournal();
 
-		return parent::getContents($templateMgr);
+		return parent::getContents($templateMgr, $request);
 	}
 }
 

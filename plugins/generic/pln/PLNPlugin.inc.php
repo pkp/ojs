@@ -329,7 +329,7 @@ class PLNPlugin extends GenericPlugin {
 	/**
 	 * @copydoc PKPPlugin::manage()
 	 */
-	function manage($verb, $args, &$message, &$messageParams) {
+	function manage($verb, $args, &$message, &$messageParams, $request = null) {
 
 		$journal =& Request::getJournal();
 
@@ -425,8 +425,8 @@ class PLNPlugin extends GenericPlugin {
 	/**
 	 * @copydoc GenericPlugin::getManagementVerbs()
 	 */
-	function getManagementVerbs() {
-		$verbs = parent::getManagementVerbs();
+	function getManagementVerbs($verbs = array()) {
+		$verbs = array_merge($verbs, parent::getManagementVerbs());
 		if ($this->getEnabled()) {
 			$verbs[] = array('settings', __('plugins.generic.pln.settings'));
 			$verbs[] = array('status', __('plugins.generic.pln.status'));
@@ -763,7 +763,7 @@ class PLNPlugin extends GenericPlugin {
 	 * @return string
 	 */
 	function newUUID() {
-		return String::generateUUID();
+		return PKPString::generateUUID();
 	}
 	
 

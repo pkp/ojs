@@ -188,7 +188,7 @@ class DOAJExportDom {
 		foreach ($articleAbstracts as $locale => $abstract) {
 			if (empty($abstract)) continue;
 
-			$abstractNode = XMLCustomWriter::createChildWithText($doc, $root, 'abstract', String::html2text($abstract));
+			$abstractNode = XMLCustomWriter::createChildWithText($doc, $root, 'abstract', PKPString::html2text($abstract));
 			XMLCustomWriter::setAttribute($abstractNode, 'language', AppLocale::get3LetterIsoFromLocale($locale));
 		}
 

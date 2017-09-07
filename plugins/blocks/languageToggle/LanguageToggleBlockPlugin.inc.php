@@ -78,7 +78,7 @@ class LanguageToggleBlockPlugin extends BlockPlugin {
 	/**
 	 * Get the HTML contents for this block.
 	 */
-	function getContents(&$templateMgr) {
+	function getContents($templateMgr, $request = null) {
 		$templateMgr->assign('isPostRequest', Request::isPost());
 		if (!defined('SESSION_DISABLE_INIT')) {
 			$journal =& Request::getJournal();
@@ -101,7 +101,7 @@ class LanguageToggleBlockPlugin extends BlockPlugin {
 
 		$templateMgr->addStyleSheet(Request::getBaseUrl() . '/' . $this->getPluginPath() . '/styles/languageToggle.css');
 
-		return parent::getContents($templateMgr);
+		return parent::getContents($templateMgr, $request);
 	}
 }
 

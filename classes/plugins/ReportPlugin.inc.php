@@ -216,19 +216,19 @@ class ReportPlugin extends Plugin {
 	/**
 	 * Display verbs for the management interface.
 	 */
-	function getManagementVerbs() {
-		return array(
+	function getManagementVerbs($verbs = array()) {
+		return array_merge($verbs, array(
 			array(
 				'reports',
 				__('manager.statistics.reports')
 			)
-		);
+		));
 	}
 
 	/**
 	 * Perform management functions
 	 */
-	function manage($verb, $args) {
+	function manage($verb, $args, &$message, &$messageParams, $request = null) {
 		if ($verb === 'reports') {
 			Request::redirect(null, 'manager', 'report', $this->getName());
 		}

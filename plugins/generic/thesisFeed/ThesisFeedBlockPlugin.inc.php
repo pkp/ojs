@@ -90,7 +90,7 @@ class ThesisFeedBlockPlugin extends BlockPlugin {
 	 * @param $templateMgr object
 	 * @return $string
 	 */
-	function getContents(&$templateMgr) {
+	function getContents($templateMgr, $request = null) {
 		$journal =& Request::getJournal();
 		if (!$journal) return '';
 
@@ -104,7 +104,7 @@ class ThesisFeedBlockPlugin extends BlockPlugin {
 		$requestedPage = Request::getRequestedPage();
 
 		if (($displayPage == 'all') || ($displayPage == 'homepage' && (empty($requestedPage) || $requestedPage == 'index' || $requestedPage == 'thesis')) || ($displayPage == $requestedPage)) {
-			return parent::getContents($templateMgr);
+			return parent::getContents($templateMgr, $request);
 		} else {
 			return '';
 		}

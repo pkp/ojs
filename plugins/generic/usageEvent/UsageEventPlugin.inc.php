@@ -76,8 +76,8 @@ class UsageEventPlugin extends GenericPlugin {
 	/**
 	 * @see GenericPlugin::getManagementVerbs()
 	 */
-	function getManagementVerbs() {
-		return array();
+	function getManagementVerbs($verbs = array()) {
+		return $verbs;
 	}
 
 

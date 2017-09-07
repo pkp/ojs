@@ -461,7 +461,7 @@ class O4DOIExportDom extends DOIExportDom {
 		assert(!empty($url));
 		if ($this->getTestMode()) {
 			// Change server domain for testing.
-			$url = String::regexp_replace('#://[^\s]+/index.php#', '://example.com/index.php', $url);
+			$url = PKPString::regexp_replace('#://[^\s]+/index.php#', '://example.com/index.php', $url);
 		}
 		XMLCustomWriter::createChildWithText($this->getDoc(), $objectElement, 'DOIWebsiteLink', $url);
 
@@ -739,7 +739,7 @@ class O4DOIExportDom extends DOIExportDom {
 		XMLCustomWriter::createChildWithText($this->getDoc(), $titleElement, 'TitleType', $titleType);
 
 		// Title text (mandatory)
-		XMLCustomWriter::createChildWithText($this->getDoc(), $titleElement, 'TitleText', String::html2text($localizedTitle));
+		XMLCustomWriter::createChildWithText($this->getDoc(), $titleElement, 'TitleText', PKPString::html2text($localizedTitle));
 
 		return $titleElement;
 	}
@@ -782,7 +782,7 @@ class O4DOIExportDom extends DOIExportDom {
 
 		// ISSN
 		if (!empty($issn)) {
-			$issn = String::regexp_replace('/[^0-9xX]/', '', $issn);
+			$issn = PKPString::regexp_replace('/[^0-9xX]/', '', $issn);
 			XMLCustomWriter::appendChild($serialVersionElement, $this->_idElement('Product', O4DOI_ID_TYPE_ISSN, $issn));
 		}
 
@@ -1046,7 +1046,7 @@ class O4DOIExportDom extends DOIExportDom {
 		// Biographical note
 		$bioNote = $this->getPrimaryTranslation($author->getBiography(null), $objectLocalePrecedence);
 		if (!empty($bioNote)) {
-			XMLCustomWriter::createChildWithText($this->getDoc(), $contributorElement, 'BiographicalNote', String::html2text($bioNote));
+			XMLCustomWriter::createChildWithText($this->getDoc(), $contributorElement, 'BiographicalNote', PKPString::html2text($bioNote));
 		}
 
 		return $contributorElement;
@@ -1142,7 +1142,7 @@ class O4DOIExportDom extends DOIExportDom {
 	function _getDoi(&$object) {
 		$doi = $object->getPubId('doi');
 		if (!empty($doi) && $this->getTestMode()) {
-			$doi = String::regexp_replace('#^[^/]+/#', MEDRA_WS_TESTPREFIX . '/', $doi);
+			$doi = PKPString::regexp_replace('#^[^/]+/#', MEDRA_WS_TESTPREFIX . '/', $doi);
 		}
 		return $doi;
 	}

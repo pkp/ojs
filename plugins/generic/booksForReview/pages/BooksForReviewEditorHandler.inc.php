@@ -163,12 +163,7 @@ class BooksForReviewEditorHandler extends Handler {
 			$countryDao =& DAORegistry::getDAO('CountryDAO');
 			$countries =& $countryDao->getCountries();
 
-			// PHP4 Requires explicit instantiation-by-reference
-			if (checkPhpVersion('5.0.0')) {
-				$bfrForm = new BookForReviewForm(BOOKS_FOR_REVIEW_PLUGIN_NAME, $bookId);
-			} else {
-				$bfrForm =& new BookForReviewForm(BOOKS_FOR_REVIEW_PLUGIN_NAME, $bookId);
-			}
+			$bfrForm = new BookForReviewForm(BOOKS_FOR_REVIEW_PLUGIN_NAME, $bookId);
 			$bfrForm->initData();
 			$templateMgr =& TemplateManager::getManager();
 			$templateMgr->assign('mode', $mode);
@@ -207,12 +202,7 @@ class BooksForReviewEditorHandler extends Handler {
 
 		if (($bookId != null && $bfrDao->getBookForReviewJournalId($bookId) == $journalId) || $bookId == null) {
 
-			// PHP4 Requires explicit instantiation-by-reference
-			if (checkPhpVersion('5.0.0')) {
-				$bfrForm = new BookForReviewForm(BOOKS_FOR_REVIEW_PLUGIN_NAME, $bookId);
-			} else {
-				$bfrForm =& new BookForReviewForm(BOOKS_FOR_REVIEW_PLUGIN_NAME, $bookId);
-			}
+			$bfrForm = new BookForReviewForm(BOOKS_FOR_REVIEW_PLUGIN_NAME, $bookId);
 			$bfrForm->readInputData();
 
 			// Add an author
@@ -341,12 +331,7 @@ class BooksForReviewEditorHandler extends Handler {
 		$bfrPlugin->import('classes.form.BooksForReviewSettingsForm');
 		$templateMgr =& TemplateManager::getManager();
 
-		// PHP4 Requires explicit instantiation-by-reference
-		if (checkPhpVersion('5.0.0')) {
-			$form = new BooksForReviewSettingsForm($bfrPlugin, $journalId);
-		} else {
-			$form =& new BooksForReviewSettingsForm($bfrPlugin, $journalId);
-		}
+		$form = new BooksForReviewSettingsForm($bfrPlugin, $journalId);
 
 		if (Config::getVar('general', 'scheduled_tasks')) {
 			$templateMgr->assign('scheduledTasksEnabled', true);
@@ -412,7 +397,7 @@ class BooksForReviewEditorHandler extends Handler {
 			$searchMatch = $request->getUserVar('searchMatch');
 
 		} else if (isset($searchInitial)) {
-			$searchInitial = String::strtoupper($searchInitial);
+			$searchInitial = PKPString::strtoupper($searchInitial);
 			$searchType = USER_FIELD_INITIAL;
 			$search = $searchInitial;
 		}
@@ -657,12 +642,12 @@ class BooksForReviewEditorHandler extends Handler {
 
 						$paramArray = array(
 							'authorName' => strip_tags($userName),
-							'authorMailingAddress' => String::html2text($userMailingAddress),
+							'authorMailingAddress' => PKPString::html2text($userMailingAddress),
 							'bookForReviewTitle' => '"' . strip_tags($book->getLocalizedTitle()) . '"',
 							'bookForReviewDueDate' => date('l, F j, Y', $dueDateTimestamp),
 							'userProfileUrl' => $request->url(null, 'user', 'profile'),
 							'submissionUrl' => $request->url(null, 'author', 'submit'),
-							'editorialContactSignature' => String::html2text($book->getEditorContactSignature())
+							'editorialContactSignature' => PKPString::html2text($book->getEditorContactSignature())
 						);
 
 						$email->addRecipient($userEmail, $userName);
@@ -738,7 +723,7 @@ class BooksForReviewEditorHandler extends Handler {
 						'authorName' => strip_tags($userFullName),
 						'bookForReviewTitle' => '"' . strip_tags($book->getLocalizedTitle()) . '"',
 						'submissionUrl' => $request->url(null, 'author', 'submit'),
-						'editorialContactSignature' => String::html2text($book->getEditorContactSignature())
+						'editorialContactSignature' => PKPString::html2text($book->getEditorContactSignature())
 					);
 
 					$email->addRecipient($userEmail, $userFullName);
@@ -822,10 +807,10 @@ class BooksForReviewEditorHandler extends Handler {
 
 					$paramArray = array(
 						'authorName' => strip_tags($userFullName),
-						'authorMailingAddress' => String::html2text($userMailingAddress),
+						'authorMailingAddress' => PKPString::html2text($userMailingAddress),
 						'bookForReviewTitle' => '"' . strip_tags($book->getLocalizedTitle()) . '"',
 						'submissionUrl' => $request->url(null, 'author', 'submit'),
-						'editorialContactSignature' => String::html2text($book->getEditorContactSignature())
+						'editorialContactSignature' => PKPString::html2text($book->getEditorContactSignature())
 					);
 
 					$email->addRecipient($userEmail, $userFullName);
@@ -905,7 +890,7 @@ class BooksForReviewEditorHandler extends Handler {
 					$paramArray = array(
 						'authorName' => strip_tags($userFullName),
 						'bookForReviewTitle' => '"' . strip_tags($book->getLocalizedTitle()) . '"',
-						'editorialContactSignature' => String::html2text($book->getEditorContactSignature())
+						'editorialContactSignature' => PKPString::html2text($book->getEditorContactSignature())
 					);
 
 					$email->addRecipient($userEmail, $userFullName);

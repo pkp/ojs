@@ -154,8 +154,7 @@ class DataversePlugin extends GenericPlugin {
 	/**
 	 * @see GenericPlugin::getManagementVerbs()
 	 */
-	function getManagementVerbs() {
-		$verbs = array();
+	function getManagementVerbs($verbs = array()) {
 		if ($this->getEnabled()) {
 			$verbs[] = array('connect', __('plugins.generic.dataverse.settings.connect'));
 			$verbs[] = array('select', __('plugins.generic.dataverse.settings.selectDataverse')); 
@@ -167,8 +166,8 @@ class DataversePlugin extends GenericPlugin {
 	/**
 	 * @see GenericPlugin::manage()
 	 */
-	function manage($verb, $args, &$message, &$messageParams) {
-		if (!parent::manage($verb, $args, $message, $messageParams)) return false;
+	function manage($verb, $args, &$message, &$messageParams, $request = null) {
+		if (!parent::manage($verb, $args, $message, $messageParams, $request)) return false;
 
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
@@ -356,7 +355,7 @@ class DataversePlugin extends GenericPlugin {
 			if ($suppFileLabelIndex !== false) {
 				$newOutput = substr($output, 0, $suppFileLabelIndex);
 				$newOutput .= '<td>'. __('plugins.generic.dataverse.dataCitation') .'</td>';
-				$newOutput .= '<td>'. String::stripUnsafeHtml($dataCitation) .'</td>';
+				$newOutput .= '<td>'. PKPString::stripUnsafeHtml($dataCitation) .'</td>';
 				$newOutput .= '</tr>';
 				$newOutput .= '<tr valign="top">';
 				$newOutput .= '<td>13.</td>';
@@ -506,7 +505,7 @@ class DataversePlugin extends GenericPlugin {
 		if ($index !== false) {
 			$newOutput = substr($output,0,$index);
 			$newOutput .= '<td class="label">'.	 __('plugins.generic.dataverse.dataCitation') .'</td>';
-			$newOutput .= '<td class="value" colspan="2">'. String::stripUnsafeHtml($dataCitation) .'</td></tr><tr>';
+			$newOutput .= '<td class="value" colspan="2">'. PKPString::stripUnsafeHtml($dataCitation) .'</td></tr><tr>';
 			$newOutput .= substr($output, $index);
 			$output = $newOutput;
 		}
@@ -1193,7 +1192,7 @@ class DataversePlugin extends GenericPlugin {
 		$package->addMetadata('description', 
 						$article->getData('studyDescription', $article->getLocale()) ? 
 						$article->getData('studyDescription', $article->getLocale()) :						
-						String::html2text($article->getAbstract($article->getLocale()))
+						PKPString::html2text($article->getAbstract($article->getLocale()))
 		);
 		foreach ($article->getAuthors() as $author) {
 			$package->addMetadata('creator', $author->getFullName(true), array('affiliation' => $this->_formatAffiliation($author, $article->getLocale())));
@@ -1201,25 +1200,25 @@ class DataversePlugin extends GenericPlugin {
 		
 		// Article metadata: fields with multiple values
 		$pattern = '/\s*'. DATAVERSE_PLUGIN_SUBJECT_SEPARATOR .'\s*/';
-		foreach(String::regexp_split($pattern, $article->getCoverageGeo($article->getLocale())) as $coverage) {
+		foreach(PKPString::regexp_split($pattern, $article->getCoverageGeo($article->getLocale())) as $coverage) {
 			if ($coverage) $package->addMetadata('coverage', $coverage);
 		}
 		// Article metadata: filter subject(s) to prevent repeated values in dataset subject field
 		$subjects = array();
-		foreach(String::regexp_split($pattern, $article->getDiscipline($article->getLocale())) as $subject) {
-			if ($subject) $subjects[String::strtolower($subject)] = $subject;
+		foreach(PKPString::regexp_split($pattern, $article->getDiscipline($article->getLocale())) as $subject) {
+			if ($subject) $subjects[PKPString::strtolower($subject)] = $subject;
 		}
-		foreach(String::regexp_split($pattern, $article->getSubjectClass($article->getLocale())) as $subject) {
-			if ($subject) $subjects[String::strtolower($subject)] = $subject;
+		foreach(PKPString::regexp_split($pattern, $article->getSubjectClass($article->getLocale())) as $subject) {
+			if ($subject) $subjects[PKPString::strtolower($subject)] = $subject;
 		}
-		foreach(String::regexp_split($pattern, $article->getSubject($article->getLocale())) as $subject) {
-			if ($subject) $subjects[String::strtolower($subject)] = $subject;
+		foreach(PKPString::regexp_split($pattern, $article->getSubject($article->getLocale())) as $subject) {
+			if ($subject) $subjects[PKPString::strtolower($subject)] = $subject;
 		}
 
 		// Article metadata: filter contributors(s) to prevent repeated values in dataset contributor field		
 		$contributors = array();
-		foreach(String::regexp_split($pattern, $article->getSponsor($article->getLocale())) as $contributor) {
-			if ($contributor) $contributors[String::strtolower($contributor)] = $contributor;
+		foreach(PKPString::regexp_split($pattern, $article->getSponsor($article->getLocale())) as $contributor) {
+			if ($contributor) $contributors[PKPString::strtolower($contributor)] = $contributor;
 		}
 		// Published article metadata
 		$pubIdAttributes = array();
@@ -1255,7 +1254,7 @@ class DataversePlugin extends GenericPlugin {
 
 		// Journal metadata
 		$package->addMetadata('publisher', $journal->getSetting('publisherInstitution'));
-		$package->addMetadata('isReferencedBy', String::html2text($this->getCitation($article)), $pubIdAttributes);
+		$package->addMetadata('isReferencedBy', PKPString::html2text($this->getCitation($article)), $pubIdAttributes);
 
 		// Suppfile metadata
 		$suppFileDao =& DAORegistry::getDAO('SuppFileDAO');				
@@ -1267,15 +1266,15 @@ class DataversePlugin extends GenericPlugin {
 			$suppFile =& $suppFileDao->getSuppFile($dvFile->getSuppFileId(), $article->getId());
 			if ($suppFile) {
 				// Split & filter subjects and/or contributors that may be repeated in article metadata
-				foreach (String::regexp_split($pattern, $suppFile->getSubject($article->getLocale())) as $subject) {
-					$subjects[String::strtolower($subject)] = $subject;
+				foreach (PKPString::regexp_split($pattern, $suppFile->getSubject($article->getLocale())) as $subject) {
+					$subjects[PKPString::strtolower($subject)] = $subject;
 				}
-				foreach (String::regexp_split($pattern, $suppFile->getSponsor($article->getLocale())) as $contributor) {
-					if ($contributor) $contributors[String::strtolower($contributor)] = $contributor;
+				foreach (PKPString::regexp_split($pattern, $suppFile->getSponsor($article->getLocale())) as $contributor) {
+					if ($contributor) $contributors[PKPString::strtolower($contributor)] = $contributor;
 				}
 				// File type has single value but possibly repeated across suppfiles
-				if ($suppFile->getType()) $suppFileTypes[String::strtolower($suppFile->getType())] = $suppFile->getType();
-				if ($suppFile->getTypeOther($article->getLocale())) $suppFileTypes[String::strtolower($suppFile->getTypeOther($article->getLocale()))] = $suppFile->getTypeOther($article->getLocale());
+				if ($suppFile->getType()) $suppFileTypes[PKPString::strtolower($suppFile->getType())] = $suppFile->getType();
+				if ($suppFile->getTypeOther($article->getLocale())) $suppFileTypes[PKPString::strtolower($suppFile->getTypeOther($article->getLocale()))] = $suppFile->getTypeOther($article->getLocale());
 			}
 		}
 		
@@ -1369,7 +1368,7 @@ class DataversePlugin extends GenericPlugin {
 		$packager = new DataversePackager();
 		foreach ($suppFiles as $suppFile) {
 			$suppFile->setFileStage(ARTICLE_FILE_SUPP); // workaround for #8444			
-			$packager->addFile($suppFile->getFilePath(), $suppFile->getOriginalFileName());
+			$packager->addDepositFile($suppFile->getFilePath(), $suppFile->getOriginalFileName());
 		}
 		$packager->createPackage();
 
@@ -1826,7 +1825,7 @@ class DataversePlugin extends GenericPlugin {
 		if ($author) {
 			if ($author->getAffiliation($locale)) {
 				// Affiliation is a block of plain text. Split into lines & trim punctuation
-				$lines = array_map("String::trimPunctuation", String::regexp_split('/\s*[\r\n]+/s', $author->getAffiliation($locale)));
+				$lines = array_map("PKPString::trimPunctuation", PKPString::regexp_split('/\s*[\r\n]+/s', $author->getAffiliation($locale)));
 				$affiliation .= implode(', ', $lines);
 				// Append country, if affiliation present
 				if ($author->getCountry())	$affiliation .= ', '. $author->getCountry();

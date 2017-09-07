@@ -48,9 +48,9 @@ class PubIdPlugin extends Plugin {
 	/**
 	 * @see PKPPlugin::getManagementVerbs()
 	 */
-	function getManagementVerbs() {
+	function getManagementVerbs($verbs = array()) {
 		if ($this->getEnabled()) {
-			$verbs = array(
+			$verbs = array_merge($verbs, array(
 				array(
 					'disable',
 					__('manager.plugins.disable')
@@ -59,14 +59,14 @@ class PubIdPlugin extends Plugin {
 					'settings',
 					__('manager.plugins.settings')
 				)
-			);
+			));
 		} else {
-			$verbs = array(
+			$verbs = array_merge($verbs, array(
 				array(
 					'enable',
 					__('manager.plugins.enable')
 				)
-			);
+			));
 		}
 		return $verbs;
 	}
@@ -74,7 +74,7 @@ class PubIdPlugin extends Plugin {
 	/**
 	 * @see PKPPlugin::manage()
 	 */
-	function manage($verb, $args) {
+	function manage($verb, $args, &$message, &$messageParams, $request = null) {
 		$templateManager =& TemplateManager::getManager();
 		$templateManager->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
 		if (!$this->getEnabled() && $verb != 'enable') return false;

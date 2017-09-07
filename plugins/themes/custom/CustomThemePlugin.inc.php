@@ -82,8 +82,8 @@ class CustomThemePlugin extends ThemePlugin {
 	 * Get the available management verbs.
 	 * @return array key-value pairs
 	 */
-	function getManagementVerbs() {
-		return array(array('settings', __('plugins.theme.custom.settings')));
+	function getManagementVerbs($verbs = array()) {
+		return array_merge($verbs, array(array('settings', __('plugins.theme.custom.settings'))));
 	}
 
 	/**
@@ -142,7 +142,7 @@ class CustomThemePlugin extends ThemePlugin {
 	 * Manage the theme.
 	 * @param $verb string management action
 	 */
-	function manage($verb) {
+	function manage($verb, $args, &$message, &$messageParams, $request = null) {
 		if ($verb != 'settings') return false;
 
 		$journal =& Request::getJournal();

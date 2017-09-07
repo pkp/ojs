@@ -225,8 +225,7 @@ class LucenePlugin extends GenericPlugin {
 	/**
 	 * @see GenericPlugin::getManagementVerbs()
 	 */
-	function getManagementVerbs() {
-		$verbs = array();
+	function getManagementVerbs($verbs = array()) {
 		if ($this->getEnabled()) {
 			$verbs[] = array('settings', __('plugins.generic.lucene.settings'));
 		}
@@ -236,8 +235,8 @@ class LucenePlugin extends GenericPlugin {
 	/**
 	 * @see GenericPlugin::manage()
 	 */
-	function manage($verb, $args, &$message, &$messageParams) {
-		if (!parent::manage($verb, $args, $message, $messageParams)) return false;
+	function manage($verb, $args, &$message, &$messageParams, $request = null) {
+		if (!parent::manage($verb, $args, $message, $messageParams, $request)) return false;
 
 		switch ($verb) {
 			case 'settings':

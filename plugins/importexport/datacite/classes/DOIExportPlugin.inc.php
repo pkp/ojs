@@ -120,8 +120,8 @@ class DOIExportPlugin extends ImportExportPlugin {
 	/**
 	 * @see ImportExportPlugin::getManagementVerbs()
 	 */
-	function getManagementVerbs() {
-		$verbs = parent::getManagementVerbs();
+	function getManagementVerbs($verbs = array()) {
+		$verbs = array_merge($verbs, parent::getManagementVerbs());
 		$verbs[] = array('settings', __('plugins.importexport.common.settings'));
 		return $verbs;
 	}
@@ -373,7 +373,7 @@ class DOIExportPlugin extends ImportExportPlugin {
 	/**
 	 * @see ImportExportPlugin::manage()
 	 */
-	function manage($verb, $args, &$message, &$messageParams, &$request) {
+	function manage($verb, $args, &$message, &$messageParams, $request = null) {
 		parent::manage($verb, $args, $message, $messageParams, $request);
 
 		switch ($verb) {
@@ -859,7 +859,7 @@ class DOIExportPlugin extends ImportExportPlugin {
 		$registeredDoi = $object->getPubId('doi');
 		assert(!empty($registeredDoi));
 		if ($this->isTestMode($request)) {
-			$registeredDoi = String::regexp_replace('#^[^/]+/#', $testPrefix . '/', $registeredDoi);
+			$registeredDoi = PKPString::regexp_replace('#^[^/]+/#', $testPrefix . '/', $registeredDoi);
 		}
 		$this->saveRegisteredDoi($object, $registeredDoi);
 	}

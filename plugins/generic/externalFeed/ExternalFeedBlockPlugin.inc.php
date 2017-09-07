@@ -77,7 +77,7 @@ class ExternalFeedBlockPlugin extends BlockPlugin {
 	 * @param $templateMgr object
 	 * @return $string
 	 */
-	function getContents(&$templateMgr) {
+	function getContents($templateMgr, $request = null) {
 		$journal =& Request::getJournal();
 		if (!$journal) return '';
 
@@ -119,7 +119,7 @@ class ExternalFeedBlockPlugin extends BlockPlugin {
 		if (!isset($externalFeeds)) return '';
 
 		$templateMgr->assign_by_ref('externalFeeds', $externalFeeds);
-		return parent::getContents($templateMgr);
+		return parent::getContents($templateMgr, $request);
 	}
 }
 

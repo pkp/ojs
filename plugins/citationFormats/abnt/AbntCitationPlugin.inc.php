@@ -78,17 +78,17 @@ class AbntCitationPlugin extends CitationPlugin {
 	 * Display verbs for the management interface.
 	 * @return array
 	 */
-	function getManagementVerbs() {
-		return array(
+	function getManagementVerbs($verbs = array()) {
+		return array_merge($verbs, array(
 			array(
 				'settings',
 				__('plugins.citationFormats.abnt.manager.settings')
 			)
-		);
+		));
 	}
 
 	/**
-	 * Display an HTML-formatted citation. We register String::strtoupper modifier
+	 * Display an HTML-formatted citation. We register PKPString::strtoupper modifier
 	 * in order to convert author names to uppercase.
 	 * @param $article Article
 	 * @param $issue Issue
@@ -112,7 +112,7 @@ class AbntCitationPlugin extends CitationPlugin {
 	 * @return boolean will redirect to the plugin category page if false,
 	 *  otherwise will remain on the same page
 	 */
-	function manage($verb, $args, &$message) {
+	function manage($verb, $args, &$message, &$messageParams, $request = null) {
 		switch ($verb) {
 			case 'settings':
 				$templateMgr =& TemplateManager::getManager();
@@ -199,11 +199,11 @@ class AbntCitationPlugin extends CitationPlugin {
 			$timestamp = strtotime($string);
 		}
 		$format = "%B %Y";
-		if (String::strlen(strftime("%B", $timestamp)) > 4) {
+		if (PKPString::strlen(strftime("%B", $timestamp)) > 4) {
 			$format = "%b. %Y";
 		}
 
-		return String::strtolower(strftime($format, $timestamp));
+		return PKPString::strtolower(strftime($format, $timestamp));
 	}
 
 	/**
@@ -219,11 +219,11 @@ class AbntCitationPlugin extends CitationPlugin {
 			$timestamp = strtotime($string);
 		}
 		$format = "%d %B %Y";
-		if (String::strlen(strftime("%B", $timestamp)) > 4) {
+		if (PKPString::strlen(strftime("%B", $timestamp)) > 4) {
 			$format = "%d %b. %Y";
 		}
 
-		return String::strtolower(strftime($format, $timestamp));
+		return PKPString::strtolower(strftime($format, $timestamp));
 	}
 }
 

@@ -144,8 +144,7 @@ class WebFeedPlugin extends GenericPlugin {
 	/**
 	 * Display verbs for the management interface.
 	 */
-	function getManagementVerbs() {
-		$verbs = array();
+	function getManagementVerbs($verbs = array()) {
 		if ($this->getEnabled()) {
 			$verbs[] = array('settings', __('plugins.generic.webfeed.settings'));
 		}
@@ -160,8 +159,8 @@ class WebFeedPlugin extends GenericPlugin {
 	 * @param $messageParams array Parameters for the message key
 	 * @return boolean
 	 */
-	function manage($verb, $args, &$message, &$messageParams) {
-		if (!parent::manage($verb, $args, $message, $messageParams)) return false;
+	function manage($verb, $args, &$message, &$messageParams, $request = null) {
+		if (!parent::manage($verb, $args, $message, $messageParams, $request)) return false;
 
 		switch ($verb) {
 			case 'settings':

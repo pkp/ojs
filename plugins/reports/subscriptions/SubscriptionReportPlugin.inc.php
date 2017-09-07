@@ -73,7 +73,7 @@ class SubscriptionReportPlugin extends ReportPlugin {
 
 		// Columns for individual subscriptions
 		$columns = array(__('subscriptionManager.individualSubscriptions'));
-		String::fputcsv($fp, array_values($columns));
+		PKPString::fputcsv($fp, array_values($columns));
 
 		$columnsCommon = array(
 			'subscription_id' => __('common.id'),
@@ -99,7 +99,7 @@ class SubscriptionReportPlugin extends ReportPlugin {
 		$columns = array_merge($columnsCommon, $columnsIndividual);
 
 		// Write out individual subscription column headings to file
-		String::fputcsv($fp, array_values($columns));
+		PKPString::fputcsv($fp, array_values($columns));
 
 		// Iterate over individual subscriptions and write out each to file
 		$individualSubscriptions =& $individualSubscriptionDao->getSubscriptionsByJournalId($journalId);
@@ -159,15 +159,15 @@ class SubscriptionReportPlugin extends ReportPlugin {
 				}
 			}
 
-			String::fputcsv($fp, $columns);
+			PKPString::fputcsv($fp, $columns);
 		}
 
 		// Columns for institutional subscriptions
 		$columns = array('');
-		String::fputcsv($fp, array_values($columns));
+		PKPString::fputcsv($fp, array_values($columns));
 
 		$columns = array(__('subscriptionManager.institutionalSubscriptions'));
-		String::fputcsv($fp, array_values($columns));
+		PKPString::fputcsv($fp, array_values($columns));
 
 		$columnsInstitution = array(
 			'institution_name' => __('manager.subscriptions.institutionName'),
@@ -185,7 +185,7 @@ class SubscriptionReportPlugin extends ReportPlugin {
 		$columns = array_merge($columnsCommon, $columnsInstitution);
 
 		// Write out institutional subscription column headings to file
-		String::fputcsv($fp, array_values($columns));
+		PKPString::fputcsv($fp, array_values($columns));
 
 		// Iterate over institutional subscriptions and write out each to file
 		$institutionalSubscriptions =& $institutionalSubscriptionDao->getSubscriptionsByJournalId($journalId);
@@ -257,7 +257,7 @@ class SubscriptionReportPlugin extends ReportPlugin {
 				}
 			}
 
-			String::fputcsv($fp, $columns);
+			PKPString::fputcsv($fp, $columns);
 		}
 
 		fclose($fp);
@@ -269,11 +269,11 @@ class SubscriptionReportPlugin extends ReportPlugin {
 	 * @return String Text with replaced and stripped HTML tags
 	 */
 	function _html2text($html) {
-		$html = String::regexp_replace('/<[\/]?p>/', chr(13) . chr(10), $html);
-		$html = String::regexp_replace('/<li>/', '&bull; ', $html);
-		$html = String::regexp_replace('/<\/li>/', chr(13) . chr(10), $html);
-		$html = String::regexp_replace('/<br[ ]?[\/]?>/', chr(13) . chr(10), $html);
-		$html = String::html2utf(strip_tags($html));
+		$html = PKPString::regexp_replace('/<[\/]?p>/', chr(13) . chr(10), $html);
+		$html = PKPString::regexp_replace('/<li>/', '&bull; ', $html);
+		$html = PKPString::regexp_replace('/<\/li>/', chr(13) . chr(10), $html);
+		$html = PKPString::regexp_replace('/<br[ ]?[\/]?>/', chr(13) . chr(10), $html);
+		$html = PKPString::html2utf(strip_tags($html));
 		return $html;
 	}
 

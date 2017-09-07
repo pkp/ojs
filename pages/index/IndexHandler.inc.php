@@ -29,7 +29,7 @@ class IndexHandler extends Handler {
 	 * @param $args array
 	 * @param $request Request
 	 */
-	function index($args, &$request) {
+	function index($args, $request) {
 		$this->validate();
 		$this->setupTemplate();
 

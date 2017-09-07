@@ -84,7 +84,7 @@ class AnnouncementFeedBlockPlugin extends BlockPlugin {
 	 * @param $templateMgr object
 	 * @return $string
 	 */
-	function getContents(&$templateMgr) {
+	function getContents($templateMgr, $request = null) {
 		$journal =& Request::getJournal();
 		if (!$journal) return '';
 
@@ -95,7 +95,7 @@ class AnnouncementFeedBlockPlugin extends BlockPlugin {
 		$requestedPage = Request::getRequestedPage();
 
 		if (($displayPage == 'all') || ($displayPage == 'homepage' && (empty($requestedPage) || $requestedPage == 'index' || $requestedPage == 'announcement')) || ($displayPage == $requestedPage)) {
-			return parent::getContents($templateMgr);
+			return parent::getContents($templateMgr, $request);
 		} else {
 			return '';
 		}

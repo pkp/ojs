@@ -210,7 +210,7 @@ class DataciteExportPlugin extends DOIExportPlugin {
 		$doi = $object->getPubId('doi');
 		assert(!empty($doi));
 		if ($this->isTestMode($request)) {
-			$doi = String::regexp_replace('#^[^/]+/#', DATACITE_API_TESTPREFIX . '/', $doi);
+			$doi = PKPString::regexp_replace('#^[^/]+/#', DATACITE_API_TESTPREFIX . '/', $doi);
 		}
 		$url = $this->_getObjectUrl($request, $journal, $object);
 		assert(!empty($url));
@@ -408,7 +408,7 @@ class DataciteExportPlugin extends DOIExportPlugin {
 
 		if ($this->isTestMode($request)) {
 			// Change server domain for testing.
-			$url = String::regexp_replace('#://[^\s]+/index.php#', '://example.com/index.php', $url);
+			$url = PKPString::regexp_replace('#://[^\s]+/index.php#', '://example.com/index.php', $url);
 		}
 		return $url;
 	}

@@ -14,7 +14,7 @@
  */
 
 import('classes.handler.Handler');
-import('classes.core.String');
+import('classes.core.PKPString');
 
 class PLNHandler extends Handler {
 
@@ -63,7 +63,7 @@ class PLNHandler extends Handler {
 			$dispatcher->handle404();
 			return FALSE;
 		}
-		return $fileManager->downloadFile($depositBag, String::mime_content_type($depositBag), TRUE);		
+		return $fileManager->downloadFile($depositBag, PKPString::mime_content_type($depositBag), TRUE);
 	}
 
 	/**

@@ -221,8 +221,7 @@ class SwordPlugin extends GenericPlugin {
 	/**
 	 * Display verbs for the management interface.
 	 */
-	function getManagementVerbs() {
-		$verbs = array();
+	function getManagementVerbs($verbs = array()) {
 		if ($this->getEnabled()) {
 			$verbs[] = array(
 				'disable',
@@ -249,7 +248,7 @@ class SwordPlugin extends GenericPlugin {
 	 * @param $messageParams array Parameters for status message
 	 * @return boolean
 	 */
-	function manage($verb, $args, &$message, &$messageParams) {
+	function manage($verb, $args, &$message, &$messageParams, $request = null) {
 		$returner = true;
 		$journal =& Request::getJournal();
 		$this->addLocaleData();

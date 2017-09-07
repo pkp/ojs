@@ -157,17 +157,17 @@ class BackupPlugin extends GenericPlugin {
 	 * Get a list of available management verbs for this plugin
 	 * @return array
 	 */
-	function getManagementVerbs() {
-		return array(array(
+	function getManagementVerbs($verbs = array()) {
+		return array_merge($verbs, array(array(
 			($this->getEnabled()?'disable':'enable'),
 			__($this->getEnabled()?'manager.plugins.disable':'manager.plugins.enable')
-		));
+		)));
 	}
 
 	/**
 	 * @see PKPPlugin::manage()
 	 */
-	function manage($verb, $args, &$message, &$messageParams) {
+	function manage($verb, $args, &$message, &$messageParams, $request = null) {
 		switch ($verb) {
 			case 'enable':
 				$this->updateSetting(0, 'enabled', true);

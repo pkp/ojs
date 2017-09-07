@@ -54,7 +54,7 @@ class DataversePackager extends PackagerAtomTwoStep {
 	 * @param $filePath String file path
 	 * @param $fileName String file name
 	 */
-	function addFile($filePath, $fileName) {
+	function addDepositFile($filePath, $fileName) {
 		$this->_files[$fileName] = $filePath;
 	}
 	

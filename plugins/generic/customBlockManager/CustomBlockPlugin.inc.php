@@ -83,8 +83,8 @@ class CustomBlockPlugin extends BlockPlugin {
 		return parent::getEnabled();
 	}
 
-	function getManagementVerbs() {
-		$verbs = parent::getManagementVerbs();
+	function getManagementVerbs($verbs = array()) {
+		$verbs = array_merge($verbs, parent::getManagementVerbs());
 		if ($this->getEnabled()) {
 			$verbs[] = array(
 				'disable',
@@ -106,7 +106,7 @@ class CustomBlockPlugin extends BlockPlugin {
 	/**
 	 * Perform management functions
 	 */
-	function manage($verb, $args) {
+	function manage($verb, $args, &$message, &$messageParams, $request = null) {
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
 
@@ -181,7 +181,7 @@ class CustomBlockPlugin extends BlockPlugin {
 	 * @param $templateMgr object
 	 * @return string
 	 */
-	function getContents(&$templateMgr) {
+	function getContents($templateMgr, $request = null) {
 		$journal =& Request::getJournal();
 		$journalId = $journal->getId();
 		
@@ -199,7 +199,7 @@ class CustomBlockPlugin extends BlockPlugin {
 		$id = 'customblock-'.preg_replace('/\W+/', '-', $this->blockName);
 		$templateMgr->assign('customBlockId', $id);
 		$templateMgr->assign('customBlockContent', $blockContentLocale);
-		return parent::getContents($templateMgr);
+		return parent::getContents($templateMgr, $request);
 	}
 
 	/**

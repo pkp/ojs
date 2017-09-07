@@ -102,7 +102,7 @@ class AuthorDAO extends PKPAuthorDAO {
 		$params[] = AUTHOR_TOC_DEFAULT;
 		$params[] = AUTHOR_TOC_SHOW;
 		if (isset($initial)) {
-			$params[] = String::strtolower($initial) . '%';
+			$params[] = PKPString::strtolower($initial) . '%';
 			$initialSql = ' AND LOWER(aa.last_name) LIKE LOWER(?)';
 		} else {
 			$initialSql = '';

@@ -137,7 +137,7 @@ class LuceneFacetsBlockPlugin extends BlockPlugin {
 	/**
 	 * @see BlockPlugin::getContents()
 	 */
-	function getContents(&$templateMgr, $request = null) {
+	function getContents($templateMgr, $request = null) {
 		// Get facets from the parent plug-in.
 		$plugin =& $this->_getLucenePlugin();
 		$facets = $plugin->getFacets();

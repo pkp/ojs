@@ -54,8 +54,7 @@ class TranslatorPlugin extends GenericPlugin {
 		return true;
 	}
 
-	function getManagementVerbs() {
-		$verbs = array();
+	function getManagementVerbs($verbs = array()) {
 		if ($this->getEnabled()) {
 			$verbs[] = array('translate', __('plugins.generic.translator.translate'));
 		}
@@ -70,8 +69,8 @@ class TranslatorPlugin extends GenericPlugin {
 	 * @param $messageParams array Parameters for the message key
 	 * @return boolean
 	 */
-	function manage($verb, $args, &$message, &$messageParams) {
-		if (!parent::manage($verb, $args, $message, $messageParams)) return false;
+	function manage($verb, $args, &$message, &$messageParams, $request = null) {
+		if (!parent::manage($verb, $args, $message, $messageParams, $request)) return false;
 		switch ($verb) {
 			case 'translate':
 				Request::redirect('index', 'translate');

@@ -95,7 +95,7 @@ class WebFeedBlockPlugin extends BlockPlugin {
 	 * @param $templateMgr object
 	 * @return $string
 	 */
-	function getContents(&$templateMgr) {
+	function getContents($templateMgr, $request = null) {
 		$journal =& Request::getJournal();
 		if (!$journal) return '';
 
@@ -106,7 +106,7 @@ class WebFeedBlockPlugin extends BlockPlugin {
 		$currentIssue =& $issueDao->getCurrentIssue($journal->getId(), true);
 
 		if ( ($currentIssue) && (($displayPage == 'all') || ($displayPage == 'homepage' && (empty($requestedPage) || $requestedPage == 'index' || $requestedPage == 'issue')) || ($displayPage == 'issue' && $displayPage == $requestedPage)) ) {
-			return parent::getContents($templateMgr);
+			return parent::getContents($templateMgr, $request);
 		} else {
 			return '';
 		}

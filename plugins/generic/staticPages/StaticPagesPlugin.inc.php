@@ -45,11 +45,7 @@ class StaticPagesPlugin extends GenericPlugin {
 		if (parent::register($category, $path)) {
 			if ($this->getEnabled()) {
 				$this->import('StaticPagesDAO');
-				if (checkPhpVersion('5.0.0')) { // WARNING: see http://pkp.sfu.ca/wiki/index.php/Information_for_Developers#Use_of_.24this_in_the_constructor
-					$staticPagesDao = new StaticPagesDAO($this->getName());
-				} else {
-					$staticPagesDao =& new StaticPagesDAO($this->getName());
-				}
+				$staticPagesDao = new StaticPagesDAO($this->getName());
 				$returner =& DAORegistry::registerDAO('StaticPagesDAO', $staticPagesDao);
 
 				HookRegistry::register('LoadHandler', array(&$this, 'callbackHandleContent'));
@@ -80,8 +76,7 @@ class StaticPagesPlugin extends GenericPlugin {
 	/**
 	 * Display verbs for the management interface.
 	 */
-	function getManagementVerbs() {
-		$verbs = array();
+	function getManagementVerbs($verbs = array()) {
 		if ($this->getEnabled()) {
 			if ($this->isTinyMCEInstalled()) {
 				$verbs[] = array('settings', __('plugins.generic.staticPages.editAddContent'));
@@ -93,8 +88,8 @@ class StaticPagesPlugin extends GenericPlugin {
 	/**
 	 * Perform management functions
 	 */
-	function manage($verb, $args, &$message, &$messageParams) {
-		if (!parent::manage($verb, $args, $message, $messageParams)) return false;
+	function manage($verb, $args, &$message, &$messageParams, $request = null) {
+		if (!parent::manage($verb, $args, $message, $messageParams, $request)) return false;
 
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));

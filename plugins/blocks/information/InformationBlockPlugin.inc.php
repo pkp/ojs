@@ -44,14 +44,14 @@ class InformationBlockPlugin extends BlockPlugin {
 	 * @param $templateMgr object
 	 * @return $string
 	 */
-	function getContents(&$templateMgr) {
+	function getContents($templateMgr, $request = null) {
 		$journal =& Request::getJournal();
 		if (!$journal) return '';
 
 		$templateMgr->assign('forReaders', $journal->getLocalizedSetting('readerInformation'));
 		$templateMgr->assign('forAuthors', $journal->getLocalizedSetting('authorInformation'));
 		$templateMgr->assign('forLibrarians', $journal->getLocalizedSetting('librarianInformation'));
-		return parent::getContents($templateMgr);
+		return parent::getContents($templateMgr, $request);
 	}
 }
 

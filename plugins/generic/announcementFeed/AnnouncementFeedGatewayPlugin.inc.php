@@ -91,8 +91,8 @@ class AnnouncementFeedGatewayPlugin extends GatewayPlugin {
 	 * plugin can handle this)
 	 * @return array
 	 */
-	function getManagementVerbs() {
-		return array();
+	function getManagementVerbs($verbs = array()) {
+		return $verbs;
 	}
 
 	/**

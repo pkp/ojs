@@ -233,16 +233,16 @@ class AuthPlugin extends Plugin {
 	/**
 	 * Return the management verbs for this plugin.
 	 */
-	function getManagementVerbs() {
-		return array(
+	function getManagementVerbs($verbs = array()) {
+		return array_merge($verbs, array(
 			array(
 				'authSources',
 				__('admin.authSources')
 			)
-		);
+		));
 	}
 
-	function manage($verb, $args) {
+	function manage($verb, $args, &$message, &$messageParams, $request = null) {
 		if ($verb === 'authSources') {
 			Request::redirect('index', 'admin', 'auth');
 		}

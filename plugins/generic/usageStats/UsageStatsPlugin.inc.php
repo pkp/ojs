@@ -145,8 +145,8 @@ class UsageStatsPlugin extends GenericPlugin {
 	/**
 	* @see PKPPlugin::manage()
 	*/
-	function manage($verb, $args, &$message, &$messageParams) {
-		$returner = parent::manage($verb, $args, $message, $messageParams);
+	function manage($verb, $args, &$message, &$messageParams, $request = null) {
+		$returner = parent::manage($verb, $args, $message, $messageParams, $request);
 		if (!$returner) return false;
 		$this->import('UsageStatsSettingsForm');
 
@@ -183,8 +183,8 @@ class UsageStatsPlugin extends GenericPlugin {
 	/**
 	* @see GenericPlugin::getManagementVerbs()
 	*/
-	function getManagementVerbs() {
-		$verbs = parent::getManagementVerbs();
+	function getManagementVerbs($verbs = array()) {
+		$verbs = array_merge($verbs, parent::getManagementVerbs());
 		if ($this->getEnabled()) {
 			$verbs[] = array('settings', __('manager.plugins.settings'));
 		}

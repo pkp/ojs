@@ -179,7 +179,7 @@ class PubMedExportDom {
 
 		/* --- Abstract --- */
 		if ($article->getAbstract($article->getLocale())) {
-			$abstractNode = XMLCustomWriter::createChildWithText($doc, $root, 'Abstract', String::html2utf(strip_tags($article->getAbstract($article->getLocale()))), false);
+			$abstractNode = XMLCustomWriter::createChildWithText($doc, $root, 'Abstract', PKPString::html2utf(strip_tags($article->getAbstract($article->getLocale()))), false);
 		}
 
 		if ($subject = $article->getSubject($article->getLocale())) {
