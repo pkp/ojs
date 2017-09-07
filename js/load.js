@@ -1,17 +1,31 @@
-// Vue lib with custom mixins
-import Vue from '../lib/pkp/js/classes/VueInit.js';
+/**
+ * @file js/load.js
+ *
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2000-2017 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @brief Compiler entry point for building the JavaScript package. File imports
+ *  using the `@` symbol are aliased to `lib/ui-library/src`.
+ */
+
+// Vue lib and custom mixins
+import Vue from 'vue';
+import GlobalMixins from '@/mixins/global.js';
 
 // Helper for initializing and tracking Vue controllers
 import VueRegistry from '../lib/pkp/js/classes/VueRegistry.js';
 
 // All Vue controllers
-import ListPanel from '../lib/pkp/js/controllers/list/ListPanel.vue';
-import SubmissionsListPanel from '../lib/pkp/js/controllers/list/submissions/SubmissionsListPanel.vue';
-import SelectSubmissionsListPanel from '../lib/pkp/js/controllers/list/submissions/SelectSubmissionsListPanel.vue';
+import ListPanel from '@/components/ListPanel/ListPanel.vue';
+import SubmissionsListPanel from '@/components/ListPanel/submissions/SubmissionsListPanel.vue';
+import SelectSubmissionsListPanel from '@/components/SelectListPanel/submissions/SelectSubmissionsListPanel.vue';
+
+Vue.mixin(GlobalMixins);
 
 // Expose Vue, the registry and controllers in a global var
 window.pkp = {
-	vue: Vue,
+	Vue: Vue,
 	registry: VueRegistry,
 	eventBus: new Vue(),
 	controllers: {
@@ -26,7 +40,7 @@ window.pkp = {
 	 * @param string|array role The key name of the role to check for
 	 * @return bool
 	 */
-	userHasRole: function(role) {
+	userHasRole: function (role) {
 
 		if (typeof role === 'string') {
 			role = [role];
@@ -39,5 +53,5 @@ window.pkp = {
 		}
 
 		return false;
-	}
+	},
 };

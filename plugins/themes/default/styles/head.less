@@ -192,7 +192,7 @@
 		// Needs to be defined outside of a media query or the font doesn't
 		// load
 		&:before {
-			&:extend(.fa);
+			.fa();
 			content: @fa-var-search;
 		}
 	}
@@ -210,7 +210,7 @@
 	.search_cancel{
 
 		&:before {
-			&:extend(.fa);
+			.fa();
 			content: @fa-var-times;
 			width: @double;
 			height: @double;
