@@ -204,7 +204,6 @@ class SectionGridHandler extends SetupGridHandler {
 		$journal = $request->getJournal();
 		
 		$sectionDao = DAORegistry::getDAO('SectionDAO');
-		
 		$section = $sectionDao->getById(
 			$request->getUserVar('sectionId'),
 			$journal->getId()
@@ -220,13 +219,13 @@ class SectionGridHandler extends SetupGridHandler {
 				return DAO::getDataChangedEvent($section->getId());
 			}
 			else {
-				AppLocale::requireComponents(LOCALE_COMPONENT_PKP_MANAGER); // manager.setup.errorDeletingItem
+				AppLocale::requireComponents(LOCALE_COMPONENT_PKP_MANAGER);
 				return new JSONMessage(false, __('manager.sections.alertDelete'));
 			}
 		
 		}
 		
-		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_MANAGER); // manager.setup.errorDeletingItem
+		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_MANAGER);
 		return new JSONMessage(false, __('manager.setup.errorDeletingItem'));
 		
 	}
