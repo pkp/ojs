@@ -202,19 +202,33 @@ class SectionGridHandler extends SetupGridHandler {
 	 */
 	function deleteSection($args, $request) {
 		$journal = $request->getJournal();
-
+		
 		$sectionDao = DAORegistry::getDAO('SectionDAO');
+		
 		$section = $sectionDao->getById(
 			$request->getUserVar('sectionId'),
 			$journal->getId()
 		);
-
+		
 		if ($section && $request->checkCSRF()) {
-			$sectionDao->deleteObject($section);
-			return DAO::getDataChangedEvent($section->getId());
+			
+			$articleDao = DAORegistry::getDAO('ArticleDAO');
+			$checkSubmissions = $articleDao->retrieve('SELECT submission_id FROM submissions WHERE section_id = ?', (int) $request->getUserVar('sectionId'));
+		
+			if ($checkSubmissions->NumRows() == 0) {
+				$sectionDao->deleteObject($section);
+				return DAO::getDataChangedEvent($section->getId());
+			}
+			else {
+				AppLocale::requireComponents(LOCALE_COMPONENT_PKP_MANAGER); // manager.setup.errorDeletingItem
+				return new JSONMessage(false, __('manager.sections.alertDelete'));
+			}
+		
 		}
+		
 		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_MANAGER); // manager.setup.errorDeletingItem
 		return new JSONMessage(false, __('manager.setup.errorDeletingItem'));
+		
 	}
 }
 
