@@ -103,9 +103,10 @@ class EditorDecisionActionsManager {
 	/**
 	 * Get an associative array matching editor recommendation codes with locale strings.
 	 * (Includes default '' => "Choose One" string.)
+	 * @param $stageId integer
 	 * @return array recommendation => localeString
 	 */
-	function getRecommendationOptions() {
+	function getRecommendationOptions($stageId) {
 		static $recommendationOptions = array(
 			'' => 'common.chooseOne',
 			SUBMISSION_EDITOR_RECOMMEND_PENDING_REVISIONS => 'editor.submission.decision.requestRevisions',
