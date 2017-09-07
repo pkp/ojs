@@ -9,4 +9,4 @@ temp
 .DS_Store
 node_modules
 js/build.js
-js/build.js.map
+styles/build.css
