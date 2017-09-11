@@ -219,7 +219,7 @@ class SectionGridHandler extends SetupGridHandler {
 
 		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_MANAGER);
 		$articleDao = DAORegistry::getDAO('ArticleDAO');
-		$checkSubmissions = $articleDao->retrieve('SELECT submission_id FROM submissions WHERE section_id = ? AND context_id = ?', (int) $request->getUserVar('sectionId'), (int) $journal->getId());
+		$checkSubmissions = $articleDao->retrieve('SELECT submission_id FROM submissions WHERE section_id = ? AND context_id = ?', array((int) $request->getUserVar('sectionId'), (int) $journal->getId()));
 
 		if ($checkSubmissions->numRows() > 0) {
 			return new JSONMessage(false, __('manager.sections.alertDelete'));
