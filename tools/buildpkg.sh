@@ -96,7 +96,15 @@ lib/pkp/lib/vendor/webmozart					\
 lib/pkp/tools/travis						\
 lib/pkp/lib/swordappv2/.git					\
 lib/pkp/lib/swordappv2/.git					\
-lib/pkp/lib/swordappv2/test"
+lib/pkp/lib/swordappv2/test					\
+.babelrc          \
+.editorconfig     \
+.eslintignore     \
+.eslintrc.js      \
+.postcssrc.js     \
+package.json      \
+webpack.config.js \
+lib/ui-library"
 
 
 cd $TMPDIR
