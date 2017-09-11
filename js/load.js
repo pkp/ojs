@@ -18,8 +18,8 @@ import SelectSubmissionsListPanel from '@/components/SelectListPanel/submissions
 // Expose Vue, the registry and controllers in a global var
 window.pkp = Object.assign(PkpLoad, {
 	controllers: {
-		'ListPanel': ListPanel,
-		'SubmissionsListPanel': SubmissionsListPanel,
-		'SelectSubmissionsListPanel': SelectSubmissionsListPanel,
+		ListPanel,
+		SubmissionsListPanel,
+		SelectSubmissionsListPanel,
 	},
 });
