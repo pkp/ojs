@@ -772,8 +772,8 @@ class PublishedArticleDAO extends ArticleDAO {
 				. ($pubIdSettingName != null?' LEFT JOIN submission_settings sss ON (s.submission_id = sss.submission_id AND sss.setting_name = ?)':'')
 				. ' ' . $this->getFetchJoins() .'
 			WHERE
-				i.published = 1 AND s.context_id = ?
-				' . ($pubIdType != null?' AND ss.setting_name = ? AND ss.setting_value IS NOT NULL':'')
+				i.published = 1 AND s.context_id = ? AND s.status <> ' . STATUS_DECLINED
+				. ($pubIdType != null?' AND ss.setting_name = ? AND ss.setting_value IS NOT NULL':'')
 				. ($title != null?' AND (sst.setting_name = ? AND sst.locale = ? AND sst.setting_value LIKE ?)':'')
 				. ($author != null?' AND (au.first_name LIKE ? OR au.middle_name LIKE ? OR au.last_name LIKE ?)':'')
 				. ($issueId != null?' AND ps.issue_id = ?':'')
