@@ -202,32 +202,32 @@ class SectionGridHandler extends SetupGridHandler {
 	 */
 	function deleteSection($args, $request) {
 		$journal = $request->getJournal();
-		
+
 		$sectionDao = DAORegistry::getDAO('SectionDAO');
 		$section = $sectionDao->getById(
 			$request->getUserVar('sectionId'),
 			$journal->getId()
 		);
-		
-		if ($section && $request->checkCSRF()) {
-			
-			$articleDao = DAORegistry::getDAO('ArticleDAO');
-			$checkSubmissions = $articleDao->retrieve('SELECT submission_id FROM submissions WHERE section_id = ?', (int) $request->getUserVar('sectionId'));
-		
-			if ($checkSubmissions->NumRows() == 0) {
-				$sectionDao->deleteObject($section);
-				return DAO::getDataChangedEvent($section->getId());
-			}
-			else {
-				AppLocale::requireComponents(LOCALE_COMPONENT_PKP_MANAGER);
-				return new JSONMessage(false, __('manager.sections.alertDelete'));
-			}
-		
+
+		if (!$request->checkCSRF()) {
+			return new JSONMessage(false, __('form.csrfInvalid'));
 		}
-		
+
+		if (!$section) {
+			return new JSONMessage(false, __('manager.setup.errorDeletingItem'));
+		}
+
 		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_MANAGER);
-		return new JSONMessage(false, __('manager.setup.errorDeletingItem'));
-		
+		$articleDao = DAORegistry::getDAO('ArticleDAO');
+		$checkSubmissions = $articleDao->retrieve('SELECT submission_id FROM submissions WHERE section_id = ? AND context_id = ?', (int) $request->getUserVar('sectionId'), (int) $journal->getId());
+
+		if ($checkSubmissions->numRows() > 0) {
+			return new JSONMessage(false, __('manager.sections.alertDelete'));
+		}
+
+		$sectionDao->deleteObject($section);
+		return DAO::getDataChangedEvent($section->getId());
+
 	}
 }
 
