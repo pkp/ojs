@@ -39,6 +39,5 @@ module.exports = {
     'padded-blocks': 0,
     // don't require === for comparisons
     'eqeqeq': 0,
-    'no-unused-vars': [0]
   }
 }
