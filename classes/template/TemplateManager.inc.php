@@ -58,7 +58,6 @@ class TemplateManager extends PKPTemplateManager {
 			$this->assign(array(
 				'brandImage' => 'templates/images/ojs_brand.png',
 				'packageKey' => 'common.openJournalSystems',
-				'pkpLink'    => 'http://pkp.sfu.ca/ojs',
 			));
 
 			// Get a count of unread tasks.
