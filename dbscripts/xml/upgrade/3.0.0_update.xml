@@ -92,7 +92,7 @@
 	<!-- issue #2758: the genre_id for HTML galley CSS files -->
 	<sql>
 		<query driver="mysql">UPDATE submission_files sf, genres g, submissions s, article_galleys_migration agm SET sf.genre_id = g.genre_id WHERE g.entry_key = 'STYLE' AND g.context_id = s.context_id AND s.submission_id = sf.submission_id AND sf.file_id = agm.style_file_id</query>
-		<query driver="mysqli">UPDATE submission_files sf, genres g, submissions s SET sf.genre_id = g.genre_id WHERE g.entry_key = 'STYLE' AND g.context_id = s.context_id AND s.submission_id = sf.submission_id</query>
+		<query driver="mysqli">UPDATE submission_files sf, genres g, submissions s, article_galleys_migration agm SET sf.genre_id = g.genre_id WHERE g.entry_key = 'STYLE' AND g.context_id = s.context_id AND s.submission_id = sf.submission_id AND sf.file_id = agm.style_file_id</query>
 		<query driver="postgres7">UPDATE submission_files SET genre_id = g.genre_id FROM genres g, submissions s, article_galleys_migration agm WHERE g.entry_key = 'STYLE' AND g.context_id = s.context_id AND s.submission_id = submission_files.submission_id AND sf.file_id = agm.style_file_id</query>
 	</sql>
 	<!-- issue #2758: set assoc_type = 515 (ASSOC_TYPE_SUBMISSION_FILE) and the appropriate assoc_id for HTML galley CSS files -->
