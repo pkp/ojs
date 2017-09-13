@@ -28,6 +28,7 @@ before_install:
 
   # Install composer dependencies
   - cd lib/pkp && composer update && cd ../..
+  - cd plugins/paymethod/paypal && composer update && cd ../..
 
   # Install node depenencies
   - . $HOME/.nvm/nvm.sh
