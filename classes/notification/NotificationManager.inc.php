@@ -125,7 +125,7 @@ class NotificationManager extends PKPNotificationManager {
 
 		// Check if user is editor
 		$article =& $articleDao->getArticle($articleId);
-		if($article && Validation::isEditor($article->getJournalId())) {
+		if($article && $roleDao->userHasRole($article->getJournalId(), $userId, ROLE_ID_EDITOR)) {
 			$roles[] = ROLE_ID_EDITOR;
 		}
 
