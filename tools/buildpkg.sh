@@ -52,7 +52,6 @@ plugins/generic/openAIRE					\
 plugins/generic/phpMyVisites					\
 plugins/generic/recommendBySimilarity				\
 plugins/generic/translator					\
-plugins/oaiMetadataFormats/nlm					\
 plugins/importexport/sample					\
 plugins/importexport/duracloud					\
 plugins/reports/subscriptions					\

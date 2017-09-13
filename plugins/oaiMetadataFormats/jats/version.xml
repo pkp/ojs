@@ -2,7 +2,7 @@
 <!DOCTYPE version SYSTEM "../../../lib/pkp/dtd/pluginVersion.dtd">
 
 <!--
-  * plugins/oaiMetadataFormats/nlm/version.xml
+  * plugins/oaiMetadataFormats/jats/version.xml
   *
   * Copyright (c) 2014-2017 Simon Fraser University
   * Copyright (c) 2003-2017 John Willinsky
@@ -11,8 +11,8 @@
   * Plugin version information.
   -->
 <version>
-	<application>nlm</application>
+	<application>jats</application>
 	<type>plugins.oaiMetadataFormats</type>
 	<release>1.0.0.0</release>
-	<date>2009-11-19</date>
+	<date>2017-09-13</date>
 </version>

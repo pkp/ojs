@@ -2,7 +2,7 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * plugins/oaiMetadataFormats/nlm/locale/en_US/locale.xml
+  * plugins/oaiMetadataFormats/jats/locale/en_US/locale.xml
   *
   * Copyright (c) 2014-2017 Simon Fraser University
   * Copyright (c) 2003-2017 John Willinsky
@@ -10,8 +10,8 @@
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
   * Localization strings.
   -->
- 
+
 <locale name="en_US" full_name="U.S. English">
-	<message key="plugins.oaiMetadata.nlm.displayName">NLM Metadata Format</message>
-	<message key="plugins.oaiMetadata.nlm.description">Structures metadata in a way that is consistent with the NLM Journal Article format.</message>
+	<message key="plugins.oaiMetadata.jats.displayName">JATS Metadata Format</message>
+	<message key="plugins.oaiMetadata.jats.description">Structures metadata in a way that is consistent with the JATS XML format.</message>
 </locale>
