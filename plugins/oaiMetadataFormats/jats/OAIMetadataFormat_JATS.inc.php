@@ -25,15 +25,11 @@ class OAIMetadataFormat_JATS extends OAIMetadataFormat {
 	 */
 	function toXml($record, $format = null) {
 		$article = $record->getData('article');
-		$journal = $record->getData('journal');
-		$section = $record->getData('section');
-		$issue = $record->getData('issue');
 		$galleys = $record->getData('galleys');
 
 
 		import('lib.pkp.classes.submission.SubmissionFile'); // SUBMISSION_FILE_... constants
 		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
-		$genres = array(); // Genre cache
 		$candidateFiles = array();
 
 		// First, look for candidates in the galleys area (published content).
@@ -61,7 +57,6 @@ class OAIMetadataFormat_JATS extends OAIMetadataFormat {
 		$candidateFile = array_shift($candidateFiles);
 
 		$doc = new DOMDocument;
-		$mock = new DOMDocument;
 		$doc->loadXML(file_get_contents($candidateFile->getFilePath()));
 		$articleNode = $doc->getElementsByTagName('article')->item(0);
 		return $doc->saveXML($articleNode);
@@ -95,5 +90,3 @@ class OAIMetadataFormat_JATS extends OAIMetadataFormat {
 		return true;
 	}
 }
-
-?>
