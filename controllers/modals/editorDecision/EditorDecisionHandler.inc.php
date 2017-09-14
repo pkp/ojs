@@ -76,14 +76,6 @@ class EditorDecisionHandler extends PKPEditorDecisionHandler {
 	//
 	// Private helper methods
 	//
-	/**
-	 * Get operations that need a review round id policy.
-	 * @return array
-	 */
-	protected function _getReviewRoundOps() {
-		return array('promoteInReview', 'savePromoteInReview', 'newReviewRound', 'saveNewReviewRound', 'sendReviewsInReview', 'saveSendReviewsInReview', 'importPeerReviews');
-	}
-
 	protected function _saveGeneralPromote($args, $request) {
 		// Redirect to the next workflow page after
 		// promoting the submission.

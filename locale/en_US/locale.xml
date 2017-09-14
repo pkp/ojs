@@ -960,6 +960,7 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="log.review.reviewFileByProxy">The Editor, {$userName}, has uploaded a review file for round {$round} of submission {$submissionId} on behalf of the reviewer, {$reviewerName}.</message>
 	<message key="log.review.reviewerFile">A reviewer file has been uploaded.</message>
 	<message key="log.editor.decision">An editor decision ({$decision}) for article {$submissionId} was recorded by {$editorName}.</message>
+	<message key="log.editor.recommendation">An editor recommndation ({$decision}) for article {$submissionId} was recorded by {$editorName}.</message>
 
 
 	<message key="log.copyedit.initiate">Copyediting on submission {$submissionId} has been commenced by {$copyeditorName}.</message>
