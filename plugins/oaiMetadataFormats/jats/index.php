@@ -16,5 +16,3 @@ require_once('OAIMetadataFormatPlugin_JATS.inc.php');
 require_once('OAIMetadataFormat_JATS.inc.php');
 
 return new OAIMetadataFormatPlugin_JATS();
-
-?>

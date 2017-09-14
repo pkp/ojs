@@ -88,5 +88,3 @@ class OAIMetadataFormatPlugin_JATS extends OAIMetadataFormatPlugin {
 		return 'http://jats.nlm.nih.gov';
 	}
 }
-
-?>
