@@ -1,0 +1,3 @@
+lib/ui-library/build/*.js
+lib/ui-library/config/*.js
+node_modules
