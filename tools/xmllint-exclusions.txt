@@ -18,5 +18,6 @@
 ./plugins/importexport/native/tests/functional
 ./plugins/importexport/users/sample.xml
 ./plugins/importexport/pubIds/tests/functional
+./plugins/paymethod/paypal/vendor
 ./lib/pkp/tests
 ./node_modules
