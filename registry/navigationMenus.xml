@@ -13,18 +13,30 @@
   -->
 
 <navigationMenus>
-	<navigationMenu title="User" area="user" default_id="1" />
+	<navigationMenu title="User" area="user">
+		<navigationMenuItem title="navigation.register" type="NMI_TYPE_USER_REGISTER" />
+		<navigationMenuItem title="navigation.login" type="NMI_TYPE_USER_LOGIN" />
 		
-	<navigationMenu title="Primary" area="primary" default_id="2">
-		<navigationMenuItem title="navigation.current" op="current" page="issue" default="1" default_id="1" />
-		<navigationMenuItem title="navigation.archives" op="archive" page="issue" default="1" default_id="2" />
-		<navigationMenuItem title="navigation.about" op="" page="about" default="1" default_id="3">
-			<navigationMenuItem title="about.aboutContext" op="" page="about" default="1" default_id="4" />
-			<navigationMenuItem title="navigation.submissions" op="submissions" page="about" default="1" default_id="5" />
-			<navigationMenuItem title="about.editorialTeam" op="editorialTeam" page="about" default="1" default_id="6" />
-			<navigationMenuItem title="about.contact" op="contact" page="about" default="1" default_id="7" />
+		<navigationMenuItem title="loggedInUsername" type="NMI_TYPE_USER_DASHBOARD">
+			<navigationMenuItem title="navigation.dashboard" type="NMI_TYPE_USER_DASHBOARD" />
+			<navigationMenuItem title="common.viewProfile" type="NMI_TYPE_USER_PROFILE" />
+			<navigationMenuItem title="navigation.admin" type="NMI_TYPE_ADMINISTRATION" />
+			<navigationMenuItem title="user.logOut" type="NMI_TYPE_USER_LOGOUT" />
+			<navigationMenuItem title="user.logOutAs" type="NMI_TYPE_USER_LOGOUT_AS" />
+		</navigationMenuItem>
+	</navigationMenu>
+		
+	<navigationMenu title="Primary" area="primary">
+		<navigationMenuItem title="navigation.current" type="NMI_TYPE_CURRENT" />
+		<navigationMenuItem title="navigation.archives" type="NMI_TYPE_ARCHIVES" />
+		<navigationMenuItem title="manager.announcements" type="NMI_TYPE_ANNOUNCEMENTS" />
+		<navigationMenuItem title="navigation.about" type="NMI_TYPE_ABOUT">
+			<navigationMenuItem title="about.aboutContext" type="NMI_TYPE_ABOUT_CONTEXT" />
+			<navigationMenuItem title="navigation.submissions" type="NMI_TYPE_SUBMISSIONS" />
+			<navigationMenuItem title="about.editorialTeam" type="NMI_TYPE_EDITORIAL_TEAM" />
+			<navigationMenuItem title="about.contact" type="NMI_TYPE_CONTACT" />
 		</navigationMenuItem>
 	</navigationMenu>
 	
-	<navigationMenu title="Footer" area="footer" default_id="0x00000003" />
+	<navigationMenu title="Footer" area="footer" />
 </navigationMenus>

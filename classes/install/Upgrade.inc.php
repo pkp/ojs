@@ -2500,13 +2500,10 @@ class Upgrade extends Installer {
 	function installDefaultNavigationMenus() {
 		$journalDao = DAORegistry::getDAO('JournalDAO');
 		$navigationMenuDao = DAORegistry::getDAO('NavigationMenuDAO');
-		$navigationMenuItemDao = DAORegistry::getDAO('NavigationMenuItemDAO');
 
 		$journals = $journalDao->getAll();
 		while ($journal = $journals->next()) {
 			$navigationMenuDao->installSettings($journal->getId(), 'registry/navigationMenus.xml');
-			$navigationMenuItemDao->installSettings($journal->getId(), 'registry/navigationMenuItems.xml');
-			$navigationMenuItemDao->installSettings($journal->getId(), 'registry/announcementNavigationMenuItems.xml');
 		}
 
 		return true;
