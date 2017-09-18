@@ -483,7 +483,7 @@ class IssueGridHandler extends GridHandler {
 				)
 			);
 		}
-		
+
 		return DAO::getDataChangedEvent();
 	}
 
@@ -509,9 +509,13 @@ class IssueGridHandler extends GridHandler {
 		import('classes.article.ArticleTombstoneManager');
 		$articleTombstoneManager = new ArticleTombstoneManager();
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
+		$articleDao = DAORegistry::getDAO('ArticleDAO');
 		$publishedArticles = $publishedArticleDao->getPublishedArticles($issue->getId());
 		foreach ($publishedArticles as $article) {
 			$articleTombstoneManager->insertArticleTombstone($article, $journal);
+			$article->setStatus(STATUS_QUEUED);
+			$article->stampStatusModified();
+			$articleDao->updateObject($article);
 		}
 
 		$dispatcher = $request->getDispatcher();
