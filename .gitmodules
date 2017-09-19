@@ -35,3 +35,6 @@
 [submodule "plugins/reports/reviewReport"]
 	path = plugins/reports/reviewReport
 	url = https://github.com/pkp/reviewReport
+[submodule "lib/ui-library"]
+	path = lib/ui-library
+	url = https://github.com/pkp/ui-library
