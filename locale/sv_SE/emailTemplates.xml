@@ -169,13 +169,13 @@ Om du har några frågor, vänligen kontakta mig. Tack för att du har valt att 
 <br />
 {$submitterName} har skickat in manuskriptet &quot;{$submissionTitle}&quot; till {$contextName}.<br />
 <br />
-Om du har några frågor, vänligen kontakta mig. Tack för att ni har valt att skicka ert bidrag till den här tidskriften.<br />
+Om du har några frågor, vänligen kontakta mig. Tack för att du har valt att skicka ditt bidrag till den här tidskriften.<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Det här e-postmeddelandet skickas, om det är aktiverat, automatiskt till andra författare knutna till bidraget i inskickningsprocessen men som inte är OJS-användare.</description>
 	</email_text>
 	<email_text key="SUBMISSION_UNSUITABLE">
-		<subject>Bidrag olämpligt</subject>
+		<subject>Bidrag utanför tidskriftens omfång</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
 En första redaktionell granskning &quot;{$submissionTitle}&quot; har visat att det här bidraget inte överensstämmer med tidskriften {$contextName}s ämnesfokus. Jag rekommenderar att du tar del av beskrivningen av tidskriften under Om liksom tidskriftens hittills publicerade material för att få en bild av vilken typ av innehåll vi publicerar. Du kan också överväga att skicka manuskriptet till en annan, mer passande, tidskrift.<br />
@@ -199,8 +199,9 @@ Tack och med vänliga hälsningar,<br />
 		<subject>Förfrågan om granskning av artikel</subject>
 		<body><![CDATA[{$reviewerName}:<br />
 <br />
-Jag tror att du skulle passa utmärkt som sakkunniggranskare av manuskriptet &quot;{$submissionTitle}&quot;, som har skickats in till {$contextName}. Bidragets sammanfattning bifogas nedan. Jag hoppas att du kan överväga att genomföra granskningen åt oss, det vore mycket värdefullt.<br />
+Jag tror att du skulle passa utmärkt som sakkunniggranskare av manuskriptet &quot;{$submissionTitle}&quot;, som har skickats in till {$contextName}. Bidragets sammanfattning bifogas nedan. Jag hoppas att du kan överväga att genomföra granskningen åt oss, då det vore mycket värdefullt.<br />
 <br />
+
 Vänligen logga in på tidskriftens webbplats senast {$responseDueDate} och svara om du har möjlighet att åta dig granskningsuppdraget eller inte. Det är också där du får tillgång till bidraget och lägger in din granskning och rekommendation. Adressen till webbplatsen är {$contextUrl}.<br />
 <br />
 Deadline för själva granskningen är {$reviewDueDate}.<br />
@@ -209,21 +210,21 @@ Om du har glömt ditt användarnamn och/eller lösenord till tidskriftens webbpl
 <br />
 Bidragets URL: {$submissionReviewUrl}<br />
 <br />
-Tack för ditt övervägande av granskningsuppdraget.<br />
+Tack för att du överväger granskningsuppdraget.<br />
 <br />
 {$editorialContactSignature}<br />
 <br />
 &quot;{$submissionTitle}&quot;<br />
 <br />
 {$submissionAbstract}]]></body>
-		<description>Det här e-postmeddelandet från Sektionsredaktören till en granskar ber granskaren att acceptera eller tacka nej till uppdraget att sakkunniggranska ett bidrag. Det innehåller information om bidraget i form av titel och sammanfattning, en deadline för granskning och instruktioner för hur man kommer åt bidraget. Meddelandet används när granskningsprocess Standard är valt i Administration &gt; Inställningar &gt; Arbetsflöde &gt; Granskning. (Annars, se REVIEW_REQUEST_ATTACHED.)</description>
+		<description>Det här e-postmeddelandet från Sektionsredaktören till en Granskare ber granskaren att acceptera eller tacka nej till uppdraget att sakkunniggranska ett bidrag. Det innehåller information om bidraget i form av titel och sammanfattning, en deadline för granskning och instruktioner för hur man kommer åt bidraget. Meddelandet används när granskningsprocess Standard är valt i Administration &gt; Inställningar &gt; Arbetsflöde &gt; Granskning. (Annars, se REVIEW_REQUEST_ATTACHED.)</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_REMIND_AUTO">
 		<subject>Förfrågan om granskning av artikel</subject>
 		<body><![CDATA[{$reviewerName}:<br />
-Det här är bara en påminnelse om vår förfrågan om huruvida du skulle vara villig att granska bidraget &quot;{$submissionTitle}&quot; för {$contextName}. Vi hade hoppats på svar innan {$responseDueDate}, och i samband med att datumet passerade genererade och skickades det här meddelandet.
+Det här är bara en påminnelse om vår förfrågan om huruvida du skulle vara villig att granska bidraget &quot;{$submissionTitle}&quot; för {$contextName}. Vi hade hoppats på svar innan {$responseDueDate}, och i och med att datumet passerade genererades och skickades det här meddelandet ut automatiskt.
 <br />
-Jag tror att du skulle passa utmärkt som sakkunniggranskare av manuskriptet &quot;{$submissionTitle}&quot;, som har skickats in till {$contextName}. Bidragets sammanfattning bifogas nedan. Jag hoppas att du kan överväga att genomföra granskningen åt oss, det vore mycket värdefullt.<br />
+Jag tror att du skulle passa utmärkt som sakkunniggranskare av manuskriptet. Bidragets sammanfattning bifogas nedan. Jag hoppas att du kan överväga att genomföra granskningen åt oss, då det vore mycket värdefullt.<br />
 <br />
 Vänligen logga in på tidskriftens webbplats senast {$responseDueDate} och svara om du har möjlighet att åta dig granskningsuppdraget eller inte. Det är också där du får tillgång till bidraget och lägger in din granskning och rekommendation. Adressen till webbplatsen är {$contextUrl}.<br />
 <br />
@@ -233,7 +234,7 @@ Om du har glömt ditt användarnamn och/eller lösenord till tidskriftens webbpl
 <br />
 Bidragets URL: {$submissionReviewUrl}<br />
 <br />
-Tack för ditt övervägande av granskningsuppdraget.<br />
+Tack för att du överväger granskningsuppdraget.<br />
 <br />
 {$editorialContactSignature}<br />
 <br />
@@ -242,391 +243,623 @@ Tack för ditt övervägande av granskningsuppdraget.<br />
 {$submissionAbstract}]]></body>
 		<description>Det här e-postmeddelandet skickas automatiskt när en granskares deadline för bekräftelse på granskningsförfrågan löper ut (se Granskningsalternativ under Inställningar &gt; Arbetsflöde &gt; Granskning) och Granskartillgång med ett klick är avaktiverat. Schemalagda aktiviteter måste vara aktiverat och konfigurerat (se serverns konfigurationsfil).</description>
 	</email_text>
-	<email_text key="REVIEW_REQUEST_ATTACHED">
-		<subject>Begäran om sakkunigbedömning</subject>
+	<email_text key="REVIEW_REQUEST_ONECLICK">
+		<subject>Förfrågan om granskning av artikel</subject>
 		<body><![CDATA[{$reviewerName}:<br />
 <br />
-	Vår tidskrift {$contextName} har fått manuskriptet &quot;{$submissionTitle}&quot; inskickat till oss. Vi hoppas att du har möjlighet att göra en sakkunighetsbedömning av manuskriptet. <br />
-	<br />
-	Se länk nedan för information om tidskriftens riktlinjer för sakkunigbedömning. Manuskriptet bifogas i det här mailet. Bedömning av manuskriptet, samt rekommendation, ska mailas till mig senast {$reviewDueDate}.<br />
+Jag tror att du skulle passa utmärkt som sakkunniggranskare av manuskriptet &quot;{$submissionTitle}&quot;, som har skickats in till {$contextName}. Bidragets sammanfattning bifogas nedan. Jag hoppas att du kan överväga att genomföra granskningen åt oss, då det vore mycket värdefullt.<br />
 <br />
-	Vänligen meddela mig innan {$responseDueDate}, för att bekräfta om du har möjlighet att åta dig uppdraget eller inte<br />
+Vänligen logga in på tidskriftens webbplats senast {$responseDueDate} och svara om du har möjlighet att åta dig granskningsuppdraget eller inte. Det är också där du får tillgång till bidraget och lägger in din granskning och rekommendation.<br />
 <br />
-	Tack för din hjälp.<br />
-	<br />
-	{$editorialContactSignature}<br />
+Deadline för själva granskningen är {$reviewDueDate}.<br />
 <br />
-	Riktlinjer för sakkunnigbedömning:<br />
+Bidragets URL: {$submissionReviewUrl}<br />
 <br />
-	{$reviewGuidelines}<br />
-	<br />
-	<br />
+Tack för att du överväger granskningsuppdraget.<br />
+<br />
+{$editorialContactSignature}<br />
+<br />
+&quot;{$submissionTitle}&quot;<br />
+<br />
+{$submissionAbstract}]]></body>
+		<description>Det här e-postmeddelandet från Sektionsredaktören till en Granskare ber granskaren att acceptera eller tacka nej till uppdraget att sakkunniggranska ett bidrag. Det innehåller information om bidraget i form av titel och sammanfattning, en deadline för granskning och instruktioner för hur man kommer åt bidraget. Meddelandet används när granskningsprocess Standard är valt i Administration &gt; Inställningar &gt; Arbetsflöde &gt; Granskning och Granskartillgång med ett klick är aktiverat.</description>
+	</email_text>
+	<email_text key="REVIEW_REQUEST_REMIND_AUTO_ONECLICK">
+		<subject>Förfrågan om granskning av artikel</subject>
+		<body><![CDATA[{$reviewerName}:<br />
+Det här är bara en påminnelse om vår förfrågan om huruvida du skulle vara villig att granska bidraget &quot;{$submissionTitle}&quot; för {$contextName}. Vi hade hoppats på svar innan {$responseDueDate}, och i och med att datumet passerade genererades och skickades det här meddelandet ut automatiskt.
+<br />
+Jag tror att du skulle passa utmärkt som sakkunniggranskare av manuskriptet. Bidragets sammanfattning bifogas nedan. Jag hoppas att du kan överväga att genomföra granskningen åt oss, då det vore mycket värdefullt.<br />
+<br />
+Vänligen logga in på tidskriftens webbplats senast {$responseDueDate} och svara om du har möjlighet att åta dig granskningsuppdraget eller inte. Det är också där du får tillgång till bidraget och lägger in din granskning och rekommendation.<br />
+<br />
+Deadline för själva granskningen är {$reviewDueDate}.<br />
+<br />
+Bidragets URL: {$submissionReviewUrl}<br />
+<br />
+Tack för att du överväger granskningsuppdraget.<br />
+<br />
+{$editorialContactSignature}<br />
+<br />
+&quot;{$submissionTitle}&quot;<br />
+<br />
+{$submissionAbstract}]]></body>
+		<description>Det här e-postmeddelandet skickas automatiskt när en granskares deadline för bekräftelse på granskningsförfrågan löper ut (se Granskningsalternativ under Inställningar &gt; Arbetsflöde &gt; Granskning) och Granskartillgång med ett klick är aktiverat. Schemalagda aktiviteter måste vara aktiverat och konfigurerat (se serverns konfigurationsfil).</description>
+	</email_text>
+	<email_text key="REVIEW_REQUEST_ATTACHED">
+		<subject>Förfrågan om granskning av artikel</subject>
+		<body><![CDATA[{$reviewerName}:<br />
+<br />
+Jag tror att du skulle passa utmärkt som sakkunniggranskare av manuskriptet &quot;{$submissionTitle}&quot; och detta är en förfrågan om du skulle vara villig att ta dig an den här viktiga uppgiften åt oss. Tidskriftens Riktlinjer för granskning bifogas här nedan, och bidraget finns som bilaga i det här e-postmeddelandet. Din bedömning av bidraget ska tillsammans med din rekommendation skickas per e-post till mig senast {$reviewDueDate}.<br />		
+<br />
+Vänligen meddela mig genom att svara på det här meddelandet senast {$responseDueDate} om du har möjlighet att åta dig uppdraget eller inte.<br />
+<br />
+Tack för att du överväger granskningsuppdraget.<br />
+<br />
+{$editorialContactSignature}<br />
+<br />
+<br />
+Riktlinjer för granskning:<br />
+<br />
+{$reviewGuidelines}<br />
 ]]></body>
-		<description>Det här meddelandet skickas från Sektionsredaktör till en Sakkunnigbedömare med förfrågan om att kvalitetsbedöma ett manuskript. Meddelandet innehåller bifogat manuskript. Mailet används när alternativet: "Bedömningsprocess bifogad i E-posten" är aktiverat i tidskriftsinställningar, Steg 2. (Annars, se REVIEW_REQUEST.)</description>
+		<description>Det här e-postmeddelandet från Sektionsredaktören till en Granskare ber granskaren att acceptera eller tacka nej till uppdraget att sakkunniggranska ett bidrag. Det innehåller bidraget som bifogad fil. Det här e-postmeddelandet används när Granskningsprocess E-postbilaga är valt i &gt; Inställningar &gt; Arbetsflöde &gt; Granskning. (Annars, se REVIEW_REQUEST.)</description>
+	</email_text>
+		<email_text key="REVIEW_REQUEST_SUBSEQUENT">
+		<subject>Förfrågan om granskning av artikel</subject>
+		<body><![CDATA[{$reviewerName}:<br />
+<br />
+Detta gäller manuskriptet &quot;{$submissionTitle},&quot;, som är under övervägande hos {$contextName}.<br />
+<br />
+Efter granskningen av en tidigare version av manuskriptet har författarna nu skickat in en reviderad version av sin artikel. Vi är glada om du skulle kunna hjälpa oss att utvärdera denna.<br />
+<br />
+Vänligen logga in på tidskriftens webbplats senast {$responseDueDate} och svara om du har möjlighet att åta dig granskningsuppdraget eller inte. Det är också där du får tillgång till bidraget och lägger in din granskning och rekommendation. Webbplatsens adress är: {$contextUrl}.<br />
+<br />
+Deadline för själva granskningen är {$reviewDueDate}.<br />
+<br />
+Om du har glömt ditt användarnamn och/eller lösenord till tidskriftens webbplats, använd följande länk för att återställa lösenordet: {$passwordResetUrl}. Dina inloggningsuppgifter skickas då till dig per e-post.<br />
+<br />
+Bidragets URL: {$submissionReviewUrl}<br />
+<br />
+Tack för att du överväger granskningsuppdraget.<br />
+<br />
+{$editorialContactSignature}<br />
+<br />
+&quot;{$submissionTitle}&quot;<br />
+<br />
+{$submissionAbstract}]]></body>
+		<description>Det här e-postmeddelandet från Sektionsredaktören till en Granskare ber granskaren att acceptera eller tacka nej till uppdraget att sakkunniggranska ett bidrag en andra gång eller på nytt. Det innehåller information om bidraget i form av titel och sammanfattning, en deadline för granskning och instruktioner för hur man kommer åt bidraget. Meddelandet används när granskningsprocess Standard är valt i Administration &gt; Inställningar &gt; Arbetsflöde &gt; Granskning. (Annars, se REVIEW_REQUEST_ATTACHED_SUBSEQUENT.)</description>
+	</email_text>
+	<email_text key="REVIEW_REQUEST_ONECLICK_SUBSEQUENT">
+		<subject>Förfrågan om granskning av artikel</subject>
+		<body><![CDATA[{$reviewerName}:<br />
+<br />
+Detta gäller manuskriptet &quot;{$submissionTitle},&quot;, som är under övervägande hos {$contextName}.<br />
+<br />
+Efter granskningen av en tidigare version av manuskriptet har författarna nu skickat in en reviderad version av sin artikel. Vi är glada om du skulle kunna hjälpa oss att utvärdera denna.<br />
+<br />
+Vänligen logga in på tidskriftens webbplats senast {$responseDueDate} och svara om du har möjlighet att åta dig granskningsuppdraget eller inte. Det är också där du får tillgång till bidraget och lägger in din granskning och rekommendation. Webbplatsens adress är: {$contextUrl}.<br />
+<br />
+Deadline för själva granskningen är {$reviewDueDate}.<br />
+<br />
+Bidragets URL: {$submissionReviewUrl}<br />
+<br />
+Tack för att du överväger granskningsuppdraget.<br />
+<br />
+{$editorialContactSignature}<br />
+<br />
+&quot;{$submissionTitle}&quot;<br />
+<br />
+{$submissionAbstract}]]></body>
+		<description>Det här e-postmeddelandet från Sektionsredaktören till en Granskare ber granskaren att acceptera eller tacka nej till uppdraget att sakkunniggranska ett bidrag en andra gång eller på nytt. Det innehåller information om bidraget i form av titel och sammanfattning, en deadline för granskning och instruktioner för hur man kommer åt bidraget. Meddelandet används när granskningsprocess Standard är valt i Administration &gt; Inställningar &gt; Arbetsflöde &gt; Granskning och Granskartillgång med ett klick är aktiverat.</description>
+	</email_text>
+	<email_text key="REVIEW_REQUEST_ATTACHED_SUBSEQUENT">
+		<subject>Förfrågan om granskning av artikel</subject>
+		<body><![CDATA[{$reviewerName}:<br />
+<br />
+Detta gäller manuskriptet &quot;{$submissionTitle},&quot;, som är under övervägande hos {$contextName}.<br />
+<br />
+Efter granskningen av en tidigare version av manuskriptet har författarna nu skickat in en reviderad version av sin artikel. Vi är glada om du skulle kunna hjälpa oss att utvärdera denna.<br />
+<br />
+Riktlinjer för granskning bifogas här nedan, och bidraget finns som bilaga i det här e-postmeddelandet. Din bedömning av bidraget ska tillsammans med din rekommendation skickas per e-post till mig senast {$reviewDueDate}.<br />
+<br />
+Vänligen meddela mig genom att svara på det här meddelandet senast {$responseDueDate} om du har möjlighet att åta dig uppdraget eller inte.<br />
+<br />
+Tack för att du överväger granskningsuppdraget.<br />
+<br />
+{$editorialContactSignature}<br />
+<br />
+<br />
+Riktlinjer för granskning<br />
+<br />
+{$reviewGuidelines}<br />
+]]></body>
+		<description>Det här e-postmeddelandet från Sektionsredaktören till en Granskare ber granskaren att acceptera eller tacka nej till uppdraget att sakkunniggranska ett bidrag en andra gång eller på nytt. Det innehåller information bidraget som en bifogad fil. Det här e-postmeddelandet används när Granskningsprocess E-postbilaga är valt i &gt; Inställningar &gt; Arbetsflöde &gt; Granskning. (Annars, se REVIEW_REQUEST_SUBSEQUENT.)</description>
 	</email_text>
 	<email_text key="REVIEW_CANCEL">
-		<subject>Begäran om sakkunnigbedömning avbruten</subject>
+		<subject>Förfrågan om granskning återkallad</subject>
 		<body><![CDATA[{$reviewerName}:<br />
 <br />
-Vi har beslutat att avbryta vår begäran om sakkunnigbedömning gällande manuskriptet, &quot;{$submissionTitle},&quot; för {$contextName}. Vi ber om ursäkt för eventuella olägenheter detta kan innebära för dig men vi hoppas att vi även i framtiden kan skicka dig manuskript för sakkunnigbedömning.<br />
+Vi har beslutat att återkalla vår förfrågan till dig om att granska bidraget &quot;{$submissionTitle},&quot; för {$contextName}. Vi ber om ursäkt för besväret och hoppas att vi även i framtiden kan fråga dig om granskningsuppdrag för tidskriftens räkning.<br />
 <br />
-Om du har frågor, vänligen kontakta mig.<br />
+Om du har några frågor, vänligen kontakta mig.
 <br />
 {$editorialContactSignature}]]></body>
-		<description>Det här meddelandet skickas från Sektionsredaktör till en Sakkunnigbedömare som fått tilldelat sig ett bedömningsuppdrag och innehåller information om att bedömningsprocessen har avbrutits.</description>
+		<description>Det här e-postmeddelandet skickas från Sektionsredaktören till en Granskare med en pågående granskning av ett bidrag, för att meddela hen att granskningen blivit återkallad.</description>
 	</email_text>
 	<email_text key="REVIEW_CONFIRM">
-		<subject>Accepterande av sakkunnigbedömning</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
+		<subject>Accepterar granskningsuppdrag</subject>
+		<body><![CDATA[Redaktörer:<br />
 <br />
-Jag har möjlighet att sakkunnigbedöma manuskriptet, &quot;{$submissionTitle},&quot; för {$contextName}. Tack för att ni kontaktat mig, jag kommer att ha bedömningen färdig till den, {$reviewDueDate}, om inte innan.<br />
+Jag har möjlighet och åtar mig gärna uppdraget att granska bidraget &quot;{$submissionTitle}&quot; för {$contextName}. Tack för att ni tänkte på mig. Jag kommer att ha granskningen färdig till deadline {$reviewDueDate}, om inte förr.<br />
 <br />
 {$reviewerName}]]></body>
-		<description>Det här meddelandet skickas från Sakkunnigbedömare till Sektionsredaktör som svar på begäran om sakkunnigbedömning. Meddelandet innehåller information om att sakkunnigbedömaren har accepterat förfrågan och att bedömningen kommer vara färdig innan det angivna datumet.</description>
+		<description>Det här e-postmeddelandet skickas från en Granskare till Sektionsredaktören som svar på en förfrågan om granskning för att meddela Sektionsredaktören att granskaren accepterar förfrågan om granskning och att hen kommer att färdigställa denna till angiven deadline.</description>
 	</email_text>
 	<email_text key="REVIEW_DECLINE">
-		<subject>Avvisan om sakkunnigbedömning</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
+		<subject>Tackar nej till granskningsuppdrag</subject>
+		<body><![CDATA[Redaktörer:<br />
 <br />
-Jag beklagar att jag inte har möjlighet att sakkunnigbedöma manuskriptet, &quot;{$submissionTitle},&quot; för {$contextName}. Tack för att ni kontaktade mig och hör gärna av er med ytterligare förfrågningar i framtiden.<br />
+Tyvärr har jag inte möjlighet i nuläget att granska bidraget &quot;{$submissionTitle}&quot; för {$contextName}. Tack för att ni tänkte på mig och hör gärna av er en annan gång.<br />
 <br />
 {$reviewerName}]]></body>
-		<description>Det här meddelandet skickas från Sakkunighetsbedömare till Sektionsredaktör som svar på förfrågan om sakkunnigbedömning av manuskript. Meddelandet innehåller information om att sakkunnigbedömaren inte har möjlighet att bedöma manuskriptet.</description>
+		<description>Det här e-postmeddelandet skickas från en Granskare till Sektionsredaktören som svar på en förfrågan om granskning för att meddela Sektionsredaktören att granskaren tackar nej till granskningsuppdraget.</description>
 	</email_text>
 	<email_text key="REVIEW_ACK">
-		<subject>Bekräftelse på sakkunnigbedömning</subject>
+		<subject>Bekräftelse på granskning av artikel</subject>
 		<body><![CDATA[{$reviewerName}:<br />
 <br />
-Tack för att du genomfört sakkunnigbedömningen av, &quot;{$submissionTitle},&quot; för {$contextName}. Vi uppskattar ditt viktiga arbete och ditt bidrag för att bibehålla tidskriftens kvalitet.<br />
+Tack för att du genomfört granskningen av bidraget &quot;{$submissionTitle}&quot; för {$contextName}. Vi uppskattar ditt arbete din roll i att bibehålla tidskriftens kvalitet.<br />
 <br />
 {$editorialContactSignature}]]></body>
-		<description>Det här meddelandet skickas från Sektionsredaktör för att bekräfta att en sakkunnigbedömning har genomförts och innehåller ett tack till Sakkunnigbedömare för utfört arbete.</description>
+		<description>Det här e-postmeddelandet skickas från en Sektionsredaktör för att bekräfta att en färdig granskning inkommit och för att tacka granskaren för hens arbete.</description>
 	</email_text>
 	<email_text key="REVIEW_REMIND">
-		<subject>Påminnelse om sakkunnigbedömning</subject>
+		<subject>Påminnelse om granskning av bidrag</subject>
 		<body><![CDATA[{$reviewerName}:<br />
 <br />
-En kort påminnelse gällande sakkunnigbedömning av manuskriptet, &quot;{$submissionTitle},&quot; för {$contextName}. Vi hoppas att det finns möjlighet för dig att genomföra sakkunnigbedömning innan {$reviewDueDate}.<br />
+Det här är bara en påminnelse om vår förfrågan om din granskning av bidraget &quot;{$submissionTitle}&quot; för {$contextName}. Vi hade hoppats på att få din granskning senast {$reviewDueDate} och skulle vara tacksamma om du ville inkomma med den så fort som möjligt.<br />
 <br />
-Om du saknar användarnamn och lösenord för tidskriftens hemsida, använd länken för att nollställa lösenordet (nya användaruppgifter mailas då till dig). {$passwordResetUrl}<br />
+Om du har glömt ditt användarnamn och/eller lösenord till tidskriftens webbplats, använd följande länk för att återställa lösenordet: {$passwordResetUrl}. Dina inloggningsuppgifter skickas då till dig per e-post.<br />
 <br />
-Manuskriptets URL: {$submissionReviewUrl}<br />
+Bidragets URL: {$submissionReviewUrl}<br />
 <br />
-Vänligen bekräfta snarast om du har möjlighet att genomföra sakkunnigbedömning av manuskriptet.<br />
+Vänligen bekräfta snarast om du har möjlighet att genomföra granskningsuppdraget, som utgör en viktig del av tidskriftens arbete. Vi ser fram emot att höra från dig.<br />
 <br />
 {$editorialContactSignature}]]></body>
-		<description>Det här meddelandet skickas från Sektionsredaktör som en påminnelse om att sakkunnigbedömning ännu inte har genomförts.</description>
+		<description>Det här e-postmeddelandet skickas från en Sektionsredaktör som en påminnelse till granskaren att deadline för granskningen har passerat.</description>
 	</email_text>
 	<email_text key="REVIEW_REMIND_ONECLICK">
-		<subject>Påminnelse om sakkunnigbedömning</subject>
+		<subject>Påminnelse om granskning av bidrag</subject>
 		<body><![CDATA[{$reviewerName}:<br />
 <br />
-En kort påminnelse gällande sakkunnigbedömning av av manuskriptet, &quot;{$submissionTitle},&quot; för {$contextName}. Vi hoppas att det finns möjlighet för dig att genomföra sakkunnigbedömning innan {$reviewDueDate}.<br />
+Det här är bara en påminnelse om vår förfrågan om din granskning av bidraget &quot;{$submissionTitle}&quot; för {$contextName}. Vi hade hoppats på att få din granskning senast {$reviewDueDate} och skulle vara tacksamma om du ville inkomma med den så fort som möjligt.<br />
 <br />
-Manuskriptets URL: {$submissionReviewUrl}<br />
+Bidragets URL: {$submissionReviewUrl}<br />
 <br />
-Vänligen bekräfta snarast om du har möjlighet att genomföra sakkunnigbedömning av manuskriptet.<br />
+Vänligen bekräfta snarast om du har möjlighet att genomföra granskningsuppdraget, som utgör en viktig del av tidskriftens arbete. Vi ser fram emot att höra från dig.<br />
 <br />
 {$editorialContactSignature}]]></body>
-		<description>Det här meddelandet skickas från Sektionsredaktör som en påminnelse om att sakkunnigbedömning ännu inte har genomförts.</description>
+		<description>Det här e-postmeddelandet skickas från en Sektionsredaktör som en påminnelse till granskaren att deadline för granskningen har passerat.</description>
 	</email_text>
 	<email_text key="REVIEW_REMIND_AUTO">
-		<subject>Automated Submission Review Reminder</subject>
+		<subject>Automatisk påminnelse om granskning av bidrag</subject>
 		<body><![CDATA[{$reviewerName}:<br />
 <br />
-En kort påminnelse gällande sakkunnigbedömning av manuskriptet, &quot;{$submissionTitle},&quot; för {$contextName}. Vi hoppas att det finns möjlighet för dig att genomföra sakkunnigbedömning så fort som möjligt. Vi hade önskat att sakkunnigbedömningen skulle vara avslutad innan {$reviewDueDate}, och den här påminnelsen skickas automatiskt när datumet har passerats. Vi skulle ändå bli tacksamma om du har möjlighet att genomföra bedömningen så fort som möjligt.<br />
+Det här är bara en påminnelse om vår förfrågan om din granskning av bidraget &quot;{$submissionTitle}&quot; för {$contextName}. Vi hade hoppats på att få din granskning senast {$reviewDueDate} och det här e-postmeddelandet skickas automatiskt när datum för deadline passeras. Vi skulle fortfarande vara tacksamma över att få in din granskning, så fort som möjligt.<br />
 <br />
-Om du saknar användarnamn och lösenord för tidskriftens hemsida, använd länken för att nollställa lösenordet (nya användaruppgifter mailas till då till dig). {$passwordResetUrl}<br />
+Om du har glömt ditt användarnamn och/eller lösenord till tidskriftens webbplats, använd följande länk för att återställa lösenordet: {$passwordResetUrl}. Dina inloggningsuppgifter skickas då till dig per e-post.<br />
 <br />
-Manuskriptets URL: {$submissionReviewUrl}<br />
+Bidragets URL: {$submissionReviewUrl}<br />
 <br />
-Vänligen bekräfta snarast om du har möjlighet att genomföra sakkunnigbedömning av manuskriptet.<br />
+Vänligen bekräfta snarast om du har möjlighet att genomföra granskningsuppdraget, som utgör en viktig del av tidskriftens arbete. Vi ser fram emot att höra från dig.<br />
 <br />
 {$editorialContactSignature}]]></body>
-		<description>Det här meddelandet skickas automatiskt när sista datum för sakkunnigbedömning har passerats (se Valmöjligheter för bedömning under Tidskriftsinställningar, Steg 2) och när tillgång för one-click bedömning är avaktiverad. Planerade aktiviteter måste aktiveras och konfigureras (se konfigurationsfil eller kontakta sidadministratör för information).</description>
+		<description>Det här e-postmeddelandet skickas automatiskt när en granskares deadline löper ut (se Granskningsalternativ under Inställningar &gt; Arbetsflöde &gt; Granskning) och när Granskartillgång med ett klick är avaktiverat. Schemalagda aktiviteter måste vara aktiverat och konfigurerat (se serverns konfigurationsfil).</description>
 	</email_text>
 	<email_text key="REVIEW_REMIND_AUTO_ONECLICK">
-		<subject>Automatisk påminnelse om sakkunnigbedömning</subject>
+		<subject>Automatisk påminnelse om granskning av bidrag</subject>
 		<body><![CDATA[{$reviewerName}:<br />
 <br />
-En kort påminnelse gällande sakkunnigbedömning av manuskriptet, &quot;{$submissionTitle},&quot; för {$contextName}. Vi hade hoppats att bedömningen skulle varit genomförd innan den {$reviewDueDate}, och det här meddelandet skickas automatiskt när datumet har passerats. Vi hoppas emellertid att du fortfarande har möjlighet att genomföra sakkunnigbedömningen och skicka in den så fort som möjligt.<br />
+Det här är bara en påminnelse om vår förfrågan om din granskning av bidraget &quot;{$submissionTitle}&quot; för {$contextName}. Vi hade hoppats på att få din granskning senast {$reviewDueDate} och det här e-postmeddelandet skickas automatiskt när datum för deadline passeras. Vi skulle fortfarande vara tacksamma över att få in din granskning, så fort som möjligt.<br />
 <br />
-Manuskriptets URL: {$submissionReviewUrl}<br />
+Bidragets URL: {$submissionReviewUrl}<br />
 <br />
-Vänligen bekräfta snarast om du har möjlighet att genomföra sakkunnigbedömning av manuskriptet.<br />
+Vänligen bekräfta snarast om du har möjlighet att genomföra granskningsuppdraget, som utgör en viktig del av tidskriftens arbete. Vi ser fram emot att höra från dig.<br />
 <br />
 {$editorialContactSignature}]]></body>
-		<description>Det här meddelandet skickas automatiskt när sista datum för sakkunnigbedömning har passerats (se Valmöjligheter för bedömning under Tidskriftsinställningar, Steg 2) och när tillgång för one-click bedömning är avaktiverad. Planerade aktiviteter måste aktiveras och konfigureras (se konfigurationsfil eller kontakta sidadministratör för information).</description>
+		<description>Det här e-postmeddelandet skickas automatiskt när en granskares deadline löper ut (se Granskningsalternativ under Inställningar &gt; Arbetsflöde &gt; Granskning) och när Granskartillgång med ett klick är aktiverat. Schemalagda aktiviteter måste vara aktiverat och konfigurerat (se serverns konfigurationsfil).</description>
 	</email_text>
-	<email_text key="EDITOR_REVIEW">
-		<subject>Redaktionell bedömning av ditt manuskript</subject>
+	<email_text key="EDITOR_DECISION_ACCEPT">
+		<subject>Redaktörsbeslut</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Vi har nu avslutat sakkunnigbedömning av ditt manuskript &quot;{$submissionTitle}.&quot; Värt beslut följer:<br />
+Vi har fattat ett beslut angående ditt bidrag till {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
-{$comments}.<br />
+Vårt beslut är att: Acceptera bidraget<br />
 <br />
-Ytterligare kommentarer av Redaktion och Sakkunnigbedömare hitatr du om du loggar in på tidskriftens hemsida:<br />
+{$editorialContactSignature}<br />
+]]></body>
+		<description>Det här e-postmeddelandet från Redaktören eller Sektionsredaktören till en Författare meddelar att ett slutligt "Acceptera bidrag"-beslut fattats för hens bidrag.</description>
+	</email_text>
+	<email_text key="EDITOR_DECISION_SEND_TO_EXTERNAL">
+		<subject>Redaktörsbeslut</subject>
+		<body><![CDATA[{$authorName}:<br />
 <br />
-Manuskriptets URL: {$submissionUrl}<br />
+Vi har fattat ett beslut angående ditt bidrag till {$contextName}, &quot;{$submissionTitle}&quot;.<br />
+<br />
+Vårt beslut är att: Skicka till granskning<br />
+<br />
+Bidragets URL: {$submissionUrl}<br />
+<br />
+{$editorialContactSignature}<br />
+]]></body>
+		<description>Det här e-postmeddelandet från Redaktören eller Sektionsredaktören till en Författare meddelar att hens bidrag skickas till extern granskning.</description>
+	</email_text>
+	<email_text key="EDITOR_DECISION_SEND_TO_PRODUCTION">
+		<subject>Redaktörsbeslut</subject>
+		<body><![CDATA[{$authorName}:<br />
+<br />
+Redigeringen av ditt bidrag &quot;{$submissionTitle}&quot; är färdig. Vi skickar det nu vidare till produktion.<br />
+<br />
+Bidragets URL: {$submissionUrl}<br />
+<br />
+{$editorialContactSignature}<br />
+]]></body>
+		<description>Det här e-postmeddelandet från Redaktören eller Sektionsredaktören till en Författare meddelar att hens bidrag sänds vidare till produktion.</description>
+	</email_text>
+	<email_text key="EDITOR_DECISION_REVISIONS">
+		<subject>Redaktörsbeslut</subject>
+		<body><![CDATA[{$authorName}:<br />
+<br />
+Vi har fattat ett beslut angående ditt bidrag till {$contextName}, &quot;{$submissionTitle}&quot;.<br />
+<br />
+Vårt beslut är att: Bearbetning krävs<br />
+<br />
+{$editorialContactSignature}<br />
+]]></body>
+		<description>Det här e-postmeddelandet från Redaktören eller Sektionsredaktören till en Författare meddelar att ett slutligt "Bearbetning krävs"-beslut fattats för hens bidrag.</description>
+	</email_text>
+	<email_text key="EDITOR_DECISION_RESUBMIT">
+		<subject>Redaktörsbeslut</subject>
+		<body><![CDATA[{$authorName}:<br />
+<br />
+Vi har fattat ett beslut angående ditt bidrag till {$contextName}, &quot;{$submissionTitle}&quot;.<br />
+<br />
+Vårt beslut är att: Skicka in igen för ny granskning<br />
+<br />
+{$editorialContactSignature}<br />
+]]></body>
+		<description>Det här e-postmeddelandet från Redaktören eller Sektionsredaktören till en Författare meddelar att ett slutligt "Skicka in igen för ny granskning"-beslut fattats för hens bidrag.</description>
+	</email_text>
+	<email_text key="EDITOR_DECISION_DECLINE">
+		<subject>Redaktörsbeslut</subject>
+		<body><![CDATA[{$authorName}:<br />
+<br />
+Vi har fattat ett beslut angående ditt bidrag till {$contextName}, &quot;{$submissionTitle}&quot;.<br />
+<br />
+Vårt beslut är att: Refusera bidrag<br />
+<br />
+{$editorialContactSignature}<br />
+]]></body>
+		<description>Det här e-postmeddelandet från Redaktören eller Sektionsredaktören till en Författare meddelar att ett slutligt "Refusera bidrag"-beslut fattats för hens bidrag.</description>
+	</email_text>
+	<email_text key="COPYEDIT_REQUEST">
+		<subject>Förfrågan om manusredigering</subject>
+		<body><![CDATA[{$participantName}:<br />
+<br />
+Jag skulle vilja be dig om att genomföra manusredigering av &quot;{$submissionTitle}&quot; för {$contextName} genom att gå igenom följande steg:<br />
+1. Klicka på Bidragets URL nedan.<br />
+2. Öppna samtliga filer tillgängliga under Filer för redigering och manusredigera dem. Skriv i Manusredigeringsdiskussioner vid behov.<br />
+3. Spara manusredigerade filer och ladda upp under Manusredigerade-panelen.<br />
+4. Meddela Redaktören att samtliga filer har förberetts och att Produktionsprocessen kan påbörjas.<br />
+<br />
+{$contextName} URL: {$contextUrl}<br />
+Bidragets URL: {$submissionUrl}<br />
+Användarnamn: {$participantUsername}<br />
+<br />
+{$editorialContactSignature}]]></body>
+		<description>Det här e-postmeddelandet skickas från Sektionsredaktören till ett bidrags Manusredaktör för att be hen att påbörja manusredigeringsprocessen. Det innehåller information om bidraget och hur man får tillgång till det.</description>
+	</email_text>
+	<email_text key="LAYOUT_REQUEST">
+		<subject>Förfrågan om publiceringsversion</subject>
+		<body><![CDATA[{$participantName}:<br />
+<br />
+Bidraget &quot;{$submissionTitle}&quot; till {$contextName} behöver nu få publiceringsversioner skapade genom att följa nedanstående steg:<br />
+1. Klicka på Bidragets URL nedan.<br />
+2. Logga in på tidskriften och använd filerna under Filer redo för produktion för att skapa publiceringsversioner enligt tidskriftens standarder.<br />
+3. Ladda upp publiceringsversionerna till sektionen Filer för publiceringsversion.<br />
+4. Meddela Redaktören, genom att använda Produktionsdiskussioner, att publiceringsversionerna är uppladdade och klara.<br />
+<br />
+{$contextName} URL: {$contextUrl}<br />
+Bidragets URL: {$submissionLayoutUrl}<br />
+Användarnamn: {$participantUsername}<br />
+<br />
+Om du för tillfället inte har möjlighet att genomföra det här arbetet, eller om du har frågor, vänligen kontakta mig. Tack för ditt arbete med tidskriften.<br />
+<br />
+{$editorialContactSignature}]]></body>
+		<description>Det här e-postmeddelandet från Sektionsredaktören till Layoutredaktören meddelar hen att hen har blivit tilldelad uppgiften att vara Layoutredaktör för ett bidrag. Det innehåller information om bidraget och hur man får tillgång till det.</description>
+	</email_text>
+	<email_text key="LAYOUT_COMPLETE">
+		<subject>Publiceringsversioner klara</subject>
+		<body><![CDATA[{$editorialContactName}:<br />
+<br />
+Publiceringsversioner har nu färdigställts för manuskriptet &quot;{$submissionTitle}&quot; för {$contextName}. Dessa är nu redo för korrekturläsning. <br />
 <br />
 Vänligen kontakta mig om du har några frågor.<br />
 <br />
-{$editorialContactSignature}]]></body>
-		<description>Det här meddelandet skickas från Sektionsredaktör till författaren av ett manuskript och innehåller beslut om publicering samt kommentarer av Sakkunnigbedömare.</description>
-	</email_text>
-	<email_text key="COPYEDIT_REQUEST">
-		<subject>Begäran om Manusredigering</subject>
-		<body><![CDATA[{$participantName}:<br />
-<br />
-Jag skulle vilja be dig om att genomföra manusredigering av manuskriptet &quot;{$submissionTitle}&quot; för {$contextName} genom att gå igenom följande steg.<br />
-1. Klicka på Manuskriptets URL nedan.<br />
-2. Logga in på tidskriften och klicka på filen som syns under Steg 1.<br />
-3. Information om redigering hittar du under Instruktioner för Manusredigering.<br />
-4. Öppna den nedladdade filen och redigera manuskriptet, ställ eventuella frågor till författaren. <br />
-5. Spara den redigerade filen och ladda upp den under Steg 1 under Manusredigering.<br />
-6. Skicka COMPLETE-mailet till Redaktören.<br />
-<br />
-{$contextName} URL: {$contextUrl}<br />
-Manuskriptets URL: {$submissionUrl}<br />
-Användarnamn: {$participantUsername}<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Det här meddelandet skickas från Sektionsredaktören till ett manuskripts Manusredaktör och innehåller information om Manusredigering.</description>
-	</email_text>
-	<email_text key="LAYOUT_REQUEST">
-		<subject>Begäran om Korrekturversion</subject>
-		<body><![CDATA[{$participantName}:<br />
-<br />
-Manuskriptet &quot;{$submissionTitle}&quot; till {$contextName} behöver Korrekturversioner för Layoutprocessen. Gå igenom följande steg.<br />
-1. Klicka på Manuskriptets URL nedan.<br />
-2. Logga in på tidskriften och använd den &quot;tvättade versionen&quot; för att skapa en Korrkturversion enligt tidskriftens föreskrifter.<br />
-3. Skicka COMPLETE mailet till Redaktören.<br />
-<br />
-{$contextName} URL: {$contextUrl}<br />
-Manuskriptets URL: {$submissionLayoutUrl}<br />
-Användarnamn: {$participantUsername}<br />
-<br />
-Om du inte har möjlighet att genomföra det här arbetet, eller om du har frågor, vänligen kontakta mig.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Det här meddelandet från Sektionsredaktören till Layoutredaktören innehåller information om att Layoutredaktören nu kan påbörja Layoutredigering av manuskriptet. Meddelandet innehåller information om manuskriptet och hur man får tillgång till det.</description>
-	</email_text>
-	<email_text key="LAYOUT_COMPLETE">
-		<subject>Korrekturversion avslutad</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
-<br />
-Korrekturversion har nu färdigställts för Manuskriptet, &quot;{$submissionTitle},&quot; för {$contextName} och Korrekturläsning kan påbörjas. <br />
-<br />
-Om du har några frågor, vänligen kontakta mig.<br />
-<br />
 {$participantName}]]></body>
-		<description>Det här meddelandet från Layoutredaktör till Sektionsredaktör innehåller information om att Layoutprocessen är avslutad.</description>
-	</email_text>
-	<email_text key="LAYOUT_ACK">
-		<subject>Bekräftelse på avslutad Layoutredigering</subject>
-		<body><![CDATA[{$participantName}:<br />
-<br />
-Tack för att du har färdigställt Korrekturversion av Manuskriptet, &quot;{$submissionTitle},&quot; for {$contextName}. Ditt arbete har inneburit ett viktigt bidrag för publiceringsprocessen.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Det här meddelandet från Sektionsredaktören till Layoutredaktören bekräftar att Layoutprocessen är avslutad och tackar Layoutredaktören för genomfört arbete.</description>
-	</email_text>
-	<email_text key="PROOFREAD_AUTHOR_REQUEST">
-		<subject>Begäran om Korrekturläsning (Författare)</subject>
-		<body><![CDATA[{$authorName}:<br />
-<br />
-Ditt manuskript &quot;{$submissionTitle}&quot; till {$contextName} ska korrekturläsas enligt nedan följande steg:<br />
-1. Klicka på Manuskriptets URL nedan.<br />
-2. Logga in på tidskriften och se Instruktioner för korrekturläsning.<br />
-3. Klicka på Visa korrektur under Layout och korrekturläs versionen.<br />
-4. Skriv in eventuella korrigeringar (typografiska eller layoutmässiga) i Rättelser från korrekturläsning.<br />
-5. Spara och maila ändringarna till Layoutredaktör och Korrekturläsare.<br />
-6. Skicka COMPLETE mailet till Redaktören.<br />
-<br />
-Manuskriptets URL: {$submissionUrl}<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Det här meddelandet från Sektionsredaktören till Författaren innehåller information om att Korrekturversionen är iordningställd för Korrekturläsning.</description>
-	</email_text>
-	<email_text key="PROOFREAD_AUTHOR_COMPLETE">
-		<subject>Korrekturläsning avslutad (Författare)</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
-<br />
-Jag har nu avslutat Korrekturläsning av manuskriptet, &quot;{$submissionTitle},&quot; för {$contextName}. Korrekturversionen kan nu färdigtällas med avslutande korrektioner av Korrekturläsare och Layoutredaktör.<br />
-<br />
-{$authorName}]]></body>
-		<description>Det här meddelandet från Författare till Korrketurläsare och Redaktör innehåller besked om att författarens korrekturläsning nu är avslutad.</description>
-	</email_text>
-	<email_text key="PROOFREAD_AUTHOR_ACK">
-		<subject>Bekräftelse på Korrekturläsning (Författare)</subject>
-		<body><![CDATA[{$authorName}:<br />
-<br />
-Tack för att du har korrekturläst manuskriptet, &quot;{$submissionTitle},&quot; i {$contextName}. Vi ser fram emot att publicera ditt arbete inom kort.<br />
-<br />
-Om du registrerar dig på vår tjänst för abbonering av nyhetsmeddelanden så kommer du att få ett mail med innehållsförteckning av kommande nummer. Om du har frågor, vänligen kontakta mig.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Det här meddelandet från Sektionsredaktören till författaren bekräftar att den inledande Korrkturläsningen i processen har avslutats.</description>
-	</email_text>
-	<email_text key="PROOFREAD_REQUEST">
-		<subject>Begäran om Korrekturläsning
-			</subject>
-		<body><![CDATA[{$proofreaderName}:<br />
-<br />
-Manuskriptet &quot;{$submissionTitle}&quot; till {$contextName} ska korrekturläsas enligt följande steg:<br />
-1. Klicka på Manuskriptets URL nedan.<br />
-2. Logga in på tidskriften och se Instruktioner för korrekturläsning.<br />
-3. Klicka på Visa korrektur under Layout och korrekturläs verionen.<br />
-4. Skriv in eventuella korrigeringar (typografiska eller layoutmässiga) i Rättelser från korrekturläsning.<br />
-5. Spara och maila eventuella korrigeringar till Layoutredaktör.<br />
-6. Skicka COMPLETE mailet till Redaktören.<br />
-<br />
-Manuskriptets URL: {$submissionUrl}<br />
-Användarnamn: {$proofreaderUsername}<br />
-<br />
-Om du inte har möjlighet att genomföra korrekturläsningen för tillfället, eller om du har andra frågor, vänligen kontakta mig.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Det här meddelandet från Sektionsredaktören till Korrekturläsaren begär att korrekturläsan påbörjar korrekturläsning av manuskript.</description>
-	</email_text>
-	<email_text key="PROOFREAD_COMPLETE">
-		<subject>Korrekturläsning avslutad</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
-<br />
-Jag har avslutat korrekturläsning av manuskriptet, &quot;{$submissionTitle},&quot; för {$contextName}. Korrekturversionen är nu avslutad och redo för slutliga korrigeringar av Layoutredaktör.<br />
-<br />
-{$proofreaderName}]]></body>
-		<description>Det är meddelandet från Korrekturläsare till Sektionsredaktör informerar att Korrekturläsaren har avslutat korrigering av manuskriptet</description>
-	</email_text>
-	<email_text key="PROOFREAD_ACK">
-		<subject>Bekräftelse på Korrekturläsning</subject>
-		<body><![CDATA[{$proofreaderName}:<br />
-<br />
-Tack för att du har korrekturläst manuskriptet, &quot;{$submissionTitle},&quot; för {$contextName}. Ditt arbete har inneburit ett viktigt bidrag för tidskriften.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Det här meddelandet från Sektionsredaktören till Korrekturläsaren bekräftar att Korrekturläsningen nu är avslutad och tackar Korrekturläsaren för utfört arbete.</description>
-	</email_text>
-	<email_text key="PROOFREAD_LAYOUT_REQUEST">
-		<subject>Begäran om Korrekturläsning (Layoutredaktör)</subject>
-		<body><![CDATA[{$participantName}:<br />
-<br />
-Manuskriptet &quot;{$submissionTitle}&quot; till {$contextName} har korrekturlästs av Författare och Korrekturläsare, och alla eventuella korrigeringar sker enligt följande steg:<br />
-1. Klicka på Manuskriptets URL nedan.<br />
-2. Logga in på tidskriften och och se Instruktioner för korrekturläsning för att skapa uppdaterade versioner.<br />
-3. Ladda upp den korrigerade och uppdaterade versionen.<br />
-3. Skicka COMPLETE mailet under Korrekturläsning Steg 3 till Redaktör.<br />
-<br />
-{$contextName} URL: {$contextUrl}<br />
-Manuskriptets URL: {$submissionUrl}<br />
-Användarnamn: {$participantUsername}<br />
-<br />
-Om du inte har möjlighet att korrekturläsa manuskriptet för tillfället, eller om du har några frågor, vänligen kontakta mig.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Det här meddelandet skickas fråm Sektionsredaktören till Layoutredaktören och meddelar att det finns en Korrekturversion iordningställd för avslutad Korrekturläsning.</description>
-	</email_text>
-	<email_text key="PROOFREAD_LAYOUT_COMPLETE">
-		<subject>Korrekturläsning avslutad (Layoutredaktör)</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
-<br />
-Korrekturversionen av manuskriptet, &quot;{$submissionTitle},&quot; for {$contextName} har nu korrekturlästs och slutgiltigt korrigerats. Bidraget är klar för publicering.<br />
-<br />
-{$participantName}]]></body>
-		<description>Det här meddelanndet från Layoutredaktör till Sektionsredaktör meddelar att det avslutande delen av korrekturläsningen nu är genomförd och att bidraget är färdigt för publicering.</description>
-	</email_text>
-	<email_text key="PROOFREAD_LAYOUT_ACK">
-		<subject>Bekräftelse av Korrekturläsning (Layoutredaktör)</subject>
-		<body><![CDATA[{$participantName}:<br />
-<br />
-Tack för att du har avslutat korrekturprocessen rörande manuskriptet, &quot;{$submissionTitle},&quot; för {$contextName}.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Det här meddelandet från Sektionsredaktören till Layoutredaktören bekräftar att den sista delen av korrekturprocessen nu har avslutats.</description>
+		<description>Det här e-postmeddelandet från Layoutredaktören till Sektionsredaktören meddelar hen att layoutprocessen färdig.</description>
 	</email_text>
 	<email_text key="EMAIL_LINK">
-		<subject>Artikel som kan vara av intresse för dig</subject>
-		<body><![CDATA[Tror att du kan vara intresserad av artikeln &quot;{$submissionTitle}&quot; av {$authorName} publiserad i Vol {$volume}, Nr {$number} ({$year}) av {$contextName} på &quot;{$articleUrl}&quot;.]]></body>
-		<description>Den här mailmallen tillhandahåller basinformation för mail till registrerade användare. Den finns tillgänglig under Läsverktyg och måste aktiveras av Tidskriftsansvarig på administrationssidan för Läsverktyg.</description>
+	  <subject>Artikel som kan vara av intresse för dig</subject>
+	  <body><![CDATA[Tänkte att du skulle kunna vara intresserad av artikeln &quot;{$submissionTitle}&quot; av {$authorName}, publicerad i vol. {$volume}, nr. {$number} ({$year}) av {$contextName} på &quot;{$articleUrl}&quot;.]]></body>
+	  <description>Den här e-postmallen ger en registrerad läsare möjligheten att skicka information om en artikel till någon annan som hen tror kan vara intresserad. Den är tillgänglig via Läsverktyg och måste vara aktiverat av tidskriftsansvarig på administrationssidan för Läsverktyg.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_NOTIFY">
-		<subject>Meddelande om registrering</subject>
+		<subject>Meddelande om prenumerationsregistrering</subject>
 		<body><![CDATA[{$subscriberName}:<br />
 <br />
-Du har nu registrerats som abonnent hos {$contextName}, med följande prenumeration:<br />
+Du har nu registrerats som prenumerant i vårt webbaserade tidskriftssystem för {$contextName}, med följande prenumeration:<br />
 <br />
 {$subscriptionType}<br />
 <br />
-För att få tillgång till material som endast är öppet för abonnenter, logga in i tidskriften med ditt användarnamn, &quot;{$username}&quot;.<br />
+För att få tillgång till material som endast är tillgängligt för prenumeranter, logga bara in i systemet med ditt användarnamn, &quot;{$username}&quot;.<br />
 <br />
 Väl inloggad kan du när som helst ändra personuppgifter och lösenord.<br />
 <br />
-OBS: Om den organisation du tillhör har ett eget abonnemnag så behöver du inte använda dina personliga inloggningsuppgifter för att få tillgång till material som kräver abonnemang.<br />
+OBS! Om du har en institutionsprenumeration behöver inte användare tillhörande din institution logga in. Begäran om åtkomst till prenumerationsmaterial kommer då automatiskt autentiseras av systemet.<br />
 <br />
-Om du har några frågor, vänligen kontakta mig.<br />
+Vänligen kontakta mig om du har några frågor.<br />
 <br />
 {$subscriptionContactSignature}]]></body>
-		<description>Det här meddelandet innehåller abonnemangsinformation för registrerade användare.</description>
+		<description>Det här e-postmeddelandet meddelar en registrerad läsare att ansvariga har skapat en prenumeration åt hen. Det inkluderar tidskriftens URL samt instruktioner för tillgång.</description>
 	</email_text>
 	<email_text key="OPEN_ACCESS_NOTIFY">
-		<subject>Nytt nummer Open Access</subject>
-		<body><![CDATA[<br />
-				Läsare:<br />
+		<subject>Nummer nu tillgängligt som open access</subject>
+		<body><![CDATA[Läsare:<br />
 <br />
-				{$contextName} har nyligen gjorts tillgänglig som Open Access. Läs innehållsförteckningen nedan och klicka dig sedan in på tidskriften {$contextUrl}) för att ta del intressant material.<br />
+{$contextName} har nyligen gjort ett nytt nummer tillgängligt som open access. Se innehållsförteckningen här och klicka dig sedan in på vår webbplats {$contextUrl}) för att ta del av material av intresse.<br />
 <br />
-				Tack för fortsatt visat intresse för vårt arbete,<br />
-				{$editorialContactSignature}]]></body>
-		<description>Det här meddelandet skickas till registrerade läsare som har begärt att meddelas om och när tidskrifter blir tillgängliga Open Access.</description>
+Tack för fortsatt visat intresse för vårt arbete!<br />
+{$editorialContactSignature}]]></body>
+		<description>Det här e-postmeddelandet skickas till registrerade läsare som har begärt att meddelas om och när ett nummer görs tillgängligt som open access.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_BEFORE_EXPIRY">
-		<subject>Abonnemang upphör</subject>
+		<subject>Prenumeration går snart ut</subject>
 		<body><![CDATA[{$subscriberName}:<br />
 <br />
-Ditt abonnemang på tidskriften {$contextName} kommer snart att upphöra.<br />
+Din prenumeration på {$contextName} håller på att gå ut.<br />
 <br />
 {$subscriptionType}<br />
-Sista datum: {$expiryDate}<br />
+Utgångsdatum: {$expiryDate}<br />
 <br />
-För att försäkra dig om fortsatt tillgång till den här tidskriften, gå till tidskriftens hemsida och förnya ditt abonnemang. Du loggar in på sidan med användarnamnet, &quot;{$username}&quot;.<br />
+För att försäkra dig om fortsatt tillgång till den här tidskriften, gå till tidskriftens webbplats och förnya din prenumeration. Du loggar in i systemet med ditt användarnamn, &quot;{$username}&quot;.<br />
 <br />
-Om du har frågor, vänligen kontakta mig.<br />
+Vänligen kontakta mig om du har frågor.<br />
 <br />
 {$subscriptionContactSignature}]]></body>
-		<description>Det här meddelandet informerar en abonnent på tidskriften att abonnemanget snart kommer att upphöra. Meddelandet innehåller även information om hur användaren kan förnya sitt abonnemanget för att säkra fortsatt tillgång till tidskriftens material.</description>
+		<description>Det här e-postmeddelandet meddelar en prenumerant att prenumerationen håller på att gå ut. Det inkluderar tidskriftens URL samt instruktioner för tillgång.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_AFTER_EXPIRY">
-		<subject>Abonnemang har upphört</subject>
+		<subject>Prenumeration har gått ut</subject>
 		<body><![CDATA[{$subscriberName}:<br />
 <br />
-Ditt abonnemang på tidskriften {$contextName} har upphört.<br />
+Din prenumeration på tidskriften {$contextName} har gått ut.<br />
 <br />
 {$subscriptionType}<br />
-Datum för upphörande: {$expiryDate}<br />
+Utgångsdatum: {$expiryDate}<br />
 <br />
-För att förnya ditt abonnemang, gå till tidskriften hemsida. Du loggar in på sidan med användarnamn, &quot;{$username}&quot;.<br />
+Gå till tidskriftens webbplats för att förnya din prenumeration. Du loggar in i systemet med ditt användarnamn, &quot;{$username}&quot;.<br />
 <br />
-Om du har frågor, vänligen kontakta mig.<br />
+Vänligen kontakta mig om du har frågor.<br />
 <br />
 {$subscriptionContactSignature}]]></body>
-		<description>Det här meddelandet informerar en abonnent om att abonnemnaget på tidskriften har upphört. Meddelandet innehåller även information om hur användaren kan förnya sitt abonnemanget för att säkra fortsatt tillgång till tidskriftens material.</description>
+		<description>Det här e-postmeddelandet meddelar en prenumerant att prenumerationen har gått ut. Det inkluderar tidskriftens URL samt instruktioner för tillgång.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_AFTER_EXPIRY_LAST">
-		<subject>Abonnemang har upphört - Sista påminnelsen</subject>
+		<subject>Prenumeration har gått ut – sista påminnelsen</subject>
 		<body><![CDATA[{$subscriberName}:<br />
 <br />
-Ditt abonnmenag på tidskriften {$contextName} har upphört.<br />
+Din prenumeration på tidskriften {$contextName} har gått ut.<br />
 Observera att det här är den sista påminnelsen som skickas till dig.<br />
 <br />
 {$subscriptionType}<br />
-Datum för upphörande: {$expiryDate}<br />
+Utgångsdatum: {$expiryDate}<br />
 <br />
-För att förnya abonnemanget, gå till tidskriftens hemsida. Du loggar in på sidan med användarnamn, &quot;{$username}&quot;.<br />
+Gå till tidskriftens webbplats för att förnya din prenumeration. Du loggar in i systemet med ditt användarnamn, &quot;{$username}&quot;.<br />
 <br />
-Om du har frågor, vänligen kontakta mig.<br />
+Vänligen kontakta mig om du har frågor.<br />
 <br />
 {$subscriptionContactSignature}]]></body>
-		<description>Det här meddelandet informerar en abonnent om att abonnemanget på tidskriften har upphört. Meddelandet innehåller även information om hur användaren kan förnya sitt abonnemanget för att säkra fortsatt tillgång till tidskriftens material.</description>
+		<description>Det här e-postmeddelandet meddelar en prenumerant att prenumerationen har gått ut. Det inkluderar tidskriftens URL samt instruktioner för tillgång.</description>
+	</email_text>
+	<email_text key="SUBSCRIPTION_PURCHASE_INDL">
+		<subject>Tecknande av prenumeration: Enskild prenumeration</subject>
+		<body><![CDATA[En enskild prenumeration på {$contextName} har tecknats online med följande detaljer.<br />
+<br />
+Prenumerationsform:<br />
+{$subscriptionType}<br />
+<br />
+Användare:<br />
+{$userDetails}<br />
+<br />
+Information om medlemskap (om tillgängligt):<br />
+{$membership}<br />
+<br />
+För att visa eller redigera den här prenumerationen, använd följande URL:<br />
+<br />
+Prenumerationens URL: {$subscriptionUrl}<br />
+]]></body>
+		<description>Det här e-postmeddelandet meddelar Prenumerationsansvarig att en enskild prenumeration har tecknats online. Det innehåller information om prenumerationen i sammanfattning samt en länk för snabb åtkomst till den tecknade prenumerationen.</description>
+	</email_text>
+	<email_text key="SUBSCRIPTION_PURCHASE_INSTL">
+		<subject>Tecknande av prenumeration: Institutionsprenumeration</subject>
+		<body><![CDATA[En institutionsprenumeration på {$contextName} har tecknats online med följande detaljer. För att aktivera prenumerationen, använd medföljande URL för prenumerationens och sätt prenumerationsstatus till "Aktiv".<br />
+<br />
+Prenumerationsform:<br />
+{$subscriptionType}<br />
+<br />
+Institution:<br />
+{$institutionName}<br />
+{$institutionMailingAddress}<br />
+<br />
+Domän (om tillgängligt):<br />
+{$domain}<br />
+<br />
+IP-omfång (om tillgängligt):<br />
+{$ipRanges}<br />
+<br />
+Kontaktperson:<br />
+{$userDetails}<br />
+<br />
+Information om medlemskap (om tillgängligt):<br />
+{$membership}<br />
+<br />
+För att visa eller redigera den här prenumerationen, använd följande URL:<br />
+<br />
+Prenumerationens URL: {$subscriptionUrl}<br />
+]]></body>
+		<description>Det här e-postmeddelandet meddelar Prenumerationsansvarig att en institutionsprenumeration har tecknats online. Det innehåller information om prenumerationen i sammanfattning samt en länk för snabb åtkomst till den tecknade prenumerationen.</description>
+	</email_text>
+	<email_text key="SUBSCRIPTION_RENEW_INDL">
+		<subject>Förnyelse av prenumeration: Enskild prenumeration</subject>
+		<body><![CDATA[En enskild prenumeration på {$contextName} har förnyats online med följande detaljer.<br />
+<br />
+Prenumerationsform:<br />
+{$subscriptionType}<br />
+<br />
+Användare:<br />
+{$userDetails}<br />
+<br />
+Information om medlemskap (om tillgängligt):<br />
+{$membership}<br />
+<br />
+För att visa eller redigera den här prenumerationen, använd följande URL:<br />
+<br />
+Prenumerationens URL: {$subscriptionUrl}<br />
+]]></body>
+		<description>Det här e-postmeddelandet meddelar Prenumerationsansvarig att en enskild prenumeration har förnyats online. Det innehåller information om prenumerationen i sammanfattning samt en länk för snabb åtkomst till den förnyade prenumerationen.</description>
+	</email_text>
+	<email_text key="SUBSCRIPTION_RENEW_INSTL">
+		<subject>Förnyelse av prenumeration: Institutionsprenumeration</subject>
+		<body><![CDATA[En institutionsprenumeration på {$contextName} har förnyats online med följande detaljer.<br />
+<br />
+Prenumerationsform:<br />
+{$subscriptionType}<br />
+<br />
+Institution:<br />
+{$institutionName}<br />
+{$institutionMailingAddress}<br />
+<br />
+Domän (om tillgängligt):<br />
+{$domain}<br />
+<br />
+IP-omfång (om tillgängligt):<br />
+{$ipRanges}<br />
+<br />
+Kontaktperson:<br />
+{$userDetails}<br />
+<br />
+Information om medlemskap (om tillgängligt):<br />
+{$membership}<br />
+<br />
+För att visa eller redigera den här prenumerationen, använd följande URL:<br />
+<br />
+Prenumerationens URL: {$subscriptionUrl}<br />
+]]></body>
+		<description>Det här e-postmeddelandet meddelar Prenumerationsansvarig att en institutionsprenumeration har förnyats online. Det innehåller information om prenumerationen i sammanfattning samt en länk för snabb åtkomst till den förnyade prenumerationen.</description>
+	</email_text>
+	<email_text key="CITATION_EDITOR_AUTHOR_QUERY">
+		<subject>Referensredigering</subject>
+		<body><![CDATA[{$authorFirstName},<br />
+<br />
+Vi skulle vara glada om du hade möjlighet att ge oss den korrekta citeringen för följande referens i din artikel {$submissionTitle}:<br />
+<br />
+{$rawCitation}<br />
+<br />
+Stort tack!<br />
+<br />
+{$userFirstName}<br />
+Manusredaktör, {$contextName}<br />
+]]></body>
+		<description>Det här e-postmeddelandet kan användas om manusredaktörer behöver efterfråga mer information om referenser från författare.</description>
+	</email_text>
+	<email_text key="GIFT_AVAILABLE">
+		<subject>{$giftNoteTitle}</subject>
+		<body><![CDATA[Hej {$recipientFirstName},<br />
+<br />
+{$buyerFullName} vill ge dig en gåva hos {$giftJournalName}:<br />
+<br />
+{$giftDetails}<br />
+<br />
+<br />
+{$giftNote}<br />
+<br />
+<br />
+Du kommer att få ett ytterligare e-postmeddelande innehållandes inloggningsuppgifter och instruktioner för hur du löser in din gåva.<br />
+<br />
+Vi önskar dig mycket nöje med din gåva!<br />
+<br />
+{$giftContactSignature}<br />
+]]></body>
+		<description>Det här e-postmeddelandet meddelar en gåvomottagare att hen fått en gåva och nu kan lösa in den.</description>
+	</email_text>
+	<email_text key="GIFT_USER_REGISTER">
+		<subject>Lös in din gåva: Inloggningsuppgifter</subject>
+		<body><![CDATA[Dear {$recipientFirstName},<br />
+<br />
+{$buyerFullName} vill ge dig en gåva hos {$giftJournalName}:<br />
+<br />
+{$giftDetails}<br />
+<br />
+<br />
+Logga in på tidskriftens webbplats ({$giftUrl}) för att lösa in din gåva.<br />
+<br />
+Ditt användarnamn: {$username}<br />
+Ditt lösenord: {$password}<br />
+<br />
+Väl inloggad kan du när som helst ändra ditt lösenord.<br />
+<br />
+Vi önskar dig mycket nöje med din gåva!<br />
+<br />
+{$giftContactSignature}<br />
+]]></body>
+		<description>Det här e-postmeddelandet meddelar en gåvomottagare hens inloggningsuppgifter till ett nytt konto.</description>
+	</email_text>
+	<email_text key="GIFT_USER_LOGIN">
+		<subject>Lös in din gåva: Inloggningsuppgifter</subject>
+		<body><![CDATA[Dear {$recipientFirstName},<br />
+<br />
+{$buyerFullName} vill ge dig en gåva hos {$giftJournalName}:<br />
+<br />
+{$giftDetails}<br />
+<br />
+<br />
+Logga in på tidskriftens webbplats ({$giftUrl}) för att lösa in din gåva.<br />
+<br />
+Ditt användarnamn: {$username}<br />
+<br />
+Vi önskar dig mycket nöje med din gåva!<br />
+<br />
+{$giftContactSignature}<br />
+]]></body>
+		<description>Det här e-postmeddelandet meddelar en gåvomottagare hens inloggningsuppgifter.</description>
+	</email_text>
+	<email_text key="REVISED_VERSION_NOTIFY">
+		<subject>Reviderad version uppladdad</subject>
+		<body><![CDATA[{$editorialContactName}:<br />
+<br />
+En reviderad version av &quot;{$submissionTitle}&quot; har laddats upp av författaren, {$authorName}.<br />
+<br />
+Bidragets URL: {$submissionUrl}<br />
+<br />
+{$editorialContactSignature}]]></body>
+		<description>Det här e-postmeddelandet skickas automatiskt till den tilldelade redaktören när författaren laddar upp en reviderad version av sin artikel.</description>
+	</email_text>
+	<email_text key="NOTIFICATION_CENTER_DEFAULT">
+		<subject>Ett meddelande angående {$contextName}</subject>
+		<body><![CDATA[Skriv in ditt meddelande.]]></body>
+		<description>Standardmeddelandet (tomt) att använda i Notification Center Message Listbuilder.</description> <!-- FIXME: Check "Notification Center Message Listbuilder" (not in any other locale file atm -->
 	</email_text>
 </email_texts>
