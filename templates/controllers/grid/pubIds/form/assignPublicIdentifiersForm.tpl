@@ -22,6 +22,7 @@
 		<input type="hidden" name="issueId" value="{$pubObject->getId()|escape}" />
 		<input type="hidden" name="confirmed" value=true />
 		{assign var=hideCancel value=false}
+		<input type="checkbox" name="sendIssueNotification" id="sendIssueNotification" checked="checked" /> {translate key="notification.type.issuePublished"}		
 {elseif $pubObject instanceof Article}
 	<form class="pkp_form" id="assignPublicIdentifierForm" method="post" action="{url router=$smarty.const.ROUTE_COMPONENT component="tab.issueEntry.IssueEntryTabHandler" op="assignPubIds" escape=false}">
 		<input type="hidden" name="submissionId" value="{$pubObject->getId()|escape}" />
