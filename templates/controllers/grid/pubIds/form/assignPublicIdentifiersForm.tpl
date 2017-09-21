@@ -23,7 +23,7 @@
 		<input type="hidden" name="confirmed" value=true />
 		{assign var=hideCancel value=false}
 		{fbvFormSection for="sendIssueNotification" list="true"}
-			{fbvElement type="checkbox" name="sendIssueNotification" id="sendIssueNotification" checked=true label="notification.type.issuePublished" inline=true}
+			{fbvElement type="checkbox" name="sendIssueNotification" id="sendIssueNotification" checked=true label="notification.sendNotificationConfirmation" inline=true}
 		{/fbvFormSection}		
 {elseif $pubObject instanceof Article}
 	<form class="pkp_form" id="assignPublicIdentifierForm" method="post" action="{url router=$smarty.const.ROUTE_COMPONENT component="tab.issueEntry.IssueEntryTabHandler" op="assignPubIds" escape=false}">
