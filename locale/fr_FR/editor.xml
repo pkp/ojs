@@ -4,8 +4,8 @@
 <!--
   * locale/fr_FR/editor.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the fr_FR (Français (France)) locale.
@@ -56,7 +56,7 @@
 	<message key="editor.issues.invalidAccessDate">La date d'accès n'est pas valide.</message>
 	<message key="editor.issues.coverPage">Image de la page couverture</message>
 	<message key="editor.issues.coverPageInstructions">(Formats acceptés : .gif, .jpg, ou .png)</message>
-	<message key="editor.issues.uploaded">Téléchargé</message>
+	<message key="editor.issues.uploaded">Tranféré</message>
 	<message key="editor.issues.remove">Supprimer</message>
 	<message key="editor.issues.proofed">Révisé</message>
 	<message key="editor.issues.removeCoverPage">Supprimer l'image de la page couverture?</message>
@@ -93,32 +93,32 @@
 	<message key="editor.navigation.futureIssues">Numéros à venir</message>
 	<message key="editor.navigation.issueArchive">Numéros précédents</message>
 	<message key="editor.article.designateReviewVersion">Désigner le fichier original comme le fichier d'évaluation</message>
-	<message key="editor.article.uploadReviewVersion">Télécharger la version d'évaluation révisée</message>
-	<message key="editor.article.showSuppFile">Présenter le fichier aux évaluateurs</message>
+	<message key="editor.article.uploadReviewVersion">Transférer la version d'évaluation révisée</message>
+	<message key="editor.article.showSuppFile">Présenter le fichier aux rapporteurs</message>
 	<message key="editor.article.layoutAndProof">Mise en page &amp; Épreuves</message>
 	<message key="editor.article.clear">Effacer</message>
-	<message key="editor.article.clearReviewer">Effacer l'évaluateur</message>
+	<message key="editor.article.clearReviewer">Effacer le rapporteur</message>
 	<message key="editor.article.changeSection">Modifier la rubrique</message>
 	<message key="editor.article.setDueDate">Établir la date d'échéance</message>
-	<message key="editor.article.addReviewer">Ajouter un évaluateur</message>
-	<message key="editor.article.toReviewer">À l'évaluateur</message>
-	<message key="editor.article.notifyReviewer">Aviser l'évaluateur</message>
+	<message key="editor.article.addReviewer">Ajouter un rapporteur</message>
+	<message key="editor.article.toReviewer">Au rapporteur</message>
+	<message key="editor.article.notifyReviewer">Aviser le rapporteur</message>
 	<message key="editor.article.initiateReview">Commencer l'évaluation</message>
 	<message key="editor.article.cancelReview">Annuler la demande</message>
-	<message key="editor.article.clearReview">Effacer l'évaluateur</message>
+	<message key="editor.article.clearReview">Effacer le rapporteur</message>
 	<message key="editor.article.enterRecommendation">Saisir la recommandation</message>
-	<message key="editor.article.enterReviewerRecommendation">Saisir la recommandation de l'évaluateur</message>
+	<message key="editor.article.enterReviewerRecommendation">Saisir la recommandation du rapporteur</message>
 	<message key="editor.article.recommendation">Recommandation</message>
-	<message key="editor.article.selectReviewer">Sélectionner l'évaluateur</message>
-	<message key="editor.article.replaceReviewer">Remplacer l'évaluateur</message>
-	<message key="editor.article.editorToEnter">Le rédacteur doit saisir les recommandation/commentaires pour l'évaluateur</message>
-	<message key="editor.article.uploadReviewForReviewer">Télécharger l'évaluation</message>
+	<message key="editor.article.selectReviewer">Sélectionner le rapporteur</message>
+	<message key="editor.article.replaceReviewer">Remplacer le rapporteur</message>
+	<message key="editor.article.editorToEnter">Le rédacteur doit saisir les recommandation/commentaires pour le rapporteur</message>
+	<message key="editor.article.uploadReviewForReviewer">Tranférer l'évaluation</message>
 	<message key="editor.article.peerReviewOptions">Options d'évaluation par les pairs</message>
 	<message key="editor.article.decision">Décision</message>
 	<message key="editor.article.noEditorSelected">Aucun rédacteur sélectionné.</message>
 	<message key="editor.article.recordDecision">Consigner la décision</message>
 	<message key="editor.article.cannotRecord">Le responsable de la rubrique n'a pas encore été consigné.</message>
-	<message key="editor.article.reviewersSeeAuthorsVersion">Les évaluateurs doivent voir la version de l'auteur</message>
+	<message key="editor.article.reviewersSeeAuthorsVersion">Les rapporteurs doivent voir la version de l'auteur</message>
 	<message key="editor.article.designateDueDate">Établir une date d'échéance</message>
 	<message key="editor.article.designateDueDateDescription">Saisir la date ou le nombre de semaines pour la nouvelle échéance.</message>
 	<message key="editor.article.todaysDate">Date d'aujourd'hui</message>
@@ -130,7 +130,7 @@
 	<message key="editor.article.editorsCopyedit">Révision du rédacteur</message>
 	<message key="editor.article.showAuthor">Permettre à l'auteur de consulter le fichier</message>
 	<message key="editor.article.showCopyeditor">Montrer la version au réviseur</message>
-	<message key="editor.article.rateReviewer">Notation de l'évaluateur</message>
+	<message key="editor.article.rateReviewer">Notation du rapporteur</message>
 	<message key="editor.article.reviewerRating.veryGood">5 Très bien</message>
 	<message key="editor.article.reviewerRating.good">4 Bien</message>
 	<message key="editor.article.reviewerRating.average">3 Moyen</message>
@@ -146,6 +146,7 @@
 	<message key="editor.article.assignEditor">Ajouter un rédacteur</message>
 	<message key="editor.article.selectEditor">Sélectionner {$roleName}</message>
 	<message key="editor.article.selectDecision">Sélectionner une décision</message>
+	<message key="editor.article.decision.resubmit">Soumettre à nouveau pour évaluation</message>
 	<message key="editor.article.selectLayoutEditor">Sélectionner le responsable de la mise en page</message>
 	<message key="editor.article.replaceLayoutEditor">Remplacer le responsable de la mise en page</message>
 	<message key="editor.article.reviewSubmission">Évaluer la soumission</message>
@@ -184,7 +185,7 @@
 	<message key="editor.article.hideCoverPageAbstract">Ne pas afficher l'image de la page couverture lors de l'affichage du résumé de l'article.</message>
 	<message key="editor.article.coverImage">Image de la page couverture</message>
 	<message key="editor.article.coverImageInstructions">(Formats autorisés : .gif, .jpg, ou .png)</message>
-	<message key="editor.article.uploaded">Téléchargé</message>
+	<message key="editor.article.uploaded">Transféré</message>
 	<message key="editor.article.removeCoverPage">Supprimer l'image de la page couverture?</message>
 	<message key="editor.article.remove">Supprimer</message>
 	<message key="editor.issues.enableOpenAccessDate">Activer l'accès libre différé</message>
@@ -192,7 +193,7 @@
 	<message key="editor.issues.confirmUnpublish">Êtes-vous certain que vous souhaitez retirer ce numéro publié?</message>
 	<message key="editor.article.archiveSubmission">Rejeter et archiver la soumission</message>
 	<message key="editor.submissionReview.cannotSendToCopyediting">Avant d'envoyer une soumission en Révision, utiliser le lien Aviser l'auteur pour informer l'auteur de la décision et sélectionner la version à envoyer.</message>
-	<message key="editor.submissionReview.sendToCopyediting">Envoyer en Révision</message>
+	<message key="editor.submissionReview.sendToCopyediting">Envoyer en Mise aux normes</message>
 	<message key="editor.notifyUsers.allReaders">Tous les lecteurs ({$count} utilisateurs)</message>
 	<message key="editor.notifyUsers.allAuthors">Tous les auteurs publiés ({$count} utilisateurs)</message>
 	<message key="editor.notifyUsers.allIndividualSubscribers">Tous les abonnés individuels ({$count} utilisateurs)</message>
@@ -206,7 +207,29 @@
 	<message key="editor.issues.noneIssueGalleys">Les épreuves du numéro n'ont pas été publiées.</message>
 	<message key="editor.issues.galleyLabelRequired">Veuillez attribuer une étiquette aux épreuves du numéro.</message>
 	<message key="editor.issues.galleyLocaleRequired">Veuillez préciser la langue utilisée dans les épreuves du numéro.</message>
-	<message key="editor.issues.galleyPublicIdentificationExists">L'identification des épreuves publiées du numéro existe déjà???</message>
+	<message key="editor.issues.galleyPublicIdentificationExists">L'identifiant du numéro de l'épreuve publié existe déjà.</message>
 	<message key="editor.issues.backToIssueGalleys">Retourner aux épreuves du numéro</message>
-	<message key="editor.issues.confirmDeleteGalley">Êtes-vous certain de vouloir supprimer les épreuves de ce numéro?</message>
+	<message key="editor.issues.confirmDeleteGalley">Voulez-vous vraiment supprimer les épreuves de ce numéro?</message>
+	<message key="editor.issues.editIssue">Gestion de numéro: {$issueIdentification}</message>
+	<message key="editor.issues.datePublished">Date de publication</message>
+	<message key="editor.issues.removeCoverImageFileNameMismatch">L'image de la page couverture à supprimer ne correspond pas à l'image de ce numéro. Veuillez recharger la page et essayer de nouveau.</message>
+	<message key="editor.issues.removeCoverImageFileNotFound">L'image de la page couverture à supprimer n'a pu être repérée. Elle est peut-être déjà détruite. Essayer de recharger la page.</message>
+	<message key="editor.issues.invalidCoverImageFormat">Format de page couverture invalide. Les formats acceptés sont .gif, .jpg, et .png.</message>
+	<message key="editor.issues.identifiers">Identifiants</message>
+	<message key="grid.action.addGalley">Ajouter une épreuve</message>
+	<message key="grid.action.publish">Publier le numéro</message>
+	<message key="grid.action.addIssue">Créer un numéro</message>
+	<message key="grid.action.viewIssue">Voir</message>
+	<message key="grid.action.previewIssue">Aperçu</message>
+	<message key="grid.action.addIssueGalley">Créer une épreuve pour le numéro</message>
+	<message key="editor.article.schedulePublication">Calendrier de publication</message>
+	<message key="editor.article.removeCoverImageFileNotFound">L'image de page couverture à supprimer n'a pu être repérée. Elle est peut-être déjà supprimée. Essayer de recharger la page.</message>
+	<message key="grid.action.removeArticle">Retirer l'article du numéro</message>
+	<message key="editor.article.remove.confirm">Êtes-vous certain de vouloir retirer cet article de ce numéro? L'article restera disponible pour un autre numéro.</message>
+	<message key="editor.issues.editIssueGalley">Éditer les épreuves du numéro</message>
+	<message key="editor.submission.production.productionReadyFilesDescription"><![CDATA[Le responsable de la mise en page prépare les fichiers de chaque épreuve et les téléverse dans le dossier <span class="pkp_help_title">Épreuves</span> approprié pour fins de vérification.]]></message>
+	<message key="editor.submission.selectGalleyFiles">Sélectionner les fichiers d'épreuves</message>
+	<message key="editor.submission.editorial.finalDraftDescription"><![CDATA[Les versions finales sur cette liste sont transformées par un Réviseur en versions révisées, téléversées dans <span class = "pkp_help_title">Révision</ span>.]]></message>
+	<message key="editor.submission.proof.manageProofFilesDescription">Tous les fichiers qui ont déjà été téléversés à n'importe quelle étape de soumission peuvent être ajoutés à la liste de vérification des épreuves en cochant la case "Inclure" ci-dessous et en cliquant sur "Rechercher". Tous les fichiers disponibles seront répertoriés et pourront être sélectionnés pour inclusion.</message>
+	<message key="editor.publicIdentificationExistsForTheSameType">Le public identifié comme '{$publicIdentifier}' existe déjà pour un autre objet de même type. Veuillez indiquer un public unique pour l'objet de même type à l'intérieur de votre revue.</message>
 </locale>

@@ -2,7 +2,7 @@
 <!DOCTYPE email_texts SYSTEM "../../lib/pkp/dtd/emailTemplateData.dtd">
 
 <!--
-  * locale/fr_CA/emailTemplates.xml
+  * locale/fr_FR/emailTemplates.xml
   *
   * Copyright (c) 2014-2017 Simon Fraser University
   * Copyright (c) 2003-2017 John Willinsky
@@ -11,7 +11,7 @@
   * Localized email templates XML file.
   -->
 
-<email_texts locale = "fr_CA">
+<email_texts locale = "fr_FR">
 	<email_text key="PASSWORD_RESET_CONFIRM">
 		<subject>Confirmation de la réinitialisation du mot de passe</subject>
 		<body><![CDATA[Nous avons reçu une demande concernant la réinitialisation de votre mot de passe pour le site Web {$siteTitle}.<br />
@@ -123,12 +123,12 @@ Une évaluation initiale de votre manuscrit intitulé « {$submissionTitle} » a
 	</email_text>
 	<email_text key="SUBMISSION_DECISION_REVIEWERS">
 		<subject>Décision concernant le manuscrit intitulé « {$submissionTitle} »</subject>
-		<body><![CDATA[Puisque vous avez été l'un des évaluateurs de la soumission intitulé « {$submissionTitle} » pour la revue {$contextName}, nous vous faisons parvenir les évaluations et la décision du rédacteur.  À nouveau, nous vous remercions pour votre contribution importante à notre processus éditorial.<br />
+		<body><![CDATA[Puisque vous avez été l'un des rapporteurs de la soumission intitulé « {$submissionTitle} » pour la revue {$contextName}, nous vous faisons parvenir les évaluations et la décision du rédacteur.  À nouveau, nous vous remercions pour votre contribution importante à notre processus éditorial.<br />
 <br />
 {$editorialContactSignature}<br />
 <br />
 {$comments}]]></body>
-		<description>Ce courriel avise les évaluateurs d'une soumission que le processus d'évaluation est complété. Il inclut de l'information au sujet de l'article et de la décision prise, et remercie les évaluateurs de leur contribution.</description>
+		<description>Ce courriel avise les rapporteurs d'une soumission que le processus d'évaluation est complété. Il inclut de l'information au sujet de l'article et de la décision prise, et remercie les rapporteurs de leur contribution.</description>
 	</email_text>
 	<email_text key="EDITOR_ASSIGN">
 		<subject>Assignation d'une soumission</subject>
@@ -147,13 +147,13 @@ Merci,<br />
 		<subject>Demande d'évaluation d'un article</subject>
 		<body><![CDATA[{$reviewerName}:<br />
 <br />
-Nous croyons que vous seriez un excellent évaluateur pour le manuscrit intitulé « {$submissionTitle} » qui a été soumis à la revue {$contextName}. Vous trouverez un résumé de la soumission ci-dessous.  Nous espérons que vous accepterez ce travail essentiel à la publication de la revue.<br />
+Nous croyons que vous seriez un excellent rapporteur pour le manuscrit intitulé « {$submissionTitle} » qui a été soumis à la revue {$contextName}. Vous trouverez un résumé de la soumission ci-dessous.  Nous espérons que vous accepterez ce travail essentiel à la publication de la revue.<br />
 <br />
 Veuillez accéder au site Web de la revue avant le {$responseDueDate} pour nous laisser savoir si vous acceptez de faire l'évaluation ou non. Vous pouvez également y consulter la soumission et y enregistrer votre évaluation et votre recommandation. Le site Web se trouve à l'adresse suivante : {$contextUrl}<br />
 <br />
 La date d'échéance de l'évaluation a été fixée au {$reviewDueDate}.<br />
 <br />
-Si vous n'avez pas de nom d'utilisateur et de mot de passe pour le site Web de la revue, cliquer sur le lien ci-dessous pour réinitialiser votre mot de passe (qui vous sera envoyé par courriel avec votre nom d'utilisateur). {$psasswordResetUrl}<br />
+Si vous n'avez pas de nom d'utilisateur et de mot de passe pour le site Web de la revue, cliquer sur le lien ci-dessous pour réinitialiser votre mot de passe (qui vous sera envoyé par courriel avec votre nom d'utilisateur). {$passwordResetUrl}<br />
 <br />
 URL de la soumission : {$submissionReviewUrl}<br />
 <br />
@@ -164,13 +164,13 @@ En espérant que vous accepterez notre demande, veuillez agréer l'expression de
 « {$submissionTitle} »<br />
 <br />
 {$submissionAbstract}]]></body>
-		<description>Ce courriel du Rédacteur de rubrique à un Évaluateur demande que l'évaluateur accepte ou refuse la tâche d'évaluation d'une soumission. Il fournit de l'information sur la soumission, tel son titre et un résumé, la date d'échéance pour l'évaluation, et comment accéder à la soumission elle-même. Ce message est utilisé quand « Processus d'évaluation standard » est sélectionné à l'Étape 2, dans la Configuration de la revue. (Autrement voir « Demande d'évaluation », en pièce jointe).</description>
+		<description>Ce courriel du Rédacteur de rubrique à un Rapporteur demande que le rapporteur accepte ou refuse la tâche d'évaluation d'une soumission. Il fournit de l'information sur la soumission, tel son titre et un résumé, la date d'échéance pour l'évaluation, et comment accéder à la soumission elle-même. Ce message est utilisé quand « Processus d'évaluation standard » est sélectionné à l'Étape 2, dans la Configuration de la revue. (Autrement voir « Demande d'évaluation », en pièce jointe).</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ONECLICK">
 		<subject>Demande d'évaluation d'un article</subject>
 		<body><![CDATA[{$reviewerName}:<br />
 <br />
-Nous croyons que vous seriez un excellent évaluateur pour le manuscrit intitulé « {$submissionTitle} » qui a été soumis à la revue {$contextName}. Vous trouverez un résumé de la soumission ci-dessous.  Nous espérons que vous accepterez ce travail essentiel à la publication de la revue.<br />
+Nous croyons que vous seriez un excellent rapporteur pour le manuscrit intitulé « {$submissionTitle} » qui a été soumis à la revue {$contextName}. Vous trouverez un résumé de la soumission ci-dessous.  Nous espérons que vous accepterez ce travail essentiel à la publication de la revue.<br />
 <br />
 Veuillez accéder au site Web de la revue avant le {$responseDueDate} pour nous informer si vous acceptez de faire l'évaluation ou non. Vous pouvez également y consulter la soumission et y enregistrer votre évaluation et votre recommandation. Le site Web se trouve à l'adresse suivante : {$contextUrl}<br />
 <br />
@@ -185,13 +185,13 @@ En espérant que vous accepterez notre demande, veuillez agréer l'expression de
 « {$submissionTitle} »<br />
 <br />
 {$submissionAbstract}]]></body>
-		<description>Ce courriel du Rédacteur de rubrique à un Évaluateur demande que l'évaluateur accepte ou décline la tâche d'évaluation d'une soumission. Il contient des informations sur la soumission tel que son titre et un résumé, la date d'échéance pour faire l'évaluation, et comment accéder à la soumission. Ce message est utilisé quand « Processus d'évaluation standard » a été sélectionné à l'Étape 2  de la Configuration de la revue, et que l'accès en « un clic » de l'évaluateur a été activé.</description>
+		<description>Ce courriel du Rédacteur de rubrique à un Rapporteur demande que le rapporteur accepte ou décline la tâche d'évaluation d'une soumission. Il contient des informations sur la soumission tel que son titre et un résumé, la date d'échéance pour faire l'évaluation, et comment accéder à la soumission. Ce message est utilisé quand « Processus d'évaluation standard » a été sélectionné à l'Étape 2  de la Configuration de la revue, et que l'accès en « un clic » du rapporteur a été activé.</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ATTACHED">
 		<subject>Demande d'évaluation d'un article</subject>
 		<body><![CDATA[{$reviewerName}:<br />
 <br />
-Nous croyons que vous feriez un excellent évaluateur pour le manuscrit intitulé « {$submissionTitle} ».  Nous espérons que vous accepterez ce travail important pour notre revue. Les Directives pour l'évaluation se trouvent ci-dessous et la soumission est jointe au présent courriel.<br />
+Nous croyons que vous feriez un excellent rapporteur pour le manuscrit intitulé « {$submissionTitle} ».  Nous espérons que vous accepterez ce travail important pour notre revue. Les Directives pour l'évaluation se trouvent ci-dessous et la soumission est jointe au présent courriel.<br />
 <br />
 Veuillez nous faire savoir par courriel d'ici le {$responseDueDate} si vous acceptez ou non d'effectuer cette évaluation.<br />
 <br />
@@ -203,7 +203,7 @@ En espérant que vous accepterez notre demande, veuillez agréer l'expression de
 Directives pour l'évaluation<br />
 <br />
 {$reviewGuidelines}]]></body>
-		<description><![CDATA[Ce courriel est envoyé par le Rédacteur de rubrique à un Évaluateur pour lui demander s'il accepte ou refuse la tâche d'évaluation d'une soumission. Il inclut la soumission en pièce jointe. Ce message est utilisé quand le processus de « Demande d'évaluation par courriel » est sélectionné à l'Étape 2 de la Configuration de la revue. (Autrement, voir « Demande d'évaluation ».)]]></description>
+		<description><![CDATA[Ce courriel est envoyé par le Rédacteur de rubrique à un Rapporteur pour lui demander s'il accepte ou refuse la tâche d'évaluation d'une soumission. Il inclut la soumission en pièce jointe. Ce message est utilisé quand le processus de « Demande d'évaluation par courriel » est sélectionné à l'Étape 2 de la Configuration de la revue. (Autrement, voir « Demande d'évaluation ».)]]></description>
 	</email_text>
 	<email_text key="REVIEW_CANCEL">
 		<subject>Annulation de la demande d'évaluation</subject>
@@ -214,7 +214,7 @@ Nous avons décidé d'annuler notre demande concernant l'évaluation du manuscri
 Si vous avez des questions, n'hésitez pas à communiquer avec nous.<br />
 <br />
 {$editorialContactSignature}]]></body>
-		<description>Ce courriel est envoyé par le Rédacteur de rubrique à un Évaluateur qui a une évaluation en cours, pour l'aviser que celle-ci a été annulée.</description>
+		<description>Ce courriel est envoyé par le Rédacteur de rubrique à un Rapporteur qui a une évaluation en cours, pour l'aviser que celle-ci a été annulée.</description>
 	</email_text>
 	<email_text key="REVIEW_CONFIRM">
 		<subject>Acceptation d'évaluation</subject>
@@ -223,7 +223,7 @@ Si vous avez des questions, n'hésitez pas à communiquer avec nous.<br />
 Je suis en mesure d'évaluer la soumission intitulée « {$submissionTitle} » pour la revue {$contextName}. Je vous remercie d'avoir pensé à moi. Je devrais être en mesure de compléter l'évaluation pour la date du {$reviewDueDate}.<br />
 <br />
 {$reviewerName}]]></body>
-		<description>Ce courriel est envoyé par l'évaluateur au rédacteur de rubrique en réponse à une demande d'évaluation, pour aviser ce dernier que la demande a été acceptée et que l'évaluation sera complétée au plus tard à la date spécifiée.</description>
+		<description>Ce courriel est envoyé par le rapporteur au rédacteur de rubrique en réponse à une demande d'évaluation, pour aviser ce dernier que la demande a été acceptée et que l'évaluation sera complétée au plus tard à la date spécifiée.</description>
 	</email_text>
 	<email_text key="REVIEW_DECLINE">
 		<subject>Refus d'évaluation</subject>
@@ -232,7 +232,7 @@ Je suis en mesure d'évaluer la soumission intitulée « {$submissionTitle} » p
 Pour le moment, il m'est impossible d'évaluer la soumission intitulée « {$submissionTitle} » pour {$contextName}. Je vous remercie d'avoir pensé à moi. N'hésitez pas à communiquer avec moi pour un autre projet.<br />
 <br />
 {$reviewerName}]]></body>
-		<description>Ce courriel est envoyé par l'évaluateur au rédacteur de rubrique en réponse à la demande d'évaluation, pour aviser ce dernier qu'il ne peut effectuer l'évaluation.</description>
+		<description>Ce courriel est envoyé par le rapporteur au rédacteur de rubrique en réponse à la demande d'évaluation, pour aviser ce dernier qu'il ne peut effectuer l'évaluation.</description>
 	</email_text>
 	<email_text key="REVIEW_ACK">
 		<subject>Accusé de réception de l'évaluation d'une soumission</subject>
@@ -241,7 +241,7 @@ Pour le moment, il m'est impossible d'évaluer la soumission intitulée « {$sub
 Nous vous remercions d'avoir évalué la soumission intitulée « {$submissionTitle} » pour {$contextName}. Nous vous sommes reconnaissants de votre contribution à la qualité des travaux que nous publions.<br />
 <br />
 {$editorialContactSignature}]]></body>
-		<description>Ce courriel est envoyé par le Rédacteur de rubrique, pour accuser réception d'une évaluation terminée et remercier l'évaluateur de sa contribution.</description>
+		<description>Ce courriel est envoyé par le Rédacteur de rubrique, pour accuser réception d'une évaluation terminée et remercier le rapporteur de sa contribution.</description>
 	</email_text>
 	<email_text key="REVIEW_REMIND">
 		<subject>Rappel d'évaluation d'une soumission</subject>
@@ -256,7 +256,7 @@ URL de la soumission : {$submissionReviewUrl}<br />
 Veuillez confirmer que vous êtes en mesure d'effectuer ce travail essentiel pour la publication de notre revue. Nous espérons avoir de vos nouvelles très bientôt.<br />
 <br />
 {$editorialContactSignature}]]></body>
-		<description>Ce courriel est envoyé par le Rédacteur de rubrique pour rappeler à un évaluateur que son évaluation est due.</description>
+		<description>Ce courriel est envoyé par le Rédacteur de rubrique pour rappeler à un rapporteur que son évaluation est due.</description>
 	</email_text>
 	<email_text key="REVIEW_REMIND_ONECLICK">
 		<subject>Rappel d'évaluation d'une soumission</subject>
@@ -269,7 +269,7 @@ Adresse URL de la soumission: {$submissionReviewUrl}<br />
 Veuillez confirmer si vous êtes en mesure de compléter ce travail essentiel pour la publication de la revue. Espérant avoir de vos nouvelles sous peu.<br />
 <br />
 {$editorialContactSignature}]]></body>
-		<description>Ce courriel est envoyé par le Rédacteur de rubrique à un évaluateur pour lui rappeler que son évaluation est due.</description>
+		<description>Ce courriel est envoyé par le Rédacteur de rubrique à un rapporteur pour lui rappeler que son évaluation est due.</description>
 	</email_text>
 	<email_text key="REVIEW_REMIND_AUTO">
 		<subject>Rappel automatique d'évaluation d'une soumission</subject>
@@ -284,7 +284,7 @@ URL de la soumission : {$submissionReviewUrl}<br />
 Veuillez confirmer que vous êtes en mesure d'effectuer ce travail important pour notre revue. J'espère avoir de vos nouvelles très bientôt.<br />
 <br />
 {$editorialContactSignature}]]></body>
-		<description><![CDATA[Ce courriel est envoyé automatiquement quand la date due d'un évaluateur est dépassée. (Voir Options d'évaluation à l'Étape 2 de la Configuration de la revue) et que l'accès en « un clic » est désactivé. Les tâches planifiées doivent être activées et configurées (voir le fichier de Configuration du site).]]></description>
+		<description><![CDATA[Ce courriel est envoyé automatiquement quand la date due d'un rapporteur est dépassée. (Voir Options d'évaluation à l'Étape 2 de la Configuration de la revue) et que l'accès en « un clic » est désactivé. Les tâches planifiées doivent être activées et configurées (voir le fichier de Configuration du site).]]></description>
 	</email_text>
 	<email_text key="REVIEW_REMIND_AUTO_ONECLICK">
 		<subject>Rappel automatique d'évaluation d'une soumission</subject>
@@ -297,7 +297,7 @@ L'adresse URL de la soumission: {$submissionReviewUrl}<br />
 S.V.P. veuillez nous confirmer votre disponibilité à compléter cette contribution importante à notre revue. Espérant recevoir de vos nouvelles bientôt.<br />
 <br />
 {$editorialContactSignature}]]></body>
-		<description><![CDATA[Ce courriel est envoyé automatiquement quand la date d'échéance de l'évaluation est dépassée (voir Options d'évaluation à l'Étape 2 de Configuration de la revue) et que l'accès en « un clic » à un évaluateur est activé. Les Tâches planifiées doivent être activées et configurées (voir le fichier de configuration du site).]]></description>
+		<description><![CDATA[Ce courriel est envoyé automatiquement quand la date d'échéance de l'évaluation est dépassée (voir Options d'évaluation à l'Étape 2 de Configuration de la revue) et que l'accès en « un clic » à un rapporteur est activé. Les Tâches planifiées doivent être activées et configurées (voir le fichier de configuration du site).]]></description>
 	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
 		<subject>Demande de révision d'une soumission</subject>
@@ -306,9 +306,9 @@ S.V.P. veuillez nous confirmer votre disponibilité à compléter cette contribu
 J'aimerais que vous effectuiez la révision du manuscrit intitulé « {$submissionTitle} » pour {$contextName} à l'aide des étapes suivantes.<br />
 1. Cliquer sur l'URL de la soumission ci-dessous.<br />
 2. Se connecter sur le site de la revue et cliquer sur le fichier qui apparaît à l'Étape 1.<br />
-3. Consulter les instructions de révision affichés sur la page Web.<br />
+3. Consulter les instructions de révision affichées sur la page Web.<br />
 4. Ouvrir le fichier téléchargé et effectuer la révision, tout en ajoutant des Requêtes à l'auteur, le cas échéant.<br />
-5. Enregistrer le fichier révisé, et télécharger à l'Étape 1 de la révision.<br />
+5. Enregistrer le fichier révisé, et le transférer à l'Étape 1 de la révision.<br />
 6. Envoyer le courriel TERMINÉ au rédacteur.<br />
 <br />
 URL de {$contextName} : {$contextUrl}<br />
@@ -560,8 +560,8 @@ Merci,<br />
 		<description>Ce courriel est envoyé à un utilisateur nouvellement inscrit, afin de l'accueillir dans le système et lui offrir un enregistrement de son nom d'utilisateur et de son mot de passe.</description>
 	</email_text>
 	<email_text key="REVIEWER_REGISTER">
-		<subject>Inscription en tant qu'évaluateur de {$contextName}</subject>
-		<body><![CDATA[Compte tenu de votre expertise, nous avons pris l'initiative d'inscrire votre nom dans la base de données des évaluateurs de {$contextName}. Cela ne vous engage d'aucune façon, mais nous permet simplement de solliciter vos services pour l'évaluation d'une soumission. Si vous êtes invité à effectuer une évaluation, vous recevrez le titre et le résumé de l'article en question, et serez toujours libre d'accepter ou de refuser une telle invitation. À tout moment, il vous est également possible de demander à ce que votre nom soit retiré de la liste des évaluateurs.<br />
+		<subject>Inscription en tant que rapporteur de {$contextName}</subject>
+		<body><![CDATA[Compte tenu de votre expertise, nous avons pris l'initiative d'inscrire votre nom dans la base de données des rapporteurs de {$contextName}. Cela ne vous engage d'aucune façon, mais nous permet simplement de solliciter vos services pour l'évaluation d'une soumission. Si vous êtes invité à effectuer une évaluation, vous recevrez le titre et le résumé de l'article en question, et serez toujours libre d'accepter ou de refuser une telle invitation. À tout moment, il vous est également possible de demander à ce que votre nom soit retiré de la liste des rapporteurs.<br />
 <br />
 Nous vous acheminons un nom d'utilisateur et un mot de passe, car tous deux sont requis pour tout échange avec la revue, par l'intermédiaire de ce site Web. Vous pouvez, par exemple, si vous le souhaitez, effectuer la mise à jour de votre profil, y compris vos intérêts en matière d'évaluation.<br />
 <br />
@@ -570,7 +570,7 @@ Mot de passe : {$password}<br />
 <br />
 Merci,<br />
 {$principalContactSignature}]]></body>
-		<description>Ce courriel est envoyé à un évaluateur nouvellement inscrit, afin de l'accueillir dans le système et lui offrir un enregistrement de son nom d'utilisateur et mot de passe.</description>
+		<description>Ce courriel est envoyé à un rapporteur nouvellement inscrit, afin de l'accueillir dans le système et lui offrir un enregistrement de son nom d'utilisateur et mot de passe.</description>
 	</email_text>
 	<email_text key="NOTIFICATION">
 		<subject>Nouvel avis de {$siteTitle}</subject>
@@ -815,7 +815,7 @@ URL de la soumission: {$submissionUrl}<br />
 		<body><![CDATA[{$reviewerName}:<br />
 Ceci est un rappel concernant notre demande d'évaluation de &quot;{$submissionTitle},&quot; pour {$contextName}. Nous espérions recevoir une réponse avant le {$responseDueDate}. Ce courriel est envoyé automatiquement après dépassement du délais.
 <br />
-Nous pensons que vous seriez un excellent évaluateur pour le manuscrit. Vous trouverez un résumé de la soumission en suivant l'hyperlien plus bas.<br />
+Nous pensons que vous seriez un excellent rapporteur pour le manuscrit. Vous trouverez un résumé de la soumission en suivant l'hyperlien plus bas.<br />
 <br />
 Veuillez vous authentifier sur la page de la revue avant le {$responseDueDate} pour y indiquer si vous participerez à cette évaluation ou non, ou simplement indiquer les recommandations suivant votre évaluation. Le site web est  {$contextUrl}<br />
 <br />
@@ -833,14 +833,14 @@ Merci de considérer cette requête.<br />
 &quot;{$submissionTitle}&quot;<br />
 <br />
 {$submissionAbstract}]]></body>
-		<description><![CDATA[Ce courriel est automatiquement envoyé lorsque la date d'échéance de confirmation d'un évaluateur est écoulée (voir Options de révision sous Paramètres> Flux des travaux> Révision) et l'accès de l'évaluateur en un clic est désactivé. Les tâches planifiées doivent être activées et configurées (voir le fichier de configuration du site).]]></description>
+		<description><![CDATA[Ce courriel est automatiquement envoyé lorsque la date d'échéance de confirmation d'un rapporteur est écoulée (voir Options de révision sous Paramètres> Flux des travaux> Révision) et l'accès du rapporteur en un clic est désactivé. Les tâches planifiées doivent être activées et configurées (voir le fichier de configuration du site).]]></description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_REMIND_AUTO_ONECLICK">
 		<subject>Demande d'évaluation d'un article</subject>
 		<body><![CDATA[{$reviewerName}:<br />
 Ceci est un rappel concernant notre demande d'évaluation de &quot;{$submissionTitle},&quot; pour {$contextName}. Nous espérions recevoir une réponse avant le {$responseDueDate}. Ce courriel est envoyé automatiquement après dépassement du délais.
 <br />
-Nous pensons que vous seriez un excellent évaluateur pour le manuscrit. Vous trouverez un résumé de la soumission en suivant l'hyperlien plus bas.<br />
+Nous pensons que vous seriez un excellent rapporteur pour le manuscrit. Vous trouverez un résumé de la soumission en suivant l'hyperlien plus bas.<br />
 <br />
 Vous seriez aimable de vous authentifier sur la page de la revue en nous indiquant si vous participerez à cette évaluation ou non, ou mieux, indiquer les recommandations suivant l'évaluation de ce manuscrit.<br />
 <br />
@@ -858,7 +858,7 @@ Merci de considérer cette requête.<br />
 &quot;{$submissionTitle}&quot;<br />
 <br />
 {$submissionAbstract}]]></body>
-		<description><![CDATA[Ce courriel est automatiquement envoyé lorsque la date d'échéance de confirmation d'un évaluateur est écoulée (voir Options de révision sous Paramètres> Flux des travaux> Révision) et l'accès de l'évaluateur en un clic est activé. Les tâches planifiées doivent être configurées et activées (voir le fichier de configuration du site).]]></description>
+		<description><![CDATA[Ce courriel est automatiquement envoyé lorsque la date d'échéance de confirmation d'un rapporteur est écoulée (voir Options de révision sous Paramètres> Flux des travaux> Révision) et l'accès du rapporteur en un clic est activé. Les tâches planifiées doivent être configurées et activées (voir le fichier de configuration du site).]]></description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_SUBSEQUENT">
 		<subject>Demande d'évaluation d'un article</subject>
@@ -881,7 +881,7 @@ Merci de considérer cette requête.<br />
 &quot;{$submissionTitle}&quot;<br />
 <br />
 {$submissionAbstract}]]></body>
-		<description><![CDATA[Ce courriel de l'éditeur de section à un réviseur demande que l'évaluateur accepte ou refuse la tâche d'examiner une soumission pour une deuxième fois ou plus. Il fournit des informations sur la soumission, comme le titre et le résumé, la date d'échéance de l'examen et la façon d'accéder à la soumission elle-même. Ce message est utilisé lorsque le processus de révision standard est sélectionné dans Administration> Paramètres> Flux des travaux> Révision et que l'accès d'un relecteur est activé. (Autrement voir REVIEW_REQUEST_ATTACHED_SUBSEQUENT.)]]></description>
+		<description><![CDATA[Ce courriel de l'éditeur de section à un réviseur demande que le rapporteur accepte ou refuse la tâche d'examiner une soumission pour une deuxième fois ou plus. Il fournit des informations sur la soumission, comme le titre et le résumé, la date d'échéance de l'examen et la façon d'accéder à la soumission elle-même. Ce message est utilisé lorsque le processus de révision standard est sélectionné dans Administration> Paramètres> Flux des travaux> Révision et que l'accès d'un relecteur est activé. (Autrement voir REVIEW_REQUEST_ATTACHED_SUBSEQUENT.)]]></description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ATTACHED_SUBSEQUENT">
 		<subject>Demande d'évaluation d'un article</subject>
@@ -902,7 +902,7 @@ Merci de considérer cette requête.<br />
 Critères pour l'évaluation<br />
 <br />
 {$reviewGuidelines}<br />]]></body>
-		<description><![CDATA[Ce courriel de l'éditeur de section à un réviseur demande que l'évaluateur accepte ou refuse la tâche d'examiner une soumission pour une deuxième fois ou plus. Il fournit des informations sur la soumission, comme le titre et le résumé, la date d'échéance de l'évaluation et la façon d'accéder à la soumission elle-même. Ce message est utilisé lorsque le processus de révision avec pièce jointe est sélectionné dans Administration> Paramètres> Flux des travaux> Révision.(Autrement voir REVIEW_REQUEST_SUBSEQUENT.)]]></description>
+		<description><![CDATA[Ce courriel de l'éditeur de section à un réviseur demande que le rapporteur accepte ou refuse la tâche d'examiner une soumission pour une deuxième fois ou plus. Il fournit des informations sur la soumission, comme le titre et le résumé, la date d'échéance de l'évaluation et la façon d'accéder à la soumission elle-même. Ce message est utilisé lorsque le processus de révision avec pièce jointe est sélectionné dans Administration> Paramètres> Flux des travaux> Révision.(Autrement voir REVIEW_REQUEST_SUBSEQUENT.)]]></description>
 	</email_text>
 	<email_text key="SUBMISSION_ACK_NOT_USER">
 		<subject>Accusé de réception de la soumission</subject>
@@ -914,5 +914,16 @@ Si vous avez des questions, n'hésitez pas à communiquer avec nous. Nous vous r
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Ce courriel, lorsque activé, est envoyé automatiquement aux autres auteurs, i.e. ceux qui ne sont pas l'utilisateur enregistré faisant la soumission.</description>
+	</email_text>
+	<email_text key="EDITOR_DECISION_INITIAL_DECLINE">
+		<subject>Editor Decision</subject>
+		<body><![CDATA[{$authorName}:<br />
+<br />
+Nous avons pris une décision concernant votre soumission à {$contextName}, &quot;{$submissionTitle}&quot;.<br />
+<br />
+Notre décision est de refuser votre soumission<br />
+<br />
+{$editorialContactSignature}<br />]]></body>
+		<description>Ce mail est envoyé à l'auteur si l'éditeur refuse la soumission avant même de la faire évaluer</description>
 	</email_text>
 </email_texts>
