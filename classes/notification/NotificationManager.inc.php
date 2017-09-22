@@ -144,19 +144,24 @@ class NotificationManager extends PKPNotificationManager {
 	}
 
 	/**
-         * @copydoc PKPNotificationManager::getMgrDelegate()
-         */
-        protected function getMgrDelegate($notificationType, $assocType, $assocId) {
-                switch ($notificationType) {
-                        case NOTIFICATION_TYPE_APPROVE_SUBMISSION:
-                        case NOTIFICATION_TYPE_VISIT_CATALOG:
-                                assert($assocType == ASSOC_TYPE_SUBMISSION && is_numeric($assocId));
-                                import('classes.notification.managerDelegate.ApproveSubmissionNotificationManager');
-                                return new ApproveSubmissionNotificationManager($notificationType);
-                }
-                // Otherwise, fall back on parent class
-                return parent::getMgrDelegate($notificationType, $assocType, $assocId);
-        }
+	 * @copydoc PKPNotificationManager::getMgrDelegate()
+	 */
+	protected function getMgrDelegate($notificationType, $assocType, $assocId) {
+		switch ($notificationType) {
+			case NOTIFICATION_TYPE_APPROVE_SUBMISSION:
+			case NOTIFICATION_TYPE_VISIT_CATALOG:
+				assert($assocType == ASSOC_TYPE_SUBMISSION && is_numeric($assocId));
+				import('classes.notification.managerDelegate.ApproveSubmissionNotificationManager');
+				return new ApproveSubmissionNotificationManager($notificationType);
+			case NOTIFICATION_TYPE_PUBLICATION_SCHEDULED:
+				assert($assocType == ASSOC_TYPE_SUBMISSION && is_numeric($assocId));
+				import('classes.notification.managerDelegate.EditingProductionStatusNotificationManager');
+				return new EditingProductionStatusNotificationManager($notificationType);
+		}
+		// Otherwise, fall back on parent class
+		return parent::getMgrDelegate($notificationType, $assocType, $assocId);
+	}
+
 }
 
 ?>
