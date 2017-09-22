@@ -499,8 +499,8 @@ class IssueGridHandler extends GridHandler {
 
 		if ($articleSearchIndex) $articleSearchIndex->articleChangesFinished();
 
-		// Send a notification to associated users if journal is publishing content online with OJS
-		if ($journal->getSetting('publishingMode') != PUBLISHING_MODE_NONE) {
+		// Send a notification to associated users if selected and journal is publishing content online with OJS
+		if ($request->getUserVar('sendIssueNotification') && $journal->getSetting('publishingMode') != PUBLISHING_MODE_NONE) {
 			import('classes.notification.NotificationManager');
 			$notificationManager = new NotificationManager();
 			$notificationUsers = array();
