@@ -2506,6 +2506,8 @@ class Upgrade extends Installer {
 			$navigationMenuDao->installSettings($journal->getId(), 'registry/navigationMenus.xml');
 		}
 
+		$navigationMenuDao->installSettings(CONTEXT_ID_NONE, 'registry/navigationMenus.xml');
+
 		return true;
 	}
 }

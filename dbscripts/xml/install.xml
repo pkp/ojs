@@ -46,4 +46,5 @@
 	<code function="createData"/>
 	<code function="createConfig"/>
 	<code function="addPluginVersions"/>
+	<code function="installDefaultNavigationMenus"/>
 </install>
