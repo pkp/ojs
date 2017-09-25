@@ -694,7 +694,7 @@ Autori koji objavljuju u ovom časopisu pristaju na sledeće uslove:
 	<message key="debug.notes.currencyListLoad">Učitana je lista valuta "{$filename}" iz XML-a.</message>
 	<message key="reviewer.article.restrictedFileAccess">Tekst prijave će biti na raspolaganju kada i ako recenzent prihvati ponudu izrade recenzije.</message>
 	<message key="reviewer.article.enterReviewForm">Kliknite na ikonu i ispunite obrazac za recencziju.</message>
-	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Ispunite obavezana polja.</message>
+	<message key="reviewer.submission.reviewFormResponse.form.responseRequired">Ispunite obavezana polja.</message>
 	<message key="common.homePageHeader.altText">Zaglavlje naslove strane</message>
 	<message key="common.journalHomepageImage.altText">Slika naslovne strane časopisa</message>
 	<message key="article.coverPage.altText">Naslovna strana</message>

@@ -818,7 +818,7 @@ Validatie kan falen op zoek-url's die formulier-invoer eisen.]]></message>
 	<message key="submission.layout.publicGalleyId">Publieke proefdruk identiicatie</message>
 	<message key="submission.layout.galleyPublicIdentificationExists">Publieke proefdruk identificatie bestaat al.</message>
 	<message key="reviewer.article.enterReviewForm">Klik op het ikoon om het reviewformulier in te vullen</message>
-	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Gelieve de verplichte velden in te vullen</message>
+	<message key="reviewer.submission.reviewFormResponse.form.responseRequired">Gelieve de verplichte velden in te vullen</message>
 	<message key="common.homePageHeader.altText">Home-pagina kop</message>
 	<message key="common.journalHomepageImage.altText">Tijdschrift home-pagina afbeelding</message>
 	<message key="article.coverPage.altText">Omslagafbeelding</message>

@@ -40,7 +40,7 @@
 
 
 	<message key="reviewer.article.enterReviewForm">Egin klik ikono batean ebaluazio-inprimakia betetzeko.</message>
-	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Nahitaezko eremuak bete egin behar dira.</message>
+	<message key="reviewer.submission.reviewFormResponse.form.responseRequired">Nahitaezko eremuak bete egin behar dira.</message>
 
 	<!-- review forms end -->
 

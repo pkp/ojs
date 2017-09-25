@@ -40,7 +40,7 @@
 	<!-- Permissions -->
 
 	<message key="reviewer.article.enterReviewForm">Clicca sull'icona e compila il modulo per la revisione.</message>
-	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Compila i campi richiesti.</message>
+	<message key="reviewer.submission.reviewFormResponse.form.responseRequired">Compila i campi richiesti.</message>
 
 	<!-- review forms end -->
 

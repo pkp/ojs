@@ -809,7 +809,7 @@ Valideringen kan mislykkes i forbindelse med URL-søgeadresser, der kræver send
 	-->
 	<!-- Default settings for payment items. -->
 	<message key="reviewer.article.enterReviewForm">Klik på ikonet for at udfylde review formularen.</message>
-	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Udfyld de obligatoriske felter.</message>
+	<message key="reviewer.submission.reviewFormResponse.form.responseRequired">Udfyld de obligatoriske felter.</message>
 	<message key="common.homePageHeader.altText">Hjemmesidehovede</message>
 	<message key="common.journalHomepageImage.altText">Tidsskriftets hjemmesidebillede</message>
 	<message key="article.coverPage.altText">Forsidebillede</message>

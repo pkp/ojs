@@ -854,7 +854,7 @@ Autores que publicam nesta revista concordam com os seguintes termos:
 	<message key="payment.paymentSent">Pagamento já foi enviado</message>
 	<message key="payment.submission.paySubmission">Pagar taxa de submissão</message>
 	<message key="reviewer.article.enterReviewForm">Clique no ícone para preencher o formulário de avaliação.</message>
-	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Preencha os campos obrigatórios.</message>
+	<message key="reviewer.submission.reviewFormResponse.form.responseRequired">Preencha os campos obrigatórios.</message>
 	<message key="article.coverPage.altText">Imagem para capa</message>
 	<message key="article.accessLogoOpen.altText">Acesso Livre</message>
 	<message key="article.accessLogoRestricted.altText">Acesso restrito</message>

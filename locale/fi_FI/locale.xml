@@ -36,7 +36,7 @@
 
 
 	<message key="reviewer.article.enterReviewForm">Klikkaa kuvaketta täyttääksesi arviointilomakkeen.</message>
-	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Täytä pakolliset kentät.</message>
+	<message key="reviewer.submission.reviewFormResponse.form.responseRequired">Täytä pakolliset kentät.</message>
 
 	<!-- review forms end -->
 

@@ -789,7 +789,7 @@ Valideringen kan for eksempel svikte på søkesteder som krever utfylling av skj
 	 *
 	-->
 	<message key="reviewer.article.enterReviewForm">Klikk på ikonet for å fylle ut vurderingsskjemaet.</message>
-	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Vær vennlig å fylle inn de påkrevde feltene.</message>
+	<message key="reviewer.submission.reviewFormResponse.form.responseRequired">Vær vennlig å fylle inn de påkrevde feltene.</message>
 	<message key="common.payment">Betaling</message>
 	<message key="common.payments">Betalinger</message>
 	<message key="common.confirmComplete">Er du sikker på at du vil registrere at du er ferdig med denne oppgaven? Hvis du gjør dette, kan du muligens ikke foreta endringer senere.</message>

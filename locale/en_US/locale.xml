@@ -36,7 +36,7 @@
 
 
 	<message key="reviewer.article.enterReviewForm">Click on icon to fill in the review form.</message>
-	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Please fill in required fields.</message>
+	<message key="reviewer.submission.reviewFormResponse.form.responseRequired">Please fill in required fields.</message>
 
 	<!-- review forms end -->
 

@@ -36,7 +36,7 @@
 	<!-- Journal Management -->
 	<!--  peer review -->
 	<message key="reviewer.article.enterReviewForm">Klik di ikon untuk mengisi form review.</message>
-	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Isilah kolom berikut.</message>
+	<message key="reviewer.submission.reviewFormResponse.form.responseRequired">Isilah kolom berikut.</message>
 
 	<!-- review forms end -->
 

@@ -41,7 +41,7 @@
 
 
 	<message key="reviewer.article.enterReviewForm">点击图标以填写审查表。</message>
-	<message key="reviewer.article.reviewFormResponse.form.responseRequired">请填写必添项目</message>
+	<message key="reviewer.submission.reviewFormResponse.form.responseRequired">请填写必添项目</message>
 
 	<!-- review forms end -->
 

@@ -37,7 +37,7 @@
     <message key="navigation.categories">Kategoriler</message>
     <message key="navigation.categories.browse">Araştır</message>
     <message key="reviewer.article.enterReviewForm">İnceleme formunu doldurmak için simgesini tıklayın.</message>
-    <message key="reviewer.article.reviewFormResponse.form.responseRequired">Lütfen gerekli alanları doldurun.</message>
+    <message key="reviewer.submission.reviewFormResponse.form.responseRequired">Lütfen gerekli alanları doldurun.</message>
 
 	<!-- Journal Management -->
 
@@ -74,7 +74,7 @@
 
 
 	<message key="reviewer.article.enterReviewForm">Değerlendirme formunu doldurmak için simgeye tıklayınız:</message>
-	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Lütfen gerekli alanları doldurunuz.</message>
+	<message key="reviewer.submission.reviewFormResponse.form.responseRequired">Lütfen gerekli alanları doldurunuz.</message>
 
 	<!-- review forms end -->
 

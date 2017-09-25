@@ -728,7 +728,7 @@ Postavljanje LOCKSS podrške za Open Journal Systems није потребно �
 	<message key="debug.notes.currencyListLoad">Учитана је листа валута "{$filename}" из XML-a.</message>
 	<message key="reviewer.article.restrictedFileAccess">Текст пријаве ће бити на располагању када и ако рецензент прихвати понуду израде рецензије.</message>
 	<message key="reviewer.article.enterReviewForm">Кликните на икону и испуните образац за реценцзију.</message>
-	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Испуните обавезана поља.</message>
+	<message key="reviewer.submission.reviewFormResponse.form.responseRequired">Испуните обавезана поља.</message>
 	<message key="common.homePageHeader.altText">Заглавље наслове стране</message>
 	<message key="common.journalHomepageImage.altText">Слика насловне стране часописа</message>
 	<message key="article.coverPage.altText">Насловна страна</message>

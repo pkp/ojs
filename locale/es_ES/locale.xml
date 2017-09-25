@@ -39,7 +39,7 @@
 
 
 	<message key="reviewer.article.enterReviewForm">Haga clic en el icono para rellenar el formulario de revisión.</message>
-	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Rellene los campos obligatorios.</message>
+	<message key="reviewer.submission.reviewFormResponse.form.responseRequired">Rellene los campos obligatorios.</message>
 
 	<!-- review forms end -->
 

@@ -36,7 +36,7 @@
 
 
 	<message key="reviewer.article.enterReviewForm">أنقر الإيقونة لملء نموذج التحكيم</message>
-	<message key="reviewer.article.reviewFormResponse.form.responseRequired">لطفاً، عليك بإملاء الحقول المطلوبة</message>
+	<message key="reviewer.submission.reviewFormResponse.form.responseRequired">لطفاً، عليك بإملاء الحقول المطلوبة</message>
 
 	<!-- review forms end -->
 

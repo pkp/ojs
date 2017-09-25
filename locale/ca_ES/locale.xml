@@ -40,7 +40,7 @@
 
 
 	<message key="reviewer.article.enterReviewForm">Feu clic a la icona per emplenar el formulari de revisió.</message>
-	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Empleneu els camps obligatoris.</message>
+	<message key="reviewer.submission.reviewFormResponse.form.responseRequired">Empleneu els camps obligatoris.</message>
 
 	<!-- review forms end -->
 

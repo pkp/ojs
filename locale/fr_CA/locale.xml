@@ -746,7 +746,7 @@ le droit de première publication, avec l’ouvrage disponible simultanément [S
 	<message key="payment.subscription.renew">Renouveler l'abonnement</message>
 	<message key="payment.subscription.expires">Expire</message>
 	<message key="rt.admin.settings.addComment">Ajouter des commentaires (permet aux lecteurs d'afficher des commentaires, le directeur de la revue pouvant les effacer).</message>
-	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Veuillez remplir les champs obligatoires.</message>
+	<message key="reviewer.submission.reviewFormResponse.form.responseRequired">Veuillez remplir les champs obligatoires.</message>
 	<message key="common.homePageHeader.altText">En-tête de la page d'accueil</message>
 	<message key="common.journalHomepageImage.altText">Image de la page d'accueil de la revue</message>
 	<message key="article.coverPage.altText">Image de la page couverture</message>

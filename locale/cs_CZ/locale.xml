@@ -40,7 +40,7 @@
 	<!-- Permissions -->
 
 	<message key="reviewer.article.enterReviewForm">Pro vyplnění formuláře recenze klikněte na ikonu.</message>
-	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Vyplňte prosím požadované položky.</message>
+	<message key="reviewer.submission.reviewFormResponse.form.responseRequired">Vyplňte prosím požadované položky.</message>
 
 	<!-- review forms end -->
 

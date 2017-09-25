@@ -36,7 +36,7 @@
 
 
 	<message key="reviewer.article.enterReviewForm">Щелкните на значке, чтобы заполнить форму рецензии.</message>
-	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Пожалуйста, заполните обязательные поля.</message>
+	<message key="reviewer.submission.reviewFormResponse.form.responseRequired">Пожалуйста, заполните обязательные поля.</message>
 
 	<!-- формы рецензии (конец) -->
 

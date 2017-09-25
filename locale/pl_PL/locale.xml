@@ -42,7 +42,7 @@
 
 
 	<message key="reviewer.article.enterReviewForm">Kliknij ikonę dymka, aby wypełnić formularz recenzji.</message>	
-	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Wypełnij wymagane pola.</message>	
+	<message key="reviewer.submission.reviewFormResponse.form.responseRequired">Wypełnij wymagane pola.</message>	
 	
 	<!-- review forms end -->
 

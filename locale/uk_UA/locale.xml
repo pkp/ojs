@@ -37,7 +37,7 @@
        <message key="navigation.categories.browse">Переглянути</message>
 
        <message key="reviewer.article.enterReviewForm">Щоб заповнити форму рецензування, натисніть на зображення.</message>
-       <message key="reviewer.article.reviewFormResponse.form.responseRequired">Будь ласка, заповніть обов'язкові поля.</message>
+       <message key="reviewer.submission.reviewFormResponse.form.responseRequired">Будь ласка, заповніть обов'язкові поля.</message>
 
        <!-- review forms end -->
 
