@@ -129,7 +129,7 @@ class CreateUsersTest extends PKPCreateUsersTest {
 				'username' => 'cturner',
 				'firstName' => 'Catherine',
 				'lastName' => 'Turner',
-				'country' => 'United Kingdom of Great Britain and Nothern Ireland',
+				'country' => 'United Kingdom',
 				'affiliation' => 'Imperial College London',
 				'roles' => array('Proofreader'),
 			),
