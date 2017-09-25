@@ -109,7 +109,8 @@
 	<message key="manager.sections.wordCountInstructions">Batasi jumlah kata abstrak untuk bagian ini (0 jika tidak ada batasan):</message>
 	<message key="manager.setup">Pengaturan Jurnal</message>
 	<message key="manager.setup.masthead">Tajuk</message>
-	<message key="manager.setup.masthead.description">Sebutkan editor, direktur pelaksana, dan pihak-pihak lain yang terkait dalam struktur organisasi pelaksana jurnal.</message>
+	<message key="manager.setup.editorialTeam">Dewan Editor</message>
+	<message key="manager.setup.editorialTeam.description">Sebutkan editor, direktur pelaksana, dan pihak-pihak lain yang terkait dalam struktur organisasi pelaksana jurnal.</message>
 	<message key="manager.setup.homepageContent">Konten Beranda Jurnal</message>
 	<message key="manager.setup.homepageContentDescription">Beranda jurnal secara default terdiri dari tautan navigasi. Konten lainnya dapat ditambahkan dengan satu atau semua opsi berikut, yang akan muncul sesuai urutan.</message>
 	<message key="manager.setup.layout">Layout Jurnal</message>

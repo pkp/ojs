@@ -613,7 +613,8 @@
 	<message key="manager.language.submissions">Manuskript</message>
 	<message key="manager.section.noSectionEditors"><![CDATA[Det er ikke oppnevnt en seksjonsredaktør. Tildel denne rollen til minst en bruker under Administrasjon > Innstillinger > Brukere &amp; roller først.]]></message>
 	<message key="manager.setup.masthead">Kolofon</message>
-	<message key="manager.setup.masthead.description">Opprett en liste over redaktører, redaksjonsledere  og andre personer tilknyttet tidsskriftet.</message>
+	<message key="manager.setup.editorialTeam">Redaksjon</message>
+	<message key="manager.setup.editorialTeam.description">Opprett en liste over redaktører, redaksjonsledere  og andre personer tilknyttet tidsskriftet.</message>
 	<message key="manager.setup.homepageContent">Innhold på hjemmesiden</message>
 	<message key="manager.setup.homepageContentDescription">Som standard består hjemmesiden av navigasjonslenker. Ytterligere hjemmesideinnhold kan legges til ved å bruke en eller flere av følgende valgmuligheter, som vil bli vist i den viste rekkefølgen.</message>
 	<message key="manager.setup.layout">Tidsskriftets sideoppsett</message>
