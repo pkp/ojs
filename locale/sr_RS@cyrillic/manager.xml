@@ -151,7 +151,6 @@
 	<message key="manager.payment.options.publicationFee">Објављивање чланка</message>
 	<message key="manager.payment.options.purchaseArticleFee">Купи чланак</message>
 	<message key="manager.payment.options.text">Опис метода плаћања</message>
-	<message key="manager.payment.options.waiverPolicy">Политика изузећа од плаћања</message>
 	<message key="manager.payment.paymentId">ID плаћања</message>
 	<message key="manager.payment.paymentMethod">Метод плаћања</message>
 	<message key="manager.payment.paymentMethod.description">Можете конфигурисати било који од Додатака за метод плаћања на овом екрану.</message>

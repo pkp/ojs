@@ -51,7 +51,6 @@
 	<message key="manager.payment.options.publicationFee">文章出版费</message>
 	<message key="manager.payment.options.purchaseArticleFee">购买文章费用</message>
 	<message key="manager.payment.options.text">支付方法描述</message>
-	<message key="manager.payment.options.waiverPolicy">放弃制度</message>
 	<message key="manager.payment.paymentId">支付ID</message>
 	<message key="manager.payment.paymentMethod">支付方法</message>
 	<message key="manager.payment.paymentMethod.description">系统提供了如下支付方法插件供您选择。</message>

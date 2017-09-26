@@ -50,7 +50,6 @@
 	<message key="manager.payment.options.publicationFee">Artikelpublicering</message>
 	<message key="manager.payment.options.purchaseArticleFee">Køb artikel</message>
 	<message key="manager.payment.options.text">Beskrivelse af betalingsmåde</message>
-	<message key="manager.payment.options.waiverPolicy">Politik om afkald</message>
 	<message key="manager.payment.paymentId">Betalings-id</message>
 	<message key="manager.payment.paymentMethod">Betalingsmåde</message>
 	<message key="manager.payment.paymentMethod.description">Du kan konfigurere en hvilken som helst af følgende plug-ins til Betalingsmåde fra denne skærm.</message>

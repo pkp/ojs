@@ -114,14 +114,9 @@ Yeni dosyada <strong>[silinmiş sözcük]</strong> değiştirilmiş bölümler k
 	<message key="default.journalSettings.lockssLicense"><![CDATA[Bu dergi, katılan kütüphanelerin koruma ve restorasyon amaçlı dağıtık kalıcı arşivler yaratmasına izin vermek için LOCKSS sistemi kullanmaktadır. <a href="http://www.lockss.org/"> LOCKSS sistemi konusunda daha fazla bilgi almak isterseniz.</a>]]></message>
 	<!-- Default settings for payment items. -->
 	<message key="default.journalSettings.publicationFee">Makale Yayını</message>
-	<message key="default.journalSettings.publicationFeeDescription">Bu makale yayın için kabul edilirse, yayın maliyetlerini karşılamak üzere bir Makale Yayın Ücreti ödemeniz istenecektir.</message>
-	<message key="default.journalSettings.waiverPolicy">Bu tür ücretleri ödemek istemiyorsanız, her bir ücret feragat için bir fırsat olacaktır. Bu ücretler ile değerli eserlerin yayın engellemek istemiyoruz.</message>
 	<message key="default.journalSettings.purchaseArticleFee">Makale Satın Al</message>
-	<message key="default.journalSettings.purchaseArticleFeeDescription">Bu ücretin ödenmesi, makalenin yazdırılması, indirilmesi ve görüntülenmesine izin verir.</message>
 	<message key="default.journalSettings.membershipFee">Dernek Üyeliği</message>
-	<message key="default.journalSettings.membershipFeeDescription">Bu ücretin ödemesi bir yıl boyunca derneğin bir üyesi olarak kaydolmanızı ve bu dergiye ücretsiz erişimenizi sağlayacaktır.</message>
 	<message key="default.journalSettings.purchaseIssueFee">Sayı Satın Al</message>
-	<message key="default.journalSettings.purchaseIssueFeeDescription">Ücretin ödemesi, bu sayının yazdırılması, indirilmesi ve görüntülenmesine izin verir.</message>
 	<message key="default.journalSettings.emailHeader">Aşağıdaki mesaj {$journalName} adına teslim edilecektir.
 ________________________________________________________________________</message>
 </locale>

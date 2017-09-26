@@ -48,7 +48,6 @@
 	<message key="manager.payment.options.publicationFee">Objavljivanje članka</message>
 	<message key="manager.payment.options.purchaseArticleFee">Kupovina članka</message>
 	<message key="manager.payment.options.text">Opis metode plaćanja</message>
-	<message key="manager.payment.options.waiverPolicy">Mogućnost izuzeća</message>
 	<message key="manager.payment.paymentId">Identifikator naplate</message>
 	<message key="manager.payment.paymentMethod">Način uplate</message>
 	<message key="manager.payment.paymentMethod.description">Sa ovog ekrana možete podesiti funkcionalne dodatke namijenjenih plaćanju:</message>

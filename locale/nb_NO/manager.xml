@@ -465,7 +465,6 @@
 	<message key="manager.payment.options.publicationFee">Publisering av artikkel</message>
 	<message key="manager.payment.options.purchaseArticleFee">Kjøp artikkel</message>
 	<message key="manager.payment.options.text">Beskrivelse av betalingsmåte</message>
-	<message key="manager.payment.options.waiverPolicy">Policy mht. betalingsfrafall</message>
 	<message key="manager.payment.paymentId">Betalings-ID</message>
 	<message key="manager.payment.paymentMethod">Betalingsmåte</message>
 	<message key="manager.payment.paymentMethod.description">Du kan konfigurere de programutvidelsene du trenger for ulike betalingsmåter fra dette skjermbildet.</message>

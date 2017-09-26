@@ -48,7 +48,6 @@
 	<message key="manager.payment.options.onlypdf">Begränsad tillgänglighet endast till artiklarnas pdf-versioner.</message>
 	<message key="manager.payment.options.publicationFee">Publicerad artikel</message>
 	<message key="manager.payment.options.text">Beskrivning av betalningsmetod</message>
-	<message key="manager.payment.options.waiverPolicy">Policy för avsägelse</message>
 	<message key="manager.payment.paymentId">Betalnings-ID</message>
 	<message key="manager.payment.paymentMethod">Betalningsmetod</message>
 	<message key="manager.payment.paymentMethod.description">Du kan konfigurera betalningsmetoderna från den här sidan.</message>

@@ -23,7 +23,7 @@ class SubscriptionsHandler extends Handler {
 		parent::__construct();
 		$this->addRoleAssignment(
 			array(ROLE_ID_MANAGER, ROLE_ID_SUBSCRIPTION_MANAGER),
-			array('index', 'subscriptions', 'subscriptionTypes', 'subscriptionPolicies', 'saveSubscriptionPolicies', 'payments')
+			array('index', 'subscriptions', 'subscriptionTypes', 'subscriptionPolicies', 'saveSubscriptionPolicies', 'paymentTypes', 'payments')
 		);
 	}
 
@@ -144,6 +144,50 @@ class SubscriptionsHandler extends Handler {
 			return new JSONMessage(true);
 		}
 		return new JSONMessage(true, $subscriptionPolicyForm->fetch($request));
+	}
+
+	/**
+	 * Display payment types for the current journal.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
+	function paymentTypes($args, $request) {
+		$this->validate();
+		$this->setupTemplate($request);
+
+		import('classes.subscription.form.PaymentTypesForm');
+
+		$templateMgr = TemplateManager::getManager($request);
+
+		$paymentTypesForm = new PaymentTypesForm();
+		if ($paymentTypesForm->isLocaleResubmit()) {
+			$paymentTypesForm->readInputData();
+		} else {
+			$paymentTypesForm->initData($request->getContext());
+		}
+		return new JSONMessage(true, $paymentTypesForm->fetch($request));
+	}
+
+	/**
+	 * Save payment types for the current journal.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
+	function savePaymentTypes($args, $request) {
+		$this->validate();
+		$this->setupTemplate($request);
+
+		import('classes.subscription.form.PaymentTypesForm');
+		$paymentTypesForm = new PaymentTypesForm();
+		$paymentTypesForm->readInputData();
+		if ($paymentTypesForm->validate()) {
+			$paymentTypesForm->execute($request);
+			$notificationManager = new NotificationManager();
+			$user = $request->getUser();
+			$notificationManager->createTrivialNotification($user->getId());
+			return new JSONMessage(true);
+		}
+		return new JSONMessage(true, $paymentTypesForm->fetch($request));
 	}
 
 	/**

@@ -128,7 +128,7 @@ class OJSPaymentManager extends PaymentManager {
 	 */
 	function publicationEnabled() {
 		$journal = $this->request->getJournal();
-		return $this->isConfigured() && $journal->getSetting('publicationFeeEnabled') && $journal->getSetting('publicationFee') > 0;
+		return $this->isConfigured() && $journal->getSetting('publicationFee') > 0;
 	}
 
 	/**
@@ -137,7 +137,7 @@ class OJSPaymentManager extends PaymentManager {
 	 */
 	function membershipEnabled() {
 		$journal = $this->request->getJournal();
-		return $this->isConfigured() && $journal->getSetting('membershipFeeEnabled') && $journal->getSetting('membershipFee') > 0;
+		return $this->isConfigured() && $journal->getSetting('membershipFee') > 0;
 	}
 
 	/**
@@ -146,7 +146,7 @@ class OJSPaymentManager extends PaymentManager {
 	 */
 	function purchaseArticleEnabled() {
 		$journal = $this->request->getJournal();
-		return $this->isConfigured() && $journal->getSetting('purchaseArticleFeeEnabled') && $journal->getSetting('purchaseArticleFee') > 0;
+		return $this->isConfigured() && $journal->getSetting('purchaseArticleFee') > 0;
 	}
 
 	/**
@@ -155,7 +155,7 @@ class OJSPaymentManager extends PaymentManager {
 	 */
 	function purchaseIssueEnabled() {
 		$journal = $this->request->getJournal();
-		return $this->isConfigured() && $journal->getSetting('purchaseIssueFeeEnabled') && $journal->getSetting('purchaseIssueFee') > 0;
+		return $this->isConfigured() && $journal->getSetting('purchaseIssueFee') > 0;
 	}
 
 	/**
@@ -173,7 +173,7 @@ class OJSPaymentManager extends PaymentManager {
 	 */
 	function acceptSubscriptionPayments() {
 		$journal = $this->request->getJournal();
-		return $this->isConfigured() && $journal->getSetting('acceptSubscriptionPayments');
+		return $this->isConfigured();
 	}
 
 	/**

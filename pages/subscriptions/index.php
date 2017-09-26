@@ -25,6 +25,8 @@ switch ($op) {
 	case 'subscriptionTypes':
 	case 'subscriptionPolicies':
 	case 'saveSubscriptionPolicies':
+	case 'paymentTypes':
+	case 'savePaymentTypes':
 	case 'payments':
 		define('HANDLER_CLASS', 'SubscriptionsHandler');
 		import('pages.subscriptions.SubscriptionsHandler');

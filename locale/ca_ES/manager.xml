@@ -54,7 +54,6 @@
 	<message key="manager.payment.options.purchaseArticleFee">Compra l'article</message>
 	<message key="manager.payment.options.purchaseIssueFee">Compra el número</message>
 	<message key="manager.payment.options.text">Descripció del mètode de pagament</message>
-	<message key="manager.payment.options.waiverPolicy">Política d’exempció de pagament</message>
 	<message key="manager.payment.paymentId">Id. del pagament</message>
 	<message key="manager.payment.paymentMethod">Mètode de pagament</message>
 	<message key="manager.payment.paymentMethod.description">Des d’aquesta pantalla podeu configurar qualsevol dels mòduls de mètodes de pagament següents.</message>

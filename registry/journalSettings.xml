@@ -180,41 +180,13 @@
 		<name>publicationFee</name>
 		<value>0</value>
 	</setting>
-	<setting type="string" locale="1">
-		<name>publicationFeeName</name>
-		<value>{translate key="default.journalSettings.publicationFee"}</value>
-	</setting>
-	<setting type="string" locale="1">
-		<name>publicationFeeDescription</name>
-		<value>{translate key="default.journalSettings.publicationFeeDescription"}</value>
-	</setting>
-	<setting type="string" locale="1">
-		<name>waiverPolicy</name>
-		<value>{translate key="default.journalSettings.waiverPolicy"}</value>
-	</setting>
 	<setting type="int" locale="0">
 		<name>purchaseArticleFee</name>
 		<value>0</value>
 	</setting>
-	<setting type="string" locale="1">
-		<name>purchaseArticleFeeName</name>
-		<value>{translate key="default.journalSettings.purchaseArticleFee"}</value>
-	</setting>
-	<setting type="string" locale="1">
-		<name>purchaseArticleFeeDescription</name>
-		<value>{translate key="default.journalSettings.purchaseArticleFeeDescription"}</value>
-	</setting>
 	<setting type="int" locale="0">
 		<name>membershipFee</name>
 		<value>0</value>
-	</setting>
-	<setting type="string" locale="1">
-		<name>membershipFeeName</name>
-		<value>{translate key="default.journalSettings.membershipFee"}</value>
-	</setting>
-	<setting type="string" locale="1">
-		<name>membershipFeeDescription</name>
-		<value>{translate key="default.journalSettings.membershipFeeDescription"}</value>
 	</setting>
 	<setting type="bool" locale="1">
 		<name>metaCitations</name>

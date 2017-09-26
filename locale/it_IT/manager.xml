@@ -51,7 +51,6 @@
 	<message key="manager.payment.options.publicationFee">Pubblicazione di un articolo accettato</message>
 	<message key="manager.payment.options.purchaseArticleFee">Compra l'articolo</message>
 	<message key="manager.payment.options.text">Descrizione del metodo di pagamento</message>
-	<message key="manager.payment.options.waiverPolicy">Politica di esenzione</message>
 	<message key="manager.payment.paymentId">ID del pagamento</message>
 	<message key="manager.payment.paymentMethod">Modalità di pagamento</message>
 	<message key="manager.payment.paymentMethod.description">Puoi configurare da qui le seguenti modalità di pagamento.</message>

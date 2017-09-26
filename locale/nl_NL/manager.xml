@@ -50,7 +50,6 @@
 	<message key="manager.payment.options.publicationFee">Artikel publicatie</message>
 	<message key="manager.payment.options.purchaseArticleFee">Koop artikel</message>
 	<message key="manager.payment.options.text">Beschrijving van de betalingsmethode</message>
-	<message key="manager.payment.options.waiverPolicy">Beleid voor kwijtschelding</message>
 	<message key="manager.payment.paymentId">Betaling ID</message>
 	<message key="manager.payment.paymentMethod">Betalingsmethode</message>
 	<message key="manager.payment.paymentMethod.description">U kunt ieder van de volgende betalingsmethode-plugins configureren.</message>

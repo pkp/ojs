@@ -55,7 +55,6 @@
        <message key="manager.payment.options.purchaseArticleFee">Придбання статті</message>
        <message key="manager.payment.options.purchaseIssueFee">Придбання випуску</message>
        <message key="manager.payment.options.text">Опис платіжного методу</message>
-       <message key="manager.payment.options.waiverPolicy">Політика винятків</message>
        <message key="manager.payment.paymentId">ID платежу</message>
        <message key="manager.payment.paymentMethod">Метод здійснення платежу</message>
        <message key="manager.payment.paymentMethod.description">На цій сторінці Ви зможете налаштувати всі нижчезазначені Модулі платіжних методів.</message>

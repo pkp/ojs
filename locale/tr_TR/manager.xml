@@ -52,7 +52,6 @@
 	<message key="manager.payment.options.publicationFee">Makale Yayını</message>
 	<message key="manager.payment.options.purchaseArticleFee">Makale Satın Al</message>
 	<message key="manager.payment.options.text">Ödeme Metodu Açıklaması</message>
-	<message key="manager.payment.options.waiverPolicy">Feragat Politikası</message>
 	<message key="manager.payment.paymentId">Ödeme Numarası</message>
 	<message key="manager.payment.paymentMethod">Ödeme Yönetmi</message>
 	<message key="manager.payment.paymentMethod.description">Bu ekrandan aşağıdaki ödeme metodu eklentilerinden birinin konfigürasyonunu yapmalısınız.</message>

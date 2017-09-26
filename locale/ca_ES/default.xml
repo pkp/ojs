@@ -47,14 +47,9 @@
 	
 	<!-- Default settings for payment items. -->
 	<message key="default.journalSettings.publicationFee">Publicació de l'article</message>
-	<message key="default.journalSettings.publicationFeeDescription">Si s'accepta la publicació de l'article, haureu de pagar una quota de publicació de l’article per cobrir les despeses de publicació.</message>
-	<message key="default.journalSettings.waiverPolicy">Si no teniu fons per pagar les quotes, podreu prescindir de pagar-les una vegada. No volem que el fet de no pagar la quota impedeixi publicar obres importants.</message>
 	<message key="default.journalSettings.purchaseArticleFee">Compra d'un article</message>
-	<message key="default.journalSettings.purchaseArticleFeeDescription">El pagament de la quota us permet veure, descarregar i imprimir l'article.</message>
 	<message key="default.journalSettings.purchaseIssueFee">Compra d'un número</message>
-	<message key="default.journalSettings.purchaseIssueFeeDescription">El pagament de la quota us permet veure, descarregar i imprimir el número.</message>
 	<message key="default.journalSettings.membershipFee">Afiliació a l’associació</message>
-	<message key="default.journalSettings.membershipFeeDescription">El pagament de la quota us inscriurà com a membre de l'associació durant un any i us proporcionarà accés lliure a la revista.</message>
 	<message key="default.journalSettings.emailHeader">El següent missatge s'entrega en nom de {$journalName}.
 ________________________________________________________________________</message>
 </locale>

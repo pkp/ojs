@@ -98,23 +98,11 @@ class OJSQueuedPayment extends QueuedPayment {
 				// DEPRECATED: This is only for display of OJS 2.x data.
 				return __('payment.type.donation');
 			case PAYMENT_TYPE_MEMBERSHIP:
-				if ($journal->getLocalizedSetting('membershipFeeName') != '') {
-					return $journal->getLocalizedSetting('membershipFeeName');
-				} else {
-					return __('payment.type.membership');
-				}
+				return __('payment.type.membership');
 			case PAYMENT_TYPE_PURCHASE_ARTICLE:
-				if ($journal->getLocalizedSetting('purchaseArticleFeeName') != '') {
-					return $journal->getLocalizedSetting('purchaseArticleFeeName');
-				} else {
-					return __('payment.type.purchaseArticle');
-				}
+				return __('payment.type.purchaseArticle');
 			case PAYMENT_TYPE_PURCHASE_ISSUE:
-				if ($journal->getLocalizedSetting('purchaseIssueFeeName') != '') {
-					return $journal->getLocalizedSetting('purchaseIssueFeeName');
-				} else {
-					return __('payment.type.purchaseIssue');
-				}
+				return __('payment.type.purchaseIssue');
 			case PAYMENT_TYPE_SUBMISSION:
 				// DEPRECATED: This is only for display of OJS 2.x data.
 				return __('payment.type.submission');
@@ -122,11 +110,7 @@ class OJSQueuedPayment extends QueuedPayment {
 				// DEPRECATED: This is only for display of OJS 2.x data.
 				return __('payment.type.fastTrack');
 			case PAYMENT_TYPE_PUBLICATION:
-				if ($journal->getLocalizedSetting('publicationFeeName') != '') {
-					return $journal->getLocalizedSetting('publicationFeeName');
-				} else {
-					return __('payment.type.publication');
-				}
+				return __('payment.type.publication');
 			default:
 				// Invalid payment type
 				assert(false);
@@ -163,23 +147,11 @@ class OJSQueuedPayment extends QueuedPayment {
 				// DEPRECATED: This is only for display of OJS 2.x data.
 				return __('payment.type.donation');
 			case PAYMENT_TYPE_MEMBERSHIP:
-				if ($journal->getLocalizedSetting('membershipFeeDescription') != '') {
-					return $journal->getLocalizedSetting('membershipFeeDescription');
-				} else {
-					return __('payment.type.membership');
-				}
+				return __('payment.type.membership');
 			case PAYMENT_TYPE_PURCHASE_ARTICLE:
-				if ($journal->getLocalizedSetting('purchaseArticleFeeDescription') != '') {
-					return $journal->getLocalizedSetting('purchaseArticleFeeDescription');
-				} else {
-					return __('payment.type.purchaseArticle');
-				}
+				return __('payment.type.purchaseArticle');
 			case PAYMENT_TYPE_PURCHASE_ISSUE:
-				if ($journal->getLocalizedSetting('purchaseIssueFeeDescription') != '') {
-					return $journal->getLocalizedSetting('purchaseIssueFeeDescription');
-				} else {
-					return __('payment.type.purchaseIssue');
-				}
+				return __('payment.type.purchaseIssue');
 			case PAYMENT_TYPE_SUBMISSION:
 				// DEPRECATED: This is only for the display of OJS 2.x data.
 				return __('payment.type.submission');
@@ -187,11 +159,7 @@ class OJSQueuedPayment extends QueuedPayment {
 				// DEPRECATED: This is only for display of OJS 2.x data.
 				return __('payment.type.fastTrack');
 			case PAYMENT_TYPE_PUBLICATION:
-				if ($journal->getLocalizedSetting('publicationFeeDescription') != '') {
-					return $journal->getLocalizedSetting('publicationFeeDescription');
-				} else {
-					return __('payment.type.publication');
-				}
+				return __('payment.type.publication');
 			default:
 				// Invalid payment type
 				assert(false);

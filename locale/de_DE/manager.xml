@@ -54,7 +54,6 @@
 	<message key="manager.payment.options.purchaseArticleFee">Artikel erwerben</message>
 	<message key="manager.payment.options.purchaseIssueFee">Ausgabe erwerben</message>
 	<message key="manager.payment.options.text">Beschreibung der Zahlungsmethode</message>
-	<message key="manager.payment.options.waiverPolicy">Richtlinien zum Verzicht auf Gebühren</message>
 	<message key="manager.payment.paymentId">Zahlungs-ID</message>
 	<message key="manager.payment.paymentMethod">Zahlungsmethode</message>
 	<message key="manager.payment.paymentMethod.description">Sie können hier jede der aufgeführten Zahlungsmethoden konfigurieren.</message>

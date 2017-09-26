@@ -54,7 +54,6 @@
 	<message key="manager.payment.options.purchaseArticleFee">Купить статью</message>
 	<message key="manager.payment.options.purchaseIssueFee">Купить выпуск</message>
 	<message key="manager.payment.options.text">Описание метода платежа</message>
-	<message key="manager.payment.options.waiverPolicy">Правила отмены платежей</message>
 	<message key="manager.payment.paymentId">ID платежа</message>
 	<message key="manager.payment.paymentMethod">Метод платежа</message>
 	<message key="manager.payment.paymentMethod.description">С этой страницы вы можете настроить любой из следующих модулей методов платежей.</message>
