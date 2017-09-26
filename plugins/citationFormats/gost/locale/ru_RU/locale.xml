@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/citationFormats/GOST/locale/ru_RU/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Russian_(ru_RU)
+  * Localization strings.
+  -->
+ 
+<locale name="ru_RU" full_name="Русский">
+	<message key="plugins.citationFormats.GOST.displayName">Модуль формата библиографических ссылок ГОСТ 7.0.5-2008</message>
+	<message key="plugins.citationFormats.GOST.citationFormatName">ГОСТ</message>
+	<message key="plugins.citationFormats.GOST.description">Реализует формат библиографических ссылок по ГОСТ 7.0.5-2008.</message>
+	
+	<message key="plugins.citationFormats.GOST.manager.settings">Настройки</message>
+	<message key="plugins.citationFormats.GOST.manager.GOSTCitationSettings">Настройки модуля формата библиографических ссылок ГОСТ</message>
+	<message key="plugins.citationFormats.GOST.manager.settings.description">Настройки, используемые для создания библиографических ссылок в соответствии с ГОСТ.</message>
+	<message key="plugins.citationFormats.GOST.manager.settings.location">Расположение</message>
+	
+	<message key="plugins.citationFormats.GOST.retrieved"><![CDATA[URL: <a href="{$url}" target="_new">{$url}</a> (дата обращения: {$retrievedDate})]]></message>
+</locale>
