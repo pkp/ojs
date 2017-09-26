@@ -82,7 +82,7 @@ class SubscriptionBlockPlugin extends BlockPlugin {
 		$paymentManager = new OJSPaymentManager($request);
 
 		if (isset($individualSubscription) || isset($institutionalSubscription)) {
-			$templateMgr->assign('acceptSubscriptionPayments', true);
+			$templateMgr->assign('acceptSubscriptionPayments', $paymentManager->isConfigured());
 		}
 
 		return parent::getContents($templateMgr, $request);
