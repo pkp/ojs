@@ -78,7 +78,6 @@ class ManualPaymentPlugin extends PaymethodPlugin {
 		$user = $request->getUser();
 
 		$templateMgr->assign('itemName', $queuedPayment->getName());
-		$templateMgr->assign('itemDescription', $queuedPayment->getDescription());
 		if ($queuedPayment->getAmount() > 0) {
 			$templateMgr->assign('itemAmount', $queuedPayment->getAmount());
 			$templateMgr->assign('itemCurrencyCode', $queuedPayment->getCurrencyCode());

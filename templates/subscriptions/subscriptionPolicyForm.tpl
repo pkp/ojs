@@ -52,7 +52,7 @@
 	{/fbvFormSection}
 
 	{fbvFormSection label="manager.subscriptionPolicies.onlinePaymentNotifications" list=true}
-		{if $journalPaymentsEnabled && $acceptSubscriptionPayments}
+		{if $journalPaymentsEnabled}
 			{assign var=paymentsEnabled value=true}
 		{/if}
 		<p>{translate key="manager.subscriptionPolicies.onlinePaymentNotificationsDescription"}</p>

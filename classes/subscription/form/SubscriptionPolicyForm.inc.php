@@ -113,7 +113,6 @@ class SubscriptionPolicyForm extends Form {
 			'validNumWeeksAfterExpiry' => $this->validNumWeeksAfterExpiry,
 			'scheduledTasksEnabled' => (boolean) Config::getVar('general', 'scheduled_tasks'),
 			'journalPaymentsEnabled' => $paymentManager->isConfigured(),
-			'acceptSubscriptionPayments' => $paymentManager->acceptSubscriptionPayments(),
 		));
 
 		return parent::fetch($request);

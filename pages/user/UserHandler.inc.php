@@ -60,7 +60,7 @@ class UserHandler extends PKPUserHandler {
 
 		import('classes.payment.ojs.OJSPaymentManager');
 		$paymentManager = new OJSPaymentManager($request);
-		$acceptSubscriptionPayments = $paymentManager->acceptSubscriptionPayments();
+		$acceptSubscriptionPayments = $paymentManager->isConfigured();
 
 		$this->setupTemplate($request);
 
@@ -122,7 +122,7 @@ class UserHandler extends PKPUserHandler {
 
 		import('classes.payment.ojs.OJSPaymentManager');
 		$paymentManager = new OJSPaymentManager($request);
-		$acceptSubscriptionPayments = $paymentManager->acceptSubscriptionPayments();
+		$acceptSubscriptionPayments = $paymentManager->isConfigured();
 		if (!$acceptSubscriptionPayments) $request->redirect(null, 'dashboard');
 
 		$this->setupTemplate($request);
@@ -201,7 +201,7 @@ class UserHandler extends PKPUserHandler {
 
 		import('classes.payment.ojs.OJSPaymentManager');
 		$paymentManager = new OJSPaymentManager($request);
-		$acceptSubscriptionPayments = $paymentManager->acceptSubscriptionPayments();
+		$acceptSubscriptionPayments = $paymentManager->isConfigured();
 		if (!$acceptSubscriptionPayments) $request->redirect(null, 'dashboard');
 
 		$this->setupTemplate($request);
@@ -305,7 +305,7 @@ class UserHandler extends PKPUserHandler {
 
 		import('classes.payment.ojs.OJSPaymentManager');
 		$paymentManager = new OJSPaymentManager($request);
-		$acceptSubscriptionPayments = $paymentManager->acceptSubscriptionPayments();
+		$acceptSubscriptionPayments = $paymentManager->isConfigured();
 		if (!$acceptSubscriptionPayments) $request->redirect(null, 'dashboard');
 
 		$this->setupTemplate($request);
@@ -354,7 +354,7 @@ class UserHandler extends PKPUserHandler {
 
 		import('classes.payment.ojs.OJSPaymentManager');
 		$paymentManager = new OJSPaymentManager($request);
-		$acceptSubscriptionPayments = $paymentManager->acceptSubscriptionPayments();
+		$acceptSubscriptionPayments = $paymentManager->isConfigured();
 		if (!$acceptSubscriptionPayments) $request->redirect(null, 'dashboard');
 
 		$this->setupTemplate($request);

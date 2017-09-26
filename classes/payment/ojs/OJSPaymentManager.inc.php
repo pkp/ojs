@@ -168,15 +168,6 @@ class OJSPaymentManager extends PaymentManager {
 	}
 
 	/**
-	 * Determine whether subscription fees are enabled.
-	 * @return boolean true iff this fee is enabled.
-	 */
-	function acceptSubscriptionPayments() {
-		$journal = $this->request->getJournal();
-		return $this->isConfigured();
-	}
-
-	/**
 	 * Get the payment plugin.
 	 * @return PaymentPlugin
 	 */

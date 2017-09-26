@@ -113,7 +113,7 @@ class SubscriptionsHandler extends Handler {
 
 		import('classes.payment.ojs.OJSPaymentManager');
 		$paymentManager = new OJSPaymentManager($request);
-		$templateMgr->assign('acceptSubscriptionPayments', $paymentManager->acceptSubscriptionPayments());
+		$templateMgr->assign('acceptSubscriptionPayments', $paymentManager->isConfigured());
 
 		$subscriptionPolicyForm = new SubscriptionPolicyForm();
 		if ($subscriptionPolicyForm->isLocaleResubmit()) {

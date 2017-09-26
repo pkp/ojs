@@ -74,9 +74,6 @@ class OJSQueuedPayment extends QueuedPayment {
 	 * @return string
 	 */
 	function getName() {
-		$journalDao = DAORegistry::getDAO('JournalDAO');
-		$journal = $journalDao->getById($this->getJournalId());
-
 		switch ($this->type) {
 			case PAYMENT_TYPE_PURCHASE_SUBSCRIPTION:
 			case PAYMENT_TYPE_RENEW_SUBSCRIPTION:
@@ -105,55 +102,6 @@ class OJSQueuedPayment extends QueuedPayment {
 				return __('payment.type.purchaseIssue');
 			case PAYMENT_TYPE_SUBMISSION:
 				// DEPRECATED: This is only for display of OJS 2.x data.
-				return __('payment.type.submission');
-			case PAYMENT_TYPE_FASTTRACK:
-				// DEPRECATED: This is only for display of OJS 2.x data.
-				return __('payment.type.fastTrack');
-			case PAYMENT_TYPE_PUBLICATION:
-				return __('payment.type.publication');
-			default:
-				// Invalid payment type
-				assert(false);
-		}
-	}
-
-	/**
-	 * Returns the description of the QueuedPayment.
-	 * Pulled from Journal Settings if present, or from locale file otherwise.
-	 * For subscriptions, pulls subscription type name.
-	 * @return string
-	 */
-	function getDescription() {
-		$journalDao = DAORegistry::getDAO('JournalDAO');
-		$journal = $journalDao->getById($this->getJournalId());
-
-		switch ($this->type) {
-			case PAYMENT_TYPE_PURCHASE_SUBSCRIPTION:
-			case PAYMENT_TYPE_RENEW_SUBSCRIPTION:
-				$institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
-
-				if ($institutionalSubscriptionDao->subscriptionExists($this->assocId)) {
-					$subscription = $institutionalSubscriptionDao->getById($this->assocId);
-				} else {
-					$individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
-					$subscription = $individualSubscriptionDao->getById($this->assocId);
-				}
-				if (!$subscription) return __('payment.type.subscription');
-
-				$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
-				$subscriptionType = $subscriptionTypeDao->getById($subscription->getTypeId());
-				return $subscriptionType->getLocalizedDescription();
-			case PAYMENT_TYPE_DONATION:
-				// DEPRECATED: This is only for display of OJS 2.x data.
-				return __('payment.type.donation');
-			case PAYMENT_TYPE_MEMBERSHIP:
-				return __('payment.type.membership');
-			case PAYMENT_TYPE_PURCHASE_ARTICLE:
-				return __('payment.type.purchaseArticle');
-			case PAYMENT_TYPE_PURCHASE_ISSUE:
-				return __('payment.type.purchaseIssue');
-			case PAYMENT_TYPE_SUBMISSION:
-				// DEPRECATED: This is only for the display of OJS 2.x data.
 				return __('payment.type.submission');
 			case PAYMENT_TYPE_FASTTRACK:
 				// DEPRECATED: This is only for display of OJS 2.x data.
