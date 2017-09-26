@@ -98,6 +98,7 @@ lib/pkp/tools/travis						\
 lib/pkp/lib/swordappv2/.git					\
 lib/pkp/lib/swordappv2/.git					\
 lib/pkp/lib/swordappv2/test					\
+node_modules      \
 .babelrc          \
 .editorconfig     \
 .eslintignore     \
@@ -133,7 +134,11 @@ composer.phar install
 cd ../../..
 echo "Done"
 
-echo -n "Run webpack build process"
+echo -n "Installing node dependencies... "
+npm install
+echo "Done"
+
+echo -n "Running webpack build process... "
 npm run build
 echo "Done"
 
