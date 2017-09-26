@@ -13,6 +13,7 @@ import PkpLoad from '../lib/pkp/js/load.js';
 // Import controllers used by OJS
 import ListPanel from '@/components/ListPanel/ListPanel.vue';
 import SubmissionsListPanel from '@/components/ListPanel/submissions/SubmissionsListPanel.vue';
+import SelectListPanel from '@/components/SelectListPanel/SelectListPanel.vue';
 import SelectSubmissionsListPanel from '@/components/SelectListPanel/submissions/SelectSubmissionsListPanel.vue';
 
 // Expose Vue, the registry and controllers in a global var
