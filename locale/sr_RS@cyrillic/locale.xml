@@ -4,12 +4,12 @@
 <!--
   * locale/sr_RS@cyrillic/locale.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University 
+  * Copyright (c) 2013-2017 Simon Fraser University
   * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Serbian_(sr_RS)
   * Localization strings for the sr_RS@cyrillic (Cрпски) locale.
-  * 
+  *
   -->
 
 <locale name="sr_RS@cyrillic" full_name="Cрпски">
@@ -69,7 +69,7 @@
 	<message key="section.title">Наслов секције</message>
 	<message key="section.abbreviation">Скраћеница</message>
 	<message key="section.abbreviation.example">(Нпр. Чланци=CLA)</message>
-	
+
 
 	<!--  Common Article Terms  --><message key="article.articles">Чланци</message>
 	<message key="article.submissionId">ID поднеска чланка</message>
@@ -654,7 +654,6 @@ Postavljanje LOCKSS podrške za Open Journal Systems није потребно �
 		<li>OJS не може модификовати локализациони registry фајл, обично "registry/locales.xml".</li>
 	</ul>
 <p>Фајл са језицима можете ручно преузети са <a href="http://pkp.sfu.ca">PKP web site</a>.</p>]]></message>
-	<message key="plugins.categories.citationFormats.description">Додаци за обликовање цитата омогућују корисницима преузимање цитата у различитим библиографским стандардима.</message>
 	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Предложене Creative Commons одредбе о ауторским правима</h3>
 <h4>1. Предлог за часописе који омогућују отворен приступ</h4>
 Аутори који објављују у овом часопису пристају на следеће услове:

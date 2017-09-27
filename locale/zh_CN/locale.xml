@@ -351,7 +351,6 @@
 	<message key="plugins.categories.auth.description">认证插件程序让OJS将用户认证的工作授权给其他的系统，像是LDAP服务器.</message>
 
 
-	<message key="plugins.categories.citationFormats.description">引文格式插件可以给点击文章引文的用户提供不同的引文格式.</message>
 
 
 	<message key="plugins.categories.generic.description">该类型插件以各种方式扩充OJS，让其他种类的WEB程序可以支持OJS.</message>

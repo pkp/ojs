@@ -783,7 +783,6 @@ A validação pode falhar em URLs para pesquisa que requeiram dados via método 
 	<message key="reader.openAccess">Acesso Livre</message>
 	<message key="reader.subscriptionAccess">Acesso Restrito</message>
 	<message key="reader.subscriptionOrFeeAccess">Acesso Restrito ou Pago</message>
-	<message key="plugins.categories.citationFormats.description">Plugins de Formatos de Citação oferecem aos usuários vários formatos para citar o documento.</message>
 	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Proposta de Aviso de Direito Autoral Creative Commons</h3>
 <h4>1. Proposta de Política para Periódicos de Acesso Livre</h4>
 Autores que publicam nesta revista concordam com os seguintes termos:

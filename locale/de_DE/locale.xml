@@ -366,7 +366,6 @@
 	<message key="plugins.categories.viewableFiles">Plugins für Artikelfahnen</message>
 	<message key="plugins.categories.viewableFiles.description">Plugins für Artikelfahnen fügen die Unterstützung für die Anzeige verschiedener Dokumentarten als Artikelfahnen hinzu.</message>
 	<message key="plugins.categories.auth.description">Die Zugangs-Plugins ermöglichen Open Journal Systems, die Zugangsberechtigung von Benutzer/innen an andere Systeme, wie etwa LDAP-Server, zu übertragen.</message>
-	<message key="plugins.categories.citationFormats.description">Plugins für Zitatformate bieten Benutzer/innen unterschiedliche Formate zur Zitation der Artikel an.</message>
 	<message key="plugins.categories.generic.description">Generische Plugins werden zur Erweiterung von Open Journal Systems in einer Vielzahl von Wegen genutzt, die nicht durch die anderen Plugin-Kategorien bereitgestellt werden.</message>
 
 	<message key="manager.setup.lockssDescription"><![CDATA[<strong>Andere LOCKSS-Netzwerke</strong>

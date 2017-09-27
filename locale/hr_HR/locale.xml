@@ -738,7 +738,6 @@ Vaš poslužitelj trenutno podržava mbstring: <strong>{$supportsMBString}</stro
 		<li>OJS ne može modificirati lokalizacijsku registry datoteku, obično "registry/locales.xml".</li>
 	</ul>
 <p>Datoteku s jezicima možete ručno preuzeti sa <a href="http://pkp.sfu.ca">PKP web site</a>.</p>]]></message>
-	<message key="plugins.categories.citationFormats.description">Dodaci za oblikovanje referenci omogućuju korisnicima preuzimanje referenci u različitim bibliografskim standardima.</message>
 	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Predložene Creative Commons odredbe o autorskim pravima</h3>
 <h4>1. Prijedlog za časopise koji omogućuju otvoren pristup</h4>
 Autori koji objavljuju u ovom časopisu pristaju na sljedeće uvijete:

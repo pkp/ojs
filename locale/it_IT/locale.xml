@@ -339,7 +339,6 @@
 
 	<!-- General plugin information -->
 	<message key="plugins.categories.auth.description">I plugin di autorizzazione permettono a OJS di delegare l'attività di autenticazione degli utenti ad altri sistemi, come server LDAP.</message>
-	<message key="plugins.categories.citationFormats.description">I plugin per i formati citazionali forniscono agli utenti vari formati per la citazione degli articolo.</message>
 	<message key="plugins.categories.generic.description">I plugin generici sono utilizzati per estendere OJS in varie modalità.</message>
 
 	<!-- Files Browser -->

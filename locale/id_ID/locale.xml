@@ -366,7 +366,6 @@
 	<message key="plugins.categories.viewableFiles">Plugin Galley Artikel</message>
 	<message key="plugins.categories.viewableFiles.description">Plugin Galley Artikel memungkinkan ditampilkannya tipe dokumen yang berbeda sebagai galley artikel.</message>
 	<message key="plugins.categories.auth.description">Plugin Otorisasi memungkinkan Open Journal Systems mendelegasikan otentikasi pengguna ke sistem eksternal, seperti server LDAP.</message>
-	<message key="plugins.categories.citationFormats.description">Plugin Format Sitasi memberikan pilihan format sitasi naskah bagi penulis.</message>
 	<message key="plugins.categories.generic.description">Plugin Generik digunakan untuk menyediakan fungsi tambahan bagi Open Journal Systems melalui berbagai cara yang belum disediakan oleh plugin lainnya.</message>
 
 	<message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems mendukung <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) untuk memastikan pengarsipan jurnal yang aman dan permanen. LOCKSS merupakan piranti lunak open source karya Stanford University Library yang memungkinkan perpustakaan mengabadikan situs jurnalnya dengan mengirim setiap terbitan baru untuk disimpan. Secara berkala setiap simpanan divalidasi isinya terhadap simpanan di perpustakaan lain, dan jika isi di situs rusak atau hilang, simpanan di perpustakaan lain akan digunakan untuk mengembalikan data.

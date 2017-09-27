@@ -342,7 +342,6 @@
 
 	<!-- General plugin information -->
 	<message key="plugins.categories.auth.description">Autorizační pluginy umožňují OJS delegovat ověření uživatelů na jiné systémy jako například LDAP servery.</message>
-	<message key="plugins.categories.citationFormats.description">Pluginy pro citační styly poskytují uživatelům různé formáty, ve kterých mohou být přístupné citace článků.</message>
 	<message key="plugins.categories.generic.description">Obecné pluginy se používají k rozšíření OJS různými způsoby, které nejsou podporovány jinými kategoriemi pluginů.</message>
 
 	<!-- Files Browser -->

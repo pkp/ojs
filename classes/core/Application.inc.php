@@ -135,12 +135,7 @@ class Application extends PKPApplication {
 			'metadata',
 			'auth',
 			'blocks',
-			// NB: 'citationFormats' is an obsolete category for backwards
-			// compatibility only. This will be replaced by 'citationOutput',
-			// see #5156.
-			'citationFormats',
 			'citationLookup',
-			'citationOutput',
 			'citationParser',
 			'gateways',
 			'generic',

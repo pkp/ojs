@@ -317,7 +317,6 @@ key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>ABISUA!</h4>
 	<message key="plugins.categories.auth.description">Baimena emateko pluginen bidez, erabiltzaile-autentifikazioa beste sistema batzuei delega diezaieke Open Journal Systems-ek, esate baterako LDAP zerbitzariei.</message>
 
 
-	<message key="plugins.categories.citationFormats.description">Aipamen-formatuen pluginen bidez, erabiltzaileek hainbat formatu izango dituzte aipamenak ikusteko.</message>
 
 
 	<message key="plugins.categories.generic.description">Plugin generikoek Open Journal Systems hedatzen dute, gainerako plugin kategoriek egin ezin dituzten hainbat gauzatarako.</message>

@@ -366,7 +366,6 @@
 	<message key="plugins.categories.viewableFiles">البرامج الإضافية للوح الطباعي</message>
 	<message key="plugins.categories.viewableFiles.description">البرامج الإضافية للوح الطباعي تقدم الدعم اللازم لعرض أنواع مختلفة من الملفات التي يمكن لها أن تكون ألواحاً طباعية للمؤلفات.</message>
 	<message key="plugins.categories.auth.description">إضافات المصادقة تسمح لنظام المجلات المفتوحة بتفويض مهام المصادقة إلى أنظمة أخرى، مثل: ملقمات LDAP</message>
-	<message key="plugins.categories.citationFormats.description">إضافات تنسيق الإقتباس تتيح للمستخدمين أنماطاً متعددة من الوصول إلى اقتباسات المؤلَّفات العلمية</message>
 	<message key="plugins.categories.generic.description">الإضافات العامة تستعمل لتعزيز نظام المجلات المفتوحة في مجالات شتى غير مدعومة ضمن فئات الإضافات الأخرى</message>
 
 	<message key="manager.setup.lockssDescription"><![CDATA[إن نظام المجلات المفتوحة يدعم شبكات <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> Lots of Copies Keep Stuff Safe لضمان حفظ آمن ودائمي لمحتويات المجلة. إن أنظمة LOCKSS هي برامجيات مفتوحة المصدر مطورة في مكتبة جامعة ستانفورد وهو يمكن المكتبات من حفظ مجلات منتخبة من الإنترنت عبر القيام دورياً بتنزيل محتويات هذه المجلات المسجلة في النظام وإضافتها إلى الأرشيف. يتم بشكل مستمر مقارنة هذا الأرشيف مع مخزونات المجلة الأخرى، وإذا تم العثور على أي محتوى مفقود أو تالف، يقوم النظام تلقائياً بتعويضه من مخزونه الإحتياطي.

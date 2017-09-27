@@ -7,6 +7,7 @@
 ./lib/pkp/lib
 ./lib/pkp/tests/classes/xslt
 ./lib/pkp/js/lib
+./plugins/generic/citationStyleLanguage/lib/vendor
 ./plugins/generic/lucene/embedded
 ./plugins/generic/lucene/tests/classes/test-article.xml
 ./plugins/oaiMetadataFormats/dc/tests/expectedResult.xml
