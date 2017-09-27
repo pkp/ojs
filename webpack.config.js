@@ -11,6 +11,7 @@ var isProduction = process.env.NODE_ENV === 'production';
 
 module.exports = {
   entry: [
+    'babel-polyfill',
     './lib/ui-library/src/styles/_global.less',
     './js/load.js'
   ],
