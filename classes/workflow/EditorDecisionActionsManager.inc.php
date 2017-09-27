@@ -106,7 +106,7 @@ class EditorDecisionActionsManager {
 	 * @param $stageId integer
 	 * @return array recommendation => localeString
 	 */
-	function getRecommendationOptions($stageId) {
+	static function getRecommendationOptions($stageId) {
 		static $recommendationOptions = array(
 			'' => 'common.chooseOne',
 			SUBMISSION_EDITOR_RECOMMEND_PENDING_REVISIONS => 'editor.submission.decision.requestRevisions',
