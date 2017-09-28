@@ -106,16 +106,6 @@ class JournalDAO extends ContextDAO {
 		$reviewFormDao = DAORegistry::getDAO('ReviewFormDAO');
 		$reviewFormDao->deleteByAssoc(ASSOC_TYPE_JOURNAL, $journalId);
 
-		// NavigationMenus
-		// TODO: when the NavigationMenu feature gets ported to OMP we could add the code to ContextDAO
-		$navigationMenuDao = DAORegistry::getDAO('NavigationMenuDAO');
-		$navigationMenuDao->deleteByContextId($journalId);
-
-		// NavigationMenuItems
-		// TODO: when the NavigationMenu feature gets ported to OMP we could add the code to ContextDAO
-		$navigationMenuItemDao = DAORegistry::getDAO('NavigationMenuItemDAO');
-		$navigationMenuItemDao->deleteByContextId($journalId);
-
 		parent::deleteById($journalId);
 	}
 

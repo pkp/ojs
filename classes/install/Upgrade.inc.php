@@ -2498,12 +2498,12 @@ class Upgrade extends Installer {
 	 * For 3.1.0 upgrade.  DefaultMenus Defaults
 	 */
 	function installDefaultNavigationMenus() {
-		$journalDao = DAORegistry::getDAO('JournalDAO');
+		$contextDao = Application::getContextDAO();
 		$navigationMenuDao = DAORegistry::getDAO('NavigationMenuDAO');
 
-		$journals = $journalDao->getAll();
-		while ($journal = $journals->next()) {
-			$navigationMenuDao->installSettings($journal->getId(), 'registry/navigationMenus.xml');
+		$contexts = $contextDao->getAll();
+		while ($context = $contexts->next()) {
+			$navigationMenuDao->installSettings($context->getId(), 'registry/navigationMenus.xml');
 		}
 
 		$navigationMenuDao->installSettings(CONTEXT_ID_NONE, 'registry/navigationMenus.xml');

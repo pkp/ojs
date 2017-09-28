@@ -170,35 +170,9 @@ class DefaultThemePlugin extends ThemePlugin {
 		// Load custom JavaScript for this theme
 		$this->addScript('default', 'js/main.js');
 
-		// Register navigationMenuItem Types
-		HookRegistry::register('NavigationMenus::displayType', array($this, 'registerNavigationMenuItemTypesDisplay'));
+		// Adding default navigationMenuAreas for all themes
+		$this->addOption('navigationMenuArea', null, array('primary', 'user', 'footer'));
 	}
-
-	function registerNavigationMenuItemTypesDisplay($hookName, $args) {
-		$type = $args[1];
-		$display =& $args[0];
-		$display = false;
-		return $display;
-	}
-
-	function getNavigationMenuItemTypes() {
-		$request = Application::getRequest();
-		$router = $request->getRouter();
-		$context = $request->getContext();
-		$dispatcher = $router->getDispatcher();
-
-		if ($dispatcher) {
-			return array( // none and custom should be elsewhere - more centrally
-				"" => 'none',
-				$dispatcher->url($request, ROUTE_PAGE, $context->getPath(), 'issue', 'archive') => 'archiveIssue',
-				$dispatcher->url($request, ROUTE_PAGE, $context->getPath(), 'issue', 'current') => 'currentIssue',
-				'custom' => "custom",
-			);
-		} else {
-			return array();
-		}
-	}
-
 
 	/**
 	 * Get the name of the settings file to be installed on new journal
