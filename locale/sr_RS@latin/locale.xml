@@ -313,10 +313,10 @@ Aktivnih prikazuje na koliko je recenzija recenzent trenutno angažovan.]]></mes
 	<message key="reviewer.article.uploadedFile">Dostavljeni fajlovi</message>
 	<message key="reviewer.article.reviewersAnnotatedVersion">Verziju je postavio recenzent</message>
 	<message key="reviewer.article.reviewersAnnotatedVersionDescription">(Ako želite obeležiti fajl za urednika, spremite ga na vaš hard disk i koristite Pregled/Slanje.)</message>
-  <message key="reviewer.article.schedule.request">Urednički zahtev</message>
-  <message key="reviewer.article.schedule.response">Vaš odgovor</message>
-  <message key="reviewer.article.schedule.submitted">Recenzija predata</message>
-  <message key="reviewer.article.schedule.due">Rok za recenzije</message>
+	<message key="reviewer.article.schedule.request">Urednički zahtev</message>
+	<message key="reviewer.article.schedule.response">Vaš odgovor</message>
+	<message key="reviewer.article.schedule.submitted">Recenzija predata</message>
+	<message key="reviewer.article.schedule.due">Rok za recenzije</message>
 	<message key="reviewer.article.decision.accept">Objaviti bez izmena</message>
 	<message key="reviewer.article.decision.pendingRevisions">Objaviti uz predložene izmene</message>
 	<message key="reviewer.article.decision.resubmitHere">Vratiti na recenziju</message>
@@ -601,7 +601,7 @@ Vaš server trenutno podržava mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="rt.admin.settings.description">Alati za čitanje prikazuju se uz objavljene priloge u indeksiranim sekcijama časopisa (ova se opcija postavlja za svaku sekciju pod "sekcije časopisa"). Alati za čitanje mogu sadržati razne opcije koje se odnose na dotični objavljeni prilog (navedene niže na ovoj stranici), i skupova opcija organizovanih po području i disciplini koje omogućavaju pretraživanje drugih web servisa za podatke vezane za člankom.</message>
 	<message key="rt.admin.settings.enableReadingTools">Omogući alate za čitanje za indeksirane rubrike časopisa.</message>
 	<message key="rt.admin.settings.relatedItems">Područja</message>
-        <message key="rt.admin.settings.relatedItemsLink"><![CDATA[Pogledajte <a href="{$relatedItemsLink}" class="action">područja pretraživanja</a> da biste pregledali, dodali, ispravili ili obrisali stavke i kontekste pretraživanja za bilo koje područje.]]></message>
+	<message key="rt.admin.settings.relatedItemsLink"><![CDATA[Pogledajte <a href="{$relatedItemsLink}" class="action">područja pretraživanja</a> da biste pregledali, dodali, ispravili ili obrisali stavke i kontekste pretraživanja za bilo koje područje.]]></message>
 	<message key="rt.admin.options">Alati za priloge časopisa</message>
 	<message key="rt.admin.relatedItems">Alati za pretraživanje srodnih sadržaja</message>
 	<message key="rt.admin.settings.addComment">Dodaj komentar (omogućuje čitaocima da ostavljaju komentare na objavljene priloge. Glavni urednik ima mogućnost brisanja komentara).</message>
