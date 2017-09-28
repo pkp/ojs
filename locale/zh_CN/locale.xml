@@ -533,7 +533,6 @@
         <message key="reviewer.article.selectRecommendation">选择一个建议选项并提交以完成流程，在选择之前您必须输入一个建议或者上传一个文件.</message>
 	<message key="reviewer.article.mustSelectDecision">没有选择任何建议选项。您必须选择发送一个建议选项。</message>
 	<message key="reviewer.article.confirmDecision">一旦您记录了一个决定，您将不再能够变更这份审稿意见书。您确定您要继续下一步？?</message>
-	<message key="reviewer.article.ensuringBlindReview">确保盲审</message>
 
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">对于文本编辑的文件</message>

@@ -543,7 +543,6 @@ Attive indica quante revisioni sono attualmente in corso.]]></message>
         <message key="reviewer.article.selectRecommendation">Seleziona un parere conclusivo e invialo all'editor per completare questa fase. Devi inserire un commento o caricare un file prima di poter scegliere il parere.</message>
 	<message key="reviewer.article.mustSelectDecision">Non è stato selezionato alcun parere. Devi scegliere un parere da inviare.</message>
 	<message key="reviewer.article.confirmDecision">Una volta che la tua decisione è stata registrata non sarai più in grado in modificarla. Sei sicuro di continuare?</message>
-	<message key="reviewer.article.ensuringBlindReview">Come assicurare una revisione cieca</message>
 
 
 

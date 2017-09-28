@@ -427,7 +427,6 @@ Aktive er hvor mange fagfellevurderinger som for øyeblikket er bestilt eller un
 	<message key="reviewer.article.reviewerGuidelines">Instruks for fagkonsulenter</message>
 	<message key="reviewer.article.mustSelectDecision">Ingen anbefaling er valgt. Du må velge en anbefaling å sende inn.</message>
  	<message key="reviewer.article.confirmDecision">Så snart du har registrert beslutningen, kan du ikke lenger endre den. Er du sikker på at du vil fortsette?</message>
-	<message key="reviewer.article.ensuringBlindReview">Sikre anonym fagvurdering</message>
 
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">Fil til MR</message>

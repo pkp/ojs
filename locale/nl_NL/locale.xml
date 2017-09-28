@@ -410,7 +410,6 @@ Actief is het aantal reviews die momenteel in overweging of behandeling zijn.]]>
         <message key="reviewer.article.selectRecommendation">Kies een aanbeveling en stuur het review in om het prodes af te ronden. U moet een review invoeren of een bestand laden voor u een aanbeveling kiest.</message>
 	<message key="reviewer.article.mustSelectDecision">Geen aanbeveling geselecteerd. U moet een aanbeveling kiezen om in te kunnen sturen.</message>
 	<message key="reviewer.article.confirmDecision">Als u een beslissing hebt vastgelegd kunt u de review niet meer veranderen. Weet u zeker dat u door wilt gaan?</message>
-	<message key="reviewer.article.ensuringBlindReview">Een blinde review verzekeren</message>
 
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">Stuur naar tekstredactie</message>

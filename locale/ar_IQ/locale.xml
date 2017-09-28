@@ -573,7 +573,6 @@
 	<message key="reviewer.article.selectRecommendation.byEditor">إختر أو عدّل توصية المحكم.</message>
 	<message key="reviewer.article.mustSelectDecision">لم يتم اختيار التوصية. عليك أن تختار توصية تقدمها</message>
 	<message key="reviewer.article.confirmDecision">بمجرد تسجيلك لقرار ما، لن يكون باستطاعتك مستقبلاً تعديل هذا التحكيم. هل أنت متأكد من رغبتك في المتابعة؟</message>
-	<message key="reviewer.article.ensuringBlindReview">ضمان التحكيم السري</message>
 
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">الملف لتدقيقه</message>

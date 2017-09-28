@@ -566,7 +566,6 @@ Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br/>
         <message key="reviewer.article.selectRecommendation">Aby zakończyć proces recenzji wybierz rekomendację i kliknij Wyślij recenzję do redaktora. Musisz wprowadzić recenzję lub wysłać plik, aby wybór rekomendacji był aktywny.</message>
 	<message key="reviewer.article.mustSelectDecision">Rekomendacja nie została wybrana. Przed wysłaniem musisz wybrać rekomendację.</message>
 	<message key="reviewer.article.confirmDecision">Po zapisaniu decyzji, dalsze zmiany nie będą możliwe. Czy chcesz kontynuować?</message>
-	<message key="reviewer.article.ensuringBlindReview">Zapewnienie ślepej recenzji</message>
 
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">Plik dla korektora</message>

@@ -496,7 +496,6 @@
 		<message key="reviewer.article.selectRecommendation">Seleccioneu una recomanació i trameteu la revisió per completar el procés. Heu d'introduir una revisió o carregar un fitxer abans de seleccionar una recomanació.</message>
 	<message key="reviewer.article.mustSelectDecision">No s’ha seleccionat cap recomanació. Heu de seleccionar la recomanació que vulgueu trametre.</message>
 	<message key="reviewer.article.confirmDecision">Una vegada hàgiu enregistrat una decisió, no podreu fer canvis en aquesta revisió. Esteu segur/a que voleu continuar?</message>
-	<message key="reviewer.article.ensuringBlindReview">Assegurar una avaluació anònima</message>
 
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">Fitxer per corregir</message>

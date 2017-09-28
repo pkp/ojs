@@ -350,7 +350,6 @@ Activo indica revisão em consideração ou em progresso.]]></message>
         <message key="reviewer.article.selectRecommendation">Escolha a recomendação adequada e submeta a revisão para concluir o processo. É obrigatório incluir os comentários da revisão ou transferir uma Versão para Revisão do documento antes de definir a sua revisão.</message>
 	<message key="reviewer.article.mustSelectDecision">Não foi seleccionada nenhuma recomendação. Deve-se escolher uma recomendação para submeter a revisão.</message>
 	<message key="reviewer.article.confirmDecision">Uma vez registada a decisão não será mais possível modificar a revisão. Deseja realmente proceder?</message>
-	<message key="reviewer.article.ensuringBlindReview">Assegurando uma Revisão Cega segura</message>
 
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">Ficheiro para Edição de Texto (C/E)</message>

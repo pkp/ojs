@@ -357,7 +357,6 @@ Active indique combien d'évaluations sont présentement considérées ou en cou
         <message key="reviewer.article.uploadFile">En outre, vous pouvez télécharger les fichiers pour fins de consultation par le rédacteur et/ou l'auteur.</message>
 	<message key="reviewer.article.mustSelectDecision">Aucune recommandation n'a été sélectionnée. Vous devez choisir une recommandation à soumettre.</message>
 	<message key="reviewer.article.confirmDecision">Du moment que vous aurez enregistré une décision, vous ne pourrez plus modifier l'évaluation. Êtes-vous certain de vouloir continuer?</message>
-	<message key="reviewer.article.ensuringBlindReview">Assurer une évaluation à l'aveugle</message>
 
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">Fichier à réviser</message>

@@ -575,7 +575,6 @@
         <message key="reviewer.article.selectRecommendation">Для завершення процесу рецензування оберіть рекомендацію та надішліть рецензію. Перед тим, як обрати рекомендацію, Ви повинні внести рецензію або вивантажити файл.</message>
        <message key="reviewer.article.mustSelectDecision">Рекомендація не обрана. Ви повинні обрати рекомендацію щодо подання.</message>
        <message key="reviewer.article.confirmDecision">Після того, як Ваше рішення буде записане, Ви не матимете можливості вносити зміни до цієї рецензії. Ви впевнені, що хочете продовжити?</message>
-       <message key="reviewer.article.ensuringBlindReview">Забезпечення сліпого рецензування</message>
 
        <!-- Used in submission editing -->
        <message key="copyeditor.article.fileToCopyedit">Файл на літературне редагування</message>

@@ -575,7 +575,6 @@ Arvostelu on asteikolla 1-5 (5 = erinomainen).<br/>
 	<message key="reviewer.article.selectRecommendation.byEditor">Aseta tai muuta arvioijan suositusta.</message>
 	<message key="reviewer.article.mustSelectDecision">Yhtään suositusta ei valittu. Et voi lähettää arviointia, ennen kuin valitset suosituksen.</message>
 	<message key="reviewer.article.confirmDecision">Kun olet tallentanut päätöksesi, et voi enää tehdä muutoksia arviointiisi. Haluatko varmasti jatkaa?</message>
-	<message key="reviewer.article.ensuringBlindReview">Sokkoarvioinnin varmistaminen</message>
 
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">Teknisesti toimitettava tiedosto</message>

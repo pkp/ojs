@@ -548,7 +548,6 @@ Aktivní udává kolik recenzí je právě zvažováno nebo zpracováváno.]]></
         <message key="reviewer.article.selectRecommendation">Pro dovršení celého procesu vyberte doporučení a odešlete recenzi. Než vyberete doporučení, musíte vložit recenzi nebo nahrát soubor.</message>
 	<message key="reviewer.article.mustSelectDecision">Nebylo vybráno žádné doporučení. Před odesláním musíte vybrat doporučení.</message>
 	<message key="reviewer.article.confirmDecision">Jakmile zaznamenáte rozhodnutí, nebudete již moci v této recenzi provést žádné změny. Jste si jistý, že chcete pokračovat?</message>
-	<message key="reviewer.article.ensuringBlindReview">Zajištění anonymní recenze</message>
 
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">Soubor pro redaktora</message>

@@ -347,7 +347,6 @@ Postavljanje LOCKSS podrške za Open Journal Systems није потребно �
 
 	<message key="reviewer.article.mustSelectDecision">Нема одабране препоруке. Да бисте предали фајл или рецензију морате одабрати препоруку.</message>
 	<message key="reviewer.article.confirmDecision">Када сте једном записали одлуку, нећете више моћи направити никакве промене на овој рецензији. Да ли сте сигурни да желите да наставите?</message>
-	<message key="reviewer.article.ensuringBlindReview">Како осигурати анонимност рецензије</message>
 
 	<!--  Used in submission editing  --><message key="copyeditor.article.fileToCopyedit">Фајл за лекторисање</message>
 	<message key="copyeditor.article.copyeditorFile">Фајл лектора</message>

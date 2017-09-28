@@ -331,7 +331,6 @@ Aktivnih prikazuje na koliko je recenzija recenzent trenutno angažovan.]]></mes
 
 	<message key="reviewer.article.mustSelectDecision">Nema odabrane preporuke. Da biste predali fajl ili recenziju morate odabrati preporuku.</message>
 	<message key="reviewer.article.confirmDecision">Kada ste jednom zapisali odluku, nećete više moći napraviti nikakve promene na ovoj recenziji. Da li ste sigurni da želite da nastavite?</message>
-	<message key="reviewer.article.ensuringBlindReview">Kako osigurati anonimnost recenzije</message>
 
 	<!--  Used in submission editing  -->
 	<message key="copyeditor.article.fileToCopyedit">Fajl za lektorisanje</message>

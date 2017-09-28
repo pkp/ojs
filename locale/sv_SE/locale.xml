@@ -555,7 +555,6 @@ Aktiva visar antalet granskare som för tillfället arbetar med granskning.]]></
 	<message key="reviewer.article.selectRecommendation">För att avsluta granskningsprocessen, välj en rekommendation och skicka granskningen. (Du måste skriva in en bedömning eller ladda upp en fil innan du kan välja rekommendation).</message>
 	<message key="reviewer.article.mustSelectDecision">Ingen rekommendation har gjorts. Du måste välja rekommendation innan du kan gå vidare.</message>
 	<message key="reviewer.article.confirmDecision">När du har registrerat ditt beslut har du inte längre möjlighet att ändra bedömningen. Är du säker på att du vill fortsätta?</message>
-	<message key="reviewer.article.ensuringBlindReview">Försäkrar anonym granskningsbedömning</message>
 
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">Fil till Manusredaktören</message>

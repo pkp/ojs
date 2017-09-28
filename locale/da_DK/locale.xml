@@ -428,7 +428,6 @@ Aktiv er antallet af bedømmelser, der i øjeblikket overvejes eller er forestå
         <message key="reviewer.article.selectRecommendation">Vælg en anbefaling, og fremsend bedømmelsen for at fuldføre processen. Du skal angive en bedømmelse eller overføre en fil, inden du kan vælge en anbefaling.</message>
 	<message key="reviewer.article.mustSelectDecision">Der er ikke valgt nogen anbefaling. Du skal vælge en anbefaling, du vil fremsende.</message>
 	<message key="reviewer.article.confirmDecision">Når du har registreret en beslutning, kan du ikke længere foretage ændringer af denne bedømmelse. Er du sikker på, at du vil fortsætte?</message>
-	<message key="reviewer.article.ensuringBlindReview">Sikring af blind review</message>
 
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">Fil til C/E</message>

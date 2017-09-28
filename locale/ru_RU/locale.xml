@@ -573,7 +573,6 @@
 	<message key="reviewer.article.selectRecommendation.byEditor">Задать или изменить рекомендацию рецензента.</message>
 	<message key="reviewer.article.mustSelectDecision">Рекомендация не была выбрана. Вы должны выбрать рекомендацию для отправки.</message>
 	<message key="reviewer.article.confirmDecision">Как только Вы запишите свое решение, Вы больше не сможете вносить изменения в эту рецензию. Вы уверены, что хотите продолжить?</message>
-	<message key="reviewer.article.ensuringBlindReview">Обеспечение слепого рецензирования</message>
 
 	<!-- Используются в редактировании материала -->
 	<message key="copyeditor.article.fileToCopyedit">Файл для литературного редактирования</message>
