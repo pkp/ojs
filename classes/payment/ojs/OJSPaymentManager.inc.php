@@ -72,19 +72,11 @@ class OJSPaymentManager extends PaymentManager {
 			case PAYMENT_TYPE_PURCHASE_ISSUE:
 				$payment->setRequestUrl($dispatcher->url($this->request, ROUTE_PAGE, null, 'issue', 'view', $assocId));
 				break;
-			case PAYMENT_TYPE_MEMBERSHIP:
-				$payment->setRequestUrl($dispatcher->url($this->request, ROUTE_PAGE, null, 'user'));
 				break;
-			case PAYMENT_TYPE_PURCHASE_SUBSCRIPTION:
 			case PAYMENT_TYPE_RENEW_SUBSCRIPTION:
 				$payment->setRequestUrl($dispatcher->url($this->request, ROUTE_PAGE, null, 'user', 'subscriptions'));
 				break;
-			case PAYMENT_TYPE_DONATION:
-				$payment->setRequestUrl($dispatcher->url($this->request, ROUTE_PAGE, null, 'donations', 'thankYou'));
-				break;
-			case PAYMENT_TYPE_FASTTRACK:
 			case PAYMENT_TYPE_PUBLICATION:
-			case PAYMENT_TYPE_SUBMISSION:
 				$submissionDao = Application::getSubmissionDAO();
 				$submission = $submissionDao->getById($assocId);
 				if ($submission->getSubmissionProgress()!=0) {
@@ -93,6 +85,10 @@ class OJSPaymentManager extends PaymentManager {
 					$payment->setRequestUrl($dispatcher->url($this->request, ROUTE_PAGE, null, 'author'));
 				}
 				break;
+			case PAYMENT_TYPE_MEMBERSHIP: // Deprecated
+			case PAYMENT_TYPE_DONATION: // Deprecated
+			case PAYMENT_TYPE_FASTTRACK: // Deprecated
+			case PAYMENT_TYPE_SUBMISSION: // Deprecated
 			default:
 				// Invalid payment type
 				assert(false);
@@ -284,9 +280,12 @@ class OJSPaymentManager extends PaymentManager {
 				}
 				$returner = true;
 				break;
+			case PAYMENT_TYPE_DONATION:
+				assert(false); // Deprecated
+				$returner = true;
+				break;
 			case PAYMENT_TYPE_PURCHASE_ARTICLE:
 			case PAYMENT_TYPE_PURCHASE_ISSUE:
-			case PAYMENT_TYPE_DONATION:
 			case PAYMENT_TYPE_SUBMISSION:
 			case PAYMENT_TYPE_PUBLICATION:
 				$returner = true;
