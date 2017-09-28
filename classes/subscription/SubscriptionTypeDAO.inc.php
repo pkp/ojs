@@ -312,8 +312,8 @@ class SubscriptionTypeDAO extends DAO {
 			FROM subscription_types
 			WHERE	journal_id = ?
 				AND institutional = ?
-				' . ($disablePublicDisplaySql===true?'AND disable_public_display = 1':'') . '
-				' . ($disablePublicDisplaySql===false?'AND disable_public_display = 0':'') . '
+				' . ($disablePublicDisplay===true?'AND disable_public_display = 1':'') . '
+				' . ($disablePublicDisplay===false?'AND disable_public_display = 0':'') . '
 			ORDER BY seq',
 			array((int) $journalId, (int) $institutional),
 			$rangeInfo
