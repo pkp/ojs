@@ -72,7 +72,6 @@ class OJSPaymentManager extends PaymentManager {
 			case PAYMENT_TYPE_PURCHASE_ISSUE:
 				$payment->setRequestUrl($dispatcher->url($this->request, ROUTE_PAGE, null, 'issue', 'view', $assocId));
 				break;
-				break;
 			case PAYMENT_TYPE_RENEW_SUBSCRIPTION:
 				$payment->setRequestUrl($dispatcher->url($this->request, ROUTE_PAGE, null, 'user', 'subscriptions'));
 				break;
