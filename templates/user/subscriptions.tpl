@@ -13,24 +13,50 @@
 {include file="frontend/components/header.tpl"}
 {/strip}
 
-<h3>{translate key="about.subscriptionsContact"}</h3>
-<p>
-	{if !empty($subscriptionName)}
-		<strong>{$subscriptionName|escape}</strong><br />
+{* Contact section *}
+<div class="subscription_contact_section">
+	{if $subscriptionAdditionalInformation}{$subscriptionAdditionalInformation|strip_unsafe_html}{/if}
+
+	{if $subscriptionMailingAddress}
+		<div class="address">
+			{$subscriptionMailingAddress|nl2br|strip_unsafe_html}
+		</div>
 	{/if}
-	{if !empty($subscriptionMailingAddress)}
-		{$subscriptionMailingAddress|nl2br}<br />
+
+	{* Subscription contact *}
+	{if $subscriptionName || $subscriptionPhone || $subscriptionEmail}
+		<div class="contact primary">
+			<h3>
+				{translate key="about.contact.subscriptionContact"}
+			</h3>
+
+			{if $subscriptionName}
+			<div class="name">
+				{$subscriptionName|escape}
+			</div>
+			{/if}
+
+			{if $subscriptionPhone}
+			<div class="phone">
+				<span class="label">
+					{translate key="about.contact.phone"}
+				</span>
+				<span class="value">
+					{$subscriptionPhone|escape}
+				</span>
+			</div>
+			{/if}
+
+			{if $subscriptionEmail}
+			<div class="email">
+				<a href="mailto:{$subscriptionEmail|escape}">
+					{$subscriptionEmail|escape}
+				</a>
+			</div>
+			{/if}
+		</div>
 	{/if}
-	{if !empty($subscriptionPhone)}
-		{translate key="user.phone"}: {$subscriptionPhone|escape}<br />
-	{/if}
-	{if !empty($subscriptionEmail)}
-		{translate key="user.email"}: {mailto address=$subscriptionEmail|escape encode="hex"}<br />
-	{/if}
-	{if !empty($subscriptionAdditionalInformation)}
-		<br />{$subscriptionAdditionalInformation|nl2br}<br />
-	{/if}
-</p>
+</div>
 
 {if $journalPaymentsEnabled}
 <h3>{translate key="user.subscriptions.subscriptionStatus"}</h3>
