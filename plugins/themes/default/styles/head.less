@@ -396,13 +396,8 @@
 	}
 
 	// Align to the right edge of the container
-	> li:last-child a {
+	> li:last-child > a {
 		padding-right: 0;
-	}
-
-	// Fix alignment issues in task-count
-	.profile > a {
-		text-align: right;
 	}
 
 	.task_count {
@@ -426,16 +421,6 @@
 		&:hover .task_count,
 		&:focus .task_count {
 			background: #fff;
-		}
-	}
-
-	.has_tasks {
-
-		ul .task_count,
-		ul a:hover .task_count,
-		ul a:focus .task_count {
-			background: #f00;
-			color: #fff;
 		}
 	}
 }
