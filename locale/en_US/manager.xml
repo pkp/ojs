@@ -233,8 +233,10 @@
 	<message key="manager.setup.listsDescription">Limit the number of items (for example, submissions, users, or editing assignments) to show in a list before showing subsequent items in another page. Also, limit the number of links to display to subsequent pages of the list.</message>
 	<message key="manager.setup.enableArchive">Enable Archiving</message>
 	<message key="manager.setup.plnPluginEnable">PLN Plugin enabled</message>
+	<message key="manager.setup.plnDescription">The PKP Private LOCKSS Network (PLN) provides free preservation services for any OJS journal that meets a few basic criteria.</message>
+	<message key="manager.setup.plnSettingsDescription">Click on the Settings link to accept the terms of use for the PKP PLN.</message>
 	<message key="manager.setup.plnPluginArchiving">PKP Private LOCKSS Network (PLN)</message>
-	<message key="manager.setup.plnPluginNotInstalled">The PKP Private LOCKSS Network (PLN) provides free preservation services for any OJS journal that meets a few basic criteria. The PKP PLN plugin for OJS 3 is currently in development and will be available soon.</message>
+	<message key="manager.setup.plnPluginNotInstalled">The PKP Private LOCKSS Network (PLN) provides free preservation services for any OJS journal that meets a few basic criteria. The PKP PLN plugin for OJS 3 is currently in development and will be available in the plugin gallery soon.</message>
 	<message key="manager.setup.otherLockss">Alternate Archiving Options</message>
 	<message key="manager.setup.lockssEnable"><![CDATA[Enable LOCKSS to store and distribute journal content at participating libraries via a LOCKSS <a href="{$lockssUrl}" target="_blank">Publisher Manifest</a> page.]]></message>
 	<message key="manager.setup.lockssLicenseDescription"><![CDATA[A LOCKSS license will appear in About the Journal under Archiving: <a href="http://www.lockss.org/community/publishers-titles-gln/" target="_blank">LOCKSS License</a>]]></message>
@@ -246,7 +248,7 @@
 	<message key="manager.setup.clockssLicenseLabel">CLOCKSS License Description</message>
 	<message key="manager.setup.clockssRegister"><![CDATA[Sign up for the CLOCKSS service by visiting <a href="http://clockss.org/" target="_blank">the CLOCKSS website</a>.]]></message>
 	<message key="manager.setup.clockssTitle">CLOCKSS</message>
-	<message key="manager.setup.porticoEnable"><![CDATA[Enable Portico]]></message>
+	<message key="manager.setup.porticoEnable"><![CDATA[Enable Portico to store and distribute journal content to libraries participating in Portico.]]></message>
 	<message key="manager.setup.porticoTitle">Portico</message>
 	<message key="manager.setup.Issn">ISSN</message>
 	<message key="manager.setup.look">The Look</message>
