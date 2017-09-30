@@ -171,7 +171,7 @@ class DefaultThemePlugin extends ThemePlugin {
 		$this->addScript('default', 'js/main.js');
 
 		// Adding default navigationMenuAreas for all themes
-		$this->addOption('navigationMenuArea', null, array('primary', 'user', 'footer'));
+		$this->addOption('navigationMenuArea', null, array('primary', 'user'));
 	}
 
 	/**
