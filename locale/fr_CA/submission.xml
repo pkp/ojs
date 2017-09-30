@@ -45,7 +45,7 @@
 	<message key="grid.action.workflow">Processus éditorial pour la soumission</message>
 	<message key="submission.issueEntry">Métadonnées</message>
 	<message key="submission.submit.whatNext.description">Le journal a été informé de votre soumission et vous a envoyé par courriel une confirmation pour vos dossiers. L'éditeur communiquera avec vous une fois que votre soumission aura été examinée.</message>
-	<message key="editor.submission.decision.sendExternalReview">Envoyer pour évaluation</message>
+	<message key="editor.submission.decision.sendExternalReview">Envoyer en évaluation</message>
 	<message key="submission.event.issueMetadataUpdated">Les métadonnées pour la publication de la soumission ont été mises à jour.</message>
 	<message key="submission.upload.fileContents">Élément de l'article</message>
 	<message key="submission.complete">Approuvé</message>
