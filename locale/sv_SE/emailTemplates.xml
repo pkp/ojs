@@ -105,7 +105,7 @@ Lösenord: {$password}<br />
 <br />
 Vänligen,<br />
 {$principalContactSignature}]]></body>
-		<description>Det här e-postmeddelandet skickas till nyregistrerade granskare för välkomna demtill systemet och förse dem med dokumentation på deras användarnamn och lösenord.</description>
+		<description>Det här e-postmeddelandet skickas till nyregistrerade granskare för välkomna dem till systemet och förse dem med dokumentation på deras användarnamn och lösenord.</description>
 	</email_text>
 	<email_text key="PUBLISH_NOTIFY">
 		<subject>Nytt nummer publicerat</subject>
@@ -115,7 +115,7 @@ Vänligen,<br />
 <br />
 Tack för visat intresse för vårt arbete,<br />
 {$editorialContactSignature}]]></body>
-		<description>Det här e-postmeddelandet skickas till registrerade läsare via "Meddela användare"-länken under Redaktörens användarprofil. Det innehåller information om att det publicerats ett nytt nummer och välkomnar dem genom en länk att besöka tidskriften.</description>
+		<description>Det här e-postmeddelandet skickas till registrerade läsare via "Meddela användare"-länken under redaktörens användarprofil. Det innehåller information om att det publicerats ett nytt nummer och välkomnar dem genom en länk att besöka tidskriften.</description>
 	</email_text>
 	<email_text key="LOCKSS_EXISTING_ARCHIVE">
 		<subject>Förfrågan om arkivering för {$contextName}</subject>
@@ -161,7 +161,7 @@ Användarnamn: {$authorUsername}<br />
 Om du har några frågor, vänligen kontakta mig. Tack för att du har valt att skicka ditt bidrag till den här tidskriften.<br />
 <br />
 {$editorialContactSignature}]]></body>
-		<description>Det här e-postmeddelandet skickas, om det är aktiverat, automatiskt till författaren när hen skickar in sitt manuskript till tidskriften. Meddelandet innehåller information om hur författaren kan följa bidraget genom redaktionella processen samt ett tack för för inskickat bidrag.</description>
+		<description>Det här e-postmeddelandet skickas, om det är aktiverat, automatiskt till författare när de skickar in sina manuskript till tidskriften. Meddelandet innehåller information om hur författaren kan följa bidraget genom redaktionella processen samt ett tack för för inskickat bidrag.</description>
 	</email_text>
 	<email_text key="SUBMISSION_ACK_NOT_USER">
 	  <subject>Bekräftelse på mottaget bidrag</subject>
@@ -175,7 +175,7 @@ Om du har några frågor, vänligen kontakta mig. Tack för att du har valt att 
 		<description>Det här e-postmeddelandet skickas, om det är aktiverat, automatiskt till andra författare knutna till bidraget i inskickningsprocessen men som inte är OJS-användare.</description>
 	</email_text>
 	<email_text key="SUBMISSION_UNSUITABLE">
-		<subject>Bidrag utanför tidskriftens omfång</subject>
+		<subject>Bidrag ej relevant för tidskriften</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
 En första redaktionell granskning &quot;{$submissionTitle}&quot; har visat att det här bidraget inte överensstämmer med tidskriften {$contextName}s ämnesfokus. Jag rekommenderar att du tar del av beskrivningen av tidskriften under Om liksom tidskriftens hittills publicerade material för att få en bild av vilken typ av innehåll vi publicerar. Du kan också överväga att skicka manuskriptet till en annan, mer passande, tidskrift.<br />
@@ -186,14 +186,14 @@ En första redaktionell granskning &quot;{$submissionTitle}&quot; har visat att 
 		<subject>Redaktionellt uppdrag</subject>
 		<body><![CDATA[{$editorialContactName}:<br />
 <br />
-Som sektionsredaktör för {$contextName} har du fått i uppdrag att föra bidraget &quot;{$submissionTitle},&quot; genom den redaktionella processen.<br />
+Som sektionsredaktör hos {$contextName} har du fått i uppdrag att föra bidraget &quot;{$submissionTitle},&quot; genom den redaktionella processen.<br />
 <br />
 Bidragets URL: {$submissionUrl}<br />
 Användarnamn: {$editorUsername}<br />
 <br />
 Tack och med vänliga hälsningar,<br />
 {$editorialContactSignature}]]></body>
-		<description>Det här e-postmeddelandet meddelar en Sektionsredaktör att Redaktören har utsett hen att ansvara för ett bidrag genom den redaktionella processen. Det innehåller även information om bidraget och hur man loggar in på tidskriftens webbplats.</description>
+		<description>Det här e-postmeddelandet meddelar en sektionsredaktör att redaktören utsett hen att ansvara för ett bidrag genom den redaktionella processen. Det innehåller även information om bidraget och hur man loggar in på tidskriftens webbplats.</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST">
 		<subject>Förfrågan om granskning av artikel</subject>
@@ -217,7 +217,7 @@ Tack för att du överväger granskningsuppdraget.<br />
 &quot;{$submissionTitle}&quot;<br />
 <br />
 {$submissionAbstract}]]></body>
-		<description>Det här e-postmeddelandet från Sektionsredaktören till en Granskare ber granskaren att acceptera eller tacka nej till uppdraget att sakkunniggranska ett bidrag. Det innehåller information om bidraget i form av titel och sammanfattning, en deadline för granskning och instruktioner för hur man kommer åt bidraget. Meddelandet används när granskningsprocess Standard är valt i Administration &gt; Inställningar &gt; Arbetsflöde &gt; Granskning. (Annars, se REVIEW_REQUEST_ATTACHED.)</description>
+		<description>Det här e-postmeddelandet från sektionsredaktören till en granskare ber granskaren att acceptera eller tacka nej till uppdraget att sakkunniggranska ett bidrag. Det innehåller information om bidraget i form av titel och sammanfattning, en deadline för granskning och instruktioner för hur man kommer åt bidraget. Meddelandet används när granskningsprocess Standard är valt i Administration &gt; Inställningar &gt; Arbetsflöde &gt; Granskning. (Annars, se REVIEW_REQUEST_ATTACHED.)</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_REMIND_AUTO">
 		<subject>Förfrågan om granskning av artikel</subject>
@@ -262,7 +262,7 @@ Tack för att du överväger granskningsuppdraget.<br />
 &quot;{$submissionTitle}&quot;<br />
 <br />
 {$submissionAbstract}]]></body>
-		<description>Det här e-postmeddelandet från Sektionsredaktören till en Granskare ber granskaren att acceptera eller tacka nej till uppdraget att sakkunniggranska ett bidrag. Det innehåller information om bidraget i form av titel och sammanfattning, en deadline för granskning och instruktioner för hur man kommer åt bidraget. Meddelandet används när granskningsprocess Standard är valt i Administration &gt; Inställningar &gt; Arbetsflöde &gt; Granskning och Granskartillgång med ett klick är aktiverat.</description>
+		<description>Det här e-postmeddelandet från sektionsredaktören till en granskare ber granskaren att acceptera eller tacka nej till uppdraget att sakkunniggranska ett bidrag. Det innehåller information om bidraget i form av titel och sammanfattning, en deadline för granskning och instruktioner för hur man kommer åt bidraget. Meddelandet används när granskningsprocess Standard är valt i Administration &gt; Inställningar &gt; Arbetsflöde &gt; Granskning och Granskartillgång med ett klick är aktiverat.</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_REMIND_AUTO_ONECLICK">
 		<subject>Förfrågan om granskning av artikel</subject>
@@ -303,7 +303,7 @@ Riktlinjer för granskning:<br />
 <br />
 {$reviewGuidelines}<br />
 ]]></body>
-		<description>Det här e-postmeddelandet från Sektionsredaktören till en Granskare ber granskaren att acceptera eller tacka nej till uppdraget att sakkunniggranska ett bidrag. Det innehåller bidraget som bifogad fil. Det här e-postmeddelandet används när Granskningsprocess E-postbilaga är valt i &gt; Inställningar &gt; Arbetsflöde &gt; Granskning. (Annars, se REVIEW_REQUEST.)</description>
+		<description>Det här e-postmeddelandet från sektionsredaktören till en granskare ber granskaren att acceptera eller tacka nej till uppdraget att sakkunniggranska ett bidrag. Det innehåller bidraget som bifogad fil. Det här e-postmeddelandet används när Granskningsprocess E-postbilaga är valt i &gt; Inställningar &gt; Arbetsflöde &gt; Granskning. (Annars, se REVIEW_REQUEST.)</description>
 	</email_text>
 		<email_text key="REVIEW_REQUEST_SUBSEQUENT">
 		<subject>Förfrågan om granskning av artikel</subject>
@@ -328,7 +328,7 @@ Tack för att du överväger granskningsuppdraget.<br />
 &quot;{$submissionTitle}&quot;<br />
 <br />
 {$submissionAbstract}]]></body>
-		<description>Det här e-postmeddelandet från Sektionsredaktören till en Granskare ber granskaren att acceptera eller tacka nej till uppdraget att sakkunniggranska ett bidrag en andra gång eller på nytt. Det innehåller information om bidraget i form av titel och sammanfattning, en deadline för granskning och instruktioner för hur man kommer åt bidraget. Meddelandet används när granskningsprocess Standard är valt i Administration &gt; Inställningar &gt; Arbetsflöde &gt; Granskning. (Annars, se REVIEW_REQUEST_ATTACHED_SUBSEQUENT.)</description>
+		<description>Det här e-postmeddelandet från sektionsredaktören till en granskare ber granskaren att acceptera eller tacka nej till uppdraget att sakkunniggranska ett bidrag en andra gång eller på nytt. Det innehåller information om bidraget i form av titel och sammanfattning, en deadline för granskning och instruktioner för hur man kommer åt bidraget. Meddelandet används när granskningsprocess Standard är valt i Administration &gt; Inställningar &gt; Arbetsflöde &gt; Granskning. (Annars, se REVIEW_REQUEST_ATTACHED_SUBSEQUENT.)</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ONECLICK_SUBSEQUENT">
 		<subject>Förfrågan om granskning av artikel</subject>
@@ -351,7 +351,7 @@ Tack för att du överväger granskningsuppdraget.<br />
 &quot;{$submissionTitle}&quot;<br />
 <br />
 {$submissionAbstract}]]></body>
-		<description>Det här e-postmeddelandet från Sektionsredaktören till en Granskare ber granskaren att acceptera eller tacka nej till uppdraget att sakkunniggranska ett bidrag en andra gång eller på nytt. Det innehåller information om bidraget i form av titel och sammanfattning, en deadline för granskning och instruktioner för hur man kommer åt bidraget. Meddelandet används när granskningsprocess Standard är valt i Administration &gt; Inställningar &gt; Arbetsflöde &gt; Granskning och Granskartillgång med ett klick är aktiverat.</description>
+		<description>Det här e-postmeddelandet från sektionsredaktören till en ranskare ber granskaren att acceptera eller tacka nej till uppdraget att sakkunniggranska ett bidrag en andra gång eller på nytt. Det innehåller information om bidraget i form av titel och sammanfattning, en deadline för granskning och instruktioner för hur man kommer åt bidraget. Meddelandet används när granskningsprocess Standard är valt i Administration &gt; Inställningar &gt; Arbetsflöde &gt; Granskning och Granskartillgång med ett klick är aktiverat.</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ATTACHED_SUBSEQUENT">
 		<subject>Förfrågan om granskning av artikel</subject>
@@ -374,7 +374,7 @@ Riktlinjer för granskning<br />
 <br />
 {$reviewGuidelines}<br />
 ]]></body>
-		<description>Det här e-postmeddelandet från Sektionsredaktören till en Granskare ber granskaren att acceptera eller tacka nej till uppdraget att sakkunniggranska ett bidrag en andra gång eller på nytt. Det innehåller information bidraget som en bifogad fil. Det här e-postmeddelandet används när Granskningsprocess E-postbilaga är valt i &gt; Inställningar &gt; Arbetsflöde &gt; Granskning. (Annars, se REVIEW_REQUEST_SUBSEQUENT.)</description>
+		<description>Det här e-postmeddelandet från sektionsredaktören till en granskare ber granskaren att acceptera eller tacka nej till uppdraget att sakkunniggranska ett bidrag en andra gång eller på nytt. Det innehåller information bidraget som en bifogad fil. Det här e-postmeddelandet används när Granskningsprocess E-postbilaga är valt i &gt; Inställningar &gt; Arbetsflöde &gt; Granskning. (Annars, se REVIEW_REQUEST_SUBSEQUENT.)</description>
 	</email_text>
 	<email_text key="REVIEW_CANCEL">
 		<subject>Förfrågan om granskning återkallad</subject>
@@ -385,7 +385,7 @@ Vi har beslutat att återkalla vår förfrågan till dig om att granska bidraget
 Om du har några frågor, vänligen kontakta mig.
 <br />
 {$editorialContactSignature}]]></body>
-		<description>Det här e-postmeddelandet skickas från Sektionsredaktören till en Granskare med en pågående granskning av ett bidrag, för att meddela hen att granskningen blivit återkallad.</description>
+		<description>Det här e-postmeddelandet skickas från sektionsredaktören till en granskare med en pågående granskning av ett bidrag, för att meddela hen att granskningen blivit återkallad.</description>
 	</email_text>
 	<email_text key="REVIEW_CONFIRM">
 		<subject>Accepterar granskningsuppdrag</subject>
@@ -394,7 +394,7 @@ Om du har några frågor, vänligen kontakta mig.
 Jag har möjlighet och åtar mig gärna uppdraget att granska bidraget &quot;{$submissionTitle}&quot; för {$contextName}. Tack för att ni tänkte på mig. Jag kommer att ha granskningen färdig till deadline {$reviewDueDate}, om inte förr.<br />
 <br />
 {$reviewerName}]]></body>
-		<description>Det här e-postmeddelandet skickas från en Granskare till Sektionsredaktören som svar på en förfrågan om granskning för att meddela Sektionsredaktören att granskaren accepterar förfrågan om granskning och att hen kommer att färdigställa denna till angiven deadline.</description>
+		<description>Det här e-postmeddelandet skickas från en granskare till sektionsredaktören som svar på en förfrågan om granskning för att meddela sektionsredaktören att granskaren accepterar förfrågan om granskning och att hen kommer att färdigställa denna till angiven deadline.</description>
 	</email_text>
 	<email_text key="REVIEW_DECLINE">
 		<subject>Tackar nej till granskningsuppdrag</subject>
@@ -403,7 +403,7 @@ Jag har möjlighet och åtar mig gärna uppdraget att granska bidraget &quot;{$s
 Tyvärr har jag inte möjlighet i nuläget att granska bidraget &quot;{$submissionTitle}&quot; för {$contextName}. Tack för att ni tänkte på mig och hör gärna av er en annan gång.<br />
 <br />
 {$reviewerName}]]></body>
-		<description>Det här e-postmeddelandet skickas från en Granskare till Sektionsredaktören som svar på en förfrågan om granskning för att meddela Sektionsredaktören att granskaren tackar nej till granskningsuppdraget.</description>
+		<description>Det här e-postmeddelandet skickas från en granskare till sektionsredaktören som svar på en förfrågan om granskning för att meddela sektionsredaktören att granskaren tackar nej till granskningsuppdraget.</description>
 	</email_text>
 	<email_text key="REVIEW_ACK">
 		<subject>Bekräftelse på granskning av artikel</subject>
@@ -412,7 +412,7 @@ Tyvärr har jag inte möjlighet i nuläget att granska bidraget &quot;{$submissi
 Tack för att du genomfört granskningen av bidraget &quot;{$submissionTitle}&quot; för {$contextName}. Vi uppskattar ditt arbete din roll i att bibehålla tidskriftens kvalitet.<br />
 <br />
 {$editorialContactSignature}]]></body>
-		<description>Det här e-postmeddelandet skickas från en Sektionsredaktör för att bekräfta att en färdig granskning inkommit och för att tacka granskaren för hens arbete.</description>
+		<description>Det här e-postmeddelandet skickas från en sektionsredaktör för att bekräfta att en färdig granskning inkommit och för att tacka granskaren för utfört arbete.</description>
 	</email_text>
 	<email_text key="REVIEW_REMIND">
 		<subject>Påminnelse om granskning av bidrag</subject>
@@ -427,7 +427,7 @@ Bidragets URL: {$submissionReviewUrl}<br />
 Vänligen bekräfta snarast om du har möjlighet att genomföra granskningsuppdraget, som utgör en viktig del av tidskriftens arbete. Vi ser fram emot att höra från dig.<br />
 <br />
 {$editorialContactSignature}]]></body>
-		<description>Det här e-postmeddelandet skickas från en Sektionsredaktör som en påminnelse till granskaren att deadline för granskningen har passerat.</description>
+		<description>Det här e-postmeddelandet skickas från en sektionsredaktör som en påminnelse till granskaren att deadline för granskningen har passerat.</description>
 	</email_text>
 	<email_text key="REVIEW_REMIND_ONECLICK">
 		<subject>Påminnelse om granskning av bidrag</subject>
@@ -440,7 +440,7 @@ Bidragets URL: {$submissionReviewUrl}<br />
 Vänligen bekräfta snarast om du har möjlighet att genomföra granskningsuppdraget, som utgör en viktig del av tidskriftens arbete. Vi ser fram emot att höra från dig.<br />
 <br />
 {$editorialContactSignature}]]></body>
-		<description>Det här e-postmeddelandet skickas från en Sektionsredaktör som en påminnelse till granskaren att deadline för granskningen har passerat.</description>
+		<description>Det här e-postmeddelandet skickas från en sektionsredaktör som en påminnelse till granskaren att deadline för granskningen har passerat.</description>
 	</email_text>
 	<email_text key="REVIEW_REMIND_AUTO">
 		<subject>Automatisk påminnelse om granskning av bidrag</subject>
@@ -480,7 +480,7 @@ Vårt beslut är att: Acceptera bidraget<br />
 <br />
 {$editorialContactSignature}<br />
 ]]></body>
-		<description>Det här e-postmeddelandet från Redaktören eller Sektionsredaktören till en Författare meddelar att ett slutligt "Acceptera bidrag"-beslut fattats för hens bidrag.</description>
+		<description>Det här e-postmeddelandet från redaktören eller sektionsredaktören till en författare meddelar att beslutet "Acceptera bidrag" fattats för hens bidrag.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_SEND_TO_EXTERNAL">
 		<subject>Redaktörsbeslut</subject>
@@ -494,7 +494,7 @@ Bidragets URL: {$submissionUrl}<br />
 <br />
 {$editorialContactSignature}<br />
 ]]></body>
-		<description>Det här e-postmeddelandet från Redaktören eller Sektionsredaktören till en Författare meddelar att hens bidrag skickas till extern granskning.</description>
+		<description>Det här e-postmeddelandet från redaktören eller sektionsredaktören till en författare meddelar att hens bidrag skickas till extern granskning.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_SEND_TO_PRODUCTION">
 		<subject>Redaktörsbeslut</subject>
@@ -506,7 +506,7 @@ Bidragets URL: {$submissionUrl}<br />
 <br />
 {$editorialContactSignature}<br />
 ]]></body>
-		<description>Det här e-postmeddelandet från Redaktören eller Sektionsredaktören till en Författare meddelar att hens bidrag sänds vidare till produktion.</description>
+		<description>Det här e-postmeddelandet från redaktören eller sektionsredaktören till en författare meddelar att hens bidrag sänds vidare till produktion.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_REVISIONS">
 		<subject>Redaktörsbeslut</subject>
@@ -518,7 +518,7 @@ Vårt beslut är att: Bearbetning krävs<br />
 <br />
 {$editorialContactSignature}<br />
 ]]></body>
-		<description>Det här e-postmeddelandet från Redaktören eller Sektionsredaktören till en Författare meddelar att ett slutligt "Bearbetning krävs"-beslut fattats för hens bidrag.</description>
+		<description>Det här e-postmeddelandet från redaktören eller sektionsredaktören till en författare meddelar att beslutet "Bearbetning krävs" fattats för hens bidrag.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_RESUBMIT">
 		<subject>Redaktörsbeslut</subject>
@@ -530,7 +530,7 @@ Vårt beslut är att: Skicka in igen för ny granskning<br />
 <br />
 {$editorialContactSignature}<br />
 ]]></body>
-		<description>Det här e-postmeddelandet från Redaktören eller Sektionsredaktören till en Författare meddelar att ett slutligt "Skicka in igen för ny granskning"-beslut fattats för hens bidrag.</description>
+		<description>Det här e-postmeddelandet från redaktören eller sektionsredaktören till en författare meddelar att beslutet "Skicka in igen för ny granskning" fattats för hens bidrag.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_DECLINE">
 		<subject>Redaktörsbeslut</subject>
@@ -542,7 +542,7 @@ Vårt beslut är att: Refusera bidrag<br />
 <br />
 {$editorialContactSignature}<br />
 ]]></body>
-		<description>Det här e-postmeddelandet från Redaktören eller Sektionsredaktören till en Författare meddelar att ett slutligt "Refusera bidrag"-beslut fattats för hens bidrag.</description>
+		<description>Det här e-postmeddelandet från redaktören eller sektionsredaktören till en författare meddelar att beslutet "Refusera bidrag" fattats för hens bidrag.</description>
 	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
 		<subject>Förfrågan om manusredigering</subject>
@@ -559,7 +559,7 @@ Bidragets URL: {$submissionUrl}<br />
 Användarnamn: {$participantUsername}<br />
 <br />
 {$editorialContactSignature}]]></body>
-		<description>Det här e-postmeddelandet skickas från Sektionsredaktören till ett bidrags Manusredaktör för att be hen att påbörja manusredigeringsprocessen. Det innehåller information om bidraget och hur man får tillgång till det.</description>
+		<description>Det här e-postmeddelandet skickas från sektionsredaktören till ett bidrags manusredaktör för att be hen att påbörja manusredigeringsprocessen. Det innehåller information om bidraget och hur man får tillgång till det.</description>
 	</email_text>
 	<email_text key="LAYOUT_REQUEST">
 		<subject>Förfrågan om publiceringsversion</subject>
@@ -578,18 +578,18 @@ Användarnamn: {$participantUsername}<br />
 Om du för tillfället inte har möjlighet att genomföra det här arbetet, eller om du har frågor, vänligen kontakta mig. Tack för ditt arbete med tidskriften.<br />
 <br />
 {$editorialContactSignature}]]></body>
-		<description>Det här e-postmeddelandet från Sektionsredaktören till Layoutredaktören meddelar hen att hen har blivit tilldelad uppgiften att vara Layoutredaktör för ett bidrag. Det innehåller information om bidraget och hur man får tillgång till det.</description>
+		<description>Det här e-postmeddelandet från sektionsredaktören till layoutredaktören för att meddela att hen har blivit tilldelad uppgiften att vara layoutredaktör för ett bidrag. Det innehåller information om bidraget och hur man får tillgång till det.</description>
 	</email_text>
 	<email_text key="LAYOUT_COMPLETE">
 		<subject>Publiceringsversioner klara</subject>
 		<body><![CDATA[{$editorialContactName}:<br />
 <br />
-Publiceringsversioner har nu färdigställts för manuskriptet &quot;{$submissionTitle}&quot; för {$contextName}. Dessa är nu redo för korrekturläsning. <br />
+Publiceringsversioner har nu färdigställts för manuskriptet &quot;{$submissionTitle}&quot; hos {$contextName}. Dessa är nu redo för korrekturläsning.<br />
 <br />
 Vänligen kontakta mig om du har några frågor.<br />
 <br />
 {$participantName}]]></body>
-		<description>Det här e-postmeddelandet från Layoutredaktören till Sektionsredaktören meddelar hen att layoutprocessen färdig.</description>
+		<description>Det här e-postmeddelandet från layoutredaktören till sektionsredaktören för att meddela hen att layoutprocessen färdig.</description>
 	</email_text>
 	<email_text key="EMAIL_LINK">
 	  <subject>Artikel som kan vara av intresse för dig</subject>
@@ -691,7 +691,7 @@ För att visa eller redigera den här prenumerationen, använd följande URL:<br
 <br />
 Prenumerationens URL: {$subscriptionUrl}<br />
 ]]></body>
-		<description>Det här e-postmeddelandet meddelar Prenumerationsansvarig att en enskild prenumeration har tecknats online. Det innehåller information om prenumerationen i sammanfattning samt en länk för snabb åtkomst till den tecknade prenumerationen.</description>
+		<description>Det här e-postmeddelandet meddelar prenumerationsansvarig att en enskild prenumeration har tecknats online. Det innehåller information om prenumerationen i sammanfattning samt en länk för snabb åtkomst till den tecknade prenumerationen.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_PURCHASE_INSTL">
 		<subject>Tecknande av prenumeration: Institutionsprenumeration</subject>
@@ -720,7 +720,7 @@ För att visa eller redigera den här prenumerationen, använd följande URL:<br
 <br />
 Prenumerationens URL: {$subscriptionUrl}<br />
 ]]></body>
-		<description>Det här e-postmeddelandet meddelar Prenumerationsansvarig att en institutionsprenumeration har tecknats online. Det innehåller information om prenumerationen i sammanfattning samt en länk för snabb åtkomst till den tecknade prenumerationen.</description>
+		<description>Det här e-postmeddelandet meddelar prenumerationsansvarig att en institutionsprenumeration har tecknats online. Det innehåller information om prenumerationen i sammanfattning samt en länk för snabb åtkomst till den tecknade prenumerationen.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_RENEW_INDL">
 		<subject>Förnyelse av prenumeration: Enskild prenumeration</subject>
@@ -739,7 +739,7 @@ För att visa eller redigera den här prenumerationen, använd följande URL:<br
 <br />
 Prenumerationens URL: {$subscriptionUrl}<br />
 ]]></body>
-		<description>Det här e-postmeddelandet meddelar Prenumerationsansvarig att en enskild prenumeration har förnyats online. Det innehåller information om prenumerationen i sammanfattning samt en länk för snabb åtkomst till den förnyade prenumerationen.</description>
+		<description>Det här e-postmeddelandet meddelar prenumerationsansvarig att en enskild prenumeration har förnyats online. Det innehåller information om prenumerationen i sammanfattning samt en länk för snabb åtkomst till den förnyade prenumerationen.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_RENEW_INSTL">
 		<subject>Förnyelse av prenumeration: Institutionsprenumeration</subject>
@@ -768,7 +768,7 @@ För att visa eller redigera den här prenumerationen, använd följande URL:<br
 <br />
 Prenumerationens URL: {$subscriptionUrl}<br />
 ]]></body>
-		<description>Det här e-postmeddelandet meddelar Prenumerationsansvarig att en institutionsprenumeration har förnyats online. Det innehåller information om prenumerationen i sammanfattning samt en länk för snabb åtkomst till den förnyade prenumerationen.</description>
+		<description>Det här e-postmeddelandet meddelar prenumerationsansvarig att en institutionsprenumeration har förnyats online. Det innehåller information om prenumerationen i sammanfattning samt en länk för snabb åtkomst till den förnyade prenumerationen.</description>
 	</email_text>
 	<email_text key="CITATION_EDITOR_AUTHOR_QUERY">
 		<subject>Referensredigering</subject>
