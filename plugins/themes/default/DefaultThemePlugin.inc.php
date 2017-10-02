@@ -169,6 +169,9 @@ class DefaultThemePlugin extends ThemePlugin {
 
 		// Load custom JavaScript for this theme
 		$this->addScript('default', 'js/main.js');
+
+		// Adding default navigationMenuAreas for all themes
+		$this->addOption('navigationMenuArea', null, array('primary', 'user'));
 	}
 
 	/**
