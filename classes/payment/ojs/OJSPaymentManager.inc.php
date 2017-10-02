@@ -168,7 +168,7 @@ class OJSPaymentManager extends PaymentManager {
 	 */
 	function getPaymentPlugin() {
 		$journal = $this->request->getJournal();
-		$paymentMethodPluginName = $journal->getSetting('paymentMethodPluginName');
+		$paymentMethodPluginName = $journal->getSetting('paymentPluginName');
 		$paymentMethodPlugin = null;
 		if (!empty($paymentMethodPluginName)) {
 			$plugins = PluginRegistry::loadCategory('paymethod');
