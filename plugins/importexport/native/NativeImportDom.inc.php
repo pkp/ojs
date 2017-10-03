@@ -788,19 +788,19 @@ class NativeImportDom {
 		if (($node = $articleNode->getChildByName('pages'))) $article->setPages($node->getValue());
 		if (($language = $articleNode->getAttribute('language'))) $article->setLanguage($language);
 
-		/* --- Handle covers --- */
+		/* --- Set IDs --- */
 		$hasErrors = false;
+		if (!NativeImportDom::handlePubIds($articleNode, $article, $journal, $issue, $article, $errors)) $hasErrors = true;
+
+		$articleDao->insertArticle($article);
+
+		/* --- Handle covers --- */
 		for ($index = 0; ($node = $articleNode->getChildByName('cover', $index)); $index++) {
 			if (!NativeImportDom::handleArticleCoverNode($journal, $node, $article, $coverErrors, $isCommandLine)) {
 				$errors = array_merge($errors, $coverErrors);
 				$hasErrors = true;
 			}
 		}
-
-		/* --- Set IDs --- */
-		if (!NativeImportDom::handlePubIds($articleNode, $article, $journal, $issue, $article, $errors)) $hasErrors = true;
-
-		$articleDao->insertArticle($article);
 
 		$dependentItems[] = array('article', $article);
 
