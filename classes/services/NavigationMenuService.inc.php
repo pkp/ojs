@@ -20,7 +20,7 @@ class NavigationMenuService extends \PKP\Services\PKPNavigationMenuService {
 	/**
 	 * Initialize hooks for extending PKPSubmissionService
 	 */
-    public function __construct() {
+	public function __construct() {
 
 		\HookRegistry::register('NavigationMenus::itemTypes', array($this, 'getMenuItemTypesCallback'));
 		\HookRegistry::register('NavigationMenus::displaySettings', array($this, 'getDisplayStatusCallback'));
@@ -28,7 +28,8 @@ class NavigationMenuService extends \PKP\Services\PKPNavigationMenuService {
 
 	/**
 	 * Return all default navigationMenuItemTypes.
-	 * @param $types array of types
+	 * @param $hookName string
+	 * @param $args array of arguments passed
 	 */
 	public function getMenuItemTypesCallback($hookName, $args) {
 		$types =& $args[0];
@@ -51,39 +52,21 @@ class NavigationMenuService extends \PKP\Services\PKPNavigationMenuService {
 
 	/**
 	 * Callback for display menu item functionallity
+	 * @param $hookName string
+	 * @param $args array of arguments passed
 	 */
 	function getDisplayStatusCallback($hookName, $args) {
 		$navigationMenuItem =& $args[0];
 
 		$request = \Application::getRequest();
 		$dispatcher = $request->getDispatcher();
+		$templateMgr = \TemplateManager::getManager(\Application::getRequest());
 
 		$isUserLoggedIn = \Validation::isLoggedIn();
 		$isUserLoggedInAs = \Validation::isLoggedInAs();
 		$context = $request->getContext();
-		$currentUser = $request->getUser();
 
-		$contextId = $context ? $context->getId() : CONTEXT_ID_NONE;
-
-		// Transform an item title if the title includes a {$variable}
-		$templateMgr = \TemplateManager::getManager(\Application::getRequest());
-		$title = $navigationMenuItem->getLocalizedTitle();
-		$prefix = '{$';
-		$postfix = '}';
-
-		$titleRepl = $title;
-
-		$prefixPos = strpos($title, $prefix);
-		$postfixPos = strpos($title, $postfix);
-
-		if ($prefixPos !== false && $postfixPos !== false && ($postfixPos - $prefixPos) > 0){
-			$titleRepl = substr($title, $prefixPos + strlen($prefix), $postfixPos - $prefixPos - strlen($prefix));
-
-			$templateReplaceTitle = $templateMgr->get_template_vars($titleRepl);
-				if ($templateReplaceTitle) {
-					$navigationMenuItem->setTitle($templateReplaceTitle, \AppLocale::getLocale());
-			}
-		}
+		$this->transformNavMenuItemTitle($templateMgr, $navigationMenuItem);
 
 		$menuItemType = $navigationMenuItem->getType();
 
