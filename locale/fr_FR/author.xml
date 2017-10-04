@@ -21,9 +21,9 @@
 	<message key="author.submit.startHereTitle">Commencer une nouvelle soumission</message>
 	<message key="author.submit.startHereLink"><![CDATA[<a href="{$submitUrl}" class="action">Cliquer ici</a> pour vous rendre à la première étape du processus de soumission en cinq étapes.]]></message>
 	<message key="author.submit.step1">Étape 1. Commencer la soumission</message>
-	<message key="author.submit.step2">Étape 2. Tranférer la soumission</message>
+	<message key="author.submit.step2">Étape 2. Transférer la soumission</message>
 	<message key="author.submit.step3">Étape 3. Saisir les métadonnées de la soumission</message>
-	<message key="author.submit.step4">Étape 4. Tranférer les fichiers supplémentaires</message>
+	<message key="author.submit.step4">Étape 4. Transférer les fichiers supplémentaires</message>
 	<message key="author.submit.step4a">Étape 4a. Ajouter un fichier supplémentaire</message>
 	<message key="author.submit.step5">Étape 5. Confirmer la soumission</message>
 	<message key="author.submit.start">Commencer</message>
@@ -72,7 +72,7 @@
 	<message key="author.submit.noSubmissionConfirm">Êtes-vous certain de vouloir continuer sans transférer de fichier de soumission?</message>
 	<message key="author.submit.supplementaryFilesInstructions">Cette étape facultative permet l'ajout de fichiers supplémentaires à la soumission. Les fichiers, qui peuvent être de n'importe quel format, peuvent comprendre (a) des instruments de recherche, (b) des ensembles de données se conformant aux conditions de la révision déontologique de la recherche de l'étude, (c) des sources qui autrement ne seraient pas disponibles aux lecteurs, (d) des nombres et des tableaux qui ne peuvent être intégrés dans le texte en soi, ou autres documents qui ajoutent une contribution au travail.</message>
 	<message key="author.submit.supplementaryFiles.saveToUpload">Cliquer sur Enregistrer pour transférer le fichier (après cela, des fichiers supplémentaires peuvent être transférés).</message>
-	<message key="author.submit.forgottenSubmitSuppFile">Êtes-vous certain de vouloir continuer sans tranférer le fichier supplémentaire que vous avez choisi?</message>
+	<message key="author.submit.forgottenSubmitSuppFile">Êtes-vous certain de vouloir continuer sans transférer le fichier supplémentaire que vous avez choisi?</message>
 	<message key="author.submit.noSupplementaryFiles">Aucun fichier supplémentaire n'a été ajouté à cette soumission.</message>
 	<message key="author.submit.backToSupplementaryFiles">Retour à Fichiers supplémentaires</message>
 	<message key="author.submit.confirmDeleteSuppFile">Êtes-vous certain de vouloir supprimer ce fichier supplémentaire?</message>

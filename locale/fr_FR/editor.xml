@@ -56,7 +56,7 @@
 	<message key="editor.issues.invalidAccessDate">La date d'accès n'est pas valide.</message>
 	<message key="editor.issues.coverPage">Image de la page couverture</message>
 	<message key="editor.issues.coverPageInstructions">(Formats acceptés : .gif, .jpg, ou .png)</message>
-	<message key="editor.issues.uploaded">Tranféré</message>
+	<message key="editor.issues.uploaded">Transféré</message>
 	<message key="editor.issues.remove">Supprimer</message>
 	<message key="editor.issues.proofed">Révisé</message>
 	<message key="editor.issues.removeCoverPage">Supprimer l'image de la page couverture?</message>
@@ -112,7 +112,7 @@
 	<message key="editor.article.selectReviewer">Sélectionner le rapporteur</message>
 	<message key="editor.article.replaceReviewer">Remplacer le rapporteur</message>
 	<message key="editor.article.editorToEnter">Le rédacteur doit saisir les recommandation/commentaires pour le rapporteur</message>
-	<message key="editor.article.uploadReviewForReviewer">Tranférer l'évaluation</message>
+	<message key="editor.article.uploadReviewForReviewer">Transférer l'évaluation</message>
 	<message key="editor.article.peerReviewOptions">Options d'évaluation par les pairs</message>
 	<message key="editor.article.decision">Décision</message>
 	<message key="editor.article.noEditorSelected">Aucun rédacteur sélectionné.</message>

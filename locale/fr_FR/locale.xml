@@ -320,7 +320,7 @@ Active indique combien d'évaluations sont présentement considérées ou en cou
 	<message key="layoutEditor.completedEditorialAssignments">Travail éditorial terminé</message>
 	<message key="layoutEditor.noActiveAssignments">Aucun travail éditorial en cours.</message>
 	<message key="layoutEditor.layoutEditingAssignments">Travail éditorial de mise en page</message>
-	<message key="layoutEditor.galley.uploadGalleyFormat">Tranférer l'épreuve</message>
+	<message key="layoutEditor.galley.uploadGalleyFormat">Transférer l'épreuve</message>
 	<message key="layoutEditor.galley.replaceGalley">Remplacer le fichier</message>
 	<message key="layoutEditor.galley.uploadSuppFile">Transférer le fichier supplémentaire</message>
 
