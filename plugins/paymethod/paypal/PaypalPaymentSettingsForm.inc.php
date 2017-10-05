@@ -75,5 +75,3 @@ class PaypalPaymentSettingsForm extends Form {
 		}
 	}
 }
-
-?>

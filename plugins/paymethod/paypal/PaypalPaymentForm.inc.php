@@ -60,7 +60,7 @@ class PaypalPaymentForm extends Form {
 				$request->redirectUrl($response->getRedirectUrl());
 			} else if ($response->isSuccessful()) {
 				die('SUCCESS');
-			} else {print_r($response);exit();
+			} else {
 				error_log('PayPal transaction error: ' . $response->getMessage());
 				$templateMgr = TemplateManager::getManager($request);
 				$templateMgr->assign('message', 'plugins.paymethod.paypal.error');
@@ -74,5 +74,3 @@ class PaypalPaymentForm extends Form {
 		}
 	}
 }
-
-?>

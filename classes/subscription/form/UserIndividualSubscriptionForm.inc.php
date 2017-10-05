@@ -89,7 +89,7 @@ class UserIndividualSubscriptionForm extends Form {
 	 * Display the form.
 	 */
 	function display() {
-		$templateMgr = TemplateManager::getManager();
+		$templateMgr = TemplateManager::getManager($this->request);
 		$templateMgr->assign(array(
 			'subscriptionId' => $this->subscription?$this->subscription->getId():null,
 			'subscriptionTypes' => array_map(
@@ -97,7 +97,7 @@ class UserIndividualSubscriptionForm extends Form {
 				$this->subscriptionTypes
 			),
 		));
-		parent::display();
+		parent::display($this->request);
 	}
 
 	/**
@@ -169,5 +169,3 @@ class UserIndividualSubscriptionForm extends Form {
 		$paymentForm->display($request);
 	}
 }
-
-?>

@@ -74,8 +74,6 @@ class ManualPaymentPlugin extends PaymethodPlugin {
 		if (!$this->isConfigured()) return null;
 
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON);
-		$templateMgr = TemplateManager::getManager($request);
-		$user = $request->getUser();
 
 		$paymentForm = new Form($this->getTemplatePath() . 'paymentForm.tpl');
 		$paymentForm->setData(array(
