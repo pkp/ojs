@@ -23,7 +23,7 @@ class IndividualSubscriptionForm extends SubscriptionForm {
 	 * @param $subscriptionId int leave as default for new subscription
 	 */
 	function __construct($request, $subscriptionId = null) {
-		parent::__construct('subscriptions/individualSubscriptionForm.tpl', $subscriptionId);
+		parent::__construct('user/individualSubscriptionForm.tpl', $subscriptionId);
 
 		$subscriptionId = isset($subscriptionId) ? (int) $subscriptionId : null;
 		$journal = $request->getJournal();

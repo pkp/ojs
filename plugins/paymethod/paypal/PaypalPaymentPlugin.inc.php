@@ -50,7 +50,7 @@ class PaypalPaymentPlugin extends PaymethodPlugin {
 	}
 
 	/**
-	 * @copydoc PaymentPlugin::getSettingsForm()
+	 * @copydoc PaymethodPlugin::getSettingsForm()
 	 */
 	function getSettingsForm($context) {
 		$this->import('PaypalPaymentSettingsForm');
@@ -58,7 +58,15 @@ class PaypalPaymentPlugin extends PaymethodPlugin {
 	}
 
 	/**
-	 * @see PaymentPlugin::isConfigured
+	 * @copydoc PaymethodPlugin::getPaymentForm()
+	 */
+	function getPaymentForm($context, $queuedPayment) {
+		$this->import('PaypalPaymentForm');
+		return new PaypalPaymentForm($this, $queuedPayment);
+	}
+
+	/**
+	 * @see PaymethodPlugin::isConfigured
 	 */
 	function isConfigured() {
 		$context = $this->getRequest()->getContext();

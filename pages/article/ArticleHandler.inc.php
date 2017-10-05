@@ -357,9 +357,10 @@ class ArticleHandler extends Handler {
 							return true;
 						} else {
 							$queuedPayment = $paymentManager->createQueuedPayment($journalId, PAYMENT_TYPE_PURCHASE_ARTICLE, $user->getId(), $publishedArticle->getId(), $journal->getSetting('purchaseArticleFee'));
-							$queuedPaymentId = $paymentManager->queuePayment($queuedPayment);
+							$paymentManager->queuePayment($queuedPayment);
 
-							$paymentManager->displayPaymentForm($queuedPaymentId, $queuedPayment);
+							$paymentForm = $paymentManager->getPaymentForm($queuedPayment);
+							$paymentForm->display($request);
 							exit;
 						}
 					}

@@ -27,13 +27,14 @@ class UserHandler extends PKPUserHandler {
 		$journal = $request->getJournal();
 		$user = $request->getUser();
 		$templateMgr = TemplateManager::getManager($request);
-		if (!$journal || !$user) $request->redirect(null, 'dashboard');
-		if ($journal->getSetting('publishingMode') !=  PUBLISHING_MODE_SUBSCRIPTION) $request->redirect(null, 'dashboard');
+		if (!$journal || !$user || $journal->getSetting('publishingMode') !=  PUBLISHING_MODE_SUBSCRIPTION) {
+			$request->redirect(null, 'index');
+		}
 
 		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
 		$individualSubscriptionTypesExist = $subscriptionTypeDao->subscriptionTypesExistByInstitutional($journal->getId(), false);
 		$institutionalSubscriptionTypesExist = $subscriptionTypeDao->subscriptionTypesExistByInstitutional($journal->getId(), true);
-		if (!$individualSubscriptionTypesExist && !$institutionalSubscriptionTypesExist) $request->redirect(null, 'dashboard');
+		if (!$individualSubscriptionTypesExist && !$institutionalSubscriptionTypesExist) $request->redirect(null, 'index');
 
 		// Subscriptions contact and additional information
 		// Get subscriptions and options for current journal
@@ -102,17 +103,15 @@ class UserHandler extends PKPUserHandler {
 	 */
 	function purchaseSubscription($args, $request) {
 		$this->validate(null, $request);
-
-		if (empty($args)) $request->redirect(null, 'dashboard');
-
 		$journal = $request->getJournal();
-		if (!$journal) $request->redirect(null, 'dashboard');
-		if ($journal->getSetting('publishingMode') != PUBLISHING_MODE_SUBSCRIPTION) $request->redirect(null, 'dashboard');
+		if (empty($args) || !$journal || $journal->getSetting('publishingMode') != PUBLISHING_MODE_SUBSCRIPTION) {
+			$request->redirect(null, 'index');
+		}
 
 		import('classes.payment.ojs.OJSPaymentManager');
 		$paymentManager = new OJSPaymentManager($request);
 		$acceptSubscriptionPayments = $paymentManager->isConfigured();
-		if (!$acceptSubscriptionPayments) $request->redirect(null, 'dashboard');
+		if (!$acceptSubscriptionPayments) $request->redirect(null, 'index');
 
 		$this->setupTemplate($request);
 		$user = $request->getUser();
@@ -135,7 +134,7 @@ class UserHandler extends PKPUserHandler {
 		if (isset($subscriptionId)) {
 			// Ensure subscription to be updated is for this user
 			if (!$subscriptionDao->subscriptionExistsByUser($subscriptionId, $user->getId())) {
-				$request->redirect(null, 'dashboard');
+				$request->redirect(null, 'index');
 			}
 
 			// Ensure subscription can be updated
@@ -148,7 +147,7 @@ class UserHandler extends PKPUserHandler {
 				SUBSCRIPTION_STATUS_AWAITING_MANUAL_PAYMENT
 			);
 
-			if (!in_array($subscriptionStatus, $validStatus)) $request->redirect(null, 'dashboard');
+			if (!in_array($subscriptionStatus, $validStatus)) $request->redirect(null, 'index');
 
 			if ($institutional) {
 				$subscriptionForm = new UserInstitutionalSubscriptionForm($request, $user->getId(), $subscriptionId);
@@ -162,7 +161,7 @@ class UserHandler extends PKPUserHandler {
 			} else {
 				// Ensure user does not already have an individual subscription
 				if ($subscriptionDao->subscriptionExistsByUserForJournal($user->getId(), $journal->getId())) {
-					$request->redirect(null, 'dashboard');
+					$request->redirect(null, 'index');
 				}
 				$subscriptionForm = new UserIndividualSubscriptionForm($request, $user->getId());
 			}
@@ -180,16 +179,16 @@ class UserHandler extends PKPUserHandler {
 	function payPurchaseSubscription($args, $request) {
 		$this->validate(null, $request);
 
-		if (empty($args)) $request->redirect(null, 'dashboard');
+		if (empty($args)) $request->redirect(null, 'index');
 
 		$journal = $request->getJournal();
-		if (!$journal) $request->redirect(null, 'dashboard');
-		if ($journal->getSetting('publishingMode') != PUBLISHING_MODE_SUBSCRIPTION) $request->redirect(null, 'dashboard');
+		if (!$journal) $request->redirect(null, 'index');
+		if ($journal->getSetting('publishingMode') != PUBLISHING_MODE_SUBSCRIPTION) $request->redirect(null, 'index');
 
 		import('classes.payment.ojs.OJSPaymentManager');
 		$paymentManager = new OJSPaymentManager($request);
 		$acceptSubscriptionPayments = $paymentManager->isConfigured();
-		if (!$acceptSubscriptionPayments) $request->redirect(null, 'dashboard');
+		if (!$acceptSubscriptionPayments) $request->redirect(null, 'index');
 
 		$this->setupTemplate($request);
 		$user = $request->getUser();
@@ -212,7 +211,7 @@ class UserHandler extends PKPUserHandler {
 		if (isset($subscriptionId)) {
 			// Ensure subscription to be updated is for this user
 			if (!$subscriptionDao->subscriptionExistsByUser($subscriptionId, $user->getId())) {
-				$request->redirect(null, 'dashboard');
+				$request->redirect(null, 'index');
 			}
 
 			// Ensure subscription can be updated
@@ -225,7 +224,7 @@ class UserHandler extends PKPUserHandler {
 				SUBSCRIPTION_STATUS_AWAITING_MANUAL_PAYMENT
 			);
 
-			if (!in_array($subscriptionStatus, $validStatus)) $request->redirect(null, 'dashboard');
+			if (!in_array($subscriptionStatus, $validStatus)) $request->redirect(null, 'index');
 
 			if ($institutional) {
 				$subscriptionForm = new UserInstitutionalSubscriptionForm($request, $user->getId(), $subscriptionId);
@@ -239,7 +238,7 @@ class UserHandler extends PKPUserHandler {
 			} else {
 				// Ensure user does not already have an individual subscription
 				if ($subscriptionDao->subscriptionExistsByUserForJournal($user->getId(), $journal->getId())) {
-					$request->redirect(null, 'dashboard');
+					$request->redirect(null, 'index');
 				}
 				$subscriptionForm = new UserIndividualSubscriptionForm($request, $user->getId());
 			}
@@ -281,17 +280,15 @@ class UserHandler extends PKPUserHandler {
 	 */
 	function completePurchaseSubscription($args, $request) {
 		$this->validate(null, $request);
-
-		if (count($args) != 2) $request->redirect(null, 'dashboard');
-
 		$journal = $request->getJournal();
-		if (!$journal) $request->redirect(null, 'dashboard');
-		if ($journal->getSetting('publishingMode') != PUBLISHING_MODE_SUBSCRIPTION) $request->redirect(null, 'dashboard');
+		if (!$journal || count($args) != 2 || $journal->getSetting('publishingMode') != PUBLISHING_MODE_SUBSCRIPTION) {
+			$request->redirect(null, 'index');
+		}
 
 		import('classes.payment.ojs.OJSPaymentManager');
 		$paymentManager = new OJSPaymentManager($request);
 		$acceptSubscriptionPayments = $paymentManager->isConfigured();
-		if (!$acceptSubscriptionPayments) $request->redirect(null, 'dashboard');
+		if (!$acceptSubscriptionPayments) $request->redirect(null, 'index');
 
 		$this->setupTemplate($request);
 		$user = $request->getUser();
@@ -304,22 +301,23 @@ class UserHandler extends PKPUserHandler {
 			$subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
 		}
 
-		if (!$subscriptionDao->subscriptionExistsByUser($subscriptionId, $user->getId())) $request->redirect(null, 'dashboard');
+		if (!$subscriptionDao->subscriptionExistsByUser($subscriptionId, $user->getId())) $request->redirect(null, 'index');
 
 		$subscription = $subscriptionDao->getById($subscriptionId);
 		$subscriptionStatus = $subscription->getStatus();
 		import('classes.subscription.Subscription');
 		$validStatus = array(SUBSCRIPTION_STATUS_ACTIVE, SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT);
 
-		if (!in_array($subscriptionStatus, $validStatus)) $request->redirect(null, 'dashboard');
+		if (!in_array($subscriptionStatus, $validStatus)) $request->redirect(null, 'index');
 
 		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
 		$subscriptionType = $subscriptionTypeDao->getById($subscription->getTypeId());
 
 		$queuedPayment = $paymentManager->createQueuedPayment($journal->getId(), PAYMENT_TYPE_PURCHASE_SUBSCRIPTION, $user->getId(), $subscriptionId, $subscriptionType->getCost(), $subscriptionType->getCurrencyCodeAlpha());
-		$queuedPaymentId = $paymentManager->queuePayment($queuedPayment);
+		$paymentManager->queuePayment($queuedPayment);
 
-		$paymentManager->displayPaymentForm($queuedPaymentId, $queuedPayment);
+		$paymentForm = $paymentManager->getPaymentForm($queuedPayment);
+		$paymentForm->display($request);
 	}
 
 	/**
@@ -329,17 +327,15 @@ class UserHandler extends PKPUserHandler {
 	 */
 	function payRenewSubscription($args, $request) {
 		$this->validate(null, $request);
-
-		if (count($args) != 2) $request->redirect(null, 'dashboard');
-
 		$journal = $request->getJournal();
-		if (!$journal) $request->redirect(null, 'dashboard');
-		if ($journal->getSetting('publishingMode') != PUBLISHING_MODE_SUBSCRIPTION) $request->redirect(null, 'dashboard');
+		if (count($args) != 2 || !$journal || $journal->getSetting('publishingMode') != PUBLISHING_MODE_SUBSCRIPTION) {
+			$request->redirect(null, 'index');
+		}
 
 		import('classes.payment.ojs.OJSPaymentManager');
 		$paymentManager = new OJSPaymentManager($request);
 		$acceptSubscriptionPayments = $paymentManager->isConfigured();
-		if (!$acceptSubscriptionPayments) $request->redirect(null, 'dashboard');
+		if (!$acceptSubscriptionPayments) $request->redirect(null, 'index');
 
 		$this->setupTemplate($request);
 		$user = $request->getUser();
@@ -352,11 +348,11 @@ class UserHandler extends PKPUserHandler {
 			$subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
 		}
 
-		if (!$subscriptionDao->subscriptionExistsByUser($subscriptionId, $user->getId())) $request->redirect(null, 'dashboard');
+		if (!$subscriptionDao->subscriptionExistsByUser($subscriptionId, $user->getId())) $request->redirect(null, 'index');
 
 		$subscription = $subscriptionDao->getById($subscriptionId);
 
-		if ($subscription->isNonExpiring()) $request->redirect(null, 'dashboard');
+		if ($subscription->isNonExpiring()) $request->redirect(null, 'index');
 
 		import('classes.subscription.Subscription');
 		$subscriptionStatus = $subscription->getStatus();
@@ -366,7 +362,7 @@ class UserHandler extends PKPUserHandler {
 			SUBSCRIPTION_STATUS_AWAITING_MANUAL_PAYMENT
 		);
 
-		if (!in_array($subscriptionStatus, $validStatus)) $request->redirect(null, 'dashboard');
+		if (!in_array($subscriptionStatus, $validStatus)) $request->redirect(null, 'index');
 
 		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
 		$subscriptionType = $subscriptionTypeDao->getById($subscription->getTypeId());

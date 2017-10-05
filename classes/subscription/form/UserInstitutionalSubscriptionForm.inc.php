@@ -197,9 +197,10 @@ class UserInstitutionalSubscriptionForm extends Form {
 		}
 
 		$queuedPayment = $paymentManager->createQueuedPayment($journalId, PAYMENT_TYPE_PURCHASE_SUBSCRIPTION, $this->userId, $subscription->getId(), $subscriptionType->getCost(), $subscriptionType->getCurrencyCodeAlpha());
-		$queuedPaymentId = $paymentManager->queuePayment($queuedPayment);
+		$paymentManager->queuePayment($queuedPayment);
 
-		$paymentManager->displayPaymentForm($queuedPaymentId, $queuedPayment);
+		$paymentForm = $paymentManager->getPaymentForm($queuedPayment);
+		$paymentForm->display($request);
 	}
 }
 

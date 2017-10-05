@@ -35,7 +35,7 @@ class UserIndividualSubscriptionForm extends Form {
 	 * @param $subscriptionId int
 	 */
 	function __construct($request, $userId = null, $subscriptionId = null) {
-		parent::__construct('subscription/userIndividualSubscriptionForm.tpl');
+		parent::__construct('user/userIndividualSubscriptionForm.tpl');
 
 		$this->userId = isset($userId) ? (int) $userId : null;
 		$this->subscription = null;
@@ -55,7 +55,7 @@ class UserIndividualSubscriptionForm extends Form {
 
 		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
 		$subscriptionTypes = $subscriptionTypeDao->getByInstitutional($journalId, false, false);
-		$this->subscriptionTypes = $subscriptionTypes->toArray();
+		$this->subscriptionTypes = $subscriptionTypes->toAssociativeArray();
 
 		// Ensure subscription type is valid
 		$this->addCheck(new FormValidatorCustom($this, 'typeId', 'required', 'user.subscriptions.form.typeIdValid', create_function('$typeId, $journalId', '$subscriptionTypeDao = DAORegistry::getDAO(\'SubscriptionTypeDAO\'); return ($subscriptionTypeDao->subscriptionTypeExistsByTypeId($typeId, $journalId) && $subscriptionTypeDao->getSubscriptionTypeInstitutional($typeId) == 0) && $subscriptionTypeDao->getSubscriptionTypeDisablePublicDisplay($typeId) == 0;'), array($journal->getId())));
@@ -90,14 +90,13 @@ class UserIndividualSubscriptionForm extends Form {
 	 */
 	function display() {
 		$templateMgr = TemplateManager::getManager();
-		if (isset($this->subscription)) {
-			$subscriptionId = $this->subscription->getId();
-		} else {
-			$subscriptionId = null;
-		}
-
-		$templateMgr->assign('subscriptionId', $subscriptionId);
-		$templateMgr->assign('subscriptionTypes', $this->subscriptionTypes);
+		$templateMgr->assign(array(
+			'subscriptionId' => $this->subscription?$this->subscription->getId():null,
+			'subscriptionTypes' => array_map(
+				function($subscriptionType) {return $subscriptionType->getLocalizedName();},
+				$this->subscriptionTypes
+			),
+		));
 		parent::display();
 	}
 
@@ -164,9 +163,10 @@ class UserIndividualSubscriptionForm extends Form {
 		}
 
 		$queuedPayment = $paymentManager->createQueuedPayment($journalId, PAYMENT_TYPE_PURCHASE_SUBSCRIPTION, $this->userId, $subscription->getId(), $subscriptionType->getCost(), $subscriptionType->getCurrencyCodeAlpha());
-		$queuedPaymentId = $paymentManager->queuePayment($queuedPayment);
+		$paymentManager->queuePayment($queuedPayment);
 
-		$paymentManager->displayPaymentForm($queuedPaymentId, $queuedPayment);
+		$paymentForm = $paymentManager->getPaymentForm($queuedPayment);
+		$paymentForm->display($request);
 	}
 }
 

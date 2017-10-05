@@ -72,6 +72,8 @@ class OJSPaymentManager extends PaymentManager {
 			case PAYMENT_TYPE_PURCHASE_ISSUE:
 				$payment->setRequestUrl($dispatcher->url($this->request, ROUTE_PAGE, null, 'issue', 'view', $assocId));
 				break;
+			case PAYMENT_TYPE_PURCHASE_SUBSCRIPTION:
+				$payment->setRequestUrl($dispatcher->url($this->request, ROUTE_PAGE, null, 'issue', 'current'));
 			case PAYMENT_TYPE_RENEW_SUBSCRIPTION:
 				$payment->setRequestUrl($dispatcher->url($this->request, ROUTE_PAGE, null, 'user', 'subscriptions'));
 				break;
@@ -90,6 +92,7 @@ class OJSPaymentManager extends PaymentManager {
 			case PAYMENT_TYPE_SUBMISSION: // Deprecated
 			default:
 				// Invalid payment type
+				error_log('Invalid payment type "' . $type . '"');
 				assert(false);
 				break;
 		}
