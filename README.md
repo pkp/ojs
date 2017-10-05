@@ -25,6 +25,9 @@ Install or update dependencies via Composer:
     cd plugins/paymethod/paypal
     php ../../../composer.phar update
     cd ../../..
+    cd plugins/generic/citationStyleLanguage
+    php ../../../composer.phar update
+    cd ../../..
 
 Install or update dependencies via [NPM](https://www.npmjs.com/):
 
