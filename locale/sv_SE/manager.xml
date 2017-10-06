@@ -28,7 +28,7 @@
 	<message key="manager.payment.addPayment">Lägg till betalning</message>
 	<message key="manager.payment.amount">Summa</message>
 	<message key="manager.payment.authorFees">Författaravgifter</message>
-	<message key="manager.payment.authorFeesDescription">Följande alternativ, med beskrivningar och avgifter (som kan redigeras nedan), syns under Steg 1 i bidragsinlämningen, samt under Bidrag i Om tidskriften, liksom vid de ställen där betalning krävs.</message>
+	<message key="manager.payment.authorFeesDescription">Mata in avgifter nedan för att aktivera författaravgifter.</message>
 	<message key="manager.payment.currency">Valuta</message>
 	<message key="manager.payment.currencymessage">OJS stöder inte valutaomvandling. Om du accepterar betalning, försäkra dig om att prenumerationspriset överensstämmer med följande belopp:</message>
 	<message key="manager.payment.description">Beskrivning</message>
@@ -37,8 +37,6 @@
 	<message key="manager.payment.enable">Aktivera</message>
 	<message key="manager.payment.feePaymentOptions">Betalningsalternativ</message>
 	<message key="manager.payment.form.numeric">Alla kostnader måste ha positiva numeriska värden (decimaltecken är tillåtna)</message>
-	<message key="manager.payment.giftFees">Administrativ avgift på gåvor</message>
-	<message key="manager.payment.giftFeesDescription">En länk för gåvoprenumeration kommer att visas i Om tidskriften under och som en del i sidomenyblocket Prenumeration </message>
 	<message key="manager.payment.generalFees">Allmänna avgifter</message>
 	<message key="manager.payment.generalFeesDescription">Föreningsprenumeranters medlemsskap kommer att synas under Policyer i Om Tidskriften. Donationslänkarna kommer att synas ovanför sökrutan i högermenyn.</message>
 	<message key="manager.payment.generalOptions">Generella alternativ</message>
@@ -46,21 +44,16 @@
 	<message key="manager.payment.notFound">Saknas</message>
 	<message key="manager.payment.options">Alternativ</message>
 	<message key="manager.payment.options.acceptSubscriptionPayments">Detta aktiverar betalningar för Prenumerationer, där former, kostnader, prenumerationstid och prenumerationer hanteras av prenumerationsansvarig.</message>
-	<message key="manager.payment.options.acceptGiftSubscriptionPayments">Detta aktiverar betalningar för gåvoprenumerationer och möjliggör för läsare att köpa gåvoprenumerationer.</message>
-	<message key="manager.payment.options.donationFee">Donationer till tidskriften</message>
-	<message key="manager.payment.options.enablePayments">Klicka här för att akivera betalningsmodulen. Fyll i följande formulär för att konfigurera betalningsinställningarna. Observera att Användare måste logga in för att använda betalningstjänsten.</message>
-	<message key="manager.payment.options.fastTrackFee">Snabb granskning</message>
+	<message key="manager.payment.options.enablePayments">Betalningar kommer att aktiveras för den här tidskriften. Observera att användare måste logga in för att göra betalningar.</message>
 	<message key="manager.payment.options.fee">Avgift</message>
 	<message key="manager.payment.options.feeDescription">Beskrivning av avgift</message>
 	<message key="manager.payment.options.feeName">Namn på avgift</message>
 	<message key="manager.payment.options.membershipFee">Föreningsmedlemskap</message>
 	<message key="manager.payment.options.onlypdf">Endast begränsad tillgång till artiklarnas PDF-versioner.</message>
-	<message key="manager.payment.options.publicationFee">Artikelpublicering</message>
+	<message key="manager.payment.options.publicationFee">Avgift för artikelpublicering</message>
 	<message key="manager.payment.options.purchaseArticleFee">Köp artikel</message>
 	<message key="manager.payment.options.purchaseIssueFee">Köp helt nummer</message>
-	<message key="manager.payment.options.submissionFee">Inskickat bidrag</message>
 	<message key="manager.payment.options.text">Beskrivning av betalningsmetod</message>
-	<message key="manager.payment.options.waiverPolicy">Policy för avgiftsfri publicering</message>
 	<message key="manager.payment.paymentId">Betalnings-ID</message>
 	<message key="manager.payment.paymentMethod">Betalningsmetod</message>
 	<message key="manager.payment.paymentMethod.description">Du kan konfigurera insticksmoduler för betalningsmetoderna från den här sidan.</message>
@@ -70,6 +63,7 @@
 	<message key="manager.payment.readerFeesDescription">Följande alternativ, inklusive beskrivningar och avgifter (redigeras nedan), visas under Policyer i Om tidskriften, liksom vid de ställen där betalning krävs.</message>
 	<message key="manager.payment.records">Betalningsposter</message>
 	<message key="manager.payments">Betalning</message>
+	<message key="manager.paymentTypes">Betalningsformer</message>
 	<message key="manager.payment.userName">Betalnings-ID</message>
 	<message key="manager.people.allEnrolledUsers">Tillagda användare till tidskriften</message>
 	<message key="manager.people.allJournals">Alla tidskrifter</message>
@@ -97,7 +91,6 @@
 	<message key="manager.sections.form.mustAllowPermission">Åtminstone ett alternativ måste vara markerat för varje sektionsredaktör.</message>
 	<message key="manager.sections.form.reviewFormId">Välj ett giltligt granskningsformulär.</message>
 	<message key="manager.sections.form.titleRequired">Ange ett namn på sektionen.</message>
-	<message key="manager.sections.hideAbout">Utelämna den här sektionen i Om tidskriften.</message>
 	<message key="manager.sections.hideTocAuthor">Utelämna författarnamnen på sektionsmaterial från numrets innehållsförteckning</message>
 	<message key="manager.sections.hideTocTitle">Utelämna titeln på sektionen från numrets innehållsförteckning.</message>
 	<message key="manager.sections.identifyType">Beskriv artiklar publicerad i sektionen som en/ett</message>
@@ -112,6 +105,8 @@
 	<message key="manager.sections.submissionReview">Kommer inte att bli sakkunniggranskad</message>
 	<message key="manager.section.submissionsToThisSection">Bidrag inskickade till den här sektionen</message>
 	<message key="manager.sections.unassigned">Tillgängliga Sektionsredaktörer</message>
+	<message key="manager.sections.wordCount">Antal ord</message>
+	<message key="manager.sections.wordCountInstructions">Begränsa antal tillåtna ord i abstract för den här sektionen (0 innebär obegränsat)</message>
 	<message key="manager.setup">Tidskriftens inställningar</message>
 	<message key="manager.setup.masthead">Redaktionsruta</message>
 	<message key="manager.setup.masthead.description">Skriv här redaktörer, tidskriftsansvarig och andra som är kopplade till tidskriften.</message>
@@ -332,7 +327,11 @@
 	<message key="manager.setup.useJournalStyleSheet">Style sheet för tidskriften</message>
 	<message key="manager.setup.userRegistration">Användarregistrering</message>
 	<message key="manager.setup.useTextTitle">Titel i text</message>
-	<message key="manager.statistics.defaultMetricDescription">Tidskriften är konfigurerad så att mer än ett användarmått registreras. Användarstatistiken kommer att visas i olika sammanhang. Vid visa tillfällen kan bara en enskild användarstatistik användas, t ex för att visa en lista över de mest använda artiklarna eller för att rangordna sökresultat. Välj ett av de konfigurerade måtten som förval.. </message>
+	<message key="manager.statistics.defaultMetricDescription">
+	Tidskriften är konfigurerad så att mer än ett användarmått registreras. Användarstatistiken kommer att visas i olika sammanhang.
+	Vid visa tillfällen kan bara en enskild användarstatistik användas, t ex för att visa en lista över de mest använda artiklarna eller för att rangordna
+	sökresultat. Välj ett av de konfigurerade måtten som förval.
+	</message>
 	<message key="manager.statistics.statistics">Tidskriftsstatistik</message>
 	<message key="manager.statistics.statistics.articleViews">Antal visningar av artikeln (endast för författare)</message>
 	<message key="manager.statistics.statistics.count.accept">Accepterat</message>
@@ -378,14 +377,12 @@
 	<message key="manager.subscriptionPolicies.expiryFullDescription">Läsarna nekas tillgång till allt innehåll som ingår i prenumerationen när prenumerationen upphör.</message>
 	<message key="manager.subscriptionPolicies.expiryPartial">Upphör delvis</message>
 	<message key="manager.subscriptionPolicies.expiryPartialDescription">Läsarna nekas tillgång till det senaste publicerade innehållet i prenumerationen, men behåller tillgång till innehåll som publicerats före det datum då prenumerationen upphörde.</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths1">Meddela prenumeranterna via e-post</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths2">månad(er) efter det att prenumerationen har upphört.</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks1">Meddela prenumeranterna via e-post</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks2">vecka/veckor efter det att prenumerationen har upphört.</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths1">Meddela prenumeranterna via e-post</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths2">månad(er) innan prenumerationen upphör.</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks1">Meddela prenumeranterna via e-post</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks2">vecka/veckor innan prenumerationen upphör.</message>
+	<message key="manager.subscriptionPolicies.xMonths">{$x} månader</message>
+	<message key="manager.subscriptionPolicies.xWeeks">{$x} veckor</message>
+	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths">Meddela prenumeranter via e-post efter prenumerationens upphörande</message>
+	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks">Meddela prenumeranter via e-post efter prenumerationens upphörande.</message>
+	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths">Meddela prenumeranter via e-post före prenumerationens upphörande.</message>
+	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks">Meddela prenumeranter via e-post före prenumerationens upphörande.</message>
 	<message key="manager.subscriptionPolicies.expiryReminders">Påminnelse om upphörande av prenumerationen</message>
 	<message key="manager.subscriptionPolicies.expiryRemindersDescription">Automatiska e-postpåminnelser (redigeras av tidskriftsansvarig under e-postmallar) kan skickas till prenumeranter både före och efter att en prenumeration har upphört.</message>
 	<message key="manager.subscriptionPolicies.expiryRemindersDisabled"><![CDATA[<strong>Anmärkning:</strong> För att aktivera alternativen måste Webbplatsadministratören aktivera <tt>scheduled_tasks</tt> alternativen i OJS:s konfigurationsfil. Ytterligare serverkonfigurationer kan behövas för att stödja funktionaliten (vilket inte är möjlig på alla servrar), som beskrivs i OJS-dokumentationen.]]></message>
@@ -412,10 +409,10 @@
 	<message key="manager.subscriptionPolicies.subscriptionContact">Prenumerationsansvarig</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactDescription">Kontaktinformationn listad under Prenumerationer i Om tidskriften.</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactEmailValid">Fyll i en giltlig e-postadress.</message>
-	<message key="manager.subscriptionPolicies.subscriptionPoliciesSaved">Dina inställningar för prenumerationspolicy har ändrats.</message>
 	<message key="manager.subscriptions">Prenumerationer</message>
 	<message key="manager.individualSubscriptions">Individuella prenumerationer</message>
 	<message key="manager.institutionalSubscriptions">Institutionella prenumerationer</message>
+	<message key="manager.subscriptions.confirmRenew">Är du säker på att du vill förnya den här prenumerationen?</message>
 	<message key="manager.subscriptions.confirmDelete">Är du säker på att du vill ta bort den här prenumerationen?</message>
 	<message key="manager.subscriptions.summary">Prenumerationer sammanfattning</message>
 	<message key="manager.subscriptions.create">Skapa en ny prenumeration</message>
@@ -520,8 +517,11 @@
 	<message key="manager.subscriptionTypes.form.individual">Individuella (användare valideras via login)</message>
 	<message key="manager.subscriptionTypes.form.institutional">Institutionella (användare valideras via domän eller IP adress).</message>
 	<message key="manager.subscriptionTypes.form.institutionalValid">Använd den befintliga kryssrutan.</message>
-	<message key="manager.subscriptionTypes.form.membership"><![CDATA[Prenumerationer kräver information om medlemskap<br/>(t ex om en förening, organisation, consortium, etc.)]]></message>
+	<message key="manager.subscriptionTypes.form.membership">Prenumerationer kräver information om medlemskap<br/>(t ex om en förening, organisation, consortium, etc.)</message>
 	<message key="manager.subscriptionTypes.form.membershipValid">Använd den befintliga kryssrutan.</message>
+	<message key="manager.subscriptionTypes.form.options">Alternativ</message>
+	<message key="manager.subscriptionTypes.form.public">Gör inte den här prenumerationsformen publikt tillgänglig eller synlig (t.ex. under Prenumerationer i Om tidskriften).</message>
+	<message key="manager.subscriptionTypes.form.publicValid">Please use the checkbox provided.</message>
 	<message key="manager.subscriptionTypes.form.saveAndCreateAnotherType">Spara och skapa en ny</message>
 	<message key="manager.subscriptionTypes.form.typeName">Namn</message>
 	<message key="manager.subscriptionTypes.form.typeNameExists">Det finns redan en prenumerationsform med det här namnet.</message>
@@ -530,33 +530,43 @@
 	<message key="manager.subscriptionTypes.noneCreated">Inga prenumerationsformer har skapats.</message>
 	<message key="manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully">En prenumerationsform har skapats.</message>
 	<message key="manager.distribution.access">Tillgång</message>
+
+	<!-- Categories -->
 	<message key="manager.setup.categories">Kategorier</message>
 	<message key="manager.setup.categories.description">Välj en lämplig kategori från listan nedan. Läsare kommer att kunna bläddra i tidskriftslistan via kategori.</message>
+	
 	<message key="grid.category.path">Väg</message>
 	<message key="grid.action.addSection">Lägg till sektion</message>
 	<message key="manager.setup.section.description">Artiklarna i ett publicerat nummer organiseras i olika sektioner, med olika teman eller olika typer av artiklar (t ex översiktsartiklar, forskningsartiklar, recensioner, osv)</message>
-	<message key="settings.roles.gridDescription">Roller är grupper av tidskriftens användare som har tillgång till olika funktioner och arbetsflöden i tidskriften. Det finns fem olika nivåer: Tidskriftsansvarig har tillgång till allt i tidskriften (allt innehåll och alla inställningar); Sektionsredaktör har fullständig tillgång till allt innehåll i tidskriften; Tidskriftsassistent har begränsad tillgång till inskickade bidrag som de har fått tilldelat av en redaktör; Granskare kan se och arbeta med inskickade bidrag som  de har tilldelats att granska; och författare kan se och interagera med begränsad information om deras egna bidrag. Dessutom, finns det fem olika steg som de olika rollerna kan få tillgång till: Inskickade bidrag, Intern granskning, Granskning, Redaktion, och Produktion.</message>
+	<message key="settings.roles.gridDescription">Roller är grupper av tidskriftens användare som har tillgång till olika funktioner och arbetsflöden i tidskriften. Det finns fem olika nivåer: Tidskriftsansvarig har tillgång till allt i tidskriften (allt innehåll och alla inställningar); Sektionsredaktör har fullständig tillgång till allt innehåll i tidskriften; Tidskriftsassistent har begränsad tillgång till inskickade bidrag som de har fått tilldelat av en redaktör; Granskare kan se och arbeta med inskickade bidrag som  de har tilldelats att granska; och författare kan se och interagera med begränsad information om deras egna bidrag. Dessutom finns det fem olika steg som de olika rollerna kan få tillgång till: Inskickade bidrag, Intern granskning, Granskning, Redaktion, och Produktion.</message>
 	<message key="manager.publication.library">Utgivarens publikationer</message>
-	<message key="manager.setup.copyrightYearBasis">Basera nya artiklars copyright år på</message>
+	<message key="manager.setup.copyrightYearBasis">Basera nya artiklars upphovsrättsår på</message>
 	<message key="manager.setup.copyrightYearBasis.article">Artiklar: förvalt år kommer att skapas av artikelns publiceringsdatum, som i "publish-as-you-go".</message>
 	<message key="manager.setup.copyrightYearBasis.issue">Nummer: förvalt år kommer att skapas av numrets publiceringsdatum.</message>
 	<message key="manager.setup.resetPermissions">Återställ villkor för artikel</message>
 	<message key="manager.setup.resetPermissions.confirm">Är du säker på att du vill återställa villkorsinformation som redan är kopplade till artiklar?</message>
 	<message key="manager.setup.resetPermissions.description">Copyrightvillkor och licensinformation kommer att vara kopplade till publicerat material permanent, garanterar att den här informationen inte kommer att ändras om en tidskrift ändrar policyer för nya bidrag. För att återställa lagrade villkorsinformationsom som redan är kopplat till publicerat innehåll, använd knappen nedan.</message>
+
+	<!-- Genres Grid -->
 	<message key="grid.genres.title.short">Förkortningar</message>
 	<message key="grid.genres.title">Förkortningar för artiklar</message>
 	<message key="grid.genres.description">De här förkortningarna används för att namnge filer och visas i menyn för uppladdade filer. Tecknet ## gör att användaren kan associera till filen antingen med hela bidragets 99Z eller en speciell del av nummer (t ex 02).</message>
+
+	<!-- Common DOI export plugins (crossref, datacite, medra) keys -->
+	<!-- plugin tabs -->
 	<message key="plugins.importexport.common.settings">Inställningar</message>
 	<message key="plugins.importexport.common.settings.DOIPluginSettings">Inställningar för DOI-insticksmodulen</message>
 	<message key="plugins.importexport.common.export.articles">Artiklar</message>
 	<message key="plugins.importexport.common.export.issues">Nummer</message>
 	<message key="plugins.importexport.common.export.representations">Publiceringsversion</message>
+	<!-- settings form -->
 	<message key="plugins.importexport.common.missingRequirements">Insticksmodulens krav är inte uppfyllda</message>
 	<message key="plugins.importexport.common.error.DOIsNotAvailable">För att använda denna insticksmodul gå till kategorin "Public Identifier" för insticksmoduler, aktivera och konfigurera insticksmodulen för DOI och ange här ett giltligt DOI prefix.</message>
 	<message key="plugins.importexport.common.error.pluginNotConfigured">Insticksmodulen är inte helt installerad.</message>
 	<message key="plugins.importexport.common.error.noDOIContentObjects">Inget publicerat material är valt för detta DOI i den publika insticksmodulen för DOI, det är därför inte möjligt att lagra eller exportera via insticksmodulen.</message>
 	<message key="plugins.importexport.common.settings.form.password">Lösenord</message>
 	<message key="plugins.importexport.common.settings.form.password.description">Lösenordet kommer att sparas i text, det är alltså inte krypterad.</message>
+	<!-- export filter -->
 	<message key="plugins.importexport.common.filter.issue">Något nummer</message>
 	<message key="plugins.importexport.common.status.any">Någon status</message>
 	<message key="plugins.importexport.common.status.notDeposited">Inte deponerad</message>
