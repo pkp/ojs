@@ -65,7 +65,8 @@ Vänligen följ nedanstående riktlinjer för att göra ändringar i ditt manusk
 
 <strong>Att svara på Frågor till författaren (QAs).</strong>
 &nbsp; Behåll alla QAs intakta och fetade i texten. Ta inte bort dem.
-&nbsp; Lägg till en kommentar direkt efter för att svara på en QA. Kommentarer ska avskiljas enligt <strong>[Kommentar:]</strong>
+&nbsp; Lägg till en kommentar direkt efter för att svara på en QA. Kommentarer ska avskiljas enligt 
+<strong>[Kommentar:]</strong>
 &nbsp; t.ex., <strong>[Kommentar: Utvecklade metoddiskussion enligt ditt förslag]</strong>.
 
 <strong>Att kommentera.</strong>
@@ -137,22 +138,11 @@ Vänligen följ nedanstående riktlinjer för att göra ändringar i ditt manusk
 	<message key="default.journalSettings.clockssLicense"><![CDATA[Den här tidskriften utnyttjar CLOCKSS-systemet för att skapa ett distribuerat arkiv hos deltagande bibliotek. Genom LOCKSS kan biblioteken som deltar i samarbetet skapa permanenta arkiv med tidskriftens innehåll för i syfte att möjliggöra bevarande och eventuell återställning. <a href="http://clockss.org/">Läs mer...</a>]]></message>
 
 	<!-- Default settings for payment items. -->
-	<message key="default.journalSettings.submissionFee">Artikelbidrag</message>
-	<message key="default.journalSettings.submissionFeeDescription">Författare behöver som en del i insändningsprocessen betala en avgift när de skickar in ett artikelbidrag för att bidra till kostnader för granskning.</message>
-	<message key="default.journalSettings.fastTrackFee">Snabbspår till granskning</message>
-	<message key="default.journalSettings.fastTrackFeeDescription">Genom att betala denna avgift garanteras att tiden för granskning, redaktörsbeslut och meddelande till författaren inte överstiger 4 veckor för aktuellt bidrag.</message>
 	<message key="default.journalSettings.publicationFee">Publicering</message>
-	<message key="default.journalSettings.publicationFeeDescription">Om den här artikeln accepteras för publicering kommer du att bli ombedd att betala en publiceringsavgift (APC) för att täcka utgifter för publiceringen.</message>
-	<message key="default.journalSettings.waiverPolicy">Om du saknar medel för att betala dessa avgifter går det att avsäga sig betalningsansvaret. Vi vill inte att avgifter hindrar vår publicering av värdefullt arbete.</message>
 	<message key="default.journalSettings.purchaseArticleFee">Köp av enstaka artikel</message>
-	<message key="default.journalSettings.purchaseArticleFeeDescription">Genom att betala den här avgiften kommer du kunna visa, ladda ned och skriva ut den här artikeln.</message>
 	<message key="default.journalSettings.purchaseIssueFee">Köp av enstaka nummer</message>
-	<message key="default.journalSettings.purchaseIssueFeeDescription">Genom att betala den här avgiften kommer du kunna visa, ladda ned och skriva ut det här numret.</message>
 	<message key="default.journalSettings.membershipFee">Medlemskap</message>
-	<message key="default.journalSettings.membershipFeeDescription">Genom att betala den här avgiften blir du medlem hos tidskriften i ett år och har då fri tillgång till materialet.</message>
-	<message key="default.journalSettings.donationFee">Donation till tidskrift</message>
-	<message key="default.journalSettings.donationFeeDescription">Donationer tas tacksamt emot oavsett storlek. De ger hjälper tidskriftens redaktörer att fortsätta ge ut en tidskrift av hög kvalitet.</message>
-
+	
 	<!-- Group defaults -->
 	<message key="default.groups.name.manager">Tidskriftsansvarig</message>
 	<message key="default.groups.plural.manager">Tidskriftsansvariga</message>
