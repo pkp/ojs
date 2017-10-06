@@ -14,9 +14,6 @@
  */
 
 import('lib.pkp.classes.form.Form');
-require_once(dirname(__FILE__) . '/vendor/autoload.php');
-
-use Omnipay\Omnipay;
 
 class PaypalPaymentForm extends Form {
 	/** @var PaypalPaymentPlugin */
@@ -41,7 +38,7 @@ class PaypalPaymentForm extends Form {
 	function display($request = null, $template = null) {
 		try {
 			$journal = $request->getJournal();
-			$gateway = Omnipay::create('PayPal_Rest');
+			$gateway = Omnipay\Omnipay::create('PayPal_Rest');
 			$gateway->initialize(array(
 				'clientId' => $this->_paypalPaymentPlugin->getSetting($journal->getId(), 'clientId'),
 				'secret' => $this->_paypalPaymentPlugin->getSetting($journal->getId(), 'secret'),
@@ -51,21 +48,13 @@ class PaypalPaymentForm extends Form {
 				'amount' => number_format($this->_queuedPayment->getAmount(), 2),
 				'currency' => $this->_queuedPayment->getCurrencyCode(),
 				'description' => $this->_queuedPayment->getName(),
-				'returnUrl' => $this->_queuedPayment->getRequestUrl(),
+				'returnUrl' => $request->url(null, 'payment', 'plugin', array($this->_paypalPaymentPlugin->getName(), 'return'), array('queuedPaymentId' => $this->_queuedPayment->getId())),
 				'cancelUrl' => $request->url(null, 'index'),
-				'notifyUrl' => $request->url(null, 'payment', 'plugin', array($this->_paypalPaymentPlugin->getName(), 'ipn')),
 			));
 			$response = $transaction->send();
-			if ($response->isRedirect()) {
-				$request->redirectUrl($response->getRedirectUrl());
-			} else if ($response->isSuccessful()) {
-				die('SUCCESS');
-			} else {
-				error_log('PayPal transaction error: ' . $response->getMessage());
-				$templateMgr = TemplateManager::getManager($request);
-				$templateMgr->assign('message', 'plugins.paymethod.paypal.error');
-				$templateMgr->display('frontend/pages/message.tpl');
-			}
+			if ($response->isRedirect()) $request->redirectUrl($response->getRedirectUrl());
+			if (!$response->isSuccessful()) throw new \Exception($response->getMessage());
+			throw new \Exception('PayPal response was not redirect!');
 		} catch (\Exception $e) {
 			error_log('PayPal transaction exception: ' . $e->getMessage());
 			$templateMgr = TemplateManager::getManager($request);
