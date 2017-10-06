@@ -36,7 +36,7 @@
 
 
 	<message key="reviewer.article.enterReviewForm">Klicka på ikonen för att fylla i granskningsformuläret.</message>
-	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Vänligen fyll i obligatoriska fält.</message>
+	<message key="reviewer.submission.reviewFormResponse.form.responseRequired">Vänligen fyll i obligatoriska fält.</message>
 
 	<!-- review forms end -->
 
@@ -336,8 +336,7 @@
 	<message key="search.results.orderDir.desc">Fallande</message>
 	<message key="search.results.similarDocuments">liknande dokument</message>
 	
-	<message key="admin.auth.defaultSourceDescription">
-		<![CDATA[<p>Att använda en annan förvald valideringskälla än OJS medför att:</p>
+	<message key="admin.auth.defaultSourceDescription"><![CDATA[<p>Att använda en annan förvald valideringskälla än OJS medför att:</p>
 <ul>
 	<li>Om en användare försöker att registrera ett nytt konto på den här sidan med ett användarnamn som redan finns hos valideringskällan (men inte i OJS-databasen) så kommer registreringen bara godkännas om lösenordet överensstämmer med det aktuella användarkontot.</li>
 </ul>]]></message>
@@ -367,7 +366,6 @@
 	<message key="plugins.categories.viewableFiles">Insticksmoduler för artiklars publiceringsversioner</message>
 	<message key="plugins.categories.viewableFiles.description">Insticksmoduler för artiklars publiceringsversioner möjliggör visning av artiklars publiceringsversioner i olika filformat.</message>
 	<message key="plugins.categories.auth.description">Insticksmoduler för autentisering tillåter Open Journal Systems att autentisera användare via andra system, t.ex. LDAP-servrar.</message>
-	<message key="plugins.categories.citationFormats.description">Insticksmoduler för citeringsformat gör det möjligt för användare att få tillgång till artikelciteringar i olika format.</message>
 	<message key="plugins.categories.generic.description">Allmänna insticksmoduler förstärker Open Journal Systems med funktioner som inte ryms inom de andra kategorierna av insticksmoduler.</message>
 
 	<message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems stöder <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) för att säkra permanent arkivering av tidskriften. LOCKSS är en fri och öppen programvara som utvecklats vid Stanford University Library. Programvaran skapar förutsättningar för bibliotek att bevara utvalda elektroniska tidskrifter genom att med regelbunden automatik söka igenom tidskrifternas webbsidor efter nyligen inlagt material och arkivera det. Varje arkiv synkas regelbundet mot speglingar hos andra bibliotek, och i händelse av förlorade eller skadade filer kan man återställa material från dessa speglingar.
@@ -400,8 +398,7 @@ Författare som publicerar i den här tidskriften accepterar följande villkor:
 	<!-- Setup Step 4 -->
 	<message key="manager.setup.basicEditorialStepsDescription"><![CDATA[Steg: Bidragskö &gt; Granskning av bidrag &gt; Redigering av bidrag &gt; Innehållsförteckning.<br /><br />
 Välj modell för hantering av den redaktionella processen. (För att ange huvudredaktör eller sektionsredaktörer, gå till "Redaktörer" under "Hantera tidskriften".)]]></message>
-	<message key="manager.setup.referenceLinkingDescription">
-		<![CDATA[<p>För att hjälpa läsare att hitta onlineversioner av material som författaren citerar finns följande alternativ:</p>
+	<message key="manager.setup.referenceLinkingDescription"><![CDATA[<p>För att hjälpa läsare att hitta onlineversioner av material som författaren citerar finns följande alternativ:</p>
 
 <ol>
 	<li><strong>Lägg till Läsverktyg</strong><p>Tidskriftsansvariga kan lägga till "Sök efter referenser" till de läsverktyg som finns i anslutning till publicerade artiklar. Läsaren kan där söka efter referenser i förvalda forskningsdatabaser.</p></li>
@@ -576,7 +573,6 @@ Aktiva visar antalet granskningar som är förfrågade eller under arbete.]]></m
 	<message key="reviewer.article.selectRecommendation.byEditor">Fastställ eller justera granskarens rekommendation.</message>
 	<message key="reviewer.article.mustSelectDecision">Ingen rekommendation har gjorts. Du måste välja rekommendation för att skicka in.</message>
 	<message key="reviewer.article.confirmDecision">När du har registrerat ett val har du inte längre möjlighet att ändra bedömningen i den här granskningen. Är du säker på att du vill fortsätta?</message>
-	<message key="reviewer.article.ensuringBlindReview">Att garantera anonym granskning</message>
 
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">Fil till Manusredaktören</message>
@@ -670,11 +666,7 @@ Aktiva visar antalet granskningar som är förfrågade eller under arbete.]]></m
 	<message key="submission.comments.forEditor">För redaktör</message>
 	<message key="submission.comments.saveAndEmailAuthor">Spara och skicka e-post till författare</message>
 	<message key="submission.comments.saveAndEmailEditor">Spara och skicka e-post till redaktör</message>
-
-	<!-- Login -->
-
-	<!-- Profile -->
-
+	
 	<!-- Registration -->
 	<message key="user.register.selectContext">Välj en tidskrift att registrera dig hos:</message>
 	<message key="user.register.noJournals">Det finns inga tidskrifter att registrera sig hos på den här webbplatsen.</message>
@@ -834,41 +826,6 @@ Aktiva visar antalet granskningar som är förfrågade eller under arbete.]]></m
 	<message key="donations.thankYou">Tack</message>
 	<message key="donations.thankYouMessage">Tack för ditt bidrag, vi uppskattar det mycket!</message>
 
-	<!-- Gifts -->
-	<message key="gifts.buyer">Från</message>
-	<message key="gifts.buyerDescription">Vem är gåvan från?</message>
-	<message key="gifts.recipient">Till</message>
-	<message key="gifts.recipientDescription">Vem är gåvan till?</message>
-	<message key="gifts.thankYou">Tack</message>
-	<message key="gifts.thankYouMessage">Din gåvobeställning är färdig. Ett e-postmeddelande med gåvan skickas till mottagaren så fort betalningen tagits emot.</message>
-	<message key="gifts.purchaseGiftIndividualSubscription">Gåvoprenumeration</message>
-	<message key="gifts.subscriptionFormIntroduction">Vänligen fyll i nedanstående formulär. Kontaktuppgifterna du anger kommer att tillsammans med ditt gåvomeddelande skickas via e-post till mottagaren och informera hen of den nya gåvoprenumerationen (även du får en kopia av detta e-postmeddelande).</message>
-	<message key="gifts.details">Gåvodetaljer</message>
-	<message key="gifts.detailsDescription">Välj gåvan nedan och inkludera ett personligt meddelande som ska skickas per e-post till mottagaren (även du får en kopia av detta e-postmeddelande).</message>
-	<message key="gifts.gift">Gåva</message>
-	<message key="gifts.noteTitle">Title</message>
-	<message key="gifts.note">Gåvomeddelande</message>
-	<message key="gifts.noteTitleRequired">Ange en titel för det personliga meddelandet.</message>
-	<message key="gifts.noteRequired">Ange ett personligt meddelande.</message>
-	<message key="gifts.localeRequired">Välj språk för det personliga meddelandet.</message>
-	<message key="gifts.myGifts">Mina gåvor</message>
-	<message key="gifts.manageMyGifts">Hantera gåvor</message>
-	<message key="gifts.redeemGift">Lös in gåva</message>
-	<message key="gifts.status.notRedeemed">Tillgänglig</message>
-	<message key="gifts.status.redeemed">Inlöst</message>
-	<message key="gifts.status.redeemGift">Lös in gåva</message>
-	<message key="gifts.subscriptions">Prenumerationer</message>
-	<message key="gifts.subscriptionsDescription">En inlöst gåva här kommer att ersätta din nuvarande prenumeration (om du har någon). Prenumerationer börjar på dagen för inlösen och är giltiga enligt den tidsperiod som gäller för aktuell prenumerationsform.</message>
-	<message key="gifts.purchaseGiftSubscription">Ge en gåvoprenumeration</message>
-	<message key="gifts.giftSubscriptionsAvailable">Det finns även gåvoprenumerationer tillgängliga. Gåvoprenumerationer kan lösas in när som helst av mottagaren och är ett bra sätt att stödja den här tidskriften på.</message>
-	<message key="gifts.noSubscriptions">Inga gåvoprenumerationer</message>
-	<message key="gifts.giftRedeemed">Inlösen av gåvan lyckades.</message>
-	<message key="gifts.noGiftToRedeem">Den här gåvan är inte tillgänglig för inlösen.</message>
-	<message key="gifts.giftAlreadyRedeemed">Den här gåvan har redan lösts in.</message>
-	<message key="gifts.giftNotValid">Den här gåvan är ogiltig, kunde inte lösas in.</message>
-	<message key="gifts.subscriptionTypeNotValid">Prenumerationsformen är inte giltig för den här gåvan. Kontakta prenumerationsansvariga.</message>
-	<message key="gifts.subscriptionNonExpiring">Gåvan löstes inte in eftersom du redan har en icke-förfallen prenumeration på den här tidskriften.</message>
-
 	<!-- Payments -->
 	<message key="payment.loginRequired">Du måste vara inloggad för att kunna betala.</message>
 	<message key="payment.loginRequired.forArticle">Prenumeration eller köp av enstaka artikel krävs för att få tillgång till innehållet. Logga in på tidskriften för att verifiera prenumeration, se tidigare köp, eller för köpa enstaka artiklar.</message>
@@ -891,14 +848,10 @@ Aktiva visar antalet granskningar som är förfrågade eller under arbete.]]></m
 	<message key="payment.type.purchaseIssue">Avgift för köp av enstaka nummer</message>
 	<message key="payment.type.subscription">Prenumerationsavgift</message>
 	<message key="payment.type.donation">Donationer</message>
-	<message key="payment.type.gift">Gåva</message>
-	<message key="payment.type.gift.subscription">Prenumeration</message>
 
 	<message key="payment.donation.makeDonation">Donera</message>
 
 	<message key="payment.submission.paySubmission">Betala prenumerationsavgift</message>
-	<message key="payment.fastTrack.payFastTrack">Betala för snabbspår</message>
-	<message key="payment.fastTrack.inFastTrack">i snabbspåret</message>
 	<message key="payment.publication.payPublication">Betala för publicering</message>
 	<message key="payment.publication.publicationPaid">Publiceringsavgift betald</message>
 
@@ -940,6 +893,7 @@ Aktiva visar antalet granskningar som är förfrågade eller under arbete.]]></m
 ]]></message>
 <message key="installer.preInstallationInstructions"><![CDATA[
 <h4>Innan installationen</h4>
+
 
 <p>1. Följande filer och kataloger (och deras innehåll) måste göras skrivbara:</p>
 <ul>
@@ -1004,6 +958,7 @@ Din server stödjer för tillfället mbstring: <strong>{$supportsMBString}</stro
 	<message key="log.review.reviewFileByProxy">Redaktören, {$userName}, har laddat upp en granskningsfil för granskningsomgång {$round} av bidrag {$submissionId} å granskarens, {$reviewerName}, vägnar.</message>
 	<message key="log.review.reviewerFile">En fil granskningsfil har laddats upp.</message>
 	<message key="log.editor.decision">Ett redaktörsbeslut ({$decision}) för artikel {$submissionId} registrerades av {$editorName}.</message>
+	<message key="log.editor.recommendation">En redaktörsrekommendation ({$decision}) för artikel {$submissionId} registrerades av {$editorName}.</message>
 
 
 	<message key="log.copyedit.initiate">Manusredigering av bidrag {$submissionId} har påbörjats av {$copyeditorName}.</message>
@@ -1072,7 +1027,7 @@ Sök-URL:er som kräver inskickade formulärdata kan komma att visas som ogiltig
 
 
 
-
+	
 	<message key="rt.beNotifiedWhen">Få meddelande när ...</message>
 
 	<message key="rt.thisJournal">Sök tidskrift</message>
@@ -1080,6 +1035,7 @@ Sök-URL:er som kräver inskickade formulärdata kan komma att visas som ogiltig
 
 	<message key="rt.context.authorTermsDescription">För material med fler än en författare, lämna samtliga namn markerade för att söka på arbeten av samma medförfattare, eller sök på en författare i taget genom att markera bara ett namn. För ytterligare information om resurserna sökningen sker i, se OM. De här resurserna är valda utifrån sin relevans och fria tillgång till hela eller delar av innehållet.</message>
 
+	
 
 	<!-- Notification Types -->
 	<message key="notification.mailListDescription">Skriv in din e-postadress för att få aviseringar direkt när det läggs till nytt viktigt innehåll i tidskriften.</message>
@@ -1100,8 +1056,9 @@ Sök-URL:er som kräver inskickade formulärdata kan komma att visas som ogiltig
 	<message key="notification.type.userComment">En läsare kommenterade "{$title}"</message>
 	<message key="notification.savedIssueMetadata">Metadata för publiceringen av numret sparades.</message>
 	<message key="notification.type.editorAssignmentTask">En ny artikel har skickats in och behöver bli tilldelad en redaktör.</message>
-	<message key="notification.type.assignProductionUser">Låt en användare skapa publiceringsversioner genom att använda Lägg till-länken i deltagarlistan.</message>
+	<message key="notification.type.assignProductionUser">Låt en användare skapa publiceringsversioner genom att använda Lägg till-länken i Deltagarlistan.</message>
 	<message key="notification.type.awaitingRepresentations">Väntar på publiceringsversioner.</message>
+	<message key="notification.type.publicationScheduled">Det här bidraget är inlagt för publicering.</message>
 	
 	<!--
 	 *
@@ -1144,4 +1101,5 @@ Sök-URL:er som kräver inskickade formulärdata kan komma att visas som ogiltig
 
 	<message key="editor.issues.backIssues">Publicerade nummer</message>
 	<message key="editor.issues.futureIssues">Kommande nummer</message>
+	<message key="navigation.subscriptions">Prenumerationer</message>
 </locale>
