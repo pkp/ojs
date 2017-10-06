@@ -68,7 +68,7 @@ class ManualPaymentPlugin extends PaymethodPlugin {
 	}
 
 	/**
-	 * @copydoc PaymethodPlugin::displayPaymentForm
+	 * @copydoc PaymethodPlugin::getPaymentForm
 	 */
 	function getPaymentForm($context, $queuedPayment) {
 		if (!$this->isConfigured()) return null;
