@@ -201,7 +201,6 @@ Tack och med vänliga hälsningar,<br />
 <br />
 Jag tror att du skulle passa utmärkt som sakkunniggranskare av manuskriptet &quot;{$submissionTitle}&quot;, som har skickats in till {$contextName}. Bidragets sammanfattning bifogas nedan. Jag hoppas att du kan överväga att genomföra granskningen åt oss, då det vore mycket värdefullt.<br />
 <br />
-
 Vänligen logga in på tidskriftens webbplats senast {$responseDueDate} och svara om du har möjlighet att åta dig granskningsuppdraget eller inte. Det är också där du får tillgång till bidraget och lägger in din granskning och rekommendation. Adressen till webbplatsen är {$contextUrl}.<br />
 <br />
 Deadline för själva granskningen är {$reviewDueDate}.<br />
@@ -544,6 +543,16 @@ Vårt beslut är att: Refusera bidrag<br />
 ]]></body>
 		<description>Det här e-postmeddelandet från redaktören eller sektionsredaktören till en författare meddelar att beslutet "Refusera bidrag" fattats för hens bidrag.</description>
 	</email_text>
+	<email_text key="EDITOR_RECOMMENDATION">
+	  <subject>Redaktörsrekommendation</subject>
+	  <body><![CDATA[{$editors}:<br />
+<br />
+Rekommendationen angående bidraget &quot;{$submissionTitle}&quot; till {$contextName} är: {$recommendation}<br />
+<br />
+{$editorialContactSignature}<br />
+]]></body>
+	  <description>Det här e-postmeddelandet från den rekommenderande redaktören eller sektionsredaktören till ansvariga redaktörer eller sektionsredaktörer meddelar dem en slutgiltig rekommendation för bidraget.</description>
+	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
 		<subject>Förfrågan om manusredigering</subject>
 		<body><![CDATA[{$participantName}:<br />
@@ -785,67 +794,6 @@ Manusredaktör, {$contextName}<br />
 ]]></body>
 		<description>Det här e-postmeddelandet kan användas om manusredaktörer behöver efterfråga mer information om referenser från författare.</description>
 	</email_text>
-	<email_text key="GIFT_AVAILABLE">
-		<subject>{$giftNoteTitle}</subject>
-		<body><![CDATA[Hej {$recipientFirstName},<br />
-<br />
-{$buyerFullName} vill ge dig en gåva hos {$giftJournalName}:<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-{$giftNote}<br />
-<br />
-<br />
-Du kommer att få ett ytterligare e-postmeddelande innehållandes inloggningsuppgifter och instruktioner för hur du löser in din gåva.<br />
-<br />
-Vi önskar dig mycket nöje med din gåva!<br />
-<br />
-{$giftContactSignature}<br />
-]]></body>
-		<description>Det här e-postmeddelandet meddelar en gåvomottagare att hen fått en gåva och nu kan lösa in den.</description>
-	</email_text>
-	<email_text key="GIFT_USER_REGISTER">
-		<subject>Lös in din gåva: Inloggningsuppgifter</subject>
-		<body><![CDATA[Dear {$recipientFirstName},<br />
-<br />
-{$buyerFullName} vill ge dig en gåva hos {$giftJournalName}:<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-Logga in på tidskriftens webbplats ({$giftUrl}) för att lösa in din gåva.<br />
-<br />
-Ditt användarnamn: {$username}<br />
-Ditt lösenord: {$password}<br />
-<br />
-Väl inloggad kan du när som helst ändra ditt lösenord.<br />
-<br />
-Vi önskar dig mycket nöje med din gåva!<br />
-<br />
-{$giftContactSignature}<br />
-]]></body>
-		<description>Det här e-postmeddelandet meddelar en gåvomottagare hens inloggningsuppgifter till ett nytt konto.</description>
-	</email_text>
-	<email_text key="GIFT_USER_LOGIN">
-		<subject>Lös in din gåva: Inloggningsuppgifter</subject>
-		<body><![CDATA[Dear {$recipientFirstName},<br />
-<br />
-{$buyerFullName} vill ge dig en gåva hos {$giftJournalName}:<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-Logga in på tidskriftens webbplats ({$giftUrl}) för att lösa in din gåva.<br />
-<br />
-Ditt användarnamn: {$username}<br />
-<br />
-Vi önskar dig mycket nöje med din gåva!<br />
-<br />
-{$giftContactSignature}<br />
-]]></body>
-		<description>Det här e-postmeddelandet meddelar en gåvomottagare hens inloggningsuppgifter.</description>
-	</email_text>
 	<email_text key="REVISED_VERSION_NOTIFY">
 		<subject>Reviderad version uppladdad</subject>
 		<body><![CDATA[{$editorialContactName}:<br />
@@ -856,6 +804,18 @@ Bidragets URL: {$submissionUrl}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Det här e-postmeddelandet skickas automatiskt till den tilldelade redaktören när författaren laddar upp en reviderad version av sin artikel.</description>
+	</email_text>
+		<email_text key="EDITOR_DECISION_INITIAL_DECLINE">
+		<subject>Redaktörsbeslut</subject>
+		<body>
+			<![CDATA[{$authorName}:<br />
+<br />
+Vi har fattat ett beslut angående ditt bidrag till {$contextName}, &quot;{$submissionTitle}&quot;.<br />
+<br />
+Vårt beslut är att: Refusera bidrag<br />
+<br />
+{$editorialContactSignature}<br />]]></body>
+		<description>Det här e-postmeddelandet skickas till författaren of redaktören refuserar bidraget direkt, innan granskningssteget.</description>
 	</email_text>
 	<email_text key="NOTIFICATION_CENTER_DEFAULT">
 		<subject>Ett meddelande angående {$contextName}</subject>
