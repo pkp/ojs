@@ -11,7 +11,7 @@
   * Localization strings for the sr_RS@latin (Srpski) locale.
   -->
 
-<locale name="sr_RS@latin" full_name = "Srpski">
+<locale name="sr_RS@latin" full_name="Srpski">
 	<!-- Submission wizard -->
 
 	<!-- Submission Information Modal -->

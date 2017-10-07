@@ -12,7 +12,7 @@
   * 
   -->
  
-<locale name="sr_RS@latin" full_name="Crpski">
+<locale name="sr_RS@latin" full_name="Srpski">
 	<message key="plugins.importexport.datacite.displayName">DataCite Export/Registration dodatak</message>
 	<message key="plugins.importexport.datacite.description">Izvezite ili registrujte metapodatke broja, članaka, prikaza i dodatnih fajlova u DataCIte formatu</message>
 	<message key="plugins.importexport.datacite.settings.description">Podesite dodatak pre prve upotrebe.</message>
