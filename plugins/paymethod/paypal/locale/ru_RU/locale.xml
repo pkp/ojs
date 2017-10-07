@@ -18,4 +18,7 @@
 	<message key="plugins.paymethod.paypal.settings">Настройки платежей через Paypal</message>
 	<message key="plugins.paymethod.paypal.settings.testMode">Тестовый режим</message>
 	<message key="plugins.paymethod.paypal.settings.accountName">Имя учетной записи</message>
+	<message key="plugins.paymethod.paypal.settings.clientId">ID клиента</message>
+	<message key="plugins.paymethod.paypal.settings.secret">Секретный код</message>
+	<message key="plugins.paymethod.paypal.error">Произошла ошибка транзакции. Пожалуйста, свяжитесь с менеджером журнала для получения более подробной информации.</message>
 </locale>
