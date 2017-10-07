@@ -11,7 +11,7 @@
   * Localization strings.
   -->
 
-<locale name="de_DE" full_name="Deutsch">
+<locale name="de_DE" full_name="Deutsch (Deutschland)">
 	<message key="plugins.generic.dublinCoreMeta.name">Dublin-Core-Plugin</message>
 	<message key="plugins.generic.dublinCoreMeta.description">Dieses Plugin bettet Dublin-Core-Meta-Tags zur besseren Indizierung in die Artikel-Seiten ein.</message>
 </locale>

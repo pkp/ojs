@@ -11,7 +11,7 @@
   * Localization strings for the sr_RS@latin (Srpski) locale.
   -->
 
-<locale name="sr_RS@latin" full_name="(Srpski)">
+<locale name="sr_RS@latin" full_name="Srpski">
 	<message key="manager.emails.confirmResetAll">Da li ste sigurni da želite da resetujete sve imejl šablone? Izgubićete sva podešavanja koja ste uradili.</message>
 	<message key="manager.files.note">Napomena: pregledač fajlova je dodatak koji omogućuje direktno upravljanje svi fajlovima i direktorijima koji su vezani za časopis.</message>
 	<message key="manager.payment.options.purchaseIssueFee">Kupi izdanje</message>
