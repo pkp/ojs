@@ -34,7 +34,7 @@
 	<message key="editor.notifyUsers.includeToc">Incluir sumário da edição:</message>
 	<message key="editor.editorAdministration">Administração do editor</message>
 	<message key="editor.issues.createIssue">Incluir edição</message>
-	<message key="editor.issues.currentIssue">Edição atual</message>
+	<message key="editor.issues.currentIssue">Edição Atual</message>
 	<message key="editor.issues.numArticles">Itens</message>
 	<message key="editor.issues.noArticles">Nenhum item agendado para esta edição.</message>
 	<message key="editor.issues.confirmDelete">Deseja realmente excluir esta edição permanentemente?</message>
