@@ -294,13 +294,6 @@ class SubmissionHandler extends APIHandler {
 			);
 		}, $pubIdPlugins);
 
-		// Citation formats
-		$citationPlugins = PluginRegistry::loadCategory('citationFormats');
-		uasort($citationPlugins, create_function('$a, $b', 'return strcmp($a->getDisplayName(), $b->getDisplayName());'));
-		$citations = array_map(function($citationPlugin) use($publishedArticle, $issue, $context) {
-			return $citationPlugin->fetchCitation($publishedArticle, $issue, $context);
-		}, $citationPlugins);
-
 		$authors = array_map(function($author) {
 			return array(
 				'name'		=> $author->getFullName(),
@@ -343,7 +336,6 @@ class SubmissionHandler extends APIHandler {
 			'cover_image'	=> $coverImage,
 			'galleys'	=> $galleys,
 			'datePublished'	=> $publishedArticle->getDatePublished(),
-			'citations'	=> $citations,
 		);
 
 		return $response->withJson($data, 200);
