@@ -117,7 +117,7 @@
 	<message key="article.suppFilesAbbrev">Tilläggsfil(er)</message>
 	<message key="article.discipline">Ämnesområde och underämnen</message>
 	<message key="article.subject">Nyckelord</message>
-	<message key="article.coverage">Omfång</message>
+	<message key="article.coverage">Täckning</message>
 	<message key="article.type">Typ, metod eller infallsvinkel</message>
 	<message key="article.language">Språk</message>
 	<message key="article.sectionEditor">Sektionsredaktör</message>
