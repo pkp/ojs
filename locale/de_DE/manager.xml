@@ -161,7 +161,7 @@
 	<message key="manager.setup.enableAnnouncements">Erlauben Sie den Zeitschriftenverwalter/innen, Mitteilungen hinzuzufügen.</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">Anzeige der</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">neuesten Mitteilungen auf der Startseite der Zeitschrift</message>
-	<message key="manager.setup.enableUserRegistration">Besucher/innen können einen Benutzeraccount bei der Zeitschrift.</message>
+	<message key="manager.setup.enableUserRegistration">Besucher/innen können einen Benutzeraccount bei der Zeitschrift registrieren.</message>
 	<message key="manager.setup.focusAndScope">Konzept</message>
 	<message key="manager.setup.focusAndScope.description">Beschreiben Sie Autor/innen, Leser/innen und Bibliothekar/innen die Bandbreite der Arikel und anderer hier zu veröffentlichenden Werke.</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWork">Indizierung von Arbeiten für Autor/innen</message>
