@@ -50,7 +50,7 @@
 	<message key="submission.proofReadingDescription"><![CDATA[Layoutredaktören laddar upp de produktionsklara filerna här. Använd <em>Tilldela manusgranskare</em> för att uppdra åt författare eller andra att korrekturläsa publiceringsversionerna, med korrigerade filer uppladdade för godkännande före publicering.]]></message>
 	<message key="grid.action.approveProof">Godkänn det här korrekturet för inkludering i publiceringsversionen.</message>
 	<message key="grid.action.pageProofApproved">Det här korrekturet har blivit godkänt för inkludering i publiceringsversionen.</message>
-	<message key="submission.submit.titleAndSummary">Titel och sammanfattning</message>
+	<message key="submission.submit.titleAndSummary">Titel och abstract</message>
 	<message key="submission.submit.upload.description">Ladda upp filer associerade till det här bidraget, inkluderat själva artikeln, multimedia, dataset, grafik, etc.</message>
 	<message key="submission.pageProofs">Korrekturläsning</message>
 	<message key="submission.confirmSubmit">Är du säker på att du vill skicka in den här artikeln till tidskriften?</message>
@@ -69,7 +69,7 @@
 	<message key="submission.submit.form.authorRequired">Minst en författare krävs.</message>
 	<message key="submission.submit.form.authorRequiredFields">Förnamn, efternamn och e-postadress för varje författare krävs.</message>
 	<message key="submission.submit.form.titleRequired">Vänligen mata in titeln på din artikel.</message>
-	<message key="submission.submit.form.abstractRequired">Vänligen mata in din artikels sammanfattning.</message>
+	<message key="submission.submit.form.abstractRequired">Vänligen mata in abstract för din artikel.</message>
 	<message key="submission.submit.form.contributorRoleRequired">Vänligen välj medarbetarens roll.</message>
 
 	<message key="submission.citationFormat.notFound">Referensformatet som efterfrågades kunde inte hämtas.</message>

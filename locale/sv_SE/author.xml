@@ -67,8 +67,8 @@
 	<message key="author.submit.form.authorRequired">Minst en författare krävs.</message>
 	<message key="author.submit.form.authorRequiredFields">För-, efternamn och e-postadress för varje författare krävs.</message>
 	<message key="author.submit.form.titleRequired">Titel krävs.</message>
-	<message key="author.submit.form.abstractRequired">Sammanfattning krävs.</message>
-	<message key="author.submit.form.wordCountAlert">Du har överskridit max antal ord för sammanfattningar i den här tidskriftssektionen.</message>
+	<message key="author.submit.form.abstractRequired">Abstract krävs.</message>
+	<message key="author.submit.form.wordCountAlert">Du har överskridit max antal ord för abstracts i den här tidskriftssektionen.</message>
 	<message key="author.submit.submissionFile">Bidrag</message>
 	<message key="author.submit.uploadSubmissionFile">Ladda upp bidrag</message>
 	<message key="author.submit.replaceSubmissionFile">Ersätt uppladdat bidrag</message>

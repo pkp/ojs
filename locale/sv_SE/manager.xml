@@ -78,7 +78,7 @@
 	<message key="manager.people.mergeUsers.into.description">Välj användare till vilken du vill överföra föregående användares författarskap, redaktörsuppdrag etc.</message>
 	<message key="manager.people.roleEnrollment">{$roll} Lägg till</message>
 	<message key="manager.people.syncUserDescription">Synkroniserad tilldelning innebär att samtliga användare inom en specifik tidskrift kan tilldelas samma roll/funktion i den här tidskriften. Funktionen gör det möjligt för en vald grupp av användare/funktioner (t ex, Granskare) att synkroniseras mellan olika tidskrifter.</message>
-	<message key="manager.sections.abstractsNotRequired">Det krävs inga sammanfattningar</message>
+	<message key="manager.sections.abstractsNotRequired">Abstracts ej obligatoriskt.</message>
 	<message key="manager.section.noSectionEditors"><![CDATA[Det finns ingen redaktör för sektionen än. Lägg till åtminstone en användare till rollen under Administration > Inställningar > Användare &amp; Roller först.]]></message>
 	<message key="manager.sections.assigned">Sektionens redaktörer</message>
 	<message key="manager.sections.confirmDelete">Vill du ta bort sektionen?</message>
@@ -355,11 +355,11 @@
 	<message key="manager.statistics.statistics.selectSections">Välj sektioner för att beräkna statistik över tidskriftens sakkunniggranskade artiklar.</message>
 	<message key="manager.statistics.statistics.subscriptions">Prenumerationer</message>
 	<message key="manager.statistics.reports.defaultReport.articleDownloads">Nedladdningar av artiklar</message>
-	<message key="manager.statistics.reports.defaultReport.articleAbstract">Visningar av sammanfattningar</message>
-	<message key="manager.statistics.reports.defaultReport.articleAbstractAndDownloads">Visningar av sammanfattningar och nedladdningar av artiklar</message>
+	<message key="manager.statistics.reports.defaultReport.articleAbstract">Visningar av abstracts</message>
+	<message key="manager.statistics.reports.defaultReport.articleAbstractAndDownloads">Visningar av abstracts och nedladdningar av artiklar</message>
 	<message key="manager.statistics.reports.defaultReport.journalIndexPageViews">Visningar av tidskriftens förstasida</message>
 	<message key="manager.statistics.reports.defaultReport.issuePageViews">Visningar av numrets innehållsförteckning</message>
-	<message key="manager.statistics.reports.filters.byContext.description"> Begränsa resultaten med nummer och/eller artikel.</message>
+	<message key="manager.statistics.reports.filters.byContext.description">Begränsa resultaten med nummer och/eller artikel.</message>
 	<message key="manager.statistics.reports.filters.byObject.description">Begränsa resultaten med objektstyp (tidskrift, nummer, artikel, filtyp) och/eller med en eller flera identifikatorer.</message>
 	<message key="manager.subscriptionPolicies">Prenumerationspolicyer</message>
 	<message key="manager.subscriptionPolicies.authorSelfArchive">Författarens egenarkiveringspolicy</message>
