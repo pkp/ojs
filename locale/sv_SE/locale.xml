@@ -393,7 +393,7 @@ Författare som publicerar i den här tidskriften accepterar följande villkor:
 	 <li>Författare kan ingå separata överenskommelser och avtal om icke-exklusiv spridning av tidskriftens publicerade version av verket (t.ex. att lägga upp det i ett institutionellt arkiv eller publicera det i en bok) så länge det inkluderar en deklaration om ursprunglig publicering i den här tidskriften.</li>
 	 <li>Författare tillåts och uppmuntras att dela sitt verk online (t.ex. i institutionella arkiv eller på författares egna webbplatser) före och under inskickningsprocessen eftersom detta är något som kan leda till givande utbyten, samt att möjligheten till citeringar ökar när den kommer i ett tidigare skede. (Se <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>.)</li>
 </ol>]]></message>
-	<message key="manager.setup.citations.enable">Aktivera Assistenten för referensuppmärkning</message>
+	<message key="manager.setup.citations.enable">Aktivera Verktyget för referensuppmärkning</message>
 
 	<!-- Setup Step 4 -->
 	<message key="manager.setup.basicEditorialStepsDescription"><![CDATA[Steg: Bidragskö &gt; Granskning av bidrag &gt; Redigering av bidrag &gt; Innehållsförteckning.<br /><br />
