@@ -14,7 +14,7 @@
 
 	{url|assign:"searchFormUrl" page="search" op="search" escape=false}
 	{$searchFormUrl|parse_url:$smarty.const.PHP_URL_QUERY|parse_str:$formUrlParameters}
-	<form id="simplesearchForm" action="{$searchFormUrl|strtok:"?"|escape}">
+	<form id="simpleSearchForm" action="{$searchFormUrl|strtok:"?"|escape}">
 		{foreach from=$formUrlParameters key=paramKey item=paramValue}
 			<input type="hidden" name="{$paramKey|escape}" value="{$paramValue|escape}"/>
 		{/foreach}
