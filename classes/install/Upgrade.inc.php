@@ -79,6 +79,69 @@ class Upgrade extends Installer {
 	}
 
 	/**
+	 * For 3.0.0 upgrade: Remove the review round and the review file if editor is not assigned.
+	 * @return boolean
+	 */
+	function removeReviewEntries() {
+		import('lib.pkp.classes.file.SubmissionFileManager');
+
+		$articleDao = DAORegistry::getDAO('ArticleDAO');
+		// Get review file IDs to be removed (from articles that have no editor assigned)
+		$reviewFileResult = $articleDao->retrieve('SELECT article_id, journal_id, review_file_id FROM articles WHERE article_id NOT IN (SELECT article_id FROM edit_assignments)');
+		while (!$reviewFileResult->EOF) {
+			$row = $reviewFileResult->GetRowAssoc(false);
+			$articleId = (int)$row['article_id'];
+			$journalId = (int)$row['journal_id'];
+			$fileId = (int)$row['review_file_id'];
+
+			// Delete the files in the files_dir:
+			$submissionFileManager = new SubmissionFileManager($journalId, $articleId);
+			$basePath = $submissionFileManager->getBasePath() . '/';
+			// Get all file revisions
+			$fileResult = $articleDao->retrieve('SELECT file_id, revision, file_name FROM article_files WHERE file_id = ?', array($fileId));
+			while (!$fileResult->EOF) {
+				$fileRow = $fileResult->GetRowAssoc(false);
+				$globPattern = $fileRow['file_name'];
+				// Search for the file name in the appropriate journal and article folder of the files_dir
+				$pattern1 = glob($basePath . '*/*/' . $globPattern);
+				$pattern2 = glob($basePath . '*/' . $globPattern);
+				if (!is_array($pattern1)) $pattern1 = array();
+				if (!is_array($pattern2)) $pattern2 = array();
+				$matchedResults = array_merge($pattern1, $pattern2);
+				if (count($matchedResults)>1) {
+					// Too many filenames matched. Continue with the first; this is just a warning.
+					error_log("WARNING: Duplicate potential files for \"$globPattern\" in \"" . $submissionFileManager->getBasePath() . "\". Taking the first.");
+				} elseif (count($matchedResults)==0) {
+					// No filenames matched. Skip migrating.
+					error_log("WARNING: Unable to find a match for \"$globPattern\" in \"" . $submissionFileManager->getBasePath() . "\". Skipping this file.");
+					continue;
+				}
+				$discoveredFilename = array_shift($matchedResults);
+				// If the file exists, delete it
+				if (file_exists($discoveredFilename)) {
+					unlink($discoveredFilename);
+				} else {
+					error_log("WARNING: File \"$discoveredFilename\" does not exist.");
+					continue;
+				}
+				$fileResult->MoveNext();
+			}
+			$fileResult->Close();
+
+			// Delete the file entries in the DB
+			$articleDao->update('DELETE FROM article_files WHERE file_id = ?', array($fileId));
+			// Set review_file_id to NULL
+			$articleDao->update('UPDATE articles SET review_file_id=NULL WHERE review_file_id = ?', array($fileId));
+			// Delete the review round for that article
+			$articleDao->update('DELETE FROM review_rounds WHERE submission_id = ?', array($articleId));
+
+			$reviewFileResult->MoveNext();
+		}
+		$reviewFileResult->Close();
+		return true;
+	}
+
+	/**
 	 * For 3.0.0 upgrade: Convert string-field semi-colon separated metadata to controlled vocabularies.
 	 * @return boolean
 	 */
@@ -683,7 +746,6 @@ class Upgrade extends Installer {
 			'email_templates',
 			'email_templates_data',
 			'controlled_vocabs',
-			'gifts',
 			'event_log',
 			'email_log',
 			'metadata_descriptions',
@@ -2358,6 +2420,79 @@ class Upgrade extends Installer {
 
 		return true;
 	}
+
+	/**
+	 * For 3.0.x - 3.1.0 upgrade: repair enabled plugin setting for site plugins.
+	 * @return boolean
+	 */
+	function enabledSitePlugins() {
+		$allPlugins =& PluginRegistry::getAllPlugins();
+		$pluginSettings = DAORegistry::getDAO('PluginSettingsDAO');
+		foreach ($allPlugins as $plugin) {
+			if ($plugin->isSitePlugin()) {
+				$pluginName = strtolower_codesafe($plugin->getName());
+				$result = $pluginSettings->update('DELETE FROM plugin_settings WHERE plugin_name = ? AND setting_name = \'enabled\' AND context_id <> 0', array($pluginName));
+			}
+		}
+		return true;
+	}
+
+	/**
+	 * For 3.0.x - 3.1.0 upgrade: repair the migration of the HTML galley CSS files in the OJS files_dir.
+	 *
+	 * NOTE: submission_files table should be first fixed with the SQLs from GitHub Issue: https://github.com/pkp/pkp-lib/issues/2758
+	 *
+	 * @return boolean
+	 */
+	function moveCSSFiles() {
+		$journalDao = DAORegistry::getDAO('JournalDAO');
+		$genreDao = DAORegistry::getDAO('GenreDAO');
+		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
+
+		import('lib.pkp.classes.file.FileManager');
+		import('lib.pkp.classes.file.SubmissionFileManager');
+		import('lib.pkp.classes.submission.SubmissionFile');
+
+		$journals = $journalDao->getAll();
+		while ($journal = $journals->next()) {
+			// Get style genre
+			$genre = $genreDao->getByKey('STYLE', $journal->getId());
+
+			// get CSS file names from the corrected submission_files table
+			$result = $submissionFileDao->retrieve('SELECT file_id, revision, original_file_name, date_uploaded, submission_id FROM submission_files WHERE file_stage = ? AND genre_id = ? AND assoc_type = ?',
+				array((int) SUBMISSION_FILE_DEPENDENT, (int) $genre->getId(), (int) ASSOC_TYPE_SUBMISSION_FILE));
+			while (!$result->EOF) {
+				$row = $result->GetRowAssoc(false);
+				// Get the wrong file name (after the 3.0.x migration)
+				// and the correct file name
+				$timestamp = date('Ymd', strtotime($row['date_uploaded']));
+				$fileManager = new FileManager();
+				$extension = $fileManager->parseFileExtension($row['original_file_name']);
+				$wrongServerName = 	$row['submission_id'] . '-' . '1' . '-' . $row['file_id'] . '-' . $row['revision'] . '-' . '1' . '-' . $timestamp . '.' . strtolower_codesafe($extension);
+				$newServerName = 	$row['submission_id'] . '-' . $genre->getId() . '-' . $row['file_id'] . '-' . $row['revision'] . '-' . SUBMISSION_FILE_DEPENDENT . '-' . $timestamp . '.' . strtolower_codesafe($extension);
+				// Get the old file path (after the 3.0.x migration, i.e. from OJS 2.4.x)
+				// and the correct file path
+				$submissionFileManager = new SubmissionFileManager($journal->getId(), $row['submission_id']);
+				$basePath = $submissionFileManager->getBasePath() . '/';
+				$sourceFilename = $basePath . 'public' . '/' . $wrongServerName;
+				$targetFilename = $basePath . 'submission/proof' . '/' . $newServerName;
+				// Move the file
+				if (!file_exists($targetFilename) && file_exists($sourceFilename)) {
+					if (!file_exists($path = dirname($targetFilename)) && !$submissionFileManager->mkdirtree($path)) {
+						error_log("Unable to make directory \"$path\"");
+					}
+					if (!rename($sourceFilename, $targetFilename)) {
+						error_log("Unable to move \"$sourceFilename\" to \"$targetFilename\".");
+					}
+				}
+				$result->MoveNext();
+			}
+			$result->Close();
+			unset($journal);
+		}
+		return true;
+	}
+
 
 }
 

@@ -543,6 +543,16 @@ Our decision is to: Decline Submission<br />
 ]]></body>
 		<description>This email from the Editor or Section Editor to an Author notifies them of a final "decline" decision regarding their submission.</description>
 	</email_text>
+	<email_text key="EDITOR_RECOMMENDATION">
+		<subject>Editor Recommendation</subject>
+		<body><![CDATA[{$editors}:<br />
+<br />
+The recommendation regarding the submission to {$contextName}, &quot;{$submissionTitle}&quot; is: {$recommendation}<br />
+<br />
+{$editorialContactSignature}<br />
+]]></body>
+		<description>This email from the recommending Editor or Section Editor to the decision making Editors or Section Editors notifies them of a final recommendation regarding the submission.</description>
+	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
 		<subject>Copyediting Request</subject>
 		<body><![CDATA[{$participantName}:<br />
@@ -784,67 +794,6 @@ Copy-Editor, {$contextName}<br />
 ]]></body>
 		<description>This email allows copyeditors to request additional information about references from authors.</description>
 	</email_text>
-	<email_text key="GIFT_AVAILABLE">
-		<subject>{$giftNoteTitle}</subject>
-		<body><![CDATA[Dear {$recipientFirstName},<br />
-<br />
-{$buyerFullName} would like to share a gift with you at {$giftJournalName}:<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-{$giftNote}<br />
-<br />
-<br />
-You will receive a follow-up email that includes login details and instructions for redeeming your gift.<br />
-<br />
-We hope that you enjoy your gift!<br />
-<br />
-{$giftContactSignature}<br />
-]]></body>
-		<description>This email notifies a gift recipient that a gift has been purchased and is available for redemption.</description>
-	</email_text>
-	<email_text key="GIFT_USER_REGISTER">
-		<subject>Redeem Your Gift: Login Details</subject>
-		<body><![CDATA[Dear {$recipientFirstName},<br />
-<br />
-{$buyerFullName} would like to share a gift with you at {$giftJournalName}:<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-To redeem your gift, please login to the journal website at {$giftUrl}<br />
-<br />
-Your username: {$username}<br />
-Your password: {$password}<br />
-<br />
-Once logged in, you can change your password at any time.<br />
-<br />
-We hope that you enjoy your gift!<br />
-<br />
-{$giftContactSignature}<br />
-]]></body>
-		<description>This email notifies a gift recipient of their login details for a new account.</description>
-	</email_text>
-	<email_text key="GIFT_USER_LOGIN">
-		<subject>Redeem Your Gift: Login Details</subject>
-		<body><![CDATA[Dear {$recipientFirstName},<br />
-<br />
-{$buyerFullName} would like to share a gift with you at {$giftJournalName}:<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-To redeem your gift, please login to the journal website at {$giftUrl}<br />
-<br />
-Your username: {$username}<br />
-<br />
-We hope that you enjoy your gift!<br />
-<br />
-{$giftContactSignature}<br />
-]]></body>
-		<description>This email notifies a gift recipient of their login details.</description>
-	</email_text>
 	<email_text key="REVISED_VERSION_NOTIFY">
 		<subject>Revised Version Uploaded</subject>
 		<body><![CDATA[{$editorialContactName}:<br />
@@ -860,5 +809,17 @@ Submission URL: {$submissionUrl}<br />
 		<subject>A message regarding {$contextName}</subject>
 		<body><![CDATA[Please enter your message.]]></body>
 		<description>The default (blank) message used in the Notification Center Message Listbuilder.</description>
+	</email_text>
+	<email_text key="EDITOR_DECISION_INITIAL_DECLINE">
+		<subject>Editor Decision</subject>
+		<body>
+			<![CDATA[{$authorName}:<br />
+<br />
+We have reached a decision regarding your submission to {$contextName}, &quot;{$submissionTitle}&quot;.<br />
+<br />
+Our decision is to: Decline Submission<br />
+<br />
+{$editorialContactSignature}<br />]]></body>
+		<description>This email is send to the author if the editor declines his submission initially, before the review stage</description>
 	</email_text>
 </email_texts>

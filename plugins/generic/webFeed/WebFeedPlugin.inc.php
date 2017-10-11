@@ -167,19 +167,16 @@ class WebFeedPlugin extends GenericPlugin {
 	function manage($args, $request) {
 		switch ($request->getUserVar('verb')) {
 			case 'settings':
-				$context = $request->getContext();
-
 				AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON,  LOCALE_COMPONENT_PKP_MANAGER);
-				$templateMgr = TemplateManager::getManager($request);
-				$templateMgr->register_function('plugin_url', array($this, 'smartyPluginUrl'));
-
-				$this->import('SettingsForm');
-				$form = new SettingsForm($this, $context->getId());
+				$this->import('WebFeedSettingsForm');
+				$form = new WebFeedSettingsForm($this, $request->getContext()->getId());
 
 				if ($request->getUserVar('save')) {
 					$form->readInputData();
 					if ($form->validate()) {
 						$form->execute();
+						$notificationManager = new NotificationManager();
+						$notificationManager->createTrivialNotification($request->getUser()->getId());
 						return new JSONMessage(true);
 					}
 				} else {

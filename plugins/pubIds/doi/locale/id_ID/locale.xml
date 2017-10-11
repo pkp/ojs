@@ -13,6 +13,7 @@
  
 <locale name="id_ID" full_name="Bahasa Indonesia">
 	<message key="plugins.pubIds.doi.displayName">DOI</message>
+	<message key="plugins.pubIds.doi.readerDisplayName">DOI</message>
 
 	<!-- settings form -->
 	<message key="plugins.pubIds.doi.manager.settings.description">Silahkan konfigurasikan plugin DOI untuk dapat mengatur dan menggunakan DOIs dalam OJS:</message>

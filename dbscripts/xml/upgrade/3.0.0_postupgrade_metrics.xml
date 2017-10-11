@@ -14,9 +14,9 @@
 	<sql>
 		<query>UPDATE metrics SET assoc_type = 1048585 WHERE assoc_type = 257</query>
 	</sql>
-	<!-- update the ASSOC_TYPE_SUPP_FILE = 262 constant to ASSOC_TYPE_SUBMISSION_FILE = 515 defined in PKPApplication -->
+	<!-- update the ASSOC_TYPE_SUPP_FILE = 262 constant to ASSOC_TYPE_SUBMISSION_FILE_COUNTER_OTHER = 531 defined in PKPApplication -->
 	<sql>
-		<query>UPDATE metrics SET assoc_type = 515 WHERE assoc_type = 262</query>
+		<query>UPDATE metrics SET assoc_type = 531 WHERE assoc_type = 262</query>
 	</sql>
 
 	<!-- update the supp file ids to the new file ids, ASSOC_TYPE_SUBMISSION_FILE = 515 -->

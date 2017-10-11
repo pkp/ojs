@@ -48,7 +48,7 @@ The editor and author should leave those changes with which they are satisfied. 
 After the text has been reviewed by editor and author, the copy editor will make a final pass over the text accepting the changes in preparation for the layout and galley stage.
 
 
-<strong>2. Harvard Educational Review </strong>
+<strong>2. Harvard Educational Review</strong>
 
 <strong>Instructions for Making Electronic Revisions to the Manuscript</strong>
 
@@ -138,21 +138,10 @@ Please follow the following protocol for making electronic revisions to your man
 	<message key="default.journalSettings.clockssLicense"><![CDATA[This journal utilizes the CLOCKSS system to create a distributed archiving system among participating libraries and permits those libraries to create permanent archives of the journal for purposes of preservation and restoration. <a href="http://clockss.org/">More...</a>]]></message>
 
 	<!-- Default settings for payment items. -->
-	<message key="default.journalSettings.submissionFee">Article Submission</message>
-	<message key="default.journalSettings.submissionFeeDescription">Authors are required to pay an Article Submission Fee as part of the submission process to contribute to review costs.</message>
-	<message key="default.journalSettings.fastTrackFee">Fast-Track Review</message>
-	<message key="default.journalSettings.fastTrackFeeDescription">With the payment of this fee, the review, editorial decision, and author notification on this manuscript is guaranteed to take place within 4 weeks.</message>
 	<message key="default.journalSettings.publicationFee">Article Publication</message>
-	<message key="default.journalSettings.publicationFeeDescription">If this paper is accepted for publication, you will be asked to pay an Article Publication Fee to cover publications costs.</message>
-	<message key="default.journalSettings.waiverPolicy">If you do not have funds to pay such fees, you will have an opportunity to waive each fee. We do not want fees to prevent the publication of worthy work.</message>
 	<message key="default.journalSettings.purchaseArticleFee">Purchase Article</message>
-	<message key="default.journalSettings.purchaseArticleFeeDescription">The payment of this fee will enable you to view, download, and print this article.</message>
 	<message key="default.journalSettings.purchaseIssueFee">Purchase Issue</message>
-	<message key="default.journalSettings.purchaseIssueFeeDescription">The payment of this fee will enable you to view, download, and print this issue.</message>
 	<message key="default.journalSettings.membershipFee">Association Membership</message>
-	<message key="default.journalSettings.membershipFeeDescription">The payment of this fee will enroll you as a member in this association for one year and provide you with free access to this journal.</message>
-	<message key="default.journalSettings.donationFee">Donations to journal</message>
-	<message key="default.journalSettings.donationFeeDescription">Donations of any amount to this journal are gratefully received and provide a means for the editors to continue to provide a journal of the highest quality to its readers.</message>
 
 	<!-- Group defaults -->
 	<message key="default.groups.name.manager">Journal manager</message>

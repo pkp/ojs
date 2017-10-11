@@ -436,7 +436,6 @@ Ativo indica avaliação em consideração ou andamento.]]></message>
         <message key="reviewer.article.selectRecommendation">Escolha a recomendação adequada e submeta a avaliação para concluir o processo. É obrigatório incluir os comentários da avaliação ou transferir uma Versão para Avaliação do documento antes de definir sua avaliação..</message>
 	<message key="reviewer.article.mustSelectDecision">Não foi selecionada nenhuma recomendação. Deve-se escolher uma recomendação para submeter a avaliação.</message>
 	<message key="reviewer.article.confirmDecision">Uma vez registrada a decisão não será mais possível modificar a avaliação. Deseja realmente proceder?</message>
-	<message key="reviewer.article.ensuringBlindReview">Assegurando uma Avaliação Cega segura</message>
 
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">Arquivo para Edição de Texto (C/E)</message>
@@ -783,7 +782,6 @@ A validação pode falhar em URLs para pesquisa que requeiram dados via método 
 	<message key="reader.openAccess">Acesso Livre</message>
 	<message key="reader.subscriptionAccess">Acesso Restrito</message>
 	<message key="reader.subscriptionOrFeeAccess">Acesso Restrito ou Pago</message>
-	<message key="plugins.categories.citationFormats.description">Plugins de Formatos de Citação oferecem aos usuários vários formatos para citar o documento.</message>
 	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Proposta de Aviso de Direito Autoral Creative Commons</h3>
 <h4>1. Proposta de Política para Periódicos de Acesso Livre</h4>
 Autores que publicam nesta revista concordam com os seguintes termos:
@@ -825,8 +823,6 @@ Autores que publicam nesta revista concordam com os seguintes termos:
 	<message key="payment.type.subscription">Taxa de Assinatura</message>
 	<message key="payment.type.donation">Doações</message>
 	<message key="payment.donation.makeDonation">Fazer doação</message>
-	<message key="payment.fastTrack.payFastTrack">Pagar Acompanhamento Rápido</message>
-	<message key="payment.fastTrack.inFastTrack">em Acompanhamento Rápido</message>
 	<message key="payment.publication.payPublication">Pagar para Publicar</message>
 	<message key="payment.publication.publicationPaid">Taxa de Publicação paga</message>
 	<message key="payment.membership.buyMembership">Pagar Assinatura Individual</message>
@@ -856,7 +852,7 @@ Autores que publicam nesta revista concordam com os seguintes termos:
 	<message key="payment.paymentSent">Pagamento já foi enviado</message>
 	<message key="payment.submission.paySubmission">Pagar taxa de submissão</message>
 	<message key="reviewer.article.enterReviewForm">Clique no ícone para preencher o formulário de avaliação.</message>
-	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Preencha os campos obrigatórios.</message>
+	<message key="reviewer.submission.reviewFormResponse.form.responseRequired">Preencha os campos obrigatórios.</message>
 	<message key="article.coverPage.altText">Imagem para capa</message>
 	<message key="article.accessLogoOpen.altText">Acesso Livre</message>
 	<message key="article.accessLogoRestricted.altText">Acesso restrito</message>
@@ -1005,43 +1001,8 @@ Pode-se opcionalmente informar o motivo pelo qual está sendo desativado o cadas
 	</li>
 </ol>]]></message>
 	<message key="site.noJournals">Não há publicações disponíveis.</message>
-	<message key="gifts.buyer">Remetente</message>
-	<message key="gifts.buyerDescription">De quem é este presente?</message>
-	<message key="gifts.recipient">Para</message>
-	<message key="gifts.recipientDescription">Para quem é este presente?</message>
-	<message key="gifts.thankYou">Obrigado</message>
-	<message key="gifts.thankYouMessage">A compra do seu presente foi concluída. Será enviada uma cópia da mensagem de presente ao destinatário assim que o pagamento for processado.</message>
-	<message key="gifts.purchaseGiftIndividualSubscription">Assinatura de presentes</message>
-	<message key="gifts.subscriptionFormIntroduction">Preencha o formulário a seguir. Os dados de contato, assim como o texto sobre o presente, serão usados na mensagem ao destinatário, informando sobre a nova assinatura de presente (uma cópia da mensagem também lhe será enviada).</message>
-	<message key="gifts.details">Detalhes do presente</message>
-	<message key="gifts.detailsDescription">Escolha o presente da lista e inclua uma mensagem personalizada que será enviada ao destinatário (você receberá uma cópia da mensagem).</message>
-	<message key="gifts.gift">Presente</message>
-	<message key="gifts.noteTitle">Título</message>
-	<message key="gifts.note">Nota sobre o presente</message>
-	<message key="gifts.noteTitleRequired">Informe o título de sua mensagem personalizada.</message>
-	<message key="gifts.noteRequired">Informe o texto de sua mensagem personalizada.</message>
-	<message key="gifts.localeRequired">Informe o idioma de sua mensagem personalizada.</message>
-	<message key="gifts.myGifts">Meus presentes</message>
-	<message key="gifts.manageMyGifts">Gerenciar presentes</message>
-	<message key="gifts.redeemGift">Resgatar presente</message>
-	<message key="gifts.status.notRedeemed">Disponível</message>
-	<message key="gifts.status.redeemed">Resgatado</message>
-	<message key="gifts.status.redeemGift">Resgatar presente</message>
-	<message key="gifts.subscriptions">Assinaturas</message>
-	<message key="gifts.subscriptionsDescription">Uma assinatura de presente resgatada aqui substituirá sua assinatura atual (caso possua uma). Assinaturas iniciam na data de resgate e serão válidas pelo período do tipo de assinatura.</message>
-	<message key="gifts.purchaseGiftSubscription">Oferecer uma assinatura de presente</message>
-	<message key="gifts.giftSubscriptionsAvailable">Assinaturas de presentes também estão disponíveis. Elas podem ser resgatadas a qualquer tempo pelo destinatário e são uma forma de apoio à esta publicação.</message>
-	<message key="gifts.noSubscriptions">Sem assinaturas de presente</message>
-	<message key="gifts.giftRedeemed">O presente foi resgatado com sucesso.</message>
-	<message key="gifts.noGiftToRedeem">O presente não está disponível para resgate.</message>
-	<message key="gifts.giftAlreadyRedeemed">O presente já foi resgatado.</message>
-	<message key="gifts.giftNotValid">O presente não é válido e não pode ser resgatado.</message>
-	<message key="gifts.subscriptionTypeNotValid">O tipo de assinatura para este presente não é válido. Entre em contato com o gerente de assinaturas.</message>
-	<message key="gifts.subscriptionNonExpiring">O presente não foi resgatado pois já possui uma assinatura permanente para esta publicação.</message>
 	<message key="payment.loginRequired.forIssue">Aquisição de assinatura ou edição obrigatório para acessar este item. Acesse o sistema para verificar assinaturas, acessar compras anteriores ou adquirir edições.</message>
 	<message key="payment.type.purchaseIssue">Taxa de aquisição de edição</message>
-	<message key="payment.type.gift">Presente</message>
-	<message key="payment.type.gift.subscription">Assinatura</message>
 	<message key="installer.allowFileUploads"><![CDATA[Seu servidor permite envio de arquivos: <strong>{$allowFileUploads}</strong>]]></message>
 	<message key="installer.maxFileUploadSize"><![CDATA[Seu servidor permite atualmente envio de arquivos no tamanho máximo de: <strong>{$maxFileUploadSize}</strong>]]></message>
 	<message key="site.upgradeAvailable.admin"><![CDATA[Uma nova versão do sistema está disponível! Sua versão atual é OJS {$currentVersion}. A versão mais recente é OJS {$latestVersion}. Acesse <a href="http://pkp.sfu.ca/ojs_download" target="_new">esta página</a> para baixar a nova versão e para instruções sobre atualização.]]></message>

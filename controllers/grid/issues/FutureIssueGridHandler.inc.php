@@ -23,7 +23,7 @@ class FutureIssueGridHandler extends IssueGridHandler {
 	/**
 	 * @copydoc PKPHandler::initialize()
 	 */
-	function initialize($request, $args) {
+	function initialize($request, $args = null) {
 		// Basic grid configuration.
 		$this->setTitle('editor.issues.futureIssues');
 
@@ -53,6 +53,14 @@ class FutureIssueGridHandler extends IssueGridHandler {
 		$journal = $request->getJournal();
 		$issueDao = DAORegistry::getDAO('IssueDAO');
 		return $issueDao->getUnpublishedIssues($journal->getId());
+	}
+
+	/**
+	 * Get the js handler for this component.
+	 * @return string
+	 */
+	public function getJSHandler() {
+		return '$.pkp.controllers.grid.issues.FutureIssueGridHandler';
 	}
 }
 

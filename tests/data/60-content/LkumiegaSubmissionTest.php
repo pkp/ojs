@@ -49,7 +49,7 @@ class LkumiegaSubmissionTest extends ContentBaseTestCase {
 		$this->performReview('amccrae', null, $title, 'Revisions Required');
 		$this->performReview('agallego', null, $title, 'Resubmit for Review');
 		$this->findSubmissionAsEditor('dbarnes', null, $title);
-		$this->recordEditorialDecision('Resubmit for Review');
+		$this->recordEditorialDecision('Request Revisions');
 		$this->logOut();
 	}
 }

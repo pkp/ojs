@@ -950,64 +950,6 @@ Diretrizes para Avaliação<br />
 {$reviewGuidelines}]]></body>
 		<description>Esta mensagem é enviada pelo Editor de seção ao avaliador, solicitando a avaliação de uma submissão em uma segunda rodada ou superior. A mensagem inclui a submissão como anexo. Ela é usada quando o processo de avaliação via e-mail é escolhido no Passo 2 de configuração da revista (Caso contrário, veja REVIEW_REQUEST_SUBSEQUENT).</description>
 	</email_text>
-	<email_text key="GIFT_AVAILABLE">
-		<subject>{$giftNoteTitle}</subject>
-		<body><![CDATA[Prezada(o) {$recipientFirstName},<br />
-<br />
-{$buyerFullName} gostaria de compartilhar um presente com você, oferecido pela publicação {$giftJournalName}:<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-{$giftNote}<br />
-<br />
-<br />
-Uma mensagem posterior será enviada com dados de acesso e instruções para o resgate do presente.<br />
-<br />
-Esperamos que o presente seja de seu agrado!<br />
-<br />
-{$giftContactSignature}]]></body>
-		<description>This email notifies a gift recipient that a gift has been purchased and is available for redemption.</description>
-	</email_text>
-	<email_text key="GIFT_USER_REGISTER">
-		<subject>Resgate de presente: Dados de acesso</subject>
-		<body><![CDATA[Prezada(o) {$recipientFirstName},<br />
-<br />
-{$buyerFullName} gostaria de compartilhar um presente com você, oferecido pela publicação {$giftJournalName}:<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-Para resgatá-lo, acesse {$giftUrl} com as credenciais a seguir:<br />
-<br />
-Login: {$username}<br />
-Senha: {$password}<br />
-<br />
-Após o acesso, você pode alterar sua senha a qualquer tempo.<br />
-<br />
-Esperamos que o presente seja do seu agrado!<br />
-<br />
-{$giftContactSignature}]]></body>
-		<description>This email notifies a gift recipient of their login details for a new account.</description>
-	</email_text>
-	<email_text key="GIFT_USER_LOGIN">
-		<subject>Resgate de presente: Dados de acesso</subject>
-		<body><![CDATA[Prezada(o) {$recipientFirstName},<br />
-<br />
-{$buyerFullName} gostaria de compartilhar com você um presente, oferecido pela publicação {$giftJournalName}:<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-Para resgatá-lo, acesse {$giftUrl} com as seguintes credenciais:<br />
-<br />
-Login: {$username}<br />
-<br />
-Esperamos que o presente seja de seu agrado!<br />
-<br />
-{$giftContactSignature}]]></body>
-		<description>This email notifies a gift recipient of their login details.</description>
-	</email_text>
 	<email_text key="REVISED_VERSION_NOTIFY">
 		<subject>Envio de versão atualizada</subject>
 		<body><![CDATA[{$editorialContactName},<br />

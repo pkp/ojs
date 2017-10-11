@@ -99,10 +99,10 @@ class SubscriptionReportPlugin extends ReportPlugin {
 		fputcsv($fp, array_values($columns));
 
 		// Iterate over individual subscriptions and write out each to file
-		$individualSubscriptions = $individualSubscriptionDao->getSubscriptionsByJournalId($journalId);
+		$individualSubscriptions = $individualSubscriptionDao->getByJournalId($journalId);
 		while ($subscription = $individualSubscriptions->next()) {
 			$user = $userDao->getById($subscription->getUserId());
-			$subscriptionType = $subscriptionTypeDao->getSubscriptionType($subscription->getTypeId());
+			$subscriptionType = $subscriptionTypeDao->getById($subscription->getTypeId());
 
 			foreach ($columns as $index => $junk) {
 				switch ($index) {
@@ -181,10 +181,10 @@ class SubscriptionReportPlugin extends ReportPlugin {
 		fputcsv($fp, array_values($columns));
 
 		// Iterate over institutional subscriptions and write out each to file
-		$institutionalSubscriptions =& $institutionalSubscriptionDao->getSubscriptionsByJournalId($journalId);
+		$institutionalSubscriptions = $institutionalSubscriptionDao->getByJournalId($journalId);
 		while ($subscription = $institutionalSubscriptions->next()) {
 			$user = $userDao->getById($subscription->getUserId());
-			$subscriptionType = $subscriptionTypeDao->getSubscriptionType($subscription->getTypeId());
+			$subscriptionType = $subscriptionTypeDao->getById($subscription->getTypeId());
 
 			foreach ($columns as $index => $junk) {
 				switch ($index) {

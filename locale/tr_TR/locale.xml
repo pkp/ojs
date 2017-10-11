@@ -29,52 +29,52 @@
 	<!-- review froms start -->
 
 	<!-- common -->
-    
-    <message key="context.current">Güncel Dergi:</message>
-    <message key="context.select">Başka bir dergi seçin:</message>
-    
-    <!-- Categories -->
-    <message key="navigation.categories">Kategoriler</message>
-    <message key="navigation.categories.browse">Araştır</message>
-    <message key="reviewer.article.enterReviewForm">İnceleme formunu doldurmak için simgesini tıklayın.</message>
-    <message key="reviewer.article.reviewFormResponse.form.responseRequired">Lütfen gerekli alanları doldurun.</message>
+
+	<message key="context.current">Güncel Dergi:</message>
+	<message key="context.select">Başka bir dergi seçin:</message>
+
+	<!-- Categories -->
+	<message key="navigation.categories">Kategoriler</message>
+	<message key="navigation.categories.browse">Araştır</message>
+	<message key="reviewer.article.enterReviewForm">İnceleme formunu doldurmak için simgesini tıklayın.</message>
+	<message key="reviewer.submission.reviewFormResponse.form.responseRequired">Lütfen gerekli alanları doldurun.</message>
 
 	<!-- Journal Management -->
 
-<message key="reviewer.complete">Hakemleme Tamamlandı !</message>
-<message key="reviewer.complete.whatNext">Hakemleme tamamlandı. Değerli görüşleriniz için teşekkür ederiz.</message>
-<message key="reviewer.submission.reviewFiles">Hakemleme Dosyaları</message>
-<message key="reviewer.step1.request">1. Tur Hakemleme</message>
-<message key="reviewer.step1.requestBoilerplate">1. Tur Hakemleme İşlemleri</message>
-<message key="reviewer.step1.viewAllDetails">Detaylar</message>
-<message key="reviewer.submission.reviewSchedule">Hakemleme Takvimi</message>
-<message key="reviewer.submission.reviewRequestDate">Hakemleme Gönderim Tarihi</message>
-<message key="reviewer.submission.responseDueDate">Hakem Yanıt Son Tarihi</message>
-<message key="reviewer.submission.reviewDueDate">Hakemleme Son Tarihi</message>
-<message key="reviewer.submission.acceptReview">Hakemlemeyi Kabul Et</message>
-<message key="reviewer.submission.declineReview">Hakemlemeyi Kabul Etme</message>
-<message key="reviewer.submission.reviewerGuidelines">Hakemlik Rehberi</message>
-<message key="reviewer.submission.noGuidelines">Hakemlik Rehberi Bulunmamaktadır.</message>
-<message key="reviewer.submission.reviewDescription">Hakemlik Görüşlerinin Yazılacağı Bölüm</message>
-<message key="reviewer.submission.uploadDescription">Hakemlik Değerlendirme Formunu Bu Kısıma Yükleyiniz</message>
-<message key="reviewer.submission.reviewerFiles">Hakemlik Dosyaları</message>
-<message key="reviewer.submission.submitReview">Hakemlemeyi Tamamla</message>
-<message key="reviewer.submission.continueToStepThree">İleri</message>
-<message key="navigation.goBack">Geri</message>
+	<message key="reviewer.complete">Hakemleme Tamamlandı !</message>
+	<message key="reviewer.complete.whatNext">Hakemleme tamamlandı. Değerli görüşleriniz için teşekkür ederiz.</message>
+	<message key="reviewer.submission.reviewFiles">Hakemleme Dosyaları</message>
+	<message key="reviewer.step1.request">1. Tur Hakemleme</message>
+	<message key="reviewer.step1.requestBoilerplate">1. Tur Hakemleme İşlemleri</message>
+	<message key="reviewer.step1.viewAllDetails">Detaylar</message>
+	<message key="reviewer.submission.reviewSchedule">Hakemleme Takvimi</message>
+	<message key="reviewer.submission.reviewRequestDate">Hakemleme Gönderim Tarihi</message>
+	<message key="reviewer.submission.responseDueDate">Hakem Yanıt Son Tarihi</message>
+	<message key="reviewer.submission.reviewDueDate">Hakemleme Son Tarihi</message>
+	<message key="reviewer.submission.acceptReview">Hakemlemeyi Kabul Et</message>
+	<message key="reviewer.submission.declineReview">Hakemlemeyi Kabul Etme</message>
+	<message key="reviewer.submission.reviewerGuidelines">Hakemlik Rehberi</message>
+	<message key="reviewer.submission.noGuidelines">Hakemlik Rehberi Bulunmamaktadır.</message>
+	<message key="reviewer.submission.reviewDescription">Hakemlik Görüşlerinin Yazılacağı Bölüm</message>
+	<message key="reviewer.submission.uploadDescription">Hakemlik Değerlendirme Formunu Bu Kısıma Yükleyiniz</message>
+	<message key="reviewer.submission.reviewerFiles">Hakemlik Dosyaları</message>
+	<message key="reviewer.submission.submitReview">Hakemlemeyi Tamamla</message>
+	<message key="reviewer.submission.continueToStepThree">İleri</message>
+	<message key="navigation.goBack">Geri</message>
 
 
 
-<message key="reviewer.reviewSteps.request">Hakemlik Önerisi</message>
-<message key="reviewer.reviewSteps.guidelines">Hakemlik Rehberi</message>
-<message key="reviewer.reviewSteps.download">Değerlendirme</message>
-<message key="reviewer.reviewSteps.completion">Sonuç</message>
+	<message key="reviewer.reviewSteps.request">Hakemlik Önerisi</message>
+	<message key="reviewer.reviewSteps.guidelines">Hakemlik Rehberi</message>
+	<message key="reviewer.reviewSteps.download">Değerlendirme</message>
+	<message key="reviewer.reviewSteps.completion">Sonuç</message>
 
 
 	<!--  peer review -->
 
 
 	<message key="reviewer.article.enterReviewForm">Değerlendirme formunu doldurmak için simgeye tıklayınız:</message>
-	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Lütfen gerekli alanları doldurunuz.</message>
+	<message key="reviewer.submission.reviewFormResponse.form.responseRequired">Lütfen gerekli alanları doldurunuz.</message>
 
 	<!-- review forms end -->
 
@@ -85,26 +85,26 @@
 	-->
 
 	<!-- Common Messages -->
-    <message key="common.openJournalSystems">Açık Dergi Sistemleri</message>
+	<message key="common.openJournalSystems">Açık Dergi Sistemleri</message>
 	<message key="common.confirmComplete">Bu görevi tamamlandı olarak işaretlemek istediğinizden emin misiniz? Sonradan değişiklik yapmanız mümkün olmayabilir.</message>
-    <message key="common.homepageNavigationLabel">Anasayfa</message>
+	<message key="common.homepageNavigationLabel">Anasayfa</message>
 	<message key="common.payment">Ödeme</message>
 	<message key="common.payments">Ödemeler</message>
 	<message key="common.homePageHeader.altText">Ana Sayfa Başlığı</message>
 	<message key="common.journalHomepageImage.altText">Dergi Ana Sayfa Görseli</message>
-    <message key="common.tasks">Bildirimler</message>
-    <message key="common.viewProfile">Profil</message>
-    <message key="common.uploadedDate">Yüklenme Tarihi</message>
-    <message key="common.upload.dragFile">Dosyayı Buraya Sürükleyebilirsiniz.</message>
-    <message key="common.upload.addFile">Dosya Ekle</message>
-    <message key="common.upload.changeFile">Dosyayı Değiştir</message>
-    <message key="common.prefix">Ünvan</message>
-    <message key="common.prefixAndTitle.tip">Örnek: Prof., Dr.</message>
-    <message key="common.prefix">Ünvan</message>
-    <message key="common.subtitle">Altyazı</message>
-    <message key="common.subtitle.tip">İsteğe bağlı altyazı, ana başlığın ardından iki nokta üst üste (:) deyiminin arkasında görünecektir.</message>
-    <message key="common.abstract">Özet</message>
-    <message key="common.name">Adı</message>
+	<message key="common.tasks">Bildirimler</message>
+	<message key="common.viewProfile">Profil</message>
+	<message key="common.uploadedDate">Yüklenme Tarihi</message>
+	<message key="common.upload.dragFile">Dosyayı Buraya Sürükleyebilirsiniz.</message>
+	<message key="common.upload.addFile">Dosya Ekle</message>
+	<message key="common.upload.changeFile">Dosyayı Değiştir</message>
+	<message key="common.prefix">Ünvan</message>
+	<message key="common.prefixAndTitle.tip">Örnek: Prof., Dr.</message>
+	<message key="common.prefix">Ünvan</message>
+	<message key="common.subtitle">Altyazı</message>
+	<message key="common.subtitle.tip">İsteğe bağlı altyazı, ana başlığın ardından iki nokta üst üste (:) deyiminin arkasında görünecektir.</message>
+	<message key="common.abstract">Özet</message>
+	<message key="common.name">Adı</message>
 
 	<!-- Common Form Messages -->
 
@@ -115,8 +115,8 @@
 	<!-- Common Error Messages -->
 
 	<!-- Navigation -->
-    <message key="navigation.archives">Arşiv</message>
-    <message key="navigation.breadcrumbSeparator">></message>
+	<message key="navigation.archives">Arşiv</message>
+	<message key="navigation.breadcrumbSeparator">></message>
 	<message key="navigation.journalHelp">Yardım</message>
 	<message key="navigation.current">Son Sayı</message>
 	<message key="navigation.otherJournals">Diğer Dergiler</message>
@@ -127,8 +127,8 @@
 	<message key="navigation.competingInterestGuidelines">Çıkar Çelişkisi Rehberi</message>
 	<message key="navigation.infoForAuthors.long">Yazarlar İçin Bilgi</message>
 	<message key="navigation.infoForLibrarians.long">Kütüphaneciler İçin Bilgi</message>
-    <message key="navigation.viewFrontend">Önizleme</message>
-    <message key="navigation.items.shownTotal">Gösterilen {$shown} - Toplam {$total}</message>
+	<message key="navigation.viewFrontend">Önizleme</message>
+	<message key="navigation.items.shownTotal">Gösterilen {$shown} - Toplam {$total}</message>
 
 	<!-- Article Queues -->
 	<message key="common.queue.long.submissionsUnassigned">Yeni Başvurular</message>
@@ -143,13 +143,13 @@
 	<message key="common.queue.short.active">Etkin</message>
 	<message key="common.queue.long.completed">Arşiv</message>
 	<message key="common.queue.short.completed">Arşiv</message>
-    <message key="common.queue.long.myAssigned">Bana Atanan Yazılar</message>
-    <message key="common.queue.long.submissionsArchived">Arşivlenen Yazılar</message>
+	<message key="common.queue.long.myAssigned">Bana Atanan Yazılar</message>
+	<message key="common.queue.long.submissionsArchived">Arşivlenen Yazılar</message>
 
 	<!--
 	 *
 	 * ENTITIES - This section contains terms pertaining to the system's
-	 *            major entities, e.g. Article, Journal, Section
+	 *			major entities, e.g. Article, Journal, Section
 	 *
 	-->
 
@@ -194,7 +194,7 @@
 	<message key="article.fontSize.small.altText">Küçük</message>
 	<message key="article.fontSize.medium.altText">Orta</message>
 	<message key="article.fontSize.large.altText">Büyük</message>
-    <message key="article.return">Makale Detayına Dönün</message>
+	<message key="article.return">Makale Detayına Dönün</message>
 
 	<!-- Submission Tracking - Common -->
 	<message key="submission.submissionEditing">Gönderi Düzenleme</message>
@@ -232,7 +232,7 @@
 	<message key="submissions.editorDecision">Editör Kararı</message>
 	<message key="submissions.editorRuling">Editör Düzenlemesi</message>
 	<message key="submission.eventLog">Kayıt Defteri</message>
-    
+
 
 	<!-- Submission list search engine -->
 	<message key="submissions.copyeditComplete">Baskı Hazırlığı Tamamlanmış</message>
@@ -259,25 +259,25 @@
 	<message key="user.noRoles.submitArticleRegClosed">Bir makale gönder: Yazar kaydı şu halde aktif değil.</message>
 	<message key="user.noRoles.regReviewer">Hakem olarak kayıt ol</message>
 	<message key="user.noRoles.regReviewerClosed">Hakem olarak kayıt ol: Hakem kaydı şu halde aktif değil.</message>
-    <message key="user.profile.identity">Kullanıcı Bilgileri</message>
-    <message key="user.profile.contact">Kullanıcı İletişim Bilgileri</message>
-    <message key="user.profile.public">Kullanıcı Kişisel Bilgileri</message>
-    <message key="user.orcid">ORCID ID</message>
+	<message key="user.profile.identity">Kullanıcı Bilgileri</message>
+	<message key="user.profile.contact">Kullanıcı İletişim Bilgileri</message>
+	<message key="user.profile.public">Kullanıcı Kişisel Bilgileri</message>
+	<message key="user.orcid">ORCID ID</message>
 
 	<!-- Roles -->
-    <message key="user.role.author">Yazar</message>
+	<message key="user.role.author">Yazar</message>
 	<message key="user.role.manager">Dergi Yöneticisi</message>
 	<message key="user.role.sectionEditor">Bölüm Editörü</message>
 	<message key="user.role.subscriptionManager">Abone Yöneticisi</message>
 	<message key="user.role.managers">Dergi Yöneticileri</message>
 	<message key="user.role.subscriptionManagers">Abone Yöneticileri</message>
-    
-    <!-- Submission -->
-    <message key="user.login.registrationComplete.manageSubmissions">Yazı Girişleri Yönetimi</message>
-    <message key="user.login.registrationComplete.newSubmission">Yeni Yazı Girişi</message>
-    <message key="user.login.registrationComplete.instructions">Kullanıcı Profili</message>
-    <message key="user.login.registrationComplete">Kullanıcı</message>
-    <message key="user.login.registrationComplete.continueBrowsing">Dergiyi Görüntüle</message>
+
+	<!-- Submission -->
+	<message key="user.login.registrationComplete.manageSubmissions">Yazı Girişleri Yönetimi</message>
+	<message key="user.login.registrationComplete.newSubmission">Yeni Yazı Girişi</message>
+	<message key="user.login.registrationComplete.instructions">Kullanıcı Profili</message>
+	<message key="user.login.registrationComplete">Kullanıcı</message>
+	<message key="user.login.registrationComplete.continueBrowsing">Dergiyi Görüntüle</message>
 
 	<!-- Common Issue Terms -->
 	<message key="issue.issue">Sayı</message>
@@ -362,7 +362,7 @@
 	<!--
 	 *
 	 * INTERFACE - Contains phrases organized by the section of the
-	 *             user interface they appear in.
+	 *			 user interface they appear in.
 	 *
 	-->
 
@@ -390,8 +390,8 @@
 	<message key="subscriptionManager.subscriptionTypes">Abonelik Türleri</message>
 
 	<!-- Journal Management -->
-    
-    <message key="informationCenter.editorialHistory">İşlem Geçmişi</message>
+
+	<message key="informationCenter.editorialHistory">İşlem Geçmişi</message>
 
 
 	<!-- Statistics & Reports -->
@@ -409,7 +409,6 @@
 	<message key="plugins.categories.auth.description">ADS Yetkilendirme Eklentileri, LDAP sunucuları gibi diğer sistemlere kullanıcı kimlik doğrulaması için izin verir.</message>
 
 
-	<message key="plugins.categories.citationFormats.description">Atıf biçimi eklentileri çeşitli biçimler ile makale atıflarına erişimde kullanıcılara destek sağlar.</message>
 
 
 	<message key="plugins.categories.generic.description">Genel eklentiler, diğer eklenti kategorileri tarafından desteklenmeyen çeşitli yollarla Açık Dergi Sistemleri kullanımını genişletmekte kullanılır.</message>
@@ -554,8 +553,7 @@ Artı (+) işareti ile hakemin şu anda değerlendirdiği yazılar belirtilmişt
 	<message key="reviewer.article.selectRecommendation">Alttaki karar seçeneklerinin aktif hale gelmesi için dördüncü adımdaki sürecin tamamlanması gerekir. Değerlendirmenin editöre iletilebilmesi için "Hakem Kararı" kutusundaki seçereklerden uygun olanının seçilmesi ve kaydedilmesi gerekir.</message>
 	<message key="reviewer.article.mustSelectDecision">Başvurunun kabülüne yönelik bir öneride bulunmadınız. İşlemin tamamlanması için bir öneride bulunmanız gerekiyor.</message>
 	<message key="reviewer.article.confirmDecision">Kararınızı kaydettikten sonra bu değerlendirmede başka bir değişiklik yapamazsınız! Devam etmek istiyor musunuz?</message>
-	<message key="reviewer.article.ensuringBlindReview">Yazara Kör Hakemlik Garanti Edilir</message>
-    <message key="reviewer.confirmSubmit">Hakemlemeyi onaylıyor musunuz ?</message>
+	<message key="reviewer.confirmSubmit">Hakemlemeyi onaylıyor musunuz ?</message>
 
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">S/D'ye dosya</message>
@@ -650,7 +648,7 @@ Artı (+) işareti ile hakemin şu anda değerlendirdiği yazılar belirtilmişt
 	<message key="submission.comments.saveAndEmailEditor">Kaydet ve Editöre E-posta Gönder</message>
 
 	<!-- Login -->
-    <message key="user.login.registerNewAccount">Dergiye kayıt olmak için burayı tıklayınız.</message>
+	<message key="user.login.registerNewAccount">Dergiye kayıt olmak için burayı tıklayınız.</message>
 
 	<!-- Profile -->
 	<!-- Registration -->
@@ -749,7 +747,7 @@ Artı (+) işareti ile hakemin şu anda değerlendirdiği yazılar belirtilmişt
 	<message key="archive.issueUnavailable">Sayı Erişilebilir Değil</message>
 
 	<!-- About The Journal -->
-    <message key="about.aboutContext">İçerik Hakkında</message>
+	<message key="about.aboutContext">İçerik Hakkında</message>
 	<message key="about.statistics">İstatistikler</message>
 	<message key="about.history">Dergi Geçmişi</message>
 	<message key="about.editorialTeam">Kişiler ve Kurullar</message>
@@ -824,8 +822,6 @@ Artı (+) işareti ile hakemin şu anda değerlendirdiği yazılar belirtilmişt
 	<message key="payment.donation.makeDonation">Bağış Yap</message>
 
 	<message key="payment.submission.paySubmission">Gönderi Ücreti Ödeme</message>
-	<message key="payment.fastTrack.payFastTrack">Hızlandırılmış Ödeme</message>
-	<message key="payment.fastTrack.inFastTrack">Hızlandırılmış Öemede</message>
 	<message key="payment.publication.payPublication">Yayın için Ödeme</message>
 	<message key="payment.publication.publicationPaid">Yayın Ücreti Ödendi</message>
 
@@ -912,12 +908,6 @@ Sunucunuz mbstring'i güncel olarak destekler: <strong>{$supportsMBString}</stro
 <p> "config.inc.php" konfigürasyon dosyasındaki "yüklendi (installed)" ayarını <em>On</em> konumuna getirmeyi unutmayın.</p>
 <p>Eğer güncellemeler ve yazılımla ilgili haberleri izlemek için üye olmadıysanız,  <strong>lütfen <a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a> sayfasından kayıt olunuz.</strong> Soru ve yorumlarınız için lütfen <a href="http://pkp.sfu.ca/support/forum" target="_new">destek forumunu</a> kullanınız.</p>]]></message>
 
-
-
-
-
-
-
 	<!-- Article Logs -->
 	<message key="log.author.documentRevised">{$authorName} {$submissionId} numaralı gönderisini değiştirdi. Yeni dosya tanımı : {$fileId}.</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName} {$submissionId} numaralı gönderiyi değerlendirme görevinden çekildi ({$round}. değerlendirme turu).</message>
@@ -993,9 +983,6 @@ Form verisi gönderilen bağlantılarda başarısız olma olasılığı fazladı
 
 	<!-- RT Entities -->
 
-
-
-
 	<message key="rt.metadata.dublinCore.primaryAuthor">Oluşturan</message>
 
 	<message key="rt.metadata.pkp.primaryAuthor">Yazarın adı, kurumu, ülkesi</message>
@@ -1005,11 +992,9 @@ Form verisi gönderilen bağlantılarda başarısız olma olasılığı fazladı
 	<message key="rt.thisJournal">Dergide Ara</message>
 
 
-		<message key="rt.context.authorTermsDescription">Birden fazla yazarı olan makaleler için, bütün yazar isimlerini işaretlerseniz birlikte yaptıkları benzer çalışmaları, ya da tek bir isim işareleyerek yazarların tek tek eserlerini arayabilirsiniz. Araştırılan kaynak hakkında daha fazla bilgi edinmek için "bilgi" sembolü üzerine tıklayınız. Bu kaynaklar, önemleri ve içeriklerinin tamamına ya da önemli kısmına açık (bedava) ulaşım sağladıkları için seçilmişlerdir.</message>
+	<message key="rt.context.authorTermsDescription">Birden fazla yazarı olan makaleler için, bütün yazar isimlerini işaretlerseniz birlikte yaptıkları benzer çalışmaları, ya da tek bir isim işareleyerek yazarların tek tek eserlerini arayabilirsiniz. Araştırılan kaynak hakkında daha fazla bilgi edinmek için "bilgi" sembolü üzerine tıklayınız. Bu kaynaklar, önemleri ve içeriklerinin tamamına ya da önemli kısmına açık (bedava) ulaşım sağladıkları için seçilmişlerdir.</message>
 
-
-
-<!-- Notification Types -->
+	<!-- Notification Types -->
 	<message key="notification.mailListDescription">Dergi içeriği ile ilgili bildirimlerin e-posta adresinize gelmesini istiyorsanız e-posta adresinizi kayıt ediniz.</message>
 	<message key="notification.notificationsPublicDescription"><![CDATA[Bu sayfa, yeni sayı veya duyurular gibi dergi ile ilgili önemli güncellemeleri gösterir. RSS beslemeleri (sağdaki resimlere tıklayarak) ya da   <a href="{$emailUrl}">e-posta yoluyla</a> bu bildirimlere abone olabilirsiniz.]]></message>
 	<message key="notification.type.articleSubmitted">"{$title}" başlıklı bir makale gönderildi..</message>
@@ -1024,8 +1009,8 @@ Form verisi gönderilen bağlantılarda başarısız olma olasılığı fazladı
 	<message key="notification.type.submissionComment">"{$title}" başlıklı makale için bir editör yorum yaptı.</message>
 	<message key="notification.type.submissions">Gönderi Durumları</message>
 	<message key="notification.type.userComment">"{$title}" başlıklı makale için bir okuyucu yorum yaptı.</message>
-    <message key="notification.type.roundStatusTitle">Gönderi Durumu</message>
-    <message key="notification.type.allReviewsIn">Bütün hakemlemeler tamamlandı.</message>
+	<message key="notification.type.roundStatusTitle">Gönderi Durumu</message>
+	<message key="notification.type.allReviewsIn">Bütün hakemlemeler tamamlandı.</message>
 <message key="notification.addedReviewer">Bildirim Gönderildi</message>
 
 	<!--
@@ -1055,7 +1040,6 @@ Form verisi gönderilen bağlantılarda başarısız olma olasılığı fazladı
 	<message key="installer.maxFileUploadSize"><![CDATA[Sunucunuz en fazla <strong>{$maxFileUploadSize}</strong> büyüklüğünde dosya yüklenmesini kabul ediyor.]]></message>
 	<message key="site.upgradeAvailable.admin"><![CDATA[ADS'nin kullanılabilir yeni bir sürümü var! Şu halde ADS'nin {$currentVersion} sürümünü kullanıyorsunuz.  {$latestVersion} ADS'nin daha güncel sürümüdür. Güncel sürümü indirmek  ve güncelleme talimatları bulmak için lütfen <a href="http://pkp.sfu.ca/ojs_download" target="_new">bu sayfa</a/yı ziyaret ediniz.]]></message>
 	<message key="site.upgradeAvailable.manager"><![CDATA[ADS'nin kullanılabilir yeni bir sürümü var! Şu halde ADS'nin {$currentVersion} sürümünü kullanıyorsunuz.  {$latestVersion} ADS'nin daha güncel sürümüdür. Yeni sürümü bildirmek için Site Yöneticiniz ({$siteAdminName} <a href="mailto:{$siteAdminEmail}">{$siteAdminEmail}</a>) ile irtibate geçiniz. Daha fazla bilgi edinmek için <a href="http://pkp.sfu.ca/ojs_download" target="_new">buraya</a> tıklayınız.]]></message>
-	<message key="gifts.thankYou">Teşekkürler</message>
 	<message key="navigation.categories">Kategoriler</message>
 	<message key="navigation.categories.browse">Listele</message>
 	<message key="issue.fullIssue">Tüm sayı</message>
@@ -1065,42 +1049,10 @@ Form verisi gönderilen bağlantılarda başarısız olma olasılığı fazladı
 
 İsteğe bağlı hesapları devre dışı bırakmak için bir sebep ile kullanıcıyı pasifleştirebilir.</message>
 	<message key="site.noJournals">Kullanılabilir dergi yoktur.</message>
-	<message key="gifts.buyer">den</message>
-	<message key="gifts.buyerDescription">Bu bağış kimden?</message>
-	<message key="gifts.recipient">ye/ya</message>
-	<message key="gifts.recipientDescription">Bu gağış kime?</message>
-	<message key="gifts.purchaseGiftIndividualSubscription">Bağış Aboneliği</message>
-	<message key="gifts.details">Bağış Detayı</message>
-	<message key="gifts.gift">Bağış</message>
-	<message key="gifts.noteTitle">Başlık</message>
-	<message key="gifts.note">Bağış Notu</message>
-	<message key="gifts.noteTitleRequired">Kişisel mesaj için lütfen başlık giriniz.</message>
-	<message key="gifts.noteRequired">Kişisel bir mesaj giriniz.</message>
-	<message key="gifts.localeRequired">Kişisel mesajınız için lütfen bir dil seçiniz.</message>
-	<message key="gifts.myGifts">Bağışlarım</message>
-	<message key="gifts.manageMyGifts">Bağışlarımı Yönet</message>
-	<message key="gifts.redeemGift">Bağış Bedelini Ödeme</message>
-	<message key="gifts.status.notRedeemed">Kullanılabilir</message>
-	<message key="gifts.status.redeemed">Ödemek</message>
-	<message key="gifts.status.redeemGift">Bağış Bedelini Ödeme</message>
-	<message key="gifts.subscriptions">Abonelikler</message>
-	<message key="gifts.purchaseGiftSubscription">Bağış Aboneliği Ver</message>
-	<message key="gifts.noSubscriptions">Bağış aoneliği yok</message>
-	<message key="gifts.giftRedeemed">Bağış ödemesi başarılı.</message>
-	<message key="gifts.noGiftToRedeem">Bağış ödemesi başarısız.</message>
-	<message key="gifts.giftAlreadyRedeemed">Bu bağış ödemesi zaten yapıldı.</message>
-	<message key="gifts.giftNotValid">Bu bağış geçerli değil ve ödemesi yapılmadı.</message>
-	<message key="gifts.subscriptionTypeNotValid">Bu bağış için abonelik türü geçerli değil. Lütfen abone yöneticisiyle iletişime geçiniz.</message>
 	<message key="payment.type.purchaseIssue">Yayın Ücreti</message>
-	<message key="payment.type.gift">Bağış</message>
-	<message key="payment.type.gift.subscription">Abonelik</message>
 	<message key="installer.allowFileUploads"><![CDATA[Sunucunuz güncel dosya yüklemesini kabul etti: <strong>{$allowFileUploads}</strong>]]></message>
 	<message key="user.profile.profileImage">Profil Resmi</message>
-    
-    
-    
-    <message key="dashboard.myQueue">Kontrol Paneli</message>
-    <message key="grid.action.logInAs">Hesabına Bağlan</message>
-    <message key="grid.user.addRole">Görev Ekle</message>
-    
+	<message key="dashboard.myQueue">Kontrol Paneli</message>
+	<message key="grid.action.logInAs">Hesabına Bağlan</message>
+	<message key="grid.user.addRole">Görev Ekle</message>
 </locale>

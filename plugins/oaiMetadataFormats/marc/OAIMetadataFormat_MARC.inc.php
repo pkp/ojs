@@ -31,8 +31,8 @@ class OAIMetadataFormat_MARC extends OAIMetadataFormat {
 		));
 
 		$subjects = array_merge_recursive(
-			$this->stripAssocArray((array) $article->getDiscipline(null)),
-			$this->stripAssocArray((array) $article->getSubject(null))
+			stripAssocArray((array) $article->getDiscipline(null)),
+			stripAssocArray((array) $article->getSubject(null))
 		);
 
 		$templateMgr->assign(array(

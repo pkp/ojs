@@ -21,7 +21,7 @@ class ArticleSearch extends SubmissionSearch {
 	/**
 	 * See SubmissionSearch::getSparseArray()
 	 */
-	function &getSparseArray(&$unorderedResults, $orderBy, $orderDir, $exclude) {
+	function getSparseArray($unorderedResults, $orderBy, $orderDir, $exclude) {
 		// Calculate a well-ordered (unique) score.
 		$resultCount = count($unorderedResults);
 		$i = 0;
@@ -227,10 +227,12 @@ class ArticleSearch extends SubmissionSearch {
 	/**
 	 * See SubmissionSearch::formatResults()
 	 *
+	 * @param $results array
+	 * @param $user User optional (if availability information is desired)
 	 * @return array An array with the articles, published articles,
 	 *  issue, journal, section and the issue availability.
 	 */
-	static function formatResults($results) {
+	function formatResults($results, $user = null) {
 		$articleDao = DAORegistry::getDAO('ArticleDAO');
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 		$issueDao = DAORegistry::getDAO('IssueDAO');
@@ -273,7 +275,7 @@ class ArticleSearch extends SubmissionSearch {
 					$issueCache[$issueId] = $issue;
 					import('classes.issue.IssueAction');
 					$issueAction = new IssueAction();
-					$issueAvailabilityCache[$issueId] = !$issueAction->subscriptionRequired($issue) || $issueAction->subscribedUser($journalCache[$journalId], $issueId, $articleId) || $issueAction->subscribedDomain($journalCache[$journalId], $issueId, $articleId);
+					$issueAvailabilityCache[$issueId] = !$issueAction->subscriptionRequired($issue, $journalCache[$journalId]) || $issueAction->subscribedUser($user, $journalCache[$journalId], $issueId, $articleId) || $issueAction->subscribedDomain(Application::getRequest(), $journalCache[$journalId], $issueId, $articleId);
 				}
 
 				// Only display articles from published issues.
@@ -387,7 +389,6 @@ class ArticleSearch extends SubmissionSearch {
 	protected function getSearchDao() {
 		return DAORegistry::getDAO('ArticleSearchDAO');
 	}
-
 }
 
 ?>

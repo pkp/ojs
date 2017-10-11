@@ -12,7 +12,7 @@
   -->
 
 <locale name="id_ID" full_name="Bahasa Indonesia">
-	<!-- 
+	<!--
 	 * This file is organized into several major sections, separated
 	 * by comments like this one. These sections are called:
 	 *  COMMON - Contains frequently-used words
@@ -24,11 +24,11 @@
 	 *  MISC - Entries that don't belong elsewhere.
 	 *  DEFAULT - Default settings for configuration items.
 	-->
-	
+
 	<!-- common -->
 	<message key="context.current">Jurnal:</message>
 	<message key="context.select">Lihat jurnal lain:</message>
-	
+
 	<!-- Categories -->
 	<message key="navigation.categories">Kategori</message>
 	<message key="navigation.categories.browse">Telusuri</message>
@@ -36,7 +36,7 @@
 	<!-- Journal Management -->
 	<!--  peer review -->
 	<message key="reviewer.article.enterReviewForm">Klik di ikon untuk mengisi form review.</message>
-	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Isilah kolom berikut.</message>
+	<message key="reviewer.submission.reviewFormResponse.form.responseRequired">Isilah kolom berikut.</message>
 
 	<!-- review forms end -->
 
@@ -208,7 +208,7 @@
 	<message key="user.noRoles.submitArticleRegClosed">Penyerahan Naskah: Pendaftaran penulis belum dibuka.</message>
 	<message key="user.noRoles.regReviewer">Pendaftaran Reviewer</message>
 	<message key="user.noRoles.regReviewerClosed">Pendaftaran Reviewer: Pendaftaran reviewer belum dibuka.</message>
-	
+
 	<!-- Roles -->
 	<message key="user.role.manager">Manajer Jurnal</message>
 	<message key="user.role.sectionEditor">Editor Bagian</message>
@@ -366,7 +366,6 @@
 	<message key="plugins.categories.viewableFiles">Plugin Galley Artikel</message>
 	<message key="plugins.categories.viewableFiles.description">Plugin Galley Artikel memungkinkan ditampilkannya tipe dokumen yang berbeda sebagai galley artikel.</message>
 	<message key="plugins.categories.auth.description">Plugin Otorisasi memungkinkan Open Journal Systems mendelegasikan otentikasi pengguna ke sistem eksternal, seperti server LDAP.</message>
-	<message key="plugins.categories.citationFormats.description">Plugin Format Sitasi memberikan pilihan format sitasi naskah bagi penulis.</message>
 	<message key="plugins.categories.generic.description">Plugin Generik digunakan untuk menyediakan fungsi tambahan bagi Open Journal Systems melalui berbagai cara yang belum disediakan oleh plugin lainnya.</message>
 
 	<message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems mendukung <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) untuk memastikan pengarsipan jurnal yang aman dan permanen. LOCKSS merupakan piranti lunak open source karya Stanford University Library yang memungkinkan perpustakaan mengabadikan situs jurnalnya dengan mengirim setiap terbitan baru untuk disimpan. Secara berkala setiap simpanan divalidasi isinya terhadap simpanan di perpustakaan lain, dan jika isi di situs rusak atau hilang, simpanan di perpustakaan lain akan digunakan untuk mengembalikan data.
@@ -571,10 +570,9 @@ Aktif berarti berapa jumlah review yang sedang dipertimbangkan atau sedang berla
 	<message key="reviewer.article.enterReviewA">Klik di ikon untuk memasukkan review Anda terhadap naskah ini.</message>
 	<message key="reviewer.article.uploadFile">Sebagai tambahan, Anda dapat mengunggah file untuk menjadi acuan editor dan/atau penulis.</message>
 	<message key="reviewer.article.selectRecommendation">Pilih rekomendasi dan serahkan hasil review untuk menyelesaikan proses. Anda harus memasukkan review atau mengunggah file sebelum memilih rekomendasi.</message>
-	<message key="reviewer.article.selectRecommendation.byEditor">Tetapkan atau atur rekomendasi reviewer.</message>	
+	<message key="reviewer.article.selectRecommendation.byEditor">Tetapkan atau atur rekomendasi reviewer.</message>
 	<message key="reviewer.article.mustSelectDecision">Tidak ada rekomendasi dipilih. Anda harus memilih satu rekomendasi untuk diserahkan.</message>
 	<message key="reviewer.article.confirmDecision">Saat Anda sudah menyimpan keputusan, Anda tidak akan bisa membuat perubahan untuk review ini. Apakah Anda yakin untuk melanjutkan?</message>
-	<message key="reviewer.article.ensuringBlindReview">Memastikan Review Anonim</message>
 
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">File untuk C/E</message>
@@ -746,7 +744,7 @@ Aktif berarti berapa jumlah review yang sedang dipertimbangkan atau sedang berla
 	<message key="article.pdf.title">Portable Document Format (PDF)</message>
 	<message key="article.download">Unduh file PDF ini</message>
 	<message key="article.pluginMissing"><![CDATA[<p>File PDF yang Anda pilih akan tampil di sini bila browser Anda memiliki PDF reader plug-in (misalnya, versi mutakhir <a href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a>).</p>]]></message>
-	
+
 	<!-- Interstitial page for non-PDF non-HTML galleys -->
 	<message key="article.nonpdf.title">Unduh Artikel</message>
 	<message key="article.nonpdf.note"><![CDATA[File yang Anda pilih dapat meng-unggah secara otomatis. Jika tidak, klik tautan dibawah ini. Perhatikan file ini mungkin memerlukan plugin untuk dilihat.<br /><br />Jika file tidak meng-unggah secara otomatis <a href="{$url}">klik disini</a>.]]></message>
@@ -828,41 +826,6 @@ Aktif berarti berapa jumlah review yang sedang dipertimbangkan atau sedang berla
 	<message key="donations.thankYou">Terima Kasih</message>
 	<message key="donations.thankYouMessage">Terima kasih untuk kontribusi Anda. Kontribusi Anda sangat kami hargai.</message>
 
-	<!-- Gifts -->
-	<message key="gifts.buyer">Dari</message>
-	<message key="gifts.buyerDescription">Dari siapa hadiah ini?</message>
-	<message key="gifts.recipient">Untuk</message>
-	<message key="gifts.recipientDescription">Untuk siapa hadiah ini?</message>
-	<message key="gifts.thankYou">Terima Kasih</message>
-	<message key="gifts.thankYouMessage">Pembelian hadiah Anda telah selesai. Anda akan menerima salinan email hadiah yang dikirimkan ke penerima hadiah saat pembayaran Anda selesai diproses.</message>
-	<message key="gifts.purchaseGiftIndividualSubscription">Hadiah Langganan</message>
-	<message key="gifts.subscriptionFormIntroduction">Mohon isi form berikut. Kontak yang dituliskan, bersama dengan pesan Anda, akan digunakan untuk mengirim email ke penerima dan memberitahu mereka tentang pendaftaran hadiah mereka (Anda juga akan memperoleh salinan email tersebut).</message>
-	<message key="gifts.details">Rincian Hadiah</message>
-	<message key="gifts.detailsDescription">Mohon pilih hadiah berikut dan tuliskan pesan Anda untuk diemailkan ke penerima (Anda akan menerima salinan email tersebut).</message>
-	<message key="gifts.gift">Hadiah</message>
-	<message key="gifts.noteTitle">Judul</message>
-	<message key="gifts.note">Pesan</message>
-	<message key="gifts.noteTitleRequired">Mohon berikan judul untuk pesan Anda.</message>
-	<message key="gifts.noteRequired">Mohon tuliskan pesan Anda.</message>
-	<message key="gifts.localeRequired">Pilih bahasa untuk pesan Anda.</message>
-	<message key="gifts.myGifts">Hadiah Saya</message>
-	<message key="gifts.manageMyGifts">Kelola Hadiah Saya</message>
-	<message key="gifts.redeemGift">Ambil Hadiah</message>
-	<message key="gifts.status.notRedeemed">Tersedia</message>
-	<message key="gifts.status.redeemed">Sudah Diambil</message>
-	<message key="gifts.status.redeemGift">Ambil Hadiah</message>
-	<message key="gifts.subscriptions">Langganan</message>
-	<message key="gifts.subscriptionsDescription">Hadiah langganan yang diambil akan menggantikan langganan Anda sebelumnya (bila ada). Subscriptions will begin on the redemption date and will be valid for the duration of the subscription type.</message>
-	<message key="gifts.purchaseGiftSubscription">Berikan hadiah langganan</message>
-	<message key="gifts.giftSubscriptionsAvailable">Hadiah langganan juga tersedia. Hadiah langganan dapat diambil kapan saja oleh penerima dan merupakan cara yang baik untuk mendukung jurnal ini.</message>
-	<message key="gifts.noSubscriptions">Tidak ada hadiah langganan</message>
-	<message key="gifts.giftRedeemed">Hadiah telah berhasil diambil.</message>
-	<message key="gifts.noGiftToRedeem">Hadiah ini tidak dapat diambil.</message>
-	<message key="gifts.giftAlreadyRedeemed">Hadiah ini telah diambil.</message>
-	<message key="gifts.giftNotValid">Hadiah ini tidak valid dan tidak dapat diambil.</message>
-	<message key="gifts.subscriptionTypeNotValid">Jenis langganan di hadiah ini tidak valid. Mohon hubungi manajer langganan.</message>
-	<message key="gifts.subscriptionNonExpiring">Hadiah tidak diberikan karena Anda telah memiliki langganan abadi di jurnal ini.</message>
-
 	<!-- Payments -->
 	<message key="payment.loginRequired">Anda harus login untuk melakukan pembayaran.</message>
 	<message key="payment.loginRequired.forArticle">Langganan atau pembelian artikel dibutuhkan untuk mengakses judul ini. Untuk verifikasi langganan, akses pembelian sebelumnya, atau untuk membeli artikel, silakan login ke jurnal.</message>
@@ -885,14 +848,10 @@ Aktif berarti berapa jumlah review yang sedang dipertimbangkan atau sedang berla
 	<message key="payment.type.purchaseIssue">Biaya Pembelian Terbitan</message>
 	<message key="payment.type.subscription">Biaya Langganan</message>
 	<message key="payment.type.donation">Donasi</message>
-	<message key="payment.type.gift">Hadiah</message>
-	<message key="payment.type.gift.subscription">Langganan</message>
 
 	<message key="payment.donation.makeDonation">Berikan donasi</message>
 
 	<message key="payment.submission.paySubmission">Bayar Biaya Penyerahan Naskah</message>
-	<message key="payment.fastTrack.payFastTrack">Bayar FastTrack</message>
-	<message key="payment.fastTrack.inFastTrack">di FastTrack</message>
 	<message key="payment.publication.payPublication">Bayar Publikasi</message>
 	<message key="payment.publication.publicationPaid">Biaya Publikasi Lunas</message>
 

@@ -41,9 +41,7 @@
 	<message key="manager.payment.notFound">Blev ikke fundet</message>
 	<message key="manager.payment.options">Indstillinger</message>
 	<message key="manager.payment.options.acceptSubscriptionPayments">Dette aktiverer betalinger for abonnementer, hvor typer, omkostning, varighed og abonnenter administreres af abonnementschefen.</message>
-	<message key="manager.payment.options.donationFee">Donationer til tidsskrift</message>
 	<message key="manager.payment.options.enablePayments">Klik her for at aktivere betalingsmodulet. Du skal konfigurere betalingsindstillinger ved at udfylde formularen nedenfor. Bemærk! Brugere skal logge på for at kunne foretage betalinger.</message>
-	<message key="manager.payment.options.fastTrackFee">Fast Track-bedømmelse</message>
 	<message key="manager.payment.options.fee">Gebyr</message>
 	<message key="manager.payment.options.feeDescription">Beskrivelse af gebyr</message>
 	<message key="manager.payment.options.feeName">Navn på gebyr</message>
@@ -51,9 +49,7 @@
 	<message key="manager.payment.options.onlypdf">Begræns kun adgang til artiklers PDF-version</message>
 	<message key="manager.payment.options.publicationFee">Artikelpublicering</message>
 	<message key="manager.payment.options.purchaseArticleFee">Køb artikel</message>
-	<message key="manager.payment.options.submissionFee">Artikelmanuskript</message>
 	<message key="manager.payment.options.text">Beskrivelse af betalingsmåde</message>
-	<message key="manager.payment.options.waiverPolicy">Politik om afkald</message>
 	<message key="manager.payment.paymentId">Betalings-id</message>
 	<message key="manager.payment.paymentMethod">Betalingsmåde</message>
 	<message key="manager.payment.paymentMethod.description">Du kan konfigurere en hvilken som helst af følgende plug-ins til Betalingsmåde fra denne skærm.</message>
@@ -352,7 +348,6 @@ I begge tilfælde har redaktøren mulighed for at inkludere bedømmelseskommenta
 	<message key="manager.subscriptionPolicies.subscriptionContact">Abonnementschef</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactDescription">Kontaktpersonen, der er angivet under Abonnementer under Om tidsskriftet.</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactEmailValid">Angiv en gyldig e-mail-adresse.</message>
-	<message key="manager.subscriptionPolicies.subscriptionPoliciesSaved">Abonnementspolitikindstillingerne er blevet opdateret.</message>
 	<message key="manager.subscriptions">Abonnementer</message>
 	<message key="manager.subscriptions.confirmDelete">Er du sikker på, at du vil slette dette abonnement?</message>
 	<message key="manager.subscriptions.create">Opret nyt abonnement</message>
@@ -493,9 +488,6 @@ I begge tilfælde har redaktøren mulighed for at inkludere bedømmelseskommenta
 	<message key="manager.setup.useThumbnail">Thumbnail</message>
 	<message key="manager.setup.categories">Kategorier</message>
 	<message key="manager.payment.options.purchaseIssueFee">Køb nummer</message>
-	<message key="manager.payment.giftFees">Gavegebyr</message>
-	<message key="manager.payment.giftFeesDescription">Et link til gaveabonnement vil fremkomme på siden 'Abonnementer' under 'Om tidsskriftet' og som del af abonnementsoplysningerne i sidemenuen.</message>
-	<message key="manager.payment.options.acceptGiftSubscriptionPayments">Dette vil gøre det muligt for læserne at købe gaveabonnementer til andre læsere.</message>
 	<message key="manager.sections.alertDelete">Før denne sektion kan slettes, skal de artikler, der er publiceret i sektionen overføres til andre sektioner.</message>
 	<message key="manager.setup.categories.description">Vælg den mest passende kategori blandt de ovenfor anførte. Læserne kan herefter browse gennem hele tidsskriftet via kategorier.</message>
 	<message key="manager.setup.resetPermissions">Genindstil artikelbegrænsning</message>
@@ -511,13 +503,11 @@ I begge tilfælde har redaktøren mulighed for at inkludere bedømmelseskommenta
 	<message key="manager.statistics.reports.filters.byObject.description">Indsnævre resultatet ud fra elementtype (tidsskrift, nummer, artikel, pdf-format, andrepubliceringsformater) og/eller ud fra et eller flere element-id'er.</message>
 	<message key="manager.setup.copyrightYearBasis">Basér ny artikels ophavsretsår på</message>
 	<message key="manager.setup.contextName">Titel på tidsskrift</message>
-	<message key=""><![CDATA[]]></message>
 	<message key="manager.setup.journalSummary">Tidsskriftsbeskrivelse</message>
 	<message key="manager.setup.journalSummary.description">Tilføj en kort beskrivelse på 20-25 ord, der vises lige under tidsskriftets links på den fælles hjemmeside sammen med de øvrige tidsskrifter.</message>
 	<message key="manager.setup.masthead.description">Opret liste over redaktører, tidsskriftschefer og andre personer tilknyttet tidsskriftet.</message>
 	<message key="manager.setup.journalAbout">Om tidsskriftet</message>
 	<message key="manager.setup.journalAbout.description">Her indskrives alle de informationer, som kan være af interesse for læsere, forfattere eller bedømmere. Det gælder f.eks. tidsskriftets fokusområde, oplysninger om ophavsret, open access politik, en erklæring om beskyttelse af personlige oplysninger, tidsskriftets historie mm.</message>
-	<message key=""><![CDATA[]]></message>
 	<message key="manager.setup.masthead">Kolofon</message>
 	<message key="manager.setup.Issn">ISSN</message>
 	<message key="manager.website.archiving">Arkivering</message>

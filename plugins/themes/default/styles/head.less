@@ -119,8 +119,11 @@
 		}
 	}
 
-	[aria-haspopup] a:focus,
-	[aria-haspopup] a:hover {
+	> li:hover ul {
+		left: 14px;
+	}
+
+	[aria-haspopup]:hover {
 		border-color: transparent;
 	}
 
@@ -134,8 +137,8 @@
 		}
 	}
 
-	[aria-haspopup]  ul a:focus,
-	[aria-haspopup]  ul a:hover {
+	.dropdown-menu a:focus,
+	.dropdown-menu a:hover {
 		border-color: @primary;
 	}
 
@@ -189,7 +192,7 @@
 		// Needs to be defined outside of a media query or the font doesn't
 		// load
 		&:before {
-			&:extend(.fa);
+			.fa();
 			content: @fa-var-search;
 		}
 	}
@@ -207,7 +210,7 @@
 	.search_cancel{
 
 		&:before {
-			&:extend(.fa);
+			.fa();
 			content: @fa-var-times;
 			width: @double;
 			height: @double;
@@ -392,32 +395,14 @@
 		color: @text-bg-base;
 	}
 
-	// Open submenus aligned to the right edge, so they don't overflow screen
-	li:hover > ul,
-	li:focus > ul,
-	li.in_focus > ul {
-		left: auto;
-		right: 0;
-	}
-
 	// Align to the right edge of the container
 	> li:last-child a {
 		padding-right: 0;
 	}
 
-	// Offset the linking arrow a bit to compensate for short menu height
-	[aria-expanded="true"]:before {
-		border-width: @half;
-	}
-
 	// Fix alignment issues in task-count
 	.profile > a {
 		text-align: right;
-	}
-
-	// Don't show the drop-down caret next to the task count
-	.profile > a:after {
-		display: none;
 	}
 
 	.task_count {

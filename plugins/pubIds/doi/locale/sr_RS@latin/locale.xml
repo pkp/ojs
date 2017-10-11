@@ -47,7 +47,7 @@
 	<message key="plugins.pubIds.doi.editor.doiObjectTypeSubmission">članak</message>
 	<message key="plugins.pubIds.doi.editor.doiSuffixCustomIdentifierNotUnique">Dati DOI sufiks je već u upotrebi. Unesite jedinstveni DOI sufiks za svaku stavku.</message>
 	<message key="plugins.pubIds.doi.description">Ovaj dodatak omogućuje dodeljivanje DOI-a</message>
-	<message key="plugins.pubIds.doi.readerDisplayName">DOI:</message>
+	<message key="plugins.pubIds.doi.readerDisplayName">DOI</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiReassign.description">Ukoliko promenite vašu DOI konfiguraciju, dodeljeni DOI-i neće biti promenjeni. Kada je konfiguracija sačuvana, koristite opciju čišćenja postojećih DOI-a i dodeljivanja novih.</message>
 	<message key="plugins.pubIds.doi.editor.doiObjectTypeRepresentation">fajl prikaza</message>
 	<message key="plugins.pubIds.doi.editor.customSuffixMissing">Nedostaje prilagođeni sufiks</message>

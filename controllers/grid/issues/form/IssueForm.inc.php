@@ -15,6 +15,9 @@
  */
 
 import('lib.pkp.classes.form.Form');
+import('lib.pkp.classes.linkAction.LinkAction');
+import('lib.pkp.classes.linkAction.request.RemoteActionConfirmationModal');
+
 import('classes.issue.Issue'); // Bring in constants
 
 class IssueForm extends Form {
@@ -23,6 +26,7 @@ class IssueForm extends Form {
 
 	/**
 	 * Constructor.
+	 * @param $issue Issue (optional)
 	 */
 	function __construct($issue = null) {
 		parent::__construct('controllers/grid/issues/form/issueForm.tpl');
@@ -45,58 +49,43 @@ class IssueForm extends Form {
 	}
 
 	/**
-	 * Fetch the form.
+	 * @copydoc Form::fetch()
 	 */
 	function fetch($request) {
-		$templateMgr = TemplateManager::getManager($request);
-		$journal = $request->getJournal();
-
-		// set up the accessibility options pulldown
-		$templateMgr->assign('enableDelayedOpenAccess', $journal->getSetting('enableDelayedOpenAccess'));
-
-		$templateMgr->assign('accessOptions', array(
-			ISSUE_ACCESS_OPEN => __('editor.issues.openAccess'),
-			ISSUE_ACCESS_SUBSCRIPTION => __('editor.issues.subscription')
-		));
-
 		if ($this->issue) {
-			$templateMgr->assign('issue', $this->issue);
-			$templateMgr->assign('issueId', $this->issue->getId());
-		}
+			$templateMgr = TemplateManager::getManager($request);
+			$templateMgr->assign(array(
+				'issue' => $this->issue,
+				'issueId' => $this->issue->getId(),
+			));
 
-		// Cover image preview
-		$locale = AppLocale::getLocale();
-		$coverImage = $this->issue ? $this->issue->getCoverImage($locale) : null;
-
-		// Cover image delete link action
-		if ($coverImage) {
-			import('lib.pkp.classes.linkAction.LinkAction');
-			import('lib.pkp.classes.linkAction.request.RemoteActionConfirmationModal');
-			$router = $request->getRouter();
-			$deleteCoverImageLinkAction = new LinkAction(
-				'deleteCoverImage',
-				new RemoteActionConfirmationModal(
-					$request->getSession(),
-					__('common.confirmDelete'), null,
-					$router->url(
-						$request, null, null, 'deleteCoverImage', null, array(
-							'coverImage' => $coverImage,
-							'issueId' => $this->issue->getId(),
-						)
+			// Cover image delete link action
+			if ($coverImage = $this->issue->getCoverImage(AppLocale::getLocale())) $templateMgr->assign(
+				'deleteCoverImageLinkAction',
+				new LinkAction(
+					'deleteCoverImage',
+					new RemoteActionConfirmationModal(
+						$request->getSession(),
+						__('common.confirmDelete'), null,
+						$request->getRouter()->url(
+							$request, null, null, 'deleteCoverImage', null, array(
+								'coverImage' => $coverImage,
+								'issueId' => $this->issue->getId(),
+							)
+						),
+						'modal_delete'
 					),
-					'modal_delete'
-				),
-				__('common.delete'),
-				null
+					__('common.delete'),
+					null
+				)
 			);
-			$templateMgr->assign('deleteCoverImageLinkAction', $deleteCoverImageLinkAction);
 		}
 
 		return parent::fetch($request);
 	}
 
 	/**
-	 * Validate the form
+	 * @copydoc Form::validate()
 	 */
 	function validate($request) {
 		if ($temporaryFileId = $this->getData('temporaryFileId')) {
@@ -115,7 +104,7 @@ class IssueForm extends Form {
 	}
 
 	/**
-	 * Initialize form data from current issue.
+	 * @copydoc Form::initData()
 	 */
 	function initData($request) {
 		if (isset($this->issue)) {
@@ -127,8 +116,6 @@ class IssueForm extends Form {
 				'year' => $this->issue->getYear(),
 				'datePublished' => $this->issue->getDatePublished(),
 				'description' => $this->issue->getDescription(null), // Localized
-				'accessStatus' => $this->issue->getAccessStatus(),
-				'openAccessDate' => $this->issue->getOpenAccessDate(),
 				'showVolume' => $this->issue->getShowVolume(),
 				'showNumber' => $this->issue->getShowNumber(),
 				'showYear' => $this->issue->getShowYear(),
@@ -138,24 +125,11 @@ class IssueForm extends Form {
 			);
 			parent::initData();
 		} else {
-			$journal = $request->getJournal();
-			switch ($journal->getSetting('publishingMode')) {
-				case PUBLISHING_MODE_SUBSCRIPTION:
-				case PUBLISHING_MODE_NONE:
-					$accessStatus = ISSUE_ACCESS_SUBSCRIPTION;
-					break;
-				case PUBLISHING_MODE_OPEN:
-				default:
-					$accessStatus = ISSUE_ACCESS_OPEN;
-					break;
-			}
-
 			$this->_data = array(
 				'showVolume' => 1,
 				'showNumber' => 1,
 				'showYear' => 1,
 				'showTitle' => 1,
-				'accessStatus' => $accessStatus
 			);
 		}
 	}
@@ -170,8 +144,6 @@ class IssueForm extends Form {
 			'number',
 			'year',
 			'description',
-			'accessStatus',
-			'enableOpenAccessDate',
 			'showVolume',
 			'showNumber',
 			'showYear',
@@ -179,7 +151,6 @@ class IssueForm extends Form {
 			'temporaryFileId',
 			'coverImageAltText',
 			'datePublished',
-			'openAccessDate',
 		));
 
 		$this->addCheck(new FormValidatorCustom($this, 'issueForm', 'required', 'editor.issues.issueIdentificationRequired', create_function('$showVolume, $showNumber, $showYear, $showTitle', 'return $showVolume || $showNumber || $showYear || $showTitle ? true : false;'), array($this->getData('showNumber'), $this->getData('showYear'), $this->getData('showTitle'))));
@@ -189,7 +160,6 @@ class IssueForm extends Form {
 	/**
 	 * Save issue settings.
 	 * @param $request PKPRequest
-	 * @return int Issue ID for created/updated issue
 	 */
 	function execute($request) {
 		$journal = $request->getJournal();
@@ -200,6 +170,16 @@ class IssueForm extends Form {
 			$issue = $this->issue;
 		} else {
 			$issue = $issueDao->newDataObject();
+			switch ($journal->getSetting('publishingMode')) {
+				case PUBLISHING_MODE_SUBSCRIPTION:
+				case PUBLISHING_MODE_NONE:
+					$issue->setAccessStatus(ISSUE_ACCESS_SUBSCRIPTION);
+					break;
+				case PUBLISHING_MODE_OPEN:
+				default:
+					$issue->setAccessStatus(ISSUE_ACCESS_OPEN);
+					break;
+			}
 			$isNewIssue = true;
 		}
 		$volume = $this->getData('volume');
@@ -219,10 +199,6 @@ class IssueForm extends Form {
 		$issue->setShowNumber($this->getData('showNumber'));
 		$issue->setShowYear($this->getData('showYear'));
 		$issue->setShowTitle($this->getData('showTitle'));
-
-		$issue->setAccessStatus($this->getData('accessStatus') ? $this->getData('accessStatus') : ISSUE_ACCESS_OPEN); // See bug #6324
-		if ($this->getData('enableOpenAccessDate')) $issue->setOpenAccessDate($this->getData('openAccessDate'));
-		else $issue->setOpenAccessDate(null);
 
 		// If it is a new issue, first insert it, then update the cover
 		// because the cover name needs an issue id.

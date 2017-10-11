@@ -828,64 +828,6 @@ Review richtlijnen<br />
 {$reviewGuidelines}]]></body>
 		<description>Deze e-mail wordt door de sectieredacteur aan een reviewer verstuurd om te vragen of die een review voor de tweede of latere ronde van een inzending wil doen. De inzending wordt als bijlage meegestuurd. Dit bericht wordt gebruikt als het e-mail reviewproces wordt geselecteerd in stap 2 van het instellen. (Zie verder REVIEW_REQUEST_SUBSEQUENT)</description>
 	</email_text>
-	<email_text key="GIFT_AVAILABLE">
-		<subject>{$giftNoteTitle}</subject>
-		<body><![CDATA[Beste {$recipientFirstName},<br />
-<br />
-{$buyerFullName} zou een u een gift  willen doen op op {$giftJournalName}:<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-{$giftNote}<br />
-<br />
-<br />
-U zult een volgende e-mail ontvangen met login gegevens en instructies voor het inwisslen van uw gift.<br />
-<br />
-We hopen dat u zult genieten van uw gift!<br />
-<br />
-{$giftContactSignature}]]></body>
-		<description>deze e-mail bericht de ontvanger van een gift dat de gift is gekocht en beschikbaar is voor inwisselen.</description>
-	</email_text>
-	<email_text key="GIFT_USER_REGISTER">
-		<subject>Wissel uw gift in: login gegevens</subject>
-		<body><![CDATA[Beste {$recipientFirstName},<br />
-<br />
-{$buyerFullName} heeft een gift voor u op {$giftJournalName}:<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-Om uw gift in te wisselen kunt u inloggen op de website van het tijdschrift op: {$giftUrl}<br />
-<br />
-Uw gebruikersnaam: {$username}<br />
-Uw wachtwoord: {$password}<br />
-<br />
-Na het inloggen kunt u uw wachtwoord veranderen.<br />
-<br />
-Veel plezier met uw gift!<br />
-<br />
-{$giftContactSignature}]]></body>
-		<description>Deze e-mail stelt de ontvanger van een gift op de hoogte van de logingegevens van een nieuw account.</description>
-	</email_text>
-	<email_text key="GIFT_USER_LOGIN">
-		<subject>Gift inwisselen: login gegevens</subject>
-		<body><![CDATA[Beste {$recipientFirstName},<br />
-<br />
-{$buyerFullName} heeft een gift voor u op {$giftJournalName}:<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-Om uw gift in te wisselen kunt u inloggen op de website van het tijdschrift op {$giftUrl}<br />
-<br />
-Uw gebruikersnaam: {$username}<br />
-<br />
-We wensen u veel plezier met uw gift!<br />
-<br />
-{$giftContactSignature}]]></body>
-		<description>Deze e-mail bericht de ontvanger van een gift over de login gegevens</description>
-	</email_text>
 	<email_text key="REVISED_VERSION_NOTIFY">
 		<subject>Herziene versie geladen</subject>
 		<body><![CDATA[{$editorialContactName}:<br />

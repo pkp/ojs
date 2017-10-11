@@ -39,7 +39,7 @@
 
 
 	<message key="reviewer.article.enterReviewForm">Haga clic en el icono para rellenar el formulario de revisión.</message>
-	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Rellene los campos obligatorios.</message>
+	<message key="reviewer.submission.reviewFormResponse.form.responseRequired">Rellene los campos obligatorios.</message>
 
 	<!-- review forms end -->
 
@@ -337,7 +337,6 @@
 
 	<!-- General plugin information -->
 	<message key="plugins.categories.auth.description">Los módulos de autorización permiten a Open Journal Systems delegar las tareas de autenticación de usuarios/as a otros sistemas, como servidores LDAP.</message>
-	<message key="plugins.categories.citationFormats.description">Los módulos de formato de citas permiten a los usuarios/as emplear distintos formatos para acceder a las citas de los artículos.</message>
 	<message key="plugins.categories.generic.description">Los módulos genéricos se utilizan para ampliar las características del Open Journal Systems de diversas maneras y que son incompatibles con otras categorías de módulos.</message>
 	<message key="plugins.categories.implicitAuth">Módulos de autenticación implícita</message>
 	<message key="plugins.categories.implicitAuth.description">Los módulos de autenticación implícita ponen en funcionamiento un soporte para la autenticación de usuarios/as basado en encabezados http.</message>
@@ -489,7 +488,6 @@
 	<message key="reviewer.article.selectRecommendation">Seleccione una recomendación y envíe la revisión para completar el proceso. Debe introducir la revisión o subir un archivo antes de seleccionar una recomendación.</message>
 	<message key="reviewer.article.mustSelectDecision">No se ha seleccionado ninguna recomendación. Debe seleccionar una recomendación antes de enviar el formulario.</message>
 	<message key="reviewer.article.confirmDecision">Una vez haya registrado su decisión, no podrá hacer cambios en esta revisión. ¿Está seguro/a de que desea continuar?</message>
-	<message key="reviewer.article.ensuringBlindReview">Garantizar una revisión anónima</message>
 
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">Archivo para el corrector/a de originales</message>
@@ -782,8 +780,6 @@
 	<message key="payment.donation.makeDonation">Hacer una donación</message>
 
 	<message key="payment.submission.paySubmission">Pagar cuota de envío</message>
-	<message key="payment.fastTrack.payFastTrack">Pagar para la revisión rápida</message>
-	<message key="payment.fastTrack.inFastTrack">en revisión rápida</message>
 	<message key="payment.publication.payPublication">Pagar para publicar</message>
 	<message key="payment.publication.publicationPaid">Cuota de publicación pagada</message>
 
@@ -1012,4 +1008,10 @@ La configuración del soporte CLOCKSS para Open Journal Systems no hace falta qu
 
 	<message key="editor.issues.backIssues">Números anteriores</message>
 	<message key="editor.issues.futureIssues">Próximos números</message>
+	<message key="journal.viewAllIssues">Ver todos los números</message>
+	<message key="about.onlineSubmissions.submissionActions">{$newSubmission} o {$viewSubmissions}.</message>
+	<message key="about.onlineSubmissions.newSubmission">Realizar un nuevo envío</message>
+	<message key="about.onlineSubmissions.viewSubmissions">Ver sus envíos pendientes</message>
+	<message key="notification.type.assignProductionUser">Asigne un usuario/a para crear galeradas mediante el enlace Añadir de la lista de participantes.</message>
+	<message key="notification.type.awaitingRepresentations">Esperando galeradas.</message>
 </locale>

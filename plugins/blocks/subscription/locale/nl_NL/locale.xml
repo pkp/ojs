@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/blocks/subscription/locale/nl_NL/locale.xml
+  *
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Credits: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Dutch_(nl_NL)
+  *
+  * Localization strings.
+  -->
+
+<locale name="nl_NL" full_name="Nederlands">
+	<message key="plugins.block.subscription.displayName">Abonnement-blok</message>
+	<message key="plugins.block.subscription.description">Deze plugin levert informatie over het abonnement in de sidebar.</message>
+	<message key="plugins.block.subscription.blockTitle">Abonnement</message>
+	<message key="plugins.block.subscription.expires">Verloopt</message>
+	<message key="plugins.block.subscription.providedBy">Toegang verzorgd door:</message>
+	<message key="plugins.block.subscription.comingFromIP">Komend van IP:</message>
+	<message key="plugins.block.subscription.about">Abonnementen</message>
+	<message key="plugins.block.subscription.loginToVerifySubscription">Log in om uw abonnement te verifiëren</message>
+</locale>

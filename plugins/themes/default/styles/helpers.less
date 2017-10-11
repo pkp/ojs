@@ -12,11 +12,11 @@
 // A horizontal navigation list
 //
 // This component is applied to the hierarchical unordered navigation lists. It
-// supports nested lists that will be displayed on hover/focus.
+// supports nested lists that will be displayed on hover.
 //
 // <ul class="pkp_nav_list">
-//   <li aria-haspopup="true" aria-expanded="false">
-//     <a href="#">1</a>
+//   <li>
+//     <a href="#" aria-haspopup="true" aria-expanded="false">1</a>
 //     <ul>
 //       <li>
 //         <a href="#">1-a</a>
@@ -84,55 +84,11 @@
 		}
 	}
 
-	// Arrow linking top-level menu items with submenus
-	[aria-expanded="true"] {
-
-		> ul {
-			left: 0;
-		}
-
-		&:before {
-			content: '';
-			position: absolute;
-			bottom: 0;
-			left: 50%;
-			.transform(translateX(-100%)); // Extra 50% centers under text, accounting for extra space from dropdown caret on the right.
-			width: 0;
-			height: 0;
-			color: @bg;
-			border-bottom: @base solid;
-			border-right: @base solid transparent;
-			border-left: @base solid transparent;
-			vertical-align: middle;
-			z-index: 1001;
-		}
-
-		// Ensure a dropdown doesn't open beyond the edge of the screen by aligning
-		// such dropdowns to the right rather than the left.
-		&.align_right > ul {
-			left: auto;
-			// Position in center on very small screens to prevent it from flying
-			// off to the left. Not a perfect solution, but should suffice for the
-			// overwhelming majority of cases
-			width: 10em;
-			right: 50%;
-			.transform(translateX(50%));
-
-			@media(min-width: @screen-phone) {
-				right: 0;
-				.transform(none);
-				width: 15em;
-			}
-		}
+	> li:hover ul {
+		left: 0;
 	}
 
-	// Dropdown caret indicating submenus
-	// @todo these can probably abstracted into reusable components
-	[aria-haspopup] a:first-child {
-		margin-right: 0;
-	}
-
-	[aria-haspopup] > a:after {
+	[aria-haspopup]:after {
 		position: relative;
 		display: inline-block;
 		content: '';
@@ -145,15 +101,18 @@
 		vertical-align: middle;
 		overflow: hidden;
 	}
+}
 
-	ul [aria-haspopup] > a:after {
-		border-left: 4px solid;
-		border-top: 4px solid transparent;
-		border-bottom: 4px solid transparent;
-		border-right: 4px solid transparent;
-	}
+// Bootstrap dropdown components
+.dropdown-menu {
+	display: none;
 
-	[aria-expanded="true"] > a:after {
-		opacity: 0;
+	&.show {
+		display: block;
 	}
+}
+
+[data-toggle="dropdown"]:hover + .dropdown-menu,
+.dropdown-menu:hover {
+	display: block;
 }

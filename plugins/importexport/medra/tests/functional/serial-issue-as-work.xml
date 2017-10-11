@@ -9,7 +9,7 @@
 		<FromEmail>from@email.com</FromEmail>
 		<ToCompany>mEDRA</ToCompany>
 		<SentDate>201111082218</SentDate>
-		<MessageNote>This dataset was exported with ojs2, version x.x.x.x.</MessageNote>
+		<MessageNote>This dataset was exported with ojs, version x.x.x.x.</MessageNote>
 	</Header>
 	<DOISerialIssueWork>
 		<NotificationType>06</NotificationType>

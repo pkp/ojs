@@ -7,9 +7,8 @@
   * Copyright (c) 2013-2017 Simon Fraser University
   * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Localization strings for the pt_PT (Português (Portugal)) locale (default journal settings).
-  *
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Portuguese_(pt_PT)
+  * Localization strings.
   -->
 
 <locale name="pt_PT" full_name="Português (Portugal)">
@@ -23,7 +22,7 @@
 	 * DEFAULT - Default settings for setup items.
 	 *
 	-->
-	<message key="default.journalSettings.checklist.notPreviouslyPublished">A contribuição é original e inédita e não se encontra sob revisão ou para publicação por outra revista. Caso contrário, deve-se justificar em "Comentários ao Editor".</message>
+	<message key="default.journalSettings.checklist.notPreviouslyPublished">A contribuição é original e inédita e não se encontra sob revisão ou para publicação junto de outra revista. Caso contrário, deve-se justificar em "Comentários ao Editor".</message>
 	<message key="default.journalSettings.checklist.fileFormat">Os ficheiros para submissão encontram-se em formato Microsoft Word, OpenOffice ou RTF (desde que não ultrapassem 2MB)</message>
 	<message key="default.journalSettings.checklist.submissionAppearance">O texto está em espaço duplo; usa uma fonte de 12-pontos; emprega itálico em vez de sublinhado (excepto em endereços URL); as figuras e tabelas estão inseridas no texto, não no final do documento na forma de anexos.</message>
 	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[O texto segue os padrões de estilo e requisitos bibliográficos descritos em <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Instruções para Autores</a>, na secção Sobre a Revista.]]></message>
@@ -91,14 +90,14 @@ Após o término das suas revisões, renomeie o arquivo de NomedoAutorQA.doc par
 • [deleted word] indica remoção de "completamente"
 • Comentário contém a resposta às QAs dos editores]]></message>
 
-	<message key="default.journalSettings.emailSignature">________________________________________________________________________
-{$journalName}
-{$indexUrl}/{$journalPath}</message>
+	<message key="default.journalSettings.emailSignature"><![CDATA[<br/>
+________________________________________________________________________<br/>
+<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>]]></message>
 	<message key="default.journalSettings.forReaders"><![CDATA[Convidamos os leitores a se registarem no serviço de notificação de publicação da revista. Clique em <a href="{$indexUrl}/{$journalPath}/user/register">Registo</a> no menu superior da página. O registo permitirá ao leitor receber o Sumário via e-mail a cada nova edição. A lista procura também reivnidicar um nível básico de apoio ou de leitura. Leia a <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">Política de Privacidade</a> da revista, que assegura aos leitores que os nomes e endereços fornecidos não serão utilizados para outros fins.]]></message>
 	<message key="default.journalSettings.forAuthors"><![CDATA[Deseja enviar contribuições à revista? Convidamos todos a conferir a secção <a href="{$indexUrl}/{$journalPath}/about">Sobre a Revista</a> e ler as políticas de secção, bem como as <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Instruções para Autores</a>. É necessário que os autores se <a href="{$indexUrl}/{$journalPath}/user/register">registem</a> no sistema antes de submeter um artigo; caso já tenha se registado basta <a href="{$indexUrl}/{$journalPath}/login">aceder</a> ao sistema e iniciar o processo de 5 passos de submissão.]]></message>
 	<message key="default.journalSettings.forLibrarians"><![CDATA[Convidamos as bibliotecas a listar revistas de Acesso Livre nos seus catálogos de revistas electrónicas. Este sistema de publicação é desenvolvido também para ser hospedado e operado por bibliotecas de pesquisa em apoio ao trabalho de publicação de revistas de corpo académico. Para mais informações sobre o Open Journal Systems - OJS, e a administração e publicação de revistas revistas por pares visite o <a href="http://pkp.sfu.ca">Public Knowledge Project</a>.]]></message>
 	<message key="default.journalSettings.lockssLicense"><![CDATA[Esta revista utiliza o sistema LOCKSS para criar um sistema de arquivo distribuído entre as bibliotecas participantes e permite às mesmas criar arquivos permanentes da revista para a preservação e restauração. <a href="http://www.lockss.org/">Saiba mais...</a>]]></message>
-	<message key="default.journalSettings.checklist.addressesLinked">URLs para as referências foram fornecidas quando disponíveis.</message>
+	<message key="default.journalSettings.checklist.addressesLinked">Quando disponíveis, foram fornecidos URLs para as referências.</message>
 	<message key="default.journalSettings.refLinkInstructions"><![CDATA[<h4>Para incluir Referências Activas no processo de Layout</h4>
 	<p>Ao transformar a submissão para HTML ou PDF, assegure-se de que todos os hiperlinks estão activos.</p>
 	<h4>A. Quando o autor informa o Link para a Referência</h4>
@@ -145,23 +144,37 @@ Os números na Tabela 3 não estão alinhadas na 3ª coluna.</pre>
 <br />
 <pre>4. FORMATAÇÃO
 O parágrafo iniciado em "Este último elemento..." não está recuado.</pre>]]></message>
-	<message key="default.journalSettings.submissionFeeDescription">Os Autores são obrigados a pagar uma Taxa de Submissão de artigos no Passo 1 do processo de submissão, como contribuição com os custos de revisão. Consulte a Política de Isenção de Taxas.</message>
-	<message key="default.journalSettings.fastTrackFeeDescription">O pagamento desta taxa garante que a revisão, decisão editorial e notificação do autor ocorrem no máximo de 4 semanas.</message>
-	<message key="default.journalSettings.publicationFeeDescription">Caso este documento seja aceite para publicação, será necessário o pagamento de uma Taxa de Publicação de Artigo para auxiliar nos custos de publicação. Consulte a Política de Isenção de Taxas.</message>
-	<message key="default.journalSettings.waiverPolicy">Caso não possa pagar as taxas descritas, notifique a Equipa Editorial através do campo Comentários, pois não é de interesse da revista que taxas impeçam a publicação de trabalhos relevantes.</message>
-	<message key="default.journalSettings.membershipFeeDescription">O pagamento desta taxa garante a sua inscrição nesta associação durante um ano, com acesso livre a esta revista.</message>
-	<message key="default.journalSettings.donationFeeDescription">Doações de qualquer valor são muito bem-vindas, e oferecem meios aos editores de manter a qualidade da revista no mais alto nível para os seus leitores e utilizadores.</message>
-	<message key="default.journalSettings.purchaseArticleFeeDescription">O pagamento da taxa permitirá visualizar, transferir e imprimir este artigo.</message>
 	<message key="section.default.title">Artigos</message>
 	<message key="section.default.abbrev">ART</message>
-	<message key="default.journalSettings.submissionFee">Submissão de artigo</message>
-	<message key="default.journalSettings.fastTrackFee">Avaliação com Acompanhamento Rápido</message>
 	<message key="default.journalSettings.publicationFee">Publicação de artigo</message>
-	<message key="default.journalSettings.purchaseArticleFee">Adquirir artigo</message>
+	<message key="default.journalSettings.purchaseArticleFee">Comprar Artigo</message>
 	<message key="default.journalSettings.membershipFee">Registo em Entidade de Classe</message>
-	<message key="default.journalSettings.donationFee">Doações à revista</message>
 	<message key="default.journalSettings.purchaseIssueFee">Comprar Número</message>
-	<message key="default.journalSettings.purchaseIssueFeeDescription">O pagamento deste montante permite ver, descarregar e imprimir o número.</message>
-	<message key="default.journalSettings.emailHeader">A seguinte mensagem foi enviada em nome de {$journalName}.
-________________________________________________________________________</message>
+	<message key="default.genres.article">Texto Artigo</message>
+	<message key="default.journalSettings.clockssLicense"><![CDATA[Esta revista utiliza o sistema CLOCKSS para criar um sistema de arquivamento distribuído entre as bibliotecas participantes e permite que estas bibliotecas criem arquivos permanentes da revista para fins de preservação e restauração. <a href="http://clockss.org/">Mais ...</a>]]></message>
+	<message key="default.groups.abbrev.externalReviewer">R</message>
+	<message key="default.groups.name.manager">Director da Revista</message>
+	<message key="default.groups.plural.manager">Directores da Revista</message>
+	<message key="default.groups.abbrev.manager">DR</message>
+	<message key="default.groups.name.editor">Editor da Revista</message>
+	<message key="default.groups.plural.editor">Editores da Revista</message>
+	<message key="default.groups.abbrev.editor">ER</message>
+	<message key="default.groups.name.guestEditor">Editor Convidado</message>
+	<message key="default.groups.plural.guestEditor">Editores Convidados</message>
+	<message key="default.groups.abbrev.guestEditor">EC</message>
+	<message key="default.groups.name.sectionEditor">Editor Secção</message>
+	<message key="default.groups.plural.sectionEditor">Editores Secção</message>
+	<message key="default.groups.abbrev.sectionEditor">EC</message>
+	<message key="default.groups.name.subscriptionManager">Gestor Assinaturas</message>
+	<message key="default.groups.plural.subscriptionManager">Gestores Assinaturas</message>
+	<message key="default.groups.abbrev.subscriptionManager">GA</message>
+	<message key="default.genres.researchInstrument">Instrumento Pesquisa</message>
+	<message key="default.genres.researchMaterials">Instrumentos Pesquisa</message>
+	<message key="default.genres.researchResults">Resultados Pesquisa</message>
+	<message key="default.genres.transcripts">Transcrições</message>
+	<message key="default.genres.dataAnalysis">Análise Dados</message>
+	<message key="default.genres.dataSet">Conjunto de Dados</message>
+	<message key="default.genres.sourceTexts">Fontes do Texto</message>
+	<message key="default.groups.name.externalReviewer">Revisor</message>
+	<message key="default.groups.plural.externalReviewer">Revisores</message>
 </locale>

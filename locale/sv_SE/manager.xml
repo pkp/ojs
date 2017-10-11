@@ -40,18 +40,14 @@
 	<message key="manager.payment.notFound">Ej funnen</message>
 	<message key="manager.payment.options">Alternativ</message>
 	<message key="manager.payment.options.acceptSubscriptionPayments">Detta aktiverar abonnemangsbetalningar där typer, kostnader, abonnemangsstid och abonnenter hanteras av abonnemangsansvarig.</message>
-	<message key="manager.payment.options.donationFee">Bidrag till tidskriften</message>
 	<message key="manager.payment.options.enablePayments">Klicka här för att akivera betalningsmodulen. Fyll i följande formulär för att konfigurera betalningsinställningarna. Obserera att Användare måste logga in för att använda betalningstjänsten.</message>
-	<message key="manager.payment.options.fastTrackFee">Snabb granskning</message>
 	<message key="manager.payment.options.fee">Avgift</message>
 	<message key="manager.payment.options.feeDescription">Avgiftsbeskrivning</message>
 	<message key="manager.payment.options.feeName">Namn på avgift</message>
 	<message key="manager.payment.options.membershipFee">Organisationsabonnemang</message>
 	<message key="manager.payment.options.onlypdf">Begränsad tillgänglighet endast till artiklarnas pdf-versioner.</message>
 	<message key="manager.payment.options.publicationFee">Publicerad artikel</message>
-	<message key="manager.payment.options.submissionFee">Inskickad artikel</message>
 	<message key="manager.payment.options.text">Beskrivning av betalningsmetod</message>
-	<message key="manager.payment.options.waiverPolicy">Policy för avsägelse</message>
 	<message key="manager.payment.paymentId">Betalnings-ID</message>
 	<message key="manager.payment.paymentMethod">Betalningsmetod</message>
 	<message key="manager.payment.paymentMethod.description">Du kan konfigurera betalningsmetoderna från den här sidan.</message>
@@ -339,7 +335,6 @@
 	<message key="manager.subscriptionPolicies.subscriptionContact">Abonnemangsansvarig</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactDescription">Kontaktinformationn listad under Abonnemang i Om tidskriften.</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactEmailValid">Vänligen fyll i E-postadress.</message>
-	<message key="manager.subscriptionPolicies.subscriptionPoliciesSaved">Dina inställningar för abonnemangspolicy har ändrats.</message>
 	<message key="manager.subscriptions">Abonnemang</message>
 	<message key="manager.subscriptions.confirmDelete">Är du säker på att du vill ta bort det här abonnemanget?</message>
 	<message key="manager.subscriptions.create">Skapa nytt abonnemang</message>

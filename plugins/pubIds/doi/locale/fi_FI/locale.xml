@@ -14,7 +14,7 @@
 <locale name="fi_FI" full_name="Suomi">
 	<message key="plugins.pubIds.doi.displayName">DOI</message>
 	<message key="plugins.pubIds.doi.description">Tämä lisäosa mahdollistaa DOI-tunnisteiden (Digital Object Identifier) määrittämisen OJS-järjestelmässä oleville numeroille, artikkeleille ja julkaistaville tiedostoille.</message>
-	<message key="plugins.pubIds.doi.readerDisplayName">DOI:</message>
+	<message key="plugins.pubIds.doi.readerDisplayName">DOI</message>
 
 	<!-- settings form -->
 	<message key="plugins.pubIds.doi.manager.settings.description">Määritä DOI-lisäosa, jotta voit hallinnoida ja käyttää DOI-tunnisteita OJS:ssä:</message>

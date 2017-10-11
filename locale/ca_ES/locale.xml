@@ -40,7 +40,7 @@
 
 
 	<message key="reviewer.article.enterReviewForm">Feu clic a la icona per emplenar el formulari de revisió.</message>
-	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Empleneu els camps obligatoris.</message>
+	<message key="reviewer.submission.reviewFormResponse.form.responseRequired">Empleneu els camps obligatoris.</message>
 
 	<!-- review forms end -->
 
@@ -339,7 +339,6 @@
 
 	<!-- General plugin information -->
 	<message key="plugins.categories.auth.description">Els mòduls d’autorització permeten que l’Open Journal Systems delegui les tasques d’autenticació d’usuaris/àries a altres sistemes, com ara els servidors LDAP.</message>
-	<message key="plugins.categories.citationFormats.description">Els mòduls de format de citació permeten als usuaris/àries accedir a les citacions d’articles amb diversos formats.</message>
 	<message key="plugins.categories.generic.description">Els mòduls genèrics s’utilitzen per ampliar les funcionalitats de l’Open Journal Systems no incloses en altres categories de mòduls.</message>
 
 	<!-- Files Browser -->
@@ -497,7 +496,6 @@
 		<message key="reviewer.article.selectRecommendation">Seleccioneu una recomanació i trameteu la revisió per completar el procés. Heu d'introduir una revisió o carregar un fitxer abans de seleccionar una recomanació.</message>
 	<message key="reviewer.article.mustSelectDecision">No s’ha seleccionat cap recomanació. Heu de seleccionar la recomanació que vulgueu trametre.</message>
 	<message key="reviewer.article.confirmDecision">Una vegada hàgiu enregistrat una decisió, no podreu fer canvis en aquesta revisió. Esteu segur/a que voleu continuar?</message>
-	<message key="reviewer.article.ensuringBlindReview">Assegurar una avaluació anònima</message>
 
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">Fitxer per corregir</message>
@@ -727,41 +725,6 @@
 	<message key="donations.thankYou">Gràcies</message>
 	<message key="donations.thankYouMessage">Moltes gràcies per la vostra contribució. La vostra contribució és molt valuosa.</message>
 
-	<!-- Gifts -->
-	<message key="gifts.buyer">De</message>
-	<message key="gifts.buyerDescription">De qui és aquest regal?</message>
-	<message key="gifts.recipient">Per a</message>
-	<message key="gifts.recipientDescription">Per a qui és aquest regal?</message>
-	<message key="gifts.thankYou">Gràcies</message>
-	<message key="gifts.thankYouMessage">La compra del vostre regal s'ha completat. Rebreu una còpia del correu electrònic que s'envia al destinatari/ària del regal un cop el vostre pagament s'hagi processat.</message>
-	<message key="gifts.purchaseGiftIndividualSubscription">Subscripció de regal</message>
-	<message key="gifts.subscriptionFormIntroduction">Ompliu el formulari següent. La informació de contacte que ens proporcioneu, juntament amb la vostra nota per al regal, es faran servir per enviar un correu electrònic al destinatari/ària i informar-lo de la seva nova subscripció de regal (també en rebreu una còpia).</message>
-	<message key="gifts.details">Detalls del regal</message>
-	<message key="gifts.detailsDescription">Seleccioneu el regal a continuació i afegiu-hi un missatge personalitzat que s'enviarà per correu electrònic al destinatari/ària (també en rebreu una còpia).</message>
-	<message key="gifts.gift">Regal</message>
-	<message key="gifts.noteTitle">Títol</message>
-	<message key="gifts.note">Nota per al regal</message>
-	<message key="gifts.noteTitleRequired">Introduïu un títol per al vostre missatge personalitzat.</message>
-	<message key="gifts.noteRequired">Introduïu el vostre missatge personalitzat.</message>
-	<message key="gifts.localeRequired">Seleccioneu una llengua per al vostre missatge personalitzat.</message>
-	<message key="gifts.myGifts">Els meus regals</message>
-	<message key="gifts.manageMyGifts">Administra els meus regals</message>
-	<message key="gifts.redeemGift">Bescanvia un regal</message>
-	<message key="gifts.status.notRedeemed">Disponibles</message>
-	<message key="gifts.status.redeemed">Bescanviats</message>
-	<message key="gifts.status.redeemGift">Bescanvia un regal</message>
-	<message key="gifts.subscriptions">Subscripcions</message>
-	<message key="gifts.subscriptionsDescription">La subscripció de regal que bescanvieu aquí substituirà la vostra subscripció existent (si en teniu alguna). Les subscripcions s'iniciaran el dia del bescanvi i seran vàlides en funció de la durada del tipus de subscripció.</message>
-	<message key="gifts.purchaseGiftSubscription">Regaleu una subscripció</message>
-	<message key="gifts.giftSubscriptionsAvailable">Les subscripcions de regal també estan disponibles. El destinatari/ària pot bescanviar la subscripció en qualsevol moment i és una bona manera de donar suport a aquesta revista.</message>
-	<message key="gifts.noSubscriptions">No hi ha subscripcions de regal disponibles.</message>
-	<message key="gifts.giftRedeemed">El regal s'ha bescanviat correctament.</message>
-	<message key="gifts.noGiftToRedeem">Aquest regal no es pot bescanviar.</message>
-	<message key="gifts.giftAlreadyRedeemed">Aquest regal ja s'ha bescanviat.</message>
-	<message key="gifts.giftNotValid">Aquest regal no es vàlid i no s'ha pogut bescanviar.</message>
-	<message key="gifts.subscriptionTypeNotValid">El tipus de subscripció per a aquest regal no és vàlid. Poseu-vos en contacte amb l'administrador/a de subscripcions.</message>
-	<message key="gifts.subscriptionNonExpiring">El regal no s'ha bescanviat perquè ja posseïu una subscripció sense venciment per a aquesta revista.</message>
-
 	<!-- Payments -->
 	<message key="payment.loginRequired">Heu d’iniciar la sessió per poder fer un pagament.</message>
 	<message key="payment.loginRequired.forArticle">Per accedir a aquest element cal fer la subscripció o el pagament de l'article. Inicieu la sessió a la revista per verificar la subscripció, accedir a una compra anterior o comprar un article.</message>
@@ -784,14 +747,10 @@
 	<message key="payment.type.purchaseIssue">Quota per comprar números</message>
 	<message key="payment.type.subscription">Quota de subscripció</message>
 	<message key="payment.type.donation">Donacions</message>
-	<message key="payment.type.gift">Regal</message>
-	<message key="payment.type.gift.subscription">Subscripció</message>
 
 	<message key="payment.donation.makeDonation">Fes una donació</message>
 
 	<message key="payment.submission.paySubmission">Paga la quota de tramesa</message>
-	<message key="payment.fastTrack.payFastTrack">Paga per fer la revisió ràpida</message>
-	<message key="payment.fastTrack.inFastTrack">en revisió ràpida</message>
 	<message key="payment.publication.payPublication">Paga per publicar</message>
 	<message key="payment.publication.publicationPaid">S'ha pagat la quota de publicació</message>
 

@@ -32,7 +32,7 @@
 	 *
 	-->
 
-        <!-- Missing Messages -->
+	<!-- Missing Messages -->
 	<message key="common.ccLicense">CC-licens</message>
 	<message key="journal.issn">Tidskriftens ISSN</message>
 	<message key="manager.setup.doiSuffix">DOI-suffix</message>
@@ -353,7 +353,6 @@
 
 
 
-	<message key="plugins.categories.citationFormats.description">Citering-Plugins förser användaren med olika format som stöder artikelcitering.</message>
 
 
 
@@ -530,33 +529,32 @@ Aktiva visar antalet granskare som för tillfället arbetar med granskning.]]></
 	<message key="reviewer.article.uploadedFile">Uppladdade filer</message>
 	<message key="reviewer.article.reviewersAnnotatedVersion">Versionen uppladdad av granskaren</message>
 	<message key="reviewer.article.reviewersAnnotatedVersionDescription">(Om du vill göra kommentarer till granskaren i filen, spara först ned filen på din hårddisk och ladda sedan upp den igen (Browse/Ladda upp.)</message>
-        <message key="reviewer.article.schedule.request">Redaktörens begäran</message>
-        <message key="reviewer.article.schedule.response">Ditt svar</message>
-        <message key="reviewer.article.schedule.submitted">Granskning har skickats in</message>
-        <message key="reviewer.article.schedule.due">Datum för granskning</message>
+	<message key="reviewer.article.schedule.request">Redaktörens begäran</message>
+	<message key="reviewer.article.schedule.response">Ditt svar</message>
+	<message key="reviewer.article.schedule.submitted">Granskning har skickats in</message>
+	<message key="reviewer.article.schedule.due">Datum för granskning</message>
 	<message key="reviewer.article.decision.accept">Acceptera manuskriptet</message>
 	<message key="reviewer.article.decision.pendingRevisions">Ändringar krävs</message>
 	<message key="reviewer.article.decision.resubmitHere">Återsänd för granskning</message>
-        <message key="reviewer.article.decision.resubmitElsewhere">Skicka in till annan tidskrift</message>
+	<message key="reviewer.article.decision.resubmitElsewhere">Skicka in till annan tidskrift</message>
 	<message key="reviewer.article.decision.decline">Avvisa manuskript</message>
 	<message key="reviewer.article.decision.seeComments">Se kommentarer</message>
 	<message key="reviewer.article.schedule">Schema</message>
-        <message key="reviewer.article.submissionToBeReviewed">Manuskript som ska granskas</message>
-        <message key="reviewer.article.reviewSchedule">Schema för granskningsuppdrag</message>
-        <message key="reviewer.article.reviewSteps">Steg för granskning</message>
-        <message key="reviewer.article.reviewerGuidelines">Riktlinjer för granskare</message>
-        <message key="reviewer.article.notifyEditorA">Meddela manuskriptets granskare</message>
-        <message key="reviewer.article.notifyEditorB">om du vill uppdra åt dig att göra en granskning.</message>
-        <message key="reviewer.article.consultGuidelines">Om du ska göra en granskning, se Riktlinjer för granskare nedan.</message>
-        <message key="reviewer.article.downloadSubmission">Klicka på filnamnen för att ladda ned och granska filerna,(antingen direkt på skärmen eller efter du har skrivit ut dokumentet), som hör till manuskriptet.</message>
-        <message key="reviewer.article.enterCompetingInterests"><![CDATA[Ange om du har en intressekonflikt avseende forskningen (see <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">CI&nbsp;Policy</a>).]]></message>
+	<message key="reviewer.article.submissionToBeReviewed">Manuskript som ska granskas</message>
+	<message key="reviewer.article.reviewSchedule">Schema för granskningsuppdrag</message>
+	<message key="reviewer.article.reviewSteps">Steg för granskning</message>
+	<message key="reviewer.article.reviewerGuidelines">Riktlinjer för granskare</message>
+	<message key="reviewer.article.notifyEditorA">Meddela manuskriptets granskare</message>
+	<message key="reviewer.article.notifyEditorB">om du vill uppdra åt dig att göra en granskning.</message>
+	<message key="reviewer.article.consultGuidelines">Om du ska göra en granskning, se Riktlinjer för granskare nedan.</message>
+	<message key="reviewer.article.downloadSubmission">Klicka på filnamnen för att ladda ned och granska filerna,(antingen direkt på skärmen eller efter du har skrivit ut dokumentet), som hör till manuskriptet.</message>
+	<message key="reviewer.article.enterCompetingInterests"><![CDATA[Ange om du har en intressekonflikt avseende forskningen (see <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">CI&nbsp;Policy</a>).]]></message>
 	<message key="reviewer.competingInterests">Intressekonflikt</message>
-        <message key="reviewer.article.enterReviewA">Klicka på ikonen för att skriva eller klistra in din granskning av manuskriptet.</message>
-        <message key="reviewer.article.uploadFile">Du kan dessutom ladda upp filer för redaktören och/eller till författaren för rådgivning.</message>
-        <message key="reviewer.article.selectRecommendation">För att avsluta granskningsprocessen, välj en rekommendation och skicka granskningen. (Du måste skriva in en bedömning eller ladda upp en fil innan du kan välja rekommendation).</message>
+	<message key="reviewer.article.enterReviewA">Klicka på ikonen för att skriva eller klistra in din granskning av manuskriptet.</message>
+	<message key="reviewer.article.uploadFile">Du kan dessutom ladda upp filer för redaktören och/eller till författaren för rådgivning.</message>
+	<message key="reviewer.article.selectRecommendation">För att avsluta granskningsprocessen, välj en rekommendation och skicka granskningen. (Du måste skriva in en bedömning eller ladda upp en fil innan du kan välja rekommendation).</message>
 	<message key="reviewer.article.mustSelectDecision">Ingen rekommendation har gjorts. Du måste välja rekommendation innan du kan gå vidare.</message>
 	<message key="reviewer.article.confirmDecision">När du har registrerat ditt beslut har du inte längre möjlighet att ändra bedömningen. Är du säker på att du vill fortsätta?</message>
-	<message key="reviewer.article.ensuringBlindReview">Försäkrar anonym granskningsbedömning</message>
 
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">Fil till Manusredaktören</message>
@@ -778,8 +776,6 @@ Aktiva visar antalet granskare som för tillfället arbetar med granskning.]]></
 	<message key="payment.donation.makeDonation">Gör en donation</message>
 
 	<message key="payment.submission.paySubmission">Betala abonnemangsavgift</message>
-	<message key="payment.fastTrack.payFastTrack">Betala för snabbspår</message>
-	<message key="payment.fastTrack.inFastTrack">i snabbspåret</message>
 	<message key="payment.publication.payPublication">Betala för Publicering</message>
 	<message key="payment.publication.publicationPaid">Publiceringsavgift betald</message>
 
@@ -1163,13 +1159,7 @@ The paragraph that begins "This last topic..." is not indented.</pre>]]></messag
 	<message key="about.subscriptions.institutional">Institutionella abonnemang</message>
 	<message key="installer.installApplication">Installera Open Journal Systems</message>
 	<message key="installer.upgradeApplication">Uppgradera Open Journal Systems</message>
-	<message key="default.journalSettings.submissionFeeDescription">Författare måste betala en publiceringsavgift för finansiering av sakkunnigbedömning/granskning.</message>
-	<message key="default.journalSettings.fastTrackFeeDescription">Med den här avgiften garanteras att granskning och besked från redaktören sker inom fyra veckor.</message>
-	<message key="default.journalSettings.publicationFeeDescription">Om artikeln accepteras för publicering, kommer du ombedjas att betala en publiceringsavgift för att täcka publiceringskostnaderna.</message>
-	<message key="default.journalSettings.waiverPolicy">Om du inte har möjligheter att betala denna avgift finns möjlighet att avstå. Vi vill inte att eventuella finansieringsaspekter ska förhindra spridning av god forskning.</message>
 	<message key="default.journalSettings.payPerViewFeeDescription">Betalning av den här avgiften innebär att du kan läsa, ladda ner och skriva ut artikeln.</message>
-	<message key="default.journalSettings.membershipFeeDescription">Betalning av den här avgiften innebär ett ettårsmedlemskap i föreningen, under vilken period du kommer att ha fri tillgänglighet till tidskriften.</message>
-	<message key="default.journalSettings.donationFeeDescription">Donationer till tidskriften tas emot tacksamt för att säkra ett fortsatt kvalificerat redaktörsskap av tidskriften.</message>
 	<message key="issue.fullIssue">Helt nummer</message>
 	<message key="issue.nonpdf.title">Ladda ned nummer</message>
 	<message key="issue.viewIssue">Visa nummer</message>

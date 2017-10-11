@@ -138,21 +138,10 @@ Mohon ikuti protokol berikut dalam membuat revisi elekronik untuk naskah Anda:
 	<message key="default.journalSettings.clockssLicense"><![CDATA[This journal utilizes the CLOCKSS system to create a distributed archiving system among participating libraries and permits those libraries to create permanent archives of the journal for purposes of preservation and restoration. <a href="http://clockss.org/">More...</a>]]></message>
 	
 	<!-- Default settings for payment items. -->
-	<message key="default.journalSettings.submissionFee">Penyerahan Naskah</message>
-	<message key="default.journalSettings.submissionFeeDescription">Penulis diminta untuk membayar Biaya Penyerahan Naskah sebagai bagian dari proses penyerahan untuk berkontribusi pada biaya review.</message>
-	<message key="default.journalSettings.fastTrackFee">Review Fast-Track</message>
-	<message key="default.journalSettings.fastTrackFeeDescription">Dengan pembayaran biaya ini, review, keputusan editorial, dan notifikasi penulis di manuskrip ini dijamin selesai dalam 4 minggu.</message>
 	<message key="default.journalSettings.publicationFee">Publikasi Artikel</message>
-	<message key="default.journalSettings.publicationFeeDescription">Jika naskah ini diterbitkan, Anda akan dikenakan Biaya Publikasi Artikel.</message>
-	<message key="default.journalSettings.waiverPolicy">Jika Anda tidak mempunyai dana untuk membayar biaya penerbitan, Anda berkesempatan untuk memperoleh dispensasi.  Kami tidak ingin biaya menghambat penerbitan karya yang berharga.</message>
 	<message key="default.journalSettings.purchaseArticleFee">Beli Artikel</message>
-	<message key="default.journalSettings.purchaseArticleFeeDescription">Pembayaran biaya ini akan memberi Anda akses untuk membaca, mengunduh, dan mencetak artikel ini.</message>
 	<message key="default.journalSettings.purchaseIssueFee">Beli Terbitan</message>
-	<message key="default.journalSettings.purchaseIssueFeeDescription">Pembayaran biaya ini akan memberi Anda akses untuk membaca, mengunduh, dan mencetak edisi terbitan ini.</message>
 	<message key="default.journalSettings.membershipFee">Keanggotaan Asosiasi</message>
-	<message key="default.journalSettings.membershipFeeDescription">Pembayaran biaya ini akan mendaftarkan Anda sebagai anggota di asosiasi ini untuk satu tahun dan memberikan akses gratis ke jurnal ini.</message>
-	<message key="default.journalSettings.donationFee">Donasi untuk jurnal</message>
-	<message key="default.journalSettings.donationFeeDescription">Donasi berapa pun jumlahnya untuk jurnal ini sangat diterima karena membantu dan menyediakan sarana bagi editor untuk menyediakan jurnal dengan kualitas terbaik untuk para pembaca.</message>
 
 	<!-- Group defaults -->
 	<message key="default.groups.name.manager">Manajer Jurnal</message>

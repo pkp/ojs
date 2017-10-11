@@ -25,7 +25,7 @@ class KalkhafajiSubmissionTest extends ContentBaseTestCase {
 			'firstName' => 'Karim',
 			'lastName' => 'Al-Khafaji',
 			'affiliation' => 'Stanford University',
-			'country' => 'United States of America',
+			'country' => 'United States',
 		));
 
 		$this->createSubmission(array(
@@ -41,7 +41,7 @@ class KalkhafajiSubmissionTest extends ContentBaseTestCase {
 				array(
 					'firstName' => 'Margaret',
 					'lastName' => 'Morse',
-					'country' => 'United States of America',
+					'country' => 'United States',
 					'affiliation' => 'Stanford University',
 					'email' => 'mmorse@mailinator.com',
 				)

@@ -36,8 +36,6 @@
 	<message key="manager.payment.enable">Habilitar</message>
 	<message key="manager.payment.feePaymentOptions">Opciones de pago de la cuota</message>
 	<message key="manager.payment.form.numeric">Todos los costes deben tener un valor numérico positivo (se permite el uso de decimales)</message>
-	<message key="manager.payment.giftFees">Donación de cuotas</message>
-	<message key="manager.payment.giftFeesDescription">Un enlace de donación de suscripciones aparecerá en la página de suscripciones en la sección Acerca de la revista y como elemento del bloque de la barra lateral de suscripciones.</message>
 	<message key="manager.payment.generalFees">Cuotas generales</message>
 	<message key="manager.payment.generalFeesDescription">La sección de Miembros de la asociación se mostrará en la sección Acerca de la revista, debajo de Políticas, y el enlace para realizar donaciones aparecerá sobre el buscador, en la parte derecha de la ventana.</message>
 	<message key="manager.payment.generalOptions">Opciones generales</message>
@@ -46,9 +44,7 @@
 	<message key="manager.payment.options">Opciones</message>
 	<message key="manager.payment.options.acceptSubscriptionPayments">Esta opción activa el pago para suscribirse a la revista. Los tipos de suscripción, el coste, la duración y las suscripciones en sí las administra el gestor/a (de suscripciones) de la revista.</message>
 	<message key="manager.payment.options.acceptGiftSubscriptionPayments">Esta opción activa el pago para donación de suscripciones y permite a los lectores/as de la revista comprar donaciones de suscripciones para otros lectores/as.</message>
-	<message key="manager.payment.options.donationFee">Donaciones a la revista</message>
 	<message key="manager.payment.options.enablePayments">Haga clic aquí para habilitar el módulo de pagos. Debe configurar las opciones de pago. Para ello, rellene el siguiente formulario. Tenga en cuenta que debe iniciar sesión para realizar cualquier pago.</message>
-	<message key="manager.payment.options.fastTrackFee">Revisión rápida</message>
 	<message key="manager.payment.options.fee">Cuota</message>
 	<message key="manager.payment.options.feeDescription">Descripción de la cuota</message>
 	<message key="manager.payment.options.feeName">Nombre de la cuota</message>
@@ -57,9 +53,7 @@
 	<message key="manager.payment.options.publicationFee">Publicar un artículo</message>
 	<message key="manager.payment.options.purchaseArticleFee">Comprar un artículo</message>
 	<message key="manager.payment.options.purchaseIssueFee">Comprar un número</message>
-	<message key="manager.payment.options.submissionFee">Enviar un artículo</message>
 	<message key="manager.payment.options.text">Descripción de la forma de pago</message>
-	<message key="manager.payment.options.waiverPolicy">Política de exención de pago</message>
 	<message key="manager.payment.paymentId">Id. del pago</message>
 	<message key="manager.payment.paymentMethod">Forma de pago</message>
 	<message key="manager.payment.paymentMethod.description">Puede configurar cualquiera de los siguientes módulos de formas de pago en esta pantalla.</message>
@@ -582,4 +576,15 @@
 	<message key="plugins.importexport.common.export.error.outputFileNotWritable">El archivo de salida {$param} no es editable.</message>
 	<message key="plugins.importexport.common.register.error.mdsError">¡El registro ha fallado! El servidor de registro del DOI ha comunicado un error: '{$param}'.</message>
 	<message key="plugins.importexport.common.register.success">¡Registro correcto!</message>
+	<message key="plugins.importexport.common.export.representations">Galeradas</message>
+	<message key="plugins.importexport.common.error.noDOIContentObjects">No hay ningún elemento publicable seleccionado para la asignación de DOI en el módulo de identificador público DOI, por lo que no hay posibilidad de depósito o exportación en este módulo.</message>
+	<message key="plugins.importexport.common.status.registered">Registrado/a</message>
+	<message key="plugins.importexport.common.validation">Validar el XML antes de la exportación y el registro.</message>
+	<message key="plugins.importexport.common.invalidXML">XML inválido:</message>
+	<message key="plugins.importexport.common.export.error.inputFileNotReadable">El archivo cargado {$param} no se puede leer.</message>
+	<message key="plugins.importexport.common.senderTask.warning.noDOIprefix">No se encuentra el prefijo DOI para la revista con la ruta {$path}.</message>
+	<message key="plugins.importexport.common.cliError">ERROR:</message>
+	<message key="plugins.importexport.common.error.unknownJournal">La ruta de la revista especificada, "{$journalPath}", no existe.</message>
+	<message key="plugins.importexport.common.error.unknownObjects">Los objetos especificados no se pueden encontrar.</message>
+	<message key="manager.setup.notifications.copyPrimaryContact">Enviar una copia al contacto principal identificado en los ajustes de la revista.</message>
 </locale>

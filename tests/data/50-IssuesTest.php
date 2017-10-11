@@ -25,7 +25,7 @@ class IssuesTest extends WebTestCase {
 		// Management > Issues
 		$this->waitForElementPresent($selector='css=li.profile a:contains(\'Dashboard\')');
 		$this->clickAndWait($selector);
-		$this->waitForElementPresent($selector='link=Issues');
+		$this->waitForElementPresent($selector='link=Future Issues');
 		$this->click($selector);
 
 		// Create issue

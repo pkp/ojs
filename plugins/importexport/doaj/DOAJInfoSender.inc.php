@@ -92,14 +92,15 @@ class DOAJInfoSender extends ScheduledTask {
 	 */
 	function _registerObjects($objects, $filter, $journal, $objectsFileNamePart) {
 		$plugin = $this->_plugin;
-		// Get the JSON
-		$exportJson = $plugin->exportJSON($objects, $filter, $journal);
-		// Deposit the JSON
-		$result = $plugin->depositXML($objects, $journal, $exportJson);
-		if ($result !== true) {
-			$this->_addLogEntry($result);
+		foreach ($objects as $object) {
+			// Get the JSON
+			$exportJson = $plugin->exportJSON($object, $filter, $journal);
+			// Deposit the JSON
+			$result = $plugin->depositXML($object, $journal, $exportJson);
+			if ($result !== true) {
+				$this->_addLogEntry($result);
+			}
 		}
-
 	}
 
 	/**

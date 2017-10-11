@@ -19,10 +19,17 @@ define('SUBMISSION_EDITOR_DECISION_EXTERNAL_REVIEW', 8);
 // Submission and review stages decision actions.
 define('SUBMISSION_EDITOR_DECISION_ACCEPT', 1);
 define('SUBMISSION_EDITOR_DECISION_DECLINE', 4);
+define('SUBMISSION_EDITOR_DECISION_INITIAL_DECLINE', 9);
 
 // Review stage decisions actions.
 define('SUBMISSION_EDITOR_DECISION_PENDING_REVISIONS', 2);
 define('SUBMISSION_EDITOR_DECISION_RESUBMIT', 3);
+
+// Review stage recommendation actions.
+define('SUBMISSION_EDITOR_RECOMMEND_ACCEPT', 11);
+define('SUBMISSION_EDITOR_RECOMMEND_DECLINE', 14);
+define('SUBMISSION_EDITOR_RECOMMEND_PENDING_REVISIONS', 12);
+define('SUBMISSION_EDITOR_RECOMMEND_RESUBMIT', 13);
 
 // Editorial stage decision actions.
 define('SUBMISSION_EDITOR_DECISION_SEND_TO_PRODUCTION', 7);
@@ -93,6 +100,23 @@ class EditorDecisionActionsManager {
 		}
 	}
 
+	/**
+	 * Get an associative array matching editor recommendation codes with locale strings.
+	 * (Includes default '' => "Choose One" string.)
+	 * @param $stageId integer
+	 * @return array recommendation => localeString
+	 */
+	static function getRecommendationOptions($stageId) {
+		static $recommendationOptions = array(
+			'' => 'common.chooseOne',
+			SUBMISSION_EDITOR_RECOMMEND_PENDING_REVISIONS => 'editor.submission.decision.requestRevisions',
+			SUBMISSION_EDITOR_RECOMMEND_RESUBMIT => 'editor.submission.decision.resubmit',
+			SUBMISSION_EDITOR_RECOMMEND_ACCEPT => 'editor.submission.decision.accept',
+			SUBMISSION_EDITOR_RECOMMEND_DECLINE => 'editor.submission.decision.decline',
+		);
+		return $recommendationOptions;
+	}
+
 	//
 	// Private helper methods.
 	//
@@ -106,24 +130,18 @@ class EditorDecisionActionsManager {
 				'operation' => 'externalReview',
 				'name' => 'externalReview',
 				'title' => 'editor.submission.decision.sendExternalReview',
-				'image' => 'advance',
-				'titleIcon' => 'modal_review',
+				'toStage' => 'editor.review',
 			),
 			SUBMISSION_EDITOR_DECISION_ACCEPT => array(
 				'name' => 'accept',
 				'operation' => 'promote',
 				'title' => 'editor.submission.decision.skipReview',
-				'image' => 'promote',
-				'help' => 'editor.review.NotifyAuthorAccept',
-				'titleIcon' => 'accept_submission',
+				'toStage' => 'submission.copyediting',
 			),
-			SUBMISSION_EDITOR_DECISION_DECLINE => array(
+			SUBMISSION_EDITOR_DECISION_INITIAL_DECLINE => array(
 				'name' => 'decline',
 				'operation' => 'sendReviews',
 				'title' => 'editor.submission.decision.decline',
-				'image' => 'decline',
-				'help' => 'editor.review.NotifyAuthorDecline',
-				'titleIcon' => 'decline_submission',
 			),
 		);
 
@@ -140,33 +158,21 @@ class EditorDecisionActionsManager {
 				'operation' => 'sendReviewsInReview',
 				'name' => 'requestRevisions',
 				'title' => 'editor.submission.decision.requestRevisions',
-				'image' => 'revisions',
-				'help' => 'editor.review.NotifyAuthorRevisions',
-				'titleIcon' => 'revisions_required',
 			),
 			SUBMISSION_EDITOR_DECISION_RESUBMIT => array(
-				'operation' => 'sendReviewsInReview',
 				'name' => 'resubmit',
 				'title' => 'editor.submission.decision.resubmit',
-				'image' => 'resubmit',
-				'help' => 'editor.review.NotifyAuthorResubmit',
-				'titleIcon' => 'please_resubmit',
 			),
 			SUBMISSION_EDITOR_DECISION_ACCEPT => array(
 				'operation' => 'promoteInReview',
 				'name' => 'accept',
 				'title' => 'editor.submission.decision.accept',
-				'image' => 'promote',
-				'help' => 'editor.review.NotifyAuthorAccept',
-				'titleIcon' => 'accept_submission',
+				'toStage' => 'submission.copyediting',
 			),
 			SUBMISSION_EDITOR_DECISION_DECLINE => array(
 				'operation' => 'sendReviewsInReview',
 				'name' => 'decline',
 				'title' => 'editor.submission.decision.decline',
-				'image' => 'decline',
-				'help' => 'editor.review.NotifyAuthorDecline',
-				'titleIcon' => 'decline_submission',
 			),
 		);
 
@@ -183,8 +189,7 @@ class EditorDecisionActionsManager {
 				'operation' => 'promote',
 				'name' => 'sendToProduction',
 				'title' => 'editor.submission.decision.sendToProduction',
-				'image' => 'send_production',
-				'titleIcon' => 'modal_send_to_production',
+				'toStage' => 'submission.production',
 			),
 		);
 

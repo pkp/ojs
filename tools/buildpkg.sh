@@ -52,11 +52,11 @@ plugins/generic/openAIRE					\
 plugins/generic/phpMyVisites					\
 plugins/generic/recommendBySimilarity				\
 plugins/generic/translator					\
-plugins/oaiMetadataFormats/nlm					\
 plugins/importexport/sample					\
 plugins/importexport/duracloud					\
 plugins/reports/subscriptions					\
 plugins/blocks/relatedItems					\
+plugins/oaiMetadataFormats/jats					\
 tests								\
 lib/pkp/tests							\
 .git								\
@@ -97,7 +97,16 @@ lib/pkp/lib/vendor/webmozart					\
 lib/pkp/tools/travis						\
 lib/pkp/lib/swordappv2/.git					\
 lib/pkp/lib/swordappv2/.git					\
-lib/pkp/lib/swordappv2/test"
+lib/pkp/lib/swordappv2/test					\
+node_modules      \
+.babelrc          \
+.editorconfig     \
+.eslintignore     \
+.eslintrc.js      \
+.postcssrc.js     \
+package.json      \
+webpack.config.js \
+lib/ui-library"
 
 
 cd $TMPDIR
@@ -112,13 +121,32 @@ echo -n "Checking out corresponding submodules ... "
 git submodule -q update --init --recursive >/dev/null || exit 1
 echo "Done"
 
-echo -n "Installing composer dependencies ... "
+echo "Installing composer dependencies:"
+echo -n " - lib/pkp ... "
 cd lib/pkp
-composer.phar update
-cd lib/vendor/oyejorge/less.php
-composer.phar install
-cd ../../../..
+composer.phar update --no-dev
 cd ../..
+echo "Done"
+
+echo -n " - plugins/paymethod/paypal ... "
+cd plugins/paymethod/paypal
+composer.phar install --no-dev
+cd ../../..
+echo "Done"
+
+echo -n " - plugins/generic/citationStyleLanguage ... "
+cd plugins/generic/citationStyleLanguage
+composer.phar install --no-dev
+cd ../../..
+echo "Done"
+
+echo -n "Installing node dependencies... "
+npm install
+echo "Done"
+
+echo -n "Running webpack build process... "
+npm run build
+echo "Done"
 
 echo -n "Preparing package ... "
 cp config.TEMPLATE.inc.php config.inc.php

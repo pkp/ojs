@@ -18,9 +18,11 @@
 		<query>DELETE FROM notifications WHERE type = 16777228</query><!-- NOTIFICATION_TYPE_SIGNOFF_PROOF -->
 	</sql>
 	<sql><!-- Drop migration tables -->
+		<drop table="article_galleys_migration" />
 		<drop table="article_files_migration" />
 		<drop table="articles_migration" />
 		<drop table="article_supplementary_files" />
 		<drop table="article_supp_file_settings" />
+		<drop table="submission_html_galley_images" />
 	</sql>
 </data>

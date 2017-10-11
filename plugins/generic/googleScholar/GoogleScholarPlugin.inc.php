@@ -58,7 +58,7 @@ class GoogleScholarPlugin extends GenericPlugin {
 		$templateMgr->addHeader('googleScholarJournalTitle', '<meta name="citation_journal_title" content="' . htmlspecialchars($journal->getName($journal->getPrimaryLocale())) . '"/>');
 		if (($issn = $journal->getSetting('onlineIssn')) || ($issn = $journal->getSetting('printIssn')) || ($issn = $journal->getSetting('issn'))) {
 			$templateMgr->addHeader('googleScholarIssn', '<meta name="citation_issn" content="' . htmlspecialchars($issn) . '"/> ');
-			
+
 		}
 
 		foreach ($article->getAuthors() as $i => $author) {
@@ -70,7 +70,7 @@ class GoogleScholarPlugin extends GenericPlugin {
 
 		$templateMgr->addHeader('googleScholarTitle', '<meta name="citation_title" content="' . htmlspecialchars($article->getTitle($article->getLocale())) . '"/>');
 
-		if (is_a($article, 'PublishedArticle') && ($datePublished = $article->getDatePublished())) {
+		if (is_a($article, 'PublishedArticle') && ($datePublished = $article->getDatePublished()) && (!$issue->getYear() || $issue->getYear() == strftime('%Y', strtotime($datePublished)))) {
 			$templateMgr->addHeader('googleScholarDate', '<meta name="citation_date" content="' . strftime('%Y/%m/%d', strtotime($datePublished)) . '"/>');
 		} elseif ($issue && $issue->getYear()) {
 			$templateMgr->addHeader('googleScholarDate', '<meta name="citation_date" content="' . htmlspecialchars($issue->getYear()) . '"/>');
@@ -91,7 +91,7 @@ class GoogleScholarPlugin extends GenericPlugin {
 		foreach((array) $templateMgr->get_template_vars('pubIdPlugins') as $pubIdPlugin) {
 			if ($pubId = $article->getStoredPubId($pubIdPlugin->getPubIdType())) {
 				$templateMgr->addHeader('googleScholarPubId' . $pubIdPlugin->getPubIdDisplayType(), '<meta name="citation_' . htmlspecialchars(strtolower($pubIdPlugin->getPubIdDisplayType())) . '" content="' . htmlspecialchars($pubId) . '"/>');
-				
+
 			}
 		}
 
@@ -99,9 +99,11 @@ class GoogleScholarPlugin extends GenericPlugin {
 		if ($language = $article->getLanguage()) $templateMgr->addHeader('googleScholarLanguage', '<meta name="citation_language" content="' . htmlspecialchars($language) . '"/>');
 
 		$i=0;
-		if ($subject = $article->getSubject(null)) foreach ($subject as $locale => $localeSubject) {
-			foreach (explode($localeSubject, '; ') as $gsKeyword) if ($gsKeyword) {
-				$templateMgr->addHeader('googleScholarKeyword' . $i++, '<meta name="citation_keywords" xml:lang="' . htmlspecialchars(substr($locale, 0, 2)) . '" content="' . htmlspecialchars($gsKeyword) . '"/>');
+		$dao = DAORegistry::getDAO('SubmissionKeywordDAO');
+		$keywords = $dao->getKeywords($article->getId(), array(AppLocale::getLocale()));
+		foreach ($keywords as $locale => $localeKeywords) {
+			foreach ($localeKeywords as $keyword) {
+				$templateMgr->addHeader('googleScholarKeyword' . $i++, '<meta name="citation_keywords" xml:lang="' . htmlspecialchars(substr($locale, 0, 2)) . '" content="' . htmlspecialchars($keyword) . '"/>');
 			}
 		}
 

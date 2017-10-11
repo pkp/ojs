@@ -40,7 +40,7 @@
 
 
 	<message key="reviewer.article.enterReviewForm">Egin klik ikono batean ebaluazio-inprimakia betetzeko.</message>
-	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Nahitaezko eremuak bete egin behar dira.</message>
+	<message key="reviewer.submission.reviewFormResponse.form.responseRequired">Nahitaezko eremuak bete egin behar dira.</message>
 
 	<!-- review forms end -->
 
@@ -317,7 +317,6 @@ key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>ABISUA!</h4>
 	<message key="plugins.categories.auth.description">Baimena emateko pluginen bidez, erabiltzaile-autentifikazioa beste sistema batzuei delega diezaieke Open Journal Systems-ek, esate baterako LDAP zerbitzariei.</message>
 
 
-	<message key="plugins.categories.citationFormats.description">Aipamen-formatuen pluginen bidez, erabiltzaileek hainbat formatu izango dituzte aipamenak ikusteko.</message>
 
 
 	<message key="plugins.categories.generic.description">Plugin generikoek Open Journal Systems hedatzen dute, gainerako plugin kategoriek egin ezin dituzten hainbat gauzatarako.</message>
@@ -521,7 +520,6 @@ itsatsi ebaluazioko oharrak hemen</message>
         <message key="reviewer.article.selectRecommendation">Hautatu gomendio bat era bidali ebaluazioa prozesua osatzeko. Gomendio bat hautatu aurretik, ebaluazio bat sartu behar duzu edo fitxategi bat kargatu.</message>
 	<message key="reviewer.article.mustSelectDecision">Ez da gomendiorik hautatu. Gomendio bat aukeratu behar duzu bidaltzeko.</message>
 	<message key="reviewer.article.confirmDecision">Erabaki bat grabatzen duzunean, ezingo duzu aldaketarik egin ebaluazio honetan. Ziur zaude jarraitu nahi duzula?</message>
-	<message key="reviewer.article.ensuringBlindReview">Ebaluazio anonimoa segurtatu</message>
 
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">Zuzentzeko fitxategia</message>
@@ -743,8 +741,6 @@ Prozesu editoriala eta argitaratze-prozesua</message>
 	<message key="payment.donation.makeDonation">Egin dohaintza bat</message>
 
 	<message key="payment.submission.paySubmission">Ordaindu bidalketa-tarifa</message>
-	<message key="payment.fastTrack.payFastTrack">Ordaindu ebaluazio azkarra</message>
-	<message key="payment.fastTrack.inFastTrack">Ebaluazio azkarrean</message>
 	<message key="payment.publication.payPublication">Ordaindu argitaratzeko</message>
 	<message key="payment.publication.publicationPaid">Argitalpen-tarifa ordainduta</message>
 
@@ -1034,49 +1030,14 @@ Balidazioak huts egin dezake bilaketa egiteko inprimaki-datuak bidaltzea eskatze
 	<message key="user.authorization.copyeditorAssignmentMissing">Sarbidea ukatuta! Ez zaizu esleitu artikulu honen zuzenketa egitea.</message>
 	<message key="user.authorization.sectionAssignment">Zure atalekoa ez den artikulu batean sartu nahi duzu.</message>
 	<message key="user.authorization.invalidCopyditorSubmission">Zuzentzailearen aurkezpena ez da baliozkoa edo ez da kontsultatu zuzentzailearen aurkezpenik!</message>
-	<message key="gifts.recipientDescription">Norentzat da opari hau?</message>
-	<message key="gifts.thankYou">Mila esker</message>
-	<message key="gifts.details">Opariaren xehetasunak</message>
-	<message key="gifts.gift">Oparia</message>
-	<message key="gifts.myGifts">Nire opariak</message>
-	<message key="gifts.manageMyGifts">Kudeatu nire opariak</message>
-	<message key="gifts.status.notRedeemed">Eskuragarri</message>
 	<message key="navigation.categories">Kategoriak</message>
 	<message key="navigation.categories.browse">Arakatu</message>
 	<message key="issue.fullIssue">Edizio osoa</message>
 	<message key="issue.nonpdf.title">Edizioa jaistea</message>
 	<message key="issue.viewIssue">Ikus edizioa</message>
 	<message key="site.noJournals">Ez dago aldizkaririk eskuragarri.</message>
-	<message key="gifts.buyer">Nondik</message>
-	<message key="gifts.buyerDescription">Norentzat da opari hau?</message>
-	<message key="gifts.recipient">Nora</message>
-	<message key="gifts.thankYouMessage">Oparia erosi da. Opariaren hartzaileari bidaltzen zaion mezuaren kopia bat jasoko duzu behin ordainketa prozesatu ondoren.</message>
-	<message key="gifts.purchaseGiftIndividualSubscription">Doako harpidetza</message>
-	<message key="gifts.subscriptionFormIntroduction">Mesedez, bete beheko inprimakia. Harremanetarako ematen den informazioa, baita zure opariaren oharra ere, erabili egingo dira hartzaileari mezu bat bidaltzeko eta doako harpidetza berria jakinarazteko (mezu horren kopia bat ere jasoko duzu zuk).</message>
-	<message key="gifts.detailsDescription">Mesedez, hautatu beheko oparia eta erantsi hartzaileari bidaliko zaion mezu pertsonalizatu bat (mezu horren kopia bat ere jasoko duzu zuk).</message>
-	<message key="gifts.noteTitle">Titulua</message>
-	<message key="gifts.note">Opariaren oharra</message>
-	<message key="gifts.noteTitleRequired">Mesedez, ipini titulu bat zure mezu pertsonalizatuari.</message>
-	<message key="gifts.noteRequired">Mesedez, idatzi mezu pertsonalizatu bat.</message>
-	<message key="gifts.localeRequired">Mesedez, hautatu hizkuntza bat zure mezu pertsonalizatuarentzat.</message>
-	<message key="gifts.subscriptions">Harpidetzak</message>
-	<message key="payment.type.gift.subscription">Harpidetza</message>
-	<message key="gifts.redeemGift">Trukatu oparia</message>
-	<message key="gifts.status.redeemed">Trukatua</message>
-	<message key="gifts.status.redeemGift">Trukatu oparia</message>
-	<message key="gifts.subscriptionsDescription">Hemen trukatutako opari gisa emandako harpidetzak gaur egun duzun harpidetza ordeztuko du (harpidetzarik baduzu). Harpidetzak truke datatik aurrera hasiko dira, eta harpidetza motak irauten duen artean izango dira baliodunak.</message>
-	<message key="gifts.purchaseGiftSubscription">Eman harpidetza opari gisa</message>
-	<message key="gifts.giftSubscriptionsAvailable">Opari gisa emandako harpidetzak ere eskuragarri daude. Hartzaileak edozein unetan truka ditzake opari gisa emandako harpidetzak, eta aldizkari honi laguntzeko modu ezin hobea da.</message>
-	<message key="gifts.noSubscriptions">Ez dago opari gisa emandako harpidetzarik</message>
-	<message key="gifts.giftRedeemed">Oparia ondo trukatu da.</message>
-	<message key="gifts.noGiftToRedeem">Oparia ez dago trukatzeko eskuragarri.</message>
-	<message key="gifts.giftAlreadyRedeemed">Opari hau trukatu da jadanik.</message>
-	<message key="gifts.giftNotValid">Opari hau ez da baliodouna, eta ezin da trukatu.</message>
-	<message key="gifts.subscriptionTypeNotValid">Opari honetarako harpidetza mota hau ez da balioduna. Mesedez, jarri harremanetan harpidetzaren kudeatzailearekin.</message>
-	<message key="gifts.subscriptionNonExpiring">Oparia ez da trukatu jadanik amaitzen ez den harpidetza egina duzulako aldizkari honekin.</message>
 	<message key="payment.loginRequired.forIssue">Harpidetza edo alearen erosketa eskatzen da itemera sartzeko. Harpidetza egiaztatzeko, sartu aurreko erosketan, edo ale erosketan, hasi aldizkariaren saioa.</message>
 	<message key="payment.type.purchaseIssue">Erosi ale bat</message>
-	<message key="payment.type.gift">Oparia</message>
 	<message key="installer.allowFileUploads"><![CDATA[Zure zerbitzariak fitxategiak gora kargatzen uzten du gaur egun: <strong>{$allowFileUploads}</strong>]]></message>
 	<message key="installer.maxFileUploadSize"><![CDATA[Zure zerbitzariak gehienez tamaina hau duten fitxategiak gora kargatzen uzten du gaur egun: <strong>{$maxFileUploadSize}</strong>]]></message>
 	<message key="site.upgradeAvailable.admin"><![CDATA[OJSren bertsio berri bat dago eskuragarri! Gaur egun OJS {$currentVersion} erabiltzen ari zara. Azken bertsioa OJS {$latestVersion} da. Mesedez, zoaz <a href="http://pkp.sfu.ca/ojs_download" target="_new">this page</a> orrira azken bertsioa kargatzeko eta eguneratzeko argibideak aurkitzeko.]]></message>

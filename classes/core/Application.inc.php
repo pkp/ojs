@@ -32,6 +32,20 @@ define('CONTEXT_JOURNAL', 1);
 
 class Application extends PKPApplication {
 	/**
+	 * Constructor
+	 */
+	public function __construct() {
+		parent::__construct();
+
+		// Register custom autoloader function for OJS namespace
+		spl_autoload_register(function($class) {
+			$prefix = 'OJS\\';
+			$rootPath = BASE_SYS_DIR . "/classes";
+			customAutoload($rootPath, $prefix, $class);
+		});
+	}
+
+	/**
 	 * Get the "context depth" of this application, i.e. the number of
 	 * parts of the URL after index.php that represent the context of
 	 * the current request (e.g. Journal [1], or Conference and
@@ -85,7 +99,6 @@ class Application extends PKPApplication {
 			'ArticleGalleyDAO' => 'classes.article.ArticleGalleyDAO',
 			'ArticleSearchDAO' => 'classes.search.ArticleSearchDAO',
 			'AuthorDAO' => 'classes.article.AuthorDAO',
-			'GiftDAO' => 'classes.gift.GiftDAO',
 			'IndividualSubscriptionDAO' => 'classes.subscription.IndividualSubscriptionDAO',
 			'InstitutionalSubscriptionDAO' => 'classes.subscription.InstitutionalSubscriptionDAO',
 			'IssueDAO' => 'classes.issue.IssueDAO',
@@ -122,12 +135,7 @@ class Application extends PKPApplication {
 			'metadata',
 			'auth',
 			'blocks',
-			// NB: 'citationFormats' is an obsolete category for backwards
-			// compatibility only. This will be replaced by 'citationOutput',
-			// see #5156.
-			'citationFormats',
 			'citationLookup',
-			'citationOutput',
 			'citationParser',
 			'gateways',
 			'generic',

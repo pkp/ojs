@@ -7,3 +7,6 @@ temp
 .buildpath
 .settings
 .DS_Store
+node_modules
+js/build.js
+styles/build.css

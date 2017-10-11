@@ -58,7 +58,6 @@ class TemplateManager extends PKPTemplateManager {
 			$this->assign(array(
 				'brandImage' => 'templates/images/ojs_brand.png',
 				'packageKey' => 'common.openJournalSystems',
-				'pkpLink'    => 'http://pkp.sfu.ca/ojs',
 			));
 
 			// Get a count of unread tasks.
@@ -114,7 +113,6 @@ class TemplateManager extends PKPTemplateManager {
 
 				import('classes.payment.ojs.OJSPaymentManager');
 				$paymentManager = new OJSPaymentManager($request);
-				$this->assign('journalPaymentsEnabled', $paymentManager->isConfigured());
 				$this->assign('pageFooter', $context->getLocalizedSetting('pageFooter'));
 			} else {
 				// Check if registration is open for any contexts
