@@ -60,7 +60,7 @@
 	<message key="editor.issues.description">Beskrivning</message>
 	<message key="editor.issues.accessStatus">Tillgänglighetsstatus</message>
 	<message key="editor.issues.accessDate">Datum för open access</message>
-	<message key="editor.issues.enableOpenAccessDate">Aktivera open access med embargo</message>
+	<message key="editor.issues.enableOpenAccessDate">Aktivera fördröjd open access</message>
 	<message key="editor.issues.coverPage">Framsida</message>
 	<message key="editor.issues.coverPageInstructions">(Tillåtna format: .gif, .jpg, eller .png)</message>
 	<message key="editor.issues.uploaded">Uppladdad</message>

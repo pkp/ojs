@@ -386,7 +386,7 @@ Författare som publicerar i den här tidskriften accepterar följande villkor:
 	<li>Författare tillåts och uppmuntras att dela sitt verk online (t.ex. i institutionella arkiv eller på författares egna webbplatser) före och under inskickningsprocessen eftersom detta är något som kan leda till givande utbyten, samt att möjligheten till citeringar ökar när den kommer i ett tidigare skede. (Se <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>.)</li>
 </ol>
 
-<h4>Förslag på policy för tidskrifter som erbjuder open access med embargo</h4>
+<h4>Förslag på policy för tidskrifter som erbjuder fördröjd open access</h4>
 Författare som publicerar i den här tidskriften accepterar följande villkor:
 <ol type="a">
 	<li>Författare bibehåller upphovsrätten och ger tidskriften rätten till första publiceringen, och att verket [SPECIFICERA EMBARGOTID] efter publicering också blir tillgängligt under licensvillkoren för en <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Erkännande-licens</a>. Denna tillåter andra att dela verket så länge man deklarerar verkets upphovperson(er) och att verket ursprungligen publicerats i den här tidskriften.</li>
@@ -794,7 +794,7 @@ Aktiva visar antalet granskningar som är förfrågade eller under arbete.]]></m
 	<message key="about.peerReviewProcess">Granskningsprocess</message>
 	<message key="about.publicationFrequency">Publiceringsfrekvens</message>
 	<message key="about.openAccessPolicy">Open access-policy</message>
-	<message key="about.delayedOpenAccess">Open access med embargo</message>
+	<message key="about.delayedOpenAccess">Fördröjd open access</message>
 	<message key="about.delayedOpenAccessDescription1">Innehållet i den här tidskriften kommer att tillgängligöras som open access</message>
 	<message key="about.delayedOpenAccessDescription2">månad(er) efter att numret har publicerats.</message>
 	<message key="about.authorSelfArchive">Parallellpublicering</message>

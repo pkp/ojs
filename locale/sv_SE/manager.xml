@@ -179,7 +179,7 @@
 	<message key="manager.setup.gettingDownTheDetails">Steg 1. Detaljer</message>
 	<message key="manager.setup.guidelines">Riktlinjer</message>
 	<message key="manager.setup.guidingSubmissions">Steg 3. Skicka in bidrag</message>
-	<message key="manager.setup.includeCreativeCommons">För tidskrifter som erbjuder omedelbar eller open access med embargo, lägg till en Creative Commons licens till allt publicerat arbete vid lämplig tidpunkt.</message>
+	<message key="manager.setup.includeCreativeCommons">För tidskrifter som erbjuder omedelbar eller fördröjd open access, lägg till en Creative Commons-licens till allt publicerat arbete vid lämplig tidpunkt.</message>
 	<message key="manager.setup.information">Information</message>
 	<message key="manager.setup.information.description">En kortfattad beskrivning av tidskriftens innehåll för bibliotekarier, potentiella författare och läsare. Informationen visas i sidans sidomeny när Informaion blocket har aktiverats.</message>
 	<message key="manager.setup.information.forAuthors">För författare</message>
@@ -364,12 +364,12 @@
 	<message key="manager.subscriptionPolicies">Prenumerationspolicyer</message>
 	<message key="manager.subscriptionPolicies.authorSelfArchive">Författarens egenarkiveringspolicy</message>
 	<message key="manager.subscriptionPolicies.authorSelfArchiveDescription">Följande egenarkiveringspolicy kommer att visas i Policyer under Om tidskriften.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccess">Open access med embargo</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription">Även om tidskriften använder sig av Open access med embargo kan redaktören ändå publicera individuella artiklar Open Access  i numret direkt.</message>
+	<message key="manager.subscriptionPolicies.delayedOpenAccess">Fördröjd open access</message>
+	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription">Även om tidskriften använder sig av fördröjd open access kan redaktören ändå publicera enskilda artiklar Open Access  i numret direkt.</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription1">Äldre nummer av tidskriften kommer vara tillgängligt Open Access</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription2">månad(er) efter att ett nummer har publicerats.</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDurationValid">Välj en giltlig tidsperiod.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription">Följande Open Access med embargo Policy kommer att visas under Policyer under Om tidskriften.</message>
+	<message key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription">Följande fördröjd open access-policy kommer att visas under Policyer under Om tidskriften.</message>
 	<message key="manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid">Använd den kryssruta som finns.</message>
 	<message key="manager.subscriptionPolicies.expiry">Prenumerationen upphör</message>
 	<message key="manager.subscriptionPolicies.expiryDescription">När prenumerationen upphör, kan läsarna nekas tillgång till allt innehåll i prenumerationen eller ha fortsatt tillgång till prenumerationens innehåll som har publicerats innan det datum då prenumerationen upphörde.</message>
@@ -402,8 +402,8 @@
 	<message key="manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewInstitutional">Meddela den prenumerationsansvarige via e-post vid online förnyelse av en institutionell prenumeration.</message>
 	<message key="manager.subscriptionPolicies.onlinePaymentPurchaseInstitutionalDescription"><![CDATA[<strong>Anmärkning:</strong>Institutionsprenumerationer som köps online kräver godkännande av domän och IP intervall och att den prenumerationsansvarige aktiverar prenumerationen.]]></message>
 	<message key="manager.subscriptionPolicies.onlinePaymentDisabled"><![CDATA[<strong>Anmärkning:</strong> För att aktivera dessa alternativ, måste den tidskriftansvarige aktivera online betalningsmodulen, inklusive online-betalning för prenumerationer under Läsaravgifter.]]></message>
-	<message key="manager.subscriptionPolicies.openAccessOptions">Open Access-alternativ för prenumerationstidskrifter.</message>
-	<message key="manager.subscriptionPolicies.openAccessOptionsDescription">Prenumerationstidskrifter kan tillåta såväl Open access med embargo, som egenarkivering av det publicerade materialet (båda alternativen ökar spridningen samt citeringen av innehållet).</message>
+	<message key="manager.subscriptionPolicies.openAccessOptions">Open access-alternativ för prenumerationstidskrifter.</message>
+	<message key="manager.subscriptionPolicies.openAccessOptionsDescription">Prenumerationstidskrifter kan tillåta såväl "fördröjd open access" som "parallellpublicering" av det publicerade materialet (båda alternativen ökar spridningen samt citeringen av innehållet).</message>
 	<message key="manager.subscriptionPolicies.subscriptionAdditionalInformation">Prenumerationsinformation</message>
 	<message key="manager.subscriptionPolicies.subscriptionAdditionalInformationDescription">Typer av prenumerationer och prissättning kommer automatiskt att visas under Prenumerationer i Om tidskriften, tillsammans med kontaktinformation till den prenumerationsansvarige. Ytterligare information om prenumerationer, som betalningsmetod eller support till prenumeranter i utvecklingsländer kan läggas till här.</message>
 	<message key="manager.subscriptionPolicies.subscriptionContact">Prenumerationsansvarig</message>
