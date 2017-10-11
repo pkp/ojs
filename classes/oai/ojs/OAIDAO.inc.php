@@ -55,7 +55,7 @@ class OAIDAO extends PKPOAIDAO {
 	 * @see lib/pkp/classes/oai/PKPOAIDAO::getEarliestDatestamp()
 	 */
 	function getEarliestDatestamp($setIds = array()) {
-		return parent::getEarliestDatestamp('SELECT	CASE WHEN COALESCE(dot.date_deleted, a.last_modified) > i.last_modified THEN i.last_modified ELSE COALESCE(dot.date_deleted, a.last_modified) END', $setIds);
+		return parent::getEarliestDatestamp('SELECT MIN(CASE WHEN COALESCE(dot.date_deleted, a.last_modified) > i.last_modified THEN i.last_modified ELSE COALESCE(dot.date_deleted, a.last_modified) END)', $setIds);
 	}
 
 	/**
