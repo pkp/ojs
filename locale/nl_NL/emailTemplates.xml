@@ -477,7 +477,7 @@ Gebruikersnaam: {$participantUsername}<br />
 Als u momenteel niet in staat bent om dit werk uit te voeren of als u vragen heeft, neemt u dan contact met me op. Dank u voor uw bijdrage aan dit tijdschrift.<br />
 <br />
 {$editorialContactSignature}]]></body>
-		<description>Deze e-mail van de sectieredacteur naar de opmaakredacteur meldt dat de proeven gereed zijn voor de laatste proefleesronde. Het geeft informatie over het arikel en hoe het te bereiken.</description>
+		<description>Deze e-mail van de sectieredacteur naar de opmaakredacteur meldt dat de proeven gereed zijn voor de laatste proefleesronde. Het geeft informatie over het artikel en hoe het te bereiken.</description>
 	</email_text>
 	<email_text key="PROOFREAD_LAYOUT_COMPLETE">
 		<subject>Proeflezen gereed (opmaakredacteur)</subject>
