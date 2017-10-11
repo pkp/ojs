@@ -9,13 +9,13 @@
  *
  * @class OJSPaymentManager
  * @ingroup payment
- * @see OJSQueuedPayment
+ * @see QueuedPayment
  *
  * @brief Provides payment management functions.
  *
  */
 
-import('classes.payment.ojs.OJSQueuedPayment');
+import('lib.pkp.classes.payment.QueuedPayment');
 import('lib.pkp.classes.payment.PaymentManager');
 
 define('PAYMENT_TYPE_MEMBERSHIP',		0x000000001);
@@ -59,7 +59,7 @@ class OJSPaymentManager extends PaymentManager {
 	function createQueuedPayment($journalId, $type, $userId, $assocId, $amount, $currencyCode = null) {
 		$journalSettingsDao = DAORegistry::getDAO('JournalSettingsDAO');
 		if (is_null($currencyCode)) $currencyCode = $journalSettingsDao->getSetting($journalId, 'currency');
-		$payment = new OJSQueuedPayment($amount, $currencyCode, $userId, $assocId);
+		$payment = new QueuedPayment($amount, $currencyCode, $userId, $assocId);
 		$payment->setJournalId($journalId);
 		$payment->setType($type);
 		$router = $this->request->getRouter();
@@ -304,6 +304,51 @@ class OJSPaymentManager extends PaymentManager {
 		$queuedPaymentDao->deleteById($queuedPayment->getId());
 
 		return $returner;
+	}
+
+	/**
+	 * Fetch the name of the description.
+	 * @return string
+	 */
+	function getPaymentName($payment) {
+		switch ($payment->getType()) {
+			case PAYMENT_TYPE_PURCHASE_SUBSCRIPTION:
+			case PAYMENT_TYPE_RENEW_SUBSCRIPTION:
+				$institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
+
+				if ($institutionalSubscriptionDao->subscriptionExists($payment->getAssocId())) {
+					$subscription = $institutionalSubscriptionDao->getById($payment->getAssocId());
+				} else {
+					$individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
+					$subscription = $individualSubscriptionDao->getById($payment->getAssocId());
+				}
+				if (!$subscription) return __('payment.type.subscription');
+
+				$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
+				$subscriptionType = $subscriptionTypeDao->getById($subscription->getTypeId());
+
+				return __('payment.type.subscription') . ' (' . $subscriptionType->getLocalizedName() . ')';
+			case PAYMENT_TYPE_DONATION:
+				// DEPRECATED: This is only for display of OJS 2.x data.
+				return __('payment.type.donation');
+			case PAYMENT_TYPE_MEMBERSHIP:
+				return __('payment.type.membership');
+			case PAYMENT_TYPE_PURCHASE_ARTICLE:
+				return __('payment.type.purchaseArticle');
+			case PAYMENT_TYPE_PURCHASE_ISSUE:
+				return __('payment.type.purchaseIssue');
+			case PAYMENT_TYPE_SUBMISSION:
+				// DEPRECATED: This is only for display of OJS 2.x data.
+				return __('payment.type.submission');
+			case PAYMENT_TYPE_FASTTRACK:
+				// DEPRECATED: This is only for display of OJS 2.x data.
+				return __('payment.type.fastTrack');
+			case PAYMENT_TYPE_PUBLICATION:
+				return __('payment.type.publication');
+			default:
+				// Invalid payment type
+				assert(false);
+		}
 	}
 }
 

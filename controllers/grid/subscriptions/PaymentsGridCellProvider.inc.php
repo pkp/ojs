@@ -16,6 +16,17 @@
 import('lib.pkp.classes.controllers.grid.GridCellProvider');
 
 class PaymentsGridCellProvider extends GridCellProvider {
+	/** @var Request */
+	var $_request;
+
+	/**
+	 * Constructor.
+	 * @param $request Request
+	 */
+	function __construct($request) {
+		$this->_request = $request;
+		parent::__construct();
+	}
 
 	//
 	// Template methods from GridCellProvider
@@ -34,11 +45,14 @@ class PaymentsGridCellProvider extends GridCellProvider {
 		switch ($column->getId()) {
 			case 'name':
 				$userDao = DAORegistry::getDAO('UserDAO');
-				$user = $userDao->getById($payment->getUser());
+				$user = $userDao->getById($payment->getUserId());
 				return array('label' => $user->getFullName());
-				break;
+			case 'type':
+				import('classes.payment.ojs.OJSPaymentManager');
+				$paymentManager = new OJSPaymentManager($this->_request);
+				return array('label' => $paymentManager->getPaymentName($payment));
 			case 'timestamp':
-				return array('label' => $payment->subscription->getUserEmail());
+				return array('label' => $payment->getTimestamp());
 		}
 		assert(false);
 	}

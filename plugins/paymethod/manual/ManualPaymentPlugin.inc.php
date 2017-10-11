@@ -76,8 +76,10 @@ class ManualPaymentPlugin extends PaymethodPlugin {
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON);
 
 		$paymentForm = new Form($this->getTemplatePath() . 'paymentForm.tpl');
+		import('classes.payment.ojs.OJSPaymentManager');
+		$paymentManager = new OJSPaymentManager($this->getRequest());
 		$paymentForm->setData(array(
-			'itemName' => $queuedPayment->getName(),
+			'itemName' => $paymentManager->getPaymentName($queuedPayment),
 			'itemAmount' => $queuedPayment->getAmount()>0?$queuedPayment->getAmount():null,
 			'itemCurrencyCode' => $queuedPayment->getAmount()>0?$queuedPayment->getCurrencyCode():null,
 			'manualInstructions' => $this->getSetting($context->getId(), 'manualInstructions'),
@@ -117,7 +119,7 @@ class ManualPaymentPlugin extends PaymethodPlugin {
 					'contextName' => $journal->getLocalizedName(),
 					'userFullName' => $user?$user->getFullName():('(' . __('common.none') . ')'),
 					'userName' => $user?$user->getUsername():('(' . __('common.none') . ')'),
-					'itemName' => $queuedPayment->getName(),
+					'itemName' => $ojsPaymentManager->getPaymentName($queuedPayment),
 					'itemCost' => $queuedPayment->getAmount(),
 					'itemCurrencyCode' => $queuedPayment->getCurrencyCode()
 				));

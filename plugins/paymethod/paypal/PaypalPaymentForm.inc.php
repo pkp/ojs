@@ -38,6 +38,8 @@ class PaypalPaymentForm extends Form {
 	function display($request = null, $template = null) {
 		try {
 			$journal = $request->getJournal();
+			import('classes.payment.ojs.OJSPaymentManager');
+			$paymentManager = new OJSPaymentManager($request);
 			$gateway = Omnipay\Omnipay::create('PayPal_Rest');
 			$gateway->initialize(array(
 				'clientId' => $this->_paypalPaymentPlugin->getSetting($journal->getId(), 'clientId'),
@@ -47,7 +49,7 @@ class PaypalPaymentForm extends Form {
 			$transaction = $gateway->purchase(array(
 				'amount' => number_format($this->_queuedPayment->getAmount(), 2),
 				'currency' => $this->_queuedPayment->getCurrencyCode(),
-				'description' => $this->_queuedPayment->getName(),
+				'description' => $paymentManager->getPaymentName($this->_queuedPayment)),
 				'returnUrl' => $request->url(null, 'payment', 'plugin', array($this->_paypalPaymentPlugin->getName(), 'return'), array('queuedPaymentId' => $this->_queuedPayment->getId())),
 				'cancelUrl' => $request->url(null, 'index'),
 			));

@@ -63,7 +63,7 @@ class PaymentsGridHandler extends GridHandler {
 		//
 		// Grid columns.
 		//
-		$cellProvider = new PaymentsGridCellProvider();
+		$cellProvider = new PaymentsGridCellProvider($request);
 
 		$this->addColumn(
 			new GridColumn(

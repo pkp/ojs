@@ -24,7 +24,7 @@ class OJSCompletedPaymentDAO extends DAO {
 	 * @param $contextId int optional
 	 * @return CompletedPayment
 	 */
-	function getCompletedPayment($completedPaymentId, $contextId = null) {
+	function getById($completedPaymentId, $contextId = null) {
 		$params = array((int) $completedPaymentId);
 		if ($contextId) $params[] = (int) $contextId;
 
@@ -96,7 +96,7 @@ class OJSCompletedPaymentDAO extends DAO {
 				$completedPayment->getAmount(),
 				$completedPayment->getCurrencyCode(),
 				$completedPayment->getPayMethodPluginName(),
-				(int) $completedPayment->getCompletedPaymentId()
+				(int) $completedPayment->getId()
 			)
 		);
 
@@ -162,7 +162,7 @@ class OJSCompletedPaymentDAO extends DAO {
 	/**
 	 * Retrieve an array of payments for a particular context ID.
 	 * @param $contextId int
-	 * @return object DAOResultFactory containing matching payments
+	 * @return array Matching payments
 	 */
 	function getByContextId($contextId, $rangeInfo = null) {
 		$result = $this->retrieveRange(
@@ -171,13 +171,19 @@ class OJSCompletedPaymentDAO extends DAO {
 			$rangeInfo
 		);
 
-		return new DAOResultFactory($result, $this, '_returnPaymentFromRow');
+		$returner = array();
+		while (!$result->EOF) {
+			$payment = $this->_fromRow($result->fields);
+			$returner[$payment->getId()] = $payment;
+			$result->MoveNext();
+		}
+		return $returner;
 	}
 
 	/**
 	 * Retrieve an array of payments for a particular user ID.
 	 * @param $userId int
-	 * @return object DAOResultFactory containing matching payments
+	 * @return array Matching payments
 	 */
 	function getByUserId($userId, $rangeInfo = null) {
 		$result = $this->retrieveRange(
@@ -186,7 +192,12 @@ class OJSCompletedPaymentDAO extends DAO {
 			$rangeInfo
 		);
 
-		$returner = new DAOResultFactory($result, $this, '_returnPaymentFromRow');
+		$returner = array();
+		while (!$result->EOF) {
+			$payment = $this->_fromRow($result->fields);
+			$returner[$payment->getId()] = $payment;
+			$result->MoveNext();
+		}
 		return $returner;
 	}
 
@@ -203,7 +214,7 @@ class OJSCompletedPaymentDAO extends DAO {
 	 * @param $row array
 	 * @return CompletedPayment
 	 */
-	function _returnPaymentFromRow($row) {
+	function _fromRow($row) {
 		$payment = $this->newDataObject();
 		$payment->setTimestamp($this->datetimeFromDB($row['timestamp']));
 		$payment->setId($row['completed_payment_id']);
