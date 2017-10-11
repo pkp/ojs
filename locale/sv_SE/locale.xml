@@ -126,7 +126,7 @@
 	<message key="article.submissions">Bidrag</message>
 	<message key="article.details">Detaljer</message>
 	<message key="article.abstract">Abstract</message>
-	<message key="article.coverPage.altText">Omslagsbild</message>
+	<message key="article.coverPage.altText">Framsida</message>
 	<message key="article.accessLogoOpen.altText">Open access</message>
 	<message key="article.accessLogoRestricted.altText">Begränsad åtkomst</message>
 	<message key="article.comments.sectionDefault">Standard</message>
@@ -231,7 +231,7 @@
 	<message key="issue.noIssues">Inga nummer</message>
 	<message key="issue.toc">Innehållsförteckning</message>
 	<message key="issue.abstract">Abstract</message>
-	<message key="issue.coverPage.altText">Omslag</message>
+	<message key="issue.coverPage.altText">Framsida</message>
 	<message key="issue.fullIssue">Helt nummer</message>
 	<message key="issue.nonpdf.title">Ladda ned nummer</message>
 	<message key="issue.viewIssue">Visa nummer</message>
