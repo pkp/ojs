@@ -553,7 +553,7 @@ Aktiva visar antalet granskningar som är förfrågade eller under arbete.]]></m
 	<message key="reviewer.article.decision.pendingRevisions">Ändringar krävs</message>
 	<message key="reviewer.article.decision.resubmitHere">Återsänd för granskning</message>
         <message key="reviewer.article.decision.resubmitElsewhere">Skicka in till annan publikation</message>
-	<message key="reviewer.article.decision.decline">Neka bidraget publicering</message>
+	<message key="reviewer.article.decision.decline">Refusera bidraget</message>
 	<message key="reviewer.article.decision.seeComments">Se kommentarer</message>
 	<message key="reviewer.article.schedule">Schema</message>
         <message key="reviewer.article.submissionToBeReviewed">Bidrag som ska granskas</message>
