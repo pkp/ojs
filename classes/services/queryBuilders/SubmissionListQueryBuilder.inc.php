@@ -54,25 +54,25 @@ class SubmissionListQueryBuilder extends \PKP\Services\QueryBuilders\PKPSubmissi
 		$q->groupBy(Capsule::raw('COALESCE(sal.setting_value, sapl.setting_value)'));
 
 		$q->leftJoin('section_settings as stpl', function($join) use($primaryLocale) {
-			$join->on('s.section_id', '=', Capsule::raw("'stpl.section_id'"));
+			$join->on('s.section_id', '=', Capsule::raw('stpl.section_id'));
 			$join->on('stpl.setting_name', '=', Capsule::raw("'section_title'"));
 			$join->on('stpl.locale', '=', Capsule::raw("'{$primaryLocale}'"));
 		});
 
 		$q->leftJoin('section_settings as stl', function($join) use($locale) {
-			$join->on('s.section_id', '=', Capsule::raw("'stl.section_id'"));
+			$join->on('s.section_id', '=', Capsule::raw('stl.section_id'));
 			$join->on('stl.setting_name', '=', Capsule::raw("'section_title'"));
 			$join->on('stl.locale', '=', Capsule::raw("'{$locale}'"));
 		});
 
 		$q->leftJoin('section_settings as sapl', function($join) use($primaryLocale) {
-			$join->on('s.section_id', '=', Capsule::raw("'sapl.section_id'"));
+			$join->on('s.section_id', '=', Capsule::raw('sapl.section_id'));
 			$join->on('sapl.setting_name', '=', Capsule::raw("'section_abbrev'"));
 			$join->on('sapl.locale', '=', Capsule::raw("'{$primaryLocale}'"));
 		});
 
 		$q->leftJoin('section_settings as sal', function($join) use($locale) {
-			$join->on('s.section_id', '=', Capsule::raw("'sal.section_id'"));
+			$join->on('s.section_id', '=', Capsule::raw('sal.section_id'));
 			$join->on('sal.setting_name', '=', Capsule::raw("'section_abbrev'"));
 			$join->on('sal.locale', '=', Capsule::raw("'{$locale}'"));
 		});
