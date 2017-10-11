@@ -26,7 +26,7 @@
 	<message key="admin.settings.defaultMetricDescription">
 		Din OJS-installation är konfigurerad för att registrera mer än ett användningsmått. Användningsstatistiken kommer att presenteras i flera sammanhang.
 		Det finns fall där endast ett användningsmått måste användas, t.ex. för att visa en sorterad lista över de mest använda bidragen eller för
-		att rangordna sökresultat. Välj ett av de konfigurerade värdena som standard.
+		att rangordna sökresultat. Välj ett av de konfigurerade värdena som default.
 	</message>
 	<message key="admin.languages.confirmDisable">Är du säker på att du vill inaktivera detta språk? Det kan påverka tidskrifter som använder språket nu.</message>
 	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Det går för tillfället inte att ladda ned språkpaket från Public Knowledge Projects webbserver eftersom:</p>

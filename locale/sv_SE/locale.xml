@@ -129,7 +129,7 @@
 	<message key="article.coverPage.altText">Framsida</message>
 	<message key="article.accessLogoOpen.altText">Open access</message>
 	<message key="article.accessLogoRestricted.altText">Begränsad åtkomst</message>
-	<message key="article.comments.sectionDefault">Standard</message>
+	<message key="article.comments.sectionDefault">Default</message>
 	<message key="article.comments.disable">Avaktivera</message>
 	<message key="article.comments.enable">Aktivera</message>
 	<message key="article.fontSize">Typsnittsstorlek</message>
@@ -731,7 +731,7 @@ Aktiva visar antalet granskningar som är förfrågade eller under arbete.]]></m
 	<message key="search.syntaxInstructions"><![CDATA[Search tips: <ul>
 <li>Söktermer skiljer inte på versaler och gemener</li>
 <li>Vissa vanliga ord utesluts av sökmotorn</li>
-<li>Som standard får du träffar på <em>alla</em> termer som angivits i sökfrågan (med andra ord, <em>AND</em> är implicit)</li>
+<li>Som default får du träffar på <em>alla</em> termer som angivits i sökfrågan (med andra ord, <em>AND</em> är implicit)</li>
 <li>Kombinera olika ord med <em>OR</em> för att hitta artiklar som innehåller minst ett av sökorden; t.ex. <em>utbildning OR forskning</em></li>
 <li>Använd parenteser för att skapa mer avancerade söksträngar; t.ex. <em>arkiv ((tidskrift OR konferens) NOT avhandlingar)</em></li>
 <li>Sök efter en exakt fras genom att använda citationstecken; t.ex. <em>"open access-publicering"</em></li>

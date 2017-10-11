@@ -820,6 +820,6 @@ Vårt beslut är att: Refusera bidrag<br />
 	<email_text key="NOTIFICATION_CENTER_DEFAULT">
 		<subject>Ett meddelande angående {$contextName}</subject>
 		<body><![CDATA[Skriv in ditt meddelande.]]></body>
-		<description>Standardmeddelandet (tomt) att använda i Notification Center Message Listbuilder.</description> <!-- FIXME: Check "Notification Center Message Listbuilder" (not in any other locale file atm -->
+		<description>Defaultmeddelande (tomt) att använda i Notification Center Message Listbuilder.</description> <!-- FIXME: Check "Notification Center Message Listbuilder" (not in any other locale file atm -->
 	</email_text>
 </email_texts>

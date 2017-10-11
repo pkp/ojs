@@ -82,11 +82,11 @@
 	<message key="editor.issues.access">Tillgänglighet</message>
 	<message key="editor.issues.cover">Omslag</message>
 	<message key="editor.issues.confirmIssueDelete">Alla artiklar kommer att skickas tillbaka till redaktionskön och alla uppladdade filer kommer att raderas. Är du säker på att du vill ta bort det här numret?</message>
-	<message key="editor.issues.resetIssueOrder"><![CDATA[Den här tidskriften använder anpassad sortering av nummer. <a href="{$url}" class="action">Återställ till standardsortering</a>]]></message>
-	<message key="editor.issues.resetSectionOrder"><![CDATA[Det här numret använder anpassad sortering av sektioner. <a href="{$url}" class="action">Återställ till standardsortering</a>]]></message>
+	<message key="editor.issues.resetIssueOrder"><![CDATA[Den här tidskriften använder anpassad sortering av nummer. <a href="{$url}" class="action">Återställ till defaultsortering</a>]]></message>
+	<message key="editor.issues.resetSectionOrder"><![CDATA[Det här numret använder anpassad sortering av sektioner. <a href="{$url}" class="action">Återställ till defaultsortering</a>]]></message>
 	<message key="editor.issues.issueData">Nummerdata</message>
 	<message key="editor.issues.saveChanges">Vill du spara ändringarna i innehållsförteckningen?</message>
-	<message key="editor.issues.default">Standard</message>
+	<message key="editor.issues.default">Default</message>
 	<message key="editor.issues.order">Ordna</message>
 	<message key="editor.issues.publicId">Publikt ID</message>
 	<message key="editor.issues.publishIssue">Publicera nummer</message>
@@ -204,7 +204,7 @@
 	<message key="editor.article.payment.publicationFeeNotPaid">Publiceringsavgiften ej betald. För att planlägga för publicering, meddela författaren att betala eller avsäga sig avgiften.</message>
 	<message key="editor.article.display">Visa</message>
 	<message key="editor.article.hideTocAuthorDescription">Utelämna författarnamnen i numrets innehållsförteckning</message>
-	<message key="editor.article.hideTocAuthorDefault">Standard</message>
+	<message key="editor.article.hideTocAuthorDefault">Default</message>
 	<message key="editor.article.hideTocAuthorHide">Utelämna</message>
 	<message key="editor.article.hideTocAuthorShow">Visa</message>
 	<message key="editor.article.cover">Omslag</message>
