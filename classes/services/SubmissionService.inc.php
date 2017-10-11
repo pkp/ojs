@@ -137,9 +137,6 @@ class SubmissionService extends \PKP\Services\PKPSubmissionService {
 	 * 		@option $submission Submission The associated submission
 	 * 		@option $props array Requested properties
 	 * 		@option $args array Request args
-	 * 		@option $publishedArticle PublishedArticle Available if this submission
-	 *      has been published.
-	 * 		@option $issue array Available if this submission has been published.
 	 * ]
 	 *
 	 * @return array
@@ -150,12 +147,42 @@ class SubmissionService extends \PKP\Services\PKPSubmissionService {
 		$props = $args[2];
 		$propertyArgs = $args[3];
 		$request = $args[3]['request'];
-		$publishedArticle = $args[4];
-		$issue = $args[5];
 		$context = $request->getContext();
+		$dispatcher = $request->getDispatcher();
+
+		$publishedArticle = null;
+		if ($context) {
+			$publishedArticleDao = \DAORegistry::getDAO('PublishedArticleDAO');
+			$publishedArticle = $publishedArticleDao->getPublishedArticleByBestArticleId(
+				(int) $context->getId(),
+				$submission->getId(),
+				true
+			);
+		}
+
+		$issue = null;
+		if ($publishedArticle) {
+			$articleId = $publishedArticle->getId();
+			$issueDao = \DAORegistry::getDAO('IssueDAO');
+			$issue = $issueDao->getById(
+				$publishedArticle->getIssueId(),
+				$publishedArticle->getJournalId(),
+				true
+			);
+		}
 
 		foreach ($props as $prop) {
 			switch ($prop) {
+				case 'urlPublished':
+					$values[$prop] = $dispatcher->url(
+						$request,
+						ROUTE_PAGE,
+						$context->getPath(),
+						'article',
+						'view',
+						$submission->getBestArticleId()
+					);
+					break;
 				case 'issue':
 				case 'issueSummary':
 					$values['issue'] = null;
@@ -177,6 +204,21 @@ class SubmissionService extends \PKP\Services\PKPSubmissionService {
 							$values['section'] = ($prop === 'section')
 								? $sectionService->getSummaryProperties($section, $args)
 								: $sectionService->getFullProperties($section, $args);
+						}
+					}
+					break;
+				case 'galleys':
+				case 'galleysSummary';
+					$values['galleys'] = null;
+					if ($publishedArticle) {
+						$values['galleys'] = [];
+						$galleyService = \ServicesContainer::instance()->get('galley');
+						$galleyArgs = array_merge($args, array('parent' => $publishedArticle));
+						$galleys = $publishedArticle->getGalleys();
+						foreach ($galleys as $galley) {
+							$values['galleys'][] = ($prop === 'galleys')
+								? $galleyService->getFullProperties($galley, $galleyArgs)
+								: $galleyService->getSummaryProperties($galley, $galleyArgs);
 						}
 					}
 					break;
