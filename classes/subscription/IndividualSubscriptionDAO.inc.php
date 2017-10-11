@@ -91,7 +91,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 			WHERE s.type_id = st.type_id
 			AND st.institutional = 0
 			AND s.user_id = ?',
-			$userId,
+			(int) $userId,
 			$rangeInfo
 		);
 
@@ -147,7 +147,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 			WHERE s.type_id = st.type_id
 			AND st.institutional = 0
 			AND s.subscription_id = ?',
-			$subscriptionId
+			(int) $subscriptionId
 		);
 
 		$returner = isset($result->fields[0]) && $result->fields[0] != 0 ? true : false;
@@ -173,8 +173,8 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 			AND s.subscription_id = ?
 			AND s.user_id = ?',
 			array(
-				$subscriptionId,
-				$userId
+				(int) $subscriptionId,
+				(int) $userId
 			)
 		);
 
@@ -201,8 +201,8 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 			AND s.user_id = ?
 			AND s.journal_id = ?',
 			array(
-				$userId,
-				$journalId
+				(int) $userId,
+				(int) $journalId
 			)
 		);
 
@@ -278,7 +278,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 			FROM
 			subscriptions s
 			WHERE s.journal_id = ?',
-			$journalId
+			(int) $journalId
 		);
 
 		$returner = true;
@@ -308,7 +308,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 			FROM
 			subscriptions s
 			WHERE s.user_id = ?',
-			$userId
+			(int) $userId
 		);
 
 		$returner = true;
@@ -341,8 +341,8 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 			WHERE s.user_id = ?
 			AND s.journal_id = ?',
 			array (
-				$userId,
-				$journalId
+				(int) $userId,
+				(int) $journalId
 			)
 		);
 
@@ -373,7 +373,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 			FROM
 			subscriptions s
 			WHERE s.type_id = ?',
-			$subscriptionTypeId
+			(int) $subscriptionTypeId
 		);
 
 		$returner = true;
