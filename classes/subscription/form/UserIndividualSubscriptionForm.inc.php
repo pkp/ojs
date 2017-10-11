@@ -93,7 +93,7 @@ class UserIndividualSubscriptionForm extends Form {
 		$templateMgr->assign(array(
 			'subscriptionId' => $this->subscription?$this->subscription->getId():null,
 			'subscriptionTypes' => array_map(
-				function($subscriptionType) {return $subscriptionType->getLocalizedName();},
+				function($subscriptionType) {return $subscriptionType->getLocalizedName() . ' (' . $subscriptionType->getCost() . ' ' . $subscriptionType->getCurrencyCodeAlpha() . ')';},
 				$this->subscriptionTypes
 			),
 		));
