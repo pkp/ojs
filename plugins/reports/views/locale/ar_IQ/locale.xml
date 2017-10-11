@@ -14,10 +14,9 @@
 <locale name="ar_IQ" full_name="العربية">
 	<message key="plugins.reports.views.displayName">معاينة التقرير</message>
 	<message key="plugins.reports.views.description">هذه الإضافة تعطي تقريراً بصيغة CSV يصف قراءات كل مقالة.</message>
-
-  <message key="plugins.reports.views.articleId">رمز المقالة التعريفي</message>
-  <message key="plugins.reports.views.articleTitle">عنوان المقالة</message>
-  <message key="plugins.reports.views.datePublished">تأريخ نشرها</message>
-  <message key="plugins.reports.views.abstractViews">معاينات الملخص</message>
-  <message key="plugins.reports.views.galleyViews">إجمالي معاينات اللوح الطباعي</message>
+	<message key="plugins.reports.views.articleId">رمز المقالة التعريفي</message>
+	<message key="plugins.reports.views.articleTitle">عنوان المقالة</message>
+	<message key="plugins.reports.views.datePublished">تأريخ نشرها</message>
+	<message key="plugins.reports.views.abstractViews">معاينات الملخص</message>
+	<message key="plugins.reports.views.galleyViews">إجمالي معاينات اللوح الطباعي</message>
 </locale>
