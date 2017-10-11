@@ -71,14 +71,7 @@ definitions:
       sponsor:
         $ref: '#/definitions/LocaleObject'
       pages:
-        type: array
-        items:
-          type: object
-          properties:
-            0:
-              type: string
-            1:
-              type: string
+        type: string
       copyrightHolder:
         $ref: '#/definitions/LocaleObject'
       copyrightYear:
@@ -178,14 +171,7 @@ definitions:
       language:
         type: string
       pages:
-        type: array
-        items:
-          type: object
-          properties:
-            0:
-              type: string
-            1:
-              type: string
+        type: string
       datePublished:
         type: string
       status:
@@ -212,8 +198,6 @@ definitions:
     properties:
       id:
         type: integer
-      _href:
-        type: string
       seq:
         type: integer
       firstName:
@@ -249,8 +233,6 @@ definitions:
     properties:
       id:
         type: integer
-      _href:
-        type: string
       seq:
         type: integer
       fullName:
@@ -262,9 +244,7 @@ definitions:
     properties:
       id:
         type: integer
-      _href:
-        type: string
-      parent:
+      _parent:
         type: string
       locale:
         type: string
@@ -272,9 +252,9 @@ definitions:
         type: string
       seq:
         type: integer
-      remoteUrl:
+      urlRemote:
         type: string
-      publishedUrl:
+      urlPublished:
         type: string
       file:
         $ref: '#/definitions/File'
@@ -287,9 +267,7 @@ definitions:
     properties:
       id:
         type: integer
-      _href:
-        type: string
-      parent:
+      _parent:
         type: string
       locale:
         type: string
@@ -297,27 +275,23 @@ definitions:
         type: string
       seq:
         type: integer
-      remoteUrl:
+      urlRemote:
         type: string
-      publishedUrl:
+      urlPublished:
         type: string
   File:
     type: object
     properties:
       id:
         type: integer
-      _href:
-        type: string
       revision:
-        type: integer
-      submissionId:
         type: integer
       fileStage:
         type: integer
       fileName:
-        $ref: '#/definitions/LocaleObject'
-      downloadUrl:
         type: string
+      genreId:
+        type: integer
       metadata:
         type: object
         properties:
@@ -333,9 +307,25 @@ definitions:
             $ref: '#/definitions/LocaleObject'
           sponsor:
             $ref: '#/definitions/LocaleObject'
-          date:
+          dateCreated:
             type: string
           language:
+            type: string
+          caption:
+            type: string
+          credit:
+            type: string
+          copyrightOwner:
+            type: string
+          terms:
+            type: string
+          width:
+            type: string
+          height:
+            type: string
+          physicalWidth:
+            type: string
+          physicalHeight:
             type: string
   Issue:
     type: object
@@ -356,8 +346,6 @@ definitions:
         type: string
       year:
         type: integer
-      isPublished:
-        type: boolean
       isCurrent:
         type: boolean
       datePublished:
@@ -366,14 +354,14 @@ definitions:
         type: string
       lastModified:
         type: string
+      publishedUrl:
+        type: string
       doi:
         type: string
       coverImageUrl:
         $ref: '#/definitions/LocaleObject'
       coverImageAltText:
         $ref: '#/definitions/LocaleObject'
-      publishedUrl:
-        type: string
       articles:
         type: array
         items:
@@ -382,16 +370,6 @@ definitions:
         type: array
         items:
           $ref: '#/definitions/SectionSummary'
-      tableOfContents:
-        type: array
-        items:
-          type: object
-          example:
-            sectionId: 1
-            articles:
-              type: array
-              items:
-                type: integer
       galleys:
         type: array
         items:
@@ -417,6 +395,10 @@ definitions:
         type: integer
       doi:
         type: string
+      datePublished:
+        type: string
+      publishedUrl:
+        type: string
       coverImageUrl:
         $ref: '#/definitions/LocaleObject'
       coverImageAltText:
@@ -434,7 +416,7 @@ definitions:
         $ref: '#/definitions/LocaleObject'
       title:
         $ref: '#/definitions/LocaleObject'
-      sequence:
+      seq:
         type: integer
   ReviewRound:
     type: object
@@ -493,8 +475,6 @@ paths:
       description: |
         **OJS 3.1 Target**:
           * See `/submissions/{submissionId}`.
-          * Support `count` and `offset` parameters.
-          * Support `assignedTo` parameters if time permits. Otherwise restrict access to managers and admins.
       parameters:
         - name: status
           description: Filter results by submission status. Pass more than one status in a comma-separated list (eg - `3,4`). Must match the value of the `STATUS_QUEUED`, `STATUS_PUBLISHED` or `STATUS_DECLINED` constants in OJS 3.
@@ -531,6 +511,11 @@ paths:
           in: query
           required: false
           type: boolean
+        - name: isOverdue
+          description: Filter the results by those for which a reviewer has missed a deadline.
+          in: query
+          required: false
+          type: boolean
         - name: sectionIds
           description: Filter the results by those assigned to a section.
           in: query
@@ -545,9 +530,14 @@ paths:
         '200':
           description: List of submissions.
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/Submission'
+            type: object
+            properties:
+              maxItems:
+                type: integer
+              items:
+                type: array
+                items:
+                  $ref: '#/definitions/Submission'
         '403':
           description: You do not have permission to access submissions assigned to the user requested in the `assignedTo` parameter.
           schema:
@@ -563,9 +553,9 @@ paths:
           * All keys except `stages`, `reviewRounds` and `reviewAssignments`
 
         **Additional notes**:
-          * Unpublished submissions should only be returned for assigned participants, editors and admins.
+          * Unpublished submissions are only returned for assigned participants, editors and admins.
           * `abstract` includes HTML markup.
-          * `pages` is an array of arrays. Each array contains two items: the start and end page. Example: `[[25, 31], [45, 62]]`. It is possible to have multiple page sets (eg - 21-32, 36-40), but may be very uncommon.
+          * `pages` is usually a `string`. But in some cases it may return an array of arrays. Each array contains two items: the start and end page. Example: `[[25, 31], [45, 62]]`.
           * `submissionProgress` will be > 0 if the submission is incomplete.
           * `stages`, `reviewRounds` and `reviewAssignments` should only be returned for participants assigned to the submission.
           * `reviewAssignments` should only expose user-identifying information for editors and admins.
@@ -596,11 +586,12 @@ paths:
       summary: Get submission galleys.
       description: |
         **OJS 3.1 Target**:
-          - All keys except `file`.
+          - All keys except `dependentFiles`.
 
         **Additional Notes**:
-          - `parent` will return the API URL representing the associated submission.
-          - `publishedUrl` will point to the frontend galley view for published submissions. It is empty for unpublished submissions.
+          - This endpoint will not be available until a submission has reached the Production stage.
+          - `_parent` will return the API URL representing the associated submission.
+          - `publishedUrl` will point to the frontend galley view (eg - `/article/view/<submission-id>/<galley-id>`).
       parameters:
         - name: submissionId
           in: path
@@ -631,7 +622,22 @@ paths:
       description: |
         **OJS 3.1 Target**:
           * See `/issues/{issueId}`.
+          * Only published issues are returned.
+          * Only the `volume`, `number` and `year` parameters are supported.
+
+        **Additional Notes**:
+          * Results are ordered by `datePublished`, most recent first.
       parameters:
+        - name: count
+          description: How many results to return in a single request. Default is `20`. Max is `100`.
+          in: query
+          required: false
+          type: integer
+        - name: offset
+          description: Offset the results returned. Use this to receive subsequent pages of requests. A `count` of `10` and `offset` of `15` will return results `15` to `25`.
+          in: query
+          required: false
+          type: integer
         - name: isPublished
           description: Filter returned issues by those that have been published.
           in: query
@@ -658,7 +664,7 @@ paths:
           schema:
             type: array
             items:
-              $ref: '#/definitions/Issue'
+              $ref: '#/definitions/IssueSummary'
         '400':
           description: The requested volume, number or year is not valid.
           schema:
@@ -693,6 +699,7 @@ paths:
 
         **Additional Notes**:
           - `description` will include HTML
+          - If the issue has a custom section order, the `seq` property of each `SectionSummary` will reflect the sequence for that issue.
       parameters:
         - name: issueId
           description: Issue ID
@@ -704,40 +711,6 @@ paths:
           description: Issue details.
           schema:
             $ref: '#/definitions/Issue'
-
-  '/issues/{issueId}/galleys':
-    get:
-      tags:
-        - Issues
-      summary: Get issue galleys.
-      description: |
-        **OJS 3.1 Target**:
-          - All keys except `file`.
-
-        **Additional Notes**:
-          - `parent` will return the API URL representing the associated issue.
-          - `publishedUrl` will point to the frontend galley view for published issues. It is empty for unpublished issues.
-      parameters:
-        - name: issueId
-          in: path
-          description: Issue ID
-          required: true
-          type: integer
-      responses:
-        '200':
-          description: Array of galleys.
-          schema:
-            type: array
-            items:
-              $ref: '#/definitions/Galley'
-        '403':
-          description: You do not have permission to access this issue.
-          schema:
-            $ref: '#/definitions/ErrorResponse'
-        '404':
-          description: Requested issue could not be found.
-          schema:
-            $ref: '#/definitions/ErrorResponse'
 
   '/_submissions':
     get:
@@ -777,13 +750,13 @@ paths:
           required: false
           type: string
         - name: count
+          description: How many results to return in a single request. Default is `20`. Max is `100`.
           in: query
-          description: Number of submission to return
           required: false
           type: integer
-        - name: page
+        - name: offset
+          description: Offset the results returned. Use this to receive subsequent pages of requests. A `count` of `10` and `offset` of `15` will return results `15` to `25`.
           in: query
-          description: Page number for pagination
           required: false
           type: integer
       responses:

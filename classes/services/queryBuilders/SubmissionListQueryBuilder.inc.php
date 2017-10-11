@@ -30,9 +30,6 @@ class SubmissionListQueryBuilder extends \PKP\Services\QueryBuilders\PKPSubmissi
 	 * @return \OJS\Services\QueryBuilders\SubmissionListQueryBuilder
 	 */
 	public function filterBySections($sectionIds) {
-		if (!is_null($sectionIds) && !is_array($sectionIds)) {
-			$sectionIds = array($sectionIds);
-		}
 		$this->sectionIds = $sectionIds;
 		return $this;
 	}

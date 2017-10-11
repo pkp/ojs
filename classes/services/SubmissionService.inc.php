@@ -21,13 +21,51 @@ class SubmissionService extends \PKP\Services\PKPSubmissionService {
 	/**
 	 * Initialize hooks for extending PKPSubmissionService
 	 */
-    public function __construct() {
+	public function __construct() {
 		parent::__construct();
 
-		\HookRegistry::register('Submission::getSubmissionList::queryBuilder', array($this, 'modifySubmissionListQueryBuilder'));
-		\HookRegistry::register('Submission::listQueryBuilder::get', array($this, 'modifySubmissionListQueryObject'));
-		\HookRegistry::register('Submission::toArray::defaultParams', array($this, 'modifyToArrayDefaultParams'));
-		\HookRegistry::register('Submission::toArray::output', array($this, 'modifyToArrayOutput'));
+		\HookRegistry::register('API::submissions::params', array($this, 'modifyAPISubmissionsParams'));
+		\HookRegistry::register('Submission::getSubmissions::queryBuilder', array($this, 'modifySubmissionListQueryBuilder'));
+		\HookRegistry::register('Submission::getSubmissions::queryObject', array($this, 'modifySubmissionListQueryObject'));
+		\HookRegistry::register('Submission::getProperties::summaryProperties', array($this, 'modifyProperties'));
+		\HookRegistry::register('Submission::getProperties::fullProperties', array($this, 'modifyProperties'));
+		\HookRegistry::register('Submission::getProperties::values', array($this, 'modifyPropertyValues'));
+	}
+
+	/**
+	 * Helper function to return the app-specific submission list query builder
+	 *
+	 * @return \OJS\Services\QueryBuilders\SubmissionListQueryBuilder
+	 */
+	public function getSubmissionListQueryBuilder($contextId) {
+		return new \OJS\Services\QueryBuilders\SubmissionListQueryBuilder($contextId);
+	}
+
+	/**
+	 * Collect and sanitize request params for submissions API endpoint
+	 *
+	 * @param $hookName string
+	 * @param $args array [
+	 *		@option array $returnParams
+	 *		@option SlimRequest $slimRequest
+	 * ]
+	 *
+	 * @return array
+	 */
+	public function modifyAPISubmissionsParams($hookName, $args) {
+		$returnParams =& $args[0];
+		$slimRequest = $args[1];
+		$requestParams = $slimRequest->getQueryParams();
+
+		if (!empty($requestParams['sectionIds'])) {
+			$sectionIds = $requestParams['sectionIds'];
+			if (is_string($sectionIds) && strpos($sectionIds, ',') > -1) {
+				$sectionIds = explode(',', $sectionIds);
+			} elseif (!is_array($sectionIds)) {
+				$sectionIds = array($sectionIds);
+			}
+			$returnParams['sectionIds'] = array_map('intval', $sectionIds);
+		}
 	}
 
 	/**
@@ -37,7 +75,7 @@ class SubmissionService extends \PKP\Services\PKPSubmissionService {
 	 * @param $args array [
 	 *		@option \OJS\Services\QueryBuilders\SubmissionListQueryBuilder $submissionListQB
 	 *		@option int $contextId
-	 *		@option array $args
+	 *		@option array $requestArgs
 	 * ]
 	 *
 	 * @return \OJS\Services\QueryBuilders\SubmissionListQueryBuilder
@@ -45,13 +83,11 @@ class SubmissionService extends \PKP\Services\PKPSubmissionService {
 	public function modifySubmissionListQueryBuilder($hookName, $args) {
 		$submissionListQB =& $args[0];
 		$contextId = $args[1];
-		$args = $args[2];
+		$requestArgs = $args[2];
 
-		if (!empty($args['sectionIds'])) {
-			$submissionListQB->filterBySections($args['sectionIds']);
+		if (!empty($requestArgs['sectionIds'])) {
+			$submissionListQB->filterBySections($requestArgs['sectionIds']);
 		}
-
-		return $submissionListQB;
 	}
 
 	/**
@@ -70,95 +106,81 @@ class SubmissionService extends \PKP\Services\PKPSubmissionService {
 		$queryBuilder = $args[1];
 
 		$queryObject = $queryBuilder->appGet($queryObject);
-
-		return true;
 	}
 
 	/**
-	 * Add app-specific default params when converting a submission to an array
+	 * Add app-specific properties to submissions
 	 *
-	 * @param $hookName string
+	 * @param $hookName string Submission::getProperties::summaryProperties or
+	 *  Submission::getProperties::fullProperties
 	 * @param $args array [
-	 * 		@option $defaultParams array Default param settings
-	 * 		@option $params array Params requested for this conversion
-	 * 		@option $submissions array Submissions to convert to array
+	 * 		@option $props array Existing properties
+	 * 		@option $submission Submission The associated submission
+	 * 		@option $args array Request args
 	 * ]
 	 *
 	 * @return array
 	 */
-	public function modifyToArrayDefaultParams($hookName, $args) {
-		$defaultParams =& $args[0];
-		$params = $args[1];
-		$submissions = $args[2];
+	public function modifyProperties($hookName, $args) {
+		$props =& $args[0];
 
-		$defaultParams['section'] = true;
-
-		return true;
+		$props[] = 'issueSummary';
+		$props[] = 'sectionSummary';
 	}
 
 	/**
-	 * Add app-specific output when converting a submission to an array
+	 * Add app-specific property values to a submission
 	 *
-	 * @param $hookName string
+	 * @param $hookName string Submission::getProperties::values
 	 * @param $args array [
-	 * 		@option $output array All submissions converted to array
-	 * 		@option $params array Params requested for this conversion
-	 * 		@option $submissions array Array of Submission objects
+	 *    @option $values array Key/value store of property values
+	 * 		@option $submission Submission The associated submission
+	 * 		@option $props array Requested properties
+	 * 		@option $args array Request args
+	 * 		@option $publishedArticle PublishedArticle Available if this submission
+	 *      has been published.
+	 * 		@option $issue array Available if this submission has been published.
 	 * ]
 	 *
 	 * @return array
 	 */
-	public function modifyToArrayOutput($hookName, $args) {
-		$output =& $args[0];
-		$params = $args[1];
-		$submissions = $args[2];
+	public function modifyPropertyValues($hookName, $args) {
+		$values =& $args[0];
+		$submission = $args[1];
+		$props = $args[2];
+		$propertyArgs = $args[3];
+		$request = $args[3]['request'];
+		$publishedArticle = $args[4];
+		$issue = $args[5];
+		$context = $request->getContext();
 
-		// Create array of Submission objects with keys matching the $output
-		// array
-		$submissionObjects = array();
-		foreach ($submissions as $submission) {
-
-			if (!is_a($submission, 'Submission')) {
-				error_log('Could not convert item to array because it is not a submission. ' . __LINE__);
-			}
-
-			$id = $submission->getId();
-			foreach ($output as $key => $submissionArray) {
-				if ($submissionArray['id'] === $id) {
-					$submissionObjects[$key] = $submission;
-				}
-			}
-		}
-
-		foreach ($submissionObjects as $key => $submission) {
-
-			if (!empty($params['section'])) {
-				$output[$key]['section'] = (int) $submission->getSectionId();
-			}
-
-			if (!empty($params['urlPublished'])) {
-				$request = \Application::getRequest();
-				$dispatcher = $request->getDispatcher();
-				$output[$key]['urlPublished'] = $dispatcher->url(
-					$request,
-					ROUTE_PAGE,
-					null,
-					'article',
-					'view',
-					$submission->getId()
-				);
+		foreach ($props as $prop) {
+			switch ($prop) {
+				case 'issue':
+				case 'issueSummary':
+					$values['issue'] = null;
+					if ($issue) {
+						$issueService = \ServicesContainer::instance()->get('issue');
+						$values['issue'] = ($prop === 'issue')
+						? $issueService->getFullProperties($issue, $propertyArgs)
+						: $issueService->getSummaryProperties($issue, $propertyArgs);
+					}
+					break;
+				case 'section':
+				case 'sectionSummary':
+					$values['section'] = array();
+					if ($context) {
+						$sectionDao = \DAORegistry::getDAO('SectionDAO');
+						$section = $sectionDao->getById($submission->getSectionId(), $context->getId());
+						if (!empty($section)) {
+							$sectionService = \ServicesContainer::instance()->get('section');
+							$values['section'] = ($prop === 'section')
+								? $sectionService->getSummaryProperties($section, $args)
+								: $sectionService->getFullProperties($section, $args);
+						}
+					}
+					break;
 			}
 		}
-
-		return true;
-	}
-
-	/**
-	 * Helper function to return the app-specific submission list query builder
-	 *
-	 * @return \OJS\Services\QueryBuilders\SubmissionListQueryBuilder
-	 */
-	public function getSubmissionListQueryBuilder($contextId) {
-		return new \OJS\Services\QueryBuilders\SubmissionListQueryBuilder($contextId);
 	}
 }

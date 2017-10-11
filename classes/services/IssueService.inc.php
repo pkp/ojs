@@ -74,6 +74,9 @@ class IssueService extends PKPBaseEntityPropertyService {
 	 * @copydoc \PKP\Services\EntityProperties\EntityPropertyInterface::getProperties()
 	 */
 	public function getProperties($issue, $props, $args = null) {
+		$request = $args['request'];
+		$context = $request->getContext();
+		$dispatcher = $request->getDispatcher();
 		$values = array();
 		foreach ($props as $prop) {
 			switch ($prop) {
@@ -82,11 +85,10 @@ class IssueService extends PKPBaseEntityPropertyService {
 					break;
 				case '_href':
 					$values[$prop] = null;
-					$slimRequest = $args['slimRequest'];
-					if ($slimRequest) {
-						$route = $slimRequest->getAttribute('route');
+					if (!empty($args['slimRequest'])) {
+						$route = $args['slimRequest']->getAttribute('route');
 						$arguments = $route->getArguments();
-						$href = "/{$arguments['contextPath']}/api/{$arguments['version']}/issues/" . $issue->getIssue();
+						$href = "{$arguments['contextPath']}/api/{$arguments['version']}/issues/" . $issue->getId();
 						$values[$prop] = $href;
 					}
 					break;
@@ -108,9 +110,6 @@ class IssueService extends PKPBaseEntityPropertyService {
 				case 'year':
 					$values[$prop] = (int) $issue->getYear();
 					break;
-				case 'isPublished':
-					$values[$prop] = (bool) $issue->isPublished();
-					break;
 				case 'isCurrent':
 					$values[$prop] = (bool) $issue->getCurrent();
 					break;
@@ -123,38 +122,74 @@ class IssueService extends PKPBaseEntityPropertyService {
 				case 'lastModified':
 					$values[$prop] = $issue->getLastModified();
 					break;
-// 				case 'publishedUrl':
-// 					$values[$prop] = (int) $issue->getYear();
-// 					break;
-// 				case 'articles':
-// 					$values[$prop] = $issue->getIssueIdentification();
-// 					break;
-// 				case 'sections':
-// 					$values[$prop] = (int) $issue->getVolume();
-// 					break;
-// 				case 'tableOfContents':
-// 					$values[$prop] = $issue->getNumber();
-// 					break;
-// 				case 'galleys':
-// 					$values[$prop] = (int) $issue->getYear();
-// 					break;
-// 				case 'doi':
-// 					$values[$prop] = $issue->getId();
-// 					break;
+				case 'publishedUrl':
+					$values[$prop] = null;
+					if ($context) {
+						$values[$prop] = $dispatcher->url(
+							$request,
+							ROUTE_PAGE,
+							$context->getPath(),
+							'issue',
+							'view',
+							$issue->getBestIssueId()
+						);
+					}
+					break;
+				case 'articles':
+					$values[$prop] = array();
+					$publishedArticleDao = \DAORegistry::getDAO('PublishedArticleDAO');
+					$publishedArticles = $publishedArticleDao->getPublishedArticles($issue->getId());
+					if (!empty($publishedArticles)) {
+						foreach ($publishedArticles as $article) {
+							$values[$prop][] = \ServicesContainer::instance()
+								->get('submission')
+								->getSummaryProperties($article, $args);
+						}
+					}
+					break;
+				case 'sections':
+					$values[$prop] = array();
+					$sectionDao = \DAORegistry::getDAO('SectionDAO');
+					$sections = $sectionDao->getByIssueId($issue->getId());
+					if (!empty($sections)) {
+						foreach ($sections as $section) {
+							$sectionProperties = \ServicesContainer::instance()
+								->get('section')
+								->getSummaryProperties($section, $args);
+							$customSequence = $sectionDao->getCustomSectionOrder($issue->getId(), $section->getId());
+							if ($customSequence) {
+								$sectionProperties['seq'] = $customSequence;
+							}
+							$values[$prop][] = $sectionProperties;
+						}
+					}
+					break;
 				case 'coverImageUrl':
-					$values[$prop] = $issue->getCoverImageUrl(null);
+					$values[$prop] = $issue->getCoverImage(null);
 					break;
 				case 'coverImageAltText':
 					$values[$prop] = $issue->getCoverImageAltText(null);
 					break;
-// 				case 'galleys':
-// 				case 'galleysSummary':
-// 					$values[$prop] = $issue->getId();
-// 					break;
-				default:
-					$this->getUnknownProperty($author, $prop, $values);
+				case 'galleys':
+				case 'galleysSummary';
+					$data = array();
+					$issueGalleyDao = \DAORegistry::getDAO('IssueGalleyDAO');
+					$galleys = $issueGalleyDao->getByIssueId($issue->getId());
+					if ($galleys) {
+						$galleyService = \ServicesContainer::instance()->get('galley');
+						$galleyArgs = array_merge($args, array('parent' => $issue));
+						foreach ($galleys as $galley) {
+							$data[] = ($prop === 'galleys')
+								? $galleyService->getFullProperties($galley, $galleyArgs)
+								: $galleyService->getSummaryProperties($galley, $galleyArgs);
+						}
+					}
+					$values['galleys'] = $data;
+					break;
 			}
 		}
+
+		\HookRegistry::call('Issue::getProperties::values', array(&$values, $issue, $props, $args));
 
 		return $values;
 	}
@@ -162,23 +197,29 @@ class IssueService extends PKPBaseEntityPropertyService {
 	/**
 	 * @copydoc \PKP\Services\EntityProperties\EntityPropertyInterface::getSummaryProperties()
 	 */
-	public function getSummaryProperties($author, $args = null) {
+	public function getSummaryProperties($issue, $args = null) {
 		$props = array (
-			'id','_href','title','description','identification','volume','number','year','doi','coverImageUrl',
-			'coverImageAltText','galleysSummary'
+			'id','_href','title','description','identification','volume','number','year','doi',
+			'datePublished', 'publishedUrl', 'coverImageUrl','coverImageAltText','galleysSummary',
 		);
-		$props = $this->getSummaryPropertyList($author, $props);
-		return $this->getProperties($author, $props);
+
+		\HookRegistry::call('Issue::getProperties::summaryProperties', array(&$props, $issue, $args));
+
+		return $this->getProperties($issue, $props, $args);
 	}
 
 	/**
 	 * @copydoc \PKP\Services\EntityProperties\EntityPropertyInterface::getFullProperties()
 	 */
-	public function getFullProperties($author, $args = null) {
+	public function getFullProperties($issue, $args = null) {
 		$props = array (
-			'id'
+			'id','_href','title','description','identification','volume','number','year','isPublished',
+			'isCurrent','datePublished','dateNotified','lastModified','publishedUrl','doi','coverImageUrl',
+			'coverImageAltText','articles','sections','tableOfContetnts','galleysSummary',
 		);
-		$props = $this->getFullPropertyList($author, $props);
-		return $this->getProperties($author, $props);
+
+		\HookRegistry::call('Issue::getProperties::fullProperties', array(&$props, $issue, $args));
+
+		return $this->getProperties($issue, $props, $args);
 	}
 }

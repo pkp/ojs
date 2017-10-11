@@ -18,6 +18,7 @@ namespace OJS\Services;
 use \Pimple\Container;
 use \OJS\Services\IssueService;
 use \OJS\Services\AuthorService;
+use \OJS\Services\GalleyService;
 
 class OJSServiceProvider implements \Pimple\ServiceProviderInterface {
 
@@ -50,6 +51,11 @@ class OJSServiceProvider implements \Pimple\ServiceProviderInterface {
 		// Author service
 		$pimple['author'] = function() {
 			return new AuthorService();
+		};
+
+		// Galley service
+		$pimple['galley'] = function() {
+			return new GalleyService();
 		};
 	}
 }
