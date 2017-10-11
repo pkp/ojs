@@ -166,6 +166,6 @@ class UserIndividualSubscriptionForm extends Form {
 		$paymentManager->queuePayment($queuedPayment);
 
 		$paymentForm = $paymentManager->getPaymentForm($queuedPayment);
-		$paymentForm->display($request);
+		$paymentForm->display($this->request);
 	}
 }
