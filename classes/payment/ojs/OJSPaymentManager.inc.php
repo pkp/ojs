@@ -109,7 +109,7 @@ class OJSPaymentManager extends PaymentManager {
 	function createCompletedPayment($queuedPayment, $payMethod) {
 		import('lib.pkp.classes.payment.CompletedPayment');
 		$payment = new CompletedPayment();
-		$payment->setContextId($queuedPayment->getJournalId());
+		$payment->setContextId($queuedPayment->getContextId());
 		$payment->setType($queuedPayment->getType());
 		$payment->setAmount($queuedPayment->getAmount());
 		$payment->setCurrencyCode($queuedPayment->getCurrencyCode());
@@ -207,7 +207,7 @@ class OJSPaymentManager extends PaymentManager {
 					$subscription = $individualSubscriptionDao->getById($subscriptionId);
 					$institutional = false;
 				}
-				if (!$subscription || $subscription->getUserId() != $queuedPayment->getUserId() || $subscription->getJournalId() != $queuedPayment->getJournalId()) {
+				if (!$subscription || $subscription->getUserId() != $queuedPayment->getUserId() || $subscription->getJournalId() != $queuedPayment->getContextId()) {
 					fatalError('Subscription integrity checks fail!');
 					return false;
 				}
@@ -256,7 +256,7 @@ class OJSPaymentManager extends PaymentManager {
 					$subscription = $individualSubscriptionDao->getById($subscriptionId);
 					$institutional = false;
 				}
-				if (!$subscription || $subscription->getUserId() != $queuedPayment->getUserId() || $subscription->getJournalId() != $queuedPayment->getJournalId()) {
+				if (!$subscription || $subscription->getUserId() != $queuedPayment->getUserId() || $subscription->getJournalId() != $queuedPayment->getContextId()) {
 					// FIXME: Is this supposed to be here?
 					error_log(print_r($subscription, true));
 					return false;
