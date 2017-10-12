@@ -115,6 +115,10 @@
 	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.requested">Requested</message>
 	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.pageTitleAssigned">Objects For Review Assignments - Assigned</message>
 	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.assigned">Assigned</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.pageTitleOffered">Objects For Review Assignments - Offered</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.offered">Offered</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.pageTitleAccepted">Objects For Review Assignments - Accepted</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.accepted">Accepted</message>
 	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.pageTitleMailed">Objects For Review Assignments - Mailed</message>
 	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.mailed">Mailed</message>
 	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.pageTitleSubmitted">Objects For Review Assignments - Submitted</message>
@@ -132,7 +136,9 @@
 	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.status">Status</message>
 	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.status.available">Available</message>
 	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.status.requested">Requested</message>
-	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.status.assigned">Assigned</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.status.assigned">Assigned</message>	
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.status.offered">Offered</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.status.accepted">Accepted</message>
 	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.status.mailed">Mailed</message>
 	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.status.submitted">Submitted</message>
 
@@ -145,15 +151,20 @@
 	<!--  Actions -->
 	<message key="plugins.generic.objectsForReview.editor.select">Select</message>
 	<message key="plugins.generic.objectsForReview.editor.assignObjectReviewer">Assign</message>
+	<message key="plugins.generic.objectsForReview.editor.offerObjectToReviewer">Offer</message>
 	<message key="plugins.generic.objectsForReview.editor.acceptObjectReviewer">Accept</message>
 	<message key="plugins.generic.objectsForReview.editor.denyObjectReviewer">Deny</message>
 	<message key="plugins.generic.objectsForReview.editor.notifyObjectMailed">Object Mailed</message>
 	<message key="plugins.generic.objectsForReview.editor.removeObjectReviewer">Remove</message>
+	<message key="plugins.generic.objectsForReview.editor.cancelReviewOffer">Cancel offer</message>
 	<message key="plugins.generic.objectsForReview.editor.confirmRemoveObjectReviewer">Are you sure you want to remove this author and clear this object's review history?</message>
+	<message key="plugins.generic.objectsForReview.editor.confirmCancelReviewOffer">Are you sure you want to  cancel the offer you did to this this author ?</message>
 	<message key="plugins.generic.objectsForReview.editor.selectSubmission">Select Submission</message>
 	<!-- Assign Author -->
 	<message key="plugins.generic.objectsForReview.editor.assignAuthor">Assign Author</message>
+	<message key="plugins.generic.objectsForReview.editor.offerToAuthor">Offer To Author</message>
 	<message key="plugins.generic.objectsForReview.editor.assignAuthor.assign">Assign</message>
+	<message key="plugins.generic.objectsForReview.editor.assignAuthor.offer">Offer</message>
 	<message key="plugins.generic.objectsForReview.editor.assignAuthor.createNewUser">Create New User</message>
 
 	<message key="plugins.generic.objectsForReview.editor.noMailingAddress">No mailing address on file.</message>
@@ -213,6 +224,8 @@
 
 	<message key="plugins.generic.objectsForReview.author.submit">Submit</message>
 	<message key="plugins.generic.objectsForReview.author.view">View</message>
+	<message key="plugins.generic.objectsForReview.author.accept">Accepte</message>
+	<message key="plugins.generic.objectsForReview.author.decline">Decline</message>
 	<!-- Submission -->
 	<message key="plugins.generic.objectsForReview.author.submitInstructions">Please indicate if this submission is a review for any of the following objects assigned to you.</message>
 
@@ -229,12 +242,14 @@
 	<message key="plugins.generic.objectsForReview.notification.ofrUpdated">Object for review updated.</message>
 	<message key="plugins.generic.objectsForReview.notification.ofrDeleted">Object for review and its assignments deleted.</message>
 	<message key="plugins.generic.objectsForReview.notification.ofrAuthorAssigned">Author assigned to object for review.</message>
+	<message key="plugins.generic.objectsForReview.notification.ofrAuthorOffered">Object for review offered to author.</message>
 	<message key="plugins.generic.objectsForReview.notification.ofrAuthorDenied">Author request denied. Object for review reset to initial state.</message>
 	<message key="plugins.generic.objectsForReview.notification.ofrAuthorMailed">Object for review recorded as mailed to author.</message>
 	<message key="plugins.generic.objectsForReview.notification.ofrAuthorRemoved">Author removed. Object for review reset to initial state.</message>
 	<message key="plugins.generic.objectsForReview.notification.ofrSubmissionAssigned">Submission assigned to object for review.</message>
 	<message key="plugins.generic.objectsForReview.notification.ofrSettingsSaved">Object for review plugin settings saved.</message>
-
+	<message key="plugins.generic.objectsForReview.notification.ofrAccepted">Your answer has been recorded, you will soon receive informations from the editor.</message>
+	<message key="plugins.generic.objectsForReview.notification.ofrDeclined">Your response was recorded and sent to the publisher.</message>
 
 	<!-- errors -->
 	<!-- Object Types Management -->

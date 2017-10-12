@@ -47,6 +47,12 @@
 		<td width="80%" class="value">{$objectForReviewAssignment->getDateAssigned()|date_format:$dateFormatShort|default:"&mdash;"}</td>
 	</tr>
 	{/if}
+	{if $status == $smarty.const.OFR_STATUS_OFFERED || $status == $smarty.const.OFR_STATUS_ACCEPTED}
+	<tr valign="top">
+		<td width="20%" class="label">{translate key="plugins.generic.objectsForReview.objectForReviewAssignments.offered"}</td>
+		<td width="80%" class="value">{$objectForReviewAssignment->getDateOffered()|date_format:$dateFormatShort|default:"&mdash;"}</td>
+	</tr>
+	{/if}
 	{if $status == $smarty.const.OFR_STATUS_MAILED || $status == $smarty.const.OFR_STATUS_SUBMITTED}
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="dateMailed" key="plugins.generic.objectsForReview.objectForReviewAssignments.mailed"}</td>
@@ -86,6 +92,13 @@
 			<a href="{url op="notifyObjectForReviewMailed" path=$objectForReviewAssignment->getId() returnPage=$returnPage}" class="action">{translate key="plugins.generic.objectsForReview.editor.notifyObjectMailed"}</a>&nbsp;|
 			{/if}
 			<a href="{url op="removeObjectForReviewAssignment" path=$objectForReviewAssignment->getId() returnPage=$returnPage}" class="action" onclick="return confirm('{translate|escape:"jsparam" key="plugins.generic.objectsForReview.editor.confirmRemoveObjectReviewer"}')">{translate key="plugins.generic.objectsForReview.editor.removeObjectReviewer"}</a>
+		{elseif $status == $smarty.const.OFR_STATUS_OFFERED }
+			<br />
+			<a href="{url op="cancelObjectForReviewOffer" path=$objectForReviewAssignment->getId() returnPage=$returnPage}" class="action">{translate key="plugins.generic.objectsForReview.editor.cancelReviewOffer"}</a>&nbsp;
+		{elseif $status == $smarty.const.OFR_STATUS_ACCEPTED}
+			<br />
+			<a href="{url op="cancelObjectForReviewOffer" path=$objectForReviewAssignment->getId() returnPage=$returnPage}" class="action">{translate key="plugins.generic.objectsForReview.editor.cancelReviewOffer"}</a>&nbsp;|
+			<a href="{url op="assignObjectForReviewAuthor" path=$objectForReview->getId() userId=$userId returnPage=$returnPage}" class="action">{translate key="plugins.generic.objectsForReview.editor.assignObjectReviewer"}</a>&nbsp;
 		{elseif $status == $smarty.const.OFR_STATUS_MAILED}
 			<br />
 			<a href="{url op="removeObjectForReviewAssignment" path=$objectForReviewAssignment->getId() returnPage=$returnPage}" class="action" onclick="return confirm('{translate|escape:"jsparam" key="plugins.generic.objectsForReview.editor.confirmRemoveObjectReviewer"}')">{translate key="plugins.generic.objectsForReview.editor.removeObjectReviewer"}</a>

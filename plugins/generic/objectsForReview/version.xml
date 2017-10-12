@@ -13,7 +13,7 @@
 <version>
 	<application>objectsForReview</application>
 	<type>plugins.generic</type>
-	<release>1.0.0.0</release>
+	<release>1.1.0.0</release>
 	<date>2014-05-01</date>
 	<lazy-load>1</lazy-load>
 	<sitewide>1</sitewide>

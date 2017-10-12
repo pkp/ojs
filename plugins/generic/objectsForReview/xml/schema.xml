@@ -239,6 +239,8 @@
 			<NOTNULL/>
 		</field>
 		<field name="date_requested" type="T"/>
+		<field name="date_offered" type="T"/>
+		<field name="date_accepted" type="T"/>
 		<field name="date_assigned" type="T"/>
 		<field name="date_mailed" type="T"/>
 		<field name="date_due" type="T"/>

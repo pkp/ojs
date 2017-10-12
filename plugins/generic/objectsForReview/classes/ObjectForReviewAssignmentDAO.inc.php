@@ -62,7 +62,7 @@ class ObjectForReviewAssignmentDAO extends DAO {
 	 * @param $submissionId int (optional)
 	 * @return boolean
 	 */
-	function assignmentExists($objectId, $userId = null, $submissionId = null) {
+	function assignmentExists($objectId, $userId = null, $submissionId = null, $statusList=array()) {
 		$params = array((int) $objectId);
 		$sql = 'SELECT COUNT(*) FROM object_for_review_assignments WHERE object_id = ?';
 		if ($userId) {
@@ -72,6 +72,12 @@ class ObjectForReviewAssignmentDAO extends DAO {
 		if ($submissionId) {
 			$sql .= ' AND submission_id = ?';
 			$params[] = (int) $submissionId;
+		}
+		if (is_array($statusList)) {
+			foreach ($statusList as $status) {
+				$sql .= ' AND status = ?';
+				$params[] = (int) $submissionId;
+			}			
 		}
 
 		$result =& $this->retrieve($sql, $params);
@@ -105,6 +111,8 @@ class ObjectForReviewAssignmentDAO extends DAO {
 		$assignment->setStatus($row['status']);
 		$assignment->setDateRequested($this->datetimeFromDB($row['date_requested']));
 		$assignment->setDateAssigned($this->datetimeFromDB($row['date_assigned']));
+		$assignment->setDateOffered($this->datetimeFromDB($row['date_offered']));
+		$assignment->setDateAccepted($this->datetimeFromDB($row['date_accepted']));
 		$assignment->setDateMailed($this->datetimeFromDB($row['date_mailed']));
 		$assignment->setDateDue($this->datetimeFromDB($row['date_due']));
 		$assignment->setDateRemindedBefore($this->datetimeFromDB($row['date_reminded_before']));
@@ -125,11 +133,13 @@ class ObjectForReviewAssignmentDAO extends DAO {
 		$this->update(
 			sprintf(
 				'INSERT INTO object_for_review_assignments
-				(object_id, user_id, submission_id, status, date_requested, date_assigned, date_mailed, date_due, date_reminded_before, date_reminded_after, notes)
+				(object_id, user_id, submission_id, status, date_requested, date_assigned, date_offered, date_accepted, date_mailed, date_due, date_reminded_before, date_reminded_after, notes)
 				VALUES
-				(?, ?, ?, ?, %s, %s, %s, %s, %s, %s, ?)',
+				(?, ?, ?, ?, %s, %s, %s, %s, %s, %s, %s, %s, ?)',
 				$this->datetimeToDB($assignment->getDateRequested()),
 				$this->datetimeToDB($assignment->getDateAssigned()),
+				$this->datetimeToDB($assignment->getDateOffered()),
+				$this->datetimeToDB($assignment->getDateAccepted()),
 				$this->datetimeToDB($assignment->getDateMailed()),
 				$this->datetimeToDB($assignment->getDateDue()),
 				$this->datetimeToDB($assignment->getDateRemindedBefore()),
@@ -162,6 +172,8 @@ class ObjectForReviewAssignmentDAO extends DAO {
 					status = ?,
 					date_requested = %s,
 					date_assigned = %s,
+					date_offered = %s,
+					date_accepted = %s,			
 					date_mailed = %s,
 					date_due = %s,
 					date_reminded_before = %s,
@@ -170,6 +182,8 @@ class ObjectForReviewAssignmentDAO extends DAO {
 				WHERE	assignment_id = ?',
 				$this->datetimeToDB($assignment->getDateRequested()),
 				$this->datetimeToDB($assignment->getDateAssigned()),
+				$this->datetimeToDB($assignment->getDateOffered()),
+				$this->datetimeToDB($assignment->getDateAccepted()),
 				$this->datetimeToDB($assignment->getDateMailed()),
 				$this->datetimeToDB($assignment->getDateDue()),
 				$this->datetimeToDB($assignment->getDateRemindedBefore()),
@@ -205,7 +219,6 @@ class ObjectForReviewAssignmentDAO extends DAO {
 	function deleteById($assignmentId, $objectId = null) {
 		$params = array((int) $assignmentId);
 		if ($objectId !== null) $params[] = (int) $objectId;
-
 		return $this->update('
 			DELETE FROM object_for_review_assignments WHERE assignment_id = ?'
 			. ($objectId !== null?' AND object_id = ?':''),
@@ -508,6 +521,8 @@ class ObjectForReviewAssignmentDAO extends DAO {
 		$counts = array();
 		$counts[OFR_STATUS_AVAILABLE] = $this->getStatusCount($contextId, OFR_STATUS_AVAILABLE, $userId);
 		$counts[OFR_STATUS_REQUESTED] = $this->getStatusCount($contextId, OFR_STATUS_REQUESTED, $userId);
+		$counts[OFR_STATUS_OFFERED] = $this->getStatusCount($contextId, OFR_STATUS_OFFERED, $userId);
+		$counts[OFR_STATUS_ACCEPTED] = $this->getStatusCount($contextId, OFR_STATUS_ACCEPTED, $userId);
 		$counts[OFR_STATUS_ASSIGNED] = $this->getStatusCount($contextId, OFR_STATUS_ASSIGNED, $userId);
 		$counts[OFR_STATUS_MAILED] = $this->getStatusCount($contextId, OFR_STATUS_MAILED, $userId);
 		$counts[OFR_STATUS_SUBMITTED] = $this->getStatusCount($contextId, OFR_STATUS_SUBMITTED, $userId);

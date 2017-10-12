@@ -15,6 +15,11 @@
 
 import('classes.handler.Handler');
 
+//Two modes of author selection
+define('ASSIGN_MODE', 0);
+define('OFFER_MODE', 1);
+
+
 class ObjectsForReviewEditorHandler extends Handler {
 
 	/**
@@ -116,6 +121,14 @@ class ObjectsForReviewEditorHandler extends Handler {
 			case 'assigned':
 				$status = OFR_STATUS_ASSIGNED;
 				$pageTitle = 'plugins.generic.objectsForReview.objectForReviewAssignments.pageTitleAssigned';
+				break;
+			case 'offered':
+				$status = OFR_STATUS_OFFERED;
+				$pageTitle = 'plugins.generic.objectsForReview.objectForReviewAssignments.pageTitleOffered';
+				break;
+			case 'accepted':
+				$status = OFR_STATUS_ACCEPTED;
+				$pageTitle = 'plugins.generic.objectsForReview.objectForReviewAssignments.pageTitleAccepted';
 				break;
 			case 'mailed':
 				$status = OFR_STATUS_MAILED;
@@ -389,20 +402,39 @@ class ObjectsForReviewEditorHandler extends Handler {
 	}
 
 	/**
+	 * Display a list of authors from which to choose an object reviewer for assignment
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
+	function selectObjectForReviewAuthorForAssignment($args, &$request) {
+		$this->selectObjectForReviewAuthor($args, $request, ASSIGN_MODE);
+		
+	}
+	/**
+	 * Display a list of authors from which to choose an object reviewer for offer
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
+	function selectObjectForReviewAuthorForOffer($args, &$request) {
+		$this->selectObjectForReviewAuthor($args, $request, OFFER_MODE);
+		
+	}
+	
+	/**
 	 * Display a list of authors from which to choose an object reviewer.
 	 * @param $args array
 	 * @param $request PKPRequest
 	 */
-	function selectObjectForReviewAuthor($args, &$request) {
+	function selectObjectForReviewAuthor($args, &$request, $selectionMode) {
 		$objectId = array_shift($args);
-
+		
 		$journal =& $request->getJournal();
 		$journalId = $journal->getId();
-
+		
 		if (!$this->_ensureObjectExists($objectId, $journalId)) {
 			$request->redirect(null, 'editor', 'objectsForReview');
 		}
-
+		
 		// Search
 		$searchField = null;
 		$searchMatch = null;
@@ -411,43 +443,44 @@ class ObjectsForReviewEditorHandler extends Handler {
 		if (!empty($search)) {
 			$searchField = $request->getUserVar('searchField');
 			$searchMatch = $request->getUserVar('searchMatch');
-
+			
 		} else if (isset($searchInitial)) {
 			$searchInitial = String::strtoupper($searchInitial);
 			$searchField = USER_FIELD_INITIAL;
 			$search = $searchInitial;
 		}
 		$fieldOptions = Array(
-			USER_FIELD_FIRSTNAME => 'user.firstName',
-			USER_FIELD_LASTNAME => 'user.lastName',
-			USER_FIELD_USERNAME => 'user.username',
-			USER_FIELD_EMAIL => 'user.email'
-		);
-
+				USER_FIELD_FIRSTNAME => 'user.firstName',
+				USER_FIELD_LASTNAME => 'user.lastName',
+				USER_FIELD_USERNAME => 'user.username',
+				USER_FIELD_EMAIL => 'user.email'
+				);
+		
 		// Get all and those authors assigned to this object
 		$rangeInfo = Handler::getRangeInfo('users');
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
 		$users =& $roleDao->getUsersByRoleId(ROLE_ID_AUTHOR, $journalId, $searchField, $search, $searchMatch, $rangeInfo);
 		$ofrAssignmentDao =& DAORegistry::getDAO('ObjectForReviewAssignmentDAO');
 		$usersAssigned = $ofrAssignmentDao->getUserIds($objectId);
-
+		
 		$this->setupTemplate($request, true);
 		$templateMgr =& TemplateManager::getManager($request);
 		$templateMgr->assign('objectId', $objectId);
-
+		$templateMgr->assign('selectionMode', $selectionMode);
+		
 		$templateMgr->assign('searchField', $searchField);
 		$templateMgr->assign('searchMatch', $searchMatch);
 		$templateMgr->assign('search', $search);
 		$templateMgr->assign('searchInitial', $searchInitial);
 		$templateMgr->assign('searchFieldOptions', $fieldOptions);
 		$templateMgr->assign('alphaList', explode(' ', __('common.alphaList')));
-
+		
 		$templateMgr->assign_by_ref('users', $users);
 		$templateMgr->assign_by_ref('usersAssigned', $usersAssigned);
-
+		
 		import('classes.security.Validation');
 		$templateMgr->assign('isJournalManager', Validation::isJournalManager());
-
+		
 		$ofrPlugin =& $this->_getObjectsForReviewPlugin();
 		$templateMgr->display($ofrPlugin->getTemplatePath() . 'editor' . '/' . 'authors.tpl');
 	}
@@ -458,38 +491,68 @@ class ObjectsForReviewEditorHandler extends Handler {
 	 * @param $request PKPRequest
 	 */
 	function assignObjectForReviewAuthor($args, &$request) {
-		$objectId = array_shift($args);
-
-		$journal =& $request->getJournal();
-		$journalId = $journal->getId();
-
-		if (!$this->_ensureObjectExists($objectId, $journalId)) {
-			$request->redirect(null, 'editor', 'objectsForReview');
-		}
-		$ofrDao =& DAORegistry::getDAO('ObjectForReviewDAO');
-		$objectForReview =& $ofrDao->getById($objectId, $journalId);
-
-		$redirect = true;
-		if ($objectForReview->getAvailable()) {
-			$userId = (int) $request->getUserVar('userId');
-			// Ensure there is no assignment for this object and user
-			$ofrAssignmentDao =& DAORegistry::getDAO('ObjectForReviewAssignmentDAO');
-			if ($ofrAssignmentDao->assignmentExists($objectId, $userId)) {
-				$request->redirect(null, 'editor', 'objectsForReview');
-			}
-			// Ensure the user exists and is an author for this journal
-			$userDao =& DAORegistry::getDAO('UserDAO');
-			$user =& $userDao->getById($userId);
-			$roleDao =& DAORegistry::getDAO('RoleDAO');
-			if (isset($user) && $roleDao->userHasRole($journalId, $userId, ROLE_ID_AUTHOR)) {
-				$returnUrl = $request->url(null, 'editor', 'assignObjectForReviewAuthor', $objectId, array('userId' => $userId));
-				// Assign
-				$redirect = $this->_assign(null, $objectForReview, $user, $returnUrl, $request);
-			}
-		}
-		if ($redirect) $request->redirect(null, 'editor', 'objectsForReview', 'assigned');
+		$this->_offerOrAssignObjectForReviewToAuthor($args, $request, ASSIGN_MODE);
 	}
-
+	
+	/**
+	 * Offers an object to a review author.
+	 * 
+	 * @param $args array        	
+	 * @param $request PKPRequest        	
+	 */
+	function offerObjectForReviewToAuthor($args, &$request) {
+		$this->_offerOrAssignObjectForReviewToAuthor($args, $request, OFFER_MODE);
+	}
+	
+	function _offerOrAssignObjectForReviewToAuthor($args, &$request, $selectionMode) {
+		$objectId = array_shift ( $args );
+		
+		$journal = & $request->getJournal ();
+		$journalId = $journal->getId ();
+		
+		if (! $this->_ensureObjectExists ( $objectId, $journalId )) {
+			$request->redirect ( null, 'editor', 'objectsForReview' );
+		}
+		$ofrDao = & DAORegistry::getDAO ( 'ObjectForReviewDAO' );
+		$objectForReview = & $ofrDao->getById ( $objectId, $journalId );
+		
+		$redirect = true;
+		if ($objectForReview->getAvailable ()) {
+			$userId = ( int ) $request->getUserVar ( 'userId' );
+			// Ensure there is no incompatible assignment for this object and user
+			/**
+			 * 
+			 * @var ObjectForReviewAssignmentDAO $ofrAssignmentDao
+			 */
+			$ofrAssignmentDao = & DAORegistry::getDAO ( 'ObjectForReviewAssignmentDAO' );
+			$ofrPlugin =& $this->_getObjectsForReviewPlugin();
+			$ofrPlugin->import('classes.ObjectForReviewAssignment');
+			//You can't offer to author if object has been offered, accepted, assigned, mailed or submitted to/by the same author
+			if (OFFER_MODE===$selectionMode && $ofrAssignmentDao->assignmentExists ( $objectId, $userId, null, [OFR_STATUS_OFFERED, OFR_STATUS_ACCEPTED, OFR_STATUS_ASSIGNED, OFR_STATUS_MAILED, OFR_STATUS_SUBMITTED] )) {
+				$request->redirect ( null, 'editor', 'objectsForReview' );
+			}
+			//You can't assign to author if object has been offered, assigned, mailed or submitted to/by the same author			
+			if (ASSIGN_MODE===$selectionMode && $ofrAssignmentDao->assignmentExists ( $objectId, $userId, null, [OFR_STATUS_OFFERED, OFR_STATUS_ASSIGNED, OFR_STATUS_MAILED, OFR_STATUS_SUBMITTED])) {
+				$request->redirect ( null, 'editor', 'objectsForReview' );
+			}
+			
+			// Ensure the user exists and is an author for this journal
+			$userDao = & DAORegistry::getDAO ( 'UserDAO' );
+			$user = & $userDao->getById ( $userId );
+			$roleDao = & DAORegistry::getDAO ( 'RoleDAO' );
+			if (isset ( $user ) && $roleDao->userHasRole ( $journalId, $userId, ROLE_ID_AUTHOR )) {
+				$action= OFFER_MODE===$selectionMode?'offerObjectForReviewToAuthor':'assignObjectForReviewAuthor';
+				$returnUrl = $request->url ( null, 'editor', $action, $objectId, array (
+						'userId' => $userId
+				) );
+				$ofrAssignment =& $ofrAssignmentDao->getByObjectAndUserId($objectId, $userId);
+				$redirect = $this->_assignOrOffer ( $ofrAssignment, $objectForReview, $user, $returnUrl, $selectionMode, $request );
+			}
+		}
+		$redirection=OFFER_MODE===$selectionMode?'offered':'assigned';
+		if ($redirect)
+			$request->redirect ( null, 'editor', 'objectsForReview', $redirection );
+	}
 	/**
 	 * Accept an object for review author.
 	 * @param $args array
@@ -517,7 +580,7 @@ class ObjectsForReviewEditorHandler extends Handler {
 		$user =& $userDao->getById($ofrAssignment->getUserId());
 		$returnUrl = $request->url(null, 'editor', 'acceptObjectForReviewAuthor', $assignmentId, array('returnPage' => $returnPage));
 		// Assign
-		$redirect = $this->_assign($ofrAssignment, $ofrAssignment->getObjectForReview(), $user, $returnUrl, $request);
+		$redirect = $this->_assignOrOffer($ofrAssignment, $ofrAssignment->getObjectForReview(), $user, $returnUrl, $request);
 
 		if ($redirect) {
 			if ($returnPage != 'all') $returnPage = 'assigned';
@@ -651,6 +714,51 @@ class ObjectsForReviewEditorHandler extends Handler {
 		} else {
 			$returnUrl = $request->url(null, 'editor', 'removeObjectForReviewAssignment', $assignmentId, array('returnPage' => $returnPage));
 			$this->_displayEmailForm($email, $ofrAssignment->getObjectForReview(), $ofrAssignment->getUser(), $returnUrl, 'OFR_REVIEWER_REMOVED', $request);
+			$redirect = false;
+		}
+		if ($redirect) $request->redirect(null, 'editor', 'objectsForReview', $returnPage);
+	}
+	
+	/**
+	 * Cancel object review offer.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
+	function cancelObjectForReviewOffer($args, &$request) {
+		$returnPage = $this->_getReturnpage($request);
+		
+		$assignmentId = array_shift($args);
+		
+		$journal =& $request->getJournal();
+		$journalId = $journal->getId();
+		
+		// Ensure the assignment exists
+		if (!$this->_ensureAssignmentExists($assignmentId, $journalId)) {
+			$request->redirect(null, 'editor', 'objectsForReview', $returnPage);
+		}
+		/**
+		 * 
+		 * @var ObjectForReviewAssignmentDAO $ofrAssignmentDao
+		 */
+		$ofrAssignmentDao =& DAORegistry::getDAO('ObjectForReviewAssignmentDAO');
+		$ofrAssignment =& $ofrAssignmentDao->getById($assignmentId);
+		// Ensure the assignment can be removed
+		if (!$this->_offerCanBeCanceled($ofrAssignment)) {
+			$request->redirect(null, 'editor', 'objectsForReview', $returnPage);
+		}
+		
+		$redirect = true;
+		import('classes.mail.MailTemplate');
+		$email = new MailTemplate('OFR_REVIEW_OFFER_CANCELED');
+		$send = $request->getUserVar('send');
+		// Editor has filled out mail form or skipped mail
+		if ($send && !$email->hasErrors()) {
+			$ofrAssignmentDao->deleteById($assignmentId);
+			$email->send();
+			$this->_createTrivialNotification(NOTIFICATION_TYPE_OFR_AUTHOR_REMOVED, $request);
+		} else {
+			$returnUrl = $request->url(null, 'editor', 'cancelObjectForReviewOffer', $assignmentId, array('returnPage' => $returnPage));
+			$this->_displayEmailForm($email, $ofrAssignment->getObjectForReview(), $ofrAssignment->getUser(), $returnUrl, 'OFR_REVIEW_OFFER_CANCELED', $request);
 			$redirect = false;
 		}
 		if ($redirect) $request->redirect(null, 'editor', 'objectsForReview', $returnPage);
@@ -1024,39 +1132,49 @@ class ObjectsForReviewEditorHandler extends Handler {
 	 * @param $returnUrl string
 	 * @param $request PKPRequest
 	 */
-	function _assign($ofrAssignment, $objectForReview, $author, $returnUrl, &$request) {
+	function _assignOrOffer($ofrAssignment, $objectForReview, $author, $returnUrl, $selectionMode, &$request) {
 		import('classes.mail.MailTemplate');
-		$email = new MailTemplate('OFR_OBJECT_ASSIGNED');
+		$emailKey = (OFFER_MODE === $selectionMode) ? 'OFR_OBJECT_OFFERED' : 'OFR_OBJECT_ASSIGNED' ;
+		$email=new MailTemplate ( $emailKey );
 		$send = $request->getUserVar('send');
 
 		// Editor has filled out mail form or skipped mail
 		if ($send && !$email->hasErrors()) {
-			// Update object for review
-			$ofrPlugin =& $this->_getObjectsForReviewPlugin();
-			$journal =& $request->getJournal();
-			$dueWeeks = $ofrPlugin->getSetting($journal->getId(), 'dueWeeks');
-			$dueDateTimestamp = time() + ($dueWeeks * 7 * 24 * 60 * 60);
-			$dueDate = date('Y-m-d H:i:s', $dueDateTimestamp);
-
+			if((ASSIGN_MODE === $selectionMode)){
+				// Update object for review
+				$ofrPlugin =& $this->_getObjectsForReviewPlugin();
+				$journal =& $request->getJournal();
+				$dueWeeks = $ofrPlugin->getSetting($journal->getId(), 'dueWeeks');
+				$dueDateTimestamp = time() + ($dueWeeks * 7 * 24 * 60 * 60);
+				$dueDate = date('Y-m-d H:i:s', $dueDateTimestamp);
+			} else {
+				$dueDate=null;
+			}
 			$ofrAssignmentDao =& DAORegistry::getDAO('ObjectForReviewAssignmentDAO');
 			if (!isset($ofrAssignment)) {
 				$ofrAssignment = $ofrAssignmentDao->newDataObject();
 				$ofrAssignment->setObjectId($objectForReview->getId());
 				$ofrAssignment->setUserId($author->getId());
 			}
-			$ofrAssignment->setStatus(OFR_STATUS_ASSIGNED);
-			$ofrAssignment->setDateAssigned(Core::getCurrentDate());
-			$ofrAssignment->setDateDue($dueDate);
+			$ofrAssignment->setStatus(ASSIGN_MODE === $selectionMode?OFR_STATUS_ASSIGNED:OFR_STATUS_OFFERED);
+			if(ASSIGN_MODE===$selectionMode){
+				$ofrAssignment->setDateAssigned(Core::getCurrentDate());
+				$ofrAssignment->setDateDue($dueDate);
+			} else {
+				$ofrAssignment->setDateOffered(Core::getCurrentDate());
+				$ofrAssignment->setDateDue(null);
+			}
+			
 			if ($ofrAssignment->getId() == null) {
 				$ofrAssignmentDao->insertObject($ofrAssignment);
 			} else {
 				$ofrAssignmentDao->updateObject($ofrAssignment);
 			}
 			$email->send();
-			$this->_createTrivialNotification(NOTIFICATION_TYPE_OFR_AUTHOR_ASSIGNED, $request);
+			$this->_createTrivialNotification(ASSIGN_MODE === $selectionMode?NOTIFICATION_TYPE_OFR_AUTHOR_ASSIGNED:NOTIFICATION_TYPE_OFR_AUTHOR_OFFERED, $request);
 			return true;
 		} else {
-			$this->_displayEmailForm($email, $objectForReview, $author, $returnUrl, 'OFR_OBJECT_ASSIGNED', $request);
+			$this->_displayEmailForm($email, $objectForReview, $author, $returnUrl, $emailKey, $request);
 			return false;
 		}
 	}
@@ -1067,7 +1185,16 @@ class ObjectsForReviewEditorHandler extends Handler {
 	 * @return boolean
 	 */
 	function _canBeRemoved($ofrAssignment) {
-	 	return ($ofrAssignment->getStatus() == OFR_STATUS_ASSIGNED) || ($ofrAssignment->getStatus() == OFR_STATUS_MAILED) || ($ofrAssignment->getStatus() == OFR_STATUS_SUBMITTED);
+		return ($ofrAssignment->getStatus() == OFR_STATUS_ASSIGNED) ||($ofrAssignment->getStatus() == OFR_STATUS_MAILED) || ($ofrAssignment->getStatus() == OFR_STATUS_SUBMITTED);
+	}
+	
+	/**
+	 * Is cancel offer action allowed
+	 * @param $ofrAssignment ObjectForReviewAssignment
+	 * @return boolean
+	 */
+	function _offerCanBeCanceled($ofrAssignment) {
+		return $ofrAssignment->getStatus() == OFR_STATUS_OFFERED || $ofrAssignment->getStatus() == OFR_STATUS_ACCEPTED ;
 	}
 
 	/**
@@ -1105,15 +1232,43 @@ class ObjectsForReviewEditorHandler extends Handler {
 				$dueWeeks = $ofrPlugin->getSetting($journal->getId(), 'dueWeeks');
 				$dueDateTimestamp = time() + ($dueWeeks * 7 * 24 * 60 * 60);
 				$paramArray = array(
-					'authorName' => strip_tags($userFullName),
-					'authorMailingAddress' => String::html2text($userMailingAddress),
-					'objectForReviewTitle' => '"' . strip_tags($objectForReview->getTitle()) . '"',
-					'objectForReviewDueDate' => date('l, F j, Y', $dueDateTimestamp),
-					'userProfileUrl' => $request->url(null, 'user', 'profile'),
-					'submissionUrl' => $request->url(null, 'author', 'submit'),
-					'editorialContactSignature' => String::html2text($editorContactSignature)
+						'authorName' => strip_tags($userFullName),
+						'authorMailingAddress' => String::html2text($userMailingAddress),
+						'objectForReviewTitle' => '"' . strip_tags($objectForReview->getTitle()) . '"',
+						'objectForReviewDueDate' => date('l, F j, Y', $dueDateTimestamp),
+						'userProfileUrl' => $request->url(null, 'user', 'profile'),
+						'submissionUrl' => $request->url(null, 'author', 'submit'),
+						'editorialContactSignature' => String::html2text($editorContactSignature)
 				);
-			} elseif ($action == 'OFR_OBJECT_DENIED') {
+			} elseif($action == 'OFR_OBJECT_OFFERED') {
+				$persons=$objectForReview->getPersons();
+				$personsStr="";
+				/**
+				 * @var ObjectForReviewPerson
+				 */
+				if(!empty($persons)){
+					$personsStr.='(';
+				}
+				$first=true;
+				foreach ($persons as $person) {					
+					if(!$first){
+						$personsStr.=', ';
+					}					
+					$personsStr.= trim($person->getFullName());
+					$first=false;
+				}
+				if(!empty($persons)){
+					$personsStr.=')';
+				}
+				$paramArray = array(
+						'authorName' => strip_tags($userFullName),
+						'objectForReviewTitle' => '"' . strip_tags($objectForReview->getTitle()) . '"',
+						'objectForReviewAuthors' =>  strip_tags($personsStr) ,
+						'acceptUrl' => $request->url(null, 'author', 'acceptReviewOffer', $objectForReview->getId()),
+						'declineUrl' => $request->url(null, 'author', 'declineReviewOffer', $objectForReview->getId()),
+						'editorialContactSignature' => String::html2text($editorContactSignature)
+				);
+			} elseif($action == 'OFR_OBJECT_DENIED') {
 				$paramArray = array(
 					'authorName' => strip_tags($userFullName),
 					'objectForReviewTitle' => '"' . strip_tags($objectForReview->getTitle()) . '"',
@@ -1129,6 +1284,12 @@ class ObjectsForReviewEditorHandler extends Handler {
 					'editorialContactSignature' => String::html2text($editorContactSignature)
 				);
 			} elseif ($action == 'OFR_REVIEWER_REMOVED') {
+				$paramArray = array(
+					'authorName' => strip_tags($userFullName),
+					'objectForReviewTitle' => '"' . strip_tags($objectForReview->getTitle()) . '"',
+					'editorialContactSignature' => String::html2text($editorContactSignature)
+				);
+			} elseif ($action == 'OFR_REVIEW_OFFER_CANCELED') {
 				$paramArray = array(
 					'authorName' => strip_tags($userFullName),
 					'objectForReviewTitle' => '"' . strip_tags($objectForReview->getTitle()) . '"',

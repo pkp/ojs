@@ -48,6 +48,10 @@
 		{elseif $status == $smarty.const.OFR_STATUS_SUBMITTED}
 			{assign var=submissionId value=$objectForReviewAssignment->getSubmissionId()}
 			<td><a href="{url page="author" op="submission" path=$submissionId}" class="action">{translate key="plugins.generic.objectsForReview.author.view"}</a></td>
+		{elseif $status == $smarty.const.OFR_STATUS_OFFERED}
+			{assign var=objectId value=$objectForReviewAssignment->getObjectId()}
+			<td><a href="{url page="author" op="acceptReviewOffer" path=$objectId}" class="action">{translate key="plugins.generic.objectsForReview.author.accept"}</a>
+			<a href="{url page="author" op="declineReviewOffer" path=$objectId}" class="action">{translate key="plugins.generic.objectsForReview.author.decline"}</a></td>
 		{else}
 			<td>&nbsp;</td>
 		{/if}

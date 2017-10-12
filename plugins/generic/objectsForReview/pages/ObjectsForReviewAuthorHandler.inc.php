@@ -45,6 +45,14 @@ class ObjectsForReviewAuthorHandler extends Handler {
 				$status = OFR_STATUS_REQUESTED;
 				$pageTitle = 'plugins.generic.objectsForReview.objectForReviewAssignments.pageTitleRequested';
 				break;
+			case 'offered':
+				$status = OFR_STATUS_OFFERED;
+				$pageTitle = 'plugins.generic.objectsForReview.objectForReviewAssignments.pageTitleOffered';
+				break;
+			case 'accepted':
+				$status = OFR_STATUS_ACCEPTED;
+				$pageTitle = 'plugins.generic.objectsForReview.objectForReviewAssignments.pageTitleAccepted';
+				break;
 			case 'assigned':
 				$status = OFR_STATUS_ASSIGNED;
 				$pageTitle = 'plugins.generic.objectsForReview.objectForReviewAssignments.pageTitleAssigned';
@@ -128,6 +136,80 @@ class ObjectsForReviewAuthorHandler extends Handler {
 			}
 		}
 		if ($redirect) $request->redirect(null, 'objectsForReview');
+	}
+	/**
+	 * Author accepts an object for review.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
+	function acceptReviewOffer($args, &$request) {
+		$this->_acceptOrDeclineReviewOffer($args, $request, 'ACCEPTED');
+	}
+	
+	/**
+	 * Author declines an object for review.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
+	function declineReviewOffer($args, &$request) {
+		$this->_acceptOrDeclineReviewOffer($args, $request, 'DECLINED');
+	}
+	
+	/**
+	 * Author acceptes declines an object for review.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 * @param $decision string "ACCEPTED" or "DECLINED"
+	 */
+	function _acceptOrDeclineReviewOffer($args, &$request, $decision) {
+		$journal =& $request->getJournal();
+		$journalId = $journal->getId();
+		
+		$objectId = !isset($args) || empty($args) ? null : (int) $args[0];
+		if (!$this->_ensureObjectExists($objectId, $journalId)) {
+			$request->redirect(null, 'objectsForReview');
+		}
+		$ofrDao =& DAORegistry::getDAO('ObjectForReviewDAO');
+		$objectForReview =& $ofrDao->getById($objectId, $journalId);
+		
+		if ($objectForReview->getAvailable()) {			
+			// Get the requesting user
+			$user =& $request->getUser();
+			$userId = $user->getId();
+			// Ensure there is no assignment for this object and user
+			/**
+			 * 
+			 * @var ObjectForReviewAssignmentDAO $ofrAssignmentDao
+			 */
+			$ofrAssignmentDao =& DAORegistry::getDAO('ObjectForReviewAssignmentDAO');
+			$ofrAssignment =& $ofrAssignmentDao->getByObjectAndUserId($objectId, $userId);
+			// check that the review was offered to this user
+			if (empty ( $ofrAssignment ) || $ofrAssignment->getStatus () != OFR_STATUS_OFFERED) {
+				$request->redirect ( null, 'author', 'objectsForReview' );
+			}
+			$redirect = true;
+			import('classes.mail.MailTemplate');
+			$email = new MailTemplate('OFR_OBJECT_'.$decision);
+			$send = $request->getUserVar('send');
+			// Author has filled out mail form or decided to skip email
+			if ($send && !$email->hasErrors()) {
+				// Update object for review as requested
+				if($decision=='DECLINED'){
+					$ofrAssignmentDao->deleteById($ofrAssignment->getId());					
+				} else {
+					$ofrAssignment->setStatus(OFR_STATUS_ACCEPTED);
+					$ofrAssignment->setDateAccepted(Core::getCurrentDate());
+					$ofrAssignmentDao->updateObject($ofrAssignment);
+				}
+				$email->send();
+				$this->_createTrivialNotification($decision=='DECLINED'?NOTIFICATION_TYPE_OFR_DECLINED:NOTIFICATION_TYPE_OFR_ACCEPTED, $request);
+			} else {
+				$returnUrl = $request->url(null, 'author', $decision=='DECLINED'?'declineReviewOffer':'acceptReviewOffer', $objectId);
+				$this->_displayEmailForm($email, $objectForReview, $user, $returnUrl, 'OFR_OBJECT_'.$decision, $request);
+				$redirect = false;
+			}
+		}		
+		if ($redirect) $request->redirect(null, 'author', 'objectsForReview');
 	}
 
 	/**
@@ -214,7 +296,7 @@ class ObjectsForReviewAuthorHandler extends Handler {
 			$editorFullName = $editor->getFullName();
 			$editorEmail = $editor->getEmail();
 
-			if ($action = 'OFR_OBJECT_REQUESTED') {
+			if ($action == 'OFR_OBJECT_REQUESTED' || $action = 'OFR_OBJECT_ACCEPTED' || $action = 'OFR_OBJECT_DECLINED') {
 				$paramArray = array(
 					'editorName' => strip_tags($editorFullName),
 					'objectForReviewTitle' => '"' . strip_tags($objectForReview->getTitle()) . '"',

@@ -8,7 +8,14 @@
  * Selection form for object for review authors.
  *
  *}
-{assign var="pageTitle" value="plugins.generic.objectsForReview.editor.assignAuthor"}
+ {if $selectionMode eq 1} 
+	{assign var="pageTitle" value="plugins.generic.objectsForReview.editor.offerToAuthor"}
+	{assign var="action" value="selectObjectForReviewAuthorForOffer"}
+{else}
+	{assign var="pageTitle" value="plugins.generic.objectsForReview.editor.assignAuthor"}
+	{assign var="action" value="selectObjectForReviewAuthorForAssignment"}
+{/if}
+{assign var="pageTitle" value="$pageTitle"}
 {include file="common/header.tpl"}
 
 <script type="text/javascript">
@@ -17,7 +24,7 @@
 		$('#submit').pkpHandler('$.pkp.controllers.form.FormHandler');
 	{rdelim});
 </script>
-<form class="pkp_form" method="post" id="submit" action="{url op="selectObjectForReviewAuthor" path=$objectId}">
+<form class="pkp_form" method="post" id="submit" action="{url op="$action" path=$objectId}">
 	<select name="searchField" size="1" class="selectMenu">
 		{html_options_translate options=$searchFieldOptions selected=$searchField}
 	</select>
@@ -28,7 +35,7 @@
 	<input type="text" size="15" name="search" class="textField" value="{$search|escape}" />&nbsp;<input type="submit" value="{translate key="common.search"}" class="button" />
 </form>
 
-<p>{foreach from=$alphaList item=letter}<a href="{url op="selectObjectForReviewAuthor" path=$objectId searchInitial=$letter}">{if $letter == $searchInitial}<strong>{$letter|escape}</strong>{else}{$letter|escape}{/if}</a> {/foreach}<a href="{url op="selectObjectForReviewAuthor" path=$objectId}">{if $searchInitial==''}<strong>{translate key="common.all"}</strong>{else}{translate key="common.all"}{/if}</a></p>
+<p>{foreach from=$alphaList item=letter}<a href="{url op="$action" path=$objectId searchInitial=$letter}">{if $letter == $searchInitial}<strong>{$letter|escape}</strong>{else}{$letter|escape}{/if}</a> {/foreach}<a href="{url op="selectObjectForReviewAuthor" path=$objectId}">{if $searchInitial==''}<strong>{translate key="common.all"}</strong>{else}{translate key="common.all"}{/if}</a></p>
 
 <a name="users"></a>
 
@@ -52,7 +59,14 @@
 			{$user->getEmail()|truncate:20:"..."|escape}&nbsp;{icon name="mail" url=$url}
 		</td>
 		<td align="right" class="nowrap">
-			{if not in_array($userId,$usersAssigned)}<a href="{url op="assignObjectForReviewAuthor" path=$objectId userId=$userId}" class="action">{translate key="plugins.generic.objectsForReview.editor.assignAuthor.assign"}</a>{/if}
+			{if $selectionMode eq 1} 
+				{assign var="op" value="offerObjectForReviewToAuthor"}
+				{assign var="label" value="plugins.generic.objectsForReview.editor.assignAuthor.offer"}								
+			{else}
+  				{assign var="op" value="assignObjectForReviewAuthor"}
+  				{assign var="label" value="plugins.generic.objectsForReview.editor.assignAuthor.assign"}
+			{/if}
+			{if not in_array($userId,$usersAssigned)}<a href="{url op=$op path=$objectId userId=$userId}" class="action">{translate key=$label}</a>{/if}
 		</td>
 	</tr>
 	<tr><td colspan="4" class="{if $users->eof()}end{/if}separator">&nbsp;</td></tr>

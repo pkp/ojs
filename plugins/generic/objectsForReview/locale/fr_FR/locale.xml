@@ -115,6 +115,10 @@
 	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.requested">Demandés</message>
 	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.pageTitleAssigned">Assignations des objets à évaluer - Assignés</message>
 	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.assigned">Assignés</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.pageTitleOffered">Assignations des objets à évaluer - Proposés</message>
+    <message key="plugins.generic.objectsForReview.objectForReviewAssignments.offered">Proposés</message>
+    <message key="plugins.generic.objectsForReview.objectForReviewAssignments.pageTitleAccepted">Assignations des objets à évaluer - Acceptés</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.accepted">Acceptés</message>
 	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.pageTitleMailed">Assignations des objets à évaluer - Envoyés</message>
 	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.mailed">Envoyés</message>
 	<message key="plugins.generic.objectsForReview.objectForReviewAssignments.pageTitleSubmitted">Assignations des objets à évaluer - Soumis</message>
@@ -133,6 +137,8 @@
 	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.status.available">Disponible</message>
 	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.status.requested">Demandé</message>
 	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.status.assigned">Assigné</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.status.offered">Proposé</message>
+	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.status.accepted">Accepté</message>
 	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.status.mailed">Envoyé</message>
 	<message key="plugins.generic.objectsForReview.objectForReviewAssignment.status.submitted">Soumis</message>
 
@@ -145,15 +151,20 @@
 	<!--  Actions -->
 	<message key="plugins.generic.objectsForReview.editor.select">Sélectionner</message>
 	<message key="plugins.generic.objectsForReview.editor.assignObjectReviewer">Assigner</message>
+	<message key="plugins.generic.objectsForReview.editor.offerObjectToReviewer">Proposer</message>
 	<message key="plugins.generic.objectsForReview.editor.acceptObjectReviewer">Accepter</message>
 	<message key="plugins.generic.objectsForReview.editor.denyObjectReviewer">Refuser</message>
 	<message key="plugins.generic.objectsForReview.editor.notifyObjectMailed">Objet envoyé</message>
 	<message key="plugins.generic.objectsForReview.editor.removeObjectReviewer">Supprimer</message>
+	<message key="plugins.generic.objectsForReview.editor.cancelReviewOffer">Annuler la proposition</message>
 	<message key="plugins.generic.objectsForReview.editor.confirmRemoveObjectReviewer">Êtes-vous sûr de vouloir supprimer cet auteur et effacer l'historique du compte rendu ?</message>
+	<message key="plugins.generic.objectsForReview.editor.confirmCancelReviewOffer">Êtes-vous sûr de vouloir annuler la proposition faite à cet auteur ?</message>
 	<message key="plugins.generic.objectsForReview.editor.selectSubmission">Sélectionner la soumission</message>
 	<!-- Assign Author -->
 	<message key="plugins.generic.objectsForReview.editor.assignAuthor">Assigner un auteur</message>
+	<message key="plugins.generic.objectsForReview.editor.offerToAuthor">Proposer à un auteur</message>
 	<message key="plugins.generic.objectsForReview.editor.assignAuthor.assign">Assigner</message>
+	<message key="plugins.generic.objectsForReview.editor.assignAuthor.offer">Proposer</message>
 	<message key="plugins.generic.objectsForReview.editor.assignAuthor.createNewUser">Créer un nouvel utilisateur</message>
 
 	<message key="plugins.generic.objectsForReview.editor.noMailingAddress">Aucun courriel dans ce fichier.</message>
@@ -213,6 +224,8 @@
 
 	<message key="plugins.generic.objectsForReview.author.submit">Soumettre</message>
 	<message key="plugins.generic.objectsForReview.author.view">Vue</message>
+	<message key="plugins.generic.objectsForReview.author.accept">Accepter</message>
+	<message key="plugins.generic.objectsForReview.author.decline">Décliner</message>
 	<!-- Submission -->
 	<message key="plugins.generic.objectsForReview.author.submitInstructions">Veuillez indiquer si cette soumission est un compte-rendu d'un des objets suivants qui vous ont été assignés.</message>
 
@@ -229,13 +242,14 @@
 	<message key="plugins.generic.objectsForReview.notification.ofrUpdated">Compte rendu d'objet mis à jour.</message>
 	<message key="plugins.generic.objectsForReview.notification.ofrDeleted">Compte rendu d'objet et ses assignations supprimés.</message>
 	<message key="plugins.generic.objectsForReview.notification.ofrAuthorAssigned">Auteur assigné à un compte rendu d'objet</message>
+	<message key="plugins.generic.objectsForReview.notification.ofrAuthorOffered">Compte rendu d'objet proposé à un auteur</message>
 	<message key="plugins.generic.objectsForReview.notification.ofrAuthorDenied">Demande de l'auteur refusée. Rénitialisation du compte rendu d'objet.</message>
 	<message key="plugins.generic.objectsForReview.notification.ofrAuthorMailed">Compte rendu d'objet enregistré comme envoyé à l'auteur.</message>
 	<message key="plugins.generic.objectsForReview.notification.ofrAuthorRemoved">Auteur supprimé. Réinitialisation du compte rendu d'objet.</message>
 	<message key="plugins.generic.objectsForReview.notification.ofrSubmissionAssigned">Soumission du compte rendu d'objet assignée.</message>
 	<message key="plugins.generic.objectsForReview.notification.ofrSettingsSaved">Paramètres du plugiciel compte rendu d'objet enregistrés.</message>
-
-
+	<message key="plugins.generic.objectsForReview.notification.ofrAccepted">Réponse enregistrée, vous recevrez prochainement des informations de l'éditeur.</message>
+	<message key="plugins.generic.objectsForReview.notification.ofrDeclined">Votre réponse a été enregistrée et transmise à l'éditeur.</message>
 	<!-- errors -->
 	<!-- Object Types Management -->
 	<message key="plugins.generic.objectsForReview.editor.objectType.form.nameRequired">L'indication d'un nom pour le type de compte rendu d'objet est obligatoire.</message>

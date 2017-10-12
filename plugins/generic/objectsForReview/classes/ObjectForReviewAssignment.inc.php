@@ -19,6 +19,8 @@ define('OFR_STATUS_REQUESTED',	0x02);
 define('OFR_STATUS_ASSIGNED',	0x03);
 define('OFR_STATUS_MAILED',		0x04);
 define('OFR_STATUS_SUBMITTED',	0x05);
+define('OFR_STATUS_OFFERED',	0x06);
+define('OFR_STATUS_ACCEPTED',	0x07);
 
 
 class ObjectForReviewAssignment extends DataObject {
@@ -138,7 +140,38 @@ class ObjectForReviewAssignment extends DataObject {
 	function setDateAssigned($dateAssigned) {
 		return $this->setData('dateAssigned', $dateAssigned);
 	}
-
+	
+	/**
+	 * Get date offered.
+	 * @return string
+	 */
+	function getDateOffered() {
+		return $this->getData('dateOffered');
+	}
+	
+	/**
+	 * Set date offered.
+	 * @param $dateOffered string
+	 */
+	function setDateOffered($dateOffered) {
+		return $this->setData('dateOffered', $dateOffered);
+	}
+	
+	/**
+	 * Get date accepted.
+	 * @return string
+	 */
+	function getDateAccepted() {
+		return $this->getData('dateAccepted');
+	}
+	
+	/**
+	 * Set date accepted.
+	 * @param $dateAccepted string
+	 */
+	function setDateAccepted($dateAccepted) {
+		return $this->setData('dateAccepted', $dateAccepted);
+	}
 
 	/**
 	 * Get date mailed.
@@ -253,6 +286,10 @@ class ObjectForReviewAssignment extends DataObject {
 				return 'plugins.generic.objectsForReview.objectForReviewAssignment.status.mailed';
 			case OFR_STATUS_SUBMITTED:
 				return 'plugins.generic.objectsForReview.objectForReviewAssignment.status.submitted';
+			case OFR_STATUS_ACCEPTED:
+				return 'plugins.generic.objectsForReview.objectForReviewAssignment.status.accepted';
+			case OFR_STATUS_OFFERED:
+				return 'plugins.generic.objectsForReview.objectForReviewAssignment.status.offered';
 			default:
 				return 'plugins.generic.objectsForReview.objectForReviewAssignment.status';
 		}

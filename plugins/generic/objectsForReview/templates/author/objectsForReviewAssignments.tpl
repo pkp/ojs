@@ -17,6 +17,8 @@
 	<li{if $returnPage == 'all'} class="current"{/if}><a href="{url op="objectsForReview" path="all"}">{translate key="plugins.generic.objectsForReview.objectForReviewAssignments.all"}</a></li>
 	{if $mode == $smarty.const.OFR_MODE_FULL}
 		<li{if $returnPage == 'requested'} class="current"{/if}><a href="{url op="objectsForReview" path="requested"}">{translate key="plugins.generic.objectsForReview.objectForReviewAssignments.requested"} ({$counts[$smarty.const.OFR_STATUS_REQUESTED]|escape})</a></li>
+		<li{if $returnPage == 'offered'} class="current"{/if}><a href="{url op="objectsForReview" path="offered"}">{translate key="plugins.generic.objectsForReview.objectForReviewAssignments.offered"} ({$counts[$smarty.const.OFR_STATUS_OFFERED]|escape})</a></li>
+		<li{if $returnPage == 'accepted'} class="current"{/if}><a href="{url op="objectsForReview" path="accepted"}">{translate key="plugins.generic.objectsForReview.objectForReviewAssignments.accepted"} ({$counts[$smarty.const.OFR_STATUS_ACCEPTED]|escape})</a></li>
 		<li{if $returnPage == 'assigned'} class="current"{/if}><a href="{url op="objectsForReview" path="assigned"}">{translate key="plugins.generic.objectsForReview.objectForReviewAssignments.assigned"} ({$counts[$smarty.const.OFR_STATUS_ASSIGNED]|escape})</a></li>
 		<li{if $returnPage == 'mailed'} class="current"{/if}><a href="{url op="objectsForReview" path="mailed"}">{translate key="plugins.generic.objectsForReview.objectForReviewAssignments.mailed"} ({$counts[$smarty.const.OFR_STATUS_MAILED]|escape})</a></li>
 	{/if}

@@ -63,7 +63,8 @@
 		<td align="right">
 		{if $objectForReview->getAvailable()}
 			{if $mode == $smarty.const.OFR_MODE_FULL}
-				<a href="{url op="selectObjectForReviewAuthor" path=$objectForReview->getId()}" class="action">{translate key="plugins.generic.objectsForReview.editor.assignObjectReviewer"}</a> |
+				<a href="{url op="selectObjectForReviewAuthorForAssignment" path=$objectForReview->getId()}" class="action">{translate key="plugins.generic.objectsForReview.editor.assignObjectReviewer"}</a> |
+				<a href="{url op="selectObjectForReviewAuthorForOffer" path=$objectForReview->getId()}" class="action">{translate key="plugins.generic.objectsForReview.editor.offerObjectToReviewer"}</a> |
 			{else}
 				<a href="{url op="selectObjectForReviewSubmission" objectId=$objectForReview->getId() returnPage='all'}" class="action">{translate key="plugins.generic.objectsForReview.editor.select"}</a> |
 			{/if}

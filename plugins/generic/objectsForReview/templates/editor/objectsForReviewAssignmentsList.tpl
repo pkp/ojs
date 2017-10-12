@@ -74,6 +74,7 @@
 		{if $mode == $smarty.const.OFR_MODE_FULL}
 			{if $userId}
 				{assign var=author value=$objectForReviewAssignment->getUser()}
+				{assign var=objectId value=$objectForReview->getId()}
 				{assign var=emailString value=$author->getFullName()|concat:" <":$author->getEmail():">"}
 				{url|assign:"url" page="user" op="email" to=$emailString|to_array redirectUrl=$currentUrl}
 				<td>{$author->getFullName()|escape}&nbsp;{icon name="mail" url=$url}
@@ -92,6 +93,14 @@
 			{elseif $status == $smarty.const.OFR_STATUS_MAILED}
 				<br />
 				<a href="{url op="removeObjectForReviewAssignment" path=$objectForReviewAssignment->getId() returnPage=$returnPage}" class="action" onclick="return confirm('{translate|escape:"jsparam" key="plugins.generic.objectsForReview.editor.confirmRemoveObjectReviewer"}')">{translate key="plugins.generic.objectsForReview.editor.removeObjectReviewer"}</a></td>
+			{elseif $status == $smarty.const.OFR_STATUS_OFFERED}
+				<br />
+				<a href="{url op="cancelObjectForReviewOffer" path=$objectForReviewAssignment->getId() returnPage=$returnPage}" class="action" onclick="return confirm('{translate|escape:"jsparam" key="plugins.generic.objectsForReview.editor.confirmCancelReviewOffer"}')">{translate key="plugins.generic.objectsForReview.editor.cancelReviewOffer"}</a></td>
+			{elseif $status == $smarty.const.OFR_STATUS_ACCEPTED}
+				<br />
+				<a href="{url op="cancelObjectForReviewOffer" path=$objectForReviewAssignment->getId() returnPage=$returnPage}" class="action" onclick="return confirm('{translate|escape:"jsparam" key="plugins.generic.objectsForReview.editor.confirmCancelReviewOffer"}')">{translate key="plugins.generic.objectsForReview.editor.cancelReviewOffer"}</a>
+				<a href="{url op="assignObjectForReviewAuthor" path=$objectId userId=$userId}" class="action">{translate key="plugins.generic.objectsForReview.editor.assignAuthor.assign"}</a>
+				</td>
 			{elseif $userId && $status == $smarty.const.OFR_STATUS_SUBMITTED}
 				<br />
 				<a href="{url op="removeObjectForReviewAssignment" path=$objectForReviewAssignment->getId() returnPage=$returnPage}" class="action" onclick="return confirm('{translate|escape:"jsparam" key="plugins.generic.objectsForReview.editor.confirmRemoveObjectReviewer"}')">{translate key="plugins.generic.objectsForReview.editor.removeObjectReviewer"}</a></td>
