@@ -26,6 +26,15 @@ class DOIPubIdPlugin extends PubIdPlugin {
 		if (!Config::getVar('general', 'installed') || defined('RUNNING_UPGRADE')) return $success;
 		if ($success && $this->getEnabled()) {
 			HookRegistry::register('CitationStyleLanguage::citation', array($this, 'getCitationData'));
+			HookRegistry::register('Submission::getProperties::summaryProperties', array($this, 'modifyObjectProperties'));
+			HookRegistry::register('Submission::getProperties::fullProperties', array($this, 'modifyObjectProperties'));
+			HookRegistry::register('Issue::getProperties::summaryProperties', array($this, 'modifyObjectProperties'));
+			HookRegistry::register('Issue::getProperties::fullProperties', array($this, 'modifyObjectProperties'));
+			HookRegistry::register('Galley::getProperties::summaryProperties', array($this, 'modifyObjectProperties'));
+			HookRegistry::register('Galley::getProperties::fullProperties', array($this, 'modifyObjectProperties'));
+			HookRegistry::register('Submission::getProperties::values', array($this, 'modifyObjectPropertyValues'));
+			HookRegistry::register('Issue::getProperties::values', array($this, 'modifyObjectPropertyValues'));
+			HookRegistry::register('Galley::getProperties::values', array($this, 'modifyObjectPropertyValues'));
 		}
 		return $success;
 	}
@@ -273,6 +282,53 @@ class DOIPubIdPlugin extends PubIdPlugin {
 		return $pubId;
 	}
 
+	/**
+	 * Add DOI to submission, issue or galley properties
+	 *
+	 * @param $hookName string <Object>::getProperties::summaryProperties or
+	 *  <Object>::getProperties::fullProperties
+	 * @param $args array [
+	 * 		@option $props array Existing properties
+	 * 		@option $object Submission|Issue|Galley
+	 * 		@option $args array Request args
+	 * ]
+	 *
+	 * @return array
+	 */
+	public function modifyObjectProperties($hookName, $args) {
+		$props =& $args[0];
+
+		$props[] = 'doi';
+	}
+
+	/**
+	 * Add DOI submission, issue or galley values
+	 *
+	 * @param $hookName string <Object>::getProperties::values
+	 * @param $args array [
+	 * 		@option $values array Key/value store of property values
+	 * 		@option $object Submission|Issue|Galley
+	 * 		@option $props array Requested properties
+	 * 		@option $args array Request args
+	 * ]
+	 *
+	 * @return array
+	 */
+	public function modifyObjectPropertyValues($hookName, $args) {
+		$values =& $args[0];
+		$object = $args[1];
+		$props = $args[2];
+
+		// DOIs are not supported for IssueGalleys
+		if (get_class($object) === 'IssueGalley') {
+			return;
+		}
+
+		if (in_array('doi', $props)) {
+			$pubId = $this->getPubId($object);
+			$values['doi'] = $pubId ? $pubId : null;
+		}
+	}
 }
 
 ?>

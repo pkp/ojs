@@ -30,13 +30,15 @@ class GalleyService extends PKPBaseEntityPropertyService {
 	 * @copydoc \PKP\Services\EntityProperties\EntityPropertyInterface::getProperties()
 	 */
 	public function getProperties($galley, $props, $args = null) {
-		$values = array();
+		\PluginRegistry::loadCategory('pubIds', true);
 		$request = $args['request'];
 		$parent = $args['parent'];
 		$context = $request->getContext();
 		$isSubmissionGalley = is_a($galley, 'Representation');
 		$isIssueGalley = is_a($galley, 'IssueFile');
 		$dispatcher = $request->getDispatcher();
+		$values = array();
+
 		foreach ($props as $prop) {
 			switch ($prop) {
 				case 'id':
@@ -150,6 +152,8 @@ class GalleyService extends PKPBaseEntityPropertyService {
 	 * @copydoc \PKP\Services\EntityProperties\EntityPropertyInterface::getSummaryProperties()
 	 */
 	public function getSummaryProperties($galley, $args = null) {
+		\PluginRegistry::loadCategory('pubIds', true);
+
 		$props = array (
 			'id','_parent','locale','label','seq','urlRemote','urlPublished'
 		);
@@ -163,6 +167,8 @@ class GalleyService extends PKPBaseEntityPropertyService {
 	 * @copydoc \PKP\Services\EntityProperties\EntityPropertyInterface::getFullProperties()
 	 */
 	public function getFullProperties($galley, $args = null) {
+		\PluginRegistry::loadCategory('pubIds', true);
+
 		$props = array (
 			'id','_parent','locale','label','seq','urlRemote','urlPublished','file'
 		);

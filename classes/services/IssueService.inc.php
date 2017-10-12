@@ -74,10 +74,12 @@ class IssueService extends PKPBaseEntityPropertyService {
 	 * @copydoc \PKP\Services\EntityProperties\EntityPropertyInterface::getProperties()
 	 */
 	public function getProperties($issue, $props, $args = null) {
+		\PluginRegistry::loadCategory('pubIds', true);
 		$request = $args['request'];
 		$context = $request->getContext();
 		$dispatcher = $request->getDispatcher();
 		$values = array();
+
 		foreach ($props as $prop) {
 			switch ($prop) {
 				case 'id':
@@ -198,8 +200,10 @@ class IssueService extends PKPBaseEntityPropertyService {
 	 * @copydoc \PKP\Services\EntityProperties\EntityPropertyInterface::getSummaryProperties()
 	 */
 	public function getSummaryProperties($issue, $args = null) {
+		\PluginRegistry::loadCategory('pubIds', true);
+
 		$props = array (
-			'id','_href','title','description','identification','volume','number','year','doi',
+			'id','_href','title','description','identification','volume','number','year',
 			'datePublished', 'publishedUrl', 'coverImageUrl','coverImageAltText','galleysSummary',
 		);
 
@@ -212,9 +216,11 @@ class IssueService extends PKPBaseEntityPropertyService {
 	 * @copydoc \PKP\Services\EntityProperties\EntityPropertyInterface::getFullProperties()
 	 */
 	public function getFullProperties($issue, $args = null) {
+		\PluginRegistry::loadCategory('pubIds', true);
+
 		$props = array (
 			'id','_href','title','description','identification','volume','number','year','isPublished',
-			'isCurrent','datePublished','dateNotified','lastModified','publishedUrl','doi','coverImageUrl',
+			'isCurrent','datePublished','dateNotified','lastModified','publishedUrl','coverImageUrl',
 			'coverImageAltText','articles','sections','tableOfContetnts','galleysSummary',
 		);
 
