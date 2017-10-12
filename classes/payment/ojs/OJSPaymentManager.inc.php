@@ -60,7 +60,7 @@ class OJSPaymentManager extends PaymentManager {
 		$journalSettingsDao = DAORegistry::getDAO('JournalSettingsDAO');
 		if (is_null($currencyCode)) $currencyCode = $journalSettingsDao->getSetting($journalId, 'currency');
 		$payment = new QueuedPayment($amount, $currencyCode, $userId, $assocId);
-		$payment->setJournalId($journalId);
+		$payment->setContextId($journalId);
 		$payment->setType($type);
 		$router = $this->request->getRouter();
 		$dispatcher = $router->getDispatcher();

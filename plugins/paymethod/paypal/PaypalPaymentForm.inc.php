@@ -49,7 +49,7 @@ class PaypalPaymentForm extends Form {
 			$transaction = $gateway->purchase(array(
 				'amount' => number_format($this->_queuedPayment->getAmount(), 2),
 				'currency' => $this->_queuedPayment->getCurrencyCode(),
-				'description' => $paymentManager->getPaymentName($this->_queuedPayment)),
+				'description' => $paymentManager->getPaymentName($this->_queuedPayment),
 				'returnUrl' => $request->url(null, 'payment', 'plugin', array($this->_paypalPaymentPlugin->getName(), 'return'), array('queuedPaymentId' => $this->_queuedPayment->getId())),
 				'cancelUrl' => $request->url(null, 'index'),
 			));
