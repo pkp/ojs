@@ -58,8 +58,8 @@ class GalleyService extends PKPBaseEntityPropertyService {
 							$parentId = $galley->getIssueId();
 						}
 						if ($parentPath) {
-							$values[$prop] = sprintf(
-								'%s/api/%s/%s/%d',
+							$values[$prop] = $this->getAPIHref(
+								$args['request'],
 								$arguments['contextPath'],
 								$arguments['version'],
 								$parentPath,

@@ -90,8 +90,13 @@ class IssueService extends PKPBaseEntityPropertyService {
 					if (!empty($args['slimRequest'])) {
 						$route = $args['slimRequest']->getAttribute('route');
 						$arguments = $route->getArguments();
-						$href = "{$arguments['contextPath']}/api/{$arguments['version']}/issues/" . $issue->getId();
-						$values[$prop] = $href;
+						$values[$prop] = $this->getAPIHref(
+							$args['request'],
+							$arguments['contextPath'],
+							$arguments['version'],
+							'issues',
+							$issue->getId()
+						);
 					}
 					break;
 				case 'title':
