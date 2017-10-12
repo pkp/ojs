@@ -204,7 +204,7 @@
 			text-align: left;
 
 			&:after {
-				&:extend(.fa);
+				.fa();
 				content: @fa-var-caret-down;
 				position: absolute;
 				top: 50%;
@@ -253,7 +253,7 @@
 			border-top: @bg-border;
 		}
 
-		.fa {
+		span {
 			margin-right: 0.5em;
 		}
 	}
