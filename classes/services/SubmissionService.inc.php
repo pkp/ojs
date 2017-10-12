@@ -202,8 +202,8 @@ class SubmissionService extends \PKP\Services\PKPSubmissionService {
 						if (!empty($section)) {
 							$sectionService = \ServicesContainer::instance()->get('section');
 							$values['section'] = ($prop === 'section')
-								? $sectionService->getSummaryProperties($section, $args)
-								: $sectionService->getFullProperties($section, $args);
+								? $sectionService->getSummaryProperties($section, $propertyArgs)
+								: $sectionService->getFullProperties($section, $propertyArgs);
 						}
 					}
 					break;
@@ -213,7 +213,7 @@ class SubmissionService extends \PKP\Services\PKPSubmissionService {
 					if ($publishedArticle) {
 						$values['galleys'] = [];
 						$galleyService = \ServicesContainer::instance()->get('galley');
-						$galleyArgs = array_merge($args, array('parent' => $publishedArticle));
+						$galleyArgs = array_merge($propertyArgs, array('parent' => $publishedArticle));
 						$galleys = $publishedArticle->getGalleys();
 						foreach ($galleys as $galley) {
 							$values['galleys'][] = ($prop === 'galleys')
