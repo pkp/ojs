@@ -16,8 +16,10 @@
 	<message key="plugins.block.subscription.description">This plugin provides sidebar subscription information.</message>
 	<message key="plugins.block.subscription.blockTitle">Subscription</message>
 	<message key="plugins.block.subscription.expires">Expires</message>
-	<message key="plugins.block.subscription.providedBy">Access provided by</message>
-	<message key="plugins.block.subscription.comingFromIP">From</message>
+	<message key="plugins.block.subscription.providedBy">Access provided by: {$institutionName}</message>
+	<message key="plugins.block.subscription.comingFromIP">Accessed from: {$ip}</message>
 	<message key="plugins.block.subscription.about">Subscriptions</message>
-	<message key="plugins.block.subscription.loginToVerifySubscription">Login to verify subscription</message>
+	<message key="plugins.block.subscription.loginToVerifySubscription">Login to access subscriber-only resources.</message>
+	<message key="plugins.block.subscription.subscriptionRequired">A subscription is required to access some resources.</message>
+	<message key="plugins.block.subscription.subscriptionRequired.learnMore">Learn More</message>
 </locale>
