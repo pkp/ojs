@@ -23,14 +23,14 @@ class IndividualSubscriptionForm extends SubscriptionForm {
 	 * @param $subscriptionId int leave as default for new subscription
 	 */
 	function __construct($request, $subscriptionId = null) {
-		parent::__construct('user/individualSubscriptionForm.tpl', $subscriptionId);
+		parent::__construct('subscriptions/individualSubscriptionForm.tpl', $subscriptionId);
 
 		$subscriptionId = isset($subscriptionId) ? (int) $subscriptionId : null;
 		$journal = $request->getJournal();
 		$journalId = $journal->getId();
 
 		if (isset($subscriptionId)) {
-			$subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO'); 
+			$subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
 			if ($subscriptionDao->subscriptionExists($subscriptionId)) {
 				$this->subscription = $subscriptionDao->getById($subscriptionId);
 			}
@@ -60,7 +60,7 @@ class IndividualSubscriptionForm extends SubscriptionForm {
 	}
 
 	/**
-	 * Save individual subscription. 
+	 * Save individual subscription.
 	 */
 	function execute() {
 		$insert = false;
@@ -77,13 +77,13 @@ class IndividualSubscriptionForm extends SubscriptionForm {
 			$individualSubscriptionDao->insertObject($this->subscription);
 		} else {
 			$individualSubscriptionDao->updateObject($this->subscription);
-		} 
+		}
 
 		// Send notification email
 		if ($this->_data['notifyEmail'] == 1) {
 			$mail = $this->_prepareNotificationEmail('SUBSCRIPTION_NOTIFY');
 			$mail->send();
-		} 
+		}
 	}
 }
 
