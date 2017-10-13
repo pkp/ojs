@@ -176,7 +176,7 @@ class IssueEntryTabHandler extends PublicationEntryTabHandler {
 		$formTemplate = $this->getAssignPublicIdentifiersFormTemplate();
 		$formParams = array('stageId' => $stageId);
 		$assignPublicIdentifiersForm = new AssignPublicIdentifiersForm($formTemplate, $submission, true, '', $formParams);
-		// Asign pub ids
+		// Assign pub ids
 		$assignPublicIdentifiersForm->readInputData();
 		$assignPublicIdentifiersForm->execute($request, true);
 		return new JSONMessage();

@@ -56,7 +56,7 @@ class SettingsPluginGridHandler extends PluginGridHandler {
 	}
 
 	//
-	// Overriden template methods.
+	// Overridden template methods.
 	//
 	/**
 	 * @copydoc CategoryGridHandler::getCategoryRowInstance()

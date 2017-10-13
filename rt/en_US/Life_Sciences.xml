@@ -330,7 +330,7 @@ This service was formerly known as BIOME.</search_description>
 	<context>
 		<context_title>Government health sites</context_title>
 		<context_abbrev>Gov Health Sites</context_abbrev>
-		<context_description>Access to health information resources provided by govenment.</context_description>
+		<context_description>Access to health information resources provided by government.</context_description>
 
 		<search>
 			<search_title>Canadian Health Network</search_title>
@@ -416,7 +416,7 @@ This service was formerly known as BIOME.</search_description>
 		</search>
 		<search>
 			<search_title>National Center for Biotechnology Information</search_title>
-			<search_description>In addition to maintaining the GenBank nucleic acid sequence database, the National Center for Biotechnology Information (NCBI) provides data analysis and retrieval and resources that operate on the data in GenBank and a varity of other biological data made available through NCBI's Web site. NCBI data retrieval resources include Entrez, PubMed, LocusLink and the Taxonomy Browser. Data analysis resources include BLAST, Electronic PCR, OrfFinder, RefSeq, UniGene, Databases of Single Nucleotide Polymorphisms (dbSNP), Human Genome Sequencing pages, GeneMap '99, Davis Human-Mouse Homology Map, Cancer Chromosome Abberation Project (CCAP) pages, Entrez Genomes, Clusters of Orthologous Groups (COGs) database, Retroviral Genotyping Tools, Cancer Genome Anatomy Project (CGAP) pages, SAGEmap, Online Mendelian Inheritance in Man (OMIM) and the Molecular Modeling Databases (MMDB).</search_description>
+			<search_description>In addition to maintaining the GenBank nucleic acid sequence database, the National Center for Biotechnology Information (NCBI) provides data analysis and retrieval and resources that operate on the data in GenBank and a variety of other biological data made available through NCBI's Web site. NCBI data retrieval resources include Entrez, PubMed, LocusLink and the Taxonomy Browser. Data analysis resources include BLAST, Electronic PCR, OrfFinder, RefSeq, UniGene, Databases of Single Nucleotide Polymorphisms (dbSNP), Human Genome Sequencing pages, GeneMap '99, Davis Human-Mouse Homology Map, Cancer Chromosome Abberation Project (CCAP) pages, Entrez Genomes, Clusters of Orthologous Groups (COGs) database, Retroviral Genotyping Tools, Cancer Genome Anatomy Project (CGAP) pages, SAGEmap, Online Mendelian Inheritance in Man (OMIM) and the Molecular Modeling Databases (MMDB).</search_description>
 			<url>http://www.ncbi.nlm.nih.gov/</url>
 			<search_url>http://www.ncbi.nlm.nih.gov/gquery/gquery.fcgi?term={$formKeywords}</search_url>
 			

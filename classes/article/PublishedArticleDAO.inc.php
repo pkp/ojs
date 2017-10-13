@@ -741,7 +741,7 @@ class PublishedArticleDAO extends ArticleDAO {
 		if ($pubIdSettingName) {
 			$params[] = $pubIdSettingName;
 		}
-		$params = array_merge($params, $this->getFetchParameters()); // because of the neccessary section row names in _fromRow
+		$params = array_merge($params, $this->getFetchParameters()); // because of the necessary section row names in _fromRow
 		$params[] = (int) $contextId;
 		if ($pubIdType) {
 			$params[] = 'pub-id::'.$pubIdType;

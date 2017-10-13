@@ -120,7 +120,7 @@ class SitemapHandler extends Handler {
 	 * @param $loc string URL of page (required)
 	 * @param $lastmod string Last modification date of page (optional)
 	 * @param $changefreq Frequency of page modifications (optional)
-	 * @param $priority string Subjective priority assesment of page (optional) 
+	 * @param $priority string Subjective priority assessment of page (optional)
 	 * @return XMLNode
 	 */
 	function _createUrlTree(&$doc, $loc, $lastmod = null, $changefreq = null, $priority = null) {		

@@ -192,7 +192,7 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin {
 	}
 
 	/**
-	 * Get published articles with a DOI asigned from submission IDs.
+	 * Get published articles with a DOI assigned from submission IDs.
 	 * @param $submissionIds array
 	 * @param $context Context
 	 * @return array
@@ -208,7 +208,7 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin {
 	}
 
 	/**
-	 * Get published issues with a DOI asigned  from issue IDs.
+	 * Get published issues with a DOI assigned from issue IDs.
 	 * @param $issueIds array
 	 * @param $context Context
 	 * @return array
