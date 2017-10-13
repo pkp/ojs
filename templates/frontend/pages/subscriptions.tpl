@@ -97,7 +97,7 @@
 			</tr>
 			{iterate from=institutionalSubscriptionTypes item=subscriptionType}
 				<tr valign="top">
-					<td>{$subscriptionType->getSubscriptionTypeName()|escape}<br />{$subscriptionType->getSubscriptionTypeDescription()|nl2br}</td>
+					<td>{$subscriptionType->getLocalizedName()|escape}<br />{$subscriptionType->getLocalizedDescription()|nl2br}</td>
 					<td>{translate key=$subscriptionType->getFormatString()}</td>
 					<td>{$subscriptionType->getDurationYearsMonths()|escape}</td>
 					<td>{$subscriptionType->getCost()|string_format:"%.2f"}&nbsp;({$subscriptionType->getCurrencyStringShort()|escape})</td>

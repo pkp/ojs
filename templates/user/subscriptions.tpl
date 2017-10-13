@@ -100,17 +100,17 @@
 	<table class="info">
 	{if $userIndividualSubscription}
 		<tr>
-			<td>{$userIndividualSubscription->getSubscriptionTypeName()|escape}</td>
+			<td>{$userIndividualSubscription->getLocalizedName()|escape}</td>
 			<td>&nbsp;</td>
 			<td>
 			{assign var="subscriptionStatus" value=$userIndividualSubscription->getStatus()}
 			{assign var="isNonExpiring" value=$userIndividualSubscription->isNonExpiring()}
 			{if $journalPaymentsEnabled && $subscriptionStatus == $smarty.const.SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT}
-				<span class="disabled">{translate key="subscriptions.status.awaitingOnlinePayment"}</span>	
+				<span class="disabled">{translate key="subscriptions.status.awaitingOnlinePayment"}</span>
 			{elseif $journalPaymentsEnabled && $subscriptionStatus == $smarty.const.SUBSCRIPTION_STATUS_AWAITING_MANUAL_PAYMENT}
-				<span class="disabled">{translate key="subscriptions.status.awaitingManualPayment"}</span>	
+				<span class="disabled">{translate key="subscriptions.status.awaitingManualPayment"}</span>
 			{elseif $subscriptionStatus != $smarty.const.SUBSCRIPTION_STATUS_ACTIVE}
-				<span class="disabled">{translate key="subscriptions.inactive"}</span>	
+				<span class="disabled">{translate key="subscriptions.inactive"}</span>
 			{else}
 				{if $isNonExpiring}
 					{translate key="subscriptionTypes.nonExpiring"}
@@ -126,7 +126,7 @@
 					<a class="action" href="{url op="completePurchaseSubscription" path="individual"|to_array:$userIndividualSubscription->getId()}">{translate key="user.subscriptions.purchase"}</a>
 				{elseif $subscriptionStatus == $smarty.const.SUBSCRIPTION_STATUS_ACTIVE}
 					{if !$isNonExpiring}
-						<a class="action" href="{url op="payRenewSubscription" path="individual"|to_array:$userIndividualSubscription->getId()}">{translate key="user.subscriptions.renew"}</a> | 
+						<a class="action" href="{url op="payRenewSubscription" path="individual"|to_array:$userIndividualSubscription->getId()}">{translate key="user.subscriptions.renew"}</a> |
 					{/if}
 					<a class="action" href="{url op="purchaseSubscription" path="individual"|to_array:$userIndividualSubscription->getId()}">{translate key="user.subscriptions.purchase"}</a>
 				{/if}
@@ -137,11 +137,11 @@
 		</tr>
 	{elseif $journalPaymentsEnabled}
 		<tr>
-			<td colspan="3" align="left"><a class="action" href="{url op="purchaseSubscription" path="individual"}">{translate key="user.subscriptions.purchaseNewSubscription"}</a></td> 
+			<td colspan="3" align="left"><a class="action" href="{url op="purchaseSubscription" path="individual"}">{translate key="user.subscriptions.purchaseNewSubscription"}</a></td>
 		</tr>
 	{else}
 		<tr>
-			<td colspan="3" align="left"><a href="{url page="about" op="subscriptions" anchor="subscriptionTypes"}">{translate key="user.subscriptions.viewSubscriptionTypes"}</a></td> 
+			<td colspan="3" align="left"><a href="{url page="about" op="subscriptions" anchor="subscriptionTypes"}">{translate key="user.subscriptions.viewSubscriptionTypes"}</a></td>
 		</tr>
 	{/if}
 	</table>
@@ -160,14 +160,14 @@
 			{assign var="subscriptionStatus" value=$userInstitutionalSubscription->getStatus()}
 			{assign var="isNonExpiring" value=$userInstitutionalSubscription->isNonExpiring()}
 			{if $journalPaymentsEnabled && $subscriptionStatus == $smarty.const.SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT}
-				<span class="disabled">{translate key="subscriptions.status.awaitingOnlinePayment"}</span>	
+				<span class="disabled">{translate key="subscriptions.status.awaitingOnlinePayment"}</span>
 			{elseif $journalPaymentsEnabled && $subscriptionStatus == $smarty.const.SUBSCRIPTION_STATUS_AWAITING_MANUAL_PAYMENT}
-				<span class="disabled">{translate key="subscriptions.status.awaitingManualPayment"}</span>	
+				<span class="disabled">{translate key="subscriptions.status.awaitingManualPayment"}</span>
 			{elseif $journalPaymentsEnabled && $subscriptionStatus == $smarty.const.SUBSCRIPTION_STATUS_NEEDS_APPROVAL}
-				<span class="disabled">{translate key="subscriptions.status.needsApproval"}</span>	
+				<span class="disabled">{translate key="subscriptions.status.needsApproval"}</span>
 			{elseif $subscriptionStatus != $smarty.const.SUBSCRIPTION_STATUS_ACTIVE}
-				<span class="disabled">{translate key="subscriptions.inactive"}</span>	
-			{else}	
+				<span class="disabled">{translate key="subscriptions.inactive"}</span>
+			{else}
 				{if $isNonExpiring}
 					{translate key="subscriptionTypes.nonExpiring"}
 				{else}
@@ -182,7 +182,7 @@
 					<a class="action" href="{url op="completePurchaseSubscription" path="institutional"|to_array:$userInstitutionalSubscription->getId()}">{translate key="user.subscriptions.purchase"}</a>
 				{elseif $subscriptionStatus == $smarty.const.SUBSCRIPTION_STATUS_ACTIVE}
 					{if !$isNonExpiring}
-						<a class="action" href="{url op="payRenewSubscription" path="institutional"|to_array:$userInstitutionalSubscription->getId()}">{translate key="user.subscriptions.renew"}</a> |  
+						<a class="action" href="{url op="payRenewSubscription" path="institutional"|to_array:$userInstitutionalSubscription->getId()}">{translate key="user.subscriptions.renew"}</a> |
 					{/if}
 					<a class="action" href="{url op="purchaseSubscription" path="institutional"|to_array:$userInstitutionalSubscription->getId()}">{translate key="user.subscriptions.purchase"}</a>
 				{/if}
@@ -196,11 +196,11 @@
 	{/if}
 	{if $journalPaymentsEnabled}
 		<tr>
-			<td colspan="3" align="left"><a class="action" href="{url page="user" op="purchaseSubscription" path="institutional"}">{translate key="user.subscriptions.purchaseNewSubscription"}</a></td> 
+			<td colspan="3" align="left"><a class="action" href="{url page="user" op="purchaseSubscription" path="institutional"}">{translate key="user.subscriptions.purchaseNewSubscription"}</a></td>
 		</tr>
 	{else}
 		<tr>
-			<td colspan="3" align="left"><a href="{url page="about" op="subscriptions" anchor="subscriptionTypes"}">{translate key="user.subscriptions.viewSubscriptionTypes"}</a></td> 
+			<td colspan="3" align="left"><a href="{url page="about" op="subscriptions" anchor="subscriptionTypes"}">{translate key="user.subscriptions.viewSubscriptionTypes"}</a></td>
 		</tr>
 	{/if}
 	</table>
