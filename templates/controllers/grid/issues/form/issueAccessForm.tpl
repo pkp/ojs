@@ -20,18 +20,13 @@
 	{csrf}
 	{include file="controllers/notification/inPlaceNotification.tpl" notificationId="issueAccessNotification"}
 
-	{fbvFormArea id="datePublishedArea" title="editor.issues.accessDate"}
-		{fbvFormSection}
-			{fbvElement type="text" id="openAccessDate" value=$openAccessDate|date_format:$dateFormatShort size=$fbvStyles.size.SMALL class="datepicker"}
-
-		{/fbvFormSection}
-	{/fbvFormArea}
-
-	{fbvFormArea id="issueAccessArea" title="editor.issues.accessStatus"}
-		{fbvFormSection}
+	{fbvFormArea id="issueAccessArea"}
+		{fbvFormSection title="editor.issues.accessStatus"}
 			{fbvElement required="true" type="select" id="accessStatus" from=$accessOptions selected=$accessStatus}
 		{/fbvFormSection}
-
-	{fbvFormButtons submitText="common.save"}
+		{fbvFormSection title="editor.issues.accessDate"}
+			{fbvElement type="text" id="openAccessDate" value=$openAccessDate|date_format:$dateFormatShort size=$fbvStyles.size.SMALL class="datepicker"}
+		{/fbvFormSection}
 	{/fbvFormArea}
+	{fbvFormButtons submitText="common.save"}
 </form>
