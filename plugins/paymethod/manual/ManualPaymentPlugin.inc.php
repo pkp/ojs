@@ -100,9 +100,9 @@ class ManualPaymentPlugin extends PaymethodPlugin {
 		$op = isset($args[0])?$args[0]:null;
 		$queuedPaymentId = isset($args[1])?((int) $args[1]):0;
 
-		import('classes.payment.ojs.OJSPaymentManager');
+		$queuedPaymentDao = DAORegistry::getDAO('QueuedPaymentDAO');
+		$queuedPayment = $queuedPaymentDao->getById($queuedPaymentId);
 		$ojsPaymentManager = new OJSPaymentManager($request);
-		$queuedPayment = $ojsPaymentManager->getById($queuedPaymentId);
 		// if the queued payment doesn't exist, redirect away from payments
 		if (!$queuedPayment) $request->redirect(null, 'index');
 
@@ -116,7 +116,7 @@ class ManualPaymentPlugin extends PaymethodPlugin {
 				$mail->setReplyTo(null);
 				$mail->addRecipient($contactEmail, $contactName);
 				$mail->assignParams(array(
-					'contextName' => $journal->getLocalizedName(),
+					'contextName' => $context->getLocalizedName(),
 					'userFullName' => $user?$user->getFullName():('(' . __('common.none') . ')'),
 					'userName' => $user?$user->getUsername():('(' . __('common.none') . ')'),
 					'itemName' => $ojsPaymentManager->getPaymentName($queuedPayment),
