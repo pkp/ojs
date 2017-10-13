@@ -30,7 +30,7 @@
 	<message key="manager.payment.authorFees">Autor/innengebühren</message>
 	<message key="manager.payment.authorFeesDescription">Die ausgewählten Optionen (zusammen mit der jeweiligen Beschreibung und den Gebühren, die weiter unten bearbeitet werden können) erscheinen unter "1. Schritt" der Beitragseinreichung, im "Über uns" der Zeitschrift unter "Zur Zeitschrift" sowie an allen Stellen, an denen eine Zahlung erforderlich ist.</message>
 	<message key="manager.payment.currency">Währung</message>
-	<message key="manager.payment.currencymessage">OJS führt keine Währungsumrechnungen durch. Wenn Sie Zahlungen für Abonnements annehmen, müssen Sie sicherstellen, dass die Währung, in der das Abonnement bezahlt wird, der hier festgelegten entpricht.</message>
+	<message key="manager.payment.currencymessage">OJS führt keine Währungsumrechnungen durch. Wenn Sie Zahlungen für Abonnements annehmen, müssen Sie sicherstellen, dass die Währung, in der das Abonnement bezahlt wird, der hier festgelegten entspricht.</message>
 	<message key="manager.payment.description">Beschreibung</message>
 	<message key="manager.payment.details">Details</message>
 	<message key="manager.payment.editSubscription">Abonnement bearbeiten</message>
@@ -104,7 +104,7 @@
 	<message key="manager.sections.submissionReview">Es findet kein Peer Review statt.</message>
 	<message key="manager.section.submissionsToThisSection">Eingereichte Beiträge für diese Rubrik</message>
 	<message key="manager.sections.unassigned">Zur Verfügung stehende Rubrikredakteur/innen</message>
-	<message key="manager.sections.wordCount">Wort-Anzahl</message>
+	<message key="manager.sections.wordCount">Wortanzahl</message>
 	<message key="manager.sections.wordCountInstructions">Wortanzahl für Abstracts für diese Rubrik begrenzen (0 für keine Begrenzung):</message>
 	<message key="manager.setup">Setup</message>
 	<message key="manager.setup.masthead">Impressum</message>
@@ -163,7 +163,7 @@
 	<message key="manager.setup.enableAnnouncementsHomepage2">neuesten Mitteilungen auf der Startseite der Zeitschrift</message>
 	<message key="manager.setup.enableUserRegistration">Besucher/innen können einen Benutzeraccount bei der Zeitschrift registrieren.</message>
 	<message key="manager.setup.focusAndScope">Konzept</message>
-	<message key="manager.setup.focusAndScope.description">Beschreiben Sie Autor/innen, Leser/innen und Bibliothekar/innen die Bandbreite der Arikel und anderer hier zu veröffentlichenden Werke.</message>
+	<message key="manager.setup.focusAndScope.description">Beschreiben Sie Autor/innen, Leser/innen und Bibliothekar/innen die Bandbreite der Artikel und anderer hier zu veröffentlichenden Werke.</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWork">Indizierung von Arbeiten für Autor/innen</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWorkDescription"><![CDATA[OJS unterstützt das Protocol for Metadata Harvesting der <a href="http://www.openarchives.org/" target="_blank">Open Archives Initiative</a>, das den Zugang zu gut katalogisierten Forschungsquellen weltweit eröffnet. Die Autor/innen veröffentlichen Metadaten ihrer Beiträge nach einer ähnlichen Vorlage. Die Zeitschriftenverwalterin/der Zeitschriftenverwalter sollte die Kategorien für die Indizierung auswählen und den Autor/innen passende Beispiele an die Hand geben, die die Indizierung ihrer Arbeit erleichtern, wobei die Begriffe durch Semikolon getrennt werden (z.B. Begriff1; Begriff2). Die Einträge sollten als Beispiele (mit "z.B." oder "zum Beispiel") gekennzeichnet sein.]]></message>
 	<message key="manager.setup.form.issnInvalid">Die angegebene ISSN ist ungültig.</message>
@@ -249,7 +249,7 @@
 	<message key="manager.setup.managingTheJournal">4. Schritt: Die Zeitschrift verwalten</message>
 	<message key="manager.setup.navigationBar">Navigationsleiste</message>
 	<message key="manager.setup.navigationBarDescription">Löschen Sie Einträge in der Navigationsleiste oder fügen Sie Einträge hinzu.</message>
-	<message key="manager.setup.navItemIsAbsolute">Die URL ist ein absolute Adresse (z.B. " http://www.example.com"), keine relative URL (z.B."/manager/setup")</message>
+	<message key="manager.setup.navItemIsAbsolute">Die URL ist eine absolute Adresse (z.B. "http://www.example.com"), keine relative URL (z.B."/manager/setup")</message>
 	<message key="manager.setup.navItemIsLiteral">Die Seitenbenennung besteht aus einer Buchstabenkette (z.B. "Einrichtung der Zeitschrift") und nicht aus einem Lokalisierungsschlüssel (z.B. "manager.setup")</message>
 	<message key="manager.setup.noImageFileUploaded">Keine Grafikdatei hochgeladen.</message>
 	<message key="manager.setup.noStyleSheetUploaded">Kein Style Sheet hochgeladen.</message>
@@ -320,7 +320,7 @@
 	<message key="manager.setup.typeProvideExamples">Beispiele für im Fachgebiet relevante Forschungsansätze, -methoden oder -verfahren angeben.</message>
 	<message key="manager.setup.uniqueIdentifier">Eindeutige Kennung</message>
 	<message key="manager.setup.uniqueIdentifierDescription">Artikel und Ausgaben können mit einer Identifikationsnummer oder einer Zeichenkette gekennzeichnet werden, wobei ein System, z.B. das DOI (Digital Object Identifier)-System, verwendet werden sollte.</message>
-	<message key="manager.setup.useEditorialReviewBoard">Die Zeitschrift hat eine Redaktion/ein Herausgeber/innen- und Gutachter/innengremium.</message>
+	<message key="manager.setup.useEditorialReviewBoard">Die Zeitschrift hat eine Redaktion bzw. ein Herausgeber/innengremium.</message>
 	<message key="manager.setup.useThumbnail">Vorschaubild</message>
 	<message key="manager.setup.useImageTitle">Titelgrafik</message>
 	<message key="manager.setup.useJournalStyleSheet">Style Sheet für die Zeitschrift</message>
@@ -341,7 +341,7 @@
 	<message key="manager.statistics.statistics.description">OJS berechnet folgende Statistiken für jede Zeitschrift: "Tage bis zur Begutachtung" wird vom Beitragseingang (oder dem Eingang der zu begutachtenden Version) bis zur ersten Redaktionsentscheidung berechnet, während die "Tage bis zur Veröffentlichung" der angenommenen Beiträge vom Hochladen des Originals bis zur Veröffentlichung berechnet werden.</message>
 	<message key="manager.statistics.statistics.itemsPublished">Veröffentlichte Beiträge</message>
 	<message key="manager.statistics.statistics.makePublic">Mitteilungen, die den Leser/innen in "Über uns" vermittelt werden.</message>
-	<message key="manager.statistics.statistics.note">Anmerkung: Die Prozentsätze der Gutachter/innenempfehlungen summieren sich nicht notwendigerweise auf 100%, weil erneut eingereichte Beiträge entweder angenommen, abgelehnt oder noch in Bearbeitung sein können.</message>
+	<message key="manager.statistics.statistics.note">Anmerkung: Die Prozentsätze der Gutachter/innenempfehlungen summieren sich nicht notwendigerweise auf 100 %, weil erneut eingereichte Beiträge entweder angenommen, abgelehnt oder noch in Bearbeitung sein können.</message>
 	<message key="manager.statistics.statistics.numIssues">Erschienene Ausgaben</message>
 	<message key="manager.statistics.statistics.numSubmissions">Gesamtzahl der Beiträge:</message>
 	<message key="manager.statistics.statistics.peerReviewed">Peer Review abgeschlossen</message>
@@ -403,7 +403,7 @@
 	<message key="manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewIndividual">Abonnementverwalter/innen per E-Mail über die Online-Erneuerung eines individuellen Abonnements informieren.</message>
 	<message key="manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewInstitutional">Abonnementverwalter/innen per E-Mail über die Online-Erneuerung eines institutionellen Abonnements informieren.</message>
 	<message key="manager.subscriptionPolicies.onlinePaymentPurchaseInstitutionalDescription"><![CDATA[<strong>Hinweis:</strong> Für online erworbene institutionelle Abonnements sind die Bewilligung der Domain und der IP-Bereiche und die Aktivierung des Abonnements durch die Abonnementverwalter/innen erforderlich.]]></message>
-	<message key="manager.subscriptionPolicies.onlinePaymentDisabled"><![CDATA[<strong>Hinweis:</strong> Um diese Optionen zu aktivieren, muss die Zeitschriftenverwalterin/der Zeitschriftenverwalter iunter Leser/innengebühren die Onlinezahlungsmodule aktivieren, incl. der Onlinezahlungen für Abonnements.]]></message>
+	<message key="manager.subscriptionPolicies.onlinePaymentDisabled"><![CDATA[<strong>Hinweis:</strong> Um diese Optionen zu aktivieren, muss die Zeitschriftenverwalterin/der Zeitschriftenverwalter unter Leser/innengebühren die Onlinezahlungsmodule aktivieren, incl. der Onlinezahlungen für Abonnements.]]></message>
 	<message key="manager.subscriptionPolicies.openAccessOptions">Open-Access-Optionen für Abonnement-Zeitschriften</message>
 	<message key="manager.subscriptionPolicies.openAccessOptionsDescription">Zeitschriften mit Abonnement können "verzögerten Open Access" und/oder "Selbstarchivierung durch die/den Autor/in" anbieten und damit die Leser/innenschaft vergrößern und die Häufigkeit, in der Beiträge zitiert werden, heraufsetzen.</message>
 	<message key="manager.subscriptionPolicies.subscriptionAdditionalInformation">Informationen zum Abonnement</message>
@@ -546,12 +546,12 @@
 	<message key="manager.setup.copyrightYearBasis.issue">Ausgabe: das Standardjahr wird aus dem Veröffentlichungsdatum der Ausgabe abgeleitet.</message>
 	<message key="manager.setup.resetPermissions">Artikelrechte zurücksetzen</message>
 	<message key="manager.setup.resetPermissions.confirm">Sind Sie sicher, dass Sie die Rechte, die bisher diesem Artikel zugewiesen sind, zurücksetzen möchten?</message>
-	<message key="manager.setup.resetPermissions.description">Copyright-Angaben und Lizenzinformationen werden permanent mit veröffentlichten Inhalten verknüpft. Damit wird sichergestellt, dass diese Angaben nicht geändert werden, wenn eine Zeitschrift ihre Policy für neue Einreichungen ändert. Um gespeicherte Rechteinformationen, die bereits mit veröffentlichten Inhalten verknüpft sind, nutzen Sie den Knopf unten.</message>
+	<message key="manager.setup.resetPermissions.description">Copyright-Angaben und Lizenzinformationen werden permanent mit veröffentlichten Inhalten verknüpft. Damit wird sichergestellt, dass diese Angaben nicht geändert werden, wenn eine Zeitschrift ihre Policy für neue Einreichungen ändert. Nutzen Sie den Knopf unten, um gespeicherte Rechteinformationen, die bereits mit veröffentlichten Inhalten verknüpft sind, zurückzusetzen.</message>
 
 	<!-- Genres Grid -->
 	<message key="grid.genres.title.short">Bestandteile</message>
 	<message key="grid.genres.title">Artikelbestandteile</message>
-	<message key="grid.genres.description">Diese Bestandteile werden genutzt, um Dateien zu benennen. Sie werden in einem Pull-Down-Menü beim Hochladen von Dateien angezeigt. Die Genres, die mit ## markiert sind, ermöglichen es der Nutzerin/dem Nutzer, die Datei entweder mit der kompletten Einreichung 99Z oder einem bestimmten Bestandteil, identifiziert anhand der Nummer (z.B. 02), verknüpfen.</message>
+	<message key="grid.genres.description">Diese Bestandteile werden genutzt, um Dateien zu benennen. Sie werden in einem Pull-Down-Menü beim Hochladen von Dateien angezeigt. Die Genres, die mit ## markiert sind, ermöglichen es der Nutzerin/dem Nutzer, die Datei entweder mit der kompletten Einreichung 99Z oder einem bestimmten Bestandteil, identifiziert anhand der Nummer (z.B. 02), zu verknüpfen.</message>
 
 	<!-- Common DOI export plugins (crossref, datacite, medra) keys -->
 	<!-- plugin tabs -->
