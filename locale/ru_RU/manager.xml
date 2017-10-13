@@ -406,9 +406,9 @@
 	<message key="manager.subscriptionPolicies.openAccessOptions">Настройки открытого доступа для журналов с платной подпиской</message>
 	<message key="manager.subscriptionPolicies.openAccessOptionsDescription">Журналы с платной подпиской могут предоставлять «отложенный открытый доступ» к своему опубликованному контенту, а также разрешать «самостоятельное создание архива автором» (все это увеличивает читательскую аудиторию и количество цитирований контента).</message>
 	<message key="manager.subscriptionPolicies.subscriptionAdditionalInformation">Информация о подписке</message>
-	<message key="manager.subscriptionPolicies.subscriptionAdditionalInformationDescription">Типы подписок и структура платежей автоматически будет размещена в разделе «Подписки» на странице «О журнале», вместе с именем и контактной информацией менеджера по подписке. Здесь также можно добавить дополнительную информацию о подписках, такую как методы оплаты или способы поддержки подписчиков из развивающихся стран.</message>
+	<message key="manager.subscriptionPolicies.subscriptionAdditionalInformationDescription">Типы подписок и структура платежей будет отображаться на странице подписок, вместе с именем и контактной информацией менеджера по подписке. Здесь также можно добавить дополнительную информацию о подписках, такую как методы оплаты или способы поддержки подписчиков из развивающихся стран.</message>
 	<message key="manager.subscriptionPolicies.subscriptionContact">Менеджер по подписке</message>
-	<message key="manager.subscriptionPolicies.subscriptionContactDescription">Информация о контактном лице, размещаемая в разделе «Подписки» страницы «О журнале».</message>
+	<message key="manager.subscriptionPolicies.subscriptionContactDescription">Эта информация о контактном лице будет показана на странице подписок для пользователей наряду с запросами, связанными с подписками.</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactEmailValid">Пожалуйста, введите правильный адрес электронной почты.</message>
 	<message key="manager.subscriptions">Подписки</message>
 	<message key="manager.individualSubscriptions">Индивидуальные подписки</message>
@@ -521,7 +521,7 @@
 	<message key="manager.subscriptionTypes.form.membership">Подписки требуют информацию о членстве (например, в ассоциации, организации, консорциуме и т. д.)</message>
 	<message key="manager.subscriptionTypes.form.membershipValid">Пожалуйста, поставьте галочку.</message>
 	<message key="manager.subscriptionTypes.form.options">Параметры</message>
-	<message key="manager.subscriptionTypes.form.public">Не делать этот тип подписки доступным всем или видимым (например, в разделе «Подписки» на странице «О журнале»).</message>
+	<message key="manager.subscriptionTypes.form.public">Не делать этот тип подписки доступным всем или видимым на веб-сайте.</message>
 	<message key="manager.subscriptionTypes.form.publicValid">Пожалуйста, поставьте галочку.</message>
 	<message key="manager.subscriptionTypes.form.saveAndCreateAnotherType">Сохранить и создать новый</message>
 	<message key="manager.subscriptionTypes.form.typeName">Имя типа</message>
@@ -531,6 +531,12 @@
 	<message key="manager.subscriptionTypes.noneCreated">Типы подписки не были созданы.</message>
 	<message key="manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully">Тип подписки успешно создан.</message>
 	<message key="manager.distribution.access">Доступ</message>
+
+	<!-- Элементы навигационного меню -->
+	<message key="manager.navigationMenus.subscriptions.description">Ссылка на страницу, описывающую предлагаемые вами подписки.</message>
+	<message key="manager.navigationMenus.mySubscriptions.description">Ссылка на страницу, описывающую текущие и прошлые подписки пользователя.</message>
+	<message key="manager.navigationMenus.mySubscriptions.conditionalWarning">Эта ссылка будет показываться только в случае, когда посетитель уже вошел в систему.</message>
+
 
 	<!-- Категории -->
 	<message key="manager.setup.categories">Категории</message>
