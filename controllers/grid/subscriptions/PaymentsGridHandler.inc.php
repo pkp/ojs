@@ -15,7 +15,6 @@
 
 import('lib.pkp.classes.controllers.grid.GridHandler');
 
-import('controllers.grid.subscriptions.PaymentsGridRow');
 import('controllers.grid.subscriptions.PaymentsGridCellProvider');
 
 class PaymentsGridHandler extends GridHandler {
@@ -85,6 +84,15 @@ class PaymentsGridHandler extends GridHandler {
 		);
 		$this->addColumn(
 			new GridColumn(
+				'amount',
+				'manager.payment.amount',
+				null,
+				null,
+				$cellProvider
+			)
+		);
+		$this->addColumn(
+			new GridColumn(
 				'timestamp',
 				'manager.payment.timestamp',
 				null,
@@ -101,14 +109,6 @@ class PaymentsGridHandler extends GridHandler {
 	function initFeatures($request, $args) {
 		import('lib.pkp.classes.controllers.grid.feature.PagingFeature');
 		return array(new PagingFeature());
-	}
-
-	/**
-	 * @copydoc GridHandler::getRowInstance()
-	 * @return PaymentsGridRow
-	 */
-	protected function getRowInstance() {
-		return new PaymentsGridRow();
 	}
 
 
