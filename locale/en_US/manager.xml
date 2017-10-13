@@ -532,6 +532,12 @@
 	<message key="manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully">Subscription type created successfully.</message>
 	<message key="manager.distribution.access">Access</message>
 
+	<!-- Navigation Menu Items -->
+	<message key="manager.navigationMenus.subscriptions.description">Link to a page describing the subscriptions you offer.</message>
+	<message key="manager.navigationMenus.mySubscriptions.description">Link to a page describing the visitor's current and past subscriptions.</message>
+	<message key="manager.navigationMenus.mySubscriptions.conditionalWarning">This link will only be displayed when a visitor is logged in.</message>
+
+
 	<!-- Categories -->
 	<message key="manager.setup.categories">Categories</message>
 	<message key="manager.setup.categories.description">Choose the most appropriate categories from the set listed above. Readers will be able to browse by category from the complete journal set.</message>
