@@ -44,6 +44,7 @@
 	<message key="manager.payment.notFound">Not Found</message>
 	<message key="manager.payment.options">Options</message>
 	<message key="manager.payment.options.acceptSubscriptionPayments">This will activate payments for Subscriptions, where types, cost, duration and subscriptions are managed by the Journal (Subscription) Manager.</message>
+	<message key="subscriptionManager.subscription.confirmRemove">Are you sure you wish to delete this subscription?</message>
 	<message key="manager.payment.options.enablePayments">Payments will be enabled for this journal. Note that users will be required to log in to make payments.</message>
 	<message key="manager.payment.options.fee">Fee</message>
 	<message key="manager.payment.options.feeDescription">Fee Description</message>
