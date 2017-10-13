@@ -40,7 +40,7 @@ class NavigationMenuService extends \PKP\Services\PKPNavigationMenuService {
 	public function getMenuItemTypesCallback($hookName, $args) {
 		$types =& $args[0];
 
-		\AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON, LOCALE_COMPONENT_PKP_USER, LOCALE_COMPONENT_PKP_EDITOR);
+		\AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON, LOCALE_COMPONENT_PKP_USER, LOCALE_COMPONENT_APP_EDITOR);
 
 		$ojsTypes = array(
 			NMI_TYPE_CURRENT => array(
