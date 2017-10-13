@@ -18,8 +18,10 @@
 	<message key="plugins.block.subscription.description">Этот плагин добавляет информацию о подписке на боковую панель.</message>
 	<message key="plugins.block.subscription.blockTitle">Подписка</message>
 	<message key="plugins.block.subscription.expires">Дата окончания</message>
-	<message key="plugins.block.subscription.providedBy">Доступ предоставлен</message>
-	<message key="plugins.block.subscription.comingFromIP">IP-адрес</message>
+	<message key="plugins.block.subscription.providedBy">Доступ предоставлен: {$institutionName}</message>
+	<message key="plugins.block.subscription.comingFromIP">Вход с IP-адреса: {$ip}</message>
 	<message key="plugins.block.subscription.about">Подписки</message>
-	<message key="plugins.block.subscription.loginToVerifySubscription">Войти в систему, чтобы проверить подписку</message>
+	<message key="plugins.block.subscription.loginToVerifySubscription">Войти в систему, чтобы получить доступ к ресурсам для подписчиков.</message>
+	<message key="plugins.block.subscription.subscriptionRequired">Для доступа к некоторым ресурсам нужна подписка.</message>
+	<message key="plugins.block.subscription.subscriptionRequired.learnMore">Узнать больше</message>
 </locale>

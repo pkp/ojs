@@ -257,6 +257,7 @@
 	<message key="subscriptions.status.needsApproval">Требуется подтверждение</message>
 	<message key="subscriptions.status.awaitingManualPayment">Ожидание оплаты вручную</message>
 	<message key="subscriptions.status.awaitingOnlinePayment">Ожидание онлайн-оплаты</message>
+	<message key="subscriptions.status.noSubscription">У вас нет активной подписки.</message>
 	<message key="subscriptions.status.other">Другое, смотрите примечания</message>
 	<message key="subscriptions.individualDescription">Идивидуальные подписки требуют входа на сайт для доступа к контенту, предоставляемому по подписке.</message>
 	<message key="subscriptions.institutionalDescription">Подписки на организацию не требуют входа пользователей на сайт. Для доступа к контенту, предоставляемому по подписке, используется домен пользователя и/или IP-адрес.</message>
@@ -697,8 +698,8 @@
 	<message key="user.subscriptions.purchaseNewSubscription">Приобрести новую подписку</message>
 	<message key="user.subscriptions.purchaseIndividualSubscription">Приобрести индивидуальную подписку</message>
 	<message key="user.subscriptions.purchaseInstitutionalSubscription">Приобрести подписку на организацию</message>
-	<message key="user.subscriptions.expires">Заканчивается</message>
-	<message key="user.subscriptions.expired">Закончилась</message>
+	<message key="user.subscriptions.expires">Заканчивается: {$date}</message>
+	<message key="user.subscriptions.expired">Закончилась: {$date}</message>
 	<message key="user.subscriptions.viewSubscriptionTypes">Показать доступные типы подписки</message>
 	<message key="user.subscriptions.form.typeId">Тип подписки</message>
 	<message key="user.subscriptions.form.membership">Членство</message>
