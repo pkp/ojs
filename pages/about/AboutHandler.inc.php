@@ -27,7 +27,7 @@ class AboutHandler extends AboutContextHandler {
 		$journal = $request->getJournal();
 		$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
 		$templateMgr->assign(array(
-			'subscriptionAdditionalInformation' => $journal->getSetting('subscriptionAdditionalInformation'),
+			'subscriptionAdditionalInformation' => $journal->getLocalizedSetting('subscriptionAdditionalInformation'),
 			'subscriptionMailingAddress' => $journal->getSetting('subscriptionMailingAddress'),
 			'subscriptionName' => $journal->getSetting('subscriptionName'),
 			'subscriptionPhone' => $journal->getSetting('subscriptionPhone'),

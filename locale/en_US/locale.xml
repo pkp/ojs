@@ -697,8 +697,8 @@ Active is how many reviews are currently being considered or underway.]]></messa
 	<message key="user.subscriptions.purchaseNewSubscription">Purchase New Subscription</message>
 	<message key="user.subscriptions.purchaseIndividualSubscription">Purchase Individual Subscription</message>
 	<message key="user.subscriptions.purchaseInstitutionalSubscription">Purchase Institutional Subscription</message>
-	<message key="user.subscriptions.expires">Expires</message>
-	<message key="user.subscriptions.expired">Expired</message>
+	<message key="user.subscriptions.expires">Expires: {$date}</message>
+	<message key="user.subscriptions.expired">Expired: {$date}</message>
 	<message key="user.subscriptions.viewSubscriptionTypes">View Available Subscription Types</message>
 	<message key="user.subscriptions.form.typeId">Subscription Type</message>
 	<message key="user.subscriptions.form.membership">Membership</message>
