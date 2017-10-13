@@ -25,7 +25,7 @@ class InstitutionalSubscriptionsGridHandler extends SubscriptionsGridHandler {
 		parent::initialize($request, $args);
 
 		// Basic grid configuration.
-		$this->setTitle('subscriptionManager.individualSubscriptions');
+		$this->setTitle('subscriptionManager.institutionalSubscriptions');
 
 		//
 		// Grid columns.

@@ -35,7 +35,7 @@ class UserIndividualSubscriptionForm extends Form {
 	 * @param $subscriptionId int
 	 */
 	function __construct($request, $userId = null, $subscriptionId = null) {
-		parent::__construct('user/userIndividualSubscriptionForm.tpl');
+		parent::__construct('frontend/pages/purchaseIndividualSubscription.tpl');
 
 		$this->userId = isset($userId) ? (int) $userId : null;
 		$this->subscription = null;
@@ -44,7 +44,7 @@ class UserIndividualSubscriptionForm extends Form {
 		$subscriptionId = isset($subscriptionId) ? (int) $subscriptionId : null;
 
 		if (isset($subscriptionId)) {
-			$subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO'); 
+			$subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
 			if ($subscriptionDao->subscriptionExists($subscriptionId)) {
 				$this->subscription = $subscriptionDao->getById($subscriptionId);
 			}
@@ -104,19 +104,19 @@ class UserIndividualSubscriptionForm extends Form {
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-		$this->readUserVars(array('typeId', 'membership')); 
+		$this->readUserVars(array('typeId', 'membership'));
 
 		// If subscription type requires it, membership is provided
 		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
 		$needMembership = $subscriptionTypeDao->getSubscriptionTypeMembership($this->getData('typeId'));
 
-		if ($needMembership) { 
+		if ($needMembership) {
 			$this->addCheck(new FormValidator($this, 'membership', 'required', 'user.subscriptions.form.membershipRequired'));
 		}
 	}
 
 	/**
-	 * Create/update individual subscription. 
+	 * Create/update individual subscription.
 	 */
 	function execute() {
 		$journal = $this->request->getJournal();
@@ -144,7 +144,7 @@ class UserIndividualSubscriptionForm extends Form {
 		import('classes.payment.ojs.OJSPaymentManager');
 		$paymentManager = new OJSPaymentManager($this->request);
 		$paymentPlugin = $paymentManager->getPaymentPlugin();
-		
+
 		if ($paymentPlugin->getName() == 'ManualPayment') {
 			$subscription->setStatus(SUBSCRIPTION_STATUS_AWAITING_MANUAL_PAYMENT);
 		} else {

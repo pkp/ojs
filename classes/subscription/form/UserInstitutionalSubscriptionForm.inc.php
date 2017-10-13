@@ -35,7 +35,7 @@ class UserInstitutionalSubscriptionForm extends Form {
 	 * @param $subscriptionId int
 	 */
 	function __construct($request, $userId = null, $subscriptionId = null) {
-		parent::__construct('subscription/userInstitutionalSubscriptionForm.tpl');
+		parent::__construct('frontend/pages/purchaseInstitutionalSubscription.tpl');
 
 		$this->userId = isset($userId) ? (int) $userId : null;
 		$this->subscription = null;
@@ -44,7 +44,7 @@ class UserInstitutionalSubscriptionForm extends Form {
 		$subscriptionId = isset($subscriptionId) ? (int) $subscriptionId : null;
 
 		if (isset($subscriptionId)) {
-			$subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO'); 
+			$subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
 			if ($subscriptionDao->subscriptionExists($subscriptionId)) {
 				$this->subscription = $subscriptionDao->getById($subscriptionId);
 			}
@@ -106,13 +106,13 @@ class UserInstitutionalSubscriptionForm extends Form {
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-		$this->readUserVars(array('typeId', 'membership', 'institutionName', 'institutionMailingAddress', 'domain', 'ipRanges')); 
+		$this->readUserVars(array('typeId', 'membership', 'institutionName', 'institutionMailingAddress', 'domain', 'ipRanges'));
 
 		// If subscription type requires it, membership is provided
 		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
 		$needMembership = $subscriptionTypeDao->getSubscriptionTypeMembership($this->getData('typeId'));
 
-		if ($needMembership) { 
+		if ($needMembership) {
 			$this->addCheck(new FormValidator($this, 'membership', 'required', 'user.subscriptions.form.membershipRequired'));
 		}
 
@@ -132,7 +132,7 @@ class UserInstitutionalSubscriptionForm extends Form {
 		$this->addCheck(new FormValidatorCustom($this, 'domain', 'required', 'user.subscriptions.form.domainIPRangeRequired', create_function('$domain, $ipRangeProvided', 'return ($domain != \'\' || $ipRangeProvided) ? true : false;'), array($ipRangeProvided)));
 
 		// If provided ensure IP ranges have IP address format; IP addresses may contain wildcards
-		if ($ipRangeProvided) {	
+		if ($ipRangeProvided) {
 			import('classes.subscription.InstitutionalSubscription');
 			$this->addCheck(new FormValidatorArrayCustom($this, 'ipRanges', 'required', 'user.subscriptions.form.ipRangeValid', create_function('$ipRange, $regExp', 'return PKPString::regexp_match($regExp, $ipRange);'),
 				array(
@@ -143,13 +143,13 @@ class UserInstitutionalSubscriptionForm extends Form {
 				),
 				false,
 				array(),
-				false		
+				false
 			));
 		}
 	}
 
 	/**
-	 * Create institutional subscription. 
+	 * Create institutional subscription.
 	 */
 	function execute() {
 		$journal = $this->request->getJournal();
@@ -174,7 +174,7 @@ class UserInstitutionalSubscriptionForm extends Form {
 		import('classes.payment.ojs.OJSPaymentManager');
 		$paymentManager = new OJSPaymentManager($this->request);
 		$paymentPlugin = $paymentManager->getPaymentPlugin();
-		
+
 		if ($paymentPlugin->getName() == 'ManualPayment') {
 			$subscription->setStatus(SUBSCRIPTION_STATUS_AWAITING_MANUAL_PAYMENT);
 		} else {

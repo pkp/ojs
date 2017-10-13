@@ -406,9 +406,9 @@
 	<message key="manager.subscriptionPolicies.openAccessOptions">Open Access Options For Subscription Journals</message>
 	<message key="manager.subscriptionPolicies.openAccessOptionsDescription">Subscription journals can provide "delayed open access" to their published content, as well as permit "author self-archiving" (both of which increase readership and citation of content).</message>
 	<message key="manager.subscriptionPolicies.subscriptionAdditionalInformation">Subscription Information</message>
-	<message key="manager.subscriptionPolicies.subscriptionAdditionalInformationDescription">The Subscription Types and fee structure will be automatically placed under Subscriptions on the About the Journal page, along with the name and contact information for the Subscription Manager. Additional information about subscriptions, such as methods of payment or support for subscribers in developing countries, can be added here.</message>
+	<message key="manager.subscriptionPolicies.subscriptionAdditionalInformationDescription">The Subscription Types and fee structure will be displayed on the subscriptions page, along with the name and contact information for the Subscription Manager. Additional information about subscriptions, such as methods of payment or support for subscribers in developing countries, can be added here.</message>
 	<message key="manager.subscriptionPolicies.subscriptionContact">Subscription Manager</message>
-	<message key="manager.subscriptionPolicies.subscriptionContactDescription">The contact listed under Subscriptions in About the Journal.</message>
+	<message key="manager.subscriptionPolicies.subscriptionContactDescription">These contact details will be listed on the subscription page for customers with enquiries related to subscriptions.</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactEmailValid">Please enter a valid email.</message>
 	<message key="manager.subscriptions">Subscriptions</message>
 	<message key="manager.individualSubscriptions">Individual Subscriptions</message>
@@ -521,7 +521,7 @@
 	<message key="manager.subscriptionTypes.form.membership">Subscriptions require membership information (e.g. of an association, organization, consortium, etc.)</message>
 	<message key="manager.subscriptionTypes.form.membershipValid">Please use the checkbox provided.</message>
 	<message key="manager.subscriptionTypes.form.options">Options</message>
-	<message key="manager.subscriptionTypes.form.public">Do not make this subscription type publicly available or visible (e.g. under Subscriptions in About the Journal).</message>
+	<message key="manager.subscriptionTypes.form.public">Do not make this subscription type publicly available or visible on the website.</message>
 	<message key="manager.subscriptionTypes.form.publicValid">Please use the checkbox provided.</message>
 	<message key="manager.subscriptionTypes.form.saveAndCreateAnotherType">Save and Create Another</message>
 	<message key="manager.subscriptionTypes.form.typeName">Name of Type</message>
@@ -531,6 +531,12 @@
 	<message key="manager.subscriptionTypes.noneCreated">No subscription types have been created.</message>
 	<message key="manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully">Subscription type created successfully.</message>
 	<message key="manager.distribution.access">Access</message>
+
+	<!-- Navigation Menu Items -->
+	<message key="manager.navigationMenus.subscriptions.description">Link to a page describing the subscriptions you offer.</message>
+	<message key="manager.navigationMenus.mySubscriptions.description">Link to a page describing the visitor's current and past subscriptions.</message>
+	<message key="manager.navigationMenus.mySubscriptions.conditionalWarning">This link will only be displayed when a visitor is logged in.</message>
+
 
 	<!-- Categories -->
 	<message key="manager.setup.categories">Categories</message>

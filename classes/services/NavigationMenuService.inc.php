@@ -15,6 +15,9 @@
 
 namespace OJS\Services;
 
+define('NMI_TYPE_SUBSCRIPTIONS', 'NMI_TYPE_SUBSCRIPTIONS');
+define('NMI_TYPE_MY_SUBSCRIPTIONS', 'NMI_TYPE_MY_SUBSCRIPTIONS');
+
 class NavigationMenuService extends \PKP\Services\PKPNavigationMenuService {
 
 	/**
@@ -44,6 +47,15 @@ class NavigationMenuService extends \PKP\Services\PKPNavigationMenuService {
 			NMI_TYPE_ARCHIVES => array(
 				'title' => __('navigation.archives'),
 				'description' => __('manager.navigationMenus.archives.description'),
+			),
+			NMI_TYPE_SUBSCRIPTIONS => array(
+				'title' => __('navigation.subscriptions'),
+				'description' => __('manager.navigationMenus.subscriptions.description'),
+			),
+			NMI_TYPE_MY_SUBSCRIPTIONS => array(
+				'title' => __('user.subscriptions.mySubscriptions'),
+				'description' => __('manager.navigationMenus.mySubscriptions.description'),
+				'conditionalWarning' => __('manager.navigationMenus.loggedOut.conditionalWarning'),
 			),
 		);
 
@@ -76,6 +88,10 @@ class NavigationMenuService extends \PKP\Services\PKPNavigationMenuService {
 			case NMI_TYPE_ARCHIVES:
 				$navigationMenuItem->setIsDisplayed($context && $context->getSetting('publishingMode') != PUBLISHING_MODE_NONE);
 				break;
+			case NMI_TYPE_SUBSCRIPTIONS:
+			case NMI_TYPE_MY_SUBSCRIPTIONS:
+				$navigationMenuItem->setIsDisplayed(\Validation::isLoggedIn());
+				break;
 		}
 
 		if ($navigationMenuItem->getIsDisplayed()) {
@@ -99,6 +115,26 @@ class NavigationMenuService extends \PKP\Services\PKPNavigationMenuService {
 						null,
 						'issue',
 						'archive',
+						null
+					));
+					break;
+				case NMI_TYPE_SUBSCRIPTIONS:
+					$navigationMenuItem->setUrl($dispatcher->url(
+						$request,
+						ROUTE_PAGE,
+						null,
+						'about',
+						'subscriptions',
+						null
+					));
+					break;
+				case NMI_TYPE_MY_SUBSCRIPTIONS:
+					$navigationMenuItem->setUrl($dispatcher->url(
+						$request,
+						ROUTE_PAGE,
+						null,
+						'user',
+						'subscriptions',
 						null
 					));
 					break;

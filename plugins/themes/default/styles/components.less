@@ -26,6 +26,7 @@
 	line-height: @triple - 2; // account for border
 	font-weight: @bold;
 	color: @primary;
+	text-decoration: none;
 
 	&:hover,
 	&:focus {
@@ -234,6 +235,14 @@
 			line-height: @triple;
 			margin-left: 1em;
 		}
+	}
+
+	.description {
+		margin-top: 0;
+		font-size: @font-tiny;
+		line-height: 1.5em;
+		color: @text-light;
+
 	}
 
 	@media(min-width: @screen-phone) {
@@ -491,5 +500,24 @@
 		clip: auto;
 		top: 0;
 		left: 50%;
+	}
+}
+
+// Tables
+.cmp_table {
+	width: 100%;
+	border: @bg-border;
+	border-bottom: none;
+	border-collapse: collapse;
+
+	th,
+	td {
+		padding: 0.5em;
+		text-align: left;
+		border-bottom: @bg-border;
+	}
+
+	th {
+		font-weight: @bold;
 	}
 }

@@ -23,32 +23,38 @@
 
 	{include file="controllers/notification/inPlaceNotification.tpl" notificationId="subscriptionTypeNotification"}
 
-	{fbvFormArea id="subscriptionTypeFormArea"}
-		{fbvElement type="text" required=true name="name" id="typeName" value=$name label="manager.subscriptionTypes.form.typeName" size=$fbvStyles.size.MEDIUM multilingual=true}
-		{fbvElement type="textarea" name="description" id="description" value=$description label="manager.subscriptionTypes.form.description" size=$fbvStyles.size.LARGE rich=true}
+	{fbvFormSection label="manager.subscriptionTypes.form.typeName"}
+		{fbvElement type="text" required=true name="name" id="typeName" value=$name size=$fbvStyles.size.MEDIUM multilingual=true}
+	{/fbvFormSection}
 
-		{fbvFormSection}
-			{fbvElement type="text" required=true name="cost" id="cost" value=$cost label="manager.subscriptionTypes.form.cost" description="manager.subscriptionTypes.form.costInstructions" size=$fbvStyles.size.MEDIUM inline=true}
-			{fbvElement type="select" required=true name="currency" id="currency" value=$currency from=$validCurrencies label="manager.subscriptionTypes.form.currency" size=$fbvStyles.size.MEDIUM inline=true translate=false}
-		{/fbvFormSection}
+	{fbvFormSection label="manager.subscriptionTypes.form.description"}
+		{fbvElement type="textarea" name="description" id="description" value=$description rich=true}
+	{/fbvFormSection}
 
-		{fbvFormSection}
-			{fbvElement type="select" required=true name="format" id="format" value=$format from=$validFormats label="manager.subscriptionTypes.form.format" size=$fbvStyles.size.MEDIUM translate=false inline=true}
-			{fbvElement type="text" name="duration" id="duration" value=$duration label="manager.subscriptionTypes.form.duration" size=$fbvStyles.size.MEDIUM label="manager.subscriptionTypes.form.durationInstructions" inline=true}
-		{/fbvFormSection}
-		{fbvFormSection title="manager.subscriptionTypes.form.subscriptions" list=true}
-			{fbvElement type="radio" name="institutional" id="individual" checked=$institutional|compare:"0" label="manager.subscriptionTypes.form.individual" value="0" disabled=$typeId}
-			{fbvElement type="radio" name="institutional" id="institutional" checked=$institutional|compare:"1" label="manager.subscriptionTypes.form.institutional" value="1" disabled=$typeId}
-		{/fbvFormSection}
+	{fbvFormSection title="manager.subscriptionTypes.form.cost"}
+		{fbvElement type="select" required=true name="currency" id="currency" value=$currency from=$validCurrencies label="manager.subscriptionTypes.form.currency" size=$fbvStyles.size.SMALL inline=true translate=false}
+		{fbvElement type="text" required=true name="cost" id="cost" value=$cost label="manager.subscriptionTypes.form.cost" description="manager.subscriptionTypes.form.costInstructions" size=$fbvStyles.size.SMALL inline=true}
+	{/fbvFormSection}
 
-		{fbvFormSection title="manager.subscriptionTypes.form.options" list=true}
-			{fbvElement type="checkbox" name="membership" id="membership" checked=$membership label="manager.subscriptionTypes.form.membership"}
-			{fbvElement type="checkbox" name="disable_public_display" id="disable_public_display" checked=$disable_public_display label="manager.subscriptionTypes.form.public"}
-		{/fbvFormSection}
-	{/fbvFormArea}
+	{fbvFormSection label="manager.subscriptionTypes.form.format"}
+		{fbvElement type="select" required=true name="format" id="format" value=$format from=$validFormats size=$fbvStyles.size.SMALL translate=false inline=true}
+	{/fbvFormSection}
+
+	{fbvFormSection label="manager.subscriptionTypes.form.duration"}
+		{fbvElement type="text" name="duration" id="duration" value=$duration size=$fbvStyles.size.SMALL label="manager.subscriptionTypes.form.durationInstructions" inline=true}
+	{/fbvFormSection}
+
+	{fbvFormSection title="manager.subscriptionTypes.form.subscriptions" list=true}
+		{fbvElement type="radio" name="institutional" id="individual" checked=$institutional|compare:"0" label="manager.subscriptionTypes.form.individual" value="0" disabled=$typeId}
+		{fbvElement type="radio" name="institutional" id="institutional" checked=$institutional|compare:"1" label="manager.subscriptionTypes.form.institutional" value="1" disabled=$typeId}
+	{/fbvFormSection}
+
+	{fbvFormSection title="manager.subscriptionTypes.form.options" list=true}
+		{fbvElement type="checkbox" name="membership" id="membership" checked=$membership label="manager.subscriptionTypes.form.membership"}
+		{fbvElement type="checkbox" name="disable_public_display" id="disable_public_display" checked=$disable_public_display label="manager.subscriptionTypes.form.public"}
+	{/fbvFormSection}
 
 	<span class="formRequired">{translate key="common.requiredField"}</span>
 
 	{fbvFormButtons id="mastheadFormSubmit" submitText="common.save" hideCancel=true}
 </form>
-

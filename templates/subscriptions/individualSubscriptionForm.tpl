@@ -25,17 +25,23 @@
 	{url|assign:subscriberSelectGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.users.subscriberSelect.SubscriberSelectGridHandler" op="fetchGrid" escape=false userId=$userId}
 	{load_url_in_div id='subscriberSelectGridContainer' url=$subscriberSelectGridUrl}
 
-	{fbvFormArea id="subscriptionFormArea"}
-		{fbvFormSection}
-			{fbvElement type="select" required=true name="status" id="status" value=$status from=$validStatus label="manager.subscriptions.form.status" size=$fbvStyles.size.MEDIUM inline=true}
+	{fbvFormArea id="individualSubscriptionFormArea"}
+		{fbvFormSection title="manager.subscriptions.form.typeId"}
 			{fbvElement type="select" required=true name="typeId" id="typeId" value=$typeId from=$subscriptionTypes label="manager.subscriptions.form.typeId" size=$fbvStyles.size.MEDIUM inline=true translate=false}
-			{fbvElement type="text" required=true name="dateStart" id="dateStart" value=$dateStart label="manager.subscriptions.form.dateStart" size=$fbvStyles.size.MEDIUM inline=true class="datepicker"}
-			{fbvElement type="text" required=true name="dateEnd" id="dateEnd" value=$dateEnd label="manager.subscriptions.form.dateEnd" size=$fbvStyles.size.MEDIUM inline=true class="datepicker"}
-			{fbvElement type="text" name="membership" id="membership" value=$membership label="manager.subscriptions.form.membership" size=$fbvStyles.size.MEDIUM inline=true}
-			{fbvElement type="text" name="referenceNumber" id="referenceNumber" value=$referenceNumber label="manager.subscriptions.form.referenceNumber" size=$fbvStyles.size.MEDIUM inline=true}
+			{fbvElement type="select" required=true name="status" id="status" value=$status from=$validStatus label="manager.subscriptions.form.status" size=$fbvStyles.size.SMALL inline=true}
 		{/fbvFormSection}
-		{fbvFormSection}
-			{fbvElement type="textarea" name="notes" id="notes" value=$notes label="manager.subscriptions.form.notes" size=$fbvStyles.size.LARGE rich=true}
+		{fbvFormSection title="common.date"}
+			{fbvElement type="text" required=true name="dateStart" id="dateStart" value=$dateStart label="manager.subscriptions.form.dateStart" size=$fbvStyles.size.SMALL inline=true class="datepicker"}
+			{fbvElement type="text" required=true name="dateEnd" id="dateEnd" value=$dateEnd label="manager.subscriptions.form.dateEnd" size=$fbvStyles.size.SMALL inline=true class="datepicker"}
+		{/fbvFormSection}
+		{fbvFormSection label="manager.subscriptions.form.membership"}
+			{fbvElement type="text" name="membership" id="membership" value=$membership size=$fbvStyles.size.MEDIUM inline=true}
+		{/fbvFormSection}
+		{fbvFormSection label="manager.subscriptions.form.referenceNumber"}
+			{fbvElement type="text" name="referenceNumber" id="referenceNumber" value=$referenceNumber size=$fbvStyles.size.MEDIUM inline=true}
+		{/fbvFormSection}
+		{fbvFormSection label="manager.subscriptions.form.notes"}
+			{fbvElement type="textarea" name="notes" id="notes" value=$notes rich=true}
 		{/fbvFormSection}
 	{/fbvFormArea}
 
