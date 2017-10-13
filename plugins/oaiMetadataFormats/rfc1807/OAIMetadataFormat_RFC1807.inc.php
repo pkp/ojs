@@ -51,8 +51,8 @@ class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat {
 
 		// Subject
 		$subjects = array_merge_recursive(
-			$this->stripAssocArray((array) $article->getDiscipline(null)),
-			$this->stripAssocArray((array) $article->getSubject(null))
+			stripAssocArray((array) $article->getDiscipline(null)),
+			stripAssocArray((array) $article->getSubject(null))
 		);
 		$subject = isset($subjects[$journal->getPrimaryLocale()])?$subjects[$journal->getPrimaryLocale()]:'';
 

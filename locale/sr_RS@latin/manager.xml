@@ -11,7 +11,7 @@
   * Localization strings for the sr_RS@latin (Srpski) locale.
   -->
 
-<locale name="sr_RS@latin" full_name="(Srpski)">
+<locale name="sr_RS@latin" full_name="Srpski">
 	<message key="manager.emails.confirmResetAll">Da li ste sigurni da želite da resetujete sve imejl šablone? Izgubićete sva podešavanja koja ste uradili.</message>
 	<message key="manager.files.note">Napomena: pregledač fajlova je dodatak koji omogućuje direktno upravljanje svi fajlovima i direktorijima koji su vezani za časopis.</message>
 	<message key="manager.payment.options.purchaseIssueFee">Kupi izdanje</message>
@@ -20,9 +20,6 @@
 	<message key="manager.setup.useThumbnail">Mala slika</message>
 	<message key="manager.statistics.reports.today">Danas</message>
 	<message key="manager.setup.categories">Kategorije</message>
-	<message key="manager.payment.giftFees">Cene poklona</message>
-	<message key="manager.payment.giftFeesDescription">Veza na poklonjenu pretplatu će se pojaviti na strani za pretplatu u delu O časopisu u delu bočnog bloka za pretplate.</message>
-	<message key="manager.payment.options.acceptGiftSubscriptionPayments">Ovo će aktivirati plaćanja za poklonjene pretplate omogućavajući čitaocima da kupe poklon pretplate i poklone ih drugim čitaocima.</message>
 	<message key="manager.sections.alertDelete">Pre nego što obrišete ovu rubriku morate članke prethodno objavljene u njoj premestiti u drugu rubriku.</message>
 	<message key="manager.setup.resetPermissions.description">Izjava o autorskim pravima i informacija o licenci će biti trajno priključene uz objavljeni sadržaj tako da se ta informacija neće promeniti u slučaju da časopis promeni svoju politiku tokom novih podnošenja članaka. Ako želite vratiti na početno stanje sačuvane dozvole priključene uz objavljeni sadržaj pritisnite donje dugme.</message>
 	<message key="manager.setup.copyrightYearBasis">Postavi godinu autorskih prava članka na</message>
@@ -106,7 +103,6 @@
 	<message key="manager.payment.noPayments">Nema plaćanja</message>
 	<message key="manager.payment.notFound">Nije pronađeno</message>
 	<message key="manager.payment.options">Opcije</message>
-	<message key="manager.payment.options.donationFee">Donacije časopisu</message>
 	<message key="manager.subscriptionTypes.form.durationRequired">Potrebno je uneti trajanje.</message>
 	<message key="manager.subscriptionTypes.form.format">Format</message>
 	<message key="manager.subscriptionTypes.form.formatRequired">Potreban je format tipa pretplate.</message>
@@ -151,12 +147,9 @@
 	<message key="manager.payment.authorFeesDescription">Odabrane opcije sa njihovim opisima i naknadama (koje mogu biti izmenjene ispod) će se pojaviti u Korak 1 procesu prijave članka i u O časopisu i Prijave delu kao i udelovima gde je plaćanje naknada naznačeno.</message>
 	<message key="manager.payment.generalFeesDescription">Članstvo asocijacije će se pojaviti u stranici O časopisu u delu Politike,a link za donacije će se pojaviti iznad funkcije za pretragu u okviru sa desne strane.</message>
 	<message key="manager.payment.options.enablePayments">Kliknite ovde da uključite modul Plaćanja. Morate konfigurisati podešavanja za plaćanja kompšletiranjem obrasca ispod.  Korisnici će morati da se prijave u sistem da bi izvršili plaćanje.</message>
-	<message key="manager.payment.options.fastTrackFee">Brza recenzija</message>
 	<message key="manager.payment.options.publicationFee">Objavljivanje članka</message>
 	<message key="manager.payment.options.purchaseArticleFee">Kupi članak</message>
-	<message key="manager.payment.options.submissionFee">Prijava članka</message>
 	<message key="manager.payment.options.text">Opis metoda plaćanja</message>
-	<message key="manager.payment.options.waiverPolicy">Politika izuzeća od plaćanja</message>
 	<message key="manager.payment.paymentId">ID plaćanja</message>
 	<message key="manager.payment.paymentMethod">Metod plaćanja</message>
 	<message key="manager.payment.paymentMethod.description">Možete konfigurisati bilo koji od Dodataka za metod plaćanja na ovom ekranu.</message>
@@ -504,7 +497,6 @@
 	<message key="manager.subscriptionPolicies.subscriptionContact">Upravnik za pretplatu</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactDescription">Kontakt naveden u Pretplate u strani O časopisu</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactEmailValid">Unesite ispravnu imejl adresu.</message>
-	<message key="manager.subscriptionPolicies.subscriptionPoliciesSaved">Vaša podešavanja za pretplate su sačuvane.</message>
 	<message key="manager.subscriptions">Pretplate</message>
 	<message key="manager.setup.reviewPolicy">Politika recenzije</message>
 	<message key="manager.setup.searchEngineIndexing">Indeksiranje pretraživačima</message>

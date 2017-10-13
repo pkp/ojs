@@ -848,67 +848,6 @@ Berrikusi gidalerroak<br />
 {$reviewGuidelines}]]></body>
 		<description>Atalen Editoreak Berrikusleari bidalitako mezu honetan berrikusleari eskatzen dio bidalitakoaren bigarren edo hurrengo berrikuspen bat onartu edo baztertu dezala. Bidalitakoari buruzko informazioa ematen du, besteak beste, titulua eta aurkezpena, berrikuspena egiteko muga, eta nola sartu bidalitakora.  Mezu hau erabiltzen da Aldizkariaren Konfigurazioan, 2. urratsean, Berrikuspen Prozesuaren Mezu Erantsia hautatzen denean. (Bestela, ikus BERRIKUSPENA_ESKAKIZUNA_ONDORENGOA.)</description>
 	</email_text>
-	<email_text key="GIFT_AVAILABLE">
-		<subject>{$giftNoteTitle}</subject>
-		<body><![CDATA[{$recipientFirstName} agurgarria:<br />
-<br />
-{$buyerFullName} jaun-andreak opari bat partekatu nahi luke zurekin hemen: {$giftJournalName}:<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-{$giftNote}<br />
-<br />
-<br />
-Jarraipenezko mezu bat jasoko duzu erregistratzeko xehetasunekin eta zure oparia trukatzeko argibideekin.<br />
-<br />
-Opariaz gozatuko duzulakoan gaude!<br />
-<br />
-{$giftContactSignature}]]></body>
-		<description>Mezu honek jakinarazten dio oparia hartzaileari opari bat erosi dela eta trukerako eskuragarri dagoela.</description>
-	</email_text>
-	<email_text key="GIFT_USER_REGISTER">
-		<subject>Trukatu zure oparia: erregistratzeko xehetasunak</subject>
-		<body><![CDATA[{$recipientFirstName} agurgarria:<br />
-<br />
-{$buyerFullName} jaun-andreak opari bat partekatu nahi luke zurekin hemen: {$giftJournalName}:<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-Zure oparia trukatzeko, mesedez, erregistratu webgunearen aldizkarian hemen: <br />
-{$giftUrl}<br />
-<br />
-Erabiltzailea: {$username}<br />
-Pasahitza: {$password}<br />
-<br />
-Behin erregistratu ondoren, pasahitza alda dezakezu noiznahi.<br />
-<br />
-Opariaz gozatuko duzulakoan gaude!<br />
-<br />
-{$giftContactSignature}]]></body>
-		<description>Mezu honek jakinarazten dizkio hartzaileari kontu berri batean erregistratzeko xehetasunak</description>
-	</email_text>
-	<email_text key="GIFT_USER_LOGIN">
-		<subject>Trukatu zure oparia: erregistratzeko xehetasunak</subject>
-		<body><![CDATA[{$recipientFirstName} agurgarria:<br />
-<br />
-{$buyerFullName} jaun-andreak opari bat partekatu nahi luke zurekin hemen: {$giftJournalName}:<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-{$giftNote}<br />
-<br />
-Zure oparia trukatzeko, mesedez, erregistratu aldizkariaren webgunean, hemen: {$giftUrl}<br />
-<br />
-Erabiltzailea: {$username}<br />
-<br />
-Opariaz gozatuko duzulakoan gaude!<br />
-<br />
-{$giftContactSignature}]]></body>
-		<description>Mezu honek jakinarazten dizkio opari hartzaileari erregistratzeko xehetasunak</description>
-	</email_text>
 	<email_text key="REVISED_VERSION_NOTIFY">
 		<subject>Bertsio errebisatua gora kargatu da</subject>
 		<body><![CDATA[{$editorialContactName}:<br />

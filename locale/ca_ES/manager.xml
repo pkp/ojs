@@ -37,8 +37,6 @@
 	<message key="manager.payment.enable">Habilita</message>
 	<message key="manager.payment.feePaymentOptions">Opcions per al pagament de quotes</message>
 	<message key="manager.payment.form.numeric">Tots els costos han de ser valors numèrics positius (s’admeten decimals)</message>
-	<message key="manager.payment.giftFees">Quotes de regal</message>
-	<message key="manager.payment.giftFeesDescription">A la secció «Subscripcions» de la pàgina «Sobre la revista», i també al bloc de subscripcions de la barra lateral, apareix un enllaç a les subscripcions de regal.</message>
 	<message key="manager.payment.generalFees">Quotes generals</message>
 	<message key="manager.payment.generalFeesDescription">L’afiliació a l’associació apareix a la pàgina «Sobre la revista», secció «Polítiques», i l’enllaç per fer donacions es mostra damunt de la funció de cerca que hi ha al marc dret.</message>
 	<message key="manager.payment.generalOptions">Opcions generals</message>
@@ -46,10 +44,7 @@
 	<message key="manager.payment.notFound">No s’ha trobat</message>
 	<message key="manager.payment.options">Opcions</message>
 	<message key="manager.payment.options.acceptSubscriptionPayments">Amb aquesta casella s'activen els pagaments per a les subscripcions. Això permet l’administrador/a (de subscripcions) gestionar-ne els tipus, els costos i la durada.</message>
-	<message key="manager.payment.options.acceptGiftSubscriptionPayments">Amb aquesta casella s'activen els pagaments de subscripcions de regal. Això permet que els lectors/ores de la revista comprin subscripcions de regal per a altres lectors/ores.</message>
-	<message key="manager.payment.options.donationFee">Donacions a la revista</message>
 	<message key="manager.payment.options.enablePayments">Feu clic aquí per habilitar el mòdul «Pagaments». Empleneu el formulari que es mostra a continuació per configurar els paràmetres del pagament. Nota: els usuaris/àries han d’iniciar la sessió per poder fer pagaments.</message>
-	<message key="manager.payment.options.fastTrackFee">Revisió ràpida</message>
 	<message key="manager.payment.options.fee">Quota</message>
 	<message key="manager.payment.options.feeDescription">Descripció de la quota</message>
 	<message key="manager.payment.options.feeName">Nom de la quota</message>
@@ -58,9 +53,7 @@
 	<message key="manager.payment.options.publicationFee">Publicació de l’article</message>
 	<message key="manager.payment.options.purchaseArticleFee">Compra l'article</message>
 	<message key="manager.payment.options.purchaseIssueFee">Compra el número</message>
-	<message key="manager.payment.options.submissionFee">Tramesa de l’article</message>
 	<message key="manager.payment.options.text">Descripció del mètode de pagament</message>
-	<message key="manager.payment.options.waiverPolicy">Política d’exempció de pagament</message>
 	<message key="manager.payment.paymentId">Id. del pagament</message>
 	<message key="manager.payment.paymentMethod">Mètode de pagament</message>
 	<message key="manager.payment.paymentMethod.description">Des d’aquesta pantalla podeu configurar qualsevol dels mòduls de mètodes de pagament següents.</message>
@@ -379,7 +372,6 @@
 	<message key="manager.subscriptionPolicies.subscriptionContact">Administrador/a de subscripcions</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactDescription">Contacte llistat a la secció «Subscripcions» de la pàgina «Sobre la revista».</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactEmailValid">Introduïu una adreça de correu electrònic vàlida.</message>
-	<message key="manager.subscriptionPolicies.subscriptionPoliciesSaved">S’han actualitzat els paràmetres de la política de subscripció.</message>
 	<message key="manager.subscriptions">Subscripcions</message>
 	<message key="manager.individualSubscriptions">Subscripcions individuals</message>
 	<message key="manager.institutionalSubscriptions">Subscripcions institucionals</message>

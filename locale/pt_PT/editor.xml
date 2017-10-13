@@ -7,9 +7,8 @@
   * Copyright (c) 2013-2017 Simon Fraser University
   * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Localization strings for the pt_PT (Português (Portugal)) locale.
-  *
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Portuguese_(pt_PT)
+  * Localization strings.
   -->
 
 <locale name="pt_PT" full_name="Português (Portugal)">
@@ -46,7 +45,7 @@
 	<message key="editor.issues.volumeRequired">O volume é obrigatório para a edição, devendo ser um número positivo inteiro.</message>
 	<message key="editor.issues.numberRequired">O número é obrigatório para a edição, devendo ser um número positivo inteiro.</message>
 	<message key="editor.issues.yearRequired">O ano é obrigatório para a edição, devendo ser um número positivo inteiro.</message>
-	<message key="editor.issues.titleRequired">O título é obrigatório.</message>
+	<message key="editor.issues.titleRequired">É obrigatório o título.</message>
 	<message key="editor.issues.issueIdentificationRequired">A identificação da Edição é obrigatória. Escolha pelo menos uma das opções de identificação para a edição.</message>
 	<message key="editor.issues.issueIdentification">Identificação de Edição</message>
 	<message key="editor.issues.publicIssueIdentifier">Identificador Público de edição</message>
@@ -55,14 +54,14 @@
 	<message key="editor.issues.accessDate">Data para Acesso Livre</message>
 	<message key="editor.issues.invalidAccessDate">A data para acesso é inválida.</message>
 	<message key="editor.issues.coverPage">Capa</message>
-	<message key="editor.issues.coverPageInstructions">(Formatos aceitáveis: .gif, .jpg ou .png )</message>
+	<message key="editor.issues.coverPageInstructions">(Formatos permitidos: .gif, .jpg ou .png )</message>
 	<message key="editor.issues.uploaded">Enviado</message>
 	<message key="editor.issues.remove">Remover</message>
 	<message key="editor.issues.proofed">Corrigido</message>
 	<message key="editor.issues.removeCoverPage">Remover imagem da capa?</message>
 	<message key="editor.issues.invalidCoverPageFormat">Formato inválido. Formatos aceitáveis são .gif, .jpg ou .png. Verifique as configurações de MimeType do servidor e permissões de pastas.</message>
 	<message key="editor.issues.styleFile">Folha de Estilos</message>
-	<message key="editor.issues.invalidStyleFormat">O formato de Folha de Estilos é inválida. Certifique-se que o documento enviado é um documento CSS válido! Documentos CSS com comentários no início poderão ser rejeitados. Verifique as configurações de MimeType do servidor e permissões de pastas.</message>
+	<message key="editor.issues.invalidStyleFormat">O formato de Folha de Estilos é inválido. Certifique-se que o documento enviado é um documento CSS válido! Documentos CSS com comentários no início poderão ser rejeitados. Verifique as configurações de MimeType do servidor e permissões de pastas.</message>
 	<message key="editor.issues.removeStyleFile">Eliminar Folha de Estilos?</message>
 	<message key="editor.issues.coverPageCaption">Legenda da capa</message>
 	<message key="editor.issues.showCoverPage">Criar capa personalizada para esta edição.</message>
@@ -97,7 +96,7 @@
 	<message key="editor.article.showSuppFile">Apresentar documento ao revisor</message>
 	<message key="editor.article.layoutAndProof"><![CDATA[Layout & Leitura de Prova]]></message>
 	<message key="editor.article.clear">Limpar</message>
-	<message key="editor.article.clearReviewer">Limpar revisor</message>
+	<message key="editor.article.clearReviewer">Retirar Revisor</message>
 	<message key="editor.article.changeSection">Alterar Secção</message>
 	<message key="editor.article.setDueDate">Definir Prazo para conclusão</message>
 	<message key="editor.article.addReviewer">Adicionar Revisor</message>
@@ -105,7 +104,7 @@
 	<message key="editor.article.notifyReviewer">Notificar Revisor</message>
 	<message key="editor.article.initiateReview">Iniciar Revisão</message>
 	<message key="editor.article.cancelReview">Cancelar Revisão</message>
-	<message key="editor.article.clearReview">Limpar Revisão</message>
+	<message key="editor.article.clearReview">Retirar Revisor</message>
 	<message key="editor.article.enterRecommendation">Definir Recomendação</message>
 	<message key="editor.article.enterReviewerRecommendation">Definir Recomendação pelo Revisor</message>
 	<message key="editor.article.recommendation">Recomendação</message>
@@ -192,20 +191,42 @@
 	<message key="editor.issues.confirmUnpublish">Deseja realmente despublicar esta edição?</message>
 	<message key="editor.article.archiveSubmission">Rejeitar e Arquivar submissão</message>
 	<message key="editor.submissionReview.cannotSendToCopyediting">Antes de enviar a submissão para Copyediting, use o link Notificar Autor para informá-lo sobre a decisão e seleccionar a versão que vai ser enviada.</message>
+	<message key="editor.submissionReview.sendToCopyediting">Enviar para Copyediting</message>
 	<message key="editor.notifyUsers.allReaders">Todos os leitores ({$count} utilizadores)</message>
 	<message key="editor.notifyUsers.allAuthors">Todos os autores publicados ({$count} utilizadores)</message>
 	<message key="editor.notifyUsers.allIndividualSubscribers">Todos os assinantes individuais ({$count} utilizadores)</message>
 	<message key="editor.notifyUsers.allInstitutionalSubscribers">Todos os assinantes institucionais ({$count} utilizadores)</message>
 	<message key="editor.reassign">Re-atribuir</message>
-	<message key="editor.publicIdentificationExists">O identificador público '{$ publicIdentifier}' já existe para outro objecto (número, artigo, galleys do número ou ficheiro suplementar). Por favor, escolha identificadores únicos que pertençam à sua revista.</message>
-	<message key="editor.issues.galleys">Galleys Número</message>
-	<message key="editor.issues.galley">Galley Número</message>
-	<message key="editor.issues.viewingGalley">Visualizando Galley do Número</message>
-	<message key="editor.issues.issueGalleysDescription">Publicar galleys com todos os conteúdos do número.</message>
-	<message key="editor.issues.noneIssueGalleys">Nenhum galley do número publicado.</message>
-	<message key="editor.issues.galleyLabelRequired">É obrigatório indicar uma categoria para o galley do número</message>
-	<message key="editor.issues.galleyLocaleRequired">É obrigatório indicar um galley local do número.</message>
-	<message key="editor.issues.galleyPublicIdentificationExists">A identificação pública do galley já existe.</message>
-	<message key="editor.issues.backToIssueGalleys">Voltar ao galley dos números</message>
-	<message key="editor.issues.confirmDeleteGalley">Tem a certeza que pretende eliminar este galley do número?</message>
+	<message key="editor.publicIdentificationExists">O identificador público '{$publicIdentifier}' já existe para outro objecto (número, artigo, edição ou ficheiro suplementar). Por favor, escolha identificadores únicos que pertençam à sua revista.</message>
+	<message key="editor.issues.galleys">Número Edições</message>
+	<message key="editor.issues.galley">Número Edição</message>
+	<message key="editor.issues.viewingGalley">Visualizando Edição</message>
+	<message key="editor.issues.issueGalleysDescription">Publicar edição com todos os conteúdos do número.</message>
+	<message key="editor.issues.noneIssueGalleys">Nenhuma edição do número publicada.</message>
+	<message key="editor.issues.galleyLabelRequired">É obrigatório indicar uma categoria para a edição do número</message>
+	<message key="editor.issues.galleyLocaleRequired">É obrigatório indicar uma edição local do número.</message>
+	<message key="editor.issues.galleyPublicIdentificationExists">A identificação pública da edição já existe.</message>
+	<message key="editor.issues.backToIssueGalleys">Voltar à edição</message>
+	<message key="editor.issues.confirmDeleteGalley">Tem a certeza que pretende eliminar esta edição?</message>
+	<message key="editor.issues.editIssue">Gestão Número: {$issueIdentification}</message>
+	<message key="editor.issues.datePublished">Data Publicação</message>
+	<message key="editor.issues.removeCoverImageFileNameMismatch">A imagem da capa que solicitou para eliminar não corresponde à imagem da capa para este número. Por favor, recarregue a página e tente novamente.</message>
+	<message key="editor.issues.removeCoverImageFileNotFound">A imagem da capa que solicitou para eliminar não pôde ser encontrada. Talvez já tenha sido eliminada. Tente recarregar a página.</message>
+	<message key="editor.issues.invalidCoverImageFormat">Formato de página de rosto inválido. Os formatos permitidos são .gif, .jpg ou .png.</message>
+	<message key="editor.issues.identifiers">Identificadores</message>
+	<message key="grid.action.addGalley">Adicionar edição</message>
+	<message key="grid.action.publish">Publicar Número</message>
+	<message key="grid.action.addIssue">Criar Número</message>
+	<message key="grid.action.viewIssue">Ver Número</message>
+	<message key="grid.action.previewIssue">Prévisualizar Número</message>
+	<message key="grid.action.addIssueGalley">Criar Edição</message>
+	<message key="editor.article.schedulePublication">Agendar para Publicação</message>
+	<message key="editor.article.removeCoverImageFileNotFound">A imagem da capa que solicitou para eliminar não pôde ser encontrada. Talvez já tenha sido elimindas. Tente recarregar a página.</message>
+	<message key="grid.action.removeArticle">Remover Artigo de Número</message>
+	<message key="editor.article.remove.confirm">Tem certeza de que deseja remover este artigo do número? O artigo estará disponível para agendamento noutro número.</message>
+	<message key="editor.issues.editIssueGalley">Editar Edição</message>
+	<message key="editor.submission.production.productionReadyFilesDescription"><![CDATA[O editor de layout prepara estes ficheiros para cada edição e, em seguida, carrega para o <span class ="pkp_help_title">Provas</span></span> para leitura de provas.]]></message>
+	<message key="editor.submission.selectGalleyFiles">Seleccionar Ficheiros Edição</message>
+	<message key="editor.submission.editorial.finalDraftDescription"><![CDATA[Os ficheiros de rascunho finais nesta lista são transformados por um Copyeditor em versões copiadas, carregadas abaixo em <span class ="pkp_help_title">Copyediting </span>.]]></message>
+	<message key="editor.submission.proof.manageProofFilesDescription">Todos os ficheiros que já foram enviados para qualquer etapa de submissão podem ser adicionados à Listagem de Revisão, marcando a caixa de selecção Incluir abaixo e clicando em Pesquisar: todos os ficheiros disponíveis serão listados e podem ser escolhidos para inclusão.</message>
 </locale>

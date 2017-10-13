@@ -17,7 +17,7 @@
 	}
 
 	&:before {
-		&:extend(.fa);
+		.fa();
 		content: @fa-var-file-text-o;
 		margin-right: 0.25em;
 	}
@@ -37,9 +37,21 @@
 		}
 
 		&:before {
-			&:extend( .fa );
+			.fa();
 			content: @fa-var-lock;
 			color: @offset;
 		}
+	}
+}
+
+.obj_galley_link_supplementary {
+	.cmp_button_text(@fa-var-file-text-o);
+	padding-right: 0;
+	padding-left: @double;
+
+	&:after {
+		right: auto;
+		left: 0;
+		text-align: left;
 	}
 }

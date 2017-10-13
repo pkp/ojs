@@ -120,8 +120,13 @@ class JournalSiteSettingsForm extends ContextSiteSettingsForm {
 			$section->setEditorRestricted(false);
 			$section->setHideTitle(false);
 			$sectionDao->insertObject($section);
+
+			$journal->updateSetting('supportedLocales', $site->getSupportedLocales());
+
+			// load default navigationMenus.
+			$this->_loadDefaultNavigationMenus($journalId);
+
 		}
-		$journal->updateSetting('supportedLocales', $site->getSupportedLocales());
 		$journal->updateSetting('name', $this->getData('name'), 'string', true);
 		$journal->updateSetting('description', $this->getData('description'), 'string', true);
 

@@ -73,7 +73,14 @@ class UsageStatsLoader extends PKPUsageStatsLoader {
 						$assocId = $articleFile->getFileId();
 					}
 
-					$assocTypeToReturn = $assocType;
+					// is the file article full text
+					$genreDao = DAORegistry::getDAO('GenreDAO');
+					$genre = $genreDao->getById($articleFile->getGenreId());
+					if ($genre->getCategory() != 1 || $genre->getSupplementary() || $genre->getDependent()) {
+						$assocTypeToReturn = ASSOC_TYPE_SUBMISSION_FILE_COUNTER_OTHER;
+					} else {
+						$assocTypeToReturn = $assocType;
+					}
 					break;
 				case ASSOC_TYPE_ISSUE:
 				case ASSOC_TYPE_ISSUE_GALLEY:

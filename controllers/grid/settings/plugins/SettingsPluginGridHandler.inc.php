@@ -69,7 +69,7 @@ class SettingsPluginGridHandler extends PluginGridHandler {
 	/**
 	 * @copydoc GridHandler::authorize()
 	 */
-	function authorize($request, $args, $roleAssignments) {
+	function authorize($request, &$args, $roleAssignments) {
 		$categoryName = $request->getUserVar('category');
 		$pluginName = $request->getUserVar('plugin');
 		if ($categoryName && $pluginName) {

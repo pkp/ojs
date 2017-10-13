@@ -362,6 +362,7 @@
 	<message key="manager.statistics.reports.filters.byContext.description">Begränsa resultaten med nummer och/eller artikel.</message>
 	<message key="manager.statistics.reports.filters.byObject.description">Begränsa resultaten med objektstyp (tidskrift, nummer, artikel, filtyp) och/eller med en eller flera identifikatorer.</message>
 	<message key="manager.subscriptionPolicies">Prenumerationspolicyer</message>
+	
 	<message key="manager.subscriptionPolicies.authorSelfArchive">Författarens egenarkiveringspolicy</message>
 	<message key="manager.subscriptionPolicies.authorSelfArchiveDescription">Följande egenarkiveringspolicy kommer att visas i Policyer under Om tidskriften.</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccess">Fördröjd open access</message>
@@ -459,7 +460,7 @@
 	<message key="manager.subscriptions.form.domainInstructions"><![CDATA[Om en domän är ifylld här, är det optimalt att ange IP intervallet.<br />Giltliga domännamn är (t ex lib.sfu.ca).]]></message>
 	<message key="manager.subscriptions.form.domainIPRangeRequired">Den valda prenumerationsformen kräver en domän och/eller ett IP intervall för prenumerationsverifiering.</message>
 	<message key="manager.subscriptions.form.domainValid">Ange en giltig domän.</message>
-	<message key="manager.subscriptions.form.ipRange">IP intervall</message>
+	<message key="manager.subscriptions.form.ipRange">IP-omfång</message>
 	<message key="manager.subscriptions.form.ipRangeItem"><![CDATA[&#8226;]]></message>
 	<message key="manager.subscriptions.form.ipRangeInstructions"><![CDATA[Om ett IP intervall är ifyllt här, är det optimalt att ange domänen.<br />Giltligt värde inkluderar en IP adress (t ex 142.58.103.1), IP intervall (t ex 142.58.103.1 - 142.58.103.4), IP intervall med jokertecken '*' (t ex 142.58.*.*), och ett IP intervall med CIDR (t ex 142.58.100.0/24).]]></message>
 	<message key="manager.subscriptions.form.ipRangeValid">Ange ett giltligt IP intervall.</message>

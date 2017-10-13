@@ -24,7 +24,7 @@
 			symbolic="article=>doaj-json"
 			displayName="plugins.importexport.doaj.displayName"
 			description="plugins.importexport.doaj.description"
-			inputType="class::classes.article.Article[]"
+			inputType="class::classes.article.Article"
 			outputType="primitive::string" />
 	</filterGroups>
 	<filters>

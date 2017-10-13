@@ -21,9 +21,6 @@
 	<message key="manager.setup.useThumbnail">Мала слика</message>
 	<message key="manager.statistics.reports.today">Данас</message>
 	<message key="manager.setup.categories">Категорије</message>
-	<message key="manager.payment.giftFees">Цене поклона</message>
-	<message key="manager.payment.giftFeesDescription">Веза на поклоњену претплату ће се појавити на страни за претплату у делу О часопису у делу бочног блока за претплате.</message>
-	<message key="manager.payment.options.acceptGiftSubscriptionPayments">Ово ће активирати плаћања за поклоњене претплате омогућавајући читаоцима да купе поклон претплате и поклоне их другим читаоцима.</message>
 	<message key="manager.sections.alertDelete">Пре него што обришете ову рубрику морате чланке претходно објављене у њој преместити у другу рубрику.</message>
 	<message key="manager.setup.resetPermissions.description">Изјава о ауторским правима и информација о лиценци ће бити трајно прикључене уз објављени садржај тако да се та информација неће променити у случају да часопис промени своју политику током нових подношења чланака. Ако желите вратити на почетно стање сачуване дозволе прикључене уз објављени садржај притисните доње дугме.</message>
 	<message key="manager.setup.copyrightYearBasis">Постави годину ауторских права чланка на</message>
@@ -107,7 +104,6 @@
 	<message key="manager.payment.noPayments">Нема плаћања</message>
 	<message key="manager.payment.notFound">Није пронађено</message>
 	<message key="manager.payment.options">Опције</message>
-	<message key="manager.payment.options.donationFee">Донације часопису</message>
 	<message key="manager.subscriptionTypes.form.durationRequired">Потребно је унети трајање.</message>
 	<message key="manager.subscriptionTypes.form.format">Формат</message>
 	<message key="manager.subscriptionTypes.form.formatRequired">Потребан је формат типа претплате.</message>
@@ -152,12 +148,9 @@
 	<message key="manager.payment.authorFeesDescription">Одабране опције са њиховим описима и накнадама (које могу бити измењене испод) ће се појавити у Корак 1 процесу пријаве чланка и у О часопису и Пријаве делу као и уделовима где је плаћање накнада назначено.</message>
 	<message key="manager.payment.generalFeesDescription">Чланство асоцијације ће се појавити у страници О часопису у делу Политике,а линк за донације ће се појавити изнад функције за претрагу у оквиру са десне стране.</message>
 	<message key="manager.payment.options.enablePayments">Кликните овде да укључите модул Плаћања. Морате конфигурисати подешавања за плаћања компшлетирањем обрасца испод.  Корисници ће морати да се пријаве у систем да би извршили плаћање.</message>
-	<message key="manager.payment.options.fastTrackFee">Брза рецензија</message>
 	<message key="manager.payment.options.publicationFee">Објављивање чланка</message>
 	<message key="manager.payment.options.purchaseArticleFee">Купи чланак</message>
-	<message key="manager.payment.options.submissionFee">Пријава чланка</message>
 	<message key="manager.payment.options.text">Опис метода плаћања</message>
-	<message key="manager.payment.options.waiverPolicy">Политика изузећа од плаћања</message>
 	<message key="manager.payment.paymentId">ID плаћања</message>
 	<message key="manager.payment.paymentMethod">Метод плаћања</message>
 	<message key="manager.payment.paymentMethod.description">Можете конфигурисати било који од Додатака за метод плаћања на овом екрану.</message>
@@ -505,7 +498,6 @@
 	<message key="manager.subscriptionPolicies.subscriptionContact">Управник за претплату</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactDescription">Контакт наведен у Претплате у страни О часопису</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactEmailValid">Унесите исправну имејл адресу.</message>
-	<message key="manager.subscriptionPolicies.subscriptionPoliciesSaved">Ваша подешавања за претплате су сачуване.</message>
 	<message key="manager.subscriptions">Претплате</message>
 	<message key="manager.setup.reviewPolicy">Политика рецензије</message>
 	<message key="manager.setup.searchEngineIndexing">Иидексирање претраживачима</message>

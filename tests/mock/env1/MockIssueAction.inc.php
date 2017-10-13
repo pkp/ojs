@@ -14,23 +14,23 @@
 class IssueAction {
 
 	/**
-	 * @see IssueAction::subscriptionRequired()
+	 * @copydoc IssueAction::subscriptionRequired()
 	 */
-	function subscriptionRequired(&$issue) {
+	function subscriptionRequired($issue, $journal) {
 		return false;
 	}
 
 	/**
-	 * @see IssueAction::subscribedUser()
+	 * @copydoc IssueAction::subscribedUser()
 	 */
-	function subscribedUser(&$journal, $issueId = null, $articleId = null) {
+	function subscribedUser($user, $journal, $issueId = null, $articleId = null) {
 		return false;
 	}
 
 	/**
-	 * @see IssueAction::subscribedDomain()
+	 * @copydoc IssueAction::subscribedDomain()
 	 */
-	function subscribedDomain(&$journal, $issueId = null, $articleId = null) {
+	function subscribedDomain($request, $journal, $issueId = null, $articleId = null) {
 		return false;
 	}
 }

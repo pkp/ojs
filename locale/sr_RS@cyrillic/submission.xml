@@ -11,7 +11,7 @@
   * Localization strings for the sr_RS@cyrillic (Cрпски) locale.
   -->
 
-<locale name="sr_RS@cyrillic" full_name = "Cрпски">
+<locale name="sr_RS@cyrillic" full_name="Cрпски">
 	<!-- Submission wizard -->
 
 	<!-- Submission Information Modal -->

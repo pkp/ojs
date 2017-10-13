@@ -46,21 +46,10 @@
 	<message key="default.journalSettings.lockssLicense"><![CDATA[La revista utilitza el sistema LOCKSS per crear un sistema d'arxivament distribuït entre totes les biblioteques que hi participen. A més, permet a les biblioteques que creïn documents permanents de la revista per a conservar-la i restaurar-la. <a href="http://lockss.org/">More...</a>]]></message>
 	
 	<!-- Default settings for payment items. -->
-	<message key="default.journalSettings.submissionFee">Tramesa de l’article</message>
-	<message key="default.journalSettings.submissionFeeDescription">Els autors/ores han de pagar una quota de tramesa de l’article com a part del procés de tramesa per contribuir a les despeses de revisió.</message>
-	<message key="default.journalSettings.fastTrackFee">Revisió ràpida</message>
-	<message key="default.journalSettings.fastTrackFeeDescription">El pagament d'aquesta quota garanteix que la revisió, la decisió editorial i la notificació de l'autor/a del manuscrit es dugui a terme en el termini de quatre setmanes.</message>
 	<message key="default.journalSettings.publicationFee">Publicació de l'article</message>
-	<message key="default.journalSettings.publicationFeeDescription">Si s'accepta la publicació de l'article, haureu de pagar una quota de publicació de l’article per cobrir les despeses de publicació.</message>
-	<message key="default.journalSettings.waiverPolicy">Si no teniu fons per pagar les quotes, podreu prescindir de pagar-les una vegada. No volem que el fet de no pagar la quota impedeixi publicar obres importants.</message>
 	<message key="default.journalSettings.purchaseArticleFee">Compra d'un article</message>
-	<message key="default.journalSettings.purchaseArticleFeeDescription">El pagament de la quota us permet veure, descarregar i imprimir l'article.</message>
 	<message key="default.journalSettings.purchaseIssueFee">Compra d'un número</message>
-	<message key="default.journalSettings.purchaseIssueFeeDescription">El pagament de la quota us permet veure, descarregar i imprimir el número.</message>
 	<message key="default.journalSettings.membershipFee">Afiliació a l’associació</message>
-	<message key="default.journalSettings.membershipFeeDescription">El pagament de la quota us inscriurà com a membre de l'associació durant un any i us proporcionarà accés lliure a la revista.</message>
-	<message key="default.journalSettings.donationFee">Donacions a la revista</message>
-	<message key="default.journalSettings.donationFeeDescription">Les donacions de qualsevol quantitat a la revista seran benvingudes i donaran als editors/ores els mitjans necessaris per oferir una revista de màxima qualitat als seus lectors/ores.</message>
 	<message key="default.journalSettings.emailHeader">El següent missatge s'entrega en nom de {$journalName}.
 ________________________________________________________________________</message>
 </locale>

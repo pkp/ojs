@@ -52,9 +52,10 @@
  * @uses $article Article This article
  * @uses $issue Issue The issue this article is assigned to
  * @uses $section Section The journal section this article is assigned to
+ * @uses $primaryGalleys array List of article galleys that are not supplementary or dependent
+ * @uses $supplementaryGalleys array List of article galleys that are supplementary
  * @uses $keywords array List of keywords assigned to this article
  * @uses $pubIdPlugins Array of pubId plugins which this article may be assigned
- * @uses $citationPlugins Array of citation format plugins
  * @uses $copyright string Copyright notice. Only assigned if statement should
  *   be included with published articles.
  * @uses $copyrightHolder string Name of copyright holder
@@ -91,6 +92,7 @@
 							{/if}
 							{if $author->getOrcid()}
 								<span class="orcid">
+									{$orcidIcon}
 									<a href="{$author->getOrcid()|escape}" target="_blank">
 										{$author->getOrcid()|escape}
 									</a>
@@ -106,16 +108,13 @@
 				{if $pubIdPlugin->getPubIdType() != 'doi'}
 					{php}continue;{/php}
 				{/if}
-				{if $issue->getPublished()}
-					{assign var=pubId value=$article->getStoredPubId($pubIdPlugin->getPubIdType())}
-				{else}
-					{assign var=pubId value=$pubIdPlugin->getPubId($article)}{* Preview pubId *}
-				{/if}
+				{assign var=pubId value=$article->getStoredPubId($pubIdPlugin->getPubIdType())}
 				{if $pubId}
 					{assign var="doiUrl" value=$pubIdPlugin->getResolvingURL($currentJournal->getId(), $pubId)|escape}
 					<div class="item doi">
 						<span class="label">
-							{translate key="plugins.pubIds.doi.readerDisplayName"}
+							{capture assign=translatedDOI}{translate key="plugins.pubIds.doi.readerDisplayName"}{/capture}
+							{translate key="semicolon" label=$translatedDOI}
 						</span>
 						<span class="value">
 							<a href="{$doiUrl}">
@@ -126,11 +125,28 @@
 				{/if}
 			{/foreach}
 
+			{* Keywords *}
+			{if !empty($keywords[$currentLocale])}
+			<div class="item keywords">
+				<span class="label">
+					{capture assign=translatedKeywords}{translate key="article.subject"}{/capture}
+					{translate key="semicolon" label=$translatedKeywords}
+				</span>
+				<span class="value">
+					{foreach from=$keywords item=keyword}
+						{foreach name=keywords from=$keyword item=keywordItem}
+							{$keywordItem|escape}{if !$smarty.foreach.keywords.last}, {/if}
+						{/foreach}
+					{/foreach}
+				</span>
+			</div>
+			{/if}
+
 			{* Abstract *}
 			{if $article->getLocalizedAbstract()}
 				<div class="item abstract">
 					<h3 class="label">{translate key="article.abstract"}</h3>
-					{$article->getLocalizedAbstract()|strip_unsafe_html|nl2br}
+					{$article->getLocalizedAbstract()|strip_unsafe_html}
 				</div>
 			{/if}
 
@@ -205,13 +221,23 @@
 			{/if}
 
 			{* Article Galleys *}
-			{assign var=galleys value=$article->getGalleys()}
-			{if $galleys}
+			{if $primaryGalleys}
 				<div class="item galleys">
 					<ul class="value galleys_links">
-						{foreach from=$galleys item=galley}
+						{foreach from=$primaryGalleys item=galley}
 							<li>
 								{include file="frontend/objects/galley_link.tpl" parent=$article galley=$galley}
+							</li>
+						{/foreach}
+					</ul>
+				</div>
+			{/if}
+			{if $supplementaryGalleys}
+				<div class="item galleys">
+					<ul class="value supplementary_galleys_links">
+						{foreach from=$supplementaryGalleys item=galley}
+							<li>
+								{include file="frontend/objects/galley_link.tpl" parent=$article galley=$galley isSupplementary="1"}
 							</li>
 						{/foreach}
 					</ul>
@@ -229,36 +255,53 @@
 				</div>
 			{/if}
 
-			{* Citation formats *}
-			{if $citationPlugins|@count}
-				<div class="item citation_formats">
-					{* Output the first citation format *}
-					{foreach from=$citationPlugins name="citationPlugins" item="citationPlugin"}
-						<div class="sub_item citation_display">
-							<div class="label">
-								{translate key="submission.howToCite"}
-							</div>
-							<div id="citationOutput" class="value">
-								{$citationPlugin->fetchCitation($article, $issue, $currentContext)}
-							</div>
-						</div>
-						{php}break;{/php}
-					{/foreach}
-
-					{* Output list of all citation formats *}
-					<div class="sub_item citation_format_options">
+			{* How to cite *}
+			{if $citation}
+				<div class="item citation">
+					<div class="sub_item citation_display">
 						<div class="label">
-							{translate key="submission.howToCite.citationFormats"}
+							{translate key="submission.howToCite"}
 						</div>
 						<div class="value">
-							<ul>
-								{foreach from=$citationPlugins name="citationPlugins" item="citationPlugin"}
-									<li class="{$citationPlugin->getName()|escape}{if $smarty.foreach.citationPlugins.iteration == 1} current{/if}">
-										{capture assign="citationUrl"}{url page="article" op="cite" path=$article->getBestArticleId()}/{$citationPlugin->getName()|escape}{/capture}
-										<a href="{$citationUrl}"{if !$citationPlugin->isDownloadable()} data-load-citation="true"{/if} target="_blank">{$citationPlugin->getCitationFormatName()|escape}</a>
-									</li>
-								{/foreach}
-							</ul>
+							<div id="citationOutput" role="region" aria-live="polite">
+								{$citation}
+							</div>
+							<div class="citation_formats">
+								<button class="cmp_button citation_formats_button" aria-controls="cslCitationFormats" aria-expanded="false" data-csl-dropdown="true">
+									{translate key="submission.howToCite.citationFormats"}
+								</button>
+								<div id="cslCitationFormats" class="citation_formats_list" aria-hidden="true">
+									<ul class="citation_formats_styles">
+										{foreach from=$citationStyles item="citationStyle"}
+											<li>
+												<a
+													aria-controls="citationOutput"
+													href="{url page="citationstylelanguage" op="get" path=$citationStyle.id params=$citationArgs}"
+													data-load-citation
+													data-json-href="{url page="citationstylelanguage" op="get" path=$citationStyle.id params=$citationArgsJson}"
+												>
+													{$citationStyle.title|escape}
+												</a>
+											</li>
+										{/foreach}
+									</ul>
+									{if count($citationDownloads)}
+										<div class="label">
+											{translate key="submission.howToCite.downloadCitation"}
+										</div>
+										<ul class="citation_formats_styles">
+											{foreach from=$citationDownloads item="citationDownload"}
+												<li>
+													<a href="{url page="citationstylelanguage" op="download" path=$citationDownload.id params=$citationArgs}">
+														<span class="fa fa-download"></span>
+														{$citationDownload.title|escape}
+													</a>
+												</li>
+											{/foreach}
+										</ul>
+									{/if}
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -289,31 +332,12 @@
 				{/if}
 			</div>
 
-			{* Keywords *}
-			{* @todo keywords not yet implemented *}
-
-			{* Article Subject *}
-			{if $article->getLocalizedSubject()}
-				<div class="item subject">
-					<h3 class="label">
-						{translate key="article.subject"}
-					</h3>
-					<div class="value">
-						{$article->getLocalizedSubject()|escape}
-					</div>
-				</div>
-			{/if}
-
 			{* PubIds (requires plugins) *}
 			{foreach from=$pubIdPlugins item=pubIdPlugin}
 				{if $pubIdPlugin->getPubIdType() == 'doi'}
 					{php}continue;{/php}
 				{/if}
-				{if $issue->getPublished()}
-					{assign var=pubId value=$article->getStoredPubId($pubIdPlugin->getPubIdType())}
-				{else}
-					{assign var=pubId value=$pubIdPlugin->getPubId($article)}{* Preview pubId *}
-				{/if}
+				{assign var=pubId value=$article->getStoredPubId($pubIdPlugin->getPubIdType())}
 				{if $pubId}
 					<div class="item pubid">
 						<div class="label">

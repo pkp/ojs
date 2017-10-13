@@ -85,6 +85,7 @@ class ArticleHandler extends Handler {
 		$fileId = array_shift($args);
 
 		$journal = $request->getJournal();
+		$user = $request->getUser();
 		$issue = $this->issue;
 		$article = $this->article;
 		$templateMgr = TemplateManager::getManager($request);
@@ -96,6 +97,38 @@ class ArticleHandler extends Handler {
 		$this->setupTemplate($request);
 
 		if (!$this->userCanViewGalley($request, $articleId, $galleyId)) fatalError('Cannot view galley.');
+
+		// Get galleys sorted into primary and supplementary groups
+		$galleys = $article->getGalleys();
+		$primaryGalleys = array();
+		$supplementaryGalleys = array();
+		if ($galleys) {
+			$genreDao = DAORegistry::getDAO('GenreDAO');
+			$primaryGenres = $genreDao->getPrimaryByContextId($journal->getId())->toArray();
+			$primaryGenreIds = array_map(function($genre) {
+				return $genre->getId();
+			}, $primaryGenres);
+			$supplementaryGenres = $genreDao->getBySupplementaryAndContextId(true, $journal->getId())->toArray();
+			$supplementaryGenreIds = array_map(function($genre) {
+				return $genre->getId();
+			}, $supplementaryGenres);
+
+			foreach ($galleys as $galley) {
+				$file = $galley->getFile();
+				if (!$file) {
+					continue;
+				}
+				if (in_array($file->getGenreId(), $primaryGenreIds)) {
+					$primaryGalleys[] = $galley;
+				} elseif (in_array($file->getGenreId(), $supplementaryGenreIds)) {
+					$supplementaryGalleys[] = $galley;
+				}
+			}
+		}
+		$templateMgr->assign(array(
+			'primaryGalleys' => $primaryGalleys,
+			'supplementaryGalleys' => $supplementaryGalleys,
+		));
 
 		// Fetch and assign the section to the template
 		$sectionDao = DAORegistry::getDAO('SectionDAO');
@@ -110,12 +143,12 @@ class ArticleHandler extends Handler {
 		// Copyright and license info
 		$templateMgr->assign(array(
 			'copyright' => $journal->getLocalizedSetting('copyrightNotice'),
-			'copyrightHolder' => $journal->getLocalizedSetting('copyrightHolder'),
-			'copyrightYear' => $journal->getSetting('copyrightYear')
 		));
 		if ($article->getLicenseURL()) $templateMgr->assign(array(
 			'licenseUrl' => $article->getLicenseURL(),
 			'ccLicenseBadge' => Application::getCCLicenseBadge($article->getLicenseURL()),
+			'copyrightHolder' => $article->getLocalizedCopyrightHolder(),
+			'copyrightYear' => $article->getCopyrightYear(),
 		));
 
 		// Keywords
@@ -125,11 +158,6 @@ class ArticleHandler extends Handler {
 		// Consider public identifiers
 		$pubIdPlugins = PluginRegistry::loadCategory('pubIds', true);
 		$templateMgr->assign('pubIdPlugins', $pubIdPlugins);
-
-		// Citation formats
-		$citationPlugins = PluginRegistry::loadCategory('citationFormats');
-		uasort($citationPlugins, create_function('$a, $b', 'return strcmp($a->getDisplayName(), $b->getDisplayName());'));
-		$templateMgr->assign('citationPlugins', $citationPlugins);
 
 		if (!$galley) {
 			// No galley: Prepare the article landing page.
@@ -143,11 +171,11 @@ class ArticleHandler extends Handler {
 			$issueAction = new IssueAction();
 			$subscriptionRequired = false;
 			if ($issue) {
-				$subscriptionRequired = $issueAction->subscriptionRequired($issue);
+				$subscriptionRequired = $issueAction->subscriptionRequired($issue, $journal);
 			}
 
-			$subscribedUser = $issueAction->subscribedUser($journal, isset($issue) ? $issue->getId() : null, isset($article) ? $article->getId() : null);
-			$subscribedDomain = $issueAction->subscribedDomain($journal, isset($issue) ? $issue->getId() : null, isset($article) ? $article->getId() : null);
+			$subscribedUser = $issueAction->subscribedUser($user, $journal, isset($issue) ? $issue->getId() : null, isset($article) ? $article->getId() : null);
+			$subscribedDomain = $issueAction->subscribedDomain($request, $journal, isset($issue) ? $issue->getId() : null, isset($article) ? $article->getId() : null);
 
 			$templateMgr->assign('hasAccess', !$subscriptionRequired || (isset($article) && $article->getAccessStatus() == ARTICLE_ACCESS_OPEN) || $subscribedUser || $subscribedDomain);
 
@@ -225,7 +253,7 @@ class ArticleHandler extends Handler {
 		$fileId = isset($args[2]) ? (int) $args[2] : 0;
 
 		if ($this->galley->getRemoteURL()) $request->redirectUrl($this->galley->getRemoteURL());
-		if ($this->userCanViewGalley($request, $articleId, $galleyId)) {
+		else if ($this->userCanViewGalley($request, $articleId, $galleyId)) {
 			if (!$fileId) {
 				$submissionFile = $this->galley->getFile();
 				if ($submissionFile) {
@@ -233,7 +261,9 @@ class ArticleHandler extends Handler {
 					// The file manager expects the real article id.  Extract it from the submission file.
 					$articleId = $submissionFile->getSubmissionId();
 				} else { // no proof files assigned to this galley!
-					return null;
+					header('HTTP/1.0 403 Forbidden');
+					echo '403 Forbidden<br>';
+					return;
 				}
 			}
 
@@ -242,6 +272,9 @@ class ArticleHandler extends Handler {
 				$submissionFileManager = new SubmissionFileManager($this->article->getContextId(), $this->article->getId());
 				$submissionFileManager->downloadFile($fileId, null, $request->getUserVar('inline')?true:false);
 			}
+		} else {
+			header('HTTP/1.0 403 Forbidden');
+			echo '403 Forbidden<br>';
 		}
 	}
 
@@ -265,14 +298,14 @@ class ArticleHandler extends Handler {
 
 		// If this is an editorial user who can view unpublished/unscheduled
 		// articles, bypass further validation. Likewise for its author.
-		if ($publishedArticle && $issueAction->allowedPrePublicationAccess($journal, $publishedArticle)) {
+		if ($publishedArticle && $issueAction->allowedPrePublicationAccess($journal, $publishedArticle, $user)) {
 			return true;
 		}
 
 		// Make sure the reader has rights to view the article/issue.
 		if ($issue && $issue->getPublished() && $publishedArticle->getStatus() == STATUS_PUBLISHED) {
-			$subscriptionRequired = $issueAction->subscriptionRequired($issue);
-			$isSubscribedDomain = $issueAction->subscribedDomain($journal, $issue->getId(), $publishedArticle->getId());
+			$subscriptionRequired = $issueAction->subscriptionRequired($issue, $journal);
+			$isSubscribedDomain = $issueAction->subscribedDomain($request, $journal, $issue->getId(), $publishedArticle->getId());
 
 			// Check if login is required for viewing.
 			if (!$isSubscribedDomain && !Validation::isLoggedIn() && $journal->getSetting('restrictArticleAccess') && isset($galleyId) && $galleyId) {
@@ -284,7 +317,7 @@ class ArticleHandler extends Handler {
 			if ( (!$isSubscribedDomain && $subscriptionRequired) && (isset($galleyId) && $galleyId) ) {
 
 				// Subscription Access
-				$subscribedUser = $issueAction->subscribedUser($journal, $issue->getId(), $publishedArticle->getId());
+				$subscribedUser = $issueAction->subscribedUser($user, $journal, $issue->getId(), $publishedArticle->getId());
 
 				import('classes.payment.ojs.OJSPaymentManager');
 				$paymentManager = new OJSPaymentManager($request);
@@ -324,9 +357,10 @@ class ArticleHandler extends Handler {
 							return true;
 						} else {
 							$queuedPayment = $paymentManager->createQueuedPayment($journalId, PAYMENT_TYPE_PURCHASE_ARTICLE, $user->getId(), $publishedArticle->getId(), $journal->getSetting('purchaseArticleFee'));
-							$queuedPaymentId = $paymentManager->queuePayment($queuedPayment);
+							$paymentManager->queuePayment($queuedPayment);
 
-							$paymentManager->displayPaymentForm($queuedPaymentId, $queuedPayment);
+							$paymentForm = $paymentManager->getPaymentForm($queuedPayment);
+							$paymentForm->display($request);
 							exit;
 						}
 					}
@@ -343,56 +377,6 @@ class ArticleHandler extends Handler {
 			$request->redirect(null, 'search');
 		}
 		return true;
-	}
-
-	/**
-	 * Fetch an item citation
-	 * @param $args
-	 * @param $request
-	 */
-	function cite($args, $request) {
-		$router = $request->getRouter();
-		$this->setupTemplate($request);
-		$articleId = isset($args[0]) ? $args[0] : 0;
-		$citeType = isset($args[1]) ? $args[1] : null;
-		$returnFormat = isset($args[2]) ? $args[2] : null;
-
-		$citationPlugins = PluginRegistry::loadCategory('citationFormats');
-
-		import('lib.pkp.classes.core.JSONMessage');
-
-		if (empty($citeType) || !isset($citationPlugins[$citeType])) {
-			AppLocale::requireComponents(LOCALE_COMPONENT_APP_SUBMISSION);
-			$errorMessage = __('submission.citationFormat.notFound');
-			if ($returnFormat == 'json') {
-				return new JSONMessage(false, $errorMessage);
-			} else {
-				echo $errorMessage;
-			}
-			return;
-		}
-
-		$article = $this->article;
-		$issue = $this->issue;
-		$journal = $request->getContext();
-
-		// Initiate a file download and exit
-		if ($citationPlugins[$citeType]->isDownloadable()) {
-			$citationPlugins[$citeType]->downloadCitation($article, $issue, $journal);
-			return;
-		}
-
-		$citation = $citationPlugins[$citeType]->fetchCitation($article, $issue, $journal);
-
-		// Return a JSON formatted string
-		if ($returnFormat == 'json') {
-			return new JSONMessage(true, $citation);
-
-		// Display it straight to the browser
-		} else {
-			echo $citation;
-			return;
-		}
 	}
 
 	/**

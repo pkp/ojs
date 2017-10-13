@@ -36,7 +36,7 @@
 
 
 	<message key="reviewer.article.enterReviewForm">Klikkaa kuvaketta täyttääksesi arviointilomakkeen.</message>
-	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Täytä pakolliset kentät.</message>
+	<message key="reviewer.submission.reviewFormResponse.form.responseRequired">Täytä pakolliset kentät.</message>
 
 	<!-- review forms end -->
 
@@ -368,7 +368,6 @@
 	<message key="plugins.categories.viewableFiles">Artikkelien julkaistavien tiedostojen lisäosat</message>
 	<message key="plugins.categories.viewableFiles.description">Artikkelien julkaistavien tiedostojen lisäosat tukevat sitä, että julkaistavia tiedostoja voidaan näyttää eri tiedostomuodoissa.</message>
 	<message key="plugins.categories.auth.description">Käyttöoikeus-lisäosa sallii Open Journal Systemsin siirtää käyttäjän todentamiseen liittyviä tehtäviä muiden järjestelmien, kuten LDAP-palvelimien, hoidettavaksi.</message>
-	<message key="plugins.categories.citationFormats.description">Viittausmuotolisäosat tarjoavat käyttäjille erilaisia malleja viittausten käyttöön.</message>
 	<message key="plugins.categories.generic.description">Yleisiä lisäosia käytetään laajentamaan Open Journal Systemsiä sellaisilla eri tavoilla, joita ei tueta muissa lisäosakategorioissa.</message>
 
 	<message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems tukee <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) -järjestelmää varmistaakseen julkaisulle turvallisen ja pysyvän arkiston. LOCKSS on Stanford University Libraryssa kehitetty avoimen lähdekoodin ohjelmisto, joka antaa kirjastoille mahdollisuuden valittujen verkkojulkaisujen säilyttämiseen, keräten säännöllisesti rekisteröityjen julkaisujen verkkosivustojen äskettäin julkaistua sisältöä ja arkistoiden sen. Jokainen arkisto tarkistetaan toistuvasti muiden kirjastojen välimuistien avulla. Mikäli sisältö on vioittunut tai kadonnut, se voidaan palauttaa muiden välimuistien tai itse julkaisun avulla.
@@ -576,7 +575,6 @@ Arvostelu on asteikolla 1-5 (5 = erinomainen).<br/>
 	<message key="reviewer.article.selectRecommendation.byEditor">Aseta tai muuta arvioijan suositusta.</message>
 	<message key="reviewer.article.mustSelectDecision">Yhtään suositusta ei valittu. Et voi lähettää arviointia, ennen kuin valitset suosituksen.</message>
 	<message key="reviewer.article.confirmDecision">Kun olet tallentanut päätöksesi, et voi enää tehdä muutoksia arviointiisi. Haluatko varmasti jatkaa?</message>
-	<message key="reviewer.article.ensuringBlindReview">Sokkoarvioinnin varmistaminen</message>
 
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">Teknisesti toimitettava tiedosto</message>
@@ -830,41 +828,6 @@ Arvostelu on asteikolla 1-5 (5 = erinomainen).<br/>
 	<message key="donations.thankYou">Kiitos</message>
 	<message key="donations.thankYouMessage">Kiitos lahjoituksesta. Arvostamme sitä suuresti.</message>
 
-	<!-- Gifts -->
-	<message key="gifts.buyer">Antaja</message>
-	<message key="gifts.buyerDescription">Keneltä tämä lahja on?</message>
-	<message key="gifts.recipient">Saaja</message>
-	<message key="gifts.recipientDescription">Kenelle tämä lahja on?</message>
-	<message key="gifts.thankYou">Kiitos</message>
-	<message key="gifts.thankYouMessage">Lahjan osto on suoritettu. Saat kopion sähköpostista, joka lähetetään lahjan vastaanottajalle, kun maksusi on käsitelty.</message>
-	<message key="gifts.purchaseGiftIndividualSubscription">Lahjatilaus</message>
-	<message key="gifts.subscriptionFormIntroduction">Täytä alla oleva lomake. Annettuja yhteystietoja sekä lahjaviestiäsi käytetään, kun vastaanottajalle ilmoitetaan uudesta lahjatilauksesta sähköpostitse (sinulle lähetetään kopio tästä sähköpostista).</message>
-	<message key="gifts.details">Lahjan tiedot</message>
-	<message key="gifts.detailsDescription">Valitse lahja alapuolelta ja kirjoita vastaanottajalle lähetettävä viesti (sinulle lähetetään kopio tästä sähköpostista).</message>
-	<message key="gifts.gift">Lahja</message>
-	<message key="gifts.noteTitle">Otsikko</message>
-	<message key="gifts.note">Lahjaviesti</message>
-	<message key="gifts.noteTitleRequired">Anna viestillesi otsikko.</message>
-	<message key="gifts.noteRequired">Kirjoita viesti vastaanottajalle.</message>
-	<message key="gifts.localeRequired">Valitse viestin kieli.</message>
-	<message key="gifts.myGifts">Omat lahjani</message>
-	<message key="gifts.manageMyGifts">Omien lahjojen hallinnointi</message>
-	<message key="gifts.redeemGift">Lunasta lahja</message>
-	<message key="gifts.status.notRedeemed">Käytettävissä</message>
-	<message key="gifts.status.redeemed">Lunastettu</message>
-	<message key="gifts.status.redeemGift">Lunasta lahja</message>
-	<message key="gifts.subscriptions">Tilaukset</message>
-	<message key="gifts.subscriptionsDescription">Lunastettu lahjatilaus korvaa tämänhetkisen tilauksesi (mikäli sinulla sellainen on). Tilaukset alkavat lunastuspäivänä ja ovat voimassa tilausvaihtoehdon keston ajan.</message>
-	<message key="gifts.purchaseGiftSubscription">Anna tilaus lahjaksi</message>
-	<message key="gifts.giftSubscriptionsAvailable">Voit antaa tilauksen myös lahjaksi. Vastaanottaja voi lunastaa tilauksen milloin tahansa. Lahjatilaukset ovat hyvä tapa tukea tätä julkaisua.</message>
-	<message key="gifts.noSubscriptions">Ei lahjatilauksia</message>
-	<message key="gifts.giftRedeemed">Lahja lunastettiin onnistuneesti.</message>
-	<message key="gifts.noGiftToRedeem">Tätä lahjaa ei voi lunastaa.</message>
-	<message key="gifts.giftAlreadyRedeemed">Tämä lahja on jo lunastettu.</message>
-	<message key="gifts.giftNotValid">Tämä lahja ei ole voimassa ja sitä ei voida lunastaa.</message>
-	<message key="gifts.subscriptionTypeNotValid">Tätä lahjaa ei voi käyttää tähän tilausvaihtoehtoon. Ota yhteyttä tilaussihteeriin.</message>
-	<message key="gifts.subscriptionNonExpiring">Lahjaa ei voitu lunastaa, koska sinulla on jo jatkuva tilaus tähän julkaisuun.</message>
-
 	<!-- Payments -->
 	<message key="payment.loginRequired">Voit maksaa vain sisäänkirjautuneena.</message>
 	<message key="payment.loginRequired.forArticle">Tähän kohteeseen pääsy edellyttää tilausta tai artikkelin ostoa. Vahvistaaksesi tilauksen, päästäksesi edelliseen tilaukseen tai ostaaksesi artikkelin sinun on kirjauduttava julkaisuun.</message>
@@ -887,14 +850,10 @@ Arvostelu on asteikolla 1-5 (5 = erinomainen).<br/>
 	<message key="payment.type.purchaseIssue">Osta numero -maksu</message>
 	<message key="payment.type.subscription">Tilausmaksu</message>
 	<message key="payment.type.donation">Lahjoitukset</message>
-	<message key="payment.type.gift">Lahja</message>
-	<message key="payment.type.gift.subscription">Tilaus</message>
 
 	<message key="payment.donation.makeDonation">Tee lahjoitus</message>
 
 	<message key="payment.submission.paySubmission">Maksa käsikirjoituksen lähetysmaksu</message>
-	<message key="payment.fastTrack.payFastTrack">Maksa saadaksesi nopeutetun arvioinnin</message>
-	<message key="payment.fastTrack.inFastTrack">Nopeutetussa arvioinnissa</message>
 	<message key="payment.publication.payPublication">Maksa, jotta voit julkaista</message>
 	<message key="payment.publication.publicationPaid">Julkaisumaksu maksettu</message>
 

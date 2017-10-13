@@ -267,7 +267,6 @@
 
 
 
-	<message key="plugins.categories.citationFormats.description">Citatieformaat plugins leveren de gebruikers verschillende formaten voor arikelcitaties.</message>
 
 	<message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems ondersteunt het <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) systeem om een permanent archief van het tijdschrift te verzekeren. LOCKSS is open source software, ontwikkeld door Stanford University Library, die bibliotheken in staat stelt om geselecteerde internet-tijdschriften te archiveren door die tijdschriften regelmatig  te onderzoeken op nieuwe inhoud en die dan te archiveren. Ieder archief wordt continue gevalideerd tegen archieven in andere bibliotheken. Verloren of beschadigd materiaal wordt uit de andere archieven hersteld.
 <br /><br />
@@ -411,7 +410,6 @@ Actief is het aantal reviews die momenteel in overweging of behandeling zijn.]]>
         <message key="reviewer.article.selectRecommendation">Kies een aanbeveling en stuur het review in om het prodes af te ronden. U moet een review invoeren of een bestand laden voor u een aanbeveling kiest.</message>
 	<message key="reviewer.article.mustSelectDecision">Geen aanbeveling geselecteerd. U moet een aanbeveling kiezen om in te kunnen sturen.</message>
 	<message key="reviewer.article.confirmDecision">Als u een beslissing hebt vastgelegd kunt u de review niet meer veranderen. Weet u zeker dat u door wilt gaan?</message>
-	<message key="reviewer.article.ensuringBlindReview">Een blinde review verzekeren</message>
 
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">Stuur naar tekstredactie</message>
@@ -629,8 +627,6 @@ Actief is het aantal reviews die momenteel in overweging of behandeling zijn.]]>
 	<message key="payment.donation.makeDonation">Doe een donatie</message>
 
 	<message key="payment.submission.paySubmission">Betaal inzendingskosten</message>
-	<message key="payment.fastTrack.payFastTrack">Betaal voor snelle beoordeling</message>
-	<message key="payment.fastTrack.inFastTrack">In snelle beoordeling</message>
 	<message key="payment.publication.payPublication">Betaal om te publiceren</message>
 	<message key="payment.publication.publicationPaid">Publicatiekosten betaald</message>
 
@@ -820,7 +816,7 @@ Validatie kan falen op zoek-url's die formulier-invoer eisen.]]></message>
 	<message key="submission.layout.publicGalleyId">Publieke proefdruk identiicatie</message>
 	<message key="submission.layout.galleyPublicIdentificationExists">Publieke proefdruk identificatie bestaat al.</message>
 	<message key="reviewer.article.enterReviewForm">Klik op het ikoon om het reviewformulier in te vullen</message>
-	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Gelieve de verplichte velden in te vullen</message>
+	<message key="reviewer.submission.reviewFormResponse.form.responseRequired">Gelieve de verplichte velden in te vullen</message>
 	<message key="common.homePageHeader.altText">Home-pagina kop</message>
 	<message key="common.journalHomepageImage.altText">Tijdschrift home-pagina afbeelding</message>
 	<message key="article.coverPage.altText">Omslagafbeelding</message>
@@ -936,52 +932,17 @@ Validatie kan falen op zoek-url's die formulier-invoer eisen.]]></message>
 	<message key="site.upgradeAvailable.manager"><![CDATA[Er is een nieuwe versie van OJS beschikbaar! U gebruikt momenteel OJS versie {$currentVersion}. De meest recente versie is OJS {$latestVersion}. Neem contact op met uw sitebeheerder ({$siteAdminName}, <a href="mailto:{$siteAdminEmail}">{$siteAdminEmail}</a>) om die te wijzen op de nieuwe versie. Meer informatie <a href="http://pkp.sfu.ca/ojs_download" target="_new">hier</a>.]]></message>
 	<message key="user.authorization.copyeditorAssignmentMissing">Geen toegang! U bent niet de tekstredacteur voor dit artikel.</message>
 	<message key="user.authorization.sectionAssignment">U probeert een artikel uit een andere sectie te benaderen</message>
-	<message key="gifts.noSubscriptions">Geen gift-abonnementen</message>
-	<message key="gifts.giftRedeemed">De gift is met succes ingewisseld</message>
-	<message key="gifts.noGiftToRedeem">Deze gift kan niet ingewisseld worden</message>
-	<message key="gifts.giftAlreadyRedeemed">Deze gift is al ingewisseld</message>
-	<message key="gifts.giftNotValid">Deze gift is niet geldig en kan niet ingewisseld worden.</message>
 	<message key="payment.loginRequired.forIssue">Een abonnement of kopen van het nummer is nodig om dit item te kunnen benaderen. Om uw abonnement  te verifiëren, een eerdere aankoop te benaderen of een nummer te kopen, moet u inloggen.</message>
 	<message key="payment.type.purchaseIssue">Prijs voor het kopen van een nummer</message>
-	<message key="payment.type.gift">Gift</message>
-	<message key="payment.type.gift.subscription">Abonnement</message>
 	<message key="installer.allowFileUploads"><![CDATA[Uw server staat momenteel het laden van bestanden toe: <strong>{$allowFileUploads}</strong>]]></message>
 	<message key="installer.maxFileUploadSize"><![CDATA[Uw server staat momenteel het laden toe van bestanden met een maximale grootte van: <strong>{$maxFileUploadSize}</strong>]]></message>
 	<message key="user.authorization.invalidCopyditorSubmission">Onjuiste tekstredacteur inzending of geen tekstredacteur inzending gevraagd!</message>
-	<message key="gifts.purchaseGiftSubscription">Schenk een abonnement</message>
-	<message key="gifts.giftSubscriptionsAvailable">U kunt ook een abonnement geven. Giften kunnen op ieder moment ingewisseld worden door de ontvanger en zijn een goede manier om dit tijdschrift te steunen.</message>
-	<message key="gifts.subscriptionTypeNotValid">De abonnementsoort voor deze gift is niet geldig. Neem contact op met de abonnementenbeheerder.</message>
 	<message key="navigation.categories">Categorieën</message>
 	<message key="navigation.categories.browse">Bladeren</message>
 	<message key="issue.fullIssue">Heel nummer</message>
 	<message key="issue.nonpdf.title">Nummer downloaden</message>
 	<message key="issue.viewIssue">Bekijk nummer</message>
 	<message key="site.noJournals">Er zijn geen tijdschriften beschikbaar</message>
-	<message key="gifts.buyer">Van</message>
-	<message key="gifts.buyerDescription">Van wie is deze gift?</message>
-	<message key="gifts.recipient">Aan</message>
-	<message key="gifts.recipientDescription">Voor wie is deze gift?</message>
-	<message key="gifts.thankYou">Dank U</message>
-	<message key="gifts.gift">Gift</message>
-	<message key="gifts.noteTitle">Titel</message>
-	<message key="gifts.note">Notitie bij de gift</message>
-	<message key="gifts.noteTitleRequired">Geef een titel voor uw persoonlijke boodschap.</message>
-	<message key="gifts.noteRequired">Geef een persoonlijke boodschap.</message>
-	<message key="gifts.myGifts">Min giften</message>
-	<message key="gifts.manageMyGifts">Beheer mijn giften</message>
-	<message key="gifts.redeemGift">Gift inwisselen</message>
-	<message key="gifts.status.notRedeemed">Beschikbaar</message>
-	<message key="gifts.status.redeemed">Ingewisseld</message>
-	<message key="gifts.status.redeemGift">Gift inwisselen</message>
-	<message key="gifts.subscriptions">Abonnementen</message>
-	<message key="gifts.thankYouMessage">De aankoop van uw gift is voltooid. U ontvangt een kopie van de e-mail aan de ontvanger zodra uw betaling verwerkt is.</message>
-	<message key="gifts.details">Gift details</message>
-	<message key="gifts.localeRequired">Kies een taal voor uw persoonlijke boodschap</message>
-	<message key="gifts.subscriptionNonExpiring">De gift is niet ingewisseld omdat u als een eeuwigdurend abonnement bij dit tijdschrift hebt.</message>
-	<message key="gifts.detailsDescription">Kies hieronder de gift en voeg een persoonlijke boodschap toe. Die wordt per e-mail verstuurd naar de begunstigde. U krijgt een kopie.</message>
-	<message key="gifts.subscriptionsDescription">Als u een gift-abonnement inwisselt vervangt dat uw bestaande abonnement (als u dat heeft). Abonnementen beginnen op de datum van inwisselen en is geldig voor de duur van het abonnementstype.</message>
-	<message key="gifts.purchaseGiftIndividualSubscription">Geef een abonnement</message>
-	<message key="gifts.subscriptionFormIntroduction">Gelieve het formulier hieronder in te vullen. De contactinformatie wordt met uw gift per e-mail naar de ontvanger gestuurd om ze van de gift op de hoogte te brengen. U krijgt een kopie van deze e-mail.</message>
 	<message key="editor.submissionEditing.notes"><![CDATA[<ol>
 	<![CDATA[<ol>
 	<li>Gemarkeerde items hebben de aandacht van een redacteur nodig. De markering is als volgt:

@@ -410,10 +410,10 @@ Aktive er hvor mange fagfellevurderinger som for øyeblikket er bestilt eller un
 	<message key="reviewer.article.uploadedFile">Opplastete filer</message>
 	<message key="reviewer.article.reviewersAnnotatedVersion">Versjon lastet opp av fagkonsulent</message>
  	<message key="reviewer.article.reviewersAnnotatedVersionDescription">(Hvis du vil skrive merknader til redaktøren direkte i manuskriptfilen, må du først lagre den på din egen maskin, og deretter bruke Finn/Last opp.)</message>
-        <message key="reviewer.article.schedule.request">Redaktørens bestilling</message>
-        <message key="reviewer.article.schedule.response">Ditt svar</message>
-        <message key="reviewer.article.schedule.submitted">Fagvurdering: innsendt</message>
-        <message key="reviewer.article.schedule.due">Fagvurdering: ventet-dato</message>
+	<message key="reviewer.article.schedule.request">Redaktørens bestilling</message>
+	<message key="reviewer.article.schedule.response">Ditt svar</message>
+	<message key="reviewer.article.schedule.submitted">Fagvurdering: innsendt</message>
+	<message key="reviewer.article.schedule.due">Fagvurdering: ventet-dato</message>
 	<message key="reviewer.article.decision.accept">aksepteres</message>
  	<message key="reviewer.article.decision.pendingRevisions">aksepteres, med forbehold om omarbeiding</message>
 	<message key="reviewer.article.decision.resubmitHere">send inn på nytt for ny fagvurdering</message>
@@ -421,13 +421,12 @@ Aktive er hvor mange fagfellevurderinger som for øyeblikket er bestilt eller un
 	<message key="reviewer.article.decision.decline">avvises</message>
 	<message key="reviewer.article.decision.seeComments">annet: se kommentarer</message>
 	<message key="reviewer.article.schedule">Arbeidsplan</message>
-        <message key="reviewer.article.submissionToBeReviewed">Manuskriptet som skal vurderes</message>
+	<message key="reviewer.article.submissionToBeReviewed">Manuskriptet som skal vurderes</message>
  	<message key="reviewer.article.reviewSchedule">Arbeidsplan for fagvurderingen</message>
-        <message key="reviewer.article.reviewSteps">Fagvurdering steg for steg</message>
-        <message key="reviewer.article.reviewerGuidelines">Instruks for fagkonsulenter</message>
+	<message key="reviewer.article.reviewSteps">Fagvurdering steg for steg</message>
+	<message key="reviewer.article.reviewerGuidelines">Instruks for fagkonsulenter</message>
 	<message key="reviewer.article.mustSelectDecision">Ingen anbefaling er valgt. Du må velge en anbefaling å sende inn.</message>
  	<message key="reviewer.article.confirmDecision">Så snart du har registrert beslutningen, kan du ikke lenger endre den. Er du sikker på at du vil fortsette?</message>
-	<message key="reviewer.article.ensuringBlindReview">Sikre anonym fagvurdering</message>
 
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">Fil til MR</message>
@@ -789,7 +788,7 @@ Valideringen kan for eksempel svikte på søkesteder som krever utfylling av skj
 	 *
 	-->
 	<message key="reviewer.article.enterReviewForm">Klikk på ikonet for å fylle ut vurderingsskjemaet.</message>
-	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Vær vennlig å fylle inn de påkrevde feltene.</message>
+	<message key="reviewer.submission.reviewFormResponse.form.responseRequired">Vær vennlig å fylle inn de påkrevde feltene.</message>
 	<message key="common.payment">Betaling</message>
 	<message key="common.payments">Betalinger</message>
 	<message key="common.confirmComplete">Er du sikker på at du vil registrere at du er ferdig med denne oppgaven? Hvis du gjør dette, kan du muligens ikke foreta endringer senere.</message>
@@ -826,7 +825,6 @@ Valideringen kan for eksempel svikte på søkesteder som krever utfylling av skj
 		<li>OJS greier ikke å modifisere registerfilen for lokalfiler, som vanligvis heter "registry/locales.xml".</li>
 	</ul>
 <p>Pakkene med oversatte lokalfiler kan lastes ned manuelt fra <a href="http://pkp.sfu.ca">PKP-nettstedet</a>.</p>]]></message>
-	<message key="plugins.categories.citationFormats.description">Siteringsformat-programutvidelser gir brukerne forskjellige formater for referanse til artiklene.</message>
 	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Forslag til <i>Creative Commons Copyright Notices</i> på engelsk</h3>
 <h4>1. Forslag til retningslinjer for tidsskrift som tilbyr <i>Open Access</i></h4>
 Authors who publish with this journal agree to the following terms:
@@ -889,8 +887,6 @@ Authors who publish with this journal agree to the following terms:
 	<message key="payment.type.donation">Donasjoner</message>
 	<message key="payment.donation.makeDonation">Gi en donasjon</message>
 	<message key="payment.submission.paySubmission">Betal innsendingsgebyr</message>
-	<message key="payment.fastTrack.payFastTrack">Betal for ekspress-fagvurdering</message>
-	<message key="payment.fastTrack.inFastTrack">til ekspress-fagvurdering</message>
 	<message key="payment.publication.payPublication">Betal publiseringsgebyr</message>
 	<message key="payment.publication.publicationPaid">Publiseringsgebyr er betalt</message>
 	<message key="payment.membership.buyMembership">Kjøp individuelt medlemskap</message>
@@ -1003,17 +999,6 @@ Authors who publish with this journal agree to the following terms:
 	<message key="issue.viewIssue">Vis nummeret</message>
 	<message key="issue.viewIssueDescription">Vis eller last ned hele nummeret</message>
 	<message key="site.noJournals">Det er ingen tidsskrift tilgjengelig.</message>
-	<message key="gifts.buyer">Fra</message>
-	<message key="gifts.buyerDescription">Hvem er denne gaven fra?</message>
-	<message key="gifts.recipient">Til</message>
-	<message key="gifts.recipientDescription">Hvem er denne gaven til?</message>
-	<message key="gifts.thankYou">Takk</message>
-	<message key="gifts.details">Gavedetaljer</message>
-	<message key="gifts.gift">Gave</message>
-	<message key="gifts.noteTitle">Tittel</message>
-	<message key="gifts.myGifts">Mine gaver</message>
-	<message key="gifts.status.notRedeemed">Tilgjengelig</message>
-	<message key="payment.type.gift">Gave</message>
 	<message key="payment.authorFees">Forfatteravgifter</message>
 	<message key="user.authorization.sectionAssignment">Du forsøker å få tilgang til en artikkel som ikke er en del av din seksjon.</message>
 	<message key="user.subscriptions.statusInformation">Aktive og utløpte abonnementer vises nedenfor sammen med sine utløpsdatoer. I tillegg kan følgende statusinformasjoner også vises med hvert abonnement.</message>

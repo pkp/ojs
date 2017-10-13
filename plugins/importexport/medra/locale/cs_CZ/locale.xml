@@ -7,8 +7,8 @@
   * Copyright (c) 2013-2017 Simon Fraser University
   * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Localization strings
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Czech_(cs_CZ)
+  * Localization strings.
   -->
  
 <locale name="cs_CZ" full_name="Čeština">
@@ -36,9 +36,14 @@
 	<message key="plugins.importexport.medra.settings.form.exportIssuesAs"><![CDATA[Zvolte, zda chcete exportovat čísla jako <a href="http://www.medra.org/en/metadata_td.htm" target="_blank">'works' nebo 'manifestations'</a>.]]></message>
 	<message key="plugins.importexport.medra.settings.form.work">work</message>	
 	<message key="plugins.importexport.medra.settings.form.manifestation">manifestation</message>
+	<message key="plugins.importexport.medra.settings.form.exportIssuesAs.label">Exportovat čísla jako</message>
+	<message key="plugins.importexport.medra.settings.form.automaticRegistration.description">OJS bude registrovat přiřazené DOI automaticky do mEDRA. Vezměte prosím na vědomí, že to může trvat krátkou dobu po zpracování publikace. Můžete zkontrolovat všechny nezaregistrované DOI.</message>
+	<message key="plugins.importexport.medra.settings.form.testMode.description">Pro registraci DOI použijte testovací rozhraní API (testovací prostředí) mEDRA. Nezapomeňte tuto možnost odstranit před výrobní fází.</message>
 
 	<message key="plugins.importexport.medra.workOrProduct"><![CDATA[NB: DOI přiřazené článkům budou exportovány službě mEDRA jako <a href="http://www.medra.org/en/metadata_td.htm" target="_blank">'works'</a>. DOIs přiřazené sazebnicím budou exportovány jako <a href="http://www.medra.org/en/metadata_td.htm" target="_blank">'manifestations'</a>.]]></message>
-		
+
+	<message key="plugins.importexport.medra.senderTask.name">Úloha automatické registrace mEDRA</message>
+
 	<message key="plugins.importexport.medra.cliUsage"><![CDATA[Použití:
 {$scriptName} {$pluginName} export [xmlFileName] [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...
 {$scriptName} {$pluginName} register [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...

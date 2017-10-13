@@ -14,5 +14,4 @@
  
 <locale name="eu_ES" full_name="Euskara">
 	<message key="default.journalSettings.purchaseIssueFee">Erosi ale bat</message>
-	<message key="default.journalSettings.purchaseIssueFeeDescription">Kuota hau ordaintzeak ale hau bistaratzen, kargatzen eta inprimatzen utziko dizu.</message>
 </locale>

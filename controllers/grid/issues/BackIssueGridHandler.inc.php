@@ -34,7 +34,7 @@ class BackIssueGridHandler extends IssueGridHandler {
 	/**
 	 * @copydoc PKPHandler::initialize()
 	 */
-	function initialize($request, $args) {
+	function initialize($request, $args = null) {
 		parent::initialize($request, $args);
 
 		// Basic grid configuration.
@@ -93,6 +93,14 @@ class BackIssueGridHandler extends IssueGridHandler {
 		$journal = $request->getJournal();
 		$issueDao = DAORegistry::getDAO('IssueDAO');
 		return $issueDao->getPublishedIssues($journal->getId());
+	}
+
+	/**
+	 * Get the js handler for this component.
+	 * @return string
+	 */
+	public function getJSHandler() {
+		return '$.pkp.controllers.grid.issues.BackIssueGridHandler';
 	}
 }
 

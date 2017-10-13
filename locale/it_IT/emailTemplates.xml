@@ -801,52 +801,6 @@ Submission URL: {$submissionUrl}<br />
 {$editorialContactSignature}]]></body>
 		<description>Questo messaggio viene inviato automaticamente all'editor quando un autore carica una versione revisionata di un articolo</description>
 	</email_text>
-	<email_text key="GIFT_USER_LOGIN">
-		<subject>Utilizza il tuo regalo: dettagli di accesso</subject>
-		<body><![CDATA[Gentile {$recipientFirstName},<br />
-<br />
-{$buyerFullName} ha un regalo per te che riguarda {$giftJournalName}:<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-Per utilizzare il tuo regalo, autenticati al sito {$giftUrl}<br />
-<br />
-Il tuo username username: {$username}<br />
-<br />
-Speriamo che tu abbia gradito il regalo!]]></body>
-		<description>Questo messaggio comunica a colui che ha ricevuto un regalo i dettagli del suo account</description>
-	</email_text>
-	<email_text key="GIFT_USER_REGISTER">
-		<subject>Utilizza il tuo regalo: dettagli di accesso</subject>
-		<body><![CDATA[Gentile {$recipientFirstName},<br />
-<br />
-{$buyerFullName} ti ha fatto un regalo che riguarda {$giftJournalName}:<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-Per utilizzare il regalo, autenticati al sito {$giftUrl}<br />
-<br />
-Username: {$username}<br />
-Password: {$password}]]></body>
-		<description>Questo messaggio informa il destinatario di un regalo dei dettagli del suo nuovo account.</description>
-	</email_text>
-	<email_text key="GIFT_AVAILABLE">
-		<subject>{$giftNoteTitle}</subject>
-		<body><![CDATA[Gentile {$recipientFirstName},<br />
-<br />
-{$buyerFullName} ha un regalo per te che riguarda {$giftJournalName}:<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-{$giftNote}<br />
-<br />
-<br />
-Riceverai un ulteriore messaggio con i dettagli per utilizzare il tuo regalo.]]></body>
-		<description>Questo messaggio informa il destinatario che ha ricevuto un regalo e come può utilizzarlo.</description>
-	</email_text>
 	<email_text key="REVIEW_REQUEST_SUBSEQUENT">
 		<subject>Article Review Request</subject>
 		<body><![CDATA[Gentile {$reviewerName}:<br />

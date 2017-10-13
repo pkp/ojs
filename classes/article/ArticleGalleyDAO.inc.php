@@ -485,7 +485,7 @@ class ArticleGalleyDAO extends RepresentationDAO implements PKPPubIdPluginDAO {
 		$result = $this->retrieveRange(
 				'SELECT	sf.*, g.*
 			FROM	submission_galleys g
-				JOIN submissions s ON (s.submission_id = g.submission_id)
+				JOIN submissions s ON (s.submission_id = g.submission_id AND s.status <> ' . STATUS_DECLINED .')
 				LEFT JOIN published_submissions ps ON (ps.submission_id = g.submission_id)
 				JOIN issues i ON (ps.issue_id = i.issue_id)
 				LEFT JOIN submission_files sf ON (g.file_id = sf.file_id)
@@ -504,8 +504,8 @@ class ArticleGalleyDAO extends RepresentationDAO implements PKPPubIdPluginDAO {
 				. (($pubIdSettingName != null && $pubIdSettingValue != null && $pubIdSettingValue != EXPORT_STATUS_NOT_DEPOSITED)?' AND gss.setting_value = ?':'')
 				. (($pubIdSettingName != null && is_null($pubIdSettingValue))?' AND (gss.setting_value IS NULL OR gss.setting_value = \'\')':'') .'
 				ORDER BY ps.date_published DESC, s.submission_id DESC, g.galley_id DESC',
-				$params,
-				$rangeInfo
+			$params,
+			$rangeInfo
 		);
 
 		return new DAOResultFactory($result, $this, '_fromRow');

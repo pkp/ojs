@@ -23,10 +23,6 @@
 		<query>DELETE FROM notifications WHERE type=16777235</query><!-- NOTIFICATION_TYPE_EDITOR_DECISION_COMMENT WARNING: This type ID conflicts with others! -->
 		<query>DELETE FROM notifications WHERE type=268435476</query><!-- NOTIFICATION_TYPE_USER_COMMENT WARNING: This type ID conflicts with others! -->
 	</sql>
-	<!-- Bug #6324: Issue Access Status = 0 -->
-	<sql>
-		<query>UPDATE issues SET access_status=1 WHERE access_status=0</query>
-	</sql>
 	<!-- Bug #6968: Check review_type constant behavior. -->
 	<sql>
 		<query>UPDATE review_assignments SET stage_id=1 WHERE stage_id=0</query>
@@ -93,6 +89,18 @@
 		<query driver="mysqli">UPDATE submission_files sf, genres g, submissions s SET sf.genre_id = g.genre_id WHERE g.entry_key = 'SUBMISSION' AND g.context_id = s.context_id AND s.submission_id = sf.submission_id</query>
 		<query driver="postgres7">UPDATE submission_files SET genre_id = g.genre_id FROM genres g, submissions s WHERE g.entry_key = 'SUBMISSION' AND g.context_id = s.context_id AND s.submission_id = submission_files.submission_id</query>
 	</sql>
+	<!-- issue #2758: the genre_id for HTML galley CSS files -->
+	<sql>
+		<query driver="mysql">UPDATE submission_files sf, genres g, submissions s, article_galleys_migration agm SET sf.genre_id = g.genre_id WHERE g.entry_key = 'STYLE' AND g.context_id = s.context_id AND s.submission_id = sf.submission_id AND sf.file_id = agm.style_file_id</query>
+		<query driver="mysqli">UPDATE submission_files sf, genres g, submissions s, article_galleys_migration agm SET sf.genre_id = g.genre_id WHERE g.entry_key = 'STYLE' AND g.context_id = s.context_id AND s.submission_id = sf.submission_id AND sf.file_id = agm.style_file_id</query>
+		<query driver="postgres7">UPDATE submission_files SET genre_id = g.genre_id FROM genres g, submissions s, article_galleys_migration agm WHERE g.entry_key = 'STYLE' AND g.context_id = s.context_id AND s.submission_id = submission_files.submission_id AND sf.file_id = agm.style_file_id</query>
+	</sql>
+	<!-- issue #2758: set assoc_type = 515 (ASSOC_TYPE_SUBMISSION_FILE) and the appropriate assoc_id for HTML galley CSS files -->
+	<sql>
+		<query driver="mysql">UPDATE submission_files sf, article_galleys_migration agm SET sf.assoc_type = 515, sf.assoc_id = agm.file_id WHERE sf.file_id = agm.style_file_id</query>
+		<query driver="mysqli">UPDATE submission_files sf, article_galleys_migration agm SET sf.assoc_type = 515, sf.assoc_id = agm.file_id WHERE sf.file_id = agm.style_file_id</query>
+		<query driver="postgres7">UPDATE submission_files SET assoc_type = 515, assoc_id = agm.file_id FROM article_galleys_migration agm WHERE sf.file_id = agm.style_file_id</query>
+	</sql>
 	<!-- Bug #7745: Change no_NO to nb_NO -->
 	<sql>
 		<query>UPDATE announcement_type_settings SET locale='nb_NO' WHERE locale='no_NO'</query>
@@ -102,7 +110,6 @@
 		<query>UPDATE email_templates_default_data SET locale='nb_NO' WHERE locale='no_NO'</query>
 		<query>UPDATE email_templates_data SET locale='nb_NO' WHERE locale='no_NO'</query>
 		<query>UPDATE controlled_vocab_entry_settings SET locale='nb_NO' WHERE locale='no_NO'</query>
-		<query>UPDATE gifts SET locale='nb_NO' WHERE locale='no_NO'</query>
 		<query>UPDATE citation_settings SET locale='nb_NO' WHERE locale='no_NO'</query>
 		<query>UPDATE metadata_description_settings SET locale='nb_NO' WHERE locale='no_NO'</query>
 		<query>UPDATE filter_settings SET locale='nb_NO' WHERE locale='no_NO'</query>
@@ -207,6 +214,7 @@
 		<query driver="mysqli">UPDATE submission_files sf, articles_migration am SET sf.file_stage=7 WHERE am.editor_file_id=sf.file_id</query><!-- SUBMISSION_FILE_FAIR_COPY -->
 		<query driver="postgres7">UPDATE submission_files SET file_stage=7 FROM articles_migration am WHERE am.editor_file_id=submission_files.file_id</query><!-- SUBMISSION_FILE_FAIR_COPY -->
 		<query>UPDATE submission_files SET file_stage=10 WHERE file_id IN (SELECT file_id FROM submission_galleys)</query><!-- SUBMISSION_FILE_PROOF -->
+		<query>UPDATE submission_files SET file_stage=17 WHERE file_id IN (SELECT style_file_id FROM article_galleys_migration)</query><!-- SUBMISSION_FILE_DEPENDENT -->
 	</sql>
 	<sql><!-- #1838 Automatic emails for open access/subscription triggered post-install -->
 		<query>DELETE FROM scheduled_tasks WHERE class_name = 'classes.tasks.OpenAccessNotification'</query>

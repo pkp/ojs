@@ -52,7 +52,7 @@
 	<message key="plugins.pubIds.doi.editor.doiObjectTypeGalley">composição</message>
 	<message key="plugins.pubIds.doi.editor.doiSuffixCustomIdentifierNotUnique">O sufixo DOI informado já está em uso por outro item publicado. Informe um sufixo DOI único para cada item.</message>
 	<message key="plugins.pubIds.doi.description">Este plugin permite a atribuição dos Identificadores Digitais de Objetos a edições, artigos e composições finais no OJS.</message>
-	<message key="plugins.pubIds.doi.readerDisplayName">DOI:</message>
+	<message key="plugins.pubIds.doi.readerDisplayName">DOI</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiReassign.description">Se você alterar sua configuração DOI, os DOIs que já foram atribuídas não serão afetadas. Uma vez que a configuração DOI é salva, use este botão para limpar todas as DOIs existentes para que as novas configurações tenham efeito sobre os objetos existentes. ATENÇÃO, não utilize esse botão para atribuir DOIs a artigos com DOIs já depositados (O mesmo documento não pode ter dois DOI)</message>
 	<message key="plugins.pubIds.doi.editor.doiObjectTypeRepresentation">composição final</message>
 	<message key="plugins.pubIds.doi.editor.customSuffixMissing">O DOI não pode ser atribuído porque o sufixo personalizado está faltando.</message>

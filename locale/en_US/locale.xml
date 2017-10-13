@@ -36,7 +36,7 @@
 
 
 	<message key="reviewer.article.enterReviewForm">Click on icon to fill in the review form.</message>
-	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Please fill in required fields.</message>
+	<message key="reviewer.submission.reviewFormResponse.form.responseRequired">Please fill in required fields.</message>
 
 	<!-- review forms end -->
 
@@ -366,7 +366,6 @@
 	<message key="plugins.categories.viewableFiles">Article Galley Plugins</message>
 	<message key="plugins.categories.viewableFiles.description">Article Galley Plugins add support for displaying different document types as article galleys.</message>
 	<message key="plugins.categories.auth.description">Authorization Plugins allow Open Journal Systems to delegate user authentication tasks to other systems, such as LDAP servers.</message>
-	<message key="plugins.categories.citationFormats.description">Citation format plugins provide users with various formats in which to access article citations.</message>
 	<message key="plugins.categories.generic.description">Generic plugins are used to extend Open Journal Systems in a variety of ways that are not supported by the other plugin categories.</message>
 
 	<message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems supports the <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) system to ensure a secure and permanent archive for the journal. LOCKSS is open source software developed at Stanford University Library that enables libraries to preserve selected web journals by regularly polling registered journal websites for newly published content and archiving it. Each archive is continually validated against other library caches, and if content is found to be corrupted or lost, the other caches or the journal is used to restore it.
@@ -574,7 +573,6 @@ Active is how many reviews are currently being considered or underway.]]></messa
 	<message key="reviewer.article.selectRecommendation.byEditor">Set or adjust the reviewer recommendation.</message>
 	<message key="reviewer.article.mustSelectDecision">No recommendation was selected. You must choose a recommendation to submit.</message>
 	<message key="reviewer.article.confirmDecision">Once you have recorded a decision you will no longer be able to make changes to this review. Are you sure you wish to continue?</message>
-	<message key="reviewer.article.ensuringBlindReview">Ensuring a Blind Review</message>
 
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">File To C/E</message>
@@ -828,41 +826,6 @@ Active is how many reviews are currently being considered or underway.]]></messa
 	<message key="donations.thankYou">Thank You</message>
 	<message key="donations.thankYouMessage">Thank you for making a contribution.  Your contribution is much appreciated.</message>
 
-	<!-- Gifts -->
-	<message key="gifts.buyer">From</message>
-	<message key="gifts.buyerDescription">Who is this gift from?</message>
-	<message key="gifts.recipient">To</message>
-	<message key="gifts.recipientDescription">Who is this gift to?</message>
-	<message key="gifts.thankYou">Thank You</message>
-	<message key="gifts.thankYouMessage">Your gift purchase has been completed. You will receive a copy of the gift email sent to the recipient once your payment has been processed.</message>
-	<message key="gifts.purchaseGiftIndividualSubscription">Gift Subscription</message>
-	<message key="gifts.subscriptionFormIntroduction">Please fill out the form below. The provided contact information, along with your gift note, will be used to email the recipient and inform them of their new gift subscription (you will also receive a copy of this email).</message>
-	<message key="gifts.details">Gift Details</message>
-	<message key="gifts.detailsDescription">Please select the gift below and include a personalized message that will be emailed to the recipient (you will receive a copy of this email).</message>
-	<message key="gifts.gift">Gift</message>
-	<message key="gifts.noteTitle">Title</message>
-	<message key="gifts.note">Gift Note</message>
-	<message key="gifts.noteTitleRequired">Please provide a title for your personalized message.</message>
-	<message key="gifts.noteRequired">Please provide a personalized message.</message>
-	<message key="gifts.localeRequired">Please select a language for your personalized message.</message>
-	<message key="gifts.myGifts">My Gifts</message>
-	<message key="gifts.manageMyGifts">Manage My Gifts</message>
-	<message key="gifts.redeemGift">Redeem Gift</message>
-	<message key="gifts.status.notRedeemed">Available</message>
-	<message key="gifts.status.redeemed">Redeemed</message>
-	<message key="gifts.status.redeemGift">Redeem Gift</message>
-	<message key="gifts.subscriptions">Subscriptions</message>
-	<message key="gifts.subscriptionsDescription">A gift subscription redeemed here will replace your existing subscription (if you have one). Subscriptions will begin on the redemption date and will be valid for the duration of the subscription type.</message>
-	<message key="gifts.purchaseGiftSubscription">Give a gift subscription</message>
-	<message key="gifts.giftSubscriptionsAvailable">Gift subscriptions are also available. Gift subscriptions can be redeemed at any time by the recipient and are a great way to support this journal.</message>
-	<message key="gifts.noSubscriptions">No gift subscriptions</message>
-	<message key="gifts.giftRedeemed">The gift was successfully redeemed.</message>
-	<message key="gifts.noGiftToRedeem">This gift is not available to be redeemed.</message>
-	<message key="gifts.giftAlreadyRedeemed">This gift has already been redeemed.</message>
-	<message key="gifts.giftNotValid">This gift is not valid and could not be redeemed.</message>
-	<message key="gifts.subscriptionTypeNotValid">The subscription type for this gift is not valid. Please contact the subscription manager.</message>
-	<message key="gifts.subscriptionNonExpiring">The gift was not redeemed since you already have a non-expiring subscription with this journal.</message>
-
 	<!-- Payments -->
 	<message key="payment.loginRequired">You must be logged in to make a payment.</message>
 	<message key="payment.loginRequired.forArticle">Subscription or article purchase required to access item. To verify subscription, access previous purchase, or purchase article, log in to journal.</message>
@@ -885,14 +848,10 @@ Active is how many reviews are currently being considered or underway.]]></messa
 	<message key="payment.type.purchaseIssue">Purchase Issue Fee</message>
 	<message key="payment.type.subscription">Subscription Fee</message>
 	<message key="payment.type.donation">Donations</message>
-	<message key="payment.type.gift">Gift</message>
-	<message key="payment.type.gift.subscription">Subscription</message>
 
 	<message key="payment.donation.makeDonation">Make a donation</message>
 
 	<message key="payment.submission.paySubmission">Pay Submission Fee</message>
-	<message key="payment.fastTrack.payFastTrack">Pay to FastTrack</message>
-	<message key="payment.fastTrack.inFastTrack">in FastTrack</message>
 	<message key="payment.publication.payPublication">Pay to Publish</message>
 	<message key="payment.publication.publicationPaid">Publication Fee Paid</message>
 
@@ -999,6 +958,7 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="log.review.reviewFileByProxy">The Editor, {$userName}, has uploaded a review file for round {$round} of submission {$submissionId} on behalf of the reviewer, {$reviewerName}.</message>
 	<message key="log.review.reviewerFile">A reviewer file has been uploaded.</message>
 	<message key="log.editor.decision">An editor decision ({$decision}) for article {$submissionId} was recorded by {$editorName}.</message>
+	<message key="log.editor.recommendation">An editor recommendation ({$decision}) for article {$submissionId} was recorded by {$editorName}.</message>
 
 
 	<message key="log.copyedit.initiate">Copyediting on submission {$submissionId} has been commenced by {$copyeditorName}.</message>
@@ -1096,8 +1056,9 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<message key="notification.type.userComment">A reader has made a comment on "{$title}"</message>
 	<message key="notification.savedIssueMetadata">Issue publication metadata saved.</message>
 	<message key="notification.type.editorAssignmentTask">A new article has been submitted to which an editor needs to be assigned.</message>
-	<message key="notification.type.assignProductionUser">Assign a user to create galleys using the Add link in the Participants list.</message>
+	<message key="notification.type.assignProductionUser">Assign a user to create galleys using the Assign link in the Participants list.</message>
 	<message key="notification.type.awaitingRepresentations">Awaiting Galleys.</message>
+	<message key="notification.type.publicationScheduled">This submission has been scheduled for publication.</message>
 
 	<!--
 	 *
@@ -1140,4 +1101,5 @@ Validation may fail on search URLs that require posted form data.]]></message>
 
 	<message key="editor.issues.backIssues">Back Issues</message>
 	<message key="editor.issues.futureIssues">Future Issues</message>
+	<message key="navigation.subscriptions">Subscriptions</message>
 </locale>

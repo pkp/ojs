@@ -189,22 +189,6 @@ class Article extends Submission {
 	}
 
 	/**
-	 * get expedited
-	 * @return boolean
-	 */
-	function getFastTracked() {
-		return $this->getData('fastTracked');
-	}
-
-	/**
-	 * set fastTracked
-	 * @param $fastTracked boolean
-	 */
-	function setFastTracked($fastTracked) {
-		return $this->setData('fastTracked',$fastTracked);
-	}
-
-	/**
 	 * Get the localized cover page server-side file name
 	 * @return string
 	 */

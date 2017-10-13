@@ -201,7 +201,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 		// Public identifiers
 		$pubIdPlugins = (array) PluginRegistry::loadCategory('pubIds', true, $journal->getId());
 		foreach ($pubIdPlugins as $pubIdPlugin) {
-			if ($pubIssueId = $issue->getStoredPubId($pubIdPlugin->getPubIdType())) {
+			if ($issue && $pubIssueId = $issue->getStoredPubId($pubIdPlugin->getPubIdType())) {
 				$dc11Description->addStatement('dc:source', $pubIssueId, METADATA_DESCRIPTION_UNKNOWN_LOCALE);
 				unset($pubIssueId);
 			}

@@ -150,21 +150,10 @@ De paragraaf die begint met  "Dit laatste onderwerp..." is niet ingesprongen.</p
 	<message key="default.journalSettings.lockssLicense"><![CDATA[Dit tijdschrift gebruikt het LOCKSS systeem om een gedistribueerd archief te maken tussen de deelnemende bibliotheken waarmee deze bibliotheken een permanent archief van het tijdschrift maken ten behoeve van bescherming en herstel. <a href="http://www.lockss.org/">Meer...</a>]]></message>
 
 	<!-- Default settings for payment items. -->
-	<message key="default.journalSettings.submissionFee">Artikel inzending</message>
-	<message key="default.journalSettings.submissionFeeDescription">Auteurs zijn verplicht om een inzendingskosten te betalen als onderdeel van de inzendingsprocedure om bij te dragen aan de kosten voor review.</message>
-	<message key="default.journalSettings.fastTrackFee">Snelle review</message>
-	<message key="default.journalSettings.fastTrackFeeDescription">Met de betaling van dit bedrag wordt gegarandeerd dat de review, beslissing van de redactie en berichtgeving over dit maniscript binnen 4 weken zal plaatsvinden.</message>
 	<message key="default.journalSettings.publicationFee">Artikelpublicatie</message>
-	<message key="default.journalSettings.publicationFeeDescription">Als dit artikel geaccepteerd wordt voor publicatie, vragen we u om een bijdrage om de publicatiekosten te helpen dekken.</message>
-	<message key="default.journalSettings.waiverPolicy">Als u niet de middelen heeft om dit bedrag te betalen, kunt u om kwijtschelding krijgen. We willen niet dat de kosten publicatie van geschikt werk in de weg staan.</message>
 	<message key="default.journalSettings.purchaseArticleFee">Koop artikel</message>
-	<message key="default.journalSettings.purchaseArticleFeeDescription">De betaling van dit bedrag stelt u in staat om dit artikel te bekijken, downloaden en af te drukken.</message>
 	<message key="default.journalSettings.membershipFee">Lidmaatschap van de organisatie</message>
-	<message key="default.journalSettings.membershipFeeDescription">De betaling van dit bedrag maakt u voor één jaar lid van deze organisatie en geeft u vrije toegang tot het tijdschrift.</message>
-	<message key="default.journalSettings.donationFee">Donaties aan het tijdschrift</message>
-	<message key="default.journalSettings.donationFeeDescription">Donaties van iedere omvang worden onder dank aanvaard en verschaffen de redactie middelen om een tijdschrift van de hoogst mogelijke kwaliteit aan de lezers aan te blijven bieden.</message>
 	<message key="default.journalSettings.purchaseIssueFee">Koop issue</message>
-	<message key="default.journalSettings.purchaseIssueFeeDescription">Door deze kosten te betalen kunt u dit issue bekijken, downloaden en afdrukken.</message>
 	<message key="default.journalSettings.emailHeader">Dit bericht wordt u toegezonden namens {$journalName}.
 ________________________________________________________________________</message>
 </locale>

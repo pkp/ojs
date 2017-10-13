@@ -40,9 +40,7 @@
 	<message key="manager.payment.notFound">Non trouvé</message>
 	<message key="manager.payment.options">Options</message>
 	<message key="manager.payment.options.acceptSubscriptionPayments">Cela activera l'application des paiements d'abonnements où les types, les frais et les utilisateurs sont gérés par le responsable des abonnements.</message>
-	<message key="manager.payment.options.donationFee">Dons à la revue</message>
 	<message key="manager.payment.options.enablePayments">Cliquez ici pour activer le module de Paiements. Vous devez remplir le formulaire ci-dessous pour configurer les paramètres de paiements. Veuillez noter que les utilisateurs doivent se connecter pour effectuer leurs paiements.</message>
-	<message key="manager.payment.options.fastTrackFee">Évaluation accélérée</message>
 	<message key="manager.payment.options.fee">Frais</message>
 	<message key="manager.payment.options.feeDescription">Description des frais</message>
 	<message key="manager.payment.options.feeName">Nom des frais</message>
@@ -50,9 +48,7 @@
 	<message key="manager.payment.options.onlypdf">Limiter l'accès suniquement aux articles en format PDF</message>
 	<message key="manager.payment.options.publicationFee">Publication d'article</message>
 	<message key="manager.payment.options.purchaseArticleFee">Acheter un article</message>
-	<message key="manager.payment.options.submissionFee">Soumission d'article</message>
 	<message key="manager.payment.options.text">Description de la méthode de paiement</message>
-	<message key="manager.payment.options.waiverPolicy">Politique d'exemption</message>
 	<message key="manager.payment.paymentId">ID du paiement</message>
 	<message key="manager.payment.paymentMethod">Mode de paiement</message>
 	<message key="manager.payment.paymentMethod.description">Vous pouvez configurer n'importe quel des plugiciels de mode de paiement suivants à partir de cet écran.</message>
@@ -344,7 +340,6 @@
 	<message key="manager.subscriptionPolicies.subscriptionContact">Responsable des abonnements</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactDescription">Le contact indiqué sous Abonnements dans À propos de la revue.</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactEmailValid">Veuillez saisir un courriel valide.</message>
-	<message key="manager.subscriptionPolicies.subscriptionPoliciesSaved">Votre politique d'abonnement a été mise à jour.</message>
 	<message key="manager.subscriptions">Abonnements</message>
 	<message key="manager.subscriptions.confirmDelete">Êtes-vous certain de vouloir supprimer cet abonnement?</message>
 	<message key="manager.subscriptions.create">Créer un nouvel abonnement</message>
@@ -482,9 +477,6 @@
 	<message key="manager.subscriptionTypes.form.options">Options</message>
 	<message key="manager.language.submissions">Soumissions</message>
 	<message key="manager.setup.addNavItem">Ajouter un élément</message>
-	<message key="manager.payment.giftFees">Tarif des formules cadeau</message>
-	<message key="manager.payment.giftFeesDescription">Un lien vers les abonnements en cadeau apparaîtra sur la page des abonnements dans À propos de la revue et dans la barre latérale des abonnements.</message>
-	<message key="manager.payment.options.acceptGiftSubscriptionPayments">Cela activera le règlement des abonnements en cadeau, permettant aux lecteurs de la revue d'acheter des abonnements en cadeau pour d'autres lecteurs.</message>
 	<message key="manager.payment.options.purchaseIssueFee">Acheter un numéro</message>
 	<message key="manager.sections.confirmDelete">Êtes-vous sûr de vouloir définitivement supprimer cette section?</message>
 	<message key="manager.sections.alertDelete">Pour supprimer cette section, déplacez les articles qui la composent dans d'autres sections.</message>

@@ -33,10 +33,10 @@
 	<message key="navigation.categories">الفئات</message>
 	<message key="navigation.categories.browse">تصفح</message>
 
-	
-	
+
+
 	<message key="reviewer.article.enterReviewForm">أنقر الإيقونة لملء نموذج التحكيم</message>
-	<message key="reviewer.article.reviewFormResponse.form.responseRequired">لطفاً، عليك بإملاء الحقول المطلوبة</message>
+	<message key="reviewer.submission.reviewFormResponse.form.responseRequired">لطفاً، عليك بإملاء الحقول المطلوبة</message>
 
 	<!-- review forms end -->
 
@@ -137,7 +137,7 @@
 	<message key="article.fontSize.medium.altText">متوسط</message>
 	<message key="article.fontSize.large.altText">كبير</message>
 	<message key="article.return">العودة إلى تفاصيل المؤلَّف</message>
-	
+
 	<!-- Submission Tracking - Common -->
 	<message key="submission.submissionEditing">تحرير طلب النشر</message>
 	<message key="submission.changeSection">حول إلى</message>
@@ -208,7 +208,7 @@
 	<message key="user.noRoles.submitArticleRegClosed">قدم مؤلَّفاً: تسجيل المؤلف معطل حالياً</message>
 	<message key="user.noRoles.regReviewer">سجل بصفة محكم</message>
 	<message key="user.noRoles.regReviewerClosed">التسجيل بصفة محكم: تسجيل المحكم معطل حالياً</message>
-    
+
 	<!-- Roles -->
 	<message key="user.role.manager">رئيس التحرير</message>
 	<message key="user.role.sectionEditor">محرر القسم</message>
@@ -218,7 +218,7 @@
 	<message key="user.role.subscriptionManagers">مدراء الاشتراكات</message>
 	<message key="user.role.journalAssistant">مساعد المجلة</message>
 	<message key="user.role.journalAssistants">مساعدو المجلة</message>
-	
+
 	<!-- Common Issue Terms -->
 	<message key="issue.issue">إصدار</message>
 	<message key="issue.issues">إصدارات</message>
@@ -335,7 +335,7 @@
 	<message key="search.results.orderDir.asc">تصاعدياً</message>
 	<message key="search.results.orderDir.desc">تنازلياً</message>
 	<message key="search.results.similarDocuments">ملفات مشابهة</message>
-	
+
 	<message key="admin.auth.defaultSourceDescription"><![CDATA[<p>تحديد مصدر مصادقة إفتراضي مغاير لنظام المجلات المفتوحة له التبعات الآتية:</p>
 	<ul>
 		<li>لو حاول مستخدم ما تسجيل حساب جديد في هذا الموقع باسم دخول مسجل سلفاً في مصدر المصادقة (لكنه غير معروف في قاعدة بيانات نظام المجلات المفتوحة)، فإن ذلك التسجيل سيكون ممكناً فقط عندما تكون كلمة المرور صحيحة في ذلك المصدر الخارجي أيضاً.</li>
@@ -366,11 +366,10 @@
 	<message key="plugins.categories.viewableFiles">البرامج الإضافية للوح الطباعي</message>
 	<message key="plugins.categories.viewableFiles.description">البرامج الإضافية للوح الطباعي تقدم الدعم اللازم لعرض أنواع مختلفة من الملفات التي يمكن لها أن تكون ألواحاً طباعية للمؤلفات.</message>
 	<message key="plugins.categories.auth.description">إضافات المصادقة تسمح لنظام المجلات المفتوحة بتفويض مهام المصادقة إلى أنظمة أخرى، مثل: ملقمات LDAP</message>
-	<message key="plugins.categories.citationFormats.description">إضافات تنسيق الإقتباس تتيح للمستخدمين أنماطاً متعددة من الوصول إلى اقتباسات المؤلَّفات العلمية</message>
 	<message key="plugins.categories.generic.description">الإضافات العامة تستعمل لتعزيز نظام المجلات المفتوحة في مجالات شتى غير مدعومة ضمن فئات الإضافات الأخرى</message>
 
 	<message key="manager.setup.lockssDescription"><![CDATA[إن نظام المجلات المفتوحة يدعم شبكات <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> Lots of Copies Keep Stuff Safe لضمان حفظ آمن ودائمي لمحتويات المجلة. إن أنظمة LOCKSS هي برامجيات مفتوحة المصدر مطورة في مكتبة جامعة ستانفورد وهو يمكن المكتبات من حفظ مجلات منتخبة من الإنترنت عبر القيام دورياً بتنزيل محتويات هذه المجلات المسجلة في النظام وإضافتها إلى الأرشيف. يتم بشكل مستمر مقارنة هذا الأرشيف مع مخزونات المجلة الأخرى، وإذا تم العثور على أي محتوى مفقود أو تالف، يقوم النظام تلقائياً بتعويضه من مخزونه الإحتياطي.
-<br /><br />		
+<br /><br />
 إن إعداد نظام LOCKSS ليقدم الدعم لنظام المجلات المفتوحة لا يستلزم أن يحدث حتى تبدأ المجلة بإصدار أعدادها بشكل نهائي. عند هذه النقطة اتبع الخطوات الآتية:]]>
 </message>
 	<message key="manager.setup.clockssDescription"><![CDATA[إن نظام المجلات المفتوحة يدعم أيضاً شبكات <a href="http://clockss.org/" target="_blank">CLOCKSS</a> Controlled Lots of Copies Keep Stuff Safe لضمان حفظ آمن ودائمي لمحتويات المجلة. إن أنظمة CLOCKSS تستند إلى برامجيات مفتوحة المصدر مطورة في مكتبة جامعة ستانفورد وهو يمكن المكتبات من حفظ مجلات منتخبة من الإنترنت عبر القيام دورياً بتنزيل محتويات هذه المجلات المسجلة في النظام وإضافتها إلى الأرشيف. يتم بشكل مستمر مقارنة هذا الأرشيف مع مخزونات المجلة الأخرى، وإذا تم العثور على أي محتوى مفقود أو تالف، يقوم النظام تلقائياً بتعويضه من مخزونه الإحتياطي.
@@ -574,7 +573,6 @@
 	<message key="reviewer.article.selectRecommendation.byEditor">إختر أو عدّل توصية المحكم.</message>
 	<message key="reviewer.article.mustSelectDecision">لم يتم اختيار التوصية. عليك أن تختار توصية تقدمها</message>
 	<message key="reviewer.article.confirmDecision">بمجرد تسجيلك لقرار ما، لن يكون باستطاعتك مستقبلاً تعديل هذا التحكيم. هل أنت متأكد من رغبتك في المتابعة؟</message>
-	<message key="reviewer.article.ensuringBlindReview">ضمان التحكيم السري</message>
 
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">الملف لتدقيقه</message>
@@ -681,7 +679,7 @@
 	<message key="user.register.reviewerDescriptionNoInterests">راغبٌ في إجراء تحكيم مناظر لطلبات النشر في المجلة.</message>
 	<message key="user.register.reviewerDescription">راغبٌ في إجراء تحكيم مناظر لطلبات النشر في الموقع.</message>
 	<message key="user.register.reviewerInterests">عرِّف إهتمامات التحكيم (مجالاته الثابتة وطرق البحث):</message>
-        
+
 	<!-- Subscriptions -->
 	<message key="user.subscriptions.mySubscriptions">اشتراكاتي</message>
 	<message key="user.subscriptions.subscriptionStatus">حالة الاشتراك</message>
@@ -828,41 +826,6 @@
 	<message key="donations.thankYou">شكراً لكم</message>
 	<message key="donations.thankYouMessage">شكراً لمساهمتك. نثمن دعمكم لنا</message>
 
-	<!-- Gifts -->
-	<message key="gifts.buyer">من</message>
-	<message key="gifts.buyerDescription">ممن هذه الهدية؟</message>
-	<message key="gifts.recipient">إلى</message>
-	<message key="gifts.recipientDescription">إلى مَن هذه الهدية؟</message>
-	<message key="gifts.thankYou">شكراً جزيلاً</message>
-	<message key="gifts.thankYouMessage">إكتمل شراؤك للهدية. ستتلقى نسخة من رسالة الهدية المعنونة إلى المستلم بمجرد تسديد مبلغها</message>
-	<message key="gifts.purchaseGiftIndividualSubscription">إهداء اشتراك</message>
-	<message key="gifts.subscriptionFormIntroduction">لطفاً، إملأ النموذج أدناه. معلومات الاتصال التي ستذكرها مع عبارة التذييل للهدية ستستعمل لمراسلة المستلم عبر البريد الالكتروني وإشعاره بإهدائه اشتراكاً في المجلة (كما أنك ستتلقى نسخة من هذه الرسالة).</message>
-	<message key="gifts.details">تفاصيل الرسالة</message>
-	<message key="gifts.detailsDescription">لطفاً، إختر الهدية أدناه، وضمِّنها رسالة شخصية تخاطب بها المتلقي (ستتلقى نسخة من هذه الرسالة).</message>
-	<message key="gifts.gift">الهدية</message>
-	<message key="gifts.noteTitle">العنوان</message>
-	<message key="gifts.note">تذييل الهدية</message>
-	<message key="gifts.noteTitleRequired">لطفاً، زودنا بعنوان لرسالتك الشخصية.</message>
-	<message key="gifts.noteRequired">لطفاً، أنشئ رسالة تخاطب بها المتلقي.</message>
-	<message key="gifts.localeRequired">لطفاً، إختر لغة رسالتك.</message>
-	<message key="gifts.myGifts">هداياي</message>
-	<message key="gifts.manageMyGifts">إدارة هداياي</message>
-	<message key="gifts.redeemGift">تلقِ الهدية</message>
-	<message key="gifts.status.notRedeemed">متوافرة</message>
-	<message key="gifts.status.redeemed">متلقاة</message>
-	<message key="gifts.status.redeemGift">تلقِ الهدية</message>
-	<message key="gifts.subscriptions">اشتراكات</message>
-	<message key="gifts.subscriptionsDescription">إهداء الاشتراك المتلقى هنا سيستبدل اشتراكك الحالي (إن كان لديك اشتراك). الاشتراكات ستبدأ من تاريخ التلقي وستكون متاحة للمدة المحددة من قبل نوع الاشتراك.</message>
-	<message key="gifts.purchaseGiftSubscription">أهدِ اشتراكاً</message>
-	<message key="gifts.giftSubscriptionsAvailable">إهداء الاشتراكات متاح أيضاً. الاشتراكات المهداة يمكن لمستلمها تلقيها في أي وقت، وهي طريقة رائعة لدعم المجلة.</message>
-	<message key="gifts.noSubscriptions">لا اشتراكات مهداة</message>
-	<message key="gifts.giftRedeemed">تم تلقي الهدية بنجاح</message>
-	<message key="gifts.noGiftToRedeem">هذه الهدية غير متاحة لتلقيها</message>
-	<message key="gifts.giftAlreadyRedeemed">هذه الهدية تم تلقيها مسبقاً</message>
-	<message key="gifts.giftNotValid">هذه الهدية غير صحيحة ولا يمكن تلقيها</message>
-	<message key="gifts.subscriptionTypeNotValid">نوعية الاشتراك لهذه الهدية غير صحيحة. لطفاً، إتصل بمدير الاشتراكات</message>
-	<message key="gifts.subscriptionNonExpiring">لم يتم تلقي هذه الهدية نظراً لكونك تمتلك مسبقاً اشتراكاً نافذاً في هذه المجلة</message>
-
 	<!-- Payments -->
 	<message key="payment.loginRequired">ينبغي عليك الدخول إلى الموقع لتقوم بالدفع</message>
 	<message key="payment.loginRequired.forArticle">الاشتراك أو شراء مؤلَّف يتطلب الدخول إلى الموقع، فبهذا يمكن التحقق من حالة الاشتراك واستعراض عمليات الشراء السابقة.</message>
@@ -885,14 +848,10 @@
 	<message key="payment.type.purchaseIssue">رسوم شراء إصدار (عدد من المجلة)</message>
 	<message key="payment.type.subscription">رسوم الاشتراك</message>
 	<message key="payment.type.donation">الهبات</message>
-	<message key="payment.type.gift">هدية</message>
-	<message key="payment.type.gift.subscription">اشتراك</message>
 
 	<message key="payment.donation.makeDonation">قدِّم هبة</message>
 
 	<message key="payment.submission.paySubmission">إدفع رسم التقديم</message>
-	<message key="payment.fastTrack.payFastTrack">إدفع للتقييم السريع</message>
-	<message key="payment.fastTrack.inFastTrack">قيد التقييم السريع</message>
 	<message key="payment.publication.payPublication">إدفع للنشر</message>
 	<message key="payment.publication.publicationPaid">تم دفع رسم النشر</message>
 

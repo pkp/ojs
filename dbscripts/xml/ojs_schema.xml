@@ -461,10 +461,6 @@
 		</field>
 
 		<field name="pages" type="C2" size="255"/>
-		<field name="fast_tracked" type="I1">
-			<NOTNULL/>
-			<DEFAULT VALUE="0"/>
-		</field>
 		<field name="hide_author" type="I1">
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>
@@ -1001,7 +997,7 @@
 		<field name="payment_type" type="I8">
 			<NOTNULL/>
 		</field>
-		<field name="journal_id" type="I8">
+		<field name="context_id" type="I8">
 			<NOTNULL/>
 		</field>
 		<field name="user_id" type="I8" />

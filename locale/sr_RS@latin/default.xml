@@ -27,18 +27,12 @@
 	<message key="default.journalSettings.checklist.submissionAppearance">Tekst ima prored 1,5, koristi font Times New Roman veličine 12, koristi kurziv umesto podvlačenja (izuzev URL adresa) i ilustracije, tabele i prilozi su smešteni unutar teksta na odgovarajućim mestima ili na kraju.</message>
 	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[Tekst sa uputstvima vezanim za stil i bibliografske zahtevime je u <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines" target="_new">Упутства за ауторе</a>, koja se nalaze u sekciji "O časopisu".]]></message>
 	<!-- Default settings for payment items. -->
-	<message key="default.journalSettings.submissionFee">Predaja radova</message>
 	<message key="default.journalSettings.publicationFee">Objavljivanje radova</message>
-	<message key="default.journalSettings.publicationFeeDescription">Ako ovaj članak bude prihvaćen za objavljivanje, od vas će se tražiti da platite naknadu za objavljivanje.</message>
 	<message key="default.journalSettings.purchaseArticleFee">Kupovina članaka</message>
 	<message key="default.journalSettings.membershipFee">Članstvo asocijacija</message>
-	<message key="default.journalSettings.donationFee">Donacije časopisu</message>
 	<message key="default.journalSettings.purchaseIssueFee">Kupi izdanje</message>
-	<message key="default.journalSettings.purchaseIssueFeeDescription">Plaćanje ovog iznosa će vam omogućiti da vidite, preuzmete ili odštampate izdanje broja.</message>
 	<message key="default.journalSettings.privacyStatement">Imena i imejl adrese unete na ovom sajtu biće korišćene isključivo za navedene potrebe ovog časopisa i neće biti dostupni ni za jednu drugu svrhu ili nekoj drugoj strani.</message>
 	<message key="default.journalSettings.openAccessPolicy">Ovaj časopis pruža otvoreni pristup sadržaju po principu koji omogućuje istraživački rad besplatno dostupan javnosti, a sve u cilju veće globalne razmene znanja.</message>
-	<message key="default.journalSettings.submissionFeeDescription">Autori su dužni da plate naknadu za predaju radova kao deo procesa predaje u svrhu doprinosa troškovima recenziranja.</message>
-	<message key="default.journalSettings.fastTrackFeeDescription">Sa plaćanjem ove nadoknade recenzentska odluka, odluka urednika i obaveštenje autoru biće zasigurno dostupni u roku od 4 nedelje.</message>
 	<message key="default.groups.name.manager">Tehnički sekretar</message>
 	<message key="default.groups.plural.manager">Tehnički sekretari</message>
 	<message key="default.groups.abbrev.manager">JM</message>
@@ -69,11 +63,6 @@ ________________________________________________________________________<br/>
 <a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>]]></message>
 	<message key="default.genres.article">Tekst članka</message>
 	<message key="default.journalSettings.authorSelfArchivePolicy">Ovaj časopis dozvoljava i ohrabruje autore da postave svoje prijavljene članke na ličnom sajtu ili u institucionalnim repozitorijima pre ili nakon objavljivanja obezbeđujući bibliografske detalje koji priznaju objavljivanje u ovom časopisu.</message>
-	<message key="default.journalSettings.fastTrackFee">Brza recenzija</message>
-	<message key="default.journalSettings.waiverPolicy">Ako nemate sredstva da platite naknadu imaćete priliku da trađite izuzeće od tih naknada. Mi ne želimo da da sprečimo objavljivanje vrednog rada.</message>
-	<message key="default.journalSettings.purchaseArticleFeeDescription">Plaćanje ovog iznosa će vam omogućiti da vidite, preuzmete ili odštampate izdanje broja.</message>
-	<message key="default.journalSettings.membershipFeeDescription">Plaćanje ove naknade će vam omogućiti da postanete član u ovoj asocijaciji za jednu godini i omogućiti vam slobodan pristup časopisu.</message>
-	<message key="default.journalSettings.donationFeeDescription">Donacija časopisu u bilo kom iznosu će biti sa zahvalnošću primljena i omogućiti urednicima da nastave da izdaju časopis najvišeg kvaliteta svojim čitaocima.</message>
 	<message key="default.journalSettings.lockssLicense"><![CDATA[Ovaj časopis koristi LOCKSS sistem za kreiranje distribuiranog sistema arhiviranja među bibliotekama učesnicama i dozvoljava tim bibliotekama da kreiraju stalne arhive časopisa u svrhu čuvanja i restauracije.<a href="http://www.lockss.org/">Više...</a>]]></message>
 	<message key="default.journalSettings.clockssLicense"><![CDATA[Ovaj časopis koristi LOCKSS sistem za kreiranje distribuiranog sistema arhiviranja među bibliotekama učesnicama i dozvoljava tim bibliotekama da kreiraju stalne arhive časopisa u svrhu čuvanja i restauracije.<a href="http://www.lockss.org/">Više...</a>]]></message>
 	<message key="default.journalSettings.copyeditInstructions">Faza korekture je namenjena da poboljša tok, jasnoću, gramatiku, fraze i formatiranje članka. U ovoj fazi autor ima poslednju šansu da učini suštinske izmene na tekstu jer je sledeća faza ograničena samo na slovne greške i ispravke u formatiranju.</message>

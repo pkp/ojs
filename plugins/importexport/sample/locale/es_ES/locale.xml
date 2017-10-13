@@ -10,6 +10,7 @@
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_(es_ES)
   * Localization strings.
   -->
+ 
 <locale name="es_ES" full_name="Español (España)">
 	<message key="plugins.importexport.sample.displayName">Plugin de ejemplo de importación/exportación</message>
 	<message key="plugins.importexport.sample.description">Este plugin proporciona un ejemplo de implementación que se puede usar para desarrollar plugins de importación/exportación. No es muy útil por si solo.</message>

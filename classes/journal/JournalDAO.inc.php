@@ -84,15 +84,12 @@ class JournalDAO extends ContextDAO {
 		$emailTemplateDao->deleteEmailTemplatesByContext($journalId);
 
 		$subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
-		$subscriptionDao->deleteSubscriptionsByJournal($journalId);
+		$subscriptionDao->deleteByJournalId($journalId);
 		$subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
-		$subscriptionDao->deleteSubscriptionsByJournal($journalId);
+		$subscriptionDao->deleteByJournalId($journalId);
 
 		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
 		$subscriptionTypeDao->deleteSubscriptionTypesByJournal($journalId);
-
-		$giftDao = DAORegistry::getDAO('GiftDAO');
-		$giftDao->deleteGiftsByAssocId(ASSOC_TYPE_JOURNAL, $journalId);
 
 		$announcementDao = DAORegistry::getDAO('AnnouncementDAO');
 		$announcementDao->deleteByAssoc(ASSOC_TYPE_JOURNAL, $journalId);

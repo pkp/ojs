@@ -13,6 +13,7 @@
  
 <locale name="tr_TR" full_name="Türkçe">
 	<message key="plugins.pubIds.doi.displayName">DOI</message>
+	<message key="plugins.pubIds.doi.readerDisplayName">DOI</message>
 
 	<!-- settings form -->
 	<message key="plugins.pubIds.doi.manager.settings.description">ADS'de DOI'leri kullanmak ve yönetebilmek için lütfen DOI eklentilerini yapılandırın.</message>

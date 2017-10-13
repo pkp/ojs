@@ -9,29 +9,27 @@
  */
 (function($) {
 
-	// Update nav menu ARIA states on focus, blur and mouse over/out events
-	$('.navDropdownMenu ul').on('focus.default  mouseenter.default', '[aria-haspopup="true"]', function (e) {
-		$(e.currentTarget).attr('aria-expanded', true);
-	});
+	// Initialize dropdown navigation menus
+	// See bootstrap dropdowns: https://getbootstrap.com/docs/4.0/components/dropdowns/
+	if (typeof $.fn.dropdown !== 'undefined') {
+		var $nav = $('#navigationPrimary, #navigationUser'),
+		$submenus = $('ul', $nav);
 
-	$('.navDropdownMenu ul').on('blur.default  mouseleave.default', '[aria-haspopup="true"]', function (e) {
-		$(e.currentTarget).attr('aria-expanded', false)
-			.attr('pkp-touch-state', '');
-	});
+		$submenus.each(function(i) {
+			var id = 'pkpDropdown' + i;
+			$(this)
+				.addClass('dropdown-menu')
+				.attr('aria-labelledby', id);
+			$(this).siblings('a')
+				.attr('data-toggle', 'dropdown')
+				.attr('aria-haspopup', true)
+				.attr('aria-expanded', false)
+				.attr('id', id)
+				.attr('href', '#');
+		});
 
-	// Taps on nav menu items with submenus should expand on first tap
-	$('.navDropdownMenu a').on('touchstart', function(e) {
-		var target = $(e.target),
-			li = target.parent('li');
-		if (li.length && li.attr('aria-haspopup')) {
-			var state = li.attr('pkp-touch-state') || '';
-			if (state != 'open') {
-				target.trigger('focus.default');
-				li.attr('pkp-touch-state', 'open');
-				e.preventDefault();
-			}
-		}
-	})
+		$('[data-toggle="dropdown"]').dropdown();
+	}
 
 	// Register click handlers for the search panel
 	var headerSearchPanelIsClosing = false,

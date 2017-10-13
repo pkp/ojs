@@ -852,67 +852,6 @@ Lektor/in, {$contextName}<br />
 ]]></body>
 		<description>Diese E-Mail ermöglicht es Lektor/innen, zusätzliche Informationen über Verweise von Autor/innen anzufordern.</description>
 	</email_text>
-	<email_text key="GIFT_AVAILABLE">
-		<subject>{$giftNoteTitle}</subject>
-		<body><![CDATA[Liebe/r {$recipientFirstName},<br />
-<br />
-{$buyerFullName} möchte mit Ihnen ein Geschenk bei {$giftJournalName} teilen:<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-{$giftNote}<br />
-<br />
-<br />
-Sie werden eine Folgemail erhalten, die Login-Details und eine Anleitung zum Einlösen des Geschenks enthält.<br />
-<br />
-Wir hoffen, dass Sie sich über Ihr Geschenk freuen!<br />
-<br />
-{$giftContactSignature}<br />
-]]></body>
-		<description>Diese E-Mail benachrichtigt eine/n Geschenkempfänger/in, dass ein Geschenk erworben worden ist und zur Einlösung bereit steht.</description>
-	</email_text>
-	<email_text key="GIFT_USER_REGISTER">
-		<subject>Lösen Sie Ihr Geschenk ein: Login-Details</subject>
-		<body><![CDATA[Liebe/r {$recipientFirstName},<br />
-<br />
-{$buyerFullName} möchte mit Ihnen ein Geschenk bei {$giftJournalName} teilen:<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-Um Ihr Geschenk einzulösen, loggen Sie sich bitte auf der Website der Zeitschrift unter {$giftUrl} ein.<br />
-<br />
-Ihr Benutzer/innenname: {$username}<br />
-Ihr Passwort: {$password}<br />
-<br />
-Sobald Sie sich eingeloggt haben, können Sie Ihr Passwort jederzeit ändern.<br />
-<br />
-Wir hoffen, dass Sie sich über Ihr Geschenk freuen!<br />
-<br />
-{$giftContactSignature}<br />
-]]></body>
-		<description>Diese E-Mail informiert eine/n Geschenkempfänger/in über die Login-Details für einen neuen Account.</description>
-	</email_text>
-	<email_text key="GIFT_USER_LOGIN">
-		<subject>Lösen Sie Ihr Geschenk ein: Login-Details</subject>
-		<body><![CDATA[Liebe/r {$recipientFirstName},<br />
-<br />
-{$buyerFullName} möchte mit Ihnen ein Geschenk bei {$giftJournalName} teilen:<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-Um Ihr Geschenk einzulösen, loggen Sie sich bitte auf der Website der Zeitschrift unter {$giftUrl} ein.<br />
-<br />
-Ihr Benutzer/innenname: {$username}<br />
-<br />
-Wir hoffen, dass Sie sich über Ihr Geschenk freuen!<br />
-<br />
-{$giftContactSignature}<br />
-]]></body>
-		<description>Diese E-Mail informiert eine/n Geschenkempfänger/in über seine/ihre Login-Details.</description>
-	</email_text>
 <email_text key="REVISED_VERSION_NOTIFY">
         <subject>Überarbeitete Version hochgeladen</subject>
         <body><![CDATA[{$editorialContactName},<br />

@@ -543,6 +543,16 @@ URL материала: {$submissionUrl}<br />
 ]]></body>
 		<description>Это письмо редактора или редактора раздела, отправляемое автору, чтобы уведомить его об окончательном решении «Отклонить материал» относительно присланного материала.</description>
 	</email_text>
+	<email_text key="EDITOR_RECOMMENDATION">
+		<subject>Рекомендация редактора</subject>
+		<body><![CDATA[Здравствуйте, {$editors}!<br />
+<br />
+По материалу «{$submissionTitle}», отправленному в «{$contextName}», могу рекомендовать следующее: {$recommendation}<br />
+<br />
+{$editorialContactSignature}<br />
+]]></body>
+		<description>Это письмо рекомендующего редактора или редактора раздела редакторам или редакторам раздела, принимающим решение, чтобы уведомить их об итоговой рекомендации относительного присланного материала.</description>
+	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
 		<subject>Запрос на литературное редактирование</subject>
 		<body><![CDATA[Здравствуйте, {$participantName}!<br />
@@ -785,67 +795,6 @@ URL подписки: {$subscriptionUrl}<br />
 ]]></body>
 		<description>Это письмо позволяет литературным редакторам запрашивать дополнительную информацию о ссылках у авторов.</description>
 	</email_text>
-	<email_text key="GIFT_AVAILABLE">
-		<subject>{$giftNoteTitle}</subject>
-		<body><![CDATA[Здравствуйте, {$recipientFirstName}!<br />
-<br />
-Наш пользователь, {$buyerFullName}, хотел бы подарить Вам следующий подарок в журнале «{$giftJournalName}»:<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-{$giftNote}<br />
-<br />
-<br />
-Вы получите еще одно письмо, в котором будет информация о входе на сайт журнала и инструкции по получению Вашего подарка.<br />
-<br />
-Мы надеемся, что Вам понравится этот подарок!<br />
-<br />
-{$giftContactSignature}<br />
-]]></body>
-		<description>Это письмо уведомляет получателя подарка о том, что подарок был куплен и доступен для получения.</description>
-	</email_text>
-	<email_text key="GIFT_USER_REGISTER">
-		<subject>Получите Ваш подарок: информация для входа в систему</subject>
-		<body><![CDATA[Здравствуйте, {$recipientFirstName}!<br />
-<br />
-Наш пользователь, {$buyerFullName}, хотел бы подарить Вам следующий подарок в журнале «{$giftJournalName}»:<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-Для получения Вашего подарка войдите на сайт журнала по адресу {$giftUrl}<br />
-<br />
-Имя пользователя: {$username}<br />
-Пароль: {$password}<br />
-<br />
-После входа на сайт Вы можете в любой момент изменить свой пароль.<br />
-<br />
-Мы надеемся, что Вам понравится этот подарок!<br />
-<br />
-{$giftContactSignature}<br />
-]]></body>
-		<description>Это письмо уведомляет получателя подарка о данных для входа на сайт для вновь созданной учетной записи.</description>
-	</email_text>
-	<email_text key="GIFT_USER_LOGIN">
-		<subject>Получите Ваш подарок: информация для входа в систему</subject>
-		<body><![CDATA[Здравствуйте, {$recipientFirstName}!<br />
-<br />
-Наш пользователь, {$buyerFullName}, хотел бы подарить Вам следующий подарок в журнале «{$giftJournalName}»:<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-Для получения Вашего подарка войдите на сайт журнала по адресу {$giftUrl}<br />
-<br />
-Имя пользователя: {$username}<br />
-<br />
-Мы надеемся, что Вам понравится этот подарок!<br />
-<br />
-{$giftContactSignature}<br />
-]]></body>
-		<description>Это письмо уведомляет получателя подарка о данных для входа на сайт.</description>
-	</email_text>
 	<email_text key="REVISED_VERSION_NOTIFY">
 		<subject>Загружена исправленная версия</subject>
 		<body><![CDATA[Здравствуйте, {$editorialContactName}!<br />
@@ -861,5 +810,17 @@ URL материала: {$submissionUrl}<br />
 		<subject>Сообщение о журнале «{$contextName}»</subject>
 		<body><![CDATA[Пожалуйста, введите свое сообщение.]]></body>
 		<description>Сообщение по умолчанию (пустое) используется в редакторе списка сообщений Центра уведомлений.</description>
+	</email_text>
+	<email_text key="EDITOR_DECISION_INITIAL_DECLINE">
+		<subject>Решение редакции</subject>
+		<body>
+			<![CDATA[Здравствуйте, {$authorName}!<br />
+<br />
+Мы приняли решение относительно Вашего материала «{$submissionTitle}», направленного в журнал «{$contextName}».<br />
+<br />
+Наше решение: Отклонить материал<br />
+<br />
+{$editorialContactSignature}<br />]]></body>
+		<description>Это письмо отправляется автору, если редактор решает отклонить его материал на начальной стадии, до этапа рецензирования</description>
 	</email_text>
 </email_texts>

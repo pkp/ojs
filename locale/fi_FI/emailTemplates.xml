@@ -165,6 +165,18 @@ Ystävällisin terveisin,<br />
 {$editorialContactSignature}]]></body>
 		<description>This email, when enabled, is automatically sent to an author when he or she completes the process of submitting a manuscript to the journal. It provides information about tracking the submission through the process and thanks the author for the submission.</description>
 	</email_text>
+	<email_text key="SUBMISSION_ACK_NOT_USER">
+		<subject>Käsikirjoituksesi on vastaanotettu</subject>
+		<body><![CDATA[Hei,<br />
+<br />
+{$submitterName} on lähettänyt julkaisuumme {$contextName} käsikirjoituksen &quot;{$submissionTitle}&quot;.<br />
+<br />
+Jos teillä on kysyttävää, otattehan yhteyttä minuun. Kiitos, että valitsitte tämän julkaisun työllenne.<br />
+<br />
+Ystävällisin terveisin,<br />
+{$editorialContactSignature}]]></body>
+		<description>This email, when enabled, is automatically sent to the other authors who are not users specified during the submission process.</description>
+	</email_text>	
 	<email_text key="SUBMISSION_UNSUITABLE">
 		<subject>Soveltumaton käsikirjoitus</subject>
 		<body><![CDATA[Hyvä {$authorName},<br />
@@ -804,70 +816,6 @@ Kiitos!<br />
 Tekninen toimittaja, {$contextName}<br />
 ]]></body>
 		<description>This email allows copyeditors to request additional information about references from authors.</description>
-	</email_text>
-	<email_text key="GIFT_AVAILABLE">
-		<subject>{$giftNoteTitle}</subject>
-		<body><![CDATA[Hyvä {$recipientFirstName},<br />
-<br />
-{$buyerFullName} haluaisi antaa teille lahjan julkaisussa {$giftJournalName}:<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-{$giftNote}<br />
-<br />
-<br />
-Tulette saamaan sähköpostin, jossa on kirjautumistiedot sekä ohjeet lahjan lunastamiseen.<br />
-<br />
-Toivotamme hyviä hetkiä lahjanne parissa!<br />
-<br />
-Ystävällisin terveisin,<br />
-{$giftContactSignature}<br />
-]]></body>
-		<description>This email notifies a gift recipient that a gift has been purchased and is available for redemption.</description>
-	</email_text>
-	<email_text key="GIFT_USER_REGISTER">
-		<subject>Lahjan lunastaminen: kirjautumistiedot</subject>
-		<body><![CDATA[Hyvä {$recipientFirstName},<br />
-<br />
-{$buyerFullName} haluaisi antaa teille lahjan julkaisussa {$giftJournalName}:<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-Lunastaaksenne lahjan kirjautukaa julkaisun verkkosivustolle osoitteessa <a href="{$giftUrl}">{$giftUrl}</a><br />
-<br />
-Käyttäjätunnuksenne: {$username}<br />
-Salasananne: {$password}<br />
-<br />
-Voitte vaihtaa salasananne milloin tahansa ollessanne sisäänkirjautuneena.<br />
-<br />
-Toivotamme hyviä hetkiä lahjanne parissa!<br />
-<br />
-Ystävällisin terveisin,<br />
-{$giftContactSignature}<br />
-]]></body>
-		<description>This email notifies a gift recipient of their login details for a new account.</description>
-	</email_text>
-	<email_text key="GIFT_USER_LOGIN">
-		<subject>Lahjan lunastaminen: kirjautumistiedot</subject>
-		<body><![CDATA[Hyvä {$recipientFirstName},<br />
-<br />
-{$buyerFullName} haluaisi antaa teille lahjan julkaisussa {$giftJournalName}:<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-Lunastaaksenne lahjan kirjautukaa julkaisun verkkosivustolle osoitteessa <a href="{$giftUrl}">{$giftUrl}</a><br>
-<br />
-Käyttäjätunnuksenne: {$username}<br>
-<br />
-Toivotamme hyviä hetkiä lahjanne parissa!<br />
-<br />
-Ystävällisin terveisin,<br />
-{$giftContactSignature}<br />
-]]></body>
-		<description>This email notifies a gift recipient of their login details.</description>
 	</email_text>
 	<email_text key="REVISED_VERSION_NOTIFY">
 		<subject>Korjattu versio on ladattu</subject>

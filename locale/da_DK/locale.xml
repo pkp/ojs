@@ -285,7 +285,6 @@ Vær opmærksom på, at OAI-grænsefladen kan deaktiveres for dette websted ved 
 
 
 
-	<message key="plugins.categories.citationFormats.description">Plug-ins til citatformater gør det muligt for brugere at få adgang til artikelcitater i forskellige formater.</message>
 
 	<message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems understøtter <a href="http://www.lockss.org/" target="_blank">LOCKSS</a>-systemet (Lots of Copies Keep Stuff Safe) for at sikre et pålideligt og permanent arkiv for tidsskriftet. LOCKSS er open source-software, der er udviklet på Stanford University Library, og som gør det muligt for biblioteker at bevare udvalgte webtidsskrifter ved regelmæssigt at foretage polling af registrerede tidsskriftswebsteder med henblik på at finde nyt publiceret indhold og arkivere det. Hvert enkelt arkiv valideres løbende i forhold til andre bibliotekscachelagre, og hvis indholdet er beskadiget eller er gået tabt, bruges de andre cachelagre eller tidsskrifter til at gendanne det.
 <br /><br />
@@ -429,7 +428,6 @@ Aktiv er antallet af bedømmelser, der i øjeblikket overvejes eller er forestå
         <message key="reviewer.article.selectRecommendation">Vælg en anbefaling, og fremsend bedømmelsen for at fuldføre processen. Du skal angive en bedømmelse eller overføre en fil, inden du kan vælge en anbefaling.</message>
 	<message key="reviewer.article.mustSelectDecision">Der er ikke valgt nogen anbefaling. Du skal vælge en anbefaling, du vil fremsende.</message>
 	<message key="reviewer.article.confirmDecision">Når du har registreret en beslutning, kan du ikke længere foretage ændringer af denne bedømmelse. Er du sikker på, at du vil fortsætte?</message>
-	<message key="reviewer.article.ensuringBlindReview">Sikring af blind review</message>
 
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">Fil til C/E</message>
@@ -636,8 +634,6 @@ aktuelle adgangskode.<br /><br />Angiv din e-mail-adresse nedenfor for at nulsti
 	<message key="payment.donation.makeDonation">Foretag en donation</message>
 
 	<message key="payment.submission.paySubmission">Betal manuskriptgebyr</message>
-	<message key="payment.fastTrack.payFastTrack">Betal for FastTrack</message>
-	<message key="payment.fastTrack.inFastTrack">i FastTrack</message>
 	<message key="payment.publication.payPublication">Betal for publicering</message>
 	<message key="payment.publication.publicationPaid">Publiceringsgebyret er betalt</message>
 
@@ -811,7 +807,7 @@ Valideringen kan mislykkes i forbindelse med URL-søgeadresser, der kræver send
 	-->
 	<!-- Default settings for payment items. -->
 	<message key="reviewer.article.enterReviewForm">Klik på ikonet for at udfylde review formularen.</message>
-	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Udfyld de obligatoriske felter.</message>
+	<message key="reviewer.submission.reviewFormResponse.form.responseRequired">Udfyld de obligatoriske felter.</message>
 	<message key="common.homePageHeader.altText">Hjemmesidehovede</message>
 	<message key="common.journalHomepageImage.altText">Tidsskriftets hjemmesidebillede</message>
 	<message key="article.coverPage.altText">Forsidebillede</message>
@@ -946,45 +942,9 @@ Valideringen kan mislykkes i forbindelse med URL-søgeadresser, der kræver send
 	</li>
 </ol>]]></message>
 	<message key="site.noJournals">Der er ingen tilgængelige tidsskrifter</message>
-	<message key="gifts.buyer">Fra</message>
-	<message key="gifts.buyerDescription">Hvem er gaven fra?</message>
-	<message key="gifts.recipient">Til</message>
-	<message key="gifts.recipientDescription">Hvem er gaven til?</message>
-	<message key="gifts.thankYou">Tak</message>
-	<message key="gifts.thankYouMessage">Dit gavebevis er færdigudfyldt. Du vil modtage en kopi af gave-e-mailen, der er sendt til modtageren, så snart betalingen har fundet sted.</message>
-	<message key="issue.viewIssue">Se nummer</message>
-	<message key="gifts.purchaseGiftIndividualSubscription">Gaveabonnement</message>
-	<message key="gifts.subscriptionFormIntroduction">Udfyld venligst formularen nedenfor. De indleverede kontaktinformationer vil sammen med dit gavebrev blive sendt til modtageren via e-mail med oplysninger om det nye gaveabonnement (du vil også modtage en kopi af denne e-mail).</message>
-	<message key="gifts.details">Gaveoplysninger</message>
-	<message key="gifts.detailsDescription">Vælg gaven nedenfor og inkluder en personlig hilsen. Den vil blive sendt via e-mail til modtageren (du vil modtage en kopi af denne e-mail).</message>
-	<message key="gifts.gift">Gave</message>
-	<message key="gifts.noteTitle">Titel</message>
-	<message key="gifts.note">Gavehilsen</message>
-	<message key="gifts.noteTitleRequired">Indsæt en overskrift til din personlige hilsen.</message>
-	<message key="gifts.noteRequired">Indsæt en personlig hilsen</message>
-	<message key="gifts.localeRequired">Vælg sprog i forbindelse med din personlige hilsen</message>
-	<message key="gifts.myGifts">Mine gaver</message>
-	<message key="gifts.manageMyGifts">Manage My Gifts</message>
-	<message key="gifts.redeemGift">Indløs gave</message>
-	<message key="gifts.status.notRedeemed">Tilgængelig</message>
-	<message key="gifts.status.redeemed">Indløst</message>
-	<message key="gifts.status.redeemGift">Indløs gave</message>
-	<message key="gifts.subscriptions">Abonnementer</message>
 	<message key="user.profile.profileImage">Profilbillede</message>
-	<message key="gifts.purchaseGiftSubscription">Giv et gaveabonnement</message>
-	<message key="gifts.giftSubscriptionsAvailable">Gaveabonnementer er tilgængelige. Gaveabonnementer kan indløses når modtageren ønsker det, og det er en god måde at støtte dette tidsskrift på.</message>
-	<message key="gifts.noSubscriptions">Ingen gaveabonnementer</message>
-	<message key="gifts.subscriptionsDescription">Hvis du indløser dit gaveabonnement her, vil det erstatte dit eksisterende abonnement (hvis du har et sådant). Abonnementet vil begynde på indløsningsdagen og være gyldigt i abonnementstypens løbetid.</message>
-	<message key="gifts.giftRedeemed">Gaven er hermed blevet indløst.</message>
-	<message key="gifts.noGiftToRedeem">Denne gave er ikke til rådighed for indløsning.</message>
-	<message key="gifts.giftAlreadyRedeemed">Gaven er allerede blevet indløst.</message>
-	<message key="gifts.giftNotValid">Denne gave er ikke valid og kan ikke indløses.</message>
-	<message key="gifts.subscriptionTypeNotValid">Denne gaveabonnementstype er ikke valid. Kontakt abonnementschefen.</message>
-	<message key="gifts.subscriptionNonExpiring">Denne gave blev ikke indløst, da du allerede har et endnu gyldigt abonnement til dette tidsskrift.</message>
 	<message key="payment.loginRequired.forIssue">Adgang til dette nummer kræver enten abonnement eller nummerkøb. For at kontrollere abonnementet eller få adgang til tidligere køb, skal du logge dig på tidsskriftet.</message>
 	<message key="payment.type.purchaseIssue">Nummerkøbsgebyr</message>
-	<message key="payment.type.gift">Gave</message>
-	<message key="payment.type.gift.subscription">Abonnement</message>
 	<message key="installer.allowFileUploads"><![CDATA[Din server tillader på nuværende tidspunkt upload af dokument: <strong>{$allowFileUploads}</strong>]]></message>
 	<message key="installer.maxFileUploadSize"><![CDATA[Din server tillader på nuværende tidspunkt upload af dokument på maksimumstørrelse: <strong>{$maxFileUploadSize}</strong>]]></message>
 	<message key="site.upgradeAvailable.admin"><![CDATA[Der er en ny OJS-udgave tilgængelig! Du anvender i øjeblikket {$currentVersion}. Den nyeste OJS-udgave er {$latestVersion}. Besøg <a href="http://pkp.sfu.ca/ojs_download" target="_new">this page</a> og download den nyeste version og se opgraderingsinstruktionerne.]]></message>

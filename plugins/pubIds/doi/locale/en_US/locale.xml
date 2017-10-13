@@ -14,7 +14,7 @@
 <locale name="en_US" full_name="U.S. English">
 	<message key="plugins.pubIds.doi.displayName">DOI</message>
 	<message key="plugins.pubIds.doi.description">This plugin enables the assignment of the Digital Object Identifiers to issues, articles and galleys in OJS.</message>
-	<message key="plugins.pubIds.doi.readerDisplayName">DOI:</message>
+	<message key="plugins.pubIds.doi.readerDisplayName">DOI</message>
 
 	<!-- settings form -->
 	<message key="plugins.pubIds.doi.manager.settings.description">Please configure the DOI plugin to be able to manage and use DOIs in OJS:</message>

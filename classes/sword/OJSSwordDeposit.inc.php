@@ -96,8 +96,10 @@ class OJSSwordDeposit {
 
 		// The article can be published or not. Support either.
 		if (is_a($this->article, 'PublishedArticle')) {
-			$plugin = PluginRegistry::loadPlugin('citationFormats', 'bibtex');
-			$this->package->setCitation(html_entity_decode(strip_tags($plugin->fetchCitation($this->article, $this->issue, $this->journal)), ENT_QUOTES, 'UTF-8'));
+			$plugin = PluginRegistry::getPlugin('generic', 'citationstylelanguageplugin');
+			$request = Application::getRequest();
+			$citation = $plugin->getCitation($request, $this->article, 'bibtex');
+			$this->package->setCitation(html_entity_decode(strip_tags($citation), ENT_QUOTES, 'UTF-8'));
 		}
 	}
 

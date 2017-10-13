@@ -411,7 +411,6 @@ Aktivnih prikazuje na koliko je recenzija recenzent trenutno angažiran.]]></mes
 
 	<message key="reviewer.article.mustSelectDecision">Nema odabrane preporuke. Da biste predali datoteku ili recenziju morate odobrati preporuku .</message>
 	<message key="reviewer.article.confirmDecision">Kada ste jednom zapisali odluku, nećete više moći napraviti nikakve promjene na ovoj recenziji. Jeste li sigurni da želite nastaviti?</message>
-	<message key="reviewer.article.ensuringBlindReview">Kako osigurati anonimnost recenzije</message>
 
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">Datoteka za lektoriranje</message>
@@ -738,7 +737,6 @@ Vaš poslužitelj trenutno podržava mbstring: <strong>{$supportsMBString}</stro
 		<li>OJS ne može modificirati lokalizacijsku registry datoteku, obično "registry/locales.xml".</li>
 	</ul>
 <p>Datoteku s jezicima možete ručno preuzeti sa <a href="http://pkp.sfu.ca">PKP web site</a>.</p>]]></message>
-	<message key="plugins.categories.citationFormats.description">Dodaci za oblikovanje referenci omogućuju korisnicima preuzimanje referenci u različitim bibliografskim standardima.</message>
 	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Predložene Creative Commons odredbe o autorskim pravima</h3>
 <h4>1. Prijedlog za časopise koji omogućuju otvoren pristup</h4>
 Autori koji objavljuju u ovom časopisu pristaju na sljedeće uvijete:
@@ -795,8 +793,6 @@ Autori koji objavljuju u ovom časopisu pristaju na sljedeće uvijete:
 	<message key="payment.type.donation">Donacije</message>
 	<message key="payment.donation.makeDonation">Uplatite donaciju</message>
 	<message key="payment.submission.paySubmission">Uplatite naknadu za prijavu članka</message>
-	<message key="payment.fastTrack.payFastTrack">Uplatite naknadu za ubrzani recenzijski postupak</message>
-	<message key="payment.fastTrack.inFastTrack">Ubrzani recenzijski postupak</message>
 	<message key="payment.publication.payPublication">Uplatite naknadu za objavljivanje</message>
 	<message key="payment.publication.publicationPaid">Naknada za objavljivanje uplaćena.</message>
 	<message key="payment.membership.buyMembership">Kupite individualno članstvo</message>
@@ -813,7 +809,7 @@ Autori koji objavljuju u ovom časopisu pristaju na sljedeće uvijete:
 	<message key="debug.notes.currencyListLoad">Učitana je lista valuta "{$filename}" iz XML-a.</message>
 	<message key="reviewer.article.restrictedFileAccess">Tekst prijave će biti na raspolaganju kada i ako recenzent prihvati ponudu izrade recenzije.</message>
 	<message key="reviewer.article.enterReviewForm">Kliknite na sličicu na zaslonu kako biste ispunili recenzijski obrazac.</message>
-	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Molimo ispunite obavezna polja.</message>
+	<message key="reviewer.submission.reviewFormResponse.form.responseRequired">Molimo ispunite obavezna polja.</message>
 	<message key="common.homePageHeader.altText">Zaglavlje naslovne stranice</message>
 	<message key="common.journalHomepageImage.altText">Slika naslovne stranice časopisa</message>
 	<message key="article.coverPage.altText">Slika naslovne stranice članka</message>
@@ -912,33 +908,8 @@ Autori koji objavljuju u ovom časopisu pristaju na sljedeće uvijete:
 	<message key="about.subscriptionTypes.format">Format</message>
 	<message key="about.subscriptionTypes.duration">Trajanje</message>
 	<message key="about.subscriptionTypes.cost">Cijena</message>
-	<message key="gifts.buyer">Od</message>
-	<message key="gifts.buyerDescription">Od koga je ovaj poklon?</message>
-	<message key="gifts.recipient">Za</message>
-	<message key="gifts.recipientDescription">Za koga je ovaj poklon?</message>
-	<message key="gifts.thankYou">Hvala</message>
-	<message key="gifts.purchaseGiftIndividualSubscription">Pretplata na poklon</message>
-	<message key="gifts.details">Detalji o poklonu</message>
-	<message key="gifts.gift">Poklon</message>
-	<message key="gifts.noteTitle">Naslov</message>
-	<message key="gifts.note">Bilješka o poklonu</message>
-	<message key="gifts.noteTitleRequired">Upišite naslov vaše personalizirane poruke.</message>
-	<message key="gifts.noteRequired">Upišite personaliziranu poruku.</message>
-	<message key="gifts.localeRequired">Odaberite jezik vaše personalizirane poruke.</message>
-	<message key="gifts.myGifts">Moji pokloni</message>
-	<message key="gifts.manageMyGifts">Upravljaj mojim poklonima</message>
 	<message key="user.register.reviewerInterests">Navedite interese za pregled članaka (suštinske oblasti i istraživački metodi)</message>
-	<message key="gifts.thankYouMessage">Vaša nabavka poklona je završena.  Dobit ćete kopiju poklon e-poruke poslate primatelju čim se obradi vaše plaćanje.</message>
-	<message key="gifts.subscriptionFormIntroduction">Ispunite obrazac niže. Upisane kontakt informacije sa vašom poklon izjavom će biti upotrebljene u poruci primatelju sa informacijom o poklonjenoj pretplati ( vi ćete dobiti kopiju te poruke).</message>
-	<message key="gifts.detailsDescription">Odaberite poklon dole i uključite vašu osobnu poruku koja će biti poslata e-porukom primatelju (vi ćete dobiti kopiju poruke).</message>
-	<message key="gifts.status.notRedeemed">Dostupno</message>
-	<message key="gifts.subscriptions">Pretplate</message>
-	<message key="gifts.purchaseGiftSubscription">Dajte poklon pretplatu</message>
-	<message key="gifts.noSubscriptions">nema poklonjenih pretplata</message>
-	<message key="gifts.subscriptionTypeNotValid">Tip pretplate nije važeći za ovaj poklon. Javite se ravnatelju za poklone.</message>
 	<message key="payment.authorFees">Autorova plaćanja</message>
-	<message key="payment.type.gift">Poklon</message>
-	<message key="payment.type.gift.subscription">Pretplata</message>
 	<message key="payment.subscription.purchase">Kupi pretplatu</message>
 	<message key="installer.allowFileUploads"><![CDATA[Vaš uslužnik dozvoljava postavljanje datoteka: <strong>{$allowFileUploads}</strong>]]></message>
 	<message key="installer.maxFileUploadSize"><![CDATA[Vaš uslužnik dozvoljava postavljanje datoteka maksimalne veličine: <strong>{$maxFileUploadSize}</strong>]]></message>
@@ -961,16 +932,6 @@ Autori koji objavljuju u ovom časopisu pristaju na sljedeće uvijete:
 	<message key="subscriptions.institutionalOnlinePaymentDescription"><![CDATA[<strong>Napomena:</strong> Institucionalna pretplata kupljena preko interneta treba obaežno odobrenje domena i IP opsega prije aktiviranja pretplate.]]></message>
 	<message key="user.subscriptions.statusInformation">Aktivne i istekle pretplate su dole prikazane sa datumima isteka. Dodatno, slijedeće statusne informacije mogu biti prikzanu uz svaku pretplatu.</message>
 	<message key="user.subscriptions.form.domainInstructions"><![CDATA[Ako je ovdje unesen domen, IP opseg nije obavezan. <br />Važeće vrijednosti za naživ domena je (npr. hrcak.srce.hr)]]></message>
-	<message key="gifts.redeemGift">Upotrebi poklon pretplatu</message>
-	<message key="gifts.status.redeemed">Upotrebljen</message>
-	<message key="gifts.status.redeemGift">Upotrebi poklon pretplatu</message>
-	<message key="gifts.subscriptionsDescription">Poklon pretplata koju ste iskoristili će zamijeniti vašu postojeću pretplatu ako je imate. Pretplata će početina dan početka upotrebe poklona i važit će dok traje taj tip pretplate.</message>
-	<message key="gifts.giftSubscriptionsAvailable">Dostupne su poklon pretplate.  Poklonjene pretplate mogu biti iskorišćene bilo kada od strane primatelja poklona. Poklon pretplate su lijep način da podržite ovaj časopis.</message>
-	<message key="gifts.giftRedeemed">Poklon je uspješno iskorišćen.</message>
-	<message key="gifts.noGiftToRedeem">Ovaj poklon se ne može ponovo iskoristiti.</message>
-	<message key="gifts.giftAlreadyRedeemed">Ovaj poklon je već iskorišćen.</message>
-	<message key="gifts.giftNotValid">Ovaj poklon je važeći i ne može biti ponovo iskorišćen.</message>
-	<message key="gifts.subscriptionNonExpiring">Ovaj poklon nije ponovo iskorišćen jer nemate važeću pretplatu na ovaj časopis.</message>
 	<message key="payment.loginRequired.forIssue">Da bi pristupili ovoj stavki potrebna je pretplata ili kupiti izdanje. Prijavite se u sustav i časopis za provjeriti pretplatu, pristupiti prethodnoj kupovini ili sada kupiti izdanje.</message>
 	<message key="notification.type.articleSubmitted">Novi članak "{$title}", je podnešen.</message>
 	<message key="notification.type.editorDecisionComment">Postavljen je komentar na urednikovu odluku za  "{$title}".</message>

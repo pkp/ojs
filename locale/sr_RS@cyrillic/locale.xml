@@ -4,12 +4,12 @@
 <!--
   * locale/sr_RS@cyrillic/locale.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University 
+  * Copyright (c) 2013-2017 Simon Fraser University
   * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Serbian_(sr_RS)
   * Localization strings for the sr_RS@cyrillic (Cрпски) locale.
-  * 
+  *
   -->
 
 <locale name="sr_RS@cyrillic" full_name="Cрпски">
@@ -69,7 +69,7 @@
 	<message key="section.title">Наслов секције</message>
 	<message key="section.abbreviation">Скраћеница</message>
 	<message key="section.abbreviation.example">(Нпр. Чланци=CLA)</message>
-	
+
 
 	<!--  Common Article Terms  --><message key="article.articles">Чланци</message>
 	<message key="article.submissionId">ID поднеска чланка</message>
@@ -347,7 +347,6 @@ Postavljanje LOCKSS podrške za Open Journal Systems није потребно �
 
 	<message key="reviewer.article.mustSelectDecision">Нема одабране препоруке. Да бисте предали фајл или рецензију морате одабрати препоруку.</message>
 	<message key="reviewer.article.confirmDecision">Када сте једном записали одлуку, нећете више моћи направити никакве промене на овој рецензији. Да ли сте сигурни да желите да наставите?</message>
-	<message key="reviewer.article.ensuringBlindReview">Како осигурати анонимност рецензије</message>
 
 	<!--  Used in submission editing  --><message key="copyeditor.article.fileToCopyedit">Фајл за лекторисање</message>
 	<message key="copyeditor.article.copyeditorFile">Фајл лектора</message>
@@ -654,7 +653,6 @@ Postavljanje LOCKSS podrške za Open Journal Systems није потребно �
 		<li>OJS не може модификовати локализациони registry фајл, обично "registry/locales.xml".</li>
 	</ul>
 <p>Фајл са језицима можете ручно преузети са <a href="http://pkp.sfu.ca">PKP web site</a>.</p>]]></message>
-	<message key="plugins.categories.citationFormats.description">Додаци за обликовање цитата омогућују корисницима преузимање цитата у различитим библиографским стандардима.</message>
 	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Предложене Creative Commons одредбе о ауторским правима</h3>
 <h4>1. Предлог за часописе који омогућују отворен приступ</h4>
 Аутори који објављују у овом часопису пристају на следеће услове:
@@ -712,8 +710,6 @@ Postavljanje LOCKSS podrške za Open Journal Systems није потребно �
 	<message key="payment.type.donation">Донације</message>
 	<message key="payment.donation.makeDonation">Уплатите донацију</message>
 	<message key="payment.submission.paySubmission">Уплатите накнаду за пријаву чланка</message>
-	<message key="payment.fastTrack.payFastTrack">Уплатите накнаду за убрзани рецензијски поступак</message>
-	<message key="payment.fastTrack.inFastTrack">Убрзани рецензијски поступак</message>
 	<message key="payment.publication.payPublication">Уплатите накнаду за објављивање</message>
 	<message key="payment.publication.publicationPaid">Накнада за објављивање уплаћена.</message>
 	<message key="payment.membership.buyMembership">Купите индивидуално чланство</message>
@@ -730,7 +726,7 @@ Postavljanje LOCKSS podrške za Open Journal Systems није потребно �
 	<message key="debug.notes.currencyListLoad">Учитана је листа валута "{$filename}" из XML-a.</message>
 	<message key="reviewer.article.restrictedFileAccess">Текст пријаве ће бити на располагању када и ако рецензент прихвати понуду израде рецензије.</message>
 	<message key="reviewer.article.enterReviewForm">Кликните на икону и испуните образац за реценцзију.</message>
-	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Испуните обавезана поља.</message>
+	<message key="reviewer.submission.reviewFormResponse.form.responseRequired">Испуните обавезана поља.</message>
 	<message key="common.homePageHeader.altText">Заглавље наслове стране</message>
 	<message key="common.journalHomepageImage.altText">Слика насловне стране часописа</message>
 	<message key="article.coverPage.altText">Насловна страна</message>
@@ -859,44 +855,12 @@ Postavljanje LOCKSS podrške za Open Journal Systems није потребно �
 	<message key="issue.nonpdf.title">Преузми издање</message>
 	<message key="issue.viewIssue">Погледај издање</message>
 	<message key="site.noJournals">Нема доступних часописа.</message>
-	<message key="gifts.buyer">Од</message>
-	<message key="gifts.buyerDescription">Од кога је овај поклон?</message>
-	<message key="gifts.recipient">За</message>
-	<message key="gifts.recipientDescription">За кога је овај поклон?</message>
-	<message key="gifts.thankYou">Хвала</message>
-	<message key="gifts.purchaseGiftIndividualSubscription">Поклоњена претплата</message>
-	<message key="gifts.details">Детаљи поклона</message>
-	<message key="gifts.gift">Поклон</message>
-	<message key="gifts.noteTitle">Наслов</message>
-	<message key="gifts.note">Белешка о поклону</message>
-	<message key="gifts.noteTitleRequired">Упишите наслов ваше персонализоване поруке.</message>
-	<message key="gifts.noteRequired">Упишите персонализовану поруку.</message>
-	<message key="gifts.localeRequired">Одаберите језик ваше персонализоване поруке.</message>
-	<message key="gifts.myGifts">Моји поклони</message>
-	<message key="gifts.manageMyGifts">Управља мојим поклонима</message>
-	<message key="gifts.redeemGift">Искористи поклон</message>
-	<message key="gifts.status.notRedeemed">Доступно</message>
-	<message key="gifts.status.redeemGift">Искористи поклон</message>
-	<message key="gifts.subscriptions">Претплате</message>
-	<message key="gifts.purchaseGiftSubscription">Дај поклоњену претплату</message>
-	<message key="gifts.noSubscriptions">Нема поклоњених претплатa</message>
-	<message key="gifts.giftRedeemed">Поклоњена претплата је успешно употребљена.</message>
-	<message key="gifts.noGiftToRedeem">Овај поклон није доступан за употребу.</message>
-	<message key="gifts.giftAlreadyRedeemed">Овај поклон јевећ био употребљен.</message>
-	<message key="gifts.giftNotValid">Овај поклон није важећи и не може битиупотребљен.</message>
-	<message key="payment.type.gift">Поклон</message>
-	<message key="payment.type.gift.subscription">Претплата</message>
 	<message key="installer.allowFileUploads"><![CDATA[Ваш сервер подржава постављање датотека: <strong>{$allowFileUploads}</strong>]]></message>
 	<message key="installer.maxFileUploadSize"><![CDATA[Ваш сервер тренутно подржава постављање максималну величину датотеке: <strong>{$maxFileUploadSize}</strong>]]></message>
 	<message
  key="site.upgradeAvailable.admin"><![CDATA[Доступна је нова верзија OJS! Тренутно користите OJS {$currentVersion}.
  Најновија верзија ОЈС је {$latestVersion}. Посетите <a href="http://pkp.sfu.ca/ojs_download" target="_new">ову страну</a>да преузмете последњу верзију и да нађете упутство за надоградњу.]]></message>
 	<message key="site.upgradeAvailable.manager"><![CDATA[Доступна је нова верзија ОЈС! Тренутно користите OJS {$currentVersion}. Обратите се вашем администратору сајта ({$siteAdminName}, <a href="mailto:{$siteAdminEmail}">{$siteAdminEmail}</a>) и обавестите га о новом издању. Више информација можете наћи <a href="http://pkp.sfu.ca/ojs_download" target="_new">овде</a>.]]></message>
-	<message key="gifts.thankYouMessage">Ваша куповина поклона је завршена. Добићете копију е-поруке у вези поклона која је послата примаоцу одмах након обраде плаћања.</message>
-	<message key="gifts.subscriptionFormIntroduction">Испуните образац доле. Уписана информација о контакту са вашом поруком о поклону ће бити послата примаоцу поклона и биће информисан о поклоњеној претплати (ви ћете добити копију ове поруке).</message>
-	<message key="gifts.detailsDescription">Одаберите поклон доле и укључите персонализовану поруку која ће битипослата примаоцу (ви ћете добити копију ове поруке).</message>
-	<message key="gifts.giftSubscriptionsAvailable">Поклон претплате су у понуди.  Примаоци поклон претплате могу је употребити у било које време. Поклоњене претплате су одличан начин да се подржи часопис.</message>
-	<message key="gifts.subscriptionTypeNotValid">Овај тип претплате није важећи за овај поклон. Контактирајте управника за претплате.</message>
 	<message key="editor.submissionEditing.notes"><![CDATA[<ol>
 	<li>Наглашене ставке показују да је уредник тражио да се изврше активности као што је доле назначено:
 		<ul>
@@ -906,9 +870,6 @@ Postavljanje LOCKSS podrške za Open Journal Systems није потребно �
 		</ul>
 	</li>
 </ol>]]></message>
-	<message key="gifts.status.redeemed">Употребљен</message>
-	<message key="gifts.subscriptionsDescription">Поклоњена претплата коју сте употребили ће заменити вашу постојећу претплату (ако је имате). Претплате ће почети са важењем на дан почетка претплате и биће важеће до истека трајања у складу са типом претплате.</message>
-	<message key="gifts.subscriptionNonExpiring">Поклон није искориштен зато што имате у току претплату на часопис која још није истекла.</message>
 	<message key="payment.loginRequired.forIssue">Да би приступили овој ставки потребна је претплата или да купите издање. Пријавите се у часопис да би верификовали претплату, приступили претходним куповинама или купили издање.</message>
 	<message key="payment.type.purchaseIssue">Цена куповине издања</message>
 	<message key="context.current">Тренутни чаопис:</message>
@@ -924,7 +885,6 @@ Postavljanje LOCKSS podrške za Open Journal Systems није потребно �
 	<message key="about.onlineSubmissions.register">Регистрација</message>
 	<message key="about.onlineSubmissions.submissionActions">{$newSubmission} или {$viewSubmissions}.</message>
 	<message key="about.onlineSubmissions.newSubmission">Направи нову предају</message>
-	<message key=""><![CDATA[]]></message>
 	<message key="user.reviewerPrompt">Да ли бисте желели да будете рецензент радова који се објављују у овом часопису?</message>
 	<message key="user.reviewerPrompt.userGroup">Да, захтевам улогу {$userGroup}.</message>
 	<message key="user.register.otherContextRoles">Захтевај следеће улоге.</message>
@@ -932,7 +892,6 @@ Postavljanje LOCKSS podrške za Open Journal Systems није потребно �
 	<message key="user.register.contextsPrompt">За које часописе на овом сајту желите да се региструјете?</message>
 	<message key="user.profile.form.hideOtherContexts">Сакриј остале часописе</message>
 	<message key="user.profile.form.showOtherContexts">Региструј се и за остале часописе</message>
-	<message key=""><![CDATA[]]></message>
 	<message key="notification.type.submissionSubmitted">Нови чланак "{$title}" је предат.</message>
 	<message key="reviewer.article.selectRecommendation.byEditor">Подеси или измени препоруку рецензента.</message>
 	<message key="article.return">Повратак на детаље чланка</message>

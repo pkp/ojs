@@ -14,6 +14,7 @@
  * @uses $hasAccess bool Can this user access galleys for this context?
  * @uses $publishedArticles array Lists of articles published in this issue
  *   sorted by section.
+ * @uses $primaryGenreIds array List of file genre ids for primary file types
  *}
 <div class="obj_issue_toc">
 
@@ -42,11 +43,7 @@
 
 		{* PUb IDs (eg - DOI) *}
 		{foreach from=$pubIdPlugins item=pubIdPlugin}
-			{if $issue->getPublished()}
-				{assign var=pubId value=$issue->getStoredPubId($pubIdPlugin->getPubIdType())}
-			{else}
-				{assign var=pubId value=$pubIdPlugin->getPubId($issue)}{* Preview pubId *}
-			{/if}
+			{assign var=pubId value=$issue->getStoredPubId($pubIdPlugin->getPubIdType())}
 			{if $pubId}
 				{assign var="doiUrl" value=$pubIdPlugin->getResolvingURL($currentJournal->getId(), $pubId)|escape}
 				<div class="pub_id {$pubIdPlugin->getPubIdType()|escape}">

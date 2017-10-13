@@ -130,6 +130,13 @@ class IssueEntryTabHandler extends PublicationEntryTabHandler {
 			$notificationManager = new NotificationManager();
 			$notificationKey = 'notification.savedIssueMetadata';
 			$notificationManager->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_SUCCESS, array('contents' => __($notificationKey)));
+			$notificationManager->updateNotification(
+				$request,
+				array(NOTIFICATION_TYPE_PUBLICATION_SCHEDULED),
+				null,
+				ASSOC_TYPE_SUBMISSION,
+				$submission->getId()
+			);
 			// Display assign public identifiers form
 			$assignPubIds = false;
 			$pubIdPlugins = PluginRegistry::loadCategory('pubIds', true);
@@ -145,13 +152,15 @@ class IssueEntryTabHandler extends PublicationEntryTabHandler {
 				$formParams = array('stageId' => $stageId);
 				$assignPublicIdentifiersForm = new AssignPublicIdentifiersForm($formTemplate, $submission, true, '', $formParams);
 				$assignPublicIdentifiersForm->initData($args, $request);
-				return new JSONMessage(true, $assignPublicIdentifiersForm->fetch($request));
+				$json = new JSONMessage(true, $assignPublicIdentifiersForm->fetch($request));
 			} else {
-				return new JSONMessage();
+				$json = new JSONMessage();
 			}
+			$json->setEvent('dataChanged');
 		} else {
-			return new JSONMessage(true, $form->fetch($request));
+			$json = new JSONMessage(true, $form->fetch($request));
 		}
+		return $json;
 	}
 
 	/**
@@ -202,7 +211,22 @@ class IssueEntryTabHandler extends PublicationEntryTabHandler {
 		$stageId = $this->getStageId();
 		$identifiersForm = new PublicIdentifiersForm($submission, $stageId, array('displayedInContainer' => true));
 		$identifiersForm->clearPubId($request->getUserVar('pubIdPlugIn'));
-		return new JSONMessage(true);
+		$json = new JSONMessage(true);
+		$json->setEvent('containerReloadRequested', array(
+			'tabsUrl' => $request->getRouter()->getDispatcher()->url(
+				$request,
+				ROUTE_COMPONENT,
+				null,
+				'modals.submissionMetadata.IssueEntryHandler',
+				'fetch',
+				null,
+				array(
+					'submissionId' => $submission->getId(),
+					'stageId' => $stageId
+				)
+			)
+		));
+		return $json;
 	}
 
 	/**

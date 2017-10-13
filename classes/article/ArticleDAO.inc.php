@@ -82,7 +82,6 @@ class ArticleDAO extends SubmissionDAO {
 		$article->setSectionAbbrev($row['section_abbrev']);
 		$article->setCitations($row['citations']);
 		$article->setPages($row['pages']);
-		$article->setFastTracked($row['fast_tracked']);
 		$article->setHideAuthor($row['hide_author']);
 
 		HookRegistry::call('ArticleDAO::_fromRow', array(&$article, &$row));
@@ -105,9 +104,9 @@ class ArticleDAO extends SubmissionDAO {
 		$article->stampModified();
 		$this->update(
 			sprintf('INSERT INTO submissions
-				(locale, context_id, section_id, stage_id, language, citations, date_submitted, date_status_modified, last_modified, status, submission_progress, pages, fast_tracked, hide_author)
+				(locale, context_id, section_id, stage_id, language, citations, date_submitted, date_status_modified, last_modified, status, submission_progress, pages, hide_author)
 				VALUES
-				(?, ?, ?, ?, ?, ?, %s, %s, %s, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, %s, %s, %s, ?, ?, ?, ?)',
 				$this->datetimeToDB($article->getDateSubmitted()), $this->datetimeToDB($article->getDateStatusModified()), $this->datetimeToDB($article->getLastModified())),
 			array(
 				$article->getLocale(),
@@ -119,7 +118,6 @@ class ArticleDAO extends SubmissionDAO {
 				$article->getStatus() === null ? STATUS_QUEUED : $article->getStatus(),
 				$article->getSubmissionProgress() === null ? 1 : $article->getSubmissionProgress(),
 				$article->getPages(),
-				(int) $article->getFastTracked(),
 				(int) $article->getHideAuthor(),
 			)
 		);
@@ -156,7 +154,6 @@ class ArticleDAO extends SubmissionDAO {
 					status = ?,
 					submission_progress = ?,
 					pages = ?,
-					fast_tracked = ?,
 					hide_author = ?
 				WHERE submission_id = ?',
 				$this->datetimeToDB($article->getDateSubmitted()), $this->datetimeToDB($article->getDateStatusModified()), $this->datetimeToDB($article->getLastModified())),
@@ -169,7 +166,6 @@ class ArticleDAO extends SubmissionDAO {
 				(int) $article->getStatus(),
 				(int) $article->getSubmissionProgress(),
 				$article->getPages(),
-				(int) $article->getFastTracked(),
 				(int) $article->getHideAuthor(),
 				(int) $article->getId()
 			)
