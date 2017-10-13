@@ -58,13 +58,13 @@
 				<table class="cmp_table">
 					<tr>
 						<th>{translate key="user.subscriptions.form.typeId"}</th>
-						<th>{translate key="subscriptions.status"}<th>
+						<th>{translate key="subscriptions.status"}</th>
 						{if $journalPaymentsEnabled}
 							<th></th>
 						{/if}
 					</tr>
 					<tr>
-						<td>{$userIndividualSubscription->getLocalizedName()|escape}</td>
+						<td>{$userIndividualSubscription->getSubscriptionTypeName()|escape}</td>
 						<td>
 							{assign var="subscriptionStatus" value=$userIndividualSubscription->getStatus()}
 							{assign var="isNonExpiring" value=$userIndividualSubscription->isNonExpiring()}
@@ -116,6 +116,7 @@
 							</td>
 						{/if}
 					</tr>
+				</table>
 			{elseif $journalPaymentsEnabled}
 				<p>
 					<a class="action" href="{url op="purchaseSubscription" path="individual"}">
