@@ -96,7 +96,7 @@ class IssueHandler extends Handler {
 		$templateMgr = TemplateManager::getManager($request);
 		$journal = $request->getJournal();
 
-		if ($galley = $this->getGalley()) {
+		if (($galley = $this->getGalley()) && $this->userCanViewGalley($request)) {
 			if (!HookRegistry::call('IssueHandler::view::galley', array(&$request, &$issue, &$galley))) {
 				$request->redirect(null, null, 'download', array($issue->getBestIssueId($journal), $galley->getBestGalleyId($journal)));
 			}
@@ -194,10 +194,8 @@ class IssueHandler extends Handler {
 			// If no domain/ip subscription, check if user has a valid subscription
 			// or if the user has previously purchased the issue
 			if (!$isSubscribedDomain && $subscriptionRequired) {
-
 				// Check if user has a valid subscription
 				$subscribedUser = $issueAction->subscribedUser($user, $journal, $issue->getId());
-
 				if (!$subscribedUser) {
 					// Check if payments are enabled,
 					import('classes.payment.ojs.OJSPaymentManager');
@@ -219,7 +217,7 @@ class IssueHandler extends Handler {
 							return true;
 						} else {
 							// Otherwise queue an issue purchase payment and display payment form
-							$queuedPayment =& $paymentManager->createQueuedPayment($journal->getId(), PAYMENT_TYPE_PURCHASE_ISSUE, $userId, $issue->getId(), $journal->getSetting('purchaseIssueFee'));
+							$queuedPayment = $paymentManager->createQueuedPayment($journal->getId(), PAYMENT_TYPE_PURCHASE_ISSUE, $userId, $issue->getId(), $journal->getSetting('purchaseIssueFee'));
 							$paymentManager->queuePayment($queuedPayment);
 
 							$paymentForm = $paymentManager->getPaymentForm($queuedPayment);
@@ -307,7 +305,7 @@ class IssueHandler extends Handler {
 
 			// Partial subscription expiry for articles
 			$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-			$publishedArticlesTemp =& $publishedArticleDao->getPublishedArticles($issue->getId());
+			$publishedArticlesTemp = $publishedArticleDao->getPublishedArticles($issue->getId());
 
 			$articleExpiryPartial = array();
 			foreach ($publishedArticlesTemp as $publishedArticle) {

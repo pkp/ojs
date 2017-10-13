@@ -77,7 +77,7 @@
 	</div>
 
 	{* Full-issue galleys *}
-	{if $issueGalleys && $hasAccess}
+	{if $issueGalleys}
 		<div class="galleys">
 			<h2>
 				{translate key="issue.fullIssue"}
