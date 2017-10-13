@@ -22,8 +22,8 @@
 							{translate key="user.subscriptions.form.typeId"}
 						</span>
 						<select name="typeId" id="typeId">
-							{foreach name=types from=$subscriptionTypes item=subscriptionType}
-								<option value="{$subscriptionType->getId()}"{if $typeId == $subscriptionType->getId()} selected{/if}>{$subscriptionType}</option>
+							{foreach name=types from=$subscriptionTypes key=thisTypeId item=subscriptionType}
+								<option value="{$thisTypeId|escape}"{if $typeId == $thisTypeId} selected{/if}>{$subscriptionType|escape}</option>
 							{/foreach}
 						</select>
 					</label>
