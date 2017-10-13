@@ -357,8 +357,11 @@ class PublishedArticleDAO extends DAO {
 		if ($useCache) {
 			$cache =& $this->_getPublishedArticleCache();
 			$returner = $cache->get($articleId);
-			if ($returner && $journalId != null && $journalId != $returner->getJournalId()) $returner = null;
-			return $returner;
+			$skip = $returner && $journalId != null && $journalId != $returner->getJournalId();
+			
+                        if ($returner && !$skip) {
+                            return $returner;
+                        }
 		}
 
 		$primaryLocale = AppLocale::getPrimaryLocale();
