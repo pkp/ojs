@@ -635,46 +635,46 @@ Tack för fortsatt visat intresse för vårt arbete!<br />
 		<description>Det här e-postmeddelandet skickas till registrerade läsare som har begärt att meddelas om och när ett nummer görs tillgängligt som open access.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_BEFORE_EXPIRY">
-		<subject>Prenumeration går snart ut</subject>
+		<subject>Prenumeration närmar sig förfallodatum</subject>
 		<body><![CDATA[{$subscriberName}:<br />
 <br />
-Din prenumeration på {$contextName} håller på att gå ut.<br />
+Din prenumeration på {$contextName} håller på att förfalla.<br />
 <br />
 {$subscriptionType}<br />
-Utgångsdatum: {$expiryDate}<br />
+Förfallodatum: {$expiryDate}<br />
 <br />
 För att försäkra dig om fortsatt tillgång till den här tidskriften, gå till tidskriftens webbplats och förnya din prenumeration. Du loggar in i systemet med ditt användarnamn, &quot;{$username}&quot;.<br />
 <br />
 Vänligen kontakta mig om du har frågor.<br />
 <br />
 {$subscriptionContactSignature}]]></body>
-		<description>Det här e-postmeddelandet meddelar en prenumerant att prenumerationen håller på att gå ut. Det inkluderar tidskriftens URL samt instruktioner för tillgång.</description>
+		<description>Det här e-postmeddelandet meddelar en prenumerant att prenumerationen håller på att förfalla. Det inkluderar tidskriftens URL samt instruktioner för tillgång.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_AFTER_EXPIRY">
-		<subject>Prenumeration har gått ut</subject>
+		<subject>Prenumeration har förfallit</subject>
 		<body><![CDATA[{$subscriberName}:<br />
 <br />
-Din prenumeration på tidskriften {$contextName} har gått ut.<br />
+Din prenumeration på tidskriften {$contextName} har förfallit.<br />
 <br />
 {$subscriptionType}<br />
-Utgångsdatum: {$expiryDate}<br />
+Förfallodatum: {$expiryDate}<br />
 <br />
 Gå till tidskriftens webbplats för att förnya din prenumeration. Du loggar in i systemet med ditt användarnamn, &quot;{$username}&quot;.<br />
 <br />
 Vänligen kontakta mig om du har frågor.<br />
 <br />
 {$subscriptionContactSignature}]]></body>
-		<description>Det här e-postmeddelandet meddelar en prenumerant att prenumerationen har gått ut. Det inkluderar tidskriftens URL samt instruktioner för tillgång.</description>
+		<description>Det här e-postmeddelandet meddelar en prenumerant att prenumerationen har förfallit. Det inkluderar tidskriftens URL samt instruktioner för tillgång.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_AFTER_EXPIRY_LAST">
-		<subject>Prenumeration har gått ut – sista påminnelsen</subject>
+		<subject>Prenumeration har förfallit – sista påminnelsen</subject>
 		<body><![CDATA[{$subscriberName}:<br />
 <br />
-Din prenumeration på tidskriften {$contextName} har gått ut.<br />
+Din prenumeration på tidskriften {$contextName} har förfallit.<br />
 Observera att det här är den sista påminnelsen som skickas till dig.<br />
 <br />
 {$subscriptionType}<br />
-Utgångsdatum: {$expiryDate}<br />
+Förfallodatum: {$expiryDate}<br />
 <br />
 Gå till tidskriftens webbplats för att förnya din prenumeration. Du loggar in i systemet med ditt användarnamn, &quot;{$username}&quot;.<br />
 <br />
