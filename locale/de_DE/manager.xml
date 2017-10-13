@@ -249,7 +249,7 @@
 	<message key="manager.setup.managingTheJournal">4. Schritt: Die Zeitschrift verwalten</message>
 	<message key="manager.setup.navigationBar">Navigationsleiste</message>
 	<message key="manager.setup.navigationBarDescription">Löschen Sie Einträge in der Navigationsleiste oder fügen Sie Einträge hinzu.</message>
-	<message key="manager.setup.navItemIsAbsolute">Die URL ist ein absolute Adresse (z.B. " http://www.example.com"), keine relative URL (z.B."/manager/setup")</message>
+	<message key="manager.setup.navItemIsAbsolute">Die URL ist eine absolute Adresse (z.B. "http://www.example.com"), keine relative URL (z.B."/manager/setup")</message>
 	<message key="manager.setup.navItemIsLiteral">Die Seitenbenennung besteht aus einer Buchstabenkette (z.B. "Einrichtung der Zeitschrift") und nicht aus einem Lokalisierungsschlüssel (z.B. "manager.setup")</message>
 	<message key="manager.setup.noImageFileUploaded">Keine Grafikdatei hochgeladen.</message>
 	<message key="manager.setup.noStyleSheetUploaded">Kein Style Sheet hochgeladen.</message>
@@ -320,7 +320,7 @@
 	<message key="manager.setup.typeProvideExamples">Beispiele für im Fachgebiet relevante Forschungsansätze, -methoden oder -verfahren angeben.</message>
 	<message key="manager.setup.uniqueIdentifier">Eindeutige Kennung</message>
 	<message key="manager.setup.uniqueIdentifierDescription">Artikel und Ausgaben können mit einer Identifikationsnummer oder einer Zeichenkette gekennzeichnet werden, wobei ein System, z.B. das DOI (Digital Object Identifier)-System, verwendet werden sollte.</message>
-	<message key="manager.setup.useEditorialReviewBoard">Die Zeitschrift hat eine Redaktion / ein Herausgeber/innen- und Gutachter/innengremium.</message>
+	<message key="manager.setup.useEditorialReviewBoard">Die Zeitschrift hat eine Redaktion bzw. ein Herausgeber/innengremium.</message>
 	<message key="manager.setup.useThumbnail">Vorschaubild</message>
 	<message key="manager.setup.useImageTitle">Titelgrafik</message>
 	<message key="manager.setup.useJournalStyleSheet">Style Sheet für die Zeitschrift</message>
