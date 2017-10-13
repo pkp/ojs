@@ -326,18 +326,6 @@ Z wyrazami szacunku, <br />
 {$reviewerName}<br />]]></body>
 		<description>Wiadomość wysyłana przez recenzenta do redaktora prowadzącego. Zawiera odrzucenie prośby o wykonanie recenzji.</description>
 	</email_text>
-	<email_text key="REVIEW_COMPLETE">
-		<subject>Ukończono recenzję artykułu</subject>
-		<body>Do: {$editorialContactName}
-
-Szanowna Pani / Szanowny Panie,
-
-Ukończyłem/am recenzję artykułu "{$articleTitle}", zgłoszonego do czasopisma {$journalName}. Przysyłam moje rekomendacje: "{$recommendation}".
-
-Z wyrazami szacunku,
-{$reviewerName}</body>
-		<description>Wiadomość wysyłana przez recenzenta do redaktora działu, w celu zgłoszenia ukończenia recenzji oraz przesłania komentarzy i rekomendacji na stronie czasopisma.</description>
-	</email_text>
 	<email_text key="REVIEW_ACK">
 		<subject>Podziękowanie za wykonanie recenzji</subject>
 		<body><![CDATA[Szanowna Pani/ Szanowny Panie,<br />
