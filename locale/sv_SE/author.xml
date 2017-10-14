@@ -42,7 +42,7 @@
 	<message key="author.submissions.queuedEditingCopyedit">Under granskning: Manusredigering begärd</message>
 	<message key="author.submissions.queuedEditingProofread">Under granskning: Korrekturläsning begärd</message>
 	<message key="author.submissions.uploadCopyeditedVersion">Ladda upp redigerat manus</message>
-	<message key="author.submissions.proofreadingCorrections">Rättelser från korrekturläsning</message>
+	<message key="author.submissions.proofreadingCorrections">Rättelser efter korrekturläsning</message>
 	<message key="author.submissions.confirmDelete">Är du säker på att du vill ta bort den påbörjade inlämningen?</message>
 	<message key="author.submissions.viewStatus">Se status</message>
 	<message key="author.submissions.noSubmissions">Inga bidrag.</message>
@@ -69,11 +69,11 @@
 	<message key="author.submit.form.titleRequired">Titel krävs.</message>
 	<message key="author.submit.form.abstractRequired">Abstract krävs.</message>
 	<message key="author.submit.form.wordCountAlert">Du har överskridit max antal ord för abstracts i den här tidskriftssektionen.</message>
-	<message key="author.submit.submissionFile">Bidrag</message>
-	<message key="author.submit.uploadSubmissionFile">Ladda upp bidrag</message>
-	<message key="author.submit.replaceSubmissionFile">Ersätt uppladdat bidrag</message>
-	<message key="author.submit.noSubmissionFile">Ingen bidrag uppladdat.</message>
-	<message key="author.submit.noSubmissionConfirm">Är du säker på att du vill fortsätta utan att ladda upp ett bidrag?</message>
+	<message key="author.submit.submissionFile">Bidragsfil</message>
+	<message key="author.submit.uploadSubmissionFile">Ladda upp bidragsfil</message>
+	<message key="author.submit.replaceSubmissionFile">Ersätt uppladdad bidragsfil</message>
+	<message key="author.submit.noSubmissionFile">Ingen bidragsfil uppladdat.</message>
+	<message key="author.submit.noSubmissionConfirm">Är du säker på att du vill fortsätta utan att ladda upp en bidragsfil?</message>
 	<message key="author.submit.supplementaryFilesInstructions">I det här frivilliga momentet kan du ladda upp kompletterande filer. Filerna, som kan vara i vilket format som helst, kan innehålla exempelvis (a) forskningsinstrument, (b) dataset, som följer villkoren i studiens forskningsetiska granskning, (c) källor som annars inte skulle skulle vara tillgänglig för läsaren, (d) figurer och diagram som inte fått utrymme i själva texten, eller annat material som tillför något till arbetet.</message>
 	<message key="author.submit.supplementaryFiles.saveToUpload">Klicka Spara för att ladda upp fil. (Efter detta kan ytterligare filer laddas upp).</message>
 	<message key="author.submit.forgottenSubmitSuppFile">Är du säker på att du vill fortsätta utan att ladda upp vald kompletterande fil?</message>

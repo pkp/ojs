@@ -175,7 +175,7 @@ Om du har några frågor, vänligen kontakta mig. Tack för att du har valt att 
 		<description>Det här e-postmeddelandet skickas, om det är aktiverat, automatiskt till andra författare knutna till bidraget i inskickningsprocessen men som inte är OJS-användare.</description>
 	</email_text>
 	<email_text key="SUBMISSION_UNSUITABLE">
-		<subject>Bidrag ej relevant för tidskriften</subject>
+		<subject>Bidrag motsvarar inte tidskriftens profil</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
 En första redaktionell granskning &quot;{$submissionTitle}&quot; har visat att det här bidraget inte överensstämmer med tidskriften {$contextName}s ämnesfokus. Jag rekommenderar att du tar del av beskrivningen av tidskriften under Om liksom tidskriftens hittills publicerade material för att få en bild av vilken typ av innehåll vi publicerar. Du kan också överväga att skicka manuskriptet till en annan, mer passande, tidskrift.<br />
@@ -289,7 +289,7 @@ Tack för att du överväger granskningsuppdraget.<br />
 		<subject>Förfrågan om granskning av artikel</subject>
 		<body><![CDATA[{$reviewerName}:<br />
 <br />
-Jag tror att du skulle passa utmärkt som sakkunniggranskare av manuskriptet &quot;{$submissionTitle}&quot; och detta är en förfrågan om du skulle vara villig att ta dig an den här viktiga uppgiften åt oss. Tidskriftens Riktlinjer för granskning bifogas här nedan, och bidraget finns som bilaga i det här e-postmeddelandet. Din bedömning av bidraget ska tillsammans med din rekommendation skickas per e-post till mig senast {$reviewDueDate}.<br />		
+Jag tror att du skulle passa utmärkt som sakkunniggranskare av manuskriptet &quot;{$submissionTitle}&quot; och detta är en förfrågan om du skulle vara villig att ta dig an den här viktiga uppgiften åt oss. Tidskriftens Riktlinjer för granskare bifogas här nedan, och bidraget finns som bilaga i det här e-postmeddelandet. Din bedömning av bidraget ska tillsammans med din rekommendation skickas per e-post till mig senast {$reviewDueDate}.<br />		
 <br />
 Vänligen meddela mig genom att svara på det här meddelandet senast {$responseDueDate} om du har möjlighet att åta dig uppdraget eller inte.<br />
 <br />
@@ -298,11 +298,11 @@ Tack för att du överväger granskningsuppdraget.<br />
 {$editorialContactSignature}<br />
 <br />
 <br />
-Riktlinjer för granskning:<br />
+Riktlinjer för granskare:<br />
 <br />
 {$reviewGuidelines}<br />
 ]]></body>
-		<description>Det här e-postmeddelandet från sektionsredaktören till en granskare ber granskaren att acceptera eller tacka nej till uppdraget att sakkunniggranska ett bidrag. Det innehåller bidraget som bifogad fil. Det här e-postmeddelandet används när Granskningsprocess E-postbilaga är valt i &gt; Inställningar &gt; Arbetsflöde &gt; Granskning. (Annars, se REVIEW_REQUEST.)</description>
+		<description>Det här e-postmeddelandet från sektionsredaktören till en granskare ber granskaren att acceptera eller tacka nej till uppdraget att sakkunniggranska ett bidrag. Det innehåller bidraget som bifogad fil. Det här e-postmeddelandet används när granskningsprocess med e-postbilaga är valt i &gt; Inställningar &gt; Arbetsflöde &gt; Granskning. (Annars, se REVIEW_REQUEST.)</description>
 	</email_text>
 		<email_text key="REVIEW_REQUEST_SUBSEQUENT">
 		<subject>Förfrågan om granskning av artikel</subject>
@@ -360,7 +360,7 @@ Detta gäller manuskriptet &quot;{$submissionTitle},&quot;, som är under överv
 <br />
 Efter granskningen av en tidigare version av manuskriptet har författarna nu skickat in en reviderad version av sin artikel. Vi är glada om du skulle kunna hjälpa oss att utvärdera denna.<br />
 <br />
-Riktlinjer för granskning bifogas här nedan, och bidraget finns som bilaga i det här e-postmeddelandet. Din bedömning av bidraget ska tillsammans med din rekommendation skickas per e-post till mig senast {$reviewDueDate}.<br />
+Riktlinjer för granskare bifogas här nedan, och bidraget finns som bilaga i det här e-postmeddelandet. Din bedömning av bidraget ska tillsammans med din rekommendation skickas per e-post till mig senast {$reviewDueDate}.<br />
 <br />
 Vänligen meddela mig genom att svara på det här meddelandet senast {$responseDueDate} om du har möjlighet att åta dig uppdraget eller inte.<br />
 <br />
@@ -369,11 +369,11 @@ Tack för att du överväger granskningsuppdraget.<br />
 {$editorialContactSignature}<br />
 <br />
 <br />
-Riktlinjer för granskning<br />
+Riktlinjer för granskare<br />
 <br />
 {$reviewGuidelines}<br />
 ]]></body>
-		<description>Det här e-postmeddelandet från sektionsredaktören till en granskare ber granskaren att acceptera eller tacka nej till uppdraget att sakkunniggranska ett bidrag en andra gång eller på nytt. Det innehåller information bidraget som en bifogad fil. Det här e-postmeddelandet används när Granskningsprocess E-postbilaga är valt i &gt; Inställningar &gt; Arbetsflöde &gt; Granskning. (Annars, se REVIEW_REQUEST_SUBSEQUENT.)</description>
+		<description>Det här e-postmeddelandet från sektionsredaktören till en granskare ber granskaren att acceptera eller tacka nej till uppdraget att sakkunniggranska ett bidrag en andra gång eller på nytt. Det innehåller information bidraget som en bifogad fil. Det här e-postmeddelandet används när Granskningsprocess med e-postbilaga är valt i &gt; Inställningar &gt; Arbetsflöde &gt; Granskning. (Annars, se REVIEW_REQUEST_SUBSEQUENT.)</description>
 	</email_text>
 	<email_text key="REVIEW_CANCEL">
 		<subject>Förfrågan om granskning återkallad</subject>

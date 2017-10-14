@@ -136,7 +136,7 @@
 	<message key="article.fontSize.small.altText">Liten</message>
 	<message key="article.fontSize.medium.altText">Mellan</message>
 	<message key="article.fontSize.large.altText">Stor</message>
-	<message key="article.return">Återgå till artikeldetaljer</message>
+	<message key="article.return">Gå tillbaka till artikeldetaljer</message>
 
 	<!-- Submission Tracking - Common -->
 	<message key="submission.submissionEditing">Manuskriptredigering</message>
@@ -235,7 +235,7 @@
 	<message key="issue.fullIssue">Helt nummer</message>
 	<message key="issue.nonpdf.title">Ladda ned nummer</message>
 	<message key="issue.viewIssue">Visa nummer</message>
-	<message key="issue.return">Återgå till nummerdetaljer</message>
+	<message key="issue.return">Gå tillbaka till nummerdetaljer</message>
 
 	<!-- Common Subscription Type Terms -->
 	<message key="subscriptionTypes.currency">Valuta</message>
@@ -637,7 +637,7 @@ Aktiva visar antalet granskningar som är förfrågade eller under arbete.]]></m
 
 	<!-- Submission Tracking - Proofread Specific -->
 	<message key="submission.proofreadingComments">Kommentarer från korrekturläsning</message>
-	<message key="submission.proofread.corrections">Rättelser från korrekturläsning</message>
+	<message key="submission.proofread.corrections">Rättelser efter korrekturläsning</message>
 	<message key="submission.proofread.instructions">Instruktioner för korrekturläsning</message>
 
 	<!-- Submission History -->
@@ -817,9 +817,9 @@ Aktiva visar antalet granskningar som är förfrågade eller under arbete.]]></m
 	<!-- Announcement -->
 
 	<!-- Help -->
-	<message key="help.ojsHelp">Open Journal Systems Hjälp</message>
-	<message key="help.ojsHelpAbbrev">OJS Hjälp</message>
-	<message key="help.searchReturnResults">Återgå till sökresultat</message>
+	<message key="help.ojsHelp">Open Journal Systems-hjälp</message>
+	<message key="help.ojsHelpAbbrev">OJS-hjälp</message>
+	<message key="help.searchReturnResults">Gå tillbaka till sökresultat</message>
 	<message key="help.goToEditPage">Redigera {$sectionTitle}</message>
 
 	<!-- Donations -->

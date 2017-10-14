@@ -108,7 +108,7 @@ Vänligen följ nedanstående riktlinjer för att göra ändringar i ditt manusk
 	<message key="default.journalSettings.proofingInstructions"><![CDATA[<p>Korrekturläsningsstadiet är till för att fånga upp eventuella fel i publiceringsversionens stavning, grammatik och formatering. I det här steget ska inte några substantiella ändringar göras, om det inte finns en särskild överenskommelse med sektionsredaktören. I Layout, klicka på VISA KORREKTUR för att se HTML, PDF, och andra tillgängliga filformat som används för att publicera bidraget.</p>
 	<h4>Korrektur av stavfel och grammatik</h4>
 
-	<p>Kopiera det felaktiga ordet eller meningen och klistra in dem i rutan Rättelser från korrekturläsning, åtgärdas med "ÄNDRA TILL"-åtgärder för redaktören enligt nedan:</p>
+	<p>Kopiera det felaktiga ordet eller meningen och klistra in dem i rutan Rättelser efter korrekturläsning, åtgärdas med "ÄNDRA TILL"-åtgärder för redaktören enligt nedan:</p>
 
 	<pre>1. ÄNDRA...
 	en de andra
@@ -123,7 +123,7 @@ Vänligen följ nedanstående riktlinjer för att göra ändringar i ditt manusk
 
 	<h4>Korrektur av formatering</h4>
 
-	<p>Beskriv vad problemet är och var det förekommer i rutan Rättelser från korrekturläsning. Använd "FORMATERING" som inledande rubrik enligt nedan:</p>
+	<p>Beskriv vad problemet är och var det förekommer i rutan Rättelser efter korrekturläsning. Använd "FORMATERING" som inledande rubrik enligt nedan:</p>
 	<br />
 	<pre>3. FORMATERING
 	Siffrorna i Tabell 3 är inte justerade i tredje kolumnen.</pre>
