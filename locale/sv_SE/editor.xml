@@ -100,16 +100,16 @@
 	<message key="editor.issues.noLiveIssues">Inga aktiva nummer</message>
 	<message key="editor.issues.open">Öppen</message>
 	<message key="editor.issues.pages">Sidor</message>
-	<message key="editor.issues.galleys">Publiceringsversioner nummer</message>
-	<message key="editor.issues.galley">Publiceringsversion nummer</message>
-	<message key="editor.issues.viewingGalley">Visar publiceringsversion nummer</message>
+	<message key="editor.issues.galleys">Numrets publiceringsversioner</message>
+	<message key="editor.issues.galley">Numrets publiceringsversion</message>
+	<message key="editor.issues.viewingGalley">Visar numrets publiceringsversion</message>
 	<message key="editor.issues.issueGalleysDescription">Publicera publiceringsversioner med hela numrets innehåll.</message>
-	<message key="editor.issues.noneIssueGalleys">Inga publiceringsversioner nummer har publicerats.</message>
-	<message key="editor.issues.galleyLabelRequired">Ett namn på publiceringsversion nummer krävs.</message>
-	<message key="editor.issues.galleyLocaleRequired">Språkkod för publiceringsversion nummer krävs.</message>
-	<message key="editor.issues.galleyPublicIdentificationExists">Identifikator för publiceringsversion nummer finns redan.</message>
-	<message key="editor.issues.backToIssueGalleys">Tillbaka till publiceringsversioner nummer</message>
-	<message key="editor.issues.confirmDeleteGalley">Är du säker på att du vill ta bort den här publiceringsversionen nummer?</message>
+	<message key="editor.issues.noneIssueGalleys">Inga publiceringsversioner för nummer har publicerats.</message>
+	<message key="editor.issues.galleyLabelRequired">Namn på numrets publiceringsversion krävs.</message>
+	<message key="editor.issues.galleyLocaleRequired">Angivelse om språk/region för numrets publiceringsversion krävs.</message>
+	<message key="editor.issues.galleyPublicIdentificationExists">Identifikator för numrets publiceringsversion finns redan.</message>
+	<message key="editor.issues.backToIssueGalleys">Tillbaka till numrets publiceringsversioner</message>
+	<message key="editor.issues.confirmDeleteGalley">Är du säker på att du vill ta bort den här publiceringsversionen för nummer?</message>
 	<message key="editor.issues.identifiers">Identifikatorer</message>
 	<message key="editor.navigation.futureIssues">Kommande nummer</message>
 	<message key="grid.action.addGalley">Lägg till publiceringsversion</message>
@@ -117,7 +117,7 @@
 	<message key="grid.action.addIssue">Skapa nummer</message>
 	<message key="grid.action.viewIssue">Visa</message>
 	<message key="grid.action.previewIssue">Förhandsgranska</message>
-	<message key="grid.action.addIssueGalley">Skapa publiceringsversion nummer</message>
+	<message key="grid.action.addIssueGalley">Skapa publiceringsversion för nummer</message>
 	<message key="grid.action.setCurrentIssue">Sätt som senaste nummer</message>
 	<message key="editor.navigation.issueArchive">Publicerade nummer</message>
 	<message key="editor.article.designateReviewVersion">Registrera originalfilen som Granskningsversion</message>
@@ -216,7 +216,7 @@
 	<message key="editor.article.remove">Ta bort</message>
 	<message key="editor.article.remove.confirm">Är du säker på att du vill ta bort den här artikeln från numret? Artikeln kommer bli tillgänglig för planläggning i annat nummer.</message>
 	<message key="editor.issues.invalidAccessDate">Tillgänglighetsdatum är ogiltigt.</message>
-	<message key="editor.issues.editIssueGalley">Redigera publiceringsversion nummer</message>
+	<message key="editor.issues.editIssueGalley">Redigera numrets publiceringsversion</message>
 	<message key="editor.submission.production.productionReadyFilesDescription"><![CDATA[Layoutredaktören förbereder dessa filer för respektive publiceringsversion och laddar sedan upp lämpliga <span class="pkp_help_title">Korrektur</span> för korrekturläsning.]]></message>
 	<message key="editor.submission.selectGalleyFiles">Välj filer för publiceringsversion</message>
 	<message key="editor.submission.editorial.finalDraftDescription"><![CDATA[Slutgiltiga utkastfiler i den här listan görs om till manusredigerade versioner av en manusredaktör och laddas upp nedan under <span class="pkp_help_title">Manusredigering</span>.]]></message>

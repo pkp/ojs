@@ -240,7 +240,7 @@ Tack för att du överväger granskningsuppdraget.<br />
 &quot;{$submissionTitle}&quot;<br />
 <br />
 {$submissionAbstract}]]></body>
-		<description>Det här e-postmeddelandet skickas automatiskt när en granskares deadline för bekräftelse på granskningsförfrågan löper ut (se Granskningsalternativ under Inställningar &gt; Arbetsflöde &gt; Granskning) och Granskartillgång med ett klick är avaktiverat. Schemalagda aktiviteter måste vara aktiverat och konfigurerat (se serverns konfigurationsfil).</description>
+		<description>Det här e-postmeddelandet skickas automatiskt när en granskares deadline för bekräftelse på granskningsförfrågan löper ut (se Granskningsalternativ under Inställningar &gt; Arbetsflöde &gt; Granskning) och Granskning utan inloggning är avaktiverat. Schemalagda aktiviteter måste vara aktiverat och konfigurerat (se serverns konfigurationsfil).</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ONECLICK">
 		<subject>Förfrågan om granskning av artikel</subject>
@@ -261,7 +261,7 @@ Tack för att du överväger granskningsuppdraget.<br />
 &quot;{$submissionTitle}&quot;<br />
 <br />
 {$submissionAbstract}]]></body>
-		<description>Det här e-postmeddelandet från sektionsredaktören till en granskare ber granskaren att acceptera eller tacka nej till uppdraget att sakkunniggranska ett bidrag. Det innehåller information om bidraget i form av titel och abstract, en deadline för granskning och instruktioner för hur man kommer åt bidraget. Meddelandet används när granskningsprocess Standard är valt i Administration &gt; Inställningar &gt; Arbetsflöde &gt; Granskning och Granskartillgång med ett klick är aktiverat.</description>
+		<description>Det här e-postmeddelandet från sektionsredaktören till en granskare ber granskaren att acceptera eller tacka nej till uppdraget att sakkunniggranska ett bidrag. Det innehåller information om bidraget i form av titel och abstract, en deadline för granskning och instruktioner för hur man kommer åt bidraget. Meddelandet används när granskningsprocess Standard är valt i Administration &gt; Inställningar &gt; Arbetsflöde &gt; Granskning och Granskning utan inloggning är aktiverat.</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_REMIND_AUTO_ONECLICK">
 		<subject>Förfrågan om granskning av artikel</subject>
@@ -283,7 +283,7 @@ Tack för att du överväger granskningsuppdraget.<br />
 &quot;{$submissionTitle}&quot;<br />
 <br />
 {$submissionAbstract}]]></body>
-		<description>Det här e-postmeddelandet skickas automatiskt när en granskares deadline för bekräftelse på granskningsförfrågan löper ut (se Granskningsalternativ under Inställningar &gt; Arbetsflöde &gt; Granskning) och Granskartillgång med ett klick är aktiverat. Schemalagda aktiviteter måste vara aktiverat och konfigurerat (se serverns konfigurationsfil).</description>
+		<description>Det här e-postmeddelandet skickas automatiskt när en granskares deadline för bekräftelse på granskningsförfrågan löper ut (se Granskningsalternativ under Inställningar &gt; Arbetsflöde &gt; Granskning) och Granskning utan inloggning är aktiverat. Schemalagda aktiviteter måste vara aktiverat och konfigurerat (se serverns konfigurationsfil).</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ATTACHED">
 		<subject>Förfrågan om granskning av artikel</subject>
@@ -350,7 +350,7 @@ Tack för att du överväger granskningsuppdraget.<br />
 &quot;{$submissionTitle}&quot;<br />
 <br />
 {$submissionAbstract}]]></body>
-		<description>Det här e-postmeddelandet från sektionsredaktören till en ranskare ber granskaren att acceptera eller tacka nej till uppdraget att sakkunniggranska ett bidrag en andra gång eller på nytt. Det innehåller information om bidraget i form av titel och abstract, en deadline för granskning och instruktioner för hur man kommer åt bidraget. Meddelandet används när granskningsprocess Standard är valt i Administration &gt; Inställningar &gt; Arbetsflöde &gt; Granskning och Granskartillgång med ett klick är aktiverat.</description>
+		<description>Det här e-postmeddelandet från sektionsredaktören till en ranskare ber granskaren att acceptera eller tacka nej till uppdraget att sakkunniggranska ett bidrag en andra gång eller på nytt. Det innehåller information om bidraget i form av titel och abstract, en deadline för granskning och instruktioner för hur man kommer åt bidraget. Meddelandet används när granskningsprocess Standard är valt i Administration &gt; Inställningar &gt; Arbetsflöde &gt; Granskning och Granskning utan inloggning är aktiverat.</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ATTACHED_SUBSEQUENT">
 		<subject>Förfrågan om granskning av artikel</subject>
@@ -467,7 +467,7 @@ Bidragets URL: {$submissionReviewUrl}<br />
 Vänligen bekräfta snarast om du har möjlighet att genomföra granskningsuppdraget, som utgör en viktig del av tidskriftens arbete. Vi ser fram emot att höra från dig.<br />
 <br />
 {$editorialContactSignature}]]></body>
-		<description>Det här e-postmeddelandet skickas automatiskt när en granskares deadline löper ut (se Granskningsalternativ under Inställningar &gt; Arbetsflöde &gt; Granskning) och när Granskartillgång med ett klick är aktiverat. Schemalagda aktiviteter måste vara aktiverat och konfigurerat (se serverns konfigurationsfil).</description>
+		<description>Det här e-postmeddelandet skickas automatiskt när en granskares deadline löper ut (se Granskningsalternativ under Inställningar &gt; Arbetsflöde &gt; Granskning) och när Granskning utan inloggning är aktiverat. Schemalagda aktiviteter måste vara aktiverat och konfigurerat (se serverns konfigurationsfil).</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_ACCEPT">
 		<subject>Redaktörsbeslut</subject>

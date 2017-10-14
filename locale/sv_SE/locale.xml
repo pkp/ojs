@@ -363,10 +363,10 @@
 	<!-- Payment Management -->
 
 	<!-- General plugin information -->
-	<message key="plugins.categories.viewableFiles">Insticksmoduler för artiklars publiceringsversioner</message>
-	<message key="plugins.categories.viewableFiles.description">Insticksmoduler för artiklars publiceringsversioner möjliggör visning av artiklars publiceringsversioner i olika filformat.</message>
-	<message key="plugins.categories.auth.description">Insticksmoduler för autentisering tillåter Open Journal Systems att autentisera användare via andra system, t.ex. LDAP-servrar.</message>
-	<message key="plugins.categories.generic.description">Allmänna insticksmoduler förstärker Open Journal Systems med funktioner som inte ryms inom de andra kategorierna av insticksmoduler.</message>
+	<message key="plugins.categories.viewableFiles">Plugins för artiklars publiceringsversioner</message>
+	<message key="plugins.categories.viewableFiles.description">Plugins för artiklars publiceringsversioner möjliggör visning av artiklars publiceringsversioner i olika filformat.</message>
+	<message key="plugins.categories.auth.description">Plugins för autentisering tillåter Open Journal Systems att autentisera användare via andra system, t.ex. LDAP-servrar.</message>
+	<message key="plugins.categories.generic.description">Allmänna plugins förstärker Open Journal Systems med funktioner som inte ryms inom de andra kategorierna av plugins.</message>
 
 	<message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems stöder <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) för att säkra permanent arkivering av tidskriften. LOCKSS är en fri och öppen programvara som utvecklats vid Stanford University Library. Programvaran skapar förutsättningar för bibliotek att bevara utvalda elektroniska tidskrifter genom att med regelbunden automatik söka igenom tidskrifternas webbsidor efter nyligen inlagt material och arkivera det. Varje arkiv synkas regelbundet mot speglingar hos andra bibliotek, och i händelse av förlorade eller skadade filer kan man återställa material från dessa speglingar.
 <br /><br />
@@ -689,7 +689,7 @@ Aktiva visar antalet granskningar som är förfrågade eller under arbete.]]></m
 	<message key="user.subscriptions.status.needsInformationDescription">Det behövs ytterligare information innan prenumerationen kan aktiveras.</message>
 	<message key="user.subscriptions.status.needsApprovalDescription">Prenumerationen måste granskas innan den kan aktiveras.</message>
 	<message key="user.subscriptions.status.awaitingManualPaymentDescription">Manuell betalning har valts men ännu inte inkommit.</message>
-	<message key="user.subscriptions.status.awaitingOnlinePaymentDescription">Online-betalning har valts men blev avbruten eller ej slutförd.</message>
+	<message key="user.subscriptions.status.awaitingOnlinePaymentDescription">Betalning online har valts men blev avbruten eller ej slutförd.</message>
 	<message key="user.subscriptions.individualSubscriptions">Enskild prenumeration</message>
 	<message key="user.subscriptions.institutionalSubscriptions">Institutionsprenumerationer</message>
 	<message key="user.subscriptions.renew">Förnya</message>
@@ -743,11 +743,11 @@ Aktiva visar antalet granskningar som är förfrågade eller under arbete.]]></m
 	<message key="article.pageTitle">Visar {$title}</message>
 	<message key="article.pdf.title">Portable Document Format (PDF)</message>
 	<message key="article.download">Ladda ned den här PDF-filen</message>
-	<message key="article.pluginMissing"><![CDATA[<p>Här ska PDF-filen du valt visas om din webbläsare har en insticksmodul för att läsa PDF-filer installerad (exempelvis en nyare version av <a href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a>).</p>]]></message>
+	<message key="article.pluginMissing"><![CDATA[<p>Här ska PDF-filen du valt visas om din webbläsare har ett plugin för att läsa PDF-filer installerad (exempelvis en nyare version av <a href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a>).</p>]]></message>
 
 	<!-- Interstitial page for non-PDF non-HTML galleys -->
 	<message key="article.nonpdf.title">Artikelnedladdning</message>
-	<message key="article.nonpdf.note"><![CDATA[Nedladdningen av filen du valde bör starta automatiskt. Om den inte gör det, klicka på länken nedan. Observera att filen kan behöva ett särskilt läsarprogram eller en särskild typ av insticksmodul för att synas.<br /><br />Om nedladdningen inte startar automatiskt, <a href="{$url}">klicka här</a>.]]></message>
+	<message key="article.nonpdf.note"><![CDATA[Nedladdningen av filen du valde bör starta automatiskt. Om den inte gör det, klicka på länken nedan. Observera att filen kan behöva ett särskilt läsarprogram eller en särskild typ av plugin för att synas.<br /><br />Om nedladdningen inte startar automatiskt, <a href="{$url}">klicka här</a>.]]></message>
 
 	<!-- Site index -->
 	<message key="site.journalsHosted">Tidskrifter som den här webbplatsen är värd för</message>
@@ -1028,7 +1028,7 @@ Sök-URL:er som kräver inskickade formulärdata kan komma att visas som ogiltig
 
 
 	
-	<message key="rt.beNotifiedWhen">Få meddelande när ...</message>
+	<message key="rt.beNotifiedWhen">Få avisering när ...</message>
 
 	<message key="rt.thisJournal">Sök tidskrift</message>
 
@@ -1039,7 +1039,7 @@ Sök-URL:er som kräver inskickade formulärdata kan komma att visas som ogiltig
 
 	<!-- Notification Types -->
 	<message key="notification.mailListDescription">Skriv in din e-postadress för att få aviseringar direkt när det läggs till nytt viktigt innehåll i tidskriften.</message>
-	<message key="notification.notificationsPublicDescription">Den här sidan visar viktiga uppdateringar relaterade till den här tidskriften, exempelvis nya nummer eller meddelanden. Du kan prenumerera på dessa meddelanden via RSS-flöden (genom att klicka på ikonerna till höger), eller <![CDATA[  <a href="{$emailUrl}">via e-post.</a>]]></message>
+	<message key="notification.notificationsPublicDescription">Den här sidan visar viktiga uppdateringar relaterade till den här tidskriften, exempelvis nya nummer eller meddelanden. Du kan prenumerera på dessa aviseringar via RSS-flöden (genom att klicka på ikonerna till höger), eller <![CDATA[  <a href="{$emailUrl}">via e-post.</a>]]></message>
 
 	<message key="notification.type.articleSubmitted">En ny artikel, "{$title}", har skickats in.</message>
 	<message key="notification.type.editing">Redaktionella händelser</message>

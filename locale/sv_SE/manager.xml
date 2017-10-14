@@ -19,7 +19,7 @@
 	<message key="manager.language.ui">Användargränssnitt</message>
 	<message key="manager.language.submissions">Bidrag</message>
 	<message key="manager.language.forms">Formulär</message>
-	<message key="manager.language.confirmDefaultSettingsOverwrite">Byter ut alla språkinställningar som finns för den tidskriften</message>
+	<message key="manager.language.confirmDefaultSettingsOverwrite">Byter ut alla språk/region-inställningar som finns för den tidskriften</message>
 	<message key="manager.languages.languageInstructions"><![CDATA[OJS kan översättas till flera olika språk och fungerar dessutom som ett flerspråkigt system där användaren kan växla mellan språk på de olika sidorna.<br /><br /> Om ett språk som stöds av OJS inte finns listad nedan, be huvudadministratören att installera språket. För instruktioner om hur ytterligare språk läggs till, se OJS-dokumentationen.]]></message>
 	<message key="manager.languages.noneAvailable">Tyvärr, det finns inga ytterligare språk tillgängliga. Kontakta huvudadministratören om du vill lägga till språk i den här tidskriften.</message>
 	<message key="manager.languages.primaryLocaleInstructions">Detta blir defaultspråk för tidskriftens webbplats.</message>
@@ -56,7 +56,7 @@
 	<message key="manager.payment.options.text">Beskrivning av betalningsmetod</message>
 	<message key="manager.payment.paymentId">Betalnings-ID</message>
 	<message key="manager.payment.paymentMethod">Betalningsmetod</message>
-	<message key="manager.payment.paymentMethod.description">Du kan konfigurera insticksmoduler för betalningsmetoderna från den här sidan.</message>
+	<message key="manager.payment.paymentMethod.description">Du kan konfigurera plugins för betalningsmetoderna från den här sidan.</message>
 	<message key="manager.payment.paymentMethods">Betalningsmetoder</message>
 	<message key="manager.payment.paymentType">Typ av betalning</message>
 	<message key="manager.payment.readerFees">Läsaravgifter</message>
@@ -109,7 +109,7 @@
 	<message key="manager.sections.wordCountInstructions">Begränsa antal tillåtna ord i abstract för den här sektionen (0 innebär obegränsat)</message>
 	<message key="manager.setup">Tidskriftens inställningar</message>
 	<message key="manager.setup.masthead">Redaktionsruta</message>
-	<message key="manager.setup.masthead.description">Skriv här redaktörer, tidskriftsansvarig och andra som är kopplade till tidskriften.</message>
+	<message key="manager.setup.masthead.description">Ange redaktörer, tidskriftsansvariga och andra som är kopplade till tidskriften.</message>
 	<message key="manager.setup.homepageContent">Innehåll på tidskriftens webbsida</message>
 	<message key="manager.setup.homepageContentDescription">Tidskriftens webbsida innehåller navigationslänkar som förval. Ytterligare innehåll på webbsidan kan läggas till genom att använda en eller alla av följande alternativ, som kommer att visas i de ordning som de står.</message>
 	<message key="manager.setup.layout">Tidskriftens layout</message>
@@ -195,7 +195,7 @@
 	<message key="manager.setup.journalSummary">Kort beskrivning av tidskriften</message>
 	<message key="manager.setup.journalSummary.description">En kort beskrivning av tidskriften som visas i tidskriftslistan.</message>
 	<message key="manager.setup.journalAbout">Om tidskriften</message>
-	<message key="manager.setup.journalAbout.description">Skriv här information om tidskriften som kan vara intressant för läsare, författare eller sakkunniggranskare. Det kan vara tidskriftens open access policy, ämne och målgrupp, upphovsrättsvillkor, sponsorer, tidskriftens historia och om tidskriften ingår i arkivsystem som LOCKSS eller CLOCKSS.</message>
+	<message key="manager.setup.journalAbout.description">Skriv här information om tidskriften som kan vara intressant för läsare, författare eller sakkunniggranskare. Det kan vara tidskriftens open access-policy, ämne och målgrupp, upphovsrättsvillkor, sponsorer, tidskriftens historia och om tidskriften ingår i arkivsystem som LOCKSS eller CLOCKSS.</message>
 	<message key="manager.setup.favicon">Tidskriftens adressikon</message>
 	<message key="manager.setup.faviconDescription">Lägg till en adressikon för tidskriften som visas bredvid navigeringsfältet när användare besöker sidan.</message>
 	<message key="manager.setup.faviconInvalid">Ogiltligt adressikon format. Accepterat format är .ico, .png, och .gif.</message>
@@ -255,11 +255,11 @@
 	<message key="manager.setup.noImageFileUploaded">Ingen bildfil har laddats upp</message>
 	<message key="manager.setup.noStyleSheetUploaded">Inget style sheet har uppladdats upp.</message>
 	<message key="manager.setup.note">Anmärkning</message>
-	<message key="manager.setup.notifications.submissionAckDisabled"><![CDATA[<strong>Anmärkning:</strong> Funktionen för utskick av e-post som bekräftar att bidrag har emottagits är avstängd. För att använda funktionen, aktivera "Bidrag ACK" e-post i E-post.]]></message>
+	<message key="manager.setup.notifications.submissionAckDisabled"><![CDATA[<strong>Anmärkning:</strong> Funktionen för utskick av e-post som bekräftar att bidrag har emottagits är avstängd. För att använda funktionen, aktivera "SUBMISSION ACK"-e-postmeddelandet i E-postmeddelanden.]]></message>
 	<message key="manager.setup.numPageLinks">Sidlänkar</message>
 	<message key="manager.setup.onlineAccessManagement">Tillgång till tidskriftens innehåll</message>
 	<message key="manager.setup.onlineIssn">e-ISSN</message>
-	<message key="manager.setup.openAccess">Tidskriftens innehåll är tillgängligt Open Access.</message>
+	<message key="manager.setup.openAccess">Tidskriftens innehåll är tillgängligt som open access.</message>
 	<message key="manager.setup.pageNumberIdentifier">Alternativ för sidnumrering</message>	
 	<message key="manager.setup.policies">Policyer</message>
 	<message key="manager.setup.policies.description">Tidskriftens fokus, sakkunninggranskning, sektioner, personuppgifter, säkerhet och övrigt.</message>
@@ -287,8 +287,8 @@
 	<message key="manager.setup.reviewOptions.onQuality">Redaktörerna betygsätter granskarna utifrån en fempoängs-skala efter avslutad granskning.</message>
 	<message key="manager.setup.reviewOptions.restrictReviewerFileAccess">Granskarna kommer endast ha tillgång till bidraget efter att de har accepterat att vara granskare.</message>
 	<message key="manager.setup.reviewOptions.reviewerAccess">Granskarens tillgång</message>
-	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled">Aktivera tillgång för one-click granskning.</message>
-	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"><![CDATA[<strong>Observera:</strong> Inbjudan via e-post till granskare innehåller en url som pekar direkt till sidan för granskning av bidraget (med tillgång till andra sidor som kräver inloggning). Av säkerhetsskäl kan inte redaktörer cc:a eller lägga till andras e-postadresser när de skickar inbjudan till granskare.]]></message>
+	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled">Aktivera granskning utan inloggning.</message>
+	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"><![CDATA[<strong>Observera:</strong> Inbjudan via e-post till granskare innehåller en URL som pekar direkt till sidan för granskning av bidraget (med tillgång till andra sidor som kräver inloggning). Av säkerhetsskäl kan inte redaktörer cc:a eller lägga till andras e-postadresser när de skickar inbjudan till granskare.]]></message>
 	<message key="manager.setup.reviewOptions.reviewerRatings">Granskarens bedömning</message>
 	<message key="manager.setup.reviewOptions.reviewerReminders">Påminnelse (för granskare)</message>
 	<message key="manager.setup.reviewOptions.showEnsuringLink"><![CDATA[Länka till <a href="javascript:openHelp('{$blindReviewHelpId}')" class="action">garanterar att granskningen är anonym</a> på sidor där författare och granskare laddar upp filer.]]></message>
@@ -314,7 +314,7 @@
 	<message key="manager.setup.submissions">Bidrag</message>
 	<message key="manager.setup.submissions.description">Riktlinjer för författare, upphovsrätt, och indexering (även registrering).</message>
 	<message key="manager.setup.subscription">Tidskriften kräver prenumeration för hela eller delar av innehållet.</message>
-	<message key="manager.setup.subscriptionDescription">Det innebär att det behövs en prenumerationssansvarig som har tillgång till prenumerationssmodulen, där ytterligare alternativ för Open access, självarkivering och e-postaviseringar administreras.</message>
+	<message key="manager.setup.subscriptionDescription">Det innebär att det behövs en prenumerationssansvarig som har tillgång till prenumerationssmodulen, där ytterligare alternativ för open access, parallellpublicering och e-postaviseringar administreras.</message>
 	<message key="manager.setup.noPublishing">OJS kommer inte användas för att publicera tidskriftens innehåll online.</message>
 	<message key="manager.setup.typeExamples">(T.ex., Historiska studier; Experimentella studier; Litteraturanalyser; Enkäter och intervjuer)</message>
 	<message key="manager.setup.typeMethodApproach">Metod och/eller tillvägagångssätt</message>
@@ -366,8 +366,8 @@
 	<message key="manager.subscriptionPolicies.authorSelfArchive">Författarens egenarkiveringspolicy</message>
 	<message key="manager.subscriptionPolicies.authorSelfArchiveDescription">Följande egenarkiveringspolicy kommer att visas i Policyer under Om tidskriften.</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccess">Fördröjd open access</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription">Även om tidskriften använder sig av fördröjd open access kan redaktören ändå publicera enskilda artiklar Open Access  i numret direkt.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription1">Äldre nummer av tidskriften kommer vara tillgängligt Open Access</message>
+	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription">Även om tidskriften använder sig av fördröjd open access kan redaktören ändå publicera enskilda artiklar som open access i numret direkt.</message>
+	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription1">Äldre nummer av tidskriften kommer vara tillgängligt som open access</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription2">månad(er) efter att ett nummer har publicerats.</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDurationValid">Välj en giltlig tidsperiod.</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription">Följande fördröjd open access-policy kommer att visas under Policyer under Om tidskriften.</message>
@@ -395,14 +395,14 @@
 	<message key="manager.subscriptionPolicies.numWeeksBeforeSubscriptionExpiryReminderValid">Välj ett giltligt värde på antalet veckor innan prenumerationen förfaller.</message>
 	<message key="manager.subscriptionPolicies.openAccessNotificationDescription">Registrerade läsare har möjligheten att få innehållsförteckningen e-postade till sig när numret blir open access.</message>
 	<message key="manager.subscriptionPolicies.openAccessNotificationDisabled"><![CDATA[<strong>Anmärkning:</strong> För att aktivera det här alternativet måste webbplatsadministratören aktivera <tt>scheduled_tasks</tt> i OJS konfigureringsfilen. Ytterligare serverkonfigurering kan komma att krävas för att stödja den här typen av funktionalitet (vilket inte är möjligt på alla servrar), som beskrivs i OJS-dokumentationen.]]></message>
-	<message key="manager.subscriptionPolicies.onlinePaymentNotifications">Avisering av online-betalning</message>
+	<message key="manager.subscriptionPolicies.onlinePaymentNotifications">Avisering av betalning online</message>
 	<message key="manager.subscriptionPolicies.onlinePaymentNotificationsDescription">Automatisk aviseringar via e-post (tidskriftsansvarig har tillgång till redigering via tidskriftsadministrationen i OJS:s E-post) kan skickas till den prenumerationsansvarige vid online betalning av prenumerationen.</message>
-	<message key="manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseIndividual">Meddela den prenumerationsansvarige via e-post vid online köp av en individuell prenumeration.</message>
-	<message key="manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional">Meddela den prenumerationsansvarige via e-post vid online köp av en institutionell prenumeration (rekomenderas).</message>
-	<message key="manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewIndividual">Meddela den prenumerationsansvarige via e-post vid online förnyelse av en individuell prenumeration.</message>
+	<message key="manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseIndividual">Meddela den prenumerationsansvarige via e-post vid online-köp av en individuell prenumeration.</message>
+	<message key="manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional">Meddela den prenumerationsansvarige via e-post vid online-köp av en institutionell prenumeration (rekomenderas).</message>
+	<message key="manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewIndividual">Meddela den prenumerationsansvarige via e-post vid online-förnyelse av en individuell prenumeration.</message>
 	<message key="manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewInstitutional">Meddela den prenumerationsansvarige via e-post vid online förnyelse av en institutionell prenumeration.</message>
-	<message key="manager.subscriptionPolicies.onlinePaymentPurchaseInstitutionalDescription"><![CDATA[<strong>Anmärkning:</strong>Institutionsprenumerationer som köps online kräver godkännande av domän och IP intervall och att den prenumerationsansvarige aktiverar prenumerationen.]]></message>
-	<message key="manager.subscriptionPolicies.onlinePaymentDisabled"><![CDATA[<strong>Anmärkning:</strong> För att aktivera dessa alternativ, måste den tidskriftansvarige aktivera online betalningsmodulen, inklusive online-betalning för prenumerationer under Läsaravgifter.]]></message>
+	<message key="manager.subscriptionPolicies.onlinePaymentPurchaseInstitutionalDescription"><![CDATA[<strong>Anmärkning:</strong>Institutionsprenumerationer som köps online kräver godkännande av domän och IP-omfång och att den prenumerationsansvarige aktiverar prenumerationen.]]></message>
+	<message key="manager.subscriptionPolicies.onlinePaymentDisabled"><![CDATA[<strong>Anmärkning:</strong> För att aktivera dessa alternativ måste den tidskriftansvarige aktivera modulen för betalning online, inklusive online-betalning för prenumerationer under Läsaravgifter.]]></message>
 	<message key="manager.subscriptionPolicies.openAccessOptions">Open access-alternativ för prenumerationstidskrifter.</message>
 	<message key="manager.subscriptionPolicies.openAccessOptionsDescription">Prenumerationstidskrifter kan tillåta såväl "fördröjd open access" som "parallellpublicering" av det publicerade materialet (båda alternativen ökar spridningen samt citeringen av innehållet).</message>
 	<message key="manager.subscriptionPolicies.subscriptionAdditionalInformation">Prenumerationsinformation</message>
@@ -456,7 +456,7 @@
 	<message key="manager.subscriptions.form.domain">Domän</message>
 	<message key="manager.subscriptions.form.institutionName">Institutionsnamn</message>
 	<message key="manager.subscriptions.form.institutionNameRequired">Ett institutionsnamn krävs.</message>
-	<message key="manager.subscriptions.form.institutionMailingAddress">E-postadress</message>
+	<message key="manager.subscriptions.form.institutionMailingAddress">Postadress</message>
 	<message key="manager.subscriptions.form.domainInstructions"><![CDATA[Om en domän är ifylld här, är det optimalt att ange IP intervallet.<br />Giltliga domännamn är (t ex lib.sfu.ca).]]></message>
 	<message key="manager.subscriptions.form.domainIPRangeRequired">Den valda prenumerationsformen kräver en domän och/eller ett IP intervall för prenumerationsverifiering.</message>
 	<message key="manager.subscriptions.form.domainValid">Ange en giltig domän.</message>
@@ -556,15 +556,15 @@
 	<!-- Common DOI export plugins (crossref, datacite, medra) keys -->
 	<!-- plugin tabs -->
 	<message key="plugins.importexport.common.settings">Inställningar</message>
-	<message key="plugins.importexport.common.settings.DOIPluginSettings">Inställningar för DOI-insticksmodulen</message>
+	<message key="plugins.importexport.common.settings.DOIPluginSettings">Inställningar för DOI-pluginet</message>
 	<message key="plugins.importexport.common.export.articles">Artiklar</message>
 	<message key="plugins.importexport.common.export.issues">Nummer</message>
 	<message key="plugins.importexport.common.export.representations">Publiceringsversion</message>
 	<!-- settings form -->
-	<message key="plugins.importexport.common.missingRequirements">Insticksmodulens krav är inte uppfyllda</message>
-	<message key="plugins.importexport.common.error.DOIsNotAvailable">För att använda denna insticksmodul gå till kategorin "Public Identifier" för insticksmoduler, aktivera och konfigurera insticksmodulen för DOI och ange här ett giltligt DOI prefix.</message>
-	<message key="plugins.importexport.common.error.pluginNotConfigured">Insticksmodulen är inte helt installerad.</message>
-	<message key="plugins.importexport.common.error.noDOIContentObjects">Inget publicerat material är valt för detta DOI i den publika insticksmodulen för DOI, det är därför inte möjligt att lagra eller exportera via insticksmodulen.</message>
+	<message key="plugins.importexport.common.missingRequirements">Pluginets krav är inte uppfyllda</message>
+	<message key="plugins.importexport.common.error.DOIsNotAvailable">För att använda dettaa plugin gå till kategorin "Public Identifier" för plugins, aktivera och konfigurera DOI-pluginet och ange här ett giltligt DOI prefix.</message>
+	<message key="plugins.importexport.common.error.pluginNotConfigured">Pluginet är inte helt installerat.</message>
+	<message key="plugins.importexport.common.error.noDOIContentObjects">Inget publicerat material är valt för detta DOI i det publika pluginet för DOI, det är därför inte möjligt att lagra eller exportera via pluginet.</message>
 	<message key="plugins.importexport.common.settings.form.password">Lösenord</message>
 	<message key="plugins.importexport.common.settings.form.password.description">Lösenordet kommer att sparas i text, det är alltså inte krypterad.</message>
 	<!-- export filter -->
