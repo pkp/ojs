@@ -137,7 +137,7 @@
 	<message key="manager.setup.historyDescription">Den här texten visas under rubriken "Om" och är till för att beskriva exempelvis förändringar av titel, redaktionens sammansättning, eller andra relevanta detaljer rörande tidskriftens utgivningshistorik.</message>
 	<message key="manager.setup.copyeditInstructions">Instruktioner för manusredigering</message>
 	<message key="manager.setup.copyeditInstructionsDescription">Instruktioner för manusredigering är tillgängligt för Manusredaktörer, Författare, och Sektionsredaktörer under Manusredigering. Nedan följer standardinstruktioner i HTML som kan ändras och ersättas av Tidskriftsansvarig när som helst (i HTML eller text).</message>
-	<message key="manager.setup.copyrightNotice">Upphovsrätts information</message>
+	<message key="manager.setup.copyrightNotice">Upphovsrättsdeklaration</message>
 	<message key="manager.setup.coverage">Täckning</message>
 	<message key="manager.setup.coverageDescription">Hänvisar till geografisk, kronologisk eller historisk täckning, och/eller speciella ämnesegenskaper för det publicerade materialet.</message>
 	<message key="manager.setup.currentIssue">Senaste numret</message>
@@ -546,7 +546,7 @@
 	<message key="manager.setup.copyrightYearBasis.issue">Nummer: förvalt år kommer att skapas av numrets publiceringsdatum.</message>
 	<message key="manager.setup.resetPermissions">Återställ villkor för artikel</message>
 	<message key="manager.setup.resetPermissions.confirm">Är du säker på att du vill återställa villkorsinformation som redan är kopplade till artiklar?</message>
-	<message key="manager.setup.resetPermissions.description">Copyrightvillkor och licensinformation kommer att vara kopplade till publicerat material permanent, garanterar att den här informationen inte kommer att ändras om en tidskrift ändrar policyer för nya bidrag. För att återställa lagrade villkorsinformationsom som redan är kopplat till publicerat innehåll, använd knappen nedan.</message>
+	<message key="manager.setup.resetPermissions.description">Upphovsrättsdeklaration och licensinformation kommer att vara kopplade till publicerat material permanent, garanterar att den här informationen inte kommer att ändras om en tidskrift ändrar policyer för nya bidrag. För att återställa lagrade villkorsinformationsom som redan är kopplat till publicerat innehåll, använd knappen nedan.</message>
 
 	<!-- Genres Grid -->
 	<message key="grid.genres.title.short">Förkortningar</message>

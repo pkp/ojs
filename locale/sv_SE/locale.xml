@@ -377,8 +377,8 @@ Du behöver inte aktivera LOCKSS i Open Journal Systems förrän publiceringen �
 Du behöver inte aktivera CLOCKSS-stöd i Open Journal Systems förrän publiceringen är i full gång.]]></message>
 
 	<!-- Setup Step 3 -->
-	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Föreslagna upphovsrättspolicyer baserade på Creative Commons</h3>
-<h4>1. Förslag på policy för tidskrifter som erbjuder open access</h4>
+	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Föreslagna upphovsrättsdeklarationer baserade på Creative Commons</h3>
+<h4>1. Förslag på deklaration för tidskrifter som erbjuder open access</h4>
 Författare som publicerar i den här tidskriften accepterar följande villkor:
 <ol type="a">
 	<li>Författare bibehåller upphovsrätten och ger tidskriften rätten till första publiceringen, som sker under licensvillkoren för en <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Erkännande-licens</a>. Denna tillåter andra att dela verket så länge man deklarerar verkets upphovperson(er) och att verket ursprungligen publicerats i den här tidskriften.</li>
@@ -386,7 +386,7 @@ Författare som publicerar i den här tidskriften accepterar följande villkor:
 	<li>Författare tillåts och uppmuntras att dela sitt verk online (t.ex. i institutionella arkiv eller på författares egna webbplatser) före och under inskickningsprocessen eftersom detta är något som kan leda till givande utbyten, samt att möjligheten till citeringar ökar när den kommer i ett tidigare skede. (Se <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>.)</li>
 </ol>
 
-<h4>Förslag på policy för tidskrifter som erbjuder fördröjd open access</h4>
+<h4>Förslag på deklaration för tidskrifter som erbjuder fördröjd open access</h4>
 Författare som publicerar i den här tidskriften accepterar följande villkor:
 <ol type="a">
 	<li>Författare bibehåller upphovsrätten och ger tidskriften rätten till första publiceringen, och att verket [SPECIFICERA EMBARGOTID] efter publicering också blir tillgängligt under licensvillkoren för en <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Erkännande-licens</a>. Denna tillåter andra att dela verket så länge man deklarerar verkets upphovperson(er) och att verket ursprungligen publicerats i den här tidskriften.</li>
@@ -396,7 +396,7 @@ Författare som publicerar i den här tidskriften accepterar följande villkor:
 	<message key="manager.setup.citations.enable">Aktivera Verktyget för referensuppmärkning</message>
 
 	<!-- Setup Step 4 -->
-	<message key="manager.setup.basicEditorialStepsDescription"><![CDATA[Steg: Bidragskö &gt; Granskning av bidrag &gt; Redigering av bidrag &gt; Innehållsförteckning.<br /><br />
+	<message key="manager.setup.basicEditorialStepsDescription"><![CDATA[Steg: Aktuella bidrag &gt; Granskning av bidrag &gt; Redigering av bidrag &gt; Innehållsförteckning.<br /><br />
 Välj modell för hantering av den redaktionella processen. (För att ange huvudredaktör eller sektionsredaktörer, gå till "Redaktörer" under "Hantera tidskriften".)]]></message>
 	<message key="manager.setup.referenceLinkingDescription"><![CDATA[<p>För att hjälpa läsare att hitta onlineversioner av material som författaren citerar finns följande alternativ:</p>
 
