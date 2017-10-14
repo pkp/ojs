@@ -277,7 +277,7 @@
 
 	<message key="submission.event.general.authorRevision">Författarreviderad fil uppdaterad</message>
 
-	<message key="submission.event.editor.editorAssigned">Redaktör tilldelad bidrag</message>
+	<message key="submission.event.editor.editorAssigned">Redaktör utsedd för bidrag</message>
 	<message key="submission.event.editor.editorUnassigned">Redaktör avsagd bidrag</message>
 	<message key="submission.event.editor.editorDecision">Redaktörsbeslut inskickat</message>
 	<message key="submission.event.editor.editorFile">Redaktörsfil uppdaterad</message>
@@ -285,7 +285,7 @@
 	<message key="submission.event.editor.submissionRestored">Bidrag återställt från arkivet</message>
 
 
-	<message key="submission.event.copyedit.copyeditorAssigned">Manusredaktör tilldelad bidrag</message>
+	<message key="submission.event.copyedit.copyeditorAssigned">Manusredaktör utsedd för bidrag</message>
 	<message key="submission.event.copyedit.copyeditorUnassigned">Manusredaktör avsagd bidrag</message>
 	<message key="submission.event.copyedit.copyeditInitiated">Manusredigering påbörjad</message>
 	<message key="submission.event.copyedit.copyeditRevision">Manusredaktörs reviderade fil uppdaterad</message>
@@ -293,13 +293,13 @@
 	<message key="submission.event.copyedit.copyeditFinalCompleted">Slutlig manusredigering slutförd</message>
 	<message key="submission.event.copyedit.copyeditSetFile">Manusredigeringsfil uppdaterad</message>
 
-	<message key="submission.event.proofread.proofreaderAssigned">Korrekturläsare tilldelad bidrag</message>
+	<message key="submission.event.proofread.proofreaderAssigned">Korrekturläsare utsedd för bidrag</message>
 	<message key="submission.event.proofread.proofreaderUnassigned">Korrekturläsare avsagd bidrag</message>
 	<message key="submission.event.proofread.proofreadInitiated">Korrekturläsning påbörjad</message>
 	<message key="submission.event.proofread.proofreadRevision">Korrekturläsares reviderade fil uppdaterad</message>
 	<message key="submission.event.proofread.proofreadCompleted">Korrekturläsning slutförd</message>
 
-	<message key="submission.event.layout.layoutEditorAssigned">Layoutredaktör tilldelad bidrag</message>
+	<message key="submission.event.layout.layoutEditorAssigned">Layoutredaktör utsedd för bidrag</message>
 	<message key="submission.event.layout.layoutEditorUnassigned">Layoutredaktör avsagd bidrag</message>
 	<message key="submission.event.layout.layoutInitiated">Layoutarbete påbörjat</message>
 	<message key="submission.event.layout.layoutGalleyCreated">Layoutfil uppdaterad</message>
@@ -448,7 +448,7 @@ Du kan välja att ge användaren en förklaring till varför kontot har spärrat
 	<![CDATA[<ol>
 	<li>Markerade element indikerar att de kräver åtgärd från en redaktör enligt följande:
 		<ul>
-			<li class="highlightReviewerNotNotified">En granskare har blivit tillagd men inte meddelad via e-post</li>
+			<li class="highlightReviewerNotNotified">En granskare har blivit utsedd men inte meddelad via e-post</li>
 			<li class="highlightNoDecision">All granskare har inkommit med sina kommentarer, men inget beslut är registrerat</li>
 			<li class="highlightRevisedCopyUploaded">Författaren har laddat upp ett omarbetat manuskript</li>
 			<li class="highlightReviewerConfirmationOverdue">Granskaren är försenad med svar på inbjudan att granska</li>
@@ -628,7 +628,7 @@ Aktiva visar antalet granskningar som är förfrågade eller under arbete.]]></m
 	<message key="submission.layout.noLayoutFile">Saknas (Ladda upp slutgiltig manusredigerings-version som Layoutversion innan du skickar förfrågan)</message>
 	<message key="submission.layout.publicGalleyId">Publik identifikator för publiceringsversion</message>
 	<message key="submission.layout.galleyPublicIdentificationExists">Publik identifikator för publiceringsversion finns redan.</message>
-	<message key="submission.layout.assignLayoutEditor">Lägg till Layoutredaktör</message>
+	<message key="submission.layout.assignLayoutEditor">Tilldela layoutredaktör</message>
 	<message key="submission.layout.replaceLayoutEditor">Ersätt Layoutredaktör</message>
 	<message key="submission.layout.layoutComments">Layoutkommentarer</message>
 	<message key="submission.layout.instructions">Layoutinstruktioner</message>
@@ -965,7 +965,7 @@ Din server stödjer för tillfället mbstring: <strong>{$supportsMBString}</stro
 	<message key="log.copyedit.copyeditFileSet">Defaultfil för manusredigering har valts.</message>
 	<message key="log.copyedit.initialEditComplete">{$copyeditorName} har avslutat första manusredigering av bidrag {$submissionId}.</message>
 	<message key="log.copyedit.finalEditComplete">{$copyeditorName} har avslutat slutgiltig manusredigering av bidrag {$submissionId}.</message>
-	<message key="log.copyedit.copyeditorAssigned">{$copyeditorName} har tilldelats att redigera manuskriptet {$submissionId}.</message>
+	<message key="log.copyedit.copyeditorAssigned">{$copyeditorName} har utsetts att redigera manuskriptet {$submissionId}.</message>
 	<message key="log.copyedit.copyeditorFile">En manusredigerad version av manuskriptet har laddats upp.</message>
 	<message key="log.copyedit.authorFile">En version av manuskriptet, manusredigerad av författaren, har laddats upp.</message>
 

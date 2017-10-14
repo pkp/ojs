@@ -47,7 +47,7 @@
 	
 	<!-- galley files grid -->
 	<message key="submission.galleyFiles">Filer för publiceringsversion</message>
-	<message key="submission.proofReadingDescription"><![CDATA[Layoutredaktören laddar upp de produktionsklara filerna här. Använd <em>Tilldela manusgranskare</em> för att uppdra åt författare eller andra att korrekturläsa publiceringsversionerna, med korrigerade filer uppladdade för godkännande före publicering.]]></message>
+	<message key="submission.proofReadingDescription"><![CDATA[Layoutredaktören laddar upp de produktionsklara filerna här. Använd <em>Utse manusgranskare</em> för att uppdra åt författare eller andra att korrekturläsa publiceringsversionerna, med korrigerade filer uppladdade för godkännande före publicering.]]></message>
 	<message key="grid.action.approveProof">Godkänn det här korrekturet för inkludering i publiceringsversionen.</message>
 	<message key="grid.action.pageProofApproved">Det här korrekturet har blivit godkänt för inkludering i publiceringsversionen.</message>
 	<message key="submission.submit.titleAndSummary">Titel och abstract</message>

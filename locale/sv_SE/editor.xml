@@ -171,8 +171,8 @@
 	<message key="editor.article.authorProofing">Författarkorrektur</message>
 	<message key="editor.article.archiveSubmission">Avvisa och arkivera bidrag</message>
 	<message key="editor.article.restoreToQueue">Återställ till aktiva-listan</message>
-	<message key="editor.article.assignSectionEditor">Lägg till sektionsredaktör</message>
-	<message key="editor.article.assignEditor">Lägg till redaktör</message>
+	<message key="editor.article.assignSectionEditor">Utse sektionsredaktör</message>
+	<message key="editor.article.assignEditor">Utse redaktör</message>
 	<message key="editor.article.selectEditor">Välj {$roleName}</message>
 	<message key="editor.article.selectDecision">Välj beslut</message>
 	<message key="editor.article.selectLayoutEditor">Välj layoutredaktör</message>
@@ -181,7 +181,7 @@
 	<message key="editor.article.resubmitForReview">Återsänd filen för granskning</message>
 	<message key="editor.article.resubmitFileForPeerReview">Återsänd vald fil för sakkunniggranskning</message>
 	<message key="editor.article.sendToCopyedit">Skicka filen till Manusredigering</message>
-	<message key="editor.article.selectProofreader">Lägg till korrekturläsare</message>
+	<message key="editor.article.selectProofreader">Utse korrekturläsare</message>
 	<message key="editor.article.replaceProofreader">Ersätt korrekturläsare</message>
 	<message key="editor.article.authorComments">Kommentarer från författare</message>
 	<message key="editor.article.proofreaderComments">Kommentarer från korrekturläsare</message>
@@ -200,7 +200,7 @@
 	<message key="editor.submissions.inSection">I sektion</message>
 	<message key="editor.article.schedulePublication">Planera för publicering</message>
 	<message key="editor.article.scheduleForPublication">Ska publiceras i</message>
-	<message key="editor.article.scheduleForPublication.toBeAssigned">Återstår att bestämma</message>
+	<message key="editor.article.scheduleForPublication.toBeAssigned">Återstår att planera</message>
 	<message key="editor.article.payment.publicationFeeNotPaid">Publiceringsavgiften ej betald. För att planlägga för publicering, meddela författaren att betala eller avsäga sig avgiften.</message>
 	<message key="editor.article.display">Visa</message>
 	<message key="editor.article.hideTocAuthorDescription">Utelämna författarnamnen i numrets innehållsförteckning</message>

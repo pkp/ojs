@@ -84,17 +84,17 @@
 	<message key="manager.sections.confirmDelete">Vill du ta bort sektionen?</message>
 	<message key="manager.sections.alertDelete">Innan sektionen kan tas bort, måste sektionens artiklar flyttas till en annan  sektion.</message>
 	<message key="manager.sections.create">Skapa en sektion</message>
-	<message key="manager.section.sectionEditorInstructions">Lägg till en Sektionsredaktör till sektionen, sektionsredaktören kommer då automatisk ha tillgång till bidragen inom sektionen. (Alternativt, kan Sektionsredaktören kopplas till inkommande bidrag manuellt.) Sektionsredaktören kan kopplas automatiskt till att hantera granskningen (sakkunniggranskningen) och/eller redigering (manusredigering, layout och korrekturläsning). En Sektionsredaktör skapas genom att klicka på Sektionsredaktör under Roller i Tidskriftsadministrationen</message>
+	<message key="manager.section.sectionEditorInstructions">Lägg till en sektionsredaktör till sektionen, som då automatiskt får tillgång till bidragen inom sektionen. (Alternativt kan sektionsredaktören kopplas till inkommande bidrag manuellt.) Sektionsredaktören kan kopplas automatiskt till att hantera granskning (sakkunniggranskningen) och/eller redigering (manusredigering, layout och korrekturläsning). En sektionsredaktör skapas genom att klicka på Sektionsredaktör under Roller i Tidskriftsadministration.</message>
 	<message key="manager.sections.editorRestriction">Bidrag kan bara skickas in av redaktörer och sektionsredaktörer.</message>
 	<message key="manager.sections.editors">Sektionsredaktörer</message>
 	<message key="manager.sections.form.abbrevRequired">Ange en förkortning till sektionens namn</message>
-	<message key="manager.sections.form.mustAllowPermission">Åtminstone ett alternativ måste vara markerat för varje sektionsredaktör.</message>
+	<message key="manager.sections.form.mustAllowPermission">Åtminstone ett alternativ måste vara markerat för varje sektionsredaktörs-uppdrag.</message>
 	<message key="manager.sections.form.reviewFormId">Välj ett giltligt granskningsformulär.</message>
 	<message key="manager.sections.form.titleRequired">Ange ett namn på sektionen.</message>
 	<message key="manager.sections.hideTocAuthor">Utelämna författarnamnen på sektionsmaterial från numrets innehållsförteckning</message>
 	<message key="manager.sections.hideTocTitle">Utelämna titeln på sektionen från numrets innehållsförteckning.</message>
 	<message key="manager.sections.identifyType">Beskriv artiklar publicerad i sektionen som en/ett</message>
-	<message key="manager.sections.identifyTypeExamples">(T.ex., "Sakkunniggranskad artikel", "Icke-sakkunniggranskad bokrecension", "Inbjudet material", etc.)</message>
+	<message key="manager.sections.identifyTypeExamples">(T.ex. "Sakkunniggranskad artikel", "Icke-sakkunniggranskad bokrecension", "Inbjudet material", etc.)</message>
 	<message key="manager.sections.indexed">Indexerad</message>
 	<message key="manager.sections.noneCreated">Inga sektioner har skapats.</message>
 	<message key="manager.sections.open">Bidrag mottas</message>
@@ -104,7 +104,7 @@
 	<message key="manager.sections.submissionIndexing">Kommer inte omfattas av tidskriftens indexering</message>
 	<message key="manager.sections.submissionReview">Kommer inte att bli sakkunniggranskad</message>
 	<message key="manager.section.submissionsToThisSection">Bidrag inskickade till den här sektionen</message>
-	<message key="manager.sections.unassigned">Tillgängliga Sektionsredaktörer</message>
+	<message key="manager.sections.unassigned">Tillgängliga sektionsredaktörer</message>
 	<message key="manager.sections.wordCount">Antal ord</message>
 	<message key="manager.sections.wordCountInstructions">Begränsa antal tillåtna ord i abstract för den här sektionen (0 innebär obegränsat)</message>
 	<message key="manager.setup">Tidskriftens inställningar</message>
@@ -228,7 +228,7 @@
 	<message key="manager.setup.layoutTemplates.file">Mallfil</message>
 	<message key="manager.setup.layoutTemplates.title">Titel</message>
 	<message key="manager.setup.lists">Listor</message>
-	<message key="manager.setup.listsDescription">Ange antal träffar som visas på på varje sida (ex. manuskript, användare). Ange också hur många länkar som ska visas på varje sida.</message>
+	<message key="manager.setup.listsDescription">Ange antal träffar som visas på på varje sida (t.ex. bidrag, användare eller redaktörsuppdrag). Ange också hur många länkar som ska visas på varje sida.</message>
 	<message key="manager.setup.enableArchive">Aktivera arkiv</message>
 	<message key="manager.setup.lockssEnable"><![CDATA[Aktivera LOCKSS för att arkivera och distribuera tidskriftens innehåll till deltagande bibliotek via LOCKSS <a href="{$lockssUrl}" target="_blank">Utgivarmanifest</a> sida.]]></message>
 	<message key="manager.setup.lockssLicenseDescription"><![CDATA[En LOCKSS-licens kommer då att visas i ”Om tidskriften” under ”Arkivering”: <a href="http://www.lockss.org/community/publishers-titles-gln/"target="_blank">LOCKSS Licens</a>]]></message>
@@ -348,10 +348,10 @@
 	<message key="manager.statistics.statistics.peerReviewed">Sakkunniggranskad</message>
 	<message key="manager.statistics.statistics.registeredReaders">Registrerade läsare</message>
 	<message key="manager.statistics.statistics.registeredUsers">Registrerade användare</message>
-	<message key="manager.statistics.statistics.reviewerCount">Antal tilldelade</message>
+	<message key="manager.statistics.statistics.reviewerCount">Antal utsedda</message>
 	<message key="manager.statistics.statistics.reviewers">Granskare</message>
 	<message key="manager.statistics.statistics.reviewerScore">Redaktörens bedömning</message>
-	<message key="manager.statistics.statistics.reviewsPerReviewer">Antal granskare</message>
+	<message key="manager.statistics.statistics.reviewsPerReviewer">Antal granskningar</message>
 	<message key="manager.statistics.statistics.selectSections">Välj sektioner för att beräkna statistik över tidskriftens sakkunniggranskade artiklar.</message>
 	<message key="manager.statistics.statistics.subscriptions">Prenumerationer</message>
 	<message key="manager.statistics.reports.defaultReport.articleDownloads">Nedladdningar av artiklar</message>
@@ -539,7 +539,7 @@
 	<message key="grid.category.path">Väg</message>
 	<message key="grid.action.addSection">Lägg till sektion</message>
 	<message key="manager.setup.section.description">Artiklarna i ett publicerat nummer organiseras i olika sektioner, med olika teman eller olika typer av artiklar (t ex översiktsartiklar, forskningsartiklar, recensioner, osv)</message>
-	<message key="settings.roles.gridDescription">Roller är grupper av tidskriftens användare som har tillgång till olika funktioner och arbetsflöden i tidskriften. Det finns fem olika nivåer: Tidskriftsansvarig har tillgång till allt i tidskriften (allt innehåll och alla inställningar); Sektionsredaktör har fullständig tillgång till allt innehåll i tidskriften; Tidskriftsassistent har begränsad tillgång till inskickade bidrag som de har fått tilldelat av en redaktör; Granskare kan se och arbeta med inskickade bidrag som  de har tilldelats att granska; och författare kan se och interagera med begränsad information om deras egna bidrag. Dessutom finns det fem olika steg som de olika rollerna kan få tillgång till: Inskickade bidrag, Intern granskning, Granskning, Redaktion, och Produktion.</message>
+	<message key="settings.roles.gridDescription">Roller är grupper av tidskriftens användare som har tillgång till olika funktioner och arbetsflöden i tidskriften. Det finns fem olika nivåer: Tidskriftsansvarig har tillgång till allt i tidskriften (allt innehåll och alla inställningar); Sektionsredaktör har fullständig tillgång till allt innehåll i tidskriften; Redaktionssekreterare har begränsad tillgång till inskickade bidrag som de har fått tilldelat av en redaktör; Granskare kan se och arbeta med inskickade bidrag som  de har tilldelats att granska; och Författare kan se och interagera med begränsad information om deras egna bidrag. Dessutom finns det fem olika steg som de olika rollerna kan få tillgång till: Inskickade bidrag, Intern granskning, Granskning, Redigering, och Produktion.</message>
 	<message key="manager.publication.library">Utgivarens publikationer</message>
 	<message key="manager.setup.copyrightYearBasis">Basera nya artiklars upphovsrättsår på</message>
 	<message key="manager.setup.copyrightYearBasis.article">Artiklar: förvalt år kommer att skapas av artikelns publiceringsdatum, som i "publish-as-you-go".</message>
@@ -562,9 +562,9 @@
 	<message key="plugins.importexport.common.export.representations">Publiceringsversion</message>
 	<!-- settings form -->
 	<message key="plugins.importexport.common.missingRequirements">Pluginets krav är inte uppfyllda</message>
-	<message key="plugins.importexport.common.error.DOIsNotAvailable">För att använda dettaa plugin gå till kategorin "Public Identifier" för plugins, aktivera och konfigurera DOI-pluginet och ange här ett giltligt DOI prefix.</message>
+	<message key="plugins.importexport.common.error.DOIsNotAvailable">För att använda dettaa plugin gå till kategorin "Publika identifikatorer" för plugins, aktivera och konfigurera DOI-pluginet och ange här ett giltligt DOI prefix.</message>
 	<message key="plugins.importexport.common.error.pluginNotConfigured">Pluginet är inte helt installerat.</message>
-	<message key="plugins.importexport.common.error.noDOIContentObjects">Inget publicerat material är valt för detta DOI i det publika pluginet för DOI, det är därför inte möjligt att lagra eller exportera via pluginet.</message>
+	<message key="plugins.importexport.common.error.noDOIContentObjects">Inget publiceringsmaterial har valts för DOI-tilldelning i DOI-pluginet. Det är därför inte möjligt att leverera eller exportera via pluginet.</message>
 	<message key="plugins.importexport.common.settings.form.password">Lösenord</message>
 	<message key="plugins.importexport.common.settings.form.password.description">Lösenordet kommer att sparas i text, det är alltså inte krypterad.</message>
 	<!-- export filter -->
@@ -585,9 +585,9 @@
 	<message key="plugins.importexport.common.invalidXML">Ogiltlig XML:</message>
 	<message key="plugins.importexport.common.export.error.outputFileNotWritable">Den producerade filen {$param} är inte skrivbar.</message>
 	<message key="plugins.importexport.common.export.error.inputFileNotReadable">Input-filen {$param} är inte läsbar.</message>
-	<message key="plugins.importexport.common.register.error.mdsError">Det gick inte att registrera! Servern för DOI registrering skickade ett felmeddelande: '{$param}'.</message>
+	<message key="plugins.importexport.common.register.error.mdsError">Det gick inte att registrera! Servern för DOI-registrering skickade ett felmeddelande: '{$param}'.</message>
 	<message key="plugins.importexport.common.register.success">Registreringen lyckades!</message>
-	<message key="plugins.importexport.common.senderTask.warning.noDOIprefix">DOI prefix saknas för tidskriften med sökvägen {$path}.</message>
+	<message key="plugins.importexport.common.senderTask.warning.noDOIprefix">DOI-prefix saknas för tidskriften med sökvägen {$path}.</message>
 	<message key="plugins.importexport.common.cliError">FEL:</message>
 	<message key="plugins.importexport.common.error.unknownJournal">Sökvägen för tidskriften, "{$journalPath}", existerar inte.</message>
 	<message key="plugins.importexport.common.error.unknownObjects">Det önskade objektet kunde inte hittas.</message>
