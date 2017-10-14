@@ -31,7 +31,7 @@
 	<message key="author.submit.supplementaryFiles">Ladda upp kompletterande filer</message>
 	<message key="author.submit.confirmation">Bekräfta</message>
 	<message key="author.submit.nextSteps">Följande steg</message>
-	<message key="submission.submit.cancelSubmission">Du kan fortsätta vid ett senare tillfälle genom att gå in på Aktuella bidrag under Min författarsida.</message> <!-- FIXME: Oklart om det ska stå Min författarsida -->
+	<message key="submission.submit.cancelSubmission">Du kan fortsätta vid ett senare tillfälle genom att gå in på Aktuella bidrag under författarens Min sida.</message>
 	<message key="author.submit.notAccepting">Den här tidskriften tar för tillfället inte emot några bidrag.</message>
 	<message key="author.submit.requestWaiver">Begär avgiftsfri publicering</message>
 	<message key="author.submit.qualifyForWaiver">Vänligen överväg avgiftsfri publicering för den här artikeln</message>
@@ -57,7 +57,7 @@
 	<message key="author.submit.form.localeRequired">Ange språk för bidraget.</message>
 	<message key="submission.submit.privacyStatement">Tidskriftens sekretessdeklaration</message>
 	<message key="author.submit.reorderInstructions">Sortera författarna i den ordning de ska listas i publikationen.</message>
-	<message key="author.submit.reorder">Sortera författares namn</message> <!-- FIXME: Oklar översättning -->
+	<message key="author.submit.reorder">Sortera om författarnamn</message>
 	<message key="author.submit.selectPrincipalContact">Primär kontaktperson för redaktionell korrespondens.</message>
 	<message key="author.submit.addAuthor">Lägg till författare</message>
 	<message key="author.submit.deleteAuthor">Ta bort författare</message>
@@ -106,10 +106,10 @@
 	<message key="author.submit.suppFile.form.descriptionRequired">Beskrivning krävs.</message>
 	<message key="author.suppFile.suppFilePublicIdentificationExists">Identifikator för publik kompletterande finns redan.</message>
 	<message key="author.suppFile.publicSuppFileIdentifier">Identifikator för publik kompletterande fil</message>
-	<message key="author.submit.confirmationDescription">För att skicka in bidraget till {$journalTitle} klicka Avsluta inlämning. Den primära kontaktpersonen för bidraget kommer få en bekräftelse med e-post och kommer att kunna följa bidragets väg genom den redaktionella processen genom att logga in på tidskriftens webbplats. Tack för att du är intresserad av att publicera i {$journalTitle}.</message> <!-- FIXME: Oklart om det ska stå Avsluta inlämning -->
+	<message key="author.submit.confirmationDescription">För att skicka in bidraget till {$journalTitle} klicka på Skicka in bidrag. Den primära kontaktpersonen för bidraget kommer få en bekräftelse med e-post och kommer att kunna följa bidragets väg genom den redaktionella processen genom att logga in på tidskriftens webbplats. Tack för att du är intresserad av att publicera i {$journalTitle}.</message>
 	<message key="author.submit.noFiles">Inga filer har laddats upp till det här bidraget.</message>
 	<message key="author.submit.filesSummary">Sammanfattning av filer</message>
-	<message key="author.submit.finishSubmission">Slutför</message>
+	<message key="author.submit.finishSubmission">Skicka in bidrag</message>
 	<message key="author.submit.submissionComplete">Bidrag inskickat. Tack för att du är intresserad av att publicera i {$journalTitle}.</message>
 	<message key="author.article.uploadAuthorVersion">Ladda upp författarversion</message>
 	<message key="author.article.copyeditedFile">Manusredigerad fil</message>
