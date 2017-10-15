@@ -130,7 +130,7 @@
 	<message key="submission.submissionEditing">Edição da submissão</message>
 	<message key="submission.changeSection">Alterar para</message>
 	<message key="submission.editorDecision">Decisão Editorial</message>
-	<message key="submission.round"><![CDATA[Rodada {$round}]]></message>
+	<message key="submission.round"><![CDATA[Rodada&amp;nbsp;{$round}]]></message>
 	<message key="submission.editorReview">Avaliação do Editor</message>
 	<message key="submission.notifyAuthor">Notificar autor</message>
 	<message key="submission.notifyEditor">Notificar editor</message>
@@ -547,7 +547,7 @@ Ativo indica avaliação em consideração ou andamento.]]></message>
 	<message key="search.allJournals">Todas as Revistas</message>
 	<message key="search.authorIndex">Índice de autores</message>
 	<message key="search.authorDetails">Perfil do autor</message>
-	<message key="search.syntaxInstructions"><![CDATA[<h4>Dicas para pesquisa: </h4><ul>
+	<message key="search.syntaxInstructions"><![CDATA[<h4>Dicas para pesquisa:</h4><ul>
 <li>O sistema de busca não diferencia maiúsculas ou minúsculas</li>
 <li>Termos irrelevantes são ignorados pelo sistema de busca</li>
 <li>São recuperados por padrão apenas artigos contendo <em>todos</em> os termos de busca (ex.: <strong>AND</strong> é implícito)</li>
@@ -622,34 +622,37 @@ Ativo indica avaliação em consideração ou andamento.]]></message>
 	<!-- Installer -->
 	<message key="installer.ojsInstallation">Instalação do sistema</message>
 	<message key="installer.ojsUpgrade">Atualização do sistema</message>
-	<message key="installer.installationInstructions"><![CDATA[<h4> Versão do OJS {$ version} </h4> 
+	<message key="installer.installationInstructions"><![CDATA[<h4> Versão do OJS {$version}</h4> 
 
-<p> Obrigado por baixar o <strong> Open Journal Systems </ strong> do Public Knowledge Project. Antes de prosseguir, leia o arquivo <a href="{$baseUrl}/docs/README"> README </a> incluídoeste software. Para obter mais informações sobre o Projeto de conhecimento público e seus projetos de software, visite o <a href="http://pkp.sfu.ca/" target="_blank"> site da PKP </a>. Se você tiver relatórios de erros ou consultas de suporte técnico sobre o Open Journal Systems, consulte o <a href="http://forum.pkp.sfu.ca" target="_blank"> fórum de suporte </a> ou visite o PKP online < um href = "https://github.com/pkp/pkp-lib#issues" target = "_ blank"> sistema de relatório de erros </a>. Embora o fórum de suporte seja o método preferido de contato, você também pode enviar um e-mail à equipe em <a href="mailto:pkp.contact@gmail.com"> pkp.contact@gmail.com </a>. </p> \
-<h4> Atualização </h4> 
+<p>Obrigado por baixar o <strong>Open Journal Systems</strong> do Public Knowledge Project. Antes de prosseguir, leia o arquivo <a href="{$baseUrl}/docs/README">README</a> incluídoeste software. Para obter mais informações sobre o Projeto de conhecimento público e seus projetos de software, visite o <a href="http://pkp.sfu.ca/" target="_blank"> site da PKP</a>. Se você tiver relatórios de erros ou consultas de suporte técnico sobre o Open Journal Systems, consulte o <a href="http://forum.pkp.sfu.ca" target="_blank"> fórum de suporte</a> ou visite o PKP online <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">sistema de relatório de erros</a>. Embora o fórum de suporte seja o método preferido de contato, você também pode enviar um e-mail à equipe em <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
 
-<p> Se você estiver atualizando uma instalação existente do OJS, <a href="{$upgradeUrl}"> clique aqui </a> para continuar. </p> \ n
-<h4> Requisitos recomendados do sistema </h4> 
+<h4> Atualização</h4>
 
-<ul> 
-	 <li> <a href="http://www.php.net/" target="_blank"> PHP </a>> = {$ phpRequiredVersion}; você está usando o PHP {$ phpVersion} {$ wrongPhpText} </li> 
-\ t <li> <a href="http://www.mysql.com/" target="_blank"> MySQL </a>> = 4.1 ou <a href = "http://www.postgresql.org / "target =" _ blank "> PostgreSQL </a>> = 9.1.5 </li> 
-\ t <li> <a href="http://httpd.apache.org/" target="_blank"> Apache </a>> = 1.3.2x ou> = 2.0.4x ou Microsoft IIS 6 </li > 
-\ t <li> Sistema operacional: qualquer sistema operacional compatível com o software acima, incluindo <a href="http://www.linux.org/" target="_blank"> Linux </a>, <a href = " http://www.bsd.org/ "target =" _ blank "> BSD </a>, <a href="http://www.oracle.com/sun/" target="_blank"> Solaris </a>, <a href="http://www.apple.com/" target="_blank"> Mac OS X </a>, <a href="http://www.microsoft.com/"> Windows </a> </li> 
-</ul> 
+<p>Se você estiver atualizando uma instalação existente do OJS, <a href="{$upgradeUrl}">clique aqui</a> para continuar.</p>
 
-<p> Como a PKP não possui recursos para testar todas as combinações possíveis de versões e plataformas de software, nenhuma garantia de operação correta ou suporte está implícita. </p> 
+<h4> Requisitos recomendados do sistema</h4>
 
-<p> As alterações a essas configurações podem ser feitas após a instalação, editando o arquivo <tt> config.inc.php </tt> no diretório base OJS, ou usando a interface da web de administração do site. </p> 
+<ul>
+	<li><a href="http://www.php.net/" target="_blank">PHP</a> >= {$phpRequiredVersion}; você está usando o PHP {$phpVersion}{$wrongPhpText}</li>
+	<li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 4.1 ou <a href="http://www.postgresql.org/"target="_blank">PostgreSQL</a> >= 9.1.5</li>
+	<li><a href="http://httpd.apache.org/" target="_blank">Apache</a> >= 1.3.2x ou >= 2.0.4x ou Microsoft IIS 6</li>
+	<li>Sistema operacional: qualquer sistema operacional compatível com o software acima, incluindo <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.oracle.com/sun/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a></li>
+</ul>
 
-<h4> Sistemas de banco de dados suportados </h4> 
+<p>Como a PKP não possui recursos para testar todas as combinações possíveis de versões e plataformas de software, nenhuma garantia de operação correta ou suporte está implícita.</p> 
 
-<p> O OJS já foi testado no MySQL e no PostgreSQL, embora outros sistemas de gerenciamento de banco de dados suportados pelo <a href="http://adodb.sourceforge.net/" target="_blank"> ADOdb </a> possam funcionar (total ou parcialmente). Os relatórios de compatibilidade e / ou patches de código para SGBDs alternativos podem ser enviados para a equipe do OJS. </p> 
+<p>As alterações a essas configurações podem ser feitas após a instalação, editando o arquivo <tt> config.inc.php</tt> no diretório base OJS, ou usando a interface da web de administração do site.</p> 
+
+<h4> Sistemas de banco de dados suportados</h4> 
+
+<p>O OJS já foi testado no MySQL e no PostgreSQL, embora outros sistemas de gerenciamento de banco de dados suportados pelo <a href="http://adodb.sourceforge.net/" target="_blank"> ADOdb</a> possam funcionar (total ou parcialmente). Os relatórios de compatibilidade e / ou patches de código para SGBDs alternativos podem ser enviados para a equipe do OJS.</p> 
 ]]></message>
-	<message key="installer.upgradeInstructions"><![CDATA[<h4> Versão do OJS {$ version} </h4> 
+<message key="installer.upgradeInstructions"><![CDATA[
+<h4> Versão do OJS {$version}</h4>
 
-<p> Obrigado por baixar o <strong> Open Journal Systems </strong> do Public Knowledge Project. Antes de prosseguir, leia os arquivos <a href="{$baseUrl}/docs/README"> README </a> e <a href="{$baseUrl}/docs/UPGRADE"> UPGRADE </a> incluídos com Este software. Para obter mais informações sobre o Projeto de conhecimento público e seus projetos de software, visite o <a href="http://pkp.sfu.ca/" target="_blank"> site da PKP </a>. Se você tiver relatórios de erros ou consultas de suporte técnico sobre o Open Journal Systems, consulte o <a href="http://forum.pkp.sfu.ca" target="_blank"> fórum de suporte </a> ou visite o PKP online <a href = "https://github.com/pkp/pkp-lib#issues" target = "_ blank"> sistema de relatório de erros </a>. Embora o fórum de suporte seja o método preferido de contato, você também pode enviar um e-mail à equipe em <a href="mailto:pkp.contact@gmail.com"> pkp.contact@gmail.com </a>. </p> 
-<p> É <strong> fortemente recomendado </strong> que você faz backup do banco de dados, do diretório de arquivos e do diretório de instalação do OJS antes de prosseguir. </p> 
-<p> Se você estiver executando em <a href="http://www.php.net/features.safe-mode" target="_blank"> Modo de segurança PHP </a>, certifique-se de que a diretiva max_execution_time em Seu arquivo de configuração do php.ini está configurado para um limite alto. Se este ou qualquer outro limite de tempo (por exemplo, a diretiva "Timeout" do Apache) for alcançado e o processo de atualização for interrompido, será necessária uma intervenção manual. </p>]]></message>
+<p>Obrigado por baixar o <strong> Open Journal Systems</strong> do Public Knowledge Project. Antes de prosseguir, leia os arquivos <a href="{$baseUrl}/docs/README"> README</a> e <a href="{$baseUrl}/docs/UPGRADE"> UPGRADE</a> incluídos com Este software. Para obter mais informações sobre o Projeto de conhecimento público e seus projetos de software, visite o <a href="http://pkp.sfu.ca/" target="_blank"> site da PKP</a>. Se você tiver relatórios de erros ou consultas de suporte técnico sobre o Open Journal Systems, consulte o <a href="http://forum.pkp.sfu.ca" target="_blank"> fórum de suporte</a> ou visite o PKP online <a href = "https://github.com/pkp/pkp-lib#issues" target = "_ blank"> sistema de relatório de erros</a>. Embora o fórum de suporte seja o método preferido de contato, você também pode enviar um e-mail à equipe em <a href="mailto:pkp.contact@gmail.com"> pkp.contact@gmail.com</a>.</p> 
+<p>É <strong> fortemente recomendado</strong> que você faz backup do banco de dados, do diretório de arquivos e do diretório de instalação do OJS antes de prosseguir.</p> 
+<p>Se você estiver executando em <a href="http://www.php.net/features.safe-mode" target="_blank"> Modo de segurança PHP</a>, certifique-se de que a diretiva max_execution_time em Seu arquivo de configuração do php.ini está configurado para um limite alto. Se este ou qualquer outro limite de tempo (por exemplo, a diretiva "Timeout" do Apache) for alcançado e o processo de atualização for interrompido, será necessária uma intervenção manual.</p>]]></message>
 	<message key="installer.localeSettingsInstructions"><![CDATA[Para suporte total ao Unicode (UTF-8), escolha UTF-8 para todas as configurações de caracteres. Note que o suporte requer o MySQL >= 4.1.1 ou PostgreSQL >= 7.1. Suporte total ao Unicode requer o PHP >= 4.3.0 compilado com suporte à biblioteca<a href="http://www.php.net/mbstring" target="_blank">mbstring</a> (habilitada em instalações padrão de versões mais recentes do PHP). Problemas com conjuntos de caracteres podem ocorrer caso estes requisitos não sejam atendidos pelo servidor.
 <br /><br />
 O servidor atualmente tem suporte a mbstring: <strong>{$supportsMBString}</strong>]]></message>
@@ -927,7 +930,7 @@ Pode-se opcionalmente informar o motivo pelo qual está sendo desativado o cadas
 	<message key="user.subscriptions.form.domainIPRangeRequired">O tipo de assinatura escolhida exige um domínio e/ou uma faixa de IP para autenticação dos assinantes.</message>
 	<message key="user.subscriptions.form.domainValid">Informe um domínio válido.</message>
 	<message key="user.subscriptions.form.ipRange">Faixas de IP</message>
-	<message key="user.subscriptions.form.ipRangeItem"><![CDATA[•]]></message>
+	<message key="user.subscriptions.form.ipRangeItem"><![CDATA[&#8226;]]></message>
 	<message key="user.subscriptions.form.ipRangeInstructions">Digite a faixa de IP caso seja uma assinatura institucional. Caso uma faixa de IP seja informada, o domínio é opcional. Valores válidos incluem um IP (ex.: 142.58.103.1), uma faixa de IP CIDR (ex.: 142.58.100.0/24), uma faixa de IP (ex.: 142.58.103.1 - 142.58.103.4), uma faixa de IP com coringa '*' (ex.: 142.58.103.*), ou qualquer combinação dessas opções separadas por ponto-e-vírgula (;) (ex.: 142.58.103.* - 142.58.107.* ; 142.58.108.1/24 ; 142.58.106.*)</message>
 	<message key="user.subscriptions.form.ipRangeValid">Digite uma faixa de IP válida.</message>
 	<message key="user.subscriptions.form.deleteIpRange">Excluir</message>
@@ -1019,14 +1022,14 @@ Pode-se opcionalmente informar o motivo pelo qual está sendo desativado o cadas
 	<message key="search.results.similarDocuments">Documentos similares</message>
 	<message key="plugins.categories.viewableFiles">Plugins de Composições Finais dos Artigos</message>
 	<message key="plugins.categories.viewableFiles.description">Plugins de Composições Finais dos Artigos permitem adicionar formatos de exibição diferentes aos documentos publicados.</message>
-	<message key="manager.setup.clockssDescription"><![CDATA[Open Journal Systems também suporta a <a href="http://clockss.org/" target="_blank"> </a> CLOCKSS (Controlled Lots of Copies Keep Stuff Safe) do sistema para garantir um arquivo seguro e permanente para a revista. CLOCKSS é baseado no software open source LOCKSS desenvolvido na Biblioteca da Universidade de Stanford que permite que bibliotecas preservem revistas selecionadas regularmente registadas. Cada arquivo é continuamente validado contra outros registros da biblioteca, e se o conteúdo for caracterizado como corrompido ou perdido, os outros registros ou a revista são usados para restaurá-lo.]]></message>
+	<message key="manager.setup.clockssDescription"><![CDATA[Open Journal Systems também suporta a <a href="http://clockss.org/" target="_blank"></a> CLOCKSS (Controlled Lots of Copies Keep Stuff Safe) do sistema para garantir um arquivo seguro e permanente para a revista. CLOCKSS é baseado no software open source LOCKSS desenvolvido na Biblioteca da Universidade de Stanford que permite que bibliotecas preservem revistas selecionadas regularmente registadas. Cada arquivo é continuamente validado contra outros registros da biblioteca, e se o conteúdo for caracterizado como corrompido ou perdido, os outros registros ou a revista são usados para restaurá-lo.]]></message>
 	<message key="submission.layout.galley.remotelyHostedContent">Esta composição final estará disponível em outro site.</message>
 	<message key="submission.layout.galley.remoteURL">URL do conteúdo hospedado remotamente</message>
 	<message key="reviewer.article.selectRecommendation.byEditor">Definir ou ajustar a recomendação do avaliador.</message>
 	<message key="user.register.selectContext">Selecione uma revista para se registrar:</message>
 	<message key="article.pageTitle">Vista do {$title}</message>
 	<message key="article.download">Baixar este arquivo PDF</message>
-	<message key="article.pluginMissing"><![CDATA[<P> O arquivo PDF selecionado deveria ser carregado no navegador caso tenha um plug-in instalado (por exemplo, uma versão recente do <a href="https://get.adobe.com/reader/"> leitor de PDF Adobe Acrobat Reader </a>). </p>]]></message>
+	<message key="article.pluginMissing"><![CDATA[<p>O arquivo PDF selecionado deveria ser carregado no navegador caso tenha um plug-in instalado (por exemplo, uma versão recente do <a href="https://get.adobe.com/reader/"> leitor de PDF Adobe Acrobat Reader</a>).</p>]]></message>
 	<message key="archive.archivesPageNumber">Arquivos - Página {$pageNumber}</message>
 	<message key="about.contact">Contato</message>
 	<message key="about.aboutContext">Sobre a Revista</message>
@@ -1069,20 +1072,15 @@ Pode-se opcionalmente informar o motivo pelo qual está sendo desativado o cadas
 	<message key="user.noRoles.selectUsersWithoutRoles">Incluir usuários sem papéis nesta revista.</message>
 	<message key="search.results.orderBy.popularityAll">Popularidade (desde sempre)</message>
 
-	<message key="editor.issues.backIssues">Edições anteriores</message>
-	<message key="editor.issues.futureIssues">Edições futuras</message>
 	<message key="notification.type.assignProductionUser">Designe um usuário para criar as composições finais usando o link "Adicionar" na lista Participantes.</message>
 	<message key="notification.type.awaitingRepresentations">Esperando Composições Finais</message>
 	<message key="journal.viewAllIssues">Ver Todas as Edições</message>
-<<<<<<< HEAD
-  <message key="about.onlineSubmissions.submissionActions">{$newSubmission} ou {$viewSubmissions}.</message>
-  <message key="installer.appInstallation">Instalação do OJS</message>
-  <message key="about.onlineSubmissions.newSubmission">Fazer nova submissão</message>
-  <message key="about.onlineSubmissions.viewSubmissions">ver suas submissões pendentes</message>
-=======
-  	<message key="about.onlineSubmissions.submissionActions">{$newSubmission} ou {$viewSubmissions}.</message>
-  	<message key="installer.appInstallation">Instalação do OJS</message>
-  	<message key="about.onlineSubmissions.newSubmission">Fazer nova submissão</message>
-  	<message key="about.onlineSubmissions.viewSubmissions">ver suas submissões pendentes</message>
->>>>>>> 9bdf4839a908cd18d7c491d13443ff6535209742
+	<message key="about.onlineSubmissions.submissionActions">{$newSubmission} ou {$viewSubmissions}.</message>
+	<message key="installer.appInstallation">Instalação do OJS</message>
+	<message key="about.onlineSubmissions.newSubmission">Fazer nova submissão</message>
+	<message key="about.onlineSubmissions.viewSubmissions">ver suas submissões pendentes</message>
+
+	<message key="editor.issues.backIssues">Edições anteriores</message>
+	<message key="editor.issues.futureIssues">Edições futuras</message>
+
 </locale>

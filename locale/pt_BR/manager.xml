@@ -121,12 +121,7 @@
 	<message key="manager.setup.currentIssue">Edição Atual</message>
 	<message key="manager.setup.customizingTheLook">Passo 5. Visual da revista</message>
 	<message key="manager.setup.customTags">Tags META personalizadas</message>
-	<message key="manager.setup.customTagsDescription"><![CDATA[Tags META, inseridas no cabeçalho HTML das páginas do sistema.
-<br  />
-Exemplo:
-<br />
-<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" /><br />
-<meta name="DC.title" content="Título da revista" />]]></message>
+	<message key="manager.setup.customTagsDescription"><![CDATA[Tags META, inseridas no cabeçalho HTML das páginas do sistema.</message>
 	<message key="manager.setup.details">Detalhes</message>
 	<message key="manager.setup.details.description">Nome da revista, ISSN, contatos, editora e patrocinadores e sistemas de busca.</message>
 	<message key="manager.setup.disableUserRegistration">O Gerente da Revista é responsável por cadastrar todos os usuários, permitindo a editores e editores de seção cadastrar avaliadores.</message>
@@ -459,7 +454,7 @@ Exemplo:
 	<message key="manager.subscriptions.form.institutionName">Instituição</message>
 	<message key="manager.subscriptions.form.institutionNameRequired">O nome da instituição é obrigatório.</message>
 	<message key="manager.subscriptions.form.institutionMailingAddress">Endereço postal</message>
-	<message key="manager.subscriptions.form.ipRangeItem"><![CDATA[•]]></message>
+	<message key="manager.subscriptions.form.ipRangeItem"><![CDATA[&#8226;]]></message>
 	<message key="manager.subscriptions.form.deleteIpRange">Excluir</message>
 	<message key="manager.subscriptions.form.addIpRange">Incluir</message>
 	<message key="manager.subscriptions.form.typeRequired">Um tipo de assinatura deve ser criado antes de criar novas assinaturas.</message>
@@ -577,15 +572,15 @@ Poderão ser usados estatísticas individuais de uso, por exemplo, para exibir u
 	<message key="plugins.importexport.common.export.error.outputFileNotWritable">O arquivo de saída {$param} não é gravável.</message>
 	<message key="plugins.importexport.common.register.error.mdsError">O registo não foi bem sucedido! O servidor de registro DOI retornou um erro: '{$param}'</message>
 	<message key="plugins.importexport.common.register.success">Registrado com sucesso!</message>
-  <message key="plugins.importexport.common.export.representations">Composições Finais</message>
-  <message key="plugins.importexport.common.error.noDOIContentObjects">Nenhum objeto publicável foi selecionado para receber DOI no plugin corrrespondente, então não há possibilidade de depósito ou exportação neste plugin.</message>
-  <message key="plugins.importexport.common.status.registered">Registrado</message>
-  <message key="plugins.importexport.common.validation">Sem objetos selecionados</message>
-  <message key="plugins.importexport.common.invalidXML">XML inválido:</message>
-  <message key="plugins.importexport.common.export.error.inputFileNotReadable">O arquivo de entrada {$param} não é legível.</message>
-  <message key="plugins.importexport.common.senderTask.warning.noDOIprefix">O prefixo DOI está faltando para a revista com o caminho {$path}.</message>
-  <message key="plugins.importexport.common.cliError">ERRO:</message>
-  <message key="plugins.importexport.common.error.unknownJournal">O caminho da revista expecificado, "{$journalPath}", não existe.</message>
-  <message key="plugins.importexport.common.error.unknownObjects">Os objetos especificados não puderam ser encontrados.</message>
-  <message key="manager.setup.notifications.copyPrimaryContact">Enviar uma cópia para o contato principal, identificado nas Configurações da Revista.</message>
+	<message key="plugins.importexport.common.export.representations">Composições Finais</message>
+	<message key="plugins.importexport.common.error.noDOIContentObjects">Nenhum objeto publicável foi selecionado para receber DOI no plugin corrrespondente, então não há possibilidade de depósito ou exportação neste plugin.</message>
+	<message key="plugins.importexport.common.status.registered">Registrado</message>
+	<message key="plugins.importexport.common.validation">Sem objetos selecionados</message>
+	<message key="plugins.importexport.common.invalidXML">XML inválido:</message>
+	<message key="plugins.importexport.common.export.error.inputFileNotReadable">O arquivo de entrada {$param} não é legível.</message>
+	<message key="plugins.importexport.common.senderTask.warning.noDOIprefix">O prefixo DOI está faltando para a revista com o caminho {$path}.</message>
+	<message key="plugins.importexport.common.cliError">ERRO:</message>
+	<message key="plugins.importexport.common.error.unknownJournal">O caminho da revista expecificado, "{$journalPath}", não existe.</message>
+	<message key="plugins.importexport.common.error.unknownObjects">Os objetos especificados não puderam ser encontrados.</message>
+	<message key="manager.setup.notifications.copyPrimaryContact">Enviar uma cópia para o contato principal, identificado nas Configurações da Revista.</message>
 </locale>

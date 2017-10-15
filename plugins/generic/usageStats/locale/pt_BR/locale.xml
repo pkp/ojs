@@ -4,7 +4,7 @@
 <!--
   * plugins/generic/usageStats/locale/pt_BR/locale.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2014-2017 Simon Fraser University
   * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Locale information: https://pkp.sfu.ca/wiki/index.php?title=OMP:_Portuguese_(pt_BR)
@@ -25,17 +25,4 @@
 		<li>Navegador</li>
 		</ul>
 		<p>Os dados coletados são usados apenas para propósitos de avaliação. Nenhum endereço de IP é mapeado a IDs de usuário. É tecnicamente impossível rastrear um conjunto específicos de dados a um IP específico.</p>]]></message>
-  <message key="plugins.generic.usageStats.settings.statsDisplayOptions.siteWide">&lt;h3&gt;Informações gerais sobre privacidade&lt;/h3&gt;
-		&lt;p&gt;Veja nossa &lt;a href="{$privacyStatementUrl}"&gt;política geral de privacidade&lt;/a&gt;.&lt;/p&gt;
-		&lt;h3&gt;Estatísticas de uso&lt;/h3&gt;
-		&lt;p&gt;Para permitir a análise de uso e impacto do periódico e dos artigos publicados, são coletados e registrados os acessos as páginas: página inicial, edições, artigos, composições finais e arquivos suplementares. No processo de coleta, todos os dados são tornados anônimos. Nenhuma informação pessoal é registrada. Os endereços de IP são obfuscados por meio de uma criptografia (usando &lt;em&gt;SHA 256&lt;/em&gt;) combinada com uma &lt;em&gt;chave de segurança de 64 caracteres&lt;/em&gt; que é &lt;em&gt;gerada randomicamente e alterada diariamente&lt;/em&gt; de forma automática. Portanto, não há como reconstruir os endereços de IP.&lt;/p&gt;
-		&lt;p&gt;As seguintes informações são coletadas, além do endereço de IP a ser obfuscado:&lt;/p&gt;
-		&lt;ul&gt;
-		&lt;li&gt;Tipo de acesso (administração, leitura, etc.)&lt;/li&gt;
-		&lt;li&gt;Hora da acessoo&lt;/li&gt;
-		&lt;li&gt;Endereço acessado&lt;/li&gt;
-		&lt;li&gt;Código de status HTTP&lt;/li&gt;
-		&lt;li&gt;Navegador&lt;/li&gt;
-		&lt;/ul&gt;
-		&lt;p&gt;Os dados coletados são usados apenas para propósitos de avaliação. Nenhum endereço de IP é mapeado a IDs de usuário. É tecnicamente impossível rastrear um conjunto específicos de dados a um IP específico.&lt;/p&gt;</message>
 </locale>

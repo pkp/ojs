@@ -10,7 +10,7 @@
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Portuguese_(pt_BR)
   * Localization strings.
   -->
- 
+
 <locale name="pt_BR" full_name="Português (Brasil)">
 	<message key="plugins.pubIds.doi.displayName">DOI</message>
 
@@ -69,7 +69,7 @@
 	<message key="plugins.pubIds.doi.editor.assignDoi.pattern">O DOI {$pubId} não pode ser atribuído porque contém um padrão inválido.</message>
 	<message key="plugins.pubIds.doi.editor.assignDoi.assigned">O DOI {$pubId} foi atribuído.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixCustomIdentifier">Insira um sufixo DOI individual para cada item publicado. Você encontrará um campo para inserir o DOI na página de meta-dados de cada item.</message>
-  <message key="plugins.pubIds.doi.manager.settings.doiAssignJournalWide">Designar DOIs</message>
-  <message key="plugins.pubIds.doi.manager.settings.doiAssignJournalWide.description">Designar DOIs a todos os objetos publicados que ainda não têm DOI designado. Esta ação não pode ser usada com a configuração de sufixos personalizados. Se você modificou a configuração acima, por favor salve suas mudanças antes de iniciar esta ação. Designar DOIs pode levar um tempo considerável, dependendo do número de objetos publicados pela revista.</message>
-  <message key="plugins.pubIds.doi.manager.settings.doiAssignJournalWide.confirm">Tem certeza que deseja designar DOIs a todos os objetos publicados que não tem DOIs designados?</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiAssignJournalWide">Designar DOIs</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiAssignJournalWide.description">Designar DOIs a todos os objetos publicados que ainda não têm DOI designado. Esta ação não pode ser usada com a configuração de sufixos personalizados. Se você modificou a configuração acima, por favor salve suas mudanças antes de iniciar esta ação. Designar DOIs pode levar um tempo considerável, dependendo do número de objetos publicados pela revista.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiAssignJournalWide.confirm">Tem certeza que deseja designar DOIs a todos os objetos publicados que não tem DOIs designados?</message>
 </locale>
