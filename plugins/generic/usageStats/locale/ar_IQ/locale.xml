@@ -12,8 +12,8 @@
   -->
 
 <locale name="ar_IQ" full_name="العربية">
-    <message key="plugins.generic.usageStats.optout.description">
-        <![CDATA[
+	<message key="plugins.generic.usageStats.settings.statsDisplayOptions.siteWide">بإمكان أي مجلة تجاوز هذه الإعدادات عبر صفحة الإضافات الخاصة بها.</message>
+	<message key="plugins.generic.usageStats.optout.description"><![CDATA[
 		<h3>معلومات شخصية عامة</h3>
 		<p>لطفاً، إرجع إلى <a href="{$privacyStatementUrl}">بيان الخصوصية</a> العام الخاص بنا.</p>
 		<h3>إحصائيات الاستعمال</h3>
@@ -26,6 +26,5 @@
 		<li>رمز حالة HTTP</li>
 		<li>برنامج التصفح المستعمل</li>
 		</ul>
-		<p>البيانات المجموعة لدينا تستعمل لأغراض تقييمية حصراً. لا نقوم بمضاهات عناوين IP مع أسماء دخول المستخدمين. عملياً، يستحيل تتبع حزمة محددة من البيانات على أساس عنوان IP معين.</p>]]>
-    </message>
+		<p>البيانات المجموعة لدينا تستعمل لأغراض تقييمية حصراً. لا نقوم بمضاهات عناوين IP مع أسماء دخول المستخدمين. عملياً، يستحيل تتبع حزمة محددة من البيانات على أساس عنوان IP معين.</p>]]></message>
 </locale>

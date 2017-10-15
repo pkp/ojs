@@ -958,6 +958,7 @@
 	<message key="log.review.reviewFileByProxy">المحرر {$userName}، قام برفع ملف للتحكيم للجولة {$round} للمؤلَّف {$submissionId} نيابة عن المحكم {$reviewerName}.</message>
 	<message key="log.review.reviewerFile">تم رفع ملف أحد المحكمين.</message>
 	<message key="log.editor.decision">تم تسجيل قرار المحرر الآتي: ({$decision}) للمؤلَّف {$submissionId} من قبل {$editorName}.</message>
+	<message key="log.editor.recommendation">توصية المحرر: ({$decision}) للمؤلَّف {$submissionId} تم تسجيلها من قبل {$editorName}.</message>
 
 
 	<message key="log.copyedit.initiate">تم الشروع بتدقيق المؤلَّف {$submissionId} من قبل {$copyeditorName}.</message>
@@ -1055,8 +1056,9 @@
 	<message key="notification.type.userComment">وضع قارئ تعليقاً عن المؤلَّف "{$title}"</message>
 	<message key="notification.savedIssueMetadata">البيانات الوصفية لنشر العدد قد تم حفظها.</message>
 	<message key="notification.type.editorAssignmentTask">مؤلَّف جديد تم تقديمه وهو بحاجة إلى تعيينه لمحرر.</message>
-	<message key="notification.type.assignProductionUser">عين أحد المستخدمين لإنشاء الألواح الطباعية مستعملاً رابط الإضافة في قائمة المشاركين.</message>
-	<message key="notification.type.awaitingRepresentations">الأللواح الطباعية قيد الانتظار.</message>
+	<message key="notification.type.assignProductionUser">عين أحد المستخدمين لإنشاء الألواح الطباعية مستعملاً رابط التعيين في قائمة المشاركين.</message>
+	<message key="notification.type.awaitingRepresentations">الألواح الطباعية قيد الانتظار.</message>
+	<message key="notification.type.publicationScheduled">هذا الطلب قد تمت جدولته للنشر.</message>
 
 	<!--
 	 *
@@ -1099,4 +1101,5 @@
 
 	<message key="editor.issues.backIssues">الأعداد السابقة</message>
 	<message key="editor.issues.futureIssues">الأعداد المستقبلية</message>
+	<message key="navigation.subscriptions">الاشتراكات</message>
 </locale>
