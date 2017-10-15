@@ -44,6 +44,7 @@
 	<message key="manager.payment.notFound">Не найдено</message>
 	<message key="manager.payment.options">Параметры</message>
 	<message key="manager.payment.options.acceptSubscriptionPayments">Это активирует платежи в разделе «Подписки», где типы подписки, их стоимость и продолжительность управляются менеджером по подписке данного журнала.</message>
+	<message key="subscriptionManager.subscription.confirmRemove">Вы уверены, что хотите удалить эту подписку?</message>
 	<message key="manager.payment.options.enablePayments">Платежи будут включены для этого журнала. Обратите внимание, что для осуществления платежей пользователи должны будут войти на сайт под своей учетной записью.</message>
 	<message key="manager.payment.options.fee">Платеж</message>
 	<message key="manager.payment.options.feeDescription">Описание платежа</message>
