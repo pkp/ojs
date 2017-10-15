@@ -121,4 +121,5 @@
 	<message key="author.submit.form.localeRequired">Vælg et indleveringssprog.</message>
 	<message key="author.submit.reorder">Genbestil forfatternavn</message>
 	<message key="author.submit.form.wordCountAlert">Du har overskredet grænsen for det maksimale antal ord for resuméer i denne sektion.</message>
+	<message key="author.submit.nextSteps">Næste trin</message>
 </locale>
