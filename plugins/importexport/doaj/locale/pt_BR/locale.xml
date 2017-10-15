@@ -19,4 +19,14 @@
 	<message key="plugins.importexport.doaj.cliUsage"><![CDATA[Uso:
 {$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...
 ]]></message>
+  <message key="plugins.importexport.doaj.registrationIntro">Uso:
+{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...
+</message>
+  <message key="plugins.importexport.doaj.settings.form.apiKey">OJS depositará os metadados automaticamente no DOAJ. Por favor note que isso pode levar um tempo depois da publicação. Você pode verificar os artigos não registrados.</message>
+  <message key="plugins.importexport.doaj.settings.form.apiKey.description">Uso:
+{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...
+</message>
+  <message key="plugins.importexport.doaj.settings.form.testMode.description">Uso:
+{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...
+</message>
 </locale>
