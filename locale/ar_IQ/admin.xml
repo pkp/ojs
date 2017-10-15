@@ -56,7 +56,6 @@
 	<message key="admin.journals.createInstructions">سيتم تلقائياً منحك دور رئيس التحرير في هذه المجلة. بعد إنشاء مجلة جديدة، سيتم توجيهك لضبط إعداداتها من أجل إكمال مرحلة التهيئة الأولية.</message>
 	<message key="admin.journals.journalSettings">إعدادات المجلة</message>
 	<message key="admin.journals.noneCreated">لم تتم استضافة أي مجلة بعد</message>
-	<message key="admin.contexts.confirmDelete">هل أنت متأكد من رغبتك في إزالة هذه المجلة من الموقع ومحو جميع متعلقاتها؟</message>
 	<message key="admin.contexts.create">استضف مجلة</message>
 	<message key="admin.journals.urlWillBe">ينبغي أن يكون بشكل كلمة واحدة قصيرة أو اختصاراً يعرِّف المجلة. رابط المجلة سيكون {$sampleUrl}.</message>
 	<message key="admin.contexts.form.titleRequired">العنوان مطلوب حتماً.</message>

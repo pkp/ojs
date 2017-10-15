@@ -109,7 +109,6 @@
 	<message key="editor.issues.galleyLocaleRequired">لا بد من إختيار لغة ما لتنضيد العدد</message>
 	<message key="editor.issues.galleyPublicIdentificationExists">المعرف العام لتنضيد العدد موجود سلفاً</message>
 	<message key="editor.issues.backToIssueGalleys">العودة إلى تنضيدات العدد</message>
-	<message key="editor.issues.viewingGalley">معاينة تنضيد العدد</message>
 	<message key="editor.issues.confirmDeleteGalley">هل أنت متأكد من رغبتك في حذف هذا التنضيد؟</message>
 	<message key="editor.issues.identifiers">المعرفات</message>
 	<message key="editor.navigation.futureIssues">الأعداد القادمة</message>
