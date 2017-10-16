@@ -58,25 +58,23 @@
 	</div>
 	{/if}
 
-	{if $hasAccess}
-		<ul class="galleys_links">
-			{foreach from=$article->getGalleys() item=galley}
-				{if $primaryGenreIds}
-					{assign var="file" value=$galley->getFile()}
-					{if !$file || !in_array($file->getGenreId(), $primaryGenreIds)}
-						{php}continue;{/php}
-					{/if}
+	<ul class="galleys_links">
+		{foreach from=$article->getGalleys() item=galley}
+			{if $primaryGenreIds}
+				{assign var="file" value=$galley->getFile()}
+				{if !$file || !in_array($file->getGenreId(), $primaryGenreIds)}
+					{php}continue;{/php}
 				{/if}
-				<li>
-					{assign var="hasArticleAccess" value=$hasAccess}
-					{if ($article->getAccessStatus() == $smarty.const.ARTICLE_ACCESS_OPEN)}
-						{assign var="hasArticleAccess" value=1}
-					{/if}
-					{include file="frontend/objects/galley_link.tpl" parent=$article hasAccess=$hasArticleAccess}
-				</li>
-			{/foreach}
-		</ul>
-	{/if}
+			{/if}
+			<li>
+				{assign var="hasArticleAccess" value=$hasAccess}
+				{if ($article->getAccessStatus() == $smarty.const.ARTICLE_ACCESS_OPEN)}
+					{assign var="hasArticleAccess" value=1}
+				{/if}
+				{include file="frontend/objects/galley_link.tpl" parent=$article hasAccess=$hasArticleAccess purchaseFee=$currentJournal->getSetting('purchaseArticleFee') purchaseCurrency=$currentJournal->getSetting('currency')}
+			</li>
+		{/foreach}
+	</ul>
 
 	{call_hook name="Templates::Issue::Issue::Article"}
 </div>

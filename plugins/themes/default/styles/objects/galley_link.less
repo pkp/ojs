@@ -27,19 +27,23 @@
 	}
 
 	&.restricted {
-		border-color: @bg;
-		color: @text-light;
-
-		&:hover,
-		&:focus {
-			background: @bg;
-			color: @text;
-		}
+		border-color: @offset;
+		color: @offset;
 
 		&:before {
 			.fa();
 			content: @fa-var-lock;
 			color: @offset;
+		}
+
+		&:hover,
+		&:focus {
+			background: @offset;
+			color: @lift;
+
+			&:before {
+				color: @lift;
+			}
 		}
 	}
 }

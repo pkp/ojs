@@ -42,7 +42,7 @@
 
 {* Get user access flag *}
 {if !$hasAccess}
-	{if $restrictOnlyPdf && type=="pdf"}
+	{if $restrictOnlyPdf && $type=="pdf"}
 		{assign var=restricted value="1"}
 	{elseif !$restrictOnlyPdf}
 		{assign var=restricted value="1"}
@@ -64,4 +64,10 @@
 	{/if}
 
 	{$galley->getGalleyLabel()|escape}
+
+	{if $restricted && $purchaseFee && $purchaseCurrency}
+		<span class="purchase_cost">
+			{translate key="reader.purchasePrice" price=$purchaseFee currency=$purchaseCurrency}
+		</span>
+	{/if}
 </a>
