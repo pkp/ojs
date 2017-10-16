@@ -15,9 +15,9 @@
 
 namespace OJS\Services;
 
+/** types for all ojs default navigationMenuItems */
 define('NMI_TYPE_SUBSCRIPTIONS', 'NMI_TYPE_SUBSCRIPTIONS');
 define('NMI_TYPE_MY_SUBSCRIPTIONS', 'NMI_TYPE_MY_SUBSCRIPTIONS');
-/** types for all ojs default navigationMenuItems */
 define('NMI_TYPE_CURRENT', 'NMI_TYPE_CURRENT');
 define('NMI_TYPE_ARCHIVES',	'NMI_TYPE_ARCHIVES');
 
