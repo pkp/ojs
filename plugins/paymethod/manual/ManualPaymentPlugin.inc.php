@@ -75,6 +75,7 @@ class ManualPaymentPlugin extends PaymethodPlugin {
 
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON);
 
+		import('lib.pkp.classes.form.Form');
 		$paymentForm = new Form($this->getTemplatePath() . 'paymentForm.tpl');
 		import('classes.payment.ojs.OJSPaymentManager');
 		$paymentManager = new OJSPaymentManager($this->getRequest());
