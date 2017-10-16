@@ -93,4 +93,9 @@
 		<!-- remove citationFormats plugins -->
 		<query>DELETE FROM versions WHERE product_type = 'plugins.citationFormats'</query>
 	</sql>
+	<sql><!-- pkp/pkp-lib#2859 -->
+		<!-- remove citationFormats plugins -->
+		<query>DELETE FROM versions WHERE product_type = 'plugins.citationOutput'</query>
+		<query>DELETE FROM journal_settings WHERE setting_name = 'metaCitationOutputFilterId'</query>
+	</sql>
 </data>
