@@ -98,4 +98,7 @@
 		<query>DELETE FROM versions WHERE product_type = 'plugins.citationOutput'</query>
 		<query>DELETE FROM journal_settings WHERE setting_name = 'metaCitationOutputFilterId'</query>
 	</sql>
+	<sql><!-- pkp/pkp-lib#2873 -->
+		<query>UPDATE filter_groups SET output_type = 'xml::schema(http://schema.datacite.org/meta/kernel-4/metadata.xsd)' WHERE output_type = 'xml::schema(http://schema.datacite.org/meta/kernel-3/metadata.xsd)'</query>
+	</sql>
 </data>
