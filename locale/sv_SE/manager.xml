@@ -44,6 +44,7 @@
 	<message key="manager.payment.notFound">Saknas</message>
 	<message key="manager.payment.options">Alternativ</message>
 	<message key="manager.payment.options.acceptSubscriptionPayments">Detta aktiverar betalningar för Prenumerationer, där former, kostnader, prenumerationstid och prenumerationer hanteras av prenumerationsansvarig.</message>
+	<message key="subscriptionManager.subscription.confirmRemove">Är du säker på att du vill radera den här prenumerationen?</message>
 	<message key="manager.payment.options.enablePayments">Betalningar kommer att aktiveras för den här tidskriften. Observera att användare måste logga in för att göra betalningar.</message>
 	<message key="manager.payment.options.fee">Avgift</message>
 	<message key="manager.payment.options.feeDescription">Beskrivning av avgift</message>
