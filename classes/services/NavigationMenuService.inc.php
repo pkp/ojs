@@ -15,8 +15,11 @@
 
 namespace OJS\Services;
 
+/** types for all ojs default navigationMenuItems */
 define('NMI_TYPE_SUBSCRIPTIONS', 'NMI_TYPE_SUBSCRIPTIONS');
 define('NMI_TYPE_MY_SUBSCRIPTIONS', 'NMI_TYPE_MY_SUBSCRIPTIONS');
+define('NMI_TYPE_CURRENT', 'NMI_TYPE_CURRENT');
+define('NMI_TYPE_ARCHIVES',	'NMI_TYPE_ARCHIVES');
 
 class NavigationMenuService extends \PKP\Services\PKPNavigationMenuService {
 
@@ -37,7 +40,7 @@ class NavigationMenuService extends \PKP\Services\PKPNavigationMenuService {
 	public function getMenuItemTypesCallback($hookName, $args) {
 		$types =& $args[0];
 
-		\AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON, LOCALE_COMPONENT_PKP_USER, LOCALE_COMPONENT_PKP_EDITOR);
+		\AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON, LOCALE_COMPONENT_PKP_USER, LOCALE_COMPONENT_APP_EDITOR);
 
 		$ojsTypes = array(
 			NMI_TYPE_CURRENT => array(
