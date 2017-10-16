@@ -391,8 +391,7 @@ class DataciteXmlFilter extends NativeExportFilter {
 	 * @param $article PublishedArticle
 	 * @param $galley ArticleGalley
 	 * @param $galleyFile SubmissionFile
-	 * @return DOMElement|null Can be null if a size
-	 *  cannot be identified for the given object.
+	 * @return DOMElement.
 	 */
 	function createResourceTypeNode($doc, $issue, $article, $galley, $galleyFile) {
 		$deployment = $this->getDeployment();
@@ -422,6 +421,10 @@ class DataciteXmlFilter extends NativeExportFilter {
 			// Create the resourceType element.
 			$resourceTypeNode = $doc->createElementNS($deployment->getNamespace(), 'resourceType', $resourceType);
 			$resourceTypeNode->setAttribute('resourceTypeGeneral', 'Text');
+		} else {
+			// It is a supplementary file
+			$resourceTypeNode = $doc->createElementNS($deployment->getNamespace(), 'resourceType');
+			$resourceTypeNode->setAttribute('resourceTypeGeneral', 'Dataset');
 		}
 		return $resourceTypeNode;
 	}

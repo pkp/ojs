@@ -18,10 +18,10 @@
  */
 
 // XML attributes
-define('DATACITE_XMLNS' , 'http://datacite.org/schema/kernel-3');
+define('DATACITE_XMLNS' , 'http://datacite.org/schema/kernel-4');
 define('DATACITE_XMLNS_XSI' , 'http://www.w3.org/2001/XMLSchema-instance');
-define('DATACITE_XSI_SCHEMAVERSION' , '3');
-define('DATACITE_XSI_SCHEMALOCATION' , 'http://schema.datacite.org/meta/kernel-3/metadata.xsd');
+define('DATACITE_XSI_SCHEMAVERSION' , '4');
+define('DATACITE_XSI_SCHEMALOCATION' , 'http://schema.datacite.org/meta/kernel-4/metadata.xsd');
 
 class DataciteExportDeployment {
 	/** @var Context The current import/export context */
