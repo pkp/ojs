@@ -172,7 +172,7 @@ class IssueService extends PKPBaseEntityPropertyService {
 					}
 					break;
 				case 'coverImageUrl':
-					$values[$prop] = $issue->getCoverImage(null);
+					$values[$prop] = $issue->getCoverImageUrls(null);
 					break;
 				case 'coverImageAltText':
 					$values[$prop] = $issue->getCoverImageAltText(null);

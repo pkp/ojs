@@ -126,6 +126,10 @@ class SubmissionService extends \PKP\Services\PKPSubmissionService {
 
 		$props[] = 'issueSummary';
 		$props[] = 'sectionSummary';
+		$props[] = 'coverImageUrl';
+		$props[] = 'coverImageAltText';
+
+		return $props;
 	}
 
 	/**
@@ -162,7 +166,6 @@ class SubmissionService extends \PKP\Services\PKPSubmissionService {
 
 		$issue = null;
 		if ($publishedArticle) {
-			$articleId = $publishedArticle->getId();
 			$issueDao = \DAORegistry::getDAO('IssueDAO');
 			$issue = $issueDao->getById(
 				$publishedArticle->getIssueId(),
@@ -182,6 +185,12 @@ class SubmissionService extends \PKP\Services\PKPSubmissionService {
 						'view',
 						$submission->getBestArticleId()
 					);
+					break;
+				case 'coverImageUrl':
+					$values[$prop] = $submission->getCoverImageUrls(null);
+					break;
+				case 'coverImageAltText':
+					$values[$prop] = $submission->getCoverImageAltText(null);
 					break;
 				case 'issue':
 				case 'issueSummary':
