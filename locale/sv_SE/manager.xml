@@ -519,7 +519,7 @@
 	<message key="manager.subscriptionTypes.form.individual">Individuella (användare valideras via login)</message>
 	<message key="manager.subscriptionTypes.form.institutional">Institutionella (användare valideras via domän eller IP-adress).</message>
 	<message key="manager.subscriptionTypes.form.institutionalValid">Använd den befintliga kryssrutan.</message>
-	<message key="manager.subscriptionTypes.form.membership">Prenumerationer kräver information om medlemskap<br/>(t ex om en förening, organisation, consortium, etc.)</message>
+	<message key="manager.subscriptionTypes.form.membership">Prenumerationer kräver information om medlemskap (t ex om en förening, organisation, consortium, etc.)</message>
 	<message key="manager.subscriptionTypes.form.membershipValid">Använd den befintliga kryssrutan.</message>
 	<message key="manager.subscriptionTypes.form.options">Alternativ</message>
 	<message key="manager.subscriptionTypes.form.public">Gör inte den här prenumerationsformen publikt tillgänglig eller synlig (t.ex. under Prenumerationer i Om tidskriften).</message>
