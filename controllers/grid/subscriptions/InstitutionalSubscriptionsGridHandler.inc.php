@@ -43,15 +43,6 @@ class InstitutionalSubscriptionsGridHandler extends SubscriptionsGridHandler {
 		);
 		$this->addColumn(
 			new GridColumn(
-				'email',
-				'user.email',
-				null,
-				null,
-				$cellProvider
-			)
-		);
-		$this->addColumn(
-			new GridColumn(
 				'subscriptionType',
 				'manager.subscriptions.subscriptionType',
 				null,

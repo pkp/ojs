@@ -76,7 +76,7 @@ class InstitutionalSubscriptionForm extends SubscriptionForm {
 					'institutionName' => $this->subscription->getInstitutionName(),
 					'institutionMailingAddress' => $this->subscription->getInstitutionMailingAddress(),
 					'domain' => $this->subscription->getDomain(),
-					'ipRanges' => $this->subscription->getIPRanges()
+					'ipRanges' => join($this->subscription->getIPRanges(), "\r\n"),
 				)
 			);
 		}
@@ -92,15 +92,7 @@ class InstitutionalSubscriptionForm extends SubscriptionForm {
 
 		// Check if IP range has been provided
 		$ipRanges = $this->getData('ipRanges');
-		$ipRangeProvided = false;
-		if (is_array($ipRanges)) {
-			foreach ($ipRanges as $ipRange) {
-				if ($ipRange != '') {
-					$ipRangeProvided = true;
-					break;
-				}
-			}
-		}
+		$ipRangeProvided = !empty(trim($ipRanges));
 
 		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
 		$subscriptionType = $subscriptionTypeDao->getById($this->getData('typeId'));
@@ -112,7 +104,7 @@ class InstitutionalSubscriptionForm extends SubscriptionForm {
 
 		// If provided ensure IP ranges have IP address format; IP addresses may contain wildcards
 		if ($ipRangeProvided) {	
-			$this->addCheck(new FormValidatorArrayCustom($this, 'ipRanges', 'required', 'manager.subscriptions.form.ipRangeValid', create_function('$ipRange, $regExp', 'return PKPString::regexp_match($regExp, $ipRange);'),
+			$this->addCheck(new FormValidatorCustom($this, 'ipRanges', 'required', 'manager.subscriptions.form.ipRangeValid', create_function('$ipRanges, $regExp', 'foreach (explode("\r\n", trim($ipRanges)) as $ipRange) if (!PKPString::regexp_match($regExp, trim($ipRange))) return false; return true;'),
 				array(
 					'/^' .
 					// IP4 address (with or w/o wildcards) or IP4 address range (with or w/o wildcards) or CIDR IP4 address
@@ -144,9 +136,7 @@ class InstitutionalSubscriptionForm extends SubscriptionForm {
 		$this->subscription->setDomain($this->getData('domain'));
 
 		$ipRanges = $this->getData('ipRanges');
-		if (empty($ipRanges) || empty($ipRanges[0])) {
-			$ipRanges = array();
-		}
+		$ipRanges = explode("\r\n", trim($ipRanges));
 		$this->subscription->setIPRanges($ipRanges);
 
 		$institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');

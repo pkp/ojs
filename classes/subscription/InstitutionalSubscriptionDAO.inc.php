@@ -286,9 +286,9 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 	 * @return boolean
 	 */
 	function updateObject($institutionalSubscription) {
-		if (!$this->_updateObject($institutionalSubscription)) return false;
+		$this->_updateObject($institutionalSubscription);
 
-		$returner = $this->update(
+		$this->update(
 			'UPDATE	institutional_subscriptions
 			SET	institution_name = ?,
 				mailing_address = ?,
@@ -304,7 +304,6 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 
 		$this->_deleteSubscriptionIPRanges($institutionalSubscription->getId());
 		$this->_insertSubscriptionIPRanges($institutionalSubscription->getId(), $institutionalSubscription->getIPRanges());
-		return true;
 	}
 
 	/**
@@ -322,7 +321,6 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 	/**
 	 * Delete institutional subscriptions by journal ID.
 	 * @param $journalId int
-	 * @return boolean
 	 */
 	function deleteByJournalId($journalId) {
 		$result = $this->retrieve(
@@ -332,7 +330,6 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 			(int) $journalId
 		);
 
-		$returner = true;
 		if ($result->RecordCount() != 0) {
 			while (!$result->EOF) {
 				$subscriptionId = $result->fields[0];
@@ -342,17 +339,14 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 		}
 
 		$result->Close();
-		return $returner;
 	}
 
 	/**
 	 * Delete institutional subscriptions by user ID.
 	 * @param $userId int
-	 * @return boolean
 	 */
 	function deleteByUserId($userId) {
 		$result = $this->retrieve('SELECT s.subscription_id FROM subscriptions s WHERE s.user_id = ?', (int) $userId);
-		$returner = true;
 		if ($result->RecordCount() != 0) {
 			while (!$result->EOF) {
 				$subscriptionId = $result->fields[0];
@@ -362,14 +356,12 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 		}
 
 		$result->Close();
-		return $returner;
 	}
 
 	/**
 	 * Delete institutional subscriptions by user ID and journal ID.
 	 * @param $userId int User ID
 	 * @param $journalId int Journal ID
-	 * @return boolean
 	 */
 	function deleteByUserIdForJournal($userId, $journalId) {
 		$result = $this->retrieve(
@@ -377,7 +369,6 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 			array((int) $userId, (int) $journalId)
 		);
 
-		$returner = true;
 		if ($result->RecordCount() != 0) {
 			while (!$result->EOF) {
 				$subscriptionId = $result->fields[0];
@@ -387,18 +378,15 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 		}
 
 		$result->Close();
-		return $returner;
 	}
 
 	/**
 	 * Delete all institutional subscriptions by subscription type ID.
 	 * @param $subscriptionTypeId int Subscription type ID
-	 * @return boolean
 	 */
 	function deleteByTypeId($subscriptionTypeId) {
 		$result = $this->retrieve('SELECT s.subscription_id FROM subscriptions s WHERE s.type_id = ?', (int) $subscriptionTypeId);
 
-		$returner = true;
 		if ($result->RecordCount() != 0) {
 			while (!$result->EOF) {
 				$subscriptionId = $result->fields[0];
@@ -408,7 +396,6 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 		}
 
 		$result->Close();
-		return $returner;
 	}
 
 	/**

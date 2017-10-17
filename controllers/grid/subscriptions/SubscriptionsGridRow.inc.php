@@ -30,7 +30,7 @@ class SubscriptionsGridRow extends GridRow {
 
 		// Is this a new row or an existing row?
 		$element =& $this->getData();
-		assert(is_a($element, 'IndividualSubscription'));
+		assert(is_a($element, 'IndividualSubscription') || is_a($element, 'InstitutionalSubscription'));
 
 		$rowId = $this->getId();
 

@@ -14,7 +14,7 @@
 		$('#institutionalSubscriptionForm').pkpHandler('$.pkp.controllers.form.AjaxFormHandler');
 	{rdelim});
 </script>
-<form class="pkp_form" method="post" id="institutionalSubscriptionForm" action="{url op="updateSubscription" path="institutional"}">
+<form class="pkp_form" method="post" id="institutionalSubscriptionForm" action="{url op="updateSubscription"}">
 	{if $subscriptionId}
 	<input type="hidden" name="subscriptionId" value="{$subscriptionId|escape}" />
 	{/if}

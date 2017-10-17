@@ -244,10 +244,9 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 	/**
 	 * Update an existing individual subscription.
 	 * @param $individualSubscription IndividualSubscription
-	 * @return boolean
 	 */
 	function updateObject($individualSubscription) {
-		return $this->_updateObject($individualSubscription);
+		$this->_updateObject($individualSubscription);
 	}
 
 	/**

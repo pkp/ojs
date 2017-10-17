@@ -70,7 +70,7 @@ class SubscriptionBlockPlugin extends BlockPlugin {
 			$subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
 			$subscriptionId = $subscriptionDao->isValidInstitutionalSubscription($domain, $ip, $journal->getId());
 			if ($subscriptionId) {
-				$institutionalSubscription = $subscriptionDao->getSubscription($subscriptionId);
+				$institutionalSubscription = $subscriptionDao->getById($subscriptionId);
 				$templateMgr->assign(array(
 					'institutionalSubscription' => $institutionalSubscription,
 					'userIP' => $ip,
