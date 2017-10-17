@@ -149,7 +149,13 @@ class GalleyService extends PKPBaseEntityPropertyService {
 	}
 
 	/**
-	 * @copydoc \PKP\Services\EntityProperties\EntityPropertyInterface::getSummaryProperties()
+	 * Returns summary properties for a galley
+	 * @param ArticleGalley|IssueGalley $galley
+	 * @param array extra arguments
+	 *		$args['request'] PKPRequest Required
+	 *		$args['parent'] Submission|Issue Required
+	 *		$args['slimRequest'] SlimRequest
+	 * @return array
 	 */
 	public function getSummaryProperties($galley, $args = null) {
 		\PluginRegistry::loadCategory('pubIds', true);
@@ -164,7 +170,13 @@ class GalleyService extends PKPBaseEntityPropertyService {
 	}
 
 	/**
-	 * @copydoc \PKP\Services\EntityProperties\EntityPropertyInterface::getFullProperties()
+	 * Returns full properties for a galley
+	 * @param ArticleGalley|IssueGalley $galley
+	 * @param array extra arguments
+	 *		$args['request'] PKPRequest Required
+	 *		$args['parent'] Submission|Issue Required
+	 *		$args['slimRequest'] SlimRequest
+	 * @return array
 	 */
 	public function getFullProperties($galley, $args = null) {
 		\PluginRegistry::loadCategory('pubIds', true);
