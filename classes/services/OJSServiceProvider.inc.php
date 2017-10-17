@@ -16,8 +16,11 @@
 namespace OJS\Services;
 
 use \Pimple\Container;
+use \PKP\Services\AuthorService;
+use \OJS\Services\SubmissionService;
+use \OJS\Services\SectionService;
+use \OJS\Services\NavigationMenuService;
 use \OJS\Services\IssueService;
-use \OJS\Services\AuthorService;
 use \OJS\Services\GalleyService;
 
 class OJSServiceProvider implements \Pimple\ServiceProviderInterface {
@@ -27,6 +30,11 @@ class OJSServiceProvider implements \Pimple\ServiceProviderInterface {
 	 * @param Pimple\Container $pimple
 	 */
 	public function register(Container $pimple) {
+
+		// Author service
+		$pimple['author'] = function() {
+			return new AuthorService();
+		};
 
 		// Submission service
 		$pimple['submission'] = function() {
@@ -46,11 +54,6 @@ class OJSServiceProvider implements \Pimple\ServiceProviderInterface {
 		// NavigationMenus service
 		$pimple['navigationMenu'] = function() {
 			return new NavigationMenuService();
-		};
-
-		// Author service
-		$pimple['author'] = function() {
-			return new AuthorService();
 		};
 
 		// Galley service
