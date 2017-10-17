@@ -104,39 +104,86 @@ class GalleyService extends PKPBaseEntityPropertyService {
 				case 'file':
 					$values[$prop] = null;
 					$file = $galley->getFile();
-					if ($file) {
-						$values[$prop] = array(
-							'id' => $file->getId(),
-							'fileName' => $file->getOriginalFileName(),
+					if (!$file) {
+						break;
+					}
+					$values[$prop] = array(
+						'id' => $file->getFileId(),
+						'fileName' => $file->getOriginalFileName(),
+					);
+					if (is_a($file, 'SubmissionFile')) {
+						$values[$prop]['revision'] = $file->getRevision();
+						$values[$prop]['fileStage'] = $file->getFileStage();
+						$values[$prop]['genreId'] = $file->getGenreId();
+						$values[$prop]['fileName'] = $file->getClientFileName();
+					}
+					if (is_a($file, 'SupplementaryFile')) {
+						$values[$prop]['metadata'] = array(
+							'description' => $file->getDescription(null),
+							'creator' => $file->getCreator(null),
+							'publisher' => $file->getPublisher(null),
+							'source' => $file->getSource(null),
+							'subject' => $file->getSubject(null),
+							'sponsor' => $file->getSponsor(null),
+							'dateCreated' => $file->getDateCreated(),
+							'language' => $file->getLanguage(),
 						);
-						if (is_a($file, 'SubmissionFile')) {
-							$values[$prop]['revision'] = $file->getRevision();
-							$values[$prop]['fileStage'] = $file->getFileStage();
-							$values[$prop]['genreId'] = $file->getGenreId();
-							$values[$prop]['fileName'] = $file->getClientFileName();
-						}
-						if (is_a($file, 'SupplementaryFile')) {
-							$values[$prop]['metadata'] = array(
-								'description' => $file->getDescription(null),
-								'creator' => $file->getCreator(null),
-								'publisher' => $file->getPublisher(null),
-								'source' => $file->getSource(null),
-								'subject' => $file->getSubject(null),
-								'sponsor' => $file->getSponsor(null),
-								'dateCreated' => $file->getDateCreated(),
-								'language' => $file->getLanguage(),
-							);
-						} elseif (is_a($file, 'SubmissionArtworkFile')) {
-							$values[$prop]['metadata'] = array(
-								'caption' => $file->getCaption(),
-								'credit' => $file->getCredit(),
-								'copyrightOwner' => $file->getCopyrightOwner(),
-								'terms' => $file->getPermissionTerms(),
-								'width' => $file->getWidth(),
-								'height' => $file->getHeight(),
-								'physicalWidth' => $file->getPhysicalWidth(300),
-								'physicalHeight' => $file->getPhysicalHeight(300),
-							);
+					} elseif (is_a($file, 'SubmissionArtworkFile')) {
+						$values[$prop]['metadata'] = array(
+							'caption' => $file->getCaption(),
+							'credit' => $file->getCredit(),
+							'copyrightOwner' => $file->getCopyrightOwner(),
+							'terms' => $file->getPermissionTerms(),
+							'width' => $file->getWidth(),
+							'height' => $file->getHeight(),
+							'physicalWidth' => $file->getPhysicalWidth(300),
+							'physicalHeight' => $file->getPhysicalHeight(300),
+						);
+					}
+
+					// Look for dependent files
+					if (is_a($file, 'SubmissionFile')) {
+						$values['dependentFiles'] = null;
+						$submissionFileDao = \DAORegistry::getDAO('SubmissionFileDAO'); /* @var $submissionFileDao SubmissionFileDAO */
+						$dependentFiles = $submissionFileDao->getLatestRevisionsByAssocId(ASSOC_TYPE_SUBMISSION_FILE, $file->getFileId(), $parent->getId(), SUBMISSION_FILE_DEPENDENT);
+						if ($dependentFiles) {
+							$values['dependentFiles'] = array();
+							foreach ($dependentFiles as $dependentFile) {
+								$dependentFileProps = array(
+									'id' => $dependentFile->getFileId(),
+									'fileName' => $dependentFile->getOriginalFileName(),
+								);
+								if (is_a($dependentFile, 'SubmissionFile')) {
+									$dependentFileProps['revision'] = $dependentFile->getRevision();
+									$dependentFileProps['fileStage'] = $dependentFile->getFileStage();
+									$dependentFileProps['genreId'] = $dependentFile->getGenreId();
+									$dependentFileProps['fileName'] = $dependentFile->getClientFileName();
+								}
+								if (is_a($dependentFile, 'SupplementaryFile')) {
+									$dependentFileProps['metadata'] = array(
+										'description' => $dependentFile->getDescription(null),
+										'creator' => $dependentFile->getCreator(null),
+										'publisher' => $dependentFile->getPublisher(null),
+										'source' => $dependentFile->getSource(null),
+										'subject' => $dependentFile->getSubject(null),
+										'sponsor' => $dependentFile->getSponsor(null),
+										'dateCreated' => $dependentFile->getDateCreated(),
+										'language' => $dependentFile->getLanguage(),
+									);
+								} elseif (is_a($dependentFile, 'SubmissionArtworkFile')) {
+									$dependentFileProps['metadata'] = array(
+										'caption' => $dependentFile->getCaption(),
+										'credit' => $dependentFile->getCredit(),
+										'copyrightOwner' => $dependentFile->getCopyrightOwner(),
+										'terms' => $dependentFile->getPermissionTerms(),
+										'width' => $dependentFile->getWidth(),
+										'height' => $dependentFile->getHeight(),
+										'physicalWidth' => $dependentFile->getPhysicalWidth(300),
+										'physicalHeight' => $dependentFile->getPhysicalHeight(300),
+									);
+								}
+								$values['dependentFiles'][] = $dependentFileProps;
+							}
 						}
 					}
 					break;

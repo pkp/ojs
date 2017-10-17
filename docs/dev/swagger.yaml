@@ -586,12 +586,13 @@ paths:
       summary: Get submission galleys.
       description: |
         **OJS 3.1 Target**:
-          - All keys except `dependentFiles`.
+          - Complete
 
         **Additional Notes**:
           - This endpoint will not be available until a submission has reached the Production stage.
           - `_parent` will return the API URL representing the associated submission.
           - `publishedUrl` will point to the frontend galley view (eg - `/article/view/<submission-id>/<galley-id>`).
+          - Some of the galley file data will only be present for supplementary and artwork files.
       parameters:
         - name: submissionId
           in: path
