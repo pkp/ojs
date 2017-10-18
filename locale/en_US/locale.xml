@@ -318,6 +318,7 @@
 	<message key="reader.openAccess">Open Access</message>
 	<message key="reader.subscriptionAccess">Requires Subscription</message>
 	<message key="reader.subscriptionOrFeeAccess">Requires Subscription or Fee</message>
+	<message key="reader.purchasePrice">({$currency} {$price})</message>
 
 	<!-- Reader Comments -->
 	<message key="comments.commentsOnArticle">Comments on this article</message>
