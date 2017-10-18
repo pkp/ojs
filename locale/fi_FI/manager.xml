@@ -63,6 +63,7 @@
 	<message key="manager.payment.readerFeesDescription">Valitut vaihtoehdot kuvauksineen ja maksuineen (joita voidaan muokata alla), näkyvät Tietoa julkaisusta -sivulla Toimintaperiaatteet-otsikon alla, sekä sellaisissa kohdissa, joissa vaaditaan maksu.</message>
 	<message key="manager.payment.records">Maksutietueet</message>
 	<message key="manager.payments">Maksut</message>
+	<message key="manager.paymentTypes">Maksutyypit</message>
 	<message key="manager.payment.userName">Maksun tunniste</message>
 	<message key="manager.people.allEnrolledUsers">Tähän julkaisuun lisätyt käyttäjät</message>
 	<message key="manager.people.allJournals">Kaikki julkaisut</message>
@@ -90,7 +91,6 @@
 	<message key="manager.sections.form.mustAllowPermission">Varmista, että vähintään yksi valintaruutu on rastitettu kunkin osastotoimittajan valinnan kohdalla.</message>
 	<message key="manager.sections.form.reviewFormId">Varmista, että olet valinnut oikein muotoillun arviointilomakkeen.</message>
 	<message key="manager.sections.form.titleRequired">Osastolle vaaditaan nimi.</message>
-	<message key="manager.sections.hideAbout">Poista tämä osasto Tietoa julkaisusta -sivulta.</message>
 	<message key="manager.sections.hideTocAuthor">Poista kirjoittajien nimet tämän osaston kohteista sisällysluettelossa.</message>
 	<message key="manager.sections.hideTocTitle">Poista tämän osaston nimi sisällysluettelosta.</message>
 	<message key="manager.sections.identifyType">Merkitse tässä osastossa julkaistut kohteet seuraavasti</message>
@@ -377,14 +377,8 @@ Julkaisusi on määritetty tallentamaan useita käytön mittareita. Käyttötila
 	<message key="manager.subscriptionPolicies.expiryFullDescription">Lukijoilta evätään pääsy kaikkeen tilauksen sisältöön tilauksen päättyessä.</message>
 	<message key="manager.subscriptionPolicies.expiryPartial">Osittainen päättyminen</message>
 	<message key="manager.subscriptionPolicies.expiryPartialDescription">Lukijoilta evätään pääsy tilauksen äskettäin julkaistuun sisältöön, mutta he säilyttävät pääsyn tilauksen päättymispäivää ennen julkaistuun sisältöön.</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths1">Ilmoita tilaajille sähköpostitse</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths2">kuukautta tilauksen päättymisen jälkeen.</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks1">Ilmoita tilaajille sähköpostitse</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks2">viikkoa tilauksen päättymisen jälkeen.</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths1">Ilmoita tilaajille sähköpostitse</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths2">kuukautta ennen tilauksen päättymistä.</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks1">Ilmoita tilaajille sähköpostitse</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks2">viikkoa ennen tilauksen päättymistä.</message>
+	<message key="manager.subscriptionPolicies.xMonths">{$x} kuukautta</message>
+	<message key="manager.subscriptionPolicies.xWeeks">{$x} viikkoa</message>
 	<message key="manager.subscriptionPolicies.expiryReminders">Muistutukset tilauksen päättymisestä</message>
 	<message key="manager.subscriptionPolicies.expiryRemindersDescription">Tilaajille voidaan lähettää automaattisia sähköpostimuistutuksia (julkaisun hallinnoijien muokattavissa OJS:n sähköpostit -kohdassa) tilauksen päättymistä ennen tai sen jälkeen.</message>
 	<message key="manager.subscriptionPolicies.expiryRemindersDisabled"><![CDATA[<strong>Huom.</strong> Aktivoidakseen nämä valinnat sivuston ylläpitäjän täytyy ottaa käyttöön <tt>scheduled_tasks</tt> -valinta OJS:n määritystiedostossa. Palvelimen lisämäärityksiä saatetaan edellyttää tämän toiminnon tukemiseksi (joka ei välttämättä ole mahdollista kaikilla palvelimilla), kuten OJS:n käyttöohjeissa mainitaan.]]></message>
@@ -583,7 +577,22 @@ Julkaisusi on määritetty tallentamaan useita käytön mittareita. Käyttötila
 	<message key="plugins.importexport.common.error.validation">Valittuja kohteita ei voitu muuntaa.</message>
 	<message key="plugins.importexport.common.invalidXML">Virheellinen XML:</message>
 	<message key="plugins.importexport.common.export.error.outputFileNotWritable">Kohdetiedosto {$param} ei ole kirjoituskelpoinen.</message>
+	<message key="plugins.importexport.common.export.error.inputFileNotReadable">Kohdetiedostoa {$param} ei voi lukea.</message>
 	<message key="plugins.importexport.common.register.error.mdsError">Rekisteröinti ei onnistunut! DOI:n rekisteröintipalvelin tuotti virheen: ‘{$param}’.</message>
 	<message key="plugins.importexport.common.register.success">Rekisteröinti onnistui!</message>
 	<message key="plugins.importexport.common.senderTask.warning.noDOIprefix">Julkaisulta, jonka polku on {$path}, puuttuu DOI-prefiksi.</message>
+	<message key="plugins.importexport.common.cliError">VIRHE:</message>
+	<message key="plugins.importexport.common.error.unknownJournal">Annettua lehden polkua, "{$journalPath}", ei löydy.</message>
+	<message key="plugins.importexport.common.error.unknownObjects">Annettuja kohteita ei löytynyt.</message>
+	<message key="manager.setup.notifications.copyPrimaryContact">Lähetä kopio pääasialliselle yhteyshenkilölle, joka on määritelty julkaisun asetuksissa.</message>
+	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths">Ilmoita tilaajille sähköpostilla, kun heidän tilauksensa on päättynyt.</message>
+	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks">Ilmoita tilaajille sähköpostilla, kun heidän tilauksensa on päättynyt.</message>
+	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths">Ilmoita tilaajille sähköpostilla, kun heidän tilauksensa on päättynyt.</message>
+	<message key="manager.subscriptions.confirmRenew">Haluatko varmasti uusia tämän tilauksen?</message>
+	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks">Ilmoita tilaajille sähköpostilla, kun heidän tilauksensa on päättynyt.</message>
+	<message key="plugins.importexport.common.validation">Validoi XML ennen vientiä ja rekisteröintiä.</message>
+	<message key="subscriptionManager.subscription.confirmRemove">Oletko varma, että haluat poistaa tämän tilauksen?</message>
+	<message key="manager.navigationMenus.subscriptions.description">Linkki lehden tilausvaihtoehtoja koskevalle sivulle.</message>
+	<message key="manager.navigationMenus.mySubscriptions.description">Linkki käyttäjän tilaushistoriaa koskevalle sivulle.</message>
+	<message key="manager.navigationMenus.mySubscriptions.conditionalWarning">Tämä linkki näytetään vain käyttäjän ollessa kirjautuneena sisään.</message>
 </locale>

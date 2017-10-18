@@ -16,7 +16,6 @@
 	<message key="section.default.title">Artikkelit</message>
 	<message key="section.default.abbrev">ART</message>
 	<message key="section.default.policy"></message>
-
 	<message key="default.genres.article">Artikkelin teksti</message>
 
 	<!--
@@ -142,7 +141,6 @@ Noudata seuraavaa protokollaa tehdessäsi elektronisia korjauksia käsikirjoituk
 	<message key="default.journalSettings.purchaseArticleFee">Osta artikkeli</message>
 	<message key="default.journalSettings.purchaseIssueFee">Osta numero</message>
 	<message key="default.journalSettings.membershipFee">Yhdistyksen jäsenyys</message>
-
 	<!-- Group defaults -->
 	<message key="default.groups.name.manager">Julkaisun hallinnoija</message>
 	<message key="default.groups.plural.manager">Julkaisun hallinnoijat</message>

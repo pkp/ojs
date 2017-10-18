@@ -174,10 +174,6 @@
 	<message key="editor.article.assignEditor">Lisää toimittaja</message>
 	<message key="editor.article.selectEditor">Valitse {$roleName}</message>
 	<message key="editor.article.selectDecision">Valitse päätös</message>
-	<message key="editor.article.decision.accept">Hyväksy käsikirjoitus</message>
-	<message key="editor.article.decision.pendingRevisions">Vaatii korjauksia</message>
-	<message key="editor.article.decision.resubmit">Lähetä uudelleen arvioitavaksi</message>
-	<message key="editor.article.decision.decline">Hylkää käsikirjoitus</message>
 	<message key="editor.article.selectLayoutEditor">Valitse taittaja</message>
 	<message key="editor.article.replaceLayoutEditor">Korvaa taittaja</message>
 	<message key="editor.article.reviewSubmission">Arvioi käsikirjoitus</message>
@@ -224,5 +220,7 @@
 	<message key="editor.submission.selectGalleyFiles">Valitse julkaistavat tiedostot</message>
 	<message key="editor.submission.editorial.finalDraftDescription"><![CDATA[Tekninen toimittaja on muuttanut tämän luettelon lopulliset luonnostiedostot teknisesti toimitetuiksi versioiksi, jotka on ladattu alla olevan <span class="pkp_help_title">Tekninen toimittaminen</span>-otsikon alle.]]></message>
 	<message key="editor.submission.proof.manageProofFilesDescription">Mitä tahansa tiedostoja, joita on ladattu käsikirjoituksen eri lähetysvaiheissa, voidaan lisätä oikolukulistalle rastittamalla Sisällytä-valintaruutu alla ja klikkaamalla Etsi: kaikki saatavilla olevat tiedostot näytetään ja voidaan valita lisättäväksi.</message>
-	<message key="editor.publicIdentificationExistsForTheSameType">Julkinen tunniste {$publicIdentifier} on jo toisen samantyyppisen kohteen käytössä. Valitse julkaisusi samantyyppisille kohteille yksilöivät tunnisteet.</message>
+	<message key="editor.issues.confirmSetCurrentIssue">Oletko varma, että haluat asettaa tämän numeron uusimmaksi?</message>
+	<message key="grid.action.setCurrentIssue">Aseta uusin numero</message>
+	<message key="editor.publicIdentificationExistsForTheSameType">Julkinen tunniste '{$publicIdentifier}' on jo käytössä. Valitse uniikki tunniste.</message>
 </locale>
