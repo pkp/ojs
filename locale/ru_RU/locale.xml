@@ -318,6 +318,7 @@
 	<message key="reader.openAccess">Открытый доступ</message>
 	<message key="reader.subscriptionAccess">Требуется подписка</message>
 	<message key="reader.subscriptionOrFeeAccess">Требуется подписка или оплата</message>
+	<message key="reader.purchasePrice">({$price} {$currency})</message>
 
 	<!-- Комментарии читателей -->
 	<message key="comments.commentsOnArticle">Комментарии к этой статье</message>
