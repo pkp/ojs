@@ -16,5 +16,5 @@
  *
  */
 
-import('api.v1.issues.IssuesHandler');
-return new IssuesHandler();
+import('api.v1.issues.IssueHandler');
+return new IssueHandler();

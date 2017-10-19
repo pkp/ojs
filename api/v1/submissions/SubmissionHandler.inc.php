@@ -28,23 +28,18 @@ class SubmissionHandler extends APIHandler {
 		$this->_endpoints = array(
 			'GET' => array (
 				array(
-					'pattern' => $this->getEndpointPattern() . '/{submissionId}/files',
-					'handler' => array($this,'getFiles'),
+					'pattern' => $this->getEndpointPattern(),
+					'handler' => array($this, 'getSubmissionList'),
 					'roles' => $roles
 				),
 				array(
 					'pattern' => $this->getEndpointPattern() . '/{submissionId}',
-					'handler' => array($this,'getSubmission'),
+					'handler' => array($this, 'getSubmission'),
 					'roles' => $roles
 				),
 				array(
-					'pattern' => $this->getEndpointPattern() . '/{submissionId}/participants',
-					'handler' => array($this,'getParticipants'),
-					'roles' => array(ROLE_ID_ASSISTANT, ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR)		// as per StageParticipantGridHandler::__construct()
-				),
-				array(
 					'pattern' => $this->getEndpointPattern() . '/{submissionId}/galleys',
-					'handler' => array($this,'getGalleys'),
+					'handler' => array($this, 'getGalleys'),
 					'roles' => $roles
 				),
 			),
@@ -63,188 +58,64 @@ class SubmissionHandler extends APIHandler {
 			$routeName = $route->getName();
 		}
 
-		import('lib.pkp.classes.security.authorization.SubmissionAccessPolicy');
-		$this->addPolicy(new SubmissionAccessPolicy($request, $args, $roleAssignments));
-
-		if (in_array($routeName, array('getFiles','getParticipants'))) {
-			$stageId = $slimRequest->getQueryParam('stageId', WORKFLOW_STAGE_ID_SUBMISSION);
-			import('lib.pkp.classes.security.authorization.WorkflowStageAccessPolicy');
-			$this->addPolicy(new WorkflowStageAccessPolicy($request, $args, $roleAssignments, 'submissionId', $stageId));
-		}
-
-		if ($routeName == 'getGalleys') {
-			import('lib.pkp.classes.security.authorization.WorkflowStageAccessPolicy');
-			$this->addPolicy(new WorkflowStageAccessPolicy($request, $args, $roleAssignments, 'submissionId', WORKFLOW_STAGE_ID_PRODUCTION));
+		if ($routeName === 'getSubmission' || $routeName === 'getGalleys') {
+			import('lib.pkp.classes.security.authorization.SubmissionAccessPolicy');
+			$this->addPolicy(new SubmissionAccessPolicy($request, $args, $roleAssignments));
 		}
 
 		return parent::authorize($request, $args, $roleAssignments);
 	}
 
 	/**
-	 * Retrieve submission file list
-	 *
+	 * Get a collection of submissions
 	 * @param $slimRequest Request Slim request object
 	 * @param $response Response object
 	 * @param array $args arguments
 	 *
 	 * @return Response
 	 */
-	public function getFiles($slimRequest, $response, $args) {
+	public function getSubmissionList($slimRequest, $response, $args) {
 		$request = $this->getRequest();
+		$currentUser = $request->getUser();
+		$dispatcher = $request->getDispatcher();
 		$context = $request->getContext();
-		$data = array();
+		$submissionService = ServicesContainer::instance()->get('submission');
 
-		$sContainer = ServicesContainer::instance();
-		$submissionService = $sContainer->get('submission');
-
-		try {
-			$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
-			$fileStage = $slimRequest->getQueryParam('fileStage');
-			$submissionFiles = $submissionService->getFiles($context->getId(), $submission, $fileStage);
-			foreach ($submissionFiles as $submissionFile) {
-				$entry = array(
-					'fileId'           => $submissionFile->getFileId(),
-					'revision'         => $submissionFile->getRevision(),
-					'submissionId'     => $submissionFile->getSubmissionId(),
-					'filename'         => $submissionFile->getName(),
-					'fileLabel'        => $submissionFile->getFileLabel(),
-					'fileStage'        => $submissionFile->getFileStage(),
-					'uploaderUserId'   => $submissionFile->getUploaderUserId(),
-					'userGroupId'      => $submissionFile->getUserGroupId()
-				);
-				if (is_a($submissionFile, 'SupplementaryFile')) {
-				        $entry['metadata'] = array(
-                                                'description'   => $submissionFile->getDescription(null),
-                                                'creator'       => $submissionFile->getCreator(null),
-                                                'publisher'     => $submissionFile->getPublisher(null),
-                                                'source'        => $submissionFile->getSource(null),
-                                                'subject'       => $submissionFile->getSubject(null),
-                                                'sponsor'       => $submissionFile->getSponsor(null),
-                                                'date'          => $submissionFile->getDateCreated(null),
-                                                'language'      => $submissionFile->getLanguage(),
-				        );
-				}
-				if (is_a($submissionFile, 'SubmissionArtworkFile')) {
-				        $entry['metadata'] = array(
-                                                'caption'               => $submissionFile->getCaption(),
-                                                'credit'                => $submissionFile->getCredit(),
-                                                'copyrightOwner'        => $submissionFile->getCopyrightOwner(),
-                                                'permissionTerms'       => $submissionFile->getPermissionTerms(),
-				        );
-				}
-				$data[] = $entry;
-			}
-		}
-		catch (PKP\Services\Exceptions\InvalidSubmissionException $e) {
+		if (!$context) {
 			return $response->withStatus(404)->withJsonError('api.submissions.404.resourceNotFound');
 		}
 
-		return $response->withJson($data, 200);
-	}
+		$params = $this->_buildListRequestParams($slimRequest);
 
-	/**
-	 * Retrieve participant list by stage
-	 *
-	 * @param $slimRequest Request Slim request object
-	 * @param $response Response object
-	 * @param array $args arguments
-	 *
-	 * @return Response
-	 */
-	public function getParticipants($slimRequest, $response, $args) {
-		$request = $this->getRequest();
-		$context = $request->getContext();
-		$data = array();
-
-		$sContainer = ServicesContainer::instance();
-		$submissionService = $sContainer->get('submission');
-
-		$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
-		$stageId = $slimRequest->getQueryParam('stageId', WORKFLOW_STAGE_ID_SUBMISSION);
-		$data = $submissionService->getParticipantsByStage($context->getId(), $submission, $stageId);
-
-		return $response->withJson($data, 200);
-	}
-
-	/**
-	 * Retrieve galley list
-	 *
-	 * @param $slimRequest Request Slim request object
-	 * @param $response Response object
-	 * @param array $args arguments
-	 *
-	 * @return Response
-	 */
-	public function getGalleys($slimRequest, $response, $args) {
-		$request = $this->getRequest();
-		$context = $request->getContext();
-		$data = array();
-
-		$sContainer = ServicesContainer::instance();
-		$submissionService = $sContainer->get('submission');
-
-		try {
-			$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
-			$data = $submissionService->getGalleys($context->getId(), $submission);
-		}
-		catch (PKP\Services\Exceptions\SubmissionStageNotValidException $e) {
-			return $response->withStatus(400)->withJsonError('api.submissions.400.stageNotValid');
+		// Prevent users from viewing submissions they're not assigned to,
+		// except for journal managers and admins.
+		if (!$currentUser->hasRole(array(ROLE_ID_MANAGER, ROLE_ID_SITE_ADMIN), $context->getId())
+				&& $params['assignedTo'] != $currentUser->getId()) {
+			return $response->withStatus(403)->withJsonError('api.submissions.403.requestedOthersUnpublishedSubmissions');
 		}
 
-		return $response->withJson($data, 200);
-	}
-
-	/**
-	 * Get submission metadata
-	 * @param $slimRequest Request Slim request object
-	 * @param $response Response object
-	 * @param array $args arguments
-	 * @return array
-	 */
-	protected function submissionMetadata($slimRequest, $response, $args) {
-		$request = $this->_request;
-		$journal = $request->getContext();
-		$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
-		assert($submission);
-
-		$queryParams = $slimRequest->getQueryParams();
-		$format = isset($queryParams['format'])?$queryParams['format']:'';
-
-		$metadataPlugins = (array) PluginRegistry::loadCategory('metadata', true, $journal->getId());
-		$schema = null;
-		foreach($metadataPlugins as $plugin) {
-			if ($plugin->supportsFormat($format)) {
-				$schema = $plugin->getSchemaObject($format);
+		$items = array();
+		$submissions = $submissionService->getSubmissions($context->getId(), $params);
+		if (!empty($submissions)) {
+			$propertyArgs = array(
+				'request' => $request,
+				'slimRequest' => $slimRequest,
+			);
+			foreach ($submissions as $submission) {
+				$items[] = $submissionService->getSummaryProperties($submission, $propertyArgs);
 			}
 		}
-		if (!$schema && array_key_exists('Dc11MetadataPlugin', $metadataPlugins)) {
-			$schema = $metadataPlugins['Dc11MetadataPlugin']->getSchemaObject('dc11');
-		}
-		if (is_a($schema, 'MetadataSchema') && in_array(ASSOC_TYPE_SUBMISSION, $schema->getAssocTypes())) {
-			return $this->getMetadata($submission, $schema);
-		};
-		assert(false);
-		return array();
-	}
 
-	function getMetadata($submission, $schema) {
-		$metadata = array();
-		$dcDescription = $submission->extractMetadata($schema);
-		foreach ($dcDescription->getProperties() as $propertyName => $property) {
-			if ($dcDescription->hasStatement($propertyName)) {
-				if ($property->getTranslated()) {
-					$values = $dcDescription->getStatementTranslations($propertyName);
-				} else {
-					$values = $dcDescription->getStatement($propertyName);
-				}
-				$metadata[$propertyName][] = $values;
-			}
-		}
-		return $metadata;
+		$data = array(
+			'maxItems' => $submissionService->getSubmissionsMaxCount($context->getId(), $params),
+			'items' => $items,
+		);
+
+		return $response->withJson($data, 200);
 	}
 
 	/**
-	 * Get submission metadata
+	 * Get a single submission
 	 * @param $slimRequest Request Slim request object
 	 * @param $response Response object
 	 * @param array $args arguments
@@ -257,87 +128,145 @@ class SubmissionHandler extends APIHandler {
 		$request = $this->getRequest();
 		$dispatcher = $request->getDispatcher();
 		$context = $request->getContext();
-		$journal = $request->getJournal();
 
 		$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
-		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-		$publishedArticle = $publishedArticleDao->getPublishedArticleByBestArticleId((int) $journal->getId(), $submission->getId(), true);
 
-		// simply return basic metadata for unpublished submissions
-		if (!isset($publishedArticle)) {
-			return $response->withJson($this->submissionMetadata($slimRequest, $response, $args), 200);
-		}
-
-		$articleId = $publishedArticle->getId();
-		$issueDao = DAORegistry::getDAO('IssueDAO');
-		$issue = $issueDao->getById($publishedArticle->getIssueId(), $publishedArticle->getJournalId(), true);
-
-		$sectionDao = DAORegistry::getDAO('SectionDAO');
-		$section = $sectionDao->getById($publishedArticle->getSectionId(), $journal->getId(), true);
-
-		// public identifiers
-		$pubIdPlugins = PluginRegistry::loadCategory('pubIds', true);
-		$pubIds = array_map(function($pubIdPlugin) use($issue, $publishedArticle, $journal) {
-			if ($pubIdPlugin->getPubIdType() != 'doi')
-				return;
-			$doiUrl = null;
-			$pubId = $issue->getPublished() ?
-					$publishedArticle->getStoredPubId($pubIdPlugin->getPubIdType()) :
-					$pubIdPlugin->getPubId($publishedArticle);
-			if($pubId) {
-				$doiUrl = $pubIdPlugin->getResolvingURL($journal->getId(), $pubId);
-			}
-
-			return array(
-				'pubId'		=> $pubId,
-				'doiUrl'	=> $doiUrl,
-			);
-		}, $pubIdPlugins);
-
-		$authors = array_map(function($author) {
-			return array(
-				'name'		=> $author->getFullName(),
-				'affiliation'	=> $author->getLocalizedAffiliation(),
-				'orcid'		=> $author->getOrcid(),
-			);
-		}, $publishedArticle->getAuthors());
-
-		$coverImage = $publishedArticle->getLocalizedCoverImage() ?
-					$publishedArticle->getLocalizedCoverImageUrl() :
-					$issue->getLocalizedCoverImageUrl();
-
-		$galleys = array_map(function($galley) use ($context, $request, $dispatcher, $articleId) {
-			$url = null;
-			if ($galley->getRemoteURL()) {
-				$url = $galley->getRemoteURL();
-			}
-			else {
-				$url = $dispatcher->url($request, ROUTE_PAGE, $context, 'article', 'download',
-						array($articleId, $galley->getBestGalleyId()));
-			}
-			return array(
-				'id'		=> $galley->getBestGalleyId(),
-				'label'		=> $galley->getGalleyLabel(),
-				'filetype'	=> $galley->getFileType(),
-				'url'		=> $url,
-			);
-		}, $publishedArticle->getGalleys());
-
-		$data = array(
-			'issueId'	=> $issue->getId(),
-			'issue'		=> $issue->getIssueIdentification(),
-			'section'	=> $section->getLocalizedTitle(),
-			'title'		=> $publishedArticle->getLocalizedTitle(),
-			'subtitle'	=> $publishedArticle->getLocalizedSubtitle(),
-			'authors'	=> $authors,
-			'pubIds'	=> $pubIds,
-			'abstract'	=> $publishedArticle->getLocalizedAbstract(),
-			'citations'	=> $publishedArticle->getCitations(),
-			'cover_image'	=> $coverImage,
-			'galleys'	=> $galleys,
-			'datePublished'	=> $publishedArticle->getDatePublished(),
-		);
+		$data = ServicesContainer::instance()
+			->get('submission')
+			->getFullProperties($submission, array(
+				'request' => $request,
+				'slimRequest' 	=> $slimRequest
+			));
 
 		return $response->withJson($data, 200);
+	}
+
+	/**
+	 * Get the galleys of a submission
+	 *
+	 * @param $slimRequest Request Slim request object
+	 * @param $response Response object
+	 * @param array $args arguments
+	 *
+	 * @return Response
+	 */
+	public function getGalleys($slimRequest, $response, $args) {
+		$request = $this->getRequest();
+		$context = $request->getContext();
+		$submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
+
+		if ($submission && $context) {
+			$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
+			$publishedArticle = $publishedArticleDao->getPublishedArticleByBestArticleId(
+				(int) $context->getId(),
+				$submission->getId(),
+				true
+			);
+		}
+
+		if (!$submission || !$publishedArticle) {
+			return $response->withStatus(404)->withJsonError('api.submissions.404.resourceNotFound');
+		}
+
+		$data = array();
+
+		$galleys = $publishedArticle->getGalleys();
+		if (!empty($galleys)) {
+			$galleyService = ServicesContainer::instance()->get('galley');
+			$args = array(
+				'request' => $request,
+				'slimRequest' => $slimRequest,
+				'parent' => $publishedArticle,
+			);
+			foreach ($galleys as $galley) {
+				$data[] = $galleyService->getFullProperties($galley, $args);
+			}
+		}
+
+		return $response->withJson($data, 200);
+	}
+
+	/**
+	 * Convert params passed to list requests. Coerce type and only return
+	 * white-listed params.
+	 *
+	 * @param $slimRequest Request Slim request object
+	 * @return array
+	 */
+	private function _buildListRequestParams($slimRequest) {
+
+		$request = $this->getRequest();
+		$currentUser = $request->getUser();
+		$context = $request->getContext();
+
+		// Merge query params over default params
+		$defaultParams = array(
+			'count' => 20,
+			'offset' => 0,
+		);
+
+		$requestParams = array_merge($defaultParams, $slimRequest->getQueryParams());
+
+		// Anyone not a manager or site admin can only access their assigned
+		// submissions
+		if (!$currentUser->hasRole(array(ROLE_ID_MANAGER, ROLE_ID_SITE_ADMIN), $context->getId())) {
+			$requestParams['assignedTo'] = $currentUser->getId();
+		}
+
+		$returnParams = array();
+
+		// Process query params to format incoming data as needed
+		foreach ($requestParams as $param => $val) {
+			switch ($param) {
+
+				case 'orderBy':
+					if (in_array($val, array('dateSubmitted', 'lastModified', 'title'))) {
+						$returnParams[$param] = $val;
+					}
+					break;
+
+				case 'orderDirection':
+					$returnParams[$param] = $val === 'ASC' ? $val : 'DESC';
+					break;
+
+				// Always convert status and stageIds to array
+				case 'status':
+				case 'stageIds':
+					if (is_string($val) && strpos($val, ',') > -1) {
+						$val = explode(',', $val);
+					} elseif (!is_array($val)) {
+						$val = array($val);
+					}
+					$returnParams[$param] = array_map('intval', $val);
+					break;
+
+				case 'assignedTo':
+					$returnParams[$param] = (int) $val;
+					break;
+
+				case 'searchPhrase':
+					$returnParams[$param] = $val;
+					break;
+
+				// Enforce a maximum count to prevent the API from crippling the
+				// server
+				case 'count':
+					$returnParams[$param] = min(100, (int) $val);
+					break;
+
+				case 'offset':
+					$returnParams[$param] = (int) $val;
+					break;
+
+				case 'isIncomplete':
+				case 'isOverdue':
+					$returnParams[$param] = true;
+					break;
+			}
+		}
+
+		\HookRegistry::call('API::submissions::params', array(&$returnParams, $slimRequest));
+
+		return $returnParams;
 	}
 }
