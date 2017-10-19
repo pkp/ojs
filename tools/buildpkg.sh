@@ -43,12 +43,9 @@ plugins/generic/backup						\
 plugins/generic/browse						\
 plugins/generic/coins						\
 plugins/generic/cookiesAlert					\
-plugins/generic/counter						\
 plugins/generic/customLocale					\
-plugins/generic/driver						\
 plugins/generic/externalFeed					\
 plugins/generic/lucene						\
-plugins/generic/openAIRE					\
 plugins/generic/phpMyVisites					\
 plugins/generic/recommendBySimilarity				\
 plugins/generic/translator					\
@@ -106,7 +103,8 @@ node_modules      \
 .postcssrc.js     \
 package.json      \
 webpack.config.js \
-lib/ui-library"
+lib/ui-library	  \
+composer.phar"
 
 
 cd $TMPDIR
@@ -122,21 +120,22 @@ git submodule -q update --init --recursive >/dev/null || exit 1
 echo "Done"
 
 echo "Installing composer dependencies:"
+curl -sS https://getcomposer.org/installer | php
 echo -n " - lib/pkp ... "
 cd lib/pkp
-composer.phar update --no-dev
+php ../../composer.phar install --no-dev
 cd ../..
 echo "Done"
 
 echo -n " - plugins/paymethod/paypal ... "
 cd plugins/paymethod/paypal
-composer.phar install --no-dev
+php ../../../composer.phar install --no-dev
 cd ../../..
 echo "Done"
 
 echo -n " - plugins/generic/citationStyleLanguage ... "
 cd plugins/generic/citationStyleLanguage
-composer.phar install --no-dev
+php ../../../composer.phar install --no-dev
 cd ../../..
 echo "Done"
 
