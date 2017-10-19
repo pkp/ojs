@@ -20,5 +20,10 @@
 	<sql><!-- pkp/pkp-lib#2543 -->
 		<query>UPDATE filter_groups SET input_type = 'class::classes.article.Article' WHERE symbolic = 'article=>doaj-json'</query>
 	</sql>
+	<sql><!-- pkp/pkp-lib#2896 -->
+		<query>UPDATE journal_settings SET setting_name = 'citationsEnabledSubmission' WHERE setting_name = 'referencesEnabledSubmission'</query>
+		<query>UPDATE journal_settings SET setting_name = 'citationsEnabledWorkflow' WHERE setting_name = 'referencesEnabledWorkflow'</query>
+		<query>UPDATE journal_settings SET setting_name = 'citationsRequired' WHERE setting_name = 'referencesRequired'</query>
+	</sql>
 </data>
 
