@@ -15,4 +15,11 @@
 	<message key="plugins.importexport.doaj.displayName">DOAJ-vientilisäosa</message>
 	<message key="plugins.importexport.doaj.description">Vie julkaisu DOAJ-tietokantaan.</message>
 	<message key="plugins.importexport.doaj.export.contact">Muodosta yhteys DOAJ:iin sisällyttämistä varten</message>
+	<message key="plugins.importexport.doaj.registrationIntro">Jos haluat rekisteröidä artikkeleita OJS-järjestelmästä käsin, anna DOAJ API-avain. Ilman avainta voit edelleen ladata tiedot XML-muodossa ja viedä ne vierailemalla DOAJ:n verkkopalvelussa.</message>
+	<message key="plugins.importexport.doaj.settings.form.apiKey">DOAJ API-avain</message>
+	<message key="plugins.importexport.doaj.settings.form.apiKey.description">API-avain löytyy DOAJ:n verkkopalvelusta.</message>
+	<message key="plugins.importexport.doaj.settings.form.automaticRegistration.description">OJS tallentaa artikkelien tiedot automaattisesti DOAJ-tietokantaan. Huomaa, että artikkelin julkaisun jälkeen tietojen viennissä on pieni viive. Voit tarkistaa listauksesta mitkä artikkelit ovat rekisteröimättä.</message>
+	<message key="plugins.importexport.doaj.settings.form.testMode.description">Käytä DOAJ-palvelun testirajapintaa. Poista tämä valinta, kun haluat aloittaa artikkeleiden rekisteröinnin.</message>
+	<message key="plugins.importexport.doaj.register.error.mdsError">Talletus ei onnistunut! DOAJ API palautti virheen: '{$param}'.</message>
+	<message key="plugins.importexport.doaj.cliUsage">Käyttö: {$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...</message>
 </locale>

@@ -36,8 +36,6 @@
 
 
 	<message key="reviewer.article.enterReviewForm">Klikkaa kuvaketta täyttääksesi arviointilomakkeen.</message>
-	<message key="reviewer.submission.reviewFormResponse.form.responseRequired">Täytä pakolliset kentät.</message>
-
 	<!-- review forms end -->
 
 	<!--
@@ -218,9 +216,6 @@
 	<message key="user.role.subscriptionManagers">Tilaussihteerit</message>
 	<message key="user.role.journalAssistant">Avustaja</message>
 	<message key="user.role.journalAssistants">Avustajat</message>
-	<message key="user.role.guestEditor">Vieraileva toimittaja</message>
-	<message key="user.role.guestEditors">Vierailevat toimittajat</message>
-
 	<!-- Common Issue Terms -->
 	<message key="issue.issue">Numero</message>
 	<message key="issue.issues">Numerot</message>
@@ -575,7 +570,6 @@ Arvostelu on asteikolla 1-5 (5 = erinomainen).<br/>
 	<message key="reviewer.article.selectRecommendation.byEditor">Aseta tai muuta arvioijan suositusta.</message>
 	<message key="reviewer.article.mustSelectDecision">Yhtään suositusta ei valittu. Et voi lähettää arviointia, ennen kuin valitset suosituksen.</message>
 	<message key="reviewer.article.confirmDecision">Kun olet tallentanut päätöksesi, et voi enää tehdä muutoksia arviointiisi. Haluatko varmasti jatkaa?</message>
-
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">Teknisesti toimitettava tiedosto</message>
 	<message key="copyeditor.article.copyeditorFile">Teknisen toimittajan tiedosto</message>
@@ -699,8 +693,8 @@ Arvostelu on asteikolla 1-5 (5 = erinomainen).<br/>
 	<message key="user.subscriptions.purchaseNewSubscription">Osta uusi tilaus</message>
 	<message key="user.subscriptions.purchaseIndividualSubscription">Osta yksittäistilaus</message>
 	<message key="user.subscriptions.purchaseInstitutionalSubscription">Osta instituutiotilaus</message>
-	<message key="user.subscriptions.expires">Päättyy</message>
-	<message key="user.subscriptions.expired">Päättynyt</message>
+	<message key="user.subscriptions.expires">Päättyy: {$date}</message>
+	<message key="user.subscriptions.expired">Päättynyt: {$date}</message>
 	<message key="user.subscriptions.viewSubscriptionTypes">Näytä tarjolla olevat tilausvaihtoehdot</message>
 	<message key="user.subscriptions.form.typeId">Tilausvaihtoehto</message>
 	<message key="user.subscriptions.form.membership">Jäsenyys</message>
@@ -828,6 +822,7 @@ Arvostelu on asteikolla 1-5 (5 = erinomainen).<br/>
 	<message key="donations.thankYou">Kiitos</message>
 	<message key="donations.thankYouMessage">Kiitos lahjoituksesta. Arvostamme sitä suuresti.</message>
 
+	<!-- Gifts -->
 	<!-- Payments -->
 	<message key="payment.loginRequired">Voit maksaa vain sisäänkirjautuneena.</message>
 	<message key="payment.loginRequired.forArticle">Tähän kohteeseen pääsy edellyttää tilausta tai artikkelin ostoa. Vahvistaaksesi tilauksen, päästäksesi edelliseen tilaukseen tai ostaaksesi artikkelin sinun on kirjauduttava julkaisuun.</message>
@@ -850,7 +845,6 @@ Arvostelu on asteikolla 1-5 (5 = erinomainen).<br/>
 	<message key="payment.type.purchaseIssue">Osta numero -maksu</message>
 	<message key="payment.type.subscription">Tilausmaksu</message>
 	<message key="payment.type.donation">Lahjoitukset</message>
-
 	<message key="payment.donation.makeDonation">Tee lahjoitus</message>
 
 	<message key="payment.submission.paySubmission">Maksa käsikirjoituksen lähetysmaksu</message>
@@ -1101,4 +1095,9 @@ Vahvistaminen saattaa epäonnistua sellaisten haun URL-osoitteiden kohdalla, jot
 
 	<message key="editor.issues.backIssues">Vanhat numerot</message>
 	<message key="editor.issues.futureIssues">Tulevat numerot</message>
+	<message key="reviewer.submission.reviewFormResponse.form.responseRequired">Ole hyvä ja täytä kaikki pakolliset kentät.</message>
+	<message key="navigation.subscriptions">Tilaukset</message>
+	<message key="notification.type.publicationScheduled">Tämä käsikirjoitus on ajoitettu julkaistavaksi.</message>
+	<message key="log.editor.recommendation">{$editorName} tallensi päätöksen ({$decision}) käsikirjoitukselle {$submissionId}.</message>
+	<message key="subscriptions.status.noSubscription">Sinulla ei ole aktiivista tilausta.</message>
 </locale>
