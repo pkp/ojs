@@ -112,7 +112,7 @@ class SubscriptionsHandler extends Handler {
 		}
 
 		import('classes.payment.ojs.OJSPaymentManager');
-		$paymentManager = new OJSPaymentManager($request);
+		$paymentManager = new OJSPaymentManager($request->getJournal());
 		$templateMgr->assign('acceptSubscriptionPayments', $paymentManager->isConfigured());
 
 		$subscriptionPolicyForm = new SubscriptionPolicyForm();

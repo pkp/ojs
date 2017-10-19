@@ -112,7 +112,7 @@ class TemplateManager extends PKPTemplateManager {
 				$this->assign( 'contextSettingsUrl', $dispatcher->url($request, ROUTE_PAGE, null, 'management', 'settings', 'context') );
 
 				import('classes.payment.ojs.OJSPaymentManager');
-				$paymentManager = new OJSPaymentManager($request);
+				$paymentManager = new OJSPaymentManager($context);
 				$this->assign('pageFooter', $context->getLocalizedSetting('pageFooter'));
 			} else {
 				// Check if registration is open for any contexts

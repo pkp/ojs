@@ -199,7 +199,7 @@ class IssueHandler extends Handler {
 				if (!$subscribedUser) {
 					// Check if payments are enabled,
 					import('classes.payment.ojs.OJSPaymentManager');
-					$paymentManager = new OJSPaymentManager($request);
+					$paymentManager = new OJSPaymentManager($journal);
 
 					if ($paymentManager->purchaseIssueEnabled() || $paymentManager->membershipEnabled() ) {
 						// If only pdf files are being restricted, then approve all non-pdf galleys
@@ -217,7 +217,7 @@ class IssueHandler extends Handler {
 							return true;
 						} else {
 							// Otherwise queue an issue purchase payment and display payment form
-							$queuedPayment = $paymentManager->createQueuedPayment($journal->getId(), PAYMENT_TYPE_PURCHASE_ISSUE, $userId, $issue->getId(), $journal->getSetting('purchaseIssueFee'));
+							$queuedPayment = $paymentManager->createQueuedPayment($request, PAYMENT_TYPE_PURCHASE_ISSUE, $userId, $issue->getId(), $journal->getSetting('purchaseIssueFee'));
 							$paymentManager->queuePayment($queuedPayment);
 
 							$paymentForm = $paymentManager->getPaymentForm($queuedPayment);
@@ -321,7 +321,7 @@ class IssueHandler extends Handler {
 		));
 
 		import('classes.payment.ojs.OJSPaymentManager');
-		$paymentManager = new OJSPaymentManager($request);
+		$paymentManager = new OJSPaymentManager($journal);
 		if ( $paymentManager->onlyPdfEnabled() ) {
 			$templateMgr->assign('restrictOnlyPdf', true);
 		}

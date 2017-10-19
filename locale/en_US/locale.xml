@@ -850,6 +850,7 @@ Active is how many reviews are currently being considered or underway.]]></messa
 	<message key="payment.type.purchaseIssue">Purchase Issue Fee</message>
 	<message key="payment.type.subscription">Subscription Fee</message>
 	<message key="payment.type.donation">Donations</message>
+	<message key="payment.requestPublicationFee">Request publication fee ({$feeAmount})</message>
 
 	<message key="payment.donation.makeDonation">Make a donation</message>
 

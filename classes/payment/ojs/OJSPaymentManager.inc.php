@@ -30,25 +30,16 @@ define('PAYMENT_TYPE_PURCHASE_ISSUE',		0x000000009);
 
 class OJSPaymentManager extends PaymentManager {
 	/**
-	 * Constructor
-	 * @param $request PKPRequest
-	 */
-	function __construct($request) {
-		parent::__construct($request);
-	}
-
-	/**
 	 * Determine whether the payment system is configured.
 	 * @return boolean true iff configured
 	 */
 	function isConfigured() {
-		$journal = $this->request->getJournal();
-		return parent::isConfigured() && $journal->getSetting('journalPaymentsEnabled');
+		return parent::isConfigured() && $this->_context->getSetting('journalPaymentsEnabled');
 	}
 
 	/**
 	 * Create a queued payment.
-	 * @param $journalId int ID of journal payment applies under
+	 * @param $request PKPRequest
 	 * @param $type int PAYMENT_TYPE_...
 	 * @param $userId int ID of user responsible for payment
 	 * @param $assocId int ID of associated entity
@@ -56,34 +47,34 @@ class OJSPaymentManager extends PaymentManager {
 	 * @param $currencyCode string optional ISO 4217 currency code
 	 * @return QueuedPayment
 	 */
-	function createQueuedPayment($journalId, $type, $userId, $assocId, $amount, $currencyCode = null) {
+	function createQueuedPayment($request, $type, $userId, $assocId, $amount, $currencyCode = null) {
 		$journalSettingsDao = DAORegistry::getDAO('JournalSettingsDAO');
-		if (is_null($currencyCode)) $currencyCode = $journalSettingsDao->getSetting($journalId, 'currency');
+		if (is_null($currencyCode)) $currencyCode = $journalSettingsDao->getSetting($this->_context->getId(), 'currency');
 		$payment = new QueuedPayment($amount, $currencyCode, $userId, $assocId);
-		$payment->setContextId($journalId);
+		$payment->setContextId($this->_context->getId());
 		$payment->setType($type);
-		$router = $this->request->getRouter();
+		$router = $request->getRouter();
 		$dispatcher = $router->getDispatcher();
 
 		switch ($type) {
 			case PAYMENT_TYPE_PURCHASE_ARTICLE:
-				$payment->setRequestUrl($dispatcher->url($this->request, ROUTE_PAGE, null, 'article', 'view', $assocId));
+				$payment->setRequestUrl($dispatcher->url($request, ROUTE_PAGE, null, 'article', 'view', $assocId));
 				break;
 			case PAYMENT_TYPE_PURCHASE_ISSUE:
-				$payment->setRequestUrl($dispatcher->url($this->request, ROUTE_PAGE, null, 'issue', 'view', $assocId));
+				$payment->setRequestUrl($dispatcher->url($request, ROUTE_PAGE, null, 'issue', 'view', $assocId));
 				break;
 			case PAYMENT_TYPE_PURCHASE_SUBSCRIPTION:
-				$payment->setRequestUrl($dispatcher->url($this->request, ROUTE_PAGE, null, 'issue', 'current'));
+				$payment->setRequestUrl($dispatcher->url($request, ROUTE_PAGE, null, 'issue', 'current'));
 			case PAYMENT_TYPE_RENEW_SUBSCRIPTION:
-				$payment->setRequestUrl($dispatcher->url($this->request, ROUTE_PAGE, null, 'user', 'subscriptions'));
+				$payment->setRequestUrl($dispatcher->url($request, ROUTE_PAGE, null, 'user', 'subscriptions'));
 				break;
 			case PAYMENT_TYPE_PUBLICATION:
 				$submissionDao = Application::getSubmissionDAO();
 				$submission = $submissionDao->getById($assocId);
 				if ($submission->getSubmissionProgress()!=0) {
-					$payment->setRequestUrl($dispatcher->url($this->request, ROUTE_PAGE, null, 'submission', 'wizard', $submission->getSubmissionProgress(), array('submissionId' => $assocId)));
+					$payment->setRequestUrl($dispatcher->url($request, ROUTE_PAGE, null, 'submission', 'wizard', $submission->getSubmissionProgress(), array('submissionId' => $assocId)));
 				} else {
-					$payment->setRequestUrl($dispatcher->url($this->request, ROUTE_PAGE, null, 'author'));
+					$payment->setRequestUrl($dispatcher->url($request, ROUTE_PAGE, null, 'author'));
 				}
 				break;
 			case PAYMENT_TYPE_MEMBERSHIP: // Deprecated
@@ -125,8 +116,7 @@ class OJSPaymentManager extends PaymentManager {
 	 * @return boolean true iff this fee is enabled.
 	 */
 	function publicationEnabled() {
-		$journal = $this->request->getJournal();
-		return $this->isConfigured() && $journal->getSetting('publicationFee') > 0;
+		return $this->isConfigured() && $this->_context->getSetting('publicationFee') > 0;
 	}
 
 	/**
@@ -134,8 +124,7 @@ class OJSPaymentManager extends PaymentManager {
 	 * @return boolean true iff this fee is enabled.
 	 */
 	function membershipEnabled() {
-		$journal = $this->request->getJournal();
-		return $this->isConfigured() && $journal->getSetting('membershipFee') > 0;
+		return $this->isConfigured() && $this->_context->getSetting('membershipFee') > 0;
 	}
 
 	/**
@@ -143,8 +132,7 @@ class OJSPaymentManager extends PaymentManager {
 	 * @return boolean true iff this fee is enabled.
 	 */
 	function purchaseArticleEnabled() {
-		$journal = $this->request->getJournal();
-		return $this->isConfigured() && $journal->getSetting('purchaseArticleFee') > 0;
+		return $this->isConfigured() && $this->_context->getSetting('purchaseArticleFee') > 0;
 	}
 
 	/**
@@ -152,8 +140,7 @@ class OJSPaymentManager extends PaymentManager {
 	 * @return boolean true iff this fee is enabled.
 	 */
 	function purchaseIssueEnabled() {
-		$journal = $this->request->getJournal();
-		return $this->isConfigured() && $journal->getSetting('purchaseIssueFee') > 0;
+		return $this->isConfigured() && $this->_context->getSetting('purchaseIssueFee') > 0;
 	}
 
 	/**
@@ -161,8 +148,7 @@ class OJSPaymentManager extends PaymentManager {
 	 * @return boolean true iff this fee is enabled.
 	 */
 	function onlyPdfEnabled() {
-		$journal = $this->request->getJournal();
-		return $this->isConfigured() && $journal->getSetting('restrictOnlyPdf');
+		return $this->isConfigured() && $this->_context->getSetting('restrictOnlyPdf');
 	}
 
 	/**
@@ -170,8 +156,7 @@ class OJSPaymentManager extends PaymentManager {
 	 * @return PaymentPlugin
 	 */
 	function getPaymentPlugin() {
-		$journal = $this->request->getJournal();
-		$paymentMethodPluginName = $journal->getSetting('paymentPluginName');
+		$paymentMethodPluginName = $this->_context->getSetting('paymentPluginName');
 		$paymentMethodPlugin = null;
 		if (!empty($paymentMethodPluginName)) {
 			$plugins = PluginRegistry::loadCategory('paymethod');

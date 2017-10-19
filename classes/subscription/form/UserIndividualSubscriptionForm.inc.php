@@ -142,7 +142,7 @@ class UserIndividualSubscriptionForm extends Form {
 		}
 
 		import('classes.payment.ojs.OJSPaymentManager');
-		$paymentManager = new OJSPaymentManager($this->request);
+		$paymentManager = new OJSPaymentManager($journal);
 		$paymentPlugin = $paymentManager->getPaymentPlugin();
 
 		if ($paymentPlugin->getName() == 'ManualPayment') {
@@ -162,7 +162,7 @@ class UserIndividualSubscriptionForm extends Form {
 			$individualSubscriptionDao->insertObject($subscription);
 		}
 
-		$queuedPayment = $paymentManager->createQueuedPayment($journalId, PAYMENT_TYPE_PURCHASE_SUBSCRIPTION, $this->userId, $subscription->getId(), $subscriptionType->getCost(), $subscriptionType->getCurrencyCodeAlpha());
+		$queuedPayment = $paymentManager->createQueuedPayment($this->request, PAYMENT_TYPE_PURCHASE_SUBSCRIPTION, $this->userId, $subscription->getId(), $subscriptionType->getCost(), $subscriptionType->getCurrencyCodeAlpha());
 		$paymentManager->queuePayment($queuedPayment);
 
 		$paymentForm = $paymentManager->getPaymentForm($queuedPayment);

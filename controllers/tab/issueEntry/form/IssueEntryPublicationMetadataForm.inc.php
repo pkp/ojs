@@ -92,7 +92,7 @@ class IssueEntryPublicationMetadataForm extends Form {
 		// include payment information
 		// Set up required Payment Related Information
 		import('classes.payment.ojs.OJSPaymentManager');
-		$paymentManager = new OJSPaymentManager($request);
+		$paymentManager = new OJSPaymentManager($context);
 		$completedPaymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO');
 		$publicationFeeEnabled = $paymentManager->publicationEnabled();
 		$templateMgr->assign('publicationFeeEnabled',  $publicationFeeEnabled);
@@ -225,7 +225,7 @@ class IssueEntryPublicationMetadataForm extends Form {
 
 			$markAsPaid = $request->getUserVar('markAsPaid');
 			import('classes.payment.ojs.OJSPaymentManager');
-			$paymentManager = new OJSPaymentManager($request);
+			$paymentManager = new OJSPaymentManager($context);
 
 			$user = $request->getUser();
 
@@ -236,8 +236,8 @@ class IssueEntryPublicationMetadataForm extends Form {
 			$submitterAssignment = $submitterAssignments->next();
 			assert(isset($submitterAssignment)); // At least one author should be assigned
 
-			$queuedPayment =& $paymentManager->createQueuedPayment(
-				$context->getId(),
+			$queuedPayment = $paymentManager->createQueuedPayment(
+				$request,
 				PAYMENT_TYPE_PUBLICATION,
 				$markAsPaid ? $submitterAssignment->getUserId() : $user->getId(),
 				$submission->getId(),

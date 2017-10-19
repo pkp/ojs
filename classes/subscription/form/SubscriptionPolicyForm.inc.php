@@ -103,7 +103,7 @@ class SubscriptionPolicyForm extends Form {
 	 */
 	function fetch($request) {
 		import('classes.payment.ojs.OJSPaymentManager');
-		$paymentManager = new OJSPaymentManager($request);
+		$paymentManager = new OJSPaymentManager($request->getJournal());
 		$templateMgr = TemplateManager::getManager();
 		$templateMgr->assign(array(
 			'validDuration' => $this->validDuration,

@@ -49,7 +49,7 @@ class PaymentsGridCellProvider extends GridCellProvider {
 				return array('label' => $user->getFullName());
 			case 'type':
 				import('classes.payment.ojs.OJSPaymentManager');
-				$paymentManager = new OJSPaymentManager($this->_request);
+				$paymentManager = new OJSPaymentManager($this->_request->getJournal());
 				return array('label' => $paymentManager->getPaymentName($payment));
 			case 'amount':
 				return array('label' => $payment->getAmount() . ' ' . $payment->getCurrencyCode());
