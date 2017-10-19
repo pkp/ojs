@@ -40,4 +40,4 @@ module.exports = {
     // don't require === for comparisons
     'eqeqeq': 0,
   }
-}
+};
