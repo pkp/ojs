@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE locale SYSTEM "../../../../lib/pkp/dtd/locale.dtd">
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
   * plugins/oaiMetadataFormats/jats/locale/de_DE/locale.xml
@@ -7,11 +7,11 @@
   * Copyright (c) 2014-2017 Simon Fraser University
   * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
   * Localization strings.
   -->
 
 <locale name="de_DE" full_name="Deutsch (Deutschland)">
-	<message key="plugins.oaiMetadata.jats.displayName">JATS (Journal Article Tag Suite) Metadatenformat</message>
-	<message key="plugins.oaiMetadata.jats.description">Strukturiert die Metadaten so, dass sie konsistent mit dem JATS (Journal Article Tag Suite) XML-Format sind.</message>
+	<message key="plugins.oaiMetadata.jats.displayName">JATS-Metadatenformat</message>
+	<message key="plugins.oaiMetadata.jats.description">Strukturiert die Metadaten so, dass sie dem JATS-XML-Format entsprechen.</message>
 </locale>
