@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE version SYSTEM "../../../dtd/pluginVersion.dtd">
+
+<!--
+  * plugins/generic/shibboleth/version.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Plugin version information.
+  -->
+<version>
+	<application>ShibbolethAuthPlugin</application>
+	<type>plugins.generic</type>
+	<release>0.1.0.0</release>
+	<date>2017-07-19</date>
+</version>
