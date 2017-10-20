@@ -452,7 +452,7 @@ class IssueGridHandler extends GridHandler {
 			// Set the status of any attendant queued articles to STATUS_PUBLISHED.
 			$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 			$articleDao = DAORegistry::getDAO('ArticleDAO');
-			$publishedArticles = $publishedArticleDao->getPublishedArticles($issueId);
+			$publishedArticles = $publishedArticleDao->getPublishedArticles($issue->getId());
 			foreach ($publishedArticles as $publishedArticle) {
 				$article = $articleDao->getById($publishedArticle->getId());
 				if ($article && $article->getStatus() == STATUS_QUEUED) {
