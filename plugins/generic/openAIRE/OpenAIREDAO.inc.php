@@ -58,7 +58,7 @@ class OpenAIREDAO extends OAIDAO {
 		$total = $result->RecordCount();
 
 		$result->Move($offset);
-		for ($count = 0; $count < $limit && !$result->EOF; $count++) {
+		for ($count = 0; !$result->EOF; $count++) {
 			$row =& $result->GetRowAssoc(false);
 			if ($this->isOpenAIRERecord($row)) {
 				$records[] =& $this->$funcName($row);
@@ -68,6 +68,8 @@ class OpenAIREDAO extends OAIDAO {
 
 		$result->Close();
 		unset($result);
+
+		$records = array_slice($records, $offset, $limit);
 
 		return $records;
 	}
