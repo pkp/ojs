@@ -223,12 +223,12 @@ class EditorSubmissionDAO extends DAO {
 					case 'contains':
 						$search = '%' . $search . '%';
 						$params[] = $search;
-						$searchSql = ' AND CONCAT(a.article_id) LIKE ?';
+						$searchSql = ' AND CAST(a.article_id AS CHAR) LIKE ?';
 						break;
 					case 'startsWith':
 						$search = $search . '%';
 						$params[] = $search;
-						$searchSql = 'AND CONCAT(a.article_id) LIKE ?';
+						$searchSql = 'AND CAST(a.article_id AS CHAR) LIKE ?';
 						break;
 				}
 				break;
