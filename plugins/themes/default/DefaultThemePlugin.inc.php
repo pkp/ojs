@@ -138,7 +138,7 @@ class DefaultThemePlugin extends ThemePlugin {
 		if (Config::getVar('general', 'enable_cdn')) {
 			$url = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css';
 		} else {
-			$url = $request->getBaseUrl() . '/lib/ui-library/static/fontawesome/fontawesome.css';
+			$url = $request->getBaseUrl() . '/lib/pkp/styles/fontawesome/fontawesome.css';
 		}
 		$this->addStyle(
 			'fontAwesome',
