@@ -109,7 +109,6 @@
 	<message key="editor.issues.galleyLocaleRequired">Eine Regionaleinstellung für die Ausgabenfahne wird benötigt.</message>
 	<message key="editor.issues.galleyPublicIdentificationExists">Die öffentliche Kennung der Ausgabenfahne existiert bereits.</message>
 	<message key="editor.issues.backToIssueGalleys">Zurück zu den Ausgabenfahnen</message>
-	<message key="editor.issues.viewingGalley">Ausgabenfahne ansehen</message>
 	<message key="editor.issues.confirmDeleteGalley">Sind Sie sicher, dass Sie diese Ausgabenfahne löschen möchten?</message>
 	<message key="editor.issues.identifiers">Identifier</message>
 	<message key="editor.navigation.futureIssues">Zukünftige Ausgaben</message>

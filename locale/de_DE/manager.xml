@@ -414,7 +414,8 @@
 	<message key="manager.subscriptions">Abonnements</message>
 	<message key="manager.individualSubscriptions">Individuelle Abonnements</message>
 	<message key="manager.institutionalSubscriptions">Institutionelle Abonnements</message>
-	<message key="manager.subscriptions.confirmDelete">Sind Sie sicher, dass Sie dieses Abonnement löschen wollen?</message>
+	<message key="manager.subscriptions.confirmRenew">Sind Sie sicher, dass Sie dieses Abonnement erneuern möchten?</message>
+	<message key="manager.subscriptions.confirmDelete">Sind Sie sicher, dass Sie dieses Abonnement löschen möchten?</message>
 	<message key="manager.subscriptions.summary">Zusammenfassung der Abonnements</message>
 	<message key="manager.subscriptions.create">Ein neues Abonnement erstellen</message>
 	<message key="manager.subscriptions.createTitle">Erstellen</message>
@@ -531,6 +532,12 @@
 	<message key="manager.subscriptionTypes.noneCreated">Es wurden keine neuen Abonnementtypen erstellt.</message>
 	<message key="manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully">Abonnementtyp erfolgreich erstellt.</message>
 	<message key="manager.distribution.access">Zugriff</message>
+
+	<!-- Navigation Menu Items -->
+	<message key="manager.navigationMenus.subscriptions.description">Verlinken Sie eine Seite, die die angebotenen Abonnements beschreibt.</message>
+	<message key="manager.navigationMenus.mySubscriptions.description">Verlinken Sie eine Seite, die die aktuellen und früheren Abonnements der Besucherin/des Besuchers beschreibt.</message>
+	<message key="manager.navigationMenus.mySubscriptions.conditionalWarning">Dieser Link wird nur angezeigt, wenn eine Nutzerin/ein Nutzer eingeloggt ist.</message>
+
 
 	<!-- Categories -->
 	<message key="manager.setup.categories">Kategorien</message>

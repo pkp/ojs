@@ -257,6 +257,7 @@
 	<message key="subscriptions.status.needsApproval">Genehmigung erforderlich</message>
 	<message key="subscriptions.status.awaitingManualPayment">Manuelle Zahlung abwarten</message>
 	<message key="subscriptions.status.awaitingOnlinePayment">Online-Zahlung abwarten</message>
+	<message key="subscriptions.status.noSubscription">Sie haben kein aktives Abonnement.</message>
 	<message key="subscriptions.status.other">Andere, siehe Hinweis</message>
 	<message key="subscriptions.individualDescription">Im Falle individueller Abonnements ist es erforderlich, sich einzuloggen, um auf Inhalte zuzugreifen.</message>
 	<message key="subscriptions.institutionalDescription">Für institutionelle Abonnements ist kein Login erforderlich. Die Domäne und/oder IP-Adresse werden genutzt, um auf Inhalte zuzugreifen.</message>
@@ -317,6 +318,7 @@
 	<message key="reader.openAccess">Freier Zugang (Open Access)</message>
 	<message key="reader.subscriptionAccess">Zugang für Abonnent/innen</message>
 	<message key="reader.subscriptionOrFeeAccess">Zugang für Abonnent/innen oder durch Zahlung einer Gebühr</message>
+	<message key="reader.purchasePrice">({$currency} {$price})</message>
 
 	<!-- Reader Comments -->
 	<message key="comments.commentsOnArticle">Kommentare zu diesem Artikel</message>
@@ -958,6 +960,7 @@ Ihr Server unterstützt derzeit : <strong>{$supportsMBString}</strong>]]></messa
 	<message key="log.review.reviewFileByProxy">Redakteur/in {$userName} hat die Begutachtungsdatei von Beitrag {$submissionId} in Durchgang {$round} im Auftrag der Gutachterin/des Gutachters {$reviewerName} hochgeladen.</message>
 	<message key="log.review.reviewerFile">Begutachtungsdatei wurde hochgeladen.</message>
 	<message key="log.editor.decision">Eine Entscheidung ({$decision}) bezüglich Artikel {$submissionId} wurde von Redakteur/in {$editorName} abgegeben.</message>
+	<message key="log.editor.recommendation">Eine redaktionelle Empfehlung ({$decision}) wurde von {$editorName} für den Artikel {$submissionId} eingetragen.</message>
 
 
 	<message key="log.copyedit.initiate">Lektorat von Beitrag {$submissionId} wurde von {$copyeditorName} begonnen.</message>
@@ -1057,6 +1060,7 @@ Die Prüfung kann bei Such-URLs, die Formularausfüllung verlangen, fehlschlagen
 	<message key="notification.type.editorAssignmentTask">Ein neuer Artikel wurde eingereicht, dem ein/e Redakteur/in zugewiesen werden muss.</message>
 	<message key="notification.type.assignProductionUser">Nutzen Sie den Hinzufügen-Link in der Teilnehmer/innen-Liste, um eine/n Nutzer/in zum Erzeugen von Fahnen einzutragen.</message>
 	<message key="notification.type.awaitingRepresentations">Warte auf Fahnen.</message>
+	<message key="notification.type.publicationScheduled">Dieser Beitrag wurde zur Publikation vorgesehen.</message>
 
 	<!--
 	 *
@@ -1099,4 +1103,5 @@ Die Prüfung kann bei Such-URLs, die Formularausfüllung verlangen, fehlschlagen
 
 	<message key="editor.issues.backIssues">Frühere Ausgaben</message>
 	<message key="editor.issues.futureIssues">Zukünftige Ausgaben</message>
+	<message key="navigation.subscriptions">Abonnements</message>
 </locale>
