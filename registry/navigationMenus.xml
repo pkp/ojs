@@ -17,7 +17,7 @@
 	<navigationMenu title="User" area="user" site="1">
 		<navigationMenuItem title="navigation.register" type="NMI_TYPE_USER_REGISTER" site="1" />
 		<navigationMenuItem title="navigation.login" type="NMI_TYPE_USER_LOGIN" site="1" />
-		<navigationMenuItem title="{$loggedInUsername}" type="NMI_TYPE_USER_DASHBOARD" site="1">
+		<navigationMenuItem title="{$loggedInUsername}" type="NMI_TYPE_USER_PROFILE" site="1">
 			<navigationMenuItem title="navigation.dashboard" type="NMI_TYPE_USER_DASHBOARD" site="1" />
 			<navigationMenuItem title="common.viewProfile" type="NMI_TYPE_USER_PROFILE" site="1" />
 			<navigationMenuItem title="navigation.admin" type="NMI_TYPE_ADMINISTRATION" site="1" />
