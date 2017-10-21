@@ -102,8 +102,7 @@ class SubscriptionPolicyForm extends Form {
 	 * @param $request PKPRequest
 	 */
 	function fetch($request) {
-		import('classes.payment.ojs.OJSPaymentManager');
-		$paymentManager = new OJSPaymentManager($request->getJournal());
+		$paymentManager = Application::getPaymentManager($request->getJournal());
 		$templateMgr = TemplateManager::getManager();
 		$templateMgr->assign(array(
 			'validDuration' => $this->validDuration,

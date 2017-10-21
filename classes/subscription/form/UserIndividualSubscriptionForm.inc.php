@@ -141,8 +141,7 @@ class UserIndividualSubscriptionForm extends Form {
 			$subscription = $this->subscription;
 		}
 
-		import('classes.payment.ojs.OJSPaymentManager');
-		$paymentManager = new OJSPaymentManager($journal);
+		$paymentManager = Application::getPaymentManager($journal);
 		$paymentPlugin = $paymentManager->getPaymentPlugin();
 
 		if ($paymentPlugin->getName() == 'ManualPayment') {

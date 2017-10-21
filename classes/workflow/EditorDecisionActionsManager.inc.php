@@ -154,8 +154,7 @@ class EditorDecisionActionsManager {
 	 * @return array
 	 */
 	static function _externalReviewStageDecisions($context) {
-		import('classes.payment.ojs.OJSPaymentManager');
-		$paymentManager = new OJSPaymentManager($context);
+		$paymentManager = Application::getPaymentManager($context);
 		return array(
 			SUBMISSION_EDITOR_DECISION_PENDING_REVISIONS => array(
 				'operation' => 'sendReviewsInReview',

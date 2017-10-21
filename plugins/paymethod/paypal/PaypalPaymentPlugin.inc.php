@@ -106,7 +106,7 @@ class PaypalPaymentPlugin extends PaymethodPlugin {
 			$transaction = $data['transactions'][0];
 			if ((float) $transaction['amount']['total'] != (float) $queuedPayment->getAmount() || $transaction['amount']['currency'] != $queuedPayment->getCurrencyCode()) throw new \Exception('Amounts (' . $transaction['amount']['total'] . ' ' . $transaction['amount']['currency'] . ' vs ' . $queuedPayment->getAmount() . ' ' . $queuedPayment->getCurrencyCode() . ') don\'t match!');
 
-			$paymentManager = new OJSPaymentManager($journal);
+			$paymentManager = Application::getPaymentManager($journal);
 			$paymentManager->fulfillQueuedPayment($request, $queuedPayment, $this->getName());
 			$request->redirectUrl($queuedPayment->getRequestUrl());
 		} catch (\Exception $e) {

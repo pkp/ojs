@@ -77,8 +77,7 @@ class ManualPaymentPlugin extends PaymethodPlugin {
 
 		import('lib.pkp.classes.form.Form');
 		$paymentForm = new Form($this->getTemplatePath() . 'paymentForm.tpl');
-		import('classes.payment.ojs.OJSPaymentManager');
-		$paymentManager = new OJSPaymentManager($context);
+		$paymentManager = Application::getPaymentManager($context);
 		$paymentForm->setData(array(
 			'itemName' => $paymentManager->getPaymentName($queuedPayment),
 			'itemAmount' => $queuedPayment->getAmount()>0?$queuedPayment->getAmount():null,
@@ -103,7 +102,7 @@ class ManualPaymentPlugin extends PaymethodPlugin {
 
 		$queuedPaymentDao = DAORegistry::getDAO('QueuedPaymentDAO');
 		$queuedPayment = $queuedPaymentDao->getById($queuedPaymentId);
-		$ojsPaymentManager = new OJSPaymentManager($context);
+		$ojsPaymentManager = Application::getPaymentManager($context);
 		// if the queued payment doesn't exist, redirect away from payments
 		if (!$queuedPayment) $request->redirect(null, 'index');
 

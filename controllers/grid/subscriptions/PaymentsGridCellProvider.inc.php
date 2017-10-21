@@ -48,8 +48,7 @@ class PaymentsGridCellProvider extends GridCellProvider {
 				$user = $userDao->getById($payment->getUserId());
 				return array('label' => $user->getFullName());
 			case 'type':
-				import('classes.payment.ojs.OJSPaymentManager');
-				$paymentManager = new OJSPaymentManager($this->_request->getJournal());
+				$paymentManager = Application::getPaymentManager($this->_request->getJournal());
 				return array('label' => $paymentManager->getPaymentName($payment));
 			case 'amount':
 				return array('label' => $payment->getAmount() . ' ' . $payment->getCurrencyCode());

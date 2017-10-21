@@ -90,9 +90,7 @@ class IssueEntryPublicationMetadataForm extends Form {
 		}
 
 		// include payment information
-		// Set up required Payment Related Information
-		import('classes.payment.ojs.OJSPaymentManager');
-		$paymentManager = new OJSPaymentManager($context);
+		$paymentManager = Application::getPaymentManager($context);
 		$completedPaymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO');
 		$publicationFeeEnabled = $paymentManager->publicationEnabled();
 		$templateMgr->assign('publicationFeeEnabled',  $publicationFeeEnabled);
@@ -224,8 +222,7 @@ class IssueEntryPublicationMetadataForm extends Form {
 		if ($waivePublicationFee) {
 
 			$markAsPaid = $request->getUserVar('markAsPaid');
-			import('classes.payment.ojs.OJSPaymentManager');
-			$paymentManager = new OJSPaymentManager($context);
+			$paymentManager = Application::getPaymentManager($context);
 
 			$user = $request->getUser();
 

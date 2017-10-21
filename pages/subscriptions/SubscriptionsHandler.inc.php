@@ -111,8 +111,7 @@ class SubscriptionsHandler extends Handler {
 			$templateMgr->assign('scheduledTasksEnabled', true);
 		}
 
-		import('classes.payment.ojs.OJSPaymentManager');
-		$paymentManager = new OJSPaymentManager($request->getJournal());
+		$paymentManager = Application::getPaymentManager($request->getJournal());
 		$templateMgr->assign('acceptSubscriptionPayments', $paymentManager->isConfigured());
 
 		$subscriptionPolicyForm = new SubscriptionPolicyForm();
