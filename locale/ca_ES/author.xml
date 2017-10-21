@@ -119,4 +119,5 @@
 	<message key="author.article.copyeditedFile">Fitxer corregit</message>
 	<message key="author.article.authorRevisedFile">Fitxer de l'autor/a</message>
 	<message key="author.submit.authorSubmitLoginMessage">Per enviar una tramesa a aquesta revista cal tenir un compte d’usuari/ària. Això permet als editors/ores fer un seguiment de les vostres trameses, enviar-vos avisos quan canviï l’estat de les trameses i sol·licitar-vos informació addicional, si escau.</message>
+	<message key="author.submit.nextSteps">Següents passos</message>
 </locale>

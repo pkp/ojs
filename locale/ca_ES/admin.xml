@@ -81,4 +81,16 @@
 	<message key="admin.categories.nameRequired">Cal que introduïu un nom de categoria.</message>
 	
 	
+	<message key="admin.languages.confirmDisable">Esteu segur que voleu desactivar aquesta configuració regional? Això podria afectar a totes les revistes allotjades que actualment utilitzin aquesta configuració regional.</message>
+	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>La descàrrega de paquets d'idiomes des del servidor web de Public Knowledge Project no està disponible actualment perquè:</p>
+	<ul>
+		<li>El seu servidor no té o no permet l'execució de la utilitat GNU "tar".</li>
+		<li>OJS no pot modificar l'arxiu de registre de configuració regional, normalment "registry/locales.xml".</li>
+	</ul>
+<p>Els paquets d'idiomes poden descarregarse manualment des de la pàgina web de PKP: <a href="http://pkp.sfu.ca"></a>.</p>]]></message>
+	<message key="admin.presses.createInstructions">Sereu registrat automàticament com a gestor d'aquesta revista. Després de la creació de la nova revista, se'l redirigirà cap a l'assistent de configuració per completar la instal·lació inicial de la revista.</message>
+	<message key="admin.scheduledTask.subscriptionExpiryReminder">Recordatori de caducitat de la subscripció</message>
+	<message key="admin.scheduledTask.openAccessNotification">Notificació d'accés obert</message>
+	<message key="admin.scheduledTask.reviewReminder">Recordatori de revisió</message>
+	<message key="admin.contexts.form.titleRequired">Es necessita un títol.</message>
 </locale>
