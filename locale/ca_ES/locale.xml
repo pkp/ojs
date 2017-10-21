@@ -899,4 +899,90 @@
 
 	<!-- Debug messages -->
 	<message key="debug.notes.currencyListLoad">S’ha carregat la llista de monedes "{$filename}" des d’XML.</message>
+	<message key="context.current">Revista actual:</message>
+	<message key="context.select">Canviar a una altra revista:</message>
+	<message key="article.return">Tornar als detalls de l'article</message>
+	<message key="journal.viewAllIssues">Veure tots els números</message>
+	<message key="user.noRoles.selectUsersWithoutRoles">Incloure usuaris/àries sense rols en aquesta revista</message>
+	<message key="user.reviewerPrompt">Voldria revisar trameses per a aquesta revista?</message>
+	<message key="user.reviewerPrompt.userGroup">Sí, sol·licitar el rol {$userGroup}.</message>
+	<message key="user.register.contextsPrompt">En quines revistes d'aquest lloc li agradaria registrar-se?</message>
+	<message key="user.register.otherContextRoles">Sol·licitar els rols següents.</message>
+	<message key="user.register.noContextReviewerInterests">Si ha sol·licitat ser revisor/a en alguna revista introdueixi els seus temes d'interès, si us plau.</message>
+	<message key="user.role.subEditors">Editors/es de secció</message>
+	<message key="user.role.journalAssistant">Assistent/a de revista</message>
+	<message key="user.role.journalAssistants">Assistents/es de revista</message>
+	<message key="issue.return">Tornar als detalls del número</message>
+	<message key="submission.event.submissionSubmitted">Article enviat</message>
+	<message key="search.results.orderBy">Ordenar resultats per</message>
+	<message key="search.results.orderBy.article">Títol de l'article</message>
+	<message key="search.results.orderBy.author">Autor/a</message>
+	<message key="search.results.orderBy.date">Data de publicació</message>
+	<message key="search.results.orderBy.issue">Número</message>
+	<message key="search.results.orderBy.journal">Títol de la revista</message>
+	<message key="search.results.orderBy.popularityAll">Popularitat (històric)</message>
+	<message key="search.results.orderBy.popularityMonth">Popularitat (últim mes)</message>
+	<message key="search.results.orderBy.relevance">Rellevància</message>
+	<message key="search.results.orderDir.asc">Ascendent</message>
+	<message key="search.results.orderDir.desc">Descendent</message>
+	<message key="search.results.similarDocuments">documents similars</message>
+	<message key="plugins.categories.viewableFiles">Mòduls de galerada d'article</message>
+	<message key="plugins.categories.viewableFiles.description">Els mòduls de galerada d'article afegeixen suport per mostrar diferents tipus de document com a galerades d'article.</message>
+	<message key="manager.setup.citations.enable">Activa l'assistent de marques de cita</message>
+	<message key="submission.layout.galley.remotelyHostedContent">Aquesta galerada estarà disponible en un lloc web diferent.</message>
+	<message key="submission.layout.galley.remoteURL">URL de contingut allotjat remotament</message>
+	<message key="reviewer.article.selectRecommendation.byEditor">Configuri o ajusti la recomanació del revisor/a.</message>
+	<message key="user.register.selectContext">Seleccioni una revista per registrar-s'hi:</message>
+	<message key="article.pageTitle">Vista de {$title}</message>
+	<message key="article.download">Descarrega aquest arxiu PDF</message>
+	<message key="archive.archivesPageNumber">Arxius - Pàgina {$pageNumber}</message>
+	<message key="about.contact">Contacte</message>
+	<message key="about.aboutContext">Sobre la revista</message>
+	<message key="about.onlineSubmissions.register">Registrar</message>
+	<message key="about.onlineSubmissions.submissionActions">{$newSubmission} o {$viewSubmissions}.</message>
+	<message key="about.onlineSubmissions.newSubmission">Fer una nova tramesa</message>
+	<message key="about.onlineSubmissions.viewSubmissions">veure les trameses pendents</message>
+	<message key="help.goToEditPage">Editar {$sectionTitle}</message>
+	<message key="notification.type.submissionSubmitted">S'ha enviat un nou article: "{$title}".</message>
+	<message key="grid.action.createContext">Crear un nova revista</message>
+	<message key="editor.navigation.issues">Números</message>
+	<message key="notification.type.approveSubmissionTitle">Esperant acceptació.</message>
+	<message key="user.profile.form.showOtherContexts">Registrar-se en altres revistes</message>
+	<message key="user.profile.form.hideOtherContexts">Amaga les altres revistes</message>
+	<message key="article.view.interstitial">Esculli un arxiu d'article per descarregar, si us plau.</message>
+	<message key="grid.catalogEntry.availableRepresentation.approved">Acceptat</message>
+	<message key="grid.catalogEntry.availableRepresentation.notApproved">Esperant acceptació</message>
+	<message key="grid.catalogEntry.approvedRepresentation.title">Acceptació de galerada</message>
+	<message key="grid.catalogEntry.approvedRepresentation.message"><![CDATA[<p>Acceptar aquesta galerada per a la publicació.</p>]]></message>
+	<message key="grid.catalogEntry.approvedRepresentation.removeMessage"><![CDATA[<p>Cancel·lar l'acceptació d'aquesta galerada.</p>]]></message>
+	<message key="search.cli.rebuildIndex.indexing">Indexant "{$journalName}"</message>
+	<message key="editor.issues.backIssues">Números anteriors</message>
+	<message key="editor.issues.futureIssues">Números pròxims</message>
+	<message key="manager.setup.clockssDescription"><![CDATA[Open Journal Systems també suporta l'ús del sistema <a href="http://clockss.org/" target="_blank">CLOCKSS</a> (Controlled Lots of Copies Keep Stuff Safe) per assegurar un arxivament permanent i segur a la revista. CLOCKSS es basa en el programari de codi font obert LOCKSS desenvolupat a la biblioteca de la Universitat de Stanford, que permet a les biblioteques mantenir les revistes web seleccionades a través del sondeig regular dels llocs web de les revistes registrades per recopilar-ne els nous continguts publicats i arxivar-los. Cada arxiu es valida contínuament amb la memòria cau d'altres biblioteques i, si el contingut es corromp o es perd, s'utilitzen les altres memòries cau o la revista per restaurar-lo.
+<br /><br />
+No cal configurar el suport CLOCKSS per a Open Journal Systems fins que comenci la publicació.]]></message>
+	<message key="notification.type.approveSubmission">Aquesta tramesa està actualment esperant l'acceptació. Quan l'obtingui apareixerà en el número.</message>
+	<message key="search.cli.rebuildIndex.indexingByJournalNotSupported">La implementació de la cerca no permet reindexació per revista.</message>
+	<message key="search.cli.rebuildIndex.unknownJournal">La ruta especificada "{$journalPath}" no coincideix amb cap revista.</message>
+	<message key="article.pluginMissing"><![CDATA[<p>L'arxiu PDF que ha seleccionat hauria de carregar-se si el seu navegador té instal·lat un mòdul de lectura de PDF reader (per exemple, una versió recent de <a href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a>).</p>]]></message>
+	<message key="installer.preInstallationInstructions"><![CDATA[<h4>Passos per a la preinstal·lació</h4>
+
+
+<p>1. Els directoris i arxius següents (i els seus continguts) han de ser editables:</p>
+<ul>
+	<li><tt>config.inc.php</tt> és editable (opcional): {$writable_config}</li>
+	<li><tt>public/</tt> és editable: {$writable_public}</li>
+	<li><tt>cache/</tt> és editable: {$writable_cache}</li>
+	<li><tt>cache/t_cache/</tt> és editable: {$writable_templates_cache}</li>
+	<li><tt>cache/t_compile/</tt> és editable: {$writable_templates_compile}</li>
+	<li><tt>cache/_db</tt> és editable: {$writable_db_cache}</li>
+</ul>
+
+<p>2. S'ha de crear un directori editable per emmagatzemar els arxius carregats (veure "Configuració d'arxiu" a continuació).</p>]]></message>
+	<message key="notification.savedIssueMetadata">S'han desat les metadades de publicació del número.</message>
+	<message key="notification.type.editorAssignmentTask">S'ha tramès un article nou i se li ha d'assignar un editor/a.</message>
+	<message key="notification.type.assignProductionUser">Asigna un usuari/ària per crear galerades amb l'opció "Afegir" de la llista de participants.</message>
+	<message key="notification.type.awaitingRepresentations">Esperant galerades.</message>
+	<message key="user.authorization.noContext">Cap revista en aquest context!</message>
+	<message key="user.authorization.invalidIssue">Sol·licitud de número invàlida!</message>
 </locale>

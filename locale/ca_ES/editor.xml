@@ -210,4 +210,28 @@
 	<message key="editor.article.removeCoverPage">Voleu eliminar la imatge de la portada?</message>
 	<message key="editor.article.remove">Elimina</message>
 	<message key="editor.issues.invalidAccessDate">La data d’accés no és vàlida.</message>
+	<message key="editor.issues.editIssue">Gestió del número: {$issueIdentification}</message>
+	<message key="editor.issues.datePublished">Data de publicació</message>
+	<message key="editor.issues.removeCoverImageFileNameMismatch">La imatge de portada que volíeu eliminar no coincideix amb la d'aquest número. Actualitzi la pàgina i torni-ho a provar.</message>
+	<message key="editor.issues.removeCoverImageFileNotFound">La imatge de portada que volíeu eliminar no s'ha pogut trobar, podria ser que ja s'hagués eliminat. Intenti-ho recarregant la pàgina.</message>
+	<message key="editor.issues.invalidCoverImageFormat">Format d'imatge de portada no vàlid. Els formats acceptats són .gif, .jpg, o .png.</message>
+	<message key="editor.issues.confirmSetCurrentIssue">Segur que voleu establir aquest número com a l'actual?</message>
+	<message key="editor.issues.identifiers">Identificadors</message>
+	<message key="grid.action.addGalley">Afegir galerada</message>
+	<message key="grid.action.publish">Publicar número</message>
+	<message key="grid.action.addIssue">Crear número</message>
+	<message key="grid.action.viewIssue">Visualitzar</message>
+	<message key="grid.action.previewIssue">Previsualitzar</message>
+	<message key="grid.action.addIssueGalley">Crear galerada del número</message>
+	<message key="grid.action.setCurrentIssue">Establir número actual</message>
+	<message key="editor.article.schedulePublication">Programar per publicar</message>
+	<message key="editor.article.removeCoverImageFileNotFound">La imatge de portada que volíeu eliminar no s'ha pogut trobar, podria ser que ja s'hagués eliminat. Intenti-ho recarregant la pàgina.</message>
+	<message key="grid.action.removeArticle">Eliminar article del número</message>
+	<message key="editor.article.remove.confirm">Segur que voleu eliminar aquest article del número? L'article estarà disponible per programar-lo en un altre número.</message>
+	<message key="editor.issues.editIssueGalley">Editar galerada del número</message>
+	<message key="editor.submission.production.productionReadyFilesDescription"><![CDATA[El maquetador/a prepara aquests arxius per a cada galerada i aleshores els carrega al lloc <span class="pkp_help_title">Proves</span> adequat per a la seva correcció.]]></message>
+	<message key="editor.submission.selectGalleyFiles">Seleccionar els arxius de galerada</message>
+	<message key="editor.submission.editorial.finalDraftDescription"><![CDATA[El corrector transforma els borradors finals d'aquesta llista en versions revisades i les carrega a continuació a <span class="pkp_help_title">Correcció d'originals</span>.]]></message>
+	<message key="editor.submission.proof.manageProofFilesDescription">Qualsevol arxiu ja carregat  a una fase de la tramesa pot afegir-se a la llista de correcció de proves marcant la casella inferior "Incloure" i fent clic a "Cercar". D'aquesta manera es llistaran tots els arxius disponibles i es podran escollir per incloure'ls.</message>
+	<message key="editor.publicIdentificationExistsForTheSameType">L'identificador públic '{$publicIdentifier}' ja existeix per a un altre objecte del mateix tipus. Esculli identificadors únics per als objectes del mateix tipus dins la seva revista.</message>
 </locale>
