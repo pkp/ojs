@@ -18,7 +18,7 @@
 	<message key="plugins.generic.webfeed.settings">Einstellungen</message>
 	<message key="plugins.generic.webfeed.settings.issue">Links zu Web-Feeds nur auf den Seiten der Ausgabe anzeigen.</message>
 	<message key="plugins.generic.webfeed.settings.homepage">Web-Feed-Links nur auf der Hauptseite und den Ausgaben-Seiten anzeigen</message>
-	<message key="plugins.generic.webfeed.settings.all">>Links zu Web-Feeds auf allen Zeitschriftenseiten anzeigen.</message>
+	<message key="plugins.generic.webfeed.settings.all">Links zu Web-Feeds auf allen Zeitschriftenseiten anzeigen.</message>
 
 	<message key="plugins.generic.webfeed.settings.currentIssue">Items in der aktuellen Ausgabe anzeigen.</message>
 	<message key="plugins.generic.webfeed.settings.recent">Eine feste Anzahl der aktuellsten Elemente anzeigen.</message>
