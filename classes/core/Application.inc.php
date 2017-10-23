@@ -247,6 +247,16 @@ class Application extends PKPApplication {
 		}
 		return $roleNames;
 	}
+
+	/**
+	 * Get the payment manager.
+	 * @param $context Context
+	 * @return OJSPaymentManager
+	 */
+	static function getPaymentManager($context) {
+		import('classes.payment.ojs.OJSPaymentManager');
+		return new OJSPaymentManager($context);
+	}
 }
 
 ?>

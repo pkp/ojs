@@ -112,23 +112,28 @@ class OJSCompletedPaymentDAO extends DAO {
 	}
 
 	/**
-	 * Look for a completed PURCHASE_ARTICLE payment matching the article ID
+	 * Get a payment by assoc info
 	 * @param $userId int
-	 * @param $articleId int
+	 * @param $paymentType int PAYMENT_TYPE_...
+	 * @param $assocId int
+	 * @return CompletedPayment|null
 	 */
-	function hasPaidPurchaseArticle($userId, $articleId) {
+	function getByAssoc($userId = null, $paymentType = null, $assocId = null) {
+		$params = array();
+		if ($userId) $params[] = (int) $userId;
+		if ($paymentType) $params[] = (int) $paymentType;
+		if ($assocId) $params[] = (int) $assocId;
 		$result = $this->retrieve(
-			'SELECT count(*) FROM completed_payments WHERE payment_type = ? AND user_id = ? AND assoc_id = ?',
-			array(
-				PAYMENT_TYPE_PURCHASE_ARTICLE,
-				(int) $userId,
-				(int) $articleId
-			)
+			'SELECT * FROM completed_payments WHERE 1=1' .
+			($paymentType?' AND payment_type = ?':'') .
+			($userId?' AND user_id = ?':'') .
+			($assocId?' AND assoc_id = ?':''),
+			$params
 		);
 
-		$returner = false;
+		$returner = null;
 		if (isset($result->fields[0]) && $result->fields[0] != 0) {
-			$returner = true;
+			$returner = $this->_fromRow($result->fields);
 		}
 
 		$result->Close();
@@ -136,27 +141,30 @@ class OJSCompletedPaymentDAO extends DAO {
 	}
 
 	/**
-	 * Look for a completed PURCHASE_ISSUE payment matching the user and issue IDs
+	 * Look for a completed PAYMENT_TYPE_PURCHASE_ARTICLE payment matching the article ID
+	 * @param $userId int
+	 * @param $articleId int
+	 */
+	function hasPaidPurchaseArticle($userId, $articleId) {
+		return $this->getByAssoc($userId, PAYMENT_TYPE_PURCHASE_ARTICLE, $articleId)?true:false;
+	}
+
+	/**
+	 * Look for a completed PAYMENT_TYPE_PURCHASE_ISSUE payment matching the user and issue IDs
 	 * @param int $userId
 	 * @param int $issueId
 	 */
 	function hasPaidPurchaseIssue($userId, $issueId) {
-		$result = $this->retrieve(
-			'SELECT count(*) FROM completed_payments WHERE payment_type = ? AND user_id = ? AND assoc_id = ?',
-			array(
-				PAYMENT_TYPE_PURCHASE_ISSUE,
-				(int) $userId,
-				(int) $issueId
-			)
-		);
+		return $this->getByAssoc($userId, PAYMENT_TYPE_PURCHASE_ISSUE, $issueId)?true:false;
+	}
 
-		$returner = false;
-		if (isset($result->fields[0]) && $result->fields[0] != 0) {
-			$returner = true;
-		}
-
-		$result->Close();
-		return $returner;
+	/**
+	 * Look for a completed PAYMENT_TYPE_PUBLICATION payment matching the user and issue IDs
+	 * @param int $userId
+	 * @param int $issueId
+	 */
+	function hasPaidPublication($userId, $articleId) {
+		return $this->getByAssoc($userId, PAYMENT_TYPE_PUBLICATION, $articleId)?true:false;
 	}
 
 	/**

@@ -50,8 +50,7 @@ class UserHandler extends PKPUserHandler {
 			$templateMgr->assign('userInstitutionalSubscriptions', $userInstitutionalSubscriptions);
 		}
 
-		import('classes.payment.ojs.OJSPaymentManager');
-		$paymentManager = new OJSPaymentManager($request);
+		$paymentManager = Application::getPaymentManager($journal);
 
 		$this->setupTemplate($request);
 
@@ -108,8 +107,7 @@ class UserHandler extends PKPUserHandler {
 			$request->redirect(null, 'index');
 		}
 
-		import('classes.payment.ojs.OJSPaymentManager');
-		$paymentManager = new OJSPaymentManager($request);
+		$paymentManager = Application::getPaymentManager($journal);
 		$acceptSubscriptionPayments = $paymentManager->isConfigured();
 		if (!$acceptSubscriptionPayments) $request->redirect(null, 'index');
 
@@ -185,8 +183,7 @@ class UserHandler extends PKPUserHandler {
 		if (!$journal) $request->redirect(null, 'index');
 		if ($journal->getSetting('publishingMode') != PUBLISHING_MODE_SUBSCRIPTION) $request->redirect(null, 'index');
 
-		import('classes.payment.ojs.OJSPaymentManager');
-		$paymentManager = new OJSPaymentManager($request);
+		$paymentManager = Application::getPaymentManager($journal);
 		$acceptSubscriptionPayments = $paymentManager->isConfigured();
 		if (!$acceptSubscriptionPayments) $request->redirect(null, 'index');
 
@@ -285,8 +282,7 @@ class UserHandler extends PKPUserHandler {
 			$request->redirect(null, 'index');
 		}
 
-		import('classes.payment.ojs.OJSPaymentManager');
-		$paymentManager = new OJSPaymentManager($request);
+		$paymentManager = Application::getPaymentManager($journal);
 		$acceptSubscriptionPayments = $paymentManager->isConfigured();
 		if (!$acceptSubscriptionPayments) $request->redirect(null, 'index');
 
@@ -313,7 +309,7 @@ class UserHandler extends PKPUserHandler {
 		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
 		$subscriptionType = $subscriptionTypeDao->getById($subscription->getTypeId());
 
-		$queuedPayment = $paymentManager->createQueuedPayment($journal->getId(), PAYMENT_TYPE_PURCHASE_SUBSCRIPTION, $user->getId(), $subscriptionId, $subscriptionType->getCost(), $subscriptionType->getCurrencyCodeAlpha());
+		$queuedPayment = $paymentManager->createQueuedPayment($request, PAYMENT_TYPE_PURCHASE_SUBSCRIPTION, $user->getId(), $subscriptionId, $subscriptionType->getCost(), $subscriptionType->getCurrencyCodeAlpha());
 		$paymentManager->queuePayment($queuedPayment);
 
 		$paymentForm = $paymentManager->getPaymentForm($queuedPayment);
@@ -332,8 +328,7 @@ class UserHandler extends PKPUserHandler {
 			$request->redirect(null, 'index');
 		}
 
-		import('classes.payment.ojs.OJSPaymentManager');
-		$paymentManager = new OJSPaymentManager($request);
+		$paymentManager = Application::getPaymentManager($journal);
 		$acceptSubscriptionPayments = $paymentManager->isConfigured();
 		if (!$acceptSubscriptionPayments) $request->redirect(null, 'index');
 
@@ -367,7 +362,7 @@ class UserHandler extends PKPUserHandler {
 		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
 		$subscriptionType = $subscriptionTypeDao->getById($subscription->getTypeId());
 
-		$queuedPayment = $paymentManager->createQueuedPayment($journal->getId(), PAYMENT_TYPE_RENEW_SUBSCRIPTION, $user->getId(), $subscriptionId, $subscriptionType->getCost(), $subscriptionType->getCurrencyCodeAlpha());
+		$queuedPayment = $paymentManager->createQueuedPayment($request, PAYMENT_TYPE_RENEW_SUBSCRIPTION, $user->getId(), $subscriptionId, $subscriptionType->getCost(), $subscriptionType->getCurrencyCodeAlpha());
 		$paymentManager->queuePayment($queuedPayment);
 
 		$paymentForm = $paymentManager->getPaymentForm($queuedPayment);
@@ -381,16 +376,13 @@ class UserHandler extends PKPUserHandler {
 	 */
 	function payMembership($args, $request) {
 		$this->validate(null, $request);
-
 		$this->setupTemplate($request);
-
-		import('classes.payment.ojs.OJSPaymentManager');
-		$paymentManager = new OJSPaymentManager($request);
-
 		$journal = $request->getJournal();
 		$user = $request->getUser();
 
-		$queuedPayment = $paymentManager->createQueuedPayment($journal->getId(), PAYMENT_TYPE_MEMBERSHIP, $user->getId(), null,  $journal->getSetting('membershipFee'));
+		$paymentManager = Application::getPaymentManager($journal);
+
+		$queuedPayment = $paymentManager->createQueuedPayment($request, PAYMENT_TYPE_MEMBERSHIP, $user->getId(), null,  $journal->getSetting('membershipFee'));
 		$paymentManager->queuePayment($queuedPayment);
 
 		$paymentForm = $paymentManager->getPaymentForm($queuedPayment);

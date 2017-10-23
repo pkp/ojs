@@ -179,8 +179,7 @@ class ArticleHandler extends Handler {
 
 			$templateMgr->assign('hasAccess', !$subscriptionRequired || (isset($article) && $article->getAccessStatus() == ARTICLE_ACCESS_OPEN) || $subscribedUser || $subscribedDomain);
 
-			import('classes.payment.ojs.OJSPaymentManager');
-			$paymentManager = new OJSPaymentManager($request);
+			$paymentManager = Application::getPaymentManager($journal);
 			if ( $paymentManager->onlyPdfEnabled() ) {
 				$templateMgr->assign('restrictOnlyPdf', true);
 			}
@@ -320,7 +319,7 @@ class ArticleHandler extends Handler {
 				$subscribedUser = $issueAction->subscribedUser($user, $journal, $issue->getId(), $publishedArticle->getId());
 
 				import('classes.payment.ojs.OJSPaymentManager');
-				$paymentManager = new OJSPaymentManager($request);
+				$paymentManager = Application::getPaymentManager($journal);
 
 				$purchasedIssue = false;
 				if (!$subscribedUser && $paymentManager->purchaseIssueEnabled()) {
@@ -343,7 +342,7 @@ class ArticleHandler extends Handler {
 						}
 
 						if (!Validation::isLoggedIn()) {
-							Validation::redirectLogin("payment.loginRequired.forArticle");
+							Validation::redirectLogin('payment.loginRequired.forArticle');
 						}
 
 						/* if the article has been paid for then forget about everything else
@@ -356,7 +355,7 @@ class ArticleHandler extends Handler {
 							$this->article = $publishedArticle;
 							return true;
 						} else {
-							$queuedPayment = $paymentManager->createQueuedPayment($journalId, PAYMENT_TYPE_PURCHASE_ARTICLE, $user->getId(), $publishedArticle->getId(), $journal->getSetting('purchaseArticleFee'));
+							$queuedPayment = $paymentManager->createQueuedPayment($request, PAYMENT_TYPE_PURCHASE_ARTICLE, $user->getId(), $publishedArticle->getId(), $journal->getSetting('purchaseArticleFee'));
 							$paymentManager->queuePayment($queuedPayment);
 
 							$paymentForm = $paymentManager->getPaymentForm($queuedPayment);

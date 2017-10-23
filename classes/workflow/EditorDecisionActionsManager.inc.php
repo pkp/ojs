@@ -41,10 +41,10 @@ class EditorDecisionActionsManager {
 	 * @param $decisions
 	 * @return array
 	 */
-	static function getActionLabels($decisions) {
+	static function getActionLabels($context, $decisions) {
 		$allDecisionsData =
 			self::_submissionStageDecisions() +
-			self::_externalReviewStageDecisions() +
+			self::_externalReviewStageDecisions($context) +
 			self::_editorialStageDecisions();
 
 		$actionLabels = array();
@@ -65,12 +65,12 @@ class EditorDecisionActionsManager {
 	 * @param $decisions array
 	 * @return boolean
 	 */
-	static function getEditorTakenActionInReviewRound($reviewRound, $decisions = array()) {
+	static function getEditorTakenActionInReviewRound($context, $reviewRound, $decisions = array()) {
 		$editDecisionDao = DAORegistry::getDAO('EditDecisionDAO');
 		$editorDecisions = $editDecisionDao->getEditorDecisions($reviewRound->getSubmissionId(), $reviewRound->getStageId(), $reviewRound->getRound());
 
 		if (empty($decisions)) {
-			$decisions = array_keys(self::_externalReviewStageDecisions());
+			$decisions = array_keys(self::_externalReviewStageDecisions($context));
 		}
 		$takenDecision = false;
 		foreach ($editorDecisions as $decision) {
@@ -87,12 +87,12 @@ class EditorDecisionActionsManager {
 	 * Get the available decisions by stage ID.
 	 * @param $stageId int WORKFLOW_STAGE_ID_...
 	 */
-	static function getStageDecisions($stageId) {
+	static function getStageDecisions($context, $stageId) {
 		switch ($stageId) {
 			case WORKFLOW_STAGE_ID_SUBMISSION:
 				return self::_submissionStageDecisions();
 			case WORKFLOW_STAGE_ID_EXTERNAL_REVIEW:
-				return self::_externalReviewStageDecisions();
+				return self::_externalReviewStageDecisions($context);
 			case WORKFLOW_STAGE_ID_EDITING:
 				return self::_editorialStageDecisions();
 			default:
@@ -150,10 +150,12 @@ class EditorDecisionActionsManager {
 
 	/**
 	 * Define and return editor decisions for the review stage.
+	 * @param $context Context
 	 * @return array
 	 */
-	static function _externalReviewStageDecisions() {
-		static $decisions = array(
+	static function _externalReviewStageDecisions($context) {
+		$paymentManager = Application::getPaymentManager($context);
+		return array(
 			SUBMISSION_EDITOR_DECISION_PENDING_REVISIONS => array(
 				'operation' => 'sendReviewsInReview',
 				'name' => 'requestRevisions',
@@ -168,6 +170,11 @@ class EditorDecisionActionsManager {
 				'name' => 'accept',
 				'title' => 'editor.submission.decision.accept',
 				'toStage' => 'submission.copyediting',
+				'paymentType' => $paymentManager->publicationEnabled()?PAYMENT_TYPE_PUBLICATION:null,
+				'paymentAmount' => $context->getSetting('publicationFee'),
+				'paymentCurrency' => $context->getSetting('currency'),
+				'requestPaymentText' => __('payment.requestPublicationFee', array('feeAmount' => $context->getSetting('publicationFee') . ' ' . $context->getSetting('currency'))),
+				'waivePaymentText' => __('payment.waive'),
 			),
 			SUBMISSION_EDITOR_DECISION_DECLINE => array(
 				'operation' => 'sendReviewsInReview',
@@ -175,8 +182,6 @@ class EditorDecisionActionsManager {
 				'title' => 'editor.submission.decision.decline',
 			),
 		);
-
-		return $decisions;
 	}
 
 	/**
