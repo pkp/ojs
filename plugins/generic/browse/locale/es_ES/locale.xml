@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/browse/locale/en_US/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
+  * Localization strings.
+  -->
+ 
+<locale name="es_ES" full_name="Español (España)">
+	<!-- plugin -->
+	<message key="plugins.generic.browse.displayName">Explorar</message>
+	<message key="plugins.generic.browse.description">Este plugin permite explorar las secciones y/osus tipos de identificación.</message>
+
+	<!-- URN manager options, setting -->
+	<message key="plugins.generic.browse.manager.settings">Configuración</message>
+	<message key="plugins.generic.browse.manager.settings.description"><![CDATA[Configure las siguientes posibilidades de navegación adicionales:]]></message>
+
+	<message key="plugins.generic.browse.manager.settings.browseSettings">Buscar configuración</message>
+	<message key="plugins.generic.browse.manager.settings.browse">Explorar</message>
+	<message key="plugins.generic.browse.manager.settings.browseByObjects">Elija los objetos que deberían ser posibles de examinar.</message>
+	<message key="plugins.generic.browse.manager.settings.enableBrowseBySections">Por sección</message>
+	<message key="plugins.generic.browse.manager.settings.enableBrowseByIdentifyTypes">Por tipo de identificación</message>
+	<message key="plugins.generic.browse.manager.settings.excludedSections">Secciones excluídas</message>
+	<message key="plugins.generic.browse.manager.settings.excludedSections.description">Elija las secciones que no se deben considerar.</message>
+	<message key="plugins.generic.browse.manager.settings.excludedIdentifyTypes">Tipos de identificación excluidos</message>
+	<message key="plugins.generic.browse.manager.settings.excludedIdentifyTypes.description">Elija los tipos de identificación que no deberían ser considerados.</message>
+
+	<message key="plugins.generic.browse.search.sections">Por secciones</message>
+	<message key="plugins.generic.browse.search.sectionIndex">Consultar el índice de la sección</message>
+	<message key="plugins.generic.browse.search.sectionDetails">Detalles de la sección</message>
+	<message key="plugins.generic.browse.search.identifyTypes">Por tipos de identificación</message>
+	<message key="plugins.generic.browse.search.identifyTypeIndex">Navegar por el índice de tipo de identificación</message>
+	<message key="plugins.generic.browse.search.identifyTypeDetails">Identificar detalles de tipo</message>
+
+</locale>
