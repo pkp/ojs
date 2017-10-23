@@ -45,10 +45,8 @@ plugins/generic/coins									\
 plugins/generic/cookiesAlert								\
 plugins/generic/counter									\
 plugins/generic/customLocale								\
-plugins/generic/driver									\
 plugins/generic/externalFeed								\
 plugins/generic/lucene									\
-plugins/generic/openAIRE								\
 plugins/generic/phpMyVisites								\
 plugins/generic/recommendBySimilarity							\
 plugins/generic/translator								\
