@@ -159,9 +159,9 @@ class OJSCompletedPaymentDAO extends DAO {
 	}
 
 	/**
-	 * Look for a completed PAYMENT_TYPE_PUBLICATION payment matching the user and issue IDs
+	 * Look for a completed PAYMENT_TYPE_PUBLICATION payment matching the user and article IDs
 	 * @param int $userId
-	 * @param int $issueId
+	 * @param int $articleId
 	 */
 	function hasPaidPublication($userId, $articleId) {
 		return $this->getByAssoc($userId, PAYMENT_TYPE_PUBLICATION, $articleId)?true:false;
@@ -237,5 +237,3 @@ class OJSCompletedPaymentDAO extends DAO {
 		return $payment;
 	}
 }
-
-?>
