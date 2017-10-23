@@ -2306,6 +2306,8 @@ class Upgrade extends Installer {
 	 * @return boolean
 	 */
 	function repairImageAssociations() {
+		$genreDao = DAORegistry::getDAO('GenreDAO');
+		$submissionDao = Application::getSubmissionDAO();
 		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
 		$result = $submissionFileDao->retrieve('SELECT df.file_id AS dependent_file_id, gf.file_id AS galley_file_id FROM submission_files df, submission_files gf, submission_html_galley_images i, submission_galleys g WHERE i.galley_id = g.galley_id AND g.file_id = gf.file_id AND i.file_id = df.file_id');
 		while (!$result->EOF) {
@@ -2314,13 +2316,18 @@ class Upgrade extends Installer {
 			foreach ((array) $submissionFiles as $submissionFile) {
 				if ($submissionFile->getFileStage() != SUBMISSION_FILE_PUBLIC) continue;
 
+				$submission = $submissionDao->getById($submissionFile->getSubmissionId());
+				$imageGenre = $genreDao->getByKey('IMAGE', $submission->getContextId());
+
 				$submissionFile->setFileStage(SUBMISSION_FILE_DEPENDENT);
 				$submissionFile->setAssocType(ASSOC_TYPE_SUBMISSION_FILE);
 				$submissionFile->setAssocId($row['galley_file_id']);
+				$submissionFile->setGenreId($imageGenre->getId());
 				$submissionFileDao->updateObject($submissionFile);
 			}
 			$result->MoveNext();
 		}
+		$submissionDao->update('DROP TABLE submission_html_galley_images');
 		return true;
 	}
 
