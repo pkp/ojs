@@ -2044,6 +2044,7 @@ class Upgrade extends Installer {
 		$journalSettingsDao = DAORegistry::getDAO('JournalSettingsDAO');
 		$journals = $journalDao->getAll();
 		while ($journal = $journals->next()) {
+			$settings = $journalSettingsDao->loadSettings($journal->getId());
 			$supportedFormLocales = $journal->getSupportedFormLocales();
 			$focusAndScope = $journal->getSetting('focusScopeDesc');
 			$focusAndScope['localeKey'] = 'about.focusAndScope';
@@ -2198,6 +2199,7 @@ class Upgrade extends Installer {
 
 		$journals = $journalDao->getAll();
 		while ($journal = $journals->next()) {
+			$settings = $journalSettingsDao->loadSettings($journal->getId());
 			if ($journal->getSetting('boardEnabled')) {
 				// get all users by group ID
 				$groupUsers = array();
