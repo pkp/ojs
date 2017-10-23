@@ -56,7 +56,6 @@
 	<message key="admin.journals.createInstructions">Sie werden automatisch als Redakteur/in dieser Zeitschrift eingetragen. Nachdem Sie eine neue Zeitschrift eingerichtet haben, loggen Sie sich dort als Redakteur/in ein, fahren Sie mit der Konfiguration fort und tragen Sie Benutzer/innen ein.</message>
 	<message key="admin.journals.journalSettings">Zeitschriften-Einstellungen</message>
 	<message key="admin.journals.noneCreated">Es wurde keine Zeitschrift eingerichtet.</message>
-	<message key="admin.contexts.confirmDelete">Sind Sie sicher, dass Sie diese Zeitschrift mitsamt ihrem gesamten Inhalt endgültig löschen möchten?</message>
 	<message key="admin.contexts.create">Eine Zeitschrift einrichten</message>
 	<message key="admin.journals.urlWillBe">Die Zeitschrift sollte über ein kurzes Wort oder eine Abkürzung identifizierbar sein. Die URL der Zeitschrift wird {$sampleUrl} lauten.</message>
 	<message key="admin.contexts.form.titleRequired">Die Angabe eines Titels ist erforderlich.</message>
