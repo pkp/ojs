@@ -171,6 +171,8 @@ class EditorDecisionActionsManager {
 				'title' => 'editor.submission.decision.accept',
 				'toStage' => 'submission.copyediting',
 				'paymentType' => $paymentManager->publicationEnabled()?PAYMENT_TYPE_PUBLICATION:null,
+				'paymentAmount' => $context->getSetting('publicationFee'),
+				'paymentCurrency' => $context->getSetting('currency'),
 				'requestPaymentText' => __('payment.requestPublicationFee', array('feeAmount' => $context->getSetting('publicationFee') . ' ' . $context->getSetting('currency'))),
 				'waivePaymentText' => __('payment.waive'),
 			),

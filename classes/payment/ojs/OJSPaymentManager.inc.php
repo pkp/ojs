@@ -74,7 +74,7 @@ class OJSPaymentManager extends PaymentManager {
 				if ($submission->getSubmissionProgress()!=0) {
 					$payment->setRequestUrl($dispatcher->url($request, ROUTE_PAGE, null, 'submission', 'wizard', $submission->getSubmissionProgress(), array('submissionId' => $assocId)));
 				} else {
-					$payment->setRequestUrl($dispatcher->url($request, ROUTE_PAGE, null, 'author'));
+					$payment->setRequestUrl($dispatcher->url($request, ROUTE_PAGE, null, 'authorDashboard', 'submission', $submission->getId()));
 				}
 				break;
 			case PAYMENT_TYPE_MEMBERSHIP: // Deprecated

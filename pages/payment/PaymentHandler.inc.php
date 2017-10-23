@@ -36,6 +36,33 @@ class PaymentHandler extends Handler {
 
 		$paymentMethodPlugin->handle($args, $request);
 	}
+
+	/**
+	 * Present a landing page from which to fulfill a payment.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
+	function pay($args, $request) {
+		if (!Validation::isLoggedIn()) {
+			Validation::redirectLogin();
+		}
+
+		$paymentManager = Application::getPaymentManager($request->getContext());
+		$templateMgr = TemplateManager::getManager($request);
+		$queuedPaymentDao = DAORegistry::getDAO('QueuedPaymentDAO');
+		$queuedPayment = $queuedPaymentDao->getById($queuedPaymentId = array_shift($args));
+		if (!$queuedPayment) {
+			$templateMgr->assign(array(
+				'pageTitle' => 'common.payment',
+				'message' => 'payment.notFound',
+			));
+			$templateMgr->display('frontend/pages/message.tpl');
+			return;
+		}
+
+		$paymentForm = $paymentManager->getPaymentForm($queuedPayment);
+		$paymentForm->display($request);
+	}
 }
 
 ?>
