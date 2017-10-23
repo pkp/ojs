@@ -2439,6 +2439,52 @@ class Upgrade extends Installer {
 	}
 
 	/**
+	 * For 3.0.x - 3.1.0 upgrade: repair the file names in files_dir after the genres are fixed in the DB.
+	 *
+	 * NOTE: we can assume that the migrated file names to be fixed are with genre ID = 1, s. https://github.com/pkp/pkp-lib/issues/2506
+	 *
+	 * @return boolean
+	 */
+	function fixGenreIdInFileNames() {
+		$journalDao = DAORegistry::getDAO('JournalDAO');
+		$genreDao = DAORegistry::getDAO('GenreDAO');
+		$submissionDao = DAORegistry::getDAO('ArticleDAO');
+		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
+
+		import('lib.pkp.classes.file.SubmissionFileManager');
+
+		$contexts = $journalDao->getAll();
+		while ($context = $contexts->next()) {
+			$styleGenre = $genreDao->getByKey('STYLE', $context->getId());
+			$submissions = $submissionDao->getByContextId($context->getId());
+			while ($submission = $submissions->next()) {
+				$submissionFileManager = new SubmissionFileManager($context->getId(), $submission->getId());
+				$basePath = $submissionFileManager->getBasePath() . '/';
+				$submissionFiles = $submissionFileDao->getBySubmissionId($submission->getId());
+				foreach ($submissionFiles as $submissionFile) {
+					// Ignore files with style genre -- if they exist, they are corrected manually i.e.
+					// the moveCSSFiles function will do this, s. https://github.com/pkp/pkp-lib/issues/2758
+					if ($submissionFile->getGenreId() != $styleGenre->getId()) {
+						$generatedNewFilename = $submissionFile->getServerFileName();
+						$targetFilename = $basePath . $submissionFile->_fileStageToPath($submissionFile->getFileStage()) . '/' . $generatedNewFilename;
+						$timestamp = date('Ymd', strtotime($submissionFile->getDateUploaded()));
+						$wrongFileName = $submission->getId() . '-' . '1' . '-' . $submissionFile->getFileId() . '-' . $submissionFile->getRevision() . '-' . $submissionFile->getFileStage() . '-' . $timestamp . '.' . strtolower_codesafe($submissionFile->getExtension());
+						$sourceFilename = $basePath . $submissionFile->_fileStageToPath($submissionFile->getFileStage()) . '/' . $wrongFileName;
+						if (file_exists($targetFilename)) continue; // Skip existing files/links
+						if (!file_exists($path = dirname($targetFilename)) && !$submissionFileManager->mkdirtree($path)) {
+							error_log("Unable to make directory \"$path\"");
+						}
+						if (!rename($sourceFilename, $targetFilename)) {
+							error_log("Unable to move \"$sourceFilename\" to \"$targetFilename\".");
+						}
+					}
+				}
+			}
+		}
+		return true;
+	}
+
+	/**
 	 * For 3.0.x - 3.1.0 upgrade: repair the migration of the HTML galley CSS files in the OJS files_dir.
 	 *
 	 * NOTE: submission_files table should be first fixed with the SQLs from GitHub Issue: https://github.com/pkp/pkp-lib/issues/2758
