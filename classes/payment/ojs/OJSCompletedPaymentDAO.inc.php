@@ -118,14 +118,17 @@ class OJSCompletedPaymentDAO extends DAO {
 	 * @param $assocId int
 	 * @return CompletedPayment|null
 	 */
-	function getByAssoc($userId, $paymentType, $assocId) {
+	function getByAssoc($userId = null, $paymentType = null, $assocId = null) {
+		$params = array();
+		if ($userId) $params[] = (int) $userId;
+		if ($paymentType) $params[] = (int) $paymentType;
+		if ($assocId) $params[] = (int) $assocId;
 		$result = $this->retrieve(
-			'SELECT * FROM completed_payments WHERE payment_type = ? AND user_id = ? AND assoc_id = ?',
-			array(
-				(int) $paymentType,
-				(int) $userId,
-				(int) $articleId
-			)
+			'SELECT * FROM completed_payments WHERE 1=1' .
+			($paymentType?' AND payment_type = ?':'') .
+			($userId?' AND user_id = ?':'') .
+			($assocId?' AND assoc_id = ?':''),
+			$params
 		);
 
 		$returner = null;

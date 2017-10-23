@@ -95,16 +95,20 @@ class OJSPaymentManager extends PaymentManager {
 	 * Create a completed payment from a queued payment.
 	 * @param $queuedPayment QueuedPayment Payment to complete.
 	 * @param $payMethod string Name of payment plugin used.
+	 * @param $userId int User ID to attribute payment to (if unspecified, will be taken from queued payment)
 	 * @return CompletedPayment
 	 */
-	function createCompletedPayment($queuedPayment, $payMethod) {
+	function createCompletedPayment($queuedPayment, $payMethod, $userId = null) {
 		import('lib.pkp.classes.payment.CompletedPayment');
 		$payment = new CompletedPayment();
 		$payment->setContextId($queuedPayment->getContextId());
 		$payment->setType($queuedPayment->getType());
 		$payment->setAmount($queuedPayment->getAmount());
 		$payment->setCurrencyCode($queuedPayment->getCurrencyCode());
-		$payment->setUserId($queuedPayment->getUserId());
+
+		if ($userId) $payment->setUserId($userId);
+		else $payment->setUserId($queuedPayment->getUserId());
+
 		$payment->setAssocId($queuedPayment->getAssocId());
 		$payment->setPayMethodPluginName($payMethod);
 
@@ -177,7 +181,7 @@ class OJSPaymentManager extends PaymentManager {
 		if ($queuedPayment) switch ($queuedPayment->getType()) {
 			case PAYMENT_TYPE_MEMBERSHIP:
 				$userDao = DAORegistry::getDAO('UserDAO');
-				$user = $userDao->getById($queuedPayment->getuserId());
+				$user = $userDao->getById($queuedPayment->getUserId());
 				$userDao->renewMembership($user);
 				$returner = true;
 				break;
@@ -282,7 +286,7 @@ class OJSPaymentManager extends PaymentManager {
 				assert(false);
 		}
 		$completedPaymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO');
-		$completedPayment = $this->createCompletedPayment($queuedPayment, $payMethodPluginName);
+		$completedPayment = $this->createCompletedPayment($queuedPayment, $payMethodPluginName, $request->getUser()->getId());
 		$completedPaymentDao->insertObject($completedPayment);
 
 		$queuedPaymentDao = DAORegistry::getDAO('QueuedPaymentDAO');
