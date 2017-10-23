@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/reports/subscriptions/locale/es_ES/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
+  * Localization strings.
+  -->
+
+<locale name="es_ES" full_name="Español (España)">
+	<message key="plugins.reports.subscriptions.displayName">Reporte de suscripciones</message>
+	<message key="plugins.reports.subscriptions.description">Este complemento implementa un informe CSV que contiene una lista de suscripciones y su información.</message>
+	<message key="plugins.reports.subscriptions.institutionMailingAddress">Dirección de correo institucional</message>
+	<message key="plugins.reports.subscriptions.ipRanges">Rangos IP</message>
+</locale>
