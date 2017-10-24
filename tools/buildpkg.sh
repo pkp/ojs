@@ -88,6 +88,7 @@ plugins/generic/citationStyleLanguage/lib/vendor/symfony/config/Tests/			\
 plugins/generic/citationStyleLanguage/lib/vendor/symfony/yaml/Tests/			\
 plugins/generic/citationStyleLanguage/lib/vendor/guzzle/guzzle/tests/Guzzle/Tests/	\
 plugins/generic/citationStyleLanguage/lib/vendor/symfony/config/Tests/			\
+plugins/generic/citationStyleLanguage/lib/vendor/citation-style-language/locales/.git	\
 lib/pkp/lib/vendor/symfony/translation/Tests/						\
 lib/pkp/lib/vendor/symfony/process/Tests/						\
 lib/pkp/lib/vendor/pimple/pimple/src/Pimple/Tests/					\
