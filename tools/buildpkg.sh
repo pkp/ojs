@@ -65,6 +65,7 @@ lib/pkp/.git										\
 lib/pkp/lib/components/*.js								\
 lib/pkp/lib/components/*.css								\
 lib/pkp/js/lib/pnotify/build-tools							\
+lib/pkp/lib/vendor/alex198710/pnotify/.git						\
 lib/pkp/lib/vendor/sebastian								\
 lib/pkp/lib/vendor/oyejorge/less.php/test						\
 lib/pkp/tools/travis									\
