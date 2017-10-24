@@ -42,7 +42,7 @@ Beispiele:
 	<message key="plugins.importexport.users.import.confirmUsers">Bestätigen Sie, dass Sie diese Benutzer/innen in das System importieren wollen</message>
 	<message key="plugins.importexport.users.import.warning">Warnung</message>
 	<message key="plugins.importexport.users.import.encryptionMismatch">Kann keine Benutzer/innen importieren, die mit {$importHash} gehasht wurden; OJS ist dafür konfiguriert, {$ojsHash} zu benutzen. Wenn Sie fortfahren, werden Sie die Passwörter der importierten Benutzer/innen zurücksetzen müssen.</message>
-	<message key="plugins.importexport.users.unknownPress">Unbekannter Zeitschriftpfad "{$pressPath}".</message>
+	<message key="plugins.importexport.users.unknownPress">Der angegebene Pfad "{$journalPath}" für die Zeitschrift ist unbekannt.</message>
 
 	<message key="plugins.importexport.users.export.exportUsers">Benutzer/innen exportieren</message>
 	<message key="plugins.importexport.users.export.exportByRole">Nach Funktion exportieren</message>
