@@ -378,14 +378,6 @@
 	<message key="manager.subscriptionPolicies.expiryFullDescription">Leser/innen wird der Zugang zu sämtlichen Abonnement-Inhalten verwehrt, wenn ihr Abonnement endet.</message>
 	<message key="manager.subscriptionPolicies.expiryPartial">Teilweises Abonnement-Ende</message>
 	<message key="manager.subscriptionPolicies.expiryPartialDescription">Leser/innen wird der Zugang zu aktuell veröffentlichten Abonnement-Inhalten verwehrt, aber sie erhalten weiterhin Zugriff auf Abonnement-Inhalte, die vor ihrem Abonnement-Ende veröffentlicht wurden.</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths1">Erinnerung per E-Mail</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths2">Monat(e) nach Ablauf des Abonnements.</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks1">Erinnerung per E-Mail</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks2">Woche(n) nach Ablauf des Abonnements.</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths1">Erinnerung per E-Mail</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths2">Monat(e) vor Ablauf des Abonnements.</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks1">Erinnerung per E-Mail</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks2">Woche(n) vor Ablauf des Abonnements.</message>
 	<message key="manager.subscriptionPolicies.expiryReminders">Erinnerung an das Auslaufen des Abonnements</message>
 	<message key="manager.subscriptionPolicies.expiryRemindersDescription">Automatische E-Mails zur Erinnerung (verfügbar unter den Standard-E-Mails des OJS) können den Abonnent/innen sowohl vor als auch nach dem Ablauf des Abonnements zugehen.</message>
 	<message key="manager.subscriptionPolicies.expiryRemindersDisabled"><![CDATA[<strong>Anmerkung:</strong> Hierzu muss die/der Website-Administrator/in <tt>scheduled_tasks</tt> in der Konfigurationsdatei von OJS aktivieren. Weitere Servereinstellungen können erforderlich sein (und sind nicht unbedingt auf allen Servern verfügbar). Siehe OJS-Dokumentation.]]></message>
@@ -600,4 +592,12 @@
 	<message key="plugins.importexport.common.error.unknownJournal">Der angegebene Zeitschriftenpfad, "{$journalPath}", existiert nicht.</message>
 	<message key="plugins.importexport.common.error.unknownObjects">Die angegebenen Objekte konnten nicht gefunden werden.</message>
 	<message key="manager.setup.notifications.copyPrimaryContact">Eine Kopie an den in den Einstellungen der Zeitschrift festgelegten Hauptkontakt senden.</message>
+	<message key="subscriptionManager.subscription.confirmRemove">Sind Sie sicher, dass Sie dieses Abonnement löschen wollen?</message>
+	<message key="manager.paymentTypes">Zahlweisen</message>
+	<message key="manager.subscriptionPolicies.xMonths">{$x} Monate</message>
+	<message key="manager.subscriptionPolicies.xWeeks">{$x} Wochen</message>
+	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths">Benutzer per E-Mail nach Ablauf des Abonnements benachrichtigen</message>
+	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks">Benutzer per E-Mail nach Ablauf des Abonnements benachrichtigen</message>
+	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths">Benutzer per E-Mail vor Ablauf des Abonnements benachrichtigen</message>
+	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks">Benutzer per E-Mail vor Ablauf des Abonnements benachrichtigen</message>
 </locale>
