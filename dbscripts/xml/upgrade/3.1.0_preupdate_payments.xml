@@ -16,5 +16,5 @@
 	<sql><rename table="completed_payments" column="journal_id" to="context_id" /></sql>
 
 	<!-- Use app-independent language in queued payments serialized data -->
-	<sql>UPDATE queued_payments SET payment_data=REPLACE(payment_data,'journalId','contextId')</sql>
+	<sql><query>UPDATE queued_payments SET payment_data=REPLACE(payment_data,'journalId','contextId')</query></sql>
 </data>
