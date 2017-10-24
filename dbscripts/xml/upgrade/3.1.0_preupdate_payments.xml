@@ -13,7 +13,8 @@
   -->
 <data>
 	<!-- Issue #1816: Abstract completed payments into library -->
-	<sql>
-		<rename table="completed_payments" column="journal_id" to="context_id" />
-	</sql>
+	<sql><rename table="completed_payments" column="journal_id" to="context_id" /></sql>
+
+	<!-- Use app-independent language in queued payments serialized data -->
+	<sql>UPDATE queued_payments SET payment_data=REPLACE(payment_data,'journalId','contextId')</sql>
 </data>
