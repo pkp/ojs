@@ -11,7 +11,7 @@
   *
   -->
 
-<install version="3.0.2.0">
+<install version="3.1.0.0">
 	<upgrade minversion="2.0.0.0" maxversion="2.3.9.9">
 		<!-- OJS < 2.4.0 to 3.0 upgrade unsupported -->
 		<code function="abort" message="installer.unsupportedUpgradeError" />
