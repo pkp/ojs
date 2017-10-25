@@ -311,8 +311,8 @@
 	<message key="manager.setup.subjectKeywordTopic">Nyckelord</message>
 	<message key="manager.setup.subjectProvideExamples">Ger exempel på nyckelord eller ämnen som är till hjälp för författarna</message>
 	<message key="manager.setup.submissionGuidelines">Riktlinjer för bidrag</message>
-	<message key="manager.setup.submissionPreparationChecklist">Checklista för inskickande av bidrag.</message>
-	<message key="manager.setup.submissionPreparationChecklistDescription">När ett bidrag skickas in till tidskriften måste författaren först kontrollera de olika momenten i Checklistan för inskickade bidrag. Checklistan syns också i Författarinstruktioner under Om tidskriften. Checklistan kan redigeras nedan men alla delmoment på listan måste markeras av författaren innan bidraget skickas in.</message>
+	<message key="manager.setup.submissionPreparationChecklist">Checklista för insändning av bidrag.</message>
+	<message key="manager.setup.submissionPreparationChecklistDescription">När ett bidrag skickas in till tidskriften måste författaren först kontrollera de olika momenten i Checklista för insändning av bidrag. Checklistan syns också i Författarinstruktioner under Om tidskriften. Checklistan kan redigeras nedan men alla delmoment på listan måste markeras av författaren innan bidraget skickas in.</message>
 	<message key="manager.setup.submissions">Bidrag</message>
 	<message key="manager.setup.submissions.description">Riktlinjer för författare, upphovsrätt, och indexering (även registrering).</message>
 	<message key="manager.setup.subscription">Tidskriften kräver prenumeration för hela eller delar av innehållet.</message>
