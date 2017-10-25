@@ -114,9 +114,9 @@
 	<message key="manager.setup.homepageContent">Innehåll på tidskriftens förstasida</message>
 	<message key="manager.setup.homepageContentDescription">Tidskriftens försasida innehåller navigationslänkar som förval. Ytterligare innehåll på webbsidan kan läggas till genom att använda en eller alla av följande alternativ, som kommer att visas i de ordning som de står.</message>
 	<message key="manager.setup.layout">Layout på tidskriften</message>
-	<message key="manager.setup.useStyleSheet">Stilmall för tidskriftens</message>
-	<message key="manager.setup.contextName">Namn på tidskrifted</message>
-	<message key="manager.setup.pageHeader">Sidhuvud för tidskriftens</message>
+	<message key="manager.setup.useStyleSheet">Stilmall för tidskriften</message>
+	<message key="manager.setup.contextName">Tidskriftens namn</message>
+	<message key="manager.setup.pageHeader">Sidhuvud för tidskriften</message>
 	<message key="manager.setup.aboutItemContent">Innehåll</message>
 	<message key="manager.setup.addAboutItem">Lägg till en rubrik under "Om" </message>
 	<message key="manager.setup.addChecklistItem">Lägg till en rubrik i checklistan</message>
