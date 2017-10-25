@@ -114,6 +114,7 @@ class Upgrade extends Installer {
 				} elseif (count($matchedResults)==0) {
 					// No filenames matched. Skip migrating.
 					error_log("WARNING: Unable to find a match for \"$globPattern\" in \"" . $submissionFileManager->getBasePath() . "\". Skipping this file.");
+					$fileResult->MoveNext();
 					continue;
 				}
 				$discoveredFilename = array_shift($matchedResults);
@@ -122,6 +123,7 @@ class Upgrade extends Installer {
 					unlink($discoveredFilename);
 				} else {
 					error_log("WARNING: File \"$discoveredFilename\" does not exist.");
+					$fileResult->MoveNext();
 					continue;
 				}
 				$fileResult->MoveNext();
