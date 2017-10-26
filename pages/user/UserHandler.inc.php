@@ -64,7 +64,7 @@ class UserHandler extends PKPUserHandler {
 			'journalPath' => $journal->getPath(),
 			'individualSubscriptionTypesExist' => $individualSubscriptionTypesExist,
 			'institutionalSubscriptionTypesExist' => $institutionalSubscriptionTypesExist,
-			'journalPaymentsEnabled' => $paymentManager->isConfigured(),
+			'paymentsEnabled' => $paymentManager->isConfigured(),
 		));
 		$templateMgr->display('frontend/pages/userSubscriptions.tpl');
 

@@ -23,12 +23,11 @@ class PaymentTypesForm extends Form {
 	 * Constructor
 	 */
 	function __construct() {
-		parent::__construct('subscriptions/paymentTypesForm.tpl');
+		parent::__construct('payments/paymentTypesForm.tpl');
 
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_MANAGER);
 
 		$this->settings = array(
-			'journalPaymentsEnabled' => 'bool',
 			'publicationFee' => 'float',
 			'purchaseArticleFeeEnabled' => 'bool',
 			'purchaseArticleFee' => 'float',

@@ -17,12 +17,8 @@
 			</ul>
 		</li>
 	{/if}
-	{if $currentJournal && $currentJournal->getSetting('publishingMode') == $smarty.const.PUBLISHING_MODE_SUBSCRIPTION && array_intersect(array(ROLE_ID_SITE_ADMIN, ROLE_ID_MANAGER, ROLE_ID_SUBSCRIPTION_MANAGER), (array)$userRoles)}
-		<li>
-			<a href="{url router=$smarty.const.ROUTE_PAGE page="subscriptions"}">
-				{translate key="navigation.subscriptions"}
-			</a>
-		</li>
+	{if $currentJournal && $currentJournal->getSetting('paymentsEnabled') && array_intersect(array(ROLE_ID_SITE_ADMIN, ROLE_ID_MANAGER, ROLE_ID_SUBSCRIPTION_MANAGER), (array)$userRoles)}
+		<li><a name="payments" href="{url router=$smarty.const.ROUTE_PAGE page="payments" anchor="payments"}">{translate key="common.payments"}</a></li>
 	{/if}
 {/capture}
 {include file="core:common/header.tpl" appSpecificMenuItems=$appSpecificMenuItems}
