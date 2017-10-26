@@ -2475,7 +2475,7 @@ class Upgrade extends Installer {
 				foreach ($submissionFiles as $submissionFile) {
 					// Ignore files with style genre -- if they exist, they are corrected manually i.e.
 					// the moveCSSFiles function will do this, s. https://github.com/pkp/pkp-lib/issues/2758
-					if ($submissionFile->getGenreId() != $styleGenre->getId()) {
+					if ($styleGenre !== NULL && $submissionFile->getGenreId() != $styleGenre->getId()) {
 						$generatedNewFilename = $submissionFile->getServerFileName();
 						$targetFilename = $basePath . $submissionFile->_fileStageToPath($submissionFile->getFileStage()) . '/' . $generatedNewFilename;
 						$timestamp = date('Ymd', strtotime($submissionFile->getDateUploaded()));
@@ -2515,38 +2515,39 @@ class Upgrade extends Installer {
 		while ($journal = $journals->next()) {
 			// Get style genre
 			$genre = $genreDao->getByKey('STYLE', $journal->getId());
-
-			// get CSS file names from the corrected submission_files table
-			$result = $submissionFileDao->retrieve('SELECT file_id, revision, original_file_name, date_uploaded, submission_id FROM submission_files WHERE file_stage = ? AND genre_id = ? AND assoc_type = ?',
-				array((int) SUBMISSION_FILE_DEPENDENT, (int) $genre->getId(), (int) ASSOC_TYPE_SUBMISSION_FILE));
-			while (!$result->EOF) {
-				$row = $result->GetRowAssoc(false);
-				// Get the wrong file name (after the 3.0.x migration)
-				// and the correct file name
-				$timestamp = date('Ymd', strtotime($row['date_uploaded']));
-				$fileManager = new FileManager();
-				$extension = $fileManager->parseFileExtension($row['original_file_name']);
-				$wrongServerName = 	$row['submission_id'] . '-' . '1' . '-' . $row['file_id'] . '-' . $row['revision'] . '-' . '1' . '-' . $timestamp . '.' . strtolower_codesafe($extension);
-				$newServerName = 	$row['submission_id'] . '-' . $genre->getId() . '-' . $row['file_id'] . '-' . $row['revision'] . '-' . SUBMISSION_FILE_DEPENDENT . '-' . $timestamp . '.' . strtolower_codesafe($extension);
-				// Get the old file path (after the 3.0.x migration, i.e. from OJS 2.4.x)
-				// and the correct file path
-				$submissionFileManager = new SubmissionFileManager($journal->getId(), $row['submission_id']);
-				$basePath = $submissionFileManager->getBasePath() . '/';
-				$sourceFilename = $basePath . 'public' . '/' . $wrongServerName;
-				$targetFilename = $basePath . 'submission/proof' . '/' . $newServerName;
-				// Move the file
-				if (!file_exists($targetFilename) && file_exists($sourceFilename)) {
-					if (!file_exists($path = dirname($targetFilename)) && !$submissionFileManager->mkdirtree($path)) {
-						error_log("Unable to make directory \"$path\"");
+			if ($genre !== NULL) {
+				// get CSS file names from the corrected submission_files table
+				$result = $submissionFileDao->retrieve('SELECT file_id, revision, original_file_name, date_uploaded, submission_id FROM submission_files WHERE file_stage = ? AND genre_id = ? AND assoc_type = ?',
+					array((int) SUBMISSION_FILE_DEPENDENT, (int) $genre->getId(), (int) ASSOC_TYPE_SUBMISSION_FILE));
+				while (!$result->EOF) {
+					$row = $result->GetRowAssoc(false);
+					// Get the wrong file name (after the 3.0.x migration)
+					// and the correct file name
+					$timestamp = date('Ymd', strtotime($row['date_uploaded']));
+					$fileManager = new FileManager();
+					$extension = $fileManager->parseFileExtension($row['original_file_name']);
+					$wrongServerName = 	$row['submission_id'] . '-' . '1' . '-' . $row['file_id'] . '-' . $row['revision'] . '-' . '1' . '-' . $timestamp . '.' . strtolower_codesafe($extension);
+					$newServerName = 	$row['submission_id'] . '-' . $genre->getId() . '-' . $row['file_id'] . '-' . $row['revision'] . '-' . SUBMISSION_FILE_DEPENDENT . '-' . $timestamp . '.' . strtolower_codesafe($extension);
+					// Get the old file path (after the 3.0.x migration, i.e. from OJS 2.4.x)
+					// and the correct file path
+					$submissionFileManager = new SubmissionFileManager($journal->getId(), $row['submission_id']);
+					$basePath = $submissionFileManager->getBasePath() . '/';
+					$sourceFilename = $basePath . 'public' . '/' . $wrongServerName;
+					$targetFilename = $basePath . 'submission/proof' . '/' . $newServerName;
+					// Move the file
+					if (!file_exists($targetFilename) && file_exists($sourceFilename)) {
+						if (!file_exists($path = dirname($targetFilename)) && !$submissionFileManager->mkdirtree($path)) {
+							error_log("Unable to make directory \"$path\"");
+						}
+						if (!rename($sourceFilename, $targetFilename)) {
+							error_log("Unable to move \"$sourceFilename\" to \"$targetFilename\".");
+						}
 					}
-					if (!rename($sourceFilename, $targetFilename)) {
-						error_log("Unable to move \"$sourceFilename\" to \"$targetFilename\".");
-					}
+					$result->MoveNext();
 				}
-				$result->MoveNext();
+				$result->Close();
+				unset($journal);
 			}
-			$result->Close();
-			unset($journal);
 		}
 		return true;
 	}
