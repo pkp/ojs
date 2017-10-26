@@ -36,10 +36,10 @@ class DistributionSettingsTabHandler extends PKPDistributionSettingsTabHandler {
 	 */
 	function saveFormData($args, $request) {
 		$response = parent::saveFormData($args, $request);
-		if ($this->getCurrentTab() == 'access' && $response->getStatus()) {
+		if (in_array($this->getCurrentTab(), array('access', 'paymentMethod')) && $response->getStatus()) {
 			// Cause the sidebar menu to be reloaded to display/hide the Subscriptions item
 			$dispatcher = $request->getDispatcher();
-			return $request->redirectUrLJson($dispatcher->url($request, ROUTE_PAGE, null, 'management', 'settings', 'distribution', array('_' => uniqid()), 'access'));
+			return $request->redirectUrlJson($dispatcher->url($request, ROUTE_PAGE, null, 'management', 'settings', 'distribution', array('_' => uniqid()), $this->getCurrentTab()));
 		}
 		return $response;
 	}
