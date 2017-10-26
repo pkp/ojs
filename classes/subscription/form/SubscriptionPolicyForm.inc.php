@@ -74,7 +74,7 @@ class SubscriptionPolicyForm extends Form {
 			$this->validNumWeeksAfterExpiry[$i] = __('manager.subscriptionPolicies.xWeeks', array('x' => $i));
 		}
 
-		parent::__construct('subscriptions/subscriptionPolicyForm.tpl');
+		parent::__construct('payments/subscriptionPolicyForm.tpl');
 
 		// If provided, subscription contact email is valid
 		$this->addCheck(new FormValidatorEmail($this, 'subscriptionEmail', 'optional', 'manager.subscriptionPolicies.subscriptionContactEmailValid'));
@@ -111,7 +111,7 @@ class SubscriptionPolicyForm extends Form {
 			'validNumMonthsAfterExpiry' => $this->validNumMonthsAfterExpiry,
 			'validNumWeeksAfterExpiry' => $this->validNumWeeksAfterExpiry,
 			'scheduledTasksEnabled' => (boolean) Config::getVar('general', 'scheduled_tasks'),
-			'journalPaymentsEnabled' => $paymentManager->isConfigured(),
+			'paymentsEnabled' => $paymentManager->isConfigured(),
 		));
 
 		return parent::fetch($request);

@@ -52,7 +52,7 @@ class SubscriptionTypeForm extends Form {
 
 		$this->typeId = isset($typeId) ? (int) $typeId : null;
 
-		parent::__construct('subscriptions/subscriptionTypeForm.tpl');
+		parent::__construct('payments/subscriptionTypeForm.tpl');
 
 		// Type name is provided
 		$this->addCheck(new FormValidatorLocale($this, 'name', 'required', 'manager.subscriptionTypes.form.typeNameRequired'));

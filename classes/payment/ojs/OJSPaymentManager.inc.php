@@ -34,7 +34,7 @@ class OJSPaymentManager extends PaymentManager {
 	 * @return boolean true iff configured
 	 */
 	function isConfigured() {
-		return parent::isConfigured() && $this->_context->getSetting('journalPaymentsEnabled');
+		return parent::isConfigured() && $this->_context->getSetting('paymentsEnabled');
 	}
 
 	/**
