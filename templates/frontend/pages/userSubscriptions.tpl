@@ -7,7 +7,7 @@
  *
  * @brief Page where users can view and manage their subscriptions.
  *
- * @uses $journalPaymentsEnabled boolean
+ * @uses $paymentsEnabled boolean
  * @uses $individualSubscriptionTypesExist boolean Have any individual
  *       subscription types been created?
  * @uses $userIndividualSubscription IndividualSubscription
@@ -21,7 +21,7 @@
 	{include file="frontend/components/breadcrumbs.tpl" currentTitleKey="user.subscriptions.mySubscriptions"}
 	{include file="frontend/components/subscriptionContact.tpl"}
 
-	{if $journalPaymentsEnabled}
+	{if $paymentsEnabled}
 		<div class="my_subscription_payments">
 			<h3>{translate key="user.subscriptions.subscriptionStatus"}</h3>
 			<p>{translate key="user.subscriptions.statusInformation"}</p>
@@ -59,7 +59,7 @@
 					<tr>
 						<th>{translate key="user.subscriptions.form.typeId"}</th>
 						<th>{translate key="subscriptions.status"}</th>
-						{if $journalPaymentsEnabled}
+						{if $paymentsEnabled}
 							<th></th>
 						{/if}
 					</tr>
@@ -68,11 +68,11 @@
 						<td>
 							{assign var="subscriptionStatus" value=$userIndividualSubscription->getStatus()}
 							{assign var="isNonExpiring" value=$userIndividualSubscription->isNonExpiring()}
-							{if $journalPaymentsEnabled && $subscriptionStatus == $smarty.const.SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT}
+							{if $paymentsEnabled && $subscriptionStatus == $smarty.const.SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT}
 								<span class="subscription_disabled">
 									{translate key="subscriptions.status.awaitingOnlinePayment"}
 								</span>
-							{elseif $journalPaymentsEnabled && $subscriptionStatus == $smarty.const.SUBSCRIPTION_STATUS_AWAITING_MANUAL_PAYMENT}
+							{elseif $paymentsEnabled && $subscriptionStatus == $smarty.const.SUBSCRIPTION_STATUS_AWAITING_MANUAL_PAYMENT}
 								<span class="subscription_disabled">
 									{translate key="subscriptions.status.awaitingManualPayment"}
 								</span>
@@ -97,7 +97,7 @@
 								{/if}
 							{/if}
 						</td>
-						{if $journalPaymentsEnabled}
+						{if $paymentsEnabled}
 							<td>
 								{if $subscriptionStatus == $smarty.const.SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT}
 									<a class="cmp_button" href="{url op="completePurchaseSubscription" path="individual"|to_array:$userIndividualSubscription->getId()}">
@@ -117,7 +117,7 @@
 						{/if}
 					</tr>
 				</table>
-			{elseif $journalPaymentsEnabled}
+			{elseif $paymentsEnabled}
 				<p>
 					<a class="action" href="{url op="purchaseSubscription" path="individual"}">
 						{translate key="user.subscriptions.purchaseNewSubscription"}
@@ -138,7 +138,7 @@
 			<h3>{translate key="user.subscriptions.institutionalSubscriptions"}</h3>
 			<p>
 				{translate key="subscriptions.institutionalDescription"}
-				{if $journalPaymentsEnabled}
+				{if $paymentsEnabled}
 					{translate key="subscriptions.institutionalOnlinePaymentDescription"}
 				{/if}
 			</p>
@@ -148,7 +148,7 @@
 						<th>{translate key="user.subscriptions.form.typeId"}</th>
 						<th>{translate key="user.subscriptions.form.institutionName"}</th>
 						<th>{translate key="subscriptions.status"}</th>
-						{if $journalPaymentsEnabled}
+						{if $paymentsEnabled}
 							<th></th>
 						{/if}
 					</tr>
@@ -159,15 +159,15 @@
 							<td>
 								{assign var="subscriptionStatus" value=$userInstitutionalSubscription->getStatus()}
 								{assign var="isNonExpiring" value=$userInstitutionalSubscription->isNonExpiring()}
-								{if $journalPaymentsEnabled && $subscriptionStatus == $smarty.const.SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT}
+								{if $paymentsEnabled && $subscriptionStatus == $smarty.const.SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT}
 									<span class="subscription_disabled">
 										{translate key="subscriptions.status.awaitingOnlinePayment"}
 									</span>
-								{elseif $journalPaymentsEnabled && $subscriptionStatus == $smarty.const.SUBSCRIPTION_STATUS_AWAITING_MANUAL_PAYMENT}
+								{elseif $paymentsEnabled && $subscriptionStatus == $smarty.const.SUBSCRIPTION_STATUS_AWAITING_MANUAL_PAYMENT}
 									<span class="subscription_disabled">
 										{translate key="subscriptions.status.awaitingManualPayment"}
 									</span>
-								{elseif $journalPaymentsEnabled && $subscriptionStatus == $smarty.const.SUBSCRIPTION_STATUS_NEEDS_APPROVAL}
+								{elseif $paymentsEnabled && $subscriptionStatus == $smarty.const.SUBSCRIPTION_STATUS_NEEDS_APPROVAL}
 									<span class="subscription_disabled">
 										{translate key="subscriptions.status.needsApproval"}
 									</span>
@@ -194,7 +194,7 @@
 									{/if}
 								{/if}
 							</td>
-							{if $journalPaymentsEnabled}
+							{if $paymentsEnabled}
 								<td>
 									{if $subscriptionStatus == $smarty.const.SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT}
 										<a class="cmp_button" href="{url op="completePurchaseSubscription" path="institutional"|to_array:$userInstitutionalSubscription->getId()}">
@@ -217,7 +217,7 @@
 				</table>
 			{/if}
 			<p>
-				{if $journalPaymentsEnabled}
+				{if $paymentsEnabled}
 					<a class="action" href="{url page="user" op="purchaseSubscription" path="institutional"}">
 						{translate key="user.subscriptions.purchaseNewSubscription"}
 					</a>
