@@ -169,7 +169,7 @@
 
 	<!-- Roles -->
 	<message key="user.role.manager">Tidsskriftschef</message>
-	<message key="user.role.sectionEditor">Sektionsredaktør</message>
+	<message key="user.role.subEditor">Sektionsredaktør</message>
 	<message key="user.role.subscriptionManager">Abonnementschef</message>
 	<message key="user.role.managers">Tidsskriftschefer</message>
 	<message key="user.role.subscriptionManagers">Abonnementschefer</message>

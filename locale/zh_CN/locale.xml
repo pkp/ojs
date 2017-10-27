@@ -205,7 +205,7 @@
 
 	<!-- Roles -->
 	<message key="user.role.manager">期刊管理员</message>
-	<message key="user.role.sectionEditor">栏目编辑</message>
+	<message key="user.role.subEditor">栏目编辑</message>
 	<message key="user.role.subscriptionManager">订阅管理员</message>
 	<message key="user.role.managers">期刊管理员</message>
 	<message key="user.role.subscriptionManagers">订阅管理员</message>

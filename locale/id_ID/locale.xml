@@ -211,7 +211,7 @@
 
 	<!-- Roles -->
 	<message key="user.role.manager">Manajer Jurnal</message>
-	<message key="user.role.sectionEditor">Editor Bagian</message>
+	<message key="user.role.subEditor">Editor Bagian</message>
 	<message key="user.role.subscriptionManager">Manajer Langganan</message>
 	<message key="user.role.managers">Manajer Jurnal</message>
 	<message key="user.role.subEditors">Editor Bagian</message>

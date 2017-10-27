@@ -166,7 +166,7 @@
 
 	<!-- Roles -->
 	<message key="user.role.manager">Glavni urednik</message>
-	<message key="user.role.sectionEditor">Urednik rubrike</message>
+	<message key="user.role.subEditor">Urednik rubrike</message>
 	<message key="user.role.subscriptionManager">Administrator pretplate</message>
 	<message key="user.role.managers">Glavni urednici</message>
 	<message key="user.role.subscriptionManagers">Administratori pretplate</message>

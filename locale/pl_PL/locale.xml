@@ -215,7 +215,7 @@
 	<!-- Roles -->
 	<message key="user.role.manager">Administrator czasopisma</message>
 	<message key="user.role.editor">Redaktor czasopisma</message>
-	<message key="user.role.sectionEditor">Redaktor działu</message>
+	<message key="user.role.subEditor">Redaktor działu</message>
 	<message key="user.role.layoutEditor">Składacz</message>
 	<message key="user.role.copyeditor">Korektor</message>
 	<message key="user.role.proofreader">Korektor pliku do publikacji</message>
@@ -223,7 +223,7 @@
 	<message key="user.role.subscriptionManager">Administrator subskrypcji</message>
 	<message key="user.role.managers">Administratorzy czasopisma</message>
 	<message key="user.role.editors">Redaktorzy</message>
-	<message key="user.role.sectionEditors">Redaktorzy działu</message>
+	<message key="user.role.subEditors">Redaktorzy działu</message>
 	<message key="user.role.layoutEditors">Składacze</message>
 	<message key="user.role.copyeditors">Korektorzy</message>
 	<message key="user.role.proofreaders">Korektorzy pliku do publikacji</message>

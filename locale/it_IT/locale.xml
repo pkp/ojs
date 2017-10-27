@@ -206,7 +206,7 @@
 
 	<!-- Roles -->
 	<message key="user.role.manager">Journal Manager</message>
-	<message key="user.role.sectionEditor">Section Editor</message>
+	<message key="user.role.subEditor">Section Editor</message>
 	<message key="user.role.subscriptionManager">Gestore degli abbonamenti</message>
 	<message key="user.role.managers">Journal Manager</message>
 	<message key="user.role.subscriptionManagers">Gestori degli abbonamenti</message>

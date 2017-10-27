@@ -146,7 +146,7 @@
 	<message key="user.myJournals">Моји часописи</message>
 
 	<!--  Roles  -->	<message key="user.role.manager">Главни уредник</message>
-	<message key="user.role.sectionEditor">Уредник секције</message>
+	<message key="user.role.subEditor">Уредник секције</message>
 	<message key="user.role.subscriptionManager">Менаджер претплата</message>
 	<message key="user.role.managers">Главни уредници</message>
 	<message key="user.role.subscriptionManagers">Менаджери претплата</message>

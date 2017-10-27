@@ -164,7 +164,7 @@
 	<!-- Roles -->
 	<message key="user.role.manager">Redaksjonsleder</message>
 	<message key="user.role.editor">Ansvarlig redaktør</message>
-	<message key="user.role.sectionEditor">Seksjonsredaktør</message>
+	<message key="user.role.subEditor">Seksjonsredaktør</message>
 	<message key="user.role.layoutEditor">Layoutredaktør</message>
 	<message key="user.role.copyeditor">Manusredaktør</message>
 	<message key="user.role.proofreader">Korrekturleser</message>

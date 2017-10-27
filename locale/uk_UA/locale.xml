@@ -211,7 +211,7 @@
 
        <!-- Roles -->
        <message key="user.role.manager">Менеджер журналу</message>
-       <message key="user.role.sectionEditor">Редактор розділу</message>
+       <message key="user.role.subEditor">Редактор розділу</message>
        <message key="user.role.subscriptionManager">Менеджер передплати</message>
        <message key="user.role.managers">Менеджери журналів</message>
        <message key="user.role.subEditors">Редактори розділів</message>

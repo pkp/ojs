@@ -209,7 +209,7 @@
 
 	<!-- Roles -->
 	<message key="user.role.manager">Julkaisun hallinnoija</message>
-	<message key="user.role.sectionEditor">Osastotoimittaja</message>
+	<message key="user.role.subEditor">Osastotoimittaja</message>
 	<message key="user.role.subscriptionManager">Tilaussihteeri</message>
 	<message key="user.role.managers">Julkaisun hallinnoijat</message>
 	<message key="user.role.subEditors">Osastotoimittajat</message>

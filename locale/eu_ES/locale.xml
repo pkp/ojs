@@ -204,7 +204,7 @@
 
 	<!-- Roles -->
 	<message key="user.role.manager">Aldizkariaren kudeatzailea</message>
-	<message key="user.role.sectionEditor">Ataleko editorea</message>
+	<message key="user.role.subEditor">Ataleko editorea</message>
 	<message key="user.role.subscriptionManager">Harpidetza-kudeatzailea</message>
 	<message key="user.role.managers">Aldizkariaren kudeatzaileak</message>
 	<message key="user.role.subscriptionManagers">Harpidetza-kudeatzaileak</message>

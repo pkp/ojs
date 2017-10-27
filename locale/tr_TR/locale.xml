@@ -267,7 +267,7 @@
 	<!-- Roles -->
 	<message key="user.role.author">Yazar</message>
 	<message key="user.role.manager">Dergi Yöneticisi</message>
-	<message key="user.role.sectionEditor">Bölüm Editörü</message>
+	<message key="user.role.subEditor">Bölüm Editörü</message>
 	<message key="user.role.subscriptionManager">Abone Yöneticisi</message>
 	<message key="user.role.managers">Dergi Yöneticileri</message>
 	<message key="user.role.subscriptionManagers">Abone Yöneticileri</message>
