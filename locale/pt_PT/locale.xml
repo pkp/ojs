@@ -150,7 +150,7 @@
 
 	<!-- Roles -->
 	<message key="user.role.manager">Director</message>
-	<message key="user.role.sectionEditor">Editor de Secção</message>
+	<message key="user.role.subEditor">Editor de Secção</message>
 	<message key="user.role.subscriptionManager">Gestor de Subscrições</message>
 	<message key="user.role.managers">Directores</message>
 	<message key="user.role.subscriptionManagers">Gestores de Subscrições</message>

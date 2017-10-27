@@ -206,7 +206,7 @@
 
 	<!-- Roles -->
 	<message key="user.role.manager">Gestor/a de la revista</message>
-	<message key="user.role.sectionEditor">Editor/a de sección</message>
+	<message key="user.role.subEditor">Editor/a de sección</message>
 	<message key="user.role.subscriptionManager">Gestor/a de suscripciones</message>
 	<message key="user.role.managers">Gestores/as de la revista</message>
 	<message key="user.role.subscriptionManagers">Gestores/as de suscripción</message>

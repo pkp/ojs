@@ -145,7 +145,7 @@
 
 	<!--  Roles  -->
 	<message key="user.role.manager">Glavni urednik</message>
-	<message key="user.role.sectionEditor">Urednik sekcije</message>
+	<message key="user.role.subEditor">Urednik sekcije</message>
 	<message key="user.role.subscriptionManager">Upravnik za pretplatae</message>
 	<message key="user.role.managers">Glavni urednici</message>
 	<message key="user.role.subscriptionManagers">Menadžeri pretplata</message>

@@ -207,7 +207,7 @@
 
 	<!-- Roles -->
 	<message key="user.role.manager">Manažer časopisu</message>
-	<message key="user.role.sectionEditor">Editor sekce</message>
+	<message key="user.role.subEditor">Editor sekce</message>
 	<message key="user.role.subscriptionManager">Manažer předplatného</message>
 	<message key="user.role.managers">Manažeři časopisu</message>
 	<message key="user.role.subscriptionManagers">Manažeři předplatného</message>

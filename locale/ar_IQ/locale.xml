@@ -211,7 +211,7 @@
 
 	<!-- Roles -->
 	<message key="user.role.manager">رئيس التحرير</message>
-	<message key="user.role.sectionEditor">محرر القسم</message>
+	<message key="user.role.subEditor">محرر القسم</message>
 	<message key="user.role.subscriptionManager">مدير الاشتراكات</message>
 	<message key="user.role.managers">المدراء</message>
 	<message key="user.role.subEditors">محررو الأقسام</message>

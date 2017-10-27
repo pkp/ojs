@@ -211,7 +211,7 @@
 
 	<!-- Roles -->
 	<message key="user.role.manager">Journal Manager</message>
-	<message key="user.role.sectionEditor">Section Editor</message>
+	<message key="user.role.subEditor">Section Editor</message>
 	<message key="user.role.subscriptionManager">Subscription Manager</message>
 	<message key="user.role.managers">Journal Managers</message>
 	<message key="user.role.subEditors">Section Editors</message>

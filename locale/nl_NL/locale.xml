@@ -161,7 +161,7 @@
 
 	<!-- Roles -->
 	<message key="user.role.manager">Tijdschriftbeheerder</message>
-	<message key="user.role.sectionEditor">Sectieredacteur</message>
+	<message key="user.role.subEditor">Sectieredacteur</message>
 	<message key="user.role.subscriptionManager">Abonnementenbeheerder</message>
 	<message key="user.role.managers">Tijdschriftbeheerders</message>
 	<message key="user.role.subscriptionManagers">Abonnementenbeheerders</message>

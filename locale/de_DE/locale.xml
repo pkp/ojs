@@ -211,7 +211,7 @@
 
 	<!-- Roles -->
 	<message key="user.role.manager">Zeitschriftenverwalter/in</message>
-	<message key="user.role.sectionEditor">Rubrikredakteur/in</message>
+	<message key="user.role.subEditor">Rubrikredakteur/in</message>
 	<message key="user.role.subscriptionManager">Abonnementverwalter/in</message>
 	<message key="user.role.managers">Zeitschriftenverwalter/innen</message>
 	<message key="user.role.subEditors">Rubrikredakteur/innen</message>

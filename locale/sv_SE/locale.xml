@@ -211,7 +211,7 @@
 
 	<!-- Roles -->
 	<message key="user.role.manager">Tidskriftsansvarig</message>
-	<message key="user.role.sectionEditor">Sektionsredaktör</message>
+	<message key="user.role.subEditor">Sektionsredaktör</message>
 	<message key="user.role.subscriptionManager">Prenumerationsansvarig</message>
 	<message key="user.role.managers">Tidskriftsansvariga</message>
 	<message key="user.role.subEditors">Sektionsredaktörer</message>

@@ -182,7 +182,7 @@
 
 	<!-- Roles -->
 	<message key="user.role.manager">Gerente da Revista</message>
-	<message key="user.role.sectionEditor">Editor de Seção</message>
+	<message key="user.role.subEditor">Editor de Seção</message>
 	<message key="user.role.subscriptionManager">Gerente de Assinaturas</message>
 	<message key="user.role.managers">Editores-Gerentes</message>
 	<message key="user.role.subscriptionManagers">Gerentes de Assinaturas</message>
