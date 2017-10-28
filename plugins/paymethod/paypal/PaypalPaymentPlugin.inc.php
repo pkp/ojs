@@ -67,10 +67,9 @@ class PaypalPaymentPlugin extends PaymethodPlugin {
 	}
 
 	/**
-	 * @see PaymethodPlugin::isConfigured
+	 * @copydoc PaymethodPlugin::isConfigured
 	 */
-	function isConfigured() {
-		$context = $this->getRequest()->getContext();
+	function isConfigured($context) {
 		if (!$context) return false;
 		if ($this->getSetting($context->getId(), 'accountName') == '') return false;
 		return true;

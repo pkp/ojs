@@ -30,7 +30,7 @@ class PaymentHandler extends Handler {
 		}
 
 		$paymentMethodPlugin =& $paymentMethodPlugins[$paymentMethodPluginName];
-		if (!$paymentMethodPlugin->isConfigured()) {
+		if (!$paymentMethodPlugin->isConfigured($request->getContext())) {
 			$request->redirect(null, null, 'index');
 		}
 
