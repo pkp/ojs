@@ -28,7 +28,7 @@
 	<message key="manager.payment.addPayment">Add Payment</message>
 	<message key="manager.payment.amount">Amount</message>
 	<message key="manager.payment.authorFees">Author Fees</message>
-	<message key="manager.payment.authorFeesDescription">Enter fee amounts below in order to enable author processing fees.</message>
+	<message key="manager.payment.authorFeesDescription">Enter fee amounts below in order to enable author processing charges.</message>
 	<message key="manager.payment.currency">Currency</message>
 	<message key="manager.payment.currencymessage">OJS does not perform any currency conversions.  If accepting payments for subscriptions, you must ensure that the subscription currency matches the one specified here.</message>
 	<message key="manager.payment.description">Description</message>
@@ -51,7 +51,7 @@
 	<message key="manager.payment.options.feeName">Fee Name</message>
 	<message key="manager.payment.options.membershipFee">Association Membership</message>
 	<message key="manager.payment.options.onlypdf">Only Restrict Access to PDF version of issues and articles</message>
-	<message key="manager.payment.options.publicationFee">Article Publication Fee</message>
+	<message key="manager.payment.options.publicationFee">Article Processing Charge</message>
 	<message key="manager.payment.options.purchaseArticleFee">Purchase Article</message>
 	<message key="manager.payment.options.purchaseIssueFee">Purchase Issue</message>
 	<message key="manager.payment.options.text">Description of Payment Method</message>
