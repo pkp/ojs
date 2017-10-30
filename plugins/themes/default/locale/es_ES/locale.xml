@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/themes/default/locale/es_ES/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
+  * Localization strings.
+  -->
+
+<locale name="es_ES" full_name="Español (España)">
+	<message key="plugins.themes.default.name">Tema por defecto</message>
+	<message key="plugins.themes.default.description">Este tema implementa el tema por defecto.</message>
+
+	<!-- Theme options -->
+	<message key="plugins.themes.default.option.typography.label">Tipografía</message>
+	<message key="plugins.themes.default.option.typography.description">Escoge una combinación de fuentes que se adapte a la revista.</message>
+	<message key="plugins.themes.default.option.typography.notoSans">Noto Sans: una fuente nativa digital diseñada por Google para un amplio soporte de idiomas.</message>
+	<message key="plugins.themes.default.option.typography.notoSerif">Noto Serif: Una variante serif de la fuente nativa digital de Google.</message>
+	<message key="plugins.themes.default.option.typography.notoSerif_notoSans">Noto Serif/Noto Sans: Un emparejamiento complementario con títulos serif y cuerpo de texto sans-serif.</message>
+	<message key="plugins.themes.default.option.typography.notoSans_notoSerif">Noto Sans/Noto Serif: Un emparejamiento complementario con títulos sans-serif y cuerpo de texto serif.</message>
+	<message key="plugins.themes.default.option.typography.lato">Lato: Una fuente moderna popular sans-serif.</message>
+	<message key="plugins.themes.default.option.typography.lora">Lora: Una fuente serif de amplio espectro, buena para leer en línea.</message>
+	<message key="plugins.themes.default.option.typography.lora_openSans">Lora/Open Sans: Un emparejamiento complementario con títulos serif y cuerpo de texto sans-serif.</message>
+	<message key="plugins.themes.default.option.colour.label">Color</message>
+	<message key="plugins.themes.default.option.colour.description">Escoge un color para el encabezado.</message>
+</locale>
