@@ -2299,7 +2299,7 @@ class Upgrade extends Installer {
 					}
 				}
 			}
-			$journalSettingsDao->updateSetting($journal->getId(), 'masthead', $masthead, 'string', true);
+			$journalSettingsDao->updateSetting($journal->getId(), 'editorialTeam', $masthead, 'string', true);
 			unset($journal);
 		}
 		return true;
