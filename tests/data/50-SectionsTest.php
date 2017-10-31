@@ -34,18 +34,11 @@ class SectionsTest extends WebTestCase {
 		$this->waitForElementPresent($selector='css=[id^=component-grid-settings-sections-sectiongrid-row-1-editSection-button-]');
 		$this->click($selector);
 
-		// Add Section Editor (David Buskins)
-		$this->waitForElementPresent($selector='css=[id^=component-listbuilder-settings-subeditorslistbuilder-addItem-button-]');
+		// Add Section Editors (David Buskins and Stephanie Berardo)
+		$this->waitForElementPresent($selector='css=.pkpListPanelItem__item:contains(\'David Buskins\')');
 		$this->clickAt($selector);
-
-		$this->waitForElementPresent('//select[@name=\'newRowId[name]\']//option[text()=\'David Buskins\']');
-		$this->select('name=newRowId[name]', 'label=David Buskins');
-
-		// Persist this one and add another (Stephanie Berardo)
-		$this->clickAt("css=[id^=component-listbuilder-settings-subeditorslistbuilder-addItem-button-]", "10,10");
-		$this->waitForElementPresent('css=span:contains(\'David Buskins\')');
-		$this->waitForElementPresent('xpath=(//select[@name="newRowId[name]"])[2]//option[text()=\'Stephanie Berardo\']');
-		$this->select('xpath=(//select[@name="newRowId[name]"])[2]', 'label=Stephanie Berardo');
+		$this->waitForElementPresent($selector='css=.pkpListPanelItem__item:contains(\'Stephanie Berardo\')');
+		$this->clickAt($selector);
 
 		// Save changes
 		$this->click('//form[@id=\'sectionForm\']//button[text()=\'Save\']');
@@ -64,10 +57,8 @@ class SectionsTest extends WebTestCase {
 		$this->click('id=abstractsNotRequired');
 
 		// Add a Section Editor (Minoti Inoue)
-		$this->waitForElementPresent($selector='css=[id^=component-listbuilder-settings-subeditorslistbuilder-addItem-button-]');
+		$this->waitForElementPresent($selector='css=.pkpListPanelItem__item:contains(\'Minoti Inoue\')');
 		$this->clickAt($selector);
-		$this->waitForElementPresent('//select[@name=\'newRowId[name]\']//option[text()=\'Minoti Inoue\']');
-		$this->select('name=newRowId[name]', 'label=Minoti Inoue');
 		$this->click('//form[@id=\'sectionForm\']//button[text()=\'Save\']');
 		$this->waitForElementNotPresent('css=div.pkp_modal_panel');
 	}
