@@ -75,6 +75,9 @@
 	<!-- CLOB/Text indexes handled differently for MySQL and PostgreSQL -->
 	<data file="dbscripts/xml/indexes.xml" />
 
+	<!-- Install default NavigationMenus -->
+	<code function="installDefaultNavigationMenus" />
+
 	<upgrade minversion="2.4.0.0" maxversion="2.4.9.9">
 		<code function="migrateCounterPluginUsageStatistics" condition="return $installer->tableExists('counter_monthly_log');" />
 		<code function="migrateTimedViewsUsageStatistics" condition="return $installer->tableExists('timed_views_log');" />
@@ -175,7 +178,6 @@
 		<note file="docs/release-notes/README-3.1.0" />
 		<code function="installEmailTemplate" key="EDITOR_DECISION_INITIAL_DECLINE" locales="en_US" />
 		<code function="installEmailTemplate" key="EDITOR_RECOMMENDATION" locales="en_US" />
-		<code function="installDefaultNavigationMenus" />
 		<note file="docs/release-notes/README-3.1.0" />
 	</upgrade>
 
