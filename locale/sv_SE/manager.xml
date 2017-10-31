@@ -110,7 +110,8 @@
 	<message key="manager.sections.wordCountInstructions">Begränsa antal tillåtna ord i abstract för den här sektionen (0 innebär obegränsat)</message>
 	<message key="manager.setup">Tidskriftsinställningar</message>
 	<message key="manager.setup.masthead">Redaktionsruta</message>
-	<message key="manager.setup.masthead.description">Ange redaktörer, tidskriftsansvariga och andra som är kopplade till tidskriften.</message>
+	<message key="manager.setup.editorialTeam">Redaktion</message>
+	<message key="manager.setup.editorialTeam.description">Ange redaktörer, tidskriftsansvariga och andra som är kopplade till tidskriften.</message>
 	<message key="manager.setup.homepageContent">Innehåll på tidskriftens förstasida</message>
 	<message key="manager.setup.homepageContentDescription">Tidskriftens försasida innehåller navigationslänkar som förval. Ytterligare innehåll på webbsidan kan läggas till genom att använda en eller alla av följande alternativ, som kommer att visas i de ordning som de står.</message>
 	<message key="manager.setup.layout">Layout på tidskriften</message>

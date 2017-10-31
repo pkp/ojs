@@ -514,7 +514,8 @@
 	<message key="manager.website.archiving">Arquivamento</message>
 	<message key="manager.section.noSectionEditors"><![CDATA[Ainda não existem Editores de Secção. Associe este papel a pelo menos um utilizador através da Administração>Configurações> Utilizadores& amp; Papéis em primeiro lugar.]]></message>
 	<message key="manager.setup.masthead">Masthead</message>
-	<message key="manager.setup.masthead.description">Lista de editores, diretores e outras pessoas associados à revista.</message>
+	<message key="manager.setup.editorialTeam">Equipa Editorial</message>
+	<message key="manager.setup.editorialTeam.description">Lista de editores, diretores e outras pessoas associados à revista.</message>
 	<message key="manager.setup.homepageContent">Conteúdo da HomePage da Revista</message>
 	<message key="manager.setup.homepageContentDescription">A página inicial da revista consiste em links de navegação por padrão. O conteúdo adicional da página inicial pode ser anexado usando uma ou todas as seguintes opções, que aparecerão na ordem mostrada.</message>
 	<message key="manager.setup.layout">Layout Revista</message>
