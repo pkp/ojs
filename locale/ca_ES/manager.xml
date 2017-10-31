@@ -511,7 +511,8 @@
 	<message key="manager.section.noSectionEditors"><![CDATA[Encara no hi ha editors/es de secció. Dóna aquest rol a un usuari/ària com a mínim a través de Gestió > Configuració > Users &amp; Roles first.]]></message>
 	<message key="plugins.importexport.common.cliError">ERROR:</message>
 	<message key="manager.setup.masthead">Capçalera</message>
-	<message key="manager.setup.masthead.description">Llista els editors/es, els directors/es de gestió i les altres persones associades amb la revista.</message>
+	<message key="manager.setup.editorialTeam">Equip editorial</message>
+	<message key="manager.setup.editorialTeam.description">Llista els editors/es, els directors/es de gestió i les altres persones associades amb la revista.</message>
 	<message key="manager.setup.homepageContent">Contingut de la pàgina d'inici de la revista</message>
 	<message key="manager.setup.homepageContentDescription">La pàgina d'inici de la revista consta dels enllaços de navegació per defecte. S'hi pot afegir contingut addicional mitjançant una o totes les opcions següents, que apareixeran en l'ordre mostrat.</message>
 	<message key="manager.setup.layout">Disseny de la revista</message>
