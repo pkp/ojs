@@ -91,10 +91,10 @@ class SectionForm extends PKPSectionForm {
 		$templateMgr->assign('reviewFormOptions', $reviewFormOptions);
 
 		// Series Editors
-		$sectionEditorsListData = $this->_getSubEditorsListPanelData($journal->getId());
+		$sectionEditorsListData = $this->_getSubEditorsListPanelData($journal->getId(), $request);
 		$templateMgr->assign(array(
 			'hasSubEditors' => !empty($sectionEditorsListData['collection']['items']),
-			'subEditorsListData' => json_encode($this->_getSubEditorsListPanelData($journal->getId())),
+			'subEditorsListData' => json_encode($sectionEditorsListData),
 		));
 
 		return parent::fetch($request);
