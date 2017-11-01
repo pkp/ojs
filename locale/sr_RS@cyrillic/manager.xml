@@ -49,7 +49,8 @@
 	<message key="manager.website.archiving">Архивирање</message>
 	<message key="manager.setup">Подешавања часописа</message>
 	<message key="manager.setup.masthead">Управа</message>
-	<message key="manager.setup.masthead.description">Наведите уреднике, директоре секретаре и остале људе који су укључени у рад часописа.</message>
+	<message key="manager.setup.editorialTeam">Часопис уређују</message>
+	<message key="manager.setup.editorialTeam.description">Наведите уреднике, директоре секретаре и остале људе који су укључени у рад часописа.</message>
 	<message key="manager.setup.homepageContent">Садржај почетне стране часописа</message>
 	<message key="manager.setup.layout">Изглед часописа</message>
 	<message key="manager.setup.useStyleSheet">Style sheet часописа</message>

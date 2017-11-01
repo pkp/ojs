@@ -502,7 +502,8 @@
 	<message key="manager.website.archiving">Archivando</message>
 	<message key="manager.section.noSectionEditors"><![CDATA[Aún no hay editores/as de sección. Añada este rol al menos a un usuario vía Administración > Ajustes > Users &amp; Roles first.]]></message>
 	<message key="manager.setup.masthead">Cabecera</message>
-	<message key="manager.setup.masthead.description">Listar editores/as, directores/as de gestión y otras personas asociadas con la revista.</message>
+	<message key="manager.setup.editorialTeam">Equipo editorial</message>
+	<message key="manager.setup.editorialTeam.description">Listar editores/as, directores/as de gestión y otras personas asociadas con la revista.</message>
 	<message key="manager.setup.homepageContent">Contenido de la página de inicio de la revista</message>
 	<message key="manager.setup.homepageContentDescription">La página de inicio de la revista consta de los enlaces por defecto. Se le puede añadir contenido adicional mediante una o todas las opciones siguientes, que aparecerán en el orden mostrado.</message>
 	<message key="manager.setup.layout">Estilo de la revista</message>

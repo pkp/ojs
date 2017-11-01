@@ -48,7 +48,8 @@
 	<message key="manager.website.archiving">Arhiviranje</message>
 	<message key="manager.setup">Podešavanja časopisa</message>
 	<message key="manager.setup.masthead">Uprava</message>
-	<message key="manager.setup.masthead.description">Navedite urednike, direktore sekretare i ostale ljude koji su uključeni u rad časopisa.</message>
+	<message key="manager.setup.editorialTeam">Časopis uređuju</message>
+	<message key="manager.setup.editorialTeam.description">Navedite urednike, direktore sekretare i ostale ljude koji su uključeni u rad časopisa.</message>
 	<message key="manager.setup.homepageContent">Sadržaj početne strane časopisa</message>
 	<message key="manager.setup.layout">Izgled časopisa</message>
 	<message key="manager.setup.useStyleSheet">Style sheet časopisa</message>

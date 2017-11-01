@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../../../lib/pkp/dtd/xmlData.dtd">
+
+<!--
+  * 3.1.1_update.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * 3.1.1.0 general updates.
+  -->
+<data>
+	<sql><!-- pkp/pkp-lib#2441 rename masthead to editorialTeam in journal_settings -->
+		<query>UPDATE journal_settings SET setting_name = 'editorialTeam' WHERE setting_name = 'masthead'</query>
+	</sql>
+</data>
