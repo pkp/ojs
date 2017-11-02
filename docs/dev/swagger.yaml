@@ -731,6 +731,52 @@ paths:
           schema:
             $ref: '#/definitions/ErrorResponse'
 
+  '/submissions/{submissionId}/participants':
+    get:
+      tags:
+        - Submissions
+      summary: Get participants assigned to a submission.
+      parameters:
+        - name: submissionId
+          in: path
+          description: Submission ID
+          required: true
+          type: integer
+      responses:
+        '200':
+          description: Array of users.
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/UserSummary'
+        '404':
+          description: Requested submission could not be found.
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+
+  '/submissions/{submissionId}/participants/{stageId}':
+    get:
+      tags:
+        - Submissions
+      summary: Get participants assigned to a stage of this submission's workflow.
+      parameters:
+        - name: submissionId
+          in: path
+          description: Submission ID
+          required: true
+          type: integer
+      responses:
+        '200':
+          description: Array of users.
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/UserSummary'
+        '404':
+          description: Requested submission could not be found.
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+
   '/issues':
     get:
       tags:
@@ -862,6 +908,11 @@ paths:
           type: string
         - name: assignedToSubmission
           description: Filter results by those assigned to this submission ID.
+          in: query
+          required: false
+          type: integer
+        - name: assignedToSubmissionStage
+          description: Filter results by those assigned to this submission stage. Will be ignored if no `assignedToSubmission` parameter exists.
           in: query
           required: false
           type: integer

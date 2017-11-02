@@ -164,10 +164,8 @@ class UserHandler extends APIHandler {
 					$returnParams[$param] = array_map('intval', $val);
 					break;
 
+				case 'assignedToSubmissionStage':
 				case 'assignedToSubmission':
-					$returnParams[$param] = (int) $val;
-					break;
-
 				case 'assignedToSection':
 					$returnParams[$param] = (int) $val;
 					break;
