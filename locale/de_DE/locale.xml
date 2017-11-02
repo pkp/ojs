@@ -395,7 +395,6 @@ Autor/innen, die in dieser Zeitschrift publizieren möchten, stimmen den folgend
 	<li>Die Autor/innen können zusätzliche Verträge für die nicht-exklusive Verbreitung der in der Zeitschrift veröffentlichten Version ihrer Arbeit unter Nennung der Erstpublikation in dieser Zeitschrift eingehen (z.B. sie in Sammelpublikation oder einem Buch veröffentlichen).</li>
 	<li>Die Autor/innen werden dazu ermutigt, ihre Arbeit parallel zur Einreichung bei dieser Zeitschrift online zu veröffentlichen (z.B. auf den Homepages von Institutionen oder auf ihrer eigenen Homepage), weil so produktive Austauschprozesse wie auch eine frühe und erweiterte Bezugnahme auf das veröffentlichte Werk gefördert werden (siehe <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>).</li>
 </ol>]]></message>
-	<message key="manager.setup.citations.enable">Den Zitationsauszeichnungsassistenten aktivieren</message>
 
 	<!-- Setup Step 4 -->
 	<message key="manager.setup.basicEditorialStepsDescription"><![CDATA[Schritte: Liste der eingegangenen Beiträge &gt; Begutachtung der Beiträge &gt; Redaktion der Beiträge &gt; Inhaltsverzeichnis<br /><br />

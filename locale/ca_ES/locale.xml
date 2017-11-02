@@ -928,7 +928,6 @@
 	<message key="search.results.similarDocuments">documents similars</message>
 	<message key="plugins.categories.viewableFiles">Mòduls de galerada d'article</message>
 	<message key="plugins.categories.viewableFiles.description">Els mòduls de galerada d'article afegeixen suport per mostrar diferents tipus de document com a galerades d'article.</message>
-	<message key="manager.setup.citations.enable">Activa l'assistent de marques de cita</message>
 	<message key="submission.layout.galley.remotelyHostedContent">Aquesta galerada estarà disponible en un lloc web diferent.</message>
 	<message key="submission.layout.galley.remoteURL">URL de contingut allotjat remotament</message>
 	<message key="reviewer.article.selectRecommendation.byEditor">Configuri o ajusti la recomanació del revisor/a.</message>

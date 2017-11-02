@@ -1079,7 +1079,6 @@ Nastavení podpory CLOCKSS pro Open Journal System stačí provést teprve po do
 	<message key="about.onlineSubmissions.submissionActions">{$newSubmission} nebo {$viewSubmissions}.</message>
 	<message key="about.onlineSubmissions.newSubmission">Zaslat nový příspěvek</message>
 	<message key="about.onlineSubmissions.viewSubmissions">zobrazit vaše rozpracované příspěvky</message>
-	<message key="manager.setup.citations.enable">Povolit pomocník pro zpracování citací</message>
 	<message key="reviewer.article.selectRecommendation.byEditor">Nastavte nebo upravte doporučení recenzenta.</message>
 	<message key="article.pluginMissing"><![CDATA[<p>Vybraný soubor PDF by se měl načíst zde, pokud má váš webový prohlížeč nainstalovaný plugin pro čtení souborů PDF (například poslední verze <a href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a>). </p>]]></message>
 	<message key="user.authorization.noContext">Žádný časopis v kontextu!</message>
