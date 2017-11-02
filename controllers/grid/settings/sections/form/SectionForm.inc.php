@@ -66,6 +66,8 @@ class SectionForm extends PKPSectionForm {
 				'wordCount' => $section->getAbstractWordCount()
 			);
 		}
+
+		parent::initData($args, $request);
 	}
 
 	/**
@@ -114,6 +116,7 @@ class SectionForm extends PKPSectionForm {
 	 * Save section.
 	 * @param $args array
 	 * @param $request PKPRequest
+	 * @return mixed
 	 */
 	function execute($args, $request) {
 		$sectionDao = DAORegistry::getDAO('SectionDAO');
@@ -144,8 +147,6 @@ class SectionForm extends PKPSectionForm {
 		$section->setPolicy($this->getData('policy'), null); // Localized
 		$section->setAbstractWordCount($this->getData('wordCount'));
 
-		HookRegistry::call('sectionform::execute', array($this, $section));
-
 		// Insert or update the section in the DB
 		if ($this->getSectionId()) {
 			$sectionDao->updateObject($section);
@@ -165,7 +166,7 @@ class SectionForm extends PKPSectionForm {
 			array($this, 'updateSubEditorEntry')
 		);
 
-		return true;
+		return parent::execute($section, $request);
 	}
 }
 

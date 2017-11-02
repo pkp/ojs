@@ -128,6 +128,16 @@
 	}
 }
 
+// List of articles
+.cmp_article_list {
+	&:extend(.pkp_unstyled_list);
+
+	> li {
+		.pkp_helpers_clear();
+		margin-bottom: @triple;
+	}
+}
+
 // Forms
 // These don't yet follow the component pattern on the frontend, but should
 // eventually once the login/registration templates are incorporated into the

@@ -102,7 +102,7 @@
 					{$section.title|escape}
 				</h2>
 			{/if}
-			<ul class="articles">
+			<ul class="cmp_article_list articles">
 				{foreach from=$section.articles item=article}
 					<li>
 						{include file="frontend/objects/article_summary.tpl"}
