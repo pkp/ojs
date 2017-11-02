@@ -116,6 +116,7 @@ class SectionForm extends PKPSectionForm {
 	 * Save section.
 	 * @param $args array
 	 * @param $request PKPRequest
+	 * @return mixed
 	 */
 	function execute($args, $request) {
 		$sectionDao = DAORegistry::getDAO('SectionDAO');
