@@ -393,7 +393,6 @@ Penulis yang mempublikasikan naskahnya di jurnal ini menyetujui hal-hal berikut:
 	<li>Penulis bisa mengikuti kontrak tambahan lain untuk distribusi non-ekslusif bagi karyanya tersebut (contoh: mempostingnya ke repositori institusi atau menerbitkannya dalam sebuah buku), dengan penghargaan terhadap penerbitan pertama di jurnal ini.</li>
 	<li>Penulis diizinkan dan didorong untuk mem-posting karya mereka online (contoh: di repositori institusi atau di website mereka) sebelum dan selama proses penyerahan, karena dapat mengarahkan ke pertukaran produktif, seperti halnya sitiran yang lebih awal dan lebih banyak dari karya yang diterbitkan. (Lihat <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>).</li>
 </ol>]]></message>
-	<message key="manager.setup.citations.enable">Aktifkan Citation Markup Assistant</message>
 
 	<!-- Setup Step 4 -->
 	<message key="manager.setup.basicEditorialStepsDescription"><![CDATA[Langkah: Antrian Penyerahan Naskah &gt; Review Naskah &gt; Pengeditan Naskah &gt; Daftar Isi.<br /><br />

@@ -880,7 +880,6 @@ Autori koji objavljuju u ovom časopisu pristaju na sledeće uslove:
 	<message key="search.results.similarDocuments">slični dokumenti</message>
 	<message key="plugins.categories.viewableFiles">Dodatak za probne kopije članka</message>
 	<message key="plugins.categories.viewableFiles.description">Dodatak za probne kopije članka daje podršku za prikaz raznih tipova dokumenata kao probnih kopija.</message>
-	<message key="manager.setup.citations.enable">Uključi pomoćnik označavanja citata</message>
 	<message key="submission.layout.galley.remotelyHostedContent">Ovaj probni otisak će biti dostupan na posebnom sajtu.</message>
 	<message key="submission.layout.galley.remoteURL">URL za sadržaj na udaljenom serveru</message>
 	<message key="user.register.selectContext">Odaberite časopis u koji se želite registrovati:</message>

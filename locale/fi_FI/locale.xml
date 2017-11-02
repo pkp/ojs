@@ -390,7 +390,6 @@ Tässä julkaisussa julkaisevat kirjoittajat hyväksyvät seuraavat ehdot:
 	 <li>Kirjoittajat voivat tehdä erillisiä, muita sopimuksia työn tässä julkaisussa julkaistun versio levittämisestä ilman yksityisoikeutta (esim. lähettää sen julkaisuarkistoon tai julkaista sen kirjassa) vain, jos työn ensijulkaisu tässä julkaisussa mainitaan.</li>
 	 <li>Kirjoittajilla on lupa lähettää työnsä verkkoon (esim. julkaisuarkistoihin tai omille verkkosivuilleen) sekä ennen käsikirjoituksen lähetysprosessia että sen aikana. Kirjoittajia myös kannustetaan toimimaan näin, koska se voi johtaa hyödyllisiin kanssakäymisiin sekä siihen, että julkaistuun työhön viitataan jo aikaisemmassa vaiheessa ja enemmän. (Lisää <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">avoimen saatavuuden vaikutuksesta</a>).</li>
 </ol>]]></message>
-	<message key="manager.setup.citations.enable">Ota viittaustenhallintatyökalu käyttöön</message>
 
 	<!-- Setup Step 4 -->
 	<message key="manager.setup.basicEditorialStepsDescription"><![CDATA[Vaiheet: Käsikirjoitusjono &gt; Käsikirjoituksen arviointi &gt; Käsikirjoituksen toimittaminen&gt; Sisällysluettelo.<br /><br />
