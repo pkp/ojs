@@ -1399,7 +1399,7 @@ class Upgrade extends Installer {
 				$submissionFile->setGenreId($genre->getId());
 				$submissionFile->setUploaderUserId($creatorUserId);
 				$submissionFile->setUserGroupId($managerUserGroup->getId());
-				$submissionFile->setFileStage(SUBMISSION_FILE_SUBMISSION);
+				$submissionFile->setFileStage(SUBMISSION_FILE_PROOF);
 				$submissionFileDao->updateObject($submissionFile);
 			}
 
@@ -2550,6 +2550,49 @@ class Upgrade extends Installer {
 		}
 		return true;
 	}
+
+	/**
+	 * For 3.0.x - 3.1.1 upgrade: repair the migration of the supp files.
+	 * @return boolean True indicates success.
+	 */
+	function repairSuppFilesFilestage() {
+		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
+
+		import('lib.pkp.classes.file.SubmissionFileManager');
+
+		// get reviewer file ids
+		$result = $submissionFileDao->retrieve(
+			'SELECT ssf.*, s.context_id
+			FROM submission_supplementary_files ssf, submission_files sf, submissions s
+			WHERE sf.file_id = ssf.file_id AND sf.revision = ssf.revision AND s.submission_id = sf.submission_id'
+		);
+		while (!$result->EOF) {
+			$row = $result->GetRowAssoc(false);
+			$submissionFileRevision = $submissionFileDao->getRevision($row['file_id'], $row['revision']);
+			if ($submissionFileRevision->getFileStage() != SUBMISSION_FILE_PROOF) {
+				$submissionFileManager = new SubmissionFileManager($row['context_id'], $submissionFileRevision->getSubmissionId());
+				$basePath = $submissionFileManager->getBasePath() . '/';
+				$generatedOldFilename = $submissionFileRevision->getServerFileName();
+				$oldFileName = $basePath . $submissionFileRevision->_fileStageToPath($submissionFileRevision->getFileStage()) . '/' . $generatedOldFilename;
+				$submissionFileRevision->setFileStage(SUBMISSION_FILE_PROOF);
+				$generatedNewFilename = $submissionFileRevision->getServerFileName();
+				$newFileName = $basePath . $submissionFileRevision->_fileStageToPath($submissionFileRevision->getFileStage()) . '/' . $generatedNewFilename;
+				if (file_exists($newFileName)) continue; // Skip existing files/links
+				if (!file_exists($path = dirname($newFileName)) && !$submissionFileManager->mkdirtree($path)) {
+					error_log("Unable to make directory \"$path\"");
+				}
+				if (!rename($oldFileName, $newFileName)) {
+					error_log("Unable to move \"$oldFileName\" to \"$newFileName\".");
+				} else {
+					$submissionFileDao->updateObject($submissionFileRevision);
+				}
+			}
+			$result->MoveNext();
+		}
+		$result->Close();
+		return true;
+	}
+
 }
 
 ?>

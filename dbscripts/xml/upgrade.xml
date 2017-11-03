@@ -183,6 +183,10 @@
 		<data file="dbscripts/xml/upgrade/3.1.1_update.xml" />
 	</upgrade>
 
+	<upgrade minversion="3.0.0.0" maxversion="3.1.0.9">
+		<code function="repairSuppFilesFilestage" />
+	</upgrade>
+
 	<!-- update plugin configuration - should be done as the final upgrade task -->
 	<code function="addPluginVersions" />
 </install>
