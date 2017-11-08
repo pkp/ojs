@@ -13,15 +13,16 @@
 	<!--
 	  - Parameters received from PHP-land
 	  -->
-	<xsl:param name="datePublished"/>
-	<xsl:param name="datePublishedDay"/>
-	<xsl:param name="datePublishedMonth"/>
-	<xsl:param name="datePublishedYear"/>
-	<xsl:param name="title"/>
-	<xsl:param name="abstract"/>
-	<xsl:param name="copyrightHolder"/>
-	<xsl:param name="copyrightYear"/>
-	<xsl:param name="licenseUrl"/>
+	<xsl:param name="datePublished"/><!-- The publication date, formatted ISO8601 -->
+	<xsl:param name="datePublishedDay"/><!-- The day part of the publication date -->
+	<xsl:param name="datePublishedMonth"/><!-- The month part of the publication date -->
+	<xsl:param name="datePublishedYear"/><!-- The year part of the publication date -->
+	<xsl:param name="title"/><!-- The title (for the submission's primary locale) -->
+	<xsl:param name="abstract"/><!-- The abstract (for the submission's primary locale) in stripped-down HTML -->
+	<xsl:param name="copyrightHolder"/><!-- The copyright holder (for the submission's primary locale) -->
+	<xsl:param name="copyrightYear"/><!-- The copyright year -->
+	<xsl:param name="licenseUrl"/><!-- The license URL -->
+	<xsl:param name="isUnpublishedXml"/><!-- Whether or not this XML document is published (e.g. via Lens Reader); 1 or 0 -->
 
 	<!--
 	  - Identity transform

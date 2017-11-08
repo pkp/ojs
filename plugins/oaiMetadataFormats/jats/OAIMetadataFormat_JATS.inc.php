@@ -79,6 +79,7 @@ class OAIMetadataFormat_JATS extends OAIMetadataFormat {
 		$xslTransform->setParameter('', 'copyrightHolder', $article->getLocalizedCopyrightHolder($article->getLocale()));
 		$xslTransform->setParameter('', 'copyrightYear', $article->getCopyrightYear());
 		$xslTransform->setParameter('', 'licenseUrl', $article->getLicenseURL());
+		$xslTransform->setParameter('', 'isUnpublishedXml', $candidateFile->getFileStage()==SUBMISSION_FILE_PRODUCTION_READY?1:0);
 
 		static $purifier;
 		if (!$purifier) {
