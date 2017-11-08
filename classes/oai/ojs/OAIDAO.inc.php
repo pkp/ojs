@@ -213,6 +213,7 @@ class OAIDAO extends PKPOAIDAO {
 		$sectionId = array_shift($setIds);
 
 		$params = array();
+		$params[] = 'publishingMode';
 		if (isset($journalId)) $params[] = (int) $journalId;
 		if (isset($sectionId)) $params[] = (int) $sectionId;
 		if ($submissionId) $params[] = (int) $submissionId;
@@ -238,7 +239,8 @@ class OAIDAO extends PKPOAIDAO {
 				JOIN issues i ON (i.issue_id = pa.issue_id)
 				JOIN sections s ON (s.section_id = a.section_id)
 				JOIN journals j ON (j.journal_id = a.context_id)
-			WHERE	i.published = 1 AND j.enabled = 1 AND a.status <> ' . STATUS_DECLINED . '
+				JOIN journal_settings jsl ON (jsl.journal_id = j.journal_id AND jsl.setting_name=?)
+			WHERE	i.published = 1 AND j.enabled = 1 AND jsl.setting_value != 2 AND a.status <> ' . STATUS_DECLINED . '
 				' . (isset($journalId) ?' AND j.journal_id = ?':'') . '
 				' . (isset($sectionId) ?' AND s.section_id = ?':'') . '
 				' . ($from?' AND GREATEST(a.last_modified, i.last_modified) >= ' . $this->datetimeToDB($from):'') . '
@@ -264,7 +266,6 @@ class OAIDAO extends PKPOAIDAO {
 			ORDER BY ' . $orderBy,
 			$params
 		);
-
 		return $result;
 	}
 }
