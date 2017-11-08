@@ -26,7 +26,7 @@ class OAIMetadataFormat_JATS extends OAIMetadataFormat {
 	function toXml($record, $format = null) {
 		$article = $record->getData('article');
 		$galleys = $record->getData('galleys');
-
+		$issue = $record->getData('issue');
 
 		import('lib.pkp.classes.submission.SubmissionFile'); // SUBMISSION_FILE_... constants
 		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
@@ -53,15 +53,55 @@ class OAIMetadataFormat_JATS extends OAIMetadataFormat {
 
 		if (count($candidateFiles) > 1) error_log('WARNING: More than one JATS XML candidate documents were located for submission ' . $article->getId() . '.');
 
-		// Fetch the XML document and return it.
+		// Fetch the XML document
 		$candidateFile = array_shift($candidateFiles);
-
 		$doc = new DOMDocument;
 		$doc->loadXML(file_get_contents($candidateFile->getFilePath()));
-		$articleNode = $doc->getElementsByTagName('article')->item(0);
-		return $doc->saveXML($articleNode);
+
+		// Load the XSL transform (if needed)
+		static $xslDocument;
+		if (!isset($xslDocument)) {
+			$xslDocument = new DOMDocument();
+			$xslDocument->load(dirname(__FILE__) . '/transform.xsl');
+		}
+		$xslTransform = new XSLTProcessor();
+
+		// Set the transformation variables
+		$datePublished = $article->getDatePublished();
+		if (!$datePublished) $datePublished = $issue->getDatePublished();
+		if ($datePublished) $datePublished = strtotime($datePublished);
+		$xslTransform->setParameter('', 'datePublished', $datePublished?strftime('%Y-%m-%d', $datePublished):'');
+		$xslTransform->setParameter('', 'datePublishedDay', $datePublished?strftime('%d', $datePublished):'');
+		$xslTransform->setParameter('', 'datePublishedMonth', $datePublished?strftime('%m', $datePublished):'');
+		$xslTransform->setParameter('', 'datePublishedYear', $datePublished?strftime('%Y', $datePublished):'');
+		$xslTransform->setParameter('', 'title', $article->getTitle($article->getLocale()));
+		$xslTransform->setParameter('', 'doi', trim($article->getStoredPubId('doi')));
+		$xslTransform->setParameter('', 'copyrightHolder', $article->getLocalizedCopyrightHolder($article->getLocale()));
+		$xslTransform->setParameter('', 'copyrightYear', $article->getCopyrightYear());
+		$xslTransform->setParameter('', 'licenseUrl', $article->getLicenseURL());
+
+		static $purifier;
+		if (!$purifier) {
+			$config = HTMLPurifier_Config::createDefault();
+			$config->set('HTML.Allowed', 'p');
+			$config->set('Cache.SerializerPath', 'cache');
+			$purifier = new HTMLPurifier($config);
+		}
+		$xslTransform->setParameter('', 'abstract', $purifier->purify($article->getAbstract($article->getLocale())));
+
+		$xslTransform->importStyleSheet($xslDocument);
+
+		// Transform the article
+		$returner = $xslTransform->transformToDoc($doc);
+		if ($returner === false) return $this->_getNullXml();
+		$articleNode = $returner->getElementsByTagName('article')->item(0);
+		return $returner->saveXml($articleNode);
 	}
 
+	/**
+	 * Return the XML for a "null" article (i.e. the minimum required XML for when something better isn't available)
+	 * @return string
+	 */
 	protected function _getNullXml() {
 		return '<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" article-type="research-article" dtd-version="1.1d1" xml:lang="en"></article>';
 	}
