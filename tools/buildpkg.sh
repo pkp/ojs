@@ -54,7 +54,6 @@ plugins/importexport/sample								\
 plugins/importexport/duracloud								\
 plugins/reports/subscriptions								\
 plugins/blocks/relatedItems								\
-plugins/oaiMetadataFormats/jats								\
 tests											\
 lib/pkp/tests										\
 .git											\
