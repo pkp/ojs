@@ -25,7 +25,7 @@ tags:
   - name: "Submissions"
   - name: "Issues"
   - name: "Users"
-    description: Only admins, journal managers and editors can access this endpoint.
+    description: Only admins and journal managers can access this endpoint.
   - name: "Backend"
     description: "Private endpoints for OJS UI."
 definitions:
