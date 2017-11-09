@@ -30,4 +30,9 @@
 		<li>
 			<a name="catalog" href="{url router=$smarty.const.ROUTE_COMPONENT component="tab.issueEntry.IssueEntryTabHandler" tab="identifiers" op="identifiers" submissionId=$submissionId stageId=$stageId tabPos="1"}">{translate key="submission.identifiers"}</a>
 		</li>
+		{if $citationsEnabled}
+			<li>
+				<a name="citations" href="{url router=$smarty.const.ROUTE_COMPONENT component="tab.issueEntry.IssueEntryTabHandler" tab="citations" op="citations" submissionId=$submissionId stageId=$stageId tabPos="2"}">{translate key="submission.citations"}</a>
+			</li>
+		{/if}
 </ul>
