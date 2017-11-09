@@ -370,9 +370,6 @@
 	<message key="plugins.categories.auth.description">Wtyczka autoryzacji pozwala aby Open Journal System uwierzytelniał użytkowników za pomocą zewnętrznych systemów, takich jak LDAP.</message>
 
 
-	<message key="plugins.categories.citationFormats.description">Wtyczki formatu cytowań pozwalają użytkownikom pobierać opisy bibliograficzne artykułów w różnych formatach.</message>
-
-
 	<message key="plugins.categories.generic.description">Wtyczki ogólne są wykorzystywane do rozszerzania możliwości Open Journal Systems i nie są wspierane przez inne rodzaje wtyczek.</message>
 
 	<message key="plugins.categories.implicitAuth">Implicit Authentication Plugins</message>
@@ -416,7 +413,6 @@ Autorzy publikujący w czasopiśmie zgadzają się na następujące zasady:
 	<li>Autorzy mogą zawierać dodatkowe umowy niewyłączne na rozpowszechnianie opublikowanej wersji utworu (np. udostępnienie w instytucjonalnym repozytorium lub opublikowanie w książce), które zobowiązywać będą do podania tytułu czasopisma, jako miejsca pierwszej publikacji.</li>
 <li>Autorzy mogą udostępniać swoje utwory online (np. w instytucjonalnym repozytorium lub na stronie internetowej) przed oraz podczas procesu rozpatrywania zgłoszenia, co może zapewnić pierwszeństwo pracy, jak również zapewnić wcześniejsze cytowania pracy (zob. <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>).</li>
 </ol>]]></message>
-	<message key="manager.setup.citations">Włącz asystenta cytowań</message>
 
 	<!-- Setup Step 4 -->
 	<message key="manager.setup.referenceLinkingDescription"><![CDATA[<p>Dostępne są następujące narzędzia umożliwiające czytelnikom lokalizowanie wersji on-line cytowanej przez autora pracy:</p>
@@ -985,7 +981,6 @@ Sprawdzanie poprawności może nie działać w przypadku adresów URL, które wy
 	<message key="submission.event.submissionSubmitted">Artykuł przesłany</message>
 	<message key="plugins.categories.viewableFiles">Wtyczki widoku plików z artykułami</message>
 	<message key="plugins.categories.viewableFiles.description">Wtyczki widoku pliku z artykułami wspierają różne formaty plików w zakresie sposobów wyświetlania.</message>
-	<message key="manager.setup.citations.enable">Włącz asystenta cytowań</message>
 	<message key="user.reviewerPrompt">Czy byłbyś skłonny(a) recenzować teksty zgłaszane do tego czasopisma?</message>
 	<message key="user.reviewerPrompt.userGroup">Tak, wyślij prośbę o nadanie roli: {$userGroup}.</message>
 	<message key="user.register.contextsPrompt">Do których czasopism na tej stronie chciałbyś(abyś) się zarejestrować?</message>
