@@ -122,6 +122,29 @@ class ManageFileApiHandler extends PKPManageFileApiHandler {
 		}
 
 	}
+
+	/**
+	 * @copydoc PKPManageFileApiHandler::detachEntities
+	 */
+	function detachEntities($submissionFile, $submissionId, $stageId) {
+		parent::detachEntities($submissionFile, $submissionId, $stageId);
+
+		switch ($submissionFile->getFileStage()) {
+			case SUBMISSION_FILE_PROOF:
+				$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
+				assert($submissionFile->getAssocType() == ASSOC_TYPE_REPRESENTATION);
+				$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
+				$allRevisions = $submissionFileDao->getAllRevisionsByAssocId(ASSOC_TYPE_REPRESENTATION, $submissionFile->getAssocId());
+				$galley = $galleyDao->getById($submissionFile->getAssocId(), $submissionFile->getSubmissionId());
+				if ($galley) {
+					if (count($allRevisions) <= 1) {
+						$galley->setFileId(NULL);
+						$galleyDao->updateObject($galley);
+					}
+				}
+				break;
+		}
+	}
 }
 
 ?>
