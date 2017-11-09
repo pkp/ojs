@@ -151,6 +151,11 @@ class ArticleHandler extends Handler {
 			'copyrightYear' => $article->getCopyrightYear(),
 		));
 
+		// Citations
+		$citationDao = DAORegistry::getDAO('CitationDAO');
+		$parsedCitations = $citationDao->getObjectsByAssocId(ASSOC_TYPE_SUBMISSION, $article->getId());
+		$templateMgr->assign('parsedCitations', $parsedCitations);
+
 		// Keywords
 		$submissionKeywordDao = DAORegistry::getDAO('SubmissionKeywordDAO');
 		$templateMgr->assign('keywords', $submissionKeywordDao->getKeywords($article->getId(), array(AppLocale::getLocale())));
