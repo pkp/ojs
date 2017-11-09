@@ -158,8 +158,8 @@ class SubscriptionTypeForm extends Form {
 		$subscriptionType->setCurrencyCodeAlpha($this->getData('currency'));
 		$subscriptionType->setDuration(($duration=$this->getData('duration'))?(int) $duration:null);
 		$subscriptionType->setFormat($this->getData('format'));
-		$subscriptionType->setMembership((int) $this->getData('membership');
-		$subscriptionType->setDisablePublicDisplay((int) $this->getData('disable_public_display');
+		$subscriptionType->setMembership((int) $this->getData('membership'));
+		$subscriptionType->setDisablePublicDisplay((int) $this->getData('disable_public_display'));
 
 		// Update or insert subscription type
 		if ($subscriptionType->getId() != null) {
