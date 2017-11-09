@@ -354,7 +354,7 @@ class ArticleHandler extends Handler {
 							$this->issue = $issue;
 							$this->article = $publishedArticle;
 							return true;
-						} else {
+						} elseif ($paymentManager->purchaseArticleEnabled()) {
 							$queuedPayment = $paymentManager->createQueuedPayment($request, PAYMENT_TYPE_PURCHASE_ARTICLE, $user->getId(), $publishedArticle->getId(), $journal->getSetting('purchaseArticleFee'));
 							$paymentManager->queuePayment($queuedPayment);
 
