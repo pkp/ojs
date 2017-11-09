@@ -37,13 +37,19 @@ class OjsIssueRequiredPolicy extends DataObjectRequiredPolicy {
 	 */
 	function dataObjectEffect() {
 		$issueId = $this->getDataObjectId();
-		if (!$issueId) return AUTHORIZATION_DENY;
+		if (!$issueId) {
+			$this->setAuthorizationDenialErrorCode(AUTHORIZATION_ERROR_BAD_REQUEST);
+			return AUTHORIZATION_DENY;
+		}
 
 		// Make sure the issue belongs to the journal.
 		$issueDao = DAORegistry::getDAO('IssueDAO');
 		$issue = $issueDao->getByBestId($issueId,  $this->journal->getId());
 
-		if (!is_a($issue, 'Issue')) return AUTHORIZATION_DENY;
+		if (!is_a($issue, 'Issue')) {
+			$this->setAuthorizationDenialErrorCode(AUTHORIZATION_ERROR_FORBIDDEN);
+			return AUTHORIZATION_DENY;
+		}
 
 		// The issue must be published, or we must have pre-publication
 		// access to it.
@@ -57,6 +63,7 @@ class OjsIssueRequiredPolicy extends DataObjectRequiredPolicy {
 				ROLE_ID_ASSISTANT,
 			)
 		))==0) {
+			$this->setAuthorizationDenialErrorCode(AUTHORIZATION_ERROR_NOT_FOUND);
 			return AUTHORIZATION_DENY;
 		}
 

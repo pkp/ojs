@@ -34,7 +34,10 @@ class OjsJournalMustPublishPolicy extends AuthorizationPolicy {
 	// Implement template methods from AuthorizationPolicy
 	//
 	function effect() {
-		if (!$this->_context) return AUTHORIZATION_DENY;
+		if (!$this->_context) {
+			$this->setAuthorizationDenialErrorCode(AUTHORIZATION_ERROR_BAD_REQUEST);
+			return AUTHORIZATION_DENY;
+		}
 
 		// Certain roles are allowed to see unpublished content.
 		$userRoles = (array) $this->getAuthorizedContextObject(ASSOC_TYPE_USER_ROLES);
@@ -47,10 +50,12 @@ class OjsJournalMustPublishPolicy extends AuthorizationPolicy {
 				ROLE_ID_SUB_EDITOR
 			)
 		))>0) {
+			$this->setAuthorizationDenialErrorCode(AUTHORIZATION_ERROR_FORBIDDEN);
 			return AUTHORIZATION_PERMIT;
 		}
 
 		if ($this->_context->getSetting('publishingMode') == PUBLISHING_MODE_NONE) {
+			$this->setAuthorizationDenialErrorCode(AUTHORIZATION_ERROR_NOT_FOUND);
 			return AUTHORIZATION_DENY;
 		}
 
