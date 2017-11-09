@@ -32,7 +32,7 @@ class UserDAO extends PKPUserDAO {
 	 * if the was expired, renew to current date + 1 year
 	 * @param $user User
 	 */
-	function renewMembership(&$user){
+	function renewMembership($user){
 		$dateEnd = $user->getSetting('dateEndMembership', 0);
 		if (!$dateEnd) $dateEnd = 0;
 
