@@ -27,6 +27,16 @@ switch ($op) {
 	case 'moveSectionToc':
 	case 'moveArticleToc':
 	case 'editIssue':
+	case 'issueGalleys':
+	case 'uploadIssueGalley':
+	case 'editIssueGalley':
+	case 'saveIssueGalley':
+	case 'orderIssueGalley':
+	case 'deleteIssueGalley':
+	case 'proofIssueGalley':
+	case 'proofIssueGalleyTop':
+	case 'proofIssueGalleyFile':
+	case 'downloadIssueFile':
 	case 'removeCoverPage':
 	case 'removeStyleFile':
 		define('HANDLER_CLASS', 'IssueManagementHandler');
