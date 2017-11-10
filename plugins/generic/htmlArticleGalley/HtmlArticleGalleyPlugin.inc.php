@@ -92,7 +92,7 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 
 		if ($galley && $galley->getFileType() == 'text/html' && $galley->getFileId() == $fileId) {
 			if (!HookRegistry::call('HtmlArticleGalleyPlugin::articleDownload', array($article,  &$galley, &$fileId))) {
-				echo $this->_getHtmlContents($request, $galley);
+				echo $this->_getHTMLContents($request, $galley);
 				$returner = true;
 				HookRegistry::call('HtmlArticleGalleyPlugin::articleDownloadFinished', array(&$returner));
 			}
