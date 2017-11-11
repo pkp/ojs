@@ -464,9 +464,14 @@ Poderão ser usados estatísticas individuais de uso, por exemplo, para exibir u
 	<message key="manager.setup.categories">Categorias</message>
 	<message key="manager.setup.categories.description">Escolha a categoria mais apropria da lista apresentada. Leitores poderão navegar por categoria a partir do conjunto completo oferecido.</message>
 	<message key="manager.website.archiving">Arquivamento</message>
-	<message key="manager.section.noSectionEditors"><![CDATA[Ainda não existem editores de sessão. Designe este papel a ao menos um usuário por meio de Gerente > Cnfigurações > Usuários e Papéis.]]></message>
+	<message key="manager.section.noSectionEditors"><![CDATA[Ainda não existem editores de sessão. Designe este papel a ao menos um usuário por meio de Gerente > Configurações > Usuários e Papéis.]]></message>
+        <message key="manager.setup.editorialTeam">Equipe Editorial</message>
 	<message key="manager.setup.masthead">Equipe Editorial</message>
+<<<<<<< HEAD
 	<message key="manager.setup.editorialTeam">Equipe Editorial</message>
+=======
+	<message key="manager.setup.masthead.description">A Equipe Editorial contem uma lista de editores, diretores, gerentes e outros indivíduos associados à revista. As informações cadastradas aqui aparecerão na seção "Sobre" da revista.</message>
+>>>>>>> minor corrections for PT_BR
 	<message key="manager.setup.homepageContent">Página Inicial da Revista</message>
 	<message key="manager.setup.homepageContentDescription">A página inicial da revista consiste em links de navegação por padrão. Conteúdo adicional pode ser anexado usando uma ou todas as seguintes opções, que aparecerão na ordem mostrada.</message>
 	<message key="manager.setup.useStyleSheet">Folha de estilos da revista</message>
@@ -494,6 +499,14 @@ Poderão ser usados estatísticas individuais de uso, por exemplo, para exibir u
 	<message key="manager.setup.clockssTitle">CLOCKSS</message>
 	<message key="manager.statistics.reports.defaultReport.issuePageViews">Visualizações do sumário da edição</message>
 	<message key="manager.distribution.access">Acesso</message>
+        
+        
+	<!-- Navigation Menu Items -->
+        <message key="manager.navigationMenus">Menus de Navegação</message>
+	<message key="manager.navigationMenus.subscriptions.description">Link para uma página descrevendo os tipos de assinatura oferecidas.</message>
+	<message key="manager.navigationMenus.mySubscriptions.description">Link para uma página descrevendo ao visitante as assinaturas atuais e passadas.</message>
+	<message key="manager.navigationMenus.mySubscriptions.conditionalWarning">Este link será mostrado apenas quando o usuário estiver logado.</message>
+
 	<message key="manager.settings.journalDescription">Todas as configurações específicas para a revista (editorial, contato, políticas, diretrizes, filiação e apoio, categorias e séries).</message>
 	<message key="manager.settings.publicationDescription">Todas as configurações específicas para o processo de publicação (configurações gerais, fase de envio do manuscrito, avaliação, estágio editorial, estágio de produção, modelos de email).</message>
 	<message key="manager.settings.websiteDescription">Todas as configurações específicas para as páginas do site público (página inicial, a aparência, idiomas)</message>
