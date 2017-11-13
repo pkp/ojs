@@ -74,6 +74,7 @@ class JournalOAI extends OAI {
 	 */
 	function identifierToArticleId($identifier) {
 		$prefix = 'oai:' . $this->config->repositoryId . ':' . 'article/';
+		$identifier = urldecode($identifier);
 		if (strstr($identifier, $prefix)) {
 			return (int) str_replace($prefix, '', $identifier);
 		} else {
