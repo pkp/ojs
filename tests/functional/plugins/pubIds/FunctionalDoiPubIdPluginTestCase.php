@@ -899,7 +899,7 @@ class FunctionalDOIPubIdPluginTest extends WebTestCase {
 				}
 				foreach (array('DC-meta', 'Google-meta') as $doiMetaAttribute) {
 					if (isset($this->pages[$objectType][$doiMetaAttribute])) {
-						$doiMetaElement = String::regexp_replace(
+						$doiMetaElement = PKPString::regexp_replace(
 							'/@[^@]+$/', '',
 							$this->pages[$objectType][$doiMetaAttribute]
 						);
