@@ -220,4 +220,7 @@
 		<query>DELETE FROM scheduled_tasks WHERE class_name = 'classes.tasks.OpenAccessNotification'</query>
 		<query>DELETE FROM scheduled_tasks WHERE class_name = 'classes.tasks.SubscriptionExpiryReminder'</query>
 	</sql>
+	<sql><!-- remove filter_groups -->
+		<query>DELETE FROM filter_groups WHERE symbolic IN ('citation=>nlm30', 'isbn=>nlm30-element-citation', 'nlm30-article-xml=>nlm23-article-xml', 'nlm30-element-citation=>isbn', 'nlm30-element-citation=>nlm30-element-citation', 'nlm30-element-citation=>nlm30-xml', 'nlm30-element-citation=>plaintext', 'nlm30=>citation', 'plaintext=>nlm30-element-citation', 'submission=>nlm23-article-xml', 'submission=>nlm30-article-xml', 'submission=>reference-list')</query>
+	</sql>
 </data>
