@@ -33,6 +33,33 @@ class SubmissionMetadataFormImplementation extends PKPSubmissionMetadataFormImpl
 		$section = $sectionDao->getById($submission->getSectionId());
 		return !$section->getAbstractsNotRequired();
 	}
+
+	/**
+	 *
+	 * @copydoc PKPSubmissionMetadataFormImplementation::addChecks()
+	 */
+	function addChecks($submission) {
+		parent::addChecks($submission);
+		$sectionDao = DAORegistry::getDAO('SectionDAO');
+		$section = $sectionDao->getById($submission->getSectionId());
+		$wordNo = $section->getAbstractWordCount();
+		if (isset($wordNo) && $wordNo > 0) {
+			$this->_parentForm->addCheck(new FormValidatorCustom($this->_parentForm, 'abstract', 'required', 'submission.submit.form.wordCountAlert', create_function('$abstract, $wordNo', 'foreach ($abstract as $localizedAbstract) {return count(explode(" ",trim(strip_tags($localizedAbstract)))) <= $wordNo; }'), array($wordNo)));
+		}
+
+	}
+
+	/**
+	 *
+	 * @copydoc Form::initData()
+	 */
+	function initData($submission) {
+		parent::initData($submission);
+		$sectionDao = DAORegistry::getDAO('SectionDAO');
+		$section = $sectionDao->getById($submission->getSectionId());
+		$wordNo = $section->getAbstractWordCount();
+		$this->_parentForm->setData('wordNo', $wordNo);
+	}
 }
 
 ?>
