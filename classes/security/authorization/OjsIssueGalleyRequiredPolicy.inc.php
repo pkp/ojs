@@ -33,13 +33,19 @@ class OjsIssueGalleyRequiredPolicy extends DataObjectRequiredPolicy {
 	 */
 	function dataObjectEffect() {
 		$issueGalleyId = (int)$this->getDataObjectId();
-		if (!$issueGalleyId) return AUTHORIZATION_DENY;
+		if (!$issueGalleyId) {
+			$this->setAuthorizationDenialErrorCode(AUTHORIZATION_ERROR_BAD_REQUEST);
+			return AUTHORIZATION_DENY;
+		}
 
 		// Make sure the issue galley belongs to the journal.
 		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
 		$issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO');
 		$issueGalley = $issueGalleyDao->getById($issueGalleyId, $issue->getId());
-		if (!is_a($issueGalley, 'IssueGalley')) return AUTHORIZATION_DENY;
+		if (!is_a($issueGalley, 'IssueGalley')) {
+			$this->setAuthorizationDenialErrorCode(AUTHORIZATION_ERROR_FORBIDDEN);
+			return AUTHORIZATION_DENY;
+		}
 
 		// Save the publication format to the authorization context.
 		$this->addAuthorizedContextObject(ASSOC_TYPE_ISSUE_GALLEY, $issueGalley);
