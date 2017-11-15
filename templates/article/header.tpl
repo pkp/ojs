@@ -71,7 +71,7 @@
 
 	{$additionalHeadData}
 </head>
-<body id="pkp-{$pageTitle|replace:'.':'-'}">
+<body id="pkp-{$pageTitle|replace:'.':'-'}" class="pkp_page_{$requestedPage|escape|default:"index"} pkp_op_{$requestedOp|escape|default:"index"}">
 
 <div id="container">
 
