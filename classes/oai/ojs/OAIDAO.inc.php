@@ -224,7 +224,7 @@ class OAIDAO extends PKPOAIDAO {
 		}
 		if ($submissionId) $params[] = (int) $submissionId;
 		$result = $this->retrieve(
-			'SELECT	LEAST(a.last_modified, i.last_modified) AS last_modified,
+			'SELECT	GREATEST(a.last_modified, i.last_modified) AS last_modified,
 				a.submission_id AS submission_id,
 				j.journal_id AS journal_id,
 				s.section_id AS section_id,
