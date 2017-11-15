@@ -22,7 +22,7 @@
 	<message key="submission.submit.newSubmissionMultiple">Start a New Submission in</message>
 	<message key="submission.submit.newSubmissionSingle">New Submission</message>
 	<message key="grid.action.workflow">Submission Workflow</message>
-	<message key="submission.abstract.wordNo.description">The abstract can contain maximal {$wordNo} words.</message>
+	<message key="submission.abstract.wordCount.description">The abstract must be {$wordCount} words or less.</message>
 
 	<message key="submission.issueEntry">Metadata</message>
 	<message key="submission.submit.whatNext.description">The journal has been notified of your submission, and you've been emailed a confirmation for your records.  Once the editor has reviewed the submission, they will contact you.</message>
