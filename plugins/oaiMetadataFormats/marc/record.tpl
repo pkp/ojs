@@ -54,9 +54,9 @@
 	<varfield id="260" i1=" " i2=" ">
 		<subfield label="b">{$publisher|escape}</subfield>
 	</varfield>
-	<dataField id="260" i1=" " i2=" ">
+	<varfield id="260" i1=" " i2=" ">
 		<subfield label="c">{$issue->getDatePublished()}</subfield>
-	</dataField>
+	</varfield>
 
 	{assign var=identifyType value=$section->getIdentifyType($journal->getPrimaryLocale())}
 	{if $identifyType}<varfield id="655" i1=" " i2="7">
