@@ -60,6 +60,15 @@ class SubmissionMetadataFormImplementation extends PKPSubmissionMetadataFormImpl
 		$wordCount = $section->getAbstractWordCount();
 		$this->_parentForm->setData('wordCount', $wordCount);
 	}
+
+	/**
+	 * @copydoc Form::readInputData()
+	 */
+	function readInputData() {
+		parent::readInputData();
+		$this->_parentForm->readUserVars(array('wordCount'));
+	}
+
 }
 
 ?>
