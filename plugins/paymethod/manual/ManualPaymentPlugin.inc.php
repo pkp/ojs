@@ -44,6 +44,9 @@ class ManualPaymentPlugin extends PaymethodPlugin {
 	function register($category, $path) {
 		if (parent::register($category, $path)) {
 			$this->addLocaleData();
+			if ($this->getEnabled()) {
+				$this->_registerTemplateResource();
+			}
 			return true;
 		}
 		return false;
@@ -75,7 +78,7 @@ class ManualPaymentPlugin extends PaymethodPlugin {
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON);
 
 		import('lib.pkp.classes.form.Form');
-		$paymentForm = new Form($this->getTemplatePath() . 'paymentForm.tpl');
+		$paymentForm = new Form($this->getTemplateResourceName() . ':templates/paymentForm.tpl');
 		$paymentManager = Application::getPaymentManager($context);
 		$paymentForm->setData(array(
 			'itemName' => $paymentManager->getPaymentName($queuedPayment),
