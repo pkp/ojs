@@ -159,6 +159,7 @@
 		<code function="repairKeywordsAndSubjects" />
 		<code function="enabledSitePlugins" />
 		<code function="moveCSSFiles" />
+		<code function="repairSuppFilesFilestage" />
 	</upgrade>
 
 	<upgrade minversion="2.4.0.0" maxversion="3.0.9.9">
