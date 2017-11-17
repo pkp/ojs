@@ -43,6 +43,13 @@
 				{/iterate}
 			</table>
 		</div>
+		{if $isUserLoggedIn}
+			<div class="subscriptions_individual_purchase">
+				<a class="action" href="{url page="user" op="purchaseSubscription" path="individual"}">
+					{translate key="user.subscriptions.purchaseNewSubscription"}
+				</a>
+			</div>
+		{/if}
 	{/if}
 
 	{if !$institutionalSubscriptionTypes->wasEmpty()}
@@ -71,6 +78,13 @@
 				</tr>
 			{/iterate}
 		</table>
+		{if $isUserLoggedIn}
+			<div class="subscriptions_institutional_purchase">
+				<a class="action" href="{url page="user" op="purchaseSubscription" path="institutional"}">
+					{translate key="user.subscriptions.purchaseNewSubscription"}
+				</a>
+			</div>
+		{/if}
 	{/if}
 </div>
 
