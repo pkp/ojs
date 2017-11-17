@@ -24,6 +24,18 @@ define('O4DOI_ARTICLE_AS_MANIFESTATION', 0x04);
 class MedraExportPlugin extends DOIPubIdExportPlugin {
 
 	/**
+	 * @copydoc Plugin::register()
+	 */
+	public function register($category, $path) {
+		$success = parent::register($category, $path);
+		if (!Config::getVar('general', 'installed') || defined('RUNNING_UPGRADE')) return $success;
+		if ($success && $this->getEnabled()) {
+			$this->_registerTemplateResource();
+		}
+		return $success;
+	}
+
+	/**
 	 * @see Plugin::getName()
 	 */
 	function getName() {
@@ -42,6 +54,13 @@ class MedraExportPlugin extends DOIPubIdExportPlugin {
 	 */
 	function getDescription() {
 		return __('plugins.importexport.medra.description');
+	}
+
+	/**
+	 * @copydoc Plugin::getTemplatePath()
+	 */
+	function getTemplatePath($inCore = false) {
+		return $this->getTemplateResourceName() . ':templates/';
 	}
 
 	/**

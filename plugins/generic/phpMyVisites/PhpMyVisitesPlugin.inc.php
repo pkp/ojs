@@ -43,6 +43,8 @@ class PhpMyVisitesPlugin extends GenericPlugin {
 
 			// Insert phpmv page tag to help footer
 			HookRegistry::register('Templates::Help::Footer::PageFooter', array($this, 'insertFooter'));
+
+			$this->_registerTemplateResource();
 		}
 		return $success;
 	}
@@ -53,6 +55,13 @@ class PhpMyVisitesPlugin extends GenericPlugin {
 
 	function getDescription() {
 		return __('plugins.generic.phpmv.description');
+	}
+
+	/**
+	 * @copydoc Plugin::getTemplatePath()
+	 */
+	function getTemplatePath($inCore = false) {
+		return $this->getTemplateResourceName() . ':';
 	}
 
 	/**

@@ -37,6 +37,7 @@ class WebFeedPlugin extends GenericPlugin {
 			if ($this->getEnabled()) {
 				HookRegistry::register('TemplateManager::display',array($this, 'callbackAddLinks'));
 				HookRegistry::register('PluginRegistry::loadCategory', array($this, 'callbackLoadCategory'));
+				$this->_registerTemplateResource();
 			}
 			return true;
 		}
@@ -56,7 +57,7 @@ class WebFeedPlugin extends GenericPlugin {
 	 * @copydoc PKPPlugin::getTemplatePath
 	 */
 	function getTemplatePath($inCore = false) {
-		return parent::getTemplatePath($inCore) . 'templates/';
+		return $this->getTemplateResourceName() . ':templates/';
 	}
 
 	/**

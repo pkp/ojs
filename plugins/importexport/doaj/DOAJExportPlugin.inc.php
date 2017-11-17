@@ -26,6 +26,18 @@ define('DOAJ_API_OPERATION', 'articles');
 class DOAJExportPlugin extends PubObjectsExportPlugin {
 
 	/**
+	 * @copydoc Plugin::register()
+	 */
+	public function register($category, $path) {
+		$success = parent::register($category, $path);
+		if (!Config::getVar('general', 'installed') || defined('RUNNING_UPGRADE')) return $success;
+		if ($success && $this->getEnabled()) {
+			$this->_registerTemplateResource();
+		}
+		return $success;
+	}
+
+	/**
 	 * @copydoc Plugin::getName()
 	 */
 	function getName() {
@@ -44,6 +56,13 @@ class DOAJExportPlugin extends PubObjectsExportPlugin {
 	 */
 	function getDescription() {
 		return __('plugins.importexport.doaj.description');
+	}
+
+	/**
+	 * @copydoc Plugin::getTemplatePath()
+	 */
+	function getTemplatePath($inCore = false) {
+		return $this->getTemplateResourceName() . ':templates/';
 	}
 
 	/**

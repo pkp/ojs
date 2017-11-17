@@ -21,6 +21,7 @@ class AnnouncementFeedPlugin extends GenericPlugin {
 			if ($this->getEnabled()) {
 				HookRegistry::register('TemplateManager::display',array($this, 'callbackAddLinks'));
 				HookRegistry::register('PluginRegistry::loadCategory', array($this, 'callbackLoadCategory'));
+				$this->_registerTemplateResource();
 			}
 			return true;
 		}
@@ -41,6 +42,13 @@ class AnnouncementFeedPlugin extends GenericPlugin {
 	 */
 	function getDescription() {
 		return __('plugins.generic.announcementfeed.description');
+	}
+
+	/**
+	 * @copydoc Plugin::getTemplatePath()
+	 */
+	function getTemplatePath($inCore = false) {
+		return $this->getTemplateResourceName() . ':templates/';
 	}
 
 	/**
