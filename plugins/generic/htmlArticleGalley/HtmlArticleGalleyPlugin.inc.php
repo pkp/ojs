@@ -55,6 +55,13 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 	}
 
 	/**
+	 * @copydoc Plugin::getTemplatePath()
+	 */
+	function getTemplatePath($inCore = false) {
+		return $this->getTemplateResourceName() . ':templates/';
+	}
+
+	/**
 	 * Present the article wrapper page.
 	 * @param string $hookName
 	 * @param array $args
@@ -72,7 +79,7 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 				'article' => $article,
 				'galley' => $galley,
 			));
-			$templateMgr->display($this->getTemplateResourceName() . ':display.tpl');
+			$templateMgr->display($this->getTemplatePath() . 'display.tpl');
 
 			return true;
 		}
