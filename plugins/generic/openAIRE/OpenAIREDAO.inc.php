@@ -4,8 +4,10 @@
  * @file plugins/generic/openAIRE/OpenAIREDAO.inc.php
  *
  * Copyright (c) 2013-2017 Simon Fraser University
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * 
+ * Contributed by 4Science (http://www.4science.it).
  *
  * @class OpenAIREDAO
  * @ingroup plugins_generic_openAIRE
@@ -56,7 +58,7 @@ class OpenAIREDAO extends OAIDAO {
 		$total = $result->RecordCount();
 
 		$result->Move($offset);
-		for ($count = 0; $count < $limit && !$result->EOF; $count++) {
+		for ($count = 0; !$result->EOF; $count++) {
 			$row =& $result->GetRowAssoc(false);
 			if ($this->isOpenAIRERecord($row)) {
 				$records[] =& $this->$funcName($row);
@@ -66,6 +68,8 @@ class OpenAIREDAO extends OAIDAO {
 
 		$result->Close();
 		unset($result);
+
+		$records = array_slice($records, $offset, $limit);
 
 		return $records;
 	}
@@ -113,5 +117,3 @@ class OpenAIREDAO extends OAIDAO {
 
 
 }
-
-?>

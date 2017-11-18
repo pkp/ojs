@@ -5,8 +5,10 @@
   * plugins/generic/openAIRE/locale/it_IT/locale.xml
   *
   * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Contributed by 4Science (http://www.4science.it).
   *
   * OpenAIRE plugin localization strings for the it_IT locale.
   -->
@@ -14,8 +16,20 @@
 <locale name="it_IT" full_name="Italiano">
 	<message key="plugins.generic.openAIRE.displayName">OpenAIRE</message>
 	<message key="plugins.generic.openAIRE.description">Il plugin OpenAIRE aggiunge l'elemento projectID ai metadati degli articoli ed estende l'interfaccia OAI-PMH in accordo con le OpenAIRE Guidelines 1.1, permettendo alla rivista OJS di divenire compatibile con le specifiche OpenAIRE</message>
-	<message key="plugins.generic.openAIRE.projectID">ProjectID</message>
+	<message key="plugins.generic.openAIRE.projectID">ID progetto</message>
+	<message key="plugins.generic.openAIRE.projectTitle">Titolo progetto</message>
+	<message key="plugins.generic.openAIRE.projectFunder">Funder</message>
+	<message key="plugins.generic.openAIRE.projectFundingProgram">Funding Program</message>
 	<message key="plugins.generic.openAIRE.metadata">Metadati specifici per OpenAIRE</message>
 	<message key="plugins.generic.openAIRE.projectID.description">(Il projectID è uguale al numero del Grant Agreement)</message>
 	<message key="plugins.generic.openAIRE.projectIDValid">Inserisci un projectID valido</message>
+	<message key="plugins.generic.openAIRE.search">Cerca progetto</message>
+	<message key="plugins.generic.openAIRE.clear">Cancella campi</message>
+	<message key="plugins.generic.openAIRE.searchBy">Cerca per</message>
+	<message key="plugins.generic.openAIRE.searchByGrant">Grant Id</message>
+	<message key="plugins.generic.openAIRE.searchByTitle">Titolo</message>
+	<message key="plugins.generic.openAIRE.searchPageTitle">Cerca le informazioni tra i metadata di openAIRE</message>
+	<message key="plugins.generic.openAIRE.submitAction">Conferma</message>
+	<message key="plugins.generic.openAIRE.searchResultsList">Scegli e seleziona il risultato appropriato dalla seguente lista:</message>
+	<message key="plugins.generic.openAIRE.noResults">Nessun risultato trovato</message>
 </locale>

@@ -5,16 +5,18 @@
   * plugins/generic/openAIRE/version.xml
   *
   * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Contributed by 4Science (http://www.4science.it).
   *
   * Plugin version information.
   -->
 <version>
 	<application>openAIRE</application>
 	<type>plugins.generic</type>
-	<release>1.1.0.0</release>
-	<date>2011-09-13</date>
+	<release>1.2.0.0</release>
+	<date>2017-04-04</date>
 	<lazy-load>1</lazy-load>
 	<class>OpenAIREPlugin</class>
 </version>
