@@ -156,8 +156,6 @@ class PaymentsHandler extends Handler {
 
 		import('classes.subscription.form.PaymentTypesForm');
 
-		$templateMgr = TemplateManager::getManager($request);
-
 		$paymentTypesForm = new PaymentTypesForm();
 		if ($paymentTypesForm->isLocaleResubmit()) {
 			$paymentTypesForm->readInputData();
