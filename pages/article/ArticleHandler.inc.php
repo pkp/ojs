@@ -153,7 +153,7 @@ class ArticleHandler extends Handler {
 
 		// Citations
 		$citationDao = DAORegistry::getDAO('CitationDAO');
-		$parsedCitations = $citationDao->getObjectsByAssocId(ASSOC_TYPE_SUBMISSION, $article->getId());
+		$parsedCitations = $citationDao->getBySubmissionId($article->getId());
 		$templateMgr->assign('parsedCitations', $parsedCitations);
 
 		// Keywords

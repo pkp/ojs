@@ -206,7 +206,7 @@ class ArticleDAO extends SubmissionDAO {
 
 		// Delete article citations.
 		$citationDao = DAORegistry::getDAO('CitationDAO');
-		$citationDao->deleteObjectsByAssocId(ASSOC_TYPE_ARTICLE, $submissionId);
+		$citationDao->deleteBySubmissionId($submissionId);
 
 		import('classes.search.ArticleSearchIndex');
 		$articleSearchIndex = new ArticleSearchIndex();
