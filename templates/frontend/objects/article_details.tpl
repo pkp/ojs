@@ -190,13 +190,19 @@
 			{/if}
 
 			{* References *}
-			{if $article->getCitations()}
+			{if $parsedCitations->getCount() || $article->getCitations()}
 				<div class="item references">
 					<h3 class="label">
 						{translate key="submission.citations"}
 					</h3>
 					<div class="value">
-						{$article->getCitations()|nl2br}
+						{if $parsedCitations->getCount()}
+							{iterate from=parsedCitations item=parsedCitation}
+								<p>{$parsedCitation->getCitationWithLinks()|strip_unsafe_html}</p>
+							{/iterate}
+						{elseif $article->getCitations()}
+							{$article->getCitations()|nl2br}
+						{/if}
 					</div>
 				</div>
 			{/if}
