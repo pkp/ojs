@@ -866,7 +866,7 @@ URL des Beitrags: {$submissionUrl}<br />
 	<email_text key="NOTIFICATION_CENTER_DEFAULT">
 		<subject>Eine Nachricht bezüglich {$contextName}</subject>
 		<body>Bitte geben Sie Ihre Nachricht ein.</body>
-		<description>Die Standard-Nachricht (leer), die vom Notification Center Message Listbuilder genutzt wird.</description>
+		<description>Die (leere) Standardnachricht, die in der Nachrichtenliste des Benachrichtigungscenters angezeigt wird.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_INITIAL_DECLINE">
 		<subject>Entscheidung der Redaktion</subject>
@@ -874,7 +874,7 @@ URL des Beitrags: {$submissionUrl}<br />
 <br />
 Wir sind zu einer Entscheidung hinsichtlich Ihrer Einreichung für {$contextName}, &quot;{$submissionTitle}&quot; gekommen.<br />
 <br />
-Wir haben entschieden, dass Ihre Einreichung abgelehnt wird.<br />
+Wir haben entschieden, Ihre Einreichung abzulehnen.<br />
 <br />
 {$editorialContactSignature}<br />]]></body>
 		<description></description>
@@ -885,7 +885,7 @@ Wir haben entschieden, dass Ihre Einreichung abgelehnt wird.<br />
 <br />
 Wir sind zu einer Entscheidung hinsichtlich Ihrer Einreichung für {$contextName}, &quot;{$submissionTitle}&quot; gekommen.<br />
 <br />
-Wir haben entschieden, ein externes Gutachten anzufordern.<br />
+Wir haben entschieden, ein Gutachten anzufordern.<br />
 <br />
 URL des Beitrags: {$submissionUrl}<br />
 <br />
@@ -896,7 +896,7 @@ URL des Beitrags: {$submissionUrl}<br />
 		<subject>Entscheidung der Redaktion</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-Das Lektorat Ihrer Einreichung &quot;{$submissionTitle}&quot; ist beendet. Wir leiten den Beitrag jetzt an das Produktionssystem weiter.<br />
+Das Lektorat Ihrer Einreichung &quot;{$submissionTitle}&quot; ist beendet. Wir leiten den Beitrag jetzt zur Herstellung weiter.<br />
 <br />
 URL des Beitrags: {$submissionUrl}<br />
 <br />
@@ -915,11 +915,11 @@ Die Empfehlung hinsichtlich der Einreichung für {$contextName}, &quot;{$submiss
 	<email_text key="REVIEW_REQUEST_REMIND_AUTO">
 		<subject>Bitte um Begutachtung eines Artikels</subject>
 		<body><![CDATA[{$reviewerName}:<br />
-dies ist eine höfliche Erinnerung an unsere Bitte an Sie, den Artikel &quot;{$submissionTitle},&quot; für {$contextName} zu begutachten. Wir hatten auf Ihre Antwort bis zum {$responseDueDate} gehofft. Diese E-Mail wurde automatisch erzeugt und mit Verstreichen dieses Datums verschickt.
+dies ist eine freundliche Erinnerung an unsere Bitte an Sie, den Artikel &quot;{$submissionTitle},&quot; für {$contextName} zu begutachten. Wir hatten auf Ihre Antwort bis zum {$responseDueDate} gehofft. Diese E-Mail wurde automatisch erzeugt und mit Verstreichen dieses Datums verschickt.
 <br />
-Wir glauben, dass Sie ein ausgezeichneter Gutachter für dieses Manuskript wären. Ein Abstract des Beitrags ist angefügt, und wir hoffen, dass Sie diese wichtige Aufgabe für uns übernehmen können.<br />
+Wir glauben, dass Sie ausgezeichnet geeignet für die Begutachtung dieses Manuskript wären. Ein Abstract des Beitrags ist angefügt, und wir hoffen, dass Sie diese wichtige Aufgabe für uns übernehmen können.<br />
 <br />
-Bitte melden Sie sich bei der Webseite des Journals an, um uns wissen zu lassen, ob Sie die Begutachtung übernehmen werden oder nicht. Über die Webseite können Sie auch auf den Beitrag zugreifen und Ihr Gutachten sowie Ihre Empfehlung hinzufügen. Die Webseite erreichen Sie hier: {$contextUrl}<br />
+Bitte melden Sie sich bei der Webseite der Zeitschrift an, um uns mitzuteilen, ob Sie die Begutachtung übernehmen werden. Über die Webseite können Sie auch auf den Beitrag zugreifen und Ihr Gutachten sowie Ihre Empfehlung hinzufügen. Die Webseite erreichen Sie hier: {$contextUrl}<br />
 <br />
 Wir benötigen das Gutachten bis zum {$reviewDueDate}.<br />
 <br />
@@ -941,9 +941,9 @@ Vielen Dank, dass Sie unsere Bitte berücksichtigen.<br />
 		<body><![CDATA[{$reviewerName}:<br />
 dies ist eine höfliche Erinnerung an unsere Bitte an Sie, den Artikel &quot;{$submissionTitle},&quot; für {$contextName} zu begutachten. Wir hatten auf Ihre Antwort bis zum {$responseDueDate} gehofft. Diese E-Mail wurde automatisch erzeugt und mit Verstreichen dieses Datums verschickt.
 <br />
-Wir glauben, dass Sie ein ausgezeichneter Gutachter für dieses Manuskript wären. Ein Abstract des Beitrags ist angefügt, und wir hoffen, dass Sie diese wichtige Aufgabe für uns übernehmen können.<br />
+Wir glauben, dass Sie dass Sie ausgezeichnet geeignet für die Begutachtung dieses Manuskript wären. Ein Abstract des Beitrags ist angefügt, und wir hoffen, dass Sie diese wichtige Aufgabe für uns übernehmen können.<br />
 <br />
-Bitte melden Sie sich bei der Webseite des Journals an, um uns wissen zu lassen, ob Sie die Begutachtung übernehmen werden oder nicht. Über die Webseite können Sie auch auf den Beitrag zugreifen und Ihr Gutachten sowie Ihre Empfehlung hinzufügen.<br />
+Bitte melden Sie sich bei der Webseite der Zeitschrift an, um uns mitzuteilen, ob Sie die Begutachtung übernehmen werden. Über die Webseite können Sie auch auf den Beitrag zugreifen und Ihr Gutachten sowie Ihre Empfehlung hinzufügen.<br />
 <br />
 Wir benötigen das Gutachten bis zum {$reviewDueDate}.<br />
 <br />
