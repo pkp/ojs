@@ -57,8 +57,8 @@
 		{fbvFormSection label="manager.setup.journalSummary" for="summary" description="manager.setup.journalSummary.description"}
 			{fbvElement type="textarea" multilingual=true name="description" id="description" value=$description rich=true}
 		{/fbvFormSection}
-		{fbvFormSection label="manager.setup.editorialTeam" for="editorialTeam" description="manager.setup.editorialTeam.description"}
-			{fbvElement type="textarea" multilingual=true name="editorialTeam" id="editorialTeam" value=$editorialTeam rich=true}
+		{fbvFormSection label="manager.masthead.title" for="masthead" description="manager.setup.masthead.description"}
+			{fbvElement type="textarea" multilingual=true name="masthead" id="masthead" value=$masthead rich=true}
 		{/fbvFormSection}
 		{fbvFormSection label="manager.setup.journalAbout" for="about" description="manager.setup.journalAbout.description"}
 			{fbvElement type="textarea" multilingual=true name="about" id="about" value=$about rich="extended" rows=30}
