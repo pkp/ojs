@@ -54,4 +54,5 @@ Die folgenden Formate sind zulässig:
 	<message key="plugins.importexport.native.import.error.issueIdentificationDuplicate">Die existierende Ausgabe mit der ID {$issueId} passt zur angegebenen Kennung "{$issueIdentification}". Diese Ausgabe wird nicht verändert, aber Artikel werden hinzugefügt werden.</message>
 	<message key="plugins.importexport.native.import.error.issueIdentificationMissing">Das Element zur Ausgabenidentifizierung fehlt für den Artikel "{$articleTitle}".</message>
 	<message key="plugins.importexport.native.import.error.publishedDateMissing">Der Artikel "{$articleTitle}" ist in einer Ausgabe enthalten, aber hat kein Veröffentlichungsdatum.</message>
+	<message key="plugins.importexport.native.exportSubmissionsSelect">Wählen Sie Artikel aus, die exportiert werden sollen</message>
 </locale>
