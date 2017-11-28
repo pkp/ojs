@@ -34,7 +34,7 @@ class AuthorDAO extends PKPAuthorDAO {
 		$publishedArticles = array();
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 		$params = array(
-			'affiliation',
+			'affiliation','firstName',AppLocale::getLocale(),'lastName',AppLocale::getLocale(),'middleName',AppLocale::getLocale(),
 			$firstName, $middleName, $lastName,
 			$affiliation, $country
 		);
@@ -45,12 +45,15 @@ class AuthorDAO extends PKPAuthorDAO {
 				aa.submission_id
 			FROM	authors aa
 				LEFT JOIN submissions a ON (aa.submission_id = a.submission_id)
-				LEFT JOIN author_settings asl ON (asl.author_id = aa.author_id AND asl.setting_name = ?)
-			WHERE	aa.first_name = ?
+				LEFT JOIN author_settings asa ON (asa.author_id = aa.author_id AND asa.setting_name = ?)
+				LEFT JOIN author_settings asf ON (asf.author_id = aa.author_id AND asf.setting_name = ? AND asf.locale = ?)
+				LEFT JOIN author_settings asl ON (asl.author_id = aa.author_id AND asl.setting_name = ? AND asl.locale = ?)
+				LEFT JOIN author_settings asm ON (asm.author_id = aa.author_id AND asm.setting_name = ? AND asm.locale = ?)
+			WHERE	asf.setting_value = ?
 				AND a.status = ' . STATUS_PUBLISHED . '
-				AND (aa.middle_name = ?' . (empty($middleName)?' OR aa.middle_name IS NULL':'') . ')
-				AND aa.last_name = ?
-				AND (asl.setting_value = ?' . (empty($affiliation)?' OR asl.setting_value IS NULL':'') . ')
+				AND (asm.setting_value = ?' . (empty($middleName)?' OR asm.setting_value IS NULL':'') . ')
+				AND asl.setting_value = ?
+				AND (asa.setting_value = ?' . (empty($affiliation)?' OR asa.setting_value IS NULL':'') . ')
 				AND (aa.country = ?' . (empty($country)?' OR aa.country IS NULL':'') . ') ' .
 				($journalId!==null?(' AND a.context_id = ?'):''),
 			$params
@@ -84,13 +87,16 @@ class AuthorDAO extends PKPAuthorDAO {
 	function getAuthorsAlphabetizedByJournal($journalId = null, $initial = null, $rangeInfo = null, $includeEmail = false) {
 		$params = array(
 			'affiliation', AppLocale::getPrimaryLocale(),
-			'affiliation', AppLocale::getLocale()
+			'affiliation', AppLocale::getLocale(),
+			'firstName',AppLocale::getLocale(),
+			'lastName',AppLocale::getLocale(),
+			'middleName',AppLocale::getLocale()
 		);
 
 		if (isset($journalId)) $params[] = $journalId;
 		if (isset($initial)) {
 			$params[] = PKPString::strtolower($initial) . '%';
-			$initialSql = ' AND LOWER(aa.last_name) LIKE LOWER(?)';
+			$initialSql = ' AND LOWER(asl.setting_value) LIKE LOWER(?)';
 		} else {
 			$initialSql = '';
 		}
@@ -103,25 +109,28 @@ class AuthorDAO extends PKPAuthorDAO {
 				' . ($includeEmail?'aa.email AS email,':'CAST(\'\' AS CHAR) AS email,') . '
 				0 AS primary_contact,
 				0 AS seq,
-				aa.first_name,
-				aa.middle_name,
-				aa.last_name,
-				SUBSTRING(asl.setting_value FROM 1 FOR 255) AS affiliation_l,
-				asl.locale,
+				asf.setting_value,
+				asm.setting_value,
+				asl.setting_value,
+				SUBSTRING(asa.setting_value FROM 1 FOR 255) AS affiliation_l,
+				asa.locale,
 				SUBSTRING(aspl.setting_value FROM 1 FOR 255) AS affiliation_pl,
 				aspl.locale AS primary_locale,
 				aa.country
 			FROM	authors aa
 				LEFT JOIN author_settings aspl ON (aa.author_id = aspl.author_id AND aspl.setting_name = ? AND aspl.locale = ?)
-				LEFT JOIN author_settings asl ON (aa.author_id = asl.author_id AND asl.setting_name = ? AND asl.locale = ?)
+				LEFT JOIN author_settings asa ON (aa.author_id = asa.author_id AND asa.setting_name = ? AND asa.locale = ?)
+				LEFT JOIN author_settings asf ON (asf.author_id = aa.author_id AND asf.setting_name = ? AND asf.locale = ?)
+				LEFT JOIN author_settings asl ON (asl.author_id = aa.author_id AND asl.setting_name = ? AND asl.locale = ?)
+				LEFT JOIN author_settings asm ON (asm.author_id = aa.author_id AND asm.setting_name = ? AND asm.locale = ?)
 				JOIN submissions a ON (a.submission_id = aa.submission_id AND a.status = ' . STATUS_PUBLISHED . ')
 				JOIN journals j ON (a.context_id = j.journal_id)
 				JOIN published_submissions pa ON (pa.submission_id = a.submission_id)
 				JOIN issues i ON (pa.issue_id = i.issue_id AND i.published = 1)
 			WHERE ' . (isset($journalId)?'j.journal_id = ?':'j.enabled = 1') . '
-				AND (aa.last_name IS NOT NULL AND aa.last_name <> \'\')' .
+				AND (asl.setting_value IS NOT NULL AND asl.setting_value <> \'\')' .
 				$initialSql . '
-			ORDER BY aa.last_name, aa.first_name',
+			ORDER BY asl.setting_value, asf.setting_value',
 			$params,
 			$rangeInfo
 		);
