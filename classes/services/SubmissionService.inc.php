@@ -24,12 +24,57 @@ class SubmissionService extends \PKP\Services\PKPSubmissionService {
 	public function __construct() {
 		parent::__construct();
 
+		\HookRegistry::register('Submission::isPublic', array($this, 'modifyIsPublic'));
 		\HookRegistry::register('API::submissions::params', array($this, 'modifyAPISubmissionsParams'));
 		\HookRegistry::register('Submission::getSubmissions::queryBuilder', array($this, 'modifySubmissionListQueryBuilder'));
 		\HookRegistry::register('Submission::getSubmissions::queryObject', array($this, 'modifySubmissionListQueryObject'));
 		\HookRegistry::register('Submission::getProperties::summaryProperties', array($this, 'modifyProperties'));
 		\HookRegistry::register('Submission::getProperties::fullProperties', array($this, 'modifyProperties'));
 		\HookRegistry::register('Submission::getProperties::values', array($this, 'modifyPropertyValues'));
+	}
+
+	/**
+	 * Modify the isPublic check on a submission, based on whether it is scheduled
+	 * for publication in an issue and that issue is published.
+	 *
+	 * @param $hookName string
+	 * @param $args array [
+	 *		@option boolean Is it public?
+	 *		@option Submission
+ 	 * ]
+	 */
+	public function modifyIsPublic($hookName, $args) {
+		$isPublic =& $args[0];
+		$submission = $args[1];
+
+		if (is_a($submission, 'PublishedArticle')) {
+			$publishedArticle = $submission;
+		} else {
+			$publishedArticleDao = \DAORegistry::getDAO('PublishedArticleDAO');
+			$publishedArticle = $publishedArticleDao->getPublishedArticleByBestArticleId(
+				$submission->getContextId(),
+				$submission->getId(),
+				true
+			);
+		}
+
+		if (empty($publishedArticle)) {
+			return;
+		}
+
+		$issueId = $publishedArticle->getIssueId();
+		$issueDao = \DAORegistry::getDAO('IssueDAO');
+		$issue = $issueDao->getById(
+			$publishedArticle->getIssueId(),
+			$publishedArticle->getJournalId(),
+			true
+		);
+
+		if (!$issue || !$issue->getPublished()) {
+			return;
+		}
+
+		$isPublic = true;
 	}
 
 	/**
