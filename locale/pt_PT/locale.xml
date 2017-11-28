@@ -1008,7 +1008,6 @@ Pode-se opcionalmente informar o motivo pelo qual está sendo desactivado o regi
 	<message key="manager.setup.clockssDescription"><![CDATA[Open Journal Systems also supports the <a href="http://clockss.org/" target="_blank">CLOCKSS</a> (Controlled Lots of Copies Keep Stuff Safe) system to ensure a secure and permanent archive for the journal. CLOCKSS is based upon the open source LOCKSS software developed at Stanford University Library that enables libraries to preserve selected web journals by regularly polling registered journal websites for newly published content and archiving it. Each archive is continually validated against other library caches, and if content is found to be corrupted or lost, the other caches or the journal is used to restore it.
 <br /><br />
 Setting up CLOCKSS support for Open Journal Systems does not need to take place until after publishing is fully underway.]]></message>
-	<message key="manager.setup.citations.enable">Activar o assistente de marcação de citações</message>
 	<message key="editor.submissionEditing.notes"><![CDATA[<ol>
 	<li>Highlighted items indicate action is required by an editor, labelled as follows:
 		<ul>

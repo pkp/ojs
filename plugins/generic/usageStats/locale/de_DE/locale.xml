@@ -26,4 +26,5 @@
 		<li>Browser</li>
 		</ul>
 		<p>Die gesammelten Informationen werden nur verwendet, um die Nutzung der Inhalte statistisch auszuwerten. Es findet keine Zuordnung von IP-Adressen zu Benutzer-IDs statt. Es ist technisch unmöglich, nachträglich einen spezifischen Datensatz zu einer spezifischen IP-Adresse nachzuverfolgen.</p>]]></message> 
+	<message key="plugins.generic.usageStats.settings.statsDisplayOptions.siteWide">Diese Einstellungen lassen sich für jede Zeitschrift bei deren Einstellungen für Plugins verändern.</message>
 </locale>

@@ -364,7 +364,7 @@ Falls Sie Fragen haben, können Sie sich gerne an mich wenden.<br />
 	</email_text>
 	<email_text key="REVIEW_CONFIRM">
 		<subject>Einwilligung in die Begutachtung</subject>
-		<body><![CDATA[{$editorialContactName},<br />
+		<body><![CDATA[Sehr geehrte Redaktion,<br />
 <br />
 ich bin in der Lage und auch gern bereit, den Beitrag &quot;{$submissionTitle}&quot; für {$contextName} zu begutachten. Vielen Dank für Ihr Vertrauen; ich werde das Gutachten spätestens bis zum {$reviewDueDate} einreichen, wenn möglich auch früher.<br />
 <br />
@@ -373,7 +373,7 @@ ich bin in der Lage und auch gern bereit, den Beitrag &quot;{$submissionTitle}&q
 	</email_text>
 	<email_text key="REVIEW_DECLINE">
 		<subject>Ablehnung der Bitte um ein Gutachten</subject>
-		<body><![CDATA[{$editorialContactName},<br />
+		<body><![CDATA[Sehr geehrte Redaktion,<br />
 <br />
 leider kann ich gegenwärtig die Begutachtung des Beitrags &quot;{$submissionTitle}&quot; für {$contextName} nicht übernehmen. Ich danke für Ihr Vertrauen. Bei anderer Gelegenheit können Sie sich gerne wieder an mich wenden.<br />
 <br />
@@ -863,4 +863,99 @@ URL des Beitrags: {$submissionUrl}<br />
 {$editorialContactSignature}]]></body>
         <description>Diese E-Mail wird automatisch an die/den zuständige/n Redakteur/in geschickt, wenn ein/e Autor/in eine überarbeitete Fassung eines Artikels hochgeladen hat.</description>
     </email_text>
+	<email_text key="NOTIFICATION_CENTER_DEFAULT">
+		<subject>Eine Nachricht bezüglich {$contextName}</subject>
+		<body>Bitte geben Sie Ihre Nachricht ein.</body>
+		<description>Die (leere) Standardnachricht, die in der Nachrichtenliste des Benachrichtigungscenters angezeigt wird.</description>
+	</email_text>
+	<email_text key="EDITOR_DECISION_INITIAL_DECLINE">
+		<subject>Entscheidung der Redaktion</subject>
+		<body><![CDATA[{$authorName}:<br />
+<br />
+Wir sind zu einer Entscheidung hinsichtlich Ihrer Einreichung für {$contextName}, &quot;{$submissionTitle}&quot; gekommen.<br />
+<br />
+Wir haben entschieden, Ihre Einreichung abzulehnen.<br />
+<br />
+{$editorialContactSignature}<br />]]></body>
+		<description></description>
+	</email_text>
+	<email_text key="EDITOR_DECISION_SEND_TO_EXTERNAL">
+		<subject>Entscheidung der Redaktion</subject>
+		<body><![CDATA[{$authorName}:<br />
+<br />
+Wir sind zu einer Entscheidung hinsichtlich Ihrer Einreichung für {$contextName}, &quot;{$submissionTitle}&quot; gekommen.<br />
+<br />
+Wir haben entschieden, ein Gutachten anzufordern.<br />
+<br />
+URL des Beitrags: {$submissionUrl}<br />
+<br />
+{$editorialContactSignature}<br />]]></body>
+		<description>Diese E-Mail vom Redakteur oder Abschnitts-Redakteur benachrichtigt darüber, dass ein externes Gutachten angefordert wird.</description>
+	</email_text>
+	<email_text key="EDITOR_DECISION_SEND_TO_PRODUCTION">
+		<subject>Entscheidung der Redaktion</subject>
+		<body><![CDATA[{$authorName}:<br />
+<br />
+Das Lektorat Ihrer Einreichung &quot;{$submissionTitle}&quot; ist beendet. Wir leiten den Beitrag jetzt zur Herstellung weiter.<br />
+<br />
+URL des Beitrags: {$submissionUrl}<br />
+<br />
+{$editorialContactSignature}<br />]]></body>
+		<description></description>
+	</email_text>
+	<email_text key="EDITOR_RECOMMENDATION">
+		<subject>Entscheidung der Redaktion</subject>
+		<body><![CDATA[{$editors}:<br />
+<br />
+Die Empfehlung hinsichtlich der Einreichung für {$contextName}, &quot;{$submissionTitle}&quot; ist: {$recommendation}<br />
+<br />
+{$editorialContactSignature}<br />]]></body>
+		<description></description>
+	</email_text>
+	<email_text key="REVIEW_REQUEST_REMIND_AUTO">
+		<subject>Bitte um Begutachtung eines Artikels</subject>
+		<body><![CDATA[{$reviewerName}:<br />
+dies ist eine freundliche Erinnerung an unsere Bitte an Sie, den Artikel &quot;{$submissionTitle},&quot; für {$contextName} zu begutachten. Wir hatten auf Ihre Antwort bis zum {$responseDueDate} gehofft. Diese E-Mail wurde automatisch erzeugt und mit Verstreichen dieses Datums verschickt.
+<br />
+Wir glauben, dass Sie ausgezeichnet geeignet für die Begutachtung dieses Manuskript wären. Ein Abstract des Beitrags ist angefügt, und wir hoffen, dass Sie diese wichtige Aufgabe für uns übernehmen können.<br />
+<br />
+Bitte melden Sie sich bei der Webseite der Zeitschrift an, um uns mitzuteilen, ob Sie die Begutachtung übernehmen werden. Über die Webseite können Sie auch auf den Beitrag zugreifen und Ihr Gutachten sowie Ihre Empfehlung hinzufügen. Die Webseite erreichen Sie hier: {$contextUrl}<br />
+<br />
+Wir benötigen das Gutachten bis zum {$reviewDueDate}.<br />
+<br />
+Wenn Sie Ihre Benutzerkennung und Ihr Passwort für die Webseite des Journals nicht haben, können Sie den folgenden Link nutzen, um Ihr Passwort zurückzusetzen (es wird Ihnen dann zusammen mit Ihrer Benutzerkennung per Mail zugeschickt): {$passwordResetUrl}<br />
+<br />
+URL des Beitrags: {$submissionReviewUrl}<br />
+<br />
+Vielen Dank, dass Sie unsere Bitte berücksichtigen.<br />
+<br />
+{$editorialContactSignature}<br />
+<br />
+&quot;{$submissionTitle}&quot;<br />
+<br />
+{$submissionAbstract}]]></body>
+		<description></description>
+	</email_text>
+	<email_text key="REVIEW_REQUEST_REMIND_AUTO_ONECLICK">
+		<subject>Bitte um Begutachtung eines Artikels</subject>
+		<body><![CDATA[{$reviewerName}:<br />
+dies ist eine höfliche Erinnerung an unsere Bitte an Sie, den Artikel &quot;{$submissionTitle},&quot; für {$contextName} zu begutachten. Wir hatten auf Ihre Antwort bis zum {$responseDueDate} gehofft. Diese E-Mail wurde automatisch erzeugt und mit Verstreichen dieses Datums verschickt.
+<br />
+Wir glauben, dass Sie dass Sie ausgezeichnet geeignet für die Begutachtung dieses Manuskript wären. Ein Abstract des Beitrags ist angefügt, und wir hoffen, dass Sie diese wichtige Aufgabe für uns übernehmen können.<br />
+<br />
+Bitte melden Sie sich bei der Webseite der Zeitschrift an, um uns mitzuteilen, ob Sie die Begutachtung übernehmen werden. Über die Webseite können Sie auch auf den Beitrag zugreifen und Ihr Gutachten sowie Ihre Empfehlung hinzufügen.<br />
+<br />
+Wir benötigen das Gutachten bis zum {$reviewDueDate}.<br />
+<br />
+URL des Beitrags: {$submissionReviewUrl}<br />
+<br />
+Vielen Dank, dass Sie unsere Bitte berücksichtigen.<br />
+<br />
+{$editorialContactSignature}<br />
+<br />
+&quot;{$submissionTitle}&quot;<br />
+<br />
+{$submissionAbstract}]]></body>
+		<description></description>
+	</email_text>
 </email_texts>

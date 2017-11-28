@@ -12,6 +12,6 @@
   -->
  
 <locale name="sv_SE" full_name="Svenska">
-	<message key="plugins.block.languageToggle.displayName">Språkväljar-block</message>
-	<message key="plugins.block.languageToggle.description">Det här tillägget lägger till ett språkväljar-block i sidomenyn</message>
+	<message key="plugins.block.languageToggle.displayName">Språkväljarblock</message>
+	<message key="plugins.block.languageToggle.description">Det här tillägget lägger till ett språkväljarblock i sidomenyn</message>
 </locale>

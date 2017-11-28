@@ -511,7 +511,8 @@
 	<message key="manager.website.archiving">Archivace</message>
 	<message key="manager.section.noSectionEditors"><![CDATA[Zatím nejsou žádní sekční editoři. Přidejte nejprve tuto roli minimálně jednomu uživateli pomocí Správa > Nastavení > Uživatelé a role.]]></message>
 	<message key="manager.setup.masthead">Hlavní titulek</message>
-	<message key="manager.setup.masthead.description">Seznam editorů, vedoucích pracovníků a dalších osob spojených s tímto časopisem.</message>
+	<message key="manager.setup.editorialTeam">Editorský tým</message>
+	<message key="manager.setup.editorialTeam.description">Seznam editorů, vedoucích pracovníků a dalších osob spojených s tímto časopisem.</message>
 	<message key="manager.setup.homepageContent">Obsah domovské stránky časopisu</message>
 	<message key="manager.setup.homepageContentDescription">Domovská stránka časopisu ve výchozím nastavení obsahuje navigační odkazy. Další obsah domovské stránky lze přidat pomocí jedné nebo více následujících možností, které se zobrazí v uvedeném pořadí.</message>
 	<message key="manager.setup.layout">Vzhled časopisu</message>

@@ -998,7 +998,6 @@ Konfigurationen af CLOCKSS-understøttelse for Open Journal Systems behøver ikk
 	<message key="search.results.similarDocuments">tilsvarende dokumenter</message>
 	<message key="plugins.categories.viewableFiles">'Article Galley Plugins'</message>
 	<message key="plugins.categories.viewableFiles.description">'Article Galley Plugins' understøtter fremvisningen af forskellige dokumenttyper som publiceringsversion af artiklen.</message>
-	<message key="manager.setup.citations.enable">Aktivér citationsmarkeringsværktøjet</message>
 	<message key="reviewer.article.selectRecommendation.byEditor">Indsæt eller tilret bedømmer-indstillingen.</message>
 	<message key="user.register.selectContext">Vælg et tidsskrift at lade dig registrere ved:</message>
 	<message key="article.pageTitle">Bedømmelse af {$title}</message>

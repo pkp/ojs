@@ -18,8 +18,8 @@
 	<message key="author.submit.submitArticle">Skicka in en artikel</message>
 	<message key="author.submit.stepsToSubmit">Fem steg för att skicka in bidrag</message>
 	<message key="author.submit.startHereTitle">Skicka in ett nytt bidrag</message>
-	<message key="author.submit.startHereLink"><![CDATA[<a href="{$submitUrl}" class="action">Klicka här</a> för att gå till steg ett av fem för inskickande av bidrag.]]></message>
-	<message key="author.submit.step1">Steg 1. Påbörja inskickandet</message>
+	<message key="author.submit.startHereLink"><![CDATA[<a href="{$submitUrl}" class="action">Klicka här</a> för att gå till steg ett av fem för insändning av bidrag.]]></message>
+	<message key="author.submit.step1">Steg 1. Påbörja insändningen</message>
 	<message key="author.submit.step2">Steg 2. Ladda upp bidraget</message>
 	<message key="author.submit.step3">Steg 3. Fyll i bidragets metadata</message>
 	<message key="author.submit.step4">Steg 4. Uppladdning av kompletterande filer</message>
@@ -48,7 +48,7 @@
 	<message key="author.submissions.noSubmissions">Inga bidrag.</message>
 	<message key="author.submit.journalSection">Tidskriftssektion</message>
 	<message key="author.submit.journalSectionDescription">Artiklar måste skickas in till en av tidskriftens sektioner.</message>
-	<message key="author.submit.verifyChecklist">Alla moment i checklistan för inskickande av bidrag måste vara genomförda innan du kan fortsätta.</message>
+	<message key="author.submit.verifyChecklist">Alla moment i checklistan för insändning av bidrag måste vara genomförda innan du kan fortsätta.</message>
 	<message key="author.submit.copyrightNoticeAgree">Författarna samtycker till upphovsrättsvillkoren som kommer att gälla för bidraget om och när det publiceras av tidskriften. (Kommentarer till redaktören kan lämnas nedan).</message>
 	<message key="author.submit.copyrightNoticeAgreeRequired">Godkännande av upphovsrättsvillkoren krävs innan du kan fortsätta.</message>
 	<message key="submission.submit.coverNote">Kommentarer till redaktören</message>

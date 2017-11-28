@@ -51,7 +51,7 @@
 	<message key="manager.payment.options.feeName">Название платежа</message>
 	<message key="manager.payment.options.membershipFee">Ассоциированное членство</message>
 	<message key="manager.payment.options.onlypdf">Ограничить доступ только PDF-версиями выпусков и статей</message>
-	<message key="manager.payment.options.publicationFee">Платеж за публикацию статьи</message>
+	<message key="manager.payment.options.publicationFee">Платеж за обработку статьи</message>
 	<message key="manager.payment.options.purchaseArticleFee">Купить статью</message>
 	<message key="manager.payment.options.purchaseIssueFee">Купить выпуск</message>
 	<message key="manager.payment.options.text">Описание метода платежа</message>

@@ -958,7 +958,6 @@
 	<message key="manager.setup.clockssDescription"><![CDATA[Open Journal Systems también soporta el sistema <a href="http://clockss.org/" target="_blank">CLOCKSS</a> (Controlled Lots of Copies Keep Stuff Safe) para garantizar un archivo permanente y seguro para la revista. CLOCKSS se basa en el software de código abierto LOCKSS desarrollado en la Stanford University Library, que permite a las bibliotecas conservar las revistas web escogidas mediante la comprobación regular de los sitios web de las revistas registradas en busca de contenido publicado recientemente y archivándolo. Cada archivo se valida constantemente contra otras memorias caché de bibliotecas y, si se detecta que el contenido se ha corrompido o perdido, se usan las otras memorias caché o la revista para restaurarlo.
 <br /><br />
 La configuración del soporte CLOCKSS para Open Journal Systems no hace falta que se lleve a cabo hasta que la publicación esté totalmente en marcha.]]></message>
-	<message key="manager.setup.citations.enable">Activar el asistente de marcado de citas</message>
 	<message key="submission.layout.galley.remotelyHostedContent">Esta galerada se abrirá en una página web nueva.</message>
 	<message key="submission.layout.galley.remoteURL">URL del contenido alojado remotamente</message>
 	<message key="reviewer.article.selectRecommendation.byEditor">Configurar o ajustar la recomendación del revisor/a.</message>

@@ -693,7 +693,6 @@ Actuellement, votre serveur prend en charge mbstring: <strong>{$supportsMBString
 	<message key="reader.openAccess">Accès libre</message>
 	<message key="reader.subscriptionAccess">Accès sous abonnement</message>
 	<message key="reader.subscriptionOrFeeAccess">Accès sous abonnement ou avec frais</message>
-	<message key="plugins.categories.citationFormats.description">Les plugiciels de format de citation fournissent aux utilisateurs différents formats par lesquels ils peuvent accéder aux citations d'articles.</message>
 	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Le téléchargement des modules linguistiques à partir du serveur Web du Public Knowledge Project n'est pas disponible présentement car :</p>
 	<ul>
 		<li>Votre serveur n'a pas ou ne permet pas l'exécution de l'utilitaire "tar" de GNU</li>
@@ -1028,6 +1027,5 @@ La validation peut échouer sur les URL de recherche qui nécessitent des formul
 	<message key="manager.setup.clockssDescription"><![CDATA[Open Journal Systems prend également en charge le système <a href="http://clockss.org/" target="_blank"> CLOCKSS </a> (Controlled Lots of Copies Keep Stuff Safe) pour assurer un archivage sécurisé et permanent pour le journal. CLOCKSS est basé sur le logiciel open source LOCKSS, développé à la bibliothèque de l'Université de Stanford, qui permet aux bibliothèques de préserver des revues Web en sondant régulièrement les sites Web de revues enregistrées pour les contenus nouvellement publiés, pour ensuite les archiver. Chaque archive est continuellement validée par rapport à d'autres caches et si le contenu est corrompu ou perdu, les autres caches ou le journal sont utilisés pour la restaurer.
 <br /> <br />
 L'installation de CLOCKSS pour Open Journal Systems n'a pas besoin d'avoir lieu avant que la publication soit en cours.]]></message>
-	<message key="manager.setup.citations.enable">Activer l'Assistant au balisage de référence (Citation Markup Assistant)</message>
 	<message key="submission.layout.galley.remoteURL">URL du contenu hébergé à distance</message>
 </locale>
