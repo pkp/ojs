@@ -193,7 +193,7 @@
 	<message key="editor.issues.confirmUnpublish">Êtes-vous certain que vous souhaitez retirer ce numéro publié?</message>
 	<message key="editor.article.archiveSubmission">Rejeter et archiver la soumission</message>
 	<message key="editor.submissionReview.cannotSendToCopyediting">Avant d'envoyer une soumission en Révision, utiliser le lien Aviser l'auteur pour informer l'auteur de la décision et sélectionner la version à envoyer.</message>
-	<message key="editor.submissionReview.sendToCopyediting">Envoyer en Mise aux normes</message>
+	<message key="editor.submissionReview.sendToCopyediting">Envoyer en Copyediting</message>
 	<message key="editor.notifyUsers.allReaders">Tous les lecteurs ({$count} utilisateurs)</message>
 	<message key="editor.notifyUsers.allAuthors">Tous les auteurs publiés ({$count} utilisateurs)</message>
 	<message key="editor.notifyUsers.allIndividualSubscribers">Tous les abonnés individuels ({$count} utilisateurs)</message>
