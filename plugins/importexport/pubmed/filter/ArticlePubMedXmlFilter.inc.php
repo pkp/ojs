@@ -194,9 +194,9 @@ class ArticlePubMedXmlFilter extends PersistableFilter {
 	function generateAuthorNode($doc, $journal, $issue, $submission, $author, $authorIndex) {
 		$authorElement = $doc->createElement('Author');
 
-		$authorElement->appendChild($doc->createElement('FirstName', ucfirst($author->getFirstName())));
-		if ($author->getMiddleName() != '') $authorElement->appendChild($doc->createElement('MiddleName', ucfirst($author->getMiddleName())));
-		$authorElement->appendChild($doc->createElement('LastName', ucfirst($author->getLastName())));
+		$authorElement->appendChild($doc->createElement('FirstName', ucfirst($author->getLocalizedFirstName())));
+		if ($author->getMiddleName() != '') $authorElement->appendChild($doc->createElement('MiddleName', ucfirst($author->getLocalizedMiddleName())));
+		$authorElement->appendChild($doc->createElement('LastName', ucfirst($author->getLocalizedLastName())));
 
 		if ($authorIndex == 0) {
 			// See http://pkp.sfu.ca/bugzilla/show_bug.cgi?id=7774
