@@ -44,7 +44,7 @@ class SubmissionFilesUploadBaseForm extends PKPSubmissionFilesUploadBaseForm {
 	 */
 	function getSubmissionFiles() {
 		if (is_null($this->_submissionFiles)) {
-			$this->_submissionFiles =& parent::getSubmissionFiles();
+			parent::getSubmissionFiles();
 		}
 
 		return $this->_submissionFiles;

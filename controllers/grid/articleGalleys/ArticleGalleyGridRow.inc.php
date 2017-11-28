@@ -70,8 +70,7 @@ class ArticleGalleyGridRow extends GridRow {
 				$this->addAction(new AddFileLinkAction(
 					$request, $this->getSubmission()->getId(), WORKFLOW_STAGE_ID_PRODUCTION,
 					array(ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR, ROLE_ID_ASSISTANT),
-					null, SUBMISSION_FILE_PROOF,
-					ASSOC_TYPE_REPRESENTATION, $rowId,
+					SUBMISSION_FILE_PROOF, ASSOC_TYPE_REPRESENTATION, $rowId,
 					null, $galley->getFileId()
 				));
 			}
