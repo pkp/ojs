@@ -227,7 +227,7 @@ Je suis en mesure d'évaluer la soumission intitulée « {$submissionTitle} » p
 	</email_text>
 	<email_text key="REVIEW_DECLINE">
 		<subject>Refus d'évaluation</subject>
-		<body><![CDATA[Éditeurs:<br />
+		<body><![CDATA[Rédacteurs :<br />
 <br />
 Pour le moment, il m'est impossible d'évaluer la soumission intitulée « {$submissionTitle} » pour {$contextName}. Je vous remercie d'avoir pensé à moi. N'hésitez pas à communiquer avec moi pour un autre projet.<br />
 <br />
@@ -617,7 +617,7 @@ Nous avons pris une décision concernant votre soumission à {$contextName}, &qu
 Notre décision est de :<br />
 <br />
 {$editorialContactSignature}]]></body>
-		<description>Cet courriel de l'éditeur ou du chef de rubrique à un auteur les notifie d'une décision finale de «soumission acceptée» concernant leur soumission.</description>
+		<description>Cet courriel du rédacteur ou du chef de rubrique à un auteur les notifie d'une décision finale de «soumission acceptée» concernant leur soumission.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_REVISIONS">
 		<subject>Décision du rédacteur</subject>
@@ -628,7 +628,7 @@ Nous avons pris une décision concernant votre soumission à {$contextName}, &qu
 Notre décision est de :<br />
 <br />
 {$editorialContactSignature}]]></body>
-		<description>Cet courriel de l'éditeur ou du chef de rubrique à un auteur les notifie d'une décision finale de «révision requise» concernant leur soumission.</description>
+		<description>Cet courriel du rédacteur ou du chef de rubrique à un auteur les notifie d'une décision finale de «révision requise» concernant leur soumission.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_RESUBMIT">
 		<subject>Décision du rédacteur</subject>
@@ -639,7 +639,7 @@ Nous avons pris une décision concernant votre soumission à {$contextName}, &qu
 Notre décision est de :<br />
 <br />
 {$editorialContactSignature}]]></body>
-		<description>Cet courriel de l'éditeur ou du chef de rubrique à un auteur les notifie d'une décision finale de «soumission à redéposer» concernant leur soumission.</description>
+		<description>Cet courriel du rédacteur ou du chef de rubrique à un auteur les notifie d'une décision finale de «soumission à redéposer» concernant leur soumission.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_DECLINE">
 		<subject>Décision du rédacteur</subject>
@@ -650,7 +650,7 @@ Nous avons pris une décision concernant votre soumission à {$contextName}, &qu
 Notre décision est de :<br />
 <br />
 {$editorialContactSignature}]]></body>
-		<description>Cet courriel de l'éditeur ou du chef de rubrique à un auteur les notifie d'une décision finale de «soumission refusée» concernant leur soumission.</description>
+		<description>Cet courriel du rédacteur ou du chef de rubrique à un auteur les notifie d'une décision finale de «soumission refusée» concernant leur soumission.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_PURCHASE_INDL">
 		<subject>Souscription à un abonnement: Individuel</subject>
@@ -764,7 +764,7 @@ Notre décision est de : Envoyé pour l'évaluation<br />
 Submission URL: {$submissionUrl}<br />
 <br />
 {$editorialContactSignature}<br />]]></body>
-		<description>Cet courriel de l'éditeur ou du chef de rubrique à un auteur les notifie que leur soumission a été envoyé à une source externe pour son évaluation.</description>
+		<description>Cet courriel du rédacteur ou du chef de rubrique à un auteur les notifie que leur soumission a été envoyé à une source externe pour son évaluation.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_SEND_TO_PRODUCTION">
 		<subject>Décision du rédacteur</subject>
@@ -797,7 +797,7 @@ Merci de considérer cette requête.<br />
 &quot;{$submissionTitle}&quot;<br />
 <br />
 {$submissionAbstract}]]></body>
-		<description><![CDATA[Ce courriel de l'éditeur de section à un réviseur demande que l'examinateur accepte ou refuse la tâche d'examiner une soumission pour une deuxième ou une plus grande série d'examen. Il fournit des informations sur la soumission, comme le titre et l'abrégé, la date d'échéance de l'examen et la façon d'accéder à la soumission elle-même. Ce message est utilisé lorsque le processus de révision standard est sélectionné dans Administration> Paramètres> Flux des travaux> Révision et que l'accès d'un relecteur est activé.]]></description>
+		<description><![CDATA[Ce courriel du rédacteur de section à un réviseur demande que l'examinateur accepte ou refuse la tâche d'examiner une soumission pour une deuxième ou une plus grande série d'examen. Il fournit des informations sur la soumission, comme le titre et l'abrégé, la date d'échéance de l'examen et la façon d'accéder à la soumission elle-même. Ce message est utilisé lorsque le processus de révision standard est sélectionné dans Administration> Paramètres> Flux des travaux> Révision et que l'accès d'un relecteur est activé.]]></description>
 	</email_text>
 	<email_text key="REVISED_VERSION_NOTIFY">
 		<subject>Version révisée téléversée</subject>
@@ -881,7 +881,7 @@ Merci de considérer cette requête.<br />
 &quot;{$submissionTitle}&quot;<br />
 <br />
 {$submissionAbstract}]]></body>
-		<description><![CDATA[Ce courriel de l'éditeur de section à un réviseur demande que le rapporteur accepte ou refuse la tâche d'examiner une soumission pour une deuxième fois ou plus. Il fournit des informations sur la soumission, comme le titre et le résumé, la date d'échéance de l'examen et la façon d'accéder à la soumission elle-même. Ce message est utilisé lorsque le processus de révision standard est sélectionné dans Administration> Paramètres> Flux des travaux> Révision et que l'accès d'un relecteur est activé. (Autrement voir REVIEW_REQUEST_ATTACHED_SUBSEQUENT.)]]></description>
+		<description><![CDATA[Ce courriel du rédacteur de section à un rapporteur demande que le rapporteur accepte ou refuse la tâche d'examiner une soumission pour une deuxième fois ou plus. Il fournit des informations sur la soumission, comme le titre et le résumé, la date d'échéance de l'examen et la façon d'accéder à la soumission elle-même. Ce message est utilisé lorsque le processus de révision standard est sélectionné dans Administration> Paramètres> Flux des travaux> Révision et que l'accès d'un relecteur est activé. (Autrement voir REVIEW_REQUEST_ATTACHED_SUBSEQUENT.)]]></description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ATTACHED_SUBSEQUENT">
 		<subject>Demande d'évaluation d'un article</subject>
@@ -902,7 +902,7 @@ Merci de considérer cette requête.<br />
 Critères pour l'évaluation<br />
 <br />
 {$reviewGuidelines}<br />]]></body>
-		<description><![CDATA[Ce courriel de l'éditeur de section à un réviseur demande que le rapporteur accepte ou refuse la tâche d'examiner une soumission pour une deuxième fois ou plus. Il fournit des informations sur la soumission, comme le titre et le résumé, la date d'échéance de l'évaluation et la façon d'accéder à la soumission elle-même. Ce message est utilisé lorsque le processus de révision avec pièce jointe est sélectionné dans Administration> Paramètres> Flux des travaux> Révision.(Autrement voir REVIEW_REQUEST_SUBSEQUENT.)]]></description>
+		<description><![CDATA[Ce courriel du responsable de rubrique à un rapporteur demande que le rapporteur accepte ou refuse la tâche d'examiner une soumission pour une deuxième fois ou plus. Il fournit des informations sur la soumission, comme le titre et le résumé, la date d'échéance de l'évaluation et la façon d'accéder à la soumission elle-même. Ce message est utilisé lorsque le processus de révision avec pièce jointe est sélectionné dans Administration> Paramètres> Flux des travaux> Révision.(Autrement voir REVIEW_REQUEST_SUBSEQUENT.)]]></description>
 	</email_text>
 	<email_text key="SUBMISSION_ACK_NOT_USER">
 		<subject>Accusé de réception de la soumission</subject>
@@ -924,6 +924,6 @@ Nous avons pris une décision concernant votre soumission à {$contextName}, &qu
 Notre décision est de refuser votre soumission<br />
 <br />
 {$editorialContactSignature}<br />]]></body>
-		<description>Ce mail est envoyé à l'auteur si l'éditeur refuse la soumission avant même de la faire évaluer</description>
+		<description>Ce mail est envoyé à l'auteur si le rédacteur refuse la soumission avant même de la faire évaluer</description>
 	</email_text>
 </email_texts>
