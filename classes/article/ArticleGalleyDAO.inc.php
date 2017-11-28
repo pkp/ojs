@@ -490,6 +490,9 @@ class ArticleGalleyDAO extends RepresentationDAO implements PKPPubIdPluginDAO {
 				JOIN issues i ON (ps.issue_id = i.issue_id)
 				LEFT JOIN submission_files sf ON (g.file_id = sf.file_id)
 				LEFT JOIN submission_files nsf ON (nsf.file_id = g.file_id AND nsf.revision > sf.revision AND nsf.file_id IS NULL )
+				LEFT JOIN author_settings asl ON (asl.author_id = u.author_id AND asl.setting_name = \''.IDENTITY_SETTING_LASTNAME.'\' AND asl.locale = \''.AppLocale::getLocale().'\')
+				LEFT JOIN author_settings asf ON (asf.author_id = u.author_id AND asf.setting_name = \''.IDENTITY_SETTING_FIRSTNAME.'\' AND asf.locale = \''.AppLocale::getLocale().'\' )
+				LEFT JOIN author_settings asm ON (asm.author_id = u.author_id AND asm.setting_name = \''.IDENTITY_SETTING_MIDDLENAME.'\' AND asm.locale = \''.AppLocale::getLocale().'\' )
 				' . ($pubIdType != null?' LEFT JOIN submission_galley_settings gs ON (g.galley_id = gs.galley_id)':'')
 				. ($title != null?' LEFT JOIN submission_settings sst ON (s.submission_id = sst.submission_id)':'')
 				. ($author != null?' LEFT JOIN authors au ON (s.submission_id = au.submission_id)':'')
@@ -498,7 +501,7 @@ class ArticleGalleyDAO extends RepresentationDAO implements PKPPubIdPluginDAO {
 				i.published = 1 AND s.context_id = ?
 				' . ($pubIdType != null?' AND gs.setting_name = ? AND gs.setting_value IS NOT NULL':'')
 				. ($title != null?' AND (sst.setting_name = ? AND sst.locale = ? AND sst.setting_value LIKE ?)':'')
-				. ($author != null?' AND (au.first_name LIKE ? OR au.middle_name LIKE ? OR au.last_name LIKE ?)':'')
+				. ($author != null?' AND (asf.setting_value LIKE ? OR asm.setting_value LIKE ? OR asl.setting_value LIKE ?)':'')
 				. ($issueId != null?' AND ps.issue_id = ?':'')
 				. (($pubIdSettingName != null && $pubIdSettingValue != null && $pubIdSettingValue == EXPORT_STATUS_NOT_DEPOSITED)?' AND gss.setting_value IS NULL':'')
 				. (($pubIdSettingName != null && $pubIdSettingValue != null && $pubIdSettingValue != EXPORT_STATUS_NOT_DEPOSITED)?' AND gss.setting_value = ?':'')

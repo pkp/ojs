@@ -73,8 +73,8 @@ class RecommendByAuthorPlugin extends GenericPlugin {
 			// until OJS allows users to consistently normalize authors (via name,
 			// email, ORCID, whatever).
 			$articles = $authorDao->getPublishedArticlesForAuthor(
-				null, $author->getFirstName(), $author->getMiddleName(),
-				$author->getLastName(), $author->getLocalizedAffiliation(),
+				null, $author->getLocalizedFirstName(), $author->getLocalizedMiddleName(),
+				$author->getLocalizedLastName(), $author->getLocalizedAffiliation(),
 				$author->getCountry()
 			);
 			foreach ($articles as $article) { /* @var $article PublishedArticle */

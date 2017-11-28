@@ -404,11 +404,12 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 			subscriptions s,
 			subscription_types st,
 			users u
+	        LEFT JOIN user_settings usl ON (usl.user_id = u.user_id AND usl.setting_name = \'' . IDENTITY_SETTING_LASTNAME . '\' AND usl.locale = \'' . AppLocale::getLocale() . '\')
 			WHERE s.type_id = st.type_id
 			AND st.institutional = 0
 			AND s.user_id = u.user_id
 			ORDER BY
-			u.last_name ASC,
+			usl.setting_value ASC,
 			s.subscription_id',
 			false,
 			$rangeInfo
@@ -427,11 +428,12 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 			FROM	subscriptions s,
 				subscription_types st,
 				users u
+	        LEFT JOIN user_settings usl ON (usl.user_id = u.user_id AND usl.setting_name = \'' . IDENTITY_SETTING_LASTNAME . '\' AND usl.locale = \'' . AppLocale::getLocale() . '\')
 			WHERE	s.type_id = st.type_id AND
 				st.institutional = 0 AND
 				s.user_id = u.user_id AND
 				s.journal_id = ?
-			ORDER BY u.last_name ASC, s.subscription_id',
+			ORDER BY usl.setting_value ASC, s.subscription_id',
 			array((int) $journalId),
 			$rangeInfo
 		);
@@ -458,10 +460,11 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 			FROM	subscriptions s
 				JOIN subscription_types st ON (s.type_id = st.type_id)
 				JOIN users u ON (s.user_id = u.user_id)
+	        	LEFT JOIN user_settings usl ON (usl.user_id = u.user_id AND usl.setting_name = \'' . IDENTITY_SETTING_LASTNAME . '\' AND usl.locale = \'' . AppLocale::getLocale() . '\')
 			WHERE	st.institutional = 0
 				AND s.journal_id = ? ' .
 			parent::_generateSearchSQL($status, $searchField, $searchMatch, $search, $dateField, $dateFrom, $dateTo, $params) .
-			' ORDER BY u.last_name ASC, s.subscription_id',
+			' ORDER BY usl.setting_value ASC, s.subscription_id',
 			array((int) $journalId),
 			$rangeInfo
 		);
@@ -538,13 +541,14 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 			FROM	subscriptions s
 				JOIN subscription_types st ON (s.type_id = st.type_id)
 				JOIN users u ON (u.user_id = s.user_id)
+	        	LEFT JOIN user_settings usl ON (usl.user_id = u.user_id AND usl.setting_name = \'' . IDENTITY_SETTING_LASTNAME . '\' AND usl.locale = \'' . AppLocale::getLocale() . '\')
 			WHERE	s.status = ' . SUBSCRIPTION_STATUS_ACTIVE . '
 				AND st.institutional = 0
 				AND EXTRACT(YEAR FROM s.date_end) = ?
 				AND EXTRACT(MONTH FROM s.date_end) = ?
 				AND EXTRACT(DAY FROM s.date_end) = ?
 				AND s.journal_id = ?
-			ORDER BY u.last_name ASC, s.subscription_id',
+			ORDER BY usl.setting_value ASC, s.subscription_id',
 			array(
 				$dateEnd[0],
 				$dateEnd[1],
