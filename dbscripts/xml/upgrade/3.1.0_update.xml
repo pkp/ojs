@@ -89,4 +89,8 @@
 		<query>UPDATE metrics SET assoc_type = 531 WHERE assoc_type = 515 AND assoc_id IN (SELECT file_id FROM submission_supplementary_files)</query>
 		<query>UPDATE metrics SET assoc_type = 531 WHERE assoc_type = 515 AND assoc_id IN (SELECT file_id FROM submission_artwork_files)</query>
 	</sql>
+	<sql><!-- pkp/pkp-lib#2832 -->
+		<!-- remove citationFormats plugins -->
+		<query>DELETE FROM versions WHERE product_type = 'plugins.citationFormats'</query>
+	</sql>
 </data>

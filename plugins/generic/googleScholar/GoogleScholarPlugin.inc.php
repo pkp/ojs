@@ -56,9 +56,13 @@ class GoogleScholarPlugin extends GenericPlugin {
 		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->addHeader('googleScholarRevision', '<meta name="gs_meta_revision" content="1.1"/>');
 		$templateMgr->addHeader('googleScholarJournalTitle', '<meta name="citation_journal_title" content="' . htmlspecialchars($journal->getName($journal->getPrimaryLocale())) . '"/>');
+
+		if ($abbreviation = $journal->getSetting('abbreviation', $journal->getPrimaryLocale()) || $abbreviation = $journal->getSetting('acronym', $journal->getPrimaryLocale())) {
+			$templateMgr->addHeader('googleScholarJournalAbbrev', '<meta name="citation_journal_abbrev" content="' . htmlspecialchars($abbreviation) . '"/>');
+		}
+
 		if (($issn = $journal->getSetting('onlineIssn')) || ($issn = $journal->getSetting('printIssn')) || ($issn = $journal->getSetting('issn'))) {
 			$templateMgr->addHeader('googleScholarIssn', '<meta name="citation_issn" content="' . htmlspecialchars($issn) . '"/> ');
-
 		}
 
 		foreach ($article->getAuthors() as $i => $author) {
@@ -91,7 +95,6 @@ class GoogleScholarPlugin extends GenericPlugin {
 		foreach((array) $templateMgr->get_template_vars('pubIdPlugins') as $pubIdPlugin) {
 			if ($pubId = $article->getStoredPubId($pubIdPlugin->getPubIdType())) {
 				$templateMgr->addHeader('googleScholarPubId' . $pubIdPlugin->getPubIdDisplayType(), '<meta name="citation_' . htmlspecialchars(strtolower($pubIdPlugin->getPubIdDisplayType())) . '" content="' . htmlspecialchars($pubId) . '"/>');
-
 			}
 		}
 

@@ -67,6 +67,7 @@
 	<schema file="lib/pkp/xml/schema/metrics.xml" />
 	<schema file="lib/pkp/xml/schema/views.xml" />
 	<schema file="lib/pkp/xml/schema/libraryFiles.xml" />
+	<schema file="lib/pkp/xml/schema/navigationMenus.xml" />
 
 	<!-- OJS schema -->
 	<schema file="dbscripts/xml/ojs_schema.xml" />
@@ -173,6 +174,7 @@
 		<note file="docs/release-notes/README-3.1.0" />
 		<code function="installEmailTemplate" key="EDITOR_DECISION_INITIAL_DECLINE" locales="en_US" />
 		<code function="installEmailTemplate" key="EDITOR_RECOMMENDATION" locales="en_US" />
+		<code function="installDefaultNavigationMenus" />
 	</upgrade>
 
 	<!-- update plugin configuration - should be done as the final upgrade task -->

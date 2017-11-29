@@ -28,7 +28,7 @@
 	<message key="manager.payment.addPayment">Добавить платеж</message>
 	<message key="manager.payment.amount">Сумма</message>
 	<message key="manager.payment.authorFees">Платежи автора</message>
-	<message key="manager.payment.authorFeesDescription">Выбранные варианты, вместе с их описаниями и ценами (они могут быть изменены ниже), появятся на Шаге 1 процесса отправки материала и на странице «О журнале» в разделе «Отправка материалов», а также во всех местах, где требуется оплата.</message>
+	<message key="manager.payment.authorFeesDescription">Введите суммы платежей ниже, чтобы включить платежи автора.</message>
 	<message key="manager.payment.currency">Валюта</message>
 	<message key="manager.payment.currencymessage">OJS не выполняет конвертацию валют. Если вы принимаете платежи за подписки, убедитесь, что валюта платежа за подписку соответствует указанной здесь валюте.</message>
 	<message key="manager.payment.description">Описание</message>
@@ -44,13 +44,13 @@
 	<message key="manager.payment.notFound">Не найдено</message>
 	<message key="manager.payment.options">Параметры</message>
 	<message key="manager.payment.options.acceptSubscriptionPayments">Это активирует платежи в разделе «Подписки», где типы подписки, их стоимость и продолжительность управляются менеджером по подписке данного журнала.</message>
-	<message key="manager.payment.options.enablePayments">Щелкните здесь, чтобы включить модуль «Платежи». Вам нужно сконфигурировать настройки платежей, заполнив форму ниже. Обратите внимание, что для осуществления платежей пользователи должны будут войти на сайт под своей учетной записью.</message>
+	<message key="manager.payment.options.enablePayments">Платежи будут включены для этого журнала. Обратите внимание, что для осуществления платежей пользователи должны будут войти на сайт под своей учетной записью.</message>
 	<message key="manager.payment.options.fee">Платеж</message>
 	<message key="manager.payment.options.feeDescription">Описание платежа</message>
 	<message key="manager.payment.options.feeName">Название платежа</message>
 	<message key="manager.payment.options.membershipFee">Ассоциированное членство</message>
 	<message key="manager.payment.options.onlypdf">Ограничить доступ только PDF-версиями выпусков и статей</message>
-	<message key="manager.payment.options.publicationFee">Публикация статьи</message>
+	<message key="manager.payment.options.publicationFee">Платеж за публикацию статьи</message>
 	<message key="manager.payment.options.purchaseArticleFee">Купить статью</message>
 	<message key="manager.payment.options.purchaseIssueFee">Купить выпуск</message>
 	<message key="manager.payment.options.text">Описание метода платежа</message>

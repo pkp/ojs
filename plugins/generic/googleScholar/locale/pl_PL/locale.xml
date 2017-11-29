@@ -11,7 +11,7 @@
   * Localization strings.
   -->
 
-<locale name="pl_PL" full_name="Polski">
+<locale name="pl_PL" full_name="Język Polski">
 	<message key="plugins.generic.googleScholar.name">Wtyczka indeksowania w Google Scholar</message>
 	<message key="plugins.generic.googleScholar.description">Wtyczka umożliwia indeksowanie opublikowanej treści w Google Scholar.</message>
 </locale>

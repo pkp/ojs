@@ -11,7 +11,7 @@
   * Localization strings.
   -->
 
-<locale name="id_ID" full_name = "Bahasa Indonesia">
+<locale name="id_ID" full_name="Bahasa Indonesia">
 	<!-- Submission wizard -->
 	<message key="submission.submit.title">Serahkan Naskah</message>
 	<message key="submission.submit.userGroup">Serahkan sebagai...</message>

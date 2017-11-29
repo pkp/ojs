@@ -34,6 +34,7 @@
 	<schema file="lib/pkp/xml/schema/metrics.xml" />
 	<schema file="lib/pkp/xml/schema/views.xml" />
 	<schema file="lib/pkp/xml/schema/libraryFiles.xml" />
+	<schema file="lib/pkp/xml/schema/navigationMenus.xml" />
 
 	<!-- OJS schema -->
 	<schema file="dbscripts/xml/ojs_schema.xml" />
@@ -45,4 +46,5 @@
 	<code function="createData"/>
 	<code function="createConfig"/>
 	<code function="addPluginVersions"/>
+	<code function="installDefaultNavigationMenus"/>
 </install>

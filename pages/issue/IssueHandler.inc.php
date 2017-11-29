@@ -220,9 +220,10 @@ class IssueHandler extends Handler {
 						} else {
 							// Otherwise queue an issue purchase payment and display payment form
 							$queuedPayment =& $paymentManager->createQueuedPayment($journal->getId(), PAYMENT_TYPE_PURCHASE_ISSUE, $userId, $issue->getId(), $journal->getSetting('purchaseIssueFee'));
-							$queuedPaymentId = $paymentManager->queuePayment($queuedPayment);
+							$paymentManager->queuePayment($queuedPayment);
 
-							$paymentManager->displayPaymentForm($queuedPaymentId, $queuedPayment);
+							$paymentForm = $paymentManager->getPaymentForm($queuedPayment);
+							$paymentForm->display($request);
 							exit;
 						}
 					}

@@ -18,4 +18,7 @@
 	<message key="plugins.paymethod.paypal.settings">Paypal Payment Settings</message>
 	<message key="plugins.paymethod.paypal.settings.testMode">Test Mode</message>
 	<message key="plugins.paymethod.paypal.settings.accountName">Account Name</message>
+	<message key="plugins.paymethod.paypal.settings.clientId">Client ID</message>
+	<message key="plugins.paymethod.paypal.settings.secret">Secret</message>
+	<message key="plugins.paymethod.paypal.error">A transaction error occurred. Please contact the journal manager for details.</message>
 </locale>

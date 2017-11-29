@@ -38,13 +38,21 @@ class PaypalPaymentSettingsForm extends Form {
 	}
 
 	/**
+	 * Get the setting names for this form.
+	 * @return array
+	 */
+	private function _getSettingNames() {
+		return array('testMode', 'accountName', 'clientId', 'secret');
+	}
+
+	/**
 	 * Initialize form data.
 	 */
 	function initData() {
 		$contextId = $this->_contextId;
 		$plugin = $this->_plugin;
 
-		foreach (array('testMode', 'accountName') as $settingName) {
+		foreach ($this->_getSettingNames() as $settingName) {
 			$this->setData($settingName, $plugin->getSetting($contextId, $settingName));
 		}
 	}
@@ -53,7 +61,7 @@ class PaypalPaymentSettingsForm extends Form {
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-		$this->readUserVars(array('testMode', 'accountName'));
+		$this->readUserVars($this->_getSettingNames());
 	}
 
 	/**
@@ -62,10 +70,8 @@ class PaypalPaymentSettingsForm extends Form {
 	function execute() {
 		$plugin = $this->_plugin;
 		$contextId = $this->_contextId;
-		foreach (array('testMode', 'accountName') as $settingName) {
+		foreach ($this->_getSettingNames() as $settingName) {
 			$plugin->updateSetting($contextId, $settingName, $this->getData($settingName));
 		}
 	}
 }
-
-?>

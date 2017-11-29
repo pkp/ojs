@@ -28,6 +28,7 @@ class PaymentTypesForm extends Form {
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_MANAGER);
 
 		$this->settings = array(
+			'journalPaymentsEnabled' => 'bool',
 			'publicationFee' => 'float',
 			'purchaseArticleFeeEnabled' => 'bool',
 			'purchaseArticleFee' => 'float',
@@ -47,9 +48,9 @@ class PaymentTypesForm extends Form {
 	 * Initialize form data from current group group.
 	 */
 	function initData($journal) {
-		$this->_data = array(
-			'journalPaymentsEnabled' => $journal->getSetting('journalPaymentsEnabled'),
-		);
+		foreach (array_keys($this->settings) as $settingName) {
+			$this->setData($settingName, $journal->getSetting($settingName));
+		}
 	}
 
 	/**
@@ -61,19 +62,12 @@ class PaymentTypesForm extends Form {
 
 	/**
 	 * Save settings
+	 * @param $request PKPRequest
 	 */
-	function save() {
-		$settingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
-
-		foreach ($this->_data as $name => $value) {
-			$isLocalized = in_array($name, $this->getLocaleFieldNames());
-			$settingsDao->updateSetting(
-				$journal->getId(),
-				$name,
-				$value,
-				$this->settings[$name],
-				$isLocalized
-			);
+	function execute($request) {
+		$journal = $request->getJournal();
+		foreach (array_keys($this->settings) as $settingName) {
+			$journal->updateSetting($settingName, $this->getData($settingName));
 		}
 	}
 }

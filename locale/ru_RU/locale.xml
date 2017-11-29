@@ -958,6 +958,7 @@
 	<message key="log.review.reviewFileByProxy">Редактор {$userName} загрузил файл рецензии на {$round}-м раунде рецензирования материала {$submissionId} по поручению рецензента {$reviewerName}.</message>
 	<message key="log.review.reviewerFile">Файл рецензента был загружен на сайт.</message>
 	<message key="log.editor.decision">Решение редакции ({$decision}) по статье {$submissionId} было введено редактором ({$editorName}).</message>
+	<message key="log.editor.recommendation">Рекомендация редактора ({$decision}) по статье {$submissionId} была введена редактором {$editorName}.</message>
 
 
 	<message key="log.copyedit.initiate">Литературное редактирование материала {$submissionId} было начато литературным редактором ({$copyeditorName}).</message>
@@ -1057,6 +1058,7 @@
 	<message key="notification.type.editorAssignmentTask">Была отправлена новая статья, которой нужно назначить редактора.</message>
 	<message key="notification.type.assignProductionUser">Назначить пользователя для создания гранок с помощью ссылки «Назначить» в списке «Участники».</message>
 	<message key="notification.type.awaitingRepresentations">Ожидающие гранок.</message>
+	<message key="notification.type.publicationScheduled">Этот материал запланирован для публикации.</message>
 
 	<!--
 	 *

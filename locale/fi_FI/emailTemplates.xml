@@ -165,6 +165,18 @@ Ystävällisin terveisin,<br />
 {$editorialContactSignature}]]></body>
 		<description>This email, when enabled, is automatically sent to an author when he or she completes the process of submitting a manuscript to the journal. It provides information about tracking the submission through the process and thanks the author for the submission.</description>
 	</email_text>
+	<email_text key="SUBMISSION_ACK_NOT_USER">
+		<subject>Käsikirjoituksesi on vastaanotettu</subject>
+		<body><![CDATA[Hei,<br />
+<br />
+{$submitterName} on lähettänyt julkaisuumme {$contextName} käsikirjoituksen &quot;{$submissionTitle}&quot;.<br />
+<br />
+Jos teillä on kysyttävää, otattehan yhteyttä minuun. Kiitos, että valitsitte tämän julkaisun työllenne.<br />
+<br />
+Ystävällisin terveisin,<br />
+{$editorialContactSignature}]]></body>
+		<description>This email, when enabled, is automatically sent to the other authors who are not users specified during the submission process.</description>
+	</email_text>	
 	<email_text key="SUBMISSION_UNSUITABLE">
 		<subject>Soveltumaton käsikirjoitus</subject>
 		<body><![CDATA[Hyvä {$authorName},<br />

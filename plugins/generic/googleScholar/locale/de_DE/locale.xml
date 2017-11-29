@@ -11,7 +11,7 @@
   * Localization strings.
   -->
 
-<locale name="de_DE" full_name="Deutsch">
+<locale name="de_DE" full_name="Deutsch (Deutschland)">
 	<message key="plugins.generic.googleScholar.name">Google-Scholar-Plugin</message>
 	<message key="plugins.generic.googleScholar.description">Dieses Plugin ermöglicht die Indizierung veröffentlichter Inhalte in Google Scholar.</message>
 </locale>

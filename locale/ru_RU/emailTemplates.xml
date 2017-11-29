@@ -543,6 +543,16 @@ URL материала: {$submissionUrl}<br />
 ]]></body>
 		<description>Это письмо редактора или редактора раздела, отправляемое автору, чтобы уведомить его об окончательном решении «Отклонить материал» относительно присланного материала.</description>
 	</email_text>
+	<email_text key="EDITOR_RECOMMENDATION">
+		<subject>Рекомендация редактора</subject>
+		<body><![CDATA[Здравствуйте, {$editors}!<br />
+<br />
+По материалу «{$submissionTitle}», отправленному в «{$contextName}», могу рекомендовать следующее: {$recommendation}<br />
+<br />
+{$editorialContactSignature}<br />
+]]></body>
+		<description>Это письмо рекомендующего редактора или редактора раздела редакторам или редакторам раздела, принимающим решение, чтобы уведомить их об итоговой рекомендации относительного присланного материала.</description>
+	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
 		<subject>Запрос на литературное редактирование</subject>
 		<body><![CDATA[Здравствуйте, {$participantName}!<br />
