@@ -999,7 +999,7 @@ class Upgrade extends Installer {
 	}
 
 	/**
-	 * Set the missing uploader user id and group id to a journal manager.
+	 * Set the missing uploader user id to a journal manager.
 	 * @return boolean True indicates success.
 	 */
 	function setFileUploader() {
@@ -1015,32 +1015,12 @@ class Upgrade extends Installer {
 			switch ($driver) {
 				case 'mysql':
 				case 'mysqli':
-					$submissionFileDao->update('UPDATE submission_files sf, submissions s SET sf.uploader_user_id = ?, sf.user_group_id = ? WHERE sf.uploader_user_id IS NULL AND sf.user_group_id IS NULL AND sf.submission_id = s.submission_id AND s.context_id = ?', array($creatorUserId, $managerUserGroup->getId(), $journal->getId()));
+					$submissionFileDao->update('UPDATE submission_files sf, submissions s SET sf.uploader_user_id = ? WHERE sf.uploader_user_id IS NULL AND sf.submission_id = s.submission_id AND s.context_id = ?', array($creatorUserId, $journal->getId()));
 					break;
 				case 'postgres':
-					$submissionFileDao->update('UPDATE submission_files SET uploader_user_id = ?, user_group_id = ? FROM submissions s WHERE submission_files.uploader_user_id IS NULL AND submission_files.user_group_id IS NULL AND submission_files.submission_id = s.submission_id AND s.context_id = ?', array($creatorUserId, $managerUserGroup->getId(), $journal->getId()));
+					$submissionFileDao->update('UPDATE submission_files SET uploader_user_id = ? FROM submissions s WHERE submission_files.uploader_user_id IS NULL AND submission_files.submission_id = s.submission_id AND s.context_id = ?', array($creatorUserId, $journal->getId()));
 					break;
 				default: fatalError('Unknown database type!');
-			}
-			$emptyUserGroupResult = $submissionFileDao->retrieve('SELECT DISTINCT sf.uploader_user_id FROM submission_files sf, submissions s WHERE sf.user_group_id IS NULL AND sf.submission_id = s.submission_id AND s.context_id = ?',array($journal->getId()));
-			while (!$emptyUserGroupResult->EOF) {
-				$row = $emptyUserGroupResult->getRowAssoc(false);
-				$emptyUserGroupResult->MoveNext();
-				$uploaderUserId = $row['uploader_user_id'];
-				$userGroupIdResult = $userGroupDao->retrieve('SELECT MIN(ug.user_group_id) as user_group_id FROM user_groups ug, user_user_groups uug WHERE ug.user_group_id = uug.user_group_id AND uug.user_id = ? AND ug.context_id = ?', array($uploaderUserId, $journal->getId()));
-				if ($userGroupIdResult->RecordCount() != 0) {
-					$userGroupId = $userGroupIdResult->fields[0];
-					switch ($driver) {
-						case 'mysql':
-						case 'mysqli':
-							$submissionFileDao->update('UPDATE submission_files sf, submissions s SET sf.user_group_id = ? WHERE sf.uploader_user_id = ? AND sf.user_group_id IS NULL AND sf.submission_id = s.submission_id AND s.context_id = ?', array($userGroupId, $uploaderUserId, $journal->getId()));
-							break;
-						case 'postgres':
-							$submissionFileDao->update('UPDATE submission_files SET user_group_id = ? FROM submissions s WHERE submission_files.uploader_user_id = ? AND submission_files.user_group_id IS NULL AND submission_files.submission_id = s.submission_id AND s.context_id = ?', array($userGroupId, $uploaderUserId, $journal->getId()));
-							break;
-						default: fatalError('Unknown database type!');
-					}
-				}
 			}
 			unset($managerUsers, $managerUserGroup);
 		}
@@ -1398,7 +1378,6 @@ class Upgrade extends Installer {
 			foreach ((array) $submissionFiles as $submissionFile) {
 				$submissionFile->setGenreId($genre->getId());
 				$submissionFile->setUploaderUserId($creatorUserId);
-				$submissionFile->setUserGroupId($managerUserGroup->getId());
 				$submissionFile->setFileStage(SUBMISSION_FILE_PROOF);
 				$submissionFileDao->updateObject($submissionFile);
 			}
