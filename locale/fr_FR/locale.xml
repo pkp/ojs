@@ -120,8 +120,8 @@
 	<message key="submission.editorVersion">Version du rédacteur</message>
 	<message key="submission.authorsRevisedVersion">Version du fichier révisée par l'auteur</message>
 	<message key="submission.authorVersion">Version de l'auteur</message>
-	<message key="submission.copyediting">Révision</message>
-	<message key="submission.copyedit">Réviser</message>
+	<message key="submission.copyediting">Copyediting</message>
+	<message key="submission.copyedit">Copyedit</message>
 	<message key="submission.proofreading">Correction d'épreuves</message>
 	<message key="submission.scheduling">Planification du calendrier</message>
 	<message key="submission.scheduledIn">Publication planifiée pour {$issueName}.</message>
