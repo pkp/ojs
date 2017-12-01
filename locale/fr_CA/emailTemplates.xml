@@ -28,6 +28,7 @@ Réinitialisation du mot de passe : {$url}<br />
 		<body><![CDATA[Votre mot de passe pour le site Web {$siteTitle} a été réinitialisé avec succès. Veuillez conserver précieusement votre nom d'utilisateur ainsi que votre mot de passe. Vous en aurez besoin pour chacune de vos interactions avec la revue.<br />
 <br />
 Votre nom d'utilisateur : {$username}<br />
+Mot de passe : {$password}<br />
 <br />
 {$principalContactSignature}]]></body>
 		<description><![CDATA[Ce courriel est envoyé aux utilisateurs inscrits lorsqu'ils ont réussi à réinitialiser leur mot de passe en ayant suivi la procédure décrite dans le courriel « Confirmation de la réinitialisation du mot de passe ».]]></description>
