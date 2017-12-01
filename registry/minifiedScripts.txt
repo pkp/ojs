@@ -109,6 +109,7 @@ lib/pkp/js/controllers/grid/settings/roles/form/UserGroupFormHandler.js
 lib/pkp/js/controllers/grid/settings/metadata/MetadataGridHandler.js
 lib/pkp/js/controllers/tab/settings/form/FileViewFormHandler.js
 lib/pkp/js/controllers/tab/settings/announcements/form/AnnouncementSettingsFormHandler.js
+lib/pkp/js/controllers/tab/settings/archiving/form/ArchivingSettingsFormHandler.js
 lib/pkp/js/controllers/tab/settings/permissions/form/PermissionSettingsFormHandler.js
 lib/pkp/js/controllers/tab/settings/paymentMethod/PaymentMethodHandler.js
 lib/pkp/js/controllers/grid/notifications/NotificationsGridHandler.js
