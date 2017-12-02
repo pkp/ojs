@@ -1,15 +1,15 @@
-OJS 3.1.0 Release Notes
-CVS tag: ojs-3_1_0-0
+OJS 3.1.0-1 Release Notes
+Tag: ojs-3_1_0-1
 
-Release date: October 23, 2017
+Release date: December 1, 2017
 ==============================
 
 OJS 3.1 contains new translations into Finnish and Swedish. It also sees the
 re-introduction of a fr_FR translation for France, based on the French
 Canadian translation.
 
-New Features
-------------
+New Features (3.1.0-0)
+----------------------
 	#390: Remove artbitrary UI field length limitations
 	#440: Grant implicit Manager access to Adminstrators
 	#469: Move pnotify to composer dependency
@@ -34,8 +34,8 @@ New Features
 	#2686: add initial JWT support to API
 	#2705: New default footer images
 
-Bug Fixes
----------
+Bug Fixes (3.1.0-0)
+-------------------
 	#772: Respond to nonexistent monographs with a 404
 	#1070: Improve confirmation notices when skipping the email is an option
 	#1144: Review file selection is unclear
@@ -227,3 +227,43 @@ Bug Fixes
 	#2907: Check/correct date formatting for Latest column in reviewer assignment
 	#2924: Updates to installation screen
 	#2930: access denied on the announcements setting page
+
+Bug Fixes (3.1.0-1)
+-------------------
+	#2441: Make wording of editorial team consistent in backend and frontend
+	#2506: Fix genre assignment for upgrades
+	#2794: Upload Revision canceled but still in revision list
+	#2874: remove citationLookup, citationParser and nlm30 metadata plugin
+	#2922: [OJS] Uploading a new Galley file and selecting "Change file" corrupts the uploaded file
+	#2942: [OJS] Infinite loop in upgrade from 2.4.8.2 to 3.1, failing to skip missing files
+	#2944: NavigationMenus - NMI_TYPE_CONTACT not returned by getMenuItemTypes
+	#2945: restore defaults genres/components
+	#2956: Plugins already installed in database but not filesystem cannot be re-installed
+	#2962: Fix membership options
+	#2964: APC usability issues
+	#2967: [OJS] OJS 3.1 missing link from Site Administration to Journal Administration
+	#2972: Untranslated locale keys in Roles select menu
+	#2980: order by user_group_id in UserGroupDAO::getByRoleId
+	#2989: Correct missing table alias for PostgreSQL upgrade
+	#2996: Paypal plugin has undeclared dependency
+	#2998: [OJS] Archiving page changes
+	#3002: Enabled plugins disabled after upgrade
+	#3009: always provide multipleContexts variable
+	#3016: supplementary files migration
+	#3039: editor actions for all managers and sub-editors
+	#3046: getCustomTemplateKeys parameters
+	#3051: OAI record datestamp
+	#3052: consider URL encoding for oai identifiers
+	#3062: wrong element attributes in oai_marc
+	#3066: viewPlugin in the plugin gallery for journal managers
+	#3070: Author names can be exposed to some reviewers
+	#3072: Prevent range requests
+	#3080: NavigationMenus - Custom Page Error on Site level
+	#3087: fix metrics assoc_type for supp files
+	#3088: File deletion from revision grid is broken
+	#3106: choose e-mail template when selecting a reviewer
+	#3108: Duplicated literal
+	#3114: Select precedent reviewer for a new round failed
+	#3122: Add copyFile method to SubmissionFileManager
+	#3141: a string was missed in locale.xml
+	#3144: NavigationMenus - Warnings removed for custom menuItems
