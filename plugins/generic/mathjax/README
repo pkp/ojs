@@ -1,0 +1,12 @@
+================================
+=== OCS mathjax Plugin
+=== Author: Vasyl Ostrovskyi (vo @ imath.kiev.ua)
+================================
+
+About
+-----
+This plugin loads the mathjax javascript LaTeX parser into all OCS pages.
+
+License
+-------
+This plugin is licensed under the GNU General Public License v2. See the file COPYING for the complete terms of this license.
