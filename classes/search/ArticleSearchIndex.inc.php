@@ -46,7 +46,7 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 			$authors = $article->getAuthors();
 			for ($i=0, $count=count($authors); $i < $count; $i++) {
 				$author = $authors[$i];
-				$fistNames = $author->getFirstName(null);
+				$firstNames = $author->getFirstName(null);
 				if (is_array($firstNames)) foreach ($firstNames as $firstName) { // Localized
                                         array_push($authorText, $firstName);
                                 }
