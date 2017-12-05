@@ -21,6 +21,7 @@ define('SUBSCRIPTION_INSTITUTION_NAME',	0x20);
 define('SUBSCRIPTION_DOMAIN',		0x21);
 define('SUBSCRIPTION_IP_RANGE',		0x22);
 
+
 class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 	/**
 	 * Retrieve an institutional subscription by subscription ID.
@@ -426,9 +427,10 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 			FROM	subscriptions s
 				JOIN subscription_types st ON (s.type_id = st.type_id)
 				JOIN users u ON (s.user_id = u.user_id)
+	            LEFT JOIN user_settings usl ON (usl.user_id = u.user_id AND usl.setting_name = \''.USER_FIELD_LASTNAME.'\' AND usl.locale = \''.AppLocale::getLocale().'\')
 			WHERE	st.institutional = 1 AND
 				s.journal_id = ?
-			ORDER BY u.last_name ASC, s.subscription_id',
+			ORDER BY usl.setting_value ASC, s.subscription_id',
 			array((int) $journalId),
 			$rangeInfo
 		);
