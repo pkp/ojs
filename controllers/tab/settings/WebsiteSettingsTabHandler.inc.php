@@ -174,17 +174,8 @@ class WebsiteSettingsTabHandler extends ManagerSettingsTabHandler {
 		}
 
 		$journal = $request->getJournal();
-		$journalSettingsDao = DAORegistry::getDAO('JournalSettingsDAO');
-		$journalSettingsDao->reloadLocalizedDefaultSettings(
-			$journal->getId(), 'registry/journalSettings.xml',
-			array(
-				'indexUrl' => $request->getIndexUrl(),
-				'journalPath' => $journal->getData('path'),
-				'primaryLocale' => $journal->getPrimaryLocale(),
-				'journalName' => $journal->getName($journal->getPrimaryLocale())
-			),
-			$locale
-		);
+		$settingsDao = Application::getContextSettingsDAO();
+		$settingsDao->reloadLocalizedDefaultContextSettings($request, $locale);
 
 		// also reload the user group localizable data
 		$userGroupDao = DAORegistry::getDAO('UserGroupDAO');
