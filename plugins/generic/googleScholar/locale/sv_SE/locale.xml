@@ -13,5 +13,5 @@
 
 <locale name="sv_SE" full_name="Svenska">
 	<message key="plugins.generic.googleScholar.name">Plugin för Google Scholar-indexering</message>
-	<message key="plugins.generic.googleScholar.description">Pluginet aktiverar kompatibilitet för indexering av publicerat innehåll i Google Scholar.</message>
+	<message key="plugins.generic.googleScholar.description">Pluginet ger stöd för indexering av publicerat innehåll i Google Scholar.</message>
 </locale>
