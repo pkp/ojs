@@ -4,15 +4,13 @@ set -e
 
 # Grab the database information
 set -e
-DB_HOST=`egrep ^host ~/.passwords/ojs_db_pw.mysql | sed 's/.*=//'`
-DB_PORT=`egrep ^port ~/.passwords/ojs_db_pw.mysql | sed 's/.*=//'`
-DB_USER=`egrep ^user ~/.passwords/ojs_db_pw.mysql | sed 's/.*=//'`
-DB_PASS=`egrep ^password ~/.passwords/ojs_db_pw.mysql | sed 's/.*=//'`
 DB_NAME=`egrep ^database ~/.passwords/ojs_db_pw.mysql | sed 's/.*=//'`
+sed 's/mysql/mysqldump/' ~/.passwords/ojs_db_pw.mysql | egrep -v 'database=' > ~/.passwords/ojs_mysqldump.sql
 
 echo "Dumping database to file."
-mysqldump -h $DB_HOST -P $DB_PORT -u $DB_USER --password=$DB_PASS $DB_NAME --skip-lock-tables --skip-extended-insert > /apps/eschol/ojs/db_backup/ojs_db_dump.sql
-echo "Adding/removing files for hg."
-hg -R /apps/eschol/ojs addremove
-echo "Committing to hg."
-hg -R /apps/eschol/ojs commit -m "Auto-commit"
+mysqldump --defaults-file=~/.passwords/ojs_mysqldump.sql $DB_NAME --skip-lock-tables --skip-extended-insert > /apps/eschol/ojs/db_backup/ojs_db_dump.sql
+rm ~/.passwords/ojs_mysqldump.sql
+echo "Compressing."
+gzip -c /apps/eschol/ojs/db_backup/ojs_db_dump.sql > /apps/eschol/ojs/db_backup/dump_`date "+%Y-%m-%dT%H:%M:%S"`.gz
+echo "Removing old backups."
+find /apps/eschol/ojs/db_backup -name 'dump_2*.gz' -mtime +45 -exec rm {} \;
