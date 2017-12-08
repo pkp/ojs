@@ -84,13 +84,7 @@ class IndexHandler extends Handler {
 			$templateMgr->assign('about', $site->getLocalizedAbout());
 			$templateMgr->assign('journalFilesPath', $request->getBaseUrl() . '/' . Config::getVar('files', 'public_files_dir') . '/journals/');
 
-			// If we're using paging, fetch the parameters
-			$usePaging = $site->getSetting('usePaging');
-			if ($usePaging) $rangeInfo = $this->getRangeInfo($request, 'journals');
-			else $rangeInfo = null;
-			$templateMgr->assign('usePaging', $usePaging);
-
-			$journals = $journalDao->getAll(true, $rangeInfo);
+			$journals = $journalDao->getAll(true);
 			$templateMgr->assign('journals', $journals);
 			$templateMgr->assign('site', $site);
 
