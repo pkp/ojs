@@ -427,7 +427,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 			FROM	subscriptions s
 				JOIN subscription_types st ON (s.type_id = st.type_id)
 				JOIN users u ON (s.user_id = u.user_id)
-	            LEFT JOIN user_settings usl ON (usl.user_id = u.user_id AND usl.setting_name = \''.USER_FIELD_LASTNAME.'\' AND usl.locale = \''.AppLocale::getLocale().'\')
+	            LEFT JOIN user_settings usl ON (usl.user_id = u.user_id AND usl.setting_name = \''.IDENTITY_SETTING_LASTNAME.'\' AND usl.locale = \''.AppLocale::getLocale().'\')
 			WHERE	st.institutional = 1 AND
 				s.journal_id = ?
 			ORDER BY usl.setting_value ASC, s.subscription_id',

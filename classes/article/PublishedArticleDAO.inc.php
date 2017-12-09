@@ -771,9 +771,9 @@ class PublishedArticleDAO extends ArticleDAO {
 				. ($author != null?' LEFT JOIN authors au ON (s.submission_id = au.submission_id)':'')
 				. ($pubIdSettingName != null?' LEFT JOIN submission_settings sss ON (s.submission_id = sss.submission_id AND sss.setting_name = ?)':'')
 				. ' ' . $this->getFetchJoins() .'
-				LEFT JOIN author_settings asf ON (asf.author_id = au.author_id AND asf.setting_name = \''.AUTHOR_FIELD_FIRSTNAME.'\' AND asf.locale = \''.AppLocale::getLocale().'\' )
-				LEFT JOIN author_settings asm ON (asm.author_id = au.author_id AND asm.setting_name = \''.AUTHOR_FIELD_MIDDLENAME.'\' AND asm.locale = \''.AppLocale::getLocale().'\' )
-				LEFT JOIN author_settings asl ON (asl.author_id = au.author_id AND asl.setting_name = \''.AUTHOR_FIELD_LASTNAME.'\' AND asl.locale = \''.AppLocale::getLocale().'\')
+				LEFT JOIN author_settings asf ON (asf.author_id = au.author_id AND asf.setting_name = \''.IDENTITY_SETTING_FIRSTNAME.'\' AND asf.locale = \''.AppLocale::getLocale().'\' )
+				LEFT JOIN author_settings asm ON (asm.author_id = au.author_id AND asm.setting_name = \''.IDENTITY_SETTING_MIDDLENAME.'\' AND asm.locale = \''.AppLocale::getLocale().'\' )
+				LEFT JOIN author_settings asl ON (asl.author_id = au.author_id AND asl.setting_name = \''.IDENTITY_SETTING_LASTNAME.'\' AND asl.locale = \''.AppLocale::getLocale().'\')
 			WHERE
 				i.published = 1 AND s.context_id = ? AND s.status <> ' . STATUS_DECLINED
 				. ($pubIdType != null?' AND ss.setting_name = ? AND ss.setting_value IS NOT NULL':'')

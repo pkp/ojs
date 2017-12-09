@@ -70,9 +70,9 @@ class ReviewerSubmissionDAO extends ArticleDAO {
 				'title', $locale, // Section title
 				'abbrev', $primaryLocale, // Section abbreviation
 				'abbrev', $locale, // Section abbreviation
-				USER_FIELD_FIRSTNAME, AppLocale::getLocale(),
-				USER_FIELD_MIDDLENAME, AppLocale::getLocale(),
-				USER_FIELD_LASTNAME, AppLocale::getLocale(),
+				IDENTITY_SETTING_FIRSTNAME, AppLocale::getLocale(),
+				IDENTITY_SETTING_MIDDLENAME, AppLocale::getLocale(),
+				IDENTITY_SETTING_LASTNAME, AppLocale::getLocale(),
 				(int) $reviewId
 			)
 		);
@@ -236,9 +236,9 @@ class ReviewerSubmissionDAO extends ArticleDAO {
 			'title', $locale, // Section title
 			'abbrev', $primaryLocale, // Section abbreviation
 			'abbrev', $locale, // Section abbreviation
-			USER_FIELD_FIRSTNAME, AppLocale::getLocale(),
-			USER_FIELD_MIDDLENAME, AppLocale::getLocale(),
-			USER_FIELD_LASTNAME, AppLocale::getLocale(),
+			IDENTITY_SETTING_FIRSTNAME, AppLocale::getLocale(),
+			IDENTITY_SETTING_MIDDLENAME, AppLocale::getLocale(),
+			IDENTITY_SETTING_LASTNAME, AppLocale::getLocale(),
 			(int) $reviewerId
 		);
 		if ($journalId) $params[] = (int) $journalId;

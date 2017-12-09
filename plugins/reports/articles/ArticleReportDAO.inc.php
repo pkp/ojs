@@ -127,9 +127,9 @@ class ArticleReportDAO extends DAO {
 					$primaryLocale,
 					'affiliation',
 					$locale,
-					AUTHOR_FIELD_FIRSTNAME, AppLocale::getLocale(),
-					AUTHOR_FIELD_MIDDLENAME, AppLocale::getLocale(),
-					AUTHOR_FIELD_LASTNAME, AppLocale::getLocale(),
+					IDENTITY_SETTING_FIRSTNAME, AppLocale::getLocale(),
+					IDENTITY_SETTING_MIDDLENAME, AppLocale::getLocale(),
+					IDENTITY_SETTING_LASTNAME, AppLocale::getLocale(),
 					(int) $journalId,
 					$article->getId()
 				)
