@@ -15,6 +15,6 @@
 	<message key="plugins.generic.recommendByAuthor.displayName">Rekommenderade artiklar av samma författare</message>
 	<message key="plugins.generic.recommendByAuthor.description">Det här pluginet infogar en lista på artiklar av samma författare på artikelns abstractsida.</message>
     
-    <message key="plugins.generic.recommendByAuthor.heading">Mest lästa artiklar av samma författare</message>
-    <message key="plugins.generic.recommendByAuthor.noMetric">OBS.: Pluginet kräver minst ett statistik/rapport-plugin aktiverat för att fungera. Om dina statistikplugin skapar mer än ett mått, välj då det huvudsakliga måttet på sidan för administratörens sidinställningar och/eller inställningarna för tidskriftsansvarig.</message>
+	<message key="plugins.generic.recommendByAuthor.heading">Mest lästa artiklar av samma författare</message>
+	<message key="plugins.generic.recommendByAuthor.noMetric">OBS.: Pluginet kräver minst ett statistik/rapport-plugin aktiverat för att fungera. Om dina statistikplugin skapar mer än ett mått, välj då det huvudsakliga måttet på sidan för administratörens sidinställningar och/eller inställningarna för tidskriftsansvarig.</message>
 </locale>
