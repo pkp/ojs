@@ -34,7 +34,10 @@ class AuthorDAO extends PKPAuthorDAO {
 		$publishedArticles = array();
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 		$params = array(
-			'affiliation','firstName',AppLocale::getLocale(),'lastName',AppLocale::getLocale(),'middleName',AppLocale::getLocale(),
+			'affiliation', 
+			AUTHOR_FIELD_FIRSTNAME, AppLocale::getLocale(),
+			AUTHOR_FIELD_LASTNAME, AppLocale::getLocale(),
+			AUTHOR_FIELD_MIDDLENAME,AppLocale::getLocale(),
 			$firstName, $middleName, $lastName,
 			$affiliation, $country
 		);
@@ -88,9 +91,9 @@ class AuthorDAO extends PKPAuthorDAO {
 		$params = array(
 			'affiliation', AppLocale::getPrimaryLocale(),
 			'affiliation', AppLocale::getLocale(),
-			'firstName',AppLocale::getLocale(),
-			'lastName',AppLocale::getLocale(),
-			'middleName',AppLocale::getLocale()
+			AUTHOR_FIELD_FIRSTNAME, AppLocale::getLocale(),
+			AUTHOR_FIELD_LASTNAME ,AppLocale::getLocale(),
+			AUTHOR_FIELD_MIDDLENAME,AppLocale::getLocale()
 		);
 
 		if (isset($journalId)) $params[] = $journalId;
