@@ -281,7 +281,7 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 	 * @param $row array
 	 * @return Issue object
 	 */
-	function _returnIssueFromRow($row) {
+	function _fromRow($row) {
 		$issue = $this->newDataObject();
 		$issue->setId($row['issue_id']);
 		$issue->setJournalId($row['journal_id']);
@@ -302,8 +302,18 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 
 		$this->getDataObjectSettings('issue_settings', 'issue_id', $row['issue_id'], $issue);
 
-		HookRegistry::call('IssueDAO::_returnIssueFromRow', array(&$issue, &$row));
+		HookRegistry::call('IssueDAO::_fromRow', array(&$issue, &$row));
 
+		return $issue;
+	}
+
+	/**
+	 * @copydoc self::_fromRow()
+	 * @deprecated
+	 */
+	function _returnIssueFromRow($row) {
+		$issue = self::_fromRow($row);
+		HookRegistry::call('IssueDAO::_returnIssueFromRow', array(&$issue, &$row));
 		return $issue;
 	}
 

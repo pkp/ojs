@@ -118,13 +118,37 @@ class IssueHandler extends Handler {
 	 */
 	function archive($args, $request) {
 		$this->setupTemplate($request);
+		$page = isset($args[0]) ? (int) $args[0] : 1;
 		$templateMgr = TemplateManager::getManager($request);
-		$journal = $request->getJournal();
+		$context = $request->getContext();
 
-		$rangeInfo = $this->getRangeInfo($request, 'issues');
-		$issueDao = DAORegistry::getDAO('IssueDAO');
-		$publishedIssuesIterator = $issueDao->getPublishedIssues($journal->getId(), $rangeInfo);
-		$templateMgr->assign('issues', $publishedIssuesIterator);
+		$count = $context->getSetting('itemsPerPage') ? $context->getSetting('itemsPerPage') : Config::getVar('interface', 'items_per_page');
+		$offset = $page > 1 ? ($page - 1) * $count : 0;
+
+		import('classes.core.ServicesContainer');
+		$issueService = ServicesContainer::instance()->get('issue');
+		$params = array(
+			'count' => $count,
+			'offset' => $offset,
+			'isPublished' => true,
+		);
+		$issues = $issueService->getIssues($context->getId(), $params);
+		$total = $issueService->getIssuesMaxCount($context->getId(), $params);
+
+		$showingStart = $offset + 1;
+		$showingEnd = min($offset + $count, $offset + count($issues));
+		$nextPage = $total > $showingEnd ? $page + 1 : null;
+		$prevPage = $showingStart > 1 ? $page - 1 : null;
+
+		$templateMgr->assign(array(
+			'issues' => $issues,
+			'showingStart' => $showingStart,
+			'showingEnd' => $showingEnd,
+			'total' => $total,
+			'nextPage' => $nextPage,
+			'prevPage' => $prevPage,
+		));
+
 		$templateMgr->display('frontend/pages/issueArchive.tpl');
 	}
 

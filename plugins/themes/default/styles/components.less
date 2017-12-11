@@ -346,18 +346,32 @@
 	}
 }
 
-// Pagination component
-// eg: 1-2 of 10 items
+// Pagination
 .cmp_pagination {
-	margin-top: @double;
-	font-size: @font-sml;
-	line-height: @double;
-	color: @text-light;
+	.pkp_helpers_clear;
 	text-align: right;
 
-	a {
-		padding-left: 0.5em;
-		padding-right: 0.5em;
+	.prev {
+		float: left;
+		margin-right: 0.5em;
+		text-decoration: none;
+
+		&:before {
+			.fa;
+			content: @fa-var-long-arrow-left;
+			margin-right: 0.5em;
+		}
+	}
+
+	.next {
+		margin-left: 0.5em;
+		text-decoration: none;
+
+		&:after {
+			.fa;
+			content: @fa-var-long-arrow-right;
+			margin-left: 0.5em;
+		}
 	}
 }
 

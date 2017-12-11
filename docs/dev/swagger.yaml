@@ -624,10 +624,13 @@ paths:
         **OJS 3.1 Target**:
           * See `/issues/{issueId}`.
           * Only published issues are returned.
-          * Only the `volume`, `number` and `year` parameters are supported.
+          * Only the `volumes`, `numbers` and `years` parameters are supported.
 
         **Additional Notes**:
           * Results are ordered by `datePublished`, most recent first.
+
+        **Changes**:
+          * `volume`, `number` and `year` were changed to `volumes`, `numbers` and `years` in OJS 3.1.1. Multiple values can be passed as a comma-separated string (eg - `1,2,3`).
       parameters:
         - name: count
           description: How many results to return in a single request. Default is `20`. Max is `100`.
@@ -639,26 +642,36 @@ paths:
           in: query
           required: false
           type: integer
+        - name: orderBy
+          description: Order the results returned. Must be one of `datePublished` or `lastModified`. Default is `datePublished`.
+          in: query
+          required: false
+          type: string
+        - name: orderDirection
+          description: Return the results in ascending or descending order. Must be `ASC` or `DESC`. Default is `DESC`.
+          in: query
+          required: false
+          type: string
         - name: isPublished
-          description: Filter returned issues by those that have been published.
+          description: Filter returned issues by those that have been published. Pass a `false` value to return only unpublished issues.
           in: query
           required: false
           type: boolean
-        - name: volume
+        - name: volumes
           description: Filter returned issues by those in a specific volume.
           in: query
           required: false
-          type: integer
-        - name: number
+          type: string
+        - name: numbers
           description: Filter returned issues by those assigned a specific number.
           in: query
           required: false
-          type: integer
-        - name: year
+          type: string
+        - name: years
           description: Filter returned issues by those in a specific year.
           in: query
           required: false
-          type: integer
+          type: string
       responses:
         '200':
           description: List of issues.

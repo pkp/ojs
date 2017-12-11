@@ -15,7 +15,6 @@
  * @brief Handle requests for issue functions.
  *
  */
-
 switch ($op) {
 	case 'index':
 	case 'current':
