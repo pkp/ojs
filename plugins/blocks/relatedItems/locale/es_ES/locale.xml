@@ -13,7 +13,7 @@
 
 <locale name="es_ES" full_name="Español (España)">
 	<message key="plugins.block.relatedItems.displayName">Bloque de ítems relacionados</message>
-	<message key="plugins.block.relatedItems.description">Este plugin muestra un bloque conteniendo ítems relacionados en la barra lateral de las herramientas de lectura.</message>
+	<message key="plugins.block.relatedItems.description">Este módulo muestra un bloque de ítems relacionados con el artículo en la barra lateral de las herramientas de lectura.</message>
 	<message key="plugins.block.relatedItems.title">Ítems relacionados</message>
 	<message key="plugins.block.relatedItems.hide">Ocultar</message>
 	<message key="plugins.block.relatedItems.show">Mostrar todos</message>

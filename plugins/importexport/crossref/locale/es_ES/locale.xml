@@ -19,7 +19,7 @@
 {$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...
 {$scriptName} {$pluginName} register [journal_path] articles objectId1 [objectId2] ...
 ]]></message>
-	<message key="plugins.importexport.crossref.requirements.satisfied">Se satisfacen todas las dependencias de plugins.</message>
+	<message key="plugins.importexport.crossref.requirements.satisfied">Se satisfacen todas las dependencias de moulos.</message>
 	<message key="plugins.importexport.crossref.settings.depositorIntro">Para un correcto depósito en CrossRef, se requieren los siguientes ítems.</message>
 	<message key="plugins.importexport.crossref.settings.form.depositorName">Nombre del depositario</message>
 	<message key="plugins.importexport.crossref.settings.form.depositorEmail">Email del depositario</message>

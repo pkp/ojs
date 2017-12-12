@@ -13,5 +13,5 @@
 
 <locale name="es_ES" full_name="Español (España)">
 	<message key="plugins.reports.views.displayName">Ver informe</message>
-	<message key="plugins.reports.views.description">Este plugin implementa un informe CSV que describe a los lectores de cada artículo.</message>
+	<message key="plugins.reports.views.description">Este módulo genera un informe CSV que describe a los lectores de cada artículo.</message>
 </locale>
