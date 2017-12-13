@@ -32,7 +32,7 @@
 	{/fbvFormSection}
 
 	{fbvFormSection title="manager.subscriptionTypes.form.cost"}
-		{fbvElement type="select" required=true name="currency" id="currency" value=$currency from=$validCurrencies label="manager.subscriptionTypes.form.currency" size=$fbvStyles.size.SMALL inline=true translate=false}
+		{fbvElement type="select" required=true name="currency" id="currency" selected=$currency from=$validCurrencies label="manager.subscriptionTypes.form.currency" size=$fbvStyles.size.SMALL inline=true translate=false}
 		{fbvElement type="text" required=true name="cost" id="cost" value=$cost label="manager.subscriptionTypes.form.cost" description="manager.subscriptionTypes.form.costInstructions" size=$fbvStyles.size.SMALL inline=true}
 	{/fbvFormSection}
 
