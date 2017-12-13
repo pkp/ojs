@@ -48,11 +48,9 @@ class ArticleGalleyForm extends Form {
 				'required',
 				'editor.issues.galleyLocaleRequired'
 			),
-			create_function(
-				'$galleyLocale, $availableLocales',
-				'return in_array($galleyLocale, $availableLocales);'
-			),
-			array_keys($journal->getSupportedSubmissionLocaleNames())
+			function($galleyLocale) use ($journal) {
+				return in_array($galleyLocale, $journal->getSupportedSubmissionLocaleNames());
+			}
 		);
 	}
 

@@ -49,13 +49,20 @@ class IndividualSubscriptionForm extends SubscriptionForm {
 		}
 
 		// Ensure subscription type is valid
-		$this->addCheck(new FormValidatorCustom($this, 'typeId', 'required', 'manager.subscriptions.form.typeIdValid', create_function('$typeId, $journalId', '$subscriptionTypeDao = DAORegistry::getDAO(\'SubscriptionTypeDAO\'); return ($subscriptionTypeDao->subscriptionTypeExistsByTypeId($typeId, $journalId) && $subscriptionTypeDao->getSubscriptionTypeInstitutional($typeId) == 0);'), array($journal->getId())));
+		$this->addCheck(new FormValidatorCustom($this, 'typeId', 'required', 'manager.subscriptions.form.typeIdValid', function($typeId) use ($journalId) {
+			$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
+			return ($subscriptionTypeDao->subscriptionTypeExistsByTypeId($typeId, $journalId) && $subscriptionTypeDao->getSubscriptionTypeInstitutional($typeId) == 0);
+		}));
 
 		// Ensure that user does not already have a subscription for this journal
 		if (!isset($subscriptionId)) {
 			$this->addCheck(new FormValidatorCustom($this, 'userId', 'required', 'manager.subscriptions.form.subscriptionExists', array(DAORegistry::getDAO('IndividualSubscriptionDAO'), 'subscriptionExistsByUserForJournal'), array($journalId), true));
 		} else {
-			$this->addCheck(new FormValidatorCustom($this, 'userId', 'required', 'manager.subscriptions.form.subscriptionExists', create_function('$userId, $journalId, $subscriptionId', '$subscriptionDao = DAORegistry::getDAO(\'IndividualSubscriptionDAO\'); $checkSubscription = $subscriptionDao->getByUserIdForJournal($userId, $journalId); return (!$checkSubscription || $checkSubscription->getId() == $subscriptionId) ? true : false;'), array($journalId, $subscriptionId)));
+			$this->addCheck(new FormValidatorCustom($this, 'userId', 'required', 'manager.subscriptions.form.subscriptionExists', function($userId) use ($journalId, $subscriptionId) {
+				$subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
+				$checkSubscription = $subscriptionDao->getByUserIdForJournal($userId, $journalId);
+				return (!$checkSubscription || $checkSubscription->getId() == $subscriptionId) ? true : false;
+			}));
 		}
 	}
 

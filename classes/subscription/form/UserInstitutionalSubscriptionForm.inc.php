@@ -58,8 +58,10 @@ class UserInstitutionalSubscriptionForm extends Form {
 		$this->subscriptionTypes = $subscriptionTypes->toArray();
 
 		// Ensure subscription type is valid
-		$this->addCheck(new FormValidatorCustom($this, 'typeId', 'required', 'user.subscriptions.form.typeIdValid', create_function('$typeId, $journalId', '$subscriptionTypeDao = DAORegistry::getDAO(\'SubscriptionTypeDAO\'); return ($subscriptionTypeDao->subscriptionTypeExistsByTypeId($typeId, $journalId) && $subscriptionTypeDao->getSubscriptionTypeInstitutional($typeId) == 1) && $subscriptionTypeDao->getSubscriptionTypeDisablePublicDisplay($typeId) == 0;'), array($journal->getId())));
-
+		$this->addCheck(new FormValidatorCustom($this, 'typeId', 'required', 'user.subscriptions.form.typeIdValid', function($typeId) use ($journalId) {
+			$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
+			return ($subscriptionTypeDao->subscriptionTypeExistsByTypeId($typeId, $journalId) && $subscriptionTypeDao->getSubscriptionTypeInstitutional($typeId) == 1) && $subscriptionTypeDao->getSubscriptionTypeDisablePublicDisplay($typeId) == 0;
+		}));
 
 		// Ensure institution name is provided
 		$this->addCheck(new FormValidator($this, 'institutionName', 'required', 'user.subscriptions.form.institutionNameRequired'));
@@ -129,22 +131,22 @@ class UserInstitutionalSubscriptionForm extends Form {
 		}
 
 		// Domain or at least one IP range has been provided
-		$this->addCheck(new FormValidatorCustom($this, 'domain', 'required', 'user.subscriptions.form.domainIPRangeRequired', create_function('$domain, $ipRangeProvided', 'return ($domain != \'\' || $ipRangeProvided) ? true : false;'), array($ipRangeProvided)));
+		$this->addCheck(new FormValidatorCustom($this, 'domain', 'required', 'user.subscriptions.form.domainIPRangeRequired', function($domain) use ($ipRangeProvided) {
+			return ($domain != '' || $ipRangeProvided) ? true : false;
+		}));
 
 		// If provided ensure IP ranges have IP address format; IP addresses may contain wildcards
 		if ($ipRangeProvided) {
 			import('classes.subscription.InstitutionalSubscription');
-			$this->addCheck(new FormValidatorArrayCustom($this, 'ipRanges', 'required', 'user.subscriptions.form.ipRangeValid', create_function('$ipRange, $regExp', 'return PKPString::regexp_match($regExp, $ipRange);'),
-				array(
+			$this->addCheck(new FormValidatorArrayCustom($this, 'ipRanges', 'required', 'user.subscriptions.form.ipRangeValid', function($ipRange) {
+				return PKPString::regexp_match(
 					'/^' .
 					// IP4 address (with or w/o wildcards) or IP4 address range (with or w/o wildcards) or CIDR IP4 address
 					'((([0-9]|[1-9][0-9]|[1][0-9]{2}|[2][0-4][0-9]|[2][5][0-5]|[' . SUBSCRIPTION_IP_RANGE_WILDCARD . '])([.]([0-9]|[1-9][0-9]|[1][0-9]{2}|[2][0-4][0-9]|[2][5][0-5]|[' . SUBSCRIPTION_IP_RANGE_WILDCARD . '])){3}((\s)*[' . SUBSCRIPTION_IP_RANGE_RANGE . '](\s)*([0-9]|[1-9][0-9]|[1][0-9]{2}|[2][0-4][0-9]|[2][5][0-5]|[' . SUBSCRIPTION_IP_RANGE_WILDCARD . '])([.]([0-9]|[1-9][0-9]|[1][0-9]{2}|[2][0-4][0-9]|[2][5][0-5]|[' . SUBSCRIPTION_IP_RANGE_WILDCARD . '])){3}){0,1})|(([0-9]|[1-9][0-9]|[1][0-9]{2}|[2][0-4][0-9]|[2][5][0-5])([.]([0-9]|[1-9][0-9]|[1][0-9]{2}|[2][0-4][0-9]|[2][5][0-5])){3}([\/](([3][0-2]{0,1})|([1-2]{0,1}[0-9])))))' .
-					'$/i'
-				),
-				false,
-				array(),
-				false
-			));
+					'$/i',
+					$ipRange
+				);
+			}));
 		}
 	}
 

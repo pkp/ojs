@@ -57,11 +57,23 @@ class URNSettingsForm extends Form {
 
 		parent::__construct($plugin->getTemplatePath() . 'settingsForm.tpl');
 
-		$this->addCheck(new FormValidatorCustom($this, 'urnObjects', 'required', 'plugins.pubIds.urn.manager.settings.urnObjectsRequired', create_function('$enableIssueURN,$form', 'return $form->getData(\'enableIssueURN\') || $form->getData(\'enableSubmissionURN\') || $form->getData(\'enableRepresentationURN\');'), array($this)));
+		$form = $this;
+		$this->addCheck(new FormValidatorCustom($this, 'urnObjects', 'required', 'plugins.pubIds.urn.manager.settings.urnObjectsRequired', function($enableIssueURN) use ($form) {
+			return $form->getData('enableIssueURN') || $form->getData('enableSubmissionURN') || $form->getData('enableRepresentationURN');
+		}));
 		$this->addCheck(new FormValidatorRegExp($this, 'urnPrefix', 'required', 'plugins.pubIds.urn.manager.settings.form.urnPrefixPattern', '/^urn:[a-zA-Z0-9-]*:.*/'));
-		$this->addCheck(new FormValidatorCustom($this, 'urnIssueSuffixPattern', 'required', 'plugins.pubIds.urn.manager.settings.form.urnIssueSuffixPatternRequired', create_function('$urnIssueSuffixPattern,$form', 'if ($form->getData(\'urnSuffix\') == \'pattern\' && $form->getData(\'enableIssueURN\')) return $urnIssueSuffixPattern != \'\';return true;'), array($this)));
-		$this->addCheck(new FormValidatorCustom($this, 'urnSubmissionSuffixPattern', 'required', 'plugins.pubIds.urn.manager.settings.form.urnSubmissionSuffixPatternRequired', create_function('$urnSubmissionSuffixPattern,$form', 'if ($form->getData(\'urnSuffix\') == \'pattern\' && $form->getData(\'enableSubmissionURN\')) return $urnSubmissionSuffixPattern != \'\';return true;'), array($this)));
-		$this->addCheck(new FormValidatorCustom($this, 'urnRepresentationSuffixPattern', 'required', 'plugins.pubIds.urn.manager.settings.form.urnRepresentationSuffixPatternRequired', create_function('$urnRepresentationSuffixPattern,$form', 'if ($form->getData(\'urnSuffix\') == \'pattern\' && $form->getData(\'enableRepresentationURN\')) return $urnRepresentationSuffixPattern != \'\';return true;'), array($this)));
+		$this->addCheck(new FormValidatorCustom($this, 'urnIssueSuffixPattern', 'required', 'plugins.pubIds.urn.manager.settings.form.urnIssueSuffixPatternRequired', function($urnIssueSuffixPattern) use ($form) {
+			if ($form->getData('urnSuffix') == 'pattern' && $form->getData('enableIssueURN')) return $urnIssueSuffixPattern != '';
+			return true;
+		}));
+		$this->addCheck(new FormValidatorCustom($this, 'urnSubmissionSuffixPattern', 'required', 'plugins.pubIds.urn.manager.settings.form.urnSubmissionSuffixPatternRequired', function($urnSubmissionSuffixPattern) use ($form) {
+			if ($form->getData('urnSuffix') == 'pattern' && $form->getData('enableSubmissionURN')) return $urnSubmissionSuffixPattern != '';
+			return true;
+		}));
+		$this->addCheck(new FormValidatorCustom($this, 'urnRepresentationSuffixPattern', 'required', 'plugins.pubIds.urn.manager.settings.form.urnRepresentationSuffixPatternRequired', function($urnRepresentationSuffixPattern) use ($form) {
+			if ($form->getData('urnSuffix') == 'pattern' && $form->getData('enableRepresentationURN')) return $urnRepresentationSuffixPattern != '';
+			return true;
+		}));
 		$this->addCheck(new FormValidatorUrl($this, 'urnResolver', 'required', 'plugins.pubIds.urn.manager.settings.form.urnResolverRequired'));
 		$this->addCheck(new FormValidatorPost($this));
 		$this->addCheck(new FormValidatorCSRF($this));

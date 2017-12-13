@@ -58,13 +58,20 @@ class UserIndividualSubscriptionForm extends Form {
 		$this->subscriptionTypes = $subscriptionTypes->toAssociativeArray();
 
 		// Ensure subscription type is valid
-		$this->addCheck(new FormValidatorCustom($this, 'typeId', 'required', 'user.subscriptions.form.typeIdValid', create_function('$typeId, $journalId', '$subscriptionTypeDao = DAORegistry::getDAO(\'SubscriptionTypeDAO\'); return ($subscriptionTypeDao->subscriptionTypeExistsByTypeId($typeId, $journalId) && $subscriptionTypeDao->getSubscriptionTypeInstitutional($typeId) == 0) && $subscriptionTypeDao->getSubscriptionTypeDisablePublicDisplay($typeId) == 0;'), array($journal->getId())));
+		$this->addCheck(new FormValidatorCustom($this, 'typeId', 'required', 'user.subscriptions.form.typeIdValid', function($typeId) use ($journalId) {
+			$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
+			return ($subscriptionTypeDao->subscriptionTypeExistsByTypeId($typeId, $journalId) && $subscriptionTypeDao->getSubscriptionTypeInstitutional($typeId) == 0) && $subscriptionTypeDao->getSubscriptionTypeDisablePublicDisplay($typeId) == 0;
+		}));
 
 		// Ensure that user does not already have a subscription for this journal
 		if (!isset($subscriptionId)) {
 			$this->addCheck(new FormValidatorCustom($this, 'userId', 'required', 'user.subscriptions.form.subscriptionExists', array(DAORegistry::getDAO('IndividualSubscriptionDAO'), 'subscriptionExistsByUserForJournal'), array($journalId), true));
 		} else {
-			$this->addCheck(new FormValidatorCustom($this, 'userId', 'required', 'user.subscriptions.form.subscriptionExists', create_function('$userId, $journalId, $subscriptionId', '$subscriptionDao = DAORegistry::getDAO(\'IndividualSubscriptionDAO\'); $checkId = $subscriptionDao->getByUserIdForJournal($userId, $journalId); return ($checkId == 0 || $checkId == $subscriptionId) ? true : false;'), array($journalId, $subscriptionId)));
+			$this->addCheck(new FormValidatorCustom($this, 'userId', 'required', 'user.subscriptions.form.subscriptionExists', function($userId) use ($journalId, $subscriptionId) {
+				$subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
+				$checkId = $subscriptionDao->getByUserIdForJournal($userId, $journalId);
+				return ($checkId == 0 || $checkId == $subscriptionId) ? true : false;
+			}));
 		}
 
 		$this->addCheck(new FormValidatorPost($this));
