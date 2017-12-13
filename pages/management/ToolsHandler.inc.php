@@ -45,7 +45,7 @@ class ToolsHandler extends PKPToolsHandler {
 				$issueDao = DAORegistry::getDAO('IssueDAO');
 				$issue = $issueDao->getById($assocId);
 				if ($issue) {
-					$objectTitle = $issue->getLocalizedTitle();
+					$objectTitle = $issue->getIssueIdentification();
 				}
 				break;
 		}
