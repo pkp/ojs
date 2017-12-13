@@ -94,8 +94,8 @@
 
 	{* Articles *}
 	<div class="sections">
-	{foreach name=sections from=$publishedArticles item=section}
-		<div class="section">
+	{foreach name=sections key=currSectionId from=$publishedArticles item=section}
+		<div class="section" id="sectionId_{$currSectionId}">
 		{if $section.articles}
 			{if $section.title}
 				<h2>
