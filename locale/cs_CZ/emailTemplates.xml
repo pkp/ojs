@@ -126,14 +126,6 @@ Pokud máte nějaké otázky, kontaktujte mě prosím. Děkujeme, že jste zvoli
 {$editorialContactSignature}]]></body>
 		<description>Tento email, pokud je povolen, je automaticky zaslán autorovi, když dokončí proces odesílání příspěvku do časopisu. Obsahuje informace o možnosti sledování příspěvku během redakčního zpracování a poděkování autorovi za příspěvek.</description>
 	</email_text>
-	<email_text key="SUBMISSION_UNSUITABLE">
-		<subject>Nevhodný příspěvek</subject>
-		<body><![CDATA[{$authorName}:<br />
-<br />
-Z úvodního prostudování příspěvku &quot;{$submissionTitle}&quot; jasně vyplynulo, že tento příspěvek nezapadá do záběru a zaměření časopisu {$contextName}. Doporučuji konzultovat popis tohoto časopisu pod položkou O časopisu a také obsah posledních čísel. Zjistíte tak více o pracích, které publikujeme. Můžete také zvážit zaslání Vašeho rukopisu do jiného, vhodnějšího časopisu.<br />
-<br />
-{$editorialContactSignature}]]></body>
-	</email_text>
 	<email_text key="SUBMISSION_COMMENT">
 		<subject>Komentář příspěvku</subject>
 		<body><![CDATA[{$name}:<br />

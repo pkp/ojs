@@ -134,17 +134,6 @@ Eğer herhangi bir soru veya sorununuz olursa lütfen bizimle iletişime geçini
 {$editorialContactSignature}]]></body>
 		<description>Bu eposta, etkinleştirilmişse, bir yazar dergiye yazı gönderme işlemini tamamladığında otomatik olarak gönderilir. Bu posta yazara gönderisi için teşekkür mesajını ve gönderisinin durumunu takip edebilmesi için gerekli olan bilgileri iletir.</description>
 	</email_text>
-	<email_text key="SUBMISSION_UNSUITABLE">
-		<subject>Uygun Olmayan Çalışma</subject>
-		<body><![CDATA[Sayın {$authorName},<br />
-<br />
-&quot;{$submissionTitle}&quot; başlıklı başvurunuz, &quot;{$contextName}&quot; dergimizin ilgi alanı ile uyuşmadığı için ilk değerlendirme sonucunda yayınlanamayacağına karar verilmiştir. Çalışmanızı konusu ile ilgili bir dergide yayınlayabileceğinizi düşünüyoruz.<br />
-Dergi Hakkında bölümünde dergimiz ile ilgili tanımlamayı gözden geçirmenizi öneririz. Ayrıca daha ayrıntılı bilgi edinmek için mevcut içeriğimizi de inceleyebilirsiniz. <br />
-İleride dergimiz içeriği ile daha uyumlu çalışmalarınızı bizimle paylaşmanızı rica ederiz.<br />
-<br />
-<br />
-{$editorialContactSignature}]]></body>
-	</email_text>
 	<email_text key="SUBMISSION_COMMENT">
 		<subject>Başvuru ile ilgili yeni yorum</subject>
 		<body><![CDATA[Sayın {$name},<br />

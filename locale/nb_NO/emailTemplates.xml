@@ -101,14 +101,6 @@ Ta kontakt med meg, hvis det er noe mer du vil vite. Takk for at du velger tidss
 {$editorialContactSignature}]]></body>
 		<description>Når denne funksjonen er slått på, sendes denne e-posten automatisk til forfattere, så snart de har fullført prosedyren for innsending av manuskript til tidsskriftet. E-posten gir informasjon om å følge manuskriptet gjennom den redaksjonelle prosessen, og takker forfatteren for bidraget.</description>
 	</email_text>
-	<email_text key="SUBMISSION_UNSUITABLE">
-		<subject>Uegnet manuskript</subject>
-		<body><![CDATA[{$authorName}:<br />
-<br />
-Ved den redaksjonelle gjennomgangen av ditt manuskript &quot;{$submissionTitle}&quot;, har vi dessverre funnet at dette bidraget ikke passer med det faglige hovedfokuset og spennvidden for {$contextName}. For at du skal bli bedre kjent med vår faglige profil, vil jeg anbefale deg å se nærmere både på beskrivelsen av tidsskriftet vårt (under Om), og på våre tidligere utgaver. Du bør også vurdere om du kjenner til andre tidsskrift som egner seg bedre for publisering av dette bidraget.<br />
-<br />
-{$editorialContactSignature}]]></body>
-	</email_text>
 	<email_text key="SUBMISSION_COMMENT">
 		<subject>Kommentar til manuskript</subject>
 		<body><![CDATA[{$name}:<br />

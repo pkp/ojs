@@ -174,14 +174,6 @@
 {$editorialContactSignature}]]></body>
 		<description>عند تمكين هذه الرسالة، سيتم إرسالها تلقائياً إلى المؤلفين الآخرين الذين لا يملكون حسابات في نظام المجلات المفتوحة المعني خلال مرحلة تقديم الطلب.</description>
 	</email_text>
-	<email_text key="SUBMISSION_UNSUITABLE">
-		<subject>طلب نشر غير متوافق مع المجلة</subject>
-		<body><![CDATA[{$authorName}:<br />
-<br />
-إن التحكيم الأولي للمؤلَّف الموسوم &quot;{$submissionTitle}&quot; أظهر جلياً أنه لا يتناسب مع محاور التخصصات العلمية في {$contextName}. أوصيك بمراجعة توصيف هذه المجلة المبين في صفحة (عن المجلة)، فضلاً عن الاطلاع على محتوياتها لتتعرف أكثر على نوعية الأعمال التي ننشرها. إذ عندها، قد تأخذ في الحسبان تقديم طلبك للنشر في مجلة علمية أخرى مناسبة أكثر.<br />
-<br />
-{$editorialContactSignature}]]></body>
-	</email_text>
 	<email_text key="EDITOR_ASSIGN">
 		<subject>تعيين المحرر</subject>
 		<body><![CDATA[{$editorialContactName}:<br />

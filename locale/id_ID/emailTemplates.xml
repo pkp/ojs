@@ -174,14 +174,6 @@ Jika ada pertanyaan, silakan hubungi kami. Terimakasih telah mempercayakan publi
 {$editorialContactSignature}]]></body>
 		<description>Email ini, jika diaktifkan, secara otomatis dikirimkan ke penulis saat menyelesaikan proses penyerahan naskah ke jurnal. Email ini memberikan informasi mengenai pemantauan kemajuan proses editorial dan mengucapkan terimakasih atas naskah yang dikirimkan.</description>
 	</email_text>
-	<email_text key="SUBMISSION_UNSUITABLE">
-		<subject>Naskah Tidak Sesuai</subject>
-		<body><![CDATA[{$authorName}:<br />
-<br />
-Review awal dari &quot;{$submissionTitle}&quot; menunjukkan bahwa naskah ini tidak sesuai dengan lingkup dan fokus dari {$contextName}. Kami merekomendasikan Anda untuk mempelajari deskripsi jurnal ini di menu Tentang Jurnal, beserta isi terbitan, untuk mengetahui lebih jauh karya yang kami terbitkan. Anda juga dapat mempertimbangkan untuk mengirimkan naskah ini ke jurnal lain yang lebih sesuai.<br />
-<br />
-{$editorialContactSignature}]]></body>
-	</email_text>
 	<email_text key="EDITOR_ASSIGN">
 		<subject>Penugasan Editorial</subject>
 		<body><![CDATA[{$editorialContactName}:<br />

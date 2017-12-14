@@ -192,14 +192,6 @@ Si tiene alguna duda puede ponerse en contacto conmigo. Gracias por elegir esta 
 {$editorialContactSignature}]]></body>
 		<description>Este correo electrónico, si está activado, se envía automáticamente a un autor/a cuando completa el proceso de envío de un manuscrito a la editorial. Proporciona información sobre el seguimiento del envío en el proceso y agradece al autor/a el envío.</description>
 	</email_text>
-	<email_text key="SUBMISSION_UNSUITABLE">
-		<subject>Envío rechazado</subject>
-		<body><![CDATA[{$authorName}:<br />
-<br />
-Tras una revisión inicial de &quot;{$submissionTitle}&quot; se ha decidido que este envío no entra dentro del ámbito de {$contextName}. Le recomiendo que consulte la descripción de esta revista en Acerca de, así como los artículos publicados, para conocer el tipo de trabajos que publicamos. También puede considerar enviar este manuscrito a otra revista más adecuada.<br />
-<br />
-{$editorialContactSignature}]]></body>
-	</email_text>
 	<email_text key="SUBMISSION_COMMENT">
 		<subject>Comentario a envío</subject>
 		<body><![CDATA[{$name}:<br />

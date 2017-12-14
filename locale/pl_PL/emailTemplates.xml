@@ -145,18 +145,6 @@ Z wyrazami szacunku, <br />
 {$editorialContactSignature}<br />]]></body>
 		<description>Wiadomość jest automatycznie wysyłana do autora po zgłoszeniu tekstu do czasopisma.</description>
 	</email_text>
-	<email_text key="SUBMISSION_UNSUITABLE">
-		<subject>Zgłoszony tekst niezgodny z zakresem czasopisma</subject>
-		<body><![CDATA[Szanowna Pani/ Szanowny Panie,<br />
-<br />
-po wstępnym zapoznaniu się z treścią zgłoszonego tekstu {$submissionTitle}, uznaliśmy, że nie jest on zgodny z zakresem czasopisma "{$contextName}". Prosimy o zapoznanie się z opisem czasopisma, jak również z treścią wybranych artykułów.<br />
-<br />
-Redakcja rekomenduje zgłoszenie tekstu do innego czasopisma.<br />
-<br />
-Z wyrazami szacunku, <br />
-{$editorialContactSignature}<br />]]></body>
-		<description></description>
-	</email_text>
 	<email_text key="SUBMISSION_COMMENT">
 		<subject>Komentarz do zgłoszenia</subject>
 		<body>{$name}:

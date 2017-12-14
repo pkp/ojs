@@ -128,15 +128,6 @@ Neemt u alstublieft contact op als u vragen heeft. Dank u voor het overwegen van
 {$editorialContactSignature}]]></body>
 		<description>Deze e-mail wordt, indien geactiveerd, automatisch verstuurd naar een auteur als die de inzendprocedure van een manuscript bij het tijdschrift voltooit. Er wordt informatie gegeven over het volgen van de inzending door het proces en de auteur wordt bedankt voor de inzending.</description>
 	</email_text>
-	<email_text key="SUBMISSION_UNSUITABLE">
-		<subject>Ongeschikte inzending</subject>
-		<body><![CDATA[{$authorName}:<br />
-<br />
-Een eerste review van &quot;{$submissionTitle}&quot; heeft duidelijk gemaakt dat deze inzending niet past binnen de scope en focus van {$contextName}. Ik raad u aan om kennis te nemen van de beschrijving van dit tijdschrift bij Over dit tijdschrift en van de actuele inhoud om meer te weten te komen over het werk dat we publiceren. U kunt overwegen om dit manuscript in te zenden bij een ander, meer geschikt tijdschrift.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description/>
-	</email_text>
 	<email_text key="SUBMISSION_COMMENT">
 		<subject>Opmerking bij inzending</subject>
 		<body><![CDATA[{$name}:<br />

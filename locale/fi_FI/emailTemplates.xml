@@ -177,15 +177,6 @@ Ystävällisin terveisin,<br />
 {$editorialContactSignature}]]></body>
 		<description>This email, when enabled, is automatically sent to the other authors who are not users specified during the submission process.</description>
 	</email_text>	
-	<email_text key="SUBMISSION_UNSUITABLE">
-		<subject>Soveltumaton käsikirjoitus</subject>
-		<body><![CDATA[Hyvä {$authorName},<br />
-<br />
-Käsikirjoituksen &quot;{$submissionTitle}&quot; alustavan arvion perusteella tämä käsikirjoitus ei valitettavasti sovellu julkaistavaksi julkaisussa {$contextName}. Suosittelen, että tutustutte julkaisun kuvaukseen Tietoa-otsikon alla sekä julkaisun tämänhetkiseen sisältöön saadaksenne paremman käsityksen siitä, millaisia töitä julkaisemme. Voitte myös lähettää käsikirjoituksenne johonkin toiseen, sopivampaan julkaisuun.<br />
-<br />
-Ystävällisin terveisin,<br />
-{$editorialContactSignature}]]></body>
-	</email_text>
 	<email_text key="EDITOR_ASSIGN">
 		<subject>Toimituksellinen toimeksianto</subject>
 		<body><![CDATA[Hyvä {$editorialContactName},<br />
