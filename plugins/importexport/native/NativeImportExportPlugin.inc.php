@@ -140,7 +140,9 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 				libxml_use_internal_errors(true);
 				$content = $this->importSubmissions(file_get_contents($temporaryFilePath), $filter, $deployment);
 				$templateMgr->assign('content', $content);
-				$validationErrors = array_filter(libxml_get_errors(), create_function('$a', 'return $a->level == LIBXML_ERR_ERROR ||  $a->level == LIBXML_ERR_FATAL;'));
+				$validationErrors = array_filter(libxml_get_errors(), function($a) {
+					return $a->level == LIBXML_ERR_ERROR || $a->level == LIBXML_ERR_FATAL;
+				});
 				$templateMgr->assign('validationErrors', $validationErrors);
 				libxml_clear_errors();
 
@@ -237,7 +239,9 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 		libxml_use_internal_errors(true);
 		$submissionXml = $exportFilter->execute($submissions, true);
 		$xml = $submissionXml->saveXml();
-		$errors = array_filter(libxml_get_errors(), create_function('$a', 'return $a->level == LIBXML_ERR_ERROR || $a->level == LIBXML_ERR_FATAL;'));
+		$errors = array_filter(libxml_get_errors(), function($a) {
+			return $a->level == LIBXML_ERR_ERROR || $a->level == LIBXML_ERR_FATAL;
+		});
 		if (!empty($errors)) {
 			$this->displayXMLValidationErrors($errors, $xml);
 		}
@@ -267,7 +271,9 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 		libxml_use_internal_errors(true);
 		$issueXml = $exportFilter->execute($issues, true);
 		$xml = $issueXml->saveXml();
-		$errors = array_filter(libxml_get_errors(), create_function('$a', 'return $a->level == LIBXML_ERR_ERROR || $a->level == LIBXML_ERR_FATAL;'));
+		$errors = array_filter(libxml_get_errors(), function($a) {
+			return $a->level == LIBXML_ERR_ERROR || $a->level == LIBXML_ERR_FATAL;
+		});
 		if (!empty($errors)) {
 			$this->displayXMLValidationErrors($errors, $xml);
 		}
@@ -363,7 +369,9 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 				$deployment = new NativeImportExportDeployment($journal, $user);
 				$deployment->setImportPath(dirname($xmlFile));
 				$content = $this->importSubmissions($xmlString, $filter, $deployment);
-				$validationErrors = array_filter(libxml_get_errors(), create_function('$a', 'return $a->level == LIBXML_ERR_ERROR ||  $a->level == LIBXML_ERR_FATAL;'));
+				$validationErrors = array_filter(libxml_get_errors(), function($a) {
+					return $a->level == LIBXML_ERR_ERROR || $a->level == LIBXML_ERR_FATAL;
+				});
 
 				// Are there any import warnings? Display them.
 				$errorTypes = array(

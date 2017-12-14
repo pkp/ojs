@@ -41,19 +41,12 @@ class IssueGalleyForm extends Form {
 
 		// Ensure a locale is provided and valid
 		$journal = $request->getJournal();
-		$this->addCheck(
-			new FormValidator(
-				$this,
-				'galleyLocale',
-				'required',
-				'editor.issues.galleyLocaleRequired'
-			),
-			create_function(
-				'$galleyLocale, $availableLocales',
-				'return in_array($galleyLocale, $availableLocales);'
-			),
-			array_keys($journal->getSupportedLocaleNames())
-		);
+		$this->addCheck(new FormValidatorCustom(
+			$this, 'galleyLocale', 'required', 'editor.issues.galleyLocaleRequired',
+			function($galleyLocale) use ($journal) {
+				return in_array($galleyLocale, $journal->getSupportedLocaleNames());
+			}
+		));
 
 		if (!$issueGalley) {
 			// A file must be uploaded with a newly-created issue galley.

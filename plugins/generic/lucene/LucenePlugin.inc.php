@@ -885,7 +885,9 @@ class LucenePlugin extends GenericPlugin {
 		if (empty($metricReport)) return;
 
 		// Pluck the metric values and find the maximum.
-		$max = max(array_map(create_function('$reportRow', 'return $reportRow["metric"];'), $metricReport));
+		$max = max(array_map(function($reportRow) {
+			return $reportRow['metric'];
+		}, $metricReport));
 		if ($max <= 0) return;
 
 		// Get the Lucene plugin installation ID.

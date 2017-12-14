@@ -37,10 +37,18 @@ class PaymentTypesForm extends Form {
 			'restrictOnlyPdf' => 'bool',
 		);
 
-		$this->addCheck(new FormValidatorCustom($this, 'publicationFee', 'optional', 'manager.payment.form.numeric', create_function('$publicationFee', 'return is_numeric($publicationFee) && $publicationFee >= 0;')));
-		$this->addCheck(new FormValidatorCustom($this, 'purchaseArticleFee', 'optional', 'manager.payment.form.numeric', create_function('$purchaseArticleFee', 'return is_numeric($purchaseArticleFee) && $purchaseArticleFee >= 0;')));
-		$this->addCheck(new FormValidatorCustom($this, 'purchaseIssueFee', 'optional', 'manager.payment.form.numeric', create_function('$purchaseIssueFee', 'return is_numeric($purchaseIssueFee) && $purchaseIssueFee >= 0;')));
-		$this->addCheck(new FormValidatorCustom($this, 'membershipFee', 'optional', 'manager.payment.form.numeric', create_function('$membershipFee', 'return is_numeric($membershipFee) && $membershipFee >= 0;')));
+		$this->addCheck(new FormValidatorCustom($this, 'publicationFee', 'optional', 'manager.payment.form.numeric', function($publicationFee) {
+			return is_numeric($publicationFee) && $publicationFee >= 0;
+		}));
+		$this->addCheck(new FormValidatorCustom($this, 'purchaseArticleFee', 'optional', 'manager.payment.form.numeric', function($purchaseArticleFee) {
+			return is_numeric($purchaseArticleFee) && $purchaseArticleFee >= 0;
+		}));
+		$this->addCheck(new FormValidatorCustom($this, 'purchaseIssueFee', 'optional', 'manager.payment.form.numeric', function($purchaseIssueFee) {
+			return is_numeric($purchaseIssueFee) && $purchaseIssueFee >= 0;
+		}));
+		$this->addCheck(new FormValidatorCustom($this, 'membershipFee', 'optional', 'manager.payment.form.numeric', function($membershipFee) {
+			return is_numeric($membershipFee) && $membershipFee >= 0;
+		}));
 	}
 
 	/**
