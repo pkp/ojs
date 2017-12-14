@@ -165,14 +165,6 @@
 {$editorialContactSignature}]]></body>
 		<description>这封电子邮件，一旦启用，就会在作者完成投稿一份稿件到期刊的流程之后，会自动地寄发给作者。邮件中提供了有关追踪稿件编辑进度的信息，以及感谢作者的投稿。</description>
 	</email_text>
-	<email_text key="SUBMISSION_UNSUITABLE">
-		<subject>不适合的稿件</subject>
-		<body><![CDATA[{$authorName}:<br />
-<br />
-我们针对〈{$submissionTitle}〉稿件的初步审查显示出，此份稿件并不适合《{$contextName}》的研究领域和焦点。我们建议您参阅在期刊「介绍」页面底下的说明，以及期刊现有的内容，了解我们出版的作品。您也可以考虑将这份稿件投稿到其他更为适合的期刊上。<br />
-<br />
-{$editorialContactSignature}]]></body>
-	</email_text>
 	<email_text key="SUBMISSION_COMMENT">
 		<subject>稿件评论</subject>
 		<body><![CDATA[{$name}:<br />

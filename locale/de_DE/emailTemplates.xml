@@ -174,14 +174,6 @@ Für weitere Fragen stehen wir Ihnen gern zur Verfügung. Danke für Ihr Interes
 {$editorialContactSignature}]]></body>
 		<description>Diese E-Mail wird, sofern aktiviert, automatisch an die weiteren Autor/innen geschickt, die laut Einreichung keine OJS-Benutzeraccounts haben.</description>
 	</email_text>
-	<email_text key="SUBMISSION_UNSUITABLE">
-		<subject>Ungeeigneter Beitrag</subject>
-		<body><![CDATA[{$authorName},<br />
-<br />
-eine erste Lektüre von &quot;{$submissionTitle}&quot; ergab, dass Ihr Beitrag den Anforderungen und der Orientierung von {$contextName} nicht entspricht. Ich schlage Ihnen vor, dass Sie sich die Beschreibung dieser Zeitschrift unter &quot;Über uns&quot; und die aktuellen Inhalte ansehen, um mehr über die Arbeiten zu erfahren, die wir veröffentlichen. Sie könnten außerdem überlegen, diesen Beitrag bei einer anderen, besser passenden Zeitschrift einzureichen.<br />
-<br />
-{$editorialContactSignature}]]></body>
-	</email_text>
 	<email_text key="SUBMISSION_COMMENT">
 		<subject>Kommentar zu Einreichung</subject>
 		<body><![CDATA[{$name},<br />

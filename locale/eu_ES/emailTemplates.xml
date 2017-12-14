@@ -128,14 +128,6 @@ Galderaren bat baduzu, jar zaitez harremanetan nirekin. Eskerrik asko zure lana 
 {$editorialContactSignature}]]></body>
 		<description>Gaituta badago, mezu hau automatikoki bidaltzen zaio egileari, aldizkarira eskuizkribua bidaltzeko prozesua osatzen duenean. Bidalketaren jarraipena egiteko informazioa bidaltzen dio, eta eskerrak ematen dizkio lana bidaltzeagatik.</description>
 	</email_text>
-	<email_text key="SUBMISSION_UNSUITABLE">
-		<subject>Bidalketa desegokia</subject>
-		<body><![CDATA[{$authorName}:<br />
-<br />
-&quot;{$submissionTitle}&quot; artikulua aztertu dugu, eta garbi dago ez zaiola egokitzen {$contextName} aldizkariaren esparruari eta orientazioari. Gure webgunean Aldizkariari buruz ematen dugun informazioa eta une honetan eskaintzen dugun edukia kontsultatzea gomendatzen dizugu, zein eratako lanak argitaratzen ditugun ikusteko. Eskuizkribua beste aldizkari batera, gaiari hobeto egokitzen zaion batera, bidali beharko zenuke.<br />
-<br />
-{$editorialContactSignature}]]></body>
-	</email_text>
 	<email_text key="SUBMISSION_COMMENT">
 		<subject>Bidalketari buruzko iruzkina</subject>
 		<body><![CDATA[{$name}:<br />

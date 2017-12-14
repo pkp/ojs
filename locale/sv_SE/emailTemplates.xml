@@ -174,14 +174,6 @@ Om du har några frågor, vänligen kontakta mig. Tack för att du har valt att 
 {$editorialContactSignature}]]></body>
 		<description>Det här e-postmeddelandet skickas, om det är aktiverat, automatiskt till andra författare knutna till bidraget i inskickningsprocessen men som inte är OJS-användare.</description>
 	</email_text>
-	<email_text key="SUBMISSION_UNSUITABLE">
-		<subject>Bidrag motsvarar inte tidskriftens profil</subject>
-		<body><![CDATA[{$authorName}:<br />
-<br />
-En första redaktionell granskning &quot;{$submissionTitle}&quot; har visat att det här bidraget inte överensstämmer med tidskriften {$contextName}s ämnesfokus. Jag rekommenderar att du tar del av beskrivningen av tidskriften under Om liksom tidskriftens hittills publicerade material för att få en bild av vilken typ av innehåll vi publicerar. Du kan också överväga att skicka manuskriptet till en annan, mer passande, tidskrift.<br />
-<br />
-{$editorialContactSignature}]]></body>
-	</email_text>
 	<email_text key="EDITOR_ASSIGN">
 		<subject>Redaktionellt uppdrag</subject>
 		<body><![CDATA[{$editorialContactName}:<br />

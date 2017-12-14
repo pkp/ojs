@@ -104,15 +104,6 @@ Si vous avez des questions, n'hésitez pas à communiquer avec nous. Nous vous r
 {$editorialContactSignature}]]></body>
 		<description>Ce courriel, lorsqu'activé, est envoyé automatiquement à un auteur quand il ou elle a complété le processus de soumission d'un manuscrit à la revue. Il fournit les informations sur comment suivre la soumission à travers le processus éditorial, et remercie l'auteur de sa soumission.</description>
 	</email_text>
-	<email_text key="SUBMISSION_UNSUITABLE">
-		<subject>Soumission non conforme</subject>
-		<body><![CDATA[{$authorName}:<br />
-<br />
-Une évaluation initiale de votre manuscrit intitulé « {$submissionTitle} » a démontré que votre soumission ne se conforme pas aux orientations de la revue {$contextName}. Nous vous suggérons de consulter la description de cette revue en cliquant sur l'onglet « À propos de la revue » et en lisant le contenu de la revue pour en apprendre davantage sur les articles que nous publions. Vous pourriez aussi considérer soumettre votre manuscrit à une revue plus appropriée.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description></description>
-	</email_text>
 	<email_text key="SUBMISSION_COMMENT">
 		<subject>Commentaires sur une soumission</subject>
 		<body><![CDATA[{$name}:<br />

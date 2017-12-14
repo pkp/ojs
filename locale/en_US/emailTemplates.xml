@@ -174,14 +174,6 @@ If you have any questions, please contact me. Thank you for considering this jou
 {$editorialContactSignature}]]></body>
 		<description>This email, when enabled, is automatically sent to the other authors who are not users within OJS specified during the submission process.</description>
 	</email_text>
-	<email_text key="SUBMISSION_UNSUITABLE">
-		<subject>Unsuitable Submission</subject>
-		<body><![CDATA[{$authorName}:<br />
-<br />
-An initial review of &quot;{$submissionTitle}&quot; has made it clear that this submission does not fit within the scope and focus of {$contextName}. I recommend that you consult the description of this journal under About, as well as its current contents, to learn more about the work that we publish. You might also consider submitting this manuscript to another, more suitable journal.<br />
-<br />
-{$editorialContactSignature}]]></body>
-	</email_text>
 	<email_text key="EDITOR_ASSIGN">
 		<subject>Editorial Assignment</subject>
 		<body><![CDATA[{$editorialContactName}:<br />

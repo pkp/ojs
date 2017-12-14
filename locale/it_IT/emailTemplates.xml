@@ -126,16 +126,6 @@ La ringrazio per la preferenza espressa nei confronti di {$contextName}.<br />
 {$editorialContactSignature}]]></body>
 		<description>Questa email, quando è abilitata, viene mandata automaticamente ad un autore quando lui o lei completa il processo di sottomissione del manoscritto al journal. Fornisce informazioni su come rintracciare la submission attraverso il processo e ringrazia l'autore per la submission.</description>
 	</email_text>
-	<email_text key="SUBMISSION_UNSUITABLE">
-		<subject>Submission non idonea</subject>
-		<body><![CDATA[{$authorName}:<br />
-<br />
-Una revisione iniziale di &quot;{$submissionTitle}&quot; ha rilevato che questa submission non rientra nello scopo e nel focus di {$contextName}. Le suggerisco di consultare meglio la sezione delle informazioni della rivista, per saperne di più sul genere di contributi che pubblichiamo.<br />
-Può comunque considerare di proporre la submission ad altra rivista più idonea.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description></description>
-	</email_text>
 	<email_text key="SUBMISSION_COMMENT">
 		<subject>Commento alla submission </subject>
 		<body><![CDATA[{$name}:<br />

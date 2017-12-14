@@ -189,22 +189,6 @@ Agradecemos mais uma vez considerar a nossa revista como meio de transmitir ao p
 {$editorialContactSignature}]]></body>
 		<description>Mensagem enviada automaticamente pelo portal ao autor, quando activada, ao ser concluído o processo de submissão de um trabalho à revista. Oferece informações sobre os mecanismos para acompanhamento do trabalho durante o processo editorial e serve como registo e confirmação da submissão.</description>
 	</email_text>
-	<email_text key="SUBMISSION_UNSUITABLE">
-		<subject>Submissão inadequada</subject>
-		<body><![CDATA[{$authorName},<br />
-<br />
-Uma avaliação inicial de &quot;{$submissionTitle}&quot; demonstrou que esta submissão não se encaixa no âmbito da revista {$contextName}.<br />
-<br />
-Recomendo que consulte a descrição do seu âmbito em Sobre a Revista, bem como o seu conteúdo, para saber mais sobre o tipo de trabalho que é publicado.<br />
-<br />
-O seu trabalho pode ser submetido a outra revista cujo âmbito e foco se encaixe melhor com a sua proposta.<br />
-<br />
-Agradecemos considerar a nossa revista como meio de transmitir ao público o seu trabalho e esperamos que a sua próxima submissão esteja de acordo com nosso foco e âmbito.<br />
-<br />
-Agradecendo desde já a atenção dispensada,<br />
-{$editorialContactSignature}]]></body>
-		<description>Mensagem notifica o autor que a sua submissão não é adequada para a revista, por não enquadrar-se no seu âmbito. Sugere ao autor a alteração ao trabalho de modo a atender às exigências da revista ou submeter para outra onde se enquadre melhor.</description>
-	</email_text>
 	<email_text key="SUBMISSION_COMMENT">
 		<subject>Comentário sobre a submissão</subject>
 		<body><![CDATA[{$name},<br />
