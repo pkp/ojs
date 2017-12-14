@@ -42,6 +42,11 @@ class SubmissionMetadataViewForm extends PKPSubmissionMetadataViewForm {
 		$sectionOptions = $sectionDao->getTitles($submission->getContextId());
 		$templateMgr->assign('sectionOptions', $sectionOptions);
 		$templateMgr->assign('sectionId', $submission->getSectionId());
+		// get word count of the section
+		$sectionDao = DAORegistry::getDAO('SectionDAO');
+		$section = $sectionDao->getById($submission->getSectionId());
+		$wordCount = $section->getAbstractWordCount();
+		$templateMgr->assign('wordCount', $wordCount);
 
 		// Cover image delete link action
 		$locale = AppLocale::getLocale();
