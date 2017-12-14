@@ -44,7 +44,14 @@ class SubmissionMetadataFormImplementation extends PKPSubmissionMetadataFormImpl
 		$section = $sectionDao->getById($submission->getSectionId());
 		$wordCount = $section->getAbstractWordCount();
 		if (isset($wordCount) && $wordCount > 0) {
-			$this->_parentForm->addCheck(new FormValidatorCustom($this->_parentForm, 'abstract', 'required', 'submission.submit.form.wordCountAlert', create_function('$abstract, $wordCount', 'foreach ($abstract as $localizedAbstract) { if (count(preg_split(\'/\s+/\', trim(str_replace(\'&nbsp;\', \' \', strip_tags($localizedAbstract))))) > $wordCount) { return false; } } return true;'), array($wordCount)));
+			$this->_parentForm->addCheck(new FormValidatorCustom($this->_parentForm, 'abstract', 'required', 'submission.submit.form.wordCountAlert', function($abstract) use($wordCount) {
+				foreach ($abstract as $localizedAbstract) {
+					if (count(preg_split('/\s+/', trim(str_replace('&nbsp;', ' ', strip_tags($localizedAbstract))))) > $wordCount) {
+						return false;
+					}
+				}
+				return true;
+			}));
 		}
 	}
 
