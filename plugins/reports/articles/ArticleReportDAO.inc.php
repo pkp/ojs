@@ -97,9 +97,9 @@ class ArticleReportDAO extends DAO {
 		$index = 1;
 		while ($article = $articles->next()) {
 			$result = $this->retrieve(
-				'SELECT	aa.first_name AS fname,
-					aa.middle_name AS mname,
-					aa.last_name AS lname,
+				'SELECT	asf.setting_value AS fname,
+					asm.setting_value AS mname,
+					asl.setting_value AS lname,
 					aa.email AS email,
 					aa.country AS country,
 					aa.url AS url,
@@ -111,6 +111,9 @@ class ArticleReportDAO extends DAO {
 					LEFT JOIN author_settings aasl ON (aa.author_id = aasl.author_id AND aasl.setting_name = ? AND aasl.locale = ?)
 					LEFT JOIN author_settings aaas ON (aa.author_id = aaas.author_id AND aaas.setting_name = ? AND aaas.locale = ?)
 					LEFT JOIN author_settings aaasl ON (aa.author_id = aaasl.author_id AND aaasl.setting_name = ? AND aaasl.locale = ?)
+					LEFT JOIN author_settings asf ON (aa.author_id = asf.author_id AND asf.setting_name = ? AND asf.locale = ?)
+					LEFT JOIN author_settings asm ON (aa.author_id = asm.author_id AND asm.setting_name = ? AND asm.locale = ?)
+					LEFT JOIN author_settings asl ON (aa.author_id = asl.author_id AND asl.setting_name = ? AND asl.locale = ?)
 				WHERE
 					a.context_id = ? AND
 					a.submission_progress = 0 AND
@@ -124,6 +127,9 @@ class ArticleReportDAO extends DAO {
 					$primaryLocale,
 					'affiliation',
 					$locale,
+					IDENTITY_SETTING_FIRSTNAME, AppLocale::getLocale(),
+					IDENTITY_SETTING_MIDDLENAME, AppLocale::getLocale(),
+					IDENTITY_SETTING_LASTNAME, AppLocale::getLocale(),
 					(int) $journalId,
 					$article->getId()
 				)
