@@ -9,6 +9,9 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Ukrainian_(uk_UA)
   * Localization strings.
+  *
+  * Updated by Vasyl Ostrovskyi, 2017
+  * Institute of Mathematics, NAS of Ukraine
   -->
 
 <locale name="uk_UA" full_name="Українська">
@@ -219,4 +222,10 @@
        <message key="editor.submission.selectGalleyFiles">Вибрати файли гранок</message>
        <message key="editor.submission.editorial.finalDraftDescription"><![CDATA[Готові файли чернеток з цього списку, пройшовши літературне редагування, завантажені літературним редактором в розділ <span class="pkp_help_title">«Літературне редагування»</span>.]]></message>
        <message key="editor.submission.proof.manageProofFilesDescription">Всі файли, які були завантажені на будь-якому етапі подання рукопису, можуть бути додані в список «Коректура», для цього потрібно поставити галочку «Включити» нижче і клацнути на кнопці «Пошук»: всі доступні файли будуть показані в списку і можуть бути обрані для включення.</message>
+	<message key="editor.article.schedulePublication">Запланувати до публікації</message>
+	<message key="editor.issues.invalidCoverImageFormat">Недійсний формат зображення обкладинки. Приймаються формати .gif, .jpg, та .png.</message>
+	<message key="editor.issues.confirmUnpublish">Ви певні, що слід скасувати публікацію цього випуску?</message>
+	<message key="editor.issues.confirmSetCurrentIssue">Ви певні, що слід встановити цей випуск як поточний?</message>
+	<message key="grid.action.setCurrentIssue">Встановити поточним випуском</message>
+	<message key="editor.publicIdentificationExistsForTheSameType">Публічний ідентифікатор '{$publicIdentifier}' вже існує для іншого об'єкту цього ж типу. Будь ласка, вибирайте унікальні ідентифікатори для об'єктів однакового типу в межах одного журналу.</message>
 </locale>

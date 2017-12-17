@@ -9,6 +9,9 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Ukrainian_(uk_UA)
   * Localization strings.
+  *
+  * Updated by Vasyl Ostrovskyi, 2017
+  * Institute of Mathematics, NAS of Ukraine
   -->
 
 <locale name="uk_UA" full_name="Українська">
@@ -58,7 +61,7 @@
     <message key="admin.contexts.create">Створити журнал</message>
     <message key="admin.journals.createInstructions">Вам буде автоматично надана роль менеджера цього журналу. Після створення нового журналу, продовжуйте його створення як менеджер, зробіть необхідні налаштування та призначте ролі користувачам.</message>
     <message key="admin.journals.urlWillBe">Це повинно бути коротке слово або акронім, який ідентифікуватиме цей журнал. URL-адресою журналу буде {$sampleUrl}</message>
-    <message key="admin.contexts.form.pathRequired">Необхідний шлях.</message>
+    <message key="admin.contexts.form.pathRequired">Слід вказати шлях.</message>
     <message key="admin.contexts.form.pathAlphaNumeric">Шлях може містити лише літери, цифри, дефіси та символи підкреслення; він повинен починатися та закінчуватися символом літери або цифри.</message>
     <message key="admin.contexts.form.pathExists">Обраний шлях вже використовується іншим журналом.</message>
     <message key="admin.journals.enableJournalInstructions">Дозволити відображення цьоого журналу на сайті</message>
@@ -94,4 +97,5 @@
     <message key="admin.scheduledTask.openAccessNotification">Повідомлення про відкритий доступ</message>
     <message key="admin.scheduledTask.reviewReminder">Нагадування рецензенту</message>
 
+	<message key="admin.contexts.form.titleRequired">Слід вказати назву.</message>
 </locale>

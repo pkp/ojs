@@ -9,6 +9,9 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Ukrainian_(uk_UA)
   * Localization strings.
+  *
+  * Updated by Vasyl Ostrovskyi, 2017
+  * Institute of Mathematics, NAS of Ukraine
   -->
 
 <locale name="uk_UA" full_name="Українська">
@@ -596,4 +599,28 @@
        <message key="plugins.importexport.common.error.unknownJournal">Вказаний шлях журналу "{$journalPath}" не існує.</message>
        <message key="plugins.importexport.common.error.unknownObjects">Не вдалось знайти вказані об'єкти.</message>
        <message key="manager.setup.notifications.copyPrimaryContact">Надіслати копію основній контактній особі, вказаній в налаштуваннях журналу.</message>
+	<message key="subscriptionManager.subscription.confirmRemove">Ви певні, що слід видалити цю передплату?</message>
+	<message key="manager.paymentTypes">Типи платежів</message>
+	<message key="manager.setup.plnPluginEnable">Модуль PKP PN увімкнено</message>
+	<message key="manager.setup.plnDescription">PKP Preservation Network (PN) надає вільний сервіс резервування для довільним журналам на базі OJS, що задовольняють певні базові вимоги.</message>
+	<message key="manager.setup.plnSettingsDescription">Клацніть на "Налаштування", щоб прийняти умови використання PKP PN.</message>
+	<message key="manager.setup.plnPluginArchiving">PKP Preservation Network (PN)</message>
+	<message key="manager.setup.plnPluginNotInstalled">PKP Preservation Network (PN) надає вільний сервіс резервування для довільним журналам на базі OJS, що задовольняють певні базові вимоги. Модуль PKP PN для OJS 3 перебуває у розробці та скоро буде наявним у галереї модулів.</message>
+	<message key="manager.setup.otherLockss">Альтернативні можливості архівування</message>
+	<message key="manager.setup.porticoEnable">Увімкнути Portico для зберігання та поширення вмісту журналу бібліотекам, що приймають участь у Portico.</message>
+	<message key="manager.setup.porticoTitle">Portico</message>
+	<message key="manager.subscriptionPolicies.xMonths">{$x} місяців</message>
+	<message key="manager.subscriptionPolicies.xWeeks">{$x} тижнів</message>
+	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths">Повідомити передплатників після закінчення терміну передплати</message>
+	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks">Повідомити передплатників після закінчення терміну передплати</message>
+	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths">Повідомити передплатників перед закінченням терміну передплати</message>
+	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks">Повідомити передплатників перед закінченням терміну передплати</message>
+	<message key="manager.subscriptions.confirmRenew">Ви певні, що слід поновити цю передплату?</message>
+	<message key="manager.subscriptions.form.notes">Примітки</message>
+	<message key="manager.distribution.access">Доступ</message>
+	<message key="manager.navigationMenus.subscriptions.description">Посилання на сторінку з описом пропонованих передплат.</message>
+	<message key="manager.navigationMenus.mySubscriptions.description">Посилання на сторінку з описом поточних та минулих передплат відвідувача</message>
+	<message key="manager.navigationMenus.mySubscriptions.conditionalWarning">Це посилання буде показане лише відвідувачам, що увійшли до системи.</message>
+	<message key="plugins.importexport.common.validation">Перевірити XML перед експортом та реєстрацією.</message>
+	<message key="plugins.importexport.common.export.error.inputFileNotReadable">Вхідний файл {$param} неможливо прочитати.</message>
 </locale>
