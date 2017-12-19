@@ -41,10 +41,10 @@
 
 	{fbvFormSection label="manager.subscriptionPolicies.expiryReminders"}
 		<p>{translate key="manager.subscriptionPolicies.expiryRemindersDescription"}</p>
-		{fbvElement type="select" id="numMonthsBeforeSubscriptionExpiryReminder" name="numMonthsBeforeSubscriptionExpiryReminder" value=$numMonthsBeforeSubscriptionExpiryReminder from=$validNumMonthsBeforeExpiry label="manager.subscriptionPolicies.expiryReminderBeforeMonths" disabled=$scheduledTasksEnabled|compare:0 size=$fbvStyles.size.MEDIUM translate=false inline=true}
-		{fbvElement type="select" id="numWeeksBeforeSubscriptionExpiryReminder" name="numWeeksBeforeSubscriptionExpiryReminder" value=$numWeeksBeforeSubscriptionExpiryReminder from=$validNumWeeksBeforeExpiry label="manager.subscriptionPolicies.expiryReminderBeforeWeeks" disabled=$scheduledTasksEnabled|compare:0 size=$fbvStyles.size.MEDIUM translate=false inline=true}
-		{fbvElement type="select" id="numWeeksAfterSubscriptionExpiryReminder" name="numWeeksAfterSubscriptionExpiryReminder" value=$numWeeksAfterSubscriptionExpiryReminder from=$validNumWeeksAfterExpiry label="manager.subscriptionPolicies.expiryReminderAfterWeeks" disabled=$scheduledTasksEnabled|compare:0 size=$fbvStyles.size.MEDIUM translate=false inline=true}
-		{fbvElement type="select" id="numMonthsAfterSubscriptionExpiryReminder" name="numMonthsAfterSubscriptionExpiryReminder" value=$numMonthsAfterSubscriptionExpiryReminder from=$validNumMonthsAfterExpiry label="manager.subscriptionPolicies.expiryReminderAfterMonths" disabled=$scheduledTasksEnabled|compare:0 size=$fbvStyles.size.MEDIUM translate=false inline=true}
+		{fbvElement type="select" id="numMonthsBeforeSubscriptionExpiryReminder" name="numMonthsBeforeSubscriptionExpiryReminder" selected=$numMonthsBeforeSubscriptionExpiryReminder from=$validNumMonthsBeforeExpiry label="manager.subscriptionPolicies.expiryReminderBeforeMonths" disabled=$scheduledTasksEnabled|compare:0 size=$fbvStyles.size.MEDIUM translate=false inline=true}
+		{fbvElement type="select" id="numWeeksBeforeSubscriptionExpiryReminder" name="numWeeksBeforeSubscriptionExpiryReminder" selected=$numWeeksBeforeSubscriptionExpiryReminder from=$validNumWeeksBeforeExpiry label="manager.subscriptionPolicies.expiryReminderBeforeWeeks" disabled=$scheduledTasksEnabled|compare:0 size=$fbvStyles.size.MEDIUM translate=false inline=true}
+		{fbvElement type="select" id="numWeeksAfterSubscriptionExpiryReminder" name="numWeeksAfterSubscriptionExpiryReminder" selected=$numWeeksAfterSubscriptionExpiryReminder from=$validNumWeeksAfterExpiry label="manager.subscriptionPolicies.expiryReminderAfterWeeks" disabled=$scheduledTasksEnabled|compare:0 size=$fbvStyles.size.MEDIUM translate=false inline=true}
+		{fbvElement type="select" id="numMonthsAfterSubscriptionExpiryReminder" name="numMonthsAfterSubscriptionExpiryReminder" selected=$numMonthsAfterSubscriptionExpiryReminder from=$validNumMonthsAfterExpiry label="manager.subscriptionPolicies.expiryReminderAfterMonths" disabled=$scheduledTasksEnabled|compare:0 size=$fbvStyles.size.MEDIUM translate=false inline=true}
 
 		{if !$scheduledTasksEnabled}
 			<span>{translate key="manager.subscriptionPolicies.expiryRemindersDisabled"}</span>
@@ -70,7 +70,7 @@
 	{fbvFormSection label="manager.subscriptionPolicies.openAccessOptions" list=true}
 		<p>{translate key="manager.subscriptionPolicies.openAccessOptionsDescription"}</p>
 
-		{fbvElement type="select" id="delayedOpenAccessDuration" name="delayedOpenAccessDuration" value=$delayedOpenAccessDuration from=$validDuration label="manager.subscriptionPolicies.delayedOpenAccessDescription" size=$fbvStyles.size.MEDIUM translate=false}
+		{fbvElement type="select" id="delayedOpenAccessDuration" name="delayedOpenAccessDuration" value=$delayedOpenAccessDuration selected=$validDuration label="manager.subscriptionPolicies.delayedOpenAccessDescription" size=$fbvStyles.size.MEDIUM translate=false}
 		{fbvElement type="checkbox" id="enableOpenAccessNotification" name="enableOpenAccessNotification" value=1 checked=$enableOpenAccessNotification label="manager.subscriptionPolicies.openAccessNotificationDescription" disabled=$scheduledTasksEnabled|compare:0}
 
 		<p>{translate key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription"}</p>

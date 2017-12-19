@@ -37,7 +37,7 @@
 	{/fbvFormSection}
 
 	{fbvFormSection label="manager.subscriptionTypes.form.format"}
-		{fbvElement type="select" required=true name="format" id="format" value=$format from=$validFormats size=$fbvStyles.size.SMALL translate=false inline=true}
+		{fbvElement type="select" required=true name="format" id="format" selected=$format from=$validFormats size=$fbvStyles.size.SMALL translate=false inline=true}
 	{/fbvFormSection}
 
 	{fbvFormSection label="manager.subscriptionTypes.form.duration"}
