@@ -79,11 +79,11 @@ class LuceneFacetsBlockPlugin extends BlockPlugin {
 	}
 
 	/**
-	 * @see Plugin::getSeq()
+	 * @copydoc BlockPlugin::getSeq()
 	 */
-	function getSeq() {
+	function getSeq($contextId = null) {
 		// Identify the position of the faceting block.
-		$seq = parent::getSeq();
+		$seq = parent::getSeq($contextId);
 
 		// If nothing has been configured then use the first
 		// position. This is ok as we'll only display facets
