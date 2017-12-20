@@ -33,4 +33,8 @@
 		<query driver="mysqli">UPDATE metrics m, submission_file_settings sfs SET m.assoc_id = sfs.file_id WHERE m.assoc_type = 531 AND sfs.setting_name = 'old-supp-id' AND sfs.setting_value = m.assoc_id</query>
 		<query driver="postgres7">UPDATE metrics SET assoc_id = sfs.file_id FROM submission_file_settings sfs WHERE metrics.assoc_type = 531 AND sfs.setting_name = 'old-supp-id' AND CAST(nullif(sfs.setting_value, '') AS integer) = metrics.assoc_id</query>
 	</sql>
+	<!-- pkp/pkp-lib#3084 Remove user_group_id column from files -->
+	<sql>
+		<query>ALTER TABLE submission_files DROP COLUMN user_group_id</query>
+	</sql>
 </data>
