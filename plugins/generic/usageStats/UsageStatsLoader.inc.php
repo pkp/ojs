@@ -678,7 +678,7 @@ class UsageStatsLoader extends FileLoader {
 	 */
 	function _getCounterRobotListFile() {
 		$file = null;
-		$dir = $this->_plugin->getPluginPath() . DIRECTORY_SEPARATOR . 'lib' . DIRECTORY_SEPARATOR . 'counter';
+		$dir = $this->_plugin->getPluginPath() . DIRECTORY_SEPARATOR . 'lib' . DIRECTORY_SEPARATOR . 'counterBots' . DIRECTORY_SEPARATOR . 'generated';
 
 		// We only expect one file inside the directory.
 		$fileCount = 0;
