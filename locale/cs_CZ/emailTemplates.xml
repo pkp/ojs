@@ -358,15 +358,6 @@ Pokud nyní nemůžete tuto práci provést nebo máte nějaké otázky, kontakt
 <br />
 {$participantName}]]></body>
 	</email_text>
-	<email_text key="COPYEDIT_ACK">
-		<subject>Poděkování za redigování </subject>
-		<body><![CDATA[{$participantName}:<br />
-<br />
-Děkujeme vám za zredigování příspěvku &quot;{$submissionTitle}&quot; pro {$contextName}. Významně tím pomáháte udržet kvalitu tohoto časopisu.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Tento email posílá editor sekce redaktorovi příspěvku, aby mu poděkoval za úspěšně dokončený proces redigování článku.</description>
-	</email_text>
 	<email_text key="COPYEDIT_AUTHOR_REQUEST">
 		<subject>Žádost o kontrolu redigování</subject>
 		<body><![CDATA[{$authorName}:<br />

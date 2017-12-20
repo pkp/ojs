@@ -437,15 +437,6 @@ URL рукопису: <a href="{$submissionEditingUrl}">{$submissionEditingUrl}<
 <br />
 {$participantName}]]></body>
        </email_text>
-       <email_text key="COPYEDIT_ACK">
-               <subject>Подяка за літературне редагування</subject>
-               <body><![CDATA[{$participantName}:<br />
-<br />
-Дякую за літературне редагування рукопису &quot;{$submissionTitle}&quot; для видання &quot;{$contextName}&quot;. Ви зробили важливий внесок у підвищення якості матеріалів, що публікуються цим журналом.<br />
-<br />
-{$editorialContactSignature}]]></body>
-               <description>Цим листом редактор розділу підтверджує літературному редактору, що його робота прийнята та дякує за його внесок.</description>
-       </email_text>
        <email_text key="COPYEDIT_AUTHOR_REQUEST">
                <subject>Запит на перегляд відредагованого тексту</subject>
                <body><![CDATA[{$authorName}:<br />
