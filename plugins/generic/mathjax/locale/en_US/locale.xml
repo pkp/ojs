@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2017 Vasyl Ostrovskyi
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.generic.mathjax.name">MathJax Plugin</message>
+	<message key="plugins.generic.mathjax.description"><![CDATA[This plugin enables javascript LaTeX math rendering of OJS content using the <a href="http://www.mathjax.org" target="_new">MathJax</a> parser.]]></message>
+	<message key="plugins.generic.mathjax.disabled">The MathJax Plugin has been disabled.</message>
+	<message key="plugins.generic.mathjax.enabled">The MathJax Plugin has been enabled.</message>
+</locale>
