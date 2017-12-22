@@ -29,7 +29,7 @@ class PaypalPaymentForm extends Form {
 	function __construct($paypalPaymentPlugin, $queuedPayment) {
 		$this->_paypalPaymentPlugin = $paypalPaymentPlugin;
 		$this->_queuedPayment = $queuedPayment;
-		parent::__construct($this->_paypalPaymentPlugin->getTemplatePath() . '/paymentForm.tpl');
+		parent::__construct(null);
 	}
 
 	/**
