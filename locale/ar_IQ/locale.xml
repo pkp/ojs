@@ -936,8 +936,8 @@
 <p>إن لم يسبق لك التسجيل وترغب في الحصول على الأخبار والتحديثات <strong>لطفاً، سجل في <a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>.</strong> إن كانت لديك استفسارات أو تعليقات، لطفاً، أنقر <a href="http://forum.pkp.sfu.ca" target="_new">منتدى الدعم</a>.</p>]]></message>
 
 	<!-- Installation upgrade warnings -->
-	<message key="site.upgradeAvailable.admin"><![CDATA[تم إطلاق نسخة جديدة من نظام المجلات المفتوحة! أنت حالياً تستعمل النسخة {$currentVersion}  منه. النسخة ذات الإصدار الأحدث هي  OJS {$latestVersion}. لطفاً، قم بزيارة <a href="http://pkp.sfu.ca/ojs_download" target="_new">هذه الصفحة</a> لتنزيل النسخة الأحدث والعثور على تعليمات الترقية.]]></message>
-	<message key="site.upgradeAvailable.manager"><![CDATA[تم إطلاق نسخة جديدة من نظام المجلات المفتوحة! أنت حالياً تستعمل النسخة {$currentVersion}منه. النسخة ذات الإصدار الأحدث هي OJS {$latestVersion}. لطفاً، إتصل بمدير الموقع ({$siteAdminName}، <a href="mailto:{$siteAdminEmail}">{$siteAdminEmail}</a>) لإبلاغه عن هذا الإصدار الأخير. للمزيد من المعلومات أنظر <a href="http://pkp.sfu.ca/ojs_download" target="_new">هنا</a>.]]></message>
+	<message key="site.upgradeAvailable.admin"><![CDATA[تم إطلاق نسخة جديدة من نظام المجلات المفتوحة! أنت حالياً تستعمل النسخة {$currentVersion} منه. النسخة ذات الإصدار الأحدث هي OJS {$latestVersion}. لطفاً، قم بزيارة <a href="http://pkp.sfu.ca/ojs_download" target="_new">هذه الصفحة</a> لتنزيل النسخة الأحدث والعثور على تعليمات الترقية.]]></message>
+	<message key="site.upgradeAvailable.manager"><![CDATA[تم إطلاق نسخة جديدة من نظام المجلات المفتوحة! أنت حالياً تستعمل النسخة {$currentVersion} منه. النسخة ذات الإصدار الأحدث هي OJS {$latestVersion}. لطفاً، إتصل بمدير الموقع ({$siteAdminName}، <a href="mailto:{$siteAdminEmail}">{$siteAdminEmail}</a>) لإبلاغه عن هذا الإصدار الأخير. للمزيد من المعلومات أنظر <a href="http://pkp.sfu.ca/ojs_download" target="_new">هنا</a>.]]></message>
 
 	<!-- Article Logs -->
 	<message key="log.author.documentRevised">{$authorName} قام بتنقيح المؤلَّف {$submissionId}. رمز الملف الجديد ID {$fileId}.</message>
