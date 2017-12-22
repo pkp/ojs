@@ -47,7 +47,7 @@ class OAIMetadataFormatPlugin_NLM extends OAIMetadataFormatPlugin {
 	}
 
 	function getNamespace() {
-		return 'http://td.nlm.nih.gov/publishing/2.3';
+		return 'http://dtd.nlm.nih.gov/publishing/2.3';
 	}
 }
 
