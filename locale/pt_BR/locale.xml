@@ -130,7 +130,7 @@
 	<message key="submission.submissionEditing">Edição da submissão</message>
 	<message key="submission.changeSection">Alterar para</message>
 	<message key="submission.editorDecision">Decisão Editorial</message>
-	<message key="submission.round"><![CDATA[Rodada&amp;nbsp;{$round}]]></message>
+	<message key="submission.round">Rodada&amp;nbsp;{$round}</message>
 	<message key="submission.editorReview">Avaliação do Editor</message>
 	<message key="submission.notifyAuthor">Notificar autor</message>
 	<message key="submission.notifyEditor">Notificar editor</message>
