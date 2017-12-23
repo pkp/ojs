@@ -2,7 +2,7 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * plugins/reports/articles/locale/es_ES/locale.xml
+  * plugins/generic/htmlArticleGalley/locale/es_ES/locale.xml
   *
   * Copyright (c) 2014-2017 Simon Fraser University
   * Copyright (c) 2003-2017 John Willinsky
@@ -12,7 +12,6 @@
   -->
 
 <locale name="es_ES" full_name="Español (España)">
-	<message key="plugins.reports.articles.displayName">Informe de Artículos</message>
-	<message key="plugins.reports.articles.description">Este módulo genera un informe CSV que contiene una lista de artículos y su información.</message>
-	<message key="plugins.reports.articles.nodecision">Sin Desición</message>
+	<message key="plugins.generic.htmlArticleGalley.displayName">Galerada de artículo en HTML</message>
+	<message key="plugins.generic.htmlArticleGalley.description">Este módulo ofrece soporte para renderizar las galeradas de los artículos en HTML.</message>
 </locale>
