@@ -2579,14 +2579,15 @@ class Upgrade extends Installer {
 				$submissionFileRevision->setFileStage(SUBMISSION_FILE_PROOF);
 				$generatedNewFilename = $submissionFileRevision->getServerFileName();
 				$newFileName = $basePath . $submissionFileRevision->_fileStageToPath($submissionFileRevision->getFileStage()) . '/' . $generatedNewFilename;
-				if (file_exists($newFileName)) continue; // Skip existing files/links
-				if (!file_exists($path = dirname($newFileName)) && !$submissionFileManager->mkdirtree($path)) {
-					error_log("Unable to make directory \"$path\"");
-				}
-				if (!rename($oldFileName, $newFileName)) {
-					error_log("Unable to move \"$oldFileName\" to \"$newFileName\".");
-				} else {
-					$submissionFileDao->updateObject($submissionFileRevision);
+				if (!file_exists($newFileName)) {
+					if (!file_exists($path = dirname($newFileName)) && !$submissionFileManager->mkdirtree($path)) {
+						error_log("Unable to make directory \"$path\"");
+					}
+					if (!rename($oldFileName, $newFileName)) {
+						error_log("Unable to move \"$oldFileName\" to \"$newFileName\".");
+					} else {
+						$submissionFileDao->updateObject($submissionFileRevision);
+					}
 				}
 			}
 			$result->MoveNext();
