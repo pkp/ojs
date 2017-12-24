@@ -623,7 +623,7 @@ class Upgrade extends Installer {
 			};
 
 			$day = date('Ymd', strtotime($row['date']));
-			$tempStatsDao->insert($assocType, $assocId, $day, $countryId, $region, $cityName, null, $loadId);
+			$tempStatsDao->insert($assocType, $assocId, $day, strtotime($row['date']), $countryId, $region, $cityName, null, $loadId);
 			$result->MoveNext();
 		}
 
