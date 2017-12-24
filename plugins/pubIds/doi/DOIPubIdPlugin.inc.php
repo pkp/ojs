@@ -263,7 +263,7 @@ class DOIPubIdPlugin extends PubIdPlugin {
 			return;
 		}
 
-		$citationData->DOI = $this->getResolvingURL($journal->getId(), $pubId);
+		$citationData->DOI = $pubId;
 	}
 
 
