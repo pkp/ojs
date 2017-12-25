@@ -370,13 +370,13 @@
 	<message key="plugins.categories.auth.description">Модули авторизации позволяют Open Journal Systems делегировать задачу аутентификации пользователей другим системам, таким как LDAP-сервера.</message>
 	<message key="plugins.categories.generic.description">Общие модули используются для расширения возможностей Open Journal Systems различными способами, которые не поддерживаются другими категориями модулей.</message>
 
-	<message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems поддерживает систему <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe), чтобы быть уверенным в безопасном и постоянном архиве для журнала. LOCKSS — открытое (open source) программное обеспечение, разработанное в библиотеке Стэнфордского университета, которое позволяет библиотекам сохранять выбранные веб-журналы регулярно проверяя веб-сайты зарегистрированных журналов на предмет нового опубликованного контента и архивируя его. Каждый архив постоянно сверяется с кэшами других библиотек, и если контент оказывается поврежденным или утраченным, для его восстановления используются другие кэши или сам журнал.
-<br /><br />
-Настраивать поддержку LOCKSS для Open Journal Systems нужно только после того как журнал будет полностью опубликован, для этого нужно выполнить следующие два шага:]]></message>
+	<message key="manager.setup.lockssDescription">
+	<![CDATA[Open Journal Systems поддерживает систему LOCKSS (Lots of Copies Keep Stuff Safe), чтобы быть уверенным в безопасном и постоянном архиве для контента журнала. Если ваш журнал принят для архивирования контента в глобальную сеть LOCKSS или участвует в частной сети LOCKSS помимо PKP PN, включите здесь необходимые настройки:
+]]></message>
 
-	<message key="manager.setup.clockssDescription"><![CDATA[Open Journal Systems также поддерживает систему <a href="http://clockss.org/" target="_blank">CLOCKSS</a> (Controlled Lots of Copies Keep Stuff Safe), чтобы быть уверенным в безопасном и постоянном архиве для журнала. CLOCKSS основана на открытом (open source) программном обеспечении LOCKSS, разработанном в библиотеке Стэнфордского университета, которое позволяет библиотекам сохранять выбранные веб-журналы регулярно проверяя веб-сайты зарегистрированных журналов на предмет нового опубликованного контента и архивируя его. Каждый архив постоянно сверяется с кэшами других библиотек, и если контент оказывается поврежденным или утраченным, для его восстановления используются другие кэши или сам журнал.
-<br /><br />
-Настраивать поддержку CLOCKSS support для Open Journal Systems нужно только после того как журнал будет полностью опубликован.]]></message>
+	<message key="manager.setup.clockssDescription"><![CDATA[Open Journal Systems также поддерживает систему CLOCKSS (Controlled Lots of Copies Keep Stuff Safe), чтобы быть уверенным в безопасном и постоянном архиве для журнала. Если ваш журнал подписал контракт с архивом CLOCKSS, включите здесь необходимые настройки:]]></message>
+
+	<message key="manager.setup.porticoDescription"><![CDATA[Portico — это некоммерческий сервис, предназначенный для сохранения цифровых публикаций, в том числе электронных журналов, книг и оцифрованных исторических коллекций. Если ваш журнал подписал контракт с Portico, включите здесь необходимые настройки:]]></message>
 
 	<!-- Настройка (Шаг 3) -->
 	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Примеры уведомлений о передаче авторских прав на основе лицензии Creative Commons</h3>
@@ -1103,4 +1103,7 @@
 	<message key="editor.issues.backIssues">Прошлые выпуски</message>
 	<message key="editor.issues.futureIssues">Будущие выпуски</message>
 	<message key="navigation.subscriptions">Подписки</message>
+
+	<!-- устаревшие строки из OJS 2 для систем, которые были обновлены с OJS 2 -->
+	<message key="log.editor.submissionExpedited">Редактор {$editorName} взялся за процесс редактирования по статье {$submissionId}.</message>
 </locale>

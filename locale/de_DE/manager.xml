@@ -544,7 +544,7 @@
 	<message key="manager.setup.copyrightYearBasis.article">Artikel: das Standardjahr wird aus dem Veröffentlichungsjahr des Artikels abgeleitet, wie bei "publish-as-you-go".</message>
 	<message key="manager.setup.copyrightYearBasis.issue">Ausgabe: das Standardjahr wird aus dem Veröffentlichungsdatum der Ausgabe abgeleitet.</message>
 	<message key="manager.setup.resetPermissions">Artikelrechte zurücksetzen</message>
-	<message key="manager.setup.resetPermissions.confirm">Sind Sie sicher, dass Sie die Rechte, die bisher diesem Artikel zugewiesen sind, zurücksetzen möchten?</message>
+	<message key="manager.setup.resetPermissions.confirm">Sind Sie sicher, dass Sie die Rechte, die bisher den Artikeln zugewiesen sind, zurücksetzen möchten?</message>
 	<message key="manager.setup.resetPermissions.description">Copyright-Angaben und Lizenzinformationen werden permanent mit veröffentlichten Inhalten verknüpft. Damit wird sichergestellt, dass diese Angaben nicht geändert werden, wenn eine Zeitschrift ihre Policy für neue Einreichungen ändert. Nutzen Sie den Knopf unten, um gespeicherte Rechteinformationen, die bereits mit veröffentlichten Inhalten verknüpft sind, zurückzusetzen.</message>
 
 	<!-- Genres Grid -->
