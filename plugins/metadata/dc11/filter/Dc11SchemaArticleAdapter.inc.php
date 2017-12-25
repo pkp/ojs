@@ -155,7 +155,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 		if (!empty($pages)) $pages = '; ' . $pages;
 		foreach ($sources as $locale => $source) {
 			if (is_a($article, 'PublishedArticle')) {
-				$sources[$locale] .= '; ' . $issue->getIssueIdentification();
+				$sources[$locale] .= '; ' . $issue->getIssueIdentification(array(), $locale);
 			}
 			$sources[$locale] .=  $pages;
 		}

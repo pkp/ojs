@@ -444,7 +444,7 @@ class Issue extends DataObject {
 	 * @param $force array force show/hide of data components
 	 * @return string
 	 */
-	function getIssueIdentification($force = array()) {
+	function getIssueIdentification($force = array(), $locale = null) {
 
 		$displayOptions = array(
 			'showVolume' => $this->getData('showVolume'),
@@ -454,15 +454,21 @@ class Issue extends DataObject {
 		);
 
 		$displayOptions = array_merge($displayOptions, $force);
+		if(is_null($locale)){
+			$locale = AppLocale::getLocale();
+		}
 
-		AppLocale::requireComponents(array(LOCALE_COMPONENT_APP_COMMON));
-		$volLabel = __('issue.vol');
-		$numLabel = __('issue.no');
+		AppLocale::requireComponents(array(LOCALE_COMPONENT_APP_COMMON), $locale);
+		$volLabel = PKPLocale::translate('issue.vol', array(), $locale);
+		$numLabel = PKPLocale::translate('issue.no', array(), $locale);
 
 		$vol = $this->getData('volume');
 		$num = $this->getData('number');
 		$year = $this->getData('year');
-		$title = $this->getLocalizedTitle();
+		$title = $this->getTitle($locale);
+		if(empty($title)){
+			$title = $this->getLocalizedTitle();
+		}
 
 		$identification = array();
 		foreach($displayOptions as $opt => $val) {
@@ -497,7 +503,8 @@ class Issue extends DataObject {
 					'showNumber' => true,
 					'showYear' => true,
 					'showTitle' => false,
-				)
+				),
+				$locale
 			);
 		}
 
