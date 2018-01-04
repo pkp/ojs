@@ -39,9 +39,11 @@
 	<tr>
 		<td class="label" colspan="2">{fieldLabel name="formLocale" key="form.formLanguage"}</td>
 		<td class="value">
-			{if $feedId}{plugin_url|assign:"externalFeedFormUrl" path="edit" id=$feedId escape=false}
-			{else}{plugin_url|assign:"externalFeedFormUrl" path="create" id=$feedId escape=false}
-			{/if}
+			{capture assign="externalFeedFormUrl"}
+				{if $feedId}{plugin_url path="edit" id=$feedId escape=false}
+				{else}{plugin_url path="create" id=$feedId escape=false}
+				{/if}
+			{/capture}
 			{form_language_chooser form="externalFeed" url=$externalFeedFormUrl}
 			<span class="instruct">{translate key="form.formLanguage.description"}</span>
 		</td>

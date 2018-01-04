@@ -9,5 +9,5 @@
  *
  *}
 
-{url|assign:sectionsGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.settings.sections.SectionGridHandler" op="fetchGrid" escape=false}
+{capture assign=sectionsGridUrl}{url router=$smarty.const.ROUTE_COMPONENT component="grid.settings.sections.SectionGridHandler" op="fetchGrid" escape=false}{/capture}
 {load_url_in_div id="sectionsGridContainer" url=$sectionsGridUrl}

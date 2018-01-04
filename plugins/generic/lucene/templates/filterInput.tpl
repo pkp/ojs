@@ -13,10 +13,10 @@
  *}
 <script>
 	{if $filterName == "simpleQuery"}
-		{url|assign:"autocompleteUrl" page="lucene" op="queryAutocomplete"}
+		{capture assign="autocompleteUrl"}{url page="lucene" op="queryAutocomplete"}{/capture}
 		{assign var="searchForm" value="simpleSearchForm"}
 	{else}
-		{url|assign:"autocompleteUrl" page="lucene" op="queryAutocomplete" searchField=$filterName}
+		{capture assign="autocompleteUrl"}{url page="lucene" op="queryAutocomplete" searchField=$filterName}{/capture}
 		{assign var="searchForm" value="searchForm"}
 	{/if}
 	$(function() {ldelim}
