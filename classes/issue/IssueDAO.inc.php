@@ -309,7 +309,7 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 
 	/**
 	 * @copydoc self::_fromRow()
-	 * @deprecated
+	 * @deprecated 2018-01-05
 	 */
 	function _returnIssueFromRow($row) {
 		$issue = self::_fromRow($row);
