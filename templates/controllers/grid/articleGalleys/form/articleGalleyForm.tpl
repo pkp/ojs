@@ -17,7 +17,7 @@
 		// Attach the form handler.
 		$('#articleGalleyForm').pkpHandler('$.pkp.controllers.grid.representations.form.RepresentationFormHandler',
 			{ldelim}
-				remoteRepresentation: {$remoteRepresentation|json_encode escape=false}
+				remoteRepresentation: {$remoteRepresentation|json_encode}
 			{rdelim}
 		);
 	{rdelim});
