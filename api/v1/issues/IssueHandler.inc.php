@@ -127,8 +127,17 @@ class IssueHandler extends APIHandler {
 
 				// Always convert volume, number and year values to array
 				case 'volumes':
+				case 'volume':
 				case 'numbers':
+				case 'number':
 				case 'years':
+				case 'year':
+
+					// Support deprecated `year`, `number` and `volume` params
+					if (substr($param, -1) === 's') {
+						$param = substr($param, 0, -1);
+					}
+
 					if (is_string($val) && strpos($val, ',') > -1) {
 						$val = explode(',', $val);
 					} elseif (!is_array($val)) {
