@@ -78,7 +78,7 @@ class ManualPaymentPlugin extends PaymethodPlugin {
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON);
 
 		import('lib.pkp.classes.form.Form');
-		$paymentForm = new Form($this->getTemplateResourceName() . ':templates/paymentForm.tpl');
+		$paymentForm = new Form($this->getTemplatePath() . 'paymentForm.tpl');
 		$paymentManager = Application::getPaymentManager($context);
 		$paymentForm->setData(array(
 			'itemName' => $paymentManager->getPaymentName($queuedPayment),
@@ -158,6 +158,6 @@ class ManualPaymentPlugin extends PaymethodPlugin {
 	 * @copydoc Plugin::getTemplatePath()
 	 */
 	function getTemplatePath($inCore = false) {
-		return parent::getTemplatePath($inCore) . 'templates/';
+		return $this->getTemplateResourceName() . ':templates/';
 	}
 }
