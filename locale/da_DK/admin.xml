@@ -70,12 +70,6 @@
 	<message key="admin.categories.disableCategories">Undlad at kategorisere tidsskrifterne</message>
 	<message key="admin.categories.enableCategories">Tillad tidsskriftchefer at rubricere tidsskrifterne under kategorier</message>
 	<message key="admin.settings.options">Valgmuligheder</message>
-	<message key="admin.settings.usePaging">Opdel listen over tidsskrifterne på flere sider for websites med mange tidsskrifter.</message>
-	<message key="admin.settings.journalsList">Tidsskriftselementer</message>
-	<message key="admin.settings.journalsList.description">Vælg de tidsskriftselementer, der skal vises for hvert tidsskrift på websiden.</message>
-	<message key="admin.settings.journalsList.showThumbnail">Tidsskrifts-thumbnail</message>
-	<message key="admin.settings.journalsList.showTitle">Tidsskriftstitel</message>
-	<message key="admin.settings.journalsList.showDescription">Tidsskriftsbeskrivelse</message>
 	<message key="admin.settings.defaultMetricDescription">Jeres OJS-installation er konfigureret til at registrere mere end en metrisk brugerenhed. Brugerstatistikker vil blive fremvist i flere forskellige sammenhænge.
 		Der er tilfælde, hvor en enkelt brugerstatistik skal anvendes, f.eks. ved visning af en sorteret liste over mest anvendte artikler eller ved rangering af
 		søgeresultater. Vælg én af de konfigurerede metriske enheder som standard.</message>

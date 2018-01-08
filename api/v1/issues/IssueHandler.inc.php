@@ -83,32 +83,101 @@ class IssueHandler extends APIHandler {
 	 * @return Response
 	 */
 	public function getIssueList($slimRequest, $response, $args) {
-
 		$request = $this->getRequest();
+		$currentUser = $request->getUser();
 		$context = $request->getContext();
-		$data = array();
+		$issueService = ServicesContainer::instance()->get('issue');
 
-		$volume = $this->getParameter('volume', null);
-		$number = $this->getParameter('number', null);
-		$year = $this->getParameter('year', null);
-
-		if (($volume && !ctype_digit($volume))
-				|| ($number && !is_string($number))
-				|| ($year && !ctype_digit($year))) {
-			return $response->withStatus(400)->withJsonError('api.submissions.400.invalidIssueIdentifiers');
+		if (!$context) {
+			return $response->withStatus(404)->withJsonError('api.submissions.404.resourceNotFound');
 		}
 
-		$issueDao = DAORegistry::getDAO('IssueDAO');
-		$issues = $issueDao->getPublishedIssuesByNumber($context->getId(), $volume, $number, $year);
+		$defaultParams = array(
+			'count' => 20,
+			'offset' => 0,
+		);
 
-		while ($issue = $issues->next()) {
-			$data[] = ServicesContainer::instance()
-					->get('issue')
-					->getSummaryProperties($issue, array(
-						'request' => $request,
-						'slimRequest' => $slimRequest,
-					));
+		$requestParams = array_merge($defaultParams, $slimRequest->getQueryParams());
+
+		$params = array();
+
+		// Process query params to format incoming data as needed
+		foreach ($requestParams as $param => $val) {
+			switch ($param) {
+
+				case 'orderBy':
+					if (in_array($val, array('datePublished', 'lastModified'))) {
+						$params[$param] = $val;
+					}
+					break;
+
+				case 'orderDirection':
+					$params[$param] = $val === 'ASC' ? $val : 'DESC';
+					break;
+
+				// Enforce a maximum count to prevent the API from crippling the
+				// server
+				case 'count':
+					$params[$param] = min(100, (int) $val);
+					break;
+
+				case 'offset':
+					$params[$param] = (int) $val;
+					break;
+
+				// Always convert volume, number and year values to array
+				case 'volumes':
+				case 'volume':
+				case 'numbers':
+				case 'number':
+				case 'years':
+				case 'year':
+
+					// Support deprecated `year`, `number` and `volume` params
+					if (substr($param, -1) === 's') {
+						$param = substr($param, 0, -1);
+					}
+
+					if (is_string($val) && strpos($val, ',') > -1) {
+						$val = explode(',', $val);
+					} elseif (!is_array($val)) {
+						$val = array($val);
+					}
+					$params[$param] = array_map('intval', $val);
+					break;
+
+				case 'isPublished':
+					$params[$param] = $val ? true : false;
+					break;
+			}
 		}
+
+		\HookRegistry::call('API::issues::params', array(&$params, $slimRequest));
+
+		// You must be a manager or site admin to access unpublished Issues
+		$isAdmin = $currentUser->hasRole(array(ROLE_ID_MANAGER, ROLE_ID_SITE_ADMIN), $context->getId());
+		if (isset($params['isPublished']) && !$params['isPublished'] && !$isAdmin) {
+			return $response->withStatus(403)->withJsonError('api.submissions.403.unpublishedIssues');
+		} elseif (!$isAdmin) {
+			$params['isPublished'] = true;
+		}
+
+		$items = array();
+		$issues = $issueService->getIssues($context->getId(), $params);
+		if (!empty($issues)) {
+			$propertyArgs = array(
+				'request' => $request,
+				'slimRequest' => $slimRequest,
+			);
+			foreach ($issues as $issue) {
+				$items[] = $issueService->getSummaryProperties($issue, $propertyArgs);
+			}
+		}
+
+		$data = array(
+			'maxItems' => $issueService->getIssuesMaxCount($context->getId(), $params),
+			'items' => $items,
+		);
 
 		return $response->withJson($data, 200);
 	}

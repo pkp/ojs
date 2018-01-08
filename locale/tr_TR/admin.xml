@@ -58,17 +58,11 @@
 	<message key="admin.mergeUsers.allUsers">Tüm Kayıtlı Üyeler</message>
 	<message key="admin.mergeUsers.confirm">Seçilen {$oldAccountCount} hesap/hesapları "{$newUsername}" kullanıcı hesabında birleştirmek istediğinizen emin misiniz? Seçilen {$oldAccountCount} hesap daha sonra açılamaz. Bu işlem geri alınamaz.</message>
 	<message key="admin.mergeUsers.noneEnrolled">Kayıtlı olmayan üyeler.</message>
-	<message key="admin.settings.journalsList.description">Lütfen site sayfasında her bir dergi için listelenen dergi elemanlarını seçiniz.</message>
 	<message key="admin.categories.enable.description">Dergilerin geniş kümeler düzenlemenize yardımcı olmak için Site Yöneticisi burada kategorileri tanımlayarak bir dizi seçebilir. Dergi yöneticisi her bir dergi için bu kategorilerden birçoğunu seçebilir ve okuyucular dergi koleksiyonlarını katagorilere göre listeleyebilir.</message>
 	<message key="admin.categories.editTitle">Kategori Düzenle</message>
 	<message key="admin.categories.createTitle">Kategori Oluştur</message>
 	<message key="admin.categories.name">Ad</message>
 	<message key="admin.settings.options">Seçenekler</message>
-	<message key="admin.settings.usePaging">Birçok dergi olan siteler için, dergilerin listesi birkaç sayfa kadar bölünürler.</message>
-	<message key="admin.settings.journalsList">Dergi elemanları</message>
-	<message key="admin.settings.journalsList.showThumbnail">Dergi Görseli (Küçük)</message>
-	<message key="admin.settings.journalsList.showTitle">Dergi başlığı</message>
-	<message key="admin.settings.journalsList.showDescription">Dergi tanımı</message>
 	<message key="admin.categories">Kategoriler</message>
 	<message key="admin.categories.disableCategories">Kategorilerde dergileri düzenlemeyiniz.</message>
 	<message key="admin.categories.enableCategories">Kategorilerde dergileri düzenlemek için Dergi Yöneticisine izin ver.</message>
