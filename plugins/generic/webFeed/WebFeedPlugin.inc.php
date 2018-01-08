@@ -79,7 +79,7 @@ class WebFeedPlugin extends GenericPlugin {
 		if (!is_a($request->getRouter(), 'PKPPageRouter')) return false;
 
 		$templateManager =& $args[0];
-		$currentJournal = $templateManager->get_template_vars('currentJournal');
+		$currentJournal = $templateManager->getTemplateVars('currentJournal');
 		if (is_null($currentJournal)) {
 			return;
 		}

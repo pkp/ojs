@@ -69,7 +69,7 @@ class RecommendBySimilarityPlugin extends GenericPlugin {
 		$output =& $params[2];
 
 		// Identify similarity terms for the given article.
-		$displayedArticle = $smarty->get_template_vars('article');
+		$displayedArticle = $smarty->getTemplateVars('article');
 		$articleId = $displayedArticle->getId();
 		import('classes.search.ArticleSearch');
 		$articleSearch = new ArticleSearch();

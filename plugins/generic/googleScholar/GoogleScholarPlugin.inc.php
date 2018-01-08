@@ -89,7 +89,7 @@ class GoogleScholarPlugin extends GenericPlugin {
 			if ($endPage = $article->getEndingPage()) $templateMgr->addHeader('googleScholarEndPage', '<meta name="citation_lastpage" content="' . htmlspecialchars($endPage) . '"/>');
 		}
 
-		foreach((array) $templateMgr->get_template_vars('pubIdPlugins') as $pubIdPlugin) {
+		foreach((array) $templateMgr->getTemplateVars('pubIdPlugins') as $pubIdPlugin) {
 			if ($pubId = $article->getStoredPubId($pubIdPlugin->getPubIdType())) {
 				$templateMgr->addHeader('googleScholarPubId' . $pubIdPlugin->getPubIdDisplayType(), '<meta name="citation_' . htmlspecialchars(strtolower($pubIdPlugin->getPubIdDisplayType())) . '" content="' . htmlspecialchars($pubId) . '"/>');
 			}

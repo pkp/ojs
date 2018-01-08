@@ -208,7 +208,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 				$output .= '</div>';
 
 				$templateManager =& $args[0];
-				$additionalHomeContent = $templateManager->get_template_vars('additionalHomeContent');
+				$additionalHomeContent = $templateManager->getTemplateVars('additionalHomeContent');
 				$templateManager->assign('additionalHomeContent', $additionalHomeContent . "\n\n" . $output);
 			}
 		}

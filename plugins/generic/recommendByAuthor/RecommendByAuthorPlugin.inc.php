@@ -69,7 +69,7 @@ class RecommendByAuthorPlugin extends GenericPlugin {
 		$output =& $params[2];
 
 		// Find articles of the same author(s).
-		$displayedArticle = $smarty->get_template_vars('article');
+		$displayedArticle = $smarty->getTemplateVars('article');
 		$authors = $displayedArticle->getAuthors();
 		$authorDao = DAORegistry::getDAO('AuthorDAO'); /* @var $authorDao AuthorDAO */
 		$foundArticles = array();
