@@ -11,7 +11,7 @@
   *
   -->
 
-<install version="2.4.8.2">
+<install version="2.4.8.3">
 	<upgrade minversion="2.0.0.0" maxversion="2.2.0.0">
 		<!-- Correct null public issue IDs; this caused problems with
 		     2.x -> 2.2.0 upgrades using public issue IDs.-->
