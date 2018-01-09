@@ -141,4 +141,6 @@ ________________________________________________________________________<br/>
 	<message key="default.groups.name.externalReviewer">Bedømmer</message>
 	<message key="default.groups.plural.externalReviewer">Bedømmere</message>
 	<message key="default.groups.abbrev.externalReviewer">R</message>
+	<message key="default.journalSettings.purchaseArticleFee">Køb artikel</message>
+	<message key="default.journalSettings.membershipFee">Foreningsmedlemskab</message>
 </locale>

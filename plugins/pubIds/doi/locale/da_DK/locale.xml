@@ -59,4 +59,7 @@
 	<message key="plugins.pubIds.doi.editor.assignDoi.emptySuffix">DOI kan ikke tilføjes, da det brugerdefinerede suffiks mangler.</message>
 	<message key="plugins.pubIds.doi.editor.assignDoi.pattern">DOI {$pubId} kan ikke tilføjes, da det indeholder et ikke-kendt format.</message>
 	<message key="plugins.pubIds.doi.editor.assignDoi.assigned">DOI {$pubId} er belvet tilføjet.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiAssignJournalWide">Tildel DOI'er</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiAssignJournalWide.description">Assign DOIs to all published journal objects that have not been assigned DOIs. This action can not be used with the individual suffix configuration. If you have modified the DOI configuration above, please save your changes before initiating this action. Assigning DOIs may take a long time, depending on the number of published objects in the journal.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiAssignJournalWide.confirm">Are you sure you wish to assign DOIs to all published objects that have not been assigned DOIs?</message>
 </locale>

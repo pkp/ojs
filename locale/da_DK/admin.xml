@@ -86,4 +86,10 @@
 
 	<message key="admin.presses.createInstructions">Du vil automatisk blive indskrevet som chef for dette tidsskrift. Efter at have oprettet et nyt tidsskrift, vil du blive omdirigeret til indstillingsguiden for at afslutte den indledende konfiguration af tidsskriftet.</message>
 	<message key="admin.scheduledTask.reviewReminder">Påmindelse om bedømmelse</message>
+	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Downloading language packs from the Public Knowledge Project web server is not currently available because:</p>
+	<ul>
+		<li>Your server does not have or allow execution of the GNU "tar" utility.</li>
+		<li>OJS is unable to modify the locale registry file, typically "registry/locales.xml".</li>
+	</ul>
+<p>Language packs can be manually downloaded from the <a href="http://pkp.sfu.ca">PKP web site</a>.</p>]]></message>
 </locale>

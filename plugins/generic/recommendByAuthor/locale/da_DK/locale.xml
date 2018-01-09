@@ -15,4 +15,5 @@
 	<message key="plugins.generic.recommendByAuthor.displayName">Anbefal artikler af forfatter</message>
 	<message key="plugins.generic.recommendByAuthor.description">Dette plug-in indsætter en fortegnelse over artikler af samme forfatter på artiklens resuméside.</message>
 	<message key="plugins.generic.recommendByAuthor.heading">Mest læste artikler af samme forfatter(e)</message>
+	<message key="plugins.generic.recommendByAuthor.noMetric">Obs.: This plugin requires at least one statistics/report plugin to be enabled. If your statistics plugins provide more than one metric then please also select a main metric on the admin's site settings page and/or on the journal manager's settings pages.</message>
 </locale>

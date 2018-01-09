@@ -625,7 +625,7 @@ aktuelle adgangskode.<br /><br />Angiv din e-mail-adresse nedenfor for at nulsti
 	<message key="payment.paymentReceived">Betalingen er modtaget</message>
 	<message key="payment.paymentSent">Betalingen er allerede sendt</message>
 	<message key="payment.type.submission">Manuskriptgebyr</message>
-	<message key="payment.type.publication">Publiceringsgebyr</message>
+	<message key="payment.type.publication">Publikationsgebyr</message>
 	<message key="payment.type.fastTrack">Gebyr for Fast Track-bedømmelse</message>
 	<message key="payment.type.membership">Gebyr for individuelt medlemskab</message>
 	<message key="payment.type.subscription">Abonnementsgebyr</message>
@@ -877,8 +877,8 @@ Valideringen kan mislykkes i forbindelse med URL-søgeadresser, der kræver send
 	<message key="user.subscriptions.purchaseNewSubscription">Køb nyt abonnement</message>
 	<message key="user.subscriptions.purchaseIndividualSubscription">Køb individuelt abonnement</message>
 	<message key="user.subscriptions.purchaseInstitutionalSubscription">Køb institutionsabonnement</message>
-	<message key="user.subscriptions.expires">Udløber</message>
-	<message key="user.subscriptions.expired">Udløbet</message>
+	<message key="user.subscriptions.expires">Udløber: {$date}</message>
+	<message key="user.subscriptions.expired">Udløbet: {$date}</message>
 	<message key="user.subscriptions.viewSubscriptionTypes">Se tilgængelige abonnementstyper</message>
 	<message key="user.subscriptions.form.typeId">Abonnementstype</message>
 	<message key="user.subscriptions.form.membership">Medlemskab</message>
@@ -1023,4 +1023,29 @@ Konfigurationen af CLOCKSS-understøttelse for Open Journal Systems behøver ikk
 	<message key="search.cli.rebuildIndex.indexing">Indeksering af "{$journalName}"</message>
 	<message key="search.cli.rebuildIndex.indexingByJournalNotSupported">Denne søgning tillader ikke en re-indeksering af hver enkelt tidsskrift.</message>
 	<message key="search.cli.rebuildIndex.unknownJournal">Den angivne tidsskriftssti "{$journalPath}" leder ikke frem til et tidsskrift.</message>
+	<message key="issue.viewIssue">Se nummer</message>
+	<message key="subscriptions.status.noSubscription">Du har ikke et aktivt abonnement.</message>
+	<message key="reader.purchasePrice">({$currency} {$price})</message>
+	<message key="manager.setup.porticoDescription">Portico is a not-for-profit service committed to the preservation of digital publications, including e-journals, e-books, and digitized historical collections. If your journal signed a contract with Portico, enable it here:</message>
+	<message key="payment.type.publication.required">Publikationsgebyret er endnu ikke betalt.</message>
+	<message key="payment.requestPublicationFee">Rekvirer publikationsgebyr ({$feeAmount})</message>
+	<message key="payment.notFound">A payment has been requested, but the request has expired. Contact the Journal Manager for details.</message>
+	<message key="installer.preInstallationInstructions"><![CDATA[<h4>Pre-Installation Steps</h4>
+
+
+<p>1. The following files and directories (and their contents) must be made writable:</p>
+<ul>
+	<li><tt>config.inc.php</tt> is writable (optional): {$writable_config}</li>
+	<li><tt>public/</tt> is writable: {$writable_public}</li>
+	<li><tt>cache/</tt> is writable: {$writable_cache}</li>
+	<li><tt>cache/t_cache/</tt> is writable: {$writable_templates_cache}</li>
+	<li><tt>cache/t_compile/</tt> is writable: {$writable_templates_compile}</li>
+	<li><tt>cache/_db</tt> is writable: {$writable_db_cache}</li>
+</ul>
+
+<p>2. A directory to store uploaded files must be created and made writable (see "File Settings" below).</p>]]></message>
+	<message key="log.editor.recommendation">En redaktørbeslutning ({$decision}) for artiklen {$submissionId} blev registreret af {$editorName}.</message>
+	<message key="notification.type.publicationScheduled">Denne indsendelse er indstillet til publikation.</message>
+	<message key="navigation.subscriptions">Abonnementer</message>
+	<message key="log.editor.submissionExpedited">{$editorName} har påtaget sig redigeringen af artiklen {$submissionId}.</message>
 </locale>

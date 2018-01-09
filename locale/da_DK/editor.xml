@@ -229,4 +229,7 @@
 	<message key="editor.submission.selectGalleyFiles">Vælg publi´ceringsklare filer</message>
 	<message key="editor.submission.editorial.finalDraftDescription"><![CDATA[Det sidste udkast på denne liste tilrettes af en manuskriptredaktør til den manuskriptredigerede version uploadet nedenfor under <span class="pkp_help_title">Manuskriptredigering</span>.]]></message>
 	<message key="editor.submission.proof.manageProofFilesDescription">Enhver fil, der allerede er blevet uploadet til et af indsendelsestrinnene kan tilføjes korrekturlæsningslisten ved nedenfor at markere afkrydsningsfeltet ud for 'Inkludér' og klikke 'Søg': Alle tilgængelige filer vil stå opført og kan tilvælges.</message>
+	<message key="editor.issues.confirmSetCurrentIssue">Er du sikker på at du vil registrere dette nummer som det nyeste?</message>
+	<message key="grid.action.setCurrentIssue">Sæt nyeste nummer</message>
+	<message key="editor.publicIdentificationExistsForTheSameType">The public identifier '{$publicIdentifier}' already exists for another object of the same type. Please choose unique identifiers for the objects of the same type within your journal.</message>
 </locale>

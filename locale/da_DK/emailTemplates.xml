@@ -881,4 +881,35 @@ Manuskriptets URL: {$submissionUrl}<br />
 {$editorialContactSignature}]]></body>
 		<description>Denne e-mail bliver automatisk sendt til udvalgte redaktør når forfatteren uploader en revideret udgave a en artikel.</description>
 	</email_text>
+	<email_text key="EDITOR_DECISION_INITIAL_DECLINE">
+		<subject>Redaktørbeslutning</subject>
+		<body><![CDATA[{$authorName}:<br />
+<br />
+Vi er nået frem til en afgørelse vedrørende dit bidrag til {$contextName}, &quot;{$submissionTitle}&quot;.<br />
+<br />
+Vi har besluttet at: Afvise manuskriptet<br />
+<br />
+{$editorialContactSignature}<br />]]></body>
+		<description>Denne e-mail sendes til forfatteren, hvis redaktøren afviser manuskriptet i indledningsfasen, før bedømmelsestrinnet</description>
+	</email_text>
+	<email_text key="EDITOR_RECOMMENDATION">
+		<subject>Redaktøranbefaling</subject>
+		<body><![CDATA[{$editors}:<br />
+<br />
+Anbefalingen med hensyn til {$contextName}, &quot;{$submissionTitle}&quot; er: {$recommendation}<br />
+<br />
+{$editorialContactSignature}<br />]]></body>
+		<description>This email from the recommending Editor or Section Editor to the decision making Editors or Section Editors notifies them of a final recommendation regarding the submission</description>
+	</email_text>
+	<email_text key="SUBMISSION_ACK_NOT_USER">
+		<subject>Indsendelsesbekræftelse</subject>
+		<body><![CDATA[Hej<br />
+<br />
+{$submitterName} har indsendt manuskriptet &quot;{$submissionTitle}&quot; til {$contextName}. <br />
+<br />
+Hvis du har spørgsmål, er du velkommen til at kontakte mig. Tak fordi du har valgt at publicere din artikel i dette tidsskrift.<br />
+<br />
+{$editorialContactSignature}]]></body>
+		<description>This email, when enabled, is automatically sent to the other authors who are not users within OJS specified during the submission process.</description>
+	</email_text>
 </email_texts>
