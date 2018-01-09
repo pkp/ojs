@@ -63,12 +63,16 @@
 		{/fbvFormSection}
 	{/fbvFormArea}
 
-	{fbvFormSection for="context" size=$fbvStyles.size.LARGE}
-		{if $sectionEditorCount > 0}{* only include the section editor listbuilder if there are section editors available *}
-			{url|assign:sectionEditorsUrl router=$smarty.const.ROUTE_COMPONENT component="listbuilder.settings.SubEditorsListbuilderHandler" op="fetch" sectionId=$sectionId escape=false}
-			{load_url_in_div id="sectionEditorsContainer" url=$sectionEditorsUrl}
-		{/if}
-	{/fbvFormSection}
+	{if $hasSubEditors}
+		{fbvFormSection}
+			{assign var="uuid" value=""|uniqid|escape}
+			<div id="subeditors-{$uuid}">
+				<script type="text/javascript">
+					pkp.registry.init('subeditors-{$uuid}', 'SelectListPanel', {$subEditorsListData});
+				</script>
+			</div>
+		{/fbvFormSection}
+	{/if}
 
 	{fbvFormButtons submitText="common.save"}
 </form>
