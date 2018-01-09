@@ -14,6 +14,6 @@
  
 <locale name="da_DK" full_name="Dansk">
 	<message key="plugins.block.information.displayName">Informationsfunktion</message>
-	<message key="plugins.block.information.description">Dette plugin indsætter link til information i sidekolonnen.</message>
+	<message key="plugins.block.information.description">Denne plugin indsætter link til information i sidekolonnen.</message>
 	<message key="plugins.block.information.link">Information</message>
 </locale>

@@ -13,8 +13,8 @@
   -->
  
 <locale name="da_DK" full_name="Dansk">
-	<message key="plugins.gateways.resolver.displayName">Resolver Plugin</message>
-	<message key="plugins.gateways.resolver.description">Dette plugin resolverer numre og artikler baseret på citeringsinformation.</message>
+	<message key="plugins.gateways.resolver.displayName">Resolver-plug-in</message>
+	<message key="plugins.gateways.resolver.description">Denne plug-in resolverer numre og artikler baseret på citeringsinformation.</message>
 	<message key="plugins.gateways.resolver.errors.errorMessage">Kan ikke resolvere en enkelt enhed ved hjælp af den angivne citeringsinformation. Sørg for at citeringsinformationen er fuldstændig og refererer til en enhed i OJS i denne anvendelse af OJS.</message>
-	<message key="plugins.gateways.resolver.exportHoldings">Export Holdings</message>
+	<message key="plugins.gateways.resolver.exportHoldings">Eksporter holdings</message>
 </locale>

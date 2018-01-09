@@ -15,11 +15,13 @@
 
 <locale name="da_DK" full_name="Dansk">
 	<message key="plugins.block.subscription.displayName">Subskriptionsfunktion</message>
-	<message key="plugins.block.subscription.description">Dette plugin indsætter information om subskription i sidekolonnen.</message>
+	<message key="plugins.block.subscription.description">Denne plugin indsætter information om subskription i sidekolonnen.</message>
 	<message key="plugins.block.subscription.blockTitle">Abonnement</message>
 	<message key="plugins.block.subscription.expires">Udløber</message>
-	<message key="plugins.block.subscription.providedBy">Adgang givet af:</message>
-	<message key="plugins.block.subscription.comingFromIP">Kommer fra IP:</message>
+	<message key="plugins.block.subscription.providedBy">Adgang givet af: {$institutionName}</message>
+	<message key="plugins.block.subscription.comingFromIP">Kommer fra IP: {$ip}</message>
 	<message key="plugins.block.subscription.about">Abonnementer</message>
 	<message key="plugins.block.subscription.loginToVerifySubscription">Log ind for at bekræfte abonnement</message>
+	<message key="plugins.block.subscription.subscriptionRequired">For at få adgang til nogle ressourcer kræves abonnement.</message>
+	<message key="plugins.block.subscription.subscriptionRequired.learnMore">Læs mere</message>
 </locale>
