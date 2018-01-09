@@ -271,23 +271,23 @@ URL подання: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><
                <description>Цим листом редактор розділу повідомляє рецензенту, який працює над поданням, про припинення рецензування.</description>
        </email_text>
        <email_text key="REVIEW_CONFIRM">
-               <subject>Погоджуюсь здійснити рецензування</subject>
-               <body><![CDATA[{$editorialContactName}:<br />
+		<subject>Погоджуюсь здійснити рецензування</subject>
+		<body><![CDATA[Шановні редактори:<br />
 <br />
 Я маю можливість та бажання працювати над рецензією подання &quot;{$submissionTitle}&quot; для видання &quot;{$contextName}&quot;. Дякую за довіру. Я планую закінчити роботу над рецензією не пізніше {$reviewDueDate}.<br />
 <br />
 {$reviewerName}]]></body>
-               <description>Цим листом рецензент повідомляє редактору розділу у відповідь на його запит, що він береться працювати над рецензією та здатний завершити цю роботу до вказаної дати.</description>
-       </email_text>
+		<description>Цим листом рецензент повідомляє редактору розділу у відповідь на його запит, що він береться працювати над рецензією та здатний завершити цю роботу до вказаної дати.</description>
+	</email_text>
        <email_text key="REVIEW_DECLINE">
-               <subject>Неможливо здійснити рецензування</subject>
-               <body><![CDATA[{$editorialContactName}:<br />
+		<subject>Неможливо здійснити рецензування</subject>
+		<body><![CDATA[Шановні редактори:<br />
 <br />
 Боюся, що зараз я не маю можливості рецензувати подання &quot;{$submissionTitle}&quot; для видання &quot;{$contextName}&quot;. Дякую за довіру, звертайтеся до мене у майбутньому.<br />
 <br />
 {$reviewerName}]]></body>
-               <description>Цим листом рецензент повідомляє редактору розділу у відповідь на його запит, що відмовляється рецензувати.</description>
-       </email_text>
+		<description>Цим листом рецензент повідомляє редактору розділу у відповідь на його запит, що відмовляється рецензувати.</description>
+	</email_text>
        <email_text key="REVIEW_ACK">
                <subject>Подяка за рецензування статті</subject>
                <body><![CDATA[{$reviewerName}:<br />
@@ -985,6 +985,112 @@ URL подання: {$submissionUrl}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Цей лист автоматично надсилається призначеному редактору, коли автор вивантажує перероблену версію своєї статті.</description>
+	</email_text>
+	<email_text key="EDITOR_DECISION_INITIAL_DECLINE">
+		<subject>Рішення редактора</subject>
+		<body><![CDATA[{$authorName}:<br />
+<br />
+Ми прийняли рішення щодо Вашого подання до видання {$contextName}, &quot;{$submissionTitle}&quot;.<br />
+<br />
+Наше рішення: Відхилити подання<br />
+<br />
+{$editorialContactSignature}<br />]]></body>
+		<description></description>
+	</email_text>
+	<email_text key="EDITOR_DECISION_SEND_TO_EXTERNAL">
+		<subject>Рішення редактора</subject>
+		<body><![CDATA[{$authorName}:<br />
+<br />
+При прийняли рішення щодо Вашого подання до видання {$contextName}, &quot;{$submissionTitle}&quot;.<br />
+<br />
+Наше рішення: Надіслати на рецензування<br />
+<br />
+Адреса URL подання: {$submissionUrl}<br />
+<br />
+{$editorialContactSignature}<br />]]></body>
+		<description></description>
+	</email_text>
+	<email_text key="EDITOR_DECISION_SEND_TO_PRODUCTION">
+		<subject>Рішення редактора</subject>
+		<body><![CDATA[{$authorName}:<br />
+<br />
+Редагування Вашого подання &quot;{$submissionTitle},&quot; завершено. Ми надсилаємо його у виробництво.<br />
+<br />
+Адреса URL подання: {$submissionUrl}<br />
+<br />
+{$editorialContactSignature}<br />]]></body>
+		<description></description>
+	</email_text>
+	<email_text key="EDITOR_RECOMMENDATION">
+		<subject>Рекомендація редактора</subject>
+		<body><![CDATA[{$editors}:<br />
+<br />
+Рекомендація щодо подання до видання {$contextName}, &quot;{$submissionTitle}&quot; наступна: {$recommendation}<br />
+<br />
+{$editorialContactSignature}<br />]]></body>
+		<description></description>
+	</email_text>
+	<email_text key="NOTIFICATION_CENTER_DEFAULT">
+		<subject>Повідомлення щодо  журналу {$contextName}</subject>
+		<body>Будь ласка, введіть текст повідомлення.</body>
+		<description></description>
+	</email_text>
+	<email_text key="SUBMISSION_ACK_NOT_USER">
+		<subject>Підтвердження подання</subject>
+		<body><![CDATA[Вітаємо,<br />
+<br />
+{$submitterName} подав рукопис &quot;{$submissionTitle}&quot; до видання {$contextName}. <br />
+<br />
+Якщо у Вас є якісь запитання, будь ласка, звертайтесь до мене. Дякуємо, що обрали наше видання для публікації Ваших результатів.<br />
+<br />
+{$editorialContactSignature}]]></body>
+		<description></description>
+	</email_text>
+	<email_text key="REVIEW_REQUEST_REMIND_AUTO">
+		<subject>Запит на рецензування статті</subject>
+		<body><![CDATA[{$reviewerName}:<br />
+Дозвольте нагадати про наш запит щодо рецензування статті &quot;{$submissionTitle},&quot; для журналу {$contextName}. Ми сподівались отримати Вашу відповідь до {$responseDueDate}, і це повідомлення було автоматично створено та надіслано, коли ця дата минула.
+<br />
+Я певен, що Ви були б чудовим рецензентом цього рукопису. Резюме подання наведено нижче, і я сподіваюсь, що Ви розглянете можливість зробити цю важливу для нас справу.<br />
+<br />
+Будь ласка, увійдіть до сайту журналу щоб вказати, чи приймаєте рукопис на рецензування, а також отримати доступ до подання та внести Вашу рецензію та рекомендації. Адреса сайту: {$contextUrl}<br />
+<br />
+Термін подання рецензії {$reviewDueDate}.<br />
+<br />
+Якщо Ви не маєте облікового запису на сайті журналу, Ви можете скористатись наведеним посиланням для перевстановлення пароля (який буде Вам надісланий разом з назвою користувача). {$passwordResetUrl}<br />
+<br />
+Адреса URL подання: {$submissionReviewUrl}<br />
+<br />
+Дякуємо, що розглянули цей запит.<br />
+<br />
+{$editorialContactSignature}<br />
+<br />
+&quot;{$submissionTitle}&quot;<br />
+<br />
+{$submissionAbstract}]]></body>
+		<description></description>
+	</email_text>
+	<email_text key="REVIEW_REQUEST_REMIND_AUTO_ONECLICK">
+		<subject>Запит на рецензування статті</subject>
+		<body><![CDATA[{$reviewerName}:<br />
+Дозвольте нагадати про наш запит щодо рецензування статті &quot;{$submissionTitle},&quot; для журналу {$contextName}. Ми сподівались отримати Вашу відповідь до {$responseDueDate}, і це повідомлення було автоматично створено та надіслано, коли ця дата минула.
+<br />
+Я певен, що Ви були б чудовим рецензентом цього рукопису. Резюме подання наведено нижче, і я сподіваюсь, що Ви розглянете можливість зробити цю важливу для нас справу.<br />
+<br />
+Будь ласка, увійдіть до сайту журналу щоб вказати, чи приймаєте рукопис на рецензування, а також отримати доступ до подання та внести Вашу рецензію та рекомендації.<br />
+<br />
+Термін подання рецензії {$reviewDueDate}.<br />
+<br />
+Адреса URL подання: {$submissionReviewUrl}<br />
+<br />
+Дякуємо, що розглянули цей запит.<br />
+<br />
+{$editorialContactSignature}<br />
+<br />
+&quot;{$submissionTitle}&quot;<br />
+<br />
+{$submissionAbstract}]]></body>
+		<description></description>
 	</email_text>
 </email_texts>
 

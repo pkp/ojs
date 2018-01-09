@@ -9,6 +9,9 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Ukrainian_(uk_UA)
   * Localization strings.
+  *
+  * Updated by Vasyl Ostrovskyi, 2017
+  * Institute of Mathematics, NAS of Ukraine
   -->
 
 <locale name="uk_UA" full_name="Українська">
@@ -700,8 +703,8 @@
        <message key="user.subscriptions.purchaseNewSubscription">Купити нову передплату</message>
        <message key="user.subscriptions.purchaseIndividualSubscription">Купити індивідуальну передплату</message>
        <message key="user.subscriptions.purchaseInstitutionalSubscription">Купити інституційну передплату</message>
-       <message key="user.subscriptions.expires">Завершується</message>
-       <message key="user.subscriptions.expired">Завершена</message>
+       <message key="user.subscriptions.expires">Завершується: {$date}</message>
+       <message key="user.subscriptions.expired">Завершена: {$date}</message>
        <message key="user.subscriptions.viewSubscriptionTypes">Переглянути доступні типи передплат</message>
        <message key="user.subscriptions.form.typeId">Тип передплат</message>
        <message key="user.subscriptions.form.membership">Членство</message>
@@ -785,7 +788,7 @@
        <message key="about.onlineSubmissions">Подання статей</message>
        <message key="about.onlineSubmissions.login">Увійдіть на сайт</message>
        <message key="about.onlineSubmissions.register">Зареєструватися</message>
-       <message key="about.onlineSubmissions.registrationRequired">Для того, щоб мати можливість подавати статті до журналу та перевіряти поточний статус своїх матеріалів необхідно увійти на сайт як зареєстрований користувач.</message>
+       <message key="about.onlineSubmissions.registrationRequired">Для того, щоб мати можливість подавати статті до журналу та перевіряти поточний статус своїх матеріалів, {$login} на сайт чи {$register}.</message>
        <message key="about.onlineSubmissions.submissionActions">{$newSubmission} або {$viewSubmissions}.</message>
        <message key="about.onlineSubmissions.newSubmission">Подати новий матеріал</message>
        <message key="about.onlineSubmissions.viewSubmissions">переглянути раніше подані матеріали</message>
@@ -932,21 +935,18 @@
 
 <h4>Системи управління базами даних, що підтримуються</h4>
 
-<p>Наразі OJS був протестований лише на MySQL та PostgreSQL, проте інші СУБД, що підтримуються через <a href="http://adodb.sourceforge.net/" target="_blank">ADOdb</a>, можуть також бути робочими (повністю або частково). Звіти про сумісність та/або патч-коди для альтернативних СУБД можуть бути надіслані працівникам OJS.</p>
+<p>Наразі OJS був протестований лише на MySQL та PostgreSQL, проте інші СУБД, що підтримуються через <a href="http://adodb.sourceforge.net/" target="_blank">ADOdb</a>, можуть також бути робочими (повністю або частково). Звіти про сумісність та/або патч-коди для альтернативних СУБД можуть бути надіслані працівникам OJS.</p>]]></message>
 
-       <message key="installer.preInstallationInstructions"><![CDATA[<h4>Підготовка до інсталяції</h4>
-
-<p>1. Необхідно відкрити для запису наступні файли і теки (та їх зміст):</p>
-<ul>
-       <li><tt>config.inc.php</tt> відкритий для запису (необов'язково): {$writable_config}</li>
-       <li><tt>public/</tt> відкритий для запису: {$writable_public}</li>
-       <li><tt>cache/</tt> відкритий для запису: {$writable_cache}</li>
-       <li><tt>cache/t_cache/</tt> відкритий для запису: {$writable_templates_cache}</li>
-       <li><tt>cache/t_compile/</tt> відкритий для запису: {$writable_templates_compile}</li>
-       <li><tt>cache/_db</tt> відкритий для запису: {$writable_db_cache}</li>
-</ul>
-
-<p>2. Потрібно створити та відкрити для запису теку для збереження вивантажених файлів (див. "Налаштування файлів" нижче).</p>]]></message>
+       <message key="installer.preInstallationInstructions"><![CDATA[<p>1. Наступні файли та теки (та їх вміст) слід зробити доступними для запису:</p>
+		<ul>
+			<li><tt>config.inc.php</tt> можна записувати (не обов'язково): {$writable_config}</li>
+			<li><tt>public/</tt> можна записувати: {$writable_public}</li>
+			<li><tt>cache/</tt> можна записувати: {$writable_cache}</li>
+			<li><tt>cache/t_cache/</tt> можна записувати: {$writable_templates_cache}</li>
+			<li><tt>cache/t_compile/</tt> можна записувати: {$writable_templates_compile}</li>
+			<li><tt>cache/_db</tt> можна записувати: {$writable_db_cache}</li>
+		</ul>
+<p>2. Слід створити теку для зберігання вивантажених файлів та зробити ї доступною для запису (Див. далі розділ "Налаштування файлів").</p>]]></message>
 
        <message key="installer.upgradeInstructions"><![CDATA[<h4>OJS версії {$version}</h4>
 
@@ -1129,4 +1129,17 @@
        <message key="editor.issues.backIssues">Попередні випуски</message>
        <message key="editor.issues.futureIssues">Наступні випуски</message>
 
+	<message key="article.return">Повернутись до деталей статті</message>
+	<message key="subscriptions.status.noSubscription">У вас немає активних передплат.</message>
+	<message key="reader.purchasePrice">({$currency} {$price})</message>
+	<message key="manager.setup.porticoDescription">Portico - це неприбуткова служба, створена для зберігання цифрових публікацій, зокрема, електронних журналів, електронних книг та оцифрованих історичних зібрань. Якщо журнал має угоду з Portico, активуйте її тут:</message>
+	<message key="reviewer.article.selectRecommendation.byEditor">Вкажіть чи виправте рекомендацію рецензента.</message>
+	<message key="payment.type.publication.required">Очікується плата за публікацію статті.</message>
+	<message key="payment.requestPublicationFee">Вимога плати за публікацію ({$feeAmount})</message>
+	<message key="payment.notFound">Вимагалась плата за публікацію, проте термін оплати минув. Зверніться до менеджера журналу за деталями.</message>
+	<message key="log.editor.recommendation">Рекомендація редактора ({$decision}) для статті {$submissionId} надана {$editorName}.</message>
+	<message key="notification.type.submissionSubmitted">Подано нову статтю "{$title}".</message>
+	<message key="notification.type.publicationScheduled">Це подання передано до публікації.</message>
+	<message key="navigation.subscriptions">Передплати</message>
+	<message key="log.editor.submissionExpedited">{$editorName} прийняв процес редагування статті {$submissionId}.</message>
 </locale>
