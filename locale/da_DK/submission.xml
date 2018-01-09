@@ -71,4 +71,5 @@
 	<message key="submission.submit.privacyStatement">Erklæring om beskyttelse af personlige oplysninger</message>
 	<message key="submission.submit.form.authorRequiredFields">Fornavn, efternavn og e-mailadresse for hver forfatter er påkrævet.</message>
 	<message key="submission.citationFormat.notFound">Det ønskede citationsformat kunne ikke genfindes.</message>
+	<message key="section.any">Enhver sektion</message>
 </locale>

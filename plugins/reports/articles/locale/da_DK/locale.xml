@@ -14,6 +14,6 @@
 
 <locale name="da_DK" full_name="Dansk">
 	<message key="plugins.reports.articles.displayName">Artikelrapport</message>
-	<message key="plugins.reports.articles.description">Dette plugin genererer en CSV-rapport indeholdende en liste over artikler og deres information.</message>
+	<message key="plugins.reports.articles.description">Denne plugin genererer en CSV-rapport indeholdende en liste over artikler og deres information.</message>
 	<message key="plugins.reports.articles.nodecision">Ingen beslutning</message>
 </locale>

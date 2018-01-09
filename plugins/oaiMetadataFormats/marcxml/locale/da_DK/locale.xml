@@ -13,6 +13,6 @@
   -->
  
 <locale name="da_DK" full_name="Dansk">
-	<message key="plugins.OAIMetadata.marcxml.displayName">MARC21 Metadata Format</message>
+	<message key="plugins.OAIMetadata.marcxml.displayName">MARC21 Metadata-format</message>
 	<message key="plugins.OAIMetadata.marcxml.description">Strukturerer metadata i overensstemmelse med MARC21–formatet.</message>
 </locale>
