@@ -24,6 +24,7 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 			if ($this->getEnabled()) {
 				HookRegistry::register('ArticleHandler::view::galley', array($this, 'articleViewCallback'), HOOK_SEQUENCE_LATE);
 				HookRegistry::register('ArticleHandler::download', array($this, 'articleDownloadCallback'), HOOK_SEQUENCE_LATE);
+				$this->_registerTemplateResource();
 			}
 			return true;
 		}
@@ -54,6 +55,13 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 	}
 
 	/**
+	 * @copydoc Plugin::getTemplatePath()
+	 */
+	function getTemplatePath($inCore = false) {
+		return $this->getTemplateResourceName() . ':templates/';
+	}
+
+	/**
 	 * Present the article wrapper page.
 	 * @param string $hookName
 	 * @param array $args
@@ -71,7 +79,7 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 				'article' => $article,
 				'galley' => $galley,
 			));
-			$templateMgr->display($this->getTemplatePath() . '/display.tpl');
+			$templateMgr->display($this->getTemplatePath() . 'display.tpl');
 
 			return true;
 		}

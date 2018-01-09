@@ -44,6 +44,9 @@ class ManualPaymentPlugin extends PaymethodPlugin {
 	function register($category, $path) {
 		if (parent::register($category, $path)) {
 			$this->addLocaleData();
+			if ($this->getEnabled()) {
+				$this->_registerTemplateResource();
+			}
 			return true;
 		}
 		return false;
@@ -155,6 +158,6 @@ class ManualPaymentPlugin extends PaymethodPlugin {
 	 * @copydoc Plugin::getTemplatePath()
 	 */
 	function getTemplatePath($inCore = false) {
-		return parent::getTemplatePath($inCore) . 'templates/';
+		return $this->getTemplateResourceName() . ':templates/';
 	}
 }

@@ -35,6 +35,7 @@ class DOIPubIdPlugin extends PubIdPlugin {
 			HookRegistry::register('Submission::getProperties::values', array($this, 'modifyObjectPropertyValues'));
 			HookRegistry::register('Issue::getProperties::values', array($this, 'modifyObjectPropertyValues'));
 			HookRegistry::register('Galley::getProperties::values', array($this, 'modifyObjectPropertyValues'));
+			$this->_registerTemplateResource();
 		}
 		return $success;
 	}
@@ -60,7 +61,7 @@ class DOIPubIdPlugin extends PubIdPlugin {
 	 * @copydoc Plugin::getTemplatePath()
 	 */
 	function getTemplatePath($inCore = false) {
-		return parent::getTemplatePath($inCore) . 'templates/';
+		return $this->getTemplateResourceName() . ':templates/';
 	}
 
 
@@ -106,14 +107,14 @@ class DOIPubIdPlugin extends PubIdPlugin {
 	 * @copydoc PKPPubIdPlugin::getPubIdMetadataFile()
 	 */
 	function getPubIdMetadataFile() {
-		return $this->getTemplatePath().'doiSuffixEdit.tpl';
+		return $this->getTemplatePath() . 'doiSuffixEdit.tpl';
 	}
 
 	/**
 	 * @copydoc PKPPubIdPlugin::getPubIdAssignFile()
 	 */
 	function getPubIdAssignFile() {
-		return $this->getTemplatePath().'doiAssign.tpl';
+		return $this->getTemplatePath() . 'doiAssign.tpl';
 	}
 
 	/**
