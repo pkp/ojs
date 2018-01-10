@@ -220,4 +220,7 @@
 		<query>DELETE FROM scheduled_tasks WHERE class_name = 'classes.tasks.OpenAccessNotification'</query>
 		<query>DELETE FROM scheduled_tasks WHERE class_name = 'classes.tasks.SubscriptionExpiryReminder'</query>
 	</sql>
+	<sql><!-- Ensure that all upgraded reviews are double-blind (issue #3255) -->
+		<query>UPDATE review_assignments SET review_method = 2</query><!-- SUBMISSION_REVIEW_METHOD_DOUBLEBLIND -->
+	</sql>
 </data>
