@@ -58,7 +58,7 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 	 * @copydoc Plugin::getTemplatePath()
 	 */
 	function getTemplatePath($inCore = false) {
-		return $this->getTemplateResourceName() . ':templates/';
+		return $this->getTemplateResourceName() . ':';
 	}
 
 	/**
