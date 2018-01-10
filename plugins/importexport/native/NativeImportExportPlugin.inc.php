@@ -86,7 +86,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 					'lazyLoad' => true,
 				));
 				$templateMgr->assign('exportSubmissionsListData', json_encode($exportSubmissionsListHandler->getConfig()));
-				$templateMgr->display($this->getTemplatePath() . 'index.tpl');
+				$templateMgr->display($this->getTemplateResourceName() . ':index.tpl');
 				break;
 			case 'uploadImportXML':
 				$user = $request->getUser();
@@ -178,7 +178,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 					}
 				}
 				// Display the results
-				$json = new JSONMessage(true, $templateMgr->fetch($this->getTemplatePath() . 'results.tpl'));
+				$json = new JSONMessage(true, $templateMgr->fetch($this->getTemplateResourceName() . ':results.tpl'));
 				return $json->getString();
 			case 'exportSubmissions':
 				$exportXml = $this->exportSubmissions(
