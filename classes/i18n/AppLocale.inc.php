@@ -24,7 +24,7 @@ class AppLocale extends PKPLocale {
 	static function getSupportedLocales() {
 		static $supportedLocales;
 		if (!isset($supportedLocales)) {
-			if (defined('SESSION_DISABLE_INIT') || !Config::getVar('general', 'installed')) {
+			if (defined('SESSION_DISABLE_INIT')) {
 				$supportedLocales = AppLocale::getAllLocales();
 			} elseif (($journal = self::$request->getJournal())) {
 				$supportedLocales = $journal->getSupportedLocaleNames();
@@ -43,7 +43,7 @@ class AppLocale extends PKPLocale {
 	static function getSupportedFormLocales() {
 		static $supportedFormLocales;
 		if (!isset($supportedFormLocales)) {
-			if (defined('SESSION_DISABLE_INIT') || !Config::getVar('general', 'installed')) {
+			if (defined('SESSION_DISABLE_INIT')) {
 				$supportedFormLocales = AppLocale::getAllLocales();
 			} elseif (($journal = self::$request->getJournal())) {
 				$supportedFormLocales = $journal->getSupportedFormLocaleNames();
@@ -63,7 +63,7 @@ class AppLocale extends PKPLocale {
 	static function getLocale() {
 		static $currentLocale;
 		if (!isset($currentLocale)) {
-			if (defined('SESSION_DISABLE_INIT') || !Config::getVar('general', 'installed')) {
+			if (defined('SESSION_DISABLE_INIT')) {
 				// If the locale is specified in the URL, allow
 				// it to override. (Necessary when locale is
 				// being set, as cookie will not yet be re-set)
@@ -145,7 +145,7 @@ class AppLocale extends PKPLocale {
 		static $locale;
 		if ($locale) return $locale;
 
-		if (defined('SESSION_DISABLE_INIT') || !Config::getVar('general', 'installed')) return $locale = LOCALE_DEFAULT;
+		if (defined('SESSION_DISABLE_INIT')) return $locale = LOCALE_DEFAULT;
 
 		$journal = self::$request->getJournal();
 
