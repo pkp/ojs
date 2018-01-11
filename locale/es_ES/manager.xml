@@ -153,7 +153,7 @@
 	<message key="manager.setup.enableAnnouncementsHomepage1">Mostrar</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">los últimos avisos publicados en la página inicial.</message>
 	<message key="manager.setup.enablePublicIssueId">Se usarán identificadores personalizados para identificar las publicaciones.</message>
-	<message key="manager.setup.enableUserRegistration">Los usuarios/as pueden registrarse en la revista con uno o varios de los siguientes roles:</message>
+	<message key="manager.setup.enableUserRegistration">Los visitantes pueden registrar una cuenta de usuario en la revista.</message>
 	<message key="manager.setup.focusAndScope">Objeto y alcance</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWork">Instrucciones de indexación para los autores/as</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWorkDescription"><![CDATA[OJS se adhiere al protocolo <a href="http://www.openarchives.org/" target="_blank">Open Archives Initiative</a> Protocol for Metadata Harvesting, estándar emergente para proporcionar acceso indexado a recursos de investigación electrónicos a escala global. Los autores/as deben usar una plantilla similar para proporcionar los metadatos necesarios para sus envíos. El gestor/a de la revista debe seleccionar las categorías para la indexación y mostrar a los autores/as ejemplos relevantes para ayudarlos a indexar sus trabajos, separando los términos con un punto y coma (p. ej., término1; término2). Las entradas deben introducirse como ejemplos utilizando "p. ej.," o "Por ejemplo,".]]></message>
