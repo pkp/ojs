@@ -206,13 +206,6 @@ class LucenePlugin extends GenericPlugin {
 		return true;
 	}
 
-	/**
-	 * @copydoc PKPPlugin::getTemplatePath
-	 */
-	function getTemplatePath($inCore = false) {
-		return $this->getTemplateResourceName() . ':templates/';
-	}
-
 	//
 	// Implement template methods from GenericPlugin.
 	//

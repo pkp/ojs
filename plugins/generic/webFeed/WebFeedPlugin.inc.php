@@ -64,13 +64,6 @@ class WebFeedPlugin extends GenericPlugin {
 	}
 
 	/**
-	 * @copydoc PKPPlugin::getTemplatePath
-	 */
-	public function getTemplatePath($inCore = false) {
-		return $this->getTemplateResourceName() . ':templates/';
-	}
-
-	/**
 	 * Add feed links to page <head> on select/all pages.
 	 */
 	public function callbackAddLinks($hookName, $args) {

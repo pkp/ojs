@@ -51,13 +51,6 @@ class BrowsePlugin extends GenericPlugin {
 	}
 
 	/**
-	 * @copydoc Plugin::getTemplatePath()
-	 */
-	function getTemplatePath($inCore = false) {
-		return $this->getTemplateResourceName() . ':templates/';
-	}
-
-	/**
 	 * Get the handler path for this plugin.
 	 */
 	function getHandlerPath() {

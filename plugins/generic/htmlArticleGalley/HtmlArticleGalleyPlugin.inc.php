@@ -55,13 +55,6 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 	}
 
 	/**
-	 * @copydoc Plugin::getTemplatePath()
-	 */
-	function getTemplatePath($inCore = false) {
-		return $this->getTemplateResourceName() . ':';
-	}
-
-	/**
 	 * Present the article wrapper page.
 	 * @param string $hookName
 	 * @param array $args

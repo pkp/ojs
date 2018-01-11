@@ -55,13 +55,6 @@ class PhpMyVisitesPlugin extends GenericPlugin {
 	}
 
 	/**
-	 * @copydoc Plugin::getTemplatePath()
-	 */
-	function getTemplatePath($inCore = false) {
-		return $this->getTemplateResourceName() . ':';
-	}
-
-	/**
 	 * Extend the {url ...} smarty to support this plugin.
 	 */
 	function smartyPluginUrl($params, &$smarty) {

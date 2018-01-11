@@ -72,13 +72,6 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 	}
 
 	/**
-	 * @copydoc Plugin::getTemplatePath()
-	 */
-	function getTemplatePath($inCore = false) {
-		return $this->getTemplateResourceName() . ':templates/';
-	}
-
-	/**
 	 * @copydoc PubObjectsExportPlugin::getSubmissionFilter()
 	 */
 	function getSubmissionFilter() {

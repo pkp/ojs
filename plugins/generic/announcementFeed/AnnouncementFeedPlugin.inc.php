@@ -55,13 +55,6 @@ class AnnouncementFeedPlugin extends GenericPlugin {
 	}
 
 	/**
-	 * @copydoc Plugin::getTemplatePath()
-	 */
-	public function getTemplatePath($inCore = false) {
-		return $this->getTemplateResourceName() . ':templates/';
-	}
-
-	/**
 	 * Add links to the feeds.
 	 * @param $hookName string
 	 * @param $args array

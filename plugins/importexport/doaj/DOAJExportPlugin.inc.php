@@ -59,13 +59,6 @@ class DOAJExportPlugin extends PubObjectsExportPlugin {
 	}
 
 	/**
-	 * @copydoc Plugin::getTemplatePath()
-	 */
-	function getTemplatePath($inCore = false) {
-		return $this->getTemplateResourceName() . ':templates/';
-	}
-
-	/**
 	 * @copydoc ImportExportPlugin::display()
 	 */
 	function display($args, $request) {

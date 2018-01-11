@@ -55,13 +55,6 @@ class ExternalFeedPlugin extends GenericPlugin {
 	}
 
 	/**
-	 * @copydoc Plugin::getTemplatePath()
-	 */
-	function getTemplatePath($inCore = false) {
-		return $this->getTemplateResourceName() . ':';
-	}
-
-	/**
 	 * Get the filename of the ADODB schema for this plugin.
 	 */
 	function getInstallSchemaFile() {

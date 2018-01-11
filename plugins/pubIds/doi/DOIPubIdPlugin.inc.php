@@ -57,13 +57,6 @@ class DOIPubIdPlugin extends PubIdPlugin {
 		return __('plugins.pubIds.doi.description');
 	}
 
-	/**
-	 * @copydoc Plugin::getTemplatePath()
-	 */
-	function getTemplatePath($inCore = false) {
-		return $this->getTemplateResourceName() . ':templates/';
-	}
-
 
 	//
 	// Implement template methods from PubIdPlugin.
