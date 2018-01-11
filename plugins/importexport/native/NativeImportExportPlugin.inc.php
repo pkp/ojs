@@ -28,13 +28,6 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 	}
 
 	/**
-	 * @copydoc Plugin::getTemplatePath($inCore)
-	 */
-	function getTemplatePath($inCore = false) {
-		return parent::getTemplatePath($inCore) . 'templates/';
-	}
-
-	/**
 	 * Get the name of this plugin. The name must be unique within
 	 * its category.
 	 * @return String name of plugin

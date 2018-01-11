@@ -29,7 +29,7 @@
 	<tr>
 		<td colspan="4" class="headseparator">&nbsp;</td>
 	</tr>
-	
+
 	{iterate from=issues item=issue}
 	<tr>
 		<td><a href="{url page="issue" op="view" path=$issue->getId()}" class="action">{$issue->getIssueIdentification()|strip_unsafe_html|nl2br}</a></td>
