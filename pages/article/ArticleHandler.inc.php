@@ -114,11 +114,12 @@ class ArticleHandler extends Handler {
 			}, $supplementaryGenres);
 
 			foreach ($galleys as $galley) {
+				$remoteUrl = $galley->getRemoteURL();
 				$file = $galley->getFile();
-				if (!$file) {
+				if (!$remoteUrl && !$file) {
 					continue;
 				}
-				if (in_array($file->getGenreId(), $primaryGenreIds)) {
+				if ($remoteUrl || in_array($file->getGenreId(), $primaryGenreIds)) {
 					$primaryGalleys[] = $galley;
 				} elseif (in_array($file->getGenreId(), $supplementaryGenreIds)) {
 					$supplementaryGalleys[] = $galley;

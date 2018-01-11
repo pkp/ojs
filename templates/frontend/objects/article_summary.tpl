@@ -64,7 +64,7 @@
 			{foreach from=$article->getGalleys() item=galley}
 				{if $primaryGenreIds}
 					{assign var="file" value=$galley->getFile()}
-					{if !$file || !in_array($file->getGenreId(), $primaryGenreIds)}
+					{if !$galley->getRemoteUrl() && !($file && in_array($file->getGenreId(), $primaryGenreIds))}
 						{php}continue;{/php}
 					{/if}
 				{/if}
