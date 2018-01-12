@@ -9,7 +9,8 @@
  * submission metadata.
  *}
 {capture assign="languagesField"}
-	{fbvFormSection description="submission.submit.metadataForm.tip" title="common.languages"}
+	{capture assign="sectionDescription"}{if !$readOnly}submission.submit.metadataForm.tip{/if}{/capture}
+	{fbvFormSection description=$sectionDescription title="common.languages"}
 		{url|assign:languagesSourceUrl router=$smarty.const.ROUTE_PAGE page="submission" op="fetchChoices" list="languages"}
 		{fbvElement type="keyword" id="languages" subLabelTranslate=true multilingual=true current=$languages source=$languagesSourceUrl disabled=$readOnly}
 	{/fbvFormSection}
