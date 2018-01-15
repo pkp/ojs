@@ -832,7 +832,7 @@
 	<message key="log.review.reviewFileByProxy">El editor/a {$userName} subió un archivo de revisión para la ronda {$round} del envío {$submissionId} en nombre del revisor {$reviewerName}.</message>
 	<message key="log.review.reviewerFile">Se subió un archivo de revisión.</message>
 	<message key="log.editor.decision">{$editorName} registró una decisión ({$decision}) editorial para el artículo {$submissionId}.</message>
-
+	<message key="log.editor.recommendation">{$editorName} registró una recomendación ({$decision}) editorial para el artículo {$submissionId}.</message>
 
 	<message key="log.copyedit.initiate">{$copyeditorName} inició la corrección de originales en el envío {$submissionId}.</message>
 	<message key="log.copyedit.copyeditFileSet">Se seleccionó el archivo de corrección de originales por defecto.</message>
@@ -912,6 +912,7 @@
 	<message key="notification.type.submissionComment">Un editor/a hizo un comentario en "{$title}".</message>
 	<message key="notification.type.submissions">Eventos de los envíos</message>
 	<message key="notification.type.userComment">Un lector/a hizo un comentario en "{$title}"</message>
+	<message key="notification.type.publicationScheduled">Este envío ha sido programado para su publicación.</message>
 
 	<!--
 	 *
@@ -1013,4 +1014,8 @@ La configuración del soporte CLOCKSS para Open Journal Systems no hace falta qu
 	<message key="about.onlineSubmissions.viewSubmissions">Ver sus envíos pendientes</message>
 	<message key="notification.type.assignProductionUser">Asigne un usuario/a para crear galeradas mediante el enlace Añadir de la lista de participantes.</message>
 	<message key="notification.type.awaitingRepresentations">Esperando galeradas.</message>
+	<message key="navigation.subscriptions">Suscripciones</message>
+	
+	<!-- legacy strings from OJS 2, for upgraded installations from OJS 2 -->
+	<message key="log.editor.submissionExpedited">{$editorName} tomó el proceso de edición para el artículo {$submissionId}.</message>
 </locale>
