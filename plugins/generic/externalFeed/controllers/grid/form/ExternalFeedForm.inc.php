@@ -18,13 +18,13 @@ import('lib.pkp.classes.form.Form');
 class ExternalFeedForm extends Form {
 	/** @var int Context (press / journal) ID */
 	protected $contextId;
-	
+
 	/** @var int Feed id */
 	protected $feedId;
-	
+
 	/** @var ExternalFeedPlugin External feed plugin */
 	protected $plugin;
-	
+
 	/**
 	 * Constructor
 	 * @param $externalFeedPlugin StaticPagesPlugin The static page plugin
@@ -43,14 +43,14 @@ class ExternalFeedForm extends Form {
 		$this->addCheck(new FormValidatorUrl($this, 'feedUrl', 'required', 'plugins.generic.externalFeed.form.feedUrlValid'));
 		$this->addCheck(new FormValidator($this, 'title', 'required', 'plugins.generic.externalFeed.form.titleRequired'));
 	}
-	
+
 	/**
 	 * Initialize form data.
 	 */
 	function initData() {
 		if ($this->feedId) {
 			$feedDao = DAORegistry::getDAO('ExternalFeedDAO');
-			$feed = $feedDao->getExternalFeed($this->feedId, $this->contextId);
+			$feed = $feedDao->getById($this->feedId, $this->contextId);
 
 			$this->setData('feedUrl', $feed->getUrl());
 			$this->setData('title', $feed->getTitle(AppLocale::getLocale()));
@@ -67,7 +67,7 @@ class ExternalFeedForm extends Form {
 			}
 		}
 	}
-	
+
 	/**
 	 * Assign form data to user-submitted data.
 	 */
@@ -93,7 +93,7 @@ class ExternalFeedForm extends Form {
 			$this->addCheck(new FormValidator($this, 'recentItems', 'required', 'plugins.generic.externalFeed.settings.recentItemsRequired'));
 		}
 	}
-	
+
 	/**
 	 * Fetch the form.
 	 * @copydoc Form::fetch()
@@ -107,7 +107,7 @@ class ExternalFeedForm extends Form {
 		
 		return parent::fetch($request);
 	}
-	
+
 	/**
 	 * Save settings.
 	 */
@@ -118,7 +118,7 @@ class ExternalFeedForm extends Form {
 		$plugin->import('classes.ExternalFeed');
 	
 		if (isset($this->feedId)) {
-			$feed = $externalFeedDao->getExternalFeed($this->feedId, $this->contextId);
+			$feed = $externalFeedDao->getById($this->feedId, $this->contextId);
 		}
 	
 		if (!isset($feed)) {
@@ -147,5 +147,5 @@ class ExternalFeedForm extends Form {
 			$externalFeedDao->resequenceExternalFeeds($feed->getJournalId());
 		}
 	}
-	
+
 }

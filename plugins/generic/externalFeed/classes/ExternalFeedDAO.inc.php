@@ -33,10 +33,13 @@ class ExternalFeedDAO extends DAO {
 	 * @param $journalId int 
 	 * @return ExternalFeed
 	 */
-	public function getExternalFeed($feedId, $journalId) {
+	public function getById($feedId, $contextId = null) {
+		$params = array((int) $feedId);
+		if ($contextId) $params[] = (int) $contextId;
+
 		$result = $this->retrieve(
-			'SELECT * FROM external_feeds WHERE feed_id = ? and journal_id = ?', 
-			array((int) $feedId, (int) $journalId)
+			'SELECT * FROM external_feeds WHERE feed_id = ? ' . ($contextId?' AND journal_id = ?':''),
+			$params
 		);
 
 		$returner = null;

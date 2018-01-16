@@ -132,7 +132,7 @@ class ExternalFeedGridHandler extends GridHandler {
 		
 		// Ensure externalFeed is valid and for this journal
 		if (($externalFeedId != null && $externalFeedDao->getExternalFeedJournalId($externalFeedId) == $journal->getId())) {
-			$feed = $externalFeedDao->getExternalFeed($externalFeedId, $journal->getId());
+			$feed = $externalFeedDao->getById($externalFeedId, $journal->getId());
 			$feed->setSequence($newSequence);
 			$externalFeedDao->updateExternalFeed($feed);
 		}
