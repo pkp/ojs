@@ -33,7 +33,7 @@ class ExternalFeedDAO extends DAO {
 	 * @param $journalId int 
 	 * @return ExternalFeed
 	 */
-	function &getExternalFeed($feedId, $journalId) {
+	public function getExternalFeed($feedId, $journalId) {
 		$result = $this->retrieve(
 			'SELECT * FROM external_feeds WHERE feed_id = ? and journal_id = ?', 
 			array((int) $feedId, (int) $journalId)
@@ -52,7 +52,7 @@ class ExternalFeedDAO extends DAO {
 	 * @param $feedId int
 	 * @return int
 	 */
-	function getExternalFeedJournalId($feedId) {
+	public function getExternalFeedJournalId($feedId) {
 		$result = $this->retrieve(
 			'SELECT journal_id FROM external_feeds WHERE feed_id = ?', $feedId
 		);
@@ -65,7 +65,7 @@ class ExternalFeedDAO extends DAO {
 	 * @param $row array
 	 * @return ExternalFeed
 	 */
-	function &_returnExternalFeedFromRow($row) {
+	public function _returnExternalFeedFromRow($row) {
 		$externalFeedPlugin =& PluginRegistry::getPlugin('generic', $this->parentPluginName);
 		$externalFeedPlugin->import('classes.ExternalFeed');
 
@@ -94,7 +94,7 @@ class ExternalFeedDAO extends DAO {
 	 * @param $externalFeed ExternalFeed
 	 * @return int 
 	 */
-	function insertExternalFeed(&$externalFeed) {
+	public function insertExternalFeed(&$externalFeed) {
 		$ret = $this->update(
 			'INSERT INTO external_feeds
 				(journal_id,
@@ -127,7 +127,7 @@ class ExternalFeedDAO extends DAO {
 	 * Get a list of fields for which localized data is supported
 	 * @return array
 	 */
-	function getLocaleFieldNames() {
+	public function getLocaleFieldNames() {
 		return array('title');
 	}
 
@@ -135,7 +135,7 @@ class ExternalFeedDAO extends DAO {
 	 * Update the localized fields for this object.
 	 * @param $externalFeed
 	 */
-	function updateLocaleFields(&$externalFeed) {
+	public function updateLocaleFields(&$externalFeed) {
 		$this->updateDataObjectSettings('external_feed_settings', $externalFeed, array(
 			'feed_id' => $externalFeed->getId()
 		));
@@ -146,7 +146,7 @@ class ExternalFeedDAO extends DAO {
 	 * @param $externalFeed ExternalFeed
 	 * @return boolean
 	 */
-	function updateExternalFeed(&$externalFeed) {
+	public function updateExternalFeed(&$externalFeed) {
 		$this->update(
 			'UPDATE external_feeds
 				SET
@@ -178,7 +178,7 @@ class ExternalFeedDAO extends DAO {
 	 * @param $externalFeed ExternalFeed 
 	 * @return boolean
 	 */
-	function deleteExternalFeed($externalFeed) {
+	public function deleteExternalFeed($externalFeed) {
 		return $this->deleteExternalFeedById($externalFeed->getId());
 	}
 
@@ -187,7 +187,7 @@ class ExternalFeedDAO extends DAO {
 	 * @param $feedId int
 	 * @return boolean
 	 */
-	function deleteExternalFeedById($feedId) {
+	public function deleteExternalFeedById($feedId) {
 		$this->update(
 			'DELETE FROM external_feeds WHERE feed_id = ?', $feedId
 		);
@@ -201,7 +201,7 @@ class ExternalFeedDAO extends DAO {
 	 * Delete external_feed by journal ID.
 	 * @param $journalId int
 	 */
-	function deleteExternalFeedsByJournalId($journalId) {
+	public function deleteExternalFeedsByJournalId($journalId) {
 		$feeds = $this->getExternalFeedsByJournalId($journalId);
 
 		while ($feed = $feeds->next()) {
@@ -215,7 +215,7 @@ class ExternalFeedDAO extends DAO {
 	 * @param $rangeInfo object DBRangeInfo object describing range of results to return
 	 * @return object DAOResultFactory containing matching ExternalFeeds 
 	 */
-	function getExternalFeedsByJournalId($journalId, $rangeInfo = null) {
+	public function getExternalFeedsByJournalId($journalId, $rangeInfo = null) {
 		$result = $this->retrieveRange(
 			'SELECT * FROM external_feeds WHERE journal_id = ? ORDER BY seq ASC',
 			$journalId,
@@ -228,7 +228,7 @@ class ExternalFeedDAO extends DAO {
 	/**
 	 * Sequentially renumber external feeds in their sequence order.
 	 */
-	function resequenceExternalFeeds($journalId) {
+	public function resequenceExternalFeeds($journalId) {
 		$result = $this->retrieve(
 			'SELECT feed_id FROM external_feeds WHERE journal_id = ? ORDER BY seq',
 			$journalId
@@ -253,7 +253,7 @@ class ExternalFeedDAO extends DAO {
 	 * Get the ID of the last inserted external feed.
 	 * @return int
 	 */
-	function getInsertId() {
+	public function getInsertId() {
 		return $this->_getInsertId('external_feeds', 'feed_id');
 	}
 }

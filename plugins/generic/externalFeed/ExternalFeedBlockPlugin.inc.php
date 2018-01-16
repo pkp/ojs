@@ -27,7 +27,7 @@ class ExternalFeedBlockPlugin extends BlockPlugin {
 	/**
 	 * Hide this plugin from the management interface (it's subsidiary)
 	 */
-	function getHideManagement() {
+	public function getHideManagement() {
 		return true;
 	}
 
@@ -36,7 +36,7 @@ class ExternalFeedBlockPlugin extends BlockPlugin {
 	 * its category.
 	 * @return String name of plugin
 	 */
-	function getName() {
+	public function getName() {
 		return 'ExternalFeedBlockPlugin';
 	}
 
@@ -44,14 +44,14 @@ class ExternalFeedBlockPlugin extends BlockPlugin {
 	 * Get the display name of this plugin.
 	 * @return String
 	 */
-	function getDisplayName() {
+	public function getDisplayName() {
 		return __('plugins.generic.externalFeed.block.displayName');
 	}
 
 	/**
 	 * Get a description of the plugin.
 	 */
-	function getDescription() {
+	public function getDescription() {
 		return __('plugins.generic.externalFeed.description');
 	}
 
@@ -59,7 +59,7 @@ class ExternalFeedBlockPlugin extends BlockPlugin {
 	 * Get the external feed plugin
 	 * @return object
 	 */
-	function &getExternalFeedPlugin() {
+	public function getExternalFeedPlugin() {
 		return $this->parentPlugin;
 	}
 
@@ -67,7 +67,7 @@ class ExternalFeedBlockPlugin extends BlockPlugin {
 	 * Override the builtin to get the correct plugin path.
 	 * @return string
 	 */
-	function getPluginPath() {
+	public function getPluginPath() {
 		$plugin =& $this->getExternalFeedPlugin();
 		return $plugin->getPluginPath();
 	}
@@ -76,7 +76,7 @@ class ExternalFeedBlockPlugin extends BlockPlugin {
 	 * Override the builtin to get the correct template path.
 	 * @return string
 	 */
-	function getTemplatePath() {
+	public function getTemplatePath() {
 		return $this->getExternalFeedPlugin()->getTemplatePath();
 	}
 
@@ -86,7 +86,7 @@ class ExternalFeedBlockPlugin extends BlockPlugin {
 	 * @param $request PKPRequest
 	 * @return $string
 	 */
-	function getContents(&$templateMgr, $request = null) {
+	public function getContents(&$templateMgr, $request = null) {
 		$journal = $request->getJournal();
 		if (!$journal) return '';
 

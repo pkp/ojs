@@ -1,37 +1,35 @@
 {**
  * plugins/generic/externalFeed/templates/settingsForm.tpl
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * External feed plugin settings
  *
  *}
 
-
-
 <script type="text/javascript">
-        // Attach the file upload form handler.
-        $(function() {ldelim}
-                $('#externalFeedSettingsForm').pkpHandler(
-                        '$.pkp.controllers.form.FileUploadFormHandler',
-                        {ldelim}
-                                $uploader: $('#plupload'),
-                                uploaderOptions: {ldelim}
-                                        {if $fileType == 'css'}
-                                                filters: {ldelim}
-                                                        mime_types : [
-                                                                {ldelim} title : "CSS files", extensions : "css" {rdelim}
-                                                        ]
-                                                {rdelim},
-                                        {/if}
-                                        uploadUrl: {url|json_encode router=$smarty.const.ROUTE_COMPONENT component="grid.settings.plugins.settingsPluginGridHandler" op="manage" plugin="externalfeedplugin" category="generic" verb="uploadStyleSheet" escape=false},
-                                        baseUrl: {$baseUrl|json_encode}
-                                {rdelim}
-                        {rdelim}
-                );
-        {rdelim});
+	// Attach the file upload form handler.
+	$(function() {ldelim}
+		$('#externalFeedSettingsForm').pkpHandler(
+			'$.pkp.controllers.form.FileUploadFormHandler',
+			{ldelim}
+				$uploader: $('#plupload'),
+				uploaderOptions: {ldelim}
+					{if $fileType == 'css'}
+						filters: {ldelim}
+							mime_types : [
+								{ldelim} title : "CSS files", extensions : "css" {rdelim}
+							]
+						{rdelim},
+					{/if}
+					uploadUrl: {url|json_encode router=$smarty.const.ROUTE_COMPONENT component="grid.settings.plugins.settingsPluginGridHandler" op="manage" plugin="externalfeedplugin" category="generic" verb="uploadStyleSheet" escape=false},
+					baseUrl: {$baseUrl|json_encode}
+				{rdelim}
+			{rdelim}
+		);
+	{rdelim});
 </script>
 
 <h2>{translate key="plugins.generic.externalFeed.settings.description"}</h2>
