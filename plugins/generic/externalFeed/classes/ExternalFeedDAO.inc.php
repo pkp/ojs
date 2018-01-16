@@ -28,6 +28,15 @@ class ExternalFeedDAO extends DAO {
 	}
 
 	/**
+	 * Instantiate a new data object.
+	 * @return ExternalFeed
+	 */
+	function newDataObject() {
+		import('plugins.generic.externalFeed.classes.ExternalFeed');
+		return new ExternalFeed();
+	}
+
+	/**
 	 * Retrieve an ExternalFeed by ID.
 	 * @param $feedId int
 	 * @param $journalId int 
@@ -69,10 +78,7 @@ class ExternalFeedDAO extends DAO {
 	 * @return ExternalFeed
 	 */
 	public function _returnExternalFeedFromRow($row) {
-		$externalFeedPlugin =& PluginRegistry::getPlugin('generic', $this->parentPluginName);
-		$externalFeedPlugin->import('classes.ExternalFeed');
-
-		$externalFeed = new ExternalFeed();
+		$externalFeed = $this->newDataObject();
 		$externalFeed->setId($row['feed_id']);
 		$externalFeed->setJournalId($row['journal_id']);
 		$externalFeed->setUrl($row['url']);
