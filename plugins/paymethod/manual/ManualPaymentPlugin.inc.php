@@ -104,7 +104,7 @@ class ManualPaymentPlugin extends PaymethodPlugin {
 
 		$queuedPaymentDao = DAORegistry::getDAO('QueuedPaymentDAO');
 		$queuedPayment = $queuedPaymentDao->getById($queuedPaymentId);
-		$ojsPaymentManager = Application::getPaymentManager($context);
+		$paymentManager = Application::getPaymentManager($context);
 		// if the queued payment doesn't exist, redirect away from payments
 		if (!$queuedPayment) $request->redirect(null, 'index');
 
@@ -121,7 +121,7 @@ class ManualPaymentPlugin extends PaymethodPlugin {
 					'contextName' => $context->getLocalizedName(),
 					'userFullName' => $user?$user->getFullName():('(' . __('common.none') . ')'),
 					'userName' => $user?$user->getUsername():('(' . __('common.none') . ')'),
-					'itemName' => $ojsPaymentManager->getPaymentName($queuedPayment),
+					'itemName' => $paymentManager->getPaymentName($queuedPayment),
 					'itemCost' => $queuedPayment->getAmount(),
 					'itemCurrencyCode' => $queuedPayment->getCurrencyCode()
 				));
@@ -158,6 +158,6 @@ class ManualPaymentPlugin extends PaymethodPlugin {
 	 * @copydoc Plugin::getTemplatePath()
 	 */
 	function getTemplatePath($inCore = false) {
-		return $this->getTemplateResourceName() . ':templates/';
+		return parent::getTemplatePath($inCore) . 'templates/';
 	}
 }
