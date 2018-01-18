@@ -290,7 +290,6 @@ class ExternalFeedPlugin extends GenericPlugin {
 			$entries = array();
 			if (empty($requestedPage) || $requestedPage == 'index') {
 				$externalFeedDao =& DAORegistry::getDAO('ExternalFeedDAO');
-				require_once('lib/pkp/lib/vendor/simplepie/simplepie/autoloader.php');
 
 				$feeds =& $externalFeedDao->getExternalFeedsByJournalId($journal->getId());
 				while ($currentFeed =& $feeds->next()) {
@@ -319,7 +318,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 				$templateManager =& $args[0];
 				$templateManager->assign('entries', $entries);
 				$templateManager->assign('entry_date_format', Config::getVar('general', 'date_format_short'));
-				$output = $templateManager->fetch(dirname(__FILE__) . '/templates/homepage.tpl');
+				$output = $templateManager->fetch($this->getTemplatePath(). 'homepage.tpl');
 				$additionalHomeContent = $templateManager->get_template_vars('additionalHomeContent');
 				$templateManager->assign('additionalHomeContent', $additionalHomeContent . "\n\n" . $output);
 
