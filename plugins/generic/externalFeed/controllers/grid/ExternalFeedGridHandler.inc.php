@@ -211,7 +211,7 @@ class ExternalFeedGridHandler extends GridHandler {
 		import('plugins.generic.externalFeed.controllers.grid.form.ExternalFeedForm');
 		$externalFeedPlugin = self::$plugin;
 		$externalFeedForm = new ExternalFeedForm(self::$plugin, $context->getId(), $feedId);
-		$externalFeedForm->readInputData();
+		$externalFeedForm->readInputData($request);
 	
 		if ($externalFeedForm->validate()) {
 			$externalFeedForm->execute();

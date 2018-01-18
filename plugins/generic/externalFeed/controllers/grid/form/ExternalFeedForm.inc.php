@@ -70,8 +70,9 @@ class ExternalFeedForm extends Form {
 
 	/**
 	 * Assign form data to user-submitted data.
+	 * @param $request PKPRequest
 	 */
-	public function readInputData() {
+	public function readInputData($request) {
 		$this->readUserVars(
 			array(
 				'feedUrl',
@@ -82,7 +83,6 @@ class ExternalFeedForm extends Form {
 			)
 		);
 		
-		$request = PKPApplication::getRequest();
 		$this->setData('title', $request->getUserVar('title')[AppLocale::getLocale()]);
 		
 		// Check that recent items value is a positive integer
