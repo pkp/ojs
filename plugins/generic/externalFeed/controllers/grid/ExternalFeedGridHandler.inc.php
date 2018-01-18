@@ -127,12 +127,12 @@ class ExternalFeedGridHandler extends GridHandler {
 	 */
 	function setDataElementSequence($request, $rowId, $gridDataElement, $newSequence) {
 		$externalFeedId = $rowId;
-		$journal = $request->getJournal();
+		$context = $request->getContext();
 		$externalFeedDao = DAORegistry::getDAO('ExternalFeedDAO');
 		
 		// Ensure externalFeed is valid and for this journal
-		if (($externalFeedId != null && $externalFeedDao->getExternalFeedJournalId($externalFeedId) == $journal->getId())) {
-			$feed = $externalFeedDao->getById($externalFeedId, $journal->getId());
+		if (($externalFeedId != null && $externalFeedDao->getExternalFeedJournalId($externalFeedId) == $context->getId())) {
+			$feed = $externalFeedDao->getById($externalFeedId, $context->getId());
 			$feed->setSequence($newSequence);
 			$externalFeedDao->updateExternalFeed($feed);
 		}
