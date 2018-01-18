@@ -32,7 +32,7 @@ class ExternalFeedForm extends Form {
 	 * @param $feedId int Static page ID (if any)
 	 */
 	function __construct($externalFeedPlugin, $contextId, $feedId = null) {
-		parent::__construct($externalFeedPlugin->getTemplatePath() . '/editExternalFeedForm.tpl');
+		parent::__construct($externalFeedPlugin->getTemplatePath() . 'editExternalFeedForm.tpl');
 		$this->contextId = $contextId;
 		$this->feedId = $feedId;
 		$this->plugin = $externalFeedPlugin;

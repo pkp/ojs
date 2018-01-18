@@ -45,6 +45,8 @@ class ExternalFeedPlugin extends GenericPlugin {
 
 			// Journal home page display
 			HookRegistry::register('TemplateManager::display', array($this, 'displayHomepage'));
+
+			$this->_registerTemplateResource();
 		}
 		return $success;
 	}
@@ -90,9 +92,9 @@ class ExternalFeedPlugin extends GenericPlugin {
 	 * Override the builtin to get the correct template path.
 	 * @return string
 	 */
-	public function getTemplatePath()
+	public function getTemplatePath($inCore = false)
 	{
-		return parent::getTemplatePath() . 'templates/';
+		return $this->getTemplateResourceName() . ':templates/';
 	}
 
 	/**

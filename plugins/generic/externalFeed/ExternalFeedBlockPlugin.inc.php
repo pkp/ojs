@@ -76,8 +76,8 @@ class ExternalFeedBlockPlugin extends BlockPlugin {
 	 * Override the builtin to get the correct template path.
 	 * @return string
 	 */
-	public function getTemplatePath() {
-		return $this->getExternalFeedPlugin()->getTemplatePath();
+	public function getTemplatePath($inCore = false) {
+		return $this->getExternalFeedPlugin()->getTemplatePath($inCore);
 	}
 
 	/**

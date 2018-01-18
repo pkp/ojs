@@ -31,7 +31,7 @@ class ExternalFeedSettingsForm extends Form {
 		$this->journalId = $journalId;
 		$this->plugin = $plugin;
 	
-		parent::__construct($plugin->getTemplatePath() . '/settingsForm.tpl');
+		parent::__construct($plugin->getTemplatePath() . 'settingsForm.tpl');
 	
 		$this->addCheck(new FormValidatorPost($this));
 		$this->addCheck(new FormValidatorCSRF($this));
