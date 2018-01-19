@@ -24,12 +24,17 @@ class UserHandler extends APIHandler {
 	 */
 	public function __construct() {
 		$this->_handlerPath = 'users';
-		$roles = array(ROLE_ID_SITE_ADMIN, ROLE_ID_MANAGER);
+		$roles = array(ROLE_ID_SITE_ADMIN, ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR);
 		$this->_endpoints = array(
 			'GET' => array (
 				array(
 					'pattern' => $this->getEndpointPattern(),
 					'handler' => array($this, 'getUsers'),
+					'roles' => $roles
+				),
+				array(
+					'pattern' => $this->getEndpointPattern() . '/reviewers',
+					'handler' => array($this, 'getReviewers'),
 					'roles' => $roles
 				),
 				array(
@@ -112,6 +117,48 @@ class UserHandler extends APIHandler {
 	}
 
 	/**
+	 * Get a collection of reviewers
+	 * @param $slimRequest Request Slim request object
+	 * @param $response Response object
+	 * @param array $args arguments
+	 *
+	 * @return Response
+	 */
+	public function getReviewers($slimRequest, $response, $args) {
+		$request = $this->getRequest();
+		$context = $request->getContext();
+		$userService = ServicesContainer::instance()->get('user');
+
+		if (!$context) {
+			return $response->withStatus(404)->withJsonError('api.submissions.404.resourceNotFound');
+		}
+
+		$params = $this->_buildListRequestParams($slimRequest);
+
+		// Restrict role IDs to reviewer roles
+		$params['roleIds'] = array(ROLE_ID_REVIEWER);
+
+		$items = array();
+		$users = $userService->getReviewers($context->getId(), $params);
+		if (!empty($users)) {
+			$propertyArgs = array(
+				'request' => $request,
+				'slimRequest' => $slimRequest,
+			);
+			foreach ($users as $user) {
+				$items[] = $userService->getReviewerSummaryProperties($user, $propertyArgs);
+			}
+		}
+
+		$data = array(
+			'maxItems' => $userService->getReviewersMaxCount($context->getId(), $params),
+			'items' => $items,
+		);
+
+		return $response->withJson($data, 200);
+	}
+
+	/**
 	 * Convert params passed to list requests. Coerce type and only return
 	 * white-listed params.
 	 *
@@ -154,7 +201,7 @@ class UserHandler extends APIHandler {
 					}
 					break;
 
-				// Always convert status and roleIds to array
+				// Always convert roleIds to array
 				case 'roleIds':
 					if (is_string($val) && strpos($val, ',') > -1) {
 						$val = explode(',', $val);
