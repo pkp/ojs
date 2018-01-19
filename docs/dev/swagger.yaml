@@ -25,7 +25,7 @@ tags:
   - name: "Submissions"
   - name: "Issues"
   - name: "Users"
-    description: Only admins and journal managers can access this endpoint.
+    description: Only admins, journal editors, and subeditors can access these endpoints.
   - name: "Backend"
     description: "Private endpoints for OJS UI."
 definitions:
@@ -492,7 +492,7 @@ definitions:
         type: string
       initials:
         type: string
-      saluation:
+      salutation:
         type: string
       suffix:
         type: string
@@ -510,10 +510,6 @@ definitions:
         type: array
         items:
           $ref: '#/definitions/UserGroup'
-      interests:
-        type: array
-        items:
-          $ref: '#/definitions/UserInterest'
       biography:
         $ref: '#/definitions/LocaleObject'
       signature:
@@ -530,6 +526,10 @@ definitions:
         type: string
       billingAddress:
         type: string
+      interests:
+        type: array
+        items:
+          $ref: '#/definitions/UserInterest'
       gossip:
         $ref: '#/definitions/LocaleObject'
       disabled:
@@ -543,6 +543,39 @@ definitions:
       dateLastLogin:
         type: string
       mustChangePassword:
+        type: boolean
+  ReviewerSummary:
+    type: object
+    properties:
+      id:
+        type: integer
+      _href:
+        type: string
+      userName:
+        type: string
+      fullName:
+        type: string
+      affiliation:
+        $ref: '#/definitions/LocaleObject'
+      groups:
+        type: array
+        items:
+          $ref: '#/definitions/UserGroup'
+      interests:
+        type: array
+        items:
+          $ref: '#/definitions/UserInterest'
+      gossip:
+        $ref: '#/definitions/LocaleObject'
+      reviewsActive:
+        type: integer
+      reviewsCompleted:
+        type: integer
+      averageReviewCompletionDays:
+        type: integer
+      dateLastReviewAssignment:
+        type: string
+      disabled:
         type: boolean
   UserGroup:
     type: object
@@ -942,7 +975,7 @@ paths:
           required: false
           type: string
         - name: searchPhrase
-          description: Filter the results by a search phrase matched against the `userName`, `firstName`, `middleName`, `lastName`, `initials`, `salutation`, `suffix` and `email`.
+          description: Filter the results by a search phrase matched against the `userName`, `firstName`, `middleName`, `lastName`, `initials`, `salutation`, `suffix`, `email`, `affiliation`, `biiography` and `orcid`.
           in: query
           required: false
           type: string
@@ -981,6 +1014,76 @@ paths:
           description: User details.
           schema:
             $ref: '#/definitions/User'
+
+  '/users/reviewers':
+    get:
+      tags:
+        - Users
+      summary: Get a list of reviewers.
+      description: |
+        In Progress.
+      parameters:
+        - name: status
+          description: Filter results by active/disabled users. Must be one of `active`, `disabled`, `all`. Default is `active`.
+          in: query
+          required: false
+          type: string
+        - name: assignedToSubmission
+          description: Filter results by those assigned to this submission ID.
+          in: query
+          required: false
+          type: integer
+        - name: assignedToSubmissionStage
+          description: Filter results by those assigned to this submission stage. Will be ignored if no `assignedToSubmission` parameter exists.
+          in: query
+          required: false
+          type: integer
+        - name: assignedToSection
+          description: Filter the results by those assigned as section editors to this section ID.
+          in: query
+          required: false
+          type: integer
+        - name: count
+          description: How many results to return in a single request. Default is `20`. Max is `100`.
+          in: query
+          required: false
+          type: integer
+        - name: offset
+          description: Offset the results returned. Use this to receive subsequent pages of requests. A `count` of `10` and `offset` of `15` will return results `15` to `25`.
+          in: query
+          required: false
+          type: integer
+        - name: orderBy
+          description: Order the results returned. Must be one of `id`, `familyName` or `givenName`. Default is `id`.
+          in: query
+          required: false
+          type: string
+        - name: orderDirection
+          description: Return the results in ascending or descending order. Must be `ASC` or `DESC`. Default is `DESC`.
+          in: query
+          required: false
+          type: string
+        - name: searchPhrase
+          description: Filter the results by a search phrase matched against the `userName`, `firstName`, `middleName`, `lastName`, `initials`, `salutation`, `suffix`, `email`, `affiliation`, `biography`, `orcid`, `interests`, and `gossip`.
+          in: query
+          required: false
+          type: string
+      responses:
+        '200':
+          description: List of users.
+          schema:
+            type: object
+            properties:
+              maxItems:
+                type: integer
+              items:
+                type: array
+                items:
+                  $ref: '#/definitions/UserSummary'
+        '403':
+          description: Only administrators, journal managers and editors are allowed to access users on this site.
+          schema:
+            $ref: '#/definitions/ErrorResponse'
 
   '/_submissions':
     get:
