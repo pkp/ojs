@@ -4,8 +4,8 @@
 <!--
   * locale/fa_IR/emailTemplates.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localized email templates XML file.
@@ -85,25 +85,13 @@
 		<subject>درخواست بایگانی کردن {$contextName}:</subject>
 		<body><![CDATA[مسئول محترم کتابخانه دانشگاه:<br />
 {$contextName} &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt; ، عضو دانشکده شما می باشد &amp;lt;[name of member]&amp;gt;. این مجله خواستار ایجاد سیستم بایگانی LOCKSS با آن کتابخانه و کتابخانه های دیگر دانشگاهها می باشد.<br />
-<br />
-[Brief description of journal]<br />
+<br /><br />
 <br />
 برنامه LOCKSS تحت آدرس http://lockss.org که یک ابتکار بین المللی مربوط به ناشر/کتابخانه می باشد. این نرم افزار رایگان، حتی توسط یک رایانه شخصی نیز اجرا می گردد. کل سامانه آن لاین شده است و به نگهداری مختصری نیازمند است.<br />
 جهت کمک در بایگانی مجله ما، از شما دعوت می کنیم که عضو انجمن LOCKSS شوید تا به شما در جمع آوری و نگهداری عناوین تهیه شده توسط سازمان خود و دیگر پژوهشگران جهان، کمک کند. برای این کار، لطفا از وب سایت LOCKSS بازدید کنید تا اطلاعاتی درباره نحوه عملکرد این سامانه دراختیار شما قرار گیرد. منتظر اعلام خبر از شما راجع به امکان تهیه چنین سامانه ای برای این مجله هستم.<br />
 <br />
 <br />
 باتشکر<br />
-{$principalContactSignature}Dear [University Librarian]<br />
-<br />
-{$contextName} &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt;, is a journal for which a member of your faculty, [name of member] serves as a [title of position]. The journal is seeking to establish a LOCKSS (Lots of Copies Keep Stuff Safe) compliant archive with this and other university libraries.<br />
-<br />
-[Brief description of journal]<br />
-<br />
-The LOCKSS Program &amp;lt;http://lockss.org/&amp;gt;, an international library/publisher initiative, is a working example of a distributed preservation and archiving repository, additional details are below. The software, which runs on an ordinary personal computer is free; the system is easily brought on-line; very little ongoing maintenance is required.<br />
-<br />
-To assist in the archiving of our journal, we invite you to become a member of the LOCKSS community, to help collect and preserve titles produced by your faculty and by other scholars worldwide. To do so, please have someone on your staff visit the LOCKSS site for information on how this system operates. I look forward to hearing from you on the feasibility of providing this archiving support for this journal.<br />
-<br />
-Thank you,<br />
 {$principalContactSignature}]]></body>
 		<description>This email encourages the recipient to participate in the LOCKSS initiative and include this journal in the archive. It provides information about the LOCKSS initiative and ways to become involved.</description>
 	</email_text>
@@ -327,15 +315,9 @@ Thank you,<br />
 ۲. بر روی فایل موجود در مرحله اول ویراستاری کلیک کنید و آنرا دانلود کنید. پس از دانلود آنرا باز کنید.<br />
 ۳. مقاله را بدقت مطالعه کرده و قسمتهای ویراستاری شده را بررسی کنید. لازم به ذکر است که در فایل ورد ارسالی تغییرات اعمال شده با رنگ و علائم مخصوص براحتی قابل تشخیص است. ویراستار ممکن است در متن مقاله سؤالاتی کرده باشد که لازم است بدقت به آنها جواب دهید.<br />
 ۴. پس از وارد کردن پاسخ سؤالات<br />
-4. Save file to desktop and upload it in 2. Author Copyedit.<br />
-5. Click the email icon under COMPLETE and send email to the editor.<br />
+5. فایل را دخیره کرده و آپلود نمایید<br />
 <br />
-This is the last opportunity that you have to make substantial changes. You will be asked at a later stage to proofread the galleys, but at that point only minor typographical and layout errors can be corrected.<br />
-<br />
-Manuscript URL: <a href="{$submissionEditingUrl}">{$submissionEditingUrl}</a><br />
-<br />
-If you are unable to undertake this work at this time or have any questions,<br />
-please contact me. Thank you for your contribution to this journal.<br />
+آدرس مقاله: <a href="{$submissionEditingUrl}">{$submissionEditingUrl}</a><br />
 <br />
 {$participantName}]]></body>
 	</email_text>
