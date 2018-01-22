@@ -1079,7 +1079,7 @@ paths:
               items:
                 type: array
                 items:
-                  $ref: '#/definitions/UserSummary'
+                  $ref: '#/definitions/ReviewerSummary'
         '403':
           description: Only administrators, journal managers and editors are allowed to access users on this site.
           schema:
