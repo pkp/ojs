@@ -1963,7 +1963,7 @@ class Upgrade extends Installer {
 		while (!$result->EOF) {
 			$row = $result->GetRowAssoc(false);
 			$authorGroup = $userGroupDao->getDefaultByRoleId($row['context_id'], ROLE_ID_AUTHOR);
-			if ($authorGroup) $userGroupDao->update('UPDATE authors SET user_group_id = ?', (int) $authorGroup->getId());
+			if ($authorGroup) $userGroupDao->update('UPDATE authors SET user_group_id = ? WHERE author_id = ?', array((int) $authorGroup->getId(), $row['author_id']));
 			$result->MoveNext();
 		}
 		$result->Close();
