@@ -544,31 +544,31 @@
 	<message key="reviewer.article.uploadedFile">الملفات المرفوعة</message>
 	<message key="reviewer.article.reviewersAnnotatedVersion">النسخة المرفوعة من قبل المحكم</message>
 	<message key="reviewer.article.reviewersAnnotatedVersionDescription">(لو رغبت في تأشير الملف للمحرر، إحفظ الملف في حاسبتك واستعمل تصفح/رفع)</message>
-        <message key="reviewer.article.schedule.request">طلب المحرر</message>
-        <message key="reviewer.article.schedule.response">إجابتك</message>
-        <message key="reviewer.article.schedule.submitted">التحكيم قُدِّم</message>
-        <message key="reviewer.article.schedule.due">التحكيم استوجب</message>
+	<message key="reviewer.article.schedule.request">طلب المحرر</message>
+	<message key="reviewer.article.schedule.response">إجابتك</message>
+	<message key="reviewer.article.schedule.submitted">التحكيم قُدِّم</message>
+	<message key="reviewer.article.schedule.due">التحكيم استوجب</message>
 	<message key="reviewer.article.decision.accept">إقبل التقديم</message>
 	<message key="reviewer.article.decision.pendingRevisions">التنقيحات مطلوبة</message>
 	<message key="reviewer.article.decision.resubmitHere">أعد التقديم للتحكيم</message>
-        <message key="reviewer.article.decision.resubmitElsewhere">أعد التقديم في مكان آخر</message>
+	<message key="reviewer.article.decision.resubmitElsewhere">أعد التقديم في مكان آخر</message>
 	<message key="reviewer.article.decision.decline">أرفض طلب النشر</message>
 	<message key="reviewer.article.decision.seeComments">أنظر الملاحظات</message>
 	<message key="reviewer.article.schedule">جدوِل</message>
-        <message key="reviewer.article.submissionToBeReviewed">طلب النشر ليُحكَّم</message>
-        <message key="reviewer.article.reviewSchedule">جدولة التحكيم</message>
-        <message key="reviewer.article.reviewSteps">خطوات التحكيم</message>
-        <message key="reviewer.article.reviewerGuidelines">إرشادات المحكم</message>
+	<message key="reviewer.article.submissionToBeReviewed">طلب النشر ليُحكَّم</message>
+	<message key="reviewer.article.reviewSchedule">جدولة التحكيم</message>
+	<message key="reviewer.article.reviewSteps">خطوات التحكيم</message>
+	<message key="reviewer.article.reviewerGuidelines">إرشادات المحكم</message>
 	<message key="reviewer.article.reviewGuidelinesDescription"><![CDATA[إن إرشادات المحكم ستقدم للمحكمين معايير الحكم على مناسبة المؤلَّف للنشر في المجلة من عدمها، كما يمكنها أن تتضمن أي تعليمات خاصة لتحضير تقييم مؤثر ومفيد. عند إجراء التقييم، يعرض الموقع للمحكمين مربعي نص، الأول "للمؤلف والمحرر" والثاني "للمحرر". بدلاً من ذلك، يمكن لرئيس تحرير المجلة إنشاء نموذج التحكيم المناظر عبر (نماذج التحكيم). وفي جميع الحالات، سيكون للمحررين خيار تضمين التقييمات المتعلقة بالمؤلف.]]></message>
-        <message key="reviewer.article.notifyEditorA">أعلم محرر طلب النشر</message>
-        <message key="reviewer.article.notifyEditorB">فيما لو أنك ستتولى مهمة التحكيم</message>
-        <message key="reviewer.article.consultGuidelines">إن كنت ستقوم بالتحكيم، راجع إرشادات المحكمين أدناه</message>
-        <message key="reviewer.article.downloadSubmission">أنقر أسماء الملفات لتنزيلها وتقييمها (على الشاشة أو عبر طباعتها)</message>
-        <message key="reviewer.article.enterCompetingInterests"><![CDATA[أعلن فيما لو كانت لديك مصالح تنافسية بالنسبة لهذا البحث (أنظر <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">CI&nbsp;السياسة</a>).]]></message>
+	<message key="reviewer.article.notifyEditorA">أعلم محرر طلب النشر</message>
+	<message key="reviewer.article.notifyEditorB">فيما لو أنك ستتولى مهمة التحكيم</message>
+	<message key="reviewer.article.consultGuidelines">إن كنت ستقوم بالتحكيم، راجع إرشادات المحكمين أدناه</message>
+	<message key="reviewer.article.downloadSubmission">أنقر أسماء الملفات لتنزيلها وتقييمها (على الشاشة أو عبر طباعتها)</message>
+	<message key="reviewer.article.enterCompetingInterests"><![CDATA[أعلن فيما لو كانت لديك مصالح تنافسية بالنسبة لهذا البحث (أنظر <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">CI&nbsp;السياسة</a>).]]></message>
 	<message key="reviewer.competingInterests">مصالح تنافسية</message>
-        <message key="reviewer.article.enterReviewA">أنقر الإيقونة للدخول (أو إلصق) تقييمك لطلب النشر هذا</message>
-        <message key="reviewer.article.uploadFile">فضلاً، بإمكانك رفع الملفات إلى المحرر و/أو المؤلف للمشاورة</message>
-        <message key="reviewer.article.selectRecommendation">إختر التوصية وقدم التحكيم لإكمال العملية. عليك أن تُدخل تحكيماً أو أن ترفع ملفاً قبل اختيار التوصية</message>
+	<message key="reviewer.article.enterReviewA">أنقر الإيقونة للدخول (أو إلصق) تقييمك لطلب النشر هذا</message>
+	<message key="reviewer.article.uploadFile">فضلاً، بإمكانك رفع الملفات إلى المحرر و/أو المؤلف للمشاورة</message>
+	<message key="reviewer.article.selectRecommendation">إختر التوصية وقدم التحكيم لإكمال العملية. عليك أن تُدخل تحكيماً أو أن ترفع ملفاً قبل اختيار التوصية</message>
 	<message key="reviewer.article.selectRecommendation.byEditor">إختر أو عدّل توصية المحكم.</message>
 	<message key="reviewer.article.mustSelectDecision">لم يتم اختيار التوصية. عليك أن تختار توصية تقدمها</message>
 	<message key="reviewer.article.confirmDecision">بمجرد تسجيلك لقرار ما، لن يكون باستطاعتك مستقبلاً تعديل هذا التحكيم. هل أنت متأكد من رغبتك في المتابعة؟</message>
@@ -668,7 +668,7 @@
 
 	<!-- Registration -->
 	<message key="user.register.selectContext">إختر أحد مجلات الموقع لتسجل فيها:</message>
-        <message key="user.register.noJournals">ليس من مجلة متاحة للتسجيل فيها ضمن هذا الموقع</message>
+	<message key="user.register.noJournals">ليس من مجلة متاحة للتسجيل فيها ضمن هذا الموقع</message>
 	<message key="user.register.privacyStatement">بيان الخصوصية</message>
 	<message key="user.register.registrationDisabled">هذه المجلة لا تتيح حالياً التسجيل فيها.</message>
 	<message key="user.register.form.passwordLengthTooShort">كلمة المرور التي أدخلتها ليست طويلة بما يكفي.</message>
@@ -807,7 +807,7 @@
 	<message key="about.subscriptionTypes.duration">المدة</message>
 	<message key="about.subscriptionTypes.cost">الكلفة</message>
 	<message key="about.availableSubscriptionTypes">أنواع الاشتراكات</message>
-        <message key="about.memberships">العضوية</message>
+	<message key="about.memberships">العضوية</message>
 	<message key="about.aboutThisPublishingSystem">عن نظام النشر هذا</message>
 	<message key="about.aboutThisPublishingSystem.altText">عملية التحرير والنشر لنظام المجلات المفتوحة</message>
 	<message key="about.aboutOJSJournal"><![CDATA[هذه المجلة تستعمل نظام المجلات المفتوحة {$ojsVersion}، والذي هو نظام مفتوح المصدر لإدارة النشر مطور ومدعوم وموزع مجاناً عبر الرابط <a href="http://pkp.sfu.ca/">مشروع المعرفة العامة</a> تحت رخصة GNU General Public License.]]></message>

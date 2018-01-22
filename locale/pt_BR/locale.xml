@@ -412,28 +412,28 @@ Ativo indica avaliação em consideração ou andamento.]]></message>
 	<message key="reviewer.article.uploadedFile">Documentos enviados</message>
 	<message key="reviewer.article.reviewersAnnotatedVersion">Versão enviada pelo avaliador</message>
 	<message key="reviewer.article.reviewersAnnotatedVersionDescription">(Caso deseje realizar anotações no documento ao editor, salve em sua máquina e depois envie usando Procurar/Enviar)</message>
-        <message key="reviewer.article.schedule.request">Solicitação do editor</message>
-        <message key="reviewer.article.schedule.response">Resposta</message>
-        <message key="reviewer.article.schedule.submitted">Avaliação enviada</message>
-        <message key="reviewer.article.schedule.due">Avaliação não concluída</message>
+	<message key="reviewer.article.schedule.request">Solicitação do editor</message>
+	<message key="reviewer.article.schedule.response">Resposta</message>
+	<message key="reviewer.article.schedule.submitted">Avaliação enviada</message>
+	<message key="reviewer.article.schedule.due">Avaliação não concluída</message>
 	<message key="reviewer.article.decision.accept">Aceitar</message>
 	<message key="reviewer.article.decision.pendingRevisions">Correções obrigatórias</message>
 	<message key="reviewer.article.decision.resubmitHere">Submeter novamente para avaliação</message>
-        <message key="reviewer.article.decision.resubmitElsewhere">Submeter a outra revista</message>
+	<message key="reviewer.article.decision.resubmitElsewhere">Submeter a outra revista</message>
 	<message key="reviewer.article.decision.decline">Rejeitar</message>
 	<message key="reviewer.article.decision.seeComments">Ver comentários</message>
 	<message key="reviewer.article.schedule">Agendar</message>
-        <message key="reviewer.article.submissionToBeReviewed">Submissão aguardando avaliação</message>
-        <message key="reviewer.article.reviewSchedule">Cronograma da avaliação</message>
-        <message key="reviewer.article.reviewSteps">Diretrizes para avaliação</message>
-        <message key="reviewer.article.reviewerGuidelines">Diretrizes para Avaliadores</message>
-        <message key="reviewer.article.notifyEditorA">Notificar o editor da submissão</message>
-        <message key="reviewer.article.notifyEditorB">a sua decisão sobre sua disponibilidade para realizar a avaliação.</message>
-        <message key="reviewer.article.consultGuidelines">Em caso positivo, consulte as Diretrizes para Avaliadores a seguir.</message>
-        <message key="reviewer.article.downloadSubmission">Clique no nome dos documentos para baixar para sua máquina e realizar a avaliação (no documento digital ou sua impressão) dos documentos associados à submissão.</message>
-        <message key="reviewer.article.enterReviewA">Clique no ícone para digitar (ou colar) a avaliação da submissão.</message>
-        <message key="reviewer.article.uploadFile">Opcionalmente, é possível transferir uma versão do documento com seus comentários para consulta pelo editor e/ou autor.</message>
-        <message key="reviewer.article.selectRecommendation">Escolha a recomendação adequada e submeta a avaliação para concluir o processo. É obrigatório incluir os comentários da avaliação ou transferir uma Versão para Avaliação do documento antes de definir sua avaliação..</message>
+	<message key="reviewer.article.submissionToBeReviewed">Submissão aguardando avaliação</message>
+	<message key="reviewer.article.reviewSchedule">Cronograma da avaliação</message>
+	<message key="reviewer.article.reviewSteps">Diretrizes para avaliação</message>
+	<message key="reviewer.article.reviewerGuidelines">Diretrizes para Avaliadores</message>
+	<message key="reviewer.article.notifyEditorA">Notificar o editor da submissão</message>
+	<message key="reviewer.article.notifyEditorB">a sua decisão sobre sua disponibilidade para realizar a avaliação.</message>
+	<message key="reviewer.article.consultGuidelines">Em caso positivo, consulte as Diretrizes para Avaliadores a seguir.</message>
+	<message key="reviewer.article.downloadSubmission">Clique no nome dos documentos para baixar para sua máquina e realizar a avaliação (no documento digital ou sua impressão) dos documentos associados à submissão.</message>
+	<message key="reviewer.article.enterReviewA">Clique no ícone para digitar (ou colar) a avaliação da submissão.</message>
+	<message key="reviewer.article.uploadFile">Opcionalmente, é possível transferir uma versão do documento com seus comentários para consulta pelo editor e/ou autor.</message>
+	<message key="reviewer.article.selectRecommendation">Escolha a recomendação adequada e submeta a avaliação para concluir o processo. É obrigatório incluir os comentários da avaliação ou transferir uma Versão para Avaliação do documento antes de definir sua avaliação..</message>
 	<message key="reviewer.article.mustSelectDecision">Não foi selecionada nenhuma recomendação. Deve-se escolher uma recomendação para submeter a avaliação.</message>
 	<message key="reviewer.article.confirmDecision">Uma vez registrada a decisão não será mais possível modificar a avaliação. Deseja realmente proceder?</message>
 
@@ -893,16 +893,16 @@ Autores que publicam nesta revista concordam com os seguintes termos:
 
 Pode-se opcionalmente informar o motivo pelo qual está sendo desativado o cadastro.</message>
 	<message key="editor.submissionReview.notes"><![CDATA[<ol>
-        <li>Itens marcados indicam que uma ação é exigida por parte do editor, classificados assim:</li>
-                <ul>
-                        <li class="highlightREviewerNotNotified">Um revisor foi designado mas não foi notificado por email</li>
-                        <li class="highlightNoDecision">Todos os revisores enviaram uma resposta, mas nenhuma decisão foi gravada</li>
-                        <li class="highlightRevisedCopyUploaded">Autor subiu uma revisão de manuscrito</li>
-                        <li class="highlightReviewerConfirmationOverdue">Revisor está atrasado para confirmar um convite para revisão</li>
-                        <li class="highlightReviewerCompletionOverdue">Revisor está atrasado para completar revisão</li>
-                </ul>
-        </li>
-        <li>"Prazo" é preenchido quando o avaliador indica disponibilidade para realizar a avaliação; exibe o tempo em semanas até a data de entrega da avaliação ou (-) semanas quando está atrasado.</li>
+	<li>Itens marcados indicam que uma ação é exigida por parte do editor, classificados assim:</li>
+		<ul>
+			<li class="highlightREviewerNotNotified">Um revisor foi designado mas não foi notificado por email</li>
+			<li class="highlightNoDecision">Todos os revisores enviaram uma resposta, mas nenhuma decisão foi gravada</li>
+			<li class="highlightRevisedCopyUploaded">Autor subiu uma revisão de manuscrito</li>
+			<li class="highlightReviewerConfirmationOverdue">Revisor está atrasado para confirmar um convite para revisão</li>
+			<li class="highlightReviewerCompletionOverdue">Revisor está atrasado para completar revisão</li>
+		</ul>
+	</li>
+	<li>"Prazo" é preenchido quando o avaliador indica disponibilidade para realizar a avaliação; exibe o tempo em semanas até a data de entrega da avaliação ou (-) semanas quando está atrasado.</li>
 </ol>]]></message>
 	<message key="reviewer.article.reviewGuidelinesDescription">As Diretrizes para Avaliação fornecerão aos avaliadores critérios necessários para julgar se uma submissão é adequada para publicação no periódico, e podem incluir quaisquer instruções especiais para preparar uma avaliação efetiva e construtiva. Ao entrar na avaliação, os avaliadores terão acesso a dois campos de texto aberto, sendo o primeiro "para autor e editor" e o segundo para "editor apenas". Como opção alternativa, o Editor Gerente pode criar formulários específicos acessando "Formulários de Avaliação", na Administração da revista. Em todos os casos, os editores terão a opção de incluir as avaliações nas mensagens, ao se comunicarem com o autor.</message>
 	<message key="user.subscriptions.mySubscriptions">Minhas Assinaturas</message>
