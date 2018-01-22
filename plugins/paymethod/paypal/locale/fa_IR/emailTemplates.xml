@@ -3,7 +3,7 @@
 <!--
   * plugins/paymethod/paypal/locale/fa_IR/emailTemplateData.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2014-2016 Simon Fraser University
   * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -15,7 +15,7 @@
 		<subject>فعالیت غیر عدی PayPal</subject>
 		<body><![CDATA[سیستم های مجله آزاد فعالیتی غیر عادی مربوط به قسمت پرداخت PayPal برای {$contextName} را کشف کرده است.<br />
 این فعالیت ممکن است بررسی بیشتر شما را ایجاب کند.<br />
-                       <br />
+					   <br />
 این ایمیل توسط افزونه PayPal سیستم های مجله آزاد تولید شده است.<br />
 <br />
 اطلاعات کامل پست برای درخواست:<br />
