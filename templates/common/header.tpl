@@ -18,7 +18,7 @@
 		</li>
 	{/if}
 	{if $currentJournal && $currentJournal->getSetting('paymentsEnabled') && array_intersect(array(ROLE_ID_SITE_ADMIN, ROLE_ID_MANAGER, ROLE_ID_SUBSCRIPTION_MANAGER), (array)$userRoles)}
-		<li>
+		<li aria-haspopup="true" aria-expanded="false">
 			<a name="payments" href="#">{translate key="common.payments"}</a>
 			<ul>
 				<li><a name="individualSubscription" href="{url router=$smarty.const.ROUTE_PAGE page="payments" anchor="individualSubscription"}">{translate key="subscriptionManager.individualSubscriptions"}</a></li>
