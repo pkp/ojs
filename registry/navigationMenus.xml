@@ -36,4 +36,6 @@
 			<navigationMenuItem title="about.contact" type="NMI_TYPE_CONTACT" />
 		</navigationMenuItem>
 	</navigationMenu>
+
+	<navigationMenuItem title="common.search" type="NMI_TYPE_SEARCH" />
 </navigationMenus>
