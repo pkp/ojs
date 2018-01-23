@@ -55,7 +55,7 @@ class ExternalFeedGridHandler extends GridHandler {
 		// Get the pages and add the data to the grid
 		self::$plugin->import('classes.ExternalFeed');
 		$externalFeedDao = DAORegistry::getDAO('ExternalFeedDAO');
-		$feeds = $externalFeedDao->getExternalFeedsByJournalId($context->getId());
+		$feeds = $externalFeedDao->getByContextId($context->getId());
 		$this->setGridDataElements($feeds);
 		
 		// Add grid-level actions

@@ -16,14 +16,14 @@
 import('lib.pkp.classes.db.DAO');
 
 class ExternalFeedDAO extends DAO {
-	/** @var string Name of parent plugin */
-	var $parentPluginName;
+	/** @var ExternalFeedPlugin reference to ExternalFeed plugin */
+	protected $parentPlugin = null;
 
 	/**
 	 * Constructor
 	 */
-	public function __construct($parentPluginName) {
-		$this->parentPluginName = $parentPluginName;
+	public function __construct($parentPlugin) {
+		$this->parentPlugin = $parentPlugin;
 		parent::__construct();
 	}
 
@@ -32,14 +32,14 @@ class ExternalFeedDAO extends DAO {
 	 * @return ExternalFeed
 	 */
 	function newDataObject() {
-		import('plugins.generic.externalFeed.classes.ExternalFeed');
+		$this->parentPlugin->import('classes.ExternalFeed');
 		return new ExternalFeed();
 	}
 
 	/**
 	 * Retrieve an ExternalFeed by ID.
 	 * @param $feedId int
-	 * @param $journalId int 
+	 * @param $contextId int 
 	 * @return ExternalFeed
 	 */
 	public function getById($feedId, $contextId = null) {
@@ -53,7 +53,7 @@ class ExternalFeedDAO extends DAO {
 
 		$returner = null;
 		if ($result->RecordCount() != 0) {
-			$returner =& $this->_returnExternalFeedFromRow($result->GetRowAssoc(false));
+			$returner = $this->_returnExternalFeedFromRow($result->GetRowAssoc(false));
 		}
 		$result->Close();
 		return $returner;
@@ -103,7 +103,7 @@ class ExternalFeedDAO extends DAO {
 	 * @param $externalFeed ExternalFeed
 	 * @return int 
 	 */
-	public function insertExternalFeed(&$externalFeed) {
+	public function insertObject($externalFeed) {
 		$ret = $this->update(
 			'INSERT INTO external_feeds
 				(journal_id,
@@ -207,11 +207,11 @@ class ExternalFeedDAO extends DAO {
 	}
 
 	/**
-	 * Delete external_feed by journal ID.
-	 * @param $journalId int
+	 * Delete external_feed by context ID.
+	 * @param $contextId int
 	 */
-	public function deleteExternalFeedsByJournalId($journalId) {
-		$feeds = $this->getExternalFeedsByJournalId($journalId);
+	public function deleteByContextId($contextId) {
+		$feeds = $this->getByContextId($contextId);
 
 		while ($feed = $feeds->next()) {
 			$this->deleteExternalFeedById($feed->getId());
@@ -219,15 +219,15 @@ class ExternalFeedDAO extends DAO {
 	}
 
 	/**
-	 * Retrieve external feeds matching a particular journal ID.
-	 * @param $journalId int
+	 * Retrieve external feeds matching a particular context ID.
+	 * @param $contextId int
 	 * @param $rangeInfo object DBRangeInfo object describing range of results to return
 	 * @return object DAOResultFactory containing matching ExternalFeeds 
 	 */
-	public function getExternalFeedsByJournalId($journalId, $rangeInfo = null) {
+	public function getByContextId($contextId, $rangeInfo = null) {
 		$result = $this->retrieveRange(
 			'SELECT * FROM external_feeds WHERE journal_id = ? ORDER BY seq ASC',
-			$journalId,
+			$contextId,
 			$rangeInfo
 		);
 

@@ -3,7 +3,7 @@
 /**
  * @file plugins/generic/externalFeed/ExternalFeedPlugin.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2013-2018 Simon Fraser University
  * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
@@ -34,13 +34,13 @@ class ExternalFeedPlugin extends GenericPlugin {
 			
 			HookRegistry::register('PluginRegistry::loadCategory', array($this, 'callbackLoadCategory'));
 			
-			$externalFeedDao = new ExternalFeedDAO($this->getName());
-			$returner =& DAORegistry::registerDAO('ExternalFeedDAO', $externalFeedDao);
+			$externalFeedDao = new ExternalFeedDAO($this);
+			DAORegistry::registerDAO('ExternalFeedDAO', $externalFeedDao);
 			
 			HookRegistry::register('Templates::Management::Settings::website', array($this, 'callbackShowWebsiteSettingsTabs'));
 			HookRegistry::register('LoadComponentHandler', array($this, 'setupGridHandler'));
 			
-			$templateMgr =& TemplateManager::getManager();
+			$templateMgr = TemplateManager::getManager();
 			$templateMgr->addStyleSheet('externalFeed', '/' . $this->getStyleSheetFile());
 
 			// Journal home page display
@@ -60,6 +60,10 @@ class ExternalFeedPlugin extends GenericPlugin {
 		return __('plugins.generic.externalFeed.displayName');
 	}
 
+	/**
+	 * Get a description of this plugin.
+	 * @return string
+	 */
 	public function getDescription() {
 		return __('plugins.generic.externalFeed.description');
 	}
@@ -98,7 +102,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 	}
 
 	/**
-	 * @see Plugin::getActions()
+	 * @copydoc Plugin::getActions()
 	 */
 	function getActions($request, $verb) {
 		import('lib.pkp.classes.linkAction.request.AjaxModal');
@@ -108,41 +112,39 @@ class ExternalFeedPlugin extends GenericPlugin {
 		$dispatcher = $request->getDispatcher();
 
 		return array_merge(
-				$this->getEnabled()?array(
-						new LinkAction(
-								'settings',
-								new AjaxModal(
-										$router->url($request, null, null, 'manage', null, array('verb' => 'settings', 'plugin' => $this->getName(), 'category' => 'generic')),
-										$this->getDisplayName()
-								),
-								__('manager.plugins.settings'),
-								null
-						),
-				):array(),
-				$this->getEnabled()?array(
-						new LinkAction(
-								'feeds',
-								new RedirectAction($dispatcher->url(
-									$request, ROUTE_PAGE,
-									null, 'management', 'settings', 'website',
-									array('uid' => uniqid()), // Force reload
-									'externalFeeds'
-								)),
-								__('plugins.generic.externalFeed.manager.feeds'),
-								null
-						),
-				):array(),
-				parent::getActions($request, $verb)
+			$this->getEnabled()?array(
+				new LinkAction(
+					'settings',
+					new AjaxModal(
+						$router->url($request, null, null, 'manage', null, array('verb' => 'settings', 'plugin' => $this->getName(), 'category' => 'generic')),
+						$this->getDisplayName()
+					),
+					__('manager.plugins.settings'),
+					null
+				),
+			):array(),
+			$this->getEnabled()?array(
+				new LinkAction(
+					'feeds',
+					new RedirectAction($dispatcher->url(
+						$request, ROUTE_PAGE,
+						null, 'management', 'settings', 'website',
+						array('uid' => uniqid()), // Force reload
+						'externalFeeds'
+					)),
+					__('plugins.generic.externalFeed.manager.feeds'),
+					null
+				),
+			):array(),
+			parent::getActions($request, $verb)
 		);
 	}
 
 	/**
-	 * @see Plugin::manage()
+	 * @copydoc Plugin::manage()
 	 */
 	function manage($args, $request) {
-
-		$journal = $request->getJournal();
-
+		$context = $request->getContext();
 		switch ($request->getUserVar('verb')) {
 			case 'settings':
 				$this->import('ExternalFeedSettingsForm');
@@ -152,7 +154,6 @@ class ExternalFeedPlugin extends GenericPlugin {
 				$templateMgr->register_function('plugin_url', array($this, 'smartyPluginUrl'));
 				$form = new ExternalFeedSettingsForm($this, $context->getId());
 				if ($request->getUserVar('save')) {
-
 					if ($request->getUserVar('deleteStyleSheet')) {
 						return $form->deleteStyleSheet();
 					}
@@ -163,16 +164,16 @@ class ExternalFeedPlugin extends GenericPlugin {
 							$temporaryFile = $temporaryFileDao->getTemporaryFile($temporaryFileId, $user->getId());
 							
 							import('classes.file.PublicFileManager');
-							$journal = $request->getJournal();
+							$context = $request->getContext();
 							$publicFileManager = new PublicFileManager();
-							$publicFileManager->copyJournalFile($journal->getId(), $temporaryFile->getFilePath(), ExternalFeedPlugin::CUSTOM_STYLESHEET);
+							$publicFileManager->copyJournalFile($context->getId(), $temporaryFile->getFilePath(), ExternalFeedPlugin::CUSTOM_STYLESHEET);
 							
 							$value = array(
 								'name' => $temporaryFile->getOriginalFileName(),
 								'uploadName' => ExternalFeedPlugin::CUSTOM_STYLESHEET,
 								'dateUploaded' => Core::getCurrentDate()
 							);
-							$this->updateSetting($journal->getId(), 'externalFeedStyleSheet', $value, 'object');
+							$this->updateSetting($context->getId(), 'externalFeedStyleSheet', $value, 'object');
 							
 							return new JSONMessage(true);
 						}
@@ -189,7 +190,6 @@ class ExternalFeedPlugin extends GenericPlugin {
 
 			case 'uploadStyleSheet':
 				$user = $request->getUser();
-
 				import('lib.pkp.classes.file.TemporaryFileManager');
 				$temporaryFileManager = new TemporaryFileManager();
 				$temporaryFile = $temporaryFileManager->handleUpload('uploadedFile', $user->getId());
@@ -197,7 +197,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 				if ($temporaryFile && in_array($temporaryFile->getFileType(), $valid_types)) {
 					$json = new JSONMessage(true);
 					$json->setAdditionalAttributes(array(
-							'temporaryFileId' => $temporaryFile->getId()
+						'temporaryFileId' => $temporaryFile->getId()
 					));
 					return $json;
 				} else {
@@ -244,7 +244,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 	 * @param $args array The parameters to the invoked hook
 	 */
 	function setupGridHandler($hookName, $params) {
-		$component =& $params[0];
+		$component = $params[0];
 		if ($component == 'plugins.generic.externalFeed.controllers.grid.ExternalFeedGridHandler') {
 			// Allow the static page grid handler to get the plugin object
 			import($component);
@@ -289,10 +289,10 @@ class ExternalFeedPlugin extends GenericPlugin {
 
 			$entries = array();
 			if (empty($requestedPage) || $requestedPage == 'index') {
-				$externalFeedDao =& DAORegistry::getDAO('ExternalFeedDAO');
+				$externalFeedDao = DAORegistry::getDAO('ExternalFeedDAO');
 
-				$feeds =& $externalFeedDao->getExternalFeedsByJournalId($journal->getId());
-				while ($currentFeed =& $feeds->next()) {
+				$feeds = $externalFeedDao->getByContextId($journal->getId());
+				while ($currentFeed = $feeds->next()) {
 					if (!$currentFeed->getDisplayHomepage()) continue;
 					$items = null;
 					$feedTitle = null;
@@ -315,7 +315,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 					);
 				}
 
-				$templateManager =& $args[0];
+				$templateManager = $args[0];
 				$templateManager->assign('entries', $entries);
 				$templateManager->assign('entry_date_format', Config::getVar('general', 'date_format_short'));
 				$output = $templateManager->fetch($this->getTemplatePath(). 'homepage.tpl');

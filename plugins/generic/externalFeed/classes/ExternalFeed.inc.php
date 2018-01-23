@@ -19,15 +19,6 @@ define('EXTERNAL_FEED_DISPLAY_BLOCK_ALL',		2);
 
 
 class ExternalFeed extends DataObject {
-
-	public function __construct() {
-		parent::__construct();
-	}
-
-	//
-	// Get/set methods
-	//
-
 	/**
 	 * Get the ID of the external feed.
 	 * @return int

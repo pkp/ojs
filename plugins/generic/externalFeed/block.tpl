@@ -1,5 +1,5 @@
 {**
- * plugins/generic/externalFeed/templates/block.tpl
+ * plugins/generic/externalFeed/block.tpl
  *
  * Copyright (c) 2014-2018 Simon Fraser University
  * Copyright (c) 2003-2018 John Willinsky

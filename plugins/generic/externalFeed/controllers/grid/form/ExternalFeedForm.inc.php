@@ -141,7 +141,7 @@ class ExternalFeedForm extends Form {
 			$externalFeedDao->updateExternalFeed($feed);
 		} else {
 			$feed->setSequence(REALLY_BIG_NUMBER);
-			$externalFeedDao->insertExternalFeed($feed);
+			$externalFeedDao->insertObject($feed);
 	
 			// Re-order the feeds so the new one is at the end of the list.
 			$externalFeedDao->resequenceExternalFeeds($feed->getJournalId());

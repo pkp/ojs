@@ -27,7 +27,7 @@ class ExternalFeedSettingsForm extends Form {
 	 * @param $plugin object
 	 * @param $journalId int
 	 */
-	public function __construct(&$plugin, $journalId) {
+	public function __construct($plugin, $journalId) {
 		$this->journalId = $journalId;
 		$this->plugin = $plugin;
 	

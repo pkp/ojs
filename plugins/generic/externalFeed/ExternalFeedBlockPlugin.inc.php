@@ -19,7 +19,10 @@ class ExternalFeedBlockPlugin extends BlockPlugin {
 	/** @var ExternalFeedPlugin reference to external feed plugin */
 	protected $parentPlugin = null;
 
-	public function __construct($plugin) {
+	/**
+	 * Constructor
+	 */
+	 public function __construct($plugin) {
 		$this->parentPlugin = $plugin;
 		parent::__construct();
 	}
@@ -68,7 +71,7 @@ class ExternalFeedBlockPlugin extends BlockPlugin {
 	 * @return string
 	 */
 	public function getPluginPath() {
-		$plugin =& $this->getExternalFeedPlugin();
+		$plugin = $this->getExternalFeedPlugin();
 		return $plugin->getPluginPath();
 	}
 
@@ -86,18 +89,17 @@ class ExternalFeedBlockPlugin extends BlockPlugin {
 	 * @param $request PKPRequest
 	 * @return $string
 	 */
-	public function getContents(&$templateMgr, $request = null) {
-		$journal = $request->getJournal();
-		if (!$journal) return '';
+	public function getContents($templateMgr, $request = null) {
+		$context = $request->getContext();
+		if (!$context) return '';
 
-		$journalId = $journal->getId();
-		$plugin =& $this->getExternalFeedPlugin();
+		$plugin = $this->getExternalFeedPlugin();
 		if (!$plugin->getEnabled()) return '';
 
 		$requestedPage = $request->getRequestedPage();
 		$externalFeedDao = DAORegistry::getDAO('ExternalFeedDAO');
 
-		$feeds = $externalFeedDao->getExternalFeedsByJournalId($journal->getId());
+		$feeds = $externalFeedDao->getByContextId($context->getId());
 		while ($currentFeed = $feeds->next()) {
 			$displayBlock = $currentFeed->getDisplayBlock();
 			if (($displayBlock == EXTERNAL_FEED_DISPLAY_BLOCK_NONE) ||
