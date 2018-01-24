@@ -191,7 +191,6 @@
 	<upgrade minversion="3.0.0.0" maxversion="3.1.0.9">
 		<code function="repairSuppFilesFilestage" />
 		<code function="fixAuthorGroup" /><!-- Run again after previous invalid fix (#3289) -->
-		<data file="dbscripts/xml/upgrade/3.1.1_update_a.xml" />
 	</upgrade>
 
 	<!-- update plugin configuration - should be done as the final upgrade task -->
