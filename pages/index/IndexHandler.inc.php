@@ -81,7 +81,7 @@ class IndexHandler extends Handler {
 				$request->redirect($journal->getPath());
 			}
 
-			$templateMgr->assign('pageTitleTranslated', $site->getLocalizedPageHeaderTitle());
+			$templateMgr->assign('pageTitleTranslated', $site->getLocalizedTitle());
 			$templateMgr->assign('about', $site->getLocalizedAbout());
 			$templateMgr->assign('journalFilesPath', $request->getBaseUrl() . '/' . Config::getVar('files', 'public_files_dir') . '/journals/');
 
