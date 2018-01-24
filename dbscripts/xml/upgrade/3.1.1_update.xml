@@ -33,4 +33,9 @@
 		<query driver="mysqli">UPDATE metrics m, submission_file_settings sfs SET m.assoc_id = sfs.file_id WHERE m.assoc_type = 531 AND sfs.setting_name = 'old-supp-id' AND sfs.setting_value = m.assoc_id</query>
 		<query driver="postgres7">UPDATE metrics SET assoc_id = sfs.file_id FROM submission_file_settings sfs WHERE metrics.assoc_type = 531 AND sfs.setting_name = 'old-supp-id' AND CAST(nullif(sfs.setting_value, '') AS integer) = metrics.assoc_id</query>
 	</sql>
+	<sql><!-- pkp/pkp-lib#3311 rename subject(EnabledSubmission, EnabledWorkflow, Required) to subjects(EnabledSubmission, EnabledWorkflow, Required) in journal_settings -->
+		<query>UPDATE journal_settings SET setting_name = 'subjectsEnabledSubmission' WHERE setting_name = 'subjectEnabledSubmission'</query>
+		<query>UPDATE journal_settings SET setting_name = 'subjectsEnabledWorkflow' WHERE setting_name = 'subjectEnabledWorkflow'</query>
+		<query>UPDATE journal_settings SET setting_name = 'subjectsRequired' WHERE setting_name = 'subjectRequired'</query>
+	</sql>
 </data>
