@@ -144,7 +144,7 @@ class ExternalFeedDAO extends DAO {
 	 * Update the localized fields for this object.
 	 * @param $externalFeed
 	 */
-	public function updateLocaleFields(&$externalFeed) {
+	public function updateLocaleFields($externalFeed) {
 		$this->updateDataObjectSettings('external_feed_settings', $externalFeed, array(
 			'feed_id' => $externalFeed->getId()
 		));
@@ -155,7 +155,7 @@ class ExternalFeedDAO extends DAO {
 	 * @param $externalFeed ExternalFeed
 	 * @return boolean
 	 */
-	public function updateExternalFeed(&$externalFeed) {
+	public function updateExternalFeed($externalFeed) {
 		$this->update(
 			'UPDATE external_feeds
 				SET
