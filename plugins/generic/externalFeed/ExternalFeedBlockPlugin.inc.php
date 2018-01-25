@@ -29,22 +29,21 @@ class ExternalFeedBlockPlugin extends BlockPlugin {
 	}
 
 	/**
-	 * Hide this plugin from the management interface (it's subsidiary)
+	 * @copydoc Plugin::getHideManagement()
 	 */
 	public function getHideManagement() {
 		return true;
 	}
 
 	/**
-	 * Get the display name of this plugin.
-	 * @return String
+	 * @copydoc Plugin::getDisplayName()
 	 */
 	public function getDisplayName() {
 		return __('plugins.generic.externalFeed.block.displayName');
 	}
 
 	/**
-	 * Get a description of the plugin.
+	 * @copydoc Plugin::getDescription()
 	 */
 	public function getDescription() {
 		return __('plugins.generic.externalFeed.description');
@@ -59,8 +58,7 @@ class ExternalFeedBlockPlugin extends BlockPlugin {
 	}
 
 	/**
-	 * Override the builtin to get the correct plugin path.
-	 * @return string
+	 * @copydoc Plugin::getPluginPath()
 	 */
 	public function getPluginPath() {
 		$plugin = $this->getExternalFeedPlugin();
@@ -68,8 +66,7 @@ class ExternalFeedBlockPlugin extends BlockPlugin {
 	}
 
 	/**
-	 * Override the builtin to get the correct template path.
-	 * @return string
+	 * @copydoc Plugin::getTemplatePath()
 	 */
 	public function getTemplatePath($inCore = false) {
 		return $this->getExternalFeedPlugin()->getTemplatePath($inCore);
