@@ -17,13 +17,13 @@ import('lib.pkp.classes.plugins.BlockPlugin');
 
 class ExternalFeedBlockPlugin extends BlockPlugin {
 	/** @var ExternalFeedPlugin reference to external feed plugin */
-	protected $parentPlugin = null;
+	protected $_parentPlugin = null;
 
 	/**
 	 * Constructor
 	 */
 	 public function __construct($plugin) {
-		$this->parentPlugin = $plugin;
+		$this->_parentPlugin = $plugin;
 		parent::__construct();
 	}
 
@@ -63,7 +63,7 @@ class ExternalFeedBlockPlugin extends BlockPlugin {
 	 * @return object
 	 */
 	public function getExternalFeedPlugin() {
-		return $this->parentPlugin;
+		return $this->_parentPlugin;
 	}
 
 	/**

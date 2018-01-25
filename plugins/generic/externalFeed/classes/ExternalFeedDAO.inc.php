@@ -17,13 +17,13 @@ import('lib.pkp.classes.db.DAO');
 
 class ExternalFeedDAO extends DAO {
 	/** @var ExternalFeedPlugin reference to ExternalFeed plugin */
-	protected $parentPlugin = null;
+	protected $_parentPlugin = null;
 
 	/**
 	 * Constructor
 	 */
 	public function __construct($parentPlugin) {
-		$this->parentPlugin = $parentPlugin;
+		$this->_parentPlugin = $parentPlugin;
 		parent::__construct();
 	}
 
@@ -32,7 +32,7 @@ class ExternalFeedDAO extends DAO {
 	 * @return ExternalFeed
 	 */
 	function newDataObject() {
-		$this->parentPlugin->import('classes.ExternalFeed');
+		$this->_parentPlugin->import('classes.ExternalFeed');
 		return new ExternalFeed();
 	}
 

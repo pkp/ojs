@@ -17,10 +17,10 @@ import('lib.pkp.classes.form.Form');
 class ExternalFeedSettingsForm extends Form {
 
 	/** @var $journalId int */
-	protected $journalId;
+	protected $_journalId;
 
 	/** @var $plugin object */
-	protected $plugin;
+	protected $_plugin;
 
 	/**
 	 * Constructor
@@ -28,8 +28,8 @@ class ExternalFeedSettingsForm extends Form {
 	 * @param $journalId int
 	 */
 	public function __construct($plugin, $journalId) {
-		$this->journalId = $journalId;
-		$this->plugin = $plugin;
+		$this->_journalId = $journalId;
+		$this->_plugin = $plugin;
 	
 		parent::__construct($plugin->getTemplatePath() . 'settingsForm.tpl');
 	
@@ -41,8 +41,8 @@ class ExternalFeedSettingsForm extends Form {
 	 * Initialize form data.
 	 */
 	public function initData() {
-		$journalId = $this->journalId;
-		$plugin = $this->plugin;
+		$journalId = $this->_journalId;
+		$plugin = $this->_plugin;
 
 		$this->_data = array(
 			'externalFeedStyleSheet' => $plugin->getSetting($journalId, 'externalFeedStyleSheet')
@@ -61,8 +61,8 @@ class ExternalFeedSettingsForm extends Form {
 	 * @copydoc Form::fetch()
 	 */
 	public function fetch($request) {
-		$journalId = $this->journalId;
-		$plugin = $this->plugin;
+		$journalId = $this->_journalId;
+		$plugin = $this->_plugin;
 
 		// Ensure upload file settings are reloaded when the form is displayed.
 		$templateMgr = TemplateManager::getManager($request);
@@ -76,8 +76,8 @@ class ExternalFeedSettingsForm extends Form {
 	 * Deletes a custom stylesheet.
 	 */
 	function deleteStyleSheet() {
-		$journalId = $this->journalId;
-		$plugin = $this->plugin;
+		$journalId = $this->_journalId;
+		$plugin = $this->_plugin;
 		$settingName = 'externalFeedStyleSheet';
 		$setting = $plugin->getSetting($journalId, $settingName);
 		import('classes.file.PublicFileManager');

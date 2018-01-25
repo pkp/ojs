@@ -17,13 +17,13 @@ import('lib.pkp.classes.form.Form');
 
 class ExternalFeedForm extends Form {
 	/** @var int Context (press / journal) ID */
-	protected $contextId;
+	protected $_contextId;
 
 	/** @var int Feed id */
-	protected $feedId;
+	protected $_feedId;
 
 	/** @var ExternalFeedPlugin External feed plugin */
-	protected $plugin;
+	protected $_plugin;
 
 	/**
 	 * Constructor
@@ -33,9 +33,9 @@ class ExternalFeedForm extends Form {
 	 */
 	function __construct($externalFeedPlugin, $contextId, $feedId = null) {
 		parent::__construct($externalFeedPlugin->getTemplatePath() . 'editExternalFeedForm.tpl');
-		$this->contextId = $contextId;
-		$this->feedId = $feedId;
-		$this->plugin = $externalFeedPlugin;
+		$this->_contextId = $contextId;
+		$this->_feedId = $feedId;
+		$this->_plugin = $externalFeedPlugin;
 		
 		// Add form checks
 		$this->addCheck(new FormValidatorPost($this));
@@ -48,9 +48,9 @@ class ExternalFeedForm extends Form {
 	 * Initialize form data.
 	 */
 	function initData() {
-		if ($this->feedId) {
+		if ($this->_feedId) {
 			$feedDao = DAORegistry::getDAO('ExternalFeedDAO');
-			$feed = $feedDao->getById($this->feedId, $this->contextId);
+			$feed = $feedDao->getById($this->_feedId, $this->_contextId);
 
 			$this->setData('feedUrl', $feed->getUrl());
 			$this->setData('title', $feed->getTitle(AppLocale::getLocale()));
@@ -101,7 +101,7 @@ class ExternalFeedForm extends Form {
 	function fetch($request) {
 		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign(array(
-			'feedId' => $this->feedId,
+			'feedId' => $this->_feedId,
 			'formLocale' => AppLocale::getLocale(),
 		));
 		
@@ -112,20 +112,20 @@ class ExternalFeedForm extends Form {
 	 * Save settings.
 	 */
 	public function execute() {
-		$plugin = $this->plugin;
+		$plugin = $this->_plugin;
 	
 		$externalFeedDao = DAORegistry::getDAO('ExternalFeedDAO');
 		$plugin->import('classes.ExternalFeed');
 	
-		if (isset($this->feedId)) {
-			$feed = $externalFeedDao->getById($this->feedId, $this->contextId);
+		if (isset($this->_feedId)) {
+			$feed = $externalFeedDao->getById($this->_feedId, $this->_contextId);
 		}
 	
 		if (!isset($feed)) {
 			$feed = new ExternalFeed();
 		}
 	
-		$feed->setJournalId($this->contextId);
+		$feed->setJournalId($this->_contextId);
 		$feed->setUrl($this->getData('feedUrl'));
 		$feed->setTitle($this->getData('title'), AppLocale::getLocale());
 		$feed->setDisplayHomepage($this->getData('displayHomepage') ? 1 : 0);
