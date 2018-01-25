@@ -53,7 +53,7 @@ class ExternalFeedDAO extends DAO {
 
 		$returner = null;
 		if ($result->RecordCount() != 0) {
-			$returner = $this->_returnExternalFeedFromRow($result->GetRowAssoc(false));
+			$returner = $this->_fromRow($result->GetRowAssoc(false));
 		}
 		$result->Close();
 		return $returner;
@@ -77,7 +77,7 @@ class ExternalFeedDAO extends DAO {
 	 * @param $row array
 	 * @return ExternalFeed
 	 */
-	public function _returnExternalFeedFromRow($row) {
+	public function _fromRow($row) {
 		$externalFeed = $this->newDataObject();
 		$externalFeed->setId($row['feed_id']);
 		$externalFeed->setJournalId($row['journal_id']);
@@ -231,7 +231,7 @@ class ExternalFeedDAO extends DAO {
 			$rangeInfo
 		);
 
-		return new DAOResultFactory($result, $this, '_returnExternalFeedFromRow');
+		return new DAOResultFactory($result, $this, '_fromRow');
 	}
 
 	/**
