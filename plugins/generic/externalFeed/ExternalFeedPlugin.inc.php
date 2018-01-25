@@ -20,10 +20,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 	const CUSTOM_STYLESHEET = 'externalFeedStyleSheet.css';
 
 	/**
-	 * Called as a plugin is registered to the registry
-	 * @param $category String Name of category plugin was registered to
-	 * @return boolean True iff plugin initialized successfully; if false,
-	 * 	the plugin will not be registered.
+	 * @copydoc Plugin::register
 	 */
 	public function register($category, $path) {
 		$success = parent::register($category, $path);

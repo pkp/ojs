@@ -21,6 +21,7 @@ class ExternalFeedDAO extends DAO {
 
 	/**
 	 * Constructor
+	 * @param $parentPlugin ExternalFeedPlugin
 	 */
 	public function __construct($parentPlugin) {
 		$this->_parentPlugin = $parentPlugin;
@@ -236,11 +237,12 @@ class ExternalFeedDAO extends DAO {
 
 	/**
 	 * Sequentially renumber external feeds in their sequence order.
+	 * @param $contextId int 
 	 */
-	public function resequenceExternalFeeds($journalId) {
+	public function resequenceExternalFeeds($contextId) {
 		$result = $this->retrieve(
 			'SELECT feed_id FROM external_feeds WHERE journal_id = ? ORDER BY seq',
-			$journalId
+			$contextId
 		);
 
 		for ($i=1; !$result->EOF; $i++) {

@@ -57,7 +57,6 @@ class ExternalFeedSettingsForm extends Form {
 	}
 
 	/**
-	 * Fetch the form.
 	 * @copydoc Form::fetch()
 	 */
 	public function fetch($request) {
