@@ -442,6 +442,7 @@ class Issue extends DataObject {
 	/**
 	 * Return the string of the issue identification based label format
 	 * @param $force array force show/hide of data components
+	 * @param $locale string use spcific non-default locale
 	 * @return string
 	 */
 	function getIssueIdentification($force = array(), $locale = null) {
