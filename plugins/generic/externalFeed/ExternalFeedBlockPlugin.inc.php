@@ -21,8 +21,9 @@ class ExternalFeedBlockPlugin extends BlockPlugin {
 
 	/**
 	 * Constructor
+	 * @param $plugin ExternalFeedPlugin
 	 */
-	 public function __construct($plugin) {
+	public function __construct($plugin) {
 		$this->_parentPlugin = $plugin;
 		parent::__construct();
 	}
