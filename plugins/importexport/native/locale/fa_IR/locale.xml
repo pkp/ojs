@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
+  * Credits: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Farsi_(fa_IR)
+  -->
+<locale name="fa_IR" full_name="فارسی">
+	<message key="plugins.importexport.native.displayName">افزونه XML مقالات و شماره ها</message>
+	<message key="plugins.importexport.native.description">درون ریزی یا برون دهی مقالات و شماره ها</message>
+	<message key="plugins.importexport.native.import">درون ریزی</message>
+	<message key="plugins.importexport.native.import.instructions">آپلود یک فایل XML برای درون ریزی</message>
+	<message key="plugins.importexport.native.exportSubmissionsSelect">مقاله مورد نظر برای برون دهی را انتخاب کنید.</message>
+	<message key="plugins.importexport.native.exportSubmissions">برون دهی مقالات</message>
+	<message key="plugins.importexport.native.exportIssues">برون دهی شماره ها</message>
+	<message key="plugins.importexport.native.results">نتایج</message>
+	<message key="plugins.inportexport.native.uploadFile">برای ادامه ابتدا یک فایل را در قسمت "درون ریزی" آپلود کنید</message>
+	<message key="plugins.importexport.native.importComplete">درون ریزی با موفقیت انجام شد، موارد زیر به سیستم درون ریزی شد:</message>
+	<message key="plugins.importexport.native.cliUsage"><![CDATA[نحوه استفاده: {$scriptName} {$pluginName} [command] ...  فرامین:  import [xmlFileName] [journal_path] [user_name] ...  export [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...  export [xmlFileName] [journal_path] article [articleId]  export [xmlFileName] [journal_path] issues [issueId1] [issueId2] ...  export [xmlFileName] [journal_path] issue [issueId]	برای وارد کردن داده ها پارامترهای دیگری به شرح ذیل بسته به root node سند XML لازم است:  چنانچه root node موجود <article> و یا <articles> باشد پارامترهای دیگری نیز لازم است. الگوهای زیر قابل قبول است:	{$scriptName} {$pluginName} import [xmlFileName] [journal_path] [user_name]  issue_id [issueId] section_id [sectionId]	{$scriptName} {$pluginName} import [xmlFileName] [journal_path] [user_name]  issue_id [issueId] section_name [name]	{$scriptName} {$pluginName} import [xmlFileName] [journal_path]  issue_id [issueId] section_abbrev [abbrev]]]></message>
+	<message key="plugins.importexport.native.error.unknownSection">بخش ناشناس {$param}</message>
+	<message key="plugins.importexport.native.error.unknownUser">کاربر ذکر شده "{$userName}" وجود ندارد.</message>
+	<message key="plugins.importexport.native.import.error.sectionTitleMismatch">نوع مقاله ذکر شده "{$section1Title}" و "{$section2Title}" در شماره مجله "{$issueTitle}" برای نوع دیگری از مقاله در این مجله بکار رفته است.</message>
+	<message key="plugins.importexport.native.import.error.sectionTitleMatch">عنوان نوع مقاله "{$sectionTitle}" در شماره مجله "{$issueTitle}" برای یک نوع دیگز مقاله بکار رفته است ولی عنوان دیگر این نوع مقاله تکراری نیست.</message>
+	<message key="plugins.importexport.native.import.error.sectionAbbrevMismatch">علامت اختصاری نوع مقاله اول "{$section1Abbrev}" و دوم "{$section2Abbrev}" در مجله شماره "{$issueTitle}" مطابقت با مجلات مختلفی دارند.</message>
+	<message key="plugins.importexport.native.import.error.sectionAbbrevMatch">علامت اختصاری "{$sectionAbbrev}" در شماره مجله "{$issueTitle}" مطابق با مجله موجودی است ولی علامت اختصاری دیگر آن مطابقت ندارد.</message>
+	<message key="plugins.importexport.native.import.error.issueIdentificationMatch">هیچ یا چندی شماره با این شناسه یافت شد. "{$issueIdentification}".</message>
+	<message key="plugins.importexport.native.import.error.issueIdentificationDuplicate">شماره موجود با شناسه {$issueId} با شناسه داده شده «{$issueIdentification}» مطابقت دارد. اطلاعات کلی شماره تغییری نخواهد کرد و تنها مقالات به آن افزوده خواهد شد.</message>
+	<message key="plugins.importexport.native.import.error.issueIdentificationMissing">شناسه شماره مقاله «{$articleTitle}» یافت نشد.</message>
+	<message key="plugins.importexport.native.import.error.publishedDateMissing">مقاله «{$articleTitle}» در داخل شماره‌ای گنجانده شده است، اما دارای تاریخ انتشاری نمی‌باشد.</message>
+</locale>

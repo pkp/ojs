@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
+  * plugins/generic/usageStats/locale/fa_IR/locale.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings
+  * Credits: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Farsi_(fa_IR)
+  -->
+<locale name="fa_IR" full_name="فارسی">
+	<message key="plugins.generic.usageStats.settings.statsDisplayOptions.siteWide">در مورد هر مجله‌ای این تنظیمات می‌تواند با استفاده از صفحه افزونه‌های آن مجله بازنویسی شود.</message>
+	<message key="plugins.generic.usageStats.optout.description"><![CDATA[<h3>اطلاعات حریم خصوصی عمومی</h3> <p>برای اطلاعات بیشتر در این زمینه لطفاً به <<a href="{$privacyStatementUrl}"> بیانیه حریم خصوصی </a> مراجعه کنید. </p> <h3>آمار کارکرد</h3> <p> به منظور توانایی تجزیه و تحلیل کارایی و میزان ارزش مجله و مقالات منتشر شده، اطلاعات مربوط به میزان دسترسی به صفحه اصلی مجله‌ها، شماره‌ها، مقالات، نسخه‌های چاپی و فایل‌های مکمل ذخیره می‌شود. در این فرآیند تمام داده‌ها به صورت ناشناس هستند و هیچ اطلاعات شخصی را شامل نمی‌شوند. آدرس‌های IP با استفاده از <em>روش SHA </em>و با استفاده از یک <em>کلید کاملاً تصادفی </em>کدگذاری می‌شوند، که در نتیجه آدرس‌های IP قابل بازیابی نخواهند بود تا از ناشناس ماندن آن‌ها اطمینان حاصل شود. </p> <p>  در کنار آدرس IP اطلاعات زیر نیز به روش مشابه کدگذاری می‌شود: </p> <ul> <li>نوع دسترسی</li> <li>زمان درخواست</li> <li> نشانی اینترنتی درخواست شده</li> <li>کد وضعیت HTTP</li> <li>مرورگر</li> </ul> <p> داده‌های جمع‌آوریجمع‌آوری شده تنها برای اهداف ارزیابی استفاده می‌شود. هیچ آدرس IP به شناسه‌های کاربری ارتباط داده نمی‌شود.از نظر فنی غیرممکن است که یک مجموعه خاص از اطلاعات از طریق یک آدرس IP خاص ردیابی شود. </p>]]></message>
+</locale>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
+<!--
+  * locale/fa_IR/admin.xml
+  *
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
+  * Credits: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Farsi_(fa_IR)
+  -->
+<locale name="fa_IR" full_name="فارسی">
+	<message key="admin.hostedJournals">مجلات میزبان</message>
+	<message key="admin.settings.journalRedirect">هدایت به سمت مجله</message>
+	<message key="admin.settings.options">امکانات</message>
+	<message key="admin.settings.usePaging">قرار دادن لیست مجلات در چندین صفحه، برای سایت‌هایی که شامل تعداد زیادی مجله هستند</message>
+	<message key="admin.settings.journalRedirectInstructions">آدرس سایت اصلی به سمت نمایش این مجله هدایت می‌شود . این عمل زمانی کاربرد دارد که فقط یک مجله در سایت میزبان شود.</message>
+	<message key="admin.settings.noJournalRedirect">هدایت نشود.</message>
+	<message key="admin.settings.journalsList">عناصر مجله</message>
+	<message key="admin.settings.journalsList.description">عناصری از مجله را که می‌خواهید در صفحه اول سایت نشان داده شود را انتخاب کنید.</message>
+	<message key="admin.settings.journalsList.showThumbnail">تصویر کوچک مجله</message>
+	<message key="admin.settings.journalsList.showTitle">عنوان مجله</message>
+	<message key="admin.settings.journalsList.showDescription">شرح مجله</message>
+	<message key="admin.settings.defaultMetricDescription">در تنظیمات نصب شما، چندین معیار اندازه‌گیری تعیین شده است. اما در برخی موارد نیاز است که از یک معیار استفاده شود، برای مثال در نمایش لیست مقالات بیشتر مشاهده شده. لطفاً یک معیار اندازه‌گیری را به عنوان معیار پیش‌فرض انتخاب کنید.</message>
+	<message key="admin.languages.confirmDisable">آیا مطمئن هستید که می‌خواهید این زبان را غیرفعال کنید؟ مجلاتی که از این زبان استفاده می‌کنند ممکن است دچار مشکل شوند!</message>
+	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>  به یکی از دلایل زیر دانلود بسته زیان از سرور PKP در حال حاضر امکان‌پذیر نیست:  </p>  <ul>  <li>  سرور شما اجازه اجرای برنامه tar را نمی‌دهد  </li>  <li>  OJS قادر به تغییر فایل رجیستری زبان نیست (فایل )"registry/locales.xml"  </li>  </ul>  <p>  بسته‌های زبانی را می‌توان به روش دستی از سایت PKP  <a href="http://pkp.sfu.ca">  دانلود کرد.  </a>.</p>]]></message>
+	<message key="admin.languages.primaryLocaleInstructions">این زبان، زبان پیش‌فرض سایت و مجلات آن خواهد بود.</message>
+	<message key="admin.languages.supportedLocalesInstructions">از این لیست زبان‌های دلخواه را برای سایت انتخاب کنید. زبان‌های انتخاب شده در دسترس تمام مجلات سایت خواهد بود و مدیر هر مجله در صورت تمایل می‌تواند آن را برای سایت خود انتخاب کند. و همچنین در منوی انتخاب زبان در تمام صفحات موجود خواهد بود. چنانچه فقط یک زبان در سایت باشد منوی انتخاب زبان و تنظیمات مربوطه موجود نخواهد بود.</message>
+	<message key="admin.locale.maybeIncomplete">زبان‌های مشخص شده ممکن است ناکامل باشند.</message>
+	<message key="admin.languages.confirmUninstall">آیا می‌خواهید این زبان را حذف کنید؟ این کار ممکن است بر روی مجلات سایت که از این زبان‌ها استفاده می‌کنند تأثیر بگذارد</message>
+	<message key="admin.languages.installNewLocalesInstructions">زبان‌هایی را که می‌خواهید در این سیستم حمایت شود انتخاب کنید. زبان‌ها قبل از استفاده می‌بایست نصب شوند. برای اطلاع از چگونگی انجام این کار به راهنمای OJS مراجعه کنید.</message>
+	<message key="admin.languages.downloadFailed">دانلود فایل (های) زبانی با شکست مواجه شد. پیام‌ (های) خطای زیر جزئیات موضوع را نشان می‌دهند</message>
+	<message key="admin.languages.localeInstalled">زبان "{$locale}" نصب شد</message>
+	<message key="admin.languages.download">دانلود فایل (های) زبانی</message>
+	<message key="admin.languages.download.cannotOpen">قادر به باز کردن فایل توصیف کننده زبان از سایت PKP نیست</message>
+	<message key="admin.languages.download.cannotModifyRegistry">افزودن زبان جدید به فایل رجیستری زبان ممکن نیست</message>
+	<message key="admin.auth.ojs">پایگاه داده کاربران OJS</message>
+	<message key="admin.auth.enableSyncProfiles">فعال کردن امکان هماهنگ‌سازی پروفایل کاربر (در صورت پشتیبانی سیستم احراز هویت خارجی). وقتی که کاربر وارد سیستم شود پروفایل وی از منبع تأیید کننده خارجی به‌روزرسانی می‌شود و چنانچه در سیستم OJS پرونده خود را تغییر دهد این تغییرات در منبع احراز هویت مورد نظر نیز اعمال می‌گردد. این موضوع شامل رمز عبور نیز می‌شود. چنانچه این گزینه فعال نشود اطلاعات پرونده کاربر در سیستم OJS به‌صورت مستقل از سیستم خارجی احراز هویت می‌باشد.</message>
+	<message key="admin.auth.enableSyncPasswords">فعال‌سازی امکان تغییر رمز عبور کاربر (در صورت پشتیبانی سیستم احراز هویت خارجی). با فعال‌سازی این گزینه کاربران می‌توانند رمز عبور خود را از داخل سیستم OJS تغییر داده و از امکان «فراموش کردن رمز عبور» نیز بهره بگیرند. در صورتی که این گزینه فعال نشود کاربرانی که از این سیستم خارجی احراز هویت استفاده می‌کنند قادر به استفاده از این امکانات نخواهند بود.</message>
+	<message key="admin.auth.enableCreateUsers">امکان ایجاد کاربر جدید )در صورت پشتیبانی سیستم احراز هویت خارجی). کاربرانی که با استفاده از سیستم خارجی در OJS ثبت‌نام می‌کنند، در آن سیستم نیز ثبت‌نام می‌کنند. همچنین چنانچه سیستم خارجی منبع پیش‌فرض احراز هویت باشد. کاربران ایجاد شده هنگام ثبت‌نام به آن سیستم نیز اضافه می‌شوند.</message>
+	<message key="admin.systemVersion">نسخه OJS</message>
+	<message key="admin.systemConfiguration">پیکره‌بندی OJS</message>
+	<message key="admin.systemConfigurationDescription"><![CDATA[تنظیمات پیکره‌بندی OJS بر گرفته شده از فایل config.inc.php]]></message>
+	<message key="admin.journals.createInstructions">شما به‌طور خودکار مدیر این مجله خواهید بود. پس از ایجاد یک مجله جدید ، به‌عنوان مدیر وارد آن شوید تا راه‌اندازی اولیه آن را انجام دهید.</message>
+	<message key="admin.journals.journalSettings">تنظیمات مجله</message>
+	<message key="admin.journals.noneCreated">هیچ مجله‌ای تعریف نشده است</message>
+	<message key="admin.contexts.create">مجله جدید</message>
+	<message key="admin.journals.urlWillBe">آدرس اینترنتی مجله این خواهد بود: {$sampleUrl}</message>
+	<message key="admin.contexts.form.titleRequired">وارد کردن عنوان ضروری است</message>
+	<message key="admin.contexts.form.pathRequired">وارد کردن مسیر الزامی است</message>
+	<message key="admin.contexts.form.pathAlphaNumeric">مسیر فقط می‌تواند شامل کاراکترهای حروف و عدد باشد</message>
+	<message key="admin.contexts.form.pathExists">مسیر انتخاب شده قبلاً توسط یک مجله دیگر انتخاب شده است</message>
+	<message key="admin.journals.enableJournalInstructions">فعال سازی مجله و نمایش عمومی ان در سایت</message>
+	<message key="admin.journals.journalDescription">توصیف مجله</message>
+	<message key="admin.journal.pathImportInstructions">مسیر موجود یا مسیری که باید ایجاد شود (مانند: ojs)</message>
+	<message key="admin.journals.importSubscriptions">درون‌ریزی اشتراک‌ها</message>
+	<message key="admin.journals.transcode">کد انتقال فراداده‌های مقاله از ISO8859-1</message>
+	<message key="admin.journals.redirect">تولید کد لازم برای نگاشت آدرس‌های OJS نسخه 1 به نسخه 2</message>
+	<message key="admin.journals.form.importPathRequired">مشخص کردن مسیر درون‌ریزی الزامی است.</message>
+	<message key="admin.journals.importErrors">درون‌ریزی با خطا مواجه شد.</message>
+	<message key="admin.mergeUsers">ادغام کاربران</message>
+	<message key="admin.mergeUsers.mergeUser">ادغام کاربر</message>
+	<message key="admin.mergeUsers.into.description">کاربری را که مسئولیت‌ها و انتساب‌های کاربر قبلی باید به آن نسبت داده شود را انتخاب نمایید</message>
+	<message key="admin.mergeUsers.from.description">کاربری را برای ادغام با حساب کاربر دیگر انتخاب کنید (مثال وقتی که شخصی دو حساب کاربری دارد ) حسابی که در ابتدا انتخاب شده پاک می‌شود و مقالات ارسالی, انتساب‌ها و غیره مربوط به آن حساب به حساب کاربری دوم نسبت داده می‌شود</message>
+	<message key="admin.mergeUsers.allUsers">تمام کاربران دارای نقش</message>
+	<message key="admin.mergeUsers.confirm">آیا مطمئن هستید که می‌خواهید حساب کاربری "{$oldAccountCount}" را با حساب کاربری"{$newUsername}" ادغام کنید؟ بعد از ادغام حساب کاربری"{$oldAccountCount}" دیگر وجود نخواهد داشت . این عملیات قابل بازگشت نیست.</message>
+	<message key="admin.mergeUsers.noneEnrolled">کاربران بدون نقش</message>
+	<!-- Categories -->
+	<message key="admin.categories">حوزه‌ها</message>
+	<message key="admin.categories.enable.description">مدیر سایت می‌تواند چندین حوزه مختلف برای دسته‌بندی مجلات تعریف کند. در این صورت مدیر مجله می‌تواند مجلات را در این حوزه‌ها قرار دهد که به خواننده کمک می‌کند تا مجلات مربوط به حوزه مورد علاقه خود را سریع‌تر بیابد.</message>
+	<message key="admin.categories.disableCategories">مجله را در هیچ حوزه‌ای قرار نده</message>
+	<message key="admin.categories.enableCategories">مدیران مجلات اجاره دارند مجلات را در حوزه‌ها قرار دهند.</message>
+	<message key="admin.categories.editTitle">ویرایش حوزه</message>
+	<message key="admin.categories.createTitle">ایجاد حوزه</message>
+	<message key="admin.categories.create">ایجاد حوزه جدید</message>
+	<message key="admin.categories.noneCreated">حوزه‌ای تعریف نشده است</message>
+	<message key="admin.categories.confirmDelete">مطمئنید که می‌خواهید این حوزه را حذف کنید؟</message>
+	<message key="admin.categories.name">نام</message>
+	<message key="admin.categories.nameRequired">وارد کردن نام حوزه اجباری است</message>
+	<message key="admin.presses.createInstructions">شما به صورت خودکار به عنوان مدیر این مجله انتخاب شده‌اید. بعد از ایجاد مجله جدید، شما به بخش تنظیمات مجله هدایت می‌شوید تا بتوانید اطلاعات مجله را تکمیل نمایید.</message>
+	<message key="admin.scheduledTask.subscriptionExpiryReminder">یادآوری اتمام اشتراک</message>
+	<message key="admin.scheduledTask.openAccessNotification">اطلاع‌رسانی مجلات دسترسی آزاد</message>
+	<message key="admin.scheduledTask.reviewReminder">یادآوری داوری</message>
+</locale>
