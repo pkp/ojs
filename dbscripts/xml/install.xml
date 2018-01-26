@@ -11,6 +11,8 @@
   -->
 
 <install version="3.1.0.0">
+	<code function="checkPhpVersion" />
+
 	<code function="createDirectories"/>
 	<code function="createDatabase"/>
 
