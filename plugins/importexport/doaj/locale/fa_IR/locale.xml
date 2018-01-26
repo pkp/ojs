@@ -8,7 +8,7 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings
-  * Translated By: Alireza Sokhandan
+  * Credits: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Farsi_(fa_IR)
   -->
 <locale name="fa_IR" full_name="فارسی">
 	<message key="plugins.importexport.doaj.displayName">افزونه برون دهی DOAJ</message>

@@ -8,7 +8,7 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localized email templates XML file.
-  * Translated By: Alireza Sokhandan
+  * Credits: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Farsi_(fa_IR)
   -->
 <email_texts locale="fa_IR">
 	<email_text key="MANUAL_PAYMENT_NOTIFICATION">
