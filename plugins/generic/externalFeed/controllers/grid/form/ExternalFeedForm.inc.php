@@ -138,7 +138,7 @@ class ExternalFeedForm extends Form {
 	
 		// Update or insert external feed
 		if ($feed->getId() != null) {
-			$externalFeedDao->updateExternalFeed($feed);
+			$externalFeedDao->updateObject($feed);
 		} else {
 			$feed->setSequence(REALLY_BIG_NUMBER);
 			$externalFeedDao->insertObject($feed);

@@ -134,7 +134,7 @@ class ExternalFeedGridHandler extends GridHandler {
 		if (($externalFeedId != null && $externalFeedDao->getExternalFeedJournalId($externalFeedId) == $context->getId())) {
 			$feed = $externalFeedDao->getById($externalFeedId, $context->getId());
 			$feed->setSequence($newSequence);
-			$externalFeedDao->updateExternalFeed($feed);
+			$externalFeedDao->updateObject($feed);
 		}
 		
 	}
@@ -235,7 +235,7 @@ class ExternalFeedGridHandler extends GridHandler {
 		
 		$externalFeedDao = DAORegistry::getDAO('ExternalFeedDAO');
 		if ($externalFeedDao->getExternalFeedJournalId($feedId) == $context->getId()) {
-			$externalFeedDao->deleteExternalFeedById($feedId);
+			$externalFeedDao->deleteObjectById($feedId);
 		}
 		
 		return DAO::getDataChangedEvent();
