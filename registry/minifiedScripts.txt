@@ -64,7 +64,6 @@ lib/pkp/js/controllers/TabHandler.js
 lib/pkp/js/controllers/MenuHandler.js
 lib/pkp/js/controllers/UploaderHandler.js
 lib/pkp/js/controllers/AutocompleteHandler.js
-lib/pkp/js/controllers/RangeSliderHandler.js
 lib/pkp/js/controllers/RevealMoreHandler.js
 lib/pkp/js/controllers/NotificationHandler.js
 lib/pkp/js/controllers/HelpPanelHandler.js
