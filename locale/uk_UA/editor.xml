@@ -37,7 +37,7 @@
 	<message key="editor.notifyUsers.allReaders">Всім читачам ({$count} користувачів)</message>
 	<message key="editor.notifyUsers.allAuthors">Всім опублікованим авторам ({$count} користувачів)</message>
 	<message key="editor.notifyUsers.allIndividualSubscribers">Всім індивідуальним передплатникам ({$count} користувачів)</message>
-	<message key="editor.notifyUsers.allInstitutionalSubscribers">Всім установам-передплатникам ({$count} користувачів)</message>   
+	<message key="editor.notifyUsers.allInstitutionalSubscribers">Всім установам-передплатникам ({$count} користувачів)</message>
 	<message key="editor.notifyUsers.inProgress">Повідомлення розсилаються користувачам ...</message>
 	<message key="editor.usersNotified">Користувачам повідомлено</message>
 	<message key="editor.notifyUsers.interestedUsers">Надіслати це повідомлення лише тим користувачам журналу, які виявили бажання отримувати новини ({$count} користувачів)</message>
