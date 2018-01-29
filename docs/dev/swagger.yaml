@@ -1031,6 +1031,26 @@ paths:
           in: query
           required: false
           type: string
+        - name: reviewsCompleted
+          description: Filter results by those who have completed at least `X` reviews. You can also pass a range as a string formatted as `X-X`
+          in: query
+          required: false
+          type: integer
+        - name: reviewsActive
+          description: Filter results by those who have `X` review assignments currently in progress. You can also pass a range as a string formatted as `X-X`.
+          in: query
+          required: false
+          type: integer
+        - name: daysSinceLastAssignment
+          description: Filter results by those who's last review was assigned at least `X` days ago. You can also pass a range as a string formatted as `X-X`.
+          in: query
+          required: false
+          type: integer
+        - name: averageCompletion
+          description: Filter results by those who complete a review assignment within `X` days on average.
+          in: query
+          required: false
+          type: integer
         - name: assignedToSubmission
           description: Filter results by those assigned to this submission ID.
           in: query
