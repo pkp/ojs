@@ -796,6 +796,11 @@ paths:
           description: Submission ID
           required: true
           type: integer
+        - name: stageId
+          in: path
+          description: Stage ID
+          required: true
+          type: integer
       responses:
         '200':
           description: Array of users.
