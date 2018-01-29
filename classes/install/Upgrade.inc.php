@@ -2577,6 +2577,7 @@ class Upgrade extends Installer {
 
 	/**
 	 * If StaticPages table exists we should port the data as NMIs
+	 * @return boolean
 	 */
 	function migrateStaticPagesToNavigationMenuItems() {
 		if ($this->tableExists('static_pages')) {
@@ -2598,7 +2599,6 @@ class Upgrade extends Installer {
 				}
 			}
 		}
-
 
 		return true;
 	}
