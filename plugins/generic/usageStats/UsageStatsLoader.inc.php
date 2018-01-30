@@ -69,9 +69,9 @@ class UsageStatsLoader extends PKPUsageStatsLoader {
 					$fileId = $args[2];
 					$articleFileDao = DAORegistry::getDAO('SubmissionFileDAO');
 					$articleFile = $articleFileDao->getLatestRevision($fileId);
-					if ($articleFile) {
-						$assocId = $articleFile->getFileId();
-					}
+					if (!$articleFile) break;
+
+					$assocId = $articleFile->getFileId();
 
 					// is the file article full text
 					$genreDao = DAORegistry::getDAO('GenreDAO');
