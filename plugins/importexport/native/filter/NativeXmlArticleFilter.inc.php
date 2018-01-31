@@ -66,7 +66,7 @@ class NativeXmlArticleFilter extends NativeXmlSubmissionFilter {
 			if (!$section) {
 				$deployment->addError(ASSOC_TYPE_SUBMISSION, NULL, __('plugins.importexport.native.error.unknownSection', array('param' => $sectionAbbrev)));
 			} else {
-				parent::handleElement($node);
+				return parent::handleElement($node);
 			}
 		}
 	}
