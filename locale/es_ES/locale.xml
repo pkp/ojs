@@ -831,9 +831,8 @@
 	<message key="log.review.reviewAcceptedByProxy">{$userName} aceptó la ronda de revisión {$round} para el envío {$submissionId} en nombre de {$reviewerName}.</message>
 	<message key="log.review.reviewFileByProxy">El editor/a {$userName} subió un archivo de revisión para la ronda {$round} del envío {$submissionId} en nombre del revisor {$reviewerName}.</message>
 	<message key="log.review.reviewerFile">Se subió un archivo de revisión.</message>
-	<message key="log.editor.decision">{$editorName} registró una decisión ({$decision}) editorial para el artículo {$submissionId}.</message>
-	<message key="log.editor.recommendation">{$editorName} registró una recomendación ({$decision}) editorial para el artículo {$submissionId}.</message>
-
+	<message key="log.editor.decision">{$editorName} registró una decisión editorial para el artículo {$submissionId}: ({$decision})</message>
+	<message key="log.editor.recommendation">{$editorName} registró una recomendación editorial para el artículo {$submissionId}: ({$decision})</message>
 	<message key="log.copyedit.initiate">{$copyeditorName} inició la corrección de originales en el envío {$submissionId}.</message>
 	<message key="log.copyedit.copyeditFileSet">Se seleccionó el archivo de corrección de originales por defecto.</message>
 	<message key="log.copyedit.initialEditComplete">{$copyeditorName} completó la corrección inicial del envío {$submissionId}.</message>
@@ -912,7 +911,7 @@
 	<message key="notification.type.submissionComment">Un editor/a hizo un comentario en "{$title}".</message>
 	<message key="notification.type.submissions">Eventos de los envíos</message>
 	<message key="notification.type.userComment">Un lector/a hizo un comentario en "{$title}"</message>
-	<message key="notification.type.publicationScheduled">Este envío ha sido programado para su publicación.</message>
+	<message key="notification.type.publicationScheduled">Se ha programado este envío para su publicación.</message>
 
 	<!--
 	 *
@@ -1017,5 +1016,5 @@ La configuración del soporte CLOCKSS para Open Journal Systems no hace falta qu
 	<message key="navigation.subscriptions">Suscripciones</message>
 	
 	<!-- legacy strings from OJS 2, for upgraded installations from OJS 2 -->
-	<message key="log.editor.submissionExpedited">{$editorName} tomó el proceso de edición para el artículo {$submissionId}.</message>
+	<message key="log.editor.submissionExpedited">{$editorName} se hará cargo del proceso de edición del artículo {$submissionId}.</message>
 </locale>
