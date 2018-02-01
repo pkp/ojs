@@ -1031,6 +1031,11 @@ paths:
           in: query
           required: false
           type: string
+        - name: reviewerRating
+          description: Filter results by those who have an average review assignment rating of at least `X` (valid ratings are between `1` and `5`).
+          in: query
+          required: false
+          type: integer
         - name: reviewsCompleted
           description: Filter results by those who have completed at least `X` reviews. You can also pass a range as a string formatted as `X-X`
           in: query
