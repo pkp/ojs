@@ -478,7 +478,6 @@ Du kan välja att ge användaren en förklaring till varför kontot har spärrat
 	<!-- Navigation sidebar menu -->
 
 	<!-- Used by editor in submission review / editing -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[Namnet länkar till granskarens profil.<br />
 Granskning sker på en skala från 1 till 5 där 5 är högsta poäng (utmärkt).<br />
 Veckor avser den genomsnittliga tiden det tar att granska ett manus.<br />
 Senaste avser datum för den senast accepterade granskningen.<br />
@@ -576,7 +575,6 @@ Aktiva visar antalet granskningar som är förfrågade eller under arbete.]]></m
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">Fil till Manusredaktören</message>
 	<message key="copyeditor.article.copyeditorFile">Manusredaktörens fil</message>
-	<message key="copyeditor.article.uploadedFile">Uppladdad fil</message>
 	<message key="copyeditor.article.copyeditorFinalFile">Manusredaktörens fil</message>
 
 	<!-- Proofreader -->

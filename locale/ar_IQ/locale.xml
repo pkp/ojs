@@ -478,7 +478,6 @@
 	<!-- Navigation sidebar menu -->
 
 	<!-- Used by editor in submission review / editing -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[الاسم يرتبط بالملف التعريفي للمحكم.<br />
 التقييم من 5 نقط (ممتاز).<br />
 عدد الأسابيع يشير على معدل فترة إكمال التحكيم.<br />
 الأخير هو تاريخ قبول التحكيم الأخير.<br />
@@ -576,7 +575,6 @@
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">الملف لتدقيقه</message>
 	<message key="copyeditor.article.copyeditorFile">ملف المدقق</message>
-	<message key="copyeditor.article.uploadedFile">الملف المرفوع</message>
 	<message key="copyeditor.article.copyeditorFinalFile">ملف المدقق</message>
 
 	<!-- Proofreader -->

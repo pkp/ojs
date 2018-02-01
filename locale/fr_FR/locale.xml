@@ -289,7 +289,6 @@ Prendre note que si votre administrateur de site a déjà inscrit ce site auprè
 	Cette tâche doit être effectuée par un administrateur de site.]]></message>
 
 	<!-- Used by editor in submission review / editing -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[Nom des liens vers le profil du rapporteur.<br />
 Notation est sur 5 (Excellent).<br />
 Semaines réfèrent au temps moyen nécessaire pour compléter une évaluation.<br />
 Dernière est la date de la plus récente évaluation acceptée.<br />
@@ -373,7 +372,6 @@ Active indique combien d'évaluations sont présentement considérées ou en cou
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">Fichier à réviser</message>
 	<message key="copyeditor.article.copyeditorFile">Fichier du réviseur</message>
-	<message key="copyeditor.article.uploadedFile">Fichier transféré</message>
 	<message key="copyeditor.article.copyeditorFinalFile">Fichier du réviseur</message>
 
 	<!-- Proofreader -->

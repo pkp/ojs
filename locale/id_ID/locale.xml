@@ -478,7 +478,6 @@ Anda dapat memberi alasan penonaktifannya kepada pengguna.</message>
 	<!-- Navigation sidebar menu -->
 
 	<!-- Used by editor in submission review / editing -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[Tautan nama ke profil Reviewer. <br />
 Nilai tertinggi adalah 5 (Bagus sekali).<br />
 Minggu menunjukkan waktu rata-rata untuk menyelesaikan review.<br />
 Yang terbaru adalah tanggal review paling baru yang diterima.<br />
@@ -576,7 +575,6 @@ Aktif berarti berapa jumlah review yang sedang dipertimbangkan atau sedang berla
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">File untuk C/E</message>
 	<message key="copyeditor.article.copyeditorFile">File Copyeditor</message>
-	<message key="copyeditor.article.uploadedFile">File yang diunggah</message>
 	<message key="copyeditor.article.copyeditorFinalFile">File Copyeditor</message>
 
 	<!-- Proofreader -->

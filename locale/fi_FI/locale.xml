@@ -475,7 +475,6 @@ Tämän tehtävän voi suorittaa vain sivuston ylläpitäjä.
 	<!-- Navigation sidebar menu -->
 
 	<!-- Used by editor in submission review / editing -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[Nimi linkittyy arvioijan profiiliin.<br/>
 Arvostelu on asteikolla 1-5 (5 = erinomainen).<br/>
 ”Viikot” viittaa keskimääräisen aikaan, jonka kuluessa arviointi tulee suorittaa.<br/>
 ”Viimeisin” kertoo viimeisimmän hyväksytyn arvioinnin päivämäärän.<br/>
@@ -572,7 +571,6 @@ Arvostelu on asteikolla 1-5 (5 = erinomainen).<br/>
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">Teknisesti toimitettava tiedosto</message>
 	<message key="copyeditor.article.copyeditorFile">Teknisen toimittajan tiedosto</message>
-	<message key="copyeditor.article.uploadedFile">Ladattu tiedosto</message>
 	<message key="copyeditor.article.copyeditorFinalFile">Teknisen toimittajan tiedosto</message>
 
 	<!-- Proofreader -->

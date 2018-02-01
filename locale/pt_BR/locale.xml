@@ -352,7 +352,6 @@ Escolha um modelo para administrar os aspectos do processo editorial. (Para desi
 	<!-- Navigation sidebar menu -->
 
 	<!-- Used by editor in submission review / editing -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[O nome é o atalho para o perfil do avaliador.<br />
 Classificação vai até 5 (Excelente).<br />
 Dias refere-se ao tempo médio para concluir uma avaliação.<br />
 Última é a data da última aceitação de avaliação,<br />
@@ -440,7 +439,6 @@ Ativo indica avaliação em consideração ou andamento.]]></message>
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">Arquivo para Edição de Texto (C/E)</message>
 	<message key="copyeditor.article.copyeditorFile">Versão do Editor de Texto</message>
-	<message key="copyeditor.article.uploadedFile">Documento transferido</message>
 	<message key="copyeditor.article.copyeditorFinalFile">Versão do Editor de Texto</message>
 
 	<!-- Proofreader -->

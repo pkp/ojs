@@ -480,7 +480,6 @@ You may optionally provide the user with a reason for disabling their account.</
 	<!-- Navigation sidebar menu -->
 
 	<!-- Used by editor in submission review / editing -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[Name links to reviewer's profile.<br/>
 Ratings is out of 5 (Excellent).<br/>
 Weeks refers to average period of time to complete a review.<br/>
 Latest is date of most recently accepted review.<br/>
@@ -578,7 +577,6 @@ Active is how many reviews are currently being considered or underway.]]></messa
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">File To C/E</message>
 	<message key="copyeditor.article.copyeditorFile">Copyeditor File</message>
-	<message key="copyeditor.article.uploadedFile">Uploaded File</message>
 	<message key="copyeditor.article.copyeditorFinalFile">Copyeditor File</message>
 
 	<!-- Proofreader -->

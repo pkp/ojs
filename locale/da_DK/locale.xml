@@ -343,7 +343,6 @@ Du kan vælge at give brugeren en begrundelse for deaktiveringen af kontoen.</me
 </ol>]]></message>
 
 	<!-- Used by editor in submission review / editing -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[Navngiv links til bedømmers profil.<br />
 Klassificeringerne går fra 5 (Fremragende) og nedefter.<br />
 Uger refererer til den gennemsnitlige tid, det tager at foretage en bedømmelse.<br />
 Senest er datoen for den seneste accepterede bedømmelse.<br />
@@ -432,7 +431,6 @@ Aktiv er antallet af bedømmelser, der i øjeblikket overvejes eller er forestå
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">Fil til C/E</message>
 	<message key="copyeditor.article.copyeditorFile">Manuskriptredaktørfil</message>
-	<message key="copyeditor.article.uploadedFile">Overført fil</message>
 	<message key="copyeditor.article.copyeditorFinalFile">Manuskriptredaktørfil</message>
 
 	<!-- Proofreader -->

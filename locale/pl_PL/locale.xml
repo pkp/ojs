@@ -470,7 +470,6 @@ Autorzy publikujący w czasopiśmie zgadzają się na następujące zasady:
 	<!-- Navigation sidebar menu -->
 	
 	<!-- Used by editor in submission review / editing -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[Nazwa użytkownika jest linkiem do profilu recenzenta.<br/>
 Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br/>
 "Tygodnie" oznaczają przeciętny czas na ukończenie recenzji.<br/>
 "Ostatnie" oznacza datę ostatnio zaakceptowanej recenzji.<br/>
@@ -566,7 +565,6 @@ Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br/>
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">Plik dla korektora</message>
 	<message key="copyeditor.article.copyeditorFile">Plik składacza</message>
-	<message key="copyeditor.article.uploadedFile">Wyślij plik</message>
 	<message key="copyeditor.article.copyeditorFinalFile">Plik składacza - wersja ukończona</message>
 
 	<!-- Proofreader -->
