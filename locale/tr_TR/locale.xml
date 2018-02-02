@@ -466,10 +466,6 @@ Editöryel süreçte bu basamakların nasıl işleyeceği konusunda bir model se
 	</ol>]]></message>
 
 	<!-- Used by editor in submission review / editing -->
-Puanlar 5 (çok iyi) üzerindendir.<br />
-Günler, bir değerlendirmeyi ortalama kaç günde tamamladığını gösterir.<br />
-En Son, son değerlendirmeyi kabul ettiği tarihi gösterir,<br />
-Artı (+) işareti ile hakemin şu anda değerlendirdiği yazılar belirtilmiştir.]]></message>
 
 	<!-- Section Editor -->
 	<message key="sectionEditor.activeEditorialAssignments">Aktif Editöryal Atamalar</message>

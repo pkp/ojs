@@ -269,10 +269,6 @@ Escolha um modelo para administrar os aspectos do processo editorial. (Para desi
 	Esta tarefa deve ser executada por um administrador do portal.]]></message>
 
 	<!-- Used by editor in submission review / editing -->
-Classificação vai até 5 (Excelente).<br />
-Dias refere-se ao tempo médio para concluir uma revisão.<br />
-Última é a data da última aceitação de revisão,<br />
-Activo indica revisão em consideração ou em progresso.]]></message>
 
 	<!-- Section Editor -->
 	<message key="sectionEditor.activeEditorialAssignments">Tarefas Editoriais Activas</message>
