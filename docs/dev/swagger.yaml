@@ -681,7 +681,7 @@ paths:
           schema:
             type: object
             properties:
-              maxItems:
+              itemsMax:
                 type: integer
               items:
                 type: array
@@ -990,7 +990,7 @@ paths:
           schema:
             type: object
             properties:
-              maxItems:
+              itemsMax:
                 type: integer
               items:
                 type: array
@@ -1104,7 +1104,7 @@ paths:
           schema:
             type: object
             properties:
-              maxItems:
+              itemsMax:
                 type: integer
               items:
                 type: array
