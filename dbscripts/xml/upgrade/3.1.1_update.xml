@@ -38,4 +38,8 @@
 		<query>UPDATE journal_settings SET setting_name = 'subjectsEnabledWorkflow' WHERE setting_name = 'subjectEnabledWorkflow'</query>
 		<query>UPDATE journal_settings SET setting_name = 'subjectsRequired' WHERE setting_name = 'subjectRequired'</query>
 	</sql>
+	<!-- pkp/pkp-lib#2894 Set 0 review ratings to NULL -->
+	<sql>
+		<query>UPDATE review_assignments ra SET ra.quality = NULL WHERE ra.quality = 0</query>
+	</sql>
 </data>
