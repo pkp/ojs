@@ -62,9 +62,17 @@
 
 // Initialize global environment
 define('INDEX_FILE_LOCATION', __FILE__);
+require_once('./sentry/lib/Raven/Autoloader.php');
+Raven_Autoloader::register();
+
+$client = new Raven_Client('https://ba1d67d3637e4585afa51ad7451e492b:532a3f4205f244ccb9107ebceba0dac5@sentry.io/167095');
+
+$error_handler = new Raven_ErrorHandler($client);
+$error_handler->registerExceptionHandler();
+$error_handler->registerErrorHandler();
+$error_handler->registerShutdownFunction();
+
 $application = require('./lib/pkp/includes/bootstrap.inc.php');
 
 // Serve the request
 $application->execute();
-
-?>
