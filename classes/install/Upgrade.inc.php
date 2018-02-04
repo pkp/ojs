@@ -2595,6 +2595,8 @@ class Upgrade extends Installer {
 					$retNMIId = $navigationMenuItemDao->portStaticPage($staticPage);
 					if ($retNMIId) {
 						$staticPagesDao->deleteById($staticPage->getId());
+					} else {
+						error_log('WARNING: The StaticPage "' . $staticPage->getLocalizedTitle() . '" uses a path (' . $staticPage->getPath() . ') that conflicts with an existing Custom Navigation Menu Item path. Skipping this StaticPage.');
 					}
 				}
 			}
