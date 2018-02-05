@@ -83,6 +83,7 @@
 
 	<!-- Install default NavigationMenus -->
 	<code function="installDefaultNavigationMenus" />
+	<code function="migrateStaticPagesToNavigationMenuItems" />
 
 	<upgrade minversion="2.4.0.0" maxversion="2.4.9.9">
 		<code function="migrateCounterPluginUsageStatistics" condition="return $installer->tableExists('counter_monthly_log');" />
