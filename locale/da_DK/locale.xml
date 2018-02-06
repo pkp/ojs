@@ -342,11 +342,6 @@ Du kan vælge at give brugeren en begrundelse for deaktiveringen af kontoen.</me
 	<li>"Forfalden" udfyldes automatisk, når bedømmeren accepterer bedømmelsesforespørgslen. I feltet vises antallet af uger til bedømmerens forfaldsdato eller (-) det antal uger, tidsfristen er blevet overskredet med.</li>
 </ol>]]></message>
 
-	<!-- Used by editor in submission review / editing -->
-Klassificeringerne går fra 5 (Fremragende) og nedefter.<br />
-Uger refererer til den gennemsnitlige tid, det tager at foretage en bedømmelse.<br />
-Senest er datoen for den seneste accepterede bedømmelse.<br />
-Aktiv er antallet af bedømmelser, der i øjeblikket overvejes eller er forestående.]]></message>
 
 	<!-- Section Editor -->
 	<message key="sectionEditor.activeEditorialAssignments">Aktive redaktionelle tildelinger</message>

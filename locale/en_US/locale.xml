@@ -375,7 +375,7 @@
 ]]></message>
 
 	<message key="manager.setup.clockssDescription"><![CDATA[Open Journal Systems also supports the CLOCKSS (Controlled Lots of Copies Keep Stuff Safe) system to ensure a secure and permanent archive for the journal. If your journal signed a contract with the CLOCKSS Archive, enable it here:]]></message>
-	
+
 	<message key="manager.setup.porticoDescription"><![CDATA[Portico is a not-for-profit service committed to the preservation of digital publications, including e-journals, e-books, and digitized historical collections. If your journal signed a contract with Portico, enable it here:]]></message>
 
 	<!-- Setup Step 3 -->
@@ -479,11 +479,6 @@ You may optionally provide the user with a reason for disabling their account.</
 
 	<!-- Navigation sidebar menu -->
 
-	<!-- Used by editor in submission review / editing -->
-Ratings is out of 5 (Excellent).<br/>
-Weeks refers to average period of time to complete a review.<br/>
-Latest is date of most recently accepted review.<br/>
-Active is how many reviews are currently being considered or underway.]]></message>
 
 
 

@@ -288,12 +288,6 @@ Prendre note que si votre administrateur de site a déjà inscrit ce site auprè
 		</ul>
 	Cette tâche doit être effectuée par un administrateur de site.]]></message>
 
-	<!-- Used by editor in submission review / editing -->
-Notation est sur 5 (Excellent).<br />
-Semaines réfèrent au temps moyen nécessaire pour compléter une évaluation.<br />
-Dernière est la date de la plus récente évaluation acceptée.<br />
-Active indique combien d'évaluations sont présentement considérées ou en cours.]]></message>
-
 	<!-- Section Editor -->
 	<message key="sectionEditor.activeEditorialAssignments">Travail éditorial en cours</message>
 	<message key="sectionEditor.completedEditorialAssignments">Travail éditorial terminé</message>
