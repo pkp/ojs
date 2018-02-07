@@ -456,12 +456,6 @@ Volitelně můžete uživateli poskytnout zdůvodnění, proč byl jeho účet z
 
 	<!-- Navigation sidebar menu -->
 
-	<!-- Used by editor in submission review / editing -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[Jméno odkazuje k profilu recenzenta.<br />
-Hodnocení je až 5 (Výborný).<br />
-Týdny udávají průměrnou dobu potřebnou pro zhotovení recenze.<br />
-Poslední udává datum poslední akceptované recenze.<br />
-Aktivní udává kolik recenzí je právě zvažováno nebo zpracováváno.]]></message>
 
 
 
@@ -552,7 +546,6 @@ Aktivní udává kolik recenzí je právě zvažováno nebo zpracováváno.]]></
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">Soubor pro redaktora</message>
 	<message key="copyeditor.article.copyeditorFile">Soubor od redaktora</message>
-	<message key="copyeditor.article.uploadedFile">Nahraný soubor</message>
 	<message key="copyeditor.article.copyeditorFinalFile">Soubor od redaktora</message>
 
 	<!-- Proofreader -->

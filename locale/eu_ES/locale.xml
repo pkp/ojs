@@ -427,12 +427,6 @@ Nahi baduzu, kontua zergatik desgaitu diozun azal diezaiokezu erabiltzaileari.</
 
 	<!-- Navigation sidebar menu -->
 
-	<!-- Used by editor in submission review / editing -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[Izena ebaluatzailearen profilerako esteka da.<br />
-Balorazio-eskala: 1-5 (Bikaina).<br />
-Asteak: ebaluazioa egiteko batez besteko denbora. <br />
-Azkena: azkeneko onartutako ebaluazioaren data.<br />
-Aktibo: une honetan kontsideratzen edo egiten ari diren ebaluazioen kopurua.]]></message>
 
 
 
@@ -524,7 +518,6 @@ itsatsi ebaluazioko oharrak hemen</message>
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">Zuzentzeko fitxategia</message>
 	<message key="copyeditor.article.copyeditorFile">Zuzentzailearen fitxategia</message>
-	<message key="copyeditor.article.uploadedFile">Kargatutako fitxategia</message>
 	<message key="copyeditor.article.copyeditorFinalFile">Zuzentzailearen fitxategia</message>
 
 	<!-- Proofreader -->

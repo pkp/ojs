@@ -322,12 +322,6 @@ Opcionalno možete proslijediti korisniku razlog zašto ste mu onemogućili rač
 	<!-- Create Issue / Issue Data -->
 	<!-- Live Issues -->
 	<!-- Navigation sidebar menu -->
-	<!-- Used by editor in submission review / editing -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[Poveznica na imenu vodi do recenzentova profila.<br />
-Ocjene su do 5 (Odličan).<br />
-Tjedni pokazuju prosječno vrijeme koje je recenzentu trebalo za završetak recenzije.<br />
-Zadnje prikazuje datum posljednje recenzije pridružene recenzentu.<br />
-Aktivnih prikazuje na koliko je recenzija recenzent trenutno angažiran.]]></message>
 
 
 
@@ -415,7 +409,6 @@ Aktivnih prikazuje na koliko je recenzija recenzent trenutno angažiran.]]></mes
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">Datoteka za lektoriranje</message>
 	<message key="copyeditor.article.copyeditorFile">Datoteka lektora</message>
-	<message key="copyeditor.article.uploadedFile">Postavljena datoteka</message>
 	<message key="copyeditor.article.copyeditorFinalFile">Datoteka lektora</message>
 
 	<!-- Proofreader -->

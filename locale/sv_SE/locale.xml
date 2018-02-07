@@ -335,7 +335,7 @@
 	<message key="search.results.orderDir.asc">Stigande</message>
 	<message key="search.results.orderDir.desc">Fallande</message>
 	<message key="search.results.similarDocuments">liknande dokument</message>
-	
+
 	<message key="admin.auth.defaultSourceDescription"><![CDATA[<p>Att använda en annan förvald valideringskälla än OJS medför att:</p>
 <ul>
 	<li>Om en användare försöker att registrera ett nytt konto på den här sidan med ett användarnamn som redan finns hos valideringskällan (men inte i OJS-databasen) så kommer registreringen bara godkännas om lösenordet överensstämmer med det aktuella användarkontot.</li>
@@ -478,11 +478,6 @@ Du kan välja att ge användaren en förklaring till varför kontot har spärrat
 	<!-- Navigation sidebar menu -->
 
 	<!-- Used by editor in submission review / editing -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[Namnet länkar till granskarens profil.<br />
-Granskning sker på en skala från 1 till 5 där 5 är högsta poäng (utmärkt).<br />
-Veckor avser den genomsnittliga tiden det tar att granska ett manus.<br />
-Senaste avser datum för den senast accepterade granskningen.<br />
-Aktiva visar antalet granskningar som är förfrågade eller under arbete.]]></message>
 	
 
 
@@ -576,7 +571,6 @@ Aktiva visar antalet granskningar som är förfrågade eller under arbete.]]></m
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">Fil till Manusredaktören</message>
 	<message key="copyeditor.article.copyeditorFile">Manusredaktörens fil</message>
-	<message key="copyeditor.article.uploadedFile">Uppladdad fil</message>
 	<message key="copyeditor.article.copyeditorFinalFile">Manusredaktörens fil</message>
 
 	<!-- Proofreader -->
@@ -665,7 +659,7 @@ Aktiva visar antalet granskningar som är förfrågade eller under arbete.]]></m
 	<message key="submission.comments.forEditor">För redaktör</message>
 	<message key="submission.comments.saveAndEmailAuthor">Spara och skicka e-post till författare</message>
 	<message key="submission.comments.saveAndEmailEditor">Spara och skicka e-post till redaktör</message>
-	
+
 	<!-- Registration -->
 	<message key="user.register.selectContext">Välj en tidskrift att registrera dig hos:</message>
 	<message key="user.register.noJournals">Det finns inga tidskrifter att registrera sig hos på den här webbplatsen.</message>
@@ -718,7 +712,7 @@ Aktiva visar antalet granskningar som är förfrågade eller under arbete.]]></m
 	<message key="user.subscriptions.form.ipRangeValid">Skriv in ett giltigt IP-omfång.</message>
 	<message key="user.subscriptions.form.deleteIpRange">Ta bort</message>
 	<message key="user.subscriptions.form.addIpRange">Lägg till</message>
-	
+
 
 	<!-- Search -->
 	<message key="search.browseAuthorIndex">Bläddra i författarregister</message>
@@ -830,7 +824,7 @@ Aktiva visar antalet granskningar som är förfrågade eller under arbete.]]></m
 	<message key="payment.loginRequired.forArticle">Prenumeration eller köp av enstaka artikel krävs för att få tillgång till innehållet. Logga in på tidskriften för att verifiera prenumeration, se tidigare köp, eller för köpa enstaka artiklar.</message>
 	<message key="payment.loginRequired.forIssue">Prenumeration eller köp av enstaka nummer krävs för att få tillgång till innehållet. Logga in på tidskriften för att verifiera prenumeration, se tidigare köp, eller köpa enstaka nummer.</message>
 	<message key="payment.loginRequired.forDonation">Du måste vara inloggad för att lämna en donation.</message>
-	
+
 	<message key="payment.paid">Betalad</message>
 	<message key="payment.payNow">Betala nu</message>
 	<message key="payment.waive">Avstå</message>
@@ -1026,7 +1020,7 @@ Sök-URL:er som kräver inskickade formulärdata kan komma att visas som ogiltig
 
 
 
-	
+
 	<message key="rt.beNotifiedWhen">Få avisering när ...</message>
 
 	<message key="rt.thisJournal">Sök tidskrift</message>
@@ -1034,7 +1028,7 @@ Sök-URL:er som kräver inskickade formulärdata kan komma att visas som ogiltig
 
 	<message key="rt.context.authorTermsDescription">För material med fler än en författare, lämna samtliga namn markerade för att söka på arbeten av samma medförfattare, eller sök på en författare i taget genom att markera bara ett namn. För ytterligare information om resurserna sökningen sker i, se OM. De här resurserna är valda utifrån sin relevans och fria tillgång till hela eller delar av innehållet.</message>
 
-	
+
 
 	<!-- Notification Types -->
 	<message key="notification.mailListDescription">Skriv in din e-postadress för att få aviseringar direkt när det läggs till nytt viktigt innehåll i tidskriften.</message>
@@ -1058,7 +1052,7 @@ Sök-URL:er som kräver inskickade formulärdata kan komma att visas som ogiltig
 	<message key="notification.type.assignProductionUser">Låt en användare skapa publiceringsversioner genom att använda Lägg till-länken i Deltagarlistan.</message>
 	<message key="notification.type.awaitingRepresentations">Väntar på publiceringsversioner.</message>
 	<message key="notification.type.publicationScheduled">Det här bidraget är inlagt för publicering.</message>
-	
+
 	<!--
 	 *
 	 * MISC - Entries that do not belong in the other sections.

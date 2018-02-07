@@ -349,7 +349,6 @@
 	<!-- Live Issues -->
 	<!-- Navigation sidebar menu -->
 	<!-- Used by editor in submission review / editing -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[لینک به پروفایل داور.<br />  نمره دهی بر مبنای پنج است.<br />  منظور از هفته میانگین مدت زمانی است که یک داوری را تمام کرده است.<br />  منظور از آخرین در واقع تاریخ قبول آخرین داوری است .<br />  منظور از فعال تعداد داوری‌های جاری داور می‌باشد.]]></message>
 	<!-- Section Editor -->
 	<message key="sectionEditor.activeEditorialAssignments">موارد جاری واگذار شده از سوی سردبیر</message>
 	<message key="sectionEditor.completedEditorialAssignments">موارد کامل شده واگذار شده از سوی سردبیر</message>
@@ -432,7 +431,6 @@
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">فایل به ویراستار</message>
 	<message key="copyeditor.article.copyeditorFile">فایل ویراستار</message>
-	<message key="copyeditor.article.uploadedFile">فایل آپلود شده</message>
 	<message key="copyeditor.article.copyeditorFinalFile">فایل ویراستار</message>
 	<!-- Proofreader -->
 	<message key="proofreader.noProofreadingAssignments">هیچ بازبینی نهائی انتساب نشده است</message>

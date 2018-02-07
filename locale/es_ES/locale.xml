@@ -405,7 +405,6 @@
 	<!-- Navigation sidebar menu -->
 
 	<!-- Used by editor in submission review / editing -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[Nombre los enlaces para el perfil del revisor/a.<br /> El máximo de la Calificación es de 5 (excelente).<br /> Las Semanas indican el plazo medio de tiempo para terminar una revisión.<br /> Última, indica la fecha de la última revisión aceptada.<br /> Activa, indica cuántas revisiones se están llevando a cabo.]]></message>
 
 
 	<!-- Section Editor -->
@@ -492,7 +491,6 @@
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">Archivo para el corrector/a de originales</message>
 	<message key="copyeditor.article.copyeditorFile">Archivo del corrector/a de originales</message>
-	<message key="copyeditor.article.uploadedFile">Archivo cargado</message>
 	<message key="copyeditor.article.copyeditorFinalFile">Archivo del corrector/a de originales</message>
 
 	<!-- Proofreader -->

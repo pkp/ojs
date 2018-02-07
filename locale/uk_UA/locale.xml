@@ -484,11 +484,6 @@
 	<!-- Navigation sidebar menu -->
 
 	<!-- Used by editor in submission review / editing -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[Імена є посиланнями на профілі рецензентів.<br />
-Шкала рейтингу п'ятибальна. Оцінка 5 (Відмінно).<br />
-Кількість тижнів - це середній час, необхідний рецензенту для завершення роботи.<br />
-У полі "Остання" вказана дата прийняття останнього запиту на рецензування.<br />
-У полі "Активні" вказується кількість робіт, які зараз рецензуються користувачем.]]></message>
 
 
 	<!-- Section Editor -->
@@ -578,7 +573,6 @@
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">Файл на літературне редагування</message>
 	<message key="copyeditor.article.copyeditorFile">Файл літ. редактора</message>
-	<message key="copyeditor.article.uploadedFile">Вивантажений файл</message>
 	<message key="copyeditor.article.copyeditorFinalFile">Файл літ. редактора</message>
 
 	<!-- Proofreader -->

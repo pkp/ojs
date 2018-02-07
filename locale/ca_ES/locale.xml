@@ -409,7 +409,6 @@
 	<!-- Navigation sidebar menu -->
 
 	<!-- Used by editor in submission review / editing -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[El nom enllaça amb el perfil del revisor/a.<br /> La puntuació és sobre 5 (Excel·lent).<br /> El camp «Setmanes» indica el període de temps mitjà utilitzat per completar una revisió.<br /> El camp «Darrera» indica la data de l’última revisió acceptada.<br /> El camp «Actives» llista les revisions en curs.]]></message>
 
 
 
@@ -500,7 +499,6 @@
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">Fitxer per corregir</message>
 	<message key="copyeditor.article.copyeditorFile">Fitxer del corrector/a d'originals</message>
-	<message key="copyeditor.article.uploadedFile">Fitxer carregat</message>
 	<message key="copyeditor.article.copyeditorFinalFile">Fitxer del corrector/a d'originals</message>
 
 	<!-- Proofreader -->
