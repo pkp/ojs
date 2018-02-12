@@ -96,16 +96,12 @@ class NavigationMenuService extends \PKP\Services\PKPNavigationMenuService {
 				if ($context) {
 					$paymentManager = \Application::getPaymentManager($context);
 					$navigationMenuItem->setIsDisplayed($context->getSetting('paymentsEnabled') && $paymentManager->isConfigured());
-				} else {
-					$navigationMenuItem->setIsDisplayed(false);
 				}
 				break;
 			case NMI_TYPE_MY_SUBSCRIPTIONS:
 				if ($context) {
 					$paymentManager = \Application::getPaymentManager($context);
-					$navigationMenuItem->setIsDisplayed(\Validation::isLoggedIn() && $context->getSetting('paymentsEnabled') && $paymentManager->isConfigured());
-				} else {
-					$navigationMenuItem->setIsDisplayed(false);
+					$navigationMenuItem->setIsDisplayed(\Validation::isLoggedIn() && $context->getSetting('paymentsEnabled') && $paymentManager->isConfigured() && $context->getSetting('publishingMode') == PUBLISHING_MODE_SUBSCRIPTION);
 				}
 				break;
 		}
