@@ -41,8 +41,8 @@ class JnovakSubmissionTest extends ContentBaseTestCase {
 		$this->findSubmissionAsEditor('dbarnes', null, $title);
 		$this->sendToReview();
 		$this->waitForElementPresent('//a[contains(text(), \'Review\')]/*[contains(text(), \'Initiated\')]');
-		$this->assignReviewer('amccrae', 'Aisla McCrae');
-		$this->assignReviewer('agallego', 'Adela Gallego');
+		$this->assignReviewer('Aisla McCrae');
+		$this->assignReviewer('Adela Gallego');
 		$this->logOut();
 		$this->performReview('amccrae', null, $title, 'Revisions Required');
 		$this->performReview('agallego', null, $title, 'Resubmit for Review');
