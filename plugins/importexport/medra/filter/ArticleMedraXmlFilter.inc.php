@@ -363,7 +363,7 @@ class ArticleMedraXmlFilter extends O4DOIXmlFilter {
 			$contributorNode->appendChild($affiliationNode);
 		}
 		// Biographical note
-		$bioNote = $this->getPrimaryTranslation($author->getBiography(null), $objectLocalePrecedence);
+		$bioNote = $this->getPrimaryTranslation($author->getBiography(), $objectLocalePrecedence);
 		if (!empty($bioNote)) {
 			$contributorNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'BiographicalNote', htmlspecialchars(PKPString::html2text($bioNote), ENT_COMPAT, 'UTF-8')));
 		}
