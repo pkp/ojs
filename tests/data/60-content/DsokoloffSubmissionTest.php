@@ -42,9 +42,9 @@ class DsokoloffSubmissionTest extends ContentBaseTestCase {
 		$this->findSubmissionAsEditor('dbarnes', null, $title);
 		$this->sendToReview();
 		$this->waitForElementPresent('//a[contains(text(), \'Review\')]/*[contains(text(), \'Initiated\')]');
-		$this->assignReviewer('phudson', 'Paul Hudson');
-		$this->assignReviewer('amccrae', 'Aisla McCrae');
-		$this->assignReviewer('agallego', 'Adela Gallego');
+		$this->assignReviewer('Paul Hudson');
+		$this->assignReviewer('Aisla McCrae');
+		$this->assignReviewer('Adela Gallego');
 		$this->logOut();
 		$this->performReview('phudson', null, $title, 'Decline Submission');
 	}
