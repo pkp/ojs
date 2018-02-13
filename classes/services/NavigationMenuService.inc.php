@@ -54,11 +54,12 @@ class NavigationMenuService extends \PKP\Services\PKPNavigationMenuService {
 			NMI_TYPE_SUBSCRIPTIONS => array(
 				'title' => __('navigation.subscriptions'),
 				'description' => __('manager.navigationMenus.subscriptions.description'),
+				'conditionalWarning' => __('manager.navigationMenus.subscriptions.conditionalWarning'),
 			),
 			NMI_TYPE_MY_SUBSCRIPTIONS => array(
 				'title' => __('user.subscriptions.mySubscriptions'),
 				'description' => __('manager.navigationMenus.mySubscriptions.description'),
-				'conditionalWarning' => __('manager.navigationMenus.loggedOut.conditionalWarning'),
+				'conditionalWarning' => __('manager.navigationMenus.mySubscriptions.conditionalWarning'),
 			),
 		);
 
@@ -92,8 +93,16 @@ class NavigationMenuService extends \PKP\Services\PKPNavigationMenuService {
 				$navigationMenuItem->setIsDisplayed($context && $context->getSetting('publishingMode') != PUBLISHING_MODE_NONE);
 				break;
 			case NMI_TYPE_SUBSCRIPTIONS:
+				if ($context) {
+					$paymentManager = \Application::getPaymentManager($context);
+					$navigationMenuItem->setIsDisplayed($context->getSetting('paymentsEnabled') && $paymentManager->isConfigured());
+				}
+				break;
 			case NMI_TYPE_MY_SUBSCRIPTIONS:
-				$navigationMenuItem->setIsDisplayed(\Validation::isLoggedIn());
+				if ($context) {
+					$paymentManager = \Application::getPaymentManager($context);
+					$navigationMenuItem->setIsDisplayed(\Validation::isLoggedIn() && $context->getSetting('paymentsEnabled') && $paymentManager->isConfigured() && $context->getSetting('publishingMode') == PUBLISHING_MODE_SUBSCRIPTION);
+				}
 				break;
 		}
 

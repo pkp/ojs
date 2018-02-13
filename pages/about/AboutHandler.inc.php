@@ -26,6 +26,14 @@ class AboutHandler extends AboutContextHandler {
 		$this->setupTemplate($request);
 		$journal = $request->getJournal();
 		$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
+
+		if ($journal) {
+			$paymentManager = \Application::getPaymentManager($journal);
+			if (!($journal->getSetting('paymentsEnabled') && $paymentManager->isConfigured())) {
+				$request->redirect(null, 'index');
+			}
+		}
+
 		$templateMgr->assign(array(
 			'subscriptionAdditionalInformation' => $journal->getLocalizedSetting('subscriptionAdditionalInformation'),
 			'subscriptionMailingAddress' => $journal->getSetting('subscriptionMailingAddress'),
