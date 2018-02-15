@@ -522,8 +522,6 @@ definitions:
         type: integer
       authString:
         type: string
-      gender:
-        type: string
       phone:
         type: string
       mailingAddress:

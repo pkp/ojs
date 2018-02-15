@@ -33,14 +33,6 @@
 	<td class="value"><input type="text" name="userInitials" id="userInitials" value="{$userInitials|escape}" size="5" maxlength="5" class="textField" />&nbsp;&nbsp;{translate key="user.initialsExample"}</td>
 </tr>
 <tr>
-	<td class="label">{fieldLabel suppressId="true" name="userGender" key="user.gender"}</td>
-	<td class="value">
-		<select name="userGender" id="userGender" size="1" class="selectMenu">
-			{html_options_translate options=$genderOptions selected=$userGender}
-		</select>
-	</td>
-</tr>
-<tr>
 	<td class="label">{fieldLabel name="userAffiliation" key="user.affiliation"}</td>
 	<td class="value">
 		<textarea name="userAffiliation[{$formLocale|escape}]" id="userAffiliation" rows="5" cols="40" class="textArea">{$userAffiliation[$formLocale]|escape}</textarea><br/>
