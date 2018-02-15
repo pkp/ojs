@@ -117,7 +117,7 @@ class SubmissionHandler extends APIHandler {
 		}
 
 		$data = array(
-			'maxItems' => $submissionService->getSubmissionsMaxCount($context->getId(), $params),
+			'itemsMax' => $submissionService->getSubmissionsMaxCount($context->getId(), $params),
 			'items' => $items,
 		);
 
