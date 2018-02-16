@@ -21,10 +21,10 @@ class URNPubIdPlugin extends PubIdPlugin {
 	/**
 	 * @copydoc Plugin::register()
 	 */
-	public function register($category, $path) {
-		$success = parent::register($category, $path);
+	public function register($category, $path, $mainContextId = null) {
+		$success = parent::register($category, $path, $mainContextId);
 		if (!Config::getVar('general', 'installed') || defined('RUNNING_UPGRADE')) return $success;
-		if ($success && $this->getEnabled()) {
+		if ($success && $this->getEnabled($mainContextId)) {
 			$this->_registerTemplateResource();
 		}
 		return $success;
