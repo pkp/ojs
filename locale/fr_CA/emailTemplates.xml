@@ -793,7 +793,7 @@ Merci de considérer cette requête.<br />
 	</email_text>
 	<email_text key="REVISED_VERSION_NOTIFY">
 		<subject>Version révisée téléversée</subject>
-		<body><![CDATA[*{$editorialContactName}:<br />
+		<body><![CDATA[Rédacteur,<br />
 <br />
 Une version révisée de &quot;{$submissionTitle}&quot; a été téléversée par {$authorName}.<br />
 <br />

@@ -846,7 +846,7 @@ Lektor/in, {$contextName}<br />
 	</email_text>
 <email_text key="REVISED_VERSION_NOTIFY">
         <subject>Überarbeitete Version hochgeladen</subject>
-        <body><![CDATA[{$editorialContactName},<br />
+        <body><![CDATA[Sehr geehrte Redaktion,<br />
 <br />
 eine überarbeitete Fassung von &quot;{$submissionTitle}&quot; ist von der/dem Autor/in {$authorName} hochgeladen worden.<br />
 <br />

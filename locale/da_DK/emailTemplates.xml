@@ -872,7 +872,7 @@ Tak for din overvejelse af denne forespørgsel.<br />
 	</email_text>
 	<email_text key="REVISED_VERSION_NOTIFY">
 		<subject>Revideret udgave uploadet</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
+		<body><![CDATA[Redaktører:<br />
 <br />
 En revideret udgave af &quot;{$submissionTitle}&quot; er blevet uploadet af forfatter {$authorName}.<br />
 <br />

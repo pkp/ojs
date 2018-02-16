@@ -778,7 +778,7 @@ Copy-Editor, {$contextName}<br />
 	</email_text>
 	<email_text key="REVISED_VERSION_NOTIFY">
 		<subject>Versi Revisi telah Diunggah</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
+		<body><![CDATA[Editor:<br />
 <br />
 Versi revisi dari &quot;{$submissionTitle}&quot; telah diunggah oleh penulis {$authorName}.<br />
 <br />
