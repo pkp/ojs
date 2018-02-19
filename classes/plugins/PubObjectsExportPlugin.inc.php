@@ -50,8 +50,8 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 	/**
 	 * @copydoc Plugin::register()
 	 */
-	function register($category, $path) {
-		$success = parent::register($category, $path);
+	function register($category, $path, $mainContextId = null) {
+		$success = parent::register($category, $path, $mainContextId);
 		if ($success) {
 			$this->addLocaleData();
 			HookRegistry::register('AcronPlugin::parseCronTab', array($this, 'callbackParseCronTab'));

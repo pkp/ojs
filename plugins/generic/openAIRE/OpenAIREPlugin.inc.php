@@ -17,16 +17,12 @@ import('lib.pkp.classes.plugins.GenericPlugin');
 
 
 class OpenAIREPlugin extends GenericPlugin {
-
 	/**
-	 * Called as a plugin is registered to the registry
-	 * @param $category String Name of category plugin was registered to
-	 * @return boolean True if plugin initialized successfully; if false,
-	 * 	the plugin will not be registered.
+	 * @copydoc Plugin::register()
 	 */
-	function register($category, $path) {
-		$success = parent::register($category, $path);
-		if ($success && $this->getEnabled()) {
+	function register($category, $path, $mainContextId = null) {
+		$success = parent::register($category, $path, $mainContextId);
+		if ($success && $this->getEnabled($mainContextId)) {
 			$this->import('OpenAIREDAO');
 			$openAIREDao = new OpenAIREDAO();
 			DAORegistry::registerDAO('OpenAIREDAO', $openAIREDao);

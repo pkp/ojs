@@ -17,15 +17,12 @@ import('lib.pkp.classes.plugins.GenericPlugin');
 
 class ExternalFeedPlugin extends GenericPlugin {
 	/**
-	 * Called as a plugin is registered to the registry
-	 * @param $category String Name of category plugin was registered to
-	 * @return boolean True iff plugin initialized successfully; if false,
-	 * 	the plugin will not be registered.
+	 * @copydoc Plugin::register()
 	 */
-	function register($category, $path) {
-		$success = parent::register($category, $path);
+	function register($category, $path, $mainContextId = null) {
+		$success = parent::register($category, $path, $mainContextId);
 
-		if ($success && $this->getEnabled()) {
+		if ($success && $this->getEnabled($mainContextId)) {
 			$this->import('ExternalFeedDAO');
 
 			$externalFeedDao = new ExternalFeedDAO($this->getName());

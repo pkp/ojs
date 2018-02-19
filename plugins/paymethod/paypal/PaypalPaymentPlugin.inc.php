@@ -40,10 +40,10 @@ class PaypalPaymentPlugin extends PaymethodPlugin {
 	}
 
 	/**
-	 * @see Plugin::register
+	 * @copydoc Plugin::register()
 	 */
-	function register($category, $path) {
-		if (parent::register($category, $path)) {
+	function register($category, $path, $mainContextId = null) {
+		if (parent::register($category, $path, $mainContextId)) {
 			$this->addLocaleData();
 			return true;
 		}

@@ -16,9 +16,12 @@
 import('lib.pkp.classes.plugins.GenericPlugin');
 
 class AnnouncementFeedPlugin extends GenericPlugin {
-	function register($category, $path) {
-		if (parent::register($category, $path)) {
-			if ($this->getEnabled()) {
+	/**
+	 * @copydoc Plugin::register()
+	 */
+	function register($category, $path, $mainContextId = null) {
+		if (parent::register($category, $path, $mainContextId)) {
+			if ($this->getEnabled($mainContextId)) {
 				HookRegistry::register('TemplateManager::display',array($this, 'callbackAddLinks'));
 				HookRegistry::register('PluginRegistry::loadCategory', array($this, 'callbackLoadCategory'));
 				$this->_registerTemplateResource();

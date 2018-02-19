@@ -39,12 +39,12 @@ class ManualPaymentPlugin extends PaymethodPlugin {
 	}
 
 	/**
-	 * @copydoc Plugin::register
+	 * @copydoc Plugin::register()
 	 */
-	function register($category, $path) {
-		if (parent::register($category, $path)) {
+	function register($category, $path, $mainContextId = null) {
+		if (parent::register($category, $path, $mainContextId)) {
 			$this->addLocaleData();
-			if ($this->getEnabled()) {
+			if ($this->getEnabled($mainContextId)) {
 				$this->_registerTemplateResource();
 			}
 			return true;

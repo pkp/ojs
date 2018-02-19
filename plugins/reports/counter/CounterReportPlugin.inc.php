@@ -23,10 +23,10 @@ import('plugins.reports.counter.classes.CounterReport');
 class CounterReportPlugin extends ReportPlugin {
 
 	/**
-	 * @see PKPPlugin::register($category, $path)
+	 * @copydoc Plugin::register()
 	 */
-	function register($category, $path) {
-		$success = parent::register($category, $path);
+	function register($category, $path, $mainContextId = null) {
+		$success = parent::register($category, $path, $mainContextId);
 		if($success) {
 			$this->addLocaleData();
 		}
