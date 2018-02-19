@@ -788,7 +788,7 @@ Manusredaktör, {$contextName}<br />
 	</email_text>
 	<email_text key="REVISED_VERSION_NOTIFY">
 		<subject>Reviderad version uppladdad</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
+		<body><![CDATA[Redaktörer:<br />
 <br />
 En reviderad version av &quot;{$submissionTitle}&quot; har laddats upp av författaren, {$authorName}.<br />
 <br />

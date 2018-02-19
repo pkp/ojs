@@ -788,7 +788,7 @@
 	</email_text>
 	<email_text key="REVISED_VERSION_NOTIFY">
 		<subject>تم رفع نسخة منقحة</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
+		<body><![CDATA[أعزائي المحررون:<br />
 <br />
 لقد تم رفع نسخة منقحة من المؤلَّف الموسوم &quot;{$submissionTitle}&quot; من قبل المؤلف {$authorName}.<br />
 <br />

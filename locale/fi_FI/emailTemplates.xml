@@ -810,7 +810,7 @@ Tekninen toimittaja, {$contextName}<br />
 	</email_text>
 	<email_text key="REVISED_VERSION_NOTIFY">
 		<subject>Korjattu versio on ladattu</subject>
-		<body><![CDATA[{$editorialContactName},<br />
+		<body><![CDATA[Hyvät toimittajat,<br />
 <br />
 {$authorName} on ladannut käsikirjoituksen &quot;{$submissionTitle}&quot; korjatun version.<br />
 <br />

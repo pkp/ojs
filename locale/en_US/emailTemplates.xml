@@ -788,7 +788,7 @@ Copy-Editor, {$contextName}<br />
 	</email_text>
 	<email_text key="REVISED_VERSION_NOTIFY">
 		<subject>Revised Version Uploaded</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
+		<body><![CDATA[Editors:<br />
 <br />
 A revised version of &quot;{$submissionTitle}&quot; has been uploaded by the author {$authorName}.<br />
 <br />

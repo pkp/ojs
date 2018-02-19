@@ -789,7 +789,7 @@ URL подписки: {$subscriptionUrl}<br />
 	</email_text>
 	<email_text key="REVISED_VERSION_NOTIFY">
 		<subject>Загружена исправленная версия</subject>
-		<body><![CDATA[Здравствуйте, {$editorialContactName}!<br />
+		<body><![CDATA[Уважаемые редакторы!<br />
 <br />
 Исправленная версия материала «{$submissionTitle}» была загружена на сайт (автор — {$authorName}).<br />
 <br />

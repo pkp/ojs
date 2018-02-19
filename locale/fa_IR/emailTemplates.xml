@@ -1049,7 +1049,7 @@ Subscription Type:<br />
 	</email_text>
 	<email_text key="REVISED_VERSION_NOTIFY">
 		<subject>آپلود نسخه اصلاح شده</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
+		<body><![CDATA[دبیر محترم:<br />
 <br />
 نسخه اصلاح شده مقاله &quot;{$submissionTitle}&quot; توسط {$authorName} در سامانه آپلود شد..<br />
 <br />

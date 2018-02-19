@@ -947,7 +947,7 @@ Gracias por considerar esta solicitud.<br />
 	</email_text>
 	<email_text key="REVISED_VERSION_NOTIFY">
 		<subject>Versión revisada cargada</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
+		<body><![CDATA[Editores/as:<br />
 <br />
 El autor {$authorName} ha cargado un versión revisada de &quot;{$submissionTitle}&quot;.<br />
 <br />

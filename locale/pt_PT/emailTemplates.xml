@@ -1149,7 +1149,7 @@ Agradecemos a resposta a este pedido.<br />
 	</email_text>
 	<email_text key="REVISED_VERSION_NOTIFY">
 		<subject>Versão revista enviada</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
+		<body><![CDATA[Cara(o) Editor:<br />
 <br />
 A versão revista do &quot;{$submissionTitle}&quot; foi enviada pelo autor {$authorName}.<br />
 <br />
