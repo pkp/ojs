@@ -228,4 +228,6 @@
 	<message key="editor.submission.editorial.finalDraftDescription"><![CDATA[Les versions finales sur cette liste sont transformées par un Réviseur en versions révisées, téléversées dans <span class = "pkp_help_title">Révision</ span>.]]></message>
 	<message key="editor.submission.proof.manageProofFilesDescription">Tous les fichiers qui ont déjà été téléversés à n'importe quelle étape de soumission peuvent être ajoutés à la liste de vérification des épreuves en cochant la case "Inclure" ci-dessous et en cliquant sur "Rechercher". Tous les fichiers disponibles seront répertoriés et pourront être sélectionnés pour inclusion.</message>
 	<message key="editor.publicIdentificationExistsForTheSameType">Le public identifié comme '{$publicIdentifier}' existe déjà pour un autre objet de même type. Veuillez indiquer un public unique pour l'objet de même type à l'intérieur de votre revue.</message>
+	<message key="editor.issues.confirmSetCurrentIssue">Êtes-vous certain de vouloir désigner ce numéro comme numéro courant?</message>
+	<message key="grid.action.setCurrentIssue">Désigner le numéro courant</message>
 </locale>
