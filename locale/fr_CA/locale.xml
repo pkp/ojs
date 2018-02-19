@@ -162,7 +162,7 @@
 
 	<!-- Rôle -->
 	<message key="user.role.manager">Directeur de la revue</message>
-	<message key="user.role.subEditor">Rédacteur de rubrique</message>
+	<message key="user.role.sectionEditor">Rédacteur de rubrique</message>
 	<message key="user.role.subscriptionManager">Responsable des abonnements</message>
 	<message key="user.role.managers">Directeurs de revue</message>
 	<message key="user.role.subscriptionManagers">Responsables des abonnements</message>
@@ -497,7 +497,7 @@ Active indique combien d'évaluations sont présentement considérées ou en cou
 	<message key="about.onlineSubmissions.registrationRequired">{$login} ou ({$register}) pour faire une soumission.</message>
 	<message key="about.authorGuidelines">Directives aux auteurs</message>
 	<message key="about.submissionPreparationChecklist">Liste de vérification de la soumission</message>
-	<message key="about.submissionPreparationChecklist.description">En tant que partie intégrante du processus de soumission, les auteurs doivent s'assurer de la conformité de leur soumission avec tous les éléments suivants, et les soumissions peuvent être retournées aux auteurs qui ne sont pas conformes à ces directives.</message>
+	<message key="about.submissionPreparationChecklist.description">Dans le cadre du processus de soumission, les auteurs doivent s'assurer de la conformité de leur soumission avec les éléments qui suivent. Les soumissions peuvent être retournées aux auteurs qui ne se conforment pas à ces directives.</message>
 	<message key="about.copyrightNotice">Mention de droit d'auteur</message>
 	<message key="about.privacyStatement">Déclaration de confidentialité</message>
 	<message key="about.peerReviewProcess">Processus d'évaluation par les pairs</message>
@@ -816,8 +816,8 @@ Titre du système de classification]]></message>
 	<message key="user.subscriptions.purchaseNewSubscription">Souscrire à un nouvel abonnement</message>
 	<message key="user.subscriptions.purchaseIndividualSubscription">Souscrire à un abonnement individuel</message>
 	<message key="user.subscriptions.purchaseInstitutionalSubscription">Souscrire à un abonnement institutionnel</message>
-	<message key="user.subscriptions.expires">Expire</message>
-	<message key="user.subscriptions.expired">Expiré</message>
+	<message key="user.subscriptions.expires">Expiration: {$date}</message>
+	<message key="user.subscriptions.expired">Expiré: {$date}</message>
 	<message key="user.subscriptions.viewSubscriptionTypes">Afficher les types d'abonnement disponibles</message>
 	<message key="user.subscriptions.form.typeId">Type d'abonnement</message>
 	<message key="user.subscriptions.form.membership">Adhésion</message>
@@ -977,5 +977,14 @@ La validation peut échouer sur les URL de recherche qui nécessitent des formul
 	<message key="manager.setup.clockssDescription"><![CDATA[Open Journal Systems prend également en charge le système <a href="http://clockss.org/" target="_blank"> CLOCKSS </a> (Controlled Lots of Copies Keep Stuff Safe) pour assurer un archivage sécurisé et permanent pour le journal. CLOCKSS est basé sur le logiciel open source LOCKSS, développé à la bibliothèque de l'Université de Stanford, qui permet aux bibliothèques de préserver des revues Web en sondant régulièrement les sites Web de revues enregistrées pour les contenus nouvellement publiés, pour ensuite les archiver. Chaque archive est continuellement validée par rapport à d'autres caches et si le contenu est corrompu ou perdu, les autres caches ou le journal sont utilisés pour la restaurer.
 <br /> <br />
 L'installation de CLOCKSS pour Open Journal Systems n'a pas besoin d'avoir lieu avant que la publication soit en cours.]]></message>
+	<message key="manager.setup.citations.enable">Activer l'Assistant au balisage de référence (Citation Markup Assistant)</message>
 	<message key="submission.layout.galley.remoteURL">URL du contenu hébergé à distance</message>
+	<message key="subscriptions.status.noSubscription">Vous n'avez pas d'abonnement actif.</message>
+	<message key="reader.purchasePrice">({$currency} {$price})</message>
+	<message key="notification.type.publicationScheduled">Cette soumission a été programmée pour publication.</message>
+	<message key="navigation.subscriptions">Abonnements</message>
+	<message key="payment.type.publication.required">Les frais de publication sont dus.</message>
+	<message key="payment.requestPublicationFee">Demande de frais de publication ({$feeAmount})</message>
+	<message key="payment.notFound">Un paiement a été demandé, mais la demande est expirée. Communiquez avec le directeur de la revue pour les détails.</message>
+	<message key="log.editor.recommendation">Une recommandation de rédacteur ({$decision}) pour l'article {$submissionId} a été enregistrée par {$editorName}.</message>
 </locale>
