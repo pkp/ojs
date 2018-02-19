@@ -509,8 +509,7 @@ Il y a des cas où seulement une seule statistique d'utilisation doit être util
 	<message key="plugins.importexport.common.register.success">Enregistrement réussi!</message>
 	<message key="manager.website.archiving">Archivage</message>
 	<message key="manager.setup.masthead">Bloc générique</message>
-	<message key="manager.setup.editorialTeam">Comité éditorial</message>
-	<message key="manager.setup.editorialTeam.description">Inscrire la liste de personnes impliquées dans la revue (directeur, rédacteurs et autres).</message>
+	<message key="manager.setup.masthead.description">Inscrire la liste de personnes impliquées dans la revue (directeur, rédacteurs et autres).</message>
 	<message key="manager.setup.homepageContent">Contenu de la page d'accueil de la revue</message>
 	<message key="manager.setup.homepageContentDescription">La page d'accueil de la revue consiste par défaut en liens pour la navigation. Des contenus additionnels peuvent être ajoutés en utilisant une ou toutes les options suivantes, qui apparaîtront dans l'ordre indiqué.</message>
 	<message key="manager.setup.layout">Mise en page de la revue</message>
@@ -582,4 +581,19 @@ Il existe cinq niveaux d'autorisation : Les Directeurs de revue ont accès à to
 	<message key="manager.setup.notifications.copyPrimaryContact">Envoyer une copie au contact principal, identifié dans les paramètres de la revue.</message>
 	<message key="plugins.importexport.common.error.unknownJournal">Le chemin pour la revue, "{$journalPath}", n'existe pas.</message>
 	<message key="manager.sections.hideAbout">Omettre cette section dans "À propos" de cette revue.</message>
+	<message key="subscriptionManager.subscription.confirmRemove">Êtes-vous certain de vouloir supprimer cet abonnement?</message>
+	<message key="manager.paymentTypes">Types de paiement</message>
+	<message key="manager.subscriptionPolicies.xMonths">{$x} mois</message>
+	<message key="manager.subscriptionPolicies.xWeeks">{$x} semaines</message>
+	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths">Aviser les abonnés par courriel après l'expiration de l'abonnement.</message>
+	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks">Aviser les abonnés par courriel après l'expiration de l'abonnement.</message>
+	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths">Aviser les abonnés par courriel avant l'expiration de l'abonnement.</message>
+	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks">Aviser les abonnés par courriel avant l'expiration de l'abonnement.</message>
+	<message key="manager.subscriptions.confirmRenew">Êtes-vous certain de vouloir renouveler cet abonnement?</message>
+	<message key="manager.navigationMenus.subscriptions.description">Lien vers la page décrivant les abonnements offerts.</message>
+	<message key="manager.navigationMenus.mySubscriptions.description">Lien vers la page décrivant les abonnements courant et passés d'un visiteur.</message>
+	<message key="manager.navigationMenus.mySubscriptions.conditionalWarning">Ce lien sera affiché seulement si le visiteur s'est connecté.</message>
+	<message key="plugins.importexport.common.validation">Valider le XML avant l'importation et l'enregistrement.</message>
+	<message key="plugins.importexport.common.export.error.inputFileNotReadable">Le fichier d'entrée {$param} n'est pas lisible.</message>
+	<message key="bon">Ajouter un élément</message>
 </locale>
