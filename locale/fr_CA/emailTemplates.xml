@@ -104,6 +104,15 @@ Si vous avez des questions, n'hésitez pas à communiquer avec nous. Nous vous r
 {$editorialContactSignature}]]></body>
 		<description>Ce courriel, lorsqu'activé, est envoyé automatiquement à un auteur quand il ou elle a complété le processus de soumission d'un manuscrit à la revue. Il fournit les informations sur comment suivre la soumission à travers le processus éditorial, et remercie l'auteur de sa soumission.</description>
 	</email_text>
+	<email_text key="SUBMISSION_UNSUITABLE">
+		<subject>Soumission non conforme</subject>
+		<body><![CDATA[{$authorName}:<br />
+<br />
+Une évaluation initiale de votre manuscrit intitulé « {$submissionTitle} » a démontré que votre soumission ne se conforme pas aux orientations de la revue {$contextName}. Nous vous suggérons de consulter la description de cette revue en cliquant sur l'onglet « À propos de la revue » et en lisant le contenu de la revue pour en apprendre davantage sur les articles que nous publions. Vous pourriez aussi considérer soumettre votre manuscrit à une revue plus appropriée.<br />
+<br />
+{$editorialContactSignature}]]></body>
+		<description></description>
+	</email_text>
 	<email_text key="SUBMISSION_COMMENT">
 		<subject>Commentaires sur une soumission</subject>
 		<body><![CDATA[{$name}:<br />
@@ -145,7 +154,7 @@ Veuillez accéder au site Web de la revue avant le {$responseDueDate} pour nous 
 <br />
 La date d'échéance de l'évaluation a été fixée au {$reviewDueDate}.<br />
 <br />
-Si vous n'avez pas de nom d'utilisateur et de mot de passe pour le site Web de la revue, cliquer sur le lien ci-dessous pour réinitialiser votre mot de passe (qui vous sera envoyé par courriel avec votre nom d'utilisateur). {$psasswordResetUrl}<br />
+Si vous n'avez pas de nom d'utilisateur et de mot de passe pour le site Web de la revue, cliquer sur le lien ci-dessous pour réinitialiser votre mot de passe (qui vous sera envoyé par courriel avec votre nom d'utilisateur). {$passwordResetUrl}<br />
 <br />
 URL de la soumission : {$submissionReviewUrl}<br />
 <br />
@@ -164,7 +173,7 @@ En espérant que vous accepterez notre demande, veuillez agréer l'expression de
 <br />
 Nous croyons que vous seriez un excellent évaluateur pour le manuscrit intitulé « {$submissionTitle} » qui a été soumis à la revue {$contextName}. Vous trouverez un résumé de la soumission ci-dessous.  Nous espérons que vous accepterez ce travail essentiel à la publication de la revue.<br />
 <br />
-Veuillez accéder au site Web de la revue avant le {$responseDueDate} pour nous informer si vous acceptez de faire l'évaluation ou non. Vous pouvez également y consulter la soumission et y enregistrer votre évaluation et votre recommandation. Le site Web se trouve à l'adresse suivante : {$contextUrl}<br />
+Veuillez accéder au site Web de la revue avant le {$responseDueDate} pour nous informer si vous acceptez de faire l'évaluation ou non. Vous pouvez également y consulter la soumission et y enregistrer votre évaluation et votre recommandation.<br />
 <br />
 Date limite pour l'évaluation {$reviewDueDate}.<br />
 <br />
@@ -830,18 +839,15 @@ Merci de considérer cette requête.<br />
 	<email_text key="REVIEW_REQUEST_REMIND_AUTO_ONECLICK">
 		<subject>Demande d'évaluation d'un article</subject>
 		<body><![CDATA[{$reviewerName}:<br />
-Ceci est un rappel concernant notre demande d'évaluation de &quot;{$submissionTitle},&quot; pour {$contextName}. Nous espérions recevoir une réponse avant le {$responseDueDate}. Ce courriel est envoyé automatiquement après dépassement du délais.
+Ceci est un rappel concernant notre demande d'évaluation de &quot;{$submissionTitle},&quot; pour {$contextName}. Nous espérions recevoir une réponse avant le {$responseDueDate}. Ce courriel est envoyé automatiquement après dépassement du délai. <br />
 <br />
-Nous pensons que vous seriez un excellent évaluateur pour le manuscrit. Vous trouverez un résumé de la soumission en suivant l'hyperlien plus bas.<br />
+Nous pensons que vous seriez un excellent évaluateur pour le manuscrit. Vous trouverez un résumé de la soumission plus bas. <br />
 <br />
-Vous seriez aimable de vous authentifier sur la page de la revue en nous indiquant si vous participerez à cette évaluation ou non, ou mieux, indiquer les recommandations suivant l'évaluation de ce manuscrit.<br />
+Nous vous serions reconnaissants si vous pouviez vous connecter sur le site Web de la revue et nous  indiquer si vous allez entreprendre l'évaluation ou non. Dans l’affirmative, vous aurez accès à la soumission et pourrez enregistrer votre évaluation et votre recommandation.br />
 <br />
-L'évaluation est dû pour le  {$reviewDueDate}.<br />
+L'évaluation est due pour le  {$reviewDueDate}.<br />
 <br />
-Si vous n'avez pas votre identifiant pour le site de la revue, vous pouvez utiliser l'hyperlien suivant pour entrer un nouveau mot de passe.
-{$passwordResetUrl}<br />
-<br />
-Hyperlien de la soumission: {$submissionReviewUrl}<br />
+Lien vers la soumission: {$submissionReviewUrl}<br />
 <br />
 Merci de considérer cette requête.<br />
 <br />
@@ -906,5 +912,25 @@ Si vous avez des questions, n'hésitez pas à communiquer avec nous. Nous vous r
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Ce courriel, lorsque activé, est envoyé automatiquement aux autres auteurs, i.e. ceux qui ne sont pas l'utilisateur enregistré faisant la soumission.</description>
+	</email_text>
+	<email_text key="EDITOR_RECOMMENDATION">
+		<subject>Recommandation du rédacteur</subject>
+		<body><![CDATA[{$editors}:<br />
+<br />
+La recommandation concernant la soumission de {$contextName}, &quot;{$submissionTitle}&quot; est : {$recommendation}<br />
+<br />
+{$editorialContactSignature}<br />]]></body>
+		<description>Cet courriel envoyé aux rédacteurs et aux rédacteurs de section ayant un pouvoir décisionnel par un rédacteur ou un rédacteur de section pour les informer d'une recommandation finale concernant la soumission.</description>
+	</email_text>
+	<email_text key="EDITOR_DECISION_INITIAL_DECLINE">
+		<subject>Décision du rédacteur</subject>
+		<body><![CDATA[{$authorName}: <br />
+<br />
+Nous avons pris une décision concernant votre soumission à {$contextName}, &quot;{$submissionTitle}&quot;.<br />
+<br />
+Notre décision est de: Décliner la soumission <br />
+<br />
+{$editorialContactSignature} <br />]]></body>
+		<description>Cet courriel est envoyé à l'auteur quand le rédacteur décline sa soumission, avant la phase d'évaluation.</description>
 	</email_text>
 </email_texts>
