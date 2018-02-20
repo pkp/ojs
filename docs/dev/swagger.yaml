@@ -978,7 +978,7 @@ paths:
           required: false
           type: string
         - name: searchPhrase
-          description: Filter the results by a search phrase matched against the `userName`, `firstName`, `middleName`, `lastName`, `initials`, `salutation`, `suffix`, `email`, `affiliation`, `biiography` and `orcid`.
+          description: Filter the results by a search phrase matched against the `userName`, `firstName`, `middleName`, `lastName`, `initials`, `salutation`, `suffix`, `email`, `affiliation`, `biography` and `orcid`.
           in: query
           required: false
           type: string
