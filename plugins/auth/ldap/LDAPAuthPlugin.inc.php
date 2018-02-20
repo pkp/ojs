@@ -342,7 +342,7 @@ class LDAPAuthPlugin extends AuthPlugin {
 			$attr['givenName'] = $user->getFirstName();
 		if ($user->getLastName())
 			$attr['sn'] = $user->getLastName();
-		if ($user->getAffiliation(null))
+		if ($user->getAffiliation(AppLocale::getLocale()))
 			$attr['organizationName'] = $user->getAffiliation(AppLocale::getLocale());
 		if ($user->getEmail())
 			$attr['mail'] = $user->getEmail();
