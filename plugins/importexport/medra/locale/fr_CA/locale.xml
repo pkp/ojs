@@ -35,10 +35,14 @@ S'il vous plaît, notez que le mot de passe sera sauvegardé en texte brute et n
 	<message key="plugins.importexport.medra.settings.form.work">oeuvres</message>	
 	<message key="plugins.importexport.medra.settings.form.manifestation">manifestation</message>
 
-	<message key="plugins.importexport.medra.workOrProduct"><![CDATA[NB: Les DOI assignés aux articles seront exportés sur mEDRA comme <a href="http://www.medra.org/en/metadata_td.htm" target="_blank">'œuvres'</a>. Les DOI assignés aux épreuves seront exportés comme <a href="http://www.medra.org/en/metadata_td.htm" target="_blank">'manifestations'</a>.]]></message>
+	<message key="plugins.importexport.medra.workOrProduct"><![CDATA[NB: Les DOI assignés aux articles seront exportés vers mEDRA comme <a href="http://www.medra.org/en/metadata_td.htm" target="_blank">'œuvres'</a>. Les DOI assignés aux épreuves seront exportés comme <a href="http://www.medra.org/en/metadata_td.htm" target="_blank">'manifestations'</a>.]]></message>
 		
 	<message key="plugins.importexport.medra.cliUsage"><![CDATA[Utilisation:
 {$scriptName} {$pluginName} export [xmlFileName] [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...
 {$scriptName} {$pluginName} register [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...
 ]]></message>
+	<message key="plugins.importexport.medra.settings.form.exportIssuesAs.label">Numéros exportés comme</message>
+	<message key="plugins.importexport.medra.settings.form.automaticRegistration.description">OJS enverra automatiquement les DOI assignées à mEDRA. Veuillez noter que le processus peut prendre un peu de temps après la publication. Vous pouvez vérifier tous les DOI non enregistrés.</message>
+	<message key="plugins.importexport.medra.settings.form.testMode.description">Utilisez l'API de test mEDRA (environnement de test) pour l'enregistrement de DOI. Attention, ne pas oublier de retirer cette option en production.</message>
+	<message key="plugins.importexport.medra.senderTask.name">Tâche automatique d'enregistrement mEDRA</message>
 </locale>
