@@ -25,4 +25,5 @@
 		<li>Navigateur</li>
 		</ul>
 		<p>Les mesures sont enregistrées dans le seul but d'évaluer la qualité du service. À aucun moment une adresse IP est associée à un compte utilisateur. Il est impossible d'associer quelque mesure que ce soit à une adresse IP particulière.</p>]]></message>
+	<message key="plugins.generic.usageStats.settings.statsDisplayOptions.siteWide">Chaque revue peut passer outre ces paramètres dans la page des plugiciels de la revue.</message>
 </locale>
