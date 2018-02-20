@@ -15,10 +15,9 @@
 	<message key="plugins.importexport.crossref.displayName">Plugiciel d'exportation CrossRef XML</message>
 	<message key="plugins.importexport.crossref.description">Exporter les métadonnées de l'article en format CrossRef XML.</message>
 
-	<message key="plugins.importexport.crossref.cliUsage"><![CDATA[Utilisation:
+	<message key="plugins.importexport.crossref.cliUsage">Utilisation:
 {$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...
-{$scriptName} {$pluginName} register [journal_path] articles objectId1 [objectId2] ...
-]]></message>
+{$scriptName} {$pluginName} register [journal_path] articles objectId1 [objectId2] ...</message>
 	<message key="plugins.importexport.crossref.requirements">Veuillez noter que le mot de passe sera enregistré en plein texte, c-a-d pas encrypté</message>
 	<message key="plugins.importexport.crossref.requirements.satisfied">Marque enregistrée</message>
 	<message key="plugins.importexport.crossref.settings.depositorIntro">L'export de données est actuellement indisponible. Veuillez vérifier les exigences du plugiciel</message>
@@ -29,4 +28,36 @@
 	<message key="plugins.importexport.crossref.settings.form.username">Nom d'utilisateur</message>
 	<message key="plugins.importexport.crossref.settings.form.usernameRequired">Veuillez entrer le nom d'utilisateur que vous a donné Crossref.</message>
 	<message key="plugins.importexport.crossref.senderTask.name">Tâche automatique d'enregistrement de CrossRef</message>
+	<message key="plugins.importexport.crossref.error.publisherNotConfigured"><![CDATA[L'éditeur n'a pas été inscrit. Vous devez ajouter une institution éditrice dans <a href="{$journalSettingsUrl}" target="_blank"> Paramètres de la revue</a>.]]></message>
+	<message key="plugins.importexport.crossref.error.issnNotConfigured"><![CDATA[L'ISSN de la revue n'a pas été inscrit. Vous devez ajouter un ISSN dans <a href="{$journalSettingsUrl}" target="_blank"> Paramètres de la revue</a>.]]></message>
+	<message key="plugins.importexport.crossref.error.noDOIContentObjects">Aucun article sélectionné pour l'assignation d'un DOI dans le plugiciel DOI public identifier. Conséquemment, aucun dépôt et aucune exportation n'est possible par ce plugiciel.</message>
+	<message key="plugins.importexport.crossref.registrationIntro"><![CDATA[Si vous souhaitez utiliser ce plugiciel pour enregistrer des DOI directement avec CrossRef, vous aurez besoin d'un nom d'utilisateur et d'un mot de passe (disponible sur <a href="http://www.crossref.org" target="_blank"> CrossRef </a>). Si vous n'avez pas votre propre nom d'utilisateur et mot de passe, vous pouvez  exporter en format XML CrossRef, mais vous ne pouvez pas enregistrer vos DOI avec CrossRef depuis OJS.]]></message>
+	<message key="plugins.importexport.crossref.settings.form.automaticRegistration.description">OJS déposera automatiquement les DOI assignés à CrossRef. Veuillez noter que le processus peut prendre un peu de temps après la publication. Vous pouvez vérifier tous les DOI non enregistrés.</message>
+	<message key="plugins.importexport.crossref.settings.form.testMode.description">Utiliser le "CrossRef test API" (environnement de test) pour le dépôt de DOI. Attention, ne pas oublier de retirer cette option en production.</message>
+	<message key="plugins.importexport.crossref.issues.description">Note: Seuls les numéros (et non leurs articles) seront considérés pour l'exportation et l'enregistrement ici.</message>
+	<message key="plugins.importexport.crossref.status.submitted">Soumis</message>
+	<message key="plugins.importexport.crossref.status.completed">Déposé</message>
+	<message key="plugins.importexport.crossref.status.failed">Échec</message>
+	<message key="plugins.importexport.crossref.status.registered">Actif</message>
+	<message key="plugins.importexport.crossref.status.markedRegistered">Marqué actif</message>
+	<message key="plugins.importexport.crossref.statusLegend"><![CDATA[<p>Statut du dépôt: </p>
+<p>
+- Non déposé: aucune tentative de dépôt n'a été effectuée pour ce DOI. <br />
+- Soumis: ce DOI a été soumis pour le dépôt. <br />
+- Déposé: le DOI a été déposé à Crossref, mais peut ne pas être encore actif. <br />
+- Actif: le DOI a été déposé, et se résout correctement. <br />
+- Échec: le dépôt DOI a échoué. <br />
+- Marqué actif: le DOI a été marqué manuellement comme actif.
+</p>
+<p> Seul le statut de la dernière tentative de dépôt est affiché. </p>
+<p> Si un dépôt a échoué, veuillez résoudre le problème et réessayer d'enregistrer le DOI. </p>]]></message>
+	<message key="plugins.importexport.crossref.action.export">Télécharger le XML</message>
+	<message key="plugins.importexport.crossref.action.markRegistered">Marqué actif</message>
+	<message key="plugins.importexport.crossref.action.register">Soumis</message>
+	<message key="plugins.importexport.crossref.action.checkStatus">Vérifier le statut</message>
+	<message key="plugins.importexport.crossref.notification.failed"><![CDATA[Échec de l'enregistrement d'un DOI. Allez dans Outils > Importer/Exporter > Plugiciel d'exportation CrossRef XML, pour voir les dépôts ayant échoué.]]></message>
+	<message key="plugins.importexport.crossref.register.error.mdsError">Échec de la soumission! Le serveur d'enregistrement de DOI a renvoyé une erreur. "{$param}".</message>
+	<message key="plugins.importexport.crossref.register.success">Soumission réussie!</message>
+	<message key="plugins.importexport.crossref.export.error.issueNotFound">Aucun numéro ne correspond à l'identifiant de numéro spécifié  "{$issueId}".</message>
+	<message key="plugins.importexport.crossref.export.error.articleNotFound">Aucun article ne correspond à l'identifiant d'article spécifié "{$articleId}".</message>
 </locale>
