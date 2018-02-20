@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/fr_CA/locale.xml
+  *
+  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="fr_CA" full_name="Français (Canada)">
+	<message key="plugins.generic.recommendByAuthor.displayName">Recommandation d'articles par auteur</message>
+	<message key="plugins.generic.recommendByAuthor.description">Ce plugiciel insère une liste d'articles du même auteur sur la page du résumé d'un article.</message>
+	<message key="plugins.generic.recommendByAuthor.heading">Articles les plus consultés par le ou les mêmes auteurs.</message>
+	<message key="plugins.generic.recommendByAuthor.noMetric">Ce plugiciel nécessite l'activation d'au moins un plugiciel de statistiques ou de rapports. Si vos plugiciels de statistiques fournissent plus d'un indicateur, sélectionnez un indicateur principal sur la page des paramètres du site (Administrateur) et/ou sur les pages de paramètres du Directeur de la revue.</message>
+</locale>
