@@ -59,4 +59,7 @@
 	<message key="plugins.pubIds.doi.editor.assignDoi.emptySuffix">Le DOI ne peut pas être attribué: le suffixe est manquant.</message>
 	<message key="plugins.pubIds.doi.editor.assignDoi.pattern">Le DOI {$pubId} ne peut pas être attribué: il contient un modèle non résolvable.</message>
 	<message key="plugins.pubIds.doi.editor.assignDoi.assigned">Le DOI {$pubId} a été attribué.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiAssignJournalWide">Assigner des DOI</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiAssignJournalWide.description">Assigner des DOI à tous les objets de revue publiés pour lesquels aucun DOI n'a déjà été assigné. Cette action ne peut pas être utilisée avec la configuration de suffixe individuel. Si vous avez modifié la configuration DOI ci-dessus, enregistrez vos modifications avant de lancer cette action. L'attribution de DOI peut prendre beaucoup de temps, selon le nombre d'objets publiés dans la revue.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiAssignJournalWide.confirm">Êtes-vous certain de vouloir assigner des DOI à tous les objets publiés qui n'ont pas de DOI?</message>
 </locale>
