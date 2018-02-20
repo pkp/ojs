@@ -18,4 +18,11 @@
 	<message key="plugins.importexport.doaj.cliUsage"><![CDATA[Utilisation:
 {$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...
 ]]></message>
+	<message key="plugins.importexport.doaj.registrationIntro">Si vous souhaitez enregistrer des articles à partir d'OJS, veuillez entrer votre clé API DOAJ. Autrement, vous pouvez exporter vers le format XML DOAJ, mais vous ne pourrez pas enregistrer vos articles avec DOAJ à partir OJS.</message>
+	<message key="plugins.importexport.doaj.settings.form.apiKey">Clé API DOAJ</message>
+	<message key="plugins.importexport.doaj.settings.form.apiKey.description">Vous trouverez votre clé API sur le site de DOAJ, sur votre page d'utilisateur.</message>
+	<message key="plugins.importexport.doaj.settings.form.automaticRegistration.description">OJS déposera automatiquement les articles dans DOAJ. Veuillez noter que le processus peut prendre un peu de temps après la publication. Vous pouvez vérifier tous les articles non enregistrés.</message>
+	<message key="plugins.importexport.doaj.settings.form.testMode.description">Utilisez l'API de test DOAJ (environnement de test) pour l'enregistrement. Attention, ne pas oublier de retirer cette option en production.</message>
+	<message key="plugins.importexport.doaj.senderTask.name">Tâche automatique d'enregistrement DOAJ</message>
+	<message key="plugins.importexport.doaj.register.error.mdsError">Échec du dépôt. L'API DOAJ a renvoyé une erreur. "{$param}".</message>
 </locale>
