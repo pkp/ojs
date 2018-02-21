@@ -93,7 +93,7 @@ class SectionForm extends PKPSectionForm {
 		// Series Editors
 		$sectionEditorsListData = $this->_getSubEditorsListPanelData($journal->getId(), $request);
 		$templateMgr->assign(array(
-			'hasSubEditors' => !empty($sectionEditorsListData['collection']['items']),
+			'hasSubEditors' => !empty($sectionEditorsListData['items']),
 			'subEditorsListData' => json_encode($sectionEditorsListData),
 		));
 

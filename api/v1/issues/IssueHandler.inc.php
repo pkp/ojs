@@ -175,7 +175,7 @@ class IssueHandler extends APIHandler {
 		}
 
 		$data = array(
-			'maxItems' => $issueService->getIssuesMaxCount($context->getId(), $params),
+			'itemsMax' => $issueService->getIssuesMaxCount($context->getId(), $params),
 			'items' => $items,
 		);
 
