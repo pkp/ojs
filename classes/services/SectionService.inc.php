@@ -76,14 +76,14 @@ class SectionService extends \PKP\Services\EntityProperties\PKPBaseEntityPropert
 	/**
 	 * @copydoc \PKP\Services\EntityProperties\EntityPropertyInterface::getSummaryProperties()
 	 */
-	public function getSummaryProperties($ection, $args = null) {
+	public function getSummaryProperties($section, $args = null) {
 		$props = array (
 			'id','abbrev','title','seq',
 		);
 
 		\HookRegistry::call('Section::getProperties::summaryProperties', array(&$props, $section, $args));
 
-		return $this->getProperties($ection, $props, $args);
+		return $this->getProperties($section, $props, $args);
 	}
 
 	/**
