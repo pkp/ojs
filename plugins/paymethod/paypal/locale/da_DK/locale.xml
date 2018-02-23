@@ -12,13 +12,13 @@
   -->
 
 <locale name="da_DK" full_name="Dansk">
-	<message key="plugins.paymethod.paypal.displayName">Paypal Fee Payment</message>
-	<message key="plugins.paymethod.paypal.description">Payments will be processed using the PayPal service.</message>
-	<message key="plugins.paymethod.paypal">Paypal Fee Payment</message>
-	<message key="plugins.paymethod.paypal.settings">Paypal Payment Settings</message>
-	<message key="plugins.paymethod.paypal.settings.testMode">Test Mode</message>
-	<message key="plugins.paymethod.paypal.settings.accountName">Account Name</message>
-	<message key="plugins.paymethod.paypal.settings.clientId">Client ID</message>
-	<message key="plugins.paymethod.paypal.settings.secret">Secret</message>
-	<message key="plugins.paymethod.paypal.error">A transaction error occurred. Please contact the journal manager for details.</message>
+	<message key="plugins.paymethod.paypal.displayName">Paypal Fee Payment - Paypal gebyrbetaling</message>
+	<message key="plugins.paymethod.paypal.description">Betalinger sker via PayPal-tjenesten.</message>
+	<message key="plugins.paymethod.paypal">Paypal gebyrbetaling</message>
+	<message key="plugins.paymethod.paypal.settings">Paypal-betalingsindstillinger</message>
+	<message key="plugins.paymethod.paypal.settings.testMode">Testtilstand</message>
+	<message key="plugins.paymethod.paypal.settings.accountName">Kontonavn</message>
+	<message key="plugins.paymethod.paypal.settings.clientId">Klient-ID</message>
+	<message key="plugins.paymethod.paypal.settings.secret">Hemmelig</message>
+	<message key="plugins.paymethod.paypal.error">Der opstod en transaktionsfejl. Kontakt tidsskriftschefen for yderligere oplysninger.</message>
 </locale>

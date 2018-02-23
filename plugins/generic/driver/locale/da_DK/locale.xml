@@ -13,5 +13,5 @@
 
 <locale name="da_DK" full_name="Dansk">
 	<message key="plugins.generic.driver.displayName">DRIVER</message>
-	<message key="plugins.generic.driver.description">The DRIVER plugin extends the OAI-PMH interface according to the DRIVER Guidelines 2.0, helping OJS journals to become DRIVER compliant.</message>
+	<message key="plugins.generic.driver.description">DRIVER-plugin'en udvider OAI-PMH-grænsefladen i henhold til DRIVER Guidelines 2.0, hvilket hjælper OJS-tidsskrifter til at blive DRIVER-kompatible.</message>
 </locale>

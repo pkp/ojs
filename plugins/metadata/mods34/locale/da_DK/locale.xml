@@ -12,6 +12,6 @@
   -->
 
 <locale name="da_DK" full_name="Dansk">
-	<message key="plugins.metadata.mods34.articleAdapter.displayName">MODS 3.4 Article Adapter</message>
-	<message key="plugins.metadata.mods34.articleAdapter.description">Extracts/injects meta-data from/into articles.</message>
+	<message key="plugins.metadata.mods34.articleAdapter.displayName">MODS 3.4 artikel-adapter</message>
+	<message key="plugins.metadata.mods34.articleAdapter.description">Udtrækker/tilføjer meta-data fra/til artikler.</message>
 </locale>

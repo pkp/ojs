@@ -124,7 +124,7 @@
 	<message key="manager.setup.currentIssue">Aktuelt nummer</message>
 	<message key="manager.setup.customizingTheLook">Trin 5. Tilpasning af udseendet</message>
 	<message key="manager.setup.customTags">Brugerdefinerede koder</message>
-	<message key="manager.setup.customTagsDescription">Indsæt brugerdefinerede HTML-sidehovedkoder i sidehovedet på hver side (f.eks. META-koder).</message>
+	<message key="manager.setup.customTagsDescription">Her kan indskrives brugerdefinerede HTML-header-tags, der efterfølgende vil blive indsat i header-sektionen på alle sider (f.eks. META-tags).</message>
 	<message key="manager.setup.details">Detaljer</message>
 	<message key="manager.setup.details.description">Navn på tidsskrift, ISSN, kontaktpersoner, sponsorer og søgemaskiner.</message>
 	<message key="manager.setup.disableUserRegistration">Tidsskriftschefen registrerer alle brugere. Det er kun redaktører eller sektionsredaktører, der kan registrere bedømmere.</message>
@@ -247,7 +247,7 @@ I begge tilfælde har redaktøren mulighed for at inkludere bedømmelseskommenta
 	<message key="manager.setup.reviewOptions.automatedReminders">Det er muligt at sende automatiske e-mail-påmindelser (tilgængelige i OJS-systemets standard-e-mails) til bedømmere på to tidspunkter (redaktøren kan desuden altid sende en e-mail direkte til bedømmeren)</message>
 	<message key="manager.setup.reviewOptions.automatedRemindersDisabled"><![CDATA[<strong>Bemærk!</strong> Hvis du vil aktivere disse indstillinger, skal webstedsadministratoren aktivere indstillingen <tt>scheduled_tasks</tt> i OJS-konfigurationsfilen. Understøttelse af denne funktionalitet (som eventuelt ikke er muligt på alle servere) kan kræve yderligere konfiguration af serveren som angivet i dokumentationen til OJS.]]></message>
 	<message key="manager.setup.reviewOptions.blindReview">Blind review</message>
-	<message key="manager.setup.reviewOptions.numWeeksPerReview">Det normale tidsforbrug, der er tilladt til bedømmelser</message>
+	<message key="manager.setup.reviewOptions.numWeeksPerReview">Antal uger afsat til bedømmelse</message>
 	<message key="manager.setup.reviewOptions.onQuality">Redaktører klassificerer bedømmere på en fempunktskvalitetsskala efter hver bedømmelse.</message>
 	<message key="manager.setup.reviewOptions.restrictReviewerFileAccess">Bedømmere får kun adgang til manuskriptfilen, efter de har accepteret at bedømme den.</message>
 	<message key="manager.setup.reviewOptions.reviewerAccess">Adgang for bedømmere</message>
@@ -541,7 +541,7 @@ I begge tilfælde har redaktøren mulighed for at inkludere bedømmelseskommenta
 	<message key="manager.setup.lockssLicenseDescription"><![CDATA[En LOCKSS licens vil fremtræde i afsnittet 'Om tidsskriftet' under arkivering: <a href="http://www.lockss.org/community/publishers-titles-gln/" target="_blank">LOCKSS License</a>]]></message>
 	<message key="manager.setup.clockssLicenseDescription"><![CDATA[En CLOCKSS licens vil fremtræde i afsnittet 'Om tidsskriftet' under arkivering: <a href="http://clockss.org/" target="_blank">CLOCKSS License</a>]]></message>
 	<message key="manager.setup.clockssLicenseLabel">CLOCKSS licensbeskrivelse</message>
-	<message key="manager.statistics.reports.defaultReport.issuePageViews">Issue table of contents page views</message>
+	<message key="manager.statistics.reports.defaultReport.issuePageViews">Visninger af numres indholdsfortegnelse</message>
 	<message key="manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid">Anvend det givne afkrydsningsfelt.</message>
 	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths1">Underret abonnenter via e-mail</message>
 	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths2">måned(er) efter abonnementsophør</message>

@@ -14,8 +14,8 @@
 
 <locale name="da_DK" full_name="Dansk">
 	<message key="plugins.reports.views.displayName">Se rapport</message>
-	<message key="plugins.reports.views.description">Dette plugin genererer en CSV-rapport om antal læsere for hver enkelt artikel.</message>
-	<message key="plugins.reports.views.articleId">Artikel ID</message>
+	<message key="plugins.reports.views.description">Denne plugin genererer en CSV-rapport som viser antal læsere for hver enkelt artikel.</message>
+	<message key="plugins.reports.views.articleId">Artikel-ID</message>
 	<message key="plugins.reports.views.articleTitle">Artikeltitel</message>
 	<message key="plugins.reports.views.datePublished">Publiceringsdato</message>
 	<message key="plugins.reports.views.abstractViews">Resume-visninger</message>

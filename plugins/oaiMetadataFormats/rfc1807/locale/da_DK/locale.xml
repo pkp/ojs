@@ -13,6 +13,6 @@
   -->
  
 <locale name="da_DK" full_name="Dansk">
-	<message key="plugins.OAIMetadata.rfc1807.displayName">RFC1807 Metadata Format</message>
+	<message key="plugins.OAIMetadata.rfc1807.displayName">RFC1807 Metadata-format</message>
 	<message key="plugins.OAIMetadata.rfc1807.description">Strukturerer metadata i overensstemmelse med RFC1807-formatet.</message>
 </locale>

@@ -12,6 +12,6 @@
   -->
 
 <locale name="da_DK" full_name="Dansk">
-	<message key="plugins.generic.dublinCoreMeta.name">Dublin Core Indexing Plugin</message>
-	<message key="plugins.generic.dublinCoreMeta.description">This plugin embeds Dublin Core meta tags in article views for indexing purposes.</message>
+	<message key="plugins.generic.dublinCoreMeta.name">Dublin Core Indexing Plug-in</message>
+	<message key="plugins.generic.dublinCoreMeta.description">Denne plug-in indlejrer Dublin Core-metatags i artikelvisninger til indeksering.</message>
 </locale>

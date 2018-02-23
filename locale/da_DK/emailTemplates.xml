@@ -121,6 +121,14 @@ Hvis du har spørgsmål, er du velkommen til at kontakte mig. Tak, fordi du har 
 {$editorialContactSignature}]]></body>
 		<description>Når denne e-mail er aktiveret, sendes den automatisk til en forfatter, når vedkommende har fremsendt et manuskript til tidsskriftet. Den indeholder oplysninger om, hvordan forfatteren kan følge manuskriptet igennem processen, og den takker forfatteren for manuskriptet.</description>
 	</email_text>
+	<email_text key="SUBMISSION_UNSUITABLE">
+		<subject>Uegnet manuskript</subject>
+		<body><![CDATA[{$authorName}:<br />
+<br />
+En indledende bedømmelse af &quot;{$submissionTitle}&quot; viser, at dette manuskript ikke stemmer overens med {$contextName}'s område og fokus. Jeg anbefaler, at du læser beskrivelsen af dette tidsskrift under Om samt dets aktuelle indhold for at få mere at vide om de artikler, vi publicerer. Du kan også overveje at sende manuskriptet til et andet og mere velegnet tidsskrift.<br />
+<br />
+{$editorialContactSignature}]]></body>
+	</email_text>
 	<email_text key="SUBMISSION_COMMENT">
 		<subject>Kommentar til manuskript</subject>
 		<body><![CDATA[{$name}:<br />
@@ -723,7 +731,7 @@ På forhånd tak!<br />
 <br />
 {$userFirstName}<br />
 Manuskriptredaktør, {$contextName}]]></body>
-		<description>Denne e-mail gør manuskriptredaktører i stand til at anmode forfattere om yderligere oplysninger vedrørende referencer.</description>
+		<description>Denne e-mail tillader manuskriptredaktører at anmode forfattere om yderligere oplysninger vedrørende referencer.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_SEND_TO_EXTERNAL">
 		<subject>Redaktørbeslutning</subject>

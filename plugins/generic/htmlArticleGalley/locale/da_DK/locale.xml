@@ -12,6 +12,6 @@
   -->
 
 <locale name="da_DK" full_name="Dansk">
-	<message key="plugins.generic.htmlArticleGalley.displayName">HTML Article Galley</message>
-	<message key="plugins.generic.htmlArticleGalley.description">This plugin provides rendering support for HTML Article Galleys.</message>
+	<message key="plugins.generic.htmlArticleGalley.displayName">HTML Article Galley (publiceringsklar)</message>
+	<message key="plugins.generic.htmlArticleGalley.description">Denne plug-in renderer publiceringsklare HTML-artikler.</message>
 </locale>

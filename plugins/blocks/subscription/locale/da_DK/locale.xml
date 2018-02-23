@@ -15,7 +15,7 @@
 
 <locale name="da_DK" full_name="Dansk">
 	<message key="plugins.block.subscription.displayName">Subskriptionsfunktion</message>
-	<message key="plugins.block.subscription.description">Dette plugin indsætter information om subskription i sidekolonnen.</message>
+	<message key="plugins.block.subscription.description">Denne plugin indsætter information om subskription i sidekolonnen.</message>
 	<message key="plugins.block.subscription.blockTitle">Abonnement</message>
 	<message key="plugins.block.subscription.expires">Udløber</message>
 	<message key="plugins.block.subscription.providedBy">Adgang givet af: {$institutionName}</message>

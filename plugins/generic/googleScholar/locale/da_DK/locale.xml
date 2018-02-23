@@ -12,6 +12,6 @@
   -->
 
 <locale name="da_DK" full_name="Dansk">
-	<message key="plugins.generic.googleScholar.name">Google Scholar Indexing Plugin</message>
-	<message key="plugins.generic.googleScholar.description">This plugin enables indexing of published content in Google Scholar.</message>
+	<message key="plugins.generic.googleScholar.name">Google Scholar-indekserings-plug-in</message>
+	<message key="plugins.generic.googleScholar.description">Denne plug-in muliggør indeksering af publiceret indhold i Google Scholar.</message>
 </locale>

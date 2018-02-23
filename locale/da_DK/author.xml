@@ -56,7 +56,7 @@
 	<message key="author.submit.deleteAuthor">Slet forfatter</message>
 	<message key="author.submit.submissionIndexingDescription">Angiv termer for indeksering af manuskriptet, og adskil termerne med et semikolon (term1; term2; term3).</message>
 	<message key="author.submit.coverageInstructions">Henviser til geografisk placering, kronologisk eller historisk dækning og/eller karaktertræk ved forskningseksempel.</message>
-	<message key="author.submit.languageInstructions"><![CDATA[Engelsk=en; Fransk=fr; Spansk=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Flere koder</a>.]]></message>
+	<message key="author.submit.languageInstructions"><![CDATA[Engelsk=en; Fransk=fr; Dansk=da. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Flere koder</a>.]]></message>
 	<message key="author.submit.form.authorRequired">Mindst én forfatter er påkrævet.</message>
 	<message key="author.submit.form.authorRequiredFields">Fornavnet, efternavnet og e-mail-adressen på hver enkelt forfatter er påkrævet.</message>
 	<message key="author.submit.form.titleRequired">Angiv artiklens titel.</message>

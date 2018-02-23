@@ -15,36 +15,34 @@
 	<message key="plugins.importexport.medra.displayName">mEDRA Eksport/Registrerings-plug-in</message>
 	<message key="plugins.importexport.medra.description">Ekportér metadata fra nummer, artikel og satsskib i Onix til DOI (O4DOI)-format med mEDRA registreringsagentur.</message>
 	
-	<message key="plugins.importexport.medra.cliUsage"><![CDATA[Brug:
+	<message key="plugins.importexport.medra.cliUsage">Brug:
 {$scriptName} {$pluginName} export [xmlFileName] [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...
-{$scriptName} {$pluginName} register [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...
-]]></message>
-	<message key="plugins.importexport.medra.intro"><![CDATA[If you want to register DOIs with mEDRA, please follow the directions on the
-		<a href="http://www.medra.org/en/guide.htm" target="_blank">mEDRA homepage</a>
-		to receive a username and password. If you do not have your own username and
-		password you'll still be able to export into the mEDRA XML format (Onix for DOI)
-		but you cannot register your DOIs with mEDRA from within OJS. 
-		Please note that the password will be saved as plain text, i.e. not encrypted, due
-		to the mEDRA registration service requirements.]]></message>
-	<message key="plugins.importexport.medra.settings.form.description">Please configure the mEDRA export plugin:</message>
-	<message key="plugins.importexport.medra.settings.form.username">Username</message>
-	<message key="plugins.importexport.medra.settings.form.usernameRequired">Please enter your mEDRA username. The username may not contain colons.</message>
-	<message key="plugins.importexport.medra.settings.form.registrantName">The name of the institution registered at mEDRA</message>
-	<message key="plugins.importexport.medra.settings.form.registrantNameRequired">Please enter the institution that is registered at mEDRA.</message>
-	<message key="plugins.importexport.medra.settings.form.fromFields">Person to be contacted by mEDRA in case of technical inquiries:</message>
+{$scriptName} {$pluginName} register [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...</message>
+	<message key="plugins.importexport.medra.intro"><![CDATA[Hvis du vil registrere DOI'er via mEDRA, skal du følge anvisningerne på
+<a href="http://www.medra.org/en/guide.htm" target="_blank">mEDRA hjemmeside</a>
+for at modtage et brugernavn og en adgangskode. Hvis du ikke har dit eget brugernavn og
+password kan du stadig eksportere til mEDRA med XML-formatet (Onix for DOI),
+men du kan ikke registrere dine DOI'er hos mEDRA inde fra OJS.
+Vær opmærksom på, at adgangskoden bliver gemt som klartekst, dvs. ikke krypteret, i overensstemmelse med mEDRA registrerings-service-krav.]]></message>
+	<message key="plugins.importexport.medra.settings.form.description">Konfigurer mEDRA eksport-plug-in:</message>
+	<message key="plugins.importexport.medra.settings.form.username">Brugernavn</message>
+	<message key="plugins.importexport.medra.settings.form.usernameRequired">Indtast dit mEDRA brugernavn. Brugernavnet må muligvis ikke indeholde kolon.</message>
+	<message key="plugins.importexport.medra.settings.form.registrantName">Navnet på den institution, der er registreret hos mEDRA</message>
+	<message key="plugins.importexport.medra.settings.form.registrantNameRequired">Indtast navnet på den institution, der er registreret hos mEDRA.</message>
+	<message key="plugins.importexport.medra.settings.form.fromFields">Person, der skal kontaktes af mEDRA i tilfælde af tekniske forespøtgsler:</message>
 	<message key="plugins.importexport.medra.settings.form.fromCompany">Institution</message>
-	<message key="plugins.importexport.medra.settings.form.fromCompanyRequired">Please enter the institution that is technically responsible for DOI export (e.g. the institution hosting your web server).</message>
-	<message key="plugins.importexport.medra.settings.form.fromName">Contact Person</message>
-	<message key="plugins.importexport.medra.settings.form.fromNameRequired">Please enter a technical contact person.</message>
-	<message key="plugins.importexport.medra.settings.form.fromEmail">Email</message>
-	<message key="plugins.importexport.medra.settings.form.fromEmailRequired">Please enter a valid technical contact email.</message>
-	<message key="plugins.importexport.medra.settings.form.publicationCountry">Please choose the country to be informed as 'publication country' to mEDRA.</message>
-	<message key="plugins.importexport.medra.settings.form.exportIssuesAs"><![CDATA[Please choose whether you want to export issues as <a href="http://www.medra.org/en/metadata_td.htm" target="_blank">'works' or 'manifestations'</a>.]]></message>
-	<message key="plugins.importexport.medra.settings.form.work">work</message>
+	<message key="plugins.importexport.medra.settings.form.fromCompanyRequired">Indtast navnet på den institution, der er teknisk ansvarlig for DOI-eksport (f.eks. institutionen, der er vært for din webserver).</message>
+	<message key="plugins.importexport.medra.settings.form.fromName">Kontaktperson</message>
+	<message key="plugins.importexport.medra.settings.form.fromNameRequired">Indtast en teknisk kontaktperson</message>
+	<message key="plugins.importexport.medra.settings.form.fromEmail">E-mail</message>
+	<message key="plugins.importexport.medra.settings.form.fromEmailRequired">Indtast en gyldig e-mail på teknisk kontaktperson</message>
+	<message key="plugins.importexport.medra.settings.form.publicationCountry">Vælg det land, som mEDRA skal angive som 'publikationsland'.</message>
+	<message key="plugins.importexport.medra.settings.form.exportIssuesAs"><![CDATA[Vælg om du vil eksportere numre enten som <a href="http://www.medra.org/en/metadata_td.htm" target="_blank">'værk' eller 'manifestationer'</a>.]]></message>
+	<message key="plugins.importexport.medra.settings.form.work">værk</message>
 	<message key="plugins.importexport.medra.settings.form.manifestation">manifestation</message>
-	<message key="plugins.importexport.medra.settings.form.exportIssuesAs.label">Issues export as</message>
-	<message key="plugins.importexport.medra.settings.form.automaticRegistration.description">OJS will register assigned DOIs automatically to mEDRA. Please note that this may take a short amount of time after publication to process. You can check for all unregistered DOIs.</message>
-	<message key="plugins.importexport.medra.settings.form.testMode.description">Use the mEDRA test API (testing environment) for DOI registration. Please do not forget to remove this option for the production.</message>
-	<message key="plugins.importexport.medra.workOrProduct"><![CDATA[NB: DOIs assigned to articles will be exported to mEDRA as <a href="http://www.medra.org/en/metadata_td.htm" target="_blank">'works'</a>. DOIs assigned to galleys will be exported as <a href="http://www.medra.org/en/metadata_td.htm" target="_blank">'manifestations'</a>.]]></message>
-	<message key="plugins.importexport.medra.senderTask.name">mEDRA automatic registration task</message>
+	<message key="plugins.importexport.medra.settings.form.exportIssuesAs.label">Nummer-eksport som</message>
+	<message key="plugins.importexport.medra.settings.form.automaticRegistration.description">OJS vil deponere tildelte DOI'er automatisk hos mEDRA. Bemærk, at der kan gå kort tid mellem publicering og endelig færdigbehandling. Alle ikke-registrerede DOI'er kan fremfindes.</message>
+	<message key="plugins.importexport.medra.settings.form.testMode.description">Brug mEDRA test-API (testmiljø) til DOI registrering. Husk at fjerne denne mulighed i forbindelse med produktionen.</message>
+	<message key="plugins.importexport.medra.workOrProduct"><![CDATA[NB: DOI'er tildelt artikler vil blive eksporteret til mEDRA som <a href="http://www.medra.org/en/metadata_td.htm" target="_blank">'værker'</a>. DOI'er tildelt publiceringsfil eksporteres som <a href="http://www.medra.org/en/metadata_td.htm" target="_blank">'manifestationer'</a>.]]></message>
+	<message key="plugins.importexport.medra.senderTask.name">mEDRA automatisk registreringsopgave</message>
 </locale>

@@ -13,5 +13,5 @@
 
 <locale name="da_DK" full_name="Dansk">
 	<message key="plugins.block.developedBy.displayName">"Udviklet af" (blok)</message>
-	<message key="plugins.block.developedBy.description">Dette plug-in indsætter sidemenu-linket "Udviklet af".</message>
+	<message key="plugins.block.developedBy.description">Denne plug-in indsætter sidemenu-linket "Udviklet af".</message>
 </locale>
