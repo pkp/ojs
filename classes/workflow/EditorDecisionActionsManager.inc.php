@@ -135,7 +135,7 @@ class EditorDecisionActionsManager {
 			SUBMISSION_EDITOR_DECISION_ACCEPT => array(
 				'name' => 'accept',
 				'operation' => 'promote',
-				'title' => 'editor.submission.decision.skipReview',
+				'title' => 'editor.submission.decision.accept',
 				'toStage' => 'submission.copyediting',
 			),
 			SUBMISSION_EDITOR_DECISION_INITIAL_DECLINE => array(
