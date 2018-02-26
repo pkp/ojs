@@ -71,13 +71,14 @@ class CommentForm extends Form {
 		$this->addCheck(new FormValidator($this, 'title', 'required', 'comments.titleRequired'));
 		if ($this->captchaEnabled) {
 			if ($this->reCaptchaEnabled) {
+				import('lib.pkp.lib.recaptcha.recaptchalib');
 				if (Config::getVar('captcha', 'recaptcha_enforce_hostname')) {
 					$host = Request::getServerHost();
 				} else { 
 					$host = '';
 				}
-				$reCaptchaVersion = intval(Config::getVar('captcha', 'recaptcha_version', 0));
-				$this->addCheck(new FormValidatorReCaptcha($this, 'recaptcha_challenge_field', ($reCaptchaVersion === 1 ? 'recaptcha_response_field' : 'g-recaptcha-response'), Request::getRemoteAddr(), 'common.captchaField.badCaptcha', $host));
+				$reCaptchaVersion = intval(Config::getVar('captcha', 'recaptcha_version', RECAPTCHA_VERSION_LEGACY));
+				$this->addCheck(new FormValidatorReCaptcha($this, 'recaptcha_challenge_field', ($reCaptchaVersion === RECAPTCHA_VERSION_LEGACY ? 'recaptcha_response_field' : 'g-recaptcha-response'), Request::getRemoteAddr(), 'common.captchaField.badCaptcha', $host));
 			} else {
 				$this->addCheck(new FormValidatorCaptcha($this, 'captcha', 'captchaId', 'common.captchaField.badCaptcha'));
 			}
@@ -133,7 +134,7 @@ class CommentForm extends Form {
 			$templateMgr->assign('reCaptchaEnabled', $this->reCaptchaEnabled);
 			if ($this->reCaptchaEnabled) {
 				import('lib.pkp.lib.recaptcha.recaptchalib');
-				$reCaptchaVersion = intval(Config::getVar('captcha', 'recaptcha_version', 0));
+				$reCaptchaVersion = intval(Config::getVar('captcha', 'recaptcha_version', RECAPTCHA_VERSION_LEGACY));
 				$publicKey = Config::getVar('captcha', 'recaptcha_public_key');
 				$useSSL = Config::getVar('security', 'force_ssl')||Request::getProtocol()=='https'?true:false;
 				$reCaptchaHtml = recaptcha_versioned_get_html($reCaptchaVersion, $publicKey, null, $useSSL);
@@ -171,8 +172,9 @@ class CommentForm extends Form {
 		);
 		if ($this->captchaEnabled) {
 			if ($this->reCaptchaEnabled) {
-				$reCaptchaVersion = intval(Config::getVar('captcha', 'recaptcha_version', 0));
-				if ($reCaptchaVersion === 0) {
+				import('lib.pkp.lib.recaptcha.recaptchalib');
+				$reCaptchaVersion = intval(Config::getVar('captcha', 'recaptcha_version', RECAPTCHA_VERSION_LEGACY));
+				if ($reCaptchaVersion === RECAPTCHA_VERSION_LEGACY) {
 					$userVars[] = 'recaptcha_challenge_field';
 					$userVars[] = 'recaptcha_response_field';
 				} else {
