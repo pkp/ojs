@@ -76,8 +76,8 @@ class WebFeedGatewayPlugin extends GatewayPlugin {
 	 * parent plugin will take care of loading this one when needed)
 	 * @return boolean
 	 */
-	function getEnabled() {
-		return $this->getWebFeedPlugin()->getEnabled();
+	function getEnabled($contextId = null) {
+		return $this->getWebFeedPlugin()->getEnabled($contextId);
 	}
 
 	/**
@@ -97,7 +97,7 @@ class WebFeedGatewayPlugin extends GatewayPlugin {
 		if (!$issue) return false;
 
 		$webFeedPlugin = $this->getWebFeedPlugin();
-		if (!$webFeedPlugin->getEnabled()) return false;
+		if (!$webFeedPlugin->getEnabled($journal->getId())) return false;
 
 		// Make sure the feed type is specified and valid
 		$type = array_shift($args);

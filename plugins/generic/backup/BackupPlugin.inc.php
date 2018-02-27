@@ -17,16 +17,12 @@ import('lib.pkp.classes.plugins.GenericPlugin');
 
 class BackupPlugin extends GenericPlugin {
 	/**
-	 * Register the plugin, if enabled; note that this plugin
-	 * runs under both Conference and Site contexts.
-	 * @param $category string
-	 * @param $path string
-	 * @return boolean
+	 * @copydoc Plugin::register()
 	 */
-	function register($category, $path) {
-		if (parent::register($category, $path)) {
+	function register($category, $path, $mainContextId = null) {
+		if (parent::register($category, $path, $mainContextId)) {
 			$this->addLocaleData();
-			if ($this->getEnabled() && Validation::isSiteAdmin()) {
+			if ($this->getEnabled($mainContextId) && Validation::isSiteAdmin()) {
 				HookRegistry::register('Templates::Admin::Index::AdminFunctions',array($this, 'addLink'));
 				HookRegistry::register ('LoadHandler', array($this, 'handleRequest'));
 			}
