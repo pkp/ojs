@@ -48,7 +48,7 @@ class ExternalFeedDAO extends DAO {
 		if ($contextId) $params[] = (int) $contextId;
 
 		$result = $this->retrieve(
-			'SELECT * FROM external_feeds WHERE feed_id = ? ' . ($contextId?' AND journal_id = ?':''),
+			'SELECT * FROM external_feeds WHERE feed_id = ? ' . ($contextId?' AND context_id = ?':''),
 			$params
 		);
 
@@ -67,7 +67,7 @@ class ExternalFeedDAO extends DAO {
 	 */
 	public function getExternalFeedJournalId($feedId) {
 		$result = $this->retrieve(
-			'SELECT journal_id FROM external_feeds WHERE feed_id = ?', $feedId
+			'SELECT context_id FROM external_feeds WHERE feed_id = ?', $feedId
 		);
 
 		return isset($result->fields[0]) ? $result->fields[0] : 0;	
@@ -81,7 +81,7 @@ class ExternalFeedDAO extends DAO {
 	public function _fromRow($row) {
 		$externalFeed = $this->newDataObject();
 		$externalFeed->setId($row['feed_id']);
-		$externalFeed->setJournalId($row['journal_id']);
+		$externalFeed->setJournalId($row['context_id']);
 		$externalFeed->setUrl($row['url']);
 		$externalFeed->setSequence($row['seq']);
 		$externalFeed->setDisplayHomepage($row['display_homepage']);
@@ -107,7 +107,7 @@ class ExternalFeedDAO extends DAO {
 	public function insertObject($externalFeed) {
 		$ret = $this->update(
 			'INSERT INTO external_feeds
-				(journal_id,
+				(context_id,
 				url,
 				seq,
 				display_homepage,
@@ -160,7 +160,7 @@ class ExternalFeedDAO extends DAO {
 		$this->update(
 			'UPDATE external_feeds
 				SET
-					journal_id = ?,
+					context_id = ?,
 					url = ?,
 					seq = ?,
 					display_homepage = ?,
@@ -227,7 +227,7 @@ class ExternalFeedDAO extends DAO {
 	 */
 	public function getByContextId($contextId, $rangeInfo = null) {
 		$result = $this->retrieveRange(
-			'SELECT * FROM external_feeds WHERE journal_id = ? ORDER BY seq ASC',
+			'SELECT * FROM external_feeds WHERE context_id = ? ORDER BY seq ASC',
 			$contextId,
 			$rangeInfo
 		);
@@ -241,7 +241,7 @@ class ExternalFeedDAO extends DAO {
 	 */
 	public function resequenceExternalFeeds($contextId) {
 		$result = $this->retrieve(
-			'SELECT feed_id FROM external_feeds WHERE journal_id = ? ORDER BY seq',
+			'SELECT feed_id FROM external_feeds WHERE context_id = ? ORDER BY seq',
 			$contextId
 		);
 
