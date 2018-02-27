@@ -189,7 +189,7 @@ class ExternalFeedDAO extends DAO {
 	 * @return boolean
 	 */
 	public function deleteObject($externalFeed) {
-		return $this->deleteObjectById($externalFeed->getId());
+		return $this->deleteById($externalFeed->getId());
 	}
 
 	/**
@@ -197,7 +197,7 @@ class ExternalFeedDAO extends DAO {
 	 * @param $feedId int
 	 * @return boolean
 	 */
-	public function deleteObjectById($feedId) {
+	public function deleteById($feedId) {
 		$this->update(
 			'DELETE FROM external_feeds WHERE feed_id = ?', $feedId
 		);
@@ -215,7 +215,7 @@ class ExternalFeedDAO extends DAO {
 		$feeds = $this->getByContextId($contextId);
 
 		while ($feed = $feeds->next()) {
-			$this->deleteObjectById($feed->getId());
+			$this->deleteById($feed->getId());
 		}
 	}
 
