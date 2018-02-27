@@ -35,7 +35,6 @@
 	<message key="admin.systemConfigurationDescription"><![CDATA[OJS-konfigurationsindstillinger fra <tt>config.inc.php</tt>.]]></message>
 	<message key="admin.journals.journalSettings">Tidsskriftsindstillinger</message>
 	<message key="admin.journals.noneCreated">Der er ikke oprettet nogen tidsskrifter.</message>
-	<message key="admin.contexts.confirmDelete">Er du sikker på, at du vil slette dette tidsskrift og alt dets indhold permanent?</message>
 	<message key="admin.contexts.create">Opret tidsskrift</message>
 	<message key="admin.journals.createInstructions">Du vil automatisk blive registreret som chef for dette tidsskrift. Når du har oprettet et nyt tidsskrift, skal du som chef registrere det for at kunne fortsætte med dets konfiguration og brugertilmelding.</message>
 	<message key="admin.journals.urlWillBe">Tidsskriftets URL-adresse er {$sampleUrl}</message>

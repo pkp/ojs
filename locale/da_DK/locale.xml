@@ -248,22 +248,7 @@
 
 	<!-- Site Administration -->
 
-	<message key="admin.settings.oaiRegistrationDescription"><![CDATA[Hvis indholdet af alle de tidsskrifter, der er tilknyttet dette websted, skal indekseres i et globalt distribueret system bestående af opslagsdatabaser, skal du <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">registrere</a> webstedets URL-adresse i værktøjet Public Knowledge Project, der bruges til harvesting af metadata<a href="http://pkp.sfu.ca/harvester/" target="_blank"></a>. Dette værktøj indsamler metadata fra de enkelte indekserede elementer i dette tidsskrift, hvilket sikrer præcis og kollektiv søgning blandt de opslagswebsteder, der overholder protokollen <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Open Archives Initiative Protocol for Metadata Harvesting</a>.
-<br /><br />
-<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Klik her</a>, og skriv <span class="highlight">{$siteUrl}</span> under <b>URL-adresse på websted</b> og <span class="highlight">{$oaiUrl}</span> under <b>URL-basisadresse på OAI-arkiv</b>.
-<br /><br />
-Vær opmærksom på, at OAI-grænsefladen kan deaktiveres for dette websted ved at redigere OJS-systemkonfigurationen. I fremtidige versioner af OJS vil OAI-grænsefladen kunne aktiveres eller deaktiveres for individuelle tidsskrifter på webstedet.]]></message>
-
-
-
 	<!-- Languages -->
-	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Det er i øjeblikket ikke muligt at hente sprogpakker fra webserveren Public Knowledge Project, fordi:</p>
-	<ul>
-		<li>Serveren ikke har eller tillader ikke kørsel af værktøjet GNU "tar"</li>
-		<li>OJS ikke kan ændre landestandardens registreringsdatabasefil, normalt "registry/locales.xml".</li>
-	</ul>
-<p>Det er muligt at hente sprogpakker manuelt fra <a href="http://pkp.sfu.ca">PKP-webstedet</a>.</p>]]></message>
-
 	<message key="admin.auth.defaultSourceDescription"><![CDATA[<p>Angivelse af en anden standardgodkendelseskilde end OJS har følgende virkning:</p>
 <ul>
 	<li>Hvis en bruger forsøger at registrere en ny konto på dette websted med et brugernavn, der findes i godkendelseskilden (men ikke i OJS-databasen), vil registreringen kun lykkes, hvis den angivne adgangskode er gyldig for den pågældende brugerkonto.</li>
@@ -307,14 +292,6 @@ Forfattere, der publicerer deres værker via dette tidsskrift, accepterer følge
 	 <li>Forfattere kan indgå flere separate kontraktlige aftaler om ikke-eksklusiv distribution af tidsskriftets publicerede version af værket (f.eks. sende det til et institutionslager eller udgive det i en bog), med en anerkendelse af værkets første publicering i nærværende tidsskrift.</li>
 	 <li>Forfattere har ret til og opfordres til at publicere deres værker online (f.eks. i institutionslagre eller på deres websted) forud for og under manuskriptprocessen, da dette kan føre til produktive udvekslinger, samt tidligere og større citater fra publicerede værker (se <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html"> The Effect of Open Access</a>).</li>
 </ol>]]></message>
-	<message key="manager.setup.subjectClassificationDescription"><![CDATA[[Tidsskriftet bruger et emneklassificeringssystem, der findes på nettet.<br />
-Titel på klassificeringssystem]]></message>
-	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[Hvis indholdet af dette tidsskrift skal indekseres i et globalt distribueret system bestående af opslagsdatabaser, skal du <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">registrere</a> tidsskriftets URL-adresse i værktøjet Public Knowledge Project, der bruges til harvesting af metadata<a href="http://pkp.sfu.ca/harvester/" target="_blank"></a>. Dette værktøj indsamler metadata fra de enkelte indekserede elementer i dette tidsskrift, hvilket sikrer præcis og kollektiv søgning blandt de opslagswebsteder, der overholder protokollen <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Open Archives Initiative Protocol for Metadata Harvesting</a>.
-<br /><br />
-Vær opmærksom på, at hvis webstedsadministratoren allerede har registreret dette websted i PKP Harvester, indekseres tidsskriftet automatisk, og du behøver ikke registrere tidsskriftet.
-<br /><br />
-<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Klik her</a>, og skriv <span class="highlight">{$siteUrl}</span> under <b>URL-adresse på websted</b> og <span class="highlight">{$oaiUrl}</span> under <b>URL-basisadresse på OAI-arkiv</b>.]]></message>
-
 	<!-- Setup Step 4 -->
 	<message key="manager.setup.basicEditorialStepsDescription"><![CDATA[Trin: Manuskriptkø &gt; Manuskriptbedømmelse &gt; Manuskriptredigering &gt; Indholdsfortegnelse.<br /><br />
 Vælg en model til håndtering af disse aspekter af den redaktionelle proces. (Gå til Redaktører under Administration af tidsskrifter, hvis du vil udpege en chefredaktør og sektionsredaktører).]]></message>
@@ -507,15 +484,11 @@ Aktiv er antallet af bedømmelser, der i øjeblikket overvejes eller er forestå
 	<message key="submission.comments.saveAndEmailEditor">Gem og send e-mail til redaktør</message>
 
 	<!-- Login -->
-	<message key="user.login.resetPasswordInstructions"><![CDATA[Af sikkerhedshensyn sender dette system registrerede brugere en e-mail med en nulstillet adgangskode i stedet for at tilbagekalde den
-aktuelle adgangskode.<br /><br />Angiv din e-mail-adresse nedenfor for at nulstille din adgangskode. Der sendes en bekræftelse til denne e-mail-adresse.]]></message>
-
 	<!-- Profile -->
 
 	<!-- Registration -->
 	<message key="user.register.noJournals">Der findes ingen tidsskrifter, du kan blive registreret hos, på dette websted.</message>
 	<message key="user.register.privacyStatement">Erklæring om beskyttelse af personlige oplysninger</message>
-	<message key="user.register.loginToRegister">Angiv dit eksisterende brugernavn og din eksisterende adgangskode for at registrere hos dette tidsskrift.</message>
 	<message key="user.register.registrationDisabled">Dette tidsskrift accepterer i øjeblikket ikke brugerregistreringer.</message>
 	<message key="user.register.form.passwordLengthTooShort">Den angivne adgangskode er for kort.</message>
 	<message key="user.register.readerDescription">Besked via e-mail ved publicering af et nummer af tidsskriftet.</message>
@@ -576,7 +549,6 @@ aktuelle adgangskode.<br /><br />Angiv din e-mail-adresse nedenfor for at nulsti
 	<message key="about.focusAndScope">Fokus og område</message>
 	<message key="about.sectionPolicies">Sektionspolitikker</message>
 	<message key="about.submissions">Manuskripter</message>
-	<message key="about.onlineSubmissions">Onlinemanuskripter</message>
 	<message key="about.onlineSubmissions.login">Gå til logon</message>
 	<message key="about.onlineSubmissions.registrationRequired">Du skal {$login} eller {$register} for at kunne foretage en indsendelse.</message>
 	<message key="about.authorGuidelines">Retningslinjer for forfattere</message>
@@ -968,12 +940,10 @@ Valideringen kan mislykkes i forbindelse med URL-søgeadresser, der kræver send
 	<message key="manager.setup.clockssDescription"><![CDATA[Open Journal Systems understøtter også <a href="http://clockss.org/" target="_blank">CLOCKSS</a> (Controlled Lots of Copies Keep Stuff Safe) for at sikre et pålideligt og permanent arkiv for tidsskrifter. CLOCKSS er baseret på LOCKSS open source-software, der er udviklet på Stanford University Library, og som gør det muligt for biblioteker at bevare udvalgte webtidsskrifter ved regelmæssigt at foretage polling af registrerede tidsskriftswebsteder med henblik på at finde nyt publiceret indhold og arkivere det. Hvert enkelt arkiv valideres løbende i forhold til andre bibliotekscachelagre, og hvis indholdet er beskadiget eller er gået tabt, bruges de andre cachelagre eller tidsskrifter til at gendanne det.
 <br /><br />
 Konfigurationen af CLOCKSS-understøttelse for Open Journal Systems behøver ikke finde sted, før publiceringen er i fuld gang. På dette tidspunkt skal du følge disse to trin:]]></message>
-	<message key="user.role.guestEditor">Gæsteredaktør</message>
 	<message key="user.noRoles.selectUsersWithoutRoles">Inkludér brugere uden nogen roller vedrørende dette tidsskrift.</message>
 	<message key="user.role.subEditors">Sektionsredaktører</message>
 	<message key="user.role.journalAssistant">Tidsskriftsassistent</message>
 	<message key="user.role.journalAssistants">Tidsskriftsassistenter</message>
-	<message key="user.role.guestEditors">Gæsteredaktører</message>
 	<message key="context.current">Aktuelle tidsskrift:</message>
 	<message key="context.select">Skift til et andet tidsskrift:</message>
 	<message key="article.return">Tilbage til artikeldetaljer</message>
@@ -1029,7 +999,7 @@ Konfigurationen af CLOCKSS-understøttelse for Open Journal Systems behøver ikk
 	<message key="manager.setup.porticoDescription">Portico er en ikke-kommerciel tjeneste, der har forpligtet sig til at opbevare digitale publikationer, herunder e-tidsskrifter, e-bøger og digitaliserede historiske samlinger. Hvis dit tidsskrift underskrev en kontrakt med Portico, skal du aktivere den her:</message>
 	<message key="payment.type.publication.required">Publikationsgebyret er endnu ikke betalt.</message>
 	<message key="payment.requestPublicationFee">Rekvirer publikationsgebyr ({$feeAmount})</message>
-	<message key="payment.notFound">A payment has been requested, but the request has expired. Contact the Journal Manager for details.</message>
+	<message key="payment.notFound">Der er blevet anmodet om betaling, men betalingsfristen er udløbet. Kontakt tidsskriftschefen for yderligere oplysninger.</message>
 	<message key="installer.preInstallationInstructions"><![CDATA[<h4>Præ-installation foranstaltninger</h4>
 
 

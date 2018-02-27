@@ -20,8 +20,6 @@
 {$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...
 {$scriptName} {$pluginName} register [journal_path] articles objectId1 [objectId2] ...
 ]]></message>
-	<message key="plugins.importexport.crossref.cliError">FEJL:</message>
-
 	<message key="plugins.importexport.crossref.export.error.issueNotFound">Intet nummer matchede det specificerede nummer ID "{$issueId}".</message>
 	<message key="plugins.importexport.crossref.export.error.articleNotFound">Ingen artikel matchede det specificerede artikel ID "{$articleId}".</message>
 
