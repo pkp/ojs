@@ -78,7 +78,7 @@ class WebFeedBlockPlugin extends BlockPlugin {
 	 * @copydoc PKPPlugin::getTemplatePath
 	 */
 	public function getTemplatePath($inCore = false) {
-		return $this->_parentPlugin->getTemplatePath($inCore);
+		return $this->_parentPlugin->getTemplatePath($inCore) . '/templates';
 	}
 
 	/**
