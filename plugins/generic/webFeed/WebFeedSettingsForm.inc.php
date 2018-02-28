@@ -87,5 +87,3 @@ class WebFeedSettingsForm extends Form {
 		$plugin->updateSetting($contextId, 'recentItems', $this->getData('recentItems'));
 	}
 }
-
-?>
