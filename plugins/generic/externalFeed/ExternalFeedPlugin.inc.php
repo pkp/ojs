@@ -14,6 +14,7 @@
  */
 
 import('lib.pkp.classes.plugins.GenericPlugin');
+require_once(dirname(__FILE__) . '/vendor/autoload.php');
 
 class ExternalFeedPlugin extends GenericPlugin {
 

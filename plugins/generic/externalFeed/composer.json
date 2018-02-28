@@ -1,0 +1,5 @@
+{
+    "require": {
+        "simplepie/simplepie": "1.4.3"
+    }
+}
