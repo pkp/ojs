@@ -61,19 +61,6 @@ class ExternalFeedDAO extends DAO {
 	}
 
 	/**
-	 * Retrieve external feed journal ID by feed ID.
-	 * @param $feedId int
-	 * @return int
-	 */
-	public function getExternalFeedJournalId($feedId) {
-		$result = $this->retrieve(
-			'SELECT context_id FROM external_feeds WHERE feed_id = ?', $feedId
-		);
-
-		return isset($result->fields[0]) ? $result->fields[0] : 0;	
-	}
-
-	/**
 	 * Internal function to return ExternalFeed object from a row.
 	 * @param $row array
 	 * @return ExternalFeed
@@ -193,11 +180,28 @@ class ExternalFeedDAO extends DAO {
 	}
 
 	/**
+	 * Check if a feed exists with the specified ID
+	 * @param $feedId int Feed ID
+	 * @param $contextId int Context ID
+	 */
+	public function feedExists($feedId, $contextId) {
+		$result = $this->retrieve(
+			'SELECT COUNT(*) FROM external_feeds WHERE feed_id = ? AND context_id = ?',
+			array((int) $feedId, (int) $contextId)
+		);
+		$returner = isset($result->fields[0]) && $result->fields[0] == 1 ? true : false;
+		$result->Close();
+		return $returner;
+	}
+
+	/**
 	 * Delete external feed by ID.
 	 * @param $feedId int
+	 * @param $contextId int
 	 * @return boolean
 	 */
-	public function deleteById($feedId) {
+	public function deleteById($feedId, $contextId = null) {
+		if (isset($contextId) && !$this->feedExists($feedId, $contextId)) return false;
 		$this->update(
 			'DELETE FROM external_feeds WHERE feed_id = ?', $feedId
 		);
@@ -205,6 +209,7 @@ class ExternalFeedDAO extends DAO {
 		$this->update(
 			'DELETE FROM external_feed_settings WHERE feed_id = ?', $feedId
 		);
+		return true;
 	}
 
 	/**

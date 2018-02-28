@@ -235,9 +235,7 @@ class ExternalFeedGridHandler extends GridHandler {
 		$context = $request->getContext();
 		
 		$externalFeedDao = DAORegistry::getDAO('ExternalFeedDAO');
-		if ($externalFeedDao->getExternalFeedJournalId($feedId) == $context->getId()) {
-			$externalFeedDao->deleteById($feedId);
-		}
+		$externalFeedDao->deleteById($feedId, $context->getId());
 		
 		return DAO::getDataChangedEvent();
 	}
