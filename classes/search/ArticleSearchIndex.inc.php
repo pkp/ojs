@@ -270,7 +270,7 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 
 				$articles = $articleDao->getByContextId($journal->getId());
 				while ($article = $articles->next()) {
-					if ($article->getDateSubmitted()) {
+					if ($article->getSubmissionProgress() == 0) { // Not incomplete
 						self::articleMetadataChanged($article);
 						self::submissionFilesChanged($article);
 						$numIndexed++;
