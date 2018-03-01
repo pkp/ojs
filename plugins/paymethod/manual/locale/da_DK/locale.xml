@@ -12,13 +12,10 @@
   -->
  
 <locale name="da_DK" full_name="Dansk">
-	<message key="plugins.paymethod.manual.displayName">Manual betaling af gebyr</message>
+	<message key="plugins.paymethod.manual.displayName">Manuel betaling af gebyr</message>
 	<message key="plugins.paymethod.manual.description">Manageren registerer manuelt modtagelse af brugerens betaling (i ekstern software).</message>
 	<message key="plugins.paymethod.manual">Manuel betaling af gebyr</message>
 	<message key="plugins.paymethod.manual.settings">Manuel betaling indstillinger</message>
-	<message key="plugins.paymethod.manual.settings.instructions">Instruktioner</message>
-	<message key="plugins.paymethod.manual.settings.manualInstructions">Instruktioner til betaling af gebyr for brugerer, som vælger manuel betaling</message>
-	
 	<message key="plugins.paymethod.manual.purchase.title">Titel</message>
 	<message key="plugins.paymethod.manual.purchase.fee">Gebyr</message>	
 	<message key="plugins.paymethod.manual.sendNotificationOfPayment">Send meddelelse om betaling</message>

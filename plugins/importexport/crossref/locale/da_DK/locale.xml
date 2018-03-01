@@ -13,16 +13,14 @@
   -->
 
 <locale name="da_DK" full_name="Dansk">
-	<message key="plugins.importexport.crossref.displayName">CrossRef XML Export Plugin</message>
+	<message key="plugins.importexport.crossref.displayName">CrossRef XML Eksport Plug-in</message>
 	<message key="plugins.importexport.crossref.description">Eksportér artikelmetadata i CrossRef XML format.</message>
 
 	<message key="plugins.importexport.crossref.cliUsage"><![CDATA[Brug: 
 {$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...
 {$scriptName} {$pluginName} register [journal_path] articles objectId1 [objectId2] ...
 ]]></message>
-	<message key="plugins.importexport.crossref.cliError">FEJL:</message>
-
-	<message key="plugins.importexport.crossref.export.error.issueNotFound">Intet nummer mathede det specificerede nummer ID "{$issueId}".</message>
+	<message key="plugins.importexport.crossref.export.error.issueNotFound">Intet nummer matchede det specificerede nummer ID "{$issueId}".</message>
 	<message key="plugins.importexport.crossref.export.error.articleNotFound">Ingen artikel matchede det specificerede artikel ID "{$articleId}".</message>
 
 	<message key="plugins.importexport.crossref.requirements">Krav</message>
@@ -34,10 +32,10 @@
 	<message key="plugins.importexport.crossref.settings.form.depositorName">Deponentnavn</message>
 	<message key="plugins.importexport.crossref.settings.form.depositorEmail">Deponent-e-mail</message>
 	<message key="plugins.importexport.crossref.settings.form.depositorNameRequired">Indsæt deponentnavn.</message>
-	<message key="plugins.importexport.crossref.settings.form.depositorEmailRequired">Indsæt deponen-e-mail.</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorEmailRequired">Indsæt deponent-e-mail.</message>
 	<message key="plugins.importexport.crossref.registrationIntro"><![CDATA[Hvis du ønsker at anvende dette plug-in til direkte registrering af Digital Object Identifiers (DOI'er) hos CrossRef skal du have et brugernavn og en adgangskode (kan oprettes fra <a href="http://www.crossref.org" target="_blank">CrossRef</a>). Hvis du ikke har dit eget brugernavn og password, kan du stadig eksportere via CrossRef XML formatet, men du kan ikke registrere dine DOI'er hos CrossRef direkte via OJS.]]></message>
 	<message key="plugins.importexport.crossref.settings.form.username">Brugernavn</message>
-	<message key="plugins.importexport.crossref.settings.form.usernameRequired">Indsær det brugernavn du har fået udleveret fra CrossRef.</message>
+	<message key="plugins.importexport.crossref.settings.form.usernameRequired">Indsæt det brugernavn du har fået udleveret fra CrossRef.</message>
 	<message key="plugins.importexport.crossref.settings.form.automaticRegistration.description">OJS vil deponere tildelte DOI'er automatisk hos CrossRef. Bemærk, at der kan gå kort tid mellem publicering og endelig færdigbehandling. Alle ikke-registrerede DOI'er kan fremfindes.</message>
 	<message key="plugins.importexport.crossref.settings.form.testMode.description">Brug CrossRef test-API til DOI-deponering (testopstilling). Glem ikke at fjerne denne mulighed under produktionen.</message>
 	<message key="plugins.importexport.crossref.issues.description">Bemærk: Kun numre (og ikke deres artikler) vil her blive taget i betragtning ved eksport/registrering.</message>
@@ -61,7 +59,7 @@
 	<message key="plugins.importexport.crossref.action.markRegistered">Markér aktiv</message>
 	<message key="plugins.importexport.crossref.action.register">Indsend</message>
 	<message key="plugins.importexport.crossref.action.checkStatus">Tjek status</message>
-	<message key="plugins.importexport.crossref.senderTask.name">CrossRef automatisk registreringsopgave</message>
+	<message key="plugins.importexport.crossref.senderTask.name">CrossRef automatiske registreringsopgave</message>
 	<message key=""><![CDATA[]]></message>
 	<message key=""><![CDATA[]]></message>
 	<message key="plugins.importexport.crossref.notification.failed"><![CDATA[En DOI blev ikke registreret. Gå til Værktøjer > Importér/Eksportér > CrossRef XML Export Plugin for at se den fejlbehæftede deponering.]]></message>
