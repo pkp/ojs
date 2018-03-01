@@ -2604,6 +2604,138 @@ class Upgrade extends Installer {
 
 		return true;
 	}
+
+	/**
+	 * Migrate sr_SR locale to the new sr_RS@latin.
+	 * @return boolean
+	 */
+	function migrateSRLocale() {
+		$oldLocale = 'sr_SR';
+		$newLocale = 'sr_RS@latin';
+
+		$oldLocaleStringLength = 's:5';
+
+		$journalSettingsDao = DAORegistry::getDAO('JournalSettingsDAO');
+
+		// Check if the sr_SR is used, and if not do not run further
+		$srExistResult = $journalSettingsDao->retrieve('SELECT COUNT(*) FROM site WHERE installed_locales LIKE ?', array('%'.$oldLocale.'%'));
+		$srExist = $srExistResult->fields[0] ? true : false;
+		$srExistResult->Close();
+		if (!$srExist) return true;
+
+		// Consider all DB tables that have locale column:
+		$dbTables = array(
+			'announcement_settings', 'announcement_type_settings', 'author_settings', 'books_for_review_settings', 'citation_settings', 'controlled_vocab_entry_settings',
+			'data_object_tombstone_settings', 'email_templates_data', 'email_templates_default_data', 'external_feed_settings', 'filter_settings', 'genre_settings', 'group_settings',
+			'issue_galleys', 'issue_galley_settings', 'issue_settings', 'journal_settings', 'library_file_settings', 'metadata_description_settings',
+			'navigation_menu_item_assignment_settings', 'navigation_menu_item_settings', 'notification_settings', 'referral_settings',
+			'review_form_element_settings', 'review_form_settings', 'review_object_metadata_settings', 'review_object_type_settings', 'rt_versions', 'section_settings', 'site_settings',
+			'static_page_settings', 'submissions', 'submission_file_settings', 'submission_galleys', 'submission_galley_settings', 'submission_settings', 'subscription_type_settings',
+			'user_group_settings', 'user_settings',
+		);
+		foreach ($dbTables as $dbTable) {
+			if ($this->tableExists($dbTable)) {
+				$journalSettingsDao->update('UPDATE '.$dbTable.' SET locale = ? WHERE locale = ?', array($newLocale, $oldLocale));
+			}
+		}
+		// Consider other locale columns
+		$journalSettingsDao->update('UPDATE journals SET primary_locale = ? WHERE primary_locale = ?', array($newLocale, $oldLocale));
+		$journalSettingsDao->update('UPDATE site SET primary_locale = ? WHERE primary_locale = ?', array($newLocale, $oldLocale));
+		$journalSettingsDao->update('UPDATE site SET installed_locales = REPLACE(installed_locales, ?, ?)', array($oldLocale, $newLocale));
+		$journalSettingsDao->update('UPDATE site SET supported_locales = REPLACE(supported_locales, ?, ?)', array($oldLocale, $newLocale));
+		$journalSettingsDao->update('UPDATE users SET locales = REPLACE(locales, ?, ?)', array($oldLocale, $newLocale));
+
+		// journal_settings
+		// Consider array setting values from the setting names:
+		// supportedFormLocales, supportedLocales, supportedSubmissionLocales
+		$settingNames = "('supportedFormLocales', 'supportedLocales', 'supportedSubmissionLocales')";
+		// As a precaution use $oldLocaleStringLength, to exclude that the text contain the old locale string
+		$settingValueResult = $journalSettingsDao->retrieve('SELECT * FROM journal_settings WHERE setting_name IN ' .$settingNames .' AND setting_value LIKE ? AND setting_type = \'object\'', array('%' .$oldLocaleStringLength .':"' .$oldLocale .'%'));
+		while (!$settingValueResult->EOF) {
+			$row = $settingValueResult->getRowAssoc(false);
+			$arraySettingValue = $journalSettingsDao->getSetting($row['journal_id'], $row['setting_name']);
+			for($i = 0; $i < count($arraySettingValue); $i++) {
+				if ($arraySettingValue[$i] == $oldLocale) {
+					$arraySettingValue[$i] = $newLocale;
+				}
+			}
+			$journalSettingsDao->updateSetting($row['journal_id'], $row['setting_name'], $arraySettingValue);
+			$settingValueResult->MoveNext();
+		}
+		$settingValueResult->Close();
+
+		// Consider journal images
+		// Note that the locale column values are already changed above
+		$publicFileManager = new PublicFileManager();
+		$settingNames = "('homeHeaderLogoImage', 'homeHeaderTitleImage', 'homepageImage', 'journalFavicon', 'journalThumbnail', 'pageHeaderLogoImage', 'pageHeaderTitleImage')";
+		$settingValueResult = $journalSettingsDao->retrieve('SELECT * FROM journal_settings WHERE setting_name IN ' .$settingNames .' AND locale = ? AND setting_value LIKE ? AND setting_type = \'object\'', array($newLocale, '%' .$oldLocale .'%'));
+		while (!$settingValueResult->EOF) {
+			$row = $settingValueResult->getRowAssoc(false);
+			$arraySettingValue = $journalSettingsDao->getSetting($row['journal_id'], $row['setting_name'], $newLocale);
+			$oldUploadName = $arraySettingValue['uploadName'];
+			$newUploadName = str_replace('_'.$oldLocale.'.', '_'.$newLocale.'.', $oldUploadName);
+			if ($publicFileManager->fileExists($publicFileManager->getContextFilesPath(ASSOC_TYPE_JOURNAL, $row['journal_id']) . '/' . $oldUploadName)) {
+				$publicFileManager->copyJournalFile($row['journal_id'], $publicFileManager->getContextFilesPath(ASSOC_TYPE_JOURNAL, $row['journal_id']) . '/' . $oldUploadName, $newUploadName);
+				$publicFileManager->removeJournalFile($row['journal_id'], $oldUploadName);
+			}
+			$arraySettingValue['uploadName'] = $newUploadName;
+			$newArraySettingValue[$newLocale] = $arraySettingValue;
+			$journalSettingsDao->updateSetting($row['journal_id'], $row['setting_name'], $newArraySettingValue, 'object', true);
+			$settingValueResult->MoveNext();
+		}
+		$settingValueResult->Close();
+
+		// Consider issue cover images
+		// Note that the locale column values are already changed above
+		$settingValueResult = $journalSettingsDao->retrieve('SELECT a.*, b.journal_id FROM issue_settings a, issues b WHERE a.setting_name = \'coverImage\' AND a.locale = ? AND a.setting_value LIKE ? AND a.setting_type = \'string\' AND b.issue_id = a.issue_id', array($newLocale, '%' .$oldLocale .'%'));
+		while (!$settingValueResult->EOF) {
+			$row = $settingValueResult->getRowAssoc(false);
+			$oldCoverImage = $row['setting_value'];
+			$newCoverImage = str_replace('_'.$oldLocale.'.', '_'.$newLocale.'.', $oldCoverImage);
+			if ($publicFileManager->fileExists($publicFileManager->getContextFilesPath(ASSOC_TYPE_JOURNAL, $row['journal_id']) . '/' . $oldCoverImage)) {
+				$publicFileManager->copyJournalFile($row['journal_id'], $publicFileManager->getContextFilesPath(ASSOC_TYPE_JOURNAL, $row['journal_id']) . '/' . $oldCoverImage, $newCoverImage);
+				$publicFileManager->removeJournalFile($row['journal_id'], $oldCoverImage);
+			}
+			$journalSettingsDao->update('UPDATE issue_settings SET setting_value = ? WHERE issue_id = ? AND setting_name = \'coverImage\' AND locale = ?', array($newCoverImage, (int) $row['issue_id'], $newLocale));
+			$settingValueResult->MoveNext();
+		}
+		$settingValueResult->Close();
+
+		// Consider article cover images
+		// Note that the locale column values are already changed above
+		$settingValueResult = $journalSettingsDao->retrieve('SELECT a.*, b.context_id FROM submission_settings a, submissions b WHERE a.setting_name = \'coverImage\' AND a.locale = ? AND a.setting_value LIKE ? AND a.setting_type = \'string\' AND b.submission_id = a.submission_id', array($newLocale, '%' .$oldLocale .'%'));
+		while (!$settingValueResult->EOF) {
+			$row = $settingValueResult->getRowAssoc(false);
+			$oldCoverImage = $row['setting_value'];
+			$newCoverImage = str_replace('_'.$oldLocale.'.', '_'.$newLocale.'.', $oldCoverImage);
+			if ($publicFileManager->fileExists($publicFileManager->getContextFilesPath(ASSOC_TYPE_JOURNAL, $row['context_id']) . '/' . $oldCoverImage)) {
+				$publicFileManager->copyJournalFile($row['context_id'], $publicFileManager->getContextFilesPath(ASSOC_TYPE_JOURNAL, $row['context_id']) . '/' . $oldCoverImage, $newCoverImage);
+				$publicFileManager->removeJournalFile($row['context_id'], $oldCoverImage);
+			}
+			$journalSettingsDao->update('UPDATE submission_settings SET setting_value = ? WHERE submission_id = ? AND setting_name = \'coverImage\' AND locale = ?', array($newCoverImage, (int) $row['submission_id'], $newLocale));
+			$settingValueResult->MoveNext();
+		}
+		$settingValueResult->Close();
+
+		// plugin_settings
+		// Consider array setting values from the setting names:
+		// blockContent (from a custom block plugin), additionalInformation (from objects for review plugin)
+		$pluginSettingsDao = DAORegistry::getDAO('PluginSettingsDAO');
+		$settingNames = "('blockContent', 'additionalInformation')";
+		$settingValueResult = $pluginSettingsDao->retrieve('SELECT * FROM plugin_settings WHERE setting_name IN ' .$settingNames .' AND setting_value LIKE ? AND setting_type = \'object\'', array('%' .$oldLocaleStringLength .':"' .$oldLocale .'%'));
+		while (!$settingValueResult->EOF) {
+			$row = $settingValueResult->getRowAssoc(false);
+			$arraySettingValue = $pluginSettingsDao->getSetting($row['context_id'], $row['plugin_name'], $row['setting_name']);
+			$arraySettingValue[$newLocale] = $arraySettingValue[$oldLocale];
+			unset($arraySettingValue[$oldLocale]);
+			$pluginSettingsDao->updateSetting($row['context_id'], $row['plugin_name'], $row['setting_name'], $arraySettingValue);
+			$settingValueResult->MoveNext();
+		}
+		$settingValueResult->Close();
+
+		return true;
+	}
+
 }
 
 ?>
