@@ -2648,7 +2648,7 @@ class Upgrade extends Installer {
 		// journal_settings
 		// Consider array setting values from the setting names:
 		// supportedFormLocales, supportedLocales, supportedSubmissionLocales
-		$settingNames = '(\'supportedFormLocales\', \'supportedLocales\', \'supportedSubmissionLocales\')';
+		$settingNames = "('supportedFormLocales', 'supportedLocales', 'supportedSubmissionLocales')";
 		// As a precaution use $oldLocaleStringLength, to exclude that the text contain the old locale string
 		$settingValueResult = $journalSettingsDao->retrieve('SELECT * FROM journal_settings WHERE setting_name IN ' .$settingNames .' AND setting_value LIKE ? AND setting_type = \'object\'', array('%' .$oldLocaleStringLength .':"' .$oldLocale .'%'));
 		while (!$settingValueResult->EOF) {
@@ -2667,7 +2667,7 @@ class Upgrade extends Installer {
 		// Consider journal images
 		// Note that the locale column values are already changed above
 		$publicFileManager = new PublicFileManager();
-		$settingNames = '(\'homeHeaderLogoImage\', \'homeHeaderTitleImage\', \'homepageImage\', \'journalFavicon\', \'journalThumbnail\', \'pageHeaderLogoImage\', \'pageHeaderTitleImage\')';
+		$settingNames = "('homeHeaderLogoImage', 'homeHeaderTitleImage', 'homepageImage', 'journalFavicon', 'journalThumbnail', 'pageHeaderLogoImage', 'pageHeaderTitleImage')";
 		$settingValueResult = $journalSettingsDao->retrieve('SELECT * FROM journal_settings WHERE setting_name IN ' .$settingNames .' AND locale = ? AND setting_value LIKE ? AND setting_type = \'object\'', array($newLocale, '%' .$oldLocale .'%'));
 		while (!$settingValueResult->EOF) {
 			$row = $settingValueResult->getRowAssoc(false);
@@ -2721,7 +2721,7 @@ class Upgrade extends Installer {
 		// Consider array setting values from the setting names:
 		// blockContent (from a custom block plugin), additionalInformation (from objects for review plugin)
 		$pluginSettingsDao = DAORegistry::getDAO('PluginSettingsDAO');
-		$settingNames = '(\'blockContent\', \'additionalInformation\')';
+		$settingNames = "('blockContent', 'additionalInformation')";
 		$settingValueResult = $pluginSettingsDao->retrieve('SELECT * FROM plugin_settings WHERE setting_name IN ' .$settingNames .' AND setting_value LIKE ? AND setting_type = \'object\'', array('%' .$oldLocaleStringLength .':"' .$oldLocale .'%'));
 		while (!$settingValueResult->EOF) {
 			$row = $settingValueResult->getRowAssoc(false);
