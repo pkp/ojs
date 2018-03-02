@@ -29,7 +29,6 @@
 	<message key="editor.submissionReview.confirmDecision">Apakah Anda ingin merekam keputusan ini?</message>
 	<message key="editor.submissionReview.emailWillArchive">Penyerahan naskah ini akan diarsipkan setelah email Beritahu Penulis telah dikirimkan atau tombol Lewati Email ditekan.</message>
 	<message key="editor.submissionReview.cannotSendToCopyediting">Sebelum mengirimkan naskah ke Copyediting, gunakan tautan Beritahu Penulis untuk memberitahukan keputusan kepada penulis dan pilih versi yang akan dikirim.</message>
-	<message key="editor.notifyUsers.allUsers">Semua pengguna terkait dengan konferensi ini ({$count} pengguna)</message>
 	<message key="editor.notifyUsers.allReaders">Semua Pembaca ({$count} pembaca)</message>
 	<message key="editor.notifyUsers.allAuthors">Semua penulis yang telah terbit naskahnya ({$count} penulis)</message>
 	<message key="editor.notifyUsers.allIndividualSubscribers">Semua pelanggan individu ({$count} pelanggan)</message>

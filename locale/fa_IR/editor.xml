@@ -28,7 +28,6 @@
 	<message key="editor.submissionReview.emailWillArchive">با توجه به اینکه بر روی لینک «بایگانی کردن» کلیک کرده‌اید چنانچه در صفحه بعد (ارسال ایمیل) دکمه ارسال یا انجام بدون ارسال را بزنید در هر حال مقاله بایگانی خواهد شد' مگر اینکه دکمه انصراف را کلیک کنید.</message>
 	<message key="editor.submissionReview.cannotSendToCopyediting">قبل از ارسال مقاله برای ویراستاری، با استفاده از لینک با خبرسازی نویسنده، تصمیم خود را به اطلاع وی برسانید و سپس نسخه ارسالی به ویراستار را انتخاب کنید.</message>
 	<message key="editor.notifyUsers">اطلاع‌رسانی به کاربران</message>
-	<message key="editor.notifyUsers.allUsers">این پیغام را به تمام کاربران این مجله بفرست  ({$count} کاربر)</message>
 	<message key="editor.notifyUsers.allReaders">تمام خوانندگان: {$count} کاربر</message>
 	<message key="editor.notifyUsers.allAuthors">تمام نویسندگان دارای مقاله چاپ شده: {$count} کاربر</message>
 	<message key="editor.notifyUsers.allIndividualSubscribers">تمام مشترکین: {$count} کاربر</message>

@@ -66,7 +66,6 @@
 	<message key="editor.submissionReview.confirmDecision">Bu kararı kaydetmek istediğinizden emin misiniz?</message>
 	<message key="editor.submissionReview.emailWillArchive">Bu gönderi Yazarı Bilgilendir e-posta mesajından sonra arşivlenecektir. Arşivleme için "Gönder" veya "E-posta Göndermeden" seçeneklerinin hangisinin kullanıldığı fark etmez.</message>
 	<message key="editor.submissionReview.cannotSendToCopyediting">Makaleyi yayına göndermeden önce,  kararı yazara bildirmek için Yazarı Bilgilendir linkini kullanınız. Daha sonra yayına gönderilcek sürümü seçerek Dosya Gönder seçeneğini tıklayınız.</message>
-	<message key="editor.notifyUsers.allUsers">Bu mesajı dergi ile bağlantılı tüm üyelere gönder ({$count} üye)</message>
 	<message key="editor.notifyUsers.allReaders">Tüm okuyucular ({$count} kişidir)</message>
 	<message key="editor.notifyUsers.allAuthors">Tüm yayınlanan yazarlar ({$count} kişidir)</message>
 	<message key="editor.notifyUsers.allIndividualSubscribers">Tüm bireysel aboneler ({$count} kişidir)</message>

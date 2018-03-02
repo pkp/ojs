@@ -30,7 +30,6 @@
 	<message key="editor.submissionReview.emailWillArchive">طلب النشر هذا سيُؤرشف بعد إرسال إشعار للمؤلف عبر البريد الالكتروني أو عندما يتم اختيار الزر الخاص بتخطي إرسال ذلك الإشعار</message>
 	<message key="editor.submissionReview.cannotSendToCopyediting">قبل إرسال طلب النشر إلى المحكمين، إستعمل رابط (إشعار المؤلف) لإبلاغه واختر النسخة التي تريد إرسالها</message>
 	<message key="editor.notifyUsers">أعلم المستخدمين</message>
-	<message key="editor.notifyUsers.allUsers">جميع المستخدمين المرتبطين بهذه المجلة والبالغ عددهم ({$count} مستخدم)</message>
 	<message key="editor.notifyUsers.allReaders">جميع القراء والبالغ عددهم ({$count} قارئ)</message>
 	<message key="editor.notifyUsers.allAuthors">جميع المؤلفين والبالغ عددهم ({$count} مؤلف)</message>
 	<message key="editor.notifyUsers.allIndividualSubscribers">جميع المشتركين المنفردين والبالغ عددهم ({$count} مشترك)</message>

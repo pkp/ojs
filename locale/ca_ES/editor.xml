@@ -31,7 +31,6 @@
 	<message key="editor.submissionReview.emailWillArchive">Aquesta tramesa s’arxivarà després d’haver enviat el correu electrònic «Notifica a l’autor/a» o d’haver premut el botó «Omet el correu electrònic».</message>
 	<message key="editor.submissionReview.cannotSendToCopyediting">Abans d’enviar la tramesa per fer la correcció d’originals, utilitzeu l’enllaç «Notifica a l’autor/a» per informar l’autor/a de la decisió i seleccioneu la versió que s’ha d’enviar.</message>
 	<message key="editor.notifyUsers">Notifica als usuaris/àries</message>
-	<message key="editor.notifyUsers.allUsers">Tots els usuaris/àries associats a aquesta revista ({$count} usuaris/àries)</message>
 	<message key="editor.notifyUsers.allReaders">Tots els lectors/ores ({$count} usuaris/àries)</message>
 	<message key="editor.notifyUsers.allAuthors">Tots els autors/ores publicats ({$count} usuaris/àries)</message>
 	<message key="editor.notifyUsers.allIndividualSubscribers">Tots els subscriptors/ores individuals ({$count} usuaris/àries)</message>

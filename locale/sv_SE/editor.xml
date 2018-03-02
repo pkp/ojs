@@ -30,7 +30,6 @@
 	<message key="editor.submissionReview.emailWillArchive">Det här bidraget kommer att arkiveras när Meddela författare-meddelandet har skickats (eller när du klickar på Hoppa över e-postmeddelande-knappen).</message>
 	<message key="editor.submissionReview.cannotSendToCopyediting">Innan du skickar bidraget till Manusredigering, använd Meddela författare-länken för att upplysa författaren om beslutet och välj den version som ska skickas vidare.</message>
 	<message key="editor.notifyUsers">Meddela användare</message>
-	<message key="editor.notifyUsers.allUsers">Alla användare knutna till den här tidskriften ({$count} användare)</message>
 	<message key="editor.notifyUsers.allReaders">Alla läsare ({$count} användare)</message>
 	<message key="editor.notifyUsers.allAuthors">Alla publicerade författare ({$count} användare)</message>
 	<message key="editor.notifyUsers.allIndividualSubscribers">Alla enskilda prenumeranter ({$count} användare)</message>

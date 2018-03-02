@@ -29,7 +29,6 @@
 	<message key="editor.submissionReview.cannotSendToCopyediting">Zanim prześlesz tekst do Przed przesłaniem tekstu do redakcji techniczne, powiadom autora o decyzji i wyborze wersji do przesłania.</message>
 	<message key="editor.submissionReview.sendToCopyediting">Prześli do redakcji technicznej</message>
 	<message key="editor.notifyUsers">Powiadom użytkowników o nowym numerze</message>
-	<message key="editor.notifyUsers.allUsers">Wszyscy użytkownicy związani z tą konferencją ({$count})</message>
 	<message key="editor.notifyUsers.allReaders">Wszyscy czytelnicy ({$count})</message>
 	<message key="editor.notifyUsers.allAuthors">Wszyscy autorzy ({$count})</message>
 	<message key="editor.notifyUsers.allIndividualSubscribers">Wszyscy subskrybenci ({$count})</message>

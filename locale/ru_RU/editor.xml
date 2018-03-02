@@ -30,7 +30,6 @@
 	<message key="editor.submissionReview.emailWillArchive">Этот материал будет перенесен в архив после того, как будет отправлено письмо «Уведомить автора» или нажата кнопка «Не отправлять письмо».</message>
 	<message key="editor.submissionReview.cannotSendToCopyediting">Перед отправкой материала на литературное редактирование используйте ссылку «Уведомить автора», чтобы сообщить автору о решении и выберите версию, которую нужно отправить.</message>
 	<message key="editor.notifyUsers">Уведомить пользователей</message>
-	<message key="editor.notifyUsers.allUsers">Все пользователи, связанные с этим журналом ({$count} пользователей)</message>
 	<message key="editor.notifyUsers.allReaders">Все читатели ({$count} пользователей)</message>
 	<message key="editor.notifyUsers.allAuthors">Все опубликованные авторы ({$count} пользователей)</message>
 	<message key="editor.notifyUsers.allIndividualSubscribers">Все индивидуальные подписчики ({$count} пользователей)</message>
