@@ -84,10 +84,11 @@ class EditorDecisionActionsManager {
 	}
 
 	/**
-	 * Get the available decisions by stage ID.
+	 * Get the available decisions by stage ID and user making decision permissions,
+	 * if the user can make decisions or if it is recommendOnly user.
 	 * @param $context Context
 	 * @param $stageId int WORKFLOW_STAGE_ID_...
-	 * @param $makeDecision boolean
+	 * @param $makeDecision boolean If the user can make decisions
 	 */
 	static function getStageDecisions($context, $stageId, $makeDecision = true) {
 		switch ($stageId) {
@@ -124,7 +125,10 @@ class EditorDecisionActionsManager {
 	//
 	/**
 	 * Define and return editor decisions for the submission stage.
-	 * @param $makeDecision boolean
+	 * If the user cannot make decisions i.e. if it is a recommendOnly user,
+	 * the user can only send the submission to the review stage, and neither
+	 * acept nor decline the submission.
+	 * @param $makeDecision boolean If the user can make decisions
 	 * @return array
 	 */
 	static function _submissionStageDecisions($makeDecision = true) {
@@ -156,8 +160,10 @@ class EditorDecisionActionsManager {
 
 	/**
 	 * Define and return editor decisions for the review stage.
+	 * If the user cannot make decisions i.e. if it is a recommendOnly user,
+	 * there will be no decisions options in the review stage.
 	 * @param $context Context
-	 * @param $makeDecision boolean
+	 * @param $makeDecision boolean If the user can make decisions
 	 * @return array
 	 */
 	static function _externalReviewStageDecisions($context, $makeDecision = true) {
@@ -197,7 +203,9 @@ class EditorDecisionActionsManager {
 
 	/**
 	 * Define and return editor decisions for the editorial stage.
-	 * @param $makeDecision boolean
+	 * Currently it does not matter if the user cannot make decisions
+	 * i.e. if it is a recommendOnly user for this stage.
+	 * @param $makeDecision boolean If the user cannot make decisions
 	 * @return array
 	 */
 	static function _editorialStageDecisions($makeDecision = true) {
