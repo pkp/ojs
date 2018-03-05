@@ -792,7 +792,7 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 	/**
 	 * @copydoc PKPPubIdPluginDAO::pubIdExists()
 	 */
-	function pubIdExists($pubIdType, $pubId, $issueId, $journalId) {
+	function pubIdExists($pubIdType, $pubId, $excludePubObjectId, $contextId) {
 		$result = $this->retrieve(
 			'SELECT COUNT(*)
 			FROM issue_settings ist
@@ -801,8 +801,8 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 			array(
 				'pub-id::'.$pubIdType,
 				$pubId,
-				(int) $issueId,
-				(int) $journalId
+				(int) $excludePubObjectId,
+				(int) $contextId
 			)
 		);
 		$returner = $result->fields[0] ? true : false;
@@ -813,12 +813,12 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 	/**
 	 * @copydoc PKPPubIdPluginDAO::changePubId()
 	 */
-	function changePubId($issueId, $pubIdType, $pubId) {
+	function changePubId($pubObjectId, $pubIdType, $pubId) {
 		$idFields = array(
 			'issue_id', 'locale', 'setting_name'
 		);
 		$updateArray = array(
-			'issue_id' => (int) $issueId,
+			'issue_id' => (int) $pubObjectId,
 			'locale' => '',
 			'setting_name' => 'pub-id::'.$pubIdType,
 			'setting_type' => 'string',
@@ -831,13 +831,13 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 	/**
 	 * @copydoc PKPPubIdPluginDAO::deletePubId()
 	 */
-	function deletePubId($issueId, $pubIdType) {
+	function deletePubId($pubObjectId, $pubIdType) {
 		$settingName = 'pub-id::'.$pubIdType;
 		$this->update(
 			'DELETE FROM issue_settings WHERE setting_name = ? AND issue_id = ?',
 			array(
 				$settingName,
-				(int)$issueId
+				(int)$pubObjectId
 			)
 		);
 		$this->flushCache();
@@ -846,12 +846,11 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 	/**
 	 * @copydoc PKPPubIdPluginDAO::deleteAllPubIds()
 	 */
-	function deleteAllPubIds($journalId, $pubIdType) {
-		$journalId = (int) $journalId;
+	function deleteAllPubIds($contextId, $pubIdType) {
 		$settingName = 'pub-id::'.$pubIdType;
 
 		// issues
-		$issues = $this->getIssues($journalId);
+		$issues = $this->getIssues($contextId);
 		while ($issue = $issues->next()) {
 			$this->update(
 				'DELETE FROM issue_settings WHERE setting_name = ? AND issue_id = ?',
