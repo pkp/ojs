@@ -4,8 +4,8 @@
 <!--
   * locale/pl_PL/emailTemplates.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Polish_(pl_PL)
   * Localized email templates XML file.
@@ -477,18 +477,6 @@ Dziękujemy za współpracę z czasopismem.
 Z wyrazami szacunku,
 {$copyeditorName}</body>
 		<description></description>
-	</email_text>
-	<email_text key="COPYEDIT_ACK">
-		<subject>Podziękowanie za redakcje techniczną</subject>
-		<body>Do: {$copyeditorName}
-
-Szanowna Pani / Szanowny Panie,
-
-Dziękujemy za wykonanie redakcji technicznej tekstu "{$articleTitle}", zgłoszonego do czasopisma {$journalName}. Pani/Pana praca ma ogromne znaczenie dla jakości czasopisma.
-
-Z wyrazami szacunku,
-{$editorialContactSignature}</body>
-		<description>Ta wiadomość jest wysyłana przez redaktora działu do redaktora technicznego w celu podziękowania za wykonaną redakcję techniczną.</description>
 	</email_text>
 	<email_text key="COPYEDIT_AUTHOR_REQUEST">
 		<subject>Prośba o przejrzenie tekstu po redakcji technicznej</subject>

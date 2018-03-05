@@ -4,8 +4,8 @@
 <!--
   * locale/de_DE/locale.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_German_(de_DE)
   * Localization strings.
@@ -480,11 +480,6 @@ Sie können der Nutzerin/dem Nutzer einen Grund für die Sperrung des Zugangs an
 	<!-- Navigation sidebar menu -->
 
 	<!-- Used by editor in submission review / editing -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[Der Name verweist zum Profil der Gutachterin/des Gutachters.<br />
-Die Bewertung erfolgt auf einer Skala von 1-5 (Ausgezeichnet).<br />
-"Wochen" bezieht sich auf die durchschnittlich von der Gutachterin/dem Gutachter für die Erstellung einer Begutachtung benötigte Zeit<br />
-"Zuletzt" bezieht sich auf das Annahmedatum der letzten Begutachtung<br />
-"Aktuell" bezieht sich auf die Anzahl momentan übernommener oder in Betracht gezogener Begutachtungen.]]></message>
 
 
 
@@ -578,7 +573,6 @@ Die Bewertung erfolgt auf einer Skala von 1-5 (Ausgezeichnet).<br />
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">Datei zum Lektorat</message>
 	<message key="copyeditor.article.copyeditorFile">Datei der Lektorin/des Lektors</message>
-	<message key="copyeditor.article.uploadedFile">Hochgeladene Datei</message>
 	<message key="copyeditor.article.copyeditorFinalFile">Datei der Lektorin/des Lektors</message>
 
 	<!-- Proofreader -->

@@ -4,8 +4,8 @@
 <!--
   * locale/sr_RS@latin/admin.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University 
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Serbian_(sr_RS)
   * Localization strings for the sr_RS@latin (Srpski) locale.
@@ -58,12 +58,6 @@
 	<message key="admin.mergeUsers.confirm">Da li ste sigurni da želite da spojite korisničke naloge {$oldAccountCount} u nalog sa korisničkim imenom "{$newUsername}"? odabrani nalozi {$oldAccountCount} više neće postojati.</message>
 	<message key="admin.mergeUsers.noneEnrolled">Nema korisnika sa dodeljenim ulogama.</message>
 	<message key="admin.settings.options">Opcije</message>
-	<message key="admin.settings.usePaging">Prelomi listu časopisa na nekoliko strana na sajtovima sa mnogo časopisa</message>
-	<message key="admin.settings.journalsList">Elementi časopisa</message>
-	<message key="admin.settings.journalsList.description">Odaberite elemente časopisa koji trebaju biti prikazani za svaki časopis na stranici sajta.</message>
-	<message key="admin.settings.journalsList.showThumbnail">Mala slika časopisa</message>
-	<message key="admin.settings.journalsList.showTitle">Naslov časopisa</message>
-	<message key="admin.settings.journalsList.showDescription">Opis časopisa</message>
 	<!-- Categories -->
 	<message key="admin.categories">Kategorije</message>
 	<message key="admin.categories.disableCategories">Ne organizuj časopise u kategorije.</message>

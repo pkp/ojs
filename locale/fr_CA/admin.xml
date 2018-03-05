@@ -4,8 +4,8 @@
 <!--
   * locale/fr_CA/admin.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_French_(fr_CA)
   * Localization strings.
@@ -58,12 +58,6 @@
 	<message key="admin.mergeUsers.noneEnrolled">Aucun utilisateur inscrit.</message>
 	<message key="admin.locale.maybeIncomplete">Les langues sélectionnées peuvent être incomplètes.</message>
 	<message key="admin.settings.options">Options</message>
-	<message key="admin.settings.usePaging">Sur les sites qui rassemblent un grand nombre de revues, fragmentez la liste de titres en plusieurs pages.</message>
-	<message key="admin.settings.journalsList">Éléments de la revue</message>
-	<message key="admin.settings.journalsList.description">Veuillez choisir pour chaque revue les éléments que vous souhaitez présenter sur la page du site.</message>
-	<message key="admin.settings.journalsList.showThumbnail">Vignette de la revue</message>
-	<message key="admin.settings.journalsList.showTitle">Titre de la revue</message>
-	<message key="admin.settings.journalsList.showDescription">Description de la revue</message>
 	<message key="admin.categories">Catégories</message>
 	<message key="admin.categories.enable.description">S'il le veut, l'administrateur de site peut ici définir un ensemble de catégories visant à optimiser la gestion d'un grand nombre de titres. Les directeurs de revue pourront alors rattacher leur publication à plusieurs de ces catégories, et les lecteurs pourront consulter les revues disponibles par type de catégorie.</message>
 	<message key="admin.categories.disableCategories">Ne pas classer les revues par catégorie.</message>
@@ -76,7 +70,7 @@
 	<message key="admin.categories.name">Nom</message>
 	<message key="admin.categories.nameRequired">Un nom de catégorie est requis.</message>
 	<message key="admin.settings.defaultMetricDescription">Votre installation OJS est paramétrée pour enregistrer plus d'une mesure d'utilisation. Les statistiques d'utilisation seront affichées dans plusieurs contextes. Il y a des cas où seulement une statistique d'utilisation doit être utilisée, ex. pour afficher une liste ordonnée des articles les plus utilisés ou classer les résultats de recherche. Veuillez sélectionnez l'une des mesures comme celle par défaut.</message>
-	
+
 	<message key="admin.languages.confirmDisable">Êtes-vous certain de vouloir désactiver cette instance locale? Cela pourrait avoir un impact sur toute revue utilisant présentement cette instance.</message>
 	<message key="admin.contexts.form.titleRequired">Un titre est requis.</message>
 	<message key="admin.presses.createInstructions">Le rôle de directeur de la revue vous sera automatique attribué. Après avoir créer une nouvelle revue, vous serez dirigé vers son assistant de configuration afin de terminer la configuration initiale de la revue.</message>

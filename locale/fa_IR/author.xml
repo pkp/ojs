@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
+<!--
+  * locale/fa_IR/author.xml
+  *
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
+  * Credits: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Farsi_(fa_IR)
+  -->
+<locale name="fa_IR" full_name="فارسی">
+	<message key="author.submit">مقاله ارسالی جدید</message>
+	<message key="author.track">مقالات ارسال شده فعال</message>
+	<message key="author.competingInterests"><![CDATA[<a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">سیاست</a> تضاد&nbsp;منافع ]]></message>
+	<message key="author.submit.submitArticle">ارسال مقاله</message>
+	<message key="author.submit.stepsToSubmit">پنج مرحله ارسال مقاله</message>
+	<message key="author.submit.startHereTitle">ارسال مقاله جدید</message>
+	<message key="author.submit.startHereLink"><![CDATA[<a href="{$submitUrl}" class="action">اینجا را کلیک کنید</a> تا به اولین مرحله از مراحل پنج گانه ارسال مقاله بروید.]]></message>
+	<message key="author.submit.step1">مرحله اول: شروع ارسال مقاله</message>
+	<message key="author.submit.step2">مرحله سوم: آپلود فایل مقاله</message>
+	<message key="author.submit.step3">مرحله دوم: وارد کردن فراداده‌ها</message>
+	<message key="author.submit.step4">مرحله چهارم: آپلود فایل‌های مکمل</message>
+	<message key="author.submit.step4a">مرحله چهارم (الف): افزودن یک فایل مکمل</message>
+	<message key="author.submit.step5">مرحله پنجم: تأیید ارسال مقاله</message>
+	<message key="author.submit.start">شروع</message>
+	<message key="author.submit.upload">آپلود مقاله ارسالی</message>
+	<message key="author.submit.metadata">وارد کردن فراداده</message>
+	<message key="author.submit.supplementaryFiles">آپلود فایل‌های مکمل</message>
+	<message key="author.submit.confirmation">تأییدیه</message>
+	<message key="author.submit.nextSteps">مرحله‌ی بعدی</message>
+	<message key="submission.submit.cancelSubmission">می توانید با انتخاب گزینه بایگانی از بخش اصلی ارسال مقاله، این مقاله را در آینده ویرایش کنید.</message>
+	<message key="author.submit.notAccepting">این مجله در حال حاضر مقاله نمی‌پذیرد</message>
+	<message key="author.submit.requestWaiver">درخواست تخفیف</message>
+	<message key="author.submit.qualifyForWaiver">لطفاً درخواست تخفیف برای این مقاله را در نظر بگیرید</message>
+	<message key="author.submit.addReasonsForWaiver">لطفاً در قسمت زیر توضیح دهید که چرا می‌بایست به شما تخفیف دهیم</message>
+	<message key="author.submit.mustEnterWaiverReason">در صورت درخواست تخفیف، می‌بایست در محلی که مشخص شده است دلیل خود را ذکر نمایید.</message>
+	<message key="author.submissions.queuedReviewSubsequent">در دور داوری {$round} </message>
+	<message key="author.submissions.queuedReviewRevisions">در حال داوری: نیاز به اصلاحات</message>
+	<message key="author.submissions.queuedEditingCopyedit">در حال ویرایش: تقاضای ویراستیاری</message>
+	<message key="author.submissions.queuedEditingProofread">در حال ویرایش: تقاضای بازبینی نهایی</message>
+	<message key="author.submissions.uploadCopyeditedVersion">آپلود نسخه ویراستاری شده</message>
+	<message key="author.submissions.proofreadingCorrections">اصلاحات بازبینی نهائی</message>
+	<message key="author.submissions.confirmDelete">آیا می‌خواهید این مقاله ارسالی ناقص را حذف کنید؟</message>
+	<message key="author.submissions.viewStatus">مشاهده وضعیت</message>
+	<message key="author.submissions.noSubmissions">هیچ مقاله ارسالی وجود ندارد</message>
+	<message key="author.submit.journalSection">نوع مقاله</message>
+	<message key="author.submit.journalSectionDescription">نوع مقاله را انتخاب کنید. برای اطلاعات بیشتر درباره انواع مقالات و سیاست‌گذاری‌های مربوطه به صفحه </message>
+	<message key="author.submit.verifyChecklist">قبل از ادامه کار اطمینان حاصل کنید که تمام موارد لازم برای ارسال مقاله که در چک‌لیست آمده است را رعایت کرده‌اید.</message>
+	<message key="author.submit.copyrightNoticeAgree">نویسندگان این مقاله موافقت خودشان را با بیانیه حق نشر این مجله اعلام می‌کنند. این بیانیه در صورت چاپ شدن این مقاله در این مجله قابل اعمال است. در قسمت پائین این صفحه می‌توانید نظرات خود را به اطلاع سردبیر برسانید.</message>
+	<message key="author.submit.copyrightNoticeAgreeRequired">قبل از ادامه ، می‌بایست با بیانیه حق نشر موافقت نمایید.</message>
+	<message key="submission.submit.coverNote">اعلام نقطه نظراتتان به سردبیر</message>
+	<message key="author.submit.comments">متن پیام (اختیاری)</message>
+	<message key="author.submit.form.sectionRequired">لطفاً نوع مقاله خود را انتخاب کنید</message>
+	<message key="author.submit.form.localeRequired">لطفاً زبان مقاله ارسالی را انتخاب کنید</message>
+	<message key="submission.submit.privacyStatement">بیانیه محرمانگی اطلاعات مجله</message>
+	<message key="author.submit.reorderInstructions">با استفاده از فلش‌ها ترتیب نام نویسندگان را تغییر دهید.</message>
+	<message key="author.submit.reorder">تغییر ترتیب نویسنده</message>
+	<message key="author.submit.selectPrincipalContact">اطلاعات تماس نویسنده مسئول</message>
+	<message key="author.submit.addAuthor">افزودن نویسنده</message>
+	<message key="author.submit.deleteAuthor">حذف نویسنده</message>
+	<message key="author.submit.submissionIndexingDescription">واژه‌هایی برای نمایه کردن مقاله، برای جداسازی واژه‌ها از سمی کالون استفاده نمایید (واژه1؛ واژه۲؛ واژه3)</message>
+	<message key="author.submit.coverageInstructions">به پوشش جغرافیائی، تاریخی یا زمانی و یا خصوصیات نمونه‌های تحقیق اشاره دارد.</message>
+	<message key="author.submit.languageInstructions"><![CDATA[English=en; Persian=fa; Arabic=ar. <a href="http://www.loc.gov/standards/iso639-2/langcodes.html" target="_blank">کدهای دیگر</a>.]]></message>
+	<message key="author.submit.form.authorRequired">وارد کردن اطلاعات حداقل یک نویسنده الزامی است</message>
+	<message key="author.submit.form.authorRequiredFields">وارد کردن نام، نام خانوادگی و ایمیل هر نویسنده الزامی است</message>
+	<message key="author.submit.form.titleRequired">لطفاً عنوان مقاله را وارد کنید.</message>
+	<message key="author.submit.form.abstractRequired">لطفاً چکیده مقاله را وارد کنید</message>
+	<message key="author.submit.form.wordCountAlert">تعداد کلمات چکیده از سقف مجاز برای این نوع مقاله تجاوز کرده است.</message>
+	<message key="author.submit.submissionFile">فایل مقاله ارسالی</message>
+	<message key="author.submit.uploadSubmissionFile">آپلود فایل مقاله</message>
+	<message key="author.submit.replaceSubmissionFile">جایگزینی فایل ارسال شده</message>
+	<message key="author.submit.noSubmissionFile">هیچ فایلی برای این مقاله آپلود نشده است.</message>
+	<message key="author.submit.noSubmissionConfirm">آیا می‌خواهید بدون آپلود هیچ فایلی ادامه دهید؟</message>
+	<message key="author.submit.supplementaryFilesInstructions">این مرحله اختیاری در روند ارسال مقاله به نویسندگان اجازه می‌دهد تا فایل‌های مکمل را به مقاله ثبت شده به افزایند. این فایل‌های مکمل می‌توانند شامل موارد زیر باشند: راهنمای پژوهش ، فایل داده ، منابعی که لازم است در دسترس خوانندگان قرار گیرد و یا تصاویری که آن‌ها را نمی‌توان در خود متن مقاله گنجاند. فایل‌های الحاقی با هر فرمت می‌توانند باشند و با همین فرمت در دسترس خوانندگان قرار می‌گیرند. در صورتی که محرمانگی داوری مقاله خدشه‌دار نشود بنا به صلاحدید نویسنده و دبیر این فایل‌ها نیز در دسترس داوران قرار می‌گیرد.</message>
+	<message key="author.submit.supplementaryFiles.saveToUpload">برای آپلود کردن فایل لطفاً بر روی دکمه «ذخیره» کلیک کنید. پس از این عمل فایل‌های دیگری را نیز می‌توانید آپلود کنید</message>
+	<message key="author.submit.forgottenSubmitSuppFile">آیا مطمئنید که می‌خواهید بدون آپلود فایل مکمل انتخاب شده، ادامه دهید؟</message>
+	<message key="author.submit.noSupplementaryFiles">هیچ فایل مکمل به این مقاله ارسالی افزوده نشده است</message>
+	<message key="author.submit.backToSupplementaryFiles">بازگشت به فایل‌های مکمل</message>
+	<message key="author.submit.confirmDeleteSuppFile">آیا می‌خواهید این فایل مکمل را حذف کنید؟</message>
+	<message key="author.submit.uploadSuppFile">آپلود فایل مکمل</message>
+	<message key="author.submit.addSupplementaryFile">افزودن یک فایل مکمل</message>
+	<message key="author.submit.editSupplementaryFile">ویرایش ویژگی‌های فایل مکمل</message>
+	<message key="author.submit.supplementaryFileData">فراداده فایل مکمل</message>
+	<message key="author.submit.supplementaryFileDataDescription">برای نمایه کردن این فایل مکمل فراداده‌های زیر را وارد کنید.</message>
+	<message key="author.submit.supplementaryFileUpload">فایل مکمل</message>
+	<message key="author.submit.suppFile.createrOrOwner">سازنده یا مالک فایل</message>
+	<message key="author.submit.suppFile.researchInstrument">ابزار پژوهشی</message>
+	<message key="author.submit.suppFile.researchMaterials">مواد پژوهشی</message>
+	<message key="author.submit.suppFile.researchResults">نتایج پژوهش</message>
+	<message key="author.submit.suppFile.transcripts">رونوشت</message>
+	<message key="author.submit.suppFile.dataAnalysis">آنالیز داده</message>
+	<message key="author.submit.suppFile.dataSet">مجموعه داده</message>
+	<message key="author.submit.suppFile.sourceText">متن منبع</message>
+	<message key="author.submit.suppFile.briefDescription">توصیف مختصر</message>
+	<message key="author.submit.suppFile.availableToPeers">فایل بدون فراداده در دسترس داوران قرار گیرد تا سیاست داوری محرمانه خدشه‌دار نشود</message>
+	<message key="author.submit.suppFile.publisherDescription">فقط مورد موارد رسماً چاپ شده استفاده شود</message>
+	<message key="author.submit.suppFile.dateDescription">تاریخ جمع‌آوری داده‌ها یا تولید ابزار</message>
+	<message key="author.submit.suppFile.sourceDescription">نام مطالعه یا دیگر منبع</message>
+	<message key="author.submit.suppFile.specifyOtherType">غیره</message>
+	<message key="author.submit.suppFile.noFile">فایلی آپلود نشده است</message>
+	<message key="author.submit.suppFile.form.titleRequired">لطفاً عنوان این فایل مکمل را وارد کنید</message>
+	<message key="author.submit.suppFile.form.subjectRequired">لطفاً یک موضوع وارد کنید</message>
+	<message key="author.submit.suppFile.form.descriptionRequired">لطفاً یک توصیف وارد کنید</message>
+	<message key="author.suppFile.suppFilePublicIdentificationExists">شناسه عمومی تعیین شده برای فایل مکمل تکراری است</message>
+	<message key="author.suppFile.publicSuppFileIdentifier">شناسه عمومی فایل مکمل</message>
+	<message key="author.submit.confirmationDescription">بر روی «تکمیل ارسال مقاله» کلیک کنید تا مقاله شما به مجله {$journalTitle} ارسال شود. رسید دریافت مقاله از طریق ایمیل به شما ارسال خواهد شد. برای مشاهده وضعیت داوری و انتشار مقاله ارسالی وارد سامانه شوید. از توجه شما به مجله {$journalTitle} متشکریم.</message>
+	<message key="author.submit.noFiles">هیچ فایلی به این مقاله ارسالی ضمیمه نشده است</message>
+	<message key="author.submit.filesSummary">لیست فایل‌های آپلود شده</message>
+	<message key="author.submit.finishSubmission">تکمیل ارسال مقاله</message>
+	<message key="author.submit.submissionComplete">ارسال مقاله تکمیل شد. از توجه شما به مجله {$journalTitle} متشکریم.</message>
+	<message key="author.article.uploadAuthorVersion">آپلود نسخه اصلاحی نویسنده</message>
+	<message key="author.article.copyeditedFile">فایل ویراستاری شده</message>
+	<message key="author.article.authorRevisedFile">فایل نویسنده</message>
+	<message key="author.submit.authorSubmitLoginMessage">برای ارسال مقاله داشتن حساب کاربری الزامی است. بدین وسیله تیم سردبیری می‌توانند مقاله ارسالی شما را پیگیری کرده و با شما تماس بگیرند.</message>
+</locale>

@@ -4,8 +4,8 @@
 <!--
   * locale/sr_RS@latin/locale.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization strings for the sr_RS@latin (Srpski) locale.
   *
@@ -256,13 +256,6 @@ Opciono možete proslediti korisniku razlog zašto ste mu onemogućili nalog.</m
 	<li>"Rok" se aktivira u trenutku kada recenzent prihvati zahtev za recenziju i označava broj nedelja do isteka roka za izradu recenzije ili (-) kada je rok recenzije istekao.</li>
 </ol>]]></message>
 
-	<!--  Editor Index Page  -->	<!--  Back Issues  -->	<!--  Create Issue / Issue Data  -->	<!--  Live Issues  -->	<!--  Navigation sidebar menu  -->	<!--  Used by editor in submission review / editing  -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[Link na imenu vodi do recenzentovog profila.<br />
-Ocene su do 5 (Odličan).<br />
-Nedelje prikazuju prosečno vreme koje je recenzentu bilo potrebno  za završetak recenzije.<br />
-Poslednje prikazuje datum poslednje recenzije dodate recenzentu.<br />
-Aktivnih prikazuje na koliko je recenzija recenzent trenutno angažovan.]]></message>
-
 	<!--  Section Editor  -->
 	<message key="sectionEditor.activeEditorialAssignments">Aktivna urednička zaduženja</message>
 	<message key="sectionEditor.completedEditorialAssignments">Dovršena urednička zaduženja</message>
@@ -335,7 +328,6 @@ Aktivnih prikazuje na koliko je recenzija recenzent trenutno angažovan.]]></mes
 	<!--  Used in submission editing  -->
 	<message key="copyeditor.article.fileToCopyedit">Fajl za lektorisanje</message>
 	<message key="copyeditor.article.copyeditorFile">Fajl lektora</message>
-	<message key="copyeditor.article.uploadedFile">Dostavljen fajl</message>
 	<message key="copyeditor.article.copyeditorFinalFile">Fajl lektora</message>
 
 	<!--  Proofreader  --><message key="proofreader.noProofreadingAssignments">Korektura nije dodeljena</message>

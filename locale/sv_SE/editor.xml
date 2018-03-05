@@ -4,8 +4,8 @@
 <!--
   * locale/sv_SE/editor.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2000-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2000-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Swedish_(sv_SE)
   * Localization strings.
@@ -30,7 +30,6 @@
 	<message key="editor.submissionReview.emailWillArchive">Det här bidraget kommer att arkiveras när Meddela författare-meddelandet har skickats (eller när du klickar på Hoppa över e-postmeddelande-knappen).</message>
 	<message key="editor.submissionReview.cannotSendToCopyediting">Innan du skickar bidraget till Manusredigering, använd Meddela författare-länken för att upplysa författaren om beslutet och välj den version som ska skickas vidare.</message>
 	<message key="editor.notifyUsers">Meddela användare</message>
-	<message key="editor.notifyUsers.allUsers">Alla användare knutna till den här tidskriften ({$count} användare)</message>
 	<message key="editor.notifyUsers.allReaders">Alla läsare ({$count} användare)</message>
 	<message key="editor.notifyUsers.allAuthors">Alla publicerade författare ({$count} användare)</message>
 	<message key="editor.notifyUsers.allIndividualSubscribers">Alla enskilda prenumeranter ({$count} användare)</message>
@@ -121,72 +120,7 @@
 	<message key="grid.action.setCurrentIssue">Sätt som senaste nummer</message>
 	<message key="editor.navigation.issueArchive">Publicerade nummer</message>
 	<message key="editor.article.designateReviewVersion">Registrera originalfilen som Granskningsversion</message>
-	<message key="editor.article.uploadReviewVersion">Ladda upp en omarbetad Granskningsversion.</message>
-	<message key="editor.article.showSuppFile">Visa filen för granskare</message>
-	<message key="editor.article.layoutAndProof">Layout &amp; Korrektur</message>
-	<message key="editor.article.clear">Rensa</message>
-	<message key="editor.article.clearReviewer">Rensa granskare</message>
-	<message key="editor.article.changeSection">Ändre sektion</message>
-	<message key="editor.article.setDueDate">Ange deadline</message>
-	<message key="editor.article.addReviewer">Lägg till granskare</message>
-	<message key="editor.article.toReviewer">Till granskare</message>
-	<message key="editor.article.notifyReviewer">Meddela granskare</message>
-	<message key="editor.article.initiateReview">Påbörja granskning</message>
-	<message key="editor.article.cancelReview">Avbryt förfrågan om granskning</message>
-	<message key="editor.article.clearReview">Rensa granskare</message>
-	<message key="editor.article.enterRecommendation">Lägg till rekommendation</message>
-	<message key="editor.article.enterReviewerRecommendation">Lägg till granskares rekommendation</message>
-	<message key="editor.article.recommendation">Rekommendation</message>
-	<message key="editor.article.selectReviewer">Välj granskare</message>
-	<message key="editor.article.replaceReviewer">Ersätt granskare</message>
-	<message key="editor.article.editorToEnter">Redaktören ska fylla i rekommendation/kommentarer från granskaren</message>
-	<message key="editor.article.uploadReviewForReviewer">Ladda upp granskning</message>
-	<message key="editor.article.peerReviewOptions">Alternativ för sakkunniggranskning</message>
 	<message key="editor.article.decision">Beslut</message>
-	<message key="editor.article.noEditorSelected">Ingen redaktör vald.</message>
-	<message key="editor.article.recordDecision">Registrera beslutet</message>
-	<message key="editor.article.cannotRecord">Sektionsredaktör inte registrerad eller ingen granskningsfil tillgänglig.</message>
-	<message key="editor.article.reviewersSeeAuthorsVersion">Granskare ska kunna se författarversionen.</message>
-	<message key="editor.article.designateDueDate">Sätt en deadline</message>
-	<message key="editor.article.designateDueDateDescription">Ange datumet eller antalet veckor för ny deadline.</message>
-	<message key="editor.article.todaysDate">Dagens datum</message>
-	<message key="editor.article.requestedByDate">Begärd till datum:</message>
-	<message key="editor.article.dueDateFormat">Format: ÅÅÅÅ-MM-DD</message>
-	<message key="editor.article.numberOfWeeks">Antal veckor</message>
-	<message key="editor.article.selectCopyeditor">Utse manusredaktör</message>
-	<message key="editor.article.replaceCopyeditor">Ersätt manusredaktör</message>
-	<message key="editor.article.editorsCopyedit">Redaktörens manusredigering</message>
-	<message key="editor.article.showAuthor">Tillåt författare se filen</message>
-	<message key="editor.article.showCopyeditor">Visa versionen för manusredaktören</message>
-	<message key="editor.article.rateReviewer">Granskarens betyg</message>
-	<message key="editor.article.reviewerRating.veryGood">5 (högsta betyg)</message>
-	<message key="editor.article.reviewerRating.good">4</message>
-	<message key="editor.article.reviewerRating.average">3</message>
-	<message key="editor.article.reviewerRating.poor">2</message>
-	<message key="editor.article.reviewerRating.veryPoor">1 (lägsta betyg)</message>
-	<message key="editor.article.comments">Kommentarer</message>
-	<message key="editor.article.commentsRequired">Kommentarsfältet är obligatoriskt.</message>
-	<message key="editor.article.saveRating">Spara betygsättning</message>
-	<message key="editor.article.noneSelected">Ingen vald</message>
-	<message key="editor.article.authorProofing">Författarkorrektur</message>
-	<message key="editor.article.archiveSubmission">Avvisa och arkivera bidrag</message>
-	<message key="editor.article.restoreToQueue">Återställ till aktiva-listan</message>
-	<message key="editor.article.assignSectionEditor">Utse sektionsredaktör</message>
-	<message key="editor.article.assignEditor">Utse redaktör</message>
-	<message key="editor.article.selectEditor">Välj {$roleName}</message>
-	<message key="editor.article.selectDecision">Välj beslut</message>
-	<message key="editor.article.selectLayoutEditor">Välj layoutredaktör</message>
-	<message key="editor.article.replaceLayoutEditor">Ersätt ayoutredaktör</message>
-	<message key="editor.article.reviewSubmission">Granska bidrag</message>
-	<message key="editor.article.resubmitForReview">Återsänd filen för granskning</message>
-	<message key="editor.article.resubmitFileForPeerReview">Återsänd vald fil för sakkunniggranskning</message>
-	<message key="editor.article.sendToCopyedit">Skicka filen till Manusredigering</message>
-	<message key="editor.article.selectProofreader">Utse korrekturläsare</message>
-	<message key="editor.article.replaceProofreader">Ersätt korrekturläsare</message>
-	<message key="editor.article.authorComments">Kommentarer från författare</message>
-	<message key="editor.article.proofreaderComments">Kommentarer från korrekturläsare</message>
-	<message key="editor.article.layoutEditorFinal">Layoutredaktörens sista</message>
-	<message key="editor.article.noDate">(datum)</message>
 	<message key="editor.submissions.showBy">Sortera efter</message>
 	<message key="editor.submissions.submitMMDD">Skicka in MM-DD</message>
 	<message key="editor.submissions.activeAssignments">Aktiva uppdrag</message>
@@ -202,16 +136,7 @@
 	<message key="editor.article.scheduleForPublication">Ska publiceras i</message>
 	<message key="editor.article.scheduleForPublication.toBeAssigned">Återstår att planera</message>
 	<message key="editor.article.payment.publicationFeeNotPaid">Publiceringsavgiften ej betald. För att planlägga för publicering, meddela författaren att betala eller avsäga sig avgiften.</message>
-	<message key="editor.article.display">Visa</message>
-	<message key="editor.article.hideTocAuthorDescription">Utelämna författarnamnen i numrets innehållsförteckning</message>
-	<message key="editor.article.hideTocAuthorDefault">Default</message>
-	<message key="editor.article.hideTocAuthorHide">Utelämna</message>
-	<message key="editor.article.hideTocAuthorShow">Visa</message>
-	<message key="editor.article.cover">Omslag</message>
-	<message key="editor.article.coverImage">Omslagsbild</message>
 	<message key="editor.article.removeCoverImageFileNotFound">Omslagsbilden du försökte ta bort kunde inte hittas. Möjligen har den redan blivit borttagen. Ladda om sidan och försök igen.</message>
-	<message key="editor.article.uploaded">Uppladdad</message>
-	<message key="editor.article.removeCoverPage">Ta bort omslagsbild?</message>
 	<message key="grid.action.removeArticle">Ta bort artikel från nummer</message>
 	<message key="editor.article.remove">Ta bort</message>
 	<message key="editor.article.remove.confirm">Är du säker på att du vill ta bort den här artikeln från numret? Artikeln kommer bli tillgänglig för planläggning i annat nummer.</message>

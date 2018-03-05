@@ -3,8 +3,8 @@
 /**
  * @file pages/search/SearchHandler.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SearchHandler
@@ -220,15 +220,15 @@ class SearchHandler extends Handler {
 				$sectionId = $article->getSectionId();
 				$journalId = $article->getJournalId();
 
+				if (!isset($journals[$journalId])) {
+					$journals[$journalId] = $journalDao->getById($journalId);
+				}
 				if (!isset($issues[$issueId])) {
 					import('classes.issue.IssueAction');
 					$issue = $issueDao->getById($issueId);
 					$issues[$issueId] = $issue;
 					$issueAction = new IssueAction();
-					$issuesUnavailable[$issueId] = $issueAction->subscriptionRequired($issue, $journal) && (!$issueAction->subscribedUser($user, $journal, $issueId, $articleId) && !$issueAction->subscribedDomain($request, $journal, $issueId, $articleId));
-				}
-				if (!isset($journals[$journalId])) {
-					$journals[$journalId] = $journalDao->getById($journalId);
+					$issuesUnavailable[$issueId] = $issueAction->subscriptionRequired($issue, $journals[$journalId]) && (!$issueAction->subscribedUser($user, $journals[$journalId], $issueId, $articleId) && !$issueAction->subscribedDomain($request, $journals[$journalId], $issueId, $articleId));
 				}
 				if (!isset($sections[$sectionId])) {
 					$sections[$sectionId] = $sectionDao->getById($sectionId, $journalId, true);

@@ -3,8 +3,8 @@
 /**
  * @file classes/services/IssueService.php
 *
-* Copyright (c) 2014-2017 Simon Fraser University
-* Copyright (c) 2000-2017 John Willinsky
+* Copyright (c) 2014-2018 Simon Fraser University
+* Copyright (c) 2000-2018 John Willinsky
 * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
 *
 * @class IssueService
@@ -17,6 +17,10 @@ namespace OJS\Services;
 
 use \Journal;
 use \PKP\Services\EntityProperties\PKPBaseEntityPropertyService;
+use \OJS\Services\QueryBuilders\IssueListQueryBuilder;
+use \DBResultRange;
+use \DAORegistry;
+use \DAOResultFactory;
 
 class IssueService extends PKPBaseEntityPropertyService {
 
@@ -25,6 +29,85 @@ class IssueService extends PKPBaseEntityPropertyService {
 	 */
 	public function __construct() {
 		parent::__construct($this);
+	}
+
+	/**
+	 * Get issues
+	 *
+	 * @param int $contextId
+	 * @param array $args {
+	 * 		@option int volumes
+	 * 		@option int numbers
+	 * 		@option int years
+	 * 		@option boolean isPublished
+	 * 		@option int count
+	 * 		@option int offset
+	 * 		@option string orderBy
+	 * 		@option string orderDirection
+	 * }
+	 *
+	 * @return array
+	 */
+	public function getIssues($contextId, $args = array()) {
+		$issueListQB = $this->_buildGetIssuesQueryObject($contextId, $args);
+		$issueListQO = $issueListQB->get();
+		$range = new DBResultRange($args['count'], null, $args['offset']);
+		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$result = $issueDao->retrieveRange($issueListQO->toSql(), $issueListQO->getBindings(), $range);
+		$queryResults = new DAOResultFactory($result, $issueDao, '_fromRow');
+
+		return $queryResults->toArray();
+	}
+
+	/**
+	 * Get max count of issues matching a query request
+	 *
+	 * @see self::getIssues()
+	 * @return int
+	 */
+	public function getIssuesMaxCount($contextId, $args = array()) {
+		$issueListQB = $this->_buildGetIssuesQueryObject($contextId, $args);
+		$countQO = $issueListQB->countOnly()->get();
+		$countRange = new DBResultRange($args['count'], 1);
+		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$countResult = $issueDao->retrieveRange($countQO->toSql(), $countQO->getBindings(), $countRange);
+		$countQueryResults = new DAOResultFactory($countResult, $issueDao, '_fromRow');
+
+		return (int) $countQueryResults->getCount();
+	}
+
+	/**
+	 * Build the submission query object for getSubmissions requests
+	 *
+	 * @see self::getSubmissions()
+	 * @return object Query object
+	 */
+	private function _buildGetIssuesQueryObject($contextId, $args = array()) {
+
+		$defaultArgs = array(
+			'orderBy' => 'datePublished',
+			'orderDirection' => 'DESC',
+			'count' => 20,
+			'offset' => 0,
+			'isPublished' => null,
+			'volumes' => null,
+			'numbers' => null,
+			'years' => null,
+		);
+
+		$args = array_merge($defaultArgs, $args);
+
+		$issueListQB = new IssueListQueryBuilder($contextId);
+		$issueListQB
+			->orderBy($args['orderBy'], $args['orderDirection'])
+			->filterByPublished($args['isPublished'])
+			->filterByVolumes($args['volumes'])
+			->filterByNumbers($args['numbers'])
+			->filterByYears($args['years']);
+
+		\HookRegistry::call('Issue::getIssues::queryBuilder', array($issueListQB, $contextId, $args));
+
+		return $issueListQB;
 	}
 
 	/**

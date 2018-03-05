@@ -4,8 +4,8 @@
 <!--
   * dbscripts/xml/upgrade/3.0.0_change_assoc_type.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * 3.0.0.0 updates for assoc_type XML file.

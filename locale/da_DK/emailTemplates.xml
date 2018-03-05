@@ -4,8 +4,8 @@
 <!--
   * locale/da_DK/emailTemplates.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localized email templates XML file.
@@ -120,6 +120,14 @@ Hvis du har spørgsmål, er du velkommen til at kontakte mig. Tak, fordi du har 
 </br>
 {$editorialContactSignature}]]></body>
 		<description>Når denne e-mail er aktiveret, sendes den automatisk til en forfatter, når vedkommende har fremsendt et manuskript til tidsskriftet. Den indeholder oplysninger om, hvordan forfatteren kan følge manuskriptet igennem processen, og den takker forfatteren for manuskriptet.</description>
+	</email_text>
+	<email_text key="SUBMISSION_UNSUITABLE">
+		<subject>Uegnet manuskript</subject>
+		<body><![CDATA[{$authorName}:<br />
+<br />
+En indledende bedømmelse af &quot;{$submissionTitle}&quot; viser, at dette manuskript ikke stemmer overens med {$contextName}'s område og fokus. Jeg anbefaler, at du læser beskrivelsen af dette tidsskrift under Om samt dets aktuelle indhold for at få mere at vide om de artikler, vi publicerer. Du kan også overveje at sende manuskriptet til et andet og mere velegnet tidsskrift.<br />
+<br />
+{$editorialContactSignature}]]></body>
 	</email_text>
 	<email_text key="SUBMISSION_COMMENT">
 		<subject>Kommentar til manuskript</subject>
@@ -723,7 +731,7 @@ På forhånd tak!<br />
 <br />
 {$userFirstName}<br />
 Manuskriptredaktør, {$contextName}]]></body>
-		<description>Denne e-mail gør manuskriptredaktører i stand til at anmode forfattere om yderligere oplysninger vedrørende referencer.</description>
+		<description>Denne e-mail tillader manuskriptredaktører at anmode forfattere om yderligere oplysninger vedrørende referencer.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_SEND_TO_EXTERNAL">
 		<subject>Redaktørbeslutning</subject>
@@ -872,7 +880,7 @@ Tak for din overvejelse af denne forespørgsel.<br />
 	</email_text>
 	<email_text key="REVISED_VERSION_NOTIFY">
 		<subject>Revideret udgave uploadet</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
+		<body><![CDATA[Redaktører:<br />
 <br />
 En revideret udgave af &quot;{$submissionTitle}&quot; er blevet uploadet af forfatter {$authorName}.<br />
 <br />
@@ -880,5 +888,36 @@ Manuskriptets URL: {$submissionUrl}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Denne e-mail bliver automatisk sendt til udvalgte redaktør når forfatteren uploader en revideret udgave a en artikel.</description>
+	</email_text>
+	<email_text key="EDITOR_DECISION_INITIAL_DECLINE">
+		<subject>Redaktørbeslutning</subject>
+		<body><![CDATA[{$authorName}:<br />
+<br />
+Vi er nået frem til en afgørelse vedrørende dit bidrag til {$contextName}, &quot;{$submissionTitle}&quot;.<br />
+<br />
+Vi har besluttet at: Afvise manuskriptet<br />
+<br />
+{$editorialContactSignature}<br />]]></body>
+		<description>Denne e-mail sendes til forfatteren, hvis redaktøren afviser manuskriptet i indledningsfasen, før bedømmelsestrinnet</description>
+	</email_text>
+	<email_text key="EDITOR_RECOMMENDATION">
+		<subject>Redaktøranbefaling</subject>
+		<body><![CDATA[{$editors}:<br />
+<br />
+Anbefalingen med hensyn til {$contextName}, &quot;{$submissionTitle}&quot; er: {$recommendation}<br />
+<br />
+{$editorialContactSignature}<br />]]></body>
+		<description>This email from the recommending Editor or Section Editor to the decision making Editors or Section Editors notifies them of a final recommendation regarding the submission</description>
+	</email_text>
+	<email_text key="SUBMISSION_ACK_NOT_USER">
+		<subject>Indsendelsesbekræftelse</subject>
+		<body><![CDATA[Hej<br />
+<br />
+{$submitterName} har indsendt manuskriptet &quot;{$submissionTitle}&quot; til {$contextName}. <br />
+<br />
+Hvis du har spørgsmål, er du velkommen til at kontakte mig. Tak fordi du har valgt at publicere din artikel i dette tidsskrift.<br />
+<br />
+{$editorialContactSignature}]]></body>
+		<description>This email, when enabled, is automatically sent to the other authors who are not users within OJS specified during the submission process.</description>
 	</email_text>
 </email_texts>

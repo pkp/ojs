@@ -3,8 +3,8 @@
 /**
  * @file classes/services/SectionService.php
 *
-* Copyright (c) 2014-2017 Simon Fraser University
-* Copyright (c) 2000-2017 John Willinsky
+* Copyright (c) 2014-2018 Simon Fraser University
+* Copyright (c) 2000-2018 John Willinsky
 * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
 *
 * @class SectionService
@@ -76,14 +76,14 @@ class SectionService extends \PKP\Services\EntityProperties\PKPBaseEntityPropert
 	/**
 	 * @copydoc \PKP\Services\EntityProperties\EntityPropertyInterface::getSummaryProperties()
 	 */
-	public function getSummaryProperties($ection, $args = null) {
+	public function getSummaryProperties($section, $args = null) {
 		$props = array (
 			'id','abbrev','title','seq',
 		);
 
 		\HookRegistry::call('Section::getProperties::summaryProperties', array(&$props, $section, $args));
 
-		return $this->getProperties($ection, $props, $args);
+		return $this->getProperties($section, $props, $args);
 	}
 
 	/**

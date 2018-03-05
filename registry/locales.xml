@@ -3,8 +3,8 @@
 <!--
   * registry/locales.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Locales registry file.
@@ -24,6 +24,7 @@
 	<locale key="en_US" complete="true"  name="English" iso639-2b="eng" iso639-3="eng" />
 	<locale key="es_ES" complete="true"  name="Español (España)" iso639-2b="spa" iso639-3="spa" />
 	<locale key="eu_ES" complete="false" name="Euskara" iso639-2b="eus" iso639-3="eus" />
+	<locale key="fa_IR" complete="true"  name="فارسی" iso639-2b="per" iso639-3="per" direction="rtl" />
 	<locale key="fi_FI" complete="true" name="Suomi" iso639-2b="fin" iso639-3="fin" />	
 	<locale key="fr_CA" complete="false" name="Français (Canada)" iso639-2b="fre" iso639-3="fra" />
 	<locale key="fr_FR" complete="false" name="Français (France)" iso639-2b="fre" iso639-3="fra" />

@@ -4,8 +4,8 @@
 <!--
   * locale/pt_BR/admin.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Portuguese_(pt_BR)
   * Localization strings.
@@ -58,12 +58,6 @@
 	<message key="admin.mergeUsers.noneEnrolled">Nenhum usuário cadastrado.</message>
 	<message key="admin.locale.maybeIncomplete">Idiomas marcados podem estar incompletos.</message>
 	<message key="admin.settings.options">Opções</message>
-	<message key="admin.settings.usePaging">Para sites com muitas publicações, quebrar a lista em várias páginas.</message>
-	<message key="admin.settings.journalsList">Elementos da publicação</message>
-	<message key="admin.settings.journalsList.description">Escolha os elementos da publicação que serão exibidos para cada publicação na página do site.</message>
-	<message key="admin.settings.journalsList.showThumbnail">Miniatura da publicação</message>
-	<message key="admin.settings.journalsList.showTitle">Título</message>
-	<message key="admin.settings.journalsList.showDescription">Descrição</message>
 	<message key="admin.categories">Categorias</message>
 	<message key="admin.categories.enable.description">O Administrador do Sistema poderá definir o conjunto de categorias aqui para ajudar a organizar grandes volumes de publicações. Editores-Gerentes poderão então escolher várias dessas categorias para cada publicação, e leitores poderão navegar nas coleções por categoria.</message>
 	<message key="admin.categories.disableCategories">Não organizar publicações em categorias.</message>
@@ -76,7 +70,7 @@
 	<message key="admin.categories.name">Nome</message>
 	<message key="admin.categories.nameRequired">O nome da categoria é obrigatório.</message>
 	<message key="admin.settings.defaultMetricDescription">O OJS está configurado para registrar mais de uma métrica de uso. Estatísticas de uso serão exibidas em vários contextos. Há casos onde uma estatística única deve ser usada, como, por exemplo, para exibir listas ordenadas dos artigos mais usados, ou para classificar resultados de pesquisa. Escolha uma das métricas configuradas como padrão.</message>
-	
+
 	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Não é possível baixar idiomas do servidor do Public Knowledge Project. Os motivos possíveis são:
 	<ul>
 		<li>Seu servidor não possui ou não permite a execução da ferramenta "tar" GNU</li>

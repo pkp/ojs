@@ -4,8 +4,8 @@
 <!--
   * locale/tr_TR/locale.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the tr_TR (Türkçe) locale.
@@ -466,11 +466,6 @@ Editöryel süreçte bu basamakların nasıl işleyeceği konusunda bir model se
 	</ol>]]></message>
 
 	<!-- Used by editor in submission review / editing -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[İsim hakemin profiline bağlantıdır.<br />
-Puanlar 5 (çok iyi) üzerindendir.<br />
-Günler, bir değerlendirmeyi ortalama kaç günde tamamladığını gösterir.<br />
-En Son, son değerlendirmeyi kabul ettiği tarihi gösterir,<br />
-Artı (+) işareti ile hakemin şu anda değerlendirdiği yazılar belirtilmiştir.]]></message>
 
 	<!-- Section Editor -->
 	<message key="sectionEditor.activeEditorialAssignments">Aktif Editöryal Atamalar</message>
@@ -558,7 +553,6 @@ Artı (+) işareti ile hakemin şu anda değerlendirdiği yazılar belirtilmişt
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">S/D'ye dosya</message>
 	<message key="copyeditor.article.copyeditorFile">Sayfa Düzenleyici Dosyası</message>
-	<message key="copyeditor.article.uploadedFile">Yüklenmiş Dosya</message>
 	<message key="copyeditor.article.copyeditorFinalFile">Sayfa Düzenleyici Son Dosyası</message>
 
 	<!-- Proofreader -->

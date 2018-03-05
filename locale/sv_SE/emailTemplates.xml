@@ -4,8 +4,8 @@
 <!--
   * locale/sv_SE/emailTemplates.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Swedish_(sv_SE)
   * Localized email templates XML file.
@@ -788,7 +788,7 @@ Manusredaktör, {$contextName}<br />
 	</email_text>
 	<email_text key="REVISED_VERSION_NOTIFY">
 		<subject>Reviderad version uppladdad</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
+		<body><![CDATA[Redaktörer:<br />
 <br />
 En reviderad version av &quot;{$submissionTitle}&quot; har laddats upp av författaren, {$authorName}.<br />
 <br />

@@ -4,8 +4,8 @@
 <!--
   * locale.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_(es_ES)
   * Localization strings.
@@ -37,5 +37,5 @@ Comandos:
 	<message key="plugins.importexport.users.export.errorsOccurred">Ha ocurrido un error durante la exportación</message>
 	<message key="plugins.importexport.users.export.couldNotWriteFile">No ha sido posible escribir al fichero "{$fileName}".</message>
 	<message key="plugins.importexport.users.import.warning">Aviso</message>
-	<message key="plugins.importexport.users.import.encryptionMismatch">No es posible usar contraseñas codificadas con {$importHash}; OMP utiliza {$ompHash}. Si decide continuar, necesitará volver a crear las contraseñas de los usuarios importados.</message>
+	<message key="plugins.importexport.users.import.encryptionMismatch">No es posible usar contraseñas codificadas con {$importHash}; OJS utiliza {$ompHash}. Si decide continuar, necesitará volver a crear las contraseñas de los usuarios importados.</message>
 </locale>

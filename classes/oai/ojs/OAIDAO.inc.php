@@ -3,8 +3,8 @@
 /**
  * @file classes/oai/ojs/OAIDAO.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class OAIDAO
@@ -212,8 +212,7 @@ class OAIDAO extends PKPOAIDAO {
 		$journalId = array_shift($setIds);
 		$sectionId = array_shift($setIds);
 
-		$params = array();
-		$params[] = 'publishingMode';
+		$params = array('publishingMode', (int) PUBLISHING_MODE_NONE, (int) STATUS_DECLINED);
 		if (isset($journalId)) $params[] = (int) $journalId;
 		if (isset($sectionId)) $params[] = (int) $sectionId;
 		if ($submissionId) $params[] = (int) $submissionId;
@@ -240,7 +239,7 @@ class OAIDAO extends PKPOAIDAO {
 				JOIN sections s ON (s.section_id = a.section_id)
 				JOIN journals j ON (j.journal_id = a.context_id)
 				JOIN journal_settings jsl ON (jsl.journal_id = j.journal_id AND jsl.setting_name=?)
-			WHERE	i.published = 1 AND j.enabled = 1 AND jsl.setting_value <> ' . PUBLISHING_MODE_NONE . ' AND a.status <> ' . STATUS_DECLINED . '
+			WHERE	i.published = 1 AND j.enabled = 1 AND jsl.setting_value <> ? AND a.status <> ?
 				' . (isset($journalId) ?' AND j.journal_id = ?':'') . '
 				' . (isset($sectionId) ?' AND s.section_id = ?':'') . '
 				' . ($from?' AND GREATEST(a.last_modified, i.last_modified) >= ' . $this->datetimeToDB($from):'') . '

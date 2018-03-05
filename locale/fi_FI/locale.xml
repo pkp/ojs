@@ -4,8 +4,8 @@
 <!--
   * locale/fi_FI/locale.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
   * Localization strings.
@@ -475,12 +475,6 @@ Tämän tehtävän voi suorittaa vain sivuston ylläpitäjä.
 	<!-- Navigation sidebar menu -->
 
 	<!-- Used by editor in submission review / editing -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[Nimi linkittyy arvioijan profiiliin.<br/>
-Arvostelu on asteikolla 1-5 (5 = erinomainen).<br/>
-”Viikot” viittaa keskimääräisen aikaan, jonka kuluessa arviointi tulee suorittaa.<br/>
-”Viimeisin” kertoo viimeisimmän hyväksytyn arvioinnin päivämäärän.<br/>
-”Aktiiviset” kertoo kuinka monta arviointia on käsiteltävänä tai parhaillaan käynnissä.]]></message>
-
 
 
 
@@ -572,7 +566,6 @@ Arvostelu on asteikolla 1-5 (5 = erinomainen).<br/>
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">Teknisesti toimitettava tiedosto</message>
 	<message key="copyeditor.article.copyeditorFile">Teknisen toimittajan tiedosto</message>
-	<message key="copyeditor.article.uploadedFile">Ladattu tiedosto</message>
 	<message key="copyeditor.article.copyeditorFinalFile">Teknisen toimittajan tiedosto</message>
 
 	<!-- Proofreader -->

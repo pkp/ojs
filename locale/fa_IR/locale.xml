@@ -1,0 +1,802 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
+<!--
+  * locale/fa_IR/locale.xml
+  *
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
+  * Credits: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Farsi_(fa_IR)
+  -->
+<locale name="fa_IR" full_name="فارسی">
+	<!--
+	 * This file is organized into several major sections, separated
+	 * by comments like this one. These sections are called:
+	 *  COMMON - Contains frequently-used words
+	 *  ENTITIES - Contains terms pertaining to the system's major
+	 *			 entities, e.g. Article, Journal, Section
+	 *  INTERFACE - Contains phrases organized by the section of the
+	 *			  user interface they appear in.
+	 *  LOG - Contains phrases related to log entries
+	 *  MISC - Entries that don't belong elsewhere.
+	 *  DEFAULT - Default settings for configuration items.
+	-->
+	<!-- common -->
+	<message key="context.current">مجله جاری:</message>
+	<message key="context.select">تعویض به مجله دیگر</message>
+	<!-- Categories -->
+	<message key="navigation.categories">حوزه</message>
+	<message key="navigation.categories.browse">پیمایش</message>
+	<message key="reviewer.article.enterReviewForm">لطفاً بر روی  آیکون کلیک کنید تا به فرم داوری بروید</message>
+	<message key="reviewer.submission.reviewFormResponse.form.responseRequired">لطفاً فیلدهای ضروری را پر کنید.</message>
+	<!-- review forms end -->
+	<!--
+	 *
+	 * COMMON - This section contains the most frequently-used words
+	 *
+	-->
+	<!-- Common Messages -->
+	<message key="common.openJournalSystems">سامانه مجله باز</message>
+	<message key="common.confirmComplete">آیا مطمئن هستید که می‌خواهید این وظیفه را به عنوان تکمیل شده علامت گذاری نمایید؟ پس از این عمل دیگر قادر به تغییر آن نخواهید بود.</message>
+	<message key="common.payment">پرداخت</message>
+	<message key="common.payments">پرداخت‌ها</message>
+	<message key="common.homePageHeader.altText">بخش سرتیتر صفحه اصلی</message>
+	<message key="common.journalHomepageImage.altText">تصویر صفحه خانگی مجله</message>
+	<!-- Common Form Messages -->
+	<!-- Common Email Messages -->
+	<!-- Common Localization Terms -->
+	<!-- Common Error Messages -->
+	<!-- Navigation -->
+	<message key="navigation.journalHelp">راهنمای مجله</message>
+	<message key="navigation.current">شماره جاری</message>
+	<message key="navigation.otherJournals">مجلات دیگر</message>
+	<message key="navigation.browseByIssue">مرور بر اساس شماره</message>
+	<message key="navigation.browseByAuthor">مرور بر اساس نویسنده</message>
+	<message key="navigation.infoForAuthors">برای نویسندگان</message>
+	<message key="navigation.infoForLibrarians">برای کتابداران</message>
+	<message key="navigation.competingInterestGuidelines">دستورالعمل‌های مربوط به تضاد منافع.</message>
+	<message key="navigation.infoForAuthors.long">اطلاعات برای نویسندگان</message>
+	<message key="navigation.infoForLibrarians.long">اطلاعات برای کتابداران</message>
+	<!-- Article Queues -->
+	<message key="common.queue.long.submissionsUnassigned">انتساب نشده</message>
+	<message key="common.queue.short.submissionsUnassigned">انتساب نشده</message>
+	<message key="common.queue.long.submissionsInEditing">مقالات ارسالی در حال ویراستاری</message>
+	<message key="common.queue.short.submissionsInEditing">در حال ویراستاری</message>
+	<message key="common.queue.long.submissionsInReview">مقالات ارسالی در حال داوری</message>
+	<message key="common.queue.short.submissionsInReview">در حال داوری</message>
+	<message key="common.queue.long.submissionsArchives">بایگانی</message>
+	<message key="common.queue.short.submissionsArchives">بایگانی‌ها</message>
+	<message key="common.queue.long.active">مقالات ارسالی فعال</message>
+	<message key="common.queue.short.active">فعال</message>
+	<message key="common.queue.long.completed">تکمیل شده</message>
+	<message key="common.queue.short.completed">بایگانی</message>
+	<!--
+	 *
+	 * ENTITIES - This section contains terms pertaining to the system's
+	 *			major entities, e.g. Article, Journal, Section
+	 *
+	-->
+	<!-- Common Section Terms -->
+	<message key="section.section">نوع مقاله</message>
+	<message key="section.sections">انواع مقالات</message>
+	<message key="section.title">عنوان نوع مقاله</message>
+	<message key="section.abbreviation">اختصار</message>
+	<message key="section.abbreviation.example">(برای مثال م ق = مقاله)</message>
+	<!-- Common Article Terms -->
+	<message key="article.article">مقاله</message>
+	<message key="article.articles">مقالات</message>
+	<message key="article.submissionId">شناسه مقاله ارسالی</message>
+	<message key="article.title">عنوان</message>
+	<message key="article.authors">نویسندگان</message>
+	<message key="article.indexingInformation">اطلاعات نمایه‌ای</message>
+	<message key="article.metadata">فراداده</message>
+	<message key="article.journalSection">نوع مقاله</message>
+	<message key="article.file">فایل</message>
+	<message key="article.suppFile">فایل مکمل</message>
+	<message key="article.suppFiles">فایل(‌های) مکمل</message>
+	<message key="article.suppFilesAbbrev">فایل‌های مکمل</message>
+	<message key="article.discipline">رشته و گرایش علمی</message>
+	<message key="article.subject">کلمات کلیدی</message>
+	<message key="article.coverage">پوشش</message>
+	<message key="article.type">نوع، روش یا راهکار</message>
+	<message key="article.language">زبان مقاله</message>
+	<message key="article.sectionEditor">دبیر بخش</message>
+	<message key="article.commentsToEditor">نظرات نویسنده</message>
+	<message key="article.submission">مقاله ارسالی</message>
+	<message key="article.submissions">مقالات ارسالی</message>
+	<message key="article.details">جزئیات</message>
+	<message key="article.abstract">چکیده</message>
+	<message key="article.coverPage.altText">تصویر روی جلد</message>
+	<message key="article.accessLogoOpen.altText">دسترسی آزاد</message>
+	<message key="article.accessLogoRestricted.altText">دسترسی محدود</message>
+	<message key="article.comments.sectionDefault">پیش‌فرض</message>
+	<message key="article.comments.disable">غیرفعال</message>
+	<message key="article.comments.enable">فعال</message>
+	<message key="article.fontSize">اندازه فونت</message>
+	<message key="article.fontSize.small.altText">کوچک</message>
+	<message key="article.fontSize.medium.altText">متوسط</message>
+	<message key="article.fontSize.large.altText">بزرگ</message>
+	<message key="article.return">بازگشت به جزئیات مقاله</message>
+	<!-- Submission Tracking - Common -->
+	<message key="submission.submissionEditing">ویرایش مقاله ارسالی</message>
+	<message key="submission.changeSection">تغییر نوع مقاله به</message>
+	<message key="submission.sent">ارسال شد</message>
+	<message key="submission.editorDecision">تصمیم دبیر</message>
+	<message key="submission.round">نوبت داوری {$round}</message>
+	<message key="submission.editorReview">داوری دبیر</message>
+	<message key="submission.notifyAuthor">اطلاع به نویسنده</message>
+	<message key="submission.notifyEditor">اطلاع به دبیر</message>
+	<message key="submission.editorAuthorRecord">سوابق مکاتبات دبیر / نویسنده</message>
+	<message key="submission.reviewersVersion">نسخه حاشیه نویسی شده داور</message>
+	<message key="submission.postReviewVersion">نسخه پس از داوری</message>
+	<message key="submission.editorVersion">نسخه دبیر</message>
+	<message key="submission.authorsRevisedVersion">نسخه اصلاح شده فایل توسط نویسنده</message>
+	<message key="submission.authorVersion">نسخه نویسنده</message>
+	<message key="submission.copyediting">ویراستاری</message>
+	<message key="submission.copyedit">ویرایش</message>
+	<message key="submission.proofreading">بازبینی نهائی</message>
+	<message key="submission.scheduling">زمان‌بندی</message>
+	<message key="submission.scheduledIn">زمان‌بندی شده برای انتشار در  {$issueName}</message>
+	<message key="submission.scheduledIn.tba">(TBA)</message>
+	<message key="submissions.sec">نوع</message>
+	<message key="submissions.step1">مرحله 1</message>
+	<message key="submissions.step3">مرحله 3</message>
+	<message key="submissions.queuedReview">در نوبت داوری</message>
+	<message key="submissions.scheduled">زیر چاپ</message>
+	<message key="submissions.published">چاپ شده</message>
+	<message key="submissions.initial">اولیه</message>
+	<message key="submissions.proofread">بازبینی</message>
+	<message key="submissions.initialProof">بازبینی اولیه</message>
+	<message key="submissions.postAuthor">پس از نویسنده</message>
+	<message key="submissions.reviewRound">دور داوری</message>
+	<message key="submissions.proof">بازبینی</message>
+	<message key="submissions.editorDecision">تصمیم دبیر</message>
+	<message key="submissions.editorRuling">اتخاذ تصمیم دبیر</message>
+	<message key="submission.eventLog">سوابق مقاله</message>
+	<!-- Submission list search engine -->
+	<message key="submissions.copyeditComplete">ویراستاری شده</message>
+	<message key="submissions.layoutComplete">صفحه بندی شده</message>
+	<message key="submissions.proofreadingComplete">بازبینی</message>
+	<!-- Submission Notes -->
+	<!-- Common Journal Terms -->
+	<message key="journal.currentIssue">شماره کنونی</message>
+	<message key="journal.journals">مجلات</message>
+	<message key="journal.path">مسیر</message>
+	<message key="context.context">مجله</message>
+	<message key="journal.issn">شاپا</message>
+	<message key="journal.viewAllIssues">نمایش همه‌ی شماره‌ها</message>
+	<!-- User -->
+	<message key="user.noRoles.selectUsersWithoutRoles">وارد کردن کاربران بدون گروه کاربری در این مجله</message>
+	<message key="user.profile.profileImage">تصویر پروفایل</message>
+	<message key="user.showAllJournals">مجلات مرا نشان بده</message>
+	<message key="user.registerForOtherJournals">ثبت‌نام برای دیگر مجلات</message>
+	<message key="user.reviewerPrompt">آیا مایل هستید با این مجله در امر داوری مقالات همکاری نمایید؟</message>
+	<message key="user.reviewerPrompt.userGroup">بله. درخواست نقش {$userGroup}</message>
+	<message key="user.register.contextsPrompt">تمایل دارید که در کدام یک از مجلات این سایت ثبت‌نام کنید؟</message>
+	<message key="user.register.otherContextRoles">درخواست نقش های زیر.</message>
+	<message key="user.register.noContextReviewerInterests">اگر تمایل دارید که به عنوان داور در این مجله ثبت‌نام کنید لطفاً زمینه های کاری خود را وارد کنید.</message>
+	<message key="user.myJournals">مجلات من</message>
+	<message key="user.manageMySubscriptions">مدیریت اشتراکات من</message>
+	<message key="user.noRoles.chooseJournal">حساب کاربری شما در حال حاضر وابسته به هیچ مجله ای نیست. لطفا یک مجله را انتخاب کنید</message>
+	<message key="user.noRoles.noRolesForJournal">حساب کاربری شما در حال حاضر هیچ نقشی در این مجله ندارد. لطفا یکی از موارد زیر را انتخاب کنید</message>
+	<message key="user.noRoles.submitArticle">ارسال پروپوزال</message>
+	<message key="user.noRoles.submitArticleRegClosed">ارسال مقاله: در حال حاضر ثبت‌نام نویسندگان غیرفعال است</message>
+	<message key="user.noRoles.regReviewer">ثبت‌نام به عنوان داور</message>
+	<message key="user.noRoles.regReviewerClosed">ثبت‌نام به عنوان داور: در حال حاضر ثبت‌نام داوران غیرفعال است</message>
+	<!-- Roles -->
+	<message key="user.role.manager">مدیر مجله</message>
+	<message key="user.role.sectionEditor">دبیر مقاله</message>
+	<message key="user.role.subscriptionManager">مدیر اشتراک</message>
+	<message key="user.role.managers">مدیران مجله</message>
+	<message key="user.role.subEditor">دبیر بخش</message>
+	<message key="user.role.subEditors">دبیران بخش</message>
+	<message key="user.role.subscriptionManagers">مدیران اشتراک</message>
+	<message key="user.role.assistant">دستیار</message>
+	<message key="user.role.journalAssistant">دستیار مجله</message>
+	<message key="user.role.journalAssistants">دستیاران مجله</message>
+	<!-- Common Issue Terms -->
+	<message key="issue.issue">شماره</message>
+	<message key="issue.issues">شماره‌ها</message>
+	<message key="issue.title">عنوان</message>
+	<message key="issue.volume">دوره</message>
+	<message key="issue.number">شماره</message>
+	<message key="issue.vol">دوره</message>
+	<message key="issue.no">شماره</message>
+	<message key="issue.year">سال</message>
+	<message key="issue.noIssues">خالی</message>
+	<message key="issue.toc">فهرست مطالب</message>
+	<message key="issue.abstract">چکیده</message>
+	<message key="issue.coverPage.altText">پشت جلد</message>
+	<message key="issue.fullIssue">شماره کامل</message>
+	<message key="issue.nonpdf.title">دانلود شماره</message>
+	<message key="issue.viewIssue">مشاهده شماره</message>
+	<message key="issue.return">بازگشت به جزئیات شماره</message>
+	<!-- Common Subscription Type Terms -->
+	<message key="subscriptionTypes.currency">واحد پول</message>
+	<message key="subscriptionTypes.year">سال</message>
+	<message key="subscriptionTypes.years">سال ها</message>
+	<message key="subscriptionTypes.month">ماه</message>
+	<message key="subscriptionTypes.months">ماه ها</message>
+	<message key="subscriptionTypes.nonExpiring">منقضی نشده</message>
+	<message key="subscriptionTypes.format">ساختار</message>
+	<message key="subscriptionTypes.format.online">آنلاین</message>
+	<message key="subscriptionTypes.format.print">چاپ</message>
+	<message key="subscriptionTypes.format.printOnline">چاپ و آنلاین</message>
+	<!-- Common Subscription Terms -->
+	<message key="subscriptions.inactive">غیرفعال</message>
+	<message key="subscriptions.status">وضعیت</message>
+	<message key="subscriptions.status.active">فعال</message>
+	<message key="subscriptions.status.needsInformation">نیازمند اطلاعات</message>
+	<message key="subscriptions.status.needsApproval">نیازمند تایید</message>
+	<message key="subscriptions.status.awaitingManualPayment">منتظر پرداخت دستی</message>
+	<message key="subscriptions.status.awaitingOnlinePayment">منتظر پرداخت آنلاین</message>
+	<message key="subscriptions.status.noSubscription">شما هیچ اشتراک فعالی ندارید.</message>
+	<message key="subscriptions.status.other">غیره، نگاه کنید به نکات</message>
+	<message key="subscriptions.individualDescription">اشتراک فردی نیاز به ورود به سیستم دارد تا به محتوای اشتراک یافته دسترسی یابید.</message>
+	<message key="subscriptions.institutionalDescription">اشتراک سازمانی نیازی به ورود به سیستم ندارد. دامنه و یا آدرس IP کاربر برای تایید هویت وی بکار خواهد رفت.</message>
+	<message key="subscriptions.institutionalOnlinePaymentDescription"><![CDATA[<strong>مهم:</strong> اشتراک سازمانی خریداری شده از طریق آنلاین قبل از فعال شدن، نیاز به تایید دامنه یا آدرس IP دارد.]]></message>
+	<!--
+	 *
+	 * LOG - This section contains entries related to log entries.
+	 *
+	-->
+	<message key="submission.event.general.defaultEvent">رخدادهای ارسال مقاله</message>
+	<message key="submission.event.submissionSubmitted">مقاله اراسل شد.</message>
+	<message key="submission.event.general.issueScheduled">مقاله ارسالی در نوبت چاپ قرار گرفت.</message>
+	<message key="submission.event.general.issueAssigned">مقاله ارسالی در یک شماره قرار داده شد..</message>
+	<message key="submission.event.general.articlePublished">مقاله چاپ شد</message>
+	<message key="submission.event.author.authorRevision">اصلاح نویسنده</message>
+	<message key="submission.event.general.authorRevision">فایل اصلاح شده توسط نویسنده آپلود شد.</message>
+	<message key="submission.event.editor.editorAssigned">دبیر مقاله ارسالی تعیین شد</message>
+	<message key="submission.event.editor.editorUnassigned">دبیر تعیین شده لغو شد.</message>
+	<message key="submission.event.editor.editorDecision">تصمیم دبیر</message>
+	<message key="submission.event.editor.editorFile">فایل دبیر</message>
+	<message key="submission.event.editor.submissionArchived">مقاله ارسالی بایگانی شد</message>
+	<message key="submission.event.editor.submissionRestored">بازیابی مقاله ارسالی از بایگانی</message>
+	<message key="submission.event.copyedit.copyeditorAssigned">ویراستار مقاله ارسالی تعیین شد</message>
+	<message key="submission.event.copyedit.copyeditorUnassigned">ویراستار انتخاب شده لغو شد.</message>
+	<message key="submission.event.copyedit.copyeditInitiated">ویراستاری آغاز شد</message>
+	<message key="submission.event.copyedit.copyeditRevision">فایل اصلاحات ویراستار به روز رسانی شد</message>
+	<message key="submission.event.copyedit.copyeditInitialCompleted">ویراستاری اولیه تکمیل شد</message>
+	<message key="submission.event.copyedit.copyeditFinalCompleted">ویراستاری نهایی تکمیل شد</message>
+	<message key="submission.event.copyedit.copyeditSetFile">فایل ویراستاری نهایی به روز رسانی شد</message>
+	<message key="submission.event.proofread.proofreaderAssigned">انتساب بازبین نهایی به مقاله</message>
+	<message key="submission.event.proofread.proofreaderUnassigned">لغو بازبین</message>
+	<message key="submission.event.proofread.proofreadInitiated">شروع بازبینی نهایی</message>
+	<message key="submission.event.proofread.proofreadRevision">نسخه بازبینی نهایی</message>
+	<message key="submission.event.proofread.proofreadCompleted">انتساب بازبین نهایی انجام شد</message>
+	<message key="submission.event.layout.layoutEditorAssigned">تعیین صفحه‌آرا</message>
+	<message key="submission.event.layout.layoutEditorUnassigned">لغو صفحه‌آرا</message>
+	<message key="submission.event.layout.layoutInitiated">شروع صفحه‌آرائی</message>
+	<message key="submission.event.layout.layoutGalleyCreated">صفحه‌آرا کلیشه چاپی به روز رشانی شد.</message>
+	<message key="submission.event.layout.layoutComplete">انتساب صفحه‌آرا انجام شد.</message>
+	<!--
+	 *
+	 * INTERFACE - Contains phrases organized by the section of the
+	 *			 user interface they appear in.
+	 *
+	-->
+	<!-- Reader article view -->
+	<message key="reader.subscribersOnly">مخصوص مشترکین</message>
+	<message key="reader.subscriptionRequiredLoginText">برای دستیابی به این مورد نیاز به اشتراک دارید. برای تأیید اشتراک ابتدا وارد سیستم شوید.</message>
+	<message key="reader.openAccess">دسترسی آزاد</message>
+	<message key="reader.subscriptionAccess">دسترسی با اشتراک</message>
+	<message key="reader.subscriptionOrFeeAccess">دسترسی با اشتراک یا نقدی</message>
+	<message key="reader.purchasePrice">({$currency} {$price})</message>
+	<!-- Reader Comments -->
+	<message key="comments.commentsOnArticle">نظرات در مورد مقاله</message>
+	<message key="comments.authenticated"><![CDATA[توسط  <a href="{$publicProfileUrl}" target="_parent">{$userName}</a>]]></message>
+	<!-- Search -->
+	<message key="search.results.orderBy">مرتب‌سازی نتایج برحسب</message>
+	<message key="search.results.orderBy.article">عنوان مقاله</message>
+	<message key="search.results.orderBy.author">نویسنده</message>
+	<message key="search.results.orderBy.date">تاریخ انتشار</message>
+	<message key="search.results.orderBy.issue">شماره</message>
+	<message key="search.results.orderBy.journal">عنوان مجله</message>
+	<message key="search.results.orderBy.popularityAll">میزان محبوبیت (در کل مدت)</message>
+	<message key="search.results.orderBy.popularityMonth">میزان محبوبیت (در ماه گذشته)</message>
+	<message key="search.results.orderBy.relevance">میزان ارتباط</message>
+	<message key="search.results.orderDir.asc">صعودی</message>
+	<message key="search.results.orderDir.desc">نزولی</message>
+	<message key="search.results.similarDocuments">اسناد مشابه</message>
+	<message key="admin.auth.defaultSourceDescription"><![CDATA[مشخص نمودن یک منبع احراز هویت پیش‌فرض جدای از OJS دارای مزیت‌های زیر است:	  <ul>		  <li>		  چنانچه کاربری بخواهد در این سایت با نام کاربری که در منبع احراز هویت خارجی  و نه در خود سیستم OJS وجود دارد ثبت‌نام کند، ثبت‌نام زمانی انجام خواهد شد که رمز عبور مناسب سیستم خارجی را وارد کند.		  </li>	  </ul>]]></message>
+	<!-- System Information -->
+	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>	  توجه!	  </h4>	  <p>	  سیستم به‌طور خودکار نمی‌تواند بر روی فایل پیکربندی بنویسد. برای اعمال تنظیمات مورد نظر می‌بایست خود فایل	  <tt>config.inc.php</tt>	  در یک ویرایشگر مناسب ویرایش کرده و تنظیمات مورد نظر خود را اعمال کنید.	  </p>]]></message>
+	<!-- Site Administrator Merge Users -->
+	<!-- Subscription Management -->
+	<message key="subscriptionManager.subscriptionManagement">مدیریت اشتراکها</message>
+	<message key="subscriptionManager.individualSubscriptions">اشتراکات شخصی</message>
+	<message key="subscriptionManager.institutionalSubscriptions">اشتراکات سازمانی</message>
+	<message key="subscriptionManager.subscriptionTypes">انواع اشتراک</message>
+	<!-- Journal Management -->
+	<!-- Statistics & Reports -->
+	<!-- Plugin Management -->
+	<!-- Payment Management -->
+	<!-- General plugin information -->
+	<message key="plugins.categories.viewableFiles">افزونه کلیشه چاپی مقاله</message>
+	<message key="plugins.categories.viewableFiles.description">افزونه‌های کلیشه چاپی مقاله امکان افزون فرمت‌های مختلف به کلیشه چاپی مقاله را فراهم می‌سازند.</message>
+	<message key="plugins.categories.auth.description">افزونه‌های احراز هویت عمل تأیید هویت را به سیستم‌های خارجی احراز هویت مانند سرور LDAP واگذار می‌کنند.</message>
+	<message key="plugins.categories.generic.description">افزونه‌های عمومی برای گسترش سیستم مجله‌های آزاد به روش‌های مختلف که توسط افزونه‌های دیگر پشتیبانی نمی‌شوند به کار می‌روند</message>
+	<message key="manager.setup.lockssDescription"><![CDATA[OJS  از سیستم <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> که علامت اختصاری Lots of Copies Keep Stuff Safe است  برای بایگانی امن و دائمی داده‌ها استفاده می‌کند. LOCKSS یک نرم‌افزار متن‌باز است که توسط کتابخانه دانشگاه استنفورد تهیه شده است و کتابخانه‌ها را قادر می‌سازد داده‌های مجلات انتخابی خود را جمع‌آوری و حفاظت کنند. این کار از طریق استخراج مداوم داده‌ها از سایت‌های مجلات انتخاب شده صورت می‌گیرد. هر بایگانی به طور مداوم با داده‌های کتابخانه‌ای دیگر مقایسه و بروز رسانی می‌شود.	  <br /><br /> نصب پشتیبانی LOCKSS برای OJS تا وقتی که مجله کاملاً به‌صورت آنلاین چاپ نشود لازم نیست. پس از راه افتادن سیستم چاپ آنلاین مجله این دو اقدام را انجام دهید تا پشتیبانی از LOCKSS برقرار شود:]]></message>
+	<message key="manager.setup.clockssDescription"><![CDATA[این سامانه از سیستم CLOCKSS که علامت اختصاری Controled Lots of Copies Keep Stuff Safe است برای بایگانی امن و دائمی داده برای مجله پشتیبانی می‌کند. CLOCKSS یک نوم افزار متن‌باز است که توسط کتابخانه دانشگاه استنفورد تهیه شده است و کتابخانه‌ها را قادر می‌سازد داده‌های مجلات انتخابی خود را جمع‌آوری و حفاظت کنند. این کار از طریق استخراج مداوم داده‌ها از سایت‌های مجلات انتخاب شده صورت می‌گیرد. هر بایگانی به طور مداوم با داده‌های کتابخانه‌ای دیگر مقایسه و بروز رسانی می‌شود.]]></message>
+	<!-- Setup Step 3 -->
+	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>	  بیانیه حق نشر پیشنهادی Creative Commons	  </h3>	  <h4>	  ۱. سیاست پیشنهادی برای مجلاتی که دسترسی آزاد عرضه می‌کنند	  </h4>	  نویسندگان مقالات این مجله بدین وسیله موافقت خود با موارد زیر را اعلام می‌کنند:	  <ol type="a">		  <li>		  حق نشر برای نویسنده باقی می‌ماند و نویسنده حق اولین چاپ مقاله را به مجله واگذار می‌کند. هردو این امر تحت مجوز	  <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">	  واگذاری Creative Commons	  </a>	  بوده که اجازه می‌دهد دیگران از مقاله به‌شرط ذکر منبع نویسنده و مجله در کار خود استفاده کنند.	  </li>		  <li>		  نویسندگان می‌توانند به‌طور مستقل ترتیبی اتخاذ کنند تا در قالب قراردادی، مقاله چاپ شده توسط مجله را منتشر کنند، یعنی آن را به بایگانی مقالات سازمان متبوعه فرستاده و یا آن را در یک کتاب چاپ کنند. البته می‌بایست منبع چاپ اولیه در این مجله را ذکر کنند.	  </li>		  <li>		  نویسندگان اجازه دارند و توصیه می‌شود که کارهای خود را قبل یا هنگام ارسال به این مجله، به‌صورت آنلاین به جاهایی مانند سایت ذخایر علمی سازمان متبوعه و یا بر روی وب‌سایت شخصی خود قرار دهند. این عمل موجب تبادلات علمی و ارجاع دهی زودتر به مقاله خواهد شد. (در این راستا می‌توانید مقاله	  (See <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">تأثیرات دسترسی آزاد به مقالات</a> را مطالعه کنید)</li>	  </ol>		<h4>	  سیاست پیشنهادی برای مجلاتی که دسترسی آزاد با تأخیر عرضه می‌کنند	  </h4>	  نویسندگان مقالات این مجله بدین وسیله موافقت خود با موارد زیر را اعلام می‌کنند:	  <ol type="a">		  <li>		  حق نشر برای نویسنده باقی می‌ماند و نویسنده حق اولین چاپ مقاله را به مجله واگذار می‌کند و این مقاله [تأخیر زمانی] مدت پس از چاپ تحت مجوز	  <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">	  واگذاری Creative Commons	  </a>	  بوده که اجازه می‌دهد دیگران از مقاله به‌شرط ذکر منبع نویسنده و مجله در کار خود استفاده کنند.		  </li>		  <li>			  نویسندگان می‌توانند به‌طور مستقل ترتیبی اتخاذ کنند تا در قالب قراردادی، مقاله چاپ شده توسط مجله را منتشر کنند، یعنی آن را به بایگانی مقالات سازمان متبوعه فرستاده و یا آن را در یک کتاب چاپ کنند. البته می‌بایست منبع چاپ اولیه در این مجله را ذکر کنند.		  </li>		  <li>			  نویسندگان اجازه دارند و توصیه می‌شود که کارهای خود را قبل یا هنگام ارسال به این مجله، به‌صورت آنلاین به جاهایی مانند سایت ذخایر علمی سازمان متبوعه و یا بر روی وب‌سایت شخصی خود قرار دهند. این عمل موجب تبادلات علمی و ارجاع دهی زودتر به مقاله خواهد شد. (در این راستا می‌توانید مقاله	  (See <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">تأثیرات دسترسی آزاد به مقالات</a> را مطالعه کنید)		  </li>	  </ol>]]></message>
+	<message key="manager.setup.citations.enable">فعال‌سازی دستیار نشانه‌گذاری ارجاعات</message>
+	<!-- Setup Step 4 -->
+	<message key="manager.setup.basicEditorialStepsDescription"><![CDATA[مراحل: نوبت مقاله ارسالی &lt; داوری مقاله ارسالی &lt;  ویراستاری مقاله ارسالی &lt; فهرست مقالات.<br /><br />	  انتخاب مدلی برای اداره این جوانب روند دبیری. (برای انتساب یک سردبیر و دبیر بخش به قسمت دبیران در مدیریت مجله بروید.)]]></message>
+	<message key="manager.setup.referenceLinkingDescription"><![CDATA[<p>	  برای اینکه خوانندگان بتوانند نسخه آنلاین مراجعی که نویسنده ارجاع داده است را پیدا کنند, گزینه‌های زیر موجود می‌باشد.	  </p>		<ol>		  <li><strong>	  افزودن یک ابزار مطالعه	  </strong><p>	  مدیر مجله می‌تواند لینک«یافتن مراجع» را به لیست ابزارهای مطالعه همراه با مقاله چاپ شده بی افزاید تا خوانندگان بتوانند متن ارجاع به یک مرجع را کپی کرده و سپس در پایگاه‌های اطلاعاتی به جستجوی آن بپردازند.	  </p></li>		  <li><strong>	  نهادن لینک مراجع در متن مقاله	  </strong><p>	  صفحه‌آرا می‌تواند لینک آنلاین مراجع مختلف را با دستورالعمل زیر در داخل مقاله قرار دهد.	  </p></li>	  </ol>]]></message>
+	<!-- Setup Step 5 -->
+	<!-- Languages -->
+	<!-- Section Management -->
+	<!-- Import/Export -->
+	<!-- Groups / Editorial Team -->
+	<!-- People Management -->
+	<message key="manager.people.confirmDisable">آیا این کاربر غیرفعال شود؟ این اقدام از ورود کاربر به سیستم جلوگیری می‌کند. می‌توانید دلیل این اقدام را به کاربر خاطر نشان سازید.</message>
+	<message key="manager.people.noAdministrativeRights"><![CDATA[متأسفانه شما نمی‌توانید این کاربر را تغییر دهید. علت این موضوع ممکن است یکی از موارد زیر باشد:  <ul>  <li>کاربر مورد نظر مدیر سایت است</li>  <li>کاربر مربوط به مجله دیگری است که شما در آن نقش مدیریتی ندارید</li>  </ul> این عمل باید توسط مدیر سایت انجام شود]]></message>
+	<!-- Email Management -->
+	<!-- Subscription Policy Management -->
+	<!-- Subscription Type Management -->
+	<!-- Subscription Management -->
+	<!-- Announcement Type Management -->
+	<!-- Announcements Management -->
+	<!-- Editor -->
+	<message key="editor.submissionReview.notes"><![CDATA[<ol>		  <li>موارد پر رنگ نشان دهنده لزوم انجام کاری توسط دبیر است. <ul> <li class="highlightReviewerNotNotified">داور انتساب داده شده است اما از طریق ایمیل به ایشان اطلاع‌رسانی انجام نشده است</li> <li class="highlightNoDecision">تمام داوران نظرات خود را اعمال کرده‌اند اما هنوز تصمیمی اتخاذ نشده است</li> <li class="highlightRevisedCopyUploaded">نویسنده مقاله اصلاح شده را آپلود کرده است</li> <li "highlightReviewerConfirmationOverdue">مهلت داور برای تأیید اصلاحات  سپری شده است</li> <li class="highlightReviewerCompletionOverdue">مهلت داور برای تکمیل داوری سپری شده است</li> </ul> </li>		 <li>فیلد «مهلت» وقتی تکمیل می‌شود که داور قبول کند که داوری را انجام دهد. در این صورت نشان دهنده تعداد هفته مانده به پایان مهلت می‌باشد. اگر منفی باشد هفته‌های گذشته از مهلت را نشان می‌دهد.</li>	  </ol>]]></message>
+	<message key="editor.submissionEditing.notes"><![CDATA[<ol>		  <li>موارد برجسته شده، کارهایی است که باید توسط دبیر انجام گیرد:			  <ul>  <li class="highlightCopyediting">tفعالیت‌های ضروری در مرحله ویراستاری</li>  <li class="highlightLayoutEditing"> tفعالیت‌های ضروری در مرحله صفحه‌آرایی</li>  <li class="higlightProofreading"> tفعالیت‌های ضروری در مرحله بازبینی نهایی</li>			  </ul>		  </li>	  </ol>]]></message>
+	<!-- Editor Index Page -->
+	<!-- Back Issues -->
+	<!-- Create Issue / Issue Data -->
+	<!-- Live Issues -->
+	<!-- Navigation sidebar menu -->
+	<!-- Used by editor in submission review / editing -->
+	<!-- Section Editor -->
+	<message key="sectionEditor.activeEditorialAssignments">موارد جاری واگذار شده از سوی سردبیر</message>
+	<message key="sectionEditor.completedEditorialAssignments">موارد کامل شده واگذار شده از سوی سردبیر</message>
+	<message key="sectionEditor.noneAssigned">موردی انتساب نشده است</message>
+	<message key="sectionEditor.copyedit.confirmRenotify">چنانچه بخواهید دوباره به این ویراستار اطلاع دهید عمل انتساب ویراستار از نو شروع خواهد شد. آیا مطمئن هستید که این کار را میخواهید انجام دهید؟</message>
+	<message key="sectionEditor.author.confirmRenotify">چنانچه بخواهید دوباره به این نویسنده اطلاع دهید عمل انتساب وی از نو شروع خواهد شد. آیا مطمئن هستید که این کار را میخواهید انجام دهید؟</message>
+	<message key="sectionEditor.layout.confirmRenotify">چنانچه بخواهید دوباره به این صفحه‌آرا اطلاع دهید عمل انتساب وی از نو شروع خواهد شد. آیا مطمئن هستید که این کار را میخواهید انجام دهید؟</message>
+	<message key="sectionEditor.proofreader.confirmRenotify">چنانچه بخواهید دوباره به این بازبین نهائی اطلاع دهید عمل انتساب وی از نو شروع خواهد شد. آیا مطمئن هستید که این کار را میخواهید انجام دهید؟</message>
+	<message key="sectionEditor.regrets.breadcrumb">انصراف</message>
+	<message key="sectionEditor.regrets.title">موارد عدم تمایل برای داوری، موارد کنسل شده و  دورهای قبلی مقاله با شناسه {$submissionId}</message>
+	<message key="sectionEditor.regrets">موارد انصراف</message>
+	<message key="sectionEditor.regrets.link">مشاده: موارد عدم تمایل به انجام داوری، موارد کنسل شده ،دورهای قبل.</message>
+	<message key="sectionEditor.regrets.reviewRound">دور داوری {$round}</message>
+	<message key="sectionEditor.regrets.decisionRound">تصمیم دبیر, دور: {$round}</message>
+	<message key="sectionEditor.regrets.regretsAndCancels">موارد عدم تمایل به انجام داوری و موارد کنسل شده</message>
+	<message key="sectionEditor.regrets.regret">انصراف</message>
+	<message key="sectionEditor.regrets.result">نتیجه</message>
+	<message key="sectionEditor.review.enrollReviewer">اعطای نقش داور به کاربران موجود</message>
+	<message key="sectionEditor.review.createReviewer">ایجاد داور جدید</message>
+	<!-- Layout Editor -->
+	<message key="layoutEditor.activeEditorialAssignments">انتسابات فعال دبیری</message>
+	<message key="layoutEditor.completedEditorialAssignments">تکمیل انتسابات دبیری</message>
+	<message key="layoutEditor.noActiveAssignments">هیچ انتساب فعالی وجود ندارد</message>
+	<message key="layoutEditor.layoutEditingAssignments">انتسابات صفحه‌آرا</message>
+	<message key="layoutEditor.galley.uploadGalleyFormat">آپلود کلیشه چاپی</message>
+	<message key="layoutEditor.galley.replaceGalley">جایگزینی فایل</message>
+	<message key="layoutEditor.galley.uploadSuppFile">جایگزینی فایل مکمل</message>
+	<message key="submission.layout.imageInvalid">فرمت تصویر انتخاب شده نامناسب است. فقط gif, jpg, png</message>
+	<message key="submission.layout.galley.remotelyHostedContent">این کلیشه چاپی در یک وب‌سایت جداگانه در دسترس خواهد بود.</message>
+	<message key="submission.layout.galley.remoteURL">آدرس محتوای خارجی</message>
+	<!-- Reviewer -->
+	<message key="reviewer.pendingReviews">مقالات منتظر داوری</message>
+	<message key="reviewer.completedReviews">انجام شده</message>
+	<message key="reviewer.averageQuality">امتیاز</message>
+	<!-- Used in submission review -->
+	<message key="reviewer.article.fileToBeReviewed">فایلی که باید داوری شود</message>
+	<message key="reviewer.article.notifyTheEditor">اطلاع به دبیر</message>
+	<message key="reviewer.article.canDoReview">داوری را انجام می‌دهم</message>
+	<message key="reviewer.article.cannotDoReview">داوری را انجام نمی‌دهم</message>
+	<message key="reviewer.article.restrictedFileAccess">در صورت تقبل داوری فایل مقاله قابل رؤیت است</message>
+	<message key="reviewer.article.submissionEditor">دبیر مقاله ارسالی</message>
+	<message key="reviewer.article.reviewerCommentsDescription">نظر داوری خود را در این قسمت وارد کنید</message>
+	<message key="reviewer.article.editorToEnter">وارد کردن توسط دبیر</message>
+	<message key="reviewer.article.sendReminder">ارسال ایمیل یادآور</message>
+	<message key="reviewer.article.automatic">(خودکار)</message>
+	<message key="reviewer.article.recommendation">توصیه</message>
+	<message key="reviewer.article.submitReview">ارسال داوری به دبیر</message>
+	<message key="reviewer.article.reviewerComments">نظرات</message>
+	<message key="reviewer.article.uploadedFile">فایل‌های آپلود شده</message>
+	<message key="reviewer.article.reviewersAnnotatedVersion">نسخه آپلود شده به‌وسیله داور</message>
+	<message key="reviewer.article.reviewersAnnotatedVersionDescription">در صورت تمایل می‌توانید در فایل اصلی مقاله مطالبی به عنوان یادداشت تایپ کنید و سپس فایل را آپلود کنید.</message>
+	<message key="reviewer.article.schedule.request">درخواست دبیر</message>
+	<message key="reviewer.article.schedule.response">پاسخ شما</message>
+	<message key="reviewer.article.schedule.submitted">داوری ارسال شد</message>
+	<message key="reviewer.article.schedule.due">مهلت داوری</message>
+	<message key="reviewer.article.decision.accept">پذیرش مقاله ارسالی</message>
+	<message key="reviewer.article.decision.pendingRevisions">اصلاحات لازم است</message>
+	<message key="reviewer.article.decision.resubmitHere">ارسال برای داوری مجدد</message>
+	<message key="reviewer.article.decision.resubmitElsewhere">ارسال به مجله دیگر</message>
+	<message key="reviewer.article.decision.decline">رد مقاله ارسالی</message>
+	<message key="reviewer.article.decision.seeComments">نظراتم را ببینید</message>
+	<message key="reviewer.article.schedule">زمان‌بندی کردن</message>
+	<message key="reviewer.article.submissionToBeReviewed">مقالات ارسالی که باید داوری شود</message>
+	<message key="reviewer.article.reviewSchedule">زمان‌بندی داوری</message>
+	<message key="reviewer.article.reviewSteps">مراحل داوری</message>
+	<message key="reviewer.article.reviewerGuidelines">دستورالعمل داوری</message>
+	<message key="reviewer.article.reviewGuidelinesDescription"><![CDATA[راهنمای داوری شامل ضوابط داوری در مورد مناسب بودن مقاله جهت چاپ در مجله می‌باشد، و ممکن است شامل دستورالعمل‌های خاص مجله برای تهیه متن مناسب داوری نیز بشود. در روند داوری به داوران دو جعبه متن ارائه می‌شود که اولی برای نویسنده و دبیر و دومی برای دبیر است. همچنین مدیر مجله می‌تواند یک فرم داوری را با استفاده از ابزار موجود در فرم‌های داوری طراحی کند. در تمام این حالات انتخاب نهائی با دبیر است که آیا حاصل داوری یک داور را در معرض دید نویسنده قرار بدهد یا خیر.]]></message>
+	<message key="reviewer.article.notifyEditorA">خبر به دبیر مقاله</message>
+	<message key="reviewer.article.notifyEditorB">که آیا این داوری را به عهده می‌گیرید</message>
+	<message key="reviewer.article.consultGuidelines">چنانچه داوری را به عهده می‌گیرید, متن راهنمای داوری در پائین این صفحه را مطالعه فرمایید.</message>
+	<message key="reviewer.article.downloadSubmission">با کلیک بر روی نام فایل‌های متعلق به این مقاله ارسالی می‌توانید آن‌ها را دانلود کرده و بر روی کامپیوتر خود باز کنید و یا آن‌ها را پرینت کنید</message>
+	<message key="reviewer.article.enterCompetingInterests"><![CDATA[هرگونه تضاد منافعی که در رابطه با این مقاله یا پژوهش دارید را اعلام نمایید. برای اطلاعات بیشتر لطفاً به آدرس زیر مراجعه کنید:  <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">سیاست تضاد منافع</a>).]]></message>
+	<message key="reviewer.competingInterests">تضاد منافع</message>
+	<message key="reviewer.article.enterReviewA">بر روی آیکون کلیک کرده و سپس نتیجه داوری خود را در مورد این مقاله وارد کنید</message>
+	<message key="reviewer.article.uploadFile">همچنین می‌توانید فایل یا فایل‌هایی را نیز آپلود کنید</message>
+	<message key="reviewer.article.selectRecommendation">یک توصیه را انتخاب کنید.</message>
+	<message key="reviewer.article.selectRecommendation.byEditor">تنظیم یا به‌روزرسانی توصیه داور</message>
+	<message key="reviewer.article.mustSelectDecision">هیچ توصیه‌ای انتخاب نشده است.  می‌بایست یکی از توصیه‌ها را برای ثبت، انتخاب کنید.</message>
+	<message key="reviewer.article.confirmDecision">در صورتی که تصمیم خود را ثبت کردید دیگر نمی‌توانید تغییری در این داوری بدهید.  آیا می‌خواهید این کار را انجام دهید؟</message>
+	<!-- Used in submission editing -->
+	<message key="copyeditor.article.fileToCopyedit">فایل به ویراستار</message>
+	<message key="copyeditor.article.copyeditorFile">فایل ویراستار</message>
+	<message key="copyeditor.article.copyeditorFinalFile">فایل ویراستار</message>
+	<!-- Proofreader -->
+	<message key="proofreader.noProofreadingAssignments">هیچ بازبینی نهائی انتساب نشده است</message>
+	<!-- Author -->
+	<!-- Article Submission Step 1 -->
+	<!-- Article Submission Step 2 -->
+	<!-- Article Submission Step 3 -->
+	<message key="author.submit.uploadInstructions"><![CDATA[برای آپلود مقاله خود به این مجله مراحل زیر را انجام دهید.	<ol>  <li>در همین صفحه بر روی پیمایش کلیک کنید و یا نام و آدرس کامل فایل را وارد کنید. با کلیک بر روی پیمایش، پنجره انتخاب فایل باز می‌شود که از طریق آن می‌توانید فایل مورد نظرتان را بر روی کامپیوتر خود پیدا کنید.</li>  <li>پس از یافتن فایل مقاله بر روی آن کلیک کنید تا انتخاب شود.</li>  <li>بر روی Open در پنجره انتخاب فایل کلیک کنید. در این صورت نام و آدرس کامل فایل در قسمت مربوطه در همین صفحه وارد می‌شود.</li>  <li>بر روی آپلود در همین صفحه کلیک کنید. بدین ترتیب فایل مورد نظر از کامپیوتر شما بر روی وب‌سایت مجله آپلود می‌شود و نام آن مطابق با استاندارد مجله تغییر پیدا می‌کند.</li>  <li>پس از آپلود فایل‌های مقاله بر روی «ذخیره و ادامه» در پائین همین صفحه کلیک کنید.</li>  </ol> با کلیک کردن بر روی نام فایل می‌توانید آن را دانلود و مشاهده کنید. در صورتی روند انتخاب و آپلود فایل را تکرار کنید فایل جدید جایگزین فایل قبلی می‌شود.  فایل‌های تکمیلی در قسمت فایل‌های مکمل در مرحله بعد قابل افزودن است. در صورت بروز هر گونه مشکل هنگام آپلود فایل لطفاً با <a href="mailto:{$supportEmail}">{$supportName}</a> از طریق ایمیل و یا با تلفن {$supportPhone} تماس حاصل نمایید.]]></message>
+	<!-- Article Submission Step 4 -->
+	<!-- Article Submission Step 4a: Supplementary Files -->
+	<!-- Article Submission Step 5 -->
+	<!-- Used in submission review / editing -->
+	<message key="submission.review.mustUploadFileForReview"> تا قبل از مشخص نمودن نسخه داوری درخواست داوری مقدور نیست.</message>
+	<!-- Submission Tracking - Copyedit Specific -->
+	<message key="submission.copyedit.mustUploadFileForInitialCopyedit">تا قبل از مشخص نمودن نسخه ویراستار،  درخواست ویراستاری مقدور نیست.</message>
+	<message key="submission.copyedit.mustUploadFileForCopyedit">تا قبل از مشخص نمودن نسخه ویراستار، درخواست ویراستاری مقدور نیست.</message>
+	<message key="submission.copyedit.initialCopyedit">ویراستاری اولیه</message>
+	<message key="submission.copyedit.editorsCopyedit">ویراستاری دبیر</message>
+	<message key="submission.copyedit.editorAuthorReview">ویراستاری نویسنده</message>
+	<message key="submission.copyedit.finalCopyedit">ویراستاری نهائی</message>
+	<message key="submission.copyedit.copyeditVersion">نسخه ویراستار</message>
+	<message key="submission.copyedit.selectCopyeditor">انتخاب ویراستار</message>
+	<message key="submission.copyedit.useFile">استفاده از فایل</message>
+	<message key="submission.copyedit.copyeditComments">نظرات ویراستار</message>
+	<message key="submission.copyedit.instructions">دستورالعمل ویراستاری</message>
+	<!-- Submission Tracking - Layout Specific -->
+	<message key="submission.layout.noLayoutFile">هیچ (لطفا ابتدا آخرین نسخه ویراستاری شده را به عنوان نسخه صفحه‌آرا آپلود کنید تا بتوانید در خواست صفحه‌آرائی ارسال کنید)</message>
+	<message key="submission.layout.publicGalleyId">شناسه عمومی کلیشه چاپی</message>
+	<message key="submission.layout.galleyPublicIdentificationExists">این شناسه عمومی کلیشه چاپی قبلا بکار رفته است</message>
+	<message key="submission.layout.assignLayoutEditor">انتساب صفحه‌آرا</message>
+	<message key="submission.layout.replaceLayoutEditor">جایگزینی صفحه‌آرا</message>
+	<message key="submission.layout.layoutComments">نظرات صفحه‌آرا</message>
+	<message key="submission.layout.instructions">دستوالعمل صفحه‌آرائی</message>
+	<message key="submission.layout.referenceLinking">لینک به مراجع</message>
+	<!-- Submission Tracking - Proofread Specific -->
+	<message key="submission.proofreadingComments">نظرات بازبین نهائی</message>
+	<message key="submission.proofread.corrections">تصحیحات بازبین نهائی</message>
+	<message key="submission.proofread.instructions">دستورالعمل بازبینی نهائی</message>
+	<!-- Submission History -->
+	<message key="submission.logType.article">مقاله</message>
+	<message key="submission.logType.author">نویسنده</message>
+	<message key="submission.logType.editor">دبیر</message>
+	<message key="submission.logType.review">داور</message>
+	<message key="submission.logType.copyedit">ویراستار</message>
+	<message key="submission.logType.layout">صفحه‌آرا</message>
+	<message key="submission.logType.proofread">بازبین نهائی</message>
+	<!-- Submission Event Log -->
+	<!-- Submission Email Log -->
+	<!-- Submission Comments -->
+	<message key="submission.comments.editorAuthorCorrespondence">مکاتبات دبیر/ نویسنده</message>
+	<message key="submission.comments.copyeditComments">نظرات ویراستار</message>
+	<message key="submission.comments.viewableDescription"><![CDATA[این نظرات را میتوانید به رویت نویسنده برسانید.<br />  پس از ذخیره باز هم میتوانید به این کار ادامه داده و نظرات بیشتری وارد کنید]]></message>
+	<message key="submission.comments.canShareWithAuthor">برای نویسنده و دبیر</message>
+	<message key="submission.comments.cannotShareWithAuthor">فقط برای دبیر</message>
+	<message key="submission.comments.blindCcReviewers">پس از ارسال این ایمیل یک رونوشت محرمانه نیز برای ارسال به داوران آماده کن.</message>
+	<message key="submission.comments.forAuthorEditor">برای نویسنده و دبیر</message>
+	<message key="submission.comments.forEditor">فقط برای دبیر</message>
+	<message key="submission.comments.saveAndEmailAuthor">ذخیره و ایمیل به نویسنده</message>
+	<message key="submission.comments.saveAndEmailEditor">ذخیره و ایمیل به دبیر</message>
+	<!-- Registration -->
+	<message key="user.register.selectContext">انتخاب مجله برای ثبت‌نام:</message>
+	<message key="user.register.noJournals">مجله ای برای ثبت‌نام در این سایت وجود ندارد.</message>
+	<message key="user.register.privacyStatement">بیانیه حریم خصوصی</message>
+	<message key="user.register.registrationDisabled">این مجله در حال حاضر ثبت‌نام کاربر نمی پذیرد</message>
+	<message key="user.register.form.passwordLengthTooShort">طول رمز عبور انتخاب شده کافی نیست</message>
+	<message key="user.register.readerDescription">اطلاع از انتشار شماره جدید مجله</message>
+	<message key="user.register.openAccessNotificationDescription">اطلاع از آزاد شدن دستیابی به یک شماره مجله</message>
+	<message key="user.register.authorDescription">میتوانید به این مجله مقاله ارسال کنید</message>
+	<message key="user.register.reviewerDescriptionNoInterests">مایلم برای این مجله مقاله داوری کنم</message>
+	<message key="user.register.reviewerDescription">مایلم برای این مجله مقاله داوری کنم. زمینه های داوری به قرار زیر است.</message>
+	<message key="user.register.reviewerInterests">مشخص نمودن علائق داوری: زمینه ها و روش‌های پژوهشی </message>
+	<!-- Subscriptions -->
+	<message key="user.subscriptions.mySubscriptions">اشتراکات من</message>
+	<message key="user.subscriptions.subscriptionStatus">وضعیت اشتراک</message>
+	<message key="user.subscriptions.statusInformation">اشتراکات فعال و منقضی هر دو در زیر همراه با تاریخ انقضا آن‌ها نشان داده شده اند. به علاوه به ازای هر اشتراک اطلاعات وضعیتی زیر نیز ممکن است نشان داده شوند.</message>
+	<message key="user.subscriptions.status">وضعیت</message>
+	<message key="user.subscriptions.statusDescription">توصیف</message>
+	<message key="user.subscriptions.status.needsInformationDescription">قبل از فعال کردن اشتراک اطلاعات بیشتری لازم است</message>
+	<message key="user.subscriptions.status.needsApprovalDescription">قبل از فعال‌سازی اشتراک می بایست بررسی گردد</message>
+	<message key="user.subscriptions.status.awaitingManualPaymentDescription">پرداخت دستی راه‌اندازی شده است ولی هنوز وصول نشده است</message>
+	<message key="user.subscriptions.status.awaitingOnlinePaymentDescription">پرداخت آنلاین شروع شده است ولی کامل نشده است</message>
+	<message key="user.subscriptions.individualSubscriptions">اشتراک شخصی</message>
+	<message key="user.subscriptions.institutionalSubscriptions">اشتراک سازمانی</message>
+	<message key="user.subscriptions.renew">تجدید</message>
+	<message key="user.subscriptions.purchase">خرید</message>
+	<message key="user.subscriptions.purchaseNewSubscription">خرید اشتراک جدید</message>
+	<message key="user.subscriptions.purchaseIndividualSubscription">خرید اشتراک شخصی</message>
+	<message key="user.subscriptions.purchaseInstitutionalSubscription">خرید اشتراک سازمانی</message>
+	<message key="user.subscriptions.expires">تاریخ انقضا : {$date}</message>
+	<message key="user.subscriptions.expired">منقضی شده در:  {$date}</message>
+	<message key="user.subscriptions.viewSubscriptionTypes">دیدن انواع اشتراکات موجود</message>
+	<message key="user.subscriptions.form.typeId">نوع اشتراک</message>
+	<message key="user.subscriptions.form.membership">عضویت</message>
+	<message key="user.subscriptions.form.membershipRequired">این نوع اشتراک انتخاب شده نیاز به اطلاعات عضویت دارد</message>
+	<message key="user.subscriptions.form.typeIdValid">لطفا نوع معتبری از اشتراک را انتخاب کنید</message>
+	<message key="user.subscriptions.form.subscriptionExists">این حساب کاربری در حال حاضر دارای یک اشتراک شخصی میباشد.</message>
+	<message key="user.subscriptions.form.membershipInstructions">اطلاعات عضویت در صورتی که برای نوع اشتراک انتخاب شده لازم شود</message>
+	<message key="user.subscriptions.form.institutionName">نام سازمان</message>
+	<message key="user.subscriptions.form.institutionNameRequired">نام سازمان لازم است</message>
+	<message key="user.subscriptions.form.institutionMailingAddress">آدرس پستی</message>
+	<message key="user.subscriptions.form.domain">دامنه</message>
+	<message key="user.subscriptions.form.domainInstructions"><![CDATA[در صورتی که نام دامنه را در این قسمت وارد میکنید، وارد کردن بازه IP اختیاری است.<br />	  (مانند  lib.sfu.ca)]]></message>
+	<message key="user.subscriptions.form.domainIPRangeRequired">نوع اشتراک انتخاب شده نیاز به نام دامنه یا بازه IP دارد تا بکمک آن اشتراک تایید شود.</message>
+	<message key="user.subscriptions.form.domainValid">لطفا یک نام دامنه معتبری وارد کنید.</message>
+	<message key="user.subscriptions.form.ipRange">بازه های IP</message>
+	<message key="user.subscriptions.form.ipRangeItem"><![CDATA[&#8226;]]></message>
+	<message key="user.subscriptions.form.ipRangeInstructions"><![CDATA[در صورت وارد کردن بازه های IP در این قسمت وارد کردن نام دامنه اختیاری است.<br />	  مقادیر معتبر عبارتند از یک آدرس IP مانند	  142.58.103.1 ،	  یک بازه IP مانند	  142.58.103.1 - 142.58.103.4 ،	  بازه IP همرا با کاراکتر سرکش * مانند:	  142.58.*.*	  و یک بازه IP بهمراه CIDR مانند	  142.58.100.0/24.]]></message>
+	<message key="user.subscriptions.form.ipRangeValid">لطفا بازه IP معتبری وارد کنید.</message>
+	<message key="user.subscriptions.form.deleteIpRange">حذف</message>
+	<message key="user.subscriptions.form.addIpRange">اضافه</message>
+	<!-- Search -->
+	<message key="search.browseAuthorIndex">پیمایش لیست نویسندگان</message>
+	<message key="search.searchFor">جستجوی مقالات برای</message>
+	<message key="search.withinJournal">درون</message>
+	<message key="search.allJournals">تمام مجلات</message>
+	<message key="search.authorIndex">پیمایش لیست نویسندگان</message>
+	<message key="search.authorDetails">جزئیات نویسندگان</message>
+	<message key="search.syntaxInstructions"><![CDATA[<h4>نکاتی در مورد جستجو: </h4>	  <ul>		  <li>حروف کوچک وبزرگ فرقی ندارند</li>		  <li>کلمات رایج در عبارت جستجو نادیده گرفته میشوند</li>		  <li>بصورت پیش‌فرض فقط مقالاتی که دارای <i>همه</i> کلمات جستجو هستند برگردانده میشوند. مثل وقتی که عملگر <i>و</i> اعمال میشود</li>		  <li>ترکیب کلمات با <i>یا</i> مقالاتی را برمیگرداند که هرکدام از کلمات را داشته باشد</li>		  <li>هنگام تشکیل عبارت های جستجوی پیچیده سعی کنید قسمت های مختلف را با پرانتز از هم جدا کنید. مانند <i>بایگانی (مجله یا کنفرانس) نه پایان نامه)</i></li>		  <li>اگر بخواهید یک عبارت را دقیقا به صورتی است جستجو کنید آن را داخل دابل کوتیشن قرار دهید مانند  <i>"مقالات دسترسی آزاد"</i></li>		  <li>برای حذف یک کلمه از جستجو به نحوی که حاصل جستجو فاقد آن کلمه باشد ، قبل از آن کلمه <b>-</b> یا <i>نه</i> بیاورید مانند  <i>آنلاین -آرشیو</i> یا <i>نه آنلاین politics</i></li>		  <li>از ستاره یعنی <b>*</b> در کلمات به عنوان علامت سرکش استفاده کنید تا جایگزین هر تعداد حروف شود. مثلا  <i>soci* morality</i> معادل  "sociological" یا "societal" میباشد</li>	  </ul>]]></message>
+	<!-- Interstitial page for PDFs -->
+	<message key="article.pageTitle">{$title}</message>
+	<message key="article.pdf.title">فايل PDF</message>
+	<message key="article.download">دانلود این فایل PDF</message>
+	<message key="article.pluginMissing"><![CDATA[<p>در صورتی که مرورگر شما دارای افزونه نمایش فایل‌های PDF باشد ( برای مثال <a href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a>)، فایل PDF در مرورگر شما نمایش داده می‌شود.</p>]]></message>
+	<!-- Interstitial page for non-PDF non-HTML galleys -->
+	<message key="article.nonpdf.title">دانلود مقاله</message>
+	<message key="article.nonpdf.note"><![CDATA[فایل انتخاب شده به‌صورت خودکار دانلود خواهد شد. در غیر این صورت بر روی لینک زیر کلیک کنید. توجه داشته باشید که برای دیدن محتویات این فایل ممکن است ابزار خاصی احتیاج داشته باشید.<br /><br />چنانچه فایل به‌صورت خودکار دانلود نشد ، <a href="{$url}">اینجا</a> را کلیک کنید.]]></message>
+	<!-- Site index -->
+	<message key="site.journalsHosted">لیست مجلات موجود بر روی این سایت</message>
+	<message key="site.journalView">مشاهده مجله</message>
+	<message key="site.journalRegister">ثبت‌نام</message>
+	<message key="site.journalCurrent">شماره جاری</message>
+	<message key="site.noJournals">هیچ مجله ای در دسترس نیست</message>
+	<!-- Current index -->
+	<message key="current.current">جاری</message>
+	<message key="current.noCurrentIssue">هیچ شماره جاری وجود ندارد</message>
+	<message key="current.noCurrentIssueDesc">این مجله هنوز شماره‌ای منتشر نکرده است</message>
+	<!-- Archive index -->
+	<message key="archive.archives">بایگانی</message>
+	<message key="archive.archivesPageNumber">بایگانی - صفحه {$pageNumber}</message>
+	<message key="archive.browse">مرور شماره‌های گذشته</message>
+	<message key="archive.issueUnavailable">شماره مجله‌ای موجود نیست</message>
+	<!-- About The Journal -->
+	<message key="about.statistics">آمار</message>
+	<message key="about.contact">اطلاعات تماس</message>
+	<message key="about.aboutContext">درباره‌ی مجله</message>
+	<message key="about.history">تاریخچه مجله</message>
+	<message key="about.editorialTeam">تیم سردبیری</message>
+	<message key="about.editorialTeam.biography">بیوگرافی</message>
+	<message key="about.editorialPolicies">سیاست‌های تیم سردبیری</message>
+	<message key="about.focusAndScope">زمینه مطالعاتی</message>
+	<message key="about.sectionPolicies">سیاست‌های بخش</message>
+	<message key="about.submissions">ارسال مقاله</message>
+	<message key="about.onlineSubmissions.login">ورود به سامانه</message>
+	<message key="about.onlineSubmissions.register">ثبت‌نام</message>
+	<message key="about.onlineSubmissions.registrationRequired">برای ارسال مقاله نیاز به {$register} و {$login} است.</message>
+	<message key="about.onlineSubmissions.submissionActions">{$newSubmission} یا {$viewSubmissions}.</message>
+	<message key="about.onlineSubmissions.newSubmission">ارسال مقاله‌ی جدید</message>
+	<message key="about.onlineSubmissions.viewSubmissions">مشاهده مقالات ارسالی در حال انتظار</message>
+	<message key="about.authorGuidelines">راهنمای نویسندگان</message>
+	<message key="about.submissionPreparationChecklist">چک‌لیست آماده‌سازی برای ارسال مقاله</message>
+	<message key="about.submissionPreparationChecklist.description">به‌عنوان مرحله‌ای از روند ارسال مقاله ، لازم است که نویسندگان از مهیا بودن اقلام مختلف برای ارسال مقاله اطمینان حاصل کنند. برای این کار لازم است که اقلام موجود در چک‌لیست زیر را بررسی نموده و در صورت مهیا بودن جلوی آن تیک بزنند.</message>
+	<message key="about.copyrightNotice">بیانیه حق نشر</message>
+	<message key="about.privacyStatement">بیانیه محرمانگی</message>
+	<message key="about.authorFees">هزینه‌های چاپ مقاله</message>
+	<message key="about.authorFeesMessage">این مجله شامل هزینه‌های زیر برای چاپ مقالات می‌باشد</message>
+	<message key="about.peerReviewProcess">روند داوری</message>
+	<message key="about.publicationFrequency">تعداد انتشار</message>
+	<message key="about.openAccessPolicy">سیاست دسترسی آزاد</message>
+	<message key="about.delayedOpenAccess">دسترسی آزاد (با تأخیر)</message>
+	<message key="about.delayedOpenAccessDescription1">محتوای این مجله به‌صورت آزاد قابل دسترسی است.</message>
+	<message key="about.delayedOpenAccessDescription2">ماه پس از انتشار یک شماره</message>
+	<message key="about.authorSelfArchive">بایگانی شده توسط نویسنده</message>
+	<message key="about.archiving">بایگانی</message>
+	<message key="about.subscriptions">اشتراک</message>
+	<message key="about.subscriptions.individual">اشتراک‌های شخصی</message>
+	<message key="about.subscriptions.institutional">اشتراک‌های سازمانی</message>
+	<message key="about.subscriptionsContact">اطلاعات تماس اشتراک</message>
+	<message key="about.subscriptionTypes.name">نام</message>
+	<message key="about.subscriptionTypes.format">فرمت</message>
+	<message key="about.subscriptionTypes.duration">مدت</message>
+	<message key="about.subscriptionTypes.cost">قیمت</message>
+	<message key="about.availableSubscriptionTypes">انواع اشتراک</message>
+	<message key="about.memberships">عضویت</message>
+	<message key="about.aboutThisPublishingSystem">درباره این سامانه انتشاراتی</message>
+	<message key="about.aboutThisPublishingSystem.altText">روند داوری و انتشار در سامانه OJS</message>
+	<message key="about.aboutOJSJournal"><![CDATA[این مجله از سیستم مجلات آزاد (OJS) نسخه {$ojsVersion} استفاده می‌کند. OJS یک نرم‌افزار متن‌باز مدیریت و انتشار مجلات است که توسط  <a href="http://pkp.sfu.ca/">پروژه دانش عمومی</a> و تحت مجوز GNU در اختیار عموم قرار گرفته است.]]></message>
+	<message key="about.aboutOJSSite"><![CDATA[این سایت از سیستم مجلات آزاد (OJS) نسخه {$ojsVersion} استفاده می‌کند. OJS یک نرم‌افزار متن‌باز مدیریت و انتشار مجلات است که توسط  <a href="http://pkp.sfu.ca/">پروژه دانش عمومی</a> و تحت مجوز GNU در اختیار عموم قرار گرفته است.]]></message>
+	<!-- Announcement -->
+	<!-- Help -->
+	<message key="help.ojsHelp">راهنمای سیستم مجلات آزاد</message>
+	<message key="help.ojsHelpAbbrev">راهنمای OJS</message>
+	<message key="help.searchReturnResults">برگشت به نتایج جستجو</message>
+	<message key="help.goToEditPage">ویرایش {$sectionTitle}</message>
+	<!-- Donations -->
+	<message key="donations.thankYou">متشکرم</message>
+	<message key="donations.thankYouMessage">از مشارکت شما متشکرم. این مشارکت برای ما بسیار گرامی است</message>
+	<!-- Payments -->
+	<message key="payment.loginRequired">برای پرداخت می‌بایست وارد شوید</message>
+	<message key="payment.loginRequired.forArticle">برای مشاهده این مورد باید مشترک باشید یا هزینه آن را بپرداخت. برای تأیید اشتراک یا برای پرداخت هزینه ابتدا وارد مجله شوید</message>
+	<message key="payment.loginRequired.forIssue">برای دسترسی به این بخش باید مشترک مجله باشید و یا هزینه دسترسی به این شماره را پرداخت کنید. برای این منظور ابتدا وارد سایت شوید.</message>
+	<message key="payment.loginRequired.forDonation">برای کمک به مجله ابتدا باید وارد شوید</message>
+	<message key="payment.paid">پرداخت شده</message>
+	<message key="payment.payNow">اکنون پرداخت کن</message>
+	<message key="payment.waive">چشم‌پوشی</message>
+	<message key="payment.alreadyPaid">قبلاً پرداخته شده است.</message>
+	<message key="payment.alreadyPaidMessage">چنانچه قبلاً هزینه را پرداخت کرده‌اید این گزینه را انتخاب کنید تا ارسال مقاله را کامل کنید. مادامی‌که پرداخت شما وصول نگردد مقاله شما جهت داوری ارسال نخواهد شد.</message>
+	<message key="payment.paymentReceived">هزینه پرداختی واصل کردید</message>
+	<message key="payment.paymentSent">هزینه قبلاً پرداخت شده است</message>
+	<message key="payment.authorFees">هزینه‌های نویسنده</message>
+	<message key="payment.type.submission">هزینه ارسال مقاله</message>
+	<message key="payment.type.publication">هزینه چاپ</message>
+	<message key="payment.type.publication.required">در انتظار پرداخت هزینه چاپ</message>
+	<message key="payment.type.fastTrack">هزینه پردازش سریع</message>
+	<message key="payment.type.membership">هزینه برای اعضا</message>
+	<message key="payment.type.purchaseArticle">هزینه خرید مقاله</message>
+	<message key="payment.type.purchaseIssue">هزینه خرید شماره</message>
+	<message key="payment.type.subscription">هزینه اشتراک</message>
+	<message key="payment.type.donation">کمک مالی</message>
+	<message key="payment.requestPublicationFee">درخواست هزینه چاپ ({$feeAmount})</message>
+	<message key="payment.notFound">پرداختی باید انجام می‌شد که زمان آن منقضی شده است. برای اطلاعات بیشتر با مدیر مجله تماس حاصل فرمایید.</message>
+	<message key="payment.donation.makeDonation">کمک مالی</message>
+	<message key="payment.submission.paySubmission">پرداخت هزینه ارسال شده</message>
+	<message key="payment.publication.payPublication">پرداخت برای چاپ</message>
+	<message key="payment.publication.publicationPaid">هزینه چاپ پرداخت شد</message>
+	<message key="payment.membership.buyMembership">پرداخت حق عضویت فردی</message>
+	<message key="payment.membership.renewMembership">تمدید عضویت فردی</message>
+	<message key="payment.membership.ends">اتمام عضویت</message>
+	<message key="payment.subscription.purchase">خرید اشتراک</message>
+	<message key="payment.subscription.renew">تمدید اشتراک</message>
+	<message key="payment.subscription.expires">منقضی می‌شود</message>
+	<!-- Installer -->
+	<message key="installer.appInstallation">نصب OJS</message>
+	<message key="installer.ojsUpgrade">بروز رسانی OJS</message>
+	<message key="installer.installationInstructions"><![CDATA[<h4>OJS نسخه {$version}</h4>	  <p>از دانلود <strong>سیستم مجلات آزاد </strong> پروژه دانش عمومی تشکر می‌کنیم. قبل از ادامه لطفاً متن فایل  <a href="{$baseUrl}/docs/README">README</a>  همراه با این سامانه را مطالعه بفرمائید. برای اطلاعات بیشتر در مورد پروژه دانش عمومی و پروژه‌های نرم‌افزاری آن لطفاً از <a href="http://pkp.sfu.ca/" target="_blank"> وب‌سایت PKP</a> بازدید بفرمائید. اگر می‌خواهید گزارش اشکال بدهید و یا به دنبال حمایت تکنیکی برای سیستم مجلات آزاد هستید به <a href="http://forum.pkp.sfu.ca">انجمن پشتیبانی</a> مراجعه و یا از  <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">سیستم گزارش اشکال </a> آنلاین PKP بازدید کنید. اگرچه ف انجمن پشتیبانی روش ترجیحی تماس می‌باشد ، شما می‌توانید به تیم حمایت کننده به آدرس <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a> ایمیل بزنید. </p>	  <h4>به‌روزرسانی</h4>	  <p>چنانچه می‌خواهید نسخه موجود را ارتقاء دهید  <a href="{$upgradeUrl}">اینجا را کلیک </a> کنید.</p>	  <h4>نیازمندی‌های توصیه شده برای نصب این سامانه</h4>   <ul>  <li><a href="http://www.php.net/" target="_blank">PHP</a> >= {$phpRequiredVersion}; نسخه کنونی PHP {$phpVersion}{$wrongPhpText}</li>  <li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 4.1 یا <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 9.1.5</li>  <li><a href="http://httpd.apache.org/" target="_blank">Apache</a> >= 1.3.2x or >= 2.0.4x یا Microsoft IIS 6</li>  <li>سیستم‌عامل: هر سیستم‌عاملی که بتواند نیازمندی‌های فوق را دارا باشد که می‌تواند شامل:<a href="http://www.linux.org/" target="_blank">لینوکس</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.oracle.com/sun/" target="_blank">سولاریس</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">ویندوز</a></li>  </ul>	   <p>از آنجا که PKP  دارای تمام امکانات برای تست کردن بر روی هر گونه ترکیب احتمالی  از نسخه‌های مختلف نرم‌افزارهای فوق و سیستم‌های عامل نیست ، هیچ‌گونه تضمینی در مورد عملکرد صحیح و یا حمایت از آن را نمی‌توانیم عهده‌دار شویم</p>	  <p>پس از خاتمه نصب برنامه می‌توانید این تنظیمات را از طریق ویرایش فایل  <tt>config.inc.php</tt> در شاخه اصلی OJS ، و یا از طریق صفحه مدیریت سایت تغییر دهید.</p>	  <h4>سیستم‌های بانک اطلاعاتی مورد پشتیبانی</h4>	  <p>OJS در حال حاضر بر روی MySQL  و PostgreSQL تست شده است. با سایر سیستم‌های بانک اطلاعاتی که توسط <a href="http://php.weblogs.com/adodb/" target="_blank">ADOdb</a> حمایت می‌شوند نیز ممکن است به‌صورت نسبی یا تمام عیار کار کند. گزارشات سازگاری و یا کدهای وصله‌ای برای سایر سیستم‌های بانک اطلاعاتی را می‌توانید به تیم OJS بفرستید</p>]]></message>
+	<message key="installer.preInstallationInstructions"><![CDATA[<h4>مراحل پیش از نصب</h4>	  <p>1. فایل‌ها و پوشه‌های زیر (به همراه فایل‌های درون پوشه‌ها) باید قابل نوشتن باشند</p>	  <ul>		  <li><tt>config.inc.php</tt> قابل نوشتن است (اختیاری): {$writable_config}</li>		  <li><tt>public/</tt> قابل نوشتن است: {$writable_public}</li>		  <li><tt>cache/</tt> قابل نوشتن است: {$writable_cache}</li>		  <li><tt>cache/t_cache/</tt> قابل نوشتن است: {$writable_templates_cache}</li>		  <li><tt>cache/t_compile/</tt> قابل نوشتن است: {$writable_templates_compile}</li>		  <li><tt>cache/_db</tt> قابل نوشتن است: {$writable_db_cache}</li>	  </ul>	  <p>2. پوشه فایل‌ها باید ایجاد شده و قابل نوشتن باشد (بخش تنظیمات فایل‌ها را مشاهده کنید)</p>]]></message>
+	<message key="installer.upgradeInstructions"><![CDATA[<h4>OJS نسخه {$version}</h4>	  <p>با تشکر به خاطر دانلود  <strong>سیستم مجلات آزاد</strong> پروژه دانش عمومی. قبل از ادامه ، فایل  <a href="{$baseUrl}/docs/README">README</a> و فایل <a href="{$baseUrl}/docs/UPGRADE">UPGRADE</a> همراه با این نرم‌افزار را مطالعه بفرمائید. برای اطلاعات بیشتر در مورد پروژه دانش عمومی و پروژه‌های نرم‌افزاری آن از  <a href="http://pkp.sfu.ca/" target="_blank"> وب‌سایت PKP</a> دیدن فرمایید. چنانچه می‌خواهید گزارش اشکال بدهید و یا ب9 دنبال حمایت تکنیکی در مورد سیستم مجلات آزاد هستید به  <a href="http://forum.pkp.sfu.ca">انجمن پشتیبانی</a> بروید و یا از  <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">سیستم گزارش اشکال </a> آنلاین PKP بازدید کنید. اگرچه انجمن پشتیبانی روش ترجیحی تماس است. همچنین می‌توانید به آدرس ایمیل  <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>	  <p> پیغام بفرستید. <strong>شدیداً توصیه می‌شود</strong>  که از بانک اطلاعاتی و پوشه فایل‌ها و پوشه نصب OJS نسخه پشتیبان تهیه کنید.</p>	  <p>چنانچه سامانه را در حالت  <a href="http://www.php.net/features.safe-mode" target="_blank"> PHP Safe Mode </a> اجرا می‌کنید ، لطفاً توجه کنید که گزینه  max_execution_time را در فایل تنظیمات  php.ini برابر با مقدار بالائی گذاشته شود. چنانچه زمان به‌روزرسانی از این مقدار و یا سایر محدوده‌ها مانند مقدار Apache's "Timeout"  بیشتر شود و روند به‌روزرسانی قطع شود، دخالت دستی لازم می‌شود.</p>]]></message>
+	<message key="installer.localeSettingsInstructions"><![CDATA[برای پشتیبانی کامل از تمام کاراکترها، برای تمام تنظیمات سیستم کاراکتری  UTF-8 را انتخاب کنید.  توجه کنید که این نوع سیستم کاراکتری نیاز به  MySQL >= 4.1.1 یا PostgreSQL >= 7.1 دارد. همچنین توجه کنید که حمایت از UTF-8 نیاز به PHP >= 4.3.0 همراه با کتابخانه <a href="http://www.php.net/mbstring" target="_blank">mbstring</a> دارد. کتابخانه mbstring به‌صورت پیش‌فرض در نسخه‌های جدید نصب PHP فعال است. چنانچه سرور شما از این ملزومات پشتیبانی نکند شما ممکن است هنگام استفاده از این سیستم کاراکتری مشکلاتی را تجربه کنید.<br /><br />سرور شما در حال حاضر mbstring را حمایت می‌کند: <strong>{$supportsMBString}</strong>]]></message>
+	<message key="installer.allowFileUploads"><![CDATA[سرور شما اجازه آپلود فایل را می‌دهد: <strong>{$allowFileUploads}</strong>]]></message>
+	<message key="installer.maxFileUploadSize"><![CDATA[بزرگ‌ترین حجم فایل که سرور شما اجازه آپلود آن را می‌دهد: <strong>{$maxFileUploadSize}</strong>]]></message>
+	<message key="installer.localeInstructions">زبان اصلی برای استفاده در این سیستم. در صورتی علاقه‌مند به پشتیبانی از زبان‌های دیگری هستید که در این لیست نیامده است به مستندات OJS مراجعه کنید.</message>
+	<message key="installer.additionalLocalesInstructions">زبان‌های اضافی را که مایلید این سیستم پشتیبانی کند انتخاب کنید. این زبان‌ها در دسترس مجلات این سایت برای استفاده قرار خواهند گرفت. البته زبان‌های اضافی را در زمان‌های دیگر نیز می‌توانید از طریق صفحه مدیریت سایت نصب کنید.</message>
+	<message key="installer.filesDirInstructions"><![CDATA[آدرس کامل پوشه‌ای که قرار است فایل‌های آپلود شده را نگه دارد. بهتر است این پوشه مستقیماً قابل دستیابی از طریق وب نباشد.  <strong>لطفاً قبل از نصب برنامه اطمینان حاصل کنید که این پوشه وجود دارد و قابل نوشتن است.</strong> برای وارد کردن آدرس در سیستم‌عامل ویندوز از «/» به جای «\» استفاده کنید .مانند "C:/myjournal/files".]]></message>
+	<message key="installer.databaseSettingsInstructions">OJS برای ذخیره داده‌های خود نیاز به دسترسی به یک بانک اطلاعاتی SQL دارد. لطفاً شرایط مورد لزوم ذکر شده در بالای این صفحه را برای دیدن لیست بانک‌های اطلاعاتی سازگار مشاهده کنید. سپس در قسمت زیر تنظیمات لازم برای ایجاد ارتباط با بانک اطلاعاتی را وارد کنید</message>
+	<message key="installer.installApplication">نصب سیستم‌های مجله آزاد</message>
+	<message key="installer.upgradeApplication">به‌روزرسانی سیستم‌های مجله آزاد</message>
+	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<b>اخطار:</b> چنانچه نصب به‌صورت نیمه کاره رها شود ممکن است لازم شود بانک اطلاعاتی و یا جداول ایجاد شده را حذف کنید و سپس اقدام به نصب مجدد نمایید.]]></message>
+	<message key="installer.overwriteConfigFileInstructions"><![CDATA[<h4>مهم!</h4>	  <p>کد نصب سامانه نمی‌تواند به‌طور خودکار در فایل تنظیمات تغییرات اعمال کند. قبل از شروع کار با سیستم لطفاً فایل <tt>config.inc.php</tt> را در یک ویرایشگر مناسب متنی باز کرده و محتوای آن را با محتوای جعبه متن زیر عوض کنید..</p>]]></message>
+	<message key="installer.installationComplete"><![CDATA[<p>نصب OJS با موفقیت پایان یافت.</p>	  <p>برای شروع کار با سیستم ، با استفاده از نام کاربری و رمز عبوری که در مرحله قبل وارد کردید به سیستم  <a href="{$loginUrl}">وارد</a> شوید.</p>	  <p>چنانچه مایلید اخبار و تازه‌ها را دریافت کنید <strong>لطفاً در  <a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a> ثبت‌نام کنید.</strong> چنانچه سؤال یا نظری دارید لطفاً از  <a href="http://forum.pkp.sfu.ca" target="_new">انجمن پشتیبانی</a> بازدید کنید.</p>]]></message>
+	<message key="installer.upgradeComplete"><![CDATA[<p>به‌روزرسانی  OJS به نسخه {$version} با موفقیت پایان یافت.</p>	  <p>فراموش نکنید که مقدار "installed" را در فایل تنظیمات  config.inc.php را دوباره به <i>On</i> برگردانید.</p>	  <p>چنانچه تا کنون ثبت‌نام نکرده‌اید و مایل هستید تا اخبار و تازه‌ها را دریافت کنید ، <strong>لطفاً در سایت  <a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a> ثبت‌نام کنید.</strong>  چنانچه سؤال و یا نظری دارید لطفاً از  <a href="http://forum.pkp.sfu.ca" target="_new"> انجمن پشتیبانی </a> دیدن نمایید.</p>]]></message>
+	<!-- Installation upgrade warnings -->
+	<message key="site.upgradeAvailable.admin"><![CDATA[نسخه جدیدی از OJS در دسترس است. شما در حال استفاده از نسخه {$currentVersion} هستید در حالی که آخرین نسخه موجود، نسخه {$latestVersion} است. لطفاً به <a href="http://pkp.sfu.ca/ojs_download" target="_new">این صفحه</a> مراجعه کرده، آخرین نسخه را دانلود نمونه و دستورالعمل‌های به‌روزرسانی را مطالعه کنید.]]></message>
+	<message key="site.upgradeAvailable.manager"><![CDATA[نسخه جدیدی از OJS در دسترس است. شما در حال استفاده از نسخه {$currentVersion} هستید در حالی که آخرین نسخه موجود، نسخه {$latestVersion} است. لطفاً به مدیر سایت ({$siteAdminName}, <a href="mailto:{$siteAdminEmail}">{$siteAdminEmail}</a>) در این مورد اطلاع دهید. اطلاعات بیشتری را می توانید در این <a href="http://pkp.sfu.ca/ojs_download" target="_new">لینک</a> مشاهده کنید.]]></message>
+	<!-- Article Logs -->
+	<message key="log.author.documentRevised">{$authorName} مقاله  {$submissionId} را اصلاح کرد. شناسه فایل جدید  {$fileId} می‌باشد.</message>
+	<message key="log.review.reviewerUnassigned">{$reviewerName} از داوری مقاله {$submissionId} برای دور  {$round} معزول شد.</message>
+	<message key="log.review.reviewInitiated">دور  {$round} داوری {$reviewerName} برای مقاله  {$submissionId} شروع شد.</message>
+	<message key="log.review.reviewReinitiated">دور {$round} داوری {$reviewerName} برای مقاله  {$submissionId} از نو شروع شد.</message>
+	<message key="log.review.reviewCleared">دور {$round} داوری {$reviewerName} برای مقاله {$submissionId} پاک شد.</message>
+	<message key="log.review.reviewerRated">{$reviewerName}  امتیاز دور  {$round} داوری مقاله {$submissionId} را وارد نمود.</message>
+	<message key="log.review.reviewDueDateSet">مهلت داوری دور  {$round} مقاله  {$submissionId} توسط {$reviewerName} به  {$dueDate} تغییر یافت.</message>
+	<message key="log.review.reviewRecommendationSet">{$reviewerName} دور {$round} داوری برای مقاله  {$submissionId} را توصیه کرد.</message>
+	<message key="log.review.reviewRecommendationSetByProxy">توصیه داوری دور  {$round} مقاله  {$submissionId} توسط دبیر مقاله, {$editorName} ، از طرف  {$reviewerName} وارد شد.</message>
+	<message key="log.review.resubmit">مقاله {$submissionId} برای داوری مجدداً ثبت شد.</message>
+	<message key="log.review.reviewDeclined">{$reviewerName} از انجام داوری دور  {$round} برای مقاله  {$submissionId} سر باز زد.</message>
+	<message key="log.review.reviewAccepted">{$reviewerName} برای داوری دور  {$round}  مقاله  {$submissionId} اظهار آمادگی کرد.</message>
+	<message key="log.review.reviewDeclinedByProxy">{$userName} از طرف {$reviewerName} از قبول داوری مقاله {$submissionId}  در دور {$round} خودداری کرده است</message>
+	<message key="log.review.reviewAcceptedByProxy">{$userName} برای داوری دور  {$round} مقاله  {$submissionId} از طرف  {$reviewerName} اظهار آمادگی کرد.</message>
+	<message key="log.review.reviewFileByProxy">دبیر ({$userName}) یک فایل داوری برای دور  {$round} مقاله  {$submissionId} از طرف داور ،  {$reviewerName} آپلود کرد.</message>
+	<message key="log.review.reviewerFile">یک فایل داوری آپلود شد</message>
+	<message key="log.editor.decision">تصمیم ({$decision}) برای مقاله {$submissionId} توسط {$editorName} اتخاذ گردید.</message>
+	<message key="log.editor.recommendation">توصیه دبیر ({$decision}) در مورد مقاله {$submissionId} توسط {$editorName} ثبت شد.</message>
+	<message key="log.copyedit.initiate">ویراستار مقاله  {$submissionId} توسط  {$copyeditorName} شروع شد.</message>
+	<message key="log.copyedit.copyeditFileSet">فایل پیش‌فرض ویراستاری انتخاب شد.</message>
+	<message key="log.copyedit.initialEditComplete">{$copyeditorName} ویراستاری اولیه مقاله   {$submissionId} را تمام کرد.</message>
+	<message key="log.copyedit.finalEditComplete">{$copyeditorName} ویراستاری نهائی مقاله  {$submissionId} را تمام کرد.</message>
+	<message key="log.copyedit.copyeditorAssigned">{$copyeditorName} برای ویراستاری مقاله  {$submissionId} انتخاب شد.</message>
+	<message key="log.copyedit.copyeditorFile">یک نسخه ویراستاری شده از مقاله ارسالی آپلود شد.</message>
+	<message key="log.copyedit.authorFile">یک نسخه فایل ویراستاری شده از مقاله ارسالی توسط نویسنده آپلود شد.</message>
+	<message key="log.layout.layoutEditorAssigned">{$editorName} به عنوان صفحه‌آرای مقاله  {$submissionId} انتخاب شد.</message>
+	<message key="log.layout.layoutEditorUnassigned">{$editorName} از صفحه‌آرائی مقاله  {$submissionId} عزل شد.</message>
+	<message key="log.layout.layoutEditComplete">{$editorName} صفحه‌آرائی مقاله  {$submissionId} را کامل کرد.</message>
+	<message key="log.editor.metadataModified">فراداده این مقاله توسط  {$editorName} تغییر یافت.</message>
+	<message key="log.editor.editorFile">یک نسخه دبیری مقاله ارسالی آپلود شد.</message>
+	<message key="log.editor.archived">مقاله  {$submissionId} بایگانی شد.</message>
+	<message key="log.editor.restored">مقاله {$submissionId} به صف بازگشت داده شد</message>
+	<message key="log.editor.editorAssigned">{$editorName} به عنوان دبیر مقاله  {$submissionId} انتخاب شد.</message>
+	<message key="log.proofread.assign">{$assignerName}، {$proofreaderName}  را برای بازبینی نهائی مقاله  {$submissionId} انتخاب کرد.</message>
+	<message key="log.proofread.complete">{$proofreaderName} مقاله {$submissionId} را برای قرارگیری در نوبت ثبت کرد.</message>
+	<message key="log.imported">{$userName} مقاله  {$submissionId} را وارد کرد.</message>
+	<!-- Reading Tools entries -->
+	<!-- RT Settings -->
+	<message key="rt.admin.settings">گزینه های ابزار خواندن</message>
+	<message key="rt.admin.settings.description">ابزارهای خواندن در کادر کنار مقالات چاپ شده در قسمتی از مجله که برای نمایش نمایه است، ظاهر میشود. ابزارهای خواندن مشتمل بر یک مجموعه از ابزارهای اختیاری مربوط به مقالات چاپ شده  است که در زیر لیست شده است و همچنین شامل مجموعه ای از ابزارهائی است که دسترسی به موارد مشابه را بر جسب زمینه مورد نظر و تخصص مربوطه فراهم میکند.</message>
+	<message key="rt.admin.settings.enableReadingTools">فعال ساختن ابزارهای خواندن برای مقالات مورد نظر مجله.</message>
+	<message key="rt.admin.settings.relatedItems">حیطه</message>
+	<message key="rt.admin.settings.relatedItemsLink"><![CDATA[برای دیدن ، افزودن ، تصحیح ، یا حذف به  <a href="{$relatedItemsLink}" class="action">مجموعه موارد مشابه</a>  برای هر حیطه مراجعه کنید.]]></message>
+	<message key="rt.admin.options">ابزار های مجله</message>
+	<message key="rt.admin.relatedItems">ابزار های موارد مربوطه</message>
+	<message key="rt.admin.settings.addComment">افزودن نقطه نظر: موجب میشود که خوانندگان بتوانند نظرات خود را ارسال کنند و مدیر مجله نیز میتواند آن‌ها را رد کند.</message>
+	<message key="rt.admin.settings.addComment.authenticated">برای ارسال نظر خود لازم است که ثبت‌نام کرده و سپس وارد شوید. ارسال بصورت گمنام مقدور نیست</message>
+	<message key="rt.admin.settings.addComment.anonymous">برای ارسال نظر خود بصورت گمنام لازم است که ثبت‌نام کرده و سپس وارد شوید.</message>
+	<message key="rt.admin.settings.addComment.unauthenticated">برای ارسال نظرات بضورت گمنام احتیاج به ثبت‌نام نیست</message>
+	<!-- RT Versions -->
+	<!-- RT Contexts -->
+	<!-- RT Searches -->
+	<message key="rt.admin.validateUrls.description"><![CDATA[احتمالا آدرس های جستجوی بی‌اعتباری در اینجا نشان داده شده است. <br />  میبایست بصورت دستی هر آدرسی که به عنوان بی‌اعتبار مشخص شده را آزمایش کنید چرا که آزمایشی که در اینجا انجام شده نتیجه آن صد در صد نیست.<br />  در مورد آدرسهای جستجوئی که مشتمل بر پر کردن و پست کردن اطالاعات یک فرم باشد ممکن است این آزمایش اعتبارسنجی شکست بخورد.]]></message>
+	<!-- RT Entities -->
+	<message key="rt.metadata.dublinCore.primaryAuthor">ایجاد</message>
+	<message key="rt.metadata.pkp.primaryAuthor">نام، وابستگی و کشور نویسنده</message>
+	<message key="rt.metadata.pkp.peerReviewed">مقاله داوری شده</message>
+	<message key="rt.beNotifiedWhen">با خبر شوم وقتی که...</message>
+	<message key="rt.thisJournal">جستجوی مجله</message>
+	<message key="rt.context.authorTermsDescription">در مورد مقالات با بیش از یک نویسنده تمام نام ها را در حالت چک خورده باقی بگذارید تا  در مورد کارهای مشترک آن‌ها جستجو شود. میتوانید هر بار یکی را جستجو کنید. برای اطلاع بیشتر در مورد منابع مورد جستجو بر روی «درباره» کلیک کنید. این منابع به خاطر مرتبط بودن آن‌ها و دسترسی آزاد به آن‌ها انتخاب شده اند.</message>
+	<!-- Notification Types -->
+	<message key="notification.mailListDescription">آدرس ایمیل خود را وارد کنید تا بدین وسیله از چاپ مطالب جدید باخبر شوید.</message>
+	<message key="notification.notificationsPublicDescription">این صفحه نشان دهنده موارد مهم به‌روزرسانی می‌باشد که در این مجله اتفاق افتاده است مانند شماره‌های جدید مجله و یا اطلاعیه‌ها. می‌توانید از طریق RSS برای این اطلاع‌رسانی‌ها ثبت‌نام کنید. برای این کار بر روی تصویر سمت راست کلیک کنید. و یا از <![CDATA[  <a href="{$emailUrl}">through email.</a>]]></message>
+	<message key="notification.type.articleSubmitted">یک مقاله جدید، "{$title}"، ارسال شد.</message>
+	<message key="notification.type.editing">ویرایش رویدادها</message>
+	<message key="notification.type.submissionSubmitted">یک مقاله با عنوان  "{$title}" ارسال شده است</message>
+	<message key="notification.type.editorDecisionComment">نقطه‌نظری در خصوص تصمیم دبیر درباره "{$title}" برجا گذاشته شده است.</message>
+	<message key="notification.type.galleyModified">کلیشه چاپی "{$title}" تغییر یافته است.</message>
+	<message key="notification.type.issuePublished">یک شماره مجله منتشر شده است</message>
+	<message key="notification.type.newAnnouncement">یک اطلاعیه جدید ایجاد شده است</message>
+	<message key="notification.type.reviewerFormComment">یک فرم داوری در خصوص "{$title}" ثبت شده است</message>
+	<message key="notification.type.reviewing">رخدادهای داوری</message>
+	<message key="notification.type.site">رویدادهای سایت</message>
+	<message key="notification.type.submissionComment">دبیر نظری در مورد "{$title}" داده است.</message>
+	<message key="notification.type.submissions">رویدادهای ارسال شده</message>
+	<message key="notification.type.userComment">یک خواننده نظری در مورد "{$title}" داده است</message>
+	<message key="notification.savedIssueMetadata">فراداده‌های انتشار شماره ذخیره شد.</message>
+	<message key="notification.type.editorAssignmentTask">مقاله‌ی جدیدی ثبت شده است ، لطفاً داوری برای آن مشخص نمایید</message>
+	<message key="notification.type.assignProductionUser">افزودن یک کاربر برای ایجاد کلیشه چاپی با انتخاب گزینه افزودن لینک در بخش همکاران</message>
+	<message key="notification.type.awaitingRepresentations">در انتظار کلیشه‌های چاپی.</message>
+	<message key="notification.type.publicationScheduled">این مقاله در نوبت چاپ قرار گرفت</message>
+	<!--
+	 *
+	 * MISC - Entries that do not belong in the other sections.
+	 *
+	-->
+	<!-- Authorization -->
+	<message key="user.authorization.copyeditorAssignmentMissing">دسترسی رد شد! شما به عنوان ویراستار این مقاله انتخاب نشده اید.</message>
+	<message key="user.authorization.noContext">هیچ مجله ای تعریف نشده است</message>
+	<message key="user.authorization.sectionAssignment">شما در حال تلاش برای دسترسی به مقاله ای هستید که در بخش شما نمی باشد.</message>
+	<message key="user.authorization.invalidIssue">درخواست شماره نامعتبر!</message>
+	<message key="user.authorization.invalidCopyditorSubmission">فایل ارسالی ویراستار نامعتبر است یا فایلی ارسال نشده است!</message>
+	<!-- Icons: Default "alt" text -->
+	<!-- Debug messages -->
+	<message key="debug.notes.currencyListLoad">لیست واحدهای پول (بارگذاری شده از فایل «"{$filename}»)</message>
+	<!-- Grid Actions -->
+	<message key="grid.action.createContext">ایجاد مجله جدید</message>
+	<!-- Included here because it may be used in the navigation bar -->
+	<message key="editor.navigation.issues">شماره</message>
+	<message key="notification.type.approveSubmission">قبل از اینکه این مقاله در شماره مورد نظر چاپ شود بایستی مورد تأیید قرار گیرد</message>
+	<message key="notification.type.approveSubmissionTitle">در انتظار تأیید</message>
+	<message key="user.profile.form.showOtherContexts">ثبت‌نام در مجله دیگر</message>
+	<message key="user.profile.form.hideOtherContexts">پنهان کردن سایر مجلات</message>
+	<message key="article.view.interstitial">لطفاً فایل مقاله مورد نظر را برای دانلود انتخاب نمایید.</message>
+	<message key="grid.catalogEntry.availableRepresentation.approved">تأیید شده</message>
+	<message key="grid.catalogEntry.availableRepresentation.notApproved">در انتظار تأیید</message>
+	<message key="grid.catalogEntry.approvedRepresentation.title">تأیید کلیشه چاپی</message>
+	<message key="grid.catalogEntry.approvedRepresentation.message"><![CDATA[<p>تأیید این کلیشه چاپی برای انتشار</p>]]></message>
+	<message key="grid.catalogEntry.approvedRepresentation.removeMessage"><![CDATA[<p>عدم تأیید این کلیشه چاپی </p>]]></message>
+	<message key="search.cli.rebuildIndex.indexing">نمایه‌سازی "{$journalName}"</message>
+	<message key="search.cli.rebuildIndex.indexingByJournalNotSupported">در سامانه جستجو این وب‌سایت نمایه‌سازی دوباره به ازای هر مجله امکانپدیر نمیباشد</message>
+	<message key="search.cli.rebuildIndex.unknownJournal">آدرس "{$journalPath}" به عنوان آدرس مجله معتبر نمی باشد</message>
+	<message key="editor.issues.backIssues">شماره‌های گذشته</message>
+	<message key="editor.issues.futureIssues">شماره‌های آینده</message>
+	<message key="navigation.subscriptions">اشتراک‌ها</message>
+</locale>

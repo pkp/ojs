@@ -4,8 +4,8 @@
 <!--
   * locale/nl_NL/locale.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the nl_NL (Nederlands) locale.
@@ -324,11 +324,6 @@ Eventueel kunt u de gebruiker een reden voor het blokkeren geven.</message>
 </ol>]]></message>
 
 	<!-- Used by editor in submission review / editing -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[De naam is een link naar het profiel van de reviewer.<br />
-Oordeel is van 1 tot  5 (Uitstekend).<br />
-Weken refereert aan de gemiddelde tijdsduur voor een complete review.<br />
-Laatste is de datum van de laatst geaccepteerde review.<br />
-Actief is het aantal reviews die momenteel in overweging of behandeling zijn.]]></message>
 
 	<!-- Section Editor -->
 	<message key="sectionEditor.activeEditorialAssignments">Actieve redactietaken</message>
@@ -414,7 +409,6 @@ Actief is het aantal reviews die momenteel in overweging of behandeling zijn.]]>
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">Stuur naar tekstredactie</message>
 	<message key="copyeditor.article.copyeditorFile">Bestand voor tekstredacteur</message>
-	<message key="copyeditor.article.uploadedFile">Geladen bestand</message>
 	<message key="copyeditor.article.copyeditorFinalFile">Bestand voor tekstredacteur</message>
 
 	<!-- Proofreader -->

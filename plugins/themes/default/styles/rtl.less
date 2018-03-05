@@ -1,8 +1,8 @@
 /**
  * @file plugins/themes/default/rtl.less
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @brief Stylesheet for flipping content to RTL (e.g. for Arabic, Persian and Hebrew)
@@ -68,14 +68,7 @@ body[dir="rtl"] {
 	.pkp_navigation_primary {
 
 		ul {
-			left: auto;
-			right: -9999px;
 			text-align: right;
-		}
-
-		[aria-expanded="true"] > ul {
-			right: 0;
-			left: auto;
 		}
 	}
 
@@ -84,16 +77,6 @@ body[dir="rtl"] {
 
 		li {
 			text-align: right;
-		}
-
-		ul {
-			left: auto;
-			right: -9999px;
-		}
-
-		[aria-expanded="true"] > ul {
-			right: auto;
-			left: 0;
 		}
 	}
 

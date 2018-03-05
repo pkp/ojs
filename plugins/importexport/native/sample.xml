@@ -20,7 +20,7 @@
 		<revision number="1" genre="Submission"
 			filename="article.docx" viewable="true"
 			date_uploaded="2014-03-06" date_modified="2014-03-06" filesize="18675"
-			filetype="application/octet-stream" user_group_ref="Journal manager"
+			filetype="application/octet-stream"
 			uploader="admin">
 			<name locale="en_US">book reviews</name>
 			<embed encoding="base64">.. base64 encoded data is here ...</embed>

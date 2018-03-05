@@ -3,8 +3,8 @@
 /**
  * @file plugins/pubIds/doi/DOIPubIdPlugin.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class DOIPubIdPlugin
@@ -21,10 +21,10 @@ class DOIPubIdPlugin extends PubIdPlugin {
 	/**
 	 * @copydoc Plugin::register()
 	 */
-	public function register($category, $path) {
-		$success = parent::register($category, $path);
+	public function register($category, $path, $mainContextId = null) {
+		$success = parent::register($category, $path, $mainContextId);
 		if (!Config::getVar('general', 'installed') || defined('RUNNING_UPGRADE')) return $success;
-		if ($success && $this->getEnabled()) {
+		if ($success && $this->getEnabled($mainContextId)) {
 			HookRegistry::register('CitationStyleLanguage::citation', array($this, 'getCitationData'));
 			HookRegistry::register('Submission::getProperties::summaryProperties', array($this, 'modifyObjectProperties'));
 			HookRegistry::register('Submission::getProperties::fullProperties', array($this, 'modifyObjectProperties'));
@@ -35,6 +35,7 @@ class DOIPubIdPlugin extends PubIdPlugin {
 			HookRegistry::register('Submission::getProperties::values', array($this, 'modifyObjectPropertyValues'));
 			HookRegistry::register('Issue::getProperties::values', array($this, 'modifyObjectPropertyValues'));
 			HookRegistry::register('Galley::getProperties::values', array($this, 'modifyObjectPropertyValues'));
+			$this->_registerTemplateResource();
 		}
 		return $success;
 	}
@@ -60,7 +61,7 @@ class DOIPubIdPlugin extends PubIdPlugin {
 	 * @copydoc Plugin::getTemplatePath()
 	 */
 	function getTemplatePath($inCore = false) {
-		return parent::getTemplatePath($inCore) . 'templates/';
+		return $this->getTemplateResourceName() . ':templates/';
 	}
 
 
@@ -106,14 +107,14 @@ class DOIPubIdPlugin extends PubIdPlugin {
 	 * @copydoc PKPPubIdPlugin::getPubIdMetadataFile()
 	 */
 	function getPubIdMetadataFile() {
-		return $this->getTemplatePath().'doiSuffixEdit.tpl';
+		return $this->getTemplatePath() . 'doiSuffixEdit.tpl';
 	}
 
 	/**
 	 * @copydoc PKPPubIdPlugin::getPubIdAssignFile()
 	 */
 	function getPubIdAssignFile() {
-		return $this->getTemplatePath().'doiAssign.tpl';
+		return $this->getTemplatePath() . 'doiAssign.tpl';
 	}
 
 	/**
@@ -263,7 +264,7 @@ class DOIPubIdPlugin extends PubIdPlugin {
 			return;
 		}
 
-		$citationData->DOI = $this->getResolvingURL($journal->getId(), $pubId);
+		$citationData->DOI = $pubId;
 	}
 
 

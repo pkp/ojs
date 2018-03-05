@@ -1,8 +1,8 @@
 {**
  * templates/payments/institutionalSubscriptionForm.tpl
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Individual subscription form under journal management.
@@ -27,8 +27,8 @@
 
 	{fbvFormArea id="institutionalSubscriptionFormArea"}
 		{fbvFormSection title="manager.subscriptions.form.typeId"}
-			{fbvElement type="select" required=true name="typeId" id="typeId" value=$typeId from=$subscriptionTypes label="manager.subscriptions.form.typeId" size=$fbvStyles.size.MEDIUM inline=true translate=false}
-			{fbvElement type="select" required=true name="status" id="status" value=$status from=$validStatus label="manager.subscriptions.form.status" size=$fbvStyles.size.SMALL inline=true}
+			{fbvElement type="select" required=true name="typeId" id="typeId" selected=$typeId from=$subscriptionTypes label="manager.subscriptions.form.typeId" size=$fbvStyles.size.MEDIUM inline=true translate=false}
+			{fbvElement type="select" required=true name="status" id="status" selected=$status from=$validStatus label="manager.subscriptions.form.status" size=$fbvStyles.size.SMALL inline=true}
 		{/fbvFormSection}
 		{fbvFormSection title="common.date"}
 			{fbvElement type="text" required=true name="dateStart" id="dateStart" value=$dateStart label="manager.subscriptions.form.dateStart" size=$fbvStyles.size.SMALL inline=true class="datepicker"}

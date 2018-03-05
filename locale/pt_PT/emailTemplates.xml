@@ -4,8 +4,8 @@
 <!--
   * locale/pt_PT/emailTemplates.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Portuguese_(pt_PT)
   * Localized email templates XML file.
@@ -453,19 +453,6 @@ Caso não esteja disponível para realizar esta tarefa ou em caso de dúvidas, e
 Agradecendo a atenção dispensada,<br />
 {$participantName}]]></body>
 		<description>Mensagem enviada pelo Editor de Texto ao Editor de Secção, informando da conclusão da tarefa editorial.</description>
-	</email_text>
-	<email_text key="COPYEDIT_ACK">
-		<subject>Agradecimento pela edição de texto</subject>
-		<body><![CDATA[{$participantName},<br />
-<br />
-Agradecemos a conclusão da edição do texto do manuscrito &quot;{$submissionTitle}&quot;, submetido à revista {$contextName}.<br />
-<br />
-A sua contribuição é fundamental para a qualidade desta publicação.<br />
-<br />
-Obrigado,<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Mensagem enviada pelo Editor de Secção ao Editor de Texto, agradecendo pela conclusão da tarefa editorial.</description>
 	</email_text>
 	<email_text key="COPYEDIT_AUTHOR_REQUEST">
 		<subject>Pedido de avaliação da edição de texto</subject>
@@ -1162,7 +1149,7 @@ Agradecemos a resposta a este pedido.<br />
 	</email_text>
 	<email_text key="REVISED_VERSION_NOTIFY">
 		<subject>Versão revista enviada</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
+		<body><![CDATA[Cara(o) Editor:<br />
 <br />
 A versão revista do &quot;{$submissionTitle}&quot; foi enviada pelo autor {$authorName}.<br />
 <br />

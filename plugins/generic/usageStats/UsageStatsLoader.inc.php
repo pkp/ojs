@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/usageStats/UsageStatsLoader.inc.php
  *
- * Copyright (c) 2013-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2013-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class UsageStatsLoader
@@ -69,9 +69,9 @@ class UsageStatsLoader extends PKPUsageStatsLoader {
 					$fileId = $args[2];
 					$articleFileDao = DAORegistry::getDAO('SubmissionFileDAO');
 					$articleFile = $articleFileDao->getLatestRevision($fileId);
-					if ($articleFile) {
-						$assocId = $articleFile->getFileId();
-					}
+					if (!$articleFile) break;
+
+					$assocId = $articleFile->getFileId();
 
 					// is the file article full text
 					$genreDao = DAORegistry::getDAO('GenreDAO');

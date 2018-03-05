@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
+<!--
+  * locale/fa_IR/editor.xml
+  *
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
+  * Credits: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Farsi_(fa_IR)
+  -->
+<locale name="fa_IR" full_name="فارسی">
+	<message key="editor.home">صفحه دبیر</message>
+	<message key="editor.reassign">انتساب دوباره</message>
+	<message key="editor.submissionsAndPublishing">مقالات ارسالی و چاپ شده</message>
+	<message key="editor.submissionQueue">صف مقالات ارسالی</message>
+	<message key="editor.submissionArchive">بایگانی مقالات ارسالی</message>
+	<message key="editor.publishing">چاپ</message>
+	<message key="editor.publishedIssues">شماره‌های چاپ شده</message>
+	<message key="editor.allSections">تمام انواع مقاله</message>
+	<message key="editor.allEditors">همه دبیران</message>
+	<message key="editor.me">مرا</message>
+	<message key="editor.publicIdentificationExists">شناسه  «{$publicIdentifier}» برای عنوان دیگری (شماره مجله، مقاله، کلیشه چاپی و یا فایل) اختصاص یافته است. لطفاً شناسه دیگری انتخاب کنید.</message>
+	<message key="editor.submissionArchive.noSubmissions">هیچ مقاله ارسالی در بایگانی نیست</message>
+	<message key="editor.submissionArchive.saveChanges">آیا تغییرات در بایگانی مقالات ارسالی ذخیره شود؟ مقالاتی که جهت حذف انتخاب شده‌اند برای همیشه از سیستم حذف خواهند شد.</message>
+	<message key="editor.submissionArchive.confirmDelete">آیا می‌خواهید برای همیشه این مقاله ارسالی را حذف کنید؟</message>
+	<message key="editor.submissionReview.confirmDecision">آیا از تصمیم گرفته شده مطمئن هستید؟</message>
+	<message key="editor.submissionReview.emailWillArchive">با توجه به اینکه بر روی لینک «بایگانی کردن» کلیک کرده‌اید چنانچه در صفحه بعد (ارسال ایمیل) دکمه ارسال یا انجام بدون ارسال را بزنید در هر حال مقاله بایگانی خواهد شد' مگر اینکه دکمه انصراف را کلیک کنید.</message>
+	<message key="editor.submissionReview.cannotSendToCopyediting">قبل از ارسال مقاله برای ویراستاری، با استفاده از لینک با خبرسازی نویسنده، تصمیم خود را به اطلاع وی برسانید و سپس نسخه ارسالی به ویراستار را انتخاب کنید.</message>
+	<message key="editor.notifyUsers">اطلاع‌رسانی به کاربران</message>
+	<message key="editor.notifyUsers.allReaders">تمام خوانندگان: {$count} کاربر</message>
+	<message key="editor.notifyUsers.allAuthors">تمام نویسندگان دارای مقاله چاپ شده: {$count} کاربر</message>
+	<message key="editor.notifyUsers.allIndividualSubscribers">تمام مشترکین: {$count} کاربر</message>
+	<message key="editor.notifyUsers.allInstitutionalSubscribers">تمام مؤسسات مشترک: {$count} کاربر</message>
+	<message key="editor.notifyUsers.inProgress">اطلاع‌رسانی به کاربران ...</message>
+	<message key="editor.usersNotified">کاربران اطلاع‌رسانی شدند</message>
+	<message key="editor.notifyUsers.allUsers">این پیغام را به تمام کاربران این مجله بفرست  ({$count} کاربر)</message>
+	<message key="editor.notifyUsers.interestedUsers">ارسال این پیغام به تمام کاربران این مجله که برای دریافت تازه‌های چاپ اظهار تمایل کرده‌اند. ({$count}  کاربر)</message>
+	<message key="editor.notifyUsers.includeToc">همچنین فهرست مقالات این شماره را نیز ضمیمه کن:</message>
+	<message key="editor.editorAdministration">اقدامات دبیری</message>
+	<message key="editor.issues.createIssue">ایجاد شماره جدید</message>
+	<message key="editor.issues.editIssue">مدیریت شماره: {$issueIdentification}</message>
+	<message key="editor.issues.currentIssue">شماره جاری</message>
+	<message key="editor.issues.numArticles">موارد</message>
+	<message key="editor.issues.noArticles">هیچ موردی در حال حاضر برای این شماره در نظر گرفته نشده است.</message>
+	<message key="editor.issues.confirmDelete">آیا می‌خواهید این شماره مجله را برای همیشه حذف کنید؟</message>
+	<message key="editor.issues.published">چاپ شده</message>
+	<message key="editor.issues.unpublished">چاپ نشده</message>
+	<message key="editor.issues.datePublished">تاریخ انتشار</message>
+	<message key="editor.issues.volumeRequired">ذکر دوره مجله برای این شماره لازم است</message>
+	<message key="editor.issues.numberRequired">ذکر شماره برای این شماره از مجله لازم است</message>
+	<message key="editor.issues.yearRequired">ذکر سال این شماره لازم است</message>
+	<message key="editor.issues.titleRequired">تعیین عنوان برای شماره مجله الزامی است</message>
+	<message key="editor.issues.issueIdentificationRequired">مشخصات شناسه‌ شماره مجله الزامی است. لطفاً حداقل یکی از گزینه‌های مربوط به اطلاعات شناسه‌ای شماره مجله را انتخاب کنید.</message>
+	<message key="editor.issues.issueIdentification">شناسایی هر شماره مجله</message>
+	<message key="editor.issues.publicIssueIdentifier">شناسه عمومی شماره مجله</message>
+	<message key="editor.issues.description">توصیف</message>
+	<message key="editor.issues.accessStatus">وضعیت دستیابی</message>
+	<message key="editor.issues.accessDate">تاریخ دسترسی آزاد</message>
+	<message key="editor.issues.enableOpenAccessDate">فعال‌سازی دسترسی آزاد (با تأخیر)</message>
+	<message key="editor.issues.coverPage">تصویر جلد</message>
+	<message key="editor.issues.coverPageInstructions">فرمت‌های مجاز: .gif, jpg, یا .png</message>
+	<message key="editor.issues.uploaded">آپلود شد</message>
+	<message key="editor.issues.remove">حذف کن</message>
+	<message key="editor.issues.proofed">بازبینی نهایی شد</message>
+	<message key="editor.issues.removeCoverPage">حذف تصویر جلد</message>
+	<message key="editor.issues.removeCoverImageFileNameMismatch">تصویری که می‌خواهید حذف کنید، تصویر این شماره از مجله نیست، لطفاً صفحه رو از اول بارگذاری کرده و دوباره تلاش کنید.</message>
+	<message key="editor.issues.removeCoverImageFileNotFound">تصویری که می‌خواهید حذف کنید در حافظه یافت نشد. احتمالاً این تصویر پیشتر پاک شده است. لطفاً صفحه را از اول بارگذاری کرده و دوباره بررسی کنید.</message>
+	<message key="editor.issues.invalidCoverImageFormat">تصویر ورودی غیر معتبر است. فرمت‌های مورد پشتیبانی شامل gif، jpg و png است.</message>
+	<message key="editor.issues.styleFile">استایل شیت</message>
+	<message key="editor.issues.invalidStyleFormat">فرمت استایل شیت انتخاب شده غلط است. فایل مورد نظر می‌بایست یک فایل CSS معتبر باشد. توجه کنید که فایل استایل شیت که دارای توضیحاتی در شروع فایل است ممکن است باعث نامعتبر شدن فایل استایل شیت شود</message>
+	<message key="editor.issues.removeStyleFile">آیا استایل شیت حذف شود؟</message>
+	<message key="editor.issues.coverPageCaption">عنوان جلد</message>
+	<message key="editor.issues.showCoverPage">ایجاد صفحه جلد دلخواه برای این شماره با عناصر زیر</message>
+	<message key="editor.issues.coverPageDisplay">نمایش</message>
+	<message key="editor.issues.openAccess">دستیابی آزاد</message>
+	<message key="editor.issues.subscription">اشتراک</message>
+	<message key="editor.issues.identification">شناسایی</message>
+	<message key="editor.issues.access">دستیابی</message>
+	<message key="editor.issues.cover">پشت جلد</message>
+	<message key="editor.issues.confirmIssueDelete">تمام مقالات این شماره به نوبت ویراستاری بازخواهند گشت و تمام فایل‌های همراه آن‌ها به‌طور دائمی از بین خواهد رفت. آیا می‌خواهید این شماره مجله را حذف کنید؟</message>
+	<message key="editor.issues.resetIssueOrder"><![CDATA[در این مجله ترتیب بخش‌ها در هر شماره مجله قابل تغییر می‌باشد.  <a href="{$url}" class="action">برگرداندن به حالت اولیه</a>]]></message>
+	<message key="editor.issues.resetSectionOrder"><![CDATA[در این شماره ترتیب انواع مقالات به صورت اختصاصی است. <a href="{$url}" class="action">برگشت به حالت پیش‌فرض</a>]]></message>
+	<message key="editor.issues.issueData">داده‌های شماره</message>
+	<message key="editor.issues.saveChanges">ذخیره تغییرات فهرست مطالب؟</message>
+	<message key="editor.issues.default">پیش‌فرض</message>
+	<message key="editor.issues.order">ترتیب</message>
+	<message key="editor.issues.publicId">شناسه عمومی</message>
+	<message key="editor.issues.publishIssue">انتشار این شماره</message>
+	<message key="editor.issues.unpublishIssue">لغو چاپ شماره</message>
+	<message key="editor.issues.previewIssue">مشاهده این شماره</message>
+	<message key="editor.issues.preview">مشاهده</message>
+	<message key="editor.issues.confirmPublish">آیا می‌خواهید این شماره جدید را منتشر کنید؟</message>
+	<message key="editor.issues.confirmUnpublish">آیا مطمئن هستید که می‌خواهید چاپ این شماره را لغو کنید؟</message>
+	<message key="editor.issues.confirmSetCurrentIssue">آیا مطمئنید که می‌خواهید این شماره را به عنوان شماره جاری ثبت کنید</message>
+	<message key="editor.issues.publicArticleIdExists">شناسه  عمومی مقاله قابل ذخیره نیست</message>
+	<message key="editor.issues.noLiveIssues">هیچ شماره مجله‌ای وجود ندارد</message>
+	<message key="editor.issues.open">باز کردن</message>
+	<message key="editor.issues.pages">صفحات</message>
+	<message key="editor.issues.galleys">کلیشه‌های چاپی شماره‌ها</message>
+	<message key="editor.issues.galley">کلیشه چاپی شماره</message>
+	<message key="editor.issues.viewingGalley">مشاهده کلیشه چاپی شماره</message>
+	<message key="editor.issues.issueGalleysDescription">کلیشه چاپی را با تمامی محتویات شماره آن منتشر کن</message>
+	<message key="editor.issues.noneIssueGalleys">هیچ کلیشه چاپی شماره مجله‌ای منتشر نشده است.</message>
+	<message key="editor.issues.galleyLabelRequired">وارد کردن برچسب کلیشه چاپی شماره الزامی است</message>
+	<message key="editor.issues.galleyLocaleRequired">وارد کردن زبان کلیشه چاپی شماره الزامی است.</message>
+	<message key="editor.issues.galleyPublicIdentificationExists">این شناسه کلیشه چاپی شماره موجود است.</message>
+	<message key="editor.issues.backToIssueGalleys">برگشت به کلیشه چاپی شماره</message>
+	<message key="editor.issues.confirmDeleteGalley">آیا مطمئنید که می‌خواهید این کلیشه چاپی شماره را حذف کنید.</message>
+	<message key="editor.issues.identifiers">شناسه‌ها</message>
+	<message key="editor.navigation.futureIssues">شماره‌های آتی مجله</message>
+	<message key="grid.action.addGalley">افزودن کلیشه چاپی</message>
+	<message key="grid.action.publish">انتشار شماره</message>
+	<message key="grid.action.addIssue">ایجاد شماره‌ی جدید</message>
+	<message key="grid.action.viewIssue">مشاهده</message>
+	<message key="grid.action.previewIssue">بازنگری</message>
+	<message key="grid.action.addIssueGalley">ایجاد کلیشه چاپی  شماره</message>
+	<message key="grid.action.setCurrentIssue">تنظیم شماره جاری</message>
+	<message key="editor.navigation.issueArchive">شماره‌های گذشته مجله</message>
+	<message key="editor.article.designateReviewVersion">تعیین فایل اصلی به عنوان نسخه داوری</message>
+	<message key="editor.article.decision">تصمیم</message>
+	<message key="editor.submissions.showBy">نشان دادن برحسب</message>
+	<message key="editor.submissions.submitMMDD">ارسال مقاله MM-DD</message>
+	<message key="editor.submissions.activeAssignments">انتسابات فعال</message>
+	<message key="editor.submissions.invite">دعوت کردن</message>
+	<message key="editor.submissions.accept">پذیرفتن</message>
+	<message key="editor.submissions.noSubmissions">هیچ مقاله ارسالی وجود ندارد</message>
+	<message key="editor.submissions.lastAssigned">آخرین</message>
+	<message key="editor.submissions.averageTime">هفته</message>
+	<message key="editor.submissions.lastCompleted">آخرین داوری کامل شده</message>
+	<message key="editor.submissions.assignedTo">منتسب شده به</message>
+	<message key="editor.submissions.inSection">برای مقالات از نوع</message>
+	<message key="editor.article.schedulePublication">برنامه چاپ</message>
+	<message key="editor.article.scheduleForPublication">کاندید پذیرش</message>
+	<message key="editor.article.scheduleForPublication.toBeAssigned">قرار است انتساب یابد</message>
+	<message key="editor.article.payment.publicationFeeNotPaid">هزینه چاپ پرداخت نشده است. برای قرار دادن در نوبت چاپ به نویسنده اطلاع دهید تا هزینه را پرداخت کند</message>
+	<message key="editor.article.removeCoverImageFileNotFound">تصویری که می‌خواهید حذف کنید در حافظه یافت نشد. احتمالاً این تصویر پیشتر پاک شده است. لطفاً صفحه را از اول بارگذاری کرده و دوباره بررسی کنید.</message>
+	<message key="grid.action.removeArticle">حذف مقاله از شماره</message>
+	<message key="editor.article.remove">حذف</message>
+	<message key="editor.article.remove.confirm">آیا مطمئنید که می‌خواهید این مقاله را از شماره حذف کنید؟ البته همچنان مقاله برای انتشار در شمارات آینده در سیستم باقی می‌ماند.</message>
+	<message key="editor.issues.invalidAccessDate">تاریخ دستیابی ذکر شده معتبر نیست</message>
+	<message key="editor.issues.editIssueGalley">ویرایش کلیشه چاپی</message>
+	<message key="editor.submission.production.productionReadyFilesDescription"><![CDATA[صفحه‌آرا فایل‌ها را برای هر کلیشه چاپی آماده می‌سازد و برای <span class="pkp_help_title"> بازبینی نهایی</span> در سیستم آپلود می‌کند.]]></message>
+	<message key="editor.submission.selectGalleyFiles">انتخاب فایل‌های کلیشه‌های چاپی</message>
+	<message key="editor.submission.editorial.finalDraftDescription"><![CDATA[آخرین نسخه از فایل توسط ویراستیار به عنوان نسخه <span class="pkp_help_title">ویراستیاری شده</span> در سیستم آپلود شده است.]]></message>
+	<message key="editor.submission.proof.manageProofFilesDescription">هر فایلی که در مراحل ارسال مقاله در سامانه آپلود شده است را می‌توان با انتخاب گزینه زیر به لیست بازبینی نهایی اضافه کرد.</message>
+	<message key="editor.publicIdentificationExistsForTheSameType">شناسه عمومی «{$publicIdentifier}» برای موجودیت دیگری از همین نوع تعریف شده است. لطفاً برای تمامی موجودیت‌های داخل مجله یک شناسه عمومی منحصربه‌فرد انتخاب کنید.</message>
+</locale>

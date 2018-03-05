@@ -3,8 +3,8 @@
 /**
  * @file controllers/grid/articleGalleys/ArticleGalleyGridRow.inc.php
  *
- * Copyright (c) 2016-2017 Simon Fraser University
- * Copyright (c) 2000-2017 John Willinsky
+ * Copyright (c) 2016-2018 Simon Fraser University
+ * Copyright (c) 2000-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ArticleGalleyGridRow
@@ -70,8 +70,7 @@ class ArticleGalleyGridRow extends GridRow {
 				$this->addAction(new AddFileLinkAction(
 					$request, $this->getSubmission()->getId(), WORKFLOW_STAGE_ID_PRODUCTION,
 					array(ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR, ROLE_ID_ASSISTANT),
-					null, SUBMISSION_FILE_PROOF,
-					ASSOC_TYPE_REPRESENTATION, $rowId,
+					SUBMISSION_FILE_PROOF, ASSOC_TYPE_REPRESENTATION, $rowId,
 					null, $galley->getFileId()
 				));
 			}

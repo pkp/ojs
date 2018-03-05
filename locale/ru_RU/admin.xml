@@ -4,8 +4,8 @@
 <!--
   * locale/ru_RU/admin.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Russian_(ru_RU)
   * Localization strings.
@@ -15,14 +15,8 @@
 	<message key="admin.hostedJournals">Журналы на сайте</message>
 	<message key="admin.settings.journalRedirect">Перенаправление журнала</message>
 	<message key="admin.settings.options">Параметры</message>
-	<message key="admin.settings.usePaging">Для сайтов с большим количеством журналов разбивать список журналов на несколько страниц.</message>
 	<message key="admin.settings.journalRedirectInstructions">Основной страницей сайта станет главная страница этого журнала. Это полезно, например, если на сайте размещается только один журнал.</message>
 	<message key="admin.settings.noJournalRedirect">Не перенаправлять</message>
-	<message key="admin.settings.journalsList">Элементы журнала</message>
-	<message key="admin.settings.journalsList.description">Пожалуйста, выберите элементы журнала, которые будут показываться для каждого журнала на странице сайта.</message>
-	<message key="admin.settings.journalsList.showThumbnail">Миниатюра журнала</message>
-	<message key="admin.settings.journalsList.showTitle">Название журнала</message>
-	<message key="admin.settings.journalsList.showDescription">Описание журнала</message>
 	<message key="admin.settings.defaultMetricDescription">
 		Ваша инсталляция OJS настроена на запись нескольких метрик использования. Статистика использования будет отображаться в нескольких контекстах.
 		Есть случаи, когда должна быть применена только одна статистика использования, например, чтобы отобразить упорядоченный список наиболее используемых статей или проранжировать

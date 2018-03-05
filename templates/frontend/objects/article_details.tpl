@@ -1,8 +1,8 @@
 {**
  * templates/frontend/objects/article_details.tpl
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @brief View of an Article which displays all details about the article.
@@ -198,7 +198,7 @@
 					<div class="value">
 						{if $parsedCitations->getCount()}
 							{iterate from=parsedCitations item=parsedCitation}
-								<p>{$parsedCitation->getCitationWithLinks()|strip_unsafe_html}</p>
+								<p>{$parsedCitation->getCitationWithLinks()|strip_unsafe_html} {call_hook name="Templates::Article::Details::Reference" citation=$parsedCitation}</p>
 							{/iterate}
 						{elseif $article->getCitations()}
 							{$article->getCitations()|nl2br}
@@ -367,6 +367,9 @@
 				<div class="item copyright">
 					{if $licenseUrl}
 						{if $ccLicenseBadge}
+							{if $copyrightHolder}
+								<p>{translate key="submission.copyrightStatement" copyrightHolder=$copyrightHolder copyrightYear=$copyrightYear}</p>
+							{/if}
 							{$ccLicenseBadge}
 						{else}
 							<a href="{$licenseUrl|escape}" class="copyright">

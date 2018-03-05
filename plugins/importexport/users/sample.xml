@@ -2,7 +2,7 @@
 <!--
   * plugins/importexport/users/sample.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2014-2018 Simon Fraser University
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Sample users XML import.
@@ -224,7 +224,6 @@
 			</password>
 			<salutation>Mr</salutation>
 			<initials>JMN</initials>
-			<gender>M</gender>
 			<date_registered>2013-11-05 12:42:05</date_registered>
 			<date_last_login>2014-01-06 08:58:08</date_last_login>
 			<date_validated>2013-11-06 00:00:00</date_validated>

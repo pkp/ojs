@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
+<!--
+  * locale/fa_IR/default.xml
+  *
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
+  * Credits: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Farsi_(fa_IR)
+  -->
+<locale name="fa_IR" full_name="فارسی">
+	<!-- Section default -->
+	<message key="section.default.title">مقالات</message>
+	<message key="section.default.abbrev">م ق</message>
+	<message key="section.default.policy">0</message>
+	<message key="default.genres.article">متن مقاله</message>
+	<!--
+	 *
+	 * DEFAULT - Default settings for setup items.
+	 *
+	-->
+	<message key="default.journalSettings.checklist.notPreviouslyPublished">مقاله ارسالی قبلاً چاپ نشده و هم در هیچ مجله دیگری تحت داوری برای چاپ نمی‌باشد. </message>
+	<message key="default.journalSettings.checklist.fileFormat">فایل ارسال شده به فرمت OpenOffice, Microsoft Word, RTF, یا WordPerfect می‌باشد.</message>
+	<message key="default.journalSettings.checklist.addressesLinked">در صورت امکان لینک مراجع در داخل متن قرار داده شده است.</message>
+	<message key="default.journalSettings.checklist.submissionAppearance">فاصله سطور در متن مقاله تک فاصله‌ای است ، فونت 12 در صورت لزوم از فونت ایتالیک بجای زیرخط دار استفاده شده است ، تمام تصاویر و نمودارها و جداول در خود متن در محل مناسب و یا در انتهای متن قرار داده شده است.</message>
+	<message key="default.journalSettings.checklist.bibliographicRequirements">متن مقاله بر طبق اصول مقاله‌نویسی و مرجع‌نگاری اشاره شده در &lt;a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines"&gt; راهنمای نویسندگان &lt;/a&gt; می‌باشد. این راهنما در قسمت درباره مجله قابل مشاهده است.</message>
+	<message key="default.journalSettings.privacyStatement">نام‌ها و ایمیل‌های وارد شده در سایت مجله، فقط در اهداف بیان شده بکار می‌رود و در دسترس هیچ شخص یا سازمان دیگری قرار نخواهد گرفت.</message>
+	<message key="default.journalSettings.openAccessPolicy">این مجله دستیابی فوری به محتوی خود را به‌صورت آزاد دارا می‌باشد به این امید که پژوهشی که به‌صورت عمومی در دسترس باشد موجب تبادل بیشتر دانش در مقیاس جهانی می‌شود</message>
+	<message key="default.journalSettings.authorSelfArchivePolicy">نویسندگان مجازند (و توصیه می‌شود) که مقالات این مجله را  در سایت‌های شخصی یا سازمانی به نمایش بگذارند.البته به شرط ذکر جزئیات کامل مرجع آن</message>
+	<message key="default.journalSettings.copyeditInstructions"><![CDATA[مرحله ویراستاری به منظور بهبود گرامر ، جمله نگاری ، و فرمت مقاله و روانی آن می‌باشد. این آخرین فرصت برای نویسنده است تا تغییرات حجیم در مقاله خود اعمال کند ، چرا که در مراحل بعدی فقط اجازه اصلاحات املائی و یا اصلاح فرمت را دارد.	 فایل تحت ویراستاری به فرمت  Word یا rtf  می‌باشد و بنابراین به‌راحتی قابل ویرایش می‌باشد. در دستورالعمل‌های این صفحه دو راهکار برای ویراستاری ارائه می‌گردد. اولین راهکار بر مبنای قابلیت «ردیابی تغییرات متن» فایل ورد می‌باشد که برای آن لازم است ویراستار، دبیر و نویسنده همگی دسترسی با این برنامه را داشته باشند. روش دوم که مستقل از نرم‌افزار است استفاده از سامانه بررسی آموزشی هاروارد می‌باشد. هر دو این روش‌ها در این جا شرح داده می‌شود. دبیر مجله مجاز است که این دستورالعمل‌ها را به صلاحدید خود تغییر دهد. و همچنین می‌توانید پیشنهادات سازنده خود را در جهت بهبودی این دستورالعمل را اعمال کنید.	 <h4>سیستم‌های ویراستاری</h4>	<strong>1. ردیابی تغییرات با نرم‌افزار ورد</strong>	از منوی Tools گزینه Track Changes، ویراستار را قادر می‌سازد تا درج و حذف کلمات را نشان‌دار نماید. درج کلمات به‌صورت رنگی نشان داده می‌شود و کلمات حذف شده به‌صورت رنگی در حاشیه نمایش داده می‌شود. همچنین ویراستار می‌تواند سؤالات خود از نویسنده یا از دبیر را نیز در کروشه درون متن بگنجاند.  سپس نسخه ویراستاری شده بارگذاری می‌شود و به اطلاع دبیر رسانده می‌شود. سپس دبیر آن را بررسی و با اطلاع نویسنده می‌رساند.	 دبیر و نویسنده می‌بایست تغییراتی را که موافق آن هستند بدون دخالت رها کنند. اگر تغییرات بیشتری لازم باشد دبیر و نویسنده می‌توانند این تغییرات را در محل‌های اولیه درج و حذف نمایند. بعلاوه می‌توانند کلمات جدیدی درج و یا حذف کنند. نویسندگان و دبیران باید به تمام سؤالات ویراستار پاسخ دهند و متن جوابیه را در کروشه قرار دهند.	 پس از بررسی متن توسط دبیر و نویسنده ویراستار آخرین بررسی را به عمل آورده و تغییرات داده شده را دائمی می‌کنند تا سرانجام نسخه صفحه‌آرا آماده شود.	   < strong>2. سامانه بررسی آموزشی هاروارد </strong>	<strong>دستورالعمل اصلاح الکترونیکی مقالات</strong>	لطفاً مراحل زیر را برای انجام اصلاحات الکترونیکی مقاله انجام دهید:	<b>پاسخ دادن به تغییرات پیشنهادی</b>  &nbsp; هر تغییری در متن را که مورد قبول می‌دانید آن را از حالت بولد یا پررنگ خارج کنید.   &nbsp; هر تغییری را که قبول نمی‌کنید متن اصلی اولیه را بجای آن درج کرده و آن را به‌صورت  <b>بولد</b> در آورید.	<b>اضافه و حذف در متن</b>  &nbsp; درج متن جدید را با  <b>بولد</b>  کردن متن جدید نشان دهید  &nbsp; متنی را که مایلید حذف کنید در کروشه قرار دهید. مانند <b>[متن حذف شده]</b>  &nbsp; اگر یک یا چند جمله را حذف کردید در مورد آن یک یادداشت در کروشه بگذارید مانند  <b>[دو جمله حذف شد]</b>	<b>پاسخ دادن به سؤالات</b>  &nbsp; تمام سؤالات را دست نخورده و بولد درون متن حفظ کنید. آن‌ها را حذف نکنید.  &nbsp;  پاسخ به یک سؤال را بعد از آن بنویسید. شروع پاسخ را با  <b>[پاسخ:</b>] مشخص کنید.  &nbsp; مانند <b>[پاسخ: بحث در مورد متدولوژی مقاله همان‌طور که گفته بودید بسط داده شد]</b>	<b>نشان‌دار کردن توضیحات</b>  &nbsp; برای نشان دادن  تغییرات ساختاری و یا اصلاحات عمیق بهتر است توضیحاتی اضافه کنید  &nbsp; مانند <b>[توضیح: پاراگراف فوق از صفحه 5 به 7 منتقل شد]</b>  &nbsp; توجه: وقتی به شماره صفحه اشاره می‌کنید شماره صفحه مقاله پرینت شده که برای شما فرستاده شده است را منظور کنید. این موضوع مهم است چرا که با اصلاً ح مقاله الکترونیک شماره صفحات ممکن است تغییر کند.	<h4>اصلاً ح کردن یک مقاله الکترونیکی</h4>	<b>فایل اصلی مقاله</b>	قبل از اینکه ساختار و سازماندهی مقاله اصلی را تغییر دهید با دیگر نویسندگان به بررسی آن بپردازید. پس از پایان اصلاحات نام فایل را از AuthorNameQA.doc به AuthorNameQAR.doc تغییر دهید مانند LeeQA.doc به LeeQAR.doc. یک پرینت از این مقاله اصلاح شده را همراه با دیسک (CD) حاوی مقاله اصلاح شده ارسال کنید.	  <b>مقاله برگشت داده شده به نویسنده همراه با سؤالات و پیشنهادات</b>	قبل از اینکه ساختار و سازماندهی <b>مقاله‌ای که به شما برگردانده‌اند</b> را تغییر دهید  با  <b>دبیران مقاله </b> هماهنگی‌های لازم را به عمل آورید. پس از اتمام اصلاحات نام فایل را از AuthorNameQA.doc به AuthorNameQAR.doc تغییر دهید مانند LeeQA.doc به LeeQAR.doc. پرینت آن را همراه با دیسک (CD) فایل ارسال کنید.	<b>یادداشت:</b>  &bull; متن‌های غیر بولد نشان می‌دهد که شما تغییرات ایجاد شده در متن اصلی را قبول دارید.  &bull; متن بولد نشان دهنده این است که متن جدیدی اضافه شده است.  &bull; [کلمه حذف شده] نشان دهنده متن حذف شده است  &bull; پاسخ سؤالات در کروشه می‌آید]]></message>
+	<message key="default.journalSettings.refLinkInstructions"><![CDATA[<h4>  برای افزودن لینک مرجع به مقاله در حال صفحه‌آرائی  </h4>  <p>  وقتی که مقاله را به صورت HTML و یا PDF در می‌آورید مطمئن شوید که تمام لینک‌ها فعال است.  </p>  <h4>  الف. وقتی‌که نویسنده لینکی برای یک مرجع ارائه داده است  </h4>  <ol>  <li>  هنگامی‌که مقاله ارسالی هنوز در قالب فایل واژه‌پرداز (مثل ورد) است, عبارت مشاهده مرجع را به انتهای مرجعی که برای آن لینک ذکر شده است اضافه کنید.  </li>  <li>  با انتخاب عبارت مشاهده مرجع, با استفاده از منوی درج لینک موجود در ورد آدرس لینک داده شده را وارد کرده و آن عبارت را به‌صورت لینک درآورید.  </li>  </ol>  <h4>  ب. افزودن امکان جستجوی گوگل اسکولار برای مراجع  </h4>  <ol>  <li>  هنگامی‌که مقاله ارسالی هنوز در قالب فایل واژه‌پرداز (مثل ورد) است, عنوان مرجع مورد نظر را با یا بدون نام نویسندگان (بسته به شیوه نسبی عنوان مرجع) کپی کنید.  </li>  <li>  متن کپی شده را بین دو علامت %22  قرار دهید و همچنین بین کلمات علامت + بگذارید:  http://scholar.google.com/scholar?q=%22PASTE+TITLE+HERE%22&hl=en&lr=&btnG=Search  بدین ترتیب آدرس جستجوی مقاله مذکور در گوگل اسکولار را می‌سازید.  </li>  <li>  عبارت گوگل اسکولار و یا (GS) را به انتهای هر مرجع در لیست مراجع بیافزائید.  </li>  <li>  عبارت گوگل اسکولار  و یا (GS)را با متدی که قبلاً گفته شد با استفاده از آدرس جستجوی ساخته شده در محله قبل به لینک تبدیل کنید.  </li>  </ol>  <h4>  ج. امکان جستجو مراجع به کمک DOI آن‌ها  </h4>  <ol>  <li>  هنگامی‌که مقاله ارسالی هنوز در قالب فایل واژه‌پرداز (مثل ورد) است, مراجع را به‌صورت گروهی در جعبه جستجوی crossref واقع در آدرس زیر کپی کنید:  http://www.crossref.org/freeTextQuery/  </li>  <li>  شماره شناسایی حاصله (DOI) را در آدرس جستجوی زیر در جای مشخص شده با عبارت PASTE DOI  قرار دهید.  Paste each DOI that the Query provides in the following URL (between = and &):  http://www.cmaj.ca/cgi/external_ref?access_num=PASTE DOI#HERE&link_type=DOI  </li>  <li>  عبارت CrossRef را به انتهای هر مرجع افزوده و مانند مراحل قبل با استفاده از عبارت جستجوی ساخته شده آن را به‌صورت لینک درآورید.  </li>  </ol>]]></message>
+	<message key="default.journalSettings.proofingInstructions"><![CDATA[مرحله بازبینی نهائی برای شناسایی هرگونه خطا املائی، گرامری، و نگارشی در نسخه نهایی است. در این مرحله تغییرات عمیق قابل اعمال نیست مگر اینکه دبیر مقاله قبول کند. در قسمت صفحه‌آرائی بر روی مشاهده نسخه بازبینی نهایی کلیک کنید تا فرمت‌های مختلف تهیه شده از قبیل HTML, PDF را ببینید.	 <strong>برای خطاهای املائی یا گرامری</strong>کلمه یا کلمات مورد نظر که دارای خطا است را در جعبه اصلاحات بررسی نهائی کپی کنید. همراه با آن دستورالعمل اصلاح خطا را نیز تحت عنوان «تغییر به» را بیاورید مانند مثال زیر: 1. تغییر....  <pre>1. تغییر  then the others  به  than the others</pre>  <br />  <pre2. تغییر  Malinowsky  به  Malinowski</pre>  <br />  <strong>خطاهای فرمت</strong> ابتدا کلمه فرمت را به عنوان تیتر و سپس محل و ماهیت خطای فرمت را در جعبه اصلاحات بررسی نهائی وارد کنید مانند مثال زیر: <br />  <pre>3.فرمت  اعداد در جدول 3 مرتب نیستند </pre>  <br />  <pre>4. فرمت  پاراگرافی که با "This last topic..."  شروع شده است فاصله سطر اول ندارد.</pre>]]></message>
+	<message key="default.journalSettings.forReaders"><![CDATA[به خوانندگان عزیز توصیه می‌کنیم که برای دریافت خبرهای انتشاراتی این مجله  با کلیک کردن بر روی لینک  <a href="{$indexUrl}/{$journalPath}/user/register">ثبت‌نام</a> در بالای صفحات ثبت‌نام کنند. در نتیجه شما از طریق ایمیل فهرست مطالب هر شماره جدید را دریافت خواهید داشت. برای اطلاع از محرمانگی اطلاعاتی که وارد می‌کنید  <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">بیانیه محرمانگی</a> مجله را مطالعه نمایید. در این بیانیه آمده است که ایمیل‌هایی که وارد می‌کنید برای مقاصد دیگر بکار نخواهد رفت.]]></message>
+	<message key="default.journalSettings.forAuthors"><![CDATA[آیا می‌خواهید به این مجله مقاله بفرستید؟ توصیه می‌شود که متن <a href="{$indexUrl}/{$journalPath}/about">درباره مجله</a>  که شامل سیاست‌های حاکم بر انواع مقالات؛ و متن  <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">راهنمای نویسندگان</a> را مطالعه فرمایید. برای ارسال مقاله لازم است در سامانه این مجله ثبت‌نام کنید. چنانچه تا کنون  در این مجله <a href="{$indexUrl}/{$journalPath}/user/register">ثبت‌نام</a> نکرده‌اید نسبت به این کار اقدام کنید. چنانچه قبلاً ثبت‌نام کرده‌اید فقط کافی است که به سامانه   <a href="{$indexUrl}/{$journalPath}/login">وارد</a> شوید  و مراحل پنجگانه ارسال مقاله را شروع کنید.]]></message>
+	<message key="default.journalSettings.forLibrarians"><![CDATA[به کتابخانه‌های پژوهشی توصیه می‌شود که این مجله را در لیست اقلام خود قرار دهند. همچنین می‌توانید به افرادی که در موسسه شما درگیر کار انتشار مجله هستند توصیه کنید که از این سیستم مجلات آزاد برای مجله خود استفاده کنند. جهت کسب اطلاعات بیشتر به سایت <a href="http://pkp.sfu.ca/ojs">سامانه مجلات آزاد </a> مراجعه کنید.]]></message>
+	<message key="default.journalSettings.lockssLicense"><![CDATA[این مجله از سیستم LOCKSS  برای ایجاد یک بایگانی گسترده در کتابخانه‌های عضو این پروژه استفاده می‌کند و بدین وسیله یک بایگانی دائمی از محتویات خود ایجاد می‌کند. <a href="http://www.lockss.org/">اطلاعات بیشتر...</a>]]></message>
+	<message key="default.journalSettings.clockssLicense"><![CDATA[این مجله از سیستم CLOCKSS  برای ایجاد یک بایگانی گسترده در کتابخانه‌های عضو این پروژه استفاده می‌کند و بدین وسیله یک بایگانی همیشگی از محتویات خود ایجاد می‌کند. <a href="http://clockss.org/">اطلاعات بیشتر...</a>]]></message>
+	<!-- Default settings for payment items. -->
+	<message key="default.journalSettings.publicationFee">انتشار مقاله</message>
+	<message key="default.journalSettings.purchaseArticleFee">خرید مقاله</message>
+	<message key="default.journalSettings.purchaseIssueFee">خرید شماره</message>
+	<message key="default.journalSettings.membershipFee">عضویت انجمن</message>
+	<!-- Group defaults -->
+	<message key="default.groups.name.manager">مدیر مجله</message>
+	<message key="default.groups.plural.manager">مدیران مجله</message>
+	<message key="default.groups.abbrev.manager">مدیر.م</message>
+	<message key="default.groups.name.editor">سردبیر مجله</message>
+	<message key="default.groups.plural.editor">سردبیران مجله</message>
+	<message key="default.groups.abbrev.editor">سردبیر</message>
+	<message key="default.groups.name.guestEditor">دبیر مهمان</message>
+	<message key="default.groups.plural.guestEditor">دبیران مهمان</message>
+	<message key="default.groups.abbrev.guestEditor">دبیر.م</message>
+	<message key="default.groups.name.sectionEditor">دبیر</message>
+	<message key="default.groups.plural.sectionEditor">دبیران</message>
+	<message key="default.groups.abbrev.sectionEditor">دبیر</message>
+	<message key="default.groups.name.subscriptionManager">مدیر اشتراک</message>
+	<message key="default.groups.plural.subscriptionManager">مدیران اشتراک</message>
+	<message key="default.groups.abbrev.subscriptionManager">م.اشتراک</message>
+	<!-- Genre Defaults -->
+	<message key="default.genres.researchInstrument">ابزارهای پژوهش</message>
+	<message key="default.genres.researchMaterials">مواد مورد استفاده</message>
+	<message key="default.genres.researchResults">نتایج پژوهش</message>
+	<message key="default.genres.transcripts">رونوشت‌ها</message>
+	<message key="default.genres.dataAnalysis">آنالیز داده‌ها</message>
+	<message key="default.genres.dataSet">مجموعه‌ی داده‌ها</message>
+	<message key="default.genres.sourceTexts">منابع</message>
+	<message key="default.groups.name.externalReviewer">داور</message>
+	<message key="default.groups.plural.externalReviewer">داوران</message>
+	<message key="default.groups.abbrev.externalReviewer">داور</message>
+	<message key="default.journalSettings.emailSignature"><![CDATA[<br/>  ________________________________________________________________________<br/>  <a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>]]></message>
+</locale>

@@ -1,8 +1,8 @@
 {**
  * templates/payments/subscriptionTypeForm.tpl
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Subscription type form under journal management.
@@ -37,7 +37,7 @@
 	{/fbvFormSection}
 
 	{fbvFormSection label="manager.subscriptionTypes.form.format"}
-		{fbvElement type="select" required=true name="format" id="format" value=$format from=$validFormats size=$fbvStyles.size.SMALL translate=false inline=true}
+		{fbvElement type="select" required=true name="format" id="format" selected=$format from=$validFormats size=$fbvStyles.size.SMALL translate=false inline=true}
 	{/fbvFormSection}
 
 	{fbvFormSection label="manager.subscriptionTypes.form.duration"}

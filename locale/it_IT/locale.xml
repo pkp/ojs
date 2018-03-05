@@ -4,8 +4,8 @@
 <!--
   * locale/it_IT/locale.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings.
@@ -456,11 +456,6 @@ Seleziona un modello per gestire questi aspetti del processo editoriale. (Per de
 	<!-- Navigation sidebar menu -->
 
 	<!-- Used by editor in submission review / editing -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[Il nome porta al profilo del revisore.<br/>
-Il giudizio arriva fino a 5 (Eccellente).<br/>
-Settimane si riferisce al tempo medi di completamente di una revisione.<br/>
-Ultima è la data della revisione accettata più recente.<br/>
-Attive indica quante revisioni sono attualmente in corso.]]></message>
 
 
 
@@ -549,7 +544,6 @@ Attive indica quante revisioni sono attualmente in corso.]]></message>
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">File al Copyeditor</message>
 	<message key="copyeditor.article.copyeditorFile">File del Copyeditor</message>
-	<message key="copyeditor.article.uploadedFile">File caricato</message>
 	<message key="copyeditor.article.copyeditorFinalFile">File del Copyeditor</message>
 
 	<!-- Proofreader -->

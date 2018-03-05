@@ -4,18 +4,18 @@
 <!--
   * locale.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_(es_ES)
   * Localization strings.
   -->
 
 <locale name="es_ES" full_name="Español (España)">
-	<message key="plugins.importexport.native.displayName">Complemento XML nativo</message>
-	<message key="plugins.importexport.native.description">Importar y exportar libros en el formato XML nativo de OMP.</message>
+	<message key="plugins.importexport.native.displayName">Módulo XML nativo</message>
+	<message key="plugins.importexport.native.description">Importar y exportar libros en el formato XML nativo.</message>
 	<message key="plugins.importexport.native.import">Importar</message>
-	<message key="plugins.importexport.native.import.instructions">Por favor, selecciona un archivo XML para subir y pincha en "Iniciar subida". Cuando se haya completado la subida del archivo, pincha en "OK" para importarlo a OMP.</message>
+	<message key="plugins.importexport.native.import.instructions">Por favor, selecciona un archivo XML para subir y pincha en "Iniciar subida". Cuando se haya completado la subida del archivo, pincha en "OK" para importarlo al gestor.</message>
 	<message key="plugins.importexport.native.export">Exportar</message>
 	<message key="plugins.importexport.native.results">Resultados</message>
 	<message key="plugins.inportexport.native.uploadFile">Por favor, sube un archivo en "Importar" para continuar.</message>

@@ -4,8 +4,8 @@
 <!--
   * locale/nb_NO/locale.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * (Norwegian translation from english by Karl Henrik Flyum, Dept. of teacher education and school development, University of Oslo, Norway, 2006-2007)
   * Localization strings for the nb_NO (Norsk bokmål) locale.
@@ -348,12 +348,6 @@ Du kan velge å gi brukeren en begrunnelse for at kontoen er slått av.</message
 
 	<!-- Navigation sidebar menu -->
 
-	<!-- Used by editor in submission review / editing -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[Navnelenker til fagkonsulentprofil.<br/>
-Rangeres på en skala fra 1 til 5, hvor 5 er best.<br/>
-Uker viser til gjennomsnittlig tid det tar å ferdigstille et vurderingsoppdrag.<br/>
-Siste er dato for siste aksepterte vurderingsoppdrag.<br/>
-Aktive er hvor mange fagfellevurderinger som for øyeblikket er bestilt eller under arbeid.]]></message>
 
 
 
@@ -431,7 +425,6 @@ Aktive er hvor mange fagfellevurderinger som for øyeblikket er bestilt eller un
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">Fil til MR</message>
 	<message key="copyeditor.article.copyeditorFile">Fil til manusredaktør</message>
-	<message key="copyeditor.article.uploadedFile">Opplastet fil</message>
 	<message key="copyeditor.article.copyeditorFinalFile">Manusredaktør fil</message>
 
 	<!-- Proofreader -->

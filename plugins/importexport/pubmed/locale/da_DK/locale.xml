@@ -4,8 +4,8 @@
 <!--
   * plugins/importexport/pubmed/locale/da_DK/locale.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the da_DK (Dansk) locale.
@@ -13,8 +13,8 @@
   -->
  
 <locale name="da_DK" full_name="Dansk">
-	<message key="plugins.importexport.pubmed.displayName">PubMed XML Eksport Plugin</message>
-	<message key="plugins.importexport.pubmed.description">Eksporter artikel metadata i PubMed XML format for indeksering i MEDLINE.</message>
+	<message key="plugins.importexport.pubmed.displayName">PubMed XML Eksport-plug-in</message>
+	<message key="plugins.importexport.pubmed.description">Eksporter artikel-metadata i PubMed XML format til indekssering i MEDLINE.</message>
 	
 	<message key="plugins.importexport.pubmed.export">Eksporter data</message>
 	<message key="plugins.importexport.pubmed.export.issues">Eksporter numre</message>
@@ -23,12 +23,12 @@
 	<message key="plugins.importexport.pubmed.export.selectArticle">Vælg artikler til eksport</message>
 	
 	<message key="plugins.importexport.pubmed.cliUsage">Brug: 
-{$scriptName} {$pluginName} [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...
+{$scriptName} {$pluginName} [xmlFileName] [journal_path] artikler [articleId1] [articleId2] ...
 {$scriptName} {$pluginName} [xmlFileName] [journal_path] nummer [issueId]</message>
 	<message key="plugins.importexport.pubmed.cliError">FEJL:</message>
 
-	<message key="plugins.importexport.pubmed.export.error.issueNotFound">Intet nummer matchede det angivne nummer ID "{$issueId}".</message>
-	<message key="plugins.importexport.pubmed.export.error.articleNotFound">Ingen artikel matchede det angivne artikel ID "{$articleId}".</message>
+	<message key="plugins.importexport.pubmed.export.error.issueNotFound">Intet nummer matchede det angivne nummer-ID "{$issueId}".</message>
+	<message key="plugins.importexport.pubmed.export.error.articleNotFound">Ingen artikel matchede det angivne artikel-ID "{$articleId}".</message>
 
 
 </locale>

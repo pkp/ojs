@@ -4,8 +4,8 @@
 <!--
   * locale/es_ES/manager.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * https://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_(es_ES)
   * Localization strings.
@@ -153,7 +153,7 @@
 	<message key="manager.setup.enableAnnouncementsHomepage1">Mostrar</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">los últimos avisos publicados en la página inicial.</message>
 	<message key="manager.setup.enablePublicIssueId">Se usarán identificadores personalizados para identificar las publicaciones.</message>
-	<message key="manager.setup.enableUserRegistration">Los usuarios/as pueden registrarse en la revista con uno o varios de los siguientes roles:</message>
+	<message key="manager.setup.enableUserRegistration">Los visitantes pueden registrar una cuenta de usuario/a en la revista.</message>
 	<message key="manager.setup.focusAndScope">Objeto y alcance</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWork">Instrucciones de indexación para los autores/as</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWorkDescription"><![CDATA[OJS se adhiere al protocolo <a href="http://www.openarchives.org/" target="_blank">Open Archives Initiative</a> Protocol for Metadata Harvesting, estándar emergente para proporcionar acceso indexado a recursos de investigación electrónicos a escala global. Los autores/as deben usar una plantilla similar para proporcionar los metadatos necesarios para sus envíos. El gestor/a de la revista debe seleccionar las categorías para la indexación y mostrar a los autores/as ejemplos relevantes para ayudarlos a indexar sus trabajos, separando los términos con un punto y coma (p. ej., término1; término2). Las entradas deben introducirse como ejemplos utilizando "p. ej.," o "Por ejemplo,".]]></message>
@@ -208,6 +208,12 @@
 	<message key="manager.setup.layoutTemplates.title">Título</message>
 	<message key="manager.setup.lists">Listas</message>
 	<message key="manager.setup.listsDescription">Introduzca el número máximo de elementos (p. ej., envíos, usuarios/as o asignación de tareas de edición) que aparecerán en cada página de una lista, así como el número de enlaces de las páginas que se mostrarán en cada una de dichas páginas.</message>
+	<message key="manager.setup.plnPluginEnable">Módulo PKP PN activado</message>
+	<message key="manager.setup.plnDescription">La Red de Preservación de PKP (PKP Preservation Network, en inglés) proporciona servicios gratuitos de preservación para cualquier revista OJS que cumpla con los criterios básicos.</message>
+	<message key="manager.setup.plnSettingsDescription">Clica en el enlace de Preferencias para aceptar los términos de uso de PKP PN.</message>
+	<message key="manager.setup.plnPluginArchiving">PKP Preservation Network (PN)</message>
+	<message key="manager.setup.plnPluginNotInstalled">PKP Preservation Network (PN) proporciona servicios gratuitos de preservación para cualquier revista OJS que cumpla con los criterios básicos. El módulo PKP PN para OJS 3 está actualmente en desarrollo y estará disponible el la garería de módulos pronto.</message>
+	<message key="manager.setup.otherLockss">Opciones Alternativas de Archivo</message>
 	<message key="manager.setup.lockssEnable"><![CDATA[Habilite LOCKSS para almacenar y distribuir contenido de la revista en bibliotecas colaboradoras a través de una página del <a href="{$lockssUrl}" target="_blank">Manifiesto editorial</a> LOCKSS. Puede encontrar la licencia de LOCKSS en la sección Archivo de la sección Acerca de la revista:]]></message>
 	<message key="manager.setup.lockssRegister"><![CDATA[Identifique de 6 a 10 bibliotecas que registrarán y almacenarán temporalmente la revista. Por ejemplo, consulte las instituciones en las que trabajan los editores/as o los miembros del consejo de redacción y/o las instituciones que ya emplean el sistema LOCKSS. Ver <a href="http://www.lockss.org/community/" target="_blank">la comunidad LOCKSS</a>. Use las invitaciones preparadas para (i) <a href="{$lockssExistingArchiveUrl}" target="_blank">bibliotecas que emplean LOCKSS</a> o (ii) <a href="{$lockssNewArchiveUrl}" target="_blank">bibliotecas que aún no emplean LOCKSS</a>.]]></message>
 	<message key="manager.setup.look">Apariencia</message>

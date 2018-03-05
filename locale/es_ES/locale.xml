@@ -4,8 +4,8 @@
 <!--
   * locale/es_ES/locale.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * https://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_(es_ES)
   * Localization strings.
@@ -405,7 +405,6 @@
 	<!-- Navigation sidebar menu -->
 
 	<!-- Used by editor in submission review / editing -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[Nombre los enlaces para el perfil del revisor/a.<br /> El máximo de la Calificación es de 5 (excelente).<br /> Las Semanas indican el plazo medio de tiempo para terminar una revisión.<br /> Última, indica la fecha de la última revisión aceptada.<br /> Activa, indica cuántas revisiones se están llevando a cabo.]]></message>
 
 
 	<!-- Section Editor -->
@@ -492,7 +491,6 @@
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">Archivo para el corrector/a de originales</message>
 	<message key="copyeditor.article.copyeditorFile">Archivo del corrector/a de originales</message>
-	<message key="copyeditor.article.uploadedFile">Archivo cargado</message>
 	<message key="copyeditor.article.copyeditorFinalFile">Archivo del corrector/a de originales</message>
 
 	<!-- Proofreader -->
@@ -831,9 +829,8 @@
 	<message key="log.review.reviewAcceptedByProxy">{$userName} aceptó la ronda de revisión {$round} para el envío {$submissionId} en nombre de {$reviewerName}.</message>
 	<message key="log.review.reviewFileByProxy">El editor/a {$userName} subió un archivo de revisión para la ronda {$round} del envío {$submissionId} en nombre del revisor {$reviewerName}.</message>
 	<message key="log.review.reviewerFile">Se subió un archivo de revisión.</message>
-	<message key="log.editor.decision">{$editorName} registró una decisión ({$decision}) editorial para el artículo {$submissionId}.</message>
-
-
+	<message key="log.editor.decision">{$editorName} registró una decisión editorial para el artículo {$submissionId}: ({$decision})</message>
+	<message key="log.editor.recommendation">{$editorName} registró una recomendación editorial para el artículo {$submissionId}: ({$decision})</message>
 	<message key="log.copyedit.initiate">{$copyeditorName} inició la corrección de originales en el envío {$submissionId}.</message>
 	<message key="log.copyedit.copyeditFileSet">Se seleccionó el archivo de corrección de originales por defecto.</message>
 	<message key="log.copyedit.initialEditComplete">{$copyeditorName} completó la corrección inicial del envío {$submissionId}.</message>
@@ -912,6 +909,7 @@
 	<message key="notification.type.submissionComment">Un editor/a hizo un comentario en "{$title}".</message>
 	<message key="notification.type.submissions">Eventos de los envíos</message>
 	<message key="notification.type.userComment">Un lector/a hizo un comentario en "{$title}"</message>
+	<message key="notification.type.publicationScheduled">Se ha programado este envío para su publicación.</message>
 
 	<!--
 	 *
@@ -1013,4 +1011,8 @@ La configuración del soporte CLOCKSS para Open Journal Systems no hace falta qu
 	<message key="about.onlineSubmissions.viewSubmissions">Ver sus envíos pendientes</message>
 	<message key="notification.type.assignProductionUser">Asigne un usuario/a para crear galeradas mediante el enlace Añadir de la lista de participantes.</message>
 	<message key="notification.type.awaitingRepresentations">Esperando galeradas.</message>
+	<message key="navigation.subscriptions">Suscripciones</message>
+	
+	<!-- legacy strings from OJS 2, for upgraded installations from OJS 2 -->
+	<message key="log.editor.submissionExpedited">{$editorName} se hará cargo del proceso de edición del artículo {$submissionId}.</message>
 </locale>

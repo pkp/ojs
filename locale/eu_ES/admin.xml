@@ -4,8 +4,8 @@
 <!--
   * locale/eu_ES/admin.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the eu_ES (Euskara) locale.
@@ -59,12 +59,6 @@
 	<message key="admin.languages.installNewLocalesInstructions">Hauta itzazu locale osagarriak sistema horretarako laguntzailea instalatzeko. Localeak aldizkari ostalariak erabili baino lehen instalatu behar dira. Ikusi OJS-ren dokumentazioa hizkuntza berrientzako laguntzaileak gehitzeari buruzko informazioa eskuratzeko.</message>
 	<message key="admin.journals.createInstructions">Aldizkari honen kudeatzaile gisa emango duzu izena automatikoki. Aldizkari berria sortu ondoren, bertara kudeatzaile gisa sartu haren ezarpenarekin eta erabiltzailearen izen-ematearekin jarraitzeko.</message>
 	<message key="admin.settings.options">Aukerak</message>
-	<message key="admin.settings.usePaging">Aldizkari ugari dituzten webguneetan, banatu aldizkarien zerrenda hainbat orritan.</message>
-	<message key="admin.settings.journalsList">Aldizkariaren elementuak</message>
-	<message key="admin.settings.journalsList.description">Mesedez, aukeratu webgunean aldizkari bakoitzak bistaratuko dituen aldizkariaren elementuak.</message>
-	<message key="admin.settings.journalsList.showThumbnail">Aldizkariaren miniatura</message>
-	<message key="admin.settings.journalsList.showTitle">Aldizkariaren titulua</message>
-	<message key="admin.settings.journalsList.showDescription">Aldizkariaren deskribapena</message>
 	<message key="admin.categories">Kategoriak</message>
 	<message key="admin.categories.enable.description">Aldizkari multzo handiak antolatzen laguntzeko, Webgunearen Administratzaileek aukera dezakete kategoria multzo bat definitzea. Aldizkarien Kudeatzaileek, ondoren, aukera dezakete kategoria hauetako guztien artean, eta irakurleek aldizkari bildumak araka ditzakete kategoriaren arabera.</message>
 	<message key="admin.categories.disableCategories">Ez antolatu aldizkariak kategorietan.</message>

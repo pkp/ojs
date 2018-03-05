@@ -4,8 +4,8 @@
 <!--
   * locale/ru_RU/locale.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Russian_(ru_RU)
   * Localization strings.
@@ -480,11 +480,6 @@
 	<!-- Меню навигации боковой панели -->
 
 	<!-- Используются редактором в процессе рецензирования / редактирования материала -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[Имя является ссылкой на профиль рецензента.<br />
-Высшая оценка в рейтинге — 5 (Отлично).<br />
-Недель — показывает средний срок выполнения рецензии рецензентом.<br />
-Последняя — дата последней принятой рецензии от данного рецензента,<br />
-Активны — количество рецензий, запросы на которые сейчас рассматривает или выполняет рецензент.]]></message>
 
 
 
@@ -578,7 +573,6 @@
 	<!-- Используются в редактировании материала -->
 	<message key="copyeditor.article.fileToCopyedit">Файл для литературного редактирования</message>
 	<message key="copyeditor.article.copyeditorFile">Файл литературного редактора</message>
-	<message key="copyeditor.article.uploadedFile">Загруженный файл</message>
 	<message key="copyeditor.article.copyeditorFinalFile">Файл литературного редактора</message>
 
 	<!-- Корректор -->

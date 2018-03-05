@@ -3,8 +3,8 @@
 /**
  * @file pages/about/AboutHandler.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class AboutHandler
@@ -26,6 +26,14 @@ class AboutHandler extends AboutContextHandler {
 		$this->setupTemplate($request);
 		$journal = $request->getJournal();
 		$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
+
+		if ($journal) {
+			$paymentManager = \Application::getPaymentManager($journal);
+			if (!($journal->getSetting('paymentsEnabled') && $paymentManager->isConfigured())) {
+				$request->redirect(null, 'index');
+			}
+		}
+
 		$templateMgr->assign(array(
 			'subscriptionAdditionalInformation' => $journal->getLocalizedSetting('subscriptionAdditionalInformation'),
 			'subscriptionMailingAddress' => $journal->getSetting('subscriptionMailingAddress'),

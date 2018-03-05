@@ -4,8 +4,8 @@
 <!--
   * locale/pt_PT/locale.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Portuguese_(pt_PT)
   * Localization strings.
@@ -269,11 +269,6 @@ Escolha um modelo para administrar os aspectos do processo editorial. (Para desi
 	Esta tarefa deve ser executada por um administrador do portal.]]></message>
 
 	<!-- Used by editor in submission review / editing -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[O nome é o atalho para o perfil do revisor.<br />
-Classificação vai até 5 (Excelente).<br />
-Dias refere-se ao tempo médio para concluir uma revisão.<br />
-Última é a data da última aceitação de revisão,<br />
-Activo indica revisão em consideração ou em progresso.]]></message>
 
 	<!-- Section Editor -->
 	<message key="sectionEditor.activeEditorialAssignments">Tarefas Editoriais Activas</message>
@@ -354,7 +349,6 @@ Activo indica revisão em consideração ou em progresso.]]></message>
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">Ficheiro para Edição de Texto (C/E)</message>
 	<message key="copyeditor.article.copyeditorFile">Versão do Editor de Texto</message>
-	<message key="copyeditor.article.uploadedFile">Documento Transferido</message>
 	<message key="copyeditor.article.copyeditorFinalFile">Versão do Editor de Texto</message>
 
 	<!-- Proofreader -->

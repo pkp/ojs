@@ -4,8 +4,8 @@
 <!--
   * locale/de_DE/manager.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_German_(de_DE)
   * Localization strings.
@@ -545,7 +545,7 @@
 	<message key="manager.setup.copyrightYearBasis.article">Artikel: das Standardjahr wird aus dem Veröffentlichungsjahr des Artikels abgeleitet, wie bei "publish-as-you-go".</message>
 	<message key="manager.setup.copyrightYearBasis.issue">Ausgabe: das Standardjahr wird aus dem Veröffentlichungsdatum der Ausgabe abgeleitet.</message>
 	<message key="manager.setup.resetPermissions">Artikelrechte zurücksetzen</message>
-	<message key="manager.setup.resetPermissions.confirm">Sind Sie sicher, dass Sie die Rechte, die bisher diesem Artikel zugewiesen sind, zurücksetzen möchten?</message>
+	<message key="manager.setup.resetPermissions.confirm">Sind Sie sicher, dass Sie die Rechte, die bisher den Artikeln zugewiesen sind, zurücksetzen möchten?</message>
 	<message key="manager.setup.resetPermissions.description">Copyright-Angaben und Lizenzinformationen werden permanent mit veröffentlichten Inhalten verknüpft. Damit wird sichergestellt, dass diese Angaben nicht geändert werden, wenn eine Zeitschrift ihre Policy für neue Einreichungen ändert. Nutzen Sie den Knopf unten, um gespeicherte Rechteinformationen, die bereits mit veröffentlichten Inhalten verknüpft sind, zurückzusetzen.</message>
 
 	<!-- Genres Grid -->

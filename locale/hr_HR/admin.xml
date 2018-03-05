@@ -4,8 +4,8 @@
 <!--
   * locale/hr_HR/admin.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the hr_HR (Hrvatski) locale.
@@ -57,10 +57,6 @@
 	<message key="admin.mergeUsers.confirm">Jeste li sigurni da želite spojiti račun korisnika "{$oldUsername}" s računom korisnika "{$newUsername}"? Račun korisničkog imena "{$oldUsername}" više neće postojati nakon toga. Ovo je nepovratna radnja.</message>
 	<message key="admin.mergeUsers.noneEnrolled">Nema evidentiranih korisnika.</message>
 	<message key="admin.settings.options">Mogućnosti</message>
-	<message key="admin.settings.usePaging">Podijeli stranu sa listom časopisa na nekoliko strana kod sajtova gdje ima više časopisa.</message>
-	<message key="admin.settings.journalsList">Elementi časopisa</message>
-	<message key="admin.settings.journalsList.showTitle">Naziv časopisa</message>
-	<message key="admin.settings.journalsList.showDescription">Opis časopisa</message>
 	<message key="admin.locale.maybeIncomplete">Označeni prijevodi su možda nezavršeni.</message>
 	<message key="admin.systemVersion">OJS verzija</message>
 	<message key="admin.categories">Kategorije</message>
@@ -72,12 +68,10 @@
 	<message key="admin.categories.confirmDelete">Da li ste sigurni da želite izbrisati ovu kategoriju?</message>
 	<message key="admin.categories.name">Ime</message>
 	<message key="admin.categories.nameRequired">Obavezno je ime kategorije.</message>
-	<message key="admin.settings.journalsList.description">Odaberite elemente časopisa koji će biti objavljeni za svaki časopis na internet stranici.</message>
-	<message key="admin.settings.journalsList.showThumbnail">Umanjena slika časopisa</message>
 	<message key="admin.settings.defaultMetricDescription">Vaš časopis je podešen tako da bilježi više od jednog načina mjerenja upotrebe stranica. Statistika upotrebe stranica će biti prikazana u nekoliko konteksta.
 Ima slučajeva kad je potrebno uzeti jedan način mjerenja npr. za prikaz liste sa rangiranjem najčešće preuzetih članaka ili za rangiranje rezultata pretrage.
 Odaberite jedan od podešenih načina mjerenja kao pretpostavljeni.</message>
 	<message key="admin.categories.enableCategories">Dozvoli Ravnateljima časopisa organizirati časopise u kategorije</message>
 	<message key="admin.categories.enable.description">Administrator internet mjesta može odrediti kategorije kako i lakše organizirati brojne nizove časopisa. Ravnatelji časopisa mogu odabrati nekoliko od tih kategorija  za svaki časopis kako bi čitatelji pregledavali kolekcije časopisa po kategorijama.</message>
-	
+
 </locale>

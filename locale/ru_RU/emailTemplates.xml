@@ -4,8 +4,8 @@
 <!--
   * locale/ru_RU/emailTemplates.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Russian_(ru_RU)
   * Localized email templates XML file.
@@ -789,7 +789,7 @@ URL подписки: {$subscriptionUrl}<br />
 	</email_text>
 	<email_text key="REVISED_VERSION_NOTIFY">
 		<subject>Загружена исправленная версия</subject>
-		<body><![CDATA[Здравствуйте, {$editorialContactName}!<br />
+		<body><![CDATA[Уважаемые редакторы!<br />
 <br />
 Исправленная версия материала «{$submissionTitle}» была загружена на сайт (автор — {$authorName}).<br />
 <br />

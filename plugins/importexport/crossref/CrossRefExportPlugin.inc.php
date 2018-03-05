@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/crossref/CrossRefExportPlugin.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class CrossRefExportPlugin
@@ -39,6 +39,18 @@ define('CROSSREF_DEPOSIT_STATUS', 'depositStatus');
 class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 
 	/**
+	 * @copydoc Plugin::register()
+	 */
+	public function register($category, $path, $mainContextId = null) {
+		$success = parent::register($category, $path, $mainContextId);
+		if (!Config::getVar('general', 'installed') || defined('RUNNING_UPGRADE')) return $success;
+		if ($success && $this->getEnabled()) {
+			$this->_registerTemplateResource();
+		}
+		return $success;
+	}
+
+	/**
 	 * @copydoc Plugin::getName()
 	 */
 	function getName() {
@@ -57,6 +69,13 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 	 */
 	function getDescription() {
 		return __('plugins.importexport.crossref.description');
+	}
+
+	/**
+	 * @copydoc Plugin::getTemplatePath()
+	 */
+	function getTemplatePath($inCore = false) {
+		return $this->getTemplateResourceName() . ':templates/';
 	}
 
 	/**

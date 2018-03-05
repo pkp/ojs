@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/announcementFeed/AnnouncementFeedPlugin.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class AnnouncementFeedPlugin
@@ -16,11 +16,22 @@
 import('lib.pkp.classes.plugins.GenericPlugin');
 
 class AnnouncementFeedPlugin extends GenericPlugin {
-	function register($category, $path) {
-		if (parent::register($category, $path)) {
-			if ($this->getEnabled()) {
+	/**
+	 * @copydoc Plugin::register()
+	 */
+	public function register($category, $path, $mainContextId = null) {
+		if (parent::register($category, $path, $mainContextId)) {
+			if ($this->getEnabled($mainContextId)) {
 				HookRegistry::register('TemplateManager::display',array($this, 'callbackAddLinks'));
-				HookRegistry::register('PluginRegistry::loadCategory', array($this, 'callbackLoadCategory'));
+				$this->import('AnnouncementFeedBlockPlugin');
+				$blockPlugin = new AnnouncementFeedBlockPlugin($this);
+				PluginRegistry::register('blocks', $blockPlugin, $this->getPluginPath());
+
+				$this->import('AnnouncementFeedGatewayPlugin');
+				$gatewayPlugin = new AnnouncementFeedGatewayPlugin($this);
+				PluginRegistry::register('gateways', $gatewayPlugin, $this->getPluginPath());
+
+				$this->_registerTemplateResource();
 			}
 			return true;
 		}
@@ -31,7 +42,7 @@ class AnnouncementFeedPlugin extends GenericPlugin {
 	 * Get the display name of this plugin
 	 * @return string
 	 */
-	function getDisplayName() {
+	public function getDisplayName() {
 		return __('plugins.generic.announcementfeed.displayName');
 	}
 
@@ -39,32 +50,15 @@ class AnnouncementFeedPlugin extends GenericPlugin {
 	 * Get the description of this plugin
 	 * @return string
 	 */
-	function getDescription() {
+	public function getDescription() {
 		return __('plugins.generic.announcementfeed.description');
 	}
 
 	/**
-	 * Register as a block and gateway plugin, even though this is a generic plugin.
-	 * This will allow the plugin to behave as a block and gateway plugin
-	 * @param $hookName string
-	 * @param $args array
+	 * @copydoc Plugin::getTemplatePath()
 	 */
-	function callbackLoadCategory($hookName, $args) {
-		$category =& $args[0];
-		$plugins =& $args[1];
-		switch ($category) {
-			case 'blocks':
-				$this->import('AnnouncementFeedBlockPlugin');
-				$blockPlugin = new AnnouncementFeedBlockPlugin($this->getName());
-				$plugins[$blockPlugin->getSeq()][$blockPlugin->getPluginPath()] =& $blockPlugin;
-				break;
-			case 'gateways':
-				$this->import('AnnouncementFeedGatewayPlugin');
-				$gatewayPlugin = new AnnouncementFeedGatewayPlugin($this->getName());
-				$plugins[$gatewayPlugin->getSeq()][$gatewayPlugin->getPluginPath()] =& $gatewayPlugin;
-				break;
-		}
-		return false;
+	public function getTemplatePath($inCore = false) {
+		return $this->getTemplateResourceName() . ':templates/';
 	}
 
 	/**
@@ -73,8 +67,8 @@ class AnnouncementFeedPlugin extends GenericPlugin {
 	 * @param $args array
 	 * @return boolean Hook processing status
 	 */
-	function callbackAddLinks($hookName, $args) {
-		$request =& $this->getRequest();
+	public function callbackAddLinks($hookName, $args) {
+		$request = $this->getRequest();
 		if ($this->getEnabled() && is_a($request->getRouter(), 'PKPPageRouter')) {
 			$templateManager = $args[0];
 			$currentJournal = $templateManager->get_template_vars('currentJournal');
@@ -123,7 +117,7 @@ class AnnouncementFeedPlugin extends GenericPlugin {
 	/**
 	 * @copydoc Plugin::getActions()
 	 */
-	function getActions($request, $verb) {
+	public function getActions($request, $verb) {
 		$router = $request->getRouter();
 		import('lib.pkp.classes.linkAction.request.AjaxModal');
 		return array_merge(
@@ -145,7 +139,7 @@ class AnnouncementFeedPlugin extends GenericPlugin {
  	/**
 	 * @copydoc Plugin::manage()
 	 */
-	function manage($args, $request) {
+	public function manage($args, $request) {
 		switch ($request->getUserVar('verb')) {
 			case 'settings':
 				$context = $request->getContext();
@@ -171,5 +165,3 @@ class AnnouncementFeedPlugin extends GenericPlugin {
 		return parent::manage($args, $request);
 	}
 }
-
-?>

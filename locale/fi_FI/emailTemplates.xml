@@ -4,8 +4,8 @@
 <!--
   * locale/fi_FI/emailTemplates.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
   * Localized email templates XML file.
@@ -810,7 +810,7 @@ Tekninen toimittaja, {$contextName}<br />
 	</email_text>
 	<email_text key="REVISED_VERSION_NOTIFY">
 		<subject>Korjattu versio on ladattu</subject>
-		<body><![CDATA[{$editorialContactName},<br />
+		<body><![CDATA[Hyvät toimittajat,<br />
 <br />
 {$authorName} on ladannut käsikirjoituksen &quot;{$submissionTitle}&quot; korjatun version.<br />
 <br />

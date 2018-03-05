@@ -1,8 +1,8 @@
 {**
  * templates/payments/subscriptionFormUser.tpl
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Common subscription fields
@@ -31,14 +31,6 @@
 <tr>
 	<td class="label">{fieldLabel name="userInitials" key="user.initials"}</td>
 	<td class="value"><input type="text" name="userInitials" id="userInitials" value="{$userInitials|escape}" size="5" maxlength="5" class="textField" />&nbsp;&nbsp;{translate key="user.initialsExample"}</td>
-</tr>
-<tr>
-	<td class="label">{fieldLabel suppressId="true" name="userGender" key="user.gender"}</td>
-	<td class="value">
-		<select name="userGender" id="userGender" size="1" class="selectMenu">
-			{html_options_translate options=$genderOptions selected=$userGender}
-		</select>
-	</td>
 </tr>
 <tr>
 	<td class="label">{fieldLabel name="userAffiliation" key="user.affiliation"}</td>

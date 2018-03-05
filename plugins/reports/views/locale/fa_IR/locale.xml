@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!--
+  * plugins/reports/views/locale/fa_IR/locale.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
+  * Credits: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Farsi_(fa_IR)
+  -->
+<locale name="fa_IR" full_name="فارسی">
+	<message key="plugins.reports.views.displayName">مشاهده گزارش</message>
+	<message key="plugins.reports.views.description">این افزونه گزارشی در فرمت CSV تهیه می کند که آمار میزان دسترسی و خوانش مقالات (به ازای هر مقاله) را شرح می دهد</message>
+	<message key="plugins.reports.views.articleId">شناسه مقاله</message>
+	<message key="plugins.reports.views.articleTitle">عنوان مقاله</message>
+	<message key="plugins.reports.views.datePublished">تاریخ انتشار</message>
+	<message key="plugins.reports.views.abstractViews">تعداد مشاهده چکیده</message>
+	<message key="plugins.reports.views.galleyViews">تعداد مشاهده کلیشه چاپی</message>
+</locale>

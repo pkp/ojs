@@ -4,8 +4,8 @@
 <!--
   * locale/es_ES/emailTemplates.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * https://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_(es_ES)
   * Localized email templates XML file.
@@ -947,7 +947,7 @@ Gracias por considerar esta solicitud.<br />
 	</email_text>
 	<email_text key="REVISED_VERSION_NOTIFY">
 		<subject>Versión revisada cargada</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
+		<body><![CDATA[Editores/as:<br />
 <br />
 El autor {$authorName} ha cargado un versión revisada de &quot;{$submissionTitle}&quot;.<br />
 <br />

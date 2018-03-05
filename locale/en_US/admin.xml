@@ -4,8 +4,8 @@
 <!--
   * locale/en_US/admin.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
   * Localization strings.
@@ -15,14 +15,8 @@
 	<message key="admin.hostedJournals">Hosted Journals</message>
 	<message key="admin.settings.journalRedirect">Journal redirect</message>
 	<message key="admin.settings.options">Options</message>
-	<message key="admin.settings.usePaging">For sites with many journals, break the list of journals up into several pages.</message>
 	<message key="admin.settings.journalRedirectInstructions">Requests to the main site will be redirected to this journal. This may be useful if the site is hosting only a single journal, for example.</message>
 	<message key="admin.settings.noJournalRedirect">Do not redirect</message>
-	<message key="admin.settings.journalsList">Journal elements</message>
-	<message key="admin.settings.journalsList.description">Please choose the journal elements that will be displayed for each journal at the site page.</message>
-	<message key="admin.settings.journalsList.showThumbnail">Journal thumbnail</message>
-	<message key="admin.settings.journalsList.showTitle">Journal title</message>
-	<message key="admin.settings.journalsList.showDescription">Journal description</message>
 	<message key="admin.settings.defaultMetricDescription">
 		Your OJS installation is configured to record more than one usage metric. Usage statistics will be displayed in several contexts.
 		There are cases where a single usage statistic must be used, e.g. to display an ordered list of most-used articles or to rank

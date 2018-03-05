@@ -3,8 +3,8 @@
 /**
  * @file plugins/paymethod/paypal/PaypalPaymentPlugin.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class PaypalPaymentPlugin
@@ -40,10 +40,10 @@ class PaypalPaymentPlugin extends PaymethodPlugin {
 	}
 
 	/**
-	 * @see Plugin::register
+	 * @copydoc Plugin::register()
 	 */
-	function register($category, $path) {
-		if (parent::register($category, $path)) {
+	function register($category, $path, $mainContextId = null) {
+		if (parent::register($category, $path, $mainContextId)) {
 			$this->addLocaleData();
 			return true;
 		}
