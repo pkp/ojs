@@ -27,7 +27,11 @@
 			<img src="{$publicFilesDir}/{$homepageImage.uploadName|escape:"url"}" alt="{$homepageImageAltText|escape}">
 		</div>
 	{/if}
-
+	{if $journalDescription}
+		<div class="journal-description">
+			{$journalDescription}
+		</div>
+	{/if}
 	{* Announcements *}
 	{if $numAnnouncementsHomepage && $announcements|@count}
 		<div class="cmp_announcements highlight_first">
