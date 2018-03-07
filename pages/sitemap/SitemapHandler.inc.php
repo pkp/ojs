@@ -10,7 +10,7 @@
  * @class SitemapHandler
  * @ingroup pages_sitemap
  *
- * @brief Produce a sitemap in XML format for submitting to search engines. 
+ * @brief Produce a sitemap in XML format for submitting to search engines.
  */
 
 import('lib.pkp.classes.xml.XMLCustomWriter');
@@ -38,14 +38,14 @@ class SitemapHandler extends Handler {
 			XMLCustomWriter::printXML($doc);
 		}
 	}
-	 
+
 	/**
 	 * Construct a sitemap index listing each journal's individual sitemap
 	 * @return XMLNode
 	 */
 	function _createSitemapIndex() {
 		$journalDao = DAORegistry::getDAO('JournalDAO');
-		
+
 		$doc = XMLCustomWriter::createDocument();
 		$root = XMLCustomWriter::createElement($doc, 'sitemapindex');
 		XMLCustomWriter::setAttribute($root, 'xmlns', SITEMAP_XSD_URL);
@@ -57,7 +57,7 @@ class SitemapHandler extends Handler {
 			XMLCustomWriter::createChildWithText($doc, $sitemap, 'loc', $sitemapUrl, false);
 			XMLCustomWriter::appendChild($root, $sitemap);
 		}
-		
+
 		XMLCustomWriter::appendChild($doc, $root);
 		return $doc;
 	}
@@ -70,50 +70,72 @@ class SitemapHandler extends Handler {
 		$issueDao = DAORegistry::getDAO('IssueDAO');
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
-		
+
 		$journal = Request::getJournal();
 		$journalId = $journal->getId();
-		
+
 		$doc = XMLCustomWriter::createDocument();
 		$root = XMLCustomWriter::createElement($doc, 'urlset');
 		XMLCustomWriter::setAttribute($root, 'xmlns', SITEMAP_XSD_URL);
-		
+
 		// Journal home
 		XMLCustomWriter::appendChild($root, $this->_createUrlTree($doc, Request::url($journal->getPath(),'index','index')));
-		// About page
-		XMLCustomWriter::appendChild($root, $this->_createUrlTree($doc, Request::url($journal->getPath(), 'about')));
-		XMLCustomWriter::appendChild($root, $this->_createUrlTree($doc, Request::url($journal->getPath(), 'about', 'editorialTeam')));
-		XMLCustomWriter::appendChild($root, $this->_createUrlTree($doc, Request::url($journal->getPath(), 'about', 'editorialPolicies')));
+		// User register
+		if ($journal->getSetting('disableUserReg') != 1) {
+			XMLCustomWriter::appendChild($root, $this->_createUrlTree($doc, Request::url($journal->getPath(), 'user', 'register')));
+		}
+		// User login
+		XMLCustomWriter::appendChild($root, $this->_createUrlTree($doc, Request::url($journal->getPath(), 'login')));
+		// Announcements (the URL for each announcement is not considered)
+		if ($journal->getSetting('enableAnnouncements') == 1) {
+			XMLCustomWriter::appendChild($root, $this->_createUrlTree($doc, Request::url($journal->getPath(), 'announcement')));
+		}
+		// About: journal
+		if (!empty($journal->getSetting('about'))) {
+			XMLCustomWriter::appendChild($root, $this->_createUrlTree($doc, Request::url($journal->getPath(), 'about')));
+		}
+		// About: submissions
 		XMLCustomWriter::appendChild($root, $this->_createUrlTree($doc, Request::url($journal->getPath(), 'about', 'submissions')));
-		XMLCustomWriter::appendChild($root, $this->_createUrlTree($doc, Request::url($journal->getPath(), 'about', 'siteMap')));
-		XMLCustomWriter::appendChild($root, $this->_createUrlTree($doc, Request::url($journal->getPath(), 'about', 'aboutThisPublishingSystem')));
+		// About: editorial team
+		if (!empty($journal->getSetting('editorialTeam'))) {
+			XMLCustomWriter::appendChild($root, $this->_createUrlTree($doc, Request::url($journal->getPath(), 'about', 'editorialTeam')));
+		}
+		// About: contact
+		if (!empty($journal->getSetting('mailingAddress')) || !empty($journal->getSetting('contactName'))) {
+			XMLCustomWriter::appendChild($root, $this->_createUrlTree($doc, Request::url($journal->getPath(), 'about', 'contact')));
+		}
 		// Search
 		XMLCustomWriter::appendChild($root, $this->_createUrlTree($doc, Request::url($journal->getPath(), 'search')));
 		XMLCustomWriter::appendChild($root, $this->_createUrlTree($doc, Request::url($journal->getPath(), 'search', 'authors')));
-		XMLCustomWriter::appendChild($root, $this->_createUrlTree($doc, Request::url($journal->getPath(), 'search', 'titles')));
 		// Issues
-		XMLCustomWriter::appendChild($root, $this->_createUrlTree($doc, Request::url($journal->getPath(), 'issue', 'current')));
-		XMLCustomWriter::appendChild($root, $this->_createUrlTree($doc, Request::url($journal->getPath(), 'issue', 'archive')));
-		$publishedIssues = $issueDao->getPublishedIssues($journalId);
-		while ($issue = $publishedIssues->next()) {
-			XMLCustomWriter::appendChild($root, $this->_createUrlTree($doc, Request::url($journal->getPath(), 'issue', 'view', $issue->getId())));
-			// Articles for issue
-			$articles = $publishedArticleDao->getPublishedArticles($issue->getId());
-			foreach($articles as $article) {
-				// Abstract
-				XMLCustomWriter::appendChild($root, $this->_createUrlTree($doc, Request::url($journal->getPath(), 'article', 'view', array($article->getBestArticleId()))));
-				// Galley files
-				$galleys = $galleyDao->getBySubmissionId($article->getId());
-				while ($galley = $galleys->next()) {
-					XMLCustomWriter::appendChild($root, $this->_createUrlTree($doc, Request::url($journal->getPath(), 'article', 'view', array($article->getBestArticleId(), $galley->getId()))));
+		if ($journal->getSetting('publishingMode') != PUBLISHING_MODE_NONE) {
+			XMLCustomWriter::appendChild($root, $this->_createUrlTree($doc, Request::url($journal->getPath(), 'issue', 'current')));
+			XMLCustomWriter::appendChild($root, $this->_createUrlTree($doc, Request::url($journal->getPath(), 'issue', 'archive')));
+			$publishedIssues = $issueDao->getPublishedIssues($journalId);
+			while ($issue = $publishedIssues->next()) {
+				XMLCustomWriter::appendChild($root, $this->_createUrlTree($doc, Request::url($journal->getPath(), 'issue', 'view', $issue->getId())));
+				// Articles for issue
+				$articles = $publishedArticleDao->getPublishedArticles($issue->getId());
+				foreach($articles as $article) {
+					// Abstract
+					XMLCustomWriter::appendChild($root, $this->_createUrlTree($doc, Request::url($journal->getPath(), 'article', 'view', array($article->getBestArticleId()))));
+					// Galley files
+					$galleys = $galleyDao->getBySubmissionId($article->getId());
+					while ($galley = $galleys->next()) {
+						XMLCustomWriter::appendChild($root, $this->_createUrlTree($doc, Request::url($journal->getPath(), 'article', 'view', array($article->getBestArticleId(), $galley->getBestGalleyId()))));
+					}
 				}
 			}
 		}
-		
+
 		XMLCustomWriter::appendChild($doc, $root);
+
+		// Enable plugins to change the sitemap
+		HookRegistry::call('SitemapHandler::createJournalSitemap', array(&$doc));
+
 		return $doc;
 	}
-	
+
 	/**
 	 * Create a url entry with children
 	 * @param $doc XMLNode Reference to the XML document object
@@ -123,17 +145,17 @@ class SitemapHandler extends Handler {
 	 * @param $priority string Subjective priority assessment of page (optional)
 	 * @return XMLNode
 	 */
-	function _createUrlTree(&$doc, $loc, $lastmod = null, $changefreq = null, $priority = null) {		
+	function _createUrlTree(&$doc, $loc, $lastmod = null, $changefreq = null, $priority = null) {
 		$url =& XMLCustomWriter::createElement($doc, 'url');
-		
+
 		XMLCustomWriter::createChildWithText($doc, $url, htmlentities('loc'), $loc, false);
 		XMLCustomWriter::createChildWithText($doc, $url, 'lastmod', $lastmod, false);
 		XMLCustomWriter::createChildWithText($doc, $url, 'changefreq', $changefreq, false);
 		XMLCustomWriter::createChildWithText($doc, $url, 'priority', $priority, false);
-		
+
 		return $url;
 	}
-	
+
 }
 
 ?>
