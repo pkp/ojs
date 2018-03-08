@@ -15,8 +15,7 @@
 {*<p>{translate key="manager.statistics.statistics.description"}</p> *}
 <p>{translate key="manager.statistics.statistics.eScholdescription"}</p>
 
-<p><strong>Usage Statistics:</strong> <a href="http://www.escholarship.org/stats/unit/{$journalPath}.html" target="_blank">HTML</a>  &nbsp;&nbsp;<a href="http://www.escholarship.org/stats/unit/{$journalPath}.xls" target="_blank">Excel</a><br />
-</p>
+<p><strong><a href="https://www.escholarship.org/uc/{$journalPath}/stats" target="_blank">Usage Statistics</a></strong></p>
 
 {if $isSiteAdmin}
 <div id="selectSections">
