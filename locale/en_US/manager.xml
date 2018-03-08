@@ -519,6 +519,7 @@
 	<message key="manager.statistics.statistics.daysToPublication">Days to publication</message>
 	<message key="manager.statistics.statistics.description">OJS calculates the following statistics for each journal. The "days to review" is calculated from date of submission (or designation of Review Version) to the initial Editor Decision, while the "days to publish" is measured for accepted submissions from its original uploading to its publication.</message>
 		<message key="manager.statistics.statistics.eScholdescription">The number of views and downloads for each publication along with historical data is available at the link below.</message>	<message key="manager.statistics.statistics.itemsPublished">Items published</message>
+		<message key="manager.statistics.statistics.itemsPublished">Items published</message>
 	<message key="manager.statistics.statistics.makePublic">Check items to be made available to readers in About the Journal.</message>
 	<message key="manager.statistics.statistics.note">Note: Percentages for peer reviewed submissions may not add up to 100%, as items resubmitted are either accepted, declined, or still in process.</message>
 	<message key="manager.statistics.statistics.numIssues">Issues published</message>
