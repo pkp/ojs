@@ -86,9 +86,14 @@ class SitemapHandler extends Handler {
 		}
 		// User login
 		XMLCustomWriter::appendChild($root, $this->_createUrlTree($doc, Request::url($journal->getPath(), 'login')));
-		// Announcements (the URL for each announcement is not considered)
+		// Announcements
 		if ($journal->getSetting('enableAnnouncements') == 1) {
 			XMLCustomWriter::appendChild($root, $this->_createUrlTree($doc, Request::url($journal->getPath(), 'announcement')));
+			$announcementDao = DAORegistry::getDAO('AnnouncementDAO');
+			$announcementsResult = $announcementDao->getByAssocId(ASSOC_TYPE_JOURNAL, $journalId);
+			while ($announcement = $announcementsResult->next()) {
+				XMLCustomWriter::appendChild($root, $this->_createUrlTree($doc, Request::url($journal->getPath(), 'announcement', 'view', $announcement->getId())));
+			}
 		}
 		// About: journal
 		if (!empty($journal->getSetting('about'))) {
@@ -127,6 +132,12 @@ class SitemapHandler extends Handler {
 				}
 			}
 		}
+		// Custom pages (navigation menu items)
+		$navigationMenuItemDao = DAORegistry::getDAO('NavigationMenuItemDAO');
+		$menuItemsResult = $navigationMenuItemDao->getByType(NMI_TYPE_CUSTOM, $journalId);
+		while ($menuItem = $menuItemsResult->next()) {
+			XMLCustomWriter::appendChild($root, $this->_createUrlTree($doc, Request::url($journal->getPath(), $menuItem->getPath())));
+		}
 
 		XMLCustomWriter::appendChild($doc, $root);
 
@@ -148,7 +159,7 @@ class SitemapHandler extends Handler {
 	function _createUrlTree(&$doc, $loc, $lastmod = null, $changefreq = null, $priority = null) {
 		$url =& XMLCustomWriter::createElement($doc, 'url');
 
-		XMLCustomWriter::createChildWithText($doc, $url, htmlentities('loc'), $loc, false);
+		XMLCustomWriter::createChildWithText($doc, $url, 'loc', $loc, false);
 		XMLCustomWriter::createChildWithText($doc, $url, 'lastmod', $lastmod, false);
 		XMLCustomWriter::createChildWithText($doc, $url, 'changefreq', $changefreq, false);
 		XMLCustomWriter::createChildWithText($doc, $url, 'priority', $priority, false);
