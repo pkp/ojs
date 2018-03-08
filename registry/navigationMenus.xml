@@ -14,7 +14,7 @@
 <!DOCTYPE navigationMenus SYSTEM "../lib/pkp/dtd/navigationMenus.dtd">
 
 <navigationMenus>
-	<navigationMenu title="User" area="user" site="1">
+	<navigationMenu title="User Navigation Menu" area="user" site="1">
 		<navigationMenuItem title="navigation.register" type="NMI_TYPE_USER_REGISTER" site="1" />
 		<navigationMenuItem title="navigation.login" type="NMI_TYPE_USER_LOGIN" site="1" />
 		<navigationMenuItem title="{$loggedInUsername}" type="NMI_TYPE_USER_DASHBOARD" site="1">
@@ -25,7 +25,7 @@
 		</navigationMenuItem>
 	</navigationMenu>
 
-	<navigationMenu title="Primary" area="primary">
+	<navigationMenu title="Primary Navigation Menu" area="primary">
 		<navigationMenuItem title="navigation.current" type="NMI_TYPE_CURRENT" />
 		<navigationMenuItem title="navigation.archives" type="NMI_TYPE_ARCHIVES" />
 		<navigationMenuItem title="manager.announcements" type="NMI_TYPE_ANNOUNCEMENTS" />
