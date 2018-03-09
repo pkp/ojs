@@ -22,6 +22,8 @@ class SitemapHandler extends Handler {
 	/**
 	 * Generate an XML sitemap for webcrawlers
 	 * Creates a sitemap index if in site context, else creates a sitemap
+	 * @param $args array
+	 * @param $request Request
 	 */
 	function index($args, $request) {
 		if ($request->getRequestedJournalPath() == 'index') {
@@ -41,7 +43,7 @@ class SitemapHandler extends Handler {
 
 	/**
 	 * Construct a sitemap index listing each journal's individual sitemap
-	 * @return XMLNode
+	 * @return DOMDocument
 	 */
 	function _createSitemapIndex() {
 		$journalDao = DAORegistry::getDAO('JournalDAO');
@@ -64,7 +66,8 @@ class SitemapHandler extends Handler {
 
 	 /**
 	 * Construct the sitemap
-	 * @return XMLNode
+	 * @param $request Request
+	 * @return DOMDocument
 	 */
 	function _createJournalSitemap($request) {
 		$issueDao = DAORegistry::getDAO('IssueDAO');
