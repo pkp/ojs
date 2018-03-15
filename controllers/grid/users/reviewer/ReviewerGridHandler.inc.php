@@ -57,16 +57,16 @@ class ReviewerGridHandler extends PKPReviewerGridHandler {
 
 		// Get the stage access policy
 		import('lib.pkp.classes.security.authorization.WorkflowStageAccessPolicy');
-		$ompWorkflowStageAccessPolicy = new WorkflowStageAccessPolicy($request, $args, $roleAssignments, 'submissionId', $stageId);
+		$workflowStageAccessPolicy = new WorkflowStageAccessPolicy($request, $args, $roleAssignments, 'submissionId', $stageId, WORKFLOW_TYPE_EDITORIAL);
 
 		// Add policy to ensure there is a review round id.
 		import('lib.pkp.classes.security.authorization.internal.ReviewRoundRequiredPolicy');
-		$ompWorkflowStageAccessPolicy->addPolicy(new ReviewRoundRequiredPolicy($request, $args, 'reviewRoundId', $this->_getReviewRoundOps()));
+		$workflowStageAccessPolicy->addPolicy(new ReviewRoundRequiredPolicy($request, $args, 'reviewRoundId', $this->_getReviewRoundOps()));
 
 		// Add policy to ensure there is a review assignment for certain operations.
 		import('lib.pkp.classes.security.authorization.internal.ReviewAssignmentRequiredPolicy');
-		$ompWorkflowStageAccessPolicy->addPolicy(new ReviewAssignmentRequiredPolicy($request, $args, 'reviewAssignmentId', $this->_getReviewAssignmentOps()));
-		$this->addPolicy($ompWorkflowStageAccessPolicy);
+		$workflowStageAccessPolicy->addPolicy(new ReviewAssignmentRequiredPolicy($request, $args, 'reviewAssignmentId', $this->_getReviewAssignmentOps()));
+		$this->addPolicy($workflowStageAccessPolicy);
 
 		return parent::authorize($request, $args, $roleAssignments);
 	}
