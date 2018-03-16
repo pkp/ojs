@@ -18,7 +18,7 @@
 		<query>UPDATE review_assignments SET date_response_due = date_due WHERE date_response_due IS NULL</query>
 	</sql>
 	<sql><!-- pkp/pkp-lib#2310: Move plugins to unified sidebar upon upgrade -->
-		<query>UPDATE plugin_settings SET setting_value=1 WHERE setting_name='context' AND plugin_name LIKE '%BlockPlugin'</query><!-- 1 is BLOCK_CONTEXT_SIDEBAR -->
+		<query>UPDATE plugin_settings SET setting_value=1 WHERE setting_name='context' AND LOWER(plugin_name) LIKE '%blockplugin'</query><!-- 1 is BLOCK_CONTEXT_SIDEBAR -->
 	</sql>
 	<sql><!-- pkp/pkp-lib#2151: set viewable = 1 for submission files (migrated from 2.4.x) -->
 		<query>UPDATE submission_files SET viewable = 1 WHERE file_stage = 2 AND viewable = 0</query><!-- 2 is SUBMISSION_FILE_SUBMISSION -->
