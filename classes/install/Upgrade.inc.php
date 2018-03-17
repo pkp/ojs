@@ -56,18 +56,6 @@ class Upgrade extends Installer {
 	}
 
 	/**
-	 * Clear the data cache files (needed because of direct tinkering
-	 * with settings tables)
-	 * @return boolean
-	 */
-	function clearDataCache() {
-		$cacheManager = CacheManager::getManager();
-		$cacheManager->flush(null, CACHE_TYPE_FILE);
-		$cacheManager->flush(null, CACHE_TYPE_OBJECT);
-		return true;
-	}
-
-	/**
 	 * Clear the CSS cache files (needed when changing LESS files)
 	 * @return boolean
 	 */
