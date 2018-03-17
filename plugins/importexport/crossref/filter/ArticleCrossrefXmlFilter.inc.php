@@ -171,12 +171,12 @@ class ArticleCrossrefXmlFilter extends IssueCrossrefXmlFilter {
 		// DOI data
 		$doiDataNode = $this->createDOIDataNode($doc, $submission->getStoredPubId('doi'), $request->url($context->getPath(), 'article', 'view', $submission->getBestArticleId(), null, null, true));
 		// append galleys files and collection nodes to the DOI data node
-		// galley can contain several files
 		$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
 		$galleys = $articleGalleyDao->getBySubmissionId($submission->getId());
-		import('lib.pkp.classes.submission.SubmissionFile'); // SUBMISSION_FILE_... constants
-		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO'); /* @var $submissionFileDao SubmissionFileDAO */
-		$submissionGalleys = array();
+		// All full-texts, PDF full-texts and remote galleys for text-mining and as-crawled URL
+		$submissionGalleys = $pdfGalleys = $remoteGalleys = array();
+		// prefered PDF full-text for the as-crawled URL
+		$pdfGalleyInArticleLocale = null;
 		// get immediatelly also supplementary files for component list
 		$componentGalleys = array();
 		$genreDao = DAORegistry::getDAO('GenreDAO');
@@ -192,15 +192,31 @@ class ArticleCrossrefXmlFilter extends IssueCrossrefXmlFilter {
 					}
 				} else {
 					$submissionGalleys[] = $galley;
+					if ($galley->isPdfGalley()) {
+						$pdfGalleys[] = $galley;
+						if (!$pdfGalleyInArticleLocale && $galley->getLocale() == $submission->getLocale()) {
+							$pdfGalleyInArticleLocale = $galley;
+						}
+					}
 				}
 			} else {
-				$submissionGalleys[] = $galley;
+				$remoteGalleys[] = $galley;
 			}
 		}
-		// submission galley files - collection nodes
-		if (!empty($submissionGalleys)) {
-			$this->appendCollectionNodes($doc, $doiDataNode, $submission, $submissionGalleys);
+		// as-crawled URLs
+		$asCrawledGalleys = array();
+		if ($pdfGalleyInArticleLocale) {
+			$asCrawledGalleys = array($pdfGalleyInArticleLocale);
+		} elseif (!empty($pdfGalleys)) {
+			$asCrawledGalleys = array($pdfGalleys[0]);
+		} else {
+			$asCrawledGalleys = $submissionGalleys;
 		}
+		// as-crawled URL - collection nodes
+		$this->appendAsCrawledCollectionNodes($doc, $doiDataNode, $submission, $asCrawledGalleys);
+		// text-mining - collection nodes
+		$submissionGalleys = array_merge($submissionGalleys, $remoteGalleys);
+		$this->appendTextMiningCollectionNodes($doc, $doiDataNode, $submission, $submissionGalleys);
 		$journalArticleNode->appendChild($doiDataNode);
 
 		// component list (supplementary files)
@@ -212,20 +228,22 @@ class ArticleCrossrefXmlFilter extends IssueCrossrefXmlFilter {
 	}
 
 	/**
-	 * Append all collection nodes 'collection' to the doi data node.
+	 * Append the collection node 'collection property="crawler-based"' to the doi data node.
 	 * @param $doc DOMDocument
 	 * @param $doiDataNode DOMElement
 	 * @param $submission PublishedArticle
 	 * @param $galleys array of galleys
 	 */
-	function appendCollectionNodes($doc, $doiDataNode, $submission, $galleys) {
+	function appendAsCrawledCollectionNodes($doc, $doiDataNode, $submission, $galleys) {
 		$deployment = $this->getDeployment();
 		$context = $deployment->getContext();
 		$request = Application::getRequest();
 
-		// start of the text-mining collection element
-		$textMiningCollectionNode = $doc->createElementNS($deployment->getNamespace(), 'collection');
-		$textMiningCollectionNode->setAttribute('property', 'text-mining');
+		if (empty($galleys)) {
+			$crawlerBasedCollectionNode = $doc->createElementNS($deployment->getNamespace(), 'collection');
+			$crawlerBasedCollectionNode->setAttribute('property', 'crawler-based');
+			$doiDataNode->appendChild($crawlerBasedCollectionNode);
+		}
 		foreach ($galleys as $galley) {
 			$resourceURL = $request->url($context->getPath(), 'article', 'download', array($submission->getBestArticleId(), $galley->getBestGalleyId()), null, null, true);
 			// iParadigms crawler based collection element
@@ -236,7 +254,26 @@ class ArticleCrossrefXmlFilter extends IssueCrossrefXmlFilter {
 			$iParadigmsItemNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'resource', $resourceURL));
 			$crawlerBasedCollectionNode->appendChild($iParadigmsItemNode);
 			$doiDataNode->appendChild($crawlerBasedCollectionNode);
-			// end iParadigms
+		}
+	}
+
+	/**
+	 * Append the collection node 'collection property="text-mining"' to the doi data node.
+	 * @param $doc DOMDocument
+	 * @param $doiDataNode DOMElement
+	 * @param $submission PublishedArticle
+	 * @param $galleys array of galleys
+	 */
+	function appendTextMiningCollectionNodes($doc, $doiDataNode, $submission, $galleys) {
+		$deployment = $this->getDeployment();
+		$context = $deployment->getContext();
+		$request = Application::getRequest();
+
+		// start of the text-mining collection element
+		$textMiningCollectionNode = $doc->createElementNS($deployment->getNamespace(), 'collection');
+		$textMiningCollectionNode->setAttribute('property', 'text-mining');
+		foreach ($galleys as $galley) {
+			$resourceURL = $request->url($context->getPath(), 'article', 'download', array($submission->getBestArticleId(), $galley->getBestGalleyId()), null, null, true);
 			// text-mining collection item
 			$textMiningItemNode = $doc->createElementNS($deployment->getNamespace(), 'item');
 			$resourceNode = $doc->createElementNS($deployment->getNamespace(), 'resource', $resourceURL);
