@@ -23,11 +23,33 @@ class OJSPermissionSettingsForm extends PermissionSettingsForm {
 	function __construct($wizardMode = false) {
 		parent::__construct(
 			array(
+				'enableAuthorSelfArchive' => 'bool',
+				'authorSelfArchivePolicy' => 'string',				
 				'copyrightYearBasis' => 'string',
 			),
 			$wizardMode
 		);
 	}
+
+	//
+	// Implement template methods from Form.
+	//
+	/**
+	 * @copydoc Form::getLocaleFieldNames
+	 */
+	function getLocaleFieldNames() {
+		return array_merge(parent::getLocaleFieldNames(), array('authorSelfArchivePolicy'));
+	}
+
+	/**
+	 * @copydoc ContextSettingsForm::fetch
+	 */
+	function fetch($request, $params = null) {
+		$templateMgr = TemplateManager::getManager($request);
+		$templateMgr->assign('scheduledTasksEnabled', (boolean) Config::getVar('general', 'scheduled_tasks'));
+		return parent::fetch($request, $params);
+	}
+
 }
 
 ?>
