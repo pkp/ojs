@@ -257,6 +257,7 @@
 	<message key="subscriptions.status.needsApproval">Behöver godkännas</message>
 	<message key="subscriptions.status.awaitingManualPayment">Väntar på manuell betalning</message>
 	<message key="subscriptions.status.awaitingOnlinePayment">Väntar på online-betalning</message>
+	<message key="subscriptions.status.noSubscription">Du har inte någon aktiv prenumeration.</message>
 	<message key="subscriptions.status.other">Annat, se anteckningar</message>
 	<message key="subscriptions.individualDescription">Enskilda prenumerationer kräver inloggning för att få tillgång till prenumerationsmaterial.</message>
 	<message key="subscriptions.institutionalDescription">Institutionsprenumerationer kräver inte inloggning. Användarens domän och/eller IP-adress används för att ge tillgång till prenumerationsmaterial.</message>
@@ -317,6 +318,7 @@
 	<message key="reader.openAccess">Open access</message>
 	<message key="reader.subscriptionAccess">Kräver prenumeration</message>
 	<message key="reader.subscriptionOrFeeAccess">Kräver prenumeration eller betalning</message>
+	<message key="reader.purchasePrice">({$currency} {$price})</message>
 
 	<!-- Reader Comments -->
 	<message key="comments.commentsOnArticle">Kommentarer till artikeln</message>
@@ -477,8 +479,7 @@ Du kan välja att ge användaren en förklaring till varför kontot har spärrat
 
 	<!-- Navigation sidebar menu -->
 
-	<!-- Used by editor in submission review / editing -->
-	
+
 
 
 
@@ -833,14 +834,17 @@ Du kan välja att ge användaren en förklaring till varför kontot har spärrat
 	<message key="payment.paymentReceived">Betalning mottagen</message>
 	<message key="payment.paymentSent">Betalning har redan skickats</message>
 	<message key="payment.authorFees">Författaravgifter</message>
-	<message key="payment.type.submission">Prenumerationsavgift</message>
+	<message key="payment.type.submission">Manusavgift</message>
 	<message key="payment.type.publication">Publiceringsavgift</message>
+	<message key="payment.type.publication.required">Publiceringsavgiften ska betalas.</message>
 	<message key="payment.type.fastTrack">Avgift för snabbspår till granskning</message>
 	<message key="payment.type.membership">Avgift för individuellt medlemskap</message>
 	<message key="payment.type.purchaseArticle">Avgift för köp av enstaka artikel</message>
 	<message key="payment.type.purchaseIssue">Avgift för köp av enstaka nummer</message>
 	<message key="payment.type.subscription">Prenumerationsavgift</message>
 	<message key="payment.type.donation">Donationer</message>
+	<message key="payment.requestPublicationFee">Begär publiceringsavgift ({$feeAmount})</message>
+	<message key="payment.notFound">Betalning har begärts men begäran har förfallit. Kontakta tidskriftsansvarig för mer information.</message>
 
 	<message key="payment.donation.makeDonation">Donera</message>
 
@@ -1076,7 +1080,7 @@ Sök-URL:er som kräver inskickade formulärdata kan komma att visas som ogiltig
 	<!-- Included here because it may be used in the navigation bar -->
 	<message key="editor.navigation.issues">Nummer</message>
 
-	<message key="notification.type.approveSubmission">Det här bidraget väntar för närvarande på godkännande innan det blir synligt i numret.</message>
+	<message key="notification.type.approveSubmission">Det här bidraget väntar för närvarande på godkännande innan det kommer att synas i numret.</message>
 	<message key="notification.type.approveSubmissionTitle">Väntar på godkännande.</message>
 
 	<message key="user.profile.form.showOtherContexts">Registrera dig hos andra tidskrifter</message>
@@ -1088,11 +1092,14 @@ Sök-URL:er som kräver inskickade formulärdata kan komma att visas som ogiltig
 	<message key="grid.catalogEntry.approvedRepresentation.title">Godkännande av publiceringsversion</message>
 	<message key="grid.catalogEntry.approvedRepresentation.message"><![CDATA[<p>Godkänn den här publiceringsversionen för publicering.</p>]]></message>
 	<message key="grid.catalogEntry.approvedRepresentation.removeMessage"><![CDATA[<p>Ta tillbaka godkännande för den här publiceringsversionen.</p>]]></message>
-	<message key="search.cli.rebuildIndex.indexing">Indexering "{$journalName}"</message>
+	<message key="search.cli.rebuildIndex.indexing">Indexerar "{$journalName}"</message>
 	<message key="search.cli.rebuildIndex.indexingByJournalNotSupported">Den här sökfunktionaliteten tillåter inte omindexering per tidskrift.</message>
 	<message key="search.cli.rebuildIndex.unknownJournal">Angiven sökväg för tidskrift, "{$journalPath}", kunde inte knytas till någon tidskrift.</message>
 
 	<message key="editor.issues.backIssues">Publicerade nummer</message>
 	<message key="editor.issues.futureIssues">Kommande nummer</message>
 	<message key="navigation.subscriptions">Prenumerationer</message>
+
+	<!-- legacy strings from OJS 2, for upgraded installations from OJS 2 -->
+	<message key="log.editor.submissionExpedited">{$editorName} har tagit hand om redigeringsprocessen för artikeln {$submissionId}.</message>
 </locale>
