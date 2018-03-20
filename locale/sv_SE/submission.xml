@@ -22,6 +22,7 @@
 	<message key="submission.submit.newSubmissionMultiple">Skicka in ett nytt bidrag i</message>
 	<message key="submission.submit.newSubmissionSingle">Nytt bidrag</message>
 	<message key="grid.action.workflow">Arbetsflöde för bidrag</message>
+	<message key="submission.abstract.wordCount.description">Abstractet får inte vara längre än {$wordCount} ord.</message>
 
 	<message key="submission.issueEntry">Metadata</message>
 	<message key="submission.submit.whatNext.description">Tidskriften har blivit meddelad om ditt insända bidrag, och du har fått en bekräftelse skickad till dig per e-post. När redaktören har läst ditt bidrag kommer hen att kontakta dig.</message>
@@ -70,6 +71,7 @@
 	<message key="submission.submit.form.authorRequiredFields">Förnamn, efternamn och e-postadress för varje författare krävs.</message>
 	<message key="submission.submit.form.titleRequired">Vänligen mata in titeln på din artikel.</message>
 	<message key="submission.submit.form.abstractRequired">Vänligen mata in abstract för din artikel.</message>
+	<message key="submission.submit.form.wordCountAlert">Ditt abstract är för långt. Korta det så att det ryms inom begränsningen i antal ord som gäller för den här sektionen.</message>
 	<message key="submission.submit.form.contributorRoleRequired">Vänligen välj medarbetarens roll.</message>
 
 	<message key="submission.citationFormat.notFound">Referensformatet som efterfrågades kunde inte hämtas.</message>
