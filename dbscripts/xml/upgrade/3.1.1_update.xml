@@ -40,7 +40,7 @@
 	</sql>
 	<!-- pkp/pkp-lib#2894 Set 0 review ratings to NULL -->
 	<sql>
-		<query>UPDATE review_assignments ra SET ra.quality = NULL WHERE ra.quality = 0</query>
+		<query>UPDATE review_assignments SET quality = NULL WHERE quality = 0</query>
 	</sql>
 	<!-- pkp/pkp-lib#2894 Update old localised user gossip entries -->
 	<sql>
