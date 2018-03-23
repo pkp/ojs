@@ -1092,4 +1092,10 @@ Vahvistaminen saattaa epäonnistua sellaisten haun URL-osoitteiden kohdalla, jot
 	<message key="notification.type.publicationScheduled">Tämä käsikirjoitus on ajoitettu julkaistavaksi.</message>
 	<message key="log.editor.recommendation">{$editorName} tallensi päätöksen ({$decision}) käsikirjoitukselle {$submissionId}.</message>
 	<message key="subscriptions.status.noSubscription">Sinulla ei ole aktiivista tilausta.</message>
+	<message key="reader.purchasePrice">({$currency} {$price})</message>
+	<message key="manager.setup.porticoDescription">Portico on voittoa tavoittelematon palvelu, joka tarjoaa digitaalisten julkaisujen pitkäaikaissäilytystä. Jos julkaisusi on solminut sopimuksen Porticon kanssa, ota se käyttöön täältä:</message>
+	<message key="payment.type.publication.required">Julkaisumaksu tulee maksettavaksi.</message>
+	<message key="payment.requestPublicationFee">Pyydä julkaisumaksua ({$feeAmount})</message>
+	<message key="payment.notFound">Maksua on pyydetty, mutta pyyntö on vanhentunut. Ota yhteyttä julkaisuun.</message>
+	<message key="log.editor.submissionExpedited">{$editorName} on nopeuttanut käsikirjoituksen {$submissionId} käsittelyä.</message>
 </locale>
