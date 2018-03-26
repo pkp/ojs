@@ -48,7 +48,7 @@
 	{assign var=canBeAssigned value=$pubIdPlugin->canBeAssigned($pubObject)}
 	{include file="$pubIdMetadataFile" pubObject=$pubObject canBeAssigned=$canBeAssigned}
 {/foreach}
-
+{call_hook name="Templates::Controllers::Tab::PubIds::Form::PublicIdentifiersForm"}
 {fbvFormButtons id="publicIdentifiersFormSubmit" submitText="common.save"}
 
 </form>
