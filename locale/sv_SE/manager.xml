@@ -99,7 +99,7 @@
 	<message key="manager.sections.indexed">Indexerad</message>
 	<message key="manager.sections.noneCreated">Inga sektioner har skapats.</message>
 	<message key="manager.sections.open">Bidrag mottas</message>
-	<message key="manager.sections.policy">Sektionspolicyer</message>
+	<message key="manager.sections.policy">Sektionspolicy</message>
 	<message key="manager.sections.readingTools">Läsverktyg</message>
 	<message key="manager.sections.reviewed">Sakkunniggranskad</message>
 	<message key="manager.sections.submissionIndexing">Kommer inte omfattas av tidskriftens indexering</message>
@@ -148,7 +148,7 @@
 	<message key="manager.setup.customTagsDescription">Anpassade HTML-taggar som kan läggas in på varje sidas huvud (t.ex META-taggar).</message>
 	<message key="manager.setup.details">Detaljer</message>
 	<message key="manager.setup.details.description">Namn på tidskriften, ISSN, kontaktuppgifter, sponsorer, sökmotorer.</message>
-	<message key="manager.setup.disableUserRegistration">Tidskriftsansvariga kan registrera alla användarkonton. Redaktörer och sektionsredaktörer kan endast registrera konton för granskare.</message>
+	<message key="manager.setup.disableUserRegistration">Tidskriftsansvarig registrerar alla användarkonton. Redaktörer och sektionsredaktörer kan endast registrera konton för granskare.</message>
 	<message key="manager.setup.discipline">Akademisk disciplin och underdiscipliner.</message>
 	<message key="manager.setup.disciplineDescription">Användbar för att bekriva en tvärvetenskaplig tidskrift och/eller om författare kan skicka in artiklar inom tvärvetenskapliga ämnen.</message>
 	<message key="manager.setup.disciplineExamples">(t.ex., Historia; Pedagogik; Sociologi; Psykologi; Kulturstudier; Juridik)</message>
@@ -164,7 +164,7 @@
 	<message key="manager.setup.enableAnnouncements">Möjliggör för tidskriftsansvariga att lägga till meddelanden.</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">Visning</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">av tidskriftens senaste meddelanden.</message>
-	<message key="manager.setup.enableUserRegistration">Besökare kan skapa ett användarkonto för tidskriften</message>
+	<message key="manager.setup.enableUserRegistration">Besökare kan skapa ett användarkonto för tidskriften.</message>
 	<message key="manager.setup.focusAndScope">Ämne och fokus</message>
 	<message key="manager.setup.focusAndScope.description">Beskriv för författare, läsare och bibliotekarier vilken typ av artiklar som tidskriften publicerar.</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWork">Författarens indexering av det egna arbetet</message>
