@@ -110,6 +110,10 @@ definitions:
               type: string
             isActiveStage:
               type: boolean
+            currentUserAssignedRoles:
+              type: array
+              items:
+                type: integer
             # @TODO Consider queries/files information to return
             # queries:
             #   type: array
