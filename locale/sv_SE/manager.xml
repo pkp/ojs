@@ -148,7 +148,7 @@
 	<message key="manager.setup.customTagsDescription">Anpassade HTML-taggar som kan läggas in på varje sidas huvud (t.ex META-taggar).</message>
 	<message key="manager.setup.details">Detaljer</message>
 	<message key="manager.setup.details.description">Namn på tidskriften, ISSN, kontaktuppgifter, sponsorer, sökmotorer.</message>
-	<message key="manager.setup.disableUserRegistration">Tidskriftsansvariga kan registrera alla användarkonton. Redaktörer och sektionsredaktörer kan endast registrera konton för granskare.</message>
+	<message key="manager.setup.disableUserRegistration">Tidskriftsanvsarig registrerar alla användarkonton. Redaktörer och sektionsredaktörer kan endast registrera konton för granskare.</message>
 	<message key="manager.setup.discipline">Akademisk disciplin och underdiscipliner.</message>
 	<message key="manager.setup.disciplineDescription">Användbar för att bekriva en tvärvetenskaplig tidskrift och/eller om författare kan skicka in artiklar inom tvärvetenskapliga ämnen.</message>
 	<message key="manager.setup.disciplineExamples">(t.ex., Historia; Pedagogik; Sociologi; Psykologi; Kulturstudier; Juridik)</message>
