@@ -810,14 +810,14 @@ class IssueManagementHandler extends EditorHandler {
                          //break;uncomment once I've figured out why I'm not getting the ARK
 					 }
 					 else{
-					     $escholURL = ereg_replace("ark:13030\/qt","http://www.escholarship.org/uc/item/",$qualifiedArk);
+					     $escholURL = ereg_replace("ark:13030\/qt","https://escholarship.org/uc/item/",$qualifiedArk);
 						 error_log("For ARTICLE ID $singleArticleID eSchol URL is:" . $escholURL);				 
 					 }
 					 $articleDOI = $article->getDOI();
 					 $articleDOI = str_replace("/","%2F", $articleDOI);
 					 $journalPath = $journal->getPath();
 					 //needs to be updated with each journal using DOIs
-					 $owner = array("ao4elt4"=>'ucolick',"cjpp"=>'ucb-eschol', "irows_cliodynamics"=>'ucr-jclio', "bling_proceedings"=>'ucb-bls', "biogeographia"=>'ucm_mndawson', "fb"=>'ucm_mndawson', "class_lta"=>'uci-jlta');
+					 $owner = array("ao4elt4"=>'ucolick',"cjpp"=>'ucb-eschol', "irows_cliodynamics"=>'ucr-jclio', "bling_proceedings"=>'ucb-bls', "biogeographia"=>'ucm_mndawson', "fb"=>'ucm_mndawson', "class_lta"=>'uci-jlta',"ucbgse_bre"=>'ucb-eschol',);
 					 error_log("Campus Based Owner: $owner[$journalPath]");
 					 $ezidIdentifier = 'https://ezid.cdlib.org/id/doi:' . $articleDOI;
 					 error_log("EZID IDENTIFIER $ezidIdentifier");
