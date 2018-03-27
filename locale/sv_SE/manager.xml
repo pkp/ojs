@@ -99,7 +99,7 @@
 	<message key="manager.sections.indexed">Indexerad</message>
 	<message key="manager.sections.noneCreated">Inga sektioner har skapats.</message>
 	<message key="manager.sections.open">Bidrag mottas</message>
-	<message key="manager.sections.policy">Sektionspolicyer</message>
+	<message key="manager.sections.policy">Sektionspolicy</message>
 	<message key="manager.sections.readingTools">Läsverktyg</message>
 	<message key="manager.sections.reviewed">Sakkunniggranskad</message>
 	<message key="manager.sections.submissionIndexing">Kommer inte omfattas av tidskriftens indexering</message>
