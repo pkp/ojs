@@ -164,7 +164,7 @@
 	<message key="manager.setup.enableAnnouncements">Möjliggör för tidskriftsansvariga att lägga till meddelanden.</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">Visning</message>
 	<message key="manager.setup.enableAnnouncementsHomepage2">av tidskriftens senaste meddelanden.</message>
-	<message key="manager.setup.enableUserRegistration">Besökare kan skapa ett användarkonto för tidskriften</message>
+	<message key="manager.setup.enableUserRegistration">Besökare kan skapa ett användarkonto för tidskriften.</message>
 	<message key="manager.setup.focusAndScope">Ämne och fokus</message>
 	<message key="manager.setup.focusAndScope.description">Beskriv för författare, läsare och bibliotekarier vilken typ av artiklar som tidskriften publicerar.</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWork">Författarens indexering av det egna arbetet</message>
