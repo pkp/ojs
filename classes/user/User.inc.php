@@ -37,7 +37,7 @@ class User extends PKPUser {
 	 */
 	function &getSetting($name, $journalId = null) {
 		$userSettingsDao = DAORegistry::getDAO('UserSettingsDAO');
-		$setting =& $userSettingsDao->getSetting($this->getId(), $name, $journalId);
+		$setting =& $userSettingsDao->getSetting($this->getId(), $name, ASSOC_TYPE_JOURNAL, $journalId);
 		return $setting;
 	}
 

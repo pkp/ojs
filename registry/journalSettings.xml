@@ -204,4 +204,8 @@
 		<name>keywordsEnabledWorkflow</name>
 		<value>1</value>
 	</setting>
+	<setting type="int" locale="0">
+		<name>publishingMode</name>
+		<value>0</value>
+	</setting>
 </journal_settings>

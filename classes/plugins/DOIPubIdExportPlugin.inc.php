@@ -40,6 +40,7 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin {
 				// missing DOI prefix
 				$doiPrefix = $exportArticles = $exportIssues = null;
 				$pubIdPlugins = PluginRegistry::loadCategory('pubIds', true);
+				$exportRepresentations = null;
 				if (isset($pubIdPlugins['doipubidplugin'])) {
 					$doiPlugin = $pubIdPlugins['doipubidplugin'];
 					$doiPrefix = $doiPlugin->getSetting($context->getId(), $doiPlugin->getPrefixFieldName());

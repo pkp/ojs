@@ -49,6 +49,10 @@ class EditorDecisionActionsManager {
 
 		$actionLabels = array();
 		foreach($decisions as $decision) {
+		    if (!array_key_exists($decision, $allDecisionsData)) {
+		        continue;
+		    }
+
 			if ($allDecisionsData[$decision]['title']) {
 				$actionLabels[$decision] = $allDecisionsData[$decision]['title'];
 			} else {

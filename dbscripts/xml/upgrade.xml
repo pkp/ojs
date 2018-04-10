@@ -69,7 +69,6 @@
 	<schema file="lib/pkp/xml/schema/tombstone.xml" />
 	<schema file="lib/pkp/xml/schema/rolesAndUserGroups.xml" />
 	<schema file="lib/pkp/xml/schema/metrics.xml" />
-	<schema file="lib/pkp/xml/schema/views.xml" />
 	<schema file="lib/pkp/xml/schema/libraryFiles.xml" />
 	<schema file="lib/pkp/xml/schema/navigationMenus.xml" />
 
@@ -197,6 +196,11 @@
 	<upgrade minversion="3.0.0.0" maxversion="3.1.0.9">
 		<code function="repairSuppFilesFilestage" />
 		<code function="fixAuthorGroup" /><!-- Run again after previous invalid fix (#3289) -->
+	</upgrade>
+
+	<upgrade minversion="3.0.0.0" maxversion="3.1.1.0">
+		<data file="dbscripts/xml/upgrade/ms_sql_support_update.xml" />
+		<note file="docs/README-MS_SQL" />
 	</upgrade>
 
 	<!-- update plugin configuration - should be done as the final upgrade task -->

@@ -36,12 +36,14 @@ class ArticleSearchDAO extends SubmissionSearchDAO {
 		$sqlWhere = '';
 		$params = array();
 
+		$isSqlServer = Config::getVar('database', 'ms_sql');
 		for ($i = 0, $count = count($phrase); $i < $count; $i++) {
 			if (!empty($sqlFrom)) {
 				$sqlFrom .= ', ';
 				$sqlWhere .= ' AND ';
 			}
-			$sqlFrom .= 'submission_search_object_keywords o'.$i.' NATURAL JOIN submission_search_keyword_list k'.$i;
+			$sqlFrom .= ($isSqlServer ? 'submission_search_object_keywords o'.$i.' ON o.object_id = o'.$i.'.object_id JOIN submission_search_keyword_list k'.$i.' ON k'.$i.'.keyword_id = o'.$i.'.keyword_id' :
+			                            'submission_search_object_keywords o'.$i.' NATURAL JOIN submission_search_keyword_list k'.$i);
 			if (strstr($phrase[$i], '%') === false) $sqlWhere .= 'k'.$i.'.keyword_text = ?';
 			else $sqlWhere .= 'k'.$i.'.keyword_text LIKE ?';
 			if ($i > 0) $sqlWhere .= ' AND o0.object_id = o'.$i.'.object_id AND o0.pos+'.$i.' = o'.$i.'.pos';
@@ -79,7 +81,7 @@ class ArticleSearchDAO extends SubmissionSearchDAO {
 				submissions s,
 				published_submissions ps,
 				issues i,
-				submission_search_objects o NATURAL JOIN ' . $sqlFrom . '
+				submission_search_objects o ' . ($isSqlServer ? 'JOIN ' : 'NATURAL JOIN ') . $sqlFrom . '
 			WHERE
 				s.submission_id = o.submission_id AND
 				s.status = ' . STATUS_PUBLISHED . ' AND
@@ -88,7 +90,7 @@ class ArticleSearchDAO extends SubmissionSearchDAO {
 				i.published = 1 AND ' . $sqlWhere . '
 			GROUP BY o.submission_id
 			ORDER BY count DESC
-			LIMIT ' . $limit,
+			' . sprintf($isSqlServer ? 'OFFSET 0 ROWS FETCH NEXT %d ROWS ONLY' : 'LIMIT %d', $limit),
 			$params,
 			3600 * $cacheHours // Cache for 24 hours
 		);

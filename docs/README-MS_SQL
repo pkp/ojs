@@ -1,0 +1,52 @@
+	=================================
+	=== Microsoft SQL Server (MS SQL)
+	=================================
+
+
+
+--------------
+PDO SQL Server
+--------------
+
+1. Open the link "https://github.com/Microsoft/msphpsql/releases" in a Web browser.
+2. According to the installed PHP version, download the DLL package for Microsoft SQL Server.
+3. Rename the PDO file to "php_pdo_sqlsrv.dll".
+4. Add this file to the "ext" folder in the PHP installation.
+
+
+
+------------------------------------
+Microsoft ODBC Driver for SQL Server
+------------------------------------
+
+Depending on which PHP version is used, download the according ODBC driver to make the connection viable.
+
+The ODBC 11 is required for PHP version "5.6.35". This PHP version must use an old version of the SQL Server PDO.
+
+
+
+-----
+ADOdb
+-----
+
+The ADOdb version has been modified to "5.20.12" and this version has been further more customized
+to take in charge MS SQL.
+
+The modified version is available in the folder "docs/dev" in the file "adodb_ms_sql.zip".
+
+Extract it somewhere and replace the current ADOdb found in the following folder : "ojs\lib\pkp\lib\adodb".
+
+This procedure is temporary and far from optimal. All the modifications should be integrated directly to
+the latest ADOdb version. At this point, we could change the version number in OJS.
+
+
+
+------------------
+Configuration File
+------------------
+
+ms_sql = On
+driver = pdo_sqlsrv
+host = sqlsrv:server=SERVER\\INSTANCE
+
+Note: within the setup home page, if an instance is required, only put one backslash in the host section.

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../../../lib/pkp/dtd/xmlData.dtd">
+
+<!--
+  * ms_sql_support_update.xml
+  *
+  * Update to support Microsoft SQL Server.
+  -->
+<data>
+	<sql>
+		<!-- Change the column name from "current" to "actual" so the reserved word "current" is not used as a name and therefore prevents compatibility issues. -->
+		<rename table="issues" column="current" to="actual" />
+		<rename table="versions" column="current" to="actual" />
+	</sql>
+</data>

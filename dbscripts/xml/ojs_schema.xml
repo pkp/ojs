@@ -63,7 +63,7 @@
 		<field name="setting_name" type="C2" size="255">
 			<NOTNULL/>
 		</field>
-		<field name="setting_value" type="X"/>
+		<field name="setting_value" type="XL"/>
 		<field name="setting_type" type="C2" size="6">
 			<NOTNULL/>
 			<descr>(bool|int|float|string|object)</descr>
@@ -145,7 +145,7 @@
 		<field name="setting_name" type="C2" size="255">
 			<NOTNULL />
 		</field>
-		<field name="setting_value" type="X"/>
+		<field name="setting_value" type="XL"/>
 		<field name="setting_type" type="C2" size="6">
 			<NOTNULL/>
 			<descr>(bool|int|float|string|object)</descr>
@@ -182,7 +182,7 @@
 			<NOTNULL />
 			<DEFAULT VALUE="0" />
 		</field>
-		<field name="current" type="I1">
+		<field name="actual" type="I1">
 			<NOTNULL />
 			<DEFAULT VALUE="0" />
 		</field>
@@ -234,7 +234,7 @@
 		<field name="setting_name" type="C2" size="255">
 			<NOTNULL />
 		</field>
-		<field name="setting_value" type="X"/>
+		<field name="setting_value" type="XL"/>
 		<field name="setting_type" type="C2" size="6">
 			<NOTNULL/>
 		</field>
@@ -494,7 +494,7 @@
 		<field name="setting_name" type="C2" size="255">
 			<NOTNULL />
 		</field>
-		<field name="setting_value" type="X"/>
+		<field name="setting_value" type="XL"/>
 		<field name="setting_type" type="C2" size="6">
 			<NOTNULL/>
 			<descr>(bool|int|float|string|object)</descr>

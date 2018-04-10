@@ -203,6 +203,7 @@ class Application extends PKPApplication {
 					}
 					break;
 				case 'postgres':
+				case 'pdo_sqlsrv':
 					$checkResult = $pluginSettingsDao->retrieve('SELECT column_name FROM information_schema.columns WHERE table_name = ? AND column_name = ?', array('plugin_settings', 'context_id'));
 					if ($checkResult->NumRows() == 0) {
 						return 'journal_id';

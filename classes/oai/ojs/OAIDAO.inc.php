@@ -62,7 +62,8 @@ class OAIDAO extends PKPOAIDAO {
 	 */
 	function &getJournal($journalId) {
 		if (!isset($this->journalCache[$journalId])) {
-			$this->journalCache[$journalId] =& $this->journalDao->getById($journalId);
+			$journal = $this->journalDao->getById($journalId);
+			$this->journalCache[$journalId] =& $journal;
 		}
 		return $this->journalCache[$journalId];
 	}
@@ -223,8 +224,9 @@ class OAIDAO extends PKPOAIDAO {
 			$params[] = $set . ':%';
 		}
 		if ($submissionId) $params[] = (int) $submissionId;
+		$isSqlServer = Config::getVar('database', 'ms_sql');
 		$result = $this->retrieve(
-			'SELECT	GREATEST(a.last_modified, i.last_modified) AS last_modified,
+			'SELECT	' . ($isSqlServer ? 'CASE WHEN a.last_modified > i.last_modified THEN a.last_modified ELSE i.last_modified END' : 'GREATEST(a.last_modified, i.last_modified)') . ' AS last_modified,
 				a.submission_id AS submission_id,
 				j.journal_id AS journal_id,
 				s.section_id AS section_id,

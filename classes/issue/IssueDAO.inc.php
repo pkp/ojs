@@ -243,7 +243,7 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 		}
 
 		$result = $this->retrieve(
-			'SELECT i.* FROM issues i WHERE journal_id = ? AND current = 1', (int) $journalId
+			'SELECT i.* FROM issues i WHERE journal_id = ? AND actual = 1', (int) $journalId
 		);
 
 		$issue = null;
@@ -260,7 +260,7 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 	 */
 	function updateCurrent($journalId, $issue = null) {
 		$this->update(
-			'UPDATE issues SET current = 0 WHERE journal_id = ? AND current = 1', (int) $journalId
+			'UPDATE issues SET actual = 0 WHERE journal_id = ? AND actual = 1', (int) $journalId
 		);
 		if ($issue) $this->updateObject($issue);
 
@@ -289,7 +289,7 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 		$issue->setNumber($row['number']);
 		$issue->setYear($row['year']);
 		$issue->setPublished($row['published']);
-		$issue->setCurrent($row['current']);
+		$issue->setCurrent($row['actual']);
 		$issue->setDatePublished($this->datetimeFromDB($row['date_published']));
 		$issue->setDateNotified($this->datetimeFromDB($row['date_notified']));
 		$issue->setLastModified($this->datetimeFromDB($row['last_modified']));
@@ -355,7 +355,7 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 	function insertObject($issue) {
 		$this->update(
 			sprintf('INSERT INTO issues
-				(journal_id, volume, number, year, published, current, date_published, date_notified, last_modified, access_status, open_access_date, show_volume, show_number, show_year, show_title)
+				(journal_id, volume, number, year, published, actual, date_published, date_notified, last_modified, access_status, open_access_date, show_volume, show_number, show_year, show_title)
 				VALUES
 				(?, ?, ?, ?, ?, ?, %s, %s, %s, ?, %s, ?, ?, ?, ?)',
 				$this->datetimeToDB($issue->getDatePublished()), $this->datetimeToDB($issue->getDateNotified()), $this->datetimeToDB($issue->getLastModified()), $this->datetimeToDB($issue->getOpenAccessDate())),
@@ -424,7 +424,7 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 					number = ?,
 					year = ?,
 					published = ?,
-					current = ?,
+					actual = ?,
 					date_published = %s,
 					date_notified = %s,
 					last_modified = %s,
@@ -570,7 +570,7 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 	 */
 	function getIssues($journalId, $rangeInfo = null) {
 		$result = $this->retrieveRange(
-			'SELECT i.* FROM issues i WHERE journal_id = ? ORDER BY current DESC, date_published DESC',
+			'SELECT i.* FROM issues i WHERE journal_id = ? ORDER BY actual DESC, date_published DESC',
 			(int) $journalId, $rangeInfo
 		);
 
@@ -585,7 +585,7 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 	 */
 	function getPublishedIssues($journalId, $rangeInfo = null) {
 		$result = $this->retrieveRange(
-			'SELECT i.* FROM issues i LEFT JOIN custom_issue_orders o ON (o.issue_id = i.issue_id) WHERE i.journal_id = ? AND i.published = 1 ORDER BY o.seq ASC, i.current DESC, i.date_published DESC',
+			'SELECT i.* FROM issues i LEFT JOIN custom_issue_orders o ON (o.issue_id = i.issue_id) WHERE i.journal_id = ? AND i.published = 1 ORDER BY o.seq ASC, i.actual DESC, i.date_published DESC',
 			(int) $journalId, $rangeInfo
 		);
 

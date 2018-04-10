@@ -106,11 +106,12 @@ class ArticlePubMedXmlFilter extends PersistableFilter {
 
 			$authorListNode = $doc->createElement('AuthorList');
 			foreach ($submission->getAuthors() as $index => $author) {
-				$authorListNode->appendChild($this->generateAuthorNode($doc, $journal, $issue, $submission, $author, $authorIndex));
+				$authorListNode->appendChild($this->generateAuthorNode($doc, $journal, $issue, $submission, $author, $index));
 			}
 			$articleNode->appendChild($authorListNode);
 
-			if ($submission->getStoredPubId('publisher-id')) {
+			$publisherId = $submission->getStoredPubId('publisher-id');
+			if ($publisherId) {
 				$articleIdListNode = $doc->createElement('ArticleIdList');
 				$articleIdNode = $doc->createElement('ArticleId', $publisherId);
 				$articleIdNode->setAttribute('IdType', 'pii');

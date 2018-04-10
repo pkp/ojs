@@ -17,6 +17,7 @@ namespace OJS\Services\QueryBuilders;
 
 use PKP\Services\QueryBuilders\BaseQueryBuilder;
 use Illuminate\Database\Capsule\Manager as Capsule;
+use \Config;
 
 class IssueListQueryBuilder extends BaseQueryBuilder {
 
@@ -154,8 +155,15 @@ class IssueListQueryBuilder extends BaseQueryBuilder {
 		$q = Capsule::table('issues as i')
 					->where('i.journal_id','=', $this->contextId)
 					->leftJoin('issue_settings as is', 'i.journal_id', '=', 'is.issue_id')
-					->orderBy($this->orderColumn, $this->orderDirection)
-					->groupBy('i.issue_id');
+					->orderBy($this->orderColumn, $this->orderDirection);
+
+		$isSqlServer = Config::getVar('database', 'ms_sql');
+		if ($isSqlServer) {
+		    $q->groupBy('i.issue_id', 'i.journal_id', 'i.volume', 'i.number', 'i.year', 'i.published', 'i.actual', 'i.date_published', 'i.date_notified', 'i.last_modified', 'i.access_status', 'i.open_access_date', 'i.show_volume', 'i.show_number', 'i.show_year', 'i.show_title', 'i.style_file_name', 'i.original_style_file_name');
+		}
+		else {
+		    $q->groupBy('i.issue_id');
+		}
 
 		// published
 		if (!is_null($this->isPublished)) {
