@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE install SYSTEM "../../lib/pkp/dtd/install.dtd">
 <!--
-  * upgrade.xml
+  * dbscripts/xml/upgrade.xml
   *
   * Copyright (c) 2014-2018 Simon Fraser University
   * Copyright (c) 2003-2018 John Willinsky
@@ -81,6 +81,10 @@
 	<!-- Install default NavigationMenus -->
 	<code function="installDefaultNavigationMenus" />
 	<code function="migrateStaticPagesToNavigationMenuItems" />
+
+	<upgrade minversion="2.4.0.0" maxversion="3.1.1.9">
+		<code function="migrateSRLocale" />
+	</upgrade>
 
 	<upgrade minversion="2.4.0.0" maxversion="2.4.9.9">
 		<code function="concatenateIntoAbout" />
@@ -189,13 +193,13 @@
 	<upgrade minversion="2.4.0.0" maxversion="3.1.0.9">
 		<data file="dbscripts/xml/upgrade/3.1.1_update.xml" />
 		<code function="installEmailTemplate" key="REVISED_VERSION_NOTIFY" locales="ar_IQ,da_DK,en_US,es_ES,fa_IR,fi_FI,fr_CA,fr_FR,id_ID,pt_PT,ru_RU,sv_SE" />
-		<code function="migrateSRLocale" />
 		<code function="clearDataCache" />
 	</upgrade>
 
 	<upgrade minversion="3.0.0.0" maxversion="3.1.0.9">
 		<code function="repairSuppFilesFilestage" />
 		<code function="fixAuthorGroup" /><!-- Run again after previous invalid fix (#3289) -->
+		<note file="docs/release-notes/README-3.1.1" />
 	</upgrade>
 
 	<upgrade minversion="3.0.0.0" maxversion="3.1.1.0">

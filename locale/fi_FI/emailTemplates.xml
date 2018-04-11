@@ -825,4 +825,17 @@ Ystävällisin terveisin,<br />
 		<body><![CDATA[Kirjoita viesti]]></body>
 		<description>The default (blank) message used in the Notification Center Message Listbuilder.</description>
 	</email_text>
+	<email_text key="EDITOR_DECISION_INITIAL_DECLINE">
+		<subject>Toimittajan päätös</subject>
+		<body>
+			<![CDATA[Hyvä {$authorName},<br />
+<br />
+Olemme tehneet päätöksen julkaisuun {$contextName} lähettämäänne käsikirjoitusta &quot;{$submissionTitle}&quot; koskien.<br />
+<br />
+Päätöksemme on: Käsikirjoitus on hylätty<br />
+<br />
+{$editorialContactSignature}<br />]]></body>
+		<description>This email is send to the author if the editor declines his submission initially, before the review stage</description>
+	</email_text>	
+	
 </email_texts>
