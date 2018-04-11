@@ -19,7 +19,7 @@
 	<message key="manager.language.ui">Användargränssnitt</message>
 	<message key="manager.language.submissions">Bidrag</message>
 	<message key="manager.language.forms">Formulär</message>
-	<message key="manager.language.confirmDefaultSettingsOverwrite">Byter ut alla språk/region-inställningar som finns för den tidskriften</message>
+	<message key="manager.language.confirmDefaultSettingsOverwrite">Det här kommer att ersätta alla språkspecifika tidskriftsinställningar som finns för det här språket/regionen.</message>
 	<message key="manager.languages.languageInstructions"><![CDATA[OJS kan översättas till flera olika språk och fungerar dessutom som ett flerspråkigt system där användaren kan växla mellan språk på de olika sidorna.<br /><br /> Om ett språk som stöds av OJS inte finns listad nedan, be huvudadministratören att installera språket. För instruktioner om hur ytterligare språk läggs till, se OJS-dokumentationen.]]></message>
 	<message key="manager.languages.noneAvailable">Tyvärr, det finns inga ytterligare språk tillgängliga. Kontakta huvudadministratören om du vill lägga till språk i den här tidskriften.</message>
 	<message key="manager.languages.primaryLocaleInstructions">Detta blir defaultspråk för tidskriftens webbplats.</message>
