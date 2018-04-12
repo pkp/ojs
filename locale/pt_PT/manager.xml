@@ -320,7 +320,6 @@
 	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks1">Notificar assinantes via e-mail</message>
 	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks2">semana(s) depois da expiração da subscrição.</message>
 	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks1">Notificar assinantes via e-mail</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks2">semana(s) antes da expiração da subscrição.</message>
 	<message key="manager.subscriptionPolicies.expiryReminders">Lembretes de Expiração de Subscrição</message>
 	<message key="manager.subscriptionPolicies.expiryRemindersDescription">Lembretes automáticos via e-mail (editáveis nas configurações da revista por Editores-Gestores na área de E-mails Padrão) podem ser enviados aos subscritores tanto antes quanto após expiração da subscrição.</message>
 	<message key="manager.subscriptionPolicies.expiryRemindersDisabled"><![CDATA[<strong>Aviso:</strong> Para activar esta opção, o administrador do portal deverá activar a opção <tt>scheduled_tasks</tt> no ficheiro de configuração do sistema. Configurações adicionais no servidor podem ser necessárias para o funcionamento correcto da opção (que pode não ser possível em todos os servidores!), como indicado na documentação do sistema.]]></message>
@@ -543,9 +542,7 @@
 	<message key="manager.setup.clockssLicenseLabel">Descrição Licença CLOCKSS</message>
 	<message key="manager.statistics.reports.defaultReport.issuePageViews">Visualizações do sumário do número</message>
 	<message key="manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid">Use a caixa de selecção fornecida.</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths1">Notificar os assinantes por e-mail</message>
 	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths2">mês(s)após caducidade da inscrição.</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths1">Notificar os assinantes por e-mail</message>
 	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths2">mês(s) antes da caducidade da inscrição.</message>
 	<message key="grid.category.path">Caminho</message>
 	<message key="grid.action.addSection">Adicionar Secção</message>
