@@ -153,4 +153,5 @@
 	<message key="editor.submission.selectGalleyFiles">Seleccionar Ficheiros Edição</message>
 	<message key="editor.submission.editorial.finalDraftDescription"><![CDATA[Os ficheiros de rascunho finais nesta lista são transformados por um Copyeditor em versões copiadas, carregadas abaixo em <span class ="pkp_help_title">Copyediting </span>.]]></message>
 	<message key="editor.submission.proof.manageProofFilesDescription">Todos os ficheiros que já foram enviados para qualquer etapa de submissão podem ser adicionados à Listagem de Revisão, marcando a caixa de selecção Incluir abaixo e clicando em Pesquisar: todos os ficheiros disponíveis serão listados e podem ser escolhidos para inclusão.</message>
+	<message key="editor.article.coverImage">Imagem de capa</message>
 </locale>

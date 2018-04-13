@@ -144,4 +144,5 @@
 	<message key="editor.submission.selectGalleyFiles">Vyberte soubory sazebnice</message>
 	<message key="editor.submission.editorial.finalDraftDescription"><![CDATA[Konečné návrhy souborů v tomto seznamu jsou převedeny redaktorem do redakčních verzí, nahrany níže pod <span class = "pkp_help_title">Redakce</ span>.¨]]></message>
 	<message key="editor.submission.proof.manageProofFilesDescription">Jakékoli soubory, které již byly nahrány do libovolné etapy podání článku, mohou být přidány do seznamu Korektury zaškrtnutím políčka Zahrnout a klepnutím na tlačítko Hledat: budou uvedeny všechny dostupné soubory a mohou být vybrány k zařazení.</message>
+	<message key="editor.article.coverImage">Titulní obrázek</message>
 </locale>
