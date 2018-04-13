@@ -134,8 +134,8 @@ class IssueHandler extends APIHandler {
 				case 'year':
 
 					// Support deprecated `year`, `number` and `volume` params
-					if (substr($param, -1) === 's') {
-						$param = substr($param, 0, -1);
+					if (substr($param, -1) !== 's') {
+						$param .= 's';
 					}
 
 					if (is_string($val) && strpos($val, ',') > -1) {
