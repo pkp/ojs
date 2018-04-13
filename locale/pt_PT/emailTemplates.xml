@@ -1169,4 +1169,15 @@ Se tiver questões, por favor contacte-me. Obrigado por considerar esta revisão
 {$editorialContactSignature}]]></body>
 		<description>Este e-mail, quando activado, é enviado automaticamente para os outros autores que não são utilizadores do Portal especificados durante o processo de envio.</description>
 	</email_text>
+	<email_text key="EDITOR_DECISION_INITIAL_DECLINE">
+		<subject>Decisão Editorial</subject>
+		<body><![CDATA[{$authorName}:<br />
+<br />
+Em relação à sua submissão à revista {$contextName}, &quot;{$submissionTitle}&quot; foi tomada uma decisão.<br />
+<br />
+A nossa decisão é:: Rejeitar a Submissão<br />
+<br />
+{$editorialContactSignature}<br />]]></body>
+		<description>Ete e-mail é enviado ao autor se o editor decidir rejeitar a submissão à priori, antes do processo de revisão.</description>
+	</email_text>
 </email_texts>
