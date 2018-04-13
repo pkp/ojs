@@ -72,4 +72,6 @@
 	<message key="submission.citationFormat.notFound">O formato de citação solicitado não pôde ser recuperado.</message>
 	<message key="submission.metadataDescription">Estas especificações são baseadas no conjunto de metadados Dublin Core, um padrão internacional usado para descrever o conteúdo da revista.</message>
 	<message key="section.any">Qualquer Secção</message>
+	<message key="submission.submit.form.wordCountAlert">O seu resumo é demasiado longo. Por favor encurte-o de modo a conter menos palavras do que as indicadas abaixo para esta secção.</message>
+	<message key="submission.abstract.wordCount.description">O resumo deverá ter no máximo {$wordCount} palavras.</message>
 </locale>
