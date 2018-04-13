@@ -156,4 +156,5 @@
 	<message key="editor.submission.production.productionReadyFilesDescription"><![CDATA[Grafički urednik će pripremiti ove fajlove za svaku završnu kopiju i postaviti ih na server u odgovarajuće <span class="pkp_help_title">Odobrene kopije</span> za konačnu proveru.]]></message>
 	<message key="editor.submission.editorial.finalDraftDescription"><![CDATA[Finalni probni fajlovi na ovoj listi su pretvoreni od strane korektora u korigovane verzije i postavljene na server u <span class="pkp_help_title">Korektura</span>.]]></message>
 	<message key="editor.submission.proof.manageProofFilesDescription">Bilo koji fajl koji je već bio postavljen na server u bilo kojoj fazi prijave članka može biti dodat na lsitu za Korekturu označavanjem Uključi kutije ispod i klikom na Pretraga: svi dostupni fajlovi će biti izlistani i odabrani za uključenje.</message>
+	<message key="editor.article.coverImage">Slika naslovne strane</message>
 </locale>

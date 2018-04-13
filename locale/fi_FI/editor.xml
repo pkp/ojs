@@ -148,4 +148,5 @@
 	<message key="editor.issues.confirmSetCurrentIssue">Oletko varma, että haluat asettaa tämän numeron uusimmaksi?</message>
 	<message key="grid.action.setCurrentIssue">Aseta uusin numero</message>
 	<message key="editor.publicIdentificationExistsForTheSameType">Julkinen tunniste '{$publicIdentifier}' on jo käytössä. Valitse uniikki tunniste.</message>
+	<message key="editor.article.coverImage">Kansikuva</message>
 </locale>
