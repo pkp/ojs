@@ -147,4 +147,5 @@
 	<message key="editor.submission.editorial.finalDraftDescription"><![CDATA[Итоговые файлы черновиков в этом списке преобразованы литературным редактором в версии, прошедши литературное редактирование, загруженные ниже в раздел  <span class="pkp_help_title">«Литературное редактирование»</span>.]]></message>
 	<message key="editor.submission.proof.manageProofFilesDescription">Все файлы, которые уже были загружены на любом этапе отправки материала, могут быть добавлены в список «Корректура», для этого нужно поставить галочку «Включить» ниже и щелкнуть на кнопке «Поиск»: все доступные файлы будут показаны в списке и могут быть выбраны для включения.</message>
 	<message key="editor.publicIdentificationExistsForTheSameType">Открытый идентификатор «{$publicIdentifier}» уже существует для другого объекта этого же типа. Пожалуйста, выбирайте уникальные идентификаторы для объектов одного типа в вашем журнале.</message>
+	<message key="editor.article.coverImage">Изображение обложки</message>
 </locale>

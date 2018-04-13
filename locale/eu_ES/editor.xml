@@ -132,4 +132,5 @@
 	<message key="editor.issues.galleyPublicIdentificationExists">Jadanik bada ale publikoaren galera probaren identifikazioa.</message>
 	<message key="editor.issues.backToIssueGalleys">Atzera alearen galera probetara</message>
 	<message key="editor.issues.confirmDeleteGalley">Ziur al zaude alearen galera proba hau ezabatu nahi duzula?</message>
+	<message key="editor.article.coverImage">Azaleko irudia</message>
 </locale>
