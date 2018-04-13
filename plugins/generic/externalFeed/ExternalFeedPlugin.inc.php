@@ -40,8 +40,6 @@ class ExternalFeedPlugin extends GenericPlugin {
 
 			// Journal Manager link to externalFeed management pages
 			HookRegistry::register('Templates::Manager::Index::ManagementPages', array($this, 'displayManagerLink'));
-
-			$this->_registerTemplateResource();
 		}
 		return $success;
 	}

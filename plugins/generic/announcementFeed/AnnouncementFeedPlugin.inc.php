@@ -20,22 +20,18 @@ class AnnouncementFeedPlugin extends GenericPlugin {
 	 * @copydoc Plugin::register()
 	 */
 	public function register($category, $path, $mainContextId = null) {
-		if (parent::register($category, $path, $mainContextId)) {
-			if ($this->getEnabled($mainContextId)) {
-				HookRegistry::register('TemplateManager::display',array($this, 'callbackAddLinks'));
-				$this->import('AnnouncementFeedBlockPlugin');
-				$blockPlugin = new AnnouncementFeedBlockPlugin($this);
-				PluginRegistry::register('blocks', $blockPlugin, $this->getPluginPath());
+		if (!parent::register($category, $path, $mainContextId)) return false;
+		if ($this->getEnabled($mainContextId)) {
+			HookRegistry::register('TemplateManager::display',array($this, 'callbackAddLinks'));
+			$this->import('AnnouncementFeedBlockPlugin');
+			$blockPlugin = new AnnouncementFeedBlockPlugin($this);
+			PluginRegistry::register('blocks', $blockPlugin, $this->getPluginPath());
 
-				$this->import('AnnouncementFeedGatewayPlugin');
-				$gatewayPlugin = new AnnouncementFeedGatewayPlugin($this);
-				PluginRegistry::register('gateways', $gatewayPlugin, $this->getPluginPath());
-
-				$this->_registerTemplateResource();
-			}
-			return true;
+			$this->import('AnnouncementFeedGatewayPlugin');
+			$gatewayPlugin = new AnnouncementFeedGatewayPlugin($this);
+			PluginRegistry::register('gateways', $gatewayPlugin, $this->getPluginPath());
 		}
-		return false;
+		return true;
 	}
 
 	/**

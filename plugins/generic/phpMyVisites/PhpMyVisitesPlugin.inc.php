@@ -40,8 +40,6 @@ class PhpMyVisitesPlugin extends GenericPlugin {
 
 			// Insert phpmv page tag to help footer
 			HookRegistry::register('Templates::Help::Footer::PageFooter', array($this, 'insertFooter'));
-
-			$this->_registerTemplateResource();
 		}
 		return $success;
 	}

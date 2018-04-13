@@ -24,18 +24,6 @@ define('O4DOI_ARTICLE_AS_MANIFESTATION', 0x04);
 class MedraExportPlugin extends DOIPubIdExportPlugin {
 
 	/**
-	 * @copydoc Plugin::register()
-	 */
-	public function register($category, $path, $mainContextId = null) {
-		$success = parent::register($category, $path, $mainContextId);
-		if (!Config::getVar('general', 'installed') || defined('RUNNING_UPGRADE')) return $success;
-		if ($success && $this->getEnabled()) {
-			$this->_registerTemplateResource();
-		}
-		return $success;
-	}
-
-	/**
 	 * @see Plugin::getName()
 	 */
 	function getName() {

@@ -39,18 +39,6 @@ define('CROSSREF_DEPOSIT_STATUS', 'depositStatus');
 class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 
 	/**
-	 * @copydoc Plugin::register()
-	 */
-	public function register($category, $path, $mainContextId = null) {
-		$success = parent::register($category, $path, $mainContextId);
-		if (!Config::getVar('general', 'installed') || defined('RUNNING_UPGRADE')) return $success;
-		if ($success && $this->getEnabled()) {
-			$this->_registerTemplateResource();
-		}
-		return $success;
-	}
-
-	/**
 	 * @copydoc Plugin::getName()
 	 */
 	function getName() {

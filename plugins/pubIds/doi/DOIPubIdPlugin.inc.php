@@ -35,7 +35,6 @@ class DOIPubIdPlugin extends PubIdPlugin {
 			HookRegistry::register('Submission::getProperties::values', array($this, 'modifyObjectPropertyValues'));
 			HookRegistry::register('Issue::getProperties::values', array($this, 'modifyObjectPropertyValues'));
 			HookRegistry::register('Galley::getProperties::values', array($this, 'modifyObjectPropertyValues'));
-			$this->_registerTemplateResource();
 		}
 		return $success;
 	}

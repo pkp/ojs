@@ -36,22 +36,18 @@ class WebFeedPlugin extends GenericPlugin {
 	 * @copydoc Plugin::register()
 	 */
 	public function register($category, $path, $mainContextId = null) {
-		if (parent::register($category, $path, $mainContextId)) {
-			if ($this->getEnabled($mainContextId)) {
-				HookRegistry::register('TemplateManager::display',array($this, 'callbackAddLinks'));
-				$this->import('WebFeedBlockPlugin');
-				$blockPlugin = new WebFeedBlockPlugin($this);
-				PluginRegistry::register('blocks', $blockPlugin, $this->getPluginPath());
+		if (!parent::register($category, $path, $mainContextId)) return false;
+		if ($this->getEnabled($mainContextId)) {
+			HookRegistry::register('TemplateManager::display',array($this, 'callbackAddLinks'));
+			$this->import('WebFeedBlockPlugin');
+			$blockPlugin = new WebFeedBlockPlugin($this);
+			PluginRegistry::register('blocks', $blockPlugin, $this->getPluginPath());
 
-				$this->import('WebFeedGatewayPlugin');
-				$gatewayPlugin = new WebFeedGatewayPlugin($this);
-				PluginRegistry::register('gateways', $gatewayPlugin, $this->getPluginPath());
-
-				$this->_registerTemplateResource();
-			}
-			return true;
+			$this->import('WebFeedGatewayPlugin');
+			$gatewayPlugin = new WebFeedGatewayPlugin($this);
+			PluginRegistry::register('gateways', $gatewayPlugin, $this->getPluginPath());
 		}
-		return false;
+		return true;
 	}
 
 	/**

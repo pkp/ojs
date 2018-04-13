@@ -27,7 +27,6 @@ class BrowsePlugin extends GenericPlugin {
 				HookRegistry::register('Plugins::Blocks::Navigation::BrowseBy',array($this, 'addNavigationItem'));
 				// Handler for browse plugin pages
 				HookRegistry::register('LoadHandler', array($this, 'setupBrowseHandler'));
-				$this->_registerTemplateResource();
 			}
 			return true;
 		}
