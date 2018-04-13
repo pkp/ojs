@@ -124,4 +124,5 @@
 	<message key="editor.notifyUsers.allAuthors">Alle publiserte forfattere ({$count} users)</message>
 	<message key="editor.notifyUsers.allIndividualSubscribers">Alle personlige abonnenter ({$count} users)</message>
 	<message key="editor.notifyUsers.allInstitutionalSubscribers">Alle institusjonelle abonnenter  ({$count} users)</message>
+	<message key="editor.article.coverImage">Omslagsbilde</message>
 </locale>

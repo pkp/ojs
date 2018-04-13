@@ -144,4 +144,5 @@
 	<message key="editor.submission.selectGalleyFiles">Pilih File Galley</message>
 	<message key="editor.submission.editorial.finalDraftDescription"><![CDATA[File draft final di daftar ini telah diubah oleh Copyeditor menjadi versi pasca-copyedit, telah diunggah berikut ini di bawah <span class="pkp_help_title">Copyediting</span>.]]></message>
 	<message key="editor.submission.proof.manageProofFilesDescription">Semua file yang telah diunggah di tiap tahap penyerahan dapat ditambahkan ke daftar Proofreading dengan menandai check box Include berikut dan klik Cari: semua file yang ada akan ditampilkan dan dapat dipilih untuk diikutsertakan.</message>
+	<message key="editor.article.coverImage">Gambar sampul</message>
 </locale>

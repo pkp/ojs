@@ -145,4 +145,5 @@
 	<message key="editor.submission.selectGalleyFiles">Вибрати файли гранок</message>
 	<message key="editor.submission.editorial.finalDraftDescription"><![CDATA[Готові файли чернеток з цього списку, пройшовши літературне редагування, завантажені літературним редактором в розділ <span class="pkp_help_title">«Літературне редагування»</span>.]]></message>
 	<message key="editor.submission.proof.manageProofFilesDescription">Всі файли, які були завантажені на будь-якому етапі подання рукопису, можуть бути додані в список «Коректура», для цього потрібно поставити галочку «Включити» нижче і клацнути на кнопці «Пошук»: всі доступні файли будуть показані в списку і можуть бути обрані для включення.</message>
+	<message key="editor.article.coverImage">Зображення обкладинки</message>
 </locale>
