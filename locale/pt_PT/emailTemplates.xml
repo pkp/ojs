@@ -1180,4 +1180,13 @@ A nossa decisão é:: Rejeitar a Submissão<br />
 {$editorialContactSignature}<br />]]></body>
 		<description>Ete e-mail é enviado ao autor se o editor decidir rejeitar a submissão à priori, antes do processo de revisão.</description>
 	</email_text>
+	<email_text key="EDITOR_RECOMMENDATION">
+		<subject>Recomenda;ção Editorial</subject>
+		<body><![CDATA[{$editors}:<br />
+<br />
+A recomendação relativamente à submissão para  {$contextName}, &quot;{$submissionTitle}&quot; é: {$recommendation}<br />
+<br />
+{$editorialContactSignature}<br />]]></body>
+		<description>Este e-mail é enviado pelo Editor de Secção ou Editor Acessor para o Editor de Secção ou Editor Priincipal, a notificar da recomendação final relativa à submissão.</description>
+	</email_text>
 </email_texts>
