@@ -1175,7 +1175,7 @@ Se tiver questões, por favor contacte-me. Obrigado por considerar esta revisão
 <br />
 Em relação à sua submissão à revista {$contextName}, &quot;{$submissionTitle}&quot; foi tomada uma decisão.<br />
 <br />
-A nossa decisão é:: Rejeitar a Submissão<br />
+A decisão é: Rejeitar a Submissão<br />
 <br />
 {$editorialContactSignature}<br />]]></body>
 		<description>Ete e-mail é enviado ao autor se o editor decidir rejeitar a submissão à priori, antes do processo de revisão.</description>
