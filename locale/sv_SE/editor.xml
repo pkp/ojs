@@ -147,5 +147,5 @@
 	<message key="editor.submission.editorial.finalDraftDescription"><![CDATA[Slutgiltiga utkastfiler i den här listan görs om till manusredigerade versioner av en manusredaktör och laddas upp nedan under <span class="pkp_help_title">Manusredigering</span>.]]></message>
 	<message key="editor.submission.proof.manageProofFilesDescription">Alla filer som redan laddats upp i något av processens steg kan läggas till i listan för Korrekturläsning genom att kryssa i rutan "Inkludera" nedan och klicka på Sök: alla tillgängliga filer listas och kan väljas för inkludering.</message>
 	<message key="editor.publicIdentificationExistsForTheSameType">Den publika identifikatorn '{$publicIdentifier}' existerar redan för ett annat objekt av samma typ. already exists for another object of the same type. Vänligen välj unika identifikatorer inom tidskriften.</message>
-  <message key="editor.article.cover">Omslag</message>
+  <message key="editor.article.coverImage">Omslagsbild</message>
 </locale>
