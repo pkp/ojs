@@ -55,7 +55,7 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin {
 					'exportIssues' => $exportIssues,
 					'exportRepresentations' => $exportRepresentations,
 				));
-				$templateMgr->display($this->getTemplatePath() . 'index.tpl');
+				$templateMgr->display($this->getTemplateResource('index.tpl'));
 				break;
 		}
 	}

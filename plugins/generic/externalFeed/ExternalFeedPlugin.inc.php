@@ -354,7 +354,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 				$feeds =& $externalFeedDao->getExternalFeedsByJournalId($journalId, $rangeInfo);
 				$templateMgr->assign('feeds', $feeds);
 
-				$templateMgr->display($this->getTemplatePath() . 'externalFeeds.tpl');
+				$templateMgr->display($this->getTemplateResource('externalFeeds.tpl'));
 				return true;
 		}
 	}

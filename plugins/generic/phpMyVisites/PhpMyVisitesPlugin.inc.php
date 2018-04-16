@@ -92,7 +92,7 @@ class PhpMyVisitesPlugin extends GenericPlugin {
 				if (!empty($phpmvSiteId) && !empty($phpmvUrl)) {
 					$templateMgr->assign('phpmvSiteId', $phpmvSiteId);
 					$templateMgr->assign('phpmvUrl', $phpmvUrl);
-					$output .= $templateMgr->fetch($this->getTemplatePath() . 'pageTag.tpl');
+					$output .= $templateMgr->fetch($this->getTemplateResource('pageTag.tpl'));
 				}
 			}
 		}

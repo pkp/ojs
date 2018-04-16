@@ -69,7 +69,7 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 				'article' => $article,
 				'galley' => $galley,
 			));
-			$templateMgr->display($this->getTemplatePath() . 'display.tpl');
+			$templateMgr->display($this->getTemplateResource('display.tpl'));
 
 			return true;
 		}

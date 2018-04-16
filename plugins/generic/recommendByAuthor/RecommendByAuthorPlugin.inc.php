@@ -50,13 +50,6 @@ class RecommendByAuthorPlugin extends GenericPlugin {
 		return __('plugins.generic.recommendByAuthor.description');
 	}
 
-	/**
-	 * @copydoc Plugin::getTemplatePath()
-	 */
-	function getTemplatePath($inCore = false) {
-		return parent::getTemplatePath($inCore) . 'templates/';
-	}
-
 
 	//
 	// View level hook implementations.
@@ -142,7 +135,7 @@ class RecommendByAuthorPlugin extends GenericPlugin {
 		import('lib.pkp.classes.core.VirtualArrayIterator');
 		$returner = new VirtualArrayIterator($pagedResults, $totalResults, $page, $itemsPerPage);
 		$smarty->assign('articlesBySameAuthor', $returner);
-		$output .= $smarty->fetch($this->getTemplatePath() . 'articleFooter.tpl');
+		$output .= $smarty->fetch($this->getTemplateResource('articleFooter.tpl'));
 		return false;
 	}
 }

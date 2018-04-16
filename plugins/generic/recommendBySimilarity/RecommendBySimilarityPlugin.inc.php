@@ -50,13 +50,6 @@ class RecommendBySimilarityPlugin extends GenericPlugin {
 		return __('plugins.generic.recommendBySimilarity.description');
 	}
 
-	/**
-	 * @copydoc PKPPlugin::getTemplatePath
-	 */
-	function getTemplatePath($inCore = false) {
-		return parent::getTemplatePath($inCore) . 'templates/';
-	}
-
 
 	//
 	// View level hook implementations.
@@ -93,7 +86,7 @@ class RecommendBySimilarityPlugin extends GenericPlugin {
 		$smarty->assign('articlesBySimilarity', $results);
 		$smarty->assign('articlesBySimilarityQuery', $query);
 
-		$output .= $smarty->fetch($this->getTemplatePath() . 'articleFooter.tpl');
+		$output .= $smarty->fetch($this->getTemplateResource('articleFooter.tpl'));
 		return false;
 	}
 }

@@ -66,13 +66,6 @@ class AnnouncementFeedGatewayPlugin extends GatewayPlugin {
 	}
 
 	/**
-	 * @copydoc PKPPlugin::getTemplatePath
-	 */
-	public function getTemplatePath($inCore = false) {
-		return $this->_parentPlugin->getTemplatePath($inCore);
-	}
-
-	/**
 	 * Get whether or not this plugin is enabled. (Should always return true, as the
 	 * parent plugin will take care of loading this one when needed)
 	 * @return boolean
@@ -151,7 +144,7 @@ class AnnouncementFeedGatewayPlugin extends GatewayPlugin {
 			'journal' => $journal,
 		));
 
-		$templateMgr->display($this->getTemplatePath() . $typeMap[$type], $mimeTypeMap[$type]);
+		$templateMgr->display($this->_parentPlugin->getTemplateResource($typeMap[$type]), $mimeTypeMap[$type]);
 
 		return true;
 	}

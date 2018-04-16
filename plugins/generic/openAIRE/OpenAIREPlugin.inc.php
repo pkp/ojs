@@ -96,7 +96,7 @@ class OpenAIREPlugin extends GenericPlugin {
 		$smarty =& $params[1];
 		$output =& $params[2];
 
-		$output .= $smarty->fetch($this->getTemplatePath() . 'projectIDEdit.tpl');
+		$output .= $smarty->fetch($this->getTemplateResource('projectIDEdit.tpl'));
 		return false;
 	}
 

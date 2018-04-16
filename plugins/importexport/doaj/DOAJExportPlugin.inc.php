@@ -55,7 +55,7 @@ class DOAJExportPlugin extends PubObjectsExportPlugin {
 			case 'index':
 			case '':
 				$templateMgr = TemplateManager::getManager($request);
-				$templateMgr->display($this->getTemplatePath() . 'index.tpl');
+				$templateMgr->display($this->getTemplateResource('index.tpl'));
 				break;
 		}
 	}
