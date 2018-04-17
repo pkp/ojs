@@ -145,4 +145,5 @@
 	<message key="editor.submission.editorial.finalDraftDescription"><![CDATA[آخرین نسخه از فایل توسط ویراستیار به عنوان نسخه <span class="pkp_help_title">ویراستیاری شده</span> در سیستم آپلود شده است.]]></message>
 	<message key="editor.submission.proof.manageProofFilesDescription">هر فایلی که در مراحل ارسال مقاله در سامانه آپلود شده است را می‌توان با انتخاب گزینه زیر به لیست بازبینی نهایی اضافه کرد.</message>
 	<message key="editor.publicIdentificationExistsForTheSameType">شناسه عمومی «{$publicIdentifier}» برای موجودیت دیگری از همین نوع تعریف شده است. لطفاً برای تمامی موجودیت‌های داخل مجله یک شناسه عمومی منحصربه‌فرد انتخاب کنید.</message>
+	<message key="editor.article.coverImage">تصویر جلد</message>
 </locale>
