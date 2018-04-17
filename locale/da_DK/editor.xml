@@ -160,4 +160,5 @@
 	<message key="editor.issues.confirmSetCurrentIssue">Er du sikker på at du vil registrere dette nummer som det nyeste?</message>
 	<message key="grid.action.setCurrentIssue">Sæt nyeste nummer</message>
 	<message key="editor.publicIdentificationExistsForTheSameType">Identifikatoren (publicid) '{$publicIdentifier}' eksisterer allerede i forbindelse med et andet objekt af samme type. Vælg unikke identifikatorer for objekter af samme type i dit tidsskrift.</message>
+	<message key="editor.article.coverImage">Forsidebillede</message>
 </locale>

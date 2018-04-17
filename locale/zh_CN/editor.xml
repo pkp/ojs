@@ -133,4 +133,5 @@
 	<message key="editor.issues.galleyPublicIdentificationExists">公共期目校样确认已经存在。</message>
 	<message key="editor.issues.backToIssueGalleys">返回期目校样。</message>
 	<message key="editor.issues.confirmDeleteGalley">您确定要删除该期目校样吗？</message>
+	<message key="editor.article.coverImage">封面图片</message>
 </locale>

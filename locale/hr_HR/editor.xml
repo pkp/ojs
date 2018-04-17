@@ -131,4 +131,5 @@
 	<message key="editor.issues.backToIssueGalleys">Povratak na korekturne kopije izdanja</message>
 	<message key="editor.issues.confirmDeleteGalley">Da li ste sigurni da želite obrisati ove korekturne kpije izdanja?</message>
 	<message key="editor.reassign">Ponovo dodijeli</message>
+	<message key="editor.article.coverImage">Slika naslovne stranice</message>
 </locale>

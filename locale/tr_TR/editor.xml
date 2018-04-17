@@ -192,4 +192,5 @@
 	<message key="editor.publicIdentificationExists">Diğer objeler (sayı, makale, dizgi veya ek dosya) için '{$publicIdentifier}' adlı genel belirleyici zaten var. Lütfen derginizdeki tekil belirleyicileri seçiniz.</message>
 	<message key="editor.article.remove">Kaldır</message>
     <message key="editor.review.notInitiated">İnceleme süreci henüz başlatılmadı.</message>
+		<message key="editor.article.coverImage">Kapak resmi</message>
 </locale>
