@@ -51,6 +51,10 @@
 		<data file="dbscripts/xml/upgrade/3.1.1_preupdate_citations.xml" condition="return $installer->columnExists('citations', 'assoc_type');" />
 	</upgrade>
 
+	<upgrade minversion="2.4.0.0" maxversion="3.1.9.9">
+		<code function="migrateFirstAndLastNames" />
+	</upgrade>
+
 	<!-- PKP schema components -->
 	<schema file="lib/pkp/xml/schema/common.xml" />
 	<schema file="lib/pkp/xml/schema/log.xml" />

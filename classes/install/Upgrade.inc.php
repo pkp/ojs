@@ -2766,6 +2766,20 @@ class Upgrade extends Installer {
 		return true;
 	}
 
+	/**
+	 * Migrate first and last user names as multilingual into the DB table user_settings.
+	 * @return boolean
+	 */
+	function migrateFirstAndLastNames() {
+		// the user names will be saved in the site's primary locale
+		$siteDao = DAORegistry::getDAO('SiteDAO');
+		$site = $siteDao->getSite();
+		$sitePrimaryLocale = $site->getPrimaryLocale();
+		import('lib.pkp.classes.identity.Identity'); // IDENTITY_SETTING_...
+		$siteDao->update("INSERT INTO user_settings (user_id, locale, setting_name, setting_value, setting_type) SELECT DISTINCT u.user_id, ?, ?, u.first_name, 'string' FROM users u", array($sitePrimaryLocale, IDENTITY_SETTING_FIRSTNAME));
+		$siteDao->update("INSERT INTO user_settings (user_id, locale, setting_name, setting_value, setting_type) SELECT DISTINCT u.user_id, ?, ?, u.first_name, 'string' FROM users u", array($sitePrimaryLocale, IDENTITY_SETTING_LASTNAME));
+	}
+
 }
 
 ?>
