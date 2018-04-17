@@ -69,8 +69,7 @@ class ViewReportPlugin extends ReportPlugin {
 		$issueDao = DAORegistry::getDAO('IssueDAO');
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 
-		$publishedByJournal = $publishedArticleDao->getPublishedArticlesByJournalId($journal->getId());
-		$publishedArticles =& $publishedByJournal;
+		$publishedArticles = $publishedArticleDao->getPublishedArticlesByJournalId($journal->getId());
 		while ($publishedArticle = $publishedArticles->next()) {
 			$articleId = $publishedArticle->getId();
 			$issueId = $publishedArticle->getIssueId();

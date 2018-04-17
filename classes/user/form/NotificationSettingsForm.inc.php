@@ -60,7 +60,7 @@ class NotificationSettingsForm extends PKPNotificationSettingsForm {
 				$currentlyReceives = $user->getSetting('openAccessNotification', $thisJournal->getId());
 				$shouldReceive = !empty($openAccessNotify) && in_array($thisJournal->getId(), $openAccessNotify);
 				if ($currentlyReceives != $shouldReceive) {
-					$userSettingsDao->updateSetting($user->getId(), 'openAccessNotification', $shouldReceive, 'bool', ASSOC_TYPE_JOURNAL, $thisJournal->getId());
+					$userSettingsDao->updateSetting($user->getId(), 'openAccessNotification', $shouldReceive, 'bool', $thisJournal->getId());
 				}
 			}
 		}

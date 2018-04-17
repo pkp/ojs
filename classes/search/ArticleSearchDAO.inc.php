@@ -36,14 +36,12 @@ class ArticleSearchDAO extends SubmissionSearchDAO {
 		$sqlWhere = '';
 		$params = array();
 
-		$isSqlServer = Config::getVar('database', 'ms_sql');
 		for ($i = 0, $count = count($phrase); $i < $count; $i++) {
 			if (!empty($sqlFrom)) {
 				$sqlFrom .= ', ';
 				$sqlWhere .= ' AND ';
 			}
-			$sqlFrom .= ($isSqlServer ? 'submission_search_object_keywords o'.$i.' ON o.object_id = o'.$i.'.object_id JOIN submission_search_keyword_list k'.$i.' ON k'.$i.'.keyword_id = o'.$i.'.keyword_id' :
-			                            'submission_search_object_keywords o'.$i.' NATURAL JOIN submission_search_keyword_list k'.$i);
+			$sqlFrom .= 'submission_search_object_keywords o'.$i.' ON o.object_id = o'.$i.'.object_id JOIN submission_search_keyword_list k'.$i.' ON k'.$i.'.keyword_id = o'.$i.'.keyword_id';
 			if (strstr($phrase[$i], '%') === false) $sqlWhere .= 'k'.$i.'.keyword_text = ?';
 			else $sqlWhere .= 'k'.$i.'.keyword_text LIKE ?';
 			if ($i > 0) $sqlWhere .= ' AND o0.object_id = o'.$i.'.object_id AND o0.pos+'.$i.' = o'.$i.'.pos';
@@ -70,6 +68,7 @@ class ArticleSearchDAO extends SubmissionSearchDAO {
 		}
 
 		import('lib.pkp.classes.submission.Submission'); // STATUS_PUBLISHED
+		$isSqlServer = Config::getVar('database', 'ms_sql');
 		$result = $this->retrieveCached(
 			'SELECT
 				o.submission_id,
@@ -81,7 +80,7 @@ class ArticleSearchDAO extends SubmissionSearchDAO {
 				submissions s,
 				published_submissions ps,
 				issues i,
-				submission_search_objects o ' . ($isSqlServer ? 'JOIN ' : 'NATURAL JOIN ') . $sqlFrom . '
+				submission_search_objects o JOIN ' . $sqlFrom . '
 			WHERE
 				s.submission_id = o.submission_id AND
 				s.status = ' . STATUS_PUBLISHED . ' AND
