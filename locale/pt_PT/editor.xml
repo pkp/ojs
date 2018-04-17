@@ -147,4 +147,5 @@
 	<message key="editor.issues.confirmSetCurrentIssue">Deseja realmente definir esta edição como a atual?</message>
 	<message key="grid.action.setCurrentIssue">Definir como Edição Atual</message>
 	<message key="editor.publicIdentificationExistsForTheSameType">O identificador público '{$publicIdentifier}' já existe para outro objeto do mesmo tipo. Por favor escolha identificadores únicos para os objetos do mesmo tipo da sua revista.</message>
+	<message key="editor.article.coverImage">Imagem de capa</message>
 </locale>

@@ -136,6 +136,7 @@
 	<message key="editor.article.scheduleForPublication">جدوله للنشر في</message>
 	<message key="editor.article.scheduleForPublication.toBeAssigned">ليتم تعيينه</message>
 	<message key="editor.article.payment.publicationFeeNotPaid">لم يتم دفع رسم النشر. لجدولة الفقرة لغرض النشر، أشعر المؤلف بدفع الرسم أو أخصمه له</message>
+	<message key="editor.article.coverImage">صورة الغلاف</message>
 	<message key="editor.article.removeCoverImageFileNotFound">تعذر العثور على صورة الغلاف التي تريد حذفها. قد تكون محذوفة سلفاً. حاول إعادة تحميل الصفحة.</message>
 	<message key="grid.action.removeArticle">إزالة المقالة من هذا العدد</message>
 	<message key="editor.article.remove">أزلها</message>

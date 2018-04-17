@@ -148,4 +148,5 @@
 	<message key="editor.submission.selectGalleyFiles">Wybierz pliki do publikacji.</message>
 	<message key="editor.submission.editorial.finalDraftDescription"><![CDATA[Pliki znajdujące się na tej liście są pobierane przez korektora. Po korekcie poprawione pliki powinny zostać przesłane poniżej, w sekcji <span class="pkp_help_title">Korekta</span>.]]></message>
 	<message key="editor.submission.proof.manageProofFilesDescription">Wszystkie pliki przesłane do dowolnego etapu mogą zostać dodane do listy korekty końcowej przez oznaczenie pola Uwzględnij poniżej i kliknięciu Szukaj: Wszystkie możliwe do dodania pliki będą widoczne w liście i dostępne do wybrania.</message>
+	<message key="editor.article.coverImage">Obraz okładki</message>
 </locale>

@@ -124,4 +124,5 @@
 	<message key="editor.issues.galleyPublicIdentificationExists">Esiste già un identificatore della gabbia del fascicolo</message>
 	<message key="editor.issues.backToIssueGalleys">Torna alle gabbie del fascicolo</message>
 	<message key="editor.issues.confirmDeleteGalley">Sei sicuro di cancellare questa gabbia del fascicolo?</message>
+	<message key="editor.article.coverImage">Immagine di copertina</message>
 </locale>
