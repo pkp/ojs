@@ -107,8 +107,12 @@ class ArticleCrossrefXmlFilter extends IssueCrossrefXmlFilter {
 			} else {
 				$personNameNode->setAttribute('sequence', 'additional');
 			}
-			$personNameNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'given_name', htmlspecialchars(ucfirst($author->getLocalizedFirstName()).(($author->getLocalizedMiddleName())?' '.ucfirst($author->getLocalizedMiddleName()):''), ENT_COMPAT, 'UTF-8')));
-			$personNameNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'surname', htmlspecialchars(ucfirst($author->getLocalizedLastName()), ENT_COMPAT, 'UTF-8')));
+			if (empty($author->getLocalizedFamilyName())) {
+				$personNameNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'surname', htmlspecialchars(ucfirst($author->getFullName()), ENT_COMPAT, 'UTF-8')));
+			} else {
+				$personNameNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'given_name', htmlspecialchars(ucfirst($author->getLocalizedGivenName()), ENT_COMPAT, 'UTF-8')));
+				$personNameNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'surname', htmlspecialchars(ucfirst($author->getLocalizedFamilyName()), ENT_COMPAT, 'UTF-8')));
+			}
 			if ($author->getData('orcid')) {
 				$personNameNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'ORCID', $author->getData('orcid')));
 			}

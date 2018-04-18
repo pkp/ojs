@@ -95,9 +95,8 @@ class ArticleReportPlugin extends ReportPlugin {
 
 		for ($a = 1; $a <= $maxAuthors; $a++) {
 			$columns = array_merge($columns, array(
-				'fname' . $a => __('user.firstName') . " (" . __('user.role.author') . " $a)",
-				'mname' . $a => __('user.middleName') . " (" . __('user.role.author') . " $a)",
-				'lname' . $a => __('user.lastName') . " (" . __('user.role.author') . " $a)",
+				'author_given' . $a => __('user.givenName') . " (" . __('user.role.author') . " $a)",
+				'author_family' . $a => __('user.familyName') . " (" . __('user.role.author') . " $a)",
 				'country' . $a => __('common.country') . " (" . __('user.role.author') . " $a)",
 				'affiliation' . $a => __('user.affiliation') . " (" . __('user.role.author') . " $a)",
 				'email' . $a => __('user.email') . " (" . __('user.role.author') . " $a)",
@@ -176,9 +175,8 @@ class ArticleReportPlugin extends ReportPlugin {
 		foreach($authors as $author) {
 			$seq++;
 
-			$returner['fname' . $seq] = isset($author['fname']) ? $author['fname'] : '';
-			$returner['mname' . $seq] = isset($author['mname']) ? $author['mname'] : '';
-			$returner['lname' . $seq] = isset($author['lname']) ? $author['lname'] : '';
+			$returner['author_given' . $seq] = isset($author['author_given']) ? $author['author_given'] : '';
+			$returner['author_family' . $seq] = isset($author['author_family']) ? $author['author_family'] : '';
 			$returner['email' . $seq] = isset($author['email']) ? $author['email'] : '';
 			$returner['affiliation' . $seq] = isset($author['affiliation']) ? $author['affiliation'] : '';
 			$returner['country' . $seq] = isset($author['country']) ? $author['country'] : '';

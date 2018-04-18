@@ -748,10 +748,9 @@ class PublishedArticleDAO extends ArticleDAO {
 		}
 		if ($title) {
 			$params[] = 'title';
-			$params[] = AppLocale::getLocale();
 			$params[] = '%' . $title . '%';
 		}
-		if ($author) array_push($params, $authorQuery = '%' . $author . '%', $authorQuery, $authorQuery);
+		if ($author) array_push($params, $authorQuery = '%' . $author . '%', $authorQuery);
 		if ($issueId) {
 			$params[] = (int) $issueId;
 		}
@@ -768,17 +767,17 @@ class PublishedArticleDAO extends ArticleDAO {
 				LEFT JOIN submissions s ON (s.submission_id = ps.submission_id)
 				' . ($pubIdType != null?' LEFT JOIN submission_settings ss ON (s.submission_id = ss.submission_id)':'')
 				. ($title != null?' LEFT JOIN submission_settings sst ON (s.submission_id = sst.submission_id)':'')
-				. ($author != null?' LEFT JOIN authors au ON (s.submission_id = au.submission_id)':'')
+				. ($author != null?' LEFT JOIN authors au ON (s.submission_id = au.submission_id)
+						LEFT JOIN author_settings asgs ON (asgs.author_id = au.author_id AND asgs.setting_name = \''.IDENTITY_SETTING_GIVENNAME.'\')
+						LEFT JOIN author_settings asfs ON (asfs.author_id = au.author_id AND asfs.setting_name = \''.IDENTITY_SETTING_FAMILYNAME.'\')
+					':'')
 				. ($pubIdSettingName != null?' LEFT JOIN submission_settings sss ON (s.submission_id = sss.submission_id AND sss.setting_name = ?)':'')
 				. ' ' . $this->getFetchJoins() .'
-				LEFT JOIN author_settings asf ON (asf.author_id = au.author_id AND asf.setting_name = \''.IDENTITY_SETTING_FIRSTNAME.'\' AND asf.locale = \''.AppLocale::getLocale().'\' )
-				LEFT JOIN author_settings asm ON (asm.author_id = au.author_id AND asm.setting_name = \''.IDENTITY_SETTING_MIDDLENAME.'\' AND asm.locale = \''.AppLocale::getLocale().'\' )
-				LEFT JOIN author_settings asl ON (asl.author_id = au.author_id AND asl.setting_name = \''.IDENTITY_SETTING_LASTNAME.'\' AND asl.locale = \''.AppLocale::getLocale().'\')
 			WHERE
 				i.published = 1 AND s.context_id = ? AND s.status <> ' . STATUS_DECLINED
 				. ($pubIdType != null?' AND ss.setting_name = ? AND ss.setting_value IS NOT NULL':'')
-				. ($title != null?' AND (sst.setting_name = ? AND sst.locale = ? AND sst.setting_value LIKE ?)':'')
-				. ($author != null?' AND (asf.setting_value LIKE ? OR asm.setting_value LIKE ? OR asl.setting_value LIKE ?)':'')
+				. ($title != null?' AND (sst.setting_name = ? AND sst.setting_value LIKE ?)':'')
+				. ($author != null?' AND (asgs.setting_value LIKE ? OR asfs.setting_value LIKE ?)':'')
 				. ($issueId != null?' AND ps.issue_id = ?':'')
 				. (($pubIdSettingName != null && $pubIdSettingValue != null && $pubIdSettingValue == EXPORT_STATUS_NOT_DEPOSITED)?' AND sss.setting_value IS NULL':'')
 				. (($pubIdSettingName != null && $pubIdSettingValue != null && $pubIdSettingValue != EXPORT_STATUS_NOT_DEPOSITED)?' AND sss.setting_value = ?':'')

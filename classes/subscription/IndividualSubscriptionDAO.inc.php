@@ -398,20 +398,21 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 	 * @return object DAOResultFactory containing IndividualSubscriptions
 	 */
 	function getAll($rangeInfo = null) {
+		$userDao = DAORegistry::getDAO('UserDAO');
 		$result = $this->retrieveRange(
-			'SELECT s.*
+			'SELECT s.*,
+			' . $userDao->getFetchColumns() .'
 			FROM
 			subscriptions s,
 			subscription_types st,
-			users u
-	        LEFT JOIN user_settings usl ON (usl.user_id = u.user_id AND usl.setting_name = \'' . IDENTITY_SETTING_LASTNAME . '\' AND usl.locale = \'' . AppLocale::getLocale() . '\')
+			users u,
+			' . $userDao->getFetchJoins() .'
 			WHERE s.type_id = st.type_id
 			AND st.institutional = 0
 			AND s.user_id = u.user_id
-			ORDER BY
-			usl.setting_value ASC,
+			' . $userDao->getOrderBy() .',
 			s.subscription_id',
-			false,
+			$userDao->getFetchParameters(),
 			$rangeInfo
 		);
 
@@ -455,17 +456,20 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 	 * @return object DAOResultFactory containing matching IndividualSubscriptions
 	 */
 	function getByJournalId($journalId, $status = null, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $rangeInfo = null) {
+		$userDao = DAORegistry::getDAO('UserDAO');
+		$params = array_merge($userDao->getFetchParameters(), array((int) $journalId));
 		$result = $this->retrieveRange(
-			'SELECT	s.*
+			'SELECT	s.*,
+			' . $userDao->getFetchColumns() .'
 			FROM	subscriptions s
 				JOIN subscription_types st ON (s.type_id = st.type_id)
 				JOIN users u ON (s.user_id = u.user_id)
-	        	LEFT JOIN user_settings usl ON (usl.user_id = u.user_id AND usl.setting_name = \'' . IDENTITY_SETTING_LASTNAME . '\' AND usl.locale = \'' . AppLocale::getLocale() . '\')
+				' . $userDao->getFetchJoins() .'
 			WHERE	st.institutional = 0
 				AND s.journal_id = ? ' .
 			parent::_generateSearchSQL($status, $searchField, $searchMatch, $search, $dateField, $dateFrom, $dateTo, $params) .
-			' ORDER BY usl.setting_value ASC, s.subscription_id',
-			array((int) $journalId),
+			$userDao->getOrderBy() .', s.subscription_id',
+			$params,
 			$rangeInfo
 		);
 		return new DAOResultFactory($result, $this, '_fromRow');
@@ -535,26 +539,32 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 	 * @return object DAOResultFactory containing matching IndividualSubscriptions
 	 */
 	function getByDateEnd($dateEnd, $journalId, $rangeInfo = null) {
+		$userDao = DAORegistry::getDAO('UserDAO');
 		$dateEnd = explode('-', $dateEnd);
+		$params = array_merge(
+			$userDao->getFetchParameters(),
+			array(
+				$dateEnd[0],
+				$dateEnd[1],
+				$dateEnd[2],
+				(int) $journalId
+		));
+
 		$result = $this->retrieveRange(
-			'SELECT	s.*
+			'SELECT	s.*,
+			' . $userDao->getFetchColumns() .'
 			FROM	subscriptions s
 				JOIN subscription_types st ON (s.type_id = st.type_id)
 				JOIN users u ON (u.user_id = s.user_id)
-	        	LEFT JOIN user_settings usl ON (usl.user_id = u.user_id AND usl.setting_name = \'' . IDENTITY_SETTING_LASTNAME . '\' AND usl.locale = \'' . AppLocale::getLocale() . '\')
+				' . $userDao->getFetchJoins() .'
 			WHERE	s.status = ' . SUBSCRIPTION_STATUS_ACTIVE . '
 				AND st.institutional = 0
 				AND EXTRACT(YEAR FROM s.date_end) = ?
 				AND EXTRACT(MONTH FROM s.date_end) = ?
 				AND EXTRACT(DAY FROM s.date_end) = ?
 				AND s.journal_id = ?
-			ORDER BY usl.setting_value ASC, s.subscription_id',
-			array(
-				$dateEnd[0],
-				$dateEnd[1],
-				$dateEnd[2],
-				(int) $journalId
-			),
+			' . $userDao->getOrderBy() .', s.subscription_id',
+			$params,
 			$rangeInfo
 		);
 		return new DAOResultFactory($result, $this, '_fromRow');

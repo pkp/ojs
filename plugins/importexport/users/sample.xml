@@ -184,8 +184,8 @@
 	</user_groups>
 	<users>
 		<user>
-			<firstname>John</firstname>
-			<lastname>Author</lastname>
+			<givenname locale="en_US">John</givenname>
+			<familyname locale="en_US">Author</familyname>
 			<email>john@author.com</email>
 			<username>author</username>
 			<password is_disabled="false" must_change="false"
@@ -198,8 +198,8 @@
 			<user_group_ref>Author</user_group_ref>
 		</user>
 		<user>
-			<firstname>John</firstname>
-			<lastname>Editor</lastname>
+			<givenname locale="en_US">John</givenname>
+			<familyname locale="en_US">Editor</familyname>
 			<email>john@editor.com</email>
 			<username>editor</username>
 			<password is_disabled="false" must_change="false"
@@ -212,8 +212,8 @@
 			<user_group_ref>Press editor</user_group_ref>
 		</user>
 		<user>
-			<firstname>admin</firstname>
-			<lastname>Smith</lastname>
+			<givenname locale="en_US">admin</givenname>
+			<familyname locale="en_US">Smith</familyname>
 			<country>CA</country>
 			<email>john@admin-site.com</email>
 			<url>http://www.admin-site.com</url>
@@ -234,8 +234,8 @@
 			<review_interests>Math, Chemistry, life science</review_interests>
 		</user>
 		<user>
-			<firstname>John</firstname>
-			<lastname>Reviewer</lastname>
+			<givenname locale="en_US">John</givenname>
+			<familyname locale="en_US">Reviewer</familyname>
 			<email>john@reviewer.com</email>
 			<username>reviewer</username>
 			<password is_disabled="false" must_change="false"

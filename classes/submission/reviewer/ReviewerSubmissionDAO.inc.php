@@ -49,30 +49,22 @@ class ReviewerSubmissionDAO extends ArticleDAO {
 			'SELECT	a.*,
 				r.*,
 				ps.date_published,
-				usf.setting_value, usl.setting_value,
 				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
 				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
 			FROM	submissions a
 				LEFT JOIN published_submissions ps ON (a.submission_id = ps.submission_id)
 				LEFT JOIN review_assignments r ON (a.submission_id = r.submission_id)
 				LEFT JOIN sections s ON (s.section_id = a.section_id)
-				LEFT JOIN users u ON (r.reviewer_id = u.user_id)
 				LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
 				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
 				LEFT JOIN section_settings sapl ON (s.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
 				LEFT JOIN section_settings sal ON (s.section_id = sal.section_id AND sal.setting_name = ? AND sal.locale = ?)
-				LEFT JOIN user_settings usf ON (usf.user_id = u.user_id AND usf.setting_name = ? AND usf.locale = ?)
-				LEFT JOIN user_settings usm ON (usf.user_id = u.user_id AND usm.setting_name = ? AND usm.locale = ?)
-				LEFT JOIN user_settings usl ON (usl.user_id = u.user_id AND usl.setting_name = ? AND usl.locale = ?)
 			WHERE	r.review_id = ?',
 			array(
 				'title', $primaryLocale, // Section title
 				'title', $locale, // Section title
 				'abbrev', $primaryLocale, // Section abbreviation
 				'abbrev', $locale, // Section abbreviation
-				IDENTITY_SETTING_FIRSTNAME, AppLocale::getLocale(),
-				IDENTITY_SETTING_MIDDLENAME, AppLocale::getLocale(),
-				IDENTITY_SETTING_LASTNAME, AppLocale::getLocale(),
 				(int) $reviewId
 			)
 		);
@@ -102,6 +94,7 @@ class ReviewerSubmissionDAO extends ArticleDAO {
 	function _fromRow($row) {
 		// Get the ReviewerSubmission object, populated with submission data
 		$reviewerSubmission = parent::_fromRow($row);
+		$reviewer = $this->userDao->getById($row['reviewer_id']);
 
 		// Comments
 		$reviewerSubmission->setMostRecentPeerReviewComment($this->submissionCommentDao->getMostRecentSubmissionComment($row['submission_id'], COMMENT_TYPE_PEER_REVIEW, $row['review_id']));
@@ -114,7 +107,7 @@ class ReviewerSubmissionDAO extends ArticleDAO {
 		// Review Assignment
 		$reviewerSubmission->setReviewId($row['review_id']);
 		$reviewerSubmission->setReviewerId($row['reviewer_id']);
-		$reviewerSubmission->setReviewerFullName($row['first_name'].' '.$row['last_name']);
+		$reviewerSubmission->setReviewerFullName($reviewer->getFullName());
 		$reviewerSubmission->setCompetingInterests($row['competing_interests']);
 		$reviewerSubmission->setRecommendation($row['recommendation']);
 		$reviewerSubmission->setDateAssigned($this->datetimeFromDB($row['date_assigned']));
@@ -196,7 +189,6 @@ class ReviewerSubmissionDAO extends ArticleDAO {
 		$sql = 'SELECT	a.*,
 				r.*,
 				ps.date_published,
-				usf.settin_value, usl.setting_value,
 				atl.setting_value AS submission_title,
 				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
 				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
@@ -205,14 +197,10 @@ class ReviewerSubmissionDAO extends ArticleDAO {
 				LEFT JOIN review_assignments r ON (a.submission_id = r.submission_id)
 				LEFT JOIN submission_settings atl ON (atl.submission_id = a.submission_id AND atl.setting_name = ? AND atl.locale = ?)
 				LEFT JOIN sections s ON (s.section_id = a.section_id)
-				LEFT JOIN users u ON (r.reviewer_id = u.user_id)
 				LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
 				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
 				LEFT JOIN section_settings sapl ON (s.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
 				LEFT JOIN section_settings sal ON (s.section_id = sal.section_id AND sal.setting_name = ? AND sal.locale = ?)
-				LEFT JOIN user_settings usf ON (usf.user_id = u.user_id AND usf.setting_name = ? AND usf.locale = ?)
-				LEFT JOIN user_settings usm ON (usf.user_id = u.user_id AND usm.setting_name = ? AND usm.locale = ?)
-				LEFT JOIN user_settings usl ON (usl.user_id = u.user_id AND usl.setting_name = ? AND usl.locale = ?)
 			WHERE r.reviewer_id = ? ' . ($journalId?	' AND a.context_id = ? ':'') .
 				'AND r.date_notified IS NOT NULL';
 
@@ -236,9 +224,6 @@ class ReviewerSubmissionDAO extends ArticleDAO {
 			'title', $locale, // Section title
 			'abbrev', $primaryLocale, // Section abbreviation
 			'abbrev', $locale, // Section abbreviation
-			IDENTITY_SETTING_FIRSTNAME, AppLocale::getLocale(),
-			IDENTITY_SETTING_MIDDLENAME, AppLocale::getLocale(),
-			IDENTITY_SETTING_LASTNAME, AppLocale::getLocale(),
 			(int) $reviewerId
 		);
 		if ($journalId) $params[] = (int) $journalId;
@@ -263,7 +248,6 @@ class ReviewerSubmissionDAO extends ArticleDAO {
 			FROM	submissions a
 				LEFT JOIN review_assignments r ON (a.submission_id = r.submission_id)
 				LEFT JOIN section s ON (s.section_id = a.section_id)
-				LEFT JOIN users u ON (r.reviewer_id = u.user_id)
 				LEFT JOIN review_rounds r2 ON (r.submission_id = r2.submission_id AND r.stage_id = r2.stage_id AND r.round = r2.round)
 			WHERE	a.context_id = ? AND
 				r.reviewer_id = ? AND

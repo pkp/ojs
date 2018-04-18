@@ -2771,13 +2771,15 @@ class Upgrade extends Installer {
 	 * @return boolean
 	 */
 	function migrateFirstAndLastNames() {
-		// the user names will be saved in the site's primary locale
-		$siteDao = DAORegistry::getDAO('SiteDAO');
-		$site = $siteDao->getSite();
-		$sitePrimaryLocale = $site->getPrimaryLocale();
+		$userDao = DAORegistry::getDAO('UserDAO');
 		import('lib.pkp.classes.identity.Identity'); // IDENTITY_SETTING_...
-		$siteDao->update("INSERT INTO user_settings (user_id, locale, setting_name, setting_value, setting_type) SELECT DISTINCT u.user_id, ?, ?, u.first_name, 'string' FROM users u", array($sitePrimaryLocale, IDENTITY_SETTING_FIRSTNAME));
-		$siteDao->update("INSERT INTO user_settings (user_id, locale, setting_name, setting_value, setting_type) SELECT DISTINCT u.user_id, ?, ?, u.first_name, 'string' FROM users u", array($sitePrimaryLocale, IDENTITY_SETTING_LASTNAME));
+		// the user names will be saved in the site's primary locale
+		$userDao->update("INSERT INTO user_settings (user_id, locale, setting_name, setting_value, setting_type) SELECT DISTINCT u.user_id, s.primary_locale, ?, u.first_name, 'string' FROM users u, site s", array(IDENTITY_SETTING_GIVENNAME));
+		$userDao->update("INSERT INTO user_settings (user_id, locale, setting_name, setting_value, setting_type) SELECT DISTINCT u.user_id, s.primary_locale, ?, u.last_name, 'string' FROM users u, site s", array(IDENTITY_SETTING_FAMILYNAME));
+		// the author names will be saved in the submission's primary locale
+		$userDao->update("INSERT INTO author_settings (author_id, locale, setting_name, setting_value, setting_type) SELECT DISTINCT a.author_id, s.locale, ?, a.first_name, 'string' FROM authors a, submissions s WHERE s.submission_id = a.submission_id", array(IDENTITY_SETTING_GIVENNAME));
+		$userDao->update("INSERT INTO author_settings (author_id, locale, setting_name, setting_value, setting_type) SELECT DISTINCT a.author_id, s.locale, ?, a.last_name, 'string' FROM authors a, submissions s WHERE s.submission_id = a.submission_id", array(IDENTITY_SETTING_FAMILYNAME));
+		return true;
 	}
 
 }
