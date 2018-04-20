@@ -2527,34 +2527,34 @@ class Upgrade extends Installer {
 	function repairSuppFilesFilestage() {
 		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
 
+		import('lib.pkp.classes.submission.SubmissionFile');
 		import('lib.pkp.classes.file.SubmissionFileManager');
 
 		// get reviewer file ids
 		$result = $submissionFileDao->retrieve(
 			'SELECT ssf.*, s.context_id
 			FROM submission_supplementary_files ssf, submission_files sf, submissions s
-			WHERE sf.file_id = ssf.file_id AND sf.revision = ssf.revision AND s.submission_id = sf.submission_id'
+			WHERE sf.file_id = ssf.file_id AND sf.file_stage = ? AND sf.assoc_type = ? AND sf.revision = ssf.revision AND s.submission_id = sf.submission_id',
+			array((int)SUBMISSION_FILE_SUBMISSION, (int)ASSOC_TYPE_REPRESENTATION)
 		);
 		while (!$result->EOF) {
 			$row = $result->GetRowAssoc(false);
 			$submissionFileRevision = $submissionFileDao->getRevision($row['file_id'], $row['revision']);
-			if ($submissionFileRevision->getFileStage() != SUBMISSION_FILE_PROOF) {
-				$submissionFileManager = new SubmissionFileManager($row['context_id'], $submissionFileRevision->getSubmissionId());
-				$basePath = $submissionFileManager->getBasePath() . '/';
-				$generatedOldFilename = $submissionFileRevision->getServerFileName();
-				$oldFileName = $basePath . $submissionFileRevision->_fileStageToPath($submissionFileRevision->getFileStage()) . '/' . $generatedOldFilename;
-				$submissionFileRevision->setFileStage(SUBMISSION_FILE_PROOF);
-				$generatedNewFilename = $submissionFileRevision->getServerFileName();
-				$newFileName = $basePath . $submissionFileRevision->_fileStageToPath($submissionFileRevision->getFileStage()) . '/' . $generatedNewFilename;
-				if (!file_exists($newFileName)) {
-					if (!file_exists($path = dirname($newFileName)) && !$submissionFileManager->mkdirtree($path)) {
-						error_log("Unable to make directory \"$path\"");
-					}
-					if (!rename($oldFileName, $newFileName)) {
-						error_log("Unable to move \"$oldFileName\" to \"$newFileName\".");
-					} else {
-						$submissionFileDao->updateObject($submissionFileRevision);
-					}
+			$submissionFileManager = new SubmissionFileManager($row['context_id'], $submissionFileRevision->getSubmissionId());
+			$basePath = $submissionFileManager->getBasePath() . '/';
+			$generatedOldFilename = $submissionFileRevision->getServerFileName();
+			$oldFileName = $basePath . $submissionFileRevision->_fileStageToPath($submissionFileRevision->getFileStage()) . '/' . $generatedOldFilename;
+			$submissionFileRevision->setFileStage(SUBMISSION_FILE_PROOF);
+			$generatedNewFilename = $submissionFileRevision->getServerFileName();
+			$newFileName = $basePath . $submissionFileRevision->_fileStageToPath($submissionFileRevision->getFileStage()) . '/' . $generatedNewFilename;
+			if (!file_exists($newFileName)) {
+				if (!file_exists($path = dirname($newFileName)) && !$submissionFileManager->mkdirtree($path)) {
+					error_log("Unable to make directory \"$path\"");
+				}
+				if (!rename($oldFileName, $newFileName)) {
+					error_log("Unable to move \"$oldFileName\" to \"$newFileName\".");
+				} else {
+					$submissionFileDao->updateObject($submissionFileRevision);
 				}
 			}
 			$result->MoveNext();
