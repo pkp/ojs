@@ -195,7 +195,6 @@
 	</upgrade>
 
 	<upgrade minversion="3.0.0.0" maxversion="3.1.0.9">
-		<code function="repairSuppFilesFilestage" />
 		<code function="fixAuthorGroup" /><!-- Run again after previous invalid fix (#3289) -->
 		<note file="docs/release-notes/README-3.1.1" />
 	</upgrade>
