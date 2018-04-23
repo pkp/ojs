@@ -192,24 +192,6 @@ Si tiene alguna duda puede ponerse en contacto conmigo. Gracias por elegir esta 
 {$editorialContactSignature}]]></body>
 		<description>Este correo electrónico, si está activado, se envía automáticamente a un autor/a cuando completa el proceso de envío de un manuscrito a la editorial. Proporciona información sobre el seguimiento del envío en el proceso y agradece al autor/a el envío.</description>
 	</email_text>
-	<email_text key="SUBMISSION_COMMENT">
-		<subject>Comentario a envío</subject>
-		<body><![CDATA[{$name}:<br />
-<br />
-{$commentName} ha añadido un comentario a su envío, &quot;{$submissionTitle}&quot; en {$contextName}:<br />
-<br />
-{$comments}]]></body>
-		<description>Este correo notifica a las diferentes personas relacionadas con el proceso de edición de un envío de que se ha enviado un nuevo comentario.</description>
-	</email_text>
-	<email_text key="SUBMISSION_DECISION_REVIEWERS">
-		<subject>Decisión sobre"{$submissionTitle}"</subject>
-		<body><![CDATA[Como uno/a de los/as revisores/as de su envío, &quot;{$submissionTitle},&quot; a {$contextName}, le envío las revisiones y la decisión editorial enviadas al / a la autor/a de este trabajo. Gracias una vez más por su importante contribución a este proceso.<br />
-<br />
-{$editorialContactSignature}<br />
-<br />
-{$comments}]]></body>
-		<description>Este correo notifica a los/as revisores/as de un envío de que el proceso de revisión ha finalizado. Incluye información sobre el artículo y la decisión tomada, y agradece a los/as revisores/as su contribución.</description>
-	</email_text>
 	<email_text key="EDITOR_ASSIGN">
 		<subject>Asignación editorial</subject>
 		<body><![CDATA[{$editorialContactName}:<br />
@@ -420,112 +402,6 @@ Si tiene cualquier pregunta, no dude en contactar con nosotros/as.<br />
 <br />
 {$participantName}]]></body>
 		<description>Este correo es enviado por el/la Editor/a de Maquetación al / a la Editor/a de Sección notificándole que el proceso de maquetación ha finalizado.</description>
-	</email_text>
-	<email_text key="LAYOUT_ACK">
-		<subject>Acuse de recibo de maquetación</subject>
-		<body><![CDATA[{$participantName}:<br />
-<br />
-Gracias por prepara las galeradas para el manuscrito &quot;{$submissionTitle},&quot; para {$contextName}. Esta es una importante contribución al proceso de publicación.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Este correo es enviado por el/la Editor/a de Sección al / a la Editor/a de Maquetación para informarle de que se ha completado el proceso de edición de la maquetación y agradece al / a la editor/a de maquetación su contribución.</description>
-	</email_text>
-	<email_text key="PROOFREAD_AUTHOR_REQUEST">
-		<subject>Petición de correccción de pruebas (autor/a)</subject>
-		<body><![CDATA[{$authorName}:<br />
-<br />
-Le rogamos que se encargue de la corrección de las galeradas de su manuscrito &quot;{$submissionTitle},&quot; para {$contextName}. Para ver las galeradas, identifíquese en la revista a través del enlace que le mostramos a continuación. Pinche en la opción VER PRUEBA para leer lo que será la versión publicada y buscar sólo errores tipográficos y de maquetación sólo. Registre estos errores en la caja de Correcciones de Pruebas, siguiendo las instrucciones proporcionadas.<br />
-<br />
-URL del manuscrito: {$submissionUrl}<br />
-<br />
-Si no puede llevar a cabo esta tarea en este momento o tiene cualquier pregunta, póngase en contacto con nosotros/as. Gracias por su contribución a esta revista.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Este correo es enviado por el / la Editor/a de Sección al / a la autor/a notificándole que tiene a su disposición una galerada del artíuclo para su corrección. Le proporciona información sobre el artículo y cómo acceder a él.</description>
-	</email_text>
-	<email_text key="PROOFREAD_AUTHOR_COMPLETE">
-		<subject>Corrección de pruebas completada (autor/a)</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
-<br />
-He completado la corrección de las pruebas de las galeradas para mi manuscrito &quot;{$submissionTitle},&quot; para {$contextName}. Las galeradas ya están listas para cualquier corrección final que hagan el/la corrector/a y el/la editor/a de maquetación.<br />
-<br />
-{$authorName}]]></body>
-		<description>Este correo enviado por el/la autor/a al / a la Corrector y Editor/a de Sección les notifica que la ronda de corrección del / de la autor/a ha finalizado y de que los detalles los encontrarán en los comentarios del artículo.</description>
-	</email_text>
-	<email_text key="PROOFREAD_AUTHOR_ACK">
-		<subject>Acuse de recibo de corrección de pruebas (autor/a)</subject>
-		<body><![CDATA[{$authorName}:<br />
-<br />
-Gracias por corregir las pruebas de las galeradas de su manuscrito &quot;{$submissionTitle},&quot; en {$contextName}. Esperamos poder publicar su trabajo a la mayor brevedad posible.<br />
-<br />
-Si se ha suscrito a nuestro servicio de notificación recibirá un correo-e con la Tabla de Contenidos una vez se haya publicado. Si tiene cualquier pregunta, póngase en contacto con nosotros/as.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Este correo enviado por el/la Editor/a de Sección al / a la autor/a comunica la finalización del proceso inicial de corrección y les agradece su contribución.</description>
-	</email_text>
-	<email_text key="PROOFREAD_REQUEST">
-		<subject>Petición de corrección de pruebas</subject>
-		<body><![CDATA[{$proofreaderName}:<br />
-<br />
-Le rogaría que corrigiera las pruebas de las galeradas de su manuscrito &quot;{$submissionTitle},&quot; para {$contextName}.<br />
-<br />
-URL del manuscrito: {$submissionUrl}<br />
-Nombre de usuaria/o: {$proofreaderUsername}<br />
-<br />
-Si no puede llevar a cabo esta tarea en este momento o tiene cualquier pregunta, póngase en contacto con nosotros/as. Gracias por su contribución a esta revista.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Este correo enviado por el/la Editor/a de Sección al / a la corrector/a solicita que se lleve a cabo la corrección de las galeradas de un artículo. Proporciona información sobre el artículo y cómo acceder a él.</description>
-	</email_text>
-	<email_text key="PROOFREAD_COMPLETE">
-		<subject>Corrección de pruebas completada</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
-<br />
-He finalizado la corrección de pruebas de las galeradas del manuscrito &quot;{$submissionTitle},&quot; para {$contextName}. Las galeradas ya están listas para cualquier corrección final por parte del / de la Editor/a de Maquetación.<br />
-<br />
-{$proofreaderName}]]></body>
-		<description>Este correo enviado del / de la Corrector/a al / a la Editor/a de Sección le notifica de que el / la corrector/a ha completado el proceso de corrección.</description>
-	</email_text>
-	<email_text key="PROOFREAD_ACK">
-		<subject>Acuse de recibo de corrección de pruebas</subject>
-		<body><![CDATA[{$proofreaderName}:<br />
-<br />
-Gracias por corregir las pruebas de las galeradas del manuscrito &quot;{$submissionTitle},&quot; para {$contextName}. Su trabajo supone una importante contribución a la calidad de esta revista.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Este correo enviado por el / la Editor/a de Sección al / a la Corrector/a confirma que el/la corrector/a ha completado el proceso de corrección y le agradece su contribución.</description>
-	</email_text>
-	<email_text key="PROOFREAD_LAYOUT_REQUEST">
-		<subject>Petición de corrección de pruebas (Editor/a de maquetación)</subject>
-		<body><![CDATA[{$participantName}:<br />
-<br />
-Le solicitamos que proceda a hacer las correcciones solicitadas una vez corregidas las pruebas de las galeradas del manuscrito &quot;{$submissionTitle},&quot; para {$contextName}.<br />
-<br />
-URL del manuscrito: {$submissionUrl}<br />
-Nombre de usuaria/o: {$participantUsername}<br />
-<br />
-Si no puede llevar a cabo esta tarea en este momento o tiene cualquier pregunta, póngase en contacto con nosotros/as. Gracias por su contribución a esta revista.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Este correo del / de la Editor/a de Sección al / a la Editor/a de Maquetación le notifica que las galeradas de un artículo están listas para la corrección final. Le proporciona información sobre el artículo y cómo acceder a él.</description>
-	</email_text>
-	<email_text key="PROOFREAD_LAYOUT_COMPLETE">
-		<subject>Corrección de pruebas completada (Editor/a de maquetación)</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
-<br />
-Ya se han corregido las galeradas, una vez hechas las pruebas, del manuscrito &quot;{$submissionTitle},&quot; para {$contextName}. Ya está listo para su publicación.<br />
-<br />
-{$participantName}]]></body>
-		<description>Este correo del / de la Editor/a de Maquetación al / a la Editor/a de Sección le notifica que la etapa final de corrección ha finalizado y que el artículo está listo para su publicación.</description>
-	</email_text>
-	<email_text key="PROOFREAD_LAYOUT_ACK">
-		<subject>Acuse de recibo de corrección de pruebas (Editor/a de maquetación)</subject>
-		<body><![CDATA[{$participantName}:<br />
-<br />
-Gracias por completar la corrección de las pruebas de galeradas asociadas con el manuscrito &quot;{$submissionTitle},&quot; para {$contextName}. Esto representa una importante contribución al trabajo de esta revista.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Este correo del / de la Editor/a de Sección al / a la Editor/a de Maquetación notifica la finalización de la etapa final de corrección y les agradece su contribución.</description>
 	</email_text>
 	<email_text key="EMAIL_LINK">
 		<subject>Artículo interesante</subject>
@@ -769,60 +645,6 @@ Submission URL: {$submissionUrl}<br />
 <br />
 {$editorialContactSignature}<br />]]></body>
 		<description>Este correo electrónico del editor/a, o del editor/a de sección, notifica al autor/a que su envío se traslada a producción.</description>
-	</email_text>
-	<email_text key="GIFT_AVAILABLE">
-		<subject>{$giftNoteTitle}</subject>
-		<body><![CDATA[Estimado/a {$recipientFirstName},<br />
-<br />
-{$buyerFullName} Nos gustaría compartir un regalo con usted en {$giftJournalName}:<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-{$giftNote}<br />
-<br />
-<br />
-En breve recibirá un correo electrónico de seguimiento con los detalles de acceso y las instrucciones para obtener su regalo.<br />]]></body>
-		<description>Este correo electrónico notifica a un destinatario de un regalo que dicho regalo está disponible para su obtención.</description>
-	</email_text>
-	<email_text key="GIFT_USER_LOGIN">
-		<subject>Obtenga su regalo: detalles de acceso</subject>
-		<body><![CDATA[Estimado/a {$recipientFirstName},<br />
-<br />
-{$buyerFullName} Nos gustaría compartir un regalo con usted en {$giftJournalName}:<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-Para obtener su regalo solo tiene que ingresar en la página web de la revista {$giftUrl}<br />
-<br />
-Usuario: {$username}<br />
-<br />
-¡Esperamos que disfrute de su regalo!<br />
-<br />
-{$giftContactSignature}<br />]]></body>
-		<description>Este correo electrónico notifica a un destinatario de un regalo sus detalles de acceso.</description>
-	</email_text>
-	<email_text key="GIFT_USER_REGISTER">
-		<subject>Obtenga su regalo: detalles de acceso</subject>
-		<body><![CDATA[Estimado/a {$recipientFirstName},<br />
-<br />
-{$buyerFullName} Nos gustaría compartir un regalo con usted en {$giftJournalName}:<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-Para obtener su regalo solo tiene que ingresar en la página web de la revista {$giftUrl}<br />
-<br />
-Usuario: {$username}<br />
-Contraseña: {$password}<br />
-<br />
-Una vez conectado podrá cambiar su contraseña siempre que quiera.<br />
-<br />
-¡Esperamos que disfrute su regalo!<br />
-<br />
-{$giftContactSignature}<br />]]></body>
-		<description>Este correo electrónico notifica a un destinatario de un regalo los detalles para crear una nueva cuenta.</description>
 	</email_text>
 	<email_text key="NOTIFICATION_CENTER_DEFAULT">
 		<subject>Mensaje sobre {$contextName}</subject>
