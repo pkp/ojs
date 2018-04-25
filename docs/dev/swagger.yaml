@@ -596,6 +596,8 @@ definitions:
         type: boolean
       recommendOnly:
         type: boolean
+      contextId:
+        type: integer
   UserInterest:
     type: object
     properties:
@@ -936,8 +938,18 @@ paths:
       description: |
         In Progress.
       parameters:
+        - name: contextIds
+          description: Filter the results by those assigned to a user group in one of these contexts. This parameter is only available when making a request to the site-wide API path, `/*/api/v1/users`. This path is only available to site admins.
+          in: query
+          required: false
+          type: string
         - name: roleIds
-          description: Filter the results by those who have one of these user role IDs.
+          description: Filter the results by those assigned to any user group matching one of these user role IDs.
+          in: query
+          required: false
+          type: string
+        - name: userGroupIds
+          description: Filter the results by those assigned to one of these user group IDs. Pass `0` to return users with no group assignments.
           in: query
           required: false
           type: string

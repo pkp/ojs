@@ -59,6 +59,7 @@
     "not ie <= 8"
   ],
   "dependencies": {
+    "vue-autosuggest": "^1.4.1",
     "vue-slider-component": "^2.5.3"
   }
 }
