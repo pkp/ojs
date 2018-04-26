@@ -949,7 +949,7 @@ paths:
           required: false
           type: string
         - name: userGroupIds
-          description: Filter the results by those assigned to one of these user group IDs. Pass `0` to return users with no group assignments.
+          description: Filter the results by those assigned to one of these user group IDs. Pass `0` to return users with no group assignments. When passing `0`, other user group IDs will be ignored and only users with no group assignments will be returned.
           in: query
           required: false
           type: string
