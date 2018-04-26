@@ -420,30 +420,6 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 	}
 
 	/**
-	 * Retrieve all individual subscribed users.
-	 * @return object DAOResultFactory containing IndividualSubscriptions
-	 */
-	function getSubscribedUsers($journalId, $rangeInfo = null) {
-		$result = $this->retrieveRange(
-			'SELECT	u.*
-			FROM	subscriptions s,
-				subscription_types st,
-				users u
-	        LEFT JOIN user_settings usl ON (usl.user_id = u.user_id AND usl.setting_name = \'' . IDENTITY_SETTING_LASTNAME . '\' AND usl.locale = \'' . AppLocale::getLocale() . '\')
-			WHERE	s.type_id = st.type_id AND
-				st.institutional = 0 AND
-				s.user_id = u.user_id AND
-				s.journal_id = ?
-			ORDER BY usl.setting_value ASC, s.subscription_id',
-			array((int) $journalId),
-			$rangeInfo
-		);
-
-		$userDao = DAORegistry::getDAO('UserDAO');
-		return new DAOResultFactory($result, $userDao, '_returnUserFromRow');
-	}
-
-	/**
 	 * Retrieve individual subscriptions matching a particular journal ID.
 	 * @param $journalId int
 	 * @param $status int
