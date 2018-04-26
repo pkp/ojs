@@ -193,7 +193,13 @@ class Application extends PKPApplication {
 	static function getPluginSettingsContextColumnName() {
 		if (defined('SESSION_DISABLE_INIT')) {
 			$pluginSettingsDao = DAORegistry::getDAO('PluginSettingsDAO');
+
+			// It looks like ADO can't take any composed driver. i.e. pdo_mysql, pdo_mssql...
 			$driver = $pluginSettingsDao->getDriver();
+			if (strpos($driver, 'pdo') !== -1) {
+				$driver = 'pdo';
+			}
+
 			switch ($driver) {
 				case 'mysql':
 				case 'mysqli':
@@ -203,7 +209,9 @@ class Application extends PKPApplication {
 					}
 					break;
 				case 'postgres':
-				case 'pdo_sqlsrv':
+				case 'mssql':
+				case 'sqlsrv':
+				case 'pdo':
 					$checkResult = $pluginSettingsDao->retrieve('SELECT column_name FROM information_schema.columns WHERE table_name = ? AND column_name = ?', array('plugin_settings', 'context_id'));
 					if ($checkResult->NumRows() == 0) {
 						return 'journal_id';

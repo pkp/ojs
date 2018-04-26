@@ -44,35 +44,23 @@ class SubmissionListQueryBuilder extends \PKP\Services\QueryBuilders\PKPSubmissi
 		$primaryLocale = \AppLocale::getPrimaryLocale();
 		$locale = \AppLocale::getLocale();
 
-		$this->columns[] = Capsule::raw('COALESCE(stl.setting_value, stpl.setting_value) AS section_title');
-		$this->columns[] = Capsule::raw('COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev');
+		$this->columns[] = Capsule::raw('aggregation.section_title');
+		$this->columns[] = Capsule::raw('aggregation.section_abbrev');
 
-		$q->groupBy(Capsule::raw('COALESCE(stl.setting_value, stpl.setting_value)'));
-		$q->groupBy(Capsule::raw('COALESCE(sal.setting_value, sapl.setting_value)'));
-
-		$q->leftJoin('section_settings as stpl', function($join) use($primaryLocale) {
-			$join->on('s.section_id', '=', Capsule::raw('stpl.section_id'));
-			$join->on('stpl.setting_name', '=', Capsule::raw("'section_title'"));
-			$join->on('stpl.locale', '=', Capsule::raw("'{$primaryLocale}'"));
-		});
-
-		$q->leftJoin('section_settings as stl', function($join) use($locale) {
-			$join->on('s.section_id', '=', Capsule::raw('stl.section_id'));
-			$join->on('stl.setting_name', '=', Capsule::raw("'section_title'"));
-			$join->on('stl.locale', '=', Capsule::raw("'{$locale}'"));
-		});
-
-		$q->leftJoin('section_settings as sapl', function($join) use($primaryLocale) {
-			$join->on('s.section_id', '=', Capsule::raw('sapl.section_id'));
-			$join->on('sapl.setting_name', '=', Capsule::raw("'section_abbrev'"));
-			$join->on('sapl.locale', '=', Capsule::raw("'{$primaryLocale}'"));
-		});
-
-		$q->leftJoin('section_settings as sal', function($join) use($locale) {
-			$join->on('s.section_id', '=', Capsule::raw('sal.section_id'));
-			$join->on('sal.setting_name', '=', Capsule::raw("'section_abbrev'"));
-			$join->on('sal.locale', '=', Capsule::raw("'{$locale}'"));
-		});
+		$q->leftJoin(Capsule::raw("(
+										SELECT s.submission_id,
+											COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
+											COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
+										FROM submissions AS s
+											LEFT JOIN section_settings AS stpl ON s.section_id = stpl.section_id and stpl.setting_name = 'section_title' and stpl.locale = '{$primaryLocale}'
+											LEFT JOIN section_settings AS stl ON s.section_id = stl.section_id and stl.setting_name = 'section_title' and stl.locale = '{$locale}'
+											LEFT JOIN section_settings AS sapl ON s.section_id = sapl.section_id and sapl.setting_name = 'section_abbrev' and sapl.locale = '{$primaryLocale}'
+											LEFT JOIN section_settings AS sal ON s.section_id = sal.section_id and sal.setting_name = 'section_abbrev' and sal.locale = '{$locale}'
+										GROUP BY s.submission_id, stl.setting_value, stpl.setting_value, sal.setting_value, sapl.setting_value
+									) AS aggregation"),
+									function($join) {
+										$join->on('s.submission_id', '=', 'aggregation.submission_id');
+									});
 
 		if (!empty($this->sectionIds)) {
 			$q->whereIn('s.section_id', $this->sectionIds);

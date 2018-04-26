@@ -153,16 +153,10 @@ class IssueListQueryBuilder extends BaseQueryBuilder {
 	public function get() {
 		$this->columns[] = 'i.*';
 		$q = Capsule::table('issues as i')
-					->where('i.journal_id','=', $this->contextId)
-					->leftJoin('issue_settings as is', 'i.journal_id', '=', 'is.issue_id')
-					->orderBy($this->orderColumn, $this->orderDirection);
+					->where('i.journal_id','=', $this->contextId);
 
-		$isSqlServer = Config::getVar('database', 'ms_sql');
-		if ($isSqlServer) {
-		    $q->groupBy('i.issue_id', 'i.journal_id', 'i.volume', 'i.number', 'i.year', 'i.published', 'i.actual', 'i.date_published', 'i.date_notified', 'i.last_modified', 'i.access_status', 'i.open_access_date', 'i.show_volume', 'i.show_number', 'i.show_year', 'i.show_title', 'i.style_file_name', 'i.original_style_file_name');
-		}
-		else {
-		    $q->groupBy('i.issue_id');
+		if (empty($this->countOnly)) {
+			$q->orderBy($this->orderColumn, $this->orderDirection);
 		}
 
 		// published

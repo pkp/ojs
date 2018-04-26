@@ -68,8 +68,7 @@ class ArticleSearchDAO extends SubmissionSearchDAO {
 		}
 
 		import('lib.pkp.classes.submission.Submission'); // STATUS_PUBLISHED
-		$isSqlServer = Config::getVar('database', 'ms_sql');
-		$result = $this->retrieveCached(
+		$result = $this->retrieveLimitCached(
 			'SELECT
 				o.submission_id,
 				MAX(s.context_id) AS journal_id,
@@ -88,9 +87,10 @@ class ArticleSearchDAO extends SubmissionSearchDAO {
 				i.issue_id = ps.issue_id AND
 				i.published = 1 AND ' . $sqlWhere . '
 			GROUP BY o.submission_id
-			ORDER BY count DESC
-			' . sprintf($isSqlServer ? 'OFFSET 0 ROWS FETCH NEXT %d ROWS ONLY' : 'LIMIT %d', $limit),
+			ORDER BY count DESC',
 			$params,
+			$limit,
+			false,
 			3600 * $cacheHours // Cache for 24 hours
 		);
 

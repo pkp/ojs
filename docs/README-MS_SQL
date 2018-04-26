@@ -65,7 +65,7 @@ Configuration File
 Add the following lines in "config.inc.php".
 
 ms_sql = On
-driver = pdo_sqlsrv
+driver = pdo_mssql
 host = sqlsrv:server=SERVER\\INSTANCE
 
 Note: within the setup home page, if an instance is required, only put one backslash in the host section.
