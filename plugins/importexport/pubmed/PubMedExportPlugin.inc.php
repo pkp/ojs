@@ -110,6 +110,13 @@ class PubMedExportPlugin extends ImportExportPlugin {
 		}
 	}
 
+	/**
+	 * @copydoc ImportExportPlugin::getPluginSettingsPrefix()
+	 */
+	function getPluginSettingsPrefix() {
+		return 'pubmed';
+	}
+
 	function exportSubmissions($submissionIds, $context, $user) {
 		$submissionDao = Application::getSubmissionDAO();
 		$xml = '';
