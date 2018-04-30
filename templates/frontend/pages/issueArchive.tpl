@@ -51,8 +51,8 @@
 		{/if}
 		{include
 			file="frontend/components/pagination.tpl"
-			prevUrl=$prevUrl
-			nextUrl=$nextUrl
+			prevUrl=$prevUrl|trim
+			nextUrl=$nextUrl|trim
 			showingStart=$showingStart
 			showingEnd=$showingEnd
 			total=$total
