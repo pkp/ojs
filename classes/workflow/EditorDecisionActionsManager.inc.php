@@ -141,7 +141,7 @@ class EditorDecisionActionsManager {
 			)
 		);
 		if ($makeDecision) {
-			$decisions = array_merge($decisions, array(
+			$decisions = $decisions + array(
 				SUBMISSION_EDITOR_DECISION_ACCEPT => array(
 					'name' => 'accept',
 					'operation' => 'promote',
@@ -153,7 +153,7 @@ class EditorDecisionActionsManager {
 					'operation' => 'sendReviews',
 					'title' => 'editor.submission.decision.decline',
 				),
-			));
+			);
 		}
 		return $decisions;
 	}

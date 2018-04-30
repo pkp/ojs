@@ -56,18 +56,6 @@ class Upgrade extends Installer {
 	}
 
 	/**
-	 * Clear the data cache files (needed because of direct tinkering
-	 * with settings tables)
-	 * @return boolean
-	 */
-	function clearDataCache() {
-		$cacheManager = CacheManager::getManager();
-		$cacheManager->flush(null, CACHE_TYPE_FILE);
-		$cacheManager->flush(null, CACHE_TYPE_OBJECT);
-		return true;
-	}
-
-	/**
 	 * Clear the CSS cache files (needed when changing LESS files)
 	 * @return boolean
 	 */
@@ -2687,7 +2675,7 @@ class Upgrade extends Installer {
 
 		// Consider issue cover images
 		// Note that the locale column values are already changed above
-		$settingValueResult = $journalSettingsDao->retrieve('SELECT a.*, b.journal_id FROM issue_settings a, issues b WHERE a.setting_name = \'coverImage\' AND a.locale = ? AND a.setting_value LIKE ? AND a.setting_type = \'string\' AND b.issue_id = a.issue_id', array($newLocale, '%' .$oldLocale .'%'));
+		$settingValueResult = $journalSettingsDao->retrieve('SELECT a.*, b.journal_id FROM issue_settings a, issues b WHERE a.setting_name = \'fileName\' AND a.locale = ? AND a.setting_value LIKE ? AND a.setting_type = \'string\' AND b.issue_id = a.issue_id', array($newLocale, '%' .$oldLocale .'%'));
 		while (!$settingValueResult->EOF) {
 			$row = $settingValueResult->getRowAssoc(false);
 			$oldCoverImage = $row['setting_value'];
@@ -2696,14 +2684,14 @@ class Upgrade extends Installer {
 				$publicFileManager->copyJournalFile($row['journal_id'], $publicFileManager->getContextFilesPath(ASSOC_TYPE_JOURNAL, $row['journal_id']) . '/' . $oldCoverImage, $newCoverImage);
 				$publicFileManager->removeJournalFile($row['journal_id'], $oldCoverImage);
 			}
-			$journalSettingsDao->update('UPDATE issue_settings SET setting_value = ? WHERE issue_id = ? AND setting_name = \'coverImage\' AND locale = ?', array($newCoverImage, (int) $row['issue_id'], $newLocale));
+			$journalSettingsDao->update('UPDATE issue_settings SET setting_value = ? WHERE issue_id = ? AND setting_name = \'fileName\' AND locale = ?', array($newCoverImage, (int) $row['issue_id'], $newLocale));
 			$settingValueResult->MoveNext();
 		}
 		$settingValueResult->Close();
 
 		// Consider article cover images
 		// Note that the locale column values are already changed above
-		$settingValueResult = $journalSettingsDao->retrieve('SELECT a.*, b.context_id FROM submission_settings a, submissions b WHERE a.setting_name = \'coverImage\' AND a.locale = ? AND a.setting_value LIKE ? AND a.setting_type = \'string\' AND b.submission_id = a.submission_id', array($newLocale, '%' .$oldLocale .'%'));
+		$settingValueResult = $journalSettingsDao->retrieve('SELECT a.*, b.context_id FROM submission_settings a, submissions b WHERE a.setting_name = \'fileName\' AND a.locale = ? AND a.setting_value LIKE ? AND a.setting_type = \'string\' AND b.submission_id = a.submission_id', array($newLocale, '%' .$oldLocale .'%'));
 		while (!$settingValueResult->EOF) {
 			$row = $settingValueResult->getRowAssoc(false);
 			$oldCoverImage = $row['setting_value'];
@@ -2712,7 +2700,7 @@ class Upgrade extends Installer {
 				$publicFileManager->copyJournalFile($row['context_id'], $publicFileManager->getContextFilesPath(ASSOC_TYPE_JOURNAL, $row['context_id']) . '/' . $oldCoverImage, $newCoverImage);
 				$publicFileManager->removeJournalFile($row['context_id'], $oldCoverImage);
 			}
-			$journalSettingsDao->update('UPDATE submission_settings SET setting_value = ? WHERE submission_id = ? AND setting_name = \'coverImage\' AND locale = ?', array($newCoverImage, (int) $row['submission_id'], $newLocale));
+			$journalSettingsDao->update('UPDATE submission_settings SET setting_value = ? WHERE submission_id = ? AND setting_name = \'fileName\' AND locale = ?', array($newCoverImage, (int) $row['submission_id'], $newLocale));
 			$settingValueResult->MoveNext();
 		}
 		$settingValueResult->Close();

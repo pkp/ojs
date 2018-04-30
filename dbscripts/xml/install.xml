@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE install SYSTEM "../../lib/pkp/dtd/install.dtd">
 <!--
-  * install.xml
+  * dbscripts/xml/install.xml
   *
   * Copyright (c) 2014-2018 Simon Fraser University
   * Copyright (c) 2003-2018 John Willinsky
@@ -10,7 +10,7 @@
   * Installation descriptor file.
   -->
 
-<install version="3.1.0.0">
+<install version="3.1.1.0">
 	<code function="checkPhpVersion" />
 
 	<code function="createDirectories"/>

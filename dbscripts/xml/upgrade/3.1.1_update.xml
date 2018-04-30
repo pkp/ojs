@@ -40,14 +40,14 @@
 	</sql>
 	<!-- pkp/pkp-lib#2894 Set 0 review ratings to NULL -->
 	<sql>
-		<query>UPDATE review_assignments ra SET ra.quality = NULL WHERE ra.quality = 0</query>
+		<query>UPDATE review_assignments SET quality = NULL WHERE quality = 0</query>
 	</sql>
 	<!-- pkp/pkp-lib#2894 Update old localised user gossip entries -->
 	<sql>
 		<query driver="mysql">UPDATE users u, (SELECT user_id, GROUP_CONCAT(DISTINCT setting_value SEPARATOR ' ') AS groupedGossips FROM user_settings WHERE setting_name = 'gossip' AND setting_value &lt;&gt; '' GROUP BY user_id) us SET u.gossip = us.groupedGossips WHERE us.user_id = u.user_id</query>
 		<query driver="mysqli">UPDATE users u, (SELECT user_id, GROUP_CONCAT(DISTINCT setting_value SEPARATOR ' ') AS groupedGossips FROM user_settings WHERE setting_name = 'gossip' AND setting_value &lt;&gt; '' GROUP BY user_id) us SET u.gossip = us.groupedGossips WHERE us.user_id = u.user_id</query>
-		<query driver="postgres7">UPDATE users SET citations = us. groupedGossips FROM (SELECT user_id, string_agg(DISTINCT setting_value, ' ') AS groupedGossips FROM user_settings WHERE setting_name = 'gossip' AND setting_value &lt;&gt; '' GROUP BY user_id) AS us WHERE us.user_id = users.user_id</query>
-		<query>DELETE FROM user_settings WHERE setting_name="gossip"</query>
+		<query driver="postgres7">UPDATE users SET gossip = us.groupedGossips FROM (SELECT user_id, string_agg(DISTINCT setting_value, ' ') AS groupedGossips FROM user_settings WHERE setting_name = 'gossip' AND setting_value &lt;&gt; '' GROUP BY user_id) AS us WHERE us.user_id = users.user_id</query>
+		<query>DELETE FROM user_settings WHERE setting_name='gossip'</query>
 	</sql>
 	<sql><!-- pkp/pkp-lib#3412 Clean up notifications left over from deleted announcements -->
 		<query driver="mysql">DELETE n FROM notifications n LEFT JOIN announcements a ON (n.assoc_id = a.announcement_id) WHERE a.announcement_id IS NULL AND n.assoc_type = 522</query><!-- ASSOC_TYPE_ANNOUNCEMENT -->

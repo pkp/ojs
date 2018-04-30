@@ -29,4 +29,18 @@
 	
 	<message key="plugins.reports.usageStats.metricType">OJS/COUNTER</message>
 	<message key="plugins.reports.usageStats.metricType.full">Open Journal Systems -tilastot (COUNTER yhteensopiva)</message>
+	<message key="plugins.generic.usageStats.settings.statsDisplayOptions.siteWide">Julkaisut voivat ohittaa nämä asetukset muokkaamalla julkaisukohtaisia asetuksia.</message>
+	<message key="plugins.generic.usageStats.optout.description"><![CDATA[<h3>Yksityisyyden suoja</h3>
+<p>Tutustu julkaisun <a href="{$privacyStatementUrl}">tietosuojalausekkeeseen</a>.</p>
+<h3>Kävijätilastot</h3>
+<p>Jotta voimme analysoida julkaisun käyttöä ja vaikutusta, keräämme kävijätilastoja julkaisun etusivuun, numeroihin, artikkeleihin sekä julkaistuihin tiedostoihin liittyen. Kaikki data anonymisoidaan. Henkilötietoja ei tallenneta. IP-osoitteet anonymisoidaan ja salataan (<em>SHA 256</em>) yhdessä 64 merkkisen <em>suolan</em> kanssa, joka luodaan automaattisesti uudelleen päivittäin. IP-osoitteita ei voi siis jälkikäteen selvittää.</p>
+<p>Seuraavat tiedot kerätään yhdessä anonymisoidun IP-osoitteen kanssa:</p>
+<ul>
+<li>Käynnin tyyppi</li>
+<li>Aika</li>
+<li>Pyydetty URL</li>
+<li>HTTP-statuskoodi</li>
+<li>Selain</li>
+</ul>
+<p>Kerättyjä tietoja käytetään ainoastaan arviointitarkoituksiin. IP-osoitteita ei liitetä käyttäjätileihin.</p>]]></message>
 </locale>

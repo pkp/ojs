@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/fi_FI/locale.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="fi_FI" full_name="Suomi">
+	<message key="plugins.generic.announcementfeed.displayName">Ilmoitusten syöte -lisäosa</message>
+	<message key="plugins.generic.announcementfeed.description">Tämä lisäosa tuottaa RSS/ATOM syötteen julkaisun ilmoituksista.</message>
+	<message key="plugins.generic.announcementfeed.settings">Asetukset</message>
+	<message key="plugins.generic.announcementfeed.settings.all">Näytä syötteen linkki kaikilla lehden sivuilla.</message>
+	<message key="plugins.generic.announcementfeed.settings.homepage">Näytä syötteen linkki vain kotisivulla ja ilmoitusten sivuilla.</message>
+	<message key="plugins.generic.announcementfeed.settings.announcement">Näytä syötteen linkki vain ilmoitusten sivuilla.</message>
+	<message key="plugins.generic.announcementfeed.settings.recentAnnouncements1">Rajoita syötteen kokoa</message>
+	<message key="plugins.generic.announcementfeed.settings.recentAnnouncements2">uusimpaan ilmoitukseen.</message>
+	<message key="plugins.generic.announcementfeed.settings.recentItemsRequired">Anna positiivinen luku.</message>
+	<message key="plugins.generic.announcementfeed.atom.altText">Atom logo</message>
+	<message key="plugins.generic.announcementfeed.rss1.altText">RSS1 logo</message>
+	<message key="plugins.generic.announcementfeed.rss2.altText">RSS2 logo</message>
+</locale>

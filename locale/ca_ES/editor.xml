@@ -157,4 +157,5 @@
 	<message key="editor.submission.editorial.finalDraftDescription"><![CDATA[El corrector transforma els borradors finals d'aquesta llista en versions revisades i les carrega a continuació a <span class="pkp_help_title">Correcció d'originals</span>.]]></message>
 	<message key="editor.submission.proof.manageProofFilesDescription">Qualsevol arxiu ja carregat  a una fase de la tramesa pot afegir-se a la llista de correcció de proves marcant la casella inferior "Incloure" i fent clic a "Cercar". D'aquesta manera es llistaran tots els arxius disponibles i es podran escollir per incloure'ls.</message>
 	<message key="editor.publicIdentificationExistsForTheSameType">L'identificador públic '{$publicIdentifier}' ja existeix per a un altre objecte del mateix tipus. Esculli identificadors únics per als objectes del mateix tipus dins la seva revista.</message>
+	<message key="editor.article.coverImage">Imatge per a la portada</message>
 </locale>

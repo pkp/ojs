@@ -34,8 +34,6 @@
 	<message key="editor.notifyUsers.includeToc">Incluir sumário da edição:</message>
 	<message key="editor.editorAdministration">Administração do Editor</message>
 	<message key="editor.issues.createIssue">Criar Edição</message>
-	<message key="editor.issues.backIssues">Edições Anteriores</message>
-	<message key="editor.issues.futureIssues">Edições Futuras</message>
 	<message key="editor.issues.currentIssue">Edição Actual</message>
 	<message key="editor.issues.numArticles">Artigos</message>
 	<message key="editor.issues.noArticles">Nenhum artigo agendado para esta edição.</message>
@@ -59,15 +57,12 @@
 	<message key="editor.issues.remove">Remover</message>
 	<message key="editor.issues.proofed">Corrigido</message>
 	<message key="editor.issues.removeCoverPage">Remover imagem da capa?</message>
-	<message key="editor.issues.invalidCoverPageFormat">Formato inválido. Formatos aceitáveis são .gif, .jpg ou .png. Verifique as configurações de MimeType do servidor e permissões de pastas.</message>
 	<message key="editor.issues.styleFile">Folha de Estilos</message>
 	<message key="editor.issues.invalidStyleFormat">O formato de Folha de Estilos é inválido. Certifique-se que o documento enviado é um documento CSS válido! Documentos CSS com comentários no início poderão ser rejeitados. Verifique as configurações de MimeType do servidor e permissões de pastas.</message>
 	<message key="editor.issues.removeStyleFile">Eliminar Folha de Estilos?</message>
 	<message key="editor.issues.coverPageCaption">Legenda da capa</message>
 	<message key="editor.issues.showCoverPage">Criar capa personalizada para esta edição.</message>
 	<message key="editor.issues.coverPageDisplay">Exibir</message>
-	<message key="editor.issues.hideCoverPageArchives">Não exibir miniatura da capa na lista de edições</message>
-	<message key="editor.issues.hideCoverPageCover">Não exibir imagem de capa antes do sumário</message>
 	<message key="editor.issues.openAccess">Acesso Livre</message>
 	<message key="editor.issues.subscription">Subscrição</message>
 	<message key="editor.issues.identification">Identificação</message>
@@ -107,15 +102,11 @@
 	<message key="editor.article.scheduleForPublication">Agendar para publicar em</message>
 	<message key="editor.article.scheduleForPublication.toBeAssigned">A Agendar</message>
 	<message key="editor.article.payment.publicationFeeNotPaid">A Taxa para Publicação do artigo não foi paga. Uma vez realizado o pagamento, será permitido agendar o artigo para publicação.</message>
-	<message key="editor.article.showCoverPage">Criar capa para este artigo com os seguintes elementos.</message>
-	<message key="editor.article.hideCoverPageToc">Não exibir miniatura da capa no sumário</message>
-	<message key="editor.article.hideCoverPageAbstract">Não exibir imagem de capa na página de resumo de artigo</message>
 	<message key="editor.article.remove">Eliminar</message>
 	<message key="editor.issues.enableOpenAccessDate">Activar acesso livre adiado</message>
 	<message key="editor.issues.unpublishIssue">Despublicar edição</message>
 	<message key="editor.issues.confirmUnpublish">Deseja realmente despublicar esta edição?</message>
 	<message key="editor.submissionReview.cannotSendToCopyediting">Antes de enviar a submissão para Copyediting, use o link Notificar Autor para informá-lo sobre a decisão e seleccionar a versão que vai ser enviada.</message>
-	<message key="editor.submissionReview.sendToCopyediting">Enviar para Copyediting</message>
 	<message key="editor.notifyUsers.allReaders">Todos os leitores ({$count} utilizadores)</message>
 	<message key="editor.notifyUsers.allAuthors">Todos os autores publicados ({$count} utilizadores)</message>
 	<message key="editor.notifyUsers.allIndividualSubscribers">Todos os assinantes individuais ({$count} utilizadores)</message>
@@ -153,4 +144,8 @@
 	<message key="editor.submission.selectGalleyFiles">Seleccionar Ficheiros Edição</message>
 	<message key="editor.submission.editorial.finalDraftDescription"><![CDATA[Os ficheiros de rascunho finais nesta lista são transformados por um Copyeditor em versões copiadas, carregadas abaixo em <span class ="pkp_help_title">Copyediting </span>.]]></message>
 	<message key="editor.submission.proof.manageProofFilesDescription">Todos os ficheiros que já foram enviados para qualquer etapa de submissão podem ser adicionados à Listagem de Revisão, marcando a caixa de selecção Incluir abaixo e clicando em Pesquisar: todos os ficheiros disponíveis serão listados e podem ser escolhidos para inclusão.</message>
+	<message key="editor.issues.confirmSetCurrentIssue">Deseja realmente definir esta edição como a atual?</message>
+	<message key="grid.action.setCurrentIssue">Definir como Edição Atual</message>
+	<message key="editor.publicIdentificationExistsForTheSameType">O identificador público '{$publicIdentifier}' já existe para outro objeto do mesmo tipo. Por favor escolha identificadores únicos para os objetos do mesmo tipo da sua revista.</message>
+	<message key="editor.article.coverImage">Imagem de capa</message>
 </locale>
