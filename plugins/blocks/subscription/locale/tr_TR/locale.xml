@@ -18,8 +18,8 @@
 	<message key="plugins.block.subscription.description">Bu eklenti yan tarafta abonelik bilgileri sağlar.</message>
 	<message key="plugins.block.subscription.blockTitle">Abone</message>
 	<message key="plugins.block.subscription.expires">Sona Eriyor</message>
-	<message key="plugins.block.subscription.providedBy">Erişimi destekleyen</message>
-	<message key="plugins.block.subscription.comingFromIP">den</message>
+	<message key="plugins.block.subscription.providedBy">Erişimi destekleyen {$institutionName}</message>
+	<message key="plugins.block.subscription.comingFromIP">den {$ip}</message>
 	<message key="plugins.block.subscription.about">Aboneler</message>
 	<message key="plugins.block.subscription.loginToVerifySubscription">Aboneliğinizi doğrulamak için giriş yapın</message>
 </locale>
