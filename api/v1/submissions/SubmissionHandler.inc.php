@@ -92,7 +92,7 @@ class SubmissionHandler extends APIHandler {
 		$submissionService = ServicesContainer::instance()->get('submission');
 
 		if (!$context) {
-			return $response->withStatus(404)->withJsonError('api.submissions.404.resourceNotFound');
+			return $response->withStatus(404)->withJsonError('api.404.resourceNotFound');
 		}
 
 		$params = $this->_buildListRequestParams($slimRequest);
@@ -175,7 +175,7 @@ class SubmissionHandler extends APIHandler {
 		}
 
 		if (!$submission || !$publishedArticle) {
-			return $response->withStatus(404)->withJsonError('api.submissions.404.resourceNotFound');
+			return $response->withStatus(404)->withJsonError('api.404.resourceNotFound');
 		}
 
 		$data = array();
@@ -214,7 +214,7 @@ class SubmissionHandler extends APIHandler {
 		$stageId = isset($args['stageId']) ? $args['stageId'] : null;
 
 		if (!$submission) {
-			return $response->withStatus(404)->withJsonError('api.submissions.404.resourceNotFound');
+			return $response->withStatus(404)->withJsonError('api.404.resourceNotFound');
 		}
 
 		$data = array();
