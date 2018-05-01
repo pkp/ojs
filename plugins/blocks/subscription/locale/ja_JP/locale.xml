@@ -18,8 +18,8 @@
 	<message key="plugins.block.subscription.description">サイドバーに購読情報を表示します。</message>
 	<message key="plugins.block.subscription.blockTitle">購読</message>
 	<message key="plugins.block.subscription.expires">購読期限</message>
-	<message key="plugins.block.subscription.providedBy">個人購読: </message>
-	<message key="plugins.block.subscription.comingFromIP">接続可能IP: </message>
+	<message key="plugins.block.subscription.providedBy">個人購読: {$institutionName}</message>
+	<message key="plugins.block.subscription.comingFromIP">接続可能IP: {$ip}</message>
 	<message key="plugins.block.subscription.about">購読</message>
 	<message key="plugins.block.subscription.loginToVerifySubscription">ログインして購読を確認</message>
 </locale>

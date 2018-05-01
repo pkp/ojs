@@ -18,8 +18,8 @@
 	<message key="plugins.block.subscription.description">Acest modul oferă informaţii privind abonamentele.</message>
 	<message key="plugins.block.subscription.blockTitle">Abonament</message>
 	<message key="plugins.block.subscription.expires">Expiră</message>
-	<message key="plugins.block.subscription.providedBy">Acces oferit de: </message>
-	<message key="plugins.block.subscription.comingFromIP">De la</message>
+	<message key="plugins.block.subscription.providedBy">Acces oferit de: {$institutionName}</message>
+	<message key="plugins.block.subscription.comingFromIP">De la {$ip}</message>
 	<message key="plugins.block.subscription.about">Abonamentele</message>
 	<message key="plugins.block.subscription.loginToVerifySubscription">Autentificare pentru a verifica abonamentul</message>
 </locale>

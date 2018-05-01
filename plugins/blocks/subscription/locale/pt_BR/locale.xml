@@ -18,8 +18,8 @@
 	<message key="plugins.block.subscription.description">Este plugin oferece informações sobre a assinatura nas barras laterais.</message>
 	<message key="plugins.block.subscription.blockTitle">Assinatura</message>
 	<message key="plugins.block.subscription.expires">Expiração</message>
-	<message key="plugins.block.subscription.providedBy">Acesso fornecido por:</message>
-	<message key="plugins.block.subscription.comingFromIP">IP de proveniência:</message>
+	<message key="plugins.block.subscription.providedBy">Acesso fornecido por: {$institutionName}</message>
+	<message key="plugins.block.subscription.comingFromIP">IP de proveniência: {$ip}</message>
 	<message key="plugins.block.subscription.about">Assinaturas</message>
 	<message key="plugins.block.subscription.loginToVerifySubscription">Acesse o sistema para verificar sua assinatura</message>
 </locale>

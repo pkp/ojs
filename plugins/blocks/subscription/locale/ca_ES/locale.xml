@@ -18,8 +18,8 @@
 	<message key="plugins.block.subscription.description">Aquest mòdul proporciona informació sobre la subscripció a la barra lateral.</message>
 	<message key="plugins.block.subscription.blockTitle">Subscripció</message>
 	<message key="plugins.block.subscription.expires">Venciment</message>
-	<message key="plugins.block.subscription.providedBy">Accés proporcionat per</message>
-	<message key="plugins.block.subscription.comingFromIP">De</message>
+	<message key="plugins.block.subscription.providedBy">Accés proporcionat per {$institutionName}</message>
+	<message key="plugins.block.subscription.comingFromIP">De {$ip}</message>
 	<message key="plugins.block.subscription.about">Subscripcions</message>
 	<message key="plugins.block.subscription.loginToVerifySubscription">Inicieu la sessió per confirmar la subscripció</message>
 </locale>
