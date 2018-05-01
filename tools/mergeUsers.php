@@ -78,8 +78,8 @@ class mergeUsers extends CommandLineTool {
 		}
 
 		// Both user IDs are valid. Merge the accounts.
-		import('classes.user.UserAction');
-		UserAction::mergeUsers($oldUserId, $newUserId);
+		import('classes.core.ServicesContainer');
+		ServicesContainer::instance()->get('user')->mergeUsers($oldUser, $newUser);
 
 		printf("Merge completed: '%s' merged into '%s'.\n",
 			$this->username2,
