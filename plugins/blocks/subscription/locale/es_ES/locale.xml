@@ -18,8 +18,8 @@
 	<message key="plugins.block.subscription.description">Este módulo proporciona información sobre las suscripciones en la barra lateral.</message>
 	<message key="plugins.block.subscription.blockTitle">Suscripción</message>
 	<message key="plugins.block.subscription.expires">Caduca</message>
-	<message key="plugins.block.subscription.providedBy">Acceso proporcionado por</message>
-	<message key="plugins.block.subscription.comingFromIP">De</message>
+	<message key="plugins.block.subscription.providedBy">Acceso proporcionado por {$institutionName}</message>
+	<message key="plugins.block.subscription.comingFromIP">De {$ip}</message>
 	<message key="plugins.block.subscription.about">Suscripciones</message>
 	<message key="plugins.block.subscription.loginToVerifySubscription">Inicie sesión para verificar la suscripción</message>
 </locale>

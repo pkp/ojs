@@ -18,8 +18,8 @@
 	<message key="plugins.block.subscription.description">Plugin honek harpidetzen informazioa ematen du alboko barran.</message>
 	<message key="plugins.block.subscription.blockTitle">Harpidetza</message>
 	<message key="plugins.block.subscription.expires">Iraungi</message>
-	<message key="plugins.block.subscription.providedBy">Sarbide-emailea: </message>
-	<message key="plugins.block.subscription.comingFromIP">IP honetatik: </message>
+	<message key="plugins.block.subscription.providedBy">Sarbide-emailea: {$institutionName}</message>
+	<message key="plugins.block.subscription.comingFromIP">IP honetatik: {$ip}</message>
 	<message key="plugins.block.subscription.about">Harpidetzak</message>
 	<message key="plugins.block.subscription.loginToVerifySubscription">Hasi saioa harpidetza egiaztatzeko</message>
 </locale>
