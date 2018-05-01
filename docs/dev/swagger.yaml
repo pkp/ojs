@@ -1034,6 +1034,36 @@ paths:
           schema:
             $ref: '#/definitions/User'
 
+  '/users/{userId}/merge':
+    post:
+      tags:
+        - Users
+      summary: Merge a user into another user account, transferring attributed articles and all associated information.
+      parameters:
+        - name: userId
+          description: The user to merge into another user. This user account will be destroyed.
+          in: path
+          required: true
+          type: integer
+        - name: mergeIntoUserId
+          description: The user into which you'd like to merge `userId`. This user account will remain when this action is complete.
+          in: query
+          required: true
+          type: string
+      responses:
+        '200':
+          description: A user object representing the `mergeIntoUser` account.
+          schema:
+            $ref: '#/definitions/User'
+        '404':
+          description: One or both user IDs do not exist.
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+        '403':
+          description: You do not have administrative privileges for this user.
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+
   '/users/reviewers':
     get:
       tags:
