@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../../../lib/pkp/dtd/xmlData.dtd">
+
+<!--
+  * event_log_submissionid.xml
+  *
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Add missing submissionId param for the log.author.submitted events.
+  *
+  -->
+
+<data>
+	<sql>
+		<query>
+			INSERT INTO event_log_settings (log_id, setting_name, setting_value, setting_type)
+			SELECT event_log.log_id, 'submissionId', event_log.assoc_id, 'string' FROM event_log
+			WHERE event_log.message='log.author.submitted'
+			AND NOT EXISTS (SELECT * FROM event_log_settings WHERE setting_name='submissionId' AND log_id=event_log.log_id)
+		</query>
+	</sql>
+</data>

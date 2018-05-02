@@ -387,6 +387,10 @@
 		<code function="installEmailTemplate" key="REVIEW_REQUEST_REMIND_AUTO_ONECLICK" locales="ar_IQ,ca_ES,cs_CZ,da_DK,de_DE,el_GR,en_US,es_AR,es_ES,eu_ES,fa_IR,fr_CA,fr_FR,gl_ES,hr_HR,id_ID,it_IT,ja_JP,mk_MK,ml_IN,nl_NL,no_NO,pl_PL,pt_BR,pt_PT,ro_RO,ru_RU,sr_SR,sv_SE,tr_TR,uk_UA,vi_VN,zh_CN,zh_TW" />
 	</upgrade>
 
+	<upgrade minversion="2.3.3.1" maxversion="2.4.8.3">
+		<data file="dbscripts/xml/upgrade/event_log_submissionid.xml" />
+	</upgrade>
+
 	<!-- update plugin configuration - should be done as the final upgrade task -->
 	<code function="addPluginVersions" />
 </install>
