@@ -70,7 +70,7 @@ class SectionEditorAction extends Action {
 			// Add log
 			import('classes.article.log.ArticleLog');
 			AppLocale::requireComponents(LOCALE_COMPONENT_APPLICATION_COMMON, LOCALE_COMPONENT_OJS_EDITOR);
-			ArticleLog::logEvent($request, $sectionEditorSubmission, ARTICLE_LOG_EDITOR_DECISION, 'log.editor.decision', array('editorName' => $user->getFullName(), 'decision' => __($decisions[$decision])));
+			ArticleLog::logEvent($request, $sectionEditorSubmission, ARTICLE_LOG_EDITOR_DECISION, 'log.editor.decision', array('editorName' => $user->getFullName(), 'decision' => __($decisions[$decision]), 'articleId' => $sectionEditorSubmission->getId()));
 		}
 	}
 
@@ -126,7 +126,7 @@ class SectionEditorAction extends Action {
 
 			// Add log
 			import('classes.article.log.ArticleLog');
-			ArticleLog::logEvent($request, $sectionEditorSubmission, ARTICLE_LOG_REVIEW_ASSIGN, 'log.review.reviewerAssigned', array('reviewerName' => $reviewer->getFullName(), 'round' => $round, 'reviewId' => $reviewAssignment->getId()));
+			ArticleLog::logEvent($request, $sectionEditorSubmission, ARTICLE_LOG_REVIEW_ASSIGN, 'log.review.reviewerAssigned', array('reviewerName' => $reviewer->getFullName(), 'round' => $round, 'reviewId' => $reviewAssignment->getId(), $articleId => $sectionEditorSubmission->getId()));
 		}
 	}
 
@@ -739,7 +739,7 @@ class SectionEditorAction extends Action {
 
 			// Add log
 			import('classes.article.log.ArticleLog');
-			ArticleLog::logEvent($request, $article, ARTICLE_LOG_REVIEW_RECOMMENDATION_BY_PROXY, 'log.review.reviewRecommendationSetByProxy', array('editorName' => $user->getFullName(), 'reviewerName' => $reviewer->getFullName(), 'reviewId' => $reviewAssignment->getId(), 'round' => $reviewAssignment->getRound()));
+			ArticleLog::logEvent($request, $article, ARTICLE_LOG_REVIEW_RECOMMENDATION_BY_PROXY, 'log.review.reviewRecommendationSetByProxy', array('editorName' => $user->getFullName(), 'reviewerName' => $reviewer->getFullName(), 'reviewId' => $reviewAssignment->getId(), 'round' => $reviewAssignment->getRound(), 'articleId' => $article->getId()));
 		}
 	}
 
@@ -901,7 +901,7 @@ class SectionEditorAction extends Action {
 
 			// Add log
 			import('classes.article.log.ArticleLog');
-			ArticleLog::logEvent($request, $sectionEditorSubmission, ARTICLE_LOG_REVIEW_RESUBMIT, 'log.review.resubmit');
+			ArticleLog::logEvent($request, $sectionEditorSubmission, ARTICLE_LOG_REVIEW_RESUBMIT, 'log.review.resubmit', array('articleId' => $sectionEditorSubmission->getId()));
 		}
 	}
 
@@ -931,7 +931,7 @@ class SectionEditorAction extends Action {
 
 			// Add log
 			import('classes.article.log.ArticleLog');
-			ArticleLog::logEvent($request, $sectionEditorSubmission, ARTICLE_LOG_COPYEDIT_ASSIGN, 'log.copyedit.copyeditorAssigned', array('copyeditorName' => $copyeditor->getFullName()));
+			ArticleLog::logEvent($request, $sectionEditorSubmission, ARTICLE_LOG_COPYEDIT_ASSIGN, 'log.copyedit.copyeditorAssigned', array('copyeditorName' => $copyeditor->getFullName(), 'articleId' => $sectionEditorSubmission->getId()));
 		}
 	}
 
@@ -1367,7 +1367,7 @@ class SectionEditorAction extends Action {
 
 		// Add log entry
 		import('classes.article.log.ArticleLog');
-		ArticleLog::logEvent($request, $sectionEditorSubmission, ARTICLE_LOG_COPYEDIT_INITIAL, 'log.copyedit.initialEditComplete', array('copyeditorName' => $user->getFullName()));
+		ArticleLog::logEvent($request, $sectionEditorSubmission, ARTICLE_LOG_COPYEDIT_INITIAL, 'log.copyedit.initialEditComplete', array('copyeditorName' => $user->getFullName(), 'articleId' => $sectionEditorSubmission->getId()));
 	}
 
 	/**
@@ -1406,7 +1406,7 @@ class SectionEditorAction extends Action {
 
 		// Add log entry
 		import('classes.article.log.ArticleLog');
-		ArticleLog::logEvent($request, $sectionEditorSubmission, ARTICLE_LOG_COPYEDIT_FINAL, 'log.copyedit.finalEditComplete', array('copyeditorName' => $user->getFullName()));
+		ArticleLog::logEvent($request, $sectionEditorSubmission, ARTICLE_LOG_COPYEDIT_FINAL, 'log.copyedit.finalEditComplete', array('copyeditorName' => $user->getFullName(), 'articleId' => $copyeditorSubmission->getId()));
 	}
 
 	/**
@@ -1481,7 +1481,7 @@ class SectionEditorAction extends Action {
 
 		// Add log
 		import('classes.article.log.ArticleLog');
-		ArticleLog::logEvent($request, $sectionEditorSubmission, ARTICLE_LOG_EDITOR_RESTORE, 'log.editor.restored');
+		ArticleLog::logEvent($request, $sectionEditorSubmission, ARTICLE_LOG_EDITOR_RESTORE, 'log.editor.restored', array('articleId' => $sectionEditorSubmission->getId()));
 	}
 
 	/**
@@ -1561,7 +1561,7 @@ class SectionEditorAction extends Action {
 			$layoutEditor =& $userDao->getById($layoutSignoff->getUserId());
 
 			// Add log entry
-			ArticleLog::logEvent($request, $submission, ARTICLE_LOG_LAYOUT_UNASSIGN, 'log.layout.layoutEditorUnassigned', array('layoutSignoffId' => $layoutSignoff->getId(), 'editorName' => $layoutEditor->getFullName()));
+			ArticleLog::logEvent($request, $submission, ARTICLE_LOG_LAYOUT_UNASSIGN, 'log.layout.layoutEditorUnassigned', array('layoutSignoffId' => $layoutSignoff->getId(), 'editorName' => $layoutEditor->getFullName(), 'articleId' => $submission->getId()));
 		}
 
 		$layoutSignoff->setUserId($editorId);
@@ -1580,7 +1580,7 @@ class SectionEditorAction extends Action {
 		$layoutEditor =& $userDao->getById($layoutSignoff->getUserId());
 
 		// Add log entry
-		ArticleLog::logEvent($request, $submission, ARTICLE_LOG_LAYOUT_ASSIGN, 'log.layout.layoutEditorAssigned', array('layoutSignoffId' => $layoutSignoff->getId(), 'editorName' => $layoutEditor->getFullName()));
+		ArticleLog::logEvent($request, $submission, ARTICLE_LOG_LAYOUT_ASSIGN, 'log.layout.layoutEditorAssigned', array('layoutSignoffId' => $layoutSignoff->getId(), 'editorName' => $layoutEditor->getFullName(), 'articleId' => $submission->getId()));
 	}
 
 	/**
@@ -2364,7 +2364,7 @@ class SectionEditorAction extends Action {
 
 			// Add log
 			import('classes.article.log.ArticleLog');
-			ArticleLog::logEvent($request, $article, ARTICLE_LOG_REVIEW_CONFIRM_BY_PROXY, $accept?'log.review.reviewAcceptedByProxy':'log.review.reviewDeclinedByProxy', array('reviewerName' => $reviewer->getFullName(), 'round' => $reviewAssignment->getRound(), 'userName' => $user->getFullName(), 'reviewId' => $reviewAssignment->getId()));
+			ArticleLog::logEvent($request, $article, ARTICLE_LOG_REVIEW_CONFIRM_BY_PROXY, $accept?'log.review.reviewAcceptedByProxy':'log.review.reviewDeclinedByProxy', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $article->getId(), 'round' => $reviewAssignment->getRound(), 'userName' => $user->getFullName(), 'reviewId' => $reviewAssignment->getId()));
 		}
 	}
 
@@ -2411,7 +2411,7 @@ class SectionEditorAction extends Action {
 
 			// Add log
 			import('classes.article.log.ArticleLog');
-			ArticleLog::logEvent($request, $article, ARTICLE_LOG_REVIEW_FILE_BY_PROXY, 'log.review.reviewFileByProxy', array('reviewerName' => $reviewer->getFullName(), 'round' => $reviewAssignment->getRound(), 'userName' => $user->getFullName(), 'reviewId' => $reviewAssignment->getId()));
+			ArticleLog::logEvent($request, $article, ARTICLE_LOG_REVIEW_FILE_BY_PROXY, 'log.review.reviewFileByProxy', array('reviewerName' => $reviewer->getFullName(), 'round' => $reviewAssignment->getRound(), 'userName' => $user->getFullName(), 'reviewId' => $reviewAssignment->getId(), 'articleId' => $article->getId()));
 		}
 	}
 

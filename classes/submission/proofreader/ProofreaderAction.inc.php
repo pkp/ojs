@@ -39,7 +39,7 @@ class ProofreaderAction extends Action {
 			if (!isset($proofreader)) return;
 			import('classes.article.log.ArticleLog');
 			import('classes.article.log.ArticleEventLogEntry');
-			ArticleLog::logEvent($request, $article, ARTICLE_LOG_PROOFREAD_ASSIGN, 'log.proofread.assign', array('assignerName' => $user->getFullName(), 'proofreaderName' => $proofreader->getFullName()));
+			ArticleLog::logEvent($request, $article, ARTICLE_LOG_PROOFREAD_ASSIGN, 'log.proofread.assign', array('assignerName' => $user->getFullName(), 'proofreaderName' => $proofreader->getFullName(), 'articleId' => $article->getId()));
 		}
 	}
 

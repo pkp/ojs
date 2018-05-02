@@ -141,7 +141,7 @@ class AuthorAction extends Action {
 			}
 			// Add log entry
 			import('classes.article.log.ArticleLog');
-			ArticleLog::logEvent($request, $authorSubmission, ARTICLE_LOG_AUTHOR_REVISION, 'log.author.documentRevised', array('authorName' => $user->getFullName(), 'fileId' => $fileId));
+			ArticleLog::logEvent($request, $authorSubmission, ARTICLE_LOG_AUTHOR_REVISION, 'log.author.documentRevised', array('authorName' => $user->getFullName(), 'fileId' => $fileId, 'articleId' => $authorSubmission->getId()));
 		}
 	}
 

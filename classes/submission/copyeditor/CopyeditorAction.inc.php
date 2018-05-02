@@ -72,7 +72,7 @@ class CopyeditorAction extends Action {
 
 			// Add log entry
 			import('classes.article.log.ArticleLog');
-			ArticleLog::logEvent($request, $copyeditorSubmission, ARTICLE_LOG_COPYEDIT_INITIAL, 'log.copyedit.initialEditComplete', array('copyeditorName' => $user->getFullName()));
+			ArticleLog::logEvent($request, $copyeditorSubmission, ARTICLE_LOG_COPYEDIT_INITIAL, 'log.copyedit.initialEditComplete', array('copyeditorName' => $user->getFullName(), 'articleId' => $copyeditorSubmission->getId()));
 
 			return true;
 
@@ -145,7 +145,7 @@ class CopyeditorAction extends Action {
 			// Add log entry
 			import('classes.article.log.ArticleLog');
 			import('classes.article.log.ArticleEventLogEntry');
-			ArticleLog::logEvent($request, $copyeditorSubmission, ARTICLE_LOG_COPYEDIT_FINAL, 'log.copyedit.finalEditComplete', Array('copyeditorName' => $user->getFullName()));
+			ArticleLog::logEvent($request, $copyeditorSubmission, ARTICLE_LOG_COPYEDIT_FINAL, 'log.copyedit.finalEditComplete', Array('copyeditorName' => $user->getFullName(), 'articleId' => $copyeditorSubmission->getId()));
 
 			return true;
 
@@ -202,7 +202,7 @@ class CopyeditorAction extends Action {
 				// Add log entry
 				$user =& $request->getUser();
 				import('classes.article.log.ArticleLog');
-				ArticleLog::logEvent($request, $copyeditorSubmission, ARTICLE_LOG_COPYEDIT_INITIATE, 'log.copyedit.initiate', array('copyeditorName' => $user->getFullName()));
+				ArticleLog::logEvent($request, $copyeditorSubmission, ARTICLE_LOG_COPYEDIT_INITIATE, 'log.copyedit.initiate', array('copyeditorName' => $user->getFullName(), 'articleId' => $copyeditorSubmission->getId()));
 			}
 		}
 	}
