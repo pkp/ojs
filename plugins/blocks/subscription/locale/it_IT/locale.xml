@@ -18,8 +18,8 @@
 	<message key="plugins.block.subscription.description">Questo plugin visualizza nella barra laterale informazioni sugli abbonamenti.</message>
 	<message key="plugins.block.subscription.blockTitle">Abbonamento</message>
 	<message key="plugins.block.subscription.expires">Scadenza</message>
-	<message key="plugins.block.subscription.providedBy">Ente abbonato</message>
-	<message key="plugins.block.subscription.comingFromIP">IP</message>
+	<message key="plugins.block.subscription.providedBy">Ente abbonato {$institutionName}</message>
+	<message key="plugins.block.subscription.comingFromIP">IP {$ip}</message>
 	<message key="plugins.block.subscription.about">Abbonamenti</message>
 	<message key="plugins.block.subscription.loginToVerifySubscription">Entra per verificare l'abbonamento</message>
 </locale>

@@ -18,8 +18,8 @@
 	<message key="plugins.block.subscription.description">Ovaj blok prikazuje informacije o pretplat.</message>
 	<message key="plugins.block.subscription.blockTitle">Pretplata</message>
 	<message key="plugins.block.subscription.expires">Ističe</message>
-	<message key="plugins.block.subscription.providedBy">Pristup odobrio</message>
-	<message key="plugins.block.subscription.comingFromIP">Od</message>
+	<message key="plugins.block.subscription.providedBy">Pristup odobrio {$institutionName}</message>
+	<message key="plugins.block.subscription.comingFromIP">Od {$ip}</message>
 	<message key="plugins.block.subscription.about">Pretplate</message>
 	<message key="plugins.block.subscription.loginToVerifySubscription">Prijavite se da potvrdite pretplatu</message>
 </locale>

@@ -18,8 +18,8 @@
 	<message key="plugins.block.subscription.description">Det här tilläget placerar prenumerationsinformation i sidomenyn</message>
 	<message key="plugins.block.subscription.blockTitle">Prenumeration</message>
 	<message key="plugins.block.subscription.expires">Löper ut</message>
-	<message key="plugins.block.subscription.providedBy">Tillgång tillhandahålls av</message>
-	<message key="plugins.block.subscription.comingFromIP">från</message>
+	<message key="plugins.block.subscription.providedBy">Tillgång tillhandahålls av {$institutionName}</message>
+	<message key="plugins.block.subscription.comingFromIP">från {$ip}</message>
 	<message key="plugins.block.subscription.about">Prenumerationer</message>
 	<message key="plugins.block.subscription.loginToVerifySubscription">Logga in för att bekräfta prenumerationen</message>
 </locale>

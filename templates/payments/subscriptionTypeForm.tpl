@@ -28,7 +28,7 @@
 	{/fbvFormSection}
 
 	{fbvFormSection label="manager.subscriptionTypes.form.description"}
-		{fbvElement type="textarea" name="description" id="description" value=$description rich=true}
+		{fbvElement type="textarea" name="description" id="description" value=$description rich=true multilingual=true}
 	{/fbvFormSection}
 
 	{fbvFormSection title="manager.subscriptionTypes.form.cost"}

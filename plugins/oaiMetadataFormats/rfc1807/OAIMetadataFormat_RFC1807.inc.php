@@ -73,7 +73,6 @@ class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat {
 			$this->formatElement('title', $article->getLocalizedTitle()) .
 			$this->formatElement('type', $section->getLocalizedIdentifyType()) .
 
-			$this->formatElement('type', $relation) .
 			$this->formatElement('author', $creators) .
 			($article->getDatePublished()?$this->formatElement('date', $article->getDatePublished()):'') .
 			$this->formatElement('copyright', strip_tags($journal->getLocalizedSetting('copyrightNotice'))) .

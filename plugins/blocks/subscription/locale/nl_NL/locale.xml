@@ -18,8 +18,8 @@
 	<message key="plugins.block.subscription.description">Deze plugin levert informatie over het abonnement in de sidebar.</message>
 	<message key="plugins.block.subscription.blockTitle">Abonnement</message>
 	<message key="plugins.block.subscription.expires">Verloopt</message>
-	<message key="plugins.block.subscription.providedBy">Toegang verzorgd door:</message>
-	<message key="plugins.block.subscription.comingFromIP">Komend van IP:</message>
+	<message key="plugins.block.subscription.providedBy">Toegang verzorgd door: {$institutionName}</message>
+	<message key="plugins.block.subscription.comingFromIP">Komend van IP: {$ip}</message>
 	<message key="plugins.block.subscription.about">Abonnementen</message>
 	<message key="plugins.block.subscription.loginToVerifySubscription">Log in om uw abonnement te verifiëren</message>
 </locale>
