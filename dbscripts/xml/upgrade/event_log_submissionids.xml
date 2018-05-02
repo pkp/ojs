@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../../../lib/pkp/dtd/xmlData.dtd">
+
+<!--
+  * event_log_submissionids.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Missing submissionId for migrated event logs.
+  -->
+<data>
+	<sql>
+		<query><!-- pkp/pkp-lib#3663 -->
+			INSERT INTO event_log_settings (log_id, setting_name, setting_value, setting_type)
+			SELECT event_log.log_id, 'submissionId', event_log.assoc_id, 'string' FROM event_log
+			WHERE event_log.message IN ('log.author.documentRevised', 'log.review.reviewerAssigned', 'log.review.reviewRecommendationSetByProxy', 'log.review.resubmit', 'log.review.reviewDeclinedByProxy', 'log.review.reviewAcceptedByProxy', 'log.review.reviewFileByProxy', 'log.editor.decision', 'log.copyedit.initiate', 'log.copyedit.initialEditComplete', 'log.copyedit.finalEditComplete', 'log.copyedit.copyeditorAssigned', 'log.layout.layoutEditorAssigned', 'log.layout.layoutEditorUnassigned', 'log.layout.layoutEditComplete', 'log.editor.restored', 'log.editor.editorAssigned', 'log.editor.submissionExpedited', 'log.proofread.assign')
+			AND NOT EXISTS (SELECT log_id FROM event_log_settings WHERE setting_name='submissionId' AND log_id=event_log.log_id)
+		</query>
+	</sql>
+</data>
