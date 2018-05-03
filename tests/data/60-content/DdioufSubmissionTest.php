@@ -22,8 +22,8 @@ class DdioufSubmissionTest extends ContentBaseTestCase {
 	function testSubmission() {
 		$this->register(array(
 			'username' => 'ddiouf',
-			'firstName' => 'Diaga',
-			'lastName' => 'Diouf',
+			'givenName' => 'Diaga',
+			'familyName' => 'Diouf',
 			'affiliation' => 'Alexandria University',
 			'country' => 'Egypt',
 		));

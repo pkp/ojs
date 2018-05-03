@@ -22,8 +22,8 @@ class KalkhafajiSubmissionTest extends ContentBaseTestCase {
 	function testSubmission() {
 		$this->register(array(
 			'username' => 'kalkhafaji',
-			'firstName' => 'Karim',
-			'lastName' => 'Al-Khafaji',
+			'givenName' => 'Karim',
+			'familyName' => 'Al-Khafaji',
 			'affiliation' => 'Stanford University',
 			'country' => 'United States',
 		));
@@ -39,8 +39,8 @@ class KalkhafajiSubmissionTest extends ContentBaseTestCase {
 			),
 			'additionalAuthors' => array(
 				array(
-					'firstName' => 'Margaret',
-					'lastName' => 'Morse',
+					'givenName' => 'Margaret',
+					'familyName' => 'Morse',
 					'country' => 'United States',
 					'affiliation' => 'Stanford University',
 					'email' => 'mmorse@mailinator.com',

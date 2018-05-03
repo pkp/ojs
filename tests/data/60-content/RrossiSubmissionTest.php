@@ -22,8 +22,8 @@ class RrossiSubmissionTest extends ContentBaseTestCase {
 	function testSubmission() {
 		$this->register(array(
 			'username' => 'rrossi',
-			'firstName' => 'Rosanna',
-			'lastName' => 'Rossi',
+			'givenName' => 'Rosanna',
+			'familyName' => 'Rossi',
 			'affiliation' => 'Barcelona University',
 			'country' => 'Spain',
 		));
