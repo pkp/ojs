@@ -25,39 +25,8 @@ class ArticleReportDAO extends DAO {
 		$primaryLocale = AppLocale::getPrimaryLocale();
 		$locale = AppLocale::getLocale();
 
-		$result = $this->retrieve(
-			'SELECT	a.submission_id AS submission_id,
-				COALESCE(asl1.setting_value, aspl1.setting_value) AS title,
-				COALESCE(asl2.setting_value, aspl2.setting_value) AS abstract,
-				COALESCE(sl.setting_value, spl.setting_value) AS section_title,
-				a.status AS status,
-				a.language AS language
-			FROM	submissions a
-				LEFT JOIN submission_settings aspl1 ON (aspl1.submission_id=a.submission_id AND aspl1.setting_name = ? AND aspl1.locale = a.locale)
-				LEFT JOIN submission_settings asl1 ON (asl1.submission_id=a.submission_id AND asl1.setting_name = ? AND asl1.locale = ?)
-				LEFT JOIN submission_settings aspl2 ON (aspl2.submission_id=a.submission_id AND aspl2.setting_name = ? AND aspl2.locale = a.locale)
-				LEFT JOIN submission_settings asl2 ON (asl2.submission_id=a.submission_id AND asl2.setting_name = ? AND asl2.locale = ?)
-				LEFT JOIN section_settings spl ON (spl.section_id=a.section_id AND spl.setting_name = ? AND spl.locale = ?)
-				LEFT JOIN section_settings sl ON (sl.section_id=a.section_id AND sl.setting_name = ? AND sl.locale = ?)
-			WHERE	a.context_id = ? AND
-				a.submission_progress = 0
-			ORDER BY a.submission_id',
-			array(
-				'title', // Article title
-				'title',
-				$locale,
-				'abstract', // Article abstract
-				'abstract',
-				$locale,
-				'title',
-				$primaryLocale,
-				'title',
-				$locale,
-				(int) $journalId
-			)
-		);
-		$articlesReturner = new DBRowIterator($result);
-		unset($result);
+		$articleDao = DAORegistry::getDAO('ArticleDAO');
+		$articlesReturner = $articleDao->getByContextId($journalId);
 
 		$result = $this->retrieve(
 			'SELECT	MAX(d.date_decided) AS date_decided,
@@ -138,5 +107,4 @@ class ArticleReportDAO extends DAO {
 		return array($articlesReturner, $authorsReturner, $decisionsReturner);
 	}
 }
-
 
