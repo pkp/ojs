@@ -18,8 +18,8 @@
 	<message key="plugins.block.subscription.description">Το πρόσθετο αυτό παρέχει πληροφορίες συνδρομών στην πλαϊνή μπάρα.</message>
 	<message key="plugins.block.subscription.blockTitle">Συνδρομή</message>
 	<message key="plugins.block.subscription.expires">Λήγει</message>
-	<message key="plugins.block.subscription.providedBy">Η πρόσβαση παρέχετε από:</message>
-	<message key="plugins.block.subscription.comingFromIP">Από το</message>
+	<message key="plugins.block.subscription.providedBy">Η πρόσβαση παρέχετε από: {$institutionName}</message>
+	<message key="plugins.block.subscription.comingFromIP">Από το {$ip}</message>
 	<message key="plugins.block.subscription.about">Συνδρομές</message>
 	<message key="plugins.block.subscription.loginToVerifySubscription">Συνδεθείτε για να επιβεβαιώσετε τη συνδρομή</message>
 </locale>

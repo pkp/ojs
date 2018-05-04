@@ -74,9 +74,16 @@ class ArticleReportPlugin extends ReportPlugin {
 		import('classes.workflow.EditorDecisionActionsManager');
 		$decisionMessages = array(
 			SUBMISSION_EDITOR_DECISION_ACCEPT => __('editor.submission.decision.accept'),
-			SUBMISSION_EDITOR_DECISION_PENDING_REVISIONS => __('editor.submission.decision.pendingRevisions'),
+			SUBMISSION_EDITOR_DECISION_PENDING_REVISIONS => __('editor.submission.decision.requestRevisions'),
 			SUBMISSION_EDITOR_DECISION_RESUBMIT => __('editor.submission.decision.resubmit'),
 			SUBMISSION_EDITOR_DECISION_DECLINE => __('editor.submission.decision.decline'),
+			SUBMISSION_EDITOR_DECISION_SEND_TO_PRODUCTION => __('editor.submission.decision.sendToProduction'),
+			SUBMISSION_EDITOR_DECISION_EXTERNAL_REVIEW => __('editor.submission.decision.sendExternalReview'),
+			SUBMISSION_EDITOR_DECISION_INITIAL_DECLINE => __('editor.submission.decision.decline'),
+			SUBMISSION_EDITOR_RECOMMEND_ACCEPT => __('editor.submission.recommendation.display', array('recommendation' => __('editor.submission.decision.accept'))),
+			SUBMISSION_EDITOR_RECOMMEND_DECLINE => __('editor.submission.recommendation.display', array('recommendation' => __('editor.submission.decision.decline'))),
+			SUBMISSION_EDITOR_RECOMMEND_PENDING_REVISIONS => __('editor.submission.recommendation.display', array('recommendation' => __('editor.submission.decision.requestRevisions'))),
+			SUBMISSION_EDITOR_RECOMMEND_RESUBMIT => __('editor.submission.recommendation.display', array('recommendation' => __('editor.submission.decision.resubmit'))),
 			null => __('plugins.reports.articles.nodecision')
 		);
 

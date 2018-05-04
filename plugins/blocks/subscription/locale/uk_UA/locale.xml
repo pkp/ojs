@@ -18,8 +18,8 @@
 	<message key="plugins.block.subscription.description">Цей модуль відображає панель з інформацією про передплату.</message>
 	<message key="plugins.block.subscription.blockTitle">Передплата</message>
 	<message key="plugins.block.subscription.expires">закінчується</message>
-	<message key="plugins.block.subscription.providedBy">Доступ забезпечує</message>
-	<message key="plugins.block.subscription.comingFromIP">З</message>
+	<message key="plugins.block.subscription.providedBy">Доступ забезпечує {$institutionName}</message>
+	<message key="plugins.block.subscription.comingFromIP">З {$ip}</message>
 	<message key="plugins.block.subscription.about">Передплати</message>
 	<message key="plugins.block.subscription.loginToVerifySubscription">Увійдіть, щоб підтвердити передплату</message>
 </locale>

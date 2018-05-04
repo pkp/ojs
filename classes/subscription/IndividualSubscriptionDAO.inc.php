@@ -80,6 +80,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 	/**
 	 * Retrieve individual subscriptions by user ID.
 	 * @param $userId int
+	 * @param $rangeInfo DBResultRange
 	 * @return object DAOResultFactory containing IndividualSubscriptions
 	 */
 	function getByUserId($userId, $rangeInfo = null) {
@@ -100,7 +101,8 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 
 	/**
 	 * Return number of individual subscriptions with given status for journal.
-	 * @param status int 
+	 * @param $journalId int
+	 * @param $status int
 	 * @return int
 	 */
 	function getStatusCount($journalId, $status = null) {
@@ -235,7 +237,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 	/**
 	 * Insert a new individual subscription.
 	 * @param $individualSubscription IndividualSubscription
-	 * @return int 
+	 * @return int
 	 */
 	function insertObject($individualSubscription) {
 		return $this->_insertObject($individualSubscription);
@@ -254,15 +256,14 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 	 * @param $subscriptionId int
 	 * @param $journalId int
 	 */
-	function deleteById($subscriptionId, $journalId) {
+	function deleteById($subscriptionId, $journalId = null) {
+		$params = array((int) $subscriptionId);
+		if ($journalId) $params[] = (int) $journalId;
 		$this->update(
 			'DELETE FROM subscriptions
-			WHERE	subscription_id = ?
-				AND journal_id = ?',
-			array(
-				(int) $subscriptionId,
-				(int) $journalId,
-			)
+			WHERE	subscription_id = ?'
+			.($journalId ? ' AND journal_id = ?' : ''),
+			$params
 		);
 	}
 
@@ -284,8 +285,8 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 		if ($result->RecordCount() != 0) {
 			while (!$result->EOF) {
 				$subscriptionId = $result->fields[0];
-				$returner = $this->deleteSubscriptionById($subscriptionId);
-				if (!$returner) { 
+				$returner = $this->deleteById($subscriptionId);
+				if (!$returner) {
 					break;
 				}
 				$result->MoveNext();
@@ -314,8 +315,8 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 		if ($result->RecordCount() != 0) {
 			while (!$result->EOF) {
 				$subscriptionId = $result->fields[0];
-				$returner = $this->deleteSubscriptionById($subscriptionId);
-				if (!$returner) { 
+				$returner = $this->deleteById($subscriptionId);
+				if (!$returner) {
 					break;
 				}
 				$result->MoveNext();
@@ -349,8 +350,8 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 		if ($result->RecordCount() != 0) {
 			while (!$result->EOF) {
 				$subscriptionId = $result->fields[0];
-				$returner = $this->deleteSubscriptionById($subscriptionId);
-				if (!$returner) { 
+				$returner = $this->deleteById($subscriptionId);
+				if (!$returner) {
 					break;
 				}
 				$result->MoveNext();
@@ -379,8 +380,8 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 		if ($result->RecordCount() != 0) {
 			while (!$result->EOF) {
 				$subscriptionId = $result->fields[0];
-				$returner = $this->deleteSubscriptionById($subscriptionId);
-				if (!$returner) { 
+				$returner = $this->deleteById($subscriptionId);
+				if (!$returner) {
 					break;
 				}
 				$result->MoveNext();
@@ -393,6 +394,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 
 	/**
 	 * Retrieve all individual subscriptions.
+	 * @param $rangeInfo DBResultRange
 	 * @return object DAOResultFactory containing IndividualSubscriptions
 	 */
 	function getAll($rangeInfo = null) {
@@ -445,7 +447,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 	 * @param $searchField int
 	 * @param $searchMatch string "is" or "contains" or "startsWith"
 	 * @param $search String to look in $searchField for
-	 * @param $dateField int 
+	 * @param $dateField int
 	 * @param $dateFrom String date to search from
 	 * @param $dateTo String date to search to
 	 * @return object DAOResultFactory containing matching IndividualSubscriptions
@@ -472,14 +474,14 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 	 * @param $journalId int
 	 * @param $check int Check using either start date, end date, or both (default)
 	 * @param $checkDate date (YYYY-MM-DD) Use this date instead of current date
-	 * @return int 
+	 * @return int
 	 */
 	function isValidIndividualSubscription($userId, $journalId, $check = SUBSCRIPTION_DATE_BOTH, $checkDate = null) {
 		if (empty($userId) || empty($journalId)) {
 			return false;
 		}
 
-		$today = $this->dateToDB(Core::getCurrentDate()); 
+		$today = $this->dateToDB(Core::getCurrentDate());
 
 		if ($checkDate == null) {
 			$checkDate = $today;
@@ -503,11 +505,11 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 			FROM	subscriptions s
 				JOIN subscription_types st ON (s.type_id = st.type_id)
 			WHERE	s.user_id = ?
-				AND s.journal_id = ? 
+				AND s.journal_id = ?
 				AND s.status = ' . SUBSCRIPTION_STATUS_ACTIVE . '
 				AND st.institutional = 0
 				AND ((st.non_expiring = 1) OR (st.non_expiring = 0 AND (' . $dateSql . ')))
-				AND (st.format = ' . SUBSCRIPTION_TYPE_FORMAT_ONLINE . ' 
+				AND (st.format = ' . SUBSCRIPTION_TYPE_FORMAT_ONLINE . '
 				OR st.format = ' . SUBSCRIPTION_TYPE_FORMAT_PRINT_ONLINE . ')',
 			array(
 				(int) $userId,
@@ -526,6 +528,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 	 * Retrieve active individual subscriptions matching a particular end date and journal ID.
 	 * @param $dateEnd string (YYYY-MM-DD)
 	 * @param $journalId int
+	 * @param $rangeInfo DBResultRange
 	 * @return object DAOResultFactory containing matching IndividualSubscriptions
 	 */
 	function getByDateEnd($dateEnd, $journalId, $rangeInfo = null) {
@@ -555,10 +558,10 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 
 	/**
 	 * Renew an individual subscription by dateEnd + duration of subscription type
-	 * if the individual subscription is expired, renew to current date + duration  
+	 * if the individual subscription is expired, renew to current date + duration
 	 * @param $individualSubscription IndividualSubscription
 	 * @return boolean
-	 */	
+	 */
 	function renewSubscription($individualSubscription) {
 		return $this->_renewSubscription($individualSubscription);
 	}
