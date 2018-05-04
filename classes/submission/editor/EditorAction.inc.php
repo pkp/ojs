@@ -75,7 +75,7 @@ class EditorAction extends SectionEditorAction {
 
 			// Add log
 			import('classes.article.log.ArticleLog');
-			ArticleLog::logEvent($request, $editorSubmission, ARTICLE_LOG_EDITOR_ASSIGN, 'log.editor.editorAssigned', array('editorName' => $sectionEditor->getFullName(), 'editorId' => $sectionEditorId));
+			ArticleLog::logEvent($request, $editorSubmission, ARTICLE_LOG_EDITOR_ASSIGN, 'log.editor.editorAssigned', array('editorName' => $sectionEditor->getFullName(), 'editorId' => $sectionEditorId, 'articleId' => $editorSubmission->getId()));
 			return true;
 		} else {
 			if (!$request->getUserVar('continued')) {
@@ -114,7 +114,7 @@ class EditorAction extends SectionEditorAction {
 		// Add a log entry before doing anything.
 		import('classes.article.log.ArticleLog');
 		import('classes.article.log.ArticleEventLogEntry');
-		ArticleLog::logEvent($request, $article, ARTICLE_LOG_EDITOR_EXPEDITE, 'log.editor.submissionExpedited', array('editorName' => $user->getFullName()));
+		ArticleLog::logEvent($request, $article, ARTICLE_LOG_EDITOR_EXPEDITE, 'log.editor.submissionExpedited', array('editorName' => $user->getFullName(), 'articleId' => $article->getId()));
 
 		// 1. Ensure that an editor is assigned.
 		$editAssignments =& $sectionEditorSubmission->getEditAssignments();
