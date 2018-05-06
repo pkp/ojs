@@ -75,15 +75,15 @@ class UserImportExportPlugin extends PKPUserImportExportPlugin {
 
 		switch ($command) {
 			case 'import':
-				$this->importUsers(file_get_contents($xmlFile), $journal, null);
+				$this->importUsers(file_get_contents($xmlFile), $journal, null, null);
 				return;
 			case 'export':
 				if ($xmlFile != '') {
 					if (empty($args)) {
-						file_put_contents($xmlFile, $this->exportAllUsers($journal, null));
+						file_put_contents($xmlFile, $this->exportAllUsers($journal, null, null));
 						return;
 					} else {
-						file_put_contents($xmlFile, $this->exportUsers($args, $journal, null));
+						file_put_contents($xmlFile, $this->exportUsers($args, $journal, null, null));
 						return;
 					}
 				}
