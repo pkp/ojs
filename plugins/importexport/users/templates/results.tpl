@@ -16,12 +16,12 @@
 		{/foreach}
 	</ul>
 {elseif $filterErrors}
-    <h2>{translate key="plugins.importexport.user.importExportErrors"}</h2>
-    <ul>
-        {foreach from=$filterErrors item=filterError}
-            <li>{$filterError|escape}</li>
-        {/foreach}
-    </ul>
+	<h2>{translate key="plugins.importexport.user.importExportErrors"}</h2>
+	<ul>
+		{foreach from=$filterErrors item=filterError}
+			<li>{$filterError|escape}</li>
+		{/foreach}
+	</ul>
 {else}
 	{translate key="plugins.importexport.users.importComplete"}
 {/if}
