@@ -52,7 +52,7 @@
 	</upgrade>
 
 	<upgrade minversion="2.4.0.0" maxversion="3.1.9.9">
-		<code function="migrateFirstAndLastNames" condition="return $installer->columnExists('users', 'first_name');" />
+		<data file="dbscripts/xml/upgrade/3.2.0_preupdate_user_author_names.xml" condition="return $installer->columnExists('users', 'first_name');" />
 	</upgrade>
 
 	<!-- PKP schema components -->
@@ -89,6 +89,11 @@
 
 	<upgrade minversion="2.4.0.0" maxversion="3.1.1.9">
 		<code function="migrateSRLocale" />
+	</upgrade>
+
+	<upgrade minversion="2.4.0.0" maxversion="3.1.9.9">
+		<!-- migrateUserAndAuthorNames should be after migrateSRLocale -->
+		<code function="migrateUserAndAuthorNames" condition="return $installer->tableExists('users_tmp');" />
 	</upgrade>
 
 	<upgrade minversion="2.4.0.0" maxversion="2.4.9.9">

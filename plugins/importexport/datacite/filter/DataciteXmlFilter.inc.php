@@ -247,7 +247,7 @@ class DataciteXmlFilter extends NativeExportFilter {
 				$authors = $article->getAuthors();
 				assert(!empty($authors));
 				foreach ($authors as $author) { /* @var $author Author */
-					$creators[] = $author->getFullName(true);
+					$creators[] = $author->getFullName(true, null, false);
 				}
 				break;
 			case isset($issue):

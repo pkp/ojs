@@ -2770,15 +2770,80 @@ class Upgrade extends Installer {
 	 * Migrate first and last user names as multilingual into the DB table user_settings.
 	 * @return boolean
 	 */
-	function migrateFirstAndLastNames() {
+	function migrateUserAndAuthorNames() {
 		$userDao = DAORegistry::getDAO('UserDAO');
 		import('lib.pkp.classes.identity.Identity'); // IDENTITY_SETTING_...
 		// the user names will be saved in the site's primary locale
-		$userDao->update("INSERT INTO user_settings (user_id, locale, setting_name, setting_value, setting_type) SELECT DISTINCT u.user_id, s.primary_locale, ?, u.first_name, 'string' FROM users u, site s", array(IDENTITY_SETTING_GIVENNAME));
-		$userDao->update("INSERT INTO user_settings (user_id, locale, setting_name, setting_value, setting_type) SELECT DISTINCT u.user_id, s.primary_locale, ?, u.last_name, 'string' FROM users u, site s", array(IDENTITY_SETTING_FAMILYNAME));
+		$userDao->update("INSERT INTO user_settings (user_id, locale, setting_name, setting_value, setting_type) SELECT DISTINCT u.user_id, s.primary_locale, ?, u.first_name, 'string' FROM users_tmp u, site s", array(IDENTITY_SETTING_GIVENNAME));
+		$userDao->update("INSERT INTO user_settings (user_id, locale, setting_name, setting_value, setting_type) SELECT DISTINCT u.user_id, s.primary_locale, ?, u.last_name, 'string' FROM users_tmp u, site s", array(IDENTITY_SETTING_FAMILYNAME));
 		// the author names will be saved in the submission's primary locale
-		$userDao->update("INSERT INTO author_settings (author_id, locale, setting_name, setting_value, setting_type) SELECT DISTINCT a.author_id, s.locale, ?, a.first_name, 'string' FROM authors a, submissions s WHERE s.submission_id = a.submission_id", array(IDENTITY_SETTING_GIVENNAME));
-		$userDao->update("INSERT INTO author_settings (author_id, locale, setting_name, setting_value, setting_type) SELECT DISTINCT a.author_id, s.locale, ?, a.last_name, 'string' FROM authors a, submissions s WHERE s.submission_id = a.submission_id", array(IDENTITY_SETTING_FAMILYNAME));
+		$userDao->update("INSERT INTO author_settings (author_id, locale, setting_name, setting_value, setting_type) SELECT DISTINCT a.author_id, s.locale, ?, a.first_name, 'string' FROM authors_tmp a, submissions s WHERE s.submission_id = a.submission_id", array(IDENTITY_SETTING_GIVENNAME));
+		$userDao->update("INSERT INTO author_settings (author_id, locale, setting_name, setting_value, setting_type) SELECT DISTINCT a.author_id, s.locale, ?, a.last_name, 'string' FROM authors_tmp a, submissions s WHERE s.submission_id = a.submission_id", array(IDENTITY_SETTING_FAMILYNAME));
+
+		// middle name, salutation and suffix will be migrated to the prefered public name
+		// user prefered public names will be inserted for each supported site locales
+		$siteDao = DAORegistry::getDAO('SiteDAO');
+		$site = $siteDao->getSite();
+		$supportedLocales = $site->getSupportedLocales();
+		$userResult = $userDao->retrieve("
+			SELECT user_id, first_name, last_name, middle_name, salutation, suffix FROM users_tmp
+			WHERE (middle_name IS NOT NULL AND middle_name <> '') OR
+			(salutation IS NOT NULL AND salutation <> '') OR
+			(suffix IS NOT NULL AND suffix <> '')
+		");
+		while (!$userResult->EOF) {
+			$row = $userResult->GetRowAssoc(false);
+			$userId = $row['user_id'];
+			$firstName = $row['first_name'];
+			$lastName = $row['last_name'];
+			$middleName = $row['middle_name'];
+			$salutation = $row['salutation'];
+			$suffix = $row['suffix'];
+			foreach ($supportedLocales as $siteLocale) {
+				$preferedPublicName = ($salutation != '' ? "$salutation " : '') . "$firstName " . ($middleName != '' ? "$middleName " : '') . $lastName . ($suffix != '' ? ", $suffix" : '');
+				if (AppLocale::isLocaleWithLastFirst($siteLocale)) {
+					$preferedPublicName = "$lastName, " . ($salutation != '' ? "$salutation " : '') . $firstName . ($middleName != '' ? " $middleName" : '');
+				}
+				$params = array((int) $userId, $siteLocale, $preferedPublicName);
+				$userDao->update("INSERT INTO user_settings (user_id, locale, setting_name, setting_value, setting_type) VALUES (?, ?, 'preferedPublicName', ?, 'string')", $params);
+			}
+			$userResult->MoveNext();
+		}
+		$userResult->Close();
+
+		// author prefered public names will be inserted for each submission locale also the title exists for
+		$authorResult = $userDao->retrieve("
+			SELECT author_id, first_name, last_name, middle_name, suffix FROM authors_tmp
+			WHERE (middle_name IS NOT NULL AND middle_name <> '') OR
+			(suffix IS NOT NULL AND suffix <> '')
+		");
+		while (!$authorResult->EOF) {
+			$row = $authorResult->GetRowAssoc(false);
+			$authorId = $row['author_id'];
+			$firstName = $row['first_name'];
+			$lastName = $row['last_name'];
+			$middleName = $row['middle_name'];
+			$suffix = $row['suffix'];
+			$localeResult = $siteDao->retrieve("SELECT ss.locale FROM submission_settings ss, authors_tmp a WHERE a.author_id = ? AND ss.submission_id = a.submission_id AND ss.setting_name = 'title' AND ss.setting_value <> ''", array((int) $authorId));
+			while (!$localeResult->EOF) {
+				$row = $localeResult->GetRowAssoc(false);
+				$locale = $row['locale'];
+				$preferedPublicName = "$firstName " . ($middleName != '' ? "$middleName " : '') . $lastName . ($suffix != '' ? ", $suffix" : '');
+				if (AppLocale::isLocaleWithLastFirst($siteLocale)) {
+					$preferedPublicName = "$lastName, " . $firstName . ($middleName != '' ? " $middleName" : '');
+				}
+				$params = array((int) $authorId, $locale, $preferedPublicName);
+				$userDao->update("INSERT INTO author_settings (author_id, locale, setting_name, setting_value, setting_type) VALUES (?, ?, 'preferedPublicName', ?, 'string')", $params);
+				$localeResult->MoveNext();
+			}
+			$localeResult->Close();
+			$authorResult->MoveNext();
+		}
+		$authorResult->Close();
+
+		// remove temporary table
+		$siteDao->update('DROP TABLE users_tmp');
+		$siteDao->update('DROP TABLE authors_tmp');
 		return true;
 	}
 
