@@ -194,7 +194,7 @@ class UserInstitutionalSubscriptionForm extends Form {
 		if ($subscription->getId()) {
 			$institutionalSubscriptionDao->updateObject($subscription);
 		} else {
-			$institutionalSubscriptionDao->insertSubscription($subscription);
+			$institutionalSubscriptionDao->insertObject($subscription);
 		}
 
 		$queuedPayment = $paymentManager->createQueuedPayment($this->request, PAYMENT_TYPE_PURCHASE_SUBSCRIPTION, $this->userId, $subscription->getId(), $subscriptionType->getCost(), $subscriptionType->getCurrencyCodeAlpha());
