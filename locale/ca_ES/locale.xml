@@ -909,7 +909,7 @@
 	<message key="user.register.noContextReviewerInterests">Si ha sol·licitat ser revisor/a en alguna revista introdueixi els seus temes d'interès, si us plau.</message>
 	<message key="user.role.subEditors">Editors/es de secció</message>
 	<message key="user.role.journalAssistant">Assistent/a de revista</message>
-	<message key="user.role.journalAssistants">Assistents/es de revista</message>
+	<message key="user.role.assistants">Assistents/es de revista</message>
 	<message key="issue.return">Tornar als detalls del número</message>
 	<message key="submission.event.submissionSubmitted">Article enviat</message>
 	<message key="search.results.orderBy">Ordenar resultats per</message>

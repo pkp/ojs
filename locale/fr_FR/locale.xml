@@ -999,7 +999,7 @@ La validation peut échouer sur les URL de recherche qui nécessitent des formul
 	<message key="about.onlineSubmissions.viewSubmissions">Voir vos soumissions en attente</message>
 	<message key="help.goToEditPage">Éditer {$sectionTitle}</message>
 	<message key="user.role.journalAssistant">Assistant</message>
-	<message key="user.role.journalAssistants">Assistants</message>
+	<message key="user.role.assistants">Assistants</message>
 	<message key="user.role.guestEditor">Rédacteur invité</message>
 	<message key="user.role.guestEditors">Rédacteurs invités</message>
 	<message key="installer.preInstallationInstructions"><![CDATA[<h4>Étapes précédant l'installation</h4>

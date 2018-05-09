@@ -194,7 +194,7 @@
 	<message key="user.role.subscriptionManagers">مدیران اشتراک</message>
 	<message key="user.role.assistant">دستیار</message>
 	<message key="user.role.journalAssistant">دستیار مجله</message>
-	<message key="user.role.journalAssistants">دستیاران مجله</message>
+	<message key="user.role.assistants">دستیاران مجله</message>
 	<!-- Common Issue Terms -->
 	<message key="issue.issue">شماره</message>
 	<message key="issue.issues">شماره‌ها</message>

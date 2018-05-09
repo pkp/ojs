@@ -71,7 +71,8 @@
 	<message key="manager.people.allSiteUsers">Enroll a User from this Site in this Journal</message>
 	<message key="manager.people.showNoRole">Show users with no role</message>
 	<message key="manager.people.allUsers">All Enrolled Users</message>
-	<message key="manager.people.confirmRemove">Remove this user from this journal? This action will unenroll the user from all roles within this journal.</message>
+	<message key="manager.people.confirmRemove">Are you sure you want to completely remove this user from this journal?</message>
+	<message key="manager.people.confirmRemoveAll">Are you sure you want to remove all role assignments for this user? This will remove their role assignments in every journal.</message>
 	<message key="manager.people.emailUsers.selectTemplate">Select a template</message>
 	<message key="manager.people.enrollExistingUser">Enroll an Existing User</message>
 	<message key="manager.people.enrollSyncJournal">With journal</message>
@@ -79,6 +80,8 @@
 	<message key="manager.people.mergeUsers.into.description">Select a user to whom to attribute the previous users' authorships, editing assignments, etc.</message>
 	<message key="manager.people.roleEnrollment">{$role} Enrollment</message>
 	<message key="manager.people.syncUserDescription">Enrollment synchronization will enroll all users enrolled in the specified role in the specified journal into the same role in this journal. This function allows a common set of users (e.g., Reviewers) to be synchronized between journals.</message>
+	<message key="manager.people.selectContextForRole">Assign roles in which journal?</message>
+	<message key="manager.people.selectContextForRole.required">Please select a journal to which you'd like to assign this user.</message>
 	<message key="manager.sections.abstractsNotRequired">Do not require abstracts</message>
 	<message key="manager.section.noSectionEditors"><![CDATA[There are no section editors yet.  Add this role to at least one user via Management > Settings > Users &amp; Roles first.]]></message>
 	<message key="manager.sections.assigned">This Section's Editors</message>

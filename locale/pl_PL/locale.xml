@@ -982,7 +982,7 @@ Sprawdzanie poprawności może nie działać w przypadku adresów URL, które wy
 	<message key="user.register.noContextReviewerInterests">Jeśli wysłałeś(aś) prośbę o możliwość recenzowania artykułów zgłoszonych do dowolnego czasopisma, podaj swoje zainteresowania.</message>
 	<message key="user.role.subEditors">Redaktorzy działów</message>
 	<message key="user.role.journalAssistant">Asystent czasopisma</message>
-	<message key="user.role.journalAssistants">Asystenci czasopisma</message>
+	<message key="user.role.assistants">Asystenci czasopisma</message>
 	<message key="user.role.guestEditor">Redaktor gościnny</message>
 	<message key="user.role.guestEditors">Redaktorzy gościnni</message>
 	<message key="search.results.orderBy">Porządkuj wyniki wg</message>

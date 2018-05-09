@@ -216,7 +216,7 @@
 	<message key="user.role.subEditors">Редактори розділів</message>
 	<message key="user.role.subscriptionManagers">Менеджери передплати</message>
 	<message key="user.role.journalAssistant">Асистент журналу</message>
-	<message key="user.role.journalAssistants">Асистенти журналу</message>
+	<message key="user.role.assistants">Асистенти журналу</message>
 
 
 	<!-- Common Issue Terms -->

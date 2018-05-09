@@ -217,7 +217,7 @@
 	<message key="user.role.subEditors">محررو الأقسام</message>
 	<message key="user.role.subscriptionManagers">مدراء الاشتراكات</message>
 	<message key="user.role.journalAssistant">مساعد المجلة</message>
-	<message key="user.role.journalAssistants">مساعدو المجلة</message>
+	<message key="user.role.assistants">مساعدو المجلة</message>
 
 	<!-- Common Issue Terms -->
 	<message key="issue.issue">إصدار</message>

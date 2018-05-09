@@ -215,7 +215,7 @@
 	<message key="user.role.subEditors">Osastotoimittajat</message>
 	<message key="user.role.subscriptionManagers">Tilaussihteerit</message>
 	<message key="user.role.journalAssistant">Avustaja</message>
-	<message key="user.role.journalAssistants">Avustajat</message>
+	<message key="user.role.assistants">Avustajat</message>
 	<!-- Common Issue Terms -->
 	<message key="issue.issue">Numero</message>
 	<message key="issue.issues">Numerot</message>

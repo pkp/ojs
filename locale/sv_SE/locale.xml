@@ -217,7 +217,7 @@
 	<message key="user.role.subEditors">Sektionsredaktörer</message>
 	<message key="user.role.subscriptionManagers">Prenumerationsansvariga</message>
 	<message key="user.role.journalAssistant">Redaktionssekreterare</message>
-	<message key="user.role.journalAssistants">Redaktionssekreterare</message>
+	<message key="user.role.assistants">Redaktionssekreterare</message>
 
 	<!-- Common Issue Terms -->
 	<message key="issue.issue">Nummer</message>

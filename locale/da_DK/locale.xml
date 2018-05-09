@@ -936,7 +936,7 @@ Konfigurationen af CLOCKSS-understøttelse for Open Journal Systems behøver ikk
 	<message key="user.noRoles.selectUsersWithoutRoles">Inkludér brugere uden nogen roller vedrørende dette tidsskrift.</message>
 	<message key="user.role.subEditors">Sektionsredaktører</message>
 	<message key="user.role.journalAssistant">Tidsskriftsassistent</message>
-	<message key="user.role.journalAssistants">Tidsskriftsassistenter</message>
+	<message key="user.role.assistants">Tidsskriftsassistenter</message>
 	<message key="context.current">Aktuelle tidsskrift:</message>
 	<message key="context.select">Skift til et andet tidsskrift:</message>
 	<message key="article.return">Tilbage til artikeldetaljer</message>

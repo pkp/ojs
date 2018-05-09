@@ -217,7 +217,7 @@
 	<message key="user.role.subEditors">Editor Bagian</message>
 	<message key="user.role.subscriptionManagers">Manajer Langganan</message>
 	<message key="user.role.journalAssistant">Asisten Jurnal</message>
-	<message key="user.role.journalAssistants">Asisten Jurnal</message>
+	<message key="user.role.assistants">Asisten Jurnal</message>
 
 	<!-- Common Issue Terms -->
 	<message key="issue.issue">Terbitan</message>

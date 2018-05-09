@@ -888,7 +888,7 @@ Postavljanje LOCKSS podrške za Open Journal Systems није потребно �
 	<message key="article.return">Повратак на детаље чланка</message>
 	<message key="user.role.subEditors">Уредници секција/рубрика</message>
 	<message key="user.role.journalAssistant">Асистент часописа</message>
-	<message key="user.role.journalAssistants">Асистенти часописа</message>
+	<message key="user.role.assistants">Асистенти часописа</message>
 	<message key="user.role.guestEditor">Гост уредник</message>
 	<message key="user.role.guestEditors">Гост уредници</message>
 	<message key="issue.return">Врати се на детаље броја</message>
