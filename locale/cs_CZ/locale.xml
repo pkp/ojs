@@ -1038,7 +1038,7 @@ Ověřování může selhat při vyhledávání URL, které vyžadují "posted f
 	<message key="user.register.noContextReviewerInterests">Pokud jste uvedli zájem o roli recenzenta v jakémkoli časopise, zadejte své zájmy.</message>
 	<message key="user.role.subEditors">Editoři sekcí</message>
 	<message key="user.role.journalAssistant">Sekretář časopisu</message>
-	<message key="user.role.journalAssistants">Sekretáři časopisů</message>
+	<message key="user.role.assistants">Sekretáři časopisů</message>
 	<message key="issue.return">Vrátit se na podrobnosti čísla</message>
 	<message key="submission.event.submissionSubmitted">Článek byl podán</message>
 	<message key="search.results.orderBy">Řadit výsledky podle</message>

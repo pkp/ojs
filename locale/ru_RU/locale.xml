@@ -217,7 +217,7 @@
 	<message key="user.role.subEditors">Редакторы разделов</message>
 	<message key="user.role.subscriptionManagers">Менеджеры по подписке</message>
 	<message key="user.role.journalAssistant">Ассистент журнала</message>
-	<message key="user.role.journalAssistants">Ассистенты журнала</message>
+	<message key="user.role.assistants">Ассистенты журнала</message>
 
 	<!-- Общие термины выпуска -->
 	<message key="issue.issue">Выпуск</message>

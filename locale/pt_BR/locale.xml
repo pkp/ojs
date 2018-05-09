@@ -1000,7 +1000,7 @@ Pode-se opcionalmente informar o motivo pelo qual está sendo desativado o cadas
 	<message key="user.register.otherContextRoles">Solicitar os seguintes papéis.</message>
 	<message key="user.register.noContextReviewerInterests">Se você pediu para ser um avaliador em qualquer revista, por favor, informe seus assuntos de interesse.</message>
 	<message key="user.role.journalAssistant">Assistente da Revista</message>
-	<message key="user.role.journalAssistants">Assitentes de Revista</message>
+	<message key="user.role.assistants">Assitentes de Revista</message>
 	<message key="issue.return">Voltar aos Detalhes da Edição</message>
 	<message key="search.results.orderBy">Ordenar resultados por</message>
 	<message key="search.results.orderBy.article">Título do Artigo</message>

@@ -217,7 +217,7 @@
 	<message key="user.role.subEditors">Section Editors</message>
 	<message key="user.role.subscriptionManagers">Subscription Managers</message>
 	<message key="user.role.journalAssistant">Assistant</message>
-	<message key="user.role.journalAssistants">Assistants</message>
+	<message key="user.role.assistants">Assistants</message>
 
 	<!-- Common Issue Terms -->
 	<message key="issue.issue">Issue</message>

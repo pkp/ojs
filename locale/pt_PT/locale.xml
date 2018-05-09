@@ -906,7 +906,7 @@ Pode-se opcionalmente informar o motivo pelo qual está sendo desactivado o regi
 	<message key="user.register.noContextReviewerInterests">Se solicitou ser um revisor em qualquer revista, insira os seus interesses de revisão.</message>
 	<message key="user.role.subEditors">Editores Secção</message>
 	<message key="user.role.journalAssistant">Assistente Editorial</message>
-	<message key="user.role.journalAssistants">Assistentes Editoriais</message>
+	<message key="user.role.assistants">Assistentes Editoriais</message>
 	<message key="issue.return">Voltar aos detalhes do número</message>
 	<message key="submission.event.submissionSubmitted">Artigo submetido</message>
 	<message key="search.results.orderBy">Ordenar resultados por</message>

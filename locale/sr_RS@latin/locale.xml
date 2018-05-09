@@ -853,7 +853,7 @@ Autori koji objavljuju u ovom časopisu pristaju na sledeće uslove:
 	<message key="article.return">Povratak na detalje članka</message>
 	<message key="user.role.subEditors">Urednici sekcija/rubrika</message>
 	<message key="user.role.journalAssistant">Asistent časopisa</message>
-	<message key="user.role.journalAssistants">Asistenti časopisa</message>
+	<message key="user.role.assistants">Asistenti časopisa</message>
 	<message key="user.role.guestEditor">Gost urednik</message>
 	<message key="user.role.guestEditors">Gost urednici</message>
 	<message key="issue.return">Vrati se na detalje broja</message>

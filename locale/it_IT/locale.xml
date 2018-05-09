@@ -1023,7 +1023,7 @@ Il processo di validazione pu&#x00F2; non funzionare sugli URL di ricerca che ri
 	<message key="journal.viewAllIssues">Visualizza tutti i numeri</message>
 	<message key="user.noRoles.selectUsersWithoutRoles">Includi utenti che non hanno un ruolo in questa rivista</message>
 	<message key="user.role.journalAssistant">Redattore</message>
-	<message key="user.role.journalAssistants">Redattori</message>
+	<message key="user.role.assistants">Redattori</message>
 	<message key="user.role.guestEditor">Guest editor</message>
 	<message key="user.role.guestEditors">Guest editor</message>
 	<message key="reviewer.article.selectRecommendation.byEditor">Imposta o modifica il parere del revisore</message>
