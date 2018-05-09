@@ -257,7 +257,7 @@ class NativeXmlArticleFilter extends NativeXmlSubmissionFilter {
 		$issue = null;
 		$issuesByIdentification = $issueDao->getIssuesByIdentification($context->getId(), $vol, $num, $year, $titles);
 		if ($issuesByIdentification->getCount() != 1) {
-			$deployment->addError(ASSOC_TYPE_SUBMISSION, $submission->getId(), __('plugins.importexport.native.import.error.issueIdentificationMatch', array('issueIdentification' => implode(',', $node->ownerDocument->saveXML($node)))));
+			$deployment->addError(ASSOC_TYPE_SUBMISSION, $submission->getId(), __('plugins.importexport.native.import.error.issueIdentificationMatch', array('issueIdentification' => $node->ownerDocument->saveXML($node))));
 		} else {
 			$issue = $issuesByIdentification->next();
 		}
