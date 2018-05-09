@@ -770,60 +770,6 @@ Submission URL: {$submissionUrl}<br />
 {$editorialContactSignature}<br />]]></body>
 		<description>Este correo electrónico del editor/a, o del editor/a de sección, notifica al autor/a que su envío se traslada a producción.</description>
 	</email_text>
-	<email_text key="GIFT_AVAILABLE">
-		<subject>{$giftNoteTitle}</subject>
-		<body><![CDATA[Estimado/a {$recipientFirstName},<br />
-<br />
-{$buyerFullName} Nos gustaría compartir un regalo con usted en {$giftJournalName}:<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-{$giftNote}<br />
-<br />
-<br />
-En breve recibirá un correo electrónico de seguimiento con los detalles de acceso y las instrucciones para obtener su regalo.<br />]]></body>
-		<description>Este correo electrónico notifica a un destinatario de un regalo que dicho regalo está disponible para su obtención.</description>
-	</email_text>
-	<email_text key="GIFT_USER_LOGIN">
-		<subject>Obtenga su regalo: detalles de acceso</subject>
-		<body><![CDATA[Estimado/a {$recipientFirstName},<br />
-<br />
-{$buyerFullName} Nos gustaría compartir un regalo con usted en {$giftJournalName}:<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-Para obtener su regalo solo tiene que ingresar en la página web de la revista {$giftUrl}<br />
-<br />
-Usuario: {$username}<br />
-<br />
-¡Esperamos que disfrute de su regalo!<br />
-<br />
-{$giftContactSignature}<br />]]></body>
-		<description>Este correo electrónico notifica a un destinatario de un regalo sus detalles de acceso.</description>
-	</email_text>
-	<email_text key="GIFT_USER_REGISTER">
-		<subject>Obtenga su regalo: detalles de acceso</subject>
-		<body><![CDATA[Estimado/a {$recipientFirstName},<br />
-<br />
-{$buyerFullName} Nos gustaría compartir un regalo con usted en {$giftJournalName}:<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-Para obtener su regalo solo tiene que ingresar en la página web de la revista {$giftUrl}<br />
-<br />
-Usuario: {$username}<br />
-Contraseña: {$password}<br />
-<br />
-Una vez conectado podrá cambiar su contraseña siempre que quiera.<br />
-<br />
-¡Esperamos que disfrute su regalo!<br />
-<br />
-{$giftContactSignature}<br />]]></body>
-		<description>Este correo electrónico notifica a un destinatario de un regalo los detalles para crear una nueva cuenta.</description>
-	</email_text>
 	<email_text key="NOTIFICATION_CENTER_DEFAULT">
 		<subject>Mensaje sobre {$contextName}</subject>
 		<body>Por favor, introduzca su mensaje.</body>

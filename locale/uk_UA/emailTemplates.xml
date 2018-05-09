@@ -935,46 +935,6 @@ URL подання: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><
 {$reviewGuidelines}]]></body>
 		<description>Цим листом редактор розділу просить рецензента виконати другий раунд рецензування подання або відмовитись від цієї роботи. У додатку до листа міститься рукопис, поданий до редакції. Цей шаблон використовується, якщо на кроці 2 Налаштування журналу обраний доступ рецензента "єдиним натисканням" (у іншому випадку див. REVIEW_REQUEST_SUBSEQUENT.)</description>
 	</email_text>
-
-	<email_text key="GIFT_USER_REGISTER">
-		<subject>Активуйте свій подарунок: Інформація для авторизації</subject>
-		<body><![CDATA[Шановний {$recipientFirstName},<br />
-<br />
-{$buyerFullName} бажає зробити Вам подарунок у виданні {$giftJournalName}:<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-Щоб активувати свій подарунок, будь ласка, зайдіть з даними, вказаними нижче, на веб-сайт журналу <a href="{$giftUrl}">{$giftUrl}</a><br />
-<br />
-Ваше ім'я користувача: {$username}<br />
-Ваш пароль: {$password}<br />
-<br />
-Після першого входу до системи, Ви у будь-який час можете змінити пароль.<br />
-<br />
-Сподіваємося, цей подарунок Вам сподобається!<br />
-<br />
-{$giftContactSignature}]]></body>
-		<description>Цим листом отримувачу подарунку повідомляються ім'я користувача та пароль для нового облікового запису.</description>
-	</email_text>
-	<email_text key="GIFT_USER_LOGIN">
-		<subject>Активуйте свій подарунок: Інформація для авторизації</subject>
-		<body><![CDATA[Шановний {$recipientFirstName},<br />
-<br />
-{$buyerFullName} бажає зробити Вам подарунок у виданні {$giftJournalName}:<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-Щоб активувати свій подарунок, будь ласка, перейдіть на сторінку веб-сайту журналу <a href="{$giftUrl}">{$giftUrl}</a><br />
-<br />
-Ваше ім'я користувача: {$username}<br />
-<br />
-Сподіваємося, цей подарунок Вам сподобається!<br />
-<br />
-{$giftContactSignature}]]></body>
-		<description>Цим листом отримувачу подарунку нагадуються його ім'я користувача та пароль.</description>
-	</email_text>
 	<email_text key="REVISED_VERSION_NOTIFY">
 		<subject>Перероблена версія вивантажена</subject>
 		<body><![CDATA[{$editorialContactName}:<br />

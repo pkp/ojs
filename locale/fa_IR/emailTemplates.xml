@@ -846,61 +846,6 @@ Subscription Type:<br />
 {$userFirstName}<br />
 ویراستار, {$contextName}]]></body>
 	</email_text>
-	<email_text key="GIFT_AVAILABLE">
-		<subject>{$giftNoteTitle}</subject>
-		<body><![CDATA[سلام {$recipientFirstName},<br />
-<br />
-{$buyerFullName}  اشتراک نشریه {$giftJournalName} را برای شما هدیه خریده است‫: ‬<br />
-{$giftDetails}<br />
-<br />
-{$giftNote}<br />
-<br />
-‎ایمیل دیگری حاوی اطلاعات لاگ این به نشریه و دریافت هدیه اشتراک شما برایتان فرستاده شده‫.‬<br />
-‎امیدواریم که از دریافت این هدیه لذت ببرید‫.‬<br />
-<br />
-<br />
-{$giftContactSignature}]]></body>
-		<description>این ایمیل به دریافت کننده هدیه اطلاع میدهد که هدیه خریده شده و آماده دریافت است‫.‬</description>
-	</email_text>
-	<email_text key="GIFT_USER_REGISTER">
-		<subject>دریافت هدیه‫:‬ اطلاعات ورود</subject>
-		<body><![CDATA[سلام {$recipientFirstName},<br />
-<br />
-{$buyerFullName}  اشتراک نشریه {$giftJournalName} را برای شما هدیه خریده است‫: ‬<br />
-<br />
-{$giftDetails}<br />
-<br />
-‎برای دریافت هدیه لطفا با اسم و رمز زیر در سایت ما به آدرس<a href="{$giftUrl}">{$giftUrl}</a>  لاگ این کنید‫.‬<br />
-<br />
-‎اسم ورود: {$username}<br />
-‎رمز ورود: {$password}<br />
-<br />
-‎بعد از ورود شما میتوانید رمزتان را هر موقعی خواستید تغییر دهید‫.‬<br />
-<br />
-‎امیدواریم که از دریافت این هدیه لذت ببرید‫.‬<br />
-<br />
-{$giftContactSignature}]]></body>
-		<description>این ایمیل حاوی اطلاعات حساب جدید کاربری برای دریافت کننده هدیه اشتراک است‫.‬</description>
-	</email_text>
-	<email_text key="GIFT_USER_LOGIN">
-		<subject>دریافت هدیه‫:‬ اطلاعات ورود</subject>
-		<body><![CDATA[سلام {$recipientFirstName},<br />
-<br />
-{$buyerFullName}  اشتراک نشریه {$giftJournalName} را برای شما هدیه خریده است‫: ‬<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-‎برای دریافت هدیه لطفا با اسم و رمز زیر در سایت ما به آدرس<a href="{$giftUrl}">{$giftUrl}</a>  لاگ این کنید‫.‬<br />
-<br />
-‎اسم ورود: {$username}<br />
-<br />
-‎امیدواریم که از دریافت این هدیه لذت ببرید‫.‬<br />
-<br />
-<br />
-{$giftContactSignature}]]></body>
-		<description>این ایمیل حاوی اطلاعات حساب جدید کاربری برای دریافت کننده هدیه اشتراک است‫.‬</description>
-	</email_text>
 	<email_text key="EDITOR_DECISION_INITIAL_DECLINE">
 		<subject>تصمیم دبیر</subject>
 		<body><![CDATA[{$authorName}:<br />

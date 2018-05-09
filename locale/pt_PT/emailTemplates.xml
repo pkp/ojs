@@ -968,64 +968,6 @@ URL da submissão : {$submissionUrl}<br />
 {$editorialContactSignature}<br />]]></body>
 		<description>Este e-mail do Editor ou Editor de Secção para o Autor notifica-o que a sua submissão foi enviada para produção.</description>
 	</email_text>
-	<email_text key="GIFT_AVAILABLE">
-		<subject>{$giftNoteTitle}</subject>
-		<body><![CDATA[Cara(o) {$recipientFirstName},<br />
-<br />
-{$buyerFullName} gostaria de partilhar uma prenda consigo em {$giftJournalName}:<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-{$giftNote}<br />
-<br />
-<br />
-Receberá um e-mail de follow-up, o qual inclui os detalhes do login e instruções para aceder à sua prenda.<br />
-<br />
-Esperamos que goste da sua prenda!<br />
-<br />
-{$giftContactSignature}<br />]]></body>
-		<description>Este e-mail notifica um destinatário da prenda que a sua prenda foi comprada e já está disponível.</description>
-	</email_text>
-	<email_text key="GIFT_USER_LOGIN">
-		<subject>Acesso à sua prenda: Detalhes do login</subject>
-		<body><![CDATA[Cara(o) {$recipientFirstName},<br />
-<br />
-{$buyerFullName} gostaria de partilhar uma prenda consigo em {$giftJournalName}:<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-Para ter acesso à sua prenda, por favor faça login no portal da revista <a href="{$giftUrl}">{$giftUrl}</a><br />
-<br />
-Nome de utilizador: {$username}<br />
-<br />
-Esperamos que goste da prenda!<br />
-<br />
-{$giftContactSignature}<br />]]></body>
-		<description>Este e-mail notifica o destinatário da prenda sobre os detalhes do login.</description>
-	</email_text>
-	<email_text key="GIFT_USER_REGISTER">
-		<subject>Acesso à sua prenda: Detalhes do login</subject>
-		<body><![CDATA[Cara(o) {$recipientFirstName},<br />
-<br />
-{$buyerFullName} gostaria de partilhar uma prenda em {$giftJournalName}:<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-Para aceder à sua prenda, por favor faça login no portal da revista em <a href="{$giftUrl}">{$giftUrl}</a><br />
-<br />
-Nome de utilizador: {$username}<br />
-A sua senha: {$password}<br />
-<br />
-Assim que tenha acedido ao portal, poderá modificar a sua senha em qualquer altura.<br />
-<br />
-Esperamos que goste da sua prenda!<br />
-<br />
-{$giftContactSignature}<br />]]></body>
-		<description>Este e-mail notifica um destinatário sobre os detalhes de login para uma nova conta.</description>
-	</email_text>
 	<email_text key="NOTIFICATION_CENTER_DEFAULT">
 		<subject>Uma mensagem relativa {$contextName}</subject>
 		<body>Por favor, insira a sua mensagem.</body>

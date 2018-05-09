@@ -873,64 +873,6 @@ Webová adresa příspěvku: {$submissionUrl}<br />
 {$editorialContactSignature}<br />]]></body>
 		<description>Tento e-mail od editora nebo editora sekce autorovi oznamuje, že jejich podání je odesláno do produkční fáze.</description>
 	</email_text>
-	<email_text key="GIFT_AVAILABLE">
-		<subject>{$giftNoteTitle}</subject>
-		<body><![CDATA[Vážený(á) {$recipientFirstName},<br />
-<br />
-{$buyerFullName} by vám rád dal dar v časopise {$giftJournalName}:<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-{$giftNote}<br />
-<br />
-<br />
-V následujícím emailu dostanete podrobnosti včetně detailu o loginu včetně pokynů, jak si dar převzít.<br />
-<br />
-Doufáme, že vám dárek udělá radost!<br />
-<br />
-{$giftContactSignature}<br />]]></body>
-		<description>Tento e-mail oznamuje příjemci daru, že byl zakoupen a je k dispozici k vyzvednutí.</description>
-	</email_text>
-	<email_text key="GIFT_USER_LOGIN">
-		<subject>Vyzvednutí dárku: Detaily loginu</subject>
-		<body><![CDATA[Vážený(á) {$recipientFirstName},<br />
-<br />
-{$buyerFullName} by s vámi rád sdílel(a) dárek v rámci časopisu {$giftJournalName}:<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-K vyzvednutí vašeho dárku se, prosím, zalogujte na webových stránkách časopisu <a href="{$giftUrl}">{$giftUrl}</a><br />
-<br />
-Vaše uživatelské jméno je: {$username}<br />
-<br />
-Doufáme, že váš dárek potěší!<br />
-<br />
-{$giftContactSignature}<br />]]></body>
-		<description>Tento e-mail sděluje příjemci daru jeho přihlašovací údaje.</description>
-	</email_text>
-	<email_text key="GIFT_USER_REGISTER">
-		<subject>Vyzvednutí dárku: Detaily loginu</subject>
-		<body><![CDATA[Vážený(á) {$recipientFirstName},<br />
-<br />
-{$buyerFullName} by s vámi rád sdílel dárek v rámci časopisu {$giftJournalName}:<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-K vyzvednutí dárku se, prosím, zalogujte na stránkách časopisu <a href="{$giftUrl}">{$giftUrl}</a><br />
-<br />
-Vaše uživatelské jméno: {$username}<br />
-Vaše heslo: {$password}<br />
-<br />
-Jakmile se zalogujete, můžete kdykoliv změnit heslo.<br />
-<br />
-Doufáme, že vás dárek potěší!<br />
-<br />
-{$giftContactSignature}<br />]]></body>
-		<description>Tento e-mail oznamuje příjemci daru své přihlašovací údaje k novému účtu.</description>
-	</email_text>
 	<email_text key="NOTIFICATION_CENTER_DEFAULT">
 		<subject>Zpráva týkající se {$contextName}</subject>
 		<body>Vložte, prosím, vaši zprávu.</body>
