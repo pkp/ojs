@@ -51,7 +51,7 @@ class IssueService extends PKPBaseEntityPropertyService {
 	public function getIssues($contextId, $args = array()) {
 		$issueListQB = $this->_buildGetIssuesQueryObject($contextId, $args);
 		$issueListQO = $issueListQB->get();
-		$range = new DBResultRange($args['count'], null, $args['offset']);
+		$range = $this->getRangeByArgs($args);
 		$issueDao = DAORegistry::getDAO('IssueDAO');
 		$result = $issueDao->retrieveRange($issueListQO->toSql(), $issueListQO->getBindings(), $range);
 		$queryResults = new DAOResultFactory($result, $issueDao, '_fromRow');
