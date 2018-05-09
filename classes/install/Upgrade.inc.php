@@ -2780,8 +2780,8 @@ class Upgrade extends Installer {
 		$userDao->update("INSERT INTO author_settings (author_id, locale, setting_name, setting_value, setting_type) SELECT DISTINCT a.author_id, s.locale, ?, a.first_name, 'string' FROM authors_tmp a, submissions s WHERE s.submission_id = a.submission_id", array(IDENTITY_SETTING_GIVENNAME));
 		$userDao->update("INSERT INTO author_settings (author_id, locale, setting_name, setting_value, setting_type) SELECT DISTINCT a.author_id, s.locale, ?, a.last_name, 'string' FROM authors_tmp a, submissions s WHERE s.submission_id = a.submission_id", array(IDENTITY_SETTING_FAMILYNAME));
 
-		// middle name, salutation and suffix will be migrated to the prefered public name
-		// user prefered public names will be inserted for each supported site locales
+		// middle name, salutation and suffix will be migrated to the preferred public name
+		// user preferred public names will be inserted for each supported site locales
 		$siteDao = DAORegistry::getDAO('SiteDAO');
 		$site = $siteDao->getSite();
 		$supportedLocales = $site->getSupportedLocales();
@@ -2800,18 +2800,18 @@ class Upgrade extends Installer {
 			$salutation = $row['salutation'];
 			$suffix = $row['suffix'];
 			foreach ($supportedLocales as $siteLocale) {
-				$preferedPublicName = ($salutation != '' ? "$salutation " : '') . "$firstName " . ($middleName != '' ? "$middleName " : '') . $lastName . ($suffix != '' ? ", $suffix" : '');
+				$preferredPublicName = ($salutation != '' ? "$salutation " : '') . "$firstName " . ($middleName != '' ? "$middleName " : '') . $lastName . ($suffix != '' ? ", $suffix" : '');
 				if (AppLocale::isLocaleWithLastFirst($siteLocale)) {
-					$preferedPublicName = "$lastName, " . ($salutation != '' ? "$salutation " : '') . $firstName . ($middleName != '' ? " $middleName" : '');
+					$preferredPublicName = "$lastName, " . ($salutation != '' ? "$salutation " : '') . $firstName . ($middleName != '' ? " $middleName" : '');
 				}
-				$params = array((int) $userId, $siteLocale, $preferedPublicName);
-				$userDao->update("INSERT INTO user_settings (user_id, locale, setting_name, setting_value, setting_type) VALUES (?, ?, 'preferedPublicName', ?, 'string')", $params);
+				$params = array((int) $userId, $siteLocale, $preferredPublicName);
+				$userDao->update("INSERT INTO user_settings (user_id, locale, setting_name, setting_value, setting_type) VALUES (?, ?, 'preferredPublicName', ?, 'string')", $params);
 			}
 			$userResult->MoveNext();
 		}
 		$userResult->Close();
 
-		// author prefered public names will be inserted for each submission locale also the title exists for
+		// author preferred public names will be inserted for each submission locale also the title exists for
 		$authorResult = $userDao->retrieve("
 			SELECT author_id, first_name, last_name, middle_name, suffix FROM authors_tmp
 			WHERE (middle_name IS NOT NULL AND middle_name <> '') OR
@@ -2828,12 +2828,12 @@ class Upgrade extends Installer {
 			while (!$localeResult->EOF) {
 				$row = $localeResult->GetRowAssoc(false);
 				$locale = $row['locale'];
-				$preferedPublicName = "$firstName " . ($middleName != '' ? "$middleName " : '') . $lastName . ($suffix != '' ? ", $suffix" : '');
+				$preferredPublicName = "$firstName " . ($middleName != '' ? "$middleName " : '') . $lastName . ($suffix != '' ? ", $suffix" : '');
 				if (AppLocale::isLocaleWithLastFirst($siteLocale)) {
-					$preferedPublicName = "$lastName, " . $firstName . ($middleName != '' ? " $middleName" : '');
+					$preferredPublicName = "$lastName, " . $firstName . ($middleName != '' ? " $middleName" : '');
 				}
-				$params = array((int) $authorId, $locale, $preferedPublicName);
-				$userDao->update("INSERT INTO author_settings (author_id, locale, setting_name, setting_value, setting_type) VALUES (?, ?, 'preferedPublicName', ?, 'string')", $params);
+				$params = array((int) $authorId, $locale, $preferredPublicName);
+				$userDao->update("INSERT INTO author_settings (author_id, locale, setting_name, setting_value, setting_type) VALUES (?, ?, 'preferredPublicName', ?, 'string')", $params);
 				$localeResult->MoveNext();
 			}
 			$localeResult->Close();

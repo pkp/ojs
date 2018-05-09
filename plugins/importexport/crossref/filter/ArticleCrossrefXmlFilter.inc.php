@@ -179,7 +179,7 @@ class ArticleCrossrefXmlFilter extends IssueCrossrefXmlFilter {
 		$galleys = $articleGalleyDao->getBySubmissionId($submission->getId());
 		// All full-texts, PDF full-texts and remote galleys for text-mining and as-crawled URL
 		$submissionGalleys = $pdfGalleys = $remoteGalleys = array();
-		// prefered PDF full-text for the as-crawled URL
+		// preferred PDF full-text for the as-crawled URL
 		$pdfGalleyInArticleLocale = null;
 		// get immediatelly also supplementary files for component list
 		$componentGalleys = array();
