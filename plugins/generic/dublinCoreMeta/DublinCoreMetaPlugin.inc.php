@@ -64,7 +64,7 @@ class DublinCoreMetaPlugin extends GenericPlugin {
 		}
 
 		$i=0;
-		foreach (explode(', ', $article->getAuthorString()) as $author) {
+		foreach (explode(__('common.commaListSeparator'), $article->getAuthorString()) as $author) {
 			$templateMgr->addHeader('dublinCoreAuthor' . $i++, '<meta name="DC.Creator.PersonalName" content="' . htmlspecialchars($author) . '"/>');
 		}
 
