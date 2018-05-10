@@ -1025,8 +1025,6 @@ Vahvistaminen saattaa epäonnistua sellaisten haun URL-osoitteiden kohdalla, jot
 
 
 	<!-- Notification Types -->
-	<message key="notification.mailListDescription">Anna sähköpostiosoitteesi saadaksesi välittömästi ilmoituksen aina, kun julkaisuun lisätään tärkeää uutta sisältöä.</message>
-	<message key="notification.notificationsPublicDescription"><![CDATA[Tältä sivulta näet tähän julkaisuun liittyvät tärkeät päivitykset, kuten uuden numeron julkaisemisen tai tiedotteita. Voit tilata nämä ilmoitukset RSS-syötteinä (klikkaamalla oikealla olevia kuvia) tai <a href="{$emailUrl}">sähköpostiisi.</a>]]></message>
 
 	<message key="notification.type.articleSubmitted">Uusi artikkeli, "{$title}", on lähetetty.</message>
 	<message key="notification.type.editing">Toimittamiseen liittyvät tapahtumat</message>

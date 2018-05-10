@@ -745,8 +745,6 @@
 	<message key="rt.thisJournal">جستجوی مجله</message>
 	<message key="rt.context.authorTermsDescription">در مورد مقالات با بیش از یک نویسنده تمام نام ها را در حالت چک خورده باقی بگذارید تا  در مورد کارهای مشترک آن‌ها جستجو شود. میتوانید هر بار یکی را جستجو کنید. برای اطلاع بیشتر در مورد منابع مورد جستجو بر روی «درباره» کلیک کنید. این منابع به خاطر مرتبط بودن آن‌ها و دسترسی آزاد به آن‌ها انتخاب شده اند.</message>
 	<!-- Notification Types -->
-	<message key="notification.mailListDescription">آدرس ایمیل خود را وارد کنید تا بدین وسیله از چاپ مطالب جدید باخبر شوید.</message>
-	<message key="notification.notificationsPublicDescription">این صفحه نشان دهنده موارد مهم به‌روزرسانی می‌باشد که در این مجله اتفاق افتاده است مانند شماره‌های جدید مجله و یا اطلاعیه‌ها. می‌توانید از طریق RSS برای این اطلاع‌رسانی‌ها ثبت‌نام کنید. برای این کار بر روی تصویر سمت راست کلیک کنید. و یا از <![CDATA[  <a href="{$emailUrl}">through email.</a>]]></message>
 	<message key="notification.type.articleSubmitted">یک مقاله جدید، "{$title}"، ارسال شد.</message>
 	<message key="notification.type.editing">ویرایش رویدادها</message>
 	<message key="notification.type.submissionSubmitted">یک مقاله با عنوان  "{$title}" ارسال شده است</message>

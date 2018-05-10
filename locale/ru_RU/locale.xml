@@ -1033,8 +1033,6 @@
 
 
 	<!-- Типы уведомлений -->
-	<message key="notification.mailListDescription">Введите ваш адрес электронной почты, чтобы моментально получать уведомления о добавлении нового контента в журнал.</message>
-	<message key="notification.notificationsPublicDescription">На этой странице показан список важных обновлений, связанных с этим журналом, таких как выход новых выпусков или объявления. Вы можете подписаться на эти уведомления через ленты RSS (щелкнув на значках справа) или <![CDATA[  <a href="{$emailUrl}">по электронной почте.</a>]]></message>
 
 	<message key="notification.type.articleSubmitted">Новая статья «{$title}» была отправлена.</message>
 	<message key="notification.type.editing">События редактирования</message>

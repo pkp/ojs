@@ -1030,8 +1030,6 @@
 
 
 	<!-- Notification Types -->
-	<message key="notification.mailListDescription">أدخل عنوان بريدك الالكتروني لتتلقى إشعارات آنية عن المحتويات الهامة الجديدة المضافة إلى المجلة.</message>
-	<message key="notification.notificationsPublicDescription">هذه الصفحة تظهر التحديثات الهامة المتعلقة بهذه المجلة، مثل الإصدارات والإعلانات الجديدة. بإمكانك الاشتراك للحصول على تلك الاشعارات عبر مغذي RSS (عبر النقر على الصورة يساراً)، أو <![CDATA[  <a href="{$emailUrl}">عبر البريد الالكتروني.</a>]]></message>
 
 	<message key="notification.type.articleSubmitted">تم تقديم مؤلَّف جديد بعنوان "{$title}".</message>
 	<message key="notification.type.editing">أحداث التحرير</message>

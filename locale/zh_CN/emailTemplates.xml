@@ -24,31 +24,6 @@
 {$principalContactSignature}]]></body>
 		<description>这封电子邮件是发送给需要这种类型通知的注册用户。</description>
 	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST">
-		<subject>来自{$siteTitle}的新信息</subject>
-		<body><![CDATA[您有一条来自{$siteTitle}的新信息:<br />
---<br />
-{$notificationContents}<br />
-<br />
-链接: {$url}<br />
---<br />
-<br />
-如果您想停止接收电子邮件通知,前往{$unsubscribeLink}输入您的邮件地址和密码。<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>这封电子邮件是发送给通知邮件列表中的未注册用户。</description>
-	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
-		<subject>欢迎来到{$siteTitle}邮件列表!</subject>
-		<body><![CDATA[您已签署接收来自{$siteTitle}的通知。<br />
-<br />
-请点击链接确认您的请求并把你的邮件地址添加到邮件列表:{$confirmLink}<br />
-<br />
-如果您想停止接收邮件通知，请前往{$unsubscribeLink}<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>这封电子邮件是发送给刚刚从通知邮件列表中注册的未注册用户.</description>
-	</email_text>
 	<email_text key="PASSWORD_RESET_CONFIRM">
 		<subject>密码重置确认</subject>
 		<body><![CDATA[我们收到您的请求，将重新设定您在{$siteTitle}网站的密码。<br />

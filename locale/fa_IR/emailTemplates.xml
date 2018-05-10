@@ -675,37 +675,11 @@ jhvdo hkrqh: {$expiryDate}<br />
 <br />
 {$principalContactSignature}]]></body>
 	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST">
-		<subject>فرم اطلاع رسانی جدید {$siteTitle}</subject>
-		<body><![CDATA[یک فرم اطلاع رسانی جدید از {$siteTitle} دارید<br />
---<br />
-{$notificationContents}<br />
-<br />
-لینک: {$url}<br />
---<br />
-<br />
-اگر دیگر مایل نیستید این ایمیل های اطلاع رسانی را دریافت کنید، لطفا به آدرس {$unsubscribeLink} رفته و آدرس ایمیل . رمز خود را وارد کنید.<br />
-<br />
-<br />
-{$principalContactSignature}]]></body>
-	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
-		<subject>به لیست ایمیلی {$siteTitle} خوش آمدید</subject>
-		<body><![CDATA[شما جهت دریافت اطلاع رسانی از {$siteTitle} ثبت نام کرده اید.<br />
-<br />
-لطفا بر روی این لینک کلیک کنید تا تقاضای خود را تایید کرده آدرس ایمیل خود را به لیست اضافه کنید:<br />
-{$confirmLink}<br />
-<br />
-چنانچه دیگر مایل به دریافت ایمیل اطلاع رسانی نیستید، لطفا به آدرس {$unsubscribeLink} مراجعه کنید.<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description></description>
-	</email_text>
 	<email_text key="EDITOR_DECISION_ACCEPT">
 		<subject>تصمیم دبیر</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-در مورد مقاله ارسالی شما (&quot;{$submissionTitle}&quot;) در {$contextName} تصمصم نهایی اتخاذ شده است.<br /> 
+در مورد مقاله ارسالی شما (&quot;{$submissionTitle}&quot;) در {$contextName} تصمصم نهایی اتخاذ شده است.<br />
 <br />
 تصمیم نهایی: پذیرش مقاله ارسالی<br />
 <br />
@@ -716,7 +690,7 @@ jhvdo hkrqh: {$expiryDate}<br />
 		<subject>تصمیم دبیر</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-در مورد مقاله ارسالی شما (&quot;{$submissionTitle}&quot;) در {$contextName} تصمصم نهایی اتخاذ شده است.<br /> 
+در مورد مقاله ارسالی شما (&quot;{$submissionTitle}&quot;) در {$contextName} تصمصم نهایی اتخاذ شده است.<br />
 <br />
 تصمیم : مقاله ارسالی نیاز به انجام اصلاحات دارد<br />
 <br />
@@ -727,7 +701,7 @@ jhvdo hkrqh: {$expiryDate}<br />
 		<subject>تصمیم دبیر</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-در مورد مقاله ارسالی شما (&quot;{$submissionTitle}&quot;) در {$contextName} تصمصم نهایی اتخاذ شده است.<br /> 
+در مورد مقاله ارسالی شما (&quot;{$submissionTitle}&quot;) در {$contextName} تصمصم نهایی اتخاذ شده است.<br />
 <br />
 تصمیم نهایی: ارسال دوباره برای داوری<br />
 <br />
@@ -738,7 +712,7 @@ jhvdo hkrqh: {$expiryDate}<br />
 		<subject>تصمیم دبیر</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-در مورد مقاله ارسالی شما (&quot;{$submissionTitle}&quot;) در {$contextName} تصمصم نهایی اتخاذ شده است.<br /> 
+در مورد مقاله ارسالی شما (&quot;{$submissionTitle}&quot;) در {$contextName} تصمصم نهایی اتخاذ شده است.<br />
 <br />
 تصمیم نهایی: عدم پذیرش مقاله ارسالی<br />
 <br />
@@ -850,7 +824,7 @@ Subscription Type:<br />
 		<subject>تصمیم دبیر</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-در مورد مقاله ارسالی شما (&quot;{$submissionTitle}&quot;) در {$contextName} تصمصم نهایی اتخاذ شده است.<br /> 
+در مورد مقاله ارسالی شما (&quot;{$submissionTitle}&quot;) در {$contextName} تصمصم نهایی اتخاذ شده است.<br />
 <br />
 تصمیم نهایی: عدم پذیرش<br />
 <br />
@@ -861,7 +835,7 @@ Subscription Type:<br />
 		<subject>تصمیم دبیر</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
-در مورد مقاله ارسالی شما (&quot;{$submissionTitle}&quot;) در {$contextName} تصمصم نهایی اتخاذ شده است.<br /> 
+در مورد مقاله ارسالی شما (&quot;{$submissionTitle}&quot;) در {$contextName} تصمصم نهایی اتخاذ شده است.<br />
 <br />
 تصمیم : ارسال به داور خارجی<br />
 <br />
@@ -874,7 +848,7 @@ Subscription Type:<br />
 		<subject>تصمیم دبیر</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
- روند داوری مقاله ارسالی شما (&quot;{$submissionTitle}&quot;)  تکمیل شده و به واحد انتشار ارسال شده است.<br /> 
+ روند داوری مقاله ارسالی شما (&quot;{$submissionTitle}&quot;)  تکمیل شده و به واحد انتشار ارسال شده است.<br />
 <br />
 مشاهده وضعیت مقاله ارسالی: {$submissionUrl}<br />
 <br />
@@ -885,7 +859,7 @@ Subscription Type:<br />
 		<subject>توصیه دبیر</subject>
 		<body><![CDATA[{$editors}:<br />
 <br />
-توصیه اینجانب در مورد مقاله ارسالی (&quot;{$submissionTitle}&quot;) در {$contextName} ، {$recommendation} می باشد.<br /> 
+توصیه اینجانب در مورد مقاله ارسالی (&quot;{$submissionTitle}&quot;) در {$contextName} ، {$recommendation} می باشد.<br />
 <br />
 {$editorialContactSignature}<br />]]></body>
 		<description>ایمیلی از طرف دبیر یا دبیر بخش به دبیر نهایی تصمیم گیرنده برای اطلاع از توصیه برای مقاله ارسالی</description>

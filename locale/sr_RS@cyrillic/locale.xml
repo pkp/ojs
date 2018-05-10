@@ -827,8 +827,6 @@ Postavljanje LOCKSS podrške za Open Journal Systems није потребно �
 	<message key="installer.installApplication">Инсталирај OJS</message>
 	<message key="installer.upgradeApplication">Надогради OJS</message>
 	<message key="rt.admin.validateUrls.description"><![CDATA[Потенцијалоно погрешни URL-ovi за сајтове за претрагу су приказани ниже.<бр />Потребно је да ручно проверите сваки URL пошто ово није 100% ипсравно.]]></message>
-	<message key="notification.mailListDescription">Унесите Вашу имејл адресу како бисте примали тренутна обавештења о важним новим адржајима у часопису.</message>
-	<message key="notification.notificationsPublicDescription"><![CDATA[Ова страница приказује важне надоградње везане за часопис, као што су нови бројеви или обавештења (вести). Можете се претплатити на ова обавештења преко RSS-a (кликом на слику десно) ili <a href="{$emailUrl}">путем имејла.</a>]]></message>
 	<message key="notification.type.editing">Догађаји у уредништву</message>
 	<message key="notification.type.editorDecisionComment">Остављен је коментар на уредникову одлуку "{$param}".</message>
 	<message key="notification.type.reviewerFormComment">Рецензија преко рецензентске форме је предата за "{$param}".</message>

@@ -1030,8 +1030,6 @@ Validasi mungkin gagal pada URL yang mensyaratkan form data yang dikirimkan.]]><
 
 
 	<!-- Notification Types -->
-	<message key="notification.mailListDescription">Masukkan alamat email Anda untuk menerima notifikasi langsung tentang konten baru yang ditambahkan ke jurnal.</message>
-	<message key="notification.notificationsPublicDescription">Halaman ini menampilkan update penting seputar jurnal ini seperti terbitan baru atau pengumuman.  Anda dapat memperoleh pemberitahuan melalui RSS feeds (klik gambar di samping), atau <![CDATA[  <a href="{$emailUrl}">melalui email.</a>]]></message>
 
 	<message key="notification.type.articleSubmitted">Naskah baru, "{$title}", telah diserahkan.</message>
 	<message key="notification.type.editing">Event Editing</message>

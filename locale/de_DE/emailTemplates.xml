@@ -23,31 +23,6 @@ Link: {$url}<br />
 {$principalContactSignature}]]></body>
 		<description>Diese E-Mail wird an angemeldete Benutzer/innen geschickt, die sich für diese Art der Benachrichtigung angemeldet haben.</description>
 	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST">
-		<subject>Neue Benachrichtigung von {$siteTitle}</subject>
-		<body><![CDATA[Sie haben eine neue Benachrichtigung von {$siteTitle}:<br />
---<br />
-{$notificationContents}<br />
-<br />
-Link: {$url}<br />
---<br />
-<br />
-Wenn Sie keine Benachrichtigungs-E-Mails mehr erhalten möchten, gehen Sie bitte zu {$unsubscribeLink} und geben Sie Ihre E-Mail-Adresse und Passwort ein.<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>Diese E-Mail wird an nicht registrierte Benutzer/innen auf der Benachrichtigungs-Mailingliste gesendet.</description>
-	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
-		<subject>Willkommen zu der {$siteTitle}-Mailingliste!</subject>
-		<body><![CDATA[Sie haben Sich angemeldet, Benachrichtigungen von {$siteTitle} zu erhalten.<br />
-<br />
-Bitte klicken Sie auf diesen Link, um Ihre Anfrage zu bestätigen und Ihre E-Mail-Adresse zur Mailingliste hinzuzufügen: {$confirmLink}<br />
-<br />
-Wenn Sie keine Benachrichtigungs-E-Mails mehr erhalten möchten, gehen Sie bitte zu {$unsubscribeLink}.<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>Diese E-Mail wird an Benutzer/innen gesendet, die gerade die Benachrichtigungs-Mailingliste abonniert haben.</description>
-	</email_text>
 	<email_text key="PASSWORD_RESET_CONFIRM">
 		<subject>Reset-Bestätigung für Ihr Passwort</subject>
 		<body><![CDATA[Wir wurden aufgefordert, Ihr Passwort für die Webseite {$siteTitle} neu zu setzen.<br />
