@@ -2811,11 +2811,20 @@ class Upgrade extends Installer {
 		}
 		$userResult->Close();
 
-		// author preferred public names will be inserted for each submission locale also the title exists for
+		// author preferred public names will be inserted for each journal supported locale
+		// get supported locales for all journals
+		$journalDao = DAORegistry::getDAO('JournalDAO');
+		$journals = $journalDao->getAll();
+		$journalsSupportedLocales = array();
+		while ($journal = $journals->next()) {
+			$journalsSupportedLocales[$journal->getId()] = $journal->getSupportedLocales();
+		}
+		// get all authors with a middle name or a suffix
 		$authorResult = $userDao->retrieve("
-			SELECT author_id, first_name, last_name, middle_name, suffix FROM authors_tmp
-			WHERE (middle_name IS NOT NULL AND middle_name <> '') OR
-			(suffix IS NOT NULL AND suffix <> '')
+			SELECT a.author_id, a.first_name, a.last_name, a.middle_name, a.suffix, j.journal_id FROM authors_tmp a
+			LEFT JOIN submissions s ON (s.submission_id = a.submission_id)
+			LEFT JOIN journals j ON (j.journal_id = s.context_id)
+			WHERE (middle_name IS NOT NULL AND middle_name <> '') OR (suffix IS NOT NULL AND suffix <> '')
 		");
 		while (!$authorResult->EOF) {
 			$row = $authorResult->GetRowAssoc(false);
@@ -2824,19 +2833,16 @@ class Upgrade extends Installer {
 			$lastName = $row['last_name'];
 			$middleName = $row['middle_name'];
 			$suffix = $row['suffix'];
-			$localeResult = $siteDao->retrieve("SELECT ss.locale FROM submission_settings ss, authors_tmp a WHERE a.author_id = ? AND ss.submission_id = a.submission_id AND ss.setting_name = 'title' AND ss.setting_value <> ''", array((int) $authorId));
-			while (!$localeResult->EOF) {
-				$row = $localeResult->GetRowAssoc(false);
-				$locale = $row['locale'];
+			$journalId = $row['journal_id'];
+			$supportedLocales = $journalsSupportedLocales[$journalId];
+			foreach ($supportedLocales as $locale) {
 				$preferredPublicName = "$firstName " . ($middleName != '' ? "$middleName " : '') . $lastName . ($suffix != '' ? ", $suffix" : '');
-				if (AppLocale::isLocaleWithLastFirst($siteLocale)) {
+				if (AppLocale::isLocaleWithLastFirst($locale)) {
 					$preferredPublicName = "$lastName, " . $firstName . ($middleName != '' ? " $middleName" : '');
 				}
 				$params = array((int) $authorId, $locale, $preferredPublicName);
 				$userDao->update("INSERT INTO author_settings (author_id, locale, setting_name, setting_value, setting_type) VALUES (?, ?, 'preferredPublicName', ?, 'string')", $params);
-				$localeResult->MoveNext();
 			}
-			$localeResult->Close();
 			$authorResult->MoveNext();
 		}
 		$authorResult->Close();
