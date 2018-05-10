@@ -61,7 +61,7 @@
 					<description>{$article->getLocalizedAbstract()|strip|escape:"html"}</description>
 
 					{* optional elements *}
-					<author>{$article->getAuthorString()|escape:"html"}</author>
+					<author>{$article->getAuthorString(false)|escape:"html"}</author>
 					{* <category/> *}
 					{* <comments/> *}
 					{* <source/> *}

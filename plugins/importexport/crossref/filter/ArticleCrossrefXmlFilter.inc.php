@@ -108,7 +108,7 @@ class ArticleCrossrefXmlFilter extends IssueCrossrefXmlFilter {
 				$personNameNode->setAttribute('sequence', 'additional');
 			}
 			if (empty($author->getLocalizedFamilyName())) {
-				$personNameNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'surname', htmlspecialchars(ucfirst($author->getFullName()), ENT_COMPAT, 'UTF-8')));
+				$personNameNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'surname', htmlspecialchars(ucfirst($author->getFullName(false)), ENT_COMPAT, 'UTF-8')));
 			} else {
 				$personNameNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'given_name', htmlspecialchars(ucfirst($author->getLocalizedGivenName()), ENT_COMPAT, 'UTF-8')));
 				$personNameNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'surname', htmlspecialchars(ucfirst($author->getLocalizedFamilyName()), ENT_COMPAT, 'UTF-8')));

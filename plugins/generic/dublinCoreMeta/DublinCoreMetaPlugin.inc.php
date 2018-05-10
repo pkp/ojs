@@ -64,8 +64,8 @@ class DublinCoreMetaPlugin extends GenericPlugin {
 		}
 
 		$i=0;
-		foreach (explode(__('common.commaListSeparator'), $article->getAuthorString()) as $author) {
-			$templateMgr->addHeader('dublinCoreAuthor' . $i++, '<meta name="DC.Creator.PersonalName" content="' . htmlspecialchars($author) . '"/>');
+		foreach ($article->getAuthors(true) as $author) {
+			$templateMgr->addHeader('dublinCoreAuthor' . $i++, '<meta name="DC.Creator.PersonalName" content="' . htmlspecialchars($author->getFullName(false)) . '"/>');
 		}
 
 		if (is_a($article, 'PublishedArticle') && ($datePublished = $article->getDatePublished())) {
