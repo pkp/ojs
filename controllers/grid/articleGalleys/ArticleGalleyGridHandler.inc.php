@@ -270,7 +270,7 @@ class ArticleGalleyGridHandler extends GridHandler {
 			$this->getSubmission()
 		);
 		$galleyForm->initData();
-		return new JSONMessage(true, $galleyForm->fetch($request, $this->getRequestArgs()));
+		return new JSONMessage(true, $galleyForm->fetch($request));
 	}
 
 	/**
@@ -343,7 +343,7 @@ class ArticleGalleyGridHandler extends GridHandler {
 			$this->getGalley()
 		);
 		$galleyForm->initData();
-		return new JSONMessage(true, $galleyForm->fetch($request, $this->getRequestArgs()));
+		return new JSONMessage(true, $galleyForm->fetch($request));
 	}
 
 	/**
@@ -377,7 +377,7 @@ class ArticleGalleyGridHandler extends GridHandler {
 
 			return DAO::getDataChangedEvent($galley->getId());
 		}
-		return new JSONMessage(true, $galleyForm->fetch());
+		return new JSONMessage(true, $galleyForm->fetch($request));
 	}
 
 	/**
