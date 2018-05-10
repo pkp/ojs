@@ -238,7 +238,7 @@ class OAIDAO extends PKPOAIDAO {
 				JOIN issues i ON (i.issue_id = pa.issue_id)
 				JOIN sections s ON (s.section_id = a.section_id)
 				JOIN journals j ON (j.journal_id = a.context_id)
-				JOIN journal_settings jsl ON (jsl.journal_id = j.journal_id AND jsl.setting_name=?)
+				LEFT JOIN journal_settings jsl ON (jsl.journal_id = j.journal_id AND jsl.setting_name=?)
 			WHERE	i.published = 1 AND j.enabled = 1 AND jsl.setting_value <> ? AND a.status <> ?
 				' . (isset($journalId) ?' AND j.journal_id = ?':'') . '
 				' . (isset($sectionId) ?' AND s.section_id = ?':'') . '
