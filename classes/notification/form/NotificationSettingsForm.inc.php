@@ -34,7 +34,7 @@ class NotificationSettingsForm extends PKPNotificationSettingsForm {
 	/**
 	 * @copydoc PKPNotificationSettingsForm::getNotificationSettingsCategories()
 	 */
-	protected function getNotificationSettingCategories() {
+	public function getNotificationSettingCategories() {
 		$categories = parent::getNotificationSettingCategories();
 		for ($i = 0; $i < count($categories); $i++) {
 			if ($categories[$i]['categoryKey'] === 'notification.type.public') {
