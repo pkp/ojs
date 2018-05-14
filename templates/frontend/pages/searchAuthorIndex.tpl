@@ -34,7 +34,7 @@
 
 	{assign var=authorGivenName value=$author->getLocalizedGivenName()}
 	{assign var=authorFamilyName value=$author->getLocalizedFamilyName()}
-	{assign var=authorName value=$author->getFullName()}
+	{assign var=authorName value=$author->getFullName(false, true)}
 
 	{strip}
 		<a href="{url op="authors" path="view" givenName=$authorGivenName familyName=$authorFamilyName affiliation=$authorAffiliation country=$authorCountry authorName=$authorName}">{$authorName|escape}</a>

@@ -22,37 +22,86 @@ class AuthorDAO extends PKPAuthorDAO {
 
 	/**
 	 * Retrieve all published submissions associated with authors with
-	 * the given first name, middle name, last name, affiliation, and country.
+	 * the given name, family name, affiliation, and country.
+	 * Authors are considered to be the same if they have the same given name and family name in one locale,
+	 * as well as affiliation (optional) and country (optional)
 	 * @param $journalId int (null if no restriction desired)
 	 * @param $givenName string
 	 * @param $familyName string
-	 * @param $affiliation string
-	 * @param $country string
+	 * @param $affiliation string (optional)
+	 * @param $country string (optional)
 	 */
-	function &getPublishedArticlesForAuthor($journalId, $givenName, $familyName, $affiliation, $country) {
-		$publishedArticles = array();
-		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-		$params = array(
-			IDENTITY_SETTING_GIVENNAME, IDENTITY_SETTING_FAMILYNAME, 'affiliation',
-			$givenName, $familyName, $affiliation, $country
-		);
+	function &getPublishedArticlesForAuthor($journalId, $givenName, $familyName, $affiliation = null, $country = null) {
+		$params = array();
+
+		$supportedLocales = array();
+		if ($journalId !== null) {
+			$journalDao = DAORegistry::getDAO('JournalDAO');
+			$journal = $journalDao->getById($journalId);
+			$supportedLocales = $journal->getSupportedLocales();
+		} else {
+			$site = Application::getRequest()->getSite();
+			$supportedLocales = $site->getSupportedLocales();;
+		}
+		$supportedLocalesCount = count($supportedLocales);
+		$sqlJoinAuthorSettings = $sqlWhereAffiliation = $sqlWhereCountry = '';
+		$sqlWhereAuthorSettings = '(';
+		foreach ($supportedLocales as $index => $locale) {
+			$sqlJoinAuthorSettings .= "
+				LEFT JOIN author_settings asg$index ON (asg$index.author_id  = a.author_id AND asg$index.setting_name = '" . IDENTITY_SETTING_GIVENNAME . "' AND asg$index.locale = '$locale')
+				LEFT JOIN author_settings asf$index ON (asf$index.author_id  = a.author_id AND asf$index.setting_name = '" . IDENTITY_SETTING_FAMILYNAME . "' AND asf$index.locale = '$locale')
+			";
+			$params[] = $givenName;
+			if (empty($familyName)) {
+				$sqlWhereFamilyName = "(asf$index.setting_value is NULL OR asf$index.setting_value = '')";
+			} else {
+				$sqlWhereFamilyName = "asf$index.setting_value = ?";
+				$params[] = $familyName;
+			}
+			if ($affiliation !== null) {
+				$sqlJoinAuthorSettings .= "
+					LEFT JOIN author_settings asa$index ON (asa$index.author_id  = a.author_id AND asa$index.setting_name = 'affiliation' AND asa$index.locale = '$locale')
+				";
+				if (empty($affiliation)) {
+					$sqlWhereAffiliation = " AND (asa$index.setting_value is NULL OR asa$index.setting_value = '')";
+				} else {
+					$sqlWhereAffiliation = " AND asa$index.setting_value = ?";
+					$params[] = $affiliation;
+				}
+			}
+			$sqlWhereAuthorSettings .= "(asg$index.setting_value = ? AND " . $sqlWhereFamilyName . $sqlWhereAffiliation . ")";
+			if ($index < $supportedLocalesCount - 1) {
+				$sqlWhereAuthorSettings .= ' OR ';
+			}
+
+		}
+		$sqlWhereAuthorSettings .= ')';
+
+		if ($country !== null) {
+			if (empty($country)) {
+				$sqlWhereCountry = " AND (a.country IS NULL OR a.country = '')";
+			} else {
+				$sqlWhereCountry = " AND a.country = ?";
+				$params[] = $country;
+			}
+		}
 		if ($journalId !== null) $params[] = (int) $journalId;
+
 		$result = $this->retrieve(
 			'SELECT DISTINCT
-				aa.submission_id
-			FROM	authors aa
-				LEFT JOIN submissions a ON (aa.submission_id = a.submission_id)
-				LEFT JOIN author_settings asgs ON (asgs.author_id = aa.author_id AND asgs.setting_name = ?)
-				LEFT JOIN author_settings asfs ON (asfs.author_id = aa.author_id AND asfs.setting_name = ?)
-				LEFT JOIN author_settings asas ON (asas.author_id = aa.author_id AND asas.setting_name = ?)
-				WHERE a.status = ' . STATUS_PUBLISHED . '
-				AND (asgs.setting_value = ?)
-				AND (asfs.setting_value = ?' . (empty($familyName)?' OR asfs.setting_value IS NULL':'') . ')
-				AND (asas.setting_value = ?' . (empty($affiliation)?' OR asas.setting_value IS NULL':'') . ')
-				AND (aa.country = ?' . (empty($country)?' OR aa.country IS NULL':'') . ') ' .
-				($journalId!==null?(' AND a.context_id = ?'):''),
+				a.submission_id
+			FROM	authors a
+				LEFT JOIN submissions s ON (s.submission_id = a.submission_id)
+				' .$sqlJoinAuthorSettings .'
+				WHERE s.status = ' . STATUS_PUBLISHED . ' AND
+				' .$sqlWhereAuthorSettings
+				. $sqlWhereCountry
+				. (($journalId !== null) ? ' AND s.context_id = ?' : ''),
 			$params
 		);
+
+		$publishedArticles = array();
+		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 		while (!$result->EOF) {
 			$row = $result->getRowAssoc(false);
 			$publishedArticle = $publishedArticleDao->getByArticleId($row['submission_id']);
@@ -66,73 +115,99 @@ class AuthorDAO extends PKPAuthorDAO {
 	}
 
 	/**
-	 * Retrieve all published authors for a journal in an associative array by
-	 * the first letter of the last name, for example:
-	 * $returnedArray['S'] gives array($misterSmithObject, $misterSmytheObject, ...)
-	 * Keys will appear in sorted order. Note that if journalId is null,
+	 * Retrieve all published authors for a journal by the first letter of the family name.
+	 * Authors will be sorted by (family, given). Note that if journalId is null,
 	 * alphabetized authors for all enabled journals are returned.
+	 * If authors have the same given names, first names and affiliations in all journal locales,
+	 * as well as country and email (otional), they are considered to be the same.
 	 * @param $journalId int Optional journal ID to restrict results to
-	 * @param $initial An initial the last names must begin with
+	 * @param $initial An initial a family name must begin with, "-" for authors with no family names
 	 * @param $rangeInfo Range information
 	 * @param $includeEmail Whether or not to include the email in the select distinct
-	 * @return DAOResultFactory Authors ordered by sequence
+	 * @return DAOResultFactory Authors ordered by last name, given name
 	 */
 	function getAuthorsAlphabetizedByJournal($journalId = null, $initial = null, $rangeInfo = null, $includeEmail = false) {
-		$locale = AppLocale::getLocale();
-		$params = array(
-			IDENTITY_SETTING_GIVENNAME, $locale,
-			IDENTITY_SETTING_GIVENNAME,
-			IDENTITY_SETTING_FAMILYNAME, $locale,
-			IDENTITY_SETTING_FAMILYNAME,
-			'affiliation', $locale,
-			'affiliation',
-		);
-		$params = array_merge($params, $this->getFetchParameters());
+		$params = $this->getFetchParameters();
 		if (isset($journalId)) $params[] = $journalId;
-		if (isset($initial)) {
-			$params[] = PKPString::strtolower($initial) . '%';
-			$initialSql = ' AND LOWER(author_given) LIKE LOWER(?)';
+
+		$supportedLocales = array();
+		if ($journalId !== null) {
+			$journalDao = DAORegistry::getDAO('JournalDAO');
+			$journal = $journalDao->getById($journalId);
+			$supportedLocales = $journal->getSupportedLocales();
 		} else {
-			$initialSql = '';
+			$site = Application::getRequest()->getSite();
+			$supportedLocales = $site->getSupportedLocales();;
 		}
+		$supportedLocalesCount = count($supportedLocales);
+		$sqlJoinAuthorSettings = $sqlColumnsAuthorSettings = $initialSql = '';
+		if (isset($initial)) {
+			$initialSql = ' AND (';
+		}
+		foreach ($supportedLocales as $index => $locale) {
+			$localeStr = str_replace('@', '_', $locale);
+			$sqlColumnsAuthorSettings .= ",
+				COALESCE(asg$index.setting_value, ''), ' ',
+				COALESCE(asf$index.setting_value, ''), ' ',
+				COALESCE(SUBSTRING(asa$index.setting_value FROM 1 FOR 255), ''), ' '
+			";
+			$sqlJoinAuthorSettings .= "
+				LEFT JOIN author_settings asg$index ON (asg$index.author_id  = aa.author_id AND asg$index.setting_name = '" . IDENTITY_SETTING_GIVENNAME . "' AND asg$index.locale = '$locale')
+				LEFT JOIN author_settings asf$index ON (asf$index.author_id  = aa.author_id AND asf$index.setting_name = '" . IDENTITY_SETTING_FAMILYNAME . "' AND asf$index.locale = '$locale')
+				LEFT JOIN author_settings asa$index ON (asa$index.author_id  = aa.author_id AND asa$index.setting_name = 'affiliation' AND asa$index.locale = '$locale')
+			";
+			if (isset($initial)) {
+				if ($initial == '-') {
+					$initialSql .= "(asf$index.setting_value IS NULL OR asf$index.setting_value = '')";
+					if ($index < $supportedLocalesCount - 1) {
+						$initialSql .= ' AND ';
+					}
+				} else {
+					$params[] = PKPString::strtolower($initial) . '%';
+					$initialSql .= "LOWER(asf$index.setting_value) LIKE LOWER(?)";
+					if ($index < $supportedLocalesCount - 1) {
+						$initialSql .= ' OR ';
+					}
+				}
+			}
+		}
+		if (isset($initial)) {
+			$initialSql .= ')';
+		}
+
 		$result = $this->retrieveRange(
-			'SELECT DISTINCT
-				CAST(\'\' AS CHAR) AS url,
-				0 AS author_id,
-				0 AS submission_id,
-				' . ($includeEmail?'a.email AS email,':'CAST(\'\' AS CHAR) AS email,') . '
-				0 AS primary_contact,
-				0 AS seq,
-				asggl.setting_value AS author_given_l,
-				asffl.setting_value AS author_family_l,
-				SUBSTRING(asl.setting_value FROM 1 FOR 255) AS affiliation_l,
-				asl.locale,
-				asggpl.setting_value AS author_given_pl,
-				asffpl.setting_value AS author_family_pl,
-				SUBSTRING(aspl.setting_value FROM 1 FOR 255) AS affiliation_pl,
-				aspl.locale AS primary_locale,
-				a.country,
-				0 AS user_group_id,
-				0 AS include_in_browse,
+			'SELECT a.*, ug.show_title, s.locale,
 				' . $this->getFetchColumns() . '
 			FROM	authors a
-				JOIN submissions s ON (s.submission_id = a.submission_id AND s.status = ' . STATUS_PUBLISHED . ')
-				JOIN journals j ON (s.context_id = j.journal_id)
-				JOIN published_submissions ps ON (ps.submission_id = s.submission_id)
-				JOIN issues i ON (ps.issue_id = i.issue_id AND i.published = 1)
-				LEFT JOIN author_settings asggl ON (a.author_id = asggl.author_id AND asggl.setting_name = ? AND asggl.locale = ?)
-				LEFT JOIN author_settings asggpl ON (a.author_id = asggpl.author_id AND asggpl.setting_name = ? AND asggpl.locale = s.locale)
-				LEFT JOIN author_settings asffl ON (a.author_id = asffl.author_id AND asffl.setting_name = ? AND asffl.locale = ?)
-				LEFT JOIN author_settings asffpl ON (a.author_id = asffpl.author_id AND asffpl.setting_name = ? AND asffpl.locale = s.locale)
-				LEFT JOIN author_settings asl ON (a.author_id = asl.author_id AND asl.setting_name = ? AND asl.locale = ?)
-				LEFT JOIN author_settings aspl ON (a.author_id = aspl.author_id AND aspl.setting_name = ? AND aspl.locale = s.locale)
+				JOIN user_groups ug ON (a.user_group_id = ug.user_group_id)
+				JOIN submissions s ON (s.submission_id = a.submission_id)
 				' . $this->getFetchJoins() . '
-			WHERE ' . (isset($journalId)?'j.journal_id = ?':'j.enabled = 1') .
-				$initialSql . '
-			' . $this->getOrderBy(),
+				JOIN (
+					SELECT
+					MIN(aa.author_id) as author_id,
+					CONCAT(
+					' . ($includeEmail ? 'aa.email,' : 'CAST(\'\' AS CHAR),') . '
+					\' \',
+					aa.country,
+					\' \'
+					' . $sqlColumnsAuthorSettings . '
+					) as names
+					FROM	authors aa
+					JOIN submissions ss ON (ss.submission_id = aa.submission_id AND ss.status = ' . STATUS_PUBLISHED . ')
+					JOIN journals j ON (ss.context_id = j.journal_id)
+					JOIN published_submissions ps ON (ps.submission_id = ss.submission_id)
+					JOIN issues i ON (ps.issue_id = i.issue_id AND i.published = 1)
+					' . $sqlJoinAuthorSettings . '
+					WHERE j.enabled = 1 AND
+					' . (isset($journalId) ? 'j.journal_id = ?' : '')
+					. $initialSql .'
+					GROUP BY names
+				) as t1 ON (t1.author_id = a.author_id)
+				' . $this->getOrderBy(),
 			$params,
 			$rangeInfo
 		);
+
 		return new DAOResultFactory($result, $this, '_fromRow');
 	}
 
