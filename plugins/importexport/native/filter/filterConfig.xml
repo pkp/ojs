@@ -124,6 +124,13 @@
 			description="plugins.importexport.native.description"
 			inputType="xml::schema(plugins/importexport/native/native.xsd)"
 			outputType="class::classes.article.ArticleGalley[]" />
+		<!-- ReviewAssignments native XML export -->
+		<filterGroup
+			symbolic="ReviewAssignments=>native-xml"
+			displayName="plugins.importexport.native.displayName"
+			description="plugins.importexport.native.description"
+			inputType="class::lib.pkp.classes.submission.reviewAssignment.ReviewAssignment[])"
+			outputType="xml::schema(plugins/importexport/native/native.xsd" />
 	</filterGroups>
 	<filters>
 		<!-- Native XML article output -->
