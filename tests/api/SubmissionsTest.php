@@ -21,21 +21,55 @@ class SubmissionsTest extends PKPApiTestCase {
 	 * @expectedException GuzzleHttp\Exception\ClientException
 	 */
 	public function testGetSubmissionsWithoutToken() {
-		$response = $this->sendRequest('GET', '/submissions', array(), false);
+		$response = $this->_sendRequest('GET', '/submissions', array(), false);
 	}
 
 	/**
 	 * @covers /submissions
 	 */
 	public function testGetSubmissions() {
-		$response = $this->sendRequest('GET', '/submissions');
+		$response = $this->_sendRequest('GET', '/submissions');
 		$this->assertEquals(200, $response->getStatusCode());
 		
-		$body = $response->getBody();
-		$data = (array) json_decode($body);
-		$this->assertJson($body->getContents());
+		$data = $this->_getResponseData($response);
 		$this->assertArrayHasKey('itemsMax', $data);
 		$this->assertArrayHasKey('items', $data);
+	}
+
+	/**
+	 * @covers /submissions/{submissionId}/galleys
+	 * @expectedException GuzzleHttp\Exception\ClientException
+	 */
+	public function testGetSubmissionGalleysWithoutToken() {
+		$response = $this->_sendRequest('GET', '/submissions/9/galleys', array(), false);
+	}
+
+	/**
+	 * @covers /submissions/{submissionId}/galleys
+	 * @expectedException GuzzleHttp\Exception\ClientException
+	 */
+	public function testGetSubmissionGalleysWithInvalidId() {
+		$response = $this->_sendRequest('GET', '/submissions/999/galleys');
+		$this->assertEquals(404, $response->getStatusCode());
+	}
+
+	/**
+	 * @covers /submissions/{submissionId}/galleys
+	 * @expectedException GuzzleHttp\Exception\ClientException
+	 */
+	public function testGetSubmissionGalleysForUnpublishedSubmissions() {
+		$response = $this->_sendRequest('GET', '/submissions/23/galleys');
+		$this->assertEquals(404, $response->getStatusCode());
+	}
+
+	/**
+	 * @covers /submissions/{submissionId}/galleys
+	 */
+	public function testGetSubmissionGalleys() {
+		$response = $this->_sendRequest('GET', '/submissions/9/galleys');
+		$this->assertEquals(200, $response->getStatusCode());
+		$data = $this->_getResponseData($response);
+		$this->assertEquals(1, count($data));
 	}
 
 	/**
@@ -43,7 +77,7 @@ class SubmissionsTest extends PKPApiTestCase {
 	 * @expectedException GuzzleHttp\Exception\ClientException
 	 */
 	public function testGetSubmissionByIdWithValidIdWithoutToken() {
-		$response = $this->sendRequest('GET', '/submissions/25', array(), false);
+		$response = $this->_sendRequest('GET', '/submissions/25', array(), false);
 	}
 
 	/**
@@ -51,7 +85,7 @@ class SubmissionsTest extends PKPApiTestCase {
 	 * @expectedException GuzzleHttp\Exception\ClientException
 	 */
 	public function testGetSubmissionByIdWithInvalidId() {
-		$response = $this->sendRequest('GET', '/submissions/9999');
+		$response = $this->_sendRequest('GET', '/submissions/9999');
 		$this->assertSame(404, $response->getStatusCode());
 	}
 
@@ -59,12 +93,10 @@ class SubmissionsTest extends PKPApiTestCase {
 	 * @covers /submissions/{submissionId}
 	 */
 	public function testGetSubmissionByIdWithValidId() {
-		$response = $this->sendRequest('GET', '/submissions/25');
+		$response = $this->_sendRequest('GET', '/submissions/25');
 		$this->assertSame(200, $response->getStatusCode());
 
-		$body = $response->getBody();
-		$data = (array) json_decode($body);
-		$this->assertJson($body->getContents());
+		$data = $this->_getResponseData($response);
 		$this->assertArrayHasKey('id', $data);
 		$this->assertArrayHasKey('title', $data);
 		$this->assertArrayHasKey('abstract', $data);
@@ -77,7 +109,7 @@ class SubmissionsTest extends PKPApiTestCase {
 	 * @expectedException GuzzleHttp\Exception\ClientException
 	 */
 	public function testGetSubmissionParticipantsWithoutToken() {
-		$response = $this->sendRequest('GET', '/submissions/25/participants', array(), false);
+		$response = $this->_sendRequest('GET', '/submissions/25/participants', array(), false);
 		$this->assertSame(404, $response->getStatusCode());
 	}
 
@@ -86,7 +118,7 @@ class SubmissionsTest extends PKPApiTestCase {
 	 * @expectedException GuzzleHttp\Exception\ClientException
 	 */
 	public function testGetSubmissionParticipantsWithInvalidId() {
-		$response = $this->sendRequest('GET', '/submissions/9999/participants');
+		$response = $this->_sendRequest('GET', '/submissions/9999/participants');
 		$this->assertSame(404, $response->getStatusCode());
 	}
 
@@ -94,12 +126,10 @@ class SubmissionsTest extends PKPApiTestCase {
 	 * @covers /submissions/{submissionId}/participants
 	 */
 	public function testGetSubmissionParticipants() {
-		$response = $this->sendRequest('GET', '/submissions/25/participants');
+		$response = $this->_sendRequest('GET', '/submissions/25/participants');
 		$this->assertSame(200, $response->getStatusCode());
 
-		$body = $response->getBody();
-		$data = (array) json_decode($body);
-		$this->assertJson($body->getContents());
+		$data = $this->_getResponseData($response);
 		$this->assertTrue(is_array($data));
 		$this->assertNotEmpty($data);
 
@@ -116,7 +146,7 @@ class SubmissionsTest extends PKPApiTestCase {
 	 * @expectedException GuzzleHttp\Exception\ClientException
 	 */
 	public function testGetSubmissionParticipantsAssignedToStageWithoutToken() {
-		$response = $this->sendRequest('GET', '/submissions/25/participants/1', array(), false);
+		$response = $this->_sendRequest('GET', '/submissions/25/participants/1', array(), false);
 		$this->assertSame(404, $response->getStatusCode());
 	}
 
@@ -125,7 +155,7 @@ class SubmissionsTest extends PKPApiTestCase {
 	 * @expectedException GuzzleHttp\Exception\ClientException
 	 */
 // 	public function testGetSubmissionParticipantsAssignedToStageWithInvalidId() {
-// 		$response = $this->sendRequest('GET', '/submissions/25/participants/99');
+// 		$response = $this->_sendRequest('GET', '/submissions/25/participants/99');
 // 		// TODO stageId should have been validated, right?
 // 		$this->assertSame(404, $response->getStatusCode());
 // 	}
@@ -134,12 +164,10 @@ class SubmissionsTest extends PKPApiTestCase {
 	 * @covers /submissions/{submissionId}/participants/{stageId}
 	 */
 	public function testGetSubmissionParticipantsAssignedToStage() {
-		$response = $this->sendRequest('GET', '/submissions/25/participants/1');
+		$response = $this->_sendRequest('GET', '/submissions/25/participants/1');
 		$this->assertSame(200, $response->getStatusCode());
 
-		$body = $response->getBody();
-		$data = (array) json_decode($body);
-		$this->assertJson($body->getContents());
+		$data = $this->_getResponseData($response);
 		$this->assertTrue(is_array($data));
 		$this->assertNotEmpty($data);
 
