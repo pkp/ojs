@@ -573,6 +573,8 @@ definitions:
         type: integer
       reviewsCompleted:
         type: integer
+      reviewsDeclined:
+        type: integer
       averageReviewCompletionDays:
         type: integer
       dateLastReviewAssignment:
