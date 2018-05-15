@@ -27,7 +27,7 @@ class OJSProfileTabHandler extends ProfileTabHandler {
 		$this->setupTemplate($request);
 		import('classes.user.form.NotificationSettingsForm');
 		$notificationsForm = new NotificationSettingsForm($request->getUser());
-		$notificationsForm->initData($request);
+		$notificationsForm->initData();
 		return new JSONMessage(true, $notificationsForm->fetch($request));
 	}
 
