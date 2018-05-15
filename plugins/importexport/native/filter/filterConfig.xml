@@ -124,12 +124,19 @@
 			description="plugins.importexport.native.description"
 			inputType="xml::schema(plugins/importexport/native/native.xsd)"
 			outputType="class::classes.article.ArticleGalley[]" />
-		<!-- ReviewAssignments native XML export -->
+		<!-- ReviewRounds native XML export -->
 		<filterGroup
-			symbolic="ReviewAssignments=>native-xml"
+			symbolic="review-round=>native-xml"
 			displayName="plugins.importexport.native.displayName"
 			description="plugins.importexport.native.description"
-			inputType="class::lib.pkp.classes.submission.reviewAssignment.ReviewAssignment[])"
+			inputType="class::lib.pkp.classes.submission.reviewRound.ReviewRound[]"
+			outputType="xml::schema(plugins/importexport/native/native.xsd" />
+		<!-- ReviewAssignments native XML export -->
+		<filterGroup
+			symbolic="review-assignment=>native-xml"
+			displayName="plugins.importexport.native.displayName"
+			description="plugins.importexport.native.description"
+			inputType="class::lib.pkp.classes.submission.reviewAssignment.ReviewAssignment[]"
 			outputType="xml::schema(plugins/importexport/native/native.xsd" />
 	</filterGroups>
 	<filters>
@@ -212,6 +219,14 @@
 		<filter
 			inGroup="native-xml=>ArticleGalley"
 			class="plugins.importexport.native.filter.NativeXmlArticleGalleyFilter"
+			isTemplate="0" />
+		<filter
+			inGroup="review-round=>native-xml"
+			class="lib.pkp.plugins.importexport.native.filter.ReviewRoundNativeXmlFilter"
+			isTemplate="0" />
+		<filter
+			inGroup="review-assignment=>native-xml"
+			class="lib.pkp.plugins.importexport.native.filter.ReviewAssignmentNativeXmlFilter"
 			isTemplate="0" />
 	</filters>
 </filterConfig>
