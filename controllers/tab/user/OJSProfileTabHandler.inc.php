@@ -43,7 +43,7 @@ class OJSProfileTabHandler extends ProfileTabHandler {
 		$notificationsForm = new NotificationSettingsForm($request->getUser());
 		$notificationsForm->readInputData();
 		if ($notificationsForm->validate()) {
-			$notificationsForm->execute($request);
+			$notificationsForm->execute();
 			return new JSONMessage(true);
 		}
 		return new JSONMessage(false, $notificationsForm->fetch($request));

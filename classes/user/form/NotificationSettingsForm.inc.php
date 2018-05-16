@@ -45,7 +45,8 @@ class NotificationSettingsForm extends PKPNotificationSettingsForm {
 	/**
 	 * Save profile settings.
 	 */
-	function execute($request) {
+	function execute() {
+		$request = Application::getRequest();
 		$user = $request->getUser();
  
 		$journalDao = DAORegistry::getDAO('JournalDAO');
@@ -64,7 +65,7 @@ class NotificationSettingsForm extends PKPNotificationSettingsForm {
 			}
 		}
  
-		parent::execute($request);
+		parent::execute();
 	}
 }
 
