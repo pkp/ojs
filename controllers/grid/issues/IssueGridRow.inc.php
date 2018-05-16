@@ -24,8 +24,8 @@ class IssueGridRow extends GridRow {
 	 * Configure the grid row
 	 * @param $request PKPRequest
 	 */
-	function initialize($request) {
-		parent::initialize($request);
+	function initialize($request, $template = null) {
+		parent::initialize($request, $template);
 
 		// Is this a new row or an existing row?
 		$issueId = $this->getId();

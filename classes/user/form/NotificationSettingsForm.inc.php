@@ -26,10 +26,9 @@ class NotificationSettingsForm extends PKPNotificationSettingsForm {
 	}
 
 	/**
-	 * Display the form.
-	 * @return PKPRequest
+	 * @copydoc Form::display()
 	 */
-	function display($request) {
+	function display($request, $template = null) {
 		$templateMgr = TemplateManager::getManager($request);
  
 		$journalDao = DAORegistry::getDAO('JournalDAO');
@@ -40,7 +39,7 @@ class NotificationSettingsForm extends PKPNotificationSettingsForm {
 			}
 		}
  
-		parent::display($request);
+		parent::display($request, $template);
 	}
 
 	/**
