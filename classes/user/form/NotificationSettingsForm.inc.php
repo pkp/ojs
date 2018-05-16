@@ -28,7 +28,7 @@ class NotificationSettingsForm extends PKPNotificationSettingsForm {
 	/**
 	 * @copydoc Form::display()
 	 */
-	function display($request, $template = null) {
+	function display($request = null, $template = null) {
 		$templateMgr = TemplateManager::getManager($request);
  
 		$journalDao = DAORegistry::getDAO('JournalDAO');
