@@ -34,8 +34,7 @@ class AppSiteSetupForm extends SiteSetupForm {
 	function initData() {
 		parent::initData();
 
-		$application = PKPApplication::getApplication();
-		$request = $application->getRequest();
+		$request = Application::getRequest();
 		$site = $request->getSite();
 		$this->setData('defaultMetricType', $site->getSetting('defaultMetricType'));
 

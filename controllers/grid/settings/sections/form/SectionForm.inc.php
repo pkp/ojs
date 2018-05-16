@@ -40,8 +40,7 @@ class SectionForm extends PKPSectionForm {
 	 * Initialize form data from current settings.
 	 */
 	function initData() {
-		$application = PKPApplication::getApplication();
-		$request = $application->getRequest();
+		$request = Application::getRequest();
 		$journal = $request->getJournal();
 
 		$sectionDao = DAORegistry::getDAO('SectionDAO');

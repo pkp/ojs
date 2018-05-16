@@ -62,8 +62,7 @@ class MastheadForm extends ContextSettingsForm {
 	function initData() {
 		parent::initData();
 
-		$application = PKPApplication::getApplication();
-		$request = $application->getRequest();
+		$request = Application::getRequest();
 		$journal = $request->getContext();
 		if ($this->getData('acronym') == null) {
 			$acronym = array();
