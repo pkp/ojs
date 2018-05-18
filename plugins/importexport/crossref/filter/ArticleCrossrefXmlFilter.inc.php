@@ -184,18 +184,20 @@ class ArticleCrossrefXmlFilter extends IssueCrossrefXmlFilter {
 			// filter supp files with DOI
 			if (!$galley->getRemoteURL()) {
 				$galleyFile = $galley->getFile();
-				$genre = $genreDao->getById($galleyFile->getGenreId());
-				if ($genre->getSupplementary()) {
-					if ($galley->getStoredPubid('doi')) {
-						// construct the array key with galley best ID and locale needed for the component node
-						$componentGalleys[] = $galley;
-					}
-				} else {
-					$submissionGalleys[] = $galley;
-					if ($galley->isPdfGalley()) {
-						$pdfGalleys[] = $galley;
-						if (!$pdfGalleyInArticleLocale && $galley->getLocale() == $submission->getLocale()) {
-							$pdfGalleyInArticleLocale = $galley;
+				if ($galleyFile) {
+					$genre = $genreDao->getById($galleyFile->getGenreId());
+					if ($genre->getSupplementary()) {
+						if ($galley->getStoredPubid('doi')) {
+							// construct the array key with galley best ID and locale needed for the component node
+							$componentGalleys[] = $galley;
+						}
+					} else {
+						$submissionGalleys[] = $galley;
+						if ($galley->isPdfGalley()) {
+							$pdfGalleys[] = $galley;
+							if (!$pdfGalleyInArticleLocale && $galley->getLocale() == $submission->getLocale()) {
+								$pdfGalleyInArticleLocale = $galley;
+							}
 						}
 					}
 				}
