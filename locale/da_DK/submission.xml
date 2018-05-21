@@ -72,4 +72,6 @@
 	<message key="submission.submit.form.authorRequiredFields">Fornavn, efternavn og e-mailadresse for hver forfatter er påkrævet.</message>
 	<message key="submission.citationFormat.notFound">Det ønskede citationsformat kunne ikke genfindes.</message>
 	<message key="section.any">Enhver sektion</message>
+	<message key="submission.abstract.wordCount.description">Resumeet skal være på {$wordCount} ord eller derunder.</message>
+	<message key="submission.submit.form.wordCountAlert">Dit resume er for langt. Forkort det venligst til under den ordgrænse, der er angivet for dette afsnit.</message>
 </locale>

@@ -15,13 +15,13 @@ php:
 dist: trusty
 python:
   - 3.3
-addons:
-  postgresql: "9.1"
 git:
   # We have to init submodules ourselves to make it recursive
   submodules: false
 addons:
   firefox: "45.9.0esr"
+  apt:
+    update: true
 before_install:
 
   # Start submodules
