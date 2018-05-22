@@ -42,7 +42,7 @@
 	<message key="plugins.importexport.medra.settings.form.work">work</message>	
 	<message key="plugins.importexport.medra.settings.form.manifestation">manifestation</message>
 	<message key="plugins.importexport.medra.settings.form.exportIssuesAs.label">Issues export as</message>	
-	<message key="plugins.importexport.medra.settings.form.automaticRegistration.description">OJS will register assigned DOIs automatically to mEDRA. Please note that this may take a short amount of time after publication to process. You can check for all unregistered DOIs.</message>
+	<message key="plugins.importexport.medra.settings.form.automaticRegistration.description">OJS will register assigned DOIs automatically to mEDRA. Please note that this may take a short amount of time after publication to process (e.g. depending on your cronjob configuration). You can check for all unregistered DOIs.</message>
 	<message key="plugins.importexport.medra.settings.form.testMode.description">Use the mEDRA test API (testing environment) for DOI registration. Please do not forget to remove this option for the production.</message>
 
 	<message key="plugins.importexport.medra.workOrProduct"><![CDATA[NB: DOIs assigned to articles will be exported to mEDRA as <a href="http://www.medra.org/en/metadata_td.htm" target="_blank">'works'</a>. DOIs assigned to galleys will be exported as <a href="http://www.medra.org/en/metadata_td.htm" target="_blank">'manifestations'</a>.]]></message>
