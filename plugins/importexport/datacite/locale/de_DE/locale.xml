@@ -31,7 +31,7 @@
 
 	<message key="plugins.importexport.datacite.settings.form.username">Benutzer/innenname (symbol)</message>
 	<message key="plugins.importexport.datacite.settings.form.usernameRequired">Bitte geben Sie den Benutzer/innennamen (symbol) ein, den Sie von DataCite erhalten haben. Der Benutzer/innenname darf keinen Doppelpunkt enthalten.</message>
-	<message key="plugins.importexport.datacite.settings.form.automaticRegistration.description">OJS wird die zugewiesenen DOI automatisch an DataCite liefern. Bitte beachten Sie, dass dieser Prozess eine gewisse Zeit nach der Veröffentlichung dauern kann (abhängig von Ihrer Cronjob-Konfiguration). Sie können nach bisher unregistrierten DOI suchen.</message>
+	<message key="plugins.importexport.datacite.settings.form.automaticRegistration.description">OJS wird die zugewiesenen DOI automatisch an DataCite liefern. Bitte beachten Sie, dass dieser Prozess eine gewisse Zeit nach der Veröffentlichung dauern kann (z.B. abhängig von Ihrer Cronjob-Konfiguration). Sie können nach bisher unregistrierten DOI suchen.</message>
 	<message key="plugins.importexport.datacite.settings.form.testMode.description">Den DataCite-Test-Präfix für die DOI-Registrierung benutzen. Bitte vergessen Sie nicht, diese Option vor dem Produktivbetrieb abzuwählen.</message>
 
 	<message key="plugins.importexport.datacite.senderTask.name">DataCite automatic registration task</message>
