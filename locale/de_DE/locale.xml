@@ -479,7 +479,6 @@ Sie können der Nutzerin/dem Nutzer einen Grund für die Sperrung des Zugangs an
 
 	<!-- Navigation sidebar menu -->
 
-	<!-- Used by editor in submission review / editing -->
 
 
 
@@ -837,12 +836,15 @@ Sie können der Nutzerin/dem Nutzer einen Grund für die Sperrung des Zugangs an
 	<message key="payment.authorFees">Autor/innengebühren</message>
 	<message key="payment.type.submission">Gebühr für das Einreichen eines Beitrags</message>
 	<message key="payment.type.publication">Veröffentlichungsgebühr</message>
+	<message key="payment.type.publication.required">Die Veröffentlichungsgebühr ist fällig.</message>
 	<message key="payment.type.fastTrack">Gebühr für beschleunigte Begutachtung</message>
 	<message key="payment.type.membership">Mitgliedsbeitrag</message>
 	<message key="payment.type.purchaseArticle">Artikelgebühr</message>
 	<message key="payment.type.purchaseIssue">Ausgabengebühr</message>
 	<message key="payment.type.subscription">Abonnementgebühr</message>
 	<message key="payment.type.donation">Spenden</message>
+	<message key="payment.requestPublicationFee">Fordere Veröffentlichungsgebühr ({$feeAmount}) an</message>
+	<message key="payment.notFound">Eine Zahlung wurde angefordert, aber die Anforderung ist abgelaufen. Kontaktieren Sie den Zeitschriftenverwalter/die Zeitschriftenverwalterin  für Einzelheiten.</message>
 
 	<message key="payment.donation.makeDonation">Spenden</message>
 
@@ -1097,7 +1099,7 @@ Die Prüfung kann bei Such-URLs, die Formularausfüllung verlangen, fehlschlagen
 	<message key="editor.issues.backIssues">Frühere Ausgaben</message>
 	<message key="editor.issues.futureIssues">Zukünftige Ausgaben</message>
 	<message key="navigation.subscriptions">Abonnements</message>
-	<message key="payment.type.publication.required">Die Veröffentlichungsgebühr ist fällig.</message>
-	<message key="payment.requestPublicationFee">Fordere Veröffentlichungsgebühr ({$feeAmount}) an</message>
-	<message key="payment.notFound">Eine Zahlung wurde angefordert, aber die Anforderung ist abgelaufen. Kontaktieren Sie den Zeitschriftenverwalter/die Zeitschriftenverwalterin  für Einzelheiten.</message>
+
+	<!-- legacy strings from OJS 2, for upgraded installations from OJS 2 -->
+	<message key="log.editor.submissionExpedited">{$editorName} hat den Redaktionsprozess für die Einreichung {$submissionId} übernommen.</message>
 </locale>
