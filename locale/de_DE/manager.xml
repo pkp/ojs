@@ -44,6 +44,7 @@
 	<message key="manager.payment.notFound">Nicht gefunden</message>
 	<message key="manager.payment.options">Optionen</message>
 	<message key="manager.payment.options.acceptSubscriptionPayments">Hier werden Abonnementzahlungen aktiviert. Art, Kosten, Dauer und Abonnent/innen werden durch die Abonnementverwaltung verwaltet.</message>
+	<message key="subscriptionManager.subscription.confirmRemove">Sind Sie sicher, dass Sie dieses Abonnement löschen wollen?</message>
 	<message key="manager.payment.options.enablePayments">Klicken Sie hier, um das Zahlungsmodul zu aktivieren. Sie müssen die Zahlungsmodalitäten im Formular unten konfigurieren. Bitte beachten Sie, dass die Benutzer/innen eingeloggt sein müssen, um Zahlungen vornehmen zu können.</message>
 	<message key="manager.payment.options.fee">Gebühr</message>
 	<message key="manager.payment.options.feeDescription">Beschreibung der Gebühr</message>
@@ -63,6 +64,7 @@
 	<message key="manager.payment.readerFeesDescription">Die ausgewählten Optionen (zusammen mit der jeweiligen Beschreibung und den Gebühren, die weiter unten bearbeitet werden können) erscheinen im "Über uns" der Zeitschrift unter "Zur Zeitschrift" und an allen Stellen, an denen eine Zahlung erforderlich ist.</message>
 	<message key="manager.payment.records">Protokoll</message>
 	<message key="manager.payments">Zahlungen</message>
+	<message key="manager.paymentTypes">Zahlweisen</message>
 	<message key="manager.payment.userName">Zahler/in</message>
 	<message key="manager.people.allEnrolledUsers">Bei dieser Zeitschrift registrierte Benutzer/innen</message>
 	<message key="manager.people.allJournals">Alle Zeitschriften</message>
@@ -230,6 +232,12 @@
 	<message key="manager.setup.lists">Listen</message>
 	<message key="manager.setup.listsDescription">Maximalzahl der Elemente auf jeder Listenseite (z.B. Beiträge, Benutzer/innen oder redaktionelle Aufgaben) festlegen sowie die Anzahl der Links, die auf jeder Seite erscheinen sollen.</message>
 	<message key="manager.setup.enableArchive">Archivierung aktivieren</message>
+	<message key="manager.setup.plnPluginEnable">PKP-PN-Plugin aktiviert</message>
+	<message key="manager.setup.plnDescription">Das PKP Preservation Network (PN) stellt freie Archivierungsdienste für jede OJS-Zeitschrift bereit, die einige grundsätzliche Kriterien erfüllt.</message>
+	<message key="manager.setup.plnSettingsDescription">Klicken Sie auf Einstellungen, um die Nutzungsbedingungen des PKP PN zu akzeptieren.</message>
+	<message key="manager.setup.plnPluginArchiving">PKP Preservation Network (PN)</message>
+	<message key="manager.setup.plnPluginNotInstalled">Das PKP Preservation Network (PN) stellt freie Archivierungsdienste für jede OJS-Zeitschrift bereit, die einige grundsätzliche Kriterien erfüllt. Das PKP-PN-Plugin für OJS 3 wird momentan entwickelt und wird bald in der Plugin-Gallerie verfügbar sein.</message>
+	<message key="manager.setup.otherLockss">Einstellungen für alternative Archivierungen</message>
 	<message key="manager.setup.lockssEnable"><![CDATA[Aktivieren Sie LOCKSS und speichern und verteilen Sie den Inhalt der Zeitschrift bei den an LOCKSS teilnehmenden Bibliotheken über ein <a href="{$lockssUrl}" target="_blank">LOCKSS-Manifest</a>. Es erscheint dann eine Lizenz von LOCKSS im "Über uns" der Zeitschrift unter "Archiv":]]></message>
 	<message key="manager.setup.lockssLicenseDescription"><![CDATA[Eine LOCKSS-Lizenz wird in "Über uns" unter Archivierung erscheinen: <a href="http://www.lockss.org/community/publishers-titles-gln/" target="_blank">LOCKSS-Lizenz</a>]]></message>
 	<message key="manager.setup.lockssLicenseLabel">Beschreibung der LOCKSS-Lizenz</message>
@@ -240,6 +248,8 @@
 	<message key="manager.setup.clockssLicenseLabel">Beschreibung der CLOCKSS-Lizenz</message>
 	<message key="manager.setup.clockssRegister"><![CDATA[Registrieren Sie sich für den CLOCKSS-Dienst, indem Sie <a href="http://clockss.org/" target="_blank">die CLOCKSS-Website</a> besuchen.]]></message>
 	<message key="manager.setup.clockssTitle">CLOCKSS</message>
+	<message key="manager.setup.porticoEnable"><![CDATA[Portico ermöglichen, Zeitschrifteninhalte zu archivieren und an teilnehmende Bibliotheken auszuliefern.]]></message>
+	<message key="manager.setup.porticoTitle">Portico</message>
 	<message key="manager.setup.Issn">ISSN</message>
 	<message key="manager.setup.look">Gestaltung</message>
 	<message key="manager.setup.look.description">Titel der Startseite, Inhalt, Kopfzeile der Zeitschrift, Fußzeile, Navigationsleiste und Style Sheet.</message>
@@ -378,6 +388,12 @@
 	<message key="manager.subscriptionPolicies.expiryFullDescription">Leser/innen wird der Zugang zu sämtlichen Abonnement-Inhalten verwehrt, wenn ihr Abonnement endet.</message>
 	<message key="manager.subscriptionPolicies.expiryPartial">Teilweises Abonnement-Ende</message>
 	<message key="manager.subscriptionPolicies.expiryPartialDescription">Leser/innen wird der Zugang zu aktuell veröffentlichten Abonnement-Inhalten verwehrt, aber sie erhalten weiterhin Zugriff auf Abonnement-Inhalte, die vor ihrem Abonnement-Ende veröffentlicht wurden.</message>
+	<message key="manager.subscriptionPolicies.xMonths">{$x} Monate</message>
+	<message key="manager.subscriptionPolicies.xWeeks">{$x} Wochen</message>
+	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths">Benutzer per E-Mail nach Ablauf des Abonnements benachrichtigen</message>
+	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks">Benutzer per E-Mail nach Ablauf des Abonnements benachrichtigen</message>
+	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths">Benutzer per E-Mail vor Ablauf des Abonnements benachrichtigen</message>
+	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks">Benutzer per E-Mail vor Ablauf des Abonnements benachrichtigen</message>
 	<message key="manager.subscriptionPolicies.expiryReminders">Erinnerung an das Auslaufen des Abonnements</message>
 	<message key="manager.subscriptionPolicies.expiryRemindersDescription">Automatische E-Mails zur Erinnerung (verfügbar unter den Standard-E-Mails des OJS) können den Abonnent/innen sowohl vor als auch nach dem Ablauf des Abonnements zugehen.</message>
 	<message key="manager.subscriptionPolicies.expiryRemindersDisabled"><![CDATA[<strong>Anmerkung:</strong> Hierzu muss die/der Website-Administrator/in <tt>scheduled_tasks</tt> in der Konfigurationsdatei von OJS aktivieren. Weitere Servereinstellungen können erforderlich sein (und sind nicht unbedingt auf allen Servern verfügbar). Siehe OJS-Dokumentation.]]></message>
@@ -592,12 +608,4 @@
 	<message key="plugins.importexport.common.error.unknownJournal">Der angegebene Zeitschriftenpfad, "{$journalPath}", existiert nicht.</message>
 	<message key="plugins.importexport.common.error.unknownObjects">Die angegebenen Objekte konnten nicht gefunden werden.</message>
 	<message key="manager.setup.notifications.copyPrimaryContact">Eine Kopie an den in den Einstellungen der Zeitschrift festgelegten Hauptkontakt senden.</message>
-	<message key="subscriptionManager.subscription.confirmRemove">Sind Sie sicher, dass Sie dieses Abonnement löschen wollen?</message>
-	<message key="manager.paymentTypes">Zahlweisen</message>
-	<message key="manager.subscriptionPolicies.xMonths">{$x} Monate</message>
-	<message key="manager.subscriptionPolicies.xWeeks">{$x} Wochen</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths">Benutzer per E-Mail nach Ablauf des Abonnements benachrichtigen</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks">Benutzer per E-Mail nach Ablauf des Abonnements benachrichtigen</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths">Benutzer per E-Mail vor Ablauf des Abonnements benachrichtigen</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks">Benutzer per E-Mail vor Ablauf des Abonnements benachrichtigen</message>
 </locale>
