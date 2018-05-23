@@ -152,6 +152,20 @@
 			description="plugins.importexport.native.description"
 			inputType="xml::schema(plugins/importexport/native/native.xsd"
 			outputType="class::lib.pkp.classes.submission.reviewAssignment.ReviewAssignment[]" />
+		<!-- Queries native XML export -->
+		<filterGroup
+			symbolic="query=>native-xml"
+			displayName="plugins.importexport.native.displayName"
+			description="plugins.importexport.native.description"
+			inputType="class::lib.pkp.classes.query.Query[]"
+			outputType="xml::schema(plugins/importexport/native/native.xsd" />
+		<!-- Notes native XML export -->
+		<filterGroup
+			symbolic="note=>native-xml"
+			displayName="plugins.importexport.native.displayName"
+			description="plugins.importexport.native.description"
+			inputType="class::lib.pkp.classes.note.Note[]"
+			outputType="xml::schema(plugins/importexport/native/native.xsd" />
 	</filterGroups>
 	<filters>
 		<!-- Native XML article output -->
@@ -249,6 +263,14 @@
 		<filter
 			inGroup="native-xml=>review-assignment"
 			class="lib.pkp.plugins.importexport.native.filter.NativeXmlReviewAssignmentFilter"
+			isTemplate="0" />
+		<filter
+			inGroup="query=>native-xml"
+			class="lib.pkp.plugins.importexport.native.filter.QueryNativeXmlFilter"
+			isTemplate="0" />
+		<filter
+			inGroup="note=>native-xml"
+			class="lib.pkp.plugins.importexport.native.filter.NoteNativeXmlFilter"
 			isTemplate="0" />
 	</filters>
 </filterConfig>
