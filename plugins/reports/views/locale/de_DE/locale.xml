@@ -14,10 +14,9 @@
 <locale name="de_DE" full_name="Deutsch (Deutschland)">
 	<message key="plugins.reports.views.displayName">Lese-Bericht</message>
 	<message key="plugins.reports.views.description">Dieses Plugin liefert einen CSV-Bericht, der die Lesezugriffe für jeden Artikel angibt.</message>
-
-  <message key="plugins.reports.views.articleId">Artikel-ID</message>
-  <message key="plugins.reports.views.articleTitle">Artikeltitel</message>
-  <message key="plugins.reports.views.datePublished">Veröffentlichungsdatum</message>
-  <message key="plugins.reports.views.abstractViews">Abstract-Ansichten</message>
-  <message key="plugins.reports.views.galleyViews">Gesamte Fahnen-Ansichten</message>
+	<message key="plugins.reports.views.articleId">Artikel-ID</message>
+	<message key="plugins.reports.views.articleTitle">Artikeltitel</message>
+	<message key="plugins.reports.views.datePublished">Veröffentlichungsdatum</message>
+	<message key="plugins.reports.views.abstractViews">Abstract-Ansichten</message>
+	<message key="plugins.reports.views.galleyViews">Gesamte Fahnen-Ansichten</message>
 </locale>

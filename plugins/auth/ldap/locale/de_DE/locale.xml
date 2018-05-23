@@ -10,7 +10,7 @@
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_German_(de_DE)
   * Localization strings.
   -->
-  
+ 
 <locale name="de_DE" full_name="Deutsch (Deutschland)">
 	<message key="plugins.auth.ldap.displayName">LDAP</message>
 	<message key="plugins.auth.ldap.description">Dieses Plugin ermöglicht es, den Berechtigungsnachweis über eine externe LDAP-Datenquelle zu beziehen und Benutzer/innenkonten mit dieser Quelle zu synchronisieren.</message>

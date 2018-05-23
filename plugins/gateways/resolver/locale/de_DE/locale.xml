@@ -10,7 +10,7 @@
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_German_(de_DE)
   * Localization strings.
   -->
-  
+ 
 <locale name="de_DE" full_name="Deutsch (Deutschland)">
 	<message key="plugins.gateways.resolver.displayName">Resolver-Plugin</message>
 	<message key="plugins.gateways.resolver.description">Dieses Plugin verwaltet Verweise für Ausgaben und Artikel, ausgehend von Zitationsinformationen.</message>
