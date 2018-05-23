@@ -32,7 +32,7 @@ class SettingsPluginGridHandler extends PluginGridHandler {
 	/**
 	 * @copydoc PluginGridHandler::loadData()
 	 */
-	function loadCategoryData($request, $categoryDataElement, $filter) {
+	function loadCategoryData($request, &$categoryDataElement, $filter = null) {
 		$plugins = parent::loadCategoryData($request, $categoryDataElement, $filter);
 		$userRoles = $this->getAuthorizedContextObject(ASSOC_TYPE_USER_ROLES);
 

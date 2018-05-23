@@ -38,10 +38,9 @@ class SectionForm extends PKPSectionForm {
 
 	/**
 	 * Initialize form data from current settings.
-	 * @param $args array
-	 * @param $request PKPRequest
 	 */
-	function initData($args, $request) {
+	function initData() {
+		$request = Application::getRequest();
 		$journal = $request->getJournal();
 
 		$sectionDao = DAORegistry::getDAO('SectionDAO');
@@ -68,15 +67,13 @@ class SectionForm extends PKPSectionForm {
 			);
 		}
 
-		parent::initData($args, $request);
+		parent::initData();
 	}
 
 	/**
-	 * Fetch form contents
-	 * @param $request Request
-	 * @see Form::fetch()
+	 * @copydoc Form::fetch()
 	 */
-	function fetch($request) {
+	function fetch($request, $template = null, $display = false) {
 		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign('sectionId', $this->getSectionId());
 
@@ -97,7 +94,7 @@ class SectionForm extends PKPSectionForm {
 			'subEditorsListData' => json_encode($sectionEditorsListData),
 		));
 
-		return parent::fetch($request);
+		return parent::fetch($request, $template, $display);
 	}
 
 	/**
@@ -119,12 +116,11 @@ class SectionForm extends PKPSectionForm {
 
 	/**
 	 * Save section.
-	 * @param $args array
-	 * @param $request PKPRequest
 	 * @return mixed
 	 */
-	function execute($args, $request) {
+	function execute() {
 		$sectionDao = DAORegistry::getDAO('SectionDAO');
+		$request = Application::getRequest();
 		$journal = $request->getJournal();
 
 		// Get or create the section object
@@ -164,7 +160,7 @@ class SectionForm extends PKPSectionForm {
 		// Update section editors
 		$this->_saveSubEditors($journal->getId());
 
-		return parent::execute($section, $request);
+		return parent::execute();
 	}
 }
 

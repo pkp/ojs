@@ -1366,7 +1366,7 @@ class SolrWebService extends XmlWebService {
 		}
 
 		// We need the request to retrieve locales and build URLs.
-		$request = PKPApplication::getRequest();
+		$request = Application::getRequest();
 
 		// Get all supported locales.
 		$site = $request->getSite();

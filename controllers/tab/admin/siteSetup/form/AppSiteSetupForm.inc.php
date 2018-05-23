@@ -31,9 +31,10 @@ class AppSiteSetupForm extends SiteSetupForm {
 	/**
 	 * @copydoc SiteSetupForm::initData()
 	 */
-	function initData($request) {
-		parent::initData($request);
+	function initData() {
+		parent::initData();
 
+		$request = Application::getRequest();
 		$site = $request->getSite();
 		$this->setData('defaultMetricType', $site->getSetting('defaultMetricType'));
 

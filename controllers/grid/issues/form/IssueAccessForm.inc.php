@@ -49,9 +49,8 @@ class IssueAccessForm extends Form {
 
 	/**
 	 * Initialize form data from current issue.
-	 * @param $request PKPRequest
 	 */
-	function initData($request) {
+	function initData() {
 		$this->_data = array(
 			'accessStatus' => $this->_issue->getAccessStatus(),
 			'openAccessDate' => $this->_issue->getOpenAccessDate(),
@@ -71,10 +70,10 @@ class IssueAccessForm extends Form {
 
 	/**
 	 * Save issue settings.
-	 * @param $request PKPRequest
 	 * @return int Issue ID for created/updated issue
 	 */
-	function execute($request) {
+	function execute() {
+		$request = Application::getRequest();
 		$journal = $request->getJournal();
 
 		$issueDao = DAORegistry::getDAO('IssueDAO');

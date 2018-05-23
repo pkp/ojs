@@ -103,12 +103,12 @@ class ArticleGalleyForm extends Form {
 
 	/**
 	 * Save changes to the galley.
-	 * @param $request PKPRequest
 	 * @return ArticleGalley The resulting article galley.
 	 */
-	function execute($request) {
+	function execute() {
 		import('classes.file.IssueFileManager');
 
+		$request = Application::getRequest();
 		$journal = $request->getJournal();
 		$articleGalley = $this->_articleGalley;
 		$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');

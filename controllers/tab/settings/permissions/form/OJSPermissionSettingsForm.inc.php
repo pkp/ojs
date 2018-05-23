@@ -44,10 +44,10 @@ class OJSPermissionSettingsForm extends PermissionSettingsForm {
 	/**
 	 * @copydoc ContextSettingsForm::fetch
 	 */
-	function fetch($request, $params = null) {
+	function fetch($request, $template = null, $display = false, $params = null) {
 		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign('scheduledTasksEnabled', (boolean) Config::getVar('general', 'scheduled_tasks'));
-		return parent::fetch($request, $params);
+		return parent::fetch($request, $template, $display, $params);
 	}
 
 }

@@ -172,7 +172,7 @@ class SectionGridHandler extends SetupGridHandler {
 
 		import('controllers.grid.settings.sections.form.SectionForm');
 		$sectionForm = new SectionForm($request, $sectionId);
-		$sectionForm->initData($args, $request);
+		$sectionForm->initData();
 		return new JSONMessage(true, $sectionForm->fetch($request));
 	}
 
@@ -190,7 +190,7 @@ class SectionGridHandler extends SetupGridHandler {
 		$sectionForm->readInputData();
 
 		if ($sectionForm->validate()) {
-			$sectionForm->execute($args, $request);
+			$sectionForm->execute();
 			return DAO::getDataChangedEvent($sectionForm->getSectionId());
 		}
 		return new JSONMessage(false);

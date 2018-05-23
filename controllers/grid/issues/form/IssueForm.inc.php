@@ -116,7 +116,7 @@ class IssueForm extends Form {
 	/**
 	 * @copydoc Form::initData()
 	 */
-	function initData($request) {
+	function initData() {
 		if (isset($this->issue)) {
 			$locale = AppLocale::getLocale();
 			$this->_data = array(
@@ -171,9 +171,9 @@ class IssueForm extends Form {
 
 	/**
 	 * Save issue settings.
-	 * @param $request PKPRequest
 	 */
-	function execute($request) {
+	function execute() {
+		$request = Application::getRequest();
 		$journal = $request->getJournal();
 
 		$issueDao = DAORegistry::getDAO('IssueDAO');

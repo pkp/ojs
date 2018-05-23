@@ -95,13 +95,13 @@ class UserInstitutionalSubscriptionForm extends Form {
 	/**
 	 * Display the form.
 	 */
-	function display() {
+	function display($request = null, $template = null) {
 		$templateMgr = TemplateManager::getManager($this->request);
 		$templateMgr->assign(array(
 			'subscriptionId' => $this->subscription?$this->subscription->getId():null,
 			'subscriptionTypes' => $this->subscriptionTypes,
 		));
-		parent::display($this->request);
+		parent::display($this->request, $template);
 	}
 
 	/**

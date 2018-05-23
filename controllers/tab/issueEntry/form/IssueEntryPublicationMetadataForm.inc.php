@@ -212,10 +212,11 @@ class IssueEntryPublicationMetadataForm extends Form {
 	 * Save the metadata and store the catalog data for this published
 	 * monograph.
 	 */
-	function execute($request) {
-		parent::execute($request);
+	function execute() {
+		parent::execute();
 
 		$submission = $this->getSubmission();
+		$request = Application::getRequest();
 		$context = $request->getContext();
 
 		$waivePublicationFee = $request->getUserVar('waivePublicationFee') ? true : false;

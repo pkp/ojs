@@ -26,10 +26,9 @@ class NotificationSettingsForm extends PKPNotificationSettingsForm {
 	}
 
 	/**
-	 * Display the form.
-	 * @return PKPRequest
+	 * @copydoc Form::display()
 	 */
-	function display($request) {
+	function display($request = null, $template = null) {
 		$templateMgr = TemplateManager::getManager($request);
  
 		$journalDao = DAORegistry::getDAO('JournalDAO');
@@ -40,13 +39,14 @@ class NotificationSettingsForm extends PKPNotificationSettingsForm {
 			}
 		}
  
-		parent::display($request);
+		parent::display($request, $template);
 	}
 
 	/**
 	 * Save profile settings.
 	 */
-	function execute($request) {
+	function execute() {
+		$request = Application::getRequest();
 		$user = $request->getUser();
  
 		$journalDao = DAORegistry::getDAO('JournalDAO');
@@ -60,12 +60,12 @@ class NotificationSettingsForm extends PKPNotificationSettingsForm {
 				$currentlyReceives = $user->getSetting('openAccessNotification', $thisJournal->getId());
 				$shouldReceive = !empty($openAccessNotify) && in_array($thisJournal->getId(), $openAccessNotify);
 				if ($currentlyReceives != $shouldReceive) {
-					$userSettingsDao->updateSetting($user->getId(), 'openAccessNotification', $shouldReceive, 'bool', $thisJournal->getId());
+					$userSettingsDao->updateSetting($user->getId(), 'openAccessNotification', $shouldReceive, 'bool', null, $thisJournal->getId());
 				}
 			}
 		}
  
-		parent::execute($request);
+		parent::execute();
 	}
 }
 

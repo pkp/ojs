@@ -34,12 +34,11 @@ class InitiateExternalReviewForm extends EditorDecisionForm {
 	//
 	/**
 	 * Execute the form.
-	 * @param $args array
-	 * @param $request PKPRequest
 	 */
-	function execute($args, $request) {
+	function execute() {
 		// Retrieve the submission.
 		$submission = $this->getSubmission();
+		$request = Application::getRequest();
 
 		// Record the decision.
 		import('classes.workflow.EditorDecisionActionsManager');

@@ -59,9 +59,10 @@ class MastheadForm extends ContextSettingsForm {
 	/**
 	 * @copydoc ContextSettingsForm::initData()
 	 */
-	function initData($request) {
-		parent::initData($request);
+	function initData() {
+		parent::initData();
 
+		$request = Application::getRequest();
 		$journal = $request->getContext();
 		if ($this->getData('acronym') == null) {
 			$acronym = array();
@@ -73,12 +74,12 @@ class MastheadForm extends ContextSettingsForm {
 	}
 
 	/**
-	 * @copydoc Form::fetch()
+	 * @copydoc ContextSettingsForm::fetch()
 	 */
-	function fetch($request, $params = null) {
+	function fetch($request, $template = null, $display = false, $params = null) {
 		$site = $request->getSite();
 		$templateMgr = TemplateManager::getManager($request);
-		return parent::fetch($request, $params);
+		return parent::fetch($request, $template, $display, $params);
 	}
 }
 

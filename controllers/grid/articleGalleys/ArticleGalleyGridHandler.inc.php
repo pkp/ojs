@@ -208,7 +208,7 @@ class ArticleGalleyGridHandler extends GridHandler {
 		);
 		import('controllers.tab.pubIds.form.PublicIdentifiersForm');
 		$form = new PublicIdentifiersForm($representation);
-		$form->initData($request);
+		$form->initData();
 		return new JSONMessage(true, $form->fetch($request));
 	}
 
@@ -229,7 +229,7 @@ class ArticleGalleyGridHandler extends GridHandler {
 		$form = new PublicIdentifiersForm($representation);
 		$form->readInputData();
 		if ($form->validate($request)) {
-			$form->execute($request);
+			$form->execute();
 			return DAO::getDataChangedEvent();
 		} else {
 			return new JSONMessage(true, $form->fetch($request));
@@ -270,7 +270,7 @@ class ArticleGalleyGridHandler extends GridHandler {
 			$this->getSubmission()
 		);
 		$galleyForm->initData();
-		return new JSONMessage(true, $galleyForm->fetch($request, $this->getRequestArgs()));
+		return new JSONMessage(true, $galleyForm->fetch($request));
 	}
 
 	/**
@@ -343,7 +343,7 @@ class ArticleGalleyGridHandler extends GridHandler {
 			$this->getGalley()
 		);
 		$galleyForm->initData();
-		return new JSONMessage(true, $galleyForm->fetch($request, $this->getRequestArgs()));
+		return new JSONMessage(true, $galleyForm->fetch($request));
 	}
 
 	/**
@@ -360,7 +360,7 @@ class ArticleGalleyGridHandler extends GridHandler {
 		$galleyForm->readInputData();
 
 		if ($galleyForm->validate($request)) {
-			$galley = $galleyForm->execute($request);
+			$galley = $galleyForm->execute();
 
 			if ($this->getSubmission()->getStageId() == WORKFLOW_STAGE_ID_EDITING ||
 				$this->getSubmission()->getStageId() == WORKFLOW_STAGE_ID_PRODUCTION) {
@@ -377,7 +377,7 @@ class ArticleGalleyGridHandler extends GridHandler {
 
 			return DAO::getDataChangedEvent($galley->getId());
 		}
-		return new JSONMessage(true, $galleyForm->fetch());
+		return new JSONMessage(true, $galleyForm->fetch($request));
 	}
 
 	/**

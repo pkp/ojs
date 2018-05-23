@@ -135,7 +135,7 @@ class CounterReport {
 	 * @return array()
 	 */
 	protected function filterForContext($filters) {
-		$request = PKPApplication::getRequest();
+		$request = Application::getRequest();
 		$journal = $request->getContext();
 		$journalId = $journal ? $journal->getId() : '';
 		// If the request context is at the journal level, the dimension context id must be that same journal id
@@ -263,7 +263,7 @@ class CounterReport {
 	 * @return mixed
 	 */
 	function _getVendorComponent($key) {
-		$request = PKPApplication::getRequest();
+		$request = Application::getRequest();
 		$site = $request->getSite();
 		$context = $request->getContext();
 		$contextDao = Application::getContextDAO();

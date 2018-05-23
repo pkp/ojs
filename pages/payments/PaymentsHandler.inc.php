@@ -178,7 +178,7 @@ class PaymentsHandler extends Handler {
 		$paymentTypesForm = new PaymentTypesForm();
 		$paymentTypesForm->readInputData();
 		if ($paymentTypesForm->validate()) {
-			$paymentTypesForm->execute($request);
+			$paymentTypesForm->execute();
 			$notificationManager = new NotificationManager();
 			$user = $request->getUser();
 			$notificationManager->createTrivialNotification($user->getId());

@@ -128,7 +128,7 @@ class IndividualSubscriptionsGridHandler extends SubscriptionsGridHandler {
 	function editSubscription($args, $request) {
 		// Form handling.
 		$subscriptionForm = new IndividualSubscriptionForm($request, $request->getUserVar('rowId'));
-		$subscriptionForm->initData($args, $request);
+		$subscriptionForm->initData();
 
 		return new JSONMessage(true, $subscriptionForm->fetch($request));
 	}
@@ -146,7 +146,7 @@ class IndividualSubscriptionsGridHandler extends SubscriptionsGridHandler {
 		$subscriptionForm->readInputData();
 
 		if ($subscriptionForm->validate()) {
-			$subscriptionForm->execute($args, $request);
+			$subscriptionForm->execute();
 			$notificationManager = new NotificationManager();
 			$notificationManager->createTrivialNotification($request->getUser()->getId(), NOTIFICATION_TYPE_SUCCESS);
 			// Prepare the grid row data.

@@ -751,7 +751,7 @@ class LucenePlugin extends GenericPlugin {
 		if ($template != 'search/search.tpl') return false;
 
 		// Get the request.
-		$request = PKPApplication::getRequest();
+		$request = Application::getRequest();
 
 		// Assign our private stylesheet.
 		$templateMgr = $params[0];
@@ -1102,7 +1102,7 @@ class LucenePlugin extends GenericPlugin {
 		}
 
 		// Assign parameters.
-		$request = PKPApplication::getRequest();
+		$request = Application::getRequest();
 		$site = $request->getSite();
 		$mail->assignParams(
 			array('siteName' => $site->getLocalizedTitle(), 'error' => $error)
