@@ -166,6 +166,20 @@
 			description="plugins.importexport.native.description"
 			inputType="class::lib.pkp.classes.note.Note[]"
 			outputType="xml::schema(plugins/importexport/native/native.xsd" />
+		<!-- Queries native XML import -->
+		<filterGroup
+			symbolic="native-xml=>query"
+			displayName="plugins.importexport.native.displayName"
+			description="plugins.importexport.native.description"
+			inputType="xml::schema(plugins/importexport/native/native.xsd"
+			outputType="class::lib.pkp.classes.query.Query[]" />
+		<!-- Notes native XML import -->
+		<filterGroup
+			symbolic="native-xml=>note"
+			displayName="plugins.importexport.native.displayName"
+			description="plugins.importexport.native.description"
+			inputType="xml::schema(plugins/importexport/native/native.xsd"
+			outputType="class::lib.pkp.classes.note.Note[]" />
 	</filterGroups>
 	<filters>
 		<!-- Native XML article output -->
@@ -271,6 +285,14 @@
 		<filter
 			inGroup="note=>native-xml"
 			class="lib.pkp.plugins.importexport.native.filter.NoteNativeXmlFilter"
+			isTemplate="0" />
+		<filter
+			inGroup="native-xml=>query"
+			class="lib.pkp.plugins.importexport.native.filter.NativeXmlQueryFilter"
+			isTemplate="0" />
+		<filter
+			inGroup="native-xml=>note"
+			class="lib.pkp.plugins.importexport.native.filter.NativeXmlNoteFilter"
 			isTemplate="0" />
 	</filters>
 </filterConfig>
