@@ -558,32 +558,7 @@ Link: {$url}<br />
 {$principalContactSignature}]]></body>
 		<description>Denne e-mail er blevet sendt til registrerede brugere, som har valgt at få tilsendt denne type meddelelser.</description>
 	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST">
-		<subject>Ny meddelelse fra {$siteTitle}</subject>
-		<body><![CDATA[Du har modtaget en ny meddelelse fra {$siteTitle}:<br />
---<br />
-{$notificationContents}<br />
-<br />
-Link: {$url}<br />
---<br />
-<br />
-Hvis du ikke længere ønsker at modtage e-mail-meddelelser, skal du gå ind på {$unsubscribeLink} og indtaste din e-mail-adresse og adgangskode.<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>Denne e-mail er blevet sendt til uregistrerede brugere på meddelelses-mailinglisten.</description>
-	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
-		<subject>Velkommen til {$siteTitle}-mailinglisten!</subject>
-		<body><![CDATA[Du har bedt om at modtage meddelelser fra {$siteTitle}.<br />
-			<br />
-Klik på dette link for at bekræfte din anmodning og tilføje din e-mail-adresse til mailinglisten: {$confirmLink}<br />
-<br />
-Hvis du ikke længere ønsker at modtage e-mail-meddelelser, skal du gå ind på {$unsubscribeLink} og indtaste din e-mail-adresse og adgangskode.<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>Denne e-mail er blevet sendt til en uregistreret bruger, som har tilmeldt sig meddelelses-mailinglisten.</description>
-	</email_text>
-		<email_text key="EDITOR_DECISION_ACCEPT">
+	<email_text key="EDITOR_DECISION_ACCEPT">
 		<subject>Redaktørbeslutning</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />

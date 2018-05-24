@@ -996,8 +996,6 @@ Ověřování může selhat při vyhledávání URL, které vyžadují "posted f
 
 
 	<!-- Notification Types -->
-	<message key="notification.mailListDescription">Vložte svou e-mailovou adresu, abyste dostávali okamžitá upozornění o důležitém novém obsahu, přidaném do časopisu.</message>
-	<message key="notification.notificationsPublicDescription"><![CDATA[Na této stránce jsou zobrazeny důležité aktuality tohoto časopisu jako vydání nového čísla, nebo oznámení. Můžete si objednat zasílání těchto upozornění pomocí RSS feeds (kliknutím na obrázek vpravo), nebo   <a href="{$emailUrl}">e-mailem.</a>]]></message>
 
 	<message key="notification.type.articleSubmitted">Byl vložen nový článek s názvem "{$title}".</message>
 	<message key="notification.type.editing">Editace událostí</message>

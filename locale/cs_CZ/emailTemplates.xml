@@ -681,32 +681,6 @@ Odkaz: {$url}<br />
 <br />
 {$principalContactSignature}]]></body>
 	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST">
-		<subject>Nové oznámení od {$siteTitle}</subject>
-		<body><![CDATA[Máte nové oznámení od {$siteTitle}:<br />
---<br />
-{$notificationContents}<br />
-<br />
-Odkaz: {$url}<br />
---<br />
-<br />
-Pokud chcete ukončit odebírání těchto informačních emalů, přejděte prosím na {$unsubscribeLink} a vložte vaši emailovou adresu a heslo.<br />
-<br />
-{$principalContactSignature}]]></body>
-	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
-		<subject>Vítejte na rezesílacím seznamu {$siteTitle}!</subject>
-		<body><![CDATA[Přihlásil jste se k odběru oznámení z {$siteTitle}.<br />
-<br />
-Pro potvrzení Vaší žádosti a přidání Vaší emailové adresy do rozesílacího seznamu klikněte prosím na tento odkaz: {$confirmLink}<br />
-<br />
-Pokud si přejete ukončit odebírání informačních emailů, přejděte prosím na {$unsubscribeLink} a vložte Vaši emailovou adresu a heslo.<br />
-<br />
-Vaše heslo pro zakázání informačních emailů je: {$password}<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>Tento e-mail je odeslán neregistrovanému uživateli, který se právě zaregistroval do mailového seznamu oznámeními.</description>
-	</email_text>
 	<email_text key="EDITOR_DECISION_ACCEPT">
 		<subject>Rozhodnutí editora</subject>
 		<body><![CDATA[{$authorName}:<br />
@@ -950,7 +924,7 @@ Děkujeme mnohokrát za spolupráci.<br />
 	<email_text key="REVIEW_REQUEST_REMIND_AUTO_ONECLICK">
 		<subject>Požadavek na recenzi článku</subject>
 		<body><![CDATA[{$reviewerName}:<br />
-Rádi bychom se vám připomněli s naší prosbou o recenzi příspěvku &quot;{$submissionTitle},&quot; do časopisu {$contextName}. Rádi bychom obdrželi vaši odpověď do {$responseDueDate}. Tento email byl automaticky vygenerován a zaslán vám, s ohledem na to, že termín již uplynul. 
+Rádi bychom se vám připomněli s naší prosbou o recenzi příspěvku &quot;{$submissionTitle},&quot; do časopisu {$contextName}. Rádi bychom obdrželi vaši odpověď do {$responseDueDate}. Tento email byl automaticky vygenerován a zaslán vám, s ohledem na to, že termín již uplynul.
 <br />
 Věříme, že budete dobrým recenzentem tohoto rukopisu. Abstrakt rukopisu je vložen níže. Budeme velmi rádi, pokud se ujmete této důležité úlohy.<br />
 <br />

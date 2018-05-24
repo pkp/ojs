@@ -446,32 +446,6 @@ Enlace: {$url}<br />
 {$principalContactSignature}]]></body>
 		<description>El email es enviado a usuarios registrados que han seleccionado recibir notificaciones.</description>
 	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST">
-		<subject>Nueva notificación desde {$siteTitle}</subject>
-		<body><![CDATA[Tiene una nueva notificación desde {$siteTitle}:<br />
---<br />
-{$notificationContents}<br />
-<br />
-Link: {$url}<br />
---<br />
-<br />
-Si no desea recibir los correos de notificaciones, vaya a {$unsubscribeLink} e introduzca su dirección de correo y su contraseña en nuestra plataforma.<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>Este email es enviado a usuarios sin registrar en las listas de notificaciones.</description>
-	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
-		<subject>Bienvenido a la lista de correo de {$siteTitle} !</subject>
-		<body><![CDATA[Has escogido recibir notificaciones desde {$siteTitle}.<br />
-<br />
-Haga clic en el siguiente enlace para confirmar su petición y añadir su correo electrónico a la lista de notificaciones:<br />
- {$confirmLink}<br />
-<br />
-Si no desea recibir emails de notificaciones, ve a {$unsubscribeLink} e introduzca su dirección de email y su contraseña.<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>Este correo es enviado a usuarios sin registrar los cuales acaban de registrarse en la lista de notificaciones.</description>
-	</email_text>
 	<email_text key="SUBSCRIPTION_RENEW_INSTL">
 		<subject>Renovación de Suscripción: Institucional</subject>
 		<body><![CDATA[An institutional subscription has been renewed online for {$contextName} with the following details.<br />

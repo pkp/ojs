@@ -23,31 +23,6 @@ Linkki: {$url}<br />
 {$principalContactSignature}]]></body>
 		<description>The email is sent to registered users that have selected to have this type of notification emailed to them.</description>
 	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST">
-		<subject>Uusi ilmoitus julkaisusta {$siteTitle}</subject>
-		<body><![CDATA[Teille on uusi ilmoitus julkaisusta {$siteTitle}:<br />
---<br />
-{$notificationContents}<br />
-<br />
-Linkki: {$url}<br />
---<br />
-<br />
-Mikäli ette halua enää vastaanottaa ilmoitussähköposteja, klikatkaa {$unsubscribeLink}.<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>This email is sent to unregistered users on the notification mailing list.</description>
-	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
-		<subject>Tervetuloa sivuston {$siteTitle} postituslistalle!</subject>
-		<body><![CDATA[Olette rekisteröitynyt ottamaan vastaan ilmoituksia sivustolta {$siteTitle}.<br />
-<br />
-Klikatkaa tätä linkkiä vahvistaaksenne pyynnön ja lisätäksenne sähköpostiosoitteenne postituslistalle: {$confirmLink}<br />
-<br />
-Mikäli ette enää halua vastaanottaa ilmoitussähköposteja, klikatkaa {$unsubscribeLink}.<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>This email is sent to an unregistered user who just registered with the notification mailing list.</description>
-	</email_text>
 	<email_text key="PASSWORD_RESET_CONFIRM">
 		<subject>Vahvista salasanan vaihtaminen</subject>
 		<body><![CDATA[Olemme vastaanottaneet pyynnön vaihtaa salasananne {$siteTitle} sivustolle.<br />
@@ -176,7 +151,7 @@ Jos teillä on kysyttävää, otattehan yhteyttä minuun. Kiitos, että valitsit
 Ystävällisin terveisin,<br />
 {$editorialContactSignature}]]></body>
 		<description>This email, when enabled, is automatically sent to the other authors who are not users specified during the submission process.</description>
-	</email_text>	
+	</email_text>
 	<email_text key="EDITOR_ASSIGN">
 		<subject>Toimituksellinen toimeksianto</subject>
 		<body><![CDATA[Hyvä {$editorialContactName},<br />
@@ -266,7 +241,7 @@ Ystävällisin terveisin,<br />
 		<subject>Artikkelin arviointipyyntö</subject>
 		<body><![CDATA[Hyvä {$reviewerName},<br />
 <br />
-Muistuttaisin ystävällisesti pyynnöstämme arvioida käsikirjoitus &quot;{$submissionTitle}&quot; julkaisulle {$contextName}. Toivoimme saavamme vastauksenne {$responseDueDate} mennessä, ja tämä sähköposti on lähetetty automaattisesti määräajan umpeuduttua. 
+Muistuttaisin ystävällisesti pyynnöstämme arvioida käsikirjoitus &quot;{$submissionTitle}&quot; julkaisulle {$contextName}. Toivoimme saavamme vastauksenne {$responseDueDate} mennessä, ja tämä sähköposti on lähetetty automaattisesti määräajan umpeuduttua.
 <br />
 Uskon, että olisitte sopiva arvioija kyseiselle käsikirjoitukselle. Käsikirjoituksen abstrakti löytyy tämän sähköpostin lopusta. Toivon, että harkitsette tähän meille tärkeään tehtävään ryhtymistä.<br />
 <br />
@@ -824,5 +799,17 @@ Ystävällisin terveisin,<br />
 		<subject>Viesti julkaisua {$contextName} koskien</subject>
 		<body><![CDATA[Kirjoita viesti]]></body>
 		<description>The default (blank) message used in the Notification Center Message Listbuilder.</description>
+	</email_text>
+	<email_text key="EDITOR_DECISION_INITIAL_DECLINE">
+		<subject>Toimittajan päätös</subject>
+		<body>
+			<![CDATA[Hyvä {$authorName},<br />
+<br />
+Olemme tehneet päätöksen julkaisuun {$contextName} lähettämäänne käsikirjoitusta &quot;{$submissionTitle}&quot; koskien.<br />
+<br />
+Päätöksemme on: Käsikirjoitus on hylätty<br />
+<br />
+{$editorialContactSignature}<br />]]></body>
+		<description>This email is send to the author if the editor declines his submission initially, before the review stage</description>
 	</email_text>
 </email_texts>

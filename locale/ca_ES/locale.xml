@@ -867,8 +867,6 @@
 	<message key="rt.context.authorTermsDescription">Per a les obres amb més d’un autor/a, deixeu tots els noms activats si voleu cercar obres que tinguin la mateixa autoria de manera col·laborativa o bé activeu un sol nom si voleu cercar cada persona una per una. Feu clic a «Sobre la revista» per obtenir més informació sobre el recurs cercat. Aquests recursos han estat seleccionats per la rellevància que tenen i perquè ofereixen accés lliure (gratuït) a tots o part dels continguts.</message>
 
 	<!-- Notification Types -->
-	<message key="notification.mailListDescription">Introduïu el vostre correu electrònic per rebre notificacions immediates del contingut important nou que s'afegeixi a la revista.</message>
-	<message key="notification.notificationsPublicDescription"><![CDATA[  <a href="{$emailUrl}">per correu electrònic.</a>]]></message>
 
 	<message key="notification.type.articleSubmitted">S'ha tramès un nou article: "{$title}".</message>
 	<message key="notification.type.editing">Esdeveniments d'edició</message>

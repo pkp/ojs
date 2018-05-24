@@ -908,7 +908,6 @@ Autori koji objavljuju u ovom časopisu pristaju na sljedeće uvijete:
 	<message key="installer.maxFileUploadSize"><![CDATA[Vaš uslužnik dozvoljava postavljanje datoteka maksimalne veličine: <strong>{$maxFileUploadSize}</strong>]]></message>
 	<message key="installer.installApplication">Instaliraj Open Journal Systems</message>
 	<message key="installer.upgradeApplication">Nadogradi Open Journal Systems</message>
-	<message key="notification.mailListDescription">Upišite vašu e-adresu kako bi dobili obavijesti o važnom dodanom sadržaju u časopis.</message>
 	<message key="notification.type.editing">Uređivanje događaja</message>
 	<message key="notification.type.issuePublished">Izdanje je objavljeno.</message>
 	<message key="notification.type.newAnnouncement">Nova obavijest je napisana.</message>
@@ -934,7 +933,6 @@ Autori koji objavljuju u ovom časopisu pristaju na sljedeće uvijete:
 	<message key="rt.admin.validateUrls.description"><![CDATA[Moguće je da su dole prikazane neke nevažeće URL za mjesta za traženje.<br />
 Provjerite ručno da li su prikazane URL važeće jer ovaj test nije 100% točan. <br />
 Provjera može pogriješiti kod URL koji zahtijevaju pretragu pomoću obrasca.]]></message>
-	<message key="notification.notificationsPublicDescription"><![CDATA[Ova stranica prikazuje važne vijesti u svezi sa ovim časopisom kao što su nova izdanja ili obavijesti. Možete se pretplatiti na ove vijesti upotrebom RSS vezama (klikom na sli;ice na desnoj strani) ili  <a href="{$emailUrl}">e-porukamal.</a>]]></message>
 	<message key="manager.setup.reviewProcessEmailDescription">Urednici šalju
 Recenzenti zahtijevaju pregled podnesenog članka u privitku ove poruke.  Recenzenti informiraju urednike o njihovim odobravanjima ili kritičkim primjedbama kao i tekst pregleda i preporuka. Urednici upisuju odobravanja ili neslaganja i njihove preglede i preporuke u stranicu Pregled podnesaka da bi pratili proces recenzije.</message>
 	<message key="editor.submissionEditing.notes"><![CDATA[<ol>

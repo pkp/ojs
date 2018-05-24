@@ -581,30 +581,6 @@ Link: {$url}<br />
 <br />
 {$principalContactSignature}]]></body>
 	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST">
-		<subject>Nieuw bericht van {$siteTitle}</subject>
-		<body><![CDATA[U heeft een nieuw bericht van {$siteTitle}:<br />
---<br />
-{$notificationContents}<br />
-<br />
-Link: {$url}<br />
---<br />
-<br />
-Als u deze berichten niet meer wilt ontvangen, ga dan naar {$unsubscribeLink} en voer uw e-mail adres en wachtwoord in.<br />
-<br />
-{$principalContactSignature}]]></body>
-	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
-		<subject>Welkom bij de {$siteTitle} maillijst!</subject>
-		<body><![CDATA[U heeft zich geregistreerd om berichten te ontvangen van {$siteTitle}.<br />
-<br />
-Klik op deze link om uw verzoek te bevestigen en uw e-mail adres toe te voegen aan de lijst: {$confirmLink}<br />
-<br />
-Als u de berichten van deze lijst niet langer wilt ontvangen, ga dan naar {$unsubscribeLink} <br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>Deze e-mail wordt verstuurd naar een ongeregistreerde gebruiker die zich zojuist heeft geregistreerd voor notoficatiemails</description>
-	</email_text>
 	<email_text key="EDITOR_DECISION_ACCEPT">
 		<subject>Redacteursbeslissing</subject>
 		<body><![CDATA[{$authorName}:<br />
