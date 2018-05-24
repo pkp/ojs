@@ -964,8 +964,6 @@ Authors who publish with this journal agree to the following terms:
 	<message key="payment.subscription.purchase">Kjøp abonnement</message>
 	<message key="installer.installApplication">Installer Open Journal Systems</message>
 	<message key="installer.upgradeApplication">Oppgrader Open Journal Systems</message>
-	<message key="notification.mailListDescription">Oppgi e-postadresse for å få umiddelbar varsling når viktig nytt innhold legges til i tidsskriftet.</message>
-	<message key="notification.notificationsPublicDescription"><![CDATA[Denne siden viser viktige oppdateringer som har med dette tidsskriftet å gjøre, som nye nummer eller kunngjøringer. Du kan abonnere på disse varslingene via RSS-tjenesten (ved å klikke på symbolene til høyre) eller <a href="{$emailUrl}">via e-post.</a>]]></message>
 	<message key="notification.type.articleSubmitted">En ny artikkel, "{$title}", har blitt innlevert.</message>
 	<message key="notification.type.editing">Redigeringshendelser</message>
 	<message key="notification.type.editorDecisionComment">Redaktørens beslutning vedrørende "{$title}" har blitt kommentert.</message>

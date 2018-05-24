@@ -1035,8 +1035,6 @@ Sök-URL:er som kräver inskickade formulärdata kan komma att visas som ogiltig
 
 
 	<!-- Notification Types -->
-	<message key="notification.mailListDescription">Skriv in din e-postadress för att få aviseringar direkt när det läggs till nytt viktigt innehåll i tidskriften.</message>
-	<message key="notification.notificationsPublicDescription">Den här sidan visar viktiga uppdateringar relaterade till den här tidskriften, exempelvis nya nummer eller meddelanden. Du kan prenumerera på dessa aviseringar via RSS-flöden (genom att klicka på ikonerna till höger), eller <![CDATA[  <a href="{$emailUrl}">via e-post.</a>]]></message>
 
 	<message key="notification.type.articleSubmitted">En ny artikel, "{$title}", har skickats in.</message>
 	<message key="notification.type.editing">Redaktionella händelser</message>

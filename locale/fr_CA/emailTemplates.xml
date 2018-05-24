@@ -575,31 +575,6 @@ Lien: {$url}<br />
 {$principalContactSignature}]]></body>
 		<description>Ce courriel est envoyé aux utilisateurs inscrits qui ont choisi de recevoir par courriel ce type d'avis.</description>
 	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST">
-		<subject>Nouvel avis de {$siteTitle}</subject>
-		<body><![CDATA[Vous avez un avis de {$siteTitle}:<br />
---<br />
-{$notificationContents}<br />
-<br />
-Lien: {$url}<br />
---<br />
-<br />
-Si vous souhaitez ne plus recevoir d'avis par courriel, veuillez aller à {$unsubscribeLink} et saisir votre adresse de courriel et mot de passe.<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>Ce courriel est envoyé aux utilisateurs non inscrits sur la liste de diffusion d'avis.</description>
-	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
-		<subject>Bienvenue à la liste de diffusion de {$siteTitle}!</subject>
-		<body><![CDATA[Vous vous êtes inscrits pour recevoir des avis de {$siteTitle}.<br />
-<br />
-Veuillez cliquer sur ce lien pour confirmer votre demande et ajouter votre adresse de courriel à la liste de diffusion : {$confirmLink}<br />
-<br />
-Si vous souhaitez  arrêter l'envoi d'avis par courriels, veuillez aller à {$unsubscribeLink} et saisir votre adresse de courriel et votre mot de passe.<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>Cet courriel est envoyé à un utilisateur non enregistré qui vient de s'inscrire à la liste de diffusion des notifications.</description>
-	</email_text>
 	<email_text key="EDITOR_DECISION_ACCEPT">
 		<subject>Décision du rédacteur</subject>
 		<body><![CDATA[{$authorName}:<br />

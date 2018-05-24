@@ -894,8 +894,6 @@
 
 
 	<!-- Notification Types -->
-	<message key="notification.mailListDescription">Introduzca su dirección de correo electrónico para recibir notificaciones inmediatas sobre contenido nuevo importante que se ha añadido a la revista.</message>
-	<message key="notification.notificationsPublicDescription"><![CDATA[  <a href="{$emailUrl}">a través de correo electrónico.</a>]]></message>
 
 	<message key="notification.type.articleSubmitted">Se envió un nuevo artículo, "{$title}".</message>
 	<message key="notification.type.editing">Edición de eventos</message>
@@ -1012,7 +1010,7 @@ La configuración del soporte CLOCKSS para Open Journal Systems no hace falta qu
 	<message key="notification.type.assignProductionUser">Asigne un usuario/a para crear galeradas mediante el enlace Añadir de la lista de participantes.</message>
 	<message key="notification.type.awaitingRepresentations">Esperando galeradas.</message>
 	<message key="navigation.subscriptions">Suscripciones</message>
-	
+
 	<!-- legacy strings from OJS 2, for upgraded installations from OJS 2 -->
 	<message key="log.editor.submissionExpedited">{$editorName} se hará cargo del proceso de edición del artículo {$submissionId}.</message>
 </locale>

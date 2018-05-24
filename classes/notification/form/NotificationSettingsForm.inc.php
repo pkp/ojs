@@ -17,6 +17,33 @@
 import('lib.pkp.classes.notification.form.PKPNotificationSettingsForm');
 
 class NotificationSettingsForm extends PKPNotificationSettingsForm {
+
+	/**
+	 * @copydoc PKPNotificationSettingsForm::getNotificationSettingsMap()
+	 */
+	protected function getNotificationSettingsMap() {
+		$settingsMap = parent::getNotificationSettingsMap();
+		$settingsMap[NOTIFICATION_TYPE_PUBLISHED_ISSUE] = array(
+			'settingName' => 'notificationPublishedIssue',
+			'emailSettingName' => 'emailNotificationPublishedIssue',
+			'settingKey' => 'notification.type.issuePublished',
+		);
+		return $settingsMap;
+	}
+
+	/**
+	 * @copydoc PKPNotificationSettingsForm::getNotificationSettingsCategories()
+	 */
+	public function getNotificationSettingCategories() {
+		$categories = parent::getNotificationSettingCategories();
+		for ($i = 0; $i < count($categories); $i++) {
+			if ($categories[$i]['categoryKey'] === 'notification.type.public') {
+				$categories[$i]['settings'][] = NOTIFICATION_TYPE_PUBLISHED_ISSUE;
+				break;
+			}
+		}
+		return $categories;
+	}
 }
 
 ?>

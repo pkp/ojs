@@ -615,30 +615,6 @@ Link: {$url}<br />
 <br />
 {$principalContactSignature}]]></body>
 	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST">
-		<subject>Nuova notifica da {$siteTitle}</subject>
-		<body><![CDATA[Hai ricevuto una notifica da  {$siteTitle}:<br />
---<br />
-{$notificationContents}<br />
-<br />
-Link: {$url}<br />
---<br />
-<br />
-Se non vuoi ricevere altre notifiche, vai alla pagina {$unsubscribeLink} per cancellarti.<br />
-<br />
-{$principalContactSignature}]]></body>
-	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
-		<subject>Benvenuto nella mailing list di {$siteTitle}!</subject>
-		<body><![CDATA[Hai chiesto di ricevere notifiche da {$siteTitle}.<br />
-<br />
-Clicca su questo link per confermare e aggiungere il tuo indirizzo nella lista di distribuzione: {$confirmLink}<br />
-<br />
-Se non vuoi ricevere email di notifica, vai alla pagina {$unsubscribeLink} per cancellarti.<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>Questo messaggio viene inviato a utenti che si sono appena registrati per ricevere le notifiche.</description>
-	</email_text>
 	<email_text key="EDITOR_DECISION_ACCEPT">
 		<subject>Decisione dell'editor</subject>
 		<body><![CDATA[&lt;![CDATA[{$authorName}:<br />

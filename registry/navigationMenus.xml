@@ -33,6 +33,7 @@
 			<navigationMenuItem title="about.aboutContext" type="NMI_TYPE_ABOUT" />
 			<navigationMenuItem title="navigation.submissions" type="NMI_TYPE_SUBMISSIONS" />
 			<navigationMenuItem title="about.editorialTeam" type="NMI_TYPE_EDITORIAL_TEAM" />
+			<navigationMenuItem title="manager.setup.privacyStatement" type="NMI_TYPE_PRIVACY" />
 			<navigationMenuItem title="about.contact" type="NMI_TYPE_CONTACT" />
 		</navigationMenuItem>
 	</navigationMenu>

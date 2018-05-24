@@ -945,8 +945,6 @@
 
 
 	<!-- Notification Types -->
-	<message key="notification.mailListDescription">请输入您的电子邮件地址，便于接收该期刊重要的新内容通知.</message>
-	<message key="notification.notificationsPublicDescription">这页显示了杂志刊期或公告相关的重要更新. 您可以通过RSS(点击右侧的图片)或者<![CDATA[  <a href="{$emailUrl}">通过电子邮件.</a>订阅这个通知 ]]></message>
 
 	<message key="notification.type.articleSubmitted">一篇新文章, "{$title}", 已经提交.</message>
 	<message key="notification.type.editing">编辑事件</message>
