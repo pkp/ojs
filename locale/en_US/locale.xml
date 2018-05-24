@@ -197,6 +197,7 @@
 	<message key="user.registerForOtherJournals">Register for Other Journals</message>
 	<message key="user.reviewerPrompt">Would you be willing to review submissions to this journal?</message>
 	<message key="user.reviewerPrompt.userGroup">Yes, request the {$userGroup} role.</message>
+	<message key="user.reviewerPrompt.optin">Yes, I would like to be contacted with requests to review submissions to this journal.</message>
 	<message key="user.register.contextsPrompt">Which journals on this site would you like to register with?</message>
 	<message key="user.register.otherContextRoles">Request the following roles.</message>
 	<message key="user.register.noContextReviewerInterests">If you requested to be a reviewer on any journal, please enter your subject interests.</message>
@@ -673,6 +674,7 @@ You may optionally provide the user with a reason for disabling their account.</
 	<message key="user.register.reviewerDescriptionNoInterests">Willing to conduct peer review of submissions to the journal.</message>
 	<message key="user.register.reviewerDescription">Willing to conduct peer review of submissions to the site.</message>
 	<message key="user.register.reviewerInterests">Identify reviewing interests (substantive areas and research methods):</message>
+	<message key="user.register.form.emailConsentAllContexts">Yes, I would like to be notified of new publications and announcements for all journals that I registered with.</message>
 
 	<!-- Subscriptions -->
 	<message key="user.subscriptions.mySubscriptions">My Subscriptions</message>
@@ -1035,8 +1037,6 @@ Validation may fail on search URLs that require posted form data.]]></message>
 
 
 	<!-- Notification Types -->
-	<message key="notification.mailListDescription">Enter your email address to receive immediate notifications of important new content added to the journal.</message>
-	<message key="notification.notificationsPublicDescription">This page shows important updates associated with this journal such as new issues or announcements.  You may subscribe to these notifications through RSS feeds (by clicking on the images to the right), or <![CDATA[  <a href="{$emailUrl}">through email.</a>]]></message>
 
 	<message key="notification.type.articleSubmitted">A new article, "{$title}", has been submitted.</message>
 	<message key="notification.type.editing">Editing Events</message>
@@ -1051,6 +1051,7 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<message key="notification.type.submissionComment">An editor has made a comment on "{$title}."</message>
 	<message key="notification.type.submissions">Submission Events</message>
 	<message key="notification.type.userComment">A reader has made a comment on "{$title}"</message>
+	<message key="notification.type.public">Public Announcements</message>
 	<message key="notification.savedIssueMetadata">Issue publication metadata saved.</message>
 	<message key="notification.type.editorAssignmentTask">A new article has been submitted to which an editor needs to be assigned.</message>
 	<message key="notification.type.assignProductionUser">Assign a user to create galleys using the Assign link in the Participants list.</message>

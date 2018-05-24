@@ -11,8 +11,6 @@
   -->
 <emails>
 	<email key="NOTIFICATION" can_edit="1" can_disable="0"/>
-	<email key="NOTIFICATION_MAILLIST" can_edit="1" can_disable="0"/>
-	<email key="NOTIFICATION_MAILLIST_WELCOME" can_edit="1" can_disable="0"/>
 	<email key="NOTIFICATION_CENTER_DEFAULT" can_edit="1" can_disable="0"/>
 	<email key="PASSWORD_RESET_CONFIRM" can_edit="1" can_disable="0"/>
 	<email key="PASSWORD_RESET" can_edit="1" can_disable="0"/>

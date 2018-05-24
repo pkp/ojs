@@ -558,31 +558,6 @@ Bağlantı: {$url}<br />
 {$principalContactSignature}]]></body>
 		<description></description>
 	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST">
-		<subject>{$siteTitle} Adlı  Siteden Yeni Bildirim</subject>
-		<body><![CDATA[{$siteTitle} adlı siteden yeni bir bir bildiriminiz var:<br />
---<br />
-{$notificationContents}<br />
-<br />
-Bağlantı: {$url}<br />
---<br />
-<br />
-Eğer bu bildirimi almak istemiyorsanız, lütfen tıklayınız {$unsubscribeLink}.<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>Bu e-posta bildirim listesindeki kayıtsız kullanıcılar tarafından gönderilir.</description>
-	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
-		<subject>Welcome to the the {$siteTitle} mailing list!</subject>
-		<body><![CDATA[You have signed up to receive notifications from {$siteTitle}.<br />
-<br />
-Please click on this link to confirm your request and add your email address to the mailing list: {$confirmLink}<br />
-<br />
-If you wish to stop receiving notification emails, please go to {$unsubscribeLink}.<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>This email is sent to an unregistered user who just registered with the notification mailing list.</description>
-	</email_text>
 	<email_text key="USER_VALIDATE">
 		<subject>Validate Your Account</subject>
 		<body><![CDATA[{$userFullName}<br />

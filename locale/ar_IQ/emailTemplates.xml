@@ -23,31 +23,6 @@
 {$principalContactSignature}]]></body>
 		<description>رسالة البريد الالكتروني هذه مرسلة إلى المستخدمين المسجلين الذين اختاروا استلام إشعار من هذا النوع عبر البريد الالكتروني.</description>
 	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST">
-		<subject>إشعار جديد من {$siteTitle}</subject>
-		<body><![CDATA[لديك إشعار جديد من {$siteTitle}:<br />
---<br />
-{$notificationContents}<br />
-<br />
-الرابط: {$url}<br />
---<br />
-<br />
-لو أردت إيقاف الإشعارات عبر البريد الالكتروني، لطفاً أنقر الرابط {$unsubscribeLink}.<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>هذه الرسالة مرسلة إلى المستخدمين غير المسجلين في قائمة الإشعار البريدي.</description>
-	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
-		<subject>مرحباً بك في قائمة المراسلة للموقع {$siteTitle} !</subject>
-		<body><![CDATA[لقد سجلت دخولك لتحصل على إشعارات من {$siteTitle}.<br />
-<br />
-لطفاً، أنقر هذا الرابط لتأكيد طلبك ولتضيف عنوان بريدك الالكتروني إلى قائمة المراسلة: {$confirmLink}<br />
-<br />
-لو أردت إيقاف الإشعارات عبر البريد الالكتروني، لطفاً أنقر الرابط {$unsubscribeLink}.<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>هذه الرسالة مرسلة إلى المستخدمين غير المسجلين الذين سجلوا تواً في قائمة الإشعار البريدي.</description>
-	</email_text>
 	<email_text key="PASSWORD_RESET_CONFIRM">
 		<subject>تأكيد إعادة تعيين كلمة المرور</subject>
 		<body><![CDATA[لقد تلقينا طلباً لإعادة تعيين كلمة مرورك في الموقع {$siteTitle}.<br />

@@ -1033,8 +1033,6 @@ Die Prüfung kann bei Such-URLs, die Formularausfüllung verlangen, fehlschlagen
 
 
 	<!-- Notification Types -->
-	<message key="notification.mailListDescription">Geben Sie Ihre E-Mail-Adresse ein, wenn Sie über neue Inhalte in dieser Zeitschrift informiert werden wollen</message>
-	<message key="notification.notificationsPublicDescription"><![CDATA[Auf dieser Seite finden Sie Updates wie neue Ausgaben oder Ankündigungen. Sie können diese Benachrichtigungen als RSS-Feed abonnieren (indem Sie auf die Abbildungen rechts klicken) oder <a href="{$emailUrl}">via E-Mail.</a>]]></message>
 
 	<message key="notification.type.articleSubmitted">Ein neuer Beitrag, "{$title}", wurde eingereicht.</message>
 	<message key="notification.type.editing">Redaktionelle Ereignisse</message>

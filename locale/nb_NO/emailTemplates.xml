@@ -556,31 +556,6 @@ Lenke: {$url}<br />
 <br />
 {$principalContactSignature}]]></body>
 	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST">
-		<subject>Ny melding fra {$siteTitle}</subject>
-		<body><![CDATA[Du har en ny melding fra {$siteTitle}:<br />
---<br />
-{$notificationContents}<br />
-<br />
-Lenke: {$url}<br />
---<br />
-<br />
-Om du ikke lenger ønsker å motte slike meldinger per e-post, gå til  {$unsubscribeLink} og oppgi din e-postadresse og passord.<br />
-<br />
-{$principalContactSignature}]]></body>
-	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
-		<subject>Velkommen til e-postlisten til {$siteTitle}!</subject>
-		<body><![CDATA[Du har bedt om å få meldinger fra {$siteTitle}.<br />
-<br />
-Vennligst klikke på denne lenken for å bekrefte ditt ønske og legge din e-postadresse til e-postlisten: {$confirmLink}<br />
-<br />
-Om du ikke lenger ønsker å få meldinger via e-post, gå til {$unsubscribeLink} og oppgi din e-postadresse og passord.<br />
-<br />
-Ditt passord for å slå av e-postmeldinger er: {$password}<br />
-<br />
-{$principalContactSignature}]]></body>
-	</email_text>
 	<email_text key="EDITOR_DECISION_ACCEPT">
 		<subject>Redaktørens beslutning</subject>
 		<body><![CDATA[{$authorName}:<br />

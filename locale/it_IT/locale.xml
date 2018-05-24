@@ -989,8 +989,6 @@ Il processo di validazione pu&#x00F2; non funzionare sugli URL di ricerca che ri
 
 	<!-- Notification Types -->
 
-	<message key="notification.mailListDescription">Inserisci il tuo indirizzo email per ricevere notifiche delle novità della rivista.</message>
-	<message key="notification.notificationsPublicDescription"><![CDATA[Questa pagina mostra aggiornamenti importanti alla rivista, come avvisi o nuovi fascicoli. Puoi ricevere queste notifiche anche attraverso feed RSS (cliccando sulle immagini a destra o <a href="{$emailUrl}">viae mail.</a>]]></message>
 	<message key="notification.type.articleSubmitted">&#200; stato proposto un nuovo articolo, "{$title}"></message>
 	<message key="notification.type.editing">Eventi modificati</message>
 	<message key="notification.type.editorDecisionComment">La decisione dell'editor su  "{$title}" &#232; stata commentata.</message>

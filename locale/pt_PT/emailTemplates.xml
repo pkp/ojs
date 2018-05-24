@@ -768,31 +768,6 @@ Link: {$url}<br />
 {$principalContactSignature}]]></body>
 		<description>Esta mensagem é enviada a utilizadores registados que escolheram activar este tipo de notificação via email.</description>
 	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST">
-		<subject>Nova notificação de {$siteTitle}</subject>
-		<body><![CDATA[Você possui uma nova notificação de {$siteTitle}:<br />
---<br />
-{$notificationContents}<br />
-<br />
-Link: {$url}<br />
---<br />
-<br />
-Caso não deseje receber mais notificações via e-mail, aceda a {$unsubscribeLink} e forneça o seu endereço de e-mail e senha.<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>Esta mensagem é enviada a utilizadores não registados que pertencem à lista de correio.</description>
-	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
-		<subject>Bem-vindo à mailing list de {$siteTitle}!</subject>
-		<body><![CDATA[Subscreveu a recepção de notificações de {$siteTitle}.<br />
-<br />
-Clique no seguinte link para confirmar o seu pedido e adicionar o seu e-mail à mailing list: {$confirmLink}<br />
-<br />
-Caso deseje interromper a recepção de notificações, aceda a {$unsubscribeLink}.<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>Esta mensagem é enviada a utilizadores não registados que acabaram de se registar no serviço de notificações da mailing list.</description>
-	</email_text>
 	<email_text key="EDITOR_DECISION_ACCEPT">
 		<subject>Decisão editorial</subject>
 		<body><![CDATA[{$authorName},<br />

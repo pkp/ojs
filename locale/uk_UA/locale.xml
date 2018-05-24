@@ -1061,8 +1061,6 @@
 
 
 	<!-- Notification Types -->
-	<message key="notification.mailListDescription">Вкажіть свою адресу email, щоб отримувати миттєві повідомлення про публікацію у цьому журналі нового контенту.</message>
-	<message key="notification.notificationsPublicDescription"><![CDATA[На цій сторінці відображаються важливі новини, пов'язані з цим журналом, наприклад, інформація про нові випуски або анонси. Ви можете отримувати ці сповіщення як стрічку RSS (натисніть на зображенні праворуч) або як <a href="{$emailUrl}">поштову підписку</a>.]]></message>
 
 	<message key="notification.type.articleSubmitted">Надіслана нова стаття: "{$title}".</message>
 	<message key="notification.type.editing">Події редакційного процесу</message>
