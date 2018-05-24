@@ -99,8 +99,9 @@ class SubmissionHandler extends APIHandler {
 
 		// Prevent users from viewing submissions they're not assigned to,
 		// except for journal managers and admins.
-		if (!$currentUser->hasRole(array(ROLE_ID_MANAGER, ROLE_ID_SITE_ADMIN), $context->getId())
-				&& $params['assignedTo'] != $currentUser->getId()) {
+		$userRoles = $this->getAuthorizedContextObject(ASSOC_TYPE_USER_ROLES);
+		$canAccessUnassignedSubmission = !empty(array_intersect(array(ROLE_ID_SITE_ADMIN, ROLE_ID_MANAGER), $userRoles));
+		if (!$canAccessUnassignedSubmission && $params['assignedTo'] != $currentUser->getId()) {
 			return $response->withStatus(403)->withJsonError('api.submissions.403.requestedOthersUnpublishedSubmissions');
 		}
 
@@ -258,13 +259,13 @@ class SubmissionHandler extends APIHandler {
 			'offset' => 0,
 		);
 
-		$requestParams = array_merge($defaultParams, $slimRequest->getQueryParams());
-
-		// Anyone not a manager or site admin can only access their assigned
-		// submissions
-		if (!$currentUser->hasRole(array(ROLE_ID_MANAGER, ROLE_ID_SITE_ADMIN), $context->getId())) {
-			$requestParams['assignedTo'] = $currentUser->getId();
+		$userRoles = $this->getAuthorizedContextObject(ASSOC_TYPE_USER_ROLES);
+		$canAccessUnassignedSubmission = !empty(array_intersect(array(ROLE_ID_SITE_ADMIN, ROLE_ID_MANAGER), $userRoles));
+		if (!$canAccessUnassignedSubmission) {
+			$defaultParams['assignedTo'] = $currentUser->getId();
 		}
+
+		$requestParams = array_merge($defaultParams, $slimRequest->getQueryParams());
 
 		$returnParams = array();
 
