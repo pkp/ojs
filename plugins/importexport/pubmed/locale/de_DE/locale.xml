@@ -10,7 +10,7 @@
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_German_(de_DE)
   * Localization strings.
   -->
-  
+ 
 <locale name="de_DE" full_name="Deutsch (Deutschland)">
 	<message key="plugins.importexport.pubmed.displayName">PubMed-XML-Export-Plugin</message>
 	<message key="plugins.importexport.pubmed.description">Beitragsmetadaten im PubMed-XML-Format für die Indexierung in MEDLINE exportieren.</message>
