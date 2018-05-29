@@ -15,10 +15,10 @@
 <data>
 	<sql>
 		<!-- to be on the safe side, remove citations that are not associated with a submission -->
-		<query driver="mysql">DELETE FROM cs USING citation_settings cs INNER JOIN citations c ON (cs.citation_id = c.citation_id) WHERE c.assoc_type &lt;&gt; 527</query><!-- ASSOC_TYPE_ARTICLE in OJS 2.4.x -->
-		<query driver="mysqli">DELETE FROM cs USING citation_settings cs INNER JOIN citations c ON (cs.citation_id = c.citation_id) WHERE c.assoc_type &lt;&gt; 527</query><!-- ASSOC_TYPE_ARTICLE in OJS 2.4.x -->
-		<query driver="postgres7">DELETE FROM citation_settings cs USING citations c WHERE c.assoc_type &lt;&gt; 527 AND cs.citation_id = c.citation_id</query><!-- ASSOC_TYPE_ARTICLE in OJS 2.4.x -->
-		<query>DELETE FROM citations WHERE assoc_type &lt;&gt; 527</query><!-- ASSOC_TYPE_ARTICLE in OJS 2.4.x -->
+		<query driver="mysql">DELETE FROM cs USING citation_settings cs INNER JOIN citations c ON (cs.citation_id = c.citation_id) WHERE c.assoc_type &lt;&gt; 257</query><!-- ASSOC_TYPE_ARTICLE in OJS 2.4.x -->
+		<query driver="mysqli">DELETE FROM cs USING citation_settings cs INNER JOIN citations c ON (cs.citation_id = c.citation_id) WHERE c.assoc_type &lt;&gt; 257</query><!-- ASSOC_TYPE_ARTICLE in OJS 2.4.x -->
+		<query driver="postgres7">DELETE FROM citation_settings cs USING citations c WHERE c.assoc_type &lt;&gt; 257 AND cs.citation_id = c.citation_id</query><!-- ASSOC_TYPE_ARTICLE in OJS 2.4.x -->
+		<query>DELETE FROM citations WHERE assoc_type &lt;&gt; 257</query><!-- ASSOC_TYPE_ARTICLE in OJS 2.4.x -->
 		<!--  rename the column assoc_id into submission_id -->
 		<rename table="citations" column="assoc_id" to="submission_id" />
 	</sql>
