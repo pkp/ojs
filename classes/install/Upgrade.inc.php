@@ -1366,7 +1366,8 @@ class Upgrade extends Installer {
 			foreach ((array) $submissionFiles as $submissionFile) {
 				$submissionFile->setGenreId($genre->getId());
 				$submissionFile->setUploaderUserId($creatorUserId);
-				$submissionFile->setFileStage(SUBMISSION_FILE_PROOF);
+				$fileStage = $article->getStatus() == STATUS_PUBLISHED ? SUBMISSION_FILE_PROOF : SUBMISSION_FILE_SUBMISSION;
+				$submissionFile->setFileStage($fileStage);
 				$submissionFileDao->updateObject($submissionFile);
 			}
 
@@ -1455,6 +1456,47 @@ class Upgrade extends Installer {
 								'string'
 							)
 						);
+					}
+				}
+			}
+		}
+		$suppFilesResult->Close();
+		return true;
+	}
+
+	/**
+	 * Provide supplementary files of active submissions for review.
+	 * @return boolean True indicates success.
+	 */
+	function provideSupplementaryFilesForReview() {
+		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
+		$reviewRoundDao = DAORegistry::getDAO('ReviewRoundDAO');
+		$reviewAssignmentDao = DAORegistry::getDAO('ReviewAssignmentDAO');
+		$reviewFilesDao = DAORegistry::getDAO('ReviewFilesDAO');
+		import('lib.pkp.classes.file.SubmissionFileManager');
+		// Get supp files with show_reviewers = 1
+		// We cannot support/consider remote supp files
+		$suppFilesResult = $submissionFileDao->retrieve('SELECT a.context_id, sf.* FROM article_supplementary_files sf, submissions a WHERE a.submission_id = sf.article_id AND sf.show_reviewers = 1 AND sf.remote_url IS NULL');
+		while (!$suppFilesResult->EOF) {
+			$suppFilesRow = $suppFilesResult->getRowAssoc(false);
+			$suppFilesResult->MoveNext();
+			$reviewRounds = $reviewRoundDao->getBySubmissionId($suppFilesRow['article_id'], WORKFLOW_STAGE_ID_EXTERNAL_REVIEW);
+			// If a review round exists
+			// copy the supp file to the submissin review stage, add it to each existing review round, and as a review round file
+			if ($reviewRounds->getCount() != 0) {
+				$submissionFileManager = new SubmissionFileManager($suppFilesRow['context_id'], $suppFilesRow['article_id']);
+				// Retrieve the supp file last revision number, although they probably only have revision 1.
+				$revisionNumber = $submissionFileDao->getLatestRevisionNumber($suppFilesRow['file_id']);
+				// copy the supp file to the submissin review stage
+				list($newFileId, $newRevision) = $submissionFileManager->copyFileToFileStage($suppFilesRow['file_id'], $revisionNumber, SUBMISSION_FILE_REVIEW_FILE, null, true);
+				while ($reviewRound = $reviewRounds->next()) {
+					// add it to the review round
+					$submissionFileDao->assignRevisionToReviewRound($newFileId, $newRevision, $reviewRound);
+					// Get all review assignments
+					$reviewAssignments = $reviewAssignmentDao->getBySubmissionId($suppFilesRow['article_id'], $reviewRound->getId(), WORKFLOW_STAGE_ID_EXTERNAL_REVIEW);
+					foreach ($reviewAssignments as $reviewAssignment) {
+						// add it to the review files
+						$reviewFilesDao->grant($reviewAssignment->getId(), $newFileId);
 					}
 				}
 			}

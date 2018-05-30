@@ -120,6 +120,7 @@
 		<code function="convertQueries" />
 		<code function="migrateFiles" />
 		<code function="convertSupplementaryFiles" />
+		<code function="provideSupplementaryFilesForReview" />
 		<code function="setFileUploader" />
 		<code function="setFileName" />
 		<data file="dbscripts/xml/upgrade/3.0.0_postupdate.xml" />
