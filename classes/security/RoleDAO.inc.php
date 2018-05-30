@@ -208,7 +208,7 @@ class RoleDAO extends DAO {
 				break;
 		}
 
-		$searchSql .= ($sortBy?(' ORDER BY ' . $this->getSortMapping($sortBy) . ' ' . $this->getDirectionMapping($sortDirection)) : '');
+		$searchSql .= ($sortBy && $this->getSortMapping($sortBy)?(' ORDER BY ' . $this->getSortMapping($sortBy) . ' ' . $this->getDirectionMapping($sortDirection)) : '');
 
 		$result =& $this->retrieveRange(
 			'SELECT DISTINCT u.*
@@ -276,7 +276,7 @@ class RoleDAO extends DAO {
 				break;
 		}
 
-		$searchSql .= ($sortBy?(' ORDER BY ' . $this->getSortMapping($sortBy) . ' ' . $this->getDirectionMapping($sortDirection)) : '');
+		$searchSql .= ($sortBy && $this->getSortMapping($sortBy)?(' ORDER BY ' . $this->getSortMapping($sortBy) . ' ' . $this->getDirectionMapping($sortDirection)) : '');
 
 		$result =& $this->retrieveRange(
 			'SELECT DISTINCT u.*
@@ -541,6 +541,10 @@ class RoleDAO extends DAO {
 			case 'name': return 'u.last_name';
 			case 'email': return 'u.email';
 			case 'id': return 'u.user_id';
+			case 'registered': return 'u.date_registered';
+			case 'login': return 'u.date_last_login';
+			case 'emailed': return 'u.date_last_email';
+			case 'validated': return 'u.date_validated';
 			default: return null;
 		}
 	}
