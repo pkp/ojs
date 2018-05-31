@@ -4,8 +4,44 @@ CVS tag: ojs-3_1_1-1
 Release date: May 31, 2018
 ==============================
 
-New Features
-------------
+New Features (OJS 3.1.1-1)
+--------------------------
+	#3077: Open review enhancements
+	#3575: Add a consent statement configuration option
+
+Bug Fixes (OJS 3.1.1-1)
+-----------------------
+	#3016: Fix supplementary files migration
+	#3423: OJS 3.1.0.1 "All reviews are in" notifications are not being sent anymore
+	#3500: Review overdue - move to end of the day
+	#3556: getTemplatePath basePath
+	#3563: place sr_SR migration before files migration
+	#3565: Missing string editor.article.coverImage (all languages)
+	#3570: Localization key typo
+	#3580: UsageStatsOptoutBlockPlugin is not displayed
+	#3589: API parameter year for issues does not work after update to 3.1.1.0
+	#3590: When a reviewer decline an invitation, he/she is still flagged as having 1 active submission
+	#3593: Issue galley locale required validation
+	#3597: remove double SQL for metrics supp file migration
+	#3608: edit review assignment to add review form
+	#3609: Keywords and Agencies metadata: when one of the two is mandatory
+	#3619: Uploading supplementary file revisions fails in some circumstances
+	#3622: Submission Library upload link error
+	#3637: User notification form crashes in site-wide context
+	#3640: remove viewInformationCenter link on the submisison step2
+	#3653: Author cannot upload revised article as a new version
+	#3662: Obfuscated access restriction for site administrator
+	#3666: Section Editor assigned as an Author (only) can access discussions that they are not participants in
+	#3694: datacite and medra registered status migration
+	#3706: Missing galley file breaks Crossref automatic deposts
+	#3720: clarify language on DOI/DOAJ registration
+	#3723: "Subeditors" are not introduced to users
+	#3744: Upgrade OJS 2.4.8.1 to 3.1.1.0 supplementary files lost for activ submissions
+	#3749: Fix wrong assoc_type in citations upgrade
+	#3750: Enable manager roles to add references during a submission
+
+New Features (OJS 3.1.1-0)
+--------------------------
 	#520: Improve Submission Library utility
 	#1692: Public identifiers for chapters
 	#1816: Implement subscription support
@@ -14,8 +50,8 @@ New Features
 	#2872: Allow themes to override templates in plugins
 	#3130: Improve blinding for role sharing between editor/author/reviewer
 
-Bug Fixes
----------
+Bug Fixes (OJS 3.1.1-0)
+-----------------------
 	#1793: Test/fix PostgreSQL upgrades
 	#1865: Adding review comments wipes out email changes
 	#2102: Consider "Select All" feature for export tools
