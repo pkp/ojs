@@ -1,7 +1,7 @@
 {
   "name": "OJS3",
   "description": "Open Journal Systems (OJS) is a journal management and publishing system that has been developed by the Public Knowledge Project through its federally funded efforts to expand and improve access to research.",
-  "version": "3.1.1",
+  "version": "3.1.1-1",
   "author": "Public Knowledge Project",
   "private": true,
   "scripts": {
