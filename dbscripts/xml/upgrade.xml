@@ -203,7 +203,7 @@
 		<code function="fixAuthorGroup" /><!-- Run again after previous invalid fix (#3289) -->
 	</upgrade>
 
-	<upgrade minversion="3.0.0.0" maxversion="3.1.1.9">
+	<upgrade minversion="2.4.0.0" maxversion="3.1.1.9">
 		<note file="docs/release-notes/README-3.1.1" />
 	</upgrade>
 
