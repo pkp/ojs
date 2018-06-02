@@ -197,6 +197,7 @@
 	<message key="user.registerForOtherJournals">Für andere Zeitschriften registrieren</message>
 	<message key="user.reviewerPrompt">Wären Sie daran interessiert, Beiträge in dieser Zeitschrift zu begutachten?</message>
 	<message key="user.reviewerPrompt.userGroup">Ja, die {$userGroup}-Rolle beantragen.</message>
+	<message key="user.reviewerPrompt.optin">Ja, ich möchte kontaktiert werden, um für Gutachten zu Einreichungen bei dieser Zeitschrift angefragt zu werden.</message>
 	<message key="user.register.contextsPrompt">Bei welchen Zeitschriften auf dieser Website möchten Sie sich registrieren?</message>
 	<message key="user.register.otherContextRoles">Die folgenden Rollen beantragen.</message>
 	<message key="user.register.noContextReviewerInterests">Wenn Sie die Aufnahme als Gutachter/in bei einer Zeitschrift beantragt haben, geben Sie bitte Ihre Begutachtungsinteressen ein.</message>
@@ -673,6 +674,7 @@ Sie können der Nutzerin/dem Nutzer einen Grund für die Sperrung des Zugangs an
 	<message key="user.register.reviewerDescriptionNoInterests">Sie sind bereit, bei der Zeitschrift eingereichte Beiträge im Peer Review zu begutachten.</message>
 	<message key="user.register.reviewerDescription">Sie sind bereit, bei der Website eingereichte Beiträge im Rahmen des Peer Review zu begutachten.</message>
 	<message key="user.register.reviewerInterests">Bitte geben Sie Begutachtungsinteressen an (Wissenschaftsbereiche und Forschungsmethoden):</message>
+	<message key="user.register.form.emailConsentAllContexts">Ja, ich möchte über neue Veröffentlichungen  und Ankündigungen aller Zeitschriften, bei denen ich registriert bin, erhalten.</message>
 
 	<!-- Subscriptions -->
 	<message key="user.subscriptions.mySubscriptions">Meine Abonnements</message>
@@ -1049,6 +1051,7 @@ Die Prüfung kann bei Such-URLs, die Formularausfüllung verlangen, fehlschlagen
 	<message key="notification.type.submissionComment">Ein/e Redakteur/in hat "{$title}" kommentiert.</message>
 	<message key="notification.type.submissions">Einreichungsereignisse</message>
 	<message key="notification.type.userComment">Ein/e Leser/in hat "{$title}" kommentiert.</message>
+	<message key="notification.type.public">Öffentliche Ankündigungen</message>
 	<message key="notification.savedIssueMetadata">Ausgabenmetadaten gespeichert.</message>
 	<message key="notification.type.editorAssignmentTask">Ein neuer Artikel wurde eingereicht, dem ein/e Redakteur/in zugewiesen werden muss.</message>
 	<message key="notification.type.assignProductionUser">Nutzen Sie den Hinzufügen-Link in der Teilnehmer/innen-Liste, um eine/n Nutzer/in zum Erzeugen von Fahnen einzutragen.</message>
