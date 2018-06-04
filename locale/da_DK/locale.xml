@@ -1009,4 +1009,7 @@ Konfigurationen af CLOCKSS-understøttelse for Open Journal Systems behøver ikk
 	<message key="notification.type.publicationScheduled">Denne indsendelse er indstillet til publikation.</message>
 	<message key="navigation.subscriptions">Abonnementer</message>
 	<message key="log.editor.submissionExpedited">{$editorName} har påtaget sig redigeringen af artiklen {$submissionId}.</message>
+	<message key="user.reviewerPrompt.optin">Ja, jeg vil gerne kontaktes med anmodninger om at foretage bedømmelse af indsendelser til dette tidsskrift.</message>
+	<message key="user.register.form.emailConsentAllContexts">Ja, jeg vil gerne underrettes om nye publikationer og meddelelser fra alle de tidsskrifter, som jeg er registreret hos.</message>
+	<message key="notification.type.public">Offentlige meddelelser</message>
 </locale>
