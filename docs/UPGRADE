@@ -42,6 +42,7 @@ Upgrading to the latest version of OJS involves two steps:
 
     - Obtaining the latest OJS code
     - Upgrading the OJS database
+    - Update Javascript libraries and build.js
 
 It is highly recommended that you also review the release notes (docs/RELEASE)
 and other documentation in the docs directory before performing an upgrade.
@@ -110,8 +111,7 @@ Upgrading the OJS database
 --------------------------
 
 After obtaining the latest OJS code, an additional script must be run to
-complete the upgrade process by upgrading the OJS database and potentially
-executing additional upgrade code.
+upgrade the OJS database and potentially executing additional upgrade code.
 
 NOTE: Patches to the included ADODB library may be required for PostgreSQL
 upgrades; see https://forum.pkp.sfu.ca/t/upgrade-failure-postgresql/19215
@@ -140,3 +140,12 @@ web-based script. To do so:
     - Select the "Upgrade" link and follow the on-screen instructions
     - Re-edit config.inc.php and change "installed = Off" back to
        "installed = On"
+
+Update Javascript libraries and build.js
+----------------------------------------
+
+To update the Javascript libraries and rebuild the build.js you have to run
+```
+npm install
+npm run build
+```
