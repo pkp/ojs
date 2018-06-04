@@ -152,16 +152,6 @@ class SubmissionsTest extends PKPApiTestCase {
 
 	/**
 	 * @covers /submissions/{submissionId}/participants/{stageId}
-	 * @expectedException GuzzleHttp\Exception\ClientException
-	 */
-// 	public function testGetSubmissionParticipantsAssignedToStageWithInvalidId() {
-// 		$response = $this->_sendRequest('GET', '/submissions/25/participants/99');
-// 		// TODO stageId should have been validated, right?
-// 		$this->assertSame(404, $response->getStatusCode());
-// 	}
-
-	/**
-	 * @covers /submissions/{submissionId}/participants/{stageId}
 	 */
 	public function testGetSubmissionParticipantsAssignedToStage() {
 		$response = $this->_sendRequest('GET', '/submissions/25/participants/1');
