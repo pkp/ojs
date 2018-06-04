@@ -1,4 +1,5 @@
 /config.inc.php
+/tests/api/config.json
 ./build
 temp
 /files
