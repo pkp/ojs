@@ -197,6 +197,7 @@
 	<message key="user.registerForOtherJournals">Registrera för andra tidskrifter</message>
 	<message key="user.reviewerPrompt">Skulle du kunna tänka dig att granska bidrag till den här tidskriften?</message>
 	<message key="user.reviewerPrompt.userGroup">Ja, begär {$userGroup}-rollen.</message>
+	<message key="user.reviewerPrompt.optin">Ja, jag vill bli kontaktad med förfrågningar gällande granskningsuppdrag för den här tidskriften.</message>
 	<message key="user.register.contextsPrompt">Vilka av tidskrifterna på den här webbplatsen vill du registrera dig hos?</message>
 	<message key="user.register.otherContextRoles">Begär följande roller.</message>
 	<message key="user.register.noContextReviewerInterests">Om du anmälde dig som granskare, vänligen fyll i dina intresseområden.</message>
@@ -673,6 +674,7 @@ Du kan välja att ge användaren en förklaring till varför kontot har spärrat
 	<message key="user.register.reviewerDescriptionNoInterests">Kan sakkunniggranska insända bidrag för tidskriften.</message>
 	<message key="user.register.reviewerDescription">Kan sakkunniggranska bidrag för tidskrifter på webbplatsen.</message>
 	<message key="user.register.reviewerInterests">Uppge intresseområden för granskning (huvudsakliga ämnesområden och forskningsmetoder).</message>
+	<message key="user.register.form.emailConsentAllContexts">Ja, jag vill bli kontaktad med information om nya publiceringar och meddelanden för alla tidskrifter jag är registrerad hos.</message>
 
 	<!-- Subscriptions -->
 	<message key="user.subscriptions.mySubscriptions">Mina prenumerationer</message>
