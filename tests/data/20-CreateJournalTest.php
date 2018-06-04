@@ -58,8 +58,9 @@ class CreateJournalTest extends WebTestCase {
 		$this->clickAndWait($selector);
 		$this->waitForElementPresent($selector='css=ul#navigationPrimary a:contains(\'Journal\')');
 		$this->clickAndWait($selector);
-    		$this->waitForElementPresent('css=[id^=abbreviation-]');
-    		$this->type('css=[id^=abbreviation-]', 'PK');
+		$this->waitForElementPresent('css=[id^=abbreviation-]');
+		$this->type('css=[id^=abbreviation-]', 'J Pub Know');
+		$this->type('css=[id^=acronym-]', 'PK');
 		$this->click('//form[@id=\'mastheadForm\']//button[text()=\'Save\']');
 		$this->waitForTextPresent('Your changes have been saved.');
 
