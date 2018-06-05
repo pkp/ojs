@@ -125,8 +125,8 @@ class OJSCompletedPaymentDAO extends DAO {
 		if ($assocId) $params[] = (int) $assocId;
 		$result = $this->retrieve(
 			'SELECT * FROM completed_payments WHERE 1=1' .
-			($paymentType?' AND payment_type = ?':'') .
 			($userId?' AND user_id = ?':'') .
+			($paymentType?' AND payment_type = ?':'') .
 			($assocId?' AND assoc_id = ?':''),
 			$params
 		);
