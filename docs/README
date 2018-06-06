@@ -119,9 +119,8 @@ codes, e.g. "fr_FR", is recommended):
 
 	* locale/en_US
 	* lib/pkp/locale/en_US
-	* help/en_US
+	* docs/manual/en
 	* registry/locale/en_US
-	* rt/en_US
 	* plugins/[plugin category]/[plugin name]/locale, where applicable
 
 The only critical files that need translation for the system to function
