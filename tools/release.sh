@@ -70,12 +70,12 @@ sed -i	-e "s/<install version=\".*\">/<install version=\"${MAJOR}.${MINOR}.${REV
 	dbscripts/xml/upgrade.xml dbscripts/xml/install.xml
 git add dbscripts/xml/upgrade.xml dbscripts/xml/install.xml
 
-# Update the README
+# Update the README.md
 sed -i	-e "s/=== Version: .*/=== Version: ${MAJOR}.${MINOR}.${REVISION}-${THISBUILD}/" \
 	-e "s/=== GIT tag: .*/=== GIT tag: ${THISTAG}/" \
 	-e "s/=== Release date: .*/=== Release date: ${BUILDDATE}/" \
-	docs/README
-git add docs/README
+	docs/README.md
+git add docs/README.md
 
 # Update the Doxygen config file
 sed -i	-e "s/^\(PROJECT_NUMBER.*= \).*/\1${MAJOR}.${MINOR}.${REVISION}-${THISBUILD}/" \

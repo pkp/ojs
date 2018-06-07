@@ -44,7 +44,7 @@
  *
  * To learn more about developing OJS, there are several additional resources
  * that may be useful:
- * - The docs/README document
+ * - The docs/README.md document
  * - The PKP support forum at http://forum.pkp.sfu.ca
  * - Documentation available at http://pkp.sfu.ca/ojs_documentation
  *

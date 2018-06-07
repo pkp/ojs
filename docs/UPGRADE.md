@@ -92,7 +92,7 @@ be resolved in the usual way, e.g. using a merge tool like kdiff3.
 OJS release version tags are of the form "ojs-MAJOR_MINOR_REVSION-BUILD".
 For example, the tag for the initial release of OJS 3.0.0 is "ojs-3_0_0-0".
 
-Consult the [README](README) of the latest OJS package or the OJS web site for the
+Consult the [README](README.md) of the latest OJS package or the OJS web site for the
 tag corresponding to the latest available OJS release.
 
 Note that attempting to update to an unreleased version (e.g., using the HEAD

@@ -68,7 +68,7 @@ according to the terms of this license. PKP also welcomes patches for
 improvements or bug fixes to the software.
 
 [pkp]: http://pkp.sfu.ca/
-[readme]: docs/README
+[readme]: docs/README.md
 [wiki-dev]: http://pkp.sfu.ca/wiki/index.php/HOW-TO_check_out_PKP_applications_from_git
 [php-unit]: http://phpunit.de/
 [gpl-licence]: docs/COPYING
