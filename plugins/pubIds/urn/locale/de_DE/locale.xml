@@ -78,4 +78,5 @@
 	<message key="plugins.pubIds.urn.editor.assignURN.assigned">URN {$pubId} wurde zugewiesen.</message>
 	<!-- errors -->
 	<message key="plugins.pubIds.urn.form.checkNoRequired">Die Prüfziffer fehlt.</message>
+
 </locale>
