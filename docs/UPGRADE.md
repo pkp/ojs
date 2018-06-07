@@ -73,7 +73,7 @@ downloading the complete package for the latest release of OJS:
 Updating from github is the recommended approach if you have made local
 modifications to the system.
 
-If your instance of OJS was checked out from github (see [docs/README-GIT](README-GIT)),
+If your instance of OJS was checked out from github (see [docs/README-GIT.md](README-GIT.md)),
 you can update the OJS code using a git client.
 
 To update the OJS code from a git check-out, run the following command from
