@@ -26,18 +26,6 @@ define('DOAJ_API_OPERATION', 'articles');
 class DOAJExportPlugin extends PubObjectsExportPlugin {
 
 	/**
-	 * @copydoc Plugin::register()
-	 */
-	public function register($category, $path, $mainContextId = null) {
-		$success = parent::register($category, $path, $mainContextId);
-		if (!Config::getVar('general', 'installed') || defined('RUNNING_UPGRADE')) return $success;
-		if ($success && $this->getEnabled()) {
-			$this->_registerTemplateResource();
-		}
-		return $success;
-	}
-
-	/**
 	 * @copydoc Plugin::getName()
 	 */
 	function getName() {
@@ -59,13 +47,6 @@ class DOAJExportPlugin extends PubObjectsExportPlugin {
 	}
 
 	/**
-	 * @copydoc Plugin::getTemplatePath()
-	 */
-	function getTemplatePath($inCore = false) {
-		return $this->getTemplateResourceName() . ':templates/';
-	}
-
-	/**
 	 * @copydoc ImportExportPlugin::display()
 	 */
 	function display($args, $request) {
@@ -74,7 +55,7 @@ class DOAJExportPlugin extends PubObjectsExportPlugin {
 			case 'index':
 			case '':
 				$templateMgr = TemplateManager::getManager($request);
-				$templateMgr->display($this->getTemplatePath() . 'index.tpl');
+				$templateMgr->display($this->getTemplateResource('index.tpl'));
 				break;
 		}
 	}

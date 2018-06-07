@@ -69,13 +69,6 @@ class CounterReportPlugin extends ReportPlugin {
 	}
 
 	/**
-	 * @see PKPPlugin::getTemplatePath()
-	 */
-	function getTemplatePath($inCore = false) {
-		return parent::getTemplatePath($inCore) . 'templates/';
-	}
-
-	/**
 	 * Get the latest counter release
 	 * @return string
 	 */
@@ -214,7 +207,7 @@ class CounterReportPlugin extends ReportPlugin {
 		// legacy reports are site-wide, so only site admins have access
 		$templateManager->assign('showLegacy', Validation::isSiteAdmin());
 		if (!empty($legacyYears)) $templateManager->assign('legacyYears', $legacyYears);
-		$templateManager->display($this->getTemplatePath() . 'index.tpl');
+		$templateManager->display($this->getTemplateResource('index.tpl'));
 	}
 
 	/**

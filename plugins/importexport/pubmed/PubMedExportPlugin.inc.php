@@ -51,13 +51,6 @@ class PubMedExportPlugin extends ImportExportPlugin {
 	}
 
 	/**
-	 * @copydoc Plugin::getTemplatePath($inCore)
-	 */
-	function getTemplatePath($inCore = false) {
-		return parent::getTemplatePath($inCore) . 'templates/';
-	}
-
-	/**
 	 * Display the plugin.
 	 * @param $args array
 	 * @param $request PKPRequest
@@ -76,7 +69,7 @@ class PubMedExportPlugin extends ImportExportPlugin {
 					'inputName' => 'selectedSubmissions[]',
 				));
 				$templateMgr->assign('exportSubmissionsListData', json_encode($exportSubmissionsListHandler->getConfig()));
-				$templateMgr->display($this->getTemplatePath() . 'index.tpl');
+				$templateMgr->display($this->getTemplateResource('index.tpl'));
 				break;
 			case 'exportSubmissions':
 				$exportXml = $this->exportSubmissions(

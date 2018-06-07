@@ -21,12 +21,11 @@ import('lib.pkp.classes.template.PKPTemplateManager');
 
 class TemplateManager extends PKPTemplateManager {
 	/**
-	 * Constructor.
 	 * Initialize template engine and assign basic template variables.
 	 * @param $request PKPRequest
 	 */
-	function __construct($request) {
-		parent::__construct($request);
+	function initialize($request) {
+		parent::initialize($request);
 
 		if (!defined('SESSION_DISABLE_INIT')) {
 			/**

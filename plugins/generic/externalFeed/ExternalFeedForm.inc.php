@@ -37,7 +37,7 @@ class ExternalFeedForm extends Form {
 		$this->feedId = isset($feedId) ? $feedId : null;
 		$this->journalId = $journalId;
 
-		parent::__construct($plugin->getTemplatePath() . 'externalFeedForm.tpl');
+		parent::__construct($plugin->getTemplateResource('externalFeedForm.tpl'));
 
 		// Feed URL is provided
 		$this->addCheck(new FormValidatorUrl($this, 'feedUrl', 'required', 'plugins.generic.externalFeed.form.feedUrlValid'));

@@ -67,13 +67,6 @@ class WebFeedGatewayPlugin extends GatewayPlugin {
 	}
 
 	/**
-	 * @copydoc PKPPlugin::getTemplatePath
-	 */
-	public function getTemplatePath($inCore = false) {
-		return $this->_parentPlugin->getTemplatePath($inCore);
-	}
-
-	/**
 	 * Get whether or not this plugin is enabled. (Should always return true, as the
 	 * parent plugin will take care of loading this one when needed)
 	 * @param $contextId int Context ID (optional)
@@ -144,7 +137,7 @@ class WebFeedGatewayPlugin extends GatewayPlugin {
 			'showToc' => true,
 		));
 
-		$templateMgr->display($this->getTemplatePath() . $typeMap[$type], $mimeTypeMap[$type]);
+		$templateMgr->display($this->_parentPlugin->getTemplateResource($typeMap[$type]), $mimeTypeMap[$type]);
 
 		return true;
 	}

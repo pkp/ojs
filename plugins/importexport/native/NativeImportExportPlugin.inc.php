@@ -28,13 +28,6 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 	}
 
 	/**
-	 * @copydoc Plugin::getTemplatePath($inCore)
-	 */
-	function getTemplatePath($inCore = false) {
-		return parent::getTemplatePath($inCore) . 'templates/';
-	}
-
-	/**
 	 * Get the name of this plugin. The name must be unique within
 	 * its category.
 	 * @return String name of plugin
@@ -86,7 +79,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 					'lazyLoad' => true,
 				));
 				$templateMgr->assign('exportSubmissionsListData', json_encode($exportSubmissionsListHandler->getConfig()));
-				$templateMgr->display($this->getTemplatePath() . 'index.tpl');
+				$templateMgr->display($this->getTemplateResource('index.tpl'));
 				break;
 			case 'uploadImportXML':
 				$user = $request->getUser();
@@ -178,7 +171,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 					}
 				}
 				// Display the results
-				$json = new JSONMessage(true, $templateMgr->fetch($this->getTemplatePath() . 'results.tpl'));
+				$json = new JSONMessage(true, $templateMgr->fetch($this->getTemplateResource('results.tpl')));
 				return $json->getString();
 			case 'exportSubmissions':
 				$exportXml = $this->exportSubmissions(

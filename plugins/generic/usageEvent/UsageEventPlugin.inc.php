@@ -68,9 +68,9 @@ class UsageEventPlugin extends PKPUsageEventPlugin {
 					// different hook.
 					if ($op == 'view' && count($args) > 1) break;
 
-					$journal = $templateMgr->get_template_vars('currentContext');
-					$issue = $templateMgr->get_template_vars('issue');
-					$publishedArticle = $templateMgr->get_template_vars('article');
+					$journal = $templateMgr->getTemplateVars('currentContext');
+					$issue = $templateMgr->getTemplateVars('issue');
+					$publishedArticle = $templateMgr->getTemplateVars('article');
 
 					// No published objects, no usage event.
 					if (!$journal && !$issue && !$publishedArticle) break;

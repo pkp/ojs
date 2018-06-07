@@ -56,7 +56,7 @@ class DOAJSettingsForm extends Form {
 		$this->_contextId = $contextId;
 		$this->_plugin = $plugin;
 
-		parent::__construct($plugin->getTemplatePath() . 'settingsForm.tpl');
+		parent::__construct($plugin->getTemplateResource('settingsForm.tpl'));
 
 		// Add form validation checks.
 		$this->addCheck(new FormValidatorPost($this));

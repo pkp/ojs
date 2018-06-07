@@ -40,8 +40,6 @@ class ExternalFeedPlugin extends GenericPlugin {
 
 			// Journal Manager link to externalFeed management pages
 			HookRegistry::register('Templates::Manager::Index::ManagementPages', array($this, 'displayManagerLink'));
-
-			$this->_registerTemplateResource();
 		}
 		return $success;
 	}
@@ -52,13 +50,6 @@ class ExternalFeedPlugin extends GenericPlugin {
 
 	function getDescription() {
 		return __('plugins.generic.externalFeed.description');
-	}
-
-	/**
-	 * @copydoc Plugin::getTemplatePath()
-	 */
-	function getTemplatePath($inCore = false) {
-		return $this->getTemplateResourceName() . ':';
 	}
 
 	/**
@@ -96,7 +87,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 	/**
 	 * Extend the {url ...} smarty to support externalFeed plugin.
 	 */
-	function smartyPluginUrl($params, &$smarty) {
+	function smartyPluginUrl($params, $smarty) {
 		$path = array($this->getCategory(), $this->getName());
 		if (is_array($params['path'])) {
 			$params['path'] = array_merge($path, $params['path']);
@@ -208,7 +199,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 				$output .= '</div>';
 
 				$templateManager =& $args[0];
-				$additionalHomeContent = $templateManager->get_template_vars('additionalHomeContent');
+				$additionalHomeContent = $templateManager->getTemplateVars('additionalHomeContent');
 				$templateManager->assign('additionalHomeContent', $additionalHomeContent . "\n\n" . $output);
 			}
 		}
@@ -363,7 +354,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 				$feeds =& $externalFeedDao->getExternalFeedsByJournalId($journalId, $rangeInfo);
 				$templateMgr->assign('feeds', $feeds);
 
-				$templateMgr->display($this->getTemplatePath() . 'externalFeeds.tpl');
+				$templateMgr->display($this->getTemplateResource('externalFeeds.tpl'));
 				return true;
 		}
 	}

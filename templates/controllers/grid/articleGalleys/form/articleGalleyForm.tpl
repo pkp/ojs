@@ -17,7 +17,7 @@
 		// Attach the form handler.
 		$('#articleGalleyForm').pkpHandler('$.pkp.controllers.grid.representations.form.RepresentationFormHandler',
 			{ldelim}
-				remoteRepresentation: {$remoteRepresentation|json_encode escape=false}
+				remoteRepresentation: {$remoteRepresentation|json_encode}
 			{rdelim}
 		);
 	{rdelim});
@@ -40,7 +40,7 @@
 	{/fbvFormArea}
 
 	{if $articleGalleyFile && ($articleGalleyFile->getFileType()=='text/html' || $articleGalleyFile->getFileType()=='application/xml')}
-		{url|assign:dependentFilesGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.files.dependent.DependentFilesGridHandler" op="fetchGrid" submissionId=$submissionId fileId=$articleGalleyFile->getFileId() stageId=$smarty.const.WORKFLOW_STAGE_ID_PRODUCTION escape=false}
+		{capture assign=dependentFilesGridUrl}{url router=$smarty.const.ROUTE_COMPONENT component="grid.files.dependent.DependentFilesGridHandler" op="fetchGrid" submissionId=$submissionId fileId=$articleGalleyFile->getFileId() stageId=$smarty.const.WORKFLOW_STAGE_ID_PRODUCTION escape=false}{/capture}
 		{load_url_in_div id="dependentFilesGridDiv" url=$dependentFilesGridUrl}
 	{/if}
 

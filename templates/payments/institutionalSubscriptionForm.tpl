@@ -22,7 +22,7 @@
 
 	{include file="controllers/notification/inPlaceNotification.tpl" notificationId="institutionalSubscriptionNotification"}
 
-	{url|assign:subscriberSelectGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.users.subscriberSelect.SubscriberSelectGridHandler" op="fetchGrid" escape=false userId=$userId}
+	{capture assign=subscriberSelectGridUrl}{url router=$smarty.const.ROUTE_COMPONENT component="grid.users.subscriberSelect.SubscriberSelectGridHandler" op="fetchGrid" escape=false userId=$userId}{/capture}
 	{load_url_in_div id='subscriberSelectGridContainer' url=$subscriberSelectGridUrl}
 
 	{fbvFormArea id="institutionalSubscriptionFormArea"}
