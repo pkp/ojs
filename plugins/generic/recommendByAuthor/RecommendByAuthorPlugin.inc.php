@@ -32,6 +32,7 @@ class RecommendByAuthorPlugin extends GenericPlugin {
 
 		if ($success && $this->getEnabled($mainContextId)) {
 			HookRegistry::register('Templates::Article::Footer::PageFooter', array($this, 'callbackTemplateArticlePageFooter'));
+			$this->_registerTemplateResource();
 		}
 		return $success;
 	}
@@ -54,7 +55,7 @@ class RecommendByAuthorPlugin extends GenericPlugin {
 	 * @copydoc Plugin::getTemplatePath()
 	 */
 	function getTemplatePath($inCore = false) {
-		return parent::getTemplatePath($inCore) . 'templates/';
+		return $this->getTemplateResourceName() . ':templates/';
 	}
 
 
