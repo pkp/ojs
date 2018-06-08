@@ -50,13 +50,10 @@ For contributions that are distributed separately as patches or plugins:
 * Tabs: Configure your editor to use tabs instead of spaces for indentation.
 * Linefeeds: Your editor must save files using UNIX linefeed format (not DOS
   CR/LF or Mac CR format).
-* Ensure your files end with a linefeed if your editor does not automatically
-  add one.
 
 
 ### Indentation style
 
-* Always include braces even in cases where they are optional.
 * Use K&R indentation style.
 * For example:
 ```
@@ -100,11 +97,9 @@ For contributions that are distributed separately as patches or plugins:
 
 ### PHP Tags
 
-* Use the `<?php ?>` tags to enclose PHP code instead of the abbreviated `<? ?>`
-  form.
-* Ensure that each opening `<?php` tag is followed by a closing `?>` tag (i.e.,
-  do not omit a trailing `?>` at the end of a file even though the PHP parser 
-  does not strictly require it).
+* Use the `<?php` tag to begin PHP code instead of the abbreviated `<?` form.
+* Omit ending ?> tags at the end of PHP files, as recommended per modern PHP
+  standards.
 
 
 ### Quoting Strings
@@ -135,11 +130,10 @@ For contributions that are distributed separately as patches or plugins:
 
 * The inline form of if/else is acceptable for small statements (e.g.,
   assignments) only. E.g., `$foo = $bar ? 1 : 0;`
-* Use spaces between tokens. E.g., `$foo = 1; $i > 0`
 * Compatibility with PHP per the README.md document is required. Appropriate
   abstractions should be used around non-backwards compatible code (e.g., using
   `function_exists()` to check for an available function and using an alternate
-implementation if it does not exist).
+  implementation if it does not exist).
 * Traditionally we used static access to class methods a lot. These provide
   a relatively easy to implement Singleton-like design pattern. They have two
   important drawbacks though: static methods cannot be overridden which inhibits
@@ -150,14 +144,11 @@ implementation if it does not exist).
 
 ## HTML/XML
 
-* HTML should be XHTML-compliant as much as possible. E.g., use `<br />` instead
-  of `<br>`.
 * Tag names should be lower case.
 
 
 ## SQL
 
-* Use spaces between tokens. E.g., `column = ?` instead of `column=?`
 * Uppercase SQL keywords. E.g., `INSERT`, `UPDATE`, etc.
 * Long SQL statements should be logically broken up into multiple lines.
 * SQL INSERT statements should always specify the column names.
@@ -208,7 +199,7 @@ implementation if it does not exist).
 
 ### Database Queries
 
-* SQL queries should use the ADOdb abstraction layer.
+* SQL queries should use the ADOdb or Laravel abstraction layer.
 * SQL should use placeholders for variables.
 * Explicit typecasts should be used where possible in variable replacements.
 * For example:
@@ -251,8 +242,7 @@ implementation if it does not exist).
 	 *
 	 * DESCRIPTION.
 	 *}
-	{assign var="pageTitle" value="user.userHome"}
-	{include file="common/header.tpl"}
+	{include file="common/header.tpl" pageTitle="user.userHome"}
 	...
 	{include file="common/footer.tpl"}
 ```
