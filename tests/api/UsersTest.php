@@ -70,23 +70,25 @@ class UsersTest extends PKPApiTestCase {
 	 * @expectedException GuzzleHttp\Exception\ClientException
 	 */
 	public function testGetUserByIdWithoutToken() {
-		$response = $this->_sendRequest('GET', '/users/1', array(), false);
+		$user = $this->_getFirstEntity('/users');
+		$response = $this->_sendRequest('GET', "/users/{$user->id}", array(), false);
 	}
-	
+
 	/**
 	 * @covers /users/{userId}
 	 * @expectedException GuzzleHttp\Exception\ClientException
 	 */
 	public function testGetUserByIdWithInvalidId() {
-		$response = $this->_sendRequest('GET', '/users/999');
+		$response = $this->_sendRequest('GET', "/users/{$this->_invalidId}");
 		$this->assertSame(404, $response->getStatusCode());
 	}
-	
+
 	/**
 	 * @covers /users/{userId}
 	 */
 	public function testGetUserById() {
-		$response = $this->_sendRequest('GET', '/users/1');
+		$user = $this->_getFirstEntity('/users');
+		$response = $this->_sendRequest('GET', "/users/{$user->id}");
 		$this->assertEquals(200, $response->getStatusCode());
 		$data = $this->_getResponseData($response);
 		$this->assertArrayHasKey('id', $data);
@@ -101,7 +103,7 @@ class UsersTest extends PKPApiTestCase {
 	public function testGetReviewersWithoutToken() {
 		$response = $this->_sendRequest('GET', '/users/reviewers', array(), false);
 	}
-	
+
 	/**
 	 * @covers /users/reviewers
 	 */
@@ -112,7 +114,7 @@ class UsersTest extends PKPApiTestCase {
 		$this->assertArrayHasKey('itemsMax', $data);
 		$this->assertArrayHasKey('items', $data);
 	}
-	
+
 	/**
 	 * @covers /users/reviewers
 	 */

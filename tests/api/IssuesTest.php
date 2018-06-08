@@ -76,7 +76,8 @@ class IssuesTest extends PKPApiTestCase {
 	 * @expectedException GuzzleHttp\Exception\ClientException
 	 */
 	public function testGetIssueByIdWithoutToken() {
-		$response = $this->_sendRequest('GET', '/issues/1', array(), false);
+		$issue = $this->_getFirstEntity('/issues');
+		$response = $this->_sendRequest('GET', "/issues/{$issue->id}", array(), false);
 	}
 	
 	/**
@@ -84,7 +85,7 @@ class IssuesTest extends PKPApiTestCase {
 	 * @expectedException GuzzleHttp\Exception\ClientException
 	 */
 	public function testGetIssueByIdWithInvalidId() {
-		$response = $this->_sendRequest('GET', '/issues/999');
+		$response = $this->_sendRequest('GET', "/issues/{$this->_invalidId}");
 		$this->assertSame(404, $response->getStatusCode());
 	}
 
@@ -92,7 +93,8 @@ class IssuesTest extends PKPApiTestCase {
 	 * @covers /issues/{issueId}
 	 */
 	public function testGetIssueById() {
-		$response = $this->_sendRequest('GET', '/issues/1');
+		$issue = $this->_getFirstEntity('/issues');
+		$response = $this->_sendRequest('GET', "/issues/{$issue->id}");
 		$this->assertEquals(200, $response->getStatusCode());
 		$data = $this->_getResponseData($response);
 		$this->assertArrayHasKey('id', $data);

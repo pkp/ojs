@@ -16,13 +16,28 @@
 import('lib.pkp.tests.PKPSubmissionsTest');
 
 class SubmissionsTest extends PKPSubmissionsTest {
+	/**
+	 * Search and return a specific submission used for galleys testing
+	 * @return Submission
+	 */
+	protected function _getSubmissionForGalleyTesting() {
+		$title = "Cyclomatic Complexity";
+		$submissions = $this->_findSubmissionByTitle($title);
+		$this->assertTrue(is_array($submissions));
+		$submission = array_shift($submissions);
+		$this->assertTrue($submission instanceof Submission);
+		$this->assertContains($title, $submission->getTitle(AppLocale::getLocale()));
+		return $submission;
+	}
 
 	/**
 	 * @covers /submissions/{submissionId}/galleys
 	 * @expectedException GuzzleHttp\Exception\ClientException
 	 */
 	public function testGetSubmissionGalleysWithoutToken() {
-		$response = $this->_sendRequest('GET', '/submissions/9/galleys', array(), false);
+		$submission = $this->_getSubmissionForGalleyTesting();
+		$submissionId = $submission->getId();
+		$response = $this->_sendRequest('GET', "/submissions/{$submissionId}/galleys", array(), false);
 	}
 
 	/**
@@ -30,7 +45,7 @@ class SubmissionsTest extends PKPSubmissionsTest {
 	 * @expectedException GuzzleHttp\Exception\ClientException
 	 */
 	public function testGetSubmissionGalleysWithInvalidId() {
-		$response = $this->_sendRequest('GET', '/submissions/999/galleys');
+		$response = $this->_sendRequest('GET', "/submissions/{$this->_invalidId}/galleys");
 		$this->assertEquals(404, $response->getStatusCode());
 	}
 
@@ -39,7 +54,14 @@ class SubmissionsTest extends PKPSubmissionsTest {
 	 * @expectedException GuzzleHttp\Exception\ClientException
 	 */
 	public function testGetSubmissionGalleysForUnpublishedSubmissions() {
-		$response = $this->_sendRequest('GET', '/submissions/23/galleys');
+		$title = "Antimicrobial";
+		$submissions = $this->_findSubmissionByTitle($title, STATUS_QUEUED);
+		$this->assertTrue(is_array($submissions));
+		$submission = array_shift($submissions);
+		$this->assertTrue($submission instanceof Submission);
+		$this->assertContains($title, $submission->getTitle(AppLocale::getLocale()));
+		$submissionId = $submission->getId();
+		$response = $this->_sendRequest('GET', "/submissions/{$submissionId}/galleys");
 		$this->assertEquals(404, $response->getStatusCode());
 	}
 
@@ -47,7 +69,9 @@ class SubmissionsTest extends PKPSubmissionsTest {
 	 * @covers /submissions/{submissionId}/galleys
 	 */
 	public function testGetSubmissionGalleys() {
-		$response = $this->_sendRequest('GET', '/submissions/9/galleys');
+		$submission = $this->_getSubmissionForGalleyTesting();
+		$submissionId = $submission->getId();
+		$response = $this->_sendRequest('GET', "/submissions/{$submissionId}/galleys");
 		$this->assertEquals(200, $response->getStatusCode());
 		$data = $this->_getResponseData($response);
 		$this->assertEquals(1, count($data));
