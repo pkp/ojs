@@ -45,7 +45,7 @@ class SectionsTest extends WebTestCase {
 		$this->waitForElementNotPresent('css=div.pkp_modal_panel');
 
 		// Verify resulting grid row
-		$this->assertEquals('Berardo, Buskins', $this->getText('css=#cell-1-editors > span'));
+		$this->assertEquals('Stephanie Berardo, David Buskins', $this->getText('css=#cell-1-editors > span'));
 		$this->waitForElementNotPresent('css=div.pkp_modal_panel');
 
 		// Create a new "Reviews" section

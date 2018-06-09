@@ -13,7 +13,7 @@
 {include file="frontend/components/header.tpl"}
 {/strip}
 <div id="authorDetails">
-<h3>{$lastName|escape}, {$firstName|escape}{if $middleName} {$middleName|escape}{/if}{if $affiliation}, {$affiliation|escape}{/if}{if $country}, {$country|escape}{/if}</h3>
+<h3>{$authorName|escape}{if $affiliation}, {$affiliation|escape}{/if}{if $country}, {$country|escape}{/if}</h3>
 <ul>
 {foreach from=$publishedArticles item=article}
 	{assign var=issueId value=$article->getIssueId()}

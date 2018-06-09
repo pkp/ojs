@@ -50,7 +50,7 @@ class Article extends Submission {
 			case PERMISSIONS_FIELD_COPYRIGHT_HOLDER:
 				switch($context->getSetting('copyrightHolderType')) {
 					case 'author':
-						$fieldValue = array($context->getPrimaryLocale() => $this->getAuthorString());
+						$fieldValue = array($context->getPrimaryLocale() => $this->getAuthorString(false));
 						break;
 					case 'other':
 						$fieldValue = $context->getSetting('copyrightHolderOther');

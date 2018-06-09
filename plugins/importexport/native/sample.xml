@@ -10,8 +10,8 @@
 	<authors xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		xsi:schemaLocation="http://pkp.sfu.ca native.xsd">
 		<author primary_contact="true" user_group_ref="Journal manager">
-			<firstname>John</firstname>
-			<lastname>Smith</lastname>
+			<givenname locale="en_US">John</givenname>
+			<familyname locale="en_US">Smith</familyname>
 			<email>john.smith@your-domain.com</email>
 		</author>
 	</authors>

@@ -65,8 +65,8 @@ class OAIMetadataFormat_DCTest extends PKPTestCase {
 		// Author
 		import('classes.article.Author');
 		$author = new Author();
-		$author->setFirstName('author-firstname');
-		$author->setLastName('author-lastname');
+		$author->setGivenName('author-firstname', 'en_US');
+		$author->setFamilyName('author-lastname', 'en_US');
 		$author->setAffiliation('author-affiliation', 'en_US');
 		$author->setEmail('someone@example.com');
 

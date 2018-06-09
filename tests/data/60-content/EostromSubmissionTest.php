@@ -22,8 +22,8 @@ class EostromSubmissionTest extends ContentBaseTestCase {
 	function testSubmission() {
 		$this->register(array(
 			'username' => 'eostrom',
-			'firstName' => 'Elinor',
-			'lastName' => 'Ostrom',
+			'givenName' => 'Elinor',
+			'familyName' => 'Ostrom',
 			'affiliation' => 'Indiana University',
 			'country' => 'United States',
 		));
@@ -39,8 +39,8 @@ class EostromSubmissionTest extends ContentBaseTestCase {
 			),
 			'additionalAuthors' => array(
 				array(
-					'firstName' => 'Frank',
-					'lastName' => 'van Laerhoven',
+					'givenName' => 'Frank',
+					'familyName' => 'van Laerhoven',
 					'country' => 'United States',
 					'affiliation' => 'Indiana University',
 					'email' => 'fvanlaerhoven@mailinator.com',

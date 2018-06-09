@@ -107,8 +107,12 @@ class ArticleCrossrefXmlFilter extends IssueCrossrefXmlFilter {
 			} else {
 				$personNameNode->setAttribute('sequence', 'additional');
 			}
-			$personNameNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'given_name', htmlspecialchars(ucfirst($author->getFirstName()).(($author->getMiddleName())?' '.ucfirst($author->getMiddleName()):''), ENT_COMPAT, 'UTF-8')));
-			$personNameNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'surname', htmlspecialchars(ucfirst($author->getLastName()), ENT_COMPAT, 'UTF-8')));
+			if (empty($author->getLocalizedFamilyName())) {
+				$personNameNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'surname', htmlspecialchars(ucfirst($author->getFullName(false)), ENT_COMPAT, 'UTF-8')));
+			} else {
+				$personNameNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'given_name', htmlspecialchars(ucfirst($author->getLocalizedGivenName()), ENT_COMPAT, 'UTF-8')));
+				$personNameNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'surname', htmlspecialchars(ucfirst($author->getLocalizedFamilyName()), ENT_COMPAT, 'UTF-8')));
+			}
 			if ($author->getData('orcid')) {
 				$personNameNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'ORCID', $author->getData('orcid')));
 			}
@@ -175,7 +179,7 @@ class ArticleCrossrefXmlFilter extends IssueCrossrefXmlFilter {
 		$galleys = $articleGalleyDao->getBySubmissionId($submission->getId());
 		// All full-texts, PDF full-texts and remote galleys for text-mining and as-crawled URL
 		$submissionGalleys = $pdfGalleys = $remoteGalleys = array();
-		// prefered PDF full-text for the as-crawled URL
+		// preferred PDF full-text for the as-crawled URL
 		$pdfGalleyInArticleLocale = null;
 		// get immediatelly also supplementary files for component list
 		$componentGalleys = array();

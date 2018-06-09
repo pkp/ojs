@@ -22,8 +22,8 @@ class CcorinoSubmissionTest extends ContentBaseTestCase {
 	function testSubmission() {
 		$this->register(array(
 			'username' => 'ccorino',
-			'firstName' => 'Carlo',
-			'lastName' => 'Corino',
+			'givenName' => 'Carlo',
+			'familyName' => 'Corino',
 			'affiliation' => 'University of Bologna',
 			'country' => 'Italy',
 		));

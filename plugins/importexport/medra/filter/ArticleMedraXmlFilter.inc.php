@@ -347,11 +347,11 @@ class ArticleMedraXmlFilter extends O4DOIXmlFilter {
 		// Contributor role (mandatory)
 		$contributorNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'ContributorRole', O4DOI_CONTRIBUTOR_ROLE_ACTUAL_AUTHOR));
 		// Person name (mandatory)
-		$personName = $author->getFullName();
+		$personName = $author->getFullName(false);
 		assert(!empty($personName));
 		$contributorNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'PersonName', htmlspecialchars($personName, ENT_COMPAT, 'UTF-8')));
 		// Inverted person name
-		$invertedPersonName = $author->getFullName(true);
+		$invertedPersonName = $author->getFullName(false, true);
 		assert(!empty($invertedPersonName));
 		$contributorNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'PersonNameInverted', htmlspecialchars($invertedPersonName, ENT_COMPAT, 'UTF-8')));
 		// Affiliation
