@@ -2779,6 +2779,21 @@ class Upgrade extends Installer {
 		return true;
 	}
 
+	/**
+	 * Migrate no_NO locale to the new nb_NO.
+	 * @return boolean
+	 */
+	function migrateNOLocale() {
+		$oldLocale = 'no_NO';
+		$newLocale = 'nb_NO';
+
+		$oldLocaleStringLength = 's:5';
+
+		$this->migrateLocale($oldLocale, $newLocale, $oldLocaleStringLength);
+
+		return true;
+	}
+
 }
 
 ?>
