@@ -35,7 +35,6 @@ Upgrading to the latest version of OJS involves two steps:
 
 - [Obtaining the latest OJS code](#obtaining-the-latest-ojs-code)
 - [Upgrading the OJS database](#upgrading-the-ojs-database)
-- [Update Javascript libraries and build.js](#update-javascript-libraries-and-buildjs)
 
 It is highly recommended that you also review the release notes ([docs/RELEASE](RELEASE))
 and other documentation in the docs directory before performing an upgrade.
@@ -105,7 +104,7 @@ the OJS team.
 ### Upgrading the OJS database
 
 After obtaining the latest OJS code, an additional script must be run to
-upgrade the OJS database and potentially executing additional upgrade code.
+upgrade the OJS database.
 
 NOTE: Patches to the included ADODB library may be required for PostgreSQL
 upgrades; see https://forum.pkp.sfu.ca/t/upgrade-failure-postgresql/19215
@@ -136,6 +135,14 @@ web-based script. To do so:
 	 "installed = On"
 
 ### Update Javascript libraries and build.js
+
+The official .tar.gz releases, and the stable branches in git (e.g.
+`ojs-stable-3_1_1`), contain precompiled javascript. If you are installing
+OJS using either of those and have not modified your Javascript, you do not
+need to compile Javascript.
+
+If you are using the git `master` branch, or have made changes to your
+Javascript code, you will need to recompile it following these instructions.
 
 To update the Javascript libraries and rebuild the build.js you have to run
 ```
