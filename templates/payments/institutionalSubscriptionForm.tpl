@@ -46,6 +46,9 @@
 		{fbvFormSection label="manager.subscriptions.form.ipRange"}
 			{fbvElement type="textarea" name="ipRanges" id="ipRanges" value=$ipRanges label="manager.subscriptions.form.ipRangeInstructions" size=$fbvStyles.size.MEDIUM}
 		{/fbvFormSection}
+		{fbvFormSection label="manager.subscriptions.form.referenceNumber"}
+			{fbvElement type="text" name="referenceNumber" id="referenceNumber" value=$referenceNumber size=$fbvStyles.size.MEDIUM inline=true}
+		{/fbvFormSection}
 		{fbvFormSection label="manager.subscriptions.form.notes"}
 			{fbvElement type="textarea" name="notes" id="notes" value=$notes rich=true}
 		{/fbvFormSection}
