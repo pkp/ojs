@@ -33,7 +33,6 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin {
 		switch (array_shift($args)) {
 			case 'index':
 			case '':
-				parent::display($args, $request);
 				$templateMgr = TemplateManager::getManager($request);
 				// Check for configuration errors:
 				$configurationErrors = $templateMgr->getTemplateVars('configurationErrors');
