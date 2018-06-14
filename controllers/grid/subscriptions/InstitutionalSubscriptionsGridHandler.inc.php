@@ -77,6 +77,15 @@ class InstitutionalSubscriptionsGridHandler extends SubscriptionsGridHandler {
 				$cellProvider
 			)
 		);
+		$this->addColumn(
+			new GridColumn(
+				'referenceNumber',
+				'manager.subscriptions.referenceNumber',
+				null,
+				null,
+				$cellProvider
+			)
+		);
 	}
 
 
