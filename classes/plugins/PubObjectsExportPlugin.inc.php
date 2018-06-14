@@ -87,13 +87,6 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 	}
 
 	/**
-	 * @copydoc Plugin::getTemplatePath($inCore)
-	 */
-	function getTemplatePath($inCore = false) {
-		return parent::getTemplatePath($inCore) . 'templates/';
-	}
-
-	/**
 	 * @copydoc ImportExportPlugin::display()
 	 */
 	function display($args, $request) {
