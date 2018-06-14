@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  * plugins/generic/referenceLinking/scheduledTasks.xml
+  *
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * ReferenceLinking Plugin scheduled task
+  *
+  * This file describes the schedule task that will check for found Crossref references DOIs.
+  *
+  -->
+
+<!DOCTYPE scheduled_tasks SYSTEM "../../../lib/pkp/dtd/scheduledTasks.dtd">
+
+<scheduled_tasks>
+	<task class="plugins.generic.referenceLinking.ReferenceLinkingInfoSender">
+		<descr>Check for found Crossref references DOIs.</descr>
+		<frequency minute="0"/>
+	</task>
+</scheduled_tasks>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * @file plugins/generic/referenceLinking/locale/en_US/locale.xml
+  *
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Reference Linking plugin localization strings for the en_US (U.S. English) locale.
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.generic.referenceLinking.displayName">Crossref Reference Linking</message>
+	<message key="plugins.generic.referenceLinking.description">The plugin adds extracted article references to the DOI registration with Crossref, checks for the found references DOIs, and displays them on the article page.</message>
+	<message key="plugins.generic.referenceLinking.description.long">This plugin will automatically add the extracted article references to the DOI registration with Crossref. Crossref will then automatically check if any DOIs can be found for the submitted references. Shortly after that, you can use the plugin to check for the found references DOIs, either automatically using the option below or manually in the submission metadata tab "References". Be aware that your article references should not change once you registered a DOI, else you would need to register the DOI anew, and check for the found references DOIs again.</message>
+	<message key="plugins.generic.referenceLinking.description.note">Be aware that your article references should not change once you registered the DOI, else you need to register the DOI anew and check for the found references DOIs again.</message>
+	<message key="plugins.generic.referenceLinking.description.requirements">This plugin requires Crossref DOIs to be assigned to articles, article references to be separately entered and extracted, as well as article DOIs to be deposited to Crossref from within OJS.</message>
+
+	<message key="plugins.generic.referenceLinking.registrationIntro">To check for the found Crossref references DOIs your Crossref username and password are needed.</message>
+	<message key="plugins.generic.referenceLinking.settings.form.submissionSettings">Submission Settings</message>
+	<message key="plugins.generic.referenceLinking.settings.form.crossrefSettings">Crossref XML Export Plugin Settings</message>
+	<message key="plugins.generic.referenceLinking.settings.form.username">Username</message>
+	<message key="plugins.generic.referenceLinking.settings.form.usernameRequired">Please enter the username you got from Crossref.</message>
+	<message key="plugins.generic.referenceLinking.settings.form.passwordRequired">Please enter the password you got from Crossref.</message>
+	<message key="plugins.generic.referenceLinking.settings.form.automaticReferenceChecking.description">OJS will automatically check for the found Crossref DOIs for the references that are submitted together with articles DOIs from within OJS.</message>
+	<message key="plugins.generic.referenceLinking.settings.form.testMode.description">Use the Crossref test API (testing environment) for the reference checking. Please do not forget to remove this option for the production.</message>
+	<message key="plugins.generic.referenceLinking.settings.form.saved">Reference linking plugin settings saved</message>
+
+	<message key="plugins.generic.referenceLinking.citationsFormActionName">Check Crossref DOIs</message>	
+	<message key="plugins.generic.referenceLinking.citationsForm.warning.toCheck">To be able to check for the Crossref references DOIs you need to</message>	
+	<message key="plugins.generic.referenceLinking.citationsForm.warning.extractCitations">extract and save references here</message>	
+	<message key="plugins.generic.referenceLinking.citationsForm.warning.assignDOI">assign a DOI to the article</message>	
+	<message key="plugins.generic.referenceLinking.citationsForm.warning.registerDOI">register this article DOI together with the exctracted references with Crossref</message>	
+	<message key="plugins.generic.referenceLinking.citationsForm.warning.toCheck.ok">To check for the found Crossref references DOIs use the button below.</message>	
+	<!-- scheduled task -->
+	<message key="plugins.generic.referenceLinking.senderTask.name">ReferenceLinking automatic registration task</message>
+</locale>
