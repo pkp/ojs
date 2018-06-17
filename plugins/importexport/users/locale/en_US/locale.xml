@@ -52,4 +52,6 @@ Examples:
 	<message key="plugins.importexport.users.importComplete">The import completed successfully. Users with usernames and email addresses that are not already in use have been imported, along with accompanying user groups.</message>
 	<message key="plugins.importexport.users.results">Results</message>
 	<message key="plugins.importexport.users.uploadFile">Please upload a file under "Import" in order to continue.</message>
+
+	<message key="plugins.importexport.submission.error.submissionFileCantBeExported">Could not export file "{$submissionFileName}" [{$submissionFileId}].</message>
 </locale>
