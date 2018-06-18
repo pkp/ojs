@@ -80,7 +80,7 @@ class ArticleSearch extends SubmissionSearch {
 					$authors = $authorDao->getBySubmissionId($submissionId);
 					$authorNames = array();
 					foreach ($authors as $author) { /* @var $author Author */
-						$authorNames[] = $author->getFullName(true);
+						$authorNames[] = $author->getFullName(false, true);
 					}
 					$orderKey = implode('; ', $authorNames);
 					unset($authors, $authorNames);

@@ -23,31 +23,6 @@
 {$principalContactSignature}]]></body>
 		<description>Это письмо отправляется зарегистрированным пользователям, которые указали, что данный тип уведомления отправляется им электронной почтой.</description>
 	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST">
-		<subject>Новое уведомление с сайта «{$siteTitle}»</subject>
-		<body><![CDATA[Вы получили новое уведомление с сайта «{$siteTitle}»:<br />
---<br />
-{$notificationContents}<br />
-<br />
-Ссылка: {$url}<br />
---<br />
-<br />
-Если хотите прекратить получать письма с уведомлениями, пожалуйста, перейдите по ссылке {$unsubscribeLink}.<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>Это письмо отправляется незарегистрированным пользователям в списке рассылки уведомлений.</description>
-	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
-		<subject>Добро пожаловать в список рассылки сайта «{$siteTitle}»!</subject>
-		<body><![CDATA[Вы подписались на получение уведомлений с сайта «{$siteTitle}».<br />
-<br />
-Пожалуйста, щелкните на этой ссылке для подтверждения запроса и добавления Вашего почтового адреса в список рассылки: {$confirmLink}<br />
-<br />
-Если хотите прекратить получать письма с уведомлениями, пожалуйста, перейдите по ссылке {$unsubscribeLink}.<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>Это письмо отправляется незарегистрированному пользователю, который только что зарегистрировался в списке рассылки уведомлений.</description>
-	</email_text>
 	<email_text key="PASSWORD_RESET_CONFIRM">
 		<subject>Подтверждение сброса пароля</subject>
 		<body><![CDATA[Мы получили запрос на сброс Вашего пароля на сайте «{$siteTitle}».<br />

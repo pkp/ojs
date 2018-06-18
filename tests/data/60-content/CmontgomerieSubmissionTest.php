@@ -22,8 +22,8 @@ class CmontgomerieSubmissionTest extends ContentBaseTestCase {
 	function testSubmission() {
 		$this->register(array(
 			'username' => 'cmontgomerie',
-			'firstName' => 'Craig',
-			'lastName' => 'Montgomerie',
+			'givenName' => 'Craig',
+			'familyName' => 'Montgomerie',
 			'affiliation' => 'University of Alberta',
 			'country' => 'Canada',
 		));
@@ -42,8 +42,8 @@ class CmontgomerieSubmissionTest extends ContentBaseTestCase {
 			),
 			'additionalAuthors' => array(
 				array(
-					'firstName' => 'Mark',
-					'lastName' => 'Irvine',
+					'givenName' => 'Mark',
+					'familyName' => 'Irvine',
 					'country' => 'Canada',
 					'affiliation' => 'University of Victoria',
 					'email' => 'mirvine@mailinator.com',

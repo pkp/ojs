@@ -40,8 +40,6 @@ class PhpMyVisitesPlugin extends GenericPlugin {
 
 			// Insert phpmv page tag to help footer
 			HookRegistry::register('Templates::Help::Footer::PageFooter', array($this, 'insertFooter'));
-
-			$this->_registerTemplateResource();
 		}
 		return $success;
 	}
@@ -55,16 +53,9 @@ class PhpMyVisitesPlugin extends GenericPlugin {
 	}
 
 	/**
-	 * @copydoc Plugin::getTemplatePath()
-	 */
-	function getTemplatePath($inCore = false) {
-		return $this->getTemplateResourceName() . ':';
-	}
-
-	/**
 	 * Extend the {url ...} smarty to support this plugin.
 	 */
-	function smartyPluginUrl($params, &$smarty) {
+	function smartyPluginUrl($params, $smarty) {
 		$path = array($this->getCategory(), $this->getName());
 		if (is_array($params['path'])) {
 			$params['path'] = array_merge($path, $params['path']);
@@ -90,7 +81,7 @@ class PhpMyVisitesPlugin extends GenericPlugin {
 			$output =& $params[2];
 			$request = $this->getRequest();
 			$templateMgr = TemplateManager::getManager($request);
-			$currentJournal = $templateMgr->get_template_vars('currentJournal');
+			$currentJournal = $templateMgr->getTemplateVars('currentJournal');
 
 			if (!empty($currentJournal)) {
 				$journal = $request->getJournal();
@@ -101,7 +92,7 @@ class PhpMyVisitesPlugin extends GenericPlugin {
 				if (!empty($phpmvSiteId) && !empty($phpmvUrl)) {
 					$templateMgr->assign('phpmvSiteId', $phpmvSiteId);
 					$templateMgr->assign('phpmvUrl', $phpmvUrl);
-					$output .= $templateMgr->fetch($this->getTemplatePath() . 'pageTag.tpl');
+					$output .= $templateMgr->fetch($this->getTemplateResource('pageTag.tpl'));
 				}
 			}
 		}

@@ -1,9 +1,6 @@
-	======================================
-	=== Comma-Separated Values (CSV) Files
-	======================================
+# Comma-Separated Values (CSV) Files
 
-Importing into a Spreadsheet
-----------------------------
+## Importing into a Spreadsheet
 
 Some applications, including Microsoft Excel, do not correctly handle newlines
 that are present within CSV data fields.
@@ -30,8 +27,7 @@ resulting spreadsheet may be used as is or Google Docs may be used to save the
 file in Microsoft Excel format for editing in Microsoft Excel.
 
 
-OpenOffice
-----------
+## OpenOffice
 
 OpenOffice may be obtained free of charge for Windows, Mac, and Linux:
 http://www.openoffice.org
@@ -40,15 +36,14 @@ Alternately, Mac users can use NeoOffice, an OpenOffice port for the Mac:
 http://www.neooffice.org
 
 
-Google Docs
------------
+## Google Docs
 
 Google Docs require an Internet connection and a Google account:
 http://docs.google.com
 
 
-Additional Information
-----------------------
+## Additional Information
 
 [1] http://tools.ietf.org/html/rfc4180
+
 [2] http://en.wikipedia.org/wiki/Comma-separated_values

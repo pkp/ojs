@@ -27,7 +27,6 @@ class BrowsePlugin extends GenericPlugin {
 				HookRegistry::register('Plugins::Blocks::Navigation::BrowseBy',array($this, 'addNavigationItem'));
 				// Handler for browse plugin pages
 				HookRegistry::register('LoadHandler', array($this, 'setupBrowseHandler'));
-				$this->_registerTemplateResource();
 			}
 			return true;
 		}
@@ -51,13 +50,6 @@ class BrowsePlugin extends GenericPlugin {
 	}
 
 	/**
-	 * @copydoc Plugin::getTemplatePath()
-	 */
-	function getTemplatePath($inCore = false) {
-		return $this->getTemplateResourceName() . ':templates/';
-	}
-
-	/**
 	 * Get the handler path for this plugin.
 	 */
 	function getHandlerPath() {
@@ -71,7 +63,7 @@ class BrowsePlugin extends GenericPlugin {
 		$smarty = $params[1];
 		$output =& $params[2];
 
-		$journal = $smarty->get_template_vars('currentJournal');
+		$journal = $smarty->getTemplateVars('currentJournal');
 
 		$templateMgr = TemplateManager::getManager($this->getRequest());
 		if ($this->getSetting($journal->getId(), 'enableBrowseBySections')) {

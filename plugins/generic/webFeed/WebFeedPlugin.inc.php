@@ -36,22 +36,18 @@ class WebFeedPlugin extends GenericPlugin {
 	 * @copydoc Plugin::register()
 	 */
 	public function register($category, $path, $mainContextId = null) {
-		if (parent::register($category, $path, $mainContextId)) {
-			if ($this->getEnabled($mainContextId)) {
-				HookRegistry::register('TemplateManager::display',array($this, 'callbackAddLinks'));
-				$this->import('WebFeedBlockPlugin');
-				$blockPlugin = new WebFeedBlockPlugin($this);
-				PluginRegistry::register('blocks', $blockPlugin, $this->getPluginPath());
+		if (!parent::register($category, $path, $mainContextId)) return false;
+		if ($this->getEnabled($mainContextId)) {
+			HookRegistry::register('TemplateManager::display',array($this, 'callbackAddLinks'));
+			$this->import('WebFeedBlockPlugin');
+			$blockPlugin = new WebFeedBlockPlugin($this);
+			PluginRegistry::register('blocks', $blockPlugin, $this->getPluginPath());
 
-				$this->import('WebFeedGatewayPlugin');
-				$gatewayPlugin = new WebFeedGatewayPlugin($this);
-				PluginRegistry::register('gateways', $gatewayPlugin, $this->getPluginPath());
-
-				$this->_registerTemplateResource();
-			}
-			return true;
+			$this->import('WebFeedGatewayPlugin');
+			$gatewayPlugin = new WebFeedGatewayPlugin($this);
+			PluginRegistry::register('gateways', $gatewayPlugin, $this->getPluginPath());
 		}
-		return false;
+		return true;
 	}
 
 	/**
@@ -64,13 +60,6 @@ class WebFeedPlugin extends GenericPlugin {
 	}
 
 	/**
-	 * @copydoc PKPPlugin::getTemplatePath
-	 */
-	public function getTemplatePath($inCore = false) {
-		return $this->getTemplateResourceName() . ':templates/';
-	}
-
-	/**
 	 * Add feed links to page <head> on select/all pages.
 	 */
 	public function callbackAddLinks($hookName, $args) {
@@ -79,7 +68,7 @@ class WebFeedPlugin extends GenericPlugin {
 		if (!is_a($request->getRouter(), 'PKPPageRouter')) return false;
 
 		$templateManager =& $args[0];
-		$currentJournal = $templateManager->get_template_vars('currentJournal');
+		$currentJournal = $templateManager->getTemplateVars('currentJournal');
 		if (is_null($currentJournal)) {
 			return;
 		}

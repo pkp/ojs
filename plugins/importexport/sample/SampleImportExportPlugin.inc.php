@@ -65,7 +65,7 @@ class SampleImportExportPlugin extends ImportExportPlugin {
 
 				$templateMgr = TemplateManager::getManager($request);
 				$templateMgr->assign('issues', $issues);
-				$templateMgr->display($this->getTemplatePath() . 'issues.tpl');
+				$templateMgr->display($this->getTemplateResource('issues.tpl'));
 		}
 	}
 

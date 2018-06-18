@@ -50,13 +50,6 @@ class RecommendBySimilarityPlugin extends GenericPlugin {
 		return __('plugins.generic.recommendBySimilarity.description');
 	}
 
-	/**
-	 * @copydoc PKPPlugin::getTemplatePath
-	 */
-	function getTemplatePath($inCore = false) {
-		return parent::getTemplatePath($inCore) . 'templates/';
-	}
-
 
 	//
 	// View level hook implementations.
@@ -69,7 +62,7 @@ class RecommendBySimilarityPlugin extends GenericPlugin {
 		$output =& $params[2];
 
 		// Identify similarity terms for the given article.
-		$displayedArticle = $smarty->get_template_vars('article');
+		$displayedArticle = $smarty->getTemplateVars('article');
 		$articleId = $displayedArticle->getId();
 		import('classes.search.ArticleSearch');
 		$articleSearch = new ArticleSearch();
@@ -93,7 +86,7 @@ class RecommendBySimilarityPlugin extends GenericPlugin {
 		$smarty->assign('articlesBySimilarity', $results);
 		$smarty->assign('articlesBySimilarityQuery', $query);
 
-		$output .= $smarty->fetch($this->getTemplatePath() . 'articleFooter.tpl');
+		$output .= $smarty->fetch($this->getTemplateResource('articleFooter.tpl'));
 		return false;
 	}
 }

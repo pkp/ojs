@@ -22,8 +22,8 @@ class LkumiegaSubmissionTest extends ContentBaseTestCase {
 	function testSubmission() {
 		$this->register(array(
 			'username' => 'lkumiega',
-			'firstName' => 'Lise',
-			'lastName' => 'Kumiega',
+			'givenName' => 'Lise',
+			'familyName' => 'Kumiega',
 			'affiliation' => 'University of Cape Town',
 			'country' => 'South Africa',
 		));

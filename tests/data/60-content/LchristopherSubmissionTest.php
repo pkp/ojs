@@ -22,8 +22,8 @@ class LchristopherSubmissionTest extends ContentBaseTestCase {
 	function testSubmission() {
 		$this->register(array(
 			'username' => 'lchristopher',
-			'firstName' => 'Leo',
-			'lastName' => 'Christopher',
+			'givenName' => 'Leo',
+			'familyName' => 'Christopher',
 			'affiliation' => 'Australian National University',
 			'country' => 'Australia',
 		));

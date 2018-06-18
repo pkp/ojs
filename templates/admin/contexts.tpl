@@ -30,7 +30,7 @@
 			</div>
 		{/if}
 
-		{url|assign:journalsUrl router=$smarty.const.ROUTE_COMPONENT component="grid.admin.journal.JournalGridHandler" op="fetchGrid" escape=false}
+		{capture assign=journalsUrl}{url router=$smarty.const.ROUTE_COMPONENT component="grid.admin.journal.JournalGridHandler" op="fetchGrid" escape=false}{/capture}
 		{load_url_in_div id="journalGridContainer" url=$journalsUrl}
 	</div>
 

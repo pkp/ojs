@@ -515,12 +515,6 @@ class IssueGridHandler extends GridHandler {
 					$journalId
 				);
 			}
-			$notificationManager->sendToMailingList($request,
-				$notificationManager->createNotification(
-					$request, UNSUBSCRIBED_USER_NOTIFICATION, NOTIFICATION_TYPE_PUBLISHED_ISSUE,
-					$journalId
-				)
-			);
 		}
 
 		$json = DAO::getDataChangedEvent();

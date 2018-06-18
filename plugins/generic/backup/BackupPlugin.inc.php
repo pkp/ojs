@@ -76,7 +76,7 @@ class BackupPlugin extends GenericPlugin {
 				$templateMgr = TemplateManager::getManager($request);
 				$templateMgr->assign('isDumpConfigured', Config::getVar('cli', 'dump')!='');
 				$templateMgr->assign('isTarConfigured', Config::getVar('cli', 'tar')!='');
-				$templateMgr->display($this->getTemplatePath() . 'index.tpl');
+				$templateMgr->display($this->getTemplateResource('index.tpl'));
 				exit();
 			case 'db':
 				$dumpTool = Config::getVar('cli', 'dump');

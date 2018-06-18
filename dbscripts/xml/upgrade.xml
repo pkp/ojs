@@ -51,6 +51,10 @@
 		<data file="dbscripts/xml/upgrade/3.1.1_preupdate_citations.xml" condition="return $installer->columnExists('citations', 'assoc_type');" />
 	</upgrade>
 
+	<upgrade minversion="2.4.0.0" maxversion="3.1.9.9">
+		<data file="dbscripts/xml/upgrade/3.2.0_preupdate_user_author_names.xml" condition="return $installer->columnExists('users', 'first_name');" />
+	</upgrade>
+
 	<!-- PKP schema components -->
 	<schema file="lib/pkp/xml/schema/common.xml" />
 	<schema file="lib/pkp/xml/schema/log.xml" />
@@ -86,6 +90,11 @@
 		<code function="migrateSRLocale" />
 	</upgrade>
 
+	<upgrade minversion="2.4.0.0" maxversion="3.1.9.9">
+		<!-- migrateUserAndAuthorNames should be after migrateSRLocale -->
+		<code function="migrateUserAndAuthorNames" condition="return $installer->tableExists('users_tmp');" />
+	</upgrade>
+
 	<upgrade minversion="2.4.0.0" maxversion="2.4.9.9">
 		<code function="concatenateIntoAbout" />
 		<code function="concatenateIntoMasthead" />
@@ -119,6 +128,7 @@
 		<code function="convertQueries" />
 		<code function="migrateFiles" />
 		<code function="convertSupplementaryFiles" />
+		<code function="provideSupplementaryFilesForReview" />
 		<code function="setFileUploader" />
 		<code function="setFileName" />
 		<data file="dbscripts/xml/upgrade/3.0.0_postupdate.xml" />
@@ -199,6 +209,9 @@
 	<upgrade minversion="3.0.0.0" maxversion="3.1.0.9">
 		<code function="repairSuppFilesFilestage" />
 		<code function="fixAuthorGroup" /><!-- Run again after previous invalid fix (#3289) -->
+	</upgrade>
+
+	<upgrade minversion="2.4.0.0" maxversion="3.1.1.9">
 		<note file="docs/release-notes/README-3.1.1" />
 	</upgrade>
 

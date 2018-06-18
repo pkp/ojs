@@ -22,8 +22,8 @@ class JmwandengaSubmissionTest extends ContentBaseTestCase {
 	function testSubmission() {
 		$this->register(array(
 			'username' => 'jmwandenga',
-			'firstName' => 'John',
-			'lastName' => 'Mwandenga',
+			'givenName' => 'John',
+			'familyName' => 'Mwandenga',
 			'affiliation' => 'University of Cape Town',
 			'country' => 'South Africa',
 		));

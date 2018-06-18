@@ -197,6 +197,7 @@
 	<message key="user.registerForOtherJournals">Registrera för andra tidskrifter</message>
 	<message key="user.reviewerPrompt">Skulle du kunna tänka dig att granska bidrag till den här tidskriften?</message>
 	<message key="user.reviewerPrompt.userGroup">Ja, begär {$userGroup}-rollen.</message>
+	<message key="user.reviewerPrompt.optin">Ja, jag vill bli kontaktad med förfrågningar gällande granskningsuppdrag för den här tidskriften.</message>
 	<message key="user.register.contextsPrompt">Vilka av tidskrifterna på den här webbplatsen vill du registrera dig hos?</message>
 	<message key="user.register.otherContextRoles">Begär följande roller.</message>
 	<message key="user.register.noContextReviewerInterests">Om du anmälde dig som granskare, vänligen fyll i dina intresseområden.</message>
@@ -673,6 +674,7 @@ Du kan välja att ge användaren en förklaring till varför kontot har spärrat
 	<message key="user.register.reviewerDescriptionNoInterests">Kan sakkunniggranska insända bidrag för tidskriften.</message>
 	<message key="user.register.reviewerDescription">Kan sakkunniggranska bidrag för tidskrifter på webbplatsen.</message>
 	<message key="user.register.reviewerInterests">Uppge intresseområden för granskning (huvudsakliga ämnesområden och forskningsmetoder).</message>
+	<message key="user.register.form.emailConsentAllContexts">Ja, jag vill bli kontaktad med information om nya publiceringar och meddelanden för alla tidskrifter jag är registrerad hos.</message>
 
 	<!-- Subscriptions -->
 	<message key="user.subscriptions.mySubscriptions">Mina prenumerationer</message>
@@ -865,7 +867,7 @@ Du kan välja att ge användaren en förklaring till varför kontot har spärrat
 	<message key="installer.ojsUpgrade">Uppgradering av OJS</message>
 	<message key="installer.installationInstructions"><![CDATA[<h4>OJS-version {$version}</h4>
 
-<p>Tack för att du laddar ned Public Knowledge Projects <strong>Open Journal Systems</strong>. Innan du fortsätter, läs <a href="{$baseUrl}/docs/README">README</a>-filen som medföljer mjukvaran. För ytterligare information om the Public Knowledge Project och dess mjukvaruprojekt, vänligen se <a href="http://pkp.sfu.ca/" target="_blank">PKP:s webbplats</a>. Om du vill rapportera buggar i Open Journal Systems eller behöver teknisk support, se <a href="http://forum.pkp.sfu.ca">PKP:s supportforum</a> eller besök PKP:s <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">buggrapporteringssystem</a>. Vi rekommenderar i första hand supportforumet om ni har frågor men det går också bra att maila supporten på: <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
+<p>Tack för att du laddar ned Public Knowledge Projects <strong>Open Journal Systems</strong>. Innan du fortsätter, läs <a href="{$baseUrl}/docs/README.md">README</a>-filen som medföljer mjukvaran. För ytterligare information om the Public Knowledge Project och dess mjukvaruprojekt, vänligen se <a href="http://pkp.sfu.ca/" target="_blank">PKP:s webbplats</a>. Om du vill rapportera buggar i Open Journal Systems eller behöver teknisk support, se <a href="http://forum.pkp.sfu.ca">PKP:s supportforum</a> eller besök PKP:s <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">buggrapporteringssystem</a>. Vi rekommenderar i första hand supportforumet om ni har frågor men det går också bra att maila supporten på: <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
 
 <h4>Uppgradera</h4>
 
@@ -905,7 +907,7 @@ Du kan välja att ge användaren en förklaring till varför kontot har spärrat
 <p>2. En katalog för lagring av uppladdade filer måste skapas och göras skrivbar (Se "Filinställningar" nedan).</p>]]></message>
         <message key="installer.upgradeInstructions"><![CDATA[<h4>OJS-version {$version}</h4>
 
-	<p>Tack för att du laddar ned Public Knowledge Projects <strong>Open Journal Systems</strong>. Innan du fortsätter, läs <a href="{$baseUrl}/docs/README">README</a>- och <a href="{$baseUrl}/docs/UPGRADE">UPGRADE</a>-filerna  som medföljer mjukvaran. För ytterligare information om the Public Knowledge Project och dess mjukvaruprojekt, vänligen se <a href="http://pkp.sfu.ca/" target="_blank">PKP:s webbplats</a>. Om du vill rapportera buggar i Open Journal Systems eller behöver teknisk support, se <a href="http://forum.pkp.sfu.ca">PKP:s supportforum</a> eller besök PKP:s <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">buggrapporteringssystem</a>. Vi rekommenderar i första hand supportforumet om ni har frågor men det går också bra att maila supporten på: <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
+	<p>Tack för att du laddar ned Public Knowledge Projects <strong>Open Journal Systems</strong>. Innan du fortsätter, läs <a href="{$baseUrl}/docs/README.md">README</a>- och <a href="{$baseUrl}/docs/UPGRADE.md">UPGRADE</a>-filerna  som medföljer mjukvaran. För ytterligare information om the Public Knowledge Project och dess mjukvaruprojekt, vänligen se <a href="http://pkp.sfu.ca/" target="_blank">PKP:s webbplats</a>. Om du vill rapportera buggar i Open Journal Systems eller behöver teknisk support, se <a href="http://forum.pkp.sfu.ca">PKP:s supportforum</a> eller besök PKP:s <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">buggrapporteringssystem</a>. Vi rekommenderar i första hand supportforumet om ni har frågor men det går också bra att maila supporten på: <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
 <p>Det <strong>rekommenderas starkt</strong> att du gör backup på din databas, filkatalogen, och OJS installationkatalog innan du fortsätter.</p>
 <p>Om du kör installationen i <a href="http://www.php.net/features.safe-mode" target="_blank">PHP Safe Mode</a>, vänligen försäkra dig om att the max_execution_time directive i din php.ini-konfigurationsfil är satt till ett högt gränsvärde. Om denna eller annan tidsbegränsning (t.ex. Apaches "Timeout"-direktiv) överskrids och uppgraderingsprocessen avbryts måste arbetet hanteras manuellt.</p>]]></message>
 	<message key="installer.localeSettingsInstructions"><![CDATA[För komplett Unicode-stöd (UTF-8), välj UTF-8 för samtliga teckenuppsättningsinställningar. Observera att fullt Unicode-stöd kräver att PHP har kompilerats med stöd för <a href="http://www.php.net/mbstring" target="_blank">mbstring</a>-biblioteket (aktiverat som default i nya PHP-installationer). Det kan uppstå problem med utökade teckenuppsättningar om inte servern uppfyller dessa krav.
@@ -1035,8 +1037,6 @@ Sök-URL:er som kräver inskickade formulärdata kan komma att visas som ogiltig
 
 
 	<!-- Notification Types -->
-	<message key="notification.mailListDescription">Skriv in din e-postadress för att få aviseringar direkt när det läggs till nytt viktigt innehåll i tidskriften.</message>
-	<message key="notification.notificationsPublicDescription">Den här sidan visar viktiga uppdateringar relaterade till den här tidskriften, exempelvis nya nummer eller meddelanden. Du kan prenumerera på dessa aviseringar via RSS-flöden (genom att klicka på ikonerna till höger), eller <![CDATA[  <a href="{$emailUrl}">via e-post.</a>]]></message>
 
 	<message key="notification.type.articleSubmitted">En ny artikel, "{$title}", har skickats in.</message>
 	<message key="notification.type.editing">Redaktionella händelser</message>

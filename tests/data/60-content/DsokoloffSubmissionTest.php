@@ -22,8 +22,8 @@ class DsokoloffSubmissionTest extends ContentBaseTestCase {
 	function testSubmission() {
 		$this->register(array(
 			'username' => 'dsokoloff',
-			'firstName' => 'Domatilia',
-			'lastName' => 'Sokoloff',
+			'givenName' => 'Domatilia',
+			'familyName' => 'Sokoloff',
 			'affiliation' => 'University College Cork',
 			'country' => 'Ireland',
 		));

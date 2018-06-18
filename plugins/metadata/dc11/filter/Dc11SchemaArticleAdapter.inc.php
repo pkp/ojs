@@ -85,7 +85,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 		// Creator
 		$authors = $article->getAuthors();
 		foreach($authors as $author) {
-			$dc11Description->addStatement('dc:creator', $author->getFullName(true));
+			$dc11Description->addStatement('dc:creator', $author->getFullName(false, true));
 		}
 
 		// Subject

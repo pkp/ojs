@@ -206,14 +206,10 @@ definitions:
         type: integer
       seq:
         type: integer
-      firstName:
-        type: string
-      middleName:
-        type: string
-      lastName:
-        type: string
-      suffix:
-        type: string
+      givenName:
+        $ref: '#/definitions/LocaleObject'
+      familyName:
+        $ref: '#/definitions/LocaleObject'
       fullName:
         type: string
       country:
@@ -488,18 +484,10 @@ definitions:
         type: string
       fullName:
         type: string
-      firstName:
-        type: string
-      middleName:
-        type: string
-      lastName:
-        type: string
-      initials:
-        type: string
-      salutation:
-        type: string
-      suffix:
-        type: string
+      givenName:
+        $ref: '#/definitions/LocaleObject'
+      familyName:
+        $ref: '#/definitions/LocaleObject'
       affiliation:
         $ref: '#/definitions/LocaleObject'
       country:
@@ -984,7 +972,7 @@ paths:
           required: false
           type: string
         - name: searchPhrase
-          description: Filter the results by a search phrase matched against the `userName`, `firstName`, `middleName`, `lastName`, `initials`, `salutation`, `suffix`, `email`, `affiliation`, `biography` and `orcid`.
+          description: Filter the results by a search phrase matched against the `userName`, `givenName`, `familyName`, `email`, `affiliation`, `biography` and `orcid`.
           in: query
           required: false
           type: string
@@ -1098,7 +1086,7 @@ paths:
           required: false
           type: string
         - name: searchPhrase
-          description: Filter the results by a search phrase matched against the `userName`, `firstName`, `middleName`, `lastName`, `initials`, `salutation`, `suffix`, `email`, `affiliation`, `biography`, `orcid`, `interests`, and `gossip`.
+          description: Filter the results by a search phrase matched against the `userName`, `givenName`, `familyName`, `email`, `affiliation`, `biography`, `orcid`, `interests`, and `gossip`.
           in: query
           required: false
           type: string

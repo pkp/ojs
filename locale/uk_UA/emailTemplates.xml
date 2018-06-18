@@ -23,31 +23,6 @@
 {$principalContactSignature}]]></body>
 		<description>Цей лист надсилається зареєстрованому користувачу, який обрав опцію отримання повідомлень цього типу електронною поштою.</description>
 	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST">
-		<subject>Ви маєте нове повідомлення від сайту {$siteTitle}</subject>
-		<body><![CDATA[Ви маєте нове повідомлення від сайту {$siteTitle}:<br />
---<br />
-{$notificationContents}<br />
-<br />
-Посилання: {$url}<br />
---<br />
-<br />
-Якщо Ви не хочете отримувати повідомлення електронною поштою, будь ласка, перейдіть за адресою {$unsubscribeLink} та вкажіть Вашу email адресу та пароль.<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>Цей лист надсилається незареєстрованим користувачам зі списку поштової розсилки.</description>
-	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
-		<subject>Вітаємо у списку поштової розсилки {$siteTitle}!</subject>
-		<body><![CDATA[Ви зареєстрували себе для отримання повідомлень від сайту {$siteTitle}.<br />
-			<br />
-Будь ласка, натисніть це посилання, щоб підтвердити свій запит та додати Вашу email адресу до списку поштової розсилки: {$confirmLink}<br />
-<br />
-Якщо Ви не хочете отримувати повідомлення електронною поштою, будь ласка, перейдіть за адресою {$unsubscribeLink}.<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>Цей лист надсилається незареєстрованому користувачу, після його реєстрації у списку поштової розсилки повідомлень.</description>
-	</email_text>
 		<email_text key="PASSWORD_RESET_CONFIRM">
 		<subject>Підтвердження скидання пароля</subject>
 		<body><![CDATA[Ми отримали запит на скидання Вашого пароля для веб-сайту {$siteTitle}.<br />
@@ -947,5 +922,3 @@ URL подання: {$submissionUrl}<br />
 		<description>Цей лист автоматично надсилається призначеному редактору, коли автор вивантажує перероблену версію своєї статті.</description>
 	</email_text>
 </email_texts>
-
-

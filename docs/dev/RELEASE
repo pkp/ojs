@@ -40,7 +40,7 @@ OJS release:
 
 3. Update release documentation:
 
-    docs/README
+    docs/README.md
     docs/release-notes/README-<VERSION>
 
 

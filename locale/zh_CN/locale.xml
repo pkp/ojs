@@ -799,7 +799,7 @@
 	<message key="installer.appInstallation">OJS安装</message>
 	<message key="installer.ojsUpgrade">OJS升级</message>
 	<message key="installer.installationInstructions"><![CDATA[<h4>OJS版本 {$version}</h4>
-<p>谢谢您下载Public Knowledge Project的<strong>Open Journal Systems</strong>. 在处理之前，请阅读 <a href="{$baseUrl}/docs/README">README</a>文件. 关于 Public Knowledge Project 相关的以及其软件的更多信息，请访问 <a href="http://pkp.sfu.ca/" target="_blank">PKP的网站</a>. 如果您有OJS的bug报告或者技术质询, 请访问<a href="http://forum.pkp.sfu.ca" target="_blank">支持论坛</a>或者访问PKP的在线 <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">Bug报告系统</a>.虽然支持论坛是联系的首选方法, 您也可以电邮 <a href="mailto:pkp-support@sfu.ca">pkp-support@sfu.ca</a>.</p>
+<p>谢谢您下载Public Knowledge Project的<strong>Open Journal Systems</strong>. 在处理之前，请阅读 <a href="{$baseUrl}/docs/README.md">README</a>文件. 关于 Public Knowledge Project 相关的以及其软件的更多信息，请访问 <a href="http://pkp.sfu.ca/" target="_blank">PKP的网站</a>. 如果您有OJS的bug报告或者技术质询, 请访问<a href="http://forum.pkp.sfu.ca" target="_blank">支持论坛</a>或者访问PKP的在线 <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">Bug报告系统</a>.虽然支持论坛是联系的首选方法, 您也可以电邮 <a href="mailto:pkp-support@sfu.ca">pkp-support@sfu.ca</a>.</p>
 <h4>升级</h4>
 <p>如果您要升级现有的OJS 2.x的安装, <a href="{$upgradeUrl}">点击这里</a> 开始.</p>
 <h4>推荐系统要求</h4>
@@ -828,7 +828,7 @@
 <p>选择 <strong>手动安装</strong> to 显示必要的 SQL语句来创建OJS数据库架构和初始数据，该数据库可以执行手动安装. 此选项可以用于调试安装问题，特别是不支持的平台。请注意，此安装方法将不会试图创建数据库或表，虽然配置文件将写入提供的数据库设置。</p>]]></message>
 	<message key="installer.upgradeInstructions">><![CDATA[
 		<h4>OJS版本{$version}</h4>
-		<p>谢谢您下载公共知识项目(Public Knowledge Project)的 <strong>开放期刊系统(Open Journal Systems)</strong>。在进行下一步之前，请先阅读这份软件中的<a href="{$baseUrl}/docs/README">README</a>文件。想了解更多关于公共知识项目以及其软件计划，请见：<a href="http://pkp.sfu.ca/" target="_blank">PKP网站</a>。如果您要回报关于开放期刊系统的错误信息或者有相关的技术支持问题，请见：<a href="http://forum.pkp.sfu.ca">支持讨论区</a>，或者请见PKP的线上<a href="https://github.com/pkp/pkp-lib#issues" target="_blank">错误回报系统</a>。虽然我们比较希望以讨论区做为联系的管道，不过您也可以寄信给技术团队：<a href="mailto:pkp-support@sfu.ca">pkp-support@sfu.ca</a>。</p>
+		<p>谢谢您下载公共知识项目(Public Knowledge Project)的 <strong>开放期刊系统(Open Journal Systems)</strong>。在进行下一步之前，请先阅读这份软件中的<a href="{$baseUrl}/docs/README.md">README</a>文件。想了解更多关于公共知识项目以及其软件计划，请见：<a href="http://pkp.sfu.ca/" target="_blank">PKP网站</a>。如果您要回报关于开放期刊系统的错误信息或者有相关的技术支持问题，请见：<a href="http://forum.pkp.sfu.ca">支持讨论区</a>，或者请见PKP的线上<a href="https://github.com/pkp/pkp-lib#issues" target="_blank">错误回报系统</a>。虽然我们比较希望以讨论区做为联系的管道，不过您也可以寄信给技术团队：<a href="mailto:pkp-support@sfu.ca">pkp-support@sfu.ca</a>。</p>
 		<p>我们<strong>强烈地建议您</strong>在继续下一步之前，请备份您的数据库、文件目录以及OJS的安装目录</p>
 		<p>如果您正在执行<a href="http://www.php.net/features.safe-mode" target="_blank">PHP安全模式</a>， 请确保在您的 php.ini 配置文件中配置max_execution_time指令一个高额的上限。如果这个或者其他的时间上限（例如Apache的 "Timeout"指令）已到，而升级程序遭到中断，您必须以手动的方式介入。</p>]]></message>
 	<message key="installer.localeSettingsInstructions"><![CDATA[为了完整支持Unicode (UTF-8)编码，请选择以UTF-8作为编码位。注意，这项支持目前需要一个MySQL >= 4.1.1或者PostgreSQL >= 7.1 的数据库服务器。也请注意，完整的Unicode编码需要PHP >= 4.3.0搭配支持<a href="http://www.php.net/mbstring" target="_blank">mbstring</a>库 (最新版本的PHP安装过程已经预设启动)。如果您的服务器没有满足这些条件的话，您可能在使用额外的字符集时会碰到问题<br /><br />
@@ -945,8 +945,6 @@
 
 
 	<!-- Notification Types -->
-	<message key="notification.mailListDescription">请输入您的电子邮件地址，便于接收该期刊重要的新内容通知.</message>
-	<message key="notification.notificationsPublicDescription">这页显示了杂志刊期或公告相关的重要更新. 您可以通过RSS(点击右侧的图片)或者<![CDATA[  <a href="{$emailUrl}">通过电子邮件.</a>订阅这个通知 ]]></message>
 
 	<message key="notification.type.articleSubmitted">一篇新文章, "{$title}", 已经提交.</message>
 	<message key="notification.type.editing">编辑事件</message>

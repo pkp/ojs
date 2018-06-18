@@ -50,13 +50,6 @@ class RecommendByAuthorPlugin extends GenericPlugin {
 		return __('plugins.generic.recommendByAuthor.description');
 	}
 
-	/**
-	 * @copydoc Plugin::getTemplatePath()
-	 */
-	function getTemplatePath($inCore = false) {
-		return parent::getTemplatePath($inCore) . 'templates/';
-	}
-
 
 	//
 	// View level hook implementations.
@@ -69,7 +62,7 @@ class RecommendByAuthorPlugin extends GenericPlugin {
 		$output =& $params[2];
 
 		// Find articles of the same author(s).
-		$displayedArticle = $smarty->get_template_vars('article');
+		$displayedArticle = $smarty->getTemplateVars('article');
 		$authors = $displayedArticle->getAuthors();
 		$authorDao = DAORegistry::getDAO('AuthorDAO'); /* @var $authorDao AuthorDAO */
 		$foundArticles = array();
@@ -80,9 +73,8 @@ class RecommendByAuthorPlugin extends GenericPlugin {
 			// until OJS allows users to consistently normalize authors (via name,
 			// email, ORCID, whatever).
 			$articles = $authorDao->getPublishedArticlesForAuthor(
-				null, $author->getFirstName(), $author->getMiddleName(),
-				$author->getLastName(), $author->getLocalizedAffiliation(),
-				$author->getCountry()
+				null, $author->getLocalizedGivenName(), $author->getLocalizedFamilyName(),
+				$author->getLocalizedAffiliation(), $author->getCountry()
 			);
 			foreach ($articles as $article) { /* @var $article PublishedArticle */
 				if ($displayedArticle->getId() == $article->getId()) continue;
@@ -142,7 +134,7 @@ class RecommendByAuthorPlugin extends GenericPlugin {
 		import('lib.pkp.classes.core.VirtualArrayIterator');
 		$returner = new VirtualArrayIterator($pagedResults, $totalResults, $page, $itemsPerPage);
 		$smarty->assign('articlesBySameAuthor', $returner);
-		$output .= $smarty->fetch($this->getTemplatePath() . 'articleFooter.tpl');
+		$output .= $smarty->fetch($this->getTemplateResource('articleFooter.tpl'));
 		return false;
 	}
 }

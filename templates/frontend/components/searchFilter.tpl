@@ -25,7 +25,7 @@
 {/if}
 {if ($displayIf == "emptyFilter" && $isEmptyFilter) || ($displayIf == "activeFilter" && !$isEmptyFilter)}
 	<div class="cmp_search_filter">
-		<label for="{$filterName}">
+		<label for="{$filterName|escape}">
 			{translate key=$key}
 		</label>
 		<div class="value">
@@ -39,7 +39,7 @@
 			{else}
 				{capture assign="filterInput"}{call_hook name="Templates::Search::SearchResults::FilterInput" filterName=$filterName filterValue=$filterValue}{/capture}
 				{if empty($filterInput)}
-					<input type="text" name="{$filterName}" id="{$filterName}" size="40" maxlength="255" value="{$filterValue|escape}" class="textField">
+					<input type="text" name="{$filterName|escape}" id="{$filterName|escape}" size="40" maxlength="255" value="{$filterValue|escape}" class="textField">
 				{else}
 					{$filterInput}
 				{/if}

@@ -282,13 +282,14 @@ class LDAPAuthPlugin extends AuthPlugin {
 	 * @param $uattr array
 	 */
 	function userFromAttr(&$user, &$uattr) {
+		$siteDao = DAORegistry::getDAO('SiteDAO');
+		$site = $siteDao->getSite();
+
 		$attr = array_change_key_case($uattr, CASE_LOWER); // Note:  array_change_key_case requires PHP >= 4.2.0
-		$firstName = @$attr['givenname'][0];
-		$middleName = null;
-		$initials = null;
-		$lastName = @$attr['sn'][0];
-		if (!isset($lastName))
-			$lastName = @$attr['surname'][0];
+		$givenName = @$attr['givenname'][0];
+		$familyName = @$attr['sn'][0];
+		if (!isset($familyName))
+			$familyName = @$attr['surname'][0];
 		$affiliation = @$attr['o'][0];
 		if (!isset($affiliation))
 			$affiliation = @$attr['organizationname'][0];
@@ -303,14 +304,10 @@ class LDAPAuthPlugin extends AuthPlugin {
 		$interests = null;
 
 		// Only update fields that exist
-		if (isset($firstName))
-			$user->setFirstName($firstName);
-		if (isset($middleName))
-			$user->setMiddleName($middleName);
-		if (isset($initials))
-			$user->setInitials($initials);
-		if (isset($lastName))
-			$user->setLastName($lastName);
+		if (isset($givenName))
+			$user->setGivenName($givenName, AppLocale::getLocale());
+		if (isset($familyName))
+			$user->setFamilyName($familyName, AppLocale::getLocale());
 		if (isset($affiliation))
 			$user->setAffiliation($affiliation, AppLocale::getLocale());
 		if (isset($email))
@@ -332,15 +329,17 @@ class LDAPAuthPlugin extends AuthPlugin {
 	 * @param $attr array
 	 */
 	function userToAttr(&$user, &$attr) {
+		$siteDao = DAORegistry::getDAO('SiteDAO');
+		$site = $siteDao->getSite();
 		// FIXME empty strings for unset fields?
 		if ($user->getFullName())
 			$attr['cn'] = $user->getFullName();
-		if ($user->getFirstName())
-			$attr['givenName'] = $user->getFirstName();
-		if ($user->getLastName())
-			$attr['sn'] = $user->getLastName();
-		if ($user->getAffiliation(AppLocale::getLocale()))
-			$attr['organizationName'] = $user->getAffiliation(AppLocale::getLocale());
+		if ($user->getLocalizedGivenName())
+			$attr['givenName'] = $user->getLocalizedGivenName();
+		if ($user->getLocalizedFamilyName())
+			$attr['sn'] = $user->getLocalizedFamilyName();
+		if ($user->getLocalizedAffiliation())
+			$attr['organizationName'] = $user->getLocalizedAffiliation();
 		if ($user->getEmail())
 			$attr['mail'] = $user->getEmail();
 		if ($user->getPhone())

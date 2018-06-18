@@ -197,6 +197,7 @@
 	<message key="user.registerForOtherJournals">Зарегистрировать для других журналов</message>
 	<message key="user.reviewerPrompt">Хотите ли вы рецензировать материалы для этого журнала?</message>
 	<message key="user.reviewerPrompt.userGroup">Да, запросить роль «{$userGroup}».</message>
+	<message key="user.reviewerPrompt.optin">Да, Я хочу, чтобы ко мне обращались с запросами на рецензирование материалов для этого журнала.</message>
 	<message key="user.register.contextsPrompt">В каких журналах на этом сайте вы хотите зарегистрироваться?</message>
 	<message key="user.register.otherContextRoles">Запросить следующие роли.</message>
 	<message key="user.register.noContextReviewerInterests">Если вы запрашиваете роль рецензента в каком-то журнале, пожалуйста, введите темы, которые интересуют Вас как рецензента.</message>
@@ -674,6 +675,7 @@
 	<message key="user.register.reviewerDescriptionNoInterests">Согласен участвовать в рецензировании материалов для этого журнала.</message>
 	<message key="user.register.reviewerDescription">Согласен участвовать в рецензировании материалов для этого сайта.</message>
 	<message key="user.register.reviewerInterests">Укажите Ваши интересы как рецензента (основная тематика, методы исследования):</message>
+	<message key="user.register.form.emailConsentAllContexts">Да, я хочу, чтобы меня уведомляли о новых публикациях и объявлениях во всех журналах, в которых я зарегистрирован.</message>
 
 	<!-- Подписки -->
 	<message key="user.subscriptions.mySubscriptions">Мои подписки</message>
@@ -863,7 +865,7 @@
 	<message key="installer.ojsUpgrade">Обновление OJS</message>
 	<message key="installer.installationInstructions"><![CDATA[<h4>Версия OJS {$version}</h4>
 
-<p>Благодарим Вас за скачивание <strong>Open Journal Systems</strong>, разработанной в рамках Public Knowledge Project. Перед продолжением, пожалуйста, прочтите файл <a href="{$baseUrl}/docs/README">README</a>, идущий с этим программным обеспечением. Более подробную информацию о Public Knowledge Project и их проектах в области программного обеспечения вы можете узнать, посетив <a href="http://pkp.sfu.ca/" target="_blank">веб-сайт PKP</a>. Если вы обнаружили ошибки или у Вас есть вопросы к технической поддержке о Open Journal Systems, посмотрите <a href="http://forum.pkp.sfu.ca" target="_blank">форум поддержки</a> или посетите онлайновую <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">систему регистрации ошибок</a> PKP. Хотя обращение в форум поддержки является предпочтительным способом связи, вы также можете отправить сообщение команде проекта на адрес <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
+<p>Благодарим Вас за скачивание <strong>Open Journal Systems</strong>, разработанной в рамках Public Knowledge Project. Перед продолжением, пожалуйста, прочтите файл <a href="{$baseUrl}/docs/README.md">README</a>, идущий с этим программным обеспечением. Более подробную информацию о Public Knowledge Project и их проектах в области программного обеспечения вы можете узнать, посетив <a href="http://pkp.sfu.ca/" target="_blank">веб-сайт PKP</a>. Если вы обнаружили ошибки или у Вас есть вопросы к технической поддержке о Open Journal Systems, посмотрите <a href="http://forum.pkp.sfu.ca" target="_blank">форум поддержки</a> или посетите онлайновую <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">систему регистрации ошибок</a> PKP. Хотя обращение в форум поддержки является предпочтительным способом связи, вы также можете отправить сообщение команде проекта на адрес <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
 
 <h4>Обновление</h4>
 
@@ -903,7 +905,7 @@
 <p>2. Каталог для хранения загруженных файлов должен быть создан и сделан доступным для записи (смотри «Настройки файлов» ниже).</p>]]></message>
 	<message key="installer.upgradeInstructions"><![CDATA[<h4>Версия OJS {$version}</h4>
 
-<p>Благодарим Вас за скачивание <strong>Open Journal Systems</strong>, разработанной в рамках Public Knowledge Project. Перед продолжением, пожалуйста, прочтите файлы <a href="{$baseUrl}/docs/README">README</a> и <a href="{$baseUrl}/docs/UPGRADE">UPGRADE</a>, идущие с этим программным обеспечением. Более подробную информацию о Public Knowledge Project и их проектах в области программного обеспечения вы можете узнать, посетив <a href="http://pkp.sfu.ca/" target="_blank">веб-сайт PKP</a>. Если вы обнаружили ошибки или у вас есть вопросы к технической поддержке о Open Journal Systems, посмотрите <a href="http://forum.pkp.sfu.ca" target="_blank">форум поддержки</a> или посетите онлайновую <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">систему регистрации ошибок</a> PKP. Хотя обращение в форум поддержки является предпочтительным способом связи, вы также можете отправить сообщение команде проекта на адрес <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
+<p>Благодарим Вас за скачивание <strong>Open Journal Systems</strong>, разработанной в рамках Public Knowledge Project. Перед продолжением, пожалуйста, прочтите файлы <a href="{$baseUrl}/docs/README.md">README</a> и <a href="{$baseUrl}/docs/UPGRADE.md">UPGRADE</a>, идущие с этим программным обеспечением. Более подробную информацию о Public Knowledge Project и их проектах в области программного обеспечения вы можете узнать, посетив <a href="http://pkp.sfu.ca/" target="_blank">веб-сайт PKP</a>. Если вы обнаружили ошибки или у вас есть вопросы к технической поддержке о Open Journal Systems, посмотрите <a href="http://forum.pkp.sfu.ca" target="_blank">форум поддержки</a> или посетите онлайновую <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">систему регистрации ошибок</a> PKP. Хотя обращение в форум поддержки является предпочтительным способом связи, вы также можете отправить сообщение команде проекта на адрес <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
 <p>Перед продолжением <strong>настоятельно рекомендуется</strong> создать резервную копию базы данных, каталога с файлами и каталога с установленной системой OJS.</p>
 <p>Если PHP запущен у вас в режиме <a href="http://www.php.net/features.safe-mode" target="_blank">PHP Safe Mode</a>, пожалуйста, убедитесь, что значение max_execution_time в файле конфигурации php.ini задано достаточно большим. Если это или какое-либо другое ограничение по времени (например, значение Timeout для Apache) будет достигнуто и процес обновления будет прерван, потребуется ручное вмешательство в процесс обновления.</p>]]></message>
 	<message key="installer.localeSettingsInstructions"><![CDATA[Для полной поддержки Unicode (UTF-8), выберите UTF-8 для всех настроек кодировки символов. Пожалуйста, обратите внимание, что полная поддержка Unicode требует PHP, откомпилированного с поддержкой библиотеки <a href="http://www.php.net/mbstring" target="_blank">mbstring</a> (включена по умолчанию в большинстве современных инсталляций PHP). У Вас могут возникнуть проблемы с расширенными кодировками, если сервер не соответствует этим требованиям.
@@ -1033,8 +1035,6 @@
 
 
 	<!-- Типы уведомлений -->
-	<message key="notification.mailListDescription">Введите ваш адрес электронной почты, чтобы моментально получать уведомления о добавлении нового контента в журнал.</message>
-	<message key="notification.notificationsPublicDescription">На этой странице показан список важных обновлений, связанных с этим журналом, таких как выход новых выпусков или объявления. Вы можете подписаться на эти уведомления через ленты RSS (щелкнув на значках справа) или <![CDATA[  <a href="{$emailUrl}">по электронной почте.</a>]]></message>
 
 	<message key="notification.type.articleSubmitted">Новая статья «{$title}» была отправлена.</message>
 	<message key="notification.type.editing">События редактирования</message>
@@ -1049,6 +1049,7 @@
 	<message key="notification.type.submissionComment">Редактор оставил комментарий к «{$title}».</message>
 	<message key="notification.type.submissions">События процесса отправки</message>
 	<message key="notification.type.userComment">Читатель добавил комментарий к «{$title}»</message>
+	<message key="notification.type.public">Публичные объявления</message>
 	<message key="notification.savedIssueMetadata">Сохранены метаданные публикации выпуска.</message>
 	<message key="notification.type.editorAssignmentTask">Была отправлена новая статья, которой нужно назначить редактора.</message>
 	<message key="notification.type.assignProductionUser">Назначить пользователя для создания гранок с помощью ссылки «Назначить» в списке «Участники».</message>

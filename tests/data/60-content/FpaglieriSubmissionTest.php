@@ -22,8 +22,8 @@ class FpaglieriSubmissionTest extends ContentBaseTestCase {
 	function testSubmission() {
 		$this->register(array(
 			'username' => 'fpaglieri',
-			'firstName' => 'Fabio',
-			'lastName' => 'Paglieri',
+			'givenName' => 'Fabio',
+			'familyName' => 'Paglieri',
 			'affiliation' => 'University of Rome',
 			'country' => 'Italy',
 		));

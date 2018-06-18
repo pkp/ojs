@@ -22,8 +22,8 @@ class JnovakSubmissionTest extends ContentBaseTestCase {
 	function testSubmission() {
 		$this->register(array(
 			'username' => 'jnovak',
-			'firstName' => 'John',
-			'lastName' => 'Novak',
+			'givenName' => 'John',
+			'familyName' => 'Novak',
 			'affiliation' => 'Aalborg University',
 			'country' => 'Denmark',
 		));

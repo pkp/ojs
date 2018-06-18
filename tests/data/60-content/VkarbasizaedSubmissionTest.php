@@ -22,8 +22,8 @@ class VkarbasizaedSubmissionTest extends ContentBaseTestCase {
 	function testSubmission() {
 		$this->register(array(
 			'username' => 'vkarbasizaed',
-			'firstName' => 'Vajiheh',
-			'lastName' => 'Karbasizaed',
+			'givenName' => 'Vajiheh',
+			'familyName' => 'Karbasizaed',
 			'affiliation' => 'University of Tehran',
 			'country' => 'Iran, Islamic Republic of',
 		));

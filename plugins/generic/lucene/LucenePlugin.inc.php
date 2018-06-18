@@ -106,8 +106,6 @@ class LucenePlugin extends GenericPlugin {
 			// This plug-in requires PHP 5.0.
 			if (!checkPhpVersion('5.0.0')) return false;
 
-			$this->_registerTemplateResource();
-
 			// Register callbacks (application-level).
 			HookRegistry::register('PluginRegistry::loadCategory', array($this, 'callbackLoadCategory'));
 			HookRegistry::register('LoadHandler', array($this, 'callbackLoadHandler'));
@@ -204,13 +202,6 @@ class LucenePlugin extends GenericPlugin {
 	 */
 	function isSitePlugin() {
 		return true;
-	}
-
-	/**
-	 * @copydoc PKPPlugin::getTemplatePath
-	 */
-	function getTemplatePath($inCore = false) {
-		return $this->getTemplateResourceName() . ':templates/';
 	}
 
 	//
@@ -779,7 +770,7 @@ class LucenePlugin extends GenericPlugin {
 		$smarty =& $params[1];
 		$output =& $params[2];
 		$smarty->assign($params[0]);
-		$output .= $smarty->fetch($this->getTemplatePath() . 'filterInput.tpl');
+		$output .= $smarty->fetch($this->getTemplateResource('filterInput.tpl'));
 		return false;
 	}
 
@@ -796,7 +787,7 @@ class LucenePlugin extends GenericPlugin {
 			'spellingSuggestionUrlParams',
 			array($this->_spellingSuggestionField => $this->_spellingSuggestion)
 		);
-		$output .= $smarty->fetch($this->getTemplatePath() . 'preResults.tpl');
+		$output .= $smarty->fetch($this->getTemplateResource('preResults.tpl'));
 		return false;
 	}
 
@@ -847,7 +838,7 @@ class LucenePlugin extends GenericPlugin {
 
 		// Render the template.
 		$output =& $params[2];
-		$output .= $smarty->fetch($this->getTemplatePath() . 'additionalSectionMetadata.tpl');
+		$output .= $smarty->fetch($this->getTemplateResource('additionalSectionMetadata.tpl'));
 		return false;
 	}
 

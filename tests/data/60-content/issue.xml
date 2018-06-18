@@ -28,8 +28,8 @@
       <abstract locale="en_US">&lt;p&gt;Focussing on the "McCabe family" of measures for the decision/logic structure of a program, leads to an evaluation of extensions to modularization, nesting and, potentially, to object-oriented program structures. A comparison of rated, operating and essential complexities of programs suggests two new metrics: "inessential complexity" as a measure of unstructuredness and "product complexity" as a potential objective measure of structural complexity. Finally, nesting and abstraction levels are considered, especially as to how metrics from the "McCabe family" might be applied in an object-oriented systems development environment.&lt;/p&gt;</abstract>
       <authors xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pkp.sfu.ca native.xsd">
         <author primary_contact="true" include_in_browse="true" user_group_ref="Author">
-          <firstname>June</firstname>
-          <lastname>Forcht</lastname>
+          <givenname locale="en_US">June</givenname>
+          <familyname locale="en_US">Forcht</familyname>
           <affiliation locale="en_US">Colorado State University</affiliation>
           <country>US</country>
           <email>jforcht@mailinator.com</email>
@@ -58,8 +58,8 @@
       <title locale="en_US">A Review of Information Systems and Corporate Memory: design for staff turn-over</title>
       <authors xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pkp.sfu.ca native.xsd">
         <author primary_contact="true" include_in_browse="true" user_group_ref="Author">
-          <firstname>Brian</firstname>
-          <lastname>Vemer</lastname>
+          <givenname locale="en_US">Brian</givenname>
+          <familyname locale="en_US">Vemer</familyname>
           <affiliation locale="en_US">University of Oslo</affiliation>
           <country>NO</country>
           <email>bvemer@mailinator.com</email>
@@ -89,8 +89,8 @@
       <abstract locale="en_US">&lt;p&gt;This paper reviews the functionality associated "data modelling" and "conceptual modelling". The history and origins of each term are considered, together with the current interpretation of each term. The term "information modelling" is also taken into account. Alternative representation forms are presented and reviewed. The merit of diagrams as a basis for a dialogue with a subject area expert is indicated. The paper suggests that a clear distinction is needed between data modelling and conceptual modelling. Both analytic modelling and prescriptive modelling are reviewed. The requirements for a conceptual schema modelling facility over and above the functionality provided by currently available data modelling facilities are presented. The need is emphasized for a conceptual schema modelling facility to support a representation form easily assimilatable by a subject area expert not familiar with information system. Based on the distinctions made, the paper suggests a way in which a data modelling facility and a conceptual schema modelling facility can be positioned in an information systems life cycle.&lt;/p&gt;</abstract>
       <authors xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pkp.sfu.ca native.xsd">
         <author primary_contact="true" include_in_browse="true" user_group_ref="Author">
-          <firstname>Karen</firstname>
-          <lastname>Bauman</lastname>
+          <givenname locale="en_US">Karen</givenname>
+          <familyname locale="en_US">Bauman</familyname>
           <affiliation locale="en_US">Chapman University</affiliation>
           <country>US</country>
           <email>kbauman@mailinator.com</email>
@@ -120,8 +120,8 @@
       <abstract locale="en_US">&lt;p&gt;Object Oriented design and databases has attracted a great deal of attention in recent years. This article outlines and discusses the semantic data principles used inter alia in understanding Object Oriented concepts. To illustrate and lend substance to this discussion a list is presented of OODBMS implementations. Their weaknesses and strengths are analysed. And their suitability for specific applications is assessed. Finally we offer some conclusions about research in this area and the directions in which further development should proceed.&lt;/p&gt;</abstract>
       <authors xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pkp.sfu.ca native.xsd">
         <author primary_contact="true" include_in_browse="true" user_group_ref="Author">
-          <firstname>Roy</firstname>
-          <lastname>Cerpa</lastname>
+          <givenname locale="en_US">Roy</givenname>
+          <familyname locale="en_US">Cerpa</familyname>
           <affiliation locale="en_US">Universidade Aberta Lisboa</affiliation>
           <country>PT</country>
           <email>rcerpa@mailinator.com</email>
@@ -151,8 +151,8 @@
       <abstract locale="en_US">&lt;p&gt;In 1964 Melvin Webber challenged the notions of community and centrality used in urban studies by demonstrating that "community without propinquity" was emerging within certain social networks. He argued that individuals were enmeshed in an overlapping range of groups, and that increasingly these social networks were not limited by physical or geographical location. His definition of community acknowledges a differentiated range of "non-place" cultures. It reflects a change to a process, rather than product oriented view of urban form, triggered in part by the influence of general systems theory. Webber influenced and was influenced by the emergence of an orientation towards non-physical aspects of community, and a participatory approach to design which emerged strongly during the seventies. Reexamination of Webber's work in the light of current information technology offers some insight into the nature of the globalisation of the world economy, and consequent impacts on nationality and sovereignty. The technologies that will be commonplace by the end of the century can both empower and disempower and it will be necessary to reconsider our current notions of both citizenship and of access to and control of such crucial resources. Opportunities offered by IT for marginalised or peripheral groups, whether at the level of nation, region or local community, will challenge existing definitions of centre and periphery. The moral panics surrounding such activities as "hacking" and its supporting "cyberpunk" sub culture demonstrate a growing awareness of the importance of emerging non-space communities.&lt;/p&gt;</abstract>
       <authors xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pkp.sfu.ca native.xsd">
         <author primary_contact="true" include_in_browse="true" user_group_ref="Author">
-          <firstname>Narciso</firstname>
-          <lastname>Pierson</lastname>
+          <givenname locale="en_US">Narciso</givenname>
+          <familyname locale="en_US">Pierson</familyname>
           <affiliation locale="en_US">Keele University</affiliation>
           <country>GB</country>
           <email>npierson@mailinator.com</email>
@@ -182,8 +182,8 @@
       <abstract locale="en_US">&lt;p&gt;Because most organizations depend on computer systems that electronically store important data to perform crucial business functions, the integrity of these information systems is paramount. Securing company systems, however, is not always an easy task. More sophisticated systems often provide widespread access to computer resources and increased user knowledge, which may lead to added difficulties in maintaining security. This paper explores whistleblowing employees' exposing illegal or unethical computer practices taking place in the organization as a method of computer security and the support for whistleblowing found in codes of ethical conduct formulated by professional societies.&lt;/p&gt;</abstract>
       <authors xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pkp.sfu.ca native.xsd">
         <author primary_contact="true" include_in_browse="true" user_group_ref="Author">
-          <firstname>Raj</firstname>
-          <lastname>Yagna</lastname>
+          <givenname locale="en_US">Raj</givenname>
+          <familyname locale="en_US">Yagna</familyname>
           <affiliation locale="en_US">Bangalore University</affiliation>
           <country>IN</country>
           <email>ryagna@mailinator.com</email>
