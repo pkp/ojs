@@ -226,6 +226,10 @@
 		<data file="dbscripts/xml/upgrade/event_log_oneclickuserid.xml" />
 	</upgrade>
 
+	<upgrade minversion="2.4.0.0" maxversion="3.1.9.9">
+		<data file="dbscripts/xml/upgrade/3.2.0_update.xml" />
+	</upgrade>
+
 	<!-- update plugin configuration - should be done as the final upgrade task -->
 	<code function="addPluginVersions" />
 </install>
