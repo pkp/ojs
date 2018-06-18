@@ -86,7 +86,7 @@ class URNPubIdPlugin extends PubIdPlugin {
 	 * @copydoc PKPPubIdPlugin::getPubIdMetadataFile()
 	 */
 	function getPubIdMetadataFile() {
-		return $this->getTemplatePath().'urnSuffixEdit.tpl';
+		return $this->getTemplateResource('urnSuffixEdit.tpl');
 	}
 
 	/**
@@ -107,7 +107,7 @@ class URNPubIdPlugin extends PubIdPlugin {
 	 * @copydoc PKPPubIdPlugin::getPubIdAssignFile()
 	 */
 	function getPubIdAssignFile() {
-		return $this->getTemplatePath().'urnAssign.tpl';
+		return $this->getTemplateResource('urnAssign.tpl');
 	}
 
 	/**
