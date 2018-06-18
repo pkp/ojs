@@ -26,8 +26,8 @@
 		<query driver="postgres7">CREATE INDEX submission_settings_name_value ON submission_settings (setting_name, setting_value) WHERE setting_name IN ('indexingState', 'medra::registeredDoi', 'datacite::registeredDoi')</query>
 		<query driver="postgres7">CREATE INDEX submission_galley_settings_name_value ON submission_galley_settings (setting_name, setting_value)</query>
 
-		<query driver="pdo">CREATE INDEX issue_settings_name_value ON issue_settings (setting_name) INCLUDE (setting_value)</query>
-		<query driver="pdo">CREATE INDEX submission_settings_name_value ON submission_settings (setting_name) INCLUDE (setting_value)</query>
-		<query driver="pdo">CREATE INDEX submission_galley_settings_name_value ON submission_galley_settings (setting_name, setting_value)</query>
+		<query driver="pdo">IF NOT EXISTS(SELECT * FROM sys.indexes WHERE Name = 'issue_settings_name_value') BEGIN CREATE INDEX issue_settings_name_value ON issue_settings (setting_name) INCLUDE (setting_value); END;</query>
+		<query driver="pdo">IF NOT EXISTS(SELECT * FROM sys.indexes WHERE Name = 'submission_settings_name_value') BEGIN CREATE INDEX submission_settings_name_value ON submission_settings (setting_name) INCLUDE (setting_value); END;</query>
+		<query driver="pdo">IF NOT EXISTS(SELECT * FROM sys.indexes WHERE Name = 'submission_galley_settings_name_value') BEGIN CREATE INDEX submission_galley_settings_name_value ON submission_galley_settings (setting_name, setting_value); END;</query>
 	</sql>
 </data>

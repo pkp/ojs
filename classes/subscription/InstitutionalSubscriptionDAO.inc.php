@@ -531,13 +531,13 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 		if (!empty($domain)) {
 			$isSqlServer = Config::getVar('database', 'ms_sql');
 			$result = $this->retrieve('
-				SELECT	iss.subscription_id
-				FROM	institutional_subscriptions iss
+				SELECT iss.subscription_id
+				FROM institutional_subscriptions iss
 					JOIN subscriptions s ON (iss.subscription_id = s.subscription_id)
 					JOIN subscription_types st ON (s.type_id = st.type_id)
 				WHERE ' . ($isSqlServer ?
-				           'CHARINDEX(UPPER(RIGHT(REPLICATE(\'.\', LEN(iss.domain) + 1) + LEFT(iss.domain, LEN(iss.domain) + 1), LEN(iss.domain) + 1)), RIGHT(REPLICATE(\'.\', LEN(?) + 1) + LEFT(?, LEN(?) + 1), LEN(?) + 1)) != 0' :
-				           'POSITION(UPPER(LPAD(iss.domain, LENGTH(iss.domain)+1, \'.\')) IN UPPER(LPAD(?, LENGTH(?)+1, \'.\'))) != 0') . '	
+							'CHARINDEX(UPPER(RIGHT(REPLICATE(\'.\', LEN(iss.domain) + 1) + LEFT(iss.domain, LEN(iss.domain) + 1), LEN(iss.domain) + 1)), RIGHT(REPLICATE(\'.\', LEN(?) + 1) + LEFT(?, LEN(?) + 1), LEN(?) + 1)) != 0' :
+							'POSITION(UPPER(LPAD(iss.domain, LENGTH(iss.domain)+1, \'.\')) IN UPPER(LPAD(?, LENGTH(?)+1, \'.\'))) != 0') . '	
 					AND iss.domain != \'\'
 					AND s.journal_id = ?
 					AND s.status = ' . SUBSCRIPTION_STATUS_ACTIVE . '

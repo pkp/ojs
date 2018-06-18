@@ -155,10 +155,6 @@ class IssueListQueryBuilder extends BaseQueryBuilder {
 		$q = Capsule::table('issues as i')
 					->where('i.journal_id','=', $this->contextId);
 
-		if (empty($this->countOnly)) {
-			$q->orderBy($this->orderColumn, $this->orderDirection);
-		}
-
 		// published
 		if (!is_null($this->isPublished)) {
 			$q->where('i.published', $this->isPublished ? 1 : 0);
@@ -186,6 +182,7 @@ class IssueListQueryBuilder extends BaseQueryBuilder {
 			$q->select(Capsule::raw('count(*) as issue_count'));
 		} else {
 			$q->select($this->columns);
+			$q->orderBy($this->orderColumn, $this->orderDirection);
 		}
 
 		return $q;

@@ -215,7 +215,7 @@
 		<note file="docs/release-notes/README-3.1.1" />
 	</upgrade>
 
-	<upgrade minversion="3.0.0.0" maxversion="3.1.1.0">
+	<upgrade minversion="3.0.0.0" maxversion="3.1.1.9">
 		<data file="dbscripts/xml/upgrade/ms_sql_support_update.xml" />
 		<note file="docs/README-MS_SQL" />
 	</upgrade>

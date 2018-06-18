@@ -14,11 +14,18 @@
 
 <data>
 	<sql>
-		<query>
-			CREATE TABLE users_tmp AS (SELECT user_id, first_name, last_name, middle_name, salutation, suffix FROM users)
-		</query>
-		<query>
-			CREATE TABLE authors_tmp AS (SELECT author_id, submission_id, first_name, last_name, middle_name, suffix FROM authors)
-		</query>
+		<query driver="mysql">CREATE TABLE users_tmp AS (SELECT user_id, first_name, last_name, middle_name, salutation, suffix FROM users)</query>
+		<query driver="mysql">CREATE TABLE authors_tmp AS (SELECT author_id, submission_id, first_name, last_name, middle_name, suffix FROM authors)</query>
+
+		<query driver="mysqli">CREATE TABLE users_tmp AS (SELECT user_id, first_name, last_name, middle_name, salutation, suffix FROM users)</query>
+		<query driver="mysqli">CREATE TABLE authors_tmp AS (SELECT author_id, submission_id, first_name, last_name, middle_name, suffix FROM authors)</query>
+
+		<query driver="postgres7">CREATE TABLE users_tmp AS (SELECT user_id, first_name, last_name, middle_name, salutation, suffix FROM users)</query>
+		<query driver="postgres7">CREATE TABLE authors_tmp AS (SELECT author_id, submission_id, first_name, last_name, middle_name, suffix FROM authors)</query>
+
+		<query driver="pdo">DROP TABLE IF EXISTS users_tmp</query>
+		<query driver="pdo">SELECT user_id, first_name, last_name, middle_name, salutation, suffix INTO users_tmp FROM users</query>
+		<query driver="pdo">DROP TABLE IF EXISTS authors_tmp</query>
+		<query driver="pdo">SELECT author_id, submission_id, first_name, last_name, middle_name, suffix INTO authors_tmp FROM authors</query>
 	</sql>
 </data>
