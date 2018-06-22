@@ -1,9 +1,9 @@
 	===================================
 	=== Open Journal Systems
 	=== The Public Knowledge Project
-	=== Version: 3.1.1
-	=== GIT tag: ojs-3_1_1-0
-	=== Release date: April 4, 2018
+	=== Version: 3.2.0
+	=== GIT tag: ojs-3_2_0-0
+	=== Release date: 
 	===================================
 
 
