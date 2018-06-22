@@ -17,7 +17,7 @@
 
 <scheduled_tasks>
 	<task class="plugins.generic.referenceLinking.ReferenceLinkingInfoSender">
-		<descr>Check for found Crossref references DOIs.</descr>
+		<descr>Check if Crossref has found DOIs for your references.</descr>
 		<frequency minute="0"/>
 	</task>
 </scheduled_tasks>

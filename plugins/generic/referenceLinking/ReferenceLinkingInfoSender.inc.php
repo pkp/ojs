@@ -22,7 +22,7 @@ class ReferenceLinkingInfoSender extends ScheduledTask {
 
 	/**
 	 * Constructor.
-	 * @param $argv array task arguments
+	 * @param $args array task arguments
 	 */
 	function __construct($args) {
 		PluginRegistry::loadCategory('generic');

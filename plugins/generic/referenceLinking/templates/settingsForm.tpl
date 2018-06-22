@@ -32,8 +32,8 @@
 	{fbvFormArea id="referenceLinkingSettingsFormArea"}
 		{fbvFormSection}
 			<p class="pkp_help">{translate key="plugins.generic.referenceLinking.registrationIntro"}</p>
-			{fbvElement type="text" id="username" value=$username label="plugins.generic.referenceLinking.settings.form.username" maxlength="50" size=$fbvStyles.size.MEDIUM required=true}
-			{fbvElement type="text" password="true" id="password" value=$password label="plugins.importexport.common.settings.form.password" maxLength="50" size=$fbvStyles.size.MEDIUM required=true}
+			{fbvElement type="text" id="username" value=$username label="plugins.generic.referenceLinking.settings.form.username" size=$fbvStyles.size.MEDIUM required=true}
+			{fbvElement type="text" password="true" id="password" value=$password label="plugins.importexport.common.settings.form.password" size=$fbvStyles.size.MEDIUM required=true}
 			<span class="instruct">{translate key="plugins.importexport.common.settings.form.password.description"}</span><br/>
 		{/fbvFormSection}
 		{fbvFormSection list="true"}

@@ -26,7 +26,7 @@ class ReferenceLinkingPlugin extends GenericPlugin {
 	 */
 	function register($category, $path, $mainContextId = null) {
 		$success = parent::register($category, $path, $mainContextId);
-		if ($success&& $this->getEnabled($mainContextId)) {
+		if ($success && $this->getEnabled($mainContextId)) {
 			if (!isset($mainContextId)) $mainContextId = $this->getCurrentContextId();
 			$username = $this->getSetting($mainContextId, 'username');
 			$password = $this->getSetting($mainContextId, 'password');
@@ -135,13 +135,17 @@ class ReferenceLinkingPlugin extends GenericPlugin {
 	/**
 	 * Hook to articlecrossrefxmlfilter::execute and add references data to the Crossref XML export
 	 * @param $hookName string
-	 * @param $params array
+	 * @param $params array [
+	 *  @option DOMDocument Crossref filter output
+	 * ]
 	 * @return boolean
 	 */
 	function addCrossrefCitationsElements($hookName, $params) {
 		$preliminaryOutput =& $params[0];
 		$request = Application::getRequest();
 		$context = $request->getContext();
+		// if Crossref export is executed via CLI, there will be no context
+		$contextId = isset($context) ? $context->getId() : null;
 		$publishedArticleDAO = DAORegistry::getDAO('PublishedArticleDAO');
 		$citationDao = DAORegistry::getDAO('CitationDAO');
 
@@ -152,7 +156,7 @@ class ReferenceLinkingPlugin extends GenericPlugin {
 			$doiNode = $doiDataNode->getElementsByTagName('doi')->item(0);
 			$doi = $doiNode->nodeValue;
 
-			$publishedArticle = $publishedArticleDAO->getPublishedArticleByPubId('doi', $doi, $context->getId());
+			$publishedArticle = $publishedArticleDAO->getPublishedArticleByPubId('doi', $doi, $contextId);
 			assert($publishedArticle);
 			$articleCitations = $citationDao->getBySubmissionId($publishedArticle->getId());
 			if ($articleCitations->getCount() != 0) {
@@ -182,7 +186,11 @@ class ReferenceLinkingPlugin extends GenericPlugin {
 	 * During the article DOI registration with Crossref, get the citations diagnostic ID from the Crossref response.
 	 *
 	 * @param $hookName string Hook name
-	 * @param $params array Array of hook parameters
+	 * @param $params array [
+	 *  @option CrossrefExportPlugin
+	 *  @option string XML reposonse from Crossref deposit
+	 *  @option Submission
+	 * ]
 	 * @return boolean
 	 */
 	function getCitationsDiagnosticId($hookName, $params) {
@@ -208,7 +216,10 @@ class ReferenceLinkingPlugin extends GenericPlugin {
 	 * "crossref::citationsDiagnosticId" and "crossref::checkCitationsDOIs".
 	 * @see DAO::getAdditionalFieldNames()
 	 * @param $hookName string
-	 * @param $params array
+	 * @param $params array [
+	 *  @option ArticleDAO
+	 *  @option array List of strings representing field names
+	 * ]
 	 */
 	function getAdditionalArticleFieldNames($hookName, $params) {
 		$additionalFields =& $params[1];
@@ -220,7 +231,10 @@ class ReferenceLinkingPlugin extends GenericPlugin {
 	 * Add "Check Crossref DOIs" button on the citations form page.
 	 *
 	 * @param $hookName string Hook name
-	 * @param $params array Array of hook parameters
+	 * @param $params array [
+	 *  @option CitationsForm
+	 *  @option string the rendered form
+	 * ]
 	 * @return boolean
 	 */
 	function getAdditionalCitationActionNames($hookName, $params) {
@@ -241,7 +255,7 @@ class ReferenceLinkingPlugin extends GenericPlugin {
 			if (!$submission->getData($this->getCitationsDiagnosticIdSettingName())) {
 				$checkItems[] = __('plugins.generic.referenceLinking.citationsForm.warning.registerDOI');
 			}
-			$commaSeparatedCheckItems = implode(', ', $checkItems);
+			$commaSeparatedCheckItems = implode(__('common.commaListSeparator'), $checkItems);
 			$notificationContents .= ' ' . $commaSeparatedCheckItems . '.';
 		} else {
 			$notificationContents = __('plugins.generic.referenceLinking.citationsForm.warning.toCheck.ok');
@@ -268,7 +282,10 @@ class ReferenceLinkingPlugin extends GenericPlugin {
 	 * "crossref::doi".
 	 * @see DAO::getAdditionalFieldNames()
 	 * @param $hookName string
-	 * @param $params array
+	 * @param $params array [
+	 *  @option CitationDAO
+	 *  @option array List of strings representing field names
+	 * ]
 	 */
 	function getAdditionalCitationFieldNames($hookName, $params) {
 		$additionalFields =& $params[1];
@@ -280,7 +297,10 @@ class ReferenceLinkingPlugin extends GenericPlugin {
 	 * Hook to the CitationForm::execute function.
 	 *
 	 * @param $hookName string Hook name
-	 * @param $params array Array of hook parameters
+	 * @param $params array [
+	 *  @option CitationsForm
+	 *  @option PKPRequest
+	 * ]
 	 * @return boolean
 	 */
 	function citationsFormExecute($hookName, $params) {
@@ -308,7 +328,7 @@ class ReferenceLinkingPlugin extends GenericPlugin {
 	}
 
 	/**
-	 * Get found Crossref references DOIs for the given artilce DOI.
+	 * Get found Crossref references DOIs for the given article DOI.
 	 * @param $submission PublishedArticle
 	 */
 	function getCrossrefReferencesDOIs($submission) {
@@ -316,7 +336,7 @@ class ReferenceLinkingPlugin extends GenericPlugin {
 		if (!empty($doi)){
 			$citationDao = DAORegistry::getDAO('CitationDAO');
 			$articleDao = DAORegistry::getDAO('ArticleDAO');
-			$citationsToCheck = $citationDao->getCitaionsBySetting($this->getCitationDoiSettingName(), null, $submission->getId());
+			$citationsToCheck = $citationDao->getCitationsBySetting($this->getCitationDoiSettingName(), null, $submission->getId());
 			$citationsToCheckKeys = array_keys($citationsToCheck);
 			if (!empty($citationsToCheckKeys)) {
 				$matchedReferences = $this->_getResolvedRefs($doi, $submission->getContextId());
@@ -341,7 +361,11 @@ class ReferenceLinkingPlugin extends GenericPlugin {
 	 * Insert reference DOI on the citations and article view page.
 	 *
 	 * @param $hookName string Hook name
-	 * @param $params array Array of hook parameters
+	 * @param $params array [
+	 *  @option Citation
+	 *  @option Smarty
+	 *  @option string Rendered smarty template
+	 * ]
 	 * @return boolean
 	 */
 	function displayReferenceDOI($hookName, $params) {
