@@ -2,7 +2,7 @@
 <!DOCTYPE version SYSTEM "../../../lib/pkp/dtd/pluginVersion.dtd">
 
 <!--
-  * version.xml
+  * plugins/generic/crossrefReferenceLinking/version.xml
   *
   * Copyright (c) 2013-2018 Simon Fraser University
   * Copyright (c) 2003-2018 John Willinsky
@@ -11,11 +11,11 @@
   * Plugin version information.
   -->
 <version>
-	<application>referenceLinking</application>
+	<application>crossrefReferenceLinking</application>
 	<type>plugins.generic</type>
 	<release>1.0.0.0</release>
 	<date>2018-06-15</date>
 	<lazy-load>1</lazy-load>
 	<sitewide>1</sitewide>
-	<class>ReferenceLinkingPlugin</class>
+	<class>CrossrefReferenceLinkingPlugin</class>
 </version>

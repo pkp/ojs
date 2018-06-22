@@ -1,14 +1,14 @@
 <?php
 
 /**
- * @file plugins/generic/referenceLinking/ReferenceLinkingSettingsForm.inc.php
+ * @file plugins/generic/crossrefReferenceLinking/CrossrefReferenceLinkingSettingsForm.inc.php
  *
  * Copyright (c) 2014-2018 Simon Fraser University
  * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @class ReferenceLinkingSettingsForm
- * @ingroup plugins_generic_referenceLinking
+ * @class CrossrefReferenceLinkingSettingsForm
+ * @ingroup plugins_generic_crossrefReferenceLinking
  *
  * @brief Form for journal managers to setup the reference linking plugin
  */
@@ -16,7 +16,7 @@
 
 import('lib.pkp.classes.form.Form');
 
-class ReferenceLinkingSettingsForm extends Form {
+class CrossrefReferenceLinkingSettingsForm extends Form {
 
 	//
 	// Private properties
@@ -32,12 +32,12 @@ class ReferenceLinkingSettingsForm extends Form {
 		return $this->_contextId;
 	}
 
-	/** @var ReferenceLinkingPlugin */
+	/** @var CrossrefReferenceLinkingPlugin */
 	var $_plugin;
 
 	/**
 	 * Get the plugin.
-	 * @return ReferenceLinkingPlugin
+	 * @return CrossrefReferenceLinkingPlugin
 	 */
 	function _getPlugin() {
 		return $this->_plugin;
@@ -49,7 +49,7 @@ class ReferenceLinkingSettingsForm extends Form {
 	//
 	/**
 	 * Constructor
-	 * @param $plugin ReferenceLinkingPlugin
+	 * @param $plugin CrossrefReferenceLinkingPlugin
 	 * @param $contextId integer
 	 */
 	function __construct($plugin, $contextId) {
@@ -59,8 +59,8 @@ class ReferenceLinkingSettingsForm extends Form {
 		parent::__construct($plugin->getTemplateResource('settingsForm.tpl'));
 
 		// Add form validation checks.
-		$this->addCheck(new FormValidator($this, 'username', 'required', 'plugins.generic.referenceLinking.settings.form.usernameRequired'));
-		$this->addCheck(new FormValidator($this, 'password', 'required', 'plugins.generic.referenceLinking.settings.form.passwordRequired'));
+		$this->addCheck(new FormValidator($this, 'username', 'required', 'plugins.generic.crossrefReferenceLinking.settings.form.usernameRequired'));
+		$this->addCheck(new FormValidator($this, 'password', 'required', 'plugins.generic.crossrefReferenceLinking.settings.form.passwordRequired'));
 		$this->addCheck(new FormValidatorPost($this));
 		$this->addCheck(new FormValidatorCSRF($this));
 	}
@@ -106,7 +106,7 @@ class ReferenceLinkingSettingsForm extends Form {
 							null, 'management', 'importexport',
 							array('plugin', 'CrossRefExportPlugin')
 							)),
-					__('plugins.generic.referenceLinking.settings.form.crossrefSettings'),
+					__('plugins.generic.crossrefReferenceLinking.settings.form.crossrefSettings'),
 					null
 					);
 			$templateMgr->assign('crossrefSettingsLinkAction', $crossrefSettingsLinkAction);
@@ -122,7 +122,7 @@ class ReferenceLinkingSettingsForm extends Form {
 					array('uid' => uniqid()), // Force reload
 					'submissionStage' // Anchor for tab
 				)),
-				__('plugins.generic.referenceLinking.settings.form.submissionSettings'),
+				__('plugins.generic.crossrefReferenceLinking.settings.form.submissionSettings'),
 				null
 			);
 			$templateMgr->assign('submissionSettingsLinkAction', $submissionSettingsLinkAction);

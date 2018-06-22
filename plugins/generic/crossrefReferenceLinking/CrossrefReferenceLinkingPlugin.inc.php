@@ -1,14 +1,14 @@
 <?php
 
 /**
- * @file plugins/generic/referenceLinking/ReferenceLinkingPlugin.inc.php
+ * @file plugins/generic/crossrefReferenceLinking/CrossrefReferenceLinkingPlugin.inc.php
  *
  * Copyright (c) 2013-2018 Simon Fraser University
  * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @class ReferenceLinkingPlugin
- * @ingroup plugins_generic_referenceLinking
+ * @class CrossrefReferenceLinkingPlugin
+ * @ingroup plugins_generic_crossrefReferenceLinking
  *
  * @brief Reference Linking plugin class
  */
@@ -20,7 +20,7 @@ define('CROSSREF_API_REFS_URL', 'https://doi.crossref.org/getResolvedRefs?doi=')
 define('CROSSREF_API_REFS_URL_DEV', 'https://test.crossref.org/getResolvedRefs?doi=');
 
 
-class ReferenceLinkingPlugin extends GenericPlugin {
+class CrossrefReferenceLinkingPlugin extends GenericPlugin {
 	/**
 	 * @copydoc Plugin::register()
 	 */
@@ -72,14 +72,14 @@ class ReferenceLinkingPlugin extends GenericPlugin {
 	 * @copydoc Plugin::getDisplayName()
 	 */
 	function getDisplayName() {
-		return __('plugins.generic.referenceLinking.displayName');
+		return __('plugins.generic.crossrefReferenceLinking.displayName');
 	}
 
 	/**
 	 * @copydoc Plugin::getDescription()
 	 */
 	function getDescription() {
-		return __('plugins.generic.referenceLinking.description');
+		return __('plugins.generic.crossrefReferenceLinking.description');
 	}
 
 	/**
@@ -129,14 +129,14 @@ class ReferenceLinkingPlugin extends GenericPlugin {
 	 */
 	function manage($args, $request) {
 		$context = $request->getContext();
-		$this->import('ReferenceLinkingSettingsForm');
+		$this->import('CrossrefReferenceLinkingSettingsForm');
 		switch ($request->getUserVar('verb')) {
 			case 'settings':
-				$form = new ReferenceLinkingSettingsForm($this, $context->getId());
+				$form = new CrossrefReferenceLinkingSettingsForm($this, $context->getId());
 				$form->initData();
 				return new JSONMessage(true, $form->fetch($request));
 			case 'save':
-				$form = new ReferenceLinkingSettingsForm($this, $context->getId());
+				$form = new CrossrefReferenceLinkingSettingsForm($this, $context->getId());
 				$form->readInputData();
 				if ($form->validate()) {
 					$form->execute($request);
@@ -144,7 +144,7 @@ class ReferenceLinkingPlugin extends GenericPlugin {
 					$notificationManager->createTrivialNotification(
 						$request->getUser()->getId(),
 						NOTIFICATION_TYPE_SUCCESS,
-						array('contents' => __('plugins.generic.referenceLinking.settings.form.saved'))
+						array('contents' => __('plugins.generic.crossrefReferenceLinking.settings.form.saved'))
 					);
 					return new JSONMessage(true);
 				}
@@ -265,23 +265,23 @@ class ReferenceLinkingPlugin extends GenericPlugin {
 
 		$notificationLabel = '<span class="label">'.$this->getDisplayName().'</span>';
 		if (!$parsedCitations->getCount() || !$submission->getStoredPubId('doi') || !$submission->getData($this->getCitationsDiagnosticIdSettingName())) {
-			$notificationContents = __('plugins.generic.referenceLinking.citationsForm.warning.toCheck');
+			$notificationContents = __('plugins.generic.crossrefReferenceLinking.citationsForm.warning.toCheck');
 			$checkItems = array();
 			if (!$parsedCitations->getCount()) {
-				$checkItems[] = __('plugins.generic.referenceLinking.citationsForm.warning.extractCitations');
+				$checkItems[] = __('plugins.generic.crossrefReferenceLinking.citationsForm.warning.extractCitations');
 			}
 			if (!$submission->getStoredPubId('doi')) {
-				$checkItems[] = __('plugins.generic.referenceLinking.citationsForm.warning.assignDOI');
+				$checkItems[] = __('plugins.generic.crossrefReferenceLinking.citationsForm.warning.assignDOI');
 			}
 			if (!$submission->getData($this->getCitationsDiagnosticIdSettingName())) {
-				$checkItems[] = __('plugins.generic.referenceLinking.citationsForm.warning.registerDOI');
+				$checkItems[] = __('plugins.generic.crossrefReferenceLinking.citationsForm.warning.registerDOI');
 			}
 			$commaSeparatedCheckItems = implode(__('common.commaListSeparator'), $checkItems);
 			$notificationContents .= ' ' . $commaSeparatedCheckItems . '.';
 		} else {
-			$notificationContents = __('plugins.generic.referenceLinking.citationsForm.warning.toCheck.ok');
+			$notificationContents = __('plugins.generic.crossrefReferenceLinking.citationsForm.warning.toCheck.ok');
 		}
-		$notificationContents .= '<br />' . __('plugins.generic.referenceLinking.description.note');
+		$notificationContents .= '<br />' . __('plugins.generic.crossrefReferenceLinking.description.note');
 		$additionalNotifications = '<div class="section">'.$notificationLabel.'<span clas="description">'.$notificationContents.'</span></div>';
 		$templateMgr->assign(array(
 			'additionalNotifications' => $additionalNotifications,
@@ -290,7 +290,7 @@ class ReferenceLinkingPlugin extends GenericPlugin {
 		// Add "Check Crossref DOIs" button only if the submission has a DOI and the references were deposited
 		if ($parsedCitations->getCount() && $submission->getStoredPubId('doi') && $submission->getData($this->getCitationsDiagnosticIdSettingName())) {
 			$actionNames =& $templateMgr->get_template_vars('actionNames');
-			$actionNames['getDois'] = __('plugins.generic.referenceLinking.citationsFormActionName');
+			$actionNames['getDois'] = __('plugins.generic.crossrefReferenceLinking.citationsFormActionName');
 			$templateMgr->assign(array(
 				'actionNames' => $actionNames,
 			));
