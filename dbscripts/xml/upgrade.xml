@@ -85,6 +85,7 @@
 
 	<upgrade minversion="2.4.0.0" maxversion="3.1.1.9">
 		<code function="migrateSRLocale" />
+		<code function="migrateNOLocale" />
 	</upgrade>
 
 	<upgrade minversion="2.4.0.0" maxversion="2.4.9.9">

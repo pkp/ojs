@@ -2636,18 +2636,16 @@ class Upgrade extends Installer {
 	}
 
 	/**
-	 * Migrate sr_SR locale to the new sr_RS@latin.
+	 * Migrate old locale to new locale.
+	 * @param oldLocale string
+	 * @param newLocale string
+	 * @param oldLocaleStringLength string
 	 * @return boolean
 	 */
-	function migrateSRLocale() {
-		$oldLocale = 'sr_SR';
-		$newLocale = 'sr_RS@latin';
-
-		$oldLocaleStringLength = 's:5';
-
+	function migrateLocale($oldLocale, $newLocale, $oldLocaleStringLength) {
 		$journalSettingsDao = DAORegistry::getDAO('JournalSettingsDAO');
 
-		// Check if the sr_SR is used, and if not do not run further
+		// Check if the old locale is used, and if not do not run further
 		$srExistResult = $journalSettingsDao->retrieve('SELECT COUNT(*) FROM site WHERE installed_locales LIKE ?', array('%'.$oldLocale.'%'));
 		$srExist = $srExistResult->fields[0] ? true : false;
 		$srExistResult->Close();
@@ -2762,6 +2760,36 @@ class Upgrade extends Installer {
 			$settingValueResult->MoveNext();
 		}
 		$settingValueResult->Close();
+
+		return true;
+	}
+
+	/**
+	 * Migrate sr_SR locale to the new sr_RS@latin.
+	 * @return boolean
+	 */
+	function migrateSRLocale() {
+		$oldLocale = 'sr_SR';
+		$newLocale = 'sr_RS@latin';
+
+		$oldLocaleStringLength = 's:5';
+
+		$this->migrateLocale($oldLocale, $newLocale, $oldLocaleStringLength);
+
+		return true;
+	}
+
+	/**
+	 * Migrate no_NO locale to the new nb_NO.
+	 * @return boolean
+	 */
+	function migrateNOLocale() {
+		$oldLocale = 'no_NO';
+		$newLocale = 'nb_NO';
+
+		$oldLocaleStringLength = 's:5';
+
+		$this->migrateLocale($oldLocale, $newLocale, $oldLocaleStringLength);
 
 		return true;
 	}
