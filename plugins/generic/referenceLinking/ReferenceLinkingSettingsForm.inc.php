@@ -92,51 +92,41 @@ class ReferenceLinkingSettingsForm extends Form {
 	 */
 	function fetch($request) {
 		$plugin = $this->_getPlugin();
+		$contextId = $request->getContext()->getId();
 		$dispatcher = $request->getDispatcher();
 		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign('pluginName', $plugin->getName());
-		// DOI plugin settings action link
-		$pubIdPlugins = PluginRegistry::loadCategory('pubIds', true);
-		if (isset($pubIdPlugins['doipubidplugin'])) {
-			import('lib.pkp.classes.linkAction.request.AjaxModal');
-			$doiPluginSettingsLinkAction = new LinkAction(
+		if (!$plugin->crossrefCredentials($contextId)) {
+			// Crossref export/registration plugin action link
+			import('lib.pkp.classes.linkAction.request.RedirectAction');
+			$crossrefSettingsLinkAction = new LinkAction(
+					'settings',
+					new RedirectAction($dispatcher->url(
+							$request, ROUTE_PAGE,
+							null, 'management', 'importexport',
+							array('plugin', 'CrossRefExportPlugin')
+							)),
+					__('plugins.generic.referenceLinking.settings.form.crossrefSettings'),
+					null
+					);
+			$templateMgr->assign('crossrefSettingsLinkAction', $crossrefSettingsLinkAction);
+		}
+		if (!$plugin->citationsEnabled($contextId)) {
+			// Settings > Workflow > Submission action link
+			import('lib.pkp.classes.linkAction.request.RedirectAction');
+			$submissionSettingsLinkAction = new LinkAction(
 				'settings',
-				new AjaxModal(
-					$dispatcher->url($request, ROUTE_COMPONENT, null, 'grid.settings.plugins.SettingsPluginGridHandler', 'manage', null, array('plugin' => 'doipubidplugin', 'category' => 'pubIds')),
-					__('plugins.importexport.common.settings.DOIPluginSettings')
-					),
-				__('plugins.importexport.common.settings.DOIPluginSettings'),
+				new RedirectAction($dispatcher->url(
+					$request, ROUTE_PAGE,
+					null, 'management', 'settings', 'publication',
+					array('uid' => uniqid()), // Force reload
+					'submissionStage' // Anchor for tab
+				)),
+				__('plugins.generic.referenceLinking.settings.form.submissionSettings'),
 				null
 			);
-			$templateMgr->assign('doiPluginSettingsLinkAction', $doiPluginSettingsLinkAction);
+			$templateMgr->assign('submissionSettingsLinkAction', $submissionSettingsLinkAction);
 		}
-		// Settings > Workflow > Submission action link
-		import('lib.pkp.classes.linkAction.request.RedirectAction');
-		$submissionSettingsLinkAction = new LinkAction(
-			'settings',
-			new RedirectAction($dispatcher->url(
-				$request, ROUTE_PAGE,
-				null, 'management', 'settings', 'publication',
-				array('uid' => uniqid()), // Force reload
-				'submissionStage' // Anchor for tab
-			)),
-			__('plugins.generic.referenceLinking.settings.form.submissionSettings'),
-			null
-		);
-		$templateMgr->assign('submissionSettingsLinkAction', $submissionSettingsLinkAction);
-		// Crossref export/registration plugin action link
-		import('lib.pkp.classes.linkAction.request.RedirectAction');
-		$crossrefSettingsLinkAction = new LinkAction(
-			'settings',
-			new RedirectAction($dispatcher->url(
-				$request, ROUTE_PAGE,
-				null, 'management', 'importexport',
-				array('plugin', 'CrossRefExportPlugin')
-			)),
-			__('plugins.generic.referenceLinking.settings.form.crossrefSettings'),
-			null
-		);
-		$templateMgr->assign('crossrefSettingsLinkAction', $crossrefSettingsLinkAction);
 		return parent::fetch($request);
 	}
 

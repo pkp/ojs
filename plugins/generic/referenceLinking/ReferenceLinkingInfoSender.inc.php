@@ -71,14 +71,15 @@ class ReferenceLinkingInfoSender extends ScheduledTask {
 	 * @return array
 	 */
 	function _getJournals() {
-		$plugin = $this->_plugin;
+		PluginRegistry::loadCategory('importexport');
+		$crossrefExportPlugin = PluginRegistry::getPlugin('importexport', 'CrossRefExportPlugin');
+
 		$contextDao = Application::getContextDAO(); /* @var $contextDao JournalDAO */
 		$journalFactory = $contextDao->getAll(true);
-
 		$journals = array();
 		while($journal = $journalFactory->next()) {
 			$journalId = $journal->getId();
-			if (!$plugin->getSetting($journalId, 'username') || !$plugin->getSetting($journalId, 'password') || !$plugin->getSetting($journalId, 'automaticRegistration')) continue;
+			if (!$journal->getSetting('citationsEnabledSubmission') || !$crossrefExportPlugin->getSetting($journalId, 'username') || !$crossrefExportPlugin->getSetting($journalId, 'password') || !$crossrefExportPlugin->getSetting($journalId, 'automaticRegistration')) continue;
 			$journals[] = $journal;
 		}
 		return $journals;

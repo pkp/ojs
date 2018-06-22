@@ -28,9 +28,7 @@ class ReferenceLinkingPlugin extends GenericPlugin {
 		$success = parent::register($category, $path, $mainContextId);
 		if ($success && $this->getEnabled($mainContextId)) {
 			if (!isset($mainContextId)) $mainContextId = $this->getCurrentContextId();
-			$username = $this->getSetting($mainContextId, 'username');
-			$password = $this->getSetting($mainContextId, 'password');
-			if ($username && $password) {
+			if ($this->crossrefCredentials($mainContextId) && $this->citationsEnabled($mainContextId)) {
 				// references tab i.e. citation form hooks
 				HookRegistry::register('citationsform::display', array($this, 'getAdditionalCitationActionNames'));
 				HookRegistry::register('citationsform::execute', array($this, 'citationsFormExecute'));
@@ -45,6 +43,29 @@ class ReferenceLinkingPlugin extends GenericPlugin {
 			}
 		}
 		return $success;
+	}
+
+	/**
+	 * Are Crossref username and password set in Crossref Export Plugin
+	 * @param $contextId integer
+	 * @return boolean
+	 */
+	function crossrefCredentials($contextId) {
+		// If crossref export plugin is set i.e. the crossref credentials exist we can assume that DOI plugin is set correctly
+		PluginRegistry::loadCategory('importexport');
+		$crossrefExportPlugin = PluginRegistry::getPlugin('importexport', 'CrossRefExportPlugin');
+		return $crossrefExportPlugin->getSetting($contextId, 'username') && $crossrefExportPlugin->getSetting($contextId, 'password');
+	}
+
+	/**
+	 * Are citations submission metadata enabled in this journal
+	 * @param $contextId integer
+	 * @return boolean
+	 */
+	function citationsEnabled($contextId) {
+		$contextDao = Application::getContextDAO();
+		$context = $contextDao->getById($contextId);
+		return $context->getSetting('citationsEnabledSubmission');
 	}
 
 	/**
@@ -382,15 +403,6 @@ class ReferenceLinkingPlugin extends GenericPlugin {
 	}
 
 	/**
-	 * Check whether we are in the test mode.
-	 * @param $contextId int
-	 * @return boolean
-	 */
-	function isTestMode($contextId) {
-		return ($this->getSetting($contextId, 'testMode') == 1);
-	}
-
-	/**
 	 * Get citations diagnostic ID setting name.
 	 * @return string
 	 */
@@ -449,11 +461,15 @@ class ReferenceLinkingPlugin extends GenericPlugin {
 			}
 		}
 		curl_setopt($curlCh, CURLOPT_RETURNTRANSFER, true);
-		$username = $this->getSetting($contextId, 'username');
-		$password = $this->getSetting($contextId, 'password');
+
+		PluginRegistry::loadCategory('importexport');
+		$crossrefExportPlugin = PluginRegistry::getPlugin('importexport', 'CrossRefExportPlugin');
+		$username = $crossrefExportPlugin->getSetting($contextId, 'username');
+		$password = $crossrefExportPlugin->getSetting($contextId, 'password');
 
 		// Use a different endpoint for testing and production.
-		$endpoint = ($this->isTestMode($contextId) ? CROSSREF_API_REFS_URL_DEV : CROSSREF_API_REFS_URL);
+		$isTestMode = $crossrefExportPlugin->getSetting($contextId, 'testMode') == 1;
+		$endpoint = ($isTestMode ? CROSSREF_API_REFS_URL_DEV : CROSSREF_API_REFS_URL);
 		curl_setopt($curlCh, CURLOPT_URL, $endpoint.$doi.'&usr='.$username.'&pwd='.$password);
 
 		$response = curl_exec($curlCh);
