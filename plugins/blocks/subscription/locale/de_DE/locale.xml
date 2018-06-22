@@ -13,7 +13,7 @@
 
 <locale name="de_DE" full_name="Deutsch (Deutschland)">
 	<message key="plugins.block.subscription.displayName">Abonnement-Block</message>
-	<message key="plugins.block.subscription.description">Dieses Plug-In stellt Informationen zum Abonnement in der Sidebar bereit.</message>
+	<message key="plugins.block.subscription.description">Dieses Plugin stellt Informationen zum Abonnement in der Sidebar bereit.</message>
 	<message key="plugins.block.subscription.blockTitle">Abonnement</message>
 	<message key="plugins.block.subscription.expires">Läuft ab</message>
 	<message key="plugins.block.subscription.providedBy">Zugriff bereitgestellt durch: {$institutionName}</message>

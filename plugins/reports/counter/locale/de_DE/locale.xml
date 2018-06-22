@@ -12,7 +12,7 @@
   -->
  
 <locale name="de_DE" full_name="Deutsch (Deutschland)">
-	<message key="plugins.reports.counter.description"><![CDATA[Das Counter-Plug-In ermöglicht Berichte über die Zeitschriftenaktivität entsprechend dem <a href="http://www.projectcounter.org">COUNTER-Standard</a>. Diese Berichte allein machen eine Zeitschrift nicht COUNTER-kompatibel. Um Counter-Kompatibilität zu erreichen, beachten Sie die Anforderungen auf der Website des COUNTER-Projekts.]]></message>
+	<message key="plugins.reports.counter.description"><![CDATA[Das Counter-Plugin ermöglicht Berichte über die Zeitschriftenaktivität entsprechend dem <a href="http://www.projectcounter.org">COUNTER-Standard</a>. Diese Berichte allein machen eine Zeitschrift nicht COUNTER-kompatibel. Um Counter-Kompatibilität zu erreichen, beachten Sie die Anforderungen auf der Website des COUNTER-Projekts.]]></message>
 	<message key="plugins.reports.counter">COUNTER-Bericht</message>
 	<message key="plugins.reports.counter.release">COUNTER-Release</message>
 	<message key="plugins.reports.counter.olderReports">Ältere Site-Berichte</message>
@@ -37,6 +37,6 @@
 	<message key="plugins.reports.counter.1a.ytdPdf">YTD-PDF</message>
 	<message key="plugins.reports.counter.1a.totalForAllJournals">Gesamtsumme für alle Zeitschriften</message>
 	<message key="plugins.reports.counter.1a.anonymous">anonym</message>
-	<message key="plugins.reports.counter.legacyStats">Die Links unten erzeugen veraltete Berichte auf Basis der alten Plug-In-Daten. Wenn Sie aktuelle COUNTER-reife Berichte mit der neuen OJS-COUNTER-Metrik erzeugen wollen, benutzen Sie die Links oben.</message>
+	<message key="plugins.reports.counter.legacyStats">Die Links unten erzeugen veraltete Berichte auf Basis der alten Plugin-Daten. Wenn Sie aktuelle COUNTER-reife Berichte mit der neuen OJS-COUNTER-Metrik erzeugen wollen, benutzen Sie die Links oben.</message>
 	<message key="plugins.reports.counter.allCustomers">Alle Kund/innen</message>
 </locale>
