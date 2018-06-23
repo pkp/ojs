@@ -174,11 +174,14 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 				$json = new JSONMessage(true, $templateMgr->fetch($this->getTemplateResource('results.tpl')));
 				return $json->getString();
 			case 'exportSubmissions':
-				$exportXml = $this->exportSubmissions(
-					(array) $request->getUserVar('selectedSubmissions'),
+				$exportXml = $this->exportContextForArticles((array) $request->getUserVar('selectedSubmissions'),
 					$request->getContext(),
-					$request->getUser()
-				);
+					$request->getUser());
+				//$exportXml = $this->exportSubmissions(
+				//  (array) $request->getUserVar('selectedSubmissions'),
+				//  $request->getContext(),
+				//  $request->getUser()
+				//);
 				import('lib.pkp.classes.file.FileManager');
 				$fileManager = new FileManager();
 				$exportFileName = $this->getExportFileName($this->getExportPath(), 'articles', $journal, '.xml');
@@ -267,6 +270,131 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 			$this->displayXMLValidationErrors($errors, $xml);
 		}
 		return $xml;
+	}
+
+	/**
+	 * Get the XML for a set of issues.
+	 * @param $issueIds array Array of issue IDs
+	 * @param $context Context
+	 * @param $user User
+	 * @return string XML contents representing the supplied issue IDs.
+	 */
+	function exportContextForIssues($issueIds, $context, $user) {
+		$xml = '';
+		$filterDao = DAORegistry::getDAO('FilterDAO');
+		$nativeExportFilters = $filterDao->getObjectsByGroup('context=>native-xml');
+		assert(count($nativeExportFilters) == 1); // Assert only a single serialization filter
+		$exportFilter = array_shift($nativeExportFilters);
+		$exportFilter->setDeployment(new NativeImportExportDeployment($context, $user));
+
+		libxml_use_internal_errors(true);
+		$contextXml = $exportFilter->execute($context, true);
+		$this->addIssuesNode($contextXml, $issueIds, $context, $user);
+
+		$xml = $contextXml->saveXml();
+		$errors = array_filter(libxml_get_errors(), function($a) {
+			return $a->level == LIBXML_ERR_ERROR || $a->level == LIBXML_ERR_FATAL;
+		});
+		if (!empty($errors)) {
+			$this->displayXMLValidationErrors($errors, $xml);
+		}
+		return $xml;
+	}
+
+	/**
+	 * Get the XML for a set of issues.
+	 * @param $issueIds array Array of issue IDs
+	 * @param $context Context
+	 * @param $user User
+	 * @return string XML contents representing the supplied issue IDs.
+	 */
+	function addIssuesNode($doc, $issueIds, $context, $user) {
+		$issueDao = DAORegistry::getDAO('IssueDAO');
+
+		$filterDao = DAORegistry::getDAO('FilterDAO');
+		$nativeExportFilters = $filterDao->getObjectsByGroup('issue=>native-xml');
+		assert(count($nativeExportFilters) == 1); // Assert only a single serialization filter
+		$exportFilter = array_shift($nativeExportFilters);
+		$exportFilter->setDeployment(new NativeImportExportDeployment($context, $user));
+		$issues = array();
+		foreach ($issueIds as $issueId) {
+			$issue = $issueDao->getById($issueId, $context->getId());
+			if ($issue) $issues[] = $issue;
+		}
+
+		$issueXml = $exportFilter->execute($issues, true);
+		if ($issueXml->documentElement instanceof DOMElement) {
+			$clone = $doc->importNode($issueXml->documentElement, true);
+			$issueXml->appendChild($clone);
+		}
+
+		return $issueXml;
+	}
+
+	/**
+	 * Get the XML for a set of issues.
+	 * @param $issueIds array Array of issue IDs
+	 * @param $context Context
+	 * @param $user User
+	 * @return string XML contents representing the supplied issue IDs.
+	 */
+	function exportContextForArticles($issueIds, $context, $user) {
+		$doc = new DOMDocument('1.0');
+		$doc->preserveWhiteSpace = false;
+		$doc->formatOutput = true;
+
+		$xml = '';
+		$filterDao = DAORegistry::getDAO('FilterDAO');
+		$nativeExportFilters = $filterDao->getObjectsByGroup('context=>native-xml');
+		assert(count($nativeExportFilters) == 1); // Assert only a single serialization filter
+		$exportFilter = array_shift($nativeExportFilters);
+		$exportFilter->setDeployment(new NativeImportExportDeployment($context, $user, "articles"));
+
+		libxml_use_internal_errors(true);
+		$contexts = array();
+		$contexts[] = $context;
+
+		$contextXml = $exportFilter->execute($contexts);
+		$this->addSubmissionsNode($contextXml, $issueIds, $context, $user);
+
+		$xml = $contextXml->saveXml();
+		$errors = array_filter(libxml_get_errors(), function($a) {
+			return $a->level == LIBXML_ERR_ERROR || $a->level == LIBXML_ERR_FATAL;
+		});
+		if (!empty($errors)) {
+			$this->displayXMLValidationErrors($errors, $xml);
+		}
+		return $xml;
+	}
+
+	/**
+	 * Get the XML for a set of issues.
+	 * @param $submissionIds array Array of issue IDs
+	 * @param $context Context
+	 * @param $user User
+	 * @return string XML contents representing the supplied issue IDs.
+	 */
+	function addSubmissionsNode($contextNode, $submissionIds, $context, $user) {
+		$submissionDao = Application::getSubmissionDAO();
+
+		$filterDao = DAORegistry::getDAO('FilterDAO');
+		$nativeExportFilters = $filterDao->getObjectsByGroup('article=>native-xml');
+		assert(count($nativeExportFilters) == 1); // Assert only a single serialization filter
+		$exportFilter = array_shift($nativeExportFilters);
+		$exportFilter->setDeployment(new NativeImportExportDeployment($context, $user));
+		$submissions = array();
+		foreach ($submissionIds as $submissionId) {
+			$submission = $submissionDao->getById($submissionId, $context->getId());
+			if ($submission) $submissions[] = $submission;
+		}
+
+		$submissionXml = $exportFilter->execute($submissions, true);
+		if ($submissionXml->documentElement instanceof DOMElement) {
+			$clone = $contextNode->importNode($submissionXml->documentElement, true);
+			$contextNode->appendChild($clone);
+		}
+
+		return $submissionXml;
 	}
 
 	/**

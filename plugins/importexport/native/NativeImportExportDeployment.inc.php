@@ -20,12 +20,15 @@ class NativeImportExportDeployment extends PKPNativeImportExportDeployment {
 
 	var $_issue;
 
+	var $_state;
+
 	/**
 	 * Constructor
 	 * @param $context Context
 	 * @param $user User
 	 */
-	function __construct($context, $user) {
+	function __construct($context, $user, $state = "") {
+		$_state = $state;
 		parent::__construct($context, $user);
 	}
 
