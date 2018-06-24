@@ -423,6 +423,73 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 		return 'plugins.importexport.common.register.success';
 	}
 
+	/**
+	 * @copydoc PKPImportExportPlugin::executeCLI()
+	 */
+	function executeCLICommand($scriptName, $command, $context, $outputFile, $objects, $filter, $objectsFileNamePart) {
+		switch ($command) {
+			case 'export':
+				PluginRegistry::loadCategory('generic', true, $context->getId());
+				$exportXml = $this->exportXML($objects, $filter, $context);
+				if ($outputFile) file_put_contents($outputFile, $exportXml);
+				break;
+			case 'register':
+				PluginRegistry::loadCategory('generic', true, $context->getId());
+				import('lib.pkp.classes.file.FileManager');
+				$fileManager = new FileManager();
+				$resultErrors = array();
+				// Errors occured will be accessible via the status link
+				// thus do not display all errors notifications (for every article),
+				// just one general.
+				// Warnings occured when the registration was successfull will however be
+				// displayed for each article.
+				$errorsOccured = false;
+				// The new Crossref deposit API expects one request per object.
+				// On contrary the export supports bulk/batch object export, thus
+				// also the filter expects an array of objects.
+				// Thus the foreach loop, but every object will be in an one item array for
+				// the export and filter to work.
+				foreach ($objects as $object) {
+					// Get the XML
+					$exportXml = $this->exportXML(array($object), $filter, $context);
+					// Write the XML to a file.
+					// export file name example: crossref-20160723-160036-articles-1-1.xml
+					$objectsFileNamePart = $objectsFileNamePart . '-' . $object->getId();
+					$exportFileName = $this->getExportFileName($this->getExportPath(), $objectsFileNamePart, $context, '.xml');
+					$fileManager->writeFile($exportFileName, $exportXml);
+					// Deposit the XML file.
+					$result = $this->depositXML($object, $context, $exportFileName);
+					if (!$result) {
+						$errorsOccured = true;
+					}
+					if (is_array($result)) {
+						$resultErrors[] = $result;
+					}
+					// Remove all temporary files.
+					$fileManager->deleteFile($exportFileName);
+				}
+				// display deposit result status messages
+				if (empty($resultErrors)) {
+					if ($errorsOccured) {
+						echo __('plugins.importexport.crossref.register.error.mdsError') . "\n";
+					} else {
+						echo __('plugins.importexport.common.register.success') . "\n";
+					}
+				} else {
+					echo __('plugins.importexport.common.cliError') . "\n";
+					foreach($resultErrors as $errors) {
+						foreach ($errors as $error) {
+							assert(is_array($error) && count($error) >= 1);
+							$errorMessage = __($error[0], array('param' => (isset($error[1]) ? $error[1] : null)));
+							echo "*** $errorMessage\n";
+						}
+					}
+					echo "\n";
+					$this->usage($scriptName);
+				}
+				break;
+		}
+	}
 }
 
 
