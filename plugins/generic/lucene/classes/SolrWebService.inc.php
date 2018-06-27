@@ -997,7 +997,7 @@ class SolrWebService extends XmlWebService {
 		if ($status !== WEBSERVICE_RESPONSE_OK) {
 			// We show a generic error message to the end user
 			// to avoid information leakage and log the exact error.
-			$application = PKPApplication::getApplication();
+			$application = Application::getApplication();
 			error_log($application->getName() . ' - Lucene plugin:' . PHP_EOL . "The Lucene web service returned a status code $status and the message" . PHP_EOL . $response->saveXML());
 			$this->_serviceMessage = __('plugins.generic.lucene.message.webServiceError');
 			return $nullValue;
@@ -1366,7 +1366,7 @@ class SolrWebService extends XmlWebService {
 		}
 
 		// We need the request to retrieve locales and build URLs.
-		$request = PKPApplication::getRequest();
+		$request = Application::getRequest();
 
 		// Get all supported locales.
 		$site = $request->getSite();

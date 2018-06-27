@@ -72,7 +72,7 @@ class PubIdExportRepresentationsListGridCellProvider extends DataObjectGridCellP
 				$issueDao = DAORegistry::getDAO('IssueDAO');
 				$issue = $issueDao->getById($issueId, $contextId);
 				// Link to the issue edit modal
-				$application = PKPApplication::getApplication();
+				$application = Application::getApplication();
 				$dispatcher = $application->getDispatcher();
 				import('lib.pkp.classes.linkAction.request.AjaxModal');
 				return array(

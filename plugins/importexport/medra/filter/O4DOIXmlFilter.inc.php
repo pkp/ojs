@@ -138,7 +138,7 @@ class O4DOIXmlFilter extends NativeExportFilter {
 		$headNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'ToCompany',  'mEDRA'));
 		$headNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'SentDate',  date('YmdHi')));
 		// Message note
-		$app = PKPApplication::getApplication();
+		$app = Application::getApplication();
 		$name = $app->getName();
 		$version = $app->getCurrentVersion();
 		$versionString = $version->getVersionString();
