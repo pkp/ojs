@@ -47,6 +47,9 @@ class Handler extends PKPHandler {
 		} else {
 			// Return the requested journal.
 			$journal = $router->getContext($request);
+
+			// If the specified journal does not exist, respond with a 404.
+			if (!$journal) $request->getDispatcher()->handle404();
 		}
 		if (is_a($journal, 'Journal')) {
 			return $journal;
