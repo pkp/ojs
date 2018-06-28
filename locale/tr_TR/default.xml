@@ -117,6 +117,4 @@ Yeni dosyada <strong>[silinmiş sözcük]</strong> değiştirilmiş bölümler k
 	<message key="default.journalSettings.purchaseArticleFee">Makale Satın Al</message>
 	<message key="default.journalSettings.membershipFee">Dernek Üyeliği</message>
 	<message key="default.journalSettings.purchaseIssueFee">Sayı Satın Al</message>
-	<message key="default.journalSettings.emailHeader">Aşağıdaki mesaj {$journalName} adına teslim edilecektir.
-________________________________________________________________________</message>
 </locale>

@@ -141,8 +141,6 @@ Paragraf koji počinje s "Posljednja tema..." nije uvučen.</pre>
 	<li>Pretvorite tu frazu u hipervezu tako što je osvjetlite i primjenite Wordov alat Insert Hyperlink i URL adresu pripremljenu pod #2.</li>
 	</ol>]]></message>
 	<message key="section.default.title">Članci</message>
-	<message key="default.journalSettings.emailHeader">SLijedeća poruka se šalje u ime {$journalName}.
-________________________________________________________________________</message>
 	<message key="section.default.abbrev">ART</message>
 	<message key="default.journalSettings.publicationFee">Objavljivanje članka</message>
 	<message key="default.journalSettings.purchaseArticleFee">Kupi članak</message>

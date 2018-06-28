@@ -154,6 +154,4 @@ De paragraaf die begint met  "Dit laatste onderwerp..." is niet ingesprongen.</p
 	<message key="default.journalSettings.purchaseArticleFee">Koop artikel</message>
 	<message key="default.journalSettings.membershipFee">Lidmaatschap van de organisatie</message>
 	<message key="default.journalSettings.purchaseIssueFee">Koop issue</message>
-	<message key="default.journalSettings.emailHeader">Dit bericht wordt u toegezonden namens {$journalName}.
-________________________________________________________________________</message>
 </locale>

@@ -50,8 +50,6 @@ ________________________________________________________________________<br/>
 	<message key="default.journalSettings.purchaseArticleFee">Compra d'un article</message>
 	<message key="default.journalSettings.purchaseIssueFee">Compra d'un número</message>
 	<message key="default.journalSettings.membershipFee">Afiliació a l’associació</message>
-	<message key="default.journalSettings.emailHeader">El següent missatge s'entrega en nom de {$journalName}.
-________________________________________________________________________</message>
 	<message key="default.genres.article">Text de l'article</message>
 	<message key="default.journalSettings.clockssLicense"><![CDATA[Aquesta revista utilitza el sistema CLOCKSS per crear un sistema d'arxius distribuït entre les biblioteques participants i permet que aquestes biblioteques creïn arxius permanents de la revista amb finalitats de preservació i restauració. <a href="http://clockss.org/">Més...</a>]]></message>
 	<message key="default.groups.name.manager">Gestor/a de la revista</message>

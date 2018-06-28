@@ -131,6 +131,4 @@
 	<message key="default.journalSettings.purchaseArticleFee">购买文章</message>
 	<message key="default.journalSettings.membershipFee">协会会员</message>
 	<message key="default.journalSettings.purchaseIssueFee">购买期次</message>
-	<message key="default.journalSettings.emailHeader">下面的信息以期刊{$journalName}的名义发出。
-________________________________________________________________________</message>
 </locale>
