@@ -126,13 +126,13 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin {
 					$this->_tarFiles($this->getExportPath(), $finalExportFileName, $exportedFiles);
 					// remove files
 					foreach ($exportedFiles as $exportedFile) {
-						$fileManager->deleteFile($exportedFile);
+						$fileManager->deleteFileByPath($exportedFile);
 					}
 				} else {
 					$finalExportFileName = array_shift($exportedFiles);
 				}
-				$fileManager->downloadFile($finalExportFileName);
-				$fileManager->deleteFile($finalExportFileName);
+				$fileManager->downloadFileByPath($finalExportFileName);
+				$fileManager->deleteFileByPath($finalExportFileName);
 			} else {
 				if (is_array($result)) {
 					foreach($result as $error) {
@@ -164,7 +164,7 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin {
 					$resultErrors[] = $result;
 				}
 				// Remove all temporary files.
-				$fileManager->deleteFile($exportFileName);
+				$fileManager->deleteFileByPath($exportFileName);
 			}
 			// send notifications
 			if (empty($resultErrors)) {
@@ -304,9 +304,9 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin {
 					}
 					$fileManager->copyFile($finalExportFileName, $outputFile);
 					foreach ($exportedFiles as $exportedFile) {
-						$fileManager->deleteFile($exportedFile);
+						$fileManager->deleteFileByPath($exportedFile);
 					}
-					$fileManager->deleteFile($finalExportFileName);
+					$fileManager->deleteFileByPath($finalExportFileName);
 				} else {
 					echo __('plugins.importexport.common.cliError') . "\n";
 					echo __('manager.plugins.tarCommandNotFound') . "\n\n";
@@ -329,7 +329,7 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin {
 						$resultErrors[] = $result;
 					}
 					// Remove all temporary files.
-					$fileManager->deleteFile($exportFileName);
+					$fileManager->deleteFileByPath($exportFileName);
 				}
 				if (empty($resultErrors)) {
 					echo __('plugins.importexport.common.register.success') . "\n";
