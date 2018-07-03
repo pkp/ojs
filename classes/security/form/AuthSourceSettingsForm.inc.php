@@ -36,9 +36,9 @@ class AuthSourceSettingsForm extends Form {
 	}
 
 	/**
-	 * Display the form.
+	 * @copydoc Form::display
 	 */
-	function display() {
+	function display($request = null, $template = null) {
 		$templateMgr = TemplateManager::getManager();
 		$templateMgr->assign('authId', $this->authId);
 
@@ -47,7 +47,7 @@ class AuthSourceSettingsForm extends Form {
 			$templateMgr->assign('pluginTemplate', $this->plugin->getSettingsTemplate());
 		}
 
-		parent::display();
+		parent::display($request, $template);
 	}
 
 	/**

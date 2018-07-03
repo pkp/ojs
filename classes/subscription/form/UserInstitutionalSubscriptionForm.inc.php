@@ -93,15 +93,18 @@ class UserInstitutionalSubscriptionForm extends Form {
 	}
 
 	/**
-	 * Display the form.
+	 * @copydoc Form::display
 	 */
-	function display() {
+	function display($request = null, $template = null) {
+		if (is_null($request)) {
+			$request = $this->request;
+		}
 		$templateMgr = TemplateManager::getManager($this->request);
 		$templateMgr->assign(array(
 			'subscriptionId' => $this->subscription?$this->subscription->getId():null,
 			'subscriptionTypes' => $this->subscriptionTypes,
 		));
-		parent::display($this->request);
+		parent::display($request, $template);
 	}
 
 	/**
