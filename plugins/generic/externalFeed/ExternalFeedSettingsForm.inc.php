@@ -58,9 +58,9 @@ class ExternalFeedSettingsForm extends Form {
 	}
 
 	/**
-	 * Display the form.
+	 * @copydoc Form::display
 	 */
-	function display() {
+	function display($request = null, $template = null) {
 		$journalId = $this->journalId;
 		$plugin = $this->plugin;
 
@@ -69,7 +69,7 @@ class ExternalFeedSettingsForm extends Form {
 		$templateMgr->assign('journalStyleSheet', $plugin->getSetting($journalId, 'externalFeedStyleSheet'));
 		$templateMgr->assign('defaultStyleSheetUrl', Request::getBaseUrl() . '/' . $plugin->getDefaultStyleSheetFile());
 
-		parent::display();
+		parent::display($request, $template);
 	}
 
 	/**

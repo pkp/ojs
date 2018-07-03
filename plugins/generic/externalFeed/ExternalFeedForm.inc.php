@@ -59,9 +59,9 @@ class ExternalFeedForm extends Form {
 	}
 
 	/**
-	 * Display the form.
+	 * @copydoc Form::display
 	 */
-	function display() {
+	function display($request = null, $template = null) {
 		$plugin = $this->plugin;
 		$request = $plugin->getRequest();
 		$templateMgr = TemplateManager::getManager($request);
@@ -69,7 +69,7 @@ class ExternalFeedForm extends Form {
 
 		$plugin->import('ExternalFeed');
 
-		parent::display();
+		parent::display($request, $template);
 	}
 
 	/**
