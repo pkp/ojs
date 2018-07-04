@@ -194,6 +194,10 @@ class Application extends PKPApplication {
 					}
 					break;
 				case 'postgres':
+				case 'postgres64':
+				case 'postgres7':
+				case 'postgres8':
+				case 'postgres9':
 					$checkResult = $pluginSettingsDao->retrieve('SELECT column_name FROM information_schema.columns WHERE table_name = ? AND column_name = ?', array('plugin_settings', 'context_id'));
 					if ($checkResult->NumRows() == 0) {
 						return 'journal_id';
