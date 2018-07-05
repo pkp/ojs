@@ -275,7 +275,7 @@ class ArticleHandler extends Handler {
 			if (!HookRegistry::call('ArticleHandler::download', array($this->article, &$this->galley, &$fileId))) {
 				import('lib.pkp.classes.file.SubmissionFileManager');
 				$submissionFileManager = new SubmissionFileManager($this->article->getContextId(), $this->article->getId());
-				$submissionFileManager->downloadFileById($fileId, null, $request->getUserVar('inline')?true:false);
+				$submissionFileManager->downloadById($fileId, null, $request->getUserVar('inline')?true:false);
 			}
 		} else {
 			header('HTTP/1.0 403 Forbidden');

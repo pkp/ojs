@@ -232,7 +232,7 @@ class IssueGalleyGridHandler extends GridHandler {
 		$issueGalley = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE_GALLEY);
 		import('classes.file.IssueFileManager');
 		$issueFileManager = new IssueFileManager($issue->getId());
-		return $issueFileManager->downloadFileById($issueGalley->getFileId());
+		return $issueFileManager->downloadById($issueGalley->getFileId());
 	}
 
 	/**

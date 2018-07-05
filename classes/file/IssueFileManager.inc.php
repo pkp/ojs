@@ -105,7 +105,7 @@ class IssueFileManager extends FileManager {
 	 * @param $inline print file as inline instead of attachment, optional
 	 * @return boolean
 	 */
-	function downloadFileById($fileId, $inline = false) {
+	function downloadById($fileId, $inline = false) {
 		$issueFileDao = DAORegistry::getDAO('IssueFileDAO');
 		$issueFile = $issueFileDao->getById($fileId);
 
@@ -113,7 +113,7 @@ class IssueFileManager extends FileManager {
 			$fileType = $issueFile->getFileType();
 			$filePath = $this->getFilesDir() . $this->contentTypeToPath($issueFile->getContentType()) . '/' . $issueFile->getServerFileName();
 
-			return parent::downloadFileByPath($filePath, $fileType, $inline);
+			return parent::downloadByPath($filePath, $fileType, $inline);
 
 		} else {
 			return false;

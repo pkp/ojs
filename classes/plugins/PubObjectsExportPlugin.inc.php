@@ -175,7 +175,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 			$fileManager = new FileManager();
 			$exportFileName = $this->getExportFileName($this->getExportPath(), $objectsFileNamePart, $context, '.xml');
 			$fileManager->writeFile($exportFileName, $exportXml);
-			$fileManager->downloadFileByPath($exportFileName);
+			$fileManager->downloadByPath($exportFileName);
 			$fileManager->deleteByPath($exportFileName);
 		} elseif ($request->getUserVar(EXPORT_ACTION_DEPOSIT)) {
 			assert($filter != null);

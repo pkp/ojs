@@ -131,7 +131,7 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin {
 				} else {
 					$finalExportFileName = array_shift($exportedFiles);
 				}
-				$fileManager->downloadFileByPath($finalExportFileName);
+				$fileManager->downloadByPath($finalExportFileName);
 				$fileManager->deleteByPath($finalExportFileName);
 			} else {
 				if (is_array($result)) {

@@ -41,8 +41,8 @@ class JournalFileManager extends BaseSubmissionFileManager {
 		return parent::uploadFile($fileName, $this->filesDir . $destFileName);
 	}
 
-	function downloadFileByPath($filePath, $fileType, $inline = false) {
-		return parent::downloadFileByPath($this->filesDir . $filePath, $fileType, $inline);
+	function downloadByPath($filePath, $fileType, $inline = false) {
+		return parent::downloadByPath($this->filesDir . $filePath, $fileType, $inline);
 	}
 
 	function deleteByPath($fileName) {
