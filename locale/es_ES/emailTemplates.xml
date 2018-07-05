@@ -81,7 +81,7 @@ Si tiene cualquier pregunta no dude en contactar con nosotros/as.<br />
 <br />
 	Gracias por mantener el interés en nuestro trabajo,<br />
 	{$editorialContactSignature}]]></body>
-		<description>Este correo se envía a los lectores registrados que han pedido recibir notificaciones por email cuando un Número se cambia a Acceso Libre.</description>
+		<description>Este correo se envía a los lectores registrados que han pedido recibir notificaciones por correo electrónico cuando un Número se cambia a Acceso Libre.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_BEFORE_EXPIRY">
 		<subject>Notificación de Expiración de Subscripción</subject>
@@ -92,12 +92,12 @@ Si tiene cualquier pregunta no dude en contactar con nosotros/as.<br />
 	{$subscriptionType}<br />
 	Fecha de Expiro: {$expiryDate}<br />
 <br />
-	Para asegurarse de que continúe a tener acceso a esta revista, por favor vaya a la pagina web de la revista y renueve su subscripción.  Puede usted entrar al sistema con su nombre de usuario, &quot;{$username}&quot;.<br />
+	Para asegurarse de que continúe a tener acceso a esta revista, por favor vaya a la página web de la revista y renueve su subscripción.  Usted puede entrar al sistema con su nombre de usuario, &quot;{$username}&quot;.<br />
 <br />
 	Si tiene alguna pregunta, por favor no tema en contactarme.<br />
 <br />
 	{$subscriptionContactSignature}]]></body>
-		<description>Este correo notifica a un subscripto que su subscripción va a expirar pronto.  Les provee con el URL de la revista e instrucciones para accederla.</description>
+		<description>Este correo notifica a un subscriptor que su subscripción va a expirar pronto.  Les provee el URL de la revista e instrucciones para accederla.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_AFTER_EXPIRY">
 		<subject>Subscripción Expirada</subject>
@@ -113,14 +113,14 @@ Si tiene cualquier pregunta no dude en contactar con nosotros/as.<br />
 	If you have any questions, please feel free to contact me.<br />
 <br />
 	{$subscriptionContactSignature}]]></body>
-		<description>Este correo notifica a un subscripto que su subscripción ha expirado.  Les provee con el URL de la revista e instrucciones para accederla.</description>
+		<description>Este correo notifica a un subscripto que su subscripción ha expirado.  Les provee el URL de la revista e instrucciones para accederla.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_AFTER_EXPIRY_LAST">
 		<subject>Subscripción Expirada - Último Recuerdo</subject>
 		<body><![CDATA[{$subscriberName}:<br />
 <br />
 	Su subscripción a {$contextName} ha expirado.<br />
-	Por favor note que este es el ultimo correo que recibirá para recordarle.<br />
+	Por favor note que este es el último correo que recibirá para recordarle.<br />
 <br />
 	{$subscriptionType}<br />
 	Fecha de Expiro: {$expiryDate}<br />
@@ -176,7 +176,7 @@ Nombre de usuaria/o: {$authorUsername}<br />
 Si tiene cualquier pregunta no dude en contactar con nosotros/as. Gracias por tener en cuenta esta revista para difundir su trabajo.<br />
 <br />
 {$editorialContactSignature}]]></body>
-		<description>Este correo, cuando está activado, se envía automáticamente a un/a autor/a when cuando completa el proceso de envío de un manuscrito a la revista. Proporciona información para hacer el seguimiento del envío a través del proceso y agradece la contribución.</description>
+		<description>Este correo, cuando está activado, se envía automáticamente a un/a autor/a cuando completa el proceso de envío de un manuscrito a la revista. Proporciona información para hacer el seguimiento del envío a través del proceso y agradece la contribución.</description>
 	</email_text>
 	<email_text key="SUBMISSION_ACK">
 		<subject>Acuse de recibo del envío</subject>
@@ -215,7 +215,7 @@ Por favor, identifíquese en la revista antes de {$responseDueDate} para decirno
 <br />
 La revisión propiamente dicha debe estar lista para el {$reviewDueDate}.<br />
 <br />
-Si ha perdido su nombre de usuaria/o y contraseña puede pinchar en el siguiente enlace para cambiar su contraseña (le llegará por correo-e junto con su nombre de usuaria/o). {$passwordResetUrl}<br />
+Si ha perdido su nombre de usuaria/o y contraseña, puede pinchar en el siguiente enlace para cambiar su contraseña (le llegará por correo-e junto con su nombre de usuaria/o). {$passwordResetUrl}<br />
 <br />
 URL del envío: {$submissionReviewUrl}<br />
 <br />
