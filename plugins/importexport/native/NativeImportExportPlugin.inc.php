@@ -187,7 +187,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 				$exportFileName = $this->getExportFileName($this->getExportPath(), 'articles', $journal, '.xml');
 				$fileManager->writeFile($exportFileName, $exportXml);
 				$fileManager->downloadFileByPath($exportFileName);
-				$fileManager->deleteFileByPath($exportFileName);
+				$fileManager->deleteByPath($exportFileName);
 				break;
 			case 'exportIssues':
 				$exportXml = $this->exportIssues(
@@ -200,7 +200,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 				$exportFileName = $this->getExportFileName($this->getExportPath(), 'issues', $journal, '.xml');
 				$fileManager->writeFile($exportFileName, $exportXml);
 				$fileManager->downloadFileByPath($exportFileName);
-				$fileManager->deleteFileByPath($exportFileName);
+				$fileManager->deleteByPath($exportFileName);
 				break;
 			default:
 				$dispatcher = $request->getDispatcher();

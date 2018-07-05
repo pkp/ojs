@@ -164,7 +164,7 @@ class CrossrefInfoSender extends ScheduledTask {
 			$this->_addLogEntry($result);
 		}
 		// Remove all temporary files.
-		$fileManager->deleteFileByPath($exportFileName);
+		$fileManager->deleteByPath($exportFileName);
 	}
 
 	/**

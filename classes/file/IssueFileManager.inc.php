@@ -80,11 +80,11 @@ class IssueFileManager extends FileManager {
 	 * @param $fileId int
 	 * @return boolean if successful
 	 */
-	function deleteFileById($fileId) {
+	function deleteById($fileId) {
 		$issueFileDao = DAORegistry::getDAO('IssueFileDAO');
 		$issueFile = $issueFileDao->getById($fileId);
 
-		if (parent::deleteFileByPath($this->getFilesDir() . $this->contentTypeToPath($issueFile->getContentType()) . '/' . $issueFile->getServerFileName())) {
+		if (parent::deleteByPath($this->getFilesDir() . $this->contentTypeToPath($issueFile->getContentType()) . '/' . $issueFile->getServerFileName())) {
 			$issueFileDao->deleteById($fileId);
 			return true;
 		}

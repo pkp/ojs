@@ -176,7 +176,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 			$exportFileName = $this->getExportFileName($this->getExportPath(), $objectsFileNamePart, $context, '.xml');
 			$fileManager->writeFile($exportFileName, $exportXml);
 			$fileManager->downloadFileByPath($exportFileName);
-			$fileManager->deleteFileByPath($exportFileName);
+			$fileManager->deleteByPath($exportFileName);
 		} elseif ($request->getUserVar(EXPORT_ACTION_DEPOSIT)) {
 			assert($filter != null);
 			// Get the XML
@@ -210,7 +210,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 				}
 			}
 			// Remove all temporary files.
-			$fileManager->deleteFileByPath($exportFileName);
+			$fileManager->deleteByPath($exportFileName);
 			// redirect back to the right tab
 			$request->redirect(null, null, null, $path, null, $tab);
 		} elseif ($request->getUserVar(EXPORT_ACTION_MARKREGISTERED)) {
@@ -571,7 +571,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 				}
 				$this->usage($scriptName);
 			}
-			$fileManager->deleteFileByPath($exportFileName);
+			$fileManager->deleteByPath($exportFileName);
 		}
 	}
 
