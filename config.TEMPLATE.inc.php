@@ -196,10 +196,6 @@ client_charset = utf-8
 ; (although the actual name may differ slightly depending on the server)
 connection_charset = Off
 
-; Database storage character set
-; Must be set to "Off" if not supported by the database server
-database_charset = Off
-
 
 ;;;;;;;;;;;;;;;;;
 ; File Settings ;
