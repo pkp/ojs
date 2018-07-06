@@ -235,7 +235,7 @@ class IssueGridHandler extends GridHandler {
 		$issueForm = new IssueForm($issue);
 		$issueForm->readInputData();
 
-		if ($issueForm->validate($request)) {
+		if ($issueForm->validate()) {
 			$issueForm->execute($request);
 			$notificationManager = new NotificationManager();
 			$notificationManager->createTrivialNotification($request->getUser()->getId());
@@ -273,7 +273,7 @@ class IssueGridHandler extends GridHandler {
 		$issueAccessForm = new IssueAccessForm($issue);
 		$issueAccessForm->readInputData();
 
-		if ($issueAccessForm->validate($request)) {
+		if ($issueAccessForm->validate()) {
 			$issueAccessForm->execute($request);
 			$notificationManager = new NotificationManager();
 			$notificationManager->createTrivialNotification($request->getUser()->getId());
@@ -351,7 +351,7 @@ class IssueGridHandler extends GridHandler {
 		import('controllers.tab.pubIds.form.PublicIdentifiersForm');
 		$form = new PublicIdentifiersForm($issue);
 		$form->readInputData();
-		if ($form->validate($request)) {
+		if ($form->validate()) {
 			$form->execute($request);
 			return DAO::getDataChangedEvent($issue->getId());
 		} else {
