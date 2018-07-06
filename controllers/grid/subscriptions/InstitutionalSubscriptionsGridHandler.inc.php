@@ -128,7 +128,7 @@ class InstitutionalSubscriptionsGridHandler extends SubscriptionsGridHandler {
 	function editSubscription($args, $request) {
 		// Form handling.
 		$subscriptionForm = new InstitutionalSubscriptionForm($request, $request->getUserVar('rowId'));
-		$subscriptionForm->initData($args, $request);
+		$subscriptionForm->initData();
 
 		return new JSONMessage(true, $subscriptionForm->fetch($request));
 	}

@@ -160,7 +160,7 @@ class PaymentsHandler extends Handler {
 		if ($paymentTypesForm->isLocaleResubmit()) {
 			$paymentTypesForm->readInputData();
 		} else {
-			$paymentTypesForm->initData($request->getContext());
+			$paymentTypesForm->initData();
 		}
 		return new JSONMessage(true, $paymentTypesForm->fetch($request));
 	}

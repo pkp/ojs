@@ -67,7 +67,7 @@ class WebsiteSettingsTabHandler extends ManagerSettingsTabHandler {
 	 */
 	function showFileUploadForm($args, $request) {
 		$fileUploadForm = $this->_getFileUploadForm($request);
-		$fileUploadForm->initData($request);
+		$fileUploadForm->initData();
 
 		return new JSONMessage(true, $fileUploadForm->fetch($request));
 	}
@@ -124,7 +124,7 @@ class WebsiteSettingsTabHandler extends ManagerSettingsTabHandler {
 		$settingName = $request->getUserVar('fileSettingName');
 
 		$tabForm = $this->getTabForm();
-		$tabForm->initData($request);
+		$tabForm->initData();
 
 		if ($request->checkCSRF() && $tabForm->deleteFile($settingName, $request)) {
 			return DAO::getDataChangedEvent($settingName);
@@ -146,7 +146,7 @@ class WebsiteSettingsTabHandler extends ManagerSettingsTabHandler {
 
 		// Try to fetch the file.
 		$tabForm = $this->getTabForm();
-		$tabForm->initData($request);
+		$tabForm->initData();
 
 		$renderedElement = $tabForm->renderFileView($settingName, $request);
 
