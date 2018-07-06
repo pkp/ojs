@@ -389,6 +389,9 @@ repository_id = ojs.pkp.sfu.ca
 ; Maximum number of records per request to serve via OAI
 oai_max_records = 100
 
+; Maximum number of identifiers per request to serve via OAI
+oai_max_identifiers = 500
+
 ;;;;;;;;;;;;;;;;;;;;;;
 ; Interface Settings ;
 ;;;;;;;;;;;;;;;;;;;;;;
