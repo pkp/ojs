@@ -59,9 +59,10 @@ class MastheadForm extends ContextSettingsForm {
 	/**
 	 * @copydoc ContextSettingsForm::initData()
 	 */
-	function initData($request) {
-		parent::initData($request);
+	function initData() {
+		parent::initData();
 
+		$request = Application::getRequest();
 		$journal = $request->getContext();
 		if ($this->getData('acronym') == null) {
 			$acronym = array();
