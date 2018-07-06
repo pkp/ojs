@@ -57,7 +57,7 @@ class ManageFileApiHandler extends PKPManageFileApiHandler {
 		import('controllers.tab.pubIds.form.PublicIdentifiersForm');
 		$form = new PublicIdentifiersForm($submissionFile, $stageId);
 		$form->readInputData();
-		if ($form->validate($request)) {
+		if ($form->validate()) {
 			$form->execute($request);
 			return DAO::getDataChangedEvent($submissionFile->getId());
 		} else {

@@ -249,7 +249,7 @@ class IssueGalleyGridHandler extends GridHandler {
 		$issueGalleyForm = new IssueGalleyForm($request, $issue, $issueGalley);
 		$issueGalleyForm->readInputData();
 
-		if ($issueGalleyForm->validate($request)) {
+		if ($issueGalleyForm->validate()) {
 			$issueId = $issueGalleyForm->execute($request);
 			return DAO::getDataChangedEvent($issueId);
 		}
