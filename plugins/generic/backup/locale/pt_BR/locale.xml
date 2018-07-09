@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/pt_BR/locale.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  * Translated by Job Diógenes Ribeiro Borges
+  -->
+
+<locale name="pt_BR" full_name="Português (Brasil)">
+	<message key="plugins.generic.backup.name">Plugin para Cópias de Segurança</message>
+	<message key="plugins.generic.backup.description">Este plugin faz uma cópia de segurança da instalação.</message>
+	<message key="plugins.generic.backup.link">Baixar a Cópia de Segurança</message>
+	<message key="plugins.generic.backup.longdescription"><![CDATA[<p>Um usuário Administrador pode usando os links a seguir para baixar uma cópia de segurança dos vários componentes da instalação. A cópia de segurança inclui <strong>todos</strong> os seguintes componentes. Para saber mais a inteligação desses componentes veja a documentação técnica.</p>]]></message>
+	<message key="plugins.generic.backup.db">Base de Dados</message>
+	<message key="plugins.generic.backup.files">Arquivos</message>
+	<message key="plugins.generic.backup.code">Código</message>
+	<message key="plugins.generic.backup.db.config"><![CDATA[{$footNoteNum}. <strong>AVISO:</strong> É necessário configurar a ferramenta que faz a cópia de segurança da base de dados através do arquivo config.inc.php. A configuração depende do servidor da banco de dados utilizado. Deve-se definir na seção [cli] a opção de configuração "dump". No caso de usar o MySQL, usar o "mysqldump":<br />
+<pre>[cli]
+dump = "/usr/bin/mysqldump -h %s -u %s -p%s %s"
+</pre>
+Os "%s" serão substituídos, na ordem:<ol>
+	<li>Nome do servidor da base de dados</li>
+	<li>Nome do utilizador da base de dados</li>
+	<li>Senha para o utilizador na base de dados</li>
+	<li>Nome da base de dados</li>
+</ol>
+Observe que é necessário definir a senha na linha de comando, o que pode ser visto como um problema de segurança.<br /><br />]]></message>
+	<message key="plugins.generic.backup.tar.config"><![CDATA[{$footNoteNum}. <strong>AVISO:</strong> O comando "tar" não foi configurado no arquivo de configuração config.inc.php. Essa configuração depende do seu servidor, devendo ser definido na seção [cli] a opção de configuração "tar", definindo o caminho completo do comando:<br />
+<pre>[cli]
+tar = "/bin/tar"
+</pre><br />]]></message>
+	<message key="plugins.generic.backup.failure"><![CDATA[<strong>AVISO:</strong> Ocorreu um erro ao realizar a cópia de segurança. Uma causa comum é a falta de permissões para gravar o arquivo.]]></message>
+</locale>
