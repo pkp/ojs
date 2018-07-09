@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/googleScholar/locale/pt_PT/locale.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Portuguese_(pt_PT)
+  * Localization strings.
+  *
+  * Translated by Job Diógenes Ribeiro Borges
+  -->
+
+<locale name="pt_PT" full_name="Português (Brasil)">
+	<message key="plugins.generic.googleScholar.name">Plugin de suporte a Indexação do Google Scholar</message>
+	<message key="plugins.generic.googleScholar.description">Este plugin permite melhorar a indexação feita pelo Google Scholar do conteúdo publicado.</message>
+</locale>
