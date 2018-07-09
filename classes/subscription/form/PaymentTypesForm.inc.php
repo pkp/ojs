@@ -70,10 +70,9 @@ class PaymentTypesForm extends Form {
 
 	/**
 	 * Save settings
-	 * @param $request PKPRequest
 	 */
-	function execute($request) {
-		$journal = $request->getJournal();
+	function execute() {
+		$journal = Application::getRequest()->getJournal();
 		foreach (array_keys($this->settings) as $settingName) {
 			$journal->updateSetting($settingName, $this->getData($settingName));
 		}

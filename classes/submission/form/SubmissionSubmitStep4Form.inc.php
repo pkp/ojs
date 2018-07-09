@@ -30,12 +30,10 @@ class SubmissionSubmitStep4Form extends PKPSubmissionSubmitStep4Form {
 
 	/**
 	 * Save changes to submission.
-	 * @param $args array
-	 * @param $request PKPRequest
 	 * @return int the submission ID
 	 */
-	function execute($args, $request) {
-		parent::execute($args, $request);
+	function execute() {
+		parent::execute();
 
 		$submission = $this->submission;
 		// Send author notification email
@@ -43,6 +41,7 @@ class SubmissionSubmitStep4Form extends PKPSubmissionSubmitStep4Form {
 		$mail = new ArticleMailTemplate($submission, 'SUBMISSION_ACK', null, null, false);
 		$authorMail = new ArticleMailTemplate($submission, 'SUBMISSION_ACK_NOT_USER', null, null, false);
 
+		$request = Application::getRequest();
 		$context = $request->getContext();
 		$router = $request->getRouter();
 		if ($mail->isEnabled()) {

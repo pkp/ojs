@@ -236,7 +236,7 @@ class IssueGridHandler extends GridHandler {
 		$issueForm->readInputData();
 
 		if ($issueForm->validate()) {
-			$issueForm->execute($request);
+			$issueForm->execute();
 			$notificationManager = new NotificationManager();
 			$notificationManager->createTrivialNotification($request->getUser()->getId());
 			return DAO::getDataChangedEvent();
@@ -274,7 +274,7 @@ class IssueGridHandler extends GridHandler {
 		$issueAccessForm->readInputData();
 
 		if ($issueAccessForm->validate()) {
-			$issueAccessForm->execute($request);
+			$issueAccessForm->execute();
 			$notificationManager = new NotificationManager();
 			$notificationManager->createTrivialNotification($request->getUser()->getId());
 			return DAO::getDataChangedEvent();
@@ -352,7 +352,7 @@ class IssueGridHandler extends GridHandler {
 		$form = new PublicIdentifiersForm($issue);
 		$form->readInputData();
 		if ($form->validate()) {
-			$form->execute($request);
+			$form->execute();
 			return DAO::getDataChangedEvent($issue->getId());
 		} else {
 			return new JSONMessage(true, $form->fetch($request));
@@ -447,7 +447,7 @@ class IssueGridHandler extends GridHandler {
 			}
 			// Asign pub ids
 			$assignPublicIdentifiersForm->readInputData();
-			$assignPublicIdentifiersForm->execute($request);
+			$assignPublicIdentifiersForm->execute();
 
 			// Set the status of any attendant queued articles to STATUS_PUBLISHED.
 			$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');

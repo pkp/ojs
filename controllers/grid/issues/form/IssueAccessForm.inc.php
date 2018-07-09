@@ -71,11 +71,10 @@ class IssueAccessForm extends Form {
 
 	/**
 	 * Save issue settings.
-	 * @param $request PKPRequest
 	 * @return int Issue ID for created/updated issue
 	 */
-	function execute($request) {
-		$journal = $request->getJournal();
+	function execute() {
+		$journal = Application::getRequest()->getJournal();
 
 		$issueDao = DAORegistry::getDAO('IssueDAO');
 		$this->_issue->setAccessStatus($this->getData('accessStatus') ? $this->getData('accessStatus') : ISSUE_ACCESS_OPEN);

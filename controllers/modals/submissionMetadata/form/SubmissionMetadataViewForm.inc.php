@@ -102,10 +102,9 @@ class SubmissionMetadataViewForm extends PKPSubmissionMetadataViewForm {
 
 	/**
 	 * Save changes to submission.
-	 * @param $request PKPRequest
 	 */
-	function execute($request) {
-		parent::execute($request);
+	function execute() {
+		parent::execute();
 		$submission = $this->getSubmission();
 		$submissionDao = Application::getSubmissionDAO();
 
@@ -120,6 +119,7 @@ class SubmissionMetadataViewForm extends PKPSubmissionMetadataViewForm {
 		$locale = AppLocale::getLocale();
 		// Copy an uploaded cover file for the article, if there is one.
 		if ($temporaryFileId = $this->getData('temporaryFileId')) {
+			$request = Application::getRequest();
 			$user = $request->getUser();
 			$temporaryFileDao = DAORegistry::getDAO('TemporaryFileDAO');
 			$temporaryFile = $temporaryFileDao->getTemporaryFile($temporaryFileId, $user->getId());
