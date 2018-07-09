@@ -13,7 +13,7 @@
   * Translated by Job Diógenes Ribeiro Borges
   -->
 
-<locale name="pt_PT" full_name="Português (Brasil)">
+<locale name="pt_BR" full_name="Português (Brasil)">
 	<message key="plugins.generic.googleScholar.name">Plugin de suporte a Indexação do Google Scholar</message>
 	<message key="plugins.generic.googleScholar.description">Este plugin permite melhorar a indexação feita pelo Google Scholar do conteúdo publicado.</message>
 </locale>
