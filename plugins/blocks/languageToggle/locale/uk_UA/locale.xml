@@ -10,8 +10,8 @@
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Ukrainian_(uk_UA)
   * Localization strings for the uk_UA (Українська) locale.
   -->
- 
+
 <locale name="uk_UA" full_name="Українська">
-       <message key="plugins.block.languageToggle.displayName">Блок зміни мови</message>
-       <message key="plugins.block.languageToggle.description">Додає перемикач мови на бічну панель.</message>
+	<message key="plugins.block.languageToggle.displayName">Блок зміни мови</message>
+	<message key="plugins.block.languageToggle.description">Додає перемикач мови на бічну панель.</message>
 </locale>
