@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/usageStats/locale/uk_UA/locale.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Ukrainian_(uk_UA)
+  * Localization strings for the uk_UA (Українська) locale.
+  -->
+
+<locale name="uk_UA" full_name="Українська">
+	<message key="plugins.generic.usageStats.settings.statsDisplayOptions.siteWide">Кожний журнал може перевизначити ці налаштування на сторінці модулів журналу.</message>
+	<message key="plugins.generic.usageStats.optout.description"><![CDATA[
+		<h3>Загальна інформація про конфіденційність</h3>
+		<p>Будь ласка, перегляньте нашу загальну <a href="{$privacyStatementUrl}">Заяву про конфіденційність</a>.</p>
+		<h3>Статистика використання</h3>
+		<p>Щоб мати змогу аналізувати використання та вплив нашого журналу та опублікованих у ньому статей, ми збираємо та реєструємо інформацію про доступ до головної сторінки журналу, випусків, статей, гранок та додаткових файлів. Уся зібрана інформація є анонімною. Особиста інформація не записується. IP-адреси анонімізуються шляхом хешування (за допомогою <em>SHA 256</em>) у поєднанні з <em>безпечною 64-символьною сіллю</em> яка автоматично <em>генерується випадковим чином і змінюється щодня</em>. Тому IP-адреси не можуть бути реконструйовані.</p>
+		<p>Наступна інформація збирається разом з анонімними IP-адресами:</p>
+		<ul>
+		<li>Тип доступу (тобто адміністративний)</li>
+		<li>Час запиту</li>
+		<li>URL, який було запитано</li>
+		<li>Код статусу HTTP</li>
+		<li>Браузер</li>
+		</ul>
+		<p>Зібрані дані використовуються лише з метою оцінки. Жодна IP-адреса не ставиться у відповідність до ID користувача. Технічно неможливо відстежити певний набір даних за певною IP-адресою.</p>]]></message>
+</locale>
