@@ -17,7 +17,7 @@
 	<message key="plugins.generic.backup.description">Este plugin faz uma cópia de segurança da instalação.</message>
 	<message key="plugins.generic.backup.link">Baixar a Cópia de Segurança</message>
 	<message key="plugins.generic.backup.longdescription"><![CDATA[<p>Um usuário Administrador pode usando os links a seguir para baixar uma cópia de segurança dos vários componentes da instalação. A cópia de segurança inclui <strong>todos</strong> os seguintes componentes. Para saber mais a inteligação desses componentes veja a documentação técnica.</p>]]></message>
-	<message key="plugins.generic.backup.db">Base de Dados</message>
+	<message key="plugins.generic.backup.db">Banco de Dados</message>
 	<message key="plugins.generic.backup.files">Arquivos</message>
 	<message key="plugins.generic.backup.code">Código</message>
 	<message key="plugins.generic.backup.db.config"><![CDATA[{$footNoteNum}. <strong>AVISO:</strong> É necessário configurar a ferramenta que faz a cópia de segurança da base de dados através do arquivo config.inc.php. A configuração depende do servidor da banco de dados utilizado. Deve-se definir na seção [cli] a opção de configuração "dump". No caso de usar o MySQL, usar o "mysqldump":<br />
@@ -25,10 +25,10 @@
 dump = "/usr/bin/mysqldump -h %s -u %s -p%s %s"
 </pre>
 Os "%s" serão substituídos, na ordem:<ol>
-	<li>Nome do servidor da base de dados</li>
-	<li>Nome do utilizador da base de dados</li>
-	<li>Senha para o utilizador na base de dados</li>
-	<li>Nome da base de dados</li>
+	<li>Nome do servidor de banco de dados</li>
+	<li>Nome do utilizador de banco de dados</li>
+	<li>Senha do usuário do banco de dados</li>
+	<li>Nome do banco de dados</li>
 </ol>
 Observe que é necessário definir a senha na linha de comando, o que pode ser visto como um problema de segurança.<br /><br />]]></message>
 	<message key="plugins.generic.backup.tar.config"><![CDATA[{$footNoteNum}. <strong>AVISO:</strong> O comando "tar" não foi configurado no arquivo de configuração config.inc.php. Essa configuração depende do seu servidor, devendo ser definido na seção [cli] a opção de configuração "tar", definindo o caminho completo do comando:<br />
