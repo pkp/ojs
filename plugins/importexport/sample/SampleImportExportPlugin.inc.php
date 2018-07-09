@@ -61,7 +61,7 @@ class SampleImportExportPlugin extends ImportExportPlugin {
 				// Display a list of issues for export
 				$journal = $request->getJournal();
 				$issueDao = DAORegistry::getDAO('IssueDAO');
-				$issues = $issueDao->getIssues($journal->getId(), Handler::getRangeInfo($this->getRequest(), 'issues'));
+				$issues = $issueDao->getIssues($journal->getId(), Handler::getRangeInfo(Application::getRequest(), 'issues'));
 
 				$templateMgr = TemplateManager::getManager($request);
 				$templateMgr->assign('issues', $issues);

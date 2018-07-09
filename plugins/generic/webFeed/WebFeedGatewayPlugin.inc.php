@@ -83,7 +83,7 @@ class WebFeedGatewayPlugin extends GatewayPlugin {
 	 */
 	public function fetch($args, $request) {
 		// Make sure we're within a Journal context
-		$request = $this->getRequest();
+		$request = Application::getRequest();
 		$journal = $request->getJournal();
 		if (!$journal) return false;
 

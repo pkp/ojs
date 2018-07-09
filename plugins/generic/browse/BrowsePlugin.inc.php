@@ -65,7 +65,7 @@ class BrowsePlugin extends GenericPlugin {
 
 		$journal = $smarty->getTemplateVars('currentJournal');
 
-		$templateMgr = TemplateManager::getManager($this->getRequest());
+		$templateMgr = TemplateManager::getManager(Application::getRequest());
 		if ($this->getSetting($journal->getId(), 'enableBrowseBySections')) {
 			$output .= '<li><a href="' . $templateMgr->smartyUrl(array('page' => 'browseSearch', 'op'=>'sections'), $smarty) . '">' . $templateMgr->smartyTranslate(array('key'=>'plugins.generic.browse.search.sections'), $smarty) . '</a></li>';
 		}

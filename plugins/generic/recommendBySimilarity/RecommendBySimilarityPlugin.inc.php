@@ -71,7 +71,7 @@ class RecommendBySimilarityPlugin extends GenericPlugin {
 
 		// If we got similarity terms then execute a search with...
 		// ... request, journal and error messages, ...
-		$request = PKPApplication::getRequest();
+		$request = Application::getRequest();
 		$router = $request->getRouter();
 		$journal = $router->getContext($request);
 		$error = null;

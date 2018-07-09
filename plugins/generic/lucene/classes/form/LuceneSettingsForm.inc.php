@@ -79,7 +79,7 @@ class LuceneSettingsForm extends Form {
 	function readInputData() {
 		// Read regular form data.
 		$this->readUserVars($this->_getFormFields());
-		$request = PKPApplication::getRequest();
+		$request = Application::getRequest();
 
 		// Set the password to the one saved in the DB
 		// if we only got the placehlder from the form.
@@ -198,7 +198,7 @@ class LuceneSettingsForm extends Form {
 	 * @return null|string a metric identifier or null
 	 */
 	function _getDefaultMetric() {
-		$application = PKPApplication::getApplication();
+		$application = Application::getApplication();
 		$metricType = $application->getDefaultMetricType();
 		if (empty($metricType)) return null;
 		$metricNames = $application->getMetricTypes(true);

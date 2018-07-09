@@ -143,7 +143,7 @@ class Journal extends Context {
 				$defaultMetricType = $availableMetrics[0];
 			} else {
 				// Use the site-wide default metric.
-				$application = PKPApplication::getApplication();
+				$application = Application::getApplication();
 				$defaultMetricType = $application->getDefaultMetricType();
 			}
 		} else {
@@ -170,7 +170,7 @@ class Journal extends Context {
 	function getMetrics($metricType = null, $columns = array(), $filter = array(), $orderBy = array(), $range = null) {
 		// Add a journal filter and run the report.
 		$filter[STATISTICS_DIMENSION_CONTEXT_ID] = $this->getId();
-		$application = PKPApplication::getApplication();
+		$application = Application::getApplication();
 		return $application->getMetrics($metricType, $columns, $filter, $orderBy, $range);
 	}
 }
