@@ -18,7 +18,7 @@
 	<message key="plugins.importexport.doaj.registrationIntro">Якщо ви хочете зареєструвати статті одразу з OJS, будь ласка, введіть свій ключ API DOAJ. Якщо у вас немає ключа API DOAJ, ви все одно зможете експортувати в DOAJ XML, але ви не можете зареєструвати свої DOI в DOAJ з OJS.</message>
 	<message key="plugins.importexport.doaj.settings.form.apiKey">Ключ DOAJ API</message>
 	<message key="plugins.importexport.doaj.settings.form.apiKey.description">Ви знайдете свій ключ API на сторінці користувача DOAJ.</message>
-	<message key="plugins.importexport.doaj.settings.form.automaticRegistration.description">OJS буде автоматично джепонувати статті на DOAJ. Зверніть увагу, що після публікації обробка може зайняти деякий час (наприклад, залежно від налаштувань вашого cron). Ви можете перевірити всі незареєстровані статті.</message>
+	<message key="plugins.importexport.doaj.settings.form.automaticRegistration.description">OJS буде автоматично депонувати статті на DOAJ. Зверніть увагу, що після публікації обробка може зайняти деякий час (наприклад, залежно від налаштувань вашого cron). Ви можете перевірити всі незареєстровані статті.</message>
 	<message key="plugins.importexport.doaj.settings.form.testMode.description">Використовувати тестовий API DOAJ (середовище тестування) для реєстрації. Будь ласка, не забудьте прибрати цей параметр для подальшої роботи.</message>
 	  
 	<message key="plugins.importexport.doaj.senderTask.name">Завдання автоматичної реєстрації DOAJ</message>
