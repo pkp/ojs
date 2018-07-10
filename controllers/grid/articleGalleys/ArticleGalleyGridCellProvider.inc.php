@@ -65,7 +65,7 @@ class ArticleGalleyGridCellProvider extends DataObjectGridCellProvider {
 	/**
 	 * @copydoc GridCellProvider::getCellActions()
 	 */
-	function getCellActions($request, $row, $column) {
+	function getCellActions($request, $row, $column, $position = GRID_ACTION_POSITION_DEFAULT) {
 		switch ($column->getId()) {
 			case 'label':
 				$element = $row->getData();
@@ -81,7 +81,7 @@ class ArticleGalleyGridCellProvider extends DataObjectGridCellProvider {
 				import('lib.pkp.controllers.api.file.linkAction.DownloadFileLinkAction');
 				return array(new DownloadFileLinkAction($request, $submissionFile, WORKFLOW_STAGE_ID_PRODUCTION, $element->getLabel()));
 		}
-		return parent::getCellActions($request, $row, $column);
+		return parent::getCellActions($request, $row, $column, $position);
 	}
 }
 
