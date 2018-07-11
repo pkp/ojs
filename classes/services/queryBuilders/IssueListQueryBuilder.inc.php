@@ -68,6 +68,8 @@ class IssueListQueryBuilder extends BaseQueryBuilder {
 	public function orderBy($column, $direction = 'DESC') {
 		if ($column === 'lastModified') {
 			$this->orderColumn = 'i.last_modified';
+		} elseif ($column === 'seq') {
+			$this->orderColumn = 'o.seq';
 		} else {
 			$this->orderColumn = 'i.date_published';
 		}
@@ -153,7 +155,8 @@ class IssueListQueryBuilder extends BaseQueryBuilder {
 		$this->columns[] = 'i.*';
 		$q = Capsule::table('issues as i')
 					->where('i.journal_id','=', $this->contextId)
-					->leftJoin('issue_settings as is', 'i.journal_id', '=', 'is.issue_id')
+					->leftJoin('issue_settings as is', 'i.issue_id', '=', 'is.issue_id')
+					->leftJoin('custom_issue_orders as o', 'o.issue_id', '=', 'i.issue_id')
 					->orderBy($this->orderColumn, $this->orderDirection)
 					->groupBy('i.issue_id');
 

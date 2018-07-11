@@ -128,6 +128,8 @@ class IssueHandler extends Handler {
 		import('classes.core.ServicesContainer');
 		$issueService = ServicesContainer::instance()->get('issue');
 		$params = array(
+			'orderBy' => 'seq',
+			'orderDirection' => 'ASC',
 			'count' => $count,
 			'offset' => $offset,
 			'isPublished' => true,

@@ -106,7 +106,7 @@ class IssueHandler extends APIHandler {
 			switch ($param) {
 
 				case 'orderBy':
-					if (in_array($val, array('datePublished', 'lastModified'))) {
+					if (in_array($val, array('datePublished', 'lastModified', 'seq'))) {
 						$params[$param] = $val;
 					}
 					break;
