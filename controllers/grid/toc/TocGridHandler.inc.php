@@ -186,9 +186,9 @@ class TocGridHandler extends CategoryGridHandler {
 	}
 
 	/**
-	 * @copydoc GridHandler::getDataElementSequence()
+	 * @copydoc CategoryGridHandler::getDataElementInCategorySequence()
 	 */
-	function getDataElementInCategorySequence($categoryId, $publishedArticle) {
+	function getDataElementInCategorySequence($categoryId, &$publishedArticle) {
 		return $publishedArticle->getSequence();
 	}
 
