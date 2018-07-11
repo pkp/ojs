@@ -30,7 +30,7 @@ class SettingsPluginGridHandler extends PluginGridHandler {
 	// Extended methods from PluginGridHandler
 	//
 	/**
-	 * @copydoc PluginGridHandler::loadData()
+	 * @copydoc PluginGridHandler::loadCategoryData()
 	 */
 	function loadCategoryData($request, &$categoryDataElement, $filter = null) {
 		$plugins = parent::loadCategoryData($request, $categoryDataElement, $filter);
