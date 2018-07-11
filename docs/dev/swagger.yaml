@@ -835,7 +835,7 @@ paths:
           required: false
           type: integer
         - name: orderBy
-          description: Order the results returned. Must be one of `datePublished` or `lastModified`. Default is `datePublished`.
+          description: Order the results returned. Must be one of `datePublished`, `lastModified` or `seq`. Default is `datePublished`.
           in: query
           required: false
           type: string
