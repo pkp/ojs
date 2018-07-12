@@ -31,7 +31,7 @@
 	<message key="plugins.pubIds.doi.manager.settings.doiPrefixPattern">Префікс є обов'язковим елементом DOI, він має бути у формі 10.xxxx.</message>
 
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffix">Суфікс DOI</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffix.description">Суфікс DOI може мати будь-яку форму, але він має бути унікальним серед всіх видавничих об'єктів з однаковим префіксом DOI:</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffix.description">Суфікс DOI може мати будь-яку форму, але він має бути унікальним серед усіх опублікованих об'єктів з однаковим префіксом DOI:</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern">Використати нижченаведений шаблон для генерування суфіксів DOI. Використовуйте %j для абревіатури журналу, %v для номера тому, %i для номера випуску, %Y для року, %a для ID статті в OJS, %g для ID гранки в OJS, %f для ID файлу в OJS, %p для номера сторінки  та %x для "власного ідентифікатора".</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.example">Наприклад, vol%viss%ipp%p може створити такий DOI: 10.1234/vol3iss2pp230</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.issues">для випусків</message>
