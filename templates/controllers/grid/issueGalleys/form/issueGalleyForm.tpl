@@ -38,8 +38,8 @@
 		{fbvFormSection title="submission.layout.galleyLabel" required="true"}
 			{fbvElement type="text" value=$label id="label" required="true"}
 		{/fbvFormSection}
-			{fbvFormSection title="submission.layout.publicGalleyId" required="true"}
-				{fbvElement type="text" value=$publicGalleyId id="publicGalleyId" required="true"}
+			{fbvFormSection title="submission.layout.publicGalleyId"}
+				{fbvElement type="text" value=$publicGalleyId id="publicGalleyId"}
 			{/fbvFormSection}
 		{fbvFormSection title="common.language" required="true"}
 			{fbvElement type="select" id="galleyLocale" from=$supportedLocales selected=$galleyLocale|default:$formLocale translate=false required="true"}

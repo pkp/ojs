@@ -150,7 +150,7 @@ class IssueGalleyForm extends Form {
 				}
 				// Upload new file
 				$issueFile = $issueFileManager->fromTemporaryFile($temporaryFile);
-				$issueGalley->setFileId($issueFile->getFileId());
+				$issueGalley->setFileId($issueFile->getId());
 			}
 
 			$issueGalley->setLabel($this->getData('label'));
