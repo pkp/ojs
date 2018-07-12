@@ -32,11 +32,10 @@ class TocGridRow extends GridRow {
 	// Overridden template methods
 	//
 	/*
-	 * Configure the grid row
-	 * @param $request PKPRequest
+	 * @copydoc GridRow::initialize
 	 */
-	function initialize($request) {
-		parent::initialize($request);
+	function initialize($request, $template = null) {
+		parent::initialize($request, $template);
 
 		$dispatcher = $request->getDispatcher();
 		import('lib.pkp.classes.linkAction.request.RedirectAction');
