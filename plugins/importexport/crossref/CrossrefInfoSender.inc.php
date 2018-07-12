@@ -31,6 +31,8 @@ class CrossrefInfoSender extends ScheduledTask {
 
 		if (is_a($plugin, 'CrossRefExportPlugin')) {
 			$plugin->addLocaleData();
+			AppLocale::requireComponents(LOCALE_COMPONENT_APP_MANAGER, LOCALE_COMPONENT_PKP_MANAGER);
+			$this->_plugin->setCLI(true);
 		}
 
 		parent::__construct($args);

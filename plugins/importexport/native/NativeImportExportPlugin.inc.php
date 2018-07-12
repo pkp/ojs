@@ -311,6 +311,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 		$journalPath = array_shift($args);
 
 		AppLocale::requireComponents(LOCALE_COMPONENT_APP_MANAGER, LOCALE_COMPONENT_PKP_MANAGER, LOCALE_COMPONENT_PKP_SUBMISSION);
+		$this->setCLI(true);
 
 		$journalDao = DAORegistry::getDAO('JournalDAO');
 		$issueDao = DAORegistry::getDAO('IssueDAO');
