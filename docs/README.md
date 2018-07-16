@@ -49,9 +49,9 @@ A secure deployment can be best achieved by using the following policies:
 	basis. Perform a manual backup when upgrading or performing
 	maintenance.
 
-* Configure OJS (config.inc.php) to use SHA1 hashing rather than MD5.
+* Configure OJS (`config.inc.php`) to use SHA1 hashing rather than MD5.
 
-* Configure OJS (config.inc.php) to use force_ssl_login so that
+* Configure OJS (`config.inc.php`) to use force_ssl_login so that
 	authenticated users communicate with the server via HTTPS.
 
 * Install OJS so that the files directory is NOT a subdirectory of
@@ -75,14 +75,14 @@ To install OJS:
 	 writeable (i.e., by changing the owner or permissions with chown or
 	 chmod):
 	 
-	 * config.inc.php (optional -- if not writable you will be prompted
+	 * `config.inc.php` (optional -- if not writable you will be prompted
 		 to manually overwrite this file during installation)
-	 * public
-	 * cache
-	 * cache/t_cache
-	 * cache/t_config
-	 * cache/t_compile
-	 * cache/_db
+	 * `public`
+	 * `cache`
+	 * `cache/t_cache`
+	 * `cache/t_config`
+	 * `cache/t_compile`
+	 * `cache/_db`
 
 3. Create a directory to store uploaded files (submission files, etc.)
 	 and make this directory writeable. It is recommended that this
@@ -93,14 +93,14 @@ To install OJS:
 	 follow the on-screen installation instructions.
 	 
 	 Alternatively, the command-line installer can be used instead by
-	 running the command "php tools/install.php" from your OJS directory.
+	 running the command `php tools/install.php` from your OJS directory.
 	 (Note: with the CLI installer you may need to chown/chmod the public
 	 and uploaded files directories after installation, if the Apache
 	 user is different from the user running the tool.)
 
 5. Recommended additional steps post-installation:
 
-	 * Review config.inc.php for additional configuration settings
+	 * Review `config.inc.php` for additional configuration settings
 	 * Review the FAQ document for frequently asked technical and
 		 server configuration questions.
 
@@ -114,19 +114,19 @@ See [docs/UPGRADE.md](UPGRADE.md) for information on upgrading from previous OJS
 
 To add support for other languages, the following sets of XML files must be
 localized and placed in an appropriately named directory (using ISO locale 
-codes, e.g. "fr_FR", is recommended):
+codes, e.g. `fr_FR`, is recommended):
 
-* locale/en_US
-* lib/pkp/locale/en_US
-* docs/manual/en
-* registry/locale/en_US
-* plugins/[plugin category]/[plugin name]/locale, where applicable
+* `locale/en_US`
+* `lib/pkp/locale/en_US`
+* `docs/manual/en`
+* `registry/locale/en_US`
+* `plugins/[plugin category]/[plugin name]/locale`, where applicable
 
 The only critical files that need translation for the system to function
-properly are found in locale/en_US, lib/pkp/locale/en_US, and
-registry/locale/en_US.
+properly are found in `locale/en_US`, `lib/pkp/locale/en_US`, and
+`registry/locale/en_US`.
 
-New locales must also be added to the file registry/locales.xml, after which
+New locales must also be added to the file `registry/locales.xml`, after which
 they can be installed in the system through the site administration web
 interface.
 	
@@ -139,10 +139,10 @@ releases of OJS.
 OJS supports a mechanism to execute a variety of tasks at scheduled times
 (such as automatic sending of reminder notification emails).
 
-To enable support for using scheduled tasks, edit your config.inc.php and
-set the scheduled_tasks setting to On, and set up your operating system to
+To enable support for using scheduled tasks, edit your `config.inc.php` and
+set the `scheduled_tasks` setting to `On`, and set up your operating system to
 periodically execute (as the same user your webserver is running under) the
-PHP script found at tools/runScheduledTasks.php in your OJS directory:
+PHP script found at `tools/runScheduledTasks.php` in your OJS directory:
 
 On *nix operating systems, this can be done by adding a simple cron task:
 ```
@@ -181,7 +181,7 @@ interpreter installed on your server.
 	functionality, you can download the database from MaxMind at:
 	http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz
 	You will need to decompress the file and place "GeoLiteCity.dat" into
-	the "plugins/generic/usageStats" directory. A separate license agreement
+	the `plugins/generic/usageStats` directory. A separate license agreement
 	is required for this use of this database. For details, see:
 	https://dev.maxmind.com/geoip/legacy/geolite/
 
