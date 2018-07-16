@@ -10,7 +10,7 @@
  *}
 {include file="frontend/components/header.tpl" pageTitle="user.subscriptions.purchaseInstitutionalSubscription"}
 
-<div class="pkp_page_content pkp_page_purchaseIndividualSubscription">
+<div class="pkp_page_content pkp_page_purchaseInstitutionalSubscription">
 	<h1 class="page_title">
 		{translate key="user.subscriptions.purchaseInstitutionalSubscription"}
 	</h1>
