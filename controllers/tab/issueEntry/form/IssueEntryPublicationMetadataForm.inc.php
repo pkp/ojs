@@ -283,8 +283,8 @@ class IssueEntryPublicationMetadataForm extends Form {
 
 				// Schedule against an issue.
 				if ($publishedArticle) {
+					if ($issueId != $publishedArticle->getIssueId()) $publishedArticle->setSequence(REALLY_BIG_NUMBER);
 					$publishedArticle->setIssueId($issueId);
-					$publishedArticle->setSequence(REALLY_BIG_NUMBER);
 					$publishedArticle->setDatePublished($this->getData('datePublished'));
 					$publishedArticle->setAccessStatus($accessStatus);
 					$publishedArticleDao->updatePublishedArticle($publishedArticle);
