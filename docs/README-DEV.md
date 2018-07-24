@@ -3,7 +3,7 @@
 ## Contributing Code
 
 The PKP team is happy to accept patches in the PKP Community Forum at
-http://forum.pkp.sfu.ca or Github at http://www.github.com/pkp. If you
+http://forum.pkp.sfu.ca or Github at https://www.github.com/pkp. If you
 would like to have your patch included in the OJS codebase, we suggest
 discussing it with the OJS team before implementation to ensure that it suits
 upcoming development plans.
@@ -27,8 +27,8 @@ For code that is intended for inclusion in the main codebase:
   platforms listed in README.
 * OJS management features should be kept in mind, such as upgrade and
   installation; database schema information should be maintained in the
-  dbscripts/xml/ojs_schema.xml file for OJS-specific functionality and in
-  lib/pkp/xml/schema for functionality that can be shared across PKP apps; etc.
+  `dbscripts/xml/ojs_schema.xml` file for OJS-specific functionality and in
+  `lib/pkp/xml/schema` for functionality that can be shared across PKP apps; etc.
 * The development team is happy to review contributed patches, but we have a
   limited amount of time to spend integrating patches with the codebase or
   modifying contributed code. If aspects of the code need work, we would rather
@@ -98,13 +98,13 @@ For contributions that are distributed separately as patches or plugins:
 ### PHP Tags
 
 * Use the `<?php` tag to begin PHP code instead of the abbreviated `<?` form.
-* Omit ending ?> tags at the end of PHP files, as recommended per modern PHP
+* Omit ending `?>` tags at the end of PHP files, as recommended per modern PHP
   standards.
 
 
 ### Quoting Strings
 
-* Use single quotes (') instead of double quotes (") to quote strings unless the
+* Use single quotes (`'`) instead of double quotes (`"`) to quote strings unless the
   string contains variables or escape sequences. Single quotes are slightly more
   efficient since PHP does not have to perform variable interpolation.
 
@@ -112,10 +112,10 @@ For contributions that are distributed separately as patches or plugins:
 ### Error Level
 
 * Code must not produce any error or warning messages with the error_reporting
-  level set to E_ALL (this is the default level set in includes/driver.inc.php).
+  level set to `E_ALL` (this is the default level set in `includes/driver.inc.php`).
 * This means using `$array['key']` rather than `$array[key]`, not using
   uninitialized variables, etc.
-* Note that this means that "@" should not be used haphazardly to suppress
+* Note that this means that "`@`" should not be used haphazardly to suppress
   error messages.
 
 
@@ -130,7 +130,7 @@ For contributions that are distributed separately as patches or plugins:
 
 * The inline form of if/else is acceptable for small statements (e.g.,
   assignments) only. E.g., `$foo = $bar ? 1 : 0;`
-* Compatibility with PHP per the README.md document is required. Appropriate
+* Compatibility with PHP per the `README.md` document is required. Appropriate
   abstractions should be used around non-backwards compatible code (e.g., using
   `function_exists()` to check for an available function and using an alternate
   implementation if it does not exist).
@@ -171,7 +171,7 @@ For contributions that are distributed separately as patches or plugins:
 * A brief log message describing the changes made must be included with all git
   commits.
 * Whenever possible, git commit log messages should be prefixed with
-  "pkp/pkp-lib#ISSUENUM" to reference a git issue; see
+  `pkp/pkp-lib#ISSUENUM` to reference a git issue; see
   https://github.com/pkp/pkp-lib#issues.
 * Please consult http://pkp.sfu.ca/wiki/index.php/HOW-TO_check_out_PKP_applications_from_git
   for instructions on setting up a development environment.
