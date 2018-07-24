@@ -84,6 +84,7 @@ class LuceneHandler extends Handler {
 
 		// Return the suggestions as JSON message.
 		$json = new JSONMessage(true, $suggestionList);
+		header('Content-Type: application/json');
 		return $json->getString();
 	}
 
