@@ -253,7 +253,6 @@ Al momento di concludere una revisione, ai revisori vengono presentate due box, 
 	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"><![CDATA[<strong>Nota:</strong> Quando questa opzione &#x00E8; abilitata, le URL delle submission nelle email di notifica e promemoria conterranno una chiave d'accesso che scavalca l'usuale processo di login. Usando questo link, i revisori possono fare revisioni senza inserire username e password; mentre debbono comunque  fare il log in per completare gli altri compiti.]]></message>
 	<message key="manager.setup.reviewOptions.reviewerRatings">Voto ai revisori</message>
 	<message key="manager.setup.reviewOptions.reviewerReminders">Promemoria per i revisori</message>
-	<message key="manager.setup.reviewOptions.showEnsuringLink"><![CDATA[Aggiungi il link a <a href="javascript:openHelp('{$blindReviewHelpId}')" class="action">Come assicurare una revisione cieca</a> alle pagine dove gli autori e i revisori caricano i file.]]></message>
 	<message key="manager.setup.reviewPolicy">Politiche di revisione</message>
 	<message key="manager.setup.searchEngineIndexing">SEO (Ottimizzazione per i motori di ricerca)</message>
 	<message key="manager.setup.searchEngineIndexingDescription">Per aumentare la visibilità della rivista nei motori di ricerca, inserisci una breve descrizione e le relative keyword (separate da virgola).</message>

@@ -230,7 +230,6 @@ Alternatywnie, administrator czasopisma może utworzyć własny <a href="{$revie
 	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"><![CDATA[<strong>Uwaga:</strong> E-mail z zaproszeniem do recenzji wysłany do recenzenta (recenzentów) zawiera specjalnie przygotowany link, który przekieruje recenzenta bezpośrednio do strony recenzji.]]></message>
 	<message key="manager.setup.reviewOptions.reviewerRatings">Ocenianie recenzentów</message>
 	<message key="manager.setup.reviewOptions.reviewerReminders">Przypomnienia wysłane recenzentom</message>
-	<message key="manager.setup.reviewOptions.showEnsuringLink"><![CDATA[Łącza do <a href="javascript:openHelp('{$blindReviewHelpId}')" class="action">zapewnienie ślepej recenzji</a> na stronach, za pośrednictwem których autorzy i recenzenci przesyłają swoje pliki.]]></message>
 	<message key="manager.setup.reviewPolicy">Zasady recenzji</message>
 	<message key="manager.setup.searchEngineIndexing">Obecność w wyszukiwarkach internetowych</message>
 	<message key="manager.setup.searchEngineIndexingDescription">Aby pomóc użytkownikom wyszukiwarek internetowych w odnalezieniu czasopisma, podaj jego krótki opis.</message>

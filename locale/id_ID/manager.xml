@@ -291,7 +291,6 @@
 	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"><![CDATA[<strong>Catatan:</strong>  email undangan ke Reviewer akan berisi URL yang akan membawa Reviewer yang diundang secara langsung ke halaman review untuk naskah (untuk akses ke halaman lain mengharuskan mereka untuk login). Untuk alasan keamanan dengan pilihan ini, editor tidak bisa memodifikasi alamat email atau menambahkan CCs atau BCCs sebelum mengirimkan undangan kepada Reviewer.]]></message> 
 	<message key="manager.setup.reviewOptions.reviewerRatings">Rating Review</message> 
 	<message key="manager.setup.reviewOptions.reviewerReminders">Pengingat Review</message> 
-	<message key="manager.setup.reviewOptions.showEnsuringLink"><![CDATA[Menyediakan tautan ke <a href="javascript:openHelp('{$blindReviewHelpId}')" class="action">Memastikan Reviewer Anonim</a> di halaman di mana penulis dan Reviewer mengunggah file.]]></message> 
 	<message key="manager.setup.reviewPolicy">Kebijakan Review</message> 
 	<message key="manager.setup.searchEngineIndexing">Pengindeksan Mesin Pencari</message> 
 	<message key="manager.setup.searchEngineIndexingDescription">Untuk membantu pengguna dalam menemukan jurnal pada search engine, masukkan deskripsi singkat tentang kami dan kata kunci yang relevan (dipisahkan oleh titik koma).</message>	

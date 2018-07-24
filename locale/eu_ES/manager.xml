@@ -245,7 +245,6 @@
 	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"><![CDATA[<strong>Oharra:</strong> Ebaluatzaileei mezu elektroniko bat bidaltzen zaienean bidalketa bat ebaluatzeko gonbita egiteko, zuzenean bidalketaren orrira eramaten duen URL bat jarriko da mezuan (saioa hasteko behar diren gainerako orrietarako sarbidearekin). Segurtasun-arrazoiengatik, aukera honekin editoreek ezingo dute helbide elektronikorik aldatu edo CC edo BCC helbiderik gehitu ebaluatzaileei gonbitak bidali aurretik.]]></message>
 	<message key="manager.setup.reviewOptions.reviewerRatings">Ebaluatzaileen kalifikazioa</message>
 	<message key="manager.setup.reviewOptions.reviewerReminders">Ebaluatzaileentzako oroigarriak</message>
-	<message key="manager.setup.reviewOptions.showEnsuringLink"><![CDATA[Ezarri <a href="javascript:openHelp('{$blindReviewHelpId}')" class="action">Ebaluazio anonimoa segurtatzen</a> duten estekak egileek eta ebaluatzaileek fitxategiak kargatzen dituzten orrietarako.]]></message>
 	<message key="manager.setup.reviewPolicy">Ebaluazio-politika</message>
 	<message key="manager.setup.searchEngineIndexing">Bilatzailearen indexatzea</message>
 	<message key="manager.setup.searchEngineIndexingDescription">Bilatzaileen bitartez aldizkari honetara heltzen laguntzeko, idatzi aldizkariaren azalpen labur bat eta gako-hitz esanguratsuak (puntu eta komaz bereizita).</message>

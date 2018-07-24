@@ -249,7 +249,6 @@ I begge tilfælde har redaktøren mulighed for at inkludere bedømmelseskommenta
 	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"><![CDATA[<strong>Bemærk!:</strong> E-mail-invitationen til bedømmere indeholder en speciel URL-adresse, der sender de inviterede bedømmere direkte til siden Bedømmelse for manuskriptet (med adgang til andre sider, hvor de skal logge på). Af sikkerhedshensyn i forbindelse med denne indstilling kan redaktører ikke ændre e-mail-adresser eller tilføje CC'er eller BCC'er forud for afsendelse af invitationer til bedømmere.]]></message>
 	<message key="manager.setup.reviewOptions.reviewerRatings">Bedømmerklassificeringer</message>
 	<message key="manager.setup.reviewOptions.reviewerReminders">Påmindelser til bedømmere</message>
-	<message key="manager.setup.reviewOptions.showEnsuringLink"><![CDATA[Indeholder links til <a href="javascript:openHelp('{$blindReviewHelpId}')" class="action">Sikring af blind review</a> på sider, hvor forfattere og bedømmere overfører filer.]]></message>
 	<message key="manager.setup.reviewPolicy">Bedømmelsespolitik</message>
 	<message key="manager.setup.searchEngineIndexing">Søgemaskineindeksering</message>
 	<message key="manager.setup.searchEngineIndexingDescription">Hjælp brugere af søgemaskiner med at finde dette tidsskrift ved at angive en kort beskrivelse af tidsskriftet samt relevante nøgleord (adskilt af semikolon).</message>

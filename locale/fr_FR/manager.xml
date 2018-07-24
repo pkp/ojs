@@ -255,7 +255,6 @@
 	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"><![CDATA[<strong>Note :</strong> Le courriel d'invitation destiné aux rapporteurs contient une URL qui les mène directement à la page d'évaluation de la soumission. L'accès à toute autre page requiert de se connecter. Pour des raisons de sécurité, les rédacteurs ne peuvent pas modifier les adresses de courriel, ni ajouter des CC ou CCI avant d'envoyer une invitation aux rapporteurs.]]></message>
 	<message key="manager.setup.reviewOptions.reviewerRatings">Notations du rapporteur</message>
 	<message key="manager.setup.reviewOptions.reviewerReminders">Rappels au rapporteur</message>
-	<message key="manager.setup.reviewOptions.showEnsuringLink"><![CDATA[Fournir un lien vers <a href="javascript:openHelp('{$blindReviewHelpId}')" class="action">Assurer une évaluation à l'aveugle</a> dans les pages où les auteurs et les rapporteurs peuvent télécharger des fichiers.]]></message>
 	<message key="manager.setup.reviewPolicy">Politique d'évaluation</message>
 	<message key="manager.setup.searchEngineIndexing">Indexation par les moteurs de recherche</message>
 	<message key="manager.setup.searchEngineIndexingDescription">Pour aider les moteurs de recherche à découvrir cette revue, fournir une brève description de la revue et des mots-clés pertinents (séparés par un point virgule).</message>

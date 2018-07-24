@@ -246,7 +246,6 @@
 	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"><![CDATA[<strong>Aviso:</strong> O convite ao avaliador conterá uma URL especial que levará os avaliadores diretamente à página de avaliação da submissão em questão (sendo necessário realizar o login para acessar outras páginas). Para garantir a segurança do processo ao usar esta opção, não é permitido ao editor alterar endereços de e-mail ou incluir destinatários de Cópias Carbono (CCs) ou Cópias Ocultas (BCCs) antes de enviar a mensagem aos avaliadores.]]></message>
 	<message key="manager.setup.reviewOptions.reviewerRatings">Classificação de avaliadores</message>
 	<message key="manager.setup.reviewOptions.reviewerReminders">Lembretes aos avaliadores</message>
-	<message key="manager.setup.reviewOptions.showEnsuringLink"><![CDATA[Oferecer links para informações sobre <a href="javascript:openHelp('{$blindReviewHelpId}')" class="action">Assegurando a avaliação pelos pares cega</a> nas páginas onde autores e avaliadores enviam documentos ao sistema.]]></message>
 	<message key="manager.setup.reviewPolicy">Política de avaliação</message>
 	<message key="manager.setup.searchEngineIndexing">Indexação para mecanismos de busca</message>
 	<message key="manager.setup.searchEngineIndexingDescription">Para auxiliar usuários de mecanismos de busca a descobrir sua revista, inclua uma breve descrição sobre a revista e palavras-chave relevantes (separadas por ponto-e-vírgula ";").</message>

@@ -292,7 +292,6 @@
 	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"><![CDATA[<strong>Huom.</strong> Arvioijille lähetettävässä sähköpostikutsussa on erityinen URL-osoite, jonka kautta arvioijat pääsevät suoraan käsikirjoituksen arviointisivulle (muille sivuille pääsy vaatii sisäänkirjautumista). Tietoturvasyistä tämän valinnan kohdalla toimittajat eivät voi muokata sähköpostiosoitteita tai lisätä kopioita tai piilokopioita ennen viestin lähettämistä.]]></message>
 	<message key="manager.setup.reviewOptions.reviewerRatings">Arvioijien arvostelu</message>
 	<message key="manager.setup.reviewOptions.reviewerReminders">Arvioijan muistutukset</message>
-	<message key="manager.setup.reviewOptions.showEnsuringLink"><![CDATA[Anna linkki kohtaan <a href="javascript:openHelp('{$blindReviewHelpId}')" class="action">Sokkoarvioinnin varmistaminen</a> sellaisilla sivuilla, joissa kirjoittajat ja arvioijat lataavat tiedostoja.]]></message>
 	<message key="manager.setup.reviewPolicy">Arviointiperiaatteet</message>
 	<message key="manager.setup.searchEngineIndexing">Hakukoneindeksointi</message>
 	<message key="manager.setup.searchEngineIndexingDescription">Anna julkaisusta lyhyt kuvaus, jonka hakukoneet voivat näyttää listatessaan julkaisun hakutuloksissa.</message>

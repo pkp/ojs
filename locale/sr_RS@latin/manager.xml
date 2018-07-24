@@ -491,7 +491,6 @@
 	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled">Uključi pristup recenzenta jednim klikom.</message>
 	<message key="manager.setup.reviewOptions.reviewerRatings">Rangiranja recenzenta</message>
 	<message key="manager.setup.reviewOptions.reviewerReminders">Podsetnici za recenzente</message>
-	<message key="manager.setup.reviewOptions.showEnsuringLink"><![CDATA[Поставите везу за  <a href="javascript:openHelp('{$blindReviewHelpId}')" class="action">Obezbeđujemo slepu recenziju</a> na stranama gde autori i recenzenti postavljaju na server svoje fajlove..]]></message>
 	<message key="manager.subscriptionPolicies.onlinePaymentNotifications">Obaveštenja o onlajn plaćanjima</message>
 	<message key="manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional">Obavesti Upravnika za pretplatu emajlom o kupovini institucionalne pretplate (preporučeno).</message>
 	<message key="manager.subscriptionPolicies.openAccessOptions">Mogućnosti otvorenog pristupa za pretplatu na časopise</message>
