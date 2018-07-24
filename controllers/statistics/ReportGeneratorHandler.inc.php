@@ -46,6 +46,7 @@ class ReportGeneratorHandler extends Handler {
 			$json->setContent($formContent);
 		}
 
+		header('Content-Type: application/json');
 		return $json->getString();
 	}
 
@@ -67,6 +68,7 @@ class ReportGeneratorHandler extends Handler {
 			$json->setStatus(false);
 		}
 
+		header('Content-Type: application/json');
 		return $json->getString();
 	}
 
@@ -97,6 +99,7 @@ class ReportGeneratorHandler extends Handler {
 			$json->setContent($articlesInfo);
 		}
 
+		header('Content-Type: application/json');
 		return $json->getString();
 	}
 
@@ -129,6 +132,7 @@ class ReportGeneratorHandler extends Handler {
 			}
 		}
 
+		header('Content-Type: application/json');
 		return $json->getString();
 	}
 
