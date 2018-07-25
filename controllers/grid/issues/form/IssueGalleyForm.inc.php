@@ -146,7 +146,7 @@ class IssueGalleyForm extends Form {
 			if ($temporaryFile) {
 				// Galley has a file, delete it before uploading new one
 				if ($issueGalley->getFileId()) {
-					$issueFileManager->deleteFile($issueGalley->getFileId());
+					$issueFileManager->deleteById($issueGalley->getFileId());
 				}
 				// Upload new file
 				$issueFile = $issueFileManager->fromTemporaryFile($temporaryFile);
