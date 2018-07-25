@@ -116,7 +116,7 @@ class IssueForm extends Form {
 	/**
 	 * @copydoc Form::initData()
 	 */
-	function initData($request) {
+	function initData() {
 		if (isset($this->issue)) {
 			$locale = AppLocale::getLocale();
 			$this->_data = array(
