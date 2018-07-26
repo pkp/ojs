@@ -146,9 +146,15 @@ Le paragraphe qui commence par « Ce dernier sujet... » n'est pas en retrait.</
 	<message key="default.journalSettings.purchaseArticleFeeDescription">Le paiement de ces frais vous permettra d'afficher, de télécharger, et d'imprimer cet article.</message>
 	<message key="section.default.title">Articles</message>
 	<message key="section.default.abbrev">ART</message>
+	<message key="default.journalSettings.submissionFee">Soumission d'article</message>
+	<message key="default.journalSettings.fastTrackFee">Évaluation prioritaire</message>
 	<message key="default.journalSettings.publicationFee">Publication d'article</message>
 	<message key="default.journalSettings.purchaseArticleFee">Acheter un article</message>
+	<message key="default.journalSettings.membershipFee">Adhésion à l'association</message>
+	<message key="default.journalSettings.donationFee">Dons à la revue</message>
+	<message key="section.default.policy"></message>
 	<message key="default.journalSettings.purchaseIssueFee">Acheter un numéro</message>
+	<message key="default.journalSettings.purchaseIssueFeeDescription">Le règlement du montant dû vous permettra de voir, de télécharger et d'imprimer ce numéro.</message>
 	<message key="default.journalSettings.emailHeader">Le message suivant est délivré au nom de {$journalName}.
 ________________________________________________________________________</message>
 	<message key="default.genres.article">Texte de l'article</message>
@@ -178,4 +184,7 @@ ________________________________________________________________________</messag
 	<message key="default.groups.name.externalReviewer">Rapporteur</message>
 	<message key="default.groups.plural.externalReviewer">Rapporteurs</message>
 	<message key="default.groups.abbrev.externalReviewer">ÉVAL</message>
+        <message key="default.groups.name.committeemember">Membre du Comité de Rédaction</message>
+        <message key="default.groups.plural.committeemembers">Membres du Comité de Rédaction</message>
+        <message key="default.groups.abbrev.committeemembers">Membres du Comité</message>
 </locale>
