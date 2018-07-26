@@ -184,7 +184,7 @@ ________________________________________________________________________</messag
 	<message key="default.groups.name.externalReviewer">Rapporteur</message>
 	<message key="default.groups.plural.externalReviewer">Rapporteurs</message>
 	<message key="default.groups.abbrev.externalReviewer">ÉVAL</message>
-        <message key="default.groups.name.committeemember">Membre du Comité de Rédaction</message>
-        <message key="default.groups.plural.committeemembers">Membres du Comité de Rédaction</message>
-        <message key="default.groups.abbrev.committeemembers">Membres du Comité</message>
+	<message key="default.groups.name.committeemember">Membre du Comité de Rédaction</message>
+	<message key="default.groups.plural.committeemembers">Membres du Comité de Rédaction</message>
+	<message key="default.groups.abbrev.committeemembers">Membres du Comité</message>
 </locale>
