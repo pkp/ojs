@@ -576,7 +576,7 @@ Ystävällisin terveisin,<br />
 		<subject>Julkaistavat tiedostot valmiita</subject>
 		<body><![CDATA[Hyvä {$editorialContactName},<br />
 <br />
-Julkaisuun {$contectName} liittyvän käsikirjoituksen &quot;{$submissionTitle}&quot; julkaistavat tiedostot on nyt taitettu ja ne ovat valmiit oikolukua varten.<br />
+Julkaisuun {$contextName} liittyvän käsikirjoituksen &quot;{$submissionTitle}&quot; julkaistavat tiedostot on nyt taitettu ja ne ovat valmiit oikolukua varten.<br />
 <br />
 Mikäli teillä on kysyttävää, otattehan minuun yhteyttä.<br />
 <br />
