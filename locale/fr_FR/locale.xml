@@ -163,6 +163,7 @@
 
 	<!-- Rôle -->
 	<message key="user.role.manager">Directeur de la revue</message>
+	<message key="user.role.sectionEditor">Rédacteur de rubrique</message>
 	<message key="user.role.subEditor">Rédacteur de rubrique</message>
 	<message key="user.role.subscriptionManager">Responsable des abonnements</message>
 	<message key="user.role.managers">Directeurs de revue</message>
@@ -823,8 +824,8 @@ Titre du système de classification]]></message>
 	<message key="user.subscriptions.purchaseNewSubscription">Souscrire à un nouvel abonnement</message>
 	<message key="user.subscriptions.purchaseIndividualSubscription">Souscrire à un abonnement individuel</message>
 	<message key="user.subscriptions.purchaseInstitutionalSubscription">Souscrire à un abonnement institutionnel</message>
-	<message key="user.subscriptions.expires">Expire</message>
-	<message key="user.subscriptions.expired">Expiré</message>
+	<message key="user.subscriptions.expires">Expire le {$date}</message>
+	<message key="user.subscriptions.expired">Expiré le {$date}</message>
 	<message key="user.subscriptions.viewSubscriptionTypes">Afficher les types d'abonnement disponibles</message>
 	<message key="user.subscriptions.form.typeId">Type d'abonnement</message>
 	<message key="user.subscriptions.form.membership">Adhésion</message>
@@ -1018,4 +1019,18 @@ La validation peut échouer sur les URL de recherche qui nécessitent des formul
 <br /> <br />
 L'installation de CLOCKSS pour Open Journal Systems n'a pas besoin d'avoir lieu avant que la publication soit en cours.]]></message>
 	<message key="submission.layout.galley.remoteURL">URL du contenu hébergé à distance</message>
+	<message key="reviewer.submission.reviewFormResponse.form.responseRequired">Merci de remplir les champs requis.</message>
+	<message key="user.reviewerPrompt.optin">Oui, j'accepte d'évaluer des articles pour ce journal.</message>
+	<message key="subscriptions.status.noSubscription">Vous n'avez pas d'abonnement actif.</message>
+	<message key="reader.purchasePrice">({$currency} {$price})</message>
+	<message key="manager.setup.porticoDescription">Portico est un service non commercial d'archivage. Si votre journal a signé un contrat avec Portico, activez le ici :</message>
+	<message key="user.register.form.emailConsentAllContexts">Oui, je souhaite être notifié pour toutes les nouvelles publications et annonces pour tous les journaux auxquels je suis abonné.</message>
+	<message key="payment.type.publication.required">Le tarif de publication est requis pour le paiement.</message>
+	<message key="payment.requestPublicationFee">Prix de publication  ({$feeAmount})</message>
+	<message key="payment.notFound">Un paiement a été demandé, mais la requête a expiré. Contactez le responsable du journal pour les détails.</message>
+	<message key="log.editor.recommendation">La recommandation  ({$decision}) pour la soumission {$submissionId} a été déposé par {$editorName}.</message>
+	<message key="notification.type.public">Annonces publiques</message>
+	<message key="notification.type.publicationScheduled">Cette soumission a été programmée pour publication.</message>
+	<message key="navigation.subscriptions">Abonnements</message>
+	<message key="log.editor.submissionExpedited">{$editorName} prend en charge le processus éditorial pour la soumission {$submissionId}.</message>
 </locale>
