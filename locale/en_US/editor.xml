@@ -11,8 +11,9 @@
   * Localization strings.
   -->
 
+
 <locale name="en_US" full_name="U.S. English">
-    <!-- added by pkel/retostauffer -->
+    <!-- added by pkel/retostauffer: status messages -->
     <message key="editor.submission.workflowDecisions.stageDecision">A decision has already been submitted</message>
     <message key="editor.submission.workflowDecisions.stageDecision.change">Change decision</message>
     <message key="editor.submission.workflowDecisions.stageDecision.Review.revision">Revision required</message>
