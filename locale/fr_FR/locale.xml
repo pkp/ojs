@@ -163,7 +163,6 @@
 
 	<!-- Rôle -->
 	<message key="user.role.manager">Directeur de la revue</message>
-	<message key="user.role.sectionEditor">Rédacteur de rubrique</message>
 	<message key="user.role.subEditor">Rédacteur de rubrique</message>
 	<message key="user.role.subscriptionManager">Responsable des abonnements</message>
 	<message key="user.role.managers">Directeurs de revue</message>
