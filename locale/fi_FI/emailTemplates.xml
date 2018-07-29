@@ -576,7 +576,7 @@ Ystävällisin terveisin,<br />
 		<subject>Julkaistavat tiedostot valmiita</subject>
 		<body><![CDATA[Hyvä {$editorialContactName},<br />
 <br />
-Julkaisuun {$contectName} liittyvän käsikirjoituksen &quot;{$submissionTitle}&quot; julkaistavat tiedostot on nyt taitettu ja ne ovat valmiit oikolukua varten.<br />
+Julkaisuun {$contextName} liittyvän käsikirjoituksen &quot;{$submissionTitle}&quot; julkaistavat tiedostot on nyt taitettu ja ne ovat valmiit oikolukua varten.<br />
 <br />
 Mikäli teillä on kysyttävää, otattehan minuun yhteyttä.<br />
 <br />
@@ -812,5 +812,14 @@ Päätöksemme on: Käsikirjoitus on hylätty<br />
 {$editorialContactSignature}<br />]]></body>
 		<description>This email is send to the author if the editor declines his submission initially, before the review stage</description>
 	</email_text>
-
+	<email_text key="EDITOR_RECOMMENDATION">
+		<subject>Toimittajan suositus</subject>
+		<body><![CDATA[{$editors}:<br />
+<br />
+Julkaisun {$contextName} käsikirjoitusta &quot;{$submissionTitle}&quot; on: {$recommendation}<br />
+<br />
+Ystävällisin terveisin,<br />
+{$editorialContactSignature}]]></body>
+		<description>This email from the recommending Editor or Section Editor to the decision making Editors or Section Editors notifies them of a final recommendation regarding the submission.</description>
+	</email_text>
 </email_texts>

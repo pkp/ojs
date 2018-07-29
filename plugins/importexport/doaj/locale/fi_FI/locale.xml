@@ -22,4 +22,5 @@
 	<message key="plugins.importexport.doaj.settings.form.testMode.description">Käytä DOAJ-palvelun testirajapintaa. Poista tämä valinta, kun haluat aloittaa artikkeleiden rekisteröinnin.</message>
 	<message key="plugins.importexport.doaj.register.error.mdsError">Talletus ei onnistunut! DOAJ API palautti virheen: '{$param}'.</message>
 	<message key="plugins.importexport.doaj.cliUsage">Käyttö: {$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...</message>
+	<message key="plugins.importexport.doaj.senderTask.name">DOAJ automaattisen rekisteröinnin tehtävä</message>
 </locale>
