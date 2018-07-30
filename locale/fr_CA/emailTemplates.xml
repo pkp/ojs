@@ -145,7 +145,7 @@ Veuillez accéder au site Web de la revue avant le {$responseDueDate} pour nous 
 <br />
 La date d'échéance de l'évaluation a été fixée au {$reviewDueDate}.<br />
 <br />
-Si vous n'avez pas de nom d'utilisateur et de mot de passe pour le site Web de la revue, cliquer sur le lien ci-dessous pour réinitialiser votre mot de passe (qui vous sera envoyé par courriel avec votre nom d'utilisateur). {$psasswordResetUrl}<br />
+Si vous n'avez pas de nom d'utilisateur et de mot de passe pour le site Web de la revue, cliquez sur le lien ci-dessous pour réinitialiser votre mot de passe (qui vous sera envoyé par courriel avec votre nom d'utilisateur). {$passwordResetUrl}<br />
 <br />
 URL de la soumission : {$submissionReviewUrl}<br />
 <br />
@@ -164,7 +164,7 @@ En espérant que vous accepterez notre demande, veuillez agréer l'expression de
 <br />
 Nous croyons que vous seriez un excellent évaluateur pour le manuscrit intitulé « {$submissionTitle} » qui a été soumis à la revue {$contextName}. Vous trouverez un résumé de la soumission ci-dessous.  Nous espérons que vous accepterez ce travail essentiel à la publication de la revue.<br />
 <br />
-Veuillez accéder au site Web de la revue avant le {$responseDueDate} pour nous informer si vous acceptez de faire l'évaluation ou non. Vous pouvez également y consulter la soumission et y enregistrer votre évaluation et votre recommandation. Le site Web se trouve à l'adresse suivante : {$contextUrl}<br />
+Veuillez accéder au site Web de la revue avant le {$responseDueDate} pour nous informer si vous acceptez de faire l'évaluation ou non. Vous pouvez également y consulter la soumission et y enregistrer votre évaluation et votre recommandation.< br />
 <br />
 Date limite pour l'évaluation {$reviewDueDate}.<br />
 <br />
@@ -805,11 +805,11 @@ Merci de considérer cette requête.<br />
 	<email_text key="REVIEW_REQUEST_REMIND_AUTO_ONECLICK">
 		<subject>Demande d'évaluation d'un article</subject>
 		<body><![CDATA[{$reviewerName}:<br />
-Ceci est un rappel concernant notre demande d'évaluation de &quot;{$submissionTitle},&quot; pour {$contextName}. Nous espérions recevoir une réponse avant le {$responseDueDate}. Ce courriel est envoyé automatiquement après dépassement du délais.
+Ceci est un rappel concernant notre demande d'évaluation de &quot;{$submissionTitle},&quot; pour {$contextName}. Nous espérions recevoir une réponse avant le {$responseDueDate}. Ce courriel est envoyé automatiquement après dépassement du délai.
 <br />
 Nous pensons que vous seriez un excellent évaluateur pour le manuscrit. Vous trouverez un résumé de la soumission en suivant l'hyperlien plus bas.<br />
 <br />
-Vous seriez aimable de vous authentifier sur la page de la revue en nous indiquant si vous participerez à cette évaluation ou non, ou mieux, indiquer les recommandations suivant l'évaluation de ce manuscrit.<br />
+Nous vous remercions de bien vouloir vous authentifier sur la page de la revue en nous indiquant si vous participerez à cette évaluation ou non. Dans le cas d’une réponse positive, vous pourrez accéder à la soumission et enregistrer votre évaluatio net votre recommandation.<br />
 <br />
 L'évaluation est dû pour le  {$reviewDueDate}.<br />
 <br />
@@ -818,7 +818,7 @@ Si vous n'avez pas votre identifiant pour le site de la revue, vous pouvez utili
 <br />
 Hyperlien de la soumission: {$submissionReviewUrl}<br />
 <br />
-Merci de considérer cette requête.<br />
+Merci de considérer cette demande.<br />
 <br />
 {$editorialContactSignature}<br />
 <br />
@@ -833,15 +833,15 @@ Merci de considérer cette requête.<br />
 <br />
 Ceci concerne le manuscrit "{$submissionTitle}", qui est présentement  évalué par{$contextName}.<br />
 <br />
-Suivant l'évaluation de la dernière version du manuscrit, l'auteur a soumis une version révisé de son document. Nous apprécierions que vous évaluiez cette nouvelle version.<br />
+Suivant l'évaluation de la dernière version, l'auteur a soumis une version révisée de son document. Nous apprécierions que vous évaluiez cette nouvelle version.<br />
 <br />
-Veuillez vous authentifier sur la page de la revue avant le {$responseDueDate} pour y indiquer si vous participerez à cette évaluation ou non, ou simplement indiquer les recommandations suivant votre évaluation.<br />
+Veuillez vous authentifier sur la page de la revue avant le {$responseDueDate} pour y indiquer si vous participerez à cette évaluation ou non. Vous pourrez aussi y indiquer les recommandations de votre évaluation, si vous acceptez de participer.<br />
 <br />
-L'évaluation est dû pour le  {$reviewDueDate}.<br />
+L'évaluation est due pour le  {$reviewDueDate}.<br />
 <br />
 Hyperlien de la soumission: {$submissionReviewUrl}<br />
 <br />
-Merci de considérer cette requête.<br />
+Merci de considérer cette demande.<br />
 <br />
 {$editorialContactSignature}<br />
 <br />
@@ -881,5 +881,25 @@ Si vous avez des questions, n'hésitez pas à communiquer avec nous. Nous vous r
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Ce courriel, lorsque activé, est envoyé automatiquement aux autres auteurs, i.e. ceux qui ne sont pas l'utilisateur enregistré faisant la soumission.</description>
+	</email_text>
+	<email_text key="EDITOR_DECISION_INITIAL_DECLINE">
+		<subject>Décision du rédacteur</subject>
+		<body><![CDATA[{$authorName}:<br />
+<br />
+Nous avons pris une décision concernant votre soumission à {$contextName}, &quot;{$submissionTitle}&quot;.<br />
+<br />
+Notre décision: Refuser la soumission<br />
+<br />
+{$editorialContactSignature}<br />]]></body>
+		<description>Cet courriel est envoyé à l'auteur si la soumission est déclinée avant la phase d'évaluation</description>
+	</email_text>
+	<email_text key="EDITOR_RECOMMENDATION">
+		<subject>Recommandation du rédacteur</subject>
+		<body><![CDATA[{$editors}:<br />
+<br />
+La recommandation concernant la soumission de &quot;{$submissionTitle}&quot; à {$contextName} est de: {$recommendation}<br />
+<br />
+{$editorialContactSignature}<br />]]></body>
+		<description>Ce courriel envoyé par le rédacteur ou le rédacteur de rubrique aux rédacteurs en charge de la prise de décisions les informe d'une recommandation finale concernant la soumission.</description>
 	</email_text>
 </email_texts>
