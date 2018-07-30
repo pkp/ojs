@@ -15,7 +15,7 @@
 	<message key="manager.emails.confirmResetAll">Êtes-vous certain de vouloir réinitialiser tous les modèles de courriels dans cette revue? Vous allez perdre toutes les personnalisations que vous avez effectuées.</message>
 	<message key="manager.files.note">Note: L'explorateur de fichiers est une fonction avancée qui permet aux fichiers et aux répertoires associés à une revue d'être affichés et manipulés directement.</message>
 	<message key="manager.journalManagement">Gestion de la revue</message>
-	<message key="manager.language.confirmDefaultSettingsOverwrite">Ceci remplacera n'importe quel paramètre de langue spécifique à une revue que vous aviez pour cette langue</message>
+	<message key="manager.language.confirmDefaultSettingsOverwrite">Ceci remplacera n'importe quel paramètre de langue spécifique à une revue que vous aviez pour cette langue.</message>
 	<message key="manager.languages.languageInstructions"><![CDATA[OJS peut être mis à la disposition des utilisateurs dans l'une des nombreuses langues prises en charge. Aussi, OJS peut fonctionner comme système multilingue, ce qui permet aux utilisateurs d'alterner entre les langues sur chaque page, et rend possible la saisie de certaines données dans plusieurs langues supplémentaires.<br /><br />Si une langue prise en charge par OJS n'est pas inscrite ci-dessous, demander à votre administrateur de site d'installer la langue à partir de l'interface de l'administration du site. Pour des directives sur la prise en charge de nouvelles langues, veuillez consulter la documentation d'OJS.]]></message>
 	<message key="manager.languages.noneAvailable">Malheureusement, aucune autre langue n'est disponible. Veuillez communiquer avec votre administrateur de site si vous désirez utiliser d'autres langues avec cette revue.</message>
 	<message key="manager.languages.primaryLocaleInstructions">Cette langue sera la langue par défaut du site de la revue.</message>
@@ -114,7 +114,7 @@
 	<message key="manager.setup.competingInterests.requireAuthors">Les auteurs soumissionnaires doivent déposer une déclaration de conflits d'intérêts (CI) avec leur soumission.</message>
 	<message key="manager.setup.competingInterests.requireReviewers">Les évaluateurs doivent déposer une déclaration de CI avec chaque évaluation par les pairs qu'ils soumettent.</message>
 	<message key="manager.setup.copyeditInstructions">Directives pour la révision</message>
-	<message key="manager.setup.copyeditInstructionsDescription">Les directives pour la révision seront mises à la disposition des Réviseurs, Auteurs, et Rédacteurs de rubrique à l'étape de la révision de la soumission. Vous trouverez ci-dessous un ensemble d'instructions par défaut en HTML, qui peuvent être modifiées ou remplacées par le Directeur de la revue en tout temps (en HTML ou texte brut).</message>
+	<message key="manager.setup.copyeditInstructionsDescription">Les directives pour la révision seront mises à la disposition des Réviseurs, Auteurs et Rédacteurs de rubrique à l'étape de la révision de la soumission. Vous trouverez ci-dessous un ensemble d'instructions par défaut en HTML, qui peuvent être modifiées ou remplacées par le Directeur de la revue en tout temps (en HTML ou texte brut).</message>
 	<message key="manager.setup.copyrightNotice">Mention de droit d'auteur</message>
 	<message key="manager.setup.coverage">Couverture</message>
 	<message key="manager.setup.coverageDescription">Fait référence à l'emplacement géo-spatial, à la couverture historique ou chronologique, ou à des caractéristiques de l'échantillon de recherche.</message>
@@ -224,7 +224,7 @@
 	<message key="manager.setup.proofingInstructionsDescription">Les directives pour la correction d'épreuves seront mises à la disposition des Correcteurs d'épreuves, Auteurs, Responsable de la mise en page, et Rédacteurs de rubrique à l'étape de la Révision de la soumission. Vous trouverez ci-dessous un ensemble de directives par défaut en HTML, qui peuvent être modifiées ou remplacées par le Directeur de la revue en tout temps (en HTML ou texte brut).</message>
 	<message key="manager.setup.provideRefLinkInstructions">Fournir des directives aux Responsables de la mise en page.</message>
 	<message key="manager.setup.publicationSchedule">Calendrier de publication</message>
-	<message key="manager.setup.publicationScheduleDescription">Les articles de la revue peuvent être publiés ensemble, comme partie intégrante d'un numéro avec son propre sommaire. Des articles individuels peuvent aussi être publiés dès qu'ils sont prêts, en les ajoutant au sommaire du numéro courant. Fournir aux lecteurs, dans À propos de la revue, une instruction relativement au système que cette revue utilisera et la périodicité de publication prévue.</message>
+	<message key="manager.setup.publicationScheduleDescription">Les articles de la revue peuvent être publiés ensemble, comme partie  d'un numéro avec son propre sommaire. Il est aussi possible de publier des articles individuels dès qu'ils sont prêts, en les ajoutant au sommaire d'un numéro courant. Il convient de fournir aux lecteurs, dans la section "À propos de la revue", des informations quant à la manière de procéder de la revue et sur la périodicité de publication prévue.</message>
 	<message key="manager.setup.publicationScheduling">Planification du calendrier de publication</message>
 	<message key="manager.setup.publicIdentifier">Identification du contenu de la revue</message>
 	<message key="manager.setup.publisher">Éditeur</message>
@@ -527,11 +527,11 @@ Il existe cinq niveaux d'autorisation : Les Directeurs de revue ont accès à to
 	<message key="manager.setup.journalThumbnail.description">Un logo ou une image de la revue qui peut être utilisé dans des listes de revues.</message>
 	<message key="manager.setup.journalThumbnail.altText">Texte alternatif pour la vignette</message>
 	<message key="manager.setup.enableArchive">Activer l'archivage</message>
-	<message key="manager.setup.lockssLicenseDescription"><![CDATA[*Une licence LOCKSS apparaîtra dans la section "À propos" de cette revue sous "Archiver": <a href="http://www.lockss.org/community/publishers-titles-gln/" target="_blank">Licence LOCKSS</a>]]></message>
+	<message key="manager.setup.lockssLicenseDescription"><![CDATA[Une licence LOCKSS apparaîtra dans la section "À propos" de cette revue sous "Archiver": <a href="http://www.lockss.org/community/publishers-titles-gln/" target="_blank">Licence LOCKSS</a>]]></message>
 	<message key="manager.setup.lockssLicenseLabel">Description de la licence LOCKSS</message>
 	<message key="manager.setup.lockssTitle">LOCKSS</message>
-	<message key="manager.setup.clockssEnable"><![CDATA[*Activer CLOCKSS pour stocker et distribuer les contenus de la revue dans les bibliothèques participantes via une page CLOCKSS <a href="{$clockssUrl}" target="_blank">Publisher Manifest</a>.]]></message>
-	<message key="manager.setup.clockssLicenseDescription"><![CDATA[*Une licence CLOCKSS apparaîtra dans la section "À propos" de cette revue"sous "Archiver" : <a href="http://clockss.org/" target="_blank"> Licence CLOCKSS</a>]]></message>
+	<message key="manager.setup.clockssEnable"><![CDATA[Activer CLOCKSS pour stocker et distribuer les contenus de la revue dans les bibliothèques participantes via une page CLOCKSS <a href="{$clockssUrl}" target="_blank">Publisher Manifest</a>.]]></message>
+	<message key="manager.setup.clockssLicenseDescription"><![CDATA[Une licence CLOCKSS apparaîtra dans la section "À propos" de cette revue"sous "Archiver" : <a href="http://clockss.org/" target="_blank"> Licence CLOCKSS</a>]]></message>
 	<message key="manager.setup.focusAndScope.description">Décrire aux auteurs, aux lecteurs et aux bibliothécaires les types d'articles et autres objets publiés dans la revue.</message>
 	<message key="manager.setup.form.issnInvalid">L'ISSN inscrit n'est pas valide.</message>
 	<message key="manager.setup.includeCreativeCommons">Pour les revues qui offrent le libre accès immédiatement ou avec une barrière mobile, ajouter une licence Creative Commons à toutes les publications au moment approprié.</message>
@@ -567,7 +567,7 @@ Il existe cinq niveaux d'autorisation : Les Directeurs de revue ont accès à to
 	<message key="manager.setup.faviconDescription">Ajoute un favicon pour cette revue qui sera affiché à côté de la barre de navigation lorsque les utilisateurs visitent le site.</message>
 	<message key="manager.setup.faviconInvalid">Format de favicon invalide. Les formats acceptés sont .ico, .png et .gif.</message>
 	<message key="manager.setup.clockssLicenseLabel">Description de la licence CLOCKSS</message>
-	<message key="manager.setup.clockssRegister"><![CDATA[*Inscrivez-vous au service CLOCKSS en visitant le site <a href="http://clockss.org/" target="_blank"> CLOCKSS </a>.]]></message>
+	<message key="manager.setup.clockssRegister"><![CDATA[Inscrivez-vous au service CLOCKSS en visitant le site <a href="http://clockss.org/" target="_blank"> CLOCKSS </a>.]]></message>
 	<message key="manager.setup.clockssTitle">CLOCKSS</message>
 	<message key="manager.setup.Issn">ISSN</message>
 	<message key="manager.statistics.reports.defaultReport.issuePageViews">Numéro Table des matières Pages vues</message>
@@ -579,7 +579,30 @@ Il existe cinq niveaux d'autorisation : Les Directeurs de revue ont accès à to
 	<message key="manager.setup.resetPermissions.confirm">êtes-vous certains de vouloir réinitialiser les autorisations déjà rattachées à l'article?</message>
 	<message key="plugins.importexport.common.cliError">ERREUR:</message>
 	<message key="plugins.importexport.common.error.unknownObjects">L'objet spécifié est introuvable.</message>
-	<message key="manager.setup.notifications.copyPrimaryContact">Envoyer une copie au contact principal, identifié dans les paramètres de la revue.</message>
+	<message key="manager.setup.notifications.copyPrimaryContact">Envoyer une copie au contact principal identifié dans les paramètres de la revue.</message>
 	<message key="plugins.importexport.common.error.unknownJournal">Le chemin pour la revue, "{$journalPath}", n'existe pas.</message>
 	<message key="manager.sections.hideAbout">Omettre cette section dans "À propos" de cette revue.</message>
+	<message key="subscriptionManager.subscription.confirmRemove">Êtes-vous certain de vouloir supprimer cet abonnement?</message>
+	<message key="manager.paymentTypes">Types de paiement</message>
+	<message key="manager.setup.plnPluginEnable">Plugiciel PKP PN activé</message>
+	<message key="manager.setup.plnDescription">Le PKP Preservation Network (PN) fournit des services de préservation gratuits pour toutes les revues sur OJS répondant à quelques critères de base.</message>
+	<message key="manager.setup.plnSettingsDescription">Cliquer sur le lien "Paramètres" pour accepter les conditions d'utilisation de PKP PN.</message>
+	<message key="manager.setup.plnPluginArchiving">PKP Preservation Network (PN)</message>
+	<message key="manager.setup.plnPluginNotInstalled">Le PKP Preservation Network (PN) fournit des services de préservation gratuits pour toutes les revues sur OJS répondant à quelques critères de base. Le plugiciel PKP PN pour OJS 3 est présentement en développement et sera disponible dans la galerie de plugiciels bientôt.</message>
+	<message key="manager.setup.otherLockss">Options d'archivage alternatives</message>
+	<message key="manager.setup.porticoEnable">Activer Portico pour stocker et distribuer le contenu de la revue aux bibliothèques participant à Portico.</message>
+	<message key="manager.setup.porticoTitle">Portico</message>
+	<message key="manager.subscriptionPolicies.xMonths">{$x} mois</message>
+	<message key="manager.subscriptionPolicies.xWeeks">{$x} semaines</message>
+	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths">Signaler par courriel l'expiration de leur abonnement aux abonnés</message>
+	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks">Signaler par courriel l'expiration de leur abonnement aux abonnés</message>
+	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths">Signaler par courriel l'expiration prochaine de leur abonnement aux abonnés</message>
+	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks">Signaler par courriel l'expiration prochaine de leur abonnement aux abonnés</message>
+	<message key="manager.subscriptions.confirmRenew">Êtes-vous certain de vouloir renouveler cet abonnement?</message>
+	<message key="manager.navigationMenus.subscriptions.description">Lien vers la page décrivant les abonnements offerts.</message>
+	<message key="manager.navigationMenus.mySubscriptions.description">Lien vers la page décrivant les abonnements courants et passés aux utilisateurs.</message>
+	<message key="manager.navigationMenus.mySubscriptions.conditionalWarning">Ce lien sera affiché uniquement si l'utilisateur est connecté.</message>
+	<message key="plugins.importexport.common.validation">Valider le XML avant l'exportation et l'enregistrement.</message>
+	<message key="plugins.importexport.common.export.error.inputFileNotReadable">Le fichier importé {$param} est illisible.</message>
+	<message key="bon">Ajouter un élément</message>
 </locale>
