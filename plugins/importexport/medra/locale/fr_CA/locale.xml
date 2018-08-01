@@ -41,4 +41,8 @@ S'il vous plaît, notez que le mot de passe sera sauvegardé en texte brute et n
 {$scriptName} {$pluginName} export [xmlFileName] [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...
 {$scriptName} {$pluginName} register [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...
 ]]></message>
+	<message key="plugins.importexport.medra.settings.form.exportIssuesAs.label">Numéros exportés comme</message>
+	<message key="plugins.importexport.medra.settings.form.automaticRegistration.description">OJS déposera  automatiquement les DOI chez mEDRA. Veuillez noter que cela peut prendre un peu de temps après la publication pour le traitement (par exemple, en fonction de votre configuration cronjob). Vous pouvez vérifier pour tous les DOI non enregistrés.</message>
+	<message key="plugins.importexport.medra.settings.form.testMode.description">Utiliser l'API test mEDRA (environnement de test) pour l'enregistrement des DOI. Ne pas oublier de supprimer cette option pour la production.</message>
+	<message key="plugins.importexport.medra.senderTask.name">Tâche d'enregistrement automatique mEDRA</message>
 </locale>

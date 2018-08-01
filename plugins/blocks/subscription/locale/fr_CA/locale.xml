@@ -22,4 +22,6 @@
 	<message key="plugins.block.subscription.comingFromIP">Adresse IP de provenance : {$ip}</message>
 	<message key="plugins.block.subscription.about">Abonnements</message>
 	<message key="plugins.block.subscription.loginToVerifySubscription">Ouvrir une session pour vérifier l'abonnement</message>
+	<message key="plugins.block.subscription.subscriptionRequired">L'abonnement est nécessaire pour accéder à certaines ressources.</message>
+	<message key="plugins.block.subscription.subscriptionRequired.learnMore">En savoir plus</message>
 </locale>

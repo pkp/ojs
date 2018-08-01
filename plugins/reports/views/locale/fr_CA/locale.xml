@@ -14,4 +14,9 @@
 <locale name = "fr_CA" full_name = "Français (Canada)">
 	<message key="plugins.reports.views.displayName">Rapport de consultation</message>
 	<message key="plugins.reports.views.description">Ce plugiciel met en place un rapport CSV décrivant le lectorat pour chaque article.</message>
+	<message key="plugins.reports.views.articleId">Article ID</message>
+	<message key="plugins.reports.views.articleTitle">Titre de l'article</message>
+	<message key="plugins.reports.views.datePublished">Date de publication</message>
+	<message key="plugins.reports.views.abstractViews">Nombre de vues du résumé</message>
+	<message key="plugins.reports.views.galleyViews">Nombre de vues des épreuves</message>
 </locale>
