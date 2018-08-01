@@ -12,6 +12,11 @@
   -->
 
 <locale name="es_ES" full_name="Español (España)">
-	<message key="plugins.reports.views.displayName">Ver informe</message>
-	<message key="plugins.reports.views.description">Este módulo genera un informe CSV que describe a los lectores de cada artículo.</message>
+	<message key="plugins.reports.views.displayName">Informe de vistas</message>
+	<message key="plugins.reports.views.description">Este módulo genera un informe CSV que muestra las lecturas de cada artículo.</message>
+	<message key="plugins.reports.views.articleId">ID de Artículo</message>
+	<message key="plugins.reports.views.articleTitle">Título del artículo</message>
+	<message key="plugins.reports.views.datePublished">Fecha de publicación</message>
+	<message key="plugins.reports.views.abstractViews">Vistas del resumen</message>
+	<message key="plugins.reports.views.galleyViews">Total de vistas de la galerada</message>
 </locale>
