@@ -196,7 +196,7 @@
 	<message key="user.showAllJournals">Mostrar Mis revistas</message>
 	<message key="user.registerForOtherJournals">Registrarse en Otras revistas</message>
 	<message key="user.myJournals">Mis revistas</message>
-	<message key="user.manageMySubscriptions">Gestionar Mis suscripciones</message>
+	<message key="user.manageMySubscriptions">Gestionar mis suscripciones</message>
 	<message key="user.noRoles.chooseJournal">En este momento su cuenta no está asociada a ninguna revista. Elija un revista:</message>
 	<message key="user.noRoles.noRolesForJournal">En este momento su cuenta no tiene asignado ningún rol para esta revista. Elija entre las siguientes acciones:</message>
 	<message key="user.noRoles.submitArticle">Envíe una propuesta</message>
@@ -246,9 +246,9 @@
 	<message key="subscriptions.status.active"> Activo/a</message>
 	<message key="subscriptions.status.needsInformation">Necesita información</message>
 	<message key="subscriptions.status.needsApproval">Necesita aprobación</message>
-	<message key="subscriptions.status.awaitingManualPayment">Esperando el Pago manual</message>
-	<message key="subscriptions.status.awaitingOnlinePayment">Esperando el Pago en línea</message>
-	<message key="subscriptions.status.other">Otro, ver Notas</message>
+	<message key="subscriptions.status.awaitingManualPayment">Esperando el pago manual</message>
+	<message key="subscriptions.status.awaitingOnlinePayment">Esperando el pago en línea</message>
+	<message key="subscriptions.status.other">Otro, ver notas</message>
 	<message key="subscriptions.individualDescription">Los suscriptores individuales deben iniciar sesión para acceder al contenido de la suscripción.</message>
 	<message key="subscriptions.institutionalDescription">Los suscriptores institucionales no necesitan iniciar sesión. El dominio del usuario/a o la dirección IP se utilizan para dar acceso al contenido de la suscripción.</message>
 	<message key="subscriptions.institutionalOnlinePaymentDescription"><![CDATA[<strong>Nota:</strong> Antes de activar las suscripciones institucionales adquiridas en línea, es necesario aprobar su dominio y rangos de IP.]]></message>
@@ -338,9 +338,6 @@
 	<!-- General plugin information -->
 	<message key="plugins.categories.auth.description">Los módulos de autorización permiten a Open Journal Systems delegar las tareas de autenticación de usuarios/as a otros sistemas, como servidores LDAP.</message>
 	<message key="plugins.categories.generic.description">Los módulos genéricos se utilizan para ampliar las características del Open Journal Systems de diversas maneras y que son incompatibles con otras categorías de módulos.</message>
-	<message key="plugins.categories.implicitAuth">Módulos de autenticación implícita</message>
-	<message key="plugins.categories.implicitAuth.description">Los módulos de autenticación implícita ponen en funcionamiento un soporte para la autenticación de usuarios/as basado en encabezados http.</message>
-
 	<!-- Files Browser -->
 
 	<!-- Journal Setup -->
@@ -577,7 +574,6 @@
 	<!-- Registration -->
 	<message key="user.register.noJournals">En este sitio no hay revistas en las que se pueda registrar.</message>
 	<message key="user.register.privacyStatement">Declaración de privacidad</message>
-	<message key="user.register.loginToRegister">Introduzca su nombre de usuario/a y contraseña actual para registrarse en esta revista.</message>
 	<message key="user.register.registrationDisabled">En este momento esta revista no acepta registros de usuario/a.</message>
 	<message key="user.register.form.passwordLengthTooShort">La contraseña que ha introducido no es bastante larga.</message>
 	<message key="user.register.readerDescription">Recibirá una notificación en su correo electrónico cuando se publique un nuevo número de la revista.</message>
@@ -604,8 +600,8 @@
 	<message key="user.subscriptions.purchaseNewSubscription">Comprar una nueva suscripción</message>
 	<message key="user.subscriptions.purchaseIndividualSubscription">Comprar una suscripción individual</message>
 	<message key="user.subscriptions.purchaseInstitutionalSubscription">Comprar una suscripción institucional</message>
-	<message key="user.subscriptions.expires">Caduca</message>
-	<message key="user.subscriptions.expired">Caducada</message>
+	<message key="user.subscriptions.expires">Expira el {$date}</message>
+	<message key="user.subscriptions.expired">Expiró el {$date}</message>
 	<message key="user.subscriptions.viewSubscriptionTypes">Ver tipos de suscripción disponibles</message>
 	<message key="user.subscriptions.form.typeId">Tipo de suscripción</message>
 	<message key="user.subscriptions.form.membership">Afiliación</message>
@@ -671,7 +667,6 @@
 	<message key="about.focusAndScope">Enfoque y alcance</message>
 	<message key="about.sectionPolicies">Políticas de sección</message>
 	<message key="about.submissions">Envíos</message>
-	<message key="about.onlineSubmissions">Envíos en línea</message>
 	<message key="about.onlineSubmissions.login">Ir a Iniciar sesión</message>
 	<message key="about.onlineSubmissions.registrationRequired">El registro y el inicio de sesión son necesarios para enviar elementos en línea y para comprobar el estado de los envíos recientes. {$login} a una cuenta existente o {$register} una nueva cuenta.</message>
 	<message key="about.authorGuidelines">Directrices para autores/as</message>
@@ -716,40 +711,6 @@
 	<message key="donations.thankYouMessage">Gracias por su contribución. Valoramos mucho su contribución.</message>
 
 	<!-- Gifts -->
-	<message key="gifts.buyer">De</message>
-	<message key="gifts.buyerDescription">¿De quién es este regalo?</message>
-	<message key="gifts.recipient">Para</message>
-	<message key="gifts.recipientDescription">¿Para quién es este regalo?</message>
-	<message key="gifts.thankYou">Gracias</message>
-	<message key="gifts.thankYouMessage">La compra de su regalo se completó. Recibirá una copia del correo electrónico que se envió al destinatario/a de su regalo, una vez el pago haya sido procesado.</message>
-	<message key="gifts.purchaseGiftIndividualSubscription">Suscripción de regalo</message>
-	<message key="gifts.subscriptionFormIntroduction">Rellene el formulario que aparece a continuación. La información de contacto proporcionada, junto con su nota de regalo, será utilizada para enviarle a los destinatarios/as un correo electrónico, y así informarle de su nueva suscripción de regalo (usted también recibirá una copia de este correo electrónico).</message>
-	<message key="gifts.details">Detalles del regalo</message>
-	<message key="gifts.detailsDescription">Seleccione a continuación el regalo e incluya un mensaje personalizado que será enviado por correo electrónico al destinatario/a (usted también recibirá una copia de este correo electrónico).</message>
-	<message key="gifts.gift">Regalo</message>
-	<message key="gifts.noteTitle">Título</message>
-	<message key="gifts.note">Nota para el regalo</message>
-	<message key="gifts.noteTitleRequired">Indique un título para su mensaje personalizado.</message>
-	<message key="gifts.noteRequired">Escriba un mensaje personalizado.</message>
-	<message key="gifts.localeRequired">Seleccione un idioma para su mensaje personalizado.</message>
-	<message key="gifts.myGifts">Mis regalos</message>
-	<message key="gifts.manageMyGifts">Gestionar mis regalos</message>
-	<message key="gifts.redeemGift">Tarjeta regalo canjeable</message>
-	<message key="gifts.status.notRedeemed">Disponible</message>
-	<message key="gifts.status.redeemed">Canjeado</message>
-	<message key="gifts.status.redeemGift">Tarjeta regalo canjeable</message>
-	<message key="gifts.subscriptions">Suscripciones</message>
-	<message key="gifts.subscriptionsDescription">Una suscripción de regalo canjeada, reemplazará la suscripción ya existente, si ya cuenta con una. Las suscripciones se llevarán a cabo durante la fecha de pago, y estarán vigentes según el tipo de suscripción.</message>
-	<message key="gifts.purchaseGiftSubscription">Regalar una suscripción</message>
-	<message key="gifts.giftSubscriptionsAvailable">Las suscripciones de regalo también están disponibles. El destinatario/a puede canjear su suscripción de regalo en cualquier momento, y son la manera perfecta de apoyar a la revista.</message>
-	<message key="gifts.noSubscriptions">Ninguna suscripción de regalo</message>
-	<message key="gifts.giftRedeemed">El regalo se canjeó con éxito.</message>
-	<message key="gifts.noGiftToRedeem">No se puede canjear este regalo.</message>
-	<message key="gifts.giftAlreadyRedeemed">El regalo ya se canjeó.</message>
-	<message key="gifts.giftNotValid">Este regalo no es válido y no se puede canjear.</message>
-	<message key="gifts.subscriptionTypeNotValid">El tipo de suscripción para el regalo no es válida. Contacte con el gestor/a de suscripciones.</message>
-	<message key="gifts.subscriptionNonExpiring">No se canjeó el regalo, ya que tiene una suscripción perpetua con esta revista.</message>
-
 	<!-- Payments -->
 	<message key="payment.loginRequired">Tiene que iniciar la sesión para realizar un pago.</message>
 	<message key="payment.loginRequired.forArticle">Es necesario comprar una suscripción o un artículo para acceder al elemento. Para verificar la suscripción, acceder a la compra anterior, o adquirir un artículo, inicie sesión en la revista.</message>
@@ -772,9 +733,6 @@
 	<message key="payment.type.purchaseIssue">Cuota de compra de números</message>
 	<message key="payment.type.subscription">Cuota de suscripción</message>
 	<message key="payment.type.donation">Donaciones</message>
-	<message key="payment.type.gift">Regalo</message>
-	<message key="payment.type.gift.subscription">Suscripción</message>
-
 	<message key="payment.donation.makeDonation">Hacer una donación</message>
 
 	<message key="payment.submission.paySubmission">Pagar cuota de envío</message>
@@ -1013,4 +971,13 @@ La configuración del soporte CLOCKSS para Open Journal Systems no hace falta qu
 
 	<!-- legacy strings from OJS 2, for upgraded installations from OJS 2 -->
 	<message key="log.editor.submissionExpedited">{$editorName} se hará cargo del proceso de edición del artículo {$submissionId}.</message>
+	<message key="user.reviewerPrompt.optin">Sí, me gustaría que me contactaran para revisar artículos de esta revista.</message>
+	<message key="subscriptions.status.noSubscription">No tiene una suscripción activa.</message>
+	<message key="reader.purchasePrice">({$currency} {$price})</message>
+	<message key="manager.setup.porticoDescription">Portico es un servicio sin ánimo de lucro comprometido con la preservación de las publicaciones digitales, entre las que se incluyen revistas y libros electrónicos y colecciones históricas digitalizadas. Si su revista ha firmado un contrato con Portico actívelo aquí:</message>
+	<message key="user.register.form.emailConsentAllContexts">Sí, deseo que me notifiquen acerca de las nuevas publicaciones y avisos de todas las revistas en las que me he registrado.</message>
+	<message key="payment.type.publication.required">La tasa de publicación está pendiente de pago.</message>
+	<message key="payment.requestPublicationFee">Solicitar tasa de publicación ({$feeAmount})</message>
+	<message key="payment.notFound">Se le ha solicitado un pago pero la petición ha expirado. Contacte con el administrador/a de la revista para obtener más detalles.</message>
+	<message key="notification.type.public">Avisos públicos</message>
 </locale>
