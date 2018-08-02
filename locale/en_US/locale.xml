@@ -675,6 +675,9 @@ You may optionally provide the user with a reason for disabling their account.</
 	<message key="user.register.reviewerDescription">Willing to conduct peer review of submissions to the site.</message>
 	<message key="user.register.reviewerInterests">Identify reviewing interests (substantive areas and research methods):</message>
 	<message key="user.register.form.emailConsentAllContexts">Yes, I would like to be notified of new publications and announcements for all journals that I registered with.</message>
+	<message key="user.register.form.privacyConsentThisContext"><![CDATA[Yes, I agree to have my data collected and stored according to this journal's <a href="{$privacyUrl}" target="_blank">privacy statement</a>.]]></message>
+	<message key="user.register.form.missingContextConsent">You must consent to the privacy statement for any journal with which you are registering.</message>
+	<message key="user.register.form.missingSiteConsent">You must consent to this site's privacy statement.</message>
 
 	<!-- Subscriptions -->
 	<message key="user.subscriptions.mySubscriptions">My Subscriptions</message>

@@ -115,6 +115,12 @@ enable_minified = Off
 ; alert purposes only.
 enable_beacon = On
 
+; Set this to "On" if you would like to only have a single, site-wide Privacy
+; Statement, rather than a separate Privacy Statement for each journal. Setting
+; this to "Off" will allow you to enter a site-wide Privacy Statement as well
+; as separate Privacy Statements for each journal.
+sitewide_privacy_statement = Off
+
 
 ;;;;;;;;;;;;;;;;;;;;;
 ; Database Settings ;
