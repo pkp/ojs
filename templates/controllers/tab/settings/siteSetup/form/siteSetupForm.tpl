@@ -77,6 +77,11 @@
 		{include file="controllers/tab/settings/appearance/form/theme.tpl"}
 		{include file="controllers/tab/settings/appearance/form/sidebar.tpl" isSiteSidebar=true}
 	{/fbvFormArea}
+	{fbvFormArea id="sitePrivacyStatement" title="manager.setup.privacyStatement"}
+		{fbvFormSection description="manager.setup.privacyStatement.description"}
+			{fbvElement type="textarea" multilingual=true name="privacyStatement" id="privacyStatement" value=$privacyStatement rich=true}
+		{/fbvFormSection}
+	{/fbvFormArea}
 
 	{if count($availableMetricTypes) > 1}
 		{fbvFormArea id="defaultMetricSelection"}

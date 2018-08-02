@@ -52,6 +52,7 @@
 
 		.roles {
 			padding: @half 0;
+			margin-bottom: 0;
 
 			legend {
 				&:extend(.pkp_screen_reader);
@@ -63,6 +64,19 @@
 				font-size: @font-sml;
 				line-height: @line-sml;
 			}
+		}
+
+		.context_privacy {
+			position: absolute;
+			left: -9999px;
+			padding: @half 0;
+			font-size: @font-sml;
+			line-height: @line-sml;
+		}
+
+		.context_privacy_visible {
+			position: relative;
+			left: auto;
 		}
 	}
 
