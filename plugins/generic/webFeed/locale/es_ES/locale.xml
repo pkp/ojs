@@ -24,4 +24,5 @@
 	<message key="plugins.generic.webfeed.atom.altText">Logo Atom</message>
 	<message key="plugins.generic.webfeed.rss1.altText">Logo RSS1</message>
 	<message key="plugins.generic.webfeed.rss2.altText">Logo RSS2</message>
+	<message key="plugins.generic.webfeed.settings.recent">Mostrar un número fijo de los elementos más recientes.</message>
 </locale>
