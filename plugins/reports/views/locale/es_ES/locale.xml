@@ -14,4 +14,9 @@
 <locale name="es_ES" full_name="Español (España)">
 	<message key="plugins.reports.views.displayName">Ver informe</message>
 	<message key="plugins.reports.views.description">Este módulo genera un informe CSV que describe a los lectores de cada artículo.</message>
+	<message key="plugins.reports.views.articleId">ID del artículo</message>
+	<message key="plugins.reports.views.articleTitle">Título del artículo</message>
+	<message key="plugins.reports.views.datePublished">Fecha de publicación</message>
+	<message key="plugins.reports.views.abstractViews">Visualizaciones de resúmenes</message>
+	<message key="plugins.reports.views.galleyViews">Visualizaciones totales de galeradas</message>
 </locale>

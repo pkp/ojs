@@ -15,9 +15,9 @@
 <locale name="es_ES" full_name="Español (España)">
     <message key="plugins.reports.counter.description"><![CDATA[El módulo COUNTER permite generar informes sobre la actividad del sitio web.]]></message>
 	<message key="plugins.reports.counter">Informe COUNTER</message>
-	<message key="plugins.reports.counter.1a.title">Informe de la revista 1 (R3): Solicitudes de artículos completos por mes y revista</message>
+	<message key="plugins.reports.counter.1a.title">Informe de la revista 1 (R3): solicitudes de artículos completos por mes y revista</message>
 	<message key="plugins.reports.counter.1a.title1">Informe de la revista 1 (R3)</message>
-	<message key="plugins.reports.counter.1a.title2">Número de solicitudes aceptadas de artículos completos por mes y revista (Año {$year})</message>
+	<message key="plugins.reports.counter.1a.title2">Número de solicitudes aceptadas de artículos completos por mes y revista (año {$year})</message>
 	<message key="plugins.reports.counter.1a.dateRun">Fecha de inicio:</message>
 	<message key="plugins.reports.counter.1a.publisher">Editorial</message>
 	<message key="plugins.reports.counter.1a.platform">Plataforma</message>
@@ -29,4 +29,15 @@
 	<message key="plugins.reports.counter.1a.totalForAllJournals">Total para todas las revistas</message>
 	<message key="plugins.reports.counter.legacyStats">Los siguientes enlaces generan informes mediante datos antiguos del módulo COUNTER. Si desea generar informes COUNTER mediante el nuevo tipo de métrica COUNTER de OJS, utilice los siguientes enlaces.</message>
 	<message key="plugins.reports.counter.1a.xml">versión XML</message>
+	<message key="plugins.reports.counter.release">Versión COUNTER</message>
+	<message key="plugins.reports.counter.olderReports">Informes del sitio antiguo</message>
+	<message key="plugins.reports.counter.error.badParameters">Los parámetros del informe no eran válidos.</message>
+	<message key="plugins.reports.counter.error.badRequest">La petición de informe no es válida.</message>
+	<message key="plugins.reports.counter.error.noResults">No se han encontrado resultados para este informe.</message>
+	<message key="plugins.reports.counter.error.noXML">Los resultados no se han podido formatear como XML.</message>
+	<message key="plugins.reports.counter.1a.introduction">Estos enlaces generan informes listos para COUNTER basados en la obsoleta versión 3.0. Este informe abarca todas las revistas del sitio. De todos modos, use la versión más reciente tan pronto como pueda.</message>
+	<message key="plugins.reports.counter.1a.name">Informe COUNTER JR1 (R3)</message>
+	<message key="plugins.reports.counter.1a.description">Informe de revista COUNTER 1 (R3): solicitudes de artículos completos por mes y revista</message>
+	<message key="plugins.reports.counter.1a.anonymous">anónimo</message>
+	<message key="plugins.reports.counter.allCustomers">Todos los clientes</message>
 </locale>
