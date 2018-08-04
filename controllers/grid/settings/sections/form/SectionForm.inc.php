@@ -14,6 +14,8 @@
  */
 
 import('lib.pkp.controllers.grid.settings.sections.form.PKPSectionForm');
+import('lib.pkp.classes.linkAction.LinkAction');
+import('lib.pkp.classes.linkAction.request.RemoteActionConfirmationModal');
 
 class SectionForm extends PKPSectionForm {
 
@@ -50,6 +52,7 @@ class SectionForm extends PKPSectionForm {
 		}
 
 		if (isset($section) ) {
+			$locale = AppLocale::getLocale();
 			$this->_data = array(
 				'title' => $section->getTitle(null), // Localized
 				'abbrev' => $section->getAbbrev(null), // Localized
@@ -64,6 +67,8 @@ class SectionForm extends PKPSectionForm {
 				'policy' => $section->getPolicy(null), // Localized
 				'wordCount' => $section->getAbstractWordCount(),
 				'subEditors' => $this->_getAssignedSubEditorIds($sectionId, $journal->getId()),
+				'coverImage' => $section->getCoverImage($locale),
+				'coverImageAltText' => $section->getCoverImageAltText($locale),
 			);
 		}
 
@@ -95,8 +100,53 @@ class SectionForm extends PKPSectionForm {
 			'hasSubEditors' => !empty($sectionEditorsListData['items']),
 			'subEditorsListData' => json_encode($sectionEditorsListData),
 		));
+		
+		$sectionDao = DAORegistry::getDAO('SectionDAO');
+		$sectionId = $this->getSectionId();
+		$section = $sectionDao->getById($sectionId, $journal->getId());
+		// Cover image delete link action
+		if ($coverImage = $section->getCoverImage(AppLocale::getLocale())) $templateMgr->assign(
+			'deleteCoverImageLinkAction',
+			new LinkAction(
+				'deleteCoverImage',
+				new RemoteActionConfirmationModal(
+					$request->getSession(),
+					__('common.confirmDelete'), null,
+					$request->getRouter()->url(
+						$request, null, null, 'deleteCoverImage', null, array(
+							'coverImage' => $coverImage,
+							'sectionId' => $sectionId,
+						)
+					),
+					'modal_delete'
+				),
+				__('common.delete'),
+				null
+			)
+		);
+		
 
 		return parent::fetch($request);
+	}
+	
+	/**
+	 * @copydoc Form::validate()
+	 */
+	function validate() {
+		if ($temporaryFileId = $this->getData('temporaryFileId')) {
+			$request = Application::getRequest();
+			$user = $request->getUser();
+			$temporaryFileDao = DAORegistry::getDAO('TemporaryFileDAO');
+			$temporaryFile = $temporaryFileDao->getTemporaryFile($temporaryFileId, $user->getId());
+			
+			import('classes.file.PublicFileManager');
+			$publicFileManager = new PublicFileManager();
+			if (!$publicFileManager->getImageExtension($temporaryFile->getFileType())) {
+				$this->addError('coverImage', __('editor.issues.invalidCoverImageFormat'));
+			}
+		}
+		
+		return parent::validate();
 	}
 
 	/**
@@ -104,7 +154,7 @@ class SectionForm extends PKPSectionForm {
 	 */
 	function readInputData() {
 		parent::readInputData();
-		$this->readUserVars(array('abbrev', 'policy', 'reviewFormId', 'identifyType', 'metaIndexed', 'metaReviewed', 'abstractsNotRequired', 'editorRestriction', 'hideTitle', 'hideAuthor', 'wordCount'));
+		$this->readUserVars(array('abbrev', 'policy', 'reviewFormId', 'identifyType', 'metaIndexed', 'metaReviewed', 'abstractsNotRequired', 'editorRestriction', 'hideTitle', 'hideAuthor', 'wordCount', 'temporaryFileId', 'coverImageAltText'));
 	}
 
 	/**
@@ -159,6 +209,24 @@ class SectionForm extends PKPSectionForm {
 			$this->setSectionId($sectionDao->insertObject($section));
 			$sectionDao->resequenceSections($journal->getId());
 		}
+		
+		$locale = AppLocale::getLocale();
+		// Copy an uploaded cover file for the section, if there is one.
+		if ($temporaryFileId = $this->getData('temporaryFileId')) {
+			$user = $request->getUser();
+			$temporaryFileDao = DAORegistry::getDAO('TemporaryFileDAO');
+			$temporaryFile = $temporaryFileDao->getTemporaryFile($temporaryFileId, $user->getId());
+			
+			import('classes.file.PublicFileManager');
+			$publicFileManager = new PublicFileManager();
+			$newFileName = 'cover_section_' . $this->getSectionId() . '_' . $locale . $publicFileManager->getImageExtension($temporaryFile->getFileType());
+			$journal = $request->getJournal();
+			$publicFileManager->copyJournalFile($journal->getId(), $temporaryFile->getFilePath(), $newFileName);
+			$section->setCoverImage($newFileName, $locale);
+			$sectionDao->updateObject($section);
+		}
+		
+		$section->setCoverImageAltText($this->getData('coverImageAltText'), $locale);
 
 		// Update section editors
 		$this->_saveSubEditors($journal->getId());
