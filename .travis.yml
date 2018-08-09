@@ -75,4 +75,4 @@ after_script:
   # - cat selenium-output
   - cat ./lib/pkp/tests/results/error.log
   - sudo apt-get install sharutils
-  - tar cvz lib/pkp/tests/results/*.png | uuencode /dev/stdout
+  - test "$(ls -A lib/pkp/tests/results/*.png)" || (tar cvz lib/pkp/tests/results/*.png | uuencode /dev/stdout)
