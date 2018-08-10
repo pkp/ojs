@@ -11,7 +11,22 @@
 <script type="text/javascript">
 	$(function() {ldelim}
 		// Attach the form handler.
-		$('#sectionForm').pkpHandler('$.pkp.controllers.form.AjaxFormHandler');
+		$('#sectionForm').pkpHandler(
+			'$.pkp.controllers.form.FileUploadFormHandler',
+			{ldelim}
+				$uploader: $('#coverImageUploader'),
+				$preview: $('#coverImagePreview'),
+				uploaderOptions: {ldelim}
+					uploadUrl: {url|json_encode op="uploadImage" escape=false},
+					baseUrl: {$baseUrl|json_encode},
+					filters: {ldelim}
+						mime_types : [
+							{ldelim} title : "Image files", extensions : "jpg,jpeg,png,svg" {rdelim}
+						]
+					{rdelim}
+				{rdelim}
+			{rdelim}
+	);
 	{rdelim});
 </script>
 
@@ -48,6 +63,35 @@
 		{/if}
 
 		{call_hook name="Templates::Manager::Sections::SectionForm::AdditionalMetadata" sectionId=$sectionId}
+	{/fbvFormArea}
+
+	{fbvFormArea id="coverImage" title="editor.section.coverPage"}
+		{fbvFormSection}
+			{include file="controllers/fileUploadContainer.tpl" id="coverImageUploader"}
+			<input type="hidden" name="temporaryFileId" id="temporaryFileId" value="" />
+		{/fbvFormSection}
+		{fbvFormSection id="coverImagePreview"}
+		{if $coverImage != ''}
+			<div class="pkp_form_file_view pkp_form_image_view">
+				<div class="img">
+					<img src="{$publicFilesDir}/{$coverImage|escape:"url"}{'?'|uniqid}" {if $coverImageAlt !== ''} alt="{$coverImageAlt|escape}"{/if}>
+				</div>
+
+				<div class="data">
+							<span class="title">
+								{translate key="common.altText"}
+							</span>
+					<span class="value">
+								{fbvElement type="text" id="coverImageAltText" label="common.altTextInstructions" value=$coverImageAltText}
+							</span>
+
+					<div id="{$deleteCoverImageLinkAction->getId()}" class="actions">
+						{include file="linkAction/linkAction.tpl" action=$deleteCoverImageLinkAction contextId="sectionForm"}
+					</div>
+				</div>
+			</div>
+		{/if}
+		{/fbvFormSection}
 	{/fbvFormArea}
 
 	{fbvFormArea id="indexingInfo" title="submission.indexing"}

@@ -24,7 +24,7 @@ class SectionGridHandler extends SetupGridHandler {
 		parent::__construct();
 		$this->addRoleAssignment(
 			array(ROLE_ID_MANAGER),
-			array('fetchGrid', 'fetchRow', 'addSection', 'editSection', 'updateSection', 'deleteSection', 'saveSequence')
+			array('fetchGrid', 'fetchRow', 'addSection', 'editSection', 'updateSection', 'deleteSection', 'saveSequence', 'deleteCoverImage')
 		);
 	}
 
@@ -230,6 +230,44 @@ class SectionGridHandler extends SetupGridHandler {
 		$sectionDao->deleteObject($section);
 		return DAO::getDataChangedEvent($section->getId());
 
+	}
+	
+	/**
+	 * Delete an uploaded cover image.
+	 * @param $args array
+	 *   `coverImage` string Filename of the cover image to be deleted.
+	 *   `sectionId` int Id of the issue this cover image is attached to
+	 * @param $request PKPRequest
+	 * @return JSONMessage JSON object
+	 */
+	function deleteCoverImage($args, $request) {
+		assert(!empty($args['coverImage']) && !empty($args['sectionId']));
+		
+		// Check if the passed filename matches the filename for this issue's
+		// cover page.
+		$sectionDao = DAORegistry::getDAO('SectionDAO');
+		$section = $sectionDao->getById((int) $args['sectionId']);
+		$locale = AppLocale::getLocale();
+		if ($args['coverImage'] != $section->getCoverImage($locale)) {
+			return new JSONMessage(false, __('editor.issues.removeCoverImageFileNameMismatch'));
+		}
+		
+		$file = $args['coverImage'];
+		
+		// Remove cover image and alt text from issue settings
+		$section->setCoverImage('', $locale);
+		$section->setCoverImageAltText('', $locale);
+		$sectionDao->updateObject($section);
+		
+		// Remove the file
+		$publicFileManager = new PublicFileManager();
+		if ($publicFileManager->removeJournalFile($section->getJournalId(), $file)) {
+			$json = new JSONMessage(true);
+			$json->setEvent('fileDeleted');
+			return $json;
+		} else {
+			return new JSONMessage(false, __('editor.issues.removeCoverImageFileNotFound'));
+		}
 	}
 }
 

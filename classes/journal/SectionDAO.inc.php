@@ -192,7 +192,7 @@ class SectionDAO extends PKPSectionDAO {
 	function getLocaleFieldNames() {
 		return array_merge(
 			parent::getLocaleFieldNames(),
-			array('abbrev', 'policy', 'identifyType')
+			array('abbrev', 'policy', 'identifyType', 'coverImageAltText', 'coverImage')
 		);
 	}
 
