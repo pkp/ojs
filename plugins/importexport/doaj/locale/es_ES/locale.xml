@@ -15,9 +15,16 @@
 
 <locale name="es_ES" full_name="Español (España)">
 	<message key="plugins.importexport.doaj.displayName">Módulo de exportación DOAJ</message>
-	<message key="plugins.importexport.doaj.description">Exportar la revista al DOAJ y añadir información sobre la revista para incluirla</message>
-	<message key="plugins.importexport.doaj.export.contact">Contactar con el DOAJ para la inclusión</message>
+	<message key="plugins.importexport.doaj.description">Exportar la revista a DOAJ.</message>
+	<message key="plugins.importexport.doaj.export.contact">Contactar con DOAJ para la inclusión</message>
 	<message key="plugins.importexport.doaj.cliUsage"><![CDATA[Uso:
 {$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...
 ]]></message>
+	<message key="plugins.importexport.doaj.registrationIntro">Si desea registrar artículos desde el propio OJS, introduzca su clave API DOAJ. Si no lo hace, todavía podrá exportarlos al formato DOAJ XML, pero no podrá registrar los artículos con DOAJ desde OJS.</message>
+	<message key="plugins.importexport.doaj.settings.form.apiKey">Clave API DOAJ</message>
+	<message key="plugins.importexport.doaj.settings.form.apiKey.description">Encontrará su clave API en su página de usuario/a de DOAJ.</message>
+	<message key="plugins.importexport.doaj.settings.form.automaticRegistration.description">OJS depositará los artículos automáticamente en DOAJ. Tenga en cuenta que este proceso puede llevar cierto tiempo tras la publicación (p.ej. en función de la configuración cron). Puede comprobar todos los artículos no registrados.</message>
+	<message key="plugins.importexport.doaj.settings.form.testMode.description">Utilice la API de prueba de DOAJ (entorno de prueba) para el registro. No olvide desactivar esta opción en la versión de producción.</message>
+	<message key="plugins.importexport.doaj.senderTask.name">Tarea de registro automático de DOAJ</message>
+	<message key="plugins.importexport.doaj.register.error.mdsError">¡El depósito no tuvo éxito! La API DOAJ informó de un error: '{$param}'.</message>
 </locale>
