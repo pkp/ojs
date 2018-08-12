@@ -24,5 +24,34 @@
 	<message key="plugins.importexport.native.error.unknownSection">Section inconnue {$param}</message>
 	<message key="plugins.importexport.native.error.unknownUser">L'usager spécifié, "{$userName}", n'existe pas.</message>
 	<message key="plugins.importexport.native.import.error.sectionTitleMismatch">La section avec le titre "{$section1Title}" et la section avec le titre "{$section2Title}" dans le numéro "{$issueTitle}" sont identiques à des sections existantes dans la revue.</message>
-	<message key="plugins.importexport.native.import.error.sectionTitleMatch">La section avec le titre "{$section1Title}" dans le numéro "{$issueTitle}" est identique à une section existante dans la revue, mais un autre titre de section ne correspond pas à un titre dans une section existante.</message>
+	<message key="plugins.importexport.native.import.error.sectionTitleMatch">La section avec le titre "{$sectionTitle}" dans le numéro "{$issueTitle}" est identique à une section existante dans la revue, mais un autre titre de section ne correspond pas à un titre dans une section existante.</message>
+	<message key="plugins.importexport.native.exportSubmissionsSelect">Sélectionner les articles à exporter</message>
+	<message key="plugins.importexport.native.cliUsage"><![CDATA[Usage: {$scriptName} {$pluginName} [command] ...
+Commands:
+	import [xmlFileName] [journal_path] [user_name] ...
+	export [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...
+	export [xmlFileName] [journal_path] article [articleId]
+	export [xmlFileName] [journal_path] issues [issueId1] [issueId2] ...
+	export [xmlFileName] [journal_path] issue [issueId]
+
+Additional parameters are required for importing data as follows, depending
+on the root node of the XML document.
+
+If the root node is <article> or <articles>, additional parameters are required.
+The following formats are accepted:
+
+{$scriptName} {$pluginName} import [xmlFileName] [journal_path] [user_name]
+	issue_id [issueId] section_id [sectionId]
+
+{$scriptName} {$pluginName} import [xmlFileName] [journal_path] [user_name]
+	issue_id [issueId] section_name [name]
+
+{$scriptName} {$pluginName} import [xmlFileName] [journal_path]
+	issue_id [issueId] section_abbrev [abbrev]]]></message>
+	<message key="plugins.importexport.native.import.error.sectionAbbrevMismatch">L'abréviation "{$section1Abbrev}" et l'abréviation "{$section2Abbrev}" du numéro "{$issueTitle}" correspondent à des rubriques différentes de la revue.</message>
+	<message key="plugins.importexport.native.import.error.sectionAbbrevMatch">L'abréviation de rubrique "{$sectionAbbrev}" du numéro "{$issueTitle}" correspond à un rubrique de la revue, mais une autre abréviation de section ne correspond à aucune abréviation de rubrique existante.</message>
+	<message key="plugins.importexport.native.import.error.issueIdentificationMatch">Aucune ou plus d'un numéro correspond `à l'identifiant de numéro donné, "{$issueIdentification}".</message>
+	<message key="plugins.importexport.native.import.error.issueIdentificationDuplicate">Un numéro existant (ID:  {$issueId}) correspond à l'identifiant de numéro donné ("{$issueIdentification}"). Le numéro ne sera pas modifié, mais les articles seront ajoutés.</message>
+	<message key="plugins.importexport.native.import.error.issueIdentificationMissing">L'élément d'identification du numéro est manquant pour l'article "{$articleTitle}".</message>
+	<message key="plugins.importexport.native.import.error.publishedDateMissing">L'article "{$articleTitle}" se retrouve dans un numéro, mais n'a pas de date de publication.</message>
 </locale>

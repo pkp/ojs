@@ -22,4 +22,6 @@
 	<message key="plugins.block.subscription.comingFromIP">De {$ip}</message>
 	<message key="plugins.block.subscription.about">Suscripciones</message>
 	<message key="plugins.block.subscription.loginToVerifySubscription">Inicie sesión para verificar la suscripción</message>
+	<message key="plugins.block.subscription.subscriptionRequired">Necesita suscribirse para acceder a algunos recursos.</message>
+	<message key="plugins.block.subscription.subscriptionRequired.learnMore">Saber más</message>
 </locale>
