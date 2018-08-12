@@ -2,71 +2,81 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * plugins/pubIds/doi/locale/uk_UA/locale.xml
+  * plugins/pubIds/urn/locale/uk_UA/locale.xml
   *
   * Copyright (c) 2014-2018 Simon Fraser University
   * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Ukrainian_(uk_UA)
-  * DOI plugin localization strings for the uk_UA (Українська) locale.
+  * URN plugin localization strings for the uk_UA (Українська) locale.
   -->
  
 <locale name="uk_UA" full_name="Українська">
-	<message key="plugins.pubIds.doi.displayName">DOI</message>
-	<message key="plugins.pubIds.doi.description">Дозволяє присвоїти ідентифікатори цифрових об'єктів (Digital Object Identifier) випускам, статтям та гранкам у OJS.</message>
-	<message key="plugins.pubIds.doi.readerDisplayName">DOI</message>
+	<message key="plugins.pubIds.urn.displayName">URN</message>
+	<message key="plugins.pubIds.urn.description">Дозволяє присвоїти уніфіковані імена ресурсів (URN) випускам, статтям та гранкам у OJS.</message>
 
-	<!-- форма налаштування -->
-	<message key="plugins.pubIds.doi.manager.settings.description">Щоб мати можливість використовувати DOI у OJS, будь ласка, налаштуйте модуль DOI:</message>
+	<!-- форма налаштувань -->
+	<message key="plugins.pubIds.urn.manager.settings.description">Щоб мати можливість використовувати URN у OJS, будь ласка, налаштуйте модуль URN:</message>
 	
-	<message key="plugins.pubIds.doi.manager.settings.doiObjects">Зміст журналу</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiObjectsRequired">Будь ласка, оберіть об'єкти, для яких мають призначатись DOI.</message>
-	<message key="plugins.pubIds.doi.manager.settings.explainDois">Будь ласка, оберіть об'єкти, які матимуть призначені для них унікальні цифрові ідентифікатори DOI:</message>
-	<message key="plugins.pubIds.doi.manager.settings.enableIssueDoi">Випуски</message>
-	<message key="plugins.pubIds.doi.manager.settings.enableSubmissionDoi">Статті</message>
-	<message key="plugins.pubIds.doi.manager.settings.enableRepresentationDoi">Гранки</message>
-	
-	<message key="plugins.pubIds.doi.manager.settings.doiPrefix">Префікс DOI</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiPrefix.description"><![CDATA[Префікс DOI призначається виданню реєстраційною агенцією (наприклад, <a href="http://www.crossref.org" target="_new">CrossRef</a>), його формат 10.xxxx (наприклад, 10.1234):]]></message>
-	<message key="plugins.pubIds.doi.manager.settings.doiPrefixPattern">Префікс є обов'язковим елементом DOI, він має бути у формі 10.xxxx.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnObjects">Зміст журналу</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnObjectsRequired">Будь ласка, оберіть об'єкти, для яких мають призначатись URN.</message>
+	<message key="plugins.pubIds.urn.manager.settings.explainURNs">Будь-ласка, виберіть об'єкти публікації, для яких будуть призначені уніфіковані імена ресурсів (URN):</message>
+	<message key="plugins.pubIds.urn.manager.settings.enableIssueURN">Випуски</message>
+	<message key="plugins.pubIds.urn.manager.settings.enableSubmissionURN">Статті</message>
+	<message key="plugins.pubIds.urn.manager.settings.enableRepresentationURN">Гранки</message>
 
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffix">Суфікс DOI</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffix.description">Суфікс DOI може мати будь-яку форму, але він має бути унікальним серед усіх опублікованих об'єктів з однаковим префіксом DOI:</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern">Використати нижченаведений шаблон для генерування суфіксів DOI. Використовуйте %j для абревіатури журналу, %v для номера тому, %i для номера випуску, %Y для року, %a для ID статті в OJS, %g для ID гранки в OJS, %f для ID файлу в OJS, %p для номера сторінки  та %x для "власного ідентифікатора".</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.example">Наприклад, vol%viss%ipp%p може створити такий DOI: 10.1234/vol3iss2pp230</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.issues">для випусків</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.submissions">для статей</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.representations">для гранок</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault">Використовувати усталені шаблони.</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault.description"><![CDATA[%j.v%vi%i - для випусків<br />%j.v%vi%i.%a - для статей<br />%j.v%vi%i.%a.g%g - для гранок.]]></message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixCustomIdentifier">Введіть індивідуальний суфікс DOI для кожного опублікованого елемента. Ви знайдете додаткове поле введення DOI на сторінці метаданих кожного елемента.</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiIssueSuffixPatternRequired">Будь ласка, визначте шаблон суфіксу DOI для випусків.</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSubmissionSuffixPatternRequired">Будь ласка, визначте шаблон суфіксу DOI для статей.</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiRepresentationSuffixPatternRequired">Будь ласка, визначте шаблон суфіксу DOI для гранок.</message>
-	
-	<message key="plugins.pubIds.doi.manager.settings.doiReassign">Перепризначити DOI</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiReassign.description">Якщо ви зміните свою DOI-конфігурацію, то вона не стосуватиметься DOI які вже були призначені. Після збереження конфігурації DOI використовуйте цю кнопку, щоб видалити усі існуючі DOI для того, щоб нові налаштування вплинули на існуючі об'єкти.</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiReassign.confirm">Ви впевнені, що хочете видалити усі існуючі DOI?</message>	
+	<message key="plugins.pubIds.urn.manager.settings.urnPrefix">Префікс URN</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnPrefix.description">Префікс URN є постійною незмінною частиною URN (наприклад, "urn:nbn:de:0000-").</message>
+	<message key="plugins.pubIds.urn.manager.settings.form.urnPrefixPattern"><![CDATA[Шаблон префіксу URN має бути у формі "urn:"&lt;NID&gt;":"&lt;NSS&gt;.]]></message>
 
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix">Суфікс URN</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.description">Суффікс URN може приймати будь-яку форму, але повинен бути унікальним серед усіх об'єктів, які публікуються з тим самим призначеним префіксом URN:</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffixPattern">Використати нижченаведений шаблон для генерування суфіксів URN. Використовуйте %j для абревіатури журналу, %v для номера тому, %i для номера випуску, %Y для року, %a для ID статті в OJS, %g для ID гранки в OJS, %f для ID файлу в OJS, %p для номера сторінки  та %x для "власного ідентифікатора".</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffixPattern.example">Наприклад, за шаблоном vol%viss%ipp%p будуть створюватись такі суфікси URN, як "vol3iss2pp230".</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffixPattern.issues">для випусків</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffixPattern.submissions">для статей</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffixPattern.representations">для гранок</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnIssueSuffixPatternRequired">Будь ласка, вкажіть шаблон суфіксу URN для випусків.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSubmissionSuffixPatternRequired">Будь ласка, вкажіть шаблон суфіксу URN для статей.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnRepresentationSuffixPatternRequired">Будь ласка, вкажіть шаблон суфіксу URN для гранок.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffixDefault">Використовувати усталений шаблон.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffixDefault.description"><![CDATA[%j.v%vi%i для випусків<br />%j.v%vi%i.%a для статей<br />%j.v%vi%i.%a.g%g для гранок.]]></message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffixCustomIdentifier">Введіть індивідуальний суфікс URN для кожного опублікованого елемента. Ви знайдете додаткове поле введення URN на сторінці метаданих кожного елемента.</message>
+	<message key="plugins.pubIds.urn.manager.settings.checkNo">Контрольне число</message>
+	<message key="plugins.pubIds.urn.manager.settings.checkNo.label">Контрольне число автоматично вираховуватиметься та буде додаватись у кінець ідентифікатору, як остання цифра URN.</message>
+	<message key="plugins.pubIds.urn.manager.settings.namespace">Простір імен</message>
+	<message key="plugins.pubIds.urn.manager.settings.namespace.choose">Оберіть</message>
+	<message key="plugins.pubIds.urn.manager.settings.namespace.description">Частіше всього, простір імен необхідно додатково реєструвати (наприклад, у Національній бібліотеці Німеччини).</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnResolver">URL-адреса перетворювача</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnResolver.description">(наприклад http://nbn-resolving.de/)</message>
+	<message key="plugins.pubIds.urn.manager.settings.form.urnResolverRequired">Будь ласка, введіть URL-адресу перетворювача.</message>
+
+	<message key="plugins.pubIds.urn.manager.settings.urnReassign">Перевантажити URN</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnReassign.description">Якщо ви зміните свою URN-конфігурацію, то вона не стосуватиметься URN, які вже були призначені. Після збереження конфігурації URN використовуйте цю кнопку, щоб видалити усі існуючі DOI для того, щоб нові налаштування вплинули на існуючі об'єкти.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnReassign.confirm">Ви впевнені, що хочете видалити усі існуючі URN?</message>
 
 	<!-- форма метаданих -->
-	<message key="plugins.pubIds.doi.editor.doi">DOI</message>
-	<message key="plugins.pubIds.doi.editor.doiObjectTypeIssue">випуску</message>
-	<message key="plugins.pubIds.doi.editor.doiObjectTypeSubmission">статті</message>
-	<message key="plugins.pubIds.doi.editor.doiObjectTypeRepresentation">гранці</message>
-	<message key="plugins.pubIds.doi.editor.customSuffixMissing">Не можна призначити DOI, оскільки відсутній індивідуальний суфікс.</message>
-	<message key="plugins.pubIds.doi.editor.patternNotResolved">Не можна призначити DOI, оскільки він містить не замінений шаблон.</message>
-	<message key="plugins.pubIds.doi.editor.canBeAssigned">Те, що ви бачите - це попередній перегляд DOI. Установіть прапорець і збережіть форму для призначення DOI.</message>
-	<message key="plugins.pubIds.doi.editor.assigned">DOI призначено {$pubObjectType}.</message>
-	<message key="plugins.pubIds.doi.editor.doiSuffixCustomIdentifierNotUnique">Обраний суфікс DOI вже використовується для іншого опублікованого елементу. Будь ласка, оберіть для кожного елемента унікальний суфікс DOI.</message>
-	<message key="plugins.pubIds.doi.editor.clearObjectsDoi">Видалити DOI</message>
-	<message key="plugins.pubIds.doi.editor.clearObjectsDoi.confirm">Ви впевнені, що хочете видалити існуючий DOI?</message>
-	<message key="plugins.pubIds.doi.editor.clearIssueObjectsDoi">Видалити DOI в об'єктів випуску</message>
-	<message key="plugins.pubIds.doi.editor.clearIssueObjectsDoi.confirm">Ви впевнені, що хочете видалити існуючі DOI в об'єктів випуску?</message>
-	<message key="plugins.pubIds.doi.editor.clearIssueObjectsDoi.description">Використовуйте цей параметр, щоб видалити DOI усіх об'єктів (статей і гранок), які наразі заплановані для публікації у цьому випуску.</message>
+	<message key="plugins.pubIds.urn.editor.urn">URN</message>
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeIssue">випуску</message>
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeSubmission">статті</message>
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeRepresentation">гранці</message>
+	<message key="plugins.pubIds.urn.editor.customSuffixMissing">Не можна призначити URN, оскільки відсутній індивідуальний суфікс.</message>
+	<message key="plugins.pubIds.urn.editor.patternNotResolved">Не можна призначити URN, оскільки він містить не замінений шаблон.</message>
+	<message key="plugins.pubIds.urn.editor.canBeAssigned">Те, що ви бачите - це попередній перегляд URN. Установіть прапорець і збережіть форму для призначення URN.</message>
+	<message key="plugins.pubIds.urn.editor.assigned">URN призначено {$pubObjectType}.</message>
+	<message key="plugins.pubIds.urn.editor.urnSuffixCustomIdentifierNotUnique">Обраний суфікс URN вже використовується для іншого опублікованого елементу. Будь ласка, оберіть для кожного елемента унікальний суфікс URN.</message>
+	<message key="plugins.pubIds.urn.editor.clearObjectsURN">Видалити URN</message>
+	<message key="plugins.pubIds.urn.editor.clearObjectsURN.confirm">Ви впевнені, що хочете видалити існуючий URN?</message>
+	<message key="plugins.pubIds.urn.editor.clearIssueObjectsURN">Видалити URN в об'єктів випуску</message>
+	<message key="plugins.pubIds.urn.editor.clearIssueObjectsURN.confirm">Ви впевнені, що хочете видалити існуючі URN в об'єктів випуску?</message>
+	<message key="plugins.pubIds.urn.editor.clearIssueObjectsURN.description">Використовуйте цей параметр, щоб видалити URN усіх об'єктів (статей і гранок), які наразі заплановані для публікації у цьому випуску.</message>
+	<message key="plugins.pubIds.urn.editor.addCheckNo">Додати контрольне число</message>
 	<!-- форма призначення -->
-	<message key="plugins.pubIds.doi.editor.assignDoi">Призначити DOI {$pubId} {$pubObjectType}</message>
-	<message key="plugins.pubIds.doi.editor.assignDoi.emptySuffix">Не можна призначити DOI, оскільки відсутній індивідуальний суфікс.</message>
-	<message key="plugins.pubIds.doi.editor.assignDoi.pattern">Не можна призначити DOI {$pubId}, оскільки він містить не замінений шаблон.</message>
-	<message key="plugins.pubIds.doi.editor.assignDoi.assigned">DOI {$pubId} був призначений.</message>
+	<message key="plugins.pubIds.urn.editor.assignURN">Призначити URN {$pubId} {$pubObjectType}</message>
+	<message key="plugins.pubIds.urn.editor.assignURN.emptySuffix">Не можна призначити URN, оскільки відсутній індивідуальний суфікс.</message>
+	<message key="plugins.pubIds.urn.editor.assignURN.pattern">Не можна призначити URN {$pubId} оскільки він містить не замінений шаблон.</message>
+	<message key="plugins.pubIds.urn.editor.assignURN.assigned">URN {$pubId} був призначений.</message>
+	<!-- errors -->
+	<message key="plugins.pubIds.urn.form.checkNoRequired">Відсутнє контрольне число.</message>
+
 </locale>
