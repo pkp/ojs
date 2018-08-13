@@ -7,31 +7,28 @@
   * Copyright (c) 2014-2018 Simon Fraser University
   * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Ukrainian_(uk_UA)
   * Localization strings for the uk_UA (Українська) locale.
-  *
-  * Translated by Denys Solovianenko, 2011
-  * V. I. Vernadsky National Library of Ukraine
   -->
  
 <locale name="uk_UA" full_name="Українська">
-       <message key="plugins.importexport.pubmed.displayName">Модуль експорту у PubMed XML</message>
-       <message key="plugins.importexport.pubmed.description">Експорт метаданих статей у формат PubMed XML для індексації у MEDLINE.</message>
-       
-       <message key="plugins.importexport.pubmed.export">ЕКспорт даних</message>
-       <message key="plugins.importexport.pubmed.export.issues">Експорт випусків</message>
-       <message key="plugins.importexport.pubmed.export.selectIssue">Оберіть випуск для експорту.</message>
-       <message key="plugins.importexport.pubmed.export.articles">Експорт статей</message>
-       <message key="plugins.importexport.pubmed.export.selectArticle">Оберіть статті для експорту.</message>
-       
-       <message key="plugins.importexport.pubmed.cliUsage"><![CDATA[Використання: 
+	<message key="plugins.importexport.pubmed.displayName">Модуль експорту у PubMed XML</message>
+	<message key="plugins.importexport.pubmed.description">Експорт метаданих статей у формат PubMed XML для індексації у MEDLINE.</message>
+
+	<message key="plugins.importexport.pubmed.export">Експорт даних</message>
+	<message key="plugins.importexport.pubmed.export.issues">Експорт випусків</message>
+	<message key="plugins.importexport.pubmed.export.selectIssue">Оберіть випуск для експорту.</message>
+	<message key="plugins.importexport.pubmed.export.articles">Експорт статей</message>
+	<message key="plugins.importexport.pubmed.export.selectArticle">Оберіть статті для експорту.</message>
+
+	<message key="plugins.importexport.pubmed.cliUsage"><![CDATA[Використання: 
 {$scriptName} {$pluginName} [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...
 {$scriptName} {$pluginName} [xmlFileName] [journal_path] issue [issueId]
 ]]></message>
-       <message key="plugins.importexport.pubmed.cliError">ПОМИЛКА:</message>
+	<message key="plugins.importexport.pubmed.cliError">ПОМИЛКА:</message>
 
-       <message key="plugins.importexport.pubmed.export.error.issueNotFound">Не існує випуску зі вказаним ідентифікатором "{$issueId}".</message>
-       <message key="plugins.importexport.pubmed.export.error.articleNotFound">Не існує статті зі вказаним ідентифікатором "{$articleId}".</message>
+	<message key="plugins.importexport.pubmed.export.error.issueNotFound">Не існує випуску з вказаним ідентифікатором "{$issueId}".</message>
+	<message key="plugins.importexport.pubmed.export.error.articleNotFound">Не існує статті з вказаним ідентифікатором "{$articleId}".</message>
 
 
 </locale>
