@@ -23,4 +23,5 @@
 	<message key="plugins.importexport.doaj.settings.form.automaticRegistration.description">OJS automaticky uloží články do DOAJ. Vezměte prosím na vědomí, že to může trvat krátkou dobu po zpracování publikace. Můžete si prohlédnout všechny nezaregistrované články.</message>
 	<message key="plugins.importexport.doaj.settings.form.testMode.description">Pro registraci použijte testovací rozhraní API (testovací prostředí) DOAJ. Nezapomeňte tuto možnost odstranit před produkční fází.</message>
 	<message key="plugins.importexport.doaj.register.error.mdsError">Uložení nebylo úspěšné! DOAJ API vrátilo následující chybu: '{$param}'.</message>
+	<message key="plugins.importexport.doaj.senderTask.name">Automatická registrace DOAJ</message>
 </locale>

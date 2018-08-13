@@ -65,11 +65,17 @@
 	<message key="admin.categories.create">Vytvořit novou kategorii</message>
 	<message key="admin.categories.noneCreated">Nebyla vytvořena žádná kategorie</message>
 	<message key="admin.categories.name">Jméno</message>
+	<message key="admin.settings.journalsList.showThumbnail">Náhled časopisu</message>
+	<message key="admin.settings.journalsList.showTitle">Název časopisu</message>
+	<message key="admin.settings.journalsList.showDescription">Popis časopisu</message>
 	<message key="admin.categories.nameRequired">Je požadováno jméno kategorie.</message>
+	<message key="admin.settings.usePaging">Pro stránky s mnoha časopisy je vhodné rozdělit seznam časopisů na několik stránek.</message>
+	<message key="admin.settings.journalsList">Prvky časopisu</message>
+	<message key="admin.settings.journalsList.description">Zvolte prvky časopisu, které budou zobrazeny pro každý časopis na úvodní stránce.</message>
 	<message key="admin.settings.defaultMetricDescription">Vaše instalace OJS je konfigurována k zaznamenávání více metrik. Statistiky čtenosti budou zobrazeny ve více kontextech. V některých případech musí být použita jedna statistika čtenosti, např. při zobrazování seznamu nejčtenějších článků, nebo při zobrazení rozsahu hledání. Vyberte si, prosím, jednu z následujících metrik jako standardní.</message>
 	<message key="admin.categories.enable.description">Administrátor webu se může rozhodnout definovat sadu kategorií, aby mohlo být zorganizováno více časopisů. Manažer časopisu se pak může rozhodnou pro jednu či více kategorií, do kterých časopis spadá.</message>
 	<message key="admin.categories.confirmDelete">Přejete si smazat tuto kategorii?</message>
-
+	
 	<message key="admin.languages.confirmDisable">Jste si jisti, že chcete zakázat tuto lokalizaci? Bude to mít vliv na všechny časopisy, které tuto lokalizaci využívají.</message>
 	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Stahování jazykových balíčků z webu Public Knowledge Project je momentálně nedostupné protože:</p>
 	<ul>

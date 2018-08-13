@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/browse/locale/cs_CZ/locale.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
+  * Localization strings.
+  -->
+ 
+<locale name="cs_CZ" full_name="Čeština">
+	<!-- plugin -->
+	<message key="plugins.generic.browse.displayName">Procházení</message>
+	<message key="plugins.generic.browse.description">Tento plugin umožňuje procházení pdole sekcí a/nebo podle jejich typů.</message>
+
+	<!-- URN manager options, setting -->
+	<message key="plugins.generic.browse.manager.settings">Nastavení</message>
+	<message key="plugins.generic.browse.manager.settings.description"><![CDATA[Nastavete, prosím, následující upřesňující možnosti procházení:]]></message>
+
+	<message key="plugins.generic.browse.manager.settings.browseSettings">Nastavení procházení</message>
+	<message key="plugins.generic.browse.manager.settings.browse">Procházení</message>
+	<message key="plugins.generic.browse.manager.settings.browseByObjects">Zvolte, jaké objekty chcete procházet.</message>
+	<message key="plugins.generic.browse.manager.settings.enableBrowseBySections">Podle sekce</message>
+	<message key="plugins.generic.browse.manager.settings.enableBrowseByIdentifyTypes">Podle typu</message>
+	<message key="plugins.generic.browse.manager.settings.excludedSections">Vyloučené sekce</message>
+	<message key="plugins.generic.browse.manager.settings.excludedSections.description">Vyberte, které sekce nemají být brány v úvahu.</message>
+	<message key="plugins.generic.browse.manager.settings.excludedIdentifyTypes">Vyloučené typy</message>
+	<message key="plugins.generic.browse.manager.settings.excludedIdentifyTypes.description">Zvolte typy, které nemají být brány v úvahu.</message>
+
+	<message key="plugins.generic.browse.search.sections">Podle sekcí</message>
+	<message key="plugins.generic.browse.search.sectionIndex">Procházet seznam sekcí</message>
+	<message key="plugins.generic.browse.search.sectionDetails">Podrobnosti sekce</message>
+	<message key="plugins.generic.browse.search.identifyTypes">Podle typu</message>
+	<message key="plugins.generic.browse.search.identifyTypeIndex">Procházet seznam typů</message>
+	<message key="plugins.generic.browse.search.identifyTypeDetails">Podrobnosti typu</message>
+
+</locale>
