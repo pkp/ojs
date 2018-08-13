@@ -50,7 +50,7 @@ class SectionForm extends PKPSectionForm {
 		}
 
 		if (isset($section) ) {
-			$this->_data = array(
+			$this->setData(array(
 				'title' => $section->getTitle(null), // Localized
 				'abbrev' => $section->getAbbrev(null), // Localized
 				'reviewFormId' => $section->getReviewFormId(),
@@ -64,7 +64,7 @@ class SectionForm extends PKPSectionForm {
 				'policy' => $section->getPolicy(null), // Localized
 				'wordCount' => $section->getAbstractWordCount(),
 				'subEditors' => $this->_getAssignedSubEditorIds($sectionId, $journal->getId()),
-			);
+			));
 		}
 
 		parent::initData();
