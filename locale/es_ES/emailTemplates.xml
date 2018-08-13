@@ -176,7 +176,7 @@ Nombre de usuaria/o: {$authorUsername}<br />
 Si tiene cualquier pregunta no dude en contactar con nosotros/as. Gracias por tener en cuenta esta revista para difundir su trabajo.<br />
 <br />
 {$editorialContactSignature}]]></body>
-		<description>Este correo, cuando está activado, se envía automáticamente a un/a autor/a when cuando completa el proceso de envío de un manuscrito a la revista. Proporciona información para hacer el seguimiento del envío a través del proceso y agradece la contribución.</description>
+		<description>Este correo, cuando está activado, se envía automáticamente a un/a autor/a cuando completa el proceso de envío de un manuscrito a la revista. Proporciona información para hacer el seguimiento del envío a través del proceso y agradece la contribución.</description>
 	</email_text>
 	<email_text key="SUBMISSION_ACK">
 		<subject>Acuse de recibo del envío</subject>
@@ -215,7 +215,7 @@ Por favor, identifíquese en la revista antes de {$responseDueDate} para decirno
 <br />
 La revisión propiamente dicha debe estar lista para el {$reviewDueDate}.<br />
 <br />
-Si ha perdido su nombre de usuaria/o y contraseña puede pinchar en el siguiente enlace para cambiar su contraseña (le llegará por correo-e junto con su nombre de usuaria/o). {$passwordResetUrl}<br />
+Si ha perdido su nombre de usuaria/o y contraseña, puede pinchar en el siguiente enlace para cambiar su contraseña (le llegará por correo-e junto con su nombre de usuaria/o). {$passwordResetUrl}<br />
 <br />
 URL del envío: {$submissionReviewUrl}<br />
 <br />
