@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/cs_CZ/locale.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="cs_CZ" full_name="Čeština">
+	<message key="plugins.generic.backup.name">Plugin pro zálohování</message>
+	<message key="plugins.generic.backup.description">Tento plugin vytvoří zálohu instalace.</message>
+	<message key="plugins.generic.backup.link">Stáhnout zálohu</message>
+	<message key="plugins.generic.backup.longdescription"><![CDATA[<p> Následující odkazy umožňují správci stránek stáhnout plnou zálohu různých součástí instalace. Úplná záloha obsahuje <strong> všechny </ strong> následující komponenty. Další informace o tom, jak tyto komponenty vzájemně souvisejí, naleznete v technické dokumentaci. </p>]]></message>
+	<message key="plugins.generic.backup.db">Databáze</message>
+	<message key="plugins.generic.backup.files">Soubory</message>
+	<message key="plugins.generic.backup.code">Kód</message>
+	<message key="plugins.generic.backup.db.config"><![CDATA[{$footNoteNum}. <strong>VAROVÁNÍ:</strong> Nástroje na zálohu databáze nejsou nastaveny v konfiguračním souboru config.inc.php. Konfigurace bude záviset na konfiguraci vašeho serveru a typu databáze, kterou používáte. Je třeba nastavit parametry v sekci [cli], v konfigurační volbě "dump". Pro MySQL, použijte nástroj mysqldump, např..:<br />
+<pre>[cli]
+dump = "/usr/bin/mysqldump -h {$hostname} -u {$username} -p{$password} {$databasename}"
+</pre>
+Řetězec "%s" bude nahrazen (v tomto pořadí):<ol>
+	<li>Jméno hostitele</li>
+	<li>Uživatelské jméno databáze</li>
+	<li>Heslo k databázi</li>
+	<li>Jméno databáze</li>
+</ol>
+Vemte na vědomí, že toto nastavení, ve kterém je uloženo heslo k databázi v příkazovém řádku, může být bezpečnostním problémem..<br /><br />]]></message>
+	<message key="plugins.generic.backup.tar.config"><![CDATA[{$footNoteNum}. <strong>VAROVÁNÍ:</strong> Nástroj "tar" není nakonfigurován v konfiguračním souboru config.inc.php. Konfigurace bude záviset na nastavení vašeho serveru. Nastavení je třeba nastavit v sekci [cli], v konfigurační možnosti "tar", kde má být určena cesta k "tar" utilitě, např:<br />
+<pre>[cli]
+tar = "/bin/tar"
+</pre><br />]]></message>
+	<message key="plugins.generic.backup.failure"><![CDATA[<strong>VAROVÁNÍ: </strong>Během zálohování došlo k chybě. Ve většině případů jsou tyto chyby způsobeny špatným nastavením práv přístupu k souborům.]]></message>
+</locale>
