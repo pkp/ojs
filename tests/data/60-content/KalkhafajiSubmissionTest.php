@@ -3,8 +3,8 @@
 /**
  * @file tests/data/60-content/KalkhafajiSubmissionTest.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2000-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2000-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class KalkhafajiSubmissionTest
@@ -22,10 +22,10 @@ class KalkhafajiSubmissionTest extends ContentBaseTestCase {
 	function testSubmission() {
 		$this->register(array(
 			'username' => 'kalkhafaji',
-			'firstName' => 'Karim',
-			'lastName' => 'Al-Khafaji',
+			'givenName' => 'Karim',
+			'familyName' => 'Al-Khafaji',
 			'affiliation' => 'Stanford University',
-			'country' => 'United States of America',
+			'country' => 'United States',
 		));
 
 		$this->createSubmission(array(
@@ -39,9 +39,9 @@ class KalkhafajiSubmissionTest extends ContentBaseTestCase {
 			),
 			'additionalAuthors' => array(
 				array(
-					'firstName' => 'Margaret',
-					'lastName' => 'Morse',
-					'country' => 'United States of America',
+					'givenName' => 'Margaret',
+					'familyName' => 'Morse',
+					'country' => 'United States',
 					'affiliation' => 'Stanford University',
 					'email' => 'mmorse@mailinator.com',
 				)

@@ -4,8 +4,8 @@
 <!--
   * locale/zh_CN/manager.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings.
@@ -42,9 +42,7 @@
 	<message key="manager.payment.noPayments">无支付记录</message>
 	<message key="manager.payment.notFound">没有找到</message>
 	<message key="manager.payment.options">支付选项管理</message>
-	<message key="manager.payment.options.donationFee">捐赠费</message>
 	<message key="manager.payment.options.enablePayments">点击这里启用支付模块.你必须填写下面的支付配置表单  注意：用户必须登录到付款.</message>
-	<message key="manager.payment.options.fastTrackFee">加急费</message>
 	<message key="manager.payment.options.fee">费用</message>
 	<message key="manager.payment.options.feeDescription">费用描述</message>
 	<message key="manager.payment.options.feeName">费用名称</message>
@@ -52,9 +50,7 @@
 	<message key="manager.payment.options.onlypdf">仅为PDF格式</message>
 	<message key="manager.payment.options.publicationFee">文章出版费</message>
 	<message key="manager.payment.options.purchaseArticleFee">购买文章费用</message>
-	<message key="manager.payment.options.submissionFee">投稿费</message>
 	<message key="manager.payment.options.text">支付方法描述</message>
-	<message key="manager.payment.options.waiverPolicy">放弃制度</message>
 	<message key="manager.payment.paymentId">支付ID</message>
 	<message key="manager.payment.paymentMethod">支付方法</message>
 	<message key="manager.payment.paymentMethod.description">系统提供了如下支付方法插件供您选择。</message>
@@ -257,7 +253,6 @@
 	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"><![CDATA[<strong>注意：</strong> 这封给审稿人的电子邮件邀请函会包涵一个特殊的网址链接，邀请审稿人直接进入稿件的「审稿」页面（同时可以存取其他需要登入身份的页面）。基于与这个选项相关的安全性理由，编辑在寄出给审稿人的邀请函之前，不能变更电子邮件或者增加副本(CCs)或密件副本(BCCs)。]]></message>
 	<message key="manager.setup.reviewOptions.reviewerRatings">审稿人评比</message>
 	<message key="manager.setup.reviewOptions.reviewerReminders">审稿人备忘录</message>
-	<message key="manager.setup.reviewOptions.showEnsuringLink"><![CDATA[在作者与审稿人上传文件的位置提供一个指向 <a href="javascript:openHelp('{$blindReviewHelpId}')" class="action">确认盲审</a>的链接。]]></message>
 	<message key="manager.setup.reviewPolicy">审稿方针</message>
 	<message key="manager.setup.searchEngineIndexing">搜寻引擎索引</message>
 	<message key="manager.setup.searchEngineIndexingDescription">为协助用户使用搜寻引擎来了解这份期刊，请提供一份简短的期刊说明与相关关键字（以分号(;)加以区隔）。</message>
@@ -350,7 +345,6 @@
 	<message key="manager.subscriptionPolicies.subscriptionContact">订阅管理员</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactDescription">这份联系信息会列在「期刊介绍」的「订阅」下面。</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactEmailValid">请输入一个有效的电子邮件地址</message>
-	<message key="manager.subscriptionPolicies.subscriptionPoliciesSaved">您的订阅方针配置已经被更新</message>
 	<message key="manager.subscriptions">订阅</message>
 	<message key="manager.subscriptions.confirmDelete">您确定您要删除掉这个订户？</message>
 	<message key="manager.subscriptions.create">建立新的订户</message>
@@ -465,9 +459,6 @@
 	<message key="manager.subscriptionTypes.noneCreated">没有建立任何的订阅类型。</message>
 	<message key="manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully">成功建立订阅类型</message>
 	<message key="manager.language.submissions">投稿</message>
-	<message key="manager.payment.giftFees">礼品费用</message>
-	<message key="manager.payment.giftFeesDescription">在“有关期刊”中的订购页面上会出现一条礼品订购的链接。这同时也是订购边栏块的一部分。</message>
-	<message key="manager.payment.options.acceptGiftSubscriptionPayments">这将激活对礼品订购的款项支付，允许读者为其他读者购买礼品订购服务。</message>
 	<message key="manager.payment.options.purchaseIssueFee">购买事项</message>
 	<message key="manager.sections.confirmDelete">您确定要永久删除该栏目吗？</message>
 	<message key="manager.sections.alertDelete">在该栏目能够被删除之前，您必须将栏目中已经出版过的文章移动到另一个栏目中。</message>

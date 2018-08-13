@@ -10,8 +10,8 @@
 	<authors xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		xsi:schemaLocation="http://pkp.sfu.ca native.xsd">
 		<author primary_contact="true" user_group_ref="Journal manager">
-			<firstname>John</firstname>
-			<lastname>Smith</lastname>
+			<givenname locale="en_US">John</givenname>
+			<familyname locale="en_US">Smith</familyname>
 			<email>john.smith@your-domain.com</email>
 		</author>
 	</authors>
@@ -20,7 +20,7 @@
 		<revision number="1" genre="Submission"
 			filename="article.docx" viewable="true"
 			date_uploaded="2014-03-06" date_modified="2014-03-06" filesize="18675"
-			filetype="application/octet-stream" user_group_ref="Journal manager"
+			filetype="application/octet-stream"
 			uploader="admin">
 			<name locale="en_US">book reviews</name>
 			<embed encoding="base64">.. base64 encoded data is here ...</embed>

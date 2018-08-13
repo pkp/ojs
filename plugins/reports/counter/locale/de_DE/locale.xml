@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/reports/counter/locale/de_DE/locale.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization strings for the de_DE (Deutsch (Deutschland)) locale.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_German_(de_DE)
+  -->
+ 
+<locale name="de_DE" full_name="Deutsch (Deutschland)">
+	<message key="plugins.reports.counter.description"><![CDATA[Das Counter-Plugin ermöglicht Berichte über die Zeitschriftenaktivität entsprechend dem <a href="http://www.projectcounter.org">COUNTER-Standard</a>. Diese Berichte allein machen eine Zeitschrift nicht COUNTER-kompatibel. Um Counter-Kompatibilität zu erreichen, beachten Sie die Anforderungen auf der Website des COUNTER-Projekts.]]></message>
+	<message key="plugins.reports.counter">COUNTER-Bericht</message>
+	<message key="plugins.reports.counter.release">COUNTER-Release</message>
+	<message key="plugins.reports.counter.olderReports">Ältere Site-Berichte</message>
+	<message key="plugins.reports.counter.error.badParameters">Die Berichtsparameter waren ungültig.</message>
+	<message key="plugins.reports.counter.error.badRequest">Die Berichtsabfrage war ungültig.</message>
+	<message key="plugins.reports.counter.error.noResults">Für diesen Bericht wurden keine Ergebnisse gefunden.</message>
+	<message key="plugins.reports.counter.error.noXML">Die Ergebnisse konnten nicht als XML formatiert werden.</message>
+	<message key="plugins.reports.counter.1a.introduction">Diese Links erzeugen COUNTER-reife Berichte, die auf dem veralteten Release 3 basieren. Benutzen Sie neuere Releases, falls möglich.</message>
+	<message key="plugins.reports.counter.1a.name">COUNTER Report JR1 (R3)</message>
+	<message key="plugins.reports.counter.1a.xml">XML-Version</message>
+	<message key="plugins.reports.counter.1a.description">COUNTER Journal Report 1 (R3): Volltext-Zugriffe nach Monat und Zeitschrift</message>
+	<message key="plugins.reports.counter.1a.title">Volltext-Zugriffe nach Monat und Zeitschrift</message>
+	<message key="plugins.reports.counter.1a.title1">Journal Report 1 (R3)</message>
+	<message key="plugins.reports.counter.1a.title2">Zahl erfolgreicher Volltext-Zugriffe nach Monat und Zeitschrift (Jahr {$year})</message>
+	<message key="plugins.reports.counter.1a.dateRun">Datum:</message>
+	<message key="plugins.reports.counter.1a.publisher">Verlag</message>
+	<message key="plugins.reports.counter.1a.platform">Plattform</message>
+	<message key="plugins.reports.counter.1a.printIssn">Print-ISSN</message>
+	<message key="plugins.reports.counter.1a.onlineIssn">Online-ISSN</message>
+	<message key="plugins.reports.counter.1a.ytdTotal">YTD-Summe</message>
+	<message key="plugins.reports.counter.1a.ytdHtml">YTD-HTML</message>
+	<message key="plugins.reports.counter.1a.ytdPdf">YTD-PDF</message>
+	<message key="plugins.reports.counter.1a.totalForAllJournals">Gesamtsumme für alle Zeitschriften</message>
+	<message key="plugins.reports.counter.1a.anonymous">anonym</message>
+	<message key="plugins.reports.counter.legacyStats">Die Links unten erzeugen veraltete Berichte auf Basis der alten Plugin-Daten. Wenn Sie aktuelle COUNTER-reife Berichte mit der neuen OJS-COUNTER-Metrik erzeugen wollen, benutzen Sie die Links oben.</message>
+	<message key="plugins.reports.counter.allCustomers">Alle Kund/innen</message>
+</locale>

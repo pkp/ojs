@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/da_DK/locale.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="da_DK" full_name="Dansk">
+	<message key="plugins.pubIds.urn.displayName">URN</message>
+	<message key="plugins.pubIds.urn.description">Denne plugin gør det muligt at tildele Uniform Resource Names til numre, artikler og publiceringsfiler (satsskibe) i OJS.</message>
+	<message key="plugins.pubIds.urn.manager.settings.description">Konfigurer denne URN-plug-in så det bliver muligt at administrere og bruge URN i OJS:</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnObjects">Tidsskriftindhold</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnObjectsRequired">Vælg de objekter, som skal have tildelt en URN.</message>
+	<message key="plugins.pubIds.urn.manager.settings.explainURNs">Vælg de publiceringsobjekter, der skal have tildelt Uniform Resource Names (URN):</message>
+	<message key="plugins.pubIds.urn.manager.settings.enableIssueURN">Numre</message>
+	<message key="plugins.pubIds.urn.manager.settings.enableSubmissionURN">Artikler</message>
+	<message key="plugins.pubIds.urn.manager.settings.enableRepresentationURN">Publiceringsfiler (satsskibe)</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnPrefix">URN-præfiks</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnPrefix.description">URN-præfikset er den del af URN'en, der aldrig ændres (e.g. "urn:nbn:de:0000-").</message>
+	<message key="plugins.pubIds.urn.manager.settings.form.urnPrefixPattern"><![CDATA[URN-præfiksets skal være i overensstemmese med følgende formular "urn:"&lt;NID&gt;":"&lt;NSS&gt;.]]></message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix">URN-suffiks</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.description">Et URN-suffiks kan formuleres frit, men skal være unikt blandt alle de publiceringsobjekter, der er tildelt samme URN-præfiks:</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffixPattern">Anvend nedenstående mønster når URN-suffikset skal genereres. Brug %j til tidsskriftinitialer, %v til årgang, %i til nummer, %Y til år, %a til OJS-artiklens ID, %g til OJS-publiceringsfilens ID (satsskibes ID), %f til OJS filens ID, %p til sidenummer %x til "Custom Identifier".</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffixPattern.example">For eksempel kan vol%viss%ipp%p generere URN-suffikset "vol3iss2pp230".</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffixPattern.issues">til numre</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffixPattern.submissions">til artikler</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffixPattern.representations">til publiceringsfiler (satsskibe)</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnIssueSuffixPatternRequired">Indsæt URN-suffiksmønsteret til numre.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSubmissionSuffixPatternRequired">Indsæt URN-suffiksmønsteret til artikler.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnRepresentationSuffixPatternRequired">Indsæt URN-suffiksmønsteret til publiceringsfiler (satsskibe).</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffixDefault">Anvend stadardmønstre.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffixDefault.description"><![CDATA[%j.v%vi%i til numre<br />%j.v%vi%i.%a til artikler<br />%j.v%vi%i.%a.g%g til publiceringsfiler (satsskibe).]]></message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffixCustomIdentifier">Indsæt et individuelt URN-suffiks for hvert publiceret element. Du finder et ekstra URN-indtastningsfelt på hvert elements metadata-side.</message>
+	<message key="plugins.pubIds.urn.manager.settings.checkNo">Kontrolnummer</message>
+	<message key="plugins.pubIds.urn.manager.settings.checkNo.label">Kontrolnummeret beregnes automatisk og tilføjes i slutningen som det sidste ciffer i en URN.</message>
+	<message key="plugins.pubIds.urn.manager.settings.namespace">Navnerum</message>
+	<message key="plugins.pubIds.urn.manager.settings.namespace.choose">Vælg</message>
+	<message key="plugins.pubIds.urn.manager.settings.namespace.description">Det persistente identifikationsnavnerum, der normalt behøves til registreringen (f.eks. På Deutsche Nationalbibliothek).</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnResolver">Resolver-URL</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnResolver.description">(e.g. http://nbn-resolving.de/)</message>
+	<message key="plugins.pubIds.urn.manager.settings.form.urnResolverRequired">Indsæt resolver-URL.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnReassign">Omfordel URN'er</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnReassign.description">Hvis du ændrer din URN-konfiguration, vil de URN'er, der allerede er blevet tildelt, ikke blive påvirket. Når URN-konfigurationen er gemt, skal du bruge denne knap til at slette alle eksisterende URN'er, så de nye indstillinger træder i kraft med eksisterende objekter.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnReassign.confirm">Er du sikker på, at du vil slette alle eksisterende URN'er?</message>
+	<message key="plugins.pubIds.urn.editor.urn">URN</message>
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeIssue">nummer</message>
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeSubmission">artikel</message>
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeRepresentation">publiceringsfil (satsskibe)</message>
+	<message key="plugins.pubIds.urn.editor.customSuffixMissing">URN'en kan ikke tildeles, da det brugerdefinerede suffiks mangler.</message>
+	<message key="plugins.pubIds.urn.editor.patternNotResolved">URN'en kan ikke tildeles, da den indeholder et uopløst mønster.</message>
+	<message key="plugins.pubIds.urn.editor.canBeAssigned">Det du ser er en forhåndsvisning af URN'en. Marker afkrydsningsfeltet og gem formularen for at tildele URN'en.</message>
+	<message key="plugins.pubIds.urn.editor.assigned">URN'en er tildelt dette {$pubObjectType}.</message>
+	<message key="plugins.pubIds.urn.editor.urnSuffixCustomIdentifierNotUnique">Det angivne URN-suffiks er allerede i brug i forbindelse med et anden publiceret element. Indtast et unikt URN-suffiks for hvert element.</message>
+	<message key="plugins.pubIds.urn.editor.clearObjectsURN">Fjern URN</message>
+	<message key="plugins.pubIds.urn.editor.clearObjectsURN.confirm">Er du sikker på, at du vil slette den eksisterende URN?</message>
+	<message key="plugins.pubIds.urn.editor.clearIssueObjectsURN">Fjern nummerelementers URN'er</message>
+	<message key="plugins.pubIds.urn.editor.clearIssueObjectsURN.confirm">Er du sikker på, at du vil slette de eksisterende nummerelementers URN'er?</message>
+	<message key="plugins.pubIds.urn.editor.clearIssueObjectsURN.description">Brug følgende mulighed for at fjerne URN'er fra alle elementer (artikler og publiceringsfiler/satsskibe) der er planlagt i forbindelse med dette nummer.</message>
+	<message key="plugins.pubIds.urn.editor.addCheckNo">Tilføj tjeknummer</message>
+	<message key="plugins.pubIds.urn.editor.assignURN">Tildel URN'en {$pubId} til dette {$pubObjectType}</message>
+	<message key="plugins.pubIds.urn.editor.assignURN.emptySuffix">URN'en kan ikke tildeles, da det brugerdefinerede suffiks mangler.</message>
+	<message key="plugins.pubIds.urn.editor.assignURN.pattern">URN'en {$pubId} kan ikke tildeles, da den indeholder et uopløst mønster.</message>
+	<message key="plugins.pubIds.urn.editor.assignURN.assigned">URN'en {$pubId} er blevet tildelt.</message>
+	<message key="plugins.pubIds.urn.form.checkNoRequired">Tjeknummeret mangler.</message>
+</locale>

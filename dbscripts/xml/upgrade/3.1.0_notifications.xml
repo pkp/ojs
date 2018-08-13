@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../../../lib/pkp/dtd/xmlData.dtd">
+
+<!--
+  * 3.1.0_notifications.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * 3.1.0.0 update removed notification types.
+  -->
+<data>
+	<sql><!-- pkp/pkp-lib#2163: Introduce REST API and Vue.js. Abandon notification types NOTIFICATION_TYPE_ALL_REVIEWS_IN and NOTIFICATION_TYPE_ALL_REVISIONS_IN -->
+		<query>DELETE FROM notifications WHERE type = 16777240 OR type = 16777248</query>
+	</sql>
+</data>

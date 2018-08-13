@@ -4,32 +4,23 @@
 <!--
   * plugins/paymethod/paypal/locale/pt_PT/locale.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2006-2009 Gunther Eysenbach, Juan Pablo Alperin, MJ Suhonos
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Localization strings for the pt_BR (Português (Brasil)) locale.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Portuguese_(pt_PT)
+  * Localization strings.
   -->
  
-<locale name="pt_BR" full_name="Português do Brasil">
+<locale name="pt_PT" full_name="Português (Portugal)">
 	<message key="plugins.paymethod.paypal.displayName">Plugin de Pagamento via Paypal</message>
 
-	<!-- PayPal Settings Form -->
-	<message key="plugins.paymethod.paypal.settings.paypalenable">Habilitar PayPal</message>
-	<message key="plugins.paymethod.paypal.settings.paypalurl">URL da IPN</message>
-	<message key="plugins.paymethod.paypal.settings.paypalurl.description"><![CDATA[Esta é a URL para o serviço de notificação instantânea do PayPal (Instant Payment Notification - IPN). Para testar, use <u>https://www.sandbox.paypal.com/cgi-bin/webscr</u>; para sistemas em produção, use <u>https://www.paypal.com/cgi-bin/webscr</u>.]]></message>
-	<message key="plugins.paymethod.paypal.settings.selleraccount">Conta do vendedor</message>
-	<message key="plugins.paymethod.paypal.settings.selleraccount.description">O login da conta do vendedor PayPal a ser utilizado, geralmente um e-mail.</message>
-	<message key="plugins.paymethod.paypal.settings.curlNotInstalled">Aviso: suporte a CURL no PHP não está instalado. Pagamentos via PayPal exigem a biblioteca CURL e não funcionará enquanto a biblioteca não for instalada.</message>
 	<message key="plugins.paymethod.paypal.settings">Configurações do PayPal</message>
 
-	<!-- PayPal -->
 	<message key="plugins.paymethod.paypal">Pagamento via PayPal</message>
-	<message key="plugins.paymethod.paypal.description"><![CDATA[O Plugin PayPal permite a usuários, sendo ou não membros do PayPal, utilizar a maioria dos cartões de crédito, bem como Cheques Eletrônicos (eChecks). O responsável deve criar uma <a href="http://www.paypal.com" target="_new">Conta de Negócios PayPal</a>.]]></message>
-	<message key="plugins.paymethod.paypal.warning">Clique em "Continuar" para acessar o portal do PayPal. Após realizar o pagamento através do PayPal clique em "Retornar ao vendedor" ("Return to Merchant") para retornar ao site de onde iniciou a compra.</message>
-	<message key="plugins.paymethod.paypal.purchase.description">Descrição</message>
-	<message key="plugins.paymethod.paypal.purchase.cancelled">Sua compra foi cancelada.</message>
-	<message key="plugins.paymethod.paypal.purchase.cancelled.title">Compra cancelada.</message>
-	<message key="plugins.paymethod.paypal.purchase.title">Título</message>
-	<message key="plugins.paymethod.paypal.purchase.fee">Taxa</message>
+	<message key="plugins.paymethod.paypal.description">Pagamentos processados através do serviço PayPal.</message>
+	<message key="plugins.paymethod.paypal.settings.testMode">Modo de Teste</message>
+	<message key="plugins.paymethod.paypal.settings.accountName">Nome da Conta</message>
+	<message key="plugins.paymethod.paypal.settings.clientId">ID do Cliente</message>
+	<message key="plugins.paymethod.paypal.settings.secret">Senha</message>
+	<message key="plugins.paymethod.paypal.error">Ocorreu um erro de transação. Contacte o gestor da revista para detalhes.</message>
 </locale>

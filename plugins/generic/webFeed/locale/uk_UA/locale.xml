@@ -4,29 +4,28 @@
 <!--
   * plugins/generic/webFeed/locale/uk_UA/locale.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Ukrainian_(uk_UA)
   * Localization strings for the uk_UA (Українська) locale.
   *
-  * Translated by Denys Solovianenko, 2011
-  * V. I. Vernadsky National Library of Ukraine
   -->
  
 <locale name="uk_UA" full_name="Українська">
-       <message key="plugins.generic.webfeed.displayName">Модуль веб-стрічок</message>
-       <message key="plugins.generic.webfeed.description">Цей модуль виробляє стрічки веб-синдикації RSS/Atom для поточного випуску.</message>
+	<message key="plugins.generic.webfeed.displayName">Модуль веб-стрічок</message>
+	<message key="plugins.generic.webfeed.description">Створює стрічку веб-синдикації у форматах RSS/Atom для поточного випуску.</message>
 
-       <message key="plugins.generic.webfeed.settings">Налаштування</message>
-       <message key="plugins.generic.webfeed.settings.issue">Відображати посилання на стрічки лише на сторінках випуску.</message>
-       <message key="plugins.generic.webfeed.settings.homepage">Відображати посилання на стрічки лише на домашній сторінці сайту журналу та на сторінках випуску.</message>
-       <message key="plugins.generic.webfeed.settings.all">Відображати посилання на стрічки на всіх сторінках сайту журналу.</message>
+	<message key="plugins.generic.webfeed.settings">Налаштування</message>
+	<message key="plugins.generic.webfeed.settings.issue">Відображати посилання на стрічки лише на сторінках випуску.</message>
+	<message key="plugins.generic.webfeed.settings.homepage">Відображати посилання на стрічки лише на домашній сторінці сайту журналу та на сторінках випуску.</message>
+	<message key="plugins.generic.webfeed.settings.all">Відображати посилання на стрічки на всіх сторінках сайту журналу.</message>
 
-       <message key="plugins.generic.webfeed.settings.currentIssue">Відображати статті поточного випуску.</message>
-       <message key="plugins.generic.webfeed.settings.recentArticles">найновіших опублікованих статей.</message>
-       <message key="plugins.generic.webfeed.settings.recentItemsRequired">Будь ласка, вкажіть позитивне ціле число для кількості нових опублікованих статей.</message>
-       <message key="plugins.generic.webfeed.atom.altText">Логотип Atom</message>
-       <message key="plugins.generic.webfeed.rss1.altText">Логотип RSS1</message>
-       <message key="plugins.generic.webfeed.rss2.altText">Логотип RSS2</message>
+	<message key="plugins.generic.webfeed.settings.currentIssue">Відображати матеріали у поточному опублікованому випуску.</message>
+	<message key="plugins.generic.webfeed.settings.recent">Відображати фіксовану кількість останніх опублікованих матеріалів.</message>
+	<message key="plugins.generic.webfeed.settings.recentArticles">Кількість останніх опублікованих матеріалів для відображення.</message>
+	<message key="plugins.generic.webfeed.settings.recentItemsRequired">Будь ласка, вкажіть додатнє ціле число для кількості останніх опублікованих матеріалів.</message>
+	<message key="plugins.generic.webfeed.atom.altText">Логотип Atom</message>
+	<message key="plugins.generic.webfeed.rss1.altText">Логотип RSS1</message>
+	<message key="plugins.generic.webfeed.rss2.altText">Логотип RSS2</message>
 </locale>

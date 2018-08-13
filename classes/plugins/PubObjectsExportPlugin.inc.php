@@ -3,8 +3,8 @@
 /**
  * @file classes/plugins/PubObjectsExportPlugin.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class PubObjectsExportPlugin
@@ -48,18 +48,14 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 	}
 
 	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-	}
-
-	/**
 	 * @copydoc Plugin::register()
 	 */
-	function register($category, $path) {
-		$success = parent::register($category, $path);
-		$this->addLocaleData();
+	function register($category, $path, $mainContextId = null) {
+		$success = parent::register($category, $path, $mainContextId);
+		if ($success) {
+			$this->addLocaleData();
+			HookRegistry::register('AcronPlugin::parseCronTab', array($this, 'callbackParseCronTab'));
+		}
 		return $success;
 	}
 
@@ -88,13 +84,6 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 				return new JSONMessage(true, $form->fetch($request));
 		}
 		return parent::manage($args, $request);
-	}
-
-	/**
-	 * @copydoc Plugin::getTemplatePath($inCore)
-	 */
-	function getTemplatePath($inCore = false) {
-		return parent::getTemplatePath($inCore) . 'templates/';
 	}
 
 	/**
@@ -186,8 +175,8 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 			$fileManager = new FileManager();
 			$exportFileName = $this->getExportFileName($this->getExportPath(), $objectsFileNamePart, $context, '.xml');
 			$fileManager->writeFile($exportFileName, $exportXml);
-			$fileManager->downloadFile($exportFileName);
-			$fileManager->deleteFile($exportFileName);
+			$fileManager->downloadByPath($exportFileName);
+			$fileManager->deleteByPath($exportFileName);
 		} elseif ($request->getUserVar(EXPORT_ACTION_DEPOSIT)) {
 			assert($filter != null);
 			// Get the XML
@@ -221,7 +210,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 				}
 			}
 			// Remove all temporary files.
-			$fileManager->deleteFile($exportFileName);
+			$fileManager->deleteByPath($exportFileName);
 			// redirect back to the right tab
 			$request->redirect(null, null, null, $path, null, $tab);
 		} elseif ($request->getUserVar(EXPORT_ACTION_MARKREGISTERED)) {
@@ -350,14 +339,11 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 		libxml_use_internal_errors(true);
 		$exportXml = $exportFilter->execute($objects, true);
 		$xml = $exportXml->saveXml();
-		$errors = array_filter(libxml_get_errors(), create_function('$a', 'return $a->level == LIBXML_ERR_ERROR || $a->level == LIBXML_ERR_FATAL;'));
+		$errors = array_filter(libxml_get_errors(), function($a) {
+			return $a->level == LIBXML_ERR_ERROR || $a->level == LIBXML_ERR_FATAL;
+		});
 		if (!empty($errors)) {
-			$charset = Config::getVar('i18n', 'client_charset');
-			header('Content-type: text/html; charset=' . $charset);
-			echo '<html><body>';
 			$this->displayXMLValidationErrors($errors, $xml);
-			echo '</body></html>';
-			fatalError(__('plugins.importexport.common.error.validation'));
 		}
 		return $xml;
 	}
@@ -585,7 +571,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 				}
 				$this->usage($scriptName);
 			}
-			$fileManager->deleteFile($exportFileName);
+			$fileManager->deleteByPath($exportFileName);
 		}
 	}
 
@@ -599,7 +585,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin {
 		$publishedArticles = array();
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 		foreach ($submissionIds as $submissionId) {
-			$publishedArticle = $publishedArticleDao->getPublishedArticleByArticleId($submissionId, $context->getId());
+			$publishedArticle = $publishedArticleDao->getByArticleId($submissionId, $context->getId());
 			if ($publishedArticle) $publishedArticles[] = $publishedArticle;
 		}
 		return $publishedArticles;

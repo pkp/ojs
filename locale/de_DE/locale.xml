@@ -4,8 +4,8 @@
 <!--
   * locale/de_DE/locale.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_German_(de_DE)
   * Localization strings.
@@ -36,7 +36,7 @@
 
 
 	<message key="reviewer.article.enterReviewForm">Klicken Sie auf das Symbol, um das Begutachtungsformular auszufüllen.</message>
-	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Bitte füllen Sie die benötigten Felder aus.</message>
+	<message key="reviewer.submission.reviewFormResponse.form.responseRequired">Bitte füllen Sie die benötigten Felder aus.</message>
 
 	<!-- review forms end -->
 
@@ -197,6 +197,7 @@
 	<message key="user.registerForOtherJournals">Für andere Zeitschriften registrieren</message>
 	<message key="user.reviewerPrompt">Wären Sie daran interessiert, Beiträge in dieser Zeitschrift zu begutachten?</message>
 	<message key="user.reviewerPrompt.userGroup">Ja, die {$userGroup}-Rolle beantragen.</message>
+	<message key="user.reviewerPrompt.optin">Ja, ich möchte kontaktiert werden, um für Gutachten zu Einreichungen bei dieser Zeitschrift angefragt zu werden.</message>
 	<message key="user.register.contextsPrompt">Bei welchen Zeitschriften auf dieser Website möchten Sie sich registrieren?</message>
 	<message key="user.register.otherContextRoles">Die folgenden Rollen beantragen.</message>
 	<message key="user.register.noContextReviewerInterests">Wenn Sie die Aufnahme als Gutachter/in bei einer Zeitschrift beantragt haben, geben Sie bitte Ihre Begutachtungsinteressen ein.</message>
@@ -211,7 +212,7 @@
 
 	<!-- Roles -->
 	<message key="user.role.manager">Zeitschriftenverwalter/in</message>
-	<message key="user.role.sectionEditor">Rubrikredakteur/in</message>
+	<message key="user.role.subEditor">Rubrikredakteur/in</message>
 	<message key="user.role.subscriptionManager">Abonnementverwalter/in</message>
 	<message key="user.role.managers">Zeitschriftenverwalter/innen</message>
 	<message key="user.role.subEditors">Rubrikredakteur/innen</message>
@@ -257,6 +258,7 @@
 	<message key="subscriptions.status.needsApproval">Genehmigung erforderlich</message>
 	<message key="subscriptions.status.awaitingManualPayment">Manuelle Zahlung abwarten</message>
 	<message key="subscriptions.status.awaitingOnlinePayment">Online-Zahlung abwarten</message>
+	<message key="subscriptions.status.noSubscription">Sie haben kein aktives Abonnement.</message>
 	<message key="subscriptions.status.other">Andere, siehe Hinweis</message>
 	<message key="subscriptions.individualDescription">Im Falle individueller Abonnements ist es erforderlich, sich einzuloggen, um auf Inhalte zuzugreifen.</message>
 	<message key="subscriptions.institutionalDescription">Für institutionelle Abonnements ist kein Login erforderlich. Die Domäne und/oder IP-Adresse werden genutzt, um auf Inhalte zuzugreifen.</message>
@@ -317,6 +319,7 @@
 	<message key="reader.openAccess">Freier Zugang (Open Access)</message>
 	<message key="reader.subscriptionAccess">Zugang für Abonnent/innen</message>
 	<message key="reader.subscriptionOrFeeAccess">Zugang für Abonnent/innen oder durch Zahlung einer Gebühr</message>
+	<message key="reader.purchasePrice">({$currency} {$price})</message>
 
 	<!-- Reader Comments -->
 	<message key="comments.commentsOnArticle">Kommentare zu diesem Artikel</message>
@@ -366,7 +369,6 @@
 	<message key="plugins.categories.viewableFiles">Plugins für Artikelfahnen</message>
 	<message key="plugins.categories.viewableFiles.description">Plugins für Artikelfahnen fügen die Unterstützung für die Anzeige verschiedener Dokumentarten als Artikelfahnen hinzu.</message>
 	<message key="plugins.categories.auth.description">Die Zugangs-Plugins ermöglichen Open Journal Systems, die Zugangsberechtigung von Benutzer/innen an andere Systeme, wie etwa LDAP-Server, zu übertragen.</message>
-	<message key="plugins.categories.citationFormats.description">Plugins für Zitatformate bieten Benutzer/innen unterschiedliche Formate zur Zitation der Artikel an.</message>
 	<message key="plugins.categories.generic.description">Generische Plugins werden zur Erweiterung von Open Journal Systems in einer Vielzahl von Wegen genutzt, die nicht durch die anderen Plugin-Kategorien bereitgestellt werden.</message>
 
 	<message key="manager.setup.lockssDescription"><![CDATA[<strong>Andere LOCKSS-Netzwerke</strong>
@@ -394,7 +396,6 @@ Autor/innen, die in dieser Zeitschrift publizieren möchten, stimmen den folgend
 	<li>Die Autor/innen können zusätzliche Verträge für die nicht-exklusive Verbreitung der in der Zeitschrift veröffentlichten Version ihrer Arbeit unter Nennung der Erstpublikation in dieser Zeitschrift eingehen (z.B. sie in Sammelpublikation oder einem Buch veröffentlichen).</li>
 	<li>Die Autor/innen werden dazu ermutigt, ihre Arbeit parallel zur Einreichung bei dieser Zeitschrift online zu veröffentlichen (z.B. auf den Homepages von Institutionen oder auf ihrer eigenen Homepage), weil so produktive Austauschprozesse wie auch eine frühe und erweiterte Bezugnahme auf das veröffentlichte Werk gefördert werden (siehe <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>).</li>
 </ol>]]></message>
-	<message key="manager.setup.citations.enable">Den Zitationsauszeichnungsassistenten aktivieren</message>
 
 	<!-- Setup Step 4 -->
 	<message key="manager.setup.basicEditorialStepsDescription"><![CDATA[Schritte: Liste der eingegangenen Beiträge &gt; Begutachtung der Beiträge &gt; Redaktion der Beiträge &gt; Inhaltsverzeichnis<br /><br />
@@ -479,12 +480,6 @@ Sie können der Nutzerin/dem Nutzer einen Grund für die Sperrung des Zugangs an
 
 	<!-- Navigation sidebar menu -->
 
-	<!-- Used by editor in submission review / editing -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[Der Name verweist zum Profil der Gutachterin/des Gutachters.<br />
-Die Bewertung erfolgt auf einer Skala von 1-5 (Ausgezeichnet).<br />
-"Wochen" bezieht sich auf die durchschnittlich von der Gutachterin/dem Gutachter für die Erstellung einer Begutachtung benötigte Zeit<br />
-"Zuletzt" bezieht sich auf das Annahmedatum der letzten Begutachtung<br />
-"Aktuell" bezieht sich auf die Anzahl momentan übernommener oder in Betracht gezogener Begutachtungen.]]></message>
 
 
 
@@ -574,12 +569,10 @@ Die Bewertung erfolgt auf einer Skala von 1-5 (Ausgezeichnet).<br />
 	<message key="reviewer.article.selectRecommendation.byEditor">Gutachter/in-Empfehlung setzen oder anpassen</message>
 	<message key="reviewer.article.mustSelectDecision">Keine Empfehlung ausgewählt. Sie müssen zur Abgabe des Gutachtens eine Empfehlung auswählen.</message>
 	<message key="reviewer.article.confirmDecision">Sobald Sie eine Empfehlung abgegeben haben, können Sie keine Änderungen mehr an diesem Gutachten vornehmen. Sind Sie sicher, dass Sie fortfahren wollen?</message>
-	<message key="reviewer.article.ensuringBlindReview">Eine anonyme Begutachtung sicherstellen</message>
 
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">Datei zum Lektorat</message>
 	<message key="copyeditor.article.copyeditorFile">Datei der Lektorin/des Lektors</message>
-	<message key="copyeditor.article.uploadedFile">Hochgeladene Datei</message>
 	<message key="copyeditor.article.copyeditorFinalFile">Datei der Lektorin/des Lektors</message>
 
 	<!-- Proofreader -->
@@ -681,6 +674,7 @@ Die Bewertung erfolgt auf einer Skala von 1-5 (Ausgezeichnet).<br />
 	<message key="user.register.reviewerDescriptionNoInterests">Sie sind bereit, bei der Zeitschrift eingereichte Beiträge im Peer Review zu begutachten.</message>
 	<message key="user.register.reviewerDescription">Sie sind bereit, bei der Website eingereichte Beiträge im Rahmen des Peer Review zu begutachten.</message>
 	<message key="user.register.reviewerInterests">Bitte geben Sie Begutachtungsinteressen an (Wissenschaftsbereiche und Forschungsmethoden):</message>
+	<message key="user.register.form.emailConsentAllContexts">Ja, ich möchte über neue Veröffentlichungen  und Ankündigungen aller Zeitschriften, bei denen ich registriert bin, erhalten.</message>
 
 	<!-- Subscriptions -->
 	<message key="user.subscriptions.mySubscriptions">Meine Abonnements</message>
@@ -699,8 +693,8 @@ Die Bewertung erfolgt auf einer Skala von 1-5 (Ausgezeichnet).<br />
 	<message key="user.subscriptions.purchaseNewSubscription">Ein neues Abonnement kaufen</message>
 	<message key="user.subscriptions.purchaseIndividualSubscription">Ein individuelles Abonnement kaufen</message>
 	<message key="user.subscriptions.purchaseInstitutionalSubscription">Ein institutionelles Abonnement kaufen</message>
-	<message key="user.subscriptions.expires">Endet</message>
-	<message key="user.subscriptions.expired">Beendet</message>
+	<message key="user.subscriptions.expires">Endet: {$date}</message>
+	<message key="user.subscriptions.expired">Beendet: {$date}</message>
 	<message key="user.subscriptions.viewSubscriptionTypes">Verfügbare Abonnement-Arten ansehen</message>
 	<message key="user.subscriptions.form.typeId">Abonnement-Art</message>
 	<message key="user.subscriptions.form.membership">Mitgliedschaft</message>
@@ -828,41 +822,6 @@ Die Bewertung erfolgt auf einer Skala von 1-5 (Ausgezeichnet).<br />
 	<message key="donations.thankYou">Danke</message>
 	<message key="donations.thankYouMessage">Vielen Dank für Ihre Spende. Wir wissen sie sehr zu schätzen.</message>
 
-	<!-- Gifts -->
-	<message key="gifts.buyer">Von</message>
-	<message key="gifts.buyerDescription">Von wem ist dieses Geschenk?</message>
-	<message key="gifts.recipient">Für</message>
-	<message key="gifts.recipientDescription">Für wen ist dieses Geschenk?</message>
-	<message key="gifts.thankYou">Danke</message>
-	<message key="gifts.thankYouMessage">Sie haben ein Geschenk erworben. Sie werden eine Kopie der Geschenk-E-Mail erhalten, die an den/die Empfänger/in geschickt wird, nachdem Ihre Zahlung verarbeitet worden ist.</message>
-	<message key="gifts.purchaseGiftIndividualSubscription">Geschenk-Abonnement</message>
-	<message key="gifts.subscriptionFormIntroduction">Bitte füllen Sie das unten stehende Formular aus. Die angegebenen Kontaktinformationen werden zusammen mit Ihrer Geschenknachricht benutzt, um den/die Empfänger/in anzuschreiben und ihn/sie über ihr neues Geschenkabonnement zu informieren. (Sie werden auch eine Kopie dieser E-Mail erhalten.)</message>
-	<message key="gifts.details">Geschenk-Details</message>
-	<message key="gifts.detailsDescription">Bitte wählen Sie das Geschenk unten aus und fügen Sie eine persönliche Nachricht hinzu, die an den/die Empfänger/in geschickt werden wird. (Sie werden auch eine Kopie dieser E-Mail erhalten.)</message>
-	<message key="gifts.gift">Geschenk</message>
-	<message key="gifts.noteTitle">Titel</message>
-	<message key="gifts.note">Geschenknachricht</message>
-	<message key="gifts.noteTitleRequired">Bitte geben Sie einen Titel für Ihre persönliche Nachricht an.</message>
-	<message key="gifts.noteRequired">Bitte geben Sie eine persönliche Nachricht an.</message>
-	<message key="gifts.localeRequired">Bitte wählen Sie eine Sprache für Ihre persönliche Nachricht aus.</message>
-	<message key="gifts.myGifts">Meine Geschenke</message>
-	<message key="gifts.manageMyGifts">Meine Geschenke verwalten</message>
-	<message key="gifts.redeemGift">Geschenk einlösen</message>
-	<message key="gifts.status.notRedeemed">Verfügbar</message>
-	<message key="gifts.status.redeemed">Eingelöst</message>
-	<message key="gifts.status.redeemGift">Geschenk einlösen</message>
-	<message key="gifts.subscriptions">Abonnements</message>
-	<message key="gifts.subscriptionsDescription">Ein hier eingelöstes Geschenkabonnement wird Ihr existierendes Abonnement ersetzen (wenn Sie eines haben). Abonnements werden mit dem Datum der Einlösung beginnen und werden für die Dauer des Abonnementtyps gültig sein.</message>
-	<message key="gifts.purchaseGiftSubscription">Ein Geschenkabonnement geben</message>
-	<message key="gifts.giftSubscriptionsAvailable">Es sind auch Geschenkabonnements erhältlich. Geschenkabonnements können zu jeder Zeit durch den/die Empfänger/in eingelöst werden und sind ein guter Weg, diese Zeitschrift zu unterstützen.</message>
-	<message key="gifts.noSubscriptions">Keine Geschenkabonnements</message>
-	<message key="gifts.giftRedeemed">Das Geschenk wurde erfolgreich eingelöst.</message>
-	<message key="gifts.noGiftToRedeem">Dieses Geschenk ist nicht zur Einlösung verfügbar.</message>
-	<message key="gifts.giftAlreadyRedeemed">Dieses Geschenk ist bereits eingelöst worden.</message>
-	<message key="gifts.giftNotValid">Dieses Geschenk ist nicht gültig und kann nicht eingelöst werden.</message>
-	<message key="gifts.subscriptionTypeNotValid">Der Abonnementtyp für dieses Geschenk ist ungültig. Bitte kontaktieren Sie den/die Abonnementverwalter/in.</message>
-	<message key="gifts.subscriptionNonExpiring">Das Geschenk wurde nicht eingelöst, da Sie bereits ein nicht auslaufendes Abonnement für diese Zeitschrift haben.</message>
-
 	<!-- Payments -->
 	<message key="payment.loginRequired">Sie müssen angemeldet sein, um Zahlungen durchführen zu können.</message>
 	<message key="payment.loginRequired.forArticle">Ein Abonnement oder der Erwerb des Artikels sind für den Zugang notwendig. Loggen Sie sich bei der Zeitschrift ein, um Ihr Abonnement zu überprüfen, auf frühere Erwerbungen zuzugreifen oder den Artikel zu erwerben.</message>
@@ -879,20 +838,19 @@ Die Bewertung erfolgt auf einer Skala von 1-5 (Ausgezeichnet).<br />
 	<message key="payment.authorFees">Autor/innengebühren</message>
 	<message key="payment.type.submission">Gebühr für das Einreichen eines Beitrags</message>
 	<message key="payment.type.publication">Veröffentlichungsgebühr</message>
+	<message key="payment.type.publication.required">Die Veröffentlichungsgebühr ist fällig.</message>
 	<message key="payment.type.fastTrack">Gebühr für beschleunigte Begutachtung</message>
 	<message key="payment.type.membership">Mitgliedsbeitrag</message>
 	<message key="payment.type.purchaseArticle">Artikelgebühr</message>
 	<message key="payment.type.purchaseIssue">Ausgabengebühr</message>
 	<message key="payment.type.subscription">Abonnementgebühr</message>
 	<message key="payment.type.donation">Spenden</message>
-	<message key="payment.type.gift">Geschenk</message>
-	<message key="payment.type.gift.subscription">Abonnement</message>
+	<message key="payment.requestPublicationFee">Fordere Veröffentlichungsgebühr ({$feeAmount}) an</message>
+	<message key="payment.notFound">Eine Zahlung wurde angefordert, aber die Anforderung ist abgelaufen. Kontaktieren Sie den Zeitschriftenverwalter/die Zeitschriftenverwalterin  für Einzelheiten.</message>
 
 	<message key="payment.donation.makeDonation">Spenden</message>
 
 	<message key="payment.submission.paySubmission">Einreichungsgebühr zahlen</message>
-	<message key="payment.fastTrack.payFastTrack">Gebühr für beschleunigte Begutachtung zahlen</message>
-	<message key="payment.fastTrack.inFastTrack">in beschleunigter Begutachtung</message>
 	<message key="payment.publication.payPublication">Veröffentlichungsgebühr zahlen</message>
 	<message key="payment.publication.publicationPaid">Veröffentlichungsgebühr bezahlt</message>
 
@@ -909,7 +867,7 @@ Die Bewertung erfolgt auf einer Skala von 1-5 (Ausgezeichnet).<br />
 	<message key="installer.ojsUpgrade">Aktualisierung von OJS</message>
 	<message key="installer.installationInstructions"><![CDATA[<h4>OJS-Version {$version}</h4>
 
-<p>Danke für das Herunterladen von Open Journal Systems <strong>des Public Knowledge Projects (PKP)</strong>. Bevor Sie fortfahren, lesen Sie bitte die zum Programm gehörende <a href="{$baseUrl}/docs/README">README</a>-Datei. Näheres über das Public Knowledge Project und seine Programmentwicklungen finden Sie auf der <a href="http://pkp.sfu.ca/" target="_blank">Webseite des PKP</a>. Wenn Sie Programmfehler melden wollen oder technische Fragen zu Open Journal Systems haben, gehen Sie bitte zum <a href="http://forum.pkp.sfu.ca">Support Forum</a> von PKP oder besuchen Sie unseren <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">Webservice für die Anzeige von Programmfehlern</a>. Wenn Sie im Support Forum keine geeignete Hilfestellung finden, können Sie uns auch unter <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a> per E-Mail kontaktieren.</p>
+<p>Danke für das Herunterladen von Open Journal Systems <strong>des Public Knowledge Projects (PKP)</strong>. Bevor Sie fortfahren, lesen Sie bitte die zum Programm gehörende <a href="{$baseUrl}/docs/README.md">README</a>-Datei. Näheres über das Public Knowledge Project und seine Programmentwicklungen finden Sie auf der <a href="http://pkp.sfu.ca/" target="_blank">Webseite des PKP</a>. Wenn Sie Programmfehler melden wollen oder technische Fragen zu Open Journal Systems haben, gehen Sie bitte zum <a href="http://forum.pkp.sfu.ca">Support Forum</a> von PKP oder besuchen Sie unseren <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">Webservice für die Anzeige von Programmfehlern</a>. Wenn Sie im Support Forum keine geeignete Hilfestellung finden, können Sie uns auch unter <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a> per E-Mail kontaktieren.</p>
 
 <h4>Aktualisierungen</h4>
 
@@ -949,7 +907,7 @@ Die Bewertung erfolgt auf einer Skala von 1-5 (Ausgezeichnet).<br />
 <p>2. Ein Verzeichnis für die Ablage hochgeladener Dateien muss angelegt und beschreibbar gemacht werden (siehe "Datei-Einstellungen" unten).</p>]]></message>
 	<message key="installer.upgradeInstructions"><![CDATA[<h4>OJS-Version{$version}</h4>
 
-<p>Danke für das Herunterladen von Open Journal Systems <strong>des Public Knowledge Project</strong>. Bevor Sie fortfahren, lesen Sie bitte die zum Programm gehörenden Dateien <a href="{$baseUrl}/docs/README">README</a> und <a href="{$baseUrl}/docs/UPGRADE">UPGRADE</a>. Näheres über das Public Knowledge Project und seine Programmentwicklungen finden Sie auf der <a href="http://pkp.sfu.ca/" target="_blank">Webseite des PKP</a>. Wenn Sie Programmfehler melden wollen oder technische Fragen zu Open Journal Systems haben, gehen Sie bitte zum <a href="http://forum.pkp.sfu.ca">Support Forum</a> von PKP oder besuchen Sie unseren <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">Webservice für die Anzeige von Programmfehlern</a>. Wenn Sie im Support Forum keine geeignete Hilfestellung finden, können Sie uns auch unter <a href="mailto:pkp.contact@gmail.com"></a> per E-Mail kontaktieren.</p>
+<p>Danke für das Herunterladen von Open Journal Systems <strong>des Public Knowledge Project</strong>. Bevor Sie fortfahren, lesen Sie bitte die zum Programm gehörenden Dateien <a href="{$baseUrl}/docs/README.md">README</a> und <a href="{$baseUrl}/docs/UPGRADE.md">UPGRADE</a>. Näheres über das Public Knowledge Project und seine Programmentwicklungen finden Sie auf der <a href="http://pkp.sfu.ca/" target="_blank">Webseite des PKP</a>. Wenn Sie Programmfehler melden wollen oder technische Fragen zu Open Journal Systems haben, gehen Sie bitte zum <a href="http://forum.pkp.sfu.ca">Support Forum</a> von PKP oder besuchen Sie unseren <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">Webservice für die Anzeige von Programmfehlern</a>. Wenn Sie im Support Forum keine geeignete Hilfestellung finden, können Sie uns auch unter <a href="mailto:pkp.contact@gmail.com"></a> per E-Mail kontaktieren.</p>
 <p>Wir <strong>empfehlen dringend</strong>, dass Sie ein Backup Ihrer Datenbank, Dateiverzeichnisse und OJS-Installation machen, bevor Sie fortfahren.</p>
 <p>Falls Sie in einem <a href="http://www.php.net/features.safe-mode" target="_blank">PHP-Safe Mode</a> arbeiten, stellen Sie bitte sicher, dass die max_execution_time-Richtlinie in Ihrer php.ini-Konfigurationsdatei auf einen hohen Grenzwert eingestellt ist. Sollte dieses (oder irgendein anderes) Zeitlimit (z.B. die "Timeout"-Regelung von Apache) erreicht werden und der Upgrade-Prozess unterbrochen werden, müssen Sie manuell eingreifen.</p>]]></message>
 	<message key="installer.localeSettingsInstructions"><![CDATA[Zur durchgängigen Unterstützung von Unicode (UTF-8) verwenden Sie stets UTF-8 als Zeichensatz. Beachten Sie, dass MySQL >= 4.1.1 oder PostgreSQL >= 7.1-Datenbankserver erforderlich sind. Beachten Sie bitte außerdem, dass die Unterstützung von Unicode PHP >= 4.3.0 kompiliert mit der Bibliothek <a href="http://www.php.net/mbstring" target="_blank">mbstring</a> verlangt (in den meisten neueren PHP-Installationen standardmäßig aktiviert). Falls Ihr Server diese Anforderungen nicht erfüllt, können Schwierigkeiten mit erweiterten Schriftsätzen auftreten.
@@ -986,7 +944,6 @@ Ihr Server unterstützt derzeit : <strong>{$supportsMBString}</strong>]]></messa
 	<message key="log.review.reviewerUnassigned">Der Beitrag {$submissionId} wird nicht länger von {$reviewerName} im Durchgang {$round} begutachtet.</message>
 	<message key="log.review.reviewInitiated">Durchgang {$round} der Begutachtung von Beitrag {$submissionId} durch {$reviewerName} hat begonnen.</message>
 	<message key="log.review.reviewReinitiated">Durchgang {$round} der Begutachtung von Beitrag {$submissionId} durch {$reviewerName} wurde erneut begonnen.</message>
-	<message key="log.review.reviewCancelled">Durchgang {$round} der Begutachtung von Beitrag {$submissionId} durch {$reviewerName} wurde abgebrochen.</message>
 	<message key="log.review.reviewCleared">Die Begutachtung von Beitrag {$submissionId} in Durchgang {$round} durch {$reviewerName} wurde gelöscht.</message>
 	<message key="log.review.reviewerRated">{$reviewerName} wurde beurteilt für Durchgang {$round} der Begutachtung von Beitrag {$submissionId}.</message>
 	<message key="log.review.reviewDueDateSet">Abgabetermin für Durchgang {$round} der Begutachtung von Beitrag {$submissionId} durch {$reviewerName} festgesetzt auf {$dueDate}.</message>
@@ -1000,6 +957,7 @@ Ihr Server unterstützt derzeit : <strong>{$supportsMBString}</strong>]]></messa
 	<message key="log.review.reviewFileByProxy">Redakteur/in {$userName} hat die Begutachtungsdatei von Beitrag {$submissionId} in Durchgang {$round} im Auftrag der Gutachterin/des Gutachters {$reviewerName} hochgeladen.</message>
 	<message key="log.review.reviewerFile">Begutachtungsdatei wurde hochgeladen.</message>
 	<message key="log.editor.decision">Eine Entscheidung ({$decision}) bezüglich Artikel {$submissionId} wurde von Redakteur/in {$editorName} abgegeben.</message>
+	<message key="log.editor.recommendation">Eine redaktionelle Empfehlung ({$decision}) wurde von {$editorName} für den Artikel {$submissionId} eingetragen.</message>
 
 
 	<message key="log.copyedit.initiate">Lektorat von Beitrag {$submissionId} wurde von {$copyeditorName} begonnen.</message>
@@ -1079,8 +1037,6 @@ Die Prüfung kann bei Such-URLs, die Formularausfüllung verlangen, fehlschlagen
 
 
 	<!-- Notification Types -->
-	<message key="notification.mailListDescription">Geben Sie Ihre E-Mail-Adresse ein, wenn Sie über neue Inhalte in dieser Zeitschrift informiert werden wollen</message>
-	<message key="notification.notificationsPublicDescription"><![CDATA[Auf dieser Seite finden Sie Updates wie neue Ausgaben oder Ankündigungen. Sie können diese Benachrichtigungen als RSS-Feed abonnieren (indem Sie auf die Abbildungen rechts klicken) oder <a href="{$emailUrl}">via E-Mail.</a>]]></message>
 
 	<message key="notification.type.articleSubmitted">Ein neuer Beitrag, "{$title}", wurde eingereicht.</message>
 	<message key="notification.type.editing">Redaktionelle Ereignisse</message>
@@ -1095,10 +1051,12 @@ Die Prüfung kann bei Such-URLs, die Formularausfüllung verlangen, fehlschlagen
 	<message key="notification.type.submissionComment">Ein/e Redakteur/in hat "{$title}" kommentiert.</message>
 	<message key="notification.type.submissions">Einreichungsereignisse</message>
 	<message key="notification.type.userComment">Ein/e Leser/in hat "{$title}" kommentiert.</message>
+	<message key="notification.type.public">Öffentliche Ankündigungen</message>
 	<message key="notification.savedIssueMetadata">Ausgabenmetadaten gespeichert.</message>
 	<message key="notification.type.editorAssignmentTask">Ein neuer Artikel wurde eingereicht, dem ein/e Redakteur/in zugewiesen werden muss.</message>
-
-
+	<message key="notification.type.assignProductionUser">Nutzen Sie den Hinzufügen-Link in der Teilnehmer/innen-Liste, um eine/n Nutzer/in zum Erzeugen von Fahnen einzutragen.</message>
+	<message key="notification.type.awaitingRepresentations">Warte auf Fahnen.</message>
+	<message key="notification.type.publicationScheduled">Dieser Beitrag wurde zur Publikation vorgesehen.</message>
 
 	<!--
 	 *
@@ -1141,4 +1099,8 @@ Die Prüfung kann bei Such-URLs, die Formularausfüllung verlangen, fehlschlagen
 
 	<message key="editor.issues.backIssues">Frühere Ausgaben</message>
 	<message key="editor.issues.futureIssues">Zukünftige Ausgaben</message>
+	<message key="navigation.subscriptions">Abonnements</message>
+
+	<!-- legacy strings from OJS 2, for upgraded installations from OJS 2 -->
+	<message key="log.editor.submissionExpedited">{$editorName} hat den Redaktionsprozess für die Einreichung {$submissionId} übernommen.</message>
 </locale>

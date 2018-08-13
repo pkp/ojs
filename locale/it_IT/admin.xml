@@ -4,8 +4,8 @@
 <!--
   * locale/it_IT/admin.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2000-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2000-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the it_IT (Italiano) locale.
@@ -60,9 +60,6 @@
 	<message key="admin.mergeUsers.noneEnrolled">Non ci sono utenti iscritti</message>
 	<message key="admin.locale.maybeIncomplete">I file marcati potrebbero essere incompleti.</message>
 	<message key="admin.settings.options">Opzioni</message>
-	<message key="admin.settings.journalsList.showThumbnail">Anteprima della rivista</message>
-	<message key="admin.settings.journalsList.showTitle">Titolo della rivista</message>
-	<message key="admin.settings.journalsList.showDescription">Descrizione della rivista</message>
 	<message key="admin.categories">Categorie</message>
 	<message key="admin.categories.disableCategories">Non organizzare le riviste in categorie</message>
 	<message key="admin.categories.editTitle">Modifica categoria</message>
@@ -73,12 +70,9 @@
 	<message key="admin.categories.name">Nome</message>
 	<message key="admin.categories.enableCategories">Consenti agli amministratori delle riviste di organizzarle in categorie</message>
 	<message key="admin.categories.nameRequired">Inserire il nome di una categoria</message>
-	<message key="admin.settings.journalsList.description">Scegli gli elementi da mostrare per ciascuna rivista nella home page del sito.</message>
-	<message key="admin.settings.journalsList">Elementi della rivista</message>
-	<message key="admin.settings.usePaging">In siti con molte riviste, spezza la lista in diverse pagine.</message>
 	<message key="admin.categories.enable.description">L'amministratore del sito può definire qui un set di categorie per migliorare l'organizzazione di siti che ospitano molte riviste. Gli amministratori delle riviste possono poi scegliere alcune di queste categorie per ciascuna rivista e i lettori possono navigare attraverso le riviste per categorie.</message>
-	
-	<message key="admin.settings.defaultMetricDescription">Questa installazione OJS è configurata per registrare più di una metrica di utilizzo. Le statistiche di utilizzo verranno visualizzate in diversi contesti. 
-Ci sono casi in cui deve essere utilizzato una sola statistica di utilizzo, ad esempio, per visualizzare un elenco ordinato di oggetti più utilizzati o risultati di ricerca. 
+
+	<message key="admin.settings.defaultMetricDescription">Questa installazione OJS è configurata per registrare più di una metrica di utilizzo. Le statistiche di utilizzo verranno visualizzate in diversi contesti.
+Ci sono casi in cui deve essere utilizzato una sola statistica di utilizzo, ad esempio, per visualizzare un elenco ordinato di oggetti più utilizzati o risultati di ricerca.
 Selezionare una delle metriche configurate come predefinita.</message>
 </locale>

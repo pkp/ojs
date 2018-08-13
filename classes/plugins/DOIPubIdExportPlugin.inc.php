@@ -3,8 +3,8 @@
 /**
  * @file classes/plugins/DOIPubIdExportPlugin.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class DOIPubIdExportPlugin
@@ -23,23 +23,6 @@ define('DOI_EXPORT_REGISTERED_DOI', 'registeredDoi');
 
 abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin {
 
-	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-	}
-
-	/**
-	 * @copydoc Plugin::register()
-	 */
-	function register($category, $path) {
-		$success = parent::register($category, $path);
-		if ($success) {
-			HookRegistry::register('AcronPlugin::parseCronTab', array($this, 'callbackParseCronTab'));
-		}
-		return $success;
-	}
 
 	/**
 	 * @copydoc ImportExportPlugin::display()
@@ -50,10 +33,9 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin {
 		switch (array_shift($args)) {
 			case 'index':
 			case '':
-				parent::display($args, $request);
 				$templateMgr = TemplateManager::getManager($request);
 				// Check for configuration errors:
-				$configurationErrors = $templateMgr->get_template_vars('configurationErrors');
+				$configurationErrors = $templateMgr->getTemplateVars('configurationErrors');
 				// missing DOI prefix
 				$doiPrefix = $exportArticles = $exportIssues = null;
 				$pubIdPlugins = PluginRegistry::loadCategory('pubIds', true);
@@ -72,7 +54,7 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin {
 					'exportIssues' => $exportIssues,
 					'exportRepresentations' => $exportRepresentations,
 				));
-				$templateMgr->display($this->getTemplatePath() . 'index.tpl');
+				$templateMgr->display($this->getTemplateResource('index.tpl'));
 				break;
 		}
 	}
@@ -209,7 +191,7 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin {
 	}
 
 	/**
-	 * Get published articles with a DOI asigned from submission IDs.
+	 * Get published articles with a DOI assigned from submission IDs.
 	 * @param $submissionIds array
 	 * @param $context Context
 	 * @return array
@@ -218,14 +200,14 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin {
 		$publishedArticles = array();
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 		foreach ($submissionIds as $submissionId) {
-			$publishedArticle = $publishedArticleDao->getPublishedArticleByArticleId($submissionId, $context->getId());
+			$publishedArticle = $publishedArticleDao->getByArticleId($submissionId, $context->getId());
 			if ($publishedArticle && $publishedArticle->getStoredPubId('doi')) $publishedArticles[] = $publishedArticle;
 		}
 		return $publishedArticles;
 	}
 
 	/**
-	 * Get published issues with a DOI asigned  from issue IDs.
+	 * Get published issues with a DOI assigned from issue IDs.
 	 * @param $issueIds array
 	 * @param $context Context
 	 * @return array

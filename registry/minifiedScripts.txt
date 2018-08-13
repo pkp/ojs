@@ -1,8 +1,8 @@
 #
 # registry/minifiedScripts.txt
 #
-# Copyright (c) 2014-2017 Simon Fraser University Library
-# Copyright (c) 2003-2017 John Willinsky
+# Copyright (c) 2014-2018 Simon Fraser University
+# Copyright (c) 2003-2018 John Willinsky
 # Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
 #
 # This file contains a list of all JavaScript files that should be compiled
@@ -21,11 +21,11 @@ lib/pkp/js/lib/jquery/plugins/jquery.equalizer.js
 lib/pkp/js/lib/jquery/plugins/jquery.jlabel-1.3.min.js
 lib/pkp/js/lib/jquery/plugins/jquery.selectBox.min.js
 
+# Underscore library
+lib/pkp/js/lib/underscore/underscore.js
+
 # JSON library
 lib/pkp/js/lib/json/json2.js
-
-# Our own functions (depend on plug-ins)
-lib/pkp/js/functions/general.js
 
 # Our own classes (depend on plug-ins)
 lib/pkp/js/classes/Helper.js
@@ -61,7 +61,6 @@ lib/pkp/js/controllers/TabHandler.js
 lib/pkp/js/controllers/MenuHandler.js
 lib/pkp/js/controllers/UploaderHandler.js
 lib/pkp/js/controllers/AutocompleteHandler.js
-lib/pkp/js/controllers/RangeSliderHandler.js
 lib/pkp/js/controllers/RevealMoreHandler.js
 lib/pkp/js/controllers/NotificationHandler.js
 lib/pkp/js/controllers/HelpPanelHandler.js
@@ -97,20 +96,20 @@ lib/pkp/js/controllers/grid/queries/ReadQueryHandler.js
 lib/pkp/js/controllers/wizard/fileUpload/FileUploadWizardHandler.js
 lib/pkp/js/controllers/wizard/fileUpload/form/FileUploadFormHandler.js
 lib/pkp/js/controllers/wizard/fileUpload/form/RevisionConfirmationHandler.js
-lib/pkp/js/controllers/grid/filter/form/FilterFormHandler.js
+lib/pkp/js/controllers/grid/navigationMenus/form/NavigationMenuFormHandler.js
+lib/pkp/js/controllers/grid/navigationMenus/form/NavigationMenuItemsFormHandler.js
 lib/pkp/js/controllers/grid/representations/form/RepresentationFormHandler.js
 lib/pkp/js/controllers/grid/settings/user/form/UserDetailsFormHandler.js
 lib/pkp/js/controllers/grid/settings/roles/form/UserGroupFormHandler.js
 lib/pkp/js/controllers/grid/settings/metadata/MetadataGridHandler.js
 lib/pkp/js/controllers/tab/settings/form/FileViewFormHandler.js
 lib/pkp/js/controllers/tab/settings/announcements/form/AnnouncementSettingsFormHandler.js
+lib/pkp/js/controllers/tab/settings/archiving/form/ArchivingSettingsFormHandler.js
 lib/pkp/js/controllers/tab/settings/permissions/form/PermissionSettingsFormHandler.js
 lib/pkp/js/controllers/tab/settings/paymentMethod/PaymentMethodHandler.js
 lib/pkp/js/controllers/grid/notifications/NotificationsGridHandler.js
 lib/pkp/js/controllers/tab/settings/siteAccessOptions/form/SiteAccessOptionsFormHandler.js
-lib/pkp/js/controllers/tab/settings/managementSettings/UsersAndRolesTabHandler.js
 lib/pkp/js/controllers/tab/workflow/WorkflowTabHandler.js
-lib/pkp/js/controllers/tab/representations/RepresentationsTabHandler.js
 lib/pkp/js/controllers/informationCenter/NotesHandler.js
 lib/pkp/js/controllers/statistics/ReportGeneratorFormHandler.js
 lib/pkp/js/controllers/dashboard/form/DashboardTaskFormHandler.js
@@ -121,6 +120,7 @@ lib/pkp/js/pages/submission/SubmissionTabHandler.js
 lib/pkp/js/pages/submission/SubmissionStep2FormHandler.js
 lib/pkp/js/pages/submission/SubmissionStep3FormHandler.js
 lib/pkp/js/pages/workflow/WorkflowHandler.js
+lib/pkp/js/controllers/grid/users/UserGridHandler.js
 lib/pkp/js/controllers/grid/users/reviewer/AdvancedReviewerSearchHandler.js
 lib/pkp/js/controllers/grid/users/reviewer/form/EditReviewFormHandler.js
 lib/pkp/js/controllers/grid/users/reviewer/form/AddReviewerFormHandler.js
@@ -130,9 +130,10 @@ lib/pkp/js/controllers/grid/users/stageParticipant/form/AddParticipantFormHandle
 lib/pkp/js/pages/reviewer/ReviewerTabHandler.js
 lib/pkp/js/pages/authorDashboard/SubmissionEmailHandler.js
 js/controllers/grid/articleGalleys/ArticleGalleyGridHandler.js
+js/controllers/grid/issues/BackIssueGridHandler.js
+js/controllers/grid/issues/FutureIssueGridHandler.js
 js/controllers/tab/issueEntry/IssueEntryTabHandler.js
 js/controllers/tab/issueEntry/form/IssueEntryPublicationMetadataFormHandler.js
-js/pages/search/SearchFormHandler.js
 
 # Our own plug-in (depends on classes)
 lib/pkp/js/lib/jquery/plugins/jquery.pkp.js

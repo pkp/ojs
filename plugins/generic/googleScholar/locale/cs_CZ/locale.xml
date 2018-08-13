@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/googleScholar/locale/cs_CZ/locale.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Czech_(cs_CZ)
+  * Localization strings.
+  -->
+
+<locale name="cs_CZ" full_name="Čeština">
+	<message key="plugins.generic.googleScholar.name">Indexovací plugin Google Scholar</message>
+	<message key="plugins.generic.googleScholar.description">Tento plugin umožňuje indexování publikovaného obsahu ve službě Google Scholar.</message>
+</locale>

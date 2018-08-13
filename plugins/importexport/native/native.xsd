@@ -3,8 +3,8 @@
 <!--
   * plugins/importexport/native/native.xsd
   *
-  * Copyright (c) 2014-2017 Simon Fraser University Library
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Schema describing native XML import/export elements specific to OJS
@@ -26,7 +26,7 @@
 						<element ref="pkp:issue_identification" minOccurs="0" maxOccurs="1" />
 						<element maxOccurs="1" minOccurs="0" name="pages" type="string" />
 					</sequence>
-					<attribute name="section_ref" type="string" />
+					<attribute name="section_ref" type="string" use="required" />
 					<attribute name="seq" type="int" />
 					<attribute name="access_status" type="int" />
 					<attribute name="stage" use="required">

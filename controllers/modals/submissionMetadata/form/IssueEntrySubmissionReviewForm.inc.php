@@ -3,8 +3,8 @@
 /**
  * @file controllers/modals/submissionMetadata/form/IssueEntrySubmissionReviewForm.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class CatalogEntrySubmissionReviewForm
@@ -35,12 +35,13 @@ class IssueEntrySubmissionReviewForm extends SubmissionMetadataViewForm {
 	 * Save the metadata.
 	 */
 	function execute($request) {
+		parent::execute($request);
 		HookRegistry::call('issueentrysubmissionreviewform::execute', array($this));
 
 		$submission = $this->getSubmission();
 		$submissionDao = Application::getSubmissionDAO();
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-		$publishedArticle = $publishedArticleDao->getPublishedArticleByArticleId($submission->getId(), null, false);
+		$publishedArticle = $publishedArticleDao->getByArticleId($submission->getId(), null, false);
 		$isExistingEntry = $publishedArticle?true:false;
 
 		if ($isExistingEntry) {

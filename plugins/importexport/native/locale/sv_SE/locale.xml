@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Swedish_(sv_SE)
+  * Localization strings.
+  -->
+
+<locale name="sv_SE" full_name="Svenska">
+	<message key="plugins.importexport.native.displayName">Plugin för OJS-XML</message>
+	<message key="plugins.importexport.native.description">Importerar och exporterar artiklar och nummer i OJS:s XML-format.</message>
+	<message key="plugins.importexport.native.import">Importera</message>
+	<message key="plugins.importexport.native.import.instructions">Ladda upp XML-fil som ska importeras</message>
+	<message key="plugins.importexport.native.exportSubmissionsSelect">Välj artiklar att exportera</message>
+	<message key="plugins.importexport.native.exportSubmissions">Exportera artiklar</message>
+	<message key="plugins.importexport.native.exportIssues">Exportera nummer</message>
+	<message key="plugins.importexport.native.results">Resultat</message>
+	<message key="plugins.inportexport.native.uploadFile">Ladda upp en fil under "Importera" för att kunna fortsätta.</message>
+	<message key="plugins.importexport.native.importComplete">Importen lyckades. Följande objekt har importerats:</message>
+	<message key="plugins.importexport.native.cliUsage"><![CDATA[Usage: {$scriptName} {$pluginName} [command] ...
+Kommandon:
+	import [xmlFileName] [journal_path] [user_name] ...
+	export [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...
+	export [xmlFileName] [journal_path] article [articleId]
+	export [xmlFileName] [journal_path] issues [issueId1] [issueId2] ...
+	export [xmlFileName] [journal_path] issue [issueId]
+
+Ytterligare parametrar krävs för att importera data enligt följande, beroende 
+på rotelementet i XML-dokumentet.
+
+Om rotelementet är <article> eller <articles> krävs ytterligare parametrar.
+Följande format accepteras:
+
+{$scriptName} {$pluginName} import [xmlFileName] [journal_path] [user_name]
+	issue_id [issueId] section_id [sectionId]
+
+{$scriptName} {$pluginName} import [xmlFileName] [journal_path] [user_name]
+	issue_id [issueId] section_name [name]
+
+{$scriptName} {$pluginName} import [xmlFileName] [journal_path]
+	issue_id [issueId] section_abbrev [abbrev]
+]]></message>
+	<message key="plugins.importexport.native.error.unknownSection">Okänd sektion: {$param}</message>
+	<message key="plugins.importexport.native.error.unknownUser">Användaren "{$userName}" existerar inte.</message>
+	<message key="plugins.importexport.native.import.error.sectionTitleMismatch">Sektionstiteln "{$section1Title}" och sektionstiteln "{$section2Title}" i numret "{$issueTitle}" matchade flera existerande tidskriftssektioner.</message>
+	<message key="plugins.importexport.native.import.error.sectionTitleMatch">Sektionstiteln "{$sectionTitle}" i numret "{$issueTitle}" matchade en existerande tidskriftssektion, men en annan titel i den här sektionen matchar inte någon annan titel i den existerande tidskriftssektionen.</message>
+	<message key="plugins.importexport.native.import.error.sectionAbbrevMismatch">Sektionsförkortningen "{$section1Abbrev}" och sektionsförkortningen "{$section2Abbrev}" i numret "{$issueTitle}" matchade flera existerande tidskriftssektioner.</message>
+	<message key="plugins.importexport.native.import.error.sectionAbbrevMatch">Sektionsförkortningen "{$sectionAbbrev}" i numret "{$issueTitle}" matchade en existerande tidskriftssektion, men en annnan förkortning för den här sektionen matchar inte någon annan förkortning för den existerande tidskriftssektionen.</message>
+	<message key="plugins.importexport.native.import.error.issueIdentificationMatch">Inget eller fler än ett nummer matchar nummeridentifikatorn "{$issueIdentification}".</message>
+	<message key="plugins.importexport.native.import.error.issueIdentificationDuplicate">Det existerande numret med id {$issueId} matchar nummeridentifikatorn "{$issueIdentification}". Numret kommer inte att ändras, men artiklarna kommer att läggas till.</message>
+	<message key="plugins.importexport.native.import.error.issueIdentificationMissing">Numrets identifikationselement saknas för artikeln "{$articleTitle}".</message>
+	<message key="plugins.importexport.native.import.error.publishedDateMissing">Artikeln "{$articleTitle}" finns i ett nummer, men har inget publiceringsdatum.</message>
+</locale>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/reports/counter/locale/fr_CA/locale.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the fr_CA locale.
+  *
+  -->
+
+<locale name="fr_CA" full_name="Français (Canada)">
+	<message key="plugins.reports.counter.description"><![CDATA[Le plugiciel COUNTER permet la consignation de données et la production de rapports <a href="http://www.projectcounter.org/about.html" target="_new">COUNTER</a> des activités du site.]]></message>
+	<message key="plugins.reports.counter">Statistiques COUNTER</message>
+
+	<message key="plugins.reports.counter.1a.title">Rapport de revue 1 (R3) : Demandes de texte intégral, par mois et par revue</message>
+	<message key="plugins.reports.counter.1a.title1">Rapport de revue 1 (R3)</message>
+	<message key="plugins.reports.counter.1a.title2">Nombre de demandes de texte intégral acceptées, par mois et par revue (Année {$year})</message>
+	<message key="plugins.reports.counter.1a.dateRun">Date d'exécution :</message>
+	<message key="plugins.reports.counter.1a.publisher">Éditeur</message>
+	<message key="plugins.reports.counter.1a.platform">Plateforme</message>
+	<message key="plugins.reports.counter.1a.printIssn">ISSN imprimé</message>
+	<message key="plugins.reports.counter.1a.onlineIssn">ISSN en ligne</message>
+	<message key="plugins.reports.counter.1a.ytdTotal">Cumulatif annuel - Total</message>
+	<message key="plugins.reports.counter.1a.ytdHtml">Cumulatif annuel - HTML</message>
+	<message key="plugins.reports.counter.1a.ytdPdf">Cumulatif annuel - PDF</message>
+	<message key="plugins.reports.counter.1a.totalForAllJournals">Total pour toutes les revues</message>
+	<message key="plugins.reports.counter.legacyStats">Les liens ci-dessous créent des rapports utilisant les données de l'ancien plugin COUNTER. Si vous désirez produire des rapports COUNTER à l'aide du nouvel indicateur COUNTER d'OJS, veuillez utiliser les liens ci-dessus.</message>
+	<message key="plugins.reports.counter.release">Version de COUNTER</message>
+	<message key="plugins.reports.counter.olderReports">Rapport des sites antérieurs</message>
+	<message key="plugins.reports.counter.error.badParameters">Les paramètres du rapport sont invalides.</message>
+	<message key="plugins.reports.counter.error.badRequest">La requête de rapport est invalide.</message>
+	<message key="plugins.reports.counter.error.noResults">Aucun résultat trouvé pour ce rapport.</message>
+	<message key="plugins.reports.counter.error.noXML">Les résultats n'ont pas pu être formatés en XML.</message>
+	<message key="plugins.reports.counter.1a.introduction">Ces liens génèrent des rapports basés sur la version 3.0 de COUNTER, qui est maintenant désuète. Ce rapport contient toutes les revues du site. Veuillez utiliser la dernière version disponible.</message>
+	<message key="plugins.reports.counter.1a.name">Rapport COUNTER JR1 (R3)</message>
+	<message key="plugins.reports.counter.1a.xml">Version de la spécification du XML</message>
+	<message key="plugins.reports.counter.1a.description">Rapport COUNTER de revue 1 (R3): Requête sur des articles en plein texte par mois et par revue</message>
+	<message key="plugins.reports.counter.1a.anonymous">anonyme</message>
+	<message key="plugins.reports.counter.allCustomers">Tous les clients</message>
+</locale>

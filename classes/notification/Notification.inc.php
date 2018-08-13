@@ -3,8 +3,8 @@
 /**
  * @file classes/notification/Notification.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class OJSNotification
@@ -15,15 +15,9 @@
 
 /** Notification associative types. */
 define('NOTIFICATION_TYPE_PUBLISHED_ISSUE', 		0x10000015);
+define('NOTIFICATION_TYPE_PUBLICATION_SCHEDULED',	0x10000016);
 
 // OJS-specific trivial notifications
-define('NOTIFICATION_TYPE_GIFT_REDEEM_STATUS_SUCCESS',				0x2000001);
-define('NOTIFICATION_TYPE_GIFT_REDEEM_STATUS_ERROR_NO_GIFT_TO_REDEEM',		0x2000002);
-define('NOTIFICATION_TYPE_GIFT_REDEEM_STATUS_ERROR_GIFT_ALREADY_REDEEMED',	0x2000003);
-define('NOTIFICATION_TYPE_GIFT_REDEEM_STATUS_ERROR_GIFT_INVALID',		0x2000004);
-define('NOTIFICATION_TYPE_GIFT_REDEEM_STATUS_ERROR_SUBSCRIPTION_TYPE_INVALID',	0x2000005);
-define('NOTIFICATION_TYPE_GIFT_REDEEM_STATUS_ERROR_SUBSCRIPTION_NON_EXPIRING',	0x2000006);
-
 define('NOTIFICATION_TYPE_BOOK_REQUESTED',			0x3000001);
 define('NOTIFICATION_TYPE_BOOK_CREATED',			0x3000002);
 define('NOTIFICATION_TYPE_BOOK_UPDATED',			0x3000003);
@@ -39,13 +33,6 @@ import('lib.pkp.classes.notification.PKPNotification');
 import('lib.pkp.classes.notification.NotificationDAO');
 
 class Notification extends PKPNotification {
-
-	/**
-	 * Constructor.
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 }
 
 ?>

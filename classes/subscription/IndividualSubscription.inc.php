@@ -3,8 +3,8 @@
 /**
  * @file classes/subscription/IndividualSubscription.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IndividualSubscription
@@ -17,10 +17,6 @@
 import('classes.subscription.Subscription');
 
 class IndividualSubscription extends Subscription {
-
-	function __construct() {
-		parent::__construct();
-	}
 
 	/**
 	 * Check whether subscription is valid

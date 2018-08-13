@@ -4,8 +4,8 @@
 <!--
   * locale/hr_HR/manager.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the hr_HR (Hrvatski) locale.
@@ -39,9 +39,7 @@
 	<message key="manager.payment.notFound">Nije pronađeno</message>
 	<message key="manager.payment.options">Opcije</message>
 	<message key="manager.payment.options.acceptSubscriptionPayments">Ovo će aktivirati naplate u modulu pretplata, gdje administrator pretplate određuje tipove, iznose i trajanje pretplata te održava listu pretplatnika.</message>
-	<message key="manager.payment.options.donationFee">Donacije časopisu</message>
 	<message key="manager.payment.options.enablePayments">Kako biste aktivirali modul za naplatu odaberite ovu opciju. Potom je potrebno kroz niže priložene opcije odrediti na koga i što se naplate odnose. Napomena: korisnici će se morati prijaviti u sustav žele li izvršiti uplatu.</message>
-	<message key="manager.payment.options.fastTrackFee">Ubrzani recenzijski postupak</message>
 	<message key="manager.payment.options.fee">Iznos</message>
 	<message key="manager.payment.options.feeDescription">Opis</message>
 	<message key="manager.payment.options.feeName">Naziv</message>
@@ -49,9 +47,7 @@
 	<message key="manager.payment.options.onlypdf">Ograniči pristup samo na PDF verzije članaka</message>
 	<message key="manager.payment.options.publicationFee">Objavljivanje članka</message>
 	<message key="manager.payment.options.purchaseArticleFee">Kupovina članka</message>
-	<message key="manager.payment.options.submissionFee">Prijava članka</message>
 	<message key="manager.payment.options.text">Opis metode plaćanja</message>
-	<message key="manager.payment.options.waiverPolicy">Mogućnost izuzeća</message>
 	<message key="manager.payment.paymentId">Identifikator naplate</message>
 	<message key="manager.payment.paymentMethod">Način uplate</message>
 	<message key="manager.payment.paymentMethod.description">Sa ovog ekrana možete podesiti funkcionalne dodatke namijenjenih plaćanju:</message>
@@ -242,7 +238,6 @@
 	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"><![CDATA[<strong>Napomena:</strong> Pozivnica e-pošte za recenzente sadržavat će poseban URL koji vodi recenzente izravno na stranicu za recenziju prijava (za pristup bilo kojoj drugoj stranici potrebno je prijaviti se u sustav). Iz sigurnosnih razloga pri korištenju ove opcije urednici neće moći modificirati adrese primatelja e-pošte ili poslati kopiju poruke "na znanje" drugim primateljima pri slanju pozivnica recenzentima.]]></message>
 	<message key="manager.setup.reviewOptions.reviewerRatings">Ocjena rada recenzenata</message>
 	<message key="manager.setup.reviewOptions.reviewerReminders">Podsjetnici za recenzente</message>
-	<message key="manager.setup.reviewOptions.showEnsuringLink"><![CDATA[Objavi poveznicu na <a href="javascript:openHelp('{$blindReviewHelpId}')" class="action">Kako osigurati anonimnost recenzije</a> na stranicama gdje autori i recenzenti prilažu svoje datoteke.]]></message>
 	<message key="manager.setup.reviewPolicy">Recenzijska politika</message>
 	<message key="manager.setup.searchEngineIndexing">Indeksiranje časopisa za tražilice</message>
 	<message key="manager.setup.searchEngineIndexingDescription">Kako bi olakšali pronalaženje ovog časopisa pomoću mrežnih tražilica, priložite kratak opis časopisa i relevantnih ključnih riječi (odvojenih točka-zarezima).</message>
@@ -333,7 +328,6 @@
 	<message key="manager.subscriptionPolicies.subscriptionAdditionalInformationDescription">Tipovi i iznosi pretplate će se automatski postaviti kao rubrika "pretplate" pod "o časopisu", zajedno s kontaktnim informacijama o administratoru pretplate. Dodatne informacije o pretplatama, kao što su metode plaćanja ili sheme za pretplatnike iz zemalja u razvoju, mogu biti dodane ovdje.</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactDescription">Kontakt administratora pretplate naveden je unutar stranice "o časopisu" u rubrici "pretplate".</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactEmailValid">Molimo unesite ispravnu e-poštu.</message>
-	<message key="manager.subscriptionPolicies.subscriptionPoliciesSaved">Postavke politike pretplate su ažurirane.</message>
 	<message key="manager.subscriptions">Pretplate</message>
 	<message key="manager.subscriptions.confirmDelete">Jeste li sigurni da želite izbrisati ovu pretplatu?</message>
 	<message key="manager.subscriptions.create">Kreiraj novu pretplatu</message>
@@ -468,12 +462,9 @@
 	<message key="manager.sections.noneCreated">Nema napravljenih rubrika.</message>
 	<message key="manager.setup.journalSetup">Podešavanje časopisa</message>
 	<message key="manager.language.forms">Obrasci</message>
-	<message key="manager.payment.options.acceptGiftSubscriptionPayments">Ovim će se aktivirati poklon pretplate čime će čitatelji časopisa moći kupiti poklon pretplate za druge čitatelje.</message>
 	<message key="manager.language.ui">UI</message>
 	<message key="manager.language.submissions">Podneseni članci</message>
 	<message key="manager.languages.languageInstructions"><![CDATA[OJS može biti dostupan korisnicima na bilo kojem od mnogo podržanih jezika. OJS, može funkcionirati kao multilingvalni sustav i omogućiti korisnicima lak prelazak između jezika na svakoj strani i da se određeni podaci unesu na nekoliko dodatnih jezika.<br /><br />  Ako nije dole izlistan jezik koji podržava OJS pitajte vašeg administratora sustava OJS da instalira jezik iz sučelja za administraciju. Pogledajte u OJS dokumentima instrukcije kako se dodaje podrška za nove jezike.]]></message>
-	<message key="manager.payment.giftFees">Plaćanja poklona</message>
-	<message key="manager.payment.giftFeesDescription">Veza za poklonjenu pretplatu će se pojaviti u stranici Pretplate u O časopisu i u bloku u rubnom stupcu.</message>
 	<message key="manager.people.allUsers">Svi upisani korisnici</message>
 	<message key="manager.setup.historyDescription">Ovaj tekst će se pojaviti u "O časopisu" rubrici na sajtučasopisa i može biti upotrebljen za opis promjena u naslovu, uredništvu i drugim stvarima važnim za povijest izdavanja časopisa.</message>
 	<message key="manager.setup.resetPermissions.description">Izjava o autorskim pravima i informacija o licenci će bititrajno priključena uz objavljen sadržaj, kako se tipodaci ne bi promijenili u slučaju da časopis izmijeni pravila za nove podneske članaka. Pritisni donje dugme da bi se vratile na početno stanje informacije o spremljenim dozvolama uz objavljen sadržaj članka.</message>

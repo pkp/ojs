@@ -3,8 +3,8 @@
 /**
  * @file controllers/api/file/ManageFileApiHandler.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2000-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2000-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ManageFileApiHandler
@@ -41,7 +41,7 @@ class ManageFileApiHandler extends PKPManageFileApiHandler {
 		$stageId = $request->getUserVar('stageId');
 		import('controllers.tab.pubIds.form.PublicIdentifiersForm');
 		$form = new PublicIdentifiersForm($submissionFile, $stageId);
-		$form->initData($request);
+		$form->initData();
 		return new JSONMessage(true, $form->fetch($request));
 	}
 
@@ -121,6 +121,29 @@ class ManageFileApiHandler extends PKPManageFileApiHandler {
 			SubmissionLog::logEvent($request, $submission, SUBMISSION_LOG_LAST_REVISION_DELETED, 'submission.event.lastRevisionDeleted', array('title' => $submissionFile->getOriginalFileName(), 'submissionId' => $submissionFile->getSubmissionId(), 'username' => $user->getUsername()));
 		}
 
+	}
+
+	/**
+	 * @copydoc PKPManageFileApiHandler::detachEntities
+	 */
+	function detachEntities($submissionFile, $submissionId, $stageId) {
+		parent::detachEntities($submissionFile, $submissionId, $stageId);
+
+		switch ($submissionFile->getFileStage()) {
+			case SUBMISSION_FILE_PROOF:
+				$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
+				assert($submissionFile->getAssocType() == ASSOC_TYPE_REPRESENTATION);
+				$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
+				$allRevisions = $submissionFileDao->getAllRevisionsByAssocId(ASSOC_TYPE_REPRESENTATION, $submissionFile->getAssocId());
+				$galley = $galleyDao->getById($submissionFile->getAssocId(), $submissionFile->getSubmissionId());
+				if ($galley) {
+					if (count($allRevisions) <= 1) {
+						$galley->setFileId(NULL);
+						$galleyDao->updateObject($galley);
+					}
+				}
+				break;
+		}
 	}
 }
 

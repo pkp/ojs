@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/htmlArticleGalley/HtmlArticleGalleyPlugin.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class HtmlArticleGalleyPlugin
@@ -19,15 +19,13 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 	/**
 	 * @see Plugin::register()
 	 */
-	function register($category, $path) {
-		if (parent::register($category, $path)) {
-			if ($this->getEnabled()) {
-				HookRegistry::register('ArticleHandler::view::galley', array($this, 'articleViewCallback'));
-				HookRegistry::register('ArticleHandler::download', array($this, 'articleDownloadCallback'));
-			}
-			return true;
+	function register($category, $path, $mainContextId = null) {
+		if (!parent::register($category, $path, $mainContextId)) return false;
+		if ($this->getEnabled($mainContextId)) {
+			HookRegistry::register('ArticleHandler::view::galley', array($this, 'articleViewCallback'), HOOK_SEQUENCE_LATE);
+			HookRegistry::register('ArticleHandler::download', array($this, 'articleDownloadCallback'), HOOK_SEQUENCE_LATE);
 		}
-		return false;
+		return true;
 	}
 
 	/**
@@ -66,20 +64,12 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 
 		if ($galley && $galley->getFileType() == 'text/html') {
 			$templateMgr = TemplateManager::getManager($request);
-			$templateMgr->addStyleSheet(
-				'htmlArticleGalleyStyles',
-				$request->getBaseUrl() . '/plugins/generic/htmlArticleGalley/display.css',
-				array(
-					'priority' => STYLE_SEQUENCE_CORE,
-					'contexts' => 'frontend',
-				)
-			);
 			$templateMgr->assign(array(
 				'issue' => $issue,
 				'article' => $article,
 				'galley' => $galley,
 			));
-			$templateMgr->display($this->getTemplatePath() . '/display.tpl');
+			$templateMgr->display($this->getTemplateResource('display.tpl'));
 
 			return true;
 		}
@@ -100,7 +90,7 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 
 		if ($galley && $galley->getFileType() == 'text/html' && $galley->getFileId() == $fileId) {
 			if (!HookRegistry::call('HtmlArticleGalleyPlugin::articleDownload', array($article,  &$galley, &$fileId))) {
-				echo $this->_getHtmlContents($request, $galley);
+				echo $this->_getHTMLContents($request, $galley);
 				$returner = true;
 				HookRegistry::call('HtmlArticleGalleyPlugin::articleDownloadFinished', array(&$returner));
 			}
@@ -175,7 +165,7 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 
 		// Perform variable replacement for journal, issue, site info
 		$issueDao = DAORegistry::getDAO('IssueDAO');
-		$issue = $issueDao->getIssueByArticleId($galley->getSubmissionId());
+		$issue = $issueDao->getByArticleId($galley->getSubmissionId());
 
 		$journal = $request->getJournal();
 		$site = $request->getSite();

@@ -4,8 +4,8 @@
 <!--
   * plugins/importexport/datacite/locale/en_US/locale.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
   * Localization strings.
@@ -31,7 +31,7 @@
 
 	<message key="plugins.importexport.datacite.settings.form.username">Username (symbol)</message>
 	<message key="plugins.importexport.datacite.settings.form.usernameRequired">Please enter the username (symbol) you got from DataCite. The username may not contain colons.</message>
-	<message key="plugins.importexport.datacite.settings.form.automaticRegistration.description">OJS will deposit DOIs automatically to DataCite. Please note that this may take a short amount of time after publication to process. You can check for all unregistered DOIs.</message>
+	<message key="plugins.importexport.datacite.settings.form.automaticRegistration.description">OJS will deposit DOIs automatically to DataCite. Please note that this may take a short amount of time after publication to process (e.g. depending on your cronjob configuration). You can check for all unregistered DOIs.</message>
 	<message key="plugins.importexport.datacite.settings.form.testMode.description">Use the DataCite test prefix for DOI registration. Please do not forget to remove this option for the production.</message>
 
 	<message key="plugins.importexport.datacite.senderTask.name">DataCite automatic registration task</message>

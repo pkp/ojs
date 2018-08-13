@@ -4,13 +4,13 @@
 <!--
   * plugins/pubIds/doi/locale/pt_BR/locale.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Portuguese_(pt_BR)
   * Localization strings.
   -->
- 
+
 <locale name="pt_BR" full_name="Português (Brasil)">
 	<message key="plugins.pubIds.doi.displayName">DOI</message>
 
@@ -52,7 +52,7 @@
 	<message key="plugins.pubIds.doi.editor.doiObjectTypeGalley">composição</message>
 	<message key="plugins.pubIds.doi.editor.doiSuffixCustomIdentifierNotUnique">O sufixo DOI informado já está em uso por outro item publicado. Informe um sufixo DOI único para cada item.</message>
 	<message key="plugins.pubIds.doi.description">Este plugin permite a atribuição dos Identificadores Digitais de Objetos a edições, artigos e composições finais no OJS.</message>
-	<message key="plugins.pubIds.doi.readerDisplayName">DOI:</message>
+	<message key="plugins.pubIds.doi.readerDisplayName">DOI</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiReassign.description">Se você alterar sua configuração DOI, os DOIs que já foram atribuídas não serão afetadas. Uma vez que a configuração DOI é salva, use este botão para limpar todas as DOIs existentes para que as novas configurações tenham efeito sobre os objetos existentes. ATENÇÃO, não utilize esse botão para atribuir DOIs a artigos com DOIs já depositados (O mesmo documento não pode ter dois DOI)</message>
 	<message key="plugins.pubIds.doi.editor.doiObjectTypeRepresentation">composição final</message>
 	<message key="plugins.pubIds.doi.editor.customSuffixMissing">O DOI não pode ser atribuído porque o sufixo personalizado está faltando.</message>
@@ -69,4 +69,7 @@
 	<message key="plugins.pubIds.doi.editor.assignDoi.pattern">O DOI {$pubId} não pode ser atribuído porque contém um padrão inválido.</message>
 	<message key="plugins.pubIds.doi.editor.assignDoi.assigned">O DOI {$pubId} foi atribuído.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixCustomIdentifier">Insira um sufixo DOI individual para cada item publicado. Você encontrará um campo para inserir o DOI na página de meta-dados de cada item.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiAssignJournalWide">Designar DOIs</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiAssignJournalWide.description">Designar DOIs a todos os objetos publicados que ainda não têm DOI designado. Esta ação não pode ser usada com a configuração de sufixos personalizados. Se você modificou a configuração acima, por favor salve suas mudanças antes de iniciar esta ação. Designar DOIs pode levar um tempo considerável, dependendo do número de objetos publicados pela revista.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiAssignJournalWide.confirm">Tem certeza que deseja designar DOIs a todos os objetos publicados que não tem DOIs designados?</message>
 </locale>

@@ -4,8 +4,8 @@
 <!--
   * plugins/importexport/crossref/locale/en_US/locale.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
   * Localization strings.
@@ -28,7 +28,7 @@
 	<message key="plugins.importexport.crossref.registrationIntro"><![CDATA[If you would like to use this plugin to register Digital Object Identifiers (DOIs) directly with CrossRef you will need a username and password (available from <a href="http://www.crossref.org" target="_blank">CrossRef</a>) in order to do so. If you do not have your own username and password you can still export into the CrossRef XML format, but you cannot register your DOIs with CrossRef from within OJS.]]></message>
 	<message key="plugins.importexport.crossref.settings.form.username">Username</message>
 	<message key="plugins.importexport.crossref.settings.form.usernameRequired">Please enter the username you got from CrossRef.</message>
-	<message key="plugins.importexport.crossref.settings.form.automaticRegistration.description">OJS will deposit assigned DOIs automatically to CrossRef. Please note that this may take a short amount of time after publication to process. You can check for all unregistered DOIs.</message>
+	<message key="plugins.importexport.crossref.settings.form.automaticRegistration.description">OJS will deposit assigned DOIs automatically to CrossRef. Please note that this may take a short amount of time after publication to process  (e.g. depending on your cronjob configuration). You can check for all unregistered DOIs.</message>
 	<message key="plugins.importexport.crossref.settings.form.testMode.description">Use the CrossRef test API (testing environment) for the DOI deposit. Please do not forget to remove this option for the production.</message>
 	<!-- descriptions -->
 	<message key="plugins.importexport.crossref.issues.description">Note: Only issues (and not their articles) will be considered for export/registration here.</message>

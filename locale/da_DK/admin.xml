@@ -4,8 +4,8 @@
 <!--
   * /locale/da_DK/admin.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the da_DK (Dansk) locale.
@@ -29,13 +29,12 @@
 	<message key="admin.auth.ojs">OJS-brugerdatabase</message>
 	<message key="admin.auth.enableSyncProfiles">Aktiver synkronisering af brugerprofil (hvis dette understøttes af denne godkendelses-plug-in). Oplysningerne om brugerprofil opdateres automatisk fra fjernkilden, når en bruger logger på, og de profilændringer (herunder ændringer af adgangskode), der er foretaget i OJS, opdateres automatisk på fjernkilden. Hvis denne indstilling ikke aktiveres, holdes oplysninger om OJS-profiler adskilt fra oplysninger om fjernkildeprofiler.</message>
 	<message key="admin.auth.enableSyncPasswords">Aktiver ændring af brugeradgangskode (hvis dette understøttes af denne godkendelses-plug-in). Hvis denne indstilling aktiveres, kan brugere ændre deres adgangskode i OJS og bruge OJS-funktionen "mistet adgangskode" til at nulstille en glemt adgangskode. Disse funktioner vil ikke være tilgængelige for brugere med denne godkendelseskilde, hvis denne indstilling ikke aktiveres.</message>
-	<message key="admin.auth.enableCreateUsers">Aktiver oprettelse af bruger (hvis dette understøttes af denne godkendelses-plug-in). De bruger, der oprettes i OJS med denne godkendelseskilde, føjes automatisk til fjerngodkendelseskilden, hvis de ikke allerede findes. Hvis denne kilde er standardgodkendelseskilden, føjes de OJS-konti, der er oprettet via brugerregistrering, også til fjerngodkendelseskilden.</message>
+	<message key="admin.auth.enableCreateUsers">Aktiver oprettelse af bruger (hvis dette understøttes af denne godkendelses-plug-in). De brugere, der oprettes i OJS med denne godkendelseskilde, føjes automatisk til fjerngodkendelseskilden, hvis de ikke allerede findes. Hvis denne kilde er standardgodkendelseskilden, føjes de OJS-konti, der er oprettet via brugerregistrering, også til fjerngodkendelseskilden.</message>
 	<message key="admin.systemVersion">OJS-version</message>
 	<message key="admin.systemConfiguration">OJS-konfiguration</message>
 	<message key="admin.systemConfigurationDescription"><![CDATA[OJS-konfigurationsindstillinger fra <tt>config.inc.php</tt>.]]></message>
 	<message key="admin.journals.journalSettings">Tidsskriftsindstillinger</message>
 	<message key="admin.journals.noneCreated">Der er ikke oprettet nogen tidsskrifter.</message>
-	<message key="admin.contexts.confirmDelete">Er du sikker på, at du vil slette dette tidsskrift og alt dets indhold permanent?</message>
 	<message key="admin.contexts.create">Opret tidsskrift</message>
 	<message key="admin.journals.createInstructions">Du vil automatisk blive registreret som chef for dette tidsskrift. Når du har oprettet et nyt tidsskrift, skal du som chef registrere det for at kunne fortsætte med dets konfiguration og brugertilmelding.</message>
 	<message key="admin.journals.urlWillBe">Tidsskriftets URL-adresse er {$sampleUrl}</message>
@@ -70,12 +69,6 @@
 	<message key="admin.categories.disableCategories">Undlad at kategorisere tidsskrifterne</message>
 	<message key="admin.categories.enableCategories">Tillad tidsskriftchefer at rubricere tidsskrifterne under kategorier</message>
 	<message key="admin.settings.options">Valgmuligheder</message>
-	<message key="admin.settings.usePaging">Opdel listen over tidsskrifterne på flere sider for websites med mange tidsskrifter.</message>
-	<message key="admin.settings.journalsList">Tidsskriftselementer</message>
-	<message key="admin.settings.journalsList.description">Vælg de tidsskriftselementer, der skal vises for hvert tidsskrift på websiden.</message>
-	<message key="admin.settings.journalsList.showThumbnail">Tidsskrifts-thumbnail</message>
-	<message key="admin.settings.journalsList.showTitle">Tidsskriftstitel</message>
-	<message key="admin.settings.journalsList.showDescription">Tidsskriftsbeskrivelse</message>
 	<message key="admin.settings.defaultMetricDescription">Jeres OJS-installation er konfigureret til at registrere mere end en metrisk brugerenhed. Brugerstatistikker vil blive fremvist i flere forskellige sammenhænge.
 		Der er tilfælde, hvor en enkelt brugerstatistik skal anvendes, f.eks. ved visning af en sorteret liste over mest anvendte artikler eller ved rangering af
 		søgeresultater. Vælg én af de konfigurerede metriske enheder som standard.</message>
@@ -86,4 +79,10 @@
 
 	<message key="admin.presses.createInstructions">Du vil automatisk blive indskrevet som chef for dette tidsskrift. Efter at have oprettet et nyt tidsskrift, vil du blive omdirigeret til indstillingsguiden for at afslutte den indledende konfiguration af tidsskriftet.</message>
 	<message key="admin.scheduledTask.reviewReminder">Påmindelse om bedømmelse</message>
+	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Download af sprogpakker fra Public Knowledge Project's web-server er ikke muligt på nuværende tidspunkt fordi:</p>
+	<ul>
+		<li>Din server har ikke eller tillader ikke afvikling af GNU "tar"-værktøjet.</li>
+		<li>OJS kan ikke ændre landekode-registerfilen, typisk "registry/locales.xml".</li>
+	</ul>
+<p>Sprogpakker kan downloades manuelt fra <a href="http://pkp.sfu.ca"> PKPs websted </a>.</p>]]></message>
 </locale>

@@ -4,8 +4,8 @@
 <!--
   * locale/tr_TR/manager.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the tr_TR (Türkçe) locale.
@@ -43,9 +43,7 @@
 	<message key="manager.payment.notFound">Bulunamadı</message>
 	<message key="manager.payment.options">Seçenekler</message>
 	<message key="manager.payment.options.acceptSubscriptionPayments">Bu abonelikler için ödemeyi aktif hale getirir. Abone Yöneticisi tarafından tür, maliyet süre ve abnelikler yönetilir.</message>
-	<message key="manager.payment.options.donationFee">Bağış</message>
 	<message key="manager.payment.options.enablePayments">Ödeme modülünü etkinleştirmek için buraya tıklayınız. Aşağıdaki formu doldurmak için ödeme ayarları konfigürasyonunu yapmalısınız. Not: Kullanıcılar ödeme yapabilmek için giriş yapmak zorundadırlar.</message>
-	<message key="manager.payment.options.fastTrackFee">Hızlı Değerlendirme</message>
 	<message key="manager.payment.options.fee">Ücret</message>
 	<message key="manager.payment.options.feeDescription">Ücret Tanımlama</message>
 	<message key="manager.payment.options.feeName">Ücret Adı</message>
@@ -53,9 +51,7 @@
 	<message key="manager.payment.options.onlypdf">Makale ve sayılarıdaki PDF sürüme sınırlandırılmış erişim</message>
 	<message key="manager.payment.options.publicationFee">Makale Yayını</message>
 	<message key="manager.payment.options.purchaseArticleFee">Makale Satın Al</message>
-	<message key="manager.payment.options.submissionFee">Makale Gönderisi</message>
 	<message key="manager.payment.options.text">Ödeme Metodu Açıklaması</message>
-	<message key="manager.payment.options.waiverPolicy">Feragat Politikası</message>
 	<message key="manager.payment.paymentId">Ödeme Numarası</message>
 	<message key="manager.payment.paymentMethod">Ödeme Yönetmi</message>
 	<message key="manager.payment.paymentMethod.description">Bu ekrandan aşağıdaki ödeme metodu eklentilerinden birinin konfigürasyonunu yapmalısınız.</message>
@@ -261,7 +257,6 @@
 	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"><![CDATA[<strong>Not:</strong> Hakemlere gönderilen e-posta, hakemlerin davet edildiği değerlendirme gönderisine doğrudan erişebilmesi için özel bir URL adresi içerir (oturum açılması gereken diğer sayfalar ile birlikte).  Bu seçenek, güvenlik nedenleriyle editörlerin CCs veya BCCs adresleri eklemelerine izin vermez.]]></message>
 	<message key="manager.setup.reviewOptions.reviewerRatings">Hakem Puanlama</message>
 	<message key="manager.setup.reviewOptions.reviewerReminders">Hakem Hatırlatmaları</message>
-	<message key="manager.setup.reviewOptions.showEnsuringLink"><![CDATA[Yazarlara ve hakemlere dosya yükleme sayfalarında <a href="javascript:openHelp('{$blindReviewHelpId}')" class="action">Kör Hakemlik Güvencesi</a> için bağlantılar sağlayın.]]></message>
 	<message key="manager.setup.reviewPolicy">Değerlendirme Politikası</message>
 	<message key="manager.setup.searchEngineIndexing">Arama Motoru Dizinlemesi</message>
 	<message key="manager.setup.searchEngineIndexingDescription">Kullanıcılara yardımcı olmak üzere arama motorlarının dergiyi dizinlemesi için dergiyle ilgili anahtar kelimeleri (noktalı virgülle ayırarak) yazabilirsiniz. Ör. İktisat; İşletme; Finans.</message>
@@ -363,7 +358,6 @@
 	<message key="manager.subscriptionPolicies.subscriptionContact">Abone Yöneticisi</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactDescription">Dergi Hakkında sayfasında abonelik hakkında bilgi vermek üzere gösterilecek.</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactEmailValid">Lütfen geçerli bir e-posta adresi giriniz.</message>
-	<message key="manager.subscriptionPolicies.subscriptionPoliciesSaved">Abonelik politikası ayarlarınız güncellendi.</message>
 	<message key="manager.subscriptions">Abonelikler</message>
 	<message key="manager.individualSubscriptions">Bireysel Abonelikler</message>
 	<message key="manager.institutionalSubscriptions">Kurumsal Abonelikler</message>
@@ -486,7 +480,6 @@
 	<message key="manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully">Abonelik türü başarıyla oluşturuldu.</message>
 	<message key="manager.sections.alertDelete">Bu bölümü silmeden önce yayımlanmış makaleleri diğer bölümlere taşımalısınız.</message>
 	<message key="manager.setup.categories.description">Yukarıda listelenen kümelerden uygun kategorileri seçiniz. Okuyucular tamamlanmış dergi kümelerinden kategoriye göre listeleme yapabilirler.</message>
-	<message key="manager.payment.giftFees">Bağış Tutarı</message>
 	<message key="manager.payment.options.purchaseIssueFee">Sayı Satın Al</message>
 	<message key="manager.setup.journalLogo.altText">Dergi Logosu</message>
 	<message key="manager.setup.journalThumbnail">Dergi Görseli (Küçük)</message>

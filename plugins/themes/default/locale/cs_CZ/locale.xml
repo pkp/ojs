@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/themes/default/locale/cs_CZ/locale.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Czech_(cs_CZ)
+  * Localization strings.
+  -->
+
+<locale name="cs_CZ" full_name="Čeština">
+	<message key="plugins.themes.default.name">Výchozí téma</message>
+	<message key="plugins.themes.default.description">Toto téma implementuje výchozí téma.</message>
+
+	<!-- Theme options -->
+	<message key="plugins.themes.default.option.typography.label">Typografie</message>
+	<message key="plugins.themes.default.option.typography.description">Vyberte kombinaci fontů, která vyhovuje tomuto časopisu.</message>
+	<message key="plugins.themes.default.option.typography.notoSans">Noto Sans: Bez patkové digitální písmo navržené společností Google s rozsáhlou podporu jazyků.</message>
+	<message key="plugins.themes.default.option.typography.notoSerif">Noto Serif: Patková verze digitálního písma společnosti Google.</message>
+	<message key="plugins.themes.default.option.typography.notoSerif_notoSans">Noto Serif/Noto Sans: Dopňkové párování patkových nadpisů s bezpatkovým dalším textem.</message>
+	<message key="plugins.themes.default.option.typography.notoSans_notoSerif">Noto Sans/Noto Serif: Komplementární párování bezpatkových nadpisů s patkovým dalším textem.</message>
+	<message key="plugins.themes.default.option.typography.lato">Lato: Populární moderní bezpatkový font.</message>
+	<message key="plugins.themes.default.option.typography.lora">Lora: Široká sada patkového písma pro dobrou on-line čitelnost.</message>
+	<message key="plugins.themes.default.option.typography.lora_openSans">Lora/Open Sans: Komplementární párování patkových nadpisů s bezpatkovým dalším textem.</message>
+	<message key="plugins.themes.default.option.colour.label">Barva</message>
+	<message key="plugins.themes.default.option.colour.description">Zvolte barvu pro záhlaví.</message>
+</locale>

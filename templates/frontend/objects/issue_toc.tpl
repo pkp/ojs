@@ -1,8 +1,8 @@
 {**
  * templates/frontend/objects/issue_toc.tpl
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @brief View of an Issue which displays a full table of contents.
@@ -14,6 +14,7 @@
  * @uses $hasAccess bool Can this user access galleys for this context?
  * @uses $publishedArticles array Lists of articles published in this issue
  *   sorted by section.
+ * @uses $primaryGenreIds array List of file genre ids for primary file types
  *}
 <div class="obj_issue_toc">
 
@@ -42,11 +43,7 @@
 
 		{* PUb IDs (eg - DOI) *}
 		{foreach from=$pubIdPlugins item=pubIdPlugin}
-			{if $issue->getPublished()}
-				{assign var=pubId value=$issue->getStoredPubId($pubIdPlugin->getPubIdType())}
-			{else}
-				{assign var=pubId value=$pubIdPlugin->getPubId($issue)}{* Preview pubId *}
-			{/if}
+			{assign var=pubId value=$issue->getStoredPubId($pubIdPlugin->getPubIdType())}
 			{if $pubId}
 				{assign var="doiUrl" value=$pubIdPlugin->getResolvingURL($currentJournal->getId(), $pubId)|escape}
 				<div class="pub_id {$pubIdPlugin->getPubIdType()|escape}">
@@ -80,7 +77,7 @@
 	</div>
 
 	{* Full-issue galleys *}
-	{if $issueGalleys && $hasAccess}
+	{if $issueGalleys}
 		<div class="galleys">
 			<h2>
 				{translate key="issue.fullIssue"}
@@ -88,7 +85,7 @@
 			<ul class="galleys_links">
 				{foreach from=$issueGalleys item=galley}
 					<li>
-						{include file="frontend/objects/galley_link.tpl" parent=$issue}
+						{include file="frontend/objects/galley_link.tpl" parent=$issue purchaseFee=$currentJournal->getSetting('purchaseIssueFee') purchaseCurrency=$currentJournal->getSetting('currency')}
 					</li>
 				{/foreach}
 			</ul>
@@ -105,7 +102,7 @@
 					{$section.title|escape}
 				</h2>
 			{/if}
-			<ul class="articles">
+			<ul class="cmp_article_list articles">
 				{foreach from=$section.articles item=article}
 					<li>
 						{include file="frontend/objects/article_summary.tpl"}

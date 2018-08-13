@@ -1,8 +1,8 @@
 /**
  * @file styles/components.less
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @brief Reusable components
@@ -26,6 +26,7 @@
 	line-height: @triple - 2; // account for border
 	font-weight: @bold;
 	color: @primary;
+	text-decoration: none;
 
 	&:hover,
 	&:focus {
@@ -59,7 +60,7 @@
 	border-right: none;
 
 	&:after {
-		&:extend(.fa);
+		.fa();
 		content: @icon;
 		position: absolute;
 		top: -1px; // border;
@@ -110,7 +111,7 @@
 	text-decoration: none;
 
 	&:after {
-		&:extend(.fa);
+		.fa();
 		content: @icon;
 		position: absolute;
 		top: 2px;
@@ -124,6 +125,16 @@
 	&:hover,
 	&:focus {
 		color: @primary-lift;
+	}
+}
+
+// List of articles
+.cmp_article_list {
+	&:extend(.pkp_unstyled_list);
+
+	> li {
+		.pkp_helpers_clear();
+		margin-bottom: @triple;
 	}
 }
 
@@ -236,6 +247,14 @@
 		}
 	}
 
+	.description {
+		margin-top: 0;
+		font-size: @font-tiny;
+		line-height: 1.5em;
+		color: @text-light;
+
+	}
+
 	@media(min-width: @screen-phone) {
 
 		input[type="text"],
@@ -327,18 +346,32 @@
 	}
 }
 
-// Pagination component
-// eg: 1-2 of 10 items
+// Pagination
 .cmp_pagination {
-	margin-top: @double;
-	font-size: @font-sml;
-	line-height: @double;
-	color: @text-light;
+	.pkp_helpers_clear;
 	text-align: right;
 
-	a {
-		padding-left: 0.5em;
-		padding-right: 0.5em;
+	.prev {
+		float: left;
+		margin-right: 0.5em;
+		text-decoration: none;
+
+		&:before {
+			.fa;
+			content: @fa-var-long-arrow-left;
+			margin-right: 0.5em;
+		}
+	}
+
+	.next {
+		margin-left: 0.5em;
+		text-decoration: none;
+
+		&:after {
+			.fa;
+			content: @fa-var-long-arrow-right;
+			margin-left: 0.5em;
+		}
 	}
 }
 
@@ -354,7 +387,7 @@
 	text-decoration: none;
 
 	&:before {
-		&:extend(.fa);
+		.fa();
 		content: @fa-var-pencil;
 	}
 }
@@ -491,5 +524,24 @@
 		clip: auto;
 		top: 0;
 		left: 50%;
+	}
+}
+
+// Tables
+.cmp_table {
+	width: 100%;
+	border: @bg-border;
+	border-bottom: none;
+	border-collapse: collapse;
+
+	th,
+	td {
+		padding: 0.5em;
+		text-align: left;
+		border-bottom: @bg-border;
+	}
+
+	th {
+		font-weight: @bold;
 	}
 }

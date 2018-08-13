@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/doaj/DOAJInfoSender.inc.php
  *
- * Copyright (c) 2013-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2013-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class DOAJInfoSender
@@ -40,7 +40,7 @@ class DOAJInfoSender extends ScheduledTask {
 	 * @copydoc ScheduledTask::getName()
 	 */
 	function getName() {
-		return __('plugins.importexport.datacite.senderTask.name');
+		return __('plugins.importexport.doaj.senderTask.name');
 	}
 
 	/**
@@ -92,14 +92,15 @@ class DOAJInfoSender extends ScheduledTask {
 	 */
 	function _registerObjects($objects, $filter, $journal, $objectsFileNamePart) {
 		$plugin = $this->_plugin;
-		// Get the JSON
-		$exportJson = $plugin->exportJSON($objects, $filter, $journal);
-		// Deposit the JSON
-		$result = $plugin->depositXML($objects, $journal, $exportJson);
-		if ($result !== true) {
-			$this->_addLogEntry($result);
+		foreach ($objects as $object) {
+			// Get the JSON
+			$exportJson = $plugin->exportJSON($object, $filter, $journal);
+			// Deposit the JSON
+			$result = $plugin->depositXML($object, $journal, $exportJson);
+			if ($result !== true) {
+				$this->_addLogEntry($result);
+			}
 		}
-
 	}
 
 	/**

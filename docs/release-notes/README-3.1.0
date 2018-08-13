@@ -1,0 +1,229 @@
+OJS 3.1.0 Release Notes
+CVS tag: ojs-3_1_0-0
+
+Release date: October 23, 2017
+==============================
+
+OJS 3.1 contains new translations into Finnish and Swedish. It also sees the
+re-introduction of a fr_FR translation for France, based on the French
+Canadian translation.
+
+New Features
+------------
+	#390: Remove artbitrary UI field length limitations
+	#440: Grant implicit Manager access to Adminstrators
+	#469: Move pnotify to composer dependency
+	#723: Strip out citation plugins and replace with CSL
+	#1503: Introduce REST API
+	#1816: Implement subscription support
+	#1911: Enable longer locale names
+	#1963: Port implicit authentication to master
+	#2101: Update PubMed plugin for OJS 3.x
+	#2163: Routing events between handlers in the JS framework
+	#2178: Add nav menu management and static pages features
+	#2306: Permit searching by submission ID
+	#2337 #2435 #2585 #2602 #2603 #2604 #2605 #2606 #2670 #2715 #2725 #2861 #2864: Locale updates
+	#2342: Add "Assign DOIs to all journal articles" button in the DOI plugin settings
+	#2358: Rewrite OAI NLM plugin for OJS 3.x
+	#2433: Provide option to restrict low-level editors to "recommend" only, not make decisions
+	#2465: Give the author access to the copyedited and galley files grids
+	#2503: Add plugin version installation tool
+	#2577: Display supplementary files in block, rather with galley files
+	#2587: Tell admin which journal they are about to remove
+	#2599: Data privacy option in usage stats plugin
+	#2686: add initial JWT support to API
+	#2705: New default footer images
+
+Bug Fixes
+---------
+	#772: Respond to nonexistent monographs with a 404
+	#1070: Improve confirmation notices when skipping the email is an option
+	#1144: Review file selection is unclear
+	#1258: "Resubmit for Review" button is unclear
+	#1265: Broken reports pages
+	#1270: Empty editor decisions list for copywriter
+	#1329: Prevent stub queries from being seen by others before completion
+	#1389: Smarty variable not rendered in registration form template
+	#1447: Improve recipient selection process for new discussions
+	#1502: article report considers only UI and primary locale
+	#1528: Improve submission process
+	#1595: Remove app/journal-specific language in pkp-lib
+	#1640: Can't add discussion with no stage participants
+	#1709: Native Import Issues for OJS and OMP
+	#1757: [OJS] duplicate keys in usageStats plugin (also: duplicate plugin)
+	#1784: Unify near-duplicate template templates/management/settings/access.tpl
+	#1786: Ensure ReCaptcha language is correct
+	#1791: Fix COUNTER plugin template references (and test plugin)
+	#1807: Multilingualism
+	#1815: Move metadata (DC/GS) meta tags into HTML head
+	#1828: Issues with input and display of keywords
+	#1853: Reload issues
+	#1859: Add Sidebar Management to site settings for multi-journal installs
+	#1866: Banner notification after scheduling
+	#1896: ORCID support in native XML import/export format for issues
+	#1907: Show volume info only when checkbox selected
+	#1930: Include article prefix on article details page
+	#1932: Investigate upgrade of submission note files
+	#1955: schemaValidate, proxy settings and allow_url_fopen
+	#2003: Filename problems
+	#2023: Remove "designation" from components
+	#2064: Standardize emailed URL handling
+	#2078: Fix scroll-jumping in HTML article galley views
+	#2082: Task notification for section editor after being assigned to a submission
+	#2085: Improve touch controls of frontend about nav dropdown
+	#2108: Tinymce error (downloadable font: OS/2: bad linegap: -32 ) with Firefox
+	#2114: Localised filenames complicate uploading submission files in multilingual journals
+	#2136: Empty sidebar breaks javascript in front end
+	#2142: Suggestions for Native XML Import
+	#2151: Viewable migration
+	#2159: Upgrading to OJS3: Revisions and Reviewer's Attachments panels not visible in Review tab for authors
+	#2160: Variable names visible in Editorial history
+	#2173: Upgrading to OJS3: multiple issues with ongoing reviews
+	#2189: Tinymce in full screen mode problematic in multilingual journals
+	#2192: Consider and migrate remote supp files as remote galley files
+	#2203: Notifications list in front end layout requires back-end JS tools
+	#2235: File revision names
+	#2247: Migrated submissions have a review round even when the submission is in stage 1
+	#2257: Correct UTF=8 typo in CrossRef issue export
+	#2258: Crossref 4.3.6 schema URL changed
+	#2260: DOAJ XML export: position multilingual elements with article locale on the first place
+	#2261: Style the new plugin gallery
+	#2265: Review master branch for dead/crufty code
+	#2266: Custom uploaded CSS files get loaded too early
+	#2267: No current issue when current issue is unpublished
+	#2269: Can't search all categories in plugin gallery
+	#2270: Sort submission lists by ID
+	#2287: Change Password page missing visual padding
+	#2295: Statistics upgrade from 2.4.0, 2.4.1 and 2.4.2 to 3.x
+	#2296: DevelopedByBlockPlugin error in a clean OJS 3.0.2 installation.
+	#2305: Fix required attribute in login form
+	#2309: Autocomplete for reviewer interests is case sensitive
+	#2310: Move block plugins to unified sidebar upon upgrade
+	#2312: Review/fix edit links
+	#2313: Prevent section editor auto-assignments outside section assignments
+	#2315: Current issue redirect should use best ID
+	#2319: PHP catchable error on issue import (OJS 3)
+	#2320: Remove or restore ROLE_ID_SUBSCRIPTION_MANAGER
+	#2321: Fix submission language export
+	#2328: Missing review round ID during file revision
+	#2331: OJS3.0.2. empty submission checklist results to PHP warnings
+	#2336: Clean up TemplateManager::display / TemplateManager::fetch
+	#2338: OJS3 Usage Statistics plugin displayStatistics setting not context specific
+	#2340: Fix readonly flag of alt tag in article cover upload
+	#2343: issue ordering
+	#2364: Drop file check on minification use
+	#2365: Native XML Plugin lacks paging in Export issues listing
+	#2367: Recaptcha verification does not honor proxy settings
+	#2371: Parse errors on grids for systeminfo
+	#2372: Incorrect return link in HTML Galley view
+	#2375: Respect context disableUserReg setting
+	#2389: add announcements introduction
+	#2391: File detection in temporary files does not adjust for common problems
+	#2392: Concatenate "about" content during OJS2 to OJS3 migration
+	#2393: [OJS] Editorial decisions buttons should be disabled on stages that are already finished
+	#2401: Correct outdated translations using `{$submissionEditingUrl}` in email templates
+	#2407: Remove mutex use
+	#2413: Add reviewId to oneclick link in automatic review reminders
+	#2417: Review form breaks for users that are visiting OJS for the first time
+	#2420: No check on PHPMailer::send() status
+	#2423: Add notification upon "Add Reviews to Email" click
+	#2428: CSRF token validity time (one hour) breaks the review form
+	#2434: Add preliminary/summary "Decline" email template
+	#2437: Add reviews to email button selects the wrong option for radio buttons in some cases
+	#2440: consider views column for old default usage statistics migration
+	#2443: Refactor AuthPlugin
+	#2446: Reviewer affiliation info is not recorded when creating reviewers
+	#2449: PHP code documentation cleanup
+	#2453: Adjust wording of Send to Copyediting button on review stage
+	#2460: Discussion item will be created even if canceled
+	#2461: Native Import can't clean up after failure for article section
+	#2462: Native import export creates duplicate issues
+	#2467: Some upgrade queries are improperly scoped
+	#2470: Migrate all section editors in OJS 2.x to 3.x upgrade
+	#2473: Tap controls don't work for dropdown menus in the backend
+	#2476: Author guidelines anchor missing
+	#2481: Reviewer has access to manuscript after declining review request
+	#2483: Default email signature is wrapped in nested anchor tags
+	#2492: registrationComplete page allows for UX issues
+	#2495: Speed up test suite
+	#2497: OJS 3.x TinyMCE not activated show error
+	#2500: Native import mismanages file operations
+	#2501: subject and subjectClass migration
+	#2506: Fix genre assignment for upgrades
+	#2509: Use supported submission locales for galley language
+	#2513: Allow SVG in image uploads
+	#2515: When section titles are long they cover article titles in issue table of contents
+	#2516: Native Import: optional submission dates per schema, but functionally required
+	#2518: SUBMISSION_ACK email includes author signature
+	#2519: do not update copyedit and production notifications in a pre-review discussion
+	#2525: Bug in issueArchive.tpl
+	#2526: Native Import should discriminate between errors and warnings
+	#2534: Use SVG format of ORCID icon
+	#2537: OJS3 upgrade article_galley_settings not migrated to submission_galley_settings
+	#2542: update Password Reset default e-mail template
+	#2543: reload scheduled tasks function for the acron plugin
+	#2552: fix warning in RecommendByAuthorPlugin
+	#2559: Consider introducing autoload behavior
+	#2562: [OJS] Settings wizard refers to Plugins tab that's unavailable
+	#2569: Deleted OAI records not displayed
+	#2572: Additional hooks
+	#2576: Color of tasks panel is confusing
+	#2580: Correct outdated reference to geo IP tool path
+	#2582: Fix HTML galley image migration in OJS2 to OJS3
+	#2592: Clearing template cache should clear .css files too
+	#2611: Prevent COinS plugin from confusing search results
+	#2612: Add filtering options to new submissions list
+	#2613: Add contextual information to icons in new submission list
+	#2616: Change "Add" to "Assign" in participants grid
+	#2621: Editor cannot rename files in review files grid
+	#2631: "Download all files" checks for tar availability, but uses zip compression
+	#2637: Replace low res icon in webfeed for high res screens
+	#2640: Update copyright holder and year
+	#2641: Remove the automatically added line breaks in article abstracts
+	#2642: Placeholder discussions not removed when new discussion creation is cancelled
+	#2646: Journals without available sections for submission should present "not accepting" message
+	#2648: the revision node grouping for supplementary files in native export
+	#2650: Native import dies if presented with a duplicate submission file revision
+	#2655: Alternate mail template for subsequent review request not selected
+	#2658: Filter hook
+	#2660: Permit HTTPS support in ORCIDs
+	#2663: Deleting an issue where no custom issue ordering exists creates a random custom issue ordering
+	#2671: Migrate crossref deposit status setting name
+	#2673: {$reviewerName} variable not replaced
+	#2675: Several minor adjustments to submission lists
+	#2678: Fix (probably) wrong wording in new API locale keys
+	#2682: User registration at the site level when email validation is enabled fails.
+	#2684: Add support for declaring metadata fields required
+	#2691: Report Generator links on the plugins listing page do not work
+	#2699: LazyLoadPlugin get/setEnabled do not consider site plugins
+	#2703: New review round modal re-opens automatically when closed in IE11
+	#2708: Implement approach for delivering constants to the new frontend components
+	#2729: Test environment set up won't work as stated in README
+	#2739: Change precedence of Google Scholar date options
+	#2744: Search bar in ListPanel has wrong styling in iOS
+	#2746: Submission list filtering doesn't work in iOS
+	#2751: Fix grid refreshing
+	#2753: DOAJ export is exporting declined articles
+	#2758: HTML galley CSS file migration
+	#2760: Add new template hooks for plugin settings pages
+	#2761: Generator meta tag untranslated
+	#2770: Preview shows DOIs even when they are not assigned
+	#2771: Integrate UI component library into OJS/OMP
+	#2778: Changing journal visibility setting will restore the default language settings
+	#2782: Fix OAI: kludgey use of `$this`; broken OAI format plugins
+	#2783: Add JATS content to OAI interface (when available)
+	#2789: Possible unnecessary variable read in the first submission form
+	#2790: Articles remain in published state after issue is unpublished
+	#2791: Fix formatting of reviewer comments when imported from review form textbox into author email
+	#2792: Review reminders need From address set
+	#2799: [OJS] Possible unnecessary template
+	#2814: Correct review form error handling bounce issues
+	#2821: Copyeditors do not have access to editorial history
+	#2830: Fix CSRF hard expiry
+	#2838: Can't add note on submission
+	#2849: Current Roles listing and user rights are not transparent
+	#2859: Remove citationOutput plugins
+	#2896: references from the submission settings should be called citations
+	#2907: Check/correct date formatting for Latest column in reviewer assignment
+	#2924: Updates to installation screen
+	#2930: access denied on the announcements setting page

@@ -4,16 +4,16 @@
 <!--
   * plugins/generic/webFeed/locale/es_ES/locale.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_(es_ES)
   * Localization strings.
   -->
  
 <locale name="es_ES" full_name="Español (España)">
-	<message key="plugins.generic.webfeed.displayName">Plugin Web de fuentes RSS/Atom</message>
-	<message key="plugins.generic.webfeed.description">Este plugin produce canales RSS/Atom para el Número en curso.</message>	
+	<message key="plugins.generic.webfeed.displayName">Módulo para fuentes RSS/Atom</message>
+	<message key="plugins.generic.webfeed.description">Este módulo produce canales RSS/Atom del número en curso.</message>	
 	<message key="plugins.generic.webfeed.settings">Opciones</message>
 	<message key="plugins.generic.webfeed.settings.currentIssue">Mostrar elementos del último número publicado</message>
 	<message key="plugins.generic.webfeed.settings.recentArticles">Elementos más recientes</message>
@@ -24,4 +24,5 @@
 	<message key="plugins.generic.webfeed.atom.altText">Logo Atom</message>
 	<message key="plugins.generic.webfeed.rss1.altText">Logo RSS1</message>
 	<message key="plugins.generic.webfeed.rss2.altText">Logo RSS2</message>
+	<message key="plugins.generic.webfeed.settings.recent">Mostrar un número fijo de los elementos más recientes.</message>
 </locale>

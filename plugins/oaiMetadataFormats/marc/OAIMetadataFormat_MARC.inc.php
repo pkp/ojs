@@ -3,8 +3,8 @@
 /**
  * @file plugins/oaiMetadataFormats/marc/OAIMetadataFormat_MARC.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class OAIMetadataFormat_MARC
@@ -31,8 +31,8 @@ class OAIMetadataFormat_MARC extends OAIMetadataFormat {
 		));
 
 		$subjects = array_merge_recursive(
-			$this->stripAssocArray((array) $article->getDiscipline(null)),
-			$this->stripAssocArray((array) $article->getSubject(null))
+			stripAssocArray((array) $article->getDiscipline(null)),
+			stripAssocArray((array) $article->getSubject(null))
 		);
 
 		$templateMgr->assign(array(

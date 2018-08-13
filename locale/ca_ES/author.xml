@@ -3,8 +3,8 @@
 <!--
   * locale/ca_ES/author.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Credits: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_(ca_ES)
@@ -119,4 +119,5 @@
 	<message key="author.article.copyeditedFile">Fitxer corregit</message>
 	<message key="author.article.authorRevisedFile">Fitxer de l'autor/a</message>
 	<message key="author.submit.authorSubmitLoginMessage">Per enviar una tramesa a aquesta revista cal tenir un compte d’usuari/ària. Això permet als editors/ores fer un seguiment de les vostres trameses, enviar-vos avisos quan canviï l’estat de les trameses i sol·licitar-vos informació addicional, si escau.</message>
+	<message key="author.submit.nextSteps">Següents passos</message>
 </locale>

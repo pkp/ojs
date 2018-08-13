@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/blocks/subscription/locale/ru_RU/locale.xml
+  *
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Credits: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Russian_(ru_RU)
+  *
+  * Localization strings.
+  -->
+
+<locale name="ru_RU" full_name="Русский">
+	<message key="plugins.block.subscription.displayName">Блок «Подписка»</message>
+	<message key="plugins.block.subscription.description">Этот плагин добавляет информацию о подписке на боковую панель.</message>
+	<message key="plugins.block.subscription.blockTitle">Подписка</message>
+	<message key="plugins.block.subscription.expires">Дата окончания</message>
+	<message key="plugins.block.subscription.providedBy">Доступ предоставлен: {$institutionName}</message>
+	<message key="plugins.block.subscription.comingFromIP">Вход с IP-адреса: {$ip}</message>
+	<message key="plugins.block.subscription.about">Подписки</message>
+	<message key="plugins.block.subscription.loginToVerifySubscription">Войти в систему, чтобы получить доступ к ресурсам для подписчиков.</message>
+	<message key="plugins.block.subscription.subscriptionRequired">Для доступа к некоторым ресурсам нужна подписка.</message>
+	<message key="plugins.block.subscription.subscriptionRequired.learnMore">Узнать больше</message>
+</locale>

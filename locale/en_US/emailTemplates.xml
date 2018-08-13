@@ -4,8 +4,8 @@
 <!--
   * locale/en_US/emailTemplates.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
   * Localized email templates XML file.
@@ -23,38 +23,13 @@ Link: {$url}<br />
 {$principalContactSignature}]]></body>
 		<description>The email is sent to registered users that have selected to have this type of notification emailed to them.</description>
 	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST">
-		<subject>New notification from {$siteTitle}</subject>
-		<body><![CDATA[You have a new notification from {$siteTitle}:<br />
---<br />
-{$notificationContents}<br />
-<br />
-Link: {$url}<br />
---<br />
-<br />
-If you wish to stop receiving notification emails, please go to {$unsubscribeLink}.<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>This email is sent to unregistered users on the notification mailing list.</description>
-	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
-		<subject>Welcome to the the {$siteTitle} mailing list!</subject>
-		<body><![CDATA[You have signed up to receive notifications from {$siteTitle}.<br />
-<br />
-Please click on this link to confirm your request and add your email address to the mailing list: {$confirmLink}<br />
-<br />
-If you wish to stop receiving notification emails, please go to {$unsubscribeLink}.<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>This email is sent to an unregistered user who just registered with the notification mailing list.</description>
-	</email_text>
 	<email_text key="PASSWORD_RESET_CONFIRM">
 		<subject>Password Reset Confirmation</subject>
 		<body><![CDATA[We have received a request to reset your password for the {$siteTitle} web site.<br />
 <br />
 If you did not make this request, please ignore this email and your password will not be changed. If you wish to reset your password, click on the below URL.<br />
 <br />
-Reset my password: <a href="{$url}">{$url}</a><br />
+Reset my password: {$url}<br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>This email is sent to a registered user when they indicate that they have forgotten their password or are unable to login. It provides a URL they can follow to reset their password.</description>
@@ -88,7 +63,7 @@ Thank you,<br />
 <br />
 You have created an account with {$contextName}, but before you can start using it, you need to validate your email account. To do this, simply follow the link below:<br />
 <br />
-<a href="{$activateUrl}">{$activateUrl}</a><br />
+{$activateUrl}<br />
 <br />
 Thank you,<br />
 {$principalContactSignature}]]></body>
@@ -111,7 +86,7 @@ Thank you,<br />
 		<subject>New Issue Published</subject>
 		<body><![CDATA[Readers:<br />
 <br />
-{$contextName} has just published its latest issue at <a href="{$contextUrl}">{$contextUrl}</a>. We invite you to review the Table of Contents here and then visit our web site to review articles and items of interest.<br />
+{$contextName} has just published its latest issue at {$contextUrl}. We invite you to review the Table of Contents here and then visit our web site to review articles and items of interest.<br />
 <br />
 Thanks for the continuing interest in our work,<br />
 {$editorialContactSignature}]]></body>
@@ -121,11 +96,11 @@ Thanks for the continuing interest in our work,<br />
 		<subject>Archiving Request for {$contextName}</subject>
 		<body><![CDATA[Dear [University Librarian]<br />
 <br />
-{$contextName} &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt;, is a journal for which a member of your faculty, [name of member], serves as a [title of position]. The journal is seeking to establish a LOCKSS (Lots of Copies Keep Stuff Safe) compliant archive with this and other university libraries.<br />
+{$contextName} &amp;lt;{$contextUrl}&amp;gt;, is a journal for which a member of your faculty, [name of member], serves as a [title of position]. The journal is seeking to establish a LOCKSS (Lots of Copies Keep Stuff Safe) compliant archive with this and other university libraries.<br />
 <br />
 [Brief description of journal]<br />
 <br />
-The URL to the LOCKSS Publisher Manifest for our journal is: <a href="{$contextUrl}">{$contextUrl}</a>/gateway/lockss<br />
+The URL to the LOCKSS Publisher Manifest for our journal is: {$contextUrl}/gateway/lockss<br />
 <br />
 We understand that you are already participating in LOCKSS. If we can provide any additional metadata for purposes of registering our journal with your version of LOCKSS, we would be happy to provide it.<br />
 <br />
@@ -137,7 +112,7 @@ Thank you,<br />
 		<subject>Archiving Request for {$contextName}</subject>
 		<body><![CDATA[Dear [University Librarian]<br />
 <br />
-{$contextName} &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt;, is a journal for which a member of your faculty, [name of member] serves as a [title of position]. The journal is seeking to establish a LOCKSS (Lots of Copies Keep Stuff Safe) compliant archive with this and other university libraries.<br />
+{$contextName} &amp;lt;{$contextUrl}&amp;gt;, is a journal for which a member of your faculty, [name of member] serves as a [title of position]. The journal is seeking to establish a LOCKSS (Lots of Copies Keep Stuff Safe) compliant archive with this and other university libraries.<br />
 <br />
 [Brief description of journal]<br />
 <br />
@@ -174,14 +149,6 @@ If you have any questions, please contact me. Thank you for considering this jou
 {$editorialContactSignature}]]></body>
 		<description>This email, when enabled, is automatically sent to the other authors who are not users within OJS specified during the submission process.</description>
 	</email_text>
-	<email_text key="SUBMISSION_UNSUITABLE">
-		<subject>Unsuitable Submission</subject>
-		<body><![CDATA[{$authorName}:<br />
-<br />
-An initial review of &quot;{$submissionTitle}&quot; has made it clear that this submission does not fit within the scope and focus of {$contextName}. I recommend that you consult the description of this journal under About, as well as its current contents, to learn more about the work that we publish. You might also consider submitting this manuscript to another, more suitable journal.<br />
-<br />
-{$editorialContactSignature}]]></body>
-	</email_text>
 	<email_text key="EDITOR_ASSIGN">
 		<subject>Editorial Assignment</subject>
 		<body><![CDATA[{$editorialContactName}:<br />
@@ -201,13 +168,13 @@ Thank you,<br />
 <br />
 I believe that you would serve as an excellent reviewer of the manuscript, &quot;{$submissionTitle},&quot; which has been submitted to {$contextName}. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.<br />
 <br />
-Please log into the journal web site by {$responseDueDate} to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is <a href="{$contextUrl}">{$contextUrl}</a><br />
+Please log into the journal web site by {$responseDueDate} to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is {$contextUrl}<br />
 <br />
 The review itself is due {$reviewDueDate}.<br />
 <br />
-If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). <a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
+If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). {$passwordResetUrl}<br />
 <br />
-Submission URL: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+Submission URL: {$submissionReviewUrl}<br />
 <br />
 Thank you for considering this request.<br />
 <br />
@@ -225,13 +192,13 @@ Just a gentle reminder of our request for your review of the submission, &quot;{
 <br />
 I believe that you would serve as an excellent reviewer of the manuscript. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.<br />
 <br />
-Please log into the journal web site to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is <a href="{$contextUrl}">{$contextUrl}</a><br />
+Please log into the journal web site to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is {$contextUrl}<br />
 <br />
 The review itself is due {$reviewDueDate}.<br />
 <br />
-If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). <a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
+If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). {$passwordResetUrl}<br />
 <br />
-Submission URL: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+Submission URL: {$submissionReviewUrl}<br />
 <br />
 Thank you for considering this request.<br />
 <br />
@@ -252,7 +219,7 @@ Please log into the journal web site by {$responseDueDate} to indicate whether y
 <br />
 The review itself is due {$reviewDueDate}.<br />
 <br />
-Submission URL: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+Submission URL: {$submissionReviewUrl}<br />
 <br />
 Thank you for considering this request.<br />
 <br />
@@ -266,7 +233,7 @@ Thank you for considering this request.<br />
 	<email_text key="REVIEW_REQUEST_REMIND_AUTO_ONECLICK">
 		<subject>Article Review Request</subject>
 		<body><![CDATA[{$reviewerName}:<br />
-Just a gentle reminder of our request for your review of the submission, &quot;{$submissionTitle},&quot; for {$contextName}. We were hoping to have your response by {$responseDueDate}, and this email has been automatically generated and sent with the passing of that date. 
+Just a gentle reminder of our request for your review of the submission, &quot;{$submissionTitle},&quot; for {$contextName}. We were hoping to have your response by {$responseDueDate}, and this email has been automatically generated and sent with the passing of that date.
 <br />
 I believe that you would serve as an excellent reviewer of the manuscript. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.<br />
 <br />
@@ -274,7 +241,7 @@ Please log into the journal web site to indicate whether you will undertake the 
 <br />
 The review itself is due {$reviewDueDate}.<br />
 <br />
-Submission URL: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+Submission URL: {$submissionReviewUrl}<br />
 <br />
 Thank you for considering this request.<br />
 <br />
@@ -312,13 +279,13 @@ This regards the manuscript &quot;{$submissionTitle},&quot; which is under consi
 <br />
 Following the review of the previous version of the manuscript, the authors have now submitted a revised version of their paper. We would appreciate it if you could help evaluate it.<br />
 <br />
-Please log into the journal web site by {$responseDueDate} to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is <a href="{$contextUrl}">{$contextUrl}</a><br />
+Please log into the journal web site by {$responseDueDate} to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is {$contextUrl}<br />
 <br />
 The review itself is due {$reviewDueDate}.<br />
 <br />
-If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). <a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
+If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). {$passwordResetUrl}<br />
 <br />
-Submission URL: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+Submission URL: {$submissionReviewUrl}<br />
 <br />
 Thank you for considering this request.<br />
 <br />
@@ -341,7 +308,7 @@ Please log into the journal web site by {$responseDueDate} to indicate whether y
 <br />
 The review itself is due {$reviewDueDate}.<br />
 <br />
-Submission URL: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+Submission URL: {$submissionReviewUrl}<br />
 <br />
 Thank you for considering this request.<br />
 <br />
@@ -419,9 +386,9 @@ Thank you for completing the review of the submission, &quot;{$submissionTitle},
 <br />
 Just a gentle reminder of our request for your review of the submission, &quot;{$submissionTitle},&quot; for {$contextName}. We were hoping to have this review by {$reviewDueDate}, and would be pleased to receive it as soon as you are able to prepare it.<br />
 <br />
-If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). <a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
+If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). {$passwordResetUrl}<br />
 <br />
-Submission URL: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+Submission URL: {$submissionReviewUrl}<br />
 <br />
 Please confirm your ability to complete this vital contribution to the work of the journal. I look forward to hearing from you.<br />
 <br />
@@ -434,7 +401,7 @@ Please confirm your ability to complete this vital contribution to the work of t
 <br />
 Just a gentle reminder of our request for your review of the submission, &quot;{$submissionTitle},&quot; for {$contextName}. We were hoping to have this review by {$reviewDueDate}, and would be pleased to receive it as soon as you are able to prepare it.<br />
 <br />
-Submission URL: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+Submission URL: {$submissionReviewUrl}<br />
 <br />
 Please confirm your ability to complete this vital contribution to the work of the journal. I look forward to hearing from you.<br />
 <br />
@@ -447,9 +414,9 @@ Please confirm your ability to complete this vital contribution to the work of t
 <br />
 Just a gentle reminder of our request for your review of the submission, &quot;{$submissionTitle},&quot; for {$contextName}. We were hoping to have this review by {$reviewDueDate}, and this email has been automatically generated and sent with the passing of that date. We would still be pleased to receive it as soon as you are able to prepare it.<br />
 <br />
-If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). <a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
+If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). {$passwordResetUrl}<br />
 <br />
-Submission URL: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+Submission URL: {$submissionReviewUrl}<br />
 <br />
 Please confirm your ability to complete this vital contribution to the work of the journal. I look forward to hearing from you.<br />
 <br />
@@ -462,7 +429,7 @@ Please confirm your ability to complete this vital contribution to the work of t
 <br />
 Just a gentle reminder of our request for your review of the submission, &quot;{$submissionTitle},&quot; for {$contextName}. We were hoping to have this review by {$reviewDueDate}, and this email has been automatically generated and sent with the passing of that date. We would still be pleased to receive it as soon as you are able to prepare it.<br />
 <br />
-Submission URL: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+Submission URL: {$submissionReviewUrl}<br />
 <br />
 Please confirm your ability to complete this vital contribution to the work of the journal. I look forward to hearing from you.<br />
 <br />
@@ -543,6 +510,16 @@ Our decision is to: Decline Submission<br />
 ]]></body>
 		<description>This email from the Editor or Section Editor to an Author notifies them of a final "decline" decision regarding their submission.</description>
 	</email_text>
+	<email_text key="EDITOR_RECOMMENDATION">
+		<subject>Editor Recommendation</subject>
+		<body><![CDATA[{$editors}:<br />
+<br />
+The recommendation regarding the submission to {$contextName}, &quot;{$submissionTitle}&quot; is: {$recommendation}<br />
+<br />
+{$editorialContactSignature}<br />
+]]></body>
+		<description>This email from the recommending Editor or Section Editor to the decision making Editors or Section Editors notifies them of a final recommendation regarding the submission.</description>
+	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
 		<subject>Copyediting Request</subject>
 		<body><![CDATA[{$participantName}:<br />
@@ -553,8 +530,8 @@ I would ask that you undertake the copyediting of &quot;{$submissionTitle}&quot;
 3. Save copyedited file(s), and upload to Copyedited panel.<br />
 4. Notify the Editor that all files have been prepared, and that the Production process may begin.<br />
 <br />
-{$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
-Submission URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+{$contextName} URL: {$contextUrl}<br />
+Submission URL: {$submissionUrl}<br />
 Username: {$participantUsername}<br />
 <br />
 {$editorialContactSignature}]]></body>
@@ -570,8 +547,8 @@ The submission &quot;{$submissionTitle}&quot; to {$contextName} now needs galley
 3. Upload the galleys to the Galley Files section.<br />
 4. Notify the Editor using Production Discussions that the galleys are uploaded and ready.<br />
 <br />
-{$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
-Submission URL: <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a><br />
+{$contextName} URL: {$contextUrl}<br />
+Submission URL: {$submissionLayoutUrl}<br />
 Username: {$participantUsername}<br />
 <br />
 If you are unable to undertake this work at this time or have any questions, please contact me. Thank you for your contribution to this journal.<br />
@@ -592,7 +569,7 @@ If you have any questions, please contact me.<br />
 	</email_text>
 	<email_text key="EMAIL_LINK">
 		<subject>Article of Possible Interest</subject>
-		<body><![CDATA[Thought you might be interested in seeing &quot;{$submissionTitle}&quot; by {$authorName} published in Vol {$volume}, No {$number} ({$year}) of {$contextName} at &quot;<a href="{$articleUrl}">{$articleUrl}</a>&quot;.]]></body>
+		<body><![CDATA[Thought you might be interested in seeing &quot;{$submissionTitle}&quot; by {$authorName} published in Vol {$volume}, No {$number} ({$year}) of {$contextName} at &quot;{$articleUrl}&quot;.]]></body>
 		<description>This email template provides a registered reader with the opportunity to send information about an article to somebody who may be interested. It is available via the Reading Tools and must be enabled by the Journal Manager in the Reading Tools Administration page.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_NOTIFY">
@@ -618,7 +595,7 @@ If you have any questions, please feel free to contact me.<br />
 		<subject>Issue Now Open Access</subject>
 		<body><![CDATA[Readers:<br />
 <br />
-{$contextName} has just made available in an open access format the following issue. We invite you to review the Table of Contents here and then visit our web site (<a href="{$contextUrl}">{$contextUrl}</a>) to review articles and items of interest.<br />
+{$contextName} has just made available in an open access format the following issue. We invite you to review the Table of Contents here and then visit our web site ({$contextUrl}) to review articles and items of interest.<br />
 <br />
 Thanks for the continuing interest in our work,<br />
 {$editorialContactSignature}]]></body>
@@ -688,7 +665,7 @@ Membership Information (if provided):<br />
 <br />
 To view or edit this subscription, please use the following URL.<br />
 <br />
-Subscription URL: <a href="{$subscriptionUrl}">{$subscriptionUrl}</a><br />
+Subscription URL: {$subscriptionUrl}<br />
 ]]></body>
 		<description>This email notifies the Subscription Manager that an individual subscription has been purchased online. It provides summary information about the subscription and a quick access link to the purchased subscription.</description>
 	</email_text>
@@ -717,7 +694,7 @@ Membership Information (if provided):<br />
 <br />
 To view or edit this subscription, please use the following URL.<br />
 <br />
-Subscription URL: <a href="{$subscriptionUrl}">{$subscriptionUrl}</a><br />
+Subscription URL: {$subscriptionUrl}<br />
 ]]></body>
 		<description>This email notifies the Subscription Manager that an institutional subscription has been purchased online. It provides summary information about the subscription and a quick access link to the purchased subscription.</description>
 	</email_text>
@@ -736,7 +713,7 @@ Membership Information (if provided):<br />
 <br />
 To view or edit this subscription, please use the following URL.<br />
 <br />
-Subscription URL: <a href="{$subscriptionUrl}">{$subscriptionUrl}</a><br />
+Subscription URL: {$subscriptionUrl}<br />
 ]]></body>
 		<description>This email notifies the Subscription Manager that an individual subscription has been renewed online. It provides summary information about the subscription and a quick access link to the renewed subscription.</description>
 	</email_text>
@@ -765,7 +742,7 @@ Membership Information (if provided):<br />
 <br />
 To view or edit this subscription, please use the following URL.<br />
 <br />
-Subscription URL: <a href="{$subscriptionUrl}">{$subscriptionUrl}</a><br />
+Subscription URL: {$subscriptionUrl}<br />
 ]]></body>
 		<description>This email notifies the Subscription Manager that an institutional subscription has been renewed online. It provides summary information about the subscription and a quick access link to the renewed subscription.</description>
 	</email_text>
@@ -784,70 +761,9 @@ Copy-Editor, {$contextName}<br />
 ]]></body>
 		<description>This email allows copyeditors to request additional information about references from authors.</description>
 	</email_text>
-	<email_text key="GIFT_AVAILABLE">
-		<subject>{$giftNoteTitle}</subject>
-		<body><![CDATA[Dear {$recipientFirstName},<br />
-<br />
-{$buyerFullName} would like to share a gift with you at {$giftJournalName}:<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-{$giftNote}<br />
-<br />
-<br />
-You will receive a follow-up email that includes login details and instructions for redeeming your gift.<br />
-<br />
-We hope that you enjoy your gift!<br />
-<br />
-{$giftContactSignature}<br />
-]]></body>
-		<description>This email notifies a gift recipient that a gift has been purchased and is available for redemption.</description>
-	</email_text>
-	<email_text key="GIFT_USER_REGISTER">
-		<subject>Redeem Your Gift: Login Details</subject>
-		<body><![CDATA[Dear {$recipientFirstName},<br />
-<br />
-{$buyerFullName} would like to share a gift with you at {$giftJournalName}:<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-To redeem your gift, please login to the journal website at <a href="{$giftUrl}">{$giftUrl}</a><br />
-<br />
-Your username: {$username}<br />
-Your password: {$password}<br />
-<br />
-Once logged in, you can change your password at any time.<br />
-<br />
-We hope that you enjoy your gift!<br />
-<br />
-{$giftContactSignature}<br />
-]]></body>
-		<description>This email notifies a gift recipient of their login details for a new account.</description>
-	</email_text>
-	<email_text key="GIFT_USER_LOGIN">
-		<subject>Redeem Your Gift: Login Details</subject>
-		<body><![CDATA[Dear {$recipientFirstName},<br />
-<br />
-{$buyerFullName} would like to share a gift with you at {$giftJournalName}:<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-To redeem your gift, please login to the journal website at <a href="{$giftUrl}">{$giftUrl}</a><br />
-<br />
-Your username: {$username}<br />
-<br />
-We hope that you enjoy your gift!<br />
-<br />
-{$giftContactSignature}<br />
-]]></body>
-		<description>This email notifies a gift recipient of their login details.</description>
-	</email_text>
 	<email_text key="REVISED_VERSION_NOTIFY">
 		<subject>Revised Version Uploaded</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
+		<body><![CDATA[Editors:<br />
 <br />
 A revised version of &quot;{$submissionTitle}&quot; has been uploaded by the author {$authorName}.<br />
 <br />
@@ -860,5 +776,17 @@ Submission URL: {$submissionUrl}<br />
 		<subject>A message regarding {$contextName}</subject>
 		<body><![CDATA[Please enter your message.]]></body>
 		<description>The default (blank) message used in the Notification Center Message Listbuilder.</description>
+	</email_text>
+	<email_text key="EDITOR_DECISION_INITIAL_DECLINE">
+		<subject>Editor Decision</subject>
+		<body>
+			<![CDATA[{$authorName}:<br />
+<br />
+We have reached a decision regarding your submission to {$contextName}, &quot;{$submissionTitle}&quot;.<br />
+<br />
+Our decision is to: Decline Submission<br />
+<br />
+{$editorialContactSignature}<br />]]></body>
+		<description>This email is send to the author if the editor declines his submission initially, before the review stage</description>
 	</email_text>
 </email_texts>

@@ -4,8 +4,8 @@
 <!--
   * plugins/generic/openAIRE/locale/en_US/locale.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
   * Localization strings.
@@ -13,8 +13,8 @@
  
 <locale name="en_US" full_name="U.S. English">
 	<message key="plugins.generic.openAIRE.displayName">OpenAIRE</message>
-	<message key="plugins.generic.openAIRE.description">The OpenAIRE plugin adds the projectID element to the article metadata and extends the OAI-PMH interface according to the OpenAIRE Guidelines 1.1, helping OJS journals to become OpenAIRE compliant.</message>
+	<message key="plugins.generic.openAIRE.description">The OpenAIRE plugin adds the ProjectID element to the article metadata and extends the OAI-PMH interface according to the OpenAIRE Guidelines 1.1, helping OJS journals to become OpenAIRE compliant.</message>
 	<message key="plugins.generic.openAIRE.projectID">OpenAIRE ProjectID</message>
 	<message key="plugins.generic.openAIRE.projectID.description"><![CDATA[If this research resulted from an EU initiative that complies with the <a href="https://www.openaire.eu/" target="_blank">OpenAIRE</a> metadata platform, please include the ProjectID, a six-digit number which corresponds with the Grant Agreement identifier.]]></message>
-	<message key="plugins.generic.openAIRE.projectIDValid">Please enter a valid projectID (6 numbers)</message>
+	<message key="plugins.generic.openAIRE.projectIDValid">Please enter a valid ProjectID (6 numbers)</message>
 </locale>

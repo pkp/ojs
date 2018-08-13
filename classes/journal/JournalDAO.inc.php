@@ -3,8 +3,8 @@
 /**
  * @file classes/journal/JournalDAO.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class JournalDAO
@@ -22,12 +22,6 @@ define('JOURNAL_FIELD_TITLE', 1);
 define('JOURNAL_FIELD_SEQUENCE', 2);
 
 class JournalDAO extends ContextDAO {
-	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 
 	/**
 	 * Construct a new Journal.
@@ -90,15 +84,12 @@ class JournalDAO extends ContextDAO {
 		$emailTemplateDao->deleteEmailTemplatesByContext($journalId);
 
 		$subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
-		$subscriptionDao->deleteSubscriptionsByJournal($journalId);
+		$subscriptionDao->deleteByJournalId($journalId);
 		$subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
-		$subscriptionDao->deleteSubscriptionsByJournal($journalId);
+		$subscriptionDao->deleteByJournalId($journalId);
 
 		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
-		$subscriptionTypeDao->deleteSubscriptionTypesByJournal($journalId);
-
-		$giftDao = DAORegistry::getDAO('GiftDAO');
-		$giftDao->deleteGiftsByAssocId(ASSOC_TYPE_JOURNAL, $journalId);
+		$subscriptionTypeDao->deleteByJournal($journalId);
 
 		$announcementDao = DAORegistry::getDAO('AnnouncementDAO');
 		$announcementDao->deleteByAssoc(ASSOC_TYPE_JOURNAL, $journalId);

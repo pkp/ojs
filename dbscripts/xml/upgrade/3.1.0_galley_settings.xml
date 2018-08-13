@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../../../lib/pkp/dtd/xmlData.dtd">
+
+<!--
+  * 3.1.0_galley_settings.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * 3.1.0.0 fix article galley settings migration.
+  -->
+<data>
+	<sql><!-- pkp/pkp-lib#2537 -->
+		<!-- copy article_galley_settings into submission_galley_settings -->
+		<query>INSERT INTO submission_galley_settings (galley_id, locale, setting_name, setting_value, setting_type) SELECT galley_id, locale, setting_name, setting_value, setting_type FROM article_galley_settings WHERE setting_name &lt;&gt; 'excludeDoi' AND setting_name &lt;&gt; 'excludeURN'</query>
+		<query>DROP TABLE article_galley_settings</query>
+		<!-- delete old/unused settings from  submission_settings -->
+		<query>DELETE FROM submission_settings WHERE setting_name IN ('excludeDoi', 'excludeURN')</query>
+	</sql>
+</data>
+

@@ -4,8 +4,8 @@
 <!--
   * locale/id_ID/emailTemplates.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
   * Localized email templates XML file.
@@ -22,31 +22,6 @@ Tautan: {$url}<br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Email ini dikirimkan ke pengguna terdaftar yang memilih untuk memperoleh jenis notifikasi ini dikirimkan melalui email.</description>
-	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST">
-		<subject>Notifikasi baru dari {$siteTitle}</subject>
-		<body><![CDATA[Anda memperoleh satu notifikasi baru dari {$siteTitle}:<br />
---<br />
-{$notificationContents}<br />
-<br />
-Tautan: {$url}<br />
---<br />
-<br />
-Jika Anda ingin berhenti menerima email notifikasi, silakan klik {$unsubscribeLink}.<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>Email ini dikirimkan ke pengguna tidak terdaftar pada mailing list notifikasi.</description>
-	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
-		<subject>Selamat datang di mailing list {$siteTitle}!</subject>
-		<body><![CDATA[Anda telah mendaftar untuk menerima notifikasi dari {$siteTitle}.<br />
-<br />
-Silakan klik tautan berikut untuk mengkonfirmasi dan menambahkan alamat email Anda ke mailing list: {$confirmLink}<br />
-<br />
-Jika Anda ingin berhenti menerima email notifikasi, silakan klik {$unsubscribeLink}.<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>Email ini dikirimkan ke pengguna tidak terdaftar yang baru saja mendaftarkan diri ke mailing list.</description>
 	</email_text>
 	<email_text key="PASSWORD_RESET_CONFIRM">
 		<subject>Konfirmasi Reset Sandi</subject>
@@ -88,7 +63,7 @@ Terimakasih,<br />
 <br />
 Anda telah membuat akun di {$contextName}.  Sebelum dapat menggunakannya, Anda perlu melakukan validasi akun email. Untuk melakukannya, klik tautan berikut ini:<br />
 <br />
-<a href="{$activateUrl}">{$activateUrl}</a><br />
+{$activateUrl}<br />
 <br />
 Terimakasih,<br />
 {$principalContactSignature}]]></body>
@@ -111,7 +86,7 @@ Terimakasih,<br />
 		<subject>Terbitan Baru</subject>
 		<body><![CDATA[Readers:<br />
 <br />
-{$contextName} baru saja menerbitkan terbitan terbarunya di <a href="{$contextUrl}">{$contextUrl}</a>. Kami mengundang Anda untuk membaca Daftar Isi dan selanjutnya mengunjungi website kami untuk membaca artikel yang Anda minati.<br />
+{$contextName} baru saja menerbitkan terbitan terbarunya di {$contextUrl}. Kami mengundang Anda untuk membaca Daftar Isi dan selanjutnya mengunjungi website kami untuk membaca artikel yang Anda minati.<br />
 <br />
 Terimakasih atas perhatian Anda,<br />
 {$editorialContactSignature}]]></body>
@@ -121,11 +96,11 @@ Terimakasih atas perhatian Anda,<br />
 		<subject>Permohonan Pengarsipan untuk {$contextName}</subject>
 		<body><![CDATA[Yang terhormat [Pustakawan Universitas]<br />
 <br />
-{$contextName} &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt;, merupakan jurnal yang salah satu anggota fakultas Anda, [name of member], menjadi [title of position]. Jurnal ini hendak membuat arsip sesuai LOCKSS (Lots of Copies Keep Stuff Safe) di perpustakaan Anda dan perpustakaan universitas lainnya.<br />
+{$contextName} &amp;lt;{$contextUrl}&amp;gt;, merupakan jurnal yang salah satu anggota fakultas Anda, [name of member], menjadi [title of position]. Jurnal ini hendak membuat arsip sesuai LOCKSS (Lots of Copies Keep Stuff Safe) di perpustakaan Anda dan perpustakaan universitas lainnya.<br />
 <br />
 [Deskripsi singkat jurnal]<br />
 <br />
-URL Publisher Manifest LOCKSS jurnal kami adalah: <a href="{$contextUrl}">{$contextUrl}</a>/gateway/lockss<br />
+URL Publisher Manifest LOCKSS jurnal kami adalah: {$contextUrl}/gateway/lockss<br />
 <br />
 Kami memahami bahwa Anda telah bergabung dengan LOCKSS. Jika kami perlu memberikan metadata tambahan untuk mendaftarkan jurnal kami di versi LOCKSS Anda, dengan senang hati kami akan memberikannya.<br />
 <br />
@@ -137,7 +112,7 @@ Terimakasih,<br />
 		<subject>Permohonan Pengarsipan untuk {$contextName}</subject>
 		<body><![CDATA[Yang terhormat [University Librarian]<br />
 <br />
-{$contextName} &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt;, merupakan jurnal yang salah satu anggota fakultas Anda, [name of member], menjadi [title of position]. Jurnal ini hendak membuat arsip sesuai LOCKSS (Lots of Copies Keep Stuff Safe) di perpustakaan Anda dan perpustakaan universitas lainnya.<br />
+{$contextName} &amp;lt;{$contextUrl}&amp;gt;, merupakan jurnal yang salah satu anggota fakultas Anda, [name of member], menjadi [title of position]. Jurnal ini hendak membuat arsip sesuai LOCKSS (Lots of Copies Keep Stuff Safe) di perpustakaan Anda dan perpustakaan universitas lainnya.<br />
 <br />
 [Deskripsi singkat jurnal]<br />
 <br />
@@ -174,14 +149,6 @@ Jika ada pertanyaan, silakan hubungi kami. Terimakasih telah mempercayakan publi
 {$editorialContactSignature}]]></body>
 		<description>Email ini, jika diaktifkan, secara otomatis dikirimkan ke penulis saat menyelesaikan proses penyerahan naskah ke jurnal. Email ini memberikan informasi mengenai pemantauan kemajuan proses editorial dan mengucapkan terimakasih atas naskah yang dikirimkan.</description>
 	</email_text>
-	<email_text key="SUBMISSION_UNSUITABLE">
-		<subject>Naskah Tidak Sesuai</subject>
-		<body><![CDATA[{$authorName}:<br />
-<br />
-Review awal dari &quot;{$submissionTitle}&quot; menunjukkan bahwa naskah ini tidak sesuai dengan lingkup dan fokus dari {$contextName}. Kami merekomendasikan Anda untuk mempelajari deskripsi jurnal ini di menu Tentang Jurnal, beserta isi terbitan, untuk mengetahui lebih jauh karya yang kami terbitkan. Anda juga dapat mempertimbangkan untuk mengirimkan naskah ini ke jurnal lain yang lebih sesuai.<br />
-<br />
-{$editorialContactSignature}]]></body>
-	</email_text>
 	<email_text key="EDITOR_ASSIGN">
 		<subject>Penugasan Editorial</subject>
 		<body><![CDATA[{$editorialContactName}:<br />
@@ -201,13 +168,13 @@ Terimakasih,<br />
 <br />
 Kami memandang bahwa Anda merupakan reviewer yang tepat untuk naskah, &quot;{$submissionTitle},&quot; yang diserahkan ke {$contextName}. Abstrak naskah tersebut disertakan di bawah ini, dan kami berharap Anda berkenan melakukannya.<br />
 <br />
-Silakan login ke website jurnal sebelum {$responseDueDate} untuk memberitahukan apakah Anda bersedia melakukan review atau tidak, juga untuk mengakses naskah dan menyerahkan review beserta rekomendasi Anda. Website jurnal adalah <a href="{$contextUrl}">{$contextUrl}</a><br />
+Silakan login ke website jurnal sebelum {$responseDueDate} untuk memberitahukan apakah Anda bersedia melakukan review atau tidak, juga untuk mengakses naskah dan menyerahkan review beserta rekomendasi Anda. Website jurnal adalah {$contextUrl}<br />
 <br />
 Tenggat review ini sendiri adalah {$reviewDueDate}.<br />
 <br />
-Jika Anda tidak memiliki nama pengguna dan sandi untuk website jurnal ini, Anda dapat menggunakan tautan berikut untuk mereset sandi Anda (yang selanjutnya akan diemailkan kepada Anda bersama nama pengguna Anda). <a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
+Jika Anda tidak memiliki nama pengguna dan sandi untuk website jurnal ini, Anda dapat menggunakan tautan berikut untuk mereset sandi Anda (yang selanjutnya akan diemailkan kepada Anda bersama nama pengguna Anda). {$passwordResetUrl}<br />
 <br />
-URL Naskah: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+URL Naskah: {$submissionReviewUrl}<br />
 <br />
 Terimakasih atas perhatiannya.<br />
 <br />
@@ -225,13 +192,13 @@ Sekedar mengingatkan tentang permohonan kami untuk melakukan review terhadap nas
 <br />
 Kami memandang bahwa Anda merupakan reviewer yang tepat untuk naskah tersebut. Abstrak naskah tersebut disertakan di bawah ini, dan kami berharap Anda berkenan melakukannya.<br />
 <br />
-Silakan login ke website jurnal untuk memberitahukan apakah Anda bersedia melakukan review atau tidak, juga untuk mengakses naskah dan menyerahkan review beserta rekomendasi Anda. Website jurnal adalah <a href="{$contextUrl}">{$contextUrl}</a><br />
+Silakan login ke website jurnal untuk memberitahukan apakah Anda bersedia melakukan review atau tidak, juga untuk mengakses naskah dan menyerahkan review beserta rekomendasi Anda. Website jurnal adalah {$contextUrl}<br />
 <br />
 Tenggat review ini sendiri adalah {$reviewDueDate}.<br />
 <br />
-Jika Anda tidak memiliki nama pengguna dan sandi untuk website jurnal ini, Anda dapat menggunakan tautan berikut untuk mereset sandi Anda (yang selanjutnya akan diemailkan kepada Anda bersama nama pengguna Anda). <a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
+Jika Anda tidak memiliki nama pengguna dan sandi untuk website jurnal ini, Anda dapat menggunakan tautan berikut untuk mereset sandi Anda (yang selanjutnya akan diemailkan kepada Anda bersama nama pengguna Anda). {$passwordResetUrl}<br />
 <br />
-URL Naskah: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+URL Naskah: {$submissionReviewUrl}<br />
 <br />
 Terimakasih atas perhatiannya.<br />
 <br />
@@ -248,11 +215,11 @@ Terimakasih atas perhatiannya.<br />
 <br />
 Kami memandang bahwa Anda merupakan reviewer yang tepat untuk naskah, &quot;{$submissionTitle},&quot; yang diserahkan ke {$contextName}. Abstrak naskah tersebut disertakan di bawah ini, dan kami berharap Anda berkenan melakukannya.<br />
 <br />
-Silakan login ke website jurnal sebelum {$responseDueDate} untuk memberitahukan apakah Anda bersedia melakukan review atau tidak, juga untuk mengakses naskah dan menyerahkan review beserta rekomendasi Anda. Website jurnal adalah <a href="{$contextUrl}">{$contextUrl}</a><br />
+Silakan login ke website jurnal sebelum {$responseDueDate} untuk memberitahukan apakah Anda bersedia melakukan review atau tidak, juga untuk mengakses naskah dan menyerahkan review beserta rekomendasi Anda. Website jurnal adalah {$contextUrl}<br />
 <br />
 Tenggat review ini sendiri adalah {$reviewDueDate}.<br />
 <br />
-URL Naskah: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+URL Naskah: {$submissionReviewUrl}<br />
 <br />
 Terimakasih atas perhatiannya.<br />
 <br />
@@ -266,15 +233,15 @@ Terimakasih atas perhatiannya.<br />
 	<email_text key="REVIEW_REQUEST_REMIND_AUTO_ONECLICK">
 		<subject>Permohonan Review Artikel</subject>
 		<body><![CDATA[{$reviewerName}:<br />
-Sekedar mengingatkan tentang permohonan kami untuk melakukan review terhadap naskah, &quot;{$submissionTitle},&quot; untuk {$contextName}. Kami berharap telah menerima respon Anda pada {$responseDueDate}, dan email ini dikirim secara otomatis seiring terlewatinya tanggal tersebut. 
+Sekedar mengingatkan tentang permohonan kami untuk melakukan review terhadap naskah, &quot;{$submissionTitle},&quot; untuk {$contextName}. Kami berharap telah menerima respon Anda pada {$responseDueDate}, dan email ini dikirim secara otomatis seiring terlewatinya tanggal tersebut.
 <br />
 Kami memandang bahwa Anda merupakan reviewer yang tepat untuk naskah tersebut. Abstrak naskah tersebut disertakan di bawah ini, dan kami berharap Anda berkenan melakukannya.<br />
 <br />
-Silakan login ke website jurnal untuk memberitahukan apakah Anda bersedia melakukan review atau tidak, juga untuk mengakses naskah dan menyerahkan review beserta rekomendasi Anda. Website jurnal adalah <a href="{$contextUrl}">{$contextUrl}</a><br />
+Silakan login ke website jurnal untuk memberitahukan apakah Anda bersedia melakukan review atau tidak, juga untuk mengakses naskah dan menyerahkan review beserta rekomendasi Anda. Website jurnal adalah {$contextUrl}<br />
 <br />
 Tenggat review ini sendiri adalah {$reviewDueDate}.<br />
 <br />
-URL Naskah: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+URL Naskah: {$submissionReviewUrl}<br />
 <br />
 Terimakasih atas perhatiannya.<br />
 <br />
@@ -312,13 +279,13 @@ Email ini terkait naskah &quot;{$submissionTitle},&quot; yang sedang dalam perti
 <br />
 Setelah review untuk versi naskah sebelumnya, penulis saat ini telah menyerahkan versi revisi naskahnya.  Kami berharap Anda dapat membantu mengevaluasinya.<br />
 <br />
-Silakan login ke website jurnal sebelum {$responseDueDate} untuk memberitahukan apakah Anda bersedia melakukan review atau tidak, juga untuk mengakses naskah dan menyerahkan review beserta rekomendasi Anda. Website jurnal adalah <a href="{$contextUrl}">{$contextUrl}</a><br />
+Silakan login ke website jurnal sebelum {$responseDueDate} untuk memberitahukan apakah Anda bersedia melakukan review atau tidak, juga untuk mengakses naskah dan menyerahkan review beserta rekomendasi Anda. Website jurnal adalah {$contextUrl}<br />
 <br />
 Tenggat review ini sendiri adalah {$reviewDueDate}.<br />
 <br />
-Jika Anda tidak memiliki nama pengguna dan sandi untuk website jurnal ini, Anda dapat menggunakan tautan berikut untuk mereset sandi Anda (yang selanjutnya akan diemailkan kepada Anda bersama nama pengguna Anda). <a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
+Jika Anda tidak memiliki nama pengguna dan sandi untuk website jurnal ini, Anda dapat menggunakan tautan berikut untuk mereset sandi Anda (yang selanjutnya akan diemailkan kepada Anda bersama nama pengguna Anda). {$passwordResetUrl}<br />
 <br />
-URL Naskah: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+URL Naskah: {$submissionReviewUrl}<br />
 <br />
 Terimakasih atas perhatiannya.<br />
 <br />
@@ -341,7 +308,7 @@ Silakan login ke website jurnal sebelum {$responseDueDate} untuk memberitahukan 
 <br />
 Tenggat review ini sendiri adalah {$reviewDueDate}.<br />
 <br />
-URL Naskah: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+URL Naskah: {$submissionReviewUrl}<br />
 <br />
 Terimakasih atas perhatiannya.<br />
 <br />
@@ -419,9 +386,9 @@ Terimakasih telah menyelesaikan review terhadap naskah, &quot;{$submissionTitle}
 <br />
 Sekedar mengingatkan tentang permohonan kami untuk melakukan review terhadap naskah, &quot;{$submissionTitle},&quot; untuk {$contextName}. Kami mengharapkan telah menerima review ini pada {$reviewDueDate}, dan akan sangat berbahagia untuk dapat menerimanya segera setelah Anda menyelesaikannya.<br />
 <br />
-Jika Anda tidak memiliki nama pengguna dan sandi untuk website jurnal ini, Anda dapat menggunakan tautan berikut untuk mereset sandi Anda (yang selanjutnya akan diemailkan kepada Anda bersama nama pengguna Anda). <a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
+Jika Anda tidak memiliki nama pengguna dan sandi untuk website jurnal ini, Anda dapat menggunakan tautan berikut untuk mereset sandi Anda (yang selanjutnya akan diemailkan kepada Anda bersama nama pengguna Anda). {$passwordResetUrl}<br />
 <br />
-URL Naskah: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+URL Naskah: {$submissionReviewUrl}<br />
 <br />
 Mohon konfirmasi kesanggupan Anda untuk menyelesaikan kontribusi penting ini.  Kami menunggu balasan Anda.<br />
 <br />
@@ -434,7 +401,7 @@ Mohon konfirmasi kesanggupan Anda untuk menyelesaikan kontribusi penting ini.  K
 <br />
 Sekedar mengingatkan tentang permohonan kami untuk melakukan review terhadap naskah, &quot;{$submissionTitle},&quot; untuk {$contextName}. Kami mengharapkan telah menerima review ini pada {$reviewDueDate}, dan akan sangat berbahagia untuk dapat menerimanya segera setelah Anda menyelesaikannya.<br />
 <br />
-URL Naskah: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+URL Naskah: {$submissionReviewUrl}<br />
 <br />
 Mohon konfirmasi kesanggupan Anda untuk menyelesaikan kontribusi penting ini.  Kami menunggu balasan Anda.<br />
 <br />
@@ -447,9 +414,9 @@ Mohon konfirmasi kesanggupan Anda untuk menyelesaikan kontribusi penting ini.  K
 <br />
 Sekedar mengingatkan tentang permohonan kami untuk melakukan review terhadap naskah, &quot;{$submissionTitle},&quot; untuk {$contextName}. Kami mengharapkan telah menerima review ini pada {$reviewDueDate}, dan email ini dikirim secara otomatis seiring terlewatinya tanggal tersebut. Kami masih tetap menanti review tersebut segera setelah Anda dapat menyelesaikannya.<br />
 <br />
-Jika Anda tidak memiliki nama pengguna dan sandi untuk website jurnal ini, Anda dapat menggunakan tautan berikut untuk mereset sandi Anda (yang selanjutnya akan diemailkan kepada Anda bersama nama pengguna Anda). <a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
+Jika Anda tidak memiliki nama pengguna dan sandi untuk website jurnal ini, Anda dapat menggunakan tautan berikut untuk mereset sandi Anda (yang selanjutnya akan diemailkan kepada Anda bersama nama pengguna Anda). {$passwordResetUrl}<br />
 <br />
-URL Naskah: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+URL Naskah: {$submissionReviewUrl}<br />
 <br />
 Mohon konfirmasi kesanggupan Anda untuk menyelesaikan kontribusi penting ini.  Kami menunggu balasan Anda.<br />
 <br />
@@ -462,7 +429,7 @@ Mohon konfirmasi kesanggupan Anda untuk menyelesaikan kontribusi penting ini.  K
 <br />
 Sekedar mengingatkan tentang permohonan kami untuk melakukan review terhadap naskah, &quot;{$submissionTitle},&quot; untuk {$contextName}. We were hoping to have this review by {$reviewDueDate}, dan email ini dikirim secara otomatis seiring terlewatinya tanggal tersebut. We would still be pleased to receive it as soon as you are able to prepare it.<br />
 <br />
-URL Naskah: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+URL Naskah: {$submissionReviewUrl}<br />
 <br />
 Mohon konfirmasi kesanggupan Anda untuk menyelesaikan kontribusi penting ini.  Kami menunggu balasan Anda.<br />
 <br />
@@ -553,8 +520,8 @@ Kami meminta Anda melakukan copyediting terhadap &quot;{$submissionTitle}&quot; 
 3. Simpan file yang telah di-copyedit, dan unggah ke panel Sudah Copyedit.<br />
 4. Beritahu Editor bahwa semua file telah siap, dan bahwa proses Produksi dapat dimulai.<br />
 <br />
-{$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
-URL Naskah: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+{$contextName} URL: {$contextUrl}<br />
+URL Naskah: {$submissionUrl}<br />
 Nama pengguna: {$participantUsername}<br />
 <br />
 {$editorialContactSignature}]]></body>
@@ -570,8 +537,8 @@ Naskah &quot;{$submissionTitle}&quot; di {$contextName} memerlukan pembuatan gal
 3. Unggah galley ke bagian File Galley.<br />
 4. Beritahu Editor menggunakan Diskusi Produksi bahwa galley telah diunggah dan siap digunakan.<br />
 <br />
-{$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
-URL Naskah: <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a><br />
+{$contextName} URL: {$contextUrl}<br />
+URL Naskah: {$submissionLayoutUrl}<br />
 Nama pengguna: {$participantUsername}<br />
 <br />
 Jika Anda tidak dapat melakukan tugas ini saat ini atau mempunyai pertanyaan, silakan hubungi kami.  Terimakasih atas kontribusi Anda ke jurnal ini.<br />
@@ -592,7 +559,7 @@ Jika ada pertanyaan, silakan hubungi kami.<br />
 	</email_text>
 	<email_text key="EMAIL_LINK">
 		<subject>Artikel Menarik</subject>
-		<body><![CDATA[Anda mungkin tertarik dengan &quot;{$submissionTitle}&quot; oleh {$authorName} diterbitkan di Vol {$volume}, No {$number} ({$year}) {$contextName} yang tersedia di &quot;<a href="{$articleUrl}">{$articleUrl}</a>&quot;.]]></body>
+		<body><![CDATA[Anda mungkin tertarik dengan &quot;{$submissionTitle}&quot; oleh {$authorName} diterbitkan di Vol {$volume}, No {$number} ({$year}) {$contextName} yang tersedia di &quot;{$articleUrl}&quot;.]]></body>
 		<description>Template email ini memungkinkan pembaca terdaftar mengirimkan informasi tentang suatu artikel kepada seseorang yang mungkin akan tertarik. Email ini tersedia di Alat Baca dan harus diaktifkan oleh Manajer Jurnal di halaman Administrasi Alat Baca.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_NOTIFY">
@@ -618,7 +585,7 @@ Jika ada pertanyaan, silakan hubungi kami.<br />
 		<subject>Terbitan Sudah Open Access</subject>
 		<body><![CDATA[Readers:<br />
 <br />
-{$contextName} telah menjadikan terbitan berikut Open Access. Kami mengundang Anda untuk menelaah Daftar Isi berikut dan mengunjungi website kami (<a href="{$contextUrl}">{$contextUrl}</a>) untuk membaca artikel dan item yang Anda minati.<br />
+{$contextName} telah menjadikan terbitan berikut Open Access. Kami mengundang Anda untuk menelaah Daftar Isi berikut dan mengunjungi website kami ({$contextUrl}) untuk membaca artikel dan item yang Anda minati.<br />
 <br />
 Terimakasih atas perhatiannya,<br />
 {$editorialContactSignature}]]></body>
@@ -688,7 +655,7 @@ Informasi Keanggotaan (jika ada):<br />
 <br />
 Untuk melihat atau mengubah langganan ini, silakan gunakan URL berikut ini.<br />
 <br />
-URL Langganan: <a href="{$subscriptionUrl}">{$subscriptionUrl}</a><br />
+URL Langganan: {$subscriptionUrl}<br />
 ]]></body>
 		<description>Email ini memberitahu Manajer Langganan bahwa sebuah langganan individu telah dibeli online.  Email ini memberikan ringkasan informasi tentang langganan tersebut beserta tautan untuk mengakses langganan yang dibeli.</description>
 	</email_text>
@@ -717,7 +684,7 @@ Informasi Keanggotaan (jika ada):<br />
 <br />
 Untuk melihat atau mengubah langganan ini, silakan gunakan URL berikut ini.<br />
 <br />
-URL Langganan: <a href="{$subscriptionUrl}">{$subscriptionUrl}</a><br />
+URL Langganan: {$subscriptionUrl}<br />
 ]]></body>
 		<description>Email ini memberitahu Manajer Langganan bahwa sebuah langganan institusi telah dibeli online.  Email ini memberikan ringkasan informasi tentang langganan tersebut beserta tautan untuk mengakses langganan yang dibeli.</description>
 	</email_text>
@@ -736,7 +703,7 @@ Informasi Keanggotaan (jika ada):<br />
 <br />
 Untuk melihat atau mengubah langganan ini, silakan gunakan URL berikut ini.<br />
 <br />
-URL Langganan: <a href="{$subscriptionUrl}">{$subscriptionUrl}</a><br />
+URL Langganan: {$subscriptionUrl}<br />
 ]]></body>
 		<description>Email ini memberitahu Manajer Langganan bahwa sebuah langganan individu telah diperbaharui online.  Email ini memberikan ringkasan informasi tentang langganan tersebut beserta tautan untuk mengakses langganan yang diperbaharui.</description>
 	</email_text>
@@ -765,7 +732,7 @@ Informasi Keanggotaan (jika ada):<br />
 <br />
 Untuk melihat atau mengubah langganan ini, silakan gunakan URL berikut ini.<br />
 <br />
-URL Langganan: <a href="{$subscriptionUrl}">{$subscriptionUrl}</a><br />
+URL Langganan: {$subscriptionUrl}<br />
 ]]></body>
 		<description>Email ini memberitahu Manajer Langganan bahwa sebuah langganan institusi telah diperbaharui online.  Email ini memberikan ringkasan informasi tentang langganan tersebut beserta tautan untuk mengakses langganan yang diperbaharui.</description>
 	</email_text>
@@ -784,70 +751,9 @@ Copy-Editor, {$contextName}<br />
 ]]></body>
 		<description>Email ini memungkinkan copyeditor untuk meminta informasi tambahan tentang rujukan dari penulis.</description>
 	</email_text>
-	<email_text key="GIFT_AVAILABLE">
-		<subject>{$giftNoteTitle}</subject>
-		<body><![CDATA[Yang terhormat {$recipientFirstName},<br />
-<br />
-{$buyerFullName} memberikan hadiah untuk Anda di {$giftJournalName}:<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-{$giftNote}<br />
-<br />
-<br />
-Anda akan menerima email lanjutan yang memuat rincian login dan petunjuk untuk menukarkan hadiah Anda.<br />
-<br />
-Selamat menggunakan hadiah Anda!<br />
-<br />
-{$giftContactSignature}<br />
-]]></body>
-		<description>Email ini memberitahu seorang penerima hadiah bahwa sebuah hadiah telah dibeli dan dapat ditukarkan.</description>
-	</email_text>
-	<email_text key="GIFT_USER_REGISTER">
-		<subject>Tukarkan Hadiah Anda: Rincian Login</subject>
-		<body><![CDATA[Yang terhormat {$recipientFirstName},<br />
-<br />
-{$buyerFullName} memberikan hadiah untuk Anda di {$giftJournalName}:<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-Untuk menukarkan hadiah Anda, silakan login ke website jurnal di <a href="{$giftUrl}">{$giftUrl}</a><br />
-<br />
-Nama pengguna Anda: {$username}<br />
-Sandi Anda: {$password}<br />
-<br />
-Setelah login, Anda dapat mengganti sandi Anda kapanpun Anda kehendaki.<br />
-<br />
-Selamat menggunakan hadiah Anda!<br />
-<br />
-{$giftContactSignature}<br />
-]]></body>
-		<description>Email ini memberitahu seorang penerima hadiah tentang rincian login untuk akun barunya.</description>
-	</email_text>
-	<email_text key="GIFT_USER_LOGIN">
-		<subject>Tukarkan Hadiah Anda: Rincian Login</subject>
-		<body><![CDATA[Yang terhormat {$recipientFirstName},<br />
-<br />
-{$buyerFullName} memberikan hadiah untuk Anda di {$giftJournalName}:<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-Untuk menukarkan hadiah Anda, silakan login ke website jurnal di <a href="{$giftUrl}">{$giftUrl}</a><br />
-<br />
-Nama pengguna Anda: {$username}<br />
-<br />
-Selamat menggunakan hadiah Anda!<br />
-<br />
-{$giftContactSignature}<br />
-]]></body>
-		<description>Email ini memberitahu seorang penerima hadiah tentang rincian loginnya.</description>
-	</email_text>
 	<email_text key="REVISED_VERSION_NOTIFY">
 		<subject>Versi Revisi telah Diunggah</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
+		<body><![CDATA[Editor:<br />
 <br />
 Versi revisi dari &quot;{$submissionTitle}&quot; telah diunggah oleh penulis {$authorName}.<br />
 <br />

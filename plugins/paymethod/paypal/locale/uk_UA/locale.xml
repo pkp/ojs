@@ -4,35 +4,21 @@
 <!--
   * plugins/paymethod/paypal/locale/uk_UA/locale.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2006-2009 Gunther Eysenbach, Juan Pablo Alperin, MJ Suhonos
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Ukrainian_(uk_UA)
   * Localization strings for the uk_UA (Українська) locale.
-  *
-  * Translated by Denys Solovianenko, 2011
-  * V. I. Vernadsky National Library of Ukraine
   -->
- 
+
 <locale name="uk_UA" full_name="Українська">
-       <message key="plugins.paymethod.paypal.displayName">Оплата рахунків за PayPal</message>
-
-       <!-- PayPal Settings Form -->
-       <message key="plugins.paymethod.paypal.settings.paypalenable">Дозволити PayPal</message>
-       <message key="plugins.paymethod.paypal.settings.paypalurl">IPN URL</message>
-       <message key="plugins.paymethod.paypal.settings.paypalurl.description"><![CDATA[Цей URL служби PayPal Instant Payment Notification (IPN). Для тестування використовуйте <u>https://www.sandbox.paypal.com/cgi-bin/webscr</u>; для роботи використовуйте <u>https://www.paypal.com/cgi-bin/webscr</u>.]]></message>
-       <message key="plugins.paymethod.paypal.settings.selleraccount">Рахунок продавця</message>
-       <message key="plugins.paymethod.paypal.settings.selleraccount.description">У цьому полі вказується ім'я користувача рахунку PayPal, типово, адреса email. Переконайтеся, що Ви активували Instant Payment Notification (IPN) для профілю свого рахунку продавця.</message>
-       <message key="plugins.paymethod.paypal.settings.curlNotInstalled">Попередження: підтримка CURL для PHP не встановлена. Підтримка платежів PayPal вимагає встановлення бібліотеки CURL, і поки вона не буде встановлена, ця функціональність не буде працювати.</message>
-       <message key="plugins.paymethod.paypal.settings">Налаштування PayPal</message>
-
-       <!-- PayPal -->
-       <message key="plugins.paymethod.paypal">Платіж за PayPal</message>
-       <message key="plugins.paymethod.paypal.description"><![CDATA[Система PayPal дозволяє користувачам, незалежно від того, чи є вони самі ченами PayPal, використовувати для розрахунків основні типи кредитних карток. Менеджеру необхідно буде створити та налаштувати <a href="http://www.paypal.com" target="_new">PayPal Business Account</a>.]]></message>
-       <message key="plugins.paymethod.paypal.warning">Натисніть кнопку "Продовжити" нижче, щоб перейти на сайт PayPal, де Ви зможете оплатити рахунок за допомогою кредитної картки (для цього не потрібно приєднуватись до PayPal). Після оплати рахунку натисніть кнопку "Return to Merchant", щоб повернутись на цей сайт.</message>
-       <message key="plugins.paymethod.paypal.purchase.title">Назва</message>
-       <message key="plugins.paymethod.paypal.purchase.fee">Розмір платежу</message>
-       <message key="plugins.paymethod.paypal.purchase.description">Опис</message>
-       <message key="plugins.paymethod.paypal.purchase.cancelled">Ваша покупка була відмінена.</message>
-       <message key="plugins.paymethod.paypal.purchase.cancelled.title">Покупка відмінена</message>
+	<message key="plugins.paymethod.paypal.displayName">Платежі через Paypal</message>
+	<message key="plugins.paymethod.paypal.description">Платежі будуть оброблятися за допомогою послуги PayPal.</message>
+	<message key="plugins.paymethod.paypal">Платежі через Paypal</message>
+	<message key="plugins.paymethod.paypal.settings">Налаштування платежів через Paypal</message>
+	<message key="plugins.paymethod.paypal.settings.testMode">Тестовий режим</message>
+	<message key="plugins.paymethod.paypal.settings.accountName">Ім'я облікового запису</message>
+	<message key="plugins.paymethod.paypal.settings.clientId">ID клієнта</message>
+	<message key="plugins.paymethod.paypal.settings.secret">Таємний код</message>
+	<message key="plugins.paymethod.paypal.error">Сталася помилка транзакції. Зверніться до менеджера журналу, щоб отримати детальнішу інформацію.</message>
 </locale>

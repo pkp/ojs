@@ -4,8 +4,8 @@
 <!--
   * locale/zh_CN/editor.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings.
@@ -96,72 +96,7 @@
 	<message key="editor.navigation.futureIssues">计划中刊期</message>
 	<message key="editor.navigation.issueArchive">过刊</message>
 	<message key="editor.article.designateReviewVersion">指定原始文件作为审阅版本</message>
-	<message key="editor.article.uploadReviewVersion">一个上传的修订的审阅版本</message>
-	<message key="editor.article.showSuppFile">目前的文件给审稿人</message>
-	<message key="editor.article.layoutAndProof">排版与校对</message>
-	<message key="editor.article.clear">清理</message>
-	<message key="editor.article.clearReviewer">清理审稿人</message>
-	<message key="editor.article.changeSection">改变栏目</message>
-	<message key="editor.article.setDueDate">设置截至日期</message>
-	<message key="editor.article.addReviewer">添加审稿人</message>
-	<message key="editor.article.toReviewer">给审稿人</message>
-	<message key="editor.article.notifyReviewer">通知审稿人</message>
-	<message key="editor.article.initiateReview">启动审阅</message>
-	<message key="editor.article.cancelReview">取消请求</message>
-	<message key="editor.article.clearReview">清除审稿人</message>
-	<message key="editor.article.enterRecommendation">输入建议</message>
-	<message key="editor.article.enterReviewerRecommendation">输入审稿人建议</message>
-	<message key="editor.article.recommendation">建议</message>
-	<message key="editor.article.selectReviewer">选择审稿人</message>
-	<message key="editor.article.replaceReviewer">替换审稿人</message>
-	<message key="editor.article.editorToEnter">编辑输入评论或者建议给审稿人</message>
-	<message key="editor.article.uploadReviewForReviewer">上传评论</message>
-	<message key="editor.article.peerReviewOptions">同行评议选项</message>
 	<message key="editor.article.decision">决策</message>
-	<message key="editor.article.noEditorSelected">没有选择的编辑.</message>
-	<message key="editor.article.recordDecision">记录决定</message>
-	<message key="editor.article.cannotRecord">编辑组尚未记录.</message>
-	<message key="editor.article.reviewersSeeAuthorsVersion">审稿人看到作者版本</message>
-	<message key="editor.article.designateDueDate">指定一个截止日期</message>
-	<message key="editor.article.designateDueDateDescription">为了新的介质日期输入日期或者周数.</message>
-	<message key="editor.article.todaysDate">今天的日期</message>
-	<message key="editor.article.requestedByDate">要求日期</message>
-	<message key="editor.article.dueDateFormat">格式: YYYY-MM-DD</message>
-	<message key="editor.article.numberOfWeeks">数周</message>
-	<message key="editor.article.selectCopyeditor">指派文本编辑</message>
-	<message key="editor.article.replaceCopyeditor">替换文本编辑</message>
-	<message key="editor.article.editorsCopyedit">编辑的文本编辑</message>
-	<message key="editor.article.showAuthor">作者可以查看文件</message>
-	<message key="editor.article.showCopyeditor">显示版本给文本编辑</message>
-	<message key="editor.article.rateReviewer">审稿人评分</message>
-	<message key="editor.article.reviewerRating.veryGood">5 高</message>
-	<message key="editor.article.reviewerRating.good">4</message>
-	<message key="editor.article.reviewerRating.average">3</message>
-	<message key="editor.article.reviewerRating.poor">2</message>
-	<message key="editor.article.reviewerRating.veryPoor">1 低</message>
-	<message key="editor.article.comments">评论</message>
-	<message key="editor.article.commentsRequired">评论字段是必需的.</message>
-	<message key="editor.article.saveRating">保存评分</message>
-	<message key="editor.article.noneSelected">无选择</message>
-	<message key="editor.article.authorProofing">作者校对</message>
-	<message key="editor.article.archiveSubmission">拒绝和存档投稿</message>
-	<message key="editor.article.restoreToQueue">恢复到活动列表</message>
-	<message key="editor.article.assignSectionEditor">添加栏目编辑</message>
-	<message key="editor.article.assignEditor">添加编辑</message>
-	<message key="editor.article.selectEditor">选择 {$roleName}</message>
-	<message key="editor.article.selectDecision">选择决定</message>
-	<message key="editor.article.selectLayoutEditor">选择布局编辑</message>
-	<message key="editor.article.replaceLayoutEditor">替换布局编辑</message>
-	<message key="editor.article.reviewSubmission">审阅投稿</message>
-	<message key="editor.article.resubmitForReview">重新提交文件审阅</message>
-	<message key="editor.article.resubmitFileForPeerReview">重新提交选定的同行评议的文件</message>
-	<message key="editor.article.sendToCopyedit">发送文件给文字编辑</message>
-	<message key="editor.article.selectProofreader">指派校对</message>
-	<message key="editor.article.replaceProofreader">替换校对</message>
-	<message key="editor.article.authorComments">作者评论</message>
-	<message key="editor.article.proofreaderComments">校对评论</message>
-	<message key="editor.article.layoutEditorFinal">最后的布局编辑</message>
-	<message key="editor.article.noDate">(日期)</message>
 	<message key="editor.submissions.showBy">显示方式</message>
 	<message key="editor.submissions.submitMMDD">提交 MM-DD</message>
 	<message key="editor.submissions.activeAssignments">活动中的任务</message>
@@ -176,20 +111,9 @@
 	<message key="editor.article.scheduleForPublication">出版计划中</message>
 	<message key="editor.article.scheduleForPublication.toBeAssigned">被指派的</message>
 	<message key="editor.article.payment.publicationFeeNotPaid">出版费未支付，便于列入出版计划,需要通知作者支付或者提交免费申请.</message>
-	<message key="editor.article.display">显示</message>
-	<message key="editor.article.hideTocAuthorDescription">在刊期的目录里忽略作者名</message>
-	<message key="editor.article.hideTocAuthorDefault">默认</message>
-	<message key="editor.article.hideTocAuthorHide">忽略</message>
-	<message key="editor.article.hideTocAuthorShow">显示</message>
-	<message key="editor.article.cover">封面</message>
 	<message key="editor.article.showCoverPage">为这篇文章创建一个包含下面内容的封面.</message>
-	<message key="editor.article.coverImageDisplay">显示</message>
 	<message key="editor.article.hideCoverPageToc">在目录页不显示封面图片的所略图.</message>
 	<message key="editor.article.hideCoverPageAbstract">在文章摘要页不显示封面图片.</message>
-	<message key="editor.article.coverImage">封面图片</message>
-	<message key="editor.article.coverImageInstructions">(允许的格式: .gif, .jpg, or .png )</message>
-	<message key="editor.article.uploaded">已经上传</message>
-	<message key="editor.article.removeCoverPage">删除封面?</message>
 	<message key="editor.article.remove">删除</message>
 	<message key="editor.issues.invalidAccessDate">读取的数据无效.</message>
 	<message key="editor.submissionReview.sendToCopyediting">发送给文字编辑</message>
@@ -209,4 +133,5 @@
 	<message key="editor.issues.galleyPublicIdentificationExists">公共期目校样确认已经存在。</message>
 	<message key="editor.issues.backToIssueGalleys">返回期目校样。</message>
 	<message key="editor.issues.confirmDeleteGalley">您确定要删除该期目校样吗？</message>
+	<message key="editor.article.coverImage">封面图片</message>
 </locale>

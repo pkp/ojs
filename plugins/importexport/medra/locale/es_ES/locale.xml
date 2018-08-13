@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
 <!--
   * plugins/importexport/medra/locale/es_ES/locale.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_(es_ES)
   * Localization strings.
   -->
  
 <locale name="es_ES" full_name="Español (España)">
-    <message key="plugins.importexport.medra.displayName">Módulo de exportación/registro de mEDRA</message>
+	<message key="plugins.importexport.medra.displayName">Módulo de exportación/registro de mEDRA</message>
 	<message key="plugins.importexport.medra.description">Exportar metadatos de un número, un artículo y una galerada en formato Onix para DOI (O4DOI) y registrar los DOI en la agencia de registro mEDRA.</message>
 
 	<message key="plugins.importexport.medra.intro"><![CDATA[
@@ -36,9 +37,13 @@
 	<message key="plugins.importexport.medra.settings.form.manifestation">Manifestación</message>
 
 	<message key="plugins.importexport.medra.workOrProduct"><![CDATA[Nota: Los DOI asignados a los artículos se exportarán a mEDRA como <a href="http://www.medra.org/en/metadata_td.htm" target="_blank">'obras'</a>. Los DOI asignados a las galeradas se exportarán como <a href="http://www.medra.org/en/metadata_td.htm" target="_blank">'manifestación'</a>.]]></message>
-		
+
 	<message key="plugins.importexport.medra.cliUsage"><![CDATA[Uso:
 {$scriptName} {$pluginName} export [xmlFileName] [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...
 {$scriptName} {$pluginName} register [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...
 ]]></message>
+	<message key="plugins.importexport.medra.settings.form.exportIssuesAs.label">Los números se exportan como</message>
+	<message key="plugins.importexport.medra.settings.form.automaticRegistration.description">OJS registrará automáticamente los DOI en mEDRA. Tenga en cuenta que este proceso puede llevar un poco de tiempo tras la publicación (p. ej., en función de la configuración cron). Puede comprobar todos los DOI que no se han registrado.</message>
+	<message key="plugins.importexport.medra.settings.form.testMode.description">Utilice la API de prueba mEDRA (entorno de prueba) para registrar los DOI. No olvide desactivar esta opción en la versión de producción.</message>
+	<message key="plugins.importexport.medra.senderTask.name">Tarea de registro automático de mEDRA</message>
 </locale>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/externalFeed/locale/sv_SE/locale.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Swedish_(sv_SE)
+  * Localization strings.
+  -->
+ 
+<locale name="sv_SE" full_name="Svenska">
+
+	<!-- External Feed -->
+	<message key="plugins.generic.externalFeed.displayName">Externa flöden</message>
+	<message key="plugins.generic.externalFeed.block.displayName">Block för externa flöden</message>
+	<message key="plugins.generic.externalFeed.description">Publicera innehåll från externa Atom/RSS-syndikeringsflöden. Till exempel från en extern WordPress-, Drupal- eller OCS-installation.</message>
+	<message key="plugins.generic.externalFeed.noneExist">Inga externa flöden</message>
+	<message key="plugins.generic.externalFeed.title">Titel</message>
+	<message key="plugins.generic.externalFeed.posted">Publicerat</message>
+	<message key="plugins.generic.externalFeed.more">Mer ...</message>
+
+	<!-- External Feed Management -->
+	<message key="plugins.generic.externalFeed.manager.feeds">Externa flöden</message>
+	<message key="plugins.generic.externalFeed.manager.settings">Inställningar</message>
+	<message key="plugins.generic.externalFeed.manager.displayBlockInstructions"><![CDATA[För att visa flödesinnehåll i sidomenyns block, gå till <a href="{$setupStep56}" target="_blank">Konfigurationssteg 5.6</a>]]></message>
+	<message key="plugins.generic.externalFeed.manager.title">Titel</message>
+	<message key="plugins.generic.externalFeed.manager.displayHomepage">Visas på förstasidan</message>
+	<message key="plugins.generic.externalFeed.manager.displayHomepage.altText">Visas på förstasidan</message>
+	<message key="plugins.generic.externalFeed.manager.noDisplayHomepage.altText">Visas inte på förstasidan</message>
+	<message key="plugins.generic.externalFeed.manager.displayBlock">Visas i block</message>
+	<message key="plugins.generic.externalFeed.manager.displayBlockAll">Alla sidor</message>
+	<message key="plugins.generic.externalFeed.manager.displayBlockAll.altText">Block på alla sidor</message>
+	<message key="plugins.generic.externalFeed.manager.noDisplayBlockAll.altText">Inga block på någon sida</message>
+	<message key="plugins.generic.externalFeed.manager.displayBlockHomepage">Förstasidan</message>    
+	<message key="plugins.generic.externalFeed.manager.displayBlockHomepage.altText">Block på förstasidan enbart</message>
+	<message key="plugins.generic.externalFeed.manager.noDisplayBlockHomepage.altText">Inga block enbart på förstasidan</message>
+	<message key="plugins.generic.externalFeed.manager.noneCreated">Inga externa flöden</message>
+	<message key="plugins.generic.externalFeed.manager.create">Skapa ett nytt externt flöde</message>
+	<message key="plugins.generic.externalFeed.manager.edit">Redigera externt flöde</message>
+	<message key="plugins.generic.externalFeed.manager.confirmDelete">Vill du ta bort det här flödet för gott?</message>
+
+	<!-- External Feed Settings -->
+	<message key="plugins.generic.externalFeed.settings">Inställningar</message>
+	<message key="plugins.generic.externalFeed.settings.description">Anpassa visningen av poster i externa flöden.</message>
+	<message key="plugins.generic.externalFeed.settings.styleSheet">Visning</message>
+	<message key="plugins.generic.externalFeed.settings.defaultStyleSheet">Stilmall för externt flöde</message>
+	<message key="plugins.generic.externalFeed.settings.stylesheetDescription">En anpassad stilmall kan användas för att ersätta det här pluginets standard-stilmall. Standard-stilmallan kan ses här</message>
+	<message key="plugins.generic.externalFeed.settings.useStyleSheet">Anpassad stilmall</message>
+
+
+	<!-- External Feed Form-->
+	<message key="plugins.generic.externalFeed.form.title">Titel</message>
+	<message key="plugins.generic.externalFeed.form.titleDescription">Webbplatsens och/eller blockets titel</message>
+	<message key="plugins.generic.externalFeed.form.titleRequired">Ange en titel för det här flödet</message>
+	<message key="plugins.generic.externalFeed.form.feedUrl">URL</message>
+	<message key="plugins.generic.externalFeed.form.feedUrlValid">Ange en giltig URL för flödet (inklusive http://)</message>
+	<message key="plugins.generic.externalFeed.form.feedUrlDescription">URL:en för det externa Atom/RSS-flödet (t.ex. http://pkp.sfu.ca/blog/feed)</message>
+	<message key="plugins.generic.externalFeed.form.display">Visa</message>
+	<message key="plugins.generic.externalFeed.form.displayHomepage">Visa på förstasidan</message>
+	<message key="plugins.generic.externalFeed.form.displayBlockNone">Visa inte i block</message>
+	<message key="plugins.generic.externalFeed.form.displayBlockHomepage">Visa i block enbart på förstasidan</message>
+	<message key="plugins.generic.externalFeed.form.displayBlockAll">Visa i block på alla sidor</message>
+	<message key="plugins.generic.externalFeed.form.recentItems1">Begränsa till</message>
+	<message key="plugins.generic.externalFeed.form.recentItems2">poster i flödet</message>
+	<message key="plugins.generic.externalFeed.form.saveAndCreateAnother">Spara och skapa ytterligare flöde</message>
+  
+</locale>

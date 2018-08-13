@@ -4,8 +4,8 @@
 <!--
   * locale/zh_CN/admin.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings.
@@ -61,22 +61,16 @@
 	<message key="admin.categories.confirmDelete">你确定要删除此类别吗？</message>
 	<message key="admin.categories.name">名称</message>
 	<message key="admin.categories.nameRequired">类别名称不能为空</message>
-	<message key="admin.settings.journalsList.showThumbnail">期刊缩略图</message>
-	<message key="admin.settings.journalsList.showTitle">期刊标题</message>
-	<message key="admin.settings.journalsList.showDescription">期刊描述</message>
 	<message key="admin.categories">分类</message>
 	<message key="admin.categories.editTitle">编辑类别</message>
 	<message key="admin.categories.createTitle">新建类别</message>
 	<message key="admin.categories.create">新建一个类别</message>
 	<message key="admin.categories.noneCreated">没有创建任何类别</message>
 	<message key="admin.settings.options">选项</message>
-	<message key="admin.settings.usePaging">含有多本期刊的网站，其期刊表会被分成若干页。</message>
-	<message key="admin.settings.journalsList">期刊元素</message>
-	<message key="admin.settings.journalsList.description">请选择在该网站页面上将为每本期刊所显示的期刊元素。</message>
 	<message key="admin.categories.enable.description">网站管理员可以选择定义此处的一套类别来帮助其组织更大规模的期刊。期刊管理员可以随后从其中为每本期刊选择若干类别，读者可以通过类别分类来浏览期刊内容。</message>
 	<message key="admin.categories.disableCategories">不要将期刊组织成类。</message>
 	<message key="admin.categories.enableCategories">允许期刊管理员将期刊组织成类。</message>
 	<message key="admin.settings.defaultMetricDescription">您的期刊使用多个度量标准。 这些度量标准的使用统计将在许多上下文中出现。
 在某些情况下，期刊应包含一个使用统计，例如： 显示常用文章的顺序列表或者搜索结果排名。请选择其中一个度量标准作为默认值。</message>
-	
+
 </locale>

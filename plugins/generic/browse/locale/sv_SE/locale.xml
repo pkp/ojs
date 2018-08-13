@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/browse/locale/sv_SE/locale.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Swedish_(sv_SE)
+  * Localization strings.
+  -->
+ 
+<locale name="sv_SE" full_name="Svenska">
+	<!-- plugin -->
+	<message key="plugins.generic.browse.displayName">Bläddra</message>
+	<message key="plugins.generic.browse.description">Det här pluginet gör det möjligt att bläddra bland sektioner och/eller deras identifikationstyper.</message>
+
+	<!-- URN manager options, setting -->
+	<message key="plugins.generic.browse.manager.settings">Inställningar</message>
+	<message key="plugins.generic.browse.manager.settings.description"><![CDATA[Konfigurera följande ytterligare bläddringsmöjligheter:]]></message>
+
+	<message key="plugins.generic.browse.manager.settings.browseSettings">Inställningar för bläddring</message>
+	<message key="plugins.generic.browse.manager.settings.browse">Bläddra</message>
+	<message key="plugins.generic.browse.manager.settings.browseByObjects">Välj de objekt som det ska vara möjligt att bläddra bland.</message>
+	<message key="plugins.generic.browse.manager.settings.enableBrowseBySections">Bland sektioner</message>
+	<message key="plugins.generic.browse.manager.settings.enableBrowseByIdentifyTypes">Bland identifikationstyper</message>
+	<message key="plugins.generic.browse.manager.settings.excludedSections">Sektioner att utesluta</message>
+	<message key="plugins.generic.browse.manager.settings.excludedSections.description">Välj sektioner som inte ska tas med.</message>
+	<message key="plugins.generic.browse.manager.settings.excludedIdentifyTypes">Identifikationstyper att utesluta</message>
+	<message key="plugins.generic.browse.manager.settings.excludedIdentifyTypes.description">Välj identifikationstyper som inte ska tas med.</message>
+
+	<message key="plugins.generic.browse.search.sections">Bland sektioner</message>
+	<message key="plugins.generic.browse.search.sectionIndex">Bläddra i index för sektioner</message>
+	<message key="plugins.generic.browse.search.sectionDetails">Detaljer för sektionen</message>
+	<message key="plugins.generic.browse.search.identifyTypes">Bland identifikationstyper</message>
+	<message key="plugins.generic.browse.search.identifyTypeIndex">Bläddra i index för identifikationstyper</message>
+	<message key="plugins.generic.browse.search.identifyTypeDetails">Detaljer för identifikationstyper</message>
+
+</locale>

@@ -4,8 +4,8 @@
 <!--
   * plugins/pubIds/doi/locale/id_ID/locale.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * DOI plugin localization strings
@@ -13,6 +13,7 @@
  
 <locale name="id_ID" full_name="Bahasa Indonesia">
 	<message key="plugins.pubIds.doi.displayName">DOI</message>
+	<message key="plugins.pubIds.doi.readerDisplayName">DOI</message>
 
 	<!-- settings form -->
 	<message key="plugins.pubIds.doi.manager.settings.description">Silahkan konfigurasikan plugin DOI untuk dapat mengatur dan menggunakan DOIs dalam OJS:</message>

@@ -4,8 +4,8 @@
 <!--
   * locale/hr_HR/locale.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the hr_HR (Hrvatski) locale.
@@ -166,7 +166,7 @@
 
 	<!-- Roles -->
 	<message key="user.role.manager">Glavni urednik</message>
-	<message key="user.role.sectionEditor">Urednik rubrike</message>
+	<message key="user.role.subEditor">Urednik rubrike</message>
 	<message key="user.role.subscriptionManager">Administrator pretplate</message>
 	<message key="user.role.managers">Glavni urednici</message>
 	<message key="user.role.subscriptionManagers">Administratori pretplate</message>
@@ -322,12 +322,6 @@ Opcionalno možete proslijediti korisniku razlog zašto ste mu onemogućili rač
 	<!-- Create Issue / Issue Data -->
 	<!-- Live Issues -->
 	<!-- Navigation sidebar menu -->
-	<!-- Used by editor in submission review / editing -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[Poveznica na imenu vodi do recenzentova profila.<br />
-Ocjene su do 5 (Odličan).<br />
-Tjedni pokazuju prosječno vrijeme koje je recenzentu trebalo za završetak recenzije.<br />
-Zadnje prikazuje datum posljednje recenzije pridružene recenzentu.<br />
-Aktivnih prikazuje na koliko je recenzija recenzent trenutno angažiran.]]></message>
 
 
 
@@ -411,12 +405,10 @@ Aktivnih prikazuje na koliko je recenzija recenzent trenutno angažiran.]]></mes
 
 	<message key="reviewer.article.mustSelectDecision">Nema odabrane preporuke. Da biste predali datoteku ili recenziju morate odobrati preporuku .</message>
 	<message key="reviewer.article.confirmDecision">Kada ste jednom zapisali odluku, nećete više moći napraviti nikakve promjene na ovoj recenziji. Jeste li sigurni da želite nastaviti?</message>
-	<message key="reviewer.article.ensuringBlindReview">Kako osigurati anonimnost recenzije</message>
 
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">Datoteka za lektoriranje</message>
 	<message key="copyeditor.article.copyeditorFile">Datoteka lektora</message>
-	<message key="copyeditor.article.uploadedFile">Postavljena datoteka</message>
 	<message key="copyeditor.article.copyeditorFinalFile">Datoteka lektora</message>
 
 	<!-- Proofreader -->
@@ -575,7 +567,7 @@ Sadržaj priložene datoteke možete provjeriti ukoliko kliknete na njezino ime.
 	<message key="installer.ojsUpgrade">OJS nadogradnja</message>
 	<message key="installer.installationInstructions"><![CDATA[<h4>OJS verzija {$version}</h4>
 
-<p>Hvala vam na preuzimanju Public Knowledge Project-ovog <strong>Open Journal Systems-a</strong>. Prije postupka, molimo vas da pročitate <a href="{$baseUrl}/docs/README">README</a> datoteku koja dolazi uz ovaj program. Za više informacija o Public Knowledge Project-u i njegovim programskim projektima, posjetite <a href="http://pkp.sfu.ca/" target="_blank">PKP mrežnu stranicu</a>. Ako primite izvješća o greški u programu ili tražite tehničku podršku za Open Journal Systems, pogledajte <a href="http://forum.pkp.sfu.ca">forum za podršku</a> ili posjetite  PKP-ov online <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">sustav za prijavljivanje greške</a>. Iako je forum za podršku korištenija metoda kontaktiranja, možete poslati i e-poštu stručnom timu na <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
+<p>Hvala vam na preuzimanju Public Knowledge Project-ovog <strong>Open Journal Systems-a</strong>. Prije postupka, molimo vas da pročitate <a href="{$baseUrl}/docs/README.md">README</a> datoteku koja dolazi uz ovaj program. Za više informacija o Public Knowledge Project-u i njegovim programskim projektima, posjetite <a href="http://pkp.sfu.ca/" target="_blank">PKP mrežnu stranicu</a>. Ako primite izvješća o greški u programu ili tražite tehničku podršku za Open Journal Systems, pogledajte <a href="http://forum.pkp.sfu.ca">forum za podršku</a> ili posjetite  PKP-ov online <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">sustav za prijavljivanje greške</a>. Iako je forum za podršku korištenija metoda kontaktiranja, možete poslati i e-poštu stručnom timu na <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
 
 <h4>Nadogradnja</h4>
 
@@ -617,7 +609,7 @@ Sadržaj priložene datoteke možete provjeriti ukoliko kliknete na njezino ime.
 <p>Izaberite <strong>Ručnu instalaciju</strong> da bi prikazali SQL izjave potrebne za kreiranje OJS sheme baze podataka i inicijalnih podataka, tako da instalacija baze podataka može biti izvršena ručno. Ta opcija je korisna kada otkrivate pogreške kod instalacijskih problema, djelomično na nepodržanim platformama. Obavijest: ta metoda instalacije neće poduzeti ništa kako bi kreirala bazu podataka ili bilo koje tablice, iako će konfiguracijska datoteka svejedno biti zapisana s isporučenim postavkama baze podataka.</p>]]></message>
 	<message key="installer.upgradeInstructions"><![CDATA[<h4>OJS verzija {$version}</h4>
 
-<p>Hvala Vam za preuzimanje Public Knowledge Projecta, <strong>Open Journal Systems</strong>. Prije postupka, molimo pročitajte <a href="{$baseUrl}/docs/README">README</a> i <a href="{$baseUrl}/docs/UPGRADE">UPGRADE</a> datoteke uključene s ovim softverom. Za više informacija o Public Knowledge Project-u i njegovim softverskim projektima, molimo posjetite <a href="http://pkp.sfu.ca/" target="_blank">PKP mrežnu stranicu</a>. Ako imate prijavu o grešci ili tražite tehničku podršku za OJS, pogledajte <a href="http://forum.pkp.sfu.ca">forum podrške</a> ili posjetite PKP-ov online <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">sustav prijave pogrešaka</a>. Iako je forum podrške preferirana metoda kontakta, također možete timu poslati e-poštu na <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
+<p>Hvala Vam za preuzimanje Public Knowledge Projecta, <strong>Open Journal Systems</strong>. Prije postupka, molimo pročitajte <a href="{$baseUrl}/docs/README.md">README</a> i <a href="{$baseUrl}/docs/UPGRADE.md">UPGRADE</a> datoteke uključene s ovim softverom. Za više informacija o Public Knowledge Project-u i njegovim softverskim projektima, molimo posjetite <a href="http://pkp.sfu.ca/" target="_blank">PKP mrežnu stranicu</a>. Ako imate prijavu o grešci ili tražite tehničku podršku za OJS, pogledajte <a href="http://forum.pkp.sfu.ca">forum podrške</a> ili posjetite PKP-ov online <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">sustav prijave pogrešaka</a>. Iako je forum podrške preferirana metoda kontakta, također možete timu poslati e-poštu na <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
 
 <p><strong>Vrlo je preporučljivo</strong> da napravite sigurnosnu kopiju vaše baze podataka, direktorija s datotekama i OJS instalacijskog direktorija prije nastavka.</p>
 <p>Ako imate pokrenut <a href="http://www.php.net/features.safe-mode" target="_blank">PHP sigurnosni mod</a>, molimo osigurajte da je max_execution_time direktiva u vašoj php.ini konfiguracijskoj datoteci postavljena na visok limit. Ako je taj ili bilo koji drugi vremenski limit (npr. Apachejeva "timeout" direktiva) dosegnut i postupak nadogradnje prekinut, bit će potrebna ručna intervencija.</p>]]></message>
@@ -643,7 +635,6 @@ Vaš poslužitelj trenutno podržava mbstring: <strong>{$supportsMBString}</stro
 	<message key="log.review.reviewerUnassigned">{$reviewerName} je povučen(a) iz recenzijskog postupka priloga {$submissionId} u {$round}. krugu recenzije.</message>
 	<message key="log.review.reviewInitiated">Recenzent {$reviewerName} pokrenuo je  {$round}. krug recenzije priloga {$submissionId}.</message>
 	<message key="log.review.reviewReinitiated">{$round}. krug recenzije recenzenta {$reviewerName} za prilog {$submissionId} je iznova pokrenut.</message>
-	<message key="log.review.reviewCancelled">Recenzija {$round}. kruga recenzenta {$reviewerName} za prilog {$submissionId} je poništena.</message>
 	<message key="log.review.reviewCleared">Recenzija {$round}. kruga recenzenta {$reviewerName} za prilog {$submissionId} je izbrisana.</message>
 	<message key="log.review.reviewerRated">{$reviewerName} je ocijenjen za {$round}. krug recenzije priloga {$submissionId}.</message>
 	<message key="log.review.reviewDueDateSet">Krajnji rok za {$round}. krug recenzije za prilog {$submissionId} za recenzenta {$reviewerName} je izmijenjen na {$dueDate}.</message>
@@ -739,7 +730,6 @@ Vaš poslužitelj trenutno podržava mbstring: <strong>{$supportsMBString}</stro
 		<li>OJS ne može modificirati lokalizacijsku registry datoteku, obično "registry/locales.xml".</li>
 	</ul>
 <p>Datoteku s jezicima možete ručno preuzeti sa <a href="http://pkp.sfu.ca">PKP web site</a>.</p>]]></message>
-	<message key="plugins.categories.citationFormats.description">Dodaci za oblikovanje referenci omogućuju korisnicima preuzimanje referenci u različitim bibliografskim standardima.</message>
 	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Predložene Creative Commons odredbe o autorskim pravima</h3>
 <h4>1. Prijedlog za časopise koji omogućuju otvoren pristup</h4>
 Autori koji objavljuju u ovom časopisu pristaju na sljedeće uvijete:
@@ -796,8 +786,6 @@ Autori koji objavljuju u ovom časopisu pristaju na sljedeće uvijete:
 	<message key="payment.type.donation">Donacije</message>
 	<message key="payment.donation.makeDonation">Uplatite donaciju</message>
 	<message key="payment.submission.paySubmission">Uplatite naknadu za prijavu članka</message>
-	<message key="payment.fastTrack.payFastTrack">Uplatite naknadu za ubrzani recenzijski postupak</message>
-	<message key="payment.fastTrack.inFastTrack">Ubrzani recenzijski postupak</message>
 	<message key="payment.publication.payPublication">Uplatite naknadu za objavljivanje</message>
 	<message key="payment.publication.publicationPaid">Naknada za objavljivanje uplaćena.</message>
 	<message key="payment.membership.buyMembership">Kupite individualno članstvo</message>
@@ -814,7 +802,7 @@ Autori koji objavljuju u ovom časopisu pristaju na sljedeće uvijete:
 	<message key="debug.notes.currencyListLoad">Učitana je lista valuta "{$filename}" iz XML-a.</message>
 	<message key="reviewer.article.restrictedFileAccess">Tekst prijave će biti na raspolaganju kada i ako recenzent prihvati ponudu izrade recenzije.</message>
 	<message key="reviewer.article.enterReviewForm">Kliknite na sličicu na zaslonu kako biste ispunili recenzijski obrazac.</message>
-	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Molimo ispunite obavezna polja.</message>
+	<message key="reviewer.submission.reviewFormResponse.form.responseRequired">Molimo ispunite obavezna polja.</message>
 	<message key="common.homePageHeader.altText">Zaglavlje naslovne stranice</message>
 	<message key="common.journalHomepageImage.altText">Slika naslovne stranice časopisa</message>
 	<message key="article.coverPage.altText">Slika naslovne stranice članka</message>
@@ -913,39 +901,13 @@ Autori koji objavljuju u ovom časopisu pristaju na sljedeće uvijete:
 	<message key="about.subscriptionTypes.format">Format</message>
 	<message key="about.subscriptionTypes.duration">Trajanje</message>
 	<message key="about.subscriptionTypes.cost">Cijena</message>
-	<message key="gifts.buyer">Od</message>
-	<message key="gifts.buyerDescription">Od koga je ovaj poklon?</message>
-	<message key="gifts.recipient">Za</message>
-	<message key="gifts.recipientDescription">Za koga je ovaj poklon?</message>
-	<message key="gifts.thankYou">Hvala</message>
-	<message key="gifts.purchaseGiftIndividualSubscription">Pretplata na poklon</message>
-	<message key="gifts.details">Detalji o poklonu</message>
-	<message key="gifts.gift">Poklon</message>
-	<message key="gifts.noteTitle">Naslov</message>
-	<message key="gifts.note">Bilješka o poklonu</message>
-	<message key="gifts.noteTitleRequired">Upišite naslov vaše personalizirane poruke.</message>
-	<message key="gifts.noteRequired">Upišite personaliziranu poruku.</message>
-	<message key="gifts.localeRequired">Odaberite jezik vaše personalizirane poruke.</message>
-	<message key="gifts.myGifts">Moji pokloni</message>
-	<message key="gifts.manageMyGifts">Upravljaj mojim poklonima</message>
 	<message key="user.register.reviewerInterests">Navedite interese za pregled članaka (suštinske oblasti i istraživački metodi)</message>
-	<message key="gifts.thankYouMessage">Vaša nabavka poklona je završena.  Dobit ćete kopiju poklon e-poruke poslate primatelju čim se obradi vaše plaćanje.</message>
-	<message key="gifts.subscriptionFormIntroduction">Ispunite obrazac niže. Upisane kontakt informacije sa vašom poklon izjavom će biti upotrebljene u poruci primatelju sa informacijom o poklonjenoj pretplati ( vi ćete dobiti kopiju te poruke).</message>
-	<message key="gifts.detailsDescription">Odaberite poklon dole i uključite vašu osobnu poruku koja će biti poslata e-porukom primatelju (vi ćete dobiti kopiju poruke).</message>
-	<message key="gifts.status.notRedeemed">Dostupno</message>
-	<message key="gifts.subscriptions">Pretplate</message>
-	<message key="gifts.purchaseGiftSubscription">Dajte poklon pretplatu</message>
-	<message key="gifts.noSubscriptions">nema poklonjenih pretplata</message>
-	<message key="gifts.subscriptionTypeNotValid">Tip pretplate nije važeći za ovaj poklon. Javite se ravnatelju za poklone.</message>
 	<message key="payment.authorFees">Autorova plaćanja</message>
-	<message key="payment.type.gift">Poklon</message>
-	<message key="payment.type.gift.subscription">Pretplata</message>
 	<message key="payment.subscription.purchase">Kupi pretplatu</message>
 	<message key="installer.allowFileUploads"><![CDATA[Vaš uslužnik dozvoljava postavljanje datoteka: <strong>{$allowFileUploads}</strong>]]></message>
 	<message key="installer.maxFileUploadSize"><![CDATA[Vaš uslužnik dozvoljava postavljanje datoteka maksimalne veličine: <strong>{$maxFileUploadSize}</strong>]]></message>
 	<message key="installer.installApplication">Instaliraj Open Journal Systems</message>
 	<message key="installer.upgradeApplication">Nadogradi Open Journal Systems</message>
-	<message key="notification.mailListDescription">Upišite vašu e-adresu kako bi dobili obavijesti o važnom dodanom sadržaju u časopis.</message>
 	<message key="notification.type.editing">Uređivanje događaja</message>
 	<message key="notification.type.issuePublished">Izdanje je objavljeno.</message>
 	<message key="notification.type.newAnnouncement">Nova obavijest je napisana.</message>
@@ -962,16 +924,6 @@ Autori koji objavljuju u ovom časopisu pristaju na sljedeće uvijete:
 	<message key="subscriptions.institutionalOnlinePaymentDescription"><![CDATA[<strong>Napomena:</strong> Institucionalna pretplata kupljena preko interneta treba obaežno odobrenje domena i IP opsega prije aktiviranja pretplate.]]></message>
 	<message key="user.subscriptions.statusInformation">Aktivne i istekle pretplate su dole prikazane sa datumima isteka. Dodatno, slijedeće statusne informacije mogu biti prikzanu uz svaku pretplatu.</message>
 	<message key="user.subscriptions.form.domainInstructions"><![CDATA[Ako je ovdje unesen domen, IP opseg nije obavezan. <br />Važeće vrijednosti za naživ domena je (npr. hrcak.srce.hr)]]></message>
-	<message key="gifts.redeemGift">Upotrebi poklon pretplatu</message>
-	<message key="gifts.status.redeemed">Upotrebljen</message>
-	<message key="gifts.status.redeemGift">Upotrebi poklon pretplatu</message>
-	<message key="gifts.subscriptionsDescription">Poklon pretplata koju ste iskoristili će zamijeniti vašu postojeću pretplatu ako je imate. Pretplata će početina dan početka upotrebe poklona i važit će dok traje taj tip pretplate.</message>
-	<message key="gifts.giftSubscriptionsAvailable">Dostupne su poklon pretplate.  Poklonjene pretplate mogu biti iskorišćene bilo kada od strane primatelja poklona. Poklon pretplate su lijep način da podržite ovaj časopis.</message>
-	<message key="gifts.giftRedeemed">Poklon je uspješno iskorišćen.</message>
-	<message key="gifts.noGiftToRedeem">Ovaj poklon se ne može ponovo iskoristiti.</message>
-	<message key="gifts.giftAlreadyRedeemed">Ovaj poklon je već iskorišćen.</message>
-	<message key="gifts.giftNotValid">Ovaj poklon je važeći i ne može biti ponovo iskorišćen.</message>
-	<message key="gifts.subscriptionNonExpiring">Ovaj poklon nije ponovo iskorišćen jer nemate važeću pretplatu na ovaj časopis.</message>
 	<message key="payment.loginRequired.forIssue">Da bi pristupili ovoj stavki potrebna je pretplata ili kupiti izdanje. Prijavite se u sustav i časopis za provjeriti pretplatu, pristupiti prethodnoj kupovini ili sada kupiti izdanje.</message>
 	<message key="notification.type.articleSubmitted">Novi članak "{$title}", je podnešen.</message>
 	<message key="notification.type.editorDecisionComment">Postavljen je komentar na urednikovu odluku za  "{$title}".</message>
@@ -981,7 +933,6 @@ Autori koji objavljuju u ovom časopisu pristaju na sljedeće uvijete:
 	<message key="rt.admin.validateUrls.description"><![CDATA[Moguće je da su dole prikazane neke nevažeće URL za mjesta za traženje.<br />
 Provjerite ručno da li su prikazane URL važeće jer ovaj test nije 100% točan. <br />
 Provjera može pogriješiti kod URL koji zahtijevaju pretragu pomoću obrasca.]]></message>
-	<message key="notification.notificationsPublicDescription"><![CDATA[Ova stranica prikazuje važne vijesti u svezi sa ovim časopisom kao što su nova izdanja ili obavijesti. Možete se pretplatiti na ove vijesti upotrebom RSS vezama (klikom na sli;ice na desnoj strani) ili  <a href="{$emailUrl}">e-porukamal.</a>]]></message>
 	<message key="manager.setup.reviewProcessEmailDescription">Urednici šalju
 Recenzenti zahtijevaju pregled podnesenog članka u privitku ove poruke.  Recenzenti informiraju urednike o njihovim odobravanjima ili kritičkim primjedbama kao i tekst pregleda i preporuka. Urednici upisuju odobravanja ili neslaganja i njihove preglede i preporuke u stranicu Pregled podnesaka da bi pratili proces recenzije.</message>
 	<message key="editor.submissionEditing.notes"><![CDATA[<ol>

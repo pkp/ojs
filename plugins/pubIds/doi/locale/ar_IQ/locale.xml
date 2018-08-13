@@ -4,8 +4,8 @@
 <!--
   * plugins/pubIds/doi/locale/ar_IQ/locale.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * DOI plugin localization strings
@@ -14,7 +14,7 @@
 <locale name="ar_IQ" full_name="العربية">
 	<message key="plugins.pubIds.doi.displayName">DOI</message>
 	<message key="plugins.pubIds.doi.description">هذه الإضافة تقوم بتعيين معرفات المكونات الرقمية للمقالات، الأعداد، الألواح الطباعية، والملفات التكميلية في نظام المجلات المفتوحة.</message>
-	<message key="plugins.pubIds.doi.readerDisplayName">DOI:</message>
+	<message key="plugins.pubIds.doi.readerDisplayName">DOI</message>
 	
 	<!-- settings form -->
 	<message key="plugins.pubIds.doi.manager.settings.description">لطفاً، قم بتهيئة إضافة DOI لتتمكن من إدارة واستعمال DOI في نظام المجلات المفتوحة:</message>
@@ -27,7 +27,7 @@
 	<message key="plugins.pubIds.doi.manager.settings.enableRepresentationDoi">الألواح الطباعية</message>
 	
 	<message key="plugins.pubIds.doi.manager.settings.doiPrefix">بادئة DOI</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiPrefix.Description"><![CDATA[إن بادئة DOI يتم تعيينها من قبل وكالات التسجيل (مثل: <a href="http://www.crossref.org" target="_new">CrossRef</a>) وهي بصيغة 10.xxxx (مثل: 10.1234):]]></message>
+	<message key="plugins.pubIds.doi.manager.settings.doiPrefix.Description"><![CDATA[إن بادئة DOI يتم تعيينها من قبل وكالات التسجيل (مثل: <a href="http://www.crossref.org" target="_new">Crossref</a>) وهي بصيغة 10.xxxx (مثل: 10.1234):]]></message>
 	<message key="plugins.pubIds.doi.manager.settings.doiPrefixPattern">إن بادئة DOI هي إجبارية وينبغي أن تكون بصيغة 10.xxxx.</message>
 
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffix">لاحقة DOI</message>
@@ -39,7 +39,6 @@
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.representations">للألواح الطباعية</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault">استعمل الأنماط الافتراضية.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault.description"><![CDATA[%j.v%vi%i للأعداد<br />%j.v%vi%i.%a للمقالات<br />%j.v%vi%i.%a.g%g للألواح الطباعية.]]></message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPublisherId">استعمل "المعرف المخصص" للفقرات المنشورة بمثابة لاحقة DOI (يجب تمكينها في خطوة التهيئة 4.3). هذا نفس المعرف الذي سيتم استعماله لروابط الإنترنت العمومية.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffixCustomIdentifier">أدخل لاحقة DOI منفردة لكل فقرة منشورة مستقلة ومختلفة عن "المعرف المخصص" المذكور في الخيار السابق. ستجد حقل إدخال DOI إضافي في كل صفحة بيانات وصفية.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiIssueSuffixPatternRequired">لطفاً، أدخل نمط لاحقة DOI للأعداد.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSubmissionSuffixPatternRequired">لطفاً، أدخل نمط لاحقة DOI للمقالات.</message>
@@ -47,8 +46,11 @@
 	
 	<message key="plugins.pubIds.doi.manager.settings.doiReassign">أعد تعيين DOI</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiReassign.description">إذا قمت بتغيير إعدادات DOI، فإن DOI التي سبق لك تعيينها لن تكون ذات جدوى. بمجرد حفظ إعدادات DOI، استعمل هذا الزر لإزالة كل ما موجود من DOI بحيث يمكن للإعدادات الجديدة أن يظهر مفعولها في المكونات الموجودة سلفاً.</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiReassign.confirm">هل أنت متأكد من رغبتك في إزالة كل ما موجود من DOI؟</message>	
+	<message key="plugins.pubIds.doi.manager.settings.doiReassign.confirm">هل أنت متأكد من رغبتك في إزالة كل ما موجود من DOI؟</message>
 
+	<message key="plugins.pubIds.doi.manager.settings.doiAssignJournalWide">تعيين معرفات DOI</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiAssignJournalWide.description">قم بتعيين معرفات DOI لجميع المكونات المنشورة في المجلة والتي لم يسبق لها أن حصلت على تلك المعرفات. هذا الإجراء لا يمكن استعماله عند تهيئة اللاحقة بشكل منفرد. إن قمت بتعديل إعدادات DOI أعلاه، لطفاً قم بحفظ التغييرات قبل الشروع بهذا الإجراء. تعيين معرفات DOI قد يستغرق وقتاً طويلاً، إعتماداً على عدد المكونات المنشورة في المجلة.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiAssignJournalWide.confirm">هل أنت متأكد من رغبتك في تعيين معرفات DOI لكل المكونات المنشورة التي لم يسبق لها الحصول على تلك المعرفات؟</message>
 
 	<!-- metadata form -->
 	<message key="plugins.pubIds.doi.editor.doi">DOI</message>

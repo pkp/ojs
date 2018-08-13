@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/lucene/LuceneFacetsBlockPlugin.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class LuceneFacetsBlockPlugin
@@ -79,11 +79,11 @@ class LuceneFacetsBlockPlugin extends BlockPlugin {
 	}
 
 	/**
-	 * @see Plugin::getSeq()
+	 * @copydoc BlockPlugin::getSeq()
 	 */
-	function getSeq() {
+	function getSeq($contextId = null) {
 		// Identify the position of the faceting block.
-		$seq = parent::getSeq();
+		$seq = parent::getSeq($contextId);
 
 		// If nothing has been configured then use the first
 		// position. This is ok as we'll only display facets

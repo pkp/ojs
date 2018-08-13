@@ -3,8 +3,8 @@
 /**
  * @file classes/search/ArticleSearch.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ArticleSearch
@@ -17,17 +17,11 @@
 import('lib.pkp.classes.search.SubmissionSearch');
 
 class ArticleSearch extends SubmissionSearch {
-	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 
 	/**
 	 * See SubmissionSearch::getSparseArray()
 	 */
-	function &getSparseArray(&$unorderedResults, $orderBy, $orderDir, $exclude) {
+	function getSparseArray($unorderedResults, $orderBy, $orderDir, $exclude) {
 		// Calculate a well-ordered (unique) score.
 		$resultCount = count($unorderedResults);
 		$i = 0;
@@ -52,7 +46,7 @@ class ArticleSearch extends SubmissionSearch {
 		$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
 		$journalTitles = array();
 		if ($orderBy == 'popularityAll' || $orderBy == 'popularityMonth') {
-			$application = PKPApplication::getApplication();
+			$application = Application::getApplication();
 			$metricType = $application->getDefaultMetricType();
 			if (is_null($metricType)) {
 				// If no default metric has been found then sort by score...
@@ -86,7 +80,7 @@ class ArticleSearch extends SubmissionSearch {
 					$authors = $authorDao->getBySubmissionId($submissionId);
 					$authorNames = array();
 					foreach ($authors as $author) { /* @var $author Author */
-						$authorNames[] = $author->getFullName(true);
+						$authorNames[] = $author->getFullName(false, true);
 					}
 					$orderKey = implode('; ', $authorNames);
 					unset($authors, $authorNames);
@@ -233,10 +227,12 @@ class ArticleSearch extends SubmissionSearch {
 	/**
 	 * See SubmissionSearch::formatResults()
 	 *
+	 * @param $results array
+	 * @param $user User optional (if availability information is desired)
 	 * @return array An array with the articles, published articles,
 	 *  issue, journal, section and the issue availability.
 	 */
-	static function formatResults(&$results) {
+	function formatResults($results, $user = null) {
 		$articleDao = DAORegistry::getDAO('ArticleDAO');
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
 		$issueDao = DAORegistry::getDAO('IssueDAO');
@@ -254,7 +250,7 @@ class ArticleSearch extends SubmissionSearch {
 		foreach ($results as $articleId) {
 			// Get the article, storing in cache if necessary.
 			if (!isset($articleCache[$articleId])) {
-				$publishedArticleCache[$articleId] = $publishedArticleDao->getPublishedArticleByArticleId($articleId);
+				$publishedArticleCache[$articleId] = $publishedArticleDao->getByArticleId($articleId);
 				$articleCache[$articleId] = $articleDao->getById($articleId);
 			}
 			$article = $articleCache[$articleId];
@@ -279,7 +275,7 @@ class ArticleSearch extends SubmissionSearch {
 					$issueCache[$issueId] = $issue;
 					import('classes.issue.IssueAction');
 					$issueAction = new IssueAction();
-					$issueAvailabilityCache[$issueId] = !$issueAction->subscriptionRequired($issue) || $issueAction->subscribedUser($journalCache[$journalId], $issueId, $articleId) || $issueAction->subscribedDomain($journalCache[$journalId], $issueId, $articleId);
+					$issueAvailabilityCache[$issueId] = !$issueAction->subscriptionRequired($issue, $journalCache[$journalId]) || $issueAction->subscribedUser($user, $journalCache[$journalId], $issueId, $articleId) || $issueAction->subscribedDomain(Application::getRequest(), $journalCache[$journalId], $issueId, $articleId);
 				}
 
 				// Only display articles from published issues.
@@ -315,7 +311,7 @@ class ArticleSearch extends SubmissionSearch {
 		if ($result === false) {
 			// Retrieve the article.
 			$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO'); /* @var $publishedArticleDao PublishedArticleDAO */
-			$article = $publishedArticleDao->getPublishedArticleByArticleId($submissionId);
+			$article = $publishedArticleDao->getByArticleId($submissionId);
 			if (is_a($article, 'PublishedArticle')) {
 				// Retrieve keywords (if any).
 				$searchTerms = $article->getLocalizedSubject();
@@ -354,7 +350,7 @@ class ArticleSearch extends SubmissionSearch {
 		);
 
 		// Only show the "popularity" options if we have a default metric.
-		$application = PKPApplication::getApplication();
+		$application = Application::getApplication();
 		$metricType = $application->getDefaultMetricType();
 		if (!is_null($metricType)) {
 			$resultSetOrderingOptions['popularityAll'] = __('search.results.orderBy.popularityAll');
@@ -393,7 +389,6 @@ class ArticleSearch extends SubmissionSearch {
 	protected function getSearchDao() {
 		return DAORegistry::getDAO('ArticleSearchDAO');
 	}
-
 }
 
 ?>

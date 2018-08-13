@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/importexport/datacite/locale/sr_RS@latin/locale.xml
+  *
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Serbian_(sr_RS)
+  * Localization strings for the sr_RS@latin (Srpski) locale.
+  * 
+  -->
+ 
+<locale name="sr_RS@latin" full_name="Srpski">
+	<message key="plugins.importexport.datacite.displayName">DataCite Export/Registration dodatak</message>
+	<message key="plugins.importexport.datacite.description">Izvezite ili registrujte metapodatke broja, članaka, prikaza i dodatnih fajlova u DataCIte formatu</message>
+	<message key="plugins.importexport.datacite.settings.description">Podesite dodatak pre prve upotrebe.</message>
+	<message key="plugins.importexport.datacite.settings.form.username">Korisničko ime (simbol)</message>
+	<message key="plugins.importexport.datacite.settings.form.usernameRequired">Unesite korisničko ime (simbol) koji ste dobili od DataCite. Korisničko ime ne može sadržati kolone.</message>
+	<message key="plugins.importexport.datacite.settings.form.automaticRegistration.description">OJS će automatski deponovati DOI-je kod DataCite. Imajte na umu da će ovo potrajati neko vreme nakon procesa objavljivanja. U svakom momentu možete proveriti neregistrovane DOI-je.</message>
+	<message key="plugins.importexport.datacite.settings.form.testMode.description">Koristite DataCite test prefiks za registraciju DOI-ja. Ne zaboravite da uklonite ovu opciju na radnoj verziji sajta.</message>
+	<message key="plugins.importexport.datacite.senderTask.name">DataCite zadatak automatske registracije</message>
+	<message key="plugins.importexport.datacite.cliUsage">Upotreba: 
+{$scriptName} {$pluginName} export xmlFileName journal_path {issues|articles|galleys|suppfiles} objectId1 [objectId2] ...
+{$scriptName} {$pluginName} register journal_path {issues|articles|galleys|suppfiles} objectId1 [objectId2] ...</message>
+</locale>

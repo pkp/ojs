@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/native/NativeImportExportDeployment.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2000-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2000-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class NativeImportExportDeployment
@@ -69,7 +69,6 @@ class NativeImportExportDeployment extends PKPNativeImportExportDeployment {
 	 */
 	function setIssue($issue) {
 		$this->_issue = $issue;
-		if ($issue) $this->addProcessedObjectId(ASSOC_TYPE_ISSUE, $issue->getId());
 	}
 
 	/**
@@ -90,9 +89,23 @@ class NativeImportExportDeployment extends PKPNativeImportExportDeployment {
 				$processedIssuesIds = $this->getProcessedObjectsIds(ASSOC_TYPE_ISSUE);
 				if (!empty($processedIssuesIds)) {
 					$issueDao = DAORegistry::getDAO('IssueDAO');
-					foreach ($processedIssuesIds as $issueId => $errorMessages) {
-						$issue = $issueDao->getById($issueId);
-						$issueDao->deleteObject($issue);
+					foreach ($processedIssuesIds as $issueId) {
+						if ($issueId) {
+							$issue = $issueDao->getById($issueId);
+							$issueDao->deleteObject($issue);
+						}
+					}
+				}
+				break;
+			case ASSOC_TYPE_SECTION:
+				$processedSectionIds = $this->getProcessedObjectsIds(ASSOC_TYPE_SECTION);
+				if (!empty($processedSectionIds)) {
+					$sectionDao = DAORegistry::getDAO('SectionDAO');
+					foreach ($processedSectionIds as $sectionId) {
+						if ($sectionId) {
+							$section = $sectionDao->getById($sectionId);
+							$sectionDao->deleteObject($section);
+						}
 					}
 				}
 				break;

@@ -4,8 +4,8 @@
 <!--
   * plugins/pubIds/doi/locale/en_US/locale.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
   * Localization strings.
@@ -14,7 +14,7 @@
 <locale name="en_US" full_name="U.S. English">
 	<message key="plugins.pubIds.doi.displayName">DOI</message>
 	<message key="plugins.pubIds.doi.description">This plugin enables the assignment of the Digital Object Identifiers to issues, articles and galleys in OJS.</message>
-	<message key="plugins.pubIds.doi.readerDisplayName">DOI:</message>
+	<message key="plugins.pubIds.doi.readerDisplayName">DOI</message>
 
 	<!-- settings form -->
 	<message key="plugins.pubIds.doi.manager.settings.description">Please configure the DOI plugin to be able to manage and use DOIs in OJS:</message>
@@ -27,7 +27,7 @@
 	<message key="plugins.pubIds.doi.manager.settings.enableRepresentationDoi">Galleys</message>
 
 	<message key="plugins.pubIds.doi.manager.settings.doiPrefix">DOI Prefix</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiPrefix.description"><![CDATA[The DOI Prefix is assigned by registration agencies (e.g. <a href="http://www.crossref.org" target="_new">CrossRef</a>) and is in the format 10.xxxx (e.g. 10.1234):]]></message>
+	<message key="plugins.pubIds.doi.manager.settings.doiPrefix.description"><![CDATA[The DOI Prefix is assigned by registration agencies (e.g. <a href="http://www.crossref.org" target="_new">Crossref</a>) and is in the format 10.xxxx (e.g. 10.1234):]]></message>
 	<message key="plugins.pubIds.doi.manager.settings.doiPrefixPattern">The DOI prefix is mandatory and must be in the form 10.xxxx.</message>
 
 	<message key="plugins.pubIds.doi.manager.settings.doiSuffix">DOI Suffix</message>

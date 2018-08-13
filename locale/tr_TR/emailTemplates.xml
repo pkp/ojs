@@ -4,8 +4,8 @@
 <!--
   * locale/tr_TR/emailTemplates.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localized email templates XML file.
@@ -20,7 +20,7 @@
 Bu istek sizin dışınızda oluştu ise, lütfen bu mesajı dikkate almayınız; eski şifrenizi kullanabilirsiniz.<br />
 Eğer şifrenizi değiştirmek istiyorsanız aşağıdaki bağlantıyı tıklayınız.<br />
 <br />
-Şifre değiştirmek için: <a href="{$url}">{$url}</a><br />
+Şifre değiştirmek için: {$url}<br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Bu e-posta şifrelerini unuttuğunu beyan eden ve/veya giriş yapamayan kayıtlı kullanıcılara gönderilmektedir. Şifre değiştirme işlemlerini yapabilecekleri bir internet adresi bildirir.</description>
@@ -50,7 +50,7 @@ Teşekkür ederiz,<br />
 		<subject>Yeni Sayı Yayınlandı</subject>
 		<body><![CDATA[Kıymetli Okuyucumuz,<br />
 <br />
-{$contextName} adlı derginin yeni saysını yayınladı. Yeni sayıya <a href="{$contextUrl}">{$contextUrl}</a> adresinden ulaşabilirsiniz.<br />
+{$contextName} adlı derginin yeni saysını yayınladı. Yeni sayıya {$contextUrl} adresinden ulaşabilirsiniz.<br />
 <br />
 Sizi dergimizin içindekiler sayfasını incelemeye, beğendiğiniz makaleleri okumaya ve değerli görüşlerinizi diğer okuyucularımız ile paylaşmaya çağırıyoruz.<br />
 <br />
@@ -81,7 +81,7 @@ Herhangi bir sorunuz olursa lütfen çekinmeden benimle irtibat kurun.<br />
 		<subject>Sayı Açık Erişime Açıldı</subject>
 		<body><![CDATA[Sayın Okuyucu,<br />
 <br />
-{$contextName} aşağıdaki sayıyı açık erişime açmıştır. Sizi sayının içindekiler bölümünü incelemeye ve dilediğiniz yazıları okumak üzere web sitemize davet ediyoruz (<a href="{$contextUrl}">{$contextUrl}</a>).<br />
+{$contextName} aşağıdaki sayıyı açık erişime açmıştır. Sizi sayının içindekiler bölümünü incelemeye ve dilediğiniz yazıları okumak üzere web sitemize davet ediyoruz ({$contextUrl}).<br />
 <br />
 Çalışmalarımıza süren ilginiz için teşekkür ederiz,<br />
 {$editorialContactSignature}]]></body>
@@ -91,11 +91,11 @@ Herhangi bir sorunuz olursa lütfen çekinmeden benimle irtibat kurun.<br />
 		<subject>{$contextName} arşivleme talebi</subject>
 		<body><![CDATA[&lt;![CDATA[Kıymetli [University Librarian]<br />
 <br />
-{$contextName} &lt;<a href="{$contextUrl}">{$contextUrl}</a>&gt; dergisi için fakültenizin üyesi [name of member] [title of position] görevini üstlenmiştir. Dergi bu ve diğer üniversite kütüphaneleri ile LOCKSS (Lots of Copies Keep Stuff Safe – çok sayıda kopya güvenliğini koruma) uyumlu arşiv oluşturmayı hedeflemektedir. <br />
+{$contextName} &lt;{$contextUrl}&gt; dergisi için fakültenizin üyesi [name of member] [title of position] görevini üstlenmiştir. Dergi bu ve diğer üniversite kütüphaneleri ile LOCKSS (Lots of Copies Keep Stuff Safe – çok sayıda kopya güvenliğini koruma) uyumlu arşiv oluşturmayı hedeflemektedir. <br />
 <br />
 [Brief description of journal]<br />
 <br />
-Dergimizin LOCKSS yayınevi bildirgesi internet adresi: <a href="{$contextUrl}">{$contextUrl}</a>/gateway/lockss<br />
+Dergimizin LOCKSS yayınevi bildirgesi internet adresi: {$contextUrl}/gateway/lockss<br />
 <br />
 LOCKSS sistemini kullandığınızı tespit etmiş bulunuyoruz. Dergimizin sizin kullandığınız LOCKSS sürümüne kaydedilebilmesi için gerekli her türlü meta veriyi sağlamaktan mutluluk duyarız.<br />
 <br />
@@ -107,7 +107,7 @@ Teşekkür ederiz,<br />
 		<subject>{$contextName} dergisi arşivleme talebi </subject>
 		<body><![CDATA[Değerli [University Librarian]<br />
 <br />
-{$contextName} &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt; dergisi için fakültenizin üyesi [name of member] [title of position] görevini üstlenmiştir. Dergi bu ve diğer üniversite kütüphaneleri ile LOCKSS (Lots of Copies Keep Stuff Safe – çok sayıda kopya güvenliğini koruma) uyumlu arşiv oluşturmayı hedeflemektedir. <br />
+{$contextName} &amp;lt;{$contextUrl}&amp;gt; dergisi için fakültenizin üyesi [name of member] [title of position] görevini üstlenmiştir. Dergi bu ve diğer üniversite kütüphaneleri ile LOCKSS (Lots of Copies Keep Stuff Safe – çok sayıda kopya güvenliğini koruma) uyumlu arşiv oluşturmayı hedeflemektedir. <br />
 <br />
 <br />
 [Brief description of journal]<br />
@@ -133,17 +133,6 @@ Eğer herhangi bir soru veya sorununuz olursa lütfen bizimle iletişime geçini
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Bu eposta, etkinleştirilmişse, bir yazar dergiye yazı gönderme işlemini tamamladığında otomatik olarak gönderilir. Bu posta yazara gönderisi için teşekkür mesajını ve gönderisinin durumunu takip edebilmesi için gerekli olan bilgileri iletir.</description>
-	</email_text>
-	<email_text key="SUBMISSION_UNSUITABLE">
-		<subject>Uygun Olmayan Çalışma</subject>
-		<body><![CDATA[Sayın {$authorName},<br />
-<br />
-&quot;{$submissionTitle}&quot; başlıklı başvurunuz, &quot;{$contextName}&quot; dergimizin ilgi alanı ile uyuşmadığı için ilk değerlendirme sonucunda yayınlanamayacağına karar verilmiştir. Çalışmanızı konusu ile ilgili bir dergide yayınlayabileceğinizi düşünüyoruz.<br />
-Dergi Hakkında bölümünde dergimiz ile ilgili tanımlamayı gözden geçirmenizi öneririz. Ayrıca daha ayrıntılı bilgi edinmek için mevcut içeriğimizi de inceleyebilirsiniz. <br />
-İleride dergimiz içeriği ile daha uyumlu çalışmalarınızı bizimle paylaşmanızı rica ederiz.<br />
-<br />
-<br />
-{$editorialContactSignature}]]></body>
 	</email_text>
 	<email_text key="SUBMISSION_COMMENT">
 		<subject>Başvuru ile ilgili yeni yorum</subject>
@@ -183,13 +172,13 @@ Teşekkürler,<br />
 <br />
 {$contextName} için gönderilen &quot;{$submissionTitle}&quot; başlıklı çalışmanın sizin ilgi alanlarınız ile uyuştuğunu ve dergimizde yayınlanabilirliği açısından inceleyebileceğinize inanoyoruz. Başvurunun içeriği aşağıya eklenmiştir. Bu görevin bizim için ne kadar önemli olduğunu göz önünde bulunduracağınızı umuyoruz.<br />
 <br />
-{$responseDueDate} tarihine kadar, bu çalışmanın hakemliğini kabul edip etmediğinizi belirtmek, ilgili çalışmaya ulaşmak, eleştiri ve önerilerinizi kaydetmek için dergi internet sitesine giriş yapabilirsiniz. Dergi adresi: <a href="{$contextUrl}">{$contextUrl}</a> <br />
+{$responseDueDate} tarihine kadar, bu çalışmanın hakemliğini kabul edip etmediğinizi belirtmek, ilgili çalışmaya ulaşmak, eleştiri ve önerilerinizi kaydetmek için dergi internet sitesine giriş yapabilirsiniz. Dergi adresi: {$contextUrl} <br />
 <br />
 Değerlendirme için son tarih: {$reviewDueDate}.<br />
 <br />
-Eğer derginin web sitesine giriş için kullanıcı adı ve şifreniz yoksa veya unuttunuz ise, şifrenizi yenilemek için bu bağlantıyı kullanabilirsiniz (Kullanıcı adınızla birlikte şifreniz size postalanacaktır). <a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
+Eğer derginin web sitesine giriş için kullanıcı adı ve şifreniz yoksa veya unuttunuz ise, şifrenizi yenilemek için bu bağlantıyı kullanabilirsiniz (Kullanıcı adınızla birlikte şifreniz size postalanacaktır). {$passwordResetUrl}<br />
 <br />
-Makale Erişim Adresi: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+Makale Erişim Adresi: {$submissionReviewUrl}<br />
 <br />
 Bu dileğimizi değerlendirdiğiniz için teşekkür ederiz.<br />
 <br />
@@ -213,7 +202,7 @@ Dergimiz web sitesine girerek, {$responseDueDate} süresinde gözden geçirme is
 <br />
 Değerlendirme raporunuz için son tarih {$reviewDueDate}.<br />
 <br />
-Başvuruya ulaşım için adres: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+Başvuruya ulaşım için adres: {$submissionReviewUrl}<br />
 <br />
 İsteğimize olumlu yaklaşımınız için şimdiden teşekkür ederiz.<br />
 <br />
@@ -290,9 +279,9 @@ Değerlendirme Rehberi:<br />
 <br />
 {$contextName} adlı dergide yayınlanması için değerlendirilmek üzere gönderilen &quot;{$submissionTitle}&quot; başlıklı çalışmanın değerlendirmesini {$reviewDueDate} tarihinden önce tamamlayacağınızı ümit ediyoruz. Yoğun işleriniz arasında değerlendirme raporunuzu tamamlayıp, bize bir an önce ileteceğiniz inancı ile dergimiz sitesindeki ulaşım bilgilerini size iletmeyi istedik.<br />
 <br />
-Eğer derginin web sitesine giriş için kullanıcı adı ve şifreniz yoksa veya unuttunuz ise, şifrenizi yenilemek için bu bağlantıyı kullanabilirsiniz (Kullanıcı adınızla birlikte şifreniz size postalanacaktır). <a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
+Eğer derginin web sitesine giriş için kullanıcı adı ve şifreniz yoksa veya unuttunuz ise, şifrenizi yenilemek için bu bağlantıyı kullanabilirsiniz (Kullanıcı adınızla birlikte şifreniz size postalanacaktır). {$passwordResetUrl}<br />
 <br />
-Makale Erişim Adresi: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+Makale Erişim Adresi: {$submissionReviewUrl}<br />
 <br />
 Derginin kalitesini arttıracak bu önemli katkıyı yapabileceğinizi lütfen onaylayınız. <br />
 <br />
@@ -305,7 +294,7 @@ Derginin kalitesini arttıracak bu önemli katkıyı yapabileceğinizi lütfen o
 <br />
 {$contextName} adlı dergide yayınlanması için değerlendirilmek üzere gönderilen &quot;{$submissionTitle}&quot; başlıklı çalışmanın değerlendirmesini {$reviewDueDate} tarihinden önce tamamlayacağınızı ümit ediyoruz. Yoğun işleriniz arasında değerlendirme raporunuzu tamamlayıp, bize bir an önce ileteceğiniz inancı ile dergimiz sitesindeki ulaşım bilgilerini size iletmeyi istedik.<br />
 <br />
-Makale Erişim Adresi: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+Makale Erişim Adresi: {$submissionReviewUrl}<br />
 <br />
 Derginin kalitesini arttıracak bu önemli katkıyı yapabileceğinizi lütfen onaylayınız.<br />
 <br />
@@ -320,9 +309,9 @@ Derginin kalitesini arttıracak bu önemli katkıyı yapabileceğinizi lütfen o
 <br />
 Değerlendirme raporunuzu bize bir an önce ileteceğiniz inancı ile dergimiz sitesindeki ulaşım bilgilerini size iletmeyi istedik.<br />
 <br />
-Eğer derginin web sitesine giriş için kullanıcı adı ve şifreniz yoksa veya unuttunuz ise, şifrenizi yenilemek için bu bağlantıyı kullanabilirsiniz (Kullanıcı adınızla birlikte şifreniz size postalanacaktır). <a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
+Eğer derginin web sitesine giriş için kullanıcı adı ve şifreniz yoksa veya unuttunuz ise, şifrenizi yenilemek için bu bağlantıyı kullanabilirsiniz (Kullanıcı adınızla birlikte şifreniz size postalanacaktır). {$passwordResetUrl}<br />
 <br />
-Makale Erişim Adresi: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+Makale Erişim Adresi: {$submissionReviewUrl}<br />
 <br />
 Derginin kalitesini arttıracak bu önemli katkıyı yapabileceğinizi lütfen onaylayınız.<br />
 <br />
@@ -337,9 +326,9 @@ Derginin kalitesini arttıracak bu önemli katkıyı yapabileceğinizi lütfen o
 <br />
 Değerlendirme raporunuzu bize bir an önce ileteceğiniz inancı ile dergimiz sitesindeki ulaşım bilgilerini size iletmeyi istedik.<br />
 <br />
-Eğer derginin web sitesine giriş için kullanıcı adı ve şifreniz yoksa veya unuttunuz ise, şifrenizi yenilemek için bu bağlantıyı kullanabilirsiniz (Kullanıcı adınızla birlikte şifreniz size postalanacaktır). <a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
+Eğer derginin web sitesine giriş için kullanıcı adı ve şifreniz yoksa veya unuttunuz ise, şifrenizi yenilemek için bu bağlantıyı kullanabilirsiniz (Kullanıcı adınızla birlikte şifreniz size postalanacaktır). {$passwordResetUrl}<br />
 <br />
-Makale Erişim Adresi: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+Makale Erişim Adresi: {$submissionReviewUrl}<br />
 <br />
 Derginin kalitesini arttıracak bu önemli katkıyı yapabileceğinizi lütfen onaylayınız.<br />
 <br />
@@ -352,7 +341,7 @@ Derginin kalitesini arttıracak bu önemli katkıyı yapabileceğinizi lütfen o
 <br />
 {$contextName} ileri sayılarında yayınlanmak üzere kabul edilen &quot;{$submissionTitle}&quot; başlıklı çalışmanın sayfa düzenini tamamlamanızı rica ederim. Dergi sitesinde yazıyı , sayfa düzeni konusundaki özel açıklamalar ile birlikte bulabilirsiniz. <br />
 <br />
-Yazı ulaşım adresi: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+Yazı ulaşım adresi: {$submissionUrl}<br />
 Kullanıcı adı: {$participantUsername}<br />
 <br />
 Lütfen eğer sayfa düzenini yapmanız konusunda bir sorun var ise bana bildiriniz.<br />
@@ -361,98 +350,13 @@ DErgimizin kalitesini arttıran değerli katkılarınız için teşekkür ederiz
 {$editorialContactSignature}]]></body>
 		<description>Yayınlanması için karar verilen yazının sayfa düzeni için gönderilmesinde kullanılır.</description>
 	</email_text>
-	<email_text key="COPYEDIT_COMPLETE">
-		<subject>Sayfa düzeni tamamlandı</subject>
-		<body><![CDATA[Sayın {$editorialContactName},<br />
-<br />
-{$contextName} için kabul edilen &quot;{$submissionTitle}&quot; başlıklı çalışmanın ilk sayfa düzenini tamamladım.<br />
-<br />
-Yazar ve editörün değerlendirmesine hazırdır.<br />
-<br />
-Teşekkürler,<br />
-{$participantName}]]></body>
-	</email_text>
-	<email_text key="COPYEDIT_ACK">
-		<subject>Sayfa düzeni için teşekkürler</subject>
-		<body><![CDATA[{$participantName}:<br />
-<br />
-{$contextName} için kabul edilen &quot;{$submissionTitle}&quot; başlıklı çalışmanın sayfa düzenini için teşekkür ederim.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Bölüm editörü sayfa düzenini inceleyerek, yapan kişiye teşşkür için kullanır.</description>
-	</email_text>
-	<email_text key="COPYEDIT_AUTHOR_REQUEST">
-		<subject>Sayfa düzenini inceler misiniz?</subject>
-		<body><![CDATA[Sayın {$authorName},<br />
-<br />
-{$contextName} için kabul edilen &quot;{$submissionTitle}&quot; başlıklı çalışmanızın sayfa düzenini tamamlandı. Lütfen aşağıdaki bağlantıdan ilk sayfa düzeni çalışmasını alıp, gözden geçiriniz. Değerlendirme sonrası 2. Basamak sayfasına gidip, geliştirdiğiniz dosyayı sisteme gönderiniz ve tamamladığınızı bildiren e-postayı editöre gönderiniz.<br />
-<br />
-Bu yazıda ciddi değişiklikler için son şansınızdır. Sonraki basamakta prova dizgi üzerinde küçük yazım hatası benzeri düzeltmeler dışında değiştirme yapma olasılığı yoktur.<br />
-<br />
-Sayfa düzeni kopyası için bağlantı: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
- <br />
-Eğer değerlendirmeyi yapamayacaksanız veya sorunuz olur ise bana yazmaya çekinmeyiniz. Dergimize katkılarınız için teşekkür ederiz.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Bölüm editörü tarafından yazara sayfa düzenini incelemesi için gönderilen ve yazıda değişiklikler için son şansı olduğunu bildiren mesaj.</description>
-	</email_text>
-	<email_text key="COPYEDIT_AUTHOR_COMPLETE">
-		<subject>Sayfa düzeni incelemesi tamamlandı</subject>
-		<body><![CDATA[Sayın {$editorialContactName},<br />
-<br />
-{$contextName} için kabul edilen &quot;{$submissionTitle}&quot; başlıklı çalışmamın sayfa düzenini gözden geçirdim. Gönderdiğim dosya mizanpaj için hazırdır.<br />
-<br />
-{$authorName}]]></body>
-		<description>Yazarca editöre sayfa düzenini gözden geçirdiğini bildirmek üzere gönderilir.</description>
-	</email_text>
-	<email_text key="COPYEDIT_AUTHOR_ACK">
-		<subject>Sayfa düzenini incelemesi için teşekkürler</subject>
-		<body><![CDATA[Sayın {$authorName},<br />
-<br />
-{$contextName} için &quot;{$submissionTitle}&quot; başlıklı çalışmanızın sayfa düzenini değerlendirdiğiniz için teşekkür ederiz. Çalışmanız yayına bir adım daha yaklaşmıştır.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Editör sayfa düzenini incelediği için yazara teşkkür etmek üzere gönderir.</description>
-	</email_text>
-	<email_text key="COPYEDIT_FINAL_REQUEST">
-		<subject>Sayfa düzenini son biçimi</subject>
-		<body><![CDATA[{$participantName}:<br />
-<br />
-{$contextName} için &quot;{$submissionTitle}&quot; başlıklı çalışmanın sayfa düzenini yazar ve editörce gözden geçirilmiştir. Mizanpaja hazır son &quot;temiz kopya&quot; için ilginizi rica ederim.<br />
-<br />
-Sayfa düzeni kopyası için bağlantı: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
-Kullanıcı adı: {$participantUsername}<br />
-<br />
-Dergimiz adına teşkkür ederiz,<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Bölüm editörünce son temiz sayfa düzeni hazırlığı için haber mesajı.</description>
-	</email_text>
-	<email_text key="COPYEDIT_FINAL_COMPLETE">
-		<subject>Sayfa düzenini son biçimi tamamlandı</subject>
-		<body><![CDATA[Sayın {$editorialContactName},<br />
-<br />
-{$contextName} için &quot;{$submissionTitle}&quot; başlıklı çalışmanın son sayfa düzenini tamamladım. Yazı mizanpaj için hazırdır.<br />
-<br />
-{$participantName}]]></body>
-		<description>Sayfa düzeninin son biçimini aldığını editöre bildirmek için kullanılır.</description>
-	</email_text>
-	<email_text key="COPYEDIT_FINAL_ACK">
-		<subject>Sayfa düzenini son biçimi için teşekkür ederim.</subject>
-		<body><![CDATA[Sayın {$participantName},<br />
-<br />
-{$contextName} için &quot;{$submissionTitle}&quot; başlıklı çalışmanın son sayfa düzenini için teşkkür ederim. Sayenizde yazı sürecin en önemli basamaklarından birisini tamamladı.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Bölüm editörü son sayfa düzeni tamamlanınca teşekkür için kullanır.</description>
-	</email_text>
 	<email_text key="LAYOUT_REQUEST">
 		<subject>Prova dizgi rica olunur</subject>
 		<body><![CDATA[{$participantName}:<br />
 <br />
 {$contextName} için &quot;{$submissionTitle}&quot; başlıklı çalışmanın mizanpajının tamamlanarak, prova dizginin tarafımıza gönderilmesi için rica ederiz.<br />
 <br />
-Sayfa düzeni kopyası için bağlantı: <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a><br />
+Sayfa düzeni kopyası için bağlantı: {$submissionLayoutUrl}<br />
 Kullanıcı adı: {$participantUsername}<br />
 <br />
 İşin gerçekleştirilmesi ile ilgili bir sorununuz veya diğer sorularınız için bana yazabilirsiniz.<br />
@@ -654,38 +558,13 @@ Bağlantı: {$url}<br />
 {$principalContactSignature}]]></body>
 		<description></description>
 	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST">
-		<subject>{$siteTitle} Adlı  Siteden Yeni Bildirim</subject>
-		<body><![CDATA[{$siteTitle} adlı siteden yeni bir bir bildiriminiz var:<br />
---<br />
-{$notificationContents}<br />
-<br />
-Bağlantı: {$url}<br />
---<br />
-<br />
-Eğer bu bildirimi almak istemiyorsanız, lütfen tıklayınız {$unsubscribeLink}.<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>Bu e-posta bildirim listesindeki kayıtsız kullanıcılar tarafından gönderilir.</description>
-	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
-		<subject>Welcome to the the {$siteTitle} mailing list!</subject>
-		<body><![CDATA[You have signed up to receive notifications from {$siteTitle}.<br />
-<br />
-Please click on this link to confirm your request and add your email address to the mailing list: {$confirmLink}<br />
-<br />
-If you wish to stop receiving notification emails, please go to {$unsubscribeLink}.<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>This email is sent to an unregistered user who just registered with the notification mailing list.</description>
-	</email_text>
 	<email_text key="USER_VALIDATE">
 		<subject>Validate Your Account</subject>
 		<body><![CDATA[{$userFullName}<br />
 <br />
 You have created an account with {$contextName}, but before you can start using it, you need to validate your email account. To do this, simply follow the link below:<br />
 <br />
-<a href="{$activateUrl}">{$activateUrl}</a><br />
+{$activateUrl}<br />
 <br />
 Thank you,<br />
 {$principalContactSignature}]]></body>
@@ -712,13 +591,13 @@ This regards the manuscript &quot;{$submissionTitle},&quot; which is under consi
 <br />
 Following the review of the previous version of the manuscript, the authors have now submitted a revised version of their paper. We would appreciate it if you could help evaluate it.<br />
 <br />
-Please log into the journal web site by {$responseDueDate} to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is <a href="{$contextUrl}">{$contextUrl}</a><br />
+Please log into the journal web site by {$responseDueDate} to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is {$contextUrl}<br />
 <br />
 The review itself is due {$reviewDueDate}.<br />
 <br />
-If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). <a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
+If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). {$passwordResetUrl}<br />
 <br />
-Submission URL: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+Submission URL: {$submissionReviewUrl}<br />
 <br />
 Thank you for considering this request.<br />
 <br />
@@ -743,7 +622,7 @@ Please log into the journal web site by {$responseDueDate} to indicate whether y
 <br />
 The review itself is due {$reviewDueDate}.<br />
 <br />
-Submission URL: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+Submission URL: {$submissionReviewUrl}<br />
 <br />
 Thank you for considering this request.<br />
 <br />
@@ -837,7 +716,7 @@ Membership Information (if provided):<br />
 <br />
 To view or edit this subscription, please use the following URL.<br />
 <br />
-Subscription URL: <a href="{$subscriptionUrl}">{$subscriptionUrl}</a>]]></body>
+Subscription URL: {$subscriptionUrl}]]></body>
 		<description>This email notifies the Subscription Manager that an individual subscription has been purchased online. It provides summary information about the subscription and a quick access link to the purchased subscription.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_PURCHASE_INSTL">
@@ -865,7 +744,7 @@ Membership Information (if provided):<br />
 <br />
 To view or edit this subscription, please use the following URL.<br />
 <br />
-Subscription URL: <a href="{$subscriptionUrl}">{$subscriptionUrl}</a>]]></body>
+Subscription URL: {$subscriptionUrl}]]></body>
 		<description>This email notifies the Subscription Manager that an institutional subscription has been purchased online. It provides summary information about the subscription and a quick access link to the purchased subscription.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_RENEW_INDL">
@@ -883,7 +762,7 @@ Membership Information (if provided):<br />
 <br />
 To view or edit this subscription, please use the following URL.<br />
 <br />
-Subscription URL: <a href="{$subscriptionUrl}">{$subscriptionUrl}</a>]]></body>
+Subscription URL: {$subscriptionUrl}]]></body>
 		<description>This email notifies the Subscription Manager that an individual subscription has been renewed online. It provides summary information about the subscription and a quick access link to the renewed subscription.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_RENEW_INSTL">
@@ -911,7 +790,7 @@ Membership Information (if provided):<br />
 <br />
 To view or edit this subscription, please use the following URL.<br />
 <br />
-Subscription URL: <a href="{$subscriptionUrl}">{$subscriptionUrl}</a>]]></body>
+Subscription URL: {$subscriptionUrl}]]></body>
 		<description>This email notifies the Subscription Manager that an institutional subscription has been renewed online. It provides summary information about the subscription and a quick access link to the renewed subscription.</description>
 	</email_text>
 	<email_text key="CITATION_EDITOR_AUTHOR_QUERY">
@@ -927,64 +806,6 @@ Thanks!<br />
 {$userFirstName}<br />
 Copy-Editor, {$contextName}]]></body>
 		<description>This email allows copyeditors to request additional information about references from authors.</description>
-	</email_text>
-	<email_text key="GIFT_AVAILABLE">
-		<subject>{$giftNoteTitle}</subject>
-		<body><![CDATA[Dear {$recipientFirstName},<br />
-<br />
-{$buyerFullName} would like to share a gift with you at {$giftJournalName}:<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-{$giftNote}<br />
-<br />
-<br />
-You will receive a follow-up email that includes login details and instructions for redeeming your gift.<br />
-<br />
-We hope that you enjoy your gift!<br />
-<br />
-{$giftContactSignature}]]></body>
-		<description>This email notifies a gift recipient that a gift has been purchased and is available for redemption.</description>
-	</email_text>
-	<email_text key="GIFT_USER_REGISTER">
-		<subject>Redeem Your Gift: Login Details</subject>
-		<body><![CDATA[Dear {$recipientFirstName},<br />
-<br />
-{$buyerFullName} would like to share a gift with you at {$giftJournalName}:<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-To redeem your gift, please login to the journal website at <a href="{$giftUrl}">{$giftUrl}</a><br />
-<br />
-Your username: {$username}<br />
-Your password: {$password}<br />
-<br />
-Once logged in, you can change your password at any time.<br />
-<br />
-We hope that you enjoy your gift!<br />
-<br />
-{$giftContactSignature}]]></body>
-		<description>This email notifies a gift recipient of their login details for a new account.</description>
-	</email_text>
-	<email_text key="GIFT_USER_LOGIN">
-		<subject>Redeem Your Gift: Login Details</subject>
-		<body><![CDATA[Dear {$recipientFirstName},<br />
-<br />
-{$buyerFullName} would like to share a gift with you at {$giftJournalName}:<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-To redeem your gift, please login to the journal website at <a href="{$giftUrl}">{$giftUrl}</a><br />
-<br />
-Your username: {$username}<br />
-<br />
-We hope that you enjoy your gift!<br />
-<br />
-{$giftContactSignature}]]></body>
-		<description>This email notifies a gift recipient of their login details.</description>
 	</email_text>
 	<email_text key="REVISED_VERSION_NOTIFY">
 		<subject>Revised Version Uploaded</subject>

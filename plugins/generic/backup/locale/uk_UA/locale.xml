@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/backup/locale/uk_UA/locale.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Ukrainian_(uk_UA)
+  * Localization strings for the uk_UA (Українська) locale.
+  -->
+     
+<locale name="uk_UA" full_name="Українська">
+	<message key="plugins.generic.backup.name">Модуль резервного копіювання</message>
+	<message key="plugins.generic.backup.description">Створює резервну копію інсталяції.</message>
+
+	<message key="plugins.generic.backup.link">Завантажити резервну копію</message>
+	<message key="plugins.generic.backup.longdescription"><![CDATA[<p>Наступні посилання дозволяють адміністратору сайту завантажити повну резервну копію різних компонентів інсталяції. Повна версія резервної копії містить <strong>усі</strong> наступні компоненти. Будь ласка, перегляньте технічну документацію для отримання додаткової інформації про те, як ці компоненти взаємопо'язані.</p>]]></message>
+	<message key="plugins.generic.backup.db">База даних</message>
+	<message key="plugins.generic.backup.files">Файли</message>
+	<message key="plugins.generic.backup.code">Код</message>
+	<message key="plugins.generic.backup.db.config"><![CDATA[{$footNoteNum}. <strong>Попередження:</strong> Інструмент створення дампа бази даних не налаштований у файлі конфігурації config.inc.php. Конфігурація буде залежати від конфігурації вашого сервера та типу бази даних, яку ви використовуєте. Вона повина бути описана у секції з назвою [cli], у параметрі конфігурації, що називається "dump". Для MySQL, використовуйте інструмент mysqldump, тобто:<br />
+<pre>[cli]
+dump = "/usr/bin/mysqldump -h %s -u %s -p%s %s"
+</pre>
+Елементи "%s" будуть замінені у такому порядку:<ol>
+	<li>Сервер БД</li>
+	<li>Ім'я користувача БД</li>
+	<li>Пароль користувача БД</li>
+	<li>Ім'я БД</li>
+</ol>
+Зауважте, що це передбачає вказування паролю бази даних в командному рядку, що може викликати проблеми безпеки.<br /><br />]]></message>
+	<message key="plugins.generic.backup.tar.config"><![CDATA[{$footNoteNum}. <strong>Попередження:</strong> Інструмент "tar" не налаштований у файлі конфігурації config.inc.php. Конфігурація буде залежати від конфігурації вашого сервера. Вона повинна бути описана в секції з назвою [cli], у параметрі конфігурації, що називається "tar", зазначивши шлях до утиліти "tar", тобто:<br />
+<pre>[cli]
+tar = "/bin/tar"
+</pre><br />]]></message>
+	<message key="plugins.generic.backup.failure"><![CDATA[<strong>Попередження: </strong>Під час резервного копіювання могла статися помилка. Найпоширенішою причиною є права доступу до файлів.]]></message>
+</locale>

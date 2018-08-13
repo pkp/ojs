@@ -4,8 +4,8 @@
 <!--
   * locale/es_ES/default.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * https://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_(es_ES)
   * Localization strings.
@@ -46,25 +46,12 @@ ________________________________________________________________________<br/>
 	<message key="default.journalSettings.lockssLicense"><![CDATA[Esta revista utiliza el sistema LOCKSS para crear un sistema de archivo distribuido entre bibliotecas colaboradoras, a las que permite crear archivos permanentes de la revista con fines de conservación y restauración. <a href="http://lockss.org/">Más...</a>]]></message>
 
 	<!-- Default settings for payment items. -->
-	<message key="default.journalSettings.submissionFee">Enviar un artículo</message>
-	<message key="default.journalSettings.submissionFeeDescription">Los autores/as deben pagar una cuota de envío del artículo como parte del proceso de envío para contribuir con los costes de revisión.</message>
-	<message key="default.journalSettings.fastTrackFee">Revisión rápida</message>
-	<message key="default.journalSettings.fastTrackFeeDescription">Con el pago de esta cuota, se garantiza que la revisión, la decisión editorial y la notificación al autor/a del manuscrito tendrán lugar dentro de un plazo de 4 semanas.</message>
 	<message key="default.journalSettings.publicationFee">Publicar un artículo</message>
-	<message key="default.journalSettings.publicationFeeDescription">Si se acepta la publicación del artículo, se le pedirá el pago de una cuota de publicación de artículo para cubrir los costes de publicación.</message>
-	<message key="default.journalSettings.waiverPolicy">En caso de no disponer de fondos para pagar dichas cuotas, existe la posibilidad de eximirse del pago. El impago de las cuotas no impedirá la publicación de aquellas obras que lo merezcan.</message>
 	<message key="default.journalSettings.purchaseArticleFee">Comprar un artículo</message>
-	<message key="default.journalSettings.purchaseArticleFeeDescription">El pago de esta cuota le permitirá visualizar, descargar e imprimir el artículo.</message>
 	<message key="default.journalSettings.purchaseIssueFee">Comprar un número</message>
-	<message key="default.journalSettings.purchaseIssueFeeDescription">El pago de esta cuota le permitirá visualizar, descargar e imprimir el número.</message>
 	<message key="default.journalSettings.membershipFee">Afiliación a una asociación</message>
-	<message key="default.journalSettings.membershipFeeDescription">El pago de esta cuota garantiza el alta como miembro de la asociación durante un año y le proporciona acceso gratuito a la revista.</message>
-	<message key="default.journalSettings.donationFee">Donaciones a la revista</message>
-	<message key="default.journalSettings.donationFeeDescription">Toda donación será gratamente recibida y se empleará en proporcionar recursos a los editores/as para seguir ofreciendo a los lectores/as una revista de alta calidad.</message>
-	<message key="default.journalSettings.emailHeader">El siguiente mensaje se está enviando a nombre de {$journalName}.
-________________________________________________________________________</message>
 	<message key="default.genres.article">Texto del artículo</message>
-	<message key="default.journalSettings.clockssLicense"><![CDATA[Esta revista utiliza el sistema CLOCKSS para crear un sistema de archivos distribuido entre las bibliotecas participantes y permite a estas bibliotecas crear archivos permanentes de la revista con finalidad de preservación y restauración. <a href="http://clockss.org/">More...</a>]]></message>
+	<message key="default.journalSettings.clockssLicense"><![CDATA[Esta revista utiliza el sistema CLOCKSS para crear un sistema de archivos distribuido entre las bibliotecas participantes y permite a estas bibliotecas crear archivos permanentes de la revista con finalidad de preservación y restauración. <a href="http://clockss.org/">Saber más...</a>]]></message>
 	<message key="default.groups.name.manager">Gestor/a de la revista</message>
 	<message key="default.groups.plural.manager">Gestores/as de la revista</message>
 	<message key="default.groups.abbrev.manager">GR</message>

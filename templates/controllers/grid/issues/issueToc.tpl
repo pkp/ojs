@@ -1,8 +1,8 @@
 {**
  * templates/controllers/grid/issues/issueToc.tpl
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Display the issue's table of contents
@@ -15,5 +15,5 @@
 	{rdelim});
 </script>
 
-{url|assign:issueTocGridUrl router=$smarty.const.ROUTE_COMPONENT component="grid.toc.TocGridHandler" op="fetchGrid" issueId=$issue->getId() escape=false}
+{capture assign=issueTocGridUrl}{url router=$smarty.const.ROUTE_COMPONENT component="grid.toc.TocGridHandler" op="fetchGrid" issueId=$issue->getId() escape=false}{/capture}
 {load_url_in_div id="issueTocGridContainer" url=$issueTocGridUrl}

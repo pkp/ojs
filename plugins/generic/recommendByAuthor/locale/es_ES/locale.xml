@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/recommendByAuthor/locale/es_ES/locale.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_(es_ES)
+  * Localization strings.
+  -->
+
+<locale name="es_ES" full_name="Español (España)">
+	<message key="plugins.generic.recommendByAuthor.displayName">Artículos recomendados del autor/a</message>
+	<message key="plugins.generic.recommendByAuthor.description">Este módulo inserta una lista de artículos del mismo autor/a en la página del resumen del artículo.</message>
+    
+    <message key="plugins.generic.recommendByAuthor.heading">Artículos más leídos del mismo autor/a</message>
+    <message key="plugins.generic.recommendByAuthor.noMetric">Nota: Este módulo requiere de la activación de, al menos, un módulo de estadísticas/informes. Si los módulos de estadísticas proporcionan más de una métrica, selecciona una métrica principal en la página de configuración del sitio y/o en las páginas de propiedades de la revista.</message>
+</locale>

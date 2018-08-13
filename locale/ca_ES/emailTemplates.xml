@@ -4,8 +4,8 @@
 <!--
   * locale/ca_ES/emailTemplates.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localized email templates XML file.
@@ -17,7 +17,7 @@
 <br />
 Si no sou l'autor d'aquesta sol·licitud, ignoreu aquest missatge de correu electrònic i no es canviarà la vostra contrasenya. Si voleu reinicialitzar la contrasenya, feu clic a l'URL següent.<br />
 <br />
-Reinicialització de la meva contrasenya: <a href="{$url}">{$url}</a><br />
+Reinicialització de la meva contrasenya: {$url}<br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Aquest missatge de correu electrònic s'envia a un usuari registrat si ha indicat que no recorda la seva contrasenya o que no pot iniciar la sessió. Inclou un URL per a la reinicialització de la contrasenya.</description>
@@ -52,7 +52,7 @@ Moltes gràcies,<br />
 <br />
 Heu creat un compte d'usuari per a {$contextName}, però abans de poder-lo començar a utilitzar heu de validar el vostre compte de correu electrònic. Per a fer-ho, seguiu l'enllaç següent:<br />
 <br />
-<a href="{$activateUrl}">{$activateUrl}</a><br />
+{$activateUrl}<br />
 <br />
 Moltes gràcies,<br />
 <br />
@@ -77,7 +77,7 @@ Moltes gràcies,<br />
 		<subject>Nou número publicat</subject>
 		<body><![CDATA[Benvolguts lectors,<br />
 <br />
-{$contextName} acaba de publicar el seu darrer número a <a href="{$contextUrl}">{$contextUrl}</a>. Us convidem a consultar-ne el sumari i a visitar el nostre lloc web per a accedir als articles i documents que us puguin interessar.<br />
+{$contextName} acaba de publicar el seu darrer número a {$contextUrl}. Us convidem a consultar-ne el sumari i a visitar el nostre lloc web per a accedir als articles i documents que us puguin interessar.<br />
 <br />
 Us agraïm l'interès per la nostra revista.<br />
 <br />
@@ -88,11 +88,11 @@ Us agraïm l'interès per la nostra revista.<br />
 		<subject>Sol·licitud d'arxivament per a {$contextName}</subject>
 		<body><![CDATA[Benvolgut/uda [bibliotecari universitari],<br />
 <br />
-{$contextName} &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt; és una revista en què un membre de la vostra facultat o universitat, [nom del membre], participa en qualitat de [nom del rol]. Des d'aquesta revista volem crear un arxiu amb la vostra biblioteca universitària i altres biblioteques, d'acord amb la iniciativa LOCKSS (&amp;lt;i&amp;gt;lots of copies keep stuff safe&amp;lt;/i&amp;gt;).<br />
+{$contextName} &amp;lt;{$contextUrl}&amp;gt; és una revista en què un membre de la vostra facultat o universitat, [nom del membre], participa en qualitat de [nom del rol]. Des d'aquesta revista volem crear un arxiu amb la vostra biblioteca universitària i altres biblioteques, d'acord amb la iniciativa LOCKSS (&amp;lt;i&amp;gt;lots of copies keep stuff safe&amp;lt;/i&amp;gt;).<br />
 <br />
 [Descripció breu de la revista]<br />
 <br />
-L'URL del LOCKSS Publisher Manifest per a la nostra revista és: <a href="{$contextUrl}">{$contextUrl}</a>/gateway/lockss<br />
+L'URL del LOCKSS Publisher Manifest per a la nostra revista és: {$contextUrl}/gateway/lockss<br />
 <br />
 Segons la informació de què disposem, la vostra biblioteca ja participa en la iniciativa LOCKSS. Per tant, no dubteu a sol·licitar-nos totes les metadades addicionals que necessiteu per a registrar aquesta revista a la vostra versió de LOCKSS.<br />
 <br />
@@ -105,7 +105,7 @@ Moltes gràcies,<br />
 		<subject>Sol·licitud d'arxivament per a {$contextName}</subject>
 		<body><![CDATA[Benvolgut/uda [bibliotecari universitari],<br />
 <br />
-{$contextName} &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt; és una revista en què un membre de la vostra facultat o universitat, [nom del membre], participa en qualitat de [nom del rol]. Des d'aquesta revista volem crear un arxiu amb la vostra biblioteca universitària i altres biblioteques, d'acord amb la iniciativa LOCKSS (&amp;lt;i&amp;gt;lots of copies keep stuff safe&amp;lt;/i&amp;gt;).<br />
+{$contextName} &amp;lt;{$contextUrl}&amp;gt; és una revista en què un membre de la vostra facultat o universitat, [nom del membre], participa en qualitat de [nom del rol]. Des d'aquesta revista volem crear un arxiu amb la vostra biblioteca universitària i altres biblioteques, d'acord amb la iniciativa LOCKSS (&amp;lt;i&amp;gt;lots of copies keep stuff safe&amp;lt;/i&amp;gt;).<br />
 <br />
 [Descripció breu de la revista]<br />
 <br />
@@ -142,15 +142,6 @@ Si teniu cap pregunta, contacteu amb mi. Gràcies per tenir en compte aquesta pu
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Aquest correu electrònic, quan està habilitat, s'envia automàticament als altres autors/ores que no són usuaris/àries a l'OMP especificats durant el procés de tramesa.</description>
-	</email_text>
-	<email_text key="SUBMISSION_UNSUITABLE">
-		<subject>Tramesa rebutjada</subject>
-		<body><![CDATA[Benvolgut/uda {$authorName},<br />
-<br />
-Després d'una primera revisió de &quot;{$submissionTitle}&quot;, hem decidit que aquesta tramesa no s'adequa a la temàtica i l'àmbit de {$contextName}. Per a conèixer millor el tipus d'obres que publiquem us recomano que consulteu la descripció d'aquesta revista a la secció Quant a i també els articles publicats fins ara. També podeu intentar trametre aquest manuscrit a una altra revista més adequada.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description></description>
 	</email_text>
 	<email_text key="SUBMISSION_COMMENT">
 		<subject>Comentari de la tramesa</subject>
@@ -192,13 +183,13 @@ Moltes gràcies,<br />
 <br />
 Considero que el vostre perfil és adequat per a revisar el manuscrit &quot;{$submissionTitle}&quot; tramès a la revista {$contextName}. A continuació trobareu un resum de la tramesa, i confio que acceptareu encarregar-vos d'aquesta important tasca.<br />
 <br />
-Us demano que inicieu la sessió a la revista abans del {$responseDueDate} per a indicar-nos si accepteu o no encarregar-vos de la revisió de la tramesa i, en cas d'acceptar-la, per a accedir-hi i enregistrar-ne la revisió i recomanació. El lloc web de la revista és <a href="{$contextUrl}">{$contextUrl}</a>.<br />
+Us demano que inicieu la sessió a la revista abans del {$responseDueDate} per a indicar-nos si accepteu o no encarregar-vos de la revisió de la tramesa i, en cas d'acceptar-la, per a accedir-hi i enregistrar-ne la revisió i recomanació. El lloc web de la revista és {$contextUrl}.<br />
 <br />
 La data límit per a la revisió és el {$reviewDueDate}.<br />
 <br />
-Si heu perdut el vostre nom d'usuari o la vostra contrasenya per al lloc web de la revista, podeu utilitzar l'enllaç següent per a reinicialitzar la contrasenya (en rebreu una de nova per correu electrònic, juntament amb el vostre nom d'usuari). <a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
+Si heu perdut el vostre nom d'usuari o la vostra contrasenya per al lloc web de la revista, podeu utilitzar l'enllaç següent per a reinicialitzar la contrasenya (en rebreu una de nova per correu electrònic, juntament amb el vostre nom d'usuari). {$passwordResetUrl}<br />
 <br />
-URL de la tramesa: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+URL de la tramesa: {$submissionReviewUrl}<br />
 <br />
 Gràcies per tenir en compte aquesta sol·licitud.<br />
 <br />
@@ -221,7 +212,7 @@ Us demano que inicieu la sessió a la revista abans del {$responseDueDate} per a
 <br />
 La data límit per a la revisió és el {$reviewDueDate}.<br />
 <br />
-URL de la tramesa: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+URL de la tramesa: {$submissionReviewUrl}<br />
 <br />
 Gràcies per tenir en compte aquesta sol·licitud.<br />
 <br />
@@ -296,9 +287,9 @@ Us agraïm que hàgiu revisat la tramesa &quot;{$submissionTitle}&quot; per a {$
 <br />
 Us recordem la nostra petició per a revisar la tramesa &quot;{$submissionTitle}&quot; per a {$contextName}. Esperàvem aquesta revisió abans del {$reviewDueDate}, i confiem rebre-la tan aviat com la tingueu enllestida.<br />
 <br />
-Si heu perdut el vostre nom d'usuari o la vostra contrasenya per al lloc web de la revista, podeu utilitzar l'enllaç següent per a reinicialitzar la contrasenya (en rebreu una de nova per correu electrònic, juntament amb el vostre nom d'usuari). <a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
+Si heu perdut el vostre nom d'usuari o la vostra contrasenya per al lloc web de la revista, podeu utilitzar l'enllaç següent per a reinicialitzar la contrasenya (en rebreu una de nova per correu electrònic, juntament amb el vostre nom d'usuari). {$passwordResetUrl}<br />
 <br />
-URL de la tramesa: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+URL de la tramesa: {$submissionReviewUrl}<br />
 <br />
 Us agrairem que ens confirmeu la vostra disponibilitat per a completar aquesta contribució vital per al funcionament de la revista, i confiem rebre notícies vostres ben aviat.<br />
 <br />
@@ -311,7 +302,7 @@ Us agrairem que ens confirmeu la vostra disponibilitat per a completar aquesta c
 <br />
 Us recordem la nostra petició per a revisar la tramesa &quot;{$submissionTitle}&quot; per a {$contextName}. Esperàvem aquesta revisió abans del {$reviewDueDate}, i confiem rebre-la tan aviat com la tingueu enllestida.<br />
 <br />
-URL de la tramesa: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+URL de la tramesa: {$submissionReviewUrl}<br />
 <br />
 Us agrairem que ens confirmeu la vostra disponibilitat per a completar aquesta contribució vital per al funcionament de la revista, i confiem rebre notícies vostres ben aviat.<br />
 <br />
@@ -324,9 +315,9 @@ Us agrairem que ens confirmeu la vostra disponibilitat per a completar aquesta c
 <br />
 Us recordem la nostra petició per a revisar la tramesa &quot;{$submissionTitle}&quot; per a {$contextName}. Esperàvem aquesta revisió abans del {$reviewDueDate}, i aquest missatge de correu electrònic s'ha generat i enviat automàticament en haver-se superat aquesta data. Malgrat això, encara confiem rebre la vostra revisió tan aviat com la tingueu enllestida.<br />
 <br />
-Si heu perdut el vostre nom d'usuari o la vostra contrasenya per al lloc web de la revista, podeu utilitzar l'enllaç següent per a reinicialitzar la contrasenya (en rebreu una de nova per correu electrònic, juntament amb el vostre nom d'usuari). <a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
+Si heu perdut el vostre nom d'usuari o la vostra contrasenya per al lloc web de la revista, podeu utilitzar l'enllaç següent per a reinicialitzar la contrasenya (en rebreu una de nova per correu electrònic, juntament amb el vostre nom d'usuari). {$passwordResetUrl}<br />
 <br />
-URL de la tramesa: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+URL de la tramesa: {$submissionReviewUrl}<br />
 <br />
 Us agrairem que ens confirmeu la vostra disponibilitat per a completar aquesta contribució vital per al funcionament de la revista, i confiem rebre notícies vostres ben aviat.<br />
 <br />
@@ -339,7 +330,7 @@ Us agrairem que ens confirmeu la vostra disponibilitat per a completar aquesta c
 <br />
 Us recordem la nostra petició per a revisar la tramesa &quot;{$submissionTitle}&quot; per a {$contextName}. Esperàvem aquesta revisió abans del {$reviewDueDate}, i aquest missatge de correu electrònic s'ha generat i enviat automàticament en haver-se superat aquesta data. Malgrat això, encara confiem rebre la vostra revisió tan aviat com la tingueu enllestida.<br />
 <br />
-URL de la tramesa: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+URL de la tramesa: {$submissionReviewUrl}<br />
 <br />
 Us agrairem que ens confirmeu la vostra disponibilitat per a completar aquesta contribució vital per al funcionament de la revista, i confiem rebre notícies vostres  ben aviat.<br />
 <br />
@@ -359,127 +350,12 @@ M'agradaria demanar-vos que us encarreguéssiu de la revisió de &quot;{$submiss
 5. Deseu el fitxer corregit i pengeu-lo en el pas 1 de la correcció.<br />
 6. Envieu el missatge de correu electrònic COMPLET a l'editor.<br />
 <br />
-URL de {$contextName}: <a href="{$contextUrl}">{$contextUrl}</a><br />
-URL de la tramesa: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL de {$contextName}: {$contextUrl}<br />
+URL de la tramesa: {$submissionUrl}<br />
 Nom d'usuari: {$participantUsername}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Aquest missatge de correu electrònic té un editor de secció com a remitent i s'envia al possible corrector d'una tramesa per a sol·licitar-li que comenci el procés de correcció. Proporciona informació sobre la tramesa i com s'hi ha d'accedir.</description>
-	</email_text>
-	<email_text key="COPYEDIT_COMPLETE">
-		<subject>Correcció completada</subject>
-		<body><![CDATA[Benvolgut/uda {$authorName},<br />
-<br />
-Ja hem corregit la vostra tramesa &quot;{$submissionTitle}&quot; per a {$contextName}. Seguiu els passos següents per a revisar els canvis proposats i respondre a les consultes a l'autor:<br />
-<br />
-1. Inicieu la sessió a la revista fent clic a l'URL que s'indica més endavant en aquest missatge i introduint-hi el vostre nom d'usuari i la vostra contrasenya (utilitzeu l'enllaç Oblida, si escau).<br />
-2. Feu clic al fitxer que hi ha a 1. Fitxer de la correcció inicial per a baixar i obrir la versió corregida.<br />
-3. Reviseu la correcció, feu-hi els canvis necessaris mitjançant l'eina de seguiment de canvis del Word i responeu les consultes.<br />
-4. Deseu el fitxer a l'escriptori i pengeu-lo a 2. Correcció de l'autor.<br />
-5. Feu clic a la icona de correu electrònic que hi ha a sota de COMPLET i envieu el missatge de correu electrònic a l'editor.<br />
-<br />
-Noteu que aquesta serà la darrera oportunitat que tindreu per a fer canvis substancials a la tramesa, atès que més endavant se us demanarà que corregiu les galerades, però durant aquest procés només podreu esmenar errors tipogràfics i de format.<br />
-<br />
-URL del manuscrit: <a href="{$submissionEditingUrl}">{$submissionEditingUrl}</a><br />
-<br />
-Si no esteu disponible per a encarregar-vos d'aquesta tasca o si teniu cap dubte o consulta, no dubteu a fer-m'ho saber.<br />
-<br />
-Gràcies per la vostra contribució a aquesta revista.<br />
-<br />
-{$participantName}]]></body>
-		<description></description>
-	</email_text>
-	<email_text key="COPYEDIT_ACK">
-		<subject>Justificant de recepció de la correcció</subject>
-		<body><![CDATA[Benvolgut/uda {$participantName},<br />
-<br />
-Gràcies per haver corregit el manuscrit &quot;{$submissionTitle}&quot; per a {$contextName}. La vostra tasca és una contribució molt important a la qualitat d'aquesta revista.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Aquest missatge de correu electrònic té l'editor de secció com a remitent i s'envia al corrector d'una tramesa per a notificar-li que ha completat el procés de correcció i agrair-li la seva contribució.</description>
-	</email_text>
-	<email_text key="COPYEDIT_AUTHOR_REQUEST">
-		<subject>Sol·licitud de revisió de la correcció</subject>
-		<body><![CDATA[Benvolgut/uda {$authorName},<br />
-<br />
-S'ha completat la primera etapa de correcció de la vostra tramesa &quot;{$submissionTitle}&quot; per a {$contextName}. Seguiu els passos següents per a revisar-la:<br />
-<br />
-1. Feu clic a l'URL de la tramesa que trobareu més avall en aquest missatge.<br />
-2. Inicieu la sessió a la revista i feu clic al fitxer que trobareu al pas 1.<br />
-3. Obriu la tramesa baixada.<br />
-4. Reviseu el text tenint en compte les propostes de correcció i les consultes a l'autor.<br />
-5. Feu totes les correccions que considereu que milloraran el text.<br />
-6. Una vegada hàgiu acabat la revisió, pengeu el fitxer al pas 2.<br />
-7. Feu clic a METADADES per a comprovar que la informació d'indexació sigui completa i correcta.<br />
-8. Envieu el missatge de correu electrònic COMPLET a l'editor i al corrector.<br />
-<br />
-URL de la tramesa: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
-<br />
-Noteu que aquesta serà la darrera oportunitat que tindreu per a fer correccions substancials a la tramesa, atès que a l'etapa de correcció de proves, que segueix la preparació de les galerades, només es podran esmenar errors tipogràfics i de format.<br />
-<br />
-Si no esteu disponible per a encarregar-vos d'aquesta tasca o si teniu cap dubte o consulta, no dubteu a fer-m'ho saber.<br />
-<br />
-Gràcies per la vostra contribució a aquesta revista,<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Aquest missatge de correu electrònic té l'editor de secció com a remitent i s'envia a l'autor d'una tramesa per a sol·licitar-li que revisi la feina feta pel corrector. Proporciona informació per a accedir al manuscrit i alerta a l'autor que aquesta és la darrera oportunitat que té per a fer-hi canvis substancials.</description>
-	</email_text>
-	<email_text key="COPYEDIT_AUTHOR_COMPLETE">
-		<subject>Revisió de la correcció completada</subject>
-		<body><![CDATA[Benvolgut/uda {$editorialContactName},<br />
-<br />
-Ja he revisat la correcció del manuscrit &quot;{$submissionTitle}&quot; per a {$contextName}. Per tant, la tramesa ja és a punt per a fer-hi la darrera ronda de revisió i preparar-la per a la maquetació.<br />
-<br />
-Gràcies per aquesta contribució a la meva obra.<br />
-<br />
-{$authorName}]]></body>
-		<description>Aquest missatge de correu electrònic té l'autor com a remitent i s'envia a l'editor de secció per a notificar-li que s'ha completat el procés de correcció de l'autor.</description>
-	</email_text>
-	<email_text key="COPYEDIT_AUTHOR_ACK">
-		<subject>Justificant de recepció de la revisió de la correcció</subject>
-		<body><![CDATA[Benvolgut/uda {$authorName},<br />
-<br />
-Gràcies per haver revisat la correcció del vostre manuscrit &quot;{$submissionTitle}&quot; per a {$contextName}. Esperem publicar la vostra obra ben aviat.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Aquest missatge de correu electrònic té l'editor de secció com a remitent i s'envia a l'autor d'una tramesa per a notificar-li que ha completat correctament el procés de correcció i agrair-li la seva contribució.</description>
-	</email_text>
-	<email_text key="COPYEDIT_FINAL_REQUEST">
-		<subject>Revisió final de la correcció</subject>
-		<body><![CDATA[Benvolgut/uda {$participantName},<br />
-<br />
-L'autor i l'editor ja han acabat de revisar la correcció de &quot;{$submissionTitle}&quot; per a {$contextName}. Ara, doncs, ja es pot preparar una &quot;còpia neta&quot; de la tramesa per a la maquetació. Per a fer-ho, seguiu els passos següents:<br />
-1. Feu clic a l'URL de la tramesa que trobareu més endavant en aquest missatge.<br />
-2. Inicieu la sessió a la revista i feu clic al fitxer que trobareu en el pas 2.<br />
-3. Obriu el fitxer baixat i incorporeu-hi totes les correccions i les respostes a les consultes.<br />
-4. Deseu el fitxer net i pengeu-lo en el pas 3 de la correcció.<br />
-5. Feu clic a METADADES per a comprovar que la informació d'indexació sigui correcta (recordeu de desar totes les correccions que hi feu).<br />
-6. Envieu el missatge de correu electrònic COMPLET a l'editor.<br />
-<br />
-URL de {$contextName}: <a href="{$contextUrl}">{$contextUrl}</a><br />
-URL de la tramesa: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
-Nom d'usuari: {$participantUsername}<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Aquest missatge de correu electrònic té l'editor de secció com a remitent i s'envia al corrector per a sol·licitar-li que s'encarregui de la ronda final de correcció d'una tramesa abans que entri en el procés de maquetació.</description>
-	</email_text>
-	<email_text key="COPYEDIT_FINAL_COMPLETE">
-		<subject>Revisió final de la correcció completada</subject>
-		<body><![CDATA[Benvolgut/uda {$editorialContactName},<br />
-<br />
-He preparat una versió neta i corregida del manuscrit &quot;{$submissionTitle}&quot; per a {$contextName}. Aquesta versió ja és a punt per a entrar en el procés de maquetació i de preparació de les galerades.<br />
-<br />
-{$participantName}]]></body>
-		<description>Aquest missatge de correu electrònic té el corrector com a remitent i s'envia a l'editor de secció per a notificar-li que ha completat la ronda final de correcció i que el procés de maquetació ja pot començar.</description>
-	</email_text>
-	<email_text key="COPYEDIT_FINAL_ACK">
-		<subject>Justificant de recepció de la revisió final de la correcció</subject>
-		<body><![CDATA[Benvolgut/uda {$participantName},<br />
-<br />
-Gràcies per haver completat la correcció del manuscrit &quot;{$submissionTitle}&quot; per a {$contextName}. La preparació d’una &quot;còpia neta&quot; per a la maquetació és un pas molt important del procés editorial.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Aquest missatge de correu electrònic té l'editor de secció com a remitent i s'envia al corrector per a notificar-li que ha completat la ronda final de correcció i agrair-li la seva contribució.</description>
 	</email_text>
 	<email_text key="LAYOUT_REQUEST">
 		<subject>Sol·licitud de galerades</subject>
@@ -491,8 +367,8 @@ Us demanem que us encarregueu de preparar les galerades de la tramesa &quot;{$su
 2. Inicieu la sessió a la revista i utilitzeu el fitxer de la versió maquetada per a crear les galerades d'acord amb els estàndards de la revista.<br />
 3. Envieu el missatge de correu electrònic COMPLET a l'editor.<br />
 <br />
-URL de {$contextName}: <a href="{$contextUrl}">{$contextUrl}</a><br />
-URL de la tramesa: <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a><br />
+URL de {$contextName}: {$contextUrl}<br />
+URL de la tramesa: {$submissionLayoutUrl}<br />
 Nom d'usuari: {$participantUsername}<br />
 <br />
 Si no esteu disponible per a encarregar-vos d'aquesta tasca o si teniu cap dubte o consulta, no dubteu a fer-m'ho saber.<br />
@@ -612,7 +488,7 @@ L'autor i el corrector de proves ja han fet la correcció de proves de la trames
 3. Pengeu les galerades revisades.<br />
 4. Envieu el missatge de correu electrònic COMPLET del pas 3 de la correcció de proves a l'editor.<br />
 <br />
-URL de {$contextName}: <a href="{$contextUrl}">{$contextUrl}</a><br />
+URL de {$contextName}: {$contextUrl}<br />
 URL de la tramesa: {$submissionUrl}<br />
 Nom d'usuari: {$participantUsername}<br />
 <br />
@@ -643,7 +519,7 @@ Gràcies per haver completat el procés de correcció de proves per a les galera
 	</email_text>
 	<email_text key="EMAIL_LINK">
 		<subject>Article que us pot interessar</subject>
-		<body><![CDATA[Considero que us pot interessar llegir l'article &quot;{$submissionTitle}&quot; de {$authorName} publicat en el volum {$volume}, número {$number} ({$year}) de {$contextName}. El podeu consultar a &quot;<a href="{$articleUrl}">{$articleUrl}</a>&quot;.]]></body>
+		<body><![CDATA[Considero que us pot interessar llegir l'article &quot;{$submissionTitle}&quot; de {$authorName} publicat en el volum {$volume}, número {$number} ({$year}) de {$contextName}. El podeu consultar a &quot;{$articleUrl}&quot;.]]></body>
 		<description>Aquesta plantilla de missatge de correu electrònic ofereix als lectors registrats l'oportunitat d'enviar informació sobre un article a algú que hi pugui estar interessat. Aquesta plantilla està disponible a les eines de lectura si l'administrador de la revista l'ha habilitada a la pàgina d'administració d'aquestes eines.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_NOTIFY">
@@ -669,7 +545,7 @@ Si teniu qualsevol consulta, no dubteu a fer-me-la arribar.<br />
 		<subject>Ara el número és d'accés obert</subject>
 		<body><![CDATA[Benvolguts lectors,<br />
 <br />
-{$contextName} acaba de publicar en format d'accés obert el número següent. Us convidem a consultar-ne el sumari adjunt i a visitar el nostre lloc web (<a href="{$contextUrl}">{$contextUrl}</a>) per a accedir als articles que us interessin.<br />
+{$contextName} acaba de publicar en format d'accés obert el número següent. Us convidem a consultar-ne el sumari adjunt i a visitar el nostre lloc web ({$contextUrl}) per a accedir als articles que us interessin.<br />
 <br />
 Us agraïm el vostre interès per la nostra revista.<br />
 <br />

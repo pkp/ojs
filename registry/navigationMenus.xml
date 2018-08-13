@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  * registry/navigationMenus.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Default NavigationMenus XML file.
+  *
+  -->
+
+<!DOCTYPE navigationMenus SYSTEM "../lib/pkp/dtd/navigationMenus.dtd">
+
+<navigationMenus>
+	<navigationMenu title="User Navigation Menu" area="user" site="1">
+		<navigationMenuItem title="navigation.register" type="NMI_TYPE_USER_REGISTER" site="1" />
+		<navigationMenuItem title="navigation.login" type="NMI_TYPE_USER_LOGIN" site="1" />
+		<navigationMenuItem title="{$loggedInUsername}" type="NMI_TYPE_USER_DASHBOARD" site="1">
+			<navigationMenuItem title="navigation.dashboard" type="NMI_TYPE_USER_DASHBOARD" site="1" />
+			<navigationMenuItem title="common.viewProfile" type="NMI_TYPE_USER_PROFILE" site="1" />
+			<navigationMenuItem title="navigation.admin" type="NMI_TYPE_ADMINISTRATION" site="1" />
+			<navigationMenuItem title="user.logOut" type="NMI_TYPE_USER_LOGOUT" site="1" />
+		</navigationMenuItem>
+	</navigationMenu>
+
+	<navigationMenu title="Primary Navigation Menu" area="primary">
+		<navigationMenuItem title="navigation.current" type="NMI_TYPE_CURRENT" />
+		<navigationMenuItem title="navigation.archives" type="NMI_TYPE_ARCHIVES" />
+		<navigationMenuItem title="manager.announcements" type="NMI_TYPE_ANNOUNCEMENTS" />
+		<navigationMenuItem title="navigation.about" type="NMI_TYPE_ABOUT">
+			<navigationMenuItem title="about.aboutContext" type="NMI_TYPE_ABOUT" />
+			<navigationMenuItem title="navigation.submissions" type="NMI_TYPE_SUBMISSIONS" />
+			<navigationMenuItem title="about.editorialTeam" type="NMI_TYPE_EDITORIAL_TEAM" />
+			<navigationMenuItem title="manager.setup.privacyStatement" type="NMI_TYPE_PRIVACY" />
+			<navigationMenuItem title="about.contact" type="NMI_TYPE_CONTACT" />
+		</navigationMenuItem>
+	</navigationMenu>
+
+	<navigationMenuItem title="common.search" type="NMI_TYPE_SEARCH" />
+</navigationMenus>

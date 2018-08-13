@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/reports/counter/locale/ar_IQ/locale.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+ 
+<locale name="ar_IQ" full_name="العربية">
+	<message key="plugins.reports.counter.description"><![CDATA[إضافة COUNTER تقدم التقارير عن نشاطات المجلة، باستعمال تقنية <a href="http://www.projectcounter.org">COUNTER القياسية</a>. هذه التقارير لوحدها لا تجعل إضافة COUNTER في المجلة متوافقة، للحصول على التوافقية المطلوبة، راجع المتطلبات في موقع مشروع COUNTER.]]></message>
+	<message key="plugins.reports.counter">تقارير COUNTER</message>
+    <message key="plugins.reports.counter.release">إطلاق COUNTER</message>
+    <message key="plugins.reports.counter.olderReports">التقارير الأقدم للموقع</message>
+    <message key="plugins.reports.counter.error.badParameters">معايير التقرير غير صحيحة.</message>
+    <message key="plugins.reports.counter.error.badRequest">إلتماس التقرير غير صحيح.</message>
+    <message key="plugins.reports.counter.error.noResults">لا نتائج لهذا التقرير.</message>
+    <message key="plugins.reports.counter.error.noXML">تعذرت صياغة النتائج بتنسيق XML.</message>
+    <message key="plugins.reports.counter.1a.introduction">هذه الروابط تنشئ تقارير جاهزة من COUNTER تستند على الإصدار المهمل 3.0. هذه التقارير تظهر عند جميع المجلات في الموقع. استعمل الإصدارات اللاحقة بدلاً عنه، إن أمكن ذلك.</message>
+    <message key="plugins.reports.counter.1a.name">تقرير COUNTER JR1 (R3)</message>
+    <message key="plugins.reports.counter.1a.xml">صيغة XML</message>
+    <message key="plugins.reports.counter.1a.description">تقرير المجلة من COUNTER 1 (R3): طلبات المؤلفات بالنص الكامل حسب المجلة والشهر</message>
+
+    <message key="plugins.reports.counter.1a.title">تقرير المجلة 1 (R3): طلبات النص الكامل للمقالات حسب الشهر والمجلة</message>
+	<message key="plugins.reports.counter.1a.title1">تقرير المجلة 1 (R3)</message>
+	<message key="plugins.reports.counter.1a.title2">عدد طلبات النص الكامل الناجحة للمقالات حسب الشهر والمجلة (لسنة {$year})</message>
+	<message key="plugins.reports.counter.1a.dateRun">تأريخ التشغيل:</message>
+	<message key="plugins.reports.counter.1a.publisher">الناشر</message>
+	<message key="plugins.reports.counter.1a.platform">منصة العمل</message>
+	<message key="plugins.reports.counter.1a.printIssn">ISSN الطباعي</message>
+	<message key="plugins.reports.counter.1a.onlineIssn">ISSN للإنترنت</message>
+	<message key="plugins.reports.counter.1a.ytdTotal">مجموع YTD</message>
+	<message key="plugins.reports.counter.1a.ytdHtml">YTD HTML</message>
+	<message key="plugins.reports.counter.1a.ytdPdf">YTD PDF</message>
+	<message key="plugins.reports.counter.1a.totalForAllJournals">الإجمالي لكل المجلات</message>
+    <message key="plugins.reports.counter.1a.anonymous">مجهول الاسم</message>
+
+    <message key="plugins.reports.counter.legacyStats">الروابط أدناه تنشئ تقارير بصيغة مهملة عبر استعمال بيانات الوظيفة الإضافية القديمة، والتي هي غير موائمة لـ COUNTER. إذا أردت إنشاء تقارير COUNTER مستعملاً نوع المقاييس الجديدة في COUNTER لنظام المجلات المفتوحة، استعمل الروابط أعلاه.</message>
+    <message key="plugins.reports.counter.allCustomers">All Customers</message>
+</locale>

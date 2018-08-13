@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/announcementFeed/AnnouncementFeedBlockPlugin.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class AnnouncementFeedBlockPlugin
@@ -16,20 +16,21 @@
 import('lib.pkp.classes.plugins.BlockPlugin');
 
 class AnnouncementFeedBlockPlugin extends BlockPlugin {
-	var $parentPluginName;
+	protected $_parentPlugin;
 
 	/**
 	 * Constructor
+	 * @param $parentPlugin AnnouncementFeedPlugin
 	 */
-	function __construct($parentPluginName) {
-		$this->parentPluginName = $parentPluginName;
+	public function __construct($parentPlugin) {
+		$this->_parentPlugin = $parentPlugin;
 		parent::__construct();
 	}
 
 	/**
 	 * Hide this plugin from the management interface (it's subsidiary)
 	 */
-	function getHideManagement() {
+	public function getHideManagement() {
 		return true;
 	}
 
@@ -38,7 +39,7 @@ class AnnouncementFeedBlockPlugin extends BlockPlugin {
 	 * its category.
 	 * @return String name of plugin
 	 */
-	function getName() {
+	public function getName() {
 		return 'AnnouncementFeedBlockPlugin';
 	}
 
@@ -46,54 +47,35 @@ class AnnouncementFeedBlockPlugin extends BlockPlugin {
 	 * Get the display name of this plugin.
 	 * @return String
 	 */
-	function getDisplayName() {
+	public function getDisplayName() {
 		return __('plugins.generic.announcementfeed.displayName');
 	}
 
 	/**
 	 * Get a description of the plugin.
 	 */
-	function getDescription() {
+	public function getDescription() {
 		return __('plugins.generic.announcementfeed.description');
-	}
-
-	/**
-	 * Get the announcement feed plugin
-	 * @return object
-	 */
-	function &getAnnouncementFeedPlugin() {
-		$plugin =& PluginRegistry::getPlugin('generic', $this->parentPluginName);
-		return $plugin;
 	}
 
 	/**
 	 * Override the builtin to get the correct plugin path.
 	 * @return string
 	 */
-	function getPluginPath() {
-		$plugin =& $this->getAnnouncementFeedPlugin();
-		return $plugin->getPluginPath();
-	}
-
-	/**
-	 * @copydoc PKPPlugin::getTemplatePath
-	 */
-	function getTemplatePath($inCore = false) {
-		$plugin = $this->getAnnouncementFeedPlugin();
-		return $plugin->getTemplatePath($inCore) . 'templates/';
+	public function getPluginPath() {
+		return $this->_parentPlugin->getPluginPath();
 	}
 
 	/**
 	 * @see BlockPlugin::getContents
 	 */
-	function getContents(&$templateMgr, $request = null) {
+	public function getContents($templateMgr, $request = null) {
 		$journal = $request->getJournal();
 		if (!$journal) return '';
 
 		if (!$journal->getSetting('enableAnnouncements')) return '';
 
-		$plugin =& $this->getAnnouncementFeedPlugin();
-		$displayPage = $plugin->getSetting($journal->getId(), 'displayPage');
+		$displayPage = $this->_parentPlugin->getSetting($journal->getId(), 'displayPage');
 		$requestedPage = $request->getRequestedPage();
 
 		if (($displayPage == 'all') || ($displayPage == 'homepage' && (empty($requestedPage) || $requestedPage == 'index' || $requestedPage == 'announcement')) || ($displayPage == $requestedPage)) {
@@ -103,5 +85,3 @@ class AnnouncementFeedBlockPlugin extends BlockPlugin {
 		}
 	}
 }
-
-?>

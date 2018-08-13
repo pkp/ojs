@@ -7,8 +7,8 @@
 /**
  * @file plugins/oaiMetadataFormats/dc/tests/OAIMetadataFormat_DCTest.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2000-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2000-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class OAIMetadataFormat_DCTest
@@ -65,8 +65,8 @@ class OAIMetadataFormat_DCTest extends PKPTestCase {
 		// Author
 		import('classes.article.Author');
 		$author = new Author();
-		$author->setFirstName('author-firstname');
-		$author->setLastName('author-lastname');
+		$author->setGivenName('author-firstname', 'en_US');
+		$author->setFamilyName('author-lastname', 'en_US');
 		$author->setAffiliation('author-affiliation', 'en_US');
 		$author->setEmail('someone@example.com');
 
@@ -131,7 +131,7 @@ class OAIMetadataFormat_DCTest extends PKPTestCase {
 		// Router
 		import('lib.pkp.classes.core.PKPRouter');
 		$router = $this->getMock('PKPRouter', array('url'));
-		$application = PKPApplication::getApplication();
+		$application = Application::getApplication();
 		$router->setApplication($application);
 		$router->expects($this->any())
 		       ->method('url')
@@ -183,9 +183,9 @@ class OAIMetadataFormat_DCTest extends PKPTestCase {
 
 		// Create a mocked PublishedArticleDAO that returns our test article.
 		import('classes.article.PublishedArticleDAO');
-		$articleDao = $this->getMock('PublishedArticleDAO', array('getPublishedArticleByArticleId'));
+		$articleDao = $this->getMock('PublishedArticleDAO', array('getByArticleId'));
 		$articleDao->expects($this->any())
-		            ->method('getPublishedArticleByArticleId')
+		            ->method('getByArticleId')
 		            ->will($this->returnValue($article));
 		DAORegistry::registerDAO('PublishedArticleDAO', $articleDao);
 

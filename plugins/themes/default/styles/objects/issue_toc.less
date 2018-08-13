@@ -1,8 +1,8 @@
 /**
  * @file styles/objects/issue_toc.less
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @brief Styles applying to an issue table of contents view
@@ -73,13 +73,8 @@
 		}
 	}
 
-	.articles > li {
-		.pkp_helpers_clear();
-		margin-bottom: @triple;
-	}
-
 	.sections:not(:first-child) {
-		margin-toP: @triple * 2;
+		margin-top: @triple * 2;
 	}
 
 	.section:last-child .articles > li:last-child {
@@ -105,12 +100,20 @@
 			position: relative;
 			margin: @triple -@double;
 			padding: @triple;
-			border-top: @bg-border;
+
+			&:before {
+				content: '';
+				position: absolute;
+				top: 45px;
+				left: 0;
+				width: 100%;
+				border-top: @bg-border;
+			}
 
 			h2 {
-				position: absolute;
-				top: -15px;
-				left: @triple / 2;
+				display: inline-block;
+				position: relative;
+				left: -15px;
 				margin-top: 0;
 				padding: 0 (@triple / 2);
 				background: @lift;

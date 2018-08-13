@@ -3,8 +3,8 @@
 /**
  * @file controllers/modals/editorDecision/EditorDecisionHandler.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class EditorDecisionHandler
@@ -76,14 +76,6 @@ class EditorDecisionHandler extends PKPEditorDecisionHandler {
 	//
 	// Private helper methods
 	//
-	/**
-	 * Get operations that need a review round id policy.
-	 * @return array
-	 */
-	protected function _getReviewRoundOps() {
-		return array('promoteInReview', 'savePromoteInReview', 'newReviewRound', 'saveNewReviewRound', 'sendReviewsInReview', 'saveSendReviewsInReview', 'importPeerReviews');
-	}
-
 	protected function _saveGeneralPromote($args, $request) {
 		// Redirect to the next workflow page after
 		// promoting the submission.
@@ -126,6 +118,7 @@ class EditorDecisionHandler extends PKPEditorDecisionHandler {
 			case SUBMISSION_EDITOR_DECISION_RESUBMIT:
 				return NOTIFICATION_TYPE_EDITOR_DECISION_RESUBMIT;
 			case SUBMISSION_EDITOR_DECISION_DECLINE:
+			case SUBMISSION_EDITOR_DECISION_INITIAL_DECLINE:
 				return NOTIFICATION_TYPE_EDITOR_DECISION_DECLINE;
 			case SUBMISSION_EDITOR_DECISION_SEND_TO_PRODUCTION:
 				return NOTIFICATION_TYPE_EDITOR_DECISION_SEND_TO_PRODUCTION;

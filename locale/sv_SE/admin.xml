@@ -4,95 +4,88 @@
 <!--
   * locale/sv_SE/admin.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2000-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Localization strings for the sv_SE (Svenska) locale.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Swedish_(sv_SE)
+  * Localization strings.
   -->
 
 <locale name="sv_SE" full_name="Svenska">
-	<message key="admin.hostedJournals">Tillgängliga tidskrifter</message>
-	<message key="admin.settings.journalRedirect">Omdirigering</message>
-	<message key="admin.settings.options">Val</message>
-	<message key="admin.settings.usePaging">Dela upp tidskriftslistan på flera sidor, om det finns många tidskrifter på webbplatsen.</message>
-	<message key="admin.settings.journalRedirectInstructions">Anropningar till huvudsidan kommer omdirigeras till den här tidskriften. Detta kan vara lämpligt till exempel om webbplatsen endast är värd för en enda tidskrift.</message>
+	<message key="admin.hostedJournals">Tidskrifter på den här webbplatsen</message>
+	<message key="admin.settings.journalRedirect">Omdirigering av tidskrift</message>
+	<message key="admin.settings.options">Alternativ</message>
+	<message key="admin.settings.journalRedirectInstructions">Anrop till huvudsidan kommer att dirigeras om till den här tidskriften. Detta kan till exempel vara lämpligt om webbplatsen endast hyser en tidskrift.</message>
 	<message key="admin.settings.noJournalRedirect">Omdirigera inte</message>
-	<message key="admin.settings.journalsList">Tidskriftselement</message>
-	<message key="admin.settings.journalsList.description">Välj vilka tidskriftselement som ska visas för varje tidskrift på webbplatsens sida.</message>
-	<message key="admin.settings.journalsList.showThumbnail">Miniatyrbild av tidskriften</message>
-	<message key="admin.settings.journalsList.showTitle">Tidskriftens titel</message>
-	<message key="admin.settings.journalsList.showDescription">Beskrivning av tidskriften</message>
 	<message key="admin.settings.defaultMetricDescription">
-		Din OJS-installation är konfigurerad att mäta mer än en användarindikator. Statistik om användningen visas i olika sammanhang.
-		Det finns tillfällen då endast en användarstatistik kan användas, t.ex. för att visa en ordnad lista över mest använda artiklar eller för att rangordna
-		sökresultat. Välj vilken av de konfigurerade indikatorerna du vill ha som förvalt alternativ.
+		Din OJS-installation är konfigurerad för att registrera mer än ett användningsmått. Användningsstatistiken kommer att presenteras i flera sammanhang.
+		Det finns fall där endast ett användningsmått måste användas, t.ex. för att visa en sorterad lista över de mest använda bidragen eller för
+		att rangordna sökresultat. Välj ett av de konfigurerade värdena som default.
 	</message>
-	<message key="admin.languages.confirmDisable">Är du säker på att du vill inaktivera detta språk? Detta kan påverka tidksrifter som nu använder språket.</message>
-	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Det går för tillfället inte att ladda ner språkpaket från Public Knowledge Projects webbserver eftersom:</p>
+	<message key="admin.languages.confirmDisable">Är du säker på att du vill inaktivera detta språk/region? Det kan påverka tidskrifter som använder språket nu.</message>
+	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Det går för tillfället inte att ladda ned språkpaket från Public Knowledge Projects webbserver eftersom:</p>
 	<ul>
 		<li>Din server har inte eller tillåter inte körning av GNU "tar"-verktyget.</li>
 		<li>OJS kan inte ändra på språkets registerfil, vanligtvis "registry/locales.xml".</li>
 	</ul>
-<p>Språkpaket kan laddas ner manuellt från <a href="http://pkp.sfu.ca">PKP:s webbplats</a>.</p>]]></message>
+<p>Språkpaket kan laddas ned manuellt från <a href="http://pkp.sfu.ca">PKP:s webbplats</a>.</p>]]></message>
 
-	<message key="admin.languages.primaryLocaleInstructions">Det här kommer att vara förvalt språk för sidan och tillhörande tidskrifter.</message>
-	<message key="admin.languages.supportedLocalesInstructions">Välj språk som sidan ska stödja. Valda språk kommer finnas tillgängliga för sidans alla tidskrifter, och även finnas tillgänglig på sidans språkmeny, (som kan tas bort på enskilda tidskriftsspecifika sidor). Om endast ett språk är valt, kommer språkmenyn inte synas och utökade språkinställningar kommer inte finnas tillgängliga.</message>
-	<message key="admin.locale.maybeIncomplete">De markerade språken kan vara ofullständigt översatta.</message>
-	<message key="admin.languages.confirmUninstall">Är du säker på att du vill avinstallera språket? Det kan komma att påverka de tidskrifter som stödjs av språket.</message>
-	<message key="admin.languages.installNewLocalesInstructions">Välj ytterligare språk som ska stödjas i systemet. Språken måste installeras innan de kan användas av tidskrifterna. Se OJS-dokumentationen för information om hur man lägger till nya språk.</message>
-	<message key="admin.languages.downloadFailed">Nedladdnigen av språket misslyckades. Se felmeddelanden nedan för information.</message>
-	<message key="admin.languages.localeInstalled">"{$locale}" Språket har installerats.</message>
-	<message key="admin.languages.download">Ladda ner språk</message>
+	<message key="admin.languages.primaryLocaleInstructions">Det här kommer att vara förvalt språk för webbplatsen och samtliga tillhörande tidskrifter.</message>
+	<message key="admin.languages.supportedLocalesInstructions">Välj språk/regioner som webbplatsen ska stödja. Valda språk/regioner kommer finnas tillgängliga för sidans alla tidskrifter, och även finnas tillgänglig på sidans språkmeny, (som kan tas bort på enskilda tidskriftsspecifika sidor). Om endast ett språk är valt, kommer språkmenyn inte synas och utökade språkinställningar kommer inte finnas tillgängliga.</message>
+	<message key="admin.locale.maybeIncomplete">De markerade språken/regionerna kan vara ofullständigt översatta.</message>
+	<message key="admin.languages.confirmUninstall">Är du säker på att du vill avinstallera språket/regionen? Det kan komma att påverka de tidskrifter som stöds av språket/regionen.</message>
+	<message key="admin.languages.installNewLocalesInstructions">Välj ytterligare språk/regioner som ska stödjas i systemet. Språken/regionerna måste installeras innan de kan användas av tidskrifterna. Se OJS-dokumentationen för information om hur man lägger till nya språk/regioner.</message>
+	<message key="admin.languages.downloadFailed">Nedladdningen av språket/regionen misslyckades. Se felmeddelanden nedan för information.</message>
+	<message key="admin.languages.localeInstalled">Språket/regionen "{$locale}" har installerats.</message>
+	<message key="admin.languages.download">Ladda ned språk/region</message>
 	<message key="admin.languages.download.cannotOpen">Kan ej öppna språkbeskrivning från PKP:s hemsida.</message>
-	<message key="admin.languages.download.cannotModifyRegistry">Kan ej lägga till nya språk till språkregistreringsfilen, ex. "registry/locales.xml".</message>
+	<message key="admin.languages.download.cannotModifyRegistry">Kan ej lägga till nya språk/regioner till språkregistreringsfilen, vanligtvis "registry/locales.xml".</message>
 	<message key="admin.auth.ojs">OJS Användardatabas</message>
-	<message key="admin.auth.enableSyncProfiles">Aktivera användarprofilsynkronisering (om detta stöds av valideringsplug-in). Information om användarprofilen kommer uppdateras automatiskt från den externa källan när en användare loggar in, även profiländringar (inklusive lösenordsändringar) gjorda i OJS kommer automatiskt uppdateras på den externa källan. Om den här valmöjligheten inte är aktiverad så kommer OJS-profilinformation skötas separat från den externa källans profilinformation.</message>
-	<message key="admin.auth.enableSyncPasswords">Aktivera ändring av lösenord (om detta stöds av valideringsplug-in). Aktivering av den här valmöjligheten möjliggör för användaren att ändra sitt lösenord inifrån OJS och användningen av OJS "lost password"-funktion för att skaffa ett nytt lösenord. Dessa funktioner kommer inte vara tillgängliga för användare hos den här valideringskällan, om valmöjligheten inte är aktiverad.</message>
-	<message key="admin.auth.enableCreateUsers">Aktivera Skapa Användare (om detta stöds av valideringsplug-in). Användare skapade inom OJS på den här valideringskällan kommer automatiskt att läggas till den externa valideringskällan, om de inte redan finns där. Om den här källan är förvald valideringskälla så kommer OJS-konton skapade genom användarregistrering att läggas till den externa valideringskällan.</message>
+	<message key="admin.auth.enableSyncProfiles">Aktivera användarprofilsynkronisering (om detta stöds av det här pluginet för autentisering). Information om användarprofilen kommer uppdateras automatiskt från den externa källan när en användare loggar in, även profiländringar (inklusive lösenordsändringar) gjorda i OJS kommer automatiskt uppdateras på den externa källan. Om den här valmöjligheten inte är aktiverad så kommer OJS-profilinformation skötas separat från den externa källans profilinformation.</message>
+	<message key="admin.auth.enableSyncPasswords">Aktivera ändring av lösenord (om detta stöds av det här pluginet för autentisering). Aktivering av den här valmöjligheten möjliggör för användaren att ändra sitt lösenord inifrån OJS och användningen av OJS "glömt lösenord"-funktion för att skaffa ett nytt lösenord. Dessa funktioner kommer inte vara tillgängliga för användare hos den här autentiseringskällan, om valmöjligheten inte är aktiverad.</message>
+	<message key="admin.auth.enableCreateUsers">Aktivera användarskapande (om detta stöds av det här pluginet för autentisering). Användare skapade inom OJS på den här autentiseringskällan kommer automatiskt att läggas till den externa autentiseringskälla, om de inte redan finns där. Om den här källan är förvald autentiseringskälla kommer OJS-konton skapade genom användarregistrering att läggas till den externa autentiseringskällan.</message>
 	<message key="admin.systemVersion">OJS-version</message>
 	<message key="admin.systemConfiguration">OJS-konfiguration</message>
 	<message key="admin.systemConfigurationDescription"><![CDATA[OJS konfigurationsinställningar från <tt>config.inc.php</tt>.]]></message>
-	<message key="admin.journals.createInstructions">Du kommer automatiskt att läggas till som tidskriftsansvarig. När du har skapat en ny tidskrift kommer du att omdirigeras till tidskriftens inställningsguide där du kan göra de första inställningarna.</message>
+	<message key="admin.journals.createInstructions">Du kommer automatiskt att läggas till som tidskriftsansvarig för den här tidskriften. Efter du har skapat en ny tidskrift kommer du att omdirigeras till tidskriftens inställningsguide, där du kan göra de första inställningarna.</message>
 	<message key="admin.journals.journalSettings">Tidskriftsinställningar</message>
-	<message key="admin.journals.noneCreated">Inga tidskrifter har skapats.</message>
-	<message key="admin.contexts.confirmDelete">Är du säker på att du vill radera den här tidskriften och allt dess innehåll?</message>
+	<message key="admin.journals.noneCreated">Inga tidskrifter skapade.</message>
 	<message key="admin.contexts.create">Skapa tidskrift</message>
-	<message key="admin.journals.urlWillBe">Tidskriftens URL kommer att vara: {$sampleUrl}</message>
-	<message key="admin.contexts.form.titleRequired">En titel är obligatorisk.</message>
-	<message key="admin.contexts.form.pathRequired">Sökvägsfältet är obligatoriskt.</message>
+	<message key="admin.journals.urlWillBe">Det här ska vara ett enskilt, kort ord eller en akronym som identifierar tidskriften. Tidskriftens URL kommer att vara: {$sampleUrl}</message>
+	<message key="admin.contexts.form.titleRequired">En titel krävs.</message>
+	<message key="admin.contexts.form.pathRequired">En sökväg krävs.</message>
 	<message key="admin.contexts.form.pathAlphaNumeric">Sökvägen får endast innehålla alfanumeriska tecken, understreck, och bindestreck, samt måste inledas och avslutas med ett alfanumeriskt tecken.</message>
 	<message key="admin.contexts.form.pathExists">Vald sökväg används redan av en annan tidskrift.</message>
 	<message key="admin.journals.enableJournalInstructions">Gör tidskriften publik.</message>
 	<message key="admin.journals.journalDescription">Beskrivning av tidskriften</message>
-	<message key="admin.journal.pathImportInstructions">Existerande sökväg eller sökväg som ska skapas (ex. "ojs").</message>
-	<message key="admin.journals.importSubscriptions">Importera abonnemangsinformation</message>
-	<message key="admin.journals.transcode">Konvertera artikelns metadata med ISO8859-1</message>
+	<message key="admin.journal.pathImportInstructions">Existerande sökväg till tidskriften eller sökväg som ska skapas (t.ex. "ojs").</message>
+	<message key="admin.journals.importSubscriptions">Importera prenumerationer</message>
+	<message key="admin.journals.transcode">Konvertera artikelns metadata med ISO 8859-1</message>
 	<message key="admin.journals.redirect">Skapa kod för att omvandla OJS 1-URL:er till OJS 2-URL:er</message>
 	<message key="admin.journals.form.importPathRequired">Importerad sökväg är obligatorisk.</message>
 	<message key="admin.journals.importErrors">Importen misslyckades</message>
-	<message key="admin.mergeUsers">Lägg samman användare</message>
-	<message key="admin.mergeUsers.mergeUser">Lägg samman användare</message>
-	<message key="admin.mergeUsers.into.description">Välj användare hos vilken du ska tillämpa föregående användares författarskap, redaktörsskap, etc.</message>
-	<message key="admin.mergeUsers.from.description">Välj användare för sammanslagning med annat användarkonto (ex. när samma användare har två användarkonton). Det konto du har valt först kommer att raderas och dess manuskript kommer att placeras under det andra kontot.</message>
-	<message key="admin.mergeUsers.allUsers">Alla existerande användare</message>
-	<message key="admin.mergeUsers.confirm">Är du säker på att du vill lägga samman användarkontot: "{$oldUsername}" med: "{$newUsername}"? Användarkontot: "{$oldUsername}" kommer då att raderas. Åtgärden kan inte ångras.</message>
-	<message key="admin.mergeUsers.noneEnrolled">Inga existerande användare.</message>
-	
-	<!-- Kategorier -->
+	<message key="admin.mergeUsers">Slå ihop användare</message>
+	<message key="admin.mergeUsers.mergeUser">Slå ihop användare</message>
+	<message key="admin.mergeUsers.into.description">Välj användare som du ska tillskriva den tidigare användarens författarskap, redaktionsuppgifter, etc., till.</message>
+	<message key="admin.mergeUsers.from.description">Välj en användare (eller flera) som ska slås ihop med ett annat användarkonto (t.ex. när någon har två användarkonton). Det först valda kontot kommer att raderas och alla bidrag, uppdrag, etc. kommer att knytas till det andra kontot.</message>
+	<message key="admin.mergeUsers.allUsers">Alla registrerade användare</message>
+	<message key="admin.mergeUsers.confirm">Är du säker på att du vill slå ihop kontot med användarnamnet "{$oldUsername}" med kontot med användarnamnet "{$newUsername}"? Kontot med användarnamnet "{$oldUsername}" kommer inte längre att existera efteråt. Åtgärden kan inte ångras.</message>
+	<message key="admin.mergeUsers.noneEnrolled">Inga registrerade användare.</message>
+
+	<!-- Categories -->
 	<message key="admin.categories">Kategorier</message>
-	<message key="admin.categories.enable.description">Webbplatsens administratör kan här skapa ett antal kategorier för att sortera stora uppsättningar tidskrifter. Tidskriftsadministratörer kan sedan välja bland dessa kategorier för varje tidskrift, och läsare kan bläddra i tidskriftssamlingar per kategori.</message>
-	<message key="admin.categories.disableCategories">Sortera inte tidskrifter efter kategorier.</message>
-	<message key="admin.categories.enableCategories">Tillåt tidskriftsadministratörer att sortera tidskrifter i kategorier.</message>
+	<message key="admin.categories.enable.description">Webbplatsens administratör kan här skapa ett antal kategorier för att ordna stora uppsättningar tidskrifter. Tidskriftsansvariga för varje tidskrift kan sedan välja bland dessa kategorier och läsare kan bläddra i tidskriftssamlingar per kategori.</message>
+	<message key="admin.categories.disableCategories">Ordna inte tidskrifter i kategorier.</message>
+	<message key="admin.categories.enableCategories">Tillåt tidskriftsadministratörer att ordna tidskrifter i kategorier.</message>
 	<message key="admin.categories.editTitle">Redigera kategori</message>
 	<message key="admin.categories.createTitle">Skapa kategori</message>
 	<message key="admin.categories.create">Skapa en ny kategori</message>
-	<message key="admin.categories.noneCreated">Inga kategorier har skapats.</message>
+	<message key="admin.categories.noneCreated">Inga kategorier skapade.</message>
 	<message key="admin.categories.confirmDelete">Är du säker på att du vill radera denna kategori?</message>
 	<message key="admin.categories.name">Namn</message>
-	<message key="admin.categories.nameRequired">Ett kategorinamn är obligatoriskt.</message>
+	<message key="admin.categories.nameRequired">Det krävs ett kategorinamn.</message>
 	<message key="admin.presses.createInstructions">Du kommer automatiskt att läggas till som tidskriftsansvarig. När du har skapat en ny tidskrift kommer du att omdirigeras till tidskriftens inställningsguide där du kan göra de första inställningarna.</message>
-	<message key="admin.scheduledTask.subscriptionExpiryReminder">Påminnelse om att abonnemang löper ut</message>
-	<message key="admin.scheduledTask.openAccessNotification">Open access-meddelande</message>
+	<message key="admin.scheduledTask.subscriptionExpiryReminder">Påminnelse om att prenumeration löper ut</message>
+	<message key="admin.scheduledTask.openAccessNotification">Open access-avisering</message>
 	<message key="admin.scheduledTask.reviewReminder">Granskningspåminnelse</message>
 </locale>

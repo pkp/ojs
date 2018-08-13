@@ -1,15 +1,17 @@
 {**
  * templates/frontend/objects/issue_summary.tpl
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @brief View of an Issue which displays a summary for use in lists
  *
  * @uses $issue Issue The issue
  *}
+{if $issue->getShowTitle()}
 {assign var=issueTitle value=$issue->getLocalizedTitle()}
+{/if}
 {assign var=issueSeries value=$issue->getIssueSeries()}
 {assign var=issueCover value=$issue->getLocalizedCoverImageUrl()}
 
@@ -28,7 +30,7 @@
 			{$issueSeries|escape}
 		{/if}
 	</a>
-	{if $issueTitle}
+	{if $issueTitle && $issueSeries}
 		<div class="series">
 			{$issueSeries|escape}
 		</div>

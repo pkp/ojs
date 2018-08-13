@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/importexport/crossref/locale/sr_RS@latin/locale.xml
+  *
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Serbian_(sr_RS)
+  * Localization strings for the sr_RS@latin (Srpski) locale.
+    -->
+
+<locale name="sr_RS@latin" full_name="Srpski">
+	<message key="plugins.importexport.crossref.displayName">CrossRef XML dodatak za izvoz</message>
+	<message key="plugins.importexport.crossref.description">Izvezi metapodatke članaka u CrossRef XML format.</message>
+	<message key="plugins.importexport.crossref.cliUsage">Korišćenje: 
+{$scriptName} {$pluginName} [xmlFileName] [journal_path] članci [articleId1] [articleId2] ...
+{$scriptName} {$pluginName} [xmlFileName] [journal_path] broj [issueId]</message>
+	<message key="plugins.importexport.crossref.requirements">Zahtevi</message>
+	<message key="plugins.importexport.crossref.requirements.satisfied">Svi zahtevi za rad dodatka su ispunjeni</message>
+	<message key="plugins.importexport.crossref.error.publisherNotConfigured"><![CDATA[Iuzdavač časopisa nije podešen! Morate dodati izdavačku instituciju na <a href="{$journalSettingsUrl}" target="_blank">stranici podešavanja časopisa</a>.]]></message>
+	<message key="plugins.importexport.crossref.error.issnNotConfigured"><![CDATA[ISSN nije podešen, morate ga dodati na <a href="{$journalSettingsUrl}" target="_blank">stranici podešavanja časopisa</a>.]]></message>
+	<message key="plugins.importexport.crossref.error.noDOIContentObjects">Članci nisu obeleženi za dodavanje DOI javnog identifikatora pa stoga nema materijala za deponovanje ili izvoz.</message>
+	<message key="plugins.importexport.crossref.settings.depositorIntro">Sledeći elementi su neophodni za supešno deponovanje kod CrossRef-a.</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorName">Ime deponenta</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorEmail">Imejl deponenta</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorNameRequired">Unesite ime deponenta.</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorEmailRequired">Unesite imejl adresu deponenta.</message>
+	<message key="plugins.importexport.crossref.settings.form.username">Korisničko ime</message>
+	<message key="plugins.importexport.crossref.settings.form.usernameRequired">Unesite korisničko ime koje je registrovano kod CrossRef-a.</message>
+	<message key="plugins.importexport.crossref.settings.form.automaticRegistration.description">OJS će automatski deponovati DOI-je kod CrossRef-a. Imajte na umu da će ovo potrajati neko vreme nakon procesa objavljivanja. U svakom momentu možete proveriti neregistrovane DOI-je.</message>
+	<message key="plugins.importexport.crossref.settings.form.testMode.description">Koristite CrossRef test API (okruženje za testiranje) za deponovanje DOI-ja. Ne zaboravite da isključite ovu opciju u proizvodnom okruženju.</message>
+	<message key="plugins.importexport.crossref.issues.description">Napomena: samo brojevi (ne i članci) će ući u opciju za izvoz/deponovanje.</message>
+	<message key="plugins.importexport.crossref.status.submitted">Poslato</message>
+	<message key="plugins.importexport.crossref.status.completed">Deponovano</message>
+	<message key="plugins.importexport.crossref.status.failed">Neuspešno</message>
+	<message key="plugins.importexport.crossref.status.registered">Aktivno</message>
+	<message key="plugins.importexport.crossref.status.markedRegistered">Obeleži kao aktivno</message>
+	<message key="plugins.importexport.crossref.action.export">Preuzmi XML</message>
+	<message key="plugins.importexport.crossref.action.markRegistered">Obeleži aktivno</message>
+	<message key="plugins.importexport.crossref.action.register">Pošalji</message>
+	<message key="plugins.importexport.crossref.action.checkStatus">Proveri status</message>
+	<message key="plugins.importexport.crossref.senderTask.name">CrossRef zadatak automatske registracije</message>
+	<message key="plugins.importexport.crossref.notification.failed"><![CDATA[DOI nije uspešno registrovan. Idite na Alatke > Uvoz/Izvoz > CrossRef XML Export Plugin da vidite neuspešna deponovanja.]]></message>
+	<message key="plugins.importexport.crossref.cliError">GREŠKA:</message>
+	<message key="plugins.importexport.crossref.register.error.mdsError">Slanje nije uspešno! Server za registraciju je vratio grešku: '{$param}'.</message>
+	<message key="plugins.importexport.crossref.register.success">Slanje uspešno!</message>
+	<message key="plugins.importexport.crossref.export.error.issueNotFound">Ni jedna jedinica se ne poklapa sa specifikovanim ID-jem jedinice "{$issueId}".</message>
+	<message key="plugins.importexport.crossref.export.error.articleNotFound">Ni jedan članak se ne poklapa sa specifikovanim ID-jem članka "{$articleId}".</message>
+	<message key="plugins.importexport.crossref.statusLegend"><![CDATA[<p>Statusi deponovanja:</p>
+		<p>
+		- Nije deponovano: nema pokušaja deponovanja za ovaj .<br />
+		- Poslato: DOI je poslat na deponovanje.<br />
+		- Deponovano: DOI je deponovan kod Crossref-a, ali još nije aktivan.<br />
+		- Aktivan: DOI je deponovan i uspešno se iščitava.<br />
+		- Neuspešno: Deponovanje DOI-ja nije uspelo.<br />
+		- Označi kao aktivno: DOI je ručno označen kao aktivan.
+		</p>
+		<p>Samo je status poslednjeg deponovanja prikazan.</p>
+		<p>Ukoliko deponovanje ne uspe, rešite problem i pokušajte ponovno deponovanje DOI-ja.</p>]]></message>
+</locale>

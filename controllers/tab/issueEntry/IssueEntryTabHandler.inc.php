@@ -3,8 +3,8 @@
 /**
  * @file controllers/tab/issueEntry/IssueEntryTabHandler.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IssueEntryTabHandler
@@ -130,6 +130,13 @@ class IssueEntryTabHandler extends PublicationEntryTabHandler {
 			$notificationManager = new NotificationManager();
 			$notificationKey = 'notification.savedIssueMetadata';
 			$notificationManager->createTrivialNotification($user->getId(), NOTIFICATION_TYPE_SUCCESS, array('contents' => __($notificationKey)));
+			$notificationManager->updateNotification(
+				$request,
+				array(NOTIFICATION_TYPE_PUBLICATION_SCHEDULED),
+				null,
+				ASSOC_TYPE_SUBMISSION,
+				$submission->getId()
+			);
 			// Display assign public identifiers form
 			$assignPubIds = false;
 			$pubIdPlugins = PluginRegistry::loadCategory('pubIds', true);
@@ -144,14 +151,16 @@ class IssueEntryTabHandler extends PublicationEntryTabHandler {
 				$formTemplate = $this->getAssignPublicIdentifiersFormTemplate();
 				$formParams = array('stageId' => $stageId);
 				$assignPublicIdentifiersForm = new AssignPublicIdentifiersForm($formTemplate, $submission, true, '', $formParams);
-				$assignPublicIdentifiersForm->initData($args, $request);
-				return new JSONMessage(true, $assignPublicIdentifiersForm->fetch($request));
+				$assignPublicIdentifiersForm->initData();
+				$json = new JSONMessage(true, $assignPublicIdentifiersForm->fetch($request));
 			} else {
-				return new JSONMessage();
+				$json = new JSONMessage();
 			}
+			$json->setEvent('dataChanged');
 		} else {
-			return new JSONMessage(true, $form->fetch($request));
+			$json = new JSONMessage(true, $form->fetch($request));
 		}
+		return $json;
 	}
 
 	/**
@@ -167,7 +176,7 @@ class IssueEntryTabHandler extends PublicationEntryTabHandler {
 		$formTemplate = $this->getAssignPublicIdentifiersFormTemplate();
 		$formParams = array('stageId' => $stageId);
 		$assignPublicIdentifiersForm = new AssignPublicIdentifiersForm($formTemplate, $submission, true, '', $formParams);
-		// Asign pub ids
+		// Assign pub ids
 		$assignPublicIdentifiersForm->readInputData();
 		$assignPublicIdentifiersForm->execute($request, true);
 		return new JSONMessage();
@@ -202,7 +211,22 @@ class IssueEntryTabHandler extends PublicationEntryTabHandler {
 		$stageId = $this->getStageId();
 		$identifiersForm = new PublicIdentifiersForm($submission, $stageId, array('displayedInContainer' => true));
 		$identifiersForm->clearPubId($request->getUserVar('pubIdPlugIn'));
-		return new JSONMessage(true);
+		$json = new JSONMessage(true);
+		$json->setEvent('containerReloadRequested', array(
+			'tabsUrl' => $request->getRouter()->getDispatcher()->url(
+				$request,
+				ROUTE_COMPONENT,
+				null,
+				'modals.submissionMetadata.IssueEntryHandler',
+				'fetch',
+				null,
+				array(
+					'submissionId' => $submission->getId(),
+					'stageId' => $stageId
+				)
+			)
+		));
+		return $json;
 	}
 
 	/**

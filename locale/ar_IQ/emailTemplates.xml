@@ -4,8 +4,8 @@
 <!--
   * locale/ar_IQ/emailTemplates.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
   * Localized email templates XML file.
@@ -23,31 +23,6 @@
 {$principalContactSignature}]]></body>
 		<description>رسالة البريد الالكتروني هذه مرسلة إلى المستخدمين المسجلين الذين اختاروا استلام إشعار من هذا النوع عبر البريد الالكتروني.</description>
 	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST">
-		<subject>إشعار جديد من {$siteTitle}</subject>
-		<body><![CDATA[لديك إشعار جديد من {$siteTitle}:<br />
---<br />
-{$notificationContents}<br />
-<br />
-الرابط: {$url}<br />
---<br />
-<br />
-لو أردت إيقاف الإشعارات عبر البريد الالكتروني، لطفاً أنقر الرابط {$unsubscribeLink}.<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>هذه الرسالة مرسلة إلى المستخدمين غير المسجلين في قائمة الإشعار البريدي.</description>
-	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
-		<subject>مرحباً بك في قائمة المراسلة للموقع {$siteTitle} !</subject>
-		<body><![CDATA[لقد سجلت دخولك لتحصل على إشعارات من {$siteTitle}.<br />
-<br />
-لطفاً، أنقر هذا الرابط لتأكيد طلبك ولتضيف عنوان بريدك الالكتروني إلى قائمة المراسلة: {$confirmLink}<br />
-<br />
-لو أردت إيقاف الإشعارات عبر البريد الالكتروني، لطفاً أنقر الرابط {$unsubscribeLink}.<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>هذه الرسالة مرسلة إلى المستخدمين غير المسجلين الذين سجلوا تواً في قائمة الإشعار البريدي.</description>
-	</email_text>
 	<email_text key="PASSWORD_RESET_CONFIRM">
 		<subject>تأكيد إعادة تعيين كلمة المرور</subject>
 		<body><![CDATA[لقد تلقينا طلباً لإعادة تعيين كلمة مرورك في الموقع {$siteTitle}.<br />
@@ -64,6 +39,7 @@
 		<body><![CDATA[كلمة مرورك أُعيد تعيينها بنجاح لتتمكن من الولوج إلى موقع {$siteTitle}. لطفاً، إحتفظ باسم الدخول وكلمة المرور المبينين أدناه كونهما ضروريان لمتابعة كل أعمالك في موقع المجلة.<br />
 <br />
 اسم الدخول: {$username}<br />
+كلمة المرور: {$password}<br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>هذه الرسالة معنونة إلى المستخدمين المسجلين الذي تمكنوا من إعادة تعيين كلمات مرورهم بنجاح متبعين الخطوات الموضحة في رسالة إعادة تعيين كلمة المرور.</description>
@@ -87,7 +63,7 @@
 <br />
 قمت بإنشاء حساب في {$contextName}، لكن قبل شروعك باستعماله، عليك تأكيد عنوان بريدك الالكتروني، وكل ما عليك القيام به الآن، اتباع الرابط أدناه:<br />
 <br />
-<a href="{$activateUrl}">{$activateUrl}</a><br />
+{$activateUrl}<br />
 <br />
 شكراً لك.<br />
 {$principalContactSignature}]]></body>
@@ -110,7 +86,7 @@
 		<subject>صدر عدد جديد من المجلة</subject>
 		<body><![CDATA[القراء الأعزة:<br />
 <br />
-{$contextName} أصدرت تواً عددها الأخير في موقعها <a href="{$contextUrl}">{$contextUrl}</a>. نحن ندعوكم إلى الاطلاع على جدول محتويات العدد، ومن ثم زيارة موقعنا لمتابعة المقالات العلمية التي تحوز على اهتمامكم.<br />
+{$contextName} أصدرت تواً عددها الأخير في موقعها {$contextUrl}. نحن ندعوكم إلى الاطلاع على جدول محتويات العدد، ومن ثم زيارة موقعنا لمتابعة المقالات العلمية التي تحوز على اهتمامكم.<br />
 <br />
 نشكر لكم إهتمامكم الدائم بنتاجاتنا؛<br />
 {$editorialContactSignature}]]></body>
@@ -120,11 +96,11 @@
 		<subject>طلب أرشفة لمجلة {$contextName}</subject>
 		<body><![CDATA[عزيزنا [أمين مكتبة الجامعة]<br />
 <br />
-{$contextName} &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt;، هي مجلة علمية فيها أحد أعضاء مؤسستك، والمدعو [اسم العضو]، يعمل بصفة [صفة العضو]. وهذه المجلة تتطلع إلى تأسيس أرشيف متوافق مع نوع LOCKSS (Lots of Copies Keep Stuff Safe) مع هذه المكتبة وغيرها من مكتبات الجامعات الأخرى.<br />
+{$contextName} &amp;lt;{$contextUrl}&amp;gt;، هي مجلة علمية فيها أحد أعضاء مؤسستك، والمدعو [اسم العضو]، يعمل بصفة [صفة العضو]. وهذه المجلة تتطلع إلى تأسيس أرشيف متوافق مع نوع LOCKSS (Lots of Copies Keep Stuff Safe) مع هذه المكتبة وغيرها من مكتبات الجامعات الأخرى.<br />
 <br />
 [وصف موجز للمجلة]<br />
 <br />
-والرابط الخاص ببيان الناشر المتعلق بأرشيف LOCKSS لمجلتنا هو: <a href="{$contextUrl}">{$contextUrl}</a>/gateway/lockss<br />
+والرابط الخاص ببيان الناشر المتعلق بأرشيف LOCKSS لمجلتنا هو: {$contextUrl}/gateway/lockss<br />
 <br />
 نحن نتفهم أنك مشترك سابقاً في LOCKSS. إن كان بإمكاننا تزويدك بأي بيانات وصفية إضافية لغرض تسجيل مجلتنا في نسختك من LOCKSS، فإننا سنكون سعداء بتوفيرها لك.<br />
 <br />
@@ -136,7 +112,7 @@
 		<subject>إلتماس أرشفة لمجلة {$contextName}</subject>
 		<body><![CDATA[عزيزنا [أمين مكتبة الجامعة<br />
 <br />
-{$contextName} &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt;، هي مجلة علمية فيها أحد أعضاء مؤسستك، والمدعو [اسم العضو]، يعمل بصفة [صفة العضو]. وهذه المجلة تتطلع إلى تأسيس أرشيف متوافق مع نوع LOCKSS (Lots of Copies Keep Stuff Safe) مع هذه المكتبة وغيرها من مكتبات الجامعات الأخرى.<br />
+{$contextName} &amp;lt;{$contextUrl}&amp;gt;، هي مجلة علمية فيها أحد أعضاء مؤسستك، والمدعو [اسم العضو]، يعمل بصفة [صفة العضو]. وهذه المجلة تتطلع إلى تأسيس أرشيف متوافق مع نوع LOCKSS (Lots of Copies Keep Stuff Safe) مع هذه المكتبة وغيرها من مكتبات الجامعات الأخرى.<br />
 <br />
 [وصف موجز للمجلة]<br />
 <br />
@@ -164,24 +140,14 @@
 	</email_text>
 	<email_text key="SUBMISSION_ACK_NOT_USER">
 		<subject>إشعار طلب التقديم</subject>
-		<body>
-			<![CDATA[مرحباً، <br />
+		<body><![CDATA[مرحباً، <br />
 <br />
 إن {$submitterName} قد تقدم بطلب لنشر المؤلَّف &quot;{$submissionTitle}&quot; إلى {$contextName}. <br />
 <br />
 إن كان لديك أي استفسارات، لطفاً تواصل معي. شكراً على اعتبارك هذه المجلة جديرة بعملك.<br />
 <br />
-{$editorialContactSignature}]]>
-		</body>
-		<description>عند تمكين هذه الرسالة، سيتم إرسالها تلقائياً إلى المؤلفين الآخرين الذين لا يملكون حسابات في نظام المجلات المفتوحة المعني خلال مرحلة تقديم الطلب.</description>
-	</email_text>
-	<email_text key="SUBMISSION_UNSUITABLE">
-		<subject>طلب نشر غير متوافق مع المجلة</subject>
-		<body><![CDATA[{$authorName}:<br />
-<br />
-إن التحكيم الأولي للمؤلَّف الموسوم &quot;{$submissionTitle}&quot; أظهر جلياً أنه لا يتناسب مع محاور التخصصات العلمية في {$contextName}. أوصيك بمراجعة توصيف هذه المجلة المبين في صفحة (عن المجلة)، فضلاً عن الاطلاع على محتوياتها لتتعرف أكثر على نوعية الأعمال التي ننشرها. إذ عندها، قد تأخذ في الحسبان تقديم طلبك للنشر في مجلة علمية أخرى مناسبة أكثر.<br />
-<br />
 {$editorialContactSignature}]]></body>
+		<description>عند تمكين هذه الرسالة، سيتم إرسالها تلقائياً إلى المؤلفين الآخرين الذين لا يملكون حسابات في نظام المجلات المفتوحة المعني خلال مرحلة تقديم الطلب.</description>
 	</email_text>
 	<email_text key="EDITOR_ASSIGN">
 		<subject>تعيين المحرر</subject>
@@ -202,13 +168,13 @@
 <br />
 كلي ثقة بأنك ستكون محكماً متميزاً للمؤلَّف الموسوم &quot;{$submissionTitle},&quot; والذي أُرسل طلب لنشره إلى {$contextName}. إن ملخص موضوعه مبين أدناه، وأنا أرجو أنك ستأخذ على عاتقك إنجاز هذه المهمة لمجلتنا.<br />
 <br />
-لطفاً، أدخل إلى موقع المجلة حتى يوم {$responseDueDate} لتبين لنا فيما لو أنك موافق على هذا التحكيم أم لا، كما يمكنك أيضاً عبر الرابط أدناه الوصول إلى متعلقات طلب النشر المذكور، وتثبيت تقييمك له وملاحظاتك بشأنه. الرابط هو: <a href="{$contextUrl}">{$contextUrl}</a><br />
+لطفاً، أدخل إلى موقع المجلة حتى يوم {$responseDueDate} لتبين لنا فيما لو أنك موافق على هذا التحكيم أم لا، كما يمكنك أيضاً عبر الرابط أدناه الوصول إلى متعلقات طلب النشر المذكور، وتثبيت تقييمك له وملاحظاتك بشأنه. الرابط هو: {$contextUrl}<br />
 <br />
 أما التحكيم نفسه، فإن موعده النهائي سيكون: {$reviewDueDate}.<br />
 <br />
-إن لم يكن اسم الدخول وكلمة المرور متوفرين بين يديك لتتمكن من الولوج إلى موقع المجلة، بإمكانك اتباع الرابط أدناه لإعادة تعيين كلمة مرورك (التي عندها ستُرسل إليك مع اسم الدخول) عبر البريد الالكتروني. <a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
+إن لم يكن اسم الدخول وكلمة المرور متوفرين بين يديك لتتمكن من الولوج إلى موقع المجلة، بإمكانك اتباع الرابط أدناه لإعادة تعيين كلمة مرورك (التي عندها ستُرسل إليك مع اسم الدخول) عبر البريد الالكتروني. {$passwordResetUrl}<br />
 <br />
-رابط الطلب: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+رابط الطلب: {$submissionReviewUrl}<br />
 <br />
 نشكر لك اهتمامك بالتماسنا هذا.<br />
 <br />
@@ -226,13 +192,13 @@
 <br />
 كلي ثقة بأنك ستكون محكماً متميزاً للمؤلَّف. إن ملخص موضوعه مبين أدناه، وأنا أرجو أنك ستأخذ على عاتقك إنجاز هذه المهمة لمجلتنا.<br />
 <br />
-لطفاً، أدخل إلى موقع المجلة لتبين لنا فيما لو أنك موافق على هذا التحكيم أم لا، كما يمكنك أيضاً عبر الرابط أدناه الوصول إلى متعلقات طلب النشر المذكور، وتثبيت تقييمك له وملاحظاتك بشأنه. الرابط هو: <a href="{$contextUrl}">{$contextUrl}</a><br />
+لطفاً، أدخل إلى موقع المجلة لتبين لنا فيما لو أنك موافق على هذا التحكيم أم لا، كما يمكنك أيضاً عبر الرابط أدناه الوصول إلى متعلقات طلب النشر المذكور، وتثبيت تقييمك له وملاحظاتك بشأنه. الرابط هو: {$contextUrl}<br />
 <br />
 أما التحكيم نفسه، فإن موعده النهائي سيكون: {$reviewDueDate}.<br />
 <br />
-إن لم يكن اسم الدخول وكلمة المرور متوفرين بين يديك لتتمكن من الولوج إلى موقع المجلة، بإمكانك اتباع الرابط أدناه لإعادة تعيين كلمة مرورك (التي عندها ستُرسل إليك مع اسم الدخول) عبر البريد الالكتروني. <a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
+إن لم يكن اسم الدخول وكلمة المرور متوفرين بين يديك لتتمكن من الولوج إلى موقع المجلة، بإمكانك اتباع الرابط أدناه لإعادة تعيين كلمة مرورك (التي عندها ستُرسل إليك مع اسم الدخول) عبر البريد الالكتروني. {$passwordResetUrl}<br />
 <br />
-رابط الطلب: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+رابط الطلب: {$submissionReviewUrl}<br />
 <br />
 نشكر لك اهتمامك بالتماسنا هذا.<br />
 <br />
@@ -253,7 +219,7 @@
 <br />
 أما التحكيم نفسه، فإن موعده النهائي سيكون: {$reviewDueDate}.<br />
 <br />
-رابط الطلب: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+رابط الطلب: {$submissionReviewUrl}<br />
 <br />
 نشكر لك اهتمامك بالتماسنا هذا.<br />
 <br />
@@ -275,7 +241,7 @@
 <br />
 أما التحكيم نفسه، فإن موعده النهائي سيكون: {$reviewDueDate}.<br />
 <br />
-رابط الطلب: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+رابط الطلب: {$submissionReviewUrl}<br />
 <br />
 نشكر لك اهتمامك بالتماسنا هذا.<br />
 <br />
@@ -313,13 +279,13 @@
 <br />
 بالنظر إلى التنقيحات المؤشرة على النسخة السابقة من المؤلَّف، قدم المؤلف/المؤلفون الآن نسخة منقحة من أوراقهم. نكون شاكرين لتعاونك معنا في تقييمها.<br />
 <br />
-لطفاً، أدخل إلى موقع المجلة حتى يوم {$responseDueDate} لتبين لنا فيما لو أنك موافق على هذا التحكيم أم لا، كما يمكنك أيضاً عبر الرابط أدناه الوصول إلى متعلقات طلب النشر المذكور، وتثبيت تقييمك له وملاحظاتك بشأنه. الرابط هو: <a href="{$contextUrl}">{$contextUrl}</a><br />
+لطفاً، أدخل إلى موقع المجلة حتى يوم {$responseDueDate} لتبين لنا فيما لو أنك موافق على هذا التحكيم أم لا، كما يمكنك أيضاً عبر الرابط أدناه الوصول إلى متعلقات طلب النشر المذكور، وتثبيت تقييمك له وملاحظاتك بشأنه. الرابط هو: {$contextUrl}<br />
 <br />
 أما التحكيم نفسه، فإن موعده النهائي سيكون: {$reviewDueDate}.<br />
 <br />
-إن لم يكن اسم الدخول وكلمة المرور متوفرين بين يديك لتتمكن من الولوج إلى موقع المجلة، بإمكانك اتباع الرابط أدناه لإعادة تعيين كلمة مرورك (التي عندها ستُرسل إليك مع اسم الدخول) عبر البريد الالكتروني. <a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
+إن لم يكن اسم الدخول وكلمة المرور متوفرين بين يديك لتتمكن من الولوج إلى موقع المجلة، بإمكانك اتباع الرابط أدناه لإعادة تعيين كلمة مرورك (التي عندها ستُرسل إليك مع اسم الدخول) عبر البريد الالكتروني. {$passwordResetUrl}<br />
 <br />
-رابط الطلب: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+رابط الطلب: {$submissionReviewUrl}<br />
 <br />
 نشكر لك اهتمامك بالتماسنا هذا.<br />
 <br />
@@ -342,7 +308,7 @@
 <br />
 أما التحكيم نفسه، فإن موعده النهائي سيكون: {$reviewDueDate}.<br />
 <br />
-رابط الطلب: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+رابط الطلب: {$submissionReviewUrl}<br />
 <br />
 نشكر لك اهتمامك بالتماسنا هذا.<br />
 <br />
@@ -420,9 +386,9 @@
 <br />
 هذا مجرد تذكير لجنابكم الكريم بشأن تحكيمكم للمؤلَّف الموسوم &quot;{$submissionTitle},&quot; والمرسل إلى {$contextName}. نحن نأمل الحصول منكم على هذا التحكيم حتى يوم {$reviewDueDate}، ونرجو أن نتلقاه منكم حالماً تكونوا جاهزين لإرساله.<br />
 <br />
-إن لم يكن اسم الدخول وكلمة المرور متوفرين بين يديك لتتمكن من الولوج إلى موقع المجلة، بإمكانك اتباع الرابط أدناه لإعادة تعيين كلمة مرورك (التي عندها ستُرسل إليك مع اسم الدخول) عبر البريد الالكتروني. <a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
+إن لم يكن اسم الدخول وكلمة المرور متوفرين بين يديك لتتمكن من الولوج إلى موقع المجلة، بإمكانك اتباع الرابط أدناه لإعادة تعيين كلمة مرورك (التي عندها ستُرسل إليك مع اسم الدخول) عبر البريد الالكتروني. {$passwordResetUrl}<br />
 <br />
-رابط الطلب: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+رابط الطلب: {$submissionReviewUrl}<br />
 <br />
 لطفاً، أكدوا لنا قدرتكم على إكمال هذه المساهمة الحيوية في أعمال مجلتنا. إنني أتطلع إلى ردكم في أقرب وقت.<br />
 <br />
@@ -435,7 +401,7 @@
 <br />
 هذا مجرد تذكير لجنابكم الكريم بشأن تحكيمكم للمؤلَّف الموسوم &quot;{$submissionTitle},&quot; والمرسل إلى {$contextName}.  نحن نأمل الحصول منكم على هذا التحكيم حتى يوم {$reviewDueDate}، ونرجو أن نتلقاه منكم حالماً تكونوا جاهزين لإرساله.<br />
 <br />
-رابط الطلب: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+رابط الطلب: {$submissionReviewUrl}<br />
 <br />
 لطفاً، أكدوا لنا قدرتكم على إكمال هذه المساهمة الحيوية في أعمال مجلتنا. إنني أتطلع إلى ردكم في أقرب وقت.<br />
 <br />
@@ -448,9 +414,9 @@
 <br />
 هذا مجرد تذكير لجنابكم الكريم بشأن تحكيمكم للمؤلَّف الموسوم &quot;{$submissionTitle},&quot; والمرسل إلى {$contextName}. نحن نأمل الحصول منكم على هذا التحكيم حتى يوم {$reviewDueDate} وهذه الرسالة مولدة آلياً نظراً لتجاوز ذلك التاريخ. مع ذلك، يسرنا أن نتلقاه منكم حالماً تكونوا جاهزين لإرساله.<br />
 <br />
-إن لم يكن اسم الدخول وكلمة المرور متوفرين بين يديك لتتمكن من الولوج إلى موقع المجلة، بإمكانك اتباع الرابط أدناه لإعادة تعيين كلمة مرورك (التي عندها ستُرسل إليك مع اسم الدخول) عبر البريد الالكتروني. <a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
+إن لم يكن اسم الدخول وكلمة المرور متوفرين بين يديك لتتمكن من الولوج إلى موقع المجلة، بإمكانك اتباع الرابط أدناه لإعادة تعيين كلمة مرورك (التي عندها ستُرسل إليك مع اسم الدخول) عبر البريد الالكتروني. {$passwordResetUrl}<br />
 <br />
-رابط الطلب: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+رابط الطلب: {$submissionReviewUrl}<br />
 <br />
 لطفاً، أكدوا لنا قدرتكم على إكمال هذه المساهمة الحيوية في أعمال مجلتنا. إنني أتطلع إلى ردكم في أقرب وقت.<br />
 <br />
@@ -463,7 +429,7 @@
 <br />
 هذا مجرد تذكير لجنابكم الكريم بشأن تحكيمكم للمؤلَّف الموسوم &quot;{$submissionTitle},&quot; والمرسل إلى {$contextName}. نحن نأمل الحصول منكم على هذا التحكيم حتى يوم {$reviewDueDate}،وهذه الرسالة مولدة آلياً نظراً لتجاوز ذلك التاريخ. مع ذلك، يسرنا أن نتلقاه منكم حالماً تكونوا جاهزين لإرساله.<br />
 <br />
-رابط الطلب: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+رابط الطلب: {$submissionReviewUrl}<br />
 <br />
 لطفاً، أكدوا لنا قدرتكم على إكمال هذه المساهمة الحيوية في أعمال مجلتنا. إنني أتطلع إلى ردكم في أقرب وقت.<br />
 <br />
@@ -544,6 +510,16 @@
 ]]></body>
 		<description>هذه الرسالة يعنونها محرر القسم إلى طالب النشر يعلمه فيها بالقرار النهائي لهيئة التحرير بشأن طلبه، ملخصه (رفض الطلب).</description>
 	</email_text>
+	<email_text key="EDITOR_RECOMMENDATION">
+		<subject>توصيات المحرر</subject>
+		<body><![CDATA[{$editors}:<br />
+<br />
+إن التوصيات المتعلقة بطلب النشر في {$contextName}، &quot;{$submissionTitle}&quot; هي: {$recommendation}<br />
+<br />
+{$editorialContactSignature}<br />
+]]></body>
+		<description>هذه الرسالة يعنونها المحرر المشارك في تقديم التوصيات أو محرر القسم إلى جهة التحرير المعنية باتخاذ القرار لإشعارها بالتوصية النهائية الخاصة بطلب نشر مقدم إلى المجلة.</description>
+	</email_text>
 	<email_text key="COPYEDIT_REQUEST">
 		<subject>إلتماس نسخة التدقيق</subject>
 		<body><![CDATA[{$participantName}:<br />
@@ -554,8 +530,8 @@
 3. إحفظ الملفات المدققة، ثم إرفعها إلى لوحة المدققات.<br />
 4. أعلم المحرر بأن جميع الملفات صارت جاهزة، وأن بالإمكان الشروع بعملية الإنتاج.<br />
 <br />
-رابط {$contextName}: <a href="{$contextUrl}">{$contextUrl}</a><br />
-رابط الطلب: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+رابط {$contextName}: {$contextUrl}<br />
+رابط الطلب: {$submissionUrl}<br />
 اسم الدخول: {$participantUsername}<br />
 <br />
 {$editorialContactSignature}]]></body>
@@ -571,8 +547,8 @@
 3. إرفع هذه الألواح إلى قسم ملفات الألواح.<br />
 4. أبلغ المحرر مستعملاً محاورات الإنتاج بأن الألواح الطباعية مرفوعة وجاهزة.<br />
 <br />
-{$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
-رابط الطلب: <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a><br />
+{$contextName} URL: {$contextUrl}<br />
+رابط الطلب: {$submissionLayoutUrl}<br />
 اسم الدخول: {$participantUsername}<br />
 <br />
 لو تعذر عليك تولي هذه المهمة حالياً أو كان لديك أية أسئلة، لطفاً لا تترد في مراسلتي. نشكر لك مساهمتك في هذه المجلة.<br />
@@ -593,7 +569,7 @@
 	</email_text>
 	<email_text key="EMAIL_LINK">
 		<subject>مقالة قد تكون مهمة</subject>
-		<body><![CDATA[لقد وجدت أن المقالة العلمية الموسومة &quot;{$submissionTitle}&quot; قد تحوز على إهتمامك، وهي من تأليف {$authorName} ومنشورة في المجلد {$volume}، العدد {$number} لسنة ({$year}) من {$contextName} على الرابط &quot;<a href="{$articleUrl}">{$articleUrl}</a>&quot;.]]></body>
+		<body><![CDATA[لقد وجدت أن المقالة العلمية الموسومة &quot;{$submissionTitle}&quot; قد تحوز على إهتمامك، وهي من تأليف {$authorName} ومنشورة في المجلد {$volume}، العدد {$number} لسنة ({$year}) من {$contextName} على الرابط &quot;{$articleUrl}&quot;.]]></body>
 		<description>قالب هذه الرسالة نموذج لما يرسله قارئ مسجل في موقع المجلة إلى أحد معارفه ملفتاً نظره إلى مقالة علمية أو بحث. تلك الخاصية متوافرة عبر أدوات القراءة وينبغي تفعيلها من قبل مدير موقع المجلة في صفحة إدارة أدوات القراءة.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_NOTIFY">
@@ -619,7 +595,7 @@
 		<subject>صدور عدد مجاني الآن</subject>
 		<body><![CDATA[قراءنا:<br />
 <br />
-{$contextName} قد أصدرت تواً عدداً مجانياً. نحن ندعوك لمراجعة جدول المحتويات هنا، ومن ثم زيارة موقعنا (<a href="{$contextUrl}">{$contextUrl}</a>) لتطلع على المواضيع والفقرات التي تحوز على إهتمامك.<br />
+{$contextName} قد أصدرت تواً عدداً مجانياً. نحن ندعوك لمراجعة جدول المحتويات هنا، ومن ثم زيارة موقعنا ({$contextUrl}) لتطلع على المواضيع والفقرات التي تحوز على إهتمامك.<br />
 <br />
 نشكر لكم إهتمامكم الدائم بنتاجاتنا؛<br />
 {$editorialContactSignature}]]></body>
@@ -689,7 +665,7 @@
 <br />
 لعرض أو تعديل هذا الاشتراك، لطفاً استعمل الرابط الآتي:<br />
 <br />
-رابط الاشتراك: <a href="{$subscriptionUrl}">{$subscriptionUrl}</a><br />
+رابط الاشتراك: {$subscriptionUrl}<br />
 ]]></body>
 		<description>هذه الرسالة تُشعر مدير الإشتراكات بشراء إشتراك منفرد عبر الإنترنت. إنها تقدم معلومات إجمالية عن الاشتراك مع رابط الوصول السريع إليه.</description>
 	</email_text>
@@ -718,7 +694,7 @@
 <br />
 لعرض أو تعديل هذا الاشتراك، لطفاً استعمل الرابط الآتي:<br />
 <br />
-رابط الاشتراك: <a href="{$subscriptionUrl}">{$subscriptionUrl}</a><br />
+رابط الاشتراك: {$subscriptionUrl}<br />
 ]]></body>
 		<description>هذه الرسالة تُشعر مدير الإشتراكات بشراء إشتراك منفرد عبر الإنترنت. إنها تقدم معلومات إجمالية عن الاشتراك مع رابط الوصول السريع إليه.</description>
 	</email_text>
@@ -737,7 +713,7 @@
 <br />
 لعرض أو تعديل هذا الاشتراك، لطفاً استعمل الرابط الآتي:<br />
 <br />
-رابط الاشتراك: <a href="{$subscriptionUrl}">{$subscriptionUrl}</a><br />
+رابط الاشتراك: {$subscriptionUrl}<br />
 ]]></body>
 		<description>هذه الرسالة تُشعر مدير الإشتراكات بتجديد إشتراك منفرد عبر الإنترنت. إنها تقدم معلومات إجمالية عن الاشتراك مع رابط الوصول السريع إليه.</description>
 	</email_text>
@@ -766,7 +742,7 @@
 <br />
 لعرض أو تعديل هذا الاشتراك، لطفاً استعمل الرابط الآتي:<br />
 <br />
-رابط الاشتراك: <a href="{$subscriptionUrl}">{$subscriptionUrl}</a><br />
+رابط الاشتراك: {$subscriptionUrl}<br />
 ]]></body>
 		<description>هذه الرسالة تُشعر مدير الإشتراكات بتجديد إشتراك مؤسساتي عبر الإنترنت. إنها تقدم معلومات إجمالية عن الاشتراك مع رابط الوصول السريع إليه.</description>
 	</email_text>
@@ -785,70 +761,9 @@
 ]]></body>
 		<description>هذه الرسالة تسمح لمدققي المجلة بالمطالبة بمعلومات إضافية عن المراجع من المؤلفين.</description>
 	</email_text>
-	<email_text key="GIFT_AVAILABLE">
-		<subject>{$giftNoteTitle}</subject>
-		<body><![CDATA[عزيزنا {$recipientFirstName},<br />
-<br />
-{$buyerFullName} يود مشاركة هدية معك على {$giftJournalName}:<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-{$giftNote}<br />
-<br />
-<br />
-ستتسلم رسالة متابعة تتضمن معلومات الدخول وتوجيهات تستحصل بها هديتك.<br />
-<br />
-نأمل أن تحوز الهدية على رضاك!<br />
-<br />
-{$giftContactSignature}<br />
-]]></body>
-		<description>هذه الرسالة تُشعر متلقي هدية بأن هديته قد تم شراؤها وصارت جاهزة لاستحصالها.</description>
-	</email_text>
-	<email_text key="GIFT_USER_REGISTER">
-		<subject>استحصل هديتك: بيانات الولوج</subject>
-		<body><![CDATA[عزيزنا {$recipientFirstName},<br />
-<br />
-{$buyerFullName} يود مشاركة هدية معك على {$giftJournalName}:<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-لتستحصل هديتك، لطفاً أدخل موقع المجلة على الرابط: <a href="{$giftUrl}">{$giftUrl}</a><br />
-<br />
-اسم الدخول: {$username}<br />
-كلمة مرورك: {$password}<br />
-<br />
-بمجرد دخولك الموقع، سيكون بإمكانك تبديل كلمة المرور في أي وقت.<br />
-<br />
-نأمل أن تحوز الهدية على رضاك!<br />
-<br />
-{$giftContactSignature}<br />
-]]></body>
-		<description>هذه الرسالة تُعلم مستلم الهدية بمعلومات الدخول إلى حساب مسجل جديد.</description>
-	</email_text>
-	<email_text key="GIFT_USER_LOGIN">
-		<subject>استحصل هديتك: بيانات الولوج</subject>
-		<body><![CDATA[عزيزنا {$recipientFirstName},<br />
-<br />
-{$buyerFullName} يود مشاركة هدية معك على {$giftJournalName}:<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-لتستحصل هديتك، لطفاً أدخل موقع المجلة على الرابط: <a href="{$giftUrl}">{$giftUrl}</a><br />
-<br />
-اسم الدخول: {$username}<br />
-<br />
-نأمل أن تحوز الهدية على رضاك!<br />
-<br />
-{$giftContactSignature}<br />
-]]></body>
-		<description>هذه الرسالة تُعلم مستلم الهدية بمعلومات الدخول إلى حساب في الموقع.</description>
-	</email_text>
 	<email_text key="REVISED_VERSION_NOTIFY">
 		<subject>تم رفع نسخة منقحة</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
+		<body><![CDATA[أعزائي المحررون:<br />
 <br />
 لقد تم رفع نسخة منقحة من المؤلَّف الموسوم &quot;{$submissionTitle}&quot; من قبل المؤلف {$authorName}.<br />
 <br />
@@ -861,5 +776,17 @@
 		<subject>رسالة تتعلق بالمجلة {$contextName}</subject>
 		<body><![CDATA[لطفاً أكتب رسالتك هنا.]]></body>
 		<description>هذه الرسالة الإفتراضية (الخالية) التي يستعملها منشئ الرسائل في مركز إشعارات النظام.</description>
+	</email_text>
+	<email_text key="EDITOR_DECISION_INITIAL_DECLINE">
+		<subject>قرار المحرر</subject>
+		<body>
+			<![CDATA[{$authorName}:<br />
+<br />
+لقد توصلنا إلى قرار بشأن طلبك للنشر في {$contextName}، &quot;{$submissionTitle}&quot;.<br />
+<br />
+إن قرارنا هو: رفض النشر<br />
+<br />
+{$editorialContactSignature}<br />]]></body>
+		<description>هذه الرسالة تعنون إلى المؤلف إذا رفض المحرر طلبه بشكل مبدئي قبل الدخول في مرحلة التحكيم</description>
 	</email_text>
 </email_texts>

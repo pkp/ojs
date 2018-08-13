@@ -3,8 +3,8 @@
 /**
  * @file classes/subscription/IndividualSubscriptionDAO.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IndividualSubscriptionDAO
@@ -20,19 +20,21 @@ import('classes.subscription.IndividualSubscription');
 class IndividualSubscriptionDAO extends SubscriptionDAO {
 	/**
 	 * Retrieve an individual subscription by subscription ID.
-	 * @param $subscriptionId int
+	 * @param $subscriptionId int Subscription ID
+	 * @param $journalId int Optional journal ID
 	 * @return IndividualSubscription
 	 */
-	function getSubscription($subscriptionId) {
+	function getById($subscriptionId, $journalId = null) {
+		$params = array((int) $subscriptionId);
+		if ($journalId) $params[] = (int) $journalId;
 		$result = $this->retrieve(
-			'SELECT s.*
-			FROM
-			subscriptions s,
-			subscription_types st
-			WHERE s.type_id = st.type_id
-			AND st.institutional = 0
-			AND s.subscription_id = ?',
-			$subscriptionId
+			'SELECT	s.*
+			FROM	subscriptions s
+				JOIN subscription_types st ON (s.type_id = st.type_id)
+			WHERE	st.institutional = 0
+				AND s.subscription_id = ?
+				' . ($journalId?' AND s.journal_id = ?':''),
+			$params
 		);
 
 		$returner = null;
@@ -50,7 +52,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 	 * @param $journalId int
 	 * @return IndividualSubscriptions
 	 */
-	function getSubscriptionByUserForJournal($userId, $journalId) {
+	function getByUserIdForJournal($userId, $journalId) {
 		$result = $this->retrieveRange(
 			'SELECT s.*
 			FROM
@@ -61,8 +63,8 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 			AND s.user_id = ?
 			AND s.journal_id = ?',
 			array(
-				$userId,
-				$journalId
+				(int) $userId,
+				(int) $journalId
 			)
 		);
 
@@ -78,9 +80,10 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 	/**
 	 * Retrieve individual subscriptions by user ID.
 	 * @param $userId int
+	 * @param $rangeInfo DBResultRange
 	 * @return object DAOResultFactory containing IndividualSubscriptions
 	 */
-	function getSubscriptionsByUser($userId, $rangeInfo = null) {
+	function getByUserId($userId, $rangeInfo = null) {
 		$result = $this->retrieveRange(
 			'SELECT s.*
 			FROM
@@ -89,46 +92,17 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 			WHERE s.type_id = st.type_id
 			AND st.institutional = 0
 			AND s.user_id = ?',
-			$userId,
+			(int) $userId,
 			$rangeInfo
 		);
 
-		$returner = new DAOResultFactory($result, $this, '_fromRow');
-
-		return $returner;
-	}
-
-	/**
-	 * Retrieve individual subscription ID by user ID.
-	 * @param $userId int
-	 * @param $journalId int
-	 * @return int
-	 */
-	function getSubscriptionIdByUser($userId, $journalId) {
-		$result = $this->retrieve(
-			'SELECT s.subscription_id
-			FROM
-			subscriptions s,
-			subscription_types st
-			WHERE s.type_id = st.type_id
-			AND st.institutional = 0
-			AND s.user_id = ?
-			AND s.journal_id = ?',
-			array(
-				$userId,
-				$journalId
-			)
-		);
-
-		$returner = isset($result->fields[0]) ? $result->fields[0] : 0;	
-
-		$result->Close();
-		return $returner;
+		return new DAOResultFactory($result, $this, '_fromRow');
 	}
 
 	/**
 	 * Return number of individual subscriptions with given status for journal.
-	 * @param status int 
+	 * @param $journalId int
+	 * @param $status int
 	 * @return int
 	 */
 	function getStatusCount($journalId, $status = null) {
@@ -175,7 +149,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 			WHERE s.type_id = st.type_id
 			AND st.institutional = 0
 			AND s.subscription_id = ?',
-			$subscriptionId
+			(int) $subscriptionId
 		);
 
 		$returner = isset($result->fields[0]) && $result->fields[0] != 0 ? true : false;
@@ -201,8 +175,8 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 			AND s.subscription_id = ?
 			AND s.user_id = ?',
 			array(
-				$subscriptionId,
-				$userId
+				(int) $subscriptionId,
+				(int) $userId
 			)
 		);
 
@@ -229,8 +203,8 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 			AND s.user_id = ?
 			AND s.journal_id = ?',
 			array(
-				$userId,
-				$journalId
+				(int) $userId,
+				(int) $journalId
 			)
 		);
 
@@ -263,32 +237,33 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 	/**
 	 * Insert a new individual subscription.
 	 * @param $individualSubscription IndividualSubscription
-	 * @return int 
+	 * @return int
 	 */
-	function insertSubscription($individualSubscription) {
-		return $this->_insertSubscription($individualSubscription);
+	function insertObject($individualSubscription) {
+		return $this->_insertObject($individualSubscription);
 	}
 
 	/**
 	 * Update an existing individual subscription.
 	 * @param $individualSubscription IndividualSubscription
-	 * @return boolean
 	 */
-	function updateSubscription($individualSubscription) {
-		return $this->_updateSubscription($individualSubscription);
+	function updateObject($individualSubscription) {
+		$this->_updateObject($individualSubscription);
 	}
 
 	/**
 	 * Delete an individual subscription by subscription ID.
 	 * @param $subscriptionId int
+	 * @param $journalId int
 	 */
-	function deleteSubscriptionById($subscriptionId) {
+	function deleteById($subscriptionId, $journalId = null) {
+		$params = array((int) $subscriptionId);
+		if ($journalId) $params[] = (int) $journalId;
 		$this->update(
-			'DELETE
-			FROM
-			subscriptions
-			WHERE subscription_id = ?',
-			(int) $subscriptionId
+			'DELETE FROM subscriptions
+			WHERE	subscription_id = ?'
+			.($journalId ? ' AND journal_id = ?' : ''),
+			$params
 		);
 	}
 
@@ -297,21 +272,21 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 	 * @param $journalId int
 	 * @return boolean
 	 */
-	function deleteSubscriptionsByJournal($journalId) {
+	function deleteByJournalId($journalId) {
 		$result = $this->retrieve(
 			'SELECT s.subscription_id
 			FROM
 			subscriptions s
 			WHERE s.journal_id = ?',
-			$journalId
+			(int) $journalId
 		);
 
 		$returner = true;
 		if ($result->RecordCount() != 0) {
 			while (!$result->EOF) {
 				$subscriptionId = $result->fields[0];
-				$returner = $this->deleteSubscriptionById($subscriptionId);
-				if (!$returner) { 
+				$returner = $this->deleteById($subscriptionId);
+				if (!$returner) {
 					break;
 				}
 				$result->MoveNext();
@@ -327,21 +302,21 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 	 * @param $userId int
 	 * @return boolean
 	 */
-	function deleteSubscriptionsByUserId($userId) {
+	function deleteByUserId($userId) {
 		$result = $this->retrieve(
 			'SELECT s.subscription_id
 			FROM
 			subscriptions s
 			WHERE s.user_id = ?',
-			$userId
+			(int) $userId
 		);
 
 		$returner = true;
 		if ($result->RecordCount() != 0) {
 			while (!$result->EOF) {
 				$subscriptionId = $result->fields[0];
-				$returner = $this->deleteSubscriptionById($subscriptionId);
-				if (!$returner) { 
+				$returner = $this->deleteById($subscriptionId);
+				if (!$returner) {
 					break;
 				}
 				$result->MoveNext();
@@ -358,7 +333,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 	 * @param $journalId int
 	 * @return boolean
 	 */
-	function deleteSubscriptionsByUserIdForJournal($userId, $journalId) {
+	function deleteByUserIdForJournal($userId, $journalId) {
 		$result = $this->retrieve(
 			'SELECT s.subscription_id
 			FROM
@@ -366,8 +341,8 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 			WHERE s.user_id = ?
 			AND s.journal_id = ?',
 			array (
-				$userId,
-				$journalId
+				(int) $userId,
+				(int) $journalId
 			)
 		);
 
@@ -375,8 +350,8 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 		if ($result->RecordCount() != 0) {
 			while (!$result->EOF) {
 				$subscriptionId = $result->fields[0];
-				$returner = $this->deleteSubscriptionById($subscriptionId);
-				if (!$returner) { 
+				$returner = $this->deleteById($subscriptionId);
+				if (!$returner) {
 					break;
 				}
 				$result->MoveNext();
@@ -392,21 +367,21 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 	 * @param $subscriptionTypeId int
 	 * @return boolean
 	 */
-	function deleteSubscriptionsByTypeId($subscriptionTypeId) {
+	function deleteByTypeId($subscriptionTypeId) {
 		$result = $this->retrieve(
 			'SELECT s.subscription_id
 			FROM
 			subscriptions s
 			WHERE s.type_id = ?',
-			$subscriptionTypeId
+			(int) $subscriptionTypeId
 		);
 
 		$returner = true;
 		if ($result->RecordCount() != 0) {
 			while (!$result->EOF) {
 				$subscriptionId = $result->fields[0];
-				$returner = $this->deleteSubscriptionById($subscriptionId);
-				if (!$returner) { 
+				$returner = $this->deleteById($subscriptionId);
+				if (!$returner) {
 					break;
 				}
 				$result->MoveNext();
@@ -419,49 +394,29 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 
 	/**
 	 * Retrieve all individual subscriptions.
+	 * @param $rangeInfo DBResultRange
 	 * @return object DAOResultFactory containing IndividualSubscriptions
 	 */
-	function getSubscriptions($rangeInfo = null) {
+	function getAll($rangeInfo = null) {
+		$userDao = DAORegistry::getDAO('UserDAO');
 		$result = $this->retrieveRange(
-			'SELECT s.*
+			'SELECT s.*,
+			' . $userDao->getFetchColumns() .'
 			FROM
 			subscriptions s,
 			subscription_types st,
-			users u
+			users u,
+			' . $userDao->getFetchJoins() .'
 			WHERE s.type_id = st.type_id
 			AND st.institutional = 0
 			AND s.user_id = u.user_id
-			ORDER BY
-			u.last_name ASC,
+			' . $userDao->getOrderBy() .',
 			s.subscription_id',
-			false,
+			$userDao->getFetchParameters(),
 			$rangeInfo
 		);
 
 		return new DAOResultFactory($result, $this, '_fromRow');
-	}
-
-	/**
-	 * Retrieve all individual subscribed users.
-	 * @return object DAOResultFactory containing IndividualSubscriptions
-	 */
-	function getSubscribedUsers($journalId, $rangeInfo = null) {
-		$result = $this->retrieveRange(
-			'SELECT	u.*
-			FROM	subscriptions s,
-				subscription_types st,
-				users u
-			WHERE	s.type_id = st.type_id AND
-				st.institutional = 0 AND
-				s.user_id = u.user_id AND
-				s.journal_id = ?
-			ORDER BY u.last_name ASC, s.subscription_id',
-			array((int) $journalId),
-			$rangeInfo
-		);
-
-		$userDao = DAORegistry::getDAO('UserDAO');
-		return new DAOResultFactory($result, $userDao, '_returnUserFromRow');
 	}
 
 	/**
@@ -471,32 +426,28 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 	 * @param $searchField int
 	 * @param $searchMatch string "is" or "contains" or "startsWith"
 	 * @param $search String to look in $searchField for
-	 * @param $dateField int 
+	 * @param $dateField int
 	 * @param $dateFrom String date to search from
 	 * @param $dateTo String date to search to
 	 * @return object DAOResultFactory containing matching IndividualSubscriptions
 	 */
-	function getSubscriptionsByJournalId($journalId, $status = null, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $rangeInfo = null) {
-
-		$params = array($journalId);
-		$searchSql = parent::_generateSearchSQL($status, $searchField, $searchMatch, $search, $dateField, $dateFrom, $dateTo, $params);
-
-		$sql = 'SELECT s.*
-				FROM
-				subscriptions s,
-				subscription_types st,
-				users u
-				WHERE s.type_id = st.type_id
-				AND st.institutional = 0
-				AND s.user_id = u.user_id
-				AND s.journal_id = ?';
- 
+	function getByJournalId($journalId, $status = null, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $rangeInfo = null) {
+		$userDao = DAORegistry::getDAO('UserDAO');
+		$params = array_merge($userDao->getFetchParameters(), array((int) $journalId));
 		$result = $this->retrieveRange(
-			$sql . ' ' . $searchSql . ' ORDER BY u.last_name ASC, s.subscription_id',
-			count($params)===1?array_shift($params):$params,
+			'SELECT	s.*,
+			' . $userDao->getFetchColumns() .'
+			FROM	subscriptions s
+				JOIN subscription_types st ON (s.type_id = st.type_id)
+				JOIN users u ON (s.user_id = u.user_id)
+				' . $userDao->getFetchJoins() .'
+			WHERE	st.institutional = 0
+				AND s.journal_id = ? ' .
+			parent::_generateSearchSQL($status, $searchField, $searchMatch, $search, $dateField, $dateFrom, $dateTo, $params) .
+			$userDao->getOrderBy() .', s.subscription_id',
+			$params,
 			$rangeInfo
 		);
-
 		return new DAOResultFactory($result, $this, '_fromRow');
 	}
 
@@ -506,15 +457,14 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 	 * @param $journalId int
 	 * @param $check int Check using either start date, end date, or both (default)
 	 * @param $checkDate date (YYYY-MM-DD) Use this date instead of current date
-	 * @return int 
+	 * @return int
 	 */
 	function isValidIndividualSubscription($userId, $journalId, $check = SUBSCRIPTION_DATE_BOTH, $checkDate = null) {
 		if (empty($userId) || empty($journalId)) {
 			return false;
 		}
-		$returner = false;
 
-		$today = $this->dateToDB(Core::getCurrentDate()); 
+		$today = $this->dateToDB(Core::getCurrentDate());
 
 		if ($checkDate == null) {
 			$checkDate = $today;
@@ -533,30 +483,25 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 				$dateSql = sprintf('%s >= s.date_start AND %s <= s.date_end', $checkDate, $checkDate);
 		}
 
-		$nonExpiringSql = "AND ((st.non_expiring = 1) OR (st.non_expiring = 0 AND ($dateSql)))";
-
 		$result = $this->retrieve('
-			SELECT s.subscription_id
-			FROM
-			subscriptions s,
-			subscription_types st
-			WHERE s.user_id = ?
-			AND s.journal_id = ? 
-			AND s.status = ' . SUBSCRIPTION_STATUS_ACTIVE . '
-			AND s.type_id = st.type_id
-			AND st.institutional = 0 '
-			. $nonExpiringSql .
-			' AND (st.format = ' . SUBSCRIPTION_TYPE_FORMAT_ONLINE . ' 
+			SELECT	s.subscription_id
+			FROM	subscriptions s
+				JOIN subscription_types st ON (s.type_id = st.type_id)
+			WHERE	s.user_id = ?
+				AND s.journal_id = ?
+				AND s.status = ' . SUBSCRIPTION_STATUS_ACTIVE . '
+				AND st.institutional = 0
+				AND ((st.non_expiring = 1) OR (st.non_expiring = 0 AND (' . $dateSql . ')))
+				AND (st.format = ' . SUBSCRIPTION_TYPE_FORMAT_ONLINE . '
 				OR st.format = ' . SUBSCRIPTION_TYPE_FORMAT_PRINT_ONLINE . ')',
 			array(
-				$userId,
-				$journalId
+				(int) $userId,
+				(int) $journalId
 			)
 		);
 
-		if ($result->RecordCount() != 0) {
-			$returner = $result->fields[0];
-		}
+		if ($result->RecordCount() != 0) $returner = $result->fields[0];
+		else $returner = false;
 
 		$result->Close();
 		return $returner;
@@ -564,45 +509,49 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 
 	/**
 	 * Retrieve active individual subscriptions matching a particular end date and journal ID.
-	 * @param $dateEnd date (YYYY-MM-DD)
+	 * @param $dateEnd string (YYYY-MM-DD)
 	 * @param $journalId int
+	 * @param $rangeInfo DBResultRange
 	 * @return object DAOResultFactory containing matching IndividualSubscriptions
 	 */
-	function getSubscriptionsByDateEnd($dateEnd, $journalId, $rangeInfo = null) {
+	function getByDateEnd($dateEnd, $journalId, $rangeInfo = null) {
+		$userDao = DAORegistry::getDAO('UserDAO');
 		$dateEnd = explode('-', $dateEnd);
-
-		$result = $this->retrieveRange(
-			'SELECT	s.*
-			FROM
-			subscriptions s,
-			subscription_types st,
-			users u
-			WHERE s.type_id = st.type_id
-			AND s.status = ' . SUBSCRIPTION_STATUS_ACTIVE . ' ' . 
-			'AND st.institutional = 0
-			AND u.user_id = s.user_id AND
-			EXTRACT(YEAR FROM s.date_end) = ? AND
-			EXTRACT(MONTH FROM s.date_end) = ? AND
-			EXTRACT(DAY FROM s.date_end) = ? AND
-			s.journal_id = ?
-			ORDER BY u.last_name ASC, s.subscription_id',
+		$params = array_merge(
+			$userDao->getFetchParameters(),
 			array(
 				$dateEnd[0],
 				$dateEnd[1],
 				$dateEnd[2],
-				$journalId
-			), $rangeInfo
-		);
+				(int) $journalId
+		));
 
+		$result = $this->retrieveRange(
+			'SELECT	s.*,
+			' . $userDao->getFetchColumns() .'
+			FROM	subscriptions s
+				JOIN subscription_types st ON (s.type_id = st.type_id)
+				JOIN users u ON (u.user_id = s.user_id)
+				' . $userDao->getFetchJoins() .'
+			WHERE	s.status = ' . SUBSCRIPTION_STATUS_ACTIVE . '
+				AND st.institutional = 0
+				AND EXTRACT(YEAR FROM s.date_end) = ?
+				AND EXTRACT(MONTH FROM s.date_end) = ?
+				AND EXTRACT(DAY FROM s.date_end) = ?
+				AND s.journal_id = ?
+			' . $userDao->getOrderBy() .', s.subscription_id',
+			$params,
+			$rangeInfo
+		);
 		return new DAOResultFactory($result, $this, '_fromRow');
 	}
 
 	/**
 	 * Renew an individual subscription by dateEnd + duration of subscription type
-	 * if the individual subscription is expired, renew to current date + duration  
+	 * if the individual subscription is expired, renew to current date + duration
 	 * @param $individualSubscription IndividualSubscription
 	 * @return boolean
-	 */	
+	 */
 	function renewSubscription($individualSubscription) {
 		return $this->_renewSubscription($individualSubscription);
 	}

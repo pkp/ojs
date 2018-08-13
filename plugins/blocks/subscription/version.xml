@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE version SYSTEM "../../../lib/pkp/dtd/pluginVersion.dtd">
+
+<!--
+  * plugins/blocks/subscription/version.xml
+  *
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Plugin version information.
+  -->
+<version>
+	<application>subscription</application>
+	<type>plugins.blocks</type>
+	<release>1.1.0.0</release>
+	<date>2009-07-13</date>
+	<lazy-load>1</lazy-load>
+	<class>SubscriptionBlockPlugin</class>
+</version>

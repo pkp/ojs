@@ -4,8 +4,8 @@
 <!--
   * locale/de_DE/emailTemplates.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_German_(de_DE)
   * Localized email templates XML file.
@@ -23,38 +23,13 @@ Link: {$url}<br />
 {$principalContactSignature}]]></body>
 		<description>Diese E-Mail wird an angemeldete Benutzer/innen geschickt, die sich für diese Art der Benachrichtigung angemeldet haben.</description>
 	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST">
-		<subject>Neue Benachrichtigung von {$siteTitle}</subject>
-		<body><![CDATA[Sie haben eine neue Benachrichtigung von {$siteTitle}:<br />
---<br />
-{$notificationContents}<br />
-<br />
-Link: {$url}<br />
---<br />
-<br />
-Wenn Sie keine Benachrichtigungs-E-Mails mehr erhalten möchten, gehen Sie bitte zu {$unsubscribeLink} und geben Sie Ihre E-Mail-Adresse und Passwort ein.<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>Diese E-Mail wird an nicht registrierte Benutzer/innen auf der Benachrichtigungs-Mailingliste gesendet.</description>
-	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
-		<subject>Willkommen zu der {$siteTitle}-Mailingliste!</subject>
-		<body><![CDATA[Sie haben Sich angemeldet, Benachrichtigungen von {$siteTitle} zu erhalten.<br />
-<br />
-Bitte klicken Sie auf diesen Link, um Ihre Anfrage zu bestätigen und Ihre E-Mail-Adresse zur Mailingliste hinzuzufügen: {$confirmLink}<br />
-<br />
-Wenn Sie keine Benachrichtigungs-E-Mails mehr erhalten möchten, gehen Sie bitte zu {$unsubscribeLink}.<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>Diese E-Mail wird an Benutzer/innen gesendet, die gerade die Benachrichtigungs-Mailingliste abonniert haben.</description>
-	</email_text>
 	<email_text key="PASSWORD_RESET_CONFIRM">
 		<subject>Reset-Bestätigung für Ihr Passwort</subject>
 		<body><![CDATA[Wir wurden aufgefordert, Ihr Passwort für die Webseite {$siteTitle} neu zu setzen.<br />
 <br />
 Falls die Aufforderung nicht von Ihnen stammt, ignorieren Sie bitte diese E-Mail, und Ihr Passwort bleibt unverändert. Falls Sie Ihr Passwort neu setzen möchten, klicken Sie bitte auf die folgende URL:<br />
 <br />
-Mein Passwort neu setzen: <a href="{$url}">{$url}</a><br />
+Mein Passwort neu setzen: {$url}<br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Diese E-Mail wird an registrierte Benutzer/innen der Benachrichtigungs-Mailingliste gesendet, die angegeben haben, dass sie ihr Passwort vergessen haben oder sich nicht einloggen können. Sie liefert eine URL, der die Benutzer/innen folgen können, um ihr Passwort zurückzusetzen.</description>
@@ -88,7 +63,7 @@ Vielen Dank,<br />
 <br />
 Sie haben ein Benutzer/innenkonto bei {$contextName} angelegt, aber bevor Sie es benutzen können, müssen Sie Ihre E-Mail-Adresse bestätigen. Dazu folgen Sie bitte einfach dem folgenden Link:<br />
 <br />
-<a href="{$activateUrl}">{$activateUrl}</a><br />
+{$activateUrl}<br />
 <br />
 Vielen Dank,<br />
 {$principalContactSignature}]]></body>
@@ -111,7 +86,7 @@ Vielen Dank,<br />
 		<subject>Neue Ausgabe erschienen</subject>
 		<body><![CDATA[Liebe Leserinnen und Leser,<br />
 <br />
-{$contextName} hat soeben die neueste Ausgabe unter <a href="{$contextUrl}">{$contextUrl}</a> veröffentlicht. Wir laden Sie ein, hier das Inhaltsverzeichnis zu lesen und sich dann auf unserer Webseite die Sie interessierenden Beiträge anzusehen.<br />
+{$contextName} hat soeben die neueste Ausgabe unter {$contextUrl} veröffentlicht. Wir laden Sie ein, hier das Inhaltsverzeichnis zu lesen und sich dann auf unserer Webseite die Sie interessierenden Beiträge anzusehen.<br />
 <br />
 Danke für das andauernde Interesse an unserer Arbeit,<br />
 {$editorialContactSignature}]]></body>
@@ -121,11 +96,11 @@ Danke für das andauernde Interesse an unserer Arbeit,<br />
 		<subject>Bitte um Archivierung von {$contextName}</subject>
 		<body><![CDATA[Sehr geehrte/r [Bibliotheksleiter/in],<br />
 <br />
-{$contextName} &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt; ist eine Zeitschrift, an der ein Mitglied Ihrer Universität, [Name], als [Mitarbeiterfunktion] mitarbeitet. Die Zeitschrift beabsichtigt, mit Ihrer und anderen Universitätsbibliotheken ein mit LOCKSS (Lots of Copies Keep Stuff Safe) kompatibles Archiv aufzubauen.<br />
+{$contextName} &amp;lt;{$contextUrl}&amp;gt; ist eine Zeitschrift, an der ein Mitglied Ihrer Universität, [Name], als [Mitarbeiterfunktion] mitarbeitet. Die Zeitschrift beabsichtigt, mit Ihrer und anderen Universitätsbibliotheken ein mit LOCKSS (Lots of Copies Keep Stuff Safe) kompatibles Archiv aufzubauen.<br />
 <br />
 [Kurze Beschreibung der Zeitschrift]<br />
 <br />
-Die Webadresse der LOCKSS-Erklärung für unsere Zeitschrift ist: <a href="{$contextUrl}">{$contextUrl}</a>/gateway/lockss<br />
+Die Webadresse der LOCKSS-Erklärung für unsere Zeitschrift ist: {$contextUrl}/gateway/lockss<br />
 <br />
 Wir gehen von der Annahme aus, dass Sie bereits an LOCKSS beteiligt sind. Falls weitere Metadaten zur Aufnahme unserer Zeitschrift in Ihre Version von LOCKSS gebraucht werden, stellen wir sie Ihnen gern zur Verfügung.<br />
 <br />
@@ -137,7 +112,7 @@ Vielen Dank,<br />
 		<subject>Bitte um Archivierung von {$contextName}</subject>
 		<body><![CDATA[Sehr geehrte/r [Bibliotheksleiter/in],<br />
 <br />
-{$contextName} &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt; ist eine Zeitschrift, an der ein Mitglied Ihrer Universität, [Name], als [Mitarbeiterfunktion] mitarbeitet. Die Zeitschrift beabsichtigt, mit Ihrer und anderen Universitätsbibliotheken ein mit LOCKSS (Lots of Copies Keep Stuff Safe) kompatibles Archiv aufzubauen.<br />
+{$contextName} &amp;lt;{$contextUrl}&amp;gt; ist eine Zeitschrift, an der ein Mitglied Ihrer Universität, [Name], als [Mitarbeiterfunktion] mitarbeitet. Die Zeitschrift beabsichtigt, mit Ihrer und anderen Universitätsbibliotheken ein mit LOCKSS (Lots of Copies Keep Stuff Safe) kompatibles Archiv aufzubauen.<br />
 <br />
 [Kurze Beschreibung der Zeitschrift]<br />
 <br />
@@ -174,32 +149,6 @@ Für weitere Fragen stehen wir Ihnen gern zur Verfügung. Danke für Ihr Interes
 {$editorialContactSignature}]]></body>
 		<description>Diese E-Mail wird, sofern aktiviert, automatisch an die weiteren Autor/innen geschickt, die laut Einreichung keine OJS-Benutzeraccounts haben.</description>
 	</email_text>
-	<email_text key="SUBMISSION_UNSUITABLE">
-		<subject>Ungeeigneter Beitrag</subject>
-		<body><![CDATA[{$authorName},<br />
-<br />
-eine erste Lektüre von &quot;{$submissionTitle}&quot; ergab, dass Ihr Beitrag den Anforderungen und der Orientierung von {$contextName} nicht entspricht. Ich schlage Ihnen vor, dass Sie sich die Beschreibung dieser Zeitschrift unter &quot;Über uns&quot; und die aktuellen Inhalte ansehen, um mehr über die Arbeiten zu erfahren, die wir veröffentlichen. Sie könnten außerdem überlegen, diesen Beitrag bei einer anderen, besser passenden Zeitschrift einzureichen.<br />
-<br />
-{$editorialContactSignature}]]></body>
-	</email_text>
-	<email_text key="SUBMISSION_COMMENT">
-		<subject>Kommentar zu Einreichung</subject>
-		<body><![CDATA[{$name},<br />
-<br />
-{$commentName} hat einen Kommentar zur Einreichung &quot;{$submissionTitle}&quot; in {$contextName} hinzugefügt:<br />
-<br />
-{$comments}]]></body>
-		<description>Diese E-Mail benachrichtigt die Personen, die mit dem Redaktionsprozess zu einer Einreichung zu tun haben, darüber, dass ein neuer Kommentar abgegeben worden ist.</description>
-	</email_text>
-	<email_text key="SUBMISSION_DECISION_REVIEWERS">
-		<subject>Entscheidung zu "{$submissionTitle}</subject>
-		<body><![CDATA[Als Gutachter/in zur Einreichung &quot;{$submissionTitle}&quot; für {$contextName} sende ich Ihnen die Gutachten und die redaktionelle Entscheidung, die an die Autorin/den Autor des Textes geschickt worden sind. Vielen Dank nochmals für den wichtigen Beitrag, den Sie zu diesem Prozess geleistet haben.<br />
-<br />
-{$editorialContactSignature}<br />
-<br />
-{$comments}]]></body>
-		<description>Diese E-Mail benachrichtigt die Gutachter/innen einer Einreichung, dass der Begutachtungsprozess abgeschlossen worden ist. Sie enthält Informationen über den Artikel und die getroffene Entscheidung und dankt den Gutachter/innen für ihre Mitwirkung.</description>
-	</email_text>
 	<email_text key="EDITOR_ASSIGN">
 		<subject>Zuweisung an Rubrikredakteur/in</subject>
 		<body><![CDATA[{$editorialContactName},<br />
@@ -219,24 +168,46 @@ Vielen Dank,<br />
 <br />
 aufgrund Ihrer Forschungsschwerpunkte wären Sie ein/e ausgezeichnete/r Gutachter/in für das Manuskript &quot;{$submissionTitle}&quot;, das zur Publikation in {$contextName} eingereicht worden ist. Weiter unten finden Sie eine Kurzfassung des Beitrags. Ich hoffe sehr, dass Sie sich bereitfinden können, uns mit Ihrer Stellungnahme zu unterstützen. Sie wären uns eine große Hilfe.<br />
 <br />
-Loggen Sie sich bitte bis zum {$responseDueDate} auf der Webseite unserer Zeitschrift ein, um uns Ihre Zu- oder Absage mitzuteilen. Sie finden dort den Beitrag und können gegebenenfalls auch Ihr Gutachten und Ihre Empfehlung dort abgeben. Die Webseite ist <a href="{$contextUrl}">{$contextUrl}</a>.<br />
+Loggen Sie sich bitte bis zum {$responseDueDate} auf der Webseite unserer Zeitschrift ein, um uns Ihre Zu- oder Absage mitzuteilen. Sie finden dort den Beitrag und können gegebenenfalls auch Ihr Gutachten und Ihre Empfehlung dort abgeben. Die Webseite ist {$contextUrl}.<br />
 <br />
 Das Gutachten wäre fällig am {$reviewDueDate}.<br />
 <br />
-Falls Sie nicht über Benutzer/innennamen und Passwort verfügen, können Sie über folgenden Link Ihr Passwort neu setzen (Benutzer/innennamen und Passwort gehen Ihnen umgehend per E-Mail zu). <a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
+Falls Sie nicht über Benutzer/innennamen und Passwort verfügen, können Sie über folgenden Link Ihr Passwort neu setzen (Benutzer/innennamen und Passwort gehen Ihnen umgehend per E-Mail zu). {$passwordResetUrl}<br />
 <br />
-URL des Beitrags: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+URL des Beitrags: {$submissionReviewUrl}<br />
 <br />
 In der Hoffnung auf eine positive Antwort,<br />
 <br />
 {$editorialContactSignature}<br />
 <br />
-<br />
-<br />
 &quot;{$submissionTitle}&quot;<br />
 <br />
 {$submissionAbstract}]]></body>
 		<description>Diese E-Mail von der/dem Rubrikredakteur/in an eine/n Gutachter/in bittet darum, dass diese/r die Aufgabe, eine Einreichung zu begutachten, übernimmt oder ablehnt. Sie liefert Informationen über die Einreichung wie Titel und Abstract, ein Fälligkeitsdatum für das Gutachten und darüber, wie auf die Einreichung zugegriffen werden kann. Diese Nachricht wird benutzt, wenn in Schritt 2 des Zeitschriftensetups das Standardbegutachtungsverfahren ausgewählt worden ist. (Ansonsten siehe REVIEW_REQUEST_ATTACHED.)</description>
+	</email_text>
+	<email_text key="REVIEW_REQUEST_REMIND_AUTO">
+		<subject>Bitte um Begutachtung eines Artikels</subject>
+		<body><![CDATA[{$reviewerName}:<br />
+dies ist eine freundliche Erinnerung an unsere Bitte an Sie, den Artikel &quot;{$submissionTitle},&quot; für {$contextName} zu begutachten. Wir hatten auf Ihre Antwort bis zum {$responseDueDate} gehofft. Diese E-Mail wurde automatisch erzeugt und mit Verstreichen dieses Datums verschickt.
+<br />
+Wir glauben, dass Sie ausgezeichnet geeignet für die Begutachtung dieses Manuskript wären. Ein Abstract des Beitrags ist angefügt, und wir hoffen, dass Sie diese wichtige Aufgabe für uns übernehmen können.<br />
+<br />
+Bitte melden Sie sich bei der Webseite der Zeitschrift an, um uns mitzuteilen, ob Sie die Begutachtung übernehmen werden. Über die Webseite können Sie auch auf den Beitrag zugreifen und Ihr Gutachten sowie Ihre Empfehlung hinzufügen. Die Webseite erreichen Sie hier: {$contextUrl}<br />
+<br />
+Wir benötigen das Gutachten bis zum {$reviewDueDate}.<br />
+<br />
+Wenn Sie Ihre Benutzerkennung und Ihr Passwort für die Webseite des Journals nicht haben, können Sie den folgenden Link nutzen, um Ihr Passwort zurückzusetzen (es wird Ihnen dann zusammen mit Ihrer Benutzerkennung per Mail zugeschickt): {$passwordResetUrl}<br />
+<br />
+URL des Beitrags: {$submissionReviewUrl}<br />
+<br />
+Vielen Dank, dass Sie unsere Bitte berücksichtigen.<br />
+<br />
+{$editorialContactSignature}<br />
+<br />
+&quot;{$submissionTitle}&quot;<br />
+<br />
+{$submissionAbstract}]]></body>
+		<description></description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ONECLICK">
 		<subject>Bitte um ein Gutachten</subject>
@@ -248,18 +219,38 @@ Loggen Sie sich bitte bis zum {$responseDueDate} auf der Webseite unserer Zeitsc
 <br />
 Das Gutachten wäre fällig am {$reviewDueDate}.<br />
 <br />
-URL des Beitrags: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+URL des Beitrags: {$submissionReviewUrl}<br />
 <br />
 In der Hoffnung auf eine positive Antwort,<br />
 <br />
 {$editorialContactSignature}<br />
 <br />
-<br />
-<br />
 &quot;{$submissionTitle}&quot;<br />
 <br />
 {$submissionAbstract}]]></body>
 		<description>Diese E-Mail von der/dem Rubrikredakteur/in an eine/n Gutachter/in bittet darum, dass diese/r die Aufgabe, eine Einreichung zu begutachten, übernimmt oder ablehnt. Sie liefert Informationen über die Einreichung wie Titel und Abstract, ein Fälligkeitsdatum für das Gutachten und darüber, wie auf die Einreichung zugegriffen werden kann. Diese Nachricht wird benutzt, wenn in Schritt 2 des Zeitschriftensetups das Standardbegutachtungsverfahren ausgewählt worden ist und wenn der One-Click-Zugang für Gutachter/innen aktiviert ist.</description>
+	</email_text>
+	<email_text key="REVIEW_REQUEST_REMIND_AUTO_ONECLICK">
+		<subject>Bitte um Begutachtung eines Artikels</subject>
+		<body><![CDATA[{$reviewerName}:<br />
+dies ist eine höfliche Erinnerung an unsere Bitte an Sie, den Artikel &quot;{$submissionTitle},&quot; für {$contextName} zu begutachten. Wir hatten auf Ihre Antwort bis zum {$responseDueDate} gehofft. Diese E-Mail wurde automatisch erzeugt und mit Verstreichen dieses Datums verschickt.
+<br />
+Wir glauben, dass Sie dass Sie ausgezeichnet geeignet für die Begutachtung dieses Manuskript wären. Ein Abstract des Beitrags ist angefügt, und wir hoffen, dass Sie diese wichtige Aufgabe für uns übernehmen können.<br />
+<br />
+Bitte melden Sie sich bei der Webseite der Zeitschrift an, um uns mitzuteilen, ob Sie die Begutachtung übernehmen werden. Über die Webseite können Sie auch auf den Beitrag zugreifen und Ihr Gutachten sowie Ihre Empfehlung hinzufügen.<br />
+<br />
+Wir benötigen das Gutachten bis zum {$reviewDueDate}.<br />
+<br />
+URL des Beitrags: {$submissionReviewUrl}<br />
+<br />
+Vielen Dank, dass Sie unsere Bitte berücksichtigen.<br />
+<br />
+{$editorialContactSignature}<br />
+<br />
+&quot;{$submissionTitle}&quot;<br />
+<br />
+{$submissionAbstract}]]></body>
+		<description></description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ATTACHED">
 		<subject>Bitte um ein Gutachten</subject>
@@ -288,13 +279,13 @@ diese E-Mail betrifft das Manuskript &quot;{$submissionTitle}&quot;, das bei {$c
 <br />
 Nach der Begutachtung der früheren Fassung des Manuskripts haben die Autor/innen nun eine überarbeitete Fassung ihres Artikels eingereicht. Wir würden uns freuen, wenn Sie bei der Beurteilung helfen könnten.<br />
 <br />
-Bitte loggen Sie sich auf der Website der Zeitschrift bis zum {$responseDueDate} ein, um uns Ihre Zu- oder Absage mitzuteilen. Sie finden dort den Beitrag und können auch Ihr Gutachten und Ihre Empfehlung dort abgeben. Die Adresse ist <a href="{$contextUrl}">{$contextUrl}</a>.<br />
+Bitte loggen Sie sich auf der Website der Zeitschrift bis zum {$responseDueDate} ein, um uns Ihre Zu- oder Absage mitzuteilen. Sie finden dort den Beitrag und können auch Ihr Gutachten und Ihre Empfehlung dort abgeben. Die Adresse ist {$contextUrl}.<br />
 <br />
 Das Gutachten selbst wäre fällig am {$reviewDueDate}.<br />
 <br />
-Falls Sie nicht über Benutzer/innennamen und Passwort verfügen, können Sie über folgenden Link Ihr Passwort neu setzen (das Ihnen dann zusammen mit Ihrem Benutzer/innennamen per E-Mail zugesandt wird). <a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
+Falls Sie nicht über Benutzer/innennamen und Passwort verfügen, können Sie über folgenden Link Ihr Passwort neu setzen (das Ihnen dann zusammen mit Ihrem Benutzer/innennamen per E-Mail zugesandt wird). {$passwordResetUrl}<br />
 <br />
-URL des Beitrags: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+URL des Beitrags: {$submissionReviewUrl}<br />
 <br />
 In der Hoffnung auf eine positive Antwort,<br />
 <br />
@@ -317,7 +308,7 @@ Bitte loggen Sie sich auf der Website der Zeitschrift bis zum {$responseDueDate}
 <br />
 Das Gutachten selbst wäre fällig zum {$reviewDueDate}.<br />
 <br />
-URL des Beitrags: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+URL des Beitrags: {$submissionReviewUrl}<br />
 <br />
 In der Hoffnung auf eine positive Antwort,<br />
 <br />
@@ -364,7 +355,7 @@ Falls Sie Fragen haben, können Sie sich gerne an mich wenden.<br />
 	</email_text>
 	<email_text key="REVIEW_CONFIRM">
 		<subject>Einwilligung in die Begutachtung</subject>
-		<body><![CDATA[{$editorialContactName},<br />
+		<body><![CDATA[Sehr geehrte Redaktion,<br />
 <br />
 ich bin in der Lage und auch gern bereit, den Beitrag &quot;{$submissionTitle}&quot; für {$contextName} zu begutachten. Vielen Dank für Ihr Vertrauen; ich werde das Gutachten spätestens bis zum {$reviewDueDate} einreichen, wenn möglich auch früher.<br />
 <br />
@@ -373,7 +364,7 @@ ich bin in der Lage und auch gern bereit, den Beitrag &quot;{$submissionTitle}&q
 	</email_text>
 	<email_text key="REVIEW_DECLINE">
 		<subject>Ablehnung der Bitte um ein Gutachten</subject>
-		<body><![CDATA[{$editorialContactName},<br />
+		<body><![CDATA[Sehr geehrte Redaktion,<br />
 <br />
 leider kann ich gegenwärtig die Begutachtung des Beitrags &quot;{$submissionTitle}&quot; für {$contextName} nicht übernehmen. Ich danke für Ihr Vertrauen. Bei anderer Gelegenheit können Sie sich gerne wieder an mich wenden.<br />
 <br />
@@ -395,9 +386,9 @@ vielen Dank für Ihr Gutachten zum Beitrag &quot;{$submissionTitle}&quot; für {
 <br />
 wir möchten Sie freundlich an Ihre Zusage erinnern, den Beitrag &quot;{$submissionTitle}&quot; für {$contextName} zu begutachten. Wir hatten gehofft, das Gutachten bis zum {$reviewDueDate} zu erhalten. Wir würden uns freuen, wenn es uns baldmöglichst zur Verfügung stünde.<br />
 <br />
-Falls Ihnen Benutzer/innenname und Passwort fehlen, können Sie über folgenden Link Ihr Passwort neu setzen (Benutzer/innenname und Passwort gehen Ihnen umgehend per E-Mail zu). <a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
+Falls Ihnen Benutzer/innenname und Passwort fehlen, können Sie über folgenden Link Ihr Passwort neu setzen (Benutzer/innenname und Passwort gehen Ihnen umgehend per E-Mail zu). {$passwordResetUrl}<br />
 <br />
-URL des Beitrags: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+URL des Beitrags: {$submissionReviewUrl}<br />
 <br />
 Könnten Sie uns bitte bestätigen, dass Sie nach wie vor bereit sind, unsere Zeitschrift gutachterlich zu unterstützen? Wir würden uns freuen, bald von Ihnen zu hören.<br />
 <br />
@@ -410,7 +401,7 @@ Könnten Sie uns bitte bestätigen, dass Sie nach wie vor bereit sind, unsere Ze
 <br />
 hiermit möchten wir Sie freundlich an Ihre Zusage erinnern, den Beitrag &quot;{$submissionTitle}&quot; für {$contextName} zu begutachten. Wir hatten gehofft, das Gutachten zum {$reviewDueDate} zu erhalten. Diese E-Mail wurde automatisch erstellt und nach Überschreitung des Termins versandt. Wir würden uns freuen, wenn uns das Gutachten baldmöglichst zur Verfügung stünde.<br />
 <br />
-URL des Beitrags: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+URL des Beitrags: {$submissionReviewUrl}<br />
 <br />
 Könnten Sie uns bitte bestätigen, dass Sie nach wie vor bereit sind, unsere Zeitschrift gutachterlich zu unterstützen? Wir würden uns freuen, bald von Ihnen zu hören.<br />
 <br />
@@ -423,9 +414,9 @@ Könnten Sie uns bitte bestätigen, dass Sie nach wie vor bereit sind, unsere Ze
 <br />
 hiermit möchten wir Sie freundlich an Ihre Zusage erinnern, den Beitrag &quot;{$submissionTitle}&quot; für {$contextName} zu begutachten. Wir hatten gehofft, das Gutachten zum {$reviewDueDate} zu erhalten. Diese E-Mail wurde automatisch erstellt und nach Überschreitung des Termins versandt. Wir würden uns freuen, wenn uns das Gutachten baldmöglichst zur Verfügung stünde.<br />
 <br />
-Falls Ihnen Benutzer/innennamen und Passwort fehlen, können Sie über folgenden Link Ihr Passwort neu setzen (Benutzer/innenname und Passwort gehen Ihnen umgehend per E-Mail zu). <a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
+Falls Ihnen Benutzer/innennamen und Passwort fehlen, können Sie über folgenden Link Ihr Passwort neu setzen (Benutzer/innenname und Passwort gehen Ihnen umgehend per E-Mail zu). {$passwordResetUrl}<br />
 <br />
-URL des Beitrags: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+URL des Beitrags: {$submissionReviewUrl}<br />
 <br />
 Könnten Sie uns bitte bestätigen, dass Sie nach wie vor bereit sind, unsere Zeitschrift gutachterlich zu unterstützen? Wir würden uns freuen, bald von Ihnen zu hören.<br />
 <br />
@@ -438,7 +429,7 @@ Könnten Sie uns bitte bestätigen, dass Sie nach wie vor bereit sind, unsere Ze
 <br />
 hiermit möchten wir Sie freundlich an Ihre Zusage erinnern, den Beitrag &quot;{$submissionTitle}&quot; für {$contextName} zu begutachten. Wir hatten gehofft, das Gutachten zum {$reviewDueDate} zu erhalten. Diese E-Mail wurde automatisch erstellt und nach Überschreitung des Termins versandt. Wir würden uns freuen, wenn uns das Gutachten baldmöglichst zur Verfügung stünde.<br />
 <br />
-URL des Beitrags: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+URL des Beitrags: {$submissionReviewUrl}<br />
 <br />
 Könnten Sie uns bitte bestätigen, dass Sie nach wie vor bereit sind, unsere Zeitschrift mit Ihrer wertvollen gutachterlichen Arbeit zu unterstützen? Wir würden uns freuen, bald von Ihnen zu hören.<br />
 <br />
@@ -453,8 +444,35 @@ wir sind zu einer Entscheidung in Bezug auf Ihre Einreichung für {$contextName}
 <br />
 Unsere Entscheidung lautet: Beitrag annehmen<br />
 <br />
-{$editorialContactSignature}<br />]]></body>
+{$editorialContactSignature}<br />
+]]></body>
 		<description>Diese E-Mail von der/dem Redakteur/in oder Rubrikredakteur/in an eine/n Autor/in informiert diese/n über eine getroffene Entscheidung zu ihrer/seiner Einreichung.</description>
+	</email_text>
+	<email_text key="EDITOR_DECISION_SEND_TO_EXTERNAL">
+		<subject>Entscheidung der Redaktion</subject>
+		<body><![CDATA[{$authorName}:<br />
+<br />
+Wir sind zu einer Entscheidung hinsichtlich Ihrer Einreichung für {$contextName}, &quot;{$submissionTitle}&quot; gekommen.<br />
+<br />
+Wir haben entschieden, ein Gutachten anzufordern.<br />
+<br />
+URL des Beitrags: {$submissionUrl}<br />
+<br />
+{$editorialContactSignature}<br />
+]]></body>
+		<description>Diese E-Mail von Redakteur/in oder Rubrikredakteur/in benachrichtigt die/den Autor/in darüber, dass ein externes Gutachten angefordert wird.</description>
+	</email_text>
+	<email_text key="EDITOR_DECISION_SEND_TO_PRODUCTION">
+		<subject>Entscheidung der Redaktion</subject>
+		<body><![CDATA[{$authorName}:<br />
+<br />
+Das Lektorat Ihrer Einreichung &quot;{$submissionTitle}&quot; ist beendet. Wir leiten den Beitrag jetzt zur Herstellung weiter.<br />
+<br />
+URL des Beitrags: {$submissionUrl}<br />
+<br />
+{$editorialContactSignature}<br />
+]]></body>
+		<description>Diese E-Mail von Redakteur/in oder Rubrikredakteur/in informiert die/den Autor/in darüber, dass deren Beitrag in die Herstellung weitergeleitet worden ist.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_REVISIONS">
 		<subject>Entscheidung der Redaktion</subject>
@@ -488,137 +506,36 @@ wir sind zu einer Entscheidung in Bezug auf Ihre Einreichung für {$contextName}
 <br />
 Unsere Entscheidung lautet: Beitrag ablehnen<br />
 <br />
-{$editorialContactSignature}<br />]]></body>
+{$editorialContactSignature}<br />
+]]></body>
 		<description>Diese E-Mail von der/dem Redakteur/in oder Rubrikredakteur/in an eine/n Autor/in informiert diese/n über eine getroffene Entscheidung zu ihrer/seiner Einreichung.</description>
 	</email_text>
-		<email_text key="COPYEDIT_REQUEST">
+	<email_text key="EDITOR_RECOMMENDATION">
+		<subject>Entscheidung der Redaktion</subject>
+		<body><![CDATA[{$editors}:<br />
+<br />
+Die Empfehlung hinsichtlich der Einreichung für {$contextName}, &quot;{$submissionTitle}&quot; ist: {$recommendation}<br />
+<br />
+{$editorialContactSignature}<br />
+]]></body>
+		<description></description>
+	</email_text>
+	<email_text key="COPYEDIT_REQUEST">
 		<subject>Bitte um ein Lektorat</subject>
 		<body><![CDATA[{$participantName},<br />
 <br />
 ich bitte Sie, das Manuskript &quot;{$submissionTitle}&quot; für {$contextName} zu lektorieren. Bitte gehen Sie dabei folgendermaßen vor:<br />
 1. Klicken Sie auf die unten stehende URL des Beitrags.<br />
-2. Loggen Sie sich bei der Zeitschrift ein und klicken Sie auf den Dateinamen in Schritt 1.<br />
-3. Beachten Sie die Hinweise zum Lektorat auf der Webseite.<br />
-4. Öffnen Sie die heruntergeladene Datei und lektorieren Sie den Text; fügen Sie, falls nötig, Fragen an die Autorin/den Autor hinzu.<br />
-5. Sichern Sie die lektorierte Version und laden Sie sie zu Schritt 1 des Lektorats hoch.<br />
-6. Schicken Sie die ABGESCHLOSSEN-E-Mail an die Redaktion.<br />
+2. Öffnen Sie alle Dateien, die unter Entwurf für Lektorat verfügbar sind, und beginnen Sie Ihr Lektorat. Fügen Sie neue Diskussionen zum Lektorat nach Bedarf hinzu.<br />
+3. Sichern Sie die lektorierte(n) Dateien und laden Sie sie unter Lektoriert hoch.<br />
+4. Benachrichtigen Sie die/den Redakteur/in, dass alle Dateien fertig sind und dass der Herstellungsprozess beginnen kann.<br />
 <br />
-URL {$contextName}: <a href="{$contextUrl}">{$contextUrl}</a><br />
-URL des Beitrags: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+URL {$contextName}: {$contextUrl}<br />
+URL des Beitrags: {$submissionUrl}<br />
 Benutzer/innenname: {$participantUsername}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Diese E-Mail wird von der/dem Rubrikredakteur/in an die/den Lektor einer Einreichung gesendet, um diese/n zu bitten, mit dem Lektorat zu beginnen. Sie liefert Informationen über die Einreichung und darüber, wie auf sie zuzugreifen ist.</description>
-	</email_text>
-	<email_text key="COPYEDIT_COMPLETE">
-		<subject>Lektorat beendet</subject>
-		<body><![CDATA[{$editorialContactName},<br />
-<br />
-wir haben den ersten Lektoratsdurchgang für das Manuskript &quot;{$submissionTitle}&quot; für {$contextName} abgeschlossen. Um die vorgeschlagenen Änderungen zu verfolgen und die eingefügten Fragen an die Autorin/den Autor zu beantworten, gehen Sie bitte folgendermaßen vor:<br />
-<br />
-1. Loggen Sie sich bitte bei der Zeitschrift mit Ihrem Benutzer/innennamen und Ihrem Passwort ein (verwenden Sie &quot;Passwort vergessen&quot;, falls nötig).<br />
-2. Klicken Sie auf die Datei bei 1: Erstes Lektorat und öffnen Sie die lektorierte Version.<br />
-3. Überprüfen Sie die lektorierte Version und nehmen Sie ggf. Änderungen vor. Verwenden Sie dabei bitte das Word-Korrekturprogramm. Beantworten Sie auch die eingefügten Fragen zum Text.<br />
-4. Sichern Sie die Datei und laden Sie sie zu Schritt 2: Lektorat durch Autor/in hoch.<br />
-5. Klicken Sie auf das E-Mail-Symbol und senden Sie die ABGESCHLOSSEN-Nachricht an die Redakteurin/den Redakteur.<br />
-<br />
-Dies ist die letzte Gelegenheit für Sie, noch größere Änderungen vorzunehmen. Sie werden später noch gebeten, die Fahnen zu korrigieren, dann können jedoch nur noch kleinere Typographie- und Layoutfehler korrigiert werden.<br />
-<br />
-URL des Beitrags: <a href="{$submissionEditingUrl}">{$submissionEditingUrl}</a><br />
-<br />
-Falls Sie zur Zeit nicht in der Lage sein sollten, unserer Aufforderung nachzukommen oder noch Fragen haben,<br />
-geben Sie mir bitte Bescheid. Vielen Dank für Ihren Beitrag zu dieser Zeitschrift.<br />
-<br />
-{$participantName}]]></body>
-	</email_text>
-	<email_text key="COPYEDIT_ACK">
-		<subject>Eingangsbestätigung für lektorierte Fassung</subject>
-		<body><![CDATA[{$participantName},<br />
-<br />
-vielen Dank für das Lektorat des Manuskripts &quot;{$submissionTitle}&quot;. Ihre Mitarbeit unterstützt uns bei den Bemühungen, die Qualität der Beiträge in {$contextName} zu sichern.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Diese E-Mail wird von der Rubrikredakteurin/dem Rubrikredakteur an die Lektorin/den Lektor eines Beitrags, um den erfolgreichen Abschluss des Lektoratsprozesses zu bestätigen und um ihr/ihm für die Unterstützung zu danken.</description>
-	</email_text>
-	<email_text key="COPYEDIT_AUTHOR_REQUEST">
-		<subject>Bitte um Durchsicht der lektorierten Fassung</subject>
-		<body><![CDATA[{$authorName},<br />
-<br />
-Ihre Einreichung &quot;{$submissionTitle}&quot; für {$contextName} hat den ersten Lektoratsschritt passiert, und Sie können ihn jetzt durchsehen. Gehen Sie bitte folgendermaßen vor:<br />
-<br />
-1. Klicken Sie auf die unten stehende URL Ihres Beitrags.<br />
-2. Loggen Sie sich bitte mit Ihrem Benutzer/innennamen bei der Zeitschrift ein und klicken Sie auf den Dateinamen, der bei Schritt 1 erscheint.<br />
-3. Öffnen Sie die heruntergeladene Version Ihres Beitrags.<br />
-4. Überprüfen Sie den Text einschließlich der Änderungsvorschläge in Ihrem Manuskript und beantworten Sie die ggf. dort gestellte Fragen.<br />
-5. Sie können weitere eigene Verbesserungen in Ihrem Text vornehmen.<br />
-6. Laden Sie die fertige Korrekturversion in Schritt 2 wieder hoch.<br />
-7. Klicken Sie auf METADATEN ÜBERPRÜFEN, um die Angaben für die Indizierung Ihres Beitrags auf Vollständigkeit und Richtigkeit zu überprüfen.<br />
-8. Benachrichtigen Sie die Redaktion mit der ABGESCHLOSSEN-E-Mail.<br />
-<br />
-URL des Beitrags: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
-<br />
-Dies ist die letzte Gelegenheit für Sie, noch größere Änderungen vorzunehmen. Sie werden danach noch gebeten, die Fahnen zu korrigieren. Dann können Sie jedoch nur noch kleinere Typographie- und Layoutfehler korrigieren.<br />
-<br />
-Falls Sie zur Zeit nicht in der Lage sein sollten, unserer Aufforderung nachzukommen oder noch Fragen haben, benachrichtigen Sie mich bitte. Vielen Dank für Ihren Beitrag zu dieser Zeitschrift.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Diese E-Mail wird von der/dem Rubrikredakteur/in an die Autorin/den Autor einer Einreichung gesendet, um diese/n darum zu bitten, die Arbeit der Lektorin/des Lektors korrekturzulesen. Sie liefert Informationen über den Zugang zu dem Manuskript und weist darauf hin, dass dies die letzte Gelegenheit für die Autorin/den Autor ist, nennenswerte Änderungen vorzunehmen.</description>
-	</email_text>
-	<email_text key="COPYEDIT_AUTHOR_COMPLETE">
-		<subject>Lektorat durch Autor/in abgeschlossen</subject>
-		<body><![CDATA[{$editorialContactName},<br />
-<br />
-ich habe nun die lektorierte Fassung meines Manuskripts &quot;{$submissionTitle}&quot; für {$contextName} korrigiert. Es steht damit für die abschließende Durchsicht und die Vorbereitung des Layouts für die Veröffentlichung in {$contextName} zur Verfügung.<br />
-<br />
-Mit bestem Dank für Ihre Bemühungen um meinen Beitrag,<br />
-{$authorName}]]></body>
-		<description>Diese E-Mail wird von der/dem Autor/in an den/die Rubrikredakteur/in gesendet, um über den Abschluss des Lektoratsschrittes durch den/die Autor/in zu informieren.</description>
-	</email_text>
-	<email_text key="COPYEDIT_AUTHOR_ACK">
-		<subject>Eingangsbestätigung für die durchgesehene Korrekturversion</subject>
-		<body><![CDATA[{$authorName},<br />
-<br />
-vielen Dank für die Durchsicht der Korrekturversion Ihres Manuskripts &quot;{$submissionTitle}&quot; für {$contextName}. Wir freuen uns auf die Veröffentlichung dieses Beitrags.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Diese E-Mail wird von der/dem Rubrikredakteur/in an die Autorin/den Autor einer Einreichung gesendet, um ihr/ihm zu bestätigen, dass das Korrekturlektorat durch die/den Autor/in abgeschlossen ist und um ihr/ihm für die Mitwirkung zu danken.</description>
-	</email_text>
-	<email_text key="COPYEDIT_FINAL_REQUEST">
-		<subject>Bitte um letzte Durchsicht</subject>
-		<body><![CDATA[{$participantName},<br />
-<br />
-Autor/in und Redaktion haben die Prüfung und Korrektur des Manuskripts &quot;{$submissionTitle}&quot; für {$contextName} abgeschlossen. Eine endgültige Fassung, die dann für das Layout zur Verfügung steht, muss jetzt erstellt werden. Bitte gehen Sie dabei folgendermaßen vor:<br />
-1. Klicken Sie auf die unten stehende URL des Beitrags.<br />
-2. Loggen Sie sich bei der Zeitschrift ein und klicken Sie auf den Dateinamen in Schritt 2.<br />
-3. Öffnen Sie die heruntergeladene Datei und fügen Sie alle Korrekturen und Fragen an die Autorin/den Autor ein.<br />
-4. Sichern Sie die Datei und laden Sie sie zu Schritt 3 des Lektorats hoch.<br />
-5. Klicken Sie auf METADATEN ÜBERPRÜFEN und überprüfen Sie die Informationen für die Indizierung. Vergessen Sie ggf. nicht, Ihre Änderungen zu sichern.<br />
-6. Schicken Sie die ABGESCHLOSSEN-E-Mail an die Redaktion.<br />
-<br />
-URL {$contextName}: <a href="{$contextUrl}">{$contextUrl}</a><br />
-URL des Beitrags: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
-Benutzer/innenname: {$participantUsername}<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Diese E-Mail wird von der/dem Rubrikredakteur/in an die/den Lektor/in gesendet, um darum zu bitten, dass sie/er einen letzten Durchgang des Lektorats einer Einreichung durchführt, bevor diese in den Layoutprozess gegeben wird.</description>
-	</email_text>
-	<email_text key="COPYEDIT_FINAL_COMPLETE">
-		<subject>Letzte Durchsicht abgeschlossen</subject>
-		<body><![CDATA[{$editorialContactName},<br />
-<br />
-ich habe eine korrigierte letzte Fassung des Manuskripts &quot;{$submissionTitle}&quot; für {$contextName} fertiggestellt. Sie steht nun zum Layout und zur Vorbereitung der Fahnen bereit.<br />
-<br />
-{$participantName}]]></body>
-		<description>Diese E-Mail von der/dem Lektor/in an die/den Rubrikredakteur/in informiert diese/n darüber, dass der letzte Lektoratdurchgang abgeschlossen worden ist und dass der Layoutprozess nun beginnen kann.</description>
-	</email_text>
-	<email_text key="COPYEDIT_FINAL_ACK">
-		<subject>Eingangsbestätigung für abschließende Korrektur</subject>
-		<body><![CDATA[{$participantName},<br />
-<br />
-vielen Dank für die abschließende Bearbeitung des Manuskripts &quot;{$submissionTitle}&quot; für {$contextName}. Mit der Erstellung dieser letzten Fassung als Vorbereitung für das Layout haben Sie uns im Redaktionsprozess sehr geholfen.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Diese E-Mail von der/dem Rubrikredakteur/in an die/den Lektor/in bestätigt den Abschluss des letzten Lektoratdurchgangs und dankt ihr/ihm für die Mitwirkung.</description>
 	</email_text>
 	<email_text key="LAYOUT_REQUEST">
 		<subject>Bitte um Layout</subject>
@@ -630,8 +547,8 @@ ich bitte Sie um das Layout der Fahnen für das Manuskript &quot;{$submissionTit
 2. Loggen Sie sich bei der Zeitschrift ein und verwenden Sie die Datei der Layout-Fassung, um die Fahne entsprechend den Vorgaben der Zeitschrift zu erstellen.<br />
 3. Schicken Sie die ABGESCHLOSSEN-E-Mail an die Redaktion.<br />
 <br />
-URL {$contextName}: <a href="{$contextUrl}">{$contextUrl}</a><br />
-URL des Beitrags: <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a><br />
+URL {$contextName}: {$contextUrl}<br />
+URL des Beitrags: {$submissionLayoutUrl}<br />
 Benutzer/innenname: {$participantUsername}<br />
 <br />
 Falls Sie zur Zeit nicht in der Lage sein sollten, die Arbeit zu übernehmen, oder Fragen haben, geben Sie mir bitte Bescheid. Vielen Dank für Ihre Unterstützung dieser Zeitschrift.<br />
@@ -650,130 +567,9 @@ Falls Sie Fragen haben, können Sie sich gerne an mich wenden.<br />
 {$participantName}]]></body>
 		<description>Diese E-Mail von der/dem Layouter/in an die/den Rubrikredakteur/in benachrichtigt diese/n, dass der Layoutprozess abgeschlossen worden ist.</description>
 	</email_text>
-	<email_text key="LAYOUT_ACK">
-		<subject>Eingangsbestätigung für die Fahnen</subject>
-		<body><![CDATA[{$participantName},<br />
-<br />
-vielen Dank für die Fahnen des Manuskripts &quot;{$submissionTitle}&quot; für {$contextName}. Dies ist ein wichtiger Beitrag zum Veröffentlichungsprozess.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Diese E-Mail von der/dem Rubrikredakteur/in an die/den Layouter/in bestätigt den Abschluss des Layoutprozesses und dankt ihr/ihm für die Mitwirkung.</description>
-	</email_text>
-	<email_text key="PROOFREAD_AUTHOR_REQUEST">
-		<subject>Bitte um Fahnenkorrektur an Autor/in</subject>
-		<body><![CDATA[{$authorName},<br />
-<br />
-wir bitten Sie, die Fahnenkorrektur von &quot;{$submissionTitle}&quot; für {$contextName} vorzunehmen. Bitte gehen Sie folgendermaßen vor:<br />
-1. Klicken Sie auf die unten stehende URL der Zeitschrift.<br />
-2. Loggen Sie sich bei der Zeitschrift ein und öffnen Sie die KORREKTURHINWEISE.<br />
-3. Klicken Sie auf KORREKTURFAHNE ANSEHEN und überprüfen Sie die Typographie und die Formatierungen.<br />
-4. Geben Sie typographische Korrekturen und Formatänderungen ein.<br />
-5. Speichern Sie die Datei ab und schicken Sie sie per E-Mail an die Layoutredaktion und das Korrekturlektorat.<br />
-6. Senden Sie die ABGESCHLOSSEN-E-Mail an die Redaktion.<br />
-<br />
-URL des Beitrags: {$submissionUrl}<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Diese E-Mail von der/dem Rubrikredakteur/in an die/den Autor/in benachrichtigt diese/n, dass die Fahnen eines Artikels zum Korrekturlektorat bereit stehen. Sie liefert Informationen über den Beitrag und darüber, wie auf ihn zugegriffen werden kann.</description>
-	</email_text>
-	<email_text key="PROOFREAD_AUTHOR_COMPLETE">
-		<subject>Korrekturen abgeschlossen (Autor/in)</subject>
-		<body><![CDATA[{$editorialContactName},<br />
-<br />
-ich habe die Fahnenkorrekturen meines Manuskripts &quot;{$submissionTitle}&quot; für {$contextName} abgeschlossen. Die Fahnen können nun von Lektor/in und Layouter/in fertiggestellt werden.<br />
-<br />
-{$authorName}]]></body>
-		<description>Diese E-Mail von der/dem Autor/in an Korrekturlektor/in und Redakteur/in benachrichtigt diese, dass der Korrekturlektoratdurchgang der Autorin/des Autors abgeschlossen ist und dann Details in den Kommentaren zum Artikel zu finden sind.</description>
-	</email_text>
-	<email_text key="PROOFREAD_AUTHOR_ACK">
-		<subject>Eingangsbestätigung für die Korrekturfassung an Autor/in</subject>
-		<body><![CDATA[{$authorName},<br />
-<br />
-vielen Dank für die Fahnenkorrektur Ihres Manuskripts &quot;{$submissionTitle}&quot;. Wir freuen uns auf die baldige Veröffentlichung Ihres Beitrags in {$contextName}.<br />
-<br />
-Wenn Sie sich für unseren Benachrichtigungsdienst einschreiben, erhalten Sie gleich bei Erscheinen eine E-Mail mit dem Inhaltsverzeichnis der neuen Nummer. Falls Sie Fragen haben, benachrichtigen Sie uns bitte.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Diese E-Mail von der/dem Rubrikredakteur/in an die/den Autor/in bestätigt den Abschluss des ersten Korrekturlektoratdurchgangs und dankt ihr/ihm für die Mitwirkung.</description>
-	</email_text>
-	<email_text key="PROOFREAD_REQUEST">
-		<subject>Korrekturlektorat-Anfrage</subject>
-		<body><![CDATA[{$proofreaderName},<br />
-<br />
-der Beitrag &quot;{$submissionTitle}&quot; für {$contextName} muss nun gemäß der folgenden Schritte durchgesehen werden.<br />
-1. Klicken Sie unten auf die URL des Beitrags.<br />
-2. Loggen Sie sich bei der Zeitschrift ein und lesen Sie die Korrekturhinweise.<br />
-3. Klicken Sie auf KORREKTURFAHNE LESEN und überprüfen Sie die Fahnen in den jeweiligen Formaten.<br />
-4. Geben Sie typographische Korrekturen und Formatänderungen ein.<br />
-5. Speichern Sie die Korrekturen und senden sie per E-Mail an die Layouterin/den Layouter.<br />
-6. Senden Sie die ABGESCHLOSSEN-E-Mail an die Redakteurin/den Redakteur.<br />
-<br />
-Manuskript-URL: {$submissionUrl}<br />
-Benutzer/innenname: {$proofreaderUsername}<br />
-<br />
-Falls Sie zur Zeit nicht in der Lage sein sollten, unserer Aufforderung nachzukommen, oder noch Fragen haben, geben Sie mir bitte Bescheid. Vielen Dank für Ihren Beitrag zu dieser Zeitschrift.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Diese E-Mail von der/dem Rubrikredakteur/in an die/den Korrekturlektor/in bittet darum, dass diese/r die Fahnen eines Artikels korrekturliest. Sie liefert Informationen über den Artikel und darüber, wie auf ihn zugegriffen werden kann.</description>
-	</email_text>
-	<email_text key="PROOFREAD_COMPLETE">
-		<subject>Lektorat beendet</subject>
-		<body><![CDATA[{$editorialContactName},<br />
-<br />
-ich habe das Lektorat für das Manuskript &quot;{$submissionTitle}&quot; für {$contextName} beendet. Die Fahnen sind für die Endkorrekturen durch die Layoutredakteurin/den Layoutredakteur fertiggestellt.<br />
-<br />
-{$proofreaderName}]]></body>
-		<description>Diese E-Mail von der/dem Korrekturlektor/in an die/den Rubrikredakteur/in benachrichtigt diese/n, dass die/der Korrekturlektor/in das Korrekturlektorat beendet hat.</description>
-	</email_text>
-	<email_text key="PROOFREAD_ACK">
-		<subject>Eingangsbestätigung für die Endkorrekturen</subject>
-		<body><![CDATA[{$proofreaderName},<br />
-<br />
-vielen Dank für die Endkorrektur der Fahnen des Manuskripts &quot;{$submissionTitle}&quot;. Sie haben uns bei den Korrekturarbeiten an {$contextName} sehr geholfen.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Diese E-Mail von der/dem Rubrikredakteur/in an die/den Korrekturlektor/in bestätigt den Abschluss des Korrekturlektorat-Prozesses durch die/den Korrekturlektor/in und dankt ihr/ihm für die Unterstützung.</description>
-	</email_text>
-	<email_text key="PROOFREAD_LAYOUT_REQUEST">
-		<subject>Korrekturlektorat-Anfrage (Layouter/in)</subject>
-		<body><![CDATA[{$participantName},<br />
-<br />
-der Beitrag &quot;{$submissionTitle}&quot; für {$contextName} ist von Autor/in und Korrekturlektor/in durchgesehen worden, und alle Korrekturen sollten nun den folgenden Schritten gemäß durchgeführt werden.<br />
-1. Klicken Sie auf die URL des Beitrags unten.<br />
-2. Loggen Sie sich bei der Zeitschrift ein und lesen Sie die Korrekturen, um die korrigierten Fahnen zu erzeugen.<br />
-3. Laden Sie die überarbeiteten Fahnen hoch.<br />
-4. Senden Sie die ABGESCHLOSSEN-E-Mail in Schritt 3 des Korrekturlektorats an die Redakteurin/den Redakteur.<br />
-<br />
-URL {$contextName}: <a href="{$contextUrl}">{$contextUrl}</a><br />
-URL des Beitrags: {$submissionUrl}<br />
-Benutzer/innenname: {$participantUsername}<br />
-<br />
-Wenn Sie diese Aufgabe zur Zeit nicht erledigen können oder wenn Sie irgendwelche Fragen haben, kontaktieren Sie mich bitte. Danke für Ihren Beitrag zu dieser Zeitschrift.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Diese E-Mail von der/dem Rubrikredakteur/in an die/den Layouter/in informiert diese/n, dass die Fahnen eines Artikels zum letzten Korrekturlektorat bereit stehen. Sie liefert Informationen über den Artikel und darüber, wie auf ihn zugegriffen werden kann.</description>
-	</email_text>
-	<email_text key="PROOFREAD_LAYOUT_COMPLETE">
-		<subject>Eingangsbestätigung Korrekturlektorat (Korrekturlektor/in)</subject>
-		<body><![CDATA[{$editorialContactName},<br />
-<br />
-nach dem Korrekturlektorat sind nun die Fahnen für das Manuskript &quot;{$submissionTitle}&quot; für {$contextName} korrigiert worden. Der Beitrag liegt damit bereit zur Veröffentlichung.<br />
-<br />
-{$participantName}]]></body>
-		<description>Diese E-Mail von der/dem Layouter/in an die/den Rubrikredakteur/in informiert diese/n darüber, dass der letzte Schritt des Korrekturlektorats abgeschlossen worden ist und der Artikel nun zur Veröffentlichung bereit steht.</description>
-	</email_text>
-	<email_text key="PROOFREAD_LAYOUT_ACK">
-		<subject>Eingangsbestätigung Korrekturlektorat (Layouter/in)</subject>
-		<body><![CDATA[{$participantName},<br />
-<br />
-vielen Dank für den Abschluss der Änderungen aus dem Korrekturlektorat in den Fahnen zum Manuskript &quot;{$submissionTitle}&quot; für {$contextName}. Dies stellt einen wichtigen Beitrag zur Arbeit dieser Zeitschrift dar.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Diese E-Mail wird von der/dem Rubrikredakteur/in an die/den Layouter/in gesendet, um den Abschluss des letzten Schritts des Korrekturlektorats zu bestätigen und um ihr/ihm für die Mitwirkung zu danken.</description>
-	</email_text>
 	<email_text key="EMAIL_LINK">
 		<subject>Möglicherweise interessierender Artikel</subject>
-		<body><![CDATA[Ich dachte, Sie würden sich vielleicht für den Beitrag &quot;{$submissionTitle}&quot; von {$authorName}, veröffentlicht in Band {$volume}, Nummer {$number} ({$year}) von {$contextName} unter &quot;<a href="{$articleUrl}">{$articleUrl}</a>&quot;, interessieren.]]></body>
+		<body><![CDATA[Ich dachte, Sie würden sich vielleicht für den Beitrag &quot;{$submissionTitle}&quot; von {$authorName}, veröffentlicht in Band {$volume}, Nummer {$number} ({$year}) von {$contextName} unter &quot;{$articleUrl}&quot;, interessieren.]]></body>
 		<description>Diese E-Mail-Vorlage gibt einer registrierten Leserin/einem registrierten Leser die Möglichkeit, Informationen über einen Artikel an jemanden zu senden, die/der sich eventuell dafür interessiert. Sie ist über die Lesewerkzeuge erreichbar und muss von der/dem Zeitschriftenverwalter/in in den Einstellungen der Lesewerkzeuge aktiviert werden.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_NOTIFY">
@@ -799,7 +595,7 @@ Falls Sie Fragen haben, können Sie sich gerne an mich wenden.<br />
 		<subject>Ausgabe jetzt im Open Access</subject>
 		<body><![CDATA[Liebe Leser/innen,<br />
 <br />
-{$contextName} hat soeben die nächste Ausgabe frei zugänglich gemacht. Wir laden Sie ein, sich hier das Inhaltsverzeichnis und auf unserer Webseite (<a href="{$contextUrl}">{$contextUrl}</a>) die Sie interessierenden Beiträge anzusehen.<br />
+{$contextName} hat soeben die nächste Ausgabe frei zugänglich gemacht. Wir laden Sie ein, sich hier das Inhaltsverzeichnis und auf unserer Webseite ({$contextUrl}) die Sie interessierenden Beiträge anzusehen.<br />
 <br />
 Wir danken für Ihr Interesse an unserer Arbeit,<br />
 {$editorialContactSignature}]]></body>
@@ -841,7 +637,8 @@ Falls Sie Fragen haben, können Sie sich gerne an mich wenden.<br />
 		<subject>Abonnement abgelaufen – letzte Benachrichtigung</subject>
 		<body><![CDATA[{$subscriberName},<br />
 <br />
-Ihr Abonnement für {$contextName} ist abgelaufen. Bitte beachten Sie, dass dies die letzte Benachrichtung ist, die wir Ihnen senden.<br />
+Ihr Abonnement für {$contextName} ist abgelaufen.<br />
+Bitte beachten Sie, dass dies die letzte Benachrichtung ist, die wir Ihnen senden.<br />
 <br />
 {$subscriptionType}<br />
 Ablaufdatum: {$expiryDate}<br />
@@ -868,7 +665,7 @@ Informationen zur Mitgliedschaft (sofern angegeben):<br />
 <br />
 Um sich dieses Abonnement anzusehen oder es zu ändern, benutzen Sie bitte die folgende URL.<br />
 <br />
-Abonnement-URL: <a href="{$subscriptionUrl}">{$subscriptionUrl}</a><br />
+Abonnement-URL: {$subscriptionUrl}<br />
 ]]></body>
 		<description>Diese E-Mail benachrichtigt die/den Abonnementverwalter/in, dass ein individuelles Abonnement online erworben worden ist. Sie liefert Informationen über das Abonnement und einen Link zum schnellen Zugriff auf das abgeschlossene Abonnement.</description>
 	</email_text>
@@ -897,7 +694,7 @@ Informationen zur Mitgliedschaft (sofern angegeben):<br />
 <br />
 Um sich dieses Abonnement anzusehen oder es zu ändern, benutzen Sie bitte die folgende URL.<br />
 <br />
-Abonnement-URL: <a href="{$subscriptionUrl}">{$subscriptionUrl}</a><br />
+Abonnement-URL: {$subscriptionUrl}<br />
 ]]></body>
 		<description>Diese E-Mail benachrichtigt die/den Abonnementverwalter/in, dass ein institutionelles Abonnement online erworben worden ist. Sie liefert Informationen über das Abonnement und einen Link zum schnellen Zugriff auf das abgeschlossene Abonnement.</description>
 	</email_text>
@@ -916,7 +713,7 @@ Informationen zur Mitgliedschaft (sofern angegeben):<br />
 <br />
 Um sich dieses Abonnement anzusehen oder es zu ändern, benutzen Sie bitte die folgende URL.<br />
 <br />
-Abonnement-URL: <a href="{$subscriptionUrl}">{$subscriptionUrl}</a><br />
+Abonnement-URL: {$subscriptionUrl}<br />
 ]]></body>
 		<description>Diese E-Mail benachrichtigt die/den Abonnementverwalter/in, dass ein individuelles Abonement online erneuert worden ist. Sie liefert Informationen über das Abonnement und einen Link zum schnellen Zugriff auf das erneuerte Abonnement.</description>
 	</email_text>
@@ -945,7 +742,7 @@ Informationen zur Mitgliedschaft (sofern angegeben):<br />
 <br />
 Um sich dieses Abonnement anzusehen oder es zu ändern, benutzen Sie bitte die folgende URL.<br />
 <br />
-Abonnement-URL: <a href="{$subscriptionUrl}">{$subscriptionUrl}</a><br />
+Abonnement-URL: {$subscriptionUrl}<br />
 ]]></body>
 		<description>Diese E-Mail benachrichtigt die/den Abonnementverwalter/in, dass ein institutionelles Abonement online erneuert worden ist. Sie liefert Informationen über das Abonnement und einen Link zum schnellen Zugriff auf das erneuerte Abonnement.</description>
 	</email_text>
@@ -964,76 +761,32 @@ Lektor/in, {$contextName}<br />
 ]]></body>
 		<description>Diese E-Mail ermöglicht es Lektor/innen, zusätzliche Informationen über Verweise von Autor/innen anzufordern.</description>
 	</email_text>
-	<email_text key="GIFT_AVAILABLE">
-		<subject>{$giftNoteTitle}</subject>
-		<body><![CDATA[Liebe/r {$recipientFirstName},<br />
-<br />
-{$buyerFullName} möchte mit Ihnen ein Geschenk bei {$giftJournalName} teilen:<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-{$giftNote}<br />
-<br />
-<br />
-Sie werden eine Folgemail erhalten, die Login-Details und eine Anleitung zum Einlösen des Geschenks enthält.<br />
-<br />
-Wir hoffen, dass Sie sich über Ihr Geschenk freuen!<br />
-<br />
-{$giftContactSignature}<br />
-]]></body>
-		<description>Diese E-Mail benachrichtigt eine/n Geschenkempfänger/in, dass ein Geschenk erworben worden ist und zur Einlösung bereit steht.</description>
-	</email_text>
-	<email_text key="GIFT_USER_REGISTER">
-		<subject>Lösen Sie Ihr Geschenk ein: Login-Details</subject>
-		<body><![CDATA[Liebe/r {$recipientFirstName},<br />
-<br />
-{$buyerFullName} möchte mit Ihnen ein Geschenk bei {$giftJournalName} teilen:<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-Um Ihr Geschenk einzulösen, loggen Sie sich bitte auf der Website der Zeitschrift unter <a href="{$giftUrl}">{$giftUrl}</a> ein.<br />
-<br />
-Ihr Benutzer/innenname: {$username}<br />
-Ihr Passwort: {$password}<br />
-<br />
-Sobald Sie sich eingeloggt haben, können Sie Ihr Passwort jederzeit ändern.<br />
-<br />
-Wir hoffen, dass Sie sich über Ihr Geschenk freuen!<br />
-<br />
-{$giftContactSignature}<br />
-]]></body>
-		<description>Diese E-Mail informiert eine/n Geschenkempfänger/in über die Login-Details für einen neuen Account.</description>
-	</email_text>
-	<email_text key="GIFT_USER_LOGIN">
-		<subject>Lösen Sie Ihr Geschenk ein: Login-Details</subject>
-		<body><![CDATA[Liebe/r {$recipientFirstName},<br />
-<br />
-{$buyerFullName} möchte mit Ihnen ein Geschenk bei {$giftJournalName} teilen:<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-Um Ihr Geschenk einzulösen, loggen Sie sich bitte auf der Website der Zeitschrift unter <a href="{$giftUrl}">{$giftUrl}</a> ein.<br />
-<br />
-Ihr Benutzer/innenname: {$username}<br />
-<br />
-Wir hoffen, dass Sie sich über Ihr Geschenk freuen!<br />
-<br />
-{$giftContactSignature}<br />
-]]></body>
-		<description>Diese E-Mail informiert eine/n Geschenkempfänger/in über seine/ihre Login-Details.</description>
-	</email_text>
-<email_text key="REVISED_VERSION_NOTIFY">
-        <subject>Überarbeitete Version hochgeladen</subject>
-        <body><![CDATA[{$editorialContactName},<br />
+	<email_text key="REVISED_VERSION_NOTIFY">
+		<subject>Überarbeitete Version hochgeladen</subject>
+		<body><![CDATA[Sehr geehrte Redaktion,<br />
 <br />
 eine überarbeitete Fassung von &quot;{$submissionTitle}&quot; ist von der/dem Autor/in {$authorName} hochgeladen worden.<br />
 <br />
 URL des Beitrags: {$submissionUrl}<br />
 <br />
 {$editorialContactSignature}]]></body>
-        <description>Diese E-Mail wird automatisch an die/den zuständige/n Redakteur/in geschickt, wenn ein/e Autor/in eine überarbeitete Fassung eines Artikels hochgeladen hat.</description>
-    </email_text>
+		<description>Diese E-Mail wird automatisch an die/den zuständige/n Redakteur/in geschickt, wenn ein/e Autor/in eine überarbeitete Fassung eines Artikels hochgeladen hat.</description>
+	</email_text>
+	<email_text key="NOTIFICATION_CENTER_DEFAULT">
+		<subject>Eine Nachricht bezüglich {$contextName}</subject>
+		<body>Bitte geben Sie Ihre Nachricht ein.</body>
+		<description>Die (leere) Standardnachricht, die in der Nachrichtenliste des Benachrichtigungscenters angezeigt wird.</description>
+	</email_text>
+	<email_text key="EDITOR_DECISION_INITIAL_DECLINE">
+		<subject>Entscheidung der Redaktion</subject>
+		<body>
+			<![CDATA[{$authorName}:<br />
+<br />
+Wir sind zu einer Entscheidung hinsichtlich Ihrer Einreichung für {$contextName}, &quot;{$submissionTitle}&quot; gekommen.<br />
+<br />
+Wir haben entschieden, Ihre Einreichung abzulehnen.<br />
+<br />
+{$editorialContactSignature}<br />]]></body>
+		<description></description>
+	</email_text>
 </email_texts>

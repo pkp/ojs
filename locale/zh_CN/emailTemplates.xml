@@ -4,8 +4,8 @@
 <!--
   * locale/zh_CN/emailTemplates.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localized email templates XML file.
@@ -24,31 +24,6 @@
 {$principalContactSignature}]]></body>
 		<description>这封电子邮件是发送给需要这种类型通知的注册用户。</description>
 	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST">
-		<subject>来自{$siteTitle}的新信息</subject>
-		<body><![CDATA[您有一条来自{$siteTitle}的新信息:<br />
---<br />
-{$notificationContents}<br />
-<br />
-链接: {$url}<br />
---<br />
-<br />
-如果您想停止接收电子邮件通知,前往{$unsubscribeLink}输入您的邮件地址和密码。<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>这封电子邮件是发送给通知邮件列表中的未注册用户。</description>
-	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
-		<subject>欢迎来到{$siteTitle}邮件列表!</subject>
-		<body><![CDATA[您已签署接收来自{$siteTitle}的通知。<br />
-<br />
-请点击链接确认您的请求并把你的邮件地址添加到邮件列表:{$confirmLink}<br />
-<br />
-如果您想停止接收邮件通知，请前往{$unsubscribeLink}<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>这封电子邮件是发送给刚刚从通知邮件列表中注册的未注册用户.</description>
-	</email_text>
 	<email_text key="PASSWORD_RESET_CONFIRM">
 		<subject>密码重置确认</subject>
 		<body><![CDATA[我们收到您的请求，将重新设定您在{$siteTitle}网站的密码。<br />
@@ -56,7 +31,7 @@
 如果您没有提出这个请求，请忽略这封电子邮件，同时您的密码将会保持不变。<br />
 如果您希望要重置您的密码，请按下面的链接。<br />
 <br />
-重置我的密码： <a href="{$url}">{$url}</a><br />
+重置我的密码： {$url}<br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>当注册用户忘记他们的密码或者无法登入的时候，这封电子邮件会寄给他们。信中会提供一个网址让它们能够登入并重置他们的密码。</description>
@@ -90,7 +65,7 @@
 <br />
 您已经在《{$contextName}》创建了账户, 在开始使用前，您需要验证您的电子邮件账号。要做到这一点，只需按照下面的链接：<br />
 <br />
-<a href="{$activateUrl}">{$activateUrl}</a><br />
+{$activateUrl}<br />
 <br />
 谢谢您,<br />
 {$principalContactSignature}]]></body>
@@ -113,7 +88,7 @@
 		<subject>新一期期刊已出版</subject>
 		<body><![CDATA[亲爱的读者您好：<br />
 <br />
-《{$contextName}》已经出版了最新一期的期刊，请见<a href="{$contextUrl}">{$contextUrl}</a>。我们诚挚地邀请您阅览这里的目录，并接着访问我们的网站以阅读各种文章以及有趣的项目。<br />
+《{$contextName}》已经出版了最新一期的期刊，请见{$contextUrl}。我们诚挚地邀请您阅览这里的目录，并接着访问我们的网站以阅读各种文章以及有趣的项目。<br />
 <br />
 感谢您持续地关注我们的作品，<br />
 {$editorialContactSignature}]]></body>
@@ -123,11 +98,11 @@
 		<subject>请存档《{$contextName}》</subject>
 		<body><![CDATA[Dear [University Librarian]<br />
 <br />
-《{$contextName}》 &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt;是一份适合贵单位教职员的期刊：[成员名称]，[职称]。这份期刊正试着与这个图书馆与其他大学图书馆，共同建立一个符合洛克斯存档计划(LOCKSS; Lots of Copies Keep Stuff Safe)的检藏资料库。<br />
+《{$contextName}》 &amp;lt;{$contextUrl}&amp;gt;是一份适合贵单位教职员的期刊：[成员名称]，[职称]。这份期刊正试着与这个图书馆与其他大学图书馆，共同建立一个符合洛克斯存档计划(LOCKSS; Lots of Copies Keep Stuff Safe)的检藏资料库。<br />
 <br />
 [期刊的简介]<br />
 <br />
-我们这份期刊在「洛克斯出版品一览」的网址是：<a href="{$contextUrl}">{$contextUrl}</a>/gateway/lockss<br />
+我们这份期刊在「洛克斯出版品一览」的网址是：{$contextUrl}/gateway/lockss<br />
 <br />
 我们了解贵单位已经参与洛克斯计划。我们非常乐意提供任何额外的后设资料，以在贵单位的洛克斯版本中进行注册。<br />
 <br />
@@ -139,7 +114,7 @@
 		<subject>请存档《{$contextName}》</subject>
 		<body><![CDATA[亲爱的[大学图书馆]：<br />
 <br />
-《{$contextName}》 &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt;是一份适合贵单位一位教职员的期刊：[成员名称]，[职称]。这份期刊正试着与这个图书馆与其他大学图书馆，共同建立一个符合洛克斯存档计划(LOCKSS; Lots of Copies Keep Stuff Safe)的检藏资料库。<br />
+《{$contextName}》 &amp;lt;{$contextUrl}&amp;gt;是一份适合贵单位一位教职员的期刊：[成员名称]，[职称]。这份期刊正试着与这个图书馆与其他大学图书馆，共同建立一个符合洛克斯存档计划(LOCKSS; Lots of Copies Keep Stuff Safe)的检藏资料库。<br />
 <br />
 [期刊的简介]<br />
 <br />
@@ -164,14 +139,6 @@
 <br />
 {$editorialContactSignature}]]></body>
 		<description>这封电子邮件，一旦启用，就会在作者完成投稿一份稿件到期刊的流程之后，会自动地寄发给作者。邮件中提供了有关追踪稿件编辑进度的信息，以及感谢作者的投稿。</description>
-	</email_text>
-	<email_text key="SUBMISSION_UNSUITABLE">
-		<subject>不适合的稿件</subject>
-		<body><![CDATA[{$authorName}:<br />
-<br />
-我们针对〈{$submissionTitle}〉稿件的初步审查显示出，此份稿件并不适合《{$contextName}》的研究领域和焦点。我们建议您参阅在期刊「介绍」页面底下的说明，以及期刊现有的内容，了解我们出版的作品。您也可以考虑将这份稿件投稿到其他更为适合的期刊上。<br />
-<br />
-{$editorialContactSignature}]]></body>
 	</email_text>
 	<email_text key="SUBMISSION_COMMENT">
 		<subject>稿件评论</subject>
@@ -210,13 +177,13 @@
 <br />
 《{$contextName}》的编辑团队相信您是投稿到本期刊之稿件〈{$submissionTitle}〉的最佳审查人选。该份稿件的摘要如下，而我们希望您会考虑进行这份对我们来说相当重要的一个工作。<br />
 <br />
-无论您是否接受审查工作与否，都请在{$responseDueDate}之前登入这个期刊网站，同时检阅这份稿件并且记录您的审查意见和编辑建议。网站为：<a href="{$contextUrl}">{$contextUrl}</a><br />
+无论您是否接受审查工作与否，都请在{$responseDueDate}之前登入这个期刊网站，同时检阅这份稿件并且记录您的审查意见和编辑建议。网站为：{$contextUrl}<br />
 <br />
 请注意审查工作的期限为：{$reviewDueDate}。<br />
 <br />
-如果您没有您在这个期刊网站的用户帐号和密码。您可以使用这个链接去重新设定您的密码（该密码会和您的用户帐号名称一起电邮给您）：<a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
+如果您没有您在这个期刊网站的用户帐号和密码。您可以使用这个链接去重新设定您的密码（该密码会和您的用户帐号名称一起电邮给您）：{$passwordResetUrl}<br />
 <br />
-稿件网址：<a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+稿件网址：{$submissionReviewUrl}<br />
 <br />
 非常感谢您考虑我们的邀请。<br />
 <br />
@@ -240,7 +207,7 @@
 <br />
 请注意审查工作的期限为：{$reviewDueDate}。<br />
 <br />
-稿件网址：<a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+稿件网址：{$submissionReviewUrl}<br />
 <br />
 非常感谢您考虑我们的邀请。<br />
 {$editorialContactSignature}<br />
@@ -315,9 +282,9 @@
 这封信只是礼貌地提醒您，我们已邀请您为《{$contextName}》审查稿件〈{$submissionTitle}〉。我们希望您<br />
 能在 {$reviewDueDate}前完成这份审查工作，并请您在备妥审查意见书之后尽快寄给我们。<br />
 <br />
-如果您没有您在这个期刊网站的用户帐号和密码。您可以使用这个链接去重新设定您的密码（该密码会和您的用户帐号名称一起电邮给您）：<a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
+如果您没有您在这个期刊网站的用户帐号和密码。您可以使用这个链接去重新设定您的密码（该密码会和您的用户帐号名称一起电邮给您）：{$passwordResetUrl}<br />
 <br />
-稿件网址：<a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+稿件网址：{$submissionReviewUrl}<br />
 <br />
 请确认您能够完成这个对本期刊作品而言非常重要的审稿任务。我们期盼得到您的回复。<br />
 <br />
@@ -331,7 +298,7 @@
 这封信只是礼貌地提醒您，我们已邀请您为《{$contextName}》审查稿件〈{$submissionTitle}〉。我们希望您<br />
 能在 {$reviewDueDate}前完成这份审查工作，并请您在备妥审查意见书之后尽快寄给我们。<br />
 <br />
-稿件网址：<a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+稿件网址：{$submissionReviewUrl}<br />
 <br />
 请确认您能够完成这个对本期刊作品而言非常重要的贡献。我们期盼听到您的回复。<br />
 <br />
@@ -345,9 +312,9 @@
 这封信只是礼貌地提醒您，我们已邀请您为《{$contextName}》审查稿件〈{$submissionTitle}〉。我们希望您<br />
 能在 {$reviewDueDate}前完成这份审查工作，并请您在备妥审查意见书之后尽快寄给我们。<br />
 <br />
-如果您没有您在这个期刊网站的用户帐号和密码。您可以使用这个链接去重新设定您的密码（该密码会和您的用户帐号名称一起电邮给您）：<a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
+如果您没有您在这个期刊网站的用户帐号和密码。您可以使用这个链接去重新设定您的密码（该密码会和您的用户帐号名称一起电邮给您）：{$passwordResetUrl}<br />
 <br />
-稿件网址：<a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+稿件网址：{$submissionReviewUrl}<br />
 <br />
 请确认您能够完成这个对本期刊作品而言非常重要的贡献。我们期盼听到您的回复。<br />
 <br />
@@ -361,7 +328,7 @@
 这封信只是礼貌地提醒您，我们已邀请您为《{$contextName}》审查稿件〈{$submissionTitle}〉。我们希望您<br />
 能在 {$reviewDueDate}前完成这份审查工作，并请您在备妥审查意见书之后尽快寄给我们。<br />
 <br />
-稿件网址：<a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+稿件网址：{$submissionReviewUrl}<br />
 <br />
 请确认您能够完成这个对本期刊作品而言非常重要的贡献。我们期盼听到您的回复。<br />
 <br />
@@ -421,126 +388,13 @@
 <br />
 我想请您为《{$contextName}》担任稿件〈{$submissionTitle}〉的校样编辑。您可以在网站上找到这份稿件，以及校样编辑的工作指引。<br />
 <br />
-稿件网址：<a href="{$submissionUrl}">{$submissionUrl}</a><br />
+稿件网址：{$submissionUrl}"<br />
 用户名称：{$participantUsername}<br />
 <br />
 如果您目前无法进行这份工作，或者对这项工作有任何的疑问，请直接回信与我联络。非常感谢您同意为这份期刊进行这份重要的工作。<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>这封电子邮件是由一位区段编辑寄发给稿件的校样编辑，请他们开始进行校样编辑的工作流程。邮件中含有关于稿件的信息以及如核取得稿件的指引.</description>
-	</email_text>
-	<email_text key="COPYEDIT_COMPLETE">
-		<subject>文字编辑工作已完成</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
-<br />
-我们现在已经完成您投到{$contextName}的&quot;{$submissionTitle}&quot; 的文字编辑.通过如下步骤，审查拟议的修改并回复到作者质询:<br />
-<br />
-1. 通过下面的期刊URL以您的用户名和密码登录到指定期刊 (需要的时候可以使用忘记链接).<br />
-2. 点击起始文字编辑文件并下载文件1，并且打开文字编辑版本.<br />
-3. 审查文字编辑，使用Word的跟踪变化作出适当修改，并回答质询.<br />
-4. 保存文件到桌面，并且将文件上传到作者文字编辑的文件2.<br />
-5. 点击email图标完成编辑，并且发送邮件给编辑.<br />
-<br />
-这是最后的机会您可以做出修改。您将在最后的阶段被请求校对草稿，但是只有少数的文字问题或者排版问题才能修改。.<br />
-<br />
-稿件 URL: <a href="{$submissionEditingUrl}">{$submissionEditingUrl}</a><br />
-<br />
-如果您不能完成这项工作或者有任何的疑问需要质询，请联系我们，感谢您对本刊的贡献.<br />
-<br />
-{$participantName}]]></body>
-	</email_text>
-	<email_text key="COPYEDIT_ACK">
-		<subject>校样编辑工作感谢函</subject>
-		<body><![CDATA[{$participantName}:<br />
-<br />
-非常感谢您为《{$contextName}》完成稿件〈{$submissionTitle}〉的校样工作。这对本期刊的品质有非常重要的贡献。<br />
-<br />
-谢谢您<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>这封电子邮件是由区段编辑寄发给稿件的校样编辑表示谢意，感谢校样编辑成功地完成了校样流程，并感谢他们的贡献。</description>
-	</email_text>
-	<email_text key="COPYEDIT_AUTHOR_REQUEST">
-		<subject>请复阅校样稿</subject>
-		<body><![CDATA[{$authorName}:<br />
-<br />
-您投向{$contextName}的稿件&quot;{$submissionTitle}&quot;已经通过第一部的文字编辑，通过如下步骤您可以审阅该内容<br />
-<br />
-1. 点击下面的投稿URL.<br />
-2. 登录到期刊并且点击显示在步骤1的文件.<br />
-3. 打开下载的投稿.<br />
-4. 审阅文本, 包括文字编辑的要求和作者的问询.<br />
-5. 完成所有文字编辑修改以改善文稿.<br />
-6. 完成后提交该修改文件到步骤2.<br />
-7. 点击元数据（METADATA），检查索引信息的正确性，并查补漏缺.<br />
-8. 发送完成邮件给编辑和文字编辑.<br />
-<br />
-稿件URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
-<br />
-这是最后的机会您可以对稿件做出文字编辑修改.在校对阶段， 校样只允许修改少量的文字问题于布局错误.<br />
-<br />
-如果您这次不能完成这项工作或者有任何质询，请联系我们，感谢您对本刊做的贡献.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>这封电子邮件是由区段编辑寄发给稿件的作者，请他们复阅校样编辑的工作。邮件中含有取得稿件的信息，并且提醒作者这将是他们做出重大修改的最后机会。</description>
-	</email_text>
-	<email_text key="COPYEDIT_AUTHOR_COMPLETE">
-		<subject>已完成复阅校样槁</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
-<br />
-我目前已经复阅过投稿《{$contextName}》之稿件〈{$submissionTitle}〉的复阅工作，而稿件已经可以进行最后阶段的校样，并准备进行排版工作。<br />
-<br />
-感谢您对本文的付出<br />
-{$authorName}]]></body>
-		<description>这封电子邮件是由作者寄发给区段编辑，提醒他们作者已经完成作者端的校样流程。</description>
-	</email_text>
-	<email_text key="COPYEDIT_AUTHOR_ACK">
-		<subject>复阅校样槁感谢函</subject>
-		<body><![CDATA[{$authorName}:<br />
-<br />
-谢谢您复阅您投稿至 《{$contextName}》之稿件〈{$submissionTitle}〉的校样槁。我们会期盼能够继续进行出版这份作品的工作。<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>这封电子邮件是由区段编辑寄给稿件的作者，确认作者校样流程已经完成，并且感谢他们的付出。</description>
-	</email_text>
-	<email_text key="COPYEDIT_FINAL_REQUEST">
-		<subject>校样槁的最后复阅工作</subject>
-		<body><![CDATA[{$participantName}:<br />
-<br />
-作者和编辑已经完成了来自《{$contextName}》期刊的稿件{$submissionTitle}的文字编辑工作.一个“完善”的新稿件已经准备好进行排版，请按照如下步骤完成排版任务：<br />
-1. 点击下面的稿件URL.<br />
-2. 登录到期刊并且点击出现在步骤2的文件.<br />
-3. 打开已经下载的文件，并且合并所有文字编辑与质询回复.<br />
-4. 保存干净文件，并且上传到文字编辑的步骤3.<br />
-5. 点击元数据（METADATA），检查索引信息(保存任何更正).<br />
-6. 发送完成电子邮件给编辑.<br />
-<br />
-{$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
-稿件URL: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
-用户名: {$participantUsername}<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>这封电子邮件是由区段编辑寄发给校样编辑，请他们进行排版工作之前的最后一次校样工作。</description>
-	</email_text>
-	<email_text key="COPYEDIT_FINAL_COMPLETE">
-		<subject>已完成最后的校样复阅工作</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
-<br />
-我目前已经就投稿《{$contextName}》之稿件〈{$submissionTitle}〉，备妥了一份清样版本。此稿件已经可以交给版面编辑，并准备进行排版工作。<br />
-<br />
-{$participantName}]]></body>
-		<description>这封电子邮件是由校样编辑寄给区段编辑，通知他们最后一次的校样工作已经完成，并且现在可以开始排版的流程。</description>
-	</email_text>
-	<email_text key="COPYEDIT_FINAL_ACK">
-		<subject>校样定稿感谢函</subject>
-		<body><![CDATA[{$participantName}:<br />
-<br />
-非常感谢您完成了投稿《{$contextName}》之稿件〈{$submissionTitle}〉的校样工作。这份为排版进行的「文字清理」预备工作在编辑流程中非常的重要。<br />
-<br />
-谢谢您<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>这封电子邮件是由区段编辑寄发给校样编辑的感谢函，感谢他们完成了校样版本的定稿以及他们的贡献。</description>
 	</email_text>
 	<email_text key="LAYOUT_REQUEST">
 		<subject>请进行排版工作</subject>
@@ -551,8 +405,8 @@
 2. 登录到期刊，并且使用排版版本文件根据期刊标准来创建样稿.<br />
 3. 发送完成稿件给编辑.<br />
 <br />
-{$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
-稿件URL: <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a><br />
+{$contextName} URL: {$contextUrl}<br />
+稿件URL: {$submissionLayoutUrl}<br />
 用户名: {$participantUsername}<br />
 <br />
 如果您这次不能完成这项工作或者有任何质询，请联系我们，感谢您对本刊的贡献.<br />
@@ -670,7 +524,7 @@
 3. 上传修订完的样稿.<br />
 4. 在校对步骤3里发送完成电邮给编辑.<br />
 <br />
-{$contextName} URL: <a href="{$contextUrl}">{$contextUrl}</a><br />
+{$contextName} URL: {$contextUrl}<br />
 Subnmission URL: {$submissionUrl}<br />
 Username: {$participantUsername}<br />
 <br />
@@ -701,7 +555,7 @@ Username: {$participantUsername}<br />
 	</email_text>
 	<email_text key="EMAIL_LINK">
 		<subject>您可能会感兴趣的期刊文章</subject>
-		<body><![CDATA[我想您会有兴趣想看看{$authorName}所写的〈{$submissionTitle}〉，刊行在《{$contextName}》 ，第{$volume}册，第{$number}期 ({$year}) 。网址为： &quot;<a href="{$articleUrl}">{$articleUrl}</a>&quot;.]]></body>
+		<body><![CDATA[我想您会有兴趣想看看{$authorName}所写的〈{$submissionTitle}〉，刊行在《{$contextName}》 ，第{$volume}册，第{$number}期 ({$year}) 。网址为： &quot;{$articleUrl}&quot;.]]></body>
 		<description>这份电子邮件样版让一个注册的读者有机会将有关一篇文章的相关信息寄给可能会感兴趣的人。这可以透过「阅读工具」进行，并且一定要由期刊管理员在「阅读工具管理」页面中启用这项功能。</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_NOTIFY">
@@ -729,7 +583,7 @@ Username: {$participantUsername}<br />
 		<subject>本期内容已经开放访问</subject>
 		<body><![CDATA[亲爱的读者您好：<br />
 <br />
-《{$contextName}》已经以开放访问的格式公开本期期刊内容。我们邀请您浏览这里所附的目录，并且接着访问我们的网站 (<a href="{$contextUrl}">{$contextUrl}</a>) ，阅读文章以及您感兴趣的项目。<br />
+《{$contextName}》已经以开放访问的格式公开本期期刊内容。我们邀请您浏览这里所附的目录，并且接着访问我们的网站 ({$contextUrl}) ，阅读文章以及您感兴趣的项目。<br />
 <br />
 感谢您持续地关注本期刊<br />
 <br />
@@ -800,7 +654,7 @@ Username: {$participantUsername}<br />
 <br />
 审阅或者编辑这个订阅，请使用如下链接.<br />
 <br />
-订阅URL: <a href="{$subscriptionUrl}">{$subscriptionUrl}</a><br />
+订阅URL: {$subscriptionUrl}<br />
 ]]></body>
 		<description>这个邮件通知订阅管理员有一个个人订阅已经在线购买.这里提供关于订阅的摘要信息和快速存取链接到订阅.</description>
 	</email_text>
@@ -830,7 +684,7 @@ IP范围(可选):<br />
 <br />
 请使用下面的链接查看和编辑这个订阅：<br />
 <br />
-订阅URL: <a href="{$subscriptionUrl}">{$subscriptionUrl}</a><br />
+订阅URL: {$subscriptionUrl}<br />
 ]]></body>
 		<description>这个邮件通知订阅管理员，一个团体订阅已经在线购买。邮件还将提供关于订阅的摘要信息和到订阅的快速存取链接.</description>
 	</email_text>
@@ -849,7 +703,7 @@ IP范围(可选):<br />
 <br />
 请使用如下链接查看和编辑这个订阅.<br />
 <br />
-订阅链接URL: <a href="{$subscriptionUrl}">{$subscriptionUrl}</a><br />
+订阅链接URL: {$subscriptionUrl}<br />
 ]]></body>
 		<description>这个邮件通知订阅管理员一个个人订阅已经在线续订了。邮件还将提供关于续订的摘要信息和到续订的快速存取链接.</description>
 	</email_text>
@@ -878,7 +732,7 @@ IP范围(可选):<br />
 <br />
 使用如下链接审查和编辑这个订阅.<br />
 <br />
-订阅URL: <a href="{$subscriptionUrl}">{$subscriptionUrl}</a><br />
+订阅URL: {$subscriptionUrl}<br />
 ]]></body>
 		<description>这个邮件通知订阅管理员一个团体订阅已经在线续订了。邮件还将提供关于续订的摘要信息和到续订的快速存取链接.</description>
 	</email_text>
@@ -904,13 +758,13 @@ This regards the manuscript &quot;{$submissionTitle},&quot; which is under consi
 <br />
 Following the review of the previous version of the manuscript, the authors have now submitted a revised version of their paper. We would appreciate it if you could help evaluate it.<br />
 <br />
-Please log into the journal web site by {$responseDueDate} to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is <a href="{$contextUrl}">{$contextUrl}</a><br />
+Please log into the journal web site by {$responseDueDate} to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is {$contextUrl}<br />
 <br />
 The review itself is due {$reviewDueDate}.<br />
 <br />
-If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). <a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
+If you do not have your username and password for the journal's web site, you can use this link to reset your password (which will then be emailed to you along with your username). {$passwordResetUrl}<br />
 <br />
-Submission URL: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+Submission URL: {$submissionReviewUrl}<br />
 <br />
 Thank you for considering this request.<br />
 <br />
@@ -945,25 +799,6 @@ Review Guidelines<br />
 {$reviewGuidelines}]]></body>
 		<description>This email is sent by the Section Editor to a Reviewer to request that they accept or decline the task of reviewing a submission for a second or greater round of review. It includes the submission as an attachment. This message is used when the Email-Attachment Review Process is selected in Journal Setup, Step 2. (Otherwise see REVIEW_REQUEST_SUBSEQUENT.)</description>
 	</email_text>
-	<email_text key="GIFT_AVAILABLE">
-		<subject>{$giftNoteTitle}</subject>
-		<body><![CDATA[Dear {$recipientFirstName},<br />
-<br />
-{$buyerFullName} would like to share a gift with you at {$giftJournalName}:<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-{$giftNote}<br />
-<br />
-<br />
-You will receive a follow-up email that includes login details and instructions for redeeming your gift.<br />
-<br />
-We hope that you enjoy your gift!<br />
-<br />
-{$giftContactSignature}]]></body>
-		<description>This email notifies a gift recipient that a gift has been purchased and is available for redemption.</description>
-	</email_text>
 	<email_text key="REVIEW_REQUEST_ONECLICK_SUBSEQUENT">
 		<subject>稿件审稿要求</subject>
 		<body><![CDATA[{$reviewerName}:<br />
@@ -976,7 +811,7 @@ Please log into the journal web site by {$responseDueDate} to indicate whether y
 <br />
 The review itself is due {$reviewDueDate}.<br />
 <br />
-Submission URL: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+Submission URL: {$submissionReviewUrl}<br />
 <br />
 Thank you for considering this request.<br />
 <br />
@@ -988,45 +823,6 @@ Thank you for considering this request.<br />
 <br />
 {$submissionAbstract}]]></body>
 		<description>This email from the Section Editor to a Reviewer requests that the reviewer accept or decline the task of reviewing a submission for a second or greater round of review. It provides information about the submission such as the title and abstract, a review due date, and how to access the submission itself. This message is used when the Standard Review Process is selected in Journal Setup, Step 2, and one-click reviewer access is enabled.</description>
-	</email_text>
-	<email_text key="GIFT_USER_REGISTER">
-		<subject>兑换你的礼物：登录</subject>
-		<body><![CDATA[Dear {$recipientFirstName},<br />
-<br />
-{$buyerFullName} would like to share a gift with you at {$giftJournalName}:<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-To redeem your gift, please login to the journal website at <a href="{$giftUrl}">{$giftUrl}</a><br />
-<br />
-Your username: {$username}<br />
-Your password: {$password}<br />
-<br />
-Once logged in, you can change your password at any time.<br />
-<br />
-We hope that you enjoy your gift!<br />
-<br />
-{$giftContactSignature}]]></body>
-		<description>此电子邮件通知的礼物收件人的一个新的帐户登录详细信息。</description>
-	</email_text>
-	<email_text key="GIFT_USER_LOGIN">
-		<subject>兑换你的礼物：登录</subject>
-		<body><![CDATA[Dear {$recipientFirstName},<br />
-<br />
-{$buyerFullName} would like to share a gift with you at {$giftJournalName}:<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-To redeem your gift, please login to the journal website at <a href="{$giftUrl}">{$giftUrl}</a><br />
-<br />
-Your username: {$username}<br />
-<br />
-We hope that you enjoy your gift!<br />
-<br />
-{$giftContactSignature}]]></body>
-		<description>此电子邮件通知的礼物收件人自己的登录信息。</description>
 	</email_text>
 	<email_text key="REVISED_VERSION_NOTIFY">
 		<subject>修订版上传</subject>

@@ -3,8 +3,8 @@
 /**
  * @file controllers/grid/settings/plugins/SettingsPluginGridHandler.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SettingsPluginGridHandler
@@ -56,7 +56,7 @@ class SettingsPluginGridHandler extends PluginGridHandler {
 	}
 
 	//
-	// Overriden template methods.
+	// Overridden template methods.
 	//
 	/**
 	 * @copydoc CategoryGridHandler::getCategoryRowInstance()
@@ -69,7 +69,7 @@ class SettingsPluginGridHandler extends PluginGridHandler {
 	/**
 	 * @copydoc GridHandler::authorize()
 	 */
-	function authorize($request, $args, $roleAssignments) {
+	function authorize($request, &$args, $roleAssignments) {
 		$categoryName = $request->getUserVar('category');
 		$pluginName = $request->getUserVar('plugin');
 		if ($categoryName && $pluginName) {

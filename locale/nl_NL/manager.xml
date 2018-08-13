@@ -4,8 +4,8 @@
 <!--
   * locale/nl_NL/manager.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the nl_NL (Nederlands) locale.
@@ -41,9 +41,7 @@
 	<message key="manager.payment.notFound">Niet gevonden</message>
 	<message key="manager.payment.options">Opties</message>
 	<message key="manager.payment.options.acceptSubscriptionPayments">Dit zal betaling voor abonnementen activeren. De types, kosten, duur en abonnees worden beheerd door de abonnementenbeheerder.</message>
-	<message key="manager.payment.options.donationFee">Schenkingen aan het tijdschrift</message>
 	<message key="manager.payment.options.enablePayments">Klik hier om de betalingsmodule in te schakelen.  U moet de betalingsinstellingen configureren door het formulier hieronder in te vullen. Merk op dat gebruikers in moeten loggen om betalingen te kunnen doen.</message>
-	<message key="manager.payment.options.fastTrackFee">Snelle review</message>
 	<message key="manager.payment.options.fee">Betaling</message>
 	<message key="manager.payment.options.feeDescription">Beschrijving van de betaling</message>
 	<message key="manager.payment.options.feeName">Naam van de betaling</message>
@@ -51,9 +49,7 @@
 	<message key="manager.payment.options.onlypdf">Alleen de toegang tot de PDF versie van de artikelen beperken</message>
 	<message key="manager.payment.options.publicationFee">Artikel publicatie</message>
 	<message key="manager.payment.options.purchaseArticleFee">Koop artikel</message>
-	<message key="manager.payment.options.submissionFee">Artikel inzending</message>
 	<message key="manager.payment.options.text">Beschrijving van de betalingsmethode</message>
-	<message key="manager.payment.options.waiverPolicy">Beleid voor kwijtschelding</message>
 	<message key="manager.payment.paymentId">Betaling ID</message>
 	<message key="manager.payment.paymentMethod">Betalingsmethode</message>
 	<message key="manager.payment.paymentMethod.description">U kunt ieder van de volgende betalingsmethode-plugins configureren.</message>
@@ -252,7 +248,6 @@
 	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"><![CDATA[<strong>Noot:</strong> De e-mail uitnodiging voor reviewers zal een speciale URL bevatten die uitgenodigde reviewers meteen naar de review-pagina voor de betreffende inzending brengt (toegang tot andere pagina's vereist inloggen). Om redenen van beveiliging kunnen redacteuren geen e-mailadressen veranderen of CC's of BCC's toevoegen voor het verzenden van uitnodigingen aan reviewers als deze optie is ingeschakeld.]]></message>
 	<message key="manager.setup.reviewOptions.reviewerRatings">Beroordeling reviewers</message>
 	<message key="manager.setup.reviewOptions.reviewerReminders">Herinneringen aan de reviewer</message>
-	<message key="manager.setup.reviewOptions.showEnsuringLink"><![CDATA[Maak links naar <a href="javascript:openHelp('{$blindReviewHelpId}')" class="action">Verzeker een blinde review</a> op pagina's waar auteurs en reviewers bestanden laden.]]></message>
 	<message key="manager.setup.reviewPolicy">Beleid voor reviews</message>
 	<message key="manager.setup.searchEngineIndexing">Zoek-indexering</message>
 	<message key="manager.setup.searchEngineIndexingDescription">Geef hier trefwoorden (gescheiden door puntkommas) en een korte omschrijving van het tijdschrift om de gebruikers van zoekmachines te helpen bij het vinden van het tijdschrift.</message>
@@ -345,7 +340,6 @@
 	<message key="manager.subscriptionPolicies.subscriptionContact">Abonnementenbeheerder</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactDescription">De contactpersoon die genoemd wordt onder Abonnementen bij Over dit tijdschrift.</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactEmailValid">Geef een geldig e-mailadres op.</message>
-	<message key="manager.subscriptionPolicies.subscriptionPoliciesSaved">De instellingen voor abonnementenbeleid zijn bijgewerkt.</message>
 	<message key="manager.subscriptions">Abonnementen</message>
 	<message key="manager.subscriptions.confirmDelete">Weet u zeker dat u dit abonnement wilt verwijderen?</message>
 	<message key="manager.subscriptions.create">Nieuw abonnement aanmaken</message>
@@ -487,11 +481,8 @@
 	<message key="manager.setup.categories">Categorieën</message>
 	<message key="manager.setup.journalThumbnail">Miniatuur voor het tijdschrift</message>
 	<message key="manager.setup.useThumbnail">Miniatuur</message>
-	<message key="manager.payment.giftFeesDescription">Een 'schenk abonnement' link zal getoond worden op de Abonnementen pagina in 'Over dit tijdschrift'  en bij de abonnementen-blok in de sidebarS</message>
-	<message key="manager.payment.options.acceptGiftSubscriptionPayments">Dit activeert betalingen voor het schenken van abonnementen, waarmee lezers abonnementen kunne kopen om aan andere lezers te schenken.</message>
 	<message key="manager.sections.alertDelete">Voordat u deze sectie kunt verwijderen, moet u de erin gepubliceerde artikelen verplaatsen naar andere secties.</message>
 	<message key="manager.setup.categories.description">Kies de meest toepasselijke categorieën uit de hierboven getoonde set. Lezers kunnen op categorie door de tijdschriften bladeren.</message>
-	<message key="manager.payment.giftFees">Gift kosten</message>
 
 	<message key="manager.setup.resetPermissions">Artikel-toestemmingen terugzetten</message>
 	<message key="manager.setup.resetPermissions.description">Het copyright statement en de licentie-informatie zullen permanent gekoppeld zijn aan de gepubliceerde inhoud, wat garandeert dat deze informatie niet wijzigt als het tijdschrift zijn beleid voor nieuwe inzendingen zou wijzigen. Klik op de knop hieronder om de reeds opgeslagen toestemmingen te terug te zetten</message>

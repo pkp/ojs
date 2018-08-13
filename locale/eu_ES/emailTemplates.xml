@@ -4,8 +4,8 @@
 <!--
   * locale/eu_ES/emailTemplates.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localized email templates XML file.
@@ -19,7 +19,7 @@
 <br />
 Eskaera ez bada zuk egindakoa, ez jaramonik egin mezu honi, eta zure pasahitza ez da aldatuko. Pasahitza berrezartzea nahi baduzu, egin klik beheko URLan.<br />
 <br />
-Berrezarri nire pasahitza: <a href="{$url}">{$url}</a><br />
+Berrezarri nire pasahitza: {$url}<br />
 <br />
 {$principalContactSignature}]]></body>
 		<description>Pasahitza ahaztu duten erabiltzaile erregistratuei edo webgunean sartu ezinda dabiltzanei bidaltzen zaie mezu hau. Pasahitza berrezartzeko URL bat ematen du.</description>
@@ -53,7 +53,7 @@ Eskerrik asko,<br />
 <br />
 {$contextName} aldizkarian kontua sortu duzu, baina kontu hori erabiltzen hasteko zure helbide elektronikoa balidatu behar duzu. Horretarako, jarraitu beheko estekari:<br />
 <br />
-<a href="{$activateUrl}">{$activateUrl}</a><br />
+{$activateUrl}<br />
 <br />
 Eskerrik asko,<br />
 {$principalContactSignature}]]></body>
@@ -76,7 +76,7 @@ Eskerrik asko,<br />
 		<subject>Zenbaki berria argitaratu da</subject>
 		<body><![CDATA[Irakurle:<br />
 <br />
-{$contextName} aldizkariak zenbaki berri bat argitaratu du <a href="{$contextUrl}">{$contextUrl}</a> webgunean. Honekin batera bidaltzen dizugun Aurkibidea aztertzera eta gure webgunean artikuluak irakurtzera gonbidatzen zaitugu.<br />
+{$contextName} aldizkariak zenbaki berri bat argitaratu du {$contextUrl} webgunean. Honekin batera bidaltzen dizugun Aurkibidea aztertzera eta gure webgunean artikuluak irakurtzera gonbidatzen zaitugu.<br />
 <br />
 Eskerrik asko gure lana interesez jarraitzeagatik,<br />
 {$editorialContactSignature}]]></body>
@@ -86,11 +86,11 @@ Eskerrik asko gure lana interesez jarraitzeagatik,<br />
 		<subject>{$contextName} aldizkaria artxiboan gehitzeko eskaera</subject>
 		<body><![CDATA[[Unibertsitateko liburuzain] estimatua<br />
 <br />
-{$contextName} aldizkaria &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt; aurkeztera gatozkizu. Aldizkariaren [kargua] zuen fakultateko [izena] da.  LOCKSS (Lots of Copies Keep Stuff Safe) konplitzen duen artxibo bat ezarri nahian gabiltza zuen unibertsitateko eta beste batzuetako liburutegiekin.<br />
+{$contextName} aldizkaria &amp;lt;{$contextUrl}&amp;gt; aurkeztera gatozkizu. Aldizkariaren [kargua] zuen fakultateko [izena] da.  LOCKSS (Lots of Copies Keep Stuff Safe) konplitzen duen artxibo bat ezarri nahian gabiltza zuen unibertsitateko eta beste batzuetako liburutegiekin.<br />
 <br />
 [Aldizkariaren azalpen laburra]<br />
 <br />
-Hau da gure aldizkariaren LOCKSS Publisher Manifest URLa: <a href="{$contextUrl}">{$contextUrl}</a>/gateway/lockss<br />
+Hau da gure aldizkariaren LOCKSS Publisher Manifest URLa: {$contextUrl}/gateway/lockss<br />
 <br />
 Jakin dugunez, LOCKSSen partaide zarete dagoeneko. Gure aldizkaria zuen LOCKSS bertsioan erregistratzeko metadatu gehigarriak eskaintzerik izango bagenu, gustu handiz egingo genuke.<br />
 <br />
@@ -102,7 +102,7 @@ Eskerrik asko,<br />
 		<subject>{$contextName} aldizkaria artxiboan gehitzeko eskaera</subject>
 		<body><![CDATA[[Unibertsitateko liburuzain] estimatua<br />
 <br />
-{$contextName} aldizkaria &amp;lt;<a href="{$contextUrl}">{$contextUrl}</a>&amp;gt; aurkeztera gatozkizu. Aldizkariaren [kargua] zuen fakultateko [izena] da. LOCKSS (Lots of Copies Keep Stuff Safe) konplitzen duen artxibo bat ezarri nahian gabiltza zuen unibertsitateko eta beste batzuetako liburutegiekin.<br />
+{$contextName} aldizkaria &amp;lt;{$contextUrl}&amp;gt; aurkeztera gatozkizu. Aldizkariaren [kargua] zuen fakultateko [izena] da. LOCKSS (Lots of Copies Keep Stuff Safe) konplitzen duen artxibo bat ezarri nahian gabiltza zuen unibertsitateko eta beste batzuetako liburutegiekin.<br />
 <br />
 [Aldizkariaren azalpen laburra]<br />
 <br />
@@ -127,14 +127,6 @@ Galderaren bat baduzu, jar zaitez harremanetan nirekin. Eskerrik asko zure lana 
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Gaituta badago, mezu hau automatikoki bidaltzen zaio egileari, aldizkarira eskuizkribua bidaltzeko prozesua osatzen duenean. Bidalketaren jarraipena egiteko informazioa bidaltzen dio, eta eskerrak ematen dizkio lana bidaltzeagatik.</description>
-	</email_text>
-	<email_text key="SUBMISSION_UNSUITABLE">
-		<subject>Bidalketa desegokia</subject>
-		<body><![CDATA[{$authorName}:<br />
-<br />
-&quot;{$submissionTitle}&quot; artikulua aztertu dugu, eta garbi dago ez zaiola egokitzen {$contextName} aldizkariaren esparruari eta orientazioari. Gure webgunean Aldizkariari buruz ematen dugun informazioa eta une honetan eskaintzen dugun edukia kontsultatzea gomendatzen dizugu, zein eratako lanak argitaratzen ditugun ikusteko. Eskuizkribua beste aldizkari batera, gaiari hobeto egokitzen zaion batera, bidali beharko zenuke.<br />
-<br />
-{$editorialContactSignature}]]></body>
 	</email_text>
 	<email_text key="SUBMISSION_COMMENT">
 		<subject>Bidalketari buruzko iruzkina</subject>
@@ -173,13 +165,13 @@ Eskerrik asko,<br />
 <br />
 Uste dut ebaluatzaile bikaina izango zinatekeela {$contextName} aldizkarira bidali diguten {$submissionTitle} eskuizkribuari buruzko iritzia emateko. Artikuluaren laburpena behean duzu, eta espero dut aintzakotzat hartu eta pentsatuko duzula guretzat lan garrantzitsu hau egiteko eskaera.<br />
 <br />
-Mesedez, sar zaitez aldizkariaren webgunean {$responseDueDate} aurretik, eta esaguzu ebaluazioa egiteko prest zauden ala ez, eta prest egonez gero, artikulua hartzeko eta zure ebaluazio-txostena eta gomendioa emateko. Webgunea <a href="{$contextUrl}">{$contextUrl}</a> da<br />
+Mesedez, sar zaitez aldizkariaren webgunean {$responseDueDate} aurretik, eta esaguzu ebaluazioa egiteko prest zauden ala ez, eta prest egonez gero, artikulua hartzeko eta zure ebaluazio-txostena eta gomendioa emateko. Webgunea {$contextUrl} da<br />
 <br />
 Ebaluazioa egiteko epea {$reviewDueDate} izango litzateke.<br />
 <br />
-Ez badaukazu aldizkariaren webgunean sartzeko erabiltzaile-izenik eta pasahitzik, behean ematen den esteka erabil dezakezu pasahitza berrezartzeko (erabiltzaile-izenarekin batera bidaliko dizugu). <a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
+Ez badaukazu aldizkariaren webgunean sartzeko erabiltzaile-izenik eta pasahitzik, behean ematen den esteka erabil dezakezu pasahitza berrezartzeko (erabiltzaile-izenarekin batera bidaliko dizugu). {$passwordResetUrl}<br />
 <br />
-Artikuluaren URLa: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+Artikuluaren URLa: {$submissionReviewUrl}<br />
 <br />
 Eskerrik asko gure eskaera kontuan hartzeagatik.<br />
 <br />
@@ -202,7 +194,7 @@ Mesedez, sar zaitez aldizkariaren webgunean {$responseDueDate} aurretik, eta esa
 <br />
 Ebaluazioa egiteko epea {$reviewDueDate} izango litzateke.<br />
 <br />
-Artikuluaren URLa: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+Artikuluaren URLa: {$submissionReviewUrl}<br />
 <br />
 Eskerrik asko gure eskaera kontuan hartzeagatik.<br />
 <br />
@@ -278,9 +270,9 @@ Eskerrik asko {$contextName} aldizkarirako &quot;{$submissionTitle}&quot; artiku
 <br />
 {$contextName} aldizkarirako &quot;{$submissionTitle}&quot; artikuluaren ebaluazioa gogorarazteko ohartxo bat baino ez. {$reviewDueDate} egunerako espero genuen zure ebaluazio-txostena, eta prestatuta daukazunean lehenbailehen bidaltzea eskertuko genizuke.<br />
 <br />
-Ez badaukazu aldizkariaren webgunean sartzeko erabiltzaile-izenik eta pasahitzik, behean ematen den esteka erabil dezakezu pasahitza berrezartzeko (erabiltzaile-izenarekin batera bidaliko dizugu). <a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
+Ez badaukazu aldizkariaren webgunean sartzeko erabiltzaile-izenik eta pasahitzik, behean ematen den esteka erabil dezakezu pasahitza berrezartzeko (erabiltzaile-izenarekin batera bidaliko dizugu). {$passwordResetUrl}<br />
 <br />
-Artikuluaren URLa: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+Artikuluaren URLa: {$submissionReviewUrl}<br />
 <br />
 Mesedez, berrets iezaguzu aldizkariarentzat biziki garrantzitsua den lan hori burutuko duzula. Besterik gabe, zure erantzunaren zain geratzen naiz.<br />
 <br />
@@ -293,7 +285,7 @@ Mesedez, berrets iezaguzu aldizkariarentzat biziki garrantzitsua den lan hori bu
 <br />
 {$contextName} aldizkarirako &quot;{$submissionTitle}&quot; artikuluaren ebaluazioa gogorarazteko ohartxo bat baino ez. {$reviewDueDate} egunerako espero genuen zure ebaluazio-txostena, eta prestatuta daukazunean lehenbailehen bidaltzea eskertuko genizuke.<br />
 <br />
-Artikuluaren URLa: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+Artikuluaren URLa: {$submissionReviewUrl}<br />
 <br />
 Mesedez, berrets iezaguzu aldizkariarentzat biziki garrantzitsua den lan hori burutuko duzula. Besterik gabe, zure erantzunaren zain geratzen naiz.<br />
 <br />
@@ -306,9 +298,9 @@ Mesedez, berrets iezaguzu aldizkariarentzat biziki garrantzitsua den lan hori bu
 <br />
 {$contextName} aldizkarirako &quot;{$submissionTitle}&quot; artikuluaren ebaluazioa gogorarazteko ohartxo bat baino ez. &quot;{$reviewDueDate}&quot; egunerako espero genuen zure ebaluazio-txostena, eta, epea igaro denez, mezu hau automatikoki sortu eta bidali da. Eskertuko genizuke prestatu orduko bidaliko bazenigu.<br />
 <br />
-Ez badaukazu aldizkariaren webgunean sartzeko erabiltzaile-izenik eta pasahitzik, behean ematen den esteka erabil dezakezu pasahitza berrezartzeko (erabiltzaile-izenarekin batera bidaliko dizugu). <a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
+Ez badaukazu aldizkariaren webgunean sartzeko erabiltzaile-izenik eta pasahitzik, behean ematen den esteka erabil dezakezu pasahitza berrezartzeko (erabiltzaile-izenarekin batera bidaliko dizugu). {$passwordResetUrl}<br />
 <br />
-Artikuluaren URLa: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+Artikuluaren URLa: {$submissionReviewUrl}<br />
 <br />
 Mesedez, berrets iezaguzu aldizkariarentzat biziki garrantzitsua den lan hori burutuko duzula. Besterik gabe, zure erantzunaren zain geratzen naiz.<br />
 <br />
@@ -321,7 +313,7 @@ Mesedez, berrets iezaguzu aldizkariarentzat biziki garrantzitsua den lan hori bu
 <br />
 {$contextName} aldizkarirako &quot;{$submissionTitle}&quot; artikuluaren ebaluazioa gogorarazteko ohartxo bat baino ez. &quot;{$reviewDueDate}&quot; egunerako espero genuen zure ebaluazio-txostena, eta, epea igaro denez, mezu hau automatikoki sortu eta bidali da. Eskertuko genizuke prestatu orduko bidaliko bazenigu.<br />
 <br />
-Artikuluaren URLa: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+Artikuluaren URLa: {$submissionReviewUrl}<br />
 <br />
 Mesedez, berrets iezaguzu aldizkariarentzat biziki garrantzitsua den lan hori burutuko duzula. Besterik gabe, zure erantzunaren zain geratzen naiz.<br />
 <br />
@@ -340,122 +332,12 @@ Mesedez, berrets iezaguzu aldizkariarentzat biziki garrantzitsua den lan hori bu
 5. Gorde zuzendutako fitxategia, eta kargatu Zuzenketako 1. urratsean.<br />
 6. Bidali BUKATU duzula adierazteko mezua editoreari.<br />
 <br />
-{$contextName} aldizkariaren URLa: <a href="{$contextUrl}">{$contextUrl}</a><br />
-Artikuluaren URLa: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
+{$contextName} aldizkariaren URLa: {$contextUrl}<br />
+Artikuluaren URLa: {$submissionUrl}<br />
 Erabiltzaile-izena: {$participantUsername}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Mezu hau Ataleko editoreak Zuzentzaileari bidaltzen dio, artikuluaren zuzenketa-prozesua egin dezala eskatzeko. Artikuluari buruzko informazioa eta fitxategia hartzeko datuak ematen ditu.</description>
-	</email_text>
-	<email_text key="COPYEDIT_COMPLETE">
-		<subject>Zuzenketa bukatuta</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
-<br />
-{$contextName} aldizkarirako &quot;{$submissionTitle}&quot; artikuluaren zuzenketa eginda dago. Proposatutako aldaketak ikusteko eta Egile-kontsultei erantzuteko, jarraitu urrats hauei mesedez:<br />
-<br />
-1. Sartu aldizkarian beheko URLaren bidez zure erabiltzaile-izenarekin eta pasahitzarekin (ahaztu bazaizu, erabili horretarako dagoen esteka).<br />
-2. Egin klik &quot;1. Lehenengo zuzenketa&quot; azpiko Fitxategian, zuzendutako bertsioa deskargatu eta irekitzeko.<br />
-3. Berrikusi zuzenketak, egin aldaketak Word-en &quot;Aldaketen kontrola&quot; (Track Changes; Control de cambios) erabiliz, eta erantzun kontsultei.<br />
-4. Gorde fitxategia mahaigainean eta kargatu &quot;2. Egilearen zuzenketa&quot; puntuan.<br />
-5. Egin klik BUKATUTAren azpiko mezu-ikonoan, eta bidali mezua editoreari.<br />
-<br />
-Hau da aldaketak eta zuzenketak egiteko izango duzun azkeneko aukera. Aurrerago, galeraden proba-zuzenketa egitea eskatuko dizugu, baina orduan tipografiako eta konposizioko akats txikiak bakarrik zuzendu ahal izango dira.<br />
-<br />
-Eskuizkribuaren URLa: <a href="{$submissionEditingUrl}">{$submissionEditingUrl}</a><br />
-<br />
-Orain ezin badiozu lan honi heldu, edo galderaren bat egin nahi badiguzu,<br />
-jar zaitez harremanetan nirekin, mesedez. Eskerrik asko aldizkariari egiten diozun ekarpenagatik.<br />
-<br />
-{$participantName}]]></body>
-	</email_text>
-	<email_text key="COPYEDIT_ACK">
-		<subject>Zuzenketaren hartu-agiria</subject>
-		<body><![CDATA[{$participantName}:<br />
-<br />
-Eskerrik asko {$contextName} aldizkarirako &quot;{$submissionTitle}&quot; eskuizkribua zuzentzeagatik. Ekarpen bikaina da gure aldizkariaren kalitatea areagotzeko.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Mezu hau Ataleko editoreak Zuzentzaileari bidaltzen dio, zuzenketa-lana ondo egin dela eta ondo heldu dela esateko eta egindako lanagatik eskerrak emateko.</description>
-	</email_text>
-	<email_text key="COPYEDIT_AUTHOR_REQUEST">
-		<subject>Zuzenketak berrikusteko eskaera</subject>
-		<body><![CDATA[{$authorName}:<br />
-<br />
-{$contextName} aldizkarirako bidali zenuen &quot;{$submissionTitle}&quot; artikuluaren lehenengo zuzenketa eginda dago, eta urrats hauen bidez ikus dezakezu emaitza:<br />
-<br />
-1. Egin klik behean, Artikuluaren URLan.<br />
-2. Sartu aldizkarian eta egin klik 1. urratsean agertzen den Fitxategian.<br />
-3. Ireki deskargatutako artikulua.<br />
-4. Berrikusi testua, aztertu proposatutako zuzenketak eta Egile-kontsultak.<br />
-5. Egin testua hobetzeko egokitzat jotzen dituzun aldaketak.<br />
-6. Bukatzen duzunean, kargatu fitxategia 2. urratsean.<br />
-7. Egin klik METADATUetan, indexatzeko informazioa osoa eta zehatza dela ziurtatzeko.<br />
-8. Bidali BUKATU duzula adierazteko mezua editoreari eta zuzentzaileari.<br />
-<br />
-Artikuluaren URLa: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
-<br />
-Hau da artikuluan aldaketak eta zuzenketak egiteko azkeneko aukera. Gero, proba-zuzenketan, galeradetan azaltzen diren tipografia eta konposizioko akatsak bakarrik zuzendu ahal izango dira.<br />
-<br />
-Orain ezin badiozu lan honi heldu, edo galderaren bat egin nahi badiguzu, jar zaitez harremanetan nirekin, mesedez. Eskerrik asko aldizkariari egiten diozun ekarpenagatik.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Mezu hau Ataleko editorea Egileari bidaltzen dio, zuzentzailearen lana berrikus dezala eskatzeko. Eskuizkribua hartzeko zer egin behar duen azaltzen dio, eta aldaketak egiteko azkeneko aukera dela abisatzen dio.</description>
-	</email_text>
-	<email_text key="COPYEDIT_AUTHOR_COMPLETE">
-		<subject>Zuzenketak berrikusita</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
-<br />
-{$contextName} aldizkarirako &quot;{$submissionTitle}&quot; artikuluari egindako zuzenketak aztertu eta berrikusi ditut, eta artikulua prest dago azken zuzenketak egiteko eta maketaziora pasatzeko.<br />
-<br />
-Eskerrik asko nire lanari egin diozuen ekarpenagatik,<br />
-{$authorName}]]></body>
-		<description>Mezu hau Egileak Ataleko editoreari bidaltzen dio, Egilearen zuzenketak eginda daudela jakinarazteko.</description>
-	</email_text>
-	<email_text key="COPYEDIT_AUTHOR_ACK">
-		<subject>Zuzenketen berrikuspenaren hartu-agiria</subject>
-		<body><![CDATA[{$authorName}:<br />
-<br />
-Eskerrik asko {$contextName} aldizkarira bidali zenuen &quot;{$submissionTitle}&quot; eskuizkribuaren zuzenketak berrikusteagatik. Laster ikusiko duzu zure lana argitaratuta.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Mezu hau Ataleko editoreak Egileari bidaltzen dio, Egileak zuzenketei egindako berrikuspena jaso duela esateko eta egindako lanagatik eskerrak emateko.</description>
-	</email_text>
-	<email_text key="COPYEDIT_FINAL_REQUEST">
-		<subject>Azken zuzenketak egiteko eskaera</subject>
-		<body><![CDATA[{$participantName}:<br />
-<br />
-Egileak eta editoreak aztertu eta berrikusi dituzte {$contextName} aldizkariko &quot;{$submissionTitle}&quot; artikuluari egindako zuzenketak. Orain &quot;kopia garbi&quot; bat prestatu behar da Maketaziora bidaltzeko, urrats hauen eginez:<br />
-1. Egin klik behean, Artikuluaren URLan.<br />
-2. Sartu aldizkarian eta egin klik 2. urratsean agertzen den Fitxategian.<br />
-3. Ireki deskargatutako fitxategia eta gehitu zuzenketak eta kontsulten erantzunak.<br />
-4. Gorde fitxategi garbia, eta kargatu Zuzenketako 3. urratsean.<br />
-5. Egin klik METADATUetan indexatzeko informazioa berrikusteko (eta gorde aldaketak).<br />
-6. Bidali BUKATU duzula adierazteko mezua editoreari.<br />
-<br />
-{$contextName} aldizkariaren URLa: <a href="{$contextUrl}">{$contextUrl}</a><br />
-Artikuluaren URLa: <a href="{$submissionUrl}">{$submissionUrl}</a><br />
-Erabiltzaile-izena: {$participantUsername}<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Mezu hau Ataleko editoreak Zuzentzaileari bidaltzen dio, azken zuzenketak egin ditzan artikuluan, maketaziora bidali aurretik.</description>
-	</email_text>
-	<email_text key="COPYEDIT_FINAL_COMPLETE">
-		<subject>Azken zuzenketak eginda</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
-<br />
-{$contextName} aldizkarirako &quot;{$submissionTitle}&quot; eskuizkribuaren bertsio zuzendu garbia prestatu dut. Gertu dago Maketaziorako eta galeradak egiteko.<br />
-<br />
-{$participantName}]]></body>
-		<description>Mezu hau Zuzentzaileak Ataleko editoreari bidaltzen dio, azken zuzenketak eginda daudela eta maketatzen hasteko garaia dela adierazteko.</description>
-	</email_text>
-	<email_text key="COPYEDIT_FINAL_ACK">
-		<subject>Azken zuzenketen hartu-agiria</subject>
-		<body><![CDATA[{$participantName}:<br />
-<br />
-Eskerrik asko {$contextName} aldizkarirako &quot;{$submissionTitle}&quot; eskuizkribuaren zuzenketa burutzeagatik. Maketaziorako &quot;kopia garbia&quot; prestatzea urrats garrantzitsua da prozesu editorialean.<br />
-<br />
-{$editorialContactSignature}]]></body>
-		<description>Mezu hau Ataleko editoreak Zuzentzaileari bidaltzen dio, azken zuzenketak hartu dituela jakinarazteko eta egindako lana eskertzeko.</description>
 	</email_text>
 	<email_text key="LAYOUT_REQUEST">
 		<subject>Galeradak eskatzea</subject>
@@ -466,8 +348,8 @@ Eskerrik asko {$contextName} aldizkarirako &quot;{$submissionTitle}&quot; eskuiz
 2. Sartu aldizkarian eta erabili Maketazio-bertsioko fitxategia, aldizkariaren arauen araberako galeradak prestatzeko.<br />
 3. Bidali BUKATU duzula adierazteko mezua editoreari.<br />
 <br />
-{$contextName} aldizkariaren URLa: <a href="{$contextUrl}">{$contextUrl}</a><br />
-Artikuluaren URLa: <a href="{$submissionLayoutUrl}">{$submissionLayoutUrl}</a><br />
+{$contextName} aldizkariaren URLa: {$contextUrl}<br />
+Artikuluaren URLa: {$submissionLayoutUrl}<br />
 Erabiltzaile-izena: {$participantUsername}<br />
 <br />
 Orain ezin badiozu lan honi heldu, edo galderaren bat egin nahi badiguzu, jar zaitez harremanetan nirekin, mesedez. Eskerrik asko aldizkariari egiten diozun ekarpenagatik.<br />
@@ -580,7 +462,7 @@ Eskerrik asko {$contextName} aldizkariko &quot;{$submissionTitle}&quot; eskuizkr
 3. Kargatu berrikusitako galeradak.<br />
 3. Bidali Proba-zuzenketako 3. urratsa BUKATU duzula adierazteko mezua editoreari.<br />
 <br />
-{$contextName} aldizkariaren URLa: <a href="{$contextUrl}">{$contextUrl}</a><br />
+{$contextName} aldizkariaren URLa: {$contextUrl}<br />
 Artikuluaren URLa: {$submissionUrl}<br />
 Erabiltzaile-izena: {$participantUsername}<br />
 <br />
@@ -613,7 +495,7 @@ Eskerrik asko {$contextName} aldizkarirako &quot;{$submissionTitle}&quot; eskuiz
 Titulua: {$submissionTitle}<br />
 Egilea: {$authorName}<br />
 Aldizkaria: {$contextName} bol: {$volume} zk: {$number} ({$year})<br />
-URLa: <a href="{$articleUrl}">{$articleUrl}</a>]]></body>
+URLa: {$articleUrl}]]></body>
 		<description>Mezu-txantiloi hau irakurle erregistratuek erabil dezakete beste norbaiti artikulu bati buruzko informazioa bidaltzeko, interesatuko zaiolakoan. Irakurtzeko tresnen bidez eskuratzen da txantiloi hau, eta Aldizkariaren kudeatzaileak gaitu behar du Irakurtzeko tresnen administrazio-orrian.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_NOTIFY">
@@ -639,7 +521,7 @@ Galderaren bat baduzu, jar zaitez harremanetan nirekin, mesedez.<br />
 		<subject>Zenbakia sarrera librekoa da orain</subject>
 		<body><![CDATA[Irakurle:<br />
 <br />
-{$contextName} aldizkariak sarrera libreko egin du ondoren zehazten dugun zenbakia. Honekin batera bidaltzen dizugun Aurkibidea aztertzera eta gure webgunean (<a href="{$contextUrl}">{$contextUrl}</a>) artikuluak irakurtzera gonbidatzen zaitugu.<br />
+{$contextName} aldizkariak sarrera libreko egin du ondoren zehazten dugun zenbakia. Honekin batera bidaltzen dizugun Aurkibidea aztertzera eta gure webgunean ({$contextUrl}) artikuluak irakurtzera gonbidatzen zaitugu.<br />
 <br />
 Eskerrik asko gure lana interesez jarraitzeagatik,<br />
 {$editorialContactSignature}]]></body>
@@ -705,33 +587,6 @@ Esteka: {$url}<br />
 {$principalContactSignature}]]></body>
 		<description>Mezu hau mota honetako jakinarazpena jasotzea hautatu duten erabiltzaile erregistratuei bidaltzen zaie.</description>
 	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST">
-		<subject>{$siteTitle} gunearen jakinarazpen berria</subject>
-		<body><![CDATA[{$siteTitle} gunearen jakinarazpen berri bat daukazu:<br />
---<br />
-{$notificationContents}<br />
-<br />
-Esteka: {$url}<br />
---<br />
-<br />
-Jakinarazpen-mezu gehiago jaso nahi ez baduzu, joan {$unsubscribeLink} orrira eta sartu zure helbide elektronikoa eta pasahitza.<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>Mezu hau jakinarazpenen posta-zerrendako erabiltzaile erregistratu gabeei bidaltzen zaie.</description>
-	</email_text>
-	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
-		<subject>Ongi etorri {$siteTitle} posta-zerrendara!</subject>
-		<body><![CDATA[{$siteTitle} gunearen jakinarazpenak jasotzeko izena eman duzu.<br />
-<br />
-Egin klik esteka honetan zure eskaera berresteko eta zure helbide elektronikoa posta-zerrendan gehitzeko: {$confirmLink}<br />
-<br />
-Jakinarazpen-mezu gehiago jaso nahi ez baduzu, joan {$unsubscribeLink} orrira eta sartu zure helbide elektronikoa eta pasahitza.<br />
-<br />
-Hau da jakinarazpen-mezuak desgaitzeko zure pasahitza: {$password}<br />
-<br />
-{$principalContactSignature}]]></body>
-		<description>Mezu hau jakinarazpenen posta-zerrendako erabiltzaile erregistratu berriei bidaltzen zaie.</description>
-	</email_text>
 	<email_text key="EDITOR_DECISION_ACCEPT">
 		<subject>Editorearen erabakia</subject>
 		<body><![CDATA[{$authorName}:<br />
@@ -791,7 +646,7 @@ Kideen informazioa (baldin badago):<br />
 <br />
 Harpidetza hau ikusi edo editatzeko, erabili ondorengo URLa.<br />
 <br />
-Harpidetza URLa: <a href="{$subscriptionUrl}">{$subscriptionUrl}</a>]]></body>
+Harpidetza URLa: {$subscriptionUrl}]]></body>
 		<description>Mezu honek Harpidetza-kudeatzaileari jakinarazten dio harpidetza indibidual bat erosi dutela linean. Harpidetza-datuen laburpena ematen du eta erositako harpidetzara bizkor joateko esteka.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_PURCHASE_INSTL">
@@ -819,7 +674,7 @@ Kideen informazioa (baldin badago):<br />
 <br />
 Harpidetza hau ikusi edo editatzeko, erabili ondorengo URLa.<br />
 <br />
-Harpidetza URLa: <a href="{$subscriptionUrl}">{$subscriptionUrl}</a>]]></body>
+Harpidetza URLa: {$subscriptionUrl}]]></body>
 		<description>Mezu honek Harpidetza-kudeatzaileari jakinarazten dio erakunde-harpidetza bat erosi dutela linean. Harpidetza-datuen laburpena ematen du eta erositako harpidetzara bizkor joateko esteka.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_RENEW_INDL">
@@ -863,7 +718,7 @@ Kideen informazioa (baldin badago):<br />
 <br />
 Harpidetza hau ikusi edo editatzeko, erabili ondorengo URLa.<br />
 <br />
-Harpidetza URLa: <a href="{$subscriptionUrl}">{$subscriptionUrl}</a>]]></body>
+Harpidetza URLa: {$subscriptionUrl}]]></body>
 		<description>Mezu honek Harpidetza-kudeatzaileari jakinarazten dio erakunde-harpidetza bat berritu dutela linean. Harpidetza-datuen laburpena ematen du eta berritutako harpidetzara bizkor joateko esteka.</description>
 	</email_text>
 	<email_text key="CITATION_EDITOR_AUTHOR_QUERY">
@@ -891,13 +746,13 @@ Hau &quot;{$submissionTitle},&quot; eskuizkribuari dagokio, {$contextName} aldiz
 <br />
 Eskuizkribuaren aurreko bertsioaren berrikuspenari jarraituz, egileek orain haien lanaren bertsio berrikusi bat bidali dute. Eskertuko genuke ebaluatzen lagunduko bazenu.<br />
 <br />
-Mesedez, sartu aldizkariaren web orrian {$responseDueDate} datarako, adierazteko berrikuspenaz arduratuko zaren edo ez, baita bidalitakora sartzeko eta zure berrikuspena eta gomendioa grabatzeko ere. Web gunea da: <a href="{$contextUrl}">{$contextUrl}</a><br />
+Mesedez, sartu aldizkariaren web orrian {$responseDueDate} datarako, adierazteko berrikuspenaz arduratuko zaren edo ez, baita bidalitakora sartzeko eta zure berrikuspena eta gomendioa grabatzeko ere. Web gunea da: {$contextUrl}<br />
 <br />
 Berrikuspenaren epemuga: {$reviewDueDate}.<br />
 <br />
-Ez baduzu erabiltzailerik eta pasahitzik aldizkariaren web orrirako, lotura hau erabil dezakezu zure pasahitza berrezartzeko (eta posta elektronikoz bidaliko zaizu ondoren, zure erabiltzailearekin batera). <a href="{$passwordResetUrl}">{$passwordResetUrl}</a><br />
+Ez baduzu erabiltzailerik eta pasahitzik aldizkariaren web orrirako, lotura hau erabil dezakezu zure pasahitza berrezartzeko (eta posta elektronikoz bidaliko zaizu ondoren, zure erabiltzailearekin batera). {$passwordResetUrl}<br />
 <br />
-URL aurkezpena: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+URL aurkezpena: {$submissionReviewUrl}<br />
 <br />
 Mila esker eskari hau kontuan hartzeagatik.<br />
 <br />
@@ -922,7 +777,7 @@ Mesedez, sartu aldizkariaren web orrian {$responseDueDate} datarako, adierazteko
 <br />
 Berrikuspenaren epemuga: {$reviewDueDate}.<br />
 <br />
-URL aurkezpena: <a href="{$submissionReviewUrl}">{$submissionReviewUrl}</a><br />
+URL aurkezpena: {$submissionReviewUrl}<br />
 <br />
 Mila esker eskari hau kontuan hartzeagatik.<br />
 <br />
@@ -957,67 +812,6 @@ Berrikusi gidalerroak<br />
 <br />
 {$reviewGuidelines}]]></body>
 		<description>Atalen Editoreak Berrikusleari bidalitako mezu honetan berrikusleari eskatzen dio bidalitakoaren bigarren edo hurrengo berrikuspen bat onartu edo baztertu dezala. Bidalitakoari buruzko informazioa ematen du, besteak beste, titulua eta aurkezpena, berrikuspena egiteko muga, eta nola sartu bidalitakora.  Mezu hau erabiltzen da Aldizkariaren Konfigurazioan, 2. urratsean, Berrikuspen Prozesuaren Mezu Erantsia hautatzen denean. (Bestela, ikus BERRIKUSPENA_ESKAKIZUNA_ONDORENGOA.)</description>
-	</email_text>
-	<email_text key="GIFT_AVAILABLE">
-		<subject>{$giftNoteTitle}</subject>
-		<body><![CDATA[{$recipientFirstName} agurgarria:<br />
-<br />
-{$buyerFullName} jaun-andreak opari bat partekatu nahi luke zurekin hemen: {$giftJournalName}:<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-{$giftNote}<br />
-<br />
-<br />
-Jarraipenezko mezu bat jasoko duzu erregistratzeko xehetasunekin eta zure oparia trukatzeko argibideekin.<br />
-<br />
-Opariaz gozatuko duzulakoan gaude!<br />
-<br />
-{$giftContactSignature}]]></body>
-		<description>Mezu honek jakinarazten dio oparia hartzaileari opari bat erosi dela eta trukerako eskuragarri dagoela.</description>
-	</email_text>
-	<email_text key="GIFT_USER_REGISTER">
-		<subject>Trukatu zure oparia: erregistratzeko xehetasunak</subject>
-		<body><![CDATA[{$recipientFirstName} agurgarria:<br />
-<br />
-{$buyerFullName} jaun-andreak opari bat partekatu nahi luke zurekin hemen: {$giftJournalName}:<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-Zure oparia trukatzeko, mesedez, erregistratu webgunearen aldizkarian hemen: <br />
-<a href="{$giftUrl}">{$giftUrl}</a><br />
-<br />
-Erabiltzailea: {$username}<br />
-Pasahitza: {$password}<br />
-<br />
-Behin erregistratu ondoren, pasahitza alda dezakezu noiznahi.<br />
-<br />
-Opariaz gozatuko duzulakoan gaude!<br />
-<br />
-{$giftContactSignature}]]></body>
-		<description>Mezu honek jakinarazten dizkio hartzaileari kontu berri batean erregistratzeko xehetasunak</description>
-	</email_text>
-	<email_text key="GIFT_USER_LOGIN">
-		<subject>Trukatu zure oparia: erregistratzeko xehetasunak</subject>
-		<body><![CDATA[{$recipientFirstName} agurgarria:<br />
-<br />
-{$buyerFullName} jaun-andreak opari bat partekatu nahi luke zurekin hemen: {$giftJournalName}:<br />
-<br />
-{$giftDetails}<br />
-<br />
-<br />
-{$giftNote}<br />
-<br />
-Zure oparia trukatzeko, mesedez, erregistratu aldizkariaren webgunean, hemen: <a href="{$giftUrl}">{$giftUrl}</a><br />
-<br />
-Erabiltzailea: {$username}<br />
-<br />
-Opariaz gozatuko duzulakoan gaude!<br />
-<br />
-{$giftContactSignature}]]></body>
-		<description>Mezu honek jakinarazten dizkio opari hartzaileari erregistratzeko xehetasunak</description>
 	</email_text>
 	<email_text key="REVISED_VERSION_NOTIFY">
 		<subject>Bertsio errebisatua gora kargatu da</subject>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/sr_RS@latin/author.xml
+  *
+  * Copyright (c) 2013-2018 Simon Fraser University 
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Serbian_(sr_RS)
+  * Localization strings for the sr_RS@latin (Srpski) locale.
+  *
+  -->
+<locale name="sr_RS@latin" full_name="Srpski">
+	<message key="author.submit">Nova predaja članka</message>
+	<message key="author.track">Aktivne predaje članka</message>
+	<message key="author.competingInterests"><![CDATA[Sukob interesа <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">TI&nbsp;Pravila</a>]]></message>
+	<message key="author.submit.submitArticle">Predaj članak</message>
+	<message key="author.submit.stepsToSubmit">Pet koraka za predaju člnka</message>
+	<message key="author.submit.startHereTitle">Započni novu predaju članka</message>
+	<message key="author.submit.startHereLink"><![CDATA[<a href="{$submitUrl}" class="action">Kliknite ovde</a> da odete na prvi korak predaje.]]></message>
+	<message key="author.submit.step1">Korak 1. Početak predaje</message>
+	<message key="author.submit.step2">Korak 2. Dodavanje rada</message>
+	<message key="author.submit.step3">Korak 3. Unos metapodataka</message>
+	<message key="author.submit.step4">Korak 4. Dodavanje dodatnih dokumenata</message>
+	<message key="author.submit.step4a">Korak 4a. Dodavanje dodatnih dokumenata</message>
+	<message key="author.submit.step5">Korak 5. Potvrda predaje</message>
+	<message key="author.submit.start">Početak</message>
+	<message key="author.submit.upload">Dodavanje rada</message>
+	<message key="author.submit.metadata">Unos metapodataka</message>
+	<message key="author.submit.supplementaryFiles">Dodavanje dodatnih dokumenata</message>
+	<message key="author.submit.confirmation">Potvrda</message>
+	<message key="author.submit.cancelSubmission">Možete završiti predaju kasnije odabirom "Aktivnih predaja" u autorskom nalogu.</message>
+	<message key="author.submit.notAccepting">Časopis trenutno ne prihvata predaje radova.</message>
+	<message key="author.submit.requestWaiver">Zahtevaj oslobađanje</message>
+	<message key="author.submit.addReasonsForWaiver">Koristite polje za unos ispod da navedete razloge za oslobađanje od naknade.</message>
+	<message key="author.submit.mustEnterWaiverReason">Ukoliko zahtevate oslobađanje, morate navesti razloge.</message>
+	<message key="author.submissions.queuedReviewSubsequent">U recenzentskom krugu {$round}</message>
+	<message key="author.submissions.queuedReviewRevisions">U recenziji: zahteva pregled</message>
+	<message key="author.submissions.queuedEditingCopyedit">U uređivanju: zahteva lekturu</message>
+	<message key="author.submissions.queuedEditingProofread">U uređivanju: zahteva korekturu</message>
+	<message key="author.submissions.uploadCopyeditedVersion">Dodaj lektorisanu verziju</message>
+	<message key="author.submissions.proofreadingCorrections">Korektorske ispravke</message>
+	<message key="author.submissions.confirmDelete">Da li ste sigurni da želite da obrišete nezavršenu predaju.</message>
+	<message key="author.submissions.viewStatus">Vidi status</message>
+	<message key="author.submissions.noSubmissions">Nema predaja.</message>
+	<message key="author.submit.journalSection">Sekcije časopisa</message>
+	<message key="author.submit.journalSectionDescription"><![CDATA[Odaberite odgovarajuću sekciju u časopisu (pogledajte sekcije i pravila u <a href="{$aboutUrl}" target="_new">O časopisu</a>).]]></message>
+	<message key="author.submit.submissionLocale">Jezik predaje</message>
+	<message key="author.submit.submissionLocaleDescription">Ovaj časopis prihvata radove ne nekoliko jezika. Odaberite primarni jezik rada iz menija.</message>
+	<message key="author.submit.verifyChecklist">Morate biti sigurni da su sve stavke u predaji zadovoljene pre nastavka.</message>
+	<message key="author.submit.copyrightNoticeAgree">Autor se slaže sa autorskim pravima koja će biti primenjena na ovaj rad ako i kada bude objavljen u časopisu (komentare za urednika možete dodat ispod ).</message>
+	<message key="author.submit.copyrightNoticeAgreeRequired">Morate se složiti sa Autorskim pravima pre nastavka.</message>
+	<message key="submission.submit.coverNote">Komentari za urednika</message>
+	<message key="author.submit.comments">Unesite tekst (opciono)</message>
+	<message key="author.submit.form.sectionRequired">Odaberite odgovarajuću sekciju časopisa za rad.</message>
+	<message key="author.submit.form.localeRequired">Odaberite jezik rada.</message>
+	<message key="submission.submit.privacyStatement">Izjava o privatnosti</message>
+	<message key="author.submit.reorderInstructions">Redosled kojim će autori biti prikazani u časopisu.</message>
+	<message key="author.submit.reorder">Redosled imena autora</message>
+	<message key="author.submit.selectPrincipalContact">Kontakt za uredničku korespodenciju.</message>
+	<message key="author.submit.addAuthor">Dodaj autora</message>
+	<message key="author.submit.deleteAuthor">Obriši autora</message>
+	<message key="author.submit.submissionIndexingDescription">Unesite termine za indeksiranje  (ključne reči); odvojite ih , (termin1, termin2, termin3).</message>
+	<message key="author.submit.coverageInstructions">Odnosi se na geoprostorne lokacije, hronološki ili istorijski period i/ili karakteristike istraživačkog postupka.</message>
+	<message key="author.submit.languageInstructions"><![CDATA[srpski=sr; engleski=en; francuski=fr; španski=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Dodatni kodovi</a>.]]></message>
+	<message key="author.submit.form.authorRequired">Morate navesti najmanje jednog autora.</message>
+	<message key="author.submit.form.authorRequiredFields">Ime, prezime i imejl adresa su neophodni za svakog autora.</message>
+	<message key="author.submit.form.titleRequired">Unesite naslov članka.</message>
+	<message key="author.submit.form.abstractRequired">Unesite apstrakt članka.</message>
+	<message key="author.submit.form.wordCountAlert">Prešli ste dozvoljen broj reči za apstrakt</message>
+	<message key="author.submit.submissionFile">Fajl predaje</message>
+	<message key="author.submit.uploadSubmissionFile">Dodaj fajl predaje</message>
+	<message key="author.submit.replaceSubmissionFile">Zameni fajl predaje</message>
+	<message key="author.submit.noSubmissionFile">Fajl predaje nije dodat</message>
+	<message key="author.submit.noSubmissionConfirm">Da li ste sigurni da želite da nastavite bez dodatog fajla predaje?</message>
+	<message key="author.submit.supplementaryFilesInstructions">Opcioni korak dozvoljava dodavanje dodatnih fajlova uz predaju. Fajlovi mogu biti u bilo kom formatu mogu da sadrže informacije o instrumentima istraživanja, baze podataka, izvore koji bu drugačije bili nedostupni čitaocima, slike i tabele koje ne mogu biti integrisane u sam tekst ili neki drugi materijal koji ima veze sa radom.</message>
+	<message key="author.submit.supplementaryFiles.saveToUpload">Kliknite sačuvaj da dodate fajl (nakon toga možete dodavati još fajlova).</message>
+	<message key="author.submit.forgottenSubmitSuppFile">Da li ste sigurni da želite da nastavite bez dodavanja dodatnog fajla koji ste odabrali?</message>
+	<message key="author.submit.noSupplementaryFiles">Dodatni fajlovi nisu dodati uz ovu prijavu.</message>
+	<message key="author.submit.backToSupplementaryFiles">Povratak na dodatne fajlove</message>
+	<message key="author.submit.confirmDeleteSuppFile">Da li ste sigurni da želite da obrišete dodatni fajl?</message>
+	<message key="author.submit.uploadSuppFile">Dodaj dodatni fajl</message>
+	<message key="author.submit.addSupplementaryFile">Dodaj dodatni fajl</message>
+	<message key="author.submit.editSupplementaryFile">Izmeni dodatni fajl</message>
+	<message key="author.submit.supplementaryFileData">Meta podaci dodatnog fajla</message>
+	<message key="author.submit.supplementaryFileDataDescription">Za indeksiranje dodatnog materijala unesite metapodatke za dodatni fajl</message>
+	<message key="author.submit.supplementaryFileUpload">Dodatni fajl</message>
+	<message key="author.submit.suppFile.createrOrOwner">Autor (ili vlasnik) fajla</message>
+	<message key="author.submit.suppFile.researchInstrument">Instrumenti istraživanja</message>
+	<message key="author.submit.suppFile.researchMaterials">Istraživački materijal</message>
+	<message key="author.submit.suppFile.researchResults">Rezultati istraživanja</message>
+	<message key="author.submit.suppFile.transcripts">Transkript</message>
+	<message key="author.submit.suppFile.dataAnalysis">Analiza podataka</message>
+	<message key="author.submit.suppFile.dataSet">Set podataka</message>
+	<message key="author.submit.suppFile.sourceText">Izvorni tekst</message>
+	<message key="author.submit.suppFile.briefDescription">Kratak opis</message>
+	<message key="author.submit.suppFile.availableToPeers">Prezentujte fajl recenzentima (bez metapodataka), što neće ugroziti "slepu recenziju".</message>
+	<message key="author.submit.suppFile.publisherDescription">Koristiti samo sa formalno objavljenim materijalima.</message>
+	<message key="author.submit.suppFile.dateDescription">Datum kada su podaci sakupljeni ili instrument sačinjen.</message>
+	<message key="author.submit.suppFile.sourceDescription">Naziv studije ili druge tačke porekla.</message>
+	<message key="author.submit.suppFile.specifyOtherType">Definiši drugo</message>
+	<message key="author.submit.suppFile.noFile">Fajl nije dodat.</message>
+	<message key="author.submit.suppFile.form.titleRequired">Unesite naziv dodatnog fajla.</message>
+	<message key="author.submit.suppFile.form.subjectRequired">Unesite subjekt.</message>
+	<message key="author.submit.suppFile.form.descriptionRequired">Unesite opis.</message>
+	<message key="author.suppFile.suppFilePublicIdentificationExists">Identifikacija javnog dodatnog fajla već postoji.</message>
+	<message key="author.suppFile.publicSuppFileIdentifier">Identifikator javnog dodatnog fajla.</message>
+	<message key="author.submit.confirmationDescription">Da biste predali vaš rukopis u {$journalTitle} kliknite na "Završi predaju". Direktor predaje će primiti obaveštenje o predaji putem imejla i biće u mogućnosti da vidi progres predaje putem uredničkog procesa. Hvala Vam na interesovanju da objavljujete radove u {$journalTitle}.</message>
+	<message key="author.submit.noFiles">Fajlovi nisu dodati uz ovu prijavu.</message>
+	<message key="author.submit.filesSummary">Rezime fajlova</message>
+	<message key="author.submit.finishSubmission">Završi predaju članka</message>
+	<message key="author.submit.submissionComplete">Predaja je završena. Hvala Vam na interesovanju da objavljujete radove u {$journalTitle}.</message>
+	<message key="author.article.uploadAuthorVersion">Dodaj autorsku verziju</message>
+	<message key="author.article.copyeditedFile">Lektorski fajl</message>
+	<message key="author.article.authorRevisedFile">Autorski fajl</message>
+	<message key="author.submit.authorSubmitLoginMessage">Korisnički nalog je obavezan kako biste predali rad u ovaj časopis. Ovo omogućuje urednicima da prate status vašeg rada i da vas kontaktiraju ukoliko dođe do promena ili su potrebne dodatne informacije.</message>
+	<message key="author.submit.qualifyForWaiver">Molim vas da razmislite o oslobađanju od plaćanja cene za podnošenje članka.</message>
+	<message key="author.submit.nextSteps">Sledeći koraci</message>
+</locale>

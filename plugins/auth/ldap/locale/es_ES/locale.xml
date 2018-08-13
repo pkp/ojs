@@ -4,8 +4,8 @@
 <!--
   * plugins/auth/ldap/locale/es_ES/locale.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_(es_ES)
   * Localization strings.
@@ -13,7 +13,7 @@
  
 <locale name="es_ES" full_name="Español (España)">
 	<message key="plugins.auth.ldap.displayName">LDAP</message>
-	<message key="plugins.auth.ldap.description">Este plugin permite autentificación y sincronización de cuentas de usuario con un servidor LDAP externo.</message>
+	<message key="plugins.auth.ldap.description">Este módulo permite autentificación y sincronización de cuentas de usuario con un servidor LDAP externo.</message>
 	
 	<message key="plugins.auth.ldap.settings">Configuración de LDAP</message>
 	<message key="plugins.auth.ldap.settings.hostname">Nombre del servidor</message>
@@ -35,4 +35,6 @@
 	<message key="plugins.auth.ldap.settings.saslprop">Propiedades de seguridad SASL</message>
 	<message key="plugins.auth.ldap.settings.uid">Atributo del nombre de cuenta</message>
 	<message key="plugins.auth.ldap.settings.uid.description">El atributo cuyo valor único identifica un objeto usuario, como el uid, cn o sAMAccountName.</message>
+	<message key="plugins.auth.ldap.settings.pwhash.description">Formato Hash para las contraseñas almacenadas en el servidor. Se recomienda SSHA.</message>
+	<message key="plugins.auth.ldap.settings.sasl">Use SASL en vez de autentificación simple</message>
 </locale>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/reports/counter/locale/id_ID/locale.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="id_ID" full_name="Bahasa Indonesia">
+	<message key="plugins.reports.counter.description"><![CDATA[COUNTER plugin bisa merekam dan <a href="http://www.projectcounter.org/about.html" target="_new">COUNTER</a> melaporkan di aktifitas situs.]]></message> 
+	<message key="plugins.reports.counter"> Statistik COUNTER </message> 
+	<message key="plugins.reports.counter.migrate"> Log Migrasi </message> 
+	<message key="plugins.reports.counter.1a.title"> Laporan Jurnal 1 (R3): Permintaan Artikel Lengkap berdasarkan Bulan dan Jurnal </message> 
+	<message key="plugins.reports.counter.1a.title1"> Laporan Jurnal 1 (R3)</message> 
+	<message key="plugins.reports.counter.1a.title2"> Jumlah Permintaan Artikel Full-Text yang sukses dari Bulan dan Jurnal (Year {$year})</message>	<message key="plugins.reports.counter.1a.dateRun"> Tanggal Operasi:</message> 
+	<message key="plugins.reports.counter.1a.publisher"> Penerbit </message> 
+	<message key="plugins.reports.counter.1a.platform">Platform</message> 
+	<message key="plugins.reports.counter.1a.printIssn"> Cetak ISSN</message> 
+	<message key="plugins.reports.counter.1a.onlineIssn"> ISSN Online </message> 
+	<message key="plugins.reports.counter.1a.ytdTotal">YTD Total</message>
+	<message key="plugins.reports.counter.1a.ytdHtml">YTD HTML</message>
+	<message key="plugins.reports.counter.1a.ytdPdf">YTD PDF</message>
+	<message key="plugins.reports.counter.1a.totalForAllJournals"> Total untuk seluruh jurnal </message> 
+</locale>

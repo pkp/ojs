@@ -3,8 +3,8 @@
 /**
  * @file controllers/grid/pubIds/PubIdExportRepresentationsListGridCellProvider.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2000-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2000-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class PubIdExportRepresentationssListGridCellProvider
@@ -45,7 +45,7 @@ class PubIdExportRepresentationsListGridCellProvider extends DataObjectGridCellP
 		assert(is_a($publishedSubmissionGalley, 'ArticleGalley') && !empty($columnId));
 
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-		$publishedSubmission = $publishedArticleDao->getPublishedArticleByArticleId($publishedSubmissionGalley->getSubmissionId());
+		$publishedSubmission = $publishedArticleDao->getByArticleId($publishedSubmissionGalley->getSubmissionId());
 		import('lib.pkp.classes.linkAction.request.RedirectAction');
 		switch ($columnId) {
 			case 'title':
@@ -54,12 +54,14 @@ class PubIdExportRepresentationsListGridCellProvider extends DataObjectGridCellP
 				if (empty($title)) $title = __('common.untitled');
 				$authorsInTitle = $publishedSubmission->getShortAuthorString();
 				$title = $authorsInTitle . '; ' . $title;
-				import('lib.pkp.controllers.grid.submissions.SubmissionsListGridCellProvider');
+				import('classes.core.ServicesContainer');
 				return array(
 					new LinkAction(
 						'itemWorkflow',
 						new RedirectAction(
-							SubmissionsListGridCellProvider::getUrlByUserRoles($request, $publishedSubmission)
+							ServicesContainer::instance()
+									->get('submission')
+									->getWorkflowUrlByUserRoles($publishedSubmission)
 						),
 						$title
 					)
@@ -70,7 +72,7 @@ class PubIdExportRepresentationsListGridCellProvider extends DataObjectGridCellP
 				$issueDao = DAORegistry::getDAO('IssueDAO');
 				$issue = $issueDao->getById($issueId, $contextId);
 				// Link to the issue edit modal
-				$application = PKPApplication::getApplication();
+				$application = Application::getApplication();
 				$dispatcher = $application->getDispatcher();
 				import('lib.pkp.classes.linkAction.request.AjaxModal');
 				return array(

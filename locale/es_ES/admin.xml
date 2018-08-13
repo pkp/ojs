@@ -4,25 +4,19 @@
 <!--
   * locale/es_ES/admin.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * https://pkp.sfu.ca/wiki/index.php?title=OJS:_Spanish_(es_ES)
   * Localization strings.
   -->
 
-<locale name="es_ES" full_name="Español (España)">	
+<locale name="es_ES" full_name="Español (España)">
 	<message key="admin.hostedJournals">Revistas alojadas</message>
 	<message key="admin.settings.journalRedirect">Redirigir revista</message>
 	<message key="admin.settings.options">Opciones</message>
-	<message key="admin.settings.usePaging">En sitios con muchas revistas, divida la lista de revistas en varias páginas.</message>
 	<message key="admin.settings.journalRedirectInstructions">Las solicitudes para acceder al sitio principal se redirigirán a esta revista. Esto puede resultarle útil si el sitio sólo aloja una revista, por ejemplo.</message>
 	<message key="admin.settings.noJournalRedirect">No redirigir</message>
-	<message key="admin.settings.journalsList">Elementos de la revista</message>
-	<message key="admin.settings.journalsList.description">Elija los elementos que se mostrarán para cada revista en la página del sitio.</message>
-	<message key="admin.settings.journalsList.showThumbnail">Miniatura de la revista</message>
-	<message key="admin.settings.journalsList.showTitle">Título de la revista</message>
-	<message key="admin.settings.journalsList.showDescription">Descripción de la revista</message>
 	<message key="admin.settings.defaultMetricDescription">
 		Su instalación de OJS está configurada para registrar más de una métrica de uso. Las estadísticas de uso se mostrarán en varios contextos. En algunos casos se debe utilizar una sola estadística de uso, p. ej. para mostrar una lista ordenada de los artículos más consultados o para clasificar los resultados de búsqueda. Seleccione una de las métricas configuradas como predeterminada.
 	</message>
@@ -80,15 +74,15 @@
 	<message key="admin.categories.confirmDelete">¿Está seguro/a de que desea eliminar la categoría?</message>
 	<message key="admin.categories.name">Nombre</message>
 	<message key="admin.categories.nameRequired">Se requiere un nombre para la categoría.</message>
-	
-	
+
+
 	<message key="admin.languages.confirmDisable">¿Está seguro de que desea desactivar esta configuración regional? Esto puede afectar a las revistas alojadas que actualmente usan esta configuración regional.</message>
-	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>La descarga de paquetes de lenguaje desde el servidor web de Public Knowledge Project no está disponible en este momento  porque:</p>
+	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>La descarga de paquetes de lenguaje desde el servidor web de Public Knowledge Project no está disponible en este momento porque:</p>
 	<ul>
 		<li>Su servidor no dispone o no permite la ejecución de la utilidad GNU "tar".</li>
 		<li>OJS no es capaz de modificar el archivo de registro de configuración regional, normalmente "registry/locales.xml".</li>
 	</ul>
-<p>Los paquetes de lenguaje se pueden descargar manualmente desde la página web de PKP <a href="http://pkp.sfu.ca"></a>.</p>]]></message>
+<p>Los paquetes de lenguaje se pueden descargar manualmente desde la página web de PKP <a href="https://pkp.sfu.ca"></a>.</p>]]></message>
 	<message key="admin.contexts.form.titleRequired">Se necesita un título.</message>
 	<message key="admin.presses.createInstructions">Usted será registrado automáticamente como administrador de esta revista. Tras la creación de la nueva revista será redireccionado al asistente de instalación para completar la configuración inicial de la revista.</message>
 	<message key="admin.scheduledTask.subscriptionExpiryReminder">Recordatorio de caducidad de la suscripción</message>

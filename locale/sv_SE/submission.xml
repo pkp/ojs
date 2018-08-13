@@ -4,21 +4,78 @@
 <!--
   * locale/sv_SE/submission.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Swedish_(sv_SE)
   * Localization strings for the sv_SE (Svenska) locale.
   -->
 
 <locale name="sv_SE" full_name="Svenska">
 	<!-- Submission wizard -->
+	<message key="submission.submit.title">Skicka in en artikel</message>
+	<message key="submission.submit.userGroup">Skicka in i egenskap av min roll som...</message>
+	<message key="submission.submit.userGroupDescription">Välj vilken roll du skickar in den här artikeln som.</message>
+	<message key="submission.upload.selectComponent">Välj artikelkomponent</message>
+	<message key="submission.title">Artikelns titel</message>
+	<message key="submission.title.tip"><![CDATA[Bidragstypen är vanligen någon av 'bild', 'text', eller andra multimedia-typer som 'mjukvara' eller 'interaktiv'. Välj den som är mest relevant för ditt bidrag. Det finns exempel på <a target="_blank" href="http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type">http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</a>]]></message>
+	<message key="submission.submit.newSubmissionMultiple">Skicka in ett nytt bidrag i</message>
+	<message key="submission.submit.newSubmissionSingle">Nytt bidrag</message>
+	<message key="grid.action.workflow">Arbetsflöde för bidrag</message>
+	<message key="submission.abstract.wordCount.description">Abstractet får inte vara längre än {$wordCount} ord.</message>
 
+	<message key="submission.issueEntry">Metadata</message>
+	<message key="submission.submit.whatNext.description">Tidskriften har blivit meddelad om ditt insända bidrag, och du har fått en bekräftelse skickad till dig per e-post. När redaktören har läst ditt bidrag kommer hen att kontakta dig.</message>
+	<message key="grid.action.galleyInIssueEntry">Publiceringsversion visas i numrets lista</message>
+	<message key="grid.action.issueEntry">Visa metadata för det här bidraget</message>
+	
 	<!-- Submission Information Modal -->
-
+	<message key="submission.issueEntry.modalTitle">Metadata för bidraget och dess publicering</message>
+	<message key="submission.issueEntry.submissionMetadata">Bidrag</message>
+	<message key="submission.issueEntry.publicationMetadata">Publicering</message>
+	<message key="submission.issueEntry.confirm">Skapa en post i numret för den här artikeln baserad på nedanstående metadata.</message>
+	
 	<!-- events -->
+	<message key="submission.event.articleGalleyMadeAvailable">Artikelns publiceringsversion "{$galleyFormatName}" har gjorts tillgänglig.</message>
+	<message key="submission.event.articleGalleyMadeUnavailable">Artikelns publiceringsversion "{$galleyFormatName}" är inte längre tillgänglig.</message>
+	<message key="submission.event.publicIdentifiers">Bidragets publika identifikatorer har uppdaterats.</message>
 
 	<!-- galleys grid -->
-
+	<message key="grid.issueEntry.availableGalley.title">Godkännande av format</message>
+	<message key="grid.issueEntry.availableGalley.removeMessage"><![CDATA[<p>Den här publiceringsversionen <em>kommer inte längre vara tillgänglig</em> för läsare.</p>]]></message>
+	<message key="grid.issueEntry.availableGalley.message"><![CDATA[<p>Den här publiceringsversionen <em>kommer göras tillgänglig</em> för läsare.</p>]]></message>
+	<message key="grid.action.availableArticleGalley">Gör den här publiceringsversionen tillgänglig.</message>
+	
 	<!-- galley files grid -->
+	<message key="submission.galleyFiles">Filer för publiceringsversion</message>
+	<message key="submission.proofReadingDescription"><![CDATA[Layoutredaktören laddar upp de produktionsklara filerna här. Använd <em>Utse manusgranskare</em> för att uppdra åt författare eller andra att korrekturläsa publiceringsversionerna, med korrigerade filer uppladdade för godkännande före publicering.]]></message>
+	<message key="grid.action.approveProof">Godkänn det här korrekturet för inkludering i publiceringsversionen.</message>
+	<message key="grid.action.pageProofApproved">Det här korrekturet har blivit godkänt för inkludering i publiceringsversionen.</message>
+	<message key="submission.submit.titleAndSummary">Titel och abstract</message>
+	<message key="submission.submit.upload.description">Ladda upp filer associerade till det här bidraget, inkluderat själva artikeln, multimedia, dataset, grafik, etc.</message>
+	<message key="submission.pageProofs">Korrekturläsning</message>
+	<message key="submission.confirmSubmit">Är du säker på att du vill skicka in den här artikeln till tidskriften?</message>
+	<message key="workflow.review.externalReview">Granskning</message>
+	<message key="editor.submission.decision.sendExternalReview">Skicka till granskning</message>
+	<message key="submission.event.issueMetadataUpdated">Bidragets nummer-metadata uppdaterades.</message>
+
+	<message key="submission.upload.fileContents">Artikelkomponent</message>
+	<message key="submission.complete">Godkänt</message>
+	<message key="submission.incomplete">Väntar på godkännande</message>
+	<message key="submission.submit.form.localeRequired">Välj språk för bidraget.</message>
+	<message key="submission.submit.submissionChecklist">Checklista för bidrag</message>
+	<message key="submission.submit.submissionChecklistDescription">Du måste läsa och acceptera att du följer kraven nedan innan du fortsätter.</message>
+	<message key="submission.submit.privacyStatement">Integritetspolicy</message>
+	<message key="submission.submit.contributorRole">Medarbetares roll</message>
+	<message key="submission.submit.form.authorRequired">Minst en författare krävs.</message>
+	<message key="submission.submit.form.authorRequiredFields">Förnamn, efternamn och e-postadress för varje författare krävs.</message>
+	<message key="submission.submit.form.titleRequired">Vänligen mata in titeln på din artikel.</message>
+	<message key="submission.submit.form.abstractRequired">Vänligen mata in abstract för din artikel.</message>
+	<message key="submission.submit.form.wordCountAlert">Ditt abstract är för långt. Korta det så att det ryms inom begränsningen i antal ord som gäller för den här sektionen.</message>
+	<message key="submission.submit.form.contributorRoleRequired">Vänligen välj medarbetarens roll.</message>
+
+	<message key="submission.citationFormat.notFound">Referensformatet som efterfrågades kunde inte hämtas.</message>
+
+	<message key="submission.metadataDescription">Den här specifikationen baseras på metadataschemat Dublin Core, en internationell standard som används för att beskriva (bland annat) tidskriftsinnehåll.</message>
+	<message key="section.any">Alla sektioner</message>
 </locale>

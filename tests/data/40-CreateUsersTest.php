@@ -3,8 +3,8 @@
 /**
  * @file tests/data/40-CreateUsersTest.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2000-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2000-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class CreateUsersTest
@@ -17,212 +17,130 @@ import('lib.pkp.tests.data.PKPCreateUsersTest');
 
 class CreateUsersTest extends PKPCreateUsersTest {
 	/**
-	 * Create a user
+	 * Create users
 	 */
-	function testCreateRvaca() {
-		$this->createUser(array(
-			'username' => 'rvaca',
-			'firstName' => 'Ramiro',
-			'lastName' => 'Vaca',
-			'country' => 'Mexico',
-			'affiliation' => 'Universidad Nacional Autónoma de México',
-			'roles' => array('Journal manager'),
-		));
-	}
-
-	/**
-	 * Create a user
-	 */
-	function testCreateDbarnes() {
-		$this->createUser(array(
-			'username' => 'dbarnes',
-			'firstName' => 'Daniel',
-			'lastName' => 'Barnes',
-			'country' => 'Australia',
-			'affiliation' => 'University of Melbourne',
-			'roles' => array('Journal editor'),
-		));
-	}
-
-	/**
-	 * Create a user
-	 */
-	function testCreateDbuskins() {
-		$this->createUser(array(
-			'username' => 'dbuskins',
-			'firstName' => 'David',
-			'lastName' => 'Buskins',
-			'country' => 'United States of America',
-			'affiliation' => 'University of Chicago',
-			'roles' => array('Section editor'),
-		));
-	}
-
-	/**
-	 * Create a user
-	 */
-	function testCreateSberardo() {
-		$this->createUser(array(
-			'username' => 'sberardo',
-			'firstName' => 'Stephanie',
-			'lastName' => 'Berardo',
-			'country' => 'Canada',
-			'affiliation' => 'University of Toronto',
-			'roles' => array('Section editor'),
-		));
-	}
-
-	/**
-	 * Create a user
-	 */
-	function testCreateMinoue() {
-		$this->createUser(array(
-			'username' => 'minoue',
-			'firstName' => 'Minoti',
-			'lastName' => 'Inoue',
-			'country' => 'Japan',
-			'affiliation' => 'Kyoto University',
-			'roles' => array('Section editor'),
-		));
-	}
-
-	/**
-	 * Create a user
-	 */
-	function testCreateJjanssen() {
-		$this->createUser(array(
-			'username' => 'jjanssen',
-			'firstName' => 'Julie',
-			'lastName' => 'Janssen',
-			'country' => 'Netherlands',
-			'affiliation' => 'Utrecht University',
-			'roles' => array('Reviewer'),
-		));
-	}
-
-	/**
-	 * Create a user
-	 */
-	function testCreatePhudson() {
-		$this->createUser(array(
-			'username' => 'phudson',
-			'firstName' => 'Paul',
-			'lastName' => 'Hudson',
-			'country' => 'Canada',
-			'affiliation' => 'McGill University',
-			'roles' => array('Reviewer'),
-		));
-	}
-
-	/**
-	 * Create a user
-	 */
-	function testCreateAmccrae() {
-		$this->createUser(array(
-			'username' => 'amccrae',
-			'firstName' => 'Aisla',
-			'lastName' => 'McCrae',
-			'country' => 'Canada',
-			'affiliation' => 'University of Manitoba',
-			'roles' => array('Reviewer'),
-		));
-	}
-
-	/**
-	 * Create a user
-	 */
-	function testCreateAgallego() {
-		$this->createUser(array(
-			'username' => 'agallego',
-			'firstName' => 'Adela',
-			'lastName' => 'Gallego',
-			'country' => 'United States of America',
-			'affiliation' => 'State University of New York',
-			'roles' => array('Reviewer'),
-		));
-	}
-
-	/**
-	 * Create a user
-	 */
-	function testCreateMfritz() {
-		$this->createUser(array(
-			'username' => 'mfritz',
-			'firstName' => 'Maria',
-			'lastName' => 'Fritz',
-			'country' => 'Belgium',
-			'affiliation' => 'Ghent University',
-			'roles' => array('Copyeditor'),
-		));
-	}
-
-	/**
-	 * Create a user
-	 */
-	function testCreateSvogt() {
-		$this->createUser(array(
-			'username' => 'svogt',
-			'firstName' => 'Sarah',
-			'lastName' => 'Vogt',
-			'country' => 'Chile',
-			'affiliation' => 'Universidad de Chile',
-			'roles' => array('Copyeditor'),
-		));
-	}
-
-	/**
-	 * Create a user
-	 */
-	function testCreateGcox() {
-		$this->createUser(array(
-			'username' => 'gcox',
-			'firstName' => 'Graham',
-			'lastName' => 'Cox',
-			'country' => 'United States of America',
-			'affiliation' => 'Duke University',
-			'roles' => array('Layout Editor'),
-		));
-	}
-
-	/**
-	 * Create a user
-	 */
-	function testCreateShellier() {
-		$this->createUser(array(
-			'username' => 'shellier',
-			'firstName' => 'Stephen',
-			'lastName' => 'Hellier',
-			'country' => 'South Africa',
-			'affiliation' => 'University of Cape Town',
-			'roles' => array('Layout Editor'),
-		));
-	}
-
-	/**
-	 * Create a user
-	 */
-	function testCreateCturner() {
-		$this->createUser(array(
-			'username' => 'cturner',
-			'firstName' => 'Catherine',
-			'lastName' => 'Turner',
-			'country' => 'United Kingdom of Great Britain and Nothern Ireland',
-			'affiliation' => 'Imperial College London',
-			'roles' => array('Proofreader'),
-		));
-	}
-
-	/**
-	 * Create a user
-	 */
-	function testCreateSkumar() {
-		$this->createUser(array(
-			'username' => 'skumar',
-			'firstName' => 'Sabine',
-			'lastName' => 'Kumar',
-			'country' => 'Singapore',
-			'affiliation' => 'National University of Singapore',
-			'roles' => array('Proofreader'),
+	function testCreateUsers() {
+		$this->createUsers(array(
+			array(
+				'username' => 'rvaca',
+				'givenName' => 'Ramiro',
+				'familyName' => 'Vaca',
+				'country' => 'Mexico',
+				'affiliation' => 'Universidad Nacional Autónoma de México',
+				'roles' => array('Journal manager'),
+			),
+			array(
+				'username' => 'dbarnes',
+				'givenName' => 'Daniel',
+				'familyName' => 'Barnes',
+				'country' => 'Australia',
+				'affiliation' => 'University of Melbourne',
+				'roles' => array('Journal editor'),
+			),
+			array(
+				'username' => 'dbuskins',
+				'givenName' => 'David',
+				'familyName' => 'Buskins',
+				'country' => 'United States',
+				'affiliation' => 'University of Chicago',
+				'roles' => array('Section editor'),
+			),
+			array(
+				'username' => 'sberardo',
+				'givenName' => 'Stephanie',
+				'familyName' => 'Berardo',
+				'country' => 'Canada',
+				'affiliation' => 'University of Toronto',
+				'roles' => array('Section editor'),
+			),
+			array(
+				'username' => 'minoue',
+				'givenName' => 'Minoti',
+				'familyName' => 'Inoue',
+				'country' => 'Japan',
+				'affiliation' => 'Kyoto University',
+				'roles' => array('Section editor'),
+			),
+			array(
+				'username' => 'jjanssen',
+				'givenName' => 'Julie',
+				'familyName' => 'Janssen',
+				'country' => 'Netherlands',
+				'affiliation' => 'Utrecht University',
+				'roles' => array('Reviewer'),
+			),
+			array(
+				'username' => 'phudson',
+				'givenName' => 'Paul',
+				'familyName' => 'Hudson',
+				'country' => 'Canada',
+				'affiliation' => 'McGill University',
+				'roles' => array('Reviewer'),
+			),
+			array(
+				'username' => 'amccrae',
+				'givenName' => 'Aisla',
+				'familyName' => 'McCrae',
+				'country' => 'Canada',
+				'affiliation' => 'University of Manitoba',
+				'roles' => array('Reviewer'),
+			),
+			array(
+				'username' => 'agallego',
+				'givenName' => 'Adela',
+				'familyName' => 'Gallego',
+				'country' => 'United States',
+				'affiliation' => 'State University of New York',
+				'roles' => array('Reviewer'),
+			),
+			array(
+				'username' => 'mfritz',
+				'givenName' => 'Maria',
+				'familyName' => 'Fritz',
+				'country' => 'Belgium',
+				'affiliation' => 'Ghent University',
+				'roles' => array('Copyeditor'),
+			),
+			array(
+				'username' => 'svogt',
+				'givenName' => 'Sarah',
+				'familyName' => 'Vogt',
+				'country' => 'Chile',
+				'affiliation' => 'Universidad de Chile',
+				'roles' => array('Copyeditor'),
+			),
+			array(
+				'username' => 'gcox',
+				'givenName' => 'Graham',
+				'familyName' => 'Cox',
+				'country' => 'United States',
+				'affiliation' => 'Duke University',
+				'roles' => array('Layout Editor'),
+			),
+			array(
+				'username' => 'shellier',
+				'givenName' => 'Stephen',
+				'familyName' => 'Hellier',
+				'country' => 'South Africa',
+				'affiliation' => 'University of Cape Town',
+				'roles' => array('Layout Editor'),
+			),
+			array(
+				'username' => 'cturner',
+				'givenName' => 'Catherine',
+				'familyName' => 'Turner',
+				'country' => 'United Kingdom',
+				'affiliation' => 'Imperial College London',
+				'roles' => array('Proofreader'),
+			),
+			array(
+				'username' => 'skumar',
+				'givenName' => 'Sabine',
+				'familyName' => 'Kumar',
+				'country' => 'Singapore',
+				'affiliation' => 'National University of Singapore',
+				'roles' => array('Proofreader'),
+			),
 		));
 	}
 }

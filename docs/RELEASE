@@ -1,86 +1,12 @@
-OJS 3.0.2 Release Notes
-CVS tag: ojs-3_0_2-0
+OJS 3.2.0 Release Notes
+CVS tag: ojs-3_2_0-0
 
-Release date: February 1, 2017
+Release date: 
 ==============================
-
 
 New Features
 ------------
-	#850# Implement CRUD API for DOAJ
-	#1726# Permit submission locale changes
-	#1808# Display article references metadata on article details page
-	#1859# Add Sidebar Management to site settings for multi-journal installs
-	#1906# enable RTL orientation in OJS 3
-	#2022# Add section to the submission filter form in the editorial back-end
-	#2174# Display author biographical information in OJS
-
 
 Bug Fixes
 ---------
-	#1426# $_SERVER[HOSTNAME] should not be used for host identification
-	#1772# Consider adding aria-required to required fields
-	#1856# getByControlledVocabId() SQL does not work with PostgreSQL
-	#1867# Check box on the logging page of OJS 3.0
-	#1873# Display comments for editor
-	#1901# Update Crossref DOI display according to their new guidelines
-	#1924# Upgrade to 3.0.0: Filename migration
-	#1934# Localize issue and article cover images
-	#1996# [OJS3] Flaws in registration
-	#2039# Role selection in other journals on user profile page broken
-	#2042# Add theme api methods for manipulating parent scripts, styles and options
-	#2044# Article cover images don't appear in search results
-	#2045# Review form elements are brought into email draft despite inclusion flag status
-	#2046# Fix tool constructor syntax
-	#2047# [OJS] Submission notes visible for authors in OJS 3.0
-	#2049# Respect "editor only" section flag on submission process
-	#2052# Permit new decisions to restore archived submissions to active queue
-	#2053# Editor assign email template not available on Submission stage
-	#2062# Problems upgrading from OJS 3.0 to 3.0.1 with PostgreSQL
-	#2068# DOI Export Plugin assertion "register" is noisy
-	#2069# Article cover images in portrait dimensions can cause extra gaps
-	#2074# DOMDocument::createElementNS() is being used without consideration for escaping
-	#2075# Review first_page / last_page parsing
-	#2076# Review page counting code: MEDRA and EndNote
-	#2079# Full-text indexing not working
-	#2083# [OJS] Author View Metadata modal javascript error
-	#2085# Improve touch controls of frontend about nav dropdown
-	#2087# Wrong usage event object when accessing article page
-	#2089# List incomplete submissions in the managers active submissions lists
-	#2091# "Omit this section from About the Journal" in Section Settings is not used
-	#2092# [OJS] Reviewer doesn't have adequate permission to download review file
-	#2097# [OJS] Updating to OJS3 - revision files and initial copyedit files missing
-	#2098# [OJS3] Only tiny area clickable for tick boxes in tasks popup
-	#2100# [OJS3] Default Theme. Review interests on registration not visible
-	#2109# Section editors can access submission and data only if they are assigned to that submission
-	#2111# Guest Editor role is inoperative
-	#2112# Related Items plugin needs rewrite for OJS 3.x
-	#2115# Configured date formats need to be respected in front end
-	#2117# Display native export validation errors
-	#2118# [OJS] Enable journal to appear publicly on the site when path written with capital letters leads to an error
-	#2129# Proxy settings are not considered when fetching plugins.xml from PKP
-	#2131# OJS3: Errors on installation page are unobtrusive
-	#2134# OJS 3.0.1: Statistics plugin needs additional testing
-	#2136# [OJS] Empty sidebar breaks javascript in front end
-	#2138# Use %Y-%m-%d in strftime function
-	#2143# Remove restriction on email length
-	#2144# REVIEW_ACCEPT should be REVIEW_CONFIRM in upgrade script
-	#2154# fix hard coded current year in the usage stats JS
-	#2156# OJS install/upgrade documentation is slightly inaccurate
-	#2158# Press/journal assistants cannot delete their own placeholder queries
-	#2159# [OJS] upgrading to OJS3: Revisions and Reviewer's Attachments panels not visible in Review tab for authors
-	#2162# ru_RU locale update
-	#2167# fix getViews
-	#2176# No Reviewers after upgrading from 2.4.8 to 3.0.1
-	#2182# CSRF check prevents notes from being deleted
-	#2184# User group settings only installed for primary locale upon context creation
-	#2185# Make stage/review assignment joins in SubmissionDAO more selective
-	#2187# [OJS] Upgrading to OJS3: authors can not download the revisions they have uploaded
-	#2195# [OJS] Upgrading to OJS3: reviewers can see the names of the authors
-	#2201# [OJS 3.0.1] A reviewer has commented on "title" notifications should not go to other reviewers
-	#2208# PostgreSQL Update Statements
-	#2211# OJS 3: Remove site wide harvester registration section
-	#2212# Editorial actions do not appear when an editor assigns themselves
-	#2215# Dropdown controls in review forms present the wrong options
-	#2218# OJS3: 'Phone' field 24-character limit
-	#2223# Work around `false` returns from `glob` on some platforms during upgrade
+

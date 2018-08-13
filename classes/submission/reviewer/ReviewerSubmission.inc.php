@@ -3,8 +3,8 @@
 /**
  * @file classes/submission/reviewer/ReviewerSubmission.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ReviewerSubmission
@@ -27,12 +27,6 @@ class ReviewerSubmission extends Article {
 	/** @var array the editor decisions of this submission */
 	var $editorDecisions;
 
-	/**
-	 * Constructor.
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 
 	/**
 	 * Get/Set Methods.
@@ -261,38 +255,6 @@ class ReviewerSubmission extends Article {
 	 */
 	function setDeclined($declined) {
 		return $this->setData('declined', $declined);
-	}
-
-	/**
-	 * Get the replaced value.
-	 * @return boolean
-	 */
-	function getReplaced() {
-		return $this->getData('replaced');
-	}
-
-	/**
-	 * Set the reviewer's replaced value.
-	 * @param $replaced boolean
-	 */
-	function setReplaced($replaced) {
-		return $this->setData('replaced', $replaced);
-	}
-
-	/**
-	 * Get the cancelled value.
-	 * @return boolean
-	 */
-	function getCancelled() {
-		return $this->getData('cancelled');
-	}
-
-	/**
-	 * Set the reviewer's cancelled value.
-	 * @param $replaced boolean
-	 */
-	function setCancelled($cancelled) {
-		return $this->setData('cancelled', $cancelled);
 	}
 
 	/**

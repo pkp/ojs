@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/blocks/languageToggle/locale/sr_RS@latin/locale.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the sr_RS@latin (Srpski) locale.
+  *
+  -->
+ 
+<locale name="sr_RS@latin" full_name="Srpski">
+	<message key="plugins.block.languageToggle.displayName">Blok promene jezika</message>
+	<message key="plugins.block.languageToggle.description">Ovaj blok prikazuje alatku za promenu jezika interfejsa.</message>
+</locale>

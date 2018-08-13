@@ -1,8 +1,8 @@
 /**
  * @file plugins/themes/default/styles/footer.less
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @brief Classes for the page footer elements
@@ -23,12 +23,12 @@
 
 // OJS brand images in footer
 .pkp_brand_footer {
-	padding: @base;
-	text-align: center;
+	.pkp_helpers_clear();
+	padding: @triple;
 
 	a {
+		float: right;
 		display: block;
-		max-width: 300px;
-		margin: 0 auto;
+		max-width: 150px;
 	}
 }

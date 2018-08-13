@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/importexport/crossref/locale/pl_PL/locale.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Polish_(pl_PL)
+  * Localization strings.
+  -->
+
+<locale name="pl_PL" full_name="Język Polski">
+	<message key="plugins.importexport.crossref.description">Eksportuj lub zarejestruj metadane artykułu w formacie CrossRef.</message>
+	<message key="plugins.importexport.crossref.displayName">Wtyczka eksportu/rejestracji CrossRef</message>
+	<message key="plugins.importexport.crossref.requirements">Wymagania</message>
+	<message key="plugins.importexport.crossref.requirements.satisfied">Wszystkie wymagania wtyczki zostały spełnione.</message>
+	<message key="plugins.importexport.crossref.error.pluginNotConfigured"><![CDATA[Wtyczka CrossRef nie została skonfigurowana! Skonfiguruj poprawnie wtyczkę <a href="{$settingsUrl}">na stronie wtyczki</a>.]]></message>
+	<message key="plugins.importexport.crossref.error.DOIsNotAvailable"><![CDATA[Identyfikator DOI nie został skonfigurowany! Włącz oraz skonfiguruj DOI <a href="{$doiUrl}" target="_blank">na stronie wtyczki</a>.]]></message>
+	<message key="plugins.importexport.crossref.error.publisherNotConfigured"><![CDATA[Organizacja wydająca czasopismo nie została skonfigurowana! Musisz uzupełnić brakujące elementy <a href="{$publisherUrl}" target="_blank">na stronie konfiguracji czasopisma</a> w kroku 1.5.]]></message>
+	<message key="plugins.importexport.crossref.settings.depositorIntro">Elementy wymagane dla poprawnego deponowania CrossRef.</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorName">Nazwa organizacji deponującej</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorEmail">Email organizacji deponującej</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorNameRequired">Podaj nazwę organizacji deponującej.</message>
+	<message key="plugins.importexport.crossref.settings.form.depositorEmailRequired">Podaj email organizacji deponującej.</message>
+	<message key="plugins.importexport.crossref.settings.form.automaticRegistration">Rejestruj DOI automatycznie</message>
+	<message key="plugins.importexport.crossref.settings.form.description">Skonfiguruj wtyczkę eksportu/rejestracji CrossRef:</message>
+	<message key="plugins.importexport.crossref.settings.form.username">Nazwa użytkownika</message>
+	<message key="plugins.importexport.crossref.settings.form.usernameRequired">Podaj nazwę użytkownika którą otrzymałeś od CrossRef.</message>
+	<message key="plugins.importexport.crossref.export.unregistered">Eksortuj niezarejestrowane artykuły</message>
+	<message key="plugins.importexport.crossref.export.selectUnregistered">Wybierz niezarejestrowane artykuły</message>
+	<message key="plugins.importexport.crossref.export.noUnregistered">Wszystkie opublikowane artykuły zostały zarejestrowane (lub żaden z nich nie posiada przypisanego DOI).</message>
+	<message key="plugins.importexport.crossref.export.error.articleDatePublishedMissing">Data publikacji nie została określona dla artykułu o ID {$param}.</message>
+	<message key="plugins.importexport.crossref.senderTask.name">Zadanie automatycznej rejestracji CrossRef</message>
+	<message key="plugins.importexport.crossref.settings.form.automaticRegistration.description"><![CDATA[OJS deponuje DOI automatycznie do CrossRef w momencie publikacji artykułów. Pamiętaj, że proces deponowania może zająć chwilę. Możesz sprawdzić wszystkie niezarejestrowane teksty <a href="{$unregisteredURL}">tutaj</a>.]]></message>
+	<message key="plugins.importexport.crossref.registrationIntro"><![CDATA[Wtyczka może zostać skonfigurowana do automatycznego rejestrowania DOI z CrossRef. W tym celu będziesz potrzebował nazwę użytkownika oraz hasło (możesz je uzyskać od <a href="http://www.crossref.org" target="_blank">CrossRef</a>. Jeżeli nie posiadasz nazwy użytkownika oraz hasła, możesz eksportować pozycje do formatu CrossRef XML, ale nie będziesz mógł rejestrować DOI z CrossRef za pomocą OJS.]]></message>
+	<message key="plugins.importexport.crossref.settings.description"><![CDATA[Możesz skonfigurować wtyczkę CrossRef  <a href="{$settingsUrl}">tutaj</a>.]]></message>
+	<message key="plugins.importexport.crossref.cliUsage">Przykład użycia:
+{$scriptName} {$pluginName} export xmlFileName journal_path {issues|articles} objectId1 [objectId2] ...
+{$scriptName} {$pluginName} register journal_path {issues|articles} objectId1 [objectId2] ...</message>
+</locale>

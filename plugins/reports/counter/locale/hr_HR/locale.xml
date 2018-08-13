@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/reports/counter/locale/hr_HR/locale.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the hr_HR (Hrvatski) locale.
+  *
+  * Marija Matesic(mmatesi1@ffzg.hr), Tomislav Biscan (info@seofruits.com.hr) Exp $
+  -->
+ 
+<locale name="hr_HR" full_name="Hrvatski">
+	<message key="plugins.reports.counter.description"><![CDATA[COUNTER je dodatak koji omogućava bilježenje aktivnosti na stranicama časopisa i izvještavanje o njima u skladu s <a href="http://www.projectcounter.org/about.html" target="_new">COUNTER</a> inicijativom.]]></message>
+	<message key="plugins.reports.counter">COUNTER statistike</message>
+
+	<message key="plugins.reports.counter.clearLog">Izbriši evidenciju</message>
+	<message key="plugins.reports.counter.confirmClear">Želite li sigurno izbrisati evidenciju? Ovaj postupak se ne može opozvati.</message>
+	<message key="plugins.reports.counter.browseLog">Pregledaj evidenciju</message>
+	<message key="plugins.reports.counter.browseLog.logBrowser">Preglednik evidencije</message>
+
+	<message key="plugins.reports.counter.entry.timestamp">Vrijeme</message>
+	<message key="plugins.reports.counter.entry.site">Stranica</message>
+	<message key="plugins.reports.counter.entry.journal">Časopis</message>
+	<message key="plugins.reports.counter.entry.user">Korisnik</message>
+	<message key="plugins.reports.counter.sessionNumber">Sesija #{$sessionNumber}</message>
+	<message key="plugins.reports.counter.entry.type">Tip</message>
+	<message key="plugins.reports.counter.entry.type.article">Članak</message>
+	<message key="plugins.reports.counter.entry.type.search">Pretraživanje</message>
+	<message key="plugins.reports.counter.entry.value">Vrijednost</message>
+
+	<message key="plugins.reports.counter.1a.title">Izvješće časopisa 1 (R3): Broj zahtjeva za punim tekstom članka po mjesecu i časopisu</message>
+	<message key="plugins.reports.counter.1a.title1">Izvješće časopisa 1 (R3)</message>
+	<message key="plugins.reports.counter.1a.title2">Broj uspješno ispunjenih zahtjeva za punim tekstom članka po mjesecu i časopisu (Godina: {$year})</message>
+	<message key="plugins.reports.counter.1a.dateRun">Datum izvršavanja:</message>
+	<message key="plugins.reports.counter.1a.publisher">Nakladnik</message>
+	<message key="plugins.reports.counter.1a.platform">Platforma</message>
+	<message key="plugins.reports.counter.1a.printIssn">ISSN tiskanog izdanja</message>
+	<message key="plugins.reports.counter.1a.onlineIssn">E-ISSN</message>
+	<message key="plugins.reports.counter.1a.ytdTotal">Ukupno od početka godine</message>
+	<message key="plugins.reports.counter.1a.ytdHtml">HTML-ova od početka godine</message>
+	<message key="plugins.reports.counter.1a.ytdPdf">PDF-ova od početka godine</message>
+	<message key="plugins.reports.counter.1a.totalForAllJournals">Ukupno za sve časopise</message>
+</locale>

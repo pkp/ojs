@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/pubIds/urn/locale/cs_CZ/locale.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Czech_(cs_CZ)
+  * Localization strings.
+  -->
+
+<locale name="cs_CZ" full_name="Čeština">
+	<message key="plugins.pubIds.urn.displayName">URN</message>
+	<message key="plugins.pubIds.urn.description">Tento plugin umožňuje přiřazení jednotných názvů zdrojů (Uniform Resource Names) k číslům, článkům a sazebnicím, v OJS.</message>
+	<message key="plugins.pubIds.urn.manager.settings.description">Nakonfigurujte, prosím URN plugin, aby bylo možné spravovat a používat URN v rámci OJS:</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnObjects">Obsah časopisu</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnObjectsRequired">Zvolte, prosím objekty, které mají mít přiřazeno URN.</message>
+	<message key="plugins.pubIds.urn.manager.settings.explainURNs">Zvolte, prosím, objekty k publikování, které budou mít přiřazena Uniform Resource Names (URN):</message>
+	<message key="plugins.pubIds.urn.manager.settings.enableIssueURN">Čísla</message>
+	<message key="plugins.pubIds.urn.manager.settings.enableSubmissionURN">Články</message>
+	<message key="plugins.pubIds.urn.manager.settings.enableRepresentationURN">Sazebnice</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnPrefix">Prefix URN</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnPrefix.description">Prefix URN je pevná, nikdy se neměnící část URN (např. "urn:nbn:de:0000-").</message>
+	<message key="plugins.pubIds.urn.manager.settings.form.urnPrefixPattern"><![CDATA[Vzor URN prefixu musí odpovídat formátu "urn:"&lt;NID&gt;":"&lt;NSS&gt;.]]></message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix">Suffix URN</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.description">URN suffix může mít jakoukoli formu, ale musí být jedinečný u všech publikačních objektů se stejným URN prefixem:</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffixPattern">Pro generaci URN suffixu použijte následující vzor. Použijte %j pro iniciály časopisu, %v pro číslo svazku, %i pro číslo časopisu, %Y pro rok, %a pro ID článku v rámci OJS, %g ID sazebnice v rámci OJS, %f pro ID souboru v rámci OJS, %p pro číslo stránky a %x pro "Vlastní identifikátor".</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffixPattern.example">Např.  vol%viss%ipp%p vytvoří URN suffix "vol3iss2pp230".</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffixPattern.issues">pro čísla</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffixPattern.submissions">pro články</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffixPattern.representations">pro sazebnice</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnIssueSuffixPatternRequired">Zadejte, prosím, vzor URN pro čísla.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSubmissionSuffixPatternRequired">Zadejte, prosím, vzor URN pro články.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnRepresentationSuffixPatternRequired">Zadejte, prosím, vzor URN pro sazebnice.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffixDefault">Použít výchozí vzory.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffixDefault.description"><![CDATA[%j.v%vi%i pro čísla<br />%j.v%vi%i.%a pro články<br />%j.v%vi%i.%a.g%g pro sazebnice.]]></message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffixCustomIdentifier">Pro každou publikovanou položku zadejte individuální suffix URN. Na stránce metadat dat každé položky naleznete vstupní pole pro zadání přípony URN.</message>
+	<message key="plugins.pubIds.urn.manager.settings.checkNo">Kontrolní číslo</message>
+	<message key="plugins.pubIds.urn.manager.settings.checkNo.label">Kontrolní číslo bude automaticky vypočteno a přidáno na konec, jako poslední číslice URN.</message>
+	<message key="plugins.pubIds.urn.manager.settings.namespace">Jmenný prostor</message>
+	<message key="plugins.pubIds.urn.manager.settings.namespace.choose">Zvolte</message>
+	<message key="plugins.pubIds.urn.manager.settings.namespace.description">Pro registraci (obvykle u Deutsche Nationalbibliothek) je obvykle potřebný jmenný prostor pro trvalý identifikátor.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnResolver">Webová adresa resolveru</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnResolver.description">(např.. http://nbn-resolving.de/)</message>
+	<message key="plugins.pubIds.urn.manager.settings.form.urnResolverRequired">Vložte, prosím, webovou adresu resolveru</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnReassign">Znovu přidělit URN</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnReassign.description">Změníte-li konfiguraci URN, URN, které již byly přiřazeny, nebudou ovlivněny. Jakmile je konfigurace URN uložena, použijte toto tlačítko pro vymazání všech stávajících URN tak, aby se nová nastavení projevila i u stávajících objektů.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnReassign.confirm">Jste si jisti, že chcete smazat všechny existující URN?</message>
+	<message key="plugins.pubIds.urn.editor.urn">URN</message>
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeIssue">číslo</message>
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeSubmission">článek</message>
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeRepresentation">sazebnice</message>
+	<message key="plugins.pubIds.urn.editor.customSuffixMissing">URN nemůže být přiděleno, protože chybí vlastní suffix.</message>
+	<message key="plugins.pubIds.urn.editor.patternNotResolved">URN nemůže být přiděleno, protože obsahuje neplatný vzorec.</message>
+	<message key="plugins.pubIds.urn.editor.canBeAssigned">To co vidíte, je náhled URN. Vyberte zaškrtávací políčko a uložte formulář pro přiřazení URN.</message>
+	<message key="plugins.pubIds.urn.editor.assigned">Tomuto {$pubObjectType} bylo přiděleno URN.</message>
+	<message key="plugins.pubIds.urn.editor.urnSuffixCustomIdentifierNotUnique">Uvedený suffix URN se již používá pro další publikovanou položku. Pro každou položku zadejte jedinečný suffix URN.</message>
+	<message key="plugins.pubIds.urn.editor.clearObjectsURN">Smazat URN</message>
+	<message key="plugins.pubIds.urn.editor.clearObjectsURN.confirm">Jste si jisti, že chcete smazat existující URN?</message>
+	<message key="plugins.pubIds.urn.editor.clearIssueObjectsURN">Vymazat URN objektů čísla</message>
+	<message key="plugins.pubIds.urn.editor.clearIssueObjectsURN.confirm">Jste si jisti, že chcete vymazat existující URN objektů čísla?</message>
+	<message key="plugins.pubIds.urn.editor.clearIssueObjectsURN.description">Použijte následující možnost k vymazání URN všech objektů (článků a sazebnic), které jsou aktuálně naplánovány pro toto číslo.</message>
+	<message key="plugins.pubIds.urn.editor.addCheckNo">Přidat kontrolní číslo</message>
+	<message key="plugins.pubIds.urn.editor.assignURN">Přiřadit URN {$pubId} tomuto {$pubObjectType}</message>
+	<message key="plugins.pubIds.urn.editor.assignURN.emptySuffix">URN nemůže být přiděleno, protože vlastní suffix je prázdný.</message>
+	<message key="plugins.pubIds.urn.editor.assignURN.pattern">URN {$pubId} nelze přiřadit, protože obsahuje neplatný vzor.</message>
+	<message key="plugins.pubIds.urn.editor.assignURN.assigned">URN {$pubId} bylo přiřazeno.</message>
+	<message key="plugins.pubIds.urn.form.checkNoRequired">Kontrolní číslo chybí.</message>
+</locale>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../../../lib/pkp/dtd/xmlData.dtd">
+
+<!--
+  * dbscripts/xml/upgrade/3.1.0_notes.xml
+  *
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  -->
+
+<data>
+	<!-- Bug #1932: submission notes file migration: set assoc_type = 520 = ASSOC_TYPE_NOTE, for submission notes file (file_stage = 3 = SUBMISSION_FILE_NOTE) -->
+	<sql>
+		<query driver="mysql">UPDATE submission_files sf, notes_tmp n SET sf.assoc_type = 520, sf.assoc_id = n.note_id WHERE n.file_id = sf.file_id AND sf.file_stage = 3</query>
+		<query driver="mysqli">UPDATE submission_files sf, notes_tmp n SET sf.assoc_type = 520, sf.assoc_id = n.note_id WHERE n.file_id = sf.file_id AND sf.file_stage = 3</query>
+		<query driver="postgres7">UPDATE submission_files SET assoc_type = 520, assoc_id = n.note_id FROM notes_tmp n WHERE n.file_id = submission_files.file_id AND submission_files.file_stage = 3</query>
+		<drop table="notes_tmp" />
+	</sql>
+</data>

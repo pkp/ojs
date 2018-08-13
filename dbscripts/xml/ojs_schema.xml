@@ -4,8 +4,8 @@
 <!--
   * ojs_schema.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * OJS database schema in XML.
@@ -32,7 +32,7 @@
 			<DEFAULT VALUE="0"/>
 			<descr>Used to order lists of journals</descr>
 		</field>
-		<field name="primary_locale" type="C2" size="5">
+		<field name="primary_locale" type="C2" size="14">
 			<NOTNULL/>
 		</field>
 		<field name="enabled" type="I1">
@@ -56,7 +56,7 @@
 		<field name="journal_id" type="I8">
 			<NOTNULL/>
 		</field>
-		<field name="locale" type="C2" size="5">
+		<field name="locale" type="C2" size="14">
 			<NOTNULL/>
 			<DEFAULT VALUE=""/>
 		</field>
@@ -138,7 +138,7 @@
 		<field name="section_id" type="I8">
 			<NOTNULL />
 		</field>
-		<field name="locale" type="C2" size="5">
+		<field name="locale" type="C2" size="14">
 			<NOTNULL />
 			<DEFAULT VALUE=""/>
 		</field>
@@ -227,7 +227,7 @@
 		<field name="issue_id" type="I8">
 			<NOTNULL />
 		</field>
-		<field name="locale" type="C2" size="5">
+		<field name="locale" type="C2" size="14">
 			<NOTNULL />
 			<DEFAULT VALUE=""/>
 		</field>
@@ -260,7 +260,7 @@
 			<KEY />
 			<AUTOINCREMENT/>
 		</field>
-		<field name="locale" type="C2" size="5"/>
+		<field name="locale" type="C2" size="14"/>
 		<field name="issue_id" type="I8">
 			<NOTNULL/>
 		</field>
@@ -287,7 +287,7 @@
 		<field name="galley_id" type="I8">
 			<NOTNULL />
 		</field>
-		<field name="locale" type="C2" size="5">
+		<field name="locale" type="C2" size="14">
 			<NOTNULL />
 			<DEFAULT VALUE=""/>
 		</field>
@@ -439,7 +439,7 @@
 			<KEY />
 			<AUTOINCREMENT />
 		</field>
-		<field name="locale" type="C2" size="5" />
+		<field name="locale" type="C2" size="14" />
 		<field name="context_id" type="I8">
 			<NOTNULL />
 		</field>
@@ -461,10 +461,6 @@
 		</field>
 
 		<field name="pages" type="C2" size="255"/>
-		<field name="fast_tracked" type="I1">
-			<NOTNULL/>
-			<DEFAULT VALUE="0"/>
-		</field>
 		<field name="hide_author" type="I1">
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>
@@ -491,7 +487,7 @@
 		<field name="submission_id" type="I8">
 			<NOTNULL />
 		</field>
-		<field name="locale" type="C2" size="5">
+		<field name="locale" type="C2" size="14">
 			<NOTNULL />
 			<DEFAULT VALUE=""/>
 		</field>
@@ -560,7 +556,7 @@
 			<KEY />
 			<AUTOINCREMENT/>
 		</field>
-		<field name="locale" type="C2" size="5"/>
+		<field name="locale" type="C2" size="14"/>
 		<field name="submission_id" type="I8">
 			<NOTNULL/>
 		</field>
@@ -590,7 +586,7 @@
 		<field name="galley_id" type="I8">
 			<NOTNULL />
 		</field>
-		<field name="locale" type="C2" size="5">
+		<field name="locale" type="C2" size="14">
 			<NOTNULL />
 			<DEFAULT VALUE=""/>
 		</field>
@@ -610,26 +606,6 @@
 			<col>galley_id</col>
 			<col>locale</col>
 			<col>setting_name</col>
-			<UNIQUE/>
-		</index>
-	</table>
-
-	<!--
-	  *
-	  * TABLE submission_html_galley_images
-	  *
-	  -->
-	<table name="submission_html_galley_images">
-		<field name="galley_id" type="I8">
-			<NOTNULL />
-		</field>
-		<field name="file_id" type="I8">
-			<NOTNULL />
-		</field>
-		<descr>Images associated with an submission HTML galley.</descr>
-		<index name="submission_html_galley_images_pkey">
-			<col>galley_id</col>
-			<col>file_id</col>
 			<UNIQUE/>
 		</index>
 	</table>
@@ -722,7 +698,7 @@
 		<field name="version_key" type="C2" size="40">
 			<NOTNULL/>
 		</field>
-		<field name="locale" type="C2" size="5">
+		<field name="locale" type="C2" size="14">
 			<DEFAULT VALUE="en_US"/>
 		</field>
 		<field name="title" type="C2" size="120">
@@ -868,7 +844,7 @@
 		<field name="type_id" type="I8">
 			<NOTNULL />
 		</field>
-		<field name="locale" type="C2" size="5">
+		<field name="locale" type="C2" size="14">
 			<NOTNULL />
 			<DEFAULT VALUE=""/>
 		</field>
@@ -1021,7 +997,7 @@
 		<field name="payment_type" type="I8">
 			<NOTNULL/>
 		</field>
-		<field name="journal_id" type="I8">
+		<field name="context_id" type="I8">
 			<NOTNULL/>
 		</field>
 		<field name="user_id" type="I8" />

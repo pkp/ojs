@@ -1,8 +1,8 @@
 {**
  * templates/controllers/grid/settings/section/form/sectionForm.tpl
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Section form under journal management.
@@ -41,9 +41,11 @@
 			{fbvElement type="text" id="wordCount" value=$wordCount maxlength="80" label="manager.sections.wordCountInstructions"}
 		{/fbvFormSection}
 
-		{fbvFormSection title="submission.reviewForm" for="reviewFormId" inline=true size=$fbvStyles.size.MEDIUM}
-			{fbvElement type="select" id="reviewFormId" defaultLabel="manager.reviewForms.noneChosen"|translate defaultValue="" from=$reviewFormOptions selected=$reviewFormId translate=false size=$fbvStyles.size.MEDIUM inline=true}
-		{/fbvFormSection}
+		{if count($reviewFormOptions)>0}
+			{fbvFormSection title="submission.reviewForm" for="reviewFormId" inline=true size=$fbvStyles.size.MEDIUM}
+				{fbvElement type="select" id="reviewFormId" defaultLabel="manager.reviewForms.noneChosen"|translate defaultValue="" from=$reviewFormOptions selected=$reviewFormId translate=false size=$fbvStyles.size.MEDIUM inline=true}
+			{/fbvFormSection}
+		{/if}
 
 		{call_hook name="Templates::Manager::Sections::SectionForm::AdditionalMetadata" sectionId=$sectionId}
 	{/fbvFormArea}
@@ -63,12 +65,16 @@
 		{/fbvFormSection}
 	{/fbvFormArea}
 
-	{fbvFormSection for="context" size=$fbvStyles.size.LARGE}
-		{if $sectionEditorCount > 0}{* only include the section editor listbuilder if there are section editors available *}
-			{url|assign:sectionEditorsUrl router=$smarty.const.ROUTE_COMPONENT component="listbuilder.settings.SubEditorsListbuilderHandler" op="fetch" sectionId=$sectionId escape=false}
-			{load_url_in_div id="sectionEditorsContainer" url=$sectionEditorsUrl}
-		{/if}
-	{/fbvFormSection}
+	{if $hasSubEditors}
+		{fbvFormSection}
+			{assign var="uuid" value=""|uniqid|escape}
+			<div id="subeditors-{$uuid}">
+				<script type="text/javascript">
+					pkp.registry.init('subeditors-{$uuid}', 'SelectListPanel', {$subEditorsListData});
+				</script>
+			</div>
+		{/fbvFormSection}
+	{/if}
 
 	{fbvFormButtons submitText="common.save"}
 </form>

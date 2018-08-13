@@ -1,8 +1,8 @@
 {**
  * plugins/generic/webFeed/templates/settingsForm.tpl
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Web feeds plugin settings
@@ -39,7 +39,6 @@
 	{/fbvFormArea}
 
 	{fbvFormButtons}
+	<p><span class="formRequired">{translate key="common.requiredField"}</span></p>
 </form>
-
-<p><span class="formRequired">{translate key="common.requiredField"}</span></p>
 </div>

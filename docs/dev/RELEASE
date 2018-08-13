@@ -15,6 +15,7 @@ OJS release:
     dbscripts/xml/version.xml
     dbscripts/xml/install.xml
     dbscripts/xml/upgrade.xml
+    package.json
 
     Commands that may be helpful in determining what bugs have been closed
     since the last release (whose tag is specified in place of <last-tag>:
@@ -39,7 +40,7 @@ OJS release:
 
 3. Update release documentation:
 
-    docs/README
+    docs/README.md
     docs/release-notes/README-<VERSION>
 
 
@@ -65,8 +66,12 @@ config.TEMPLATE.inc.php and compile and commit the latest JS before tagging!
 
 6. Build the OJS package and patch files:
 
+WARNING: If working on a stable branch, the latest `js/build.js` file will be
+compiled when `tools/buildpkg.sh` is run. Remove js/build.js from the .gitignore
+file and commit it to the new stable branch.
+
     sh tools/buildpkg.sh <VERSION> <TAG>-<BRANCH> <PATCH_DIR>
-    
+
     (<PATCH_DIR> is the path to a directory containing previous OJS release
      packages against which to build patches)
 

@@ -4,8 +4,8 @@
 <!--
   * locale/fi_FI/admin.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
   * Localization strings.
@@ -15,14 +15,8 @@
 	<message key="admin.hostedJournals">Ylläpidetyt julkaisut</message>
 	<message key="admin.settings.journalRedirect">Julkaisun uudelleenohjaus</message>
 	<message key="admin.settings.options">Valinnat</message>
-	<message key="admin.settings.usePaging">Mikäli sivustolla on useita julkaisuja, jaa julkaisulista usealle sivulle.</message>
 	<message key="admin.settings.journalRedirectInstructions">Pyynnöt pääsivustolle uudelleenohjataan tähän julkaisuun. Tämä saattaa olla hyödyllinen toiminto, jos sivustolla ylläpidetään vain yhtä julkaisua.</message>
 	<message key="admin.settings.noJournalRedirect">Älä uudelleenohjaa</message>
-	<message key="admin.settings.journalsList">Julkaisun elementit</message>
-	<message key="admin.settings.journalsList.description">Valitse julkaisun elementit, jotka näytetään jokaisen julkaisun kohdalla sivuston sivulla.</message>
-	<message key="admin.settings.journalsList.showThumbnail">Julkaisun pikkukuva</message>
-	<message key="admin.settings.journalsList.showTitle">Julkaisun nimi</message>
-	<message key="admin.settings.journalsList.showDescription">Julkaisun kuvaus</message>
 	<message key="admin.settings.defaultMetricDescription">
 OJS-asennuksesi on määritetty tallentamaan useita käytön mittareita. Käyttötilastot näkyvät useassa yhteydessä.
 		Joissain tapauksissa on käytettävä yksittäistä käyttötilastoa, esim. silloin, kun näytetään käytetyimpien artikkeleiden järjestetty lista ja asetettaessa hakutuloksia paremmuusjärjestykseen. Valitse yksi määritetyistä mittareista oletusarvoksi.
@@ -55,7 +49,6 @@ OJS-asennuksesi on määritetty tallentamaan useita käytön mittareita. Käytt�
 	<message key="admin.journals.createInstructions">Sinut lisätään automaattisesti tämän julkaisun hallinnoijaksi. Uuden julkaisun luonnin jälkeen sinut uudelleenohjataan ohjattuun asetusten luontiin julkaisun aloitusasetusten loppuun saattamiseksi.</message>
 	<message key="admin.journals.journalSettings">Julkaisun asetukset</message>
 	<message key="admin.journals.noneCreated">Yhtään julkaisua ei ole luotu.</message>
-	<message key="admin.contexts.confirmDelete">Haluatko varmasti poistaa tämän julkaisun ja sen sisällön pysyvästi?</message>
 	<message key="admin.contexts.create">Luo julkaisu</message>
 	<message key="admin.journals.urlWillBe">Tämän tulee olla yksittäinen lyhyt sana tai akronyymi, joka identifioi julkaisun. Julkaisun URL-osoitteeksi tulee {$sampleUrl}</message>
 	<message key="admin.contexts.form.titleRequired">Nimi vaaditaan.</message>

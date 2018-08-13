@@ -4,8 +4,8 @@
 <!--
   * locale/de_DE/submission.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_German_(de_DE)
   * Localization strings.
@@ -22,6 +22,7 @@
 	<message key="submission.submit.newSubmissionMultiple">Eine neue Einreichung beginnen in</message>
 	<message key="submission.submit.newSubmissionSingle">Neue Einreichung</message>
 	<message key="grid.action.workflow">Einreichungsworkflow</message>
+	<message key="submission.abstract.wordCount.description">Das Abstract darf höchstens {$wordCount} Wörter enthalten.</message>
 
 	<message key="submission.issueEntry">Metadaten</message>
 	<message key="submission.submit.whatNext.description">Die Zeitschrift wurde über Ihre Einreichung informiert, und Sie haben eine Bestätigung per E-Mail erhalten. Sobald die/der Redakteur/in die Einreichung begutachtet hat, werden Sie benachrichtigt.</message>
@@ -70,6 +71,7 @@
 	<message key="submission.submit.form.authorRequiredFields">Vorname, Nachname und E-Mail-Adresse aller Autor/innen müssen angegeben werden.</message>
 	<message key="submission.submit.form.titleRequired">Bitte geben Sie den Titel Ihres Artikels an.</message>
 	<message key="submission.submit.form.abstractRequired">Bitte geben Sie das Abstract Ihres Artikels an.</message>
+	<message key="submission.submit.form.wordCountAlert">Ihr Abstract ist zu lang. Bitte kürzen Sie es auf eine Länge, die unter der Höchstgrenze für diese Rubrik liegt.</message>
 	<message key="submission.submit.form.contributorRoleRequired">Bitte wählen Sie die Rolle der Beiträgerin/des Beiträgers aus.</message>
 
 	<message key="submission.citationFormat.notFound">Das angeforderte Zitationsformat konnte nicht abgerufen werden.</message>

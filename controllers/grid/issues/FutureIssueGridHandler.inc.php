@@ -3,8 +3,8 @@
 /**
  * @file controllers/grid/issues/IssueGridHandler.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2000-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2000-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IssueGridHandler
@@ -16,13 +16,6 @@
 import('classes.controllers.grid.issues.IssueGridHandler');
 
 class FutureIssueGridHandler extends IssueGridHandler {
-	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-	}
-
 
 	//
 	// Implement template methods from PKPHandler
@@ -30,7 +23,7 @@ class FutureIssueGridHandler extends IssueGridHandler {
 	/**
 	 * @copydoc PKPHandler::initialize()
 	 */
-	function initialize($request, $args) {
+	function initialize($request, $args = null) {
 		// Basic grid configuration.
 		$this->setTitle('editor.issues.futureIssues');
 
@@ -60,6 +53,14 @@ class FutureIssueGridHandler extends IssueGridHandler {
 		$journal = $request->getJournal();
 		$issueDao = DAORegistry::getDAO('IssueDAO');
 		return $issueDao->getUnpublishedIssues($journal->getId());
+	}
+
+	/**
+	 * Get the js handler for this component.
+	 * @return string
+	 */
+	public function getJSHandler() {
+		return '$.pkp.controllers.grid.issues.FutureIssueGridHandler';
 	}
 }
 

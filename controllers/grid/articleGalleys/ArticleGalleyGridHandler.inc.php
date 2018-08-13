@@ -3,8 +3,8 @@
 /**
  * @file controllers/grid/articleGalleys/ArticleGalleyGridHandler.inc.php
  *
- * Copyright (c) 2016-2017 Simon Fraser University Library
- * Copyright (c) 2000-2017 John Willinsky
+ * Copyright (c) 2016-2018 Simon Fraser University
+ * Copyright (c) 2000-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ArticleGalleyGridHandler
@@ -30,8 +30,11 @@ class ArticleGalleyGridHandler extends GridHandler {
 	function __construct() {
 		parent::__construct();
 		$this->addRoleAssignment(
+			array(ROLE_ID_AUTHOR, ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR, ROLE_ID_ASSISTANT),
+			array('fetchGrid', 'fetchRow'));
+		$this->addRoleAssignment(
 			array(ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR, ROLE_ID_ASSISTANT),
-			array('fetchGrid', 'fetchRow', 'addGalley', 'editGalley', 'editGalleyTab', 'updateGalley', 'deleteGalley', 'identifiers', 'updateIdentifiers', 'clearPubId', 'saveSequence'));
+			array('addGalley', 'editGalley', 'editGalleyTab', 'updateGalley', 'deleteGalley', 'identifiers', 'updateIdentifiers', 'clearPubId', 'saveSequence'));
 	}
 
 
@@ -110,16 +113,19 @@ class ArticleGalleyGridHandler extends GridHandler {
 		));
 
 		$router = $request->getRouter();
-		$this->addAction(new LinkAction(
-			'addGalley',
-			new AjaxModal(
-				$router->url($request, null, null, 'addGalley', null, $this->getRequestArgs()),
-				__('submission.layout.newGalley'),
-				'modal_add_item'
-			),
-			__('grid.action.addGalley'),
-			'add_item'
-		));
+		$userRoles = $this->getAuthorizedContextObject(ASSOC_TYPE_USER_ROLES);
+		if (0 != count(array_intersect($userRoles, array(ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR, ROLE_ID_ASSISTANT)))) {
+			$this->addAction(new LinkAction(
+				'addGalley',
+				new AjaxModal(
+					$router->url($request, null, null, 'addGalley', null, $this->getRequestArgs()),
+					__('submission.layout.newGalley'),
+					'modal_add_item'
+				),
+				__('grid.action.addGalley'),
+				'add_item'
+			));
+		}
 	}
 
 	//
@@ -202,7 +208,7 @@ class ArticleGalleyGridHandler extends GridHandler {
 		);
 		import('controllers.tab.pubIds.form.PublicIdentifiersForm');
 		$form = new PublicIdentifiersForm($representation);
-		$form->initData($request);
+		$form->initData();
 		return new JSONMessage(true, $form->fetch($request));
 	}
 
@@ -288,14 +294,18 @@ class ArticleGalleyGridHandler extends GridHandler {
 		$notificationDao = DAORegistry::getDAO('NotificationDAO');
 		$notificationDao->deleteByAssoc(ASSOC_TYPE_REPRESENTATION, $galley->getId());
 
-		$notificationMgr = new NotificationManager();
-		$notificationMgr->updateNotification(
-			$request,
-			array(NOTIFICATION_TYPE_ASSIGN_PRODUCTIONUSER, NOTIFICATION_TYPE_AWAITING_REPRESENTATIONS),
-			null,
-			ASSOC_TYPE_SUBMISSION,
-			$galley->getSubmissionId()
-		);
+		if ($this->getSubmission()->getStageId() == WORKFLOW_STAGE_ID_EDITING ||
+			$this->getSubmission()->getStageId() == WORKFLOW_STAGE_ID_PRODUCTION) {
+
+			$notificationMgr = new NotificationManager();
+			$notificationMgr->updateNotification(
+				$request,
+				array(NOTIFICATION_TYPE_ASSIGN_PRODUCTIONUSER, NOTIFICATION_TYPE_AWAITING_REPRESENTATIONS),
+				null,
+				ASSOC_TYPE_SUBMISSION,
+				$galley->getSubmissionId()
+			);
+		}
 
 		return DAO::getDataChangedEvent($galley->getId());
 	}
@@ -352,14 +362,18 @@ class ArticleGalleyGridHandler extends GridHandler {
 		if ($galleyForm->validate($request)) {
 			$galley = $galleyForm->execute($request);
 
-			$notificationMgr = new NotificationManager();
-			$notificationMgr->updateNotification(
-				$request,
-				array(NOTIFICATION_TYPE_ASSIGN_PRODUCTIONUSER, NOTIFICATION_TYPE_AWAITING_REPRESENTATIONS),
-				null,
-				ASSOC_TYPE_SUBMISSION,
-				$galley->getSubmissionId()
-			);
+			if ($this->getSubmission()->getStageId() == WORKFLOW_STAGE_ID_EDITING ||
+				$this->getSubmission()->getStageId() == WORKFLOW_STAGE_ID_PRODUCTION) {
+
+				$notificationMgr = new NotificationManager();
+				$notificationMgr->updateNotification(
+					$request,
+					array(NOTIFICATION_TYPE_ASSIGN_PRODUCTIONUSER, NOTIFICATION_TYPE_AWAITING_REPRESENTATIONS),
+					null,
+					ASSOC_TYPE_SUBMISSION,
+					$galley->getSubmissionId()
+				);
+			}
 
 			return DAO::getDataChangedEvent($galley->getId());
 		}

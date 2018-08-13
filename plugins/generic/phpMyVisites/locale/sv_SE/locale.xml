@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/phpMyVisites/locale/sv_SE/locale.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Swedish_(sv_SE)
+  * Localization strings.
+  -->
+ 
+<locale name="sv_SE" full_name="Svenska">
+
+	<!-- phpMyVisites -->
+	<message key="plugins.generic.phpmv.displayName">Plugin för phpMyVisites</message>
+	<message key="plugins.generic.phpmv.description"><![CDATA[Integrerar OJS med phpMyVisites, en fri och öppen applikation för insamling och analys av besök på webbplatsen. phpMyVisites behöver vara installerad. Besök <a href="http://www.phpmyvisites.us/" title="phpMyVisites webbplats">phpMyVisites webbplats</a> för mer information.]]></message>
+	<!-- phpMyVisites Settings Management -->
+	<message key="plugins.generic.phpmv.manager.settings">Inställningar</message>
+	<message key="plugins.generic.phpmv.manager.phpmvSettings">phpMyVisites-inställningar</message>
+	<message key="plugins.generic.phpmv.manager.settings.description"><![CDATA[<p>Med det här pluginet aktiverat blir det möjligt att använda phpMyVisites för att samla in och analysera data för besök på tidskriftens webbplats. Pluginet kräver att phpMyVisites är installerat. Besök <a href="http://www.phpmyvisites.us/" title="phpMyVisites webbplats">phpMyVisites webbplats</a> för mer information.</p>]]></message>
+	<message key="plugins.generic.phpmv.manager.settings.phpmvUrl">phpMyVisites-URL</message>
+	<message key="plugins.generic.phpmv.manager.settings.phpmvUrlInstructions">Fullständig URL till din phpMyVisites-installation (d.v.s. http://myserver.net/phpmv).</message>
+	<message key="plugins.generic.phpmv.manager.settings.phpmvUrlRequired">Ange en giltig URL. Inkludera http:// i början.</message>
+	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteId">Webbplatsens profilnummer</message>
+	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteIdInstructions">I phpMyVisites, klicka på Administration-> Modify site. Webbplatsens profilnummer visas bredvid ditt profilnamn för webbplatsen.</message>
+	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteIdRequired">Ange ett profilnummer för webbplatsen.</message>
+
+</locale>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/pubIds/urn/locale/sr_RS@latin/locale.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Serbian_(sr_RS)
+  * URN plugin localization strings
+  -->
+ 
+<locale name="sr_RS@latin" full_name="Srpski">
+	<message key="plugins.pubIds.urn.displayName">URN</message>
+
+	<!-- settings form -->
+	<message key="plugins.pubIds.urn.manager.settings.urnObjects">Sadržaj časopisa</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnObjectsRequired">Odaberi objekte za koje bi URN-ovi trebali biti dodeljeni.</message>
+	<message key="plugins.pubIds.urn.manager.settings.enableIssueURN">URN-ovi će biti dodeljeni jedinicama.</message>
+	<message key="plugins.pubIds.urn.manager.settings.enableSubmissionURN">URN-ovi će biti dodeljeni člancima.</message>
+	<message key="plugins.pubIds.urn.manager.settings.enableRepresentationURN">URN-ovi će biti dodeljeni prikazima (npr. HTML ili PDF faljlovi).</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnPrefix">URN prefiks</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnPrefix.description">URN prefiks je fiksan, nepromenjiv deo URN-a (npr. "urn:nbn:de:0000-").</message>
+	<message key="plugins.pubIds.urn.manager.settings.form.urnPrefixPattern"><![CDATA[Obrazac URN prefiksa mora biti u formi "urn:"&lt;NID&gt;":"&lt;NSS&gt;.]]></message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix">URN sufiks</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffixPattern.example">Npr, vol%viss%ipp%p može generisati URN sufiks "vol3iss2pp230".</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffixPattern.issues">za jedinicu (broj)</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffixPattern.submissions">za članak</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffixPattern.representations">za prikaz</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnIssueSuffixPatternRequired">Unesite URN sufiks obrazac za jedinicu.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSubmissionSuffixPatternRequired">Unesite URN sufiks obrazac za članak.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnRepresentationSuffixPatternRequired">Unesite URN sufiks obrazac za prikaz.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffixDefault">Koristi predefinisane obrasce.</message>
+	<message key="plugins.pubIds.urn.manager.settings.checkNo">Broj za proveru</message>
+	<message key="plugins.pubIds.urn.manager.settings.checkNo.label">Broj za proveru biće automatski izračunat i dodat na kraj, kao poslednja cifra URN-a.</message>
+	<message key="plugins.pubIds.urn.manager.settings.namespace">Ime</message>
+	<message key="plugins.pubIds.urn.manager.settings.namespace.choose">Izaberi</message>
+	<message key="plugins.pubIds.urn.manager.settings.namespace.description">Imena stalnih identifikatora obično potrebni za registraciju (e.g. at the Deutsche Nationalbibliothek).</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnReassign">Obriši URN-ove</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnReassign.description">Ako promenite URN konfiguraciju, URN-ovi koje ste već dodelili neće biti pogođeni promenom. Kada je promenjena URN konfiguracija sačuvana, koristite ovo dugme za brisanje svih postojećih URN-ova, tako da nova podešavanja stupe na snagu sa postojećim objektima.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnReassign.confirm">Da li ste sigurni da želite da obrišete postojeće URN-ove?</message>
+
+	<!-- metadata form -->
+	<message key="plugins.pubIds.urn.editor.urn">URN</message>
+	<!-- errors -->
+	<message key="plugins.pubIds.urn.form.checkNoRequired">Broj za proveru nedostaje.</message>
+	<message key="plugins.pubIds.urn.description">Ovaj dodatak omogućuje dodeljivanje Uniform Resource Names brojevima, člancima i fajlovima radova u OJS.</message>
+	<message key="plugins.pubIds.urn.manager.settings.description">Podesite URN dodatak kako bi bili u mogućnosti da uređujete i koristite URN u OJS-u</message>
+	<message key="plugins.pubIds.urn.manager.settings.explainURNs">Obeležite objekte koji će imati dodeljenj Uniform Resource Names (URN):</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.description">URN sufiks može imati bilo koju formu ali ona mora biti istovetna sa ostalima unutar istog prefiksa:</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffixPattern">Koristite šemu navedenu niže kako biste generisali URN sufiks. Koristite %j za inicijale časopisa, %v za godinu (volume), %i za broj, %Y za godinu, %a za ID članka u OJS-u, %g za ID fajla prikaza, %f za ID OJS fajla, %p za broj stranice i %x za "Prilagođeni identifikator" (Custom Identifier).</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffixDefault.description"><![CDATA[%j.v%vi%i za izdanje<br />%j.v%vi%i.%a za članak<br />%j.v%vi%i.%a.g%g za fajl prikaza.]]></message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffixCustomIdentifier">Unesite individualni URN sufiks za svaku objavljenu jedinicu. Pronaćićete dodatna polja za unos na stranicama sa metapodacima.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnResolver">Resolver URL</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnResolver.description">(npr. http://nbn-resolving.de/)</message>
+	<message key="plugins.pubIds.urn.manager.settings.form.urnResolverRequired">Unesite resolver URL.</message>
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeIssue">jedinica (broj)</message>
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeSubmission">članak</message>
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeRepresentation">fajl prikaza</message>
+	<message key="plugins.pubIds.urn.editor.customSuffixMissing">URN ne može biti dodeljen pošto nedostaje prilagođeni sufiks.</message>
+	<message key="plugins.pubIds.urn.editor.patternNotResolved">URN ne može biti dodeljen pošto sadrži kombinaciju koja se ne može razrešiti.</message>
+	<message key="plugins.pubIds.urn.editor.canBeAssigned">Ovo što vidite je prikaz URN-a. Obeležite polje i sačuvajte formu kako biste ga dodelili.</message>
+	<message key="plugins.pubIds.urn.editor.assigned">URN je dodeljen za {$pubObjectType}.</message>
+	<message key="plugins.pubIds.urn.editor.urnSuffixCustomIdentifierNotUnique">Dati sufiks je u upotrebi. Unesite jedinstveni sufiks za svaku jedinicu.</message>
+	<message key="plugins.pubIds.urn.editor.clearObjectsURN">Obriši URN</message>
+	<message key="plugins.pubIds.urn.editor.clearObjectsURN.confirm">Da li ste sigurni da želite da obrišete postojeće URN-ove?</message>
+	<message key="plugins.pubIds.urn.editor.clearIssueObjectsURN">Obrišite URN-ove</message>
+	<message key="plugins.pubIds.urn.editor.clearIssueObjectsURN.confirm">Da li ste sigurni da želite da obrišete postojeće URN-ove za ovu jedinicu?</message>
+	<message key="plugins.pubIds.urn.editor.clearIssueObjectsURN.description">Koristite sledeću opciju da obrišete sve dodeljene URN-ove za ovu jedinicu.</message>
+	<message key="plugins.pubIds.urn.editor.addCheckNo">Dodaj broj za proveru</message>
+	<message key="plugins.pubIds.urn.editor.assignURN">Dodeli URN {$pubId} za {$pubObjectType}</message>
+	<message key="plugins.pubIds.urn.editor.assignURN.emptySuffix">URN ne može biti dodeljen pošto nedostaje prilagođeni sufiks.</message>
+	<message key="plugins.pubIds.urn.editor.assignURN.pattern">URN{$pubId} ne može biti dodeljen pošto sadrži kombinaciju koja se ne može razrešiti.</message>
+	<message key="plugins.pubIds.urn.editor.assignURN.assigned">URN {$pubId} je dodeljen.</message>
+</locale>

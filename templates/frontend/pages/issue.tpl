@@ -1,8 +1,8 @@
 {**
  * templates/frontend/pages/issue.tpl
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @brief Display a landing page for a single issue. It will show the table of contents
@@ -12,6 +12,7 @@
  * @uses $issueIdentification string Label for this issue, consisting of one or
  *       more of the volume, number, year and title, depending on settings
  * @uses $issueGalleys array Galleys for the entire issue
+ * @uses $primaryGenreIds array List of file genre IDs for primary types
  *}
 {include file="frontend/components/header.tpl" pageTitleTranslated=$issueIdentification}
 

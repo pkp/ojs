@@ -2,10 +2,10 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * plugins/importexport/native/locale/pt_BR/locale.xml
+  * locale.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Portuguese_(pt_BR)
   * Localization strings.
@@ -24,4 +24,9 @@
 	<message key="plugins.importexport.native.import.error.sectionTitleMatch">O título da seção "{$sectionTitle}" da edição "{$issueTitle}" é compatível com uma seção existente, mas o outro título desta seção não é compatível com o outro título da seção existente na revista.</message>
 	<message key="plugins.importexport.native.import.error.sectionAbbrevMismatch">A abreviatura da seção "{$section1Abbrev}" e a abreviatura da seção "{$section2Abbrev}" da edição "{$issueTitle}" são compatíveis com seções distintas existentes na revista.</message>
 	<message key="plugins.importexport.native.import.error.sectionAbbrevMatch">A abreviatura da seção "{$sectionAbbrev}" da edição "{$issueTitle}" é compatível com uma seção existente, mas outra abreviatura desta edição não é compatível com outra abreviatura de seção existente na revista.</message>
+	<message key="plugins.importexport.native.exportSubmissions">Exportar Artigos</message>
+	<message key="plugins.importexport.native.cliUsage">O título da seção "{$section1Title}" e o título da seção  "{$section2Title}" da edição "{$issueTitle}" são compatíveis com edições diferentes existentes na revista.</message>
+	<message key="plugins.importexport.native.exportIssues">Exportar Edições</message>
+	<message key="plugins.importexport.native.error.unknownSection">Seção desconhecida {$param}</message>
+	<message key="plugins.importexport.native.error.unknownUser">O usuário informado, "{$userName}", não existe.</message>
 </locale>

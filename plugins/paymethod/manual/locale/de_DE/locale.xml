@@ -4,8 +4,8 @@
 <!--
   * plugins/paymethod/manual/locale/de_DE/locale.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_German_(de_DE)
   * Localization strings.
@@ -16,13 +16,11 @@
 	<message key="plugins.paymethod.manual.description">Der/die Abonnementverwalter/in verzeichnet den Erhalt von Zahlungen manuell (außerhalb der Software).</message>
 	<message key="plugins.paymethod.manual">Manuelle Gebührenzahlung</message>
 	<message key="plugins.paymethod.manual.settings">Manuelle Zahlungseinstellungen</message>
-	<message key="plugins.paymethod.manual.settings.instructions">Anleitungen</message>
-	<message key="plugins.paymethod.manual.settings.manualInstructions">Gebührenzahlungs-Anleitungen für Nutzer/innen, die sich für eine manuelle Zahlungsweise entscheiden</message>
 	
 	<message key="plugins.paymethod.manual.sendNotificationOfPayment">Zahlungsbenachrichtigung senden</message>
 	<message key="plugins.paymethod.manual.paymentNotification">Zahlungsbenachrichtigung</message>
 	<message key="plugins.paymethod.manual.notificationSent">Zahlungsbenachrichtigung gesendet</message>
 
 	<message key="plugins.paymethod.manual.purchase.title">Titel</message>
-	<message key="plugins.paymethod.manual.purchase.fee">Gebühr</message>	
+	<message key="plugins.paymethod.manual.purchase.fee">Gebühr</message>
 </locale>

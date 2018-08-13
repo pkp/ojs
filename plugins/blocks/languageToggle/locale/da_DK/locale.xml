@@ -4,8 +4,8 @@
 <!--
   * plugins/blocks/languageToggle/locale/da_DK/locale.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the da_DK (Dansk) locale.
@@ -14,5 +14,5 @@
  
 <locale name="da_DK" full_name="Dansk">
 	<message key="plugins.block.languageToggle.displayName">Sprogvælgerfunktion</message>
-	<message key="plugins.block.languageToggle.description">Dette plugin indsætter funktion til valg af sprog i sidekolonnen.</message>
+	<message key="plugins.block.languageToggle.description">Denne plugin indsætter funktion til valg af sprog i sidekolonnen.</message>
 </locale>

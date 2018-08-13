@@ -3,8 +3,8 @@
 <!--
   * locale/ca_ES/admin.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Credits: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Catalan_(ca_ES)
@@ -16,14 +16,8 @@
 	<message key="admin.hostedJournals">Revistes allotjades</message>
 	<message key="admin.settings.journalRedirect">Redirecció a la revista</message>
 	<message key="admin.settings.options">Opcions</message>
-	<message key="admin.settings.usePaging">A llocs web que contenen moltes revistes, divideix la llista de revistes en vàries pàgines.</message>
 	<message key="admin.settings.journalRedirectInstructions">Les peticions al lloc web principal són redireccionades a aquesta revista. Això pot ser útil si el lloc web únicament allotja una sola revista, per exemple.</message>
 	<message key="admin.settings.noJournalRedirect">No redireccionis</message>
-	<message key="admin.settings.journalsList">Elements de les revistes</message>
-	<message key="admin.settings.journalsList.description">Trieu els elements que es mostren per a cada revista del lloc web.</message>
-	<message key="admin.settings.journalsList.showThumbnail">Miniatures de les revistes</message>
-	<message key="admin.settings.journalsList.showTitle">Títol de la revista</message>
-	<message key="admin.settings.journalsList.showDescription">Descripció de la revista</message>
 	<message key="admin.settings.defaultMetricDescription">La vostra instal·lació de l'OJS està configurada per registrar més d'una mètrica d'utilització. Les estadístiques d'utilització es mostren en diferents contexts. Hi ha casos on només es fa servir una estadística d'ús, p. ex. per mostrar una llista ordenada dels articles més utilitzats o per ordenar resultats d'una cerca. Seleccioneu una de les mètriques configurades com a opció predeterminada.</message>
 	<message key="admin.languages.primaryLocaleInstructions">Aquesta és la llengua predeterminada per al lloc web i per a qualsevol revista allotjada.</message>
 	<message key="admin.languages.supportedLocalesInstructions">Seleccioneu totes les configuracions regionals que oferirà el lloc web. Les configuracions regionals seleccionades estan disponibles per al seu ús a totes les revistes allotjades al lloc web, i també apareixen a un menú de selecció d'idioma disponible a cada pàgina del lloc web (que es pot desactivar en pàgines concretes de les revistes). Si no se seleccionen diferents configuracions regionals, el menú de selecció de llengua no apareix i la configuració avançada de llengua no està disponible a les revistes.</message>
@@ -79,6 +73,18 @@
 	<message key="admin.categories.confirmDelete">Esteu segurs que voleu suprimir aquesta categoria?</message>
 	<message key="admin.categories.name">Nom</message>
 	<message key="admin.categories.nameRequired">Cal que introduïu un nom de categoria.</message>
-	
-	
+
+
+	<message key="admin.languages.confirmDisable">Esteu segur que voleu desactivar aquesta configuració regional? Això podria afectar a totes les revistes allotjades que actualment utilitzin aquesta configuració regional.</message>
+	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>La descàrrega de paquets d'idiomes des del servidor web de Public Knowledge Project no està disponible actualment perquè:</p>
+	<ul>
+		<li>El seu servidor no té o no permet l'execució de la utilitat GNU "tar".</li>
+		<li>OJS no pot modificar l'arxiu de registre de configuració regional, normalment "registry/locales.xml".</li>
+	</ul>
+<p>Els paquets d'idiomes poden descarregarse manualment des de la pàgina web de PKP: <a href="http://pkp.sfu.ca"></a>.</p>]]></message>
+	<message key="admin.presses.createInstructions">Sereu registrat automàticament com a gestor d'aquesta revista. Després de la creació de la nova revista, se'l redirigirà cap a l'assistent de configuració per completar la instal·lació inicial de la revista.</message>
+	<message key="admin.scheduledTask.subscriptionExpiryReminder">Recordatori de caducitat de la subscripció</message>
+	<message key="admin.scheduledTask.openAccessNotification">Notificació d'accés obert</message>
+	<message key="admin.scheduledTask.reviewReminder">Recordatori de revisió</message>
+	<message key="admin.contexts.form.titleRequired">Es necessita un títol.</message>
 </locale>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/reports/articles/locale/pl_PL/locale.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Polish_(pl_PL)
+  * Localization strings.
+  -->
+
+<locale name="pl_PL" full_name="Język Polski">
+	<message key="plugins.reports.articles.displayName">Raport z artykułami</message>
+	<message key="plugins.reports.articles.description">Wtyczka umożliwia wygenerowanie raportu w formacie CSV zawierającego listę wszystkich artykułów oraz informacji o nich.</message>
+	<message key="plugins.reports.articles.nodecision">Brak decyzji</message>
+</locale>

@@ -3,8 +3,8 @@
 /**
  * @file classes/plugins/PubIdPlugin.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class PubIdPlugin
@@ -16,13 +16,6 @@
 import('lib.pkp.classes.plugins.PKPPubIdPlugin');
 
 abstract class PubIdPlugin extends PKPPubIdPlugin {
-
-	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 
 	/**
 	 * @copydoc Plugin::manage()
@@ -160,7 +153,7 @@ abstract class PubIdPlugin extends PKPPubIdPlugin {
 		if (!is_a($pubObject, 'Issue')) {
 			assert(!is_null($submission));
 			$issueDao = DAORegistry::getDAO('IssueDAO'); /* @var $issueDao IssueDAO */
-			$issue = $issueDao->getIssueByArticleId($submission->getId(), $contextId);
+			$issue = $issueDao->getByArticleId($submission->getId(), $contextId);
 		}
 		if ($issue && $contextId != $issue->getJournalId()) return null;
 

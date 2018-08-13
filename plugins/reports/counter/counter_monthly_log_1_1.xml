@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../../../lib/pkp/dtd/xmlData.dtd">
+
+<!--
+* plugins/reports/counter/counter_monthly_log_1_1.xml
+*
+* Copyright (c) 2014-2018 Simon Fraser University
+* Copyright (c) 2003-2018 John Willinsky
+* Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+*
+* second version of the counter_monthly_log with one row per month per journal
+* DEPRECATED upgrade function for 2.3.x
+-->
+
+<data>
+
+	<!-- rename current table to _old -->
+	<sql>
+		<query>
+			ALTER TABLE counter_monthly_log RENAME TO counter_monthly_log_old
+		</query>
+	</sql>
+
+
+
+	<!-- create new counter_monthly_log with a new schema -->
+	<sql>
+		<query driver="mysql">
+			CREATE TABLE counter_monthly_log ( year int(11) NOT NULL, month int(11) NOT NULL, journal_id int(11) NOT NULL, count_html int(20) NOT NULL DEFAULT 0, count_pdf int(20) NOT NULL DEFAULT 0, count_other int(20) NOT NULL DEFAULT 0, UNIQUE KEY counter_monthly_log_ukey (year,month,journal_id) )
+		</query>
+	
+		<!-- Same thing for postgres, probably only works on PG 8.x -->
+		<query driver="postgres7">
+			CREATE TABLE counter_monthly_log ( year INT8 NOT NULL, journal_id INT8 NOT NULL, month INT8 NOT NULL, count_html INT8 DEFAULT 0 NOT NULL, count_pdf INT8 DEFAULT 0 NOT NULL, count_other INT8 DEFAULT 0 NOT NULL)
+		</query>
+		<query driver="postgres7">
+			CREATE UNIQUE INDEX counter_monthly_log_key ON counter_monthly_log (year, month, journal_id)
+		</query>
+	</sql>
+
+
+
+	<!-- pull data out of _old table and insert into new table, assume 0 for count_html, count_other -->
+	<sql>
+		<query>
+			INSERT INTO counter_monthly_log (year,month,journal_id,count_html,count_pdf,count_other) SELECT year, 1 as month, journal_id, 0, count_jan as count, 0 FROM counter_monthly_log_old UNION SELECT year, 2 as month, journal_id, 0, count_feb as count, 0 FROM counter_monthly_log_old UNION SELECT year, 3 as month, journal_id, 0, count_mar as count, 0 FROM counter_monthly_log_old UNION SELECT year, 4 as month, journal_id, 0, count_apr as count, 0 FROM counter_monthly_log_old UNION SELECT year, 5 as month, journal_id, 0, count_may as count, 0 FROM counter_monthly_log_old UNION SELECT year, 6 as month, journal_id, 0, count_jun as count, 0 FROM counter_monthly_log_old UNION SELECT year, 7 as month, journal_id, 0, count_jul as count, 0 FROM counter_monthly_log_old UNION SELECT year, 8 as month, journal_id, 0, count_aug as count, 0 FROM counter_monthly_log_old UNION SELECT year, 9 as month, journal_id, 0, count_sep as count, 0 FROM counter_monthly_log_old UNION SELECT year, 10 as month, journal_id, 0, count_oct as count, 0 FROM counter_monthly_log_old UNION SELECT year, 11 as month, journal_id, 0, count_nov as count, 0 FROM counter_monthly_log_old UNION SELECT year, 12 as month, journal_id, 0, count_dec as count, 0 FROM counter_monthly_log_old ORDER BY journal_id, year, month
+		</query>
+	</sql>
+
+
+
+	<!-- remove the _old table -->
+	<sql>
+		<query driver="mysql">
+			DROP TABLE IF EXISTS counter_monthly_log_old
+		</query>
+
+		<query driver="postgres7">
+			DROP TABLE counter_monthly_log_old CASCADE
+		</query>
+	</sql>
+</data>

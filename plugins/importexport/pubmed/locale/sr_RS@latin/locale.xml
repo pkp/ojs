@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/importexport/pubmed/locale/sr_RS@latin/locale.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Serbian_(sr_RS)
+  * Localization strings for the sr_RS@latin (Srpski) locale.
+  * 
+  -->
+ 
+<locale name="sr_RS@latin" full_name="Srpski">
+	<message key="plugins.importexport.pubmed.displayName">PubMed XML dodatak za izvoz</message>
+	<message key="plugins.importexport.pubmed.description">Izvoz metapodataka članaka u PubMed XML formatu za indeksiranje u MEDLINE.</message>
+	<message key="plugins.importexport.pubmed.export">Izvezi podatke</message>
+	<message key="plugins.importexport.pubmed.export.issues">Izvezi broj</message>
+	<message key="plugins.importexport.pubmed.export.selectIssue">Odaberi brojeve za izvoz.</message>
+	<message key="plugins.importexport.pubmed.export.articles">Izvezi članke</message>
+	<message key="plugins.importexport.pubmed.export.selectArticle">Odaberi članke za izvoz.</message>
+		<message key="plugins.importexport.pubmed.cliUsage">Korišćenje: 
+{$scriptName} {$pluginName} [xmlFileName] [journal_path] članci [articleId1] [articleId2] ...
+{$scriptName} {$pluginName} [xmlFileName] [journal_path] broj [issueId]</message>
+	<message key="plugins.importexport.pubmed.cliError">GREŠKA:</message>
+	<message key="plugins.importexport.pubmed.export.error.issueNotFound">Ni jedan broj se ne poklapa sa zadatim ID-jem broja "{$issueId}".</message>
+	<message key="plugins.importexport.pubmed.export.error.articleNotFound">Ni jedan članak se ne poklapa sa zadatim ID-jem članka "{$articleId}".</message>
+</locale>

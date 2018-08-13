@@ -4,8 +4,8 @@
 <!--
   * locale/fr_CA/author.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_French_(fr_CA)
   * Localization strings.
@@ -31,7 +31,7 @@
 	<message key="author.submit.supplementaryFiles">Télécharger les fichiers supplémentaires</message>
 	<message key="author.submit.confirmation">Confirmer la soumission</message>
 	<message key="submission.submit.cancelSubmission">Vous pouvez compléter cette soumission plus tard en la sélectionnant dans le menu des soumissions actives de l'auteur.</message>
-  <message key="author.submit.notAccepting">Cette revue n'accepte pas de soumissions pour le moment.</message>
+  	<message key="author.submit.notAccepting">Cette revue n'accepte pas de soumissions pour le moment.</message>
 	<message key="author.submit.requestWaiver">Demande d'exemption</message>
 	<message key="author.submit.qualifyForWaiver">Veuillez envisager d'être exempté des Frais de soumission d'article pour cet article</message>
 	<message key="author.submit.addReasonsForWaiver">Veuillez utiliser la boîte de commentaires ci-dessous pour expliquer pourquoi vous devriez être exempté des frais.</message>
@@ -119,4 +119,7 @@
 	<message key="author.submit.form.wordCountAlert">Vous avez dépassé la limite maximale de mots fixée pour les résumés, dans cette section de la rubrique</message>
 	<message key="author.submit.form.localeRequired">Veuillez sélectionner une langue de soumission.</message>
 	<message key="author.submit.nextSteps">Étapes suivantes</message>
+	<message key="submission.submit.cancelSubmission">Vous pouvez compléter cette soumission plus tard en la sélectionnant dans le menu des soumissions actives de l'auteur.</message>
+	<message key="author.submit.submissionLocale">Langue de la soumission</message>
+	<message key="author.submit.submissionLocaleDescription">Ce journal accepte des soumissions dans plusieurs langues. Choisissez la langue principale de la soumission à partir du menu déroulant.</message>
 </locale>

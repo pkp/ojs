@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/doaj/DOAJExportPlugin.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class DOAJExportPlugin
@@ -15,21 +15,15 @@
 
 import('classes.plugins.PubObjectsExportPlugin');
 
-define('DOAJ_XSD_URL', 'http://www.doaj.org/schemas/doajArticles.xsd');
+define('DOAJ_XSD_URL', 'https://www.doaj.org/schemas/doajArticles.xsd');
 
 define('DOAJ_API_DEPOSIT_OK', 201);
 
-define('DOAJ_API_URL', 'http://doaj.org/api/v1/');
-define('DOAJ_API_URL_DEV', 'http://testdoaj.cottagelabs.com/api/v1/');
-define('DOAJ_API_OPERATION', 'bulk/articles');
+define('DOAJ_API_URL', 'https://doaj.org/api/v1/');
+define('DOAJ_API_URL_DEV', 'https://testdoaj.cottagelabs.com/api/v1/');
+define('DOAJ_API_OPERATION', 'articles');
 
 class DOAJExportPlugin extends PubObjectsExportPlugin {
-	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 
 	/**
 	 * @copydoc Plugin::getName()
@@ -61,7 +55,7 @@ class DOAJExportPlugin extends PubObjectsExportPlugin {
 			case 'index':
 			case '':
 				$templateMgr = TemplateManager::getManager($request);
-				$templateMgr->display($this->getTemplatePath() . 'index.tpl');
+				$templateMgr->display($this->getTemplateResource('index.tpl'));
 				break;
 		}
 	}
@@ -107,7 +101,7 @@ class DOAJExportPlugin extends PubObjectsExportPlugin {
 
 	/**
 	 * @see PubObjectsExportPlugin::depositXML()
-	 * @param $objects mixed Array of PublishedArticles
+	 * @param $objects PublishedArticle
 	 * @param $context Context
 	 * @param $jsonString string Export JSON string
 	 * @return boolean Whether the JSON string has been registered
@@ -148,12 +142,10 @@ class DOAJExportPlugin extends PubObjectsExportPlugin {
 		} else {
 			// Deposit was received
 			$result = true;
-			foreach ($objects as $object) {
-				// set the status
-				$object->setData($this->getDepositStatusSettingName(), EXPORT_STATUS_REGISTERED);
-				// Update the object
-				$this->updateObject($object);
-			}
+			// set the status
+			$objects->setData($this->getDepositStatusSettingName(), EXPORT_STATUS_REGISTERED);
+			// Update the object
+			$this->updateObject($objects);
 		}
 		curl_close($curlCh);
 		return $result;
@@ -170,20 +162,26 @@ class DOAJExportPlugin extends PubObjectsExportPlugin {
 			assert($filter != null);
 			// Set filter for JSON
 			$filter = 'article=>doaj-json';
-			// Get the JSON
-			$exportJson = $this->exportJSON($objects, $filter, $context);
-			// Deposit the JSON
-			$result = $this->depositXML($objects, $context, $exportJson);
+			$resultErrors = array();
+			foreach ($objects as $object) {
+				// Get the JSON
+				$exportJson = $this->exportJSON($object, $filter, $context);
+				// Deposit the JSON
+				$result = $this->depositXML($object, $context, $exportJson);
+				if (is_array($result)) {
+					$resultErrors[] = $result;
+				}
+			}
 			// send notifications
-			if ($result === true) {
+			if (empty($resultErrors)) {
 				$this->_sendNotification(
 					$request->getUser(),
 					$this->getDepositSuccessNotificationMessageKey(),
 					NOTIFICATION_TYPE_SUCCESS
 				);
 			} else {
-				if (is_array($result)) {
-					foreach($result as $error) {
+				foreach($resultErrors as $errors) {
+					foreach ($errors as $error) {
 						assert(is_array($error) && count($error) >= 1);
 						$this->_sendNotification(
 							$request->getUser(),
@@ -203,12 +201,12 @@ class DOAJExportPlugin extends PubObjectsExportPlugin {
 
 	/**
 	 * Get the JSON for selected objects.
-	 * @param $objects mixed Array of or single published article, issue or galley
+	 * @param $object PublishedArticle
 	 * @param $filter string
 	 * @param $context Context
 	 * @return string JSON variable.
 	 */
-	function exportJSON($objects, $filter, $context) {
+	function exportJSON($object, $filter, $context) {
 		$json = '';
 		$filterDao = DAORegistry::getDAO('FilterDAO');
 		$exportFilters = $filterDao->getObjectsByGroup($filter);
@@ -216,7 +214,7 @@ class DOAJExportPlugin extends PubObjectsExportPlugin {
 		$exportFilter = array_shift($exportFilters);
 		$exportDeployment = $this->_instantiateExportDeployment($context);
 		$exportFilter->setDeployment($exportDeployment);
-		$json = $exportFilter->execute($objects, true);
+		$json = $exportFilter->execute($object, true);
 		return $json;
 	}
 

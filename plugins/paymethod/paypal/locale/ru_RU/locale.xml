@@ -4,8 +4,8 @@
 <!--
   * plugins/paymethod/paypal/locale/ru_RU/locale.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2006-2009 Gunther Eysenbach, Juan Pablo Alperin, MJ Suhonos
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Russian_(ru_RU)
   * Localization strings.
@@ -13,23 +13,12 @@
 
 <locale name="ru_RU" full_name="Русский">
 	<message key="plugins.paymethod.paypal.displayName">Модуль «Платежи через PayPal»</message>
-
-	<!-- Форма настройки PayPal -->
-	<message key="plugins.paymethod.paypal.settings.paypalenable">Включить PayPal</message>
-	<message key="plugins.paymethod.paypal.settings.paypalurl">URL-адрес IPN</message>
-	<message key="plugins.paymethod.paypal.settings.paypalurl.description"><![CDATA[Это URL-адрес службы уведомлений о моментальных платежах PayPal (PayPal's Instant Payment Notification, IPN). Для тестирования используйте <code>https://www.sandbox.paypal.com/cgi-bin/webscr</code>; для реальной работы используйте <code>https://www.paypal.com/cgi-bin/webscr</code>.]]></message>
-	<message key="plugins.paymethod.paypal.settings.selleraccount">Учетная запись продавца (Seller Account)</message>
-	<message key="plugins.paymethod.paypal.settings.selleraccount.description">Это имя пользователя учетной записи PayPal, которую использует продавец, обычно это адрес электронной почты. Убедитесь, что в профиле вашей учетной записи продавца активировано уведомление о моментальных платежах (Instant Payment Notification).</message>
-	<message key="plugins.paymethod.paypal.settings.curlNotInstalled">Предупреждение: поддержка CURL для PHP не установлена. Поддержка оплаты через PayPal требует библиотеки CURL и не будет работать до тех пор, пока она не будет установлена.</message>
-	<message key="plugins.paymethod.paypal.settings">Настройки PayPal</message>
-
-	<!-- PayPal -->
-	<message key="plugins.paymethod.paypal">Платеж через PayPal</message>
-	<message key="plugins.paymethod.paypal.description"><![CDATA[PayPal позволяет пользователям (не важно, зарегистрированы они на PayPal или нет) использовать все основные кредитные карты. Управляющий должен будет настроить <a href="http://www.paypal.com" target="_new">PayPal Business Account</a>.]]></message>
-	<message key="plugins.paymethod.paypal.warning">Щелкните на кнопке «Продолжить» ниже, чтобы перейти на сайт PayPal, где кредитные карты могут быть использованы для оплаты (без регистрации на PayPal). Используйте кнопку «Вернуться к продавцу» после внесения платежа, чтобы вернуться на этот сайт.</message>
-	<message key="plugins.paymethod.paypal.purchase.title">Название</message>
-	<message key="plugins.paymethod.paypal.purchase.fee">Сумма</message>
-	<message key="plugins.paymethod.paypal.purchase.description">Описание</message>
-	<message key="plugins.paymethod.paypal.purchase.cancelled">Ваша покупка была отменена.</message>
-	<message key="plugins.paymethod.paypal.purchase.cancelled.title">Покупка отменена</message>
+	<message key="plugins.paymethod.paypal.description">Платежи будут обрабатываться с помощью службы PayPal.</message>
+	<message key="plugins.paymethod.paypal">Платежи через PayPal</message>
+	<message key="plugins.paymethod.paypal.settings">Настройки платежей через Paypal</message>
+	<message key="plugins.paymethod.paypal.settings.testMode">Тестовый режим</message>
+	<message key="plugins.paymethod.paypal.settings.accountName">Имя учетной записи</message>
+	<message key="plugins.paymethod.paypal.settings.clientId">ID клиента</message>
+	<message key="plugins.paymethod.paypal.settings.secret">Секретный код</message>
+	<message key="plugins.paymethod.paypal.error">Произошла ошибка транзакции. Пожалуйста, свяжитесь с менеджером журнала для получения более подробной информации.</message>
 </locale>

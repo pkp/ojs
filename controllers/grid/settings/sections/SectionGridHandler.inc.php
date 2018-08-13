@@ -3,8 +3,8 @@
 /**
  * @file controllers/grid/settings/sections/SectionGridHandler.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SectionGridHandler
@@ -64,7 +64,7 @@ class SectionGridHandler extends SetupGridHandler {
 			} else {
 				$editors = array();
 				foreach ($assignedSubEditors as $subEditor) {
-					$editors[] = $subEditor->getLastName();
+					$editors[] = $subEditor->getFullName();
 				}
 				$editorsString = implode(', ', $editors);
 			}
@@ -76,7 +76,9 @@ class SectionGridHandler extends SetupGridHandler {
 				'seq' => $section->getSequence()
 			);
 		}
-		uasort($gridData, create_function('$a,$b', 'return $a[\'seq\']-$b[\'seq\'];'));
+		uasort($gridData, function($a,$b) {
+			return $a['seq']-$b['seq'];
+		});
 
 		$this->setGridDataElements($gridData);
 
@@ -170,7 +172,7 @@ class SectionGridHandler extends SetupGridHandler {
 
 		import('controllers.grid.settings.sections.form.SectionForm');
 		$sectionForm = new SectionForm($request, $sectionId);
-		$sectionForm->initData($args, $request);
+		$sectionForm->initData();
 		return new JSONMessage(true, $sectionForm->fetch($request));
 	}
 
@@ -209,12 +211,25 @@ class SectionGridHandler extends SetupGridHandler {
 			$journal->getId()
 		);
 
-		if ($section && $request->checkCSRF()) {
-			$sectionDao->deleteObject($section);
-			return DAO::getDataChangedEvent($section->getId());
+		if (!$request->checkCSRF()) {
+			return new JSONMessage(false, __('form.csrfInvalid'));
 		}
-		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_MANAGER); // manager.setup.errorDeletingItem
-		return new JSONMessage(false, __('manager.setup.errorDeletingItem'));
+
+		if (!$section) {
+			return new JSONMessage(false, __('manager.setup.errorDeletingItem'));
+		}
+
+		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_MANAGER);
+		$articleDao = DAORegistry::getDAO('ArticleDAO');
+		$checkSubmissions = $articleDao->retrieve('SELECT submission_id FROM submissions WHERE section_id = ? AND context_id = ?', array((int) $request->getUserVar('sectionId'), (int) $journal->getId()));
+
+		if ($checkSubmissions->numRows() > 0) {
+			return new JSONMessage(false, __('manager.sections.alertDelete'));
+		}
+
+		$sectionDao->deleteObject($section);
+		return DAO::getDataChangedEvent($section->getId());
+
 	}
 }
 

@@ -8,8 +8,8 @@
 /**
  * @file controllers/wizard/fileUpload/FileUploadWizardHandler.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class FileUploadWizardHandler
@@ -24,13 +24,6 @@ import('lib.pkp.controllers.wizard.fileUpload.PKPFileUploadWizardHandler');
 
 class FileUploadWizardHandler extends PKPFileUploadWizardHandler {
 
-	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-	}
-
 	//
 	// Implement template methods from PKPHandler
 	//
@@ -41,7 +34,7 @@ class FileUploadWizardHandler extends PKPFileUploadWizardHandler {
 
 		// Authorize review round id when this handler is used in review stages.
 		import('lib.pkp.classes.submission.SubmissionFile');
-		if ($stageId == WORKFLOW_STAGE_ID_EXTERNAL_REVIEW && $request->getUserVar('fileStage') != SUBMISSION_FILE_QUERY) {
+		if ($stageId == WORKFLOW_STAGE_ID_EXTERNAL_REVIEW && !in_array($request->getUserVar('fileStage'), array(SUBMISSION_FILE_QUERY, SUBMISSION_FILE_DEPENDENT))) {
 			import('lib.pkp.classes.security.authorization.internal.ReviewRoundRequiredPolicy');
 			$this->addPolicy(new ReviewRoundRequiredPolicy($request, $args));
 		}

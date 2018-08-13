@@ -3,8 +3,8 @@
 /**
  * @file classes/user/UserAction.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class UserAction
@@ -72,53 +72,45 @@ class UserAction {
 		// Transfer old user's individual subscriptions for each journal if new user
 		// does not have a valid individual subscription for a given journal.
 		$individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
-		$oldUserSubscriptions = $individualSubscriptionDao->getSubscriptionsByUser($oldUserId);
+		$oldUserSubscriptions = $individualSubscriptionDao->getByUserId($oldUserId);
 
 		while ($oldUserSubscription = $oldUserSubscriptions->next()) {
 			$subscriptionJournalId = $oldUserSubscription->getJournalId();
 			$oldUserValidSubscription = $individualSubscriptionDao->isValidIndividualSubscription($oldUserId, $subscriptionJournalId);
 			if ($oldUserValidSubscription) {
 				// Check if new user has a valid subscription for current journal
-				$newUserSubscriptionId = $individualSubscriptionDao->getSubscriptionIdByUser($newUserId, $subscriptionJournalId);
-				if (empty($newUserSubscriptionId)) {
+				$newUserSubscription = $individualSubscriptionDao->getByUserIdForJournal($newUserId, $subscriptionJournalId);
+				if (!$newUserSubscription) {
 					// New user does not have this subscription, transfer old user's
 					$oldUserSubscription->setUserId($newUserId);
-					$individualSubscriptionDao->updateSubscription($oldUserSubscription);
+					$individualSubscriptionDao->updateObject($oldUserSubscription);
 				} elseif (!$individualSubscriptionDao->isValidIndividualSubscription($newUserId, $subscriptionJournalId)) {
 					// New user has a subscription but it's invalid. Delete it and
 					// transfer old user's valid one
-					$individualSubscriptionDao->deleteSubscriptionsByUserIdForJournal($newUserId, $subscriptionJournalId);
+					$individualSubscriptionDao->deleteByUserIdForJournal($newUserId, $subscriptionJournalId);
 					$oldUserSubscription->setUserId($newUserId);
-					$individualSubscriptionDao->updateSubscription($oldUserSubscription);
+					$individualSubscriptionDao->updateObject($oldUserSubscription);
 				}
 			}
 		}
 
 		// Delete any remaining old user's subscriptions not transferred to new user
-		$individualSubscriptionDao->deleteSubscriptionsByUserId($oldUserId);
+		$individualSubscriptionDao->deleteByUserId($oldUserId);
 
 		// Transfer all old user's institutional subscriptions for each journal to
 		// new user. New user now becomes the contact person for these.
 		$institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
-		$oldUserSubscriptions = $institutionalSubscriptionDao->getSubscriptionsByUser($oldUserId);
+		$oldUserSubscriptions = $institutionalSubscriptionDao->getByUserId($oldUserId);
 
 		while ($oldUserSubscription = $oldUserSubscriptions->next()) {
 			$oldUserSubscription->setUserId($newUserId);
-			$institutionalSubscriptionDao->updateSubscription($oldUserSubscription);
-		}
-
-		// Transfer old user's gifts to new user
-		$giftDao = DAORegistry::getDAO('GiftDAO');
-		$gifts = $giftDao->getAllGiftsByRecipient(ASSOC_TYPE_JOURNAL, $oldUserId);
-		while ($gift = $gifts->next()) {
-			$gift->setRecipientUserId($newUserId);
-			$giftDao->updateObject($gift);
+			$institutionalSubscriptionDao->updateObject($oldUserSubscription);
 		}
 
 		// Transfer completed payments.
 		$paymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO');
 		$paymentFactory = $paymentDao->getByUserId($oldUserId);
-		while ($payment = $paymentFactory->next()) {
+		while ($payment = next($paymentFactory)) {
 			$payment->setUserId($newUserId);
 			$paymentDao->updateObject($payment);
 		}

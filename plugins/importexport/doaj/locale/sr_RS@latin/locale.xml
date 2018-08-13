@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/importexport/doaj/locale/sr_RS@latin/locale.xml
+  *
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Serbian_(sr_RS)
+  * Localization strings for the sr_RS@latin (Srpski) locale.
+  * 
+  -->
+
+<locale name="sr_RS@latin" full_name="Srpski">
+	<message key="plugins.importexport.doaj.displayName">DOAJ dodatak za izvoz</message>
+	<message key="plugins.importexport.doaj.description">Izvoz časopisa za DOAJ i obezbeđivanje informacija o časopisu za uključivanje</message>
+	<message key="plugins.importexport.doaj.export.contact">Kontaktiraj DOAJ za uključivanje</message>
+</locale>

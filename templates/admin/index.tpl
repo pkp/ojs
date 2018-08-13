@@ -1,8 +1,8 @@
 {**
  * templates/admin/index.tpl
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Site administration index.
@@ -33,10 +33,10 @@
 
 	<ul>
 		<li><a href="{url op="systemInfo"}">{translate key="admin.systemInformation"}</a></li>
-		<li><a href="{url op="expireSessions"}" onclick="return confirm({translate|json_encode key="admin.confirmExpireSessions"})">{translate key="admin.expireSessions"}</a></li>
+		<li><a href="{url op="expireSessions"}" onclick="return confirm({translate|json_encode|escape key="admin.confirmExpireSessions"})">{translate key="admin.expireSessions"}</a></li>
 		<li><a href="{url op="clearDataCache"}">{translate key="admin.clearDataCache"}</a></li>
-		<li><a href="{url op="clearTemplateCache"}" onclick="return confirm({translate|json_encode key="admin.confirmClearTemplateCache"})">{translate key="admin.clearTemplateCache"}</a></li>
-		<li><a href="{url op="clearScheduledTaskLogFiles"}" onclick="return confirm({translate|json_encode key="admin.scheduledTask.confirmClearLogs"})">{translate key="admin.scheduledTask.clearLogs"}</a></li>
+		<li><a href="{url op="clearTemplateCache"}" onclick="return confirm({translate|json_encode|escape key="admin.confirmClearTemplateCache"})">{translate key="admin.clearTemplateCache"}</a></li>
+		<li><a href="{url op="clearScheduledTaskLogFiles"}" onclick="return confirm({translate|json_encode|escape key="admin.scheduledTask.confirmClearLogs"})">{translate key="admin.scheduledTask.clearLogs"}</a></li>
 		{call_hook name="Templates::Admin::Index::AdminFunctions"}
 	</ul>
 

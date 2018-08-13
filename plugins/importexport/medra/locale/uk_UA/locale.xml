@@ -4,11 +4,11 @@
 <!--
   * plugins/importexport/medra/locale/uk_UA/locale.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Localization strings
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Ukrainian_(uk_UA)
+  * Localization strings for the uk_UA (Українська) locale.
   -->
  
 <locale name="uk_UA" full_name="Українська">
@@ -29,15 +29,20 @@
 	<message key="plugins.importexport.medra.settings.form.fromCompanyRequired">Будь ласка, вкажіть установу, яка несе технічну відповідальність за експорт DOI (наприклад, установу, яка надає хостинг цьому веб-серверу).</message>
 	<message key="plugins.importexport.medra.settings.form.fromName">Контактна особа</message>
 	<message key="plugins.importexport.medra.settings.form.fromNameRequired">Будь ласка, вкажіть контактну особу з технічних питань.</message>
-	<message key="plugins.importexport.medra.settings.form.fromEmail">Email</message>
-	<message key="plugins.importexport.medra.settings.form.fromEmailRequired">Будь ласка, вкажіть коректну адресу email контактної особи з технічних питань.</message>
+	<message key="plugins.importexport.medra.settings.form.fromEmail">Адреса електронної пошти</message>
+	<message key="plugins.importexport.medra.settings.form.fromEmailRequired">Будь ласка, вкажіть коректну адресу електронної пошти контактної особи з технічних питань.</message>
 	<message key="plugins.importexport.medra.settings.form.publicationCountry">Будь ласка, вкажіть країну, яка буде відображена у mEDRA як 'держава публікації'.</message>
 	<message key="plugins.importexport.medra.settings.form.exportIssuesAs"><![CDATA[Будь ласка, вкажіть як Ви хочете експортувати випуски: <a href="http://www.medra.org/en/metadata_td.htm" target="_blank">'works' або 'manifestations'</a>.]]></message>
-	<message key="plugins.importexport.medra.settings.form.work">work</message>	
-	<message key="plugins.importexport.medra.settings.form.manifestation">manifestation</message>
+	<message key="plugins.importexport.medra.settings.form.work">робота</message>	
+	<message key="plugins.importexport.medra.settings.form.manifestation">маніфестація</message>
+	<message key="plugins.importexport.medra.settings.form.exportIssuesAs.label">Експортувати номери як</message>	
+	<message key="plugins.importexport.medra.settings.form.automaticRegistration.description">OJS буде автоматично реєструвати присвоєні DOI в mEDRA. Зверніть увагу, що після публікації обробка може зайняти деякий час (наприклад, залежно від налаштувань вашого cron). Ви можете перевірити всі незареєстровані DOI.</message>
+	<message key="plugins.importexport.medra.settings.form.testMode.description">Використовувати тестовий API mEDRA (середовище тестування) для реєстрації DOI. Будь ласка, не забудьте прибрати цей параметр для подальшої роботи.</message>
 
-	<message key="plugins.importexport.medra.workOrProduct"><![CDATA[NB: DOI, призначені для статей, будуть експортовані у mEDRA як об'єкти типу <a href="http://www.medra.org/en/metadata_td.htm" target="_blank">'works'</a>. DOI, призначені для гранок, будуть експортовані як об'єкти типу <a href="http://www.medra.org/en/metadata_td.htm" target="_blank">'manifestations'</a>.]]></message>
+	<message key="plugins.importexport.medra.workOrProduct"><![CDATA[Зверніть увагу: DOI, призначені для статей, будуть експортовані у mEDRA як об'єкти типу <a href="http://www.medra.org/en/metadata_td.htm" target="_blank">'works'</a>. DOI, призначені для гранок, будуть експортовані як об'єкти типу <a href="http://www.medra.org/en/metadata_td.htm" target="_blank">'manifestations'</a>.]]></message>
 
+	<message key="plugins.importexport.medra.senderTask.name">Завдання автоматичної реєстрації mEDRA</message>
+	
 	<message key="plugins.importexport.medra.cliUsage"><![CDATA[Використання:
 {$scriptName} {$pluginName} export [xmlFileName] [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...
 {$scriptName} {$pluginName} register [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...

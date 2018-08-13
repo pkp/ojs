@@ -4,8 +4,8 @@
 <!--
   * locale/eu_ES/locale.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings.
@@ -40,7 +40,7 @@
 
 
 	<message key="reviewer.article.enterReviewForm">Egin klik ikono batean ebaluazio-inprimakia betetzeko.</message>
-	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Nahitaezko eremuak bete egin behar dira.</message>
+	<message key="reviewer.submission.reviewFormResponse.form.responseRequired">Nahitaezko eremuak bete egin behar dira.</message>
 
 	<!-- review forms end -->
 
@@ -204,7 +204,7 @@
 
 	<!-- Roles -->
 	<message key="user.role.manager">Aldizkariaren kudeatzailea</message>
-	<message key="user.role.sectionEditor">Ataleko editorea</message>
+	<message key="user.role.subEditor">Ataleko editorea</message>
 	<message key="user.role.subscriptionManager">Harpidetza-kudeatzailea</message>
 	<message key="user.role.managers">Aldizkariaren kudeatzaileak</message>
 	<message key="user.role.subscriptionManagers">Harpidetza-kudeatzaileak</message>
@@ -317,7 +317,6 @@ key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>ABISUA!</h4>
 	<message key="plugins.categories.auth.description">Baimena emateko pluginen bidez, erabiltzaile-autentifikazioa beste sistema batzuei delega diezaieke Open Journal Systems-ek, esate baterako LDAP zerbitzariei.</message>
 
 
-	<message key="plugins.categories.citationFormats.description">Aipamen-formatuen pluginen bidez, erabiltzaileek hainbat formatu izango dituzte aipamenak ikusteko.</message>
 
 
 	<message key="plugins.categories.generic.description">Plugin generikoek Open Journal Systems hedatzen dute, gainerako plugin kategoriek egin ezin dituzten hainbat gauzatarako.</message>
@@ -428,12 +427,6 @@ Nahi baduzu, kontua zergatik desgaitu diozun azal diezaiokezu erabiltzaileari.</
 
 	<!-- Navigation sidebar menu -->
 
-	<!-- Used by editor in submission review / editing -->
-	<message key="editor.article.selectReviewerNotes"><![CDATA[Izena ebaluatzailearen profilerako esteka da.<br />
-Balorazio-eskala: 1-5 (Bikaina).<br />
-Asteak: ebaluazioa egiteko batez besteko denbora. <br />
-Azkena: azkeneko onartutako ebaluazioaren data.<br />
-Aktibo: une honetan kontsideratzen edo egiten ari diren ebaluazioen kopurua.]]></message>
 
 
 
@@ -521,12 +514,10 @@ itsatsi ebaluazioko oharrak hemen</message>
         <message key="reviewer.article.selectRecommendation">Hautatu gomendio bat era bidali ebaluazioa prozesua osatzeko. Gomendio bat hautatu aurretik, ebaluazio bat sartu behar duzu edo fitxategi bat kargatu.</message>
 	<message key="reviewer.article.mustSelectDecision">Ez da gomendiorik hautatu. Gomendio bat aukeratu behar duzu bidaltzeko.</message>
 	<message key="reviewer.article.confirmDecision">Erabaki bat grabatzen duzunean, ezingo duzu aldaketarik egin ebaluazio honetan. Ziur zaude jarraitu nahi duzula?</message>
-	<message key="reviewer.article.ensuringBlindReview">Ebaluazio anonimoa segurtatu</message>
 
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">Zuzentzeko fitxategia</message>
 	<message key="copyeditor.article.copyeditorFile">Zuzentzailearen fitxategia</message>
-	<message key="copyeditor.article.uploadedFile">Kargatutako fitxategia</message>
 	<message key="copyeditor.article.copyeditorFinalFile">Zuzentzailearen fitxategia</message>
 
 	<!-- Proofreader -->
@@ -743,8 +734,6 @@ Prozesu editoriala eta argitaratze-prozesua</message>
 	<message key="payment.donation.makeDonation">Egin dohaintza bat</message>
 
 	<message key="payment.submission.paySubmission">Ordaindu bidalketa-tarifa</message>
-	<message key="payment.fastTrack.payFastTrack">Ordaindu ebaluazio azkarra</message>
-	<message key="payment.fastTrack.inFastTrack">Ebaluazio azkarrean</message>
 	<message key="payment.publication.payPublication">Ordaindu argitaratzeko</message>
 	<message key="payment.publication.publicationPaid">Argitalpen-tarifa ordainduta</message>
 
@@ -760,7 +749,7 @@ Prozesu editoriala eta argitaratze-prozesua</message>
 	<message key="installer.ojsUpgrade">OJS bertsio-berritzea</message>
 	<message key="installer.installationInstructions"><![CDATA[<h4>OJS {$version} bertsioa</h4>
 
-<p>Eskerrik asko Public Knowledge Project-en <strong>Open Journal Systems</strong> deskargatzeagatik. Aurrera egin aurretik, irakur ezazu mesedez software honekin batera ematen den <a href="{$baseUrl}/docs/README">README</a> fitxategia. Public Knowledge Project-i eta dituen software-proiektuei buruzko informazio gehiago nahi izanez gero, jo <a href="http://pkp.sfu.ca/" target="_blank">PKP webgunera</a>. Open Journal Systems-en akatsen berri emateko edo laguntza teknikoa eskatzeko, ikus <a href="http://forum.pkp.sfu.ca">laguntza teknikoko foroa</a> edo PKPren <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">akatsen berri emateko</a> lineako sistema. Laguntza teknikoko foroa hobetsi arren kontaktuetarako, mezua ere mezua ere bidal diezaiokezu taldeari <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a> helbidera.</p>
+<p>Eskerrik asko Public Knowledge Project-en <strong>Open Journal Systems</strong> deskargatzeagatik. Aurrera egin aurretik, irakur ezazu mesedez software honekin batera ematen den <a href="{$baseUrl}/docs/README.md">README</a> fitxategia. Public Knowledge Project-i eta dituen software-proiektuei buruzko informazio gehiago nahi izanez gero, jo <a href="http://pkp.sfu.ca/" target="_blank">PKP webgunera</a>. Open Journal Systems-en akatsen berri emateko edo laguntza teknikoa eskatzeko, ikus <a href="http://forum.pkp.sfu.ca">laguntza teknikoko foroa</a> edo PKPren <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">akatsen berri emateko</a> lineako sistema. Laguntza teknikoko foroa hobetsi arren kontaktuetarako, mezua ere mezua ere bidal diezaiokezu taldeari <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a> helbidera.</p>
 
 <h4>Bertsio-berritzea</h4>
 
@@ -809,7 +798,7 @@ datu-basearen ezarpenak konfigurazio-fitxategian idatziko diren
 arren.</p>]]></message>
 	<message key="installer.upgradeInstructions"><![CDATA[<h4>OJS {$version} bertsioa</h4>
 
-<p>Eskerrik asko Public Knowledge Project-en <strong>Open Journal Systems</strong> deskargatzeagatik. Aurrera egin aurretik, irakur itzazu mesedez software honekin batera ematen diren <a href="{$baseUrl}/docs/README">README</a> eta <a href="{$baseUrl}/docs/UPGRADE">UPGRADE</a> fitxategiak. Public Knowledge Project-i eta lantzen dituen software-proiektuei buruzko informazio gehiago nahi izanez gero, jo <a href="http://pkp.sfu.ca/" target="_blank">PKP webgunera</a>. Open Journal Systems-en akatsen berri emateko edo laguntza teknikoa eskatzeko, ikus <a href="http://forum.pkp.sfu.ca">laguntza teknikoko foroa</a> edo PKPren <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">akatsen berri emateko</a> lineako sistema. Laguntza teknikoko foroa hobetsi arren kontaktuetarako, mezua ere bidal diezaiokezu taldeari <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a> helbidera.</p>
+<p>Eskerrik asko Public Knowledge Project-en <strong>Open Journal Systems</strong> deskargatzeagatik. Aurrera egin aurretik, irakur itzazu mesedez software honekin batera ematen diren <a href="{$baseUrl}/docs/README.md">README</a> eta <a href="{$baseUrl}/docs/UPGRADE.md">UPGRADE</a> fitxategiak. Public Knowledge Project-i eta lantzen dituen software-proiektuei buruzko informazio gehiago nahi izanez gero, jo <a href="http://pkp.sfu.ca/" target="_blank">PKP webgunera</a>. Open Journal Systems-en akatsen berri emateko edo laguntza teknikoa eskatzeko, ikus <a href="http://forum.pkp.sfu.ca">laguntza teknikoko foroa</a> edo PKPren <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">akatsen berri emateko</a> lineako sistema. Laguntza teknikoko foroa hobetsi arren kontaktuetarako, mezua ere bidal diezaiokezu taldeari <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a> helbidera.</p>
 <p>Aurrera jarraitu aurretik, <strong>biziki gomendatzen dizugu</strong> datu-basearen, fitxategien direktorioaren eta OJSren instalazio-direktorioaren kopiak egitea.</p>
 <p><a href="http://www.php.net/features.safe-mode" target="_blank">PHP modu seguruan</a> exekutatzen ari bazara, ziurtatu zure php.ini konfigurazio-fitxategiko max_execution_time direktibaren muga altu jarrita dagoela. Muga horretara edo besteren batera (adib. Apache-ren "Timeout" direktibarenera) heltzen bada eta bertsio-berritzeko prozesua geratzen bada, eskuz konpondu behar da.</p>]]></message>
 	<message key="installer.localeSettingsInstructions"><![CDATA[Unicode (UTF-8) euskarri osoa edukitzeko, hautatu UTF-8 karaktere-joko guztien ezarpenetan. Kontuan izan, euskarri horrek MySQL >= 4.1.1 edo PostgreSQL >= 7.1 datu-base zerbitzaria eskatzen duela. Kontuan izan, halaber, Unicode euskarri osoa edukitzeko, PHP >= 4.3.0 eduki behar dela <a href="http://www.php.net/mbstring" target="_blank">mbstring</a> liburutegirako euskarriarekin konpilatuta (lehenespenez gaitzen da PHP instalazio berrietan). Zure zerbitzariak baldintza horiek betetzen ez baditu, problemak izan ditzakezu karaktere-joko hedatuak erabiltzeko.
@@ -837,8 +826,6 @@ artikulua ebaluatzeko {$round}. bueltan.</message>
 	<message key="log.review.reviewerUnassigned">{$reviewerName} ebaluatzaileari {$submissionId} artikulua ebaluatzeko esleipena kendu zaio {$round}. bueltan.</message>
 	<message key="log.review.reviewInitiated">{$reviewerName} {$submissionId} artikula {$round}. bueltan ebaluatzen hasi da.</message>
 	<message key="log.review.reviewReinitiated">{$reviewerName} berriro hasi da {$submissionId} artikulua {$round}. bueltan ebaluatzen.</message>
-	<message key="log.review.reviewCancelled">{$reviewerName} ebaluatzailearen {$submissionId} artikuluaren
-{$round}. ebaluazio-buelta bertan behera utzi da.</message>
 	<message key="log.review.reviewCleared">{$reviewerName} ebaluatzailearen {$submissionId} artikuluaren {$round}. ebaluazio-buelta ezabatu egin da.</message>
 	<message key="log.review.reviewerRated">{$reviewerName} {$submissionId} artikuluaren {$round}. ebaluazio-bueltarako baloratu da.</message>
 	<message key="log.review.reviewDueDateSet">{$reviewerName} ebaluatzailearen {$submissionId} artikuluaren {$round}. ebaluazio-bueltaren mugaeguna {$dueDate} izango da.</message>
@@ -1019,8 +1006,6 @@ Balidazioak huts egin dezake bilaketa egiteko inprimaki-datuak bidaltzea eskatze
 	<message key="payment.subscription.purchase">Erosi harpidetza</message>
 	<message key="installer.installApplication">Instalatu Open Journal Systems</message>
 	<message key="installer.upgradeApplication">Bertsio-berritu Open Journal Systems</message>
-	<message key="notification.mailListDescription">Sartu zure helbide eletkronikoa aldizkariari gehitu zaizkion eduki berri garrantzitsuen jakinarazpenak berehala jasotzeko.</message>
-	<message key="notification.notificationsPublicDescription"><![CDATA[Orri honek aldizkariarekin lotutako eguneraketa garrantzitsuak erakusten ditu, hala nola gai edo anuntzio berriak. Jakinarazpen horietan izen-eman dezakezu, bai RSS jarioekin (eskuineko irudietan klik eginez), bai <a href="{$emailUrl}">posta elektronikoz. </a>]]></message>
 	<message key="notification.type.articleSubmitted">Artikulu berri bat, "{$title}", aurkeztu da.</message>
 	<message key="notification.type.editing">Gertaerak editatzen</message>
 	<message key="notification.type.editorDecisionComment">Editoreak erabakitzeko iruzkin bat utzi da "{$title}" artikuluan.</message>
@@ -1036,49 +1021,14 @@ Balidazioak huts egin dezake bilaketa egiteko inprimaki-datuak bidaltzea eskatze
 	<message key="user.authorization.copyeditorAssignmentMissing">Sarbidea ukatuta! Ez zaizu esleitu artikulu honen zuzenketa egitea.</message>
 	<message key="user.authorization.sectionAssignment">Zure atalekoa ez den artikulu batean sartu nahi duzu.</message>
 	<message key="user.authorization.invalidCopyditorSubmission">Zuzentzailearen aurkezpena ez da baliozkoa edo ez da kontsultatu zuzentzailearen aurkezpenik!</message>
-	<message key="gifts.recipientDescription">Norentzat da opari hau?</message>
-	<message key="gifts.thankYou">Mila esker</message>
-	<message key="gifts.details">Opariaren xehetasunak</message>
-	<message key="gifts.gift">Oparia</message>
-	<message key="gifts.myGifts">Nire opariak</message>
-	<message key="gifts.manageMyGifts">Kudeatu nire opariak</message>
-	<message key="gifts.status.notRedeemed">Eskuragarri</message>
 	<message key="navigation.categories">Kategoriak</message>
 	<message key="navigation.categories.browse">Arakatu</message>
 	<message key="issue.fullIssue">Edizio osoa</message>
 	<message key="issue.nonpdf.title">Edizioa jaistea</message>
 	<message key="issue.viewIssue">Ikus edizioa</message>
 	<message key="site.noJournals">Ez dago aldizkaririk eskuragarri.</message>
-	<message key="gifts.buyer">Nondik</message>
-	<message key="gifts.buyerDescription">Norentzat da opari hau?</message>
-	<message key="gifts.recipient">Nora</message>
-	<message key="gifts.thankYouMessage">Oparia erosi da. Opariaren hartzaileari bidaltzen zaion mezuaren kopia bat jasoko duzu behin ordainketa prozesatu ondoren.</message>
-	<message key="gifts.purchaseGiftIndividualSubscription">Doako harpidetza</message>
-	<message key="gifts.subscriptionFormIntroduction">Mesedez, bete beheko inprimakia. Harremanetarako ematen den informazioa, baita zure opariaren oharra ere, erabili egingo dira hartzaileari mezu bat bidaltzeko eta doako harpidetza berria jakinarazteko (mezu horren kopia bat ere jasoko duzu zuk).</message>
-	<message key="gifts.detailsDescription">Mesedez, hautatu beheko oparia eta erantsi hartzaileari bidaliko zaion mezu pertsonalizatu bat (mezu horren kopia bat ere jasoko duzu zuk).</message>
-	<message key="gifts.noteTitle">Titulua</message>
-	<message key="gifts.note">Opariaren oharra</message>
-	<message key="gifts.noteTitleRequired">Mesedez, ipini titulu bat zure mezu pertsonalizatuari.</message>
-	<message key="gifts.noteRequired">Mesedez, idatzi mezu pertsonalizatu bat.</message>
-	<message key="gifts.localeRequired">Mesedez, hautatu hizkuntza bat zure mezu pertsonalizatuarentzat.</message>
-	<message key="gifts.subscriptions">Harpidetzak</message>
-	<message key="payment.type.gift.subscription">Harpidetza</message>
-	<message key="gifts.redeemGift">Trukatu oparia</message>
-	<message key="gifts.status.redeemed">Trukatua</message>
-	<message key="gifts.status.redeemGift">Trukatu oparia</message>
-	<message key="gifts.subscriptionsDescription">Hemen trukatutako opari gisa emandako harpidetzak gaur egun duzun harpidetza ordeztuko du (harpidetzarik baduzu). Harpidetzak truke datatik aurrera hasiko dira, eta harpidetza motak irauten duen artean izango dira baliodunak.</message>
-	<message key="gifts.purchaseGiftSubscription">Eman harpidetza opari gisa</message>
-	<message key="gifts.giftSubscriptionsAvailable">Opari gisa emandako harpidetzak ere eskuragarri daude. Hartzaileak edozein unetan truka ditzake opari gisa emandako harpidetzak, eta aldizkari honi laguntzeko modu ezin hobea da.</message>
-	<message key="gifts.noSubscriptions">Ez dago opari gisa emandako harpidetzarik</message>
-	<message key="gifts.giftRedeemed">Oparia ondo trukatu da.</message>
-	<message key="gifts.noGiftToRedeem">Oparia ez dago trukatzeko eskuragarri.</message>
-	<message key="gifts.giftAlreadyRedeemed">Opari hau trukatu da jadanik.</message>
-	<message key="gifts.giftNotValid">Opari hau ez da baliodouna, eta ezin da trukatu.</message>
-	<message key="gifts.subscriptionTypeNotValid">Opari honetarako harpidetza mota hau ez da balioduna. Mesedez, jarri harremanetan harpidetzaren kudeatzailearekin.</message>
-	<message key="gifts.subscriptionNonExpiring">Oparia ez da trukatu jadanik amaitzen ez den harpidetza egina duzulako aldizkari honekin.</message>
 	<message key="payment.loginRequired.forIssue">Harpidetza edo alearen erosketa eskatzen da itemera sartzeko. Harpidetza egiaztatzeko, sartu aurreko erosketan, edo ale erosketan, hasi aldizkariaren saioa.</message>
 	<message key="payment.type.purchaseIssue">Erosi ale bat</message>
-	<message key="payment.type.gift">Oparia</message>
 	<message key="installer.allowFileUploads"><![CDATA[Zure zerbitzariak fitxategiak gora kargatzen uzten du gaur egun: <strong>{$allowFileUploads}</strong>]]></message>
 	<message key="installer.maxFileUploadSize"><![CDATA[Zure zerbitzariak gehienez tamaina hau duten fitxategiak gora kargatzen uzten du gaur egun: <strong>{$maxFileUploadSize}</strong>]]></message>
 	<message key="site.upgradeAvailable.admin"><![CDATA[OJSren bertsio berri bat dago eskuragarri! Gaur egun OJS {$currentVersion} erabiltzen ari zara. Azken bertsioa OJS {$latestVersion} da. Mesedez, zoaz <a href="http://pkp.sfu.ca/ojs_download" target="_new">this page</a> orrira azken bertsioa kargatzeko eta eguneratzeko argibideak aurkitzeko.]]></message>

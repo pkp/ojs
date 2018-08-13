@@ -4,8 +4,8 @@
 <!--
   * locale/tr_TR/default.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the tr_TR (Türkçe) locale.
@@ -113,21 +113,8 @@ Yeni dosyada <strong>[silinmiş sözcük]</strong> değiştirilmiş bölümler k
 	<message key="default.journalSettings.forLibrarians"><![CDATA[Kütüphanelere, bu açık erişimli dergiyi elektronik dergileri içine almaları önerilir. Açık Dergi Sitemleri ile ilgili ayrıntılı bilgi <a href="http://pkp.sfu.ca">Public Knowledge Project</a> bağlantısından elde edilebilir.]]></message>
 	<message key="default.journalSettings.lockssLicense"><![CDATA[Bu dergi, katılan kütüphanelerin koruma ve restorasyon amaçlı dağıtık kalıcı arşivler yaratmasına izin vermek için LOCKSS sistemi kullanmaktadır. <a href="http://www.lockss.org/"> LOCKSS sistemi konusunda daha fazla bilgi almak isterseniz.</a>]]></message>
 	<!-- Default settings for payment items. -->
-	<message key="default.journalSettings.submissionFee">Makale Gönderisi</message>
-	<message key="default.journalSettings.submissionFeeDescription">Yazarların, hakem değerlendirmesi için gönderi sürecinin bir parçası olarak Makale Gönderi Üceti ödemesi gereklidir.</message>
-	<message key="default.journalSettings.fastTrackFee">Hızlandırılmış Değerlendirme</message>
-	<message key="default.journalSettings.fastTrackFeeDescription">Bu ücretinin ödenmesi, gönderinin hakem değerlendirmesini, editoryal kararı ve yazar bildirimini 4 hafta içinde gerçekleştirilmesini garanti eder.</message>
 	<message key="default.journalSettings.publicationFee">Makale Yayını</message>
-	<message key="default.journalSettings.publicationFeeDescription">Bu makale yayın için kabul edilirse, yayın maliyetlerini karşılamak üzere bir Makale Yayın Ücreti ödemeniz istenecektir.</message>
-	<message key="default.journalSettings.waiverPolicy">Bu tür ücretleri ödemek istemiyorsanız, her bir ücret feragat için bir fırsat olacaktır. Bu ücretler ile değerli eserlerin yayın engellemek istemiyoruz.</message>
 	<message key="default.journalSettings.purchaseArticleFee">Makale Satın Al</message>
-	<message key="default.journalSettings.purchaseArticleFeeDescription">Bu ücretin ödenmesi, makalenin yazdırılması, indirilmesi ve görüntülenmesine izin verir.</message>
 	<message key="default.journalSettings.membershipFee">Dernek Üyeliği</message>
-	<message key="default.journalSettings.membershipFeeDescription">Bu ücretin ödemesi bir yıl boyunca derneğin bir üyesi olarak kaydolmanızı ve bu dergiye ücretsiz erişimenizi sağlayacaktır.</message>
-	<message key="default.journalSettings.donationFee">Dergiye Bağış</message>
-	<message key="default.journalSettings.donationFeeDescription">Bu derginin herhangi bir miktarı bağış olarak alması ve okurlarına yüksek kalitede bir dergi sunmaya devam etmek istemesi düzenleyiciler için bir araç sağlamaktadır.</message>
 	<message key="default.journalSettings.purchaseIssueFee">Sayı Satın Al</message>
-	<message key="default.journalSettings.purchaseIssueFeeDescription">Ücretin ödemesi, bu sayının yazdırılması, indirilmesi ve görüntülenmesine izin verir.</message>
-	<message key="default.journalSettings.emailHeader">Aşağıdaki mesaj {$journalName} adına teslim edilecektir.
-________________________________________________________________________</message>
 </locale>

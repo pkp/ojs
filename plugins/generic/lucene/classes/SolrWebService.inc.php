@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/lucene/classes/SolrWebService.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SolrWebService
@@ -997,7 +997,7 @@ class SolrWebService extends XmlWebService {
 		if ($status !== WEBSERVICE_RESPONSE_OK) {
 			// We show a generic error message to the end user
 			// to avoid information leakage and log the exact error.
-			$application = PKPApplication::getApplication();
+			$application = Application::getApplication();
 			error_log($application->getName() . ' - Lucene plugin:' . PHP_EOL . "The Lucene web service returned a status code $status and the message" . PHP_EOL . $response->saveXML());
 			$this->_serviceMessage = __('plugins.generic.lucene.message.webServiceError');
 			return $nullValue;
@@ -1289,7 +1289,7 @@ class SolrWebService extends XmlWebService {
 		foreach($articles as $article) {
 			if (!is_a($article, 'PublishedArticle')) {
 				// Try to upgrade the article to a published article.
-				$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($article->getId());
+				$publishedArticle =& $publishedArticleDao->getByArticleId($article->getId());
 				if (is_a($publishedArticle, 'PublishedArticle')) {
 					unset($article);
 					$article =& $publishedArticle;
@@ -1366,7 +1366,7 @@ class SolrWebService extends XmlWebService {
 		}
 
 		// We need the request to retrieve locales and build URLs.
-		$request = PKPApplication::getRequest();
+		$request = Application::getRequest();
 
 		// Get all supported locales.
 		$site = $request->getSite();
@@ -1968,7 +1968,7 @@ class SolrWebService extends XmlWebService {
 		$issueAction = new IssueAction();
 		$subscriptionRequired = $issueAction->subscriptionRequired($issue, $journal);
 		if ($subscriptionRequired) {
-			$isSubscribedDomain = $issueAction->subscribedDomain($journal, $issue->getId(), $article->getId());
+			$isSubscribedDomain = $issueAction->subscribedDomain(Application::getRequest(), $journal, $issue->getId(), $article->getId());
 			if (!$isSubscribedDomain) return false;
 		}
 

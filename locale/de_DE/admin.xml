@@ -4,8 +4,8 @@
 <!--
   * locale/de_DE/admin.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_German_(de_DE)
   * Localization strings.
@@ -15,14 +15,8 @@
 	<message key="admin.hostedJournals">Zeitschriften auf dieser Website</message>
 	<message key="admin.settings.journalRedirect">Umleitung zu der Zeitschrift</message>
 	<message key="admin.settings.options">Optionen</message>
-	<message key="admin.settings.usePaging">Teile bei Installationen mit mehreren Zeitschriften die Liste der Zeitschriften auf mehrere Seiten auf.</message>
 	<message key="admin.settings.journalRedirectInstructions">Anfragen bei der Startseite werden zu dieser Zeitschrift umgeleitet. Dies kann hilfreich sein, wenn auf der Website z.B. nur eine einzige Zeitschrift angeboten wird.</message>
 	<message key="admin.settings.noJournalRedirect">Nicht umleiten</message>
-	<message key="admin.settings.journalsList">Zeitschriftenelemente</message>
-	<message key="admin.settings.journalsList.description">Bitte wählen Sie die Zeitschriftenelemente, die für jede Zeitschrift auf der Gesamtwebsite angezeigt werden sollen.</message>
-	<message key="admin.settings.journalsList.showThumbnail">Vorschaubild der Zeitschrift</message>
-	<message key="admin.settings.journalsList.showTitle">Titel der Zeitschrift</message>
-	<message key="admin.settings.journalsList.showDescription">Beschreibung der Zeitschrift</message>
 	<message key="admin.settings.defaultMetricDescription">
 		Ihre OJS-Installation ist so eingestellt, dass sie mehr als eine Nutzungsstatistik aufzeichnet. Nutzungsstatistiken werden in verschiedenen Kontexten angezeigt.
 		Es gibt Fälle, in denen eine einzige Nutzungsstatistik benutzt werden muss, z.B. wenn eine sortierte Liste der am häufigsten genutzten Artikel angezeigt werden soll oder um
@@ -38,7 +32,7 @@
 
 	<message key="admin.languages.primaryLocaleInstructions">Diese Regionaleinstellung wird die Standardeinstellung der Website und aller ihrer Zeitschriften.</message>
 	<message key="admin.languages.supportedLocalesInstructions">Wählen Sie alle Regionaleinstellungen aus, die die Website anbieten soll. Die gewählten Parameter können von allen Zeitschriften, die auf der Website angeboten werden, verwendet werden und erscheinen auch im Sprachenmenü auf jeder Seite der Website (die Seiten bestimmter Zeitschriften können davon ausgenommen werden). Wenn nur eine Regionaleinstellung ausgewählt wird, erscheint das Sprachenmenü nicht, und den Zeitschriften stehen keine erweiterten Spracheinstellungen zur Verfügung.</message>
-	<message key="admin.locale.maybeIncomplete">Gekennzeichnete Lokaleinstellungen können unvollständig sein.</message>	
+	<message key="admin.locale.maybeIncomplete">Gekennzeichnete Lokaleinstellungen können unvollständig sein.</message>
 	<message key="admin.languages.confirmUninstall">Sind Sie sicher, dass Sie diese Regionaleinstellung deinstallieren wollen? Jede Zeitschrift, die diesen Datensatz verwendet, wird davon betroffen sein.</message>
 	<message key="admin.languages.installNewLocalesInstructions">Wählen Sie zusätzliche Regionaleinstellungen, die dieses System unterstützen soll. Die Regionaleinstellungen müssen installiert sein, bevor sie von den angebotenen Zeitschriften verwendet werden können. Weitere Informationen zum Hinzufügen neuer Regionaleinstellungen finden Sie in der OJS-Dokumentation.</message>
 	<message key="admin.languages.downloadFailed">Das Herunterladen der Regionaleinstellung ist fehlgeschlagen. Die Fehlernachricht(en) weiter unten beschreiben den Fehler.</message>
@@ -56,7 +50,6 @@
 	<message key="admin.journals.createInstructions">Sie werden automatisch als Redakteur/in dieser Zeitschrift eingetragen. Nachdem Sie eine neue Zeitschrift eingerichtet haben, loggen Sie sich dort als Redakteur/in ein, fahren Sie mit der Konfiguration fort und tragen Sie Benutzer/innen ein.</message>
 	<message key="admin.journals.journalSettings">Zeitschriften-Einstellungen</message>
 	<message key="admin.journals.noneCreated">Es wurde keine Zeitschrift eingerichtet.</message>
-	<message key="admin.contexts.confirmDelete">Sind Sie sicher, dass Sie diese Zeitschrift mitsamt ihrem gesamten Inhalt endgültig löschen möchten?</message>
 	<message key="admin.contexts.create">Eine Zeitschrift einrichten</message>
 	<message key="admin.journals.urlWillBe">Die Zeitschrift sollte über ein kurzes Wort oder eine Abkürzung identifizierbar sein. Die URL der Zeitschrift wird {$sampleUrl} lauten.</message>
 	<message key="admin.contexts.form.titleRequired">Die Angabe eines Titels ist erforderlich.</message>

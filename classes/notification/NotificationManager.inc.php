@@ -3,8 +3,8 @@
 /**
  * @file classes/notification/NotificationManager.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2000-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2000-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class PKPNotificationManager
@@ -19,13 +19,6 @@ import('lib.pkp.classes.notification.PKPNotificationManager');
 class NotificationManager extends PKPNotificationManager {
 	/* @var array Cache each user's most privileged role for each submission */
 	var $privilegedRoles;
-
-	/**
-	 * Constructor.
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 
 
 	/**
@@ -63,18 +56,6 @@ class NotificationManager extends PKPNotificationManager {
 		switch ($notification->getType()) {
 			case NOTIFICATION_TYPE_PUBLISHED_ISSUE:
 				return __('notification.type.issuePublished');
-			case NOTIFICATION_TYPE_GIFT_REDEEM_STATUS_SUCCESS:
-				return __('gifts.giftRedeemed');
-			case NOTIFICATION_TYPE_GIFT_REDEEM_STATUS_ERROR_NO_GIFT_TO_REDEEM:
-				return __('gifts.noGiftToRedeem');
-			case NOTIFICATION_TYPE_GIFT_REDEEM_STATUS_ERROR_GIFT_ALREADY_REDEEMED:
-				return __('gifts.giftAlreadyRedeemed');
-			case NOTIFICATION_TYPE_GIFT_REDEEM_STATUS_ERROR_GIFT_INVALID:
-				return __('gifts.giftNotValid');
-			case NOTIFICATION_TYPE_GIFT_REDEEM_STATUS_ERROR_SUBSCRIPTION_TYPE_INVALID:
-				return __('gifts.subscriptionTypeNotValid');
-			case NOTIFICATION_TYPE_GIFT_REDEEM_STATUS_ERROR_SUBSCRIPTION_NON_EXPIRING:
-				return __('gifts.subscriptionNonExpiring');
 			case NOTIFICATION_TYPE_BOOK_REQUESTED:
 				return __('plugins.generic.booksForReview.notification.bookRequested');
 			case NOTIFICATION_TYPE_BOOK_CREATED:
@@ -131,14 +112,7 @@ class NotificationManager extends PKPNotificationManager {
 			case NOTIFICATION_TYPE_BOOK_AUTHOR_ASSIGNED:
 			case NOTIFICATION_TYPE_BOOK_AUTHOR_DENIED:
 			case NOTIFICATION_TYPE_BOOK_AUTHOR_REMOVED:
-			case NOTIFICATION_TYPE_GIFT_REDEEM_STATUS_SUCCESS:
 					return 'notifySuccess';
-			case NOTIFICATION_TYPE_GIFT_REDEEM_STATUS_ERROR_NO_GIFT_TO_REDEEM:
-			case NOTIFICATION_TYPE_GIFT_REDEEM_STATUS_ERROR_GIFT_ALREADY_REDEEMED:
-			case NOTIFICATION_TYPE_GIFT_REDEEM_STATUS_ERROR_GIFT_INVALID:
-			case NOTIFICATION_TYPE_GIFT_REDEEM_STATUS_ERROR_SUBSCRIPTION_TYPE_INVALID:
-			case NOTIFICATION_TYPE_GIFT_REDEEM_STATUS_ERROR_SUBSCRIPTION_NON_EXPIRING:
-					return 'notifyError';
 			default: return parent::getStyleClass($notification);
 		}
 	}
@@ -164,32 +138,30 @@ class NotificationManager extends PKPNotificationManager {
 			case NOTIFICATION_TYPE_BOOK_AUTHOR_ASSIGNED:
 			case NOTIFICATION_TYPE_BOOK_AUTHOR_DENIED:
 			case NOTIFICATION_TYPE_BOOK_AUTHOR_REMOVED:
-			case NOTIFICATION_TYPE_GIFT_REDEEM_STATUS_SUCCESS:
 				return 'notifyIconSuccess';
-			case NOTIFICATION_TYPE_GIFT_REDEEM_STATUS_ERROR_NO_GIFT_TO_REDEEM:
-			case NOTIFICATION_TYPE_GIFT_REDEEM_STATUS_ERROR_GIFT_ALREADY_REDEEMED:
-			case NOTIFICATION_TYPE_GIFT_REDEEM_STATUS_ERROR_GIFT_INVALID:
-			case NOTIFICATION_TYPE_GIFT_REDEEM_STATUS_ERROR_SUBSCRIPTION_TYPE_INVALID:
-			case NOTIFICATION_TYPE_GIFT_REDEEM_STATUS_ERROR_SUBSCRIPTION_NON_EXPIRING:
-				return 'notifyIconError';
 			default: return parent::getIconClass($notification);
 		}
 	}
 
 	/**
-         * @copydoc PKPNotificationManager::getMgrDelegate()
-         */
-        protected function getMgrDelegate($notificationType, $assocType, $assocId) {
-                switch ($notificationType) {
-                        case NOTIFICATION_TYPE_APPROVE_SUBMISSION:
-                        case NOTIFICATION_TYPE_VISIT_CATALOG:
-                                assert($assocType == ASSOC_TYPE_SUBMISSION && is_numeric($assocId));
-                                import('classes.notification.managerDelegate.ApproveSubmissionNotificationManager');
-                                return new ApproveSubmissionNotificationManager($notificationType);
-                }
-                // Otherwise, fall back on parent class
-                return parent::getMgrDelegate($notificationType, $assocType, $assocId);
-        }
+	 * @copydoc PKPNotificationManager::getMgrDelegate()
+	 */
+	protected function getMgrDelegate($notificationType, $assocType, $assocId) {
+		switch ($notificationType) {
+			case NOTIFICATION_TYPE_APPROVE_SUBMISSION:
+			case NOTIFICATION_TYPE_VISIT_CATALOG:
+				assert($assocType == ASSOC_TYPE_SUBMISSION && is_numeric($assocId));
+				import('classes.notification.managerDelegate.ApproveSubmissionNotificationManager');
+				return new ApproveSubmissionNotificationManager($notificationType);
+			case NOTIFICATION_TYPE_PUBLICATION_SCHEDULED:
+				assert($assocType == ASSOC_TYPE_SUBMISSION && is_numeric($assocId));
+				import('classes.notification.managerDelegate.EditingProductionStatusNotificationManager');
+				return new EditingProductionStatusNotificationManager($notificationType);
+		}
+		// Otherwise, fall back on parent class
+		return parent::getMgrDelegate($notificationType, $assocType, $assocId);
+	}
+
 }
 
 ?>

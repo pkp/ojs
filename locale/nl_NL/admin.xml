@@ -4,8 +4,8 @@
 <!--
   * locale/nl_NL/admin.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the nl_NL (Nederlands) locale.
@@ -67,17 +67,11 @@
 	<message key="admin.categories.noneCreated">Er zijn nog geen categorieën.</message>
 	<message key="admin.categories.confirmDelete">Weet u zeker dat u deze categorie wilt verwijderen?</message>
 	<message key="admin.categories.nameRequired">Een categorienaam is verplicht</message>
-	<message key="admin.settings.journalsList.showTitle">Titel van het tijdschrift</message>
-	<message key="admin.settings.journalsList.showDescription">Beschrijving van het tijdschrift.</message>
 	<message key="admin.categories">Categorieën</message>
 	<message key="admin.categories.enable.description">De sitebeheerder kan hier een set categorieën definiëren om te helpen de tijdschriften te organiseren. Tijdschriftbeheerders kunnen deze categorieën aan hun tijdschrift toekennen. Gebruikers kunnen de tijdschriften op categorie bekijken.</message>
 	<message key="admin.settings.options">Opties</message>
-	<message key="admin.settings.usePaging">Verdeel de lijst in pagina's als er veel tijdschriften zijn</message>
-	<message key="admin.settings.journalsList">Tijdschriftelementen</message>
-	<message key="admin.settings.journalsList.description">Kies de tijdschriftelementen die voor ieder tijdschrift getoond worden op de pagina van de site</message>
-	<message key="admin.settings.journalsList.showThumbnail">Miniatuur van het tijdschrift</message>
 	<message key="admin.settings.defaultMetricDescription">Uw OJS installatie geconfigureerd voor meer dan een gebruiksmeting. Gebruiksstatistieken worden in verschillende contexten getoond.
 		Soms wordt een enkele statistiek getoond, bv, om een lijst van meestgebruikte artikelen te tonen of om
 		zoekresultaten te wegen. Kies een van de methodes als standaard.</message>
-	
+
 </locale>

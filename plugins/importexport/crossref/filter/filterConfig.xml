@@ -4,8 +4,8 @@
 <!--
   * plugins/importexport/crossref/filter/filterConfig.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Filter Configuration.
@@ -18,14 +18,14 @@
 			displayName="plugins.importexport.crossref.displayName"
 			description="plugins.importexport.crossref.description"
 			inputType="class::classes.issue.Issue[]"
-			outputType="xml::schema(http://www.crossref.org/schema/deposit/crossref4.3.6.xsd)" />
+			outputType="xml::schema(https://www.crossref.org/schemas/crossref4.3.6.xsd)" />
 		<!-- Crossref XML article output -->
 		<filterGroup
 			symbolic="article=>crossref-xml"
 			displayName="plugins.importexport.crossref.displayName"
 			description="plugins.importexport.crossref.description"
 			inputType="class::classes.article.Article[]"
-			outputType="xml::schema(http://www.crossref.org/schema/deposit/crossref4.3.6.xsd)" />
+			outputType="xml::schema(https://www.crossref.org/schemas/crossref4.3.6.xsd)" />
 	</filterGroups>
 	<filters>
 		<!-- Crossref XML issue output -->

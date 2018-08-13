@@ -3,8 +3,8 @@
 /**
  * @file classes/issue/IssueFileDAO.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IssueFileDAO
@@ -14,21 +14,14 @@
  * @brief Operations for retrieving and modifying IssueFile objects.
  */
 
-import('lib.pkp.classes.file.PKPFileDAO');
+import('lib.pkp.classes.db.DAO');
 import('classes.issue.IssueFile');
 
+class IssueFileDAO extends DAO {
 
-class IssueFileDAO extends PKPFileDAO {
-
-	 /* @var array MIME types that can be displayed inline in a browser */
+	 /** @var array MIME types that can be displayed inline in a browser */
 	var $_inlineableTypes = null;
 
-	/**
-	 * Constructor.
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 
 	/**
 	 * Get inlineable file types.

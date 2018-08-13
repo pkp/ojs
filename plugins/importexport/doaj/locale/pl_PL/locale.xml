@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/importexport/doaj/locale/pl_PL/locale.xml
+  *
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings
+  -->
+
+<locale name="pl_PL" full_name="Język Polski">
+		<message key="plugins.importexport.doaj.markRegistered.success">Wybrane elementy zostały zasnaczone jako zarejestrowane!</message>
+	<message key="plugins.importexport.doaj.export.issue">Eksportuj numery</message>
+	<message key="plugins.importexport.doaj.export.issueInfo">Eksportuj numery w formacie XML</message>
+	<message key="plugins.importexport.doaj.export.article">Eksportuj artykuły</message>
+	<message key="plugins.importexport.doaj.export.articleInfo">Eksportuj wybrane artykuły w XML</message>
+</locale>

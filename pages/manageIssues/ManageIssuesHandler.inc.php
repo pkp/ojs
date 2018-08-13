@@ -3,8 +3,8 @@
 /**
  * @file pages/manageIssues/ManageIssuesHandler.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IssueManagementHandler
@@ -27,7 +27,7 @@ class ManageIssuesHandler extends Handler {
 		$this->addRoleAssignment(
 			array(ROLE_ID_SUB_EDITOR, ROLE_ID_MANAGER),
 			array(
-				'index',
+				'index', 'issuesTabs'
 			)
 		);
 	}
@@ -45,7 +45,7 @@ class ManageIssuesHandler extends Handler {
 	 * Displays the issue listings in a tabbed interface.
 	 * @param $args array
 	 * @param $request PKPRequest
-	 * @return JSONMessage JSON object
+	 * @return string Response contents.
 	 */
 	function index($args, $request) {
 		$this->setupTemplate($request);
@@ -53,6 +53,21 @@ class ManageIssuesHandler extends Handler {
 
 		$templateMgr = TemplateManager::getManager($request);
 		return $templateMgr->display('manageIssues/issues.tpl');
+	}
+
+	/**
+	 * Returns the issues tabs in the form of a JSON Message.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 * @return JSONMessage JSON object
+	 */
+	function issuesTabs($args, $request) {
+		$this->setupTemplate($request);
+		AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR);
+
+		$templateMgr = TemplateManager::getManager($request);
+
+		return $templateMgr->fetchJson('manageIssues/issuesTabs.tpl');
 	}
 }
 

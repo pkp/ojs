@@ -3,8 +3,8 @@
 /**
  * @file classes/subscription/SubscriptionType.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class Subscriptiontyoe
@@ -28,22 +28,6 @@ class SubscriptionType extends DataObject {
 	//
 
 	/**
-	 * Get the ID of the subscription type.
-	 * @return int
-	 */
-	function getTypeId() {
-		return $this->getData('typeId');
-	}
-
-	/**
-	 * Set the ID of the subscription type.
-	 * @param $typeId int
-	 */
-	function setTypeId($typeId) {
-		return $this->setData('typeId', $typeId);
-	}
-
-	/**
 	 * Get the journal ID of the subscription type.
 	 * @return int
 	 */
@@ -63,7 +47,7 @@ class SubscriptionType extends DataObject {
 	 * Get the localized subscription type name
 	 * @return string
 	 */
-	function getSubscriptionTypeName() {
+	function getLocalizedName() {
 		return $this->getLocalizedData('name');
 	}
 
@@ -89,7 +73,7 @@ class SubscriptionType extends DataObject {
 	 * Get the localized subscription type description
 	 * @return string
 	 */
-	function getSubscriptionTypeDescription() {
+	function getLocalizedDescription() {
 		return $this->getLocalizedData('description');
 	}
 
@@ -175,18 +159,10 @@ class SubscriptionType extends DataObject {
 
 	/**
 	 * Get subscription type nonExpiring.
-	 * @return int
+	 * @return boolean
 	 */
 	function getNonExpiring() {
-		return $this->getData('nonExpiring');
-	}
-
-	/**
-	 * Set subscription type nonExpiring.
-	 * @param $nonExpiring int
-	 */
-	function setNonExpiring($nonExpiring) {
-		return $this->setData('nonExpiring', $nonExpiring);
+		return $this->getDuration()==null;
 	}
 
 	/**
@@ -211,12 +187,12 @@ class SubscriptionType extends DataObject {
 	 * @return string
 	 */
 	function getDurationYearsMonths($locale = null) {
-		if ($this->getData('nonExpiring')) {
+		if (!$this->getDuration()) {
 			return __('subscriptionTypes.nonExpiring', null, $locale);
 		}
 
-		$years = (int)floor($this->getData('duration')/12);
-		$months = (int)fmod($this->getData('duration'), 12);
+		$years = (int)floor($this->getDuration()/12);
+		$months = (int)fmod($this->getDuration(), 12);
 		$yearsMonths = '';
 
 		if ($years == 1) {
@@ -338,7 +314,8 @@ class SubscriptionType extends DataObject {
 	 * @return string
 	 */
 	function getSummaryString() {
-		return $this->getSubscriptionTypeName() . ' - ' . $this->getDurationYearsMonths() . ' - ' . sprintf('%.2f', $this->getCost()) . ' ' . $this->getCurrencyStringShort();
+		$subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
+		return $this->getLocalizedName() . ' - ' . $this->getDurationYearsMonths() . ' - ' . sprintf('%.2f', $this->getCost()) . ' ' . $this->getCurrencyStringShort();
 	}
 }
 

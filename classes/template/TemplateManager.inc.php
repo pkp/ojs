@@ -3,8 +3,8 @@
 /**
  * @file classes/template/TemplateManager.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class TemplateManager
@@ -21,12 +21,11 @@ import('lib.pkp.classes.template.PKPTemplateManager');
 
 class TemplateManager extends PKPTemplateManager {
 	/**
-	 * Constructor.
 	 * Initialize template engine and assign basic template variables.
 	 * @param $request PKPRequest
 	 */
-	function __construct($request) {
-		parent::__construct($request);
+	function initialize($request) {
+		parent::initialize($request);
 
 		if (!defined('SESSION_DISABLE_INIT')) {
 			/**
@@ -58,7 +57,6 @@ class TemplateManager extends PKPTemplateManager {
 			$this->assign(array(
 				'brandImage' => 'templates/images/ojs_brand.png',
 				'packageKey' => 'common.openJournalSystems',
-				'pkpLink'    => 'http://pkp.sfu.ca/ojs',
 			));
 
 			// Get a count of unread tasks.
@@ -110,11 +108,9 @@ class TemplateManager extends PKPTemplateManager {
 				// variable in templates/common/header.tpl, instead of
 				// reproducing a lot of OMP/OJS-specific logic there.
 				$dispatcher = $request->getDispatcher();
-				$this->assign( 'contextSettingsUrl', $dispatcher->url($request, ROUTE_PAGE, null, 'management', 'settings', 'journal') );
+				$this->assign( 'contextSettingsUrl', $dispatcher->url($request, ROUTE_PAGE, null, 'management', 'settings', 'context') );
 
-				import('classes.payment.ojs.OJSPaymentManager');
-				$paymentManager = new OJSPaymentManager($request);
-				$this->assign('journalPaymentsEnabled', $paymentManager->isConfigured());
+				$paymentManager = Application::getPaymentManager($context);
 				$this->assign('pageFooter', $context->getLocalizedSetting('pageFooter'));
 			} else {
 				// Check if registration is open for any contexts

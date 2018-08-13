@@ -3,8 +3,8 @@
 /**
  * @file plugins/metadata/dc11/filter/Dc11SchemaArticleAdapter.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2000-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2000-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class Dc11SchemaArticleAdapter
@@ -85,7 +85,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 		// Creator
 		$authors = $article->getAuthors();
 		foreach($authors as $author) {
-			$dc11Description->addStatement('dc:creator', $author->getFullName(true));
+			$dc11Description->addStatement('dc:creator', $author->getFullName(false, true));
 		}
 
 		// Subject
@@ -155,7 +155,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 		if (!empty($pages)) $pages = '; ' . $pages;
 		foreach ($sources as $locale => $source) {
 			if (is_a($article, 'PublishedArticle')) {
-				$sources[$locale] .= '; ' . $issue->getIssueIdentification();
+				$sources[$locale] .= '; ' . $issue->getIssueIdentification(array(), $locale);
 			}
 			$sources[$locale] .=  $pages;
 		}
@@ -201,7 +201,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 		// Public identifiers
 		$pubIdPlugins = (array) PluginRegistry::loadCategory('pubIds', true, $journal->getId());
 		foreach ($pubIdPlugins as $pubIdPlugin) {
-			if ($pubIssueId = $issue->getStoredPubId($pubIdPlugin->getPubIdType())) {
+			if ($issue && $pubIssueId = $issue->getStoredPubId($pubIdPlugin->getPubIdType())) {
 				$dc11Description->addStatement('dc:source', $pubIssueId, METADATA_DESCRIPTION_UNKNOWN_LOCALE);
 				unset($pubIssueId);
 			}

@@ -1,8 +1,8 @@
 {**
  * templates/controllers/tab/pubIds/form/publicIdentifiersForm.tpl
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  *}
@@ -48,7 +48,7 @@
 	{assign var=canBeAssigned value=$pubIdPlugin->canBeAssigned($pubObject)}
 	{include file="$pubIdMetadataFile" pubObject=$pubObject canBeAssigned=$canBeAssigned}
 {/foreach}
-
+{call_hook name="Templates::Controllers::Tab::PubIds::Form::PublicIdentifiersForm"}
 {fbvFormButtons id="publicIdentifiersFormSubmit" submitText="common.save"}
 
 </form>

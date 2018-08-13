@@ -1,8 +1,8 @@
 {**
  * templates/admin/journalSettings.tpl
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Basic journal settings under site administration.
@@ -35,7 +35,7 @@
 		{/fbvFormSection}
 		{fbvFormSection title="journal.path" required=true for="path"}
 			{fbvElement type="text" id="path" value=$path size=$smarty.const.SMALL maxlength="32" required=true}
-			{url|assign:"sampleUrl" router=$smarty.const.ROUTE_PAGE journal="path"}
+			{capture assign="sampleUrl"}{url router=$smarty.const.ROUTE_PAGE journal="path"}{/capture}
 			{** FIXME: is this class instruct still the right one? **}
 			<span class="instruct">{translate key="admin.journals.urlWillBe" sampleUrl=$sampleUrl}</span>
 		{/fbvFormSection}

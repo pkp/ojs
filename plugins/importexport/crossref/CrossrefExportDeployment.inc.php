@@ -6,8 +6,8 @@
 /**
  * @file plugins/importexport/crossref/CrossrefExportDeployment.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2000-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2000-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class CrossrefExportDeployment
@@ -21,7 +21,7 @@
 define('CROSSREF_XMLNS' , 'http://www.crossref.org/schema/4.3.6');
 define('CROSSREF_XMLNS_XSI' , 'http://www.w3.org/2001/XMLSchema-instance');
 define('CROSSREF_XSI_SCHEMAVERSION' , '4.3.6');
-define('CROSSREF_XSI_SCHEMALOCATION' , 'http://www.crossref.org/schema/deposit/crossref4.3.6.xsd');
+define('CROSSREF_XSI_SCHEMALOCATION' , 'https://www.crossref.org/schemas/crossref4.3.6.xsd');
 define('CROSSREF_XMLNS_JATS' , 'http://www.ncbi.nlm.nih.gov/JATS1');
 define('CROSSREF_XMLNS_AI' , 'http://www.crossref.org/AccessIndicators.xsd');
 

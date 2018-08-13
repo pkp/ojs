@@ -3,8 +3,8 @@
 /**
  * @file classes/handler/Handler.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class Handler
@@ -16,12 +16,6 @@
 import('lib.pkp.classes.handler.PKPHandler');
 
 class Handler extends PKPHandler {
-	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 
 	/**
 	 * Returns a "best-guess" journal, based in the request data, if
@@ -53,6 +47,9 @@ class Handler extends PKPHandler {
 		} else {
 			// Return the requested journal.
 			$journal = $router->getContext($request);
+
+			// If the specified journal does not exist, respond with a 404.
+			if (!$journal) $request->getDispatcher()->handle404();
 		}
 		if (is_a($journal, 'Journal')) {
 			return $journal;

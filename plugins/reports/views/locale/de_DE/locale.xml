@@ -4,8 +4,8 @@
 <!--
   * plugins/reports/views/locale/de_DE/locale.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_German_(de_DE)
   * Localization strings.
@@ -14,10 +14,9 @@
 <locale name="de_DE" full_name="Deutsch (Deutschland)">
 	<message key="plugins.reports.views.displayName">Lese-Bericht</message>
 	<message key="plugins.reports.views.description">Dieses Plugin liefert einen CSV-Bericht, der die Lesezugriffe für jeden Artikel angibt.</message>
-
-  <message key="plugins.reports.views.articleId">Artikel-ID</message>
-  <message key="plugins.reports.views.articleTitle">Artikeltitel</message>
-  <message key="plugins.reports.views.datePublished">Veröffentlichungsdatum</message>
-  <message key="plugins.reports.views.abstractViews">Abstract-Ansichten</message>
-  <message key="plugins.reports.views.galleyViews">Gesamte Fahnen-Ansichten</message>
+	<message key="plugins.reports.views.articleId">Artikel-ID</message>
+	<message key="plugins.reports.views.articleTitle">Artikeltitel</message>
+	<message key="plugins.reports.views.datePublished">Veröffentlichungsdatum</message>
+	<message key="plugins.reports.views.abstractViews">Abstract-Ansichten</message>
+	<message key="plugins.reports.views.galleyViews">Gesamte Fahnen-Ansichten</message>
 </locale>

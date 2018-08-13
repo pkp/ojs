@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/pubIds/urn/locale/sv_SE/locale.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Swedish_(sv_SE)
+  * Localization strings.
+  -->
+
+<locale name="sv_SE" full_name="Svenska">
+	<message key="plugins.pubIds.urn.displayName">URN</message>
+	<message key="plugins.pubIds.urn.description">Det här pluginet gör det möjligt att tilldela Uniform Resource Names till nummer, artiklar och publiceringsversioner i OJS.</message>
+
+	<!-- settings form -->
+	<message key="plugins.pubIds.urn.manager.settings.description">Konfigurera URN pluginet så att det blir möjligt att hantera och använda URN:s i OJS:</message>
+
+	<message key="plugins.pubIds.urn.manager.settings.urnObjects">Tidskriftsinnehåll</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnObjectsRequired">Välj objekt som ska tilldelas URN:er.</message>
+	<message key="plugins.pubIds.urn.manager.settings.explainURNs">Välj de publiceringsobjekt som ska tilldelas Uniform Resource Names (URN):</message>
+	<message key="plugins.pubIds.urn.manager.settings.enableIssueURN">Nummer</message>
+	<message key="plugins.pubIds.urn.manager.settings.enableSubmissionURN">Artiklar</message>
+	<message key="plugins.pubIds.urn.manager.settings.enableRepresentationURN">Publiceringsversioner</message>
+
+	<message key="plugins.pubIds.urn.manager.settings.urnPrefix">URN-prefix</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnPrefix.description"><![CDATA[URN-prefixet är den delen fasta delen av URN:et, som aldrig ändras (t.ex. "urn:nbn:de:0000-").]]></message>
+	<message key="plugins.pubIds.urn.manager.settings.form.urnPrefixPattern"><![CDATA[Mönstret för URN-prefixet måste ha formen "urn:"&lt;NID&gt;":"&lt;NSS&gt;.]]></message>
+
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix">URN-suffix</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffix.description">Ett URN-suffix kan ha vilken form som helst, men måste vara unikt bland alla publicerade objekt inom samma tilldelade URN-prefix:</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffixPattern">Använd mönstret nedan för att generera URN-suffix. Använd %j för tidskriftsinitialer, %v för volym, %i för nummer, %Y för år, %a för OJS artikel-ID, %g för OJS publiceringsversions-ID, %f för OJS fil-ID, %p för sidnumret och %x för "Custom Identifier".</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffixPattern.example">Till exempel vol%viss%ipp%p kan skapa URN-suffixet "vol3iss2pp230".</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffixPattern.issues">för nummer</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffixPattern.submissions">för artiklar</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffixPattern.representations">för publiceringsverioner</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnIssueSuffixPatternRequired">Ange ett URN-suffixmönster för nummer.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSubmissionSuffixPatternRequired">Ange ett URN-suffixmönster för artiklar.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnRepresentationSuffixPatternRequired">Ange ett URN-suffixmönster för publiceringsversioner.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffixDefault">Använd standardmönster.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffixDefault.description"><![CDATA[%j.v%vi%i för nummer<br />%j.v%vi%i.%a för artiklar<br />%j.v%vi%i.%a.g%g för publiceringsversioner.]]></message>
+	<message key="plugins.pubIds.urn.manager.settings.urnSuffixCustomIdentifier">Ange ett individuellt URN-suffix för varje publicerat objekt. Det finns ett extra URN-fält på varje objekts metadatasida.</message>
+	<message key="plugins.pubIds.urn.manager.settings.checkNo">Kontrollnummer</message>
+	<message key="plugins.pubIds.urn.manager.settings.checkNo.label">Kontrollnumret kommer automatiskt att räknas fram och läggas på slutet, som den sista siffran i ett URN.</message>
+	<message key="plugins.pubIds.urn.manager.settings.namespace">Namnrymd</message>
+	<message key="plugins.pubIds.urn.manager.settings.namespace.choose">Välj</message>
+	<message key="plugins.pubIds.urn.manager.settings.namespace.description">Den permanenta identifikatorns namnrymd behövs vanligtvis för registeringen (t.ex. på Deutsche Nationalbibliothek).</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnResolver">Resolver-URL</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnResolver.description">(t.ex. http://nbn-resolving.de/)</message>
+	<message key="plugins.pubIds.urn.manager.settings.form.urnResolverRequired">Lägg till resolverns URL.</message>
+
+	<message key="plugins.pubIds.urn.manager.settings.urnReassign">Tilldela om URN:er</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnReassign.description">Om du ändrar URN-konfigurationen kommer URN:er som redan har tilldelats inte att påverkas. När URN konfigurationen är sparad, använd den här knappen för att ta bort alla existerande URN:er så att inställningarna påverkar alla existerande objekt.</message>
+	<message key="plugins.pubIds.urn.manager.settings.urnReassign.confirm">Vill du ta bort alla existerande URN:er?</message>
+
+	<!-- metadata form -->
+	<message key="plugins.pubIds.urn.editor.urn">URN</message>
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeIssue">nummer</message>
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeSubmission">artikel</message>
+	<message key="plugins.pubIds.urn.editor.urnObjectTypeRepresentation">publiceringsversion</message>
+	<message key="plugins.pubIds.urn.editor.customSuffixMissing">URN:et kan inte tilldelas eftersom det anpassade suffixet saknas.</message>
+	<message key="plugins.pubIds.urn.editor.patternNotResolved">URN:et kan inte tilldelas eftersom det innehåller ett felaktigt mönster.</message>
+	<message key="plugins.pubIds.urn.editor.canBeAssigned">Det du ser är en förhandsvisning av URN:et. Välj kryssrutan och spara formuläret för att tilldela URN:et.</message>
+	<message key="plugins.pubIds.urn.editor.assigned">URN:et har tilldelats till {$pubObjectType}.</message>
+	<message key="plugins.pubIds.urn.editor.urnSuffixCustomIdentifierNotUnique">Det angivna URN-suffixet används redan för ett annat publicerat objekt. Lägg till ett unikt URN-suffix för varje objekt.</message>
+	<message key="plugins.pubIds.urn.editor.clearObjectsURN">Ta bort URN</message>
+	<message key="plugins.pubIds.urn.editor.clearObjectsURN.confirm">Vill du ta bort existerande URN?</message>
+	<message key="plugins.pubIds.urn.editor.clearIssueObjectsURN">Ta bort nummerobjekts URN</message>
+	<message key="plugins.pubIds.urn.editor.clearIssueObjectsURN.confirm">Vill du verkligen ta bort URN:er för befintliga nummer?</message>
+	<message key="plugins.pubIds.urn.editor.clearIssueObjectsURN.description">Använd följande alternativ för att ta bort URN:er för alla objekt (artiklar och publiceringsversioner) som för närvarande är planerade för publicering i det här numret.</message>
+	<message key="plugins.pubIds.urn.editor.addCheckNo">Lägg till kontrollnummer</message>
+	<!-- assignment form -->
+	<message key="plugins.pubIds.urn.editor.assignURN">Tilldela URN:et {$pubId} till {$pubObjectType}</message>
+	<message key="plugins.pubIds.urn.editor.assignURN.emptySuffix">URN:et kan inte tilldelas eftersom det anpassade suffixet saknas.</message>
+	<message key="plugins.pubIds.urn.editor.assignURN.pattern">URN:et {$pubId} kan inte tilldelas eftersom det innehåller ett felaktigt mönster.</message>
+	<message key="plugins.pubIds.urn.editor.assignURN.assigned">URN:et {$pubId} har tilldelats.</message>
+	<!-- errors -->
+	<message key="plugins.pubIds.urn.form.checkNoRequired">Kontrollnumret saknas.</message>
+
+</locale>

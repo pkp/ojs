@@ -4,8 +4,8 @@
 /**
  * @file plugins/pubIds/doi/js/DOISettingsFormHandler.js
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2000-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2000-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class DOISettingsFormHandler.js
@@ -39,6 +39,8 @@
 				this.callbackWrapper(this.updatePatternFormElementStatus_));
 		//ping our handler to set the form's initial state.
 		this.callbackWrapper(this.updatePatternFormElementStatus_());
+
+		this.bind('formSubmitted', this.callbackWrapper(this.maybeReloadPage_));
 	};
 	$.pkp.classes.Helper.inherits(
 			$.pkp.plugins.pubIds.doi.js.DOISettingsFormHandler,
@@ -75,6 +77,20 @@
 		} else {
 			$element.find('[id*="SuffixPattern"]').filter(':text').
 					attr('disabled', 'disabled');
+		}
+	};
+
+
+	/**
+	* Reload the page if we're on an import/export page. The DOI settings can be accessed from several
+	* import/export screens. When the DOI settings change, this can impact the import/export settings, so
+	* we just reload the whole page.
+	*
+	* @private
+	*/
+	$.pkp.plugins.pubIds.doi.js.DOISettingsFormHandler.prototype.maybeReloadPage_ = function() {
+		if ($('body').hasClass('pkp_op_importexport')) {
+			window.location.reload();
 		}
 	};
 

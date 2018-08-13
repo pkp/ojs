@@ -3,8 +3,8 @@
 /**
  * @file tests/data/20-CreateJournalTest.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2000-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2000-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class CreateJournalTest
@@ -58,8 +58,9 @@ class CreateJournalTest extends WebTestCase {
 		$this->clickAndWait($selector);
 		$this->waitForElementPresent($selector='css=ul#navigationPrimary a:contains(\'Journal\')');
 		$this->clickAndWait($selector);
-    		$this->waitForElementPresent('css=[id^=abbreviation-]');
-    		$this->type('css=[id^=abbreviation-]', 'PK');
+		$this->waitForElementPresent('css=[id^=abbreviation-]');
+		$this->type('css=[id^=abbreviation-]', 'J Pub Know');
+		$this->type('css=[id^=acronym-]', 'PK');
 		$this->click('//form[@id=\'mastheadForm\']//button[text()=\'Save\']');
 		$this->waitForTextPresent('Your changes have been saved.');
 

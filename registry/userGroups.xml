@@ -4,8 +4,8 @@
 <!--
   * registry/userGroups.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Roles XML file.
@@ -42,4 +42,7 @@
 
 	<!-- Reader Role -->
 	<group roleId="0x00100000" stages="" name="default.groups.name.reader" plural="default.groups.plural.reader" abbrev="default.groups.abbrev.reader" permitSelfRegistration="true" />
+
+	<!-- Subscription Manager Role -->
+	<group roleId="0x00200000" stages="" name="default.groups.name.subscriptionManager" plural="default.groups.plural.subscriptionManager" abbrev="default.groups.abbrev.subscriptionManager" />
 </groups>

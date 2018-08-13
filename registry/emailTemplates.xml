@@ -3,16 +3,14 @@
 <!--
   * emailTemplates.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Email templates XML file.
   -->
 <emails>
 	<email key="NOTIFICATION" can_edit="1" can_disable="0"/>
-	<email key="NOTIFICATION_MAILLIST" can_edit="1" can_disable="0"/>
-	<email key="NOTIFICATION_MAILLIST_WELCOME" can_edit="1" can_disable="0"/>
 	<email key="NOTIFICATION_CENTER_DEFAULT" can_edit="1" can_disable="0"/>
 	<email key="PASSWORD_RESET_CONFIRM" can_edit="1" can_disable="0"/>
 	<email key="PASSWORD_RESET" can_edit="1" can_disable="0"/>
@@ -24,7 +22,6 @@
 	<email key="LOCKSS_NEW_ARCHIVE" can_edit="1" can_disable="0"/>
 	<email key="SUBMISSION_ACK" can_edit="1" can_disable="1" to_role_id="65536"/>
 	<email key="SUBMISSION_ACK_NOT_USER" can_edit="1" can_disable="1" to_role_id="65536"/>
-	<email key="SUBMISSION_UNSUITABLE" can_edit="1" can_disable="1" to_role_id="65536" from_role_id="512"/>
 	<email key="EDITOR_ASSIGN" can_edit="1" can_disable="1" from_role_id="256" to_role_id="512"/>
 	<email key="REVIEW_CANCEL" can_edit="1" can_disable="1" from_role_id="512" to_role_id="4096"/>
 	<email key="REVIEW_REQUEST" can_edit="1" can_disable="1" from_role_id="512" to_role_id="4096"/>
@@ -48,6 +45,8 @@
 	<email key="EDITOR_DECISION_REVISIONS" can_edit="1" can_disable="0" from_role_id="512" to_role_id="65536"/>
 	<email key="EDITOR_DECISION_RESUBMIT" can_edit="1" can_disable="0" from_role_id="512" to_role_id="65536"/>
 	<email key="EDITOR_DECISION_DECLINE" can_edit="1" can_disable="0" from_role_id="512" to_role_id="65536"/>
+	<email key="EDITOR_DECISION_INITIAL_DECLINE" can_edit="1" can_disable="0" from_role_id="512" to_role_id="65536"/>
+	<email key="EDITOR_RECOMMENDATION" can_edit="1" can_disable="0" from_role_id="17" to_role_id="16"/>
 	<email key="COPYEDIT_REQUEST" can_edit="1" can_disable="1" from_role_id="512" to_role_id="8192"/>
 	<email key="LAYOUT_REQUEST" can_edit="1" can_disable="1" from_role_id="512" to_role_id="768"/>
 	<email key="LAYOUT_COMPLETE" can_edit="1" can_disable="1" from_role_id="768" to_role_id="512"/>
@@ -62,8 +61,5 @@
 	<email key="SUBSCRIPTION_RENEW_INDL" can_edit="1" can_disable="0" to_role_id="2097152"/>
 	<email key="SUBSCRIPTION_RENEW_INSTL" can_edit="1" can_disable="0" to_role_id="2097152"/>
 	<email key="CITATION_EDITOR_AUTHOR_QUERY" can_edit="1" can_disable="0"/>
-	<email key="GIFT_AVAILABLE" can_edit="1" can_disable="0"/>
-	<email key="GIFT_USER_REGISTER" can_edit="1" can_disable="0"/>
-	<email key="GIFT_USER_LOGIN" can_edit="1" can_disable="0"/>
 	<email key="REVISED_VERSION_NOTIFY" can_edit="1" can_disable="0" to_role_id="512"/>
 </emails>

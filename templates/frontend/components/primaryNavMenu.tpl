@@ -1,8 +1,8 @@
 {**
  * templates/frontend/components/primaryNavMenu.tpl
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Primary navigation menu list for OJS
@@ -32,7 +32,7 @@
 			</li>
 		{/if}
 
-		<li aria-haspopup="true" aria-expanded="false">
+		<li>
 			<a href="{url router=$smarty.const.ROUTE_PAGE page="about"}">
 				{translate key="navigation.about"}
 			</a>
@@ -42,7 +42,7 @@
 						{translate key="about.aboutContext"}
 					</a>
 				</li>
-				{if $currentJournal->getLocalizedSetting('masthead')}
+				{if $currentJournal->getLocalizedSetting('editorialTeam')}
 					<li>
 						<a href="{url router=$smarty.const.ROUTE_PAGE page="about" op="editorialTeam"}">
 							{translate key="about.editorialTeam"}

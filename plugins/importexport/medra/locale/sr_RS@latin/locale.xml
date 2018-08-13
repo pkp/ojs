@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/importexport/medra/locale/sr_RS@latin/locale.xml
+  *
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Serbian_(sr_RS)
+  * Localization strings
+  * 
+  -->
+ 
+<locale name="sr_RS@latin" full_name="Srpski">
+	<message key="plugins.importexport.medra.displayName">mEDRA Export/Registration dodatak</message>
+	<message key="plugins.importexport.medra.description">Izvezite metapodatke jedinice, članka ili prikaza u Onix za DOI (O4DOI) format i registrujte DOI-e u mEDRA agenciji.</message>
+	<message key="plugins.importexport.medra.intro"><![CDATA[Ako želite da registrujete DOI-e u mEDRA, pratite uputstva na
+		<a href="http://www.medra.org/en/guide.htm" target="_blank">mEDRA stranici</a>
+		da biste dobili korisničko ime i lozinku. Ukoliko nemate korisničko ime i lozinku i dalje ćete biti u mogućnosti da izvezete u mEDRA XML format (Onix za DOI)
+		ali ne možete da registrujete vaše DOI-e sa mEDRA iz OJS-a. 
+		Lozinka će biti sačuvana kao tekst, bez enkripcije u skladu sa potrebama mEDRA servisa.]]></message>
+
+	<message key="plugins.importexport.medra.settings.form.description">Podesite mEDRA dodatak:</message>
+	<message key="plugins.importexport.medra.settings.form.username">Korisničko ime</message>
+	<message key="plugins.importexport.medra.settings.form.usernameRequired">Unesite mEDRA korisničko ime.</message>
+	<message key="plugins.importexport.medra.settings.form.registrantName">Ime institucije registrovane kod mEDRA</message>	
+	<message key="plugins.importexport.medra.settings.form.registrantNameRequired">Unesite ime institucije.</message>
+	<message key="plugins.importexport.medra.settings.form.fromFields">Osoba koja može biti kontaktirana u slučaju potrebe:</message>
+	<message key="plugins.importexport.medra.settings.form.fromCompany">Institucija</message>
+	<message key="plugins.importexport.medra.settings.form.fromCompanyRequired">Unesite instituciju koja je tehnički odgovorna za izvoz DOI podataka (npr. institucija gde je hostovan server).</message>
+	<message key="plugins.importexport.medra.settings.form.fromName">Kontakt osoba</message>
+	<message key="plugins.importexport.medra.settings.form.fromNameRequired">Unesite tehničku kontakt osobu.</message>
+	<message key="plugins.importexport.medra.settings.form.fromEmail">Imejl</message>
+	<message key="plugins.importexport.medra.settings.form.fromEmailRequired">Unesite ispravnu imejl adresu tehničkog kontakta.</message>
+	<message key="plugins.importexport.medra.settings.form.publicationCountry">Odaberite zemlju.</message>
+	<message key="plugins.importexport.medra.settings.form.exportIssuesAs"><![CDATA[Odaberite da li želite da jedinicu izvozite kao <a href="http://www.medra.org/en/metadata_td.htm" target="_blank">'radove' ili 'manifestacije'</a>.]]></message>
+	<message key="plugins.importexport.medra.settings.form.work">rad</message>	
+	<message key="plugins.importexport.medra.settings.form.manifestation">manifestacija</message>
+	<message key="plugins.importexport.medra.workOrProduct"><![CDATA[NAPOMENA: DOI-i dodeljeni člancima biće izvezeni u  mEDRA kao <a href="http://www.medra.org/en/metadata_td.htm" target="_blank">'radovi'</a>. DOI-i dodeljeni prikazima biće izvezeni kao<a href="http://www.medra.org/en/metadata_td.htm" target="_blank">'manifestacije'</a>.]]></message>
+	<message key="plugins.importexport.medra.cliUsage">Korišćenje: 
+{$scriptName} {$pluginName} export xmlFileName journal_path {issues|articles|galleys} objectId1 [objectId2] ...
+{$scriptName} {$pluginName} register journal_path {issues|articles|galleys} objectId1 [objectId2] ...</message>
+	<message key="plugins.importexport.medra.settings.form.exportIssuesAs.label">Izvezi jedinicu kao</message>
+	<message key="plugins.importexport.medra.settings.form.automaticRegistration.description">OJS će automatski registrovati dedeljene DOI-je u mEDRA. Ovo će potrajati neko vreme nakon procesa objavljivanja. U svakom momentu možete proveriti neregistrovane DOI-je.</message>
+	<message key="plugins.importexport.medra.settings.form.testMode.description">Koristite mEDRA test API (test okruženje) za registraciju DOI-ja. Ne zaboravite da uklonite ovo u proizvodnom okruženju.</message>
+	<message key="plugins.importexport.medra.senderTask.name">mEDRA zadatak za automatsku registraciju</message>
+</locale>

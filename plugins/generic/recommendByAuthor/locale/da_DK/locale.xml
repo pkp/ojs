@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/recommendByAuthor/locale/da_DK/locale.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
+  * Localization strings.
+  -->
+
+<locale name="da_DK" full_name="Dansk">
+	<message key="plugins.generic.recommendByAuthor.displayName">Anbefal artikler af forfatter</message>
+	<message key="plugins.generic.recommendByAuthor.description">Denne plug-in indsætter en fortegnelse over artikler af samme forfatter på artiklens resuméside.</message>
+	<message key="plugins.generic.recommendByAuthor.heading">Mest læste artikler af samme forfatter(e)</message>
+	<message key="plugins.generic.recommendByAuthor.noMetric">Bemærk: Denne plug-in kræver mindst en aktiveret statistik-rapport-plug-in. Hvis dine statistiske plug-ins indeholder mere end en enhed, skal du også vælge en normalenhed på administratorens og/eller tidsskriftschefens indstillingssider.</message>
+</locale>

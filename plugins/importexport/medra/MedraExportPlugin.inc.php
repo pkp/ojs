@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/medra/MedraExportPlugin.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class MedraExportPlugin
@@ -22,12 +22,6 @@ define('O4DOI_ARTICLE_AS_WORK', 0x03);
 define('O4DOI_ARTICLE_AS_MANIFESTATION', 0x04);
 
 class MedraExportPlugin extends DOIPubIdExportPlugin {
-	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 
 	/**
 	 * @see Plugin::getName()

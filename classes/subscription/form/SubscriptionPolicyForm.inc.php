@@ -3,8 +3,8 @@
 /**
  * @file classes/subscription/form/SubscriptionPolicyForm.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SubscriptionPolicyForm
@@ -13,15 +13,15 @@
  * @brief Form for managers to setup subscription policies.
  */
 
-define('SUBSCRIPTION_OPEN_ACCESS_DELAY_MIN', '0');
-define('SUBSCRIPTION_OPEN_ACCESS_DELAY_MAX', '24');
+define('SUBSCRIPTION_OPEN_ACCESS_DELAY_MIN', '1');
+define('SUBSCRIPTION_OPEN_ACCESS_DELAY_MAX', '60');
 define('SUBSCRIPTION_EXPIRY_REMINDER_BEFORE_MONTHS_MIN', '1');
 define('SUBSCRIPTION_EXPIRY_REMINDER_BEFORE_MONTHS_MAX', '12');
-define('SUBSCRIPTION_EXPIRY_REMINDER_BEFORE_WEEKS_MIN', '0');
+define('SUBSCRIPTION_EXPIRY_REMINDER_BEFORE_WEEKS_MIN', '1');
 define('SUBSCRIPTION_EXPIRY_REMINDER_BEFORE_WEEKS_MAX', '3');
 define('SUBSCRIPTION_EXPIRY_REMINDER_AFTER_MONTHS_MIN', '1');
 define('SUBSCRIPTION_EXPIRY_REMINDER_AFTER_MONTHS_MAX', '12');
-define('SUBSCRIPTION_EXPIRY_REMINDER_AFTER_WEEKS_MIN', '0');
+define('SUBSCRIPTION_EXPIRY_REMINDER_AFTER_WEEKS_MIN', '1');
 define('SUBSCRIPTION_EXPIRY_REMINDER_AFTER_WEEKS_MAX', '3');
 
 import('lib.pkp.classes.form.Form');
@@ -47,28 +47,34 @@ class SubscriptionPolicyForm extends Form {
 	 * Constructor
 	 */
 	function __construct() {
+		AppLocale::requireComponents(LOCALE_COMPONENT_APP_MANAGER);
 
+		$this->validDuration = array(0 => __('common.disabled'));
 		for ($i=SUBSCRIPTION_OPEN_ACCESS_DELAY_MIN; $i<=SUBSCRIPTION_OPEN_ACCESS_DELAY_MAX; $i++) {
-			$this->validDuration[$i] = $i;
+			$this->validDuration[$i] = __('manager.subscriptionPolicies.xMonths', array('x' => $i));
 		}
 
+		$this->validNumMonthsBeforeExpiry = array(0 => __('common.disabled'));
 		for ($i=SUBSCRIPTION_EXPIRY_REMINDER_BEFORE_MONTHS_MIN; $i<=SUBSCRIPTION_EXPIRY_REMINDER_BEFORE_MONTHS_MAX; $i++) {
-			$this->validNumMonthsBeforeExpiry[$i] = $i;
+			$this->validNumMonthsBeforeExpiry[$i] = __('manager.subscriptionPolicies.xMonths', array('x' => $i));
 		}
 
+		$this->validNumWeeksBeforeExpiry = array(0 => __('common.disabled'));
 		for ($i=SUBSCRIPTION_EXPIRY_REMINDER_BEFORE_WEEKS_MIN; $i<=SUBSCRIPTION_EXPIRY_REMINDER_BEFORE_WEEKS_MAX; $i++) {
-			$this->validNumWeeksBeforeExpiry[$i] = $i;
+			$this->validNumWeeksBeforeExpiry[$i] = __('manager.subscriptionPolicies.xWeeks', array('x' => $i));
 		}
 
+		$this->validNumMonthsAfterExpiry = array(0 => __('common.disabled'));
 		for ($i=SUBSCRIPTION_EXPIRY_REMINDER_AFTER_MONTHS_MIN; $i<=SUBSCRIPTION_EXPIRY_REMINDER_AFTER_MONTHS_MAX; $i++) {
-			$this->validNumMonthsAfterExpiry[$i] = $i;
+			$this->validNumMonthsAfterExpiry[$i] = __('manager.subscriptionPolicies.xMonths', array('x' => $i));
 		}
 
+		$this->validNumWeeksAfterExpiry = array(0 => __('common.disabled'));
 		for ($i=SUBSCRIPTION_EXPIRY_REMINDER_AFTER_WEEKS_MIN; $i<=SUBSCRIPTION_EXPIRY_REMINDER_AFTER_WEEKS_MAX; $i++) {
-			$this->validNumWeeksAfterExpiry[$i] = $i;
+			$this->validNumWeeksAfterExpiry[$i] = __('manager.subscriptionPolicies.xWeeks', array('x' => $i));
 		}
 
-		parent::__construct('subscription/subscriptionPolicyForm.tpl');
+		parent::__construct('payments/subscriptionPolicyForm.tpl');
 
 		// If provided, subscription contact email is valid
 		$this->addCheck(new FormValidatorEmail($this, 'subscriptionEmail', 'optional', 'manager.subscriptionPolicies.subscriptionContactEmailValid'));
@@ -92,17 +98,23 @@ class SubscriptionPolicyForm extends Form {
 	}
 
 	/**
-	 * Display the form.
+	 * Fetch the form.
+	 * @param $request PKPRequest
 	 */
-	function display() {
+	function fetch($request) {
+		$paymentManager = Application::getPaymentManager($request->getJournal());
 		$templateMgr = TemplateManager::getManager();
-		$templateMgr->assign('validDuration', $this->validDuration);
-		$templateMgr->assign('validNumMonthsBeforeExpiry', $this->validNumMonthsBeforeExpiry);
-		$templateMgr->assign('validNumWeeksBeforeExpiry', $this->validNumWeeksBeforeExpiry);
-		$templateMgr->assign('validNumMonthsAfterExpiry', $this->validNumMonthsAfterExpiry);
-		$templateMgr->assign('validNumWeeksAfterExpiry', $this->validNumWeeksAfterExpiry);
+		$templateMgr->assign(array(
+			'validDuration' => $this->validDuration,
+			'validNumMonthsBeforeExpiry' => $this->validNumMonthsBeforeExpiry,
+			'validNumWeeksBeforeExpiry' => $this->validNumWeeksBeforeExpiry,
+			'validNumMonthsAfterExpiry' => $this->validNumMonthsAfterExpiry,
+			'validNumWeeksAfterExpiry' => $this->validNumWeeksAfterExpiry,
+			'scheduledTasksEnabled' => (boolean) Config::getVar('general', 'scheduled_tasks'),
+			'paymentsEnabled' => $paymentManager->isConfigured(),
+		));
 
-		parent::display();
+		return parent::fetch($request);
 	}
 
 	/**
@@ -119,7 +131,6 @@ class SubscriptionPolicyForm extends Form {
 			'subscriptionPhone' => $journalSettingsDao->getSetting($journalId, 'subscriptionPhone'),
 			'subscriptionMailingAddress' => $journalSettingsDao->getSetting($journalId, 'subscriptionMailingAddress'),
 			'subscriptionAdditionalInformation' => $journalSettingsDao->getSetting($journalId, 'subscriptionAdditionalInformation'),
-			'enableDelayedOpenAccess' => $journalSettingsDao->getSetting($journalId, 'enableDelayedOpenAccess'),
 			'delayedOpenAccessDuration' => $journalSettingsDao->getSetting($journalId, 'delayedOpenAccessDuration'),
 			'delayedOpenAccessPolicy' => $journalSettingsDao->getSetting($journalId, 'delayedOpenAccessPolicy'),
 			'enableOpenAccessNotification' => $journalSettingsDao->getSetting($journalId, 'enableOpenAccessNotification'),
@@ -130,13 +141,9 @@ class SubscriptionPolicyForm extends Form {
 			'enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional' => $journalSettingsDao->getSetting($journalId, 'enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional'),
 			'enableSubscriptionOnlinePaymentNotificationRenewIndividual' => $journalSettingsDao->getSetting($journalId, 'enableSubscriptionOnlinePaymentNotificationRenewIndividual'),
 			'enableSubscriptionOnlinePaymentNotificationRenewInstitutional' => $journalSettingsDao->getSetting($journalId, 'enableSubscriptionOnlinePaymentNotificationRenewInstitutional'),
-			'enableSubscriptionExpiryReminderBeforeMonths' => $journalSettingsDao->getSetting($journalId, 'enableSubscriptionExpiryReminderBeforeMonths'),
 			'numMonthsBeforeSubscriptionExpiryReminder' => $journalSettingsDao->getSetting($journalId, 'numMonthsBeforeSubscriptionExpiryReminder'),
-			'enableSubscriptionExpiryReminderBeforeWeeks' => $journalSettingsDao->getSetting($journalId, 'enableSubscriptionExpiryReminderBeforeWeeks'),
 			'numWeeksBeforeSubscriptionExpiryReminder' => $journalSettingsDao->getSetting($journalId, 'numWeeksBeforeSubscriptionExpiryReminder'),
-			'enableSubscriptionExpiryReminderAfterMonths' => $journalSettingsDao->getSetting($journalId, 'enableSubscriptionExpiryReminderAfterMonths'),
 			'numMonthsAfterSubscriptionExpiryReminder' => $journalSettingsDao->getSetting($journalId, 'numMonthsAfterSubscriptionExpiryReminder'),
-			'enableSubscriptionExpiryReminderAfterWeeks' => $journalSettingsDao->getSetting($journalId, 'enableSubscriptionExpiryReminderAfterWeeks'),
 			'numWeeksAfterSubscriptionExpiryReminder' => $journalSettingsDao->getSetting($journalId, 'numWeeksAfterSubscriptionExpiryReminder')
 		);
 	}
@@ -145,32 +152,14 @@ class SubscriptionPolicyForm extends Form {
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-		$this->readUserVars(array('subscriptionName', 'subscriptionEmail', 'subscriptionPhone', 'subscriptionMailingAddress', 'subscriptionAdditionalInformation', 'enableDelayedOpenAccess', 'delayedOpenAccessDuration', 'delayedOpenAccessPolicy', 'enableOpenAccessNotification', 'enableAuthorSelfArchive', 'authorSelfArchivePolicy', 'subscriptionExpiryPartial', 'enableSubscriptionOnlinePaymentNotificationPurchaseIndividual', 'enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional', 'enableSubscriptionOnlinePaymentNotificationRenewIndividual', 'enableSubscriptionOnlinePaymentNotificationRenewInstitutional', 'enableSubscriptionExpiryReminderBeforeMonths', 'numMonthsBeforeSubscriptionExpiryReminder', 'enableSubscriptionExpiryReminderBeforeWeeks', 'numWeeksBeforeSubscriptionExpiryReminder', 'enableSubscriptionExpiryReminderAfterWeeks', 'numWeeksAfterSubscriptionExpiryReminder', 'enableSubscriptionExpiryReminderAfterMonths', 'numMonthsAfterSubscriptionExpiryReminder'));
+		$this->readUserVars(array('subscriptionName', 'subscriptionEmail', 'subscriptionPhone', 'subscriptionMailingAddress', 'subscriptionAdditionalInformation', 'delayedOpenAccessDuration', 'delayedOpenAccessPolicy', 'enableOpenAccessNotification', 'enableAuthorSelfArchive', 'authorSelfArchivePolicy', 'subscriptionExpiryPartial', 'enableSubscriptionOnlinePaymentNotificationPurchaseIndividual', 'enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional', 'enableSubscriptionOnlinePaymentNotificationRenewIndividual', 'enableSubscriptionOnlinePaymentNotificationRenewInstitutional', 'numMonthsBeforeSubscriptionExpiryReminder', 'numWeeksBeforeSubscriptionExpiryReminder', 'numWeeksAfterSubscriptionExpiryReminder', 'numMonthsAfterSubscriptionExpiryReminder'));
 
-		// If delayed open access selected, ensure a valid duration is provided
-		if ($this->_data['enableDelayedOpenAccess'] == 1) {
-			$this->addCheck(new FormValidatorInSet($this, 'delayedOpenAccessDuration', 'required', 'manager.subscriptionPolicies.delayedOpenAccessDurationValid', array_keys($this->validDuration)));
-		}
+		$this->addCheck(new FormValidatorInSet($this, 'delayedOpenAccessDuration', 'required', 'manager.subscriptionPolicies.delayedOpenAccessDurationValid', array_keys($this->validDuration)));
 
-		// If expiry reminder before months is selected, ensure a valid month value is provided
-		if ($this->_data['enableSubscriptionExpiryReminderBeforeMonths'] == 1) {
-			$this->addCheck(new FormValidatorInSet($this, 'numMonthsBeforeSubscriptionExpiryReminder', 'required', 'manager.subscriptionPolicies.numMonthsBeforeSubscriptionExpiryReminderValid', array_keys($this->validNumMonthsBeforeExpiry)));
-		}
-
-		// If expiry reminder before weeks is selected, ensure a valid week value is provided
-		if ($this->_data['enableSubscriptionExpiryReminderBeforeWeeks'] == 1) {
-			$this->addCheck(new FormValidatorInSet($this, 'numWeeksBeforeSubscriptionExpiryReminder', 'required', 'manager.subscriptionPolicies.numWeeksBeforeSubscriptionExpiryReminderValid', array_keys($this->validNumWeeksBeforeExpiry)));
-		}
-
-		// If expiry reminder after months is selected, ensure a valid month value is provided
-		if ($this->_data['enableSubscriptionExpiryReminderAfterMonths'] == 1) {
-			$this->addCheck(new FormValidatorInSet($this, 'numMonthsAfterSubscriptionExpiryReminder', 'required', 'manager.subscriptionPolicies.numMonthsAfterSubscriptionExpiryReminderValid', array_keys($this->validNumMonthsAfterExpiry)));
-		}
-
-		// If expiry reminder after weeks is selected, ensure a valid week value is provided
-		if ($this->_data['enableSubscriptionExpiryReminderAfterWeeks'] == 1) {
-			$this->addCheck(new FormValidatorInSet($this, 'numWeeksAfterSubscriptionExpiryReminder', 'required', 'manager.subscriptionPolicies.numWeeksAfterSubscriptionExpiryReminderValid', array_keys($this->validNumWeeksAfterExpiry)));
-		}
+		$this->addCheck(new FormValidatorInSet($this, 'numMonthsBeforeSubscriptionExpiryReminder', 'required', 'manager.subscriptionPolicies.numMonthsBeforeSubscriptionExpiryReminderValid', array_keys($this->validNumMonthsBeforeExpiry)));
+		$this->addCheck(new FormValidatorInSet($this, 'numWeeksBeforeSubscriptionExpiryReminder', 'required', 'manager.subscriptionPolicies.numWeeksBeforeSubscriptionExpiryReminderValid', array_keys($this->validNumWeeksBeforeExpiry)));
+		$this->addCheck(new FormValidatorInSet($this, 'numMonthsAfterSubscriptionExpiryReminder', 'required', 'manager.subscriptionPolicies.numMonthsAfterSubscriptionExpiryReminderValid', array_keys($this->validNumMonthsAfterExpiry)));
+		$this->addCheck(new FormValidatorInSet($this, 'numWeeksAfterSubscriptionExpiryReminder', 'required', 'manager.subscriptionPolicies.numWeeksAfterSubscriptionExpiryReminderValid', array_keys($this->validNumWeeksAfterExpiry)));
 	}
 
 	/**
@@ -194,7 +183,6 @@ class SubscriptionPolicyForm extends Form {
 		$journalSettingsDao->updateSetting($journalId, 'subscriptionPhone', $this->getData('subscriptionPhone'), 'string');
 		$journalSettingsDao->updateSetting($journalId, 'subscriptionMailingAddress', $this->getData('subscriptionMailingAddress'), 'string');
 		$journalSettingsDao->updateSetting($journalId, 'subscriptionAdditionalInformation', $this->getData('subscriptionAdditionalInformation'), 'string', true); // Localized
-		$journalSettingsDao->updateSetting($journalId, 'enableDelayedOpenAccess', $this->getData('enableDelayedOpenAccess') == null ? 0 : $this->getData('enableDelayedOpenAccess'), 'bool');
 		$journalSettingsDao->updateSetting($journalId, 'delayedOpenAccessDuration', $this->getData('delayedOpenAccessDuration'), 'int');
 		$journalSettingsDao->updateSetting($journalId, 'delayedOpenAccessPolicy', $this->getData('delayedOpenAccessPolicy'), 'string', true); // Localized
 		$journalSettingsDao->updateSetting($journalId, 'enableOpenAccessNotification', $this->getData('enableOpenAccessNotification') == null ? 0 : $this->getData('enableOpenAccessNotification'), 'bool');
@@ -205,13 +193,9 @@ class SubscriptionPolicyForm extends Form {
 		$journalSettingsDao->updateSetting($journalId, 'enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional', $this->getData('enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional') == null ? 0 : $this->getData('enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional'), 'bool');
 		$journalSettingsDao->updateSetting($journalId, 'enableSubscriptionOnlinePaymentNotificationRenewIndividual', $this->getData('enableSubscriptionOnlinePaymentNotificationRenewIndividual') == null ? 0 : $this->getData('enableSubscriptionOnlinePaymentNotificationRenewIndividual'), 'bool');
 		$journalSettingsDao->updateSetting($journalId, 'enableSubscriptionOnlinePaymentNotificationRenewInstitutional', $this->getData('enableSubscriptionOnlinePaymentNotificationRenewInstitutional') == null ? 0 : $this->getData('enableSubscriptionOnlinePaymentNotificationRenewInstitutional'), 'bool');
-		$journalSettingsDao->updateSetting($journalId, 'enableSubscriptionExpiryReminderBeforeMonths', $this->getData('enableSubscriptionExpiryReminderBeforeMonths') == null ? 0 : $this->getData('enableSubscriptionExpiryReminderBeforeMonths'), 'bool');
 		$journalSettingsDao->updateSetting($journalId, 'numMonthsBeforeSubscriptionExpiryReminder', $this->getData('numMonthsBeforeSubscriptionExpiryReminder'), 'int');
-		$journalSettingsDao->updateSetting($journalId, 'enableSubscriptionExpiryReminderBeforeWeeks', $this->getData('enableSubscriptionExpiryReminderBeforeWeeks') == null ? 0 : $this->getData('enableSubscriptionExpiryReminderBeforeWeeks'), 'bool');
 		$journalSettingsDao->updateSetting($journalId, 'numWeeksBeforeSubscriptionExpiryReminder', $this->getData('numWeeksBeforeSubscriptionExpiryReminder'), 'int');
-		$journalSettingsDao->updateSetting($journalId, 'enableSubscriptionExpiryReminderAfterMonths', $this->getData('enableSubscriptionExpiryReminderAfterMonths') == null ? 0 : $this->getData('enableSubscriptionExpiryReminderAfterMonths'), 'bool');
 		$journalSettingsDao->updateSetting($journalId, 'numMonthsAfterSubscriptionExpiryReminder', $this->getData('numMonthsAfterSubscriptionExpiryReminder'), 'int');
-		$journalSettingsDao->updateSetting($journalId, 'enableSubscriptionExpiryReminderAfterWeeks', $this->getData('enableSubscriptionExpiryReminderAfterWeeks') == null ? 0 : $this->getData('enableSubscriptionExpiryReminderAfterWeeks'), 'bool');
 		$journalSettingsDao->updateSetting($journalId, 'numWeeksAfterSubscriptionExpiryReminder', $this->getData('numWeeksAfterSubscriptionExpiryReminder'), 'int');
 	}
 }

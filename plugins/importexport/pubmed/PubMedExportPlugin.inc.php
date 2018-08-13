@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/pubmed/PubMedExportPlugin.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2003-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class PubMedExportPlugin
@@ -17,13 +17,10 @@ import('lib.pkp.classes.plugins.ImportExportPlugin');
 
 class PubMedExportPlugin extends ImportExportPlugin {
 	/**
-	 * Called as a plugin is registered to the registry
-	 * @param $category String Name of category plugin was registered to
-	 * @return boolean True if plugin initialized successfully; if false,
-	 * 	the plugin will not be registered.
+	 * @copydoc Plugin::register()
 	 */
-	function register($category, $path) {
-		$success = parent::register($category, $path);
+	function register($category, $path, $mainContextId = null) {
+		$success = parent::register($category, $path, $mainContextId);
 		$this->addLocaleData();
 		return $success;
 	}
@@ -37,137 +34,155 @@ class PubMedExportPlugin extends ImportExportPlugin {
 		return 'PubMedExportPlugin';
 	}
 
+	/**
+	 * Get the display name.
+	 * @return string
+	 */
 	function getDisplayName() {
 		return __('plugins.importexport.pubmed.displayName');
 	}
 
+	/**
+	 * Get the display description.
+	 * @return string
+	 */
 	function getDescription() {
 		return __('plugins.importexport.pubmed.description');
 	}
 
+	/**
+	 * Display the plugin.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
 	function display($args, $request) {
-		$templateMgr = TemplateManager::getManager($request);
 		parent::display($args, $request);
-
-		$issueDao = DAORegistry::getDAO('IssueDAO');
-
+		$templateMgr = TemplateManager::getManager($request);
 		$journal = $request->getJournal();
-
 		switch (array_shift($args)) {
+			case 'index':
+			case '':
+				import('lib.pkp.controllers.list.submissions.SelectSubmissionsListHandler');
+				$exportSubmissionsListHandler = new SelectSubmissionsListHandler(array(
+					'title' => 'plugins.importexport.native.exportSubmissionsSelect',
+					'count' => 100,
+					'inputName' => 'selectedSubmissions[]',
+				));
+				$templateMgr->assign('exportSubmissionsListData', json_encode($exportSubmissionsListHandler->getConfig()));
+				$templateMgr->display($this->getTemplateResource('index.tpl'));
+				break;
+			case 'exportSubmissions':
+				$exportXml = $this->exportSubmissions(
+					(array) $request->getUserVar('selectedSubmissions'),
+					$request->getContext(),
+					$request->getUser()
+				);
+				import('lib.pkp.classes.file.FileManager');
+				$fileManager = new FileManager();
+				$exportFileName = $this->getExportFileName($this->getExportPath(), 'articles', $journal, '.xml');
+				$fileManager->writeFile($exportFileName, $exportXml);
+				$fileManager->downloadByPath($exportFileName);
+				$fileManager->deleteByPath($exportFileName);
+				break;
 			case 'exportIssues':
-				$issueIds = $request->getUserVar('issueId');
-				if (!isset($issueIds)) $issueIds = array();
-				$issues = array();
-				foreach ($issueIds as $issueId) {
-					$issue = $issueDao->getById($issueId);
-					if (!$issue) $request->redirect();
-					$issues[] = $issue;
-				}
-				$this->exportIssues($journal, $issues);
-				break;
-			case 'exportIssue':
-				$issueId = array_shift($args);
-				$issue = $issueDao->getById($issueId);
-				if (!$issue) $request->redirect();
-				$issues = array($issue);
-				$this->exportIssues($journal, $issues);
-				break;
-			case 'exportArticle':
-				$articleIds = array(array_shift($args));
-				$articleSearch = new ArticleSearch();
-				$result = $articleSearch->formatResults($articleIds);
-				$this->exportArticles($result);
-				break;
-			case 'exportArticles':
-				$articleIds = $request->getUserVar('articleId');
-				if (!isset($articleIds)) $articleIds = array();
-				$articleSearch = new ArticleSearch();
-				$results = $articleSearch->formatResults($articleIds);
-				$this->exportArticles($results);
-				break;
-			case 'issues':
-				// Display a list of issues for export
-				AppLocale::requireComponents(LOCALE_COMPONENT_APP_EDITOR);
-				$issueDao = DAORegistry::getDAO('IssueDAO');
-				$issues = $issueDao->getIssues($journal->getId(), Handler::getRangeInfo($this->getRequest(), 'issues'));
-
-				$templateMgr->assign('issues', $issues);
-				$templateMgr->display($this->getTemplatePath() . 'issues.tpl');
-				break;
-			case 'articles':
-				// Display a list of articles for export
-				$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-				$rangeInfo = Handler::getRangeInfo($this->getRequest(), 'articles');
-				$articleIds = $publishedArticleDao->getPublishedArticleIdsByJournal($journal->getId(), false);
-				$totalArticles = count($articleIds);
-				if ($rangeInfo->isValid()) $articleIds = array_slice($articleIds, $rangeInfo->getCount() * ($rangeInfo->getPage()-1), $rangeInfo->getCount());
-				import('lib.pkp.classes.core.VirtualArrayIterator');
-				$articleSearch = new ArticleSearch();
-				$iterator = new VirtualArrayIterator($articleSearch->formatResults($articleIds), $totalArticles, $rangeInfo->getPage(), $rangeInfo->getCount());
-				$templateMgr->assign('articles', $iterator);
-				$templateMgr->display($this->getTemplatePath() . 'articles.tpl');
+				$exportXml = $this->exportIssues(
+					(array) $request->getUserVar('selectedIssues'),
+					$request->getContext(),
+					$request->getUser()
+				);
+				import('lib.pkp.classes.file.FileManager');
+				$fileManager = new FileManager();
+				$exportFileName = $this->getExportFileName($this->getExportPath(), 'issues', $journal, '.xml');
+				$fileManager->writeFile($exportFileName, $exportXml);
+				$fileManager->downloadByPath($exportFileName);
+				$fileManager->deleteByPath($exportFileName);
 				break;
 			default:
-				$templateMgr->display($this->getTemplatePath() . 'index.tpl');
+				$dispatcher = $request->getDispatcher();
+				$dispatcher->handle404();
 		}
 	}
 
-	function exportArticles(&$results, $outputFile = null) {
-		$this->import('PubMedExportDom');
-		$doc =& PubMedExportDom::generatePubMedDom();
-		$articleSetNode =& PubMedExportDom::generateArticleSetDom($doc);
-
-		foreach ($results as $result) {
-			$journal =& $result['journal'];
-			$issue =& $result['issue'];
-			$section =& $result['section'];
-			$article =& $result['publishedArticle'];
-
-			$articleNode =& PubMedExportDom::generateArticleDom($doc, $journal, $issue, $section, $article);
-			XMLCustomWriter::appendChild($articleSetNode, $articleNode);
-		}
-
-		if (!empty($outputFile)) {
-			if (($h = fopen($outputFile, 'w'))===false) return false;
-			fwrite($h, XMLCustomWriter::getXML($doc));
-			fclose($h);
-		} else {
-			header("Content-Type: application/xml");
-			header("Cache-Control: private");
-			header("Content-Disposition: attachment; filename=\"pubmed.xml\"");
-			XMLCustomWriter::printXML($doc);
-		}
-		return true;
+	/**
+	 * @copydoc ImportExportPlugin::getPluginSettingsPrefix()
+	 */
+	function getPluginSettingsPrefix() {
+		return 'pubmed';
 	}
 
-	function exportIssues(&$journal, &$issues, $outputFile = null) {
-		$this->import('PubMedExportDom');
-		$doc =& PubMedExportDom::generatePubMedDom();
-		$articleSetNode =& PubMedExportDom::generateArticleSetDom($doc);
+	function exportSubmissions($submissionIds, $context, $user) {
+		$submissionDao = Application::getSubmissionDAO();
+		$xml = '';
+		$filterDao = DAORegistry::getDAO('FilterDAO');
+		$pubmedExportFilters = $filterDao->getObjectsByGroup('article=>pubmed-xml');
+		assert(count($pubmedExportFilters) == 1); // Assert only a single serialization filter
+		$exportFilter = array_shift($pubmedExportFilters);
+		$submissions = array();
+		foreach ($submissionIds as $submissionId) {
+			$submission = $submissionDao->getById($submissionId, $context->getId());
+			if ($submission) $submissions[] = $submission;
+		}
+		libxml_use_internal_errors(true);
+		$submissionXml = $exportFilter->execute($submissions, true);
+		$xml = $submissionXml->saveXml();
+		$errors = array_filter(libxml_get_errors(), function($a) {
+			return $a->level == LIBXML_ERR_ERROR || $a->level == LIBXML_ERR_FATAL;
+		});
+		if (!empty($errors)) {
+			$charset = Config::getVar('i18n', 'client_charset');
+			header('Content-type: text/html; charset=' . $charset);
+			echo '<html><body>';
+			$this->displayXMLValidationErrors($errors, $xml);
+			echo '</body></html>';
+			fatalError(__('plugins.importexport.common.error.validation'));
+		}
+		return $xml;
+	}
 
-		$sectionDao = DAORegistry::getDAO('SectionDAO');
+	/**
+	 * Get the XML for a set of issues.
+	 * @param $issueIds array Array of issue IDs
+	 * @param $context Context
+	 * @param $user User
+	 * @return string XML contents representing the supplied issue IDs.
+	 */
+	function exportIssues($issueIds, $context, $user) {
+		$issueDao = DAORegistry::getDAO('IssueDAO');
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-
-		foreach ($issues as $issue) {
-			foreach ($sectionDao->getByIssueId($issue->getId()) as $section) {
-				foreach ($publishedArticleDao->getPublishedArticlesBySectionId($section->getId(), $issue->getId()) as $article) {
-					$articleNode = PubMedExportDom::generateArticleDom($doc, $journal, $issue, $section, $article);
-					XMLCustomWriter::appendChild($articleSetNode, $articleNode);
-				}
+		$submissionIds = array();
+		foreach ($issueIds as $issueId) {
+			$publishedArticles = $publishedArticleDao->getPublishedArticles($issueId);
+			foreach ($publishedArticles as $publishedArticle) {
+				$submissionIds[] = $publishedArticle->getId();
 			}
 		}
 
-		if (!empty($outputFile)) {
-			if (($h = fopen($outputFile, 'w'))===false) return false;
-			fwrite($h, XMLCustomWriter::getXML($doc));
-			fclose($h);
-		} else {
-			header("Content-Type: application/xml");
-			header("Cache-Control: private");
-			header("Content-Disposition: attachment; filename=\"pubmed.xml\"");
-			XMLCustomWriter::printXML($doc);
+		$submissionDao = Application::getSubmissionDAO();
+		$xml = '';
+		$filterDao = DAORegistry::getDAO('FilterDAO');
+		$pubmedExportFilters = $filterDao->getObjectsByGroup('article=>pubmed-xml');
+		assert(count($pubmedExportFilters) == 1); // Assert only a single serialization filter
+		$exportFilter = array_shift($pubmedExportFilters);
+		$submissions = array();
+		foreach ($submissionIds as $submissionId) {
+			$submission = $submissionDao->getById($submissionId, $context->getId());
+			if ($submission) $submissions[] = $submission;
 		}
-		return true;
+		libxml_use_internal_errors(true);
+		$submissionXml = $exportFilter->execute($submissions, true);
+		$xml = $submissionXml->saveXml();
+		$errors = array_filter(libxml_get_errors(), function($a) {
+			return $a->level == LIBXML_ERR_ERROR || $a->level == LIBXML_ERR_FATAL;
+		});
+		if (!empty($errors)) {
+			$charset = Config::getVar('i18n', 'client_charset');
+			header('Content-type: text/html; charset=' . $charset);
+			echo '<html><body>';
+			$this->displayXMLValidationErrors($errors, $xml);
+			echo '</body></html>';
+			fatalError(__('plugins.importexport.common.error.validation'));
+		}
+		return $xml;
 	}
 
 	/**

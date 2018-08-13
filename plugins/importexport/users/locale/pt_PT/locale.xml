@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Portuguese_(pt_PT)
+  * Localization strings.
+  -->
+
+<locale name="pt_PT" full_name="Português (Portugal)">
+	<message key="plugins.importexport.users.displayName">Plugin Utilizadores XML</message>
+	<message key="plugins.importexport.users.description">Importar e exportar utilizadores</message>
+	<message key="plugins.importexport.users.cliUsage">Modo de utilização: {$scriptName} {$pluginName} [command] ...
+Commands:
+	import [xmlFileName] [journal_path]
+	export [xmlFileName] [journal_path]
+	export [xmlFileName] [journal_path] [userId1] [userId2] ...</message>
+	<message key="plugins.importexport.users.cliUsage.examples">Exemplos:
+	Import users into myJournal from myImportFile.xml:
+	{$scriptName} {$pluginName} import myImportFile.xml myJournal
+
+	Export all users from myJournal:
+	{$scriptName} {$pluginName} export myExportFile.xml myJournal
+
+	Export users specified by their ID:
+	{$scriptName} {$pluginName} export myExportFile.xml myJournal 1 2</message>
+	<message key="plugins.importexport.users.import.importUsers">Importar Utilizadores</message>
+	<message key="plugins.importexport.users.import.instructions"><![CDATA[Seleccione um ficheiro de dados XML contendo informações sobre o utilizador para importar para esta revista. Consulte a ajuda da revista para obter detalhes sobre o formato deste ficheiro. <br /> <br /> Note que, se o ficheiro importado contiver quaisquer nomes de utilizadores ou endereços de e-mail que já existam no sistema, os dados do utilizador para estes utilizadores não serão importados e quaisquer novos papéis a serem criados serão atribuídos aos utilizadores existentes.]]></message>
+	<message key="plugins.importexport.users.import.dataFile">Ficheiro de dados do utilizador</message>
+	<message key="plugins.importexport.users.import.sendNotify">Enviar um e-mail de notificação para cada utilizador importado contendo o nome de utilizador e a senha.</message>
+	<message key="plugins.importexport.users.import.continueOnError">Continuar importando outros utilizadores se ocorrer um erro.</message>
+	<message key="plugins.importexport.users.import.usersWereImported">Os seguintes utilizadores foram importados com sucesso para a revista.</message>
+	<message key="plugins.importexport.users.import.errorsOccurred">Ocorreram erros durante a importação</message>
+	<message key="plugins.importexport.users.import.confirmUsers">Confirme que estes são os utilizadores que gostaria de importar para a revista</message>
+	<message key="plugins.importexport.users.import.warning">Aviso</message>
+	<message key="plugins.importexport.users.import.encryptionMismatch">Não é possível usar senhas com {$importHash}; O OJS está configurado para usar {$ojsHash}. Se continuar, tem de restabelecer as senhas dos utilizadores importados.</message>
+	<message key="plugins.importexport.users.unknownPress">Foi especificado um caminho "{$journalPath}" desconhecido da revista.</message>
+	<message key="plugins.importexport.users.export.exportUsers">Exportar Utilizadores</message>
+	<message key="plugins.importexport.users.export.exportByRole">Exportar por Papel</message>
+	<message key="plugins.importexport.users.export.exportAllUsers">Exportar Todos</message>
+	<message key="plugins.importexport.users.export.errorsOccurred">Ocorreram erros durante a exportação</message>
+	<message key="plugins.importexport.users.export.couldNotWriteFile">Não foi possível gravar no ficheiro "{$fileName}".</message>
+	<message key="plugins.importexport.users.importComplete">A importação foi concluída com sucesso. Utilizadores com nomes de utilizadores e endereços de e-mail que ainda não estão em uso foram importados, juntamente com os grupos de utilizadores que os acompanham.</message>
+	<message key="plugins.importexport.users.results">Resultados</message>
+	<message key="plugins.importexport.users.uploadFile">Faça o upload de um ficheiro em "Importar" para continuar.</message>
+</locale>

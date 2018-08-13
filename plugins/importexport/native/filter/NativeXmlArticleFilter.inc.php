@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/native/filter/NativeXmlArticleFilter.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2000-2017 John Willinsky
+ * Copyright (c) 2014-2018 Simon Fraser University
+ * Copyright (c) 2000-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class NativeXmlArticleFilter
@@ -52,6 +52,26 @@ class NativeXmlArticleFilter extends NativeXmlSubmissionFilter {
 	}
 
 	/**
+	 * Handle an Article import.
+	 * The Article must have a valid section in order to be imported
+	 * @param $node DOMElement
+	 */
+	function handleElement($node) {
+		$deployment = $this->getDeployment();
+		$context = $deployment->getContext();
+		$sectionAbbrev = $node->getAttribute('section_ref');
+		if ($sectionAbbrev !== '') {
+			$sectionDao = DAORegistry::getDAO('SectionDAO');
+			$section = $sectionDao->getByAbbrev($sectionAbbrev, $context->getId());
+			if (!$section) {
+				$deployment->addError(ASSOC_TYPE_SUBMISSION, NULL, __('plugins.importexport.native.error.unknownSection', array('param' => $sectionAbbrev)));
+			} else {
+				return parent::handleElement($node);
+			}
+		}
+	}
+
+	/**
 	 * @see Filter::process()
 	 * @param $document DOMDocument|string
 	 * @return array Array of imported documents
@@ -72,7 +92,7 @@ class NativeXmlArticleFilter extends NativeXmlSubmissionFilter {
 	}
 
 	/**
-	 * Populate the submission object from the node
+	 * Populate the submission object from the node, checking first for a valid section and published_date/issue relationship
 	 * @param $submission Submission
 	 * @param $node DOMElement
 	 * @return Submission
@@ -88,6 +108,14 @@ class NativeXmlArticleFilter extends NativeXmlSubmissionFilter {
 			} else {
 				$submission->setSectionId($section->getId());
 			}
+		}
+		// check if article is related to an issue, but has no published date
+		$datePublished = $node->getAttribute('date_published');
+		$issue = $deployment->getIssue();
+		$issue_identification = $node->getElementsByTagName('issue_identification');
+		if (!$datePublished && ($issue || $issue_identification->length)) {
+			$titleNodes = $node->getElementsByTagName('title');
+			$deployment->addError(ASSOC_TYPE_SUBMISSION, $submission->getId(), __('plugins.importexport.native.import.error.publishedDateMissing', array('articleTitle' => $titleNodes->item(0)->textContent)));
 		}
 
 		return parent::populateObject($submission, $node);
@@ -141,7 +169,7 @@ class NativeXmlArticleFilter extends NativeXmlSubmissionFilter {
 				break;
 			default:
 				$importClass=null; // Suppress scrutinizer warn
-				$deployment->addError(ASSOC_TYPE_SUBMISSION, $submission->getId(), __('plugins.importexport.common.error.unknownElement', array('param' => $elementName)));
+				$deployment->addWarning(ASSOC_TYPE_SUBMISSION, $submission->getId(), __('plugins.importexport.common.error.unknownElement', array('param' => $elementName)));
 		}
 		// Caps on class name for consistency with imports, whose filter
 		// group names are generated implicitly.
@@ -202,28 +230,26 @@ class NativeXmlArticleFilter extends NativeXmlSubmissionFilter {
 		$context = $deployment->getContext();
 		$submission = $deployment->getSubmission();
 		$vol = $num = $year = null;
-		$titles = $givenIssueIdentification = array();
+		$titles = array();
 		for ($n = $node->firstChild; $n !== null; $n=$n->nextSibling) {
 			if (is_a($n, 'DOMElement')) {
 				switch ($n->tagName) {
 					case 'volume':
 						$vol = $n->textContent;
-						$givenIssueIdentification[] = 'volue = ' .$vol .' ';
 						break;
 					case 'number':
 						$num = $n->textContent;
-						$givenIssueIdentification[] = 'number = ' .$num .' ';
 						break;
 					case 'year':
 						$year = $n->textContent;
-						$givenIssueIdentification[] = 'year = ' .$year .' ';
 						break;
 					case 'title':
 						list($locale, $value) = $this->parseLocalizedContent($n);
 						if (empty($locale)) $locale = $context->getPrimaryLocale();
 						$titles[$locale] = $value;
-						$givenIssueIdentification[] = 'title (' .$locale .') = ' .$value .' ';
 						break;
+					default:
+						$deployment->addWarning(ASSOC_TYPE_SUBMISSION, $submission->getId(), __('plugins.importexport.common.error.unknownElement', array('param' => $n->tagName)));
 				}
 			}
 		}
@@ -231,7 +257,7 @@ class NativeXmlArticleFilter extends NativeXmlSubmissionFilter {
 		$issue = null;
 		$issuesByIdentification = $issueDao->getIssuesByIdentification($context->getId(), $vol, $num, $year, $titles);
 		if ($issuesByIdentification->getCount() != 1) {
-			$deployment->addError(ASSOC_TYPE_SUBMISSION, $submission->getId(), __('plugins.importexport.native.import.error.issueIdentificationMatch', array('issueIdentification' => implode(',', $givenIssueIdentification))));
+			$deployment->addError(ASSOC_TYPE_SUBMISSION, $submission->getId(), __('plugins.importexport.native.import.error.issueIdentificationMatch', array('issueIdentification' => $node->ownerDocument->saveXML($node))));
 		} else {
 			$issue = $issuesByIdentification->next();
 		}

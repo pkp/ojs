@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/reports/counter/locale/no_NO/locale.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the no_NO (Norsk) locale.
+  *
+  -->
+ 
+<locale name="no_NO" full_name="Norsk">
+	<message key="plugins.reports.counter.description"><![CDATA[COUNTER-programutvidelsen gjør det mulig å registrere og <a href="http://www.projectcounter.org/about.html" target="_new">COUNTER</a>-rapportere trafikken på siden.]]></message>
+	<message key="plugins.reports.counter">COUNTER-statistikk</message>
+
+	<message key="plugins.reports.counter.1a.title">Tidsskrift-rapport 1 (R3): Fulltekst artikkelforespørsler per måned og tidsskrift</message>
+	<message key="plugins.reports.counter.1a.title1">Tidsskrift-rapport 1 (R3)</message>
+	<message key="plugins.reports.counter.1a.title2">Antall artikkelnedlastninger per måned og tidsskrift (År {$year})</message>
+	<message key="plugins.reports.counter.1a.dateRun">Kjørt dato:</message>
+	<message key="plugins.reports.counter.1a.publisher">Utgiver</message>
+	<message key="plugins.reports.counter.1a.platform">Plattform</message>
+	<message key="plugins.reports.counter.1a.printIssn">ISSN (trykt utgave)</message>
+	<message key="plugins.reports.counter.1a.onlineIssn">ISSN (nettutgave)</message>
+	<message key="plugins.reports.counter.1a.ytdTotal">HIÅ Total</message>
+	<message key="plugins.reports.counter.1a.ytdHtml">HIÅ HTML</message>
+	<message key="plugins.reports.counter.1a.ytdPdf">HIÅ PDF</message>
+	<message key="plugins.reports.counter.1a.totalForAllJournals">Totalt for alle tidsskrift</message>
+	<message key="plugins.reports.counter.migrate">Flytt loggfil</message>
+</locale>
