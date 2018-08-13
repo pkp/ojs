@@ -72,10 +72,11 @@ class IssueGalleyForm extends Form {
 	}
 
 	/**
-	 * Validate the form
+	 * @copydoc Form::validate
 	 */
-	function validate($request) {
+	function validate($callHooks = true) {
 		// Check if public galley ID is already being used
+		$request = Application::getRequest();
 		$journal = $request->getJournal();
 		$journalDao = DAORegistry::getDAO('JournalDAO'); /* @var $journalDao JournalDAO */
 
@@ -90,7 +91,7 @@ class IssueGalleyForm extends Form {
 			}
 		}
 
-		return parent::validate();
+		return parent::validate($callHooks);
 	}
 
 	/**
