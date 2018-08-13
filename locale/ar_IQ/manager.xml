@@ -292,7 +292,6 @@
 	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"><![CDATA[<strong>ملاحظة:</strong> إن دعوة المحكمين عبر البريد الالكتروني ستتضمن رابطاً خاصاً يأخذهم مباشرة إلى صفحة التحكيم الخاصة بالطلب المعني (مع إمكانية الوصول إلى أي صفحات أخرى يتطلبها تسجيل دخولهم). لأسباب أمنية مع هذا الخيار، لا يكون بإمكان المحررين تعديل عناوين البريد الالكتروني أو تمرير نسخة من الرسالة إلى أطراف أخرى ليس لها علاقة بالتحكيم.]]></message>
 	<message key="manager.setup.reviewOptions.reviewerRatings">تقييم المحكم</message>
 	<message key="manager.setup.reviewOptions.reviewerReminders">تذكيرات المحكم</message>
-	<message key="manager.setup.reviewOptions.showEnsuringLink"><![CDATA[ضمِّنها روابط <a href="javascript:openHelp('{$blindReviewHelpId}')" class="action">لضمان التحكيم السري</a> على الصفحات المتعلقة برفع الملفات إلى الموقع من قبل المحكمين والمؤلفين.]]></message>
 	<message key="manager.setup.reviewPolicy">سياسة التحكيم</message>
 	<message key="manager.setup.searchEngineIndexing">فهرسة محركات البحث</message>
 	<message key="manager.setup.searchEngineIndexingDescription">لمساعدة مستعملي محركات البحث في العثور على هذه المجلة، زود الموقع بوصف موجز للمجلة والكلمات المفتاحية ذات العلاقة بها (مفصولة بفارزة منقوطة إنجليزية).</message>

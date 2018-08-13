@@ -25,9 +25,10 @@ Réinitialisation du mot de passe : {$url}<br />
 	</email_text>
 	<email_text key="PASSWORD_RESET">
 		<subject>Réinitialisation du mot de passe</subject>
-		<body><![CDATA[Votre mot de passe pour le site Web {$siteTitle} a été réinitialisé avec succès. Veuillez conserver précieusement votre nom d'utilisateur ainsi que votre mot de passe. Vous en aurez besoin pour chacune de vos interactions avec la revue.<br />
+		<body><![CDATA[Votre mot de passe pour le site Web {$siteTitle} a été réinitialisé avec succès. Ce mot de passe est temporaire, vous devrez le changer à la prochaine utilisation.<br />
 <br />
 Votre nom d'utilisateur : {$username}<br />
+Mot de passe temporaire : {$password}<br />
 <br />
 {$principalContactSignature}]]></body>
 		<description><![CDATA[Ce courriel est envoyé aux utilisateurs inscrits lorsqu'ils ont réussi à réinitialiser leur mot de passe en ayant suivi la procédure décrite dans le courriel « Confirmation de la réinitialisation du mot de passe ».]]></description>
@@ -580,7 +581,7 @@ Lien: {$url}<br />
 <br />
 Nous avons pris une décision concernant votre soumission à {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
-Notre décision est de :<br />
+Notre décision est d'accepter votre soumission.<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Cet courriel du rédacteur ou du chef de rubrique à un auteur les notifie d'une décision finale de «soumission acceptée» concernant leur soumission.</description>
@@ -591,7 +592,7 @@ Notre décision est de :<br />
 <br />
 Nous avons pris une décision concernant votre soumission à {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
-Notre décision est de :<br />
+Notre décision est de vous demander une nouvelle version de votre soumission.<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Cet courriel du rédacteur ou du chef de rubrique à un auteur les notifie d'une décision finale de «révision requise» concernant leur soumission.</description>
@@ -602,7 +603,7 @@ Notre décision est de :<br />
 <br />
 Nous avons pris une décision concernant votre soumission à {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
-Notre décision est de :<br />
+Notre décision est d'accepter votre soumission sous réserve des corrections. <br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Cet courriel du rédacteur ou du chef de rubrique à un auteur les notifie d'une décision finale de «soumission à redéposer» concernant leur soumission.</description>
@@ -613,7 +614,7 @@ Notre décision est de :<br />
 <br />
 Nous avons pris une décision concernant votre soumission à {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
-Notre décision est de :<br />
+Notre décision est de refuser votre soumission.<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Cet courriel du rédacteur ou du chef de rubrique à un auteur les notifie d'une décision finale de «soumission refusée» concernant leur soumission.</description>
@@ -725,7 +726,7 @@ Réviseur, {$contextName}]]></body>
 <br />
 Nous avons pris une décision concernant votre soumission à {$contextName}, &quot;{$submissionTitle}&quot;.<br />
 <br />
-Notre décision est de : Envoyé pour l'évaluation<br />
+Notre décision est d'envoyer votre soumission en évaluation<br />
 <br />
 Submission URL: {$submissionUrl}<br />
 <br />

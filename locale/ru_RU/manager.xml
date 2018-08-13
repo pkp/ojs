@@ -301,7 +301,6 @@
 	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"><![CDATA[<strong>Обратите внимание:</strong> Письмо рецензентам с запросом будет содержать специальный URL-адрес (ссылку), по которой рецензенты смогут напрямую попасть на страницу «Рецензирование» материала (доступ ко всем другим страницам будет требовать входа в систему с их учетной записью). Из соображений безопасности, при использовании этой возможности редакторы не могут изменять адреса электронной почты или добавлять адреса для копий (CC) и скрытых копий (BCC) перед отправкой запросов рецензентам.]]></message>
 	<message key="manager.setup.reviewOptions.reviewerRatings">Рейтинги рецензентов</message>
 	<message key="manager.setup.reviewOptions.reviewerReminders">Напоминания рецензентам</message>
-	<message key="manager.setup.reviewOptions.showEnsuringLink"><![CDATA[Добавлять ссылки на <a href="javascript:openHelp('{$blindReviewHelpId}')" class="action">«Обеспечение слепого рецензирования»</a> на страницах, где авторы и рецензенты загружают файлы.]]></message>
 	<message key="manager.setup.reviewPolicy">Правила рецензирования</message>
 	<message key="manager.setup.searchEngineIndexing">Индексация поисковыми машинами</message>
 	<message key="manager.setup.searchEngineIndexingDescription">Добавьте краткое описание журнала, которое будут отображать поисковые машины, при показе журнала в своих результатах выдачи.</message>

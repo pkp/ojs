@@ -128,6 +128,8 @@ class IssueHandler extends Handler {
 		import('classes.core.ServicesContainer');
 		$issueService = ServicesContainer::instance()->get('issue');
 		$params = array(
+			'orderBy' => 'seq',
+			'orderDirection' => 'ASC',
 			'count' => $count,
 			'offset' => $offset,
 			'isPublished' => true,
@@ -165,7 +167,7 @@ class IssueHandler extends Handler {
 			if (!HookRegistry::call('IssueHandler::download', array(&$issue, &$galley))) {
 				import('classes.file.IssueFileManager');
 				$issueFileManager = new IssueFileManager($issue->getId());
-				return $issueFileManager->downloadFile($galley->getFileId(), $request->getUserVar('inline')?true:false);
+				return $issueFileManager->downloadById($galley->getFileId(), $request->getUserVar('inline')?true:false);
 			}
 		}
 	}

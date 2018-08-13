@@ -156,7 +156,7 @@ class IssueGridHandler extends GridHandler {
 
 		import('controllers.grid.issues.form.IssueForm');
 		$issueForm = new IssueForm($issue);
-		$issueForm->initData($request);
+		$issueForm->initData();
 		return new JSONMessage(true, $issueForm->fetch($request));
 	}
 
@@ -256,7 +256,7 @@ class IssueGridHandler extends GridHandler {
 
 		import('controllers.grid.issues.form.IssueAccessForm');
 		$issueAccessForm = new IssueAccessForm($issue);
-		$issueAccessForm->initData($request);
+		$issueAccessForm->initData();
 		return new JSONMessage(true, $issueAccessForm->fetch($request));
 	}
 
@@ -336,7 +336,7 @@ class IssueGridHandler extends GridHandler {
 		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
 		import('controllers.tab.pubIds.form.PublicIdentifiersForm');
 		$form = new PublicIdentifiersForm($issue);
-		$form->initData($request);
+		$form->initData();
 		return new JSONMessage(true, $form->fetch($request));
 	}
 
@@ -442,7 +442,7 @@ class IssueGridHandler extends GridHandler {
 			$assignPublicIdentifiersForm = new AssignPublicIdentifiersForm($formTemplate, $issue, true, $confirmationText);
 			if (!$request->getUserVar('confirmed')) {
 				// Display assign pub ids modal
-				$assignPublicIdentifiersForm->initData($args, $request);
+				$assignPublicIdentifiersForm->initData();
 				return new JSONMessage(true, $assignPublicIdentifiersForm->fetch($request));
 			}
 			// Asign pub ids

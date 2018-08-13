@@ -79,7 +79,7 @@ class PhpMyVisitesPlugin extends GenericPlugin {
 		if ($this->getEnabled()) {
 			$smarty = $params[1];
 			$output =& $params[2];
-			$request = $this->getRequest();
+			$request = Application::getRequest();
 			$templateMgr = TemplateManager::getManager($request);
 			$currentJournal = $templateMgr->getTemplateVars('currentJournal');
 

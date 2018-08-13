@@ -71,4 +71,7 @@
 	<message key="submission.pageProofs">Correction d'épreuve</message>
 	<message key="submission.confirmSubmit">Êtes-vous certain de vouloir soumettre cet article à la revue?</message>
 	<message key="workflow.review.externalReview">Évaluation</message>
+	<message key="submission.abstract.wordCount.description">Le résumé doit comporté au maximum {$wordCount} mots.</message>
+	<message key="submission.submit.form.wordCountAlert">Votre résumé est trop long. Merci de respecter le nombre de mots limite.</message>
+	<message key="section.any">Toutes les sections</message>
 </locale>

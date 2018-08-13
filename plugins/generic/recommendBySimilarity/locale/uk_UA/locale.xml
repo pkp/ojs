@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/recommendBySimilarity/locale/uk_UA/locale.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Ukrainian_(uk_UA)
+  * Localization strings for the uk_UA (Українська) locale.
+  -->
+
+<locale name="uk_UA" full_name="Українська">
+	<message key="plugins.generic.recommendBySimilarity.displayName">Модуль "Рекомендовані схожі статті"</message>
+	<message key="plugins.generic.recommendBySimilarity.description">Додає список схожих статей на сторінку з анотацією статті.</message>
+
+	<message key="plugins.generic.recommendBySimilarity.heading">Схожі статті</message>
+	<message key="plugins.generic.recommendBySimilarity.advancedSearchIntro">Ви також можете {$advancedSearchLink} для цієї статті.</message>
+	<message key="plugins.generic.recommendBySimilarity.advancedSearch">розпочати розширений пошук схожих статей</message>
+</locale>

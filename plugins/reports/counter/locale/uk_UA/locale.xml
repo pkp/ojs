@@ -7,27 +7,36 @@
   * Copyright (c) 2014-2018 Simon Fraser University
   * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Ukrainian_(uk_UA)
   * Localization strings for the uk_UA (Українська) locale.
-  *
-  * Translated by Denys Solovianenko, 2011
-  * V. I. Vernadsky National Library of Ukraine
   -->
  
 <locale name="uk_UA" full_name="Українська">
-       <message key="plugins.reports.counter.description"><![CDATA[Модуль COUNTER дозволяє запис та створення звітів щодо активності на сайті за стандартом <a href="http://www.projectcounter.org/about.html" target="_new">COUNTER</a>.]]></message>
-       <message key="plugins.reports.counter">Статистика COUNTER</message>
-       <message key="plugins.reports.counter.migrate">Міграція лог-файлу</message>
-       <message key="plugins.reports.counter.1a.title">Журнальний звіт 1 (R3): Запити повних текстів статей за місяцями та журналами</message>
-       <message key="plugins.reports.counter.1a.title1">Журнальний звіт 1 (R3)</message>
-       <message key="plugins.reports.counter.1a.title2">Кількість успішних запитів повних текстів статей за місяцями та журналами (Рік {$year})</message>
-       <message key="plugins.reports.counter.1a.dateRun">Дата формування:</message>
-       <message key="plugins.reports.counter.1a.publisher">Видавець</message>
-       <message key="plugins.reports.counter.1a.platform">Платформа</message>
-       <message key="plugins.reports.counter.1a.printIssn">Print ISSN</message>
-       <message key="plugins.reports.counter.1a.onlineIssn">Online ISSN</message>
-       <message key="plugins.reports.counter.1a.ytdTotal">Всього з початку року</message>
-       <message key="plugins.reports.counter.1a.ytdHtml">HTML з початку року</message>
-       <message key="plugins.reports.counter.1a.ytdPdf">PDF з початку року</message>
-       <message key="plugins.reports.counter.1a.totalForAllJournals">Всього по всіх журналах</message>
+	<message key="plugins.reports.counter.description"><![CDATA[Модуль COUNTER дозволяє запис та створення звітів щодо активності на сайті за стандартом <a href="http://www.projectcounter.org/about.html" target="_new">COUNTER</a>. Проте наявність цих звітів не забезпечить відповідність журналу вимогам COUNTER. Щоб забезпечити відповідність вимогам COUNTER, перегляньте вимоги на веб-сайті проекту COUNTER.]]></message>
+	<message key="plugins.reports.counter">Статистика COUNTER</message>
+	<message key="plugins.reports.counter.release">Версія COUNTER</message>
+	<message key="plugins.reports.counter.olderReports">Застарілі звіти про сайт</message>
+	<message key="plugins.reports.counter.error.badParameters">Неправильні параметри звіту.</message>
+	<message key="plugins.reports.counter.error.badRequest">Неправильний запит звіту.</message>
+	<message key="plugins.reports.counter.error.noResults">Не знайдено результати для цього звіту.</message>
+	<message key="plugins.reports.counter.error.noXML">Результати не можуть бути відформатовані в XML</message>
+	<message key="plugins.reports.counter.1a.introduction">Ці посилання генерують звіти для COUNTER, що базуються на застарілій версії 3.0. Цей звіт охоплює всі журнали на сайті. Бажано використовувати останню версію.</message>
+	<message key="plugins.reports.counter.1a.name">Звіт COUNTER JR1 (R3)</message>
+	<message key="plugins.reports.counter.1a.xml">XML-версія</message>
+	<message key="plugins.reports.counter.1a.description">COUNTER Журнальний звіт 1 (R3): Запити повних текстів статей за місяцями та журналами</message>
+	<message key="plugins.reports.counter.1a.title">Журнальний звіт 1 (R3): Запити повних текстів статей за місяцями та журналами</message>
+	<message key="plugins.reports.counter.1a.title1">Журнальний звіт 1 (R3)</message>
+	<message key="plugins.reports.counter.1a.title2">Кількість успішних запитів повних текстів статей за місяцями та журналами (Рік {$year})</message>
+	<message key="plugins.reports.counter.1a.dateRun">Дата формування:</message>
+	<message key="plugins.reports.counter.1a.publisher">Видавець</message>
+	<message key="plugins.reports.counter.1a.platform">Платформа</message>
+	<message key="plugins.reports.counter.1a.printIssn">Print ISSN</message>
+	<message key="plugins.reports.counter.1a.onlineIssn">Online ISSN</message>
+	<message key="plugins.reports.counter.1a.ytdTotal">Всього з початку року</message>
+	<message key="plugins.reports.counter.1a.ytdHtml">HTML з початку року</message>
+	<message key="plugins.reports.counter.1a.ytdPdf">PDF з початку року</message>
+	<message key="plugins.reports.counter.1a.totalForAllJournals">Всього по всіх журналах</message>
+	<message key="plugins.reports.counter.1a.anonymous">анонімно</message>
+	<message key="plugins.reports.counter.legacyStats">Нижченаведені посилання генерують застарілі звіти, використовуючи дані старого модуля, які не є готовими для COUNTER. Якщо ви хочете згенерувати поточні звіти COUNTER за допомогою нового типу метрики OJS COUNTER, скористайтеся вищенаведеними посиланнями.</message>
+	<message key="plugins.reports.counter.allCustomers">Усі клієнти</message>
 </locale>

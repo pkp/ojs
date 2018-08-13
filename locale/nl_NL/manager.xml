@@ -248,7 +248,6 @@
 	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"><![CDATA[<strong>Noot:</strong> De e-mail uitnodiging voor reviewers zal een speciale URL bevatten die uitgenodigde reviewers meteen naar de review-pagina voor de betreffende inzending brengt (toegang tot andere pagina's vereist inloggen). Om redenen van beveiliging kunnen redacteuren geen e-mailadressen veranderen of CC's of BCC's toevoegen voor het verzenden van uitnodigingen aan reviewers als deze optie is ingeschakeld.]]></message>
 	<message key="manager.setup.reviewOptions.reviewerRatings">Beroordeling reviewers</message>
 	<message key="manager.setup.reviewOptions.reviewerReminders">Herinneringen aan de reviewer</message>
-	<message key="manager.setup.reviewOptions.showEnsuringLink"><![CDATA[Maak links naar <a href="javascript:openHelp('{$blindReviewHelpId}')" class="action">Verzeker een blinde review</a> op pagina's waar auteurs en reviewers bestanden laden.]]></message>
 	<message key="manager.setup.reviewPolicy">Beleid voor reviews</message>
 	<message key="manager.setup.searchEngineIndexing">Zoek-indexering</message>
 	<message key="manager.setup.searchEngineIndexingDescription">Geef hier trefwoorden (gescheiden door puntkommas) en een korte omschrijving van het tijdschrift om de gebruikers van zoekmachines te helpen bij het vinden van het tijdschrift.</message>

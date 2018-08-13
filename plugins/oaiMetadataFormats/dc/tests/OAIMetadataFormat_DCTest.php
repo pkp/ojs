@@ -131,7 +131,7 @@ class OAIMetadataFormat_DCTest extends PKPTestCase {
 		// Router
 		import('lib.pkp.classes.core.PKPRouter');
 		$router = $this->getMock('PKPRouter', array('url'));
-		$application = PKPApplication::getApplication();
+		$application = Application::getApplication();
 		$router->setApplication($application);
 		$router->expects($this->any())
 		       ->method('url')

@@ -83,11 +83,9 @@ class SubmissionMetadataViewForm extends PKPSubmissionMetadataViewForm {
 
 	/**
 	 * Initialize form data
-	 * @param $args array
-	 * @param $request PKPRequest
 	 */
-	function initData($args, $request) {
-		parent::initData($args, $request);
+	function initData() {
+		parent::initData();
 		$submission = $this->getSubmission();
 		$locale = AppLocale::getLocale();
 		$this->setData('coverImage', $submission->getCoverImage($locale));

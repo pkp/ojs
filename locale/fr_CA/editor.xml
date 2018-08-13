@@ -25,7 +25,7 @@
 	<message key="editor.submissionArchive.saveChanges">Enregistrer les modifications aux soumissions archivées? Les soumissions sélectionnées pour suppression seront supprimées du système de façon permanente.</message>
 	<message key="editor.submissionArchive.confirmDelete">Êtes-vous certain de vouloir supprimer définitivement cette soumission?</message>
 	<message key="editor.submissionReview.confirmDecision">Êtes-vous certain de vouloir enregistrer cette décision?</message>
-	<message key="editor.submissionReview.emailWillArchive">Cette soumission sera archivée après l'envoi du courriel Avis à l'auteur, ou à l'après avoir cliquer sur le bouton Omettre le courriel.</message>
+	<message key="editor.submissionReview.emailWillArchive">Cette soumission sera archivée après l'envoi du courriel "Avis à l'auteur", ou après avoir décliné l'envoi de ce courriel.</message>
 	<message key="editor.notifyUsers">Informer les utilisateurs</message>
 	<message key="editor.notifyUsers.inProgress">Aviser les utilisateurs...</message>
 	<message key="editor.usersNotified">Utilisateurs avisés</message>
@@ -113,7 +113,7 @@
 	<message key="editor.issues.enableOpenAccessDate">Activer l'accès libre différé</message>
 	<message key="editor.issues.unpublishIssue">Dépublier le numéro</message>
 	<message key="editor.issues.confirmUnpublish">Êtes-vous certain que vous souhaitez retirer ce numéro publié?</message>
-	<message key="editor.submissionReview.cannotSendToCopyediting">Avant d'envoyer une soumission en Révision, utiliser le lien Aviser l'auteur pour informer l'auteur de la décision et sélectionner la version à envoyer.</message>
+	<message key="editor.submissionReview.cannotSendToCopyediting">Avant d'envoyer une soumission en Révision, utiliser le lien "Aviser l'auteur" pour informer l'auteur de la décision et sélectionner la version à envoyer.</message>
 	<message key="editor.notifyUsers.allReaders">Tous les lecteurs ({$count} utilisateurs)</message>
 	<message key="editor.notifyUsers.allAuthors">Tous les auteurs publiés ({$count} utilisateurs)</message>
 	<message key="editor.notifyUsers.allIndividualSubscribers">Tous les abonnés individuels ({$count} utilisateurs)</message>
@@ -153,4 +153,6 @@
 	<message key="editor.submission.proof.manageProofFilesDescription">Tous les fichiers qui ont déjà été téléversés à n'importe quelle étape de soumission peuvent être ajoutés à la liste de vérification des épreuves en cochant la case "Inclure" ci-dessous et en cliquant sur "Rechercher". Tous les fichiers disponibles seront répertoriés et pourront être sélectionnés pour inclusion.</message>
 	<message key="editor.publicIdentificationExistsForTheSameType">Le public identifié comme '{$publicIdentifier}' existe déjà pour un autre objet de même type. Veuillez indiquer un public unique pour l'objet de même type à l'intérieur de votre revue.</message>
 	<message key="editor.article.coverImage">Image de la page couverture</message>
+	<message key="editor.issues.confirmSetCurrentIssue">Êtes-vous certain de vouloir définir ce numéro comme étant le dernier numéro?</message>
+	<message key="grid.action.setCurrentIssue">Paramétrer le dernier numéro</message>
 </locale>

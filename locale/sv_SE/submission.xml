@@ -65,7 +65,7 @@
 	<message key="submission.submit.form.localeRequired">Välj språk för bidraget.</message>
 	<message key="submission.submit.submissionChecklist">Checklista för bidrag</message>
 	<message key="submission.submit.submissionChecklistDescription">Du måste läsa och acceptera att du följer kraven nedan innan du fortsätter.</message>
-	<message key="submission.submit.privacyStatement">Sekretesspolicy</message>
+	<message key="submission.submit.privacyStatement">Integritetspolicy</message>
 	<message key="submission.submit.contributorRole">Medarbetares roll</message>
 	<message key="submission.submit.form.authorRequired">Minst en författare krävs.</message>
 	<message key="submission.submit.form.authorRequiredFields">Förnamn, efternamn och e-postadress för varje författare krävs.</message>

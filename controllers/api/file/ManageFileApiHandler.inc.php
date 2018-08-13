@@ -41,7 +41,7 @@ class ManageFileApiHandler extends PKPManageFileApiHandler {
 		$stageId = $request->getUserVar('stageId');
 		import('controllers.tab.pubIds.form.PublicIdentifiersForm');
 		$form = new PublicIdentifiersForm($submissionFile, $stageId);
-		$form->initData($request);
+		$form->initData();
 		return new JSONMessage(true, $form->fetch($request));
 	}
 

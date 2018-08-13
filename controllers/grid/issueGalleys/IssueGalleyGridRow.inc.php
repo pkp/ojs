@@ -33,11 +33,10 @@ class IssueGalleyGridRow extends GridRow {
 	// Overridden template methods
 	//
 	/*
-	 * Configure the grid row
-	 * @param $request PKPRequest
+	 * @copydoc GridRow::initialize
 	 */
-	function initialize($request) {
-		parent::initialize($request);
+	function initialize($request, $template = null) {
+		parent::initialize($request, $template);
 
 		// Is this a new row or an existing row?
 		$issueGalleyId = $this->getId();

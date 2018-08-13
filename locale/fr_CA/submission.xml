@@ -44,7 +44,7 @@
 	<message key="submission.submit.newSubmissionSingle">Nouvelle soumission</message>
 	<message key="grid.action.workflow">Processus éditorial pour la soumission</message>
 	<message key="submission.issueEntry">Métadonnées</message>
-	<message key="submission.submit.whatNext.description">Le journal a été informé de votre soumission et vous a envoyé par courriel une confirmation pour vos dossiers. L'éditeur communiquera avec vous une fois que votre soumission aura été examinée.</message>
+	<message key="submission.submit.whatNext.description">La revue a été informée de votre soumission et vous a envoyé par courriel une confirmation pour vos dossiers.  Un rédacteur communiquera avec vous lorsque votre soumission aura été examinée.</message>
 	<message key="editor.submission.decision.sendExternalReview">Envoyer en évaluation</message>
 	<message key="submission.event.issueMetadataUpdated">Les métadonnées pour la publication de la soumission ont été mises à jour.</message>
 	<message key="submission.upload.fileContents">Élément de l'article</message>
@@ -59,11 +59,11 @@
 	<message key="submission.event.articleGalleyMadeUnavailable">L'article mis en page "{$galleyFormatName}" n'est pas disponible.</message>
 	<message key="submission.event.publicIdentifiers">Identifiants publics mis à jour.</message>
 	<message key="grid.issueEntry.availableGalley.title">Approbation du format</message>
-	<message key="grid.issueEntry.availableGalley.removeMessage"><![CDATA[*<p>Ce mod`èle de mise en page <em>ne sera plus offert</em>aux lecteurs</p>.]]></message>
-	<message key="grid.issueEntry.availableGalley.message"><![CDATA[*<p>Ce mod`èle de mise en page <em>sera offert</em>aux lecteurs</p>.]]></message>
+	<message key="grid.issueEntry.availableGalley.removeMessage"><![CDATA[<p>Ce mod`èle de mise en page <em>ne sera plus offert</em>aux lecteurs</p>.]]></message>
+	<message key="grid.issueEntry.availableGalley.message"><![CDATA[<p>Ce mod`èle de mise en page <em>sera offert</em>aux lecteurs</p>.]]></message>
 	<message key="grid.action.availableArticleGalley">Rendre ce modèle de mise en page disponible</message>
 	<message key="submission.galleyFiles">Fichiers de mise en page</message>
-	<message key="submission.proofReadingDescription"><![CDATA[*Le responsable de la mise en page télécharge les fichiers qui ont été préparés pour publication ici.  Utiliser <em>Assigner un vérificateur</em> pour identifier les auteurs et les autres personnes qui reliront les articles mis en page, avec les fichiers corrigés téléchargés, pour approbation avant la publication.]]></message>
+	<message key="submission.proofReadingDescription"><![CDATA[Le responsable de la mise en page télécharge les fichiers qui ont été préparés pour publication ici.  Utiliser <em>Assigner un vérificateur</em> pour identifier les auteurs et les autres personnes qui reliront les articles mis en page, avec les fichiers corrigés téléchargés, pour approbation avant la publication.]]></message>
 	<message key="grid.action.approveProof">Approuver cette épreuve.</message>
 	<message key="grid.action.pageProofApproved">Cette épreuve a été approuvée.</message>
 	<message key="submission.submit.titleAndSummary">Titre et résumé</message>
@@ -71,4 +71,7 @@
 	<message key="submission.pageProofs">Correction d'épreuve</message>
 	<message key="submission.confirmSubmit">Êtes-vous certain de vouloir soumettre cet article à la revue?</message>
 	<message key="workflow.review.externalReview">Évaluation</message>
+	<message key="submission.abstract.wordCount.description">Le résumé doit contenir {$wordCount} mots ou moins.</message>
+	<message key="submission.submit.form.wordCountAlert">Votre résumé est trop long. Veuillez le raccourcir selon la limite indiquée.</message>
+	<message key="section.any">Aucune rubrique</message>
 </locale>

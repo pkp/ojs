@@ -11,13 +11,13 @@
   -->
 <email_texts locale="es_ES">
 	<email_text key="MANUAL_PAYMENT_NOTIFICATION">
-		<subject>Notificación de Pago Manual</subject>
+		<subject>Notificación de pago manual</subject>
 		<body><![CDATA[Un pago manual necesita ser procesado para la revista  {$contextName} y el usuario {$userFullName} (username &quot;{$userName}&quot;).<br />
 <br />
 El ítem pagado es &quot;{$itemName}&quot;.<br />
 El precio es {$itemCost} ({$itemCurrencyCode}).<br />
 <br />
 Este correo ha sido generado por el plugin de Pago Manual de  Open Journal Systems.]]></body>
-		<description>Este correo se usa para notificar al Gestor de la Revista de que se ha realizado un pago manual.</description>
+		<description>Este correo se usa para notificar al gestor/a de la revista de que se ha realizado un pago manual.</description>
 	</email_text>
 </email_texts>

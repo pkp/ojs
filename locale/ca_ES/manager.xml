@@ -260,7 +260,6 @@
 	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"><![CDATA[<strong>Nota:</strong> La invitació per correu electrònic als revisors/ores conté un URL especial que dirigeix directament els revisors/ores convidats a la pàgina de revisió de la tramesa (amb accés a qualsevol altra pàgina que requereixi identificació). Per motius de seguretat, els editors/ores no poden modificar les adreces de correu electrònic ni afegir-ne als camps CC o CCO abans d’enviar les invitacions als revisors/ores.]]></message>
 	<message key="manager.setup.reviewOptions.reviewerRatings">Valoració dels revisors/ores</message>
 	<message key="manager.setup.reviewOptions.reviewerReminders">Recordatoris per a la revisió</message>
-	<message key="manager.setup.reviewOptions.showEnsuringLink"><![CDATA[Inclou un enllaç a la secció <a href="javascript:openHelp('{$blindReviewHelpId}')" class="action">Assegurar una avaluació anònima</a> a totes les pàgines en què els autors/ores i els revisors/ores carreguin fitxers.]]></message>
 	<message key="manager.setup.reviewPolicy">Política de revisió</message>
 	<message key="manager.setup.searchEngineIndexing">Indexació per als motors de cerca</message>
 	<message key="manager.setup.searchEngineIndexingDescription">Per ajudar els usuaris/àries dels motors de cerca a trobar aquesta revista, indiqueu-ne una breu descripció i les paraules clau més importants (separades per punt i coma).</message>

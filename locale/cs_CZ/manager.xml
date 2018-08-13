@@ -248,7 +248,6 @@
 	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"><![CDATA[<strong>Poznámka:</strong> E-mailové pozvání pro recenzenta bude obsahovat speciální URL, které dovede pozvané recenzenty přímo na Recenzní stránku k danému příspěvku (s přístupem na jakékoliv další stránky normálně vyžadující přihlášení). Z bezpečnostních důvodů nemohou editoři při tomto nastavení pozměnit e-mailové adresy nebo přidat CC nebo BCC předtím, než pošlou recenzentům pozvání.]]></message>
 	<message key="manager.setup.reviewOptions.reviewerRatings">Hodnocení recenzenta</message>
 	<message key="manager.setup.reviewOptions.reviewerReminders">Připomenutí pro recenzenta</message>
-	<message key="manager.setup.reviewOptions.showEnsuringLink"><![CDATA[Poskytnout odkazy na <a href="javascript:openHelp('{$blindReviewHelpId}')" class="action">Zajištění anonymní recenze</a> na stránkách, ze kterých autoři a recenzenti nahrávají soubory.]]></message>
 	<message key="manager.setup.reviewPolicy">Pravidla recenzního řízení</message>
 	<message key="manager.setup.searchEngineIndexing">Indexace vyhledávacími nástroji</message>
 	<message key="manager.setup.searchEngineIndexingDescription">Abyste usnadnili uživatelům vyhledávacích nástrojů objevení tohoto časopisu, poskytněte stručný popis časopisu a relevantní klíčová slova (oddělená středníkem).</message>

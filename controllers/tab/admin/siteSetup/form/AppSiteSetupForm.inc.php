@@ -21,7 +21,7 @@ class AppSiteSetupForm extends SiteSetupForm {
 	 * @copydoc SiteSetupForm::fetch()
 	 */
 	function fetch($request, $params = null) {
-		$application = PKPApplication::getApplication();
+		$application = Application::getApplication();
 		$templateMgr = TemplateManager::getManager();
 		$templateMgr->assign('availableMetricTypes', $application->getMetricTypes(true));
 
@@ -31,9 +31,10 @@ class AppSiteSetupForm extends SiteSetupForm {
 	/**
 	 * @copydoc SiteSetupForm::initData()
 	 */
-	function initData($request) {
-		parent::initData($request);
+	function initData() {
+		parent::initData();
 
+		$request = Application::getRequest();
 		$site = $request->getSite();
 		$this->setData('defaultMetricType', $site->getSetting('defaultMetricType'));
 

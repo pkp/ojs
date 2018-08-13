@@ -301,7 +301,6 @@
 	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"><![CDATA[<strong>Anmerkung:</strong> Die Einladungs-E-Mail an die Gutachter/innen enthält eine URL, die direkt zur Begutachtungsseite für den Beitrag (mit Zugang zu allen anderen Seiten, die ein Einloggen voraussetzen) führt. Aus Sicherheitsgründen können die Redakteur/innen vor dem Absenden der Einladung weder E-Mail-Adressen verändern noch CC- oder BCC-Empfänger/innen hinzufügen.]]></message>
 	<message key="manager.setup.reviewOptions.reviewerRatings">Bewertung der Gutachterin/des Gutachters</message>
 	<message key="manager.setup.reviewOptions.reviewerReminders">Erinnerung für Gutachter/innen</message>
-	<message key="manager.setup.reviewOptions.showEnsuringLink"><![CDATA[Bietet Links zu <a href="javascript:openHelp('{$blindReviewHelpId}')" class="action">Anonyme Begutachtung sicherstellen</a> auf den Seiten, auf denen Autor/innen und Gutachter/innen Dateien hochladen.]]></message>
 	<message key="manager.setup.reviewPolicy">Begutachtungsgrundsätze</message>
 	<message key="manager.setup.searchEngineIndexingDescription">Damit die Nutzer/innen von Suchmaschinen die Zeitschrift einfacher finden, stellen Sie bitte eine kurze Beschreibung der Zeitschrift und charakteristische Schlagworte (durch Semikolon getrennt) zusammen.</message>
 	<message key="manager.setup.searchEngineIndexing">Für Suchmaschinen indizieren</message>

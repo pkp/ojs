@@ -246,7 +246,6 @@
 	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"><![CDATA[<strong>Aviso:</strong> O convite ao revisor conterá um URL especial que levará os revisores directamente à página de Revisão para a submissão em questão (sendo necessário realizar a autenticação para aceder a outras páginas). Para garantir a segurança do processo ao usar esta opção, não é permitido ao editor alterar endereços de e-mail ou Cópias Carbono (CCs) ou Cópias Ocultas (BCCs) antes de enviar a mensagem aos revisores.]]></message>
 	<message key="manager.setup.reviewOptions.reviewerRatings">Classificação de Revisores</message>
 	<message key="manager.setup.reviewOptions.reviewerReminders">Lembretes a Revisores</message>
-	<message key="manager.setup.reviewOptions.showEnsuringLink"><![CDATA[Oferecer links para informações sobre <a href="javascript:openHelp('{$blindReviewHelpId}')" class="action">Assegurando a Revisão Cega por Pares</a> nas páginas onde autores e revisores enviam documentos ao sistema.]]></message>
 	<message key="manager.setup.reviewPolicy">Política de Revisão</message>
 	<message key="manager.setup.searchEngineIndexing">Indexação para Mecanismos de Pesquisa</message>
 	<message key="manager.setup.searchEngineIndexingDescription">Para auxiliar utilizadores de mecanismos de pesquisa a descobrir a sua revista, inclua uma descrição breve sobre a revista e palavras-chave relevantes (separadas por ponto-e-vírgula ";").</message>

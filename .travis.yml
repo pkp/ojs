@@ -74,4 +74,5 @@ after_script:
   # - cat xvfb-output
   # - cat selenium-output
   - cat ./lib/pkp/tests/results/error.log
-  - tar cvz lib/pkp/tests/results/*.png | uuencode /dev/stdout
+  - sudo apt-get install sharutils
+  - test "$(ls -A lib/pkp/tests/results | grep .png)" && (tar cvz lib/pkp/tests/results/*.png | uuencode /dev/stdout)

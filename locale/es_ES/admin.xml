@@ -77,12 +77,12 @@
 
 
 	<message key="admin.languages.confirmDisable">¿Está seguro de que desea desactivar esta configuración regional? Esto puede afectar a las revistas alojadas que actualmente usan esta configuración regional.</message>
-	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>La descarga de paquetes de lenguaje desde el servidor web de Public Knowledge Project no está disponible en este momento  porque:</p>
+	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>La descarga de paquetes de lenguaje desde el servidor web de Public Knowledge Project no está disponible en este momento porque:</p>
 	<ul>
 		<li>Su servidor no dispone o no permite la ejecución de la utilidad GNU "tar".</li>
 		<li>OJS no es capaz de modificar el archivo de registro de configuración regional, normalmente "registry/locales.xml".</li>
 	</ul>
-<p>Los paquetes de lenguaje se pueden descargar manualmente desde la página web de PKP <a href="http://pkp.sfu.ca"></a>.</p>]]></message>
+<p>Los paquetes de lenguaje se pueden descargar manualmente desde la página web de PKP <a href="https://pkp.sfu.ca"></a>.</p>]]></message>
 	<message key="admin.contexts.form.titleRequired">Se necesita un título.</message>
 	<message key="admin.presses.createInstructions">Usted será registrado automáticamente como administrador de esta revista. Tras la creación de la nueva revista será redireccionado al asistente de instalación para completar la configuración inicial de la revista.</message>
 	<message key="admin.scheduledTask.subscriptionExpiryReminder">Recordatorio de caducidad de la suscripción</message>

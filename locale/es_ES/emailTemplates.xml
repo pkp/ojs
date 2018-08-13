@@ -74,66 +74,66 @@ Si tiene cualquier pregunta no dude en contactar con nosotros/as.<br />
 		<description>Este correo notifica a un/a lector/a registrado/a que el/la Gestor/a les ha creado una suscripción. Proporciona la URL de la revista junto con instrucciones para acceder a ella.</description>
 	</email_text>
 	<email_text key="OPEN_ACCESS_NOTIFY">
-		<subject>Ahora el Número es Acceso Libre</subject>
+		<subject>Ahora el número es de acceso libre</subject>
 		<body><![CDATA[Lectores:<br />
 <br />
 	{$contextName} acaba de hacer disponible de forma acceso libre el siguiente número. Los invitamos a revisar la Tabla de Contenido aquí y después visite nuestra página Web  ({$contextUrl}) para consultar los artículos que sean de su interés.<br />
 <br />
 	Gracias por mantener el interés en nuestro trabajo,<br />
 	{$editorialContactSignature}]]></body>
-		<description>Este correo se envía a los lectores registrados que han pedido recibir notificaciones por correo electrónico cuando un Número se cambia a Acceso Libre.</description>
+		<description>Este correo se envía a los lectores/as registrados que han pedido recibir notificaciones por email cuando un número se vuelve de acceso libre.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_BEFORE_EXPIRY">
-		<subject>Notificación de Expiración de Subscripción</subject>
+		<subject>Notificación de expiración de suscripción</subject>
 		<body><![CDATA[{$subscriberName}:<br />
 <br />
-	Su subscripción a {$contextName} está a punto de expirar.<br />
+	Su suscripción a {$contextName} está a punto de expirar.<br />
 <br />
 	{$subscriptionType}<br />
-	Fecha de Expiro: {$expiryDate}<br />
+	Fecha de expiración: {$expiryDate}<br />
 <br />
-	Para asegurarse de que continúe a tener acceso a esta revista, por favor vaya a la página web de la revista y renueve su subscripción.  Usted puede entrar al sistema con su nombre de usuario, &quot;{$username}&quot;.<br />
+	Para asegurarse de que continúa teniendo acceso a la revista entre en la página web de la revista y renueve su suscripción.  Puede acceder al sistema con su nombre de usuario/a, &quot;{$username}&quot;.<br />
 <br />
-	Si tiene alguna pregunta, por favor no tema en contactarme.<br />
+	Si tiene cualquier pregunta no dude en contactarme.<br />
 <br />
 	{$subscriptionContactSignature}]]></body>
-		<description>Este correo notifica a un subscriptor que su subscripción va a expirar pronto.  Les provee el URL de la revista e instrucciones para accederla.</description>
+		<description>Este correo notifica al suscriptor que su susscripción va a expirar pronto.  También proporciona el URL de la revista e instrucciones para acceder.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_AFTER_EXPIRY">
-		<subject>Subscripción Expirada</subject>
+		<subject>Subscripción expirada</subject>
 		<body><![CDATA[{$subscriberName}:<br />
 <br />
 	Su subscripción a {$contextName} ha expirado.<br />
 <br />
 	{$subscriptionType}<br />
-	Fecha de Expiro: {$expiryDate}<br />
+	Fecha de expiración: {$expiryDate}<br />
 <br />
-	Para renovar su subscripción, por favor vaya a la pagina web de la revista.  Puede usted entrar al sistema con su nombre de usuario, &quot;{$username}&quot;.<br />
+	Para renovar su suscripción entre en la página web de la revista.  Puede acceder al sistema con su nombre de usuario, &quot;{$username}&quot;.<br />
 <br />
-	If you have any questions, please feel free to contact me.<br />
+	Si tiene cualquier pregunta no dude en contactarme.<br />
 <br />
 	{$subscriptionContactSignature}]]></body>
-		<description>Este correo notifica a un subscripto que su subscripción ha expirado.  Les provee el URL de la revista e instrucciones para accederla.</description>
+		<description>Este correo notifica al suscriptor que su subscripción ha expirado.  También proporciona el URL de la revista con las instrucciones para acceder.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_AFTER_EXPIRY_LAST">
-		<subject>Subscripción Expirada - Último Recuerdo</subject>
+		<subject>Suscripción expirada - Último recordatorio</subject>
 		<body><![CDATA[{$subscriberName}:<br />
 <br />
-	Su subscripción a {$contextName} ha expirado.<br />
-	Por favor note que este es el último correo que recibirá para recordarle.<br />
+	Su suscripción a {$contextName} ha expirado.<br />
+	Tenga en cuenta que este es el último correo que recibirá para recordárselo.<br />
 <br />
 	{$subscriptionType}<br />
-	Fecha de Expiro: {$expiryDate}<br />
+	Fecha de expiración: {$expiryDate}<br />
 <br />
-	Para renovar su subscripción, por favor vaya a la pagina web de la revista.  Puede usted entrar al sistema con su nombre de usuario, &quot;{$username}&quot;.<br />
+	Para renovar su suscripción entre en la página web de la revista.  Puede acceder al sistema con su nombre de usuario/a, &quot;{$username}&quot;.<br />
 <br />
-	If you have any questions, please feel free to contact me.<br />
+	Si tiene cualquier pregunta no dude en contactarme.<br />
 <br />
 	{$subscriptionContactSignature}]]></body>
-		<description>Este correo notifica a un subscripto que su subscripción ha expirado.  Les provee con el URL de la revista e instrucciones para accederla.</description>
+		<description>Este correo notifica al suscriptor que su subscripción ha expirado.  También proporciona el URL de la revista con las instrucciones para acceder.</description>
 	</email_text>
 	<email_text key="LOCKSS_EXISTING_ARCHIVE">
-		<subject>Petición de Archivado para {$contextName}</subject>
+		<subject>Petición de archivado para {$contextName}</subject>
 		<body><![CDATA[Estimado/a [Bibliotecaria/o Universitaria/o]<br />
 <br />
 {$contextName} &amp;lt;{$contextUrl}&amp;gt;, es una revista en la que un miembro de su Facultad/Universidad, [nombre de la persona], colabora como [cargo que desempeña]. La revista está intentando crear un archivo LOCKSS (Lots of Copies Keep Stuff Safe) con esta y otras bibliotecas universitarias.<br />
@@ -149,7 +149,7 @@ Gracias,<br />
 		<description>Este correo solicita al / a la administrador/a de un archivo LOCKSS que tenga en cuenta esta revista para incluirla en su archivo. Proporciona la URL del Manifiesto Editorial LOCKSS de la revista.</description>
 	</email_text>
 	<email_text key="LOCKSS_NEW_ARCHIVE">
-		<subject>Petición de archivo para {$contextName}</subject>
+		<subject>Petición de archivado para {$contextName}</subject>
 		<body><![CDATA[Estimado/a [Bibliotecario/a Universitario/a]<br />
 <br />
 {$contextName} &amp;lt;{$contextUrl}&amp;gt;, es una revista en la que un miembro de su Facultad/Universidad, [nombre de la persona], colabora como [cargo que desempeña]. La revista está intentando crear un archivo LOCKSS (Lots of Copies Keep Stuff Safe) con esta y otras bibliotecas universitarias.<br />
@@ -232,7 +232,7 @@ Resumen<br />
 		<description>Este correo del / de la Editor/a de Sección a un/a revisor/a le solicita que acepte o rechace la revisión de un envío. Proporciona información sobre el envío como el título y el resumen, el plazo de revisión, y cómo acceder al envío propiamente dicho. Este mensaje se usa cuando se selecciona el Proceso de Envío Estándar en la configuración de la revista, paso 2. (En caso de haber seleccionado otra opción, REVIEW_REQUEST_ATTACHED.)</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_ONECLICK">
-		<subject>Petición de Revisión de Artículo</subject>
+		<subject>Petición de revisión de artículo</subject>
 		<body><![CDATA[{$reviewerName}:<br />
 <br />
 Tengo el convencimiento de que sería un/a excelente revisor/a del manuscrito &quot;{$submissionTitle},&quot; que ha sido enviado a {$contextName}. A continuación encontrará un extracto del envío, con la esperanza de que aceptará llevar a cabo esta importante tarea para nosotros.<br />
@@ -447,53 +447,53 @@ Enlace: {$url}<br />
 		<description>El email es enviado a usuarios registrados que han seleccionado recibir notificaciones.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_RENEW_INSTL">
-		<subject>Renovación de Suscripción: Institucional</subject>
-		<body><![CDATA[An institutional subscription has been renewed online for {$contextName} with the following details.<br />
+		<subject>Renovación de suscripción: Institucional</subject>
+		<body><![CDATA[Se ha renovado en línea una suscripción institucional para {$contextName} con los detalles siguientes.<br />
 <br />
-Subscription Type:<br />
+Tipo de suscripción:<br />
 {$subscriptionType}<br />
 <br />
-Institution:<br />
+Institución:<br />
 {$institutionName}<br />
 {$institutionMailingAddress}<br />
 <br />
-Domain (if provided):<br />
+Dominio (si se proporciona):<br />
 {$domain}<br />
 <br />
-IP Ranges (if provided):<br />
+Rangos IP (si se proporcionan):<br />
 {$ipRanges}<br />
 <br />
-Persona de Contacto:<br />
+Persona de contacto:<br />
 {$userDetails}<br />
 <br />
-Información de membresía (si proporcionada):<br />
-{$membership}<br />
-<br />
-Para ver o editar esta suscripción, por favor use la siguiente url:<br />
-<br />
-URL para gestionar la Suscripción: {$subscriptionUrl}]]></body>
-		<description>Este correo notifica al Gestor de Suscripciones de que una Suscripción Institucional ha sido renovada online. Provee de información resumida de la suscripción y de un enlace deacceso rápido a la suscripción renovada.</description>
-	</email_text>
-	<email_text key="SUBSCRIPTION_RENEW_INDL">
-		<subject>Renovación de suscrpción: Individual</subject>
-		<body><![CDATA[Una Suscripción Individual ha sido renovada online para {$contextName} con los siguientes detalles.<br />
-<br />
-Tipo de Subscripción:<br />
-{$subscriptionType}<br />
-<br />
-Usuario:<br />
-{$userDetails}<br />
-<br />
-Información de Membresía (si proporcionada):<br />
+Información de membresía (si se proporciona):<br />
 {$membership}<br />
 <br />
 Para ver o editar esta suscripción use la siguiente URL:<br />
 <br />
-URL para gestionar la subscripción: {$subscriptionUrl}]]></body>
-		<description>Este email notifica al Gestor de Suscripciones de que una suscripción Individual se ha renovado online. Provee de información resumida sobre la suscripción y de un enlace de acceso rápido a la suscripción renovada.</description>
+URL para gestionar la suscripción: {$subscriptionUrl}]]></body>
+		<description>Este correo notifica al administrador/a de suscripciones que una suscripción institucional ha sido renovada en línea. Proporciona información resumida de la suscripción y un enlace de acceso rápido a la suscripción renovada.</description>
+	</email_text>
+	<email_text key="SUBSCRIPTION_RENEW_INDL">
+		<subject>Renovación de suscripción: Individual</subject>
+		<body><![CDATA[Una suscripción individual ha sido renovada en línea para {$contextName} con los siguientes detalles.<br />
+<br />
+Tipo de suscripción:<br />
+{$subscriptionType}<br />
+<br />
+Usuario/a:<br />
+{$userDetails}<br />
+<br />
+Información de membresía (si se proporciona):<br />
+{$membership}<br />
+<br />
+Para ver o editar esta suscripción use la siguiente URL:<br />
+<br />
+URL para gestionar la suscripción: {$subscriptionUrl}]]></body>
+		<description>Este correo notifica al administrador/a de suscripciones que una suscripción individual se ha renovado en línea. Proporciona información resumida sobre la suscripción y  un enlace de acceso rápido a la suscripción renovada.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_ACCEPT">
-		<subject>Decisión del Editor</subject>
+		<subject>Decisión del editor/a</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
 Hemos tomado una decisión sobre su envío en {$contextName}, &quot;{$submissionTitle}&quot;.<br />
@@ -501,10 +501,10 @@ Hemos tomado una decisión sobre su envío en {$contextName}, &quot;{$submission
 Nuestra decisión es: Aceptar el envío<br />
 <br />
 {$editorialContactSignature}<br />]]></body>
-		<description>Este email del Editor o Editor de Sección  a un Autor notifica de la decisión final sobre su envío.</description>
+		<description>Este correo electrónico del editor/a o editor/a de sección al autor/a le notifica de la decisión final sobre su envío.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_RESUBMIT">
-		<subject>Decisión del Editor</subject>
+		<subject>Decisión del editor/a</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
 Hemos tomado una decisión sobre su envío en {$contextName}, &quot;{$submissionTitle}&quot;.<br />
@@ -512,10 +512,10 @@ Hemos tomado una decisión sobre su envío en {$contextName}, &quot;{$submission
 Nuestra decisión es: Volver a enviar a revisión<br />
 <br />
 {$editorialContactSignature}<br />]]></body>
-		<description>Este email del Editor o Editor de Sección a un Autor le notifica de que se ha tomado una decisión definitiva sobre su presentación.</description>
+		<description>Este correo electrónico del editor/a o editor/a de sección al autor/a le notifica sobre la decisión final de volver a revisar su envío.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_DECLINE">
-		<subject>Decisión del Editor</subject>
+		<subject>Decisión del editor/a</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
 Hemos tomado una decisión sobre su envío en {$contextName}, &quot;{$submissionTitle}&quot;.<br />
@@ -523,10 +523,10 @@ Hemos tomado una decisión sobre su envío en {$contextName}, &quot;{$submission
 Nuestra decisión es: Rechazar el envío<br />
 <br />
 {$editorialContactSignature}<br />]]></body>
-		<description>Este email del Editor o Editor de Sección a un Autor les notifica sobre una decisión definitiva sobre su presentación.</description>
+		<description>Este correo electrónico del editor/a o editor/a de sección al autor/a le notifica sobre la decisión final de "rechazar" su envío.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_REVISIONS">
-		<subject>Decisión del Editor</subject>
+		<subject>Decisión del editor/a</subject>
 		<body><![CDATA[{$authorName}:<br />
 <br />
 Hemos tomado una decisión sobre su envío en {$contextName}, &quot;{$submissionTitle}&quot;.<br />
@@ -534,31 +534,31 @@ Hemos tomado una decisión sobre su envío en {$contextName}, &quot;{$submission
 Nuestra decisión es: Necesita revisiones<br />
 <br />
 {$editorialContactSignature}<br />]]></body>
-		<description>Este email del Editor o Editor de Sección a un Autor, les notifica de una decisión definitiva sobre su presentación.</description>
+		<description>Este correo electrónico del editor/a o editor/a de sección al autor/a le notifica que la decisión final respecto a su envío es que "necesita revisiones".</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_PURCHASE_INDL">
-		<subject>Compra de Suscripción: Individual</subject>
-		<body><![CDATA[An individual subscription has been purchased online for {$contextName} with the following details.<br />
+		<subject>Compra de suscripción: Individual</subject>
+		<body><![CDATA[Se ha adquirido en línea una suscripción individual para {$contextName} con los detalles siguientes:<br />
 <br />
-Subscription Type:<br />
+Tipo de suscripción:<br />
 {$subscriptionType}<br />
 <br />
-Usuario:<br />
+Usuario/a:<br />
 {$userDetails}<br />
 <br />
-Información de Membresía (si proporcionada):<br />
+Información de membresía (si se proporciona):<br />
 {$membership}<br />
 <br />
 Para ver o editar esta suscripción, use la siguiente URL.<br />
 <br />
 URL de la suscripción: {$subscriptionUrl}]]></body>
-		<description>Este correo notifica al Gestor de Suscripciones que una suscripción individual ha sido comprada online. Proporciona de un resumen de la información sobre la suscripción y un acceso rápido al enlace de la suscripción comprada.</description>
+		<description>Este correo notifica al administrador/a de suscripciones que una suscripción individual ha sido adquirida online. Proporciona un resumen de la información sobre la suscripción y un enlace de acceso rápido a la suscripción adquirida.</description>
 	</email_text>
 	<email_text key="SUBSCRIPTION_PURCHASE_INSTL">
-		<subject>Compra de Suscripción: Institucional</subject>
-		<body><![CDATA[Una Suscripción Institucional ha sido comprada online en {$contextName} con los siguientes detalles. Para activar la suscripción, use el enlace proporcionado y pon el status de la suscripción como 'Activo'.<br />
+		<subject>Compra de suscripción: Institucional</subject>
+		<body><![CDATA[Se ha adquirido en línea una suscripción institucional para {$contextName} con los siguientes detalles. Para activar la suscripción, use el enlace proporcionado y configure el estado de la suscripción como 'Activo'.<br />
 <br />
-Tipo de Suscripción:<br />
+Tipo de suscripción:<br />
 {$subscriptionType}<br />
 <br />
 Institución:<br />
@@ -574,27 +574,27 @@ Rangos de IP (si se proporcionan):<br />
 Persona de contacto:<br />
 {$userDetails}<br />
 <br />
-Información de Membresía (si proporcionada):<br />
+Información de membresía (si se proporciona):<br />
 {$membership}<br />
 <br />
 Para ver o editar esta suscripción, use el siguiente enlace.<br />
 <br />
 Enlace de la suscripción: {$subscriptionUrl}]]></body>
-		<description>Este correo notifica al Gestor de Suscripciones de que una suscripción institucional ha sido comprada online. Proporciona información resumida sobre la suscripción y un enlace rápido a la suscripción comprada.</description>
+		<description>Este correo notifica al administrador/a de suscripciones que una suscripción institucional ha sido adquirida en línea. Proporciona información resumida sobre la suscripción y un enlace de acceso rápido a la suscripción adquirida.</description>
 	</email_text>
 	<email_text key="CITATION_EDITOR_AUTHOR_QUERY">
-		<subject>Edición de Citas</subject>
+		<subject>Edición de citas</subject>
 		<body><![CDATA[{$authorFirstName},<br />
 <br />
-Por favor, ¿Podría usted verificar o proporcionarnos la cita adecuada para la siguiente referencia de su artículo, {$submissionTitle}:<br />
+Por favor, ¿podría usted verificar o proporcionarnos la cita adecuada para la siguiente referencia de su artículo, {$submissionTitle}?:<br />
 <br />
 {$rawCitation}<br />
 <br />
-Gracias!<br />
+¡Gracias!<br />
 <br />
 {$userFirstName}<br />
-Corrector de estilo, {$contextName}]]></body>
-		<description>Este correo electrónico permite a los correctores de estilo solicitar información adicional acerca de las referencias de los autores.</description>
+Corrector/a de estilo, {$contextName}]]></body>
+		<description>Este correo electrónico permite a los correctores/as de estilo solicitar información adicional acerca de las referencias de los autores/as.</description>
 	</email_text>
 	<email_text key="EDITOR_DECISION_SEND_TO_EXTERNAL">
 		<subject>Decisión del editor/a</subject>
@@ -751,5 +751,36 @@ URL del envío: {$submissionUrl}<br />
 <br />
 {$editorialContactSignature}]]></body>
 		<description>Este correo electrónico se envía de forma automática al editor/a asignado cuando el autor/a carga una versión revisada de un artículo.</description>
+	</email_text>
+	<email_text key="EDITOR_DECISION_INITIAL_DECLINE">
+		<subject>Decisión del editor/a</subject>
+		<body><![CDATA[{$authorName}:<br />
+<br />
+Hemos llegado a una decisión sobre su envio a {$contextName}, &quot;{$submissionTitle}&quot;.<br />
+<br />
+Nuestra decisión es: Rechazar el envío<br />
+<br />
+{$editorialContactSignature}<br />]]></body>
+		<description>Este correo electrónico se envía al autor/a si el editor/a rechaza su envío inicialmente, antes de la fase de revisión</description>
+	</email_text>
+	<email_text key="EDITOR_RECOMMENDATION">
+		<subject>Recomendación del editor/a</subject>
+		<body><![CDATA[{$editors}:<br />
+<br />
+La recomendación respecto al envío a {$contextName}, &quot;{$submissionTitle}&quot; es: {$recommendation}<br />
+<br />
+{$editorialContactSignature}<br />]]></body>
+		<description>Este correo electrónico del editor/a o editor/a de sección que aconseja para los editores/as o editores/as de sección que toman las decisiones les notifica sobre la recomendación final respecto al envío.</description>
+	</email_text>
+	<email_text key="SUBMISSION_ACK_NOT_USER">
+		<subject>Acuse de recibo del envío</subject>
+		<body><![CDATA[Hola,<br />
+<br />
+{$submitterName} ha enviado el manuscrito &quot;{$submissionTitle}&quot; a {$contextName}. <br />
+<br />
+Si tiene cualquier pregunta no dude en contactarme. Le agradecemos que haya elegido esta revista para dar a conocer su obra.<br />
+<br />
+{$editorialContactSignature}]]></body>
+		<description>Este correo electrónico, si está activado, se envía automáticamente a los autores/as que no son usuarios/as del OJS especificado durante el proceso de envío.</description>
 	</email_text>
 </email_texts>

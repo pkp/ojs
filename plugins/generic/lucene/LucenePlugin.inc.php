@@ -352,7 +352,7 @@ class LucenePlugin extends GenericPlugin {
 		if (!in_array($op, $publicOps)) return;
 
 		// Get the journal object from the context (optimized).
-		$request = $this->getRequest();
+		$request = Application::getRequest();
 		$router = $request->getRouter();
 		$journal = $router->getContext($request); /* @var $journal Journal */
 		if ($op == 'usageMetricBoost' && $journal != null) return;
@@ -742,7 +742,7 @@ class LucenePlugin extends GenericPlugin {
 		if ($template != 'search/search.tpl') return false;
 
 		// Get the request.
-		$request = PKPApplication::getRequest();
+		$request = Application::getRequest();
 
 		// Assign our private stylesheet.
 		$templateMgr = $params[0];
@@ -858,7 +858,7 @@ class LucenePlugin extends GenericPlugin {
 		// Check error conditions:
 		// - the "ranking/sorting-by-metric" feature is not enabled
 		// - a "main metric" is not configured
-		$application = PKPApplication::getApplication();
+		$application = Application::getApplication();
 		$metricType = $application->getDefaultMetricType();
 		if (!($this->getSetting(0, 'rankingByMetric') || $this->getSetting(0, 'sortingByMetric')) ||
 				empty($metricType)) return;
@@ -1093,7 +1093,7 @@ class LucenePlugin extends GenericPlugin {
 		}
 
 		// Assign parameters.
-		$request = PKPApplication::getRequest();
+		$request = Application::getRequest();
 		$site = $request->getSite();
 		$mail->assignParams(
 			array('siteName' => $site->getLocalizedTitle(), 'error' => $error)

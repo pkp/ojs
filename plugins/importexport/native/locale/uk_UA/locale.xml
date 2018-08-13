@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/importexport/native/locale/uk_UA/locale.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Ukrainian_(uk_UA)
+  * Localization strings for the uk_UA (Українська) locale.
+  -->
+
+<locale name="uk_UA" full_name="Українська">
+	<message key="plugins.importexport.native.displayName">Модуль "Власний XML"</message>
+	<message key="plugins.importexport.native.description">Імпортує та експортує статті та випуски у власний XML-формат OJS.</message>
+	<message key="plugins.importexport.native.import">Імпорт</message>
+	<message key="plugins.importexport.native.import.instructions">Завантажити файл з XMLдля імпорту</message>
+	<message key="plugins.importexport.native.exportSubmissionsSelect">Оберіть статті для експорту</message>
+	<message key="plugins.importexport.native.exportSubmissions">Експортувати статті</message>
+	<message key="plugins.importexport.native.exportIssues">Експортувати випуски</message>
+	<message key="plugins.importexport.native.results">Результати</message>
+	<message key="plugins.inportexport.native.uploadFile">Будь ласка, завантажте файл у розділ "Імпортувати" щоб продовжити.</message>
+	<message key="plugins.importexport.native.importComplete">Імпортування успішно завершено. Нижченаведені елементи були імпортовані:</message>
+	<message key="plugins.importexport.native.cliUsage"><![CDATA[Використання: {$scriptName} {$pluginName} [command] ...
+Commands:
+	import [xmlFileName] [journal_path] [user_name] ...
+	export [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...
+	export [xmlFileName] [journal_path] article [articleId]
+	export [xmlFileName] [journal_path] issues [issueId1] [issueId2] ...
+	export [xmlFileName] [journal_path] issue [issueId]
+
+Потрібні деякі додаткові параметри для імпортування даних в залежності
+від кореневого вузла XML-документа.
+
+Якщо кореневий вузол <article> або <articles>, потрібні додаткові параметри.
+Прийнятні такі формати:
+
+{$scriptName} {$pluginName} import [xmlFileName] [journal_path] [user_name]
+	issue_id [issueId] section_id [sectionId]
+
+{$scriptName} {$pluginName} import [xmlFileName] [journal_path] [user_name]
+	issue_id [issueId] section_name [name]
+
+{$scriptName} {$pluginName} import [xmlFileName] [journal_path]
+	issue_id [issueId] section_abbrev [abbrev]
+]]></message>
+	<message key="plugins.importexport.native.error.unknownSection">Невідомий розділ {$param}</message>
+	<message key="plugins.importexport.native.error.unknownUser">Вказаний користувач, "{$userName}", не існує.</message>
+	<message key="plugins.importexport.native.import.error.sectionTitleMismatch">Назва розділу "{$section1Title}" та назва розділу "{$section2Title}" у випуску "{$issueTitle}" співпадають з різними існуючими розідлами журналу.</message>
+	<message key="plugins.importexport.native.import.error.sectionTitleMatch">Назва розділу "{$sectionTitle}" у випуску "{$issueTitle}" співпадає з існуючим розділом журналу, але інша назва цього розділу не збігається з іншою назвою існуючого розділу журналу.</message>
+	<message key="plugins.importexport.native.import.error.sectionAbbrevMismatch">Абревіатура розділу "{$section1Abbrev}" та абревіатура розділу "{$section2Abbrev}" у випуску "{$issueTitle}" співпадає з різними існуючими розділами журналу.</message>
+	<message key="plugins.importexport.native.import.error.sectionAbbrevMatch">Абревіатура розділу "{$sectionAbbrev}" у випуску "{$issueTitle}" співпадає з існуючим розділом журналу, але інша абревіатура цього розділу не співпадає з іншою абревіатурою існуючого розділу журналу.</message>
+	<message key="plugins.importexport.native.import.error.issueIdentificationMatch">Жоден випуск або більше одного випуску співпадає з вказаною ідентифікацією випуску "{$issueIdentification}".</message>
+	<message key="plugins.importexport.native.import.error.issueIdentificationDuplicate">Існуючий випуск з ідентифікатором {$issueId} співпадає з вказаною ідентифікацією випуску "{$issueIdentification}". Цей випуск не буде змінено, але статті будуть додані.</message>
+	<message key="plugins.importexport.native.import.error.issueIdentificationMissing">Елемент ідентифікації випуску відсутній для статті "{$articleTitle}".</message>
+	<message key="plugins.importexport.native.import.error.publishedDateMissing">Стаття "{$articleTitle}" є у випуску, але для неї не вказана дата публікації.</message>
+</locale>

@@ -507,7 +507,6 @@
 	<message key="manager.setup.reviewerDatabaseLink">Database over potensielle fagkonsulenter</message>
 	<message key="manager.setup.reviewerDatabaseLink.desc">Legg til en lenke til en relevant og tilgjengelig litteraturdatabase på 'Velg fagkonsulent'-siden, for at databasen skal kunne brukes til å søke etter potensielle fagkonsulenter.</message>
 	<message key="manager.setup.reviewOptions.blindReview">Anonym fagvurdering</message>
-	<message key="manager.setup.reviewOptions.showEnsuringLink"><![CDATA[Vis lenke til <a href="javascript:openHelp('{$blindReviewHelpId}')" class="action">Sikre anonym fagvurdering</a> på de sidene hvor forfattere og fagkonsulenter laster opp filer.]]></message>
 	<message key="manager.setup.showGalleyLinksDescription">Vis alltid sideoppsettlenker og indikér om tilgangen er begrenset.</message>
 	<message key="manager.statistics.statistics.articleViews">Telleverk for artikkelvisning (kun for forfattere)</message>
 	<message key="manager.subscriptionPolicies.expiry">Abonnementets utløpstid</message>

@@ -292,7 +292,6 @@
 	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"><![CDATA[<strong>Примітка:</strong> Листи-запрошення рецензентів включатимуть спеціальний прямий URL до сторінки з поданням (при цьому для доступу до всіх інших сторінок їм буде необхідно зайти у систему з іменем/паролем). З міркувань безпеки, за умов використання цієї опції, редактори не зможуть змінювати адреси email або додавати додаткові адреси (CC та BCC) під час написання листів-запрошень рецензентів.]]></message>
 	<message key="manager.setup.reviewOptions.reviewerRatings">Рейтинги рецензентів</message>
 	<message key="manager.setup.reviewOptions.reviewerReminders">Нагадування рецензентам</message>
-	<message key="manager.setup.reviewOptions.showEnsuringLink"><![CDATA[Надати посилання на <a href="javascript:openHelp('{$blindReviewHelpId}')" class="action">Гарантії анонімного рецензування</a> на сторінках, де автори та рецензенти вивантажують файли.]]></message>
 	<message key="manager.setup.reviewPolicy">Політика рецензування</message>
 	<message key="manager.setup.searchEngineIndexing">Індексування пошуковими системами</message>
 	<message key="manager.setup.searchEngineIndexingDescription">Щоб допомогти користувачам пошукових систем знаходити журнал, надайте короткий опис журналу та набір релевантних ключових слів (розділених крапкою з комою).</message>

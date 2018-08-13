@@ -301,7 +301,6 @@
 	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"><![CDATA[<strong>Observera:</strong> Inbjudan via e-post till granskare innehåller en URL som pekar direkt till sidan för granskning av bidraget (med tillgång till andra sidor som kräver inloggning). Av säkerhetsskäl kan inte redaktörer cc:a eller lägga till andras e-postadresser när de skickar inbjudan till granskare.]]></message>
 	<message key="manager.setup.reviewOptions.reviewerRatings">Granskarens bedömning</message>
 	<message key="manager.setup.reviewOptions.reviewerReminders">Påminnelse (för granskare)</message>
-	<message key="manager.setup.reviewOptions.showEnsuringLink"><![CDATA[Länka till <a href="javascript:openHelp('{$blindReviewHelpId}')" class="action">garanterar att granskningen är anonym</a> på sidor där författare och granskare laddar upp filer.]]></message>
 	<message key="manager.setup.reviewPolicy">Granskningspolicy</message>
 	<message key="manager.setup.searchEngineIndexing">Indexering för sökmotorer</message>
 	<message key="manager.setup.searchEngineIndexingDescription">Lägg till en kort beskrivning av tidskriften som sökmotorer kan visa när tidskriften visas i sökresultatet</message>	

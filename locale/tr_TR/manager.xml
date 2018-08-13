@@ -257,7 +257,6 @@
 	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"><![CDATA[<strong>Not:</strong> Hakemlere gönderilen e-posta, hakemlerin davet edildiği değerlendirme gönderisine doğrudan erişebilmesi için özel bir URL adresi içerir (oturum açılması gereken diğer sayfalar ile birlikte).  Bu seçenek, güvenlik nedenleriyle editörlerin CCs veya BCCs adresleri eklemelerine izin vermez.]]></message>
 	<message key="manager.setup.reviewOptions.reviewerRatings">Hakem Puanlama</message>
 	<message key="manager.setup.reviewOptions.reviewerReminders">Hakem Hatırlatmaları</message>
-	<message key="manager.setup.reviewOptions.showEnsuringLink"><![CDATA[Yazarlara ve hakemlere dosya yükleme sayfalarında <a href="javascript:openHelp('{$blindReviewHelpId}')" class="action">Kör Hakemlik Güvencesi</a> için bağlantılar sağlayın.]]></message>
 	<message key="manager.setup.reviewPolicy">Değerlendirme Politikası</message>
 	<message key="manager.setup.searchEngineIndexing">Arama Motoru Dizinlemesi</message>
 	<message key="manager.setup.searchEngineIndexingDescription">Kullanıcılara yardımcı olmak üzere arama motorlarının dergiyi dizinlemesi için dergiyle ilgili anahtar kelimeleri (noktalı virgülle ayırarak) yazabilirsiniz. Ör. İktisat; İşletme; Finans.</message>

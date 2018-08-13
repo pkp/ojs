@@ -177,7 +177,7 @@ class SubscriptionTypesGridHandler extends GridHandler {
 	function editSubscriptionType($args, $request) {
 		// Form handling.
 		$subscriptionTypeForm = new SubscriptionTypeForm($request->getJournal()->getId(), $request->getUserVar('rowId'));
-		$subscriptionTypeForm->initData($args, $request);
+		$subscriptionTypeForm->initData();
 		return new JSONMessage(true, $subscriptionTypeForm->fetch($request));
 	}
 
