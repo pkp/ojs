@@ -113,7 +113,7 @@ This script can be executed from the command-line or via the OJS web interface.
 
 #### 1. Command-line
 
-If you have the CLI version of PHP installed (e.g., /usr/bin/php), you can
+If you have the CLI version of PHP installed (e.g., `/usr/bin/php`), you can
 upgrade the database as follows:
 
 - Edit config.inc.php and change "installed = On" to "installed = Off"
