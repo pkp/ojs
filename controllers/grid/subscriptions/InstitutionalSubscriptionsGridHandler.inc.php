@@ -146,7 +146,7 @@ class InstitutionalSubscriptionsGridHandler extends SubscriptionsGridHandler {
 		$subscriptionForm->readInputData();
 
 		if ($subscriptionForm->validate()) {
-			$subscriptionForm->execute($args, $request);
+			$subscriptionForm->execute();
 			$notificationManager = new NotificationManager();
 			$notificationManager->createTrivialNotification($request->getUser()->getId(), NOTIFICATION_TYPE_SUCCESS);
 			// Prepare the grid row data.

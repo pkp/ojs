@@ -212,9 +212,10 @@ class IssueEntryPublicationMetadataForm extends Form {
 	 * Save the metadata and store the catalog data for this published
 	 * monograph.
 	 */
-	function execute($request) {
-		parent::execute($request);
+	function execute() {
+		parent::execute();
 
+		$request = Application::getRequest();
 		$submission = $this->getSubmission();
 		$context = $request->getContext();
 

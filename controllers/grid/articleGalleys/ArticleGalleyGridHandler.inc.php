@@ -229,7 +229,7 @@ class ArticleGalleyGridHandler extends GridHandler {
 		$form = new PublicIdentifiersForm($representation);
 		$form->readInputData();
 		if ($form->validate()) {
-			$form->execute($request);
+			$form->execute();
 			return DAO::getDataChangedEvent();
 		} else {
 			return new JSONMessage(true, $form->fetch($request));
@@ -360,7 +360,7 @@ class ArticleGalleyGridHandler extends GridHandler {
 		$galleyForm->readInputData();
 
 		if ($galleyForm->validate()) {
-			$galley = $galleyForm->execute($request);
+			$galley = $galleyForm->execute();
 
 			if ($this->getSubmission()->getStageId() == WORKFLOW_STAGE_ID_EDITING ||
 				$this->getSubmission()->getStageId() == WORKFLOW_STAGE_ID_PRODUCTION) {

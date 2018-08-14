@@ -105,7 +105,7 @@ class WebsiteSettingsTabHandler extends ManagerSettingsTabHandler {
 		$fileUploadForm->readInputData();
 
 		if ($fileUploadForm->validate()) {
-			if ($fileUploadForm->execute($request)) {
+			if ($fileUploadForm->execute()) {
 				// Generate a JSON message with an event
 				$settingName = $request->getUserVar('fileSettingName');
 				return DAO::getDataChangedEvent($settingName);

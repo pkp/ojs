@@ -118,13 +118,11 @@ class SectionForm extends PKPSectionForm {
 
 	/**
 	 * Save section.
-	 * @param $args array
-	 * @param $request PKPRequest
 	 * @return mixed
 	 */
-	function execute($args, $request) {
+	function execute() {
 		$sectionDao = DAORegistry::getDAO('SectionDAO');
-		$journal = $request->getJournal();
+		$journal = Application::getRequest()->getJournal();
 
 		// Get or create the section object
 		if ($this->getSectionId()) {
@@ -163,7 +161,7 @@ class SectionForm extends PKPSectionForm {
 		// Update section editors
 		$this->_saveSubEditors($journal->getId());
 
-		return parent::execute($section, $request);
+		return parent::execute();
 	}
 }
 

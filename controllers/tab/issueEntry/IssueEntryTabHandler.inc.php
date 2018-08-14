@@ -121,7 +121,7 @@ class IssueEntryTabHandler extends PublicationEntryTabHandler {
 		$form = new IssueEntryPublicationMetadataForm($submission->getId(), $user->getId(), $stageId);
 		$form->readInputData();
 		if($form->validate()) {
-			$form->execute($request);
+			$form->execute();
 			// Log the event
 			import('lib.pkp.classes.log.SubmissionLog');
 			import('classes.log.SubmissionEventLogEntry'); // Log consts
@@ -178,7 +178,7 @@ class IssueEntryTabHandler extends PublicationEntryTabHandler {
 		$assignPublicIdentifiersForm = new AssignPublicIdentifiersForm($formTemplate, $submission, true, '', $formParams);
 		// Assign pub ids
 		$assignPublicIdentifiersForm->readInputData();
-		$assignPublicIdentifiersForm->execute($request, true);
+		$assignPublicIdentifiersForm->execute(true);
 		return new JSONMessage();
 	}
 
@@ -242,7 +242,7 @@ class IssueEntryTabHandler extends PublicationEntryTabHandler {
 		$form = new PublicIdentifiersForm($submission, $stageId, array('displayedInContainer' => true));
 		$form->readInputData();
 		if ($form->validate()) {
-			$form->execute($request);
+			$form->execute();
 			$json = new JSONMessage();
 			import('lib.pkp.classes.log.SubmissionLog');
 			import('classes.log.SubmissionEventLogEntry'); // Log consts

@@ -190,7 +190,7 @@ class SectionGridHandler extends SetupGridHandler {
 		$sectionForm->readInputData();
 
 		if ($sectionForm->validate()) {
-			$sectionForm->execute($args, $request);
+			$sectionForm->execute();
 			return DAO::getDataChangedEvent($sectionForm->getSectionId());
 		}
 		return new JSONMessage(false);

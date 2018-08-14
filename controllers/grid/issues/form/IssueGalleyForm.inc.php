@@ -125,13 +125,13 @@ class IssueGalleyForm extends Form {
 
 	/**
 	 * Save changes to the galley.
-	 * @param $request PKPRequest
 	 * @return int the galley ID
 	 */
-	function execute($request) {
+	function execute() {
 		import('classes.file.IssueFileManager');
 		$issueFileManager = new IssueFileManager($this->_issue->getId());
 
+		$request = Application::getRequest();
 		$journal = $request->getJournal();
 		$user = $request->getUser();
 

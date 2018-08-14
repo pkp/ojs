@@ -194,7 +194,7 @@ class SubscriptionTypesGridHandler extends GridHandler {
 		$subscriptionTypeForm->readInputData();
 
 		if ($subscriptionTypeForm->validate()) {
-			$subscriptionTypeForm->execute($args, $request);
+			$subscriptionTypeForm->execute();
 			$notificationManager = new NotificationManager();
 			$notificationManager->createTrivialNotification($request->getUser()->getId(), NOTIFICATION_TYPE_SUCCESS);
 			// Prepare the grid row data.

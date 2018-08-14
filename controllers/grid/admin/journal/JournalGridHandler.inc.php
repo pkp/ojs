@@ -60,7 +60,7 @@ class JournalGridHandler extends ContextGridHandler {
 		// The context settings form will return a context path in two cases:
 		// 1 - if a new context was created;
 		// 2 - if a press path of an existing context was edited.
-		$newContextPath = $settingsForm->execute($request);
+		$newContextPath = $settingsForm->execute();
 
 		// Create the notification.
 		$notificationMgr = new NotificationManager();
