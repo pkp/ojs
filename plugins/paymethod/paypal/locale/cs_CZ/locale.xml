@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/cs_CZ/locale.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="cs_CZ" full_name="Čeština">
+	<message key="plugins.paymethod.paypal.displayName">Platba pomocí služby PayPal</message>
+	<message key="plugins.paymethod.paypal.description">Platba bude provedena s využítím služby PayPal.</message>
+	<message key="plugins.paymethod.paypal">Platba pomocí služby PayPal</message>
+	<message key="plugins.paymethod.paypal.settings">Nastavení plateb PayPal</message>
+	<message key="plugins.paymethod.paypal.settings.testMode">Testovací mód</message>
+	<message key="plugins.paymethod.paypal.settings.accountName">Jméno účtu</message>
+	<message key="plugins.paymethod.paypal.settings.clientId">ID klienta</message>
+	<message key="plugins.paymethod.paypal.settings.secret">Tajemství</message>
+	<message key="plugins.paymethod.paypal.error">Došlo k chybě transakce. Podrobné informace získáte od správce časopisu.</message>
+</locale>

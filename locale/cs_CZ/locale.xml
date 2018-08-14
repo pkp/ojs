@@ -167,7 +167,7 @@
 	<message key="submissions.step3">Krok 3</message>
 	<message key="submissions.queuedReview">Ve frontě k recenzi</message>
 	<message key="submissions.scheduled">Naplánované</message>
-	<message key="submissions.published">Publikované</message>
+	<message key="submissions.published">Publikováno</message>
 	<message key="submissions.initial">Počáteční</message>
 	<message key="submissions.proofread">Korektura</message>
 	<message key="submissions.initialProof">Počáteční kontrola</message>
@@ -186,7 +186,7 @@
 	<!-- Submission Notes -->
 
 	<!-- Common Journal Terms -->
-	<message key="journal.currentIssue">Aktuální výtisk</message>
+	<message key="journal.currentIssue">Aktuální číslo</message>
 	<message key="journal.journals">Časopisy</message>
 	<message key="journal.path">Cesta</message>
 	<message key="context.context">Časopis</message>
@@ -456,12 +456,7 @@ Volitelně můžete uživateli poskytnout zdůvodnění, proč byl jeho účet z
 
 	<!-- Navigation sidebar menu -->
 
-
-
-
-
-
-
+	<!-- Used by editor in submission review / editing -->
 	<!-- Section Editor -->
 	<message key="sectionEditor.activeEditorialAssignments">Aktivní editorské úkoly</message>
 	<message key="sectionEditor.completedEditorialAssignments">Dokončené editorské úkoly</message>
@@ -665,8 +660,8 @@ Volitelně můžete uživateli poskytnout zdůvodnění, proč byl jeho účet z
 	<message key="user.subscriptions.purchaseNewSubscription">Zakoupit nové předplatné</message>
 	<message key="user.subscriptions.purchaseIndividualSubscription">Zakoupit individuální předplatné</message>
 	<message key="user.subscriptions.purchaseInstitutionalSubscription">Zakoupit institucionální předplatné</message>
-	<message key="user.subscriptions.expires">Vyprší</message>
-	<message key="user.subscriptions.expired">Vypršelo</message>
+	<message key="user.subscriptions.expires">Vyprší dne {$date}</message>
+	<message key="user.subscriptions.expired">Vypršelo dne {$date}</message>
 	<message key="user.subscriptions.viewSubscriptionTypes">Zobrazit dostupné typy předplatného</message>
 	<message key="user.subscriptions.form.typeId">Typy předplatného</message>
 	<message key="user.subscriptions.form.membership">Členství</message>
@@ -742,7 +737,7 @@ Volitelně můžete uživateli poskytnout zdůvodnění, proč byl jeho účet z
 	<message key="about.sectionPolicies">Pravidla sekcí</message>
 	<message key="about.submissions">Příspěvky</message>
 	<message key="about.onlineSubmissions.login">Jít na přihlášení</message>
-	<message key="about.onlineSubmissions.registrationRequired">Registrace a přihlášení je zapotřebí pro online zasílání příspěvků a kontrolu jejich aktuálního stavu.</message>
+	<message key="about.onlineSubmissions.registrationRequired">K podání příspěvku je třeba {$login} nebo {$register}</message>
 	<message key="about.authorGuidelines">Pokyny pro autory</message>
 	<message key="about.submissionPreparationChecklist">Kontrolní seznam pro přípravu příspěvku</message>
 	<message key="about.submissionPreparationChecklist.description">Jako součást procesu odesílání příspěvku je požadováno, aby autoři zaškrnutím potvrdili, že jejich příspěvek je v souladu se všemi následujícími položkami. Příspěvky, které nebudou v souladu s těmito pravidly, mohou být autorům vráceny.</message>
@@ -826,7 +821,7 @@ Volitelně můžete uživateli poskytnout zdůvodnění, proč byl jeho účet z
 	<message key="installer.ojsUpgrade">OJS Upgrade</message>
 	<message key="installer.installationInstructions"><![CDATA[<h4>Verze OJS {$version}</h4>
 
-<p>Děkujeme za stažení <strong>Open Journal Systému</strong> vytvořeného Public Knowledge Projectem. Než budete pokračovat, přečtěte si prosím <a href="{$baseUrl}/docs/README.md">README</a> soubor dodaný s tímto softwarem. Pro více informací o Public Knowledge Projectu a jeho softwarových projektech navštivte prosím <a href="http://pkp.sfu.ca/" target="_blank">PKP webové stránky</a>. Pokud máte bug reporty nebo dotazy na technickou podporu OJS, navštivte <a href="http://forum.pkp.sfu.ca">support forum</a> nebo navštivte PKP online <a href="http://pkp.sfu.ca/bugzilla/" target="_blank">bug reporting systém</a>. Přestože je support forum preferovaným způsobem kontaktování, můžete také týmu poslat email na <a href="mailto:pkp-support@sfu.ca">pkp-support@sfu.ca</a>.</p>
+<p>Děkujeme za stažení <strong>Open Journal Systému</strong> vytvořeného Public Knowledge Projectem. Než budete pokračovat, přečtěte si prosím <a href="{$baseUrl}/docs/README">README</a> soubor dodaný s tímto softwarem. Pro více informací o Public Knowledge Projectu a jeho softwarových projektech navštivte prosím <a href="http://pkp.sfu.ca/" target="_blank">PKP webové stránky</a>. Pokud máte bug reporty nebo dotazy na technickou podporu OJS, navštivte <a href="http://forum.pkp.sfu.ca">support forum</a> nebo navštivte PKP online <a href="http://pkp.sfu.ca/bugzilla/" target="_blank">bug reporting systém</a>. Přestože je support forum preferovaným způsobem kontaktování, můžete také týmu poslat email na <a href="mailto:pkp-support@sfu.ca">pkp-support@sfu.ca</a>.</p>
 
 <h4>Upgrade</h4>
 
@@ -864,7 +859,7 @@ Volitelně můžete uživateli poskytnout zdůvodnění, proč byl jeho účet z
 <p>2. Musí být vytvořen adresář pro ukládání nahraných souborů a nastaven jako zapsatelný (viz "Nastavení souborů" níže).</p>]]></message>
 	<message key="installer.upgradeInstructions"><![CDATA[<h4>Verze OJS {$version}</h4>
 
-<p>Děkujeme za stažení <strong>Open Journal Systému</strong> vytvořeného Public Knowledge Projectem. Než budete pokračovat, přečtěte si prosím <a href="{$baseUrl}/docs/README.md">README</a> a <a href="{$baseUrl}/docs/UPGRADE.md">UPGRADE</a> soubory dodané s tímto softwarem. Pro více informací o Public Knowledge Projectu a jeho softwarových projektech navštivte prosím <a href="http://pkp.sfu.ca/" target="_blank">PKP webové stránky</a>. Pokud máte bug reporty nebo dotazy na technickou podporu OJS, navštivte <a href="http://forum.pkp.sfu.ca">support forum</a> nebo navštivte PKP online <a href="http://pkp.sfu.ca/bugzilla/" target="_blank">bug reporting systém</a>. Přestože je support forum preferovaným způsobem kontaktování, můžete také týmu poslat email na <a href="mailto:pkp-support@sfu.ca">pkp-support@sfu.ca</a>.</p>
+<p>Děkujeme za stažení <strong>Open Journal Systému</strong> vytvořeného Public Knowledge Projectem. Než budete pokračovat, přečtěte si prosím <a href="{$baseUrl}/docs/README">README</a> a <a href="{$baseUrl}/docs/UPGRADE">UPGRADE</a> soubory dodané s tímto softwarem. Pro více informací o Public Knowledge Projectu a jeho softwarových projektech navštivte prosím <a href="http://pkp.sfu.ca/" target="_blank">PKP webové stránky</a>. Pokud máte bug reporty nebo dotazy na technickou podporu OJS, navštivte <a href="http://forum.pkp.sfu.ca">support forum</a> nebo navštivte PKP online <a href="http://pkp.sfu.ca/bugzilla/" target="_blank">bug reporting systém</a>. Přestože je support forum preferovaným způsobem kontaktování, můžete také týmu poslat email na <a href="mailto:pkp-support@sfu.ca">pkp-support@sfu.ca</a>.</p>
 <p>Je <strong>důrazně doporučeno</strong>, abyste udělali zálohu vaší databáze, adresáře souborů a OJS instalace před tím, než budete pokračovat.</p>
 <p>Pokud máte zapnutý <a href="http://www.php.net/features.safe-mode" target="_blank">PHP Safe Mode</a>, ujistěte se prosím, že max_execution_time instrukce ve vašem php.ini konfiguračním souboru je nastaven na vysoký limit. Pokud bude tohoto nebo jakéhokoliv dalšího časového limitu (např. "Timeout" instrukce u Apache) dosaženo a bude přerušen proces upgradování, budou vyžadovány ruční zásahy.</p>]]></message>
 	<message key="installer.localeSettingsInstructions"><![CDATA[Pro kompletní podporu Unicode (UTF-8) zvolte UTF-8 pro nastavení všech znakových sad. Vězte, že tato podpora aktuálně vyžaduje MySQL >= 4.1.1 nebo PostgreSQL >= 7.1 databázový server. Vězte prosím také, že plná Unicode podpora vyžaduje PHP >= 4.3.0 kompilované s podporou pro <a href="http://www.php.net/mbstring" target="_blank">mbstring</a> knihovnu (ve výchozím nastavení povoleno ve většině nejnovějších instalací PHP). Pokud Váš server nesplňuje tyto požadavky, můžete se při používání rozšířených znakových sad střetnout s problémy.
@@ -996,7 +991,6 @@ Ověřování může selhat při vyhledávání URL, které vyžadují "posted f
 
 
 	<!-- Notification Types -->
-
 	<message key="notification.type.articleSubmitted">Byl vložen nový článek s názvem "{$title}".</message>
 	<message key="notification.type.editing">Editace událostí</message>
 	<message key="notification.type.editorDecisionComment">Byla vložena poznámka k rozhodnutí editora o článku "{$title}".</message>
@@ -1107,4 +1101,17 @@ Nastavení podpory CLOCKSS pro Open Journal System stačí provést teprve po do
 <P> 2. Adresář pro ukládání nahraných souborů musí být vytvořen a zapisovatelný (viz "Nastavení souborů" níže). </p>]]></message>
 	<message key="help.goToEditPage">Editovat {$sectionTitle}</message>
 	<message key="notification.type.submissionSubmitted">Nový článek s názvem "{$title}" byl vložen.</message>
+	<message key="subscriptions.status.noSubscription">Nemáte aktivní předplatné.</message>
+	<message key="reader.purchasePrice">{$price}) ({$currency}</message>
+	<message key="payment.type.publication.required">Je třeba uhradit publikační poplatek.</message>
+	<message key="payment.requestPublicationFee">Požadovaný publikační poplatek ({$feeAmount})</message>
+	<message key="payment.notFound">Byla požadována platba, ale termín požadavku vypršel. Podrobné informace získáte od správce časopisu.</message>
+	<message key="notification.type.publicationScheduled">Příspěvek byl naplánován k publikování.</message>
+	<message key="navigation.subscriptions">Předplatné</message>
+	<message key="log.editor.submissionExpedited">{$editorName} převzal redakční proces příspěvku {$submissionId}.</message>
+	<message key="manager.setup.porticoDescription">Portico je nezisková služba, která se zasazuje o uchování digitálních publikací, včetně e-časopisů, elektronických knih a digitalizovaných historických sbírek. Pokud podepsal váš časopis smlouvu s Portico, povolte tuto službu zde:</message>
+	<message key="log.editor.recommendation">Doporučení redaktora ({$decision}) pro článek {$submissionId} zaznamenal {$editorName}.</message>
+	<message key="user.register.form.emailConsentAllContexts">Ano, chci dostávat upozornění na nové články a dostávat nová upozornění v rámci všech časopisů, ke kterým jsem se zaregistroval.</message>
+	<message key="notification.type.public">Veřejné oznámení</message>
+	<message key="user.reviewerPrompt.optin">Ano, chci být kontaktován s požadavky na recenze příspěvků do tohoto časopisu.</message>
 </locale>

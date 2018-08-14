@@ -13,19 +13,19 @@
  
 <locale name="cs_CZ" full_name="Čeština">
 	<message key="plugins.auth.ldap.displayName">LDAP</message>
-	<message key="plugins.auth.ldap.description">Tento plugin umožňuje ověření a synchronizování uživatelských účtů vzhledem k externímu LDAP zdroji dat.</message>
+	<message key="plugins.auth.ldap.description">Tento plugin umožňuje ověření a synchronizování uživatelských účtů vzhledem k externímu LDAP zdroji ověření.</message>
 	
-	<message key="plugins.auth.ldap.settings">LDAP nastavení</message>
-	<message key="plugins.auth.ldap.settings.hostname">Server hostname</message>
-	<message key="plugins.auth.ldap.settings.hostname.description">Např.: "ldap.example.com" nebo "ldaps://ldap.example.com" (pro použití SSL)</message>
+	<message key="plugins.auth.ldap.settings">nastavení LDAP</message>
+	<message key="plugins.auth.ldap.settings.hostname">hostname serveru</message>
+	<message key="plugins.auth.ldap.settings.hostname.description">Např.: "ldap.example.com" nebo "ldaps://ldap.example.com" (při použití SSL)</message>
 	<message key="plugins.auth.ldap.settings.port">Port serveru</message>
 	<message key="plugins.auth.ldap.settings.port.description">Volitelné. Výchozí na to 389 (LDAP) nebo 636 (LDAP přes SSL)</message>
 	<message key="plugins.auth.ldap.settings.basedn">Base DN</message>
 	<message key="plugins.auth.ldap.settings.basedn.description">Např.: "ou=people,dc=example,dc=com"</message>
-	<message key="plugins.auth.ldap.settings.managerdn">Manažer DN</message>
+	<message key="plugins.auth.ldap.settings.managerdn">Správce DN</message>
 	<message key="plugins.auth.ldap.settings.managerdn.description">Např.: "cn=Manager,dc=example,dc=com"</message>
-	<message key="plugins.auth.ldap.settings.managerpwd">Heslo manažera</message>
-	<message key="plugins.auth.ldap.settings.managerpwd.description">Manažer DN a heslo jsou požadovány pouze pokud jsou povoleny možnosti synchronizace uživatelských profilů/hesel nebo vytváření uživatelů. Pokud bude LDAP použito pouze pro ověřování, je možné tyto možnosti vynechat.</message>
+	<message key="plugins.auth.ldap.settings.managerpwd">Heslo správce</message>
+	<message key="plugins.auth.ldap.settings.managerpwd.description">Správce DN a heslo jsou požadovány pouze pokud jsou povoleny možnosti synchronizace uživatelských profilů/hesel nebo vytváření uživatelů. Pokud bude LDAP použito pouze pro ověřování, je možné tyto možnosti vynechat.</message>
 	<message key="plugins.auth.ldap.settings.uid">Atribut jména účtu</message>
 	<message key="plugins.auth.ldap.settings.uid.description">Atribut jehož hodnota jedinečně identifikuje uživatelský objekt, jako uid nebo cn nebo sAMAccountName.</message>
 	<message key="plugins.auth.ldap.settings.pwhash">Šifrování hesla</message>

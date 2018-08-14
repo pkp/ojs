@@ -126,6 +126,14 @@ Pokud máte nějaké otázky, kontaktujte mě prosím. Děkujeme, že jste zvoli
 {$editorialContactSignature}]]></body>
 		<description>Tento email, pokud je povolen, je automaticky zaslán autorovi, když dokončí proces odesílání příspěvku do časopisu. Obsahuje informace o možnosti sledování příspěvku během redakčního zpracování a poděkování autorovi za příspěvek.</description>
 	</email_text>
+	<email_text key="SUBMISSION_UNSUITABLE">
+		<subject>Nevhodný příspěvek</subject>
+		<body><![CDATA[{$authorName}:<br />
+<br />
+Z úvodního prostudování příspěvku &quot;{$submissionTitle}&quot; jasně vyplynulo, že tento příspěvek nezapadá do záběru a zaměření časopisu {$contextName}. Doporučuji konzultovat popis tohoto časopisu pod položkou O časopisu a také obsah posledních čísel. Zjistíte tak více o pracích, které publikujeme. Můžete také zvážit zaslání Vašeho rukopisu do jiného, vhodnějšího časopisu.<br />
+<br />
+{$editorialContactSignature}]]></body>
+	</email_text>
 	<email_text key="SUBMISSION_COMMENT">
 		<subject>Komentář příspěvku</subject>
 		<body><![CDATA[{$name}:<br />
@@ -237,7 +245,7 @@ V případě, že budete mít jakékoliv dotazy, mě prosím kontaktujte.<br />
 	</email_text>
 	<email_text key="REVIEW_CONFIRM">
 		<subject>Mohu zpracovat recenzi</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
+		<body><![CDATA[Editoři:<br />
 <br />
 Mohu a jsem ochotný zpracovat recenzi příspěvku &quot;{$submissionTitle}&quot; pro {$contextName}. Děkuji, že jste mě oslovili. Plánuji dokončit zpracování recenze ve stanoveném termínu {$reviewDueDate}, případně dříve.<br />
 <br />
@@ -246,7 +254,7 @@ Mohu a jsem ochotný zpracovat recenzi příspěvku &quot;{$submissionTitle}&quo
 	</email_text>
 	<email_text key="REVIEW_DECLINE">
 		<subject>Nemohu zpracovat recenzi</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
+		<body><![CDATA[Editoři:<br />
 <br />
 Obávám se, že tentokrát nejsem schopen zpracovat recenzi příspěvku &quot;{$submissionTitle}&quot; pro {$contextName}. Děkuji, že jste mě oslovili a neváhejte mě jindy opět kontaktovat.<br />
 <br />
@@ -357,6 +365,15 @@ Pokud nyní nemůžete tuto práci provést nebo máte nějaké otázky, kontakt
 <br />
 <br />
 {$participantName}]]></body>
+	</email_text>
+	<email_text key="COPYEDIT_ACK">
+		<subject>Poděkování za redigování </subject>
+		<body><![CDATA[{$participantName}:<br />
+<br />
+Děkujeme vám za zredigování příspěvku &quot;{$submissionTitle}&quot; pro {$contextName}. Významně tím pomáháte udržet kvalitu tohoto časopisu.<br />
+<br />
+{$editorialContactSignature}]]></body>
+		<description>Tento email posílá editor sekce redaktorovi příspěvku, aby mu poděkoval za úspěšně dokončený proces redigování článku.</description>
 	</email_text>
 	<email_text key="COPYEDIT_AUTHOR_REQUEST">
 		<subject>Žádost o kontrolu redigování</subject>
@@ -681,6 +698,32 @@ Odkaz: {$url}<br />
 <br />
 {$principalContactSignature}]]></body>
 	</email_text>
+	<email_text key="NOTIFICATION_MAILLIST">
+		<subject>Nové oznámení od {$siteTitle}</subject>
+		<body><![CDATA[Máte nové oznámení od {$siteTitle}:<br />
+--<br />
+{$notificationContents}<br />
+<br />
+Odkaz: {$url}<br />
+--<br />
+<br />
+Pokud chcete ukončit odebírání těchto informačních emalů, přejděte prosím na {$unsubscribeLink} a vložte vaši emailovou adresu a heslo.<br />
+<br />
+{$principalContactSignature}]]></body>
+	</email_text>
+	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
+		<subject>Vítejte na rezesílacím seznamu {$siteTitle}!</subject>
+		<body><![CDATA[Přihlásil jste se k odběru oznámení z {$siteTitle}.<br />
+<br />
+Pro potvrzení Vaší žádosti a přidání Vaší emailové adresy do rozesílacího seznamu klikněte prosím na tento odkaz: {$confirmLink}<br />
+<br />
+Pokud si přejete ukončit odebírání informačních emailů, přejděte prosím na {$unsubscribeLink} a vložte Vaši emailovou adresu a heslo.<br />
+<br />
+Vaše heslo pro zakázání informačních emailů je: {$password}<br />
+<br />
+{$principalContactSignature}]]></body>
+		<description>Tento e-mail je odeslán neregistrovanému uživateli, který se právě zaregistroval do mailového seznamu oznámeními.</description>
+	</email_text>
 	<email_text key="EDITOR_DECISION_ACCEPT">
 		<subject>Rozhodnutí editora</subject>
 		<body><![CDATA[{$authorName}:<br />
@@ -847,6 +890,64 @@ Webová adresa příspěvku: {$submissionUrl}<br />
 {$editorialContactSignature}<br />]]></body>
 		<description>Tento e-mail od editora nebo editora sekce autorovi oznamuje, že jejich podání je odesláno do produkční fáze.</description>
 	</email_text>
+	<email_text key="GIFT_AVAILABLE">
+		<subject>{$giftNoteTitle}</subject>
+		<body><![CDATA[Vážený(á) {$recipientFirstName},<br />
+<br />
+{$buyerFullName} by vám rád dal dar v časopise {$giftJournalName}:<br />
+<br />
+{$giftDetails}<br />
+<br />
+<br />
+{$giftNote}<br />
+<br />
+<br />
+V následujícím emailu dostanete podrobnosti včetně detailu o loginu včetně pokynů, jak si dar převzít.<br />
+<br />
+Doufáme, že vám dárek udělá radost!<br />
+<br />
+{$giftContactSignature}<br />]]></body>
+		<description>Tento e-mail oznamuje příjemci daru, že byl zakoupen a je k dispozici k vyzvednutí.</description>
+	</email_text>
+	<email_text key="GIFT_USER_LOGIN">
+		<subject>Vyzvednutí dárku: Detaily loginu</subject>
+		<body><![CDATA[Vážený(á) {$recipientFirstName},<br />
+<br />
+{$buyerFullName} by s vámi rád sdílel(a) dárek v rámci časopisu {$giftJournalName}:<br />
+<br />
+{$giftDetails}<br />
+<br />
+<br />
+K vyzvednutí vašeho dárku se, prosím, zalogujte na webových stránkách časopisu <a href="{$giftUrl}">{$giftUrl}</a><br />
+<br />
+Vaše uživatelské jméno je: {$username}<br />
+<br />
+Doufáme, že váš dárek potěší!<br />
+<br />
+{$giftContactSignature}<br />]]></body>
+		<description>Tento e-mail sděluje příjemci daru jeho přihlašovací údaje.</description>
+	</email_text>
+	<email_text key="GIFT_USER_REGISTER">
+		<subject>Vyzvednutí dárku: Detaily loginu</subject>
+		<body><![CDATA[Vážený(á) {$recipientFirstName},<br />
+<br />
+{$buyerFullName} by s vámi rád sdílel dárek v rámci časopisu {$giftJournalName}:<br />
+<br />
+{$giftDetails}<br />
+<br />
+<br />
+K vyzvednutí dárku se, prosím, zalogujte na stránkách časopisu <a href="{$giftUrl}">{$giftUrl}</a><br />
+<br />
+Vaše uživatelské jméno: {$username}<br />
+Vaše heslo: {$password}<br />
+<br />
+Jakmile se zalogujete, můžete kdykoliv změnit heslo.<br />
+<br />
+Doufáme, že vás dárek potěší!<br />
+<br />
+{$giftContactSignature}<br />]]></body>
+		<description>Tento e-mail oznamuje příjemci daru své přihlašovací údaje k novému účtu.</description>
+	</email_text>
 	<email_text key="NOTIFICATION_CENTER_DEFAULT">
 		<subject>Zpráva týkající se {$contextName}</subject>
 		<body>Vložte, prosím, vaši zprávu.</body>
@@ -887,7 +988,7 @@ Pokud máte nějaké dotazy, kontaktujte mne, prosím. Děkujeme vám za využí
 	</email_text>
 	<email_text key="REVISED_VERSION_NOTIFY">
 		<subject>Nahrána opravená verze příspěvku</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
+		<body><![CDATA[Editoři:<br />
 <br />
 Opravená verze příspěvku &quot;{$submissionTitle}&quot; byla nahrána autorem {$authorName}.<br />
 <br />
@@ -924,7 +1025,7 @@ Děkujeme mnohokrát za spolupráci.<br />
 	<email_text key="REVIEW_REQUEST_REMIND_AUTO_ONECLICK">
 		<subject>Požadavek na recenzi článku</subject>
 		<body><![CDATA[{$reviewerName}:<br />
-Rádi bychom se vám připomněli s naší prosbou o recenzi příspěvku &quot;{$submissionTitle},&quot; do časopisu {$contextName}. Rádi bychom obdrželi vaši odpověď do {$responseDueDate}. Tento email byl automaticky vygenerován a zaslán vám, s ohledem na to, že termín již uplynul.
+Rádi bychom se vám připomněli s naší prosbou o recenzi příspěvku &quot;{$submissionTitle},&quot; do časopisu {$contextName}. Rádi bychom obdrželi vaši odpověď do {$responseDueDate}. Tento email byl automaticky vygenerován a zaslán vám, s ohledem na to, že termín již uplynul. 
 <br />
 Věříme, že budete dobrým recenzentem tohoto rukopisu. Abstrakt rukopisu je vložen níže. Budeme velmi rádi, pokud se ujmete této důležité úlohy.<br />
 <br />
@@ -988,5 +1089,25 @@ Děkujeme mnohokrát za spolupráci.<br />
 <br />
 {$submissionAbstract}]]></body>
 		<description><![CDATA[Tento e-mail od editoru sekce k recenzentovi požaduje, aby recenzent přijal nebo odmítl úlohu přezkoumání příspěvku pro druhé nebo větší kolo recenzí. Poskytuje informace o podání, jako je název a abstrakt, datum splatnosti kontroly a přístup k samotnému podání. Tato zpráva se používá v případě, že je ve Správci> Nastavení> Pracovní postup> Kontrola vybrán proces Standardní kontrola a je povolen přístup jednoho recenzenta k recenzím.]]></description>
+	</email_text>
+	<email_text key="EDITOR_DECISION_INITIAL_DECLINE">
+		<subject>Rozhodnutí redaktora</subject>
+		<body><![CDATA[{$authorName}:<br />
+<br />
+Dosáhli jsme rozhodnutí ohledně vašeho příspěvku pro {$contextName}, &quot;{$submissionTitle}&quot;.<br />
+<br />
+Naše rozhodnutí je: Odmítnout příspěvek <br />
+<br />
+{$editorialContactSignature} <br />]]></body>
+		<description>Tento e-mail se pošle autorovi, pokud redaktor odmítne příspěvek již před recenzním řízením</description>
+	</email_text>
+	<email_text key="EDITOR_RECOMMENDATION">
+		<subject>Doporučení redaktora</subject>
+		<body><![CDATA[{$editors}:<br />
+<br />
+Doporučení k příspěvku {$contextName}, &quot;{$submissionTitle}&quot; je: {$recommendation}<br />
+<br />
+{$editorialContactSignature}<br />]]></body>
+		<description>Tento e-mail je od redaktora nebo redaktora sekce pro odpovědného redaktora nebo pro redaktory sekcí - informuje o konečném doporučení ohledně příspěvku.</description>
 	</email_text>
 </email_texts>

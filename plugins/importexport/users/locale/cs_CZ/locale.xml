@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/cs_CZ/locale.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="cs_CZ" full_name="Čeština">
+	<message key="plugins.importexport.users.displayName">Plugin XML import/exprot uživatelů</message>
+	<message key="plugins.importexport.users.description">Zajišťuje import a export uživatelů</message>
+	<message key="plugins.importexport.users.cliUsage">Použití: {$scriptName} {$pluginName} [command] ...
+Příkazy:
+	import [xmlFileName] [journal_path]
+	export [xmlFileName] [journal_path]
+	export [xmlFileName] [journal_path] [userId1] [userId2] ...</message>
+	<message key="plugins.importexport.users.cliUsage.examples">Příiklady:
+	Import uživatelů do myJournal z myImportFile.xml:
+	{$scriptName} {$pluginName} import myImportFile.xml myJournal
+
+	Export všech uživatelů myJournal:
+	{$scriptName} {$pluginName} export myExportFile.xml myJournal
+
+	Export uživatelů podle jejich ID:
+	{$scriptName} {$pluginName} export myExportFile.xml myJournal 1 2</message>
+	<message key="plugins.importexport.users.import.importUsers">Import uživatelů</message>
+	<message key="plugins.importexport.users.import.instructions"><![CDATA[Vyberte datový soubor XML obsahující informace o uživateli, který chcete importovat do tohoto časopisu. Informace o formátu tohoto souboru naleznete v nápovědě časopisu. <br/> <br/>Pokud importovaný soubor obsahuje nějaká uživatelská jména nebo e-mailové adresy, které již v systému existují, uživatelská data pro tyto uživatele nebudou importovány a všechny nové role, které mají být vytvořeny, budou přiděleny stávajícím uživatelům.]]></message>
+	<message key="plugins.importexport.users.import.dataFile">Soubor dat o uživatelích</message>
+	<message key="plugins.importexport.users.import.sendNotify">Pošlete e-mailem každému importovanému uživateli upozornění, které obsahuje uživatelské jméno a heslo uživatele.</message>
+	<message key="plugins.importexport.users.import.continueOnError">Pokračovat v importu ostatních uživatelů v případě výskytu chyby.</message>
+	<message key="plugins.importexport.users.import.usersWereImported">Následující uživatelé byli úspěšně importováni do systému.</message>
+	<message key="plugins.importexport.users.import.errorsOccurred">Během importu došlo k chybě</message>
+	<message key="plugins.importexport.users.import.confirmUsers">Potvrďte, že toto jsou uživatelé, které chcete importovat do systému</message>
+	<message key="plugins.importexport.users.import.warning">Varování</message>
+	<message key="plugins.importexport.users.import.encryptionMismatch">Nelze použít hesla s {$importHash}; OJS je konfigurován pro použití {$ojsHash}. Pokud budete pokračovat, budete muset obnovit hesla importovaných uživatelů.</message>
+	<message key="plugins.importexport.users.unknownPress">Byl specifikován neznámý časopis "{$journalPath}".</message>
+	<message key="plugins.importexport.users.export.exportUsers">Export uživatelů</message>
+	<message key="plugins.importexport.users.export.exportByRole">Exportovat podle role</message>
+	<message key="plugins.importexport.users.export.exportAllUsers">Exportovat všechny</message>
+	<message key="plugins.importexport.users.export.errorsOccurred">Během exportu došlo k chybám</message>
+	<message key="plugins.importexport.users.export.couldNotWriteFile">Do souboru "{$fileName}" nelze zapisovat.</message>
+	<message key="plugins.importexport.users.importComplete">Import byl úspěšně dokončen. Uživatelé s uživatelskými jmény a e-mailovými adresami, které se doposud nepoužívají, byli importováni společně s příslušnými uživatelskými skupinami.</message>
+	<message key="plugins.importexport.users.results">Výsledky</message>
+	<message key="plugins.importexport.users.uploadFile">Pro pokračování nahrajte soubor v "Import".</message>
+</locale>

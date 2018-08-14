@@ -248,6 +248,7 @@
 	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"><![CDATA[<strong>Poznámka:</strong> E-mailové pozvání pro recenzenta bude obsahovat speciální URL, které dovede pozvané recenzenty přímo na Recenzní stránku k danému příspěvku (s přístupem na jakékoliv další stránky normálně vyžadující přihlášení). Z bezpečnostních důvodů nemohou editoři při tomto nastavení pozměnit e-mailové adresy nebo přidat CC nebo BCC předtím, než pošlou recenzentům pozvání.]]></message>
 	<message key="manager.setup.reviewOptions.reviewerRatings">Hodnocení recenzenta</message>
 	<message key="manager.setup.reviewOptions.reviewerReminders">Připomenutí pro recenzenta</message>
+	<message key="manager.setup.reviewOptions.showEnsuringLink"><![CDATA[Poskytnout odkazy na <a href="javascript:openHelp('{$blindReviewHelpId}')" class="action">Zajištění anonymní recenze</a> na stránkách, ze kterých autoři a recenzenti nahrávají soubory.]]></message>
 	<message key="manager.setup.reviewPolicy">Pravidla recenzního řízení</message>
 	<message key="manager.setup.searchEngineIndexing">Indexace vyhledávacími nástroji</message>
 	<message key="manager.setup.searchEngineIndexingDescription">Abyste usnadnili uživatelům vyhledávacích nástrojů objevení tohoto časopisu, poskytněte stručný popis časopisu a relevantní klíčová slova (oddělená středníkem).</message>
@@ -318,10 +319,6 @@
 	<message key="manager.subscriptionPolicies.expiryFullDescription">Čtenářům je po vypršení předplatného zakázan přístup k veškerému předplacenému obsahu.</message>
 	<message key="manager.subscriptionPolicies.expiryPartial">Částečné vypršení</message>
 	<message key="manager.subscriptionPolicies.expiryPartialDescription">Čtenáři mají zakázaný přístup k nově publikovanému předplacenému obsahu, ale zůstává jim povolen přístup k předplacenému obsahu vydanému před datem vypršení předplatného.</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks1">Upozornit předplatitele e-mailem</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks2">týden(týdny) po vypršení předplatného.</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks1">Upozornit předplatitele emailem</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks2">týden(týdny) před vypršením předplatného.</message>
 	<message key="manager.subscriptionPolicies.expiryReminders">Připomenutí vypršení předplatného</message>
 	<message key="manager.subscriptionPolicies.expiryRemindersDescription">Předplatitelům mohou být automaticky zasílány e-mailové připomínky (dostupné manažerům časopisu pro úpravy v předpřipravených emailech OJS) před tím i poté, co předplatné vypršelo.</message>
 	<message key="manager.subscriptionPolicies.expiryRemindersDisabled"><![CDATA[<strong>Poznámka:</strong> Pro aktivování této možnosti musí administrátor stránek povolit volbu <tt>scheduled_tasks</tt> v konfiguračním souboru OJS. Podpora těchto funkcí může vyžadovat dodatečnou konfiguraci serveru (nemusí být realizovatelná na všech serverech) tak, jak je uvedeno v OJS documentaci.]]></message>
@@ -510,8 +507,6 @@
 	<message key="manager.website.archiving">Archivace</message>
 	<message key="manager.section.noSectionEditors"><![CDATA[Zatím nejsou žádní sekční editoři. Přidejte nejprve tuto roli minimálně jednomu uživateli pomocí Správa > Nastavení > Uživatelé a role.]]></message>
 	<message key="manager.setup.masthead">Hlavní titulek</message>
-	<message key="manager.setup.editorialTeam">Editorský tým</message>
-	<message key="manager.setup.editorialTeam.description">Seznam editorů, vedoucích pracovníků a dalších osob spojených s tímto časopisem.</message>
 	<message key="manager.setup.homepageContent">Obsah domovské stránky časopisu</message>
 	<message key="manager.setup.homepageContentDescription">Domovská stránka časopisu ve výchozím nastavení obsahuje navigační odkazy. Další obsah domovské stránky lze přidat pomocí jedné nebo více následujících možností, které se zobrazí v uvedeném pořadí.</message>
 	<message key="manager.setup.layout">Vzhled časopisu</message>
@@ -542,10 +537,6 @@
 	<message key="manager.setup.Issn">ISSN</message>
 	<message key="manager.statistics.reports.defaultReport.issuePageViews">Obsah čísla s počty přístupů</message>
 	<message key="manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid">Použijte, prosím,  zaškrtávací políčka.</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths1">Upozornit předplatitele emailem</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths2">měsíc(ů) po vypršení předplatného.</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths1">Upozornit předplatitele emailem</message>
-	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths2">měsíc(ů) před vypršením předplatného.</message>
 	<message key="manager.distribution.access">Přístup</message>
 	<message key="grid.category.path">Cesta</message>
 	<message key="grid.action.addSection">Přidat sekci</message>
@@ -580,4 +571,28 @@
 	<message key="plugins.importexport.common.error.unknownJournal">Vybraná adresa časopisu  "{$journalPath}" neexistuje.</message>
 	<message key="plugins.importexport.common.error.unknownObjects">Specifikované objekty nelze najít.</message>
 	<message key="manager.setup.notifications.copyPrimaryContact">Odeslání kopie primárnímu kontaktu, identifikovanému v Nastavení časopisu.</message>
+	<message key="subscriptionManager.subscription.confirmRemove">Jste si jisti, že chcete smazat toto předplatné?</message>
+	<message key="manager.paymentTypes">Typy platby</message>
+	<message key="manager.setup.plnPluginEnable">Plugin PKP PN byl povolen</message>
+	<message key="manager.setup.plnDescription">PKP Preservation Network (PN) poskytuje bezplatné archivační služby pro všechny časopisy OJS, které splňují několik základních kritérií.</message>
+	<message key="manager.setup.plnSettingsDescription">Klikněte na odkaz Nastavení k přijetí podmínek používání PKP PN.</message>
+	<message key="manager.setup.plnPluginArchiving">PKP Archivační síť (PN)</message>
+	<message key="manager.setup.plnPluginNotInstalled">PKP Preservation Network (PN) poskytuje bezplatné archivační služby pro všechny časopisy OJS, které splňují několik základních kritérií. Plugin PKP PN pro OJS 3 je v současnosti ve vývoji a brzy bude k dispozici v galerii pluginů.</message>
+	<message key="manager.setup.otherLockss">Jiné archivační možnosti</message>
+	<message key="manager.setup.porticoEnable">Povolte službu Portico k ukládání a distribuci obsahu časopisu knihovnám, které se účastní v projektu Portico.</message>
+	<message key="manager.setup.porticoTitle">Portico</message>
+	<message key="manager.subscriptionPolicies.xWeeks">{$x} týdnů</message>
+	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths">Upozornit předplatitele emailem po vypršení předplatného</message>
+	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks">Upozornit předplatitele emailem po vypršení předplatného.</message>
+	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths">Upozornit předplatitele emailem před vypršením předplatného.</message>
+	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks">Upozornit předplatitele emailem před vypršením předplatného.</message>
+	<message key="manager.subscriptions.confirmRenew">Jste si jisti, že chcete obnovit toto předplatné?</message>
+	<message key="manager.navigationMenus.subscriptions.description">Odkaz na stránku, kde jsou popsány nabídky vašeho předplatného.</message>
+	<message key="manager.navigationMenus.mySubscriptions.description">Odkaz na stránku popisující návštěvníkovo současné i minulá předplatná.</message>
+	<message key="manager.navigationMenus.mySubscriptions.conditionalWarning">Tento odkaz se zobrazí pouze v případě, že je návštěvník přihlášený.</message>
+	<message key="plugins.importexport.common.validation">Validujte XML před exportem a registrací.</message>
+	<message key="plugins.importexport.common.export.error.inputFileNotReadable">Vstupní soubor {$param} není čitelný.</message>
+	<message key="manager.subscriptionPolicies.xMonths">{$x} měsíců</message>
+	<message key="manager.setup.editorialTeam">Tým redaktorů</message>
+	<message key="manager.setup.editorialTeam.description">Seznam redaktorů, vedoucích správců a ostatních osobností spojených s tímto časopisem.</message>
 </locale>
