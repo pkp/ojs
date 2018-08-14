@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/lucene/locale/en_US/locale.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
+  * Localization strings.
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.generic.lucene.displayName">Lucene Search Plugin</message>
+	<message key="plugins.generic.lucene.description">The Lucene plugin provides multi-language support, improved search result relevance, faster indexing, better scalability and more.</message>
+
+	<message key="plugins.generic.lucene.faceting.title">refine your search</message>
+	<message key="plugins.generic.lucene.faceting.discipline">Discipline</message>
+	<message key="plugins.generic.lucene.faceting.subject">Keyword</message>
+	<message key="plugins.generic.lucene.faceting.type">Method/Approach</message>
+	<message key="plugins.generic.lucene.faceting.coverage">Coverage</message>
+	<message key="plugins.generic.lucene.faceting.journalTitle">Journal</message>
+	<message key="plugins.generic.lucene.faceting.authors">Author</message>
+	<message key="plugins.generic.lucene.faceting.publicationDate">Publication Date</message>
+	
+	<message key="plugins.generic.lucene.message.coreNotFound">The requested core '{$core}' was not found on the Solr server. Is it online?</message>
+	<message key="plugins.generic.lucene.message.indexingIncomplete">An error occurred while indexing: Processed {$numProcessed} out of a batch of {$batchCount} ({$numDeleted} deleted documents in this batch).</message>
+	<message key="plugins.generic.lucene.message.indexOnline">Index with {$numDocs} documents online.</message>
+	<message key="plugins.generic.lucene.message.pullIndexingDisabled">Pull indexing is not enabled. Please enable it in the Lucene plugin settings.</message>
+	<message key="plugins.generic.lucene.message.searchServiceOffline">Unfortunately the OJS search service is currently offline.</message>
+	<message key="plugins.generic.lucene.message.techAdminInformed">The technical administrator of this journal has been informed about the problem.</message>
+	<message key="plugins.generic.lucene.message.webServiceError">The Lucene web service returned an error.</message>
+
+	<message key="plugins.generic.lucene.rebuildIndex.couldNotDeleteFieldCache">Could not delete the field cache. Please execute 'rm cache/fc-plugins-lucene-fieldCache.php' manually with appropriate permissions.</message>
+	<message key="plugins.generic.lucene.rebuildIndex.pullResult">{$numMarked} articles marked for update</message>
+	<message key="plugins.generic.lucene.rebuildIndex.rebuildDictionaries">Rebuilding dictionaries</message>
+	<message key="plugins.generic.lucene.rebuildIndex.updateBoostFile">Updating usage statistics data</message>
+	
+	<message key="plugins.generic.lucene.results.didYouMean">Did you mean</message>
+	<message key="plugins.generic.lucene.results.syntaxInstructions"><![CDATA[
+		Search tips: <ul>
+			<li>Search terms are case-insensitive</li>
+			<li>Common words are ignored</li>
+			<li>By default articles containing <em>any</em> term in the query are returned (i.e., <em>OR</em> is implied)</li>
+			<li>Make sure that a word exists in an article by prefixing it with <strong>+</strong>; e.g., <em>+journal +access scholarly academic</em></li>
+			<li>Combine multiple words with <em>AND</em> to find articles containing all terms; e.g., <em>education AND research</em></li>
+			<li>Exclude a word by prefixing it with <strong>-</strong> or <em>NOT</em>; e.g., <em>online -politics</em> or <em>online NOT politics</em></li>
+			<li>Search for an exact phrase by putting it in quotes; e.g., <em>"open access publishing"</em>. Hint: Quoting Chinese or Japanese words will help you to find exact word matches in mixed-language fields, e.g. "中国".</li>
+			<li>Use parentheses to create more complex queries; e.g., <em>archive ((journal AND conference) NOT theses)</em></li>
+		 </ul>
+	]]></message>
+
+	<message key="plugins.generic.lucene.settings">Settings</message>
+	<message key="plugins.generic.lucene.settings.autosuggest">Auto-Suggest (show a dynamic drop-down with search term suggestions while entering a search query)</message>
+	<message key="plugins.generic.lucene.settings.autosuggestTypeExplanation"><![CDATA[
+		<strong>Check terms for results</strong>: Only suggest terms that will actually produce search results. Suggestions will be
+		cross-checked against the current journal and terms already entered into other search fields.<br />
+		<strong>Use global dictionary</strong>: This is faster, consumes less resources on the search server and therefore scales better
+		for large installations. Suggestions may contain irrelevant terms, though, e.g. from other journals or terms that produce no
+		search results.
+	]]></message>
+	<message key="plugins.generic.lucene.settings.autosuggestTypeFaceting">Check terms for results</message>
+	<message key="plugins.generic.lucene.settings.autosuggestTypeSuggester">Use global dictionary</message>
+	<message key="plugins.generic.lucene.settings.customRanking">Custom Ranking (set individual ranking weights per journal section)</message>
+	<message key="plugins.generic.lucene.settings.description"><![CDATA[
+		The Lucene plugin acesses the Lucene search index through a Solr server. This configuration page allows you to configure access to the Solr server.
+		<strong>Please make sure you read the plugin's README file (plugins/generic/lucene/README) before you try to change the default configuration.</strong>
+		If you are using the embedded scenario behind a firewall as explained in the README file then you may probably leave all configuration parameters unchanged.
+	]]></message>
+	<message key="plugins.generic.lucene.settings.dictionaryRebuild">Rebuild dictionaries</message>
+	<message key="plugins.generic.lucene.settings.faceting">Faceting (display a navigation box with additional filters to refine your search)</message>
+	<message key="plugins.generic.lucene.settings.facetingSelectCategory">You may select specific facet categories (the corresponding metadata must have beeen selected for indexing in journal setup, step 3.4)</message>
+	<message key="plugins.generic.lucene.settings.featureDescription"><![CDATA[
+		The Lucene plugin provides several optional search features. Most of these features are enabled by default but can be disabled or fine-tuned.
+	]]></message>
+	<message key="plugins.generic.lucene.settings.highlighting">Highlighting (display a short excerpt of each article's full text containing queried keywords)</message>
+	<message key="plugins.generic.lucene.settings.indexAdministration">Index Administration</message>
+	<message key="plugins.generic.lucene.settings.indexRebuild">Rebuild index</message>
+	<message key="plugins.generic.lucene.settings.indexRebuild.confirm">Rebuilding the index and/or dictionaries can take a long time. Are you sure you want to proceed?</message>
+	<message key="plugins.generic.lucene.settings.indexRebuildAllJournals">Rebuild index for all journals</message>
+	<message key="plugins.generic.lucene.settings.indexRebuildDescription">If your Lucene index became outdated or corrupted, you can re-index your data per journal or for all journals of this installation. Dictionaries must be rebuilt after large index updates when using auto-suggest or alternative spelling suggestions. (See plugins/generic/lucene/README for details and ways to automate these processes.)</message>
+	<message key="plugins.generic.lucene.settings.indexRebuildJournal">Rebuild index for journal "{$journalName}"</message>
+	<message key="plugins.generic.lucene.settings.indexRebuildMessages">Output from the last index rebuild:</message>
+	<message key="plugins.generic.lucene.settings.instantSearch">Instant search (return search results instantly when a user types a search query - obs: uses considerable server resources)</message>
+	<message key="plugins.generic.lucene.settings.instId">Unique Installation ID</message>
+	<message key="plugins.generic.lucene.settings.instIdRequired">Please enter an ID that uniquely identifies this OJS installation to the Solr search server.</message>
+	<message key="plugins.generic.lucene.settings.instIdInstructions">If you use a central search server then you'll have to provide a unique installation ID for every OJS installation sharing the same search index.  This can be any arbitrary text but it must be different for every participating OJS server (e.g. the server's static IP address if you have one OJS installation per server).</message>
+	<message key="plugins.generic.lucene.settings.internalError">Invalid selection.</message>
+	<message key="plugins.generic.lucene.settings.luceneSettings">Lucene Plugin: Settings</message>
+	<message key="plugins.generic.lucene.settings.password">Password</message>
+	<message key="plugins.generic.lucene.settings.passwordInstructions">Please enter the Solr server password.</message>
+	<message key="plugins.generic.lucene.settings.passwordRequired">Please enter a valid password to authenticate to the Solr search server.</message>
+	<message key="plugins.generic.lucene.settings.pullIndexing">Pull indexing (this is an advanced feature, see README file for more information)</message>
+	<message key="plugins.generic.lucene.settings.rankingByMetricEnabled">Ranking By Usage Statistics (Your '{$metricName}' statistics data will be used to influence the ranking)</message>
+	<message key="plugins.generic.lucene.settings.rankingByMetricDisabled">Ranking By Usage Statistics (please activate at least one statistics/reporting plugin and select a "main metric" in the site settings to enable this option)</message>
+	<message key="plugins.generic.lucene.settings.searchEndpoint">Search Endpoint URL</message>
+	<message key="plugins.generic.lucene.settings.searchEndpointInstructions">The Solr search endpoint consists of the server URL and a search handler. See the default setting as an example. Only change this if you are using a central search server.</message>
+	<message key="plugins.generic.lucene.settings.searchEndpointRequired">Please enter a valid URL representing the search endpoint (Solr search server and search handler) you would like to connect to.</message>
+	<message key="plugins.generic.lucene.settings.searchFeatures">Search Feature Configuration</message>
+	<message key="plugins.generic.lucene.settings.serverNotAvailable"><![CDATA[
+		You can not currently administer the Solr server from the web interface.<br/>
+		<br/>
+		Possible reasons are:
+		<ul>
+			<li>You may not have an embedded server installed in this OJS instance (see 'plugins/generic/lucene/README' for details).</li>
+			<li>The installation of your embedded server may be incomplete. Please check that the directories 'plugins/generic/lucene/lib/solr' and 'plugins/generic/lucene/lib/jetty' actually contain (or point to) the solr/jetty installation files.</li>
+			<li>The server administration scripts 'start.sh', 'stop.sh' and 'check.sh' in 'plugins/generic/lucene/embedded/bin' may not be executable. Check the permission flags of these files.</li>
+			<li>The files in 'files/lucene/' may not be writable by your web server's user. Check the permission flags of these files.</li>
+			<li>An embedded solr process may already be running but under a different OS user. This means that you cannot manipulate the process from within PHP.</li>
+			<li>Your PHP configuration may disallow script execution. Check the 'safe_mode' and 'disabled_function' settings in your php.ini. If you do not have access to your php.ini then you can execute the scripts manually to start/stop the server.</li>
+		</ul>
+	]]></message>
+	<message key="plugins.generic.lucene.settings.simdocs">More-Like-This (display a link "similar documents" for every search result)</message>
+	<message key="plugins.generic.lucene.settings.solrServerSettings">Solr server settings</message>
+	<message key="plugins.generic.lucene.settings.sortingByMetricEnabled">Sorting By Usage Statistics (Your '{$metricName}' statistics data will be used to sort by popularity)</message>
+	<message key="plugins.generic.lucene.settings.sortingByMetricDisabled">Sorting By Usage Statistics (please activate at least one statistics/reporting plugin and select a "main metric" in the site settings to enable this option)</message>
+	<message key="plugins.generic.lucene.settings.spellcheck">Alternative Spelling Suggestions (display alternative search terms)</message>
+	<message key="plugins.generic.lucene.settings.startStopServer">Solr Server Administration</message>
+	<message key="plugins.generic.lucene.settings.startServer">Start Server</message>
+	<message key="plugins.generic.lucene.settings.stopServer">Stop Server</message>
+	<message key="plugins.generic.lucene.settings.updateBoostFile">Update Ranking Data</message>
+	<message key="plugins.generic.lucene.settings.updateBoostFileDescription">Usage statistics must be copied regularly to the Solr server, e.g. daily or monthly - depending on how often you update the statistics. To do so click the button above. You can also automate this task (see 'plugins/generic/lucene/README' for details).</message>
+	<message key="plugins.generic.lucene.settings.updateBoostFileDisabled"><![CDATA[
+		Usage statistics must be copied regularly to the Solr server. You can not currently update usage statistics from the web interface.<br/>
+		<br/>
+		Possible reasons are:
+		<ul>
+			<li>If you are using pull indexing, the index update cron job on the remote server ("pull.sh") will automatically update statistics data whenever executed (see 'plugins/generic/lucene/README' for details).</li>
+			<li>Your web server may not have write permissions to the 'files/lucene/data' directory. Make sure that both, the web server and the solr server, have access to this directory and refresh this page.</li>
+		</ul>
+	]]></message>
+	<message key="plugins.generic.lucene.settings.usageStatistics">Usage Statistics</message>
+	<message key="plugins.generic.lucene.settings.useProxySettings">Proxy settings</message>
+	<message key="plugins.generic.lucene.settings.useProxySettingsInstructions">Use proxy settings from the file config.inc.php for the Solr web service requests.</message>
+	<message key="plugins.generic.lucene.settings.username">Username</message>
+	<message key="plugins.generic.lucene.settings.usernameInstructions">The Solr search server uses HTTP BASIC authentication. Please enter the username.</message>
+	<message key="plugins.generic.lucene.settings.usernameRequired">Please enter a valid username to authenticate to the Solr search server (colons are disallowed).</message>
+
+	<message key="plugins.generic.lucene.sectionForm.rankingBoost">Custom Ranking Weight</message>
+	<message key="plugins.generic.lucene.sectionForm.rankingBoostInstructions">
+		The Lucene/Solr search plugin allows you to adjust the relative weight of articles in the result list
+		of a search query. Setting the ranking weight higher (or lower) does not place articles in this
+		section above (or below) all other articles. But they will rank better (or worse) than they would
+		without the adjustment made. Setting this option to "never show" will completely exclude articles
+		in this section from search results.
+	</message>
+	<message key="plugins.generic.lucene.sectionForm.rankingBoostInvalid">Please select a valid custom ranking weight.</message>
+	<message key="plugins.generic.lucene.sectionForm.ranking.never">Never Show</message>
+	<message key="plugins.generic.lucene.sectionForm.ranking.low">Rank Lower</message>
+	<message key="plugins.generic.lucene.sectionForm.ranking.normal">Normal</message>
+	<message key="plugins.generic.lucene.sectionForm.ranking.high">Rank Higher</message>
+</locale>
