@@ -141,6 +141,10 @@
 		</value>
 	</setting>
 	<setting type="bool" locale="0">
+		<name>reviewerAccessKeysEnabled</name>
+		<value>true</value>
+	</setting>
+	<setting type="bool" locale="0">
 		<name>rtAbstract</name>
 		<value>true</value>
 	</setting>
