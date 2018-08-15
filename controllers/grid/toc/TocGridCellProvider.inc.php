@@ -58,7 +58,7 @@ class TocGridCellProvider extends GridCellProvider {
 							array_merge(
 								array(
 									'articleId' => $article->getId(),
-									'status' => ($article->getAccessStatus() == ARTICLE_ACCESS_OPEN) ? ARTICLE_ACCESS_DEFAULT : ARTICLE_ACCESS_OPEN,
+									'status' => ($article->getAccessStatus() == ARTICLE_ACCESS_OPEN) ? ARTICLE_ACCESS_ISSUE_DEFAULT : ARTICLE_ACCESS_OPEN,
 									'csrfToken' => $request->getSession()->getCSRFToken(),
 								),
 								$row->getRequestArgs()
