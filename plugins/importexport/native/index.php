@@ -16,4 +16,4 @@ require_once('NativeImportExportPlugin.inc.php');
 
 return new NativeImportExportPlugin();
 
-?>
+

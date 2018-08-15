@@ -199,4 +199,4 @@ class IssueFileDAO extends DAO {
 	}
 }
 
-?>
+

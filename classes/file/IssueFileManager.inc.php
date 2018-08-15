@@ -188,4 +188,4 @@ class IssueFileManager extends FileManager {
 	}
 }
 
-?>
+

@@ -86,4 +86,4 @@ class IssueAccessForm extends Form {
 	}
 }
 
-?>
+

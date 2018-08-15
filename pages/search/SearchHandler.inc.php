@@ -292,4 +292,4 @@ class SearchHandler extends Handler {
 	}
 }
 
-?>
+

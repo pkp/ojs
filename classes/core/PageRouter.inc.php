@@ -26,4 +26,4 @@ class PageRouter extends PKPPageRouter {
 	}
 }
 
-?>
+

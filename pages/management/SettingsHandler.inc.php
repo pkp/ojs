@@ -148,4 +148,4 @@ class SettingsHandler extends ManagementHandler {
 	}
 }
 
-?>
+

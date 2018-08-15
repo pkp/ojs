@@ -72,4 +72,4 @@ class FunctionalLucenePluginHighlightingTest extends FunctionalLucenePluginBaseT
 		);
 	}
 }
-?>
+

@@ -167,4 +167,4 @@ class CounterReportJR1 extends CounterReport {
 
 }
 
-?>
+

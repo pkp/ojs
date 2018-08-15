@@ -399,4 +399,4 @@ class FunctionalEditingTest extends FunctionalEditingBaseTestCase {
 		return $testFile;
 	}
 }
-?>
+

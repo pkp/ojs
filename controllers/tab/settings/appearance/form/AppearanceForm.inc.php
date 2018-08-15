@@ -35,4 +35,4 @@ class AppearanceForm extends PKPAppearanceForm {
 	}
 }
 
-?>
+

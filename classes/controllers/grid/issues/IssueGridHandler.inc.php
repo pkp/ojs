@@ -593,4 +593,4 @@ class IssueGridHandler extends GridHandler {
 	}
 }
 
-?>
+

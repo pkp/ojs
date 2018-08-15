@@ -196,4 +196,4 @@ class SubscriberSelectGridHandler extends GridHandler {
 	}
 }
 
-?>
+

@@ -323,4 +323,4 @@ class DOIPubIdPlugin extends PubIdPlugin {
 	}
 }
 
-?>
+

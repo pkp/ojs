@@ -36,4 +36,4 @@ class FunctionalNativeExportTest extends FunctionalImportExportBaseTestCase {
 		}
 	}
 }
-?>
+

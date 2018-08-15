@@ -27,4 +27,4 @@ class IndividualSubscription extends Subscription {
 	}
 }
 
-?>
+

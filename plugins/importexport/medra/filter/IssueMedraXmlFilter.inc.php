@@ -214,4 +214,4 @@ class IssueMedraXmlFilter extends O4DOIXmlFilter {
 
 }
 
-?>
+

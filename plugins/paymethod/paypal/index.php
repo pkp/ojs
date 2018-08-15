@@ -19,4 +19,4 @@ require_once('PaypalPaymentPlugin.inc.php');
 
 return new PaypalPaymentPlugin();
 
-?> 
+

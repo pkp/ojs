@@ -359,4 +359,4 @@ class IssueEntryPublicationMetadataForm extends Form {
 	}
 }
 
-?>
+

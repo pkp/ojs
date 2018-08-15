@@ -184,4 +184,4 @@ class CrossrefInfoSender extends ScheduledTask {
 	}
 
 }
-?>
+

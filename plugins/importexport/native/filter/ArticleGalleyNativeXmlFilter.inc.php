@@ -67,4 +67,4 @@ class ArticleGalleyNativeXmlFilter extends RepresentationNativeXmlFilter {
 	}
 }
 
-?>
+

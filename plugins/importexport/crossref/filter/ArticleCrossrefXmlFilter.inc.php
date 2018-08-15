@@ -327,4 +327,4 @@ class ArticleCrossrefXmlFilter extends IssueCrossrefXmlFilter {
 
 }
 
-?>
+

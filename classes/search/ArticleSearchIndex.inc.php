@@ -322,4 +322,4 @@ class ArticleSearchIndex extends SubmissionSearchIndex {
 	}
 }
 
-?>
+

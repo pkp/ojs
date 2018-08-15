@@ -41,4 +41,4 @@ class ArticleMailTemplate extends SubmissionMailTemplate {
 	}
 }
 
-?>
+

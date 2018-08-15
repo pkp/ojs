@@ -772,4 +772,4 @@ class FunctionalUrnPubIdPluginTest extends WebTestCase {
 	*/
 
 }
-?>
+

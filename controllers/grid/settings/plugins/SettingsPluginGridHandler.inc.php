@@ -90,4 +90,4 @@ class SettingsPluginGridHandler extends PluginGridHandler {
 	}
 }
 
-?>
+

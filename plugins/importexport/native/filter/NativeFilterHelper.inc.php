@@ -49,4 +49,4 @@ class NativeFilterHelper {
 	}
 
 }
-?>
+

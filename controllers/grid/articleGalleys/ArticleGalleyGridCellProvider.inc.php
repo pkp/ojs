@@ -85,4 +85,4 @@ class ArticleGalleyGridCellProvider extends DataObjectGridCellProvider {
 	}
 }
 
-?>
+

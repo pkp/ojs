@@ -391,4 +391,4 @@ class ArticleSearch extends SubmissionSearch {
 	}
 }
 
-?>
+

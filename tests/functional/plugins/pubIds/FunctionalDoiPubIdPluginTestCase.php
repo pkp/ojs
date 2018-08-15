@@ -976,4 +976,4 @@ class FunctionalDOIPubIdPluginTest extends WebTestCase {
 		);
 	}
 }
-?>
+

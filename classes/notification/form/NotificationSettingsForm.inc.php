@@ -46,4 +46,4 @@ class NotificationSettingsForm extends PKPNotificationSettingsForm {
 	}
 }
 
-?>
+

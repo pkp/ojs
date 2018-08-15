@@ -792,4 +792,4 @@ class PublishedArticleDAO extends ArticleDAO {
 
 }
 
-?>
+

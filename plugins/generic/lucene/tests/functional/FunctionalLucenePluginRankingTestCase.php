@@ -174,4 +174,4 @@ class FunctionalLucenePluginRankingTest extends FunctionalLucenePluginBaseTestCa
 		}
 	}
 }
-?>
+

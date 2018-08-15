@@ -136,4 +136,4 @@ class ArticleGalleyForm extends Form {
 	}
 }
 
-?>
+

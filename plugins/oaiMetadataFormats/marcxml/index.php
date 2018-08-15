@@ -17,4 +17,4 @@ require_once('OAIMetadataFormat_MARC21.inc.php');
 
 return new OAIMetadataFormatPlugin_MARC21();
 
-?>
+

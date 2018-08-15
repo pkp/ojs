@@ -53,4 +53,4 @@ class User extends PKPUser {
 	}
 }
 
-?>
+

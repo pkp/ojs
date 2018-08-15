@@ -147,4 +147,4 @@ class CrossRefSettingsForm extends Form {
 
 }
 
-?>
+

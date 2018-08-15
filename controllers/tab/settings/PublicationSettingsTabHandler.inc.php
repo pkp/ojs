@@ -32,4 +32,4 @@ class PublicationSettingsTabHandler extends ManagerSettingsTabHandler {
 	}
 }
 
-?>
+

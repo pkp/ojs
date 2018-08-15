@@ -264,4 +264,4 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 		}
 	}
 }
-?>
+

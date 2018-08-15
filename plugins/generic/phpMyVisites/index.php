@@ -20,4 +20,4 @@ require_once('PhpMyVisitesPlugin.inc.php');
 
 return new PhpMyVisitesPlugin();
 
-?>
+

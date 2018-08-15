@@ -19,4 +19,4 @@ import('classes.log.SubmissionEventLogEntry');
 class SubmissionEventLogDAO extends PKPSubmissionEventLogDAO {
 }
 
-?>
+

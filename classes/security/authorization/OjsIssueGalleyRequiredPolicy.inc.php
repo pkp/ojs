@@ -47,4 +47,4 @@ class OjsIssueGalleyRequiredPolicy extends DataObjectRequiredPolicy {
 	}
 }
 
-?>
+

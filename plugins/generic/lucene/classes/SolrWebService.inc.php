@@ -1977,4 +1977,4 @@ class SolrWebService extends XmlWebService {
 	}
 }
 
-?>
+

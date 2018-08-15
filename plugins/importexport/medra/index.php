@@ -21,4 +21,4 @@ require_once('MedraExportPlugin.inc.php');
 
 return new MedraExportPlugin();
 
-?>
+

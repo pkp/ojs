@@ -124,4 +124,4 @@ class FunctionalLucenePluginBaseTestCase extends WebTestCase {
 		$this->clickAndWait($this->simpleSearchForm . 'input[@type="submit"]');
 	}
 }
-?>
+

@@ -104,4 +104,4 @@ class BackIssueGridHandler extends IssueGridHandler {
 	}
 }
 
-?>
+

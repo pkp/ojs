@@ -101,4 +101,4 @@ class Request extends PKPRequest {
 	}
 }
 
-?>
+

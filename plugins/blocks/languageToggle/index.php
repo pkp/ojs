@@ -19,4 +19,4 @@ require_once('LanguageToggleBlockPlugin.inc.php');
 
 return new LanguageToggleBlockPlugin();
 
-?> 
+

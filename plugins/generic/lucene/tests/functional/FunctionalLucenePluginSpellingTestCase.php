@@ -130,4 +130,4 @@ class FunctionalLucenePluginSpellingTest extends FunctionalLucenePluginBaseTestC
 		$this->assertValue('authors', 'author');
 	}
 }
-?>
+

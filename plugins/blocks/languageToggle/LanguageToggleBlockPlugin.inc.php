@@ -112,4 +112,4 @@ class LanguageToggleBlockPlugin extends BlockPlugin {
 	}
 }
 
-?>
+

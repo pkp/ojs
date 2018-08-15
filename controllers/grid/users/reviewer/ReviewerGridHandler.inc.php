@@ -44,4 +44,4 @@ class ReviewerGridHandler extends PKPReviewerGridHandler {
 	}
 }
 
-?>
+

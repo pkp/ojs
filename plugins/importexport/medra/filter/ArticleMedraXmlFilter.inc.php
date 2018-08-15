@@ -396,4 +396,4 @@ class ArticleMedraXmlFilter extends O4DOIXmlFilter {
 
 }
 
-?>
+

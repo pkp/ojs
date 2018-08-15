@@ -163,4 +163,4 @@ class OpenAccessNotification extends ScheduledTask {
 	}
 }
 
-?>
+

@@ -185,4 +185,4 @@ class MedraSettingsForm extends Form {
 	}
 }
 
-?>
+

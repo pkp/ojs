@@ -252,4 +252,4 @@ class OAIMetadataFormat_DCTest extends PKPTestCase {
        	return $handler.'-'.$op.'-'.implode('-', $path);
 	}
 }
-?>
+

@@ -20,4 +20,4 @@ require_once('DefaultThemePlugin.inc.php');
 
 return new DefaultThemePlugin();
 
-?>
+

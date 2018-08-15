@@ -58,4 +58,4 @@ class Handler extends PKPHandler {
 	}
 }
 
-?>
+

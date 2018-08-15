@@ -63,4 +63,4 @@ class SectionGridRow extends GridRow {
 	}
 }
 
-?>
+

@@ -89,4 +89,4 @@ class AuthSourceSettingsForm extends Form {
 	}
 }
 
-?>
+

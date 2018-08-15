@@ -165,4 +165,4 @@ class SectionForm extends PKPSectionForm {
 	}
 }
 
-?>
+

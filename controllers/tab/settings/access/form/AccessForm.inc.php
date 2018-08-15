@@ -32,4 +32,4 @@ class AccessForm extends ContextSettingsForm {
 	}
 }
 
-?>
+

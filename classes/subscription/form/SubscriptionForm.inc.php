@@ -243,4 +243,4 @@ class SubscriptionForm extends Form {
 	}
 }
 
-?>
+

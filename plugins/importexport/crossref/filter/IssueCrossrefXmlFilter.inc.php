@@ -235,4 +235,4 @@ class IssueCrossrefXmlFilter extends NativeExportFilter {
 
 }
 
-?>
+

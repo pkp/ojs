@@ -57,4 +57,4 @@ class InitiateExternalReviewForm extends EditorDecisionForm {
 	}
 }
 
-?>
+

@@ -202,4 +202,4 @@ class LuceneHandler extends Handler {
 	}
 }
 
-?>
+

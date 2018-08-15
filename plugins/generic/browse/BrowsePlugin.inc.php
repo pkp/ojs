@@ -138,4 +138,4 @@ class BrowsePlugin extends GenericPlugin {
 	}
 }
 
-?>
+

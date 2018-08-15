@@ -127,4 +127,4 @@ class ExternalFeedSettingsForm extends Form {
 	}
 }
 
-?>
+

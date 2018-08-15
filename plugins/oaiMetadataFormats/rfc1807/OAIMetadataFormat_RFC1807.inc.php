@@ -105,4 +105,4 @@ class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat {
 	}
 }
 
-?>
+

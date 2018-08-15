@@ -123,4 +123,4 @@ class FunctionalLucenePluginCustomRankingTest extends FunctionalLucenePluginBase
 
 	}
 }
-?>
+

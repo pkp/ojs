@@ -84,4 +84,4 @@ class IssueGalleyGridRow extends GridRow {
 	}
 }
 
-?>
+

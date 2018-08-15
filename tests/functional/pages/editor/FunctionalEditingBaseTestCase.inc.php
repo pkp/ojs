@@ -241,4 +241,4 @@ class FunctionalEditingBaseTestCase extends WebTestCase {
 		$this->clickAndWait('css=input.defaultButton');
 	}
 }
-?>
+

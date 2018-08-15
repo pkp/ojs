@@ -99,4 +99,4 @@ class OpenAIREDAO extends OAIDAO {
 	}
 }
 
-?>
+

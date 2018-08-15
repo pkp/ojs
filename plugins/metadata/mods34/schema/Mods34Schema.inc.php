@@ -26,4 +26,4 @@ class Mods34Schema extends PKPMods34Schema {
 		parent::__construct(ASSOC_TYPE_ARTICLE);
 	}
 }
-?>
+

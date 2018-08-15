@@ -158,4 +158,4 @@ class EditorDecisionHandler extends PKPEditorDecisionHandler {
 	}
 }
 
-?>
+

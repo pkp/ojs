@@ -175,4 +175,4 @@ class Journal extends Context {
 	}
 }
 
-?>
+

@@ -545,4 +545,4 @@ class O4DOIXmlFilter extends NativeExportFilter {
 
 }
 
-?>
+

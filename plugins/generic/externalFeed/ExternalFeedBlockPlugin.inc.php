@@ -124,4 +124,4 @@ class ExternalFeedBlockPlugin extends BlockPlugin {
 	}
 }
 
-?>
+

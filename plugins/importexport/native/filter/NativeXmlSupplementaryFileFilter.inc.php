@@ -107,4 +107,4 @@ class NativeXmlSupplementaryFileFilter extends NativeXmlArticleFileFilter {
 	}
 }
 
-?>
+

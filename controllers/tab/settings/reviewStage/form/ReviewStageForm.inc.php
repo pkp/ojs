@@ -32,4 +32,4 @@ class ReviewStageForm extends PKPReviewStageForm {
 	}
 }
 
-?>
+

@@ -394,4 +394,4 @@ class ArticleHandler extends Handler {
 	}
 }
 
-?>
+

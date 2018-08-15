@@ -97,4 +97,4 @@ class FunctionalNativeImportTest extends FunctionalImportExportBaseTestCase {
 		self::assertRegExp('/##plugins.importexport.native.import.error.unknownPubId##/', $result);
 	}
 }
-?>
+

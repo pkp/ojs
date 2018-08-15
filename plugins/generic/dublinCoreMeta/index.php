@@ -20,4 +20,4 @@ require_once('DublinCoreMetaPlugin.inc.php');
 
 return new DublinCoreMetaPlugin();
 
-?>
+

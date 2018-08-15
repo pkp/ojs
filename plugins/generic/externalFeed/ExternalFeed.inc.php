@@ -180,4 +180,4 @@ class ExternalFeed extends DataObject {
 	}
 }
 
-?>
+

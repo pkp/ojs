@@ -58,4 +58,4 @@ class OjsJournalMustPublishPolicy extends AuthorizationPolicy {
 	}
 }
 
-?>
+

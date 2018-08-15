@@ -432,4 +432,4 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin {
 
 }
 
-?>
+

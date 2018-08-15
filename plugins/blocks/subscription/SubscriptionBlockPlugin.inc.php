@@ -88,4 +88,4 @@ class SubscriptionBlockPlugin extends BlockPlugin {
 	}
 }
 
-?>
+

@@ -319,4 +319,4 @@ class SubscriptionType extends DataObject {
 	}
 }
 
-?>
+

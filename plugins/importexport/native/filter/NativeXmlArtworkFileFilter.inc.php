@@ -89,4 +89,4 @@ class NativeXmlArtworkFileFilter extends NativeXmlArticleFileFilter {
 	}
 }
 
-?>
+

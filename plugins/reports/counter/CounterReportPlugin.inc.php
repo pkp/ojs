@@ -236,4 +236,4 @@ class CounterReportPlugin extends ReportPlugin {
 
 }
 
-?>
+

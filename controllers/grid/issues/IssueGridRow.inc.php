@@ -128,4 +128,4 @@ class IssueGridRow extends GridRow {
 	}
 }
 
-?>
+

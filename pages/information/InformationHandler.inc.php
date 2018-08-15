@@ -92,4 +92,4 @@ class InformationHandler extends Handler {
 	}
 }
 
-?>
+

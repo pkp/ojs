@@ -214,4 +214,4 @@ class Section extends PKPSection {
 	}
 }
 
-?>
+

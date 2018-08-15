@@ -196,4 +196,4 @@ class ReviewerSubmissionDAO extends ArticleDAO {
 	}
 }
 
-?>
+

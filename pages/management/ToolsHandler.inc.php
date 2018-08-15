@@ -54,4 +54,4 @@ class ToolsHandler extends PKPToolsHandler {
 	}
 }
 
-?>
+

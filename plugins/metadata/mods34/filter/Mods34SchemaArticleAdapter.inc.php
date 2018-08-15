@@ -79,4 +79,4 @@ class Mods34SchemaArticleAdapter extends Mods34SchemaSubmissionAdapter {
 		return $mods34Description;
 	}
 }
-?>
+

@@ -281,4 +281,4 @@ class IssueGalleyGridHandler extends GridHandler {
 	}
 }
 
-?>
+

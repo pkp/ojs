@@ -85,4 +85,4 @@ class FunctionalLucenePluginInstantSearchTest extends FunctionalLucenePluginBase
 		$this->waitForElementNotPresent('css=#results .nodata');
 	}
 }
-?>
+

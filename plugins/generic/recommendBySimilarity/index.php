@@ -20,4 +20,4 @@ require_once('RecommendBySimilarityPlugin.inc.php');
 
 return new RecommendBySimilarityPlugin();
 
-?>
+

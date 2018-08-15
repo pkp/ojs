@@ -90,4 +90,4 @@ class RecommendBySimilarityPlugin extends GenericPlugin {
 		return false;
 	}
 }
-?>
+

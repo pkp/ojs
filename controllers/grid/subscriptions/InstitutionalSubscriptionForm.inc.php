@@ -157,4 +157,4 @@ class InstitutionalSubscriptionForm extends SubscriptionForm {
 	}
 }
 
-?>
+

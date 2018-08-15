@@ -269,4 +269,4 @@ class TocGridHandler extends CategoryGridHandler {
 	}
 }
 
-?>
+

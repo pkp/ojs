@@ -63,4 +63,4 @@ class SitemapHandler extends PKPSitemapHandler {
 
 }
 
-?>
+

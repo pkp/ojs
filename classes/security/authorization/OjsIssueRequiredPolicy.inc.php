@@ -91,4 +91,4 @@ class OjsIssueRequiredPolicy extends DataObjectRequiredPolicy {
 	}
 }
 
-?>
+

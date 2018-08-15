@@ -161,4 +161,4 @@ class DublinCoreMetaPlugin extends GenericPlugin {
 	}
 }
 
-?>
+

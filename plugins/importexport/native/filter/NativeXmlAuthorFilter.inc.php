@@ -36,4 +36,4 @@ class NativeXmlAuthorFilter extends NativeXmlPKPAuthorFilter {
 	}
 }
 
-?>
+

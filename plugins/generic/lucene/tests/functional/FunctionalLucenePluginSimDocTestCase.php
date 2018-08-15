@@ -77,4 +77,4 @@ class FunctionalLucenePluginSimDocTest extends FunctionalLucenePluginBaseTestCas
 		$this->assertValue('name=query', '*test*');
 	}
 }
-?>
+

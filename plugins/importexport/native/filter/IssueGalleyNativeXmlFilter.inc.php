@@ -119,4 +119,4 @@ class IssueGalleyNativeXmlFilter extends NativeExportFilter {
 	}
 }
 
-?>
+

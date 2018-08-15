@@ -289,4 +289,4 @@ class IssueEntryTabHandler extends PublicationEntryTabHandler {
 	}
 }
 
-?>
+

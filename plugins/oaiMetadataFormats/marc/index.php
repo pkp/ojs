@@ -17,4 +17,4 @@ require_once('OAIMetadataFormat_MARC.inc.php');
 
 return new OAIMetadataFormatPlugin_MARC();
 
-?>
+

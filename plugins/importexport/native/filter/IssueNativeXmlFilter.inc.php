@@ -290,4 +290,4 @@ class IssueNativeXmlFilter extends NativeExportFilter {
 
 }
 
-?>
+

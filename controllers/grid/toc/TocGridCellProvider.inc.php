@@ -73,4 +73,4 @@ class TocGridCellProvider extends GridCellProvider {
 	}
 }
 
-?>
+

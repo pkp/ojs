@@ -557,4 +557,4 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 	}
 }
 
-?>
+

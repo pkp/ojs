@@ -256,4 +256,4 @@ class ExternalFeedDAO extends DAO {
 	}
 }
 
-?>
+

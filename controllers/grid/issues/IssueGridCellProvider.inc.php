@@ -81,4 +81,4 @@ class IssueGridCellProvider extends GridCellProvider {
 	}
 }
 
-?>
+

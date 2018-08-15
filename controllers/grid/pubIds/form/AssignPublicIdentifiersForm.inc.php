@@ -58,4 +58,4 @@ class AssignPublicIdentifiersForm extends PKPAssignPublicIdentifiersForm {
 
 }
 
-?>
+

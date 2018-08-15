@@ -258,4 +258,4 @@ class URNPubIdPlugin extends PubIdPlugin {
 	}
 }
 
-?>
+

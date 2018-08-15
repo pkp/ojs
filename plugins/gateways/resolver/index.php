@@ -20,4 +20,4 @@ require_once('ResolverPlugin.inc.php');
 
 return new ResolverPlugin();
 
-?>
+

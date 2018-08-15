@@ -134,4 +134,4 @@ class PublishedArticle extends Article {
 	}
 }
 
-?>
+

@@ -52,4 +52,4 @@ class GalleyMedraXmlFilter extends ArticleMedraXmlFilter {
 
 }
 
-?>
+

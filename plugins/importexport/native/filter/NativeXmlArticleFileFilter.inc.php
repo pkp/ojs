@@ -36,4 +36,4 @@ class NativeXmlArticleFileFilter extends NativeXmlSubmissionFileFilter {
 	}
 }
 
-?>
+

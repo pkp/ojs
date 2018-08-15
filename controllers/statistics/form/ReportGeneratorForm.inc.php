@@ -26,4 +26,4 @@ class ReportGeneratorForm extends PKPReportGeneratorForm {
 	}
 }
 
-?>
+

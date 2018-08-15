@@ -47,4 +47,4 @@ class AboutHandler extends AboutContextHandler {
 	}
 }
 
-?>
+

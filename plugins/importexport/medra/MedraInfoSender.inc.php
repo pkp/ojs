@@ -166,4 +166,4 @@ class MedraInfoSender extends ScheduledTask {
 	}
 
 }
-?>
+

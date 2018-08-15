@@ -221,4 +221,4 @@ class LucenePluginTest extends DatabaseTestCase {
 		$this->assertTrue($embeddedServer->start());
 	}
 }
-?>
+

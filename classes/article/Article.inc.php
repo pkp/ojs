@@ -284,4 +284,4 @@ class Article extends Submission {
 	}
 }
 
-?>
+

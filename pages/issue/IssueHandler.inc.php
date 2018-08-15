@@ -356,4 +356,4 @@ class IssueHandler extends Handler {
 	}
 }
 
-?>
+

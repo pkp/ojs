@@ -42,4 +42,4 @@ class JournalSettingsTabHandler extends ManagerSettingsTabHandler {
 	}
 }
 
-?>
+

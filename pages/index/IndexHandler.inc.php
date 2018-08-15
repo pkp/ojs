@@ -95,4 +95,4 @@ class IndexHandler extends Handler {
 	}
 }
 
-?>
+

@@ -270,4 +270,4 @@ class FunctionalLucenePluginAutocompletionTest extends FunctionalLucenePluginBas
 		$this->assertValue($searchBox, 'wings');
 	}
 }
-?>
+

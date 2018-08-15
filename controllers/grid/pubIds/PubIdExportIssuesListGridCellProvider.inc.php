@@ -120,4 +120,4 @@ class PubIdExportIssuesListGridCellProvider extends DataObjectGridCellProvider {
 
 }
 
-?>
+

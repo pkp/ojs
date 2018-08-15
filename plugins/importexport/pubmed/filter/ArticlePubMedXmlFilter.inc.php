@@ -229,4 +229,4 @@ class ArticlePubMedXmlFilter extends PersistableFilter {
 	}
 }
 
-?>
+

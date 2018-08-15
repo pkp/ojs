@@ -142,4 +142,4 @@ class DataciteSettingsForm extends Form {
 
 }
 
-?>
+

@@ -123,4 +123,4 @@ class DOAJSettingsForm extends Form {
 
 }
 
-?>
+

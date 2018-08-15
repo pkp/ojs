@@ -265,4 +265,4 @@ class NativeXmlArticleFilter extends NativeXmlSubmissionFilter {
 	}
 }
 
-?>
+

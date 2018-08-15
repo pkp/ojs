@@ -77,4 +77,4 @@ class FunctionalOaiDcTest extends FunctionalOaiBaseTestCase {
 		}
 	}
 }
-?>
+

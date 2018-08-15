@@ -19,4 +19,4 @@ require_once('BrowsePlugin.inc.php');
 
 return new BrowsePlugin();
 
-?>
+

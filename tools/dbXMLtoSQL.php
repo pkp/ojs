@@ -34,4 +34,4 @@ class dbXMLtoSQL extends XmlToSqlTool {
 $tool = new dbXMLtoSQL(isset($argv) ? $argv : array());
 $tool->execute();
 
-?>
+

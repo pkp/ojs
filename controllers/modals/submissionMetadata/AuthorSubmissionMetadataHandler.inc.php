@@ -50,4 +50,4 @@ class AuthorSubmissionMetadataHandler extends SubmissionMetadataHandler {
 	}
 }
 
-?>
+

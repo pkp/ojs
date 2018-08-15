@@ -50,4 +50,4 @@ class JournalFileManager extends BaseSubmissionFileManager {
 	}
 }
 
-?>
+

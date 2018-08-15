@@ -138,4 +138,4 @@ class RecommendByAuthorPlugin extends GenericPlugin {
 		return false;
 	}
 }
-?>
+

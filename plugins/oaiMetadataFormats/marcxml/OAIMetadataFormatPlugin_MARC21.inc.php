@@ -51,4 +51,4 @@ class OAIMetadataFormatPlugin_MARC21 extends OAIMetadataFormatPlugin {
 	}
 }
 
-?>
+

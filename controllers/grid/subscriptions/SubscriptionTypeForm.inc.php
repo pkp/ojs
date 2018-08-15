@@ -178,4 +178,4 @@ class SubscriptionTypeForm extends Form {
 	}
 }
 
-?>
+

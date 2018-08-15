@@ -419,4 +419,4 @@ class FunctionalLucenePluginFacetingTest extends FunctionalLucenePluginBaseTestC
 		}
 	}
 }
-?>
+

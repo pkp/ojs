@@ -872,4 +872,4 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 	}
 }
 
-?>
+

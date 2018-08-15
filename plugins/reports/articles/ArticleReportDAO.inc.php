@@ -139,4 +139,4 @@ class ArticleReportDAO extends DAO {
 	}
 }
 
-?>
+

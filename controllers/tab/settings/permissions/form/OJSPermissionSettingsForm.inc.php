@@ -52,4 +52,4 @@ class OJSPermissionSettingsForm extends PermissionSettingsForm {
 
 }
 
-?>
+

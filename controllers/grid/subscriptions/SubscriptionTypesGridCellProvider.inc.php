@@ -45,4 +45,4 @@ class SubscriptionTypesGridCellProvider extends GridCellProvider {
 	}
 }
 
-?>
+

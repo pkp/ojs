@@ -341,4 +341,4 @@ class OJSPaymentManager extends PaymentManager {
 	}
 }
 
-?>
+

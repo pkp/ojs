@@ -197,4 +197,4 @@ class OJSSwordDeposit {
 	}
 }
 
-?>
+

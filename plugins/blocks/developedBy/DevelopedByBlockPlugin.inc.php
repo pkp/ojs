@@ -81,4 +81,4 @@ class DevelopedByBlockPlugin extends BlockPlugin {
 	}
 }
 
-?>
+

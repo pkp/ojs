@@ -108,4 +108,4 @@ class ArticleGalleyGridRow extends GridRow {
 	}
 }
 
-?>
+

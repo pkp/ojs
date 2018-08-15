@@ -20,4 +20,4 @@ require_once('ArticleReportPlugin.inc.php');
 
 return new ArticleReportPlugin();
 
-?>
+

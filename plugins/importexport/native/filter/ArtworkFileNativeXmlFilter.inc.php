@@ -79,4 +79,4 @@ class ArtworkFileNativeXmlFilter extends SubmissionFileNativeXmlFilter {
 	}
 }
 
-?>
+

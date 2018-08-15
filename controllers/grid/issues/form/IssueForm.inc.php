@@ -245,4 +245,4 @@ class IssueForm extends Form {
 	}
 }
 
-?>
+

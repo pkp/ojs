@@ -222,4 +222,4 @@ class PubIdExportIssuesListGridHandler extends GridHandler {
 
 }
 
-?>
+

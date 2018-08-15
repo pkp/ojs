@@ -358,4 +358,4 @@ class ReviewerSubmission extends Article {
 	}
 }
 
-?>
+

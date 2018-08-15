@@ -20,4 +20,4 @@ require_once('SubscriptionReportPlugin.inc.php');
 
 return new SubscriptionReportPlugin();
 
-?>
+

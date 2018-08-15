@@ -271,4 +271,4 @@ class FunctionalLucenePluginSearchTest extends FunctionalLucenePluginBaseTestCas
 		}
 	}
 }
-?>
+

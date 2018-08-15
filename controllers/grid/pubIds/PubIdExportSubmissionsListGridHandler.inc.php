@@ -76,4 +76,4 @@ class PubIdExportSubmissionsListGridHandler extends ExportPublishedSubmissionsLi
 
 }
 
-?>
+

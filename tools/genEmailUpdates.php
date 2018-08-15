@@ -114,4 +114,4 @@ class genEmailUpdates extends CommandLineTool {
 $tool = new genEmailUpdates(isset($argv) ? $argv : array());
 $tool->execute();
 
-?>
+

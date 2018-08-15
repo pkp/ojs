@@ -93,4 +93,4 @@ class UserImportExportPlugin extends PKPUserImportExportPlugin {
 	}
 }
 
-?>
+

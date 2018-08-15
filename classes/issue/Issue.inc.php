@@ -561,4 +561,4 @@ class Issue extends DataObject {
 	}
 }
 
-?>
+

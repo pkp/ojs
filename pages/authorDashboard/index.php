@@ -28,4 +28,4 @@ switch ($op) {
 		define('HANDLER_CLASS', 'AuthorDashboardHandler');
 }
 
-?>
+

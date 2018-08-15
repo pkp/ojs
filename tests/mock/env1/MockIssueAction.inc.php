@@ -34,4 +34,4 @@ class IssueAction {
 		return false;
 	}
 }
-?>
+

@@ -60,4 +60,4 @@ class SubmissionDeletionTool extends CommandLineTool {
 
 $tool = new SubmissionDeletionTool(isset($argv) ? $argv : array());
 $tool->execute();
-?>
+

@@ -185,4 +185,4 @@ class IndividualSubscriptionsGridHandler extends SubscriptionsGridHandler {
 	}
 }
 
-?>
+

@@ -64,4 +64,4 @@ class FutureIssueGridHandler extends IssueGridHandler {
 	}
 }
 
-?>
+

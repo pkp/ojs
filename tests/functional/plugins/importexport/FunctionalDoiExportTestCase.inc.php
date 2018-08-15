@@ -899,4 +899,4 @@ class FunctionalDoiExportTest extends FunctionalImportExportBaseTestCase {
 		}
 	}
 }
-?>
+

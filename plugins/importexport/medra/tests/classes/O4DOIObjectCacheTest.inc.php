@@ -138,4 +138,4 @@ class O4DOIObjectCacheTest extends PKPTestCase {
 		self::assertTrue($cache->isCached('galleysByArticle', $article->getId()));
 	}
 }
-?>
+

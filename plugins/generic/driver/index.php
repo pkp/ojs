@@ -19,4 +19,4 @@ require_once('DRIVERPlugin.inc.php');
 
 return new DRIVERPlugin();
 
-?>
+

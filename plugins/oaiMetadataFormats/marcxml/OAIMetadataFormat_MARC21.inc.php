@@ -45,4 +45,4 @@ class OAIMetadataFormat_MARC21 extends OAIMetadataFormat {
 	}
 }
 
-?>
+

@@ -81,4 +81,4 @@ class MedraWebserviceTest extends PKPTestCase {
 		return file_get_contents($sampleFile);
 	}
 }
-?>
+

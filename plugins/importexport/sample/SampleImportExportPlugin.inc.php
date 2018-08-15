@@ -86,4 +86,4 @@ class SampleImportExportPlugin extends ImportExportPlugin {
 	}
 }
 
-?>
+

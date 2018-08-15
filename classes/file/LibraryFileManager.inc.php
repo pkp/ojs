@@ -26,4 +26,4 @@ class LibraryFileManager extends PKPLibraryFileManager {
 	}
 }
 
-?>
+

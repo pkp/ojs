@@ -809,4 +809,4 @@ class DataciteXmlFilter extends NativeExportFilter {
 	}
 }
 
-?>
+

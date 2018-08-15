@@ -74,4 +74,4 @@ class IssueFile extends PKPFile {
 	}
 }
 
-?>
+

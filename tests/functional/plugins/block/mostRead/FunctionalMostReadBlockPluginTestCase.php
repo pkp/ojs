@@ -136,4 +136,4 @@ class FunctionalMostReadBlockPluginTest extends WebTestCase {
 		}
 	}
 }
-?>
+

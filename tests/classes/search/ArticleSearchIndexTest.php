@@ -405,4 +405,4 @@ class ArticleSearchIndexTest extends PKPTestCase {
 		return $articleSearchIndex;
 	}
 }
-?>
+

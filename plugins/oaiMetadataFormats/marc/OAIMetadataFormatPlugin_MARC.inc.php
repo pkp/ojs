@@ -52,4 +52,4 @@ class OAIMetadataFormatPlugin_MARC extends OAIMetadataFormatPlugin {
 	}
 }
 
-?>
+

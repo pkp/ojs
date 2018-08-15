@@ -129,4 +129,4 @@ class MedraExportPlugin extends DOIPubIdExportPlugin {
 
 }
 
-?>
+

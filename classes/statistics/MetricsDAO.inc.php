@@ -99,4 +99,4 @@ class MetricsDAO extends PKPMetricsDAO {
 		return $returnArray;
 	}
 }
-?>
+

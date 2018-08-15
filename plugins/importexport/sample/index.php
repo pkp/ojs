@@ -20,4 +20,4 @@ require_once('SampleImportExportPlugin.inc.php');
 
 return new SampleImportExportPlugin();
 
-?>
+

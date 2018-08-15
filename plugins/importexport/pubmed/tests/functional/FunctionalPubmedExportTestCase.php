@@ -22,4 +22,4 @@ class FunctionalPubmedExportTest extends FunctionalImportExportBaseTestCase {
 		self::assertEquals('10.1234/t.v1i1.1', $export->evaluate('string(/ArticleSet/Article/ELocationID[@EIdType="doi"])'));
 	}
 }
-?>
+

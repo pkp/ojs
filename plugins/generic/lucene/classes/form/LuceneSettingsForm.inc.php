@@ -207,4 +207,4 @@ class LuceneSettingsForm extends Form {
 	}
 }
 
-?>
+

@@ -257,4 +257,4 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 	}
 }
 
-?>
+

@@ -45,4 +45,4 @@ class DistributionSettingsTabHandler extends PKPDistributionSettingsTabHandler {
 	}
 }
 
-?>
+

@@ -20,4 +20,4 @@ require_once('CrossRefExportPlugin.inc.php');
 
 return new CrossRefExportPlugin();
 
-?>
+

@@ -120,4 +120,4 @@ class DOAJInfoSender extends ScheduledTask {
 	}
 
 }
-?>
+

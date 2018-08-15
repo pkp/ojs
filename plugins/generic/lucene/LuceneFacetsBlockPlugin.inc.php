@@ -174,4 +174,4 @@ class LuceneFacetsBlockPlugin extends BlockPlugin {
 	}
 }
 
-?>
+

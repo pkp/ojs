@@ -66,4 +66,4 @@ class StatisticsHelper extends PKPStatisticsHelper {
 
 }
 
-?>
+

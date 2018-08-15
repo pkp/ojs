@@ -45,4 +45,4 @@ class OAIMetadataFormat_MARC extends OAIMetadataFormat {
 	}
 }
 
-?>
+

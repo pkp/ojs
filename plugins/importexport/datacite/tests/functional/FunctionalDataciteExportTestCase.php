@@ -417,4 +417,4 @@ class FunctionalDataciteExportTest extends FunctionalDoiExportTest {
 		return parent::cleanXml($xml);
 	}
 }
-?>
+

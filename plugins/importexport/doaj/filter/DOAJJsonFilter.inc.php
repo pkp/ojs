@@ -164,4 +164,4 @@ class DOAJJsonFilter extends NativeImportExportFilter {
 
 }
 
-?>
+

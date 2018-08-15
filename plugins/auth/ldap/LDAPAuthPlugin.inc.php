@@ -374,4 +374,4 @@ class LDAPAuthPlugin extends AuthPlugin {
 	}
 }
 
-?>
+

@@ -19,4 +19,4 @@ require_once('ManualPaymentPlugin.inc.php');
 
 return new ManualPaymentPlugin();
 
-?> 
+

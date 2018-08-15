@@ -138,4 +138,4 @@ class PaypalPaymentPlugin extends PaymethodPlugin {
 	}
 }
 
-?>
+

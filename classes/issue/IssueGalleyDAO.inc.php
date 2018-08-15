@@ -383,4 +383,4 @@ class IssueGalleyDAO extends DAO {
 	}
 }
 
-?>
+

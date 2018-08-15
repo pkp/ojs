@@ -47,4 +47,4 @@ class OJSInstallTool extends InstallTool {
 $tool = new OJSInstallTool(isset($argv) ? $argv : array());
 $tool->execute();
 
-?>
+

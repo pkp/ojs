@@ -114,4 +114,4 @@ class NativeXmlArticleGalleyFilter extends NativeXmlRepresentationFilter {
 	}
 }
 
-?>
+

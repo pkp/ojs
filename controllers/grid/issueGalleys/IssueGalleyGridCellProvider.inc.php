@@ -41,4 +41,4 @@ class IssueGalleyGridCellProvider extends GridCellProvider {
 	}
 }
 
-?>
+

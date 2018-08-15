@@ -345,4 +345,4 @@ class ArticleSearchTest extends PKPTestCase {
 		DAORegistry::registerDAO('SectionDAO', $sectionDAO);
 	}
 }
-?>
+

@@ -88,4 +88,4 @@ class ArticleNativeXmlFilter extends SubmissionNativeXmlFilter {
 
 }
 
-?>
+

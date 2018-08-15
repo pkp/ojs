@@ -178,4 +178,4 @@ class IssueGalley extends IssueFile {
 
 }
 
-?>
+

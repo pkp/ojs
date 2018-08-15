@@ -221,4 +221,4 @@ class DOAJExportPlugin extends PubObjectsExportPlugin {
 
 }
 
-?>
+

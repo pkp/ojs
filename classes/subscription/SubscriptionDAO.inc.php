@@ -388,4 +388,4 @@ abstract class SubscriptionDAO extends DAO {
 	}
 }
 
-?>
+

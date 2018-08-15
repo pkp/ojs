@@ -339,4 +339,4 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 
 }
 
-?>
+

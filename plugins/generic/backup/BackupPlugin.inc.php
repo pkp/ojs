@@ -148,4 +148,4 @@ class BackupPlugin extends GenericPlugin {
 	}
 }
 
-?>
+

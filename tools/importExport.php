@@ -67,4 +67,4 @@ class importExport extends CommandLineTool {
 
 $tool = new importExport(isset($argv) ? $argv : array());
 $tool->execute();
-?>
+

@@ -17,4 +17,4 @@ require_once('OAIMetadataFormat_DC.inc.php');
 
 return new OAIMetadataFormatPlugin_DC();
 
-?>
+

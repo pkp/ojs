@@ -360,4 +360,4 @@ class ExternalFeedPlugin extends GenericPlugin {
 	}
 }
 
-?>
+

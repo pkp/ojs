@@ -24,4 +24,4 @@ class SubmissionSubmitStep2Form extends PKPSubmissionSubmitStep2Form {
 	}
 }
 
-?>
+

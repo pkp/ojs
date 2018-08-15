@@ -33,4 +33,4 @@ class OJSUpgradeTool extends UpgradeTool {
 $tool = new OJSUpgradeTool(isset($argv) ? $argv : array());
 $tool->execute();
 
-?>
+

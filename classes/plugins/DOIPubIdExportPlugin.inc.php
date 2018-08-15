@@ -240,4 +240,4 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin {
 
 }
 
-?>
+

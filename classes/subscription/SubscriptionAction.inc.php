@@ -80,4 +80,4 @@ class SubscriptionAction {
 	}
 }
 
-?>
+

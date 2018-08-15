@@ -200,4 +200,4 @@ class SubscriptionPolicyForm extends Form {
 	}
 }
 
-?>
+

@@ -71,4 +71,4 @@ class SupplementaryFileNativeXmlFilter extends SubmissionFileNativeXmlFilter {
 	}
 }
 
-?>
+

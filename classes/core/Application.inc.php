@@ -265,4 +265,4 @@ class Application extends PKPApplication {
 	}
 }
 
-?>
+

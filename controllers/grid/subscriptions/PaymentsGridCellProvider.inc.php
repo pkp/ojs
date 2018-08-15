@@ -59,4 +59,4 @@ class PaymentsGridCellProvider extends GridCellProvider {
 	}
 }
 
-?>
+

@@ -171,4 +171,4 @@ class ResolverPlugin extends GatewayPlugin {
 	}
 }
 
-?>
+

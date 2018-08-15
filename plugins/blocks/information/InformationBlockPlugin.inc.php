@@ -55,4 +55,4 @@ class InformationBlockPlugin extends BlockPlugin {
 	}
 }
 
-?>
+

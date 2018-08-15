@@ -787,4 +787,4 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 	}
 }
 
-?>
+

@@ -279,4 +279,4 @@ class FunctionalLucenePluginRankingByMetricTest extends FunctionalLucenePluginBa
 		}
 	}
 }
-?>
+

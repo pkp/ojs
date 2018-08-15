@@ -20,4 +20,4 @@ require_once('RecommendByAuthorPlugin.inc.php');
 
 return new RecommendByAuthorPlugin();
 
-?>
+

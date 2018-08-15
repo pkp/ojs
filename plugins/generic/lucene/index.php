@@ -20,4 +20,4 @@ require_once('LucenePlugin.inc.php');
 
 return new LucenePlugin();
 
-?>
+

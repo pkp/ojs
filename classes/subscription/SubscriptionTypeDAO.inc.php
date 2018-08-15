@@ -376,4 +376,4 @@ class SubscriptionTypeDAO extends DAO {
 	}
 }
 
-?>
+

@@ -292,4 +292,4 @@ abstract class PubIdPlugin extends PKPPubIdPlugin {
 
 }
 
-?>
+

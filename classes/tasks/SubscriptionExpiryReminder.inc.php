@@ -284,4 +284,4 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 	}
 }
 
-?>
+

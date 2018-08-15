@@ -72,4 +72,4 @@ class ExportableIssuesListGridHandler extends IssueGridHandler {
 	}
 }
 
-?>
+

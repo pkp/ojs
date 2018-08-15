@@ -54,4 +54,4 @@ class IssueEntrySubmissionReviewForm extends SubmissionMetadataViewForm {
 	}
 }
 
-?>
+

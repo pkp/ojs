@@ -675,4 +675,4 @@ class SolrWebServiceTest extends PKPTestCase {
 		$returner[] = 'indexingState';
 	}
 }
-?>
+

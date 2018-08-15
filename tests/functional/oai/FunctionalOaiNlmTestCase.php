@@ -34,4 +34,4 @@ class FunctionalOaiNlmTest extends FunctionalOaiBaseTestCase {
 		self::assertEquals('10.1234/t.v1i1.1', $xPath->evaluate('string(/oai:OAI-PMH/oai:GetRecord/oai:record/oai:metadata/nlm:article/nlm:front/nlm:article-meta/nlm:article-id[@pub-id-type="doi"])'));
 	}
 }
-?>
+

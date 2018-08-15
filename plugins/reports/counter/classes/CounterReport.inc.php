@@ -307,4 +307,4 @@ class CounterReport {
 
 }
 
-?>
+

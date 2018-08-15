@@ -141,4 +141,4 @@ class JournalSiteSettingsForm extends ContextSiteSettingsForm {
 	}
 }
 
-?>
+

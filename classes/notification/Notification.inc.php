@@ -35,4 +35,4 @@ import('lib.pkp.classes.notification.NotificationDAO');
 class Notification extends PKPNotification {
 }
 
-?>
+

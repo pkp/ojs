@@ -20,4 +20,4 @@ require_once('DevelopedByBlockPlugin.inc.php');
 
 return new DevelopedByBlockPlugin();
 
-?>
+

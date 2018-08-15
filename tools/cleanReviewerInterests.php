@@ -124,4 +124,4 @@ class ReviewerInterestsDeletionTool extends CommandLineTool {
 $tool = new ReviewerInterestsDeletionTool(isset($argv) ? $argv : array());
 $tool->execute();
 
-?>
+

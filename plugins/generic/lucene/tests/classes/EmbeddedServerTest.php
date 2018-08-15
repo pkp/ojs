@@ -80,4 +80,4 @@ class EmbeddedServerTest extends PKPTestCase {
 		}
 	}
 }
-?>
+

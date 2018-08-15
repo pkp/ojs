@@ -137,4 +137,4 @@ class GoogleScholarPlugin extends GenericPlugin {
 	}
 }
 
-?>
+

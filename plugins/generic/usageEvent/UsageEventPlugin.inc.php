@@ -156,4 +156,4 @@ class UsageEventPlugin extends PKPUsageEventPlugin {
 
 }
 
-?>
+

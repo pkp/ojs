@@ -88,4 +88,4 @@ class SubscriptionsGridRow extends GridRow {
 	}
 }
 
-?>
+

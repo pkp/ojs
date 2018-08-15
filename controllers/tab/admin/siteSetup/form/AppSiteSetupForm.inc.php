@@ -68,4 +68,4 @@ class AppSiteSetupForm extends SiteSetupForm {
 	}
 }
 
-?>
+

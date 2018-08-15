@@ -82,4 +82,4 @@ class PublicFileManager extends PKPPublicFileManager {
 	}
 }
 
-?>
+

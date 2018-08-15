@@ -19,4 +19,4 @@ import('lib.pkp.plugins.metadata.mods34.PKPMods34MetadataPlugin');
 class Mods34MetadataPlugin extends PKPMods34MetadataPlugin {
 }
 
-?>
+

@@ -110,4 +110,4 @@ class NativeXmlIssueGalleyFilter extends NativeImportFilter {
 	}
 }
 
-?>
+

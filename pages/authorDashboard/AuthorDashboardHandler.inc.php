@@ -19,4 +19,4 @@ import('lib.pkp.pages.authorDashboard.PKPAuthorDashboardHandler');
 class AuthorDashboardHandler extends PKPAuthorDashboardHandler {
 }
 
-?>
+

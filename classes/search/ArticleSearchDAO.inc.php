@@ -110,4 +110,4 @@ class ArticleSearchDAO extends SubmissionSearchDAO {
 	}
 }
 
-?>
+

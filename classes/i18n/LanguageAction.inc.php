@@ -21,4 +21,4 @@ import('lib.pkp.classes.i18n.PKPLanguageAction');
 class LanguageAction extends PKPLanguageAction {
 }
 
-?>
+

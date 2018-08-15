@@ -396,4 +396,4 @@ class ArticleGalleyGridHandler extends GridHandler {
 	}
 }
 
-?>
+

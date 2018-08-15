@@ -59,4 +59,4 @@ class JournalSettingsDAO extends SettingsDAO {
 	}
 }
 
-?>
+

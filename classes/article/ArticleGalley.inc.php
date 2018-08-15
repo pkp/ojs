@@ -162,4 +162,4 @@ class ArticleGalley extends Representation {
 	}
 }
 
-?>
+

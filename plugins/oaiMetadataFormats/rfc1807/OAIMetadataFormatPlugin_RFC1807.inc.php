@@ -52,4 +52,4 @@ class OAIMetadataFormatPlugin_RFC1807 extends OAIMetadataFormatPlugin {
 	}
 }
 
-?>
+

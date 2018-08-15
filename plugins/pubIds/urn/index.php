@@ -19,4 +19,4 @@ require_once('URNPubIdPlugin.inc.php');
 
 return new URNPubIdPlugin();
 
-?>
+

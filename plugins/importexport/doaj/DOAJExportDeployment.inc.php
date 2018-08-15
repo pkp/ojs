@@ -118,4 +118,4 @@ class DOAJExportDeployment {
 
 }
 
-?>
+

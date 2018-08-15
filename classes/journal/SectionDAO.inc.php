@@ -610,4 +610,4 @@ class SectionDAO extends PKPSectionDAO {
 
 }
 
-?>
+

@@ -21,4 +21,4 @@ require_once(dirname(__FILE__) . '/ViewReportPlugin.inc.php');
 
 return new ViewReportPlugin();
 
-?>
+

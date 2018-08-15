@@ -229,4 +229,4 @@ class JournalOAI extends OAI {
 	}
 }
 
-?>
+

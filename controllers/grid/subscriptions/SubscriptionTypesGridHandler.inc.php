@@ -224,4 +224,4 @@ class SubscriptionTypesGridHandler extends GridHandler {
 	}
 }
 
-?>
+

@@ -210,4 +210,4 @@ class JournalDAO extends ContextDAO {
 	}
 }
 
-?>
+

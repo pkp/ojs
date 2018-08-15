@@ -94,4 +94,4 @@ class IndividualSubscriptionForm extends SubscriptionForm {
 	}
 }
 
-?>
+

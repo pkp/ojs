@@ -21,4 +21,4 @@ require_once('SubscriptionBlockPlugin.inc.php');
 
 return new SubscriptionBlockPlugin();
 
-?> 
+

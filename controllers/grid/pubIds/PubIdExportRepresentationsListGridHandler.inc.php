@@ -304,4 +304,4 @@ class PubIdExportRepresentationsListGridHandler extends GridHandler {
 
 }
 
-?>
+

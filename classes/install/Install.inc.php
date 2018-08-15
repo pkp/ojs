@@ -53,4 +53,4 @@ class Install extends PKPInstall {
 	}
 }
 
-?>
+

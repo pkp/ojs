@@ -1157,4 +1157,4 @@ class LucenePlugin extends GenericPlugin {
 		$solr->reloadExternalFiles();
 	}
 }
-?>
+

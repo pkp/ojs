@@ -164,4 +164,4 @@ class NotificationManager extends PKPNotificationManager {
 
 }
 
-?>
+

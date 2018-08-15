@@ -71,4 +71,4 @@ class ManageIssuesHandler extends Handler {
 	}
 }
 
-?>
+

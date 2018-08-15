@@ -48,4 +48,4 @@ class ReviewRoundTabHandler extends PKPReviewRoundTabHandler {
 	}
 }
 
-?>
+

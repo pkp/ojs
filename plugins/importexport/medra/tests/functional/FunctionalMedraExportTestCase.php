@@ -414,4 +414,4 @@ class FunctionalMedraExportTest extends FunctionalDoiExportTest {
 		return parent::cleanXml($xml);
 	}
 }
-?>
+

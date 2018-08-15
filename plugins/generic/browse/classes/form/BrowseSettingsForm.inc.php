@@ -100,4 +100,4 @@ class BrowseSettingsForm extends Form {
 	}
 }
 
-?>
+

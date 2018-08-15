@@ -241,4 +241,4 @@ class DOAJXmlFilter extends NativeExportFilter {
 
 }
 
-?>
+

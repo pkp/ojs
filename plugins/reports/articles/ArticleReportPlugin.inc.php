@@ -188,4 +188,4 @@ class ArticleReportPlugin extends ReportPlugin {
 
 }
 
-?>
+

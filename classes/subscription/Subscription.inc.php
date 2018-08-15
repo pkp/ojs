@@ -270,4 +270,4 @@ class Subscription extends DataObject {
 	}
 }
 
-?>
+

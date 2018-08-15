@@ -19,4 +19,4 @@ require_once('OpenAIREPlugin.inc.php');
 
 return new OpenAIREPlugin();
 
-?>
+

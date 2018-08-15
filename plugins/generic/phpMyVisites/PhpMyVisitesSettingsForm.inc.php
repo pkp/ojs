@@ -70,4 +70,4 @@ class PhpMyVisitesSettingsForm extends Form {
 	}
 }
 
-?>
+

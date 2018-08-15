@@ -64,4 +64,4 @@ class ManualPaymentSettingsForm extends Form {
 	}
 }
 
-?>
+

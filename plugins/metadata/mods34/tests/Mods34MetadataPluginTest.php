@@ -27,4 +27,4 @@ class Mods34MetadataPluginTest extends PKPMods34MetadataPluginTest {
 		parent::testMods34MetadataPlugin($appSpecificFilters);
 	}
 }
-?>
+

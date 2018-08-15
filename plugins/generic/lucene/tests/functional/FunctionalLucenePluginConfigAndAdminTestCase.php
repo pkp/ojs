@@ -697,4 +697,4 @@ class FunctionalLucenePluginConfigAndAdminTest extends FunctionalLucenePluginBas
 		self::assertEquals(SOLR_STATUS_ONLINE, $solrWebService->getServerStatus());
 	}
 }
-?>
+

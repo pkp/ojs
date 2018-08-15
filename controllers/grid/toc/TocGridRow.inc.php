@@ -68,4 +68,4 @@ class TocGridRow extends GridRow {
 	}
 }
 
-?>
+

@@ -26,4 +26,4 @@ switch ($op) {
 		require_once('lib/pkp/pages/about/index.php');
 }
 
-?>
+

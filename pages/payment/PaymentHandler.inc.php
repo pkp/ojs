@@ -65,4 +65,4 @@ class PaymentHandler extends Handler {
 	}
 }
 
-?>
+

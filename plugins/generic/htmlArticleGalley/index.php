@@ -19,4 +19,4 @@ require_once('HtmlArticleGalleyPlugin.inc.php');
 
 return new HtmlArticleGalleyPlugin();
 
-?>
+

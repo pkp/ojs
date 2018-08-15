@@ -73,4 +73,4 @@ class UserSettingsDAO extends PKPUserSettingsDAO {
 	}
 }
 
-?>
+

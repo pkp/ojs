@@ -515,4 +515,4 @@ class ArticleGalleyDAO extends RepresentationDAO implements PKPPubIdPluginDAO {
 
 }
 
-?>
+

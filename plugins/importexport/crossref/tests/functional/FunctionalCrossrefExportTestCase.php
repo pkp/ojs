@@ -53,4 +53,4 @@ class FunctionalCrossrefExportTest extends FunctionalImportExportBaseTestCase {
 		}
 	}
 }
-?>
+

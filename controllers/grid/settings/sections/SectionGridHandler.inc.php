@@ -233,4 +233,4 @@ class SectionGridHandler extends SetupGridHandler {
 	}
 }
 
-?>
+

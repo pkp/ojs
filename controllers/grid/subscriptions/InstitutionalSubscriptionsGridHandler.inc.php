@@ -176,4 +176,4 @@ class InstitutionalSubscriptionsGridHandler extends SubscriptionsGridHandler {
 	}
 }
 
-?>
+

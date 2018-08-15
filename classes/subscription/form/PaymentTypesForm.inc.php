@@ -79,4 +79,4 @@ class PaymentTypesForm extends Form {
 	}
 }
 
-?>
+

@@ -30,4 +30,4 @@ class TocGridCategoryRow extends GridCategoryRow {
 	}
 }
 
-?>
+

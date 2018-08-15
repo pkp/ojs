@@ -78,4 +78,4 @@ class IssueEntryHandler extends PublicationEntryHandler {
 	}
 }
 
-?>
+

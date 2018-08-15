@@ -170,4 +170,4 @@ class DataciteInfoSender extends ScheduledTask {
 	}
 
 }
-?>
+
