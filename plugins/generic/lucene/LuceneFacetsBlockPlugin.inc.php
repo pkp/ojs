@@ -99,11 +99,11 @@ class LuceneFacetsBlockPlugin extends BlockPlugin {
 	// Implement template methods from LazyLoadPlugin
 	//
 	/**
-	 * @see LazyLoadPlugin::getEnabled()
+	 * @copydoc LazyLoadPlugin::getEnabled()
 	 */
-	function getEnabled() {
+	function getEnabled($contextId = null) {
 		$plugin =& $this->_getLucenePlugin();
-		return $plugin->getEnabled();
+		return $plugin->getEnabled($contextId);
 	}
 
 
