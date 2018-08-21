@@ -32,7 +32,7 @@ class JournalSettingsTabHandler extends ManagerSettingsTabHandler {
 	// Overridden methods from Handler
 	//
 	/**
-	 * @copydoc PKPHandler::initialize()
+	 * @copydoc ManagerSettingsTabHandler::initialize()
 	 */
 	function initialize($request, $args = null) {
 		parent::initialize($request, $args);

@@ -114,8 +114,6 @@ class PaymentsGridHandler extends GridHandler {
 
 	/**
 	 * @copydoc GridHandler::loadData()
-	 * @param $request PKPRequest
-	 * @return array Grid data.
 	 */
 	protected function loadData($request, $filter) {
 		$paymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO');

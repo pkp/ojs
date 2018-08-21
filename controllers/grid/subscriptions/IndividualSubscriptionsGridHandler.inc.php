@@ -103,8 +103,6 @@ class IndividualSubscriptionsGridHandler extends SubscriptionsGridHandler {
 	//
 	/**
 	 * @copydoc GridHandler::loadData()
-	 * @param $request PKPRequest
-	 * @return array Grid data.
 	 */
 	protected function loadData($request, $filter) {
 		// Get the context.
