@@ -23,9 +23,10 @@ class UserSettingsDAO extends PKPUserSettingsDAO {
 	 * @param $name
 	 * @param $journalId int
 	 * @return mixed
+	 * @see PKPUserSettingsDAO::getByAssoc
 	 */
 	function &getSetting($userId, $name, $journalId = null) {
-		return parent::getSetting($userId, $name, ASSOC_TYPE_JOURNAL, $journalId);
+		return parent::getByAssoc($userId, $name, ASSOC_TYPE_JOURNAL, $journalId);
 	}
 
 	/**
@@ -35,9 +36,10 @@ class UserSettingsDAO extends PKPUserSettingsDAO {
 	 * @param $type string
 	 * @param $journalId int
 	 * @return DAOResultFactory matching Users
+	 * @see PKPUserSettingsDAO::getUsersByAssocSetting
 	 */
 	function &getUsersBySetting($name, $value, $type = null, $journalId = null) {
-		return parent::getUsersBySetting($name, $value, $type, ASSOC_TYPE_JOURNAL, $journalId);
+		return parent::getUsersByAssocSetting($name, $value, $type, ASSOC_TYPE_JOURNAL, $journalId);
 	}
 
 	/**
@@ -57,19 +59,21 @@ class UserSettingsDAO extends PKPUserSettingsDAO {
 	 * @param $value mixed
 	 * @param $type string data type of the setting. If omitted, type will be guessed
 	 * @param $journalId int
+	 * @see PKPUserSettingsDAO::updateByAssoc
 	 */
 	function updateSetting($userId, $name, $value, $type = null, $journalId = null) {
-		return parent::updateSetting($userId, $name, $value, $type, ASSOC_TYPE_JOURNAL, $journalId);
+		return parent::updateByAssoc($userId, $name, $value, $type, ASSOC_TYPE_JOURNAL, $journalId);
 	}
 
 	/**
-	 * Delete a user setting.
+	 * Delete a user setting by association.
 	 * @param $userId int
 	 * @param $name string
 	 * @param $journalId int
+	 * @see PKPUserSettingsDAO::deleteByAssoc
 	 */
 	function deleteSetting($userId, $name, $journalId = null) {
-		return parent::deleteSetting($userId, $name, ASSOC_TYPE_JOURNAL, $journalId);
+		return parent::deleteByAssoc($userId, $name, ASSOC_TYPE_JOURNAL, $journalId);
 	}
 }
 
