@@ -18,17 +18,28 @@ import('lib.pkp.classes.user.PKPUserSettingsDAO');
 
 class UserSettingsDAO extends PKPUserSettingsDAO {
 	/**
-	 * @copydoc PKPUserSettingsDAO::getSetting
+	 * Retrieve a user setting value.
+	 * @param $userId int
+	 * @param $name
+	 * @param $journalId int
+	 * @return mixed
+	 * @see PKPUserSettingsDAO::getByAssoc
 	 */
-	function &getSetting($userId, $name, $assocType = null, $journalId = null) {
-		return parent::getSetting($userId, $name, ASSOC_TYPE_JOURNAL, $journalId);
+	function &getSetting($userId, $name, $journalId = null) {
+		return parent::getByAssoc($userId, $name, ASSOC_TYPE_JOURNAL, $journalId);
 	}
 
 	/**
-	 * @copydoc PKPUserSettingsDAO::getUsersBySetting
+	 * Retrieve all users by setting name and value.
+	 * @param $name string
+	 * @param $value mixed
+	 * @param $type string
+	 * @param $journalId int
+	 * @return DAOResultFactory matching Users
+	 * @see PKPUserSettingsDAO::getUsersByAssocSetting
 	 */
-	function &getUsersBySetting($name, $value, $type = null, $assocType = null, $journalId = null) {
-		return parent::getUsersBySetting($name, $value, $type, ASSOC_TYPE_JOURNAL, $journalId);
+	function &getUsersBySetting($name, $value, $type = null, $journalId = null) {
+		return parent::getUsersByAssocSetting($name, $value, $type, ASSOC_TYPE_JOURNAL, $journalId);
 	}
 
 	/**
@@ -42,17 +53,27 @@ class UserSettingsDAO extends PKPUserSettingsDAO {
 	}
 
 	/**
-	 * @copydoc PKPUserSettingsDAO::updateSetting
+	 * Add/update a user setting.
+	 * @param $userId int
+	 * @param $name string
+	 * @param $value mixed
+	 * @param $type string data type of the setting. If omitted, type will be guessed
+	 * @param $journalId int
+	 * @see PKPUserSettingsDAO::updateByAssoc
 	 */
-	function updateSetting($userId, $name, $value, $type = null, $assocType = null, $journalId = null) {
-		return parent::updateSetting($userId, $name, $value, $type, ASSOC_TYPE_JOURNAL, $journalId);
+	function updateSetting($userId, $name, $value, $type = null, $journalId = null) {
+		return parent::updateByAssoc($userId, $name, $value, $type, ASSOC_TYPE_JOURNAL, $journalId);
 	}
 
 	/**
-	 * @copydoc PKPUserSettingsDAO::deleteSetting
+	 * Delete a user setting by association.
+	 * @param $userId int
+	 * @param $name string
+	 * @param $journalId int
+	 * @see PKPUserSettingsDAO::deleteByAssoc
 	 */
-	function deleteSetting($userId, $name, $assocType = null, $journalId = null) {
-		return parent::deleteSetting($userId, $name, ASSOC_TYPE_JOURNAL, $journalId);
+	function deleteSetting($userId, $name, $journalId = null) {
+		return parent::deleteByAssoc($userId, $name, ASSOC_TYPE_JOURNAL, $journalId);
 	}
 }
 
