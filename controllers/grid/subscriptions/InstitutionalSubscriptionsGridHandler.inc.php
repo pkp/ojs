@@ -19,7 +19,7 @@ import('controllers.grid.subscriptions.InstitutionalSubscriptionForm');
 
 class InstitutionalSubscriptionsGridHandler extends SubscriptionsGridHandler {
 	/**
-	 * @copydoc GridHandler::initialize()
+	 * @copydoc SubscriptionsGridHandler::initialize()
 	 */
 	function initialize($request, $args = null) {
 		parent::initialize($request, $args);

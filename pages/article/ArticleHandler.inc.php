@@ -45,8 +45,9 @@ class ArticleHandler extends Handler {
 
 	/**
 	 * @see PKPHandler::initialize()
+	 * @param $args array Arguments list
 	 */
-	function initialize($request, $args) {
+	function initialize($request, $args = array()) {
 		$articleId = isset($args[0]) ? $args[0] : 0;
 
 		$journal = $request->getContext();

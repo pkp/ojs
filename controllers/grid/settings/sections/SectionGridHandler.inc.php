@@ -33,7 +33,7 @@ class SectionGridHandler extends SetupGridHandler {
 	// Overridden template methods
 	//
 	/**
-	 * @copydoc GridHandler::initialize()
+	 * @copydoc SetupGridHandler::initialize()
 	 */
 	function initialize($request, $args = null) {
 		parent::initialize($request, $args);

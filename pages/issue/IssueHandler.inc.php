@@ -39,7 +39,7 @@ class IssueHandler extends Handler {
 	}
 
 	/**
-	 * @copydoc PKPHandler::initialize()
+	 * @see PKPHandler::initialize()
 	 * @param $args array Arguments list
 	 */
 	function initialize($request, $args = array()) {

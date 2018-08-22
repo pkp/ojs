@@ -18,17 +18,6 @@ import('classes.controllers.grid.issues.IssueGridHandler');
 class ExportableIssuesListGridHandler extends IssueGridHandler {
 
 	//
-	// Implement template methods from PKPHandler
-	//
-	/**
-	 * @copydoc GridHandler::initialize()
-	 */
-	function initialize($request, $args = null) {
-		parent::initialize($request, $args);
-	}
-
-
-	//
 	// Implemented methods from GridHandler.
 	//
 	/**
