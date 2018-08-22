@@ -21,7 +21,7 @@ class FutureIssueGridHandler extends IssueGridHandler {
 	// Implement template methods from PKPHandler
 	//
 	/**
-	 * @copydoc GridHandler::initialize()
+	 * @copydoc IssueGridHandler::initialize()
 	 */
 	function initialize($request, $args = null) {
 		// Basic grid configuration.
