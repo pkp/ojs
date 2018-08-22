@@ -26,9 +26,13 @@ class SubmissionFileDAO extends PKPSubmissionFileDAO {
 	// Protected helper methods
 	//
 	/**
-	 * @copydoc PKPSubmissionFileDAO::fromRow()
+	 * Return a SubmissionFile object from a row.
+	 * @param $row array
+	 * @param $fileImplementation string, ignored
+	 * @return SubmissionFile
+	 * @see PKPSubmissionFileDAO::fromRow()
 	 */
-	function fromRow($row) {
+	function fromRow($row, $fileImplementation = null) {
 		if (isset($row['artwork_file_id']) && is_numeric($row['artwork_file_id'])) {
 			return parent::fromRow($row, 'SubmissionArtworkFile');
 		} elseif (isset($row['supplementary_file_id']) && is_numeric($row['supplementary_file_id'])) {
