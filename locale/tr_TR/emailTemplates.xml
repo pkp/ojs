@@ -9,7 +9,6 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localized email templates XML file.
-  *
   -->
 
 <email_texts locale="tr_TR">
@@ -207,8 +206,6 @@ Başvuruya ulaşım için adres: {$submissionReviewUrl}<br />
 İsteğimize olumlu yaklaşımınız için şimdiden teşekkür ederiz.<br />
 <br />
 {$editorialContactSignature}<br />
-<br />
-<br />
 <br />
 &quot;{$submissionTitle}&quot;<br />
 <br />

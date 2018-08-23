@@ -9,14 +9,18 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the tr_TR (Türkçe) locale.
-  *
   -->
- 
+
 <locale name="tr_TR" full_name="Türkçe">
 	<!-- Section default -->
 	<message key="section.default.title">Makaleler</message>
 	<message key="section.default.abbrev">MAK</message>
 	<message key="section.default.policy"></message>	
+
+	<message key="default.genres.article">Makale Metni</message>
+
+	<!--
+	 *
 	 * DEFAULT - Default settings for setup items.
 	 *
 	-->
@@ -29,8 +33,9 @@
 	<message key="default.journalSettings.openAccessPolicy">Bu dergi açık erişim sağlama politikasını benimsemiştir. Açık erişim bilginin global değişimini artırarak insanlık için yararlı sonuçlar doğurmaktadır.</message>
 	<message key="default.journalSettings.authorSelfArchivePolicy">Yazarlar bu dergide yayınlanan çalışmalarını kişisel web sitelerinde veya kurumsal arşivlerde, dergiye kütüphanecilik kurallarına uyan bağlantı vererek açık olarak yayınlayabilirler.</message>
 	<message key="default.journalSettings.copyeditInstructions"><![CDATA[Sayfa düzenleme aşaması, makalenin şekli, sözcükleri, gramer yapısı, açıklığı ve akıcılığını geliştirme amaçldır. Bir diğer evrede de yalnızca yazın ve şekil düzeltmeleri yapılacağından bu yazar için yazıda yapabileceği son değişiklikler için son şans olmaktadır. 
- 
+
 Sayfa düzenlemesi yapılacak dosya MS Word veya .rtf dosyası biçimindedir. Böylece belge kolayca biçimlendirilir. Buradaki açıklamalar iki yöntemi önerir. Birincisi MS Word programının Değişiklikleri İzle olanağını kullanmaktır. Ancak bu yol seçildiğinde yazar, editör ve dizgicilerin programa ulaşım olanağının olması gerekir. İkinci sistem ise, yazılım bağımsızdır ve Harward Educational Review yönteminden izin alınarak buraya alınmıştır. Dergi editörü bu açıklamaları düzenleyip, kendi koşullarına daha uygun biçime getirebilir.
+
 
 <h4> Sayfa düzenlemesi düzeltme sistemleri</h4>
 
@@ -114,7 +119,6 @@ ________________________________________________________________________<br/>
 	<message key="default.journalSettings.purchaseArticleFee">Makale Satın Al</message>
 	<message key="default.journalSettings.membershipFee">Dernek Üyeliği</message>
 	<message key="default.journalSettings.purchaseIssueFee">Sayı Satın Al</message>
-	<message key="default.genres.article">Makale Metni</message>
 	<message key="default.groups.name.manager">Dergi yöneticisi</message>
 	<message key="default.groups.plural.manager">Dergi yöneticileri</message>
 	<message key="default.groups.abbrev.manager">DY</message>
@@ -162,6 +166,7 @@ ________________________________________________________________________<br/>
 	<li>Add the phrase CrossRef to the end of each citation in the submission's References list.</li>
 	<li>Turn that phrase into a hyperlink by highlighting the phrase and using Word's Insert Hyperlink tool and the appropriate URL prepared in #2.</li>
 	</ol>]]></message>
+
 	<message key="default.journalSettings.proofingInstructions"><![CDATA[<p>The proofreading stage is intended to catch any errors in the galley's spelling, grammar, and formatting. More substantial changes cannot be made at this stage, unless discussed with the Section Editor. In Layout, click on VIEW PROOF to see the HTML, PDF, and other available file formats used in publishing this item.</p>
 	<h4>For Spelling and Grammar Errors</h4>
 
