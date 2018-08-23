@@ -14,8 +14,8 @@
 
 <locale name="tr_TR" full_name="Türkçe">
 	<message key="admin.hostedJournals">Yayınlanan Dergiler</message>
-	<message key="admin.settings.journalRedirect">Dergiye Yönlendirme</message>
-	<message key="admin.settings.journalRedirectInstructions">Siteye girişler, doğrudan derginin ana sayfasına yönlendirilecektir. Özellikle tek dergi tutuluyor ise yararlıdır.</message>
+	<message key="admin.settings.journalRedirect">Dergi Yönlendirmesi</message>
+	<message key="admin.settings.journalRedirectInstructions">Siteye yapılan girişler doğrudan derginin ana sayfasına yönlendirir. OJS üzerinde tek dergi yayınlanıyır ise yararlıdır.</message>
 	<message key="admin.settings.noJournalRedirect">Yönlendirme yapma</message>
 	<message key="admin.languages.primaryLocaleInstructions">Bu site ve yayınlanan dergiler için varsayılan dil olacaktır.</message>
 	<message key="admin.languages.supportedLocalesInstructions">Sitede kullanılacak dilleri seçiniz. Seçilen diller sitede sunulan tüm dergiler için kullanılabilir olacaktır ve özel dergi sayfaları dışında, seçtiğiniz dillerden oluşan bir dil seçme aracı tüm sayfalarda okuyucunun hizmetine sunulacaktır. Eğer birden çok dil seçilmez ise, dil seçim aracı gösterilmeyecektir ve dergiler için genişletilmiş dil olanakları çalışmayacaktır.</message>
@@ -36,7 +36,6 @@
 	<message key="admin.systemConfigurationDescription"><![CDATA[<tt>config.inc.php</tt>'de ADS kurulum ayarları.]]></message>
 	<message key="admin.journals.journalSettings">Dergi Ayarları</message>
 	<message key="admin.journals.noneCreated">Dergi Oluşturulmadı.</message>
-	<message key="admin.contexts.confirmDelete">Bu dergi ve tüm içeriğini kalıcı olarak silmek istediğinizden emin misiniz?</message>
 	<message key="admin.contexts.create">Dergi Oluştur</message>
 	<message key="admin.journals.createInstructions">Otomatik olarak bu derginin yöneticisi olarak kaydedileceksiniz. Yeni bir dergi oluşturduktan sonra, ayarları ile devam edebilmek ve kullanıcı kaydı yapabilmek için yönetici olarak girin.</message>
 	<message key="admin.journals.urlWillBe">Bu dergiyi tanımlayan kısa bir kelime ya da kısaltma olmalıdır. Derginin URL adresi {$sampleUrl} şeklinde olabilir.</message>
@@ -70,4 +69,18 @@
 	<message key="admin.categories.noneCreated">Herhangi bir kategori oluşturulamadı.</message>
 	<message key="admin.categories.confirmDelete">Bu kategoriyi silmek istediğinize emin misiniz?</message>
 	<message key="admin.categories.nameRequired">Bir kategori adı gerekli.</message>
+	<message key="admin.contexts.form.titleRequired">Bir başlık gerekli.</message>
+	<message key="admin.scheduledTask.subscriptionExpiryReminder">Abone Süresi Hatırlatıcısı</message>
+	<message key="admin.scheduledTask.openAccessNotification">Açık Erişim Bildirimi</message>
+	<message key="admin.scheduledTask.reviewReminder">Değerlendirme Hatırlatıcısı</message>
+	<message key="admin.settings.defaultMetricDescription">OJS yüklemeniz, birden fazla kullanım metriği kaydetmek için yapılandırılmıştır. Kullanım istatistikleri birkaç bağlamda görüntülenecektir.
+		Tek kullanımlık istatistiğin kullanılması gereken durumlar vardır. Örneğin, en çok kullanılan makalelerin sıralı bir listesini görüntülemek veya sıralamak için arama sonuçları. Lütfen yapılandırılmış metriklerden birini varsayılan olarak seçin.</message>
+	<message key="admin.languages.confirmDisable">Bu dil ayarını devre dışı bırakmak istediğinizden emin misiniz? Bu, şu anda dil ayarı kullanan dergileri etkileyebilir.</message>
+	<message key="admin.languages.downloadUnavailable"><![CDATA[<p> Kamu Bilgi Projesi (PKP) web sunucusundan dil paketleri mevcut değil çünkü: </p>
+<ul>
+<li> Sunucunuz GNU "tar" yardımcı programına sahip değil veya izin vermemektedir. </li>
+<li> OJS, genellikle "registry/locales.xml" yerel kayıt defteri dosyasını değiştiremez. </li>
+</ul>
+<p> Dil paketleri <a href="http://pkp.sfu.ca">PKP web sitesinden</a> manuel olarak indirilebilir. </ p>]]></message>
+	<message key="admin.presses.createInstructions">Bu derginin yöneticisi olarak otomatik olarak kaydedileceksiniz. Yeni bir dergi oluşturduktan sonra, başlangıç kurulumunu tamamlamak için kendi ayar sihirbazına yönlendirilirsiniz.</message>
 </locale>

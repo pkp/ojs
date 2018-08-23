@@ -351,19 +351,19 @@ DErgimizin kalitesini arttıran değerli katkılarınız için teşekkür ederiz
 		<description>Yayınlanması için karar verilen yazının sayfa düzeni için gönderilmesinde kullanılır.</description>
 	</email_text>
 	<email_text key="LAYOUT_REQUEST">
-		<subject>Prova dizgi rica olunur</subject>
+		<subject>Dizgi Provası Ricası</subject>
 		<body><![CDATA[{$participantName}:<br />
 <br />
 {$contextName} için &quot;{$submissionTitle}&quot; başlıklı çalışmanın mizanpajının tamamlanarak, prova dizginin tarafımıza gönderilmesi için rica ederiz.<br />
 <br />
-Sayfa düzeni kopyası için bağlantı: {$submissionLayoutUrl}<br />
+Prova dizgi kopya bağlantısı: {$submissionLayoutUrl}<br />
 Kullanıcı adı: {$participantUsername}<br />
 <br />
-İşin gerçekleştirilmesi ile ilgili bir sorununuz veya diğer sorularınız için bana yazabilirsiniz.<br />
-Dergimizin kalitesine katkılarınız için teşekkür ederiz..<br />
+İşin gerçekleştirilmesi ile ilgili bir soru / sorularınızı yazabilirsiniz.<br />
+Katkılarınız için teşekkür ederiz.<br />
 <br />
 {$editorialContactSignature}]]></body>
-		<description>Saon sayfa düzeni kopyasının mizanpaj için gönderilmesinde kullanılan mesaj.</description>
+		<description>Son sayfa düzeni kopyasının mizanpajının gönderilmesinde kullanılan mesaj.</description>
 	</email_text>
 	<email_text key="LAYOUT_COMPLETE">
 		<subject>Prova dizgi tamamlandı</subject>
@@ -558,30 +558,55 @@ Bağlantı: {$url}<br />
 {$principalContactSignature}]]></body>
 		<description></description>
 	</email_text>
+	<email_text key="NOTIFICATION_MAILLIST">
+		<subject>{$siteTitle} Adlı  Siteden Yeni Bildirim</subject>
+		<body><![CDATA[{$siteTitle} adlı siteden yeni bir bir bildiriminiz var:<br />
+--<br />
+{$notificationContents}<br />
+<br />
+Bağlantı: {$url}<br />
+--<br />
+<br />
+Eğer bu bildirimi almak istemiyorsanız, lütfen tıklayınız {$unsubscribeLink}.<br />
+<br />
+{$principalContactSignature}]]></body>
+		<description>Bu e-posta bildirim listesindeki kayıtsız kullanıcılar tarafından gönderilir.</description>
+	</email_text>
+	<email_text key="NOTIFICATION_MAILLIST_WELCOME">
+		<subject>{$siteTitle} posta listesine hoş geldiniz!</subject>
+		<body><![CDATA[{$siteTitle} adresinden bildirim almak için kaydoldunuz.<br />
+<br />
+İsteğinizi onaylamak ve e-posta adresinizi posta listesine eklemek için lütfen bu bağlantıyı tıklayın: {$confirmLink}<br />
+<br />
+Bildirim e-postaları almayı durdurmak isterseniz, lütfen {$unsubscribeLink} adresine gidin.<br />
+<br />
+{$principalContactSignature}]]></body>
+		<description>Bu e-posta, bildirim postalama listesine yeni kayıt olmuş bir kayıtsız kullanıcıya gönderilir.</description>
+	</email_text>
 	<email_text key="USER_VALIDATE">
-		<subject>Validate Your Account</subject>
+		<subject>Hesabınızı Doğrulayın</subject>
 		<body><![CDATA[{$userFullName}<br />
 <br />
-You have created an account with {$contextName}, but before you can start using it, you need to validate your email account. To do this, simply follow the link below:<br />
+{$contextName} ile bir hesap oluşturdunuz, ancak kullanmaya başlamadan önce e-posta hesabınızı doğrulamanız gerekiyor. Bunu yapmak için aşağıdaki bağlantıyı takip etmeniz yeterlidir:<br />
 <br />
 {$activateUrl}<br />
 <br />
-Thank you,<br />
+Teşekkürler,<br />
 {$principalContactSignature}]]></body>
-		<description>This email is sent to a newly registered user to welcome them to the system and provide them with a record of their username and password.</description>
+		<description>Bu e-posta, yeni kayıtlı bir kullanıcıya sisteme hoş geldiniz ve kullanıcı adlarını ve şifrelerini kaydetmelerini sağlamak için gönderilir.</description>
 	</email_text>
 	<email_text key="REVIEWER_REGISTER">
-		<subject>Registration as Reviewer with {$contextName}</subject>
-		<body><![CDATA[In light of your expertise, we have taken the liberty of registering your name in the reviewer database for {$contextName}. This does not entail any form of commitment on your part, but simply enables us to approach you with a submission to possibly review. On being invited to review, you will have an opportunity to see the title and abstract of the paper in question, and you'll always be in a position to accept or decline the invitation. You can also ask at any point to have your name removed from this reviewer list.<br />
+		<subject>{$ContextName} ile Hakem Olarak Kayıt</subject>
+		<body><![CDATA[Uzmanlık alanınız ışığında, adınızı  {$contextName} için hakem veri tabanına kaydettik. Bu sizi herhangi bir katkı yapma zorunluluğu altına sokmaz; ancak değerlendirilmek üzere size bir başvuru göndermemizi sağlar. Değerlendirmesi istenecek makalenin başlığını ve özetini görme olanağı sağlar. Daveti kabul etmek veya reddetmek sizin tasarrufunuzdadır. Ayrıca, dilediğiniz zaman adınızın değerlendirme listesinden kaldırılmasını isteyebilirsiniz.<br />
 <br />
-We are providing you with a username and password, which is used in all interactions with the journal through its website. You may wish, for example, to update your profile, including your reviewing interests.<br />
+Web sitesi üzerinden, dergi ile ilgili tüm işlemler için kullanılan bir kullanıcı adı ve şifre sunuyoruz. Örneğin, bu şifre ile değerlendirme notlarınızı, ilgi alanlarınızı ve profilinizi güncelleyebilirsiniz.<br />
 <br />
-Username: {$username}<br />
-Password: {$password}<br />
+Kullanıcı adı: {$username}<br />
+Şifre: {$password}<br />
 <br />
-Thank you,<br />
+Teşekkürler,<br />
 {$principalContactSignature}]]></body>
-		<description>This email is sent to a newly registered reviewer to welcome them to the system and provide them with a record of their username and password.</description>
+		<description>Bu e-posta, yeni kayıt olan bir hakeme, sisteme hoş geldiniz mesajı ile birlikte kullanıcı adı ve şifresini iletmek için gönderilir.</description>
 	</email_text>
 	<email_text key="REVIEW_REQUEST_SUBSEQUENT">
 		<subject>Article Review Request</subject>
@@ -808,14 +833,121 @@ Copy-Editor, {$contextName}]]></body>
 		<description>This email allows copyeditors to request additional information about references from authors.</description>
 	</email_text>
 	<email_text key="REVISED_VERSION_NOTIFY">
-		<subject>Revised Version Uploaded</subject>
-		<body><![CDATA[{$editorialContactName}:<br />
+		<subject>Düzeltilmiş versiyon yüklendi</subject>
+		<body><![CDATA[Editörler:<br />
 <br />
-A revised version of &quot;{$submissionTitle}&quot; has been uploaded by the author {$authorName}.<br />
+&quot;{$submissionTitle}&quot'un düzeltilmiş versiyonu,  yazar {$authorName} tarafından yüklendi<br />
+<br />
+Gönderi URL: {$submissionUrl}<br />
+<br />
+{$editorialContactSignature}]]></body>
+		<description>Yazar bir makalenin gözden geçirilmiş bir sürümünü yüklediğinde bu e-posta otomatik olarak atanan düzenleyiciye gönderilir.</description>
+	</email_text>
+	<email_text key="EDITOR_DECISION_SEND_TO_PRODUCTION">
+		<subject>Editör Kararı</subject>
+		<body><![CDATA[{$authorName}:<br />
+<br />
+
+&quot;{$submissionTitle},&quot; adlı gönderinizin düzenlemesi tamamlandı. Makalenizi basım aşamasına gönderiyoruz.<br />
+<br />
+Gönderi URL'si: {$submissionUrl}<br />
+<br />
+{$editorialContactSignature}<br />]]></body>
+		<description>Editörden veya Bölüm Editörden Yazar'a gönderilen bu e-posta, makalelerin basım aşamasına gönderildiklerini bildirir.</description>
+	</email_text>
+	<email_text key="NOTIFICATION_CENTER_DEFAULT">
+		<subject>{$contextName} ile ilgili bir mesaj</subject>
+		<body>Lütfen mesajınızı giriniz.</body>
+		<description>Bildirim Merkezi Mesaj Listesi Oluşturucusun'da kullanılan varsayılan (boş) mesaj.</description>
+	</email_text>
+	<email_text key="EDITOR_DECISION_INITIAL_DECLINE">
+		<subject>Editör Kararı</subject>
+		<body><![CDATA[{$authorName}:<br />
+<br />
+{$contextName}, &quot;{$submissionTitle}&quot; adresine yaptığınız gönderinizle ilgili bir karara varılmıştır..<br />
+<br />
+Kararımız: Gönderi Reddedildi<br />
+<br />
+{$editorialContactSignature}<br />]]></body>
+		<description>Değerlendirme aşamasından önce editörün gönderiyi reddetmesi halinde bu e-posta yazarına gönderilir.</description>
+	</email_text>
+	<email_text key="EDITOR_DECISION_SEND_TO_EXTERNAL">
+		<subject>Editör Kararı</subject>
+		<body><![CDATA[{$authorName}:<br />
+<br />
+{$contextName}, &quot;{$submissionTitle}&quot; adresine yaptığınız gönderi için bir karara varılmıştır.<br />
+<br />
+Karar: Hakeme Gönderilmesi Uygundur<br />
 <br />
 Submission URL: {$submissionUrl}<br />
 <br />
+{$editorialContactSignature}<br />]]></body>
+		<description>Editörden veya Bölüm Editörden bir Yazar'a gönderilen bu e-posta, gönderinin harici bir hakeme gönderildiğini bildirir.</description>
+	</email_text>
+	<email_text key="EDITOR_RECOMMENDATION">
+		<subject>Editör Tavsiyesi</subject>
+		<body><![CDATA[{$editors}:<br />
+<br />
+{$contextName}, &quot;{$submissionTitle}&quot; adlı gönderi ile ilgili öneri: {$recommendation}<br />
+<br />
+{$editorialContactSignature}<br />]]></body>
+		<description>Düzenleyici Editörden veya Bölüm Editörden, karar veren editörleri veya Bölüm Editörleri'ne gönderilen bu e-postalar, onlara gönderiyle ilgili nihai bir öneriyi bildirir.</description>
+	</email_text>
+	<email_text key="REVIEW_REQUEST_REMIND_AUTO">
+		<subject>Makale Değerlendirme İsteği</subject>
+		<body><![CDATA[{$reviewerName}:<br />
+Gönderiyi incelemeniz için talebimizin sadece nazik bir hatırlatıcısı, &quot;{$submissionTitle},&quot;  {$contextName} için cevabınızı {$responseDueDate} e kadar almayı umuyorduk; bu e-posta otomatik olarak oluşturulmuştur.
+<br />
+Makalenin mükemmel bir hakemi olacağınıza inanıyorum. Makale özeti aşağıda yer almaktadır ve umarım bu önemli görevi bizim için üstlenmeyi düşünürsünüz.<br />
+<br />
+İncelemeyi yapıp yapamayacağınızı, gönderime ulaşıp ulaşamayacağınızı ve inceleme ve tavsiyelerinizi kayıt edip etmeyeceğinizi belirtmek için lütfen dergi web sitesine giriş yapın. Web sitesi {$contextUrl}<br />
+<br />
+İnceleme bitiş tarihi {$reviewDueDate}.<br />
+<br />
+Derginin web sitesi için kullanıcı adınız ve şifreniz yoksa, şifrenizi sıfırlamak için bu bağlantıyı kullanabilirsiniz (kullanıcı adınız ile birlikte size e-postayla gönderilecektir).. {$passwordResetUrl}<br />
+<br />
+Gönderi URL: {$submissionReviewUrl}<br />
+<br />
+Bu isteği düşündüğünüz için teşekkür ederiz.<br />
+<br />
+{$editorialContactSignature}<br />
+<br />
+&quot;{$submissionTitle}&quot;<br />
+<br />
+{$submissionAbstract}]]></body>
+		<description><![CDATA[Bu e-posta, bir hakemin onay tarihi geçtiğinde otomatik olarak gönderilir (Ayarlar> İş Akışı> Gözden geçirme altındaki İnceleme Seçenekleri'ne bakın) ve tek tıklatma hakem erişimi devre dışı bırakılır. Zamanlanmış görevler etkinleştirilmeli ve yapılandırılmalıdır (site yapılandırma dosyası bölümüne bakınız).]]></description>
+	</email_text>
+	<email_text key="REVIEW_REQUEST_REMIND_AUTO_ONECLICK">
+		<subject>Makale Değerlendirme İsteği</subject>
+		<body><![CDATA[{$reviewerName}:<br />
+Makaleyi incelemeniz için talebimizin sadece nazik bir hatırlatıcısı, &quot;{$submissionTitle},&quot;  {$contextName} için.  {$responseDueDate}'e kadar yanıtınızı almayı umuyoruz, ve bu mail otomatik olarak oluşturularak gönderilmiştir.
+<br />
+Makalenin için mükemmel bir hakem olacağınıza inanıyorum. Makale özeti aşağıda yer almaktadır ve umarım bu önemli görevi bizim için üstlenmeyi düşünürsünüz..<br />
+<br />
+İncelemeyi yapıp yapamayacağınızı, gönderime girip girmeyeceğinizi ve inceleme ve tavsiyelerinizi kayıt edip etmeyeceğinizi belirtmek için lütfen dergi web sitesine giriş yapın..<br />
+<br />
+İnceleme son tarihi {$reviewDueDate}.<br />
+<br />
+Makale URL'si: {$submissionReviewUrl}<br />
+<br />
+Bu isteği düşündüğünüz için teşekkür ederiz.<br />
+<br />
+{$editorialContactSignature}<br />
+<br />
+&quot;{$submissionTitle}&quot;<br />
+<br />
+{$submissionAbstract}]]></body>
+		<description><![CDATA[Bu e-posta, bir hakemin onay tarihi geçtiğinde otomatik olarak gönderilir (Ayarlar> İş Akışı> Gözden geçirme altındaki İnceleme Seçenekleri'ne bakın) ve tek tıklatma hakem erişimi etkinleştirilir. Zamanlanmış görevler etkinleştirilmeli ve yapılandırılmalıdır (site yapılandırma dosyasına bakın).]]></description>
+	</email_text>
+	<email_text key="SUBMISSION_ACK_NOT_USER">
+		<subject>Başvuru Onayı</subject>
+		<body><![CDATA[Merhaba,<br />
+<br />
+{$submitterName} tarafından {$contextName} için &quot;{$submissionTitle}&quot başlıklı makale gönderildi. <br />
+<br />
+Herhangi bir sorunuz varsa, lütfen yazınız. Dergimizde makalenizi değerlendirme isteğiniz için teşekkür ederiz.<br />
+<br />
 {$editorialContactSignature}]]></body>
-		<description>This email is automatically sent to the assigned editor when author uploads a revised version of an article.</description>
+		<description>Bu e-posta etkinleştirildiğinde, otomatik gönderi işlemi sırasında OJS içinde belirtilmeyen diğer yazarlara gönderilir.</description>
 	</email_text>
 </email_texts>
