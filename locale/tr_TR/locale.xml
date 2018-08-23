@@ -9,7 +9,6 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the tr_TR (Türkçe) locale.
-  *
   -->
 
 <locale name="tr_TR" full_name="Türkçe">
@@ -26,8 +25,6 @@
 	 *  DEFAULT - Default settings for configuration items.
 	-->
 
-	<!-- review froms start -->
-
 	<!-- common -->
 
 	<message key="context.current">Güncel Dergi:</message>
@@ -38,10 +35,6 @@
 	<message key="navigation.categories.browse">Araştır</message>
 	<message key="reviewer.article.enterReviewForm">İnceleme formunu doldurmak için simgesini tıklayın.</message>
 	<message key="reviewer.submission.reviewFormResponse.form.responseRequired">Lütfen gerekli alanları doldurun.</message>
-
-	<!-- Journal Management -->
-
-	<!--  peer review -->
 
 
 	<message key="reviewer.article.enterReviewForm">Değerlendirme formunu doldurmak için simgeye tıklayınız:</message>
@@ -94,8 +87,11 @@
 	<message key="common.queue.short.active">Etkin</message>
 	<message key="common.queue.long.completed">Arşiv</message>
 	<message key="common.queue.short.completed">Arşiv</message>
+
+	<!--
+	 *
 	 * ENTITIES - This section contains terms pertaining to the system's
-	 *			major entities, e.g. Article, Journal, Section
+	 *            major entities, e.g. Article, Journal, Section
 	 *
 	-->
 
@@ -212,7 +208,6 @@
 	<message key="user.role.managers">Dergi Yöneticileri</message>
 	<message key="user.role.subscriptionManagers">Abone Yöneticileri</message>
 
-	<!-- Submission -->
 	<!-- Common Issue Terms -->
 	<message key="issue.issue">Sayı</message>
 	<message key="issue.issues">Sayılar</message>
@@ -327,7 +322,6 @@
 
 	<!-- Statistics & Reports -->
 
-
 	<!-- Plugin Management -->
 
 	<!-- Payment Management -->
@@ -377,7 +371,23 @@ Editöryel süreçte bu basamakların nasıl işleyeceği konusunda bir model se
 	Bu görev site yöneticisi tarafından yerine getirilmelidir.
 	]]></message>
 
-	<message key="editor.submissionReview.notes"><![CDATA[<ol>
+
+
+	<!-- Email Management -->
+
+	<!-- Subscription Policy Management -->
+
+	<!-- Subscription Type Management -->
+
+	<!-- Subscription Management -->
+
+	<!-- Announcement Type Management -->
+
+	<!-- Announcements Management -->
+
+	<!-- Editor -->
+	<message key="editor.submissionReview.notes">
+	<![CDATA[<ol>
 	<li>Aşağıda belirtilen öğeler editör işlemi beklemektedir:
 		<ul>
 			<li class="highlightReviewerNotNotified">Bir Hakem atanandı ancak e-posta ile bilgilendirilmedi</li>
@@ -499,6 +509,7 @@ Editöryel süreçte bu basamakların nasıl işleyeceği konusunda bir model se
 <li>Dosya Gönder butonunu tıklayarak, dosyayı kendi bilgisayarınızdan derginin internet sitesine yükleyiniz, dosyanızın adı dergi kurallarına uygun olarak değiştirilecektir.</li>
 <li>Başvuru yüklendikten sonar, sayfanın alt kısmında yer alan Kaydet ve Devam et'e tıklayınız.</li>
 </ol>]]></message>
+
 	<!-- Article Submission Step 4 -->
 
 	<!-- Article Submission Step 4a: Supplementary Files -->
@@ -564,8 +575,6 @@ Editöryel süreçte bu basamakların nasıl işleyeceği konusunda bir model se
 	<message key="submission.comments.saveAndEmailAuthor">Kaydet ve Yazara E-posta Gönder</message>
 	<message key="submission.comments.saveAndEmailEditor">Kaydet ve Editöre E-posta Gönder</message>
 
-	<!-- Login -->
-	<!-- Profile -->
 	<!-- Registration -->
 	<message key="user.register.noJournals">Bu sitede kayıt olabileceğiniz bir dergi yok.</message>
 	<message key="user.register.privacyStatement">Gizlilik Bildirimi</message>
@@ -578,7 +587,8 @@ Editöryel süreçte bu basamakların nasıl işleyeceği konusunda bir model se
 	<message key="user.register.reviewerDescriptionNoInterests">Dergiye yapılan gönderilerin hakemliğini yapmaya istekli.</message>
 	<message key="user.register.reviewerDescription">Dergiye yapılan gönderilen hakemliğini yapmaya istekli olma. İlgi alanlarınızı tanımlayın (bağımsız alanlar ve araştırma yöntemleri).</message>
 	<message key="user.register.reviewerInterests">İlgi / uzmanlık alanlarınız (Uzmanlık alanı terimlerini açılır menüden seçiniz):</message>
-<!-- Subscriptions -->
+
+	<!-- Subscriptions -->
 	<message key="user.subscriptions.mySubscriptions">Aboneliklerim</message>
 	<message key="user.subscriptions.subscriptionStatus">Abonelik Durumu</message>
 	<message key="user.subscriptions.statusInformation">Aktif ve süresi dolmuş abonelikleri sona erme tarihi ile birlikte aşağıda görüntülenmektedir. Buna ek olarak, aşağıdaki durum bilgileri her abonelik ile birlikte gelebilir.</message>
@@ -644,7 +654,7 @@ Editöryel süreçte bu basamakların nasıl işleyeceği konusunda bir model se
 	<message key="article.nonpdf.title">Makale İndir</message>
 	<message key="article.nonpdf.note"><![CDATA[Seçmiş olduğunuz dosya otomatik olarak indirilmeye başlanacaktır. Eğer indirme otomatiok olarak başlamaz ise aşağıdaki bağlantıyı tıklayın. Bu dosyanın görülebilmesi için özel bir görüntüleyici veya bağlantıya gereksinim olabilir.<br /><br />Eğer makale otomatik olarak indirilmez ise  <a href="{$url}">buraya tıklayın</a>.]]></message>
 
-<!-- Site index -->
+	<!-- Site index -->
 	<message key="site.journalsHosted">Bu sitedeki dergiler</message>
 	<message key="site.journalView">Dergiyi Görüntüle</message>
 	<message key="site.journalRegister">Kayıt</message>
@@ -922,11 +932,14 @@ Form verisi gönderilen bağlantılarda başarısız olma olasılığı fazladı
 	<message key="notification.type.submissionComment">"{$title}" başlıklı makale için bir editör yorum yaptı.</message>
 	<message key="notification.type.submissions">Gönderi Durumları</message>
 	<message key="notification.type.userComment">"{$title}" başlıklı makale için bir okuyucu yorum yaptı.</message>
+
+	<!--
+	 *
 	 * MISC - Entries that do not belong in the other sections.
 	 *
 	-->
 	<!-- Authorization -->
-		<message key="user.authorization.copyeditorAssignmentMissing">Erişim engellendi! Bu makaleye yayın editörü olarak atanmamışsınız.</message>
+	<message key="user.authorization.copyeditorAssignmentMissing">Erişim engellendi! Bu makaleye yayın editörü olarak atanmamışsınız.</message>
 	<message key="user.authorization.sectionAssignment">Erişmeye çalıştığınız makale size ait bölümün parça değil.</message>
 	<message key="user.authorization.invalidCopyditorSubmission">Hatalı sayfa düzenleyici gönderisi veya sayfa düzenleyici gönderi isteği yok.</message>
 
