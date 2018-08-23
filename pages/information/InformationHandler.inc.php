@@ -18,6 +18,21 @@ import('classes.handler.Handler');
 class InformationHandler extends Handler {
 
 	/**
+	 * @see PKPHandler::authorize()
+	 */
+	function authorize($request, &$args, $roleAssignments) {
+		$context = $request->getContext();
+		if (!$context || !$context->getSetting('restrictSiteAccess')) {
+			$templateMgr = TemplateManager::getManager($request);
+			$templateMgr->setCacheability(CACHEABILITY_PUBLIC);
+		}
+
+		import('lib.pkp.classes.security.authorization.ContextRequiredPolicy');
+		$this->addPolicy(new ContextRequiredPolicy($request));
+		return parent::authorize($request, $args, $roleAssignments);
+	}
+
+	/**
 	 * Display the information page for the journal.
 	 * @param $args array
 	 * @param $request PKPRequest
