@@ -12,26 +12,26 @@
   -->
 
 <locale name="tr_TR" full_name="Türkçe">
-    
 
-    <message key="submission.submit.submissionChecklist">Yazar Onay Butonları</message>
-    <message key="submission.submit.submissionChecklistDescription">Yeni yazı girişi için yazarın bu butonları onaylamış ve kabul etmiş olmaları gerekmektedir.</message>
-    <message key="submission.upload.fileContents">Yüklenecek Dosya İçeriği</message>
-    <message key="submission.upload.selectComponent">Lütfen Seçiniz...</message>
-    
+
+	<message key="submission.submit.submissionChecklist">Yazar Onay Butonları</message>
+	<message key="submission.submit.submissionChecklistDescription">Yeni yazı girişi için yazarın bu butonları onaylamış ve kabul etmiş olmaları gerekmektedir.</message>
+	<message key="submission.upload.fileContents">Yüklenecek Dosya İçeriği</message>
+	<message key="submission.upload.selectComponent">Lütfen Seçiniz...</message>
+
 	<!-- Submission wizard -->
-    <message key="submission.submit.title">Bir Makale Girişi Yapınız.</message>
-    <message key="submission.title">Makale Başlığı</message>
-    <message key="grid.action.workflow">Gönderi İş Akışı</message>
-    <message key="submission.submit.newSubmissionSingle">Yeni Yazı Girişi</message>
-    <message key="submission.issueEntry">Metadata</message>
-    <message key="submission.submit.userGroup">... olarak gönder.</message>
+	<message key="submission.submit.title">Bir Makale Girişi Yapınız.</message>
+	<message key="submission.title">Makale Başlığı</message>
+	<message key="grid.action.workflow">Gönderi İş Akışı</message>
+	<message key="submission.submit.newSubmissionSingle">Yeni Yazı Girişi</message>
+	<message key="submission.issueEntry">Metadata</message>
+	<message key="submission.submit.userGroup">... olarak gönder.</message>
 
 
 	<!-- Submission Information Modal -->
-    <message key="submission.issueEntry.submissionMetadata">Yazı Girişi</message>
-    <message key="submission.issueEntry.publicationMetadata">Yayın</message>
-    
+	<message key="submission.issueEntry.submissionMetadata">Yazı Girişi</message>
+	<message key="submission.issueEntry.publicationMetadata">Yayın</message>
+
 	<!-- events -->
 
 	<!-- galleys grid -->
