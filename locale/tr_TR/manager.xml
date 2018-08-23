@@ -490,7 +490,7 @@
 	<message key="manager.statistics.reports.defaultReport.journalIndexPageViews">Dergi ana sayfa görüntülemeleri</message>
 	<message key="manager.setup.resetPermissions">Makale İzinlerini Sıfırla</message>
 	<message key="manager.setup.copyrightYearBasis">Yeni makalenin temel telif hakkı yılı</message>
-    	<message key="manager.website.archiving">Website Arşivi</message>
+	<message key="manager.website.archiving">Website Arşivi</message>
 	<!-- Common DOI export plugins (crossref, datacite, medra) keys -->
 	<!-- plugin tabs -->
 	<message key="plugins.importexport.common.settings">Ayarlar</message>
