@@ -10,7 +10,7 @@
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
   * Localization strings.
   -->
- 
+
 <locale name="en_US" full_name="U.S. English">
 	<message key="plugins.generic.usageEvent.displayName">Usage event</message>
 	<message key="plugins.generic.usageEvent.description">Creates a hook that provides usage event in a defined format.</message>
