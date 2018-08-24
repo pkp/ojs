@@ -8,23 +8,23 @@
   * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * DOI plugin localization strings
+  * Localization strings.
   -->
- 
+
 <locale name="tr_TR" full_name="Türkçe">
 	<message key="plugins.pubIds.doi.displayName">DOI</message>
 	<message key="plugins.pubIds.doi.readerDisplayName">DOI</message>
 
 	<!-- settings form -->
 	<message key="plugins.pubIds.doi.manager.settings.description">ADS'de DOI'leri kullanmak ve yönetebilmek için lütfen DOI eklentilerini yapılandırın.</message>
-	
+
 	<message key="plugins.pubIds.doi.manager.settings.doiObjects">Dergi İçeriği</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiObjectsRequired">Lütfen DOI'lerin atanacağı nesneleri seçiniz.</message>
 	<message key="plugins.pubIds.doi.manager.settings.explainDois">Lütfen Dijital Nesne Belirleyici (DOI) atanacak yayımlanmış nesneleri seçiniz:</message>
 	<message key="plugins.pubIds.doi.manager.settings.enableIssueDoi">Sayılar</message>
 	<message key="plugins.pubIds.doi.manager.settings.enableSubmissionDoi">Makaleler</message>
 	<message key="plugins.pubIds.doi.manager.settings.enableRepresentationDoi">Dizgi Tablaları</message>
-	
+
 	<message key="plugins.pubIds.doi.manager.settings.doiPrefix">DOI Ön Eki</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiPrefix.description"><![CDATA[DOI Ön Ekleri kayıt ajansları (Örneğin; <a href="http://www.crossref.org" target="_new">CrossRef</a>) tarafından atanmıştır ve biçimi 10.xxxx şeklindedir (Örneğin; 10.1234):]]></message>
 	<message key="plugins.pubIds.doi.manager.settings.doiPrefixPattern">DOI ön eki zorunludur ve 10.xxxx biçiminde olmalıdır.</message>
@@ -40,7 +40,8 @@
 	<message key="plugins.pubIds.doi.manager.settings.doiIssueSuffixPatternRequired">Lütfen sayılar için örnek/şablon DOI son ekini giriniz.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiSubmissionSuffixPatternRequired">Lütfen makaleler için örnek/şablon DOI son ekini giriniz.</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiRepresentationSuffixPatternRequired">Lütfen dizgi tablaları için örnek/şablon DOI son ekini gibiniz.</message>
-	
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixCustomIdentifier">Yayınlanan her bir öğe için ayrı bir DOI soneki girin. Her bir öğenin üst veri sayfasında ek bir DOI giriş alanı bulacaksınız.</message>
+
 	<message key="plugins.pubIds.doi.manager.settings.doiReassign">DOI'leri yeniden ata</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiReassign.confirm">Mevcut tüm DOI'leri silmek istediğinizden emin misiniz?</message>	
 
@@ -66,9 +67,9 @@
 	<message key="plugins.pubIds.doi.editor.clearIssueObjectsDoi">Sayı nesneleri DOI'lerini Temizle</message>
 	<message key="plugins.pubIds.doi.editor.clearIssueObjectsDoi.confirm">Var olan öğe DOI'lerini silmek istediğinizden emin misiniz?</message>
 	<message key="plugins.pubIds.doi.editor.clearIssueObjectsDoi.description">Bu sayı için şu anda planlanmış tüm öğelerin (makaleler ve dizgi tablaları ) DOI'lerini temizlemek için aşağıdaki seçeneği kullanın.</message>
+	<!-- assignment form -->
 	<message key="plugins.pubIds.doi.editor.assignDoi">Bu {$pubObjectType} için DOI {$pubId} atayın</message>
 	<message key="plugins.pubIds.doi.editor.assignDoi.emptySuffix">Özel sonek eksik olduğundan DOI atanamaz.</message>
 	<message key="plugins.pubIds.doi.editor.assignDoi.pattern">DOI {$pubId}, çözümlenmemiş bir şablon içerdiğinden atanamaz.</message>
 	<message key="plugins.pubIds.doi.editor.assignDoi.assigned">DOI {$pubId} atanmıştır.</message>
-	<message key="plugins.pubIds.doi.manager.settings.doiSuffixCustomIdentifier">Yayınlanan her bir öğe için ayrı bir DOI soneki girin. Her bir öğenin üst veri sayfasında ek bir DOI giriş alanı bulacaksınız.</message>
 </locale>
