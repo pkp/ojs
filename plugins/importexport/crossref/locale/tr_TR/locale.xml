@@ -30,4 +30,46 @@
 	<message key="plugins.importexport.crossref.settings.form.username">Kullanıcı adı</message>
 	<message key="plugins.importexport.crossref.settings.form.usernameRequired">CrossRef'ten almış olduğunuz kullanıcı adını giriniz.</message>
 	<message key="plugins.importexport.crossref.senderTask.name">CrossRef bilgi göndericisi</message>
+	<message key="plugins.importexport.crossref.error.publisherNotConfigured"><![CDATA[Bir dergi yayıncısı belirtilmemiş! <a href="{$journalSettingsUrl}" target="_blank">Dergi Ayarları Sayfasında</a> bir yayınevi  belirtmelisiniz.]]></message>
+	<message key="plugins.importexport.crossref.error.issnNotConfigured"><![CDATA[Dergi ISSN bilgisi belirtilmemiş! <a href="{$journalSettingsUrl}" target="_blank">Dergi Ayarları Sayfası"</a>nda ISSN eklemelisiniz.]]></message>
+	<message key="plugins.importexport.crossref.error.noDOIContentObjects">DOI genel tanımlayıcı eklentisinde DOI ataması için makaleler seçilmemiştir, bu nedenle eklenti için depolama veya ihraç yapılamamaktadır.</message>
+	<message key="plugins.importexport.crossref.registrationIntro"><![CDATA[Bu eklentiye, Dijital Nesne Tanımlayıcıları (DOI'ler) doğrudan CrossRef'e kaydettirmek istemeniz halinde, bunu yapmak için bir kullanıcı adı ve şifreye (<a href="http://www.crossref.org" target="_blank">CrossRef</a> den ulaşılabilir) ihtiyacınız olacaktır. Eğer kendi kullanıcı adınız ve şifreniz yoksa, yine de CrossRef XML biçimi ile dışa aktarma yapabilirsiniz, ancak DOI'lerinizi CrossRef'e OJS içinden kaydedemezsiniz.]]></message>
+	<message key="plugins.importexport.crossref.settings.form.automaticRegistration.description">OJS atanmış DOI'leri otomatik olarak CrossRef'e aktarır. Lütfen bu işlemin yayınlanma işleminden sonra kısa bir süre alabileceğini unutmayın. Kayıtsız tüm DOI'leri kontrol edebilirsiniz.</message>
+	<message key="plugins.importexport.crossref.settings.form.testMode.description">DOI depolaması için CrossRef test API'sini (test ortamı) kullanın. Lütfen bu seçeneği yayın için kaldırmayı unutmayın.</message>
+	<message key="plugins.importexport.crossref.issues.description">Not: Burada ihraç / kayıt için sadece sayılar (makaleler hariç) dikkate alınacaktır.</message>
+	<message key="plugins.importexport.crossref.status.submitted">Gönderildi</message>
+	<message key="plugins.importexport.crossref.status.completed">Depolandı</message>
+	<message key="plugins.importexport.crossref.status.failed">Başarısız Oldu</message>
+	<message key="plugins.importexport.crossref.status.registered">Etkin</message>
+	<message key="plugins.importexport.crossref.status.markedRegistered">İşaretli Etkin</message>
+	<message key="plugins.importexport.crossref.action.export">XML İndir</message>
+	<message key="plugins.importexport.crossref.action.markRegistered">Etkinleri İşaretle</message>
+	<message key="plugins.importexport.crossref.action.register">Göner</message>
+	<message key="plugins.importexport.crossref.action.checkStatus">Durumu kontrol et</message>
+	<message key="plugins.importexport.crossref.notification.failed"><![CDATA[DOI kaydı başarısız oldu. Başarısız olanları görmek için lütfen "Araçlar > İçe Aktar / Dışa Aktar > CrossRef XML İhraç Eklentisi" bölümüne gidin.]]></message>
+	<message key="plugins.importexport.crossref.register.error.mdsError">Gönderi başarısız! DOI kayıt sunucusu bir hata verdi: '{$ param}'. '{$param}'.</message>
+	<message key="plugins.importexport.crossref.register.success">Gönderi başarılı!</message>
+	<message key="plugins.importexport.crossref.export.error.issueNotFound">Hiçbir sayı belirtilen sayı kimliği "{$issueId}" ile eşleşmedi.</message>
+	<message key="plugins.importexport.crossref.export.error.articleNotFound">Hiçbir makale belirtilen makale kimliği "{$articleId}" ile eşleşmedi.</message>
+	<message key="plugins.importexport.crossref.statusLegend"><![CDATA[<p>Depolama Duurmu:</p>
+
+		<p>
+
+		- Depolanmadı: Bu DOI için hiçbir depolama girişimi yapılmadı.<br />
+
+		- Gönderildi: Bu DOI depolama için gönderildi.<br />
+
+		- Depolandı: DOI, Crossref'e depolandı, ancak henüz aktif olmayabilir.<br />
+
+		- Etkin: DOI yatırıldı ve doğru şekilde çözümleniyor.<br />
+
+		- Başarısız: DOI depolama başarısız oldu.<br />
+
+		- Etkin işaretli: DOI, aktif olarak elle işaretlendi.
+
+		</p>
+
+		<p>Sadece son depolama girişiminin durumu görüntülenir.</p>
+
+		<p>Bir depolama başarısız olursa, lütfen sorunu çözün ve DOI'yi tekrar kaydettirmeyi deneyin.</p>]]></message>
 </locale>

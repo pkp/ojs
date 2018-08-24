@@ -27,4 +27,5 @@
 	<message key="plugins.generic.webfeed.atom.altText">Atom logosu</message>
 	<message key="plugins.generic.webfeed.rss1.altText">RSS1 logosu</message>
 	<message key="plugins.generic.webfeed.rss2.altText">RSS2 logosu</message>
+	<message key="plugins.generic.webfeed.settings.recent">Son öğelerin sayısını görüntüleyin.</message>
 </locale>

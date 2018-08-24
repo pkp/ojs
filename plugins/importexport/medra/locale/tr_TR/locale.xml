@@ -32,4 +32,12 @@
 {$scriptName} {$pluginName} export [xmlFileName] [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...
 {$scriptName} {$pluginName} register [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...
 ]]></message>
+	<message key="plugins.importexport.medra.intro"><![CDATA[DOI'leri mEDRA ile kaydetmek istiyorsanız, lütfen kullanıcı adı ve şifre almak için <a href="http://www.medra.org/en/guide.htm" target="_blank">mEDRA Ana Sayfasın</a>daki talimatları izleyin. Eğer kendi kullanıcı adınız ve şifreniz yoksa, mEDRA XML biçimine (DOI için Onix) aktarma imkanınız olacaktır, bu durumda DOI'lerinizi mEDRA'ya OJS içinden kaydedemezsiniz. Şifrenin mEDRA kayıt hizmeti gereksinimleri nedeniyle düz metin (şifreli değil) olarak kaydedileceğini lütfen unutmayın.]]></message>
+	<message key="plugins.importexport.medra.settings.form.publicationCountry">Lütfen mEDRA'ya 'yayınlan ülkeyi' olarak bildirilecek ülkeyi seçiniz.</message>
+	<message key="plugins.importexport.medra.settings.form.exportIssuesAs"><![CDATA[Lütfen sayıları <a href="http://www.medra.org/en/metadata_td.htm" target="_blank">'iş' veya 'görünüm'</a> olarak dışa aktarmak isteyip istemediğinizi belirtin.]]></message>
+	<message key="plugins.importexport.medra.settings.form.exportIssuesAs.label">Sayıları şu şekilde ihraç et:</message>
+	<message key="plugins.importexport.medra.settings.form.automaticRegistration.description">OJS atanmış DOI'leri otomatik olarak mEDRA'ya kaydeder. Lütfen bunu yayınlanma işleminden sonra kısa bir süre alabileceğini unutmayın. Kayıtsız tüm DOI'leri kontrol edebilirsiniz.</message>
+	<message key="plugins.importexport.medra.settings.form.testMode.description">DOI kaydı için mEDRA test API'sini (test ortamı) kullanın. Lütfen bu seçeneği yayın için kaldırmayı unutmayın.</message>
+	<message key="plugins.importexport.medra.workOrProduct"><![CDATA[Not: Makalelere atanan DOI'ler mEDRA'ya <a href="http://www.medra.org/en/metadata_td.htm" target="_blank">'iş'</a> olarak ihraç edilecek. Dizgi'lere atanan DOI'ler <a href="http://www.medra.org/en/metadata_td.htm" target="_blank">'görünüm'</a> olarak ihraç edilecek.]]></message>
+	<message key="plugins.importexport.medra.senderTask.name">mEDRA otomatik kayıt görevi</message>
 </locale>
