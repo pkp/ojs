@@ -918,8 +918,6 @@ Form verisi gönderilen bağlantılarda başarısız olma olasılığı fazladı
 	<message key="rt.context.authorTermsDescription">Birden fazla yazarı olan makaleler için, bütün yazar isimlerini işaretlerseniz birlikte yaptıkları benzer çalışmaları, ya da tek bir isim işareleyerek yazarların tek tek eserlerini arayabilirsiniz. Araştırılan kaynak hakkında daha fazla bilgi edinmek için "bilgi" sembolü üzerine tıklayınız. Bu kaynaklar, önemleri ve içeriklerinin tamamına ya da önemli kısmına açık (bedava) ulaşım sağladıkları için seçilmişlerdir.</message>
 
 	<!-- Notification Types -->
-	<message key="notification.mailListDescription">Dergi içeriği ile ilgili bildirimlerin e-posta adresinize gelmesini istiyorsanız e-posta adresinizi kayıt ediniz.</message>
-	<message key="notification.notificationsPublicDescription"><![CDATA[Bu sayfa, yeni sayı veya duyurular gibi dergi ile ilgili önemli güncellemeleri gösterir. RSS beslemeleri (sağdaki resimlere tıklayarak) ya da   <a href="{$emailUrl}">e-posta yoluyla</a> bu bildirimlere abone olabilirsiniz.]]></message>
 	<message key="notification.type.articleSubmitted">"{$title}" başlıklı bir makale gönderildi..</message>
 	<message key="notification.type.editing">Düzenleme durumları</message>
 	<message key="notification.type.editorDecisionComment">"{$title}" başlıklı makale için editör yorum yaptı.</message>
@@ -1083,4 +1081,7 @@ Authors who publish with this journal agree to the following terms:
 	 <li>Authors are able to enter into separate, additional contractual arrangements for the non-exclusive distribution of the journal's published version of the work (e.g., post it to an institutional repository or publish it in a book), with an acknowledgement of its initial publication in this journal.</li>
 	 <li>Authors are permitted and encouraged to post their work online (e.g., in institutional repositories or on their website) prior to and during the submission process, as it can lead to productive exchanges, as well as earlier and greater citation of published work (See <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html"> The Effect of Open Access</a>).</li>
 </ol>]]></message>
+	<message key="user.reviewerPrompt.optin">Evet, bu dergiye gönderilen başvurulara hakemlik için istek yapanlarla iletişime geçmek istiyorum.</message>
+	<message key="user.register.form.emailConsentAllContexts">Evet, kaydettiğim tüm dergiler için yeni yayınlar ve duyurulardan haberdar olmak istiyorum.</message>
+	<message key="notification.type.public">Genel Duyurular</message>
 </locale>
