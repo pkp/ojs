@@ -147,4 +147,5 @@
 	<message key="editor.submission.editorial.finalDraftDescription"><![CDATA[Bu listedeki nihai taslak dosyalar altında aşağıda yüklendi copyedited sürümleri, bir sayfa düzenleyici tarafından dönüştürülür.<span class="pkp_help_title">Copyediting</span>.]]></message>
 	<message key="editor.submission.proof.manageProofFilesDescription">Zaten herhangi bir başvuru aşamasında yüklenmiş olan tüm dosyalar için aşağıdaki onay kutusunu ve tıklayarak Dahil kontrol ederek Redaksiyon liste eklenebilir. Arama: Tüm mevcut dosyalar listelenir ve dahil edilmesi için seçilebilir.</message>
 	<message key="editor.publicIdentificationExists">Diğer objeler (sayı, makale, dizgi veya ek dosya) için '{$publicIdentifier}' adlı genel belirleyici zaten var. Lütfen derginizdeki tekil belirleyicileri seçiniz.</message>
+	<message key="editor.article.coverImage">Kapak Görseli</message>
 </locale>
