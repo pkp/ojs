@@ -29,6 +29,7 @@
 	<message key="editor.submissionReview.confirmDecision">Bu kararı kaydetmek istediğinizden emin misiniz?</message>
 	<message key="editor.submissionReview.emailWillArchive">Bu gönderi Yazarı Bilgilendir e-posta mesajından sonra arşivlenecektir. Arşivleme için "Gönder" veya "E-posta Göndermeden" seçeneklerinin hangisinin kullanıldığı fark etmez.</message>
 	<message key="editor.submissionReview.cannotSendToCopyediting">Makaleyi yayına göndermeden önce,  kararı yazara bildirmek için Yazarı Bilgilendir linkini kullanınız. Daha sonra yayına gönderilcek sürümü seçerek Dosya Gönder seçeneğini tıklayınız.</message>
+	<message key="editor.notifyUsers">Kullanıcıları Bilgilendir</message>
 	<message key="editor.notifyUsers.allReaders">Tüm okuyucular ({$count} kişidir)</message>
 	<message key="editor.notifyUsers.allAuthors">Tüm yayınlanan yazarlar ({$count} kişidir)</message>
 	<message key="editor.notifyUsers.allIndividualSubscribers">Tüm bireysel aboneler ({$count} kişidir)</message>
@@ -67,6 +68,7 @@
 	<message key="editor.issues.removeCoverPage">Kapak sayfası görselini kaldır?</message>
 	<message key="editor.issues.removeCoverImageFileNameMismatch">Silmek istediğiniz kapak resmi ile eşleşme sağlanamadı. Lütfen sayfayı yenileyin ve tekrar deneyin.</message>
 	<message key="editor.issues.removeCoverImageFileNotFound">Silmek istediğiniz kapak resmi bulunamadı. Silinmiş olabilir. Sayfayı yenilemeyi deneyin.</message>
+	<message key="editor.issues.invalidCoverImageFormat">Geçersiz kapak sayfası biçimi. Kabul edilebilir biçimler: .gif, .jpg veya .png.</message>
 	<message key="editor.issues.styleFile">Sayfa Sitili</message>
 	<message key="editor.issues.invalidStyleFormat">Uygunsuz sayfa sitil dosyası. Gönderdiğiniz dosyanın geçerli bir biçimlendirme dosyası olduğundan emin olunuz (CSS). (Note: Başlangıcında yorumlar olan biçimlendirme dosyaları reddedilebilir.)</message>
 	<message key="editor.issues.removeStyleFile">Sayfa Stilini Kaldır?</message>
@@ -92,6 +94,7 @@
 	<message key="editor.issues.preview">(Önizleme)</message>
 	<message key="editor.issues.confirmPublish">Yeni sayıyı yayınlamak istediğinizden emin misiniz?</message>
 	<message key="editor.issues.confirmUnpublish">Yeni sayıyı yayından kaldırmak istediğinizden emin misiniz?</message>
+	<message key="editor.issues.confirmSetCurrentIssue">Bu sayıyı güncel sayı olarak belirlemek istediğinizden emin misiniz?</message>
 	<message key="editor.issues.publicArticleIdExists">Aşağıdaki makale için Genel Sayı kaydedilemiyor:</message>
 	<message key="editor.issues.noLiveIssues">Yayınlanan Sayı Yok</message>
 	<message key="editor.issues.open">Aç</message>
@@ -105,7 +108,6 @@
 	<message key="editor.issues.galleyLocaleRequired">Sayı dizgi dili gerekli.</message>
 	<message key="editor.issues.galleyPublicIdentificationExists">Genel sayı dizgi kimliği zaten var.</message>
 	<message key="editor.issues.backToIssueGalleys">Sayı dizgilerine geri dön</message>
-	<message key="editor.issues.viewingGalley">Sayı Dizgisine Bakış</message>
 	<message key="editor.issues.confirmDeleteGalley">Bu sayı dizgisini silmek istediğinizden emin misiniz?</message>
 	<message key="editor.issues.identifiers">Tanımlayıcılar</message>
 	<message key="editor.navigation.futureIssues">Gelecek Sayılar</message>
@@ -115,6 +117,7 @@
 	<message key="grid.action.viewIssue">Bakış</message>
 	<message key="grid.action.previewIssue">Önizleme</message>
 	<message key="grid.action.addIssueGalley">Sayı Dizgisi Yarat</message>
+	<message key="grid.action.setCurrentIssue">Güncel Sayı Belirle</message>
 	<message key="editor.navigation.issueArchive">Önceki Sayılar</message>
 	<message key="editor.article.designateReviewVersion">Orjinal dosyayı Değerlendirme Sürümü olarak belirle</message>
 	<message key="editor.article.decision">Karar</message>
@@ -133,6 +136,7 @@
 	<message key="editor.article.scheduleForPublication">Yayınlanmak üzere planlandığı sayı:</message>
 	<message key="editor.article.scheduleForPublication.toBeAssigned">Yayın Planı Yapılacak</message>
 	<message key="editor.article.payment.publicationFeeNotPaid">Yayın ücreti ödenmedi. Öğenin yayın planına alınabilmesi için yazara ödeme veya feragat bilgilendirmesi yap.</message>
+	<message key="editor.article.removeCoverImageFileNotFound">Silmek istediğiniz kapak resmi bulunamadı. Zaten silinmiş olabilir. Sayfayı yeniden yüklemeyi deneyin.</message>
 	<message key="grid.action.removeArticle">Makale Sayıdan Silinsin</message>
 	<message key="editor.article.remove">Sil</message>
 	<message key="editor.article.remove.confirm">Makaleyi bu sayıdan silmek istediğinizden emin misiniz ? Bu makale bir başka sayı içinde yayınlanabilir.</message>
@@ -143,11 +147,4 @@
 	<message key="editor.submission.editorial.finalDraftDescription"><![CDATA[Bu listedeki nihai taslak dosyalar altında aşağıda yüklendi copyedited sürümleri, bir sayfa düzenleyici tarafından dönüştürülür.<span class="pkp_help_title">Copyediting</span>.]]></message>
 	<message key="editor.submission.proof.manageProofFilesDescription">Zaten herhangi bir başvuru aşamasında yüklenmiş olan tüm dosyalar için aşağıdaki onay kutusunu ve tıklayarak Dahil kontrol ederek Redaksiyon liste eklenebilir. Arama: Tüm mevcut dosyalar listelenir ve dahil edilmesi için seçilebilir.</message>
 	<message key="editor.publicIdentificationExists">Diğer objeler (sayı, makale, dizgi veya ek dosya) için '{$publicIdentifier}' adlı genel belirleyici zaten var. Lütfen derginizdeki tekil belirleyicileri seçiniz.</message>
-	<message key="editor.article.remove">Kaldır</message>
-	<message key="editor.publicIdentificationExistsForTheSameType">'{$publicIdentifier}' genel belirleyicisi, aynı türden başka bir nesne için zaten var. Lütfen derginizden aynı türde nesneler için benzersiz tanımlayıcılar seçin.</message>
-	<message key="editor.article.removeCoverImageFileNotFound">Silmek istediğiniz kapak resmi bulunamadı. Zaten silinmiş olabilir. Sayfayı yeniden yüklemeyi deneyin.</message>
-	<message key="editor.notifyUsers">Kullanıcıları Bilgilendir</message>
-	<message key="editor.issues.invalidCoverImageFormat">Geçersiz kapak sayfası biçimi. Kabul edilebilir biçimler: .gif, .jpg veya .png.</message>
-	<message key="editor.issues.confirmSetCurrentIssue">Bu sayıyı güncel sayı olarak belirlemek istediğinizden emin misiniz?</message>
-	<message key="grid.action.setCurrentIssue">Güncel Sayı Belirle</message>
 </locale>
