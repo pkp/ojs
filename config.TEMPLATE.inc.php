@@ -41,6 +41,10 @@ session_cookie_name = OJSSID
 ; (set to 0 to force expiration at end of current session)
 session_lifetime = 30
 
+; Only create session cookies for users that are logged in
+; Ensures GDPR compliance
+session_limit = Off
+
 ; Enable support for running scheduled tasks
 ; Set this to On if you have set up the scheduled tasks script to
 ; execute periodically
