@@ -72,4 +72,4 @@
 	<message key="plugins.pubIds.doi.editor.assignDoi.emptySuffix">The DOI cannot be assigned because the custom suffix is missing.</message>
 	<message key="plugins.pubIds.doi.editor.assignDoi.pattern">The DOI {$pubId} cannot be assigned because it contains an unresolved pattern.</message>
 	<message key="plugins.pubIds.doi.editor.assignDoi.assigned">The DOI {$pubId} has been assigned.</message>
- </locale>
+</locale>

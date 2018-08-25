@@ -37,4 +37,6 @@
 	<message key="plugins.reports.counter.error.noResults">Bu rapor için hiç bir sonuç bulunamadı.</message>
 	<message key="plugins.reports.counter.allCustomers">Tüm Müşteriler</message>
 	<message key="plugins.reports.counter.error.noXML">Sonuçlar XML olarak biçimlendirilemedi.</message>
+	<message key="plugins.reports.counter.1a.introduction">Bu bağlantılar, eski Sürüm 3.0'a dayanarak COUNTER tabanlı raporlar oluşturur. Bu rapor sitede tüm dergileri kapsar. Mümkünse en son sürümü kullanın.</message>
+	<message key="plugins.reports.counter.legacyStats">Aşağıdaki bağlantılar, COUNTER destekli olmayan eski eklenti verilerini kullanarak eski raporlar oluşturur. Yeni OJS COUNTER metrik tipini kullanarak mevcut COUNTER raporları oluşturmak istiyorsanız, yukarıdaki bağlantıları kullanın.</message>
 </locale>

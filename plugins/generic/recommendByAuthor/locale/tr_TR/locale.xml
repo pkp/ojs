@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/recommendByAuthor/locale/tr_TR/locale.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="tr_TR" full_name="Türkçe">
+	<message key="plugins.generic.recommendByAuthor.displayName">Makaleleri Yazara Göre Öner</message>
+	<message key="plugins.generic.recommendByAuthor.description">Bu eklenti, makale yazarı sayfasında aynı yazarın makalelerini listeler.</message>
+	<message key="plugins.generic.recommendByAuthor.heading">Aynı yazarın en çok okunan makaleleri.</message>
+	<message key="plugins.generic.recommendByAuthor.noMetric">Uyarı: Bu eklenti etkinleştirilecek en az bir istatistik / rapor eklentisi gerektirir. İstatistik eklentileriniz birden fazla metrik sağlıyorsa, lütfen yöneticinin site ayarları sayfasında ve / veya günlük yöneticisinin ayarlar sayfalarında bir ana metrik seçin.</message>
+</locale>

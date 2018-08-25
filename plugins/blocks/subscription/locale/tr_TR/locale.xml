@@ -7,9 +7,7 @@
   * Copyright (c) 2013-2018 Simon Fraser University
   * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
   * Credits: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Turkish_(tr_TR)
-  *
   * Localization strings.
   -->
 
@@ -18,8 +16,10 @@
 	<message key="plugins.block.subscription.description">Bu eklenti yan tarafta abonelik bilgileri sağlar.</message>
 	<message key="plugins.block.subscription.blockTitle">Abone</message>
 	<message key="plugins.block.subscription.expires">Sona Eriyor</message>
-	<message key="plugins.block.subscription.providedBy">Erişimi destekleyen {$institutionName}</message>
-	<message key="plugins.block.subscription.comingFromIP">den {$ip}</message>
+	<message key="plugins.block.subscription.providedBy">Erişimi destekleyen kurum: {$institutionName}</message>
+	<message key="plugins.block.subscription.comingFromIP">Erişilen yer: {$ip}</message>
 	<message key="plugins.block.subscription.about">Aboneler</message>
 	<message key="plugins.block.subscription.loginToVerifySubscription">Aboneliğinizi doğrulamak için giriş yapın</message>
+	<message key="plugins.block.subscription.subscriptionRequired">Bazı kaynaklara erişm için bir abonelik gereklidir.</message>
+	<message key="plugins.block.subscription.subscriptionRequired.learnMore">Daha Fazla</message>
 </locale>

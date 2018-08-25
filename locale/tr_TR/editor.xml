@@ -9,7 +9,6 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the tr_TR (Türkçe) locale.
-  *
   -->
 
 <locale name="tr_TR" full_name="Türkçe">
@@ -17,41 +16,6 @@
 	<message key="editor.reassign">Yeniden Ata</message>
 	<message key="editor.submissionsAndPublishing">Gönderiler ve Yayımlama</message>
 	<message key="editor.submissionQueue">Gönderi Kuyruğu</message>
-	<message key="editor.submission.newRound">Yeni Tur</message>
-	<message key="editor.submissionLibrary">Gönderi Kütüphanesi</message>
-	<message key="editor.submission.addReviewer">Hakem Ekle</message>
-	<message key="editor.submission.uploadSelectFiles">Dosya Ekle</message>
-	<message key="editor.submission.roundStatus.reviewsReady">Hakem raporları ulaştı.</message>
-
-	<message key="editor.submission.decision.requestRevisions">Karar: Düzeltme</message>
-	<message key="editor.submission.decision.resubmit">Karar: Tekrar Gönderme</message>
-	<message key="editor.submission.roundStatus.pendingReviewers">Hakem Bekleniyor</message>
-	<message key="editor.submissionReview.uploadAttachment">Dosya Yükle</message>
-	<message key="editor.submission.decision.decline">Karar: Red</message>
-	<message key="editor.submission.decision.sendToProduction">Basıma Gönder</message>
-	<message key="editor.submission.production.productionReadyFiles">Basıma Hazır Dosyalar</message>
-	<message key="editor.submission.findAndSelectReviewer">Hakem Atama İşlemi</message>
-	<message key="editor.submissionReview.restrictFiles">Dosyalar</message>
-	<message key="editor.submissionReview.restrictFiles.hide">Dosyaları Gizle</message>
-	<message key="editor.submissionReview.reviewType">Hakemleme Türü</message>
-	<message key="editor.submissionReview.doubleBlind">İki Kör Hakemleme</message>
-	<message key="editor.submissionReview.blind">Kör Hakemleme</message>
-	<message key="editor.submissionReview.open">Açık Hakemleme </message>
-	<message key="editor.review.requestSent">İstek Gönderildi </message>
-	<message key="editor.review.reviewDetails">Detaylar </message>
-	<message key="editor.review.emailReviewer">E-Mail Gönder</message>
-
-
-	<message key="editor.submission.revisions">Düzeltmeler</message>
-	<message key="editor.submission.selectReviewer">Hakem Ata</message>
-	<message key="editor.review.skipEmail">Mail Gönderme</message>
-	<message key="editor.review.createReviewer">Yeni Hakem Oluştur</message>
-	<message key="editor.review.personalMessageToReviewer">Hakeme Gönderilecek Mesaj</message>
-	<message key="editor.review.importantDates">Önemli Tarihler</message>
-	<message key="editor.review.reviewDueDate">Hakemleme Son Tarihi</message>
-	<message key="editor.review.enrollReviewer.short">Yeni Hakem Kaydet</message>
-	<message key="editor.review.reviewSubmitted">Tamamlandı</message>
-	<message key="editor.review.readReview">Değerlendirmeyi Gör</message>
 	<message key="editor.submissionArchive">Gönderi Arşivi</message>
 	<message key="editor.publishing">Yayımlama</message>
 	<message key="editor.publishedIssues">Yayımlanmış Sayılar</message>
@@ -60,12 +24,12 @@
 	<message key="editor.me">Ben</message>
 	<message key="editor.publicIdentificationExists">Bu tanımlama '{$publicIdentifier}' zaten başka bir nesneye (konu, makale, kadırga ya da dosyası) için mevcuttur. dergi içinde benzersiz tanımlamalar seçiniz.</message>
 	<message key="editor.submissionArchive.noSubmissions">Arşivde kayıtlı gönderi yok</message>
-	<message key="editor.submission.stageParticipants">Katılımcılar</message>
 	<message key="editor.submissionArchive.saveChanges">Arşivlenmiş gönderilerdeki değişiklikleri kaydet. Silinmek üzere işaretli kayıtlı yazılar sistemden tamamen silinecektir.</message>
 	<message key="editor.submissionArchive.confirmDelete">Bu kaydı tamamen silmek istediğinizden emin misiniz?</message>
 	<message key="editor.submissionReview.confirmDecision">Bu kararı kaydetmek istediğinizden emin misiniz?</message>
 	<message key="editor.submissionReview.emailWillArchive">Bu gönderi Yazarı Bilgilendir e-posta mesajından sonra arşivlenecektir. Arşivleme için "Gönder" veya "E-posta Göndermeden" seçeneklerinin hangisinin kullanıldığı fark etmez.</message>
 	<message key="editor.submissionReview.cannotSendToCopyediting">Makaleyi yayına göndermeden önce,  kararı yazara bildirmek için Yazarı Bilgilendir linkini kullanınız. Daha sonra yayına gönderilcek sürümü seçerek Dosya Gönder seçeneğini tıklayınız.</message>
+	<message key="editor.notifyUsers">Kullanıcıları Bilgilendir</message>
 	<message key="editor.notifyUsers.allReaders">Tüm okuyucular ({$count} kişidir)</message>
 	<message key="editor.notifyUsers.allAuthors">Tüm yayınlanan yazarlar ({$count} kişidir)</message>
 	<message key="editor.notifyUsers.allIndividualSubscribers">Tüm bireysel aboneler ({$count} kişidir)</message>
@@ -78,8 +42,6 @@
 	<message key="editor.editorAdministration">Editör Yönetimi</message>
 	<message key="editor.issues.createIssue">Sayı Oluştur</message>
 	<message key="editor.issues.editIssue">Sayı Yönetimi: {$issueIdentification}</message>
-	<message key="editor.issues.backIssues">Eski Sayılar</message>
-	<message key="editor.issues.futureIssues">Gelecek Sayılar</message>
 	<message key="editor.issues.currentIssue">Şimdiki Sayı</message>
 	<message key="editor.issues.numArticles">Öğeler</message>
 	<message key="editor.issues.noArticles">Bu sayı için seçilmiş öğe yok</message>
@@ -106,15 +68,13 @@
 	<message key="editor.issues.removeCoverPage">Kapak sayfası görselini kaldır?</message>
 	<message key="editor.issues.removeCoverImageFileNameMismatch">Silmek istediğiniz kapak resmi ile eşleşme sağlanamadı. Lütfen sayfayı yenileyin ve tekrar deneyin.</message>
 	<message key="editor.issues.removeCoverImageFileNotFound">Silmek istediğiniz kapak resmi bulunamadı. Silinmiş olabilir. Sayfayı yenilemeyi deneyin.</message>
-	<message key="editor.issues.invalidCoverPageFormat">Geçersiz kapak sayfası görsel biçimi. Uygun dosya biçimleri: .gif, .jpg veya .png.</message>
+	<message key="editor.issues.invalidCoverImageFormat">Geçersiz kapak sayfası biçimi. Kabul edilebilir biçimler: .gif, .jpg veya .png.</message>
 	<message key="editor.issues.styleFile">Sayfa Sitili</message>
 	<message key="editor.issues.invalidStyleFormat">Uygunsuz sayfa sitil dosyası. Gönderdiğiniz dosyanın geçerli bir biçimlendirme dosyası olduğundan emin olunuz (CSS). (Note: Başlangıcında yorumlar olan biçimlendirme dosyaları reddedilebilir.)</message>
 	<message key="editor.issues.removeStyleFile">Sayfa Stilini Kaldır?</message>
 	<message key="editor.issues.coverPageCaption">Kapak başlığı</message>
 	<message key="editor.issues.showCoverPage">Bu sayı için aşağıdaki öğeler ile bir kapak oluşturunuz.</message>
 	<message key="editor.issues.coverPageDisplay">Görüntüle</message>
-	<message key="editor.issues.hideCoverPageArchives">Sayı listesinde küçük görüntü kapağı görseli görüntüleme.</message>
-	<message key="editor.issues.hideCoverPageCover">Eski içindekiler sayfasında kapak görseli görüntüleme.</message>
 	<message key="editor.issues.openAccess">Açık erişim</message>
 	<message key="editor.issues.subscription">Abonelik</message>
 	<message key="editor.issues.identification">Tanımlama</message>
@@ -134,6 +94,7 @@
 	<message key="editor.issues.preview">(Önizleme)</message>
 	<message key="editor.issues.confirmPublish">Yeni sayıyı yayınlamak istediğinizden emin misiniz?</message>
 	<message key="editor.issues.confirmUnpublish">Yeni sayıyı yayından kaldırmak istediğinizden emin misiniz?</message>
+	<message key="editor.issues.confirmSetCurrentIssue">Bu sayıyı güncel sayı olarak belirlemek istediğinizden emin misiniz?</message>
 	<message key="editor.issues.publicArticleIdExists">Aşağıdaki makale için Genel Sayı kaydedilemiyor:</message>
 	<message key="editor.issues.noLiveIssues">Yayınlanan Sayı Yok</message>
 	<message key="editor.issues.open">Aç</message>
@@ -147,10 +108,8 @@
 	<message key="editor.issues.galleyLocaleRequired">Sayı dizgi dili gerekli.</message>
 	<message key="editor.issues.galleyPublicIdentificationExists">Genel sayı dizgi kimliği zaten var.</message>
 	<message key="editor.issues.backToIssueGalleys">Sayı dizgilerine geri dön</message>
-	<message key="editor.issues.viewingGalley">Sayı Dizgisine Bakış</message>
 	<message key="editor.issues.confirmDeleteGalley">Bu sayı dizgisini silmek istediğinizden emin misiniz?</message>
 	<message key="editor.issues.identifiers">Tanımlayıcılar</message>
-	<message key="editor.navigation.issues">Sayılar</message>
 	<message key="editor.navigation.futureIssues">Gelecek Sayılar</message>
 	<message key="grid.action.addGalley">Dizgiye Ekle</message>
 	<message key="grid.action.publish">Sayıyı Yayınla</message>
@@ -158,6 +117,7 @@
 	<message key="grid.action.viewIssue">Bakış</message>
 	<message key="grid.action.previewIssue">Önizleme</message>
 	<message key="grid.action.addIssueGalley">Sayı Dizgisi Yarat</message>
+	<message key="grid.action.setCurrentIssue">Güncel Sayı Belirle</message>
 	<message key="editor.navigation.issueArchive">Önceki Sayılar</message>
 	<message key="editor.article.designateReviewVersion">Orjinal dosyayı Değerlendirme Sürümü olarak belirle</message>
 	<message key="editor.article.decision">Karar</message>
@@ -176,10 +136,7 @@
 	<message key="editor.article.scheduleForPublication">Yayınlanmak üzere planlandığı sayı:</message>
 	<message key="editor.article.scheduleForPublication.toBeAssigned">Yayın Planı Yapılacak</message>
 	<message key="editor.article.payment.publicationFeeNotPaid">Yayın ücreti ödenmedi. Öğenin yayın planına alınabilmesi için yazara ödeme veya feragat bilgilendirmesi yap.</message>
-	<message key="editor.article.showCoverPage">Aşağıdaki öğeler ile bu makale için bir kapak oluştur.</message>
-	<message key="editor.article.hideCoverPageToc">İçindekiler sayfasında küçük kapak görseli görüntüleme.</message>
-	<message key="editor.article.hideCoverPageAbstract">Makale abstraktını görüntülerken kapak görseli görüntüleme.</message>
-
+	<message key="editor.article.removeCoverImageFileNotFound">Silmek istediğiniz kapak resmi bulunamadı. Zaten silinmiş olabilir. Sayfayı yeniden yüklemeyi deneyin.</message>
 	<message key="grid.action.removeArticle">Makale Sayıdan Silinsin</message>
 	<message key="editor.article.remove">Sil</message>
 	<message key="editor.article.remove.confirm">Makaleyi bu sayıdan silmek istediğinizden emin misiniz ? Bu makale bir başka sayı içinde yayınlanabilir.</message>
@@ -190,7 +147,5 @@
 	<message key="editor.submission.editorial.finalDraftDescription"><![CDATA[Bu listedeki nihai taslak dosyalar altında aşağıda yüklendi copyedited sürümleri, bir sayfa düzenleyici tarafından dönüştürülür.<span class="pkp_help_title">Copyediting</span>.]]></message>
 	<message key="editor.submission.proof.manageProofFilesDescription">Zaten herhangi bir başvuru aşamasında yüklenmiş olan tüm dosyalar için aşağıdaki onay kutusunu ve tıklayarak Dahil kontrol ederek Redaksiyon liste eklenebilir. Arama: Tüm mevcut dosyalar listelenir ve dahil edilmesi için seçilebilir.</message>
 	<message key="editor.publicIdentificationExists">Diğer objeler (sayı, makale, dizgi veya ek dosya) için '{$publicIdentifier}' adlı genel belirleyici zaten var. Lütfen derginizdeki tekil belirleyicileri seçiniz.</message>
-	<message key="editor.article.remove">Kaldır</message>
-	<message key="editor.review.notInitiated">İnceleme süreci henüz başlatılmadı.</message>
-	<message key="editor.article.coverImage">Kapak resmi</message>
+	<message key="editor.article.coverImage">Kapak Görseli</message>
 </locale>

@@ -15,5 +15,6 @@
 	<message key="plugins.generic.openAIRE.displayName">OpenAIRE Eklentisi</message>
 	<message key="plugins.generic.openAIRE.description">OpenAIRE eklentisi makalenin üst verisine proje numarası elemanını ekler ve OpenAIRE uyumlu olması için ADS dergilerine yardımcı OpenAIRE Yönergesi 1.1'e göre OAI-PMH arabirimini genişletir.</message>
 	<message key="plugins.generic.openAIRE.projectID">OpenAIRE Proje No</message>
+	<message key="plugins.generic.openAIRE.projectID.description"><![CDATA[Bu araştırma, <a href="https://www.openaire.eu/" target="_blank">OpenAIRE</a> üst veri platformuna uyan bir AB girişiminden kaynaklanıyorsa, lütfen Hibe Sözleşmesi tanımlayıcısına karşılık gelen altı basamaklı bir sayı olan Proje Numarasını (ProjectID) girin.]]></message>
 	<message key="plugins.generic.openAIRE.projectIDValid">Lütfen geçerli bir proje numarası giriniz (6 haneli)</message>
 </locale>

@@ -9,7 +9,6 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the tr_TR (Türkçe) locale.
-  *
   -->
 
 <locale name="tr_TR" full_name="Türkçe">
@@ -26,8 +25,6 @@
 	 *  DEFAULT - Default settings for configuration items.
 	-->
 
-	<!-- review froms start -->
-
 	<!-- common -->
 
 	<message key="context.current">Güncel Dergi:</message>
@@ -38,39 +35,6 @@
 	<message key="navigation.categories.browse">Araştır</message>
 	<message key="reviewer.article.enterReviewForm">İnceleme formunu doldurmak için simgesini tıklayın.</message>
 	<message key="reviewer.submission.reviewFormResponse.form.responseRequired">Lütfen gerekli alanları doldurun.</message>
-
-	<!-- Journal Management -->
-
-	<message key="reviewer.complete">Hakemleme Tamamlandı !</message>
-	<message key="reviewer.complete.whatNext">Hakemleme tamamlandı. Değerli görüşleriniz için teşekkür ederiz.</message>
-	<message key="reviewer.submission.reviewFiles">Hakemleme Dosyaları</message>
-	<message key="reviewer.step1.request">1. Tur Hakemleme</message>
-	<message key="reviewer.step1.requestBoilerplate">1. Tur Hakemleme İşlemleri</message>
-	<message key="reviewer.step1.viewAllDetails">Detaylar</message>
-	<message key="reviewer.submission.reviewSchedule">Hakemleme Takvimi</message>
-	<message key="reviewer.submission.reviewRequestDate">Hakemleme Gönderim Tarihi</message>
-	<message key="reviewer.submission.responseDueDate">Hakem Yanıt Son Tarihi</message>
-	<message key="reviewer.submission.reviewDueDate">Hakemleme Son Tarihi</message>
-	<message key="reviewer.submission.acceptReview">Hakemlemeyi Kabul Et</message>
-	<message key="reviewer.submission.declineReview">Hakemlemeyi Kabul Etme</message>
-	<message key="reviewer.submission.reviewerGuidelines">Hakemlik Rehberi</message>
-	<message key="reviewer.submission.noGuidelines">Hakemlik Rehberi Bulunmamaktadır.</message>
-	<message key="reviewer.submission.reviewDescription">Hakemlik Görüşlerinin Yazılacağı Bölüm</message>
-	<message key="reviewer.submission.uploadDescription">Hakemlik Değerlendirme Formunu Bu Kısıma Yükleyiniz</message>
-	<message key="reviewer.submission.reviewerFiles">Hakemlik Dosyaları</message>
-	<message key="reviewer.submission.submitReview">Hakemlemeyi Tamamla</message>
-	<message key="reviewer.submission.continueToStepThree">İleri</message>
-	<message key="navigation.goBack">Geri</message>
-
-
-
-	<message key="reviewer.reviewSteps.request">Hakemlik Önerisi</message>
-	<message key="reviewer.reviewSteps.guidelines">Hakemlik Rehberi</message>
-	<message key="reviewer.reviewSteps.download">Değerlendirme</message>
-	<message key="reviewer.reviewSteps.completion">Sonuç</message>
-
-
-	<!--  peer review -->
 
 
 	<message key="reviewer.article.enterReviewForm">Değerlendirme formunu doldurmak için simgeye tıklayınız:</message>
@@ -87,25 +51,10 @@
 	<!-- Common Messages -->
 	<message key="common.openJournalSystems">Açık Dergi Sistemleri</message>
 	<message key="common.confirmComplete">Bu görevi tamamlandı olarak işaretlemek istediğinizden emin misiniz? Sonradan değişiklik yapmanız mümkün olmayabilir.</message>
-	<message key="common.homepageNavigationLabel">Anasayfa</message>
 	<message key="common.payment">Ödeme</message>
 	<message key="common.payments">Ödemeler</message>
 	<message key="common.homePageHeader.altText">Ana Sayfa Başlığı</message>
 	<message key="common.journalHomepageImage.altText">Dergi Ana Sayfa Görseli</message>
-	<message key="common.tasks">Bildirimler</message>
-	<message key="common.viewProfile">Profil</message>
-	<message key="common.uploadedDate">Yüklenme Tarihi</message>
-	<message key="common.upload.dragFile">Dosyayı Buraya Sürükleyebilirsiniz.</message>
-	<message key="common.upload.addFile">Dosya Ekle</message>
-	<message key="common.upload.changeFile">Dosyayı Değiştir</message>
-	<message key="common.prefix">Ünvan</message>
-	<message key="common.prefixAndTitle.tip">Örnek: Prof., Dr.</message>
-	<message key="common.prefix">Ünvan</message>
-	<message key="common.subtitle">Altyazı</message>
-	<message key="common.subtitle.tip">İsteğe bağlı altyazı, ana başlığın ardından iki nokta üst üste (:) deyiminin arkasında görünecektir.</message>
-	<message key="common.abstract">Özet</message>
-	<message key="common.name">Adı</message>
-
 	<!-- Common Form Messages -->
 
 	<!-- Common Email Messages -->
@@ -115,8 +64,6 @@
 	<!-- Common Error Messages -->
 
 	<!-- Navigation -->
-	<message key="navigation.archives">Arşiv</message>
-	<message key="navigation.breadcrumbSeparator">></message>
 	<message key="navigation.journalHelp">Yardım</message>
 	<message key="navigation.current">Son Sayı</message>
 	<message key="navigation.otherJournals">Diğer Dergiler</message>
@@ -127,9 +74,6 @@
 	<message key="navigation.competingInterestGuidelines">Çıkar Çelişkisi Rehberi</message>
 	<message key="navigation.infoForAuthors.long">Yazarlar İçin Bilgi</message>
 	<message key="navigation.infoForLibrarians.long">Kütüphaneciler İçin Bilgi</message>
-	<message key="navigation.viewFrontend">Önizleme</message>
-	<message key="navigation.items.shownTotal">Gösterilen {$shown} - Toplam {$total}</message>
-
 	<!-- Article Queues -->
 	<message key="common.queue.long.submissionsUnassigned">Yeni Başvurular</message>
 	<message key="common.queue.short.submissionsUnassigned">Yeni Başvurular</message>
@@ -143,13 +87,11 @@
 	<message key="common.queue.short.active">Etkin</message>
 	<message key="common.queue.long.completed">Arşiv</message>
 	<message key="common.queue.short.completed">Arşiv</message>
-	<message key="common.queue.long.myAssigned">Bana Atanan Yazılar</message>
-	<message key="common.queue.long.submissionsArchived">Arşivlenen Yazılar</message>
 
 	<!--
 	 *
 	 * ENTITIES - This section contains terms pertaining to the system's
-	 *			major entities, e.g. Article, Journal, Section
+	 *            major entities, e.g. Article, Journal, Section
 	 *
 	-->
 
@@ -259,25 +201,12 @@
 	<message key="user.noRoles.submitArticleRegClosed">Bir makale gönder: Yazar kaydı şu halde aktif değil.</message>
 	<message key="user.noRoles.regReviewer">Hakem olarak kayıt ol</message>
 	<message key="user.noRoles.regReviewerClosed">Hakem olarak kayıt ol: Hakem kaydı şu halde aktif değil.</message>
-	<message key="user.profile.identity">Kullanıcı Bilgileri</message>
-	<message key="user.profile.contact">Kullanıcı İletişim Bilgileri</message>
-	<message key="user.profile.public">Kullanıcı Kişisel Bilgileri</message>
-	<message key="user.orcid">ORCID ID</message>
-
 	<!-- Roles -->
-	<message key="user.role.author">Yazar</message>
 	<message key="user.role.manager">Dergi Yöneticisi</message>
 	<message key="user.role.subEditor">Bölüm Editörü</message>
 	<message key="user.role.subscriptionManager">Abone Yöneticisi</message>
 	<message key="user.role.managers">Dergi Yöneticileri</message>
 	<message key="user.role.subscriptionManagers">Abone Yöneticileri</message>
-
-	<!-- Submission -->
-	<message key="user.login.registrationComplete.manageSubmissions">Yazı Girişleri Yönetimi</message>
-	<message key="user.login.registrationComplete.newSubmission">Yeni Yazı Girişi</message>
-	<message key="user.login.registrationComplete.instructions">Kullanıcı Profili</message>
-	<message key="user.login.registrationComplete">Kullanıcı</message>
-	<message key="user.login.registrationComplete.continueBrowsing">Dergiyi Görüntüle</message>
 
 	<!-- Common Issue Terms -->
 	<message key="issue.issue">Sayı</message>
@@ -391,11 +320,7 @@
 
 	<!-- Journal Management -->
 
-	<message key="informationCenter.editorialHistory">İşlem Geçmişi</message>
-
-
 	<!-- Statistics & Reports -->
-
 
 	<!-- Plugin Management -->
 
@@ -416,12 +341,6 @@
 	<message key="manager.setup.lockssDescription"><![CDATA[Açık Dergi Sistemleri, dergi için güvenli ve kalıcı arşiv sistemi olan <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) uygulamasını destekler. LOCKSS uygulaması Stanford Üniversitesi Kütüphanesinde geliştirilmiştir. Kütüphanelerde düzenli olarak toplanan kayıtlı dergilerin web sitelerinde yeni yayınlanmış içerikleri arşivlemeyi sağlayan açık kaynak kodlu bir yazılımdır. Her arşiv kütüphane sisteminde meydana gelebilecek bir kayıba karşı veriyi korur. Eğer bozulur veya kaybolursa diğer önbellek verinin temini için kullanılır.
 <br /><br />
 Açık Dergi Sistemleri için LOCKSS desteğini dergi tümüyle yayına geçmeden açmayınız, dergi tümüyle yayına başlayınca aşağıdaki iki adımı izleyiniz:]]></message>
-
-	<message key="manager.setup.subjectClassificationDescription"><![CDATA[[Dergi webde mevcut konu sınıflama sistemi kullanır.<br />
-Sınıflama Sistemi Başlığı]]></message>
-<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[Dergi içeriğinin uluslararası erişimi olan veri tabanlarında dizinlenmesi ve <a href="http://www.oclc.org/oaister/contribute.en.html" target="_blank"> bu veri tabanlarına katkıda bulunmak</a> için bağlantıyı ziyaret ederek derginizi resmi <a href="http://www.openarchives.org/data/registerasprovider.html" target="_blank">Açık Arşiv</a>'e kayıt edebilirsiniz.  Kayıt yaptırmak için temel URL adresiniz gerekir: <span class="highlight">{$oaiUrl}</span>.  Daha sonra derginizi <a href="http://gita.grainger.uiuc.edu/registry/" target="_blank">UIUC OAI registry</a> ve <a href="http://www.oclc.org/oaister" target="_blank">OAIster</a>'e kayıt edebilirsiniz.
-<br /><br />
-Not: Site yöneticiniz PKP Harvester ile bu siteyi kayıt etti ise, derginiz otomatik olarak dizinlenecek ve dergi için özel bir kayıt gerekmeyecektir.]]></message>
 
 	<!-- Setup Step 4 -->
 	<message key="manager.setup.basicEditorialStepsDescription"><![CDATA[Basamaklar: Başvuru Kuyruğu &gt; Başvuru Değerlendirilmesi &gt; Yazıların Düzenlenmesi &gt; Yayın bekleme kuyruğu &gt; İçindekiler.<br /><br />
@@ -452,7 +371,23 @@ Editöryel süreçte bu basamakların nasıl işleyeceği konusunda bir model se
 	Bu görev site yöneticisi tarafından yerine getirilmelidir.
 	]]></message>
 
-	<message key="editor.submissionReview.notes"><![CDATA[<ol>
+
+
+	<!-- Email Management -->
+
+	<!-- Subscription Policy Management -->
+
+	<!-- Subscription Type Management -->
+
+	<!-- Subscription Management -->
+
+	<!-- Announcement Type Management -->
+
+	<!-- Announcements Management -->
+
+	<!-- Editor -->
+	<message key="editor.submissionReview.notes">
+	<![CDATA[<ol>
 	<li>Aşağıda belirtilen öğeler editör işlemi beklemektedir:
 		<ul>
 			<li class="highlightReviewerNotNotified">Bir Hakem atanandı ancak e-posta ile bilgilendirilmedi</li>
@@ -548,8 +483,6 @@ Editöryel süreçte bu basamakların nasıl işleyeceği konusunda bir model se
 	<message key="reviewer.article.selectRecommendation">Alttaki karar seçeneklerinin aktif hale gelmesi için dördüncü adımdaki sürecin tamamlanması gerekir. Değerlendirmenin editöre iletilebilmesi için "Hakem Kararı" kutusundaki seçereklerden uygun olanının seçilmesi ve kaydedilmesi gerekir.</message>
 	<message key="reviewer.article.mustSelectDecision">Başvurunun kabülüne yönelik bir öneride bulunmadınız. İşlemin tamamlanması için bir öneride bulunmanız gerekiyor.</message>
 	<message key="reviewer.article.confirmDecision">Kararınızı kaydettikten sonra bu değerlendirmede başka bir değişiklik yapamazsınız! Devam etmek istiyor musunuz?</message>
-	<message key="reviewer.confirmSubmit">Hakemlemeyi onaylıyor musunuz ?</message>
-
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">S/D'ye dosya</message>
 	<message key="copyeditor.article.copyeditorFile">Sayfa Düzenleyici Dosyası</message>
@@ -576,6 +509,7 @@ Editöryel süreçte bu basamakların nasıl işleyeceği konusunda bir model se
 <li>Dosya Gönder butonunu tıklayarak, dosyayı kendi bilgisayarınızdan derginin internet sitesine yükleyiniz, dosyanızın adı dergi kurallarına uygun olarak değiştirilecektir.</li>
 <li>Başvuru yüklendikten sonar, sayfanın alt kısmında yer alan Kaydet ve Devam et'e tıklayınız.</li>
 </ol>]]></message>
+
 	<!-- Article Submission Step 4 -->
 
 	<!-- Article Submission Step 4a: Supplementary Files -->
@@ -641,14 +575,9 @@ Editöryel süreçte bu basamakların nasıl işleyeceği konusunda bir model se
 	<message key="submission.comments.saveAndEmailAuthor">Kaydet ve Yazara E-posta Gönder</message>
 	<message key="submission.comments.saveAndEmailEditor">Kaydet ve Editöre E-posta Gönder</message>
 
-	<!-- Login -->
-	<message key="user.login.registerNewAccount">Dergiye kayıt olmak için burayı tıklayınız.</message>
-
-	<!-- Profile -->
 	<!-- Registration -->
 	<message key="user.register.noJournals">Bu sitede kayıt olabileceğiniz bir dergi yok.</message>
 	<message key="user.register.privacyStatement">Gizlilik Bildirimi</message>
-	<message key="user.register.loginToRegister">Dergiye kaydolmak için mevcut kullanıcı adı ve şifrenizi giriniz.</message>
 	<message key="user.register.registrationDisabled">Bu dergi şu anda kullanıcı kayıtlarını kabul etmemektedir.</message>
 	<message key="user.register.form.passwordLengthTooShort">Girdiğiniz şifre yeterince uzun değildir.</message>
 	<message key="user.register.readerDescription">Derginin sayısı yayınlandığında e-posta ile bildirilecektir.</message>
@@ -658,7 +587,8 @@ Editöryel süreçte bu basamakların nasıl işleyeceği konusunda bir model se
 	<message key="user.register.reviewerDescriptionNoInterests">Dergiye yapılan gönderilerin hakemliğini yapmaya istekli.</message>
 	<message key="user.register.reviewerDescription">Dergiye yapılan gönderilen hakemliğini yapmaya istekli olma. İlgi alanlarınızı tanımlayın (bağımsız alanlar ve araştırma yöntemleri).</message>
 	<message key="user.register.reviewerInterests">İlgi / uzmanlık alanlarınız (Uzmanlık alanı terimlerini açılır menüden seçiniz):</message>
-<!-- Subscriptions -->
+
+	<!-- Subscriptions -->
 	<message key="user.subscriptions.mySubscriptions">Aboneliklerim</message>
 	<message key="user.subscriptions.subscriptionStatus">Abonelik Durumu</message>
 	<message key="user.subscriptions.statusInformation">Aktif ve süresi dolmuş abonelikleri sona erme tarihi ile birlikte aşağıda görüntülenmektedir. Buna ek olarak, aşağıdaki durum bilgileri her abonelik ile birlikte gelebilir.</message>
@@ -675,8 +605,8 @@ Editöryel süreçte bu basamakların nasıl işleyeceği konusunda bir model se
 	<message key="user.subscriptions.purchaseNewSubscription">Yeni Abonelik Başlat</message>
 	<message key="user.subscriptions.purchaseIndividualSubscription">Bireysle Abonelik Başlat</message>
 	<message key="user.subscriptions.purchaseInstitutionalSubscription">Kurumsal Abonelik Başlat</message>
-	<message key="user.subscriptions.expires">Sona Eriyor</message>
-	<message key="user.subscriptions.expired">Sona Erdi</message>
+	<message key="user.subscriptions.expires">Bitiş tarihi: {$date}</message>
+	<message key="user.subscriptions.expired">Sona Tarih: {$date}</message>
 	<message key="user.subscriptions.viewSubscriptionTypes">Mevcut Abonelik Türlerini  Görüntüle</message>
 	<message key="user.subscriptions.form.typeId">Abonelik Türü</message>
 	<message key="user.subscriptions.form.membership">Üyelik</message>
@@ -724,7 +654,7 @@ Editöryel süreçte bu basamakların nasıl işleyeceği konusunda bir model se
 	<message key="article.nonpdf.title">Makale İndir</message>
 	<message key="article.nonpdf.note"><![CDATA[Seçmiş olduğunuz dosya otomatik olarak indirilmeye başlanacaktır. Eğer indirme otomatiok olarak başlamaz ise aşağıdaki bağlantıyı tıklayın. Bu dosyanın görülebilmesi için özel bir görüntüleyici veya bağlantıya gereksinim olabilir.<br /><br />Eğer makale otomatik olarak indirilmez ise  <a href="{$url}">buraya tıklayın</a>.]]></message>
 
-<!-- Site index -->
+	<!-- Site index -->
 	<message key="site.journalsHosted">Bu sitedeki dergiler</message>
 	<message key="site.journalView">Dergiyi Görüntüle</message>
 	<message key="site.journalRegister">Kayıt</message>
@@ -750,9 +680,8 @@ Editöryel süreçte bu basamakların nasıl işleyeceği konusunda bir model se
 	<message key="about.focusAndScope">Odak ve Kapsam</message>
 	<message key="about.sectionPolicies">Bölüm Politikaları</message>
 	<message key="about.submissions">Gönderiler</message>
-	<message key="about.onlineSubmissions">Çevrimiçi Gönderi</message>
 	<message key="about.onlineSubmissions.login">Girişe Gidiniz</message>
-	<message key="about.onlineSubmissions.registrationRequired">Site aracılığı ile gönderi yapmak ve süreci izlemek için bir kullanıcı kaydı yaptırmanız gerekmektedir.</message>
+	<message key="about.onlineSubmissions.registrationRequired">Bir gönderi yapmak için {$login} veya {$register} yapın.</message>
 	<message key="about.authorGuidelines">Yazar Rehberi</message>
 	<message key="about.submissionPreparationChecklist">Başvuru Kontrol Listesi</message>
 	<message key="about.submissionPreparationChecklist.description">Başvuru sürecünde yazarlar başvurularının aşağıdaki listedeki tüm maddelere uyduğunu kontrol etmelidirler, bu rehbere uymayan başvurular yazarlara geri döndürülecektir.</message>
@@ -832,7 +761,7 @@ Editöryel süreçte bu basamakların nasıl işleyeceği konusunda bir model se
 	<message key="installer.ojsUpgrade">ADS Güncellenmesi</message>
 	<message key="installer.installationInstructions"><![CDATA[<h4>ADS Sürümü {$version}</h4>
 
-<p>Kamu Bilgilendirme Projelerinden (PKP) <strong>Açık Dergi Sistemleri</strong>ni yüklediğiniz için teşekkür ederiz. İlerlemeden önce lütfen yazılımın içerdiği <a href="{$baseUrl}/docs/README.md">BENİ OKU (README)</a> dosyasını okuyunuz. PKP ve onunla ilgili yazılım projeleri  hakkında daha ayrıntılı bilgi için lütfen <a href="http://pkp.sfu.ca/" target="_blank">PKP web sitesini</a>ziyaret edin. Açık Dergi Sistemleri hakkında virüs raporları veya teknik destek bilgisi isterseniz <a href="http://pkp.sfu.ca/support/forum">destek forumuna</a> veya PKP <a href="http://pkp.sfu.ca/bugzilla/" target="_blank">virüs bildirim sistemine</a> bakabilirsiniz. Destek forumu tercih edilen yöntem olmakla birlikte yazılım ekibine e-posta da gönderebilirsiniz <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
+<p>Kamu Bilgilendirme Projelerinden (PKP) <strong>Açık Dergi Sistemleri</strong>ni yüklediğiniz için teşekkür ederiz. İlerlemeden önce lütfen yazılımın içerdiği <a href="{$baseUrl}/docs/README">BENİ OKU (README)</a> dosyasını okuyunuz. PKP ve onunla ilgili yazılım projeleri  hakkında daha ayrıntılı bilgi için lütfen <a href="http://pkp.sfu.ca/" target="_blank">PKP web sitesini</a>ziyaret edin. Açık Dergi Sistemleri hakkında virüs raporları veya teknik destek bilgisi isterseniz <a href="http://pkp.sfu.ca/support/forum">destek forumuna</a> veya PKP <a href="http://pkp.sfu.ca/bugzilla/" target="_blank">virüs bildirim sistemine</a> bakabilirsiniz. Destek forumu tercih edilen yöntem olmakla birlikte yazılım ekibine e-posta da gönderebilirsiniz <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
 
 <h4>Güncelle</h4>
 
@@ -874,7 +803,7 @@ Editöryel süreçte bu basamakların nasıl işleyeceği konusunda bir model se
 <p><strong>Manuel yükleme</strong>de SQL kurallarının gösterilmesi, ADS veri tabanı şeması ve başlangıç verileri oluşturmak için gereklidir. Bunu veri tabanı yüklemesinin manuel olarak yapılmasını istiyorsanız seçin. Bu seçenek özellikle desteklenmeyen platformlar üzerinde yükleme sorunları olduğunda yararlıdır. Konfigürasyon dosyasını hali hazırda destekleyen veri tabanı ayarları ile yazılacak olmakla beraber bu yükleme yönteminin veri tabanı veya herhangi bir tablo oluşturma denemesine girmeyeceğine dikkat edin.</p>]]></message>
 	<message key="installer.upgradeInstructions"><![CDATA[<h4>ADS Sürümü {$version}</h4>
 
-<p>Kamu Bilgilendirme Projelerinden (PKP) <strong>Açık Dergi Sistemleri</strong>ni yüklediğiniz için teşekkür ederiz. İlerlemeden önce lütfen bu yazılımın içindeki <a href="{$baseUrl}/docs/README.md">BENİ OKU (README) </a> ve <a href="{$baseUrl}/docs/UPGRADE.md">GÜNCELLE (UPGRADE) </a>  dosyalarını okuyun. Kamu Bilgilendirme Projesi ve onun içindeki yazılım projeleri için lütfen <a href="http://pkp.sfu.ca/" target="_blank">PKP internet sitesini</a> ziyaret edin. Açık Dergi Sistemleri hakkında virüs raporları veya teknik deste ile ilgili sorularınız varsa,  <a href="http://pkp.sfu.ca/support/forum">destek forumuna</a> veya PKP <a href="http://pkp.sfu.ca/bugzilla/" target="_blank">virüs bildirim sistemine</a> bakınız. Destek forumu tercih edilen ilişki kurma yöntemi olmakla birlikte, yazılım ekibine e-posta ile de ulaşabilirsiniz : <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
+<p>Kamu Bilgilendirme Projelerinden (PKP) <strong>Açık Dergi Sistemleri</strong>ni yüklediğiniz için teşekkür ederiz. İlerlemeden önce lütfen bu yazılımın içindeki <a href="{$baseUrl}/docs/README">BENİ OKU (README) </a> ve <a href="{$baseUrl}/docs/UPGRADE">GÜNCELLE (UPGRADE) </a>  dosyalarını okuyun. Kamu Bilgilendirme Projesi ve onun içindeki yazılım projeleri için lütfen <a href="http://pkp.sfu.ca/" target="_blank">PKP internet sitesini</a> ziyaret edin. Açık Dergi Sistemleri hakkında virüs raporları veya teknik deste ile ilgili sorularınız varsa,  <a href="http://pkp.sfu.ca/support/forum">destek forumuna</a> veya PKP <a href="http://pkp.sfu.ca/bugzilla/" target="_blank">virüs bildirim sistemine</a> bakınız. Destek forumu tercih edilen ilişki kurma yöntemi olmakla birlikte, yazılım ekibine e-posta ile de ulaşabilirsiniz : <a href="mailto:pkp.contact@gmail.com">pkp.contact@gmail.com</a>.</p>
 <p>Devam etmeden önce veri tabanınızın, dosya dizini ve ADS yükleme dizini yedeklerini almanızı <strong>kuvvetle öneririz</strong>.</p>
 <p>Eğer <a href="http://www.php.net/features.safe-mode" target="_blank">PHP güvenli modda</a> çalışıyorsanız, lütfen "php.ini" konfigürasyon dosyanızda maksimum uygulama zamanı için en yüksek sınırı ayarlayınız. Bu veya diğer bir zaman sınırına (Apache'nin 'zaman aşımı' seçeneği gibi) ulaşıldığında güncelleme sürecine ara verilir ve tamamlamak için manuel girişim gerekir.</p>]]></message>
 	<message key="installer.localeSettingsInstructions"><![CDATA[Tam evrensel kod (Unicode UTF-8) desteği için tüm karakter seti ayarlarını UTF-8 olarak seçin. Bu desteğin MySQL> = 4.1.1 veya PostgreSQL> = 7.1 veri tabanı sunucusu gerektirdiğini unutmayın. Bunun <a href="http://www.php.net/mbstring" target="_blank">mbstring</a> desteği ile derlenmiş PHP >= 4.3.0  tam Unicode desteği gerektirdiğini unutmayınız. (Kütüphane son PHP yüklemelerinin çoğunda hazır olarak yetkilendirilmiştir). Eğer sunucunuz bu özellikleri karşılamaz ise genişletilmiş öğe kümelerini kullanırken sorun yaşayabilirsiniz.
@@ -1001,9 +930,6 @@ Form verisi gönderilen bağlantılarda başarısız olma olasılığı fazladı
 	<message key="notification.type.submissionComment">"{$title}" başlıklı makale için bir editör yorum yaptı.</message>
 	<message key="notification.type.submissions">Gönderi Durumları</message>
 	<message key="notification.type.userComment">"{$title}" başlıklı makale için bir okuyucu yorum yaptı.</message>
-	<message key="notification.type.roundStatusTitle">Gönderi Durumu</message>
-	<message key="notification.type.allReviewsIn">Bütün hakemlemeler tamamlandı.</message>
-<message key="notification.addedReviewer">Bildirim Gönderildi</message>
 
 	<!--
 	 *
@@ -1011,7 +937,7 @@ Form verisi gönderilen bağlantılarda başarısız olma olasılığı fazladı
 	 *
 	-->
 	<!-- Authorization -->
-		<message key="user.authorization.copyeditorAssignmentMissing">Erişim engellendi! Bu makaleye yayın editörü olarak atanmamışsınız.</message>
+	<message key="user.authorization.copyeditorAssignmentMissing">Erişim engellendi! Bu makaleye yayın editörü olarak atanmamışsınız.</message>
 	<message key="user.authorization.sectionAssignment">Erişmeye çalıştığınız makale size ait bölümün parça değil.</message>
 	<message key="user.authorization.invalidCopyditorSubmission">Hatalı sayfa düzenleyici gönderisi veya sayfa düzenleyici gönderi isteği yok.</message>
 
@@ -1044,7 +970,118 @@ Form verisi gönderilen bağlantılarda başarısız olma olasılığı fazladı
 	<message key="payment.type.purchaseIssue">Yayın Ücreti</message>
 	<message key="installer.allowFileUploads"><![CDATA[Sunucunuz güncel dosya yüklemesini kabul etti: <strong>{$allowFileUploads}</strong>]]></message>
 	<message key="user.profile.profileImage">Profil Resmi</message>
-	<message key="dashboard.myQueue">Kontrol Paneli</message>
-	<message key="grid.action.logInAs">Hesabına Bağlan</message>
-	<message key="grid.user.addRole">Görev Ekle</message>
+	<message key="journal.viewAllIssues">Tüm Sayıları Göster</message>
+	<message key="user.noRoles.selectUsersWithoutRoles">Bu dergide rolleri olmayan kullanıcıları dahil et.</message>
+	<message key="user.reviewerPrompt">Bu dergiye yapılan gönderileri incelemek ister misiniz?</message>
+	<message key="user.reviewerPrompt.userGroup">Evet, {$userGroup} rolü iste.</message>
+	<message key="user.register.contextsPrompt">Bu sitedeki hangi dergilere kayıt yaptırmak istersiniz?</message>
+	<message key="user.register.otherContextRoles">Aşağıdaki rolleri iste.</message>
+	<message key="user.register.noContextReviewerInterests">Herhangi bir dergide hakem olmak istediyseniz, lütfen ilgi alanlarınızı girin.</message>
+	<message key="user.role.subEditors">Bölüm Editörleri</message>
+	<message key="user.role.journalAssistant">Dergi Asistanı</message>
+	<message key="user.role.journalAssistants">Dergi Asistanları</message>
+	<message key="issue.return">Sayı Detaylarına Dön</message>
+	<message key="subscriptions.status.noSubscription">Etkin bir aboneliğiniz yok.</message>
+	<message key="submission.event.submissionSubmitted">Makale gönderildi</message>
+	<message key="reader.purchasePrice">({$price} {$currency})</message>
+	<message key="search.results.orderBy">Sonuçları şuna göre sırala:</message>
+	<message key="search.results.orderBy.article">Makale Başlığı</message>
+	<message key="search.results.orderBy.author">Yazar</message>
+	<message key="search.results.orderBy.date">Yayın Tarihi</message>
+	<message key="search.results.orderBy.issue">Sayı</message>
+	<message key="search.results.orderBy.journal">Dergi Başlığı</message>
+	<message key="search.results.orderBy.popularityAll">Popülerlik (Tüm Zamanlar)</message>
+	<message key="search.results.orderBy.popularityMonth">Popülerlik (Geçen Ay)</message>
+	<message key="search.results.orderBy.relevance">İlgi</message>
+	<message key="search.results.orderDir.asc">Azalan</message>
+	<message key="search.results.orderDir.desc">Azalan</message>
+	<message key="search.results.similarDocuments">benzer belgeler</message>
+	<message key="admin.auth.defaultSourceDescription"><![CDATA[<p>OJS dışındaki bir varsayılan kimlik doğrulama kaynağının belirtilmesi aşağıdaki etkilere sahiptir:</p>
+<ul>
+	<li>Bir kullanıcı, bu site ile kimlik doğrulama kaynağında bulunan (ancak OJS veri tabanında bulunmayan) bir kullanıcı adıyla yeni bir hesap oluşturmaya çalışırsa, kayıt girişimi yalnızca sağlanan şifre söz konusu kullanıcı hesabı için geçerliyse izin verilir.</li>
+</ul>]]></message>
+	<message key="plugins.categories.viewableFiles">Makale Dizgi Eklentisi</message>
+	<message key="plugins.categories.viewableFiles.description">Makale Dizgi Eklentileri, makale kaideleri olarak farklı belge türlerini görüntülemek için destek sağlar.</message>
+	<message key="manager.setup.clockssDescription">Açık Dergi Sistemleri ayrıca, dergi için güvenli ve kalıcı bir arşiv sağlamak için CLOCKSS (Kontrollü Çok Sayıdaki Kopyaları Güvenli Tutma) sistemini destekler. Derginiz CLOCKSS Arşivi ile bir sözleşme imzaladıysa, buradan etkinleştirin:</message>
+	<message key="manager.setup.porticoDescription">Portico, e-dergiler, e-kitaplar ve sayısallaştırılmış tarihsel koleksiyonlar dahil olmak üzere dijital yayınların korunmasına yönelik kar amacı gütmeyen bir hizmettir. Derginiz Portico ile bir sözleşme imzaladıysa, buradan etkinleştirin:</message>
+	<message key="submission.layout.galley.remotelyHostedContent">Bu dizgi ayrı bir web sitesinde mevcut olacak.</message>
+	<message key="submission.layout.galley.remoteURL">Uzak erişim içeriğinin URL adresi</message>
+	<message key="reviewer.article.selectRecommendation.byEditor">Gözden geçirme önerisini inceleyin veya ayarlayın.</message>
+	<message key="article.pageTitle">{$title} görünümü</message>
+	<message key="article.download">Bu PDF dosyası indir</message>
+	<message key="article.pluginMissing"><![CDATA[<p>Web tarayıcınızda bir PDF okuyucu eklentisi yüklüyse (örneğin, <a href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a>'ın son bir sürümü varsa) seçtiğiniz PDF dosyası yüklenir.</p>]]></message>
+	<message key="archive.archivesPageNumber">Arşivler - Sayfa: {$pageNumber}</message>
+	<message key="about.contact">İletişim</message>
+	<message key="about.onlineSubmissions.register">Kayıt</message>
+	<message key="about.onlineSubmissions.submissionActions">{$newSubmission} veya {$viewSubmissions}.</message>
+	<message key="about.onlineSubmissions.newSubmission">Yeni bir gönderi yap</message>
+	<message key="about.onlineSubmissions.viewSubmissions">bekleyen gönderilerinizi görüntüleyin</message>
+	<message key="help.goToEditPage">{$sectionTitle} bölümünü düzelt</message>
+	<message key="payment.loginRequired.forIssue">Öğeye erişmek için abonelik olmak veya sayı satın alma gereklidir. Aboneliği doğrulamak, önceki satın alma işlemine erişmek veya satın alma sayıya erişmek için dergiye giriş yapın.</message>
+	<message key="payment.alreadyPaidMessage">Gönderi işlemini tamamlamak için ödemeyi dergiye göndermişseniz bu kutuyu seçin. Gönderi, ödeme gelene kadar incelenmeyecektir. Ödeme talimatlarını görmek için yukarıdaki ÖDEME'ye tıklayın.</message>
+	<message key="payment.type.publication.required">Ödeme yayın ücreti içindir.</message>
+	<message key="payment.requestPublicationFee">Yayınlama ücreti:  ({$feeAmount})</message>
+	<message key="payment.notFound">Bir ödeme talep edildi, ancak isteğin süresi doldu. Ayrıntılar için Dergi Yöneticisine başvurun.</message>
+	<message key="user.register.selectContext">Kayıt olmak için bir dergi seçin:</message>
+	<message key="installer.preInstallationInstructions"><![CDATA[<h4>Ön yükleme Adınmları</h4>
+
+
+<p>1. Aşağıdaki dosyalar ve dizinler (ve içerikleri) yazılabilir olmalıdır:</p>
+<ul>
+	<li><tt>config.inc.php</tt> yazılabilir (optional): {$writable_config}</li>
+	<li><tt>public/</tt> yazılabilir: {$writable_public}</li>
+	<li><tt>cache/</tt> yazılabilir: {$writable_cache}</li>
+	<li><tt>cache/t_cache/</tt> yazılabilir: {$writable_templates_cache}</li>
+	<li><tt>cache/t_compile/</tt> yazılabilir: {$writable_templates_compile}</li>
+	<li><tt>cache/_db</tt> yazılabilir: {$writable_db_cache}</li>
+</ul>
+
+<p>2. Yüklenen dosyaları depolamak için bir dizin oluşturulmalı ve yazılabilir yapılmalıdır (aşağıdaki "Dosya Ayarları" bölümüne bakın).</p>]]></message>
+	<message key="log.editor.recommendation">{$submissionId}  için bir editör önerisi ({$decision}), {$editorName} tarafından kaydedildi.</message>
+	<message key="notification.type.submissionSubmitted">Yeni bir makale, "{$title}," gönderildi.</message>
+	<message key="notification.savedIssueMetadata">Sayı üst verileri kaydedildi.</message>
+	<message key="notification.type.editorAssignmentTask">Editörün atanması yapılması gereken yeni bir makale gönderildi.</message>
+	<message key="notification.type.assignProductionUser">Katılımcılar listesindeki Atama bağlantısını kullanarak bir kullanıcı oluşturmak için bir kullanıcı atayın.</message>
+	<message key="notification.type.awaitingRepresentations">Baskılar Bekliyor.</message>
+	<message key="notification.type.publicationScheduled">Bu gönderi yayınlanmak üzere planlandı.</message>
+	<message key="user.authorization.noContext">Bağlamda dergi yok!</message>
+	<message key="user.authorization.invalidIssue">Geçersiz sayı talep edildi!</message>
+	<message key="grid.action.createContext">Yeni Bir Dergi Oluştur</message>
+	<message key="editor.navigation.issues">Sayılar</message>
+	<message key="notification.type.approveSubmission">Bu gönderinin sayıda görüntülenebilmesi için onay gerekir.</message>
+	<message key="notification.type.approveSubmissionTitle">Bekleyen onay.</message>
+	<message key="user.profile.form.showOtherContexts">Diğer dergilere kayıt ol</message>
+	<message key="user.profile.form.hideOtherContexts">Diğer dergileri sakla</message>
+	<message key="article.view.interstitial">Lütfen indirmek için bir makale dosyası seçin.</message>
+	<message key="grid.catalogEntry.availableRepresentation.approved">Onaylandı</message>
+	<message key="grid.catalogEntry.availableRepresentation.notApproved">Onay Bekleniyor</message>
+	<message key="grid.catalogEntry.approvedRepresentation.title">Dizgi Onayı</message>
+	<message key="grid.catalogEntry.approvedRepresentation.message"><![CDATA[<p>Yayın için bu dizgiyi onaylayın</p>]]></message>
+	<message key="grid.catalogEntry.approvedRepresentation.removeMessage"><![CDATA[<p>Bu dizginin onayını kaldır.</p>]]></message>
+	<message key="search.cli.rebuildIndex.indexing">"{$journalName}" indeksleniyor</message>
+	<message key="search.cli.rebuildIndex.indexingByJournalNotSupported">Bu arama uygulaması, dergi başına yeniden indekslenmesine izin vermez.</message>
+	<message key="search.cli.rebuildIndex.unknownJournal">Verilen günlük yolu "{$journalPath}" bu dergi için çözülemedi.</message>
+	<message key="editor.issues.backIssues">Eski Sayılar</message>
+	<message key="editor.issues.futureIssues">Gelecek Sayılar</message>
+	<message key="navigation.subscriptions">Abonelikler</message>
+	<message key="log.editor.submissionExpedited">{$editorName}, {$submissionId} makalesi için düzenleme işlemini tamamladı.</message>
+	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Proposed Creative Commons Copyright Notices</h3>
+<h4>1. Proposed Policy for Journals That Offer Open Access</h4>
+Authors who publish with this journal agree to the following terms:
+<ol type="a">
+	<li>Authors retain copyright and grant the journal right of first publication with the work simultaneously licensed under a <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License</a> that allows others to share the work with an acknowledgement of the work's authorship and initial publication in this journal.</li>
+	<li>Authors are able to enter into separate, additional contractual arrangements for the non-exclusive distribution of the journal's published version of the work (e.g., post it to an institutional repository or publish it in a book), with an acknowledgement of its initial publication in this journal.</li>
+	<li>Authors are permitted and encouraged to post their work online (e.g., in institutional repositories or on their website) prior to and during the submission process, as it can lead to productive exchanges, as well as earlier and greater citation of published work (See <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>).</li>
+</ol>
+
+<h4>2. Proposed Policy for Journals That Offer Delayed Open Access</h4>
+Authors who publish with this journal agree to the following terms:
+<ol type="a">
+	<li>Authors retain copyright and grant the journal right of first publication, with the work [SPECIFY PERIOD OF TIME] after publication simultaneously licensed under a <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License</a> that allows others to share the work with an acknowledgement of the work's authorship and initial publication in this journal.</li>
+	 <li>Authors are able to enter into separate, additional contractual arrangements for the non-exclusive distribution of the journal's published version of the work (e.g., post it to an institutional repository or publish it in a book), with an acknowledgement of its initial publication in this journal.</li>
+	 <li>Authors are permitted and encouraged to post their work online (e.g., in institutional repositories or on their website) prior to and during the submission process, as it can lead to productive exchanges, as well as earlier and greater citation of published work (See <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html"> The Effect of Open Access</a>).</li>
+</ol>]]></message>
+	<message key="user.reviewerPrompt.optin">Evet, bu dergiye gönderilen başvurulara hakemlik için istek yapanlarla iletişime geçmek istiyorum.</message>
+	<message key="user.register.form.emailConsentAllContexts">Evet, kaydettiğim tüm dergiler için yeni yayınlar ve duyurulardan haberdar olmak istiyorum.</message>
+	<message key="notification.type.public">Genel Duyurular</message>
 </locale>
