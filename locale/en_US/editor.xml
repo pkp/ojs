@@ -12,6 +12,18 @@
   -->
 
 <locale name="en_US" full_name="U.S. English">
+    <!-- added by pkel/retostauffer -->
+    <message key="editor.submission.workflowDecisions.stageDecision">A decision has already been submitted</message>
+    <message key="editor.submission.workflowDecisions.stageDecision.change">Change decision</message>
+    <message key="editor.submission.workflowDecisions.stageDecision.Review.revision">Revision required</message>
+    <message key="editor.submission.workflowDecisions.stageDecision.Review.resubmit">Declined, resubmit for review</message>
+    <message key="editor.submission.workflowDecisions.stageDecision.Review.sentToExternal">Sent to externals for review</message>
+    <message key="editor.submission.workflowDecisions.stageDecision.Review.accepted">Submission accepted</message>
+    <message key="editor.submission.workflowDecisions.stageDecision.Review.declined">Submission declined</message>
+
+    <message key="editor.submission.workflowDecisions.stageDecision.Submission.published">Already published.</message>
+    <message key="editor.submission.workflowDecisions.stageDecision.Submission.declined">Submission has been declined.</message>
+
 	<message key="editor.home">Editor Home</message>
 	<message key="editor.reassign">Reassign</message>
 	<message key="editor.submissionsAndPublishing">Submissions and Publishing</message>
