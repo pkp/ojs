@@ -116,6 +116,20 @@
 		e.chartOptions.elements.rectangle.backgroundColor = 'rgba(0, 122, 178, 0.6)';
 	});
 
+	// Toggle display of consent checkboxes in site-wide registration
+	var $contextOptinGroup = $('#contextOptinGroup');
+	if ($contextOptinGroup.length) {
+		var $roles = $contextOptinGroup.find('.roles :checkbox');
+		$roles.change(function() {
+			var $thisRoles = $(this).closest('.roles');
+			if ($thisRoles.find(':checked').length) {
+				$thisRoles.siblings('.context_privacy').addClass('context_privacy_visible');
+			} else {
+				$thisRoles.siblings('.context_privacy').removeClass('context_privacy_visible');
+			}
+		});
+	}
+
 	// Initialize tag-it components
 	//
 	// The tag-it component is used during registration for the user to enter
