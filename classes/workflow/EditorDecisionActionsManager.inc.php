@@ -38,12 +38,14 @@ class EditorDecisionActionsManager {
 
 	/**
 	 * Get decision actions labels.
-	 * @param $decisions
+	 * @param $context Context
+	 * @param $stageId int
+	 * @param $decisions array
 	 * @return array
 	 */
-	static function getActionLabels($context, $decisions) {
+	static function getActionLabels($context, $stageId, $decisions) {
 		$allDecisionsData =
-			self::_submissionStageDecisions() +
+			self::_submissionStageDecisions($stageId) +
 			self::_externalReviewStageDecisions($context) +
 			self::_editorialStageDecisions();
 
@@ -93,7 +95,7 @@ class EditorDecisionActionsManager {
 	static function getStageDecisions($context, $stageId, $makeDecision = true) {
 		switch ($stageId) {
 			case WORKFLOW_STAGE_ID_SUBMISSION:
-				return self::_submissionStageDecisions($makeDecision);
+				return self::_submissionStageDecisions($stageId, $makeDecision);
 			case WORKFLOW_STAGE_ID_EXTERNAL_REVIEW:
 				return self::_externalReviewStageDecisions($context, $makeDecision);
 			case WORKFLOW_STAGE_ID_EDITING:
@@ -128,10 +130,11 @@ class EditorDecisionActionsManager {
 	 * If the user cannot make decisions i.e. if it is a recommendOnly user,
 	 * the user can only send the submission to the review stage, and neither
 	 * acept nor decline the submission.
+	 * @param $stageId int WORKFLOW_STAGE_ID_...
 	 * @param $makeDecision boolean If the user can make decisions
 	 * @return array
 	 */
-	static function _submissionStageDecisions($makeDecision = true) {
+	static function _submissionStageDecisions($stageId, $makeDecision = true) {
 		$decisions = array(
 			SUBMISSION_EDITOR_DECISION_EXTERNAL_REVIEW => array(
 				'operation' => 'externalReview',
@@ -141,13 +144,18 @@ class EditorDecisionActionsManager {
 			)
 		);
 		if ($makeDecision) {
+			if ($stageId == WORKFLOW_STAGE_ID_SUBMISSION) {
+				$decisions = $decisions + array(
+					SUBMISSION_EDITOR_DECISION_ACCEPT => array(
+						'name' => 'accept',
+						'operation' => 'promote',
+						'title' => 'editor.submission.decision.skipReview',
+						'toStage' => 'submission.copyediting',
+					),
+				);
+			}
+
 			$decisions = $decisions + array(
-				SUBMISSION_EDITOR_DECISION_ACCEPT => array(
-					'name' => 'accept',
-					'operation' => 'promote',
-					'title' => 'editor.submission.decision.skipReview',
-					'toStage' => 'submission.copyediting',
-				),
 				SUBMISSION_EDITOR_DECISION_INITIAL_DECLINE => array(
 					'name' => 'decline',
 					'operation' => 'sendReviews',
