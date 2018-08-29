@@ -54,6 +54,19 @@ class IssueEntryHandler extends PublicationEntryHandler {
 		$tabContentUrl = $dispatcher->url($request, ROUTE_COMPONENT, null, 'tab.issueEntry.IssueEntryTabHandler', 'galleyMetadata', null, array('submissionId' => $submission->getId(), 'stageId' => $this->getStageId()));
 		$templateMgr->assign('tabContentUrl', $tabContentUrl);
 
+		// versioning
+		$journal = $request->getJournal();
+		$articleDao = DAORegistry::getDAO('ArticleDAO');
+		$latestSubmissionVersion = $articleDao->getLatestVersionId($submission->getId());
+		$submissionVersion = $latestSubmissionVersion;
+
+		if(isset($args['submissionVersion'])){
+			$submissionVersion = $args['submissionVersion'];
+		}
+
+		$templateMgr->assign('latestSubmissionVersion', $latestSubmissionVersion);
+		$templateMgr->assign('submissionVersion', $submissionVersion);
+
 		return $templateMgr->fetchJson('controllers/modals/submissionMetadata/issueEntryTabs.tpl');
 	}
 
@@ -77,5 +90,3 @@ class IssueEntryHandler extends PublicationEntryHandler {
 		return $json;
 	}
 }
-
-

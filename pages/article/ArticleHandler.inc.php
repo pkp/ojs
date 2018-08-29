@@ -29,6 +29,16 @@ class ArticleHandler extends Handler {
 	/** galley associated with the request **/
 	var $galley;
 
+	/** @var $submissionVersion int: submission(article) version ID associated with the request **/
+	var $submissionVersion;
+	/**
+	 * Constructor
+	 * @param $request Request
+	 */
+	function __construct() {
+		parent::__construct();
+	}
+
 
 	/**
 	 * @copydoc PKPHandler::authorize()
@@ -49,19 +59,20 @@ class ArticleHandler extends Handler {
 	 */
 	function initialize($request, $args = array()) {
 		$articleId = isset($args[0]) ? $args[0] : 0;
+		$this->journal = $request->getContext();
 
-		$journal = $request->getContext();
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-		$publishedArticle = $publishedArticleDao->getPublishedArticleByBestArticleId((int) $journal->getId(), $articleId, true);
-
 		$issueDao = DAORegistry::getDAO('IssueDAO');
+		$articleDao = DAORegistry::getDAO('ArticleDAO');
+		$publishedArticle = $publishedArticleDao->getPublishedArticleByBestArticleId((int) $this->journal->getId(), $articleId, false, null);
+
 		if (isset($publishedArticle)) {
 			$issue = $issueDao->getById($publishedArticle->getIssueId(), $publishedArticle->getJournalId(), true);
 			$this->issue = $issue;
 			$this->article = $publishedArticle;
 		} else {
 			$articleDao = DAORegistry::getDAO('ArticleDAO');
-			$article = $articleDao->getById((int) $articleId, $journal->getId(), true);
+			$article = $articleDao->getById((int) $articleId, $this->journal->getId(), true);
 			$this->article = $article;
 		}
 
@@ -75,15 +86,35 @@ class ArticleHandler extends Handler {
 		}
 	}
 
+
+	/**
+	 * Handle article versions. Calls view().
+	 * @param $args array
+	 * @param $request Request
+	 */
+	function version($args, $request){
+		$articleId = $args[0];
+		$this->submissionVersion = isset($args[1]) ? $args[1] : $this->article->getCurrentVersionId();
+		$galleyId = isset($args[2]) ? $args[2] : 0;
+		array_splice($args, 1, 1);
+
+		// get this published article version
+		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
+		$this->article = $publishedArticleDao->getPublishedArticleByBestArticleId((int) $this->journal->getId(), $articleId, false, $this->submissionVersion);
+		$this->view($args, $request);
+	}
+
+
 	/**
 	 * View Article. (Either article landing page or galley view.)
 	 * @param $args array
 	 * @param $request Request
 	 */
 	function view($args, $request) {
-		$articleId = array_shift($args);
-		$galleyId = array_shift($args);
-		$fileId = array_shift($args);
+		$articleId = $args[0];
+		$galleyId = isset($args[1]) ? $args[1] : 0;
+		$fileId = isset($args[2]) ? $args[2] : 0;
+		$fileRevision = isset($args[3]) ? $args[3] : 0;
 
 		$journal = $request->getJournal();
 		$user = $request->getUser();
@@ -94,8 +125,11 @@ class ArticleHandler extends Handler {
 			'issue' => $issue,
 			'article' => $article,
 			'fileId' => $fileId,
+			'fileRevision' => $fileRevision,
 		));
 		$this->setupTemplate($request);
+
+		$submissionVersion = $this->submissionVersion ? $this->submissionVersion : $article->getCurrentVersionId();
 
 		if (!$this->userCanViewGalley($request, $articleId, $galleyId)) fatalError('Cannot view galley.');
 
@@ -194,13 +228,24 @@ class ArticleHandler extends Handler {
 				$templateMgr->assign('purchaseArticleEnabled', true);
 			}
 
+			// article versioning
+			$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
+			// check if this is an old version
+			if ($this->submissionVersion && ($this->submissionVersion < $article->getCurrentVersionId())) {
+				$templateMgr->assign('isPreviousVersion', true);
+			}
+			// get all published previous article versions
+			$previousVersions = $publishedArticleDao->getPublishedSubmissionVersions($this->article->getId(), $this->journal->getId(), SORT_DIRECTION_DESC);
+			$templateMgr->assign('submissionVersion', $this->submissionVersion);
+			$templateMgr->assign('previousVersions', $previousVersions);
+
 			if (!HookRegistry::call('ArticleHandler::view', array(&$request, &$issue, &$article))) {
 				return $templateMgr->display('frontend/pages/article.tpl');
 			}
 		} else {
 			// Galley: Prepare the galley file download.
 			if (!HookRegistry::call('ArticleHandler::view::galley', array(&$request, &$issue, &$galley, &$article))) {
-				$request->redirect(null, null, 'download', array($articleId, $galleyId));
+				$request->redirect(null, null, 'download', array($articleId, $galleyId, 0, $submissionVersion));
 			}
 
 		}
@@ -257,6 +302,10 @@ class ArticleHandler extends Handler {
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? $args[1] : 0;
 		$fileId = isset($args[2]) ? (int) $args[2] : 0;
+		$submissionVersion = isset($args[3]) ? (int) $args[3] : 0;
+
+		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
+		$this->galley = $galleyDao->getByBestGalleyId($galleyId, $this->article->getId(), $submissionVersion);
 
 		if (!isset($this->galley)) $request->getDispatcher()->handle404();
 		if ($this->galley->getRemoteURL()) $request->redirectUrl($this->galley->getRemoteURL());
@@ -395,5 +444,3 @@ class ArticleHandler extends Handler {
 		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_READER, LOCALE_COMPONENT_PKP_SUBMISSION);
 	}
 }
-
-

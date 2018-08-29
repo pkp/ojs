@@ -22,7 +22,7 @@
 		);
 	{rdelim});
 </script>
-<form class="pkp_form" id="articleGalleyForm" method="post" action="{url op="updateGalley" submissionId=$submissionId representationId=$representationId}">
+<form class="pkp_form" id="articleGalleyForm" method="post" action="{url op="updateGalley" submissionId=$submissionId submissionVersion=$submissionVersion representationId=$representationId}">
 	{csrf}
 	{fbvFormArea id="galley"}
 		{fbvFormSection title="submission.layout.galleyLabel" required=true}

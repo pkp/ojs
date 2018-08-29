@@ -2009,6 +2009,54 @@ class Upgrade extends Installer {
 		return true;
 	}
 
+
+	/**
+	 * For 2.x - 3.2 upgrade: Move 'date_published' from the table 'published_submissions' into the table 'submission_settings'
+	 * @return boolean
+	 */
+	function migrateDatesPublished() {
+		$submissionDao = Application::getSubmissionDAO();
+		$result = $submissionDao->retrieve('SELECT submission_id, date_published FROM published_submissions');
+
+		while (!$result->EOF) {
+			$row = $result->GetRowAssoc(false);
+			$submissionId = $row['submission_id'];
+			$datePublished = $submissionDao->datetimeFromDB($row['date_published']);
+
+			$submission = $submissionDao->getById($submissionId);
+			$submission->setDatePublished($datePublished);
+			$submissionDao->updateLocaleFields($submission);
+
+			$result->MoveNext();
+		}
+		return true;
+	}
+
+	/**
+	 * For 2.x - 3.2 upgrade: Move 'file_id' from the table 'submission_galleys' into the table 'submission_galley_files'
+	 * @return boolean
+	 */
+	function migrateGalleyFiles() {
+		$galleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
+		$result = $galleyDao->retrieve('SELECT galley_id, file_id FROM submission_galleys');
+
+		while (!$result->EOF) {
+			$row = $result->GetRowAssoc(false);
+			$galleyId = $row['galley_id'];
+			$fileId = $row['file_id'];
+
+			if(isset($fileId) && $fileId != 0){
+				$galley = $galleyDao->getById($galleyId);
+				$galley->setFileId($fileId);
+				$galleyDao->updateObject($galley);
+			}
+
+			$result->MoveNext();
+		}
+
+		return true;
+	}
+
 	/**
 	 * For 2.4.x - 3.1.0 upgrade: remove cancelled review assignments.
 	 * @return boolean
@@ -2897,5 +2945,3 @@ class Upgrade extends Installer {
 	}	
 
 }
-
-

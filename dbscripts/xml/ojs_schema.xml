@@ -487,6 +487,10 @@
 		<field name="submission_id" type="I8">
 			<NOTNULL />
 		</field>
+		<field name="submission_version" type="I8">
+			<NOTNULL />
+			<DEFAULT VALUE="1"/>
+		</field>
 		<field name="locale" type="C2" size="14">
 			<NOTNULL />
 			<DEFAULT VALUE=""/>
@@ -505,6 +509,7 @@
 		</index>
 		<index name="submission_settings_pkey">
 			<col>submission_id</col>
+			<col>submission_version</col>
 			<col>locale</col>
 			<col>setting_name</col>
 			<UNIQUE/>
@@ -527,7 +532,6 @@
 		<field name="issue_id" type="I8">
 			<NOTNULL/>
 		</field>
-		<field name="date_published" type="T"/>
 		<field name="seq" type="F">
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>
@@ -561,7 +565,6 @@
 			<NOTNULL/>
 		</field>
 		<field name="label" type="C2" size="255"/>
-		<field name="file_id" type="I8"/>
 		<field name="seq" type="F">
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>
@@ -579,12 +582,41 @@
 
 	<!--
 	  *
+	  * TABLE submission_galley_files
+	  *
+	  -->
+	<table name="submission_galley_files">
+		<field name="galley_id" type="I8">
+			<NOTNULL />
+		</field>
+		<field name="submission_version" type="I8">
+			<NOTNULL />
+			<DEFAULT VALUE="1"/>
+		</field>
+		<field name="file_id" type="I8"/>
+		<descr>Submission galley files</descr>
+		<index name="submission_galley_files_galley_id">
+			<col>galley_id</col>
+		</index>
+		<index name="submission_galley_files_pkey">
+			<col>galley_id</col>
+			<col>submission_version</col>
+			<UNIQUE/>
+		</index>
+	</table>
+
+	<!--
+	  *
 	  * TABLE submission_galley_settings
 	  *
 	  -->
 	<table name="submission_galley_settings">
 		<field name="galley_id" type="I8">
 			<NOTNULL />
+		</field>
+		<field name="submission_version" type="I8">
+			<NOTNULL />
+			<DEFAULT VALUE="1"/>
 		</field>
 		<field name="locale" type="C2" size="14">
 			<NOTNULL />
@@ -604,6 +636,7 @@
 		</index>
 		<index name="submission_galley_settings_pkey">
 			<col>galley_id</col>
+			<col>submission_version</col>
 			<col>locale</col>
 			<col>setting_name</col>
 			<UNIQUE/>

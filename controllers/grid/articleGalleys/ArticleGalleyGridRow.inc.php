@@ -16,16 +16,20 @@
 import('lib.pkp.classes.controllers.grid.GridRow');
 
 class ArticleGalleyGridRow extends GridRow {
-	/** @var Submission **/
+	/** @var $_submission submission the article **/
 	var $_submission;
+
+	/** @var $_submissionVersion int the article version */
+	var $_submissionVersion;
 
 	/**
 	 * Constructor
 	 * @param $submission Submission
+	 * @param $submissionVersion Submission Version
 	 */
-	function __construct($submission) {
+	function __construct($submission, $submissionVersion) {
 		$this->_submission = $submission;
-
+		$this->_submissionVersion = $submissionVersion;
 		parent::__construct();
 	}
 
@@ -39,6 +43,10 @@ class ArticleGalleyGridRow extends GridRow {
 		// Do the default initialization
 		parent::initialize($request, $template);
 
+		// Retrieve the submission from the request
+		$submission = $this->getSubmission();
+		$submissionVersion = $this->getSubmissionVersion();
+
 		// Is this a new row or an existing row?
 		$rowId = $this->getId();
 		if (!empty($rowId) && is_numeric($rowId)) {
@@ -47,42 +55,47 @@ class ArticleGalleyGridRow extends GridRow {
 			$actionArgs = $this->getRequestArgs();
 			$actionArgs['representationId'] = $rowId;
 
-			// Add row-level actions
-			import('lib.pkp.classes.linkAction.request.AjaxModal');
-			$this->addAction(new LinkAction(
-				'editGalley',
-				new AjaxModal(
-					$router->url($request, null, null, 'editGalley', null, $actionArgs),
-					__('submission.layout.editGalley'),
-					'modal_edit'
-				),
-				__('grid.action.edit'),
-				'edit'
-			));
+			// Check of this is the latest version to ...
+			if($submissionVersion == $submission->getCurrentVersionId()){
 
-			$galley = $this->getData();
-			if ($galley->getRemoteUrl() == '') {
-				import('lib.pkp.controllers.api.file.linkAction.AddFileLinkAction');
-				import('lib.pkp.classes.submission.SubmissionFile'); // Constants
-				$this->addAction(new AddFileLinkAction(
-					$request, $this->getSubmission()->getId(), WORKFLOW_STAGE_ID_PRODUCTION,
-					array(ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR, ROLE_ID_ASSISTANT),
-					SUBMISSION_FILE_PROOF, ASSOC_TYPE_REPRESENTATION, $rowId,
-					null, $galley->getFileId()
+				// ... add row-level actions
+				import('lib.pkp.classes.linkAction.request.AjaxModal');
+				$this->addAction(new LinkAction(
+					'editGalley',
+					new AjaxModal(
+						$router->url($request, null, null, 'editGalley', null, $actionArgs),
+						__('submission.layout.editGalley'),
+						'modal_edit'
+					),
+					__('grid.action.edit'),
+					'edit'
 				));
-			}
 
-			import('lib.pkp.classes.linkAction.request.RemoteActionConfirmationModal');
-			$this->addAction(new LinkAction(
-				'deleteGalley',
-				new RemoteActionConfirmationModal(
-					$request->getSession(),
-					__('common.confirmDelete'),
-					__('grid.action.delete'),
-					$router->url($request, null, null, 'deleteGalley', null, $actionArgs), 'modal_delete'),
-				__('grid.action.delete'),
-				'delete'
-			));
+				$galley = $this->getData();
+
+				if ($galley->getRemoteUrl() == '') {
+							import('lib.pkp.controllers.api.file.linkAction.AddFileLinkAction');
+							import('lib.pkp.classes.submission.SubmissionFile'); // Constants
+							$this->addAction(new AddFileLinkAction(
+								$request, $this->getSubmission()->getId(), WORKFLOW_STAGE_ID_PRODUCTION,
+								array(ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR, ROLE_ID_ASSISTANT),
+								SUBMISSION_FILE_PROOF,
+								ASSOC_TYPE_REPRESENTATION, $rowId,
+								null, $galley->getFileId()
+							));
+					}
+
+					import('lib.pkp.classes.linkAction.request.RemoteActionConfirmationModal');
+						$this->addAction(new LinkAction(
+							'deleteGalley',
+							new RemoteActionConfirmationModal(
+								$request->getSession(),
+								__('common.confirmDelete'),
+								__('grid.action.delete'),
+								$router->url($request, null, null, 'deleteGalley', null, $actionArgs), 'modal_delete'),
+							'delete'
+						));
+			}
 		}
 	}
 
@@ -95,14 +108,21 @@ class ArticleGalleyGridRow extends GridRow {
 	}
 
 	/**
+	 * Get the submission version for this row (already authorized)
+	 * @return int
+	 */
+	function getSubmissionVersion() {
+		return $this->_submissionVersion;
+	}
+
+	/**
 	 * Get the base arguments that will identify the data in the grid.
 	 * @return array
 	 */
 	function getRequestArgs() {
 		return array(
 			'submissionId' => $this->getSubmission()->getId(),
+			'submissionVersion' => $this->getSubmissionVersion(),
 		);
 	}
 }
-
-

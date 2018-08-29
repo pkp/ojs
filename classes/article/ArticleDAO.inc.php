@@ -45,7 +45,7 @@ class ArticleDAO extends SubmissionDAO {
 		$params = $this->getFetchParameters();
 		$params[] = $settingName;
 
-		$sql = 'SELECT s.*, ps.date_published,
+		$sql = 'SELECT s.*,
 				' . $this->getFetchColumns() . '
 			FROM	submissions s
 				LEFT JOIN published_submissions ps ON (s.submission_id = ps.submission_id)
@@ -72,10 +72,11 @@ class ArticleDAO extends SubmissionDAO {
 	/**
 	 * Internal function to return an Article object from a row.
 	 * @param $row array
+	 * @param $submissionVersion int
 	 * @return Article
 	 */
-	function _fromRow($row) {
-		$article = parent::_fromRow($row);
+	function _fromRow($row, $submissionVersion = null) {
+		$article = parent::_fromRow($row, $submissionVersion);
 
 		$article->setSectionId($row['section_id']);
 		$article->setSectionTitle($row['section_title']);
@@ -172,9 +173,10 @@ class ArticleDAO extends SubmissionDAO {
 		);
 
 		$this->updateLocaleFields($article);
+		$version = $article->getCurrentVersionId($article->getContextId());
 
 		// update authors for this article
-		$authors = $article->getAuthors();
+		$authors = $article->getAuthors(false, $version);
 		for ($i=0, $count=count($authors); $i < $count; $i++) {
 			if ($authors[$i]->getId() > 0) {
 				$this->authorDao->updateObject($authors[$i]);
@@ -370,7 +372,7 @@ class ArticleDAO extends SubmissionDAO {
 	 * @copydoc SubmissionDAO::getGroupByColumns()
 	 */
 	protected function getGroupByColumns() {
-		return 's.submission_id, ps.date_published, stl.setting_value, stpl.setting_value, sal.setting_value, sapl.setting_value';
+		return 's.submission_id, stl.setting_value, stpl.setting_value, sal.setting_value, sapl.setting_value';
 	}
 
 	/**

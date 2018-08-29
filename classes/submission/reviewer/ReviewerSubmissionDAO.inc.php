@@ -48,7 +48,6 @@ class ReviewerSubmissionDAO extends ArticleDAO {
 		$result = $this->retrieve(
 			'SELECT	a.*,
 				r.*,
-				ps.date_published,
 				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
 				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
 			FROM	submissions a

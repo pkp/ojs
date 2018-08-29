@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../../../lib/pkp/dtd/xmlData.dtd">
+
+<!--
+  * dbscripts/xml/upgrade/3.2.0_versioning.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * 3.2.0.0 versioning updates.
+  -->
+<data>
+	<sql>
+		<!-- submission_settings -->
+		<query>
+			INSERT INTO submission_settings (submission_id, setting_name, setting_value, setting_type)
+			SELECT ps.submission_id, 'datePublished', ps.date_published, 'string'
+			FROM published_submissions_tmp ps
+			WHERE ps.date_published IS NOT NULL
+		</query>
+		<query>UPDATE submission_settings SET submission_version = 1 WHERE submission_version IS NULL OR submission_version = 0</query>
+		<query>DROP TABLE published_submissions_tmp</query>
+
+		<!-- author_settings -->
+		<query>UPDATE author_settings SET submission_version = 1 WHERE submission_version IS NULL OR submission_version = 0</query>
+
+		<!-- submission galleys -->
+		<query>
+			INSERT INTO submission_galley_files (galley_id, file_id)
+			SELECT sg.galley_id, sg.file_id
+			FROM submission_galleys_tmp sg
+			WHERE sg.file_id IS NOT NULL
+		</query>
+		<query>DROP TABLE submission_galleys_tmp</query>
+	</sql>
+</data>

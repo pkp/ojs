@@ -22,13 +22,24 @@
 				{rdelim});
 	{rdelim});
 </script>
+{if $latestSubmissionVersion != 1}
+	<div class="pkp_notification">
+		<div class="notifyInfo">
+			{translate key="submission.production.editMetadata.info" version=$submissionVersion}
+			<br>
+			{if $latestSubmissionVersion == $submissionVersion}
+				{translate key="submission.production.editMetadata.previous"}
+			{/if}
+		</div>
+	</div>
+{/if}
 <div id="newIssueEntryTabs">
 	<ul>
 		<li>
-			<a name="submission" href="{url router=$smarty.const.ROUTE_COMPONENT component="tab.issueEntry.IssueEntryTabHandler" tab="submission" op="submissionMetadata" submissionId=$submissionId stageId=$stageId tabPos="0"}">{translate key="submission.issueEntry.submissionMetadata"}</a>
+			<a name="submission" href="{url router=$smarty.const.ROUTE_COMPONENT component="tab.issueEntry.IssueEntryTabHandler" tab="submission" op="submissionMetadata" submissionId=$submissionId submissionVersion=$submissionVersion stageId=$stageId tabPos="0"}">{translate key="submission.issueEntry.submissionMetadata"}</a>
 		</li>
 		<li>
-			<a name="catalog" href="{url router=$smarty.const.ROUTE_COMPONENT component="tab.issueEntry.IssueEntryTabHandler" tab="identifiers" op="identifiers" submissionId=$submissionId stageId=$stageId tabPos="1"}">{translate key="submission.identifiers"}</a>
+			<a name="catalog" href="{url router=$smarty.const.ROUTE_COMPONENT component="tab.issueEntry.IssueEntryTabHandler" tab="identifiers" op="identifiers" submissionId=$submissionId submissionVersion=$submissionVersion stageId=$stageId tabPos="1"}">{translate key="submission.identifiers"}</a>
 		</li>
 		{if $citationsEnabled}
 			<li>

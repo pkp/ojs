@@ -27,6 +27,7 @@
 	<input type="hidden" name="stageId" value="{$stageId|escape}" />
 	<input type="hidden" name="waivePublicationFee" value="0" />
 	<input type="hidden" name="markAsPaid" value="0" />
+  <input type="hidden" name="submissionVersion" value="{$formParams.submissionVersion|escape}" />
 
 	{if !$publicationFeeEnabled || $publicationPayment}
 		{fbvFormArea id="schedulingInformation" title="editor.article.scheduleForPublication"}
@@ -46,10 +47,10 @@
 			{/fbvFormSection}
 		{/fbvFormArea}
 
-		{if $publishedArticle}
+		{if $publishedArticle && $publishedVersion}
 			{fbvFormArea id="schedulingInformation" title="editor.issues.published"}
 				{fbvFormSection for="publishedDate"}
-					{fbvElement type="text" required=true id="datePublished" value=$publishedArticle->getDatePublished()|date_format:$dateFormatShort translate=false label="editor.issues.published" inline=true size=$fbvStyles.size.MEDIUM class="datepicker"}
+					{fbvElement type="text" required=true id="datePublished" value=$datePublished|date_format:$dateFormatShort translate=false label="editor.issues.published" inline=true size=$fbvStyles.size.MEDIUM class="datepicker"}
 				{if $issueAccess && $issueAccess == $smarty.const.ISSUE_ACCESS_SUBSCRIPTION && $context->getSetting('publishingMode') == $smarty.const.PUBLISHING_MODE_SUBSCRIPTION}
 					{fbvElement type="select" id="accessStatus" required=true from=$accessOptions selected=$publishedArticle->getAccessStatus() translate=false label="editor.issues.access" inline=true size=$fbvStyles.size.MEDIUM}
 				{/if}

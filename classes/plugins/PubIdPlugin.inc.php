@@ -129,17 +129,20 @@ abstract class PubIdPlugin extends PKPPubIdPlugin {
 		$submissionFile = ($pubObjectType == 'SubmissionFile' ? $pubObject : null);
 
 		// Get the context id.
+		$submissionDao = Application::getSubmissionDAO();
 		if (in_array($pubObjectType, array('Issue', 'Submission'))) {
 			$contextId = $pubObject->getJournalId();
 		} else {
 			// Retrieve the submission.
 			assert(is_a($pubObject, 'Representation') || is_a($pubObject, 'SubmissionFile'));
-			$submissionDao = Application::getSubmissionDAO();
 			$submission = $submissionDao->getById($pubObject->getSubmissionId(), null, true);
 			if (!$submission) return null;
 			// Now we can identify the context.
 			$contextId = $submission->getJournalId();
 		}
+		// Get the latest submission version
+		$latestSubmissionVersion = $submission->getCurrentVersionId();
+
 		// Check the context
 		$context = $this->getContext($contextId);
 		if (!$context) return null;
@@ -192,7 +195,7 @@ abstract class PubIdPlugin extends PKPPubIdPlugin {
 
 				if ($submission) {
 					// %a - article id
-					$pubIdSuffix = PKPString::regexp_replace('/%a/', $submission->getId(), $pubIdSuffix);
+					$pubIdSuffix = PKPString::regexp_replace('/%a/', $submission->getId().'.'.$latestSubmissionVersion, $pubIdSuffix);
 					// %p - page number
 					if ($submission->getPages()) {
 						$pubIdSuffix = PKPString::regexp_replace('/%p/', $submission->getPages(), $pubIdSuffix);
@@ -221,7 +224,7 @@ abstract class PubIdPlugin extends PKPPubIdPlugin {
 				}
 
 				if ($submission) {
-					$pubIdSuffix .= '.' . $submission->getId();
+					$pubIdSuffix .= '.' . $submission->getId().'.'.$latestSubmissionVersion;
 				}
 
 				if ($representation) {
@@ -291,5 +294,3 @@ abstract class PubIdPlugin extends PKPPubIdPlugin {
 	}
 
 }
-
-

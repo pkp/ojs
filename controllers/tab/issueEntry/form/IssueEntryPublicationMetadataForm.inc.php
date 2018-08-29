@@ -44,7 +44,8 @@ class IssueEntryPublicationMetadataForm extends Form {
 	function __construct($submissionId, $userId, $stageId = null, $formParams = null) {
 		parent::__construct('controllers/tab/issueEntry/form/publicationMetadataFormFields.tpl');
 		$submissionDao = Application::getSubmissionDAO();
-		$this->_submission = $submissionDao->getById($submissionId);
+		$submissionVersion = isset($formParams['submissionVersion']) ? $formParams['submissionVersion'] : null;
+		$this->_submission = $submissionDao->getById((int) $submissionId, null, false, $submissionVersion);
 
 		$this->_stageId = $stageId;
 		$this->_formParams = $formParams;
@@ -71,6 +72,9 @@ class IssueEntryPublicationMetadataForm extends Form {
 			'formParams' => $this->getFormParams(),
 			'context' => $context,
 		));
+
+		// check if this submissionVersion has a publication date
+		$templateMgr->assign('publishedVersion', ($this->_submission->getDatePublished()? true : false));
 
 		$journalSettingsDao = DAORegistry::getDAO('JournalSettingsDAO');
 		$templateMgr->assign('issueOptions', $this->getIssueOptions($context));
@@ -147,7 +151,7 @@ class IssueEntryPublicationMetadataForm extends Form {
 
 		$submission = $this->getSubmission();
 		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-		$this->_publishedArticle = $publishedArticleDao->getByArticleId($submission->getId(), null, false);
+		$this->_publishedArticle = $publishedArticleDao->getByArticleId($submission->getId(), null, false, $submission->getSubmissionVersion());
 
 		$copyrightHolder = $submission->getCopyrightHolder(null);
 		$copyrightYear = $submission->getCopyrightYear();
@@ -158,6 +162,7 @@ class IssueEntryPublicationMetadataForm extends Form {
 			'copyrightYear' => $submission->getDefaultCopyrightYear(),
 			'licenseURL' => $submission->getDefaultLicenseURL(),
 			'arePermissionsAttached' => !empty($copyrightHolder) || !empty($copyrightYear) || !empty($licenseURL),
+			'datePublished' => $submission->getDatePublished(),
 		);
 	}
 
@@ -255,7 +260,7 @@ class IssueEntryPublicationMetadataForm extends Form {
 
 			$sectionDao = DAORegistry::getDAO('SectionDAO');
 			$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
-			$publishedArticle = $publishedArticleDao->getByArticleId($submission->getId(), null, false); /* @var $publishedArticle PublishedArticle */
+			$publishedArticle = $publishedArticleDao->getByArticleId($submission->getId(), null, false, $publishedArticleDao->getLatestVersionId($submission->getId())); /* @var $publishedArticle PublishedArticle */
 
 			if ($publishedArticle) {
 				if (!$issue || !$issue->getPublished()) {
@@ -282,11 +287,13 @@ class IssueEntryPublicationMetadataForm extends Form {
 
 			if ($issue) {
 
+				// set publication date
+				$submission->setDatePublished($this->getData('datePublished') ? $this->getData('datePublished') : Core::getCurrentDate());
+
 				// Schedule against an issue.
 				if ($publishedArticle) {
 					if ($issueId != $publishedArticle->getIssueId()) $publishedArticle->setSequence(REALLY_BIG_NUMBER);
 					$publishedArticle->setIssueId($issueId);
-					$publishedArticle->setDatePublished($this->getData('datePublished'));
 					$publishedArticle->setAccessStatus($accessStatus);
 					$publishedArticleDao->updatePublishedArticle($publishedArticle);
 
@@ -296,7 +303,6 @@ class IssueEntryPublicationMetadataForm extends Form {
 					$publishedArticle = $publishedArticleDao->newDataObject();
 					$publishedArticle->setId($submission->getId());
 					$publishedArticle->setIssueId($issueId);
-					$publishedArticle->setDatePublished(Core::getCurrentDate());
 					$publishedArticle->setSequence(REALLY_BIG_NUMBER);
 					$publishedArticle->setAccessStatus($accessStatus);
 
@@ -339,6 +345,15 @@ class IssueEntryPublicationMetadataForm extends Form {
 				$submission->setLicenseURL(null);
 			}
 
+			// Versioning
+			// get submission version
+			if ($request->getUserVar('submissionVersion')) {
+				$submissionVersion = (int)$request->getUserVar('submissionVersion');
+			} else {
+				$submissionVersion = $submission->getCurrentVersionId();
+			}
+			$submission->setData('submissionVersion', $submissionVersion);
+
 			// Resequence the articles.
 			$publishedArticleDao->resequencePublishedArticles($submission->getSectionId(), $issueId);
 
@@ -358,5 +373,3 @@ class IssueEntryPublicationMetadataForm extends Form {
 		}
 	}
 }
-
-
