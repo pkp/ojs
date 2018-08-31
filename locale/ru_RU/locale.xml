@@ -676,6 +676,9 @@
 	<message key="user.register.reviewerDescription">Согласен участвовать в рецензировании материалов для этого сайта.</message>
 	<message key="user.register.reviewerInterests">Укажите Ваши интересы как рецензента (основная тематика, методы исследования):</message>
 	<message key="user.register.form.emailConsentAllContexts">Да, я хочу, чтобы меня уведомляли о новых публикациях и объявлениях во всех журналах, в которых я зарегистрирован.</message>
+	<message key="user.register.form.privacyConsentThisContext"><![CDATA[Да, я даю согласие на сбор и хранение моих данных в рамках <a href="{$privacyUrl}" target="_blank">политики конфиденциальности</a> этого журнала.]]></message>
+	<message key="user.register.form.missingContextConsent">Вы должны согласиться с политикой конфиденциальности любого журнала, в котором вы регистрируетесь.</message>
+	<message key="user.register.form.missingSiteConsent">Вы должны согласиться с политикой конфиденциальности этого сайта.</message>
 
 	<!-- Подписки -->
 	<message key="user.subscriptions.mySubscriptions">Мои подписки</message>
