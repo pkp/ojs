@@ -201,9 +201,21 @@
 	<message key="journal.journal">Tidskrift</message>
 
 	<!-- User -->
+	<message key="user.profile.profileImage">Profilbild</message>
 	<message key="user.showAllJournals">Visa mina tidskrifter</message>
 	<message key="user.registerForOtherJournals">Registrera för Andra tidskrifter</message>
 	<message key="user.myJournals">Mina tidskrifter</message>
+	<message key="user.manageMySubscriptions">Hantera mina prenumerationer</message>
+	<message key="user.noRoles.chooseJournal">Ditt konto är inte kopplat till några tidskrifter. Välj en tidskrift:</message>
+	<message key="user.noRoles.noRolesForJournal">Ditt konto har inga tilldelade roller för denna tidskrift. Välj bland nedanstående handlingar:</message>
+	<message key="user.noRoles.submitArticle">Skicka ett förslag</message>
+	<message key="user.noRoles.submitArticleRegClosed">Skicka en artikel: Författarregisterering är avaktiverad.</message>
+	<message key="user.noRoles.regReviewer">Registera som granskare</message>
+	<message key="user.noRoles.regReviewerClosed">Registera som granskare: Granskarregistrering är avaktiverad.</message>
+	<message key="user.orcid">ORCID iD</message>
+	<message key="user.orcid.description"><![CDATA[ORCID iDs kan vara tilldelas av <a href="http://orcid.org/" target="_blank">the ORCID Registry</a>. Du måste följa deras krav för att uttrycka en ORCID iD, samt ange fullständig URI (ex. <em>http://orcid.org/0000-0002-1825-0097</em>).]]></message>
+	<message key="user.profile.form.orcidInvalid">Det ORCID iD du angav är ogiltigt.</message>
+	<message key="user.profile.implicitAuthChangePasswordInstructions">Om du loggade in via din Shibboleth, följ din organisations rutiner för att ändra ditt lösenord. Lokala användare fortsätter enligt nedan.</message>	
 	
 	<!-- Roles -->
 	<message key="user.role.manager">Tidskriftsansvarig</message>
@@ -235,6 +247,32 @@
 	<message key="issue.noIssues">Inga nummer</message>
 	<message key="issue.toc">Innehållsförteckning</message>
 	<message key="issue.abstract">Sammanfattning</message>
+
+	<!-- Common Subscription Type Terms -->
+	<message key="subscriptionTypes.currency">Valuta</message>
+	<message key="subscriptionTypes.year">år</message>
+	<message key="subscriptionTypes.years">års</message>
+	<message key="subscriptionTypes.month">månad</message>
+	<message key="subscriptionTypes.months">månader</message>
+	<message key="subscriptionTypes.nonExpiring">löper inte ut</message>
+	<message key="subscriptionTypes.format">Format</message>
+	<message key="subscriptionTypes.format.online">Online</message>
+	<message key="subscriptionTypes.format.print">Papper</message>
+	<message key="subscriptionTypes.format.printOnline">Papper och online</message>
+
+	<!-- Common Subscription Terms -->
+	<message key="subscriptions.inactive">Inaktiv</message>
+	<message key="subscriptions.status">Status</message>
+	<message key="subscriptions.status.active">Aktiv</message>
+	<message key="subscriptions.status.needsInformation">Ytterligare information behövs</message>
+	<message key="subscriptions.status.needsApproval">Behöver godkännas</message>
+	<message key="subscriptions.status.awaitingManualPayment">Inväntar maneull betalning</message>
+	<message key="subscriptions.status.awaitingOnlinePayment">Inväntar onlinebetalning</message>
+	<message key="subscriptions.status.other">Annat, se anteckningar</message>
+	<message key="subscriptions.individualDescription">Individuella prenumerationer kräver inloggning för åtkomst till innehållet.</message>
+	<message key="subscriptions.institutionalDescription">Institutionsprenumerationer kräver ingen inloggning, användarens domän och/eller IP-adress används för att ge åtkomst till innehållet.</message>
+	<message key="subscriptions.institutionalOnlinePaymentDescription"><![CDATA[<strong>Observera:</strong> Institutionsprenumerationer som köpts online kräver godkännande av domän och IP-spann innan prenumerationen aktiveras.]]></message>
+
 
 	<!--
 	 *
@@ -700,7 +738,45 @@ Aktiva visar antalet granskare som för tillfället arbetar med granskning.]]></
 	<message key="user.register.reviewerDescriptionNoInterests">Kan utföra granskning av inskickade manuskript för tidskriften.</message>
 	<message key="user.register.reviewerDescription">Kan utföra granskning av inskickade manuskript till tidskriften. Uppge intresseområden för att utföra granskning (Huvudämnen och forskningsmetod).</message>
 
-
+	<!-- Subscriptions -->
+	<message key="user.subscriptions.mySubscriptions">Mina prenumerationer</message>
+	<message key="user.subscriptions.subscriptionStatus">Prenumerationsstatus</message>
+	<message key="user.subscriptions.statusInformation">Aktiva och utgångna prenumerationer visas nedan med sina respektive utgångsdatum. Dessutom kan följande statusinformationer ingå i varje prenumeration.</message>
+	<message key="user.subscriptions.status">Status</message>
+	<message key="user.subscriptions.statusDescription">Beskrivning</message>
+	<message key="user.subscriptions.status.needsInformationDescription">Ytterligare information krävs innan prenumerationen kan aktiveras</message>
+	<message key="user.subscriptions.status.needsApprovalDescription">Prenumerationen måste granskas innan den aktiveras</message>
+	<message key="user.subscriptions.status.awaitingManualPaymentDescription">Manuell betalning har inletts men inte mottagits</message>
+	<message key="user.subscriptions.status.awaitingOnlinePaymentDescription">Onlinebetalning har inletts men avbrutits eller inte färdigställts</message>
+	<message key="user.subscriptions.individualSubscriptions">Individuell prenumeration</message>
+	<message key="user.subscriptions.institutionalSubscriptions">Institutionsprenumeration</message>
+	<message key="user.subscriptions.renew">Förnya</message>
+	<message key="user.subscriptions.purchase">Köp</message>
+	<message key="user.subscriptions.purchaseNewSubscription">Köp ny prenumeration</message>
+	<message key="user.subscriptions.purchaseIndividualSubscription">Köp individuell prenumeration</message>
+	<message key="user.subscriptions.purchaseInstitutionalSubscription">Köp institutionsprenumeration</message>
+	<message key="user.subscriptions.expires">Löper ut</message>
+	<message key="user.subscriptions.expired">Löpt ut</message>
+	<message key="user.subscriptions.viewSubscriptionTypes">Visa tillgängliga prenumerationstyper</message>
+	<message key="user.subscriptions.form.typeId">Prenumerationstyp</message>
+	<message key="user.subscriptions.form.membership">Medlemskap</message>
+	<message key="user.subscriptions.form.membershipRequired">Den valda prenumerationstypen kräver medlemskapsinformation.</message>
+	<message key="user.subscriptions.form.typeIdValid">Välj en giltig prenumerationstyp.</message>
+	<message key="user.subscriptions.form.subscriptionExists">Detta användarkonta har redan en individuell prenumeration.</message>
+	<message key="user.subscriptions.form.membershipInstructions">Medlemskapsinformation, om sådan krävs för den valda prenumerationstypen.</message>
+	<message key="user.subscriptions.form.institutionName">Institutionens namn</message>
+	<message key="user.subscriptions.form.institutionNameRequired">Institutionens namn krävs</message>
+	<message key="user.subscriptions.form.institutionMailingAddress">Postadress</message>
+	<message key="user.subscriptions.form.domain">Domän</message>
+	<message key="user.subscriptions.form.domainInstructions"><![CDATA[If a domain is entered here, IP ranges are optional.<br />Valid values are domain names (e.g. lib.sfu.ca).]]></message>
+	<message key="user.subscriptions.form.domainIPRangeRequired">Den valda prenumerationstypen kräver en domän och/eller ett IP-adresspann för att verifiera prenumerationen.</message>
+	<message key="user.subscriptions.form.domainValid">Ange en giltig domän.</message>
+	<message key="user.subscriptions.form.ipRange">IP-adresspann</message>
+	<message key="user.subscriptions.form.ipRangeItem"><![CDATA[&#8226;]]></message>
+	<message key="user.subscriptions.form.ipRangeInstructions"><![CDATA[If IP ranges are entered here, the domain is optional.<br />Valid values include an IP address (e.g. 142.58.103.1), IP range (e.g. 142.58.103.1 - 142.58.103.4), IP range with wildcard '*' (e.g. 142.58.*.*), and an IP range with CIDR (e.g. 142.58.100.0/24).]]></message>
+	<message key="user.subscriptions.form.ipRangeValid">Ange giltigt IP-adresspann.</message>
+	<message key="user.subscriptions.form.deleteIpRange">Radera</message>
+	<message key="user.subscriptions.form.addIpRange">Lägg till</message>
 
 	<!-- Search -->
 	<message key="search.browseAuthorIndex">Bläddra Författarregister</message>
@@ -1204,7 +1280,7 @@ The paragraph that begins "This last topic..." is not indented.</pre>]]></messag
 	<message key="user.subscriptions.purchaseInstitutionalSubscription">Köp institutionellt abonnemang</message>
 	<message key="user.subscriptions.expires">Löper ut</message>
 	<message key="user.subscriptions.expired">Har löpt ut</message>
-	<message key="user.subscriptions.form.typeId">Typ av abbonemang</message>
+	<message key="user.subscriptions.form.typeId">Typ av abonnemang</message>
 	<message key="user.subscriptions.form.membership">Medlemskap</message>
 	<message key="user.subscriptions.form.institutionName">Institutionens namn</message>
 	<message key="about.subscriptions.individual">Individuella abonnemang</message>
