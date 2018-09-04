@@ -4,8 +4,8 @@
 <!--
   * plugins/blocks/subscription/locale/pl_PL/locale.xml
   *
-  * Copyright (c) 2013-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Credits: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Polish_(pl_PL)
@@ -18,8 +18,8 @@
 	<message key="plugins.block.subscription.description">Wtyczka elementu blokowego informacji o subskrypcji.</message>
 	<message key="plugins.block.subscription.blockTitle">Subskrypcje</message>
 	<message key="plugins.block.subscription.expires">Kończy się</message>
-	<message key="plugins.block.subscription.providedBy">Dostęp zapewnia {$institutionName}</message>
-	<message key="plugins.block.subscription.comingFromIP">Z {$ip}</message>
+	<message key="plugins.block.subscription.providedBy">Dostęp zapewnia</message>
+	<message key="plugins.block.subscription.comingFromIP">Z</message>
 	<message key="plugins.block.subscription.about">Subskrypcje</message>
 	<message key="plugins.block.subscription.loginToVerifySubscription">Zaloguj się w celu sprawdzenia subskrypcji</message>
 </locale>

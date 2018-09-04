@@ -4,8 +4,8 @@
 <!--
   * locale/pl_PL/author.xml
   *
-  * Copyright (c) 2013-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Polish_(pl_PL)
   * Localization strings.
@@ -58,7 +58,7 @@
 	<message key="author.submit.selectPrincipalContact">Główna osoba do kontaktu.</message>
 	<message key="author.submit.addAuthor">Dodaj autora</message>
 	<message key="author.submit.deleteAuthor">Usuń autora</message>
-	<message key="author.submit.submissionIndexingDescription">Podaj słowa kluczowe dla zgłoszonego tekstu. Poszczególne słowa kluczowe oddziel za pomocą średnika (np. Historia mówiona; oral history; relacje historii mówionej; świadek historii; źródła wywołane; metoda biograficzna).</message>
+	<message key="author.submit.submissionIndexingDescription">Podaj słowa kluczowe dla zgłoszonego tekstu. Poszczególne słowa kluczowe oddziel od siebie za pomocą średnika (słowo kluczowe; słowo kluczowe; słowo kluczowe).</message>
 	<message key="author.submit.coverageInstructions">Określa zasięg geograficzny, chronologiczny i historyczny przedmiotu badań.</message>
 	<message key="author.submit.languageInstructions"><![CDATA[Angielski=en; Polski=pl. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Pozostałe kody</a>.]]></message>
 	<message key="author.submit.form.authorRequired">Przynajmniej jeden autor jest wymagany.</message>

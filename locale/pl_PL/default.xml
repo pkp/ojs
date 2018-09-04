@@ -4,8 +4,8 @@
 <!--
   * locale/pl_PL/default.xml
   *
-  * Copyright (c) 2013-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Polish_(pl_PL)
   * Localization strings.
@@ -15,8 +15,6 @@
 	<!-- Section default -->
 	<message key="section.default.title">Artykuły</message>
 	<message key="section.default.abbrev">ART</message>
-	<message key="section.default.policy">Zasady domyślne</message>
-
 	<message key="default.genres.article">Tekst artykułu</message>
 
 	<!--
@@ -37,7 +35,7 @@
 	<!-- Default settings for payment items. -->
 
 	<message key="default.journalSettings.publicationFee">Publikacja artykułu</message>
-	<message key="default.journalSettings.purchaseIssueFee">Opłata za numer</message>
+	<message key="default.journalSettings.purchaseIssueFee">Kup numer</message>
 
 
 	<!-- Group defaults -->
@@ -54,7 +52,7 @@
 	<message key="default.groups.plural.sectionEditor">Redaktorzy działu</message>
 	<message key="default.groups.abbrev.sectionEditor">RED DZ</message>
 	<message key="default.groups.name.subscriptionManager">Menadżer subskrypcji</message>
-	<message key="default.groups.plural.subscriptionManager">Menedżerowie subskrypcji</message>
+	<message key="default.groups.plural.subscriptionManager">Menadżerowie subskrypcji</message>
 	<message key="default.groups.abbrev.subscriptionManager">SUB</message>
 
 	<!-- Genre Defaults -->
@@ -73,4 +71,63 @@
 	<message key="default.journalSettings.emailSignature"><![CDATA[<br/>
 ________________________________________________________________________<br/>
 <a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>]]></message>
+	<message key="default.journalSettings.checklist.bibliographicRequirements">Tekst został sformatowany zgodnie z wytycznymi dla autora określającymi styl i zasady sporządzania bibliografii.</message>
+	<message key="default.journalSettings.privacyStatement">Wprowadzone do systemu dane i osobowe oraz adresy e-mail będą wykorzystywane wyłącznie do celów wydawniczych czasopisma.</message>
+	<message key="default.journalSettings.openAccessPolicy">Czasopismo zapewnia otwarty dostęp (open access) do pełnych tekstów, niezwłocznie po ich opublikowaniu. Dzięki temu czasopisma wspiera globalny obieg wiedzy.</message>
+	<message key="default.journalSettings.purchaseArticleFee">Kup artykuł</message>
+	<message key="default.journalSettings.membershipFee">Członkowstwo</message>
+	<message key="default.journalSettings.checklist.submissionAppearance">Interlinia 1; wysokość pisma 12 pkt; stosowana raczej kursywa niż podkreślenia (za wyjątkiem adresów stron internetowych); wszystkie rysunki oraz tabele są umieszczone w tekście w odpowiednich miejscach (nie na końcu).</message>
+	<message key="default.journalSettings.authorSelfArchivePolicy">Czasopismo zezwala autorom i zachęca ich do zamieszczania swoich artykułów na prywatnych stronach internetowych oraz w instytucjonalnych repozytoriach. Dotyczy to zarówno wersji przed opublikowaniem, jak i wersji po publikacji. Udostępniając swoje artykuły są zobowiązani do zamieszczenia szczegółowych informacji bibliograficznych, w szczególności (o ile to tylko możliwe) podania tytułu tego czasopisma.</message>
+	<message key="default.journalSettings.refLinkInstructions"><![CDATA[<h4>To Add Reference Linking to the Layout Process</h4>
+	<p>When turning a submission into HTML or PDF, make sure that all hyperlinks in the submission are active.</p>
+	<h4>A. When the Author Provides a Link with the Reference</h4>
+	<ol>
+	<li>While the submission is still in its word processing format (e.g., Word), add the phrase VIEW ITEM to the end of the reference that has a URL.</li>
+	<li>Turn that phrase into a hyperlink by highlighting it and using Word's Insert Hyperlink tool and the URL prepared in #2.</li>
+	</ol>
+	<h4>B. Enabling Readers to Search Google Scholar For References</h4>
+	<ol>
+		<li>While the submission is still in its word processing format (e.g., Word), copy the title of the work referenced in the References list (if it appears to be too common a title—e.g., "Peace"—then copy author and title).</li>
+		<li>Paste the reference's title between the %22's, placing a + between each word: http://scholar.google.com/scholar?q=%22PASTE+TITLE+HERE%22&hl=en&lr=&btnG=Search.</li>
+
+	<li>Add the phrase GS SEARCH to the end of each citation in the submission's References list.</li>
+	<li>Turn that phrase into a hyperlink by highlighting it and using Word's Insert Hyperlink tool and the URL prepared in #2.</li>
+	</ol>
+	<h4>C. Enabling Readers to Search for References with a DOI</h4>
+	<ol>
+	<li>While the submission is still in Word, copy a batch of references into CrossRef Text Query http://www.crossref.org/freeTextQuery/.</li>
+	<li>Paste each DOI that the Query provides in the following URL (between = and &): http://www.cmaj.ca/cgi/external_ref?access_num=PASTE DOI#HERE&link_type=DOI.</li>
+	<li>Add the phrase CrossRef to the end of each citation in the submission's References list.</li>
+	<li>Turn that phrase into a hyperlink by highlighting the phrase and using Word's Insert Hyperlink tool and the appropriate URL prepared in #2.</li>
+	</ol>]]></message>
+	<message key="default.journalSettings.proofingInstructions"><![CDATA[<p>The proofreading stage is intended to catch any errors in the galley's spelling, grammar, and formatting. More substantial changes cannot be made at this stage, unless discussed with the Section Editor. In Layout, click on VIEW PROOF to see the HTML, PDF, and other available file formats used in publishing this item.</p>
+	<h4>For Spelling and Grammar Errors</h4>
+
+	<p>Copy the problem word or groups of words and paste them into the Proofreading Corrections box with "CHANGE-TO" instructions to the editor as follows:</p>
+
+	<pre>1. CHANGE...
+	then the others
+	TO...
+	than the others</pre>
+	<br />
+	<pre>2. CHANGE...
+	Malinowsky
+	TO...
+	Malinowski</pre>
+	<br />
+
+	<h4>For Formatting Errors</h4>
+
+	<p>Describe the location and nature of the problem in the Proofreading Corrections box after typing in the title "FORMATTING" as follows:</p>
+	<br />
+	<pre>3. FORMATTING
+	The numbers in Table 3 are not aligned in the third column.</pre>
+	<br />
+	<pre>4. FORMATTING
+	The paragraph that begins "This last topic..." is not indented.</pre>]]></message>
+	<message key="default.journalSettings.forReaders"><![CDATA[Zachęcamy czytelników, aby zarejestrowali się na stronie w celu uzyskiwania powiadomień od czasopisma. W tym celu należy kliknąć przycisk <a href="{$indexUrl}/{$journalPath}/user/register">Zarejestruj</a> znajdujący się w górnej części strony. W wyniku rejestracji czytelnicy będą otrzymywać na skrzynkę e-mail spisy treści nowych numerów. To pozwoli również czasopismu zapewnić dodatkowe wsparcie czytelnikom. Przed rejestracją czytelnicy powinni zapoznać się z <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">Polityką prywatności</a>.]]></message>
+	<message key="default.journalSettings.forLibrarians">Zachęcamy bibliotekarzy do włączenia strony czasopisma do ich systemów bibliotecznych.</message>
+	<message key="default.journalSettings.lockssLicense"><![CDATA[This journal utilizes the LOCKSS system to create a distributed archiving system among participating libraries and permits those libraries to create permanent archives of the journal for purposes of preservation and restoration. <a href="http://www.lockss.org/">More...</a>]]></message>
+	<message key="default.journalSettings.clockssLicense"><![CDATA[This journal utilizes the CLOCKSS system to create a distributed archiving system among participating libraries and permits those libraries to create permanent archives of the journal for purposes of preservation and restoration. <a href="http://clockss.org/">More...</a>]]></message>
+	<message key="section.default.policy">Treść polityki prywatności.</message>
 </locale>

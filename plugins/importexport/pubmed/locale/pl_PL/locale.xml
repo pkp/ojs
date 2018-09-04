@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/pl_PL/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="pl_PL" full_name="Język Polski">
+	<message key="plugins.importexport.pubmed.displayName">Wtyczka eksportu PubMed XML</message>
+	<message key="plugins.importexport.pubmed.description">Eksportuj metadane artykułu w formacie PubMed XML do zaindeksowania w MEDLINE.</message>
+	<message key="plugins.importexport.pubmed.export">Eksportuj dane</message>
+	<message key="plugins.importexport.pubmed.export.issues">Eksportuj numery</message>
+	<message key="plugins.importexport.pubmed.export.selectIssue">Wybierz numer do eksportu</message>
+	<message key="plugins.importexport.pubmed.export.articles">Eksportuj artykuły</message>
+	<message key="plugins.importexport.pubmed.export.selectArticle">Wybierz artykuły do eksportu</message>
+	<message key="plugins.importexport.pubmed.cliUsage">Użycie: 
+{$scriptName} {$pluginName} [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...
+{$scriptName} {$pluginName} [xmlFileName] [journal_path] issue [issueId]</message>
+	<message key="plugins.importexport.pubmed.cliError">Błąd:</message>
+	<message key="plugins.importexport.pubmed.export.error.issueNotFound">Brak numerów powiązanych z określonym ID numeru "{$issueId}".</message>
+	<message key="plugins.importexport.pubmed.export.error.articleNotFound">Brak artykułu powiązanego z określonym ID artykułu "{$articleId}".</message>
+</locale>

@@ -4,17 +4,28 @@
 <!--
   * plugins/importexport/doaj/locale/pl_PL/locale.xml
   *
-  * Copyright (c) 2013-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings
   -->
 
 <locale name="pl_PL" full_name="Język Polski">
-		<message key="plugins.importexport.doaj.markRegistered.success">Wybrane elementy zostały zasnaczone jako zarejestrowane!</message>
+		<message key="plugins.importexport.doaj.markRegistered.success">Wybrane elementy zostały zaznaczone jako zarejestrowane!</message>
 	<message key="plugins.importexport.doaj.export.issue">Eksportuj numery</message>
 	<message key="plugins.importexport.doaj.export.issueInfo">Eksportuj numery w formacie XML</message>
 	<message key="plugins.importexport.doaj.export.article">Eksportuj artykuły</message>
 	<message key="plugins.importexport.doaj.export.articleInfo">Eksportuj wybrane artykuły w XML</message>
+	<message key="plugins.importexport.doaj.displayName">Wtyczka eksportu DOAJ</message>
+	<message key="plugins.importexport.doaj.description">Eksportuj czasopismo do DOAJ.</message>
+	<message key="plugins.importexport.doaj.export.contact">Skontaktuj się z DOAJ, aby włączyć czasopismo do bazy</message>
+	<message key="plugins.importexport.doaj.registrationIntro">Jeśli chciałbyś(abyś) zarejestrować artykuły z OJS, włącz swój klucz API DOAJ. Możesz też również eksportować metadane do pliku DOAJ XML, ale nie możesz takiego pliku wysłać do DOAJ z OJS.</message>
+	<message key="plugins.importexport.doaj.settings.form.apiKey">Klucz API DOAJ</message>
+	<message key="plugins.importexport.doaj.settings.form.apiKey.description">Klucz API znajdziesz na stronie użytkownika w DOAJ.</message>
+	<message key="plugins.importexport.doaj.settings.form.automaticRegistration.description">OJS zdeponuje automatycznie artykuły w DOAJ. Zauważ, że zadanie to będzie realizowane zaraz po publikacji. Upewnij się, że dane zostały automatycznie przesłane.</message>
+	<message key="plugins.importexport.doaj.settings.form.testMode.description">Wykorzystaj test API DOAJ (środowisko testowe) do rejestracji. Nie zapomnij usunąć tej opcji przed produkcją.</message>
+	<message key="plugins.importexport.doaj.senderTask.name">Zadanie automatycznej rejestracji DOAJ</message>
+	<message key="plugins.importexport.doaj.register.error.mdsError">Zdeponowanie nie ukończyło się sukcesem. API DOAJ zwróciło błąd: '{$param}'.</message>
+	<message key="plugins.importexport.doaj.cliUsage">Użycie:  {$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles objectId1 [objectId2] ...</message>
 </locale>

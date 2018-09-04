@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/pl_PL/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="pl_PL" full_name="Język Polski">
+	<message key="plugins.generic.addThis.displayName">AddThis</message>
+	<message key="plugins.generic.addThis.description">Wtyczka umożliwia udostępnianie artykułów w mediach społecznościowych.</message>
+	<message key="plugins.generic.addThis.title">AddThis</message>
+	<message key="plugins.generic.addThis.settings">Ustawienia</message>
+	<message key="plugins.generic.addThis.settings.statistics">Statystyki</message>
+	<message key="plugins.generic.addThis.form.saved">Formularz ustawień AddThis zapisany.</message>
+	<message key="plugins.generic.addThis.form.profileId">Id profilu AddThis</message>
+	<message key="plugins.generic.addThis.form.username">Użytkownik AddThis</message>
+	<message key="plugins.generic.addThis.form.password">Hasło AddThis (wymagane do wyświetlania statystyk)</message>
+	<message key="plugins.generic.addThis.form.registerLink"><![CDATA[<a href="https://www.addthis.com/register">Zarejestruj</a> dla darmowych raportów z pogłębioną analizą pozwalających lepiej zrozumieć ruch w serwisach społecznościowych.]]></message>
+	<message key="plugins.generic.addThis.settings.displayStyle">Wybierz, w jaki sposób powinien wyświetlać się AddThis</message>
+	<message key="plugins.generic.addThis.grid.shares">Udostępnienia</message>
+	<message key="plugins.generic.addThis.grid.title">Najczęściej udostępniane linki</message>
+	<message key="plugins.generic.addThis.statistics.instructions"><![CDATA[Lista pokazuje najczęściej udostępniane linki w ostatnim tygodniu. Aby zapoznać się ze wszystkimi możliwymi statystykami AddThis odwiedź stronę internetową <a href="http://www.addthis.com/analytics" target="_blank">AddThis Analytics</a> i zaloguj się.]]></message>
+</locale>
