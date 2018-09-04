@@ -4,8 +4,8 @@
 <!--
   * plugins/importexport/crossref/locale/pl_PL/locale.xml
   *
-  * Copyright (c) 2014-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Polish_(pl_PL)
   * Localization strings.
@@ -16,27 +16,47 @@
 	<message key="plugins.importexport.crossref.displayName">Wtyczka eksportu/rejestracji CrossRef</message>
 	<message key="plugins.importexport.crossref.requirements">Wymagania</message>
 	<message key="plugins.importexport.crossref.requirements.satisfied">Wszystkie wymagania wtyczki zostały spełnione.</message>
-	<message key="plugins.importexport.crossref.error.pluginNotConfigured"><![CDATA[Wtyczka CrossRef nie została skonfigurowana! Skonfiguruj poprawnie wtyczkę <a href="{$settingsUrl}">na stronie wtyczki</a>.]]></message>
-	<message key="plugins.importexport.crossref.error.DOIsNotAvailable"><![CDATA[Identyfikator DOI nie został skonfigurowany! Włącz oraz skonfiguruj DOI <a href="{$doiUrl}" target="_blank">na stronie wtyczki</a>.]]></message>
-	<message key="plugins.importexport.crossref.error.publisherNotConfigured"><![CDATA[Organizacja wydająca czasopismo nie została skonfigurowana! Musisz uzupełnić brakujące elementy <a href="{$publisherUrl}" target="_blank">na stronie konfiguracji czasopisma</a> w kroku 1.5.]]></message>
+	<message key="plugins.importexport.crossref.error.publisherNotConfigured"><![CDATA[Organizacja wydająca czasopismo nie została skonfigurowana! Musisz uzupełnić brakujące elementy <a href="{$journalSettingsUrl}" target="_blank">na stronie konfiguracji czasopisma</a> w kroku 1.5.]]></message>
 	<message key="plugins.importexport.crossref.settings.depositorIntro">Elementy wymagane dla poprawnego deponowania CrossRef.</message>
 	<message key="plugins.importexport.crossref.settings.form.depositorName">Nazwa organizacji deponującej</message>
 	<message key="plugins.importexport.crossref.settings.form.depositorEmail">Email organizacji deponującej</message>
 	<message key="plugins.importexport.crossref.settings.form.depositorNameRequired">Podaj nazwę organizacji deponującej.</message>
 	<message key="plugins.importexport.crossref.settings.form.depositorEmailRequired">Podaj email organizacji deponującej.</message>
-	<message key="plugins.importexport.crossref.settings.form.automaticRegistration">Rejestruj DOI automatycznie</message>
-	<message key="plugins.importexport.crossref.settings.form.description">Skonfiguruj wtyczkę eksportu/rejestracji CrossRef:</message>
 	<message key="plugins.importexport.crossref.settings.form.username">Nazwa użytkownika</message>
 	<message key="plugins.importexport.crossref.settings.form.usernameRequired">Podaj nazwę użytkownika którą otrzymałeś od CrossRef.</message>
-	<message key="plugins.importexport.crossref.export.unregistered">Eksortuj niezarejestrowane artykuły</message>
-	<message key="plugins.importexport.crossref.export.selectUnregistered">Wybierz niezarejestrowane artykuły</message>
-	<message key="plugins.importexport.crossref.export.noUnregistered">Wszystkie opublikowane artykuły zostały zarejestrowane (lub żaden z nich nie posiada przypisanego DOI).</message>
-	<message key="plugins.importexport.crossref.export.error.articleDatePublishedMissing">Data publikacji nie została określona dla artykułu o ID {$param}.</message>
 	<message key="plugins.importexport.crossref.senderTask.name">Zadanie automatycznej rejestracji CrossRef</message>
 	<message key="plugins.importexport.crossref.settings.form.automaticRegistration.description"><![CDATA[OJS deponuje DOI automatycznie do CrossRef w momencie publikacji artykułów. Pamiętaj, że proces deponowania może zająć chwilę. Możesz sprawdzić wszystkie niezarejestrowane teksty <a href="{$unregisteredURL}">tutaj</a>.]]></message>
 	<message key="plugins.importexport.crossref.registrationIntro"><![CDATA[Wtyczka może zostać skonfigurowana do automatycznego rejestrowania DOI z CrossRef. W tym celu będziesz potrzebował nazwę użytkownika oraz hasło (możesz je uzyskać od <a href="http://www.crossref.org" target="_blank">CrossRef</a>. Jeżeli nie posiadasz nazwy użytkownika oraz hasła, możesz eksportować pozycje do formatu CrossRef XML, ale nie będziesz mógł rejestrować DOI z CrossRef za pomocą OJS.]]></message>
-	<message key="plugins.importexport.crossref.settings.description"><![CDATA[Możesz skonfigurować wtyczkę CrossRef  <a href="{$settingsUrl}">tutaj</a>.]]></message>
 	<message key="plugins.importexport.crossref.cliUsage">Przykład użycia:
 {$scriptName} {$pluginName} export xmlFileName journal_path {issues|articles} objectId1 [objectId2] ...
 {$scriptName} {$pluginName} register journal_path {issues|articles} objectId1 [objectId2] ...</message>
+	<message key="plugins.importexport.crossref.error.issnNotConfigured"><![CDATA[ISSN czasopisma nie został skonfigurowany! Musisz dodać ISSN na <a href="{$journalSettingsUrl}" target="_blank">stronie konfiguracji czasopisma</a>.]]></message>
+	<message key="plugins.importexport.crossref.error.noDOIContentObjects">Artykuły nie zostały skonfigurowane do współpracy z DOI - eksport nie jest możliwy.</message>
+	<message key="plugins.importexport.crossref.settings.form.testMode.description">Wykorzystaj API CrossRef (środowisko testowe) dla testowania DOI. Nie zapomnij usunąć tego ustawienia przed finalnym zdeponowaniem DOI.</message>
+	<message key="plugins.importexport.crossref.issues.description">Uwaga: Tylko numery (nie artykuły) zostaną uwzględnione do eksportu/rejestracji.</message>
+	<message key="plugins.importexport.crossref.status.submitted">Przesłane</message>
+	<message key="plugins.importexport.crossref.status.completed">Zdeponowane</message>
+	<message key="plugins.importexport.crossref.status.failed">Nieudane</message>
+	<message key="plugins.importexport.crossref.status.registered">Aktywne</message>
+	<message key="plugins.importexport.crossref.status.markedRegistered">Oznaczone jako aktywne</message>
+	<message key="plugins.importexport.crossref.action.export">Pobierz XML</message>
+	<message key="plugins.importexport.crossref.action.markRegistered">Oznacz jako aktywne</message>
+	<message key="plugins.importexport.crossref.action.register">Prześlij</message>
+	<message key="plugins.importexport.crossref.action.checkStatus">Sprawdź status</message>
+	<message key="plugins.importexport.crossref.notification.failed"><![CDATA[Błąd rejestracji DOI. Przejdź do Narzędzia -> Import/Eksport > CrossRef XML aby sprawdzić błędy.]]></message>
+	<message key="plugins.importexport.crossref.register.error.mdsError">Przesyłanie nieudane! Serwer DOI zwrócił błąd: '{$param}'.</message>
+	<message key="plugins.importexport.crossref.register.success">Przesyłanie zakończone sukcesem!</message>
+	<message key="plugins.importexport.crossref.export.error.issueNotFound">Żaden numer nie pasuje do ID "{$issueId}".</message>
+	<message key="plugins.importexport.crossref.export.error.articleNotFound">Żaden tekst nie pasuje do ID "{$articleId}".</message>
+	<message key="plugins.importexport.crossref.statusLegend"><![CDATA[<p>Status:</p>
+		<p>
+		- Not deposited: no deposit attempt has been made for this DOI.<br />
+		- Submitted: this DOI has been submitted for the deposit.<br />
+		- Deposited: the DOI has been deposited to Crossref, but may not be active yet.<br />
+		- Active: the DOI has been deposited, and is resolving correctly.<br />
+		- Failed: the DOI deposit has failed.<br />
+		- Marked active: the DOI was manually marked as active.
+		</p>
+		<p>Only the status of the last deposit attempt is displayed.</p>
+		<p>If a deposit has failed, please solve the problem and try to register the DOI again.</p>]]></message>
 </locale>

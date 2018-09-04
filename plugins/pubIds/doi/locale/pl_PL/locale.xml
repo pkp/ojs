@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/pl_PL/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="pl_PL" full_name="Język Polski">
+	<message key="plugins.pubIds.doi.displayName">DOI</message>
+	<message key="plugins.pubIds.doi.description">Wtyczka umożliwia przydzielanie DOI dla numerów, artykułów oraz plików publikowanych w OJS.</message>
+	<message key="plugins.pubIds.doi.readerDisplayName">DOI</message>
+	<message key="plugins.pubIds.doi.manager.settings.description">Skonfiguruj wtyczkę DOI aby móc zarządzać DOI w OJS:</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiObjects">Zawartość czasopisma</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiObjectsRequired">Wybierz obiekt dla którego powinno zostać przypisane DOI.</message>
+	<message key="plugins.pubIds.doi.manager.settings.explainDois">Wybierz publikowane obiekty, dla których zostanie przypisane DOI:</message>
+	<message key="plugins.pubIds.doi.manager.settings.enableIssueDoi">Numery</message>
+	<message key="plugins.pubIds.doi.manager.settings.enableSubmissionDoi">Artykuły</message>
+	<message key="plugins.pubIds.doi.manager.settings.enableRepresentationDoi">Pliki</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiPrefix">Prefiks DOI</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiPrefix.description"><![CDATA[Prefiks DOI jest przydzielany przez organizacje rejestrujące, np. <a href="http://www.crossref.org" target="_new">Crossref</a> i posiada format 10.xxxx (np. 10.1234):]]></message>
+	<message key="plugins.pubIds.doi.manager.settings.doiPrefixPattern">Prefiks DOI jest wymagany i musi posiadać formę 10.xxx.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffix">Sufiks DOI</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffix.description">Sufiks DOI może przyjmować dowolną formę, ale musi być jednakowy dla wszystkich obiektów z takim samym prefiksem:</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern">Podaj wzór do generowania sufiksu DOI. Użyj %j dla inicjałów czasopisma, %v dla wolumenu, %i dla numeru, %Y dla roku, %a dla ID artykułu, %g dla ID pliku z tekstem, %f dla ID pliku OJS, %p dla numeru strony oraz %x dla własnego parametru.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.example">Przykładowo, vol%viss%ipp%p utworzy DOI 10.1234/vol3iss2pp230</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.issues">dla numerów</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.submissions">dla artykułów</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.representations">dla plików finalnych</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault">Korzystaj z domyślnego wzoru.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault.description"><![CDATA[%j.v%vi%i dla numerów<br />%j.v%vi%i.%a dla artykułów<br />%j.v%vi%i.%a.g%g dla plików finalnych.]]></message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixCustomIdentifier">Podaj indywidualny sufiks DOI dla każdego z opublikowanych elementów. W zakładce metadanych znajdziesz odpowiednie pole, gdzie będziesz mógł podać własny sufiks DOI dla obiektu.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiIssueSuffixPatternRequired">Podaj wzór sufiksu DOI dla numerów.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSubmissionSuffixPatternRequired">Podaj wzór sufiksu DOI dla artykułów.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiRepresentationSuffixPatternRequired">Podaj wzór sufiksu DOI dla plików finalnych.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiReassign">Przydziel ponownie DOI</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiReassign.description">Jeżeli zmienisz konfigurację DOI, przydzielone DOI nie będą zmienione. Po zapisaniu konfiguracji wykorzystaj ten przycisk aby wyczyścić istniejące DOI i przydzielić numerację ponownie dla istniejących obiektów.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiReassign.confirm">Czy na pewno usunąć wszystkie istniejące DOI?</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiAssignJournalWide">Przydziel DOI</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiAssignJournalWide.description">Przydziel DOI dla wszystkich obiektów w czasopiśmie dla których nie zostały przydzielone. To działanie nie może zostać zrealizowane z indywidualną konfiguracją sufiksu. Jeżeli zmodyfikowałeś konfigurację DOI powyżej, zapisz swoje zmiany przed wykonaniem tego działania. Przydzielanie DOI może chwilę potrwać - w zależności od numerów opublikowanych obiektów w czasopiśmie.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiAssignJournalWide.confirm">Czy na pewno przydzielić DOI dla wszystkich opublikowanych obiektów dla których nie zostały przydzielone DOI?</message>
+	<message key="plugins.pubIds.doi.editor.doi">DOI</message>
+	<message key="plugins.pubIds.doi.editor.doiObjectTypeIssue">numer</message>
+	<message key="plugins.pubIds.doi.editor.doiObjectTypeSubmission">artykuł</message>
+	<message key="plugins.pubIds.doi.editor.doiObjectTypeRepresentation">pliki finalne</message>
+	<message key="plugins.pubIds.doi.editor.customSuffixMissing">DOI nie może zostać przydzielone, ponieważ brakuje własnego sufiksu.</message>
+	<message key="plugins.pubIds.doi.editor.patternNotResolved">DOI nie może zostać przydzielone, ponieważ posiada niezrozumiały wzór.</message>
+	<message key="plugins.pubIds.doi.editor.canBeAssigned">Podgląd DOI. Zaznacz pole wyboru i zapisz formularz aby przydzielić DOI.</message>
+	<message key="plugins.pubIds.doi.editor.assigned">DOI jest przydzielone do tego {$pubObjectType}.</message>
+	<message key="plugins.pubIds.doi.editor.doiSuffixCustomIdentifierNotUnique">Podany sufiks DOI jest już w użyciu przez inny obiekt. Podaj unikatowy sufiks dla każdego typu obiektów.</message>
+	<message key="plugins.pubIds.doi.editor.clearObjectsDoi">Wyczyść DOI</message>
+	<message key="plugins.pubIds.doi.editor.clearObjectsDoi.confirm">Czy na pewno usunąć istniejące DOI?</message>
+	<message key="plugins.pubIds.doi.editor.clearIssueObjectsDoi">Wyczyść DOI dla obiektów czasopisma</message>
+	<message key="plugins.pubIds.doi.editor.clearIssueObjectsDoi.confirm">Czy na pewno usunąć DOI?</message>
+	<message key="plugins.pubIds.doi.editor.clearIssueObjectsDoi.description">Skorzystaj z tej opcji jeżeli chcesz wyczyścić DOI dla wszystkich obiektów czasopisma (artykułów oraz plików finalnych) przydzielonych dla tego numeru.</message>
+	<message key="plugins.pubIds.doi.editor.assignDoi">Przydziel DOI {$pubId} dla {$pubObjectType}</message>
+	<message key="plugins.pubIds.doi.editor.assignDoi.emptySuffix">DOI nie może zostać przydzielone, ponieważ indywidualny sufiks nie istnieje.</message>
+	<message key="plugins.pubIds.doi.editor.assignDoi.pattern">DOI {$pubId} nie może zostać przydzielone, ponieważ posiada nierozwiązany wzór.</message>
+	<message key="plugins.pubIds.doi.editor.assignDoi.assigned">DOI {$pubId} zostało przydzielone.</message>
+</locale>
