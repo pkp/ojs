@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE locale SYSTEM "../../../../../../lib/pkp/dtd/locale.dtd">
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
   * plugins/importexport/crossref/locale/pl_PL/locale.xml
@@ -48,15 +48,4 @@
 	<message key="plugins.importexport.crossref.register.success">Przesyłanie zakończone sukcesem!</message>
 	<message key="plugins.importexport.crossref.export.error.issueNotFound">Żaden numer nie pasuje do ID "{$issueId}".</message>
 	<message key="plugins.importexport.crossref.export.error.articleNotFound">Żaden tekst nie pasuje do ID "{$articleId}".</message>
-	<message key="plugins.importexport.crossref.statusLegend"><![CDATA[<p>Status:</p>
-		<p>
-		- Not deposited: no deposit attempt has been made for this DOI.<br />
-		- Submitted: this DOI has been submitted for the deposit.<br />
-		- Deposited: the DOI has been deposited to Crossref, but may not be active yet.<br />
-		- Active: the DOI has been deposited, and is resolving correctly.<br />
-		- Failed: the DOI deposit has failed.<br />
-		- Marked active: the DOI was manually marked as active.
-		</p>
-		<p>Only the status of the last deposit attempt is displayed.</p>
-		<p>If a deposit has failed, please solve the problem and try to register the DOI again.</p>]]></message>
 </locale>
