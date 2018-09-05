@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/pl_PL/locale.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="pl_PL" full_name="Język Polski">
+	<message key="plugins.reports.counter.description"><![CDATA[Wtyczka COUNTER pozwala generować raporty o aktywności czasopisma z wykorzystaniem <a href="http://www.projectcounter.org">standardu COUNTER</a>.]]></message>
+	<message key="plugins.reports.counter">Raporty COUNTER</message>
+	<message key="plugins.reports.counter.release">Wersja COUNTER</message>
+	<message key="plugins.reports.counter.olderReports">Raporty starszej strony</message>
+	<message key="plugins.reports.counter.error.badParameters">Parametry raportu były nieprawidłowe.</message>
+	<message key="plugins.reports.counter.error.badRequest">Żądanie raportu jest nieprawidłowe.</message>
+	<message key="plugins.reports.counter.error.noResults">Brak wyników do wyświetlenia w raporcie.</message>
+	<message key="plugins.reports.counter.error.noXML">Wyniki nie mogą być zapisane w formacie XML.</message>
+	<message key="plugins.reports.counter.1a.introduction">Podane linki generują gotowe raporty COUNTER oparte na przestarzałej wersji 3.0. Raport obejmuje wszystkie czasopisma z platformy wydawniczej. Używaj najnowszej wersji jeżeli to tylko możliwe.</message>
+	<message key="plugins.reports.counter.1a.name">COUNTER Report JR1 (R3)</message>
+	<message key="plugins.reports.counter.1a.xml">Wersja XML</message>
+	<message key="plugins.reports.counter.1a.description">COUNTER Journal Report 1 (R3): Zapytania o pełne teksty artykułów w danym miesiącu i czasopiśmie</message>
+	<message key="plugins.reports.counter.1a.title">Journal Report 1 (R3): Zapytania o pełne teksty artykułów w danym miesiącu i czasopiśmie</message>
+	<message key="plugins.reports.counter.1a.title1">Journal Report 1 (R3)</message>
+	<message key="plugins.reports.counter.1a.title2">Liczba zapytań o pełne teksty artykułów na miesiąc i w danym czasopiśmie (Year {$year})</message>
+	<message key="plugins.reports.counter.1a.dateRun">Data uruchomienia:</message>
+	<message key="plugins.reports.counter.1a.publisher">Wydawca</message>
+	<message key="plugins.reports.counter.1a.platform">Platforma</message>
+	<message key="plugins.reports.counter.1a.printIssn">Wyświetl ISSN</message>
+	<message key="plugins.reports.counter.1a.onlineIssn">Online ISSN</message>
+	<message key="plugins.reports.counter.1a.ytdTotal">YTD łącznie</message>
+	<message key="plugins.reports.counter.1a.ytdHtml">YTD HTML</message>
+	<message key="plugins.reports.counter.1a.ytdPdf">YTD PDF</message>
+	<message key="plugins.reports.counter.1a.totalForAllJournals">Łącznie dla wszystkich czasopism</message>
+	<message key="plugins.reports.counter.1a.anonymous">anonimowy</message>
+	<message key="plugins.reports.counter.legacyStats">Poniższe linki generują przestarzałe raporty wykorzystując dane ze starej wtyczki, która nie jest gotowym COUNTER. Jeżeli chcesz wygenerować raporty za pomocą aktualnego COUNTER wykorzystaj typ metryki OJS COUNTER, użyj powyższych linków.</message>
+	<message key="plugins.reports.counter.allCustomers">Wszyscy klienci</message>
+</locale>

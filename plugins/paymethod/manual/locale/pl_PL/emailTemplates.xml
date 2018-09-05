@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE email_texts SYSTEM "../../../../../lib/pkp/dtd/emailTemplateData.dtd">
+<!--
+  * emailTemplateData.xml
+  *
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localized email templates XML file.
+  -->
+<email_texts locale="pl_PL">
+	<email_text key="MANUAL_PAYMENT_NOTIFICATION">
+		<subject>Manualne powiadomienie o płatności</subject>
+		<body></body>
+		<description>Ten szablon wiadomości jest wykorzystywany do powiadomienia administratora czasopisma, że została przesłana manualna prośba o płatność.</description>
+	</email_text>
+</email_texts>

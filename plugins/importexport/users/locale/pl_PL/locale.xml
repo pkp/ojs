@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!DOCTYPE locale SYSTEM "../../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
   * locale.xml
@@ -12,12 +12,43 @@
   -->
  
 <locale name="pl_PL" full_name="Język Polski">
-	<message key="plugins.importexport.users.displayName">Import/eksport użytkowników do formatu XML</message>
-	<message key="plugins.importexport.users.description">Wtyczka umożliwia importowanie oraz eksportowanie użytkowników</message>
+	<message key="plugins.importexport.users.displayName">Wtyczka do importu/eksportu użytkowników w XML</message>
+	<message key="plugins.importexport.users.description">Import i eksport użytkowników</message>
 
 
 	<message key="plugins.importexport.users.import.importUsers">Importuj użytkowników</message>
 	<message key="plugins.importexport.users.import.failedToImportUser">Błąd importowania użytkowników</message>
 	<message key="plugins.importexport.users.import.failedToImportRole">Błąd przydzielania roli dla użytkownika</message>
 	<message key="plugins.importexport.users.import.dataFile">Plik danych użytkownika</message>
+	<message key="plugins.importexport.users.cliUsage">Użycie: {$scriptName} {$pluginName} [command] ...
+Komendy:
+	import [xmlFileName] [journal_path]
+	export [xmlFileName] [journal_path]
+	export [xmlFileName] [journal_path] [userId1] [userId2] ...</message>
+	<message key="plugins.importexport.users.cliUsage.examples">Przykłady:
+	Importuj użytkowników myJournal z myImportFile.xml:
+	{$scriptName} {$pluginName} import myImportFile.xml myJournal
+
+	Eksportuj wszystkich użytkowników z myJournal:
+	{$scriptName} {$pluginName} export myExportFile.xml myJournal
+
+	Eksportuj użytkowników z ID:
+	{$scriptName} {$pluginName} export myExportFile.xml myJournal 1 2</message>
+	<message key="plugins.importexport.users.import.instructions"><![CDATA[Wybierz plik z danymi w formacie XML zawierający informacje o użytkowniku, celem ich zaimportowania do tego czasopisma<br /><br />Sprawdź, czy plik do zaimportowania zawiera nazwę użytkownika lub adres e-mail, które już istnieją w systemie. Takie dane nie mogą być zaimportowane.]]></message>
+	<message key="plugins.importexport.users.import.sendNotify">Wyślij e-mail z powiadomieniem zawierającym nazwę użytkownika i hasło do każdego zaimportowanego użytkownika.</message>
+	<message key="plugins.importexport.users.import.continueOnError">Kontynuuj import użytkowników jeżeli nastąpi problem.</message>
+	<message key="plugins.importexport.users.import.usersWereImported">Następujący użytkownicy zostali zaimportowani do systemu.</message>
+	<message key="plugins.importexport.users.import.errorsOccurred">Wystąpił błąd podczas importu</message>
+	<message key="plugins.importexport.users.import.confirmUsers">Potwierdź, że ci użytkownicy chcą być zaimportowani do systemu</message>
+	<message key="plugins.importexport.users.import.warning">Uwaga</message>
+	<message key="plugins.importexport.users.import.encryptionMismatch">Nie możesz używać haseł z {$importHash}; OJS jest skonfigurowany do używania {$ojsHash}. Jeżeli chcesz kontynuować, musisz zresetować zaimportowane hasła użytkowników.</message>
+	<message key="plugins.importexport.users.unknownPress">Została podana nieznana ścieżka czasopisma "{$journalPath}".</message>
+	<message key="plugins.importexport.users.export.exportUsers">Eksportuj użytkowników</message>
+	<message key="plugins.importexport.users.export.exportByRole">Eksportuj według roli</message>
+	<message key="plugins.importexport.users.export.exportAllUsers">Eksportuj wszystkich</message>
+	<message key="plugins.importexport.users.export.errorsOccurred">Wystąpiły błędy podczas eksportu</message>
+	<message key="plugins.importexport.users.export.couldNotWriteFile">Nie można zapisać do pliku "{$fileName}".</message>
+	<message key="plugins.importexport.users.importComplete">Import zakończony. Zostali zaimportowani użytkownicy, których nazwy i adresy e-mail nie znajdowały się wcześniej w systemie.</message>
+	<message key="plugins.importexport.users.results">Wyniki</message>
+	<message key="plugins.importexport.users.uploadFile">Prześlij plik "Import" w celu kontynuowania</message>
 </locale>

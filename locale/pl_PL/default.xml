@@ -15,8 +15,6 @@
 	<!-- Section default -->
 	<message key="section.default.title">Artykuły</message>
 	<message key="section.default.abbrev">ART</message>
-	<message key="section.default.policy">Zasady domyślne</message>
-
 	<message key="default.genres.article">Tekst artykułu</message>
 
 	<!--
@@ -37,7 +35,7 @@
 	<!-- Default settings for payment items. -->
 
 	<message key="default.journalSettings.publicationFee">Publikacja artykułu</message>
-	<message key="default.journalSettings.purchaseIssueFee">Opłata za numer</message>
+	<message key="default.journalSettings.purchaseIssueFee">Kup numer</message>
 
 
 	<!-- Group defaults -->
@@ -54,7 +52,7 @@
 	<message key="default.groups.plural.sectionEditor">Redaktorzy działu</message>
 	<message key="default.groups.abbrev.sectionEditor">RED DZ</message>
 	<message key="default.groups.name.subscriptionManager">Menadżer subskrypcji</message>
-	<message key="default.groups.plural.subscriptionManager">Menedżerowie subskrypcji</message>
+	<message key="default.groups.plural.subscriptionManager">Menadżerowie subskrypcji</message>
 	<message key="default.groups.abbrev.subscriptionManager">SUB</message>
 
 	<!-- Genre Defaults -->
@@ -73,4 +71,63 @@
 	<message key="default.journalSettings.emailSignature"><![CDATA[<br/>
 ________________________________________________________________________<br/>
 <a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>]]></message>
+	<message key="default.journalSettings.checklist.bibliographicRequirements">Tekst został sformatowany zgodnie z wytycznymi dla autora określającymi styl i zasady sporządzania bibliografii.</message>
+	<message key="default.journalSettings.privacyStatement">Wprowadzone do systemu dane i osobowe oraz adresy e-mail będą wykorzystywane wyłącznie do celów wydawniczych czasopisma.</message>
+	<message key="default.journalSettings.openAccessPolicy">Czasopismo zapewnia otwarty dostęp (open access) do pełnych tekstów, niezwłocznie po ich opublikowaniu. Dzięki temu czasopisma wspiera globalny obieg wiedzy.</message>
+	<message key="default.journalSettings.purchaseArticleFee">Kup artykuł</message>
+	<message key="default.journalSettings.membershipFee">Członkowstwo</message>
+	<message key="default.journalSettings.checklist.submissionAppearance">Interlinia 1; wysokość pisma 12 pkt; stosowana raczej kursywa niż podkreślenia (za wyjątkiem adresów stron internetowych); wszystkie rysunki oraz tabele są umieszczone w tekście w odpowiednich miejscach (nie na końcu).</message>
+	<message key="default.journalSettings.authorSelfArchivePolicy">Czasopismo zezwala autorom i zachęca ich do zamieszczania swoich artykułów na prywatnych stronach internetowych oraz w instytucjonalnych repozytoriach. Dotyczy to zarówno wersji przed opublikowaniem, jak i wersji po publikacji. Udostępniając swoje artykuły są zobowiązani do zamieszczenia szczegółowych informacji bibliograficznych, w szczególności (o ile to tylko możliwe) podania tytułu tego czasopisma.</message>
+	<message key="default.journalSettings.refLinkInstructions"><![CDATA[<h4>Aby dodać odnośnik do procesu tworzenia układu</h4>
+	<p>Kiedy zamieniasz zgłoszenie na HTML lub PDF, upewnij się, że wszystkie hiperłącza w zgłoszeniu są aktywne.</p>
+	<h4>A. Kiedy autor przedstawia link do źródła danych</h4>
+	<ol>
+	<li>Podczas gdy zgłoszenie jest nadal w formacie przetwarzania tekstu (np. Word), dodaj wyrażenie VIEW ITEM na końcu odnośnika, który ma URL.</li>
+	<li>Zmień tę frazę w hiperłącze, zaznaczając ją i używając narzędzia Word Wstaw hiperłącze i adresu URL przygotowanego w #2.</li>
+	</ol>
+	<h4>B. Umożliwienie Czytelnikom wyszukiwania w Google Scholar w celu uzyskania referencji</h4>
+	<ol>
+		<li>Podczas gdy zgłoszenie jest jeszcze w formacie przetwarzania tekstu (np. Word), skopiuj tytuł odnośnika na liście Referencji (jeśli wydaje się, że jest on zbyt powszechny, np. tytuł "Pokój" - kopiuj autora i tytuł).</li>
+		<li>Wklej tytuł odnośnika pomiędzy %22, umieszczając znak + pomiędzy każdym słowem: http://scholar.google.com/scholar?q=%22WKLEJ+TYTUL+TUTAJ%22&hl=en&lr=&btnG=Search.</li>
+
+	<li>Dodaj wyrażenie GS SEARCH na końcu każdego cytatu na liście referencyjnej zgłoszenia.</li>
+	<li>Zmień tę frazę w hiperłącze, zaznaczając ją i używając narzędzia Word Wstaw hiperłącze i adresu URL przygotowanego w #2.</li>
+	</ol>
+	<h4>C. Umożliwienie czytelnikom wyszukiwania referencji z DOI</h4>
+	<ol>
+	<li>Gdy zgłoszenie jest jeszcze w Word, skopiuj partię odnośników do CrossRef Text Query http://www.crossref.org/freeTextQuery/.</li>
+	<li>Wklej każde polecenie DOI, które zawiera zapytanie w następującym adresie URL (pomiędzy = i &): http://www.cmaj.ca/cgi/external_ref?access_num=PASTE DOI#HERE&link_type=DOI.</li>
+	<li>Dodaj wyrażenie CrossRef na końcu każdego cytatu w liście referencyjnej zgłoszenia.</li>
+	<li>Zmień tę frazę w hiperłącze, zaznaczając frazę i używając narzędzia Word Wstaw hiperłącze i odpowiedniego adresu URL przygotowanego w #2.</li>
+	</ol>]]></message>
+	<message key="default.journalSettings.proofingInstructions"><![CDATA[<p>Etap korekty ma na celu wychwycenie wszelkich błędów w pisowni, gramatyce i formatowaniu. Na tym etapie nie można wprowadzać większych zmian merytorycznych, chyba że zostanie to omówione z redaktorem działu. W zakładce Layout kliknij na VIEW PROOF, aby zobaczyć formaty HTML, PDF i inne dostępne formaty plików używane do publikacji tego elementu.</p>
+	<h4>W przypadku błędów ortograficznych i gramatycznych</h4>
+
+	<p>Skopiuj problematyczne słowo lub grupy słów i wklej je do pola Korekty z instrukcjami "ZAMIEŃ" do redaktora w następujący sposób:</p>
+
+	<pre>1. ZAMIEŃ...
+	then the others
+	NA...
+	than the others</pre>
+	<br />
+	<pre>2. ZAMIEŃ...
+	Malinowsky
+	NA...
+	Malinowski</pre>
+	<br />
+
+	<h4>Błędy formatowania</h4>
+
+	<p>Opisz lokalizację i charakter problemu w polu Korekta po wpisaniu w tytule "FORMATOWANIE" w następujący sposób:</p>
+	<br />
+	<pre>3. FORMATOWANIE
+	Liczby w tabeli 3 nie są wyrównane w trzeciej kolumnie.</pre>
+	<br />
+	<pre>4. FORMATOWANIE
+	Akapit rozpoczynający się od słów "Ten ostatni temat..." nie jest wcięty.</pre>]]></message>
+	<message key="default.journalSettings.forReaders"><![CDATA[Zachęcamy czytelników, aby zarejestrowali się na stronie w celu uzyskiwania powiadomień od czasopisma. W tym celu należy kliknąć przycisk <a href="{$indexUrl}/{$journalPath}/user/register">Zarejestruj</a> znajdujący się w górnej części strony. W wyniku rejestracji czytelnicy będą otrzymywać na skrzynkę e-mail spisy treści nowych numerów. To pozwoli również czasopismu zapewnić dodatkowe wsparcie czytelnikom. Przed rejestracją czytelnicy powinni zapoznać się z <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">Polityką prywatności</a>.]]></message>
+	<message key="default.journalSettings.forLibrarians">Zachęcamy bibliotekarzy do włączenia strony czasopisma do ich systemów bibliotecznych.</message>
+	<message key="default.journalSettings.lockssLicense"><![CDATA[Czasopismo to wykorzystuje system LOCKSS do tworzenia rozproszonego systemu archiwizacji pomiędzy uczestniczącymi bibliotekami i pozwala tym bibliotekom tworzyć stałe archiwa czasopisma na potrzeby konserwacji i odnowy. <a href="http://www.lockss.org/">Więcej...</a>]]></message>
+	<message key="default.journalSettings.clockssLicense"><![CDATA[Czasopismo to wykorzystuje system CLOCKSS do tworzenia rozproszonego systemu archiwizacji pomiędzy uczestniczącymi bibliotekami i pozwala tym bibliotekom tworzyć stałe archiwa czasopisma na potrzeby konserwacji i odnowy. <a href="http://clockss.org/">Więcej...</a>]]></message>
+	<message key="section.default.policy">Treść polityki prywatności.</message>
 </locale>

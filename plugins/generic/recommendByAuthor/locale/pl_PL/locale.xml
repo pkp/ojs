@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+<!DOCTYPE locale SYSTEM "../../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
   * plugins/generic/recommendByAuthor/locale/pl_PL/locale.xml
@@ -15,5 +15,5 @@
 	<message key="plugins.generic.recommendByAuthor.displayName">Polecaj artykuły wg autora</message>
 	<message key="plugins.generic.recommendByAuthor.description">Wtyczka pokazuje listę artykułów tego samego autora na stronie abstraktu.</message>
 	<message key="plugins.generic.recommendByAuthor.heading">Inne teksty tego samego autora</message>
-	<message key="plugins.generic.recommendByAuthor.noMetric">Wtyczka wymaga co najmniej jedną wtyczkę statystyczną/raportowania. Jeżeli twoja wtyczka obsługująca statystyki udostępnia więcej niż jedną metrykę, wybierz również główną metrykę w ustawieniach administracyjnych strony.</message>
+	<message key="plugins.generic.recommendByAuthor.noMetric">Wtyczka wymaga co najmniej jednej wtyczki statystycznej/raportowania. Jeżeli twoja wtyczka obsługująca statystyki udostępnia więcej niż jedną metrykę, wybierz również główną metrykę w ustawieniach administracyjnych strony.</message>
 </locale>

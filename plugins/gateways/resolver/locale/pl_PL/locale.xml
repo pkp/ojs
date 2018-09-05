@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/pl_PL/locale.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="pl_PL" full_name="Język Polski">
+	<message key="plugins.gateways.resolver.displayName">Wtyczka Resolver</message>
+	<message key="plugins.gateways.resolver.description">Wtyczka rozwiązuje numery i artykuły w oparciu o dane z cytowań.</message>
+	<message key="plugins.gateways.resolver.errors.errorMessage">Rozwiązanie pojedynczej jednostki z określonego opisu zawartego w cytowaniach jest niemożliwe. Upewnij się, że opis nie jest złożony i odnosi się do jednej jednostki (publikacji).</message>
+	<message key="plugins.gateways.resolver.exportHoldings">Eksportuje Holdings</message>
+</locale>
