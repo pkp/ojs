@@ -4,8 +4,8 @@
 <!--
   * locale/pl_PL/locale.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Polish_(pl_PL)
   * Localization strings.
@@ -279,19 +279,14 @@
 	<message key="submission.event.general.issueScheduled">Artykuł przesłany do kolejki</message>
 	<message key="submission.event.general.issueAssigned">Artykuły przypisany do numeru</message>
 	<message key="submission.event.general.articlePublished">Artykuł opublikowany</message>
-
 	<message key="submission.event.author.authorRevision">Korekta autora przesłana</message>
-
 	<message key="submission.event.general.authorRevision">Plik korekty autora zaktualizowany</message>
-	
 	<message key="submission.event.editor.editorAssigned">Redaktor przypisany do zgłoszonego tekstu</message>
 	<message key="submission.event.editor.editorUnassigned">Redaktor odłączony od zgłoszonego tekstu</message>
 	<message key="submission.event.editor.editorDecision">Decyzja redaktora wysłana</message>
 	<message key="submission.event.editor.editorFile">Plik redaktora zaktualizowany</message>
 	<message key="submission.event.editor.submissionArchived">Wysłany tekst przeniesiony do archiwum</message>
 	<message key="submission.event.editor.submissionRestored">Wysłany tekst przywrócony z archiwum</message>
-	
-	
 	<message key="submission.event.copyedit.copyeditorAssigned">Korektor przypisany do zgłoszonego tekstu</message>
 	<message key="submission.event.copyedit.copyeditorUnassigned">Korektor odłączony od zgłoszonego tekstu</message>
 	<message key="submission.event.copyedit.copyeditInitiated">Korekta rozpoczęta</message>
@@ -299,13 +294,11 @@
 	<message key="submission.event.copyedit.copyeditInitialCompleted">Wstępna korekta ukończona</message>
 	<message key="submission.event.copyedit.copyeditFinalCompleted">Korekta ukończona</message>
 	<message key="submission.event.copyedit.copyeditSetFile">Plik po korekcie zaktualizowany</message>
-	
 	<message key="submission.event.proofread.proofreaderAssigned">Korektor pliku do publikacji przypisany do zgłoszenia</message>
 	<message key="submission.event.proofread.proofreaderUnassigned">Korektor pliku do publikacji odłączony od zgłoszenia</message>
 	<message key="submission.event.proofread.proofreadInitiated">Korekta pliku do publikacji rozpoczęta</message>
 	<message key="submission.event.proofread.proofreadRevision">Plik po korekcie pliku do publikacji zaktualizowany</message>
 	<message key="submission.event.proofread.proofreadCompleted">Korekta pliku do publikacji ukończona</message>
-	
 	<message key="submission.event.layout.layoutEditorAssigned">Składacz przypisany do tekstu</message>
 	<message key="submission.event.layout.layoutEditorUnassigned">Składacz odłączony od zgłoszonego tekstu</message>
 	<message key="submission.event.layout.layoutInitiated">Skład rozpoczęty</message>
@@ -368,14 +361,9 @@
 
 	<!-- General plugin information -->
 	<message key="plugins.categories.auth.description">Wtyczka autoryzacji pozwala aby Open Journal System uwierzytelniał użytkowników za pomocą zewnętrznych systemów, takich jak LDAP.</message>
-
-
 	<message key="plugins.categories.generic.description">Wtyczki ogólne są wykorzystywane do rozszerzania możliwości Open Journal Systems i nie są wspierane przez inne rodzaje wtyczek.</message>
-
 	<message key="plugins.categories.implicitAuth">Implicit Authentication Plugins</message>
 	<message key="plugins.categories.implicitAuth.description">Implicit Authentication plugins implement support for authenticating users based on http headers.</message>
-
-
 	<message key="plugins.categories.oaiMetadataFormats">OAI Metadata Format Plugins</message>
 	<message key="plugins.categories.oaiMetadataFormats.description">These format plugins express metadata in OAI communications.</message>
 
@@ -489,7 +477,6 @@ Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br/>
 	<message key="sectionEditor.author.confirmRenotify">Ponowne powiadomienie autora spowoduje zresetowanie ustawień w zakresie tekstu.</message>
 	<message key="sectionEditor.layout.confirmRenotify">Ponowne powiadomienie składacza spowoduje zresetowanie ustawień w zakresie przypisanego tekstu</message>
 	<message key="sectionEditor.proofreader.confirmRenotify">Ponowne powiadomienie korektora pliku do publikacji spowoduje zresetowanie ustawień w zakresie przypisanego tekstu.</message>
-
 	<message key="sectionEditor.regrets.breadcrumb">Odmowy</message>
 	<message key="sectionEditor.regrets.title">#{$submissionId} Odmowy recenzentów, anulowania, wcześniejsze etapy</message>
 	<message key="sectionEditor.regrets">Odmowy</message>
@@ -533,8 +520,7 @@ Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br/>
 	<message key="reviewer.article.reviewerComments">Uwagi</message>
 	<message key="reviewer.article.uploadedFile">Wysłane pliki</message>	
 	<message key="reviewer.article.reviewersAnnotatedVersion">Wersja wysłana przez recenzenta</message>
-	<message key="reviewer.article.reviewersAnnotatedVersionDescription">(Jeżeli chcesz uzupełnić plik o komentarze dla redaktora
-, zapisz plik na dysku.)</message>
+	<message key="reviewer.article.reviewersAnnotatedVersionDescription">(Jeżeli chcesz uzupełnić plik o komentarze dla redaktora, zapisz plik na dysku.)</message>
         <message key="reviewer.article.schedule.request">Prośba redaktora</message>
         <message key="reviewer.article.schedule.response">Twoja odpowiedź</message>
         <message key="reviewer.article.schedule.submitted">Wysłane recenzje</message>
@@ -825,11 +811,9 @@ Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br/>
 	<message key="log.copyedit.copyeditorAssigned">{$copyeditorName} został(a) przypisany(a) do wykonania korekty tekstu {$submissionId}.</message>
 	<message key="log.copyedit.copyeditorFile">Plik po korekcie został przesłany przez korektora.</message>
 	<message key="log.copyedit.authorFile">Plik po korekcie został przesłany przez autora.</message>
-
 	<message key="log.layout.layoutEditorAssigned">{$editorName} został(a) przypisany(a) do wykonania składu tekstu {$submissionId}.</message>
 	<message key="log.layout.layoutEditorUnassigned">{$editorName} został(a) odłączony(a) od wykonania składu tekstu {$submissionId}.</message>
 	<message key="log.layout.layoutEditComplete">{$editorName} ukończył(a) skład tekstu {$submissionId}.</message>
-
 	<message key="log.editor.metadataModified">Metadane tekstu zostały zmienione przez {$editorName}.</message>
 	<message key="log.editor.editorFile">Wersja redaktorska pliku została wysłana.</message>
 	<message key="log.editor.archived">Tekst {$submissionId} został zarchiwizowany.</message>
@@ -850,10 +834,8 @@ Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br/>
 	<message key="rt.admin.settings.enableReadingTools">Włącz Narzędzia dla czytelników, dla oznaczonych działów czasopisma.</message>
 	<message key="rt.admin.settings.relatedItems">Dziedzina</message>
 	<message key="rt.admin.settings.relatedItemsLink"><![CDATA[Zobacz <a href="{$relatedItemsLink}" class="action">Ustawienia powiązanych pozycji</a> aby zobaczyć, dodać, poprawić lub usunąć powiązane pozycje dla każdej dziedziny.]]></message>
-
 	<message key="rt.admin.options">Journal Item Tools</message>
 	<message key="rt.admin.relatedItems">Narzędzia powiązanych pozycji</message>
-
 	<message key="rt.admin.settings.addComment">Dodaj komentarz (włącza możliwość umieszczania komentarzy przez czytelników, które mogą być usuwane przez Administratora czasopisma).</message>
 	<message key="rt.admin.settings.addComment.authenticated">Użytkownik musi być zarejestrowany i zalogowany aby umieścić komentarz. Zamieszczanie komentarzy przez osoby anonimowe nie jest dozwolone. </message>
 	<message key="rt.admin.settings.addComment.anonymous">Użytkownik musi być zarejestrowany i zalogowany aby umieścić komentarz. Zamieszczanie komentarzy przez osoby anonimowe jest dozwolone.</message>
@@ -876,11 +858,9 @@ Sprawdzanie poprawności może nie działać w przypadku adresów URL, które wy
 
 
 	<message key="rt.metadata.dublinCore.primaryAuthor">Autor</message>
-
 	<message key="rt.metadata.pkp.primaryAuthor">Imię, nazwisko autora, afiliacja, kraj</message>
 	<message key="rt.metadata.pkp.peerReviewed">Recenzowany artykuł</message>
 	<message key="rt.beNotifiedWhen">Powiadom gdy...</message>
-
 	<message key="rt.thisJournal">Wyszukaj w czasopiśmie</message>
 
 

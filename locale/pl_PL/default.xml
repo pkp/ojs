@@ -4,8 +4,8 @@
 <!--
   * locale/pl_PL/default.xml
   *
-  * Copyright (c) 2013-2017 Simon Fraser University
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Polish_(pl_PL)
   * Localization strings.
@@ -78,56 +78,56 @@ ________________________________________________________________________<br/>
 	<message key="default.journalSettings.membershipFee">Członkowstwo</message>
 	<message key="default.journalSettings.checklist.submissionAppearance">Interlinia 1; wysokość pisma 12 pkt; stosowana raczej kursywa niż podkreślenia (za wyjątkiem adresów stron internetowych); wszystkie rysunki oraz tabele są umieszczone w tekście w odpowiednich miejscach (nie na końcu).</message>
 	<message key="default.journalSettings.authorSelfArchivePolicy">Czasopismo zezwala autorom i zachęca ich do zamieszczania swoich artykułów na prywatnych stronach internetowych oraz w instytucjonalnych repozytoriach. Dotyczy to zarówno wersji przed opublikowaniem, jak i wersji po publikacji. Udostępniając swoje artykuły są zobowiązani do zamieszczenia szczegółowych informacji bibliograficznych, w szczególności (o ile to tylko możliwe) podania tytułu tego czasopisma.</message>
-	<message key="default.journalSettings.refLinkInstructions"><![CDATA[<h4>To Add Reference Linking to the Layout Process</h4>
-	<p>When turning a submission into HTML or PDF, make sure that all hyperlinks in the submission are active.</p>
-	<h4>A. When the Author Provides a Link with the Reference</h4>
+	<message key="default.journalSettings.refLinkInstructions"><![CDATA[<h4>Aby dodać odnośnik do procesu tworzenia układu</h4>
+	<p>Kiedy zamieniasz zgłoszenie na HTML lub PDF, upewnij się, że wszystkie hiperłącza w zgłoszeniu są aktywne.</p>
+	<h4>A. Kiedy autor przedstawia link do źródła danych</h4>
 	<ol>
-	<li>While the submission is still in its word processing format (e.g., Word), add the phrase VIEW ITEM to the end of the reference that has a URL.</li>
-	<li>Turn that phrase into a hyperlink by highlighting it and using Word's Insert Hyperlink tool and the URL prepared in #2.</li>
+	<li>Podczas gdy zgłoszenie jest nadal w formacie przetwarzania tekstu (np. Word), dodaj wyrażenie VIEW ITEM na końcu odnośnika, który ma URL.</li>
+	<li>Zmień tę frazę w hiperłącze, zaznaczając ją i używając narzędzia Word Wstaw hiperłącze i adresu URL przygotowanego w #2.</li>
 	</ol>
-	<h4>B. Enabling Readers to Search Google Scholar For References</h4>
+	<h4>B. Umożliwienie Czytelnikom wyszukiwania w Google Scholar w celu uzyskania referencji</h4>
 	<ol>
-		<li>While the submission is still in its word processing format (e.g., Word), copy the title of the work referenced in the References list (if it appears to be too common a title—e.g., "Peace"—then copy author and title).</li>
-		<li>Paste the reference's title between the %22's, placing a + between each word: http://scholar.google.com/scholar?q=%22PASTE+TITLE+HERE%22&hl=en&lr=&btnG=Search.</li>
+		<li>Podczas gdy zgłoszenie jest jeszcze w formacie przetwarzania tekstu (np. Word), skopiuj tytuł odnośnika na liście Referencji (jeśli wydaje się, że jest on zbyt powszechny, np. tytuł "Pokój" - kopiuj autora i tytuł).</li>
+		<li>Wklej tytuł odnośnika pomiędzy %22, umieszczając znak + pomiędzy każdym słowem: http://scholar.google.com/scholar?q=%22WKLEJ+TYTUL+TUTAJ%22&hl=en&lr=&btnG=Search.</li>
 
-	<li>Add the phrase GS SEARCH to the end of each citation in the submission's References list.</li>
-	<li>Turn that phrase into a hyperlink by highlighting it and using Word's Insert Hyperlink tool and the URL prepared in #2.</li>
+	<li>Dodaj wyrażenie GS SEARCH na końcu każdego cytatu na liście referencyjnej zgłoszenia.</li>
+	<li>Zmień tę frazę w hiperłącze, zaznaczając ją i używając narzędzia Word Wstaw hiperłącze i adresu URL przygotowanego w #2.</li>
 	</ol>
-	<h4>C. Enabling Readers to Search for References with a DOI</h4>
+	<h4>C. Umożliwienie czytelnikom wyszukiwania referencji z DOI</h4>
 	<ol>
-	<li>While the submission is still in Word, copy a batch of references into CrossRef Text Query http://www.crossref.org/freeTextQuery/.</li>
-	<li>Paste each DOI that the Query provides in the following URL (between = and &): http://www.cmaj.ca/cgi/external_ref?access_num=PASTE DOI#HERE&link_type=DOI.</li>
-	<li>Add the phrase CrossRef to the end of each citation in the submission's References list.</li>
-	<li>Turn that phrase into a hyperlink by highlighting the phrase and using Word's Insert Hyperlink tool and the appropriate URL prepared in #2.</li>
+	<li>Gdy zgłoszenie jest jeszcze w Word, skopiuj partię odnośników do CrossRef Text Query http://www.crossref.org/freeTextQuery/.</li>
+	<li>Wklej każde polecenie DOI, które zawiera zapytanie w następującym adresie URL (pomiędzy = i &): http://www.cmaj.ca/cgi/external_ref?access_num=PASTE DOI#HERE&link_type=DOI.</li>
+	<li>Dodaj wyrażenie CrossRef na końcu każdego cytatu w liście referencyjnej zgłoszenia.</li>
+	<li>Zmień tę frazę w hiperłącze, zaznaczając frazę i używając narzędzia Word Wstaw hiperłącze i odpowiedniego adresu URL przygotowanego w #2.</li>
 	</ol>]]></message>
-	<message key="default.journalSettings.proofingInstructions"><![CDATA[<p>The proofreading stage is intended to catch any errors in the galley's spelling, grammar, and formatting. More substantial changes cannot be made at this stage, unless discussed with the Section Editor. In Layout, click on VIEW PROOF to see the HTML, PDF, and other available file formats used in publishing this item.</p>
-	<h4>For Spelling and Grammar Errors</h4>
+	<message key="default.journalSettings.proofingInstructions"><![CDATA[<p>Etap korekty ma na celu wychwycenie wszelkich błędów w pisowni, gramatyce i formatowaniu. Na tym etapie nie można wprowadzać większych zmian merytorycznych, chyba że zostanie to omówione z redaktorem działu. W zakładce Layout kliknij na VIEW PROOF, aby zobaczyć formaty HTML, PDF i inne dostępne formaty plików używane do publikacji tego elementu.</p>
+	<h4>W przypadku błędów ortograficznych i gramatycznych</h4>
 
-	<p>Copy the problem word or groups of words and paste them into the Proofreading Corrections box with "CHANGE-TO" instructions to the editor as follows:</p>
+	<p>Skopiuj problematyczne słowo lub grupy słów i wklej je do pola Korekty z instrukcjami "ZAMIEŃ" do redaktora w następujący sposób:</p>
 
-	<pre>1. CHANGE...
+	<pre>1. ZAMIEŃ...
 	then the others
-	TO...
+	NA...
 	than the others</pre>
 	<br />
-	<pre>2. CHANGE...
+	<pre>2. ZAMIEŃ...
 	Malinowsky
-	TO...
+	NA...
 	Malinowski</pre>
 	<br />
 
-	<h4>For Formatting Errors</h4>
+	<h4>Błędy formatowania</h4>
 
-	<p>Describe the location and nature of the problem in the Proofreading Corrections box after typing in the title "FORMATTING" as follows:</p>
+	<p>Opisz lokalizację i charakter problemu w polu Korekta po wpisaniu w tytule "FORMATOWANIE" w następujący sposób:</p>
 	<br />
-	<pre>3. FORMATTING
-	The numbers in Table 3 are not aligned in the third column.</pre>
+	<pre>3. FORMATOWANIE
+	Liczby w tabeli 3 nie są wyrównane w trzeciej kolumnie.</pre>
 	<br />
-	<pre>4. FORMATTING
-	The paragraph that begins "This last topic..." is not indented.</pre>]]></message>
+	<pre>4. FORMATOWANIE
+	Akapit rozpoczynający się od słów "Ten ostatni temat..." nie jest wcięty.</pre>]]></message>
 	<message key="default.journalSettings.forReaders"><![CDATA[Zachęcamy czytelników, aby zarejestrowali się na stronie w celu uzyskiwania powiadomień od czasopisma. W tym celu należy kliknąć przycisk <a href="{$indexUrl}/{$journalPath}/user/register">Zarejestruj</a> znajdujący się w górnej części strony. W wyniku rejestracji czytelnicy będą otrzymywać na skrzynkę e-mail spisy treści nowych numerów. To pozwoli również czasopismu zapewnić dodatkowe wsparcie czytelnikom. Przed rejestracją czytelnicy powinni zapoznać się z <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">Polityką prywatności</a>.]]></message>
 	<message key="default.journalSettings.forLibrarians">Zachęcamy bibliotekarzy do włączenia strony czasopisma do ich systemów bibliotecznych.</message>
-	<message key="default.journalSettings.lockssLicense"><![CDATA[This journal utilizes the LOCKSS system to create a distributed archiving system among participating libraries and permits those libraries to create permanent archives of the journal for purposes of preservation and restoration. <a href="http://www.lockss.org/">More...</a>]]></message>
-	<message key="default.journalSettings.clockssLicense"><![CDATA[This journal utilizes the CLOCKSS system to create a distributed archiving system among participating libraries and permits those libraries to create permanent archives of the journal for purposes of preservation and restoration. <a href="http://clockss.org/">More...</a>]]></message>
+	<message key="default.journalSettings.lockssLicense"><![CDATA[Czasopismo to wykorzystuje system LOCKSS do tworzenia rozproszonego systemu archiwizacji pomiędzy uczestniczącymi bibliotekami i pozwala tym bibliotekom tworzyć stałe archiwa czasopisma na potrzeby konserwacji i odnowy. <a href="http://www.lockss.org/">Więcej...</a>]]></message>
+	<message key="default.journalSettings.clockssLicense"><![CDATA[Czasopismo to wykorzystuje system CLOCKSS do tworzenia rozproszonego systemu archiwizacji pomiędzy uczestniczącymi bibliotekami i pozwala tym bibliotekom tworzyć stałe archiwa czasopisma na potrzeby konserwacji i odnowy. <a href="http://clockss.org/">Więcej...</a>]]></message>
 	<message key="section.default.policy">Treść polityki prywatności.</message>
 </locale>
