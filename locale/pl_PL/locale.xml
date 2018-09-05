@@ -41,8 +41,8 @@
 	<message key="submission.reviewFormResponse">Formularz recenzji</message>
 
 
-	<message key="reviewer.article.enterReviewForm">Kliknij ikonę dymka, aby wypełnić formularz recenzji.</message>	
-	<message key="reviewer.submission.reviewFormResponse.form.responseRequired">Wypełnij wymagane pola.</message>	
+	<message key="reviewer.article.enterReviewForm">Kliknij ikonę dymka, aby wypełnić formularz recenzji.</message>
+	<message key="reviewer.submission.reviewFormResponse.form.responseRequired">Wypełnij wymagane pola.</message>
 	
 	<!-- review forms end -->
 
@@ -169,7 +169,7 @@
 	<message key="submission.proofreading">Korekta pliku do publikacji</message>
 	<message key="submission.scheduling">Harmonogram</message>
 	<message key="submission.scheduledIn">Zaplanowane do publikacji w {$issueName}.</message>
-	<message key="submission.scheduledIn.tba">(do uzgodnienia)</message>	
+	<message key="submission.scheduledIn.tba">(do uzgodnienia)</message>
 	<message key="submissions.sec">Dział</message>
 	<message key="submissions.step1">Krok 1</message>
 	<message key="submissions.step3">Krok 3</message>
@@ -378,7 +378,7 @@
 	<message key="manager.setup.lockssDescription"><![CDATA[LOCKSS jest otwartoźródłowym systemem opracowanym przez Bibliotekę Uniwerytetu Stanford, który umożliwia archiwizowanie wybranych czasopism publikowanych w internecie. Każdy zarchiwizowany artykuł jest wielokrotnie sprawdzany, a jego kopia przywracana w przypadku występienia błędów lub nieciągłości danych.
 <br /><br />
 Konfiguracja LOCKSS dla OJS może zostać przeprowadzona zarówno przed jak i po opublikowaniu treści w czasopiśmie. Możesz włączyć system LOCKSS poniżej:]]></message>
-	
+
 	<!-- Setup Step 3 -->
 	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Informacje o prawach autorskich zaproponowane przez Creative Commons</h3>
 <h4>1. Zaproponowana polityka dla czasopisma, które zapewnia otwarty dostęp</h4>
@@ -451,7 +451,7 @@ Autorzy publikujący w czasopiśmie zgadzają się na następujące zasady:
 	<!-- Live Issues -->
 
 	<!-- Navigation sidebar menu -->
-	
+
 	<!-- Used by editor in submission review / editing -->
 	<message key="editor.article.selectReviewerNotes"><![CDATA[Nazwa użytkownika jest linkiem do profilu recenzenta.<br/>
 Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br/>
@@ -513,7 +513,7 @@ Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br/>
 	<message key="reviewer.article.recommendation">Rekomendacje</message>
 	<message key="reviewer.article.submitReview">Wyślij recenzję do redaktora</message>
 	<message key="reviewer.article.reviewerComments">Uwagi</message>
-	<message key="reviewer.article.uploadedFile">Wysłane pliki</message>	
+	<message key="reviewer.article.uploadedFile">Wysłane pliki</message>
 	<message key="reviewer.article.reviewersAnnotatedVersion">Wersja wysłana przez recenzenta</message>
 	<message key="reviewer.article.reviewersAnnotatedVersionDescription">(Jeżeli chcesz uzupełnić plik o komentarze dla redaktora, zapisz plik na dysku.)</message>
 	<message key="reviewer.article.schedule.request">Prośba redaktora</message>
@@ -610,7 +610,7 @@ Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br/>
 	<message key="submission.proofread.instructions">Wytyczne dla korektora pliku do publikacji</message>
 
 	<!-- Submission History -->
-	
+
 	<message key="submission.logType.article">Artykuł</message>
 	<message key="submission.logType.author">Autor</message>
 	<message key="submission.logType.editor">Redaktor czasopisma</message>
@@ -618,11 +618,11 @@ Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br/>
 	<message key="submission.logType.copyedit">Korekta</message>
 	<message key="submission.logType.layout">Skład</message>
 	<message key="submission.logType.proofread">Zaakceptowane</message>
-	
+
 	<!-- Submission Event Log -->
 
 	<!-- Submission Email Log -->
-	
+
 	<!-- Submission Comments -->
 	<message key="submission.comments.editorAuthorCorrespondence">Korespondencja redaktor/autor</message>
 	<message key="submission.comments.copyeditComments">Uwagi korektora</message>
@@ -845,7 +845,7 @@ Ocena jest w skali 5-stopniowej (gdzie 5 oznacza "doskonały").<br/>
 	<message key="rt.admin.validateUrls.description"><![CDATA[Poniżej wyświetlone są prawdopodobnie niepoprawne adresy URL wyszukiwanych stron.<br/>
 Powinieneś(naś) ręcznie zweryfikować każdy URL i oznaczyć jako poprawny, jako że automatyczne testowanie URL nie zawsze działa w 100%.<br/>
 Sprawdzanie poprawności może nie działać w przypadku adresów URL, które wymagają opublikowania danych formularza.]]></message>
-	
+
 	<!-- RT Entities -->
 
 
@@ -867,7 +867,7 @@ Sprawdzanie poprawności może nie działać w przypadku adresów URL, które wy
 	<message key="notification.type.editorDecisionComment">Dostępne są nowe uwagi do decyzji redaktora dla "{$title}".</message>
 	<message key="notification.type.galleyModified">Plik z publikacją dla "{$title}" został zmodyfikowany.</message>
 	<message key="notification.type.issuePublished">Nowy numer został opublikowany.</message>
-	<message key="notification.type.newAnnouncement">Nowe ogłoszenie zostało utworzone.</message>	
+	<message key="notification.type.newAnnouncement">Nowe ogłoszenie zostało utworzone.</message>
 	<message key="notification.type.reviewerFormComment">Recenzja od recenzenta została przesłana do "{$title}".</message>
 	<message key="notification.type.reviewing">Wydarzenia dotyczące procesu recenzji</message>
 	<message key="notification.type.site">Wydarzenia dotyczące strony</message>
@@ -1019,7 +1019,6 @@ Skonfigurowanie CLOCKSS w Open Journal Systems nie wymaga posiadania opublikowan
 	<message key="editor.issues.futureIssues">Zaplanowane numery</message>
 	<message key="subscriptions.status.noSubscription">Nie posiadasz aktualnej prenumeraty.</message>
 	<message key="reader.purchasePrice">({$currency} {$price})</message>
-	<message key="manager.setup.porticoDescription">Portico is a not-for-profit service committed to the preservation of digital publications, including e-journals, e-books, and digitized historical collections. If your journal signed a contract with Portico, enable it here:</message>
 	<message key="submission.layout.referenceLinking">Linkowanie odniesień</message>
 	<message key="log.editor.recommendation">Rekomendacja ({$decision}) dla tekstu {$submissionId} została utworzona przez {$editorName}.</message>
 	<message key="navigation.subscriptions">Subskrypcje</message>
