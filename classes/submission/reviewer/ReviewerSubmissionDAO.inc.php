@@ -171,7 +171,7 @@ class ReviewerSubmissionDAO extends ArticleDAO {
 				$reviewerSubmission->getCompetingInterests(),
 				(int) $reviewerSubmission->getRecommendation(),
 				(int) $reviewerSubmission->getDeclined(),
-				(int) $reviewerSubmission->getQuality(),
+				$reviewerSubmission->getQuality(),
 				(int) $reviewerSubmission->getReviewId()
 			)
 		);
