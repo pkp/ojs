@@ -64,6 +64,9 @@ class SubmissionHandler extends APIHandler {
 		$routeName = null;
 		$slimRequest = $this->getSlimRequest();
 
+		import('lib.pkp.classes.security.authorization.ContextAccessPolicy');
+		$this->addPolicy(new ContextAccessPolicy($request, $roleAssignments));
+
 		if (!is_null($slimRequest) && ($route = $slimRequest->getAttribute('route'))) {
 			$routeName = $route->getName();
 		}
