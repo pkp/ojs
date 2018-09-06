@@ -85,6 +85,9 @@ class SettingsPluginGridHandler extends PluginGridHandler {
 					break;
 			}
 			$this->addPolicy(new PluginAccessPolicy($request, $args, $roleAssignments, $accessMode));
+		} else {
+			import('lib.pkp.classes.security.authorization.ContextAccessPolicy');
+			$this->addPolicy(new ContextAccessPolicy($request, $roleAssignments));
 		}
 		return parent::authorize($request, $args, $roleAssignments);
 	}
