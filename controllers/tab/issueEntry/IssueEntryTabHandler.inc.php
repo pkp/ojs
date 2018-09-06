@@ -122,6 +122,8 @@ class IssueEntryTabHandler extends PublicationEntryTabHandler {
 		$form->readInputData();
 		if($form->validate()) {
 			$form->execute();
+			// submission changed, so get it again
+			$submission = $form->getSubmission();
 			// Log the event
 			import('lib.pkp.classes.log.SubmissionLog');
 			import('classes.log.SubmissionEventLogEntry'); // Log consts
