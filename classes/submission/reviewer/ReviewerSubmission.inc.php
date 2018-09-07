@@ -259,7 +259,7 @@ class ReviewerSubmission extends Article {
 
 	/**
 	 * Get quality.
-	 * @return int
+	 * @return int|null
 	 */
 	function getQuality() {
 		return $this->getData('quality');
@@ -267,7 +267,7 @@ class ReviewerSubmission extends Article {
 
 	/**
 	 * Set quality.
-	 * @param $quality int
+	 * @param $quality int|null
 	 */
 	function setQuality($quality) {
 		return $this->setData('quality', $quality);
