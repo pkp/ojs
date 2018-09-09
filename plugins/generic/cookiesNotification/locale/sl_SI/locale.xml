@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/cookiesNotification/locale/sl_SI/locale.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for this plugin.
+  *
+  -->
+  
+<locale name="sl_SI" full_name="Slovenščina">
+	<message key="plugins.generic.cookiesNotification.displayName">Obvestilo o piškotkih</message>
+  <message key="plugins.generic.cookiesNotification.description">Pokaže uporabnikom obvestilo o piškotkih</message>
+  <message key="plugins.generic.cookiesNotification.alert">Spletna stran uporablja piškotke za hranjenje podatkov o uporabniški seji.</message>
+</locale>

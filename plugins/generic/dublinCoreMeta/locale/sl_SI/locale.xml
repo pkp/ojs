@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/dublinCoreMeta/locale/sl_SI/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
+  * Localization strings.
+  -->
+
+<locale name="sl_SI" full_name="Slovenščina">
+	<message key="plugins.generic.dublinCoreMeta.name">Vtičnik za Dublin Core indeksiranje</message>
+	<message key="plugins.generic.dublinCoreMeta.description">Vtičnik vsebuje  Dublin Core meta oznake prispevkov za namene indeksiranja.</message>
+</locale>

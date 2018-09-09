@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/openAIRE/locale/sl_SI/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
+  * Localization strings.
+  -->
+ 
+<locale name="sl_SI" full_name="Slovenščina">
+	<message key="plugins.generic.openAIRE.displayName">OpenAIRE</message>
+	<message key="plugins.generic.openAIRE.description">OpenAIRE vtičnik dodak elemnt ProjectID v metapodatke prispevka in razširi OAI-PMH vmesnik v skladu z zahtevami OpenAIRE Guidelines 1.1 in s tem omogoči OJS revijam, da so skladne z OpenAIRE .</message>
+	<message key="plugins.generic.openAIRE.projectID">OpenAIRE ProjectID</message>
+	<message key="plugins.generic.openAIRE.projectID.description"><![CDATA[Če je prispevek rezultat dela v okviru EU iniciative, ki je podrejena <a href="https://www.openaire.eu/" target="_blank">OpenAIRE</a> metapodatkovni platformi, prosimo vključite ProjectID, ki je šestmestno število, ki predstavlja Grant Agreement identifikator.]]></message>
+	<message key="plugins.generic.openAIRE.projectIDValid">Prosimo vnesite veljaven ProjectID (6 številk)</message>
+</locale>

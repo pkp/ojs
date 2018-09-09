@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/importexport/quickSubmit/locale/sl_SI/locale.xml
+  *
+  * Copyright (c) 2013-2017 Simon Fraser University Library
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings
+  -->
+
+<locale name="sl_SI" full_name="Slovenščina">
+	<message key="plugins.importexport.quickSubmit.displayName">Vtičnik za hitro oddajo prispevka</message>
+	<message key="plugins.importexport.quickSubmit.description">Vtičnik za oddajo prispevka v enem koraku</message>
+	<message key="plugins.importexport.quickSubmit.descriptionLong">Vtičnik omogoča, da oddate prispevek direktno v fazo produkcija ali številko.</message>
+	<message key="plugins.importexport.quickSubmit.success">Prispevek dodan</message>
+	<message key="plugins.importexport.quickSubmit.successDescription">Creiranje prispevka je bilo uspešno.</message>
+	<message key="plugins.importexport.quickSubmit.successReturn">Nazaj na vtičnik za hitro oddajo prispevka.</message>
+	<message key="plugins.importexport.quickSubmit.published">Izdano</message>
+	<message key="plugins.importexport.quickSubmit.unpublished">Še ne izdano</message>
+	<message key="plugins.importexport.quickSubmit.goToSubmission">Pojdi na prispevek</message>
+	<message key="plugins.importexport.quickSubmit.selectIssue">Številka mora biti izbrana</message>
+</locale>
