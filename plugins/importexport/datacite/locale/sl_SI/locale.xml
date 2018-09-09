@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/importexport/datacite/locale/sl_SI/locale.xml
+  *
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
+  * Localization strings.
+  -->
+
+<locale name="sl_SI" full_name="Slovenščina">
+	<message key="plugins.importexport.datacite.displayName">Vtičnik za DataCite izvoz/registracijo</message>
+	<message key="plugins.importexport.datacite.description">Izvozi ali registrira metapodatke številke, prispeveke, prelome in dodatnih datotek v DataCite obliki.</message>
+
+	<message key="plugins.importexport.datacite.settings.description">Pred prvo uporabo prosimo nastavite DataCite vtičnik.</message>
+	<message key="plugins.importexport.datacite.intro"><![CDATA[
+		Če želite registrirati DOI-je pri DataCite, kontaktirajte upravljalskega agenta na <a href="http://datacite.org/contact" target="_blank">DataCite
+		domači strani</a>, ki vas bo napotil na vašega lokalnega člana DataCite. Ko boste uredili članstvo v
+		organizaciji, boste dobili podatke za pripravo javnih identifikatorjev (DOI) in regostracijo pripadajočih metapodatkov. Če nimate svojega uporabniškega imena in gesla, lahko še vedno izvozite podatke v 
+		DataCite XML obliki, ne morete pa registrirati DOI-je pri DataCite direktno iz OJS.
+		Prosimo, da upoštevate, da bo geslo shranjeno kot prosto besedilo, torej nekriptirano, zaradi zahtev 
+		DataCite registracijskega servisa.
+	]]></message>
+
+	<message key="plugins.importexport.datacite.settings.form.username">Uporabniško ime (simbol)</message>
+	<message key="plugins.importexport.datacite.settings.form.usernameRequired">Prosimo vnesite uporabniško ime (simbol), ki ste ga dobili od DataCite. Uporabniško ime lahko vsebuje dvopičja.</message>
+	<message key="plugins.importexport.datacite.settings.form.automaticRegistration.description">OJS bo avtomatsko opravil depozit dodeljenih DOI-jev na DataCite. Prosimo upoštevajte, da je za to lahko potrebno nekaj časa po tistem, ko objavite novo številko. Lahko preverite vse neregistrirane DOI-je</message>
+	<message key="plugins.importexport.datacite.settings.form.testMode.description">Uporabi DataCite test prefix za DOI registracijo. Ne pozabite odstraniti te možnosti za produkcijo!</message>
+
+	<message key="plugins.importexport.datacite.senderTask.name">Opravilo avtomatske registracije pri DataCite</message>
+
+	<message key="plugins.importexport.datacite.cliUsage"><![CDATA[Uporaba: 
+{$scriptName} {$pluginName} export [outputFileName] [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...
+{$scriptName} {$pluginName} register [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...
+]]></message>
+</locale>
