@@ -1,8 +1,34 @@
-OJS 3.1.1-2 Release Notes
-Git tag: ojs-3_1_1-2
+OJS 3.1.1-4 Release Notes
+Git tag: ojs-3_1_1-4
 
-Release date: June 11, 2018
+Release date: September 11, 2018
 ==============================
+Bug fixes (OJS 3.1.1-4)
+	#4036# Reviewers receive a 0 rating when a review assignment is accepted
+	#4024# Ensure RoleBasedHandlerOperationPolicy is used where addRoleAssignment is used
+	#4009# Usagestats not being processed if contextPath collides with "article"
+	#3996# HTML image URLs with special characters do not work
+	#3988# Fix undefined variable in query access helper
+	#3967# Latest compatible plugin release is not recognized in plugin gallery
+	#3944# JSON responses do not consistently set content-type to application/json
+	#3936# Cannot edit review assignment due date
+	#3935# reload submission after saving the Schedule For Publication form
+	#3930# do not change the sequence of published articles when editing the "Schedule For Publication" form
+	#3922# purchaseInstitutionalSubscription template: change page container element class
+	#3894# Ensure overdue status of review assignments is calculated the same in all places
+	#3892# Check downloadability of submission files from the submission history
+	#3881# Disabled users receive notifications
+	#3878# import/export of HTML galley images
+	#3876# issue galley public identifier should not be required
+	#3871# submission.title untranslated in review reminder form
+	#3870# Reviewers can't complete step 1 of the review process due to privacy consent error
+	#3868# lib/pkp/tools/installPluginVersion.php fails with SetCharSet() error
+	#3864# book double listed in a series, when ordered by title
+	#3851# Ask two times a revision in a review round failed
+	#3846# NavigationMenu Feature - Locales for default NMIs retrieved from key and not database
+	#3837# do not display references input field in the metadata modal submission tab
+	#3836# Privacy consent statements error in registration form multi-journal install
+	#3834# Login page for disabled contexts not available
 
 Bug fixes (OJS 3.1.1-2)
 -----------------------
