@@ -37,6 +37,7 @@
 	<locale key="pt_BR" complete="true"  name="Português (Brasil)" iso639-2b="por" iso639-3="por" />
 	<locale key="pt_PT" complete="false" name="Português (Portugal)" iso639-2b="por" iso639-3="por" />
 	<locale key="ru_RU" complete="false" name="Русский" iso639-2b="rus" iso639-3="rus" />
+	<locale key="sl_SI" complete="false" name="Slovenščina" iso639-2b="slv" iso639-3="slv" />
 	<locale key="sr_RS@cyrillic" complete="false" name="Cрпски" iso639-2b="srp" iso639-3="srp" />
 	<locale key="sr_RS@latin" complete="false" name="Srpski" iso639-2b="srp" iso639-3="srp" />
 	<locale key="sv_SE" complete="true" name="Svenska" iso639-2b="swe" iso639-3="swe" />
