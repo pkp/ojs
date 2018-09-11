@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
+<!--
+  * locale/sl_SI/editor.xml
+  *
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
+  * Localization strings.
+  -->
+<locale name="sl_SI" full_name="Slovenščina">
+	<message key="editor.home">Domača stran urednika</message>
+	<message key="editor.reassign">Prerazporeditev</message>
+	<message key="editor.submissionsAndPublishing">Oddaja in objava prispevkov</message>
+	<message key="editor.submissionQueue">Vrsta oddanih prispevkov</message>
+	<message key="editor.submissionArchive">Arhiv oddanih prispevkov</message>
+	<message key="editor.publishing">Izdajanje</message>
+	<message key="editor.publishedIssues">Izdane številke</message>
+	<message key="editor.allSections">Vse rubrike</message>
+	<message key="editor.allEditors">Vsi uredniki</message>
+	<message key="editor.me">Jaz</message>
+	<message key="editor.publicIdentificationExists">Javni identifikator '{$publicIdentifier}' že obstaja za drug predmet (številka revije, članek, datoteka). Prosimo  izberite unikatne identifikatorje znotraj vaše revije.</message>
+	<message key="editor.submissionArchive.noSubmissions">V arhivu ni nobenih oddanih prispevkov.</message>
+	<message key="editor.submissionArchive.saveChanges">Shrani spremembe v arhiv oddanih prispevkov?</message>
+	<message key="editor.submissionArchive.confirmDelete">Ste prepričani, da želite za vedno zbrisati ta prispevek?</message>
+	<message key="editor.submissionReview.confirmDecision">Ste prepričani, da želite shraniti to odločitev?</message>
+	<message key="editor.submissionReview.emailWillArchive">Ta prispevek bo arhiviran, ko bo poslana e-pošta z obvestilom avtorju ali po kliku gumba Preskoči e-pošto.</message>
+	<message key="editor.submissionReview.cannotSendToCopyediting">Pred pošiljanjem prispevka v lektoriranje uporabite povezavo 	Korespondenca urednik/avtor in obvestite avtorja o odločitvi in izberite verzijo, ki jo boste poslali.</message>
+	<message key="editor.notifyUsers">Obvesti uporabnike</message>
+	<message key="editor.notifyUsers.allUsers">Pošlji sporočilo vsem registriranim uporabnikom te revije  ({$count} uporabnikov)</message>
+	<message key="editor.notifyUsers.allReaders">Vsi bralci ({$count} uporabnikov)</message>
+	<message key="editor.notifyUsers.allAuthors">Vsi objavljeni avtorji ({$count} uporabnikov)</message>
+	<message key="editor.notifyUsers.allIndividualSubscribers">Vsi individualni naročniki ({$count} uporabnikov)</message>
+	<message key="editor.notifyUsers.allInstitutionalSubscribers">Vsi institucionalni naročniki ({$count} uporabnikov)</message>
+	<message key="editor.notifyUsers.inProgress">Obvesti uporabnike...</message>
+	<message key="editor.usersNotified">Obveščeni uporabniki</message>
+	<message key="editor.notifyUsers.interestedUsers">Pošlji to obvestilo vsem uporabnikom revije, ki so se prijavili, da želijo prejemati obvestila ({$count} uporabnikov)</message>
+	<message key="editor.notifyUsers.includeToc">Vključite kazalo iz te številke:</message>
+	<message key="editor.editorAdministration">Uredniška administracija</message>
+	<message key="editor.issues.createIssue">Ustvari novo številko revije</message>
+	<message key="editor.issues.editIssue">Issue Management: {$issueIdentification}</message>
+	<message key="editor.issues.currentIssue">Tekoča številka</message>
+	<message key="editor.issues.numArticles">Število prispevkov</message>
+	<message key="editor.issues.noArticles">Nobenih prispevkov še ni predvidenih za to številko.</message>
+	<message key="editor.issues.confirmDelete">Ste prepričani, da želite za vedno zbrisati to številko revije?</message>
+	<message key="editor.issues.published">Izdane</message>
+	<message key="editor.issues.unpublished">Neizdane</message>
+	<message key="editor.issues.datePublished">Datum izdaje</message>
+	<message key="editor.issues.volumeRequired">Letnik je obvezen in mora biti pozitivno število.</message>
+	<message key="editor.issues.numberRequired">Številka je obvezna in mora biti pozitivno število.</message>
+	<message key="editor.issues.yearRequired">Leto je obvezno in mora biti pozitivno število.</message>
+	<message key="editor.issues.titleRequired">Naslov številke je obvezen.</message>
+	<message key="editor.issues.issueIdentificationRequired">Identifikator številke je obvezen. Prosimo izberite vsaj eno od identifikacijskih možnosti.</message>
+	<message key="editor.issues.issueIdentification">Identifikacija številke revije</message>
+	<message key="editor.issues.publicIssueIdentifier">Javni identifikator številke</message>
+	<message key="editor.issues.description">Opis</message>
+	<message key="editor.issues.accessStatus">Pristopni status</message>
+	<message key="editor.issues.accessDate">Datum prostega dostopa</message>
+	<message key="editor.issues.enableOpenAccessDate">Omogoči odprt dostop z zakasnitvijo</message>
+	<message key="editor.issues.coverPage">Slika naslovnice</message>
+	<message key="editor.issues.coverPageInstructions">(Dovoljeni formati: .gif, .jpg in.png )</message>
+	<message key="editor.issues.uploaded">Naloženo</message>
+	<message key="editor.issues.remove">Zbriši</message>
+	<message key="editor.issues.proofed">Korigirano</message>
+	<message key="editor.issues.removeCoverPage">Zbriši sliko naslovnice?</message>
+	<message key="editor.issues.removeCoverImageFileNameMismatch">Slika naslovnice, ki ste jo želeli izbrisati ne pripada tej reviji. Prosimo ponovno naložite stran in poskusite ponovno.</message>
+	<message key="editor.issues.removeCoverImageFileNotFound">Slika naslovnice, ki ste jo želeli izbrisati ne obstaja. Morda je bila že izbirsana. Ponovno naložite stran.</message>
+	<message key="editor.issues.invalidCoverImageFormat">Napačen format naslovnice. Dovoljeni formati so .gif, .jpg, or .png.</message>
+	<message key="editor.issues.styleFile">Stilska tablica</message>
+	<message key="editor.issues.invalidStyleFormat">Napačen format stilske tablice. Preverite, da boste oddali datoteko, ki bo veljaven CSS. (CSS datoteke, ki imajo na začetku komentar, so lahko zavrnjene.)</message>
+	<message key="editor.issues.removeStyleFile">Stilska tablica</message>
+	<message key="editor.issues.coverPageCaption">Naslov naslovnice</message>
+	<message key="editor.issues.showCoverPage">Ustvari naslovnico za to številko s spodnjimi elementi:</message>
+	<message key="editor.issues.coverPageDisplay">Prikaži</message>
+	<message key="editor.issues.openAccess">Prost dostop</message>
+	<message key="editor.issues.subscription">Naročnine</message>
+	<message key="editor.issues.identification">Identifikacija</message>
+	<message key="editor.issues.access">Dostop</message>
+	<message key="editor.issues.cover">Naslovnica</message>
+	<message key="editor.issues.confirmIssueDelete">Vsi prispevki te številke bodo vrnjeni na začetek urejanja in vse pripadajoče datoteke bodo trajno zbrisani. Ste prepričani, da želite zbrisati to številko revije?</message>
+	<message key="editor.issues.resetIssueOrder"><![CDATA[Vrstni red številk te revije se določajo ročno. <a href="{$url}" class="action">Povrni na privzeto</a>]]></message>
+	<message key="editor.issues.resetSectionOrder"><![CDATA[Vrstni red rubrik te revije se določajo ročno. <a href="{$url}" class="action">Povrni na privzeto</a>]]></message>
+	<message key="editor.issues.issueData">Podatki o številki</message>
+	<message key="editor.issues.saveChanges">Shrani spremembe v kazalo vsebine?</message>
+	<message key="editor.issues.default">Privzeto</message>
+	<message key="editor.issues.order">Vrstni red</message>
+	<message key="editor.issues.publicId">Javni ID</message>
+	<message key="editor.issues.publishIssue">Objavi to številko revije</message>
+	<message key="editor.issues.unpublishIssue">Umakni to številke revije</message>
+	<message key="editor.issues.previewIssue">Predogled te številke revije</message>
+	<message key="editor.issues.preview">(Predogled)</message>
+	<message key="editor.issues.confirmPublish">Ste prepričani, da želite objaviti to številko revije?</message>
+	<message key="editor.issues.confirmUnpublish">Ste prepričani, da želite umakniti to številko revije?</message>
+	<message key="editor.issues.publicArticleIdExists">Shranjevanje javnega IDja ni bilo mogoče za prispevek:</message>
+	<message key="editor.issues.noLiveIssues">Ni številk revije</message>
+	<message key="editor.issues.open">Odpri</message>
+	<message key="editor.issues.pages">Strani</message>
+	<message key="editor.issues.galleys">Prelomi številke</message>
+	<message key="editor.issues.galley">Prelom številke</message>
+	<message key="editor.issues.viewingGalley">Pregled preloma številke</message>
+	<message key="editor.issues.issueGalleysDescription">Objavi prelom številke s celotnim kazalom vsebine.</message>
+	<message key="editor.issues.noneIssueGalleys">Prelom številke ni objavljen.</message>
+	<message key="editor.issues.galleyLabelRequired">Ime preloma številke je obvezen.</message>
+	<message key="editor.issues.galleyLocaleRequired">Jezik preloma številke je obvezen.</message>
+	<message key="editor.issues.galleyPublicIdentificationExists">Javna identifikacija preloma številke že obstaja.</message>
+	<message key="editor.issues.backToIssueGalleys">Nazaj na prelome številke</message>
+	<message key="editor.issues.confirmDeleteGalley">Ste prepričani, da želite zbrisati ta prelom številke?</message>
+	<message key="editor.issues.identifiers">Identifikatorji</message>
+	<message key="editor.navigation.futureIssues">Naslednje številke</message>
+	<message key="grid.action.addGalley">Dodaj prelom</message>
+	<message key="grid.action.publish">Objavi Številko</message>
+	<message key="grid.action.addIssue">Ustvari številko</message>
+	<message key="grid.action.viewIssue">Poglej</message>
+	<message key="grid.action.previewIssue">Predogled</message>
+	<message key="grid.action.addIssueGalley">Ustvari prelom številke</message>
+	<message key="editor.navigation.issueArchive">Pretekle številke</message>
+	<message key="editor.article.designateReviewVersion">Določi originalno datoteko kot recenzirano verzijo</message>
+	<message key="editor.article.decision">Odločitev</message>
+	<message key="editor.submissions.showBy">Prikaži po</message>
+	<message key="editor.submissions.submitMMDD">Oddaj DD.MM</message>
+	<message key="editor.submissions.activeAssignments">Aktivne zadolžitve</message>
+	<message key="editor.submissions.invite">Povabi</message>
+	<message key="editor.submissions.accept">Sprejmi</message>
+	<message key="editor.submissions.noSubmissions">Ni prijav</message>
+	<message key="editor.submissions.lastAssigned">Zadnji</message>
+	<message key="editor.submissions.averageTime">Tedni</message>
+	<message key="editor.submissions.lastCompleted">Zadnje končano</message>
+	<message key="editor.submissions.assignedTo">Dodeljeno</message>
+	<message key="editor.submissions.inSection">V rubriki</message>
+	<message key="editor.article.schedulePublication">Dodeli v številko</message>
+	<message key="editor.article.scheduleForPublication">Planiran za objavo v</message>
+	<message key="editor.article.scheduleForPublication.toBeAssigned">bo splaniran</message>
+	<message key="editor.article.payment.publicationFeeNotPaid">Prispevki za objavo niso plačani. Za planiranje objave prispevka obvesti avtorja o zahtevnem plačilu pristojbine ali ga oprosti pristojbine.</message>
+	<message key="editor.article.coverImage">Slika naslovnice</message>
+	<message key="editor.article.removeCoverImageFileNotFound">Brisanej slike naslovnice ni uspelo. Morda je bila že izbrisana. Poskusite ponovno naložiti stran.</message>
+	<message key="grid.action.removeArticle">Odstrani prispevek iz številke</message>
+	<message key="editor.article.remove">Odstrani</message>
+	<message key="editor.article.remove.confirm">Ste prepričani, da želite odstraniti prispevek iz te številke? Prispevek bo po odstranitvi na voljo za objavo v drugi številki.</message>
+	<message key="editor.issues.invalidAccessDate">Pristopni datum ni veljaven.</message>
+	<message key="editor.issues.editIssueGalley">Uredi prelom številke</message>
+	<message key="editor.submission.production.productionReadyFilesDescription"><![CDATA[Grafični urednik pripravi te datoteke za vsak prelom in jih naloži na odgovarjajoči <span class="pkp_help_title">Prelomi</span> za korekturo.]]></message>
+	<message key="editor.submission.selectGalleyFiles">Izberi datoteke preloma</message>
+	<message key="editor.submission.editorial.finalDraftDescription"><![CDATA[Končne osnutek datotek pripravi lektor in jih kot lektorirane verzije naloži spodaj pod <span class="pkp_help_title">Lektoriranje</span>.]]></message>
+	<message key="editor.submission.proof.manageProofFilesDescription">Katerokoli datoteke, ki so bile naložene v katerikoli fazi, se lahko doda med seznam za korekturo z označitvijo potrditvenega polja spodaj in klikom na Išči: vse datoteke, ki so na voljo, bodo prikazane in jih bo možno izbrati za vključitev.</message>
+	<message key="editor.issues.confirmSetCurrentIssue">Ste prepričani, da želite določiti to številko kot trenutno?</message>
+	<message key="grid.action.setCurrentIssue">Določi za trenutno številko</message>
+	<message key="editor.publicIdentificationExistsForTheSameType">Javna oznaka '{$publicIdentifier}'  že obstaja za drug objekt enakega tipa. Prosimo izberite unikatno oznako za objekte istega tipa znotraj vaše revije.</message>
+</locale>
