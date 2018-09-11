@@ -32,10 +32,9 @@
 					{assign var="description" value=$journal->getLocalizedDescription()}
 					<li{if $thumb} class="has_thumb"{/if}>
 						{if $thumb}
-							{assign var="altText" value=$journal->getLocalizedSetting('journalThumbnailAltText')}
 							<div class="thumb">
 								<a href="{$url|escape}">
-									<img src="{$journalFilesPath}{$journal->getId()}/{$thumb.uploadName|escape:"url"}"{if $altText} alt="{$altText|escape}"{/if}>
+									<img src="{$journalFilesPath}{$journal->getId()}/{$thumb.uploadName|escape:"url"}"{if $thumb.altText} alt="{$thumb.altText|escape}"{/if}>
 								</a>
 							</div>
 						{/if}
