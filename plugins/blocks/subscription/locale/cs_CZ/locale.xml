@@ -20,6 +20,8 @@
 	<message key="plugins.block.subscription.expires">Vyprší</message>
 	<message key="plugins.block.subscription.providedBy">Přístup poskytl: {$institutionName}</message>
 	<message key="plugins.block.subscription.comingFromIP">Přichází z IP: {$ip}</message>
-	<message key="plugins.block.subscription.about">Předplatné</message>
-	<message key="plugins.block.subscription.loginToVerifySubscription">Přihlaste se pro ověření předplatného</message>
+	<message key="plugins.block.subscription.about">Přístupy</message>
+	<message key="plugins.block.subscription.loginToVerifySubscription">Přihlaste se pro přístup k zdrojům s omezeným přístupem.</message>
+	<message key="plugins.block.subscription.subscriptionRequired">Pro přístup k některým zdrojům je třeba předplatné.</message>
+	<message key="plugins.block.subscription.subscriptionRequired.learnMore">Více informací</message>
 </locale>

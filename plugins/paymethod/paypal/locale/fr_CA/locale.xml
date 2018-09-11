@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/fr_CA/locale.xml
+  *
+  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="fr_CA" full_name="Français (Canada)">
+	<message key="plugins.paymethod.paypal.displayName">Paiement PayPal</message>
+	<message key="plugins.paymethod.paypal.description">Les paiements seront effectués par l'intermédiaire du service de paiement PayPal.</message>
+	<message key="plugins.paymethod.paypal">Paiement PayPal</message>
+	<message key="plugins.paymethod.paypal.settings">Paramètres du service de paiement PayPal</message>
+	<message key="plugins.paymethod.paypal.settings.testMode">Mode Test</message>
+	<message key="plugins.paymethod.paypal.settings.accountName">Nom du compte</message>
+	<message key="plugins.paymethod.paypal.settings.clientId">Client ID</message>
+	<message key="plugins.paymethod.paypal.settings.secret">Secret</message>
+	<message key="plugins.paymethod.paypal.error">Une erreur de transaction s'est produite. Veuillez contacter un responsable de la revue pour plus de détails.</message>
+</locale>

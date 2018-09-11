@@ -24,5 +24,6 @@
 	<message key="plugins.generic.webfeed.rss1.altText">Logo RSS1</message>
 	<message key="plugins.generic.webfeed.rss2.altText">Logo RSS2</message>
 	<message key="plugins.generic.webfeed.settings.homepage">Afficher les liens de fil de syndication dans la page d'accueil et les pages des numéros uniquement.</message>
+	<message key="plugins.generic.webfeed.settings.recent">Afficher un nombre fixe des éléments les plus récents.</message>
 </locale>
 

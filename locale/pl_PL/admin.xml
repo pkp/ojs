@@ -52,6 +52,12 @@
 	<message key="admin.mergeUsers.allUsers">Wszyscy użytkownicy</message>
 	<message key="admin.mergeUsers.confirm">Potwierdź połączenie użytkownika {$oldAccountCount} z nowym użytkownikiem "{$newUsername}"? Użytkownik {$oldAccountCount} zostanie nieudwracalnie usunięty.</message>
 	<message key="admin.settings.options">Opcje</message>
+	<message key="admin.settings.usePaging">Dla stron z dużą listą czasopism, podziel listę czasopism na strony.</message>
+	<message key="admin.settings.journalsList">Elementy czasopism</message>
+	<message key="admin.settings.journalsList.description">Wybierz jakie elementy zostaną wyświetlone dla każdego czasopisma na stronie głównej</message>
+	<message key="admin.settings.journalsList.showThumbnail">Miniatura czasopisma</message>
+	<message key="admin.settings.journalsList.showTitle">Tytuł czasopisma</message>
+	<message key="admin.settings.journalsList.showDescription">Opis czasopisma</message>
 	<message key="admin.categories">Kategorie</message>
 	<message key="admin.categories.disableCategories">Nie organizuj czasopism w kategorie.</message>
 	<message key="admin.categories.enableCategories">Pozwól administratorom czasopism na organizowanie ich w kategorie.</message>

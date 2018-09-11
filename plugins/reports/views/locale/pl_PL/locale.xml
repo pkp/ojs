@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/reports/views/locale/pl_PL/locale.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="pl_PL" full_name="Język Polski">
+	<message key="plugins.reports.views.displayName">Raport z wejściami</message>
+	<message key="plugins.reports.views.description">Wtyczka umożliwia wygenerowanie raportu w formacie CSV zawierającego informacje o liczbie wejść dla każdego artykułu.</message>
+	<message key="plugins.reports.views.articleId">ID artykułu</message>
+	<message key="plugins.reports.views.articleTitle">Tytuł artykułu</message>
+	<message key="plugins.reports.views.datePublished">Data publikacji</message>
+	<message key="plugins.reports.views.abstractViews">Liczba wyświetleń abstraktu</message>
+	<message key="plugins.reports.views.galleyViews">Liczba wyświetleń pliku z artykułem</message>
+</locale>

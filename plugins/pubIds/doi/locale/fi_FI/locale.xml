@@ -69,4 +69,7 @@
 	<message key="plugins.pubIds.doi.editor.assignDoi.emptySuffix">DOI-tunnistetta ei voida määrittää, koska mukautettu suffiksi puuttuu.</message>
 	<message key="plugins.pubIds.doi.editor.assignDoi.pattern">DOI-tunnistetta {$pubId} ei voida määrittää, koska se sisältää resolvoitumattoman muotoilun.</message>
 	<message key="plugins.pubIds.doi.editor.assignDoi.assigned">DOI-tunniste {$pubId} on määritetty.</message>
- </locale>
+ 	<message key="plugins.pubIds.doi.manager.settings.doiAssignJournalWide">Liitä DOI-tunnisteita</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiAssignJournalWide.description"><![CDATA[Liitä DOI-tunnisteet <i>kaikkiin</i> julkaistuihin objekteihin (tavallisesti artikkelit), joille ei ole annettu DOI-tunnistetta. Tätä toimintoa ei voi käyttää, mikäli DOI-tunnisteet määritetään yksilöllisesti. Mikäli olet muuttanut DOI-asetuksia yllä, tallenna ensin tekemäsi muutokset. Tunnisteiden liittäminen voi viedä pitkään, jos julkaistuja objekteja on paljon.]]></message>
+	<message key="plugins.pubIds.doi.manager.settings.doiAssignJournalWide.confirm">Oletko varma, että haluat liittää DOI-tunnisteet kaikkiin julkaistuihin objekteihin, joilla ei vielä ole tunnistetta?</message>
+</locale>

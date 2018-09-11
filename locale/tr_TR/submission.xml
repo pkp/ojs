@@ -12,34 +12,69 @@
   -->
 
 <locale name="tr_TR" full_name="Türkçe">
-    
 
-    <message key="submission.mySubmissions">Yazılarım</message>
-    <message key="submission.submit.submissionChecklist">Yazar Onay Butonları</message>
-    <message key="submission.submit.submissionChecklistDescription">Yeni yazı girişi için yazarın bu butonları onaylamış ve kabul etmiş olmaları gerekmektedir.</message>
-    <message key="submission.submit.uploadStep">Dosya Yükleme</message>
-    <message key="submission.submission">Giriş Yapıldı</message>
-    <message key="submission.upload.fileContents">Yüklenecek Dosya İçeriği</message>
-    <message key="submission.submit.uploadSubmissionFile">Yeni Yazı Girişi</message>
-    <message key="submission.upload.selectComponent">Lütfen Seçiniz...</message>
-    
+
+	<message key="submission.submit.submissionChecklist">Yazar Onay Butonları</message>
+	<message key="submission.submit.submissionChecklistDescription">Yeni yazı girişi için yazarın bu butonları onaylamış ve kabul etmiş olmaları gerekmektedir.</message>
+	<message key="submission.upload.fileContents">Yüklenecek Dosya İçeriği</message>
+	<message key="submission.upload.selectComponent">Lütfen Seçiniz...</message>
+
 	<!-- Submission wizard -->
-    <message key="submission.submit.title">Bir Makale Girişi Yapınız.</message>
-    <message key="submission.title">Makale Başlığı</message>
-    <message key="grid.action.workflow">Gönderi İş Akışı</message>
-    <message key="submission.submit.newSubmissionSingle">Yeni Yazı Girişi</message>
-    <message key="submission.issueEntry">Metadata</message>
-    <message key="submission.submit.userGroup">... olarak gönder.</message>
+	<message key="submission.submit.title">Bir Makale Girişi Yapınız.</message>
+	<message key="submission.title">Makale Başlığı</message>
+	<message key="grid.action.workflow">Gönderi İş Akışı</message>
+	<message key="submission.submit.newSubmissionSingle">Yeni Yazı Girişi</message>
+	<message key="submission.issueEntry">Metadata</message>
+	<message key="submission.submit.userGroup">... olarak gönder.</message>
 
 
 	<!-- Submission Information Modal -->
-    <message key="submission.issueEntry.submissionMetadata">Yazı Girişi</message>
-    <message key="submission.issueEntry.publicationMetadata">Yayın</message>
-    
+	<message key="submission.issueEntry.submissionMetadata">Yazı Girişi</message>
+	<message key="submission.issueEntry.publicationMetadata">Yayın</message>
+
 	<!-- events -->
 
 	<!-- galleys grid -->
-    <message key="grid.submission.itemTitle">Yazı Başlığı</message>
-    <message key="workflow.stage">Durumu</message>
 	<!-- galley files grid -->
+	<message key="submission.submit.userGroupDescription">Bu makaleyi gönderdiğiniz kapasiteyi seçin.</message>
+	<message key="submission.title.tip"><![CDATA[Gönderi türü genellikle 'görüntü', 'metin' veya 'yazılım' veya 'etkileşimli' dahil olmak üzere diğer çoklu ortam türlerinden biridir. Lütfen gönderinizle ilgili olanı seçin. Örnekler şu adreste bulunabilir: <a target="_blank" href="http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type">http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</a>]]></message>
+	<message key="submission.submit.newSubmissionMultiple">Yeni Bir Gönderi Başlat</message>
+	<message key="submission.abstract.wordCount.description">Özet,  {$wordCount} kelime veya daha az olmalıdır.</message>
+	<message key="submission.submit.whatNext.description">Dergiye yaptığınız gönderi bildirildi ve kayıtlarınız için bir onay e-postası gönderildi. Editör gönderiyi inceledikten sonra sizinle iletişim kuracak.</message>
+	<message key="grid.action.galleyInIssueEntry">Dizgi girişinde sorun görünüyor</message>
+	<message key="grid.action.issueEntry">Bu gönderinin üst verilerini görüntüle</message>
+	<message key="submission.issueEntry.modalTitle">Gönderi ve Yayın Üst Verisi</message>
+	<message key="submission.issueEntry.confirm">Aşağıdaki üst veriler temelinde bu makale için bir sorun girişi oluşturun.</message>
+	<message key="submission.event.articleGalleyMadeAvailable">Makale "{$galleyFormatName}" kullanılabilir hale getirilmiştir.</message>
+	<message key="submission.event.articleGalleyMadeUnavailable">"{$galleyFormatName}" makalesi kullanılmamaktadır.</message>
+	<message key="submission.event.publicIdentifiers">Gönderinin genel tanımlayıcıları güncellendi.</message>
+	<message key="grid.issueEntry.availableGalley.title">Biçim Onayı</message>
+	<message key="grid.issueEntry.availableGalley.removeMessage"><![CDATA[<p>Bu dizgi, okuyuculara <em>artık sağlanamaz</em>.</p>]]></message>
+	<message key="grid.issueEntry.availableGalley.message"><![CDATA[<p>Bu dizgi, okuyuculara için <em>erişilebilir olacak</em>.</p>]]></message>
+	<message key="grid.action.availableArticleGalley">Bu dizigiyi kullanılabilir yap</message>
+	<message key="submission.galleyFiles">Dizgi Dosyaları</message>
+	<message key="submission.proofReadingDescription">Sayfa düzenleyici, burada yayınlanmak üzere hazırlanmış olan biçimli dosyaları yükler. Yayından önce onay için yüklenen düzeltilmiş dosyalar ile, dizgiyi prova etmek için yazarları ve diğer kişileri atamak için "Atama Denetçisi"ni kullanın.</message>
+	<message key="grid.action.approveProof">Dizgiye dahil edilmek için bu düzenlemeyi onayla.</message>
+	<message key="grid.action.pageProofApproved">Bu düzenleme, dizgiye dahil edilmek üzere onaylandı.</message>
+	<message key="submission.submit.titleAndSummary">Başlık ve Özet</message>
+	<message key="submission.submit.upload.description">Makale, multimedya, veri setleri, sanat eseri vb. dahil olmak üzere bu gönderiyle ilişkili dosyaları yükleyin.</message>
+	<message key="submission.pageProofs">Düzeltme</message>
+	<message key="submission.confirmSubmit">Bu yazıyı dergiye göndermek istediğinizden emin misiniz?</message>
+	<message key="workflow.review.externalReview">Değerlendir</message>
+	<message key="editor.submission.decision.sendExternalReview">Değerlendirmeye Gönder</message>
+	<message key="submission.event.issueMetadataUpdated">Gönderinin konu üst verileri güncellendi.</message>
+	<message key="submission.complete">Onaylandı</message>
+	<message key="submission.incomplete">Bekleyen Onay</message>
+	<message key="submission.submit.form.localeRequired">Lütfen bir gönderi dili seçiniz.</message>
+	<message key="submission.submit.privacyStatement">Gizlilik Beyanı</message>
+	<message key="submission.submit.contributorRole">Katkı verenin rolü</message>
+	<message key="submission.submit.form.authorRequired">En az bir yazar gerekli.</message>
+	<message key="submission.submit.form.authorRequiredFields">Her bir yazarın adı, soyadı ve e-posta adresi gereklidir.</message>
+	<message key="submission.submit.form.titleRequired">Lütfen makalenizin başlığını giriniz.</message>
+	<message key="submission.submit.form.abstractRequired">Lütfen makalenizin özetini giriniz.</message>
+	<message key="submission.submit.form.wordCountAlert">Özetiniz çok uzun. Lütfen bu bölüm için belirtilen kelime limitinin uygun düzenleyin.</message>
+	<message key="submission.submit.form.contributorRoleRequired">Lütfen katkıda bulunanın rolünü seçin.</message>
+	<message key="submission.citationFormat.notFound">İstenen alıntı formatı alınamadı.</message>
+	<message key="submission.metadataDescription">Bu özellikler, dergi içeriğini tanımlamak için kullanılan uluslararası bir standart olan Dublin Core üst veri kümesine dayanmaktadır.</message>
+	<message key="section.any">Herhangi Bir Bölüm</message>
 </locale>

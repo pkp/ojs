@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/importexport/datacite/locale/pl_PL/locale.xml
+  *
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="pl_PL" full_name="Język Polski">
+	<message key="plugins.importexport.datacite.displayName">Wtyczka eksportu/rejestracji DataCite</message>
+	<message key="plugins.importexport.datacite.description">Eksportuj lub zarejestruj metadane numeru, artykułu, pliku lub dodatkowych plików w formacie DataCite.</message>
+	<message key="plugins.importexport.datacite.settings.description">Skonfiguruj wtyczkę eksportu DataCite zanim użyjesz ją po raz pierwszy.</message>
+	<message key="plugins.importexport.datacite.intro"><![CDATA[Jeżeli chcesz zarejestrować DOI z DataCite, proszę skontaktuj się z agentem DataCite za pośrednictwem <a href="http://datacite.org/contact" target="_blank">strony internetowej DataCite</a>, który skieruje cię do lokalnego członka DataCite. Po nawiązaniu relacji z organizacją członkowską, zostaniesz połączony z serwisem DataCite na potrzeby tworzenia identyfikatorów DOI i ich rejestrowania wraz z metadanymi. Jeżeli nie posiadasz jeszcze nazwy użytkownika i hasła, nadasz możesz przygotować pliki w formacie DataCite XML, ale nie możesz ich zarejestrować z OJS.]]></message>
+	<message key="plugins.importexport.datacite.settings.form.username">Użytkownik (symbol)</message>
+	<message key="plugins.importexport.datacite.settings.form.usernameRequired">Wprowadź nazwę użytkownika (symbol), jaką uzyskałeś(aś) z DataCite. Nazwa użytkownika nie może zawierać dwukropka.</message>
+	<message key="plugins.importexport.datacite.settings.form.automaticRegistration.description">OJS zdeponuje DOI automatycznie w DataCite. Zauważ, że czynność ta następuje krótko po publikacji. Sprawdź, czy wszystkie dane zostały zdeponowane.</message>
+	<message key="plugins.importexport.datacite.settings.form.testMode.description">Użyj test prefiksu DataCite do rejestracji DOI. Nie zapomnij usunąć tej opcji przed produkcją.</message>
+	<message key="plugins.importexport.datacite.senderTask.name">Zadanie automatycznej rejestracji w DataCite</message>
+	<message key="plugins.importexport.datacite.cliUsage">Użyj: 
+{$scriptName} {$pluginName} export [outputFileName] [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...
+{$scriptName} {$pluginName} register [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...</message>
+</locale>

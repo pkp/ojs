@@ -14,6 +14,8 @@
 <locale name="pl_PL" full_name="Język Polski">
 	<message key="plugins.themes.default.name">Domyślny motyw</message>
 	<message key="plugins.themes.default.description">Motyw domyślny OJS3.</message>
+
+	<!-- Theme options -->
 	<message key="plugins.themes.default.option.typography.label">Typografia</message>
 	<message key="plugins.themes.default.option.typography.description">Wybierz ustawienia krojów pisma które najlepiej pasują do Twojego czasopisma.</message>
 	<message key="plugins.themes.default.option.typography.notoSans">Noto Sans: Krój projektowany z myślą o wyświetlaniu na ekranach, zaprojektowany przez Google z dużym wsparciem dla języków.</message>

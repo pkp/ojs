@@ -665,7 +665,7 @@ Du kan välja att ge användaren en förklaring till varför kontot har spärrat
 	<!-- Registration -->
 	<message key="user.register.selectContext">Välj en tidskrift att registrera dig hos:</message>
 	<message key="user.register.noJournals">Det finns inga tidskrifter att registrera sig hos på den här webbplatsen.</message>
-	<message key="user.register.privacyStatement">Sekretesspolicy</message>
+	<message key="user.register.privacyStatement">Integritetspolicy</message>
 	<message key="user.register.registrationDisabled">Den här tidskriften tar för tillfället inte emot några registreringar.</message>
 	<message key="user.register.form.passwordLengthTooShort">Det lösenord du angivit är för kort.</message>
 	<message key="user.register.readerDescription">Meddelas via e-post när nytt nummer av tidskriften publiceras.</message>
@@ -784,7 +784,7 @@ Du kan välja att ge användaren en förklaring till varför kontot har spärrat
 	<message key="about.submissionPreparationChecklist">Checklista vid insändning av bidrag</message>
 	<message key="about.submissionPreparationChecklist.description">Som en del av insändningsprocessen måste författare kryssa för att bidraget uppfyller följande krav. Bidrag som inte uppfyller kraven kan komma att skickas tillbaka till författaren.</message>
 	<message key="about.copyrightNotice">Upphovsrättsdeklaration</message>
-	<message key="about.privacyStatement">Sekretesspolicy</message>
+	<message key="about.privacyStatement">Integritetspolicy</message>
 	<message key="about.authorFees">Författaravgifter</message>
 	<message key="about.authorFeesMessage">Den här tidskriften tillämpar följande författaravgifter.</message>
 	<message key="about.peerReviewProcess">Granskningsprocess</message>

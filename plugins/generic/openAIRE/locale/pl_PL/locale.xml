@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/openAIRE/locale/pl_PL/locale.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="pl_PL" full_name="Język Polski">
+	<message key="plugins.generic.openAIRE.displayName">OpenAIRE</message>
+	<message key="plugins.generic.openAIRE.description">Wtyczka OpenAIRE dodaje element ID Projektu do metadanych artykułu i rozszerza interfejs OAI-PMH zgodnie z wytycznymi zwartymi OpenAIRE Guidelines 1.1, pomaga czasopismom korzystającym z OJS osiągnąć zgodność z OpenAIRE.</message>
+	<message key="plugins.generic.openAIRE.projectID">ID Projektu OpenAIRE</message>
+	<message key="plugins.generic.openAIRE.projectID.description"><![CDATA[Jeżeli badania są rezultatem badań finansowanych z EU initiative, metadane artykułu powinny być widoczne na platformie <a href="https://www.openaire.eu/" target="_blank">OpenAIRE</a>. Wprowadź ID Projektu składające się z sześciu cyfr określających identyfikator umowy grantowej.]]></message>
+	<message key="plugins.generic.openAIRE.projectIDValid">Wprowadź ID Projektu (6 cyfr)</message>
+</locale>

@@ -29,4 +29,29 @@
 	<message key="plugins.importexport.native.import.error.sectionAbbrevMismatch">Osaston lyhenne "{$section1Abbrev}" ja osaston lyhenne "{$section2Abbrev}" numerossa"{$issueTitle}" täsmäsivät eri olemassa olevien osastojen kanssa.</message>
 	<message key="plugins.importexport.native.error.unknownSection">Tuntematon osasto  {$param}</message>
 	<message key="plugins.importexport.native.error.unknownUser">Annettua käyttäjää "{$userName}" ei ole olemassa.</message>
+	<message key="plugins.importexport.native.exportSubmissionsSelect">Valitse vietävät artikkelit</message>
+	<message key="plugins.importexport.native.cliUsage"><![CDATA[Käyttö: {$scriptName} {$pluginName} [command] ...
+Komennot:
+	import [xmlFileName] [journal_path] [user_name] ...
+	export [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...
+	export [xmlFileName] [journal_path] article [articleId]
+	export [xmlFileName] [journal_path] issues [issueId1] [issueId2] ...
+	export [xmlFileName] [journal_path] issue [issueId]
+
+Ylimääräisiä parametrejä tarvitaan tuontiin riippuen XML-tiedoston juurielementistä.
+
+Mikäli juurielementti on <article> tai <articles>, ylimääräisiä parametrejä tarvitaan.
+
+Seuraavat muodot ovat sallittuja:
+
+{$scriptName} {$pluginName} import [xmlFileName] [journal_path] [user_name]
+	issue_id [issueId] section_id [sectionId]
+
+{$scriptName} {$pluginName} import [xmlFileName] [journal_path] [user_name]
+	issue_id [issueId] section_name [name]
+
+{$scriptName} {$pluginName} import [xmlFileName] [journal_path]
+	issue_id [issueId] section_abbrev [abbrev]]]></message>
+	<message key="plugins.importexport.native.import.error.issueIdentificationDuplicate">Numerolla {$issueId} on sama tunniste "{$issueIdentification}". Numeroa ei muokata, mutta nyt tuotavat artikkelit lisätään siihen.</message>
+	<message key="plugins.importexport.native.import.error.publishedDateMissing">Artikkeli "{$articleTitle}" sisältyy numeroon, mutta sille ei ole annettu julkaisupäivää.</message>
 </locale>

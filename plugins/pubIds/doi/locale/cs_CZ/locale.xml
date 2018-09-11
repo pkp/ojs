@@ -59,4 +59,7 @@
 	<message key="plugins.pubIds.doi.editor.assignDoi.emptySuffix">DOI nemůže být přiděleno, protože vlastní suffix je prázdný.</message>
 	<message key="plugins.pubIds.doi.editor.assignDoi.pattern">DOI {$pubId} nelze přiřadit, protože obsahuje neplatný vzor.</message>
 	<message key="plugins.pubIds.doi.editor.assignDoi.assigned">DOI  {$pubId} bylo přiřazeno.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiAssignJournalWide">Přiřadit čísla DOI</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiAssignJournalWide.description">Přiřadit DOI všem objektům všech publikovaných časopisů, které doposud neměly přiřazeno DOI. Tato akce nemůže být použita v případě individuální konfigurace přípon. Pokud jste změnili konfiguraci DOI výše, je třeba před zahájením této akce uložit změny. Přiřazení DOI může trvat dlouho v závislosti na počtu publikovaných objektů v časopise.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiAssignJournalWide.confirm">Jste si jisti, že chcete přidělit DOI všem publikovaným objektům, které doposud neměly přiděleno DOI?</message>
 </locale>

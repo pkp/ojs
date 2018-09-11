@@ -1096,4 +1096,7 @@ Vahvistaminen saattaa epäonnistua sellaisten haun URL-osoitteiden kohdalla, jot
 	<message key="payment.requestPublicationFee">Pyydä julkaisumaksua ({$feeAmount})</message>
 	<message key="payment.notFound">Maksua on pyydetty, mutta pyyntö on vanhentunut. Ota yhteyttä julkaisuun.</message>
 	<message key="log.editor.submissionExpedited">{$editorName} on nopeuttanut käsikirjoituksen {$submissionId} käsittelyä.</message>
+	<message key="user.reviewerPrompt.optin">Kyllä, minulle voi lähettää vertaisarviointeja koskevia pyyntöjä tästä julkaisusta.</message>
+	<message key="user.register.form.emailConsentAllContexts">Kyllä, haluan uusia numeroita ja tiedotteita koskevia ilmoituksia kaikista julkaisuista, joihin olen rekisteröitynyt.</message>
+	<message key="notification.type.public">Julkiset tiedotteet</message>
 </locale>
