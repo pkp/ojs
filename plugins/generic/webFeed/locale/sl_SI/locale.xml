@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/webFeed/locale/sl_SI/locale.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
+  * Localization strings.
+  -->
+ 
+<locale name="sl_SI" full_name="Slovenščina">
+	<message key="plugins.generic.webfeed.displayName">Web Feed vtičnik</message>
+	<message key="plugins.generic.webfeed.description">Vtičnik pripravi RSS/Atom feed za trenutno številko.</message>
+
+	<message key="plugins.generic.webfeed.settings">Nastavitve</message>
+	<message key="plugins.generic.webfeed.settings.issue">Prikaži web feed povezave le na straneh številk revij.</message>
+	<message key="plugins.generic.webfeed.settings.homepage">Prikaži web feed povezave le na domači strani in straneh številk revij.</message>
+	<message key="plugins.generic.webfeed.settings.all">Prikaži web feed povezave  na vseh straneh revije.</message>
+
+	<message key="plugins.generic.webfeed.settings.currentIssue">Prikaži le trenutno objavljeno številko.</message>
+	<message key="plugins.generic.webfeed.settings.recent">Prikaži fiksno število zadnjih številk.</message>
+	<message key="plugins.generic.webfeed.settings.recentArticles">Število postavk, ki se prikažejo</message>
+	<message key="plugins.generic.webfeed.settings.recentItemsRequired">Prosimo, vnesite pozitivno celoštevilčno vrednost za zadnje objavljene številke.</message>
+	<message key="plugins.generic.webfeed.atom.altText">Atom logo</message>
+	<message key="plugins.generic.webfeed.rss1.altText">RSS1 logo</message>
+	<message key="plugins.generic.webfeed.rss2.altText">RSS2 logo</message>
+</locale>

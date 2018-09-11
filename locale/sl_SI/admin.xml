@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/sl_SI/admin.xml
+  *
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=Translating_OxS
+  * Localization strings.
+  -->
+<locale name="sl_SI" full_name="Slovenščina">
+	<message key="admin.hostedJournals">Revije na tem spletišču</message>
+	<message key="admin.settings.journalRedirect">Preusmeritev revije</message>
+	<message key="admin.settings.options">Nastavitve</message>
+	<message key="admin.settings.journalRedirectInstructions">Vse zahteve in obiski domače strani bodo preusmerjene na to revijo. To je uporabno, če na spletišču gostuje le ena revija.</message>
+	<message key="admin.settings.noJournalRedirect">Ne preusmeri</message>
+	<message key="admin.settings.defaultMetricDescription">
+		Vaša OJS namestitev beleži več kot le eno metriko uporabe, ki so prikazane v različnih kontekstih.
+		V nekaterih primerih mora biti uporabljena le ena metrika (npr. vrstni red najbolj branih člankov ali vrstni red iskalnih rezultatof. Prosimo izberite eno od konfiguriranih metrik kot privzeto.
+	</message>
+	<message key="admin.languages.confirmDisable">Ste prepričani, da želite onemogočiti ta jezik? To lahko vpliva na revije, ki ga trenutno uporabljajo.</message>
+	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Prenos jezikovnega paketa iz Public Knowledge Project spletne strani trenutno ni mogoče zaradi:</p>
+	<ul>
+		<li>Vaš srežnik nima ali ni mogoče uporabljati orodja "tar".</li>
+		<li>OJS ne more spremeniti lokalne konfiguracijske datoteke, običajno "registry/locales.xml".</li>
+	</ul>
+<p>Jezikovni paket lahko ročno prenesete iz <a href="http://pkp.sfu.ca">PKP spletne strani</a>.</p>]]></message>
+
+	<message key="admin.languages.primaryLocaleInstructions">To bo privzeti jezik za spletišče in vse gostujoče revije.</message>
+	<message key="admin.languages.supportedLocalesInstructions">Izberite vse jezike, ki bodo podprti na tem spletišču. Izbrani jeziki bodo na voljo za vse gostujoče revije in se bodo pojavili na meniju možnih jezikov na vsaki spletni strani (to lahko spremenite na specifičnih straneh revije). Če ne bo izbranih več jezikov, se na spletnih straneh ne bo pojavil meni za jezikovno nastavitev.</message>
+	<message key="admin.locale.maybeIncomplete">Označeni jeziki so lahko nepopolni.</message>
+	<message key="admin.languages.confirmUninstall">Ste prepričani, da želite odstraniti ta jezik? To lahko vpliva na vse gostujoče revije.</message>
+	<message key="admin.languages.installNewLocalesInstructions">Izberite dodatne jezike, ki jih želite imeti na voljo na spletišču. Vsak jezik mora biti nameščen pred uporabo. V OJS dokumentaciji lahko najdete več informacij o podpori novih jezikov.</message>
+	<message key="admin.languages.downloadFailed">Prenos jezika ni uspel. Spodaj je opis napak(e).</message>
+	<message key="admin.languages.localeInstalled">Nameščen je bil jezik "{$locale}".</message>
+	<message key="admin.languages.download">Prenesi jezik</message>
+	<message key="admin.languages.download.cannotOpen">Jezikovnega deskriptorja ni bilo mogoče odpreti na PKP spletni strani.</message>
+	<message key="admin.languages.download.cannotModifyRegistry">Dodajenje novega jezika v nastavitveno datoteko ni bilo mogoče, običajno je to  "registry/locales.xml".</message>
+	<message key="admin.auth.ojs">OJS uporabniška baza podatkov</message>
+	<message key="admin.auth.enableSyncProfiles">Omogoči sinhroniziranje uporabniških računov (če je podprto s tem avtentikacijskim dodatkom). Uporabniški račun bo avtomatsko posodobljen iz oddaljenega vira, ko se uporbnik prijavi v sistem. Hkrati se bodo vse spremembe uporabniškega računa (tudi gesla) v OJS, avtomatsko posodobile na oddaljenem viru. Če ta opcija ni omogočena, bo OJS uporabniški račun ločen od uporabniškega računa na oddaljenem viru.</message>
+	<message key="admin.auth.enableSyncPasswords">Omogoči spreminjanje gesla (če je omogočeno s tem avtentikacijskim dodatkom). Ta opcija dovoljuje uporabnikom, da spremenijo svoje geslo v OJSju in da lahko uporabijo OJS-jevo funkcijo "izgubljeno geslo" za ponastavitev pozabljenega gesla. Če ta opcija ni omogočena, te funkcije uporabnikom, ki uporabljajo ta avtentikacijski vir, ne bodo na voljo.</message>
+	<message key="admin.auth.enableCreateUsers">Omogoči ustvarjanje uporabnikov (če je ta avtentikacijski dodatek to podpira). Uporabniki, ki bodo ustvarjeni v OJS s tem avtentikacijskim virom, bodo avtomatsko dodani tudi v oddaljenem avtentikacijskem viru, če še ne obstajajo. Če je ta vir privzet avtentikacijski vir, bodo enako dodani tudi vsi uporabniki, ki bodo svoj račun ustvarili v postopku uporabniške registracije.</message>
+	<message key="admin.systemVersion">Verzija OJS</message>
+	<message key="admin.systemConfiguration">OJS konfiguracija</message>
+	<message key="admin.systemConfigurationDescription"><![CDATA[Nastavitve OJS iz <tt>config.inc.php</tt>.]]></message>
+	<message key="admin.journals.createInstructions">Avtomatsko boste določeni za upravitelja revije. Ko ustvarite revijo, se prijavite kot upravitelj in nadaljujte z nastavljanjem revije in določanjem uporabnikov.</message>
+	<message key="admin.journals.journalSettings">Nastavitve revije</message>
+	<message key="admin.journals.noneCreated">Nobena revija ni bila ustvarjena.</message>
+	<message key="admin.contexts.create">Ustvari revijo</message>
+	<message key="admin.journals.urlWillBe">To naj bo ena kratka beseda ali kratica, ki identificira revijo. URL revije bo potem {$sampleUrl}</message>
+	<message key="admin.contexts.form.titleRequired">Naslov je obvezen.</message>
+	<message key="admin.contexts.form.pathRequired">Pot je obvezna.</message>
+	<message key="admin.contexts.form.pathAlphaNumeric">Pot lahko vsebuje le alfanumerične znake, podčrtaj in pomišljaj ter se mora začeti in končati z alfanumeričnim znakom.</message>
+	<message key="admin.contexts.form.pathExists">Izbrano pot že uporablja druga revija.</message>
+	<message key="admin.journals.enableJournalInstructions">Omogoči, da se revija pojavlja javno na spletišču</message>
+	<message key="admin.journals.journalDescription">Opis revije</message>
+	<message key="admin.journal.pathImportInstructions">Obstoječa pot revije ali pot, ki jo želite ustvariti (npr. "ojs").</message>
+	<message key="admin.journals.importSubscriptions">Uvozi naročnine</message>
+	<message key="admin.journals.transcode">Prekodiraj metapodatke prenesenih člankov iz ISO8859-1</message>
+	<message key="admin.journals.redirect">Generiraj kodo za preslikavo OJS 1 URL-ev v OJS 2 URL-je</message>
+	<message key="admin.journals.form.importPathRequired">Uvozna pot je obvezna</message>
+	<message key="admin.journals.importErrors">Uvoz ni uspel v celoti</message>
+	<message key="admin.mergeUsers">Združi uporabnike</message>
+	<message key="admin.mergeUsers.mergeUser">Združi uporabnika</message>
+	<message key="admin.mergeUsers.into.description">Izberite uporabnika, ki mu želite pripisati vsa avtorska dela, uredniške zadolžitve, itd. prejšnjega uporabnika.</message>
+	<message key="admin.mergeUsers.from.description">Izberite račun uporabnika (ali več), ki jih želite zružiti v drug uporabniški račun (npr. če kdo uporablja več uporabniških računov). Vsi oddani članki, zadolžitve in ostalo, prvoizbranega uporabniškega računa (ali več njih) bodo zbrisani in preneseni na drug uporabniški račun.</message>
+	<message key="admin.mergeUsers.allUsers">Vsi evidentirani uporabniki</message>
+	<message key="admin.mergeUsers.confirm">Ali ste prepričani, da želite združiti izbran uporabniški račun (ali več njih) {$oldAccountCount} v uporabniški račun z imenom "{$newUsername}"? Izbrani uporabniški računi {$oldAccountCount} ne bodo več obstajali. Ta akcija je nerevezibilna!</message>
+	<message key="admin.mergeUsers.noneEnrolled">Ni vpisanih uporabnikov.</message>
+
+	<!-- Categories -->
+	<message key="admin.categories">Kategorije</message>
+	<message key="admin.categories.enable.description">Administrator spletišča lahko definira množico kategorij, ki pomagajo organizirati veliko število revij. Glavni uredniki revij lahko izberejo več teh kategorij za vsako revijo. Bralci lahko brskajo po revijah s pomočjo teh kategorij.</message>
+	<message key="admin.categories.disableCategories">Ne organiziraj revij po kategorijah.</message>
+	<message key="admin.categories.enableCategories">Dovoli glavnim urednikom revij, da jih organizirajo po kategorijah.</message>
+	<message key="admin.categories.editTitle">Uredi kategorije</message>
+	<message key="admin.categories.createTitle">Ustvari kategorijo</message>
+	<message key="admin.categories.create">Ustvari novo kategorijo</message>
+	<message key="admin.categories.noneCreated">Nobene kategorije ni bilo ustvarjene</message>
+	<message key="admin.categories.confirmDelete">Ste prepričani, da želite zbrisati to kategorijo?</message>
+	<message key="admin.categories.name">Ime</message>
+	<message key="admin.categories.nameRequired">Ime kategorije je obvezno.</message>
+	<message key="admin.presses.createInstructions">Avtomatsko boste vpisani kot upravnik revije. Ko bo revija ustvarjena, boste preusmerjeni na čarovnika za dokončanje vseh nastavitev revije.</message>
+	<message key="admin.scheduledTask.subscriptionExpiryReminder">Opomnik za potek naročnine</message>
+	<message key="admin.scheduledTask.openAccessNotification">Obvestilo o prostem dostopu</message>
+	<message key="admin.scheduledTask.reviewReminder">Opomnik za recenzijo</message>
+</locale>

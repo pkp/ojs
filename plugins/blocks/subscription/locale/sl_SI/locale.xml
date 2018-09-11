@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/blocks/subscription/locale/sl_SI/locale.xml
+  *
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="sl_SI" full_name="Slovenščina">
+	<message key="plugins.block.subscription.displayName">Blok za naročnine</message>
+	<message key="plugins.block.subscription.description">Ta vtičnik implementira stranski blok s podatki o naročnini.</message>
+	<message key="plugins.block.subscription.blockTitle">Naročnina</message>
+	<message key="plugins.block.subscription.expires">Poteče</message>
+	<message key="plugins.block.subscription.providedBy">Dostop zagotavlja: {$institutionName}</message>
+	<message key="plugins.block.subscription.comingFromIP">Dostopano iz: {$ip}</message>
+	<message key="plugins.block.subscription.about">Naročnine</message>
+	<message key="plugins.block.subscription.loginToVerifySubscription">Prijava za dostop do vsebin dostopnih le naročnikom.</message>
+	<message key="plugins.block.subscription.subscriptionRequired">Za določene vsebine je potrebna naročnina.</message>
+	<message key="plugins.block.subscription.subscriptionRequired.learnMore">Več</message>
+</locale>
