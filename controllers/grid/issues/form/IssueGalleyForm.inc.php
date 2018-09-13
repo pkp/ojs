@@ -82,7 +82,7 @@ class IssueGalleyForm extends Form {
 
 		$publicGalleyId = $this->getData('publicGalleyId');
 		if ($publicGalleyId) {
-			if (is_numeric($publicGalleyId)) {
+			if (ctype_digit($publicGalleyId)) {
 				$this->addError('publicGalleyId', __('editor.publicIdentificationNumericNotAllowed', array('publicIdentifier' => $publicGalleyId)));
 				$this->addErrorField('publicGalleyId');
 			} elseif ($journalDao->anyPubIdExists($journal->getId(), 'publisher-id', $publicGalleyId, ASSOC_TYPE_ISSUE_GALLEY, $this->_issueGalley?$this->_issueGalley->getId():null, true)) {
