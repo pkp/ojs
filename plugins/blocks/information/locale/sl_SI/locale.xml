@@ -11,7 +11,7 @@
   * Localization strings.
   -->
  
-<locale name="sl_SI" full_name="Slovensko (Slovenian)">
+<locale name="sl_SI" full_name="Slovenščina">
 	<message key="plugins.block.information.displayName">Informacijski blok</message>
 	<message key="plugins.block.information.description">Ta vtičnik ureja informacijske povezave na stranski orodni vrstici.</message>
 	<message key="plugins.block.information.link">Informacije</message>

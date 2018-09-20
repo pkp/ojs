@@ -11,7 +11,7 @@
   * Localization strings.
   -->
 
-<locale name="sv_SE" full_name="Svenska ">
+<locale name="sv_SE" full_name="Svenska">
 	<message key="plugins.importexport.crossref.displayName">Plugin för export av CrossRef-XML</message>
 	<message key="plugins.importexport.crossref.description">Exporterar artikelmetadata i CrossRefs XML-format.</message>
 	<!-- settings -->
