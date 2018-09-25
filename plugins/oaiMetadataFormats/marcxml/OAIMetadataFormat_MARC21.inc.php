@@ -41,7 +41,8 @@ class OAIMetadataFormat_MARC21 extends OAIMetadataFormat {
 			'language' => AppLocale::get3LetterIsoFromLocale($article->getLocale())
 		));
 
-		return $templateMgr->fetch(dirname(__FILE__) . '/record.tpl');
+		$plugin = PluginRegistry::getPlugin('oaiMetadataFormats', 'OAIFormatPlugin_MARC21');
+		return $templateMgr->fetch($plugin->getTemplateResource('record.tpl'));
 	}
 }
 
