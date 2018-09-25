@@ -75,7 +75,6 @@ class ViewReportPlugin extends ReportPlugin {
 			$issueId = $publishedArticle->getIssueId();
 			$articleTitles[$articleId] = preg_replace( "/\r|\n/", "", $publishedArticle->getLocalizedTitle() );
 
-
 			// Store the abstract view count
 			$abstractViewCounts[$articleId] = $publishedArticle->getViews();
 			// Make sure we get the issue identification
