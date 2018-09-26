@@ -4,6 +4,12 @@ env:
   - TEST=validation
   - TEST=pgsql
   - TEST=mysql
+  # Reduce the validation tests to just one run (rather than one per PHP version)
+  exclude:
+  - php: 5.6
+    env: TEST=validation
+  - php: 7.1
+    env: TEST=validation
   global:
   - secure: "nxosaZUBRaYhk8+LHaDnVgMIveiK4zewiXW5Fw5TtB/D6V67oASufil1uhcayyzIBwnrZZmrFPLhXm0Lm1RiQHrsftffcMB5JlWK9R9EyWpyd87ewqWy3kXBAvsXXTU6ihGiaFpklhVCKt7XcDSR8bWEb2NVWrM7JS7dHDKMwaA="
 language: php
