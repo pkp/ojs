@@ -58,7 +58,7 @@ before_install:
   # - (sleep 590; cat access.log; cat error.log; cat xvfb-output; cat selenium-output; cat ./lib/pkp/tests/results/error.log) &
 
 script:
-  - if [[ "$TEST" != "validation" ]]; then ./lib/pkp/tools/travis/prepare-tests.sh; fi
+  - if [[ "$TEST" != "validation" ]]; then source ./lib/pkp/tools/travis/prepare-tests.sh; fi
   - if [[ "$TEST" != "validation" ]]; then ./lib/pkp/tools/travis/run-tests.sh; fi
   - if [[ "$TEST" == "validation" ]]; then ./lib/pkp/tools/travis/validate-xml.sh && ./lib/pkp/tools/buildjs.sh -n; fi
 
