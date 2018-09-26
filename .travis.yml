@@ -28,9 +28,9 @@ before_install:
   - ./tools/startSubmodulesTRAVIS.sh
 
   # Install composer dependencies
-  - cd lib/pkp && composer -q update && cd ../..
-  - cd plugins/paymethod/paypal && composer -q update && cd ../../..
-  - cd plugins/generic/citationStyleLanguage && composer -q install --no-dev && cd ../../..
+  - composer -d=lib/pkp -q install --no-dev
+  - composer -d=plugins/paymethod/paypal -q install --no-dev
+  - composer -d=plugins/generic/citationStyleLanguage -q install --no-dev
 
   # Install node depenencies
   - . $HOME/.nvm/nvm.sh
