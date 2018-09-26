@@ -23,14 +23,8 @@ addons:
   apt:
     update: true
 before_install:
-
-  # Start submodules
   - ./tools/startSubmodulesTRAVIS.sh
-
-  # Install composer dependencies
-  - composer -d=lib/pkp -q install --no-dev
-  - composer -d=plugins/paymethod/paypal -q install --no-dev
-  - composer -d=plugins/generic/citationStyleLanguage -q install --no-dev
+  - ./lib/pkp/tools/travis/install-composer-dependencies.sh
 
   # Install node depenencies
   - . $HOME/.nvm/nvm.sh
