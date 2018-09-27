@@ -24,11 +24,6 @@ addons:
 before_install:
   - ./tools/startSubmodulesTRAVIS.sh
   - ./lib/pkp/tools/travis/install-composer-dependencies.sh
-
-  # Install node depenencies
-  - . $HOME/.nvm/nvm.sh
-  - nvm install stable
-  - nvm use stable
   - npm install && npm run build
 
   # Configure the webserver
