@@ -18,7 +18,7 @@
 	<message key="plugins.importexport.doaj.registrationIntro">إذا رغبت بتسجيل المقالات من داخل نظام المجلات المفتوحة، لطفاً، أدخل مفتاح واجهة التطبيق لـ DOAJ. بخلاف ذلك، لا يزال بإمكانك التصدير بصيغة DOAJ XML ولكن بدون تسجيل مقالاتك في DOAJ مباشرة من نظام المجلات المفتوحة.</message>
 	<message key="plugins.importexport.doaj.settings.form.apiKey">مفتاح واجهة تطبيق DOAJ</message>
 	<message key="plugins.importexport.doaj.settings.form.apiKey.description">ستجد مفتاح واجهة التطبيق على صفحة المستخدم لموقع DOAJ.</message>
-	<message key="plugins.importexport.doaj.settings.form.automaticRegistration.description">نظام المجلات المفتوحة سيقوم بإيداع المقالات تلقائياً في DOAJ. لطفاً، خذ بنظر الاعتبار أن هذه العملية قد تستغرق وقتاً قصيراً بُعيد النشر لأغراض المعالجة. بإمكانك دوماً التحقق من وجود مقالات غير مسجلة فيه.</message>
+	<message key="plugins.importexport.doaj.settings.form.automaticRegistration.description">نظام المجلات المفتوحة سيقوم بإيداع المقالات تلقائياً في DOAJ. لطفاً، خذ بنظر الاعتبار أن هذه العملية قد تستغرق وقتاً قصيراً بُعيد النشر لأغراض المعالجة (أي اعتماداً على إعداداتك للإضافة cronjob). بإمكانك دوماً التحقق من وجود مقالات غير مسجلة فيه.</message>
 	<message key="plugins.importexport.doaj.settings.form.testMode.description">استعمل واجهة التطبيق الاختبارية لـ DOAJ (بيئة إختبارية) لغرض التسجيل. لطفاً، إحرص على إزالة هذا الخيار عند مرحلة الإنتاج الفعلي.</message>
 
 	<message key="plugins.importexport.doaj.senderTask.name">وظيفة التسجيل التلقائي في DOAJ</message>

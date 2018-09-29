@@ -197,6 +197,7 @@
 	<message key="user.registerForOtherJournals">سجِّل في مجلات أُخر</message>
 	<message key="user.reviewerPrompt">هل تود تحكيم طلبات النشر المقدمة إلى هذه المجلة؟</message>
 	<message key="user.reviewerPrompt.userGroup">نعم، أطلب دور {$userGroup}.</message>
+	<message key="user.reviewerPrompt.optin">نعم، أود مراسلتي بشأن تحكيم طلبات النشر المقدمة إلى هذه المجلة.</message>
 	<message key="user.register.contextsPrompt">في أي من مجلات هذا الموقع ترغب بالتسجيل؟</message>
 	<message key="user.register.otherContextRoles">أطلب الأدوار الآتية:</message>
 	<message key="user.register.noContextReviewerInterests">إذا طلبت أن تكون محكماً في أي مجلة، لطفاً، أذكر مجالات اهتمامك.</message>
@@ -257,6 +258,7 @@
 	<message key="subscriptions.status.needsApproval">يتطلب المصادقة</message>
 	<message key="subscriptions.status.awaitingManualPayment">بانتظار الدفع السنوي</message>
 	<message key="subscriptions.status.awaitingOnlinePayment">بانتظار الدفع عبر الإنترنت</message>
+	<message key="subscriptions.status.noSubscription">ليس لديك حالياً اشتراك فعال.</message>
 	<message key="subscriptions.status.other">غير ذلك، أنظر الملاحظات</message>
 	<message key="subscriptions.individualDescription">الاشتراك المنفرد يتطلب التسجيل في الموقع للوصول إلى المحتوى المطلوب</message>
 	<message key="subscriptions.institutionalDescription">الاشتراك المؤسساتي لا يتطلب التسجيل، النطاق وعنوان IP للمستخدم يستعملان للتحكم بالوصول إلى المحتوى المطلوب</message>
@@ -317,6 +319,7 @@
 	<message key="reader.openAccess">وصول مفتوح</message>
 	<message key="reader.subscriptionAccess">الوصول عبر الاشتراك</message>
 	<message key="reader.subscriptionOrFeeAccess">الوصول عبر الاشتراك أو تسديد الرسوم</message>
+	<message key="reader.purchasePrice">({$currency} {$price})</message>
 
 	<!-- Reader Comments -->
 	<message key="comments.commentsOnArticle">التعليقات عن هذا المؤلَّف</message>
@@ -671,6 +674,10 @@
 	<message key="user.register.reviewerDescriptionNoInterests">راغبٌ في إجراء تحكيم مناظر لطلبات النشر في المجلة.</message>
 	<message key="user.register.reviewerDescription">راغبٌ في إجراء تحكيم مناظر لطلبات النشر في الموقع.</message>
 	<message key="user.register.reviewerInterests">عرِّف إهتمامات التحكيم (مجالاته الثابتة وطرق البحث):</message>
+	<message key="user.register.form.emailConsentAllContexts">نعم، أود الحصول على إشعارات بشأن الإصدارات الجديدة والإعلانات من جميع المجلات التي سجلت فيها.</message>
+	<message key="user.register.form.privacyConsentThisContext"><![CDATA[نعم، أوافق على جمع بياناتي وخزنها وفق ما ورد في <a href="{$privacyUrl}" target="_blank">بيان الخصوصية</a> لهذه المجلة.]]></message>
+	<message key="user.register.form.missingContextConsent">عليك الموافقة على فقرات بيان الخصوصية لكل مجلة تقوم بالتسجيل فيها.</message>
+	<message key="user.register.form.missingSiteConsent">عليك الموافقة على فقرات بيان الخصوصية في هذا الموقع.</message>
 
 	<!-- Subscriptions -->
 	<message key="user.subscriptions.mySubscriptions">اشتراكاتي</message>
@@ -834,12 +841,15 @@
 	<message key="payment.authorFees">رسوم المؤلف</message>
 	<message key="payment.type.submission">رسوم طلب النشر</message>
 	<message key="payment.type.publication">رسوم النشر</message>
+	<message key="payment.type.publication.required">رسوم النشر قد استوجبت الدفع.</message>
 	<message key="payment.type.fastTrack">رسوم مسار التحكيم السريع</message>
 	<message key="payment.type.membership">رسوم العضوية الشخصية</message>
 	<message key="payment.type.purchaseArticle">رسوم شراء مقالة</message>
 	<message key="payment.type.purchaseIssue">رسوم شراء إصدار (عدد من المجلة)</message>
 	<message key="payment.type.subscription">رسوم الاشتراك</message>
 	<message key="payment.type.donation">الهبات</message>
+	<message key="payment.requestPublicationFee">رسوم طلب النشر ({$feeAmount})</message>
+	<message key="payment.notFound">لقد تم التماس تسديد الرسوم، غير أن الالتماس قد انتهت صلاحيته. راسل رئيس تحرير المجلة للمزيد من التفاصيل.</message>
 
 	<message key="payment.donation.makeDonation">قدِّم هبة</message>
 
@@ -1044,6 +1054,7 @@
 	<message key="notification.type.submissionComment">وضع المحرر تعليقاً عن المؤلَّف "{$title}".</message>
 	<message key="notification.type.submissions">أحداث طلب النشر</message>
 	<message key="notification.type.userComment">وضع قارئ تعليقاً عن المؤلَّف "{$title}"</message>
+	<message key="notification.type.public">إعلانات عامة</message>
 	<message key="notification.savedIssueMetadata">البيانات الوصفية لنشر العدد قد تم حفظها.</message>
 	<message key="notification.type.editorAssignmentTask">مؤلَّف جديد تم تقديمه وهو بحاجة إلى تعيينه لمحرر.</message>
 	<message key="notification.type.assignProductionUser">عين أحد المستخدمين لإنشاء الألواح الطباعية مستعملاً رابط التعيين في قائمة المشاركين.</message>
@@ -1092,4 +1103,7 @@
 	<message key="editor.issues.backIssues">الأعداد السابقة</message>
 	<message key="editor.issues.futureIssues">الأعداد المستقبلية</message>
 	<message key="navigation.subscriptions">الاشتراكات</message>
+
+	<!-- legacy strings from OJS 2, for upgraded installations from OJS 2 -->
+	<message key="log.editor.submissionExpedited">{$editorName} قد تولى مهمة تحرير المؤلَّف {$submissionId}.</message>
 </locale>

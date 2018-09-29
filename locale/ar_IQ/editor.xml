@@ -136,7 +136,6 @@
 	<message key="editor.article.scheduleForPublication">جدوله للنشر في</message>
 	<message key="editor.article.scheduleForPublication.toBeAssigned">ليتم تعيينه</message>
 	<message key="editor.article.payment.publicationFeeNotPaid">لم يتم دفع رسم النشر. لجدولة الفقرة لغرض النشر، أشعر المؤلف بدفع الرسم أو أخصمه له</message>
-	<message key="editor.article.coverImage">صورة الغلاف</message>
 	<message key="editor.article.removeCoverImageFileNotFound">تعذر العثور على صورة الغلاف التي تريد حذفها. قد تكون محذوفة سلفاً. حاول إعادة تحميل الصفحة.</message>
 	<message key="grid.action.removeArticle">إزالة المقالة من هذا العدد</message>
 	<message key="editor.article.remove">أزلها</message>
@@ -148,4 +147,5 @@
 	<message key="editor.submission.editorial.finalDraftDescription"><![CDATA[الملفات المسودة النهائية ضمن هذه القائمة يتم تحويلها من قبل المدقق إلى نسخ مدققة، يتم رفعها أدناه ضمن باب <span class="pkp_help_title">التدقيق</span>.]]></message>
 	<message key="editor.submission.proof.manageProofFilesDescription">أي ملفات سبق رفعها إلى أي مرحلة من مراحل طلب النشر يمكن إضافتها إلى قائمة القراءة التصحيحية عبر تأشير خانة تضمين الملفات أدناه ومن ثم النقر على زر البحث. كل الملفات المتاحة سيتم عرضها وستكون جاهزة لهذا الغرض.</message>
 	<message key="editor.publicIdentificationExistsForTheSameType">المعرف العام '{$publicIdentifier}' موجود سلفاً لمكون آخر من نفس النوع. لطفاً، إختر معرفات فريدة للمكونات التي من نفس النوع ضمن مجلتك.</message>
+	<message key="editor.article.coverImage">صورة الغلاف</message>
 </locale>
