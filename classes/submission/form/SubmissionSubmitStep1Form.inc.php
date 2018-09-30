@@ -39,6 +39,19 @@ class SubmissionSubmitStep1Form extends PKPSubmissionSubmitStep1Form {
 		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign('sectionOptions', $sectionOptions);
 
+		// Get section policies for this context
+		$sectionPolicies = array();
+		foreach ($sectionOptions as $sectionId => $sectionTitle) {
+			$section = $sectionDao->getById($sectionId);
+
+			$sectionPolicy = $section ? $section->getLocalizedPolicy() : null;
+			$sectionPolicyPlainText = trim(PKPString::html2text($sectionPolicy));
+			if (strlen($sectionPolicyPlainText) > 0)
+				$sectionPolicies[$sectionId] = $sectionPolicy;
+		}
+
+		$templateMgr->assign('sectionPolicies', $sectionPolicies);
+
 		return parent::fetch($request);
 	}
 

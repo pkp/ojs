@@ -101,6 +101,7 @@
 	<message key="section.title">Titel der Rubrik</message>
 	<message key="section.abbreviation">Abkürzung</message>
 	<message key="section.abbreviation.example">(Zum Beispiel, Artikel=ART)</message>
+	<message key="section.policy">Richtlinien der Rubrik</message>
 
 	<!-- Common Article Terms -->
 	<message key="article.article">Artikel</message>

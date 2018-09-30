@@ -101,6 +101,7 @@
 	<message key="section.title">Section title</message>
 	<message key="section.abbreviation">Abbreviation</message>
 	<message key="section.abbreviation.example">(For example, Articles=ART)</message>
+	<message key="section.policy">Section Policy</message>
 
 	<!-- Common Article Terms -->
 	<message key="article.article">Article</message>
