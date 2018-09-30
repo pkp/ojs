@@ -7,10 +7,12 @@
  *
  * Include section policy for submissions.
  *}
-{assign var=formSectionClass value=""}
+{assign var=class value="section-policy section-id-`$sectionId` `$class`"}
+
 {if $hidden}
-	{assign var=formSectionClass value="pkp_helpers_display_none"}
+	{assign var=class value="`$class` pkp_helpers_display_none"}
 {/if}
-{fbvFormSection id=$id title="section.policy" class=$formSectionClass}
+
+{fbvFormSection title="section.policy" class=$class}
 	{$content}
 {/fbvFormSection}

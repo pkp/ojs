@@ -16,7 +16,7 @@
 			{assign var=preselectedSectionId value=$sectionOptions|@array_keys|@array_pop}
 			{fbvElement type="hidden" id="sectionId" value=$preselectedSectionId}
 
-			{include file="submission/form/sectionPolicy.tpl" content=$sectionPolicies[$preselectedSectionId] hidden=false}
+			{include file="submission/form/sectionPolicy.tpl" sectionId=$preselectedSectionId content=$sectionPolicies[$preselectedSectionId]}
 		{else}
 			{include file="submission/form/section.tpl"}
 		{/if}
