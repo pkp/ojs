@@ -231,7 +231,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 			LOCALE_COMPONENT_PKP_USER
 		);
 		$templateMgr = TemplateManager::getManager($request);
-		$templateMgr->register_function('plugin_url', array($this, 'smartyPluginUrl'));
+		$templateMgr->registerPlugin('function', 'plugin_url', array($this->plugin, 'smartyPluginUrl'));
 		$journal = $request->getJournal();
 		$journalId = $journal->getId();
 

@@ -110,7 +110,7 @@ class BrowsePlugin extends GenericPlugin {
 		switch (array_shift($args)) {
 			case 'settings':
 				$templateMgr = TemplateManager::getManager($request);
-				$templateMgr->register_function('plugin_url', array($this, 'smartyPluginUrl'));
+				$templateMgr->registerPlugin('function', 'plugin_url', array($this->plugin, 'smartyPluginUrl'));
 				$journal = $request->getJournal();
 
 				$this->import('classes.form.BrowseSettingsForm');
