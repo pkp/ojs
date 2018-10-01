@@ -103,9 +103,6 @@ class LucenePlugin extends GenericPlugin {
 		if (!Config::getVar('general', 'installed') || defined('RUNNING_UPGRADE')) return $success;
 
 		if ($success && $this->getEnabled($mainContextId)) {
-			// This plug-in requires PHP 5.0.
-			if (!checkPhpVersion('5.0.0')) return false;
-
 			// Register callbacks (application-level).
 			HookRegistry::register('PluginRegistry::loadCategory', array($this, 'callbackLoadCategory'));
 			HookRegistry::register('LoadHandler', array($this, 'callbackLoadHandler'));
