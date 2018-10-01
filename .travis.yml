@@ -10,7 +10,6 @@ language: php
 php:
   - 7.1
   - 7.2
-# group: deprecated-2017Q1
 dist: trusty
 python:
   - 3.3
@@ -48,7 +47,7 @@ before_install:
 script:
   - if [[ "$TEST" != "validation" ]]; then source ./lib/pkp/tools/travis/prepare-tests.sh; fi
   - if [[ "$TEST" != "validation" ]]; then ./lib/pkp/tools/travis/run-tests.sh; fi
-  - if [[ "$TEST" == "validation" ]]; then ./lib/pkp/tools/travis/validate-xml.sh && ./lib/pkp/tools/buildjs.sh -n; fi
+  - if [[ "$TEST" == "validation" ]]; then ./lib/pkp/tools/travis/validate-xml.sh && ./lib/pkp/tools/buildjs.sh -n && ./lib/pkp/tools/checkHelp.sh; fi
 
 after_script:
   # Merge the coverage reports into one HTML report and upload to http://pkp.sfu.ca/test-coverage
@@ -58,10 +57,7 @@ after_script:
   - if [[ "$TEST" != "validation" ]]; then ./lib/pkp/tools/travis/post-data-build.sh; fi
 
   # Print logs and outputs for debugging.
-  # - cat access.log
   - tail -c 1048576 error.log
-  # - cat xvfb-output
-  # - cat selenium-output
   - cat ./lib/pkp/tests/results/error.log
   - sudo apt-get install sharutils
   - test "$(ls -A lib/pkp/tests/results | grep .png)" && (tar cz lib/pkp/tests/results/*.png | uuencode /dev/stdout)
