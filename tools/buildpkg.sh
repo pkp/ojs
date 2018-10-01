@@ -63,7 +63,6 @@ lib/pkp/tests										\
 lib/pkp/.git										\
 lib/pkp/lib/components/*.js								\
 lib/pkp/lib/components/*.css								\
-lib/pkp/js/lib/pnotify/build-tools							\
 lib/pkp/lib/vendor/smarty/smarty/demo							\
 lib/pkp/lib/vendor/alex198710/pnotify/.git						\
 lib/pkp/lib/vendor/sebastian								\
