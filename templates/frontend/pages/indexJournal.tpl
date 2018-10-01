@@ -36,7 +36,7 @@
 			</h2>
 			{foreach name=announcements from=$announcements item=announcement}
 				{if $smarty.foreach.announcements.iteration > $numAnnouncementsHomepage}
-					{php}break;{/php}
+					{break}
 				{/if}
 				{if $smarty.foreach.announcements.iteration == 1}
 					{include file="frontend/objects/announcement_summary.tpl" heading="h3"}

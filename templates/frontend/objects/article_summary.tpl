@@ -70,7 +70,7 @@
 				{if $primaryGenreIds}
 					{assign var="file" value=$galley->getFile()}
 					{if !$galley->getRemoteUrl() && !($file && in_array($file->getGenreId(), $primaryGenreIds))}
-						{php}continue;{/php}
+						{continue}
 					{/if}
 				{/if}
 				<li>
