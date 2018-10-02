@@ -1,13 +1,13 @@
 <?php
 
 /**
- * @file tests/data/20-CreateJournalTest.inc.php
+ * @file tests/data/20-CreateContextTest.inc.php
  *
  * Copyright (c) 2014-2018 Simon Fraser University
  * Copyright (c) 2000-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @class CreateJournalTest
+ * @class CreateContextTest
  * @ingroup tests_data
  *
  * @brief Data build suite: Create and configure a test journal
@@ -15,18 +15,18 @@
 
 import('lib.pkp.tests.WebTestCase');
 
-class CreateJournalTest extends WebTestCase {
+class CreateContextTest extends WebTestCase {
 	/**
 	 * Prepare for tests.
 	 */
-	function testCreateJournalLogin() {
+	function testCreateContextLogin() {
 		parent::logIn('admin', 'admin');
 	}
 
 	/**
 	 * Create and set up test data journal.
 	 */
-	function testCreateJournal() {
+	function testCreateContext() {
 		$this->open(self::$baseUrl);
 		$this->waitForElementPresent('link=Administration');
 		$this->click('link=Administration');
@@ -50,7 +50,7 @@ class CreateJournalTest extends WebTestCase {
 	/**
 	 * Set up the test journal.
 	 */
-	function testSetupJournal() {
+	function testSetupContext() {
 		$this->open(self::$baseUrl);
 
 		// Management > Settings > Journal
