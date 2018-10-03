@@ -44,6 +44,7 @@
 	<message key="manager.payment.notFound">لم يُعثر عليه</message>
 	<message key="manager.payment.options">الخيارات</message>
 	<message key="manager.payment.options.acceptSubscriptionPayments">هذا الأمر سيُمكن مدفوعات الاشتراكات حيث ستكون: أنواعها ومبالغها ومددها واشتراكاتها مدارة من قبل المجلة عبر (مدير الاشتراكات).</message>
+	<message key="subscriptionManager.subscription.confirmRemove">هل أنت متأكد من رغبتك في حذف هذا الاشتراك؟</message>
 	<message key="manager.payment.options.enablePayments">سيتم تمكين وحدة المدفوعات لهذه المجلة. لاحظ أن المستخدمين عليهم الدخول إلى الموقع للقيام بدفع المال.</message>
 	<message key="manager.payment.options.fee">الرسم</message>
 	<message key="manager.payment.options.feeDescription">وصف الرسم</message>
@@ -158,7 +159,7 @@
 	<message key="manager.setup.emailBounceAddressDescription">أي رسالة لا تصل إلى هدفها سيعتبرها الموقع خطأً يُبلغ عنه إلى العنوان البريدي</message>
 	<message key="manager.setup.emailBounceAddressDisabled"><![CDATA[<strong>ملاحظة:</strong> لتفعيل هذا الخيار، على مدير الموقع تفعيل <tt>allow_envelope_sender</tt> في ملف إعداد نظام المجلات المفتوحة. قد يتطلب الأمر أيضاً المزيد من التعديل في إعدادات الملقم لدعم هذه الوظيفة (الأمر الذي قد لا يكون ممكناً في جميع الملقمات)، كما هو مبين في أدبيات النظام.]]></message>
 	<message key="manager.setup.emails">تحديد هوية البريد الالكتروني</message>
-          <message key="manager.setup.emailSignature">التوقيع</message>
+	<message key="manager.setup.emailSignature">التوقيع</message>
 	<message key="manager.setup.emailSignatureDescription">رسائل البريد الالكتروني المُحضرَّة آلياً والمرسلة من قبل النظام نيابة عن المجلة، ستكون مذيلة بالتوقيع الآتي، علماً أن محتوى تلك الرسائل قابل للتعديل ضمن باب (الإعدادات).</message>
 	<message key="manager.setup.enableAnnouncements">تمكين مدراء المجلة من إضافة إعلاناتهم على الموقع</message>
 	<message key="manager.setup.enableAnnouncementsHomepage1">عرض</message>
@@ -231,6 +232,12 @@
 	<message key="manager.setup.lists">القوائم</message>
 	<message key="manager.setup.listsDescription">أدخل أكبر عدد من الفقرات (على سبيل المثال: طلبات النشر، المستخدمون، مهام التحرير) التي لها أن تظهر في كل صفحة، وعدد روابط الصفحات التي لها أن تظهر في كل صفحة.</message>
 	<message key="manager.setup.enableArchive">تمكين الحفظ</message>
+	<message key="manager.setup.plnPluginEnable">الإضافة PKP PN ممكنة</message>
+	<message key="manager.setup.plnDescription">إن شبكة الحفظ لمشروع المعرفة العامة (PN) تقدم خدمات حفظ مجانية لأي مجلة تعمل بنظام المجلات المفتوحة شريطة أن تلتزم ببعض المعايير الأساسية.</message>
+	<message key="manager.setup.plnSettingsDescription">أنقر على رابط الإعدادات للموافقة على شروط استعمال شبكة الحفظ لمشروع المعرفة العامة.</message>
+	<message key="manager.setup.plnPluginArchiving">شبكة الحفظ لمشروع المعرفة العامة (PN)</message>
+	<message key="manager.setup.plnPluginNotInstalled">إن شبكة الحفظ لمشروع المعرفة العامة (PN) تقدم خدمات حفظ مجانية لأي مجلة تعمل بنظام المجلات المفتوحة شريطة أن تلتزم ببعض المعايير الأساسية. إن الإضافة الخاصة بشبكة الحفظ والمخصصة للنسخة الثالثة من نظام المجلات المفتوحة هي قيد التطوير حالياً وستكون متاحة ضمن معرض الإضافات قريباً.</message>
+	<message key="manager.setup.otherLockss">خيارات أرشفة بديلة</message>
 	<message key="manager.setup.lockssEnable"><![CDATA[تمكين LOCKSS لتخزين وتوزيع محتوى المجلة لدى المكتبات المساهمة بواسطة صفحة LOCKSS <a href="{$lockssUrl}" target="_blank">وثيقة الناشر الأساسية</a>. إن رخصة LOCKSS ستظهر ضمن (عن المجلة) تحت (الحفظ):]]></message>
 	<message key="manager.setup.lockssLicenseDescription"><![CDATA[رخصة LOCKSS ستظهر في (عن المجلة) تحت باب الحفظ: <a href="http://www.lockss.org/community/publishers-titles-gln/" target="_blank">رخصة LOCKSS</a>]]></message>
 	<message key="manager.setup.lockssLicenseLabel">وصف رخصة LOCKSS</message>
@@ -241,6 +248,8 @@
 	<message key="manager.setup.clockssLicenseLabel">وصف رخصة CLOCKSS</message>
 	<message key="manager.setup.clockssRegister"><![CDATA[سجل للحصول على خدمة CLOCKSS عبر زيارة <a href="http://clockss.org/" target="_blank">موقع CLOCKSS</a>.]]></message>
 	<message key="manager.setup.clockssTitle">CLOCKSS</message>
+	<message key="manager.setup.porticoEnable"><![CDATA[تمكين Portico من حفظ وتوزيع محتوى المجلة للمكتبات المشاركة في Portico.]]></message>
+	<message key="manager.setup.porticoTitle">Portico</message>
 	<message key="manager.setup.Issn">ISSN</message>
 	<message key="manager.setup.look">المظهر</message>
 	<message key="manager.setup.look.description">رأس الصفحة الرئيسية، المحتوى، رأس المجلة، تذييلها، شريط التنقل، وملف الأنماط.</message>
@@ -292,6 +301,7 @@
 	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"><![CDATA[<strong>ملاحظة:</strong> إن دعوة المحكمين عبر البريد الالكتروني ستتضمن رابطاً خاصاً يأخذهم مباشرة إلى صفحة التحكيم الخاصة بالطلب المعني (مع إمكانية الوصول إلى أي صفحات أخرى يتطلبها تسجيل دخولهم). لأسباب أمنية مع هذا الخيار، لا يكون بإمكان المحررين تعديل عناوين البريد الالكتروني أو تمرير نسخة من الرسالة إلى أطراف أخرى ليس لها علاقة بالتحكيم.]]></message>
 	<message key="manager.setup.reviewOptions.reviewerRatings">تقييم المحكم</message>
 	<message key="manager.setup.reviewOptions.reviewerReminders">تذكيرات المحكم</message>
+	<message key="manager.setup.reviewOptions.showEnsuringLink"><![CDATA[إظهار روابط <a href="javascript:openHelp('{$blindReviewHelpId}')" class="action">لضمان التحكيم السري</a> على الصفحات التي يقوم فيها المؤلفون والمحكمون برفع الملفات.]]></message>
 	<message key="manager.setup.reviewPolicy">سياسة التحكيم</message>
 	<message key="manager.setup.searchEngineIndexing">فهرسة محركات البحث</message>
 	<message key="manager.setup.searchEngineIndexingDescription">لمساعدة مستعملي محركات البحث في العثور على هذه المجلة، زود الموقع بوصف موجز للمجلة والكلمات المفتاحية ذات العلاقة بها (مفصولة بفارزة منقوطة إنجليزية).</message>
@@ -330,7 +340,7 @@
 	<message key="manager.statistics.defaultMetricDescription">
 		إن مجلتك مهيئة لتسجيل أكثر من مقياس تشغيل واحد. إحصائيات التشغيل ستم عرضها في عدة سياقات.
 		هناك حالات لا بد فيها من استعمال معيار تشغيل إحصائي واحد، مثل: عرض قائمة مرتبة هجائياً لمؤلَّفات الأكثر استعمالاً
-        أو عند تقييم نتائج البحث في الموقع. لطفاً، إختر أحد المقاييس الإحصائية ليكون بمثابة المعيار الإفتراضي.
+		أو عند تقييم نتائج البحث في الموقع. لطفاً، إختر أحد المقاييس الإحصائية ليكون بمثابة المعيار الإفتراضي.
 	</message>
 	<message key="manager.statistics.statistics">إحصائيات المجلة</message>
 	<message key="manager.statistics.statistics.articleViews">عدد مشاهدات المؤلَّف (للمؤلفين حصراً)</message>
@@ -531,7 +541,13 @@
 	<message key="manager.subscriptionTypes.noneCreated">لم يتم إنشاء أنواع الاشتراكات بعد.</message>
 	<message key="manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully">أُنشِئت نوعية الاشتراك بنجاح.</message>
 	<message key="manager.distribution.access">الوصول</message>
-	
+
+	<!-- Navigation Menu Items -->
+	<message key="manager.navigationMenus.subscriptions.description">رابط إلى الصفحة التي تصف الاشتراكات المتاحة في المجلة.</message>
+	<message key="manager.navigationMenus.mySubscriptions.description">رابط إلى الصفحة التي تصف الاشتراك الحالي والاشتراكات السابقة للمستخدم.</message>
+	<message key="manager.navigationMenus.mySubscriptions.conditionalWarning">هذا الرابط سيظهر فقط إذا قام المستخدم بتسجيل دخوله إلى الموقع.</message>
+
+
 	<!-- Categories -->
 	<message key="manager.setup.categories">التصنيفات</message>
 	<message key="manager.setup.categories.description">إختر التصنيفات الأكثر مناسبة من المجموعة المدرجة أعلاه. سيكون القراء قادرين على التصفح حسب الصنف من المجموعة الكاملة للمجلة.</message>

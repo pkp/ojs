@@ -30,7 +30,7 @@
  
 	<message key="plugins.importexport.datacite.settings.form.username">اسم المستخدم (الرمز)</message>
 	<message key="plugins.importexport.datacite.settings.form.usernameRequired">لطفاً، أدخل اسم المستخدم (الرمز) الذي حصلت عليه من DataCite. لا ينبغي أن يتضمن اسم المستخدم على علامات تنقيط.</message>
-	<message key="plugins.importexport.datacite.settings.form.automaticRegistration.description"><![CDATA[نظام المجلات المفتوحة سيقوم تلقائياً بإيداع DOIs في DataCite بمجرد نشر المقالات. لطفاً، لاحظ أن ذلك قد يستغرق وقتاً قصيراً بعد النشر بسبب متطلبات المعالجة. بإمكانك التحقق من وجود DOIs غير مسجلة عبر <a href="{$unregisteredURL}">قائمة المؤلفات غير المسجلة</a>.]]></message>
+	<message key="plugins.importexport.datacite.settings.form.automaticRegistration.description"><![CDATA[نظام المجلات المفتوحة سيقوم تلقائياً بإيداع DOIs في DataCite بمجرد نشر المقالات. لطفاً، لاحظ أن ذلك قد يستغرق وقتاً قصيراً بعد النشر بسبب متطلبات المعالجة (أي اعتماداً على إعداداتك للإضافة cronjob). بإمكانك التحقق من وجود DOIs غير مسجلة عبر <a href="{$unregisteredURL}">قائمة المؤلفات غير المسجلة</a>.]]></message>
 	<message key="plugins.importexport.datacite.settings.form.testMode.description">استعمل بادئة إختبار DataCite لتسجيل المكون الرقمي DOI. لطفاً، لا تنس إزالة هذا الخيار عند التشغيل الفعلي.</message>
 	<message key="plugins.importexport.datacite.senderTask.name">مهمة التسجيل التلقائي لـ DataCite</message>
  
