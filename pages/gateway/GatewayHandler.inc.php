@@ -16,14 +16,23 @@
 import('classes.handler.Handler');
 
 class GatewayHandler extends Handler {
-
+	/**
+	 * Index handler.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
 	function index($args, $request) {
 		$request->redirect(null, 'index');
 	}
 
+	/**
+	 * Display the LOCKSS manifest.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
 	function lockss($args, $request) {
 		$this->validate();
-		$this->setupTemplate();
+		$this->setupTemplate($request);
 
 		$journal = $request->getJournal();
 		$templateMgr = TemplateManager::getManager($request);
@@ -102,9 +111,14 @@ class GatewayHandler extends Handler {
 		$templateMgr->display('gateway/lockss.tpl');
 	}
 
+	/**
+	 * Display the CLOCKSS manifest.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
 	function clockss($args, $request) {
 		$this->validate();
-		$this->setupTemplate();
+		$this->setupTemplate($request);
 
 		$journal = $request->getJournal();
 		$templateMgr = TemplateManager::getManager($request);
@@ -185,6 +199,8 @@ class GatewayHandler extends Handler {
 
 	/**
 	 * Handle requests for gateway plugins.
+	 * @param $args array
+	 * @param $request PKPRequest
 	 */
 	function plugin($args, $request) {
 		$this->validate();
@@ -201,5 +217,4 @@ class GatewayHandler extends Handler {
 		}
 	}
 }
-
 
