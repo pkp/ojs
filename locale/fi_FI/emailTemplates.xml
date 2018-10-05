@@ -816,7 +816,7 @@ Päätöksemme on: Käsikirjoitus on hylätty<br />
 		<subject>Toimittajan suositus</subject>
 		<body><![CDATA[{$editors}:<br />
 <br />
-Julkaisun {$contextName} käsikirjoitusta &quot;{$submissionTitle}&quot; on: {$recommendation}<br />
+Julkaisun {$contextName} käsikirjoitusta &quot;{$submissionTitle}&quot; koskeva suositus on: {$recommendation}<br />
 <br />
 Ystävällisin terveisin,<br />
 {$editorialContactSignature}]]></body>
