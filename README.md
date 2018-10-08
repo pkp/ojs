@@ -17,6 +17,11 @@ Checkout submodules and copy default configuration :
 
 Install or update dependencies via Composer:
 
+    # if you have Composer installed
+    composer -d=lib/pkp update
+    composer -d=plugins/paymethod/paypal update
+    composer -d=plugins/generic/citationStyleLanguage update
+
     # if you don't already have Composer installed:
     curl -sS https://getcomposer.org/installer | php
     cd lib/pkp
