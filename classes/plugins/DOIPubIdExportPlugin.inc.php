@@ -42,18 +42,15 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin {
 				if (isset($pubIdPlugins['doipubidplugin'])) {
 					$doiPlugin = $pubIdPlugins['doipubidplugin'];
 					$doiPrefix = $doiPlugin->getSetting($context->getId(), $doiPlugin->getPrefixFieldName());
-					$exportArticles = $doiPlugin->getSetting($context->getId(), 'enableSubmissionDoi');
-					$exportIssues = $doiPlugin->getSetting($context->getId(), 'enableIssueDoi');
-					$exportRepresentations = $doiPlugin->getSetting($context->getId(), 'enableRepresentationDoi');
+					$templateMgr->assign(array(
+						'exportArticles' => $doiPlugin->getSetting($context->getId(), 'enableSubmissionDoi'),
+						'exportIssues' => $doiPlugin->getSetting($context->getId(), 'enableIssueDoi'),
+						'exportRepresentations' => $doiPlugin->getSetting($context->getId(), 'enableRepresentationDoi'),
+					));
 				}
 				if (empty($doiPrefix)) {
 					$configurationErrors[] = DOI_EXPORT_CONFIG_ERROR_DOIPREFIX;
 				}
-				$templateMgr->assign(array(
-					'exportArticles' => $exportArticles,
-					'exportIssues' => $exportIssues,
-					'exportRepresentations' => $exportRepresentations,
-				));
 				$templateMgr->display($this->getTemplateResource('index.tpl'));
 				break;
 		}
