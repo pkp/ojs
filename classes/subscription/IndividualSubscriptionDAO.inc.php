@@ -436,14 +436,14 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 		$params = array_merge($userDao->getFetchParameters(), array((int) $journalId));
 		$result = $this->retrieveRange(
 			'SELECT	s.*,
-			' . $userDao->getFetchColumns() .'
+			' . $userDao->getFetchColumns() . '
 			FROM	subscriptions s
 				JOIN subscription_types st ON (s.type_id = st.type_id)
 				JOIN users u ON (s.user_id = u.user_id)
-				' . $userDao->getFetchJoins() .'
+				' . $userDao->getFetchJoins() . '
 			WHERE	st.institutional = 0
 				AND s.journal_id = ? ' .
-			parent::_generateSearchSQL($status, $searchField, $searchMatch, $search, $dateField, $dateFrom, $dateTo, $params) .
+			parent::_generateSearchSQL($status, $searchField, $searchMatch, $search, $dateField, $dateFrom, $dateTo, $params) . ' ' .
 			$userDao->getOrderBy() .', s.subscription_id',
 			$params,
 			$rangeInfo

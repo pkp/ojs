@@ -93,6 +93,41 @@ class InstitutionalSubscriptionsGridHandler extends SubscriptionsGridHandler {
 	// Implement methods from GridHandler.
 	//
 	/**
+	 * @copydoc GridHandler::renderFilter()
+	 */
+	function renderFilter($request) {
+		$context = $request->getContext();
+
+		// Import field constants.
+		import('lib.pkp.classes.user.PKPUserDAO');
+		import('classes.subscription.InstitutionalSubscriptionDAO');
+		$fieldOptions = array(
+			IDENTITY_SETTING_GIVENNAME => 'user.givenName',
+			IDENTITY_SETTING_FAMILYNAME => 'user.familyName',
+			USER_FIELD_USERNAME => 'user.username',
+			USER_FIELD_EMAIL => 'user.email',
+			SUBSCRIPTION_MEMBERSHIP => 'user.subscriptions.form.membership',
+			SUBSCRIPTION_REFERENCE_NUMBER => 'manager.subscriptions.form.referenceNumber',
+			SUBSCRIPTION_NOTES => 'manager.subscriptions.form.notes',
+			SUBSCRIPTION_INSTITUTION_NAME => 'manager.subscriptions.form.institutionName',
+			SUBSCRIPTION_DOMAIN => 'manager.subscriptions.form.domain',
+			SUBSCRIPTION_IP_RANGE => 'manager.subscriptions.form.ipRange',
+		);
+
+		$matchOptions = array(
+			'contains' => 'form.contains',
+			'is' => 'form.is'
+		);
+
+		$filterData = array(
+			'fieldOptions' => $fieldOptions,
+			'matchOptions' => $matchOptions
+		);
+
+		return parent::renderFilter($request, $filterData);
+	}
+
+	/**
 	 * @copydoc GridHandler::loadData()
 	 */
 	protected function loadData($request, $filter) {
@@ -101,16 +136,7 @@ class InstitutionalSubscriptionsGridHandler extends SubscriptionsGridHandler {
 
 		$subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
 		$rangeInfo = $this->getGridRangeInfo($request, $this->getId());
-		return $subscriptionDao->getByJournalId($journal->getId());
-		// FIXME: , $filterStatus, $searchField, $searchMatch, $search, $dateSearchField, $fromDate, $toDate, $rangeInfo);
-		/* return $userGroupDao->getUsersById(
-			$filter['userGroup'],
-			$filter['includeNoRole']?null:$context->getId(),
-			$filter['searchField'],
-			$filter['search']?$filter['search']:null,
-			$filter['searchMatch'],
-			$rangeInfo
-		); */
+		return $subscriptionDao->getByJournalId($journal->getId(), null, $filter['searchField'], $filter['searchMatch'], $filter['search']?$filter['search']:null, null, null, null, $rangeInfo);
 	}
 
 
