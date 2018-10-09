@@ -453,6 +453,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 	 * @return object DAOResultFactory containing matching IndividualSubscriptions
 	 */
 	function getByJournalId($journalId, $status = null, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $rangeInfo = null) {
+		$params = array((int) $journalId);
 		$result = $this->retrieveRange(
 			'SELECT	s.*
 			FROM	subscriptions s
@@ -462,7 +463,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 				AND s.journal_id = ? ' .
 			parent::_generateSearchSQL($status, $searchField, $searchMatch, $search, $dateField, $dateFrom, $dateTo, $params) .
 			' ORDER BY u.last_name ASC, s.subscription_id',
-			array((int) $journalId),
+			$params,
 			$rangeInfo
 		);
 		return new DAOResultFactory($result, $this, '_fromRow');

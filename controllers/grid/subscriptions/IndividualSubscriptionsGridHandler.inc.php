@@ -102,6 +102,34 @@ class IndividualSubscriptionsGridHandler extends SubscriptionsGridHandler {
 	// Implement methods from GridHandler.
 	//
 	/**
+	 * @copydoc GridHandler::renderFilter()
+	 */
+	function renderFilter($request) {
+		$context = $request->getContext();
+
+		// Import PKPUserDAO to define the SUBSCRIPTION_* constants.
+		import('classes.subscription.SubscriptionDAO');
+		$fieldOptions = array(
+			SUBSCRIPTION_USER => 'common.user',
+			SUBSCRIPTION_MEMBERSHIP => 'user.subscriptions.form.membership',
+			SUBSCRIPTION_REFERENCE_NUMBER => 'manager.subscriptions.form.referenceNumber',
+			SUBSCRIPTION_NOTES => 'manager.subscriptions.form.notes',
+		);
+
+		$matchOptions = array(
+			'contains' => 'form.contains',
+			'is' => 'form.is'
+		);
+
+		$filterData = array(
+			'fieldOptions' => $fieldOptions,
+			'matchOptions' => $matchOptions
+		);
+
+		return parent::renderFilter($request, $filterData);
+	}
+
+	/**
 	 * @copydoc GridHandler::loadData()
 	 * @param $request PKPRequest
 	 * @return array Grid data.
@@ -112,16 +140,7 @@ class IndividualSubscriptionsGridHandler extends SubscriptionsGridHandler {
 
 		$subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
 		$rangeInfo = $this->getGridRangeInfo($request, $this->getId());
-		return $subscriptionDao->getByJournalId($journal->getId());
-		// FIXME: , $filterStatus, $searchField, $searchMatch, $search, $dateSearchField, $fromDate, $toDate, $rangeInfo);
-		/* return $userGroupDao->getUsersById(
-			$filter['userGroup'],
-			$filter['includeNoRole']?null:$context->getId(),
-			$filter['searchField'],
-			$filter['search']?$filter['search']:null,
-			$filter['searchMatch'],
-			$rangeInfo
-		); */
+		return $subscriptionDao->getByJournalId($journal->getId(), null, $filter['searchField'], $filter['searchMatch'], $filter['search']?$filter['search']:null, null, null, null, $rangeInfo);
 	}
 
 
