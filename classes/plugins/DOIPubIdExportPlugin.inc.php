@@ -37,7 +37,7 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin {
 				// Check for configuration errors:
 				$configurationErrors = $templateMgr->getTemplateVars('configurationErrors');
 				// missing DOI prefix
-				$doiPrefix = $exportArticles = $exportIssues = null;
+				$doiPrefix = null;
 				$pubIdPlugins = PluginRegistry::loadCategory('pubIds', true);
 				if (isset($pubIdPlugins['doipubidplugin'])) {
 					$doiPlugin = $pubIdPlugins['doipubidplugin'];
