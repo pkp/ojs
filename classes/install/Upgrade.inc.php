@@ -2855,6 +2855,47 @@ class Upgrade extends Installer {
 		return true;
 	}
 
+	/**
+	* Update assoc_id for assoc_type 531
+	* @return boolean True indicates success.
+	*/
+	function updateSuppFileMetrics() {
+ 		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
+		$metricsDao = DAORegistry::getDAO('MetricsDAO');
+ 		# Copy 531 assoc_type data to temp table
+		$result = $metricsDao->update(
+			'CREATE TABLE metrics_supp AS (SELECT * FROM metrics WHERE assoc_type = 531)'
+		);
+ 		# Fetch submission_file data with old-supp-id
+		$result = $submissionFileDao->retrieve(
+			'SELECT * FROM submission_file_settings WHERE setting_name =  ?',
+			'old-supp-id'
+		);	
+ 		# Loop through the data and save to temp table
+		while (!$result->EOF) {
+			$row = $result->GetRowAssoc(false);
+ 			# Use assoc_type 2531 to prevent collisions between old assoc_id and new assoc_id
+			$metricsDao->update(
+			'UPDATE metrics_supp SET assoc_id = ?, assoc_type = ? WHERE assoc_type = ? AND assoc_id = ?',
+			array((int) $row['file_id'], 2531, 531, (int) $row['setting_value'])
+			);
+			$result->MoveNext();
+		}
+		$result->Close();
+ 		# update temprorary 2531 values to 531 values
+		$metricsDao->update(
+			'UPDATE metrics_supp SET assoc_type = ? WHERE assoc_type = ?',
+			array(531, 2531)
+		);		
+ 		# delete all existing 531 values from the actual metrics table
+		$metricsDao->update('DELETE FROM metrics WHERE assoc_type = 531');
+ 		# copy updated 531 values from metrics_supp to metrics table
+		$metricsDao->update('INSERT metrics SELECT * FROM metrics_supp');
+ 		# Drop metrics_supp table
+		$metricsDao->update('DROP TABLE metrics_supp');
+ 		return true;
+	}	
+
 }
 
 
