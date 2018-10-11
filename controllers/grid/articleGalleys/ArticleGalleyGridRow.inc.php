@@ -39,9 +39,6 @@ class ArticleGalleyGridRow extends GridRow {
 		// Do the default initialization
 		parent::initialize($request, $template);
 
-		// Retrieve the submission from the request
-		$submission = $this->getSubmission();
-
 		// Is this a new row or an existing row?
 		$rowId = $this->getId();
 		if (!empty($rowId) && is_numeric($rowId)) {
