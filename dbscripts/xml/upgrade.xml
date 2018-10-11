@@ -202,6 +202,7 @@
 
 	<upgrade minversion="2.4.0.0" maxversion="3.1.0.9">
 		<data file="dbscripts/xml/upgrade/3.1.1_update.xml" />
+		<code function="updateSuppFileMetrics" />
 		<code function="installEmailTemplate" key="REVISED_VERSION_NOTIFY" locales="ar_IQ,da_DK,en_US,es_ES,fa_IR,fi_FI,fr_CA,fr_FR,id_ID,pt_PT,ru_RU,sv_SE" />
 		<code function="clearDataCache" />
 	</upgrade>
