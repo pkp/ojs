@@ -52,6 +52,7 @@ class ArticleGalleyGridRow extends GridRow {
 
 			// Add row-level actions
 			import('lib.pkp.classes.linkAction.request.AjaxModal');
+			AppLocale::requireComponents(LOCALE_COMPONENT_APP_SUBMISSION); // submission.layout.editGalley
 			$this->addAction(new LinkAction(
 				'editGalley',
 				new AjaxModal(
@@ -59,11 +60,17 @@ class ArticleGalleyGridRow extends GridRow {
 					__('submission.layout.editGalley'),
 					'modal_edit'
 				),
-				__('grid.action.edit'),
-				'edit'
+				__('grid.action.editGalley'),
+				'editGalley'
 			));
 
 			$galley = $this->getData();
+			if ($galleyFile = $galley->getFile()) {
+				import('lib.pkp.controllers.api.file.linkAction.EditFileLinkAction');
+				$this->addAction($linkAction = new EditFileLinkAction($request, $galleyFile, WORKFLOW_STAGE_ID_PRODUCTION));
+				$linkAction->setTitle(__('grid.action.editFile'));
+			}
+
 			if ($galley->getRemoteUrl() == '') {
 				import('lib.pkp.controllers.api.file.linkAction.AddFileLinkAction');
 				import('lib.pkp.classes.submission.SubmissionFile'); // Constants

@@ -28,6 +28,8 @@
 	<message key="submission.submit.whatNext.description">The journal has been notified of your submission, and you've been emailed a confirmation for your records.  Once the editor has reviewed the submission, they will contact you.</message>
 	<message key="grid.action.galleyInIssueEntry">Galley appears in issue entry</message>
 	<message key="grid.action.issueEntry">View this submission's metadata</message>
+	<message key="grid.action.editGalley">Edit Galley</message>
+	<message key="grid.action.editFile">Edit File</message>
 
 	<!-- Submission Information Modal -->
 	<message key="submission.issueEntry.modalTitle">Submission and Publication Metadata</message>
