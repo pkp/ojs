@@ -38,6 +38,7 @@ class SubmissionSubmitStep1Form extends PKPSubmissionSubmitStep1Form {
 		$sectionOptions = array('0' => '') + $sectionDao->getTitles($this->context->getId(), !$canSubmitAll);
 		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign('sectionOptions', $sectionOptions);
+		$templateMgr->assign('sectionId', $request->getUserVar('sectionId'));
 
 		// Get section policies for this context
 		$sectionPolicies = array();
