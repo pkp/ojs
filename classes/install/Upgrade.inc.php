@@ -2856,7 +2856,7 @@ class Upgrade extends Installer {
 	}
 
 	/**
-	* Update assoc_id for assoc_type 531
+	* Update assoc_id for assoc_type ASSOC_TYPE_SUBMISSION_FILE_COUNTER_OTHER = 531
 	* @return boolean True indicates success.
 	*/
 	function updateSuppFileMetrics() {
