@@ -32,6 +32,40 @@ class IssueEntrySubmissionReviewForm extends SubmissionMetadataViewForm {
 	}
 
 	/**
+	 * Fetch the HTML contents of the form.
+	 * @param $request PKPRequest
+	 * return string
+	 */
+	function fetch($request) {
+		$context = $request->getContext();
+
+		$roleDao = DAORegistry::getDAO('RoleDAO');
+		$user = $request->getUser();
+		$canSubmitAll = $roleDao->userHasRole($context->getId(), $user->getId(), ROLE_ID_MANAGER) ||
+			$roleDao->userHasRole($context->getId(), $user->getId(), ROLE_ID_SUB_EDITOR);
+
+		// Get section options for this context
+		$sectionDao = DAORegistry::getDAO('SectionDAO');
+		$sectionOptions = array('0' => '') + $sectionDao->getTitles($context->getId(), !$canSubmitAll);
+
+		// Get section policies for this context
+		$sectionPolicies = array();
+		foreach ($sectionOptions as $sectionId => $sectionTitle) {
+			$section = $sectionDao->getById($sectionId);
+
+			$sectionPolicy = $section ? $section->getLocalizedPolicy() : null;
+			$sectionPolicyPlainText = trim(PKPString::html2text($sectionPolicy));
+			if (strlen($sectionPolicyPlainText) > 0)
+				$sectionPolicies[$sectionId] = $sectionPolicy;
+		}
+
+		$templateMgr = TemplateManager::getManager($request);
+		$templateMgr->assign('sectionPolicies', $sectionPolicies);
+
+		return parent::fetch($request);
+	}
+
+	/**
 	 * Save the metadata.
 	 */
 	function execute() {
