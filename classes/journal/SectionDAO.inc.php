@@ -192,7 +192,7 @@ class SectionDAO extends PKPSectionDAO {
 	function getLocaleFieldNames() {
 		return array_merge(
 			parent::getLocaleFieldNames(),
-			array('abbrev', 'policy', 'identifyType')
+			array('abbrev', 'identifyType')
 		);
 	}
 
@@ -412,22 +412,6 @@ class SectionDAO extends PKPSectionDAO {
 		}
 		$result->Close();
 		return $returner;
-	}
-
-	/**
-	 * Retrieve the IDs and titles of the sections for a journal in an associative array.
-	 * @param $journalId int Journal ID
-	 * @param $submittableOnly boolean optional
-	 * @return array
-	 */
-	function getTitles($journalId, $submittableOnly = false) {
-		$sections = array();
-		$sectionsIterator = $this->getByJournalId($journalId);
-		while ($section = $sectionsIterator->next()) {
-			if ($submittableOnly && $section->getEditorRestricted()) continue;
-			$sections[$section->getId()] = $section->getLocalizedTitle();
-		}
-		return $sections;
 	}
 
 	/**
