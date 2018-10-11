@@ -1,9 +1,9 @@
 # Configure the build matrix
 env:
   matrix:
-  - TEST=validation
-  - TEST=pgsql
-  - TEST=mysql
+  - TEST=validation # Validation tests: lint the XML, minify the Javascript, etc
+  - TEST=pgsql # Integration tests using PostgreSQL
+  - TEST=mysql # Integration tests using MySQL/MariaDB
   global:
   - secure: "nxosaZUBRaYhk8+LHaDnVgMIveiK4zewiXW5Fw5TtB/D6V67oASufil1uhcayyzIBwnrZZmrFPLhXm0Lm1RiQHrsftffcMB5JlWK9R9EyWpyd87ewqWy3kXBAvsXXTU6ihGiaFpklhVCKt7XcDSR8bWEb2NVWrM7JS7dHDKMwaA="
 language: php
@@ -12,42 +12,50 @@ php:
   - 7.2
 dist: trusty
 python:
-  - 3.3
+  - 3.3 # Required by Javascript linter/builder
 git:
-  # We have to init submodules ourselves to make it recursive
+  # Inhibit automatic submodule checkout (see below)
   submodules: false
 addons:
-  firefox: "45.9.0esr"
+  firefox: "45.9.0esr" # Required by Selenium tests
   apt:
     update: true
 before_install:
+  # Check out submodules (this script checks out developer forks if necessary)
   - ./tools/startSubmodulesTRAVIS.sh
-  - ./lib/pkp/tools/travis/install-composer-dependencies.sh
-  - npm install && npm run build
 
-  # Configure the webserver
-  - if [[ "$TEST" != "validation" ]]; then ./lib/pkp/tools/travis/prepare-webserver.sh; fi
+  - |
+    if [[ "$TEST" != "validation" ]]; then
+      # Prepare for unit and integration tests.
 
-  # Start xvfb
-  - if [[ "$TEST" != "validation" ]]; then ./lib/pkp/tools/travis/start-xvfb.sh; fi
+      # Prepare the server environment
+      ./lib/pkp/tools/travis/prepare-webserver.sh
+      source ./lib/pkp/tools/travis/start-xvfb.sh
+      ./lib/pkp/tools/travis/start-selenium.sh
 
-  # Start Selenium
-  - if [[ "$TEST" != "validation" ]]; then ./lib/pkp/tools/travis/start-selenium.sh; fi
+      # Prepare the local codebase
+      ./lib/pkp/tools/travis/install-composer-dependencies.sh
+      npm install && npm run build
+    else
+      # Prepare for validation tests.
+      ./lib/pkp/tools/travis/install-linter.sh
+    fi
 
-  # Prepare code coverage
+  # The code coverage test is only performed in the MySQL test round.
   - if [[ "$TEST" == "mysql" ]]; then ./lib/pkp/tools/travis/prepare-code-coverage.sh; fi
 
-  # Install the JS linter
-  - if [[ "$TEST" == "validation" ]]; then ./lib/pkp/tools/travis/install-linter.sh; fi
-
-  # Sleep and output our logs, to avoid hanging build with no access to
-  # logs. This is useful for debugging but too verbose to leave enabled.
-  # - (sleep 590; cat access.log; cat error.log; cat xvfb-output; cat selenium-output; cat ./lib/pkp/tests/results/error.log) &
-
 script:
-  - if [[ "$TEST" != "validation" ]]; then source ./lib/pkp/tools/travis/prepare-tests.sh; fi
-  - if [[ "$TEST" != "validation" ]]; then ./lib/pkp/tools/travis/run-tests.sh; fi
-  - if [[ "$TEST" == "validation" ]]; then ./lib/pkp/tools/travis/validate-xml.sh && ./lib/pkp/tools/buildjs.sh -n && ./lib/pkp/tools/checkHelp.sh; fi
+  - |
+    if [[ "$TEST" != "validation" ]]; then
+      # Run the unit and integration tests.
+      source ./lib/pkp/tools/travis/prepare-tests.sh
+      ./lib/pkp/tools/travis/run-tests.sh
+    else
+      # Run the validation tests.
+      ./lib/pkp/tools/travis/validate-xml.sh
+      ./lib/pkp/tools/buildjs.sh -n
+      ./lib/pkp/tools/checkHelp.sh
+    fi
 
 after_script:
   # Merge the coverage reports into one HTML report and upload to http://pkp.sfu.ca/test-coverage
