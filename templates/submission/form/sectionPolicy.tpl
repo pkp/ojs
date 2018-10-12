@@ -9,10 +9,6 @@
  *}
 {assign var=class value="section-policy section-id-`$sectionId` `$class`"}
 
-{if $hidden}
-	{assign var=class value="`$class` pkp_helpers_display_none"}
-{/if}
-
 {fbvFormSection title="section.policy" class=$class}
 	{$content}
 {/fbvFormSection}
