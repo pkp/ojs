@@ -782,6 +782,7 @@ You may optionally provide the user with a reason for disabling their account.</
 	<message key="about.onlineSubmissions.register">Register</message>
 	<message key="about.onlineSubmissions.registrationRequired">{$login} or {$register} to make a submission.</message>
 	<message key="about.onlineSubmissions.submissionActions">{$newSubmission} or {$viewSubmissions}.</message>
+	<message key="about.onlineSubmissions.submitToSection"><![CDATA[Make a new submission to the <a href="{$url}">{$name}</a> section.]]></message>
 	<message key="about.onlineSubmissions.newSubmission">Make a new submission</message>
 	<message key="about.onlineSubmissions.viewSubmissions">view your pending submissions</message>
 	<message key="about.authorGuidelines">Author Guidelines</message>

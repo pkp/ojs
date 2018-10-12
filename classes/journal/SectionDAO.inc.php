@@ -20,6 +20,23 @@ import ('lib.pkp.classes.context.PKPSectionDAO');
 class SectionDAO extends PKPSectionDAO {
 	var $cache;
 
+	/**
+	 * Get the name of the section table in the database
+	 *
+	 * @return string
+	 */
+	protected function _getTableName() {
+		return 'sections';
+	}
+
+	/**
+	 * Get the name of the context ID table column
+	 *
+	 * @return string
+	 */
+	protected function _getContextIdColumnName() {
+		return 'journal_id';
+	}
 
 	function _cacheMiss($cache, $id) {
 		$section = $this->getById($id, null, false);
@@ -366,21 +383,6 @@ class SectionDAO extends PKPSectionDAO {
 	}
 
 	/**
-	 * Retrieve all sections for a journal.
-	 * @param $journalId int Journal ID
-	 * @param $rangeInfo DBResultRange optional
-	 * @return DAOResultFactory containing Sections ordered by sequence
-	 */
-	function getByContextId($journalId, $rangeInfo = null) {
-		$result = $this->retrieveRange(
-			'SELECT * FROM sections WHERE journal_id = ? ORDER BY seq',
-			(int) $journalId, $rangeInfo
-		);
-
-		return new DAOResultFactory($result, $this, '_fromRow');
-	}
-
-	/**
 	 * Retrieve all sections.
 	 * @param $rangeInfo DBResultRange optional
 	 * @return DAOResultFactory containing Sections ordered by journal ID and sequence
@@ -593,5 +595,3 @@ class SectionDAO extends PKPSectionDAO {
 	}
 
 }
-
-
