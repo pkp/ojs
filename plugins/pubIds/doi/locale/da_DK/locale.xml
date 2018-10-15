@@ -14,7 +14,7 @@
 <locale name="da_DK" full_name="Dansk">
 	<message key="plugins.pubIds.doi.displayName">DOI</message>
 	<message key="plugins.pubIds.doi.description">Denne plug-in gør det muligt at tildele DOI’er (Digital Object Identifiers) til numre, artikler, satsskibe og supplerende filer i OJS.</message>
-	<message key="plugins.pubIds.doi.readerDisplayName">DOI:</message>
+	<message key="plugins.pubIds.doi.readerDisplayName">DOI</message>
 	<message key="plugins.pubIds.doi.manager.settings.description">Konfigurér dette DOI plug-in, så det bliver muligt at administrere og bruge DOI’er i OJS:</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiObjects">Tidsskriftsindhold</message>
 	<message key="plugins.pubIds.doi.manager.settings.doiObjectsRequired">Vælg de elementer, der skal have tildelt et DOI.</message>
