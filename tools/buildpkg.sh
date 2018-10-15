@@ -126,15 +126,15 @@ echo "Done"
 
 echo "Installing composer dependencies:"
 echo -n " - lib/pkp ... "
-composer.phar -d=lib/pkp install --no-dev
+composer.phar --working-dir=lib/pkp install --no-dev
 echo "Done"
 
 echo -n " - plugins/paymethod/paypal ... "
-composer.phar -d=plugins/paymethod/paypal install --no-dev
+composer.phar --working-dir=plugins/paymethod/paypal install --no-dev
 echo "Done"
 
 echo -n " - plugins/generic/citationStyleLanguage ... "
-composer.phar -d=plugins/generic/citationStyleLanguage install --no-dev
+composer.phar --working-dir=plugins/generic/citationStyleLanguage install --no-dev
 echo "Done"
 
 echo -n "Installing node dependencies... "
