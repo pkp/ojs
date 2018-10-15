@@ -73,7 +73,7 @@ class ViewReportPlugin extends ReportPlugin {
 		while ($publishedArticle = $publishedArticles->next()) {
 			$articleId = $publishedArticle->getId();
 			$issueId = $publishedArticle->getIssueId();
-			$articleTitles[$articleId] = preg_replace( "/\r|\n/", "", $publishedArticle->getLocalizedTitle() );
+			$articleTitles[$articleId] = PKPString::regexp_replace( "/\r|\n/", "", $publishedArticle->getLocalizedTitle() );
 
 			// Store the abstract view count
 			$abstractViewCounts[$articleId] = $publishedArticle->getViews();
