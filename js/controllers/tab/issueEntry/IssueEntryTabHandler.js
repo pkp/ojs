@@ -94,7 +94,6 @@
 		if ($updateSourceElement.attr('id').match(/^galleysGridContainer/)) {
 
 			if (this.tabsUrl_ && this.tabContentUrl_) {
-				$element = this.getHtmlElement();
 				$.get(this.tabsUrl_, null, this.callbackWrapper(
 						this.updateTabsHandler_), 'json');
 			}
