@@ -121,7 +121,7 @@
 				currentIndexes = {},
 				// only interested in galley tabs, so filter out the others
 				regexp = /galley(\d+)/,
-				i, j, id, match, url, totalWidth = 0;
+				i, j, id, match, url;
 
 		for (j = 0; j < currentTabs.length; j++) {
 			id = currentTabs[j].getAttribute('id');
